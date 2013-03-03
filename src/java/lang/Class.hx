@@ -36,7 +36,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @return a string representation of this class object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the {@code Class} object associated with the class or
@@ -69,7 +69,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*            by this method fails
 	* @exception ClassNotFoundException if the class cannot be located
 	*/
-	@:overload public static function forName(className : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function forName(className : String) : Class<Dynamic>;
 	
 	/**
 	* Returns the {@code Class} object associated with the class or
@@ -131,7 +131,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see       java.lang.ClassLoader
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public static function forName(name : String, initialize : Bool, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:require(java2) @:overload @:public @:static public static function forName(name : String, initialize : Bool, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Creates a new instance of the class represented by this {@code Class}
@@ -180,7 +180,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*             </ul>
 	*
 	*/
-	@:overload public function newInstance() : T;
+	@:overload @:public public function newInstance() : T;
 	
 	/**
 	* Determines if the specified {@code Object} is assignment-compatible
@@ -212,7 +212,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function isInstance(obj : Dynamic) : Bool;
+	@:require(java1) @:overload @:public @:native public function isInstance(obj : Dynamic) : Bool;
 	
 	/**
 	* Determines if the class or interface represented by this
@@ -238,7 +238,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*            null.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function isAssignableFrom(cls : Class<Dynamic>) : Bool;
+	@:require(java1) @:overload @:public @:native public function isAssignableFrom(cls : Class<Dynamic>) : Bool;
 	
 	/**
 	* Determines if the specified {@code Class} object represents an
@@ -247,7 +247,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return  {@code true} if this object represents an interface;
 	*          {@code false} otherwise.
 	*/
-	@:overload @:native public function isInterface() : Bool;
+	@:overload @:public @:native public function isInterface() : Bool;
 	
 	/**
 	* Determines if this {@code Class} object represents an array class.
@@ -256,7 +256,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*          {@code false} otherwise.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function isArray() : Bool;
+	@:require(java1) @:overload @:public @:native public function isArray() : Bool;
 	
 	/**
 	* Determines if the specified {@code Class} object represents a
@@ -286,7 +286,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see     java.lang.Void#TYPE
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function isPrimitive() : Bool;
+	@:require(java1) @:overload @:public @:native public function isPrimitive() : Bool;
 	
 	/**
 	* Returns true if this {@code Class} object represents an annotation
@@ -297,7 +297,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*      type; {@code false} otherwise
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnnotation() : Bool;
+	@:require(java5) @:overload @:public public function isAnnotation() : Bool;
 	
 	/**
 	* Returns {@code true} if this class is a synthetic class;
@@ -306,7 +306,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*         defined by the Java Language Specification.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isSynthetic() : Bool;
+	@:require(java5) @:overload @:public public function isSynthetic() : Bool;
 	
 	/**
 	* Returns the  name of the entity (class, interface, array class,
@@ -359,7 +359,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return  the name of the class or interface
 	*          represented by this object.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the class loader for the class.  Some implementations may use
@@ -387,7 +387,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see SecurityManager#checkPermission
 	* @see java.lang.RuntimePermission
 	*/
-	@:overload public function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Returns an array of {@code TypeVariable} objects that represent the
@@ -404,7 +404,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*     <cite>The Java&trade; Virtual Machine Specification</cite>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Class<T>>>;
+	@:require(java5) @:overload @:public public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Class<T>>>;
 	
 	/**
 	* Returns the {@code Class} representing the superclass of the entity
@@ -417,7 +417,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @return the superclass of the class represented by this object.
 	*/
-	@:overload @:native public function getSuperclass() : Class<T>;
+	@:overload @:public @:native public function getSuperclass() : Class<T>;
 	
 	/**
 	* Returns the {@code Type} representing the direct superclass of
@@ -448,7 +448,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return the superclass of the class represented by this object
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericSuperclass() : java.lang.reflect.Type;
+	@:require(java5) @:overload @:public public function getGenericSuperclass() : java.lang.reflect.Type;
 	
 	/**
 	* Gets the package for this class.  The class loader of this class is used
@@ -465,7 +465,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return the package of the class, or null if no package
 	*         information is available from the archive or codebase.
 	*/
-	@:overload public function getPackage() : java.lang.Package;
+	@:overload @:public public function getPackage() : java.lang.Package;
 	
 	/**
 	* Determines the interfaces implemented by the class or interface
@@ -507,7 +507,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @return an array of interfaces implemented by this class.
 	*/
-	@:overload @:native public function getInterfaces() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public @:native public function getInterfaces() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns the {@code Type}s representing the interfaces
@@ -558,7 +558,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return an array of interfaces implemented by this class
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericInterfaces() : java.NativeArray<java.lang.reflect.Type>;
+	@:require(java5) @:overload @:public public function getGenericInterfaces() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns the {@code Class} representing the component type of an
@@ -570,7 +570,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see     java.lang.reflect.Array
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function getComponentType() : Class<Dynamic>;
+	@:require(java1) @:overload @:public @:native public function getComponentType() : Class<Dynamic>;
 	
 	/**
 	* Returns the Java language modifiers for this class or interface, encoded
@@ -599,7 +599,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see     java.lang.reflect.Modifier
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function getModifiers() : Int;
+	@:require(java1) @:overload @:public @:native public function getModifiers() : Int;
 	
 	/**
 	* Gets the signers of this class.
@@ -609,7 +609,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*          a primitive type or void.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function getSigners() : java.NativeArray<Dynamic>;
+	@:require(java1) @:overload @:public @:native public function getSigners() : java.NativeArray<Dynamic>;
 	
 	/**
 	* If this {@code Class} object represents a local or anonymous
@@ -626,7 +626,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*     that class is a local or anonymous class; otherwise {@code null}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getEnclosingMethod() : java.lang.reflect.Method;
+	@:require(java5) @:overload @:public public function getEnclosingMethod() : java.lang.reflect.Method;
 	
 	/**
 	* If this {@code Class} object represents a local or anonymous
@@ -642,7 +642,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*     that class is a local or anonymous class; otherwise {@code null}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getEnclosingConstructor() : java.lang.reflect.Constructor<Dynamic>;
+	@:require(java5) @:overload @:public public function getEnclosingConstructor() : java.lang.reflect.Constructor<Dynamic>;
 	
 	/**
 	* If the class or interface represented by this {@code Class} object
@@ -655,7 +655,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return the declaring class for this class
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function getDeclaringClass() : Class<Dynamic>;
+	@:require(java1) @:overload @:public @:native public function getDeclaringClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the immediately enclosing class of the underlying
@@ -664,7 +664,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return the immediately enclosing class of the underlying class
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getEnclosingClass() : Class<Dynamic>;
+	@:require(java5) @:overload @:public public function getEnclosingClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the simple name of the underlying class as given in the
@@ -678,7 +678,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return the simple name of the underlying class
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSimpleName() : String;
+	@:require(java5) @:overload @:public public function getSimpleName() : String;
 	
 	/**
 	* Returns the canonical name of the underlying class as
@@ -690,7 +690,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* {@code null} otherwise.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getCanonicalName() : String;
+	@:require(java5) @:overload @:public public function getCanonicalName() : String;
 	
 	/**
 	* Returns {@code true} if and only if the underlying class
@@ -699,7 +699,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return {@code true} if and only if this class is an anonymous class.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnonymousClass() : Bool;
+	@:require(java5) @:overload @:public public function isAnonymousClass() : Bool;
 	
 	/**
 	* Returns {@code true} if and only if the underlying class
@@ -708,7 +708,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return {@code true} if and only if this class is a local class.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isLocalClass() : Bool;
+	@:require(java5) @:overload @:public public function isLocalClass() : Bool;
 	
 	/**
 	* Returns {@code true} if and only if the underlying class
@@ -717,7 +717,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @return {@code true} if and only if this class is a member class.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isMemberClass() : Bool;
+	@:require(java5) @:overload @:public public function isMemberClass() : Bool;
 	
 	/**
 	* Returns an array containing {@code Class} objects representing all
@@ -753,7 +753,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getClasses() : java.NativeArray<Class<Dynamic>>;
+	@:require(java1) @:overload @:public public function getClasses() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns an array containing {@code Field} objects reflecting all
@@ -798,7 +798,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getFields() : java.NativeArray<java.lang.reflect.Field>;
+	@:require(java1) @:overload @:public public function getFields() : java.NativeArray<java.lang.reflect.Field>;
 	
 	/**
 	* Returns an array containing {@code Method} objects reflecting all
@@ -842,7 +842,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getMethods() : java.NativeArray<java.lang.reflect.Method>;
+	@:require(java1) @:overload @:public public function getMethods() : java.NativeArray<java.lang.reflect.Method>;
 	
 	/**
 	* Returns an array containing {@code Constructor} objects reflecting
@@ -884,7 +884,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getConstructors() : java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
+	@:require(java1) @:overload @:public public function getConstructors() : java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
 	
 	/**
 	* Returns a {@code Field} object that reflects the specified public
@@ -935,7 +935,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getField(name : String) : java.lang.reflect.Field;
+	@:require(java1) @:overload @:public public function getField(name : String) : java.lang.reflect.Field;
 	
 	/**
 	* Returns a {@code Method} object that reflects the specified public
@@ -1008,7 +1008,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getMethod(name : String, parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:require(java1) @:overload @:public public function getMethod(name : String, parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
 	/**
 	* Returns a {@code Constructor} object that reflects the specified
@@ -1050,7 +1050,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getConstructor(parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<T>;
+	@:require(java1) @:overload @:public public function getConstructor(parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<T>;
 	
 	/**
 	* Returns an array of {@code Class} objects reflecting all the
@@ -1085,7 +1085,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredClasses() : java.NativeArray<Class<Dynamic>>;
+	@:require(java1) @:overload @:public public function getDeclaredClasses() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns an array of {@code Field} objects reflecting all the fields
@@ -1122,7 +1122,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredFields() : java.NativeArray<java.lang.reflect.Field>;
+	@:require(java1) @:overload @:public public function getDeclaredFields() : java.NativeArray<java.lang.reflect.Field>;
 	
 	/**
 	* Returns an array of {@code Method} objects reflecting all the
@@ -1163,7 +1163,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredMethods() : java.NativeArray<java.lang.reflect.Method>;
+	@:require(java1) @:overload @:public public function getDeclaredMethods() : java.NativeArray<java.lang.reflect.Method>;
 	
 	/**
 	* Returns an array of {@code Constructor} objects reflecting all the
@@ -1201,7 +1201,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredConstructors() : java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
+	@:require(java1) @:overload @:public public function getDeclaredConstructors() : java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
 	
 	/**
 	* Returns a {@code Field} object that reflects the specified declared
@@ -1237,7 +1237,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredField(name : String) : java.lang.reflect.Field;
+	@:require(java1) @:overload @:public public function getDeclaredField(name : String) : java.lang.reflect.Field;
 	
 	/**
 	* Returns a {@code Method} object that reflects the specified
@@ -1280,7 +1280,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredMethod(name : String, parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:require(java1) @:overload @:public public function getDeclaredMethod(name : String, parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
 	/**
 	* Returns a {@code Constructor} object that reflects the specified
@@ -1318,7 +1318,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function getDeclaredConstructor(parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<T>;
+	@:require(java1) @:overload @:public public function getDeclaredConstructor(parameterTypes : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Constructor<T>;
 	
 	/**
 	* Finds a resource with a given name.  The rules for searching resources
@@ -1355,7 +1355,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @throws  NullPointerException If {@code name} is {@code null}
 	* @since  JDK1.1
 	*/
-	@:require(java1) @:overload public function getResourceAsStream(name : String) : java.io.InputStream;
+	@:require(java1) @:overload @:public public function getResourceAsStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Finds a resource with a given name.  The rules for searching resources
@@ -1391,7 +1391,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*              resource with this name is found
 	* @since  JDK1.1
 	*/
-	@:require(java1) @:overload public function getResource(name : String) : java.net.URL;
+	@:require(java1) @:overload @:public public function getResource(name : String) : java.net.URL;
 	
 	/**
 	* Returns the {@code ProtectionDomain} of this class.  If there is a
@@ -1413,7 +1413,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see java.lang.RuntimePermission
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getProtectionDomain() : java.security.ProtectionDomain;
+	@:require(java2) @:overload @:public public function getProtectionDomain() : java.security.ProtectionDomain;
 	
 	/**
 	* Returns the assertion status that would be assigned to this
@@ -1439,7 +1439,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	* @see    java.lang.ClassLoader#setDefaultAssertionStatus
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function desiredAssertionStatus() : Bool;
+	@:require(java4) @:overload @:public public function desiredAssertionStatus() : Bool;
 	
 	/**
 	* Returns true if and only if this class was declared as an enum in the
@@ -1449,7 +1449,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*     source code
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isEnum() : Bool;
+	@:require(java5) @:overload @:public public function isEnum() : Bool;
 	
 	/**
 	* Returns the elements of this enum class or null if this
@@ -1461,7 +1461,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*     represent an enum type
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getEnumConstants() : java.NativeArray<T>;
+	@:require(java5) @:overload @:public public function getEnumConstants() : java.NativeArray<T>;
 	
 	/**
 	* Casts an object to the class or interface represented
@@ -1475,7 +1475,7 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*
 	* @since 1.5
 	*/
-	@:require(java5) //@:overload public function _cast(obj : Dynamic) : T;
+	@:require(java5) //@:overload @:public public function _cast(obj : Dynamic) : T;
 	
 	/**
 	* Casts this {@code Class} object to represent a subclass of the class
@@ -1497,29 +1497,29 @@ extern class Class<T> implements java.io.Serializable implements java.lang.refle
 	*    the class itself).
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function asSubclass<U>(clazz : Class<U>) : Class<U>;
+	@:require(java5) @:overload @:public public function asSubclass<U>(clazz : Class<U>) : Class<U>;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotation<A : java.lang.annotation.Annotation>(annotationClass : Class<A>) : A;
+	@:require(java5) @:overload @:public public function getAnnotation<A : java.lang.annotation.Annotation>(annotationClass : Class<A>) : A;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnnotationPresent(annotationClass : Class<java.lang.annotation.Annotation>) : Bool;
+	@:require(java5) @:overload @:public public function isAnnotationPresent(annotationClass : Class<java.lang.annotation.Annotation>) : Bool;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public public function getAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	
 }

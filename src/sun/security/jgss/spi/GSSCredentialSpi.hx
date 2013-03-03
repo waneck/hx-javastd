@@ -32,7 +32,7 @@ extern interface GSSCredentialSpi
 	*
 	* @author Mayank Upadhyay
 	*/
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
 	/**
 	* Called to invalidate this credential element and release
@@ -41,7 +41,7 @@ extern interface GSSCredentialSpi
 	*
 	* @exception GSSException with major codes NO_CRED and FAILURE
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Returns the principal name for this credential. The name
@@ -50,7 +50,7 @@ extern interface GSSCredentialSpi
 	* @return GSSNameSpi representing principal name of this credential
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getName() : sun.security.jgss.spi.GSSNameSpi;
 	
 	/**
 	* Returns the init lifetime remaining.
@@ -58,7 +58,7 @@ extern interface GSSCredentialSpi
 	* @return the init lifetime remaining in seconds
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getInitLifetime() : Int;
+	@:overload @:public public function getInitLifetime() : Int;
 	
 	/**
 	* Returns the accept lifetime remaining.
@@ -66,21 +66,21 @@ extern interface GSSCredentialSpi
 	* @return the accept lifetime remaining in seconds
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getAcceptLifetime() : Int;
+	@:overload @:public public function getAcceptLifetime() : Int;
 	
 	/**
 	* Determines if this credential element can be used by a context
 	* initiator.
 	* @return true if it can be used for initiating contexts
 	*/
-	@:overload public function isInitiatorCredential() : Bool;
+	@:overload @:public public function isInitiatorCredential() : Bool;
 	
 	/**
 	* Determines if this credential element can be used by a context
 	* acceptor.
 	* @return true if it can be used for accepting contexts
 	*/
-	@:overload public function isAcceptorCredential() : Bool;
+	@:overload @:public public function isAcceptorCredential() : Bool;
 	
 	/**
 	* Returns the oid representing the underlying credential
@@ -89,7 +89,7 @@ extern interface GSSCredentialSpi
 	* @return the Oid for this credential mechanism
 	* @exception GSSException may be thrown
 	*/
-	@:overload public function getMechanism() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMechanism() : org.ietf.jgss.Oid;
 	
 	
 }

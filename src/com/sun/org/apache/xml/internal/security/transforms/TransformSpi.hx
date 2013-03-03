@@ -25,7 +25,7 @@ extern class TransformSpi
 	* For API compatibility not thread safe.
 	* @deprecated
 	*/
-	private var _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform;
+	@:protected private var _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Set the transform object.
@@ -33,7 +33,7 @@ extern class TransformSpi
 	* @param transform the Transform
 	* @deprecated
 	*/
-	@:overload private function setTransform(transform : com.sun.org.apache.xml.internal.security.transforms.Transform) : Void;
+	@:overload @:protected private function setTransform(transform : com.sun.org.apache.xml.internal.security.transforms.Transform) : Void;
 	
 	/**
 	* The mega method which MUST be implemented by the Transformation Algorithm.
@@ -49,7 +49,7 @@ extern class TransformSpi
 	* @throws SAXException
 	* @throws TransformationException
 	*/
-	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:protected private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* The mega method which MUST be implemented by the Transformation Algorithm.
@@ -68,7 +68,7 @@ extern class TransformSpi
 	* @throws SAXException
 	* @throws TransformationException
 	*/
-	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:protected private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* The mega method which MUST be implemented by the Transformation Algorithm.
@@ -82,14 +82,14 @@ extern class TransformSpi
 	* @throws SAXException
 	* @throws TransformationException
 	*/
-	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:protected private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Returns the URI representation of <code>Transformation algorithm</code>
 	*
 	* @return the URI representation of <code>Transformation algorithm</code>
 	*/
-	@:overload @:abstract private function engineGetURI() : String;
+	@:overload @:protected @:abstract private function engineGetURI() : String;
 	
 	
 }

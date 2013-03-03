@@ -26,7 +26,7 @@ extern class TemplatesHandlerImpl implements org.xml.sax.ContentHandler implemen
 	/**
 	* Default constructor
 	*/
-	@:overload private function new(indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
+	@:overload @:protected private function new(indentNumber : Int, tfactory : com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl) : Void;
 	
 	/**
 	* Implements javax.xml.transform.sax.TemplatesHandler.getSystemId()
@@ -34,7 +34,7 @@ extern class TemplatesHandlerImpl implements org.xml.sax.ContentHandler implemen
 	* resolved.
 	* @return The systemID that was set with setSystemId(String id)
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Implements javax.xml.transform.sax.TemplatesHandler.setSystemId()
@@ -42,12 +42,12 @@ extern class TemplatesHandlerImpl implements org.xml.sax.ContentHandler implemen
 	* resolved.
 	* @param id Base URI for this stylesheet
 	*/
-	@:overload public function setSystemId(id : String) : Void;
+	@:overload @:public public function setSystemId(id : String) : Void;
 	
 	/**
 	* Store URIResolver needed for Transformers.
 	*/
-	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* Implements javax.xml.transform.sax.TemplatesHandler.getTemplates()
@@ -58,7 +58,7 @@ extern class TemplatesHandlerImpl implements org.xml.sax.ContentHandler implemen
 	* @return The Templates object that was created during the SAX event
 	*         process, or null if no Templates object has been created.
 	*/
-	@:overload public function getTemplates() : javax.xml.transform.Templates;
+	@:overload @:public public function getTemplates() : javax.xml.transform.Templates;
 	
 	/**
 	* This method implements XSLTC's SourceLoader interface. It is used to
@@ -69,62 +69,62 @@ extern class TemplatesHandlerImpl implements org.xml.sax.ContentHandler implemen
 	* @param xsltc The compiler that resuests the document
 	* @return An InputSource with the loaded document
 	*/
-	@:overload public function loadSource(href : String, context : String, xsltc : com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC) : org.xml.sax.InputSource;
+	@:overload @:public public function loadSource(href : String, context : String, xsltc : com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC) : org.xml.sax.InputSource;
 	
 	/**
 	* Re-initialize parser and forward SAX2 event.
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function startElement(uri : String, localname : String, qname : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localname : String, qname : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function endElement(uri : String, localname : String, qname : String) : Void;
+	@:overload @:public public function endElement(uri : String, localname : String, qname : String) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function processingInstruction(name : String, value : String) : Void;
+	@:overload @:public public function processingInstruction(name : String, value : String) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Just forward SAX2 event to parser object.
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Set internal system Id and forward SAX2 event to parser object.
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	
 }

@@ -7,13 +7,13 @@ package org.omg.Dynamic;
 */
 extern class Parameter implements org.omg.CORBA.portable.IDLEntity
 {
-	public var argument : org.omg.CORBA.Any;
+	@:public public var argument : org.omg.CORBA.Any;
 	
-	public var mode : org.omg.CORBA.ParameterMode;
+	@:public public var mode : org.omg.CORBA.ParameterMode;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_argument : org.omg.CORBA.Any, _mode : org.omg.CORBA.ParameterMode) : Void;
+	@:overload @:public public function new(_argument : org.omg.CORBA.Any, _mode : org.omg.CORBA.ParameterMode) : Void;
 	
 	
 }

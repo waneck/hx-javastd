@@ -38,7 +38,7 @@ package javax.management;
 	*
 	* @param e the wrapped exception.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Creates an <CODE>MBeanException</CODE> that wraps the actual <CODE>java.lang.Exception</CODE> with
@@ -47,21 +47,21 @@ package javax.management;
 	* @param e the wrapped exception.
 	* @param message the detail message.
 	*/
-	@:overload public function new(e : java.lang.Exception, message : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, message : String) : Void;
 	
 	/**
 	* Return the actual {@link Exception} thrown.
 	*
 	* @return the wrapped exception.
 	*/
-	@:overload public function getTargetException() : java.lang.Exception;
+	@:overload @:public public function getTargetException() : java.lang.Exception;
 	
 	/**
 	* Return the actual {@link Exception} thrown.
 	*
 	* @return the wrapped exception.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

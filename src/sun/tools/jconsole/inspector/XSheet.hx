@@ -25,24 +25,24 @@ package sun.tools.jconsole.inspector;
 */
 extern class XSheet extends javax.swing.JPanel implements java.awt.event.ActionListener implements javax.management.NotificationListener
 {
-	@:overload public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function isMBeanNode(node : javax.swing.tree.DefaultMutableTreeNode) : Bool;
+	@:overload @:public public function isMBeanNode(node : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
-	@:overload @:synchronized public function displayNode(node : javax.swing.tree.DefaultMutableTreeNode) : Void;
+	@:overload @:public @:synchronized public function displayNode(node : javax.swing.tree.DefaultMutableTreeNode) : Void;
 	
 	/**
 	* Notification listener: handles asynchronous reception
 	* of MBean operation results and MBean notifications.
 	*/
-	@:overload public function handleNotification(e : javax.management.Notification, handback : Dynamic) : Void;
+	@:overload @:public public function handleNotification(e : javax.management.Notification, handback : Dynamic) : Void;
 	
 	/**
 	* Action listener: handles actions in panel buttons
 	*/
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

@@ -33,9 +33,9 @@ package com.sun.tools.javac.util;
 */
 extern class Abort extends java.lang.Error
 {
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

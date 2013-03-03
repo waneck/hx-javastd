@@ -43,43 +43,43 @@ extern interface HTMLElement extends org.w3c.dom.Element
 	/**
 	*  The element's identifier. See the  id attribute definition in HTML 4.0.
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function setId(id : String) : Void;
+	@:overload @:public public function setId(id : String) : Void;
 	
 	/**
 	*  The element's advisory title. See the  title attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getTitle() : String;
+	@:overload @:public public function getTitle() : String;
 	
-	@:overload public function setTitle(title : String) : Void;
+	@:overload @:public public function setTitle(title : String) : Void;
 	
 	/**
 	*  Language code defined in RFC 1766. See the  lang attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getLang() : String;
+	@:overload @:public public function getLang() : String;
 	
-	@:overload public function setLang(lang : String) : Void;
+	@:overload @:public public function setLang(lang : String) : Void;
 	
 	/**
 	*  Specifies the base direction of directionally neutral text and the
 	* directionality of tables. See the  dir attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getDir() : String;
+	@:overload @:public public function getDir() : String;
 	
-	@:overload public function setDir(dir : String) : Void;
+	@:overload @:public public function setDir(dir : String) : Void;
 	
 	/**
 	*  The class attribute of the element. This attribute has been renamed
 	* due to conflicts with the "class" keyword exposed by many languages.
 	* See the  class attribute definition in HTML 4.0.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
-	@:overload public function setClassName(className : String) : Void;
+	@:overload @:public public function setClassName(className : String) : Void;
 	
 	
 }

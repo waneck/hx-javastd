@@ -29,9 +29,9 @@ package sun.nio.cs.ext;
 }
 @:native('sun$nio$cs$ext$CompoundTextSupport$ControlSequence') @:internal extern class CompoundTextSupport_ControlSequence
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

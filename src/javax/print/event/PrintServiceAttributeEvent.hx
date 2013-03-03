@@ -33,14 +33,14 @@ extern class PrintServiceAttributeEvent extends javax.print.event.PrintEvent
 	* @throws IllegalArgumentException if <code>source</code> is
 	*         <code>null</code>.
 	*/
-	@:overload public function new(source : javax.print.PrintService, attributes : javax.print.attribute.PrintServiceAttributeSet) : Void;
+	@:overload @:public public function new(source : javax.print.PrintService, attributes : javax.print.attribute.PrintServiceAttributeSet) : Void;
 	
 	/**
 	* Returns the print service.
 
 	* @return  Print Service object.
 	*/
-	@:overload public function getPrintService() : javax.print.PrintService;
+	@:overload @:public public function getPrintService() : javax.print.PrintService;
 	
 	/**
 	* Determine the printing service attributes that changed and their new
@@ -49,7 +49,7 @@ extern class PrintServiceAttributeEvent extends javax.print.event.PrintEvent
 	* @return  Attributes containing the new values for the service
 	* attributes that changed. The returned set may be unmodifiable.
 	*/
-	@:overload public function getAttributes() : javax.print.attribute.PrintServiceAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintServiceAttributeSet;
 	
 	
 }

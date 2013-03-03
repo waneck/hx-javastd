@@ -48,7 +48,7 @@ package java.rmi.server;
 	* Constructs an <code>RMISocketFactory</code>.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a client socket connected to the specified host and port.
@@ -58,7 +58,7 @@ package java.rmi.server;
 	* @exception IOException if an I/O error occurs during socket creation
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:require(java1) @:overload @:public @:abstract public function createSocket(host : String, port : Int) : java.net.Socket;
 	
 	/**
 	* Create a server socket on the specified port (port 0 indicates
@@ -69,7 +69,7 @@ package java.rmi.server;
 	* creation
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:abstract public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:require(java1) @:overload @:public @:abstract public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	/**
 	* Set the global socket factory from which RMI gets sockets (if the
@@ -86,7 +86,7 @@ package java.rmi.server;
 	* @see java.lang.SecurityManager#checkSetFactory()
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function setSocketFactory(fac : java.rmi.server.RMISocketFactory) : Void;
+	@:require(java1) @:overload @:public @:synchronized @:static public static function setSocketFactory(fac : java.rmi.server.RMISocketFactory) : Void;
 	
 	/**
 	* Returns the socket factory set by the <code>setSocketFactory</code>
@@ -96,7 +96,7 @@ package java.rmi.server;
 	* @see #setSocketFactory(RMISocketFactory)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function getSocketFactory() : java.rmi.server.RMISocketFactory;
+	@:require(java1) @:overload @:public @:synchronized @:static public static function getSocketFactory() : java.rmi.server.RMISocketFactory;
 	
 	/**
 	* Returns a reference to the default socket factory used
@@ -106,7 +106,7 @@ package java.rmi.server;
 	* @return the default RMI socket factory
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function getDefaultSocketFactory() : java.rmi.server.RMISocketFactory;
+	@:require(java1) @:overload @:public @:synchronized @:static public static function getDefaultSocketFactory() : java.rmi.server.RMISocketFactory;
 	
 	/**
 	* Sets the failure handler to be called by the RMI runtime if server
@@ -127,7 +127,7 @@ package java.rmi.server;
 	* @see java.rmi.server.RMIFailureHandler#failure(Exception)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function setFailureHandler(fh : java.rmi.server.RMIFailureHandler) : Void;
+	@:require(java1) @:overload @:public @:synchronized @:static public static function setFailureHandler(fh : java.rmi.server.RMIFailureHandler) : Void;
 	
 	/**
 	* Returns the handler for socket creation failure set by the
@@ -136,7 +136,7 @@ package java.rmi.server;
 	* @see #setFailureHandler(RMIFailureHandler)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function getFailureHandler() : java.rmi.server.RMIFailureHandler;
+	@:require(java1) @:overload @:public @:synchronized @:static public static function getFailureHandler() : java.rmi.server.RMIFailureHandler;
 	
 	
 }

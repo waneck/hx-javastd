@@ -51,7 +51,7 @@ package java.beans;
 	* @param newValue      The new value of the property.
 	* @param index index of the property element that was changed.
 	*/
-	@:overload public function new(source : Dynamic, propertyName : String, oldValue : Dynamic, newValue : Dynamic, index : Int) : Void;
+	@:overload @:public public function new(source : Dynamic, propertyName : String, oldValue : Dynamic, newValue : Dynamic, index : Int) : Void;
 	
 	/**
 	* Gets the index of the property that was changed.
@@ -59,7 +59,7 @@ package java.beans;
 	* @return The index specifying the property element that was
 	*         changed.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	
 }

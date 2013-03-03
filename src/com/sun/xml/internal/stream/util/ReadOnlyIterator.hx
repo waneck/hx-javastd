@@ -29,21 +29,21 @@ package com.sun.xml.internal.stream.util;
 */
 extern class ReadOnlyIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(itr : java.util.Iterator<Dynamic>) : Void;
-	
-	/**
-	* @return
-	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function new(itr : java.util.Iterator<Dynamic>) : Void;
 	
 	/**
 	* @return
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function remove() : Void;
+	/**
+	* @return
+	*/
+	@:overload @:public public function next() : Dynamic;
+	
+	@:overload @:public public function remove() : Void;
 	
 	
 }

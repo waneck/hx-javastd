@@ -29,39 +29,39 @@ extern class BasicStroke implements java.awt.Stroke
 	* Joins path segments by extending their outside edges until
 	* they meet.
 	*/
-	public static var JOIN_MITER(default, null) : Int;
+	@:public @:final @:static public static var JOIN_MITER(default, null) : Int;
 	
 	/**
 	* Joins path segments by rounding off the corner at a radius
 	* of half the line width.
 	*/
-	public static var JOIN_ROUND(default, null) : Int;
+	@:public @:final @:static public static var JOIN_ROUND(default, null) : Int;
 	
 	/**
 	* Joins path segments by connecting the outer corners of their
 	* wide outlines with a straight segment.
 	*/
-	public static var JOIN_BEVEL(default, null) : Int;
+	@:public @:final @:static public static var JOIN_BEVEL(default, null) : Int;
 	
 	/**
 	* Ends unclosed subpaths and dash segments with no added
 	* decoration.
 	*/
-	public static var CAP_BUTT(default, null) : Int;
+	@:public @:final @:static public static var CAP_BUTT(default, null) : Int;
 	
 	/**
 	* Ends unclosed subpaths and dash segments with a round
 	* decoration that has a radius equal to half of the width
 	* of the pen.
 	*/
-	public static var CAP_ROUND(default, null) : Int;
+	@:public @:final @:static public static var CAP_ROUND(default, null) : Int;
 	
 	/**
 	* Ends unclosed subpaths and dash segments with a square
 	* projection that extends beyond the end of the segment
 	* to a distance equal to half of the line width.
 	*/
-	public static var CAP_SQUARE(default, null) : Int;
+	@:public @:final @:static public static var CAP_SQUARE(default, null) : Int;
 	
 	/**
 	* Constructs a new <code>BasicStroke</code> with the specified
@@ -90,7 +90,7 @@ extern class BasicStroke implements java.awt.Stroke
 	*         <code>dash</code> is zero
 	* @throws IllegalArgumentException if dash lengths are all zero.
 	*/
-	@:overload public function new(width : Single, cap : Int, join : Int, miterlimit : Single, dash : java.NativeArray<Single>, dash_phase : Single) : Void;
+	@:overload @:public public function new(width : Single, cap : Int, join : Int, miterlimit : Single, dash : java.NativeArray<Single>, dash_phase : Single) : Void;
 	
 	/**
 	* Constructs a solid <code>BasicStroke</code> with the specified
@@ -107,7 +107,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* @throws IllegalArgumentException if <code>join</code> is not
 	*         either JOIN_ROUND, JOIN_BEVEL, or JOIN_MITER
 	*/
-	@:overload public function new(width : Single, cap : Int, join : Int, miterlimit : Single) : Void;
+	@:overload @:public public function new(width : Single, cap : Int, join : Int, miterlimit : Single) : Void;
 	
 	/**
 	* Constructs a solid <code>BasicStroke</code> with the specified
@@ -123,7 +123,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* @throws IllegalArgumentException if <code>join</code> is not
 	*         either JOIN_ROUND, JOIN_BEVEL, or JOIN_MITER
 	*/
-	@:overload public function new(width : Single, cap : Int, join : Int) : Void;
+	@:overload @:public public function new(width : Single, cap : Int, join : Int) : Void;
 	
 	/**
 	* Constructs a solid <code>BasicStroke</code> with the specified
@@ -132,7 +132,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* @param width the width of the <code>BasicStroke</code>
 	* @throws IllegalArgumentException if <code>width</code> is negative
 	*/
-	@:overload public function new(width : Single) : Void;
+	@:overload @:public public function new(width : Single) : Void;
 	
 	/**
 	* Constructs a new <code>BasicStroke</code> with defaults for all
@@ -140,7 +140,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* The default attributes are a solid line of width 1.0, CAP_SQUARE,
 	* JOIN_MITER, a miter limit of 10.0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a <code>Shape</code> whose interior defines the
@@ -148,7 +148,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* @param s the <code>Shape</code> boundary be stroked
 	* @return the <code>Shape</code> of the stroked outline.
 	*/
-	@:overload public function createStrokedShape(s : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public public function createStrokedShape(s : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Returns the line width.  Line width is represented in user space,
@@ -158,7 +158,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* @return the line width of this <code>BasicStroke</code>.
 	* @see Graphics2D
 	*/
-	@:overload public function getLineWidth() : Single;
+	@:overload @:public public function getLineWidth() : Single;
 	
 	/**
 	* Returns the end cap style.
@@ -166,7 +166,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* of the static <code>int</code> values that define possible end cap
 	* styles.
 	*/
-	@:overload public function getEndCap() : Int;
+	@:overload @:public public function getEndCap() : Int;
 	
 	/**
 	* Returns the line join style.
@@ -174,13 +174,13 @@ extern class BasicStroke implements java.awt.Stroke
 	* of the static <code>int</code> values that define possible line
 	* join styles.
 	*/
-	@:overload public function getLineJoin() : Int;
+	@:overload @:public public function getLineJoin() : Int;
 	
 	/**
 	* Returns the limit of miter joins.
 	* @return the limit of miter joins of the <code>BasicStroke</code>.
 	*/
-	@:overload public function getMiterLimit() : Single;
+	@:overload @:public public function getMiterLimit() : Single;
 	
 	/**
 	* Returns the array representing the lengths of the dash segments.
@@ -194,7 +194,7 @@ extern class BasicStroke implements java.awt.Stroke
 	* to an even element of the dash array and transparent otherwise.
 	* @return the dash array.
 	*/
-	@:overload public function getDashArray() : java.NativeArray<Single>;
+	@:overload @:public public function getDashArray() : java.NativeArray<Single>;
 	
 	/**
 	* Returns the current dash phase.
@@ -204,13 +204,13 @@ extern class BasicStroke implements java.awt.Stroke
 	* the beginning of the stroke.
 	* @return the dash phase as a <code>float</code> value.
 	*/
-	@:overload public function getDashPhase() : Single;
+	@:overload @:public public function getDashPhase() : Single;
 	
 	/**
 	* Returns the hashcode for this stroke.
 	* @return      a hash code for this stroke.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests if a specified object is equal to this <code>BasicStroke</code>
@@ -223,7 +223,7 @@ extern class BasicStroke implements java.awt.Stroke
 	*            dash phase are the same for both objects;
 	*            <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

@@ -34,34 +34,34 @@ extern class PropertyManager
 	* @author K.Venugopal@sun.com
 	* @author Sunitha Reddy, sunitha.reddy@sun.com
 	*/
-	public static var STAX_NOTATIONS(default, null) : String;
+	@:public @:static @:final public static var STAX_NOTATIONS(default, null) : String;
 	
-	public static var STAX_ENTITIES(default, null) : String;
+	@:public @:static @:final public static var STAX_ENTITIES(default, null) : String;
 	
-	public static var CONTEXT_READER(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_READER(default, null) : Int;
 	
-	public static var CONTEXT_WRITER(default, null) : Int;
+	@:public @:static @:final public static var CONTEXT_WRITER(default, null) : Int;
 	
 	/** Creates a new instance of PropertyManager */
-	@:overload public function new(context : Int) : Void;
+	@:overload @:public public function new(context : Int) : Void;
 	
 	/**
 	* Initialize this object with the properties taken from passed PropertyManager object.
 	*/
-	@:overload public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* public void reset(){
 	* supportedProps.clear() ;
 	* }
 	*/
-	@:overload public function containsProperty(property : String) : Bool;
+	@:overload @:public public function containsProperty(property : String) : Bool;
 	
-	@:overload public function getProperty(property : String) : Dynamic;
+	@:overload @:public public function getProperty(property : String) : Dynamic;
 	
-	@:overload public function setProperty(property : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(property : String, value : Dynamic) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

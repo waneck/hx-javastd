@@ -34,7 +34,7 @@ extern interface TlsMasterSecret extends javax.crypto.SecretKey
 	*
 	* @return the major version number, or -1 if it is not available
 	*/
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
 	/**
 	* Returns the minor version number encapsulated in the premaster secret
@@ -45,7 +45,7 @@ extern interface TlsMasterSecret extends javax.crypto.SecretKey
 	*
 	* @return the major version number, or -1 if it is not available
 	*/
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
 	
 }

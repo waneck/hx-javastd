@@ -47,7 +47,7 @@ package java.util.logging;
 	* @param record the log record to be formatted.
 	* @return a formatted log record
 	*/
-	@:overload public function format(record : java.util.logging.LogRecord) : String;
+	@:overload @:public public function format(record : java.util.logging.LogRecord) : String;
 	
 	/**
 	* Return the header string for a set of XML formatted records.
@@ -55,7 +55,7 @@ package java.util.logging;
 	* @param   h  The target handler (can be null)
 	* @return  a valid XML string
 	*/
-	@:overload public function getHead(h : java.util.logging.Handler) : String;
+	@:overload @:public public function getHead(h : java.util.logging.Handler) : String;
 	
 	/**
 	* Return the tail string for a set of XML formatted records.
@@ -63,7 +63,7 @@ package java.util.logging;
 	* @param   h  The target handler (can be null)
 	* @return  a valid XML string
 	*/
-	@:overload public function getTail(h : java.util.logging.Handler) : String;
+	@:overload @:public public function getTail(h : java.util.logging.Handler) : String;
 	
 	
 }

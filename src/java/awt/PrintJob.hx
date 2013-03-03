@@ -41,37 +41,37 @@ extern class PrintJob
 	* the PrintGraphics interface.
 	* @see PrintGraphics
 	*/
-	@:overload @:abstract public function getGraphics() : java.awt.Graphics;
+	@:overload @:public @:abstract public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Returns the dimensions of the page in pixels.
 	* The resolution of the page is chosen so that it
 	* is similar to the screen resolution.
 	*/
-	@:overload @:abstract public function getPageDimension() : java.awt.Dimension;
+	@:overload @:public @:abstract public function getPageDimension() : java.awt.Dimension;
 	
 	/**
 	* Returns the resolution of the page in pixels per inch.
 	* Note that this doesn't have to correspond to the physical
 	* resolution of the printer.
 	*/
-	@:overload @:abstract public function getPageResolution() : Int;
+	@:overload @:public @:abstract public function getPageResolution() : Int;
 	
 	/**
 	* Returns true if the last page will be printed first.
 	*/
-	@:overload @:abstract public function lastPageFirst() : Bool;
+	@:overload @:public @:abstract public function lastPageFirst() : Bool;
 	
 	/**
 	* Ends the print job and does any necessary cleanup.
 	*/
-	@:overload @:abstract public function end() : Void;
+	@:overload @:public @:abstract public function end() : Void;
 	
 	/**
 	* Ends this print job once it is no longer referenced.
 	* @see #end
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	
 }

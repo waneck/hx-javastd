@@ -37,7 +37,7 @@ extern class UnsupportedFlavorException extends java.lang.Exception
 	* @param flavor the flavor object which caused the exception. May
 	*        be <code>null</code>.
 	*/
-	@:overload public function new(flavor : java.awt.datatransfer.DataFlavor) : Void;
+	@:overload @:public public function new(flavor : java.awt.datatransfer.DataFlavor) : Void;
 	
 	
 }

@@ -39,7 +39,7 @@ package java.rmi.activation;
 	* @param s the detail message
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(s : String) : Void;
+	@:require(java2) @:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs an <code>ActivateFailedException</code> with the specified
@@ -49,7 +49,7 @@ package java.rmi.activation;
 	* @param ex the nested exception
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(s : String, ex : java.lang.Exception) : Void;
+	@:require(java2) @:overload @:public public function new(s : String, ex : java.lang.Exception) : Void;
 	
 	
 }

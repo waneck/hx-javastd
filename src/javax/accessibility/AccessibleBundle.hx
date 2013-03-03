@@ -25,14 +25,14 @@ package javax.accessibility;
 */
 extern class AccessibleBundle
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The locale independent name of the state.  This is a programmatic
 	* name that is not intended to be read by humans.
 	* @see #toDisplayString
 	*/
-	private var key : String;
+	@:protected private var key : String;
 	
 	/**
 	* Obtains the key as a localized string.
@@ -46,7 +46,7 @@ extern class AccessibleBundle
 	* @param locale the locale for which to obtain a localized string
 	* @return a localized String for the key.
 	*/
-	@:overload private function toDisplayString(resourceBundleName : String, locale : java.util.Locale) : String;
+	@:overload @:protected private function toDisplayString(resourceBundleName : String, locale : java.util.Locale) : String;
 	
 	/**
 	* Obtains the key as a localized string.
@@ -56,20 +56,20 @@ extern class AccessibleBundle
 	* @param locale the locale for which to obtain a localized string
 	* @return a localized String for the key.
 	*/
-	@:overload public function toDisplayString(locale : java.util.Locale) : String;
+	@:overload @:public public function toDisplayString(locale : java.util.Locale) : String;
 	
 	/**
 	* Gets localized string describing the key using the default locale.
 	* @return a localized String describing the key for the default locale
 	*/
-	@:overload public function toDisplayString() : String;
+	@:overload @:public public function toDisplayString() : String;
 	
 	/**
 	* Gets localized string describing the key using the default locale.
 	* @return a localized String describing the key using the default locale
 	* @see #toDisplayString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

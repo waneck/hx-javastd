@@ -46,7 +46,7 @@ package java.io;
 	* @exception IOException If any of the usual Input/Output
 	* related exceptions occur.
 	*/
-	@:overload public function readObject() : Dynamic;
+	@:overload @:public public function readObject() : Dynamic;
 	
 	/**
 	* Reads a byte of data. This method will block if no input is
@@ -55,7 +55,7 @@ package java.io;
 	*          stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public public function read() : Int;
 	
 	/**
 	* Reads into an array of bytes.  This method will
@@ -65,7 +65,7 @@ package java.io;
 	*          returned when the end of the stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads into an array of bytes.  This method will
@@ -77,7 +77,7 @@ package java.io;
 	*          returned when the end of the stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips n bytes of input.
@@ -85,7 +85,7 @@ package java.io;
 	* @return  the actual number of bytes skipped.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that can be read
@@ -93,7 +93,7 @@ package java.io;
 	* @return the number of available bytes.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public public function available() : Int;
 	
 	/**
 	* Closes the input stream. Must be called
@@ -101,7 +101,7 @@ package java.io;
 	* the stream.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

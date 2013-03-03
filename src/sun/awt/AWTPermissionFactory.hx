@@ -28,7 +28,7 @@ extern class AWTPermissionFactory implements sun.security.util.PermissionFactory
 	/**
 	* A factory object for AWTPermission objects.
 	*/
-	@:overload public function newPermission(name : String) : java.awt.AWTPermission;
+	@:overload @:public public function newPermission(name : String) : java.awt.AWTPermission;
 	
 	
 }

@@ -57,7 +57,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	* @see ThreadMXBean#isThreadCpuTimeEnabled
 	* @see ThreadMXBean#setThreadCpuTimeEnabled
 	*/
-	@:overload public function getThreadCpuTime(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getThreadCpuTime(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Returns the CPU time that each thread whose ID is in the input array
@@ -91,7 +91,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	* @see ThreadMXBean#isThreadCpuTimeEnabled
 	* @see ThreadMXBean#setThreadCpuTimeEnabled
 	*/
-	@:overload public function getThreadUserTime(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getThreadUserTime(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Returns an approximation of the total amount of memory, in bytes,
@@ -127,7 +127,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	* @see #isThreadAllocatedMemoryEnabled
 	* @see #setThreadAllocatedMemoryEnabled
 	*/
-	@:overload public function getThreadAllocatedBytes(id : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getThreadAllocatedBytes(id : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns an approximation of the total amount of memory, in bytes,
@@ -160,7 +160,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	* @see #isThreadAllocatedMemoryEnabled
 	* @see #setThreadAllocatedMemoryEnabled
 	*/
-	@:overload public function getThreadAllocatedBytes(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getThreadAllocatedBytes(ids : java.NativeArray<haxe.Int64>) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Tests if the Java virtual machine implementation supports thread memory
@@ -172,7 +172,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	*     allocation measurement;
 	*   {@code false} otherwise.
 	*/
-	@:overload public function isThreadAllocatedMemorySupported() : Bool;
+	@:overload @:public public function isThreadAllocatedMemorySupported() : Bool;
 	
 	/**
 	* Tests if thread memory allocation measurement is enabled.
@@ -185,7 +185,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	*
 	* @see #isThreadAllocatedMemorySupported
 	*/
-	@:overload public function isThreadAllocatedMemoryEnabled() : Bool;
+	@:overload @:public public function isThreadAllocatedMemoryEnabled() : Bool;
 	
 	/**
 	* Enables or disables thread memory allocation measurement.  The default
@@ -203,7 +203,7 @@ extern interface ThreadMXBean extends java.lang.management.ThreadMXBean
 	*
 	* @see #isThreadAllocatedMemorySupported
 	*/
-	@:overload public function setThreadAllocatedMemoryEnabled(enable : Bool) : Void;
+	@:overload @:public public function setThreadAllocatedMemoryEnabled(enable : Bool) : Void;
 	
 	
 }

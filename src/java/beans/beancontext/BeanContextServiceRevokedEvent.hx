@@ -32,21 +32,21 @@ extern class BeanContextServiceRevokedEvent extends java.beans.beancontext.BeanC
 	* @param sc the service that is being revoked
 	* @param invalidate <code>true</code> for immediate revocation
 	*/
-	@:overload public function new(bcs : java.beans.beancontext.BeanContextServices, sc : Class<Dynamic>, invalidate : Bool) : Void;
+	@:overload @:public public function new(bcs : java.beans.beancontext.BeanContextServices, sc : Class<Dynamic>, invalidate : Bool) : Void;
 	
 	/**
 	* Gets the source as a reference of type <code>BeanContextServices</code>
 	* @return the <code>BeanContextServices</code> from which
 	* this service is being revoked
 	*/
-	@:overload public function getSourceAsBeanContextServices() : java.beans.beancontext.BeanContextServices;
+	@:overload @:public public function getSourceAsBeanContextServices() : java.beans.beancontext.BeanContextServices;
 	
 	/**
 	* Gets the service class that is the subject of this notification
 	* @return A <code>Class</code> reference to the
 	* service that is being revoked
 	*/
-	@:overload public function getServiceClass() : Class<Dynamic>;
+	@:overload @:public public function getServiceClass() : Class<Dynamic>;
 	
 	/**
 	* Checks this event to determine whether or not
@@ -55,19 +55,19 @@ extern class BeanContextServiceRevokedEvent extends java.beans.beancontext.BeanC
 	* @return <code>true</code> if the service being revoked is of the
 	* same class as the specified service
 	*/
-	@:overload public function isServiceClass(service : Class<Dynamic>) : Bool;
+	@:overload @:public public function isServiceClass(service : Class<Dynamic>) : Bool;
 	
 	/**
 	* Reports if the current service is being forcibly revoked,
 	* in which case the references are now invalidated and unusable.
 	* @return <code>true</code> if current service is being forcibly revoked
 	*/
-	@:overload public function isCurrentServiceInvalidNow() : Bool;
+	@:overload @:public public function isCurrentServiceInvalidNow() : Bool;
 	
 	/**
 	* A <code>Class</code> reference to the service that is being revoked.
 	*/
-	private var serviceClass : Class<Dynamic>;
+	@:protected private var serviceClass : Class<Dynamic>;
 	
 	
 }

@@ -28,34 +28,34 @@ extern class XMenuItemPeer implements java.awt.peer.MenuItemPeer
 	/*
 	* From MenuComponentPeer
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public public function setFont(font : java.awt.Font) : Void;
 	
 	/*
 	* From MenuItemPeer
 	*/
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
-	@:overload public function setEnabled(enabled : Bool) : Void;
-	
-	/**
-	* DEPRECATED:  Replaced by setEnabled(boolean).
-	* @see java.awt.peer.MenuItemPeer
-	*/
-	@:overload public function enable() : Void;
+	@:overload @:public public function setEnabled(enabled : Bool) : Void;
 	
 	/**
 	* DEPRECATED:  Replaced by setEnabled(boolean).
 	* @see java.awt.peer.MenuItemPeer
 	*/
-	@:overload public function disable() : Void;
+	@:overload @:public public function enable() : Void;
+	
+	/**
+	* DEPRECATED:  Replaced by setEnabled(boolean).
+	* @see java.awt.peer.MenuItemPeer
+	*/
+	@:overload @:public public function disable() : Void;
 	
 	
 }
 @:native('sun$awt$X11$XMenuItemPeer$TextMetrics') @:internal extern class XMenuItemPeer_TextMetrics implements java.lang.Cloneable
 {
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

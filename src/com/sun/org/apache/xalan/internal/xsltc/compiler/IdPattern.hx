@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class IdPattern extends com.sun.org.apache.xalan.internal.xsltc.compiler.IdKeyPattern
 {
-	@:overload public function new(id : String) : Void;
+	@:overload @:public public function new(id : String) : Void;
 	
 	
 }

@@ -25,29 +25,29 @@ package sun.management;
 */
 extern class Agent
 {
-	@:overload public static function premain(args : String) : Void;
+	@:overload @:public @:static public static function premain(args : String) : Void;
 	
-	@:overload public static function agentmain(args : String) : Void;
+	@:overload @:public @:static public static function agentmain(args : String) : Void;
 	
-	@:overload public static function loadManagementProperties() : java.util.Properties;
+	@:overload @:public @:static public static function loadManagementProperties() : java.util.Properties;
 	
-	@:overload @:synchronized public static function getManagementProperties() : java.util.Properties;
+	@:overload @:public @:static @:synchronized public static function getManagementProperties() : java.util.Properties;
 	
-	@:overload public static function startAgent() : Void;
+	@:overload @:public @:static public static function startAgent() : Void;
 	
-	@:overload public static function error(key : String) : Void;
+	@:overload @:public @:static public static function error(key : String) : Void;
 	
-	@:overload public static function error(key : String, params : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function error(key : String, params : java.NativeArray<String>) : Void;
 	
-	@:overload public static function error(key : String, message : String) : Void;
+	@:overload @:public @:static public static function error(key : String, message : String) : Void;
 	
-	@:overload public static function error(e : java.lang.Exception) : Void;
+	@:overload @:public @:static public static function error(e : java.lang.Exception) : Void;
 	
-	@:overload public static function warning(key : String, message : String) : Void;
+	@:overload @:public @:static public static function warning(key : String, message : String) : Void;
 	
-	@:overload public static function getText(key : String) : String;
+	@:overload @:public @:static public static function getText(key : String) : String;
 	
-	@:overload public static function getText(key : String, args : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function getText(key : String, args : java.NativeArray<String>) : String;
 	
 	
 }

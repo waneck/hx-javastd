@@ -34,79 +34,79 @@ extern class DLSRegion
 	*
 	* @author Karl Helgason
 	*/
-	public static var OPTION_SELFNONEXCLUSIVE(default, null) : Int;
+	@:public @:final @:static public static var OPTION_SELFNONEXCLUSIVE(default, null) : Int;
 	
-	private var modulators : java.util.List<com.sun.media.sound.DLSModulator>;
+	@:protected private var modulators : java.util.List<com.sun.media.sound.DLSModulator>;
 	
-	private var keyfrom : Int;
+	@:protected private var keyfrom : Int;
 	
-	private var keyto : Int;
+	@:protected private var keyto : Int;
 	
-	private var velfrom : Int;
+	@:protected private var velfrom : Int;
 	
-	private var velto : Int;
+	@:protected private var velto : Int;
 	
-	private var options : Int;
+	@:protected private var options : Int;
 	
-	private var exclusiveClass : Int;
+	@:protected private var exclusiveClass : Int;
 	
-	private var fusoptions : Int;
+	@:protected private var fusoptions : Int;
 	
-	private var phasegroup : Int;
+	@:protected private var phasegroup : Int;
 	
-	private var channel : haxe.Int64;
+	@:protected private var channel : haxe.Int64;
 	
-	private var sample : com.sun.media.sound.DLSSample;
+	@:protected private var sample : com.sun.media.sound.DLSSample;
 	
-	private var sampleoptions : com.sun.media.sound.DLSSampleOptions;
+	@:protected private var sampleoptions : com.sun.media.sound.DLSSampleOptions;
 	
-	@:overload public function getModulators() : java.util.List<com.sun.media.sound.DLSModulator>;
+	@:overload @:public public function getModulators() : java.util.List<com.sun.media.sound.DLSModulator>;
 	
-	@:overload public function getChannel() : haxe.Int64;
+	@:overload @:public public function getChannel() : haxe.Int64;
 	
-	@:overload public function setChannel(channel : haxe.Int64) : Void;
+	@:overload @:public public function setChannel(channel : haxe.Int64) : Void;
 	
-	@:overload public function getExclusiveClass() : Int;
+	@:overload @:public public function getExclusiveClass() : Int;
 	
-	@:overload public function setExclusiveClass(exclusiveClass : Int) : Void;
+	@:overload @:public public function setExclusiveClass(exclusiveClass : Int) : Void;
 	
-	@:overload public function getFusoptions() : Int;
+	@:overload @:public public function getFusoptions() : Int;
 	
-	@:overload public function setFusoptions(fusoptions : Int) : Void;
+	@:overload @:public public function setFusoptions(fusoptions : Int) : Void;
 	
-	@:overload public function getKeyfrom() : Int;
+	@:overload @:public public function getKeyfrom() : Int;
 	
-	@:overload public function setKeyfrom(keyfrom : Int) : Void;
+	@:overload @:public public function setKeyfrom(keyfrom : Int) : Void;
 	
-	@:overload public function getKeyto() : Int;
+	@:overload @:public public function getKeyto() : Int;
 	
-	@:overload public function setKeyto(keyto : Int) : Void;
+	@:overload @:public public function setKeyto(keyto : Int) : Void;
 	
-	@:overload public function getOptions() : Int;
+	@:overload @:public public function getOptions() : Int;
 	
-	@:overload public function setOptions(options : Int) : Void;
+	@:overload @:public public function setOptions(options : Int) : Void;
 	
-	@:overload public function getPhasegroup() : Int;
+	@:overload @:public public function getPhasegroup() : Int;
 	
-	@:overload public function setPhasegroup(phasegroup : Int) : Void;
+	@:overload @:public public function setPhasegroup(phasegroup : Int) : Void;
 	
-	@:overload public function getSample() : com.sun.media.sound.DLSSample;
+	@:overload @:public public function getSample() : com.sun.media.sound.DLSSample;
 	
-	@:overload public function setSample(sample : com.sun.media.sound.DLSSample) : Void;
+	@:overload @:public public function setSample(sample : com.sun.media.sound.DLSSample) : Void;
 	
-	@:overload public function getVelfrom() : Int;
+	@:overload @:public public function getVelfrom() : Int;
 	
-	@:overload public function setVelfrom(velfrom : Int) : Void;
+	@:overload @:public public function setVelfrom(velfrom : Int) : Void;
 	
-	@:overload public function getVelto() : Int;
+	@:overload @:public public function getVelto() : Int;
 	
-	@:overload public function setVelto(velto : Int) : Void;
+	@:overload @:public public function setVelto(velto : Int) : Void;
 	
-	@:overload public function setModulators(modulators : java.util.List<com.sun.media.sound.DLSModulator>) : Void;
+	@:overload @:public public function setModulators(modulators : java.util.List<com.sun.media.sound.DLSModulator>) : Void;
 	
-	@:overload public function getSampleoptions() : com.sun.media.sound.DLSSampleOptions;
+	@:overload @:public public function getSampleoptions() : com.sun.media.sound.DLSSampleOptions;
 	
-	@:overload public function setSampleoptions(sampleOptions : com.sun.media.sound.DLSSampleOptions) : Void;
+	@:overload @:public public function setSampleoptions(sampleOptions : com.sun.media.sound.DLSSampleOptions) : Void;
 	
 	
 }

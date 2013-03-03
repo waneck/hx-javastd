@@ -72,7 +72,7 @@ package java.awt;
 	* @see       #select(int)
 	* @see       #select(java.lang.String)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates the <code>Choice</code>'s peer.  This peer allows us
@@ -81,7 +81,7 @@ package java.awt;
 	* @see     java.awt.Toolkit#createChoice(java.awt.Choice)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Returns the number of items in this <code>Choice</code> menu.
@@ -89,13 +89,13 @@ package java.awt;
 	* @see     #getItem
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function getItemCount() : Int;
+	@:require(java1) @:overload @:public public function getItemCount() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getItemCount()</code>.
 	*/
-	@:overload public function countItems() : Int;
+	@:overload @:public public function countItems() : Int;
 	
 	/**
 	* Gets the string at the specified index in this
@@ -103,7 +103,7 @@ package java.awt;
 	* @param      index the index at which to begin
 	* @see        #getItemCount
 	*/
-	@:overload public function getItem(index : Int) : String;
+	@:overload @:public public function getItem(index : Int) : String;
 	
 	/**
 	* Adds an item to this <code>Choice</code> menu.
@@ -112,7 +112,7 @@ package java.awt;
 	*                  <code>null</code>
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function add(item : String) : Void;
+	@:require(java1) @:overload @:public public function add(item : String) : Void;
 	
 	/**
 	* Obsolete as of Java 2 platform v1.1.  Please use the
@@ -123,7 +123,7 @@ package java.awt;
 	* @exception NullPointerException if the item's value is equal to
 	*          <code>null</code>
 	*/
-	@:overload public function addItem(item : String) : Void;
+	@:overload @:public public function addItem(item : String) : Void;
 	
 	/**
 	* Inserts the item into this choice at the specified position.
@@ -143,7 +143,7 @@ package java.awt;
 	* @param index the position at which the item should be inserted
 	* @exception IllegalArgumentException if index is less than 0
 	*/
-	@:overload public function insert(item : String, index : Int) : Void;
+	@:overload @:public public function insert(item : String, index : Int) : Void;
 	
 	/**
 	* Removes the first occurrence of <code>item</code>
@@ -158,7 +158,7 @@ package java.awt;
 	*                     exist in the choice menu
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function remove(item : String) : Void;
+	@:require(java1) @:overload @:public public function remove(item : String) : Void;
 	
 	/**
 	* Removes an item from the choice menu
@@ -173,14 +173,14 @@ package java.awt;
 	*          position is out of bounds
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function remove(position : Int) : Void;
+	@:require(java1) @:overload @:public public function remove(position : Int) : Void;
 	
 	/**
 	* Removes all items from the choice menu.
 	* @see       #remove
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function removeAll() : Void;
+	@:require(java1) @:overload @:public public function removeAll() : Void;
 	
 	/**
 	* Gets a representation of the current choice as a string.
@@ -188,14 +188,14 @@ package java.awt;
 	*                     selected item in this choice menu
 	* @see       #getSelectedIndex
 	*/
-	@:overload @:synchronized public function getSelectedItem() : String;
+	@:overload @:public @:synchronized public function getSelectedItem() : String;
 	
 	/**
 	* Returns an array (length 1) containing the currently selected
 	* item.  If this choice has no items, returns <code>null</code>.
 	* @see ItemSelectable
 	*/
-	@:overload @:synchronized public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public @:synchronized public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the index of the currently selected item.
@@ -205,7 +205,7 @@ package java.awt;
 	*  is currently selected
 	* @see #getSelectedItem
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	/**
 	* Sets the selected item in this <code>Choice</code> menu to be the
@@ -224,7 +224,7 @@ package java.awt;
 	* @see        #getSelectedItem
 	* @see        #getSelectedIndex
 	*/
-	@:overload @:synchronized public function select(pos : Int) : Void;
+	@:overload @:public @:synchronized public function select(pos : Int) : Void;
 	
 	/**
 	* Sets the selected item in this <code>Choice</code> menu
@@ -242,7 +242,7 @@ package java.awt;
 	* @see         #getSelectedItem
 	* @see         #getSelectedIndex
 	*/
-	@:overload @:synchronized public function select(str : String) : Void;
+	@:overload @:public @:synchronized public function select(str : String) : Void;
 	
 	/**
 	* Adds the specified item listener to receive item events from
@@ -260,7 +260,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Removes the specified item listener so that it no longer receives
@@ -276,7 +276,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the item listeners
@@ -292,7 +292,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -327,7 +327,7 @@ package java.awt;
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this choice. If the event is an
@@ -343,7 +343,7 @@ package java.awt;
 	* @see        #processItemEvent
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this <code>Choice</code>
@@ -369,7 +369,7 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
+	@:require(java1) @:overload @:protected private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Choice</code>
@@ -380,7 +380,7 @@ package java.awt;
 	*
 	* @return    the parameter string of this <code>Choice</code> menu
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -393,7 +393,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>Choice</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -405,7 +405,7 @@ package java.awt;
 */
 @:require(java3) @:native('java$awt$Choice$AccessibleAWTChoice') extern class Choice_AccessibleAWTChoice extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -416,7 +416,7 @@ package java.awt;
 	* @return this object
 	* @see AccessibleAction
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the role of this object.
@@ -425,7 +425,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible actions available in this object
@@ -434,7 +434,7 @@ package java.awt;
 	*
 	* @return the zero-based number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Returns a description of the specified action of the object.
@@ -443,7 +443,7 @@ package java.awt;
 	* @return a String description of the action
 	* @see #getAccessibleActionCount
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -452,7 +452,7 @@ package java.awt;
 	* @return true if the action was performed; otherwise false.
 	* @see #getAccessibleActionCount
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	
 }

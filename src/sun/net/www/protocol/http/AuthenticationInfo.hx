@@ -33,48 +33,48 @@ extern class AuthenticationInfo extends sun.net.www.protocol.http.AuthCacheValue
 	* @author Herb Jellinek
 	* @author Bill Foote
 	*/
-	public static var SERVER_AUTHENTICATION(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var SERVER_AUTHENTICATION(default, null) : java.StdTypes.Char16;
 	
-	public static var PROXY_AUTHENTICATION(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var PROXY_AUTHENTICATION(default, null) : java.StdTypes.Char16;
 	
 	/* AuthCacheValue: */
-	@:transient private var pw : java.net.PasswordAuthentication;
+	@:transient @:protected private var pw : java.net.PasswordAuthentication;
 	
-	@:overload public function credentials() : java.net.PasswordAuthentication;
+	@:overload @:public public function credentials() : java.net.PasswordAuthentication;
 	
-	@:overload public function getAuthType() : sun.net.www.protocol.http.AuthCacheValue.AuthCacheValue_Type;
+	@:overload @:public public function getAuthType() : sun.net.www.protocol.http.AuthCacheValue.AuthCacheValue_Type;
 	
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function getRealm() : String;
+	@:overload @:public public function getRealm() : String;
 	
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
-	@:overload public function getProtocolScheme() : String;
+	@:overload @:public public function getProtocolScheme() : String;
 	
 	/** Use this constructor only for proxy entries */
-	@:overload public function new(type : java.StdTypes.Char16, authScheme : sun.net.www.protocol.http.AuthScheme, host : String, port : Int, realm : String) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Char16, authScheme : sun.net.www.protocol.http.AuthScheme, host : String, port : Int, realm : String) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/*
 	* Constructor used to limit the authorization to the path within
 	* the URL. Use this constructor for origin server entries.
 	*/
-	@:overload public function new(type : java.StdTypes.Char16, authScheme : sun.net.www.protocol.http.AuthScheme, url : java.net.URL, realm : String) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Char16, authScheme : sun.net.www.protocol.http.AuthScheme, url : java.net.URL, realm : String) : Void;
 	
 	/**
 	* @return true if this authentication supports preemptive authorization
 	*/
-	@:overload @:abstract public function supportsPreemptiveAuthorization() : Bool;
+	@:overload @:public @:abstract public function supportsPreemptiveAuthorization() : Bool;
 	
 	/**
 	* @return the name of the HTTP header this authentication wants set.
 	*          This is used for preemptive authorization.
 	*/
-	@:overload public function getHeaderName() : String;
+	@:overload @:public public function getHeaderName() : String;
 	
 	/**
 	* Calculates and returns the authentication header value based
@@ -85,7 +85,7 @@ extern class AuthenticationInfo extends sun.net.www.protocol.http.AuthCacheValue
 	* @return the value of the HTTP header this authentication wants set.
 	*          Used for preemptive authorization.
 	*/
-	@:overload @:abstract public function getHeaderValue(url : java.net.URL, method : String) : String;
+	@:overload @:public @:abstract public function getHeaderValue(url : java.net.URL, method : String) : String;
 	
 	/**
 	* Set header(s) on the given connection.  Subclasses must override
@@ -96,7 +96,7 @@ extern class AuthenticationInfo extends sun.net.www.protocol.http.AuthCacheValue
 	* @param raw The raw header field (if needed)
 	* @return true if all goes well, false if no headers were set.
 	*/
-	@:overload @:abstract public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
+	@:overload @:public @:abstract public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
 	
 	/**
 	* Check if the header indicates that the current auth. parameters are stale.
@@ -106,7 +106,7 @@ extern class AuthenticationInfo extends sun.net.www.protocol.http.AuthCacheValue
 	* returning false means we have to go back to the user to ask for a new
 	* username password.
 	*/
-	@:overload @:abstract public function isAuthorizationStale(header : String) : Bool;
+	@:overload @:public @:abstract public function isAuthorizationStale(header : String) : Bool;
 	
 	
 }

@@ -28,14 +28,14 @@ extern class ServerSocketFactory
 	/**
 	* Creates a server socket factory.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a copy of the environment's default socket factory.
 	*
 	* @return the <code>ServerSocketFactory</code>
 	*/
-	@:overload public static function getDefault() : javax.net.ServerSocketFactory;
+	@:overload @:public @:static public static function getDefault() : javax.net.ServerSocketFactory;
 	
 	/**
 	* Returns an unbound server socket.  The socket is configured with
@@ -47,7 +47,7 @@ extern class ServerSocketFactory
 	* @see java.net.ServerSocket#bind(java.net.SocketAddress, int)
 	* @see java.net.ServerSocket#ServerSocket()
 	*/
-	@:overload public function createServerSocket() : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket() : java.net.ServerSocket;
 	
 	/**
 	* Returns a server socket bound to the specified port.
@@ -70,7 +70,7 @@ extern class ServerSocketFactory
 	* @see    SecurityManager#checkListen
 	* @see java.net.ServerSocket#ServerSocket(int)
 	*/
-	@:overload @:abstract public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public @:abstract public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	/**
 	* Returns a server socket bound to the specified port, and uses the
@@ -98,7 +98,7 @@ extern class ServerSocketFactory
 	* @see    SecurityManager#checkListen
 	* @see java.net.ServerSocket#ServerSocket(int, int)
 	*/
-	@:overload @:abstract public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
+	@:overload @:public @:abstract public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
 	
 	/**
 	* Returns a server socket bound to the specified port,
@@ -133,19 +133,19 @@ extern class ServerSocketFactory
 	* @see    SecurityManager#checkListen
 	* @see java.net.ServerSocket#ServerSocket(int, int, java.net.InetAddress)
 	*/
-	@:overload @:abstract public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
+	@:overload @:public @:abstract public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
 	
 	
 }
 @:internal extern class DefaultServerSocketFactory extends javax.net.ServerSocketFactory
 {
-	@:overload override public function createServerSocket() : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket() : java.net.ServerSocket;
 	
-	@:overload override public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
-	@:overload override public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
 	
-	@:overload override public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
 	
 	
 }

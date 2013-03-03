@@ -34,21 +34,21 @@ package com.sun.corba.se.impl.orbutil;
 	/**
 	* Get the name of this field.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Get the type of the field.
 	*/
-	@:overload public function getType() : Class<Dynamic>;
+	@:overload @:public public function getType() : Class<Dynamic>;
 	
-	@:overload public function getTypeCode() : java.StdTypes.Char16;
+	@:overload @:public public function getTypeCode() : java.StdTypes.Char16;
 	
-	@:overload public function getTypeString() : String;
+	@:overload @:public public function getTypeString() : String;
 	
 	/**
 	* test if this field is a primitive or not.
 	*/
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
 	/**
 	* Compare this with another ObjectStreamField.
@@ -56,26 +56,26 @@ package com.sun.corba.se.impl.orbutil;
 	* types that are primitives are "smaller" than objects.
 	* if equal, the names are compared.
 	*/
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
 	* Compare the types of two class descriptors.
 	* The match if they have the same primitive types.
 	* or if they are both objects and the object types match.
 	*/
-	@:overload public function typeEquals(other : com.sun.corba.se.impl.orbutil.ObjectStreamField) : Bool;
+	@:overload @:public public function typeEquals(other : com.sun.corba.se.impl.orbutil.ObjectStreamField) : Bool;
 	
 	/* Returns the signature of the Field.
 	*
 	*/
-	@:overload public function getSignature() : String;
+	@:overload @:public public function getSignature() : String;
 	
 	/**
 	* Return a string describing this field.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getClazz() : Class<Dynamic>;
+	@:overload @:public public function getClazz() : Class<Dynamic>;
 	
 	
 }

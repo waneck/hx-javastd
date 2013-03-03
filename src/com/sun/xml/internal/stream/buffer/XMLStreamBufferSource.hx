@@ -44,32 +44,32 @@ extern class XMLStreamBufferSource extends javax.xml.transform.sax.SAXSource
 	*     the getXMLReader method.</li>
 	* </ul>
 	*/
-	private var _buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:protected private var _buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
-	private var _bufferProcessor : com.sun.xml.internal.stream.buffer.sax.SAXBufferProcessor;
+	@:protected private var _bufferProcessor : com.sun.xml.internal.stream.buffer.sax.SAXBufferProcessor;
 	
 	/**
 	* XMLStreamBufferSource constructor.
 	*
 	* @param buffer the {@link XMLStreamBuffer} to use.
 	*/
-	@:overload public function new(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:public public function new(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
 	/**
 	* Get the {@link XMLStreamBuffer} that is used.
 	*
 	* @return the {@link XMLStreamBuffer}.
 	*/
-	@:overload public function getXMLStreamBuffer() : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:overload @:public public function getXMLStreamBuffer() : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	/**
 	* Set the {@link XMLStreamBuffer} to use.
 	*
 	* @param buffer the {@link XMLStreamBuffer}.
 	*/
-	@:overload public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:public public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
-	@:overload override public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public override public function getXMLReader() : org.xml.sax.XMLReader;
 	
 	
 }

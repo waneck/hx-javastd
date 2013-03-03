@@ -28,7 +28,7 @@ extern interface IIOPPrimaryToContactInfo
 	/**
 	* @param primary - clear any state relating to primary.
 	*/
-	@:overload public function reset(primary : com.sun.corba.se.pept.transport.ContactInfo) : Void;
+	@:overload @:public public function reset(primary : com.sun.corba.se.pept.transport.ContactInfo) : Void;
 	
 	/**
 	* @param primary - the key.
@@ -38,7 +38,7 @@ extern interface IIOPPrimaryToContactInfo
 	* @param contactInfos - the list of replicas associated with the
 	* primary.
 	*/
-	@:overload public function hasNext(primary : com.sun.corba.se.pept.transport.ContactInfo, previous : com.sun.corba.se.pept.transport.ContactInfo, contactInfos : java.util.List<Dynamic>) : Bool;
+	@:overload @:public public function hasNext(primary : com.sun.corba.se.pept.transport.ContactInfo, previous : com.sun.corba.se.pept.transport.ContactInfo, contactInfos : java.util.List<Dynamic>) : Bool;
 	
 	/**
 	* @param primary - the key.
@@ -49,7 +49,7 @@ extern interface IIOPPrimaryToContactInfo
 	* contactInfos.  Map the <code>ContactInfo</code> following
 	* previous to primary and return that <code>ContactInfo</code>.
 	*/
-	@:overload public function next(primary : com.sun.corba.se.pept.transport.ContactInfo, previous : com.sun.corba.se.pept.transport.ContactInfo, contactInfos : java.util.List<Dynamic>) : com.sun.corba.se.pept.transport.ContactInfo;
+	@:overload @:public public function next(primary : com.sun.corba.se.pept.transport.ContactInfo, previous : com.sun.corba.se.pept.transport.ContactInfo, contactInfos : java.util.List<Dynamic>) : com.sun.corba.se.pept.transport.ContactInfo;
 	
 	
 }

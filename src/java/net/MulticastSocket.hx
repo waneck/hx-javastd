@@ -44,7 +44,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see SecurityManager#checkListen
 	* @see java.net.DatagramSocket#setReuseAddress(boolean)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a multicast socket and bind it to a specific port.
@@ -67,7 +67,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see SecurityManager#checkListen
 	* @see java.net.DatagramSocket#setReuseAddress(boolean)
 	*/
-	@:overload public function new(port : Int) : Void;
+	@:overload @:public public function new(port : Int) : Void;
 	
 	/**
 	* Create a MulticastSocket bound to the specified socket address.
@@ -94,7 +94,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(bindaddr : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function new(bindaddr : java.net.SocketAddress) : Void;
 	
 	/**
 	* Set the default time-to-live for multicast packets sent out
@@ -111,7 +111,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* <b>int</b> instead of <b>byte</b> as the type for ttl.
 	* @see #getTTL()
 	*/
-	@:overload public function setTTL(ttl : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setTTL(ttl : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Set the default time-to-live for multicast packets sent out
@@ -132,7 +132,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	*
 	* @see #getTimeToLive()
 	*/
-	@:overload public function setTimeToLive(ttl : Int) : Void;
+	@:overload @:public public function setTimeToLive(ttl : Int) : Void;
 	
 	/**
 	* Get the default time-to-live for multicast packets sent out on
@@ -145,7 +145,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* an <b>int</b> instead of a <b>byte</b>.
 	* @see #setTTL(byte)
 	*/
-	@:overload public function getTTL() : java.StdTypes.Int8;
+	@:overload @:public public function getTTL() : java.StdTypes.Int8;
 	
 	/**
 	* Get the default time-to-live for multicast packets sent out on
@@ -155,7 +155,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @return the default time-to-live value
 	* @see #setTimeToLive(int)
 	*/
-	@:overload public function getTimeToLive() : Int;
+	@:overload @:public public function getTimeToLive() : Int;
 	
 	/**
 	* Joins a multicast group. Its behavior may be affected by
@@ -175,7 +175,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	*
 	* @see SecurityManager#checkMulticast(InetAddress)
 	*/
-	@:overload public function joinGroup(mcastaddr : java.net.InetAddress) : Void;
+	@:overload @:public public function joinGroup(mcastaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Leave a multicast group. Its behavior may be affected by
@@ -194,7 +194,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	*
 	* @see SecurityManager#checkMulticast(InetAddress)
 	*/
-	@:overload public function leaveGroup(mcastaddr : java.net.InetAddress) : Void;
+	@:overload @:public public function leaveGroup(mcastaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Joins the specified multicast group at the specified interface.
@@ -220,7 +220,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see SecurityManager#checkMulticast(InetAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:public public function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Leave a multicast group on a specified local interface.
@@ -245,7 +245,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see SecurityManager#checkMulticast(InetAddress)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:public public function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Set the multicast network interface used by methods
@@ -256,7 +256,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* the underlying protocol, such as a TCP error.
 	* @see #getInterface()
 	*/
-	@:overload public function setInterface(inf : java.net.InetAddress) : Void;
+	@:overload @:public public function setInterface(inf : java.net.InetAddress) : Void;
 	
 	/**
 	* Retrieve the address of the network interface used for
@@ -271,7 +271,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	*
 	* @see #setInterface(java.net.InetAddress)
 	*/
-	@:overload public function getInterface() : java.net.InetAddress;
+	@:overload @:public public function getInterface() : java.net.InetAddress;
 	
 	/**
 	* Specify the network interface for outgoing multicast datagrams
@@ -283,7 +283,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see #getNetworkInterface()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setNetworkInterface(netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:public public function setNetworkInterface(netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Get the multicast network interface set.
@@ -294,7 +294,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see #setNetworkInterface(NetworkInterface)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getNetworkInterface() : java.net.NetworkInterface;
+	@:require(java4) @:overload @:public public function getNetworkInterface() : java.net.NetworkInterface;
 	
 	/**
 	* Disable/Enable local loopback of multicast datagrams
@@ -310,7 +310,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @since 1.4
 	* @see #getLoopbackMode
 	*/
-	@:require(java4) @:overload public function setLoopbackMode(disable : Bool) : Void;
+	@:require(java4) @:overload @:public public function setLoopbackMode(disable : Bool) : Void;
 	
 	/**
 	* Get the setting for local loopback of multicast datagrams.
@@ -320,7 +320,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @since 1.4
 	* @see #setLoopbackMode
 	*/
-	@:require(java4) @:overload public function getLoopbackMode() : Bool;
+	@:require(java4) @:overload @:public public function getLoopbackMode() : Bool;
 	
 	/**
 	* Sends a datagram packet to the destination, with a TTL (time-
@@ -369,7 +369,7 @@ extern class MulticastSocket extends java.net.DatagramSocket
 	* @see SecurityManager#checkMulticast(java.net.InetAddress, byte)
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload public function send(p : java.net.DatagramPacket, ttl : java.StdTypes.Int8) : Void;
+	@:overload @:public public function send(p : java.net.DatagramPacket, ttl : java.StdTypes.Int8) : Void;
 	
 	
 }

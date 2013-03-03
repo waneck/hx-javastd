@@ -68,7 +68,7 @@ extern class CK_SESSION_INFO
 	*   CK_SLOT_ID slotID;
 	* </PRE>
 	*/
-	public var slotID : haxe.Int64;
+	@:public public var slotID : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -76,7 +76,7 @@ extern class CK_SESSION_INFO
 	*   CK_STATE state;
 	* </PRE>
 	*/
-	public var state : haxe.Int64;
+	@:public public var state : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -84,7 +84,7 @@ extern class CK_SESSION_INFO
 	*   CK_FLAGS flags;
 	* </PRE>
 	*/
-	public var flags : haxe.Int64;
+	@:public public var flags : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -92,17 +92,17 @@ extern class CK_SESSION_INFO
 	*   CK_ULONG ulDeviceError;
 	* </PRE>
 	*/
-	public var ulDeviceError : haxe.Int64;
+	@:public public var ulDeviceError : haxe.Int64;
 	
 	/* device-dependent error code */
-	@:overload public function new(slotID : haxe.Int64, state : haxe.Int64, flags : haxe.Int64, ulDeviceError : haxe.Int64) : Void;
+	@:overload @:public public function new(slotID : haxe.Int64, state : haxe.Int64, flags : haxe.Int64, ulDeviceError : haxe.Int64) : Void;
 	
 	/**
 	* Returns the string representation of CK_SESSION_INFO.
 	*
 	* @return the string representation of CK_SESSION_INFO
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

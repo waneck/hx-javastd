@@ -63,43 +63,43 @@ extern class ArrayType extends com.sun.org.apache.bcel.internal.generic.Referenc
 	*
 	* @param type array type, e.g. T_INT
 	*/
-	@:overload public function new(type : java.StdTypes.Int8, dimensions : Int) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Int8, dimensions : Int) : Void;
 	
 	/**
 	* Convenience constructor for reference array type, e.g. Object[]
 	*
 	* @param class_name complete name of class (java.lang.String, e.g.)
 	*/
-	@:overload public function new(class_name : String, dimensions : Int) : Void;
+	@:overload @:public public function new(class_name : String, dimensions : Int) : Void;
 	
 	/**
 	* Constructor for array of given type
 	*
 	* @param type type of array (may be an array itself)
 	*/
-	@:overload public function new(type : com.sun.org.apache.bcel.internal.generic.Type, dimensions : Int) : Void;
+	@:overload @:public public function new(type : com.sun.org.apache.bcel.internal.generic.Type, dimensions : Int) : Void;
 	
 	/**
 	* @return basic type of array, i.e., for int[][][] the basic type is int
 	*/
-	@:overload public function getBasicType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getBasicType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* @return element type of array, i.e., for int[][][] the element type is int[][]
 	*/
-	@:overload public function getElementType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getElementType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return number of dimensions of array
 	*/
-	@:overload public function getDimensions() : Int;
+	@:overload @:public public function getDimensions() : Int;
 	
 	/** @return a hash code value for the object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/** @return true if both type objects refer to the same array type.
 	*/
-	@:overload public function equals(type : Dynamic) : Bool;
+	@:overload @:public public function equals(type : Dynamic) : Bool;
 	
 	
 }

@@ -25,68 +25,68 @@ package com.sun.xml.internal.stream.events;
 */
 extern class DummyEvent implements javax.xml.stream.events.XMLEvent
 {
-	private var fLocation : javax.xml.stream.Location;
+	@:protected private var fLocation : javax.xml.stream.Location;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(i : Int) : Void;
+	@:overload @:public public function new(i : Int) : Void;
 	
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
-	@:overload private function setEventType(eventType : Int) : Void;
+	@:overload @:protected private function setEventType(eventType : Int) : Void;
 	
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
-	@:overload public function isEntityReference() : Bool;
+	@:overload @:public public function isEntityReference() : Bool;
 	
-	@:overload public function isProcessingInstruction() : Bool;
+	@:overload @:public public function isProcessingInstruction() : Bool;
 	
-	@:overload public function isCharacterData() : Bool;
+	@:overload @:public public function isCharacterData() : Bool;
 	
-	@:overload public function isStartDocument() : Bool;
+	@:overload @:public public function isStartDocument() : Bool;
 	
-	@:overload public function isEndDocument() : Bool;
+	@:overload @:public public function isEndDocument() : Bool;
 	
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
 	/** Returns this event as Characters, may result in
 	* a class cast exception if this event is not Characters.
 	*/
-	@:overload public function asCharacters() : javax.xml.stream.events.Characters;
+	@:overload @:public public function asCharacters() : javax.xml.stream.events.Characters;
 	
 	/** Returns this event as an end  element event, may result in
 	* a class cast exception if this event is not a end element.
 	*/
-	@:overload public function asEndElement() : javax.xml.stream.events.EndElement;
+	@:overload @:public public function asEndElement() : javax.xml.stream.events.EndElement;
 	
 	/** Returns this event as a start element event, may result in
 	* a class cast exception if this event is not a start element.
 	*/
-	@:overload public function asStartElement() : javax.xml.stream.events.StartElement;
+	@:overload @:public public function asStartElement() : javax.xml.stream.events.StartElement;
 	
 	/** This method is provided for implementations to provide
 	* optional type information about the associated event.
 	* It is optional and will return null if no information
 	* is available.
 	*/
-	@:overload public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public public function getSchemaType() : javax.xml.namespace.QName;
 	
 	/** A utility function to check if this event is an Attribute.
 	* @see Attribute
 	*/
-	@:overload public function isAttribute() : Bool;
+	@:overload @:public public function isAttribute() : Bool;
 	
 	/** A utility function to check if this event is Characters.
 	* @see Characters
 	*/
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
 	/** A utility function to check if this event is a Namespace.
 	* @see Namespace
 	*/
-	@:overload public function isNamespace() : Bool;
+	@:overload @:public public function isNamespace() : Bool;
 	
 	/** This method will write the XMLEvent as per the XML 1.0 specification as Unicode characters.
 	* No indentation or whitespace should be outputted.
@@ -103,35 +103,35 @@ extern class DummyEvent implements javax.xml.stream.events.XMLEvent
 	* @param writer The writer that will output the data
 	* @throws XMLStreamException if there is a fatal error writing the event
 	*/
-	@:overload public function writeAsEncodedUnicode(writer : java.io.Writer) : Void;
+	@:overload @:public public function writeAsEncodedUnicode(writer : java.io.Writer) : Void;
 	
 	/** Helper method in order to expose IOException.
 	* @param writer The writer that will output the data
 	* @throws XMLStreamException if there is a fatal error writing the event
 	* @throws IOException if there is an IO error
 	*/
-	@:overload @:abstract private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected @:abstract private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	/** Helper method to escape < > & for characters event and
 	*  quotes, lt and amps for Entity
 	*/
-	@:overload private function charEncode(writer : java.io.Writer, data : String) : Void;
+	@:overload @:protected private function charEncode(writer : java.io.Writer, data : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$stream$events$DummyEvent$DummyLocation') @:internal extern class DummyEvent_DummyLocation implements javax.xml.stream.Location
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

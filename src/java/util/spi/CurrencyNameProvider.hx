@@ -29,7 +29,7 @@ extern class CurrencyNameProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the symbol of the given currency code for the specified locale.
@@ -52,7 +52,7 @@ extern class CurrencyNameProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.util.Currency#getSymbol(java.util.Locale)
 	*/
-	@:overload @:abstract public function getSymbol(currencyCode : String, locale : java.util.Locale) : String;
+	@:overload @:public @:abstract public function getSymbol(currencyCode : String, locale : java.util.Locale) : String;
 	
 	/**
 	* Returns a name for the currency that is appropriate for display to the
@@ -73,7 +73,7 @@ extern class CurrencyNameProvider extends java.util.spi.LocaleServiceProvider
 	*     <code>locale</code> is <code>null</code>
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDisplayName(currencyCode : String, locale : java.util.Locale) : String;
+	@:require(java7) @:overload @:public public function getDisplayName(currencyCode : String, locale : java.util.Locale) : String;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* @throws IllegalArgumentException if <code>name</code> is empty or if
 	* <code>actions</code> is invalid.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	/**
 	* Checks if this PropertyPermission object "implies" the specified
@@ -58,7 +58,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two PropertyPermission objects for equality. Checks that <i>obj</i> is
@@ -68,7 +68,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* @return true if obj is a PropertyPermission, and has the same name and
 	* actions as this PropertyPermission object.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
@@ -78,7 +78,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the "canonical string representation" of the actions.
@@ -89,7 +89,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing
@@ -99,7 +99,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* @return a new PermissionCollection object suitable for storing
 	* PropertyPermissions.
 	*/
-	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -109,7 +109,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* Create an empty PropertyPermissions object.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission to the PropertyPermissions. The key for the hash is
@@ -123,7 +123,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* @exception SecurityException - if this PropertyPermissionCollection
 	*                                object has been marked readonly
 	*/
-	@:overload public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -134,7 +134,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	* @return true if "permission" is a proper subset of a permission in
 	* the set, false if not.
 	*/
-	@:overload public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the PropertyPermission objects in the
@@ -142,7 +142,7 @@ extern class PropertyPermission extends java.security.BasicPermission
 	*
 	* @return an enumeration of all the PropertyPermission objects.
 	*/
-	@:overload public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }

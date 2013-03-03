@@ -28,32 +28,32 @@ extern class FloatExpression extends sun.tools.tree.ConstantExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, value : Single) : Void;
+	@:overload @:public public function new(where : haxe.Int64, value : Single) : Void;
 	
 	/**
 	* Get the value
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload public function equals(i : Int) : Bool;
+	@:overload @:public override public function equals(i : Int) : Bool;
 	
 	/**
 	* Check if the expression is equal to its default static value
 	*/
-	@:overload public function equalsDefault() : Bool;
+	@:overload @:public override public function equalsDefault() : Bool;
 	
 	/**
 	* Code
 	*/
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

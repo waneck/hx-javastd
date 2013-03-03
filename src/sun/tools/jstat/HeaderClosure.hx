@@ -29,12 +29,12 @@ extern class HeaderClosure implements sun.tools.jstat.Closure
 	* visit an object to perform some operation. In this case, the
 	* object is a ColumnFormat we are building the header string.
 	*/
-	@:overload public function visit(o : Dynamic, hasNext : Bool) : Void;
+	@:overload @:public public function visit(o : Dynamic, hasNext : Bool) : Void;
 	
 	/*
 	* get the header string.
 	*/
-	@:overload public function getHeader() : String;
+	@:overload @:public public function getHeader() : String;
 	
 	
 }

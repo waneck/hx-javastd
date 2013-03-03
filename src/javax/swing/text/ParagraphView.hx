@@ -30,7 +30,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Sets the type of justification.
@@ -42,26 +42,26 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* <li><code>StyleConstants.ALIGN_RIGHT</code>
 	* </ul>
 	*/
-	@:overload private function setJustification(j : Int) : Void;
+	@:overload @:protected private function setJustification(j : Int) : Void;
 	
 	/**
 	* Sets the line spacing.
 	*
 	* @param ls the value is a factor of the line hight
 	*/
-	@:overload private function setLineSpacing(ls : Single) : Void;
+	@:overload @:protected private function setLineSpacing(ls : Single) : Void;
 	
 	/**
 	* Sets the indent on the first line.
 	*
 	* @param fi the value in points
 	*/
-	@:overload private function setFirstLineIndent(fi : Single) : Void;
+	@:overload @:protected private function setFirstLineIndent(fi : Single) : Void;
 	
 	/**
 	* Set the cached properties from the attributes.
 	*/
-	@:overload private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected private function setPropertiesFromAttributes() : Void;
 	
 	/**
 	* Returns the number of views that this view is
@@ -76,7 +76,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return the number of views that this <code>ParagraphView</code>
 	*          is responsible for
 	*/
-	@:overload private function getLayoutViewCount() : Int;
+	@:overload @:protected private function getLayoutViewCount() : Int;
 	
 	/**
 	* Returns the view at a given <code>index</code>.
@@ -91,7 +91,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @param index the <code>index</code> of the desired view
 	* @return the view at <code>index</code>
 	*/
-	@:overload private function getLayoutView(index : Int) : javax.swing.text.View;
+	@:overload @:protected private function getLayoutView(index : Int) : javax.swing.text.View;
 	
 	/**
 	* Returns the next visual position for the cursor, in
@@ -108,7 +108,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return the location in the model that represents the
 	*  next location visual position
 	*/
-	@:overload override private function getNextNorthSouthVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:protected override private function getNextNorthSouthVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Returns the closest model position to <code>x</code>.
@@ -127,7 +127,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @param x the x coordinate of interest
 	* @return the closest model position to <code>x</code>
 	*/
-	@:overload private function getClosestPositionTo(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>, rowIndex : Int, x : Int) : Int;
+	@:overload @:protected private function getClosestPositionTo(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>, rowIndex : Int, x : Int) : Int;
 	
 	/**
 	* Determines in which direction the next view lays.
@@ -153,7 +153,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return true if the text is layed out right to left at
 	*         position, otherwise false.
 	*/
-	@:overload override private function flipEastAndWestAtEnds(position : Int, bias : javax.swing.text.Position.Position_Bias) : Bool;
+	@:overload @:protected override private function flipEastAndWestAtEnds(position : Int, bias : javax.swing.text.Position.Position_Bias) : Bool;
 	
 	/**
 	* Fetches the constraining span to flow against for
@@ -163,7 +163,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*  <code>index</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getFlowSpan(index : Int) : Int;
+	@:require(java3) @:overload @:public override public function getFlowSpan(index : Int) : Int;
 	
 	/**
 	* Fetches the location along the flow axis that the
@@ -173,7 +173,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*  <code>index</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getFlowStart(index : Int) : Int;
+	@:require(java3) @:overload @:public override public function getFlowStart(index : Int) : Int;
 	
 	/**
 	* Create a <code>View</code> that should be used to hold a
@@ -181,7 +181,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return the new <code>View</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function createRow() : javax.swing.text.View;
+	@:require(java3) @:overload @:protected override private function createRow() : javax.swing.text.View;
 	
 	/**
 	* Returns the next tab stop position given a reference position.
@@ -208,14 +208,14 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @see TabStop
 	* @see LabelView
 	*/
-	@:overload public function nextTabStop(x : Single, tabOffset : Int) : Single;
+	@:overload @:public public function nextTabStop(x : Single, tabOffset : Int) : Single;
 	
 	/**
 	* Gets the <code>Tabset</code> to be used in calculating tabs.
 	*
 	* @return the <code>TabSet</code>
 	*/
-	@:overload private function getTabSet() : javax.swing.text.TabSet;
+	@:overload @:protected private function getTabSet() : javax.swing.text.TabSet;
 	
 	/**
 	* Returns the size used by the views between
@@ -231,7 +231,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @param endOffset the ending document offset >= startOffset
 	* @return the size >= 0
 	*/
-	@:overload private function getPartialSize(startOffset : Int, endOffset : Int) : Single;
+	@:overload @:protected private function getPartialSize(startOffset : Int, endOffset : Int) : Single;
 	
 	/**
 	* Finds the next character in the document with a character in
@@ -242,13 +242,13 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @param start where to start in the model >= 0
 	* @return the document offset, or -1 if no characters found
 	*/
-	@:overload private function findOffsetToCharactersInString(string : java.NativeArray<java.StdTypes.Char16>, start : Int) : Int;
+	@:overload @:protected private function findOffsetToCharactersInString(string : java.NativeArray<java.StdTypes.Char16>, start : Int) : Int;
 	
 	/**
 	* Returns where the tabs are calculated from.
 	* @return where tabs are calculated from
 	*/
-	@:overload private function getTabBase() : Single;
+	@:overload @:protected private function getTabBase() : Single;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -259,7 +259,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -275,7 +275,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*   away from the origin.  An alignment of 0.5 would be the
 	*   center of the view.
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Breaks this view on the given axis at the given length.
@@ -295,7 +295,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*  returned
 	* @see View#breakView
 	*/
-	@:overload public function breakView(axis : Int, len : Single, a : java.awt.Shape) : javax.swing.text.View;
+	@:overload @:public public function breakView(axis : Int, len : Single, a : java.awt.Shape) : javax.swing.text.View;
 	
 	/**
 	* Gets the break weight for a given location.
@@ -313,7 +313,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*  either <code>GoodBreakWeight</code> or <code>BadBreakWeight</code>
 	* @see View#getBreakWeight
 	*/
-	@:overload public function getBreakWeight(axis : Int, len : Single) : Int;
+	@:overload @:public public function getBreakWeight(axis : Int, len : Single) : Int;
 	
 	/**
 	* Calculate the needs for the paragraph along the minor axis.
@@ -334,7 +334,7 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return      the new or adjusted {@code SizeRequirements} object
 	* @throws IllegalArgumentException  if the {@code axis} parameter is invalid
 	*/
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -346,10 +346,10 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/** Indentation for the first line, from the left inset. */
-	private var firstLineIndent : Int;
+	@:protected private var firstLineIndent : Int;
 	
 	
 }
@@ -365,16 +365,16 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* paragraph fills in the row with its needed
 	* children.
 	*/
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This view
 	* isn't directly responsible for an element so it returns
 	* the outer classes attributes.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -391,16 +391,16 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Range represented by a row in the paragraph is only
 	* a subset of the total range of the paragraph element.
 	* @see View#getRange
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
-	@:overload override public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Perform layout for the minor axis of the box (i.e. the
@@ -422,15 +422,15 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
-	@:overload override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMajorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
-	@:overload override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Fetches the child view index representing the given position in
@@ -440,16 +440,16 @@ extern class ParagraphView extends javax.swing.text.FlowView implements javax.sw
 	* @return  index of the view representing the given position, or
 	*   -1 if no view represents that position
 	*/
-	@:overload override private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected override private function getViewIndexAtPosition(pos : Int) : Int;
 	
 	/**
 	* Gets the left inset.
 	*
 	* @return the inset
 	*/
-	@:overload override private function getLeftInset() : java.StdTypes.Int16;
+	@:overload @:protected override private function getLeftInset() : java.StdTypes.Int16;
 	
-	@:overload override private function getBottomInset() : java.StdTypes.Int16;
+	@:overload @:protected override private function getBottomInset() : java.StdTypes.Int16;
 	
 	
 }

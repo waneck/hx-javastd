@@ -49,7 +49,7 @@ package com.sun.rowset.internal;
 */
 extern class CachedRowSetWriter implements javax.sql.rowset.spi.TransactionalWriter implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Propagates changes in the given <code>RowSet</code> object
@@ -107,38 +107,38 @@ extern class CachedRowSetWriter implements javax.sql.rowset.spi.TransactionalWri
 	*         written to the rowset's underlying data source;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function writeData(caller : javax.sql.RowSetInternal) : Bool;
+	@:overload @:public public function writeData(caller : javax.sql.RowSetInternal) : Bool;
 	
 	/**
 	* Sets the reader for this writer to the given reader.
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function setReader(reader : com.sun.rowset.internal.CachedRowSetReader) : Void;
+	@:overload @:public public function setReader(reader : com.sun.rowset.internal.CachedRowSetReader) : Void;
 	
 	/**
 	* Gets the reader for this writer.
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getReader() : com.sun.rowset.internal.CachedRowSetReader;
+	@:overload @:public public function getReader() : com.sun.rowset.internal.CachedRowSetReader;
 	
 	/**
 	*
 	*/
-	@:overload public function commit() : Void;
+	@:overload @:public public function commit() : Void;
 	
-	@:overload public function commit(crs : com.sun.rowset.CachedRowSetImpl, updateRowset : Bool) : Void;
-	
-	/**
-	*
-	*/
-	@:overload public function rollback() : Void;
+	@:overload @:public public function commit(crs : com.sun.rowset.CachedRowSetImpl, updateRowset : Bool) : Void;
 	
 	/**
 	*
 	*/
-	@:overload public function rollback(s : java.sql.Savepoint) : Void;
+	@:overload @:public public function rollback() : Void;
+	
+	/**
+	*
+	*/
+	@:overload @:public public function rollback(s : java.sql.Savepoint) : Void;
 	
 	
 }

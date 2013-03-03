@@ -25,7 +25,7 @@ package javax.swing;
 */
 @:internal extern class LayoutComparator implements java.util.Comparator<java.awt.Component> implements java.io.Serializable
 {
-	@:overload public function compare(a : java.awt.Component, b : java.awt.Component) : Int;
+	@:overload @:public public function compare(a : java.awt.Component, b : java.awt.Component) : Int;
 	
 	
 }

@@ -30,32 +30,32 @@ package sun.security.krb5.internal.crypto;
 */
 extern class CksumType
 {
-	@:overload public static function getInstance(cksumTypeConst : Int) : sun.security.krb5.internal.crypto.CksumType;
+	@:overload @:public @:static public static function getInstance(cksumTypeConst : Int) : sun.security.krb5.internal.crypto.CksumType;
 	
 	/**
 	* Returns default checksum type.
 	*/
-	@:overload public static function getInstance() : sun.security.krb5.internal.crypto.CksumType;
+	@:overload @:public @:static public static function getInstance() : sun.security.krb5.internal.crypto.CksumType;
 	
-	@:overload @:abstract public function confounderSize() : Int;
+	@:overload @:public @:abstract public function confounderSize() : Int;
 	
-	@:overload @:abstract public function cksumType() : Int;
+	@:overload @:public @:abstract public function cksumType() : Int;
 	
-	@:overload @:abstract public function isSafe() : Bool;
+	@:overload @:public @:abstract public function isSafe() : Bool;
 	
-	@:overload @:abstract public function cksumSize() : Int;
+	@:overload @:public @:abstract public function cksumSize() : Int;
 	
-	@:overload @:abstract public function keyType() : Int;
+	@:overload @:public @:abstract public function keyType() : Int;
 	
-	@:overload @:abstract public function keySize() : Int;
+	@:overload @:public @:abstract public function keySize() : Int;
 	
-	@:overload @:abstract public function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function calculateKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function calculateKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:abstract public function verifyKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, checksum : java.NativeArray<java.StdTypes.Int8>, usage : Int) : Bool;
+	@:overload @:public @:abstract public function verifyKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, checksum : java.NativeArray<java.StdTypes.Int8>, usage : Int) : Bool;
 	
-	@:overload public static function isChecksumEqual(cksum1 : java.NativeArray<java.StdTypes.Int8>, cksum2 : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static public static function isChecksumEqual(cksum1 : java.NativeArray<java.StdTypes.Int8>, cksum2 : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }

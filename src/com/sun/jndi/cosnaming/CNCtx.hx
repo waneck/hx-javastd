@@ -25,14 +25,14 @@ package com.sun.jndi.cosnaming;
 */
 extern class CNCtx implements javax.naming.Context
 {
-	public var _nc : org.omg.CosNaming.NamingContext;
+	@:public public var _nc : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* This method is used by the iiop and iiopname URL Context factories.
 	*/
-	@:overload public static function createUsingURL(url : String, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.ResolveResult;
+	@:overload @:public @:static public static function createUsingURL(url : String, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.ResolveResult;
 	
-	@:overload public function getNameInNamespace() : String;
+	@:overload @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Converts the "String" name into a CompositeName
@@ -43,7 +43,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException See callResolve.
 	* @return the resolved object
 	*/
-	@:overload public function lookup(name : String) : Dynamic;
+	@:overload @:public public function lookup(name : String) : Dynamic;
 	
 	/**
 	* Converts the "Name" name into a NameComponent[] object and
@@ -54,7 +54,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException See callResolve.
 	* @return the resolved object
 	*/
-	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookup(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Converts the "Name" name into a NameComponent[] object and
@@ -65,7 +65,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param obj Object to be bound.
 	* @exception NamingException See callBindOrRebind
 	*/
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Converts the "String" name into a CompositeName object and
@@ -75,7 +75,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param obj Object to be bound.
 	* @exception NamingException See callBindOrRebind
 	*/
-	@:overload public function bind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Converts the "Name" name into a NameComponent[] object and
@@ -87,7 +87,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param obj Object to be bound.
 	* @exception NamingException See callBindOrRebind
 	*/
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Converts the "String" name into a CompositeName object and
@@ -97,7 +97,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param obj Object to be bound.
 	* @exception NamingException See callBindOrRebind
 	*/
-	@:overload public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Converts the "String" name into a CompositeName object and
@@ -108,7 +108,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param name string
 	* @exception NamingException See callUnbind
 	*/
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public public function unbind(name : String) : Void;
 	
 	/**
 	* Converts the "Name" name into a NameComponent[] object and
@@ -117,7 +117,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param name string
 	* @exception NamingException See callUnbind
 	*/
-	@:overload public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public public function unbind(name : javax.naming.Name) : Void;
 	
 	/**
 	* Renames an object. Since COS Naming does not support a rename
@@ -127,7 +127,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param newName string, name used to replace.
 	* @exception NamingException See bind
 	*/
-	@:overload public function rename(oldName : String, newName : String) : Void;
+	@:overload @:public public function rename(oldName : String, newName : String) : Void;
 	
 	/**
 	* Renames an object. Since COS Naming does not support a rename
@@ -137,7 +137,7 @@ extern class CNCtx implements javax.naming.Context
 	* @param newName JNDI Name, name used to replace.
 	* @exception NamingException See bind
 	*/
-	@:overload public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
 	/**
 	* Returns a NameClassEnumeration object which has a list of name
@@ -147,7 +147,7 @@ extern class CNCtx implements javax.naming.Context
 	* with a non-null argument
 	* @return a list of name-class objects as a NameClassEnumeration.
 	*/
-	@:overload public function list(name : String) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function list(name : String) : javax.naming.NamingEnumeration<Dynamic>;
 	
 	/**
 	* Returns a NameClassEnumeration object which has a list of name
@@ -156,7 +156,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException All exceptions thrown by lookup
 	* @return a list of name-class objects as a NameClassEnumeration.
 	*/
-	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
 	
 	/**
 	* Returns a BindingEnumeration object which has a list of name
@@ -165,7 +165,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException all exceptions returned by lookup
 	* @return a list of bindings as a BindingEnumeration.
 	*/
-	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<Dynamic>;
 	
 	/**
 	* Returns a BindingEnumeration object which has a list of name
@@ -174,7 +174,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException all exceptions returned by lookup.
 	* @return a list of bindings as a BindingEnumeration.
 	*/
-	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<Dynamic>;
 	
 	/**
 	* Uses the callDestroy function to destroy the context. If name is
@@ -183,7 +183,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception OperationNotSupportedException when list is invoked
 	* with a non-null argument
 	*/
-	@:overload public function destroySubcontext(name : String) : Void;
+	@:overload @:public public function destroySubcontext(name : String) : Void;
 	
 	/**
 	* Uses the callDestroy function to destroy the context. Destroys
@@ -192,7 +192,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception OperationNotSupportedException when list is invoked
 	* with a non-null argument
 	*/
-	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public public function destroySubcontext(name : javax.naming.Name) : Void;
 	
 	/**
 	* Uses the callBindNewContext convenience function to create a new
@@ -201,7 +201,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException See callBindNewContext
 	* @return the new context object.
 	*/
-	@:overload public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : String) : javax.naming.Context;
 	
 	/**
 	* Uses the callBindNewContext convenience function to create a new
@@ -210,7 +210,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException See callBindNewContext
 	* @return the new context object.
 	*/
-	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
 	/**
 	* Is mapped to resolve in the COS Naming api.
@@ -218,7 +218,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException See lookup.
 	* @return the resolved object.
 	*/
-	@:overload public function lookupLink(name : String) : Dynamic;
+	@:overload @:public public function lookupLink(name : String) : Dynamic;
 	
 	/**
 	* Is mapped to resolve in the COS Naming api.
@@ -226,7 +226,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException See lookup.
 	* @return the resolved object.
 	*/
-	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Allow access to the name parser object.
@@ -235,7 +235,7 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException --
 	* @return NameParser object
 	*/
-	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : String) : javax.naming.NameParser;
 	
 	/**
 	* Allow access to the name parser object.
@@ -244,17 +244,17 @@ extern class CNCtx implements javax.naming.Context
 	* @exception NamingException --
 	* @return NameParser object
 	*/
-	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
 	/**
 	* Returns the current environment.
 	* @return Environment.
 	*/
-	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	@:overload public function composeName(name : String, prefix : String) : String;
+	@:overload @:public public function composeName(name : String, prefix : String) : String;
 	
-	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds to the environment for the current context.
@@ -264,17 +264,17 @@ extern class CNCtx implements javax.naming.Context
 	* @param propVal  The ORB.
 	* @return the previous value of this property if any.
 	*/
-	@:overload public function addToEnvironment(propName : String, propValue : Dynamic) : Dynamic;
+	@:overload @:public public function addToEnvironment(propName : String, propValue : Dynamic) : Dynamic;
 	
-	@:overload public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
-	@:overload @:synchronized public function incEnumCount() : Void;
+	@:overload @:synchronized @:public public function incEnumCount() : Void;
 	
-	@:overload @:synchronized public function decEnumCount() : Void;
+	@:overload @:synchronized @:public public function decEnumCount() : Void;
 	
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:synchronized @:public public function close() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

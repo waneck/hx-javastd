@@ -34,93 +34,93 @@ extern class DLSInfo
 	/**
 	* (INAM) Title or subject.
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* (ICRD) Date of creation, the format is: YYYY-MM-DD.
 	*        For example 2007-01-01 for 1. january of year 2007.
 	*/
-	public var creationDate : String;
+	@:public public var creationDate : String;
 	
 	/**
 	* (IENG) Name of engineer who created the object.
 	*/
-	public var engineers : String;
+	@:public public var engineers : String;
 	
 	/**
 	* (IPRD) Name of the product which the object is intended for.
 	*/
-	public var product : String;
+	@:public public var product : String;
 	
 	/**
 	* (ICOP) Copyright information.
 	*/
-	public var copyright : String;
+	@:public public var copyright : String;
 	
 	/**
 	* (ICMT) General comments. Doesn't contain newline characters.
 	*/
-	public var comments : String;
+	@:public public var comments : String;
 	
 	/**
 	* (ISFT) Name of software package used to create the file.
 	*/
-	public var tools : String;
+	@:public public var tools : String;
 	
 	/**
 	* (IARL) Where content is archived.
 	*/
-	public var archival_location : String;
+	@:public public var archival_location : String;
 	
 	/**
 	* (IART) Artists of original content.
 	*/
-	public var artist : String;
+	@:public public var artist : String;
 	
 	/**
 	* (ICMS) Names of persons or orginizations who commissioned the file.
 	*/
-	public var commissioned : String;
+	@:public public var commissioned : String;
 	
 	/**
 	* (IGNR) Genre of the work.
 	*        Example: jazz, classical, rock, etc.
 	*/
-	public var genre : String;
+	@:public public var genre : String;
 	
 	/**
 	* (IKEY) List of keyword that describe the content.
 	*        Examples: FX, bird, piano, etc.
 	*/
-	public var keywords : String;
+	@:public public var keywords : String;
 	
 	/**
 	* (IMED) Describes original medium of the data.
 	*        For example: record, CD, etc.
 	*/
-	public var medium : String;
+	@:public public var medium : String;
 	
 	/**
 	* (ISBJ) Description of the content.
 	*/
-	public var subject : String;
+	@:public public var subject : String;
 	
 	/**
 	* (ISRC) Name of person or orginization who supplied
 	*        orginal material for the file.
 	*/
-	public var source : String;
+	@:public public var source : String;
 	
 	/**
 	* (ISRF) Source media for sample data is from.
 	*        For example: CD, TV, etc.
 	*/
-	public var source_form : String;
+	@:public public var source_form : String;
 	
 	/**
 	* (ITCH) Technician who sample the file/object.
 	*/
-	public var technician : String;
+	@:public public var technician : String;
 	
 	
 }

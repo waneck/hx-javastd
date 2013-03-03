@@ -30,7 +30,7 @@ package sun.tools.asm;
 */
 extern class ArrayData
 {
-	@:overload public function new(type : sun.tools.java.Type, nargs : Int) : Void;
+	@:overload @:public public function new(type : sun.tools.java.Type, nargs : Int) : Void;
 	
 	
 }

@@ -28,40 +28,40 @@ extern class AsyncOperation extends com.sun.tools.internal.ws.processor.model.Op
 	/**
 	*
 	*/
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
 	/**
 	* @param operation
 	*/
-	@:overload public function new(operation : com.sun.tools.internal.ws.processor.model.Operation, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(operation : com.sun.tools.internal.ws.processor.model.Operation, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
 	/**
 	* @param name
 	*/
-	@:overload public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
 	/**
 	* @return Returns the async.
 	*/
-	@:overload public function isAsync() : Bool;
+	@:overload @:public public function isAsync() : Bool;
 	
-	@:overload public function setAsyncType(type : com.sun.tools.internal.ws.processor.model.AsyncOperationType) : Void;
+	@:overload @:public public function setAsyncType(type : com.sun.tools.internal.ws.processor.model.AsyncOperationType) : Void;
 	
-	@:overload public function getAsyncType() : com.sun.tools.internal.ws.processor.model.AsyncOperationType;
+	@:overload @:public public function getAsyncType() : com.sun.tools.internal.ws.processor.model.AsyncOperationType;
 	
-	@:overload public function setResponseBean(type : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
+	@:overload @:public public function setResponseBean(type : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
 	
-	@:overload public function getResponseBeanType() : com.sun.tools.internal.ws.processor.model.AbstractType;
+	@:overload @:public public function getResponseBeanType() : com.sun.tools.internal.ws.processor.model.AbstractType;
 	
-	@:overload public function getResponseBeanJavaType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getResponseBeanJavaType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function getCallBackType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getCallBackType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function getNormalOperation() : com.sun.tools.internal.ws.processor.model.Operation;
+	@:overload @:public public function getNormalOperation() : com.sun.tools.internal.ws.processor.model.Operation;
 	
-	@:overload public function setNormalOperation(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:public public function setNormalOperation(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload override public function getJavaMethodName() : String;
+	@:overload @:public override public function getJavaMethodName() : String;
 	
 	
 }

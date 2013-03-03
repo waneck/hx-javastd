@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class ChildNode extends com.sun.org.apache.xerces.internal.dom.NodeImpl
 {
 	/** Next sibling. */
-	private var nextSibling : com.sun.org.apache.xerces.internal.dom.ChildNode;
+	@:protected private var nextSibling : com.sun.org.apache.xerces.internal.dom.ChildNode;
 	
 	/**
 	* No public constructor; only subclasses of Node should be
@@ -29,10 +29,10 @@ extern class ChildNode extends com.sun.org.apache.xerces.internal.dom.NodeImpl
 	* <p>
 	* Every Node knows what Document it belongs to.
 	*/
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
 	
 	/** Constructor for serialization. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a duplicate of a given node. You can consider this a
@@ -57,18 +57,18 @@ extern class ChildNode extends com.sun.org.apache.xerces.internal.dom.NodeImpl
 	* is read-only, to permit applications using only the DOM API to obtain
 	* editable copies of locked portions of the tree.
 	*/
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the parent node of this node
 	*/
-	@:overload override public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public override public function getParentNode() : org.w3c.dom.Node;
 	
 	/** The next child of this node's parent, or null if none */
-	@:overload override public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public override public function getNextSibling() : org.w3c.dom.Node;
 	
 	/** The previous child of this node's parent, or null if none */
-	@:overload override public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public override public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	
 }

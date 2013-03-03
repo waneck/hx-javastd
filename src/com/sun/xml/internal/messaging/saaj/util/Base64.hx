@@ -43,7 +43,7 @@ extern class Base64
 	* @param binaryData Array containing binaryData
 	* @return Encoded Base64 array
 	*/
-	@:overload public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function encode(binaryData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Decodes Base64 data into octects
@@ -51,9 +51,9 @@ extern class Base64
 	* @param binaryData Byte array containing Base64 data
 	* @return Array containind decoded data.
 	*/
-	@:overload public function decode(base64Data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function decode(base64Data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function base64Decode(orig : String) : String;
+	@:overload @:public @:static public static function base64Decode(orig : String) : String;
 	
 	
 }

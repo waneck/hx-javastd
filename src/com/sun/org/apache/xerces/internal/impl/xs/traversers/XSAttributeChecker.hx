@@ -20,153 +20,153 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 */
 extern class XSAttributeChecker
 {
-	public static var ATTIDX_ABSTRACT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_ABSTRACT(default, null) : Int;
 	
-	public static var ATTIDX_AFORMDEFAULT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_AFORMDEFAULT(default, null) : Int;
 	
-	public static var ATTIDX_BASE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_BASE(default, null) : Int;
 	
-	public static var ATTIDX_BLOCK(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_BLOCK(default, null) : Int;
 	
-	public static var ATTIDX_BLOCKDEFAULT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_BLOCKDEFAULT(default, null) : Int;
 	
-	public static var ATTIDX_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_DEFAULT(default, null) : Int;
 	
-	public static var ATTIDX_EFORMDEFAULT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_EFORMDEFAULT(default, null) : Int;
 	
-	public static var ATTIDX_FINAL(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_FINAL(default, null) : Int;
 	
-	public static var ATTIDX_FINALDEFAULT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_FINALDEFAULT(default, null) : Int;
 	
-	public static var ATTIDX_FIXED(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_FIXED(default, null) : Int;
 	
-	public static var ATTIDX_FORM(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_FORM(default, null) : Int;
 	
-	public static var ATTIDX_ID(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_ID(default, null) : Int;
 	
-	public static var ATTIDX_ITEMTYPE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_ITEMTYPE(default, null) : Int;
 	
-	public static var ATTIDX_MAXOCCURS(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_MAXOCCURS(default, null) : Int;
 	
-	public static var ATTIDX_MEMBERTYPES(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_MEMBERTYPES(default, null) : Int;
 	
-	public static var ATTIDX_MINOCCURS(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_MINOCCURS(default, null) : Int;
 	
-	public static var ATTIDX_MIXED(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_MIXED(default, null) : Int;
 	
-	public static var ATTIDX_NAME(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_NAME(default, null) : Int;
 	
-	public static var ATTIDX_NAMESPACE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_NAMESPACE(default, null) : Int;
 	
-	public static var ATTIDX_NAMESPACE_LIST(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_NAMESPACE_LIST(default, null) : Int;
 	
-	public static var ATTIDX_NILLABLE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_NILLABLE(default, null) : Int;
 	
-	public static var ATTIDX_NONSCHEMA(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_NONSCHEMA(default, null) : Int;
 	
-	public static var ATTIDX_PROCESSCONTENTS(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_PROCESSCONTENTS(default, null) : Int;
 	
-	public static var ATTIDX_PUBLIC(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_PUBLIC(default, null) : Int;
 	
-	public static var ATTIDX_REF(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_REF(default, null) : Int;
 	
-	public static var ATTIDX_REFER(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_REFER(default, null) : Int;
 	
-	public static var ATTIDX_SCHEMALOCATION(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_SCHEMALOCATION(default, null) : Int;
 	
-	public static var ATTIDX_SOURCE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_SOURCE(default, null) : Int;
 	
-	public static var ATTIDX_SUBSGROUP(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_SUBSGROUP(default, null) : Int;
 	
-	public static var ATTIDX_SYSTEM(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_SYSTEM(default, null) : Int;
 	
-	public static var ATTIDX_TARGETNAMESPACE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_TARGETNAMESPACE(default, null) : Int;
 	
-	public static var ATTIDX_TYPE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_TYPE(default, null) : Int;
 	
-	public static var ATTIDX_USE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_USE(default, null) : Int;
 	
-	public static var ATTIDX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_VALUE(default, null) : Int;
 	
-	public static var ATTIDX_ENUMNSDECLS(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_ENUMNSDECLS(default, null) : Int;
 	
-	public static var ATTIDX_VERSION(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_VERSION(default, null) : Int;
 	
-	public static var ATTIDX_XML_LANG(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_XML_LANG(default, null) : Int;
 	
-	public static var ATTIDX_XPATH(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_XPATH(default, null) : Int;
 	
-	public static var ATTIDX_FROMDEFAULT(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_FROMDEFAULT(default, null) : Int;
 	
-	public static var ATTIDX_ISRETURNED(default, null) : Int;
+	@:public @:static @:final public static var ATTIDX_ISRETURNED(default, null) : Int;
 	
-	private static var DT_ANYURI(default, null) : Int;
+	@:protected @:static @:final private static var DT_ANYURI(default, null) : Int;
 	
-	private static var DT_ID(default, null) : Int;
+	@:protected @:static @:final private static var DT_ID(default, null) : Int;
 	
-	private static var DT_QNAME(default, null) : Int;
+	@:protected @:static @:final private static var DT_QNAME(default, null) : Int;
 	
-	private static var DT_STRING(default, null) : Int;
+	@:protected @:static @:final private static var DT_STRING(default, null) : Int;
 	
-	private static var DT_TOKEN(default, null) : Int;
+	@:protected @:static @:final private static var DT_TOKEN(default, null) : Int;
 	
-	private static var DT_NCNAME(default, null) : Int;
+	@:protected @:static @:final private static var DT_NCNAME(default, null) : Int;
 	
-	private static var DT_XPATH(default, null) : Int;
+	@:protected @:static @:final private static var DT_XPATH(default, null) : Int;
 	
-	private static var DT_XPATH1(default, null) : Int;
+	@:protected @:static @:final private static var DT_XPATH1(default, null) : Int;
 	
-	private static var DT_LANGUAGE(default, null) : Int;
+	@:protected @:static @:final private static var DT_LANGUAGE(default, null) : Int;
 	
-	private static var DT_COUNT(default, null) : Int;
+	@:protected @:static @:final private static var DT_COUNT(default, null) : Int;
 	
-	private static var DT_BLOCK(default, null) : Int;
+	@:protected @:static @:final private static var DT_BLOCK(default, null) : Int;
 	
-	private static var DT_BLOCK1(default, null) : Int;
+	@:protected @:static @:final private static var DT_BLOCK1(default, null) : Int;
 	
-	private static var DT_FINAL(default, null) : Int;
+	@:protected @:static @:final private static var DT_FINAL(default, null) : Int;
 	
-	private static var DT_FINAL1(default, null) : Int;
+	@:protected @:static @:final private static var DT_FINAL1(default, null) : Int;
 	
-	private static var DT_FINAL2(default, null) : Int;
+	@:protected @:static @:final private static var DT_FINAL2(default, null) : Int;
 	
-	private static var DT_FORM(default, null) : Int;
+	@:protected @:static @:final private static var DT_FORM(default, null) : Int;
 	
-	private static var DT_MAXOCCURS(default, null) : Int;
+	@:protected @:static @:final private static var DT_MAXOCCURS(default, null) : Int;
 	
-	private static var DT_MAXOCCURS1(default, null) : Int;
+	@:protected @:static @:final private static var DT_MAXOCCURS1(default, null) : Int;
 	
-	private static var DT_MEMBERTYPES(default, null) : Int;
+	@:protected @:static @:final private static var DT_MEMBERTYPES(default, null) : Int;
 	
-	private static var DT_MINOCCURS1(default, null) : Int;
+	@:protected @:static @:final private static var DT_MINOCCURS1(default, null) : Int;
 	
-	private static var DT_NAMESPACE(default, null) : Int;
+	@:protected @:static @:final private static var DT_NAMESPACE(default, null) : Int;
 	
-	private static var DT_PROCESSCONTENTS(default, null) : Int;
+	@:protected @:static @:final private static var DT_PROCESSCONTENTS(default, null) : Int;
 	
-	private static var DT_USE(default, null) : Int;
+	@:protected @:static @:final private static var DT_USE(default, null) : Int;
 	
-	private static var DT_WHITESPACE(default, null) : Int;
+	@:protected @:static @:final private static var DT_WHITESPACE(default, null) : Int;
 	
-	private static var DT_BOOLEAN(default, null) : Int;
+	@:protected @:static @:final private static var DT_BOOLEAN(default, null) : Int;
 	
-	private static var DT_NONNEGINT(default, null) : Int;
+	@:protected @:static @:final private static var DT_NONNEGINT(default, null) : Int;
 	
-	private static var DT_POSINT(default, null) : Int;
+	@:protected @:static @:final private static var DT_POSINT(default, null) : Int;
 	
-	private var fSchemaHandler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler;
+	@:protected private var fSchemaHandler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler;
 	
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private var fNonSchemaAttrs : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var fNonSchemaAttrs : java.util.Map<Dynamic, Dynamic>;
 	
-	private var fNamespaceList : java.util.Vector<Dynamic>;
+	@:protected private var fNamespaceList : java.util.Vector<Dynamic>;
 	
-	private var fSeen : java.NativeArray<Bool>;
+	@:protected private var fSeen : java.NativeArray<Bool>;
 	
-	@:overload public function new(schemaHandler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler) : Void;
+	@:overload @:public public function new(schemaHandler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler) : Void;
 	
-	@:overload public function reset(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function reset(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Check whether the specified element conforms to the attributes restriction
@@ -178,7 +178,7 @@ extern class XSAttributeChecker
 	* @param schemaDoc  the document where the element lives in
 	* @return           an array containing attribute values
 	*/
-	@:overload public function checkAttributes(element : org.w3c.dom.Element, isGlobal : Bool, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo) : java.NativeArray<Dynamic>;
+	@:overload @:public public function checkAttributes(element : org.w3c.dom.Element, isGlobal : Bool, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Check whether the specified element conforms to the attributes restriction
@@ -194,31 +194,31 @@ extern class XSAttributeChecker
 	* @param enumAsQName  whether to tread enumeration value as QName
 	* @return             an array containing attribute values
 	*/
-	@:overload public function checkAttributes(element : org.w3c.dom.Element, isGlobal : Bool, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, enumAsQName : Bool) : java.NativeArray<Dynamic>;
+	@:overload @:public public function checkAttributes(element : org.w3c.dom.Element, isGlobal : Bool, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, enumAsQName : Bool) : java.NativeArray<Dynamic>;
 	
-	@:overload public function checkNonSchemaAttributes(grammarBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
+	@:overload @:public public function checkNonSchemaAttributes(grammarBucket : com.sun.org.apache.xerces.internal.impl.xs.XSGrammarBucket) : Void;
 	
-	@:overload public static function normalize(content : String, ws : java.StdTypes.Int16) : String;
+	@:overload @:public @:static public static function normalize(content : String, ws : java.StdTypes.Int16) : String;
 	
-	@:overload private function getAvailableArray() : java.NativeArray<Dynamic>;
+	@:overload @:protected private function getAvailableArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function returnAttrArray(attrArray : java.NativeArray<Dynamic>, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo) : Void;
+	@:overload @:public public function returnAttrArray(attrArray : java.NativeArray<Dynamic>, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo) : Void;
 	
-	@:overload public function resolveNamespace(element : org.w3c.dom.Element, attrs : java.NativeArray<org.w3c.dom.Attr>, nsSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport) : Void;
+	@:overload @:public public function resolveNamespace(element : org.w3c.dom.Element, attrs : java.NativeArray<org.w3c.dom.Attr>, nsSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport) : Void;
 	
 	
 }
 @:internal extern class OneAttr
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var dvIndex : Int;
+	@:public public var dvIndex : Int;
 	
-	public var valueIndex : Int;
+	@:public public var valueIndex : Int;
 	
-	public var dfltValue : Dynamic;
+	@:public public var dfltValue : Dynamic;
 	
-	@:overload public function new(name : String, dvIndex : Int, valueIndex : Int, dfltValue : Dynamic) : Void;
+	@:overload @:public public function new(name : String, dvIndex : Int, valueIndex : Int, dfltValue : Dynamic) : Void;
 	
 	
 }

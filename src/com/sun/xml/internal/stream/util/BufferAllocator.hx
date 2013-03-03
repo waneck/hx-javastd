@@ -32,21 +32,21 @@ package com.sun.xml.internal.stream.util;
 */
 extern class BufferAllocator
 {
-	public static var SMALL_SIZE_LIMIT : Int;
+	@:public @:static public static var SMALL_SIZE_LIMIT : Int;
 	
-	public static var MEDIUM_SIZE_LIMIT : Int;
+	@:public @:static public static var MEDIUM_SIZE_LIMIT : Int;
 	
-	public static var LARGE_SIZE_LIMIT : Int;
+	@:public @:static public static var LARGE_SIZE_LIMIT : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getCharBuffer(size : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getCharBuffer(size : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function returnCharBuffer(c : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function returnCharBuffer(c : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function getByteBuffer(size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteBuffer(size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function returnByteBuffer(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function returnByteBuffer(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

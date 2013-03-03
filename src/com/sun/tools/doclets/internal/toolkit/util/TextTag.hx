@@ -39,47 +39,47 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	/**
 	*  Constructor
 	*/
-	@:overload public function new(holder : com.sun.javadoc.Doc, text : String) : Void;
+	@:overload @:public public function new(holder : com.sun.javadoc.Doc, text : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function holder() : com.sun.javadoc.Doc;
+	@:overload @:public public function holder() : com.sun.javadoc.Doc;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function kind() : String;
+	@:overload @:public public function kind() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function text() : String;
+	@:overload @:public public function text() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

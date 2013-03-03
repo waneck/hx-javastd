@@ -30,7 +30,7 @@ extern class KeyResolverSpi
 	* @param storage
 	* @return
 	*/
-	@:overload public function engineCanResolve(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : Bool;
+	@:overload @:public public function engineCanResolve(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : Bool;
 	
 	/**
 	* Method engineResolvePublicKey
@@ -42,7 +42,7 @@ extern class KeyResolverSpi
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
+	@:overload @:public public function engineResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
 	
 	/**
 	* Method engineResolvePublicKey
@@ -54,7 +54,7 @@ extern class KeyResolverSpi
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineLookupAndResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
+	@:overload @:public public function engineLookupAndResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
 	
 	/**
 	* Method engineResolveCertificate
@@ -66,7 +66,7 @@ extern class KeyResolverSpi
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
+	@:overload @:public public function engineResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
 	
 	/**
 	* Method engineResolveCertificate
@@ -78,7 +78,7 @@ extern class KeyResolverSpi
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineLookupResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
+	@:overload @:public public function engineLookupResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
 	
 	/**
 	* Method engineResolveSecretKey
@@ -90,7 +90,7 @@ extern class KeyResolverSpi
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
+	@:overload @:public public function engineResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
 	
 	/**
 	* Method engineResolveSecretKey
@@ -102,12 +102,12 @@ extern class KeyResolverSpi
 	*
 	* @throws KeyResolverException
 	*/
-	@:overload public function engineLookupAndResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
+	@:overload @:public public function engineLookupAndResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
 	
 	/** Field _properties */
-	private var _properties : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var _properties : java.util.Map<Dynamic, Dynamic>;
 	
-	private var globalResolver : Bool;
+	@:protected private var globalResolver : Bool;
 	
 	/**
 	* Method engineSetProperty
@@ -115,7 +115,7 @@ extern class KeyResolverSpi
 	* @param key
 	* @param value
 	*/
-	@:overload public function engineSetProperty(key : String, value : String) : Void;
+	@:overload @:public public function engineSetProperty(key : String, value : String) : Void;
 	
 	/**
 	* Method engineGetProperty
@@ -123,7 +123,7 @@ extern class KeyResolverSpi
 	* @param key
 	* @return obtain the property appointed by key
 	*/
-	@:overload public function engineGetProperty(key : String) : String;
+	@:overload @:public public function engineGetProperty(key : String) : String;
 	
 	/**
 	* Method understandsProperty
@@ -131,9 +131,9 @@ extern class KeyResolverSpi
 	* @param propertyToTest
 	* @return true if understood the property
 	*/
-	@:overload public function understandsProperty(propertyToTest : String) : Bool;
+	@:overload @:public public function understandsProperty(propertyToTest : String) : Bool;
 	
-	@:overload public function setGlobalResolver(globalResolver : Bool) : Void;
+	@:overload @:public public function setGlobalResolver(globalResolver : Bool) : Void;
 	
 	
 }

@@ -25,40 +25,40 @@ package sun.awt.image;
 */
 extern class ToolkitImage extends java.awt.Image
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Construct an image from an ImageProducer object.
 	*/
-	@:overload public function new(is : java.awt.image.ImageProducer) : Void;
+	@:overload @:public public function new(is : java.awt.image.ImageProducer) : Void;
 	
-	@:overload public function getSource() : java.awt.image.ImageProducer;
+	@:overload @:public override public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* Return the width of the original image source.
 	* If the width isn't known, then the image is reconstructed.
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
 	/**
 	* Return the width of the original image source.
 	* If the width isn't known, then the ImageObserver object will be
 	* notified when the data is available.
 	*/
-	@:overload @:synchronized public function getWidth(iw : java.awt.image.ImageObserver) : Int;
+	@:overload @:public @:synchronized override public function getWidth(iw : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Return the height of the original image source.
 	* If the height isn't known, then the image is reconstructed.
 	*/
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Return the height of the original image source.
 	* If the height isn't known, then the ImageObserver object will be
 	* notified when the data is available.
 	*/
-	@:overload @:synchronized public function getHeight(iw : java.awt.image.ImageObserver) : Int;
+	@:overload @:public @:synchronized override public function getHeight(iw : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Return a property of the image by name.  Individual property names
@@ -70,29 +70,29 @@ extern class ToolkitImage extends java.awt.Image
 	* be used to store an optional comment which can be presented to
 	* the user as a description of the image, its source, or its author.
 	*/
-	@:overload public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload @:public override public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
-	@:overload public function hasError() : Bool;
+	@:overload @:public public function hasError() : Bool;
 	
-	@:overload public function check(iw : java.awt.image.ImageObserver) : Int;
+	@:overload @:public public function check(iw : java.awt.image.ImageObserver) : Int;
 	
-	@:overload public function preload(iw : java.awt.image.ImageObserver) : Void;
+	@:overload @:public public function preload(iw : java.awt.image.ImageObserver) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload private function makeImageRep() : sun.awt.image.ImageRepresentation;
+	@:overload @:protected private function makeImageRep() : sun.awt.image.ImageRepresentation;
 	
-	@:overload @:synchronized public function getImageRep() : sun.awt.image.ImageRepresentation;
+	@:overload @:public @:synchronized public function getImageRep() : sun.awt.image.ImageRepresentation;
 	
-	@:overload public function getGraphics() : java.awt.Graphics;
-	
-	/* this method is needed by printing code */
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/* this method is needed by printing code */
-	@:overload public function getBufferedImage() : java.awt.image.BufferedImage;
+	@:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
-	@:overload public function setAccelerationPriority(priority : Single) : Void;
+	/* this method is needed by printing code */
+	@:overload @:public public function getBufferedImage() : java.awt.image.BufferedImage;
+	
+	@:overload @:public override public function setAccelerationPriority(priority : Single) : Void;
 	
 	
 }

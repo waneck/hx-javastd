@@ -29,7 +29,7 @@ extern class ExsltBase
 	* @param n The Node.
 	* @return The string value of the Node
 	*/
-	@:overload private static function toString(n : org.w3c.dom.Node) : String;
+	@:overload @:protected @:static private static function toString(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Convert the string value of a Node to a number.
@@ -38,7 +38,7 @@ extern class ExsltBase
 	* @param n The Node.
 	* @return The number value of the Node
 	*/
-	@:overload private static function toNumber(n : org.w3c.dom.Node) : Float;
+	@:overload @:protected @:static private static function toNumber(n : org.w3c.dom.Node) : Float;
 	
 	
 }

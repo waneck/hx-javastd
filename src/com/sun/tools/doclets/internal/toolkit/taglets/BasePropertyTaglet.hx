@@ -34,7 +34,7 @@ extern class BasePropertyTaglet extends com.sun.tools.doclets.internal.toolkit.t
 	* Do not use it as an API
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Given the <code>Tag</code> representation of this custom
@@ -44,41 +44,41 @@ extern class BasePropertyTaglet extends com.sun.tools.doclets.internal.toolkit.t
 	* @param tagletWriter the taglet writer for output.
 	* @return the TagletOutput representation of this <code>Tag</code>.
 	*/
-	@:overload override public function getTagletOutput(tag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(tag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* Will return false because this tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inConstructor() : Bool;
+	@:overload @:public override public function inConstructor() : Bool;
 	
 	/**
 	* Will return false because this tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inOverview() : Bool;
+	@:overload @:public override public function inOverview() : Bool;
 	
 	/**
 	* Will return false because this tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inPackage() : Bool;
+	@:overload @:public override public function inPackage() : Bool;
 	
 	/**
 	* Will return false because this tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inType() : Bool;
+	@:overload @:public override public function inType() : Bool;
 	
 	/**
 	* Will return false because this tag is not inline.
 	* @return false since this is not an inline tag.
 	*/
-	@:overload override public function isInlineTag() : Bool;
+	@:overload @:public override public function isInlineTag() : Bool;
 	
 	
 }

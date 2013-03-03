@@ -43,10 +43,10 @@ package javax.swing.event;
 extern class TableColumnModelEvent extends java.util.EventObject
 {
 	/** The index of the column from where it was moved or removed */
-	private var fromIndex : Int;
+	@:protected private var fromIndex : Int;
 	
 	/** The index of the column to where it was moved or added */
-	private var toIndex : Int;
+	@:protected private var toIndex : Int;
 	
 	/**
 	* Constructs a {@code TableColumnModelEvent} object.
@@ -59,13 +59,13 @@ extern class TableColumnModelEvent extends java.util.EventObject
 	* @see #getFromIndex
 	* @see #getToIndex
 	*/
-	@:overload public function new(source : javax.swing.table.TableColumnModel, from : Int, to : Int) : Void;
+	@:overload @:public public function new(source : javax.swing.table.TableColumnModel, from : Int, to : Int) : Void;
 	
 	/** Returns the fromIndex.  Valid for removed or moved events */
-	@:overload public function getFromIndex() : Int;
+	@:overload @:public public function getFromIndex() : Int;
 	
 	/** Returns the toIndex.  Valid for add and moved events */
-	@:overload public function getToIndex() : Int;
+	@:overload @:public public function getToIndex() : Int;
 	
 	
 }

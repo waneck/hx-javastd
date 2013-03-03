@@ -36,7 +36,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @throws NullPointerException if <code>principals</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>principals</code> is empty.
 	*/
-	@:overload public function new(principals : String) : Void;
+	@:overload @:public public function new(principals : String) : Void;
 	
 	/**
 	* Create a new <code>DelegationPermission</code>
@@ -50,7 +50,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @throws NullPointerException if <code>principals</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>principals</code> is empty.
 	*/
-	@:overload public function new(principals : String, actions : String) : Void;
+	@:overload @:public public function new(principals : String, actions : String) : Void;
 	
 	/**
 	* Checks if this Kerberos delegation permission object "implies" the
@@ -62,7 +62,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two DelegationPermission objects for equality.
@@ -73,14 +73,14 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	*  has the same subordinate and service principal as this.
 	*  DelegationPermission object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a PermissionCollection object for storing
@@ -94,13 +94,13 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @return a new PermissionCollection object suitable for storing
 	* DelegationPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
 @:internal extern class KrbDelegationPermissionCollection extends java.security.PermissionCollection implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Check and see if this collection of permissions implies the permissions
@@ -111,7 +111,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @return true if "permission" is a proper subset of a permission in
 	* the collection, false if not.
 	*/
-	@:overload public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Adds a permission to the DelegationPermissions. The key for
@@ -125,7 +125,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @exception SecurityException - if this PermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Returns an enumeration of all the DelegationPermission objects
@@ -133,7 +133,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	*
 	* @return an enumeration of all the DelegationPermission objects.
 	*/
-	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

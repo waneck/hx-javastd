@@ -29,35 +29,35 @@ extern class LdapReferralException extends javax.naming.ldap.LdapReferralExcepti
 	* Gets a context at which to continue processing.
 	* The current environment properties are re-used.
 	*/
-	@:overload override public function getReferralContext() : javax.naming.Context;
+	@:overload @:public override public function getReferralContext() : javax.naming.Context;
 	
 	/**
 	* Gets a context at which to continue processing.
 	* The supplied environment properties are used.
 	*/
-	@:overload override public function getReferralContext(newProps : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public override public function getReferralContext(newProps : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
 	/**
 	* Gets a context at which to continue processing.
 	* The supplied environment properties and connection controls are used.
 	*/
-	@:overload override public function getReferralContext(newProps : java.util.Hashtable<Dynamic, Dynamic>, connCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.Context;
+	@:overload @:public override public function getReferralContext(newProps : java.util.Hashtable<Dynamic, Dynamic>, connCtls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.Context;
 	
 	/**
 	* Gets referral information.
 	*/
-	@:overload override public function getReferralInfo() : Dynamic;
+	@:overload @:public override public function getReferralInfo() : Dynamic;
 	
 	/**
 	* Marks the current referral as one to be retried.
 	*/
-	@:overload override public function retryReferral() : Void;
+	@:overload @:public override public function retryReferral() : Void;
 	
 	/**
 	* Marks the current referral as one to be ignored.
 	* Returns false when there are no referrals remaining to be processed.
 	*/
-	@:overload override public function skipReferral() : Bool;
+	@:overload @:public override public function skipReferral() : Bool;
 	
 	
 }

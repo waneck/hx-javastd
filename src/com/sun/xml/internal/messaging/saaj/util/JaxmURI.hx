@@ -30,7 +30,7 @@ extern class JaxmURI implements java.io.Serializable
 	/**
 	* Construct a new and uninitialized URI.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new URI from another URI. All fields for this URI are
@@ -38,7 +38,7 @@ extern class JaxmURI implements java.io.Serializable
 	*
 	* @param p_other the URI to copy (cannot be null)
 	*/
-	@:overload public function new(p_other : com.sun.xml.internal.messaging.saaj.util.JaxmURI) : Void;
+	@:overload @:public public function new(p_other : com.sun.xml.internal.messaging.saaj.util.JaxmURI) : Void;
 	
 	/**
 	* Construct a new URI from a URI specification string. If the
@@ -55,7 +55,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_uriSpec violates any syntax
 	*                                   rules
 	*/
-	@:overload public function new(p_uriSpec : String) : Void;
+	@:overload @:public public function new(p_uriSpec : String) : Void;
 	
 	/**
 	* Construct a new URI from a base URI and a URI specification string.
@@ -69,7 +69,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_uriSpec violates any syntax
 	*                                  rules
 	*/
-	@:overload public function new(p_base : com.sun.xml.internal.messaging.saaj.util.JaxmURI, p_uriSpec : String) : Void;
+	@:overload @:public public function new(p_base : com.sun.xml.internal.messaging.saaj.util.JaxmURI, p_uriSpec : String) : Void;
 	
 	/**
 	* Construct a new URI that does not follow the generic URI syntax.
@@ -83,7 +83,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_scheme violates any
 	*                                  syntax rules
 	*/
-	@:overload public function new(p_scheme : String, p_schemeSpecificPart : String) : Void;
+	@:overload @:public public function new(p_scheme : String, p_schemeSpecificPart : String) : Void;
 	
 	/**
 	* Construct a new URI that follows the generic URI syntax from its
@@ -106,7 +106,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if any of the parameters violates
 	*                                  syntax rules or semantic rules
 	*/
-	@:overload public function new(p_scheme : String, p_host : String, p_path : String, p_queryString : String, p_fragment : String) : Void;
+	@:overload @:public public function new(p_scheme : String, p_host : String, p_path : String, p_queryString : String, p_fragment : String) : Void;
 	
 	/**
 	* Construct a new URI that follows the generic URI syntax from its
@@ -133,14 +133,14 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if any of the parameters violates
 	*                                  syntax rules or semantic rules
 	*/
-	@:overload public function new(p_scheme : String, p_userinfo : String, p_host : String, p_port : Int, p_path : String, p_queryString : String, p_fragment : String) : Void;
+	@:overload @:public public function new(p_scheme : String, p_userinfo : String, p_host : String, p_port : Int, p_path : String, p_queryString : String, p_fragment : String) : Void;
 	
 	/**
 	* Get the scheme for this URI.
 	*
 	* @return the scheme for this URI
 	*/
-	@:overload public function getScheme() : String;
+	@:overload @:public public function getScheme() : String;
 	
 	/**
 	* Get the scheme-specific part for this URI (everything following the
@@ -148,28 +148,28 @@ extern class JaxmURI implements java.io.Serializable
 	*
 	* @return the scheme-specific part for this URI
 	*/
-	@:overload public function getSchemeSpecificPart() : String;
+	@:overload @:public public function getSchemeSpecificPart() : String;
 	
 	/**
 	* Get the userinfo for this URI.
 	*
 	* @return the userinfo for this URI (null if not specified).
 	*/
-	@:overload public function getUserinfo() : String;
+	@:overload @:public public function getUserinfo() : String;
 	
 	/**
 	* Get the host for this URI.
 	*
 	* @return the host for this URI (null if not specified).
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* Get the port for this URI.
 	*
 	* @return the port for this URI (-1 if not specified).
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Get the path for this URI (optionally with the query string and
@@ -185,7 +185,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @return the path for this URI possibly including the query string
 	*         and fragment
 	*/
-	@:overload public function getPath(p_includeQueryString : Bool, p_includeFragment : Bool) : String;
+	@:overload @:public public function getPath(p_includeQueryString : Bool, p_includeFragment : Bool) : String;
 	
 	/**
 	* Get the path for this URI. Note that the value returned is the path
@@ -193,7 +193,7 @@ extern class JaxmURI implements java.io.Serializable
 	*
 	* @return the path for this URI.
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Get the query string for this URI.
@@ -202,7 +202,7 @@ extern class JaxmURI implements java.io.Serializable
 	*         was no "?" in the URI spec, empty string if there was a
 	*         "?" but no query string following it.
 	*/
-	@:overload public function getQueryString() : String;
+	@:overload @:public public function getQueryString() : String;
 	
 	/**
 	* Get the fragment for this URI.
@@ -211,7 +211,7 @@ extern class JaxmURI implements java.io.Serializable
 	*         was no "#" in the URI spec, empty string if there was a
 	*         "#" but no fragment following it.
 	*/
-	@:overload public function getFragment() : String;
+	@:overload @:public public function getFragment() : String;
 	
 	/**
 	* Set the scheme for this URI. The scheme is converted to lowercase
@@ -222,7 +222,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_scheme is not a conformant
 	*                                  scheme name
 	*/
-	@:overload public function setScheme(p_scheme : String) : Void;
+	@:overload @:public public function setScheme(p_scheme : String) : Void;
 	
 	/**
 	* Set the userinfo for this URI. If a non-null value is passed in and
@@ -233,7 +233,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_userinfo contains invalid
 	*                                  characters
 	*/
-	@:overload public function setUserinfo(p_userinfo : String) : Void;
+	@:overload @:public public function setUserinfo(p_userinfo : String) : Void;
 	
 	/**
 	* Set the host for this URI. If null is passed in, the userinfo
@@ -244,7 +244,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_host is not a valid IP
 	*                                  address or DNS hostname.
 	*/
-	@:overload public function setHost(p_host : String) : Void;
+	@:overload @:public public function setHost(p_host : String) : Void;
 	
 	/**
 	* Set the port for this URI. -1 is used to indicate that the port is
@@ -257,7 +257,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_port is not -1 and not a
 	*                                  valid port number
 	*/
-	@:overload public function setPort(p_port : Int) : Void;
+	@:overload @:public public function setPort(p_port : Int) : Void;
 	
 	/**
 	* Set the path for this URI. If the supplied path is null, then the
@@ -273,7 +273,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_path contains invalid
 	*                                  characters
 	*/
-	@:overload public function setPath(p_path : String) : Void;
+	@:overload @:public public function setPath(p_path : String) : Void;
 	
 	/**
 	* Append to the end of the path of this URI. If the current path does
@@ -288,7 +288,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_addToPath contains syntax
 	*                                  errors
 	*/
-	@:overload public function appendPath(p_addToPath : String) : Void;
+	@:overload @:public public function appendPath(p_addToPath : String) : Void;
 	
 	/**
 	* Set the query string for this URI. A non-null value is valid only
@@ -301,7 +301,7 @@ extern class JaxmURI implements java.io.Serializable
 	*                                  URI does not conform to the generic
 	*                                  URI syntax or if the path is null
 	*/
-	@:overload public function setQueryString(p_queryString : String) : Void;
+	@:overload @:public public function setQueryString(p_queryString : String) : Void;
 	
 	/**
 	* Set the fragment for this URI. A non-null value is valid only
@@ -314,7 +314,7 @@ extern class JaxmURI implements java.io.Serializable
 	*                                  URI does not conform to the generic
 	*                                  URI syntax or if the path is null
 	*/
-	@:overload public function setFragment(p_fragment : String) : Void;
+	@:overload @:public public function setFragment(p_fragment : String) : Void;
 	
 	/**
 	* Determines if the passed-in Object is equivalent to this URI.
@@ -324,14 +324,14 @@ extern class JaxmURI implements java.io.Serializable
 	* @return true if p_test is a URI with all values equal to this
 	*         URI, false otherwise
 	*/
-	@:overload public function equals(p_test : Dynamic) : Bool;
+	@:overload @:public public function equals(p_test : Dynamic) : Bool;
 	
 	/**
 	* Get the URI as a string specification. See RFC 2396 Section 5.2.
 	*
 	* @return the URI string specification
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Get the indicator as to whether this URI uses the "generic URI"
@@ -340,7 +340,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @return true if this URI uses the "generic URI" syntax, false
 	*         otherwise
 	*/
-	@:overload public function isGenericURI() : Bool;
+	@:overload @:public public function isGenericURI() : Bool;
 	
 	/**
 	* Determine whether a scheme conforms to the rules for a scheme name.
@@ -349,7 +349,7 @@ extern class JaxmURI implements java.io.Serializable
 	*
 	* @return true if the scheme is conformant, false otherwise
 	*/
-	@:overload public static function isConformantSchemeName(p_scheme : String) : Bool;
+	@:overload @:public @:static public static function isConformantSchemeName(p_scheme : String) : Bool;
 	
 	/**
 	* Determine whether a string is syntactically capable of representing
@@ -362,7 +362,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @return true if the string is a syntactically valid IPv4 address
 	*              or hostname
 	*/
-	@:overload public static function isWellFormedAddress(p_address : String) : Bool;
+	@:overload @:public @:static public static function isWellFormedAddress(p_address : String) : Bool;
 	
 	
 }
@@ -378,7 +378,7 @@ extern class JaxmURI implements java.io.Serializable
 	* Constructs a <code>MalformedURIException</code> with no specified
 	* detail message.
 	******************************************************************/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*****************************************************************
 	* Constructs a <code>MalformedURIException</code> with the
@@ -386,7 +386,7 @@ extern class JaxmURI implements java.io.Serializable
 	*
 	* @param p_msg the detail message.
 	******************************************************************/
-	@:overload public function new(p_msg : String) : Void;
+	@:overload @:public public function new(p_msg : String) : Void;
 	
 	
 }

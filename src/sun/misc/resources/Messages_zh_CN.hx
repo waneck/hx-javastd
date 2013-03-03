@@ -36,7 +36,7 @@ extern class Messages_zh_CN extends java.util.ListResourceBundle
 	* <p>
 	* @return the contents of this <code>ResourceBundle</code>.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:public override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

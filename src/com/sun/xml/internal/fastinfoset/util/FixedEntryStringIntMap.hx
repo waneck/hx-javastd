@@ -27,17 +27,17 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class FixedEntryStringIntMap extends com.sun.xml.internal.fastinfoset.util.StringIntMap
 {
-	@:overload public function new(fixedEntry : String, initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(fixedEntry : String, initialCapacity : Int, loadFactor : Single) : Void;
 	
-	@:overload public function new(fixedEntry : String, initialCapacity : Int) : Void;
+	@:overload @:public public function new(fixedEntry : String, initialCapacity : Int) : Void;
 	
-	@:overload public function new(fixedEntry : String) : Void;
+	@:overload @:public public function new(fixedEntry : String) : Void;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
-	@:overload @:final override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
+	@:overload @:public @:final override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.FixedEntryStringIntMap, clear : Bool) : Void;
+	@:overload @:public @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.FixedEntryStringIntMap, clear : Bool) : Void;
 	
 	
 }

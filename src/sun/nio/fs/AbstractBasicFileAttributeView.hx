@@ -25,13 +25,80 @@ package sun.nio.fs;
 */
 @:internal extern class AbstractBasicFileAttributeView implements java.nio.file.attribute.BasicFileAttributeView implements sun.nio.fs.DynamicFileAttributeView
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload public function readAttributes(requested : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public public function readAttributes(requested : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	
+	/**
+	* Updates any or all of the file's last modified time, last access time,
+	* and create time attributes.
+	*
+	* <p> This method updates the file's timestamp attributes. The values are
+	* converted to the epoch and precision supported by the file system.
+	* Converting from finer to coarser granularities result in precision loss.
+	* The behavior of this method when attempting to set a timestamp that is
+	* not supported or to a value that is outside the range supported by the
+	* underlying file store is not defined. It may or not fail by throwing an
+	* {@code IOException}.
+	*
+	* <p> If any of the {@code lastModifiedTime}, {@code lastAccessTime},
+	* or {@code createTime} parameters has the value {@code null} then the
+	* corresponding timestamp is not changed. An implementation may require to
+	* read the existing values of the file attributes when only some, but not
+	* all, of the timestamp attributes are updated. Consequently, this method
+	* may not be an atomic operation with respect to other file system
+	* operations. Reading and re-writing existing values may also result in
+	* precision loss. If all of the {@code lastModifiedTime}, {@code
+	* lastAccessTime} and {@code createTime} parameters are {@code null} then
+	* this method has no effect.
+	*
+	* <p> <b>Usage Example:</b>
+	* Suppose we want to change a file's creation time.
+	* <pre>
+	*    Path path = ...
+	*    FileTime time = ...
+	*    Files.getFileAttributeView(path, BasicFileAttributeView.class).setTimes(null, null, time);
+	* </pre>
+	*
+	* @param   lastModifiedTime
+	*          the new last modified time, or {@code null} to not change the
+	*          value
+	* @param   lastAccessTime
+	*          the last access time, or {@code null} to not change the value
+	* @param   createTime
+	*          the file's create time, or {@code null} to not change the value
+	*
+	* @throws  IOException
+	*          if an I/O error occurs
+	* @throws  SecurityException
+	*          In the case of the default provider, a security manager is
+	*          installed, its  {@link SecurityManager#checkWrite(String) checkWrite}
+	*          method is invoked to check write access to the file
+	*
+	* @see java.nio.file.Files#setLastModifiedTime
+	*/
+	@:overload @:public public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
+	
+	/**
+	* Reads the basic file attributes as a bulk operation.
+	*
+	* <p> It is implementation specific if all file attributes are read as an
+	* atomic operation with respect to other file system operations.
+	*
+	* @return  the file attributes
+	*
+	* @throws  IOException
+	*          if an I/O error occurs
+	* @throws  SecurityException
+	*          In the case of the default provider, a security manager is
+	*          installed, its {@link SecurityManager#checkRead(String) checkRead}
+	*          method is invoked to check read access to the file
+	*/
+	@:overload @:public public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
 	
 	
 }

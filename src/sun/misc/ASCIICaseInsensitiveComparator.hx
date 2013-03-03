@@ -30,9 +30,9 @@ extern class ASCIICaseInsensitiveComparator implements java.util.Comparator<Stri
 	tables internal to the JDK contain only ASCII data and are using
 	the "generalized" java.lang.String case-insensitive comparator
 	which converts each character to both upper and lower case. */
-	public static var CASE_INSENSITIVE_ORDER(default, null) : java.util.Comparator<String>;
+	@:public @:static @:final public static var CASE_INSENSITIVE_ORDER(default, null) : java.util.Comparator<String>;
 	
-	@:overload public function compare(s1 : String, s2 : String) : Int;
+	@:overload @:public public function compare(s1 : String, s2 : String) : Int;
 	
 	/**
 	* A case insensitive hash code method to go with the case insensitive
@@ -48,7 +48,7 @@ extern class ASCIICaseInsensitiveComparator implements java.util.Comparator<Stri
 	* @param s a String to compute the hashcode on.
 	* @return  a hash code value for this object.
 	*/
-	@:overload public static function lowerCaseHashCode(s : String) : Int;
+	@:overload @:public @:static public static function lowerCaseHashCode(s : String) : Int;
 	
 	
 }

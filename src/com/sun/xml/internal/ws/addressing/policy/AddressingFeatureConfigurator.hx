@@ -28,9 +28,9 @@ extern class AddressingFeatureConfigurator implements com.sun.xml.internal.ws.po
 	/**
 	* Creates a new instance of AddressingFeatureConfigurator
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public public function getFeatures(key : com.sun.xml.internal.ws.policy.PolicyMapKey, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
 	
 	
 }

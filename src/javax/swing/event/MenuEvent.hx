@@ -31,7 +31,7 @@ extern class MenuEvent extends java.util.EventObject
 	* @param source  the Object that originated the event
 	*                (typically <code>this</code>)
 	*/
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic) : Void;
 	
 	
 }

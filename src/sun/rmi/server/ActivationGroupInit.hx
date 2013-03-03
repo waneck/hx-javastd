@@ -28,7 +28,7 @@ extern class ActivationGroupInit
 	/**
 	* Main program to start a VM for an activation group.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

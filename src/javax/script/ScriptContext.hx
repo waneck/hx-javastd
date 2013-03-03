@@ -40,7 +40,7 @@ extern interface ScriptContext
 	* the specified <code>Bindings</code> is null.
 	*
 	*/
-	@:overload public function setBindings(bindings : javax.script.Bindings, scope : Int) : Void;
+	@:overload @:public public function setBindings(bindings : javax.script.Bindings, scope : Int) : Void;
 	
 	/**
 	* Gets the <code>Bindings</code>  associated with the given scope in this
@@ -52,7 +52,7 @@ extern interface ScriptContext
 	* @throws IllegalArgumentException If no <code>Bindings</code> is defined for the
 	* specified scope value in <code>ScriptContext</code> of this type.
 	*/
-	@:overload public function getBindings(scope : Int) : javax.script.Bindings;
+	@:overload @:public public function getBindings(scope : Int) : javax.script.Bindings;
 	
 	/**
 	* Sets the value of an attribute in a given scope.
@@ -65,7 +65,7 @@ extern interface ScriptContext
 	*         if the name is empty or if the scope is invalid.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public function setAttribute(name : String, value : Dynamic, scope : Int) : Void;
+	@:overload @:public public function setAttribute(name : String, value : Dynamic, scope : Int) : Void;
 	
 	/**
 	* Gets the value of an attribute in a given scope.
@@ -79,7 +79,7 @@ extern interface ScriptContext
 	*         if the name is empty or if the value of scope is invalid.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public function getAttribute(name : String, scope : Int) : Dynamic;
+	@:overload @:public public function getAttribute(name : String, scope : Int) : Dynamic;
 	
 	/**
 	* Remove an attribute in a given scope.
@@ -92,7 +92,7 @@ extern interface ScriptContext
 	*         if the name is empty or if the scope is invalid.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public function removeAttribute(name : String, scope : Int) : Dynamic;
+	@:overload @:public public function removeAttribute(name : String, scope : Int) : Dynamic;
 	
 	/**
 	* Retrieves the value of the attribute with the given name in
@@ -107,7 +107,7 @@ extern interface ScriptContext
 	* @throws NullPointerException if the name is null.
 	* @throws IllegalArgumentException if the name is empty.
 	*/
-	@:overload public function getAttribute(name : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Get the lowest scope in which an attribute is defined.
@@ -118,35 +118,35 @@ extern interface ScriptContext
 	* @throws NullPointerException if name is null.
 	* @throws IllegalArgumentException if name is empty.
 	*/
-	@:overload public function getAttributesScope(name : String) : Int;
+	@:overload @:public public function getAttributesScope(name : String) : Int;
 	
 	/**
 	* Returns the <code>Writer</code> for scripts to use when displaying output.
 	*
 	* @return The <code>Writer</code>.
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Returns the <code>Writer</code> used to display error output.
 	*
 	* @return The <code>Writer</code>
 	*/
-	@:overload public function getErrorWriter() : java.io.Writer;
+	@:overload @:public public function getErrorWriter() : java.io.Writer;
 	
 	/**
 	* Sets the <code>Writer</code> for scripts to use when displaying output.
 	*
 	* @param writer The new <code>Writer</code>.
 	*/
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Sets the <code>Writer</code> used to display error output.
 	*
 	* @param writer The <code>Writer</code>.
 	*/
-	@:overload public function setErrorWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setErrorWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Returns a <code>Reader</code> to be used by the script to read
@@ -154,14 +154,14 @@ extern interface ScriptContext
 	*
 	* @return The <code>Reader</code>.
 	*/
-	@:overload public function getReader() : java.io.Reader;
+	@:overload @:public public function getReader() : java.io.Reader;
 	
 	/**
 	* Sets the <code>Reader</code> for scripts to read input
 	* .
 	* @param reader The new <code>Reader</code>.
 	*/
-	@:overload public function setReader(reader : java.io.Reader) : Void;
+	@:overload @:public public function setReader(reader : java.io.Reader) : Void;
 	
 	/**
 	* Returns immutable <code>List</code> of all the valid values for
@@ -169,7 +169,7 @@ extern interface ScriptContext
 	*
 	* @return list of scope values
 	*/
-	@:overload public function getScopes() : java.util.List<Null<Int>>;
+	@:overload @:public public function getScopes() : java.util.List<Null<Int>>;
 	
 	
 }

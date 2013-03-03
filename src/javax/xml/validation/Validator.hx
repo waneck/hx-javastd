@@ -35,7 +35,7 @@ extern class Validator
 	* <code>null</code> {@link LSResourceResolver}.
 	* </p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Reset this <code>Validator</code> to its original configuration.</p>
@@ -49,7 +49,7 @@ extern class Validator
 	* <code>Object</code>s, e.g. {@link Object#equals(Object obj)}.  It is guaranteed to have a functionally equal
 	* <code>LSResourceResolver</code> and <code>ErrorHandler</code>.</p>
 	*/
-	@:overload @:abstract public function reset() : Void;
+	@:overload @:public @:abstract public function reset() : Void;
 	
 	/**
 	* Validates the specified input.
@@ -88,7 +88,7 @@ extern class Validator
 	*
 	* @see #validate(Source source, Result result)
 	*/
-	@:overload public function validate(source : javax.xml.transform.Source) : Void;
+	@:overload @:public public function validate(source : javax.xml.transform.Source) : Void;
 	
 	/**
 	* <p>Validates the specified input and send the augmented validation
@@ -200,7 +200,7 @@ extern class Validator
 	*
 	* @see #validate(Source source)
 	*/
-	@:overload @:abstract public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public @:abstract public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Sets the {@link ErrorHandler} to receive errors encountered
@@ -252,7 +252,7 @@ extern class Validator
 	* @param   errorHandler
 	*      A new error handler to be set. This parameter can be null.
 	*/
-	@:overload @:abstract public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:abstract public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Gets the current {@link ErrorHandler} set to this {@link Validator}.
@@ -265,7 +265,7 @@ extern class Validator
 	*
 	* @see #setErrorHandler(ErrorHandler)
 	*/
-	@:overload @:abstract public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public @:abstract public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Sets the {@link LSResourceResolver} to customize
@@ -304,7 +304,7 @@ extern class Validator
 	* @param   resourceResolver
 	*      A new resource resolver to be set. This parameter can be null.
 	*/
-	@:overload @:abstract public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public @:abstract public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
 	/**
 	* Gets the current {@link LSResourceResolver} set to this {@link Validator}.
@@ -317,7 +317,7 @@ extern class Validator
 	*
 	* @see #setErrorHandler(ErrorHandler)
 	*/
-	@:overload @:abstract public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload @:public @:abstract public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
 	/**
 	* Look up the value of a feature flag.
@@ -345,7 +345,7 @@ extern class Validator
 	*
 	* @see #setFeature(String, boolean)
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
 	/**
 	* Set the value of a feature flag.
@@ -375,7 +375,7 @@ extern class Validator
 	*
 	* @see #getFeature(String)
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* Set the value of a property.
@@ -401,7 +401,7 @@ extern class Validator
 	* @throws NullPointerException
 	*   When the name parameter is null.
 	*/
-	@:overload public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, object : Dynamic) : Void;
 	
 	/**
 	* Look up the value of a property.
@@ -432,7 +432,7 @@ extern class Validator
 	*
 	* @see #setProperty(String, Object)
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	
 }

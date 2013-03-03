@@ -37,7 +37,7 @@ package javax.xml.ws;
 	*
 	*  @return java.util.List&lt;Handler> Handler chain
 	*/
-	@:overload public function getHandlerChain() : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
+	@:overload @:public public function getHandlerChain() : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
 	
 	/**
 	* Sets the handler chain for the protocol binding instance.
@@ -50,7 +50,7 @@ package javax.xml.ws;
 	*          avoid any overriding of a pre-configured handler
 	*          chain.
 	*/
-	@:overload public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public @:public public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	/**
 	* Get the URI for this binding instance.

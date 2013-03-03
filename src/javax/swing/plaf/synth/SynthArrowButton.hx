@@ -25,33 +25,33 @@ package javax.swing.plaf.synth;
 */
 @:internal extern class SynthArrowButton extends javax.swing.JButton implements javax.swing.SwingConstants implements javax.swing.plaf.UIResource
 {
-	@:overload public function new(direction : Int) : Void;
+	@:overload @:public public function new(direction : Int) : Void;
 	
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
-	@:overload public function setDirection(dir : Int) : Void;
+	@:overload @:public public function setDirection(dir : Int) : Void;
 	
-	@:overload public function getDirection() : Int;
+	@:overload @:public public function getDirection() : Int;
 	
-	@:overload public function setFocusable(focusable : Bool) : Void;
+	@:overload @:public override public function setFocusable(focusable : Bool) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthArrowButton$SynthArrowButtonUI') @:internal extern class SynthArrowButton_SynthArrowButtonUI extends javax.swing.plaf.synth.SynthButtonUI
 {
-	@:overload override private function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
-	@:overload override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public public function getMaximumSize() : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

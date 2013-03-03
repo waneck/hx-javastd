@@ -28,36 +28,36 @@ extern class ByteOutputStream extends java.io.OutputStream
 	/**
 	* The buffer where data is stored.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The number of valid bytes in the buffer.
 	*/
-	private var count : Int;
+	@:protected private var count : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Copies all the bytes from this input into this buffer.
 	*/
-	@:overload public function write(_in : java.io.InputStream) : Void;
+	@:overload @:public public function write(_in : java.io.InputStream) : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes a string as ASCII string.
 	*/
-	@:overload public function writeAsAscii(s : String) : Void;
+	@:overload @:public public function writeAsAscii(s : String) : Void;
 	
-	@:overload public function writeTo(out : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(out : java.io.OutputStream) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Evil buffer reallocation method.
@@ -66,11 +66,11 @@ extern class ByteOutputStream extends java.io.OutputStream
 	* @deprecated
 	*      because this is evil!
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function newInputStream() : com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
+	@:overload @:public public function newInputStream() : com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
 	
 	/**
 	* Converts the buffer's contents into a string, translating bytes into
@@ -79,13 +79,13 @@ extern class ByteOutputStream extends java.io.OutputStream
 	* @return String translated from the buffer's contents.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function toString() : String;
+	@:require(java1) @:overload @:public public function toString() : String;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	
 }

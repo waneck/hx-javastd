@@ -57,7 +57,7 @@ package javax.xml.ws;
 	*  @see javax.xml.ws.handler.MessageContext
 	*  @see javax.xml.ws.ProtocolException
 	**/
-	@:overload public function invoke(request : T) : T;
+	@:overload @:public public function invoke(request : T) : T;
 	
 	
 }

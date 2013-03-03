@@ -25,7 +25,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 */
 @:internal extern class Chunk
 {
-	@:overload public function new(data : com.sun.xml.internal.org.jvnet.mimepull.Data) : Void;
+	@:overload @:public public function new(data : com.sun.xml.internal.org.jvnet.mimepull.Data) : Void;
 	
 	/**
 	* Creates a new chunk and adds to linked list.
@@ -34,7 +34,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	* @param buf MIME part partial data
 	* @return created chunk
 	*/
-	@:overload public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : com.sun.xml.internal.org.jvnet.mimepull.Chunk;
+	@:overload @:public public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : com.sun.xml.internal.org.jvnet.mimepull.Chunk;
 	
 	
 }

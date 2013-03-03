@@ -32,17 +32,17 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class ThreadIterator implements java.util.Iterator<com.sun.jdi.ThreadReference>
 {
-	@:overload public function new(tg : com.sun.jdi.ThreadGroupReference) : Void;
+	@:overload @:public public function new(tg : com.sun.jdi.ThreadGroupReference) : Void;
 	
-	@:overload public function new(tgl : java.util.List<com.sun.jdi.ThreadGroupReference>) : Void;
+	@:overload @:public public function new(tgl : java.util.List<com.sun.jdi.ThreadGroupReference>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function next() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function nextThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function nextThread() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ package java.io;
 	*         The cause of this error, or <tt>null</tt> if the cause
 	*         is not known
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

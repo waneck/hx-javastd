@@ -29,7 +29,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	* Construct a new, empty printer state reasons attribute; the underlying
 	* hash map has the default initial capacity and load factor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* super a new, empty printer state reasons attribute; the underlying
@@ -40,7 +40,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	* @throws IllegalArgumentException if the initial capacity is less
 	*     than zero.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Construct a new, empty printer state reasons attribute; the underlying
@@ -52,7 +52,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	* @throws IllegalArgumentException if the initial capacity is less
 	*     than zero.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Construct a new printer state reasons attribute that contains the same
@@ -73,7 +73,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	*     if any value in <CODE>map</CODE> is not an instance of class
 	*     {@link Severity Severity}.
 	*/
-	@:overload public function new(map : java.util.Map<javax.print.attribute.standard.PrinterStateReason, javax.print.attribute.standard.Severity>) : Void;
+	@:overload @:public public function new(map : java.util.Map<javax.print.attribute.standard.PrinterStateReason, javax.print.attribute.standard.Severity>) : Void;
 	
 	/**
 	* Adds the given printer state reason to this printer state reasons
@@ -100,7 +100,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	*     Severity}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function put(reason : javax.print.attribute.standard.PrinterStateReason, severity : javax.print.attribute.standard.Severity) : javax.print.attribute.standard.Severity;
+	@:require(java5) @:overload @:public public function put(reason : javax.print.attribute.standard.PrinterStateReason, severity : javax.print.attribute.standard.Severity) : javax.print.attribute.standard.Severity;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -112,7 +112,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -123,7 +123,7 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Obtain an unmodifiable set view of the individual printer state reason
@@ -146,29 +146,29 @@ extern class PrinterStateReasons extends java.util.HashMap<javax.print.attribute
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>severity</CODE> is null.
 	*/
-	@:overload public function printerStateReasonSet(severity : javax.print.attribute.standard.Severity) : java.util.Set<javax.print.attribute.standard.PrinterStateReason>;
+	@:overload @:public public function printerStateReasonSet(severity : javax.print.attribute.standard.Severity) : java.util.Set<javax.print.attribute.standard.PrinterStateReason>;
 	
 	
 }
 @:native('javax$print$attribute$standard$PrinterStateReasons$PrinterStateReasonSet') @:internal extern class PrinterStateReasons_PrinterStateReasonSet extends java.util.AbstractSet<javax.print.attribute.standard.PrinterStateReason>
 {
-	@:overload public function new(severity : javax.print.attribute.standard.Severity, entrySet : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(severity : javax.print.attribute.standard.Severity, entrySet : java.util.Set<Dynamic>) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }
 @:native('javax$print$attribute$standard$PrinterStateReasons$PrinterStateReasonSetIterator') @:internal extern class PrinterStateReasons_PrinterStateReasonSetIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function new(severity : javax.print.attribute.standard.Severity, iterator : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function new(severity : javax.print.attribute.standard.Severity, iterator : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

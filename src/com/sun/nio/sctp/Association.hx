@@ -55,14 +55,14 @@ package com.sun.nio.sctp;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(associationID : Int, maxInStreams : Int, maxOutStreams : Int) : Void;
+	@:overload @:protected private function new(associationID : Int, maxInStreams : Int, maxOutStreams : Int) : Void;
 	
 	/**
 	* Returns the associationID.
 	*
 	* @return  The association ID
 	*/
-	@:overload @:final public function associationID() : Int;
+	@:overload @:public @:final public function associationID() : Int;
 	
 	/**
 	* Returns the maximum number of inbound streams that this association
@@ -73,7 +73,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The maximum number of inbound streams
 	*/
-	@:overload @:final public function maxInboundStreams() : Int;
+	@:overload @:public @:final public function maxInboundStreams() : Int;
 	
 	/**
 	* Returns the maximum number of outbound streams that this association
@@ -84,7 +84,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The maximum number of outbound streams
 	*/
-	@:overload @:final public function maxOutboundStreams() : Int;
+	@:overload @:public @:final public function maxOutboundStreams() : Int;
 	
 	
 }

@@ -30,75 +30,75 @@ extern class PeekMetrics
 	* has done any drawing with a Paint that
 	* is not an instance of <code>Color</code>
 	*/
-	@:overload public function hasNonSolidColors() : Bool;
+	@:overload @:public public function hasNonSolidColors() : Bool;
 	
 	/**
 	* Return true if the application has
 	* done any drawing with an alpha other
 	* than 1.0.
 	*/
-	@:overload public function hasCompositing() : Bool;
+	@:overload @:public public function hasCompositing() : Bool;
 	
 	/**
 	* Return true if the application has
 	* drawn any text.
 	*/
-	@:overload public function hasText() : Bool;
+	@:overload @:public public function hasText() : Bool;
 	
 	/**
 	* Return true if the application has
 	* drawn any images.
 	*/
-	@:overload public function hasImages() : Bool;
+	@:overload @:public public function hasImages() : Bool;
 	
 	/**
 	* The application is performing a fill
 	* so record the needed information.
 	*/
-	@:overload public function fill(g : java.awt.Graphics2D) : Void;
+	@:overload @:public public function fill(g : java.awt.Graphics2D) : Void;
 	
 	/**
 	* The application is performing a draw
 	* so record the needed information.
 	*/
-	@:overload public function draw(g : java.awt.Graphics2D) : Void;
+	@:overload @:public public function draw(g : java.awt.Graphics2D) : Void;
 	
 	/**
 	* The application is performing a clearRect
 	* so record the needed information.
 	*/
-	@:overload public function clear(g : java.awt.Graphics2D) : Void;
+	@:overload @:public public function clear(g : java.awt.Graphics2D) : Void;
 	
 	/**
 	* The application is drawing text
 	* so record the needed information.
 	*/
-	@:overload public function drawText(g : java.awt.Graphics2D) : Void;
+	@:overload @:public public function drawText(g : java.awt.Graphics2D) : Void;
 	
 	/**
 	* The application is drawing text
 	* defined by <code>TextLayout</code>
 	* so record the needed information.
 	*/
-	@:overload public function drawText(g : java.awt.Graphics2D, textLayout : java.awt.font.TextLayout) : Void;
+	@:overload @:public public function drawText(g : java.awt.Graphics2D, textLayout : java.awt.font.TextLayout) : Void;
 	
 	/**
 	* The application is drawing the passed
 	* in image.
 	*/
-	@:overload public function drawImage(g : java.awt.Graphics2D, image : java.awt.Image) : Void;
+	@:overload @:public public function drawImage(g : java.awt.Graphics2D, image : java.awt.Image) : Void;
 	
 	/**
 	* The application is drawing the passed
 	* in image.
 	*/
-	@:overload public function drawImage(g : java.awt.Graphics2D, image : java.awt.image.RenderedImage) : Void;
+	@:overload @:public public function drawImage(g : java.awt.Graphics2D, image : java.awt.image.RenderedImage) : Void;
 	
 	/**
 	* The application is drawing the passed
 	* in image.
 	*/
-	@:overload public function drawImage(g : java.awt.Graphics2D, image : java.awt.image.renderable.RenderableImage) : Void;
+	@:overload @:public public function drawImage(g : java.awt.Graphics2D, image : java.awt.image.renderable.RenderableImage) : Void;
 	
 	
 }

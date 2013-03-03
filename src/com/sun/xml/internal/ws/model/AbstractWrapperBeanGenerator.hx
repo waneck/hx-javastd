@@ -25,18 +25,18 @@ package com.sun.xml.internal.ws.model;
 */
 extern class AbstractWrapperBeanGenerator<T, C, M, A>
 {
-	@:overload private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, Dynamic, M>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, M>, factory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<T, A>) : Void;
+	@:overload @:protected private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, Dynamic, M>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, M>, factory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<T, A>) : Void;
 	
-	@:overload @:abstract private function getSafeType(type : T) : T;
+	@:overload @:protected @:abstract private function getSafeType(type : T) : T;
 	
 	/**
 	* Returns Holder's value type.
 	*
 	* @return null if it not a Holder, otherwise return Holder's value type
 	*/
-	@:overload @:abstract private function getHolderValueType(type : T) : T;
+	@:overload @:protected @:abstract private function getHolderValueType(type : T) : T;
 	
-	@:overload @:abstract private function isVoidType(type : T) : Bool;
+	@:overload @:protected @:abstract private function isVoidType(type : T) : Bool;
 	
 	/**
 	* Computes request bean members for a method. Collects all IN and INOUT
@@ -47,7 +47,7 @@ extern class AbstractWrapperBeanGenerator<T, C, M, A>
 	* @param method SEI method for which request bean members are computed
 	* @return List of request bean members
 	*/
-	@:overload public function collectRequestBeanMembers(method : M) : java.util.List<A>;
+	@:overload @:public public function collectRequestBeanMembers(method : M) : java.util.List<A>;
 	
 	/**
 	* Computes response bean members for a method. Collects all OUT and INOUT
@@ -58,7 +58,7 @@ extern class AbstractWrapperBeanGenerator<T, C, M, A>
 	* @param method SEI method for which response bean members are computed
 	* @return List of response bean members
 	*/
-	@:overload public function collectResponseBeanMembers(method : M) : java.util.List<A>;
+	@:overload @:public public function collectResponseBeanMembers(method : M) : java.util.List<A>;
 	
 	/**
 	* Computes and sorts exception bean members for a given exception as per
@@ -75,7 +75,7 @@ extern class AbstractWrapperBeanGenerator<T, C, M, A>
 	* @param exception
 	* @return list of properties in the correct order for an exception bean
 	*/
-	@:overload public function collectExceptionBeanMembers(exception : C) : java.util.Collection<A>;
+	@:overload @:public public function collectExceptionBeanMembers(exception : C) : java.util.Collection<A>;
 	
 	
 }
@@ -87,7 +87,7 @@ extern class AbstractWrapperBeanGenerator<T, C, M, A>
 }
 @:native('com$sun$xml$internal$ws$model$AbstractWrapperBeanGenerator$XmlElementHandler') @:internal extern class AbstractWrapperBeanGenerator_XmlElementHandler implements java.lang.reflect.InvocationHandler
 {
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

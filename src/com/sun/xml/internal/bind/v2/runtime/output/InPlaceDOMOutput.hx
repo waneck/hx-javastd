@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime.output;
 */
 extern class InPlaceDOMOutput extends com.sun.xml.internal.bind.v2.runtime.output.SAXOutput
 {
-	@:overload public function new(node : org.w3c.dom.Node, assoc : com.sun.xml.internal.bind.v2.runtime.AssociationMap<Dynamic>) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node, assoc : com.sun.xml.internal.bind.v2.runtime.AssociationMap<Dynamic>) : Void;
 	
-	@:overload override public function endStartTag() : Void;
+	@:overload @:public override public function endStartTag() : Void;
 	
 	
 }

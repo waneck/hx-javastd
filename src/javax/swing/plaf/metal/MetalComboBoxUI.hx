@@ -41,9 +41,9 @@ package javax.swing.plaf.metal;
 */
 extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* If necessary paints the currently selected item.
@@ -54,7 +54,7 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	* @throws NullPointerException if any of the arguments are null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:require(java5) @:overload @:public override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
 	/**
 	* If necessary paints the background of the currently selected item.
@@ -65,7 +65,7 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	* @throws NullPointerException if any of the arguments are null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function paintCurrentValueBackground(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:require(java5) @:overload @:public override public function paintCurrentValueBackground(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
 	/**
 	* Returns the baseline.
@@ -75,15 +75,15 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
-	@:overload override private function createEditor() : javax.swing.ComboBoxEditor;
+	@:overload @:protected override private function createEditor() : javax.swing.ComboBoxEditor;
 	
-	@:overload override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
+	@:overload @:protected override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
 	
-	@:overload override private function createArrowButton() : javax.swing.JButton;
+	@:overload @:protected override private function createArrowButton() : javax.swing.JButton;
 	
-	@:overload override public function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:public override public function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	/**
 	* As of Java 2 platform v1.4 this method is no longer used. Do not call or
@@ -92,11 +92,11 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	*
 	* @deprecated As of Java 2 platform v1.4.
 	*/
-	@:overload private function editablePropertyChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected private function editablePropertyChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayoutManager() : java.awt.LayoutManager;
 	
-	@:overload public function layoutComboBox(parent : java.awt.Container, manager : javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxUI_MetalComboBoxLayoutManager) : Void;
+	@:overload @:public public function layoutComboBox(parent : java.awt.Container, manager : javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxUI_MetalComboBoxLayoutManager) : Void;
 	
 	/**
 	* As of Java 2 platform v1.4 this method is no
@@ -104,13 +104,13 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	*
 	* @deprecated As of Java 2 platform v1.4.
 	*/
-	@:overload private function removeListeners() : Void;
+	@:overload @:protected private function removeListeners() : Void;
 	
-	@:overload override public function configureEditor() : Void;
+	@:overload @:public override public function configureEditor() : Void;
 	
-	@:overload override public function unconfigureEditor() : Void;
+	@:overload @:public override public function unconfigureEditor() : Void;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }
@@ -120,7 +120,7 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 */
 @:native('javax$swing$plaf$metal$MetalComboBoxUI$MetalPropertyChangeListener') extern class MetalComboBoxUI_MetalPropertyChangeListener extends javax.swing.plaf.basic.BasicComboBoxUI.BasicComboBoxUI_PropertyChangeHandler
 {
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -130,9 +130,9 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 */
 @:native('javax$swing$plaf$metal$MetalComboBoxUI$MetalComboBoxLayoutManager') extern class MetalComboBoxUI_MetalComboBoxLayoutManager extends javax.swing.plaf.basic.BasicComboBoxUI.BasicComboBoxUI_ComboBoxLayoutManager
 {
-	@:overload override public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(parent : java.awt.Container) : Void;
 	
-	@:overload public function superLayout(parent : java.awt.Container) : Void;
+	@:overload @:public public function superLayout(parent : java.awt.Container) : Void;
 	
 	
 }
@@ -148,9 +148,9 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 */
 @:native('javax$swing$plaf$metal$MetalComboBoxUI$MetalComboPopup') extern class MetalComboBoxUI_MetalComboPopup extends javax.swing.plaf.basic.BasicComboPopup
 {
-	@:overload public function new(cBox : javax.swing.JComboBox<Dynamic>) : Void;
+	@:overload @:public public function new(cBox : javax.swing.JComboBox<Dynamic>) : Void;
 	
-	@:overload override public function delegateFocus(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function delegateFocus(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

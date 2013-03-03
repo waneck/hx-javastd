@@ -30,51 +30,51 @@ extern class AbstractDocument
 	*
 	* @author WS Development Team
 	*/
-	private var forest(default, null) : com.sun.tools.internal.ws.wsdl.parser.DOMForest;
+	@:protected @:final private var forest(default, null) : com.sun.tools.internal.ws.wsdl.parser.DOMForest;
 	
-	private var errReceiver(default, null) : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
+	@:protected @:final private var errReceiver(default, null) : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
 	
-	@:overload private function new(forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:protected private function new(forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function setSystemId(s : String) : Void;
+	@:overload @:public public function setSystemId(s : String) : Void;
 	
-	@:overload public function addIncludedDocument(systemId : String) : Void;
+	@:overload @:public public function addIncludedDocument(systemId : String) : Void;
 	
-	@:overload public function isIncludedDocument(systemId : String) : Bool;
+	@:overload @:public public function isIncludedDocument(systemId : String) : Bool;
 	
-	@:overload public function addIncludedEntity(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function addIncludedEntity(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function addImportedDocument(systemId : String) : Void;
+	@:overload @:public public function addImportedDocument(systemId : String) : Void;
 	
-	@:overload public function isImportedDocument(systemId : String) : Bool;
+	@:overload @:public public function isImportedDocument(systemId : String) : Bool;
 	
-	@:overload public function addImportedEntity(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function addImportedEntity(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function getMap(k : com.sun.tools.internal.ws.wsdl.framework.Kind) : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getMap(k : com.sun.tools.internal.ws.wsdl.framework.Kind) : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload public function define(e : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown) : Void;
+	@:overload @:public public function define(e : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown) : Void;
 	
-	@:overload public function find(k : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown;
+	@:overload @:public public function find(k : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : com.sun.tools.internal.ws.wsdl.framework.GloballyKnown;
 	
-	@:overload public function validateLocally() : Void;
+	@:overload @:public public function validateLocally() : Void;
 	
-	@:overload @:abstract public function validate(validator : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceValidator) : Void;
+	@:overload @:public @:abstract public function validate(validator : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceValidator) : Void;
 	
-	@:overload @:abstract private function getRoot() : com.sun.tools.internal.ws.wsdl.framework.Entity;
+	@:overload @:protected @:abstract private function getRoot() : com.sun.tools.internal.ws.wsdl.framework.Entity;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$wsdl$framework$AbstractDocument$LocallyValidatingAction') @:internal extern class AbstractDocument_LocallyValidatingAction implements com.sun.tools.internal.ws.wsdl.framework.EntityAction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function perform(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function perform(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getException() : com.sun.tools.internal.ws.wsdl.framework.ValidationException;
+	@:overload @:public public function getException() : com.sun.tools.internal.ws.wsdl.framework.ValidationException;
 	
 	
 }

@@ -30,19 +30,19 @@ extern class W3CAddressingMetadataWSDLGeneratorExtension extends com.sun.xml.int
 	*
 	* @author Rama Pulavarthi
 	*/
-	@:overload public function start(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
+	@:overload @:public override public function start(ctxt : com.sun.xml.internal.ws.api.wsdl.writer.WSDLGenExtnContext) : Void;
 	
-	@:overload public function addOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public override public function addOperationInputExtension(input : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
-	@:overload public function addOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
+	@:overload @:public override public function addOperationOutputExtension(output : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod) : Void;
 	
-	@:overload public function addOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
+	@:overload @:public override public function addOperationFaultExtension(fault : com.sun.xml.internal.txw2.TypedXmlWriter, method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : Void;
 	
-	@:overload @:final private static function getDefaultInputAction(method : com.sun.xml.internal.ws.api.model.JavaMethod) : String;
+	@:overload @:protected @:static @:final private static function getDefaultInputAction(method : com.sun.xml.internal.ws.api.model.JavaMethod) : String;
 	
-	@:overload @:final private static function getDefaultOutputAction(method : com.sun.xml.internal.ws.api.model.JavaMethod) : String;
+	@:overload @:protected @:static @:final private static function getDefaultOutputAction(method : com.sun.xml.internal.ws.api.model.JavaMethod) : String;
 	
-	@:overload @:final private static function getDefaultFaultAction(method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : String;
+	@:overload @:protected @:static @:final private static function getDefaultFaultAction(method : com.sun.xml.internal.ws.api.model.JavaMethod, ce : com.sun.xml.internal.ws.api.model.CheckedException) : String;
 	
 	
 }

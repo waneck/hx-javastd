@@ -30,9 +30,9 @@ package sun.swing;
 */
 extern class StringUIClientPropertyKey implements sun.swing.UIClientPropertyKey
 {
-	@:overload public function new(key : String) : Void;
+	@:overload @:public public function new(key : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

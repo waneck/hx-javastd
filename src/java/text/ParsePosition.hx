@@ -56,17 +56,17 @@ extern class ParsePosition
 	* is the index of the character at which parsing will begin; on output, it
 	* is the index of the character following the last character parsed.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Set the current parse position.
 	*/
-	@:overload public function setIndex(index : Int) : Void;
+	@:overload @:public public function setIndex(index : Int) : Void;
 	
 	/**
 	* Create a new ParsePosition with the given initial index.
 	*/
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
 	/**
 	* Set the index at which a parse error occurred.  Formatters
@@ -74,31 +74,31 @@ extern class ParsePosition
 	* parseObject method.  The default value is -1 if this is not set.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setErrorIndex(ei : Int) : Void;
+	@:require(java2) @:overload @:public public function setErrorIndex(ei : Int) : Void;
 	
 	/**
 	* Retrieve the index at which an error occurred, or -1 if the
 	* error index has not been set.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getErrorIndex() : Int;
+	@:require(java2) @:overload @:public public function getErrorIndex() : Int;
 	
 	/**
 	* Overrides equals
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this ParsePosition.
 	* @return a hash code value for this object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return a string representation of this ParsePosition.
 	* @return  a string representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

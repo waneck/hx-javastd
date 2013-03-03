@@ -30,7 +30,7 @@ extern class OffScreenImage extends java.awt.image.BufferedImage
 	* a Component.  The Component's foreground and background colors and
 	* default font are used as the defaults for this image.
 	*/
-	private var c : java.awt.Component;
+	@:protected private var c : java.awt.Component;
 	
 	/**
 	* Constructs an OffScreenImage given a color model and tile,
@@ -38,13 +38,13 @@ extern class OffScreenImage extends java.awt.image.BufferedImage
 	* The component is used to obtain the foreground color, background
 	* color and font.
 	*/
-	@:overload public function new(c : java.awt.Component, cm : java.awt.image.ColorModel, raster : java.awt.image.WritableRaster, isRasterPremultiplied : Bool) : Void;
+	@:overload @:public public function new(c : java.awt.Component, cm : java.awt.image.ColorModel, raster : java.awt.image.WritableRaster, isRasterPremultiplied : Bool) : Void;
 	
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
-	@:overload override public function createGraphics() : java.awt.Graphics2D;
+	@:overload @:public override public function createGraphics() : java.awt.Graphics2D;
 	
-	@:overload override public function getSource() : java.awt.image.ImageProducer;
+	@:overload @:public override public function getSource() : java.awt.image.ImageProducer;
 	
 	
 }

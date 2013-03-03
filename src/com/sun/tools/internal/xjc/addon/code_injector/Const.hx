@@ -31,7 +31,7 @@ extern class Const
 	/**
 	* Customization namespace URI.
 	*/
-	public static var NS(default, null) : String;
+	@:public @:static @:final public static var NS(default, null) : String;
 	
 	
 }

@@ -26,7 +26,7 @@ package javax.swing;
 extern class JSeparator extends javax.swing.JComponent implements javax.swing.SwingConstants implements javax.accessibility.Accessible
 {
 	/** Creates a new horizontal separator. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new separator with the specified horizontal or
@@ -39,14 +39,14 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	*          is neither <code>SwingConstants.HORIZONTAL</code> nor
 	*          <code>SwingConstants.VERTICAL</code>
 	*/
-	@:overload public function new(orientation : Int) : Void;
+	@:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	*
 	* @return the SeparatorUI object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.SeparatorUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.SeparatorUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -59,14 +59,14 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.SeparatorUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.SeparatorUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -75,7 +75,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the orientation of this separator.
@@ -88,7 +88,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	* @see SwingConstants
 	* @see #setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Sets the orientation of the separator.
@@ -109,7 +109,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	*    attribute: visualUpdate true
 	*  description: The orientation of the separator.
 	*/
-	@:overload public function setOrientation(orientation : Int) : Void;
+	@:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JSeparator</code>.
@@ -121,7 +121,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	*
 	* @return  a string representation of this <code>JSeparator</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JSeparator.
@@ -132,7 +132,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	* @return an AccessibleJSeparator that serves as the
 	*         AccessibleContext of this JSeparator
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -158,7 +158,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

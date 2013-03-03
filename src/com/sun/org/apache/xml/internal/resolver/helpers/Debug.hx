@@ -34,16 +34,16 @@ package com.sun.org.apache.xml.internal.resolver.helpers;
 extern class Debug
 {
 	/** The internal debug level. */
-	private var debug : Int;
+	@:protected private var debug : Int;
 	
 	/** Constructor */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Set the debug level for future messages. */
-	@:overload public function setDebug(newDebug : Int) : Void;
+	@:overload @:public public function setDebug(newDebug : Int) : Void;
 	
 	/** Get the current debug level. */
-	@:overload public function getDebug() : Int;
+	@:overload @:public public function getDebug() : Int;
 	
 	/**
 	* Print debug message (if the debug level is high enough).
@@ -56,7 +56,7 @@ extern class Debug
 	* value.
 	* @param message The text of the message.
 	*/
-	@:overload public function message(level : Int, message : String) : Void;
+	@:overload @:public public function message(level : Int, message : String) : Void;
 	
 	/**
 	* Print debug message (if the debug level is high enough).
@@ -70,7 +70,7 @@ extern class Debug
 	* @param message The text of the message.
 	* @param spec An argument to the message.
 	*/
-	@:overload public function message(level : Int, message : String, spec : String) : Void;
+	@:overload @:public public function message(level : Int, message : String, spec : String) : Void;
 	
 	/**
 	* Print debug message (if the debug level is high enough).
@@ -85,7 +85,7 @@ extern class Debug
 	* @param spec1 An argument to the message.
 	* @param spec2 Another argument to the message.
 	*/
-	@:overload public function message(level : Int, message : String, spec1 : String, spec2 : String) : Void;
+	@:overload @:public public function message(level : Int, message : String, spec1 : String, spec2 : String) : Void;
 	
 	
 }

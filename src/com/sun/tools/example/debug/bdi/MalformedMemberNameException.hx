@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.bdi;
 */
 @:internal extern class MalformedMemberNameException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

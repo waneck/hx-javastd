@@ -48,7 +48,7 @@ package java.util.concurrent;
 	* The cause is not initialized, and may subsequently be
 	* initialized by a call to {@link #initCause(Throwable) initCause}.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs an <tt>ExecutionException</tt> with the specified detail
@@ -57,7 +57,7 @@ package java.util.concurrent;
 	*
 	* @param message the detail message
 	*/
-	@:overload private function new(message : String) : Void;
+	@:overload @:protected private function new(message : String) : Void;
 	
 	/**
 	* Constructs an <tt>ExecutionException</tt> with the specified detail
@@ -67,7 +67,7 @@ package java.util.concurrent;
 	* @param  cause the cause (which is saved for later retrieval by the
 	*         {@link #getCause()} method)
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs an <tt>ExecutionException</tt> with the specified cause.
@@ -80,7 +80,7 @@ package java.util.concurrent;
 	* @param  cause the cause (which is saved for later retrieval by the
 	*         {@link #getCause()} method)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

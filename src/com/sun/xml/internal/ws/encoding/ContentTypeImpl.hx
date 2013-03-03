@@ -25,24 +25,24 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class ContentTypeImpl implements com.sun.xml.internal.ws.api.pipe.ContentType
 {
-	@:overload public function new(contentType : String) : Void;
+	@:overload @:public public function new(contentType : String) : Void;
 	
-	@:overload public function new(contentType : String, soapAction : String) : Void;
+	@:overload @:public public function new(contentType : String, soapAction : String) : Void;
 	
-	@:overload public function new(contentType : String, soapAction : String, accept : String) : Void;
+	@:overload @:public public function new(contentType : String, soapAction : String, accept : String) : Void;
 	
 	/**
 	* Returns the character set encoding.
 	*
 	* @return returns the character set encoding.
 	*/
-	@:overload public function getCharSet() : String;
+	@:overload @:public public function getCharSet() : String;
 	
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function getSOAPActionHeader() : String;
+	@:overload @:public public function getSOAPActionHeader() : String;
 	
-	@:overload public function getAcceptHeader() : String;
+	@:overload @:public public function getAcceptHeader() : String;
 	
 	
 }

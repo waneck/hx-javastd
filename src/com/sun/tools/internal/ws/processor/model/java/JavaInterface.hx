@@ -29,55 +29,55 @@ extern class JavaInterface
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function new(name : String, impl : String) : Void;
+	@:overload @:public public function new(name : String, impl : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getFormalName() : String;
+	@:overload @:public public function getFormalName() : String;
 	
-	@:overload public function setFormalName(s : String) : Void;
+	@:overload @:public public function setFormalName(s : String) : Void;
 	
-	@:overload public function getRealName() : String;
+	@:overload @:public public function getRealName() : String;
 	
-	@:overload public function setRealName(s : String) : Void;
+	@:overload @:public public function setRealName(s : String) : Void;
 	
-	@:overload public function getImpl() : String;
+	@:overload @:public public function getImpl() : String;
 	
-	@:overload public function setImpl(s : String) : Void;
+	@:overload @:public public function setImpl(s : String) : Void;
 	
-	@:overload public function getMethods() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getMethods() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function hasMethod(method : com.sun.tools.internal.ws.processor.model.java.JavaMethod) : Bool;
+	@:overload @:public public function hasMethod(method : com.sun.tools.internal.ws.processor.model.java.JavaMethod) : Bool;
 	
-	@:overload public function addMethod(method : com.sun.tools.internal.ws.processor.model.java.JavaMethod) : Void;
-	
-	/* serialization */
-	@:overload public function getMethodsList() : java.util.List<Dynamic>;
+	@:overload @:public public function addMethod(method : com.sun.tools.internal.ws.processor.model.java.JavaMethod) : Void;
 	
 	/* serialization */
-	@:overload public function setMethodsList(l : java.util.List<Dynamic>) : Void;
-	
-	@:overload public function hasInterface(interfaceName : String) : Bool;
-	
-	@:overload public function addInterface(interfaceName : String) : Void;
-	
-	@:overload public function getInterfaces() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getMethodsList() : java.util.List<Dynamic>;
 	
 	/* serialization */
-	@:overload public function getInterfacesList() : java.util.List<Dynamic>;
+	@:overload @:public public function setMethodsList(l : java.util.List<Dynamic>) : Void;
+	
+	@:overload @:public public function hasInterface(interfaceName : String) : Bool;
+	
+	@:overload @:public public function addInterface(interfaceName : String) : Void;
+	
+	@:overload @:public public function getInterfaces() : java.util.Iterator<Dynamic>;
 	
 	/* serialization */
-	@:overload public function setInterfacesList(l : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function getInterfacesList() : java.util.List<Dynamic>;
 	
-	@:overload public function getSimpleName() : String;
+	/* serialization */
+	@:overload @:public public function setInterfacesList(l : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getJavaDoc() : String;
+	@:overload @:public public function getSimpleName() : String;
 	
-	@:overload public function setJavaDoc(javadoc : String) : Void;
+	@:overload @:public public function getJavaDoc() : String;
+	
+	@:overload @:public public function setJavaDoc(javadoc : String) : Void;
 	
 	
 }

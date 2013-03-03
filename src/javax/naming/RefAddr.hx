@@ -57,28 +57,28 @@ package javax.naming;
 	* Contains the type of this address.
 	* @serial
 	*/
-	private var addrType : String;
+	@:protected private var addrType : String;
 	
 	/**
 	* Constructs a new instance of RefAddr using its address type.
 	*
 	* @param addrType A non-null string describing the type of the address.
 	*/
-	@:overload private function new(addrType : String) : Void;
+	@:overload @:protected private function new(addrType : String) : Void;
 	
 	/**
 	* Retrieves the address type of this address.
 	*
 	* @return The non-null address type of this address.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Retrieves the contents of this address.
 	*
 	* @return The possibly null address contents.
 	*/
-	@:overload @:abstract public function getContent() : Dynamic;
+	@:overload @:public @:abstract public function getContent() : Dynamic;
 	
 	/**
 	* Determines whether obj is equal to this RefAddr.
@@ -95,7 +95,7 @@ package javax.naming;
 	* @see #getContent
 	* @see #getType
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes the hash code of this address using its address type and contents.
@@ -105,7 +105,7 @@ package javax.naming;
 	* @return The hash code of this address as an int.
 	* @see java.lang.Object#hashCode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Generates the string representation of this address.
@@ -113,7 +113,7 @@ package javax.naming;
 	* This representation is intended for display only and not to be parsed.
 	* @return The non-null string representation of this address.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

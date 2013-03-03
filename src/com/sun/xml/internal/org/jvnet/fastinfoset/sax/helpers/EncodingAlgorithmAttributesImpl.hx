@@ -30,7 +30,7 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	/**
 	* Construct a new, empty EncodingAlgorithmAttributesImpl object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy an existing Attributes object.
@@ -40,7 +40,7 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	*
 	* @param attributes The existing Attributes object.
 	*/
-	@:overload public function new(attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function new(attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Use registered encoding algorithms and copy an existing Attributes object.
@@ -52,13 +52,13 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	*      The registeredEncodingAlgorithms encoding algorithms.
 	* @param attributes The existing Attributes object.
 	*/
-	@:overload public function new(registeredEncodingAlgorithms : java.util.Map<Dynamic, Dynamic>, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function new(registeredEncodingAlgorithms : java.util.Map<Dynamic, Dynamic>, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Clear the attribute list for reuse.
 	*
 	*/
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final public function clear() : Void;
 	
 	/**
 	* Add an attribute to the end of the list.
@@ -77,7 +77,7 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	* @param type The attribute type as a string.
 	* @param value The attribute value.
 	*/
-	@:overload public function addAttribute(URI : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload @:public public function addAttribute(URI : String, localName : String, qName : String, type : String, value : String) : Void;
 	
 	/**
 	* Add an attribute to the end of the list.
@@ -99,7 +99,7 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	* @param alphabet The alphabet associated with the attribute value,
 	*              may be null if there is no associated alphabet.
 	*/
-	@:overload public function addAttribute(URI : String, localName : String, qName : String, type : String, value : String, index : Bool, alphabet : String) : Void;
+	@:overload @:public public function addAttribute(URI : String, localName : String, qName : String, type : String, value : String, index : Bool, alphabet : String) : Void;
 	
 	/**
 	* Add an attribute with built in algorithm data to the end of the list.
@@ -118,7 +118,7 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	* @param builtInAlgorithmID The built in algorithm ID.
 	* @param algorithmData The built in algorithm data.
 	*/
-	@:overload public function addAttributeWithBuiltInAlgorithmData(URI : String, localName : String, qName : String, builtInAlgorithmID : Int, algorithmData : Dynamic) : Void;
+	@:overload @:public public function addAttributeWithBuiltInAlgorithmData(URI : String, localName : String, qName : String, builtInAlgorithmID : Int, algorithmData : Dynamic) : Void;
 	
 	/**
 	* Add an attribute with algorithm data to the end of the list.
@@ -138,7 +138,7 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	* @param algorithmID The algorithm ID.
 	* @param algorithmData The algorithm data.
 	*/
-	@:overload public function addAttributeWithAlgorithmData(URI : String, localName : String, qName : String, algorithmURI : String, algorithmID : Int, algorithmData : Dynamic) : Void;
+	@:overload @:public public function addAttributeWithAlgorithmData(URI : String, localName : String, qName : String, algorithmURI : String, algorithmID : Int, algorithmData : Dynamic) : Void;
 	
 	/**
 	* Replace an attribute value with algorithm data.
@@ -152,55 +152,55 @@ extern class EncodingAlgorithmAttributesImpl implements com.sun.xml.internal.org
 	* @param algorithmID The algorithm ID.
 	* @param algorithmData The algorithm data.
 	*/
-	@:overload public function replaceWithAttributeAlgorithmData(index : Int, algorithmURI : String, algorithmID : Int, algorithmData : Dynamic) : Void;
+	@:overload @:public public function replaceWithAttributeAlgorithmData(index : Int, algorithmURI : String, algorithmID : Int, algorithmData : Dynamic) : Void;
 	
 	/**
 	* Copy an entire Attributes object.
 	*
 	* @param atts The attributes to copy.
 	*/
-	@:overload public function setAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function setAttributes(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Copy an entire EncodingAlgorithmAttributes object.
 	*
 	* @param atts The attributes to copy.
 	*/
-	@:overload public function setAttributes(atts : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmAttributes) : Void;
+	@:overload @:public public function setAttributes(atts : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmAttributes) : Void;
 	
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
-	@:overload @:final public function getLocalName(index : Int) : String;
+	@:overload @:public @:final public function getLocalName(index : Int) : String;
 	
-	@:overload @:final public function getQName(index : Int) : String;
+	@:overload @:public @:final public function getQName(index : Int) : String;
 	
-	@:overload @:final public function getType(index : Int) : String;
+	@:overload @:public @:final public function getType(index : Int) : String;
 	
-	@:overload @:final public function getURI(index : Int) : String;
+	@:overload @:public @:final public function getURI(index : Int) : String;
 	
-	@:overload @:final public function getValue(index : Int) : String;
+	@:overload @:public @:final public function getValue(index : Int) : String;
 	
-	@:overload @:final public function getIndex(qName : String) : Int;
+	@:overload @:public @:final public function getIndex(qName : String) : Int;
 	
-	@:overload @:final public function getType(qName : String) : String;
+	@:overload @:public @:final public function getType(qName : String) : String;
 	
-	@:overload @:final public function getValue(qName : String) : String;
+	@:overload @:public @:final public function getValue(qName : String) : String;
 	
-	@:overload @:final public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public @:final public function getIndex(uri : String, localName : String) : Int;
 	
-	@:overload @:final public function getType(uri : String, localName : String) : String;
+	@:overload @:public @:final public function getType(uri : String, localName : String) : String;
 	
-	@:overload @:final public function getValue(uri : String, localName : String) : String;
+	@:overload @:public @:final public function getValue(uri : String, localName : String) : String;
 	
-	@:overload @:final public function getAlgorithmURI(index : Int) : String;
+	@:overload @:public @:final public function getAlgorithmURI(index : Int) : String;
 	
-	@:overload @:final public function getAlgorithmIndex(index : Int) : Int;
+	@:overload @:public @:final public function getAlgorithmIndex(index : Int) : Int;
 	
-	@:overload @:final public function getAlgorithmData(index : Int) : Dynamic;
+	@:overload @:public @:final public function getAlgorithmData(index : Int) : Dynamic;
 	
-	@:overload @:final public function getAlpababet(index : Int) : String;
+	@:overload @:public @:final public function getAlpababet(index : Int) : String;
 	
-	@:overload @:final public function getToIndex(index : Int) : Bool;
+	@:overload @:public @:final public function getToIndex(index : Int) : Bool;
 	
 	
 }

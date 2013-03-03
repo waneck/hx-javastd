@@ -30,11 +30,11 @@ package sun.security.krb5.internal;
 */
 extern class HostAddress implements java.lang.Cloneable
 {
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Gets the InetAddress of this HostAddress.
@@ -42,9 +42,9 @@ extern class HostAddress implements java.lang.Cloneable
 	* @exception if no IP address for the host could be found.
 	*
 	*/
-	@:overload public function getInetAddress() : java.net.InetAddress;
+	@:overload @:public public function getInetAddress() : java.net.InetAddress;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a HostAddress from the specified address and address type.
@@ -56,9 +56,9 @@ extern class HostAddress implements java.lang.Cloneable
 	* @exception KrbApErrException if address type and address length do not match defined value.
 	*
 	*/
-	@:overload public function new(new_addrType : Int, new_address : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_addrType : Int, new_address : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(inetAddress : java.net.InetAddress) : Void;
+	@:overload @:public public function new(inetAddress : java.net.InetAddress) : Void;
 	
 	/**
 	* Constructs a host address from a single DER-encoded value.
@@ -67,7 +67,7 @@ extern class HostAddress implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes a HostAddress object.
@@ -76,7 +76,7 @@ extern class HostAddress implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parses (unmarshal) a host address from a DER input stream.  This form
@@ -91,7 +91,7 @@ extern class HostAddress implements java.lang.Cloneable
 	* @return an instance of HostAddress.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.HostAddress;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.HostAddress;
 	
 	
 }

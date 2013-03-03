@@ -34,32 +34,32 @@ extern class CustomName
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	*/
-	@:overload public function new(name : String, javaDoc : String) : Void;
+	@:overload @:public public function new(name : String, javaDoc : String) : Void;
 	
 	/**
 	* @return Returns the javaDoc.
 	*/
-	@:overload public function getJavaDoc() : String;
+	@:overload @:public public function getJavaDoc() : String;
 	
 	/**
 	* @param javaDoc The javaDoc to set.
 	*/
-	@:overload public function setJavaDoc(javaDoc : String) : Void;
+	@:overload @:public public function setJavaDoc(javaDoc : String) : Void;
 	
 	/**
 	* @return Returns the name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* @param name The name to set.
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	
 }

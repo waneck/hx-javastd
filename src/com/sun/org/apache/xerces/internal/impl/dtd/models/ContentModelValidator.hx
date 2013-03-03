@@ -73,7 +73,7 @@ extern interface ContentModelValidator
 	*         of children, then the specified children are valid but additional
 	*         content is required to reach a valid ending state.
 	*/
-	@:overload public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
+	@:overload @:public public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
 	
 	
 }

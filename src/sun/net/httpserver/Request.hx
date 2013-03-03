@@ -27,20 +27,20 @@ package sun.net.httpserver;
 */
 @:internal extern class Request
 {
-	@:overload public function inputStream() : java.io.InputStream;
+	@:overload @:public public function inputStream() : java.io.InputStream;
 	
-	@:overload public function outputStream() : java.io.OutputStream;
+	@:overload @:public public function outputStream() : java.io.OutputStream;
 	
 	/**
 	* read a line from the stream returning as a String.
 	* Not used for reading headers.
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	/**
 	* returns the request line (first line of a request)
 	*/
-	@:overload public function requestLine() : String;
+	@:overload @:public public function requestLine() : String;
 	
 	
 }
@@ -49,38 +49,38 @@ package sun.net.httpserver;
 */
 @:native('sun$net$httpserver$Request$ReadStream') @:internal extern class Request_ReadStream extends java.io.InputStream
 {
-	@:overload public function new(server : sun.net.httpserver.ServerImpl, chan : java.nio.channels.SocketChannel) : Void;
+	@:overload @:public public function new(server : sun.net.httpserver.ServerImpl, chan : java.nio.channels.SocketChannel) : Void;
 	
-	@:overload @:synchronized public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload @:synchronized public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
-	@:overload @:synchronized public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, srclen : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, srclen : Int) : Int;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/* Does not query the OS socket */
-	@:overload @:synchronized public function available() : Int;
+	@:overload @:public @:synchronized override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload @:synchronized public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	
 }
 @:native('sun$net$httpserver$Request$WriteStream') @:internal extern class Request_WriteStream extends java.io.OutputStream
 {
-	@:overload public function new(server : sun.net.httpserver.ServerImpl, channel : java.nio.channels.SocketChannel) : Void;
+	@:overload @:public public function new(server : sun.net.httpserver.ServerImpl, channel : java.nio.channels.SocketChannel) : Void;
 	
-	@:overload @:synchronized public function write(b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : Int) : Void;
 	
-	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

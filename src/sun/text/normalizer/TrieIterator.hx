@@ -111,7 +111,7 @@ package sun.text.normalizer;
 	* @param trie to be used
 	* @exception IllegalArgumentException throw when argument is null.
 	*/
-	@:overload public function new(trie : sun.text.normalizer.Trie) : Void;
+	@:overload @:public public function new(trie : sun.text.normalizer.Trie) : Void;
 	
 	/**
 	* <p>Returns true if we are not at the end of the iteration, false
@@ -123,12 +123,12 @@ package sun.text.normalizer;
 	* @exception NoSuchElementException - if no more elements exist.
 	* @see com.ibm.icu.util.RangeValueIterator.Element
 	*/
-	@:overload @:final public function next(element : sun.text.normalizer.RangeValueIterator.RangeValueIterator_Element) : Bool;
+	@:overload @:public @:final public function next(element : sun.text.normalizer.RangeValueIterator.RangeValueIterator_Element) : Bool;
 	
 	/**
 	* Resets the iterator to the beginning of the iteration
 	*/
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final public function reset() : Void;
 	
 	/**
 	* Called by next() to extracts a 32 bit value from a trie value
@@ -139,7 +139,7 @@ package sun.text.normalizer;
 	* @param value a value from the trie
 	* @return extracted value
 	*/
-	@:overload private function extract(value : Int) : Int;
+	@:overload @:protected private function extract(value : Int) : Int;
 	
 	
 }

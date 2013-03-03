@@ -30,27 +30,27 @@ package sun.security.krb5.internal;
 */
 extern class KRBError implements java.io.Serializable
 {
-	@:overload public function new(new_apOptions : sun.security.krb5.internal.APOptions, new_cTime : sun.security.krb5.internal.KerberosTime, new_cuSec : Null<Int>, new_sTime : sun.security.krb5.internal.KerberosTime, new_suSec : Null<Int>, new_errorCode : Int, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_realm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_eText : String, new_eData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(new_apOptions : sun.security.krb5.internal.APOptions, new_cTime : sun.security.krb5.internal.KerberosTime, new_cuSec : Null<Int>, new_sTime : sun.security.krb5.internal.KerberosTime, new_suSec : Null<Int>, new_errorCode : Int, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_realm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_eText : String, new_eData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(new_apOptions : sun.security.krb5.internal.APOptions, new_cTime : sun.security.krb5.internal.KerberosTime, new_cuSec : Null<Int>, new_sTime : sun.security.krb5.internal.KerberosTime, new_suSec : Null<Int>, new_errorCode : Int, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_realm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_eText : String, new_eData : java.NativeArray<java.StdTypes.Int8>, new_eCksum : sun.security.krb5.Checksum) : Void;
+	@:overload @:public public function new(new_apOptions : sun.security.krb5.internal.APOptions, new_cTime : sun.security.krb5.internal.KerberosTime, new_cuSec : Null<Int>, new_sTime : sun.security.krb5.internal.KerberosTime, new_suSec : Null<Int>, new_errorCode : Int, new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_realm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_eText : String, new_eData : java.NativeArray<java.StdTypes.Int8>, new_eCksum : sun.security.krb5.Checksum) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
-	@:overload @:final public function getServerTime() : sun.security.krb5.internal.KerberosTime;
+	@:overload @:public @:final public function getServerTime() : sun.security.krb5.internal.KerberosTime;
 	
-	@:overload @:final public function getClientTime() : sun.security.krb5.internal.KerberosTime;
+	@:overload @:public @:final public function getClientTime() : sun.security.krb5.internal.KerberosTime;
 	
-	@:overload @:final public function getServerMicroSeconds() : Null<Int>;
+	@:overload @:public @:final public function getServerMicroSeconds() : Null<Int>;
 	
-	@:overload @:final public function getClientMicroSeconds() : Null<Int>;
+	@:overload @:public @:final public function getClientMicroSeconds() : Null<Int>;
 	
-	@:overload @:final public function getErrorCode() : Int;
+	@:overload @:public @:final public function getErrorCode() : Int;
 	
-	@:overload @:final public function getPA() : java.NativeArray<sun.security.krb5.internal.PAData>;
+	@:overload @:public @:final public function getPA() : java.NativeArray<sun.security.krb5.internal.PAData>;
 	
-	@:overload @:final public function getErrorString() : String;
+	@:overload @:public @:final public function getErrorString() : String;
 	
 	/**
 	* Encodes an KRBError object.
@@ -58,11 +58,11 @@ extern class KRBError implements java.io.Serializable
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

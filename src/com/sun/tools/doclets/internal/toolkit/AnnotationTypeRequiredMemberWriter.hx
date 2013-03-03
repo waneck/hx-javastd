@@ -42,7 +42,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param classDoc the annotation type being documented
 	* @param memberDetailsTree the content tree representing member details
 	*/
-	@:overload public function addAnnotationDetailsTreeHeader(classDoc : com.sun.javadoc.ClassDoc, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationDetailsTreeHeader(classDoc : com.sun.javadoc.ClassDoc, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the annotation type documentation tree header.
@@ -51,7 +51,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param annotationDetailsTree the content tree representing annotation type details
 	* @return content tree for the annotation type documentation header
 	*/
-	@:overload public function getAnnotationDocTreeHeader(member : com.sun.javadoc.MemberDoc, annotationDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationDocTreeHeader(member : com.sun.javadoc.MemberDoc, annotationDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the annotation type details tree.
@@ -59,7 +59,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param annotationDetailsTree the content tree representing annotation type details
 	* @return content tree for the annotation type details
 	*/
-	@:overload public function getAnnotationDetails(annotationDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationDetails(annotationDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the annotation type documentation.
@@ -68,7 +68,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param isLastContent true if the content to be added is the last content
 	* @return content tree for the annotation type documentation
 	*/
-	@:overload public function getAnnotationDoc(annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content, isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationDoc(annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content, isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the signature for the given member.
@@ -76,7 +76,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param member the member being documented
 	* @return content tree for the annotation type signature
 	*/
-	@:overload public function getSignature(member : com.sun.javadoc.MemberDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSignature(member : com.sun.javadoc.MemberDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the deprecated output for the given member.
@@ -84,7 +84,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param member the member being documented
 	* @param annotationDocTree content tree to which the deprecated information will be added
 	*/
-	@:overload public function addDeprecated(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDeprecated(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the comments for the given member.
@@ -92,7 +92,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param member the member being documented
 	* @param annotationDocTree the content tree to which the comments will be added
 	*/
-	@:overload public function addComments(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addComments(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the tags for the given member.
@@ -100,12 +100,12 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param member the member being documented
 	* @param annotationDocTree the content tree to which the tags will be added
 	*/
-	@:overload public function addTags(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addTags(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Close the writer.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

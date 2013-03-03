@@ -29,39 +29,39 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* The table for which this object is the header;
 	* the default is <code>null</code>.
 	*/
-	private var table : javax.swing.JTable;
+	@:protected private var table : javax.swing.JTable;
 	
 	/**
 	* The <code>TableColumnModel</code> of the table header.
 	*/
-	private var columnModel : javax.swing.table.TableColumnModel;
+	@:protected private var columnModel : javax.swing.table.TableColumnModel;
 	
 	/**
 	* If true, reordering of columns are allowed by the user;
 	* the default is true.
 	*/
-	private var reorderingAllowed : Bool;
+	@:protected private var reorderingAllowed : Bool;
 	
 	/**
 	* If true, resizing of columns are allowed by the user;
 	* the default is true.
 	*/
-	private var resizingAllowed : Bool;
+	@:protected private var resizingAllowed : Bool;
 	
 	/*
 	* If this flag is true, then the header will repaint the table as
 	* a column is dragged or resized; the default is true.
 	*/
-	private var updateTableInRealTime : Bool;
+	@:protected private var updateTableInRealTime : Bool;
 	
 	/** The index of the column being resized. <code>null</code> if not resizing. */
-	@:transient private var resizingColumn : javax.swing.table.TableColumn;
+	@:transient @:protected private var resizingColumn : javax.swing.table.TableColumn;
 	
 	/** The index of the column being dragged. <code>null</code> if not dragging. */
-	@:transient private var draggedColumn : javax.swing.table.TableColumn;
+	@:transient @:protected private var draggedColumn : javax.swing.table.TableColumn;
 	
 	/** The distance from its original position the column has been dragged. */
-	@:transient private var draggedDistance : Int;
+	@:transient @:protected private var draggedDistance : Int;
 	
 	/**
 	*  Constructs a <code>JTableHeader</code> with a default
@@ -69,7 +69,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see #createDefaultColumnModel
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*  Constructs a <code>JTableHeader</code> which is initialized with
@@ -80,7 +80,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param cm        the column model for the table
 	* @see #createDefaultColumnModel
 	*/
-	@:overload public function new(cm : javax.swing.table.TableColumnModel) : Void;
+	@:overload @:public public function new(cm : javax.swing.table.TableColumnModel) : Void;
 	
 	/**
 	*  Sets the table associated with this header.
@@ -89,13 +89,13 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*   bound: true
 	*   description: The table associated with this header.
 	*/
-	@:overload public function setTable(table : javax.swing.JTable) : Void;
+	@:overload @:public public function setTable(table : javax.swing.JTable) : Void;
 	
 	/**
 	*  Returns the table associated with this header.
 	*  @return  the <code>table</code> property
 	*/
-	@:overload public function getTable() : javax.swing.JTable;
+	@:overload @:public public function getTable() : javax.swing.JTable;
 	
 	/**
 	*  Sets whether the user can drag column headers to reorder columns.
@@ -107,7 +107,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  bound: true
 	*  description: Whether the user can drag column headers to reorder columns.
 	*/
-	@:overload public function setReorderingAllowed(reorderingAllowed : Bool) : Void;
+	@:overload @:public public function setReorderingAllowed(reorderingAllowed : Bool) : Void;
 	
 	/**
 	* Returns true if the user is allowed to rearrange columns by
@@ -117,7 +117,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  the <code>reorderingAllowed</code> property
 	* @see     #setReorderingAllowed
 	*/
-	@:overload public function getReorderingAllowed() : Bool;
+	@:overload @:public public function getReorderingAllowed() : Bool;
 	
 	/**
 	*  Sets whether the user can resize columns by dragging between headers.
@@ -129,7 +129,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  bound: true
 	*  description: Whether the user can resize columns by dragging between headers.
 	*/
-	@:overload public function setResizingAllowed(resizingAllowed : Bool) : Void;
+	@:overload @:public public function setResizingAllowed(resizingAllowed : Bool) : Void;
 	
 	/**
 	* Returns true if the user is allowed to resize columns by dragging
@@ -139,7 +139,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  the <code>resizingAllowed</code> property
 	* @see     #setResizingAllowed
 	*/
-	@:overload public function getResizingAllowed() : Bool;
+	@:overload @:public public function getResizingAllowed() : Bool;
 	
 	/**
 	* Returns the the dragged column, if and only if, a drag is in
@@ -149,7 +149,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*          process, otherwise returns <code>null</code>
 	* @see     #getDraggedDistance
 	*/
-	@:overload public function getDraggedColumn() : javax.swing.table.TableColumn;
+	@:overload @:public public function getDraggedColumn() : javax.swing.table.TableColumn;
 	
 	/**
 	* Returns the column's horizontal distance from its original
@@ -161,7 +161,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*          value is meaningless
 	* @see     #getDraggedColumn
 	*/
-	@:overload public function getDraggedDistance() : Int;
+	@:overload @:public public function getDraggedDistance() : Int;
 	
 	/**
 	* Returns the resizing column.  If no column is being
@@ -170,7 +170,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  the resizing column, if a resize is in process, otherwise
 	*          returns <code>null</code>
 	*/
-	@:overload public function getResizingColumn() : javax.swing.table.TableColumn;
+	@:overload @:public public function getResizingColumn() : javax.swing.table.TableColumn;
 	
 	/*
 	*  Sets whether the body of the table updates in real time when
@@ -180,7 +180,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*                                  the body of the table in real time
 	* @see #getUpdateTableInRealTime
 	*/
-	@:overload public function setUpdateTableInRealTime(flag : Bool) : Void;
+	@:overload @:public public function setUpdateTableInRealTime(flag : Bool) : Void;
 	
 	/*
 	* Returns true if the body of the table view updates in real
@@ -191,7 +191,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  true if the table updates in real time
 	* @see #setUpdateTableInRealTime
 	*/
-	@:overload public function getUpdateTableInRealTime() : Bool;
+	@:overload @:public public function getUpdateTableInRealTime() : Bool;
 	
 	/**
 	* Sets the default renderer to be used when no <code>headerRenderer</code>
@@ -199,7 +199,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param  defaultRenderer  the default renderer
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setDefaultRenderer(defaultRenderer : javax.swing.table.TableCellRenderer) : Void;
+	@:require(java3) @:overload @:public public function setDefaultRenderer(defaultRenderer : javax.swing.table.TableCellRenderer) : Void;
 	
 	/**
 	* Returns the default renderer used when no <code>headerRenderer</code>
@@ -207,7 +207,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return the default renderer
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getDefaultRenderer() : javax.swing.table.TableCellRenderer;
+	@:require(java3) @:overload @:public public function getDefaultRenderer() : javax.swing.table.TableCellRenderer;
 	
 	/**
 	* Returns the index of the column that <code>point</code> lies in, or -1 if it
@@ -216,7 +216,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  the index of the column that <code>point</code> lies in, or -1 if it
 	*          lies out of bounds
 	*/
-	@:overload public function columnAtPoint(point : java.awt.Point) : Int;
+	@:overload @:public public function columnAtPoint(point : java.awt.Point) : Int;
 	
 	/**
 	* Returns the rectangle containing the header tile at <code>column</code>.
@@ -226,7 +226,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  the rectangle containing the header tile at <code>column</code>
 	* @see JTable#getCellRect
 	*/
-	@:overload public function getHeaderRect(column : Int) : java.awt.Rectangle;
+	@:overload @:public public function getHeaderRect(column : Int) : java.awt.Rectangle;
 	
 	/**
 	* Allows the renderer's tips to be used if there is text set.
@@ -234,14 +234,14 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*                          renderer and, therefore, the proper tip
 	* @return the tool tip for this component
 	*/
-	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns the look and feel (L&F) object that renders this component.
 	*
 	* @return the <code>TableHeaderUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.TableHeaderUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.TableHeaderUI;
 	
 	/**
 	* Sets the look and feel (L&F) object that renders this component.
@@ -249,7 +249,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param ui  the <code>TableHeaderUI</code> L&F object
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.TableHeaderUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.TableHeaderUI) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the look and feel
@@ -259,7 +259,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the look and feel
@@ -270,7 +270,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	*  Sets the column model for this table to <code>newModel</code> and registers
@@ -284,7 +284,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  bound: true
 	*  description: The object governing the way columns appear in the view.
 	*/
-	@:overload public function setColumnModel(columnModel : javax.swing.table.TableColumnModel) : Void;
+	@:overload @:public public function setColumnModel(columnModel : javax.swing.table.TableColumnModel) : Void;
 	
 	/**
 	* Returns the <code>TableColumnModel</code> that contains all column information
@@ -293,7 +293,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return  the <code>columnModel</code> property
 	* @see     #setColumnModel
 	*/
-	@:overload public function getColumnModel() : javax.swing.table.TableColumnModel;
+	@:overload @:public public function getColumnModel() : javax.swing.table.TableColumnModel;
 	
 	/**
 	* Invoked when a column is added to the table column model.
@@ -304,7 +304,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param e  the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnAdded(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is removed from the table column model.
@@ -315,7 +315,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param e  the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnRemoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is repositioned.
@@ -326,7 +326,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param e the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
+	@:overload @:public public function columnMoved(e : javax.swing.event.TableColumnModelEvent) : Void;
 	
 	/**
 	* Invoked when a column is moved due to a margin change.
@@ -337,7 +337,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param e the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Invoked when the selection model of the <code>TableColumnModel</code>
@@ -350,7 +350,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param e the event received
 	* @see TableColumnModelListener
 	*/
-	@:overload public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function columnSelectionChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	/**
 	*  Returns the default column model object which is
@@ -359,7 +359,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return the default column model object
 	*/
-	@:overload private function createDefaultColumnModel() : javax.swing.table.TableColumnModel;
+	@:overload @:protected private function createDefaultColumnModel() : javax.swing.table.TableColumnModel;
 	
 	/**
 	*  Returns a default renderer to be used when no header renderer
@@ -368,19 +368,19 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  @return the default table column renderer
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function createDefaultRenderer() : javax.swing.table.TableCellRenderer;
+	@:require(java3) @:overload @:protected private function createDefaultRenderer() : javax.swing.table.TableCellRenderer;
 	
 	/**
 	* Initializes the local variables and properties with default values.
 	* Used by the constructor methods.
 	*/
-	@:overload private function initializeLocalVars() : Void;
+	@:overload @:protected private function initializeLocalVars() : Void;
 	
 	/**
 	* Sizes the header and marks it as needing display.  Equivalent
 	* to <code>revalidate</code> followed by <code>repaint</code>.
 	*/
-	@:overload public function resizeAndRepaint() : Void;
+	@:overload @:public public function resizeAndRepaint() : Void;
 	
 	/**
 	*  Sets the header's <code>draggedColumn</code> to <code>aColumn</code>.
@@ -391,13 +391,13 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  @param  aColumn  the column being dragged, or <code>null</code> if
 	*                 no column is being dragged
 	*/
-	@:overload public function setDraggedColumn(aColumn : javax.swing.table.TableColumn) : Void;
+	@:overload @:public public function setDraggedColumn(aColumn : javax.swing.table.TableColumn) : Void;
 	
 	/**
 	*  Sets the header's <code>draggedDistance</code> to <code>distance</code>.
 	*  @param distance  the distance dragged
 	*/
-	@:overload public function setDraggedDistance(distance : Int) : Void;
+	@:overload @:public public function setDraggedDistance(distance : Int) : Void;
 	
 	/**
 	*  Sets the header's <code>resizingColumn</code> to <code>aColumn</code>.
@@ -408,7 +408,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  @param  aColumn  the column being resized, or <code>null</code> if
 	*                 no column is being resized
 	*/
-	@:overload public function setResizingColumn(aColumn : javax.swing.table.TableColumn) : Void;
+	@:overload @:public public function setResizingColumn(aColumn : javax.swing.table.TableColumn) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JTableHeader</code>. This method
@@ -422,7 +422,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return  a string representation of this <code>JTableHeader</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JTableHeader.
@@ -433,7 +433,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return an AccessibleJTableHeader that serves as the
 	*         AccessibleContext of this JTableHeader
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -461,7 +461,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -472,7 +472,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return the Accessible, if it exists, at the specified location;
 	* else null
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -481,7 +481,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -489,7 +489,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	
 }
@@ -503,7 +503,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  Constructs an AccessiblJTableHeaaderEntry
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(c : Int, p : javax.swing.table.JTableHeader, t : javax.swing.JTable) : Void;
+	@:require(java4) @:overload @:public public function new(c : Int, p : javax.swing.table.JTableHeader, t : javax.swing.JTable) : Void;
 	
 	/**
 	* Get the AccessibleContext associated with this object.
@@ -513,33 +513,33 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
-	@:overload override public function setAccessibleName(s : String) : Void;
+	@:overload @:public override public function setAccessibleName(s : String) : Void;
 	
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
-	@:overload override public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public override public function setAccessibleDescription(s : String) : Void;
 	
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleComponent associated with this object.  In the
@@ -549,67 +549,67 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
-	@:overload public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(c : java.awt.Cursor) : Void;
 	
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.java.swing.plaf.windows;
 */
 @:internal extern class AnimationController implements java.awt.event.ActionListener implements java.beans.PropertyChangeListener
 {
-	@:overload @:synchronized public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public @:synchronized public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload @:synchronized public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public @:synchronized public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -37,7 +37,7 @@ package com.sun.java.swing.plaf.windows;
 }
 @:native('com$sun$java$swing$plaf$windows$AnimationController$PartUIClientPropertyKey') @:internal extern class AnimationController_PartUIClientPropertyKey implements sun.swing.UIClientPropertyKey
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

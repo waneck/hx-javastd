@@ -39,15 +39,15 @@ extern class MotifLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @author unattributed
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
-	@:overload override public function isNativeLookAndFeel() : Bool;
+	@:overload @:public override public function isNativeLookAndFeel() : Bool;
 	
-	@:overload override public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public override public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Load the SystemColors into the defaults table.  The keys
@@ -57,11 +57,11 @@ extern class MotifLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* values, otherwise we create color objects whose values match
 	* the default CDE/Motif colors.
 	*/
-	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	
 }

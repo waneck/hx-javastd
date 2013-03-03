@@ -25,14 +25,14 @@ extern interface Serializer
 	* serialized. This method should not be called while the
 	* serializer is in the process of serializing a document.
 	*/
-	@:overload public function setOutputByteStream(output : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputByteStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* Specifies a writer to which the document should be serialized.
 	* This method should not be called while the serializer is in
 	* the process of serializing a document.
 	*/
-	@:overload public function setOutputCharStream(output : java.io.Writer) : Void;
+	@:overload @:public public function setOutputCharStream(output : java.io.Writer) : Void;
 	
 	/**
 	* Specifies an output format for this serializer. It the
@@ -43,28 +43,28 @@ extern interface Serializer
 	*
 	* @param format The output format to use
 	*/
-	@:overload public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Return a {@link DocumentHandler} interface into this serializer.
 	* If the serializer does not support the {@link DocumentHandler}
 	* interface, it should return null.
 	*/
-	@:overload public function asDocumentHandler() : org.xml.sax.DocumentHandler;
+	@:overload @:public public function asDocumentHandler() : org.xml.sax.DocumentHandler;
 	
 	/**
 	* Return a {@link ContentHandler} interface into this serializer.
 	* If the serializer does not support the {@link ContentHandler}
 	* interface, it should return null.
 	*/
-	@:overload public function asContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function asContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return a {@link DOMSerializer} interface into this serializer.
 	* If the serializer does not support the {@link DOMSerializer}
 	* interface, it should return null.
 	*/
-	@:overload public function asDOMSerializer() : com.sun.org.apache.xml.internal.serialize.DOMSerializer;
+	@:overload @:public public function asDOMSerializer() : com.sun.org.apache.xml.internal.serialize.DOMSerializer;
 	
 	
 }

@@ -61,21 +61,21 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class LocatorWrapper implements com.sun.org.apache.xerces.internal.xni.XMLLocator
 {
-	@:overload public function new(_loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(_loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* <p>Returns the character offset,
@@ -86,7 +86,7 @@ extern class LocatorWrapper implements com.sun.org.apache.xerces.internal.xni.XM
 	* {@link org.xml.sax.Locator},
 	* always return <code>-1</code>.</p>
 	*/
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
 	/**
 	* <p>Returns the XML version of the current entity.</p>
@@ -95,7 +95,7 @@ extern class LocatorWrapper implements com.sun.org.apache.xerces.internal.xni.XM
 	* {@link org.xml.sax.Locator},
 	* always return <code>null</code>.</p>
 	*/
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	
 }

@@ -25,29 +25,29 @@ package sun.security.jgss.wrapper;
 */
 extern class GSSNameElement implements sun.security.jgss.spi.GSSNameSpi
 {
-	@:overload public function getKrbName() : String;
+	@:overload @:public public function getKrbName() : String;
 	
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
-	@:overload public function equals(other : sun.security.jgss.spi.GSSNameSpi) : Bool;
+	@:overload @:public public function equals(other : sun.security.jgss.spi.GSSNameSpi) : Bool;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getMechanism() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMechanism() : org.ietf.jgss.Oid;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getStringNameType() : org.ietf.jgss.Oid;
+	@:overload @:public public function getStringNameType() : org.ietf.jgss.Oid;
 	
-	@:overload public function isAnonymousName() : Bool;
+	@:overload @:public public function isAnonymousName() : Bool;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

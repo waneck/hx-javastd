@@ -35,28 +35,28 @@ package com.sun.org.apache.xml.internal.resolver;
 extern class CatalogException extends java.lang.Exception
 {
 	/** A wrapper around another exception */
-	public static var WRAPPER(default, null) : Int;
+	@:public @:static @:final public static var WRAPPER(default, null) : Int;
 	
 	/** An invalid entry */
-	public static var INVALID_ENTRY(default, null) : Int;
+	@:public @:static @:final public static var INVALID_ENTRY(default, null) : Int;
 	
 	/** An invalid entry type */
-	public static var INVALID_ENTRY_TYPE(default, null) : Int;
+	@:public @:static @:final public static var INVALID_ENTRY_TYPE(default, null) : Int;
 	
 	/** Could not instantiate an XML parser */
-	public static var NO_XML_PARSER(default, null) : Int;
+	@:public @:static @:final public static var NO_XML_PARSER(default, null) : Int;
 	
 	/** Unknown XML format */
-	public static var UNKNOWN_FORMAT(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_FORMAT(default, null) : Int;
 	
 	/** Unparseable XML catalog (not XML)*/
-	public static var UNPARSEABLE(default, null) : Int;
+	@:public @:static @:final public static var UNPARSEABLE(default, null) : Int;
 	
 	/** XML but parse failed */
-	public static var PARSE_FAILED(default, null) : Int;
+	@:public @:static @:final public static var PARSE_FAILED(default, null) : Int;
 	
 	/** Text catalog ended in mid-comment */
-	public static var UNENDED_COMMENT(default, null) : Int;
+	@:public @:static @:final public static var UNENDED_COMMENT(default, null) : Int;
 	
 	/**
 	* Create a new CatalogException.
@@ -64,14 +64,14 @@ extern class CatalogException extends java.lang.Exception
 	* @param type The exception type
 	* @param message The error or warning message.
 	*/
-	@:overload public function new(type : Int, message : String) : Void;
+	@:overload @:public public function new(type : Int, message : String) : Void;
 	
 	/**
 	* Create a new CatalogException.
 	*
 	* @param type The exception type
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Create a new CatalogException wrapping an existing exception.
@@ -82,7 +82,7 @@ extern class CatalogException extends java.lang.Exception
 	*
 	* @param e The exception to be wrapped in a CatalogException.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Create a new CatalogException from an existing exception.
@@ -93,7 +93,7 @@ extern class CatalogException extends java.lang.Exception
 	* @param message The detail message.
 	* @param e The exception to be wrapped in a CatalogException.
 	*/
-	@:overload public function new(message : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Exception) : Void;
 	
 	/**
 	* Return a detail message for this exception.
@@ -104,28 +104,28 @@ extern class CatalogException extends java.lang.Exception
 	*
 	* @return The error or warning message.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Return the embedded exception, if any.
 	*
 	* @return The embedded exception, or null if there is none.
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	/**
 	* Return the exception type
 	*
 	* @return The exception type
 	*/
-	@:overload public function getExceptionType() : Int;
+	@:overload @:public public function getExceptionType() : Int;
 	
 	/**
 	* Override toString to pick up any embedded exception.
 	*
 	* @return A string representation of this exception.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -46,7 +46,7 @@ extern class SSLContextSpi
 	* @param tm the sources of peer authentication trust decisions
 	* @param random the source of randomness for this generator
 	*/
-	@:overload @:abstract private function engineInit(ah : java.NativeArray<javax.net.ssl.KeyManager>, th : java.NativeArray<javax.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(ah : java.NativeArray<javax.net.ssl.KeyManager>, th : java.NativeArray<javax.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
 	
 	/**
 	* Returns a <code>SocketFactory</code> object for this
@@ -54,7 +54,7 @@ extern class SSLContextSpi
 	*
 	* @return the factory
 	*/
-	@:overload @:abstract private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:protected @:abstract private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	/**
 	* Returns a <code>ServerSocketFactory</code> object for
@@ -62,7 +62,7 @@ extern class SSLContextSpi
 	*
 	* @return the factory
 	*/
-	@:overload @:abstract private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload @:protected @:abstract private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
 	
 }

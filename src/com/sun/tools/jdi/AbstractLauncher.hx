@@ -25,13 +25,13 @@ package com.sun.tools.jdi;
 */
 @:internal extern class AbstractLauncher extends com.sun.tools.jdi.ConnectorImpl implements com.sun.jdi.connect.LaunchingConnector
 {
-	@:overload @:abstract public function launch(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload @:abstract @:public public function launch(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
-	@:overload @:abstract override public function name() : String;
+	@:overload @:abstract @:public override public function name() : String;
 	
-	@:overload @:abstract override public function description() : String;
+	@:overload @:abstract @:public override public function description() : String;
 	
-	@:overload private function launch(commandArray : java.NativeArray<String>, address : String, listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, ts : com.sun.jdi.connect.spi.TransportService) : com.sun.jdi.VirtualMachine;
+	@:overload @:protected private function launch(commandArray : java.NativeArray<String>, address : String, listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, ts : com.sun.jdi.connect.spi.TransportService) : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Returns the transport mechanism used by this connector to establish
@@ -39,7 +39,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link Transport} used by this connector.
 	*/
-	@:overload @:public override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
 	/**
 	* Returns the arguments accepted by this Connector and their
@@ -50,7 +50,7 @@ package com.sun.tools.jdi;
 	* @return the map associating argument names with argument
 	* information and default value.
 	*/
-	@:overload override public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
+	@:overload @:public override public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
 	
 	
 }

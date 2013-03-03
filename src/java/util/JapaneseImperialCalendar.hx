@@ -28,27 +28,27 @@ package java.util;
 	/**
 	* The ERA constant designating the era before Meiji.
 	*/
-	public static var BEFORE_MEIJI(default, null) : Int;
+	@:public @:static @:final public static var BEFORE_MEIJI(default, null) : Int;
 	
 	/**
 	* The ERA constant designating the Meiji era.
 	*/
-	public static var MEIJI(default, null) : Int;
+	@:public @:static @:final public static var MEIJI(default, null) : Int;
 	
 	/**
 	* The ERA constant designating the Taisho era.
 	*/
-	public static var TAISHO(default, null) : Int;
+	@:public @:static @:final public static var TAISHO(default, null) : Int;
 	
 	/**
 	* The ERA constant designating the Showa era.
 	*/
-	public static var SHOWA(default, null) : Int;
+	@:public @:static @:final public static var SHOWA(default, null) : Int;
 	
 	/**
 	* The ERA constant designating the Heisei era.
 	*/
-	public static var HEISEI(default, null) : Int;
+	@:public @:static @:final public static var HEISEI(default, null) : Int;
 	
 	/**
 	* Constructs a <code>JapaneseImperialCalendar</code> based on the current time
@@ -57,7 +57,7 @@ package java.util;
 	* @param zone the given time zone.
 	* @param aLocale the given locale.
 	*/
-	@:overload public function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
+	@:overload @:public public function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
 	
 	/**
 	* Compares this <code>JapaneseImperialCalendar</code> to the specified
@@ -72,13 +72,13 @@ package java.util;
 	* <code>false</code> otherwise.
 	* @see Calendar#compareTo(Calendar)
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Generates the hash code for this
 	* <code>JapaneseImperialCalendar</code> object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Adds the specified (signed) amount of time to the given calendar field,
@@ -108,9 +108,9 @@ package java.util;
 	* or if any calendar fields have out-of-range values in
 	* non-lenient mode.
 	*/
-	@:overload override public function add(field : Int, amount : Int) : Void;
+	@:overload @:public override public function add(field : Int, amount : Int) : Void;
 	
-	@:overload override public function roll(field : Int, up : Bool) : Void;
+	@:overload @:public override public function roll(field : Int, up : Bool) : Void;
 	
 	/**
 	* Adds a signed amount to the specified calendar field without changing larger fields.
@@ -132,11 +132,11 @@ package java.util;
 	* @see #add(int,int)
 	* @see #set(int,int)
 	*/
-	@:overload override public function roll(field : Int, amount : Int) : Void;
+	@:overload @:public override public function roll(field : Int, amount : Int) : Void;
 	
-	@:overload override public function getDisplayName(field : Int, style : Int, locale : java.util.Locale) : String;
+	@:overload @:public override public function getDisplayName(field : Int, style : Int, locale : java.util.Locale) : String;
 	
-	@:overload override public function getDisplayNames(field : Int, style : Int, locale : java.util.Locale) : java.util.Map<String, Null<Int>>;
+	@:overload @:public override public function getDisplayNames(field : Int, style : Int, locale : java.util.Locale) : java.util.Map<String, Null<Int>>;
 	
 	/**
 	* Returns the minimum value for the given calendar field of this
@@ -156,7 +156,7 @@ package java.util;
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getMinimum(field : Int) : Int;
+	@:overload @:public override public function getMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the maximum value for the given calendar field of this
@@ -176,7 +176,7 @@ package java.util;
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getMaximum(field : Int) : Int;
+	@:overload @:public override public function getMaximum(field : Int) : Int;
 	
 	/**
 	* Returns the highest minimum value for the given calendar field
@@ -196,7 +196,7 @@ package java.util;
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getGreatestMinimum(field : Int) : Int;
+	@:overload @:public override public function getGreatestMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the lowest maximum value for the given calendar field
@@ -216,7 +216,7 @@ package java.util;
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getLeastMaximum(field : Int) : Int;
+	@:overload @:public override public function getLeastMaximum(field : Int) : Int;
 	
 	/**
 	* Returns the minimum value that this calendar field could have,
@@ -235,7 +235,7 @@ package java.util;
 	* @see #getLeastMaximum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload override public function getActualMinimum(field : Int) : Int;
+	@:overload @:public override public function getActualMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the maximum value that this calendar field could have,
@@ -259,13 +259,13 @@ package java.util;
 	* @see #getLeastMaximum(int)
 	* @see #getActualMinimum(int)
 	*/
-	@:overload override public function getActualMaximum(field : Int) : Int;
+	@:overload @:public override public function getActualMaximum(field : Int) : Int;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
-	@:overload override public function getTimeZone() : java.util.TimeZone;
+	@:overload @:public override public function getTimeZone() : java.util.TimeZone;
 	
-	@:overload override public function setTimeZone(zone : java.util.TimeZone) : Void;
+	@:overload @:public override public function setTimeZone(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Converts the time value (millisecond offset from the <a
@@ -276,7 +276,7 @@ package java.util;
 	*
 	* @see Calendar#complete
 	*/
-	@:overload override private function computeFields() : Void;
+	@:overload @:protected override private function computeFields() : Void;
 	
 	/**
 	* Converts calendar field values to the time value (millisecond
@@ -284,7 +284,7 @@ package java.util;
 	*
 	* @exception IllegalArgumentException if any calendar fields are invalid.
 	*/
-	@:overload override private function computeTime() : Void;
+	@:overload @:protected override private function computeTime() : Void;
 	
 	
 }

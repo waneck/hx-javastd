@@ -38,7 +38,7 @@ extern class FtpProtocolException extends java.lang.Exception
 	*
 	* @param   detail   the detail message.
 	*/
-	@:overload public function new(detail : String) : Void;
+	@:overload @:public public function new(detail : String) : Void;
 	
 	/**
 	* Constructs a new {@code FtpProtocolException} from the
@@ -47,7 +47,7 @@ extern class FtpProtocolException extends java.lang.Exception
 	* @param   detail   the detail message.
 	* @param   code The {@code FtpRelyCode} received from server.
 	*/
-	@:overload public function new(detail : String, code : sun.net.ftp.FtpReplyCode) : Void;
+	@:overload @:public public function new(detail : String, code : sun.net.ftp.FtpReplyCode) : Void;
 	
 	/**
 	* Gets the reply code sent by the server that led to this exception
@@ -55,7 +55,7 @@ extern class FtpProtocolException extends java.lang.Exception
 	*
 	* @return The {@link FtpReplyCode} associated with that exception.
 	*/
-	@:overload public function getReplyCode() : sun.net.ftp.FtpReplyCode;
+	@:overload @:public public function getReplyCode() : sun.net.ftp.FtpReplyCode;
 	
 	
 }

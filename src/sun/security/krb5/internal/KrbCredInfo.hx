@@ -54,29 +54,29 @@ extern class KrbCredInfo
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var key : sun.security.krb5.EncryptionKey;
+	@:public public var key : sun.security.krb5.EncryptionKey;
 	
-	public var prealm : sun.security.krb5.Realm;
+	@:public public var prealm : sun.security.krb5.Realm;
 	
-	public var pname : sun.security.krb5.PrincipalName;
+	@:public public var pname : sun.security.krb5.PrincipalName;
 	
-	public var flags : sun.security.krb5.internal.TicketFlags;
+	@:public public var flags : sun.security.krb5.internal.TicketFlags;
 	
-	public var authtime : sun.security.krb5.internal.KerberosTime;
+	@:public public var authtime : sun.security.krb5.internal.KerberosTime;
 	
-	public var starttime : sun.security.krb5.internal.KerberosTime;
+	@:public public var starttime : sun.security.krb5.internal.KerberosTime;
 	
-	public var endtime : sun.security.krb5.internal.KerberosTime;
+	@:public public var endtime : sun.security.krb5.internal.KerberosTime;
 	
-	public var renewTill : sun.security.krb5.internal.KerberosTime;
+	@:public public var renewTill : sun.security.krb5.internal.KerberosTime;
 	
-	public var srealm : sun.security.krb5.Realm;
+	@:public public var srealm : sun.security.krb5.Realm;
 	
-	public var sname : sun.security.krb5.PrincipalName;
+	@:public public var sname : sun.security.krb5.PrincipalName;
 	
-	public var caddr : sun.security.krb5.internal.HostAddresses;
+	@:public public var caddr : sun.security.krb5.internal.HostAddresses;
 	
-	@:overload public function new(new_key : sun.security.krb5.EncryptionKey, new_prealm : sun.security.krb5.Realm, new_pname : sun.security.krb5.PrincipalName, new_flags : sun.security.krb5.internal.TicketFlags, new_authtime : sun.security.krb5.internal.KerberosTime, new_starttime : sun.security.krb5.internal.KerberosTime, new_endtime : sun.security.krb5.internal.KerberosTime, new_renewTill : sun.security.krb5.internal.KerberosTime, new_srealm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_caddr : sun.security.krb5.internal.HostAddresses) : Void;
+	@:overload @:public public function new(new_key : sun.security.krb5.EncryptionKey, new_prealm : sun.security.krb5.Realm, new_pname : sun.security.krb5.PrincipalName, new_flags : sun.security.krb5.internal.TicketFlags, new_authtime : sun.security.krb5.internal.KerberosTime, new_starttime : sun.security.krb5.internal.KerberosTime, new_endtime : sun.security.krb5.internal.KerberosTime, new_renewTill : sun.security.krb5.internal.KerberosTime, new_srealm : sun.security.krb5.Realm, new_sname : sun.security.krb5.PrincipalName, new_caddr : sun.security.krb5.internal.HostAddresses) : Void;
 	
 	/**
 	* Constructs a KrbCredInfo object.
@@ -85,7 +85,7 @@ extern class KrbCredInfo
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @exception RealmException if an error occurs while parsing a Realm object.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an KrbCredInfo object.
@@ -93,9 +93,9 @@ extern class KrbCredInfo
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

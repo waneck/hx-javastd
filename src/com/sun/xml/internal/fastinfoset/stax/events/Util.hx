@@ -32,9 +32,9 @@ extern class Util
 	*
 	* @param s The string to check.
 	*/
-	@:overload public static function isEmptyString(s : String) : Bool;
+	@:overload @:public @:static public static function isEmptyString(s : String) : Bool;
 	
-	@:overload @:final public static function getEventTypeString(eventType : Int) : String;
+	@:overload @:public @:final @:static public static function getEventTypeString(eventType : Int) : String;
 	
 	
 }

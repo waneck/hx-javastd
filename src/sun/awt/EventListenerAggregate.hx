@@ -35,7 +35,7 @@ extern class EventListenerAggregate
 	* @throws ClassCastException if <code>listenerClass</code> is not
 	*         assignable to <code>java.util.EventListener</code>
 	*/
-	@:overload public function new(listenerClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(listenerClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Adds the listener to this aggregate.
@@ -46,7 +46,7 @@ extern class EventListenerAggregate
 	*         an instatce of <code>listenerClass</code> specified
 	*         in the constructor
 	*/
-	@:overload @:synchronized public function add(listener : java.util.EventListener) : Void;
+	@:overload @:public @:synchronized public function add(listener : java.util.EventListener) : Void;
 	
 	/**
 	* Removes a listener that is equal to the given one from this aggregate.
@@ -61,7 +61,7 @@ extern class EventListenerAggregate
 	*         an instatce of <code>listenerClass</code> specified
 	*         in the constructor
 	*/
-	@:overload @:synchronized public function remove(listener : java.util.EventListener) : Bool;
+	@:overload @:public @:synchronized public function remove(listener : java.util.EventListener) : Bool;
 	
 	/**
 	* Returns an array of all the listeners contained in this aggregate.
@@ -73,7 +73,7 @@ extern class EventListenerAggregate
 	* @return all the listeners contained in this aggregate (an empty
 	*         array if there are no listeners)
 	*/
-	@:overload @:synchronized public function getListenersInternal() : java.NativeArray<java.util.EventListener>;
+	@:overload @:public @:synchronized public function getListenersInternal() : java.NativeArray<java.util.EventListener>;
 	
 	/**
 	* Returns an array of all the listeners contained in this aggregate.
@@ -86,14 +86,14 @@ extern class EventListenerAggregate
 	* @return a copy of all the listeners contained in this aggregate (an empty
 	*         array if there are no listeners)
 	*/
-	@:overload @:synchronized public function getListenersCopy() : java.NativeArray<java.util.EventListener>;
+	@:overload @:public @:synchronized public function getListenersCopy() : java.NativeArray<java.util.EventListener>;
 	
 	/**
 	* Returns the number of lisetners in this aggregate.
 	*
 	* @return the number of lisetners in this aggregate
 	*/
-	@:overload @:synchronized public function size() : Int;
+	@:overload @:public @:synchronized public function size() : Int;
 	
 	/**
 	* Returns <code>true</code> if this aggregate contains no listeners,
@@ -102,7 +102,7 @@ extern class EventListenerAggregate
 	* @return <code>true</code> if this aggregate contains no listeners,
 	*         <code>false</code> otherwise
 	*/
-	@:overload @:synchronized public function isEmpty() : Bool;
+	@:overload @:public @:synchronized public function isEmpty() : Bool;
 	
 	
 }

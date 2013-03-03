@@ -26,67 +26,67 @@ package sun.awt.X11;
 ////import static sun.awt.X11.XEmbed.*;
 extern class XEmbedServerTester implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public static function getTester(serverBounds : java.NativeArray<java.awt.Rectangle>, parent : haxe.Int64) : sun.awt.X11.XEmbedServerTester;
+	@:overload @:public @:static public static function getTester(serverBounds : java.NativeArray<java.awt.Rectangle>, parent : haxe.Int64) : sun.awt.X11.XEmbedServerTester;
 	
-	@:overload public function test1_1() : Void;
+	@:overload @:public public function test1_1() : Void;
 	
-	@:overload public function test1_2() : Void;
+	@:overload @:public public function test1_2() : Void;
 	
-	@:overload public function test1_3() : Void;
+	@:overload @:public public function test1_3() : Void;
 	
-	@:overload public function test1_4() : Void;
+	@:overload @:public public function test1_4() : Void;
 	
-	@:overload public function test1_5() : Void;
+	@:overload @:public public function test1_5() : Void;
 	
-	@:overload public function test1_6() : Void;
+	@:overload @:public public function test1_6() : Void;
 	
-	@:overload public function test1_7() : Void;
+	@:overload @:public public function test1_7() : Void;
 	
-	@:overload public function test2_5() : Void;
+	@:overload @:public public function test2_5() : Void;
 	
-	@:overload public function test2_6() : Void;
+	@:overload @:public public function test2_6() : Void;
 	
-	@:overload public function test3_1() : Void;
+	@:overload @:public public function test3_1() : Void;
 	
-	@:overload public function test3_3() : Void;
+	@:overload @:public public function test3_3() : Void;
 	
-	@:overload public function test3_4() : Void;
+	@:overload @:public public function test3_4() : Void;
 	
-	@:overload public function test3_5() : Void;
+	@:overload @:public public function test3_5() : Void;
 	
-	@:overload public function test3_6() : Void;
+	@:overload @:public public function test3_6() : Void;
 	
-	@:overload public function test4_1() : Void;
+	@:overload @:public public function test4_1() : Void;
 	
-	@:overload public function test4_2() : Void;
+	@:overload @:public public function test4_2() : Void;
 	
-	@:overload public function test4_3() : Void;
+	@:overload @:public public function test4_3() : Void;
 	
-	@:overload public function test4_4() : Void;
+	@:overload @:public public function test4_4() : Void;
 	
-	@:overload public function test6_1_1() : Void;
+	@:overload @:public public function test6_1_1() : Void;
 	
-	@:overload public function test6_1_2() : Void;
+	@:overload @:public public function test6_1_2() : Void;
 	
-	@:overload public function test6_1_3() : Void;
+	@:overload @:public public function test6_1_3() : Void;
 	
-	@:overload public function test6_1_4() : Void;
+	@:overload @:public public function test6_1_4() : Void;
 	
-	@:overload public function test6_2_1() : Void;
+	@:overload @:public public function test6_2_1() : Void;
 	
-	@:overload public function test6_2_2() : Void;
+	@:overload @:public public function test6_2_2() : Void;
 	
-	@:overload public function test6_2_3() : Void;
+	@:overload @:public public function test6_2_3() : Void;
 	
-	@:overload public function test6_2_4() : Void;
+	@:overload @:public public function test6_2_4() : Void;
 	
-	@:overload public function test7_1() : Void;
+	@:overload @:public public function test7_1() : Void;
 	
-	@:overload public function test7_2() : Void;
+	@:overload @:public public function test7_2() : Void;
 	
-	@:overload public function test9_1() : Void;
+	@:overload @:public public function test9_1() : Void;
 	
-	@:overload public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(ev : sun.awt.X11.XEvent) : Void;
 	
 	
 }

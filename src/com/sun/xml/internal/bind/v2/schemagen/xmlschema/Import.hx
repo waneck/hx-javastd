@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Import extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function namespace(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
+	@:overload @:public public function namespace(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
 	
-	@:overload public function schemaLocation(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
+	@:overload @:public public function schemaLocation(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
 	
 	
 }

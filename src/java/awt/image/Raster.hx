@@ -38,43 +38,43 @@ extern class Raster
 	* The SampleModel that describes how pixels from this Raster
 	* are stored in the DataBuffer.
 	*/
-	private var sampleModel : java.awt.image.SampleModel;
+	@:protected private var sampleModel : java.awt.image.SampleModel;
 	
 	/** The DataBuffer that stores the image data. */
-	private var dataBuffer : java.awt.image.DataBuffer;
+	@:protected private var dataBuffer : java.awt.image.DataBuffer;
 	
 	/** The X coordinate of the upper-left pixel of this Raster. */
-	private var minX : Int;
+	@:protected private var minX : Int;
 	
 	/** The Y coordinate of the upper-left pixel of this Raster. */
-	private var minY : Int;
+	@:protected private var minY : Int;
 	
 	/** The width of this Raster. */
-	private var width : Int;
+	@:protected private var width : Int;
 	
 	/** The height of this Raster. */
-	private var height : Int;
+	@:protected private var height : Int;
 	
 	/**
 	* The X translation from the coordinate space of the
 	* Raster's SampleModel to that of the Raster.
 	*/
-	private var sampleModelTranslateX : Int;
+	@:protected private var sampleModelTranslateX : Int;
 	
 	/**
 	* The Y translation from the coordinate space of the
 	* Raster's SampleModel to that of the Raster.
 	*/
-	private var sampleModelTranslateY : Int;
+	@:protected private var sampleModelTranslateY : Int;
 	
 	/** The number of bands in the Raster. */
-	private var numBands : Int;
+	@:protected private var numBands : Int;
 	
 	/** The number of DataBuffer data elements per pixel. */
-	private var numDataElements : Int;
+	@:protected private var numDataElements : Int;
 	
 	/** The parent of this Raster, or null. */
-	private var parent : java.awt.image.Raster;
+	@:protected private var parent : java.awt.image.Raster;
 	
 	/**
 	* Creates a Raster based on a PixelInterleavedSampleModel with the
@@ -104,7 +104,7 @@ extern class Raster
 	*         <code>location.y + h</code> results in integer
 	*         overflow
 	*/
-	@:overload public static function createInterleavedRaster(dataType : Int, w : Int, h : Int, bands : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createInterleavedRaster(dataType : Int, w : Int, h : Int, bands : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a PixelInterleavedSampleModel with the
@@ -143,7 +143,7 @@ extern class Raster
 	*         <code>DataBuffer.TYPE_BYTE</code>, or
 	*         <code>DataBuffer.TYPE_USHORT</code>.
 	*/
-	@:overload public static function createInterleavedRaster(dataType : Int, w : Int, h : Int, scanlineStride : Int, pixelStride : Int, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createInterleavedRaster(dataType : Int, w : Int, h : Int, scanlineStride : Int, pixelStride : Int, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a BandedSampleModel with the
@@ -171,7 +171,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if <code>bands</code>
 	*         is less than 1
 	*/
-	@:overload public static function createBandedRaster(dataType : Int, w : Int, h : Int, bands : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createBandedRaster(dataType : Int, w : Int, h : Int, bands : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a BandedSampleModel with the
@@ -209,7 +209,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if <code>bankIndices</code>
 	*         or <code>bandOffsets</code> is <code>null</code>
 	*/
-	@:overload public static function createBandedRaster(dataType : Int, w : Int, h : Int, scanlineStride : Int, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createBandedRaster(dataType : Int, w : Int, h : Int, scanlineStride : Int, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a SinglePixelPackedSampleModel with
@@ -241,7 +241,7 @@ extern class Raster
 	*         <code>DataBuffer.TYPE_USHORT</code>
 	*         or <code>DataBuffer.TYPE_INT</code>
 	*/
-	@:overload public static function createPackedRaster(dataType : Int, w : Int, h : Int, bandMasks : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createPackedRaster(dataType : Int, w : Int, h : Int, bandMasks : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a packed SampleModel with the
@@ -287,7 +287,7 @@ extern class Raster
 	*         <code>DataBuffer.TYPE_USHORT</code>
 	*         or <code>DataBuffer.TYPE_INT</code>
 	*/
-	@:overload public static function createPackedRaster(dataType : Int, w : Int, h : Int, bands : Int, bitsPerBand : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createPackedRaster(dataType : Int, w : Int, h : Int, bands : Int, bitsPerBand : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a PixelInterleavedSampleModel with the
@@ -324,7 +324,7 @@ extern class Raster
 	*         than one bank.
 	* @throws NullPointerException if <code>dataBuffer</code> is null
 	*/
-	@:overload public static function createInterleavedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, scanlineStride : Int, pixelStride : Int, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createInterleavedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, scanlineStride : Int, pixelStride : Int, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a BandedSampleModel with the
@@ -356,7 +356,7 @@ extern class Raster
 	*         or <code>DataBuffer.TYPE_INT</code>
 	* @throws NullPointerException if <code>dataBuffer</code> is null
 	*/
-	@:overload public static function createBandedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, scanlineStride : Int, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createBandedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, scanlineStride : Int, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a SinglePixelPackedSampleModel with
@@ -388,7 +388,7 @@ extern class Raster
 	*         than one bank.
 	* @throws NullPointerException if <code>dataBuffer</code> is null
 	*/
-	@:overload public static function createPackedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, scanlineStride : Int, bandMasks : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createPackedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, scanlineStride : Int, bandMasks : java.NativeArray<Int>, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster based on a MultiPixelPackedSampleModel with the
@@ -418,7 +418,7 @@ extern class Raster
 	*         than one bank.
 	* @throws NullPointerException if <code>dataBuffer</code> is null
 	*/
-	@:overload public static function createPackedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, bitsPerPixel : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createPackedRaster(dataBuffer : java.awt.image.DataBuffer, w : Int, h : Int, bitsPerPixel : Int, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	*  Creates a Raster with the specified SampleModel and DataBuffer.
@@ -441,7 +441,7 @@ extern class Raster
 	*  @throws NullPointerException if either SampleModel or DataBuffer is
 	*          null
 	*/
-	@:overload public static function createRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer, location : java.awt.Point) : java.awt.image.Raster;
+	@:overload @:public @:static public static function createRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer, location : java.awt.Point) : java.awt.image.Raster;
 	
 	/**
 	*  Creates a WritableRaster with the specified SampleModel.
@@ -457,7 +457,7 @@ extern class Raster
 	*          <code>location.y + sm.getHeight()</code> results in integer
 	*          overflow
 	*/
-	@:overload public static function createWritableRaster(sm : java.awt.image.SampleModel, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createWritableRaster(sm : java.awt.image.SampleModel, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	*  Creates a WritableRaster with the specified SampleModel and DataBuffer.
@@ -480,7 +480,7 @@ extern class Raster
 	*         or MultiPixelPackedSampleModel.
 	* @throws NullPointerException if either SampleModel or DataBuffer is null
 	*/
-	@:overload public static function createWritableRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer, location : java.awt.Point) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function createWritableRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer, location : java.awt.Point) : java.awt.image.WritableRaster;
 	
 	/**
 	*  Constructs a Raster with the given SampleModel.  The Raster's
@@ -496,7 +496,7 @@ extern class Raster
 	*  @throws NullPointerException either <code>sampleModel</code> or
 	*          <code>origin</code> is null
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
+	@:overload @:protected private function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
 	
 	/**
 	*  Constructs a Raster with the given SampleModel and DataBuffer.
@@ -513,7 +513,7 @@ extern class Raster
 	*  @throws NullPointerException either <code>sampleModel</code> or
 	*          <code>origin</code> is null
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
+	@:overload @:protected private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a Raster with the given SampleModel, DataBuffer, and
@@ -541,13 +541,13 @@ extern class Raster
 	*         <code>aRegion.y + aRegion.height</code> results in integer
 	*         overflow
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.Raster) : Void;
+	@:overload @:protected private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.Raster) : Void;
 	
 	/**
 	* Returns the parent Raster (if any) of this Raster or null.
 	* @return the parent Raster or <code>null</code>.
 	*/
-	@:overload public function getParent() : java.awt.image.Raster;
+	@:overload @:public public function getParent() : java.awt.image.Raster;
 	
 	/**
 	* Returns the X translation from the coordinate system of the
@@ -557,7 +557,7 @@ extern class Raster
 	* @return the X translation from the coordinate space of the
 	*         Raster's SampleModel to that of the Raster.
 	*/
-	@:overload @:final public function getSampleModelTranslateX() : Int;
+	@:overload @:final @:public public function getSampleModelTranslateX() : Int;
 	
 	/**
 	* Returns the Y translation from the coordinate system of the
@@ -567,7 +567,7 @@ extern class Raster
 	* @return the Y translation from the coordinate space of the
 	*         Raster's SampleModel to that of the Raster.
 	*/
-	@:overload @:final public function getSampleModelTranslateY() : Int;
+	@:overload @:final @:public public function getSampleModelTranslateY() : Int;
 	
 	/**
 	* Create a compatible WritableRaster the same size as this Raster with
@@ -575,7 +575,7 @@ extern class Raster
 	* @return a compatible <code>WritableRaster</code> with the same sample
 	*         model and a new data buffer.
 	*/
-	@:overload public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
 	
 	/**
 	* Create a compatible WritableRaster with the specified size, a new
@@ -587,7 +587,7 @@ extern class Raster
 	* @exception RasterFormatException if the width or height is less than
 	*                               or equal to zero.
 	*/
-	@:overload public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Create a compatible WritableRaster with location (minX, minY)
@@ -604,7 +604,7 @@ extern class Raster
 	*         overflow
 	* @throws NullPointerException if <code>rect</code> is null
 	*/
-	@:overload public function createCompatibleWritableRaster(rect : java.awt.Rectangle) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleWritableRaster(rect : java.awt.Rectangle) : java.awt.image.WritableRaster;
 	
 	/**
 	* Create a compatible WritableRaster with the specified
@@ -624,7 +624,7 @@ extern class Raster
 	*         <code>y + h</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createCompatibleWritableRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleWritableRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Create a Raster with the same size, SampleModel and DataBuffer
@@ -644,7 +644,7 @@ extern class Raster
 	*         <code>childMinY + this.getHeight()</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createTranslatedChild(childMinX : Int, childMinY : Int) : java.awt.image.Raster;
+	@:overload @:public public function createTranslatedChild(childMinX : Int, childMinY : Int) : java.awt.image.Raster;
 	
 	/**
 	* Returns a new Raster which shares all or part of this Raster's
@@ -698,39 +698,39 @@ extern class Raster
 	*         <code>childMinY + height</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createChild(parentX : Int, parentY : Int, width : Int, height : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
+	@:overload @:public public function createChild(parentX : Int, parentY : Int, width : Int, height : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
 	
 	/**
 	* Returns the bounding Rectangle of this Raster. This function returns
 	* the same information as getMinX/MinY/Width/Height.
 	* @return the bounding box of this <code>Raster</code>.
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/** Returns the minimum valid X coordinate of the Raster.
 	*  @return the minimum x coordinate of this <code>Raster</code>.
 	*/
-	@:overload @:final public function getMinX() : Int;
+	@:overload @:final @:public public function getMinX() : Int;
 	
 	/** Returns the minimum valid Y coordinate of the Raster.
 	*  @return the minimum y coordinate of this <code>Raster</code>.
 	*/
-	@:overload @:final public function getMinY() : Int;
+	@:overload @:final @:public public function getMinY() : Int;
 	
 	/** Returns the width in pixels of the Raster.
 	*  @return the width of this <code>Raster</code>.
 	*/
-	@:overload @:final public function getWidth() : Int;
+	@:overload @:final @:public public function getWidth() : Int;
 	
 	/** Returns the height in pixels of the Raster.
 	*  @return the height of this <code>Raster</code>.
 	*/
-	@:overload @:final public function getHeight() : Int;
+	@:overload @:final @:public public function getHeight() : Int;
 	
 	/** Returns the number of bands (samples per pixel) in this Raster.
 	*  @return the number of bands of this <code>Raster</code>.
 	*/
-	@:overload @:final public function getNumBands() : Int;
+	@:overload @:final @:public public function getNumBands() : Int;
 	
 	/**
 	*  Returns the number of data elements needed to transfer one pixel
@@ -743,7 +743,7 @@ extern class Raster
 	*  as the storage data type of the DataBuffer.
 	*  @return the number of data elements.
 	*/
-	@:overload @:final public function getNumDataElements() : Int;
+	@:overload @:final @:public public function getNumDataElements() : Int;
 	
 	/**
 	*  Returns the TransferType used to transfer pixels via the
@@ -757,17 +757,17 @@ extern class Raster
 	*  be one of the types defined in DataBuffer.
 	*  @return this transfer type.
 	*/
-	@:overload @:final public function getTransferType() : Int;
+	@:overload @:final @:public public function getTransferType() : Int;
 	
 	/** Returns the DataBuffer associated with this Raster.
 	*  @return the <code>DataBuffer</code> of this <code>Raster</code>.
 	*/
-	@:overload public function getDataBuffer() : java.awt.image.DataBuffer;
+	@:overload @:public public function getDataBuffer() : java.awt.image.DataBuffer;
 	
 	/** Returns the SampleModel that describes the layout of the image data.
 	*  @return the <code>SampleModel</code> of this <code>Raster</code>.
 	*/
-	@:overload public function getSampleModel() : java.awt.image.SampleModel;
+	@:overload @:public public function getSampleModel() : java.awt.image.SampleModel;
 	
 	/**
 	* Returns data for a single pixel in a primitive array of type
@@ -794,7 +794,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if outData is too small to hold the output.
 	*/
-	@:overload public function getDataElements(x : Int, y : Int, outData : Dynamic) : Dynamic;
+	@:overload @:public public function getDataElements(x : Int, y : Int, outData : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the pixel data for the specified rectangle of pixels in a
@@ -824,7 +824,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if outData is too small to hold the output.
 	*/
-	@:overload public function getDataElements(x : Int, y : Int, w : Int, h : Int, outData : Dynamic) : Dynamic;
+	@:overload @:public public function getDataElements(x : Int, y : Int, w : Int, h : Int, outData : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the samples in an array of int for the specified pixel.
@@ -839,7 +839,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if iArray is too small to hold the output.
 	*/
-	@:overload public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function getPixel(x : Int, y : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns the samples in an array of float for the
@@ -855,7 +855,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if fArray is too small to hold the output.
 	*/
-	@:overload public function getPixel(x : Int, y : Int, fArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getPixel(x : Int, y : Int, fArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the samples in an array of double for the specified pixel.
@@ -870,7 +870,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if dArray is too small to hold the output.
 	*/
-	@:overload public function getPixel(x : Int, y : Int, dArray : java.NativeArray<Float>) : java.NativeArray<Float>;
+	@:overload @:public public function getPixel(x : Int, y : Int, dArray : java.NativeArray<Float>) : java.NativeArray<Float>;
 	
 	/**
 	* Returns an int array containing all samples for a rectangle of pixels,
@@ -888,7 +888,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if iArray is too small to hold the output.
 	*/
-	@:overload public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns a float array containing all samples for a rectangle of pixels,
@@ -906,7 +906,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if fArray is too small to hold the output.
 	*/
-	@:overload public function getPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a double array containing all samples for a rectangle of pixels,
@@ -924,7 +924,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if dArray is too small to hold the output.
 	*/
-	@:overload public function getPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>) : java.NativeArray<Float>;
+	@:overload @:public public function getPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>) : java.NativeArray<Float>;
 	
 	/**
 	* Returns the sample in a specified band for the pixel located
@@ -941,7 +941,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function getSample(x : Int, y : Int, b : Int) : Int;
+	@:overload @:public public function getSample(x : Int, y : Int, b : Int) : Int;
 	
 	/**
 	* Returns the sample in a specified band
@@ -958,7 +958,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function getSampleFloat(x : Int, y : Int, b : Int) : Single;
+	@:overload @:public public function getSampleFloat(x : Int, y : Int, b : Int) : Single;
 	
 	/**
 	* Returns the sample in a specified band
@@ -975,7 +975,7 @@ extern class Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function getSampleDouble(x : Int, y : Int, b : Int) : Float;
+	@:overload @:public public function getSampleDouble(x : Int, y : Int, b : Int) : Float;
 	
 	/**
 	* Returns the samples for a specified band for the specified rectangle
@@ -996,7 +996,7 @@ extern class Raster
 	* the band index are not in bounds, or if iArray is too small to
 	* hold the output.
 	*/
-	@:overload public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns the samples for a specified band for the specified rectangle
@@ -1017,7 +1017,7 @@ extern class Raster
 	* the band index are not in bounds, or if fArray is too small to
 	* hold the output.
 	*/
-	@:overload public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the samples for a specified band for a specified rectangle
@@ -1038,7 +1038,7 @@ extern class Raster
 	* the band index are not in bounds, or if dArray is too small to
 	* hold the output.
 	*/
-	@:overload public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>) : java.NativeArray<Float>;
+	@:overload @:public public function getSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>) : java.NativeArray<Float>;
 	
 	
 }

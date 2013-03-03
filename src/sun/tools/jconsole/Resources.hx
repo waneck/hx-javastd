@@ -30,13 +30,13 @@ extern class Resources
 	* formatted with the specified arguments.
 	*
 	*/
-	@:overload public static function getText(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function getText(key : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Returns the mnemonic keycode int of the jconsole resource for the specified key.
 	*
 	*/
-	@:overload public static function getMnemonicInt(key : String) : Int;
+	@:overload @:public @:static public static function getMnemonicInt(key : String) : Int;
 	
 	
 }

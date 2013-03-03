@@ -46,14 +46,14 @@ extern class UndoableEditEvent extends java.util.EventObject
 	*                (typically <code>this</code>)
 	* @param edit    an UndoableEdit object
 	*/
-	@:overload public function new(source : Dynamic, edit : javax.swing.undo.UndoableEdit) : Void;
+	@:overload @:public public function new(source : Dynamic, edit : javax.swing.undo.UndoableEdit) : Void;
 	
 	/**
 	* Returns the edit value.
 	*
 	* @return the UndoableEdit object encapsulating the edit
 	*/
-	@:overload public function getEdit() : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function getEdit() : javax.swing.undo.UndoableEdit;
 	
 	
 }

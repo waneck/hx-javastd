@@ -45,7 +45,7 @@ package java.awt;
 	* @serial
 	* @see #clone()
 	*/
-	public var top : Int;
+	@:public public var top : Int;
 	
 	/**
 	* The inset from the left.
@@ -55,7 +55,7 @@ package java.awt;
 	* @serial
 	* @see #clone()
 	*/
-	public var left : Int;
+	@:public public var left : Int;
 	
 	/**
 	* The inset from the bottom.
@@ -65,7 +65,7 @@ package java.awt;
 	* @serial
 	* @see #clone()
 	*/
-	public var bottom : Int;
+	@:public public var bottom : Int;
 	
 	/**
 	* The inset from the right.
@@ -75,7 +75,7 @@ package java.awt;
 	* @serial
 	* @see #clone()
 	*/
-	public var right : Int;
+	@:public public var right : Int;
 	
 	/**
 	* Creates and initializes a new <code>Insets</code> object with the
@@ -85,7 +85,7 @@ package java.awt;
 	* @param       bottom   the inset from the bottom.
 	* @param       right   the inset from the right.
 	*/
-	@:overload public function new(top : Int, left : Int, bottom : Int, right : Int) : Void;
+	@:overload @:public public function new(top : Int, left : Int, bottom : Int, right : Int) : Void;
 	
 	/**
 	* Set top, left, bottom, and right to the specified values
@@ -96,7 +96,7 @@ package java.awt;
 	* @param       right   the inset from the right.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function set(top : Int, left : Int, bottom : Int, right : Int) : Void;
+	@:require(java5) @:overload @:public public function set(top : Int, left : Int, bottom : Int, right : Int) : Void;
 	
 	/**
 	* Checks whether two insets objects are equal. Two instances
@@ -107,14 +107,14 @@ package java.awt;
 	*                          otherwise <code>false</code>.
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java1) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this Insets.
 	*
 	* @return    a hash code for this Insets.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>Insets</code> object.
@@ -125,13 +125,13 @@ package java.awt;
 	*
 	* @return  a string representation of this <code>Insets</code> object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Create a copy of this object.
 	* @return     a copy of this <code>Insets</code> object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

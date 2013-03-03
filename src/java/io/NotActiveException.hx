@@ -36,12 +36,12 @@ package java.io;
 	*
 	* @param reason  a String describing the reason for the exception.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructor to create a new NotActiveException without a reason.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

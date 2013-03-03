@@ -50,52 +50,52 @@ extern class BatchEnvironment
 	/**
 	* Creates a new BatchEnvironment with the specified RootDoc.
 	**/
-	@:overload public function new(rootDoc : com.sun.javadoc.RootDoc) : Void;
+	@:overload @:public public function new(rootDoc : com.sun.javadoc.RootDoc) : Void;
 	
 	/**
 	* Returns the RootDoc for this environment.
 	**/
-	@:overload public function rootDoc() : com.sun.javadoc.RootDoc;
+	@:overload @:public public function rootDoc() : com.sun.javadoc.RootDoc;
 	
-	@:overload public function docRemote() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function docRemote() : com.sun.javadoc.ClassDoc;
 	
-	@:overload public function docException() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function docException() : com.sun.javadoc.ClassDoc;
 	
-	@:overload public function docRemoteException() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function docRemoteException() : com.sun.javadoc.ClassDoc;
 	
-	@:overload public function docRuntimeException() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function docRuntimeException() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Sets this environment's verbosity status.
 	**/
-	@:overload public function setVerbose(verbose : Bool) : Void;
+	@:overload @:public public function setVerbose(verbose : Bool) : Void;
 	
 	/**
 	* Returns this environment's verbosity status.
 	**/
-	@:overload public function verbose() : Bool;
+	@:overload @:public public function verbose() : Bool;
 	
 	/**
 	* Adds the specified file to the list of source files generated
 	* during this batch.
 	**/
-	@:overload public function addGeneratedFile(file : java.io.File) : Void;
+	@:overload @:public public function addGeneratedFile(file : java.io.File) : Void;
 	
 	/**
 	* Returns the list of files generated during this batch.
 	**/
-	@:overload public function generatedFiles() : java.util.List<java.io.File>;
+	@:overload @:public public function generatedFiles() : java.util.List<java.io.File>;
 	
 	/**
 	* Outputs the specified (non-error) message.
 	**/
-	@:overload public function output(msg : String) : Void;
+	@:overload @:public public function output(msg : String) : Void;
 	
 	/**
 	* Reports an error using the specified resource key and text
 	* formatting arguments.
 	**/
-	@:overload public function error(key : String, args : java.NativeArray<String>) : Void;
+	@:overload @:public public function error(key : String, args : java.NativeArray<String>) : Void;
 	
 	
 }

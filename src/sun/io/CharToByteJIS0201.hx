@@ -31,13 +31,13 @@ package sun.io;
 */
 @:internal extern class CharToByteJIS0201 extends sun.io.CharToByteSingleByte
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getNative(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload @:public override public function getNative(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
-	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	
 }

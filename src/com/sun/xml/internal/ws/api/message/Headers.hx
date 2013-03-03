@@ -29,12 +29,12 @@ extern class Headers
 	* @deprecated
 	*      Use {@link #create(JAXBRIContext, Object)} instead.
 	*/
-	@:overload public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, m : javax.xml.bind.Marshaller, o : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, m : javax.xml.bind.Marshaller, o : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a {@link Header} backed a by a JAXB bean.
 	*/
-	@:overload public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, o : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, o : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a {@link Header} backed a by a JAXB bean, with the given tag name.
@@ -47,28 +47,28 @@ extern class Headers
 	* @param o
 	*      The JAXB bean that represents the contents of the header. Must not be null.
 	*/
-	@:overload public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, m : javax.xml.bind.Marshaller, tagName : javax.xml.namespace.QName, o : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, m : javax.xml.bind.Marshaller, tagName : javax.xml.namespace.QName, o : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a {@link Header} backed a by a JAXB bean.
 	*/
-	@:overload public static function create(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, jaxbObject : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, jaxbObject : Dynamic) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a new {@link Header} backed by a SAAJ object.
 	*/
-	@:overload public static function create(header : javax.xml.soap.SOAPHeaderElement) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(header : javax.xml.soap.SOAPHeaderElement) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a new {@link Header} backed by an {@link Element}.
 	*/
-	@:overload public static function create(node : org.w3c.dom.Element) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(node : org.w3c.dom.Element) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* @deprecated
 	*      Use {@link #create(Element)}
 	*/
-	@:overload public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, node : org.w3c.dom.Element) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, node : org.w3c.dom.Element) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a new {@link Header} that reads from {@link XMLStreamReader}.
@@ -77,7 +77,7 @@ extern class Headers
 	* Note that the header implementation will read the entire data
 	* into memory anyway, so this might not be as efficient as you might hope.
 	*/
-	@:overload public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a new {@link Header} that that has a single text value in it
@@ -86,7 +86,7 @@ extern class Headers
 	* @param name QName of the header element
 	* @param value text value of the header
 	*/
-	@:overload public static function create(name : javax.xml.namespace.QName, value : String) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function create(name : javax.xml.namespace.QName, value : String) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Creates a new {@link Header} that that has a single text value in it
@@ -95,7 +95,7 @@ extern class Headers
 	* @param name QName of the header element
 	* @param value text value of the header
 	*/
-	@:overload public static function createMustUnderstand(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, name : javax.xml.namespace.QName, value : String) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public @:static public static function createMustUnderstand(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, name : javax.xml.namespace.QName, value : String) : com.sun.xml.internal.ws.api.message.Header;
 	
 	
 }

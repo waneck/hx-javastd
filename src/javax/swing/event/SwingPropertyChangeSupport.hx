@@ -33,7 +33,7 @@ extern class SwingPropertyChangeSupport extends java.beans.PropertyChangeSupport
 	* @throws NullPointerException if {@code sourceBean} is
 	*         {@code null}
 	*/
-	@:overload public function new(sourceBean : Dynamic) : Void;
+	@:overload @:public public function new(sourceBean : Dynamic) : Void;
 	
 	/**
 	* Constructs a SwingPropertyChangeSupport object.
@@ -46,7 +46,7 @@ extern class SwingPropertyChangeSupport extends java.beans.PropertyChangeSupport
 	*         {@code null}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(sourceBean : Dynamic, notifyOnEDT : Bool) : Void;
+	@:require(java6) @:overload @:public public function new(sourceBean : Dynamic, notifyOnEDT : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -62,7 +62,7 @@ extern class SwingPropertyChangeSupport extends java.beans.PropertyChangeSupport
 	*         {@code null}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function firePropertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:require(java6) @:overload @:public override public function firePropertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Returns {@code notifyOnEDT} property.
@@ -71,7 +71,7 @@ extern class SwingPropertyChangeSupport extends java.beans.PropertyChangeSupport
 	* @see #SwingPropertyChangeSupport(Object sourceBean, boolean notifyOnEDT)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function isNotifyOnEDT() : Bool;
+	@:require(java6) @:overload @:public @:final public function isNotifyOnEDT() : Bool;
 	
 	
 }

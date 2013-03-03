@@ -37,7 +37,7 @@ package com.sun.java.swing.plaf.windows;
 */
 @:require(java5) extern class WindowsClassicLookAndFeel extends com.sun.java.swing.plaf.windows.WindowsLookAndFeel
 {
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	
 }

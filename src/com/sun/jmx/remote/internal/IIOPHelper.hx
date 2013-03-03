@@ -28,22 +28,22 @@ extern class IIOPHelper
 	/**
 	* Returns true if RMI-IIOP and CORBA is available.
 	*/
-	@:overload public static function isAvailable() : Bool;
+	@:overload @:public @:static public static function isAvailable() : Bool;
 	
 	/**
 	* Returns true if the given object is a Stub.
 	*/
-	@:overload public static function isStub(obj : Dynamic) : Bool;
+	@:overload @:public @:static public static function isStub(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the Delegate to which the given Stub delegates.
 	*/
-	@:overload public static function getDelegate(stub : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function getDelegate(stub : Dynamic) : Dynamic;
 	
 	/**
 	* Sets the Delegate for a given Stub.
 	*/
-	@:overload public static function setDelegate(stub : Dynamic, delegate : Dynamic) : Void;
+	@:overload @:public @:static public static function setDelegate(stub : Dynamic, delegate : Dynamic) : Void;
 	
 	/**
 	* Returns the ORB associated with the given stub
@@ -52,54 +52,54 @@ extern class IIOPHelper
 	*          if the object does not support the operation that
 	*          was invoked
 	*/
-	@:overload public static function getOrb(stub : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function getOrb(stub : Dynamic) : Dynamic;
 	
 	/**
 	* Connects the Stub to the given ORB.
 	*/
-	@:overload public static function connect(stub : Dynamic, orb : Dynamic) : Void;
+	@:overload @:public @:static public static function connect(stub : Dynamic, orb : Dynamic) : Void;
 	
 	/**
 	* Returns true if the given object is an ORB.
 	*/
-	@:overload public static function isOrb(obj : Dynamic) : Bool;
+	@:overload @:public @:static public static function isOrb(obj : Dynamic) : Bool;
 	
 	/**
 	* Creates, and returns, a new ORB instance.
 	*/
-	@:overload public static function createOrb(args : java.NativeArray<String>, props : java.util.Properties) : Dynamic;
+	@:overload @:public @:static public static function createOrb(args : java.NativeArray<String>, props : java.util.Properties) : Dynamic;
 	
 	/**
 	* Converts a string, produced by the object_to_string method, back
 	* to a CORBA object reference.
 	*/
-	@:overload public static function stringToObject(orb : Dynamic, str : String) : Dynamic;
+	@:overload @:public @:static public static function stringToObject(orb : Dynamic, str : String) : Dynamic;
 	
 	/**
 	* Converts the given CORBA object reference to a string.
 	*/
-	@:overload public static function objectToString(orb : Dynamic, obj : Dynamic) : String;
+	@:overload @:public @:static public static function objectToString(orb : Dynamic, obj : Dynamic) : String;
 	
 	/**
 	* Checks to ensure that an object of a remote or abstract interface
 	* type can be cast to a desired type.
 	*/
-	@:overload public static function narrow<T>(narrowFrom : Dynamic, narrowTo : Class<T>) : T;
+	@:overload @:public @:static public static function narrow<T>(narrowFrom : Dynamic, narrowTo : Class<T>) : T;
 	
 	/**
 	* Makes a server object ready to receive remote calls
 	*/
-	@:overload public static function exportObject(obj : java.rmi.Remote) : Void;
+	@:overload @:public @:static public static function exportObject(obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Deregisters a server object from the runtime.
 	*/
-	@:overload public static function unexportObject(obj : java.rmi.Remote) : Void;
+	@:overload @:public @:static public static function unexportObject(obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Returns a stub for the given server object.
 	*/
-	@:overload public static function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
+	@:overload @:public @:static public static function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
 	
 	
 }

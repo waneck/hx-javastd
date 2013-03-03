@@ -25,7 +25,7 @@ package sun.management;
 */
 extern class GcInfoBuilder
 {
-	@:overload public function getPoolNames() : java.NativeArray<String>;
+	@:overload @:public public function getPoolNames() : java.NativeArray<String>;
 	
 	
 }

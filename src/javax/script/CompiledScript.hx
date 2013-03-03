@@ -38,7 +38,7 @@ extern class CompiledScript
 	* @throws ScriptException if an error occurs.
 	* @throws NullPointerException if context is null.
 	*/
-	@:overload @:abstract public function eval(context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public @:abstract public function eval(context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Executes the program stored in the <code>CompiledScript</code> object using
@@ -55,7 +55,7 @@ extern class CompiledScript
 	*
 	* @throws ScriptException if an error occurs.
 	*/
-	@:overload public function eval(bindings : javax.script.Bindings) : Dynamic;
+	@:overload @:public public function eval(bindings : javax.script.Bindings) : Dynamic;
 	
 	/**
 	* Executes the program stored in the <code>CompiledScript</code> object.  The
@@ -66,7 +66,7 @@ extern class CompiledScript
 	*
 	* @throws ScriptException if an error occurs.
 	*/
-	@:overload public function eval() : Dynamic;
+	@:overload @:public public function eval() : Dynamic;
 	
 	/**
 	* Returns the <code>ScriptEngine</code> whose <code>compile</code> method created this <code>CompiledScript</code>.
@@ -74,7 +74,7 @@ extern class CompiledScript
 	*
 	* @return The <code>ScriptEngine</code> that created this <code>CompiledScript</code>
 	*/
-	@:overload @:abstract public function getEngine() : javax.script.ScriptEngine;
+	@:overload @:public @:abstract public function getEngine() : javax.script.ScriptEngine;
 	
 	
 }

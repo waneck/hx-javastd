@@ -37,7 +37,7 @@ package java.nio.file;
 	* @param   file
 	*          a string identifying the file or {@code null} if not known
 	*/
-	@:overload public function new(file : String) : Void;
+	@:overload @:public public function new(file : String) : Void;
 	
 	
 }

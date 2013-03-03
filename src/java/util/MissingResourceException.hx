@@ -53,21 +53,21 @@ package java.util;
 	* @param className the name of the resource class
 	* @param key the key for the missing resource.
 	*/
-	@:overload public function new(s : String, className : String, key : String) : Void;
+	@:overload @:public public function new(s : String, className : String, key : String) : Void;
 	
 	/**
 	* Gets parameter passed by constructor.
 	*
 	* @return the name of the resource class
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Gets parameter passed by constructor.
 	*
 	* @return the key for the missing resource
 	*/
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	
 }

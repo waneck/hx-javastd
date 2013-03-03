@@ -35,7 +35,7 @@ package java.awt.dnd;
 	* @param a listener-a
 	* @param b listener-b
 	*/
-	@:overload private function new(a : java.util.EventListener, b : java.util.EventListener) : Void;
+	@:overload @:protected private function new(a : java.util.EventListener, b : java.util.EventListener) : Void;
 	
 	/**
 	* Handles the <code>DragSourceDragEvent</code> by invoking
@@ -43,7 +43,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragEnter(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Handles the <code>DragSourceDragEvent</code> by invoking
@@ -51,7 +51,7 @@ package java.awt.dnd;
 	*
 	* @param e the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragOver(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Handles the <code>DragSourceDragEvent</code> by invoking
@@ -59,7 +59,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dropActionChanged(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Handles the <code>DragSourceEvent</code> by invoking
@@ -67,7 +67,7 @@ package java.awt.dnd;
 	*
 	* @param dse the <code>DragSourceEvent</code>
 	*/
-	@:overload public function dragExit(dse : java.awt.dnd.DragSourceEvent) : Void;
+	@:overload @:public public function dragExit(dse : java.awt.dnd.DragSourceEvent) : Void;
 	
 	/**
 	* Handles the <code>DragSourceDropEvent</code> by invoking
@@ -75,7 +75,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDropEvent</code>
 	*/
-	@:overload public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
+	@:overload @:public public function dragDropEnd(dsde : java.awt.dnd.DragSourceDropEvent) : Void;
 	
 	/**
 	* Handles the <code>DragSourceDragEvent</code> by invoking
@@ -83,7 +83,7 @@ package java.awt.dnd;
 	*
 	* @param dsde the <code>DragSourceDragEvent</code>
 	*/
-	@:overload public function dragMouseMoved(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
+	@:overload @:public public function dragMouseMoved(dsde : java.awt.dnd.DragSourceDragEvent) : Void;
 	
 	/**
 	* Adds drag-source-listener-a with drag-source-listener-b and
@@ -92,7 +92,7 @@ package java.awt.dnd;
 	* @param a drag-source-listener-a
 	* @param b drag-source-listener-b
 	*/
-	@:overload public static function add(a : java.awt.dnd.DragSourceListener, b : java.awt.dnd.DragSourceListener) : java.awt.dnd.DragSourceListener;
+	@:overload @:public @:static public static function add(a : java.awt.dnd.DragSourceListener, b : java.awt.dnd.DragSourceListener) : java.awt.dnd.DragSourceListener;
 	
 	/**
 	* Adds drag-source-motion-listener-a with drag-source-motion-listener-b and
@@ -101,7 +101,7 @@ package java.awt.dnd;
 	* @param a drag-source-motion-listener-a
 	* @param b drag-source-motion-listener-b
 	*/
-	@:overload public static function add(a : java.awt.dnd.DragSourceMotionListener, b : java.awt.dnd.DragSourceMotionListener) : java.awt.dnd.DragSourceMotionListener;
+	@:overload @:public @:static public static function add(a : java.awt.dnd.DragSourceMotionListener, b : java.awt.dnd.DragSourceMotionListener) : java.awt.dnd.DragSourceMotionListener;
 	
 	/**
 	* Removes the old drag-source-listener from drag-source-listener-l
@@ -110,7 +110,7 @@ package java.awt.dnd;
 	* @param l drag-source-listener-l
 	* @param oldl the drag-source-listener being removed
 	*/
-	@:native('remove') @:overload public static function _remove(l : java.awt.dnd.DragSourceListener, oldl : java.awt.dnd.DragSourceListener) : java.awt.dnd.DragSourceListener;
+	@:native('remove') @:overload @:public @:static public static function _remove(l : java.awt.dnd.DragSourceListener, oldl : java.awt.dnd.DragSourceListener) : java.awt.dnd.DragSourceListener;
 	
 	/**
 	* Removes the old drag-source-motion-listener from
@@ -120,7 +120,7 @@ package java.awt.dnd;
 	* @param l drag-source-motion-listener-l
 	* @param ol the drag-source-motion-listener being removed
 	*/
-	@:native('remove') @:overload public static function _remove(l : java.awt.dnd.DragSourceMotionListener, ol : java.awt.dnd.DragSourceMotionListener) : java.awt.dnd.DragSourceMotionListener;
+	@:native('remove') @:overload @:public @:static public static function _remove(l : java.awt.dnd.DragSourceMotionListener, ol : java.awt.dnd.DragSourceMotionListener) : java.awt.dnd.DragSourceMotionListener;
 	
 	/**
 	* Returns the resulting multicast listener from adding listener-a
@@ -132,14 +132,14 @@ package java.awt.dnd;
 	* @param a event listener-a
 	* @param b event listener-b
 	*/
-	@:overload private static function addInternal(a : java.util.EventListener, b : java.util.EventListener) : java.util.EventListener;
+	@:overload @:protected @:static private static function addInternal(a : java.util.EventListener, b : java.util.EventListener) : java.util.EventListener;
 	
 	/**
 	* Removes a listener from this multicaster and returns the
 	* resulting multicast listener.
 	* @param oldl the listener to be removed
 	*/
-	@:overload override private function remove(oldl : java.util.EventListener) : java.util.EventListener;
+	@:overload @:protected override private function remove(oldl : java.util.EventListener) : java.util.EventListener;
 	
 	/**
 	* Returns the resulting multicast listener after removing the
@@ -152,9 +152,9 @@ package java.awt.dnd;
 	* @param l the listener being removed from
 	* @param oldl the listener being removed
 	*/
-	@:overload private static function removeInternal(l : java.util.EventListener, oldl : java.util.EventListener) : java.util.EventListener;
+	@:overload @:protected @:static private static function removeInternal(l : java.util.EventListener, oldl : java.util.EventListener) : java.util.EventListener;
 	
-	@:overload private static function save(s : java.io.ObjectOutputStream, k : String, l : java.util.EventListener) : Void;
+	@:overload @:protected @:static private static function save(s : java.io.ObjectOutputStream, k : String, l : java.util.EventListener) : Void;
 	
 	
 }

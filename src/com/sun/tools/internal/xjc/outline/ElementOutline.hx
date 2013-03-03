@@ -28,25 +28,25 @@ extern class ElementOutline
 	/**
 	* A {@link Outline} that encloses all the class outlines.
 	*/
-	@:overload @:abstract public function parent() : com.sun.tools.internal.xjc.outline.Outline;
+	@:overload @:public @:abstract public function parent() : com.sun.tools.internal.xjc.outline.Outline;
 	
 	/**
 	* {@link PackageOutline} that contains this class.
 	*/
-	@:overload public function _package() : com.sun.tools.internal.xjc.outline.PackageOutline;
+	@:overload @:public public function _package() : com.sun.tools.internal.xjc.outline.PackageOutline;
 	
 	/**
 	* This {@link ElementOutline} holds information about this {@link CElementInfo}.
 	*/
-	public var target(default, null) : com.sun.tools.internal.xjc.model.CElementInfo;
+	@:public @:final public var target(default, null) : com.sun.tools.internal.xjc.model.CElementInfo;
 	
 	/**
 	* The implementation aspect of a bean.
 	* The actual place where fields/methods should be generated into.
 	*/
-	public var implClass(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	@:public @:final public var implClass(default, null) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload private function new(target : com.sun.tools.internal.xjc.model.CElementInfo, implClass : com.sun.codemodel.internal.JDefinedClass) : Void;
+	@:overload @:protected private function new(target : com.sun.tools.internal.xjc.model.CElementInfo, implClass : com.sun.codemodel.internal.JDefinedClass) : Void;
 	
 	
 }

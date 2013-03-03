@@ -51,7 +51,7 @@ package javax.accessibility;
 	*
 	* @param s the string to set the text contents
 	*/
-	@:overload public function setTextContents(s : String) : Void;
+	@:overload @:public public function setTextContents(s : String) : Void;
 	
 	/**
 	* Inserts the specified string at the given index/
@@ -60,7 +60,7 @@ package javax.accessibility;
 	* be inserted
 	* @param s the string to insert in the text
 	*/
-	@:overload public function insertTextAtIndex(index : Int, s : String) : Void;
+	@:overload @:public public function insertTextAtIndex(index : Int, s : String) : Void;
 	
 	/**
 	* Returns the text string between two indices.
@@ -69,7 +69,7 @@ package javax.accessibility;
 	* @param endIndex the ending index in the text
 	* @return the text string between the indices
 	*/
-	@:overload public function getTextRange(startIndex : Int, endIndex : Int) : String;
+	@:overload @:public public function getTextRange(startIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Deletes the text between two indices
@@ -77,7 +77,7 @@ package javax.accessibility;
 	* @param startIndex the starting index in the text
 	* @param endIndex the ending index in the text
 	*/
-	@:overload public function delete(startIndex : Int, endIndex : Int) : Void;
+	@:overload @:public public function delete(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Cuts the text between two indices into the system clipboard.
@@ -85,7 +85,7 @@ package javax.accessibility;
 	* @param startIndex the starting index in the text
 	* @param endIndex the ending index in the text
 	*/
-	@:overload public function cut(startIndex : Int, endIndex : Int) : Void;
+	@:overload @:public public function cut(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Pastes the text from the system clipboard into the text
@@ -93,7 +93,7 @@ package javax.accessibility;
 	*
 	* @param startIndex the starting index in the text
 	*/
-	@:overload public function paste(startIndex : Int) : Void;
+	@:overload @:public public function paste(startIndex : Int) : Void;
 	
 	/**
 	* Replaces the text between two indices with the specified
@@ -103,7 +103,7 @@ package javax.accessibility;
 	* @param endIndex the ending index in the text
 	* @param s the string to replace the text between two indices
 	*/
-	@:overload public function replaceText(startIndex : Int, endIndex : Int, s : String) : Void;
+	@:overload @:public public function replaceText(startIndex : Int, endIndex : Int, s : String) : Void;
 	
 	/**
 	* Selects the text between two indices.
@@ -111,7 +111,7 @@ package javax.accessibility;
 	* @param startIndex the starting index in the text
 	* @param endIndex the ending index in the text
 	*/
-	@:overload public function selectText(startIndex : Int, endIndex : Int) : Void;
+	@:overload @:public public function selectText(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Sets attributes for the text between two indices.
@@ -121,7 +121,7 @@ package javax.accessibility;
 	* @param as the attribute set
 	* @see AttributeSet
 	*/
-	@:overload public function setAttributes(startIndex : Int, endIndex : Int, as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setAttributes(startIndex : Int, endIndex : Int, as : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class FileSystemException extends java.io.IOException
 	* @param   file
 	*          a string identifying the file or {@code null} if not known.
 	*/
-	@:overload public function new(file : String) : Void;
+	@:overload @:public public function new(file : String) : Void;
 	
 	/**
 	* Constructs an instance of this class. This constructor should be used
@@ -48,33 +48,33 @@ extern class FileSystemException extends java.io.IOException
 	* @param   reason
 	*          a reason message with additional information or {@code null}
 	*/
-	@:overload public function new(file : String, other : String, reason : String) : Void;
+	@:overload @:public public function new(file : String, other : String, reason : String) : Void;
 	
 	/**
 	* Returns the file used to create this exception.
 	*
 	* @return  the file (can be {@code null})
 	*/
-	@:overload public function getFile() : String;
+	@:overload @:public public function getFile() : String;
 	
 	/**
 	* Returns the other file used to create this exception.
 	*
 	* @return  the other file (can be {@code null})
 	*/
-	@:overload public function getOtherFile() : String;
+	@:overload @:public public function getOtherFile() : String;
 	
 	/**
 	* Returns the string explaining why the file system operation failed.
 	*
 	* @return  the string explaining why the file system operation failed
 	*/
-	@:overload public function getReason() : String;
+	@:overload @:public public function getReason() : String;
 	
 	/**
 	* Returns the detail message string.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

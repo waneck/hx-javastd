@@ -40,7 +40,7 @@ extern class FileImageOutputStream extends javax.imageio.stream.ImageOutputStrea
 	* other reason.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function new(f : java.io.File) : Void;
+	@:overload @:public public function new(f : java.io.File) : Void;
 	
 	/**
 	* Constructs a <code>FileImageOutputStream</code> that will write
@@ -51,17 +51,17 @@ extern class FileImageOutputStream extends javax.imageio.stream.ImageOutputStrea
 	* @exception IllegalArgumentException if <code>raf</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(raf : java.io.RandomAccessFile) : Void;
+	@:overload @:public public function new(raf : java.io.RandomAccessFile) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function length() : haxe.Int64;
+	@:overload @:public override public function length() : haxe.Int64;
 	
 	/**
 	* Sets the current stream position and resets the bit offset to
@@ -74,14 +74,14 @@ extern class FileImageOutputStream extends javax.imageio.stream.ImageOutputStrea
 	* than the flushed position.
 	* @exception IOException if any other I/O error occurs.
 	*/
-	@:overload override public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public override public function seek(pos : haxe.Int64) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload @:protected override private function finalize() : Void;
 	
 	
 }

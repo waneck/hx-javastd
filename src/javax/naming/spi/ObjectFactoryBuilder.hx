@@ -39,7 +39,7 @@ extern interface ObjectFactoryBuilder
 	* @exception NamingException If an object factory cannot be created.
 	*
 	*/
-	@:overload public function createObjectFactory(obj : Dynamic, environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.ObjectFactory;
+	@:overload @:public public function createObjectFactory(obj : Dynamic, environment : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.spi.ObjectFactory;
 	
 	
 }

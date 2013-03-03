@@ -28,7 +28,7 @@ extern class DefaultComboBoxModel<E> extends javax.swing.AbstractListModel<E> im
 	/**
 	* Constructs an empty DefaultComboBoxModel object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a DefaultComboBoxModel object initialized with
@@ -36,7 +36,7 @@ extern class DefaultComboBoxModel<E> extends javax.swing.AbstractListModel<E> im
 	*
 	* @param items  an array of Object objects
 	*/
-	@:overload public function new(items : java.NativeArray<E>) : Void;
+	@:overload @:public public function new(items : java.NativeArray<E>) : Void;
 	
 	/**
 	* Constructs a DefaultComboBoxModel object initialized with
@@ -44,20 +44,20 @@ extern class DefaultComboBoxModel<E> extends javax.swing.AbstractListModel<E> im
 	*
 	* @param v  a Vector object ...
 	*/
-	@:overload public function new(v : java.util.Vector<E>) : Void;
+	@:overload @:public public function new(v : java.util.Vector<E>) : Void;
 	
 	/**
 	* Set the value of the selected item. The selected item may be null.
 	* <p>
 	* @param anObject The combo box value or null for no selection.
 	*/
-	@:overload public function setSelectedItem(anObject : Dynamic) : Void;
+	@:overload @:public public function setSelectedItem(anObject : Dynamic) : Void;
 	
-	@:overload public function getSelectedItem() : Dynamic;
+	@:overload @:public public function getSelectedItem() : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : E;
+	@:overload @:public override public function getElementAt(index : Int) : E;
 	
 	/**
 	* Returns the index-position of the specified object in the list.
@@ -66,20 +66,20 @@ extern class DefaultComboBoxModel<E> extends javax.swing.AbstractListModel<E> im
 	* @return an int representing the index position, where 0 is
 	*         the first position
 	*/
-	@:overload public function getIndexOf(anObject : Dynamic) : Int;
+	@:overload @:public public function getIndexOf(anObject : Dynamic) : Int;
 	
-	@:overload public function addElement(anObject : E) : Void;
+	@:overload @:public public function addElement(anObject : E) : Void;
 	
-	@:overload public function insertElementAt(anObject : E, index : Int) : Void;
+	@:overload @:public public function insertElementAt(anObject : E, index : Int) : Void;
 	
-	@:overload public function removeElementAt(index : Int) : Void;
+	@:overload @:public public function removeElementAt(index : Int) : Void;
 	
-	@:overload public function removeElement(anObject : Dynamic) : Void;
+	@:overload @:public public function removeElement(anObject : Dynamic) : Void;
 	
 	/**
 	* Empties the list.
 	*/
-	@:overload public function removeAllElements() : Void;
+	@:overload @:public public function removeAllElements() : Void;
 	
 	
 }

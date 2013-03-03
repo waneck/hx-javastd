@@ -25,17 +25,17 @@ package com.sun.media.sound;
 */
 @:internal extern class PortMixer extends com.sun.media.sound.AbstractMixer
 {
-	@:overload override public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload @:public override public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
-	@:overload override public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
+	@:overload @:public override public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
-	@:overload override private function implOpen() : Void;
+	@:overload @:protected override private function implOpen() : Void;
 	
-	@:overload override private function implClose() : Void;
+	@:overload @:protected override private function implClose() : Void;
 	
-	@:overload override private function implStart() : Void;
+	@:overload @:protected override private function implStart() : Void;
 	
-	@:overload override private function implStop() : Void;
+	@:overload @:protected override private function implStop() : Void;
 	
 	
 }
@@ -44,9 +44,9 @@ package com.sun.media.sound;
 */
 @:native('com$sun$media$sound$PortMixer$PortMixerPort') @:internal extern class PortMixer_PortMixerPort extends com.sun.media.sound.AbstractLine implements javax.sound.sampled.Port
 {
-	@:overload public function open() : Void;
+	@:overload @:public override public function open() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -55,9 +55,9 @@ package com.sun.media.sound;
 */
 @:native('com$sun$media$sound$PortMixer$BoolCtrl') @:internal extern class PortMixer_BoolCtrl extends javax.sound.sampled.BooleanControl
 {
-	@:overload public function setValue(value : Bool) : Void;
+	@:overload @:public override public function setValue(value : Bool) : Void;
 	
-	@:overload public function getValue() : Bool;
+	@:overload @:public override public function getValue() : Bool;
 	
 	
 }
@@ -87,9 +87,9 @@ package com.sun.media.sound;
 */
 @:native('com$sun$media$sound$PortMixer$FloatCtrl') @:internal extern class PortMixer_FloatCtrl extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(value : Single) : Void;
+	@:overload @:public override public function setValue(value : Single) : Void;
 	
-	@:overload override public function getValue() : Single;
+	@:overload @:public override public function getValue() : Single;
 	
 	
 }

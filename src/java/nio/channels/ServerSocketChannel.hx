@@ -28,7 +28,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Opens a server-socket channel.
@@ -48,7 +48,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.ServerSocketChannel;
+	@:overload @:public @:static public static function open() : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -60,7 +60,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final public function validOps() : Int;
+	@:overload @:public @:final override public function validOps() : Int;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket
@@ -88,7 +88,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function bind(local : java.net.SocketAddress) : java.nio.channels.ServerSocketChannel;
+	@:require(java7) @:overload @:public @:final public function bind(local : java.net.SocketAddress) : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket to
@@ -128,7 +128,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.ServerSocketChannel;
+	@:require(java7) @:overload @:public @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* @throws  UnsupportedOperationException           {@inheritDoc}
@@ -138,7 +138,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.ServerSocketChannel;
+	@:require(java7) @:overload @:public @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Retrieves a server socket associated with this channel.
@@ -148,7 +148,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @return  A server socket associated with this channel
 	*/
-	@:overload @:abstract public function socket() : java.net.ServerSocket;
+	@:overload @:public @:abstract public function socket() : java.net.ServerSocket;
 	
 	/**
 	* Accepts a connection made to this channel's socket.
@@ -197,7 +197,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function accept() : java.nio.channels.SocketChannel;
+	@:overload @:public @:abstract public function accept() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Returns the value of a socket option.
@@ -217,7 +217,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload @:public @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public @:public @:public @:public @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -227,7 +227,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload @:public @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:public @:public @:public @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -245,14 +245,14 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:public @:public public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public @:public @:public @:public @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -271,7 +271,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public @:public override public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
 	
 	
 }

@@ -49,12 +49,12 @@ extern interface DOMError
 	* The severity of the error, either <code>SEVERITY_WARNING</code>,
 	* <code>SEVERITY_ERROR</code>, or <code>SEVERITY_FATAL_ERROR</code>.
 	*/
-	@:overload public function getSeverity() : java.StdTypes.Int16;
+	@:overload @:public public function getSeverity() : java.StdTypes.Int16;
 	
 	/**
 	* An implementation specific string describing the error that occurred.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	*  A <code>DOMString</code> indicating which related data is expected in
@@ -69,22 +69,22 @@ extern interface DOMError
 	* <code>CDATASection</code> node in document order resulting from the
 	* split is returned by the <code>relatedData</code> attribute.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* The related platform dependent exception if any.
 	*/
-	@:overload public function getRelatedException() : Dynamic;
+	@:overload @:public public function getRelatedException() : Dynamic;
 	
 	/**
 	*  The related <code>DOMError.type</code> dependent data if any.
 	*/
-	@:overload public function getRelatedData() : Dynamic;
+	@:overload @:public public function getRelatedData() : Dynamic;
 	
 	/**
 	* The location of the error.
 	*/
-	@:overload public function getLocation() : org.w3c.dom.DOMLocator;
+	@:overload @:public public function getLocation() : org.w3c.dom.DOMLocator;
 	
 	
 }

@@ -26,13 +26,13 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 extern class BIUserConversion implements com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion
 {
 	/** Gets the location where this declaration is declared. */
-	@:overload public function getSourceLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getSourceLocation() : org.xml.sax.Locator;
 	
 	/** Gets the conversion name. */
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/** Gets a transducer for this conversion. */
-	@:overload public function getTransducer() : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function getTransducer() : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	
 }

@@ -67,33 +67,33 @@ package sun.security.ec;
 */
 @:require(java6) extern class ECParameters extends java.security.AlgorithmParametersSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function decodePoint(data : java.NativeArray<java.StdTypes.Int8>, curve : java.security.spec.EllipticCurve) : java.security.spec.ECPoint;
+	@:overload @:public @:static public static function decodePoint(data : java.NativeArray<java.StdTypes.Int8>, curve : java.security.spec.EllipticCurve) : java.security.spec.ECPoint;
 	
-	@:overload public static function encodePoint(point : java.security.spec.ECPoint, curve : java.security.spec.EllipticCurve) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function encodePoint(point : java.security.spec.ECPoint, curve : java.security.spec.EllipticCurve) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function getNamedCurve(params : java.security.spec.ECParameterSpec) : sun.security.ec.NamedCurve;
+	@:overload @:public @:static public static function getNamedCurve(params : java.security.spec.ECParameterSpec) : sun.security.ec.NamedCurve;
 	
-	@:overload public static function getCurveName(params : java.security.spec.ECParameterSpec) : String;
+	@:overload @:public @:static public static function getCurveName(params : java.security.spec.ECParameterSpec) : String;
 	
-	@:overload public static function encodeParameters(params : java.security.spec.ECParameterSpec) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function encodeParameters(params : java.security.spec.ECParameterSpec) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function decodeParameters(params : java.NativeArray<java.StdTypes.Int8>) : java.security.spec.ECParameterSpec;
+	@:overload @:public @:static public static function decodeParameters(params : java.NativeArray<java.StdTypes.Int8>) : java.security.spec.ECParameterSpec;
 	
-	@:overload private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
+	@:overload @:protected override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
 	
-	@:overload private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(spec : Class<T>) : T;
+	@:overload @:protected override private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(spec : Class<T>) : T;
 	
-	@:overload private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineToString() : String;
+	@:overload @:protected override private function engineToString() : String;
 	
 	
 }

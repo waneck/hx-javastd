@@ -47,7 +47,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @see     ObjectInputStream#readFields()
 	* @see     ObjectOutputStream#ObjectOutputStream(OutputStream)
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Provide a way for subclasses that are completely reimplementing
@@ -65,7 +65,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @see SecurityManager#checkPermission
 	* @see java.io.SerializablePermission
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Read an object from the ObjectInputStream.  The class of the object, the
@@ -97,7 +97,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	*          stream instead of objects.
 	* @throws  IOException Any of the usual Input/Output related exceptions.
 	*/
-	@:overload @:final public function readObject() : Dynamic;
+	@:overload @:public @:final public function readObject() : Dynamic;
 	
 	/**
 	* This method is called by trusted subclasses of ObjectOutputStream that
@@ -116,7 +116,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @see #readObject()
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function readObjectOverride() : Dynamic;
+	@:require(java2) @:overload @:protected private function readObjectOverride() : Dynamic;
 	
 	/**
 	* Reads an "unshared" object from the ObjectInputStream.  This method is
@@ -163,7 +163,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  IOException if an I/O error occurs during deserialization
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function readUnshared() : Dynamic;
+	@:require(java4) @:overload @:public public function readUnshared() : Dynamic;
 	
 	/**
 	* Read the non-static and non-transient fields of the current class from
@@ -177,7 +177,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  NotActiveException if the stream is not currently reading
 	*          objects.
 	*/
-	@:overload public function defaultReadObject() : Void;
+	@:overload @:public public function defaultReadObject() : Void;
 	
 	/**
 	* Reads the persistent fields from the stream and makes them available by
@@ -192,7 +192,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	*          objects.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function readFields() : java.io.ObjectInputStream.ObjectInputStream_GetField;
+	@:require(java2) @:overload @:public public function readFields() : java.io.ObjectInputStream.ObjectInputStream_GetField;
 	
 	/**
 	* Register an object to be validated before the graph is returned.  While
@@ -210,7 +210,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	*          so it is invalid to register a callback.
 	* @throws  InvalidObjectException The validation object is null.
 	*/
-	@:overload public function registerValidation(obj : java.io.ObjectInputValidation, prio : Int) : Void;
+	@:overload @:public public function registerValidation(obj : java.io.ObjectInputValidation, prio : Int) : Void;
 	
 	/**
 	* Load the local class equivalent of the specified stream class
@@ -253,7 +253,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  ClassNotFoundException if class of a serialized object cannot
 	*          be found.
 	*/
-	@:overload private function resolveClass(desc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected private function resolveClass(desc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	/**
 	* Returns a proxy class that implements the interfaces named in a proxy
@@ -306,7 +306,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @see ObjectOutputStream#annotateProxyClass(Class)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
+	@:require(java3) @:overload @:protected private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
 	
 	/**
 	* This method will allow trusted subclasses of ObjectInputStream to
@@ -335,7 +335,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @return  the substituted object
 	* @throws  IOException Any of the usual Input/Output exceptions.
 	*/
-	@:overload private function resolveObject(obj : Dynamic) : Dynamic;
+	@:overload @:protected private function resolveObject(obj : Dynamic) : Dynamic;
 	
 	/**
 	* Enable the stream to allow objects read from the stream to be replaced.
@@ -358,7 +358,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @see SecurityManager#checkPermission
 	* @see java.io.SerializablePermission
 	*/
-	@:overload private function enableResolveObject(enable : Bool) : Bool;
+	@:overload @:protected private function enableResolveObject(enable : Bool) : Bool;
 	
 	/**
 	* The readStreamHeader method is provided to allow subclasses to read and
@@ -370,7 +370,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  StreamCorruptedException if control information in the stream
 	*          is inconsistent
 	*/
-	@:overload private function readStreamHeader() : Void;
+	@:overload @:protected private function readStreamHeader() : Void;
 	
 	/**
 	* Read a class descriptor from the serialization stream.  This method is
@@ -389,7 +389,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @see java.io.ObjectOutputStream#writeClassDescriptor(java.io.ObjectStreamClass)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function readClassDescriptor() : java.io.ObjectStreamClass;
+	@:require(java3) @:overload @:protected private function readClassDescriptor() : java.io.ObjectStreamClass;
 	
 	/**
 	* Reads a byte of data. This method will block if no input is available.
@@ -397,7 +397,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @return  the byte read, or -1 if the end of the stream is reached.
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads into an array of bytes.  This method will block until some input
@@ -412,7 +412,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  IOException If an I/O error has occurred.
 	* @see java.io.DataInputStream#readFully(byte[],int,int)
 	*/
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns the number of bytes that can be read without blocking.
@@ -421,7 +421,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  IOException if there are I/O errors while reading from the
 	*          underlying <code>InputStream</code>
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Closes the input stream. Must be called to release any resources
@@ -429,7 +429,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	*
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Reads in a boolean.
@@ -438,7 +438,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readBoolean() : Bool;
+	@:overload @:public public function readBoolean() : Bool;
 	
 	/**
 	* Reads an 8 bit byte.
@@ -447,7 +447,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readByte() : java.StdTypes.Int8;
+	@:overload @:public public function readByte() : java.StdTypes.Int8;
 	
 	/**
 	* Reads an unsigned 8 bit byte.
@@ -456,7 +456,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readUnsignedByte() : Int;
+	@:overload @:public public function readUnsignedByte() : Int;
 	
 	/**
 	* Reads a 16 bit char.
@@ -465,7 +465,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readChar() : java.StdTypes.Char16;
+	@:overload @:public public function readChar() : java.StdTypes.Char16;
 	
 	/**
 	* Reads a 16 bit short.
@@ -474,7 +474,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readShort() : java.StdTypes.Int16;
+	@:overload @:public public function readShort() : java.StdTypes.Int16;
 	
 	/**
 	* Reads an unsigned 16 bit short.
@@ -483,7 +483,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readUnsignedShort() : Int;
+	@:overload @:public public function readUnsignedShort() : Int;
 	
 	/**
 	* Reads a 32 bit int.
@@ -492,7 +492,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
 	/**
 	* Reads a 64 bit long.
@@ -501,7 +501,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
 	/**
 	* Reads a 32 bit float.
@@ -510,7 +510,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readFloat() : Single;
+	@:overload @:public public function readFloat() : Single;
 	
 	/**
 	* Reads a 64 bit double.
@@ -519,7 +519,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readDouble() : Float;
+	@:overload @:public public function readDouble() : Float;
 	
 	/**
 	* Reads bytes, blocking until all bytes are read.
@@ -528,7 +528,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readFully(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function readFully(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Reads bytes, blocking until all bytes are read.
@@ -539,7 +539,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  EOFException If end of file is reached.
 	* @throws  IOException If other I/O error has occurred.
 	*/
-	@:overload public function readFully(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Skips bytes.
@@ -548,7 +548,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @return  the actual number of bytes skipped.
 	* @throws  IOException If an I/O error has occurred.
 	*/
-	@:overload public function skipBytes(len : Int) : Int;
+	@:overload @:public public function skipBytes(len : Int) : Int;
 	
 	/**
 	* Reads in a line that has been terminated by a \n, \r, \r\n or EOF.
@@ -559,7 +559,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @deprecated This method does not properly convert bytes to characters.
 	*          see DataInputStream for the details and alternatives.
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	/**
 	* Reads a String in
@@ -572,7 +572,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws  UTFDataFormatException if read bytes do not represent a valid
 	*          modified UTF-8 encoding of a string
 	*/
-	@:overload public function readUTF() : String;
+	@:overload @:public public function readUTF() : String;
 	
 	
 }
@@ -590,7 +590,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	*
 	* @return  the descriptor class that describes the serializable fields
 	*/
-	@:overload @:abstract public function getObjectStreamClass() : java.io.ObjectStreamClass;
+	@:overload @:public @:abstract public function getObjectStreamClass() : java.io.ObjectStreamClass;
 	
 	/**
 	* Return true if the named field is defaulted and has no value in this
@@ -603,7 +603,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if <code>name</code> does not
 	*         correspond to a serializable field
 	*/
-	@:overload @:abstract public function defaulted(name : String) : Bool;
+	@:overload @:public @:abstract public function defaulted(name : String) : Bool;
 	
 	/**
 	* Get the value of the named boolean field from the persistent field.
@@ -617,7 +617,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : Bool) : Bool;
+	@:overload @:public @:abstract public function get(name : String, val : Bool) : Bool;
 	
 	/**
 	* Get the value of the named byte field from the persistent field.
@@ -631,7 +631,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : java.StdTypes.Int8) : java.StdTypes.Int8;
+	@:overload @:public @:abstract public function get(name : String, val : java.StdTypes.Int8) : java.StdTypes.Int8;
 	
 	/**
 	* Get the value of the named char field from the persistent field.
@@ -645,7 +645,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public @:abstract public function get(name : String, val : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
 	/**
 	* Get the value of the named short field from the persistent field.
@@ -659,7 +659,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function get(name : String, val : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
 	/**
 	* Get the value of the named int field from the persistent field.
@@ -673,7 +673,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : Int) : Int;
+	@:overload @:public @:abstract public function get(name : String, val : Int) : Int;
 	
 	/**
 	* Get the value of the named long field from the persistent field.
@@ -687,7 +687,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:abstract public function get(name : String, val : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Get the value of the named float field from the persistent field.
@@ -701,7 +701,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : Single) : Single;
+	@:overload @:public @:abstract public function get(name : String, val : Single) : Single;
 	
 	/**
 	* Get the value of the named double field from the persistent field.
@@ -715,7 +715,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : Float) : Float;
+	@:overload @:public @:abstract public function get(name : String, val : Float) : Float;
 	
 	/**
 	* Get the value of the named Object field from the persistent field.
@@ -729,7 +729,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* @throws IllegalArgumentException if type of <code>name</code> is
 	*         not serializable or if the field type is incorrect
 	*/
-	@:overload @:abstract public function get(name : String, val : Dynamic) : Dynamic;
+	@:overload @:public @:abstract public function get(name : String, val : Dynamic) : Dynamic;
 	
 	
 }
@@ -738,27 +738,27 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 */
 @:native('java$io$ObjectInputStream$GetFieldImpl') @:internal extern class ObjectInputStream_GetFieldImpl extends java.io.ObjectInputStream.ObjectInputStream_GetField
 {
-	@:overload override public function getObjectStreamClass() : java.io.ObjectStreamClass;
+	@:overload @:public override public function getObjectStreamClass() : java.io.ObjectStreamClass;
 	
-	@:overload override public function defaulted(name : String) : Bool;
+	@:overload @:public override public function defaulted(name : String) : Bool;
 	
-	@:overload override public function get(name : String, val : Bool) : Bool;
+	@:overload @:public override public function get(name : String, val : Bool) : Bool;
 	
-	@:overload override public function get(name : String, val : java.StdTypes.Int8) : java.StdTypes.Int8;
+	@:overload @:public override public function get(name : String, val : java.StdTypes.Int8) : java.StdTypes.Int8;
 	
-	@:overload override public function get(name : String, val : java.StdTypes.Char16) : java.StdTypes.Char16;
+	@:overload @:public override public function get(name : String, val : java.StdTypes.Char16) : java.StdTypes.Char16;
 	
-	@:overload override public function get(name : String, val : java.StdTypes.Int16) : java.StdTypes.Int16;
+	@:overload @:public override public function get(name : String, val : java.StdTypes.Int16) : java.StdTypes.Int16;
 	
-	@:overload override public function get(name : String, val : Int) : Int;
+	@:overload @:public override public function get(name : String, val : Int) : Int;
 	
-	@:overload override public function get(name : String, val : Single) : Single;
+	@:overload @:public override public function get(name : String, val : Single) : Single;
 	
-	@:overload override public function get(name : String, val : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function get(name : String, val : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function get(name : String, val : Float) : Float;
+	@:overload @:public override public function get(name : String, val : Float) : Float;
 	
-	@:overload override public function get(name : String, val : Dynamic) : Dynamic;
+	@:overload @:public override public function get(name : String, val : Dynamic) : Dynamic;
 	
 	
 }
@@ -771,7 +771,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	/**
 	* Resets the callback list to its initial (empty) state.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }
@@ -784,15 +784,15 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 */
 @:native('java$io$ObjectInputStream$PeekInputStream') @:internal extern class ObjectInputStream_PeekInputStream extends java.io.InputStream
 {
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -812,15 +812,15 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* read the requested data from within data blocks when in block data
 	* mode.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(len : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/*
 	* The following methods are equivalent to their counterparts in
@@ -828,37 +828,37 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	* and read the requested data from within data blocks when in block
 	* data mode.
 	*/
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, copy : Bool) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, copy : Bool) : Void;
 	
-	@:overload public function skipBytes(n : Int) : Int;
+	@:overload @:public public function skipBytes(n : Int) : Int;
 	
-	@:overload public function readBoolean() : Bool;
+	@:overload @:public public function readBoolean() : Bool;
 	
-	@:overload public function readByte() : java.StdTypes.Int8;
+	@:overload @:public public function readByte() : java.StdTypes.Int8;
 	
-	@:overload public function readUnsignedByte() : Int;
+	@:overload @:public public function readUnsignedByte() : Int;
 	
-	@:overload public function readChar() : java.StdTypes.Char16;
+	@:overload @:public public function readChar() : java.StdTypes.Char16;
 	
-	@:overload public function readShort() : java.StdTypes.Int16;
+	@:overload @:public public function readShort() : java.StdTypes.Int16;
 	
-	@:overload public function readUnsignedShort() : Int;
+	@:overload @:public public function readUnsignedShort() : Int;
 	
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
-	@:overload public function readFloat() : Single;
+	@:overload @:public public function readFloat() : Single;
 	
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
-	@:overload public function readDouble() : Float;
+	@:overload @:public public function readDouble() : Float;
 	
-	@:overload public function readUTF() : String;
+	@:overload @:public public function readUTF() : String;
 	
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	
 }
@@ -899,13 +899,13 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 */
 @:native('java$io$ObjectInputStream$HandleTable$HandleList') @:internal extern class ObjectInputStream_HandleTable_HandleList
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function add(handle : Int) : Void;
+	@:overload @:public public function add(handle : Int) : Void;
 	
-	@:overload public function get(index : Int) : Int;
+	@:overload @:public public function get(index : Int) : Int;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	
 }

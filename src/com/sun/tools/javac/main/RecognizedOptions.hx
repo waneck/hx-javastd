@@ -33,16 +33,16 @@ package com.sun.tools.javac.main;
 */
 extern class RecognizedOptions
 {
-	@:overload public static function getJavacFileManagerOptions(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
+	@:overload @:public @:static public static function getJavacFileManagerOptions(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
 	
-	@:overload public static function getJavacToolOptions(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
+	@:overload @:public @:static public static function getJavacToolOptions(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
 	
 	/**
 	* Get all the recognized options.
 	* @param helper an {@code OptionHelper} to help when processing options
 	* @return an array of options
 	*/
-	@:overload public static function getAll(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
+	@:overload @:public @:static public static function getAll(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
 	
 	
 }
@@ -68,21 +68,21 @@ extern class RecognizedOptions
 }
 @:native('com$sun$tools$javac$main$RecognizedOptions$GrumpyHelper') extern class RecognizedOptions_GrumpyHelper implements com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper
 {
-	@:overload public function setOut(out : java.io.PrintWriter) : Void;
+	@:overload @:public public function setOut(out : java.io.PrintWriter) : Void;
 	
-	@:overload public function error(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function printVersion() : Void;
+	@:overload @:public public function printVersion() : Void;
 	
-	@:overload public function printFullVersion() : Void;
+	@:overload @:public public function printFullVersion() : Void;
 	
-	@:overload public function printHelp() : Void;
+	@:overload @:public public function printHelp() : Void;
 	
-	@:overload public function printXhelp() : Void;
+	@:overload @:public public function printXhelp() : Void;
 	
-	@:overload public function addFile(f : java.io.File) : Void;
+	@:overload @:public public function addFile(f : java.io.File) : Void;
 	
-	@:overload public function addClassName(s : String) : Void;
+	@:overload @:public public function addClassName(s : String) : Void;
 	
 	
 }

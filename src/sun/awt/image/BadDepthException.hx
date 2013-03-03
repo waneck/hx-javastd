@@ -25,7 +25,7 @@ package sun.awt.image;
 */
 extern class BadDepthException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -55,14 +55,14 @@ package java.util;
 	*
 	* @param listener  the listener object
 	*/
-	@:overload public function new(listener : T) : Void;
+	@:overload @:public public function new(listener : T) : Void;
 	
 	/**
 	* Returns the listener associated with the proxy.
 	*
 	* @return  the listener associated with the proxy
 	*/
-	@:overload public function getListener() : T;
+	@:overload @:public public function getListener() : T;
 	
 	
 }

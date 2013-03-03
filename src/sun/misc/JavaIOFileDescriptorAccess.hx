@@ -28,13 +28,13 @@ extern interface JavaIOFileDescriptorAccess
 	/*
 	* @author Chris Hegarty
 	*/
-	@:overload public function set(obj : java.io.FileDescriptor, fd : Int) : Void;
+	@:overload @:public public function set(obj : java.io.FileDescriptor, fd : Int) : Void;
 	
-	@:overload public function get(fd : java.io.FileDescriptor) : Int;
+	@:overload @:public public function get(fd : java.io.FileDescriptor) : Int;
 	
-	@:overload public function setHandle(obj : java.io.FileDescriptor, handle : haxe.Int64) : Void;
+	@:overload @:public public function setHandle(obj : java.io.FileDescriptor, handle : haxe.Int64) : Void;
 	
-	@:overload public function getHandle(obj : java.io.FileDescriptor) : haxe.Int64;
+	@:overload @:public public function getHandle(obj : java.io.FileDescriptor) : haxe.Int64;
 	
 	
 }

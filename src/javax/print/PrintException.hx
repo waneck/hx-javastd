@@ -35,21 +35,21 @@ extern class PrintException extends java.lang.Exception
 	/**
 	* Construct a print exception with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a print exception with the given detail message.
 	*
 	* @param  s  Detail message, or null if no detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Construct a print exception chaining the supplied exception.
 	*
 	* @param  e  Chained exception.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Construct a print exception with the given detail message
@@ -57,7 +57,7 @@ extern class PrintException extends java.lang.Exception
 	* @param  s  Detail message, or null if no detail message.
 	* @param  e  Chained exception.
 	*/
-	@:overload public function new(s : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(s : String, e : java.lang.Exception) : Void;
 	
 	
 }

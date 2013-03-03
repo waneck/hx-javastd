@@ -28,22 +28,22 @@ extern class ContainerEvent extends java.awt.event.ComponentEvent
 	/**
 	* The first number in the range of ids used for container events.
 	*/
-	public static var CONTAINER_FIRST(default, null) : Int;
+	@:public @:static @:final public static var CONTAINER_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for container events.
 	*/
-	public static var CONTAINER_LAST(default, null) : Int;
+	@:public @:static @:final public static var CONTAINER_LAST(default, null) : Int;
 	
 	/**
 	* This event indicates that a component was added to the container.
 	*/
-	public static var COMPONENT_ADDED(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_ADDED(default, null) : Int;
 	
 	/**
 	* This event indicates that a component was removed from the container.
 	*/
-	public static var COMPONENT_REMOVED(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_REMOVED(default, null) : Int;
 	
 	/**
 	* Constructs a <code>ContainerEvent</code> object.
@@ -62,7 +62,7 @@ extern class ContainerEvent extends java.awt.event.ComponentEvent
 	* @see #getID()
 	* @see #getChild()
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, child : java.awt.Component) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, child : java.awt.Component) : Void;
 	
 	/**
 	* Returns the originator of the event.
@@ -71,14 +71,14 @@ extern class ContainerEvent extends java.awt.event.ComponentEvent
 	* the event, or <code>null</code> if the object is not a
 	* <code>Container</code>.
 	*/
-	@:overload public function getContainer() : java.awt.Container;
+	@:overload @:public public function getContainer() : java.awt.Container;
 	
 	/**
 	* Returns the component that was affected by the event.
 	*
 	* @return the Component object that was added or removed
 	*/
-	@:overload public function getChild() : java.awt.Component;
+	@:overload @:public public function getChild() : java.awt.Component;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -86,7 +86,7 @@ extern class ContainerEvent extends java.awt.event.ComponentEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

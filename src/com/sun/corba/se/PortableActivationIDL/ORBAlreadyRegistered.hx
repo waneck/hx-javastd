@@ -7,13 +7,13 @@ package com.sun.corba.se.PortableActivationIDL;
 */
 extern class ORBAlreadyRegistered extends org.omg.CORBA.UserException
 {
-	public var orbId : String;
+	@:public public var orbId : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_orbId : String) : Void;
+	@:overload @:public public function new(_orbId : String) : Void;
 	
-	@:overload public function new($reason : String, _orbId : String) : Void;
+	@:overload @:public public function new($reason : String, _orbId : String) : Void;
 	
 	
 }

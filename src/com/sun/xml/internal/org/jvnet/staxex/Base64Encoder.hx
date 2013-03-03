@@ -28,11 +28,11 @@ package com.sun.xml.internal.org.jvnet.staxex;
 */
 @:internal extern class Base64Encoder
 {
-	@:overload public static function encode(i : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function encode(i : Int) : java.StdTypes.Char16;
 	
-	@:overload public static function encodeByte(i : Int) : java.StdTypes.Int8;
+	@:overload @:public @:static public static function encodeByte(i : Int) : java.StdTypes.Int8;
 	
-	@:overload public static function print(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : String;
+	@:overload @:public @:static public static function print(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : String;
 	
 	/**
 	* Encodes a byte array into a char array by doing base64 encoding.
@@ -43,7 +43,7 @@ package com.sun.xml.internal.org.jvnet.staxex;
 	*      the value of {@code ptr+((len+2)/3)*4}, which is the new offset
 	*      in the output buffer where the further bytes should be placed.
 	*/
-	@:overload public static function print(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, ptr : Int) : Int;
+	@:overload @:public @:static public static function print(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, ptr : Int) : Int;
 	
 	
 }

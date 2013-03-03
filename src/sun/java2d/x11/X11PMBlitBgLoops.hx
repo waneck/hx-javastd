@@ -34,11 +34,11 @@ extern class X11PMBlitBgLoops extends sun.java2d.loops.BlitBg
 	* this type of BlitBg will accelerated double-buffer copies between those
 	* two surfaces.
 */
-	@:overload public static function register() : Void;
+	@:overload @:public @:static public static function register() : Void;
 	
-	@:overload public function new(srcType : sun.java2d.loops.SurfaceType, dstType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(srcType : sun.java2d.loops.SurfaceType, dstType : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function BlitBg(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgColor : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function BlitBg(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, bgColor : Int, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }

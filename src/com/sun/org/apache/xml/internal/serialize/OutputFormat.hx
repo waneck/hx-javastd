@@ -29,7 +29,7 @@ extern class OutputFormat
 	/**
 	* Constructs a new output format with the default values.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new output format with the default values for
@@ -44,7 +44,7 @@ extern class OutputFormat
 	* @see #setIndenting
 	* @see #setMethod
 	*/
-	@:overload public function new(method : String, encoding : String, indenting : Bool) : Void;
+	@:overload @:public public function new(method : String, encoding : String, indenting : Bool) : Void;
 	
 	/**
 	* Constructs a new output format with the proper method,
@@ -54,7 +54,7 @@ extern class OutputFormat
 	* @param doc The document to output
 	* @see #whichMethod
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructs a new output format with the proper method,
@@ -70,7 +70,7 @@ extern class OutputFormat
 	* @see #setIndenting
 	* @see #whichMethod
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, encoding : String, indenting : Bool) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, encoding : String, indenting : Bool) : Void;
 	
 	/**
 	* Returns the method specified for this output format.
@@ -82,7 +82,7 @@ extern class OutputFormat
 	*
 	* @return The specified output method, or null
 	*/
-	@:overload public function getMethod() : String;
+	@:overload @:public public function getMethod() : String;
 	
 	/**
 	* Sets the method for this output format.
@@ -90,7 +90,7 @@ extern class OutputFormat
 	* @see #getMethod
 	* @param method The output method, or null
 	*/
-	@:overload public function setMethod(method : String) : Void;
+	@:overload @:public public function setMethod(method : String) : Void;
 	
 	/**
 	* Returns the version for this output method.
@@ -101,7 +101,7 @@ extern class OutputFormat
 	*
 	* @return The specified method version, or null
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Sets the version for this output method.
@@ -111,7 +111,7 @@ extern class OutputFormat
 	* @see #getVersion
 	* @param version The output method version, or null
 	*/
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
 	/**
 	* Returns the indentation specified. If no indentation
@@ -121,12 +121,12 @@ extern class OutputFormat
 	* @return The indentation or zero
 	* @see #setIndenting
 	*/
-	@:overload public function getIndent() : Int;
+	@:overload @:public public function getIndent() : Int;
 	
 	/**
 	* Returns true if indentation was specified.
 	*/
-	@:overload public function getIndenting() : Bool;
+	@:overload @:public public function getIndenting() : Bool;
 	
 	/**
 	* Sets the indentation. The document will not be
@@ -136,7 +136,7 @@ extern class OutputFormat
 	*
 	* @param indent The indentation, or zero
 	*/
-	@:overload public function setIndent(indent : Int) : Void;
+	@:overload @:public public function setIndent(indent : Int) : Void;
 	
 	/**
 	* Sets the indentation on and off. When set on, the default
@@ -147,7 +147,7 @@ extern class OutputFormat
 	*
 	* @param on True if indentation should be on
 	*/
-	@:overload public function setIndenting(on : Bool) : Void;
+	@:overload @:public public function setIndenting(on : Bool) : Void;
 	
 	/**
 	* Returns the specified encoding. If no encoding was
@@ -155,7 +155,7 @@ extern class OutputFormat
 	*
 	* @return The encoding
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Sets the encoding for this output method. If no
@@ -166,30 +166,30 @@ extern class OutputFormat
 	* @see #getEncoding
 	* @param encoding The encoding, or null
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* Sets the encoding for this output method with an <code>EncodingInfo</code>
 	* instance.
 	*/
-	@:overload public function setEncoding(encInfo : com.sun.org.apache.xml.internal.serialize.EncodingInfo) : Void;
+	@:overload @:public public function setEncoding(encInfo : com.sun.org.apache.xml.internal.serialize.EncodingInfo) : Void;
 	
 	/**
 	* Returns an <code>EncodingInfo<code> instance for the encoding.
 	*
 	* @see #setEncoding
 	*/
-	@:overload public function getEncodingInfo() : com.sun.org.apache.xml.internal.serialize.EncodingInfo;
+	@:overload @:public public function getEncodingInfo() : com.sun.org.apache.xml.internal.serialize.EncodingInfo;
 	
 	/**
 	* Sets whether java encoding names are permitted
 	*/
-	@:overload public function setAllowJavaNames(allow : Bool) : Void;
+	@:overload @:public public function setAllowJavaNames(allow : Bool) : Void;
 	
 	/**
 	* Returns whether java encoding names are permitted
 	*/
-	@:overload public function setAllowJavaNames() : Bool;
+	@:overload @:public public function setAllowJavaNames() : Bool;
 	
 	/**
 	* Returns the specified media type, or null.
@@ -198,7 +198,7 @@ extern class OutputFormat
 	*
 	* @return The specified media type, or null
 	*/
-	@:overload public function getMediaType() : String;
+	@:overload @:public public function getMediaType() : String;
 	
 	/**
 	* Sets the media type.
@@ -206,7 +206,7 @@ extern class OutputFormat
 	* @see #getMediaType
 	* @param mediaType The specified media type
 	*/
-	@:overload public function setMediaType(mediaType : String) : Void;
+	@:overload @:public public function setMediaType(mediaType : String) : Void;
 	
 	/**
 	* Sets the document type public and system identifiers.
@@ -219,64 +219,64 @@ extern class OutputFormat
 	* @param publicId The public identifier, or null
 	* @param systemId The system identifier, or null
 	*/
-	@:overload public function setDoctype(publicId : String, systemId : String) : Void;
+	@:overload @:public public function setDoctype(publicId : String, systemId : String) : Void;
 	
 	/**
 	* Returns the specified document type public identifier,
 	* or null.
 	*/
-	@:overload public function getDoctypePublic() : String;
+	@:overload @:public public function getDoctypePublic() : String;
 	
 	/**
 	* Returns the specified document type system identifier,
 	* or null.
 	*/
-	@:overload public function getDoctypeSystem() : String;
+	@:overload @:public public function getDoctypeSystem() : String;
 	
 	/**
 	* Returns true if comments should be ommited.
 	* The default is false.
 	*/
-	@:overload public function getOmitComments() : Bool;
+	@:overload @:public public function getOmitComments() : Bool;
 	
 	/**
 	* Sets comment omitting on and off.
 	*
 	* @param omit True if comments should be ommited
 	*/
-	@:overload public function setOmitComments(omit : Bool) : Void;
+	@:overload @:public public function setOmitComments(omit : Bool) : Void;
 	
 	/**
 	* Returns true if the DOCTYPE declaration should
 	* be ommited. The default is false.
 	*/
-	@:overload public function getOmitDocumentType() : Bool;
+	@:overload @:public public function getOmitDocumentType() : Bool;
 	
 	/**
 	* Sets DOCTYPE declaration omitting on and off.
 	*
 	* @param omit True if DOCTYPE declaration should be ommited
 	*/
-	@:overload public function setOmitDocumentType(omit : Bool) : Void;
+	@:overload @:public public function setOmitDocumentType(omit : Bool) : Void;
 	
 	/**
 	* Returns true if the XML document declaration should
 	* be ommited. The default is false.
 	*/
-	@:overload public function getOmitXMLDeclaration() : Bool;
+	@:overload @:public public function getOmitXMLDeclaration() : Bool;
 	
 	/**
 	* Sets XML declaration omitting on and off.
 	*
 	* @param omit True if XML declaration should be ommited
 	*/
-	@:overload public function setOmitXMLDeclaration(omit : Bool) : Void;
+	@:overload @:public public function setOmitXMLDeclaration(omit : Bool) : Void;
 	
 	/**
 	* Returns true if the document type is standalone.
 	* The default is false.
 	*/
-	@:overload public function getStandalone() : Bool;
+	@:overload @:public public function getStandalone() : Bool;
 	
 	/**
 	* Sets document DTD standalone. The public and system
@@ -285,14 +285,14 @@ extern class OutputFormat
 	*
 	* @param standalone True if document DTD is standalone
 	*/
-	@:overload public function setStandalone(standalone : Bool) : Void;
+	@:overload @:public public function setStandalone(standalone : Bool) : Void;
 	
 	/**
 	* Returns a list of all the elements whose text node children
 	* should be output as CDATA, or null if no such elements were
 	* specified.
 	*/
-	@:overload public function getCDataElements() : java.NativeArray<String>;
+	@:overload @:public public function getCDataElements() : java.NativeArray<String>;
 	
 	/**
 	* Returns true if the text node children of the given elements
@@ -301,7 +301,7 @@ extern class OutputFormat
 	* @param tagName The element's tag name
 	* @return True if should serialize as CDATA
 	*/
-	@:overload public function isCDataElement(tagName : String) : Bool;
+	@:overload @:public public function isCDataElement(tagName : String) : Bool;
 	
 	/**
 	* Sets the list of elements for which text node children
@@ -309,14 +309,14 @@ extern class OutputFormat
 	*
 	* @param cdataElements List of CDATA element tag names
 	*/
-	@:overload public function setCDataElements(cdataElements : java.NativeArray<String>) : Void;
+	@:overload @:public public function setCDataElements(cdataElements : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a list of all the elements whose text node children
 	* should be output unescaped (no character references), or null
 	* if no such elements were specified.
 	*/
-	@:overload public function getNonEscapingElements() : java.NativeArray<String>;
+	@:overload @:public public function getNonEscapingElements() : java.NativeArray<String>;
 	
 	/**
 	* Returns true if the text node children of the given elements
@@ -325,7 +325,7 @@ extern class OutputFormat
 	* @param tagName The element's tag name
 	* @return True if should serialize unescaped
 	*/
-	@:overload public function isNonEscapingElement(tagName : String) : Bool;
+	@:overload @:public public function isNonEscapingElement(tagName : String) : Bool;
 	
 	/**
 	* Sets the list of elements for which text node children
@@ -333,7 +333,7 @@ extern class OutputFormat
 	*
 	* @param nonEscapingElements List of unescaped element tag names
 	*/
-	@:overload public function setNonEscapingElements(nonEscapingElements : java.NativeArray<String>) : Void;
+	@:overload @:public public function setNonEscapingElements(nonEscapingElements : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a specific line separator to use. The default is the
@@ -342,7 +342,7 @@ extern class OutputFormat
 	*
 	* @return The specified line separator
 	*/
-	@:overload public function getLineSeparator() : String;
+	@:overload @:public public function getLineSeparator() : String;
 	
 	/**
 	* Sets the line separator. The default is the Web line separator
@@ -353,7 +353,7 @@ extern class OutputFormat
 	*
 	* @param lineSeparator The specified line separator
 	*/
-	@:overload public function setLineSeparator(lineSeparator : String) : Void;
+	@:overload @:public public function setLineSeparator(lineSeparator : String) : Void;
 	
 	/**
 	* Returns true if the default behavior for this format is to
@@ -362,7 +362,7 @@ extern class OutputFormat
 	* this rule. All elements that specify space preserving will
 	* always preserve space.
 	*/
-	@:overload public function getPreserveSpace() : Bool;
+	@:overload @:public public function getPreserveSpace() : Bool;
 	
 	/**
 	* Sets space preserving as the default behavior. The default is
@@ -371,7 +371,7 @@ extern class OutputFormat
 	*
 	* @param preserve True if spaces should be preserved
 	*/
-	@:overload public function setPreserveSpace(preserve : Bool) : Void;
+	@:overload @:public public function setPreserveSpace(preserve : Bool) : Void;
 	
 	/**
 	* Return the selected line width for breaking up long lines.
@@ -379,7 +379,7 @@ extern class OutputFormat
 	* broken at space boundaries based on this line width.
 	* No line wrapping occurs if this value is zero.
 	*/
-	@:overload public function getLineWidth() : Int;
+	@:overload @:public public function getLineWidth() : Int;
 	
 	/**
 	* Sets the line width. If zero then no line wrapping will
@@ -390,7 +390,7 @@ extern class OutputFormat
 	* @see #getLineWidth
 	* @see #setIndenting
 	*/
-	@:overload public function setLineWidth(lineWidth : Int) : Void;
+	@:overload @:public public function setLineWidth(lineWidth : Int) : Void;
 	
 	/**
 	* Returns the preserveEmptyAttribute flag. If flag is false, then'
@@ -398,7 +398,7 @@ extern class OutputFormat
 	* name only (in HTML mode).
 	* @return preserve the preserve flag
 	*/
-	@:overload public function getPreserveEmptyAttributes() : Bool;
+	@:overload @:public public function getPreserveEmptyAttributes() : Bool;
 	
 	/**
 	* Sets the preserveEmptyAttribute flag. If flag is false, then'
@@ -406,14 +406,14 @@ extern class OutputFormat
 	* name only (in HTML mode).
 	* @param preserve the preserve flag
 	*/
-	@:overload public function setPreserveEmptyAttributes(preserve : Bool) : Void;
+	@:overload @:public public function setPreserveEmptyAttributes(preserve : Bool) : Void;
 	
 	/**
 	* Returns the last printable character based on the selected
 	* encoding. Control characters and non-printable characters
 	* are always printed as character references.
 	*/
-	@:overload public function getLastPrintable() : java.StdTypes.Char16;
+	@:overload @:public public function getLastPrintable() : java.StdTypes.Char16;
 	
 	/**
 	* Determine the output method for the specified document.
@@ -426,25 +426,25 @@ extern class OutputFormat
 	* @param doc The document to check
 	* @return The suitable method
 	*/
-	@:overload public static function whichMethod(doc : org.w3c.dom.Document) : String;
+	@:overload @:public @:static public static function whichMethod(doc : org.w3c.dom.Document) : String;
 	
 	/**
 	* Returns the document type public identifier
 	* specified for this document, or null.
 	*/
-	@:overload public static function whichDoctypePublic(doc : org.w3c.dom.Document) : String;
+	@:overload @:public @:static public static function whichDoctypePublic(doc : org.w3c.dom.Document) : String;
 	
 	/**
 	* Returns the document type system identifier
 	* specified for this document, or null.
 	*/
-	@:overload public static function whichDoctypeSystem(doc : org.w3c.dom.Document) : String;
+	@:overload @:public @:static public static function whichDoctypeSystem(doc : org.w3c.dom.Document) : String;
 	
 	/**
 	* Returns the suitable media format for a document
 	* output with the specified method.
 	*/
-	@:overload public static function whichMediaType(method : String) : String;
+	@:overload @:public @:static public static function whichMediaType(method : String) : String;
 	
 	
 }
@@ -475,22 +475,22 @@ extern class OutputFormat
 	/**
 	* Public identifier for HTML 4.01 (Strict) document type.
 	*/
-	public static var HTMLPublicId(default, null) : String;
+	@:public @:static @:final public static var HTMLPublicId(default, null) : String;
 	
 	/**
 	* System identifier for HTML 4.01 (Strict) document type.
 	*/
-	public static var HTMLSystemId(default, null) : String;
+	@:public @:static @:final public static var HTMLSystemId(default, null) : String;
 	
 	/**
 	* Public identifier for XHTML 1.0 (Strict) document type.
 	*/
-	public static var XHTMLPublicId(default, null) : String;
+	@:public @:static @:final public static var XHTMLPublicId(default, null) : String;
 	
 	/**
 	* System identifier for XHTML 1.0 (Strict) document type.
 	*/
-	public static var XHTMLSystemId(default, null) : String;
+	@:public @:static @:final public static var XHTMLSystemId(default, null) : String;
 	
 	
 }
@@ -502,20 +502,20 @@ extern class OutputFormat
 	*
 	* @see #setIndenting(boolean)
 	*/
-	public static var Indent(default, null) : Int;
+	@:public @:static @:final public static var Indent(default, null) : Int;
 	
 	/**
 	* The default encoding for Web documents it UTF-8.
 	*
 	* @see #getEncoding()
 	*/
-	public static var Encoding(default, null) : String;
+	@:public @:static @:final public static var Encoding(default, null) : String;
 	
 	/**
 	* The default line width at which to break long lines
 	* when identing. This is set to 72.
 	*/
-	public static var LineWidth(default, null) : Int;
+	@:public @:static @:final public static var LineWidth(default, null) : Int;
 	
 	
 }

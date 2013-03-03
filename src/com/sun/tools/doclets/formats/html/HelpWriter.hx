@@ -35,7 +35,7 @@ extern class HelpWriter extends com.sun.tools.doclets.formats.html.HtmlDocletWri
 	* Constructor to construct HelpWriter object.
 	* @param filename File to be generated.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
 	
 	/**
 	* Construct the HelpWriter object and then use it to generate the help
@@ -44,12 +44,12 @@ extern class HelpWriter extends com.sun.tools.doclets.formats.html.HtmlDocletWri
 	* on the command line.
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
 	
 	/**
 	* Generate the help file contents.
 	*/
-	@:overload private function generateHelpFile() : Void;
+	@:overload @:protected private function generateHelpFile() : Void;
 	
 	/**
 	* Add the help file contents from the resource file to the content tree. While adding the
@@ -59,14 +59,14 @@ extern class HelpWriter extends com.sun.tools.doclets.formats.html.HtmlDocletWri
 	*
 	* @param contentTree the content tree to which the help file contents will be added
 	*/
-	@:overload private function addHelpFileContents(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addHelpFileContents(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the help label.
 	*
 	* @return a content tree for the help label
 	*/
-	@:overload private function getNavLinkHelp() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkHelp() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

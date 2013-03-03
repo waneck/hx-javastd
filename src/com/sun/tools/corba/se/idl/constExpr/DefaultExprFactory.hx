@@ -36,61 +36,61 @@ package com.sun.tools.corba.se.idl.constExpr;
 //// NOTES:
 extern class DefaultExprFactory implements com.sun.tools.corba.se.idl.constExpr.ExprFactory
 {
-	@:overload public function and(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.And;
+	@:overload @:public public function and(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.And;
 	
-	@:overload public function booleanAnd(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.BooleanAnd;
+	@:overload @:public public function booleanAnd(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.BooleanAnd;
 	
-	@:overload public function booleanNot(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.BooleanNot;
+	@:overload @:public public function booleanNot(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.BooleanNot;
 	
-	@:overload public function booleanOr(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.BooleanOr;
+	@:overload @:public public function booleanOr(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.BooleanOr;
 	
-	@:overload public function divide(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Divide;
+	@:overload @:public public function divide(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Divide;
 	
-	@:overload public function equal(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Equal;
+	@:overload @:public public function equal(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Equal;
 	
-	@:overload public function greaterEqual(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.GreaterEqual;
+	@:overload @:public public function greaterEqual(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.GreaterEqual;
 	
-	@:overload public function greaterThan(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.GreaterThan;
+	@:overload @:public public function greaterThan(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.GreaterThan;
 	
-	@:overload public function lessEqual(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.LessEqual;
+	@:overload @:public public function lessEqual(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.LessEqual;
 	
-	@:overload public function lessThan(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.LessThan;
+	@:overload @:public public function lessThan(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.LessThan;
 	
-	@:overload public function minus(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Minus;
+	@:overload @:public public function minus(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Minus;
 	
-	@:overload public function modulo(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Modulo;
+	@:overload @:public public function modulo(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Modulo;
 	
-	@:overload public function negative(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Negative;
+	@:overload @:public public function negative(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Negative;
 	
-	@:overload public function not(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Not;
+	@:overload @:public public function not(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Not;
 	
-	@:overload public function notEqual(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.NotEqual;
+	@:overload @:public public function notEqual(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.NotEqual;
 	
-	@:overload public function or(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Or;
+	@:overload @:public public function or(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Or;
 	
-	@:overload public function plus(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Plus;
+	@:overload @:public public function plus(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Plus;
 	
-	@:overload public function positive(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Positive;
+	@:overload @:public public function positive(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Positive;
 	
-	@:overload public function shiftLeft(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.ShiftLeft;
+	@:overload @:public public function shiftLeft(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.ShiftLeft;
 	
-	@:overload public function shiftRight(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.ShiftRight;
+	@:overload @:public public function shiftRight(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.ShiftRight;
 	
-	@:overload public function terminal(representation : String, charValue : Null<java.StdTypes.Char16>, isWide : Bool) : com.sun.tools.corba.se.idl.constExpr.Terminal;
+	@:overload @:public public function terminal(representation : String, charValue : Null<java.StdTypes.Char16>, isWide : Bool) : com.sun.tools.corba.se.idl.constExpr.Terminal;
 	
-	@:overload public function terminal(representation : String, booleanValue : Null<Bool>) : com.sun.tools.corba.se.idl.constExpr.Terminal;
+	@:overload @:public public function terminal(representation : String, booleanValue : Null<Bool>) : com.sun.tools.corba.se.idl.constExpr.Terminal;
 	
-	@:overload public function terminal(representation : String, bigIntegerValue : java.math.BigInteger) : com.sun.tools.corba.se.idl.constExpr.Terminal;
+	@:overload @:public public function terminal(representation : String, bigIntegerValue : java.math.BigInteger) : com.sun.tools.corba.se.idl.constExpr.Terminal;
 	
-	@:overload public function terminal(representation : String, doubleValue : Null<Float>) : com.sun.tools.corba.se.idl.constExpr.Terminal;
+	@:overload @:public public function terminal(representation : String, doubleValue : Null<Float>) : com.sun.tools.corba.se.idl.constExpr.Terminal;
 	
-	@:overload public function terminal(stringValue : String, isWide : Bool) : com.sun.tools.corba.se.idl.constExpr.Terminal;
+	@:overload @:public public function terminal(stringValue : String, isWide : Bool) : com.sun.tools.corba.se.idl.constExpr.Terminal;
 	
-	@:overload public function terminal(constReference : com.sun.tools.corba.se.idl.ConstEntry) : com.sun.tools.corba.se.idl.constExpr.Terminal;
+	@:overload @:public public function terminal(constReference : com.sun.tools.corba.se.idl.ConstEntry) : com.sun.tools.corba.se.idl.constExpr.Terminal;
 	
-	@:overload public function times(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Times;
+	@:overload @:public public function times(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Times;
 	
-	@:overload public function xor(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Xor;
+	@:overload @:public public function xor(left : com.sun.tools.corba.se.idl.constExpr.Expression, right : com.sun.tools.corba.se.idl.constExpr.Expression) : com.sun.tools.corba.se.idl.constExpr.Xor;
 	
 	
 }

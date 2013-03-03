@@ -26,14 +26,14 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	/**
 	* Create an empty nodelist.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an empty, using the given block size.
 	*
 	* @param blocksize Size of blocks to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Create a NodeSet, and copy the members of the
@@ -41,7 +41,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param nodelist List of Nodes to be made members of the new set.
 	*/
-	@:overload public function new(nodelist : org.w3c.dom.NodeList) : Void;
+	@:overload @:public public function new(nodelist : org.w3c.dom.NodeList) : Void;
 	
 	/**
 	* Create a NodeSet, and copy the members of the
@@ -49,7 +49,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param nodelist Set of Nodes to be made members of the new set.
 	*/
-	@:overload public function new(nodelist : com.sun.org.apache.xpath.internal.NodeSet) : Void;
+	@:overload @:public public function new(nodelist : com.sun.org.apache.xpath.internal.NodeSet) : Void;
 	
 	/**
 	* Create a NodeSet, and copy the members of the
@@ -57,20 +57,20 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param ni Iterator which yields Nodes to be made members of the new set.
 	*/
-	@:overload public function new(ni : org.w3c.dom.traversal.NodeIterator) : Void;
+	@:overload @:public public function new(ni : org.w3c.dom.traversal.NodeIterator) : Void;
 	
 	/**
 	* Create a NodeSet which contains the given Node.
 	*
 	* @param node Single node to be added to the new set.
 	*/
-	@:overload public function new(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @return The root node of the Iterator, as specified when it was created.
 	* For non-Iterator NodeSets, this will be null.
 	*/
-	@:overload public function getRoot() : org.w3c.dom.Node;
+	@:overload @:public public function getRoot() : org.w3c.dom.Node;
 	
 	/**
 	* Get a cloned Iterator, and reset its state to the beginning of the
@@ -82,12 +82,12 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws CloneNotSupportedException if this subclass of NodeSet
 	* does not support the clone() operation.
 	*/
-	@:overload public function cloneWithReset() : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function cloneWithReset() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Reset the iterator. May have no effect on non-iterator Nodesets.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	*  This attribute determines which node types are presented via the
@@ -101,7 +101,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* <code>SHOW_ALL & ~SHOW_ENTITY_REFERENCE</code>, meaning that
 	* only entity references are suppressed.
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	/**
 	* The filter object used to screen nodes. Filters are applied to
@@ -116,7 +116,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* returning a placeholder object just to indicate that this is
 	* not going to return all nodes selected by whatToShow.
 	*/
-	@:overload public function getFilter() : org.w3c.dom.traversal.NodeFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.traversal.NodeFilter;
 	
 	/**
 	*  The value of this flag determines whether the children of entity
@@ -134,7 +134,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* contents of EntityRefrence nodes may be returned (though whatToShow
 	* says that the EntityReferences themselves are not shown.)
 	*/
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -146,7 +146,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*    INVALID_STATE_ERR: Raised if this method is called after the
 	*   <code>detach</code> method was invoked.
 	*/
-	@:overload public function nextNode() : org.w3c.dom.Node;
+	@:overload @:public public function nextNode() : org.w3c.dom.Node;
 	
 	/**
 	*  Returns the previous node in the set and moves the position of the
@@ -159,7 +159,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a cached type, and hence doesn't know what the previous node was.
 	*/
-	@:overload public function previousNode() : org.w3c.dom.Node;
+	@:overload @:public public function previousNode() : org.w3c.dom.Node;
 	
 	/**
 	* Detaches the iterator from the set which it iterated over, releasing
@@ -172,7 +172,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* INVALID_STATE_ERR to be raised by later operations.
 	* </p>
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* Tells if this NodeSet is "fresh", in other words, if
@@ -182,7 +182,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @return true if nextNode() would return the first node in the set,
 	* false if it would return a later one.
 	*/
-	@:overload public function isFresh() : Bool;
+	@:overload @:public public function isFresh() : Bool;
 	
 	/**
 	* If an index is requested, NodeSet will call this method
@@ -196,7 +196,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not
 	* one of the types which supports indexing/counting.
 	*/
-	@:overload public function runTo(index : Int) : Void;
+	@:overload @:public public function runTo(index : Int) : Void;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection. If
@@ -210,7 +210,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*   <code>NodeList</code>, or <code>null</code> if that is not a valid
 	*   index.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* The number of nodes in the list. The range of valid child node indices is
@@ -220,7 +220,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return integer indicating how many nodes are represented by this list.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Add a node to the NodeSet. Not all types of NodeSets support this
@@ -230,7 +230,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNode(n : org.w3c.dom.Node) : Void;
+	@:overload @:public public function addNode(n : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Insert a node at a given position.
@@ -241,7 +241,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function insertNode(n : org.w3c.dom.Node, pos : Int) : Void;
+	@:overload @:public public function insertNode(n : org.w3c.dom.Node, pos : Int) : Void;
 	
 	/**
 	* Remove a node.
@@ -250,7 +250,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function removeNode(n : org.w3c.dom.Node) : Void;
+	@:overload @:public public function removeNode(n : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Copy NodeList members into this nodelist, adding in
@@ -261,7 +261,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodes(nodelist : org.w3c.dom.NodeList) : Void;
+	@:overload @:public public function addNodes(nodelist : org.w3c.dom.NodeList) : Void;
 	
 	/**
 	* <p>Copy NodeList members into this nodelist, adding in
@@ -279,7 +279,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodes(ns : com.sun.org.apache.xpath.internal.NodeSet) : Void;
+	@:overload @:public public function addNodes(ns : com.sun.org.apache.xpath.internal.NodeSet) : Void;
 	
 	/**
 	* Copy NodeList members into this nodelist, adding in
@@ -289,7 +289,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodes(iterator : org.w3c.dom.traversal.NodeIterator) : Void;
+	@:overload @:public public function addNodes(iterator : org.w3c.dom.traversal.NodeIterator) : Void;
 	
 	/**
 	* Copy NodeList members into this nodelist, adding in
@@ -300,7 +300,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodesInDocOrder(nodelist : org.w3c.dom.NodeList, support : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function addNodesInDocOrder(nodelist : org.w3c.dom.NodeList, support : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
 	/**
 	* Copy NodeList members into this nodelist, adding in
@@ -311,7 +311,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodesInDocOrder(iterator : org.w3c.dom.traversal.NodeIterator, support : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function addNodesInDocOrder(iterator : org.w3c.dom.traversal.NodeIterator, support : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
 	/**
 	* Add the node into a vector of nodes where it should occur in
@@ -323,7 +323,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodeInDocOrder(node : org.w3c.dom.Node, test : Bool, support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function addNodeInDocOrder(node : org.w3c.dom.Node, test : Bool, support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Add the node into a vector of nodes where it should occur in
@@ -335,11 +335,11 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodeInDocOrder(node : org.w3c.dom.Node, support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function addNodeInDocOrder(node : org.w3c.dom.Node, support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/** If this node is being used as an iterator, the next index that nextNode()
 	*  will return.  */
-	@:transient private var m_next : Int;
+	@:transient @:protected private var m_next : Int;
 	
 	/**
 	* Get the current position, which is one less than
@@ -349,7 +349,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return The the current position index.
 	*/
-	@:overload public function getCurrentPos() : Int;
+	@:overload @:public public function getCurrentPos() : Int;
 	
 	/**
 	* Set the current position in the node set.
@@ -357,7 +357,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a cached type, and thus doesn't permit indexed access.
 	*/
-	@:overload public function setCurrentPos(i : Int) : Void;
+	@:overload @:public public function setCurrentPos(i : Int) : Void;
 	
 	/**
 	* Return the last fetched node.  Needed to support the UnionPathIterator.
@@ -366,14 +366,14 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a cached type, and thus doesn't permit indexed access.
 	*/
-	@:overload public function getCurrentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getCurrentNode() : org.w3c.dom.Node;
 	
 	/** True if this list can be mutated.  */
-	@:transient private var m_mutable : Bool;
+	@:transient @:protected private var m_mutable : Bool;
 	
 	/** True if this list is cached.
 	*  @serial  */
-	@:transient private var m_cacheNodes : Bool;
+	@:transient @:protected private var m_cacheNodes : Bool;
 	
 	/**
 	* Get whether or not this is a cached node set.
@@ -381,7 +381,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return True if this list is cached.
 	*/
-	@:overload public function getShouldCacheNodes() : Bool;
+	@:overload @:public public function getShouldCacheNodes() : Bool;
 	
 	/**
 	* If setShouldCacheNodes(true) is called, then nodes will
@@ -394,15 +394,15 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* request caching after we've already begun stepping through the
 	* nodes in this set.
 	*/
-	@:overload public function setShouldCacheNodes(b : Bool) : Void;
+	@:overload @:public public function setShouldCacheNodes(b : Bool) : Void;
 	
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
-	@:overload public function setLast(last : Int) : Void;
+	@:overload @:public public function setLast(last : Int) : Void;
 	
 	/** Number of nodes in this NodeVector.
 	*  @serial          */
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/**
 	* Get a cloned LocPathIterator.
@@ -411,35 +411,35 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of nodes in this NodeVector
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Append a Node onto the vector.
 	*
 	* @param value Node to add to the vector
 	*/
-	@:overload public function addElement(value : org.w3c.dom.Node) : Void;
+	@:overload @:public public function addElement(value : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Append a Node onto the vector.
 	*
 	* @param value Node to add to the vector
 	*/
-	@:overload @:final public function push(value : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function push(value : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Pop a node from the tail of the vector and return the result.
 	*
 	* @return the node at the tail of the vector
 	*/
-	@:overload @:final public function pop() : org.w3c.dom.Node;
+	@:overload @:public @:final public function pop() : org.w3c.dom.Node;
 	
 	/**
 	* Pop a node from the tail of the vector and return the
@@ -447,12 +447,12 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return The top of the stack after it's been popped
 	*/
-	@:overload @:final public function popAndTop() : org.w3c.dom.Node;
+	@:overload @:public @:final public function popAndTop() : org.w3c.dom.Node;
 	
 	/**
 	* Pop a node from the tail of the vector.
 	*/
-	@:overload @:final public function popQuick() : Void;
+	@:overload @:public @:final public function popQuick() : Void;
 	
 	/**
 	* Return the node at the top of the stack without popping the stack.
@@ -461,7 +461,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return Node at the top of the stack or null if stack is empty.
 	*/
-	@:overload @:final public function peepOrNull() : org.w3c.dom.Node;
+	@:overload @:public @:final public function peepOrNull() : org.w3c.dom.Node;
 	
 	/**
 	* Push a pair of nodes into the stack.
@@ -471,14 +471,14 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @param v1 First node to add to vector
 	* @param v2 Second node to add to vector
 	*/
-	@:overload @:final public function pushPair(v1 : org.w3c.dom.Node, v2 : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function pushPair(v1 : org.w3c.dom.Node, v2 : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Pop a pair of nodes from the tail of the stack.
 	* Special purpose method for TransformerImpl, pushElemTemplateElement.
 	* Performance critical.
 	*/
-	@:overload @:final public function popPair() : Void;
+	@:overload @:public @:final public function popPair() : Void;
 	
 	/**
 	* Set the tail of the stack to the given node.
@@ -487,7 +487,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param n Node to set at the tail of vector
 	*/
-	@:overload @:final public function setTail(n : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function setTail(n : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Set the given node one position from the tail.
@@ -496,7 +496,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param n Node to set
 	*/
-	@:overload @:final public function setTailSub1(n : org.w3c.dom.Node) : Void;
+	@:overload @:public @:final public function setTailSub1(n : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Return the node at the tail of the vector without popping
@@ -505,7 +505,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return Node at the tail of the vector
 	*/
-	@:overload @:final public function peepTail() : org.w3c.dom.Node;
+	@:overload @:public @:final public function peepTail() : org.w3c.dom.Node;
 	
 	/**
 	* Return the node one position from the tail without popping.
@@ -514,7 +514,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return Node one away from the tail
 	*/
-	@:overload @:final public function peepTailSub1() : org.w3c.dom.Node;
+	@:overload @:public @:final public function peepTailSub1() : org.w3c.dom.Node;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.
@@ -525,14 +525,14 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @param value Node to insert
 	* @param at Position where to insert
 	*/
-	@:overload public function insertElementAt(value : org.w3c.dom.Node, at : Int) : Void;
+	@:overload @:public public function insertElementAt(value : org.w3c.dom.Node, at : Int) : Void;
 	
 	/**
 	* Append the nodes to the list.
 	*
 	* @param nodes NodeVector to append to this list
 	*/
-	@:overload public function appendNodes(nodes : com.sun.org.apache.xpath.internal.NodeSet) : Void;
+	@:overload @:public public function appendNodes(nodes : com.sun.org.apache.xpath.internal.NodeSet) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.
@@ -540,7 +540,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* the specified index is shifted upward to have an index one greater
 	* than the value it had previously.
 	*/
-	@:overload public function removeAllElements() : Void;
+	@:overload @:public public function removeAllElements() : Void;
 	
 	/**
 	* Removes the first occurrence of the argument from this vector.
@@ -553,7 +553,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return True if the node was successfully removed
 	*/
-	@:overload public function removeElement(s : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function removeElement(s : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Deletes the component at the specified index. Each component in
@@ -563,7 +563,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param i Index of node to remove
 	*/
-	@:overload public function removeElementAt(i : Int) : Void;
+	@:overload @:public public function removeElementAt(i : Int) : Void;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -575,7 +575,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @param node Node to set
 	* @param index Index of where to set the node
 	*/
-	@:overload public function setElementAt(node : org.w3c.dom.Node, index : Int) : Void;
+	@:overload @:public public function setElementAt(node : org.w3c.dom.Node, index : Int) : Void;
 	
 	/**
 	* Get the nth element.
@@ -584,7 +584,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return Node at specified index
 	*/
-	@:overload public function elementAt(i : Int) : org.w3c.dom.Node;
+	@:overload @:public public function elementAt(i : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Tell if the table contains the given node.
@@ -593,7 +593,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @return True if the given node was found.
 	*/
-	@:overload public function contains(s : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function contains(s : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -606,7 +606,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : org.w3c.dom.Node, index : Int) : Int;
+	@:overload @:public public function indexOf(elem : org.w3c.dom.Node, index : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -618,7 +618,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : org.w3c.dom.Node) : Int;
+	@:overload @:public public function indexOf(elem : org.w3c.dom.Node) : Int;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.tools.internal.jxc.apt;
 */
 @:internal extern class AnnotationParser implements com.sun.mirror.apt.AnnotationProcessor
 {
-	@:overload public function getEnv() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
+	@:overload @:public public function getEnv() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
 	
-	@:overload public function process() : Void;
+	@:overload @:public public function process() : Void;
 	
 	
 }

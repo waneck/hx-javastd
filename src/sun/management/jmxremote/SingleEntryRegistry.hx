@@ -31,15 +31,15 @@ package sun.management.jmxremote;
 */
 extern class SingleEntryRegistry extends sun.rmi.registry.RegistryImpl
 {
-	@:overload override public function list() : java.NativeArray<String>;
+	@:overload @:public override public function list() : java.NativeArray<String>;
 	
-	@:overload override public function lookup(name : String) : java.rmi.Remote;
+	@:overload @:public override public function lookup(name : String) : java.rmi.Remote;
 	
-	@:overload override public function bind(name : String, obj : java.rmi.Remote) : Void;
+	@:overload @:public override public function bind(name : String, obj : java.rmi.Remote) : Void;
 	
-	@:overload override public function rebind(name : String, obj : java.rmi.Remote) : Void;
+	@:overload @:public override public function rebind(name : String, obj : java.rmi.Remote) : Void;
 	
-	@:overload override public function unbind(name : String) : Void;
+	@:overload @:public override public function unbind(name : String) : Void;
 	
 	
 }

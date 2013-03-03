@@ -26,76 +26,76 @@ package javax.swing.text;
 extern class TabStop implements java.io.Serializable
 {
 	/** Character following tab is positioned at location. */
-	public static var ALIGN_LEFT(default, null) : Int;
+	@:public @:static @:final public static var ALIGN_LEFT(default, null) : Int;
 	
 	/** Characters following tab are positioned such that all following
 	* characters up to next tab/newline end at location. */
-	public static var ALIGN_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var ALIGN_RIGHT(default, null) : Int;
 	
 	/** Characters following tab are positioned such that all following
 	* characters up to next tab/newline are centered around the tabs
 	* location. */
-	public static var ALIGN_CENTER(default, null) : Int;
+	@:public @:static @:final public static var ALIGN_CENTER(default, null) : Int;
 	
 	/** Characters following tab are aligned such that next
 	* decimal/tab/newline is at the tab location, very similar to
 	* RIGHT_TAB, just includes decimal as additional character to look for.
 	*/
-	public static var ALIGN_DECIMAL(default, null) : Int;
+	@:public @:static @:final public static var ALIGN_DECIMAL(default, null) : Int;
 	
-	public static var ALIGN_BAR(default, null) : Int;
+	@:public @:static @:final public static var ALIGN_BAR(default, null) : Int;
 	
 	/* Bar tabs (whatever they are) are actually a separate kind of tab
 	in the RTF spec. However, being a bar tab and having alignment
 	properties are mutually exclusive, so the reader treats barness
 	as being a kind of alignment. */
-	public static var LEAD_NONE(default, null) : Int;
+	@:public @:static @:final public static var LEAD_NONE(default, null) : Int;
 	
-	public static var LEAD_DOTS(default, null) : Int;
+	@:public @:static @:final public static var LEAD_DOTS(default, null) : Int;
 	
-	public static var LEAD_HYPHENS(default, null) : Int;
+	@:public @:static @:final public static var LEAD_HYPHENS(default, null) : Int;
 	
-	public static var LEAD_UNDERLINE(default, null) : Int;
+	@:public @:static @:final public static var LEAD_UNDERLINE(default, null) : Int;
 	
-	public static var LEAD_THICKLINE(default, null) : Int;
+	@:public @:static @:final public static var LEAD_THICKLINE(default, null) : Int;
 	
-	public static var LEAD_EQUALS(default, null) : Int;
+	@:public @:static @:final public static var LEAD_EQUALS(default, null) : Int;
 	
 	/**
 	* Creates a tab at position <code>pos</code> with a default alignment
 	* and default leader.
 	*/
-	@:overload public function new(pos : Single) : Void;
+	@:overload @:public public function new(pos : Single) : Void;
 	
 	/**
 	* Creates a tab with the specified position <code>pos</code>,
 	* alignment <code>align</code> and leader <code>leader</code>.
 	*/
-	@:overload public function new(pos : Single, align : Int, leader : Int) : Void;
+	@:overload @:public public function new(pos : Single, align : Int, leader : Int) : Void;
 	
 	/**
 	* Returns the position, as a float, of the tab.
 	* @return the position of the tab
 	*/
-	@:overload public function getPosition() : Single;
+	@:overload @:public public function getPosition() : Single;
 	
 	/**
 	* Returns the alignment, as an integer, of the tab.
 	* @return the alignment of the tab
 	*/
-	@:overload public function getAlignment() : Int;
+	@:overload @:public public function getAlignment() : Int;
 	
 	/**
 	* Returns the leader of the tab.
 	* @return the leader of the tab
 	*/
-	@:overload public function getLeader() : Int;
+	@:overload @:public public function getLeader() : Int;
 	
 	/**
 	* Returns true if the tabs are equal.
 	* @return true if the tabs are equal, otherwise false
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hashCode for the object.  This must be defined
@@ -103,10 +103,10 @@ extern class TabStop implements java.io.Serializable
 	*
 	* @return the hashCode for the object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/* This is for debugging; perhaps it should be removed before release */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

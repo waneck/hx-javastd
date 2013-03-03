@@ -39,7 +39,7 @@ extern class IntrospectionException extends java.lang.Exception
 	*
 	* @param mess Descriptive message
 	*/
-	@:overload public function new(mess : String) : Void;
+	@:overload @:public public function new(mess : String) : Void;
 	
 	
 }

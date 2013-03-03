@@ -36,27 +36,27 @@ package com.sun.script.javascript;
 	/**
 	* Creates a new instance of RhinoScriptEngine
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function eval(reader : java.io.Reader, ctxt : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public override public function eval(reader : java.io.Reader, ctxt : javax.script.ScriptContext) : Dynamic;
 	
-	@:overload public function eval(script : String, ctxt : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public override public function eval(script : String, ctxt : javax.script.ScriptContext) : Dynamic;
 	
-	@:overload public function getFactory() : javax.script.ScriptEngineFactory;
+	@:overload @:public override public function getFactory() : javax.script.ScriptEngineFactory;
 	
-	@:overload public function createBindings() : javax.script.Bindings;
+	@:overload @:public override public function createBindings() : javax.script.Bindings;
 	
-	@:overload public function invokeFunction(name : String, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invokeFunction(name : String, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload public function invokeMethod(thiz : Dynamic, name : String, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invokeMethod(thiz : Dynamic, name : String, args : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload public function getInterface<T>(clasz : Class<T>) : T;
+	@:overload @:public public function getInterface<T>(clasz : Class<T>) : T;
 	
-	@:overload public function getInterface<T>(thiz : Dynamic, clasz : Class<T>) : T;
+	@:overload @:public public function getInterface<T>(thiz : Dynamic, clasz : Class<T>) : T;
 	
-	@:overload public function compile(script : String) : javax.script.CompiledScript;
+	@:overload @:public public function compile(script : String) : javax.script.CompiledScript;
 	
-	@:overload public function compile(script : java.io.Reader) : javax.script.CompiledScript;
+	@:overload @:public public function compile(script : java.io.Reader) : javax.script.CompiledScript;
 	
 	
 }

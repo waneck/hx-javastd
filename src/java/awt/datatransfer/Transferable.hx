@@ -31,7 +31,7 @@ extern interface Transferable
 	* for providing the data (from most richly descriptive to least descriptive).
 	* @return an array of data flavors in which this data can be transferred
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether or not the specified data flavor is supported for
@@ -39,7 +39,7 @@ extern interface Transferable
 	* @param flavor the requested flavor for the data
 	* @return boolean indicating whether or not the data flavor is supported
 	*/
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns an object which represents the data to be transferred.  The class
@@ -52,7 +52,7 @@ extern interface Transferable
 	* @exception UnsupportedFlavorException if the requested data flavor is
 	*              not supported.
 	*/
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }

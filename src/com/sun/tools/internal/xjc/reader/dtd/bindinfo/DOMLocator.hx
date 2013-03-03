@@ -26,7 +26,7 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 @:internal extern class DOMLocator
 {
 	/** Sets the location information to a specified element. */
-	@:overload public static function setLocationInfo(e : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public @:static public static function setLocationInfo(e : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Gets the location information from an element.
@@ -35,7 +35,7 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 	* For this method to work, the setLocationInfo method has to be
 	* called before.
 	*/
-	@:overload public static function getLocationInfo(e : org.w3c.dom.Element) : org.xml.sax.Locator;
+	@:overload @:public @:static public static function getLocationInfo(e : org.w3c.dom.Element) : org.xml.sax.Locator;
 	
 	
 }

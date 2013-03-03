@@ -39,47 +39,47 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	/**
 	* The default package name.
 	*/
-	public static var DEFAULT_PACKAGE_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_PACKAGE_NAME(default, null) : String;
 	
 	/**
 	* The default package file name.
 	*/
-	public static var DEFAULT_PACKAGE_FILE_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_PACKAGE_FILE_NAME(default, null) : String;
 	
 	/**
 	* The anchor for the default package.
 	*/
-	public static var UNNAMED_PACKAGE_ANCHOR(default, null) : String;
+	@:public @:static @:final public static var UNNAMED_PACKAGE_ANCHOR(default, null) : String;
 	
 	/**
 	* The name of the doc files directory.
 	*/
-	public static var DOC_FILES_DIR_NAME(default, null) : String;
+	@:public @:static @:final public static var DOC_FILES_DIR_NAME(default, null) : String;
 	
 	/**
 	* The default amount of space between tab stops.
 	*/
-	public static var DEFAULT_TAB_STOP_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_TAB_STOP_LENGTH(default, null) : Int;
 	
 	/**
 	* The name of the directory where we will copy resource files to.
 	*/
-	public static var RESOURE_DIR_NAME(default, null) : String;
+	@:public @:static @:final public static var RESOURE_DIR_NAME(default, null) : String;
 	
 	/**
 	* The source output directory name
 	*/
-	public static var SOURCE_OUTPUT_DIR_NAME(default, null) : String;
+	@:public @:static @:final public static var SOURCE_OUTPUT_DIR_NAME(default, null) : String;
 	
 	/**
 	* The name of the package list file.
 	*/
-	public static var PACKAGE_LIST_FILE_NAME(default, null) : String;
+	@:public @:static @:final public static var PACKAGE_LIST_FILE_NAME(default, null) : String;
 	
 	/**
 	* The line seperator for the current operating system.
 	*/
-	public static var NL(default, null) : String;
+	@:public @:static @:final public static var NL(default, null) : String;
 	
 	
 }

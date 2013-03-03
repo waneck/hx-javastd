@@ -32,35 +32,35 @@ extern class ElementIterator implements java.lang.Cloneable
 	*
 	* @param document a Document.
 	*/
-	@:overload public function new(document : javax.swing.text.Document) : Void;
+	@:overload @:public public function new(document : javax.swing.text.Document) : Void;
 	
 	/**
 	* Creates a new ElementIterator.
 	*
 	* @param root the root Element.
 	*/
-	@:overload public function new(root : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(root : javax.swing.text.Element) : Void;
 	
 	/**
 	* Clones the ElementIterator.
 	*
 	* @return a cloned ElementIterator Object.
 	*/
-	@:overload @:synchronized public function clone() : Dynamic;
+	@:overload @:public @:synchronized public function clone() : Dynamic;
 	
 	/**
 	* Fetches the first element.
 	*
 	* @return an Element.
 	*/
-	@:overload public function first() : javax.swing.text.Element;
+	@:overload @:public public function first() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the current depth of element tree.
 	*
 	* @return the depth.
 	*/
-	@:overload public function depth() : Int;
+	@:overload @:public public function depth() : Int;
 	
 	/**
 	* Fetches the current Element.
@@ -68,7 +68,7 @@ extern class ElementIterator implements java.lang.Cloneable
 	* @return element on top of the stack or
 	*          <code>null</code> if the root element is <code>null</code>
 	*/
-	@:overload public function current() : javax.swing.text.Element;
+	@:overload @:public public function current() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the next Element. The strategy
@@ -78,7 +78,7 @@ extern class ElementIterator implements java.lang.Cloneable
 	* @return the next element or <code>null</code>
 	*          at the end of the list.
 	*/
-	@:overload public function next() : javax.swing.text.Element;
+	@:overload @:public public function next() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the previous Element. If howver the current
@@ -88,7 +88,7 @@ extern class ElementIterator implements java.lang.Cloneable
 	* @return previous <code>Element</code> if available
 	*
 	*/
-	@:overload public function previous() : javax.swing.text.Element;
+	@:overload @:public public function previous() : javax.swing.text.Element;
 	
 	
 }
@@ -105,7 +105,7 @@ extern class ElementIterator implements java.lang.Cloneable
 */
 @:native('javax$swing$text$ElementIterator$StackItem') @:internal extern class ElementIterator_StackItem implements java.lang.Cloneable
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }

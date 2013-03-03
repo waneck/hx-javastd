@@ -47,7 +47,7 @@ package javax.xml.ws.handler;
 	*  @param portInfo Contains information about the port being accessed.
 	*  @return java.util.List&lt;Handler> chain
 	**/
-	@:overload public function getHandlerChain(portInfo : javax.xml.ws.handler.PortInfo) : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
+	@:overload @:public public function getHandlerChain(portInfo : javax.xml.ws.handler.PortInfo) : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
 	
 	
 }

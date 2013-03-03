@@ -37,7 +37,7 @@ extern interface X509KeyManager extends com.sun.net.ssl.KeyManager
 	* @param issuers the list of acceptable CA issuer subject names
 	* @return the matching alias names
 	*/
-	@:overload public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/**
 	* Choose an alias to authenticate the client side of a secure
@@ -48,7 +48,7 @@ extern interface X509KeyManager extends com.sun.net.ssl.KeyManager
 	* @param issuers the list of acceptable CA issuer subject names
 	* @return the alias name for the desired key
 	*/
-	@:overload public function chooseClientAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
+	@:overload @:public public function chooseClientAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
 	
 	/**
 	* Get the matching aliases for authenticating the server side of a secure
@@ -59,7 +59,7 @@ extern interface X509KeyManager extends com.sun.net.ssl.KeyManager
 	* @param issuers the list of acceptable CA issuer subject names
 	* @return the matching alias names
 	*/
-	@:overload public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/**
 	* Choose an alias to authenticate the server side of a secure
@@ -70,7 +70,7 @@ extern interface X509KeyManager extends com.sun.net.ssl.KeyManager
 	* @param issuers the list of acceptable CA issuer subject names
 	* @return the alias name for the desired key
 	*/
-	@:overload public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
+	@:overload @:public public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>) : String;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -80,7 +80,7 @@ extern interface X509KeyManager extends com.sun.net.ssl.KeyManager
 	* @return the certificate chain (ordered with the user's certificate first
 	* and the root certificate authority last)
 	*/
-	@:overload public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/*
 	* Returns the key associated with the given alias.
@@ -89,7 +89,7 @@ extern interface X509KeyManager extends com.sun.net.ssl.KeyManager
 	*
 	* @return the requested key
 	*/
-	@:overload public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	
 }

@@ -26,7 +26,7 @@ package com.sun.xml.internal.xsom.impl;
 extern class Const
 {
 	/** Namespace URI of XML Schema. */
-	public static var schemaNamespace(default, null) : String;
+	@:public @:static @:final public static var schemaNamespace(default, null) : String;
 	
 	
 }

@@ -25,17 +25,17 @@ package sun.awt.X11;
 */
 extern class XDesktopPeer implements java.awt.peer.DesktopPeer
 {
-	@:overload public function isSupported(type : java.awt.Desktop.Desktop_Action) : Bool;
+	@:overload @:public public function isSupported(type : java.awt.Desktop.Desktop_Action) : Bool;
 	
-	@:overload public function open(file : java.io.File) : Void;
+	@:overload @:public public function open(file : java.io.File) : Void;
 	
-	@:overload public function edit(file : java.io.File) : Void;
+	@:overload @:public public function edit(file : java.io.File) : Void;
 	
-	@:overload public function print(file : java.io.File) : Void;
+	@:overload @:public public function print(file : java.io.File) : Void;
 	
-	@:overload public function mail(uri : java.net.URI) : Void;
+	@:overload @:public public function mail(uri : java.net.URI) : Void;
 	
-	@:overload public function browse(uri : java.net.URI) : Void;
+	@:overload @:public public function browse(uri : java.net.URI) : Void;
 	
 	
 }

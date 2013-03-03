@@ -25,41 +25,41 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ComponentImpl implements com.sun.xml.internal.xsom.XSComponent
 {
-	@:overload private function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl) : Void;
+	@:overload @:protected private function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl) : Void;
 	
-	private var ownerDocument(default, null) : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl;
+	@:protected @:final private var ownerDocument(default, null) : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl;
 	
-	@:overload public function getOwnerSchema() : com.sun.xml.internal.xsom.impl.SchemaImpl;
+	@:overload @:public public function getOwnerSchema() : com.sun.xml.internal.xsom.impl.SchemaImpl;
 	
-	@:overload public function getRoot() : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload @:public public function getRoot() : com.sun.xml.internal.xsom.XSSchemaSet;
 	
-	@:overload public function getSourceDocument() : com.sun.xml.internal.xsom.parser.SchemaDocument;
+	@:overload @:public public function getSourceDocument() : com.sun.xml.internal.xsom.parser.SchemaDocument;
 	
-	@:overload @:final public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;
+	@:overload @:public @:final public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;
 	
-	@:overload public function getAnnotation(createIfNotExist : Bool) : com.sun.xml.internal.xsom.XSAnnotation;
+	@:overload @:public public function getAnnotation(createIfNotExist : Bool) : com.sun.xml.internal.xsom.XSAnnotation;
 	
-	@:overload @:final public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public @:final public function getLocator() : org.xml.sax.Locator;
 	
-	@:overload public function getForeignAttributes() : java.util.List<com.sun.xml.internal.xsom.impl.ForeignAttributesImpl>;
+	@:overload @:public public function getForeignAttributes() : java.util.List<com.sun.xml.internal.xsom.impl.ForeignAttributesImpl>;
 	
-	@:overload public function getForeignAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public public function getForeignAttribute(nsUri : String, localName : String) : String;
 	
-	@:overload public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
-	@:overload public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Accepts a functor.
 	*/
-	@:overload @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload @:public @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
 	/**
 	* Accepts a visitor.
 	*/
-	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
 	
 }

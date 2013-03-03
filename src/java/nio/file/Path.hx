@@ -30,7 +30,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*
 	* @return  the file system that created this object
 	*/
-	@:overload public function getFileSystem() : java.nio.file.FileSystem;
+	@:overload @:public public function getFileSystem() : java.nio.file.FileSystem;
 	
 	/**
 	* Tells whether or not this path is absolute.
@@ -40,7 +40,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*
 	* @return  {@code true} if, and only if, this path is absolute
 	*/
-	@:overload public function isAbsolute() : Bool;
+	@:overload @:public public function isAbsolute() : Bool;
 	
 	/**
 	* Returns the root component of this path as a {@code Path} object,
@@ -49,7 +49,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @return  a path representing the root component of this path,
 	*          or {@code null}
 	*/
-	@:overload public function getRoot() : java.nio.file.Path;
+	@:overload @:public public function getRoot() : java.nio.file.Path;
 	
 	/**
 	* Returns the name of the file or directory denoted by this path as a
@@ -59,7 +59,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @return  a path representing the name of the file or directory, or
 	*          {@code null} if this path has zero elements
 	*/
-	@:overload public function getFileName() : java.nio.file.Path;
+	@:overload @:public public function getFileName() : java.nio.file.Path;
 	
 	/**
 	* Returns the <em>parent path</em>, or {@code null} if this path does not
@@ -84,7 +84,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*
 	* @return  a path representing the path's parent
 	*/
-	@:overload public function getParent() : java.nio.file.Path;
+	@:overload @:public public function getParent() : java.nio.file.Path;
 	
 	/**
 	* Returns the number of name elements in the path.
@@ -92,7 +92,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @return  the number of elements in the path, or {@code 0} if this path
 	*          only represents a root component
 	*/
-	@:overload public function getNameCount() : Int;
+	@:overload @:public public function getNameCount() : Int;
 	
 	/**
 	* Returns a name element of this path as a {@code Path} object.
@@ -112,7 +112,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          equal to the number of elements, or this path has zero name
 	*          elements
 	*/
-	@:overload public function getName(index : Int) : java.nio.file.Path;
+	@:overload @:public public function getName(index : Int) : java.nio.file.Path;
 	
 	/**
 	* Returns a relative {@code Path} that is a subsequence of the name
@@ -139,7 +139,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          the number of elements. If {@code endIndex} is less than or
 	*          equal to {@code beginIndex}, or larger than the number of elements.
 	*/
-	@:overload public function subpath(beginIndex : Int, endIndex : Int) : java.nio.file.Path;
+	@:overload @:public public function subpath(beginIndex : Int, endIndex : Int) : java.nio.file.Path;
 	
 	/**
 	* Tests if this path starts with the given path.
@@ -164,7 +164,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @return  {@code true} if this path starts with the given path; otherwise
 	*          {@code false}
 	*/
-	@:overload public function startsWith(other : java.nio.file.Path) : Bool;
+	@:overload @:public public function startsWith(other : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests if this path starts with a {@code Path}, constructed by converting
@@ -209,7 +209,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @return  {@code true} if this path ends with the given path; otherwise
 	*          {@code false}
 	*/
-	@:overload public function endsWith(other : java.nio.file.Path) : Bool;
+	@:overload @:public public function endsWith(other : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests if this path ends with a {@code Path}, constructed by converting
@@ -257,7 +257,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @see #getParent
 	* @see #toRealPath
 	*/
-	@:overload public function normalize() : java.nio.file.Path;
+	@:overload @:public public function normalize() : java.nio.file.Path;
 	
 	/**
 	* Resolve the given path against this path.
@@ -280,7 +280,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*
 	* @see #relativize
 	*/
-	@:overload public function resolve(other : java.nio.file.Path) : java.nio.file.Path;
+	@:overload @:public public function resolve(other : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Converts a given path string to a {@code Path} and resolves it against
@@ -380,7 +380,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          if {@code other} is not a {@code Path} that can be relativized
 	*          against this path
 	*/
-	@:overload public function relativize(other : java.nio.file.Path) : java.nio.file.Path;
+	@:overload @:public public function relativize(other : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Returns a URI to represent this path.
@@ -433,7 +433,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          is installed, the {@link #toAbsolutePath toAbsolutePath} method
 	*          throws a security exception.
 	*/
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
 	/**
 	* Returns a {@code Path} object representing the absolute path of this
@@ -456,7 +456,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          checkPropertyAccess} method is invoked to check access to the
 	*          system property {@code user.dir}
 	*/
-	@:overload public function toAbsolutePath() : java.nio.file.Path;
+	@:overload @:public public function toAbsolutePath() : java.nio.file.Path;
 	
 	/**
 	* Returns the <em>real</em> path of an existing file.
@@ -502,7 +502,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          checkPropertyAccess} method is invoked to check access to the
 	*          system property {@code user.dir}
 	*/
-	@:overload public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
+	@:overload @:public public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
 	
 	/**
 	* Returns a {@link File} object representing this path. Where this {@code
@@ -580,7 +580,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the file.
 	*/
-	@:overload public function register(watcher : java.nio.file.WatchService, events : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Kind<Dynamic>>, modifiers : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Modifier>) : java.nio.file.WatchKey;
+	@:overload @:public public function register(watcher : java.nio.file.WatchService, events : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Kind<Dynamic>>, modifiers : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Modifier>) : java.nio.file.WatchKey;
 	
 	/**
 	* Registers the file located by this path with a watch service.
@@ -658,7 +658,7 @@ extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends j
 	* @throws  ClassCastException
 	*          if the paths are associated with different providers
 	*/
-	@:overload public function compareTo(other : java.nio.file.Path) : Int;
+	@:overload @:public public function compareTo(other : java.nio.file.Path) : Int;
 	
 	
 }

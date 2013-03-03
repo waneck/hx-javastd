@@ -25,9 +25,9 @@ package com.sun.jndi.ldap;
 */
 extern class LdapResult
 {
-	public var status : Int;
+	@:public public var status : Int;
 	
-	public var serverCreds : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var serverCreds : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

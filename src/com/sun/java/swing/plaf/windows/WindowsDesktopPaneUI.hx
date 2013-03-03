@@ -37,13 +37,13 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsDesktopPaneUI extends javax.swing.plaf.basic.BasicDesktopPaneUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDesktopManager() : Void;
+	@:overload @:protected override private function installDesktopManager() : Void;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
 	
 }

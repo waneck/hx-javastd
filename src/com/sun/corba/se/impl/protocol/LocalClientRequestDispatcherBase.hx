@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class LocalClientRequestDispatcherBase implements com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher
 {
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var servantIsLocal : Bool;
+	@:protected private var servantIsLocal : Bool;
 	
-	private var oaf : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
+	@:protected private var oaf : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
 	
-	private var oaid : com.sun.corba.se.spi.ior.ObjectAdapterId;
+	@:protected private var oaid : com.sun.corba.se.spi.ior.ObjectAdapterId;
 	
-	private var objectId : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var objectId : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function getObjectId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getObjectId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function is_local(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function is_local(self : org.omg.CORBA.Object) : Bool;
 	
 	/*
 	* Possible paths through
@@ -56,13 +56,13 @@ extern class LocalClientRequestDispatcherBase implements com.sun.corba.se.spi.pr
 	*       servant_postinvoke is called
 	*
 	*/
-	@:overload public function useLocalInvocation(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function useLocalInvocation(self : org.omg.CORBA.Object) : Bool;
 	
 	/** Check that the servant in info (which must not be null) is
 	* an instance of the expectedType.  If not, set the thread local flag
 	* and return false.
 	*/
-	@:overload private function checkForCompatibleServant(so : org.omg.CORBA.portable.ServantObject, expectedType : Class<Dynamic>) : Bool;
+	@:overload @:protected private function checkForCompatibleServant(so : org.omg.CORBA.portable.ServantObject, expectedType : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns a Java reference to the servant which should be used for this
@@ -89,9 +89,9 @@ extern class LocalClientRequestDispatcherBase implements com.sun.corba.se.spi.pr
 	* this optimization (e.g. due to security, transactions, etc).
 	* The method must return null if the servant is not of the expected type.
 	*/
-	@:overload public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public @:public public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public @:public public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	
 }

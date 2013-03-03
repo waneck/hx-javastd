@@ -69,7 +69,7 @@ extern class StoreInstruction extends com.sun.org.apache.bcel.internal.generic.L
 	* @param c_tag Instruction number for compact version, ASTORE_0, e.g.
 	* @param n local variable index (unsigned short)
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, c_tag : java.StdTypes.Int16, n : Int) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, c_tag : java.StdTypes.Int16, n : Int) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -79,11 +79,11 @@ extern class StoreInstruction extends com.sun.org.apache.bcel.internal.generic.L
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	/** @return how many words are consumed from stack
 	*/
-	@:overload @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

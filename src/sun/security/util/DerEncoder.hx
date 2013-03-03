@@ -30,7 +30,7 @@ extern interface DerEncoder
 	*
 	* @param out  the stream on which the DER encoding is written.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	
 }

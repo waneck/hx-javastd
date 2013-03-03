@@ -25,29 +25,29 @@ package com.sun.tools.internal.ws.resources;
 */
 extern class JavacompilerMessages
 {
-	@:overload public static function localizableJAVACOMPILER_CLASSPATH_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableJAVACOMPILER_CLASSPATH_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* {0} is not available in the classpath, requires Sun's JDK version 5.0 or latter.
 	*
 	*/
-	@:overload public static function JAVACOMPILER_CLASSPATH_ERROR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function JAVACOMPILER_CLASSPATH_ERROR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableJAVACOMPILER_NOSUCHMETHOD_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableJAVACOMPILER_NOSUCHMETHOD_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* There is no such method {0} available, requires Sun's JDK version 5.0 or latter.
 	*
 	*/
-	@:overload public static function JAVACOMPILER_NOSUCHMETHOD_ERROR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function JAVACOMPILER_NOSUCHMETHOD_ERROR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableJAVACOMPILER_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableJAVACOMPILER_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* error : {0}.
 	*
 	*/
-	@:overload public static function JAVACOMPILER_ERROR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function JAVACOMPILER_ERROR(arg0 : Dynamic) : String;
 	
 	
 }

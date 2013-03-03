@@ -30,14 +30,14 @@ extern class SOAPFaultException extends javax.xml.ws.ProtocolException
 	*
 	*  @see javax.xml.soap.SOAPFactory#createFault
 	**/
-	@:overload public function new(fault : javax.xml.soap.SOAPFault) : Void;
+	@:overload @:public public function new(fault : javax.xml.soap.SOAPFault) : Void;
 	
 	/** Gets the embedded <code>SOAPFault</code> instance.
 	*
 	*  @return <code>javax.xml.soap.SOAPFault</code> SOAP
 	*          fault element
 	**/
-	@:overload public function getFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public public function getFault() : javax.xml.soap.SOAPFault;
 	
 	
 }

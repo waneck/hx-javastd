@@ -25,41 +25,41 @@ package com.sun.corba.se.impl.orbutil;
 */
 extern class ObjectWriter
 {
-	@:overload public static function make(isIndenting : Bool, initialLevel : Int, increment : Int) : com.sun.corba.se.impl.orbutil.ObjectWriter;
+	@:overload @:public @:static public static function make(isIndenting : Bool, initialLevel : Int, increment : Int) : com.sun.corba.se.impl.orbutil.ObjectWriter;
 	
-	@:overload @:abstract public function startObject(obj : Dynamic) : Void;
+	@:overload @:public @:abstract public function startObject(obj : Dynamic) : Void;
 	
-	@:overload @:abstract public function startElement() : Void;
+	@:overload @:public @:abstract public function startElement() : Void;
 	
-	@:overload @:abstract public function endElement() : Void;
+	@:overload @:public @:abstract public function endElement() : Void;
 	
-	@:overload @:abstract public function endObject(str : String) : Void;
+	@:overload @:public @:abstract public function endObject(str : String) : Void;
 	
-	@:overload @:abstract public function endObject() : Void;
+	@:overload @:public @:abstract public function endObject() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function append(arg : Bool) : Void;
+	@:overload @:public public function append(arg : Bool) : Void;
 	
-	@:overload public function append(arg : java.StdTypes.Char16) : Void;
+	@:overload @:public public function append(arg : java.StdTypes.Char16) : Void;
 	
-	@:overload public function append(arg : java.StdTypes.Int16) : Void;
+	@:overload @:public public function append(arg : java.StdTypes.Int16) : Void;
 	
-	@:overload public function append(arg : Int) : Void;
+	@:overload @:public public function append(arg : Int) : Void;
 	
-	@:overload public function append(arg : haxe.Int64) : Void;
+	@:overload @:public public function append(arg : haxe.Int64) : Void;
 	
-	@:overload public function append(arg : Single) : Void;
+	@:overload @:public public function append(arg : Single) : Void;
 	
-	@:overload public function append(arg : Float) : Void;
+	@:overload @:public public function append(arg : Float) : Void;
 	
-	@:overload public function append(arg : String) : Void;
+	@:overload @:public public function append(arg : String) : Void;
 	
-	private var result : java.lang.StringBuffer;
+	@:protected private var result : java.lang.StringBuffer;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function appendObjectHeader(obj : Dynamic) : Void;
+	@:overload @:protected private function appendObjectHeader(obj : Dynamic) : Void;
 	
 	
 }
@@ -73,31 +73,31 @@ extern class ObjectWriter
 */
 @:native('com$sun$corba$se$impl$orbutil$ObjectWriter$IndentingObjectWriter') @:internal extern class ObjectWriter_IndentingObjectWriter extends com.sun.corba.se.impl.orbutil.ObjectWriter
 {
-	@:overload public function new(initialLevel : Int, increment : Int) : Void;
+	@:overload @:public public function new(initialLevel : Int, increment : Int) : Void;
 	
-	@:overload override public function startObject(obj : Dynamic) : Void;
+	@:overload @:public override public function startObject(obj : Dynamic) : Void;
 	
-	@:overload override public function startElement() : Void;
+	@:overload @:public override public function startElement() : Void;
 	
-	@:overload override public function endElement() : Void;
+	@:overload @:public override public function endElement() : Void;
 	
-	@:overload override public function endObject(str : String) : Void;
+	@:overload @:public override public function endObject(str : String) : Void;
 	
-	@:overload override public function endObject() : Void;
+	@:overload @:public override public function endObject() : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$orbutil$ObjectWriter$SimpleObjectWriter') @:internal extern class ObjectWriter_SimpleObjectWriter extends com.sun.corba.se.impl.orbutil.ObjectWriter
 {
-	@:overload override public function startObject(obj : Dynamic) : Void;
+	@:overload @:public override public function startObject(obj : Dynamic) : Void;
 	
-	@:overload override public function startElement() : Void;
+	@:overload @:public override public function startElement() : Void;
 	
-	@:overload override public function endObject(str : String) : Void;
+	@:overload @:public override public function endObject(str : String) : Void;
 	
-	@:overload override public function endElement() : Void;
+	@:overload @:public override public function endElement() : Void;
 	
-	@:overload override public function endObject() : Void;
+	@:overload @:public override public function endObject() : Void;
 	
 	
 }

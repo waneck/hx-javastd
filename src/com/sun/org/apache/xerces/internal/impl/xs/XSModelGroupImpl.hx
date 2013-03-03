@@ -29,21 +29,21 @@ extern class XSModelGroupImpl implements com.sun.org.apache.xerces.internal.xs.X
 	*
 	* @version $Id: XSModelGroupImpl.java,v 1.7 2010-11-01 04:39:55 joehw Exp $
 	*/
-	public static var MODELGROUP_CHOICE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var MODELGROUP_CHOICE(default, null) : java.StdTypes.Int16;
 	
-	public static var MODELGROUP_SEQUENCE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var MODELGROUP_SEQUENCE(default, null) : java.StdTypes.Int16;
 	
-	public static var MODELGROUP_ALL(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var MODELGROUP_ALL(default, null) : java.StdTypes.Int16;
 	
-	public var fCompositor : java.StdTypes.Int16;
+	@:public public var fCompositor : java.StdTypes.Int16;
 	
-	public var fParticles : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl>;
+	@:public public var fParticles : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl>;
 	
-	public var fParticleCount : Int;
+	@:public public var fParticleCount : Int;
 	
-	public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:public public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* 3.8.6 Effective Total Range (all and sequence) and
@@ -52,57 +52,57 @@ extern class XSModelGroupImpl implements com.sun.org.apache.xerces.internal.xs.X
 	* They are not exactly the same as it's described in the spec, but all the
 	* values from the spec are retrievable by these methods.
 	*/
-	@:overload public function minEffectiveTotalRange() : Int;
+	@:overload @:public public function minEffectiveTotalRange() : Int;
 	
-	@:overload public function maxEffectiveTotalRange() : Int;
+	@:overload @:public public function maxEffectiveTotalRange() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Get the type of the object, i.e ELEMENT_DECLARATION.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The <code>name</code> of this <code>XSObject</code> depending on the
 	* <code>XSObject</code> type.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
 	* unspecified.  defines how a namespace URI is attached to schema
 	* components.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* {compositor} One of all, choice or sequence. The valid constants values
 	* are: ALL, CHOICE, SEQUENCE.
 	*/
-	@:overload public function getCompositor() : java.StdTypes.Int16;
+	@:overload @:public public function getCompositor() : java.StdTypes.Int16;
 	
 	/**
 	* {particles} A list of particles
 	*/
-	@:overload public function getParticles() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getParticles() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* Optional. Annotation.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* Optional. Annotations.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* @see org.apache.xerces.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	
 }

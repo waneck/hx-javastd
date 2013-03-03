@@ -28,19 +28,19 @@ extern class CacheFSInfo extends com.sun.tools.javac.file.FSInfo
 	/**
 	* Register a Context.Factory to create a CacheFSInfo.
 	*/
-	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public @:static public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function clearCache() : Void;
+	@:overload @:public public function clearCache() : Void;
 	
-	@:overload override public function getCanonicalFile(file : java.io.File) : java.io.File;
+	@:overload @:public override public function getCanonicalFile(file : java.io.File) : java.io.File;
 	
-	@:overload override public function exists(file : java.io.File) : Bool;
+	@:overload @:public override public function exists(file : java.io.File) : Bool;
 	
-	@:overload override public function isDirectory(file : java.io.File) : Bool;
+	@:overload @:public override public function isDirectory(file : java.io.File) : Bool;
 	
-	@:overload override public function isFile(file : java.io.File) : Bool;
+	@:overload @:public override public function isFile(file : java.io.File) : Bool;
 	
-	@:overload override public function getJarClassPath(file : java.io.File) : java.util.List<java.io.File>;
+	@:overload @:public override public function getJarClassPath(file : java.io.File) : java.util.List<java.io.File>;
 	
 	
 }

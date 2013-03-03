@@ -50,21 +50,21 @@ extern interface AuthCache
 	* with the same pkey, but with a different path value in
 	* the AuthCacheValue.
 	*/
-	@:overload public function put(pkey : String, value : sun.net.www.protocol.http.AuthCacheValue) : Void;
+	@:overload @:public public function put(pkey : String, value : sun.net.www.protocol.http.AuthCacheValue) : Void;
 	
 	/**
 	* Get an entry from the cache based on pkey as described above, but also
 	* using a pathname (skey) and the cache must return an entry
 	* if skey is a sub-path of the AuthCacheValue.path field.
 	*/
-	@:overload public function get(pkey : String, skey : String) : sun.net.www.protocol.http.AuthCacheValue;
+	@:overload @:public public function get(pkey : String, skey : String) : sun.net.www.protocol.http.AuthCacheValue;
 	
 	/**
 	* remove the entry from the cache whose pkey is specified and
 	* whose path is equal to entry.path. If entry is null then
 	* all entries with the same pkey should be removed.
 	*/
-	@:overload public function remove(pkey : String, entry : sun.net.www.protocol.http.AuthCacheValue) : Void;
+	@:overload @:public public function remove(pkey : String, entry : sun.net.www.protocol.http.AuthCacheValue) : Void;
 	
 	
 }

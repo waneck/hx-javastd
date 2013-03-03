@@ -25,15 +25,15 @@ package com.sun.corba.se.spi.orb;
 */
 extern class StringPair
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function new(first : String, second : String) : Void;
+	@:overload @:public public function new(first : String, second : String) : Void;
 	
-	@:overload public function getFirst() : String;
+	@:overload @:public public function getFirst() : String;
 	
-	@:overload public function getSecond() : String;
+	@:overload @:public public function getSecond() : String;
 	
 	
 }

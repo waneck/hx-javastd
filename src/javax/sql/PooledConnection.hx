@@ -95,7 +95,7 @@ extern interface PooledConnection
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function addStatementEventListener(listener : javax.sql.StatementEventListener) : Void;
+	@:require(java6) @:overload @:public public function addStatementEventListener(listener : javax.sql.StatementEventListener) : Void;
 	
 	/**
 	* Removes the specified <code>StatementEventListener</code> from the list of
@@ -108,7 +108,7 @@ extern interface PooledConnection
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function removeStatementEventListener(listener : javax.sql.StatementEventListener) : Void;
+	@:require(java6) @:overload @:public public function removeStatementEventListener(listener : javax.sql.StatementEventListener) : Void;
 	
 	
 }

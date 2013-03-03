@@ -46,7 +46,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* implementations. For full locale coverage, use the
 	* {@link #getInstance(Locale) getInstance} method.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a DecimalFormatSymbols object for the given locale.
@@ -59,7 +59,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	*
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -75,7 +75,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	*         <code>DecimalFormatSymbols</code> instances are available.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:require(java6) @:overload @:public @:static public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Gets the <code>DecimalFormatSymbols</code> instance for the default
@@ -87,7 +87,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @return a <code>DecimalFormatSymbols</code> instance.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance() : java.text.DecimalFormatSymbols;
+	@:require(java6) @:overload @:public @:static @:final public static function getInstance() : java.text.DecimalFormatSymbols;
 	
 	/**
 	* Gets the <code>DecimalFormatSymbols</code> instance for the specified
@@ -101,138 +101,138 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @exception NullPointerException if <code>locale</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance(locale : java.util.Locale) : java.text.DecimalFormatSymbols;
+	@:require(java6) @:overload @:public @:static @:final public static function getInstance(locale : java.util.Locale) : java.text.DecimalFormatSymbols;
 	
 	/**
 	* Gets the character used for zero. Different for Arabic, etc.
 	*/
-	@:overload public function getZeroDigit() : java.StdTypes.Char16;
+	@:overload @:public public function getZeroDigit() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used for zero. Different for Arabic, etc.
 	*/
-	@:overload public function setZeroDigit(zeroDigit : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setZeroDigit(zeroDigit : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the character used for thousands separator. Different for French, etc.
 	*/
-	@:overload public function getGroupingSeparator() : java.StdTypes.Char16;
+	@:overload @:public public function getGroupingSeparator() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used for thousands separator. Different for French, etc.
 	*/
-	@:overload public function setGroupingSeparator(groupingSeparator : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setGroupingSeparator(groupingSeparator : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the character used for decimal sign. Different for French, etc.
 	*/
-	@:overload public function getDecimalSeparator() : java.StdTypes.Char16;
+	@:overload @:public public function getDecimalSeparator() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used for decimal sign. Different for French, etc.
 	*/
-	@:overload public function setDecimalSeparator(decimalSeparator : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setDecimalSeparator(decimalSeparator : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the character used for per mille sign. Different for Arabic, etc.
 	*/
-	@:overload public function getPerMill() : java.StdTypes.Char16;
+	@:overload @:public public function getPerMill() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used for per mille sign. Different for Arabic, etc.
 	*/
-	@:overload public function setPerMill(perMill : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setPerMill(perMill : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the character used for percent sign. Different for Arabic, etc.
 	*/
-	@:overload public function getPercent() : java.StdTypes.Char16;
+	@:overload @:public public function getPercent() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used for percent sign. Different for Arabic, etc.
 	*/
-	@:overload public function setPercent(percent : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setPercent(percent : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the character used for a digit in a pattern.
 	*/
-	@:overload public function getDigit() : java.StdTypes.Char16;
+	@:overload @:public public function getDigit() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used for a digit in a pattern.
 	*/
-	@:overload public function setDigit(digit : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setDigit(digit : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the character used to separate positive and negative subpatterns
 	* in a pattern.
 	*/
-	@:overload public function getPatternSeparator() : java.StdTypes.Char16;
+	@:overload @:public public function getPatternSeparator() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used to separate positive and negative subpatterns
 	* in a pattern.
 	*/
-	@:overload public function setPatternSeparator(patternSeparator : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setPatternSeparator(patternSeparator : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Gets the string used to represent infinity. Almost always left
 	* unchanged.
 	*/
-	@:overload public function getInfinity() : String;
+	@:overload @:public public function getInfinity() : String;
 	
 	/**
 	* Sets the string used to represent infinity. Almost always left
 	* unchanged.
 	*/
-	@:overload public function setInfinity(infinity : String) : Void;
+	@:overload @:public public function setInfinity(infinity : String) : Void;
 	
 	/**
 	* Gets the string used to represent "not a number". Almost always left
 	* unchanged.
 	*/
-	@:overload public function getNaN() : String;
+	@:overload @:public public function getNaN() : String;
 	
 	/**
 	* Sets the string used to represent "not a number". Almost always left
 	* unchanged.
 	*/
-	@:overload public function setNaN(NaN : String) : Void;
+	@:overload @:public public function setNaN(NaN : String) : Void;
 	
 	/**
 	* Gets the character used to represent minus sign. If no explicit
 	* negative format is specified, one is formed by prefixing
 	* minusSign to the positive format.
 	*/
-	@:overload public function getMinusSign() : java.StdTypes.Char16;
+	@:overload @:public public function getMinusSign() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the character used to represent minus sign. If no explicit
 	* negative format is specified, one is formed by prefixing
 	* minusSign to the positive format.
 	*/
-	@:overload public function setMinusSign(minusSign : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setMinusSign(minusSign : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Returns the currency symbol for the currency of these
 	* DecimalFormatSymbols in their locale.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCurrencySymbol() : String;
+	@:require(java2) @:overload @:public public function getCurrencySymbol() : String;
 	
 	/**
 	* Sets the currency symbol for the currency of these
 	* DecimalFormatSymbols in their locale.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurrencySymbol(currency : String) : Void;
+	@:require(java2) @:overload @:public public function setCurrencySymbol(currency : String) : Void;
 	
 	/**
 	* Returns the ISO 4217 currency code of the currency of these
 	* DecimalFormatSymbols.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getInternationalCurrencySymbol() : String;
+	@:require(java2) @:overload @:public public function getInternationalCurrencySymbol() : String;
 	
 	/**
 	* Sets the ISO 4217 currency code of the currency of these
@@ -249,7 +249,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @see #setCurrencySymbol
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setInternationalCurrencySymbol(currencyCode : String) : Void;
+	@:require(java2) @:overload @:public public function setInternationalCurrencySymbol(currencyCode : String) : Void;
 	
 	/**
 	* Gets the currency of these DecimalFormatSymbols. May be null if the
@@ -259,7 +259,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @return the currency used, or null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCurrency() : java.util.Currency;
+	@:require(java4) @:overload @:public public function getCurrency() : java.util.Currency;
 	
 	/**
 	* Sets the currency of these DecimalFormatSymbols.
@@ -273,19 +273,19 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @see #setCurrencySymbol
 	* @see #setInternationalCurrencySymbol
 	*/
-	@:require(java4) @:overload public function setCurrency(currency : java.util.Currency) : Void;
+	@:require(java4) @:overload @:public public function setCurrency(currency : java.util.Currency) : Void;
 	
 	/**
 	* Returns the monetary decimal separator.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMonetaryDecimalSeparator() : java.StdTypes.Char16;
+	@:require(java2) @:overload @:public public function getMonetaryDecimalSeparator() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the monetary decimal separator.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setMonetaryDecimalSeparator(sep : java.StdTypes.Char16) : Void;
+	@:require(java2) @:overload @:public public function setMonetaryDecimalSeparator(sep : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Returns the string used to separate the mantissa from the exponent.
@@ -295,7 +295,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @see #setExponentSeparator(java.lang.String)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getExponentSeparator() : String;
+	@:require(java6) @:overload @:public public function getExponentSeparator() : String;
 	
 	/**
 	* Sets the string used to separate the mantissa from the exponent.
@@ -306,22 +306,22 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @see #getExponentSeparator()
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setExponentSeparator(exp : String) : Void;
+	@:require(java6) @:overload @:public public function setExponentSeparator(exp : String) : Void;
 	
 	/**
 	* Standard override.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Override equals.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Override hashCode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -331,7 +331,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 */
 @:native('java$text$DecimalFormatSymbols$DecimalFormatSymbolsGetter') @:internal extern class DecimalFormatSymbols_DecimalFormatSymbolsGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DecimalFormatSymbolsProvider, java.text.DecimalFormatSymbols>
 {
-	@:overload public function getObject(decimalFormatSymbolsProvider : java.text.spi.DecimalFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DecimalFormatSymbols;
+	@:overload @:public public function getObject(decimalFormatSymbolsProvider : java.text.spi.DecimalFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DecimalFormatSymbols;
 	
 	
 }

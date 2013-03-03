@@ -117,7 +117,7 @@ package java.awt;
 	*         if the secondary loop was started by this call,
 	*         {@code false} otherwise
 	*/
-	@:overload public function enter() : Bool;
+	@:overload @:public public function enter() : Bool;
 	
 	/**
 	* Unblocks the execution of the thread blocked by the {@link
@@ -140,7 +140,7 @@ package java.awt;
 	*         has not yet been finished with the {@link #exit} method,
 	*         {@code false} otherwise
 	*/
-	@:overload public function exit() : Bool;
+	@:overload @:public public function exit() : Bool;
 	
 	
 }

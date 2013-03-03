@@ -46,7 +46,7 @@ extern interface NotificationEmitter extends javax.management.NotificationBroadc
 	* registered with the MBean, or it is not registered with the
 	* given filter and handback.
 	*/
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	
 }

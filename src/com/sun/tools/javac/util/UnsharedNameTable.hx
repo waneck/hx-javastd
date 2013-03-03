@@ -35,26 +35,26 @@ extern class UnsharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public static function create(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.Name.Name_Table;
+	@:overload @:static @:public public static function create(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.Name.Name_Table;
 	
 	/** Index counter for names in this table.
 	*/
-	public var index : Int;
+	@:public public var index : Int;
 	
 	/** Allocator
 	*  @param names The main name table
 	*  @param hashSize the (constant) size to be used for the hash table
 	*                  needs to be a power of two.
 	*/
-	@:overload public function new(names : com.sun.tools.javac.util.Names, hashSize : Int) : Void;
+	@:overload @:public public function new(names : com.sun.tools.javac.util.Names, hashSize : Int) : Void;
 	
-	@:overload public function new(names : com.sun.tools.javac.util.Names) : Void;
+	@:overload @:public public function new(names : com.sun.tools.javac.util.Names) : Void;
 	
-	@:overload public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload @:public override public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload @:public override public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }
@@ -64,15 +64,15 @@ extern class UnsharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 }
 @:native('com$sun$tools$javac$util$UnsharedNameTable$NameImpl') @:internal extern class UnsharedNameTable_NameImpl extends javax.lang.model.element.Name
 {
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload public function getByteLength() : Int;
+	@:overload @:public public function getByteLength() : Int;
 	
-	@:overload public function getByteAt(i : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getByteAt(i : Int) : java.StdTypes.Int8;
 	
-	@:overload public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getByteOffset() : Int;
+	@:overload @:public public function getByteOffset() : Int;
 	
 	
 }

@@ -25,20 +25,20 @@ package sun.tools.java;
 */
 extern class Environment implements sun.tools.java.Constants
 {
-	@:overload public function new(env : sun.tools.java.Environment, source : Dynamic) : Void;
+	@:overload @:public public function new(env : sun.tools.java.Environment, source : Dynamic) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Tells whether an Identifier refers to a package which should be
 	* exempt from the "exists" check in Imports#resolve().
 	*/
-	@:overload public function isExemptPackage(id : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function isExemptPackage(id : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Return a class declaration given a fully qualified class name.
 	*/
-	@:overload public function getClassDeclaration(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDeclaration;
+	@:overload @:public public function getClassDeclaration(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDeclaration;
 	
 	/**
 	* Return a class definition given a fully qualified class name.
@@ -46,43 +46,43 @@ extern class Environment implements sun.tools.java.Constants
 	* Should be called only with 'internal' class names, i.e., the result
 	* of a call to 'resolveName' or a synthetic class name.
 	*/
-	@:overload @:final public function getClassDefinition(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDefinition;
+	@:overload @:public @:final public function getClassDefinition(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Return a class declaration given a type. Only works for
 	* class types.
 	*/
-	@:overload public function getClassDeclaration(t : sun.tools.java.Type) : sun.tools.java.ClassDeclaration;
+	@:overload @:public public function getClassDeclaration(t : sun.tools.java.Type) : sun.tools.java.ClassDeclaration;
 	
 	/**
 	* Return a class definition given a type. Only works for
 	* class types.
 	*/
-	@:overload @:final public function getClassDefinition(t : sun.tools.java.Type) : sun.tools.java.ClassDefinition;
+	@:overload @:public @:final public function getClassDefinition(t : sun.tools.java.Type) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Check if a class exists (without actually loading it).
 	* (Since inner classes cannot in general be examined without
 	* loading source, this method does not accept inner names.)
 	*/
-	@:overload public function classExists(nm : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function classExists(nm : sun.tools.java.Identifier) : Bool;
 	
-	@:overload @:final public function classExists(t : sun.tools.java.Type) : Bool;
+	@:overload @:public @:final public function classExists(t : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Get the package path for a package
 	*/
-	@:overload public function getPackage(pkg : sun.tools.java.Identifier) : sun.tools.java.Package;
+	@:overload @:public public function getPackage(pkg : sun.tools.java.Identifier) : sun.tools.java.Package;
 	
 	/**
 	* Load the definition of a class.
 	*/
-	@:overload public function loadDefinition(c : sun.tools.java.ClassDeclaration) : Void;
+	@:overload @:public public function loadDefinition(c : sun.tools.java.ClassDeclaration) : Void;
 	
 	/**
 	* Return the source of the environment (ie: the thing being compiled/parsed).
 	*/
-	@:overload @:final public function getSource() : Dynamic;
+	@:overload @:public @:final public function getSource() : Dynamic;
 	
 	/**
 	* Resolve a type. Make sure that all the classes referred to by
@@ -117,23 +117,23 @@ extern class Environment implements sun.tools.java.Constants
 	* semantic checking.  This would affect class names appearing in 'extends',
 	* 'implements', and 'throws' clauses, as well as in member declarations.
 	*/
-	@:overload public function resolve(where : haxe.Int64, c : sun.tools.java.ClassDefinition, t : sun.tools.java.Type) : Bool;
+	@:overload @:public public function resolve(where : haxe.Int64, c : sun.tools.java.ClassDefinition, t : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Given its fully-qualified name, verify that a class is defined and accessible.
 	* Used to check components of qualified names in contexts where a class is expected.
 	* Like 'resolve', but is given a single type name, not a type descriptor.
 	*/
-	@:overload public function resolveByName(where : haxe.Int64, c : sun.tools.java.ClassDefinition, nm : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function resolveByName(where : haxe.Int64, c : sun.tools.java.ClassDefinition, nm : sun.tools.java.Identifier) : Bool;
 	
-	@:overload public function resolveExtendsByName(where : haxe.Int64, c : sun.tools.java.ClassDefinition, nm : sun.tools.java.Identifier) : Bool;
+	@:overload @:public public function resolveExtendsByName(where : haxe.Int64, c : sun.tools.java.ClassDefinition, nm : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Like 'getClassDefinition(env)', but check access on each component.
 	* Currently called only by 'resolve' above.  It is doubtful that calls
 	* to 'getClassDefinition(env)' are appropriate now.
 	*/
-	@:overload @:final public function getQualifiedClassDefinition(where : haxe.Int64, nm : sun.tools.java.Identifier, ctxClass : sun.tools.java.ClassDefinition, isExtends : Bool) : sun.tools.java.ClassDefinition;
+	@:overload @:public @:final public function getQualifiedClassDefinition(where : haxe.Int64, nm : sun.tools.java.Identifier, ctxClass : sun.tools.java.ClassDefinition, isExtends : Bool) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Resolve the names within a type, returning the adjusted type.
@@ -148,14 +148,14 @@ extern class Environment implements sun.tools.java.Constants
 	* type is being resolved is synthetic, names are resolved with respect
 	* to the package scope.  (Fix for 4097882)
 	*/
-	@:overload public function resolveNames(c : sun.tools.java.ClassDefinition, t : sun.tools.java.Type, synth : Bool) : sun.tools.java.Type;
+	@:overload @:public public function resolveNames(c : sun.tools.java.ClassDefinition, t : sun.tools.java.Type, synth : Bool) : sun.tools.java.Type;
 	
 	/**
 	* Resolve a class name, using only package and import directives.
 	* Report no errors.
 	* <p>
 	*/
-	@:overload public function resolveName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public public function resolveName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Discover if name consists of a package prefix, followed by the
@@ -168,59 +168,59 @@ extern class Environment implements sun.tools.java.Constants
 	* However, import processing uses this routine directly,
 	* since import names must be exactly qualified to start with.
 	*/
-	@:overload @:final public function resolvePackageQualifiedName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public @:final public function resolvePackageQualifiedName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Resolve a class name, using only package and import directives.
 	*/
-	@:overload public function resolve(nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public public function resolve(nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Get the imports used to resolve class names.
 	*/
-	@:overload public function getImports() : sun.tools.java.Imports;
+	@:overload @:public public function getImports() : sun.tools.java.Imports;
 	
 	/**
 	* Create a new class.
 	*/
-	@:overload public function makeClassDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, name : sun.tools.java.IdentifierToken, doc : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
+	@:overload @:public public function makeClassDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, name : sun.tools.java.IdentifierToken, doc : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Create a new field.
 	*/
-	@:overload public function makeMemberDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, doc : String, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, argNames : java.NativeArray<sun.tools.java.IdentifierToken>, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : Dynamic) : sun.tools.java.MemberDefinition;
+	@:overload @:public public function makeMemberDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, doc : String, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, argNames : java.NativeArray<sun.tools.java.IdentifierToken>, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : Dynamic) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Returns true if the given method is applicable to the given arguments
 	*/
-	@:overload public function isApplicable(m : sun.tools.java.MemberDefinition, args : java.NativeArray<sun.tools.java.Type>) : Bool;
+	@:overload @:public public function isApplicable(m : sun.tools.java.MemberDefinition, args : java.NativeArray<sun.tools.java.Type>) : Bool;
 	
 	/**
 	* Returns true if "best" is in every argument at least as good as "other"
 	*/
-	@:overload public function isMoreSpecific(best : sun.tools.java.MemberDefinition, other : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public public function isMoreSpecific(best : sun.tools.java.MemberDefinition, other : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Returns true if "from" is a more specific type than "to"
 	*/
-	@:overload public function isMoreSpecific(from : sun.tools.java.Type, to : sun.tools.java.Type) : Bool;
+	@:overload @:public public function isMoreSpecific(from : sun.tools.java.Type, to : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Return true if an implicit cast from this type to
 	* the given type is allowed.
 	*/
-	@:overload public function implicitCast(from : sun.tools.java.Type, to : sun.tools.java.Type) : Bool;
+	@:overload @:public public function implicitCast(from : sun.tools.java.Type, to : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Return true if an explicit cast from this type to
 	* the given type is allowed.
 	*/
-	@:overload public function explicitCast(from : sun.tools.java.Type, to : sun.tools.java.Type) : Bool;
+	@:overload @:public public function explicitCast(from : sun.tools.java.Type, to : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Flags.
 	*/
-	@:overload public function getFlags() : Int;
+	@:overload @:public public function getFlags() : Int;
 	
 	/**
 	* Debugging flags.  There used to be a method debug()
@@ -228,66 +228,66 @@ extern class Environment implements sun.tools.java.Constants
 	* (it now cooperates with -O and line number, variable
 	* range and source file info can be toggled separately).
 	*/
-	@:overload @:final public function debug_lines() : Bool;
+	@:overload @:public @:final public function debug_lines() : Bool;
 	
-	@:overload @:final public function debug_vars() : Bool;
+	@:overload @:public @:final public function debug_vars() : Bool;
 	
-	@:overload @:final public function debug_source() : Bool;
+	@:overload @:public @:final public function debug_source() : Bool;
 	
 	/**
 	* Optimization flags.  There used to be a method optimize()
 	* that has been replaced because -O has changed meaning in
 	* javac to be replaced with -O and -O:interclass.
 	*/
-	@:overload @:final public function opt() : Bool;
+	@:overload @:public @:final public function opt() : Bool;
 	
-	@:overload @:final public function opt_interclass() : Bool;
+	@:overload @:public @:final public function opt_interclass() : Bool;
 	
 	/**
 	* Verbose
 	*/
-	@:overload @:final public function verbose() : Bool;
+	@:overload @:public @:final public function verbose() : Bool;
 	
 	/**
 	* Dump debugging stuff
 	*/
-	@:overload @:final public function dump() : Bool;
+	@:overload @:public @:final public function dump() : Bool;
 	
 	/**
 	* Verbose
 	*/
-	@:overload @:final public function warnings() : Bool;
+	@:overload @:public @:final public function warnings() : Bool;
 	
 	/**
 	* Dependencies
 	*/
-	@:overload @:final public function dependencies() : Bool;
+	@:overload @:public @:final public function dependencies() : Bool;
 	
 	/**
 	* Print Dependencies to stdout
 	*/
-	@:overload @:final public function print_dependencies() : Bool;
+	@:overload @:public @:final public function print_dependencies() : Bool;
 	
 	/**
 	* Deprecation warnings are enabled.
 	*/
-	@:overload @:final public function deprecation() : Bool;
+	@:overload @:public @:final public function deprecation() : Bool;
 	
 	/**
 	* Do not support virtual machines before version 1.2.
 	* This option is not supported and is only here for testing purposes.
 	*/
-	@:overload @:final public function version12() : Bool;
+	@:overload @:public @:final public function version12() : Bool;
 	
 	/**
 	* Floating point is strict by default
 	*/
-	@:overload @:final public function strictdefault() : Bool;
+	@:overload @:public @:final public function strictdefault() : Bool;
 	
 	/**
 	* Release resources, if any.
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public public function shutdown() : Void;
 	
 	/**
 	* Issue an error.
@@ -298,66 +298,66 @@ extern class Environment implements sun.tools.java.Constants
 	*  arg2     - a second optional argument to the error (null if not applicable)
 	*  arg3     - a third optional argument to the error (null if not applicable)
 	*/
-	@:overload public function error(source : Dynamic, where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
+	@:overload @:public public function error(source : Dynamic, where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
 	
-	@:overload @:final public function error(where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
+	@:overload @:public @:final public function error(where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
 	
-	@:overload @:final public function error(where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic) : Void;
+	@:overload @:public @:final public function error(where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic) : Void;
 	
-	@:overload @:final public function error(where : haxe.Int64, err : String, arg1 : Dynamic) : Void;
+	@:overload @:public @:final public function error(where : haxe.Int64, err : String, arg1 : Dynamic) : Void;
 	
-	@:overload @:final public function error(where : haxe.Int64, err : String) : Void;
+	@:overload @:public @:final public function error(where : haxe.Int64, err : String) : Void;
 	
 	/**
 	* Output a string. This can either be an error message or something
 	* for debugging. This should be used instead of println.
 	*/
-	@:overload public function output(msg : String) : Void;
+	@:overload @:public public function output(msg : String) : Void;
 	
-	@:overload public static function debugOutput(msg : Dynamic) : Void;
+	@:overload @:public @:static public static function debugOutput(msg : Dynamic) : Void;
 	
 	/**
 	* set character encoding name
 	*/
-	@:overload public function setCharacterEncoding(encoding : String) : Void;
+	@:overload @:public public function setCharacterEncoding(encoding : String) : Void;
 	
 	/**
 	* Return character encoding name
 	*/
-	@:overload public function getCharacterEncoding() : String;
+	@:overload @:public public function getCharacterEncoding() : String;
 	
 	/**
 	* Return major version to use in generated class files.
 	*/
-	@:overload public function getMajorVersion() : java.StdTypes.Int16;
+	@:overload @:public public function getMajorVersion() : java.StdTypes.Int16;
 	
 	/**
 	* Return minor version to use in generated class files.
 	*/
-	@:overload public function getMinorVersion() : java.StdTypes.Int16;
+	@:overload @:public public function getMinorVersion() : java.StdTypes.Int16;
 	
 	/**
 	*  get coverage flag
 	*/
-	@:overload @:final public function coverage() : Bool;
+	@:overload @:public @:final public function coverage() : Bool;
 	
 	/**
 	*  get flag of generation the coverage data file
 	*/
-	@:overload @:final public function covdata() : Bool;
+	@:overload @:public @:final public function covdata() : Bool;
 	
 	/**
 	* Return the coverage data file
 	*/
-	@:overload public function getcovFile() : java.io.File;
+	@:overload @:public public function getcovFile() : java.io.File;
 	
-	@:overload public function dtEnter(s : String) : Void;
+	@:overload @:public public function dtEnter(s : String) : Void;
 	
-	@:overload public function dtExit(s : String) : Void;
+	@:overload @:public public function dtExit(s : String) : Void;
 	
-	@:overload public function dtEvent(s : String) : Void;
+	@:overload @:public public function dtEvent(s : String) : Void;
 	
-	@:overload public function dumpModifiers() : Bool;
+	@:overload @:public public function dumpModifiers() : Bool;
 	
 	
 }

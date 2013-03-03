@@ -51,31 +51,31 @@ package com.sun.xml.internal.rngom.digested;
 	*
 	* @author <A href="mailto:demakov@ispras.ru">Alexey Demakov</A>
 	*/
-	private var out : javax.xml.stream.XMLStreamWriter;
+	@:protected private var out : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public function new(out : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(out : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function print(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function print(node : org.w3c.dom.Node) : Void;
 	
-	@:overload private function visitChildren(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function visitChildren(node : org.w3c.dom.Node) : Void;
 	
-	@:overload private function visitDocument(document : org.w3c.dom.Document) : Void;
+	@:overload @:protected private function visitDocument(document : org.w3c.dom.Document) : Void;
 	
-	@:overload private function visitDocumentFragment(documentFragment : org.w3c.dom.DocumentFragment) : Void;
+	@:overload @:protected private function visitDocumentFragment(documentFragment : org.w3c.dom.DocumentFragment) : Void;
 	
-	@:overload private function visitElement(node : org.w3c.dom.Element) : Void;
+	@:overload @:protected private function visitElement(node : org.w3c.dom.Element) : Void;
 	
-	@:overload private function visitAttr(node : org.w3c.dom.Attr) : Void;
+	@:overload @:protected private function visitAttr(node : org.w3c.dom.Attr) : Void;
 	
-	@:overload private function visitComment(comment : org.w3c.dom.Comment) : Void;
+	@:overload @:protected private function visitComment(comment : org.w3c.dom.Comment) : Void;
 	
-	@:overload private function visitText(node : org.w3c.dom.Text) : Void;
+	@:overload @:protected private function visitText(node : org.w3c.dom.Text) : Void;
 	
-	@:overload private function visitCDATASection(cdata : org.w3c.dom.CDATASection) : Void;
+	@:overload @:protected private function visitCDATASection(cdata : org.w3c.dom.CDATASection) : Void;
 	
-	@:overload private function visitProcessingInstruction(processingInstruction : org.w3c.dom.ProcessingInstruction) : Void;
+	@:overload @:protected private function visitProcessingInstruction(processingInstruction : org.w3c.dom.ProcessingInstruction) : Void;
 	
-	@:overload private function visitReference(entityReference : org.w3c.dom.EntityReference) : Void;
+	@:overload @:protected private function visitReference(entityReference : org.w3c.dom.EntityReference) : Void;
 	
 	
 }

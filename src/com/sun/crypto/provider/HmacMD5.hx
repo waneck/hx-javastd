@@ -33,14 +33,14 @@ extern class HmacMD5 extends javax.crypto.MacSpi implements java.lang.Cloneable
 	/**
 	* Standard constructor, creates a new HmacMD5 instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the length of the HMAC in bytes.
 	*
 	* @return the HMAC length in bytes.
 	*/
-	@:overload override private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
 	/**
 	* Initializes the HMAC with the given secret key and algorithm parameters.
@@ -53,14 +53,14 @@ extern class HmacMD5 extends javax.crypto.MacSpi implements java.lang.Cloneable
 	* @exception InvalidAlgorithmParameterException if the given algorithm
 	* parameters are inappropriate for this MAC.
 	*/
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Processes the given byte.
 	*
 	* @param input the input byte to be processed.
 	*/
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Processes the first <code>len</code> bytes in <code>input</code>,
@@ -70,9 +70,9 @@ extern class HmacMD5 extends javax.crypto.MacSpi implements java.lang.Cloneable
 	* @param offset the offset in <code>input</code> where the input starts.
 	* @param len the number of bytes to process.
 	*/
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Completes the HMAC computation and resets the HMAC for further use,
@@ -80,18 +80,18 @@ extern class HmacMD5 extends javax.crypto.MacSpi implements java.lang.Cloneable
 	*
 	* @return the HMAC result.
 	*/
-	@:overload override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Resets the HMAC for further use, maintaining the secret key that the
 	* HMAC was initialized with.
 	*/
-	@:overload override private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
 	/*
 	* Clones this object.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

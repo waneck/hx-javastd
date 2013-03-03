@@ -28,12 +28,12 @@ package sun.security.ssl;
 	/**
 	* Returns the <code>SSLSession</code> bound to the specified session id.
 	*/
-	@:overload public function getSession(sessionId : java.NativeArray<java.StdTypes.Int8>) : javax.net.ssl.SSLSession;
+	@:overload @:public public function getSession(sessionId : java.NativeArray<java.StdTypes.Int8>) : javax.net.ssl.SSLSession;
 	
 	/**
 	* Returns an enumeration of the active SSL sessions.
 	*/
-	@:overload public function getIds() : java.util.Enumeration<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function getIds() : java.util.Enumeration<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/**
 	* Sets the timeout limit for cached <code>SSLSession</code> objects
@@ -42,32 +42,32 @@ package sun.security.ssl;
 	* should be timed within the shorter one of the old timeout and the
 	* new timeout.
 	*/
-	@:overload public function setSessionTimeout(seconds : Int) : Void;
+	@:overload @:public public function setSessionTimeout(seconds : Int) : Void;
 	
 	/**
 	* Gets the timeout limit for cached <code>SSLSession</code> objects
 	*/
-	@:overload public function getSessionTimeout() : Int;
+	@:overload @:public public function getSessionTimeout() : Int;
 	
 	/**
 	* Sets the size of the cache used for storing
 	* <code>SSLSession</code> objects.
 	*/
-	@:overload public function setSessionCacheSize(size : Int) : Void;
+	@:overload @:public public function setSessionCacheSize(size : Int) : Void;
 	
 	/**
 	* Gets the size of the cache used for storing
 	* <code>SSLSession</code> objects.
 	*/
-	@:overload public function getSessionCacheSize() : Int;
+	@:overload @:public public function getSessionCacheSize() : Int;
 	
 	
 }
 @:native('sun$security$ssl$SSLSessionContextImpl$SessionCacheVisitor') @:internal extern class SSLSessionContextImpl_SessionCacheVisitor implements sun.security.util.Cache.Cache_CacheVisitor
 {
-	@:overload public function visit(map : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function visit(map : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function getSessionIds() : java.util.Enumeration<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function getSessionIds() : java.util.Enumeration<java.NativeArray<java.StdTypes.Int8>>;
 	
 	
 }

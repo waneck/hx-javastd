@@ -45,7 +45,7 @@ extern class UIManager implements java.io.Serializable
 	* @return an array of <code>LookAndFeelInfo</code> objects
 	* @see #setLookAndFeel
 	*/
-	@:overload public static function getInstalledLookAndFeels() : java.NativeArray<javax.swing.UIManager.UIManager_LookAndFeelInfo>;
+	@:overload @:public @:static public static function getInstalledLookAndFeels() : java.NativeArray<javax.swing.UIManager.UIManager_LookAndFeelInfo>;
 	
 	/**
 	* Sets the set of available look and feels. While this method does
@@ -59,7 +59,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #getInstalledLookAndFeels
 	* @throws NullPointerException if {@code infos} is {@code null}
 	*/
-	@:overload public static function setInstalledLookAndFeels(infos : java.NativeArray<javax.swing.UIManager.UIManager_LookAndFeelInfo>) : Void;
+	@:overload @:public @:static public static function setInstalledLookAndFeels(infos : java.NativeArray<javax.swing.UIManager.UIManager_LookAndFeelInfo>) : Void;
 	
 	/**
 	* Adds the specified look and feel to the set of available look
@@ -70,7 +70,7 @@ extern class UIManager implements java.io.Serializable
 	*          look and feel and identifies the class that implements it
 	* @see #setInstalledLookAndFeels
 	*/
-	@:overload public static function installLookAndFeel(info : javax.swing.UIManager.UIManager_LookAndFeelInfo) : Void;
+	@:overload @:public @:static public static function installLookAndFeel(info : javax.swing.UIManager.UIManager_LookAndFeelInfo) : Void;
 	
 	/**
 	* Adds the specified look and feel to the set of available look
@@ -82,7 +82,7 @@ extern class UIManager implements java.io.Serializable
 	* @param className name of the class that implements the look and feel
 	* @see #setInstalledLookAndFeels
 	*/
-	@:overload public static function installLookAndFeel(name : String, className : String) : Void;
+	@:overload @:public @:static public static function installLookAndFeel(name : String, className : String) : Void;
 	
 	/**
 	* Returns the current look and feel or <code>null</code>.
@@ -90,7 +90,7 @@ extern class UIManager implements java.io.Serializable
 	* @return current look and feel, or <code>null</code>
 	* @see #setLookAndFeel
 	*/
-	@:overload public static function getLookAndFeel() : javax.swing.LookAndFeel;
+	@:overload @:public @:static public static function getLookAndFeel() : javax.swing.LookAndFeel;
 	
 	/**
 	* Sets the current look and feel to {@code newLookAndFeel}.
@@ -116,7 +116,7 @@ extern class UIManager implements java.io.Serializable
 	*          {@code false}
 	* @see #getLookAndFeel
 	*/
-	@:overload public static function setLookAndFeel(newLookAndFeel : javax.swing.LookAndFeel) : Void;
+	@:overload @:public @:static public static function setLookAndFeel(newLookAndFeel : javax.swing.LookAndFeel) : Void;
 	
 	/**
 	* Loads the {@code LookAndFeel} specified by the given class
@@ -135,7 +135,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws ClassCastException if {@code className} does not identify
 	*         a class that extends {@code LookAndFeel}
 	*/
-	@:overload public static function setLookAndFeel(className : String) : Void;
+	@:overload @:public @:static public static function setLookAndFeel(className : String) : Void;
 	
 	/**
 	* Returns the name of the <code>LookAndFeel</code> class that implements
@@ -150,7 +150,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #setLookAndFeel
 	* @see #getCrossPlatformLookAndFeelClassName
 	*/
-	@:overload public static function getSystemLookAndFeelClassName() : String;
+	@:overload @:public @:static public static function getSystemLookAndFeelClassName() : String;
 	
 	/**
 	* Returns the name of the <code>LookAndFeel</code> class that implements
@@ -162,7 +162,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #setLookAndFeel
 	* @see #getSystemLookAndFeelClassName
 	*/
-	@:overload public static function getCrossPlatformLookAndFeelClassName() : String;
+	@:overload @:public @:static public static function getCrossPlatformLookAndFeelClassName() : String;
 	
 	/**
 	* Returns the defaults. The returned defaults resolve using the
@@ -170,7 +170,7 @@ extern class UIManager implements java.io.Serializable
 	*
 	* @return a <code>UIDefaults</code> object containing the default values
 	*/
-	@:overload public static function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public @:static public static function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Returns a font from the defaults. If the value for {@code key} is
@@ -180,7 +180,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Font</code> object
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getFont(key : Dynamic) : java.awt.Font;
+	@:overload @:public @:static public static function getFont(key : Dynamic) : java.awt.Font;
 	
 	/**
 	* Returns a font from the defaults that is appropriate
@@ -195,7 +195,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getFont(key : Dynamic, l : java.util.Locale) : java.awt.Font;
+	@:require(java4) @:overload @:public @:static public static function getFont(key : Dynamic, l : java.util.Locale) : java.awt.Font;
 	
 	/**
 	* Returns a color from the defaults. If the value for {@code key} is
@@ -205,7 +205,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Color</code> object
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getColor(key : Dynamic) : java.awt.Color;
+	@:overload @:public @:static public static function getColor(key : Dynamic) : java.awt.Color;
 	
 	/**
 	* Returns a color from the defaults that is appropriate
@@ -220,7 +220,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getColor(key : Dynamic, l : java.util.Locale) : java.awt.Color;
+	@:require(java4) @:overload @:public @:static public static function getColor(key : Dynamic, l : java.util.Locale) : java.awt.Color;
 	
 	/**
 	* Returns an <code>Icon</code> from the defaults. If the value for
@@ -230,7 +230,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Icon</code> object
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getIcon(key : Dynamic) : javax.swing.Icon;
+	@:overload @:public @:static public static function getIcon(key : Dynamic) : javax.swing.Icon;
 	
 	/**
 	* Returns an <code>Icon</code> from the defaults that is appropriate
@@ -245,7 +245,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getIcon(key : Dynamic, l : java.util.Locale) : javax.swing.Icon;
+	@:require(java4) @:overload @:public @:static public static function getIcon(key : Dynamic, l : java.util.Locale) : javax.swing.Icon;
 	
 	/**
 	* Returns a border from the defaults. If the value for
@@ -255,7 +255,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Border</code> object
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getBorder(key : Dynamic) : javax.swing.border.Border;
+	@:overload @:public @:static public static function getBorder(key : Dynamic) : javax.swing.border.Border;
 	
 	/**
 	* Returns a border from the defaults that is appropriate
@@ -270,7 +270,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getBorder(key : Dynamic, l : java.util.Locale) : javax.swing.border.Border;
+	@:require(java4) @:overload @:public @:static public static function getBorder(key : Dynamic, l : java.util.Locale) : javax.swing.border.Border;
 	
 	/**
 	* Returns a string from the defaults. If the value for
@@ -280,7 +280,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>String</code>
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getString(key : Dynamic) : String;
+	@:overload @:public @:static public static function getString(key : Dynamic) : String;
 	
 	/**
 	* Returns a string from the defaults that is appropriate for the
@@ -295,7 +295,7 @@ extern class UIManager implements java.io.Serializable
 	* @since 1.4
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:require(java4) @:overload public static function getString(key : Dynamic, l : java.util.Locale) : String;
+	@:require(java4) @:overload @:public @:static public static function getString(key : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Returns an integer from the defaults. If the value for
@@ -306,7 +306,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the int
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getInt(key : Dynamic) : Int;
+	@:overload @:public @:static public static function getInt(key : Dynamic) : Int;
 	
 	/**
 	* Returns an integer from the defaults that is appropriate
@@ -322,7 +322,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInt(key : Dynamic, l : java.util.Locale) : Int;
+	@:require(java4) @:overload @:public @:static public static function getInt(key : Dynamic, l : java.util.Locale) : Int;
 	
 	/**
 	* Returns a boolean from the defaults which is associated with
@@ -334,7 +334,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getBoolean(key : Dynamic) : Bool;
+	@:require(java4) @:overload @:public @:static public static function getBoolean(key : Dynamic) : Bool;
 	
 	/**
 	* Returns a boolean from the defaults which is associated with
@@ -351,7 +351,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getBoolean(key : Dynamic, l : java.util.Locale) : Bool;
+	@:require(java4) @:overload @:public @:static public static function getBoolean(key : Dynamic, l : java.util.Locale) : Bool;
 	
 	/**
 	* Returns an <code>Insets</code> object from the defaults. If the value
@@ -361,7 +361,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Insets</code> object
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getInsets(key : Dynamic) : java.awt.Insets;
+	@:overload @:public @:static public static function getInsets(key : Dynamic) : java.awt.Insets;
 	
 	/**
 	* Returns an <code>Insets</code> object from the defaults that is
@@ -376,7 +376,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInsets(key : Dynamic, l : java.util.Locale) : java.awt.Insets;
+	@:require(java4) @:overload @:public @:static public static function getInsets(key : Dynamic, l : java.util.Locale) : java.awt.Insets;
 	
 	/**
 	* Returns a dimension from the defaults. If the value
@@ -386,7 +386,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Dimension</code> object
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function getDimension(key : Dynamic) : java.awt.Dimension;
+	@:overload @:public @:static public static function getDimension(key : Dynamic) : java.awt.Dimension;
 	
 	/**
 	* Returns a dimension from the defaults that is appropriate
@@ -401,7 +401,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getDimension(key : Dynamic, l : java.util.Locale) : java.awt.Dimension;
+	@:require(java4) @:overload @:public @:static public static function getDimension(key : Dynamic, l : java.util.Locale) : java.awt.Dimension;
 	
 	/**
 	* Returns an object from the defaults.
@@ -410,7 +410,7 @@ extern class UIManager implements java.io.Serializable
 	* @return the <code>Object</code>
 	* @throws NullPointerException if {@code key} is {@code null}
 	*/
-	@:overload public static function get(key : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an object from the defaults that is appropriate for
@@ -424,7 +424,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function get(key : Dynamic, l : java.util.Locale) : Dynamic;
+	@:require(java4) @:overload @:public @:static public static function get(key : Dynamic, l : java.util.Locale) : Dynamic;
 	
 	/**
 	* Stores an object in the developer defaults. This is a cover method
@@ -439,7 +439,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code key} is {@code null}
 	* @see UIDefaults#put
 	*/
-	@:overload public static function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the appropriate {@code ComponentUI} implementation for
@@ -455,7 +455,7 @@ extern class UIManager implements java.io.Serializable
 	* @throws NullPointerException if {@code target} is {@code null}
 	* @see UIDefaults#getUI
 	*/
-	@:overload public static function getUI(target : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function getUI(target : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Returns the {@code UIDefaults} from the current look and feel,
@@ -471,7 +471,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #setLookAndFeel(LookAndFeel)
 	* @see LookAndFeel#getDefaults
 	*/
-	@:overload public static function getLookAndFeelDefaults() : javax.swing.UIDefaults;
+	@:overload @:public @:static public static function getLookAndFeelDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Adds a <code>LookAndFeel</code> to the list of auxiliary look and feels.
@@ -489,7 +489,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #getAuxiliaryLookAndFeels
 	* @see #getInstalledLookAndFeels
 	*/
-	@:overload public static function addAuxiliaryLookAndFeel(laf : javax.swing.LookAndFeel) : Void;
+	@:overload @:static @:public public static function addAuxiliaryLookAndFeel(laf : javax.swing.LookAndFeel) : Void;
 	
 	/**
 	* Removes a <code>LookAndFeel</code> from the list of auxiliary look and feels.
@@ -506,7 +506,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #setLookAndFeel
 	* @see #getInstalledLookAndFeels
 	*/
-	@:overload public static function removeAuxiliaryLookAndFeel(laf : javax.swing.LookAndFeel) : Bool;
+	@:overload @:static @:public public static function removeAuxiliaryLookAndFeel(laf : javax.swing.LookAndFeel) : Bool;
 	
 	/**
 	* Returns the list of auxiliary look and feels (can be <code>null</code>).
@@ -522,7 +522,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #setLookAndFeel
 	* @see #getInstalledLookAndFeels
 	*/
-	@:overload public static function getAuxiliaryLookAndFeels() : java.NativeArray<javax.swing.LookAndFeel>;
+	@:overload @:static @:public public static function getAuxiliaryLookAndFeels() : java.NativeArray<javax.swing.LookAndFeel>;
 	
 	/**
 	* Adds a <code>PropertyChangeListener</code> to the listener list.
@@ -531,7 +531,7 @@ extern class UIManager implements java.io.Serializable
 	* @param listener  the <code>PropertyChangeListener</code> to be added
 	* @see java.beans.PropertyChangeSupport
 	*/
-	@:overload public static function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:static public static function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChangeListener</code> from the listener list.
@@ -541,7 +541,7 @@ extern class UIManager implements java.io.Serializable
 	* @param listener  the <code>PropertyChangeListener</code> to be removed
 	* @see java.beans.PropertyChangeSupport
 	*/
-	@:overload public static function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:static public static function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>PropertyChangeListener</code>s added
@@ -551,7 +551,7 @@ extern class UIManager implements java.io.Serializable
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:static public static function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	
 }
@@ -574,7 +574,7 @@ extern class UIManager implements java.io.Serializable
 	* <code>create</code> is false and this has not been invoked
 	* with true, null will be returned.
 	*/
-	@:overload @:synchronized public function getPropertyChangeSupport(create : Bool) : javax.swing.event.SwingPropertyChangeSupport;
+	@:overload @:public @:synchronized public function getPropertyChangeSupport(create : Bool) : javax.swing.event.SwingPropertyChangeSupport;
 	
 	
 }
@@ -597,7 +597,7 @@ extern class UIManager implements java.io.Serializable
 	* @param className a <code>String</code> specifiying the name of
 	*                      the class that implements the look and feel
 	*/
-	@:overload public function new(name : String, className : String) : Void;
+	@:overload @:public public function new(name : String, className : String) : Void;
 	
 	/**
 	* Returns the name of the look and feel in a form suitable
@@ -605,7 +605,7 @@ extern class UIManager implements java.io.Serializable
 	* @return a <code>String</code> containing the name
 	* @see LookAndFeel#getName
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the name of the class that implements this look and feel.
@@ -613,7 +613,7 @@ extern class UIManager implements java.io.Serializable
 	*              <code>LookAndFeel</code>
 	* @see LookAndFeel
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -621,7 +621,7 @@ extern class UIManager implements java.io.Serializable
 	*
 	* @return a <code>String</code> representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

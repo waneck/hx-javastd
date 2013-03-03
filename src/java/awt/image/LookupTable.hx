@@ -52,19 +52,19 @@ extern class LookupTable
 	* @throws IllegalArgumentException if <code>offset</code> is less than 0
 	*         or if <code>numComponents</code> is less than 1
 	*/
-	@:overload private function new(offset : Int, numComponents : Int) : Void;
+	@:overload @:protected private function new(offset : Int, numComponents : Int) : Void;
 	
 	/**
 	* Returns the number of components in the lookup table.
 	* @return the number of components in this <code>LookupTable</code>.
 	*/
-	@:overload public function getNumComponents() : Int;
+	@:overload @:public public function getNumComponents() : Int;
 	
 	/**
 	* Returns the offset.
 	* @return the offset of this <code>LookupTable</code>.
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Returns an <code>int</code> array of components for
@@ -78,7 +78,7 @@ extern class LookupTable
 	* @return an <code>int</code> array of components for one
 	*         pixel.
 	*/
-	@:overload @:abstract public function lookupPixel(src : java.NativeArray<Int>, dest : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public @:abstract public function lookupPixel(src : java.NativeArray<Int>, dest : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	
 }

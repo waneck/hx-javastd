@@ -52,7 +52,7 @@ package java.text;
 	* of its large size.  For source-code readability, it seemed better for the
 	* builder to have its own source file.
 	*/
-	@:overload public function new(tables : java.text.RBCollationTables.RBCollationTables_BuildAPI) : Void;
+	@:overload @:public public function new(tables : java.text.RBCollationTables.RBCollationTables_BuildAPI) : Void;
 	
 	/**
 	* Create a table-based collation object with the given rules.
@@ -62,7 +62,7 @@ package java.text;
 	* @see java.util.RuleBasedCollator#RuleBasedCollator
 	* @exception ParseException If the rules format is incorrect.
 	*/
-	@:overload public function build(pattern : String, decmp : Int) : Void;
+	@:overload @:public public function build(pattern : String, decmp : Int) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package sun.awt.X11;
 */
 extern class XMouseInfoPeer implements java.awt.peer.MouseInfoPeer
 {
-	@:overload public function fillPointWithCoords(point : java.awt.Point) : Int;
+	@:overload @:public public function fillPointWithCoords(point : java.awt.Point) : Int;
 	
-	@:overload public function isWindowUnderMouse(w : java.awt.Window) : Bool;
+	@:overload @:public public function isWindowUnderMouse(w : java.awt.Window) : Bool;
 	
 	
 }

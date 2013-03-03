@@ -91,7 +91,7 @@ package javax.management;
 	*    if the given {@code implementation} does not implement the
 	*    specified interface, or if {@code emitter} is null.
 	*/
-	@:overload public function new<T>(implementation : T, mbeanInterface : Class<T>, emitter : javax.management.NotificationEmitter) : Void;
+	@:overload @:public public function new<T>(implementation : T, mbeanInterface : Class<T>, emitter : javax.management.NotificationEmitter) : Void;
 	
 	/**
 	* <p>Make an MBean whose management interface is specified by
@@ -128,7 +128,7 @@ package javax.management;
 	*    if the given {@code implementation} does not implement the
 	*    specified interface, or if {@code emitter} is null.
 	*/
-	@:overload public function new<T>(implementation : T, mbeanInterface : Class<T>, isMXBean : Bool, emitter : javax.management.NotificationEmitter) : Void;
+	@:overload @:public public function new<T>(implementation : T, mbeanInterface : Class<T>, isMXBean : Bool, emitter : javax.management.NotificationEmitter) : Void;
 	
 	/**
 	* <p>Make an MBean whose management interface is specified by
@@ -161,7 +161,7 @@ package javax.management;
 	*    if {@code this} does not implement the specified interface, or
 	*    if {@code emitter} is null.
 	*/
-	@:overload private function new(mbeanInterface : Class<Dynamic>, emitter : javax.management.NotificationEmitter) : Void;
+	@:overload @:protected private function new(mbeanInterface : Class<Dynamic>, emitter : javax.management.NotificationEmitter) : Void;
 	
 	/**
 	* <p>Make an MBean whose management interface is specified by
@@ -197,15 +197,15 @@ package javax.management;
 	*    if {@code this} does not implement the specified interface, or
 	*    if {@code emitter} is null.
 	*/
-	@:overload private function new(mbeanInterface : Class<Dynamic>, isMXBean : Bool, emitter : javax.management.NotificationEmitter) : Void;
+	@:overload @:protected private function new(mbeanInterface : Class<Dynamic>, isMXBean : Bool, emitter : javax.management.NotificationEmitter) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	/**
 	* <p>Sends a notification.</p>
@@ -221,7 +221,7 @@ package javax.management;
 	* @throws ClassCastException if the {@code emitter} parameter to the
 	* constructor was not a {@code NotificationBroadcasterSupport}.
 	*/
-	@:overload public function sendNotification(n : javax.management.Notification) : Void;
+	@:overload @:public public function sendNotification(n : javax.management.Notification) : Void;
 	
 	
 }

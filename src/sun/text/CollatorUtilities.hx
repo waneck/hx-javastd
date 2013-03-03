@@ -25,9 +25,9 @@ package sun.text;
 */
 extern class CollatorUtilities
 {
-	@:overload public static function toLegacyMode(mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Int;
+	@:overload @:public @:static public static function toLegacyMode(mode : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode) : Int;
 	
-	@:overload public static function toNormalizerMode(mode : Int) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
+	@:overload @:public @:static public static function toNormalizerMode(mode : Int) : sun.text.normalizer.NormalizerBase.NormalizerBase_Mode;
 	
 	
 }

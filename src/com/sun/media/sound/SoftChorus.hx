@@ -25,19 +25,19 @@ package com.sun.media.sound;
 */
 extern class SoftChorus implements com.sun.media.sound.SoftAudioProcessor
 {
-	@:overload public function init(samplerate : Single, controlrate : Single) : Void;
+	@:overload @:public public function init(samplerate : Single, controlrate : Single) : Void;
 	
-	@:overload public function globalParameterControlChange(slothpath : java.NativeArray<Int>, param : haxe.Int64, value : haxe.Int64) : Void;
+	@:overload @:public public function globalParameterControlChange(slothpath : java.NativeArray<Int>, param : haxe.Int64, value : haxe.Int64) : Void;
 	
-	@:overload public function processControlLogic() : Void;
+	@:overload @:public public function processControlLogic() : Void;
 	
-	@:overload public function processAudio() : Void;
+	@:overload @:public public function processAudio() : Void;
 	
-	@:overload public function setInput(pin : Int, input : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function setInput(pin : Int, input : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function setMixMode(mix : Bool) : Void;
+	@:overload @:public public function setMixMode(mix : Bool) : Void;
 	
-	@:overload public function setOutput(pin : Int, output : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function setOutput(pin : Int, output : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
 	
 }
@@ -49,41 +49,41 @@ extern class SoftChorus implements com.sun.media.sound.SoftAudioProcessor
 */
 @:native('com$sun$media$sound$SoftChorus$VariableDelay') @:internal extern class SoftChorus_VariableDelay
 {
-	@:overload public function new(maxbuffersize : Int) : Void;
+	@:overload @:public public function new(maxbuffersize : Int) : Void;
 	
-	@:overload public function setDelay(delay : Single) : Void;
+	@:overload @:public public function setDelay(delay : Single) : Void;
 	
-	@:overload public function setFeedBack(feedback : Single) : Void;
+	@:overload @:public public function setFeedBack(feedback : Single) : Void;
 	
-	@:overload public function setGain(gain : Single) : Void;
+	@:overload @:public public function setGain(gain : Single) : Void;
 	
-	@:overload public function setReverbSendGain(rgain : Single) : Void;
+	@:overload @:public public function setReverbSendGain(rgain : Single) : Void;
 	
-	@:overload public function processMix(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
+	@:overload @:public public function processMix(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
 	
-	@:overload public function processReplace(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
+	@:overload @:public public function processReplace(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftChorus$LFODelay') @:internal extern class SoftChorus_LFODelay
 {
-	@:overload public function new(samplerate : Float, controlrate : Float) : Void;
+	@:overload @:public public function new(samplerate : Float, controlrate : Float) : Void;
 	
-	@:overload public function setDepth(depth : Float) : Void;
+	@:overload @:public public function setDepth(depth : Float) : Void;
 	
-	@:overload public function setRate(rate : Float) : Void;
+	@:overload @:public public function setRate(rate : Float) : Void;
 	
-	@:overload public function setPhase(phase : Float) : Void;
+	@:overload @:public public function setPhase(phase : Float) : Void;
 	
-	@:overload public function setFeedBack(feedback : Single) : Void;
+	@:overload @:public public function setFeedBack(feedback : Single) : Void;
 	
-	@:overload public function setGain(gain : Single) : Void;
+	@:overload @:public public function setGain(gain : Single) : Void;
 	
-	@:overload public function setReverbSendGain(rgain : Single) : Void;
+	@:overload @:public public function setReverbSendGain(rgain : Single) : Void;
 	
-	@:overload public function processMix(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
+	@:overload @:public public function processMix(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
 	
-	@:overload public function processReplace(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
+	@:overload @:public public function processReplace(_in : java.NativeArray<Single>, out : java.NativeArray<Single>, rout : java.NativeArray<Single>) : Void;
 	
 	
 }

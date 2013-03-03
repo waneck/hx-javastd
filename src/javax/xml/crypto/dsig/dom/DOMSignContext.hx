@@ -42,7 +42,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @throws NullPointerException if <code>signingKey</code> or
 	*    <code>parent</code> is <code>null</code>
 	*/
-	@:overload public function new(signingKey : java.security.Key, parent : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(signingKey : java.security.Key, parent : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Creates a <code>DOMSignContext</code> with the specified signing key,
@@ -59,7 +59,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @throws NullPointerException if <code>signingKey</code>,
 	*    <code>parent</code> or <code>nextSibling</code> is <code>null</code>
 	*/
-	@:overload public function new(signingKey : java.security.Key, parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(signingKey : java.security.Key, parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Creates a <code>DOMSignContext</code> with the specified key selector
@@ -73,7 +73,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @throws NullPointerException if <code>ks</code> or <code>parent</code>
 	*    is <code>null</code>
 	*/
-	@:overload public function new(ks : javax.xml.crypto.KeySelector, parent : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(ks : javax.xml.crypto.KeySelector, parent : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Creates a <code>DOMSignContext</code> with the specified key selector,
@@ -87,7 +87,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @throws NullPointerException if <code>ks</code>, <code>parent</code> or
 	*    <code>nextSibling</code> is <code>null</code>
 	*/
-	@:overload public function new(ks : javax.xml.crypto.KeySelector, parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(ks : javax.xml.crypto.KeySelector, parent : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Sets the parent node.
@@ -97,7 +97,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @throws NullPointerException if <code>parent</code> is <code>null</code>
 	* @see #getParent
 	*/
-	@:overload public function setParent(parent : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setParent(parent : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Sets the next sibling node.
@@ -107,7 +107,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	*    node. Specify <code>null</code> to remove the current setting.
 	* @see #getNextSibling
 	*/
-	@:overload public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Returns the parent node.
@@ -115,7 +115,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @return the parent node (never <code>null</code>)
 	* @see #setParent(Node)
 	*/
-	@:overload public function getParent() : org.w3c.dom.Node;
+	@:overload @:public public function getParent() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the nextSibling node.
@@ -123,7 +123,7 @@ extern class DOMSignContext extends javax.xml.crypto.dom.DOMCryptoContext implem
 	* @return the nextSibling node, or <code>null</code> if not specified.
 	* @see #setNextSibling(Node)
 	*/
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	
 }

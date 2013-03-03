@@ -31,7 +31,7 @@ package com.sun.rowset.internal;
 */
 extern class WebRowSetXmlReader implements javax.sql.rowset.spi.XmlReader implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Parses the given <code>WebRowSet</code> object, getting its input from
@@ -56,7 +56,7 @@ extern class WebRowSetXmlReader implements javax.sql.rowset.spi.XmlReader implem
 	*            reader for the given rowset
 	* @see XmlReaderContentHandler
 	*/
-	@:overload public function readXML(caller : javax.sql.rowset.WebRowSet, reader : java.io.Reader) : Void;
+	@:overload @:public public function readXML(caller : javax.sql.rowset.WebRowSet, reader : java.io.Reader) : Void;
 	
 	/**
 	* Parses the given <code>WebRowSet</code> object, getting its input from
@@ -83,13 +83,13 @@ extern class WebRowSetXmlReader implements javax.sql.rowset.spi.XmlReader implem
 	*            reader for the given rowset
 	* @see XmlReaderContentHandler
 	*/
-	@:overload public function readXML(caller : javax.sql.rowset.WebRowSet, iStream : java.io.InputStream) : Void;
+	@:overload @:public public function readXML(caller : javax.sql.rowset.WebRowSet, iStream : java.io.InputStream) : Void;
 	
 	/**
 	* For code coverage purposes only right now
 	*
 	*/
-	@:overload public function readData(caller : javax.sql.RowSetInternal) : Void;
+	@:overload @:public public function readData(caller : javax.sql.RowSetInternal) : Void;
 	
 	
 }

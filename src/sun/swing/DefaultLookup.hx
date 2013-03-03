@@ -30,35 +30,35 @@ extern class DefaultLookup
 	* <code>AppContext</code>. Null implies the UIManager should be
 	* used.
 	*/
-	@:overload public static function setDefaultLookup(lookup : sun.swing.DefaultLookup) : Void;
+	@:overload @:public @:static public static function setDefaultLookup(lookup : sun.swing.DefaultLookup) : Void;
 	
-	@:overload public static function get(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
+	@:overload @:public @:static public static function get(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
 	
-	@:overload public static function getInt(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : Int) : Int;
+	@:overload @:public @:static public static function getInt(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : Int) : Int;
 	
-	@:overload public static function getInt(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Int;
+	@:overload @:public @:static public static function getInt(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Int;
 	
-	@:overload public static function getInsets(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public @:static public static function getInsets(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload public static function getInsets(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : java.awt.Insets;
+	@:overload @:public @:static public static function getInsets(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : java.awt.Insets;
 	
-	@:overload public static function getBoolean(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : Bool) : Bool;
+	@:overload @:public @:static public static function getBoolean(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : Bool) : Bool;
 	
-	@:overload public static function getBoolean(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Bool;
+	@:overload @:public @:static public static function getBoolean(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Bool;
 	
-	@:overload public static function getColor(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : java.awt.Color) : java.awt.Color;
+	@:overload @:public @:static public static function getColor(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : java.awt.Color) : java.awt.Color;
 	
-	@:overload public static function getColor(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : java.awt.Color;
+	@:overload @:public @:static public static function getColor(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : java.awt.Color;
 	
-	@:overload public static function getIcon(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : javax.swing.Icon) : javax.swing.Icon;
+	@:overload @:public @:static public static function getIcon(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : javax.swing.Icon) : javax.swing.Icon;
 	
-	@:overload public static function getIcon(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : javax.swing.Icon;
+	@:overload @:public @:static public static function getIcon(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : javax.swing.Icon;
 	
-	@:overload public static function getBorder(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : javax.swing.border.Border) : javax.swing.border.Border;
+	@:overload @:public @:static public static function getBorder(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String, defaultValue : javax.swing.border.Border) : javax.swing.border.Border;
 	
-	@:overload public static function getBorder(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : javax.swing.border.Border;
+	@:overload @:public @:static public static function getBorder(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : javax.swing.border.Border;
 	
-	@:overload public function getDefault(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
+	@:overload @:public public function getDefault(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
 	
 	
 }

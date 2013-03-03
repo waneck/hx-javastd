@@ -28,21 +28,21 @@ package sun.java2d.loops;
 */
 extern class GraphicsPrimitive
 {
-	@:overload @:synchronized @:final public static function makePrimTypeID() : Int;
+	@:overload @:public @:synchronized @:static @:final public static function makePrimTypeID() : Int;
 	
-	@:overload @:synchronized @:final public static function makeUniqueID(primTypeID : Int, src : sun.java2d.loops.SurfaceType, cmp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Int;
+	@:overload @:public @:synchronized @:static @:final public static function makeUniqueID(primTypeID : Int, src : sun.java2d.loops.SurfaceType, cmp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Int;
 	
 	/**
 	* Create a new GraphicsPrimitive with all of the required
 	* descriptive information.
 	*/
-	@:overload private function new(methodSignature : String, primTypeID : Int, sourceType : sun.java2d.loops.SurfaceType, compositeType : sun.java2d.loops.CompositeType, destType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(methodSignature : String, primTypeID : Int, sourceType : sun.java2d.loops.SurfaceType, compositeType : sun.java2d.loops.CompositeType, destType : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	* Create a new GraphicsPrimitive for native invocation
 	* with all of the required descriptive information.
 	*/
-	@:overload private function new(pNativePrim : haxe.Int64, methodSignature : String, primTypeID : Int, sourceType : sun.java2d.loops.SurfaceType, compositeType : sun.java2d.loops.CompositeType, destType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(pNativePrim : haxe.Int64, methodSignature : String, primTypeID : Int, sourceType : sun.java2d.loops.SurfaceType, compositeType : sun.java2d.loops.CompositeType, destType : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	* Gets instance ID of this graphics primitive.
@@ -58,11 +58,11 @@ extern class GraphicsPrimitive
 	*
 	* @return instance ID
 	*/
-	@:overload @:final public function getUniqueID() : Int;
+	@:overload @:public @:final public function getUniqueID() : Int;
 	
 	/**
 	*/
-	@:overload @:final public function getSignature() : String;
+	@:overload @:public @:final public function getSignature() : String;
 	
 	/**
 	* Gets unique id for this GraphicsPrimitive type.
@@ -72,23 +72,23 @@ extern class GraphicsPrimitive
 	*
 	* @return primitive ID
 	*/
-	@:overload @:final public function getPrimTypeID() : Int;
+	@:overload @:public @:final public function getPrimTypeID() : Int;
 	
 	/**
 	*/
-	@:overload @:final public function getNativePrim() : haxe.Int64;
+	@:overload @:public @:final public function getNativePrim() : haxe.Int64;
 	
 	/**
 	*/
-	@:overload @:final public function getSourceType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public @:final public function getSourceType() : sun.java2d.loops.SurfaceType;
 	
 	/**
 	*/
-	@:overload @:final public function getCompositeType() : sun.java2d.loops.CompositeType;
+	@:overload @:public @:final public function getCompositeType() : sun.java2d.loops.CompositeType;
 	
 	/**
 	*/
-	@:overload @:final public function getDestType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public @:final public function getDestType() : sun.java2d.loops.SurfaceType;
 	
 	/**
 	* Return true if this primitive can be used for the given signature
@@ -101,49 +101,49 @@ extern class GraphicsPrimitive
 	* @param comptype The composite type for the operation
 	* @param dsttype The surface type for the destination of the operation
 	*/
-	@:overload @:final public function satisfies(signature : String, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Bool;
+	@:overload @:public @:final public function satisfies(signature : String, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Bool;
 	
-	@:overload @:abstract public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public @:abstract public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload @:abstract public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public @:abstract public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	public static var traceflags : Int;
+	@:public @:static public static var traceflags : Int;
 	
-	public static var tracefile : String;
+	@:public @:static public static var tracefile : String;
 	
-	public static var traceout : java.io.PrintStream;
+	@:public @:static public static var traceout : java.io.PrintStream;
 	
-	public static var TRACELOG(default, null) : Int;
+	@:public @:static @:final public static var TRACELOG(default, null) : Int;
 	
-	public static var TRACETIMESTAMP(default, null) : Int;
+	@:public @:static @:final public static var TRACETIMESTAMP(default, null) : Int;
 	
-	public static var TRACECOUNTS(default, null) : Int;
+	@:public @:static @:final public static var TRACECOUNTS(default, null) : Int;
 	
-	@:overload public static function tracingEnabled() : Bool;
+	@:overload @:public @:static public static function tracingEnabled() : Bool;
 	
-	@:overload @:synchronized public static function tracePrimitive(prim : Dynamic) : Void;
+	@:overload @:public @:synchronized @:static public static function tracePrimitive(prim : Dynamic) : Void;
 	
-	@:overload private function setupGeneralBinaryOp(gbo : sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp) : Void;
+	@:overload @:protected private function setupGeneralBinaryOp(gbo : sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp) : Void;
 	
-	@:overload private function setupGeneralUnaryOp(guo : sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralUnaryOp) : Void;
+	@:overload @:protected private function setupGeneralUnaryOp(guo : sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralUnaryOp) : Void;
 	
-	@:overload private static function createConverter(srctype : sun.java2d.loops.SurfaceType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.Blit;
+	@:overload @:protected @:static private static function createConverter(srctype : sun.java2d.loops.SurfaceType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.Blit;
 	
-	@:overload private static function convertFrom(ob : sun.java2d.loops.Blit, srcData : sun.java2d.SurfaceData, srcX : Int, srcY : Int, w : Int, h : Int, dstData : sun.java2d.SurfaceData) : sun.java2d.SurfaceData;
+	@:overload @:protected @:static private static function convertFrom(ob : sun.java2d.loops.Blit, srcData : sun.java2d.SurfaceData, srcX : Int, srcY : Int, w : Int, h : Int, dstData : sun.java2d.SurfaceData) : sun.java2d.SurfaceData;
 	
-	@:overload private static function convertFrom(ob : sun.java2d.loops.Blit, srcData : sun.java2d.SurfaceData, srcX : Int, srcY : Int, w : Int, h : Int, dstData : sun.java2d.SurfaceData, type : Int) : sun.java2d.SurfaceData;
+	@:overload @:protected @:static private static function convertFrom(ob : sun.java2d.loops.Blit, srcData : sun.java2d.SurfaceData, srcX : Int, srcY : Int, w : Int, h : Int, dstData : sun.java2d.SurfaceData, type : Int) : sun.java2d.SurfaceData;
 	
-	@:overload private static function convertTo(ob : sun.java2d.loops.Blit, srcImg : sun.java2d.SurfaceData, dstImg : sun.java2d.SurfaceData, clip : sun.java2d.pipe.Region, dstX : Int, dstY : Int, w : Int, h : Int) : Void;
+	@:overload @:protected @:static private static function convertTo(ob : sun.java2d.loops.Blit, srcImg : sun.java2d.SurfaceData, dstImg : sun.java2d.SurfaceData, clip : sun.java2d.pipe.Region, dstX : Int, dstY : Int, w : Int, h : Int) : Void;
 	
-	@:overload private static function getGeneralOp(primID : Int, comptype : sun.java2d.loops.CompositeType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:protected @:static private static function getGeneralOp(primID : Int, comptype : sun.java2d.loops.CompositeType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload public static function simplename(fields : java.NativeArray<java.lang.reflect.Field>, o : Dynamic) : String;
+	@:overload @:public @:static public static function simplename(fields : java.NativeArray<java.lang.reflect.Field>, o : Dynamic) : String;
 	
-	@:overload public static function simplename(st : sun.java2d.loops.SurfaceType) : String;
+	@:overload @:public @:static public static function simplename(st : sun.java2d.loops.SurfaceType) : String;
 	
-	@:overload public static function simplename(ct : sun.java2d.loops.CompositeType) : String;
+	@:overload @:public @:static public static function simplename(ct : sun.java2d.loops.CompositeType) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -157,7 +157,7 @@ extern class GraphicsPrimitive
 	* This method allows the setupGeneralBinaryOp method to set
 	* the converters into the General version of the Primitive.
 	*/
-	@:overload public function setPrimitives(srcconverter : sun.java2d.loops.Blit, dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
+	@:overload @:public public function setPrimitives(srcconverter : sun.java2d.loops.Blit, dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
 	
 	/**
 	* These 4 methods are implemented automatically for any
@@ -165,15 +165,15 @@ extern class GraphicsPrimitive
 	* to retrieve the information needed to find the right
 	* converter primitives.
 	*/
-	@:overload public function getSourceType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public public function getSourceType() : sun.java2d.loops.SurfaceType;
 	
-	@:overload public function getCompositeType() : sun.java2d.loops.CompositeType;
+	@:overload @:public public function getCompositeType() : sun.java2d.loops.CompositeType;
 	
-	@:overload public function getDestType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public public function getDestType() : sun.java2d.loops.SurfaceType;
 	
-	@:overload public function getSignature() : String;
+	@:overload @:public public function getSignature() : String;
 	
-	@:overload public function getPrimTypeID() : Int;
+	@:overload @:public public function getPrimTypeID() : Int;
 	
 	
 }
@@ -183,7 +183,7 @@ extern class GraphicsPrimitive
 	* This method allows the setupGeneralUnaryOp method to set
 	* the converters into the General version of the Primitive.
 	*/
-	@:overload public function setPrimitives(dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
+	@:overload @:public public function setPrimitives(dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
 	
 	/**
 	* These 3 methods are implemented automatically for any
@@ -191,21 +191,21 @@ extern class GraphicsPrimitive
 	* to retrieve the information needed to find the right
 	* converter primitives.
 	*/
-	@:overload public function getCompositeType() : sun.java2d.loops.CompositeType;
+	@:overload @:public public function getCompositeType() : sun.java2d.loops.CompositeType;
 	
-	@:overload public function getDestType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public public function getDestType() : sun.java2d.loops.SurfaceType;
 	
-	@:overload public function getSignature() : String;
+	@:overload @:public public function getSignature() : String;
 	
-	@:overload public function getPrimTypeID() : Int;
+	@:overload @:public public function getPrimTypeID() : Int;
 	
 	
 }
 @:native('sun$java2d$loops$GraphicsPrimitive$TraceReporter') extern class GraphicsPrimitive_TraceReporter extends java.lang.Thread
 {
-	@:overload public static function setShutdownHook() : Void;
+	@:overload @:public @:static public static function setShutdownHook() : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

@@ -48,7 +48,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* @param alignment one of the alignments from this
 	* <code>ImageGraphicAttribute</code>
 	*/
-	@:overload public function new(image : java.awt.Image, alignment : Int) : Void;
+	@:overload @:public public function new(image : java.awt.Image, alignment : Int) : Void;
 	
 	/**
 	* Constructs an <code>ImageGraphicAttribute</code> from the specified
@@ -68,7 +68,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* the <code>Image</code> that appears at the origin of the
 	* <code>ImageGraphicAttribute</code> in the text line.
 	*/
-	@:overload public function new(image : java.awt.Image, alignment : Int, originX : Single, originY : Single) : Void;
+	@:overload @:public public function new(image : java.awt.Image, alignment : Int, originX : Single, originY : Single) : Void;
 	
 	/**
 	* Returns the ascent of this <code>ImageGraphicAttribute</code>.  The
@@ -76,7 +76,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* from the top of the image to the origin.
 	* @return the ascent of this <code>ImageGraphicAttribute</code>.
 	*/
-	@:overload override public function getAscent() : Single;
+	@:overload @:public override public function getAscent() : Single;
 	
 	/**
 	* Returns the descent of this <code>ImageGraphicAttribute</code>.
@@ -84,7 +84,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* distance from the origin to the bottom of the image.
 	* @return the descent of this <code>ImageGraphicAttribute</code>.
 	*/
-	@:overload override public function getDescent() : Single;
+	@:overload @:public override public function getDescent() : Single;
 	
 	/**
 	* Returns the advance of this <code>ImageGraphicAttribute</code>.
@@ -92,7 +92,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* distance from the origin to the right edge of the image.
 	* @return the advance of this <code>ImageGraphicAttribute</code>.
 	*/
-	@:overload override public function getAdvance() : Single;
+	@:overload @:public override public function getAdvance() : Single;
 	
 	/**
 	* Returns a {@link Rectangle2D} that encloses all of the
@@ -103,18 +103,18 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* @return a <code>Rectangle2D</code> that encloses all of the bits
 	* rendered by this <code>ImageGraphicAttribute</code>.
 	*/
-	@:overload override public function getBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function draw(graphics : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public override public function draw(graphics : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	/**
 	* Returns a hashcode for this <code>ImageGraphicAttribute</code>.
 	* @return  a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this <code>ImageGraphicAttribute</code> to the specified
@@ -124,7 +124,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* <code>ImageGraphicAttribute</code> equals <code>rhs</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public public function equals(rhs : Dynamic) : Bool;
 	
 	/**
 	* Compares this <code>ImageGraphicAttribute</code> to the specified
@@ -135,7 +135,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* <code>ImageGraphicAttribute</code> equals <code>rhs</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(rhs : java.awt.font.ImageGraphicAttribute) : Bool;
+	@:overload @:public public function equals(rhs : java.awt.font.ImageGraphicAttribute) : Bool;
 	
 	
 }

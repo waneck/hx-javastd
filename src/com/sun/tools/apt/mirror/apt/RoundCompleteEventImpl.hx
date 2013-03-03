@@ -25,7 +25,7 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class RoundCompleteEventImpl extends com.sun.mirror.apt.RoundCompleteEvent
 {
-	@:overload public function new(source : com.sun.mirror.apt.AnnotationProcessorEnvironment, rs : com.sun.mirror.apt.RoundState) : Void;
+	@:overload @:public public function new(source : com.sun.mirror.apt.AnnotationProcessorEnvironment, rs : com.sun.mirror.apt.RoundState) : Void;
 	
 	
 }

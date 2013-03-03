@@ -26,7 +26,7 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	*
 	* @param result the object which receives the constructed DOM nodes
 	*/
-	@:overload public function setDOMResult(result : javax.xml.transform.dom.DOMResult) : Void;
+	@:overload @:public public function setDOMResult(result : javax.xml.transform.dom.DOMResult) : Void;
 	
 	/**
 	* A document type declaration.
@@ -35,11 +35,11 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	*
 	* @exception XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function doctypeDecl(node : org.w3c.dom.DocumentType) : Void;
+	@:overload @:public public function doctypeDecl(node : org.w3c.dom.DocumentType) : Void;
 	
-	@:overload public function characters(node : org.w3c.dom.Text) : Void;
+	@:overload @:public public function characters(node : org.w3c.dom.Text) : Void;
 	
-	@:overload public function cdata(node : org.w3c.dom.CDATASection) : Void;
+	@:overload @:public public function cdata(node : org.w3c.dom.CDATASection) : Void;
 	
 	/**
 	* A comment.
@@ -48,7 +48,7 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	*
 	* @exception XNIException Thrown by application to signal an error.
 	*/
-	@:overload public function comment(node : org.w3c.dom.Comment) : Void;
+	@:overload @:public public function comment(node : org.w3c.dom.Comment) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -65,9 +65,9 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	*
 	* @exception XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function processingInstruction(node : org.w3c.dom.ProcessingInstruction) : Void;
+	@:overload @:public public function processingInstruction(node : org.w3c.dom.ProcessingInstruction) : Void;
 	
-	@:overload public function setIgnoringCharacters(ignore : Bool) : Void;
+	@:overload @:public public function setIgnoringCharacters(ignore : Bool) : Void;
 	
 	
 }

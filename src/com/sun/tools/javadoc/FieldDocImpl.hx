@@ -35,32 +35,32 @@ extern class FieldDocImpl extends com.sun.tools.javadoc.MemberDocImpl implements
 	* @author Neal Gafter (rewrite)
 	* @author Scott Seligman (generics, enums, annotations)
 	*/
-	@:require(java2) private var sym(default, null) : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
+	@:require(java2) @:protected @:final private var sym(default, null) : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
 	
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, rawDocs : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, rawDocs : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol) : Void;
 	
 	/**
 	* Returns the flags in terms of javac's flags
 	*/
-	@:overload override private function getFlags() : haxe.Int64;
+	@:overload @:protected override private function getFlags() : haxe.Int64;
 	
 	/**
 	* Identify the containing class
 	*/
-	@:overload override private function getContainingClass() : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
+	@:overload @:protected override private function getContainingClass() : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
 	
 	/**
 	* Get type of this field.
 	*/
-	@:overload public function type() : com.sun.javadoc.Type;
+	@:overload @:public public function type() : com.sun.javadoc.Type;
 	
 	/**
 	* Get the value of a constant field.
@@ -69,7 +69,7 @@ extern class FieldDocImpl extends com.sun.tools.javadoc.MemberDocImpl implements
 	* automatically wrapped in an object if it has a primitive type.
 	* If the field is not constant, returns null.
 	*/
-	@:overload public function constantValue() : Dynamic;
+	@:overload @:public public function constantValue() : Dynamic;
 	
 	/**
 	* Get the value of a constant field.
@@ -79,38 +79,38 @@ extern class FieldDocImpl extends com.sun.tools.javadoc.MemberDocImpl implements
 	* other than primitive literals. If the field is
 	* not constant, returns null.
 	*/
-	@:overload public function constantValueExpression() : String;
+	@:overload @:public public function constantValueExpression() : String;
 	
 	/**
 	* Return true if this field is included in the active set.
 	*/
-	@:overload override public function isIncluded() : Bool;
+	@:overload @:public override public function isIncluded() : Bool;
 	
 	/**
 	* Is this Doc item a field (but not an enum constant?
 	*/
-	@:overload override public function isField() : Bool;
+	@:overload @:public override public function isField() : Bool;
 	
 	/**
 	* Is this Doc item an enum constant?
 	* (For legacy doclets, return false.)
 	*/
-	@:overload override public function isEnumConstant() : Bool;
+	@:overload @:public override public function isEnumConstant() : Bool;
 	
 	/**
 	* Return true if this field is transient
 	*/
-	@:overload public function isTransient() : Bool;
+	@:overload @:public public function isTransient() : Bool;
 	
 	/**
 	* Return true if this field is volatile
 	*/
-	@:overload public function isVolatile() : Bool;
+	@:overload @:public public function isVolatile() : Bool;
 	
 	/**
 	* Returns true if this field was synthesized by the compiler.
 	*/
-	@:overload public function isSynthetic() : Bool;
+	@:overload @:public override public function isSynthetic() : Bool;
 	
 	/**
 	* Return the serialField tags in this FieldDocImpl item.
@@ -118,17 +118,17 @@ extern class FieldDocImpl extends com.sun.tools.javadoc.MemberDocImpl implements
 	* @return an array of <tt>SerialFieldTagImpl</tt> containing all
 	*         <code>&#64serialField</code> tags.
 	*/
-	@:overload public function serialFieldTags() : java.NativeArray<com.sun.javadoc.SerialFieldTag>;
+	@:overload @:public public function serialFieldTags() : java.NativeArray<com.sun.javadoc.SerialFieldTag>;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function qualifiedName() : String;
+	@:overload @:public override public function qualifiedName() : String;
 	
 	/**
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload override public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public override public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

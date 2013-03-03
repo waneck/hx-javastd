@@ -25,33 +25,33 @@ package com.sun.tools.jdi;
 */
 extern class LongValueImpl extends com.sun.tools.jdi.PrimitiveValueImpl implements com.sun.jdi.LongValue
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function compareTo(obj : com.sun.jdi.LongValue) : Int;
+	@:overload @:public public function compareTo(obj : com.sun.jdi.LongValue) : Int;
 	
-	@:overload public function type() : com.sun.jdi.Type;
+	@:overload @:public override public function type() : com.sun.jdi.Type;
 	
-	@:overload public function value() : haxe.Int64;
+	@:overload @:public public function value() : haxe.Int64;
 	
-	@:overload public function booleanValue() : Bool;
+	@:overload @:public override public function booleanValue() : Bool;
 	
-	@:overload public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
-	@:overload public function charValue() : java.StdTypes.Char16;
+	@:overload @:public override public function charValue() : java.StdTypes.Char16;
 	
-	@:overload public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
-	@:overload public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
-	@:overload public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
-	@:overload public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

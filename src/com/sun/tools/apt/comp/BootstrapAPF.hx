@@ -25,13 +25,13 @@ package com.sun.tools.apt.comp;
 */
 extern class BootstrapAPF implements com.sun.mirror.apt.AnnotationProcessorFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function supportedOptions() : java.util.Collection<String>;
+	@:overload @:public public function supportedOptions() : java.util.Collection<String>;
 	
-	@:overload public function supportedAnnotationTypes() : java.util.Collection<String>;
+	@:overload @:public public function supportedAnnotationTypes() : java.util.Collection<String>;
 	
-	@:overload public function getProcessorFor(atds : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
+	@:overload @:public public function getProcessorFor(atds : java.util.Set<com.sun.mirror.declaration.AnnotationTypeDeclaration>, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	
 }

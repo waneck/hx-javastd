@@ -25,18 +25,18 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RegistryInfoImpl<T, C, F, M> implements com.sun.xml.internal.bind.v2.model.annotation.Locatable implements com.sun.xml.internal.bind.v2.model.core.RegistryInfo<T, C>
 {
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
-	@:overload public function getReferences() : java.util.Set<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
+	@:overload @:public public function getReferences() : java.util.Set<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
 	
 	/**
 	* Gets the name of the package that this registry governs.
 	*/
-	@:overload public function getPackageName() : String;
+	@:overload @:public public function getPackageName() : String;
 	
-	@:overload public function getClazz() : C;
+	@:overload @:public public function getClazz() : C;
 	
 	
 }

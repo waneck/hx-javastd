@@ -29,41 +29,41 @@ package com.sun.crypto.provider;
 }
 @:native('com$sun$crypto$provider$SslMacCore$SslMacMD5') extern class SslMacCore_SslMacMD5 extends javax.crypto.MacSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
-	@:overload private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
 	
 }
 @:native('com$sun$crypto$provider$SslMacCore$SslMacSHA1') extern class SslMacCore_SslMacSHA1 extends javax.crypto.MacSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function engineGetMacLength() : Int;
+	@:overload @:protected override private function engineGetMacLength() : Int;
 	
-	@:overload private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
 	
 }

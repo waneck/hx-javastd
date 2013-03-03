@@ -25,21 +25,21 @@ package sun.awt.X11;
 */
 @:internal extern class XFramePeer extends sun.awt.X11.XDecoratedPeer implements java.awt.peer.FramePeer
 {
-	@:overload public function setMenuBar(mb : java.awt.MenuBar) : Void;
+	@:overload @:public public function setMenuBar(mb : java.awt.MenuBar) : Void;
 	
-	@:overload public function setMaximizedBounds(b : java.awt.Rectangle) : Void;
+	@:overload @:public public function setMaximizedBounds(b : java.awt.Rectangle) : Void;
 	
-	@:overload public function getState() : Int;
+	@:overload @:public public function getState() : Int;
 	
-	@:overload public function setState(newState : Int) : Void;
+	@:overload @:public public function setState(newState : Int) : Void;
 	
-	@:overload override public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public override public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleStateChange(oldState : Int, newState : Int) : Void;
+	@:overload @:public override public function handleStateChange(oldState : Int, newState : Int) : Void;
 	
-	@:overload public function setVisible(vis : Bool) : Void;
+	@:overload @:public override public function setVisible(vis : Bool) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	/*
 	* Print the native component by rendering the Motif look ourselves.
@@ -47,11 +47,11 @@ package sun.awt.X11;
 	* of Component (and thus it has no "print" method which gets called by
 	* default).
 	*/
-	@:overload public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function print(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function getBoundsPrivate() : java.awt.Rectangle;
+	@:overload @:public public function getBoundsPrivate() : java.awt.Rectangle;
 	
 	
 }

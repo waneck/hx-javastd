@@ -32,7 +32,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	/**
 	* Construct a new, empty Attributes2Impl object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy an existing Attributes or Attributes2 object.
@@ -48,22 +48,22 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	*
 	* @param atts The existing Attributes object.
 	*/
-	@:overload public function new(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function new(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Returns the current value of the attribute's "declared" flag.
 	*/
-	@:overload public function isDeclared(index : Int) : Bool;
+	@:overload @:public public function isDeclared(index : Int) : Bool;
 	
 	/**
 	* Returns the current value of the attribute's "declared" flag.
 	*/
-	@:overload public function isDeclared(uri : String, localName : String) : Bool;
+	@:overload @:public public function isDeclared(uri : String, localName : String) : Bool;
 	
 	/**
 	* Returns the current value of the attribute's "declared" flag.
 	*/
-	@:overload public function isDeclared(qName : String) : Bool;
+	@:overload @:public public function isDeclared(qName : String) : Bool;
 	
 	/**
 	* Returns the current value of an attribute's "specified" flag.
@@ -73,7 +73,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	* @exception java.lang.ArrayIndexOutOfBoundsException When the
 	*            supplied index does not identify an attribute.
 	*/
-	@:overload public function isSpecified(index : Int) : Bool;
+	@:overload @:public public function isSpecified(index : Int) : Bool;
 	
 	/**
 	* Returns the current value of an attribute's "specified" flag.
@@ -85,7 +85,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	* @exception java.lang.IllegalArgumentException When the
 	*            supplied names do not identify an attribute.
 	*/
-	@:overload public function isSpecified(uri : String, localName : String) : Bool;
+	@:overload @:public public function isSpecified(uri : String, localName : String) : Bool;
 	
 	/**
 	* Returns the current value of an attribute's "specified" flag.
@@ -95,7 +95,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	* @exception java.lang.IllegalArgumentException When the
 	*            supplied name does not identify an attribute.
 	*/
-	@:overload public function isSpecified(qName : String) : Bool;
+	@:overload @:public public function isSpecified(qName : String) : Bool;
 	
 	/**
 	* Copy an entire Attributes object.  The "specified" flags are
@@ -106,7 +106,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	*
 	* @see AttributesImpl#setAttributes
 	*/
-	@:overload public function setAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function setAttributes(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Add an attribute to the end of the list, setting its
@@ -119,9 +119,9 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	*
 	* @see AttributesImpl#addAttribute
 	*/
-	@:overload public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
-	@:overload public function removeAttribute(index : Int) : Void;
+	@:overload @:public override public function removeAttribute(index : Int) : Void;
 	
 	/**
 	* Assign a value to the "declared" flag of a specific attribute.
@@ -134,7 +134,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	*            supplied index does not identify an attribute.
 	* @see #setType
 	*/
-	@:overload public function setDeclared(index : Int, value : Bool) : Void;
+	@:overload @:public public function setDeclared(index : Int, value : Bool) : Void;
 	
 	/**
 	* Assign a value to the "specified" flag of a specific attribute.
@@ -146,7 +146,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	* @exception java.lang.ArrayIndexOutOfBoundsException When the
 	*            supplied index does not identify an attribute.
 	*/
-	@:overload public function setSpecified(index : Int, value : Bool) : Void;
+	@:overload @:public public function setSpecified(index : Int, value : Bool) : Void;
 	
 	
 }

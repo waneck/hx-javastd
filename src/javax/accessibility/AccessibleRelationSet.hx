@@ -36,12 +36,12 @@ extern class AccessibleRelationSet
 	* @see #toArray
 	* @see #clear
 	*/
-	private var relations : java.util.Vector<javax.accessibility.AccessibleRelation>;
+	@:protected private var relations : java.util.Vector<javax.accessibility.AccessibleRelation>;
 	
 	/**
 	* Creates a new empty relation set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new relation with the initial set of relations contained in
@@ -50,7 +50,7 @@ extern class AccessibleRelationSet
 	* @param relations an array of AccessibleRelation describing the
 	* relation set.
 	*/
-	@:overload public function new(relations : java.NativeArray<javax.accessibility.AccessibleRelation>) : Void;
+	@:overload @:public public function new(relations : java.NativeArray<javax.accessibility.AccessibleRelation>) : Void;
 	
 	/**
 	* Adds a new relation to the current relation set.  If the relation
@@ -62,7 +62,7 @@ extern class AccessibleRelationSet
 	* @return true if relation is added to the relation set; false if the
 	* relation set is unchanged
 	*/
-	@:overload public function add(relation : javax.accessibility.AccessibleRelation) : Bool;
+	@:overload @:public public function add(relation : javax.accessibility.AccessibleRelation) : Bool;
 	
 	/**
 	* Adds all of the relations to the existing relation set.  Duplicate
@@ -70,7 +70,7 @@ extern class AccessibleRelationSet
 	*
 	* @param relations  AccessibleRelation array describing the relation set.
 	*/
-	@:overload public function addAll(relations : java.NativeArray<javax.accessibility.AccessibleRelation>) : Void;
+	@:overload @:public public function addAll(relations : java.NativeArray<javax.accessibility.AccessibleRelation>) : Void;
 	
 	/**
 	* Removes a relation from the current relation set.  If the relation
@@ -83,17 +83,17 @@ extern class AccessibleRelationSet
 	* @return true if the relation is in the relation set; false if the
 	* relation set is unchanged
 	*/
-	@:overload public function remove(relation : javax.accessibility.AccessibleRelation) : Bool;
+	@:overload @:public public function remove(relation : javax.accessibility.AccessibleRelation) : Bool;
 	
 	/**
 	* Removes all the relations from the current relation set.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the number of relations in the relation set.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns whether the relation set contains a relation
@@ -101,7 +101,7 @@ extern class AccessibleRelationSet
 	* @param key the AccessibleRelation key
 	* @return true if the relation is in the relation set; otherwise false
 	*/
-	@:overload public function contains(key : String) : Bool;
+	@:overload @:public public function contains(key : String) : Bool;
 	
 	/**
 	* Returns the relation that matches the specified key.
@@ -109,13 +109,13 @@ extern class AccessibleRelationSet
 	* @return the relation, if one exists, that matches the specified key.
 	* Otherwise, null is returned.
 	*/
-	@:overload public function get(key : String) : javax.accessibility.AccessibleRelation;
+	@:overload @:public public function get(key : String) : javax.accessibility.AccessibleRelation;
 	
 	/**
 	* Returns the current relation set as an array of AccessibleRelation
 	* @return AccessibleRelation array contacting the current relation.
 	*/
-	@:overload public function toArray() : java.NativeArray<javax.accessibility.AccessibleRelation>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.accessibility.AccessibleRelation>;
 	
 	/**
 	* Creates a localized String representing all the relations in the set
@@ -124,7 +124,7 @@ extern class AccessibleRelationSet
 	* @return comma separated localized String
 	* @see AccessibleBundle#toDisplayString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

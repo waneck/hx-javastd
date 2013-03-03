@@ -40,7 +40,7 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	*
 	* @param url       the URL being accessed
 	*/
-	@:overload private function setNewClient(url : java.net.URL) : Void;
+	@:overload @:protected private function setNewClient(url : java.net.URL) : Void;
 	
 	/**
 	* Obtain a HttpClient object. Use the cached copy if specified.
@@ -49,7 +49,7 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* @param useCache  whether the cached connection should be used
 	*                  if present
 	*/
-	@:overload private function setNewClient(url : java.net.URL, useCache : Bool) : Void;
+	@:overload @:protected private function setNewClient(url : java.net.URL, useCache : Bool) : Void;
 	
 	/**
 	* Create a new HttpClient object, set up so that it uses
@@ -60,7 +60,7 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* @param proxyHost the proxy host to use
 	* @param proxyPort the proxy port to use
 	*/
-	@:overload private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
+	@:overload @:protected private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
 	
 	/**
 	* Obtain a HttpClient object, set up so that it uses per-instance
@@ -73,45 +73,45 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* @param useCache  whether the cached connection should be used
 	*                  if present
 	*/
-	@:overload private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
+	@:overload @:protected private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
 	/**
 	* Implements the HTTP protocol handler's "connect" method,
 	* establishing an SSL connection to the server as necessary.
 	*/
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
 	/**
 	* Used by subclass to access "connected" variable.  Since we are
 	* delegating the actual implementation to "delegate", we need to
 	* delegate the access of "connected" as well.
 	*/
-	@:overload private function isConnected() : Bool;
+	@:overload @:protected private function isConnected() : Bool;
 	
 	/**
 	* Used by subclass to access "connected" variable.  Since we are
 	* delegating the actual implementation to "delegate", we need to
 	* delegate the access of "connected" as well.
 	*/
-	@:overload private function setConnected(conn : Bool) : Void;
+	@:overload @:protected private function setConnected(conn : Bool) : Void;
 	
 	/**
 	* Returns the cipher suite in use on this connection.
 	*/
-	@:overload public function getCipherSuite() : String;
+	@:overload @:public override public function getCipherSuite() : String;
 	
 	/**
 	* Returns the certificate chain the client sent to the
 	* server, or null if the client did not authenticate.
 	*/
-	@:overload public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's certificate chain, or throws
 	* SSLPeerUnverified Exception if
 	* the server did not authenticate.
 	*/
-	@:overload public function getServerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getServerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's X.509 certificate chain, or null if
@@ -121,7 +121,7 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* implementing javax.net.ssl.HttpsURLConnection, but provided for
 	* compatibility with the com.sun.net.ssl.HttpsURLConnection version.
 	*/
-	@:overload public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public override public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	/*
 	* Allowable input/output sequences:
@@ -133,18 +133,18 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* Disallowed:
 	* - get input, [read input,] get output, [write output]
 	*/
-	@:overload @:synchronized override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public @:synchronized override public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload @:synchronized override public function getInputStream() : java.io.InputStream;
+	@:overload @:public @:synchronized override public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getErrorStream() : java.io.InputStream;
+	@:overload @:public override public function getErrorStream() : java.io.InputStream;
 	
 	/**
 	* Disconnect from the server.
 	*/
-	@:overload override public function disconnect() : Void;
+	@:overload @:public override public function disconnect() : Void;
 	
-	@:overload override public function usingProxy() : Bool;
+	@:overload @:public override public function usingProxy() : Bool;
 	
 	/**
 	* Returns an unmodifiable Map of the header fields.
@@ -156,32 +156,32 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* @return a Map of header fields
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getHeaderFields() : java.util.Map<String, java.util.List<String>>;
+	@:require(java4) @:overload @:public override public function getHeaderFields() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Gets a header field by name. Returns null if not known.
 	* @param name the name of the header field
 	*/
-	@:overload override public function getHeaderField(name : String) : String;
+	@:overload @:public override public function getHeaderField(name : String) : String;
 	
 	/**
 	* Gets a header field by index. Returns null if not known.
 	* @param n the index of the header field
 	*/
-	@:overload override public function getHeaderField(n : Int) : String;
+	@:overload @:public override public function getHeaderField(n : Int) : String;
 	
 	/**
 	* Gets a header field by index. Returns null if not known.
 	* @param n the index of the header field
 	*/
-	@:overload override public function getHeaderFieldKey(n : Int) : String;
+	@:overload @:public override public function getHeaderFieldKey(n : Int) : String;
 	
 	/**
 	* Sets request property. If a property with the key already
 	* exists, overwrite its value with the new value.
 	* @param value the value to be set
 	*/
-	@:overload override public function setRequestProperty(key : String, value : String) : Void;
+	@:overload @:public override public function setRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Adds a general request property specified by a
@@ -194,14 +194,14 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* @see #getRequestProperties(java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function addRequestProperty(key : String, value : String) : Void;
+	@:require(java4) @:overload @:public override public function addRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Overwrite super class method
 	*/
-	@:overload override public function getResponseCode() : Int;
+	@:overload @:public override public function getResponseCode() : Int;
 	
-	@:overload override public function getRequestProperty(key : String) : String;
+	@:overload @:public override public function getRequestProperty(key : String) : String;
 	
 	/**
 	* Returns an unmodifiable Map of general request
@@ -215,100 +215,100 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* @throws IllegalStateException if already connected
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
+	@:require(java4) @:overload @:public override public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
 	
 	/*
 	* We support JDK 1.2.x so we can't count on these from JDK 1.3.
 	* We override and supply our own version.
 	*/
-	@:overload override public function setInstanceFollowRedirects(shouldFollow : Bool) : Void;
+	@:overload @:public override public function setInstanceFollowRedirects(shouldFollow : Bool) : Void;
 	
-	@:overload override public function getInstanceFollowRedirects() : Bool;
+	@:overload @:public override public function getInstanceFollowRedirects() : Bool;
 	
-	@:overload override public function setRequestMethod(method : String) : Void;
+	@:overload @:public override public function setRequestMethod(method : String) : Void;
 	
-	@:overload override public function getRequestMethod() : String;
+	@:overload @:public override public function getRequestMethod() : String;
 	
-	@:overload override public function getResponseMessage() : String;
+	@:overload @:public override public function getResponseMessage() : String;
 	
-	@:overload override public function getHeaderFieldDate(name : String, Default : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function getHeaderFieldDate(name : String, Default : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
-	@:overload override public function getURL() : java.net.URL;
+	@:overload @:public override public function getURL() : java.net.URL;
 	
-	@:overload override public function getContentLength() : Int;
+	@:overload @:public override public function getContentLength() : Int;
 	
-	@:overload override public function getContentLengthLong() : haxe.Int64;
+	@:overload @:public override public function getContentLengthLong() : haxe.Int64;
 	
-	@:overload override public function getContentType() : String;
+	@:overload @:public override public function getContentType() : String;
 	
-	@:overload override public function getContentEncoding() : String;
+	@:overload @:public override public function getContentEncoding() : String;
 	
-	@:overload override public function getExpiration() : haxe.Int64;
+	@:overload @:public override public function getExpiration() : haxe.Int64;
 	
-	@:overload override public function getDate() : haxe.Int64;
+	@:overload @:public override public function getDate() : haxe.Int64;
 	
-	@:overload override public function getLastModified() : haxe.Int64;
+	@:overload @:public override public function getLastModified() : haxe.Int64;
 	
-	@:overload override public function getHeaderFieldInt(name : String, Default : Int) : Int;
+	@:overload @:public override public function getHeaderFieldInt(name : String, Default : Int) : Int;
 	
-	@:overload override public function getHeaderFieldLong(name : String, Default : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function getHeaderFieldLong(name : String, Default : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function getContent() : Dynamic;
+	@:overload @:public override public function getContent() : Dynamic;
 	
-	@:overload override public function getContent(classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
+	@:overload @:public override public function getContent(classes : java.NativeArray<Class<Dynamic>>) : Dynamic;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function setDoInput(doinput : Bool) : Void;
+	@:overload @:public override public function setDoInput(doinput : Bool) : Void;
 	
-	@:overload override public function getDoInput() : Bool;
+	@:overload @:public override public function getDoInput() : Bool;
 	
-	@:overload override public function setDoOutput(dooutput : Bool) : Void;
+	@:overload @:public override public function setDoOutput(dooutput : Bool) : Void;
 	
-	@:overload override public function getDoOutput() : Bool;
+	@:overload @:public override public function getDoOutput() : Bool;
 	
-	@:overload override public function setAllowUserInteraction(allowuserinteraction : Bool) : Void;
+	@:overload @:public override public function setAllowUserInteraction(allowuserinteraction : Bool) : Void;
 	
-	@:overload override public function getAllowUserInteraction() : Bool;
+	@:overload @:public override public function getAllowUserInteraction() : Bool;
 	
-	@:overload override public function setUseCaches(usecaches : Bool) : Void;
+	@:overload @:public override public function setUseCaches(usecaches : Bool) : Void;
 	
-	@:overload override public function getUseCaches() : Bool;
+	@:overload @:public override public function getUseCaches() : Bool;
 	
-	@:overload override public function setIfModifiedSince(ifmodifiedsince : haxe.Int64) : Void;
+	@:overload @:public override public function setIfModifiedSince(ifmodifiedsince : haxe.Int64) : Void;
 	
-	@:overload override public function getIfModifiedSince() : haxe.Int64;
+	@:overload @:public override public function getIfModifiedSince() : haxe.Int64;
 	
-	@:overload override public function getDefaultUseCaches() : Bool;
+	@:overload @:public override public function getDefaultUseCaches() : Bool;
 	
-	@:overload override public function setDefaultUseCaches(defaultusecaches : Bool) : Void;
+	@:overload @:public override public function setDefaultUseCaches(defaultusecaches : Bool) : Void;
 	
 	/*
 	* finalize (dispose) the delegated object.  Otherwise
 	* sun.net.www.protocol.http.HttpURLConnection's finalize()
 	* would have to be made public.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload override public function setConnectTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setConnectTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getConnectTimeout() : Int;
+	@:overload @:public override public function getConnectTimeout() : Int;
 	
-	@:overload override public function setReadTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setReadTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getReadTimeout() : Int;
+	@:overload @:public override public function getReadTimeout() : Int;
 	
-	@:overload override public function setFixedLengthStreamingMode(contentLength : Int) : Void;
+	@:overload @:public override public function setFixedLengthStreamingMode(contentLength : Int) : Void;
 	
-	@:overload override public function setFixedLengthStreamingMode(contentLength : haxe.Int64) : Void;
+	@:overload @:public override public function setFixedLengthStreamingMode(contentLength : haxe.Int64) : Void;
 	
-	@:overload override public function setChunkedStreamingMode(chunklen : Int) : Void;
+	@:overload @:public override public function setChunkedStreamingMode(chunklen : Int) : Void;
 	
 	
 }

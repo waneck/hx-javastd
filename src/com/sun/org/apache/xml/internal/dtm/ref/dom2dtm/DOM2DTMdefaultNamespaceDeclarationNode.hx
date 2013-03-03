@@ -23,91 +23,91 @@ package com.sun.org.apache.xml.internal.dtm.ref.dom2dtm;
 */
 extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr implements org.w3c.dom.TypeInfo
 {
-	@:overload public function getNodeName() : String;
+	@:overload @:public public function getNodeName() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
-	@:overload public function getNodeValue() : String;
+	@:overload @:public public function getNodeValue() : String;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
-	@:overload public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
-	@:overload public function hasChildNodes() : Bool;
+	@:overload @:public public function hasChildNodes() : Bool;
 	
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
-	@:overload public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getParentNode() : org.w3c.dom.Node;
 	
-	@:overload public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public public function getFirstChild() : org.w3c.dom.Node;
 	
-	@:overload public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public public function getLastChild() : org.w3c.dom.Node;
 	
-	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
-	@:overload public function getSpecified() : Bool;
+	@:overload @:public public function getSpecified() : Bool;
 	
-	@:overload public function normalize() : Void;
+	@:overload @:public public function normalize() : Void;
 	
-	@:overload public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
-	@:overload public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType() : java.StdTypes.Int16;
 	
-	@:overload public function setNodeValue(value : String) : Void;
+	@:overload @:public public function setNodeValue(value : String) : Void;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
-	@:overload public function setPrefix(value : String) : Void;
+	@:overload @:public public function setPrefix(value : String) : Void;
 	
-	@:overload public function insertBefore(a : org.w3c.dom.Node, b : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function insertBefore(a : org.w3c.dom.Node, b : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function replaceChild(a : org.w3c.dom.Node, b : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function replaceChild(a : org.w3c.dom.Node, b : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function appendChild(a : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(a : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function removeChild(a : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function removeChild(a : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
-	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/** Non-DOM method, part of the temporary kluge
 	* %REVIEW% This would be a pruning problem, but since it will always be
 	* added to the root element and we prune on elements, we shouldn't have
 	* to worry.
 	*/
-	@:overload public function getHandleOfNode() : Int;
+	@:overload @:public public function getHandleOfNode() : Int;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeName()
 	*/
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeNamespace()
 	*/
-	@:overload public function getTypeNamespace() : String;
+	@:overload @:public public function getTypeNamespace() : String;
 	
 	/**
 	* @see or.gw3c.dom.TypeInfo#isDerivedFrom(String,String,int)
 	*/
-	@:overload public function isDerivedFrom(ns : String, localName : String, derivationMethod : Int) : Bool;
+	@:overload @:public public function isDerivedFrom(ns : String, localName : String, derivationMethod : Int) : Bool;
 	
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
-	@:overload public function isId() : Bool;
+	@:overload @:public public function isId() : Bool;
 	
 	/**
 	* Associate an object to a key on this node. The object can later be
@@ -122,7 +122,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   the given key on this node, or <code>null</code> if there was none.
 	* @since DOM Level 3
 	*/
-	@:overload public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -133,7 +133,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   on this node, or <code>null</code> if there was none.
 	* @since DOM Level 3
 	*/
-	@:overload public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -155,7 +155,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   childNodes, etc.
 	* @since DOM Level 3
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -199,7 +199,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   <code>true</code> otherwise <code>false</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* DOM Level 3 - Experimental:
@@ -210,7 +210,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	* @return th URI for the namespace
 	* @since DOM Level 3
 	*/
-	@:overload public function lookupNamespaceURI(specifiedPrefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(specifiedPrefix : String) : String;
 	
 	/**
 	*  DOM Level 3: Experimental
@@ -221,7 +221,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   is the default namespace, <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	*
@@ -231,7 +231,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	* @param namespaceURI
 	* @return the prefix for the namespace
 	*/
-	@:overload public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -247,7 +247,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -294,7 +294,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -341,7 +341,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
 	/**
 	* Compares a node with this node with regard to their position in the
@@ -351,7 +351,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	*   node.
 	* @since DOM Level 3
 	*/
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if undefined.
@@ -377,7 +377,7 @@ extern class DOM2DTMdefaultNamespaceDeclarationNode implements org.w3c.dom.Attr 
 	* Yes. (F2F 26 Sep 2001)
 	* @since DOM Level 3
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	
 }

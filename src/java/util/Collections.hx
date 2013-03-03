@@ -77,7 +77,7 @@ extern class Collections
 	*         detects that the natural ordering of the list elements is
 	*         found to violate the {@link Comparable} contract
 	*/
-	@:overload public static function sort<T : java.lang.Comparable<T>>(list : java.util.List<T>) : Void;
+	@:overload @:public @:static public static function sort<T : java.lang.Comparable<T>>(list : java.util.List<T>) : Void;
 	
 	/**
 	* Sorts the specified list according to the order induced by the
@@ -131,7 +131,7 @@ extern class Collections
 	* @throws IllegalArgumentException (optional) if the comparator is
 	*         found to violate the {@link Comparator} contract
 	*/
-	@:overload public static function sort<T>(list : java.util.List<T>, c : java.util.Comparator<T>) : Void;
+	@:overload @:public @:static public static function sort<T>(list : java.util.List<T>, c : java.util.Comparator<T>) : Void;
 	
 	/**
 	* Searches the specified list for the specified object using the binary
@@ -163,7 +163,7 @@ extern class Collections
 	*         integers), or the search key is not mutually comparable
 	*         with the elements of the list.
 	*/
-	@:overload public static function binarySearch<T>(list : java.util.List<java.lang.Comparable<T>>, key : T) : Int;
+	@:overload @:public @:static public static function binarySearch<T>(list : java.util.List<java.lang.Comparable<T>>, key : T) : Int;
 	
 	/**
 	* Searches the specified list for the specified object using the binary
@@ -199,7 +199,7 @@ extern class Collections
 	*         or the search key is not mutually comparable with the
 	*         elements of the list using this comparator.
 	*/
-	@:overload public static function binarySearch<T>(list : java.util.List<T>, key : T, c : java.util.Comparator<T>) : Int;
+	@:overload @:public @:static public static function binarySearch<T>(list : java.util.List<T>, key : T, c : java.util.Comparator<T>) : Int;
 	
 	/**
 	* Reverses the order of the elements in the specified list.<p>
@@ -210,7 +210,7 @@ extern class Collections
 	* @throws UnsupportedOperationException if the specified list or
 	*         its list-iterator does not support the <tt>set</tt> operation.
 	*/
-	@:overload public static function reverse(list : java.util.List<Dynamic>) : Void;
+	@:overload @:public @:static public static function reverse(list : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Randomly permutes the specified list using a default source of
@@ -240,7 +240,7 @@ extern class Collections
 	* @throws UnsupportedOperationException if the specified list or
 	*         its list-iterator does not support the <tt>set</tt> operation.
 	*/
-	@:overload public static function shuffle(list : java.util.List<Dynamic>) : Void;
+	@:overload @:public @:static public static function shuffle(list : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Randomly permute the specified list using the specified source of
@@ -265,7 +265,7 @@ extern class Collections
 	* @throws UnsupportedOperationException if the specified list or its
 	*         list-iterator does not support the <tt>set</tt> operation.
 	*/
-	@:overload public static function shuffle(list : java.util.List<Dynamic>, rnd : java.util.Random) : Void;
+	@:overload @:public @:static public static function shuffle(list : java.util.List<Dynamic>, rnd : java.util.Random) : Void;
 	
 	/**
 	* Swaps the elements at the specified positions in the specified list.
@@ -280,7 +280,7 @@ extern class Collections
 	*         || j &lt; 0 || j &gt;= list.size()).
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function swap(list : java.util.List<Dynamic>, i : Int, j : Int) : Void;
+	@:require(java4) @:overload @:public @:static public static function swap(list : java.util.List<Dynamic>, i : Int, j : Int) : Void;
 	
 	/**
 	* Replaces all of the elements of the specified list with the specified
@@ -293,7 +293,7 @@ extern class Collections
 	* @throws UnsupportedOperationException if the specified list or its
 	*         list-iterator does not support the <tt>set</tt> operation.
 	*/
-	@:overload public static function fill<T>(list : java.util.List<T>, obj : T) : Void;
+	@:overload @:public @:static public static function fill<T>(list : java.util.List<T>, obj : T) : Void;
 	
 	/**
 	* Copies all of the elements from one list into another.  After the
@@ -311,7 +311,7 @@ extern class Collections
 	* @throws UnsupportedOperationException if the destination list's
 	*         list-iterator does not support the <tt>set</tt> operation.
 	*/
-	@:overload public static function copy<T>(dest : java.util.List<T>, src : java.util.List<T>) : Void;
+	@:overload @:public @:static public static function copy<T>(dest : java.util.List<T>, src : java.util.List<T>) : Void;
 	
 	/**
 	* Returns the minimum element of the given collection, according to the
@@ -334,7 +334,7 @@ extern class Collections
 	* @throws NoSuchElementException if the collection is empty.
 	* @see Comparable
 	*/
-	@:overload public static function min<T : Dynamic, java.lang.Comparable<T>>(coll : java.util.Collection<T>) : T;
+	@:overload @:public @:static public static function min<T : Dynamic, java.lang.Comparable<T>>(coll : java.util.Collection<T>) : T;
 	
 	/**
 	* Returns the minimum element of the given collection, according to the
@@ -358,7 +358,7 @@ extern class Collections
 	* @throws NoSuchElementException if the collection is empty.
 	* @see Comparable
 	*/
-	@:overload public static function min<T>(coll : java.util.Collection<T>, comp : java.util.Comparator<T>) : T;
+	@:overload @:public @:static public static function min<T>(coll : java.util.Collection<T>, comp : java.util.Comparator<T>) : T;
 	
 	/**
 	* Returns the maximum element of the given collection, according to the
@@ -381,7 +381,7 @@ extern class Collections
 	* @throws NoSuchElementException if the collection is empty.
 	* @see Comparable
 	*/
-	@:overload public static function max<T : Dynamic, java.lang.Comparable<T>>(coll : java.util.Collection<T>) : T;
+	@:overload @:public @:static public static function max<T : Dynamic, java.lang.Comparable<T>>(coll : java.util.Collection<T>) : T;
 	
 	/**
 	* Returns the maximum element of the given collection, according to the
@@ -405,7 +405,7 @@ extern class Collections
 	* @throws NoSuchElementException if the collection is empty.
 	* @see Comparable
 	*/
-	@:overload public static function max<T>(coll : java.util.Collection<T>, comp : java.util.Comparator<T>) : T;
+	@:overload @:public @:static public static function max<T>(coll : java.util.Collection<T>, comp : java.util.Comparator<T>) : T;
 	
 	/**
 	* Rotates the elements in the specified list by the specified distance.
@@ -462,7 +462,7 @@ extern class Collections
 	*         its list-iterator does not support the <tt>set</tt> operation.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function rotate(list : java.util.List<Dynamic>, distance : Int) : Void;
+	@:require(java4) @:overload @:public @:static public static function rotate(list : java.util.List<Dynamic>, distance : Int) : Void;
 	
 	/**
 	* Replaces all occurrences of one specified value in a list with another.
@@ -482,7 +482,7 @@ extern class Collections
 	*         its list-iterator does not support the <tt>set</tt> operation.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public static function replaceAll<T>(list : java.util.List<T>, oldVal : T, newVal : T) : Bool;
+	@:require(java4) @:overload @:public @:static public static function replaceAll<T>(list : java.util.List<T>, oldVal : T, newVal : T) : Bool;
 	
 	/**
 	* Returns the starting position of the first occurrence of the specified
@@ -504,7 +504,7 @@ extern class Collections
 	*         is no such occurrence.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public static function indexOfSubList(source : java.util.List<Dynamic>, target : java.util.List<Dynamic>) : Int;
+	@:require(java4) @:overload @:public @:static public static function indexOfSubList(source : java.util.List<Dynamic>, target : java.util.List<Dynamic>) : Int;
 	
 	/**
 	* Returns the starting position of the last occurrence of the specified
@@ -526,7 +526,7 @@ extern class Collections
 	*         is no such occurrence.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public static function lastIndexOfSubList(source : java.util.List<Dynamic>, target : java.util.List<Dynamic>) : Int;
+	@:require(java4) @:overload @:public @:static public static function lastIndexOfSubList(source : java.util.List<Dynamic>, target : java.util.List<Dynamic>) : Int;
 	
 	/**
 	* Returns an unmodifiable view of the specified collection.  This method
@@ -549,7 +549,7 @@ extern class Collections
 	*         returned.
 	* @return an unmodifiable view of the specified collection.
 	*/
-	@:overload public static function unmodifiableCollection<T>(c : java.util.Collection<T>) : java.util.Collection<T>;
+	@:overload @:public @:static public static function unmodifiableCollection<T>(c : java.util.Collection<T>) : java.util.Collection<T>;
 	
 	/**
 	* Returns an unmodifiable view of the specified set.  This method allows
@@ -564,7 +564,7 @@ extern class Collections
 	* @param  s the set for which an unmodifiable view is to be returned.
 	* @return an unmodifiable view of the specified set.
 	*/
-	@:overload public static function unmodifiableSet<T>(s : java.util.Set<T>) : java.util.Set<T>;
+	@:overload @:public @:static public static function unmodifiableSet<T>(s : java.util.Set<T>) : java.util.Set<T>;
 	
 	/**
 	* Returns an unmodifiable view of the specified sorted set.  This method
@@ -582,7 +582,7 @@ extern class Collections
 	*        returned.
 	* @return an unmodifiable view of the specified sorted set.
 	*/
-	@:overload public static function unmodifiableSortedSet<T>(s : java.util.SortedSet<T>) : java.util.SortedSet<T>;
+	@:overload @:public @:static public static function unmodifiableSortedSet<T>(s : java.util.SortedSet<T>) : java.util.SortedSet<T>;
 	
 	/**
 	* Returns an unmodifiable view of the specified list.  This method allows
@@ -599,7 +599,7 @@ extern class Collections
 	* @param  list the list for which an unmodifiable view is to be returned.
 	* @return an unmodifiable view of the specified list.
 	*/
-	@:overload public static function unmodifiableList<T>(list : java.util.List<T>) : java.util.List<T>;
+	@:overload @:public @:static public static function unmodifiableList<T>(list : java.util.List<T>) : java.util.List<T>;
 	
 	/**
 	* Returns an unmodifiable view of the specified map.  This method
@@ -615,7 +615,7 @@ extern class Collections
 	* @param  m the map for which an unmodifiable view is to be returned.
 	* @return an unmodifiable view of the specified map.
 	*/
-	@:overload public static function unmodifiableMap<K, V>(m : java.util.Map<K, V>) : java.util.Map<K, V>;
+	@:overload @:public @:static public static function unmodifiableMap<K, V>(m : java.util.Map<K, V>) : java.util.Map<K, V>;
 	
 	/**
 	* Returns an unmodifiable view of the specified sorted map.  This method
@@ -633,7 +633,7 @@ extern class Collections
 	*        returned.
 	* @return an unmodifiable view of the specified sorted map.
 	*/
-	@:overload public static function unmodifiableSortedMap<K, V>(m : java.util.SortedMap<K, V>) : java.util.SortedMap<K, V>;
+	@:overload @:public @:static public static function unmodifiableSortedMap<K, V>(m : java.util.SortedMap<K, V>) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns a synchronized (thread-safe) collection backed by the specified
@@ -666,7 +666,7 @@ extern class Collections
 	* @param  c the collection to be "wrapped" in a synchronized collection.
 	* @return a synchronized view of the specified collection.
 	*/
-	@:overload public static function synchronizedCollection<T>(c : java.util.Collection<T>) : java.util.Collection<T>;
+	@:overload @:public @:static public static function synchronizedCollection<T>(c : java.util.Collection<T>) : java.util.Collection<T>;
 	
 	/**
 	* Returns a synchronized (thread-safe) set backed by the specified
@@ -693,7 +693,7 @@ extern class Collections
 	* @param  s the set to be "wrapped" in a synchronized set.
 	* @return a synchronized view of the specified set.
 	*/
-	@:overload public static function synchronizedSet<T>(s : java.util.Set<T>) : java.util.Set<T>;
+	@:overload @:public @:static public static function synchronizedSet<T>(s : java.util.Set<T>) : java.util.Set<T>;
 	
 	/**
 	* Returns a synchronized (thread-safe) sorted set backed by the specified
@@ -732,7 +732,7 @@ extern class Collections
 	* @param  s the sorted set to be "wrapped" in a synchronized sorted set.
 	* @return a synchronized view of the specified sorted set.
 	*/
-	@:overload public static function synchronizedSortedSet<T>(s : java.util.SortedSet<T>) : java.util.SortedSet<T>;
+	@:overload @:public @:static public static function synchronizedSortedSet<T>(s : java.util.SortedSet<T>) : java.util.SortedSet<T>;
 	
 	/**
 	* Returns a synchronized (thread-safe) list backed by the specified
@@ -759,7 +759,7 @@ extern class Collections
 	* @param  list the list to be "wrapped" in a synchronized list.
 	* @return a synchronized view of the specified list.
 	*/
-	@:overload public static function synchronizedList<T>(list : java.util.List<T>) : java.util.List<T>;
+	@:overload @:public @:static public static function synchronizedList<T>(list : java.util.List<T>) : java.util.List<T>;
 	
 	/**
 	* Returns a synchronized (thread-safe) map backed by the specified
@@ -788,7 +788,7 @@ extern class Collections
 	* @param  m the map to be "wrapped" in a synchronized map.
 	* @return a synchronized view of the specified map.
 	*/
-	@:overload public static function synchronizedMap<K, V>(m : java.util.Map<K, V>) : java.util.Map<K, V>;
+	@:overload @:public @:static public static function synchronizedMap<K, V>(m : java.util.Map<K, V>) : java.util.Map<K, V>;
 	
 	/**
 	* Returns a synchronized (thread-safe) sorted map backed by the specified
@@ -832,7 +832,7 @@ extern class Collections
 	* @param  m the sorted map to be "wrapped" in a synchronized sorted map.
 	* @return a synchronized view of the specified sorted map.
 	*/
-	@:overload public static function synchronizedSortedMap<K, V>(m : java.util.SortedMap<K, V>) : java.util.SortedMap<K, V>;
+	@:overload @:public @:static public static function synchronizedSortedMap<K, V>(m : java.util.SortedMap<K, V>) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns a dynamically typesafe view of the specified collection.
@@ -894,7 +894,7 @@ extern class Collections
 	* @return a dynamically typesafe view of the specified collection
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function checkedCollection<E>(c : java.util.Collection<E>, type : Class<E>) : java.util.Collection<E>;
+	@:require(java5) @:overload @:public @:static public static function checkedCollection<E>(c : java.util.Collection<E>, type : Class<E>) : java.util.Collection<E>;
 	
 	/**
 	* Returns a dynamically typesafe view of the specified set.
@@ -922,7 +922,7 @@ extern class Collections
 	* @return a dynamically typesafe view of the specified set
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function checkedSet<E>(s : java.util.Set<E>, type : Class<E>) : java.util.Set<E>;
+	@:require(java5) @:overload @:public @:static public static function checkedSet<E>(s : java.util.Set<E>, type : Class<E>) : java.util.Set<E>;
 	
 	/**
 	* Returns a dynamically typesafe view of the specified sorted set.
@@ -951,7 +951,7 @@ extern class Collections
 	* @return a dynamically typesafe view of the specified sorted set
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function checkedSortedSet<E>(s : java.util.SortedSet<E>, type : Class<E>) : java.util.SortedSet<E>;
+	@:require(java5) @:overload @:public @:static public static function checkedSortedSet<E>(s : java.util.SortedSet<E>, type : Class<E>) : java.util.SortedSet<E>;
 	
 	/**
 	* Returns a dynamically typesafe view of the specified list.
@@ -979,7 +979,7 @@ extern class Collections
 	* @return a dynamically typesafe view of the specified list
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function checkedList<E>(list : java.util.List<E>, type : Class<E>) : java.util.List<E>;
+	@:require(java5) @:overload @:public @:static public static function checkedList<E>(list : java.util.List<E>, type : Class<E>) : java.util.List<E>;
 	
 	/**
 	* Returns a dynamically typesafe view of the specified map.
@@ -1015,7 +1015,7 @@ extern class Collections
 	* @return a dynamically typesafe view of the specified map
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function checkedMap<K, V>(m : java.util.Map<K, V>, keyType : Class<K>, valueType : Class<V>) : java.util.Map<K, V>;
+	@:require(java5) @:overload @:public @:static public static function checkedMap<K, V>(m : java.util.Map<K, V>, keyType : Class<K>, valueType : Class<V>) : java.util.Map<K, V>;
 	
 	/**
 	* Returns a dynamically typesafe view of the specified sorted map.
@@ -1051,7 +1051,7 @@ extern class Collections
 	* @return a dynamically typesafe view of the specified map
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function checkedSortedMap<K, V>(m : java.util.SortedMap<K, V>, keyType : Class<K>, valueType : Class<V>) : java.util.SortedMap<K, V>;
+	@:require(java5) @:overload @:public @:static public static function checkedSortedMap<K, V>(m : java.util.SortedMap<K, V>, keyType : Class<K>, valueType : Class<V>) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns an iterator that has no elements.  More precisely,
@@ -1075,7 +1075,7 @@ extern class Collections
 	* @return an empty iterator
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function emptyIterator<T>() : java.util.Iterator<T>;
+	@:require(java7) @:overload @:public @:static public static function emptyIterator<T>() : java.util.Iterator<T>;
 	
 	/**
 	* Returns a list iterator that has no elements.  More precisely,
@@ -1109,7 +1109,7 @@ extern class Collections
 	* @return an empty list iterator
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function emptyListIterator<T>() : java.util.ListIterator<T>;
+	@:require(java7) @:overload @:public @:static public static function emptyListIterator<T>() : java.util.ListIterator<T>;
 	
 	/**
 	* Returns an enumeration that has no elements.  More precisely,
@@ -1130,14 +1130,14 @@ extern class Collections
 	* @return an empty enumeration
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function emptyEnumeration<T>() : java.util.Enumeration<T>;
+	@:require(java7) @:overload @:public @:static public static function emptyEnumeration<T>() : java.util.Enumeration<T>;
 	
 	/**
 	* The empty set (immutable).  This set is serializable.
 	*
 	* @see #emptySet()
 	*/
-	public static var EMPTY_SET(default, null) : java.util.Set<Dynamic>;
+	@:public @:static @:final public static var EMPTY_SET(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns the empty set (immutable).  This set is serializable.
@@ -1155,14 +1155,14 @@ extern class Collections
 	* @see #EMPTY_SET
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public static function emptySet<T>() : java.util.Set<T>;
+	@:require(java5) @:overload @:public @:static @:final public static function emptySet<T>() : java.util.Set<T>;
 	
 	/**
 	* The empty list (immutable).  This list is serializable.
 	*
 	* @see #emptyList()
 	*/
-	public static var EMPTY_LIST(default, null) : java.util.List<Dynamic>;
+	@:public @:static @:final public static var EMPTY_LIST(default, null) : java.util.List<Dynamic>;
 	
 	/**
 	* Returns the empty list (immutable).  This list is serializable.
@@ -1179,7 +1179,7 @@ extern class Collections
 	* @see #EMPTY_LIST
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public static function emptyList<T>() : java.util.List<T>;
+	@:require(java5) @:overload @:public @:static @:final public static function emptyList<T>() : java.util.List<T>;
 	
 	/**
 	* The empty map (immutable).  This map is serializable.
@@ -1187,7 +1187,7 @@ extern class Collections
 	* @see #emptyMap()
 	* @since 1.3
 	*/
-	@:require(java3) public static var EMPTY_MAP(default, null) : java.util.Map<Dynamic, Dynamic>;
+	@:require(java3) @:public @:static @:final public static var EMPTY_MAP(default, null) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Returns the empty map (immutable).  This map is serializable.
@@ -1204,7 +1204,7 @@ extern class Collections
 	* @see #EMPTY_MAP
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public static function emptyMap<K, V>() : java.util.Map<K, V>;
+	@:require(java5) @:overload @:public @:static @:final public static function emptyMap<K, V>() : java.util.Map<K, V>;
 	
 	/**
 	* Returns an immutable set containing only the specified object.
@@ -1213,7 +1213,7 @@ extern class Collections
 	* @param o the sole object to be stored in the returned set.
 	* @return an immutable set containing only the specified object.
 	*/
-	@:overload public static function singleton<T>(o : T) : java.util.Set<T>;
+	@:overload @:public @:static public static function singleton<T>(o : T) : java.util.Set<T>;
 	
 	/**
 	* Returns an immutable list containing only the specified object.
@@ -1223,7 +1223,7 @@ extern class Collections
 	* @return an immutable list containing only the specified object.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function singletonList<T>(o : T) : java.util.List<T>;
+	@:require(java3) @:overload @:public @:static public static function singletonList<T>(o : T) : java.util.List<T>;
 	
 	/**
 	* Returns an immutable map, mapping only the specified key to the
@@ -1235,7 +1235,7 @@ extern class Collections
 	*         mapping.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function singletonMap<K, V>(key : K, value : V) : java.util.Map<K, V>;
+	@:require(java3) @:overload @:public @:static public static function singletonMap<K, V>(key : K, value : V) : java.util.Map<K, V>;
 	
 	/**
 	* Returns an immutable list consisting of <tt>n</tt> copies of the
@@ -1252,7 +1252,7 @@ extern class Collections
 	* @see    List#addAll(Collection)
 	* @see    List#addAll(int, Collection)
 	*/
-	@:overload public static function nCopies<T>(n : Int, o : T) : java.util.List<T>;
+	@:overload @:public @:static public static function nCopies<T>(n : Int, o : T) : java.util.List<T>;
 	
 	/**
 	* Returns a comparator that imposes the reverse of the <em>natural
@@ -1273,7 +1273,7 @@ extern class Collections
 	*         the <tt>Comparable</tt> interface.
 	* @see Comparable
 	*/
-	@:overload public static function reverseOrder<T>() : java.util.Comparator<T>;
+	@:overload @:public @:static public static function reverseOrder<T>() : java.util.Comparator<T>;
 	
 	/**
 	* Returns a comparator that imposes the reverse ordering of the specified
@@ -1291,7 +1291,7 @@ extern class Collections
 	*         specified comparator.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function reverseOrder<T>(cmp : java.util.Comparator<T>) : java.util.Comparator<T>;
+	@:require(java5) @:overload @:public @:static public static function reverseOrder<T>(cmp : java.util.Comparator<T>) : java.util.Comparator<T>;
 	
 	/**
 	* Returns an enumeration over the specified collection.  This provides
@@ -1302,7 +1302,7 @@ extern class Collections
 	* @return an enumeration over the specified collection.
 	* @see Enumeration
 	*/
-	@:overload public static function enumeration<T>(c : java.util.Collection<T>) : java.util.Enumeration<T>;
+	@:overload @:public @:static public static function enumeration<T>(c : java.util.Collection<T>) : java.util.Enumeration<T>;
 	
 	/**
 	* Returns an array list containing the elements returned by the
@@ -1319,7 +1319,7 @@ extern class Collections
 	* @see Enumeration
 	* @see ArrayList
 	*/
-	@:require(java4) @:overload public static function list<T>(e : java.util.Enumeration<T>) : java.util.ArrayList<T>;
+	@:require(java4) @:overload @:public @:static public static function list<T>(e : java.util.Enumeration<T>) : java.util.ArrayList<T>;
 	
 	/**
 	* Returns the number of elements in the specified collection equal to the
@@ -1333,7 +1333,7 @@ extern class Collections
 	* @throws NullPointerException if <tt>c</tt> is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function frequency(c : java.util.Collection<Dynamic>, o : Dynamic) : Int;
+	@:require(java5) @:overload @:public @:static public static function frequency(c : java.util.Collection<Dynamic>, o : Dynamic) : Int;
 	
 	/**
 	* Returns {@code true} if the two specified collections have no
@@ -1373,7 +1373,7 @@ extern class Collections
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function disjoint(c1 : java.util.Collection<Dynamic>, c2 : java.util.Collection<Dynamic>) : Bool;
+	@:require(java5) @:overload @:public @:static public static function disjoint(c1 : java.util.Collection<Dynamic>, c2 : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Adds all of the specified elements to the specified collection.
@@ -1401,7 +1401,7 @@ extern class Collections
 	* @see Collection#addAll(Collection)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function addAll<T>(c : java.util.Collection<T>, elements : java.NativeArray<T>) : Bool;
+	@:require(java5) @:overload @:public @:static public static function addAll<T>(c : java.util.Collection<T>, elements : java.NativeArray<T>) : Bool;
 	
 	/**
 	* Returns a set backed by the specified map.  The resulting set displays
@@ -1432,7 +1432,7 @@ extern class Collections
 	* @throws IllegalArgumentException if <tt>map</tt> is not empty
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newSetFromMap<E>(map : java.util.Map<E, Null<Bool>>) : java.util.Set<E>;
+	@:require(java6) @:overload @:public @:static public static function newSetFromMap<E>(map : java.util.Map<E, Null<Bool>>) : java.util.Set<E>;
 	
 	/**
 	* Returns a view of a {@link Deque} as a Last-in-first-out (Lifo)
@@ -1451,7 +1451,7 @@ extern class Collections
 	* @return the queue
 	* @since  1.6
 	*/
-	@:require(java6) @:overload public static function asLifoQueue<T>(deque : java.util.Deque<T>) : java.util.Queue<T>;
+	@:require(java6) @:overload @:public @:static public static function asLifoQueue<T>(deque : java.util.Deque<T>) : java.util.Queue<T>;
 	
 	
 }
@@ -1464,33 +1464,33 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableCollection') @:internal extern class Collections_UnmodifiableCollection<E> implements java.util.Collection<E> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function addAll(coll : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(coll : java.util.Collection<E>) : Bool;
 	
-	@:overload public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }
@@ -1499,9 +1499,9 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableSet') @:internal extern class Collections_UnmodifiableSet<E> extends java.util.Collections.Collections_UnmodifiableCollection<E> implements java.util.Set<E> implements java.io.Serializable
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -1510,17 +1510,17 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableSortedSet') @:internal extern class Collections_UnmodifiableSortedSet<E> extends java.util.Collections.Collections_UnmodifiableSet<E> implements java.util.SortedSet<E> implements java.io.Serializable
 {
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function headSet(toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function tailSet(fromElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function first() : E;
+	@:overload @:public public function first() : E;
 	
-	@:overload public function last() : E;
+	@:overload @:public public function last() : E;
 	
 	
 }
@@ -1529,29 +1529,29 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableList') @:internal extern class Collections_UnmodifiableList<E> extends java.util.Collections.Collections_UnmodifiableCollection<E> implements java.util.List<E>
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public public function get(index : Int) : E;
 	
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(o : Dynamic) : Int;
 	
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
-	@:overload public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator() : java.util.ListIterator<E>;
 	
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -1560,7 +1560,7 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableRandomAccessList') @:internal extern class Collections_UnmodifiableRandomAccessList<E> extends java.util.Collections.Collections_UnmodifiableList<E> implements java.util.RandomAccess
 {
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -1569,35 +1569,35 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableMap') @:internal extern class Collections_UnmodifiableMap<K, V> implements java.util.Map<K, V> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(val : Dynamic) : Bool;
+	@:overload @:public public function containsValue(val : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public public function get(key : Dynamic) : V;
 	
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public public function put(key : K, value : V) : V;
 	
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public public function remove(key : Dynamic) : V;
 	
-	@:overload public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function putAll(m : java.util.Map<K, V>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public public function keySet() : java.util.Set<K>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public public function values() : java.util.Collection<V>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1611,11 +1611,11 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableMap$UnmodifiableEntrySet') @:internal extern class Collections_UnmodifiableMap_UnmodifiableEntrySet<K, V> extends java.util.Collections.Collections_UnmodifiableSet<java.util.Map.Map_Entry<K, V>>
 {
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* This method is overridden to protect the backing set against
@@ -1623,16 +1623,16 @@ extern class Collections
 	* that the equality-candidate is Map.Entry and calls its
 	* setValue method.
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* The next two methods are overridden to protect against
 	* an unscrupulous List whose contains(Object o) method senses
 	* when o is a Map.Entry, and calls o.setValue.
 	*/
-	@:overload override public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -1645,17 +1645,17 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableMap$UnmodifiableEntrySet$UnmodifiableEntry') @:internal extern class Collections_UnmodifiableMap_UnmodifiableEntrySet_UnmodifiableEntry<K, V> implements java.util.Map.Map_Entry<K, V>
 {
-	@:overload public function getKey() : K;
+	@:overload @:public public function getKey() : K;
 	
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
-	@:overload public function setValue(value : V) : V;
+	@:overload @:public public function setValue(value : V) : V;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1664,17 +1664,17 @@ extern class Collections
 */
 @:native('java$util$Collections$UnmodifiableSortedMap') @:internal extern class Collections_UnmodifiableSortedMap<K, V> extends java.util.Collections.Collections_UnmodifiableMap<K, V> implements java.util.SortedMap<K, V> implements java.io.Serializable
 {
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
-	@:overload public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function headMap(toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function headMap(toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function firstKey() : K;
+	@:overload @:public public function firstKey() : K;
 	
-	@:overload public function lastKey() : K;
+	@:overload @:public public function lastKey() : K;
 	
 	
 }
@@ -1683,33 +1683,33 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedCollection') @:internal extern class Collections_SynchronizedCollection<E> implements java.util.Collection<E> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function addAll(coll : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(coll : java.util.Collection<E>) : Bool;
 	
-	@:overload public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1718,9 +1718,9 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedSet') @:internal extern class Collections_SynchronizedSet<E> extends java.util.Collections.Collections_SynchronizedCollection<E> implements java.util.Set<E>
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -1729,17 +1729,17 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedSortedSet') @:internal extern class Collections_SynchronizedSortedSet<E> extends java.util.Collections.Collections_SynchronizedSet<E> implements java.util.SortedSet<E>
 {
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function headSet(toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function tailSet(fromElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function first() : E;
+	@:overload @:public public function first() : E;
 	
-	@:overload public function last() : E;
+	@:overload @:public public function last() : E;
 	
 	
 }
@@ -1748,29 +1748,29 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedList') @:internal extern class Collections_SynchronizedList<E> extends java.util.Collections.Collections_SynchronizedCollection<E> implements java.util.List<E>
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public public function get(index : Int) : E;
 	
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(o : Dynamic) : Int;
 	
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
-	@:overload public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator() : java.util.ListIterator<E>;
 	
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -1779,7 +1779,7 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedRandomAccessList') @:internal extern class Collections_SynchronizedRandomAccessList<E> extends java.util.Collections.Collections_SynchronizedList<E> implements java.util.RandomAccess
 {
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -1788,35 +1788,35 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedMap') @:internal extern class Collections_SynchronizedMap<K, V> implements java.util.Map<K, V> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public public function get(key : Dynamic) : V;
 	
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public public function put(key : K, value : V) : V;
 	
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public public function remove(key : Dynamic) : V;
 	
-	@:overload public function putAll(map : java.util.Map<K, V>) : Void;
+	@:overload @:public public function putAll(map : java.util.Map<K, V>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public public function keySet() : java.util.Set<K>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public public function values() : java.util.Collection<V>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -1825,17 +1825,17 @@ extern class Collections
 */
 @:native('java$util$Collections$SynchronizedSortedMap') @:internal extern class Collections_SynchronizedSortedMap<K, V> extends java.util.Collections.Collections_SynchronizedMap<K, V> implements java.util.SortedMap<K, V>
 {
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
-	@:overload public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function headMap(toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function headMap(toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function firstKey() : K;
+	@:overload @:public public function firstKey() : K;
 	
-	@:overload public function lastKey() : K;
+	@:overload @:public public function lastKey() : K;
 	
 	
 }
@@ -1844,33 +1844,33 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedCollection') @:internal extern class Collections_CheckedCollection<E> implements java.util.Collection<E> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
-	@:overload public function addAll(coll : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(coll : java.util.Collection<E>) : Bool;
 	
 	
 }
@@ -1879,9 +1879,9 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedSet') @:internal extern class Collections_CheckedSet<E> extends java.util.Collections.Collections_CheckedCollection<E> implements java.util.Set<E> implements java.io.Serializable
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -1890,17 +1890,17 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedSortedSet') @:internal extern class Collections_CheckedSortedSet<E> extends java.util.Collections.Collections_CheckedSet<E> implements java.util.SortedSet<E> implements java.io.Serializable
 {
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
-	@:overload public function first() : E;
+	@:overload @:public public function first() : E;
 	
-	@:overload public function last() : E;
+	@:overload @:public public function last() : E;
 	
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function headSet(toElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.SortedSet<E>;
 	
-	@:overload public function tailSet(fromElement : E) : java.util.SortedSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.SortedSet<E>;
 	
 	
 }
@@ -1909,29 +1909,29 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedList') @:internal extern class Collections_CheckedList<E> extends java.util.Collections.Collections_CheckedCollection<E> implements java.util.List<E>
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public public function get(index : Int) : E;
 	
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(o : Dynamic) : Int;
 	
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
-	@:overload public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator() : java.util.ListIterator<E>;
 	
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -1940,7 +1940,7 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedRandomAccessList') @:internal extern class Collections_CheckedRandomAccessList<E> extends java.util.Collections.Collections_CheckedList<E> implements java.util.RandomAccess
 {
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -1949,35 +1949,35 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedMap') @:internal extern class Collections_CheckedMap<K, V> implements java.util.Map<K, V> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(v : Dynamic) : Bool;
+	@:overload @:public public function containsValue(v : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public public function get(key : Dynamic) : V;
 	
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public public function remove(key : Dynamic) : V;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public public function keySet() : java.util.Set<K>;
 	
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public public function values() : java.util.Collection<V>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public public function put(key : K, value : V) : V;
 	
-	@:overload public function putAll(t : java.util.Map<K, V>) : Void;
+	@:overload @:public public function putAll(t : java.util.Map<K, V>) : Void;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }
@@ -1991,25 +1991,25 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedMap$CheckedEntrySet') @:internal extern class Collections_CheckedMap_CheckedEntrySet<K, V> implements java.util.Set<java.util.Map.Map_Entry<K, V>>
 {
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function add(e : java.util.Map.Map_Entry<K, V>) : Bool;
+	@:overload @:public public function add(e : java.util.Map.Map_Entry<K, V>) : Bool;
 	
-	@:overload public function addAll(coll : java.util.Collection<java.util.Map.Map_Entry<K, V>>) : Bool;
+	@:overload @:public public function addAll(coll : java.util.Collection<java.util.Map.Map_Entry<K, V>>) : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* This method is overridden to protect the backing set against
@@ -2017,22 +2017,22 @@ extern class Collections
 	* that the equality-candidate is Map.Entry and calls its
 	* setValue method.
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* The bulk collection methods are overridden to protect
 	* against an unscrupulous collection whose contains(Object o)
 	* method senses when o is a Map.Entry, and calls o.setValue.
 	*/
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -2045,17 +2045,17 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedMap$CheckedEntrySet$CheckedEntry') @:internal extern class Collections_CheckedMap_CheckedEntrySet_CheckedEntry<K, V, T> implements java.util.Map.Map_Entry<K, V>
 {
-	@:overload public function getKey() : K;
+	@:overload @:public public function getKey() : K;
 	
-	@:overload public function getValue() : V;
+	@:overload @:public public function getValue() : V;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function setValue(value : V) : V;
+	@:overload @:public public function setValue(value : V) : V;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -2064,51 +2064,51 @@ extern class Collections
 */
 @:native('java$util$Collections$CheckedSortedMap') @:internal extern class Collections_CheckedSortedMap<K, V> extends java.util.Collections.Collections_CheckedMap<K, V> implements java.util.SortedMap<K, V> implements java.io.Serializable
 {
-	@:overload public function comparator() : java.util.Comparator<K>;
+	@:overload @:public public function comparator() : java.util.Comparator<K>;
 	
-	@:overload public function firstKey() : K;
+	@:overload @:public public function firstKey() : K;
 	
-	@:overload public function lastKey() : K;
+	@:overload @:public public function lastKey() : K;
 	
-	@:overload public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function headMap(toKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function headMap(toKey : K) : java.util.SortedMap<K, V>;
 	
-	@:overload public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
+	@:overload @:public public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
 	
 	
 }
 @:native('java$util$Collections$EmptyIterator') @:internal extern class Collections_EmptyIterator<E> implements java.util.Iterator<E>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : E;
+	@:overload @:public public function next() : E;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('java$util$Collections$EmptyListIterator') @:internal extern class Collections_EmptyListIterator<E> extends java.util.Collections.Collections_EmptyIterator<E> implements java.util.ListIterator<E>
 {
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function previous() : E;
+	@:overload @:public public function previous() : E;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function set(e : E) : Void;
+	@:overload @:public public function set(e : E) : Void;
 	
-	@:overload public function add(e : E) : Void;
+	@:overload @:public public function add(e : E) : Void;
 	
 	
 }
 @:native('java$util$Collections$EmptyEnumeration') @:internal extern class Collections_EmptyEnumeration<E> implements java.util.Enumeration<E>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : E;
+	@:overload @:public public function nextElement() : E;
 	
 	
 }
@@ -2117,19 +2117,19 @@ extern class Collections
 */
 @:native('java$util$Collections$EmptySet') @:internal extern class Collections_EmptySet<E> extends java.util.AbstractSet<E> implements java.io.Serializable
 {
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function contains(obj : Dynamic) : Bool;
+	@:overload @:public override public function contains(obj : Dynamic) : Bool;
 	
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }
@@ -2138,27 +2138,27 @@ extern class Collections
 */
 @:native('java$util$Collections$EmptyList') @:internal extern class Collections_EmptyList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess implements java.io.Serializable
 {
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public override public function listIterator() : java.util.ListIterator<E>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function contains(obj : Dynamic) : Bool;
+	@:overload @:public override public function contains(obj : Dynamic) : Bool;
 	
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }
@@ -2167,25 +2167,25 @@ extern class Collections
 */
 @:native('java$util$Collections$EmptyMap') @:internal extern class Collections_EmptyMap<K, V> extends java.util.AbstractMap<K, V> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }
@@ -2194,11 +2194,11 @@ extern class Collections
 */
 @:native('java$util$Collections$SingletonSet') @:internal extern class Collections_SingletonSet<E> extends java.util.AbstractSet<E> implements java.io.Serializable
 {
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	
 }
@@ -2207,13 +2207,13 @@ extern class Collections
 */
 @:native('java$util$Collections$SingletonList') @:internal extern class Collections_SingletonList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess implements java.io.Serializable
 {
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function contains(obj : Dynamic) : Bool;
+	@:overload @:public override public function contains(obj : Dynamic) : Bool;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
 	
 }
@@ -2222,21 +2222,21 @@ extern class Collections
 */
 @:native('java$util$Collections$SingletonMap') @:internal extern class Collections_SingletonMap<K, V> extends java.util.AbstractMap<K, V> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	
 }
@@ -2245,21 +2245,21 @@ extern class Collections
 */
 @:native('java$util$Collections$CopiesList') @:internal extern class Collections_CopiesList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function contains(obj : Dynamic) : Bool;
+	@:overload @:public override public function contains(obj : Dynamic) : Bool;
 	
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public override public function lastIndexOf(o : Dynamic) : Int;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
@@ -2268,7 +2268,7 @@ extern class Collections
 */
 @:native('java$util$Collections$ReverseComparator') @:internal extern class Collections_ReverseComparator implements java.util.Comparator<java.lang.Comparable<Dynamic>> implements java.io.Serializable
 {
-	@:overload public function compare(c1 : java.lang.Comparable<Dynamic>, c2 : java.lang.Comparable<Dynamic>) : Int;
+	@:overload @:public public function compare(c1 : java.lang.Comparable<Dynamic>, c2 : java.lang.Comparable<Dynamic>) : Int;
 	
 	
 }
@@ -2277,11 +2277,11 @@ extern class Collections
 */
 @:native('java$util$Collections$ReverseComparator2') @:internal extern class Collections_ReverseComparator2<T> implements java.util.Comparator<T> implements java.io.Serializable
 {
-	@:overload public function compare(t1 : T, t2 : T) : Int;
+	@:overload @:public public function compare(t1 : T, t2 : T) : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -2290,35 +2290,35 @@ extern class Collections
 */
 @:native('java$util$Collections$SetFromMap') @:internal extern class Collections_SetFromMap<E> extends java.util.AbstractSet<E> implements java.util.Set<E> implements java.io.Serializable
 {
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	
 }
@@ -2327,41 +2327,41 @@ extern class Collections
 */
 @:native('java$util$Collections$AsLIFOQueue') @:internal extern class Collections_AsLIFOQueue<E> extends java.util.AbstractQueue<E> implements java.util.Queue<E> implements java.io.Serializable
 {
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
-	@:overload public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
-	@:overload public function remove() : E;
+	@:overload @:public override public function remove() : E;
 	
-	@:overload public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
-	@:overload public function element() : E;
+	@:overload @:public override public function element() : E;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	
 }

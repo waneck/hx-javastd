@@ -30,7 +30,7 @@ package com.sun.tools.javadoc;
 	* <p>
 	* For example, a two dimensional array of String returns 'String'.
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
 	/**
 	* Return qualified name of type excluding any dimension information.
@@ -38,19 +38,19 @@ package com.sun.tools.javadoc;
 	* For example, a two dimensional array of String
 	* returns 'java.lang.String'.
 	*/
-	@:overload public function qualifiedTypeName() : String;
+	@:overload @:public public function qualifiedTypeName() : String;
 	
 	/**
 	* Return the simple name of this type.
 	*/
-	@:overload public function simpleTypeName() : String;
+	@:overload @:public public function simpleTypeName() : String;
 	
 	/**
 	* Return the type's dimension information, as a string.
 	* <p>
 	* For example, a two dimensional array of String returns '[][]'.
 	*/
-	@:overload public function dimension() : String;
+	@:overload @:public public function dimension() : String;
 	
 	/**
 	* Return this type as a class.  Array dimensions are ignored.
@@ -58,27 +58,27 @@ package com.sun.tools.javadoc;
 	* @return a ClassDocImpl if the type is a Class.
 	* Return null if it is a primitive type..
 	*/
-	@:overload public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return null, as this is not an annotation type.
 	*/
-	@:overload public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	/**
 	* Return null, as this is not an instantiation.
 	*/
-	@:overload public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
+	@:overload @:public public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
 	
 	/**
 	* Return null, as this is not a type variable.
 	*/
-	@:overload public function asTypeVariable() : com.sun.javadoc.TypeVariable;
+	@:overload @:public public function asTypeVariable() : com.sun.javadoc.TypeVariable;
 	
 	/**
 	* Return null, as this is not a wildcard type;
 	*/
-	@:overload public function asWildcardType() : com.sun.javadoc.WildcardType;
+	@:overload @:public public function asWildcardType() : com.sun.javadoc.WildcardType;
 	
 	/**
 	* Returns a string representation of the type.
@@ -90,12 +90,12 @@ package com.sun.tools.javadoc;
 	*
 	* @return name of type including any dimension information.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return true if this is a primitive type.
 	*/
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
 	
 }

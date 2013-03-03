@@ -37,11 +37,11 @@ package com.sun.media.sound;
 */
 extern interface ModelDirector
 {
-	@:overload public function noteOn(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function noteOff(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOff(noteNumber : Int, velocity : Int) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

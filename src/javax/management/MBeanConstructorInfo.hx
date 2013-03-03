@@ -36,7 +36,7 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	* @param constructor The <CODE>java.lang.reflect.Constructor</CODE>
 	* object describing the MBean constructor.
 	*/
-	@:overload public function new(description : String, constructor : java.lang.reflect.Constructor<Dynamic>) : Void;
+	@:overload @:public public function new(description : String, constructor : java.lang.reflect.Constructor<Dynamic>) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanConstructorInfo</CODE> object.
@@ -47,7 +47,7 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	* may be null with the same effect as a zero-length array.
 	* @param description A human readable description of the constructor.
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanConstructorInfo</CODE> object.
@@ -62,7 +62,7 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>Returns a shallow clone of this instance.  The clone is
@@ -74,7 +74,7 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	* <p>Since this class is immutable, cloning is chiefly of
 	* interest to subclasses.</p>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* <p>Returns the list of parameters for this constructor.  Each
@@ -89,9 +89,9 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	*
 	* @return  An array of <CODE>MBeanParameterInfo</CODE> objects.
 	*/
-	@:overload public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
+	@:overload @:public public function getSignature() : java.NativeArray<javax.management.MBeanParameterInfo>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this MBeanConstructorInfo to another.
@@ -106,7 +106,7 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	* signature arrays are equal if their elements are pairwise
 	* equal.
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/* Unlike attributes and operations, it's quite likely we'll have
 	more than one constructor with the same name and even
@@ -114,7 +114,7 @@ extern class MBeanConstructorInfo extends javax.management.MBeanFeatureInfo impl
 	We don't include the description, though, because it could be
 	quite long and yet the same between constructors.  Likewise for
 	the descriptor.  */
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

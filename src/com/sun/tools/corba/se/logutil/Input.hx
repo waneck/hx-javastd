@@ -33,42 +33,42 @@ extern class Input
 	* @throws FileNotFoundException if the file can't be found.
 	* @throws IOException if an I/O error occurs.
 	*/
-	@:overload public function new(filename : String) : Void;
+	@:overload @:public public function new(filename : String) : Void;
 	
 	/**
 	* Returns the name of this group of exceptions.
 	*
 	* @return the name of this group of exceptions.
 	*/
-	@:overload public function getGroupName() : String;
+	@:overload @:public public function getGroupName() : String;
 	
 	/**
 	* Returns the name of the package this class will go in.
 	*
 	* @return the name of the package.
 	*/
-	@:overload public function getPackageName() : String;
+	@:overload @:public public function getPackageName() : String;
 	
 	/**
 	* Returns the name of the generated class.
 	*
 	* @return the name of the class.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the exceptions contained in this class.
 	*
 	* @return the exceptions.
 	*/
-	@:overload public function getExceptions() : java.util.Queue<com.sun.tools.corba.se.logutil.InputException>;
+	@:overload @:public public function getExceptions() : java.util.Queue<com.sun.tools.corba.se.logutil.InputException>;
 	
 	/**
 	* Returns a textual representation of this input.
 	*
 	* @return a textual representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

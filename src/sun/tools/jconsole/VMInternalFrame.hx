@@ -25,11 +25,11 @@ package sun.tools.jconsole;
 */
 extern class VMInternalFrame extends sun.tools.jconsole.MaximizableInternalFrame
 {
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload public function getVMPanel() : sun.tools.jconsole.VMPanel;
+	@:overload @:public public function getVMPanel() : sun.tools.jconsole.VMPanel;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }

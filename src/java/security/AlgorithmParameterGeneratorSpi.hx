@@ -32,7 +32,7 @@ extern class AlgorithmParameterGeneratorSpi
 	* @param size the size (number of bits).
 	* @param random the source of randomness.
 	*/
-	@:overload @:abstract private function engineInit(size : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(size : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this parameter generator with a set of
@@ -44,14 +44,14 @@ extern class AlgorithmParameterGeneratorSpi
 	* @exception InvalidAlgorithmParameterException if the given parameter
 	* generation values are inappropriate for this parameter generator.
 	*/
-	@:overload @:abstract private function engineInit(genParamSpec : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(genParamSpec : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates the parameters.
 	*
 	* @return the new AlgorithmParameters object.
 	*/
-	@:overload @:abstract private function engineGenerateParameters() : java.security.AlgorithmParameters;
+	@:overload @:protected @:abstract private function engineGenerateParameters() : java.security.AlgorithmParameters;
 	
 	
 }

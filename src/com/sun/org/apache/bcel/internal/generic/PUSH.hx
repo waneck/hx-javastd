@@ -70,64 +70,64 @@ extern class PUSH implements com.sun.org.apache.bcel.internal.generic.CompoundIn
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Int) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Int) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Bool) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Bool) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Single) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Single) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : haxe.Int64) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : haxe.Int64) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Float) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Float) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : String) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : String) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : java.lang.Number) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : java.lang.Number) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Null<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Null<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* @param cp Constant pool
 	* @param value to be pushed
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Null<Bool>) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen, value : Null<Bool>) : Void;
 	
-	@:overload @:final public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public @:final public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
-	@:overload @:final public function getInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function getInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

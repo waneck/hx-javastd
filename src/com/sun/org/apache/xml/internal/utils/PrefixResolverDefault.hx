@@ -30,7 +30,7 @@ extern class PrefixResolverDefault implements com.sun.org.apache.xml.internal.ut
 	* Warning: This will not work correctly if xpathExpressionContext
 	* is an attribute node.
 	*/
-	@:overload public function new(xpathExpressionContext : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(xpathExpressionContext : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Given a namespace, get the corrisponding prefix.  This assumes that
@@ -40,7 +40,7 @@ extern class PrefixResolverDefault implements com.sun.org.apache.xml.internal.ut
 	* @return Namespace that prefix resolves to, or null if prefix
 	* is not bound.
 	*/
-	@:overload public function getNamespaceForPrefix(prefix : String) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String) : String;
 	
 	/**
 	* Given a namespace, get the corrisponding prefix.
@@ -52,19 +52,19 @@ extern class PrefixResolverDefault implements com.sun.org.apache.xml.internal.ut
 	* @return Namespace that prefix resolves to, or null if prefix
 	* is not bound.
 	*/
-	@:overload public function getNamespaceForPrefix(prefix : String, namespaceContext : org.w3c.dom.Node) : String;
+	@:overload @:public public function getNamespaceForPrefix(prefix : String, namespaceContext : org.w3c.dom.Node) : String;
 	
 	/**
 	* Return the base identifier.
 	*
 	* @return null
 	*/
-	@:overload public function getBaseIdentifier() : String;
+	@:overload @:public public function getBaseIdentifier() : String;
 	
 	/**
 	* @see PrefixResolver#handlesNullPrefixes()
 	*/
-	@:overload public function handlesNullPrefixes() : Bool;
+	@:overload @:public public function handlesNullPrefixes() : Bool;
 	
 	
 }

@@ -35,28 +35,28 @@ package javax.xml.stream;
 */
 @:require(java6) extern class XMLStreamException extends java.lang.Exception
 {
-	private var nested : java.lang.Throwable;
+	@:protected private var nested : java.lang.Throwable;
 	
-	private var location : javax.xml.stream.Location;
+	@:protected private var location : javax.xml.stream.Location;
 	
 	/**
 	* Default constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct an exception with the assocated message.
 	*
 	* @param msg the message to report
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Construct an exception with the assocated exception
 	*
 	* @param th a nested exception
 	*/
-	@:overload public function new(th : java.lang.Throwable) : Void;
+	@:overload @:public public function new(th : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct an exception with the assocated message and exception
@@ -64,7 +64,7 @@ package javax.xml.stream;
 	* @param th a nested exception
 	* @param msg the message to report
 	*/
-	@:overload public function new(msg : String, th : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, th : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct an exception with the assocated message, exception and location.
@@ -73,7 +73,7 @@ package javax.xml.stream;
 	* @param msg the message to report
 	* @param location the location of the error
 	*/
-	@:overload public function new(msg : String, location : javax.xml.stream.Location, th : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, location : javax.xml.stream.Location, th : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct an exception with the assocated message, exception and location.
@@ -81,21 +81,21 @@ package javax.xml.stream;
 	* @param msg the message to report
 	* @param location the location of the error
 	*/
-	@:overload public function new(msg : String, location : javax.xml.stream.Location) : Void;
+	@:overload @:public public function new(msg : String, location : javax.xml.stream.Location) : Void;
 	
 	/**
 	* Gets the nested exception.
 	*
 	* @return Nested exception
 	*/
-	@:overload public function getNestedException() : java.lang.Throwable;
+	@:overload @:public public function getNestedException() : java.lang.Throwable;
 	
 	/**
 	* Gets the location of the exception
 	*
 	* @return the location of the exception, may be null if none is available
 	*/
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
 	
 }

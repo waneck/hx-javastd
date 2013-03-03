@@ -27,17 +27,17 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Creates a new simple attribute value.
 	* @param value the attribute value.
 	*/
-	@:overload public function new(value : String) : Void;
+	@:overload @:public public function new(value : String) : Void;
 	
 	/**
 	* Returns this attribute value's type (String).
 	* @param stable The compiler/parser's symbol table
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function contextDependent() : Bool;
+	@:overload @:protected override private function contextDependent() : Bool;
 	
 	/**
 	* Translate this attribute value into JVM bytecodes that pushes the
@@ -45,7 +45,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param classGen BCEL Java class generator
 	* @param methodGen BCEL Java method generator
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

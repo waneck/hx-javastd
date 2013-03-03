@@ -32,7 +32,7 @@ extern class CharsetProvider
 	*          If a security manager has been installed and it denies
 	*          {@link RuntimePermission}<tt>("charsetProvider")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates an iterator that iterates over the charsets supported by this
@@ -42,7 +42,7 @@ extern class CharsetProvider
 	*
 	* @return  The new iterator
 	*/
-	@:overload @:abstract public function charsets() : java.util.Iterator<java.nio.charset.Charset>;
+	@:overload @:public @:abstract public function charsets() : java.util.Iterator<java.nio.charset.Charset>;
 	
 	/**
 	* Retrieves a charset for the given charset name. </p>
@@ -55,7 +55,7 @@ extern class CharsetProvider
 	*          or <tt>null</tt> if the named charset
 	*          is not supported by this provider
 	*/
-	@:overload @:abstract public function charsetForName(charsetName : String) : java.nio.charset.Charset;
+	@:overload @:public @:abstract public function charsetForName(charsetName : String) : java.nio.charset.Charset;
 	
 	
 }

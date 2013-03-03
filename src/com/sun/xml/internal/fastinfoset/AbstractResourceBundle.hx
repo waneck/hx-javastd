@@ -40,7 +40,7 @@ extern class AbstractResourceBundle extends java.util.ResourceBundle
 	*
 	* @author FastInfoset team
 	*/
-	public static var LOCALE(default, null) : String;
+	@:public @:static @:final public static var LOCALE(default, null) : String;
 	
 	/**
 	* Gets 'key' from ResourceBundle and format mesage using 'args'.
@@ -49,7 +49,7 @@ extern class AbstractResourceBundle extends java.util.ResourceBundle
 	* @param args Array of arguments for message.
 	* @return String formatted message.
 	*/
-	@:overload public function getString(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getString(key : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Parse a locale string, return corresponding Locale instance.
@@ -58,7 +58,7 @@ extern class AbstractResourceBundle extends java.util.ResourceBundle
 	* Name for the locale of interest.  If null, use VM default locale.
 	* @return New Locale instance.
 	*/
-	@:overload public static function parseLocale(localeString : String) : java.util.Locale;
+	@:overload @:public @:static public static function parseLocale(localeString : String) : java.util.Locale;
 	
 	/**
 	* Subclasses of this class must implement this method so that the
@@ -68,7 +68,7 @@ extern class AbstractResourceBundle extends java.util.ResourceBundle
 	*  A java.util.ResourceBundle from the subsclass. Methods in this class
 	*  will use this reference.
 	*/
-	@:overload @:abstract public function getBundle() : java.util.ResourceBundle;
+	@:overload @:public @:abstract public function getBundle() : java.util.ResourceBundle;
 	
 	/**
 	* Since we are changing the ResourceBundle extension point, must
@@ -82,7 +82,7 @@ extern class AbstractResourceBundle extends java.util.ResourceBundle
 	*
 	* @see java.util.ResourceBundle#handleGetObject(String)
 	*/
-	@:overload override private function handleGetObject(key : String) : Dynamic;
+	@:overload @:protected override private function handleGetObject(key : String) : Dynamic;
 	
 	/**
 	* Since we are changing the ResourceBundle extension point, must
@@ -93,7 +93,7 @@ extern class AbstractResourceBundle extends java.util.ResourceBundle
 	*
 	* @see java.util.ResourceBundle#getKeys()
 	*/
-	@:overload @:final override public function getKeys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:final override public function getKeys() : java.util.Enumeration<Dynamic>;
 	
 	
 }

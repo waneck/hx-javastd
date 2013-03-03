@@ -67,7 +67,7 @@ package com.sun.security.sasl.gsskerb;
 */
 @:internal extern class GssKrb5Client extends com.sun.security.sasl.gsskerb.GssKrb5Base implements javax.security.sasl.SaslClient
 {
-	@:overload public function hasInitialResponse() : Bool;
+	@:overload @:public public function hasInitialResponse() : Bool;
 	
 	/**
 	* Processes the challenge data.
@@ -83,7 +83,7 @@ package com.sun.security.sasl.gsskerb;
 	* @return A non-null byte array containing the response to be
 	* sent to the server.
 	*/
-	@:overload public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateChallenge(challengeData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

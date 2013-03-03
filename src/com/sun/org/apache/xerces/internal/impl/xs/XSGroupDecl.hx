@@ -29,51 +29,51 @@ extern class XSGroupDecl implements com.sun.org.apache.xerces.internal.xs.XSMode
 	* @author Sandy Gao, IBM
 	* @version $Id: XSGroupDecl.java,v 1.7 2010-11-01 04:39:55 joehw Exp $
 	*/
-	public var fName : String;
+	@:public public var fName : String;
 	
-	public var fTargetNamespace : String;
+	@:public public var fTargetNamespace : String;
 	
-	public var fModelGroup : com.sun.org.apache.xerces.internal.impl.xs.XSModelGroupImpl;
+	@:public public var fModelGroup : com.sun.org.apache.xerces.internal.impl.xs.XSModelGroupImpl;
 	
-	public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:public public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* Get the type of the object, i.e ELEMENT_DECLARATION.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The <code>name</code> of this <code>XSObject</code> depending on the
 	* <code>XSObject</code> type.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
 	* unspecified.  defines how a namespace URI is attached to schema
 	* components.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* {model group} A model group.
 	*/
-	@:overload public function getModelGroup() : com.sun.org.apache.xerces.internal.xs.XSModelGroup;
+	@:overload @:public public function getModelGroup() : com.sun.org.apache.xerces.internal.xs.XSModelGroup;
 	
 	/**
 	* Optional. Annotation.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* Optional. Annotations.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* @see org.apache.xerces.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	
 }

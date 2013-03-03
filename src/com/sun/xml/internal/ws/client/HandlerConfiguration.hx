@@ -40,30 +40,30 @@ extern class HandlerConfiguration
 	* @param roles               This contains the roles assumed by the Binding implementation.
 	* @param handlerChain        This contains the handler chain set on the Binding
 	*/
-	@:overload public function new(roles : java.util.Set<String>, handlerChain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public public function new(roles : java.util.Set<String>, handlerChain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	/**
 	* This is called when roles as reset on binding using SOAPBinding#setRoles(), to save reparsing the handlers again.
 	* @param roles
 	* @param oldConfig
 	*/
-	@:overload public function new(roles : java.util.Set<String>, oldConfig : com.sun.xml.internal.ws.client.HandlerConfiguration) : Void;
+	@:overload @:public public function new(roles : java.util.Set<String>, oldConfig : com.sun.xml.internal.ws.client.HandlerConfiguration) : Void;
 	
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	/**
 	*
 	* @return return a copy of handler chain
 	*/
-	@:overload public function getHandlerChain() : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
+	@:overload @:public public function getHandlerChain() : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>;
 	
-	@:overload public function getLogicalHandlers() : java.util.List<javax.xml.ws.handler.LogicalHandler<Dynamic>>;
+	@:overload @:public public function getLogicalHandlers() : java.util.List<javax.xml.ws.handler.LogicalHandler<Dynamic>>;
 	
-	@:overload public function getSoapHandlers() : java.util.List<javax.xml.ws.handler.soap.SOAPHandler<Dynamic>>;
+	@:overload @:public public function getSoapHandlers() : java.util.List<javax.xml.ws.handler.soap.SOAPHandler<Dynamic>>;
 	
-	@:overload public function getMessageHandlers() : java.util.List<com.sun.xml.internal.ws.api.handler.MessageHandler<Dynamic>>;
+	@:overload @:public public function getMessageHandlers() : java.util.List<com.sun.xml.internal.ws.api.handler.MessageHandler<Dynamic>>;
 	
-	@:overload public function getHandlerKnownHeaders() : java.util.Set<javax.xml.namespace.QName>;
+	@:overload @:public public function getHandlerKnownHeaders() : java.util.Set<javax.xml.namespace.QName>;
 	
 	
 }

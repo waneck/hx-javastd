@@ -56,7 +56,7 @@ extern class RowFilter<M, I>
 	*         not a valid regular expression.
 	* @see java.util.regex.Pattern
 	*/
-	@:overload public static function regexFilter<M, I>(regex : String, indices : java.NativeArray<Int>) : javax.swing.RowFilter<M, I>;
+	@:overload @:public @:static public static function regexFilter<M, I>(regex : String, indices : java.NativeArray<Int>) : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Returns a <code>RowFilter</code> that includes entries that
@@ -80,7 +80,7 @@ extern class RowFilter<M, I>
 	* @see java.util.Calendar
 	* @see java.util.Date
 	*/
-	@:overload public static function dateFilter<M, I>(type : javax.swing.RowFilter.RowFilter_ComparisonType, date : java.util.Date, indices : java.NativeArray<Int>) : javax.swing.RowFilter<M, I>;
+	@:overload @:public @:static public static function dateFilter<M, I>(type : javax.swing.RowFilter.RowFilter_ComparisonType, date : java.util.Date, indices : java.NativeArray<Int>) : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Returns a <code>RowFilter</code> that includes entries that
@@ -100,7 +100,7 @@ extern class RowFilter<M, I>
 	*         are &lt; 0, <code>type</code> is <code>null</code>
 	*         or <code>number</code> is <code>null</code>
 	*/
-	@:overload public static function numberFilter<M, I>(type : javax.swing.RowFilter.RowFilter_ComparisonType, number : java.lang.Number, indices : java.NativeArray<Int>) : javax.swing.RowFilter<M, I>;
+	@:overload @:public @:static public static function numberFilter<M, I>(type : javax.swing.RowFilter.RowFilter_ComparisonType, number : java.lang.Number, indices : java.NativeArray<Int>) : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Returns a <code>RowFilter</code> that includes entries if any
@@ -123,7 +123,7 @@ extern class RowFilter<M, I>
 	* @return a <code>RowFilter</code> implementing the specified criteria
 	* @see java.util.Arrays#asList
 	*/
-	@:overload public static function orFilter<M, I>(filters : java.lang.Iterable<javax.swing.RowFilter<M, I>>) : javax.swing.RowFilter<M, I>;
+	@:overload @:public @:static public static function orFilter<M, I>(filters : java.lang.Iterable<javax.swing.RowFilter<M, I>>) : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Returns a <code>RowFilter</code> that includes entries if all
@@ -146,7 +146,7 @@ extern class RowFilter<M, I>
 	* @throws NullPointerException if <code>filters</code> is null
 	* @see java.util.Arrays#asList
 	*/
-	@:overload public static function andFilter<M, I>(filters : java.lang.Iterable<javax.swing.RowFilter<M, I>>) : javax.swing.RowFilter<M, I>;
+	@:overload @:public @:static public static function andFilter<M, I>(filters : java.lang.Iterable<javax.swing.RowFilter<M, I>>) : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Returns a <code>RowFilter</code> that includes entries if the
@@ -157,7 +157,7 @@ extern class RowFilter<M, I>
 	* @throws IllegalArgumentException if <code>filter</code> is
 	*         <code>null</code>
 	*/
-	@:overload public static function notFilter<M, I>(filter : javax.swing.RowFilter<M, I>) : javax.swing.RowFilter<M, I>;
+	@:overload @:public @:static public static function notFilter<M, I>(filter : javax.swing.RowFilter<M, I>) : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Returns true if the specified entry should be shown;
@@ -171,7 +171,7 @@ extern class RowFilter<M, I>
 	*              object from the model
 	* @return true if the entry should be shown
 	*/
-	@:overload @:abstract public function include(entry : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
+	@:overload @:public @:abstract public function include(entry : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
 	
 	
 }
@@ -226,14 +226,14 @@ extern class RowFilter<M, I>
 	/**
 	* Creates an <code>Entry</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the underlying model.
 	*
 	* @return the model containing the data that this entry represents
 	*/
-	@:overload @:abstract public function getModel() : M;
+	@:overload @:public @:abstract public function getModel() : M;
 	
 	/**
 	* Returns the number of values in the entry.  For
@@ -242,7 +242,7 @@ extern class RowFilter<M, I>
 	*
 	* @return number of values in the object being filtered
 	*/
-	@:overload @:abstract public function getValueCount() : Int;
+	@:overload @:public @:abstract public function getValueCount() : Int;
 	
 	/**
 	* Returns the value at the specified index.  This may return
@@ -254,7 +254,7 @@ extern class RowFilter<M, I>
 	* @throws <code>IndexOutOfBoundsException</code> if index &lt; 0 or
 	*         &gt;= getValueCount
 	*/
-	@:overload @:abstract public function getValue(index : Int) : Dynamic;
+	@:overload @:public @:abstract public function getValue(index : Int) : Dynamic;
 	
 	/**
 	* Returns the string value at the specified index.  If
@@ -273,7 +273,7 @@ extern class RowFilter<M, I>
 	* @throws <code>IndexOutOfBoundsException</code> if index &lt; 0 ||
 	*         &gt;= getValueCount
 	*/
-	@:overload public function getStringValue(index : Int) : String;
+	@:overload @:public public function getStringValue(index : Int) : String;
 	
 	/**
 	* Returns the identifer (in the model) of the entry.
@@ -283,51 +283,51 @@ extern class RowFilter<M, I>
 	* @return a model-based (not view-based) identifier for
 	*         this entry
 	*/
-	@:overload @:abstract public function getIdentifier() : I;
+	@:overload @:public @:abstract public function getIdentifier() : I;
 	
 	
 }
 @:native('javax$swing$RowFilter$GeneralFilter') @:internal extern class RowFilter_GeneralFilter extends javax.swing.RowFilter<Dynamic, Dynamic>
 {
-	@:overload override public function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>) : Bool;
+	@:overload @:public override public function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>) : Bool;
 	
-	@:overload @:abstract private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
+	@:overload @:protected @:abstract private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
 	
 	
 }
 @:native('javax$swing$RowFilter$RegexFilter') @:internal extern class RowFilter_RegexFilter extends javax.swing.RowFilter.RowFilter_GeneralFilter
 {
-	@:overload override private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
+	@:overload @:protected override private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
 	
 	
 }
 @:native('javax$swing$RowFilter$DateFilter') @:internal extern class RowFilter_DateFilter extends javax.swing.RowFilter.RowFilter_GeneralFilter
 {
-	@:overload override private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
+	@:overload @:protected override private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
 	
 	
 }
 @:native('javax$swing$RowFilter$NumberFilter') @:internal extern class RowFilter_NumberFilter extends javax.swing.RowFilter.RowFilter_GeneralFilter
 {
-	@:overload override private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
+	@:overload @:protected override private function include(value : javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>, index : Int) : Bool;
 	
 	
 }
 @:native('javax$swing$RowFilter$OrFilter') @:internal extern class RowFilter_OrFilter<M, I> extends javax.swing.RowFilter<M, I>
 {
-	@:overload override public function include(value : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
+	@:overload @:public override public function include(value : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
 	
 	
 }
 @:native('javax$swing$RowFilter$AndFilter') @:internal extern class RowFilter_AndFilter<M, I> extends javax.swing.RowFilter.RowFilter_OrFilter<M, I>
 {
-	@:overload override public function include(value : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
+	@:overload @:public override public function include(value : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
 	
 	
 }
 @:native('javax$swing$RowFilter$NotFilter') @:internal extern class RowFilter_NotFilter<M, I> extends javax.swing.RowFilter<M, I>
 {
-	@:overload override public function include(value : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
+	@:overload @:public override public function include(value : javax.swing.RowFilter.RowFilter_Entry<M, I>) : Bool;
 	
 	
 }

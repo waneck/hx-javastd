@@ -32,13 +32,13 @@ extern class AttributeInUseException extends javax.naming.NamingException
 	* @param   explanation     Possibly null additional detail about this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of AttributeInUseException.
 	* All fields are initialized to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

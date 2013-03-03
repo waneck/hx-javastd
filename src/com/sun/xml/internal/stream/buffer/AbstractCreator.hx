@@ -29,44 +29,44 @@ package com.sun.xml.internal.stream.buffer;
 */
 extern class AbstractCreator extends com.sun.xml.internal.stream.buffer.AbstractCreatorProcessor
 {
-	private var _buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
+	@:protected private var _buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
 	
-	@:overload public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
+	@:overload @:public public function setXMLStreamBuffer(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
 	
-	@:overload public function getXMLStreamBuffer() : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
+	@:overload @:public public function getXMLStreamBuffer() : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
 	
-	@:overload @:final private function createBuffer() : Void;
+	@:overload @:protected @:final private function createBuffer() : Void;
 	
 	/**
 	* Should be called whenever a new tree is stored on the buffer.
 	*/
-	@:overload @:final private function increaseTreeCount() : Void;
+	@:overload @:protected @:final private function increaseTreeCount() : Void;
 	
-	@:overload @:final private function setBuffer(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
+	@:overload @:protected @:final private function setBuffer(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
 	
-	@:overload @:final private function setHasInternedStrings(hasInternedStrings : Bool) : Void;
+	@:overload @:protected @:final private function setHasInternedStrings(hasInternedStrings : Bool) : Void;
 	
-	@:overload @:final private function storeStructure(b : Int) : Void;
+	@:overload @:protected @:final private function storeStructure(b : Int) : Void;
 	
-	@:overload @:final private function resizeStructure() : Void;
+	@:overload @:protected @:final private function resizeStructure() : Void;
 	
-	@:overload @:final private function storeStructureString(s : String) : Void;
+	@:overload @:protected @:final private function storeStructureString(s : String) : Void;
 	
-	@:overload @:final private function resizeStructureStrings() : Void;
+	@:overload @:protected @:final private function resizeStructureStrings() : Void;
 	
-	@:overload @:final private function storeContentString(s : String) : Void;
+	@:overload @:protected @:final private function storeContentString(s : String) : Void;
 	
-	@:overload @:final private function storeContentCharacters(type : Int, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:protected @:final private function storeContentCharacters(type : Int, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final private function resizeContentCharacters() : Void;
+	@:overload @:protected @:final private function resizeContentCharacters() : Void;
 	
-	@:overload @:final private function storeContentCharactersCopy(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:protected @:final private function storeContentCharactersCopy(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final private function peekAtContentObject() : Dynamic;
+	@:overload @:protected @:final private function peekAtContentObject() : Dynamic;
 	
-	@:overload @:final private function storeContentObject(s : Dynamic) : Void;
+	@:overload @:protected @:final private function storeContentObject(s : Dynamic) : Void;
 	
-	@:overload @:final private function resizeContentObjects() : Void;
+	@:overload @:protected @:final private function resizeContentObjects() : Void;
 	
 	
 }

@@ -10,13 +10,13 @@ extern class DuplicateName extends org.omg.CORBA.UserException
 	/** 
 	* The name for which there was already an interceptor registered.
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_name : String) : Void;
+	@:overload @:public public function new(_name : String) : Void;
 	
-	@:overload public function new($reason : String, _name : String) : Void;
+	@:overload @:public public function new($reason : String, _name : String) : Void;
 	
 	
 }

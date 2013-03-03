@@ -36,7 +36,7 @@ extern interface Acceptor
 	* @return <code>true</code> when it performs initializatin
 	* actions (typically the first call.
 	*/
-	@:overload public function initialize() : Bool;
+	@:overload @:public public function initialize() : Bool;
 	
 	/**
 	* Used to determine if an <code>Acceptor</code> has been initialized.
@@ -44,7 +44,7 @@ extern interface Acceptor
 	* @return <code>true</code. if the <code>Acceptor</code> has been
 	* initialized.
 	*/
-	@:overload public function initialized() : Bool;
+	@:overload @:public public function initialized() : Bool;
 	
 	/**
 	* PEPt uses separate caches for each type of <code>Acceptor</code>
@@ -52,7 +52,7 @@ extern interface Acceptor
 	*
 	* @return {@link java.lang.String}
 	*/
-	@:overload public function getConnectionCacheType() : String;
+	@:overload @:public public function getConnectionCacheType() : String;
 	
 	/**
 	* Set the
@@ -66,7 +66,7 @@ extern interface Acceptor
 	*
 	* @param connectionCache.
 	*/
-	@:overload public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.InboundConnectionCache) : Void;
+	@:overload @:public public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.InboundConnectionCache) : Void;
 	
 	/**
 	* Get the
@@ -81,7 +81,7 @@ extern interface Acceptor
 	* @return
 	* {@link com.sun.corba.se.pept.transport.ConnectionCache ConnectionCache}
 	*/
-	@:overload public function getConnectionCache() : com.sun.corba.se.pept.transport.InboundConnectionCache;
+	@:overload @:public public function getConnectionCache() : com.sun.corba.se.pept.transport.InboundConnectionCache;
 	
 	/**
 	* Used to determine if the <code>Acceptor</code> should register
@@ -96,7 +96,7 @@ extern interface Acceptor
 	* registered with
 	* {@link com.sun.corba.se.pept.transport.Selector Selector}
 	*/
-	@:overload public function shouldRegisterAcceptEvent() : Bool;
+	@:overload @:public public function shouldRegisterAcceptEvent() : Bool;
 	
 	/**
 	* Accept a connection request.
@@ -109,12 +109,12 @@ extern interface Acceptor
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	* being created.
 	*/
-	@:overload public function accept() : Void;
+	@:overload @:public public function accept() : Void;
 	
 	/**
 	* Close the <code>Acceptor</code>.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Get the
@@ -124,7 +124,7 @@ extern interface Acceptor
 	* @return
 	* {@link com.sun.corba.se.pept.transport.EventHandler EventHandler}
 	*/
-	@:overload public function getEventHandler() : com.sun.corba.se.pept.transport.EventHandler;
+	@:overload @:public public function getEventHandler() : com.sun.corba.se.pept.transport.EventHandler;
 	
 	/**
 	* Used to get a
@@ -136,7 +136,7 @@ extern interface Acceptor
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.MessageMeidator MessageMediator}
 	*/
-	@:overload public function createMessageMediator(xbroker : com.sun.corba.se.pept.broker.Broker, xconnection : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function createMessageMediator(xbroker : com.sun.corba.se.pept.broker.Broker, xconnection : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	/**
 	* Used to finish creating a
@@ -148,7 +148,7 @@ extern interface Acceptor
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
 	*/
-	@:overload public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, xconnection : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, xconnection : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	/**
 	* Used to get a
@@ -159,7 +159,7 @@ extern interface Acceptor
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
 	*/
-	@:overload public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
 	/**
 	* Used to get a
@@ -170,7 +170,7 @@ extern interface Acceptor
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
 	*/
-	@:overload public function createOutputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function createOutputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
 	
 	
 }

@@ -41,14 +41,14 @@ extern class Messages
 	* properties file.  The specified properties file is assumed to
 	* reside in the CLASSPATH. An IOException is thrown if the loading fails.
 	*/
-	@:overload @:final @:synchronized public static function msgLoad(propertyFileName : String) : Void;
+	@:overload @:public @:static @:final @:synchronized public static function msgLoad(propertyFileName : String) : Void;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
 	* string.  If the msgkey cannot be found, its value is returned
 	* as the output message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -61,7 +61,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm : String) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm : String) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -74,7 +74,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm : Int) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm : Int) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -87,7 +87,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm1 : String, parm2 : String) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm1 : String, parm2 : String) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -100,7 +100,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm1 : Int, parm2 : String) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm1 : Int, parm2 : String) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -113,7 +113,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm1 : String, parm2 : Int) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm1 : String, parm2 : Int) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -126,7 +126,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm1 : Int, parm2 : Int) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm1 : Int, parm2 : Int) : String;
 	
 	/**
 	* Returns the message text corresponding to the passed msgkey
@@ -140,7 +140,7 @@ extern class Messages
 	* If the msgkey cannot be found, its value is used as the
 	* message text.
 	*/
-	@:overload @:final public static function msg(msgkey : String, parm1 : String, parm2 : String, parm3 : String) : String;
+	@:overload @:public @:static @:final public static function msg(msgkey : String, parm1 : String, parm2 : String, parm3 : String) : String;
 	
 	
 }

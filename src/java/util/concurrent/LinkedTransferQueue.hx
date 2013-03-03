@@ -37,7 +37,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	/**
 	* Creates an initially empty {@code LinkedTransferQueue}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a {@code LinkedTransferQueue}
@@ -48,7 +48,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Inserts the specified element at the tail of this queue.
@@ -56,7 +56,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function put(e : E) : Void;
+	@:overload @:public public function put(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the tail of this queue.
@@ -67,7 +67,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*  {@link BlockingQueue#offer(Object,long,TimeUnit) BlockingQueue.offer})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue.
@@ -76,7 +76,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	* @return {@code true} (as specified by {@link Queue#offer})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue.
@@ -86,7 +86,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	* @return {@code true} (as specified by {@link Collection#add})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Transfers the element to a waiting consumer immediately, if possible.
@@ -98,7 +98,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function tryTransfer(e : E) : Bool;
+	@:overload @:public public function tryTransfer(e : E) : Bool;
 	
 	/**
 	* Transfers the element to a consumer, waiting if necessary to do so.
@@ -111,7 +111,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function transfer(e : E) : Void;
+	@:overload @:public public function transfer(e : E) : Void;
 	
 	/**
 	* Transfers the element to a consumer if it is possible to do so
@@ -127,25 +127,25 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function tryTransfer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function tryTransfer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload public function take() : E;
+	@:overload @:public public function take() : E;
 	
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
-	@:overload override public function poll() : E;
-	
-	/**
-	* @throws NullPointerException     {@inheritDoc}
-	* @throws IllegalArgumentException {@inheritDoc}
-	*/
-	@:overload public function drainTo(c : java.util.Collection<E>) : Int;
+	@:overload @:public override public function poll() : E;
 	
 	/**
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>) : Int;
+	
+	/**
+	* @throws NullPointerException     {@inheritDoc}
+	* @throws IllegalArgumentException {@inheritDoc}
+	*/
+	@:overload @:public public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
 	
 	/**
 	* Returns an iterator over the elements in this queue in proper sequence.
@@ -160,18 +160,18 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return an iterator over the elements in this queue in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload override public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Returns {@code true} if this queue contains no elements.
 	*
 	* @return {@code true} if this queue contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function hasWaitingConsumer() : Bool;
+	@:overload @:public public function hasWaitingConsumer() : Bool;
 	
 	/**
 	* Returns the number of elements in this queue.  If this queue
@@ -185,9 +185,9 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return the number of elements in this queue
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function getWaitingConsumerCount() : Int;
+	@:overload @:public public function getWaitingConsumerCount() : Int;
 	
 	/**
 	* Removes a single instance of the specified element from this queue,
@@ -200,7 +200,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	* @param o element to be removed from this queue, if present
 	* @return {@code true} if this queue changed as a result of the call
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this queue contains the specified element.
@@ -210,7 +210,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	* @param o object to be checked for containment in this queue
 	* @return {@code true} if this queue contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Always returns {@code Integer.MAX_VALUE} because a
@@ -219,7 +219,7 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 	* @return {@code Integer.MAX_VALUE} (as specified by
 	*         {@link BlockingQueue#remainingCapacity()})
 	*/
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
 	
 }
@@ -235,11 +235,11 @@ extern class LinkedTransferQueue<E> extends java.util.AbstractQueue<E> implement
 }
 @:native('java$util$concurrent$LinkedTransferQueue$Itr') @:internal extern class LinkedTransferQueue_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload @:final public function hasNext() : Bool;
+	@:overload @:public @:final public function hasNext() : Bool;
 	
-	@:overload @:final public function next() : Dynamic;
+	@:overload @:public @:final public function next() : Dynamic;
 	
-	@:overload @:final public function remove() : Void;
+	@:overload @:public @:final public function remove() : Void;
 	
 	
 }

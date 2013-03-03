@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 @:internal extern class DefaultFieldRenderer implements com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer
 {
-	@:overload public function new(frf : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory, defaultCollectionFieldRenderer : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer) : Void;
+	@:overload @:public public function new(frf : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory, defaultCollectionFieldRenderer : com.sun.tools.internal.xjc.generator.bean.field.FieldRenderer) : Void;
 	
-	@:overload public function generate(outline : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
+	@:overload @:public public function generate(outline : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : com.sun.tools.internal.xjc.outline.FieldOutline;
 	
 	
 }

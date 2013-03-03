@@ -28,15 +28,15 @@ package sun.nio.fs;
 */
 @:internal extern class LinuxUserDefinedFileAttributeView extends sun.nio.fs.AbstractUserDefinedFileAttributeView
 {
-	@:overload public function list() : java.util.List<String>;
+	@:overload @:public override public function list() : java.util.List<String>;
 	
-	@:overload public function size(name : String) : Int;
+	@:overload @:public override public function size(name : String) : Int;
 	
-	@:overload public function read(name : String, dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public override public function read(name : String, dst : java.nio.ByteBuffer) : Int;
 	
-	@:overload public function write(name : String, src : java.nio.ByteBuffer) : Int;
+	@:overload @:public override public function write(name : String, src : java.nio.ByteBuffer) : Int;
 	
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public override public function delete(name : String) : Void;
 	
 	
 }

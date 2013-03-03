@@ -30,13 +30,13 @@ extern class IconUIResource implements javax.swing.Icon implements javax.swing.p
 	* an existing Icon instance.
 	* @param delegate the icon being wrapped
 	*/
-	@:overload public function new(delegate : javax.swing.Icon) : Void;
+	@:overload @:public public function new(delegate : javax.swing.Icon) : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

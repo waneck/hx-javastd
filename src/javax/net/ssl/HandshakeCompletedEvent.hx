@@ -31,14 +31,14 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	* @param sock the SSLSocket acting as the source of the event
 	* @param s the SSLSession this event is associated with
 	*/
-	@:overload public function new(sock : javax.net.ssl.SSLSocket, s : javax.net.ssl.SSLSession) : Void;
+	@:overload @:public public function new(sock : javax.net.ssl.SSLSocket, s : javax.net.ssl.SSLSession) : Void;
 	
 	/**
 	* Returns the session that triggered this event.
 	*
 	* @return the <code>SSLSession</code> for this handshake
 	*/
-	@:overload public function getSession() : javax.net.ssl.SSLSession;
+	@:overload @:public public function getSession() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Returns the cipher suite in use by the session which was produced
@@ -47,7 +47,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	*
 	* @return the name of the cipher suite negotiated during this session.
 	*/
-	@:overload public function getCipherSuite() : String;
+	@:overload @:public public function getCipherSuite() : String;
 	
 	/**
 	* Returns the certificate(s) that were sent to the peer during
@@ -67,7 +67,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	*          then null is returned.
 	* @see #getLocalPrincipal()
 	*/
-	@:overload public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the identity of the peer which was established as part
@@ -82,7 +82,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	* @exception SSLPeerUnverifiedException if the peer is not verified.
 	* @see #getPeerPrincipal()
 	*/
-	@:overload public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getPeerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the identity of the peer which was identified as part
@@ -103,7 +103,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	* @exception SSLPeerUnverifiedException if the peer is not verified.
 	* @see #getPeerPrincipal()
 	*/
-	@:overload public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public public function getPeerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	/**
 	* Returns the identity of the peer which was established as part of
@@ -121,7 +121,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPeerPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public public function getPeerPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the principal that was sent to the peer during handshaking.
@@ -136,7 +136,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLocalPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public public function getLocalPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the socket which is the source of this event.
@@ -145,7 +145,7 @@ extern class HandshakeCompletedEvent extends java.util.EventObject
 	*
 	* @return the socket on which the connection was made.
 	*/
-	@:overload public function getSocket() : javax.net.ssl.SSLSocket;
+	@:overload @:public public function getSocket() : javax.net.ssl.SSLSocket;
 	
 	
 }

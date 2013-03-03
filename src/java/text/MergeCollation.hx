@@ -41,26 +41,26 @@ package java.text;
 	* Creates from a pattern
 	* @exception ParseException If the input pattern is incorrect.
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* recovers current pattern
 	*/
-	@:overload public function getPattern() : String;
+	@:overload @:public public function getPattern() : String;
 	
 	/**
 	* recovers current pattern.
 	* @param withWhiteSpace puts spacing around the entries, and \n
 	* before & and <
 	*/
-	@:overload public function getPattern(withWhiteSpace : Bool) : String;
+	@:overload @:public public function getPattern(withWhiteSpace : Bool) : String;
 	
 	/**
 	* emits the pattern for collation builder.
 	* @return emits the string in the format understable to the collation
 	* builder.
 	*/
-	@:overload public function emitPattern() : String;
+	@:overload @:public public function emitPattern() : String;
 	
 	/**
 	* emits the pattern for collation builder.
@@ -69,31 +69,31 @@ package java.text;
 	* @return emits the string in the format understable to the collation
 	* builder.
 	*/
-	@:overload public function emitPattern(withWhiteSpace : Bool) : String;
+	@:overload @:public public function emitPattern(withWhiteSpace : Bool) : String;
 	
 	/**
 	* sets the pattern.
 	*/
-	@:overload public function setPattern(pattern : String) : Void;
+	@:overload @:public public function setPattern(pattern : String) : Void;
 	
 	/**
 	* adds a pattern to the current one.
 	* @param pattern the new pattern to be added
 	*/
-	@:overload public function addPattern(pattern : String) : Void;
+	@:overload @:public public function addPattern(pattern : String) : Void;
 	
 	/**
 	* gets count of separate entries
 	* @return the size of pattern entries
 	*/
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	/**
 	* gets count of separate entries
 	* @param index the offset of the desired pattern entry
 	* @return the requested pattern entry
 	*/
-	@:overload public function getItemAt(index : Int) : java.text.PatternEntry;
+	@:overload @:public public function getItemAt(index : Int) : java.text.PatternEntry;
 	
 	
 }

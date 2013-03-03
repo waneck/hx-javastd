@@ -93,14 +93,14 @@ package javax.smartcardio;
 	* TerminalFactory.getInstance()} methods and receives the <code>params</code>
 	* object specified by the application.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the CardTerminals created by this factory.
 	*
 	* @return the CardTerminals created by this factory.
 	*/
-	@:overload @:abstract private function engineTerminals() : javax.smartcardio.CardTerminals;
+	@:overload @:protected @:abstract private function engineTerminals() : javax.smartcardio.CardTerminals;
 	
 	
 }

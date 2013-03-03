@@ -41,39 +41,39 @@ package javax.swing;
 */
 extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel implements java.lang.Cloneable implements java.io.Serializable
 {
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
-	private var leadAnchorNotificationEnabled : Bool;
-	
-	/** {@inheritDoc} */
-	@:overload public function getMinSelectionIndex() : Int;
+	@:protected private var leadAnchorNotificationEnabled : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function getMaxSelectionIndex() : Int;
+	@:overload @:public public function getMinSelectionIndex() : Int;
 	
 	/** {@inheritDoc} */
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getMaxSelectionIndex() : Int;
 	
 	/** {@inheritDoc} */
-	@:overload public function getSelectionMode() : Int;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
+	
+	/** {@inheritDoc} */
+	@:overload @:public public function getSelectionMode() : Int;
 	
 	/**
 	* {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function setSelectionMode(selectionMode : Int) : Void;
+	@:overload @:public public function setSelectionMode(selectionMode : Int) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function isSelectedIndex(index : Int) : Bool;
+	@:overload @:public public function isSelectedIndex(index : Int) : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function isSelectionEmpty() : Bool;
+	@:overload @:public public function isSelectionEmpty() : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function addListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
+	@:overload @:public public function addListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function removeListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
+	@:overload @:public public function removeListSelectionListener(l : javax.swing.event.ListSelectionListener) : Void;
 	
 	/**
 	* Returns an array of all the list selection listeners
@@ -88,19 +88,19 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getListSelectionListeners() : java.NativeArray<javax.swing.event.ListSelectionListener>;
+	@:require(java4) @:overload @:public public function getListSelectionListeners() : java.NativeArray<javax.swing.event.ListSelectionListener>;
 	
 	/**
 	* Notifies listeners that we have ended a series of adjustments.
 	*/
-	@:overload private function fireValueChanged(isAdjusting : Bool) : Void;
+	@:overload @:protected private function fireValueChanged(isAdjusting : Bool) : Void;
 	
 	/**
 	* Notifies <code>ListSelectionListeners</code> that the value
 	* of the selection, in the closed interval <code>firstIndex</code>,
 	* <code>lastIndex</code>, has changed.
 	*/
-	@:overload private function fireValueChanged(firstIndex : Int, lastIndex : Int) : Void;
+	@:overload @:protected private function fireValueChanged(firstIndex : Int, lastIndex : Int) : Void;
 	
 	/**
 	* @param firstIndex the first index in the interval
@@ -109,7 +109,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*          adjustments
 	* @see EventListenerList
 	*/
-	@:overload private function fireValueChanged(firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
+	@:overload @:protected private function fireValueChanged(firstIndex : Int, lastIndex : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered as
@@ -146,13 +146,13 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Sets the value of the leadAnchorNotificationEnabled flag.
 	* @see             #isLeadAnchorNotificationEnabled()
 	*/
-	@:overload public function setLeadAnchorNotificationEnabled(flag : Bool) : Void;
+	@:overload @:public public function setLeadAnchorNotificationEnabled(flag : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>leadAnchorNotificationEnabled</code> flag.
@@ -172,10 +172,10 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	* @return  the value of the <code>leadAnchorNotificationEnabled</code> flag
 	* @see             #setLeadAnchorNotificationEnabled(boolean)
 	*/
-	@:overload public function isLeadAnchorNotificationEnabled() : Bool;
+	@:overload @:public public function isLeadAnchorNotificationEnabled() : Bool;
 	
 	/** {@inheritDoc} */
-	@:overload public function clearSelection() : Void;
+	@:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Changes the selection to be between {@code index0} and {@code index1}
@@ -198,7 +198,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*         (and neither index is {@code -1})
 	* @see #addListSelectionListener
 	*/
-	@:overload public function setSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function setSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Changes the selection to be the set union of the current selection
@@ -226,7 +226,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	* @see #addListSelectionListener
 	* @see #setSelectionInterval
 	*/
-	@:overload public function addSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function addSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Changes the selection to be the set difference of the current selection
@@ -252,7 +252,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*         (and neither index is {@code -1})
 	* @see #addListSelectionListener
 	*/
-	@:overload public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeSelectionInterval(index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Insert length indices beginning before/after index. If the value
@@ -262,7 +262,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	* called to sync the selection model with a corresponding change
 	* in the data model.
 	*/
-	@:overload public function insertIndexInterval(index : Int, length : Int, before : Bool) : Void;
+	@:overload @:public public function insertIndexInterval(index : Int, length : Int, before : Bool) : Void;
 	
 	/**
 	* Remove the indices in the interval index0,index1 (inclusive) from
@@ -270,10 +270,10 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	* model width a corresponding change in the data model.  Note
 	* that (as always) index0 need not be <= index1.
 	*/
-	@:overload public function removeIndexInterval(index0 : Int, index1 : Int) : Void;
+	@:overload @:public public function removeIndexInterval(index0 : Int, index1 : Int) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload public function setValueIsAdjusting(isAdjusting : Bool) : Void;
+	@:overload @:public public function setValueIsAdjusting(isAdjusting : Bool) : Void;
 	
 	/**
 	* Returns a string that displays and identifies this
@@ -281,7 +281,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*
 	* @return a <code>String</code> representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a clone of this selection model with the same selection.
@@ -291,13 +291,13 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*    both (a) implement the Cloneable interface and (b) define a
 	*    <code>clone</code> method.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/** {@inheritDoc} */
-	@:overload public function getAnchorSelectionIndex() : Int;
+	@:overload @:public public function getAnchorSelectionIndex() : Int;
 	
 	/** {@inheritDoc} */
-	@:overload public function getLeadSelectionIndex() : Int;
+	@:overload @:public public function getLeadSelectionIndex() : Int;
 	
 	/**
 	* Set the anchor selection index, leaving all selection values unchanged.
@@ -307,7 +307,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	* @see #getAnchorSelectionIndex
 	* @see #setLeadSelectionIndex
 	*/
-	@:overload public function setAnchorSelectionIndex(anchorIndex : Int) : Void;
+	@:overload @:public public function setAnchorSelectionIndex(anchorIndex : Int) : Void;
 	
 	/**
 	* Set the lead selection index, leaving all selection values unchanged.
@@ -322,7 +322,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function moveLeadSelectionIndex(leadIndex : Int) : Void;
+	@:require(java5) @:overload @:public public function moveLeadSelectionIndex(leadIndex : Int) : Void;
 	
 	/**
 	* Sets the lead selection index, ensuring that values between the
@@ -352,7 +352,7 @@ extern class DefaultListSelectionModel implements javax.swing.ListSelectionModel
 	* @see #getLeadSelectionIndex
 	* @see #setAnchorSelectionIndex
 	*/
-	@:overload public function setLeadSelectionIndex(leadIndex : Int) : Void;
+	@:overload @:public public function setLeadSelectionIndex(leadIndex : Int) : Void;
 	
 	
 }

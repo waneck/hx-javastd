@@ -32,104 +32,104 @@ package com.sun.tools.doclets.formats.html;
 */
 @:require(java5) extern class TagletWriterImpl extends com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter
 {
-	@:overload public function new(htmlWriter : com.sun.tools.doclets.formats.html.HtmlDocletWriter, isFirstSentence : Bool) : Void;
+	@:overload @:public public function new(htmlWriter : com.sun.tools.doclets.formats.html.HtmlDocletWriter, isFirstSentence : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getDocRootOutput() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getDocRootOutput() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function deprecatedTagOutput(doc : com.sun.javadoc.Doc) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function deprecatedTagOutput(doc : com.sun.javadoc.Doc) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMsgRetriever() : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
+	@:overload @:public override public function getMsgRetriever() : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getParamHeader(header : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getParamHeader(header : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function paramTagOutput(paramTag : com.sun.javadoc.ParamTag, paramName : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function paramTagOutput(paramTag : com.sun.javadoc.ParamTag, paramName : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function returnTagOutput(returnTag : com.sun.javadoc.Tag) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function returnTagOutput(returnTag : com.sun.javadoc.Tag) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function seeTagOutput(holder : com.sun.javadoc.Doc, seeTags : java.NativeArray<com.sun.javadoc.SeeTag>) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function seeTagOutput(holder : com.sun.javadoc.Doc, seeTags : java.NativeArray<com.sun.javadoc.SeeTag>) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function simpleTagOutput(simpleTags : java.NativeArray<com.sun.javadoc.Tag>, header : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function simpleTagOutput(simpleTags : java.NativeArray<com.sun.javadoc.Tag>, header : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function simpleTagOutput(simpleTag : com.sun.javadoc.Tag, header : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function simpleTagOutput(simpleTag : com.sun.javadoc.Tag, header : String) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getThrowsHeader() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getThrowsHeader() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function throwsTagOutput(throwsTag : com.sun.javadoc.ThrowsTag) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function throwsTagOutput(throwsTag : com.sun.javadoc.ThrowsTag) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function throwsTagOutput(throwsType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function throwsTagOutput(throwsType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function valueTagOutput(field : com.sun.javadoc.FieldDoc, constantVal : String, includeLink : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function valueTagOutput(field : com.sun.javadoc.FieldDoc, constantVal : String, includeLink : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function commentTagsToOutput(holderTag : com.sun.javadoc.Tag, tags : java.NativeArray<com.sun.javadoc.Tag>) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function commentTagsToOutput(holderTag : com.sun.javadoc.Tag, tags : java.NativeArray<com.sun.javadoc.Tag>) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function commentTagsToOutput(holderDoc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function commentTagsToOutput(holderDoc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function commentTagsToOutput(holderTag : com.sun.javadoc.Tag, holderDoc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>, isFirstSentence : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function commentTagsToOutput(holderTag : com.sun.javadoc.Tag, holderDoc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>, isFirstSentence : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
+	@:overload @:public override public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
 	
 	/**
 	* Return an instance of a TagletWriter that knows how to write HTML.
 	*
 	* @return an instance of a TagletWriter that knows how to write HTML.
 	*/
-	@:overload override public function getTagletOutputInstance() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutputInstance() : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

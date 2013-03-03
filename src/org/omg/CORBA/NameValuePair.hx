@@ -32,19 +32,19 @@ extern class NameValuePair implements org.omg.CORBA.portable.IDLEntity
 	/**
 	* The name to be associated with a value by this <code>NameValuePair</code> object.
 	*/
-	public var id : String;
+	@:public public var id : String;
 	
 	/**
 	* The value to be associated with a name by this <code>NameValuePair</code> object.
 	*/
-	public var value : org.omg.CORBA.Any;
+	@:public public var value : org.omg.CORBA.Any;
 	
 	/**
 	* Constructs an empty <code>NameValuePair</code> object.
 	* To associate a name with a value after using this constructor, the fields
 	* of this object have to be accessed individually.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>NameValuePair</code> object that associates
@@ -52,7 +52,7 @@ extern class NameValuePair implements org.omg.CORBA.portable.IDLEntity
 	* @param __id the name to be associated with the given <code>Any</code> object
 	* @param __value the <code>Any</code> object to be associated with the given name
 	*/
-	@:overload public function new(__id : String, __value : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function new(__id : String, __value : org.omg.CORBA.Any) : Void;
 	
 	
 }

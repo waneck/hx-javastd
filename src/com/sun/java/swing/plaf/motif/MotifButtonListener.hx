@@ -31,9 +31,9 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifButtonListener extends javax.swing.plaf.basic.BasicButtonListener
 {
-	@:overload public function new(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public public function new(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function checkOpacity(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function checkOpacity(b : javax.swing.AbstractButton) : Void;
 	
 	
 }

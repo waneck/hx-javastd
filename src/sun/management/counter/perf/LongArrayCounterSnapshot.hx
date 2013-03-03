@@ -28,11 +28,11 @@ package sun.management.counter.perf;
 */
 @:internal extern class LongArrayCounterSnapshot extends sun.management.counter.AbstractCounter implements sun.management.counter.LongArrayCounter
 {
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
-	@:overload public function longArrayValue() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function longArrayValue() : java.NativeArray<haxe.Int64>;
 	
-	@:overload public function longAt(index : Int) : haxe.Int64;
+	@:overload @:public public function longAt(index : Int) : haxe.Int64;
 	
 	
 }

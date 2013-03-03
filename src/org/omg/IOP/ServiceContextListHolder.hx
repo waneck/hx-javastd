@@ -8,17 +8,17 @@ package org.omg.IOP;
 /** An array of service contexts, forming a service context list. */
 extern class ServiceContextListHolder implements org.omg.CORBA.portable.Streamable
 {
-	public var value : java.NativeArray<org.omg.IOP.ServiceContext>;
+	@:public public var value : java.NativeArray<org.omg.IOP.ServiceContext>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialValue : java.NativeArray<org.omg.IOP.ServiceContext>) : Void;
+	@:overload @:public public function new(initialValue : java.NativeArray<org.omg.IOP.ServiceContext>) : Void;
 	
-	@:overload public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

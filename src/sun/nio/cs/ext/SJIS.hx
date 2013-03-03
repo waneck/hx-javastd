@@ -27,41 +27,41 @@ package sun.nio.cs.ext;
 */
 extern class SJIS extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$SJIS$Decoder') @:internal extern class SJIS_Decoder extends sun.nio.cs.ext.JIS_X_0208_Decoder implements sun.nio.cs.ext.DelegatableDecoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload private function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload private function decodeDouble(c1 : Int, c2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decodeDouble(c1 : Int, c2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override public function implReset() : Void;
+	@:overload @:public override public function implReset() : Void;
 	
-	@:overload override public function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public override public function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$SJIS$Encoder') @:internal extern class SJIS_Encoder extends sun.nio.cs.ext.JIS_X_0208_Encoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
 	
-	@:overload override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

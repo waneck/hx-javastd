@@ -33,7 +33,7 @@ package sun.misc;
 */
 extern class RegexpPool
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Add a regular expression to the pool of regular expressions.
@@ -46,7 +46,7 @@ extern class RegexpPool
 	parameter.
 	* @exception REException error
 	*/
-	@:overload public function add(re : String, ret : Dynamic) : Void;
+	@:overload @:public public function add(re : String, ret : Dynamic) : Void;
 	
 	/**
 	* Replace the target for the regular expression with a different
@@ -60,7 +60,7 @@ extern class RegexpPool
 	*      is called with the string fragment that matched the '*' as its
 	*      parameter.
 	*/
-	@:overload public function replace(re : String, ret : Dynamic) : Void;
+	@:overload @:public public function replace(re : String, ret : Dynamic) : Void;
 	
 	/**
 	* Delete the regular expression and its target.
@@ -68,7 +68,7 @@ extern class RegexpPool
 	*           must begin or end with a '*'
 	* @return target - the old target.
 	*/
-	@:overload public function delete(re : String) : Dynamic;
+	@:overload @:public public function delete(re : String) : Dynamic;
 	
 	/** Search for a match to a string & return the object associated
 	with it with the match.  When multiple regular expressions
@@ -83,13 +83,13 @@ extern class RegexpPool
 	the return value is the result from calling
 	return.found(string_that_matched_wildcard).
 	*/
-	@:overload public function match(s : String) : Dynamic;
+	@:overload @:public public function match(s : String) : Dynamic;
 	
 	/** Identical to match except that it will only find matches to
 	regular expressions that were added to the pool <i>after</i>
 	the last regular expression that matched in the last call
 	to match() or matchNext() */
-	@:overload public function matchNext(s : String) : Dynamic;
+	@:overload @:public public function matchNext(s : String) : Dynamic;
 	
 	/** Resets the pool so that the next call to matchNext looks
 	at all regular expressions in the pool.  match(s); is equivalent
@@ -100,10 +100,10 @@ extern class RegexpPool
 	match() was done in such a way that there are no such race
 	hazards: multiple threads can be matching in the same pool
 	simultaneously. */
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/** Print this pool to standard output */
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

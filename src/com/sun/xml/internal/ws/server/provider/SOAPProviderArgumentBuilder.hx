@@ -28,39 +28,39 @@ package com.sun.xml.internal.ws.server.provider;
 	/**
 	* @author Jitendra Kotamraju
 	*/
-	private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected @:final private var soapVersion(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$PayloadSource') @:internal extern class SOAPProviderArgumentBuilder_PayloadSource extends com.sun.xml.internal.ws.server.provider.SOAPProviderArgumentBuilder<javax.xml.transform.Source>
 {
-	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
+	@:overload @:protected override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
 	
-	@:overload private function getResponseMessage(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected private function getResponseMessage(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$MessageSource') @:internal extern class SOAPProviderArgumentBuilder_MessageSource extends com.sun.xml.internal.ws.server.provider.SOAPProviderArgumentBuilder<javax.xml.transform.Source>
 {
-	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
+	@:overload @:protected override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
 	
-	@:overload private function getResponseMessage(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected private function getResponseMessage(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$SOAPMessageParameter') @:internal extern class SOAPProviderArgumentBuilder_SOAPMessageParameter extends com.sun.xml.internal.ws.server.provider.SOAPProviderArgumentBuilder<javax.xml.soap.SOAPMessage>
 {
-	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.soap.SOAPMessage;
+	@:overload @:protected override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.soap.SOAPMessage;
 	
-	@:overload private function getResponseMessage(soapMsg : javax.xml.soap.SOAPMessage) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected private function getResponseMessage(soapMsg : javax.xml.soap.SOAPMessage) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, returnValue : javax.xml.soap.SOAPMessage, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:protected private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, returnValue : javax.xml.soap.SOAPMessage, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

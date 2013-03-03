@@ -25,15 +25,15 @@ package com.sun.tools.internal.ws.processor.modeler.annotation;
 */
 @:internal extern class MemberInfo implements java.lang.Comparable<com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>
 {
-	@:overload public function new(paramType : com.sun.mirror.type.TypeMirror, paramName : String, jaxbAnnotations : java.util.List<java.lang.annotation.Annotation>) : Void;
+	@:overload @:public public function new(paramType : com.sun.mirror.type.TypeMirror, paramName : String, jaxbAnnotations : java.util.List<java.lang.annotation.Annotation>) : Void;
 	
-	@:overload public function getJaxbAnnotations() : java.util.List<java.lang.annotation.Annotation>;
+	@:overload @:public public function getJaxbAnnotations() : java.util.List<java.lang.annotation.Annotation>;
 	
-	@:overload public function getParamType() : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getParamType() : com.sun.mirror.type.TypeMirror;
 	
-	@:overload public function getParamName() : String;
+	@:overload @:public public function getParamName() : String;
 	
-	@:overload public function compareTo(member : com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo) : Int;
+	@:overload @:public public function compareTo(member : com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo) : Int;
 	
 	
 }

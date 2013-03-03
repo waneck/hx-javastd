@@ -28,11 +28,11 @@ extern interface ByteBufferPool
 	/**
 	* @author Charlie Hunt
 	*/
-	@:overload public function getByteBuffer(theSize : Int) : java.nio.ByteBuffer;
+	@:overload @:public public function getByteBuffer(theSize : Int) : java.nio.ByteBuffer;
 	
-	@:overload public function releaseByteBuffer(thebb : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function releaseByteBuffer(thebb : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function activeCount() : Int;
+	@:overload @:public public function activeCount() : Int;
 	
 	
 }

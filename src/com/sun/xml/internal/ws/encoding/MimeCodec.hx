@@ -25,46 +25,56 @@ package com.sun.xml.internal.ws.encoding;
 */
 @:internal extern class MimeCodec implements com.sun.xml.internal.ws.api.pipe.Codec
 {
-	public static var MULTIPART_RELATED_MIME_TYPE(default, null) : String;
+	@:public @:static @:final public static var MULTIPART_RELATED_MIME_TYPE(default, null) : String;
 	
-	private var rootCodec : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:protected private var rootCodec : com.sun.xml.internal.ws.api.pipe.Codec;
 	
-	private var version(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected @:final private var version(default, null) : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
+	@:protected @:final private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
 	
-	@:overload private function new(version : com.sun.xml.internal.ws.api.SOAPVersion, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:protected private function new(version : com.sun.xml.internal.ws.api.SOAPVersion, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
 	/**
 	* Copy constructor.
 	*/
-	@:overload private function new(that : com.sun.xml.internal.ws.encoding.MimeCodec) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.encoding.MimeCodec) : Void;
 	
-	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Parses a {@link Packet} from a {@link MimeMultipartParser}.
 	*/
-	@:overload @:abstract private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected @:abstract private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:abstract public function copy() : com.sun.xml.internal.ws.encoding.MimeCodec;
+	@:overload @:public @:abstract public function copy() : com.sun.xml.internal.ws.encoding.MimeCodec;
 	
-	@:overload public static function writeln(s : String, out : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function writeln(s : String, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes a string as ASCII string.
 	*/
-	@:overload public static function writeAsAscii(s : String, out : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function writeAsAscii(s : String, out : java.io.OutputStream) : Void;
 	
-	@:overload public static function writeln(out : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function writeln(out : java.io.OutputStream) : Void;
+	
+	/**
+	* The version of {@link #encode(Packet,OutputStream)}
+	* that writes to NIO {@link ByteBuffer}.
+	*
+	* <p>
+	* TODO: for the convenience of implementation, write
+	* an adapter that wraps {@link WritableByteChannel} to {@link OutputStream}.
+	*/
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
 	
 }

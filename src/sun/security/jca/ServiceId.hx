@@ -32,11 +32,11 @@ package sun.security.jca;
 */
 @:require(java5) extern class ServiceId
 {
-	public var type(default, null) : String;
+	@:public @:final public var type(default, null) : String;
 	
-	public var algorithm(default, null) : String;
+	@:public @:final public var algorithm(default, null) : String;
 	
-	@:overload public function new(type : String, algorithm : String) : Void;
+	@:overload @:public public function new(type : String, algorithm : String) : Void;
 	
 	
 }

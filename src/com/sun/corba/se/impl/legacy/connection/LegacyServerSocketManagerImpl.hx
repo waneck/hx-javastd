@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.legacy.connection;
 */
 extern class LegacyServerSocketManagerImpl implements com.sun.corba.se.spi.legacy.connection.LegacyServerSocketManager
 {
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function legacyGetTransientServerPort(type : String) : Int;
+	@:overload @:public public function legacyGetTransientServerPort(type : String) : Int;
 	
-	@:overload @:synchronized public function legacyGetPersistentServerPort(socketType : String) : Int;
+	@:overload @:public @:synchronized public function legacyGetPersistentServerPort(socketType : String) : Int;
 	
-	@:overload @:synchronized public function legacyGetTransientOrPersistentServerPort(socketType : String) : Int;
+	@:overload @:public @:synchronized public function legacyGetTransientOrPersistentServerPort(socketType : String) : Int;
 	
-	@:overload @:synchronized public function legacyGetEndpoint(name : String) : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketEndPointInfo;
+	@:overload @:public @:synchronized public function legacyGetEndpoint(name : String) : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketEndPointInfo;
 	
-	@:overload public function legacyIsLocalServerPort(port : Int) : Bool;
+	@:overload @:public public function legacyIsLocalServerPort(port : Int) : Bool;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
 	
 }

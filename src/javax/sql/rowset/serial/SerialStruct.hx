@@ -55,7 +55,7 @@ extern class SerialStruct implements java.sql.Struct implements java.io.Serializ
 	* @throws SerialException if an error occurs
 	* @see java.sql.Struct
 	*/
-	@:overload public function new(_in : java.sql.Struct, map : java.util.Map<String, Class<Dynamic>>) : Void;
+	@:overload @:public public function new(_in : java.sql.Struct, map : java.util.Map<String, Class<Dynamic>>) : Void;
 	
 	/**
 	* Constructs a <code>SerialStruct</code> object from the
@@ -75,7 +75,7 @@ extern class SerialStruct implements java.sql.Struct implements java.io.Serializ
 	*        that defines how the UDT is to be mapped
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function new(_in : java.sql.SQLData, map : java.util.Map<String, Class<Dynamic>>) : Void;
+	@:overload @:public public function new(_in : java.sql.SQLData, map : java.util.Map<String, Class<Dynamic>>) : Void;
 	
 	/**
 	* Retrieves the SQL type name for this <code>SerialStruct</code>
@@ -87,7 +87,7 @@ extern class SerialStruct implements java.sql.Struct implements java.io.Serializ
 	*         <code>SerialStruct</code> object represents
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getSQLTypeName() : String;
+	@:overload @:public public function getSQLTypeName() : String;
 	
 	/**
 	* Retrieves an array of <code>Object</code> values containing the
@@ -99,7 +99,7 @@ extern class SerialStruct implements java.sql.Struct implements java.io.Serializ
 	*         that this <code>SerialStruct</code> object represents
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getAttributes() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getAttributes() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Retrieves the attributes for the SQL structured type that
@@ -118,7 +118,7 @@ extern class SerialStruct implements java.sql.Struct implements java.io.Serializ
 	*         represents
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getAttributes(map : java.util.Map<String, Class<Dynamic>>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getAttributes(map : java.util.Map<String, Class<Dynamic>>) : java.NativeArray<Dynamic>;
 	
 	
 }

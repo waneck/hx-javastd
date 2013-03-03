@@ -42,7 +42,7 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class XMLDSigRI extends java.security.Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -72,7 +72,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	* This provider is available to all JDBC <code>RowSet</code> implementations as the
 	* default persistence provider.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns <code>"javax.sql.rowset.providers.RIXMLProvider"</code>, which is
@@ -81,7 +81,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	* @return a <code>String</code> object with the fully specified class name of
 	*           this <code>RIOptimisticProvider</code> implementation
 	*/
-	@:overload override public function getProviderID() : String;
+	@:overload @:public override public function getProviderID() : String;
 	
 	/**
 	* Sets this <code>WebRowSet</code> object's reader to the given
@@ -89,7 +89,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function setXmlReader(reader : javax.sql.rowset.spi.XmlReader) : Void;
+	@:overload @:public public function setXmlReader(reader : javax.sql.rowset.spi.XmlReader) : Void;
 	
 	/**
 	* Sets this <code>WebRowSet</code> object's writer to the given
@@ -97,7 +97,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function setXmlWriter(writer : javax.sql.rowset.spi.XmlWriter) : Void;
+	@:overload @:public public function setXmlWriter(writer : javax.sql.rowset.spi.XmlWriter) : Void;
 	
 	/**
 	* Retrieves the reader that this <code>WebRowSet</code> object
@@ -106,7 +106,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	* @return the <code>XmlReader</code> object for this SyncProvider
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getXmlReader() : javax.sql.rowset.spi.XmlReader;
+	@:overload @:public public function getXmlReader() : javax.sql.rowset.spi.XmlReader;
 	
 	/**
 	* Retrieves the writer that this <code>WebRowSet</code> object
@@ -115,7 +115,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	* @return the <code>XmlWriter</code> for this SyncProvider
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getXmlWriter() : javax.sql.rowset.spi.XmlWriter;
+	@:overload @:public public function getXmlWriter() : javax.sql.rowset.spi.XmlWriter;
 	
 	/**
 	* Returns the <code>SyncProvider</code> grade of syncrhonization that
@@ -134,35 +134,35 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	*       </PRE>
 	*
 	*/
-	@:overload override public function getProviderGrade() : Int;
+	@:overload @:public override public function getProviderGrade() : Int;
 	
 	/**
 	* Returns the default UPDATABLE_VIEW behavior of this reader
 	*
 	*/
-	@:overload override public function supportsUpdatableView() : Int;
+	@:overload @:public override public function supportsUpdatableView() : Int;
 	
 	/**
 	* Returns the default DATASOURCE_LOCK behavior of this reader
 	*/
-	@:overload override public function getDataSourceLock() : Int;
+	@:overload @:public override public function getDataSourceLock() : Int;
 	
 	/**
 	* Throws an unsupported operation exception as this method does
 	* function with non-locking XML data sources.
 	*/
-	@:overload override public function setDataSourceLock(lock : Int) : Void;
+	@:overload @:public override public function setDataSourceLock(lock : Int) : Void;
 	
 	/**
 	* Returns a null object as RowSetWriters are not returned by this SyncProvider
 	*/
-	@:overload override public function getRowSetWriter() : javax.sql.RowSetWriter;
+	@:overload @:public override public function getRowSetWriter() : javax.sql.RowSetWriter;
 	
 	/**
 	* Returns a null object as RowSetWriter objects are not returned by this
 	* SyncProvider
 	*/
-	@:overload override public function getRowSetReader() : javax.sql.RowSetReader;
+	@:overload @:public override public function getRowSetReader() : javax.sql.RowSetReader;
 	
 	/**
 	* Returns the release version ID of the Reference Implementation Optimistic
@@ -170,7 +170,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	*
 	* @return the <code>String</code> detailing the version number of this SyncProvider
 	*/
-	@:overload override public function getVersion() : String;
+	@:overload @:public override public function getVersion() : String;
 	
 	/**
 	* Returns the vendor name of the Reference Implemntation Optimistic
@@ -179,7 +179,7 @@ extern class RIXMLProvider extends javax.sql.rowset.spi.SyncProvider
 	* @return the <code>String</code> detailing the vendor name of this
 	*      SyncProvider
 	*/
-	@:overload override public function getVendor() : String;
+	@:overload @:public override public function getVendor() : String;
 	
 	
 }

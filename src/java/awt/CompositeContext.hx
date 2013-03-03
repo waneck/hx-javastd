@@ -28,7 +28,7 @@ extern interface CompositeContext
 	/**
 	* Releases resources allocated for a context.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Composes the two source {@link Raster} objects and
@@ -46,7 +46,7 @@ extern interface CompositeContext
 	* result of the operation is stored
 	* @see Composite
 	*/
-	@:overload public function compose(src : java.awt.image.Raster, dstIn : java.awt.image.Raster, dstOut : java.awt.image.WritableRaster) : Void;
+	@:overload @:public public function compose(src : java.awt.image.Raster, dstIn : java.awt.image.Raster, dstOut : java.awt.image.WritableRaster) : Void;
 	
 	
 }

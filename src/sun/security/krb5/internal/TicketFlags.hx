@@ -48,13 +48,13 @@ extern class TicketFlags extends sun.security.krb5.internal.util.KerberosFlags
 	*                   hw-authent(11)
 	*                  }
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(flags : java.NativeArray<Bool>) : Void;
+	@:overload @:public public function new(flags : java.NativeArray<Bool>) : Void;
 	
-	@:overload public function new(size : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(size : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Parse (unmarshal) a ticket flag from a DER input stream.  This form
@@ -68,18 +68,18 @@ extern class TicketFlags extends sun.security.krb5.internal.util.KerberosFlags
 	* @return an instance of TicketFlags.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.TicketFlags;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.TicketFlags;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function match(options : sun.security.krb5.internal.LoginOptions) : Bool;
+	@:overload @:public public function match(options : sun.security.krb5.internal.LoginOptions) : Bool;
 	
-	@:overload public function match(flags : sun.security.krb5.internal.TicketFlags) : Bool;
+	@:overload @:public public function match(flags : sun.security.krb5.internal.TicketFlags) : Bool;
 	
 	/**
 	* Returns the string representative of ticket flags.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* Creates a {@code LinkedBlockingQueue} with a capacity of
 	* {@link Integer#MAX_VALUE}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a {@code LinkedBlockingQueue} with the given (fixed) capacity.
@@ -47,7 +47,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws IllegalArgumentException if {@code capacity} is not greater
 	*         than zero
 	*/
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
 	/**
 	* Creates a {@code LinkedBlockingQueue} with a capacity of
@@ -59,14 +59,14 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Returns the number of elements in this queue.
 	*
 	* @return the number of elements in this queue
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns the number of additional elements that this queue can ideally
@@ -79,7 +79,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* because it may be the case that another thread is about to
 	* insert or remove an element.
 	*/
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
 	/**
 	* Inserts the specified element at the tail of this queue, waiting if
@@ -88,7 +88,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws InterruptedException {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function put(e : E) : Void;
+	@:overload @:public public function put(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the tail of this queue, waiting if
@@ -99,7 +99,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws InterruptedException {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue if it is
@@ -112,15 +112,15 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
-	@:overload public function take() : E;
+	@:overload @:public public function take() : E;
 	
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
-	@:overload override public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
-	@:overload override public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Removes a single instance of the specified element from this queue,
@@ -133,7 +133,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @param o element to be removed from this queue, if present
 	* @return {@code true} if this queue changed as a result of the call
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this queue contains the specified element.
@@ -143,7 +143,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @param o object to be checked for containment in this queue
 	* @return {@code true} if this queue contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -158,7 +158,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -196,15 +196,15 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Atomically removes all of the elements from this queue.
 	* The queue will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -212,7 +212,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>) : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -220,7 +220,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
 	
 	/**
 	* Returns an iterator over the elements in this queue in proper sequence.
@@ -235,7 +235,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return an iterator over the elements in this queue in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -248,11 +248,11 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 }
 @:native('java$util$concurrent$LinkedBlockingQueue$Itr') @:internal extern class LinkedBlockingQueue_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

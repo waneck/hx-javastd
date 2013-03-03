@@ -27,9 +27,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class RelativeLocationPath extends com.sun.org.apache.xalan.internal.xsltc.compiler.Expression
 {
-	@:overload @:abstract public function getAxis() : Int;
+	@:overload @:public @:abstract public function getAxis() : Int;
 	
-	@:overload @:abstract public function setAxis(axis : Int) : Void;
+	@:overload @:public @:abstract public function setAxis(axis : Int) : Void;
 	
 	
 }

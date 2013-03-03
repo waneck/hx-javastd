@@ -48,18 +48,18 @@ package com.sun.org.apache.xerces.internal.util;
 extern class SymbolTable
 {
 	/** Default table size. */
-	private static var TABLE_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var TABLE_SIZE(default, null) : Int;
 	
 	/** Buckets. */
-	private var fBuckets : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry>;
+	@:protected private var fBuckets : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry>;
 	
-	private var fTableSize : Int;
+	@:protected private var fTableSize : Int;
 	
 	/** Constructs a symbol table with a default number of buckets. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs a symbol table with a specified number of buckets. */
-	@:overload public function new(tableSize : Int) : Void;
+	@:overload @:public public function new(tableSize : Int) : Void;
 	
 	/**
 	* Adds the specified symbol to the symbol table and returns a
@@ -69,7 +69,7 @@ extern class SymbolTable
 	*
 	* @param symbol The new symbol.
 	*/
-	@:overload public function addSymbol(symbol : String) : String;
+	@:overload @:public public function addSymbol(symbol : String) : String;
 	
 	/**
 	* Adds the specified symbol to the symbol table and returns a
@@ -81,7 +81,7 @@ extern class SymbolTable
 	* @param offset The offset into the buffer of the new symbol.
 	* @param length The length of the new symbol in the buffer.
 	*/
-	@:overload public function addSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : String;
+	@:overload @:public public function addSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : String;
 	
 	/**
 	* Returns a hashcode value for the specified symbol. The value
@@ -91,7 +91,7 @@ extern class SymbolTable
 	*
 	* @param symbol The symbol to hash.
 	*/
-	@:overload public function hash(symbol : String) : Int;
+	@:overload @:public public function hash(symbol : String) : Int;
 	
 	/**
 	* Returns a hashcode value for the specified symbol information.
@@ -104,7 +104,7 @@ extern class SymbolTable
 	*               of the symbol.
 	* @param length The length of the symbol.
 	*/
-	@:overload public function hash(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public public function hash(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Returns true if the symbol table already contains the specified
@@ -112,7 +112,7 @@ extern class SymbolTable
 	*
 	* @param symbol The symbol to look for.
 	*/
-	@:overload public function containsSymbol(symbol : String) : Bool;
+	@:overload @:public public function containsSymbol(symbol : String) : Bool;
 	
 	/**
 	* Returns true if the symbol table already contains the specified
@@ -122,7 +122,7 @@ extern class SymbolTable
 	* @param offset The offset into the buffer.
 	* @param length The length of the symbol in the buffer.
 	*/
-	@:overload public function containsSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Bool;
+	@:overload @:public public function containsSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Bool;
 	
 	
 }
@@ -133,28 +133,28 @@ extern class SymbolTable
 @:native('com$sun$org$apache$xerces$internal$util$SymbolTable$Entry') extern class SymbolTable_Entry
 {
 	/** Symbol. */
-	public var symbol : String;
+	@:public public var symbol : String;
 	
 	/**
 	* Symbol characters. This information is duplicated here for
 	* comparison performance.
 	*/
-	public var characters : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var characters : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** The next entry. */
-	public var next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry;
+	@:public public var next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry;
 	
 	/**
 	* Constructs a new entry from the specified symbol and next entry
 	* reference.
 	*/
-	@:overload public function new(symbol : String, next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry) : Void;
+	@:overload @:public public function new(symbol : String, next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry) : Void;
 	
 	/**
 	* Constructs a new entry from the specified symbol information and
 	* next entry reference.
 	*/
-	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry) : Void;
+	@:overload @:public public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry) : Void;
 	
 	
 }

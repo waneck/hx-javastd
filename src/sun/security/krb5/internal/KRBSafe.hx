@@ -47,19 +47,19 @@ extern class KRBSafe
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var pvno : Int;
+	@:public public var pvno : Int;
 	
-	public var msgType : Int;
+	@:public public var msgType : Int;
 	
-	public var safeBody : sun.security.krb5.internal.KRBSafeBody;
+	@:public public var safeBody : sun.security.krb5.internal.KRBSafeBody;
 	
-	public var cksum : sun.security.krb5.Checksum;
+	@:public public var cksum : sun.security.krb5.Checksum;
 	
-	@:overload public function new(new_safeBody : sun.security.krb5.internal.KRBSafeBody, new_cksum : sun.security.krb5.Checksum) : Void;
+	@:overload @:public public function new(new_safeBody : sun.security.krb5.internal.KRBSafeBody, new_cksum : sun.security.krb5.Checksum) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an KRBSafe object.
@@ -67,7 +67,7 @@ extern class KRBSafe
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

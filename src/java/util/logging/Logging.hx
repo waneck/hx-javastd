@@ -25,13 +25,13 @@ package java.util.logging;
 */
 @:internal extern class Logging implements java.util.logging.LoggingMXBean
 {
-	@:overload public function getLoggerNames() : java.util.List<String>;
+	@:overload @:public public function getLoggerNames() : java.util.List<String>;
 	
-	@:overload public function getLoggerLevel(loggerName : String) : String;
+	@:overload @:public public function getLoggerLevel(loggerName : String) : String;
 	
-	@:overload public function setLoggerLevel(loggerName : String, levelName : String) : Void;
+	@:overload @:public public function setLoggerLevel(loggerName : String, levelName : String) : Void;
 	
-	@:overload public function getParentLoggerName(loggerName : String) : String;
+	@:overload @:public public function getParentLoggerName(loggerName : String) : String;
 	
 	
 }

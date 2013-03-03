@@ -30,9 +30,9 @@ extern class CorbanameURL extends com.sun.corba.se.impl.naming.namingutil.INSURL
 	* and initializes all the variables accordingly. If there are any parsing
 	* errors then BAD_PARAM exception is raised.
 	*/
-	@:overload public function new(aURL : String) : Void;
+	@:overload @:public public function new(aURL : String) : Void;
 	
-	@:overload public function isCorbanameURL() : Bool;
+	@:overload @:public override public function isCorbanameURL() : Bool;
 	
 	
 }

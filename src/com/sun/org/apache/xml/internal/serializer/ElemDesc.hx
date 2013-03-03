@@ -24,10 +24,10 @@ package com.sun.org.apache.xml.internal.serializer;
 extern class ElemDesc
 {
 	/** Bit position if this attribute type is a URL. */
-	public static var ATTRURL(default, null) : Int;
+	@:public @:static @:final public static var ATTRURL(default, null) : Int;
 	
 	/** Bit position if this attribute type is an empty type. */
-	public static var ATTREMPTY(default, null) : Int;
+	@:public @:static @:final public static var ATTREMPTY(default, null) : Int;
 	
 	/**
 	* Tell if any of the bits of interest are set for a named attribute type.
@@ -37,7 +37,7 @@ extern class ElemDesc
 	*
 	* @return true if any of the flags are set for the named attribute.
 	*/
-	@:overload public function isAttrFlagSet(name : String, flags : Int) : Bool;
+	@:overload @:public public function isAttrFlagSet(name : String, flags : Int) : Bool;
 	
 	
 }

@@ -38,15 +38,15 @@ extern class ParameterEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 {
 	/** This is a set of class constants.  A parameter can be passed
 	as one of In, Out, or Inout. */
-	public static var In(default, null) : Int;
+	@:public @:static @:final public static var In(default, null) : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.ParameterEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.ParameterEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the paramter generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -54,18 +54,18 @@ extern class ParameterEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the parameter generator.
 	@returns an object which implements the ParameterGen interface.
 	@see ParameterGen */
-	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** This indicates the pass type of this parameter. */
-	@:overload public function passType(passType : Int) : Void;
+	@:overload @:public public function passType(passType : Int) : Void;
 	
 	/** This indicates the pass type of this parameter. */
-	@:overload public function passType() : Int;
+	@:overload @:public public function passType() : Int;
 	
 	
 }

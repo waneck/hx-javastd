@@ -28,23 +28,23 @@ package sun.nio.cs.ext;
 */
 extern class COMPOUND_TEXT_Decoder extends java.nio.charset.CharsetDecoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, des : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, des : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Resets the decoder.
 	* Call this method to reset the decoder to its initial state
 	*/
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override private function implReplaceWith(newReplacement : String) : Void;
+	@:overload @:protected override private function implReplaceWith(newReplacement : String) : Void;
 	
 	
 }

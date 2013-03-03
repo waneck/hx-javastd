@@ -28,12 +28,12 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.AsynchronousChannelProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.AsynchronousChannelProvider) : Void;
 	
 	/**
 	* Returns the provider that created this channel.
 	*/
-	@:overload @:final public function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
+	@:overload @:public @:final public function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
 	
 	/**
 	* Opens an asynchronous server-socket channel.
@@ -57,7 +57,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:static public static function open(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Opens an asynchronous server-socket channel.
@@ -74,7 +74,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:static public static function open() : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket to
@@ -97,7 +97,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  ClosedChannelException              {@inheritDoc}
 	* @throws  IOException                         {@inheritDoc}
 	*/
-	@:overload @:final public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:final public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket to
@@ -134,14 +134,14 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* @throws  IllegalArgumentException                {@inheritDoc}
 	* @throws  ClosedChannelException                  {@inheritDoc}
 	* @throws  IOException                             {@inheritDoc}
 	*/
-	@:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload @:public @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Accepts a connection.
@@ -184,7 +184,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  ShutdownChannelGroupException
 	*          If the channel group has terminated
 	*/
-	@:overload @:abstract public function accept<A>(attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.AsynchronousSocketChannel, A>) : Void;
+	@:overload @:public @:abstract public function accept<A>(attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.AsynchronousSocketChannel, A>) : Void;
 	
 	/**
 	* Accepts a connection.
@@ -204,7 +204,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  NotYetBoundException
 	*          If this channel's socket has not yet been bound
 	*/
-	@:overload @:abstract public function accept() : java.util.concurrent.Future<java.nio.channels.AsynchronousSocketChannel>;
+	@:overload @:public @:abstract public function accept() : java.util.concurrent.Future<java.nio.channels.AsynchronousSocketChannel>;
 	
 	/**
 	* Returns the value of a socket option.
@@ -224,7 +224,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -234,7 +234,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -252,14 +252,14 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -278,7 +278,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public public function close() : Void;
+	@:overload @:public @:public @:public @:public @:public @:public public function close() : Void;
 	
 	
 }

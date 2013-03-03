@@ -25,11 +25,11 @@ package sun.security.jgss;
 */
 extern class ProviderList
 {
-	public static var DEFAULT_MECH_OID(default, null) : org.ietf.jgss.Oid;
+	@:public @:static @:final public static var DEFAULT_MECH_OID(default, null) : org.ietf.jgss.Oid;
 	
-	@:overload public function new(caller : sun.security.jgss.GSSCaller, useNative : Bool) : Void;
+	@:overload @:public public function new(caller : sun.security.jgss.GSSCaller, useNative : Bool) : Void;
 	
-	@:overload @:synchronized public function getMechFactory(mechOid : org.ietf.jgss.Oid) : sun.security.jgss.spi.MechanismFactory;
+	@:overload @:synchronized @:public public function getMechFactory(mechOid : org.ietf.jgss.Oid) : sun.security.jgss.spi.MechanismFactory;
 	
 	/**
 	* Obtains a MechanismFactory for a given mechanism. If the
@@ -42,13 +42,13 @@ extern class ProviderList
 	* support the desired mechanism, or when no provider supports
 	* the desired mechanism.
 	*/
-	@:overload @:synchronized public function getMechFactory(mechOid : org.ietf.jgss.Oid, p : java.security.Provider) : sun.security.jgss.spi.MechanismFactory;
+	@:overload @:synchronized @:public public function getMechFactory(mechOid : org.ietf.jgss.Oid, p : java.security.Provider) : sun.security.jgss.spi.MechanismFactory;
 	
-	@:overload public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
 	
-	@:overload @:synchronized public function addProviderAtFront(p : java.security.Provider, mechOid : org.ietf.jgss.Oid) : Void;
+	@:overload @:synchronized @:public public function addProviderAtFront(p : java.security.Provider, mechOid : org.ietf.jgss.Oid) : Void;
 	
-	@:overload @:synchronized public function addProviderAtEnd(p : java.security.Provider, mechOid : org.ietf.jgss.Oid) : Void;
+	@:overload @:synchronized @:public public function addProviderAtEnd(p : java.security.Provider, mechOid : org.ietf.jgss.Oid) : Void;
 	
 	
 }
@@ -64,11 +64,11 @@ extern class ProviderList
 */
 @:native('sun$security$jgss$ProviderList$PreferencesEntry') @:internal extern class ProviderList_PreferencesEntry
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

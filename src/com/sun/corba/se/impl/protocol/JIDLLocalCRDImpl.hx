@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class JIDLLocalCRDImpl extends com.sun.corba.se.impl.protocol.LocalClientRequestDispatcherBase
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	private var servant : org.omg.CORBA.portable.ServantObject;
+	@:protected private var servant : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload override public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public override public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload override public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public override public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
-	@:overload public function setServant(servant : Dynamic) : Void;
+	@:overload @:public public function setServant(servant : Dynamic) : Void;
 	
-	@:overload public function unexport() : Void;
+	@:overload @:public public function unexport() : Void;
 	
 	
 }

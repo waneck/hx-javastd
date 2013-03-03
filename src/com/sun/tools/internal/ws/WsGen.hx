@@ -29,7 +29,7 @@ extern class WsGen
 	* CLI entry point. Use {@link Invoker} to
 	* load tools.jar
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Entry point for tool integration.
@@ -44,7 +44,7 @@ extern class WsGen
 	* @return
 	*      0 if the tool runs successfully.
 	*/
-	@:overload public static function doMain(args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function doMain(args : java.NativeArray<String>) : Int;
 	
 	
 }

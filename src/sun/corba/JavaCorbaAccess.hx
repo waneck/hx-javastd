@@ -25,7 +25,7 @@ package sun.corba;
 */
 extern interface JavaCorbaAccess
 {
-	@:overload public function newValueHandlerImpl() : com.sun.corba.se.impl.io.ValueHandlerImpl;
+	@:overload @:public public function newValueHandlerImpl() : com.sun.corba.se.impl.io.ValueHandlerImpl;
 	
 	
 }

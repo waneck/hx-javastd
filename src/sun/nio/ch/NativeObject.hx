@@ -31,9 +31,9 @@ package sun.nio.ch;
 	/**
 	* Proxies for objects that reside in native memory.
 	*/
-	private static var unsafe(default, null) : sun.misc.Unsafe;
+	@:protected @:static @:final private static var unsafe(default, null) : sun.misc.Unsafe;
 	
-	@:overload private function new(size : Int, pageAligned : Bool) : Void;
+	@:overload @:protected private function new(size : Int, pageAligned : Bool) : Void;
 	
 	
 }

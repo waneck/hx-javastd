@@ -25,19 +25,19 @@ package com.sun.tools.classfile;
 */
 extern class Method
 {
-	@:overload public function new(access_flags : com.sun.tools.classfile.AccessFlags, name_index : Int, descriptor : com.sun.tools.classfile.Descriptor, attributes : com.sun.tools.classfile.Attributes) : Void;
+	@:overload @:public public function new(access_flags : com.sun.tools.classfile.AccessFlags, name_index : Int, descriptor : com.sun.tools.classfile.Descriptor, attributes : com.sun.tools.classfile.Attributes) : Void;
 	
-	@:overload public function byteLength() : Int;
+	@:overload @:public public function byteLength() : Int;
 	
-	@:overload public function getName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	public var access_flags(default, null) : com.sun.tools.classfile.AccessFlags;
+	@:public @:final public var access_flags(default, null) : com.sun.tools.classfile.AccessFlags;
 	
-	public var name_index(default, null) : Int;
+	@:public @:final public var name_index(default, null) : Int;
 	
-	public var descriptor(default, null) : com.sun.tools.classfile.Descriptor;
+	@:public @:final public var descriptor(default, null) : com.sun.tools.classfile.Descriptor;
 	
-	public var attributes(default, null) : com.sun.tools.classfile.Attributes;
+	@:public @:final public var attributes(default, null) : com.sun.tools.classfile.Attributes;
 	
 	
 }

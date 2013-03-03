@@ -35,41 +35,41 @@ package com.sun.tools.example.debug.gui;
 ////### the time it is created is used throughout its lifetime.
 extern class ThreadTreeTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$ThreadTreeTool$ThreadTreeToolListener') @:internal extern class ThreadTreeTool_ThreadTreeToolListener extends com.sun.tools.example.debug.event.JDIAdapter implements com.sun.tools.example.debug.event.JDIListener implements com.sun.tools.example.debug.bdi.SessionListener
 {
-	@:overload public function sessionStart(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionStart(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionInterrupt(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionInterrupt(e : java.util.EventObject) : Void;
 	
-	@:overload public function sessionContinue(e : java.util.EventObject) : Void;
+	@:overload @:public public function sessionContinue(e : java.util.EventObject) : Void;
 	
-	@:overload public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
+	@:overload @:public override public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
 	
-	@:overload public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
+	@:overload @:public override public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
 	
-	@:overload public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload @:public override public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$ThreadTreeTool$ThreadTreeNode') @:internal extern class ThreadTreeTool_ThreadTreeNode extends javax.swing.tree.DefaultMutableTreeNode
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function getThread() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function getThreadId() : String;
+	@:overload @:public public function getThreadId() : String;
 	
-	@:overload override public function isLeaf() : Bool;
+	@:overload @:public override public function isLeaf() : Bool;
 	
-	@:overload public function addThread(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function addThread(thread : com.sun.jdi.ThreadReference) : Void;
 	
-	@:overload public function removeThread(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public public function removeThread(thread : com.sun.jdi.ThreadReference) : Void;
 	
 	
 }

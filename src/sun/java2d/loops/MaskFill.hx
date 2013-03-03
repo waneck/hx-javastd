@@ -35,68 +35,68 @@ extern class MaskFill extends sun.java2d.loops.GraphicsPrimitive
 	* 4) the mask may be null in which case it should be treated
 	*    as if it were an array of all opaque values (0xff)
 	*/
-	public static var methodSignature(default, null) : String;
+	@:public @:static @:final public static var methodSignature(default, null) : String;
 	
-	public static var fillPgramSignature(default, null) : String;
+	@:public @:static @:final public static var fillPgramSignature(default, null) : String;
 	
-	public static var drawPgramSignature(default, null) : String;
+	@:public @:static @:final public static var drawPgramSignature(default, null) : String;
 	
-	public static var primTypeID(default, null) : Int;
+	@:public @:static @:final public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskFill;
+	@:overload @:public @:static public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskFill;
 	
-	@:overload public static function locatePrim(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskFill;
+	@:overload @:public @:static public static function locatePrim(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskFill;
 	
 	/*
 	* Note that this uses locatePrim, not locate, so it can return
 	* null if there is no specific loop to handle this op...
 	*/
-	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskFill;
+	@:overload @:public @:static public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskFill;
 	
-	@:overload private function new(alternateSignature : String, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(alternateSignature : String, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	* All MaskFill implementors must have this invoker method
 	*/
-	@:overload @:native public function new(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
+	@:overload @:public @:native public function new(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
 	
-	@:overload @:native public function FillAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public @:native public function FillAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
-	@:overload @:native public function DrawAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload @:public @:native public function DrawAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
-	@:overload public function canDoParallelograms() : Bool;
+	@:overload @:public public function canDoParallelograms() : Bool;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }
 @:native('sun$java2d$loops$MaskFill$General') @:internal extern class MaskFill_General extends sun.java2d.loops.MaskFill
 {
-	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, offset : Int, scan : Int) : Void;
+	@:overload @:public override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, offset : Int, scan : Int) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$MaskFill$TraceMaskFill') @:internal extern class MaskFill_TraceMaskFill extends sun.java2d.loops.MaskFill
 {
-	@:overload public function new(target : sun.java2d.loops.MaskFill) : Void;
+	@:overload @:public public function new(target : sun.java2d.loops.MaskFill) : Void;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
+	@:overload @:public override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
 	
-	@:overload override public function FillAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload @:public override public function FillAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
-	@:overload override public function DrawAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload @:public override public function DrawAAPgram(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
-	@:overload override public function canDoParallelograms() : Bool;
+	@:overload @:public override public function canDoParallelograms() : Bool;
 	
 	
 }

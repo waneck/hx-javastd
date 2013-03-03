@@ -70,7 +70,7 @@ extern class LocalVariableTable extends com.sun.org.apache.bcel.internal.classfi
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to `LocalVariableTable'
@@ -78,7 +78,7 @@ extern class LocalVariableTable extends com.sun.org.apache.bcel.internal.classfi
 	* @param local_variable_table Table of local variables
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, local_variable_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LocalVariable>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, local_variable_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LocalVariable>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -87,7 +87,7 @@ extern class LocalVariableTable extends com.sun.org.apache.bcel.internal.classfi
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump local variable table attribute to file stream in binary format.
@@ -95,30 +95,30 @@ extern class LocalVariableTable extends com.sun.org.apache.bcel.internal.classfi
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Array of local variables of method.
 	*/
-	@:overload @:final public function getLocalVariableTable() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LocalVariable>;
+	@:overload @:public @:final public function getLocalVariableTable() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LocalVariable>;
 	
 	/** @return first matching variable using index
 	*/
-	@:overload @:final public function getLocalVariable(index : Int) : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
+	@:overload @:public @:final public function getLocalVariable(index : Int) : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
 	
-	@:overload @:final public function setLocalVariableTable(local_variable_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LocalVariable>) : Void;
+	@:overload @:public @:final public function setLocalVariableTable(local_variable_table : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.LocalVariable>) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
-	@:overload @:final public function getTableLength() : Int;
+	@:overload @:public @:final public function getTableLength() : Int;
 	
 	
 }

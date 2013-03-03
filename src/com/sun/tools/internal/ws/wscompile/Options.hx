@@ -28,91 +28,91 @@ extern class Options
 	/**
 	* -verbose
 	*/
-	public var verbose : Bool;
+	@:public public var verbose : Bool;
 	
 	/**
 	* - quite
 	*/
-	public var quiet : Bool;
+	@:public public var quiet : Bool;
 	
 	/**
 	* -keep
 	*/
-	public var keep : Bool;
+	@:public public var keep : Bool;
 	
 	/**
 	* -d
 	*/
-	public var destDir : java.io.File;
+	@:public public var destDir : java.io.File;
 	
 	/**
 	* -s
 	*/
-	public var sourceDir : java.io.File;
+	@:public public var sourceDir : java.io.File;
 	
-	public var classpath : String;
+	@:public public var classpath : String;
 	
 	/**
 	* -Xnocompile
 	*/
-	public var nocompile : Bool;
+	@:public public var nocompile : Bool;
 	
-	public var target : com.sun.tools.internal.ws.wscompile.Options.Options_Target;
+	@:public public var target : com.sun.tools.internal.ws.wscompile.Options.Options_Target;
 	
 	/**
 	* strictly follow the compatibility rules specified in JAXWS spec
 	*/
-	public static var STRICT(default, null) : Int;
+	@:public @:static @:final public static var STRICT(default, null) : Int;
 	
 	/**
 	* loosely follow the compatibility rules and allow the use of vendor
 	* binding extensions
 	*/
-	public static var EXTENSION(default, null) : Int;
+	@:public @:static @:final public static var EXTENSION(default, null) : Int;
 	
 	/**
 	* this switch determines how carefully the compiler will follow
 	* the compatibility rules in the spec. Either <code>STRICT</code>
 	* or <code>EXTENSION</code>.
 	*/
-	public var compatibilityMode : Int;
+	@:public public var compatibilityMode : Int;
 	
-	@:overload public function isExtensionMode() : Bool;
+	@:overload @:public public function isExtensionMode() : Bool;
 	
 	/**
 	* Target direcoty when producing files.
 	*/
-	public var targetDir : java.io.File;
+	@:public public var targetDir : java.io.File;
 	
-	public var debug : Bool;
+	@:public public var debug : Bool;
 	
 	/**
 	* -Xdebug - gives complete stack trace
 	*/
-	public var debugMode : Bool;
+	@:public public var debugMode : Bool;
 	
 	/**
 	* Remember info on  generated source file generated so that it
 	* can be removed later, if appropriate.
 	*/
-	@:overload public function addGeneratedFile(file : java.io.File) : Void;
+	@:overload @:public public function addGeneratedFile(file : java.io.File) : Void;
 	
 	/**
 	* Remove generated files
 	*/
-	@:overload public function removeGeneratedFiles() : Void;
+	@:overload @:public public function removeGeneratedFiles() : Void;
 	
 	/**
 	* Return all the generated files and its types.
 	*/
-	@:overload public function getGeneratedFiles() : java.lang.Iterable<java.io.File>;
+	@:overload @:public public function getGeneratedFiles() : java.lang.Iterable<java.io.File>;
 	
 	/**
 	* Delete all the generated source files made during the execution
 	* of this environment (those that have been registered with the
 	* "addGeneratedFile" method).
 	*/
-	@:overload public function deleteGeneratedFiles() : Void;
+	@:overload @:public public function deleteGeneratedFiles() : Void;
 	
 	/**
 	* Parses arguments and fill fields of this object.
@@ -120,14 +120,14 @@ extern class Options
 	* @exception BadCommandLineException
 	*      thrown when there's a problem in the command-line arguments
 	*/
-	@:overload public function parseArguments(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function parseArguments(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Adds a file from the argume
 	*
 	* @param arg a file, could be a wsdl or xsd or a Class
 	*/
-	@:overload private function addFile(arg : String) : Void;
+	@:overload @:protected private function addFile(arg : String) : Void;
 	
 	/**
 	* Parses an option <code>args[i]</code> and return
@@ -139,17 +139,17 @@ extern class Options
 	* @exception BadCommandLineException
 	*      If the callee wants to provide a custom message for an error.
 	*/
-	@:overload private function parseArguments(args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:protected private function parseArguments(args : java.NativeArray<String>, i : Int) : Int;
 	
 	/**
 	* Obtains an operand and reports an error if it's not there.
 	*/
-	@:overload public function requireArgument(optionName : String, args : java.NativeArray<String>, i : Int) : String;
+	@:overload @:public public function requireArgument(optionName : String, args : java.NativeArray<String>, i : Int) : String;
 	
 	/**
 	* Get a URLClassLoader from using the classpath
 	*/
-	@:overload public function getClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Utility method for converting a search path string to an array
@@ -158,7 +158,7 @@ extern class Options
 	* @param path the search path string
 	* @return the resulting array of directory and JAR file URLs
 	*/
-	@:overload public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
+	@:overload @:public @:static public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
 	
 	/**
 	* Returns the directory or JAR file URL corresponding to the specified
@@ -167,7 +167,7 @@ extern class Options
 	* @param file the File object
 	* @return the resulting directory or JAR file URL, or null if unknown
 	*/
-	@:overload public static function fileToURL(file : java.io.File) : java.net.URL;
+	@:overload @:public @:static public static function fileToURL(file : java.io.File) : java.net.URL;
 	
 	
 }

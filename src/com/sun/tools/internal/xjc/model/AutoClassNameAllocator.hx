@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class AutoClassNameAllocator implements com.sun.tools.internal.xjc.api.ClassNameAllocator
 {
-	@:overload public function new(core : com.sun.tools.internal.xjc.api.ClassNameAllocator) : Void;
+	@:overload @:public public function new(core : com.sun.tools.internal.xjc.api.ClassNameAllocator) : Void;
 	
-	@:overload public function assignClassName(packageName : String, className : String) : String;
+	@:overload @:public public function assignClassName(packageName : String, className : String) : String;
 	
 	
 }

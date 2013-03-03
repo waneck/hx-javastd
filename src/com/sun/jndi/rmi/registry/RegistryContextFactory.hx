@@ -28,11 +28,11 @@ extern class RegistryContextFactory implements javax.naming.spi.ObjectFactory im
 	/**
 	* The type of each address in an RMI registry reference.
 	*/
-	public static var ADDRESS_TYPE(default, null) : String;
+	@:public @:final @:static public static var ADDRESS_TYPE(default, null) : String;
 	
-	@:overload public function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
+	@:overload @:public public function getInitialContext(env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.Context;
 	
-	@:overload public function getObjectInstance(ref : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:overload @:public public function getObjectInstance(ref : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
 	
 }

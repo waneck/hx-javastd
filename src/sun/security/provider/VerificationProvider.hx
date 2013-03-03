@@ -25,7 +25,7 @@ package sun.security.provider;
 */
 extern class VerificationProvider extends java.security.Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

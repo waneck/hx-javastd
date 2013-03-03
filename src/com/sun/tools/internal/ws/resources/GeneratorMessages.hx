@@ -25,61 +25,61 @@ package com.sun.tools.internal.ws.resources;
 */
 extern class GeneratorMessages
 {
-	@:overload public static function localizableGENERATOR_SERVICE_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_SERVICE_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Could not generate Service, class: {0} already exists. Rename wsdl:Service "{1}" using JAX-WS customization
 	*
 	*/
-	@:overload public static function GENERATOR_SERVICE_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_SERVICE_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableGENERATOR_SEI_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_SEI_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Could not generate SEI, class: {0} already exists. Rename wsdl:portType "{1}" using JAX-WS customization
 	*
 	*/
-	@:overload public static function GENERATOR_SEI_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_SEI_CLASS_ALREADY_EXIST(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableGENERATOR_NESTED_GENERATOR_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_NESTED_GENERATOR_ERROR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* generator error: {0}
 	*
 	*/
-	@:overload public static function GENERATOR_NESTED_GENERATOR_ERROR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_NESTED_GENERATOR_ERROR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableGENERATOR_INTERNAL_ERROR_SHOULD_NOT_HAPPEN(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_INTERNAL_ERROR_SHOULD_NOT_HAPPEN(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* internal error (should not happen): {0}
 	*
 	*/
-	@:overload public static function GENERATOR_INTERNAL_ERROR_SHOULD_NOT_HAPPEN(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_INTERNAL_ERROR_SHOULD_NOT_HAPPEN(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableGENERATOR_INDENTINGWRITER_CHARSET_CANTENCODE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_INDENTINGWRITER_CHARSET_CANTENCODE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* WSDL has some characters which native java encoder can''t encode: "{0}"
 	*
 	*/
-	@:overload public static function GENERATOR_INDENTINGWRITER_CHARSET_CANTENCODE(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_INDENTINGWRITER_CHARSET_CANTENCODE(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableGENERATOR_CANNOT_CREATE_DIR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_CANNOT_CREATE_DIR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* can''t create directory: {0}
 	*
 	*/
-	@:overload public static function GENERATOR_CANNOT_CREATE_DIR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_CANNOT_CREATE_DIR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableGENERATOR_CANT_WRITE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableGENERATOR_CANT_WRITE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* can''t write file: {0}
 	*
 	*/
-	@:overload public static function GENERATOR_CANT_WRITE(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function GENERATOR_CANT_WRITE(arg0 : Dynamic) : String;
 	
 	
 }

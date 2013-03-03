@@ -33,11 +33,11 @@ extern class InvalidAddressingHeaderException extends javax.xml.ws.WebServiceExc
 	* @param subsubcode
 	*      represents the reason why the Addressing header in question is invalid.
 	*/
-	@:overload public function new(problemHeader : javax.xml.namespace.QName, subsubcode : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(problemHeader : javax.xml.namespace.QName, subsubcode : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getProblemHeader() : javax.xml.namespace.QName;
+	@:overload @:public public function getProblemHeader() : javax.xml.namespace.QName;
 	
-	@:overload public function getSubsubcode() : javax.xml.namespace.QName;
+	@:overload @:public public function getSubsubcode() : javax.xml.namespace.QName;
 	
 	
 }

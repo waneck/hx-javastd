@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.expr;
 */
 @:internal extern class LValue
 {
-	private var jdiValue : com.sun.jdi.Value;
+	@:protected private var jdiValue : com.sun.jdi.Value;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -30,9 +30,9 @@ package com.sun.tools.internal.ws.processor.model;
 */
 extern class AsyncOperationType
 {
-	public static var POLLING(default, null) : com.sun.tools.internal.ws.processor.model.AsyncOperationType;
+	@:public @:static @:final public static var POLLING(default, null) : com.sun.tools.internal.ws.processor.model.AsyncOperationType;
 	
-	public static var CALLBACK(default, null) : com.sun.tools.internal.ws.processor.model.AsyncOperationType;
+	@:public @:static @:final public static var CALLBACK(default, null) : com.sun.tools.internal.ws.processor.model.AsyncOperationType;
 	
 	
 }

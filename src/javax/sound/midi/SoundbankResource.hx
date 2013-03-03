@@ -77,20 +77,20 @@ extern class SoundbankResource
 	* @see #getDataClass
 	* @see #getData
 	*/
-	@:overload private function new(soundBank : javax.sound.midi.Soundbank, name : String, dataClass : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(soundBank : javax.sound.midi.Soundbank, name : String, dataClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Obtains the sound bank that contains this <code>SoundbankResource</code>.
 	* @return the sound bank in which this <code>SoundbankResource</code> is stored
 	*/
-	@:overload public function getSoundbank() : javax.sound.midi.Soundbank;
+	@:overload @:public public function getSoundbank() : javax.sound.midi.Soundbank;
 	
 	/**
 	* Obtains the name of the resource.  This should generally be a string
 	* descriptive of the resource.
 	* @return the instrument's name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Obtains the class used by this sample to represent its data.
@@ -100,7 +100,7 @@ extern class SoundbankResource
 	* @return the class used to represent the sample's data, or
 	* null if the data is not accessible
 	*/
-	@:overload public function getDataClass() : Class<Dynamic>;
+	@:overload @:public public function getDataClass() : Class<Dynamic>;
 	
 	/**
 	* Obtains the sampled audio that is stored in this <code>SoundbankResource</code>.
@@ -109,7 +109,7 @@ extern class SoundbankResource
 	* @return an object containing the sampled audio data
 	* @see #getDataClass
 	*/
-	@:overload @:abstract public function getData() : Dynamic;
+	@:overload @:public @:abstract public function getData() : Dynamic;
 	
 	
 }

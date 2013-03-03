@@ -50,7 +50,7 @@ extern interface CSSFontFaceRule extends org.w3c.dom.css.CSSRule
 	/**
 	*  The declaration-block of this rule.
 	*/
-	@:overload public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
+	@:overload @:public public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
 	
 	
 }

@@ -25,29 +25,29 @@ package sun.nio.ch;
 */
 @:internal extern class SinkChannelImpl extends java.nio.channels.Pipe.Pipe_SinkChannel implements sun.nio.ch.SelChImpl
 {
-	@:overload public function getFD() : java.io.FileDescriptor;
+	@:overload @:public public function getFD() : java.io.FileDescriptor;
 	
-	@:overload public function getFDVal() : Int;
+	@:overload @:public public function getFDVal() : Int;
 	
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload @:protected override private function implCloseSelectableChannel() : Void;
 	
-	@:overload public function kill() : Void;
+	@:overload @:public public function kill() : Void;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload @:protected override private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload public function translateReadyOps(ops : Int, initialOps : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateReadyOps(ops : Int, initialOps : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:public public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload override public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public override public function write(src : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
-	@:overload override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	
 }

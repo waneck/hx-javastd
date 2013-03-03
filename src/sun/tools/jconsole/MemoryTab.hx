@@ -47,57 +47,57 @@ package sun.tools.jconsole;
 	Center: details
 	East:   poolChart
 	*/
-	@:overload public static function getTabName() : String;
+	@:overload @:public @:static public static function getTabName() : String;
 	
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload public function itemStateChanged(ev : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(ev : java.awt.event.ItemEvent) : Void;
 	
-	@:overload public function gc() : Void;
+	@:overload @:public public function gc() : Void;
 	
-	@:overload override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload @:public override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
-	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$MemoryTab$PoolPlotter') @:internal extern class MemoryTab_PoolPlotter extends sun.tools.jconsole.Plotter
 {
-	@:overload public function new(objectName : javax.management.ObjectName, name : String, isHeap : Bool) : Void;
+	@:overload @:public public function new(objectName : javax.management.ObjectName, name : String, isHeap : Bool) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('sun$tools$jconsole$MemoryTab$PoolChart') @:internal extern class MemoryTab_PoolChart extends sun.tools.jconsole.BorderedComponent implements javax.accessibility.Accessible implements java.awt.event.MouseListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setValue(poolIndex : Int, poolPlotter : sun.tools.jconsole.MemoryTab.MemoryTab_PoolPlotter, value : haxe.Int64, threshold : haxe.Int64, max : haxe.Int64) : Void;
+	@:overload @:public public function setValue(poolIndex : Int, poolPlotter : sun.tools.jconsole.MemoryTab.MemoryTab_PoolPlotter, value : haxe.Int64, threshold : haxe.Int64, max : haxe.Int64) : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function getToolTipText(e : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(e : java.awt.event.MouseEvent) : String;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('sun$tools$jconsole$MemoryTab$PoolChart$AccessiblePoolChart') extern class MemoryTab_PoolChart_AccessiblePoolChart extends javax.swing.JPanel.JPanel_AccessibleJPanel
 {
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	
 }

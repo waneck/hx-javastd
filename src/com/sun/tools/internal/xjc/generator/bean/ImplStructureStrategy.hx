@@ -47,18 +47,30 @@ extern enum ImplStructureStrategy
 	/**
 	* Corresponds to {@link Aspect#EXPOSED}
 	*/
-	public var exposed(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	@:public @:final public var exposed(default, null) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Corresponds to {@link Aspect#IMPLEMENTATION}
 	*/
-	public var implementation(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	@:public @:final public var implementation(default, null) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function new(exposed : com.sun.codemodel.internal.JDefinedClass, implementation : com.sun.codemodel.internal.JDefinedClass) : Void;
+	@:overload @:public public function new(exposed : com.sun.codemodel.internal.JDefinedClass, implementation : com.sun.codemodel.internal.JDefinedClass) : Void;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$generator$bean$ImplStructureStrategy$Result') extern class ImplStructureStrategy_Result
 {
+	/**
+	* Corresponds to {@link Aspect#EXPOSED}
+	*/
+	@:public @:final public var exposed(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	
+	/**
+	* Corresponds to {@link Aspect#IMPLEMENTATION}
+	*/
+	@:public @:final public var implementation(default, null) : com.sun.codemodel.internal.JDefinedClass;
+	
+	@:overload @:public public function new(exposed : com.sun.codemodel.internal.JDefinedClass, implementation : com.sun.codemodel.internal.JDefinedClass) : Void;
+	
 	
 }

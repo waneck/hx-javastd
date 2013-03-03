@@ -61,13 +61,13 @@ extern class CompactByteArray implements java.lang.Cloneable
 	/**
 	* The total number of Unicode characters.
 	*/
-	public static var UNICODECOUNT(default, null) : Int;
+	@:public @:static @:final public static var UNICODECOUNT(default, null) : Int;
 	
 	/**
 	* Constructor for CompactByteArray.
 	* @param defaultValue the default value of the compact array.
 	*/
-	@:overload public function new(defaultValue : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(defaultValue : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Constructor for CompactByteArray.
@@ -75,14 +75,14 @@ extern class CompactByteArray implements java.lang.Cloneable
 	* @param newValues the values of the compact array.
 	* @exception IllegalArgumentException If index is out of range.
 	*/
-	@:overload public function new(indexArray : java.NativeArray<java.StdTypes.Int16>, newValues : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(indexArray : java.NativeArray<java.StdTypes.Int16>, newValues : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Get the mapped value of a Unicode character.
 	* @param index the character to get the mapped value with
 	* @return the mapped value of the given character
 	*/
-	@:overload public function elementAt(index : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload @:public public function elementAt(index : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
 	/**
 	* Set a new value for a Unicode character.
@@ -90,7 +90,7 @@ extern class CompactByteArray implements java.lang.Cloneable
 	* @param index the character to set the mapped value with
 	* @param value the new mapped value
 	*/
-	@:overload public function setElementAt(index : java.StdTypes.Char16, value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setElementAt(index : java.StdTypes.Char16, value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Set new values for a range of Unicode character.
@@ -98,27 +98,27 @@ extern class CompactByteArray implements java.lang.Cloneable
 	* @param end the ending offset of the range
 	* @param value the new mapped value
 	*/
-	@:overload public function setElementAt(start : java.StdTypes.Char16, end : java.StdTypes.Char16, value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setElementAt(start : java.StdTypes.Char16, end : java.StdTypes.Char16, value : java.StdTypes.Int8) : Void;
 	
 	/**
 	*Compact the array.
 	*/
-	@:overload public function compact() : Void;
+	@:overload @:public public function compact() : Void;
 	
 	/** For internal use only.  Do not modify the result, the behavior of
 	* modified results are undefined.
 	*/
-	@:overload public function getIndexArray() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getIndexArray() : java.NativeArray<java.StdTypes.Int16>;
 	
 	/** For internal use only.  Do not modify the result, the behavior of
 	* modified results are undefined.
 	*/
-	@:overload public function getStringArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getStringArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Compares the equality of two compact array objects.
@@ -126,12 +126,12 @@ extern class CompactByteArray implements java.lang.Cloneable
 	* @return true if the current compact array object is the same
 	* as the compact array object obj; false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Generates the hash code for the compact array object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

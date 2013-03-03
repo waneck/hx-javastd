@@ -25,22 +25,22 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLServiceImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLService
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, parent : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, parent : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getParent() : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
+	@:overload @:public public function getParent() : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function get(portName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl;
+	@:overload @:public public function get(portName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl;
 	
-	@:overload public function getFirstPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public public function getFirstPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	@:overload public function getPorts() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl>;
+	@:overload @:public public function getPorts() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl>;
 	
 	/**
 	* gets the first port in this service which matches the portType
 	*/
-	@:overload public function getMatchingPort(portTypeName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl;
+	@:overload @:public public function getMatchingPort(portTypeName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl;
 	
 	/**
 	* Populates the Map that holds port name as key and {@link WSDLPort} as the value.
@@ -49,7 +49,7 @@ extern class WSDLServiceImpl extends com.sun.xml.internal.ws.model.wsdl.Abstract
 	* @param port     Must be non-null
 	* @throws NullPointerException if either opName or ptOp is null
 	*/
-	@:overload public function put(portName : javax.xml.namespace.QName, port : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl) : Void;
+	@:overload @:public public function put(portName : javax.xml.namespace.QName, port : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl) : Void;
 	
 	
 }

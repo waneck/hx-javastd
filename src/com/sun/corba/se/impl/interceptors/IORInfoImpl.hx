@@ -42,7 +42,7 @@ extern class IORInfoImpl extends org.omg.CORBA.LocalObject implements org.omg.Po
 	*   If the given policy type is known, but no policy of that tpye is
 	*   in effect, then this operation will return a nil object reference.
 	*/
-	@:overload public function get_effective_policy(type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function get_effective_policy(type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* A portable ORB service implementation calls this method from its
@@ -54,7 +54,7 @@ extern class IORInfoImpl extends org.omg.CORBA.LocalObject implements org.omg.Po
 	*
 	* @param tagged_component The IOP::TaggedComponent to add
 	*/
-	@:overload public function add_ior_component(tagged_component : org.omg.IOP.TaggedComponent) : Void;
+	@:overload @:public public function add_ior_component(tagged_component : org.omg.IOP.TaggedComponent) : Void;
 	
 	/**
 	* A portable ORB service implementation calls this method from its
@@ -72,7 +72,7 @@ extern class IORInfoImpl extends org.omg.CORBA.LocalObject implements org.omg.Po
 	* @param profile_id The IOP::ProfileId tof the profile to which this
 	*     component will be added.
 	*/
-	@:overload public function add_ior_component_to_profile(tagged_component : org.omg.IOP.TaggedComponent, profile_id : Int) : Void;
+	@:overload @:public public function add_ior_component_to_profile(tagged_component : org.omg.IOP.TaggedComponent, profile_id : Int) : Void;
 	
 	/**
 	* @param type The type of the server port
@@ -80,19 +80,19 @@ extern class IORInfoImpl extends org.omg.CORBA.LocalObject implements org.omg.Po
 	* @return The listen port number for that type.
 	* @throws UnknownType if no port of the given type is found.
 	*/
-	@:overload public function getServerPort(type : String) : Int;
+	@:overload @:public public function getServerPort(type : String) : Int;
 	
-	@:overload public function getObjectAdapter() : com.sun.corba.se.spi.oa.ObjectAdapter;
+	@:overload @:public public function getObjectAdapter() : com.sun.corba.se.spi.oa.ObjectAdapter;
 	
-	@:overload public function manager_id() : Int;
+	@:overload @:public public function manager_id() : Int;
 	
-	@:overload public function state() : java.StdTypes.Int16;
+	@:overload @:public public function state() : java.StdTypes.Int16;
 	
-	@:overload public function adapter_template() : org.omg.PortableInterceptor.ObjectReferenceTemplate;
+	@:overload @:public public function adapter_template() : org.omg.PortableInterceptor.ObjectReferenceTemplate;
 	
-	@:overload public function current_factory() : org.omg.PortableInterceptor.ObjectReferenceFactory;
+	@:overload @:public public function current_factory() : org.omg.PortableInterceptor.ObjectReferenceFactory;
 	
-	@:overload public function current_factory(factory : org.omg.PortableInterceptor.ObjectReferenceFactory) : Void;
+	@:overload @:public public function current_factory(factory : org.omg.PortableInterceptor.ObjectReferenceFactory) : Void;
 	
 	
 }

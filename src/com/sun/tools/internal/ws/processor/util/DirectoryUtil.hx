@@ -30,9 +30,9 @@ extern class DirectoryUtil
 	*
 	* @author WS Development Team
 	*/
-	@:overload public static function getOutputDirectoryFor(theClass : String, rootDir : java.io.File) : java.io.File;
+	@:overload @:public @:static public static function getOutputDirectoryFor(theClass : String, rootDir : java.io.File) : java.io.File;
 	
-	@:overload public static function getRelativePathfromCommonBase(file : java.io.File, base : java.io.File) : String;
+	@:overload @:public @:static public static function getRelativePathfromCommonBase(file : java.io.File, base : java.io.File) : String;
 	
 	
 }

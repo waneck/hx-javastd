@@ -38,7 +38,7 @@ extern class UserException extends java.lang.Exception implements org.omg.CORBA.
 	* Constructs a <code>UserException</code> object.
 	* This method is called only by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a <code>UserException</code> object with a
@@ -47,7 +47,7 @@ extern class UserException extends java.lang.Exception implements org.omg.CORBA.
 	* @param reason a <code>String</code> object giving the reason for this
 	*         exception
 	*/
-	@:overload private function new(reason : String) : Void;
+	@:overload @:protected private function new(reason : String) : Void;
 	
 	
 }

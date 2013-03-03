@@ -25,25 +25,25 @@ package com.sun.xml.internal.ws.server;
 */
 extern class InvokerTube<T> extends com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl
 {
-	@:overload private function new(invoker : com.sun.xml.internal.ws.api.server.Invoker) : Void;
+	@:overload @:protected private function new(invoker : com.sun.xml.internal.ws.api.server.Invoker) : Void;
 	
-	@:overload public function setEndpoint(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public public function setEndpoint(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
-	@:overload private function getEndpoint() : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
+	@:overload @:protected private function getEndpoint() : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
 	
 	/**
 	* Returns the {@link Invoker} object that serves the request.
 	*/
-	@:overload @:final public function getInvoker(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.server.Invoker;
+	@:overload @:public @:final public function getInvoker(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.server.Invoker;
 	
 	/**
 	* processRequest() and processResponse() do not share any instance variables
 	* while processing the request. {@link InvokerTube} is stateless and terminal,
 	* so no need to create copies.
 	*/
-	@:overload @:final override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	@:overload @:public @:final override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
-	@:overload override public function preDestroy() : Void;
+	@:overload @:public override public function preDestroy() : Void;
 	
 	/**
 	* This method can be called while the user service is servicing the request
@@ -52,7 +52,7 @@ extern class InvokerTube<T> extends com.sun.xml.internal.ws.api.pipe.helper.Abst
 	* <p>
 	* This is primarily designed for {@link StatefulInstanceResolver}. Use with care.
 	*/
-	@:overload public static function getCurrentPacket() : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public @:static public static function getCurrentPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

@@ -25,20 +25,20 @@ package com.sun.istack.internal.tools;
 */
 extern class ParallelWorldClassLoader extends java.lang.ClassLoader implements java.io.Closeable
 {
-	@:overload public function new(parent : java.lang.ClassLoader, prefix : String) : Void;
+	@:overload @:public public function new(parent : java.lang.ClassLoader, prefix : String) : Void;
 	
-	@:overload private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
-	@:overload private function findResource(name : String) : java.net.URL;
+	@:overload @:protected override private function findResource(name : String) : java.net.URL;
 	
-	@:overload private function findResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:overload @:protected override private function findResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	/**
 	* Given the URL inside jar, returns the URL to the jar itself.
 	*/
-	@:overload public static function toJarUrl(res : java.net.URL) : java.net.URL;
+	@:overload @:public @:static public static function toJarUrl(res : java.net.URL) : java.net.URL;
 	
 	
 }

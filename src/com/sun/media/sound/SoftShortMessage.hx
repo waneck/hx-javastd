@@ -25,11 +25,11 @@ package com.sun.media.sound;
 */
 extern class SoftShortMessage extends javax.sound.midi.ShortMessage
 {
-	@:overload public function getChannel() : Int;
+	@:overload @:public override public function getChannel() : Int;
 	
-	@:overload public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
+	@:overload @:public override public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

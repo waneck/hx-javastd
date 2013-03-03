@@ -46,53 +46,53 @@ package com.sun.xml.internal.rngom.digested;
 */
 @:internal extern class PatternParseable implements com.sun.xml.internal.rngom.parse.Parseable
 {
-	@:overload public function new(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:public public function new(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
-	@:overload public function parse(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parse(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function parseInclude(uri : String, f : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, g : com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parseInclude(uri : String, f : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, g : com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function parseExternal(uri : String, f : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, s : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parseExternal(uri : String, f : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, s : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$digested$PatternParseable$Parser') @:internal extern class PatternParseable_Parser implements com.sun.xml.internal.rngom.digested.DPatternVisitor<com.sun.xml.internal.rngom.ast.om.ParsedPattern>
 {
-	@:overload public function new(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(sb : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class TypeSet
 	* @param type the type
 	* @return true iff this TypeSet contains the specified type
 	*/
-	@:overload @:abstract public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
+	@:overload @:public @:abstract public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
 	
 	/**
 	* Calculate the TypeSet formed by the intersection of two
@@ -44,7 +44,7 @@ extern class TypeSet
 	* @param b another TypeSet
 	* @return the intersection of a and b
 	*/
-	@:overload public static function intersection(a : com.sun.xml.internal.xsom.util.TypeSet, b : com.sun.xml.internal.xsom.util.TypeSet) : com.sun.xml.internal.xsom.util.TypeSet;
+	@:overload @:public @:static public static function intersection(a : com.sun.xml.internal.xsom.util.TypeSet, b : com.sun.xml.internal.xsom.util.TypeSet) : com.sun.xml.internal.xsom.util.TypeSet;
 	
 	/**
 	* Calculate the TypeSet formed by the union of two
@@ -54,7 +54,7 @@ extern class TypeSet
 	* @param b another TypeSet
 	* @return the union of a and b
 	*/
-	@:overload public static function union(a : com.sun.xml.internal.xsom.util.TypeSet, b : com.sun.xml.internal.xsom.util.TypeSet) : com.sun.xml.internal.xsom.util.TypeSet;
+	@:overload @:public @:static public static function union(a : com.sun.xml.internal.xsom.util.TypeSet, b : com.sun.xml.internal.xsom.util.TypeSet) : com.sun.xml.internal.xsom.util.TypeSet;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class ORBDefaultInitRefResolverImpl implements com.sun.corba.se.spi.resolver.Resolver
 {
-	@:overload public function new(urlHandler : com.sun.corba.se.spi.orb.Operation, orbDefaultInitRef : String) : Void;
+	@:overload @:public public function new(urlHandler : com.sun.corba.se.spi.orb.Operation, orbDefaultInitRef : String) : Void;
 	
-	@:overload public function resolve(ident : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve(ident : String) : org.omg.CORBA.Object;
 	
-	@:overload public function list() : java.util.Set<Dynamic>;
+	@:overload @:public public function list() : java.util.Set<Dynamic>;
 	
 	
 }

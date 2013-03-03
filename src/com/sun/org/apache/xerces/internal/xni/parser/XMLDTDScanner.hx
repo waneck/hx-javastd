@@ -27,7 +27,7 @@ extern interface XMLDTDScanner extends com.sun.org.apache.xerces.internal.xni.pa
 	*
 	* @throws IOException Thrown on i/o error.
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Scans the internal subset of the document.
@@ -49,7 +49,7 @@ extern interface XMLDTDScanner extends com.sun.org.apache.xerces.internal.xni.pa
 	*
 	* @return True if there is more to scan, false otherwise.
 	*/
-	@:overload public function scanDTDInternalSubset(complete : Bool, standalone : Bool, hasExternalSubset : Bool) : Bool;
+	@:overload @:public public function scanDTDInternalSubset(complete : Bool, standalone : Bool, hasExternalSubset : Bool) : Bool;
 	
 	/**
 	* Scans the external subset of the document.
@@ -64,7 +64,7 @@ extern interface XMLDTDScanner extends com.sun.org.apache.xerces.internal.xni.pa
 	*
 	* @return True if there is more to scan, false otherwise.
 	*/
-	@:overload public function scanDTDExternalSubset(complete : Bool) : Bool;
+	@:overload @:public public function scanDTDExternalSubset(complete : Bool) : Bool;
 	
 	
 }

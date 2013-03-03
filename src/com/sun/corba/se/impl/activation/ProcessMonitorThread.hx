@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.activation;
 */
 extern class ProcessMonitorThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

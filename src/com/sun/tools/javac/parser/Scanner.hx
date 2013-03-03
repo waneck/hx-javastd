@@ -36,7 +36,7 @@ extern class Scanner implements com.sun.tools.javac.parser.Lexer
 	/** Create a scanner from the input buffer.  buffer must implement
 	*  array() and compact(), and remaining() must be less than limit().
 	*/
-	@:overload private function new(fac : com.sun.tools.javac.parser.ScannerFactory, buffer : java.nio.CharBuffer) : Void;
+	@:overload @:protected private function new(fac : com.sun.tools.javac.parser.ScannerFactory, buffer : java.nio.CharBuffer) : Void;
 	
 	/**
 	* Create a scanner from the input array.  This method might
@@ -49,20 +49,20 @@ extern class Scanner implements com.sun.tools.javac.parser.Lexer
 	* @param inputLength the size of the input.
 	* Must be positive and less than or equal to input.length.
 	*/
-	@:overload private function new(fac : com.sun.tools.javac.parser.ScannerFactory, input : java.NativeArray<java.StdTypes.Char16>, inputLength : Int) : Void;
+	@:overload @:protected private function new(fac : com.sun.tools.javac.parser.ScannerFactory, input : java.NativeArray<java.StdTypes.Char16>, inputLength : Int) : Void;
 	
 	/** The value of a literal token, recorded as a string.
 	*  For integers, leading 0x and 'l' suffixes are suppressed.
 	*/
-	@:overload public function stringVal() : String;
+	@:overload @:public public function stringVal() : String;
 	
 	/** Read token.
 	*/
-	@:overload public function nextToken() : Void;
+	@:overload @:public public function nextToken() : Void;
 	
 	/** Return the current token, set by nextToken().
 	*/
-	@:overload public function token() : com.sun.tools.javac.parser.Token;
+	@:overload @:public public function token() : com.sun.tools.javac.parser.Token;
 	
 	/** Sets the current token.
 	* This method is primarily used to update the token stream when the
@@ -72,55 +72,55 @@ extern class Scanner implements com.sun.tools.javac.parser.Lexer
 	* that this does not handle arbitrary tokens containing Unicode escape
 	* sequences.
 	*/
-	@:overload public function token(token : com.sun.tools.javac.parser.Token) : Void;
+	@:overload @:public public function token(token : com.sun.tools.javac.parser.Token) : Void;
 	
 	/** Return the current token's position: a 0-based
 	*  offset from beginning of the raw input stream
 	*  (before unicode translation)
 	*/
-	@:overload public function pos() : Int;
+	@:overload @:public public function pos() : Int;
 	
 	/** Return the last character position of the current token.
 	*/
-	@:overload public function endPos() : Int;
+	@:overload @:public public function endPos() : Int;
 	
 	/** Return the last character position of the previous token.
 	*/
-	@:overload public function prevEndPos() : Int;
+	@:overload @:public public function prevEndPos() : Int;
 	
 	/** Return the position where a lexical error occurred;
 	*/
-	@:overload public function errPos() : Int;
+	@:overload @:public public function errPos() : Int;
 	
 	/** Set the position where a lexical error occurred;
 	*/
-	@:overload public function errPos(pos : Int) : Void;
+	@:overload @:public public function errPos(pos : Int) : Void;
 	
 	/** Return the name of an identifier or token for the current token.
 	*/
-	@:overload public function name() : com.sun.tools.javac.util.Name;
+	@:overload @:public public function name() : com.sun.tools.javac.util.Name;
 	
 	/** Return the radix of a numeric literal token.
 	*/
-	@:overload public function radix() : Int;
+	@:overload @:public public function radix() : Int;
 	
 	/** Has a @deprecated been encountered in last doc comment?
 	*  This needs to be reset by client with resetDeprecatedFlag.
 	*/
-	@:overload public function deprecatedFlag() : Bool;
+	@:overload @:public public function deprecatedFlag() : Bool;
 	
-	@:overload public function resetDeprecatedFlag() : Void;
+	@:overload @:public public function resetDeprecatedFlag() : Void;
 	
 	/**
 	* Returns the documentation string of the current token.
 	*/
-	@:overload public function docComment() : String;
+	@:overload @:public public function docComment() : String;
 	
 	/**
 	* Returns a copy of the input buffer, up to its inputLength.
 	* Unicode escape sequences are not translated.
 	*/
-	@:overload public function getRawCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getRawCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Returns a copy of a character array subset of the input buffer.
@@ -136,30 +136,30 @@ extern class Scanner implements com.sun.tools.javac.parser.Lexer
 	* @throws IndexOutOfBounds if either offset is outside of the
 	*         array bounds
 	*/
-	@:overload public function getRawCharacters(beginIndex : Int, endIndex : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getRawCharacters(beginIndex : Int, endIndex : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Called when a complete comment has been scanned. pos and endPos
 	* will mark the comment boundary.
 	*/
-	@:overload private function processComment(style : com.sun.tools.javac.parser.Scanner.Scanner_CommentStyle) : Void;
+	@:overload @:protected private function processComment(style : com.sun.tools.javac.parser.Scanner.Scanner_CommentStyle) : Void;
 	
 	/**
 	* Called when a complete whitespace run has been scanned. pos and endPos
 	* will mark the whitespace boundary.
 	*/
-	@:overload private function processWhiteSpace() : Void;
+	@:overload @:protected private function processWhiteSpace() : Void;
 	
 	/**
 	* Called when a line terminator has been processed.
 	*/
-	@:overload private function processLineTerminator() : Void;
+	@:overload @:protected private function processLineTerminator() : Void;
 	
 	/** Build a map for translating between line numbers and
 	* positions in the input.
 	*
 	* @return a LineMap */
-	@:overload public function getLineMap() : com.sun.tools.javac.util.Position.Position_LineMap;
+	@:overload @:public public function getLineMap() : com.sun.tools.javac.util.Position.Position_LineMap;
 	
 	
 }

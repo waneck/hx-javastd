@@ -32,13 +32,13 @@ package com.sun.tools.example.debug.gui;
 */
 extern class TypeScriptWriter extends java.io.Writer
 {
-	@:overload public function new(script : com.sun.tools.example.debug.gui.TypeScript) : Void;
+	@:overload @:public public function new(script : com.sun.tools.example.debug.gui.TypeScript) : Void;
 	
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

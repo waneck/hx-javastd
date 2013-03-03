@@ -26,7 +26,7 @@ package com.sun.org.apache.xpath.internal.domapi;
 	/**
 	* @see org.w3c.dom.xpath.XPathResult#getResultType()
 	*/
-	@:overload public function getResultType() : java.StdTypes.Int16;
+	@:overload @:public public function getResultType() : java.StdTypes.Int16;
 	
 	/**
 	*  The value of this number result.
@@ -35,7 +35,7 @@ package com.sun.org.apache.xpath.internal.domapi;
 	*   <code>NUMBER_TYPE</code>.
 	* @see org.w3c.dom.xpath.XPathResult#getNumberValue()
 	*/
-	@:overload public function getNumberValue() : Float;
+	@:overload @:public public function getNumberValue() : Float;
 	
 	/**
 	* The value of this string result.
@@ -45,12 +45,12 @@ package com.sun.org.apache.xpath.internal.domapi;
 	*
 	* @see org.w3c.dom.xpath.XPathResult#getStringValue()
 	*/
-	@:overload public function getStringValue() : String;
+	@:overload @:public public function getStringValue() : String;
 	
 	/**
 	* @see org.w3c.dom.xpath.XPathResult#getBooleanValue()
 	*/
-	@:overload public function getBooleanValue() : Bool;
+	@:overload @:public public function getBooleanValue() : Bool;
 	
 	/**
 	* The value of this single node result, which may be <code>null</code>.
@@ -61,12 +61,12 @@ package com.sun.org.apache.xpath.internal.domapi;
 	*
 	* @see org.w3c.dom.xpath.XPathResult#getSingleNodeValue()
 	*/
-	@:overload public function getSingleNodeValue() : org.w3c.dom.Node;
+	@:overload @:public public function getSingleNodeValue() : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.xpath.XPathResult#getInvalidIteratorState()
 	*/
-	@:overload public function getInvalidIteratorState() : Bool;
+	@:overload @:public public function getInvalidIteratorState() : Bool;
 	
 	/**
 	* The number of nodes in the result snapshot. Valid values for
@@ -79,7 +79,7 @@ package com.sun.org.apache.xpath.internal.domapi;
 	*
 	* @see org.w3c.dom.xpath.XPathResult#getSnapshotLength()
 	*/
-	@:overload public function getSnapshotLength() : Int;
+	@:overload @:public public function getSnapshotLength() : Int;
 	
 	/**
 	* Iterates and returns the next node from the node set or
@@ -94,7 +94,7 @@ package com.sun.org.apache.xpath.internal.domapi;
 	*   returned.
 	* @see org.w3c.dom.xpath.XPathResult#iterateNext()
 	*/
-	@:overload public function iterateNext() : org.w3c.dom.Node;
+	@:overload @:public public function iterateNext() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the <code>index</code>th item in the snapshot collection. If
@@ -113,12 +113,12 @@ package com.sun.org.apache.xpath.internal.domapi;
 	*
 	* @see org.w3c.dom.xpath.XPathResult#snapshotItem(int)
 	*/
-	@:overload public function snapshotItem(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function snapshotItem(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.events.EventListener#handleEvent(Event)
 	*/
-	@:overload public function handleEvent(event : org.w3c.dom.events.Event) : Void;
+	@:overload @:public public function handleEvent(event : org.w3c.dom.events.Event) : Void;
 	
 	
 }

@@ -30,19 +30,19 @@ package com.sun.security.auth.module;
 */
 extern class UnixSystem
 {
-	private var username : String;
+	@:protected private var username : String;
 	
-	private var uid : haxe.Int64;
+	@:protected private var uid : haxe.Int64;
 	
-	private var gid : haxe.Int64;
+	@:protected private var gid : haxe.Int64;
 	
-	private var groups : java.NativeArray<haxe.Int64>;
+	@:protected private var groups : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Instantiate a <code>UnixSystem</code> and load
 	* the native library to access the underlying system information.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the username for the current Unix user.
@@ -51,7 +51,7 @@ extern class UnixSystem
 	*
 	* @return the username for the current Unix user.
 	*/
-	@:overload public function getUsername() : String;
+	@:overload @:public public function getUsername() : String;
 	
 	/**
 	* Get the UID for the current Unix user.
@@ -60,7 +60,7 @@ extern class UnixSystem
 	*
 	* @return the UID for the current Unix user.
 	*/
-	@:overload public function getUid() : haxe.Int64;
+	@:overload @:public public function getUid() : haxe.Int64;
 	
 	/**
 	* Get the GID for the current Unix user.
@@ -69,7 +69,7 @@ extern class UnixSystem
 	*
 	* @return the GID for the current Unix user.
 	*/
-	@:overload public function getGid() : haxe.Int64;
+	@:overload @:public public function getGid() : haxe.Int64;
 	
 	/**
 	* Get the supplementary groups for the current Unix user.
@@ -78,7 +78,7 @@ extern class UnixSystem
 	*
 	* @return the supplementary groups for the current Unix user.
 	*/
-	@:overload public function getGroups() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getGroups() : java.NativeArray<haxe.Int64>;
 	
 	
 }

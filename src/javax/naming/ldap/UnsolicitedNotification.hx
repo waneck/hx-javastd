@@ -31,7 +31,7 @@ extern interface UnsolicitedNotification extends javax.naming.ldap.ExtendedRespo
 	* @return A possibly null array of referrals, each of which is represented
 	* by a URL string. If null, no referral was sent by the server.
 	*/
-	@:overload public function getReferrals() : java.NativeArray<String>;
+	@:overload @:public public function getReferrals() : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the exception as constructed using information
@@ -40,7 +40,7 @@ extern interface UnsolicitedNotification extends javax.naming.ldap.ExtendedRespo
 	* sent by the server. If null, a "success" status was indicated by
 	* the server.
 	*/
-	@:overload public function getException() : javax.naming.NamingException;
+	@:overload @:public public function getException() : javax.naming.NamingException;
 	
 	
 }

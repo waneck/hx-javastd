@@ -33,11 +33,11 @@ package com.sun.jndi.toolkit.dir;
 */
 extern class ContainmentFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 {
-	@:overload public function new(match : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function new(match : javax.naming.directory.Attributes) : Void;
 	
-	@:overload public function check(attrs : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public public function check(attrs : javax.naming.directory.Attributes) : Bool;
 	
-	@:overload public static function contains(superset : javax.naming.directory.Attributes, subset : javax.naming.directory.Attributes) : Bool;
+	@:overload @:public @:static public static function contains(superset : javax.naming.directory.Attributes, subset : javax.naming.directory.Attributes) : Bool;
 	
 	
 }

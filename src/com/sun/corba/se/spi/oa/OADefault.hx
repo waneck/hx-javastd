@@ -29,9 +29,9 @@ extern class OADefault
 	* instances for this version of the ORB.  These methods are generally
 	* used in ORBConfigurator instances to construct an ORB instance.
 	*/
-	@:overload public static function makePOAFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
+	@:overload @:public @:static public static function makePOAFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
 	
-	@:overload public static function makeTOAFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
+	@:overload @:public @:static public static function makeTOAFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.oa.ObjectAdapterFactory;
 	
 	
 }

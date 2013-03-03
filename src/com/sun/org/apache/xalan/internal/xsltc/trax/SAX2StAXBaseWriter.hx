@@ -25,65 +25,65 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class SAX2StAXBaseWriter extends org.xml.sax.helpers.DefaultHandler implements org.xml.sax.ext.LexicalHandler
 {
-	private var isCDATA : Bool;
+	@:protected private var isCDATA : Bool;
 	
-	private var CDATABuffer : java.lang.StringBuffer;
+	@:protected private var CDATABuffer : java.lang.StringBuffer;
 	
-	private var namespaces : java.util.Vector<Dynamic>;
+	@:protected private var namespaces : java.util.Vector<Dynamic>;
 	
-	private var docLocator : org.xml.sax.Locator;
+	@:protected private var docLocator : org.xml.sax.Locator;
 	
-	private var reporter : javax.xml.stream.XMLReporter;
+	@:protected private var reporter : javax.xml.stream.XMLReporter;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(reporter : javax.xml.stream.XMLReporter) : Void;
+	@:overload @:public public function new(reporter : javax.xml.stream.XMLReporter) : Void;
 	
-	@:overload public function setXMLReporter(reporter : javax.xml.stream.XMLReporter) : Void;
+	@:overload @:public public function setXMLReporter(reporter : javax.xml.stream.XMLReporter) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getCurrentLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getCurrentLocation() : javax.xml.stream.Location;
 	
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
 	/**
 	* Used to report a {@link SAXException}to the {@link XMLReporter}
 	* registered with this handler.
 	*/
-	@:overload private function reportException(type : String, e : org.xml.sax.SAXException) : Void;
+	@:overload @:protected private function reportException(type : String, e : org.xml.sax.SAXException) : Void;
 	
 	/**
 	* Parses an XML qualified name, and places the resulting prefix and local
@@ -94,7 +94,7 @@ extern class SAX2StAXBaseWriter extends org.xml.sax.helpers.DefaultHandler imple
 	*            will be placed at <code>results[0]</code>, and the local
 	*            part at <code>results[1]</code>
 	*/
-	@:overload @:final public static function parseQName(qName : String, results : java.NativeArray<String>) : Void;
+	@:overload @:public @:static @:final public static function parseQName(qName : String, results : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -106,15 +106,15 @@ extern class SAX2StAXBaseWriter extends org.xml.sax.helpers.DefaultHandler imple
 */
 @:native('com$sun$org$apache$xalan$internal$xsltc$trax$SAX2StAXBaseWriter$SAXLocation') @:internal extern class SAX2StAXBaseWriter_SAXLocation implements javax.xml.stream.Location
 {
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

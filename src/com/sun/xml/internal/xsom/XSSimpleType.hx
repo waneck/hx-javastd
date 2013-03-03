@@ -46,7 +46,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	/**
 	* Gets the variety of this simple type.
 	*/
-	@:overload public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
+	@:overload @:public public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
 	
 	/**
 	* Gets the ancestor primitive {@link XSSimpleType} if
@@ -55,7 +55,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	* @return
 	*      null otherwise.
 	*/
-	@:overload public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
 	/**
 	* Returns true if this is a primitive built-in simple type
@@ -95,7 +95,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	* @return null
 	*      if this component has not been redefined.
 	*/
-	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function getRedefinedBy() : com.sun.xml.internal.xsom.XSSimpleType;
 	
 	/**
 	* Gets the effective facet object of the given name.
@@ -119,7 +119,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	*      return that object. If the facet is not specified
 	*      anywhere in its derivation chain, null will be returned.
 	*/
-	@:overload public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
+	@:overload @:public public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
 	
 	/**
 	* For multi-valued facets (enumeration and pattern), obtain all values.
@@ -129,11 +129,11 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	* @return
 	*      can be empty but never null.
 	*/
-	@:overload public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
+	@:overload @:public public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
+	@:overload @:public public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
 	
-	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<T>) : T;
+	@:overload @:public public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<T>) : T;
 	
 	/** Returns true if <code>this instanceof XSRestrictionSimpleType</code>. */
 	@:overload public function isRestriction() : Bool;

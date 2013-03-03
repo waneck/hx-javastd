@@ -25,27 +25,27 @@ package sun.java2d.xr;
 */
 extern class DirtyRegion implements java.lang.Cloneable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function growDirtyRegion(x : Int, y : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function growDirtyRegion(x : Int, y : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
-	@:overload public function growDirtyRegionTileLimit(x : Int, y : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function growDirtyRegionTileLimit(x : Int, y : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public static function combineRegion(region1 : sun.java2d.xr.DirtyRegion, region2 : sun.java2d.xr.DirtyRegion) : sun.java2d.xr.DirtyRegion;
+	@:overload @:public @:static public static function combineRegion(region1 : sun.java2d.xr.DirtyRegion, region2 : sun.java2d.xr.DirtyRegion) : sun.java2d.xr.DirtyRegion;
 	
-	@:overload public function setDirtyLineRegion(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function setDirtyLineRegion(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function translate(x : Int, y : Int) : Void;
+	@:overload @:public public function translate(x : Int, y : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function cloneRegion() : sun.java2d.xr.DirtyRegion;
+	@:overload @:public public function cloneRegion() : sun.java2d.xr.DirtyRegion;
 	
 	
 }

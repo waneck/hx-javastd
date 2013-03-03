@@ -30,7 +30,7 @@ package com.sun.jndi.ldap;
 	* For each result, create the appropriate NamingEvent and
 	* queue to be dispatched to listeners.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

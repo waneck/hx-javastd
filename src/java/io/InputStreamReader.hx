@@ -30,7 +30,7 @@ extern class InputStreamReader extends java.io.Reader
 	*
 	* @param  in   An InputStream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Creates an InputStreamReader that uses the named charset.
@@ -45,7 +45,7 @@ extern class InputStreamReader extends java.io.Reader
 	* @exception  UnsupportedEncodingException
 	*             If the named charset is not supported
 	*/
-	@:overload public function new(_in : java.io.InputStream, charsetName : String) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, charsetName : String) : Void;
 	
 	/**
 	* Creates an InputStreamReader that uses the given charset. </p>
@@ -56,7 +56,7 @@ extern class InputStreamReader extends java.io.Reader
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function new(_in : java.io.InputStream, cs : java.nio.charset.Charset) : Void;
+	@:require(java4) @:overload @:public public function new(_in : java.io.InputStream, cs : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Creates an InputStreamReader that uses the given charset decoder.  </p>
@@ -67,7 +67,7 @@ extern class InputStreamReader extends java.io.Reader
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function new(_in : java.io.InputStream, dec : java.nio.charset.CharsetDecoder) : Void;
+	@:require(java4) @:overload @:public public function new(_in : java.io.InputStream, dec : java.nio.charset.CharsetDecoder) : Void;
 	
 	/**
 	* Returns the name of the character encoding being used by this stream.
@@ -89,7 +89,7 @@ extern class InputStreamReader extends java.io.Reader
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Reads a single character.
@@ -99,7 +99,7 @@ extern class InputStreamReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads characters into a portion of an array.
@@ -113,7 +113,7 @@ extern class InputStreamReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Tells whether this stream is ready to be read.  An InputStreamReader is
@@ -122,9 +122,9 @@ extern class InputStreamReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

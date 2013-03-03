@@ -48,7 +48,7 @@ extern class SecretKeySpec implements java.security.spec.KeySpec implements java
 	* @exception IllegalArgumentException if <code>algorithm</code>
 	* is null or <code>key</code> is null or empty.
 	*/
-	@:overload public function new(key : java.NativeArray<java.StdTypes.Int8>, algorithm : String) : Void;
+	@:overload @:public public function new(key : java.NativeArray<java.StdTypes.Int8>, algorithm : String) : Void;
 	
 	/**
 	* Constructs a secret key from the given byte array, using the first
@@ -88,21 +88,21 @@ extern class SecretKeySpec implements java.security.spec.KeySpec implements java
 	* <code>offset</code> or <code>len</code> index bytes outside the
 	* <code>key</code>.
 	*/
-	@:overload public function new(key : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, algorithm : String) : Void;
+	@:overload @:public public function new(key : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, algorithm : String) : Void;
 	
 	/**
 	* Returns the name of the algorithm associated with this secret key.
 	*
 	* @return the secret key algorithm.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns the name of the encoding format for this secret key.
 	*
 	* @return the string "RAW".
 	*/
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	/**
 	* Returns the key material of this secret key.
@@ -110,13 +110,13 @@ extern class SecretKeySpec implements java.security.spec.KeySpec implements java
 	* @return the key material. Returns a new array
 	* each time this method is called.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Calculates a hash code value for the object.
 	* Objects that are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -129,7 +129,7 @@ extern class SecretKeySpec implements java.security.spec.KeySpec implements java
 	* @return true if the objects are considered equal, false if
 	* <code>obj</code> is null or otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

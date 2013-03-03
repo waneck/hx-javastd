@@ -46,19 +46,19 @@ package com.sun.xml.internal.rngom.parse.xml;
 */
 extern class DtdContext implements org.xml.sax.DTDHandler implements org.relaxng.datatype.ValidationContext
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(dc : com.sun.xml.internal.rngom.parse.xml.DtdContext) : Void;
+	@:overload @:public public function new(dc : com.sun.xml.internal.rngom.parse.xml.DtdContext) : Void;
 	
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
-	@:overload public function isNotation(notationName : String) : Bool;
+	@:overload @:public public function isNotation(notationName : String) : Bool;
 	
-	@:overload public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload @:public public function isUnparsedEntity(entityName : String) : Bool;
 	
-	@:overload public function clearDtdContext() : Void;
+	@:overload @:public public function clearDtdContext() : Void;
 	
 	/**
 	* Resolves a namespace prefix to the corresponding namespace URI.
@@ -81,13 +81,13 @@ extern class DtdContext implements org.xml.sax.DTDHandler implements org.relaxng
 	*              If the specified prefix is not declared,
 	*              the implementation must return null.
 	*/
-	@:overload public function resolveNamespacePrefix(prefix : String) : String;
+	@:overload @:public public function resolveNamespacePrefix(prefix : String) : String;
 	
 	/**
 	* Returns the base URI of the context.  The null string may be returned
 	* if no base URI is known.
 	*/
-	@:overload public function getBaseUri() : String;
+	@:overload @:public public function getBaseUri() : String;
 	
 	
 }

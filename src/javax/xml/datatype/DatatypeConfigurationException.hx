@@ -35,7 +35,7 @@ package javax.xml.datatype;
 	* <p>Create a new <code>DatatypeConfigurationException</code> with
 	* no specified detail mesage and cause.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Create a new <code>DatatypeConfigurationException</code> with
@@ -43,7 +43,7 @@ package javax.xml.datatype;
 	*
 	* @param message The detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* <p>Create a new <code>DatatypeConfigurationException</code> with
@@ -52,7 +52,7 @@ package javax.xml.datatype;
 	* @param message The detail message.
 	* @param cause The cause.  A <code>null</code> value is permitted, and indicates that the cause is nonexistent or unknown.
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* <p>Create a new <code>DatatypeConfigurationException</code> with
@@ -60,7 +60,7 @@ package javax.xml.datatype;
 	*
 	* @param cause The cause.  A <code>null</code> value is permitted, and indicates that the cause is nonexistent or unknown.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

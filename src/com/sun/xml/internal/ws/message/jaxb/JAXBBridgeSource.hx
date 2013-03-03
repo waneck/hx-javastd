@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.message.jaxb;
 	* Wraps a bridge and JAXB object into a pseudo-{@link Source}.
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, contentObject : Dynamic) : Void;
+	@:overload @:public public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, contentObject : Dynamic) : Void;
 	
 	
 }

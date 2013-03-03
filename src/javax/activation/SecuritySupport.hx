@@ -30,15 +30,15 @@ package javax.activation;
 */
 @:require(java6) @:internal extern class SecuritySupport
 {
-	@:overload public static function getContextClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getContextClassLoader() : java.lang.ClassLoader;
 	
-	@:overload public static function getResourceAsStream(c : Class<Dynamic>, name : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getResourceAsStream(c : Class<Dynamic>, name : String) : java.io.InputStream;
 	
-	@:overload public static function getResources(cl : java.lang.ClassLoader, name : String) : java.NativeArray<java.net.URL>;
+	@:overload @:public @:static public static function getResources(cl : java.lang.ClassLoader, name : String) : java.NativeArray<java.net.URL>;
 	
-	@:overload public static function getSystemResources(name : String) : java.NativeArray<java.net.URL>;
+	@:overload @:public @:static public static function getSystemResources(name : String) : java.NativeArray<java.net.URL>;
 	
-	@:overload public static function openStream(url : java.net.URL) : java.io.InputStream;
+	@:overload @:public @:static public static function openStream(url : java.net.URL) : java.io.InputStream;
 	
 	
 }

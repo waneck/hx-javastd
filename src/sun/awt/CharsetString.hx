@@ -28,27 +28,27 @@ extern class CharsetString
 	/**
 	* chars for this string.  See also offset, length.
 	*/
-	public var charsetChars : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var charsetChars : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Offset within charsetChars of first character
 	**/
-	public var offset : Int;
+	@:public public var offset : Int;
 	
 	/**
 	* Length of the string we represent.
 	**/
-	public var length : Int;
+	@:public public var length : Int;
 	
 	/**
 	* This string's FontDescriptor.
 	*/
-	public var fontDescriptor : sun.awt.FontDescriptor;
+	@:public public var fontDescriptor : sun.awt.FontDescriptor;
 	
 	/**
 	* Creates a new CharsetString
 	*/
-	@:overload public function new(charsetChars : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, fontDescriptor : sun.awt.FontDescriptor) : Void;
+	@:overload @:public public function new(charsetChars : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, fontDescriptor : sun.awt.FontDescriptor) : Void;
 	
 	
 }

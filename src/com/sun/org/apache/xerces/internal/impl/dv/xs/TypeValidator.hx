@@ -32,33 +32,33 @@ extern class TypeValidator
 	* @author Sandy Gao, IBM
 	*
 	*/
-	@:overload @:abstract public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload @:abstract public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload @:public @:abstract public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload public function checkExtraRules(value : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function checkExtraRules(value : Dynamic, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
-	public static var LESS_THAN(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var LESS_THAN(default, null) : java.StdTypes.Int16;
 	
-	public static var EQUAL(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var EQUAL(default, null) : java.StdTypes.Int16;
 	
-	public static var GREATER_THAN(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var GREATER_THAN(default, null) : java.StdTypes.Int16;
 	
-	public static var INDETERMINATE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INDETERMINATE(default, null) : java.StdTypes.Int16;
 	
-	@:overload public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload @:public public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
-	@:overload public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
+	@:overload @:public public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
 	
-	@:overload public function getDataLength(value : Dynamic) : Int;
+	@:overload @:public public function getDataLength(value : Dynamic) : Int;
 	
-	@:overload public function getTotalDigits(value : Dynamic) : Int;
+	@:overload @:public public function getTotalDigits(value : Dynamic) : Int;
 	
-	@:overload public function getFractionDigits(value : Dynamic) : Int;
+	@:overload @:public public function getFractionDigits(value : Dynamic) : Int;
 	
-	@:overload @:final public static function isDigit(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static @:final public static function isDigit(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload @:final public static function getDigit(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static @:final public static function getDigit(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

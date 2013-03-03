@@ -25,39 +25,39 @@ package com.sun.corba.se.impl.ior;
 */
 extern class WireObjectKeyTemplate implements com.sun.corba.se.spi.ior.ObjectKeyTemplate
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream, osh : org.omg.CORBA.OctetSeqHolder) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream, osh : org.omg.CORBA.OctetSeqHolder) : Void;
 	
-	@:overload public function write(id : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(id : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getSubcontractId() : Int;
+	@:overload @:public public function getSubcontractId() : Int;
 	
 	/** While it might make sense to throw an exception here, this causes
 	* problems since we need to check whether unusual object references
 	* are local or not.  It seems that the easiest way to handle this is
 	* to return an invalid server id.
 	*/
-	@:overload public function getServerId() : Int;
+	@:overload @:public public function getServerId() : Int;
 	
-	@:overload public function getORBId() : String;
+	@:overload @:public public function getORBId() : String;
 	
-	@:overload public function getObjectAdapterId() : com.sun.corba.se.spi.ior.ObjectAdapterId;
+	@:overload @:public public function getObjectAdapterId() : com.sun.corba.se.spi.ior.ObjectAdapterId;
 	
 	/** Adapter ID is not available, since our
 	* ORB did not implement the object carrying this key.
 	*/
-	@:overload public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getAdapterId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public public function getServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
 	
 }

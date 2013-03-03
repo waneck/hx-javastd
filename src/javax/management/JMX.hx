@@ -29,55 +29,55 @@ extern class JMX
 	* The name of the <a href="Descriptor.html#defaultValue">{@code
 	* defaultValue}</a> field.
 	*/
-	public static var DEFAULT_VALUE_FIELD(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_VALUE_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#immutableInfo">{@code
 	* immutableInfo}</a> field.
 	*/
-	public static var IMMUTABLE_INFO_FIELD(default, null) : String;
+	@:public @:static @:final public static var IMMUTABLE_INFO_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#interfaceClassName">{@code
 	* interfaceClassName}</a> field.
 	*/
-	public static var INTERFACE_CLASS_NAME_FIELD(default, null) : String;
+	@:public @:static @:final public static var INTERFACE_CLASS_NAME_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#legalValues">{@code
 	* legalValues}</a> field.
 	*/
-	public static var LEGAL_VALUES_FIELD(default, null) : String;
+	@:public @:static @:final public static var LEGAL_VALUES_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#maxValue">{@code
 	* maxValue}</a> field.
 	*/
-	public static var MAX_VALUE_FIELD(default, null) : String;
+	@:public @:static @:final public static var MAX_VALUE_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#minValue">{@code
 	* minValue}</a> field.
 	*/
-	public static var MIN_VALUE_FIELD(default, null) : String;
+	@:public @:static @:final public static var MIN_VALUE_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#mxbean">{@code
 	* mxbean}</a> field.
 	*/
-	public static var MXBEAN_FIELD(default, null) : String;
+	@:public @:static @:final public static var MXBEAN_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#openType">{@code
 	* openType}</a> field.
 	*/
-	public static var OPEN_TYPE_FIELD(default, null) : String;
+	@:public @:static @:final public static var OPEN_TYPE_FIELD(default, null) : String;
 	
 	/**
 	* The name of the <a href="Descriptor.html#originalType">{@code
 	* originalType}</a> field.
 	*/
-	public static var ORIGINAL_TYPE_FIELD(default, null) : String;
+	@:public @:static @:final public static var ORIGINAL_TYPE_FIELD(default, null) : String;
 	
 	/**
 	* <p>Make a proxy for a Standard MBean in a local or remote
@@ -142,7 +142,7 @@ extern class JMX
 	*
 	* @return the new proxy instance.
 	*/
-	@:overload public static function newMBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>) : T;
+	@:overload @:public @:static public static function newMBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>) : T;
 	
 	/**
 	* <p>Make a proxy for a Standard MBean in a local or remote MBean
@@ -178,7 +178,7 @@ extern class JMX
 	*
 	* @return the new proxy instance.
 	*/
-	@:overload public static function newMBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>, notificationEmitter : Bool) : T;
+	@:overload @:public @:static public static function newMBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>, notificationEmitter : Bool) : T;
 	
 	/**
 	* <p>Make a proxy for an MXBean in a local or remote
@@ -271,7 +271,7 @@ extern class JMX
 	*
 	* @return the new proxy instance.
 	*/
-	@:overload public static function newMXBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>) : T;
+	@:overload @:public @:static public static function newMXBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>) : T;
 	
 	/**
 	* <p>Make a proxy for an MXBean in a local or remote MBean
@@ -307,7 +307,7 @@ extern class JMX
 	*
 	* @return the new proxy instance.
 	*/
-	@:overload public static function newMXBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>, notificationEmitter : Bool) : T;
+	@:overload @:public @:static public static function newMXBeanProxy<T>(connection : javax.management.MBeanServerConnection, objectName : javax.management.ObjectName, interfaceClass : Class<T>, notificationEmitter : Bool) : T;
 	
 	/**
 	* <p>Test whether an interface is an MXBean interface.
@@ -323,7 +323,7 @@ extern class JMX
 	*
 	* @throws NullPointerException if {@code interfaceClass} is null.
 	*/
-	@:overload public static function isMXBeanInterface(interfaceClass : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isMXBeanInterface(interfaceClass : Class<Dynamic>) : Bool;
 	
 	
 }

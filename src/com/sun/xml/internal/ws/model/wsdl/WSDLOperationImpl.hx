@@ -25,35 +25,35 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLOperationImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation
 {
-	private var messages : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl>;
+	@:protected private var messages : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl>;
 	
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getParameterOrder() : String;
+	@:overload @:public public function getParameterOrder() : String;
 	
-	@:overload public function setParameterOrder(parameterOrder : String) : Void;
+	@:overload @:public public function setParameterOrder(parameterOrder : String) : Void;
 	
-	@:overload public function getInput() : com.sun.xml.internal.ws.model.wsdl.WSDLInputImpl;
+	@:overload @:public public function getInput() : com.sun.xml.internal.ws.model.wsdl.WSDLInputImpl;
 	
-	@:overload public function setInput(input : com.sun.xml.internal.ws.model.wsdl.WSDLInputImpl) : Void;
+	@:overload @:public public function setInput(input : com.sun.xml.internal.ws.model.wsdl.WSDLInputImpl) : Void;
 	
-	@:overload public function getOutput() : com.sun.xml.internal.ws.model.wsdl.WSDLOutputImpl;
+	@:overload @:public public function getOutput() : com.sun.xml.internal.ws.model.wsdl.WSDLOutputImpl;
 	
-	@:overload public function isOneWay() : Bool;
+	@:overload @:public public function isOneWay() : Bool;
 	
-	@:overload public function setOutput(output : com.sun.xml.internal.ws.model.wsdl.WSDLOutputImpl) : Void;
+	@:overload @:public public function setOutput(output : com.sun.xml.internal.ws.model.wsdl.WSDLOutputImpl) : Void;
 	
-	@:overload public function getFaults() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLFaultImpl>;
+	@:overload @:public public function getFaults() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLFaultImpl>;
 	
-	@:overload public function getFault(faultDetailName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault;
+	@:overload @:public public function getFault(faultDetailName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault;
 	
-	@:overload public function getPortTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getPortTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function addFault(fault : com.sun.xml.internal.ws.model.wsdl.WSDLFaultImpl) : Void;
+	@:overload @:public public function addFault(fault : com.sun.xml.internal.ws.model.wsdl.WSDLFaultImpl) : Void;
 	
-	@:overload public function freez(root : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl) : Void;
+	@:overload @:public public function freez(root : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl) : Void;
 	
 	
 }

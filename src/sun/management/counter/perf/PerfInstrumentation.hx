@@ -25,17 +25,17 @@ package sun.management.counter.perf;
 */
 extern class PerfInstrumentation
 {
-	@:overload public function new(b : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(b : java.nio.ByteBuffer) : Void;
 	
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
-	@:overload public function getModificationTimeStamp() : haxe.Int64;
+	@:overload @:public public function getModificationTimeStamp() : haxe.Int64;
 	
-	@:overload @:synchronized public function getAllCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public @:synchronized public function getAllCounters() : java.util.List<sun.management.counter.Counter>;
 	
-	@:overload @:synchronized public function findByPattern(patternString : String) : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public @:synchronized public function findByPattern(patternString : String) : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

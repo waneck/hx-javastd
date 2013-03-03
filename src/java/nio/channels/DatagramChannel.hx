@@ -28,7 +28,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:protected private function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
 	/**
 	* Opens a datagram channel.
@@ -50,7 +50,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : java.nio.channels.DatagramChannel;
+	@:overload @:public @:static public static function open() : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Opens a datagram channel.
@@ -81,7 +81,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @since   1.7
 	*/
-	@:require(java7) @:overload public static function open(family : java.net.ProtocolFamily) : java.nio.channels.DatagramChannel;
+	@:require(java7) @:overload @:public @:static public static function open(family : java.net.ProtocolFamily) : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -93,7 +93,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final public function validOps() : Int;
+	@:overload @:public @:final override public function validOps() : Int;
 	
 	/**
 	* @throws  AlreadyBoundException               {@inheritDoc}
@@ -107,7 +107,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
+	@:require(java7) @:overload @:public @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
 	
 	/**
 	* @throws  UnsupportedOperationException           {@inheritDoc}
@@ -117,7 +117,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.DatagramChannel;
+	@:require(java7) @:overload @:public @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Retrieves a datagram socket associated with this channel.
@@ -127,7 +127,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @return  A datagram socket associated with this channel
 	*/
-	@:overload @:abstract public function socket() : java.net.DatagramSocket;
+	@:overload @:public @:abstract public function socket() : java.net.DatagramSocket;
 	
 	/**
 	* Tells whether or not this channel's socket is connected.
@@ -135,7 +135,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @return  {@code true} if, and only if, this channel's socket
 	*          is {@link #isOpen open} and connected
 	*/
-	@:overload @:abstract public function isConnected() : Bool;
+	@:overload @:public @:abstract public function isConnected() : Bool;
 	
 	/**
 	* Connects this channel's socket.
@@ -187,7 +187,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function connect(remote : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
+	@:overload @:public @:abstract public function connect(remote : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Disconnects this channel's socket.
@@ -208,7 +208,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function disconnect() : java.nio.channels.DatagramChannel;
+	@:overload @:public @:abstract public function disconnect() : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Returns the remote address to which this channel's socket is connected.
@@ -223,7 +223,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function getRemoteAddress() : java.net.SocketAddress;
+	@:require(java7) @:overload @:public @:abstract public function getRemoteAddress() : java.net.SocketAddress;
 	
 	/**
 	* Receives a datagram via this channel.
@@ -287,7 +287,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function receive(dst : java.nio.ByteBuffer) : java.net.SocketAddress;
+	@:overload @:public @:abstract public function receive(dst : java.nio.ByteBuffer) : java.net.SocketAddress;
 	
 	/**
 	* Sends a datagram via this channel.
@@ -352,7 +352,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function send(src : java.nio.ByteBuffer, target : java.net.SocketAddress) : Int;
+	@:overload @:public @:abstract public function send(src : java.nio.ByteBuffer, target : java.net.SocketAddress) : Int;
 	
 	/**
 	* Reads a datagram from this channel.
@@ -367,7 +367,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  NotYetConnectedException
 	*          If this channel's socket is not connected
 	*/
-	@:overload @:abstract public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:abstract public function read(dst : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Reads a datagram from this channel.
@@ -382,7 +382,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  NotYetConnectedException
 	*          If this channel's socket is not connected
 	*/
-	@:overload @:abstract public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public @:abstract public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Reads a datagram from this channel.
@@ -397,7 +397,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  NotYetConnectedException
 	*          If this channel's socket is not connected
 	*/
-	@:overload @:final public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public @:final public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Writes a datagram to this channel.
@@ -410,7 +410,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  NotYetConnectedException
 	*          If this channel's socket is not connected
 	*/
-	@:overload @:abstract public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public @:abstract public function write(src : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Writes a datagram to this channel.
@@ -429,7 +429,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  NotYetConnectedException
 	*          If this channel's socket is not connected
 	*/
-	@:overload @:abstract public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public @:abstract public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Writes a datagram to this channel.
@@ -448,7 +448,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  NotYetConnectedException
 	*          If this channel's socket is not connected
 	*/
-	@:overload @:final public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public @:final public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Returns the value of a socket option.
@@ -468,7 +468,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Joins a multicast group to begin receiving datagrams sent to the group
@@ -515,7 +515,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*          {@link SecurityManager#checkMulticast(InetAddress) checkMulticast}
 	*          method denies access to the multiast group
 	*/
-	@:overload public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface, source : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload @:public public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface, source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -525,7 +525,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -543,7 +543,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Closes this channel.
@@ -559,14 +559,14 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Joins a multicast group to begin receiving all datagrams sent to the group,
@@ -607,7 +607,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*          {@link SecurityManager#checkMulticast(InetAddress) checkMulticast}
 	*          method denies access to the multiast group
 	*/
-	@:overload public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface) : java.nio.channels.MembershipKey;
+	@:overload @:public public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface) : java.nio.channels.MembershipKey;
 	
 	
 }

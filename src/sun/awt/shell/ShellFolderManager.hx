@@ -29,7 +29,7 @@ package sun.awt.shell;
 	* Create a shell folder from a file.
 	* Override to return machine-dependent behavior.
 	*/
-	@:overload public function createShellFolder(file : java.io.File) : sun.awt.shell.ShellFolder;
+	@:overload @:public public function createShellFolder(file : java.io.File) : sun.awt.shell.ShellFolder;
 	
 	/**
 	* @param key a <code>String</code>
@@ -51,23 +51,23 @@ package sun.awt.shell;
 	*
 	* @return An Object matching the key string.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Does <code>dir</code> represent a "computer" such as a node on the network, or
 	* "My Computer" on the desktop.
 	*/
-	@:overload public function isComputerNode(dir : java.io.File) : Bool;
+	@:overload @:public public function isComputerNode(dir : java.io.File) : Bool;
 	
-	@:overload public function isFileSystemRoot(dir : java.io.File) : Bool;
+	@:overload @:public public function isFileSystemRoot(dir : java.io.File) : Bool;
 	
-	@:overload private function createInvoker() : sun.awt.shell.ShellFolder.ShellFolder_Invoker;
+	@:overload @:protected private function createInvoker() : sun.awt.shell.ShellFolder.ShellFolder_Invoker;
 	
 	
 }
 @:native('sun$awt$shell$ShellFolderManager$DirectInvoker') @:internal extern class ShellFolderManager_DirectInvoker implements sun.awt.shell.ShellFolder.ShellFolder_Invoker
 {
-	@:overload public function invoke<T>(task : java.util.concurrent.Callable<T>) : T;
+	@:overload @:public public function invoke<T>(task : java.util.concurrent.Callable<T>) : T;
 	
 	
 }

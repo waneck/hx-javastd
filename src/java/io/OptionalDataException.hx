@@ -52,14 +52,14 @@ package java.io;
 	*
 	* @serial
 	*/
-	public var length : Int;
+	@:public public var length : Int;
 	
 	/**
 	* True if there is no more data in the buffered part of the stream.
 	*
 	* @serial
 	*/
-	public var eof : Bool;
+	@:public public var eof : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ extern interface BufferedContextProvider
 	* @return associated context
 	* @see sun.java2d.pipe.BufferedContext
 	*/
-	@:overload public function getContext() : sun.java2d.pipe.BufferedContext;
+	@:overload @:public public function getContext() : sun.java2d.pipe.BufferedContext;
 	
 	
 }

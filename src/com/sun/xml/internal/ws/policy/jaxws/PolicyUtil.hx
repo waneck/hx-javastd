@@ -33,7 +33,7 @@ extern class PolicyUtil
 	* @param providers The discovered implementations are added to this collection.
 	* @param service The service interface.
 	*/
-	@:overload public static function addServiceProviders<T>(providers : java.util.Collection<T>, service : Class<T>) : Void;
+	@:overload @:public @:static public static function addServiceProviders<T>(providers : java.util.Collection<T>, service : Class<T>) : Void;
 	
 	/**
 	* Iterates through the ports in the WSDL model, for each policy in the policy
@@ -44,7 +44,7 @@ extern class PolicyUtil
 	* @param policyMap The policy map
 	* @throws PolicyException If the list of WebServiceFeatures could not be computed
 	*/
-	@:overload public static function configureModel(model : com.sun.xml.internal.ws.api.model.wsdl.WSDLModel, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
+	@:overload @:public @:static public static function configureModel(model : com.sun.xml.internal.ws.api.model.wsdl.WSDLModel, policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
 	
 	/**
 	* Returns the list of features that correspond to the policies in the policy
@@ -55,7 +55,7 @@ extern class PolicyUtil
 	* @param portName The service port name
 	* @return List of features for the given port corresponding to the policies in the map
 	*/
-	@:overload public static function getPortScopedFeatures(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
+	@:overload @:public @:static public static function getPortScopedFeatures(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : java.util.Collection<javax.xml.ws.WebServiceFeature>;
 	
 	
 }

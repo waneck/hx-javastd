@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class InvocationHandlerFactoryImpl implements com.sun.corba.se.spi.orbutil.proxy.InvocationHandlerFactory
 {
-	@:overload public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData) : Void;
+	@:overload @:public public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData) : Void;
 	
-	@:overload public function getInvocationHandler() : java.lang.reflect.InvocationHandler;
+	@:overload @:public public function getInvocationHandler() : java.lang.reflect.InvocationHandler;
 	
-	@:overload public function getProxyInterfaces() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getProxyInterfaces() : java.NativeArray<Class<Dynamic>>;
 	
 	
 }
 @:native('com$sun$corba$se$impl$presentation$rmi$InvocationHandlerFactoryImpl$CustomCompositeInvocationHandlerImpl') @:internal extern class InvocationHandlerFactoryImpl_CustomCompositeInvocationHandlerImpl extends com.sun.corba.se.spi.orbutil.proxy.CompositeInvocationHandlerImpl implements com.sun.corba.se.spi.orbutil.proxy.LinkedInvocationHandler implements java.io.Serializable
 {
-	@:overload public function setProxy(proxy : java.lang.reflect.Proxy) : Void;
+	@:overload @:public public function setProxy(proxy : java.lang.reflect.Proxy) : Void;
 	
-	@:overload public function getProxy() : java.lang.reflect.Proxy;
+	@:overload @:public public function getProxy() : java.lang.reflect.Proxy;
 	
-	@:overload public function new(stub : com.sun.corba.se.spi.presentation.rmi.DynamicStub) : Void;
+	@:overload @:public public function new(stub : com.sun.corba.se.spi.presentation.rmi.DynamicStub) : Void;
 	
 	/** Return the stub, which will actually be written to the stream.
 	* It will be custom marshalled, with the actual writing done in
@@ -48,7 +48,7 @@ extern class InvocationHandlerFactoryImpl implements com.sun.corba.se.spi.orbuti
 	* handler on read, and return the invocation handler on the
 	* readResolve method.
 	*/
-	@:overload public function writeReplace() : Dynamic;
+	@:overload @:public public function writeReplace() : Dynamic;
 	
 	
 }

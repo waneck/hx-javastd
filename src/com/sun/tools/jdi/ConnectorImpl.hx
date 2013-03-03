@@ -25,9 +25,9 @@ package com.sun.tools.jdi;
 */
 @:internal extern class ConnectorImpl implements com.sun.jdi.connect.Connector
 {
-	@:overload public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
+	@:overload @:public public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a short identifier for the connector. Connector implementors
@@ -38,7 +38,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the name of this connector.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Returns a human-readable description of this connector
@@ -46,7 +46,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the description of this connector
 	*/
-	@:overload public function description() : String;
+	@:overload @:public public function description() : String;
 	
 	/**
 	* Returns the transport mechanism used by this connector to establish
@@ -54,33 +54,33 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link Transport} used by this connector.
 	*/
-	@:overload override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
 	
 }
 @:native('com$sun$tools$jdi$ConnectorImpl$ArgumentImpl') @:internal extern class ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_Argument implements java.lang.Cloneable implements java.io.Serializable
 {
-	@:overload @:abstract public function isValid(value : String) : Bool;
+	@:overload @:public @:abstract public function isValid(value : String) : Bool;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function label() : String;
+	@:overload @:public public function label() : String;
 	
-	@:overload public function description() : String;
+	@:overload @:public public function description() : String;
 	
-	@:overload public function value() : String;
+	@:overload @:public public function value() : String;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
-	@:overload public function mustSpecify() : Bool;
+	@:overload @:public public function mustSpecify() : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -89,7 +89,7 @@ package com.sun.tools.jdi;
 	/**
 	* Sets the value of the argument.
 	*/
-	@:overload public function setValue(value : Bool) : Void;
+	@:overload @:public public function setValue(value : Bool) : Void;
 	
 	/**
 	* Performs basic sanity check of argument.
@@ -97,7 +97,7 @@ package com.sun.tools.jdi;
 	* representation of a boolean value.
 	* @see #stringValueOf(boolean)
 	*/
-	@:overload override public function isValid(value : String) : Bool;
+	@:overload @:public override public function isValid(value : String) : Bool;
 	
 	/**
 	* Return the string representation of the <code>value</code>
@@ -106,7 +106,7 @@ package com.sun.tools.jdi;
 	* @return the localized String representation of the
 	* boolean value.
 	*/
-	@:overload public function stringValueOf(value : Bool) : String;
+	@:overload @:public public function stringValueOf(value : Bool) : String;
 	
 	/**
 	* Return the value of the argument as a boolean.  Since
@@ -116,7 +116,7 @@ package com.sun.tools.jdi;
 	* the boolean returned by this method is undefined.
 	* @return the value of the argument as a boolean.
 	*/
-	@:overload public function booleanValue() : Bool;
+	@:overload @:public public function booleanValue() : Bool;
 	
 	
 }
@@ -129,21 +129,21 @@ package com.sun.tools.jdi;
 	* when the connection is established - for example,
 	* on {@link LaunchingConnector#launch}
 	*/
-	@:overload public function setValue(value : Int) : Void;
+	@:overload @:public public function setValue(value : Int) : Void;
 	
 	/**
 	* Performs basic sanity check of argument.
 	* @return <code>true</code> if value represents an int that is
 	* <code>{@link #min()} &lt;= value &lt;= {@link #max()}</code>
 	*/
-	@:overload override public function isValid(value : String) : Bool;
+	@:overload @:public override public function isValid(value : String) : Bool;
 	
 	/**
 	* Performs basic sanity check of argument.
 	* @return <code>true</code> if
 	* <code>{@link #min()} &lt;= value  &lt;= {@link #max()}</code>
 	*/
-	@:overload public function isValid(value : Int) : Bool;
+	@:overload @:public public function isValid(value : Int) : Bool;
 	
 	/**
 	* Return the string representation of the <code>value</code>
@@ -152,7 +152,7 @@ package com.sun.tools.jdi;
 	* @return the String representation of the
 	* int value.
 	*/
-	@:overload public function stringValueOf(value : Int) : String;
+	@:overload @:public public function stringValueOf(value : Int) : String;
 	
 	/**
 	* Return the value of the argument as a int.  Since
@@ -162,19 +162,19 @@ package com.sun.tools.jdi;
 	* the int returned by this method is undefined.
 	* @return the value of the argument as a int.
 	*/
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
 	/**
 	* The upper bound for the value.
 	* @return the maximum allowed value for this argument.
 	*/
-	@:overload public function max() : Int;
+	@:overload @:public public function max() : Int;
 	
 	/**
 	* The lower bound for the value.
 	* @return the minimum allowed value for this argument.
 	*/
-	@:overload public function min() : Int;
+	@:overload @:public public function min() : Int;
 	
 	
 }
@@ -184,7 +184,7 @@ package com.sun.tools.jdi;
 	* Performs basic sanity check of argument.
 	* @return <code>true</code> always
 	*/
-	@:overload override public function isValid(value : String) : Bool;
+	@:overload @:public override public function isValid(value : String) : Bool;
 	
 	
 }
@@ -194,13 +194,13 @@ package com.sun.tools.jdi;
 	* Return the possible values for the argument
 	* @return {@link List} of {@link String}
 	*/
-	@:overload public function choices() : java.util.List<String>;
+	@:overload @:public public function choices() : java.util.List<String>;
 	
 	/**
 	* Performs basic sanity check of argument.
 	* @return <code>true</code> if value is one of {@link #choices()}.
 	*/
-	@:overload override public function isValid(value : String) : Bool;
+	@:overload @:public override public function isValid(value : String) : Bool;
 	
 	
 }

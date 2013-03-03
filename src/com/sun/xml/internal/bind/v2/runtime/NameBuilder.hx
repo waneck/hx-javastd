@@ -25,18 +25,18 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class NameBuilder
 {
-	@:overload public function createElementName(name : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.runtime.Name;
+	@:overload @:public public function createElementName(name : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.runtime.Name;
 	
-	@:overload public function createElementName(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.Name;
+	@:overload @:public public function createElementName(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.Name;
 	
-	@:overload public function createAttributeName(name : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.runtime.Name;
+	@:overload @:public public function createAttributeName(name : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.runtime.Name;
 	
-	@:overload public function createAttributeName(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.Name;
+	@:overload @:public public function createAttributeName(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.Name;
 	
 	/**
 	* Wraps up everything and creates {@link NameList}.
 	*/
-	@:overload public function conclude() : com.sun.xml.internal.bind.v2.runtime.NameList;
+	@:overload @:public public function conclude() : com.sun.xml.internal.bind.v2.runtime.NameList;
 	
 	
 }

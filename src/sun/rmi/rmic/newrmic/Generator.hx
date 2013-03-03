@@ -31,19 +31,19 @@ extern interface Generator
 	* Returns true if successful or false if an error occurs.  Errors
 	* are output to the specific Main instance.
 	**/
-	@:overload public function parseArgs(args : java.NativeArray<String>, main : sun.rmi.rmic.newrmic.Main) : Bool;
+	@:overload @:public public function parseArgs(args : java.NativeArray<String>, main : sun.rmi.rmic.newrmic.Main) : Bool;
 	
 	/**
 	* Returns the most specific environment class required by this
 	* generator.
 	**/
-	@:overload public function envClass() : Class<sun.rmi.rmic.newrmic.BatchEnvironment>;
+	@:overload @:public public function envClass() : Class<sun.rmi.rmic.newrmic.BatchEnvironment>;
 	
 	/**
 	* Returns the names of the classes that must be available through
 	* the doclet API in order for this generator to function.
 	**/
-	@:overload public function bootstrapClassNames() : java.util.Set<String>;
+	@:overload @:public public function bootstrapClassNames() : java.util.Set<String>;
 	
 	/**
 	* Generates the protocol-specific rmic output files for the
@@ -55,7 +55,7 @@ extern interface Generator
 	* passed to the addGeneratedFile method of the specified
 	* BatchEnvironment.
 	**/
-	@:overload public function generate(env : sun.rmi.rmic.newrmic.BatchEnvironment, inputClass : com.sun.javadoc.ClassDoc, destDir : java.io.File) : Void;
+	@:overload @:public public function generate(env : sun.rmi.rmic.newrmic.BatchEnvironment, inputClass : com.sun.javadoc.ClassDoc, destDir : java.io.File) : Void;
 	
 	
 }

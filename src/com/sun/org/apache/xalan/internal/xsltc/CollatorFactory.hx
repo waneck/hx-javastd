@@ -27,9 +27,9 @@ extern interface CollatorFactory
 	* @author W. Eliot Kimber (eliot@isogen.com)
 	* @author Santiago Pericas-Geertsen
 	*/
-	@:overload public function getCollator(lang : String, country : String) : java.text.Collator;
+	@:overload @:public public function getCollator(lang : String, country : String) : java.text.Collator;
 	
-	@:overload public function getCollator(locale : java.util.Locale) : java.text.Collator;
+	@:overload @:public public function getCollator(locale : java.util.Locale) : java.text.Collator;
 	
 	
 }

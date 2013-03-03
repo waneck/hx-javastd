@@ -47,7 +47,7 @@ package com.sun.rowset.internal;
 */
 extern class CachedRowSetReader implements javax.sql.RowSetReader implements java.io.Serializable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Reads data from a data source and populates the given
@@ -83,7 +83,7 @@ extern class CachedRowSetReader implements javax.sql.RowSetReader implements jav
 	*         problem making the connection, or the command property has not
 	*         been set
 	*/
-	@:overload public function readData(caller : javax.sql.RowSetInternal) : Void;
+	@:overload @:public public function readData(caller : javax.sql.RowSetInternal) : Void;
 	
 	/**
 	* Checks to see if the writer associated with this reader needs
@@ -96,7 +96,7 @@ extern class CachedRowSetReader implements javax.sql.RowSetReader implements jav
 	*         to reset the values of its fields; <code>false</code> otherwise
 	* @throws SQLException if an access error occurs
 	*/
-	@:overload public function reset() : Bool;
+	@:overload @:public public function reset() : Bool;
 	
 	/**
 	* Establishes a connection with the data source for the given
@@ -119,7 +119,7 @@ extern class CachedRowSetReader implements javax.sql.RowSetReader implements jav
 	*         to the caller's data source
 	* @throws SQLException if an access error occurs
 	*/
-	@:overload public function connect(caller : javax.sql.RowSetInternal) : java.sql.Connection;
+	@:overload @:public public function connect(caller : javax.sql.RowSetInternal) : java.sql.Connection;
 	
 	/**
 	* Assists in determining whether the current connection was created by this
@@ -127,7 +127,7 @@ extern class CachedRowSetReader implements javax.sql.RowSetReader implements jav
 	*
 	* @return a boolean giving the status of whether the connection has been closed.
 	*/
-	@:overload private function getCloseConnection() : Bool;
+	@:overload @:protected private function getCloseConnection() : Bool;
 	
 	/**
 	*  This sets the start position in the ResultSet from where to begin. This is
@@ -136,7 +136,7 @@ extern class CachedRowSetReader implements javax.sql.RowSetReader implements jav
 	* @param pos integer indicating the position in the <code>ResultSet</code> to begin
 	*        populating from.
 	*/
-	@:overload public function setStartPosition(pos : Int) : Void;
+	@:overload @:public public function setStartPosition(pos : Int) : Void;
 	
 	
 }

@@ -43,7 +43,7 @@ extern interface ImageFetchable
 	* @see ImageFetcher
 	* @see ImageProducer
 	*/
-	@:overload public function doFetch() : Void;
+	@:overload @:public public function doFetch() : Void;
 	
 	
 }

@@ -33,32 +33,32 @@ package com.sun.tools.javac.code;
 extern class Attribute implements javax.lang.model.element.AnnotationValue
 {
 	/** The type of the annotation element. */
-	public var type : com.sun.tools.javac.code.Type;
+	@:public public var type : com.sun.tools.javac.code.Type;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload @:abstract public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public @:abstract public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	
 }
 /** The value for an annotation element of primitive type or String. */
 @:native('com$sun$tools$javac$code$Attribute$Constant') extern class Attribute_Constant extends com.sun.tools.javac.code.Attribute
 {
-	public var value(default, null) : Dynamic;
+	@:public @:final public var value(default, null) : Dynamic;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type, value : Dynamic) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type, value : Dynamic) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	
 }
@@ -67,17 +67,17 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 */
 @:native('com$sun$tools$javac$code$Attribute$Class') extern class Attribute_Class extends com.sun.tools.javac.code.Attribute
 {
-	public var type(default, null) : com.sun.tools.javac.code.Type;
+	@:public @:final public var type(default, null) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function new(types : com.sun.tools.javac.code.Types, type : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function new(types : com.sun.tools.javac.code.Types, type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getValue() : com.sun.tools.javac.code.Type;
+	@:overload @:public override public function getValue() : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	
 }
@@ -91,11 +91,11 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 	*  and the value to be returned when that method is called to
 	*  access this attribute.
 	*/
-	public var values(default, null) : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, com.sun.tools.javac.code.Attribute>>;
+	@:public @:final public var values(default, null) : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, com.sun.tools.javac.code.Attribute>>;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, com.sun.tools.javac.code.Attribute>>) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, com.sun.tools.javac.code.Attribute>>) : Void;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	/**
 	* Returns a string representation of this annotation.
@@ -105,17 +105,17 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 	*     @com.example.foo
 	* Omit parens for marker annotations, and omit "value=" when allowed.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function member(member : com.sun.tools.javac.util.Name) : com.sun.tools.javac.code.Attribute;
+	@:overload @:public public function member(member : com.sun.tools.javac.util.Name) : com.sun.tools.javac.code.Attribute;
 	
-	@:overload override public function getValue() : com.sun.tools.javac.code.Attribute.Attribute_Compound;
+	@:overload @:public override public function getValue() : com.sun.tools.javac.code.Attribute.Attribute_Compound;
 	
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
-	@:overload public function getAnnotationType() : javax.lang.model.type.DeclaredType;
+	@:overload @:public public function getAnnotationType() : javax.lang.model.type.DeclaredType;
 	
-	@:overload public function getElementValues() : java.util.Map<MethodSymbol, com.sun.tools.javac.code.Attribute>;
+	@:overload @:public public function getElementValues() : java.util.Map<MethodSymbol, com.sun.tools.javac.code.Attribute>;
 	
 	
 }
@@ -123,17 +123,17 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 */
 @:native('com$sun$tools$javac$code$Attribute$Array') extern class Attribute_Array extends com.sun.tools.javac.code.Attribute
 {
-	public var values(default, null) : java.NativeArray<com.sun.tools.javac.code.Attribute>;
+	@:public @:final public var values(default, null) : java.NativeArray<com.sun.tools.javac.code.Attribute>;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type, values : java.NativeArray<com.sun.tools.javac.code.Attribute>) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type, values : java.NativeArray<com.sun.tools.javac.code.Attribute>) : Void;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getValue() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute>;
+	@:overload @:public override public function getValue() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute>;
 	
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	
 }
@@ -141,31 +141,31 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 */
 @:native('com$sun$tools$javac$code$Attribute$Enum') extern class Attribute_Enum extends com.sun.tools.javac.code.Attribute
 {
-	public var value : VarSymbol;
+	@:public public var value : VarSymbol;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type, value : VarSymbol) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type, value : VarSymbol) : Void;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getValue() : VarSymbol;
+	@:overload @:public override public function getValue() : VarSymbol;
 	
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	
 }
 @:native('com$sun$tools$javac$code$Attribute$Error') extern class Attribute_Error extends com.sun.tools.javac.code.Attribute
 {
-	@:overload public function new(type : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function new(type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function getValue() : String;
+	@:overload @:public override public function getValue() : String;
 	
-	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
+	@:overload @:public override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	
 }

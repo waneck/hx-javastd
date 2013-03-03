@@ -28,17 +28,17 @@ extern class ClassTypeImpl extends com.sun.tools.apt.mirror.type.DeclaredTypeImp
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaration() : com.sun.mirror.declaration.ClassDeclaration;
+	@:overload @:public override public function getDeclaration() : com.sun.mirror.declaration.ClassDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSuperclass() : com.sun.mirror.type.ClassType;
+	@:overload @:public public function getSuperclass() : com.sun.mirror.type.ClassType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

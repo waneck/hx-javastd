@@ -106,7 +106,7 @@ package java.util.concurrent.locks;
 	* Creates an instance of {@code ReentrantLock}.
 	* This is equivalent to using {@code ReentrantLock(false)}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an instance of {@code ReentrantLock} with the
@@ -114,7 +114,7 @@ package java.util.concurrent.locks;
 	*
 	* @param fair {@code true} if this lock should use a fair ordering policy
 	*/
-	@:overload public function new(fair : Bool) : Void;
+	@:overload @:public public function new(fair : Bool) : Void;
 	
 	/**
 	* Acquires the lock.
@@ -130,7 +130,7 @@ package java.util.concurrent.locks;
 	* purposes and lies dormant until the lock has been acquired,
 	* at which time the lock hold count is set to one.
 	*/
-	@:overload public function lock() : Void;
+	@:overload @:public public function lock() : Void;
 	
 	/**
 	* Acquires the lock unless the current thread is
@@ -178,7 +178,7 @@ package java.util.concurrent.locks;
 	*
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload public function lockInterruptibly() : Void;
+	@:overload @:public public function lockInterruptibly() : Void;
 	
 	/**
 	* Acquires the lock only if it is not held by another thread at the time
@@ -206,7 +206,7 @@ package java.util.concurrent.locks;
 	*         current thread, or the lock was already held by the current
 	*         thread; and {@code false} otherwise
 	*/
-	@:overload public function tryLock() : Bool;
+	@:overload @:public public function tryLock() : Bool;
 	
 	/**
 	* Acquires the lock if it is not held by another thread within the given
@@ -278,7 +278,7 @@ package java.util.concurrent.locks;
 	* @throws NullPointerException if the time unit is null
 	*
 	*/
-	@:overload public function tryLock(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function tryLock(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Attempts to release this lock.
@@ -291,7 +291,7 @@ package java.util.concurrent.locks;
 	* @throws IllegalMonitorStateException if the current thread does not
 	*         hold this lock
 	*/
-	@:overload public function unlock() : Void;
+	@:overload @:public public function unlock() : Void;
 	
 	/**
 	* Returns a {@link Condition} instance for use with this
@@ -332,7 +332,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the Condition object
 	*/
-	@:overload public function newCondition() : java.util.concurrent.locks.Condition;
+	@:overload @:public public function newCondition() : java.util.concurrent.locks.Condition;
 	
 	/**
 	* Queries the number of holds on this lock by the current thread.
@@ -364,7 +364,7 @@ package java.util.concurrent.locks;
 	* @return the number of holds on this lock by the current thread,
 	*         or zero if this lock is not held by the current thread
 	*/
-	@:overload public function getHoldCount() : Int;
+	@:overload @:public public function getHoldCount() : Int;
 	
 	/**
 	* Queries if this lock is held by the current thread.
@@ -409,7 +409,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if current thread holds this lock and
 	*         {@code false} otherwise
 	*/
-	@:overload public function isHeldByCurrentThread() : Bool;
+	@:overload @:public public function isHeldByCurrentThread() : Bool;
 	
 	/**
 	* Queries if this lock is held by any thread. This method is
@@ -419,14 +419,14 @@ package java.util.concurrent.locks;
 	* @return {@code true} if any thread holds this lock and
 	*         {@code false} otherwise
 	*/
-	@:overload public function isLocked() : Bool;
+	@:overload @:public public function isLocked() : Bool;
 	
 	/**
 	* Returns {@code true} if this lock has fairness set true.
 	*
 	* @return {@code true} if this lock has fairness set true
 	*/
-	@:overload @:final public function isFair() : Bool;
+	@:overload @:public @:final public function isFair() : Bool;
 	
 	/**
 	* Returns the thread that currently owns this lock, or
@@ -441,7 +441,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the owner, or {@code null} if not owned
 	*/
-	@:overload private function getOwner() : java.lang.Thread;
+	@:overload @:protected private function getOwner() : java.lang.Thread;
 	
 	/**
 	* Queries whether any threads are waiting to acquire this lock. Note that
@@ -453,7 +453,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if there may be other threads waiting to
 	*         acquire the lock
 	*/
-	@:overload @:final public function hasQueuedThreads() : Bool;
+	@:overload @:public @:final public function hasQueuedThreads() : Bool;
 	
 	/**
 	* Queries whether the given thread is waiting to acquire this
@@ -466,7 +466,7 @@ package java.util.concurrent.locks;
 	* @return {@code true} if the given thread is queued waiting for this lock
 	* @throws NullPointerException if the thread is null
 	*/
-	@:overload @:final public function hasQueuedThread(thread : java.lang.Thread) : Bool;
+	@:overload @:public @:final public function hasQueuedThread(thread : java.lang.Thread) : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting to
@@ -478,7 +478,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the estimated number of threads waiting for this lock
 	*/
-	@:overload @:final public function getQueueLength() : Int;
+	@:overload @:public @:final public function getQueueLength() : Int;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -491,7 +491,7 @@ package java.util.concurrent.locks;
 	*
 	* @return the collection of threads
 	*/
-	@:overload private function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Queries whether any threads are waiting on the given condition
@@ -508,7 +508,7 @@ package java.util.concurrent.locks;
 	*         not associated with this lock
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload public function hasWaiters(condition : java.util.concurrent.locks.Condition) : Bool;
+	@:overload @:public public function hasWaiters(condition : java.util.concurrent.locks.Condition) : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting on the
@@ -525,7 +525,7 @@ package java.util.concurrent.locks;
 	*         not associated with this lock
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload public function getWaitQueueLength(condition : java.util.concurrent.locks.Condition) : Int;
+	@:overload @:public public function getWaitQueueLength(condition : java.util.concurrent.locks.Condition) : Int;
 	
 	/**
 	* Returns a collection containing those threads that may be
@@ -544,7 +544,7 @@ package java.util.concurrent.locks;
 	*         not associated with this lock
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload private function getWaitingThreads(condition : java.util.concurrent.locks.Condition) : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected private function getWaitingThreads(condition : java.util.concurrent.locks.Condition) : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a string identifying this lock, as well as its lock state.
@@ -554,7 +554,7 @@ package java.util.concurrent.locks;
 	*
 	* @return a string identifying this lock, as well as its lock state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -565,9 +565,9 @@ package java.util.concurrent.locks;
 */
 @:native('java$util$concurrent$locks$ReentrantLock$Sync') @:internal extern class ReentrantLock_Sync extends java.util.concurrent.locks.AbstractQueuedSynchronizer
 {
-	@:overload @:final override private function tryRelease(releases : Int) : Bool;
+	@:overload @:protected @:final override private function tryRelease(releases : Int) : Bool;
 	
-	@:overload @:final override private function isHeldExclusively() : Bool;
+	@:overload @:protected @:final override private function isHeldExclusively() : Bool;
 	
 	
 }
@@ -576,7 +576,7 @@ package java.util.concurrent.locks;
 */
 @:native('java$util$concurrent$locks$ReentrantLock$NonfairSync') @:internal extern class ReentrantLock_NonfairSync extends java.util.concurrent.locks.ReentrantLock.ReentrantLock_Sync
 {
-	@:overload @:final override private function tryAcquire(acquires : Int) : Bool;
+	@:overload @:protected @:final override private function tryAcquire(acquires : Int) : Bool;
 	
 	
 }
@@ -589,7 +589,7 @@ package java.util.concurrent.locks;
 	* Fair version of tryAcquire.  Don't grant access unless
 	* recursive call or no waiters or is first.
 	*/
-	@:overload @:final override private function tryAcquire(acquires : Int) : Bool;
+	@:overload @:protected @:final override private function tryAcquire(acquires : Int) : Bool;
 	
 	
 }

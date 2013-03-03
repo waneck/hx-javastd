@@ -24,13 +24,13 @@ package com.sun.org.apache.xpath.internal.axes;
 extern class MatchPatternIterator extends com.sun.org.apache.xpath.internal.axes.LocPathIterator
 {
 	/** This is the select pattern, translated into a match pattern. */
-	private var m_pattern : com.sun.org.apache.xpath.internal.patterns.StepPattern;
+	@:protected private var m_pattern : com.sun.org.apache.xpath.internal.patterns.StepPattern;
 	
 	/** The traversal axis from where the nodes will be filtered. */
-	private var m_superAxis : Int;
+	@:protected private var m_superAxis : Int;
 	
 	/** The DTM inner traversal class, that corresponds to the super axis. */
-	private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:protected private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	/**
 	* Initialize the context values for this expression
@@ -39,7 +39,7 @@ extern class MatchPatternIterator extends com.sun.org.apache.xpath.internal.axes
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -48,13 +48,13 @@ extern class MatchPatternIterator extends com.sun.org.apache.xpath.internal.axes
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Get the next node via getNextXXX.  Bottlenecked for derived class override.
 	* @return The next node on the axis, or DTM.NULL.
 	*/
-	@:overload private function getNextNode() : Int;
+	@:overload @:protected private function getNextNode() : Int;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -63,7 +63,7 @@ extern class MatchPatternIterator extends com.sun.org.apache.xpath.internal.axes
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload override public function nextNode() : Int;
+	@:overload @:public override public function nextNode() : Int;
 	
 	/**
 	*  Test whether a specified node is visible in the logical view of a
@@ -74,7 +74,7 @@ extern class MatchPatternIterator extends com.sun.org.apache.xpath.internal.axes
 	* @return  a constant to determine whether the node is accepted,
 	*   rejected, or skipped, as defined  above .
 	*/
-	@:overload public function acceptNode(n : Int, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : java.StdTypes.Int16;
+	@:overload @:public public function acceptNode(n : Int, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : java.StdTypes.Int16;
 	
 	
 }

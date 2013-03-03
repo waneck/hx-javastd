@@ -31,7 +31,7 @@ extern class FuncExtFunctionAvailable extends com.sun.org.apache.xpath.internal.
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* The function table is an instance field. In order to access this instance
@@ -40,7 +40,7 @@ extern class FuncExtFunctionAvailable extends com.sun.org.apache.xpath.internal.
 	* during compiling of XPath expressions.
 	* @param aTable an instance of the function table
 	*/
-	@:overload public function setFunctionTable(aTable : com.sun.org.apache.xpath.internal.compiler.FunctionTable) : Void;
+	@:overload @:public public function setFunctionTable(aTable : com.sun.org.apache.xpath.internal.compiler.FunctionTable) : Void;
 	
 	
 }

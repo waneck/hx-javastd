@@ -25,29 +25,29 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 @:internal extern class BridgeImpl<T> extends com.sun.xml.internal.bind.v2.runtime.InternalBridge<T>
 {
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, tagName : com.sun.xml.internal.bind.v2.runtime.Name, bi : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<T>, typeRef : com.sun.xml.internal.bind.api.TypeReference) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, tagName : com.sun.xml.internal.bind.v2.runtime.Name, bi : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<T>, typeRef : com.sun.xml.internal.bind.api.TypeReference) : Void;
 	
-	@:overload override public function marshal(_m : javax.xml.bind.Marshaller, t : T, output : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function marshal(_m : javax.xml.bind.Marshaller, t : T, output : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function marshal(_m : javax.xml.bind.Marshaller, t : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public override public function marshal(_m : javax.xml.bind.Marshaller, t : T, output : java.io.OutputStream, nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload override public function marshal(_m : javax.xml.bind.Marshaller, t : T, output : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function marshal(_m : javax.xml.bind.Marshaller, t : T, output : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function marshal(_m : javax.xml.bind.Marshaller, t : T, contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function marshal(_m : javax.xml.bind.Marshaller, t : T, contentHandler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload override public function marshal(_m : javax.xml.bind.Marshaller, t : T, result : javax.xml.transform.Result) : Void;
+	@:overload @:public override public function marshal(_m : javax.xml.bind.Marshaller, t : T, result : javax.xml.transform.Result) : Void;
 	
-	@:overload override public function unmarshal(_u : javax.xml.bind.Unmarshaller, _in : javax.xml.stream.XMLStreamReader) : T;
+	@:overload @:public override public function unmarshal(_u : javax.xml.bind.Unmarshaller, _in : javax.xml.stream.XMLStreamReader) : T;
 	
-	@:overload override public function unmarshal(_u : javax.xml.bind.Unmarshaller, _in : javax.xml.transform.Source) : T;
+	@:overload @:public override public function unmarshal(_u : javax.xml.bind.Unmarshaller, _in : javax.xml.transform.Source) : T;
 	
-	@:overload override public function unmarshal(_u : javax.xml.bind.Unmarshaller, _in : java.io.InputStream) : T;
+	@:overload @:public override public function unmarshal(_u : javax.xml.bind.Unmarshaller, _in : java.io.InputStream) : T;
 	
-	@:overload override public function unmarshal(_u : javax.xml.bind.Unmarshaller, n : org.w3c.dom.Node) : T;
+	@:overload @:public override public function unmarshal(_u : javax.xml.bind.Unmarshaller, n : org.w3c.dom.Node) : T;
 	
-	@:overload override public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
+	@:overload @:public override public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
 	
-	@:overload public function marshal(value : T, out : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function marshal(value : T, out : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	
 }

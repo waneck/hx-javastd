@@ -233,7 +233,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*         violates the active <code>JOIN</code>
 	* @see Joinable#setMatchColumn
 	*/
-	@:overload public function addRowSet(rowset : javax.sql.rowset.Joinable) : Void;
+	@:overload @:public public function addRowSet(rowset : javax.sql.rowset.Joinable) : Void;
 	
 	/**
 	* Adds the given <code>RowSet</code> object to this <code>JoinRowSet</code>
@@ -255,7 +255,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*         (2) <i>rowset</i> violates the active <code>JOIN</code>
 	* @see Joinable#unsetMatchColumn
 	*/
-	@:overload public function addRowSet(rowset : javax.sql.RowSet, columnIdx : Int) : Void;
+	@:overload @:public public function addRowSet(rowset : javax.sql.RowSet, columnIdx : Int) : Void;
 	
 	/**
 	* Adds <i>rowset</i> to this <code>JoinRowSet</code> object and
@@ -276,7 +276,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*         (2) the match column for <i>rowset</i> does not satisfy the
 	*         conditions of the <code>JOIN</code>
 	*/
-	@:overload public function addRowSet(rowset : javax.sql.RowSet, columnName : String) : Void;
+	@:overload @:public public function addRowSet(rowset : javax.sql.RowSet, columnName : String) : Void;
 	
 	/**
 	* Adds one or more <code>RowSet</code> objects contained in the given
@@ -307,7 +307,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*         a <code>RowSet</code> object being added violates the active
 	*         <code>JOIN</code>
 	*/
-	@:overload public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnIdx : java.NativeArray<Int>) : Void;
+	@:overload @:public public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnIdx : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Adds one or more <code>RowSet</code> objects contained in the given
@@ -338,7 +338,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*         a <code>RowSet</code> object being added violates the active
 	*         <code>JOIN</code>
 	*/
-	@:overload public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnName : java.NativeArray<String>) : Void;
+	@:overload @:public public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnName : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a <code>Collection</code> object containing the
@@ -354,7 +354,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	* @throws SQLException if an error occurs generating the
 	*         <code>Collection</code> object to be returned
 	*/
-	@:overload public function getRowSets() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getRowSets() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns a <code>String</code> array containing the names of the
@@ -368,7 +368,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*         the <code>RowSet</code> objects
 	* @see CachedRowSet#setTableName
 	*/
-	@:overload public function getRowSetNames() : java.NativeArray<String>;
+	@:overload @:public public function getRowSetNames() : java.NativeArray<String>;
 	
 	/**
 	* Creates a new <code>CachedRowSet</code> object containing the
@@ -398,7 +398,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	* @see javax.sql.rowset.CachedRowSet
 	* @see javax.sql.rowset.spi.SyncProvider
 	*/
-	@:overload public function toCachedRowSet() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public public function toCachedRowSet() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Indicates if CROSS_JOIN is supported by a JoinRowSet
@@ -406,7 +406,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*
 	* @return true if the CROSS_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsCrossJoin() : Bool;
+	@:overload @:public public function supportsCrossJoin() : Bool;
 	
 	/**
 	* Indicates if INNER_JOIN is supported by a JoinRowSet
@@ -414,7 +414,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*
 	* @return true is the INNER_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsInnerJoin() : Bool;
+	@:overload @:public public function supportsInnerJoin() : Bool;
 	
 	/**
 	* Indicates if LEFT_OUTER_JOIN is supported by a JoinRowSet
@@ -422,7 +422,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*
 	* @return true is the LEFT_OUTER_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsLeftOuterJoin() : Bool;
+	@:overload @:public public function supportsLeftOuterJoin() : Bool;
 	
 	/**
 	* Indicates if RIGHT_OUTER_JOIN is supported by a JoinRowSet
@@ -430,7 +430,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*
 	* @return true is the RIGHT_OUTER_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsRightOuterJoin() : Bool;
+	@:overload @:public public function supportsRightOuterJoin() : Bool;
 	
 	/**
 	* Indicates if FULL_JOIN is supported by a JoinRowSet
@@ -438,7 +438,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*
 	* @return true is the FULL_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsFullJoin() : Bool;
+	@:overload @:public public function supportsFullJoin() : Bool;
 	
 	/**
 	* Allow the application to adjust the type of <code>JOIN</code> imposed
@@ -452,7 +452,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	* @throws SQLException if an unsupported <code>JOIN</code> type is set
 	* @see #getJoinType
 	*/
-	@:overload public function setJoinType(joinType : Int) : Void;
+	@:overload @:public public function setJoinType(joinType : Int) : Void;
 	
 	/**
 	* Return a SQL-like description of the WHERE clause being used
@@ -466,7 +466,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	* @throws SQLException if an error occurs in generating a representation
 	* of the WHERE clause.
 	*/
-	@:overload public function getWhereClause() : String;
+	@:overload @:public public function getWhereClause() : String;
 	
 	/**
 	* Returns a <code>int</code> describing the set SQL <code>JOIN</code> type
@@ -483,7 +483,7 @@ extern interface JoinRowSet extends javax.sql.rowset.WebRowSet
 	*     type supported by the JoinRowSet instance.
 	* @see #setJoinType
 	*/
-	@:overload public function getJoinType() : Int;
+	@:overload @:public public function getJoinType() : Int;
 	
 	
 }

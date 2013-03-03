@@ -37,22 +37,22 @@ package sun.awt.image;
 */
 extern class GifImageDecoder extends sun.awt.image.ImageDecoder
 {
-	@:overload public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
+	@:overload @:public public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
 	
 	/**
 	* produce an image from the stream.
 	*/
-	@:overload public function produceImage() : Void;
+	@:overload @:public override public function produceImage() : Void;
 	
-	@:overload public static function grow_colormap(colormap : java.NativeArray<java.StdTypes.Int8>, newlen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function grow_colormap(colormap : java.NativeArray<java.StdTypes.Int8>, newlen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:internal extern class GifFrame
 {
-	@:overload public function new(id : sun.awt.image.GifImageDecoder, dm : Int, dl : Int, init : Bool, cm : java.awt.image.IndexColorModel, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function new(id : sun.awt.image.GifImageDecoder, dm : Int, dl : Int, init : Bool, cm : java.awt.image.IndexColorModel, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function dispose() : Bool;
+	@:overload @:public public function dispose() : Bool;
 	
 	
 }

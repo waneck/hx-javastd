@@ -29,15 +29,15 @@ package sun.security.jgss.krb5;
 	* Creates an AcceptSecContextToken for the context acceptor to send to
 	* the context initiator.
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, apReq : sun.security.krb5.KrbApReq) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, apReq : sun.security.krb5.KrbApReq) : Void;
 	
 	/**
 	* Creates an AcceptSecContextToken at the context initiator's side
 	* using the bytes received from  the acceptor.
 	*/
-	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, serviceCreds : sun.security.krb5.Credentials, apReq : sun.security.krb5.KrbApReq, is : java.io.InputStream) : Void;
+	@:overload @:public public function new(context : sun.security.jgss.krb5.Krb5Context, serviceCreds : sun.security.krb5.Credentials, apReq : sun.security.krb5.KrbApReq, is : java.io.InputStream) : Void;
 	
-	@:overload @:final public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final override public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

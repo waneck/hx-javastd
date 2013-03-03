@@ -53,7 +53,7 @@ extern interface LinkStyle
 	/**
 	*  The style sheet.
 	*/
-	@:overload public function getSheet() : org.w3c.dom.stylesheets.StyleSheet;
+	@:overload @:public public function getSheet() : org.w3c.dom.stylesheets.StyleSheet;
 	
 	
 }

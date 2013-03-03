@@ -76,7 +76,7 @@ extern class ServiceTag
 	* @throws IllegalArgumentException if any value of the input fields
 	*    does not conform to the service tag XML schema.
 	*/
-	@:overload public static function newInstance(productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:static public static function newInstance(productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Creates a service tag object with a specified <tt>instance_urn</tt>.
@@ -96,7 +96,7 @@ extern class ServiceTag
 	* @throws IllegalArgumentException if any value of the input fields
 	*    does not conform to the service tag XML schema.
 	*/
-	@:overload public static function newInstance(instanceURN : String, productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:static public static function newInstance(instanceURN : String, productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Returns a uniform resource name (URN) in this format:
@@ -105,63 +105,63 @@ extern class ServiceTag
 	* </blockquote>
 	* @return a URN.
 	*/
-	@:overload public static function generateInstanceURN() : String;
+	@:overload @:public @:static public static function generateInstanceURN() : String;
 	
 	/**
 	* Returns the uniform resource name of this service tag instance.
 	*
 	* @return  the <tt>instance_urn</tt> of this service tag.
 	*/
-	@:overload public function getInstanceURN() : String;
+	@:overload @:public public function getInstanceURN() : String;
 	
 	/**
 	* Returns the name of the product.
 	*
 	* @return the product name.
 	*/
-	@:overload public function getProductName() : String;
+	@:overload @:public public function getProductName() : String;
 	
 	/**
 	* Returns the version of the product.
 	*
 	* @return the product version.
 	*/
-	@:overload public function getProductVersion() : String;
+	@:overload @:public public function getProductVersion() : String;
 	
 	/**
 	* Returns the uniform resource name of the product.
 	*
 	* @return the product URN.
 	*/
-	@:overload public function getProductURN() : String;
+	@:overload @:public public function getProductURN() : String;
 	
 	/**
 	* Returns the uniform resource name of the product's parent.
 	*
 	* @return the product's parent URN.
 	*/
-	@:overload public function getProductParentURN() : String;
+	@:overload @:public public function getProductParentURN() : String;
 	
 	/**
 	* Returns the name of the product's parent.
 	*
 	* @return the product's parent name.
 	*/
-	@:overload public function getProductParent() : String;
+	@:overload @:public public function getProductParent() : String;
 	
 	/**
 	* Returns the identifier defined for this product instance.
 	*
 	* @return  the identifier defined for this product instance.
 	*/
-	@:overload public function getProductDefinedInstanceID() : String;
+	@:overload @:public public function getProductDefinedInstanceID() : String;
 	
 	/**
 	* Returns the vendor of the product.
 	*
 	* @return the product vendor.
 	*/
-	@:overload public function getProductVendor() : String;
+	@:overload @:public public function getProductVendor() : String;
 	
 	/**
 	* Returns the platform architecture on which the product
@@ -169,7 +169,7 @@ extern class ServiceTag
 	*
 	* @return the platform architecture on which the product is running on.
 	*/
-	@:overload public function getPlatformArch() : String;
+	@:overload @:public public function getPlatformArch() : String;
 	
 	/**
 	* Returns the timestamp.  This timestamp is set when this service tag
@@ -181,21 +181,21 @@ extern class ServiceTag
 	* is added to or updated in a {@code RegistrationData} object or
 	* the system service tag registry, or {@code null}.
 	*/
-	@:overload public function getTimestamp() : java.util.Date;
+	@:overload @:public public function getTimestamp() : java.util.Date;
 	
 	/**
 	* Returns the container of the product.
 	*
 	* @return the container of the product.
 	*/
-	@:overload public function getContainer() : String;
+	@:overload @:public public function getContainer() : String;
 	
 	/**
 	* Returns the source of this service tag.
 	*
 	* @return  source of this service tag.
 	*/
-	@:overload public function getSource() : String;
+	@:overload @:public public function getSource() : String;
 	
 	/**
 	* Returns the UID. The UID is set when this service tag
@@ -208,7 +208,7 @@ extern class ServiceTag
 	* is added to or updated in the system service tag registry,
 	* or {@code -1}.
 	*/
-	@:overload public function getInstallerUID() : Int;
+	@:overload @:public public function getInstallerUID() : Int;
 	
 	/**
 	* Compares this service tag to the specified object.
@@ -220,13 +220,13 @@ extern class ServiceTag
 	* @return {@code true} if this service tag is the same as
 	* the specified object.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this service tag.
 	* @return the hash code value for this service tag.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the string representation of this service tag.
@@ -234,7 +234,7 @@ extern class ServiceTag
 	*
 	* @return the string representation of this service tag.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the {@link ServiceTag} instance for the running Java
@@ -262,7 +262,7 @@ extern class ServiceTag
 	*         or {@code null} if not supported.
 	* @throws IOException if an error occurs in this operation.
 	*/
-	@:overload public static function getJavaServiceTag(source : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:static public static function getJavaServiceTag(source : String) : com.sun.servicetag.ServiceTag;
 	
 	
 }

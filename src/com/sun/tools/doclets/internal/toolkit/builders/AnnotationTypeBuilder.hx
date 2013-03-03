@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The root element of the annotation type XML is {@value}.
 	*/
-	public static var ROOT(default, null) : String;
+	@:public @:static @:final public static var ROOT(default, null) : String;
 	
 	/**
 	* Construct a new ClassBuilder.
@@ -48,17 +48,17 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param annotationTypeDoc the class being documented.
 	* @param writer            the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, annotationTypeDoc : com.sun.javadoc.AnnotationTypeDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, annotationTypeDoc : com.sun.javadoc.AnnotationTypeDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function build() : Void;
+	@:overload @:public override public function build() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Build the annotation type documentation.
@@ -66,7 +66,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param contentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeDoc(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the annotation information tree documentation.
@@ -74,7 +74,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* If this annotation is deprecated, build the appropriate information.
@@ -82,7 +82,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the signature of the current annotation type.
@@ -90,7 +90,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeSignature(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the annotation type description.
@@ -98,7 +98,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the tag information for the current annotation type.
@@ -106,7 +106,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationInfoTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeTagInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the member summary contents of the page.
@@ -114,7 +114,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the member details contents of the page.
@@ -122,7 +122,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param annotationContentTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, annotationContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the annotation type optional member documentation.
@@ -130,7 +130,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeOptionalMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeOptionalMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the annotation type required member documentation.
@@ -138,7 +138,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param memberDetailsTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeRequiredMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeRequiredMemberDetails(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

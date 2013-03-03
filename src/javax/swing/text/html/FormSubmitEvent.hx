@@ -31,14 +31,14 @@ extern class FormSubmitEvent extends javax.swing.text.html.HTMLFrameHyperlinkEve
 	* @return the form method type, either
 	* <code>Method.GET</code> or <code>Method.POST</code>.
 	*/
-	@:overload public function getMethod() : javax.swing.text.html.FormSubmitEvent.FormSubmitEvent_MethodType;
+	@:overload @:public public function getMethod() : javax.swing.text.html.FormSubmitEvent.FormSubmitEvent_MethodType;
 	
 	/**
 	* Gets the form submission data.
 	*
 	* @return the string representing the form submission data.
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	
 }

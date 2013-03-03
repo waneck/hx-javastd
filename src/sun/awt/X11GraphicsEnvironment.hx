@@ -25,48 +25,48 @@ package sun.awt;
 */
 extern class X11GraphicsEnvironment extends sun.java2d.SunGraphicsEnvironment
 {
-	@:overload public static function isGLXAvailable() : Bool;
+	@:overload @:public @:static public static function isGLXAvailable() : Bool;
 	
-	@:overload public static function isGLXVerbose() : Bool;
+	@:overload @:public @:static public static function isGLXVerbose() : Bool;
 	
-	@:overload public static function isXRenderAvailable() : Bool;
+	@:overload @:public @:static public static function isXRenderAvailable() : Bool;
 	
-	@:overload public static function isXRenderVerbose() : Bool;
+	@:overload @:public @:static public static function isXRenderVerbose() : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:native override private function getNumScreens() : Int;
+	@:overload @:protected @:native override private function getNumScreens() : Int;
 	
-	@:overload override private function makeScreenDevice(screennum : Int) : java.awt.GraphicsDevice;
+	@:overload @:protected override private function makeScreenDevice(screennum : Int) : java.awt.GraphicsDevice;
 	
-	@:overload @:native private function getDefaultScreenNum() : Int;
+	@:overload @:protected @:native private function getDefaultScreenNum() : Int;
 	
 	/**
 	* Returns the default screen graphics device.
 	*/
-	@:overload override public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
+	@:overload @:public override public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
 	
-	@:overload override public function isDisplayLocal() : Bool;
+	@:overload @:public override public function isDisplayLocal() : Bool;
 	
 	/**
 	* Returns face name for default font, or null if
 	* no face names are used for CompositeFontDescriptors
 	* for this platform.
 	*/
-	@:overload public function getDefaultFontFaceName() : String;
+	@:overload @:public public function getDefaultFontFaceName() : String;
 	
 	/**
 	* Override for Xinerama case: call new Solaris API for getting the correct
 	* centering point from the windowing system.
 	*/
-	@:overload override public function getCenterPoint() : java.awt.Point;
+	@:overload @:public override public function getCenterPoint() : java.awt.Point;
 	
 	/**
 	* Override for Xinerama case
 	*/
-	@:overload override public function getMaximumWindowBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getMaximumWindowBounds() : java.awt.Rectangle;
 	
-	@:overload public function runningXinerama() : Bool;
+	@:overload @:public public function runningXinerama() : Bool;
 	
 	/**
 	* Return the bounds for a centered Window on a system running in Xinerama
@@ -96,13 +96,13 @@ extern class X11GraphicsEnvironment extends sun.java2d.SunGraphicsEnvironment
 	* fit neither of the cases above.  The fallback case is to simply return
 	* the combined area for all screens.
 	*/
-	@:overload private function getXineramaWindowBounds() : java.awt.Rectangle;
+	@:overload @:protected private function getXineramaWindowBounds() : java.awt.Rectangle;
 	
 	/**
 	* From the DisplayChangedListener interface; devices do not need
 	* to react to this event.
 	*/
-	@:overload override public function paletteChanged() : Void;
+	@:overload @:public override public function paletteChanged() : Void;
 	
 	
 }

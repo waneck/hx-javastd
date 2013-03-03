@@ -31,47 +31,47 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param x component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getBox(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:protected override private function getBox(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function setAnimationIndex(newValue : Int) : Void;
+	@:overload @:protected override private function setAnimationIndex(newValue : Int) : Void;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -85,7 +85,7 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -96,7 +96,7 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -105,7 +105,7 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* Paints the component's text.
@@ -114,22 +114,22 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param g {@code Graphics} object used for painting
 	* @param title the text to paint
 	*/
-	@:overload private function paintText(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, title : String) : Void;
+	@:overload @:protected private function paintText(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, title : String) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

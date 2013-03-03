@@ -63,7 +63,7 @@ extern interface DocumentTraversal
 	*   NOT_SUPPORTED_ERR: Raised if the specified <code>root</code> is
 	*   <code>null</code>.
 	*/
-	@:overload public function createNodeIterator(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function createNodeIterator(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Create a new <code>TreeWalker</code> over the subtree rooted at the
@@ -93,7 +93,7 @@ extern interface DocumentTraversal
 	*    NOT_SUPPORTED_ERR: Raised if the specified <code>root</code> is
 	*   <code>null</code>.
 	*/
-	@:overload public function createTreeWalker(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.TreeWalker;
+	@:overload @:public public function createTreeWalker(root : org.w3c.dom.Node, whatToShow : Int, filter : org.w3c.dom.traversal.NodeFilter, entityReferenceExpansion : Bool) : org.w3c.dom.traversal.TreeWalker;
 	
 	
 }

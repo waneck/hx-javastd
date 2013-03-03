@@ -40,7 +40,7 @@ extern class XMLStreamBufferMark extends com.sun.xml.internal.stream.buffer.XMLS
 	* The {@link AbstractCreator} or {@link AbstractProcessor} from which the current
 	* position of creation of the XMLStreamBuffer will be taken as the mark.
 	*/
-	@:overload public function new(inscopeNamespaces : java.util.Map<String, String>, src : com.sun.xml.internal.stream.buffer.AbstractCreatorProcessor) : Void;
+	@:overload @:public public function new(inscopeNamespaces : java.util.Map<String, String>, src : com.sun.xml.internal.stream.buffer.AbstractCreatorProcessor) : Void;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.legacy.connection;
 */
 extern class DefaultSocketFactory implements com.sun.corba.se.spi.legacy.connection.ORBSocketFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setORB(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function setORB(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function createServerSocket(type : String, port : Int) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(type : String, port : Int) : java.net.ServerSocket;
 	
-	@:overload public function getEndPointInfo(orb : org.omg.CORBA.ORB, ior : com.sun.corba.se.spi.ior.IOR, socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : com.sun.corba.se.spi.transport.SocketInfo;
+	@:overload @:public public function getEndPointInfo(orb : org.omg.CORBA.ORB, ior : com.sun.corba.se.spi.ior.IOR, socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : com.sun.corba.se.spi.transport.SocketInfo;
 	
-	@:overload public function createSocket(socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : java.net.Socket;
+	@:overload @:public public function createSocket(socketInfo : com.sun.corba.se.spi.transport.SocketInfo) : java.net.Socket;
 	
 	
 }

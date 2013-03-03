@@ -37,7 +37,7 @@ extern class Robot
 	* @see     SecurityManager#checkPermission
 	* @see     AWTPermission
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a Robot for the given screen device. Coordinates passed
@@ -67,14 +67,14 @@ extern class Robot
 	* @see     SecurityManager#checkPermission
 	* @see     AWTPermission
 	*/
-	@:overload public function new(screen : java.awt.GraphicsDevice) : Void;
+	@:overload @:public public function new(screen : java.awt.GraphicsDevice) : Void;
 	
 	/**
 	* Moves mouse pointer to given screen coordinates.
 	* @param x         X position
 	* @param y         Y position
 	*/
-	@:overload @:synchronized public function mouseMove(x : Int, y : Int) : Void;
+	@:overload @:public @:synchronized public function mouseMove(x : Int, y : Int) : Void;
 	
 	/**
 	* Presses one or more mouse buttons.  The mouse buttons should
@@ -128,7 +128,7 @@ extern class Robot
 	* @see java.awt.MouseInfo#getNumberOfButtons()
 	* @see java.awt.event.MouseEvent
 	*/
-	@:overload @:synchronized public function mousePress(buttons : Int) : Void;
+	@:overload @:public @:synchronized public function mousePress(buttons : Int) : Void;
 	
 	/**
 	* Releases one or more mouse buttons.
@@ -181,7 +181,7 @@ extern class Robot
 	* @see java.awt.MouseInfo#getNumberOfButtons()
 	* @see java.awt.event.MouseEvent
 	*/
-	@:overload @:synchronized public function mouseRelease(buttons : Int) : Void;
+	@:overload @:public @:synchronized public function mouseRelease(buttons : Int) : Void;
 	
 	/**
 	* Rotates the scroll wheel on wheel-equipped mice.
@@ -192,7 +192,7 @@ extern class Robot
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function mouseWheel(wheelAmt : Int) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function mouseWheel(wheelAmt : Int) : Void;
 	
 	/**
 	* Presses a given key.  The key should be released using the
@@ -208,7 +208,7 @@ extern class Robot
 	* @see     #keyRelease(int)
 	* @see     java.awt.event.KeyEvent
 	*/
-	@:overload @:synchronized public function keyPress(keycode : Int) : Void;
+	@:overload @:public @:synchronized public function keyPress(keycode : Int) : Void;
 	
 	/**
 	* Releases a given key.
@@ -223,7 +223,7 @@ extern class Robot
 	* @see  #keyPress(int)
 	* @see     java.awt.event.KeyEvent
 	*/
-	@:overload @:synchronized public function keyRelease(keycode : Int) : Void;
+	@:overload @:public @:synchronized public function keyRelease(keycode : Int) : Void;
 	
 	/**
 	* Returns the color of a pixel at the given screen coordinates.
@@ -231,7 +231,7 @@ extern class Robot
 	* @param   y       Y position of pixel
 	* @return  Color of the pixel
 	*/
-	@:overload @:synchronized public function getPixelColor(x : Int, y : Int) : java.awt.Color;
+	@:overload @:public @:synchronized public function getPixelColor(x : Int, y : Int) : java.awt.Color;
 	
 	/**
 	* Creates an image containing pixels read from the screen.  This image does
@@ -243,32 +243,32 @@ extern class Robot
 	* @see     SecurityManager#checkPermission
 	* @see     AWTPermission
 	*/
-	@:overload @:synchronized public function createScreenCapture(screenRect : java.awt.Rectangle) : java.awt.image.BufferedImage;
+	@:overload @:public @:synchronized public function createScreenCapture(screenRect : java.awt.Rectangle) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns whether this Robot automatically invokes <code>waitForIdle</code>
 	* after generating an event.
 	* @return Whether <code>waitForIdle</code> is automatically called
 	*/
-	@:overload @:synchronized public function isAutoWaitForIdle() : Bool;
+	@:overload @:public @:synchronized public function isAutoWaitForIdle() : Bool;
 	
 	/**
 	* Sets whether this Robot automatically invokes <code>waitForIdle</code>
 	* after generating an event.
 	* @param   isOn    Whether <code>waitForIdle</code> is automatically invoked
 	*/
-	@:overload @:synchronized public function setAutoWaitForIdle(isOn : Bool) : Void;
+	@:overload @:public @:synchronized public function setAutoWaitForIdle(isOn : Bool) : Void;
 	
 	/**
 	* Returns the number of milliseconds this Robot sleeps after generating an event.
 	*/
-	@:overload @:synchronized public function getAutoDelay() : Int;
+	@:overload @:public @:synchronized public function getAutoDelay() : Int;
 	
 	/**
 	* Sets the number of milliseconds this Robot sleeps after generating an event.
 	* @throws  IllegalArgumentException If <code>ms</code> is not between 0 and 60,000 milliseconds inclusive
 	*/
-	@:overload @:synchronized public function setAutoDelay(ms : Int) : Void;
+	@:overload @:public @:synchronized public function setAutoDelay(ms : Int) : Void;
 	
 	/**
 	* Sleeps for the specified time.
@@ -278,28 +278,28 @@ extern class Robot
 	* @throws  IllegalArgumentException if <code>ms</code> is not between 0 and 60,000 milliseconds inclusive
 	* @see     java.lang.Thread#sleep
 	*/
-	@:overload @:synchronized public function delay(ms : Int) : Void;
+	@:overload @:public @:synchronized public function delay(ms : Int) : Void;
 	
 	/**
 	* Waits until all events currently on the event queue have been processed.
 	* @throws  IllegalThreadStateException if called on the AWT event dispatching thread
 	*/
-	@:overload @:synchronized public function waitForIdle() : Void;
+	@:overload @:public @:synchronized public function waitForIdle() : Void;
 	
 	/**
 	* Returns a string representation of this Robot.
 	*
 	* @return  the string representation.
 	*/
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
 	
 }
 @:native('java$awt$Robot$RobotDisposer') @:internal extern class Robot_RobotDisposer implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(peer : java.awt.peer.RobotPeer) : Void;
+	@:overload @:public public function new(peer : java.awt.peer.RobotPeer) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

@@ -28,44 +28,44 @@ extern class AMXGlassfish
 	/**
 	* AMX behavior specific to Glassfish V3.
 	*/
-	public static var DEFAULT_JMX_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_JMX_DOMAIN(default, null) : String;
 	
 	/** Default domain support */
-	public static var DEFAULT(default, null) : com.sun.org.glassfish.external.amx.AMXGlassfish;
+	@:public @:static @:final public static var DEFAULT(default, null) : com.sun.org.glassfish.external.amx.AMXGlassfish;
 	
 	/** Anything other than {@link #DEFAULT} is not supported in Glassfish V3 */
-	@:overload public function new(jmxDomain : String) : Void;
+	@:overload @:public public function new(jmxDomain : String) : Void;
 	
 	/** Return a version string, or null if not running in Glassfish */
-	@:overload public static function getGlassfishVersion() : String;
+	@:overload @:public @:static public static function getGlassfishVersion() : String;
 	
 	/** JMX domain used by AMX MBeans.
 	* <p>
 	* All MBeans in this domain must be AMX-compliant, see http://tinyurl.com/nryoqp =
 	https://glassfish.dev.java.net/nonav/v3/admin/planning/V3Changes/V3_AMX_SPI.html
 	*/
-	@:overload public function amxJMXDomain() : String;
+	@:overload @:public public function amxJMXDomain() : String;
 	
 	/** JMX domain used by AMX support MBeans.  Private use only */
-	@:overload public function amxSupportDomain() : String;
+	@:overload @:public public function amxSupportDomain() : String;
 	
 	/** name of the Domain Admin Server (DAS) as found in an ObjectName */
-	@:overload public function dasName() : String;
+	@:overload @:public public function dasName() : String;
 	
 	/** name of the Domain Admin Server (DAS) &lt;config> */
-	@:overload public function dasConfig() : String;
+	@:overload @:public public function dasConfig() : String;
 	
 	/** return the ObjectName of the AMX DomainRoot MBean */
-	@:overload public function domainRoot() : javax.management.ObjectName;
+	@:overload @:public public function domainRoot() : javax.management.ObjectName;
 	
 	/** ObjectName for top-level monitoring MBean (parent of those for each server) */
-	@:overload public function monitoringRoot() : javax.management.ObjectName;
+	@:overload @:public public function monitoringRoot() : javax.management.ObjectName;
 	
 	/** ObjectName for top-level monitoring MBean for specified server */
-	@:overload public function serverMon(serverName : String) : javax.management.ObjectName;
+	@:overload @:public public function serverMon(serverName : String) : javax.management.ObjectName;
 	
 	/** ObjectName for top-level monitoring MBean for the DAS. */
-	@:overload public function serverMonForDAS() : javax.management.ObjectName;
+	@:overload @:public public function serverMonForDAS() : javax.management.ObjectName;
 	
 	/** Make a new AMX ObjectName with unchecked exception.
 	*  name must be null to create a singleton ObjectName.
@@ -75,28 +75,28 @@ extern class AMXGlassfish
 	* @param name The ObjectName name
 	* @return The objectname with pp, type, and (optionally) name.
 	*/
-	@:overload public function newObjectName(pp : String, type : String, name : String) : javax.management.ObjectName;
+	@:overload @:public public function newObjectName(pp : String, type : String, name : String) : javax.management.ObjectName;
 	
 	/** Make a new ObjectName for AMX domain with unchecked exception */
-	@:overload public function newObjectName(s : String) : javax.management.ObjectName;
+	@:overload @:public public function newObjectName(s : String) : javax.management.ObjectName;
 	
 	/**
 	ObjectName for {@link BootAMXMBean}
 	*/
-	@:overload public function getBootAMXMBeanObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getBootAMXMBeanObjectName() : javax.management.ObjectName;
 	
 	/**
 	Invoke the bootAMX() method on {@link BootAMXMBean}.  Upon return,
 	AMX continues to load.
 	A cilent should call {@link invokeWaitAMXReady} prior to use.
 	*/
-	@:overload public function invokeBootAMX(conn : javax.management.MBeanServerConnection) : Void;
+	@:overload @:public public function invokeBootAMX(conn : javax.management.MBeanServerConnection) : Void;
 	
 	/**
 	Listen for the registration of AMX DomainRoot
 	Listening starts automatically.
 	*/
-	@:overload public function listenForDomainRoot<T : com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_Callback>(server : javax.management.MBeanServerConnection, _callback : T) : com.sun.org.glassfish.external.amx.MBeanListener<T>;
+	@:overload @:public public function listenForDomainRoot<T : com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_Callback>(server : javax.management.MBeanServerConnection, _callback : T) : com.sun.org.glassfish.external.amx.MBeanListener<T>;
 	
 	/**
 	Wait until AMX has loaded and is ready for use.
@@ -104,13 +104,13 @@ extern class AMXGlassfish
 	This will <em>not</em> cause AMX to load; it will block forever until AMX is ready. In other words,
 	don't call this method unless it's a convenient thread that can wait forever.
 	*/
-	@:overload public function waitAMXReady(server : javax.management.MBeanServerConnection) : javax.management.ObjectName;
+	@:overload @:public public function waitAMXReady(server : javax.management.MBeanServerConnection) : javax.management.ObjectName;
 	
 	/**
 	Listen for the registration of the {@link BootAMXMBean}.
 	Listening starts automatically.  See {@link AMXBooter#BootAMXCallback}.
 	*/
-	@:overload public function listenForBootAMX<T : com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_Callback>(server : javax.management.MBeanServerConnection, _callback : T) : com.sun.org.glassfish.external.amx.MBeanListener<T>;
+	@:overload @:public public function listenForBootAMX<T : com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_Callback>(server : javax.management.MBeanServerConnection, _callback : T) : com.sun.org.glassfish.external.amx.MBeanListener<T>;
 	
 	/**
 	Ensure that AMX is loaded and ready to use.  This method returns only when all
@@ -119,17 +119,17 @@ extern class AMXGlassfish
 	@param conn connection to the MBeanServer
 	@return the ObjectName of the domain-root MBean
 	*/
-	@:overload public function bootAMX(conn : javax.management.MBeanServerConnection) : javax.management.ObjectName;
+	@:overload @:public public function bootAMX(conn : javax.management.MBeanServerConnection) : javax.management.ObjectName;
 	
-	@:overload public function bootAMX(server : javax.management.MBeanServer) : javax.management.ObjectName;
+	@:overload @:public public function bootAMX(server : javax.management.MBeanServer) : javax.management.ObjectName;
 	
 	
 }
 @:native('com$sun$org$glassfish$external$amx$AMXGlassfish$WaitForDomainRootListenerCallback') @:internal extern class AMXGlassfish_WaitForDomainRootListenerCallback extends com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_CallbackImpl
 {
-	@:overload public function new(conn : javax.management.MBeanServerConnection) : Void;
+	@:overload @:public public function new(conn : javax.management.MBeanServerConnection) : Void;
 	
-	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload @:public override public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }
@@ -142,9 +142,9 @@ boot AMX and then take other dependent actions.
 */
 @:native('com$sun$org$glassfish$external$amx$AMXGlassfish$BootAMXCallback') extern class AMXGlassfish_BootAMXCallback extends com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_CallbackImpl
 {
-	@:overload public function new(conn : javax.management.MBeanServerConnection) : Void;
+	@:overload @:public public function new(conn : javax.management.MBeanServerConnection) : Void;
 	
-	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload @:public override public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }

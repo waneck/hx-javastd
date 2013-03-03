@@ -32,7 +32,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @see #setView
 	* @see #setUI
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new {@code JLayer} object
@@ -42,7 +42,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see #setUI
 	*/
-	@:overload public function new(view : V) : Void;
+	@:overload @:public public function new(view : V) : Void;
 	
 	/**
 	* Creates a new {@code JLayer} object with the specified view component
@@ -52,7 +52,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param ui the {@link javax.swing.plaf.LayerUI} delegate
 	* to be used by this {@code JLayer}
 	*/
-	@:overload public function new(view : V, ui : javax.swing.plaf.LayerUI<V>) : Void;
+	@:overload @:public public function new(view : V, ui : javax.swing.plaf.LayerUI<V>) : Void;
 	
 	/**
 	* Returns the {@code JLayer}'s view component or {@code null}.
@@ -63,7 +63,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see #setView(Component)
 	*/
-	@:overload public function getView() : V;
+	@:overload @:public public function getView() : V;
 	
 	/**
 	* Sets the {@code JLayer}'s view component, which can be {@code null}.
@@ -73,7 +73,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see #getView()
 	*/
-	@:overload public function setView(view : V) : Void;
+	@:overload @:public public function setView(view : V) : Void;
 	
 	/**
 	* Sets the {@link javax.swing.plaf.LayerUI} which will perform painting
@@ -81,14 +81,14 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @param ui the {@link javax.swing.plaf.LayerUI} for this {@code JLayer}
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.LayerUI<V>) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.LayerUI<V>) : Void;
 	
 	/**
 	* Returns the {@link javax.swing.plaf.LayerUI} for this {@code JLayer}.
 	*
 	* @return the {@code LayerUI} for this {@code JLayer}
 	*/
-	@:overload public function getUI() : javax.swing.plaf.LayerUI<V>;
+	@:overload @:public public function getUI() : javax.swing.plaf.LayerUI<V>;
 	
 	/**
 	* Returns the {@code JLayer}'s glassPane component or {@code null}.
@@ -99,7 +99,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see #setGlassPane(JPanel)
 	*/
-	@:overload public function getGlassPane() : javax.swing.JPanel;
+	@:overload @:public public function getGlassPane() : javax.swing.JPanel;
 	
 	/**
 	* Sets the {@code JLayer}'s glassPane component, which can be {@code null}.
@@ -109,7 +109,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see #getGlassPane()
 	*/
-	@:overload public function setGlassPane(glassPane : javax.swing.JPanel) : Void;
+	@:overload @:public public function setGlassPane(glassPane : javax.swing.JPanel) : Void;
 	
 	/**
 	* Called by the constructor methods to create a default {@code glassPane}.
@@ -118,7 +118,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @return the default {@code glassPane}
 	*/
-	@:overload public function createGlassPane() : javax.swing.JPanel;
+	@:overload @:public public function createGlassPane() : javax.swing.JPanel;
 	
 	/**
 	* Sets the layout manager for this container.  This method is
@@ -130,7 +130,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param mgr the specified layout manager
 	* @exception IllegalArgumentException this method is not supported
 	*/
-	@:overload public function setLayout(mgr : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(mgr : java.awt.LayoutManager) : Void;
 	
 	/**
 	* A non-{@code null} border, or non-zero insets, isn't supported, to prevent the geometry
@@ -144,7 +144,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param border the {@code Border} to set
 	* @exception IllegalArgumentException this method is not supported
 	*/
-	@:overload public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload @:public override public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* This method is not supported by {@code JLayer}
@@ -155,17 +155,17 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @see #setView(Component)
 	* @see #setGlassPane(JPanel)
 	*/
-	@:overload private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public override public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function removeAll() : Void;
+	@:overload @:public override public function removeAll() : Void;
 	
 	/**
 	* Always returns {@code true} to cause painting to originate from {@code JLayer},
@@ -174,7 +174,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @return true
 	* @see JComponent#isPaintingOrigin()
 	*/
-	@:overload private function isPaintingOrigin() : Bool;
+	@:overload @:protected override private function isPaintingOrigin() : Bool;
 	
 	/**
 	* Delegates its functionality to the
@@ -186,21 +186,21 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param w  the width of the region to be painted
 	* @param h  the height of the region to be painted
 	*/
-	@:overload public function paintImmediately(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintImmediately(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Delegates all painting to the {@link javax.swing.plaf.LayerUI} object.
 	*
 	* @param g the {@code Graphics} to render to
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* This method is empty, because all painting is done by
 	* {@link #paint(Graphics)} and
 	* {@link javax.swing.plaf.LayerUI#update(Graphics, JComponent)} methods
 	*/
-	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* The {@code JLayer} overrides the default implementation of
@@ -213,12 +213,12 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @return false
 	*/
-	@:overload public function isOptimizedDrawingEnabled() : Bool;
+	@:overload @:public override public function isOptimizedDrawingEnabled() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Enables the events from JLayer and <b>all its descendants</b>
@@ -256,7 +256,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @see LayerUI#eventDispatched(AWTEvent, JLayer)
 	* @see Component#isDisplayable()
 	*/
-	@:overload public function setLayerEventMask(layerEventMask : haxe.Int64) : Void;
+	@:overload @:public public function setLayerEventMask(layerEventMask : haxe.Int64) : Void;
 	
 	/**
 	* Returns the bitmap of event mask to receive by this {@code JLayer}
@@ -269,13 +269,13 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @return the bitmask of event types to receive for this {@code JLayer}
 	*/
-	@:overload public function getLayerEventMask() : haxe.Int64;
+	@:overload @:public public function getLayerEventMask() : haxe.Int64;
 	
 	/**
 	* Delegates its functionality to the {@link javax.swing.plaf.LayerUI#updateUI(JLayer)} method,
 	* if {@code LayerUI} is set.
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the preferred size of the viewport for a view component.
@@ -287,7 +287,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see Scrollable
 	*/
-	@:overload public function getPreferredScrollableViewportSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredScrollableViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Returns a scroll increment, which is required for components
@@ -301,7 +301,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see Scrollable
 	*/
-	@:overload public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableBlockIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Returns {@code false} to indicate that the height of the viewport does not
@@ -315,7 +315,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see Scrollable
 	*/
-	@:overload public function getScrollableTracksViewportHeight() : Bool;
+	@:overload @:public public function getScrollableTracksViewportHeight() : Bool;
 	
 	/**
 	* Returns {@code false} to indicate that the width of the viewport does not
@@ -329,7 +329,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see Scrollable
 	*/
-	@:overload public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns a scroll increment, which is required for components
@@ -349,30 +349,30 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @see Scrollable
 	*/
-	@:overload public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Delegates its functionality to the {@link javax.swing.plaf.LayerUI#doLayout(JLayer)} method,
 	* if {@code LayerUI} is set.
 	*/
-	@:overload public function doLayout() : Void;
+	@:overload @:public override public function doLayout() : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this {@code JLayer}.
 	*
 	* @return the AccessibleContext associated with this {@code JLayer}.
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -381,7 +381,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 */
 @:native('javax$swing$JLayer$LayerEventController') @:internal extern class JLayer_LayerEventController implements java.awt.event.AWTEventListener
 {
-	@:overload public function eventDispatched(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(event : java.awt.AWTEvent) : Void;
 	
 	
 }
@@ -394,7 +394,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	/**
 	* Creates a new {@link DefaultLayerGlassPane}
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* First, implementation of this method iterates through
@@ -408,7 +408,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param y the <i>y</i> coordinate of the point
 	* @return true if this component logically contains x,y
 	*/
-	@:overload public function contains(x : Int, y : Int) : Bool;
+	@:overload @:public override public function contains(x : Int, y : Int) : Bool;
 	
 	
 }

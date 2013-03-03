@@ -28,12 +28,12 @@ extern class SlotTable
 	/**
 	* This method sets the slot data at the given slot id (index).
 	*/
-	@:overload public function set_slot(id : Int, data : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function set_slot(id : Int, data : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* This method get the slot data for the given slot id (index).
 	*/
-	@:overload public function get_slot(id : Int) : org.omg.CORBA.Any;
+	@:overload @:public public function get_slot(id : Int) : org.omg.CORBA.Any;
 	
 	
 }

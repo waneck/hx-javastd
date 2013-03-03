@@ -27,25 +27,25 @@ package com.sun.org.apache.xerces.internal.xni;
 extern interface XMLLocator
 {
 	/** Returns the public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/** Returns the literal system identifier. */
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
 	/** Returns the base system identifier. */
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
 	/** Returns the expanded system identifier. */
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
 	/** Returns the line number, or <code>-1</code> if no line number is available. */
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/** Returns the column number, or <code>-1</code> if no column number is available. */
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/** Returns the character offset, or <code>-1</code> if no character offset is available. */
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
 	/**
 	* Returns the encoding of the current entity.
@@ -55,7 +55,7 @@ extern interface XMLLocator
 	* having been specified on the XMLInputSource, the parser
 	* will make an initial "guess" which could be in error.
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Returns the XML version of the current entity. This will normally be the
@@ -67,7 +67,7 @@ extern interface XMLLocator
 	* final once the XML or text declaration has been read or once it has been
 	* determined that there is no such declaration.
 	*/
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	
 }

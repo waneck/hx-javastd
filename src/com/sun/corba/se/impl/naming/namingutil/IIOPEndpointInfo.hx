@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.naming.namingutil;
 */
 extern class IIOPEndpointInfo
 {
-	@:overload public function setHost(theHost : String) : Void;
+	@:overload @:public public function setHost(theHost : String) : Void;
 	
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function setPort(thePort : Int) : Void;
+	@:overload @:public public function setPort(thePort : Int) : Void;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function setVersion(theMajor : Int, theMinor : Int) : Void;
+	@:overload @:public public function setVersion(theMajor : Int, theMinor : Int) : Void;
 	
-	@:overload public function getMajor() : Int;
+	@:overload @:public public function getMajor() : Int;
 	
-	@:overload public function getMinor() : Int;
+	@:overload @:public public function getMinor() : Int;
 	
 	/** Internal Debug Method.
 	*/
-	@:overload public function dump() : Void;
+	@:overload @:public public function dump() : Void;
 	
 	
 }

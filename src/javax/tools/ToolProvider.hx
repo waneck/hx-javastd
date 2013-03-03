@@ -39,7 +39,7 @@ package javax.tools;
 	* @return the compiler provided with this platform or
 	* {@code null} if no compiler is provided
 	*/
-	@:overload public static function getSystemJavaCompiler() : javax.tools.JavaCompiler;
+	@:overload @:public @:static public static function getSystemJavaCompiler() : javax.tools.JavaCompiler;
 	
 	/**
 	* Returns the class loader for tools provided with this platform.
@@ -50,7 +50,7 @@ package javax.tools;
 	* @return the class loader for tools provided with this platform
 	* or {@code null} if no tools are provided
 	*/
-	@:overload public static function getSystemToolClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getSystemToolClassLoader() : java.lang.ClassLoader;
 	
 	
 }

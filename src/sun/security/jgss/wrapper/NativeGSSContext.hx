@@ -31,99 +31,99 @@ package sun.security.jgss.wrapper;
 */
 @:require(java6) @:internal extern class NativeGSSContext implements sun.security.jgss.spi.GSSContextSpi
 {
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
-	@:overload public function initSecContext(is : java.io.InputStream, mechTokenLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function initSecContext(is : java.io.InputStream, mechTokenLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function acceptSecContext(is : java.io.InputStream, mechTokenLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function acceptSecContext(is : java.io.InputStream, mechTokenLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function isEstablished() : Bool;
+	@:overload @:public public function isEstablished() : Bool;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getWrapSizeLimit(qop : Int, confReq : Bool, maxTokenSize : Int) : Int;
+	@:overload @:public public function getWrapSizeLimit(qop : Int, confReq : Bool, maxTokenSize : Int) : Int;
 	
-	@:overload public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, os : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, len : Int, outBuf : java.NativeArray<java.StdTypes.Int8>, outOffset : Int, msgProp : org.ietf.jgss.MessageProp) : Int;
+	@:overload @:public public function wrap(inBuf : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, len : Int, outBuf : java.NativeArray<java.StdTypes.Int8>, outOffset : Int, msgProp : org.ietf.jgss.MessageProp) : Int;
 	
-	@:overload public function wrap(inStream : java.io.InputStream, outStream : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function wrap(inStream : java.io.InputStream, outStream : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, len : Int, outBuf : java.NativeArray<java.StdTypes.Int8>, outOffset : Int, msgProp : org.ietf.jgss.MessageProp) : Int;
+	@:overload @:public public function unwrap(inBuf : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, len : Int, outBuf : java.NativeArray<java.StdTypes.Int8>, outOffset : Int, msgProp : org.ietf.jgss.MessageProp) : Int;
 	
-	@:overload public function unwrap(inStream : java.io.InputStream, outStream : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function unwrap(inStream : java.io.InputStream, outStream : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function unwrap(inStream : java.io.InputStream, outBuf : java.NativeArray<java.StdTypes.Int8>, outOffset : Int, msgProp : org.ietf.jgss.MessageProp) : Int;
+	@:overload @:public public function unwrap(inStream : java.io.InputStream, outBuf : java.NativeArray<java.StdTypes.Int8>, outOffset : Int, msgProp : org.ietf.jgss.MessageProp) : Int;
 	
-	@:overload public function getMIC(_in : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMIC(_in : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int, msgProp : org.ietf.jgss.MessageProp) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getMIC(inStream : java.io.InputStream, outStream : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function getMIC(inStream : java.io.InputStream, outStream : java.io.OutputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function verifyMIC(inToken : java.NativeArray<java.StdTypes.Int8>, tOffset : Int, tLen : Int, inMsg : java.NativeArray<java.StdTypes.Int8>, mOffset : Int, mLen : Int, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function verifyMIC(inToken : java.NativeArray<java.StdTypes.Int8>, tOffset : Int, tLen : Int, inMsg : java.NativeArray<java.StdTypes.Int8>, mOffset : Int, mLen : Int, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function verifyMIC(tokStream : java.io.InputStream, msgStream : java.io.InputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:public public function verifyMIC(tokStream : java.io.InputStream, msgStream : java.io.InputStream, msgProp : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function requestMutualAuth(state : Bool) : Void;
+	@:overload @:public public function requestMutualAuth(state : Bool) : Void;
 	
-	@:overload public function requestReplayDet(state : Bool) : Void;
+	@:overload @:public public function requestReplayDet(state : Bool) : Void;
 	
-	@:overload public function requestSequenceDet(state : Bool) : Void;
+	@:overload @:public public function requestSequenceDet(state : Bool) : Void;
 	
-	@:overload public function requestCredDeleg(state : Bool) : Void;
+	@:overload @:public public function requestCredDeleg(state : Bool) : Void;
 	
-	@:overload public function requestAnonymity(state : Bool) : Void;
+	@:overload @:public public function requestAnonymity(state : Bool) : Void;
 	
-	@:overload public function requestConf(state : Bool) : Void;
+	@:overload @:public public function requestConf(state : Bool) : Void;
 	
-	@:overload public function requestInteg(state : Bool) : Void;
+	@:overload @:public public function requestInteg(state : Bool) : Void;
 	
-	@:overload public function requestDelegPolicy(state : Bool) : Void;
+	@:overload @:public public function requestDelegPolicy(state : Bool) : Void;
 	
-	@:overload public function requestLifetime(lifetime : Int) : Void;
+	@:overload @:public public function requestLifetime(lifetime : Int) : Void;
 	
-	@:overload public function setChannelBinding(cb : org.ietf.jgss.ChannelBinding) : Void;
+	@:overload @:public public function setChannelBinding(cb : org.ietf.jgss.ChannelBinding) : Void;
 	
-	@:overload public function getCredDelegState() : Bool;
+	@:overload @:public public function getCredDelegState() : Bool;
 	
-	@:overload public function getMutualAuthState() : Bool;
+	@:overload @:public public function getMutualAuthState() : Bool;
 	
-	@:overload public function getReplayDetState() : Bool;
+	@:overload @:public public function getReplayDetState() : Bool;
 	
-	@:overload public function getSequenceDetState() : Bool;
+	@:overload @:public public function getSequenceDetState() : Bool;
 	
-	@:overload public function getAnonymityState() : Bool;
+	@:overload @:public public function getAnonymityState() : Bool;
 	
-	@:overload public function isTransferable() : Bool;
+	@:overload @:public public function isTransferable() : Bool;
 	
-	@:overload public function isProtReady() : Bool;
+	@:overload @:public public function isProtReady() : Bool;
 	
-	@:overload public function getConfState() : Bool;
+	@:overload @:public public function getConfState() : Bool;
 	
-	@:overload public function getIntegState() : Bool;
+	@:overload @:public public function getIntegState() : Bool;
 	
-	@:overload public function getDelegPolicyState() : Bool;
+	@:overload @:public public function getDelegPolicyState() : Bool;
 	
-	@:overload public function getLifetime() : Int;
+	@:overload @:public public function getLifetime() : Int;
 	
-	@:overload public function getSrcName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getSrcName() : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getTargName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getTargName() : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getMech() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMech() : org.ietf.jgss.Oid;
 	
-	@:overload public function getDelegCred() : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public public function getDelegCred() : sun.security.jgss.spi.GSSCredentialSpi;
 	
-	@:overload public function isInitiator() : Bool;
+	@:overload @:public public function isInitiator() : Bool;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
+	@:overload @:public public function inquireSecContext(type : com.sun.security.jgss.InquireType) : Dynamic;
 	
 	
 }

@@ -26,31 +26,31 @@ package sun.net.www.protocol.https;
 @:internal extern class HttpsClient extends sun.net.www.http.HttpClient implements javax.net.ssl.HandshakeCompletedListener
 {
 	/** Returns the default HTTPS port (443) */
-	@:overload override private function getDefaultPort() : Int;
+	@:overload @:protected override private function getDefaultPort() : Int;
 	
 	/**
 	* The following method, createSocket, is defined in NetworkClient
 	* and overridden here so that the socket facroty is used to create
 	* new sockets.
 	*/
-	@:overload override private function createSocket() : java.net.Socket;
+	@:overload @:protected override private function createSocket() : java.net.Socket;
 	
-	@:overload override public function needsTunneling() : Bool;
+	@:overload @:public override public function needsTunneling() : Bool;
 	
-	@:overload override public function afterConnect() : Void;
+	@:overload @:public override public function afterConnect() : Void;
 	
-	@:overload override private function putInKeepAliveCache() : Void;
+	@:overload @:protected override private function putInKeepAliveCache() : Void;
 	
 	/*
 	* Close an idle connection to this URL (if it exists in the cache).
 	*/
-	@:overload override public function closeIdleConnection() : Void;
+	@:overload @:public override public function closeIdleConnection() : Void;
 	
 	/**
 	* Returns the certificate chain the client sent to the
 	* server, or null if the client did not authenticate.
 	*/
-	@:overload public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* This method implements the SSL HandshakeCompleted callback,
@@ -60,19 +60,19 @@ package sun.net.www.protocol.https;
 	* a given connection may change.  When sessions change, so may
 	* peer identities and cipher suites.
 	*/
-	@:overload public function handshakeCompleted(event : javax.net.ssl.HandshakeCompletedEvent) : Void;
+	@:overload @:public public function handshakeCompleted(event : javax.net.ssl.HandshakeCompletedEvent) : Void;
 	
 	/**
 	* @return the proxy host being used for this client, or null
 	*          if we're not going through a proxy
 	*/
-	@:overload override public function getProxyHostUsed() : String;
+	@:overload @:public override public function getProxyHostUsed() : String;
 	
 	/**
 	* @return the proxy port being used for this client.  Meaningless
 	*          if getProxyHostUsed() gives null.
 	*/
-	@:overload override public function getProxyPortUsed() : Int;
+	@:overload @:public override public function getProxyPortUsed() : Int;
 	
 	
 }

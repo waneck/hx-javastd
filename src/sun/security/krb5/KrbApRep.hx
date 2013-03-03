@@ -35,31 +35,31 @@ extern class KrbApRep
 	* @throws KrbException
 	* @throws IOException
 	*/
-	@:overload public function new(incomingReq : sun.security.krb5.KrbApReq, useSeqNumber : Bool, useSubKey : Bool) : Void;
+	@:overload @:public public function new(incomingReq : sun.security.krb5.KrbApReq, useSeqNumber : Bool, useSubKey : Bool) : Void;
 	
 	/**
 	* Constructs a KRB-AP-REQ from the bytes received from a service.
 	* @throws KrbException
 	* @throws IOException
 	*/
-	@:overload public function new(message : java.NativeArray<java.StdTypes.Int8>, tgtCreds : sun.security.krb5.Credentials, outgoingReq : sun.security.krb5.KrbApReq) : Void;
+	@:overload @:public public function new(message : java.NativeArray<java.StdTypes.Int8>, tgtCreds : sun.security.krb5.Credentials, outgoingReq : sun.security.krb5.KrbApReq) : Void;
 	
 	/**
 	* Returns the optional subkey stored in
 	* this message. Returns null if none is stored.
 	*/
-	@:overload public function getSubKey() : sun.security.krb5.EncryptionKey;
+	@:overload @:public public function getSubKey() : sun.security.krb5.EncryptionKey;
 	
 	/**
 	* Returns the optional sequence number stored in the
 	* this message. Returns null if none is stored.
 	*/
-	@:overload public function getSeqNumber() : Null<Int>;
+	@:overload @:public public function getSeqNumber() : Null<Int>;
 	
 	/**
 	* Returns the ASN.1 encoding that should be sent to the peer.
 	*/
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

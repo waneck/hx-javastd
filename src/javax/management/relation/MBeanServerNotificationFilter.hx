@@ -29,13 +29,13 @@ extern class MBeanServerNotificationFilter extends javax.management.Notification
 	* Creates a filter selecting all MBeanServerNotification notifications for
 	* all ObjectNames.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Disables any MBeanServerNotification (all ObjectNames are
 	* deselected).
 	*/
-	@:overload @:synchronized public function disableAllObjectNames() : Void;
+	@:overload @:public @:synchronized public function disableAllObjectNames() : Void;
 	
 	/**
 	* Disables MBeanServerNotifications concerning given ObjectName.
@@ -44,12 +44,12 @@ extern class MBeanServerNotificationFilter extends javax.management.Notification
 	*
 	* @exception IllegalArgumentException  if the given ObjectName is null
 	*/
-	@:overload @:synchronized public function disableObjectName(objectName : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function disableObjectName(objectName : javax.management.ObjectName) : Void;
 	
 	/**
 	* Enables all MBeanServerNotifications (all ObjectNames are selected).
 	*/
-	@:overload @:synchronized public function enableAllObjectNames() : Void;
+	@:overload @:public @:synchronized public function enableAllObjectNames() : Void;
 	
 	/**
 	* Enables MBeanServerNotifications concerning given ObjectName.
@@ -58,7 +58,7 @@ extern class MBeanServerNotificationFilter extends javax.management.Notification
 	*
 	* @exception IllegalArgumentException  if the given ObjectName is null
 	*/
-	@:overload @:synchronized public function enableObjectName(objectName : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function enableObjectName(objectName : javax.management.ObjectName) : Void;
 	
 	/**
 	* Gets all the ObjectNames enabled.
@@ -69,7 +69,7 @@ extern class MBeanServerNotificationFilter extends javax.management.Notification
 	* <P>- empty means all ObjectNames are deselected, i.e. no ObjectName
 	* selected.
 	*/
-	@:overload @:synchronized public function getEnabledObjectNames() : java.util.Vector<javax.management.ObjectName>;
+	@:overload @:public @:synchronized public function getEnabledObjectNames() : java.util.Vector<javax.management.ObjectName>;
 	
 	/**
 	* Gets all the ObjectNames disabled.
@@ -80,7 +80,7 @@ extern class MBeanServerNotificationFilter extends javax.management.Notification
 	* <P>- empty means all ObjectNames are selected, i.e. no ObjectName
 	* deselected.
 	*/
-	@:overload @:synchronized public function getDisabledObjectNames() : java.util.Vector<javax.management.ObjectName>;
+	@:overload @:public @:synchronized public function getDisabledObjectNames() : java.util.Vector<javax.management.ObjectName>;
 	
 	/**
 	* Invoked before sending the specified notification to the listener.
@@ -99,7 +99,7 @@ extern class MBeanServerNotificationFilter extends javax.management.Notification
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload @:synchronized override public function isNotificationEnabled(notif : javax.management.Notification) : Bool;
+	@:overload @:public @:synchronized override public function isNotificationEnabled(notif : javax.management.Notification) : Bool;
 	
 	
 }

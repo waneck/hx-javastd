@@ -26,13 +26,13 @@ package sun.security.ssl;
 @:internal extern class SessionId
 {
 	/** Returns the ID as a string */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Returns a value which is the same for session IDs which are equal */
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/** Returns true if the parameter is the same session ID */
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

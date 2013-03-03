@@ -30,7 +30,7 @@ package com.sun.tools.internal.xjc.generator.bean;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(outline : com.sun.tools.internal.xjc.generator.bean.BeanGenerator, model : com.sun.tools.internal.xjc.model.Model, targetPackage : com.sun.codemodel.internal.JPackage) : Void;
+	@:overload @:public public function new(outline : com.sun.tools.internal.xjc.generator.bean.BeanGenerator, model : com.sun.tools.internal.xjc.model.Model, targetPackage : com.sun.codemodel.internal.JPackage) : Void;
 	
 	
 }

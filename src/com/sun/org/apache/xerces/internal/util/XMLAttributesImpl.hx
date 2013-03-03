@@ -62,35 +62,35 @@ package com.sun.org.apache.xerces.internal.util;
 extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni.XMLAttributes implements com.sun.xml.internal.stream.XMLBufferListener
 {
 	/** Default table size. */
-	private static var TABLE_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var TABLE_SIZE(default, null) : Int;
 	
 	/**
 	* Threshold at which an instance is treated
 	* as a large attribute list.
 	*/
-	private static var SIZE_LIMIT(default, null) : Int;
+	@:protected @:static @:final private static var SIZE_LIMIT(default, null) : Int;
 	
 	/** Namespaces. */
-	private var fNamespaces : Bool;
+	@:protected private var fNamespaces : Bool;
 	
 	/**
 	* Usage count for the attribute table view.
 	* Incremented each time all attributes are removed
 	* when the attribute table view is in use.
 	*/
-	private var fLargeCount : Int;
+	@:protected private var fLargeCount : Int;
 	
 	/** Attribute count. */
-	private var fLength : Int;
+	@:protected private var fLength : Int;
 	
 	/** Attribute information. */
-	private var fAttributes : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute>;
+	@:protected private var fAttributes : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute>;
 	
 	/**
 	* Hashtable of attribute information.
 	* Provides an alternate view of the attribute specification.
 	*/
-	private var fAttributeTableView : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute>;
+	@:protected private var fAttributeTableView : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute>;
 	
 	/**
 	* Tracks whether each chain in the hash table is stale
@@ -98,25 +98,25 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* A chain is stale if its state is not the same as the number
 	* of times the attribute table view has been used.
 	*/
-	private var fAttributeTableViewChainState : java.NativeArray<Int>;
+	@:protected private var fAttributeTableViewChainState : java.NativeArray<Int>;
 	
 	/**
 	* Actual number of buckets in the table view.
 	*/
-	private var fTableViewBuckets : Int;
+	@:protected private var fTableViewBuckets : Int;
 	
 	/**
 	* Indicates whether the table view contains consistent data.
 	*/
-	private var fIsTableViewConsistent : Bool;
+	@:protected private var fIsTableViewConsistent : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @param tableSize initial size of table view
 	*/
-	@:overload public function new(tableSize : Int) : Void;
+	@:overload @:public public function new(tableSize : Int) : Void;
 	
 	/**
 	* Sets whether namespace processing is being performed. This state
@@ -126,7 +126,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*
 	* @see #getLocalName
 	*/
-	@:overload public function setNamespaces(namespaces : Bool) : Void;
+	@:overload @:public public function setNamespaces(namespaces : Bool) : Void;
 	
 	/**
 	* Adds an attribute. The attribute's non-normalized value of the
@@ -156,15 +156,15 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @see #setNonNormalizedValue
 	* @see #setSpecified
 	*/
-	@:overload public function addAttribute(name : com.sun.org.apache.xerces.internal.xni.QName, type : String, value : String) : Int;
+	@:overload @:public public function addAttribute(name : com.sun.org.apache.xerces.internal.xni.QName, type : String, value : String) : Int;
 	
-	@:overload public function addAttribute(name : com.sun.org.apache.xerces.internal.xni.QName, type : String, value : String, valueCache : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload @:public public function addAttribute(name : com.sun.org.apache.xerces.internal.xni.QName, type : String, value : String, valueCache : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Removes all of the attributes. This method will also remove all
 	* entities associated to the attributes.
 	*/
-	@:overload public function removeAllAttributes() : Void;
+	@:overload @:public public function removeAllAttributes() : Void;
 	
 	/**
 	* Removes the attribute at the specified index.
@@ -174,7 +174,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*
 	* @param attrIndex The attribute index.
 	*/
-	@:overload public function removeAttributeAt(attrIndex : Int) : Void;
+	@:overload @:public public function removeAttributeAt(attrIndex : Int) : Void;
 	
 	/**
 	* Sets the name of the attribute at the specified index.
@@ -182,7 +182,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param attrIndex The attribute index.
 	* @param attrName  The new attribute name.
 	*/
-	@:overload public function setName(attrIndex : Int, attrName : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function setName(attrIndex : Int, attrName : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Sets the fields in the given QName structure with the values
@@ -191,7 +191,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param attrIndex The attribute index.
 	* @param attrName  The attribute name structure to fill in.
 	*/
-	@:overload public function getName(attrIndex : Int, attrName : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function getName(attrIndex : Int, attrName : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Sets the type of the attribute at the specified index.
@@ -206,7 +206,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*                  parenthesis and suffixed by a close parenthesis.
 	*                  For example: "(true|false)".
 	*/
-	@:overload public function setType(attrIndex : Int, attrType : String) : Void;
+	@:overload @:public public function setType(attrIndex : Int, attrType : String) : Void;
 	
 	/**
 	* Sets the value of the attribute at the specified index. This
@@ -217,9 +217,9 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*
 	* @see #setNonNormalizedValue
 	*/
-	@:overload public function setValue(attrIndex : Int, attrValue : String) : Void;
+	@:overload @:public public function setValue(attrIndex : Int, attrValue : String) : Void;
 	
-	@:overload public function setValue(attrIndex : Int, attrValue : String, value : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:public public function setValue(attrIndex : Int, attrValue : String, value : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* Sets the non-normalized value of the attribute at the specified
@@ -228,7 +228,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param attrIndex The attribute index.
 	* @param attrValue The new non-normalized attribute value.
 	*/
-	@:overload public function setNonNormalizedValue(attrIndex : Int, attrValue : String) : Void;
+	@:overload @:public public function setNonNormalizedValue(attrIndex : Int, attrValue : String) : Void;
 	
 	/**
 	* Returns the non-normalized value of the attribute at the specified
@@ -237,7 +237,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*
 	* @param attrIndex The attribute index.
 	*/
-	@:overload public function getNonNormalizedValue(attrIndex : Int) : String;
+	@:overload @:public public function getNonNormalizedValue(attrIndex : Int) : String;
 	
 	/**
 	* Sets whether an attribute is specified in the instance document
@@ -247,14 +247,14 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param specified True if the attribute is specified in the instance
 	*                  document.
 	*/
-	@:overload public function setSpecified(attrIndex : Int, specified : Bool) : Void;
+	@:overload @:public public function setSpecified(attrIndex : Int, specified : Bool) : Void;
 	
 	/**
 	* Returns true if the attribute is specified in the instance document.
 	*
 	* @param attrIndex The attribute index.
 	*/
-	@:overload public function isSpecified(attrIndex : Int) : Bool;
+	@:overload @:public public function isSpecified(attrIndex : Int) : Bool;
 	
 	/**
 	* Return the number of attributes in the list.
@@ -264,7 +264,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*
 	* @return The number of attributes in the list.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Look up an attribute's type by index.
@@ -286,7 +286,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         index is out of range.
 	* @see #getLength
 	*/
-	@:overload public function getType(index : Int) : String;
+	@:overload @:public public function getType(index : Int) : String;
 	
 	/**
 	* Look up an attribute's type by XML 1.0 qualified name.
@@ -299,7 +299,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         attribute is not in the list or if qualified names
 	*         are not available.
 	*/
-	@:overload public function getType(qname : String) : String;
+	@:overload @:public public function getType(qname : String) : String;
 	
 	/**
 	* Look up an attribute's value by index.
@@ -314,7 +314,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         index is out of range.
 	* @see #getLength
 	*/
-	@:overload public function getValue(index : Int) : String;
+	@:overload @:public public function getValue(index : Int) : String;
 	
 	/**
 	* Look up an attribute's value by XML 1.0 qualified name.
@@ -327,7 +327,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         attribute is not in the list or if qualified names
 	*         are not available.
 	*/
-	@:overload public function getValue(qname : String) : String;
+	@:overload @:public public function getValue(qname : String) : String;
 	
 	/**
 	* Return the name of an attribute in this list (by position).
@@ -345,7 +345,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         if the index is out of range.
 	* @see #getLength
 	*/
-	@:overload public function getName(index : Int) : String;
+	@:overload @:public public function getName(index : Int) : String;
 	
 	/**
 	* Look up the index of an attribute by XML 1.0 qualified name.
@@ -354,7 +354,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndex(qName : String) : Int;
+	@:overload @:public public function getIndex(qName : String) : Int;
 	
 	/**
 	* Look up the index of an attribute by Namespace name.
@@ -365,7 +365,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndex(uri : String, localPart : String) : Int;
+	@:overload @:public public function getIndex(uri : String, localPart : String) : Int;
 	
 	/**
 	* Look up the index of an attribute by local name only,
@@ -375,7 +375,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndexByLocalName(localPart : String) : Int;
+	@:overload @:public public function getIndexByLocalName(localPart : String) : Int;
 	
 	/**
 	* Look up an attribute's local name by index.
@@ -386,7 +386,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         if the index is out of range.
 	* @see #getLength
 	*/
-	@:overload public function getLocalName(index : Int) : String;
+	@:overload @:public public function getLocalName(index : Int) : String;
 	
 	/**
 	* Look up an attribute's XML 1.0 qualified name by index.
@@ -397,9 +397,9 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         is out of range.
 	* @see #getLength
 	*/
-	@:overload public function getQName(index : Int) : String;
+	@:overload @:public public function getQName(index : Int) : String;
 	
-	@:overload public function getQualifiedName(index : Int) : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function getQualifiedName(index : Int) : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* Look up an attribute's type by Namespace name.
@@ -414,7 +414,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	*         attribute is not in the list or if Namespace
 	*         processing is not being performed.
 	*/
-	@:overload public function getType(uri : String, localName : String) : String;
+	@:overload @:public public function getType(uri : String, localName : String) : String;
 	
 	/**
 	* Look up the index of an attribute by XML 1.0 qualified name.
@@ -428,7 +428,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndexFast(qName : String) : Int;
+	@:overload @:public public function getIndexFast(qName : String) : Int;
 	
 	/**
 	* Adds an attribute. The attribute's non-normalized value of the
@@ -457,7 +457,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @see #setSpecified
 	* @see #checkDuplicatesNS
 	*/
-	@:overload public function addAttributeNS(name : com.sun.org.apache.xerces.internal.xni.QName, type : String, value : String) : Void;
+	@:overload @:public public function addAttributeNS(name : com.sun.org.apache.xerces.internal.xni.QName, type : String, value : String) : Void;
 	
 	/**
 	* Checks for duplicate expanded names (local part and namespace name
@@ -471,7 +471,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return the name of a duplicate attribute found in the search,
 	* otherwise null.
 	*/
-	@:overload public function checkDuplicatesNS() : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function checkDuplicatesNS() : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* Look up the index of an attribute by Namespace name.
@@ -487,7 +487,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndexFast(uri : String, localPart : String) : Int;
+	@:overload @:public public function getIndexFast(uri : String, localPart : String) : Int;
 	
 	/**
 	* Returns the position in the table view
@@ -497,7 +497,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return the position in the table view where the given attribute
 	* would be hashed
 	*/
-	@:overload private function getTableViewBucket(qname : String) : Int;
+	@:overload @:protected private function getTableViewBucket(qname : String) : Int;
 	
 	/**
 	* Returns the position in the table view
@@ -508,31 +508,31 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return the position in the table view where the given attribute
 	* would be hashed
 	*/
-	@:overload private function getTableViewBucket(localpart : String, uri : String) : Int;
+	@:overload @:protected private function getTableViewBucket(localpart : String, uri : String) : Int;
 	
 	/**
 	* Purges all elements from the table view.
 	*/
-	@:overload private function cleanTableView() : Void;
+	@:overload @:protected private function cleanTableView() : Void;
 	
 	/**
 	* Prepares the table view of the attributes list for use.
 	*/
-	@:overload private function prepareTableView() : Void;
+	@:overload @:protected private function prepareTableView() : Void;
 	
 	/**
 	* Prepares the table view of the attributes list for use,
 	* and populates it with the attributes which have been
 	* previously read.
 	*/
-	@:overload private function prepareAndPopulateTableView() : Void;
+	@:overload @:protected private function prepareAndPopulateTableView() : Void;
 	
 	/**
 	* Returns the prefix of the attribute at the specified index.
 	*
 	* @param index The index of the attribute.
 	*/
-	@:overload public function getPrefix(index : Int) : String;
+	@:overload @:public public function getPrefix(index : Int) : String;
 	
 	/**
 	* Look up an attribute's Namespace URI by index.
@@ -541,7 +541,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The Namespace URI
 	* @see #getLength
 	*/
-	@:overload public function getURI(index : Int) : String;
+	@:overload @:public public function getURI(index : Int) : String;
 	
 	/**
 	* Look up an attribute's value by Namespace name and
@@ -557,7 +557,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return The attribute value as a string, or null if the
 	*         attribute is not in the list.
 	*/
-	@:overload public function getValue(uri : String, localName : String) : String;
+	@:overload @:public public function getValue(uri : String, localName : String) : String;
 	
 	/**
 	* Look up an augmentations by Namespace name.
@@ -566,7 +566,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param localName The local name of the attribute.
 	* @return Augmentations
 	*/
-	@:overload public function getAugmentations(uri : String, localName : String) : com.sun.org.apache.xerces.internal.xni.Augmentations;
+	@:overload @:public public function getAugmentations(uri : String, localName : String) : com.sun.org.apache.xerces.internal.xni.Augmentations;
 	
 	/**
 	* Look up an augmentation by XML 1.0 qualified name.
@@ -577,7 +577,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return Augmentations
 	*
 	*/
-	@:overload public function getAugmentations(qName : String) : com.sun.org.apache.xerces.internal.xni.Augmentations;
+	@:overload @:public public function getAugmentations(qName : String) : com.sun.org.apache.xerces.internal.xni.Augmentations;
 	
 	/**
 	* Look up an augmentations by attributes index.
@@ -585,7 +585,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param attributeIndex The attribute index.
 	* @return Augmentations
 	*/
-	@:overload public function getAugmentations(attributeIndex : Int) : com.sun.org.apache.xerces.internal.xni.Augmentations;
+	@:overload @:public public function getAugmentations(attributeIndex : Int) : com.sun.org.apache.xerces.internal.xni.Augmentations;
 	
 	/**
 	* Sets the augmentations of the attribute at the specified index.
@@ -593,7 +593,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param attrIndex The attribute index.
 	* @param augs      The augmentations.
 	*/
-	@:overload public function setAugmentations(attrIndex : Int, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function setAugmentations(attrIndex : Int, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Sets the uri of the attribute at the specified index.
@@ -601,23 +601,23 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	* @param attrIndex The attribute index.
 	* @param uri       Namespace uri
 	*/
-	@:overload public function setURI(attrIndex : Int, uri : String) : Void;
+	@:overload @:public public function setURI(attrIndex : Int, uri : String) : Void;
 	
-	@:overload public function setSchemaId(attrIndex : Int, schemaId : Bool) : Void;
+	@:overload @:public public function setSchemaId(attrIndex : Int, schemaId : Bool) : Void;
 	
-	@:overload public function getSchemaId(index : Int) : Bool;
+	@:overload @:public public function getSchemaId(index : Int) : Bool;
 	
-	@:overload public function getSchemaId(qname : String) : Bool;
+	@:overload @:public public function getSchemaId(qname : String) : Bool;
 	
-	@:overload public function getSchemaId(uri : String, localName : String) : Bool;
+	@:overload @:public public function getSchemaId(uri : String, localName : String) : Bool;
 	
 	/**
 	* This method will be invoked by XMLEntityReader before ScannedEntities buffer
 	* is reloaded.
 	*/
-	@:overload public function refresh() : Void;
+	@:overload @:public public function refresh() : Void;
 	
-	@:overload public function refresh(pos : Int) : Void;
+	@:overload @:public public function refresh(pos : Int) : Void;
 	
 	
 }
@@ -629,35 +629,35 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 @:native('com$sun$org$apache$xerces$internal$util$XMLAttributesImpl$Attribute') @:internal extern class XMLAttributesImpl_Attribute
 {
 	/** Name. */
-	public var name : com.sun.org.apache.xerces.internal.xni.QName;
+	@:public public var name : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/** Type. */
-	public var type : String;
+	@:public public var type : String;
 	
 	/** Value. */
-	public var value : String;
+	@:public public var value : String;
 	
 	/** This will point to the ScannedEntities buffer.*/
-	public var xmlValue : com.sun.org.apache.xerces.internal.xni.XMLString;
+	@:public public var xmlValue : com.sun.org.apache.xerces.internal.xni.XMLString;
 	
 	/** Non-normalized value. */
-	public var nonNormalizedValue : String;
+	@:public public var nonNormalizedValue : String;
 	
 	/** Specified. */
-	public var specified : Bool;
+	@:public public var specified : Bool;
 	
 	/** Schema ID type. */
-	public var schemaId : Bool;
+	@:public public var schemaId : Bool;
 	
 	/**
 	* Augmentations information for this attribute.
 	* XMLAttributes has no knowledge if any augmentations
 	* were attached to Augmentations.
 	*/
-	public var augs : com.sun.org.apache.xerces.internal.xni.Augmentations;
+	@:public public var augs : com.sun.org.apache.xerces.internal.xni.Augmentations;
 	
 	/** Pointer to the next attribute in the chain. **/
-	public var next : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute;
+	@:public public var next : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute;
 	
 	
 }

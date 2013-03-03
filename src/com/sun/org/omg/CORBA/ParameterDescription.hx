@@ -32,17 +32,17 @@ package com.sun.org.omg.CORBA;
 //// This file has been _CHANGED_
 extern class ParameterDescription implements org.omg.CORBA.portable.IDLEntity
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var type : org.omg.CORBA.TypeCode;
+	@:public public var type : org.omg.CORBA.TypeCode;
 	
-	public var type_def : org.omg.CORBA.IDLType;
+	@:public public var type_def : org.omg.CORBA.IDLType;
 	
-	public var mode : com.sun.org.omg.CORBA.ParameterMode;
+	@:public public var mode : com.sun.org.omg.CORBA.ParameterMode;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_name : String, _type : org.omg.CORBA.TypeCode, _type_def : org.omg.CORBA.IDLType, _mode : com.sun.org.omg.CORBA.ParameterMode) : Void;
+	@:overload @:public public function new(_name : String, _type : org.omg.CORBA.TypeCode, _type_def : org.omg.CORBA.IDLType, _mode : com.sun.org.omg.CORBA.ParameterMode) : Void;
 	
 	
 }

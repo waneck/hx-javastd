@@ -26,13 +26,13 @@ package com.sun.xml.internal.ws.client.sei;
 ////import com.sun.tools.internal.ws.wsdl.document.soap.SOAPBinding;
 @:internal extern class AsyncMethodHandler extends com.sun.xml.internal.ws.client.sei.SEIMethodHandler
 {
-	@:overload @:final private function doInvoke(proxy : Dynamic, args : java.NativeArray<Dynamic>, handler : javax.xml.ws.AsyncHandler<Dynamic>) : javax.xml.ws.Response<Dynamic>;
+	@:overload @:protected @:final private function doInvoke(proxy : Dynamic, args : java.NativeArray<Dynamic>, handler : javax.xml.ws.AsyncHandler<Dynamic>) : javax.xml.ws.Response<Dynamic>;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$client$sei$AsyncMethodHandler$SEIAsyncInvoker') @:internal extern class AsyncMethodHandler_SEIAsyncInvoker extends com.sun.xml.internal.ws.client.AsyncInvoker
 {
-	@:overload override public function do_run() : Void;
+	@:overload @:public override public function do_run() : Void;
 	
 	
 }

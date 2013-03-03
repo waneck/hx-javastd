@@ -35,81 +35,81 @@ extern class MsgKey
 	/** An internal error with the messages,
 	* this is the message to use if the message key can't be found
 	*/
-	public static var BAD_MSGKEY(default, null) : String;
+	@:public @:static @:final public static var BAD_MSGKEY(default, null) : String;
 	
 	/**
 	* An internal error with the messages,
 	* this is the message to use if the message format operation failed.
 	*/
-	public static var BAD_MSGFORMAT(default, null) : String;
+	@:public @:static @:final public static var BAD_MSGFORMAT(default, null) : String;
 	
-	public static var ER_RESOURCE_COULD_NOT_FIND(default, null) : String;
+	@:public @:static @:final public static var ER_RESOURCE_COULD_NOT_FIND(default, null) : String;
 	
-	public static var ER_RESOURCE_COULD_NOT_LOAD(default, null) : String;
+	@:public @:static @:final public static var ER_RESOURCE_COULD_NOT_LOAD(default, null) : String;
 	
-	public static var ER_BUFFER_SIZE_LESSTHAN_ZERO(default, null) : String;
+	@:public @:static @:final public static var ER_BUFFER_SIZE_LESSTHAN_ZERO(default, null) : String;
 	
-	public static var ER_INVALID_UTF16_SURROGATE(default, null) : String;
+	@:public @:static @:final public static var ER_INVALID_UTF16_SURROGATE(default, null) : String;
 	
-	public static var ER_OIERROR(default, null) : String;
+	@:public @:static @:final public static var ER_OIERROR(default, null) : String;
 	
-	public static var ER_NAMESPACE_PREFIX(default, null) : String;
+	@:public @:static @:final public static var ER_NAMESPACE_PREFIX(default, null) : String;
 	
-	public static var ER_STRAY_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var ER_STRAY_ATTRIBUTE(default, null) : String;
 	
-	public static var ER_STRAY_NAMESPACE(default, null) : String;
+	@:public @:static @:final public static var ER_STRAY_NAMESPACE(default, null) : String;
 	
-	public static var ER_COULD_NOT_LOAD_RESOURCE(default, null) : String;
+	@:public @:static @:final public static var ER_COULD_NOT_LOAD_RESOURCE(default, null) : String;
 	
-	public static var ER_COULD_NOT_LOAD_METHOD_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ER_COULD_NOT_LOAD_METHOD_PROPERTY(default, null) : String;
 	
-	public static var ER_SERIALIZER_NOT_CONTENTHANDLER(default, null) : String;
+	@:public @:static @:final public static var ER_SERIALIZER_NOT_CONTENTHANDLER(default, null) : String;
 	
-	public static var ER_ILLEGAL_ATTRIBUTE_POSITION(default, null) : String;
+	@:public @:static @:final public static var ER_ILLEGAL_ATTRIBUTE_POSITION(default, null) : String;
 	
-	public static var ER_ILLEGAL_CHARACTER(default, null) : String;
+	@:public @:static @:final public static var ER_ILLEGAL_CHARACTER(default, null) : String;
 	
-	public static var ER_INVALID_PORT(default, null) : String;
+	@:public @:static @:final public static var ER_INVALID_PORT(default, null) : String;
 	
-	public static var ER_PORT_WHEN_HOST_NULL(default, null) : String;
+	@:public @:static @:final public static var ER_PORT_WHEN_HOST_NULL(default, null) : String;
 	
-	public static var ER_HOST_ADDRESS_NOT_WELLFORMED(default, null) : String;
+	@:public @:static @:final public static var ER_HOST_ADDRESS_NOT_WELLFORMED(default, null) : String;
 	
-	public static var ER_SCHEME_NOT_CONFORMANT(default, null) : String;
+	@:public @:static @:final public static var ER_SCHEME_NOT_CONFORMANT(default, null) : String;
 	
-	public static var ER_SCHEME_FROM_NULL_STRING(default, null) : String;
+	@:public @:static @:final public static var ER_SCHEME_FROM_NULL_STRING(default, null) : String;
 	
-	public static var ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE(default, null) : String;
+	@:public @:static @:final public static var ER_PATH_CONTAINS_INVALID_ESCAPE_SEQUENCE(default, null) : String;
 	
-	public static var ER_PATH_INVALID_CHAR(default, null) : String;
+	@:public @:static @:final public static var ER_PATH_INVALID_CHAR(default, null) : String;
 	
-	public static var ER_NO_SCHEME_INURI(default, null) : String;
+	@:public @:static @:final public static var ER_NO_SCHEME_INURI(default, null) : String;
 	
-	public static var ER_FRAG_INVALID_CHAR(default, null) : String;
+	@:public @:static @:final public static var ER_FRAG_INVALID_CHAR(default, null) : String;
 	
-	public static var ER_FRAG_WHEN_PATH_NULL(default, null) : String;
+	@:public @:static @:final public static var ER_FRAG_WHEN_PATH_NULL(default, null) : String;
 	
-	public static var ER_FRAG_FOR_GENERIC_URI(default, null) : String;
+	@:public @:static @:final public static var ER_FRAG_FOR_GENERIC_URI(default, null) : String;
 	
-	public static var ER_NO_SCHEME_IN_URI(default, null) : String;
+	@:public @:static @:final public static var ER_NO_SCHEME_IN_URI(default, null) : String;
 	
-	public static var ER_CANNOT_INIT_URI_EMPTY_PARMS(default, null) : String;
+	@:public @:static @:final public static var ER_CANNOT_INIT_URI_EMPTY_PARMS(default, null) : String;
 	
-	public static var ER_NO_FRAGMENT_STRING_IN_PATH(default, null) : String;
+	@:public @:static @:final public static var ER_NO_FRAGMENT_STRING_IN_PATH(default, null) : String;
 	
-	public static var ER_NO_QUERY_STRING_IN_PATH(default, null) : String;
+	@:public @:static @:final public static var ER_NO_QUERY_STRING_IN_PATH(default, null) : String;
 	
-	public static var ER_NO_PORT_IF_NO_HOST(default, null) : String;
+	@:public @:static @:final public static var ER_NO_PORT_IF_NO_HOST(default, null) : String;
 	
-	public static var ER_NO_USERINFO_IF_NO_HOST(default, null) : String;
+	@:public @:static @:final public static var ER_NO_USERINFO_IF_NO_HOST(default, null) : String;
 	
-	public static var ER_SCHEME_REQUIRED(default, null) : String;
+	@:public @:static @:final public static var ER_SCHEME_REQUIRED(default, null) : String;
 	
-	public static var ER_XML_VERSION_NOT_SUPPORTED(default, null) : String;
+	@:public @:static @:final public static var ER_XML_VERSION_NOT_SUPPORTED(default, null) : String;
 	
-	public static var ER_FACTORY_PROPERTY_MISSING(default, null) : String;
+	@:public @:static @:final public static var ER_FACTORY_PROPERTY_MISSING(default, null) : String;
 	
-	public static var ER_ENCODING_NOT_SUPPORTED(default, null) : String;
+	@:public @:static @:final public static var ER_ENCODING_NOT_SUPPORTED(default, null) : String;
 	
 	
 }

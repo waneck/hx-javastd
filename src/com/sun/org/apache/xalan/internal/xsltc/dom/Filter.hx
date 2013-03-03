@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern interface Filter
 {
-	@:overload public function test(node : Int) : Bool;
+	@:overload @:public public function test(node : Int) : Bool;
 	
 	
 }

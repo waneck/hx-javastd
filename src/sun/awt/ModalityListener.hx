@@ -32,12 +32,12 @@ extern interface ModalityListener
 	/**
 	* Called by AWT when it enters a new level of modality
 	*/
-	@:overload public function modalityPushed(ev : sun.awt.ModalityEvent) : Void;
+	@:overload @:public public function modalityPushed(ev : sun.awt.ModalityEvent) : Void;
 	
 	/**
 	* Called by AWT when it exits a level of modality
 	*/
-	@:overload public function modalityPopped(ev : sun.awt.ModalityEvent) : Void;
+	@:overload @:public public function modalityPopped(ev : sun.awt.ModalityEvent) : Void;
 	
 	
 }

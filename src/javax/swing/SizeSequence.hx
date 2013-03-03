@@ -127,7 +127,7 @@ to the size of the previous item, and so on.">
 	* @see #insertEntries
 	* @see #setSizes(int[])
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new <code>SizeSequence</code> object
@@ -138,7 +138,7 @@ to the size of the previous item, and so on.">
 	* @exception NegativeArraySizeException if
 	*    <code>numEntries < 0</code>
 	*/
-	@:overload public function new(numEntries : Int) : Void;
+	@:overload @:public public function new(numEntries : Int) : Void;
 	
 	/**
 	* Creates a new <code>SizeSequence</code> object
@@ -148,7 +148,7 @@ to the size of the previous item, and so on.">
 	* @param numEntries  the number of sizes to track
 	* @param value       the initial value of each size
 	*/
-	@:overload public function new(numEntries : Int, value : Int) : Void;
+	@:overload @:public public function new(numEntries : Int, value : Int) : Void;
 	
 	/**
 	* Creates a new <code>SizeSequence</code> object
@@ -157,7 +157,7 @@ to the size of the previous item, and so on.">
 	* @param sizes  the array of sizes to be contained in
 	*               the <code>SizeSequence</code>
 	*/
-	@:overload public function new(sizes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(sizes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Resets this <code>SizeSequence</code> object,
@@ -170,14 +170,14 @@ to the size of the previous item, and so on.">
 	* @param sizes  the array of sizes to be contained in
 	*               this <code>SizeSequence</code>
 	*/
-	@:overload public function setSizes(sizes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setSizes(sizes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the size of all entries.
 	*
 	* @return  a new array containing the sizes in this object
 	*/
-	@:overload public function getSizes() : java.NativeArray<Int>;
+	@:overload @:public public function getSizes() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the start position for the specified entry.
@@ -194,7 +194,7 @@ to the size of the previous item, and so on.">
 	* @param index  the index of the entry whose position is desired
 	* @return       the starting position of the specified entry
 	*/
-	@:overload public function getPosition(index : Int) : Int;
+	@:overload @:public public function getPosition(index : Int) : Int;
 	
 	/**
 	* Returns the index of the entry
@@ -205,7 +205,7 @@ to the size of the previous item, and so on.">
 	* @param position  the position of the entry
 	* @return  the index of the entry that occupies the specified position
 	*/
-	@:overload public function getIndex(position : Int) : Int;
+	@:overload @:public public function getIndex(position : Int) : Int;
 	
 	/**
 	* Returns the size of the specified entry.
@@ -216,7 +216,7 @@ to the size of the previous item, and so on.">
 	* @param index  the index corresponding to the entry
 	* @return  the size of the entry
 	*/
-	@:overload public function getSize(index : Int) : Int;
+	@:overload @:public public function getSize(index : Int) : Int;
 	
 	/**
 	* Sets the size of the specified entry.
@@ -228,7 +228,7 @@ to the size of the previous item, and so on.">
 	* @param index  the index corresponding to the entry
 	* @param size   the size of the entry
 	*/
-	@:overload public function setSize(index : Int, size : Int) : Void;
+	@:overload @:public public function setSize(index : Int, size : Int) : Void;
 	
 	/**
 	* Adds a contiguous group of entries to this <code>SizeSequence</code>.
@@ -247,7 +247,7 @@ to the size of the previous item, and so on.">
 	*   are outside of the range:
 	*   (<code>0 <= start < (getSizes().length)) AND (length >= 0)</code>
 	*/
-	@:overload public function insertEntries(start : Int, length : Int, value : Int) : Void;
+	@:overload @:public public function insertEntries(start : Int, length : Int, value : Int) : Void;
 	
 	/**
 	* Removes a contiguous group of entries
@@ -262,7 +262,7 @@ to the size of the previous item, and so on.">
 	* @param start   the index of the first entry to be removed
 	* @param length  the number of entries to be removed
 	*/
-	@:overload public function removeEntries(start : Int, length : Int) : Void;
+	@:overload @:public public function removeEntries(start : Int, length : Int) : Void;
 	
 	
 }

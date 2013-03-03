@@ -25,30 +25,30 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 */
 @:internal extern class SingleMapNodeProperty<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.property.PropertyImpl<BeanT>
 {
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeMapPropertyInfo) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeMapPropertyInfo) : Void;
 	
-	@:overload public function reset(bean : BeanT) : Void;
+	@:overload @:public override public function reset(bean : BeanT) : Void;
 	
 	/**
 	* A Map property can never be ID.
 	*/
-	@:overload public function getIdValue(bean : BeanT) : String;
+	@:overload @:public override public function getIdValue(bean : BeanT) : String;
 	
-	@:overload public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload public function buildChildElementUnmarshallers(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:public override public function buildChildElementUnmarshallers(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
+	@:overload @:public override public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
 	
-	@:overload public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public override public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$property$SingleMapNodeProperty$ReceiverImpl') @:internal extern class SingleMapNodeProperty_ReceiverImpl implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
+	@:overload @:public public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
 	
 	
 }

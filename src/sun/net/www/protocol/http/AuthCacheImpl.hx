@@ -25,15 +25,15 @@ package sun.net.www.protocol.http;
 */
 extern class AuthCacheImpl implements sun.net.www.protocol.http.AuthCache
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setMap(map : java.util.HashMap<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setMap(map : java.util.HashMap<Dynamic, Dynamic>) : Void;
 	
-	@:overload @:synchronized public function put(pkey : String, value : sun.net.www.protocol.http.AuthCacheValue) : Void;
+	@:overload @:public @:synchronized public function put(pkey : String, value : sun.net.www.protocol.http.AuthCacheValue) : Void;
 	
-	@:overload @:synchronized public function get(pkey : String, skey : String) : sun.net.www.protocol.http.AuthCacheValue;
+	@:overload @:public @:synchronized public function get(pkey : String, skey : String) : sun.net.www.protocol.http.AuthCacheValue;
 	
-	@:overload @:synchronized public function remove(pkey : String, entry : sun.net.www.protocol.http.AuthCacheValue) : Void;
+	@:overload @:public @:synchronized public function remove(pkey : String, entry : sun.net.www.protocol.http.AuthCacheValue) : Void;
 	
 	
 }

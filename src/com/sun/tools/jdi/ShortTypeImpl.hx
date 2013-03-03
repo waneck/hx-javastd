@@ -25,7 +25,7 @@ package com.sun.tools.jdi;
 */
 extern class ShortTypeImpl extends com.sun.tools.jdi.PrimitiveTypeImpl implements com.sun.jdi.ShortType
 {
-	@:overload override public function signature() : String;
+	@:overload @:public override public function signature() : String;
 	
 	
 }

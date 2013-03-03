@@ -30,47 +30,47 @@ extern class Ber
 	*
 	* @author Jagane Sundar
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var offset : Int;
+	@:protected private var offset : Int;
 	
-	private var bufsize : Int;
+	@:protected private var bufsize : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public static function dumpBER(outStream : java.io.OutputStream, tag : String, bytes : java.NativeArray<java.StdTypes.Int8>, from : Int, to : Int) : Void;
+	@:overload @:public @:static public static function dumpBER(outStream : java.io.OutputStream, tag : String, bytes : java.NativeArray<java.StdTypes.Int8>, from : Int, to : Int) : Void;
 	
-	public static var ASN_BOOLEAN(default, null) : Int;
+	@:public @:static @:final public static var ASN_BOOLEAN(default, null) : Int;
 	
-	public static var ASN_INTEGER(default, null) : Int;
+	@:public @:static @:final public static var ASN_INTEGER(default, null) : Int;
 	
-	public static var ASN_BIT_STRING(default, null) : Int;
+	@:public @:static @:final public static var ASN_BIT_STRING(default, null) : Int;
 	
-	public static var ASN_SIMPLE_STRING(default, null) : Int;
+	@:public @:static @:final public static var ASN_SIMPLE_STRING(default, null) : Int;
 	
-	public static var ASN_OCTET_STR(default, null) : Int;
+	@:public @:static @:final public static var ASN_OCTET_STR(default, null) : Int;
 	
-	public static var ASN_NULL(default, null) : Int;
+	@:public @:static @:final public static var ASN_NULL(default, null) : Int;
 	
-	public static var ASN_OBJECT_ID(default, null) : Int;
+	@:public @:static @:final public static var ASN_OBJECT_ID(default, null) : Int;
 	
-	public static var ASN_SEQUENCE(default, null) : Int;
+	@:public @:static @:final public static var ASN_SEQUENCE(default, null) : Int;
 	
-	public static var ASN_SET(default, null) : Int;
+	@:public @:static @:final public static var ASN_SET(default, null) : Int;
 	
-	public static var ASN_PRIMITIVE(default, null) : Int;
+	@:public @:static @:final public static var ASN_PRIMITIVE(default, null) : Int;
 	
-	public static var ASN_UNIVERSAL(default, null) : Int;
+	@:public @:static @:final public static var ASN_UNIVERSAL(default, null) : Int;
 	
-	public static var ASN_CONSTRUCTOR(default, null) : Int;
+	@:public @:static @:final public static var ASN_CONSTRUCTOR(default, null) : Int;
 	
-	public static var ASN_APPLICATION(default, null) : Int;
+	@:public @:static @:final public static var ASN_APPLICATION(default, null) : Int;
 	
-	public static var ASN_CONTEXT(default, null) : Int;
+	@:public @:static @:final public static var ASN_CONTEXT(default, null) : Int;
 	
-	public static var ASN_PRIVATE(default, null) : Int;
+	@:public @:static @:final public static var ASN_PRIVATE(default, null) : Int;
 	
-	public static var ASN_ENUMERATED(default, null) : Int;
+	@:public @:static @:final public static var ASN_ENUMERATED(default, null) : Int;
 	
 	
 }

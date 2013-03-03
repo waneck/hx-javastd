@@ -39,7 +39,7 @@ package java.io;
 	* @param      snk   The piped reader to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function new(snk : java.io.PipedReader) : Void;
+	@:overload @:public public function new(snk : java.io.PipedReader) : Void;
 	
 	/**
 	* Creates a piped writer that is not yet connected to a
@@ -49,7 +49,7 @@ package java.io;
 	* @see     java.io.PipedReader#connect(java.io.PipedWriter)
 	* @see     java.io.PipedWriter#connect(java.io.PipedReader)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Connects this piped writer to a receiver. If this object
@@ -69,7 +69,7 @@ package java.io;
 	* @param      snk   the piped reader to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized public function connect(snk : java.io.PipedReader) : Void;
+	@:overload @:public @:synchronized public function connect(snk : java.io.PipedReader) : Void;
 	
 	/**
 	* Writes the specified <code>char</code> to the piped output stream.
@@ -85,7 +85,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedReader) unconnected}, closed
 	*          or an I/O error occurs.
 	*/
-	@:overload public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> characters from the specified character array
@@ -104,7 +104,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedReader) unconnected}, closed
 	*          or an I/O error occurs.
 	*/
-	@:overload public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output characters
@@ -113,7 +113,7 @@ package java.io;
 	*
 	* @exception  IOException  if the pipe is closed, or an I/O error occurs.
 	*/
-	@:overload @:synchronized public function flush() : Void;
+	@:overload @:public @:synchronized override public function flush() : Void;
 	
 	/**
 	* Closes this piped output stream and releases any system resources
@@ -122,7 +122,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

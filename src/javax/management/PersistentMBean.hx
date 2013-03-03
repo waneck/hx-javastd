@@ -43,7 +43,7 @@ extern interface PersistentMBean
 	* @exception InstanceNotFoundException Could not find or load this MBean from persistent
 	*                                      storage
 	*/
-	@:overload public function load() : Void;
+	@:overload @:public public function load() : Void;
 	
 	/**
 	* Captures the current state of this MBean instance and
@@ -69,7 +69,7 @@ extern interface PersistentMBean
 	* @exception RuntimeOperationsException Wraps exceptions from the persistence mechanism
 	* @exception InstanceNotFoundException Could not find/access the persistent store
 	*/
-	@:overload public function store() : Void;
+	@:overload @:public public function store() : Void;
 	
 	
 }

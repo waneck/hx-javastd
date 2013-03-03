@@ -34,14 +34,14 @@ extern class Certificate implements java.io.Serializable
 	* Java Cryptography Architecture Standard Algorithm Name Documentation</a>
 	* for information about standard certificate types.
 	*/
-	@:overload private function new(type : String) : Void;
+	@:overload @:protected private function new(type : String) : Void;
 	
 	/**
 	* Returns the type of this certificate.
 	*
 	* @return the type of this certificate.
 	*/
-	@:overload @:final public function getType() : String;
+	@:overload @:public @:final public function getType() : String;
 	
 	/**
 	* Compares this certificate for equality with the specified
@@ -54,7 +54,7 @@ extern class Certificate implements java.io.Serializable
 	* @return true iff the encoded forms of the two certificates
 	* match, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this certificate from its
@@ -62,7 +62,7 @@ extern class Certificate implements java.io.Serializable
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the encoded form of this certificate. It is
@@ -74,7 +74,7 @@ extern class Certificate implements java.io.Serializable
 	*
 	* @exception CertificateEncodingException if an encoding error occurs.
 	*/
-	@:overload @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Verifies that this certificate was signed using the
@@ -89,7 +89,7 @@ extern class Certificate implements java.io.Serializable
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload @:abstract public function verify(key : java.security.PublicKey) : Void;
+	@:overload @:public @:abstract public function verify(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Verifies that this certificate was signed using the
@@ -107,21 +107,21 @@ extern class Certificate implements java.io.Serializable
 	* @exception SignatureException on signature errors.
 	* @exception CertificateException on encoding errors.
 	*/
-	@:overload @:abstract public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
+	@:overload @:public @:abstract public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
 	
 	/**
 	* Returns a string representation of this certificate.
 	*
 	* @return a string representation of this certificate.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	/**
 	* Gets the public key from this certificate.
 	*
 	* @return the public key.
 	*/
-	@:overload @:abstract public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public @:abstract public function getPublicKey() : java.security.PublicKey;
 	
 	/**
 	* Replace the Certificate to be serialized.
@@ -132,7 +132,7 @@ extern class Certificate implements java.io.Serializable
 	* this Certificate could not be created
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function writeReplace() : Dynamic;
+	@:require(java3) @:overload @:protected private function writeReplace() : Dynamic;
 	
 	
 }
@@ -152,7 +152,7 @@ extern class Certificate implements java.io.Serializable
 	*
 	* @param data the Certificate data.
 	*/
-	@:overload private function new(type : String, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(type : String, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Resolve the Certificate Object.
@@ -164,7 +164,7 @@ extern class Certificate implements java.io.Serializable
 	* @throws java.io.ObjectStreamException if the Certificate
 	*      could not be resolved
 	*/
-	@:overload private function readResolve() : Dynamic;
+	@:overload @:protected private function readResolve() : Dynamic;
 	
 	
 }

@@ -26,24 +26,24 @@ package javax.swing.text.rtf;
 @:internal extern interface RTFAttribute
 {
 	/* int domain; */
-	@:overload public function domain() : Int;
+	@:overload @:public public function domain() : Int;
 	
 	/* String swingName; */
-	@:overload public function swingName() : Dynamic;
+	@:overload @:public public function swingName() : Dynamic;
 	
 	/* String rtfName; */
-	@:overload public function rtfName() : String;
+	@:overload @:public public function rtfName() : String;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
-	@:overload public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
+	@:overload @:public public function set(target : javax.swing.text.MutableAttributeSet, parameter : Int) : Bool;
 	
-	@:overload public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
+	@:overload @:public public function setDefault(target : javax.swing.text.MutableAttributeSet) : Bool;
 	
 	/* TODO: This method is poorly thought out */
-	@:overload public function write(source : javax.swing.text.AttributeSet, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public public function write(source : javax.swing.text.AttributeSet, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
-	@:overload public function writeValue(value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
+	@:overload @:public public function writeValue(value : Dynamic, target : javax.swing.text.rtf.RTFGenerator, force : Bool) : Bool;
 	
 	
 }

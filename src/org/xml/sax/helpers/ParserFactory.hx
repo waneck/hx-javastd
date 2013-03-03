@@ -50,7 +50,7 @@ extern class ParserFactory
 	* @see #makeParser(java.lang.String)
 	* @see org.xml.sax.Parser
 	*/
-	@:overload public static function makeParser() : org.xml.sax.Parser;
+	@:overload @:public @:static public static function makeParser() : org.xml.sax.Parser;
 	
 	/**
 	* Create a new SAX parser object using the class name provided.
@@ -73,7 +73,7 @@ extern class ParserFactory
 	* @see #makeParser()
 	* @see org.xml.sax.Parser
 	*/
-	@:overload public static function makeParser(className : String) : org.xml.sax.Parser;
+	@:overload @:public @:static public static function makeParser(className : String) : org.xml.sax.Parser;
 	
 	
 }

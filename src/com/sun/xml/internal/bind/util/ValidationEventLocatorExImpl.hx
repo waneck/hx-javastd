@@ -25,14 +25,14 @@ package com.sun.xml.internal.bind.util;
 */
 extern class ValidationEventLocatorExImpl extends javax.xml.bind.helpers.ValidationEventLocatorImpl implements com.sun.xml.internal.bind.ValidationEventLocatorEx
 {
-	@:overload public function new(target : Dynamic, fieldName : String) : Void;
+	@:overload @:public public function new(target : Dynamic, fieldName : String) : Void;
 	
-	@:overload public function getFieldName() : String;
+	@:overload @:public public function getFieldName() : String;
 	
 	/**
 	* Returns a nice string representation for better debug experience.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

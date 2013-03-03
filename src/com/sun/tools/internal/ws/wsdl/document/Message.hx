@@ -30,31 +30,31 @@ package com.sun.tools.internal.ws.wsdl.document;
 */
 extern class Message extends com.sun.tools.internal.ws.wsdl.framework.GlobalEntity
 {
-	@:overload public function new(defining : com.sun.tools.internal.ws.wsdl.framework.Defining, locator : org.xml.sax.Locator, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(defining : com.sun.tools.internal.ws.wsdl.framework.Defining, locator : org.xml.sax.Locator, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function add(part : com.sun.tools.internal.ws.wsdl.document.MessagePart) : Void;
+	@:overload @:public public function add(part : com.sun.tools.internal.ws.wsdl.document.MessagePart) : Void;
 	
-	@:overload public function parts() : java.util.Iterator<com.sun.tools.internal.ws.wsdl.document.MessagePart>;
+	@:overload @:public public function parts() : java.util.Iterator<com.sun.tools.internal.ws.wsdl.document.MessagePart>;
 	
-	@:overload public function getParts() : java.util.List<com.sun.tools.internal.ws.wsdl.document.MessagePart>;
+	@:overload @:public public function getParts() : java.util.List<com.sun.tools.internal.ws.wsdl.document.MessagePart>;
 	
-	@:overload public function getPart(name : String) : com.sun.tools.internal.ws.wsdl.document.MessagePart;
+	@:overload @:public public function getPart(name : String) : com.sun.tools.internal.ws.wsdl.document.MessagePart;
 	
-	@:overload public function numParts() : Int;
+	@:overload @:public public function numParts() : Int;
 	
-	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload @:public override public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
+	@:overload @:public public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
-	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
+	@:overload @:public public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

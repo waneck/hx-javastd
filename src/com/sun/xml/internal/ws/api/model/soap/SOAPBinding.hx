@@ -31,38 +31,38 @@ extern class SOAPBinding
 	*
 	* @author Vivek Pandey
 	*/
-	private var use : Use;
+	@:protected private var use : Use;
 	
-	private var style : Style;
+	@:protected private var style : Style;
 	
-	private var soapVersion : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected private var soapVersion : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	private var soapAction : String;
+	@:protected private var soapAction : String;
 	
 	/**
 	* Get {@link Use} such as <code>literal</code> or <code>encoded</code>.
 	*/
-	@:overload public function getUse() : Use;
+	@:overload @:public public function getUse() : Use;
 	
 	/**
 	* Get {@link Style} - such as <code>document</code> or <code>rpc</code>.
 	*/
-	@:overload public function getStyle() : Style;
+	@:overload @:public public function getStyle() : Style;
 	
 	/**
 	* Get the {@link SOAPVersion}
 	*/
-	@:overload public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:overload @:public public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	/**
 	* Returns true if its document/literal
 	*/
-	@:overload public function isDocLit() : Bool;
+	@:overload @:public public function isDocLit() : Bool;
 	
 	/**
 	* Returns true if this is a rpc/literal binding
 	*/
-	@:overload public function isRpcLit() : Bool;
+	@:overload @:public public function isRpcLit() : Bool;
 	
 	/**
 	* Value of <code>wsdl:binding/wsdl:operation/soap:operation@soapAction</code> attribute or
@@ -80,7 +80,7 @@ extern class SOAPBinding
 	*
 	* @see com.sun.xml.internal.ws.api.message.Packet#soapAction
 	*/
-	@:overload public function getSOAPAction() : String;
+	@:overload @:public public function getSOAPAction() : String;
 	
 	
 }

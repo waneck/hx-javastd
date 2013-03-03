@@ -25,10 +25,10 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 */
 extern class BIEnumeration implements com.sun.tools.internal.xjc.reader.dtd.bindinfo.BIConversion
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/** Returns a transducer for this enumeration declaration. */
-	@:overload public function getTransducer() : com.sun.tools.internal.xjc.model.TypeUse;
+	@:overload @:public public function getTransducer() : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	
 }

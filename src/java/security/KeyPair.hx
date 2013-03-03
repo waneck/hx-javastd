@@ -46,21 +46,21 @@ extern class KeyPair implements java.io.Serializable
 	*
 	* @param privateKey the private key.
 	*/
-	@:overload public function new(publicKey : java.security.PublicKey, privateKey : java.security.PrivateKey) : Void;
+	@:overload @:public public function new(publicKey : java.security.PublicKey, privateKey : java.security.PrivateKey) : Void;
 	
 	/**
 	* Returns a reference to the public key component of this key pair.
 	*
 	* @return a reference to the public key.
 	*/
-	@:overload public function getPublic() : java.security.PublicKey;
+	@:overload @:public public function getPublic() : java.security.PublicKey;
 	
 	/**
 	* Returns a reference to the private key component of this key pair.
 	*
 	* @return a reference to the private key.
 	*/
-	@:overload public function getPrivate() : java.security.PrivateKey;
+	@:overload @:public public function getPrivate() : java.security.PrivateKey;
 	
 	
 }

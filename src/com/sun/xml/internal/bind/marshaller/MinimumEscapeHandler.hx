@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.marshaller;
 */
 extern class MinimumEscapeHandler implements com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler
 {
-	public static var theInstance(default, null) : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
+	@:public @:static @:final public static var theInstance(default, null) : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
 	
-	@:overload public function escape(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, isAttVal : Bool, out : java.io.Writer) : Void;
+	@:overload @:public public function escape(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, isAttVal : Bool, out : java.io.Writer) : Void;
 	
 	
 }

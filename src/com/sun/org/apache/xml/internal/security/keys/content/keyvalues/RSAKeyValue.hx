@@ -28,7 +28,7 @@ extern class RSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor RSAKeyValue
@@ -37,7 +37,7 @@ extern class RSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	* @param modulus
 	* @param exponent
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, modulus : java.math.BigInteger, exponent : java.math.BigInteger) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, modulus : java.math.BigInteger, exponent : java.math.BigInteger) : Void;
 	
 	/**
 	* Constructor RSAKeyValue
@@ -46,13 +46,13 @@ extern class RSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	* @param key
 	* @throws IllegalArgumentException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, key : java.security.Key) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, key : java.security.Key) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

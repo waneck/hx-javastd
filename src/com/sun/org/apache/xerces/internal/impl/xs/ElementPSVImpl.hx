@@ -21,55 +21,55 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.ElementPSVI
 {
 	/** element declaration */
-	private var fDeclaration : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:protected private var fDeclaration : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/** type of element, could be xsi:type */
-	private var fTypeDecl : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:protected private var fTypeDecl : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/** true if clause 3.2 of Element Locally Valid (Element) (3.3.4)
 	* is satisfied, otherwise false
 	*/
-	private var fNil : Bool;
+	@:protected private var fNil : Bool;
 	
 	/** true if the element value was provided by the schema; false otherwise.
 	*/
-	private var fSpecified : Bool;
+	@:protected private var fSpecified : Bool;
 	
 	/** schema normalized value property */
-	private var fNormalizedValue : String;
+	@:protected private var fNormalizedValue : String;
 	
 	/** schema actual value */
-	private var fActualValue : Dynamic;
+	@:protected private var fActualValue : Dynamic;
 	
 	/** schema actual value type */
-	private var fActualValueType : java.StdTypes.Int16;
+	@:protected private var fActualValueType : java.StdTypes.Int16;
 	
 	/** actual value types if the value is a list */
-	private var fItemValueTypes : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:protected private var fItemValueTypes : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/** http://www.w3.org/TR/xmlschema-1/#e-notation*/
-	private var fNotation : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:protected private var fNotation : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
 	/** member type definition against which element was validated */
-	private var fMemberType : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:protected private var fMemberType : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/** validation attempted: none, partial, full */
-	private var fValidationAttempted : java.StdTypes.Int16;
+	@:protected private var fValidationAttempted : java.StdTypes.Int16;
 	
 	/** validity: valid, invalid, unknown */
-	private var fValidity : java.StdTypes.Int16;
+	@:protected private var fValidity : java.StdTypes.Int16;
 	
 	/** error codes */
-	private var fErrorCodes : java.NativeArray<String>;
+	@:protected private var fErrorCodes : java.NativeArray<String>;
 	
 	/** validation context: could be QName or XPath expression*/
-	private var fValidationContext : String;
+	@:protected private var fValidationContext : String;
 	
 	/** deferred XSModel **/
-	private var fGrammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>;
+	@:protected private var fGrammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>;
 	
 	/** the schema information property */
-	private var fSchemaInformation : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:protected private var fSchemaInformation : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	* [schema default]
@@ -77,7 +77,7 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	* @return The canonical lexical representation of the declaration's {value constraint} value.
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-schema_default>XML Schema Part 1: Structures [schema default]</a>
 	*/
-	@:overload public function getSchemaDefault() : String;
+	@:overload @:public public function getSchemaDefault() : String;
 	
 	/**
 	* [schema normalized value]
@@ -86,14 +86,14 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-schema_normalized_value>XML Schema Part 1: Structures [schema normalized value]</a>
 	* @return the normalized value of this item after validation
 	*/
-	@:overload public function getSchemaNormalizedValue() : String;
+	@:overload @:public public function getSchemaNormalizedValue() : String;
 	
 	/**
 	* [schema specified]
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-schema_specified">XML Schema Part 1: Structures [schema specified]</a>
 	* @return true - value was specified in schema, false - value comes from the infoset
 	*/
-	@:overload public function getIsSchemaSpecified() : Bool;
+	@:overload @:public public function getIsSchemaSpecified() : Bool;
 	
 	/**
 	* Determines the extent to which the document has been validated
@@ -101,7 +101,7 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	* @return return the [validation attempted] property. The possible values are
 	*         NO_VALIDATION, PARTIAL_VALIDATION and FULL_VALIDATION
 	*/
-	@:overload public function getValidationAttempted() : java.StdTypes.Int16;
+	@:overload @:public public function getValidationAttempted() : java.StdTypes.Int16;
 	
 	/**
 	* Determine the validity of the node with respect
@@ -110,7 +110,7 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	* @return return the [validity] property. Possible values are:
 	*         UNKNOWN_VALIDITY, INVALID_VALIDITY, VALID_VALIDITY
 	*/
-	@:overload public function getValidity() : java.StdTypes.Int16;
+	@:overload @:public public function getValidity() : java.StdTypes.Int16;
 	
 	/**
 	* A list of error codes generated from validation attempts.
@@ -118,30 +118,30 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	*
 	* @return Array of error codes
 	*/
-	@:overload public function getErrorCodes() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getErrorCodes() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
-	@:overload public function getValidationContext() : String;
+	@:overload @:public public function getValidationContext() : String;
 	
 	/**
 	* [nil]
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-nil>XML Schema Part 1: Structures [nil]</a>
 	* @return true if clause 3.2 of Element Locally Valid (Element) (3.3.4) above is satisfied, otherwise false
 	*/
-	@:overload public function getNil() : Bool;
+	@:overload @:public public function getNil() : Bool;
 	
 	/**
 	* [notation]
 	* @see <a href="http://www.w3.org/TR/xmlschema-1/#e-notation>XML Schema Part 1: Structures [notation]</a>
 	* @return The notation declaration.
 	*/
-	@:overload public function getNotation() : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:overload @:public public function getNotation() : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
 	/**
 	* An item isomorphic to the type definition used to validate this element.
 	*
 	* @return  a type declaration
 	*/
-	@:overload public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* If and only if that type definition is a simple type definition
@@ -152,7 +152,7 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	*
 	* @return  a simple type declaration
 	*/
-	@:overload public function getMemberTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getMemberTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* An item isomorphic to the element declaration used to validate
@@ -160,7 +160,7 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	*
 	* @return  an element declaration
 	*/
-	@:overload public function getElementDeclaration() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getElementDeclaration() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* [schema information]
@@ -168,27 +168,27 @@ extern class ElementPSVImpl implements com.sun.org.apache.xerces.internal.xs.Ele
 	* @return The schema information property if it's the validation root,
 	*         null otherwise.
 	*/
-	@:overload @:synchronized public function getSchemaInformation() : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public @:synchronized public function getSchemaInformation() : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.ItemPSVI#getActualNormalizedValue()
 	*/
-	@:overload public function getActualNormalizedValue() : Dynamic;
+	@:overload @:public public function getActualNormalizedValue() : Dynamic;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.ItemPSVI#getActualNormalizedValueType()
 	*/
-	@:overload public function getActualNormalizedValueType() : java.StdTypes.Int16;
+	@:overload @:public public function getActualNormalizedValueType() : java.StdTypes.Int16;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xs.ItemPSVI#getItemValueTypes()
 	*/
-	@:overload public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	* Reset() should be called in validator startElement(..) method.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	* @param keyChar the character value for a keyboard key
 	* @return a KeyStroke object for that key
 	*/
-	@:overload public static function getKeyStroke(keyChar : java.StdTypes.Char16) : javax.swing.KeyStroke;
+	@:overload @:public @:static public static function getKeyStroke(keyChar : java.StdTypes.Char16) : javax.swing.KeyStroke;
 	
 	/**
 	* Returns an instance of a KeyStroke, specifying whether the key is
@@ -47,7 +47,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	* @return a KeyStroke object for that key
 	* @deprecated use getKeyStroke(char)
 	*/
-	@:overload public static function getKeyStroke(keyChar : java.StdTypes.Char16, onKeyRelease : Bool) : javax.swing.KeyStroke;
+	@:overload @:public @:static public static function getKeyStroke(keyChar : java.StdTypes.Char16, onKeyRelease : Bool) : javax.swing.KeyStroke;
 	
 	/**
 	* Returns a shared instance of a {@code KeyStroke}
@@ -86,7 +86,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	* @see java.awt.event.InputEvent
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getKeyStroke(keyChar : Null<java.StdTypes.Char16>, modifiers : Int) : javax.swing.KeyStroke;
+	@:require(java3) @:overload @:public @:static public static function getKeyStroke(keyChar : Null<java.StdTypes.Char16>, modifiers : Int) : javax.swing.KeyStroke;
 	
 	/**
 	* Returns a shared instance of a KeyStroke, given a numeric key code and a
@@ -131,7 +131,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	* @see java.awt.event.KeyEvent
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getKeyStroke(keyCode : Int, modifiers : Int, onKeyRelease : Bool) : javax.swing.KeyStroke;
+	@:overload @:public @:static public static function getKeyStroke(keyCode : Int, modifiers : Int, onKeyRelease : Bool) : javax.swing.KeyStroke;
 	
 	/**
 	* Returns a shared instance of a KeyStroke, given a numeric key code and a
@@ -173,7 +173,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	* @see java.awt.event.KeyEvent
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getKeyStroke(keyCode : Int, modifiers : Int) : javax.swing.KeyStroke;
+	@:overload @:public @:static public static function getKeyStroke(keyCode : Int, modifiers : Int) : javax.swing.KeyStroke;
 	
 	/**
 	* Returns a KeyStroke which represents the stroke which generated a given
@@ -187,7 +187,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	* @throws NullPointerException if <code>anEvent</code> is null
 	* @return the KeyStroke that precipitated the event
 	*/
-	@:overload public static function getKeyStrokeForEvent(anEvent : java.awt.event.KeyEvent) : javax.swing.KeyStroke;
+	@:overload @:public @:static public static function getKeyStrokeForEvent(anEvent : java.awt.event.KeyEvent) : javax.swing.KeyStroke;
 	
 	/**
 	* Parses a string and returns a <code>KeyStroke</code>.
@@ -220,7 +220,7 @@ extern class KeyStroke extends java.awt.AWTKeyStroke
 	*
 	* @see java.awt.event.KeyEvent
 	*/
-	@:overload public static function getKeyStroke(s : String) : javax.swing.KeyStroke;
+	@:overload @:public @:static public static function getKeyStroke(s : String) : javax.swing.KeyStroke;
 	
 	
 }

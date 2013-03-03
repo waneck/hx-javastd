@@ -25,7 +25,7 @@ package javax.swing.plaf.basic;
 */
 extern class BasicGraphicsUtils
 {
-	@:overload public static function drawEtchedRect(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
+	@:overload @:public @:static public static function drawEtchedRect(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
 	
 	/**
 	* Returns the amount of space taken up by a border drawn by
@@ -33,9 +33,9 @@ extern class BasicGraphicsUtils
 	*
 	* @return  the inset of an etched rect
 	*/
-	@:overload public static function getEtchedInsets() : java.awt.Insets;
+	@:overload @:public @:static public static function getEtchedInsets() : java.awt.Insets;
 	
-	@:overload public static function drawGroove(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, highlight : java.awt.Color) : Void;
+	@:overload @:public @:static public static function drawGroove(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, highlight : java.awt.Color) : Void;
 	
 	/**
 	* Returns the amount of space taken up by a border drawn by
@@ -43,11 +43,11 @@ extern class BasicGraphicsUtils
 	*
 	* @return  the inset of a groove border
 	*/
-	@:overload public static function getGrooveInsets() : java.awt.Insets;
+	@:overload @:public @:static public static function getGrooveInsets() : java.awt.Insets;
 	
-	@:overload public static function drawBezel(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, isPressed : Bool, isDefault : Bool, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
+	@:overload @:public @:static public static function drawBezel(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, isPressed : Bool, isDefault : Bool, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
 	
-	@:overload public static function drawLoweredBezel(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
+	@:overload @:public @:static public static function drawLoweredBezel(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
 	
 	/** Draw a string with the graphics <code>g</code> at location (x,y)
 	*  just like <code>g.drawString</code> would.
@@ -55,7 +55,7 @@ extern class BasicGraphicsUtils
 	*  in text will be underlined. The matching algorithm is
 	*  not case sensitive.
 	*/
-	@:overload public static function drawString(g : java.awt.Graphics, text : String, underlinedChar : Int, x : Int, y : Int) : Void;
+	@:overload @:public @:static public static function drawString(g : java.awt.Graphics, text : String, underlinedChar : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Draw a string with the graphics <code>g</code> at location
@@ -73,11 +73,11 @@ extern class BasicGraphicsUtils
 	* @param y y coordinate to draw at
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function drawStringUnderlineCharAt(g : java.awt.Graphics, text : String, underlinedIndex : Int, x : Int, y : Int) : Void;
+	@:require(java4) @:overload @:public @:static public static function drawStringUnderlineCharAt(g : java.awt.Graphics, text : String, underlinedIndex : Int, x : Int, y : Int) : Void;
 	
-	@:overload public static function drawDashedRect(g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public @:static public static function drawDashedRect(g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public static function getPreferredButtonSize(b : javax.swing.AbstractButton, textIconGap : Int) : java.awt.Dimension;
+	@:overload @:public @:static public static function getPreferredButtonSize(b : javax.swing.AbstractButton, textIconGap : Int) : java.awt.Dimension;
 	
 	
 }

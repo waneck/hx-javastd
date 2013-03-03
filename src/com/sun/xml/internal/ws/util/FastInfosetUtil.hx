@@ -28,7 +28,7 @@ extern class FastInfosetUtil
 	/**
 	* Returns the FI parser allocated for this thread.
 	*/
-	@:overload public static function createFIStreamReader(_in : java.io.InputStream) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:static public static function createFIStreamReader(_in : java.io.InputStream) : javax.xml.stream.XMLStreamReader;
 	
 	
 }

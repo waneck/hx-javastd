@@ -30,19 +30,19 @@ package sun.security.krb5.internal;
 */
 extern class HostAddresses implements java.lang.Cloneable
 {
-	@:overload public function new(new_addresses : java.NativeArray<sun.security.krb5.internal.HostAddress>) : Void;
+	@:overload @:public public function new(new_addresses : java.NativeArray<sun.security.krb5.internal.HostAddress>) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(serverPrincipal : sun.security.krb5.PrincipalName) : Void;
+	@:overload @:public public function new(serverPrincipal : sun.security.krb5.PrincipalName) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function inList(addr : sun.security.krb5.internal.HostAddress) : Bool;
+	@:overload @:public public function inList(addr : sun.security.krb5.internal.HostAddress) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Constructs a new <code>HostAddresses</code> object.
@@ -52,7 +52,7 @@ extern class HostAddresses implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading
 	* encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes a <code>HostAddresses</code> object.
@@ -62,7 +62,7 @@ extern class HostAddresses implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading
 	* encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) a <code>HostAddresses</code> from a DER input stream.
@@ -77,7 +77,7 @@ extern class HostAddresses implements java.lang.Cloneable
 	* @param optional indicates if this data field is optional.
 	* @return an instance of <code>HostAddresses</code>.
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.HostAddresses;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.HostAddresses;
 	
 	/**
 	* Writes data field values in <code>HostAddresses</code> in FCC
@@ -87,20 +87,20 @@ extern class HostAddresses implements java.lang.Cloneable
 	* @exception IOException if an I/O exception occurs.
 	* @see sun.security.krb5.internal.ccache.CCacheOutputStream
 	*/
-	@:overload public function writeAddrs(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
+	@:overload @:public public function writeAddrs(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
 	
-	@:overload public function getInetAddresses() : java.NativeArray<java.net.InetAddress>;
+	@:overload @:public public function getInetAddresses() : java.NativeArray<java.net.InetAddress>;
 	
 	/**
 	* Returns all the IP addresses of the local host.
 	*/
-	@:overload public static function getLocalAddresses() : sun.security.krb5.internal.HostAddresses;
+	@:overload @:public @:static public static function getLocalAddresses() : sun.security.krb5.internal.HostAddresses;
 	
 	/**
 	* Creates a new HostAddresses instance from the supplied list
 	* of InetAddresses.
 	*/
-	@:overload public function new(inetAddresses : java.NativeArray<java.net.InetAddress>) : Void;
+	@:overload @:public public function new(inetAddresses : java.NativeArray<java.net.InetAddress>) : Void;
 	
 	
 }

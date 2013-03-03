@@ -25,83 +25,83 @@ package com.sun.jmx.remote.util;
 */
 extern class ClassLogger
 {
-	@:overload public function new(subsystem : String, className : String) : Void;
+	@:overload @:public public function new(subsystem : String, className : String) : Void;
 	
-	@:overload @:final public function traceOn() : Bool;
+	@:overload @:public @:final public function traceOn() : Bool;
 	
-	@:overload @:final public function debugOn() : Bool;
+	@:overload @:public @:final public function debugOn() : Bool;
 	
-	@:overload @:final public function warningOn() : Bool;
+	@:overload @:public @:final public function warningOn() : Bool;
 	
-	@:overload @:final public function infoOn() : Bool;
+	@:overload @:public @:final public function infoOn() : Bool;
 	
-	@:overload @:final public function configOn() : Bool;
+	@:overload @:public @:final public function configOn() : Bool;
 	
-	@:overload @:final public function fineOn() : Bool;
+	@:overload @:public @:final public function fineOn() : Bool;
 	
-	@:overload @:final public function finerOn() : Bool;
+	@:overload @:public @:final public function finerOn() : Bool;
 	
-	@:overload @:final public function finestOn() : Bool;
+	@:overload @:public @:final public function finestOn() : Bool;
 	
-	@:overload @:final public function debug(func : String, msg : String) : Void;
+	@:overload @:public @:final public function debug(func : String, msg : String) : Void;
 	
-	@:overload @:final public function debug(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function debug(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function debug(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function debug(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	//@:overload @:final public function _trace(func : String, msg : String) : Void;
+	//@:overload @:public @:final public function _trace(func : String, msg : String) : Void;
 	
-	//@:overload @:final public function _trace(func : String, t : java.lang.Throwable) : Void;
+	//@:overload @:public @:final public function _trace(func : String, t : java.lang.Throwable) : Void;
 	
-	//@:overload @:final public function _trace(func : String, msg : String, t : java.lang.Throwable) : Void;
+	//@:overload @:public @:final public function _trace(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function error(func : String, msg : String) : Void;
+	@:overload @:public @:final public function error(func : String, msg : String) : Void;
 	
-	@:overload @:final public function error(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function error(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function error(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function error(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function finest(func : String, msg : String) : Void;
+	@:overload @:public @:final public function finest(func : String, msg : String) : Void;
 	
-	@:overload @:final public function finest(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function finest(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function finest(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function finest(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function finer(func : String, msg : String) : Void;
+	@:overload @:public @:final public function finer(func : String, msg : String) : Void;
 	
-	@:overload @:final public function finer(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function finer(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function finer(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function finer(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function fine(func : String, msg : String) : Void;
+	@:overload @:public @:final public function fine(func : String, msg : String) : Void;
 	
-	@:overload @:final public function fine(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function fine(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function fine(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function fine(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function config(func : String, msg : String) : Void;
+	@:overload @:public @:final public function config(func : String, msg : String) : Void;
 	
-	@:overload @:final public function config(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function config(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function config(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function config(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function info(func : String, msg : String) : Void;
+	@:overload @:public @:final public function info(func : String, msg : String) : Void;
 	
-	@:overload @:final public function info(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function info(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function info(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function info(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function warning(func : String, msg : String) : Void;
+	@:overload @:public @:final public function warning(func : String, msg : String) : Void;
 	
-	@:overload @:final public function warning(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function warning(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function warning(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function warning(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function severe(func : String, msg : String) : Void;
+	@:overload @:public @:final public function severe(func : String, msg : String) : Void;
 	
-	@:overload @:final public function severe(func : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function severe(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function severe(func : String, msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public @:final public function severe(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
 	
 }

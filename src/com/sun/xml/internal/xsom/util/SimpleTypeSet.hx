@@ -25,12 +25,12 @@ package com.sun.xml.internal.xsom.util;
 */
 extern class SimpleTypeSet extends com.sun.xml.internal.xsom.util.TypeSet
 {
-	@:overload public function new(s : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(s : java.util.Set<Dynamic>) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.util.TypeSet#contains(com.sun.xml.internal.xsom.XSDeclaration)
 	*/
-	@:overload override public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
+	@:overload @:public override public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
 	
 	
 }

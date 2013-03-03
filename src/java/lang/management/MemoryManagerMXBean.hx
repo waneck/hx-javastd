@@ -64,7 +64,7 @@ package java.lang.management;
 	*
 	* @return the name of this memory manager.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Tests if this memory manager is valid in the Java virtual
@@ -75,7 +75,7 @@ package java.lang.management;
 	*               Java virtual machine;
 	*         <tt>false</tt> otherwise.
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Returns the name of memory pools that this memory manager manages.
@@ -83,7 +83,7 @@ package java.lang.management;
 	* @return an array of <tt>String</tt> objects, each is
 	* the name of a memory pool that this memory manager manages.
 	*/
-	@:overload public function getMemoryPoolNames() : java.NativeArray<String>;
+	@:overload @:public public function getMemoryPoolNames() : java.NativeArray<String>;
 	
 	
 }

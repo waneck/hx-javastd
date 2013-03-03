@@ -25,13 +25,13 @@ package com.sun.tools.jdi;
 */
 extern class SocketListeningConnector extends com.sun.tools.jdi.GenericListeningConnector
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function startListening(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
+	@:overload @:public override public function startListening(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function description() : String;
+	@:overload @:public override public function description() : String;
 	
 	
 }

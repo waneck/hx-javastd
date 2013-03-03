@@ -39,7 +39,7 @@ extern interface PrintJobAttributeListener
 	* <code>PROCESSING</code> to <code>PROCESSING_STOPPED</code>.
 	* @param pjae the event.
 	*/
-	@:overload public function attributeUpdate(pjae : javax.print.event.PrintJobAttributeEvent) : Void;
+	@:overload @:public public function attributeUpdate(pjae : javax.print.event.PrintJobAttributeEvent) : Void;
 	
 	
 }

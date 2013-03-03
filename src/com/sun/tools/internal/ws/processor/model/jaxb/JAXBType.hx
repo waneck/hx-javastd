@@ -32,37 +32,37 @@ extern class JAXBType extends com.sun.tools.internal.ws.processor.model.Abstract
 	* @author
 	*     Vivek Pandey
 	*/
-	@:overload public function new(jaxbType : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
+	@:overload @:public public function new(jaxbType : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.java.JavaType, jaxbMapping : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping, jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.java.JavaType, jaxbMapping : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping, jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeVisitor) : Void;
 	
-	@:overload public function isUnwrappable() : Bool;
+	@:overload @:public public function isUnwrappable() : Bool;
 	
-	@:overload public function hasWrapperChildren() : Bool;
+	@:overload @:public public function hasWrapperChildren() : Bool;
 	
-	@:overload override public function isLiteralType() : Bool;
+	@:overload @:public override public function isLiteralType() : Bool;
 	
-	@:overload public function getWrapperChildren() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty>;
+	@:overload @:public public function getWrapperChildren() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty>;
 	
-	@:overload public function setWrapperChildren(children : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty>) : Void;
+	@:overload @:public public function setWrapperChildren(children : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty>) : Void;
 	
-	@:overload public function getJaxbMapping() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping;
+	@:overload @:public public function getJaxbMapping() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping;
 	
-	@:overload public function setJaxbMapping(jaxbMapping : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping) : Void;
+	@:overload @:public public function setJaxbMapping(jaxbMapping : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping) : Void;
 	
-	@:overload public function setUnwrapped(unwrapped : Bool) : Void;
+	@:overload @:public public function setUnwrapped(unwrapped : Bool) : Void;
 	
-	@:overload public function isUnwrapped() : Bool;
+	@:overload @:public public function isUnwrapped() : Bool;
 	
-	@:overload public function getJaxbModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
+	@:overload @:public public function getJaxbModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
 	
-	@:overload public function setJaxbModel(jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
+	@:overload @:public public function setJaxbModel(jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
 	
 	
 }

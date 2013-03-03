@@ -28,17 +28,17 @@ extern class SocketFactoryContactInfoImpl extends com.sun.corba.se.impl.transpor
 	/**
 	* @author Harold Carr
 	*/
-	private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	private var socketInfo : com.sun.corba.se.spi.transport.SocketInfo;
+	@:protected private var socketInfo : com.sun.corba.se.spi.transport.SocketInfo;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, addressingDisposition : java.StdTypes.Int16, cookie : com.sun.corba.se.spi.transport.SocketInfo) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, addressingDisposition : java.StdTypes.Int16, cookie : com.sun.corba.se.spi.transport.SocketInfo) : Void;
 	
-	@:overload public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public override public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -28,39 +28,39 @@ extern class SctpServerChannelImpl extends com.sun.nio.sctp.SctpServerChannel im
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload public function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
+	@:overload @:public public function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
-	@:overload override public function bind(local : java.net.SocketAddress, backlog : Int) : com.sun.nio.sctp.SctpServerChannel;
+	@:overload @:public override public function bind(local : java.net.SocketAddress, backlog : Int) : com.sun.nio.sctp.SctpServerChannel;
 	
-	@:overload override public function bindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpServerChannel;
+	@:overload @:public override public function bindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpServerChannel;
 	
-	@:overload override public function unbindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpServerChannel;
+	@:overload @:public override public function unbindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpServerChannel;
 	
-	@:overload override public function accept() : com.sun.nio.sctp.SctpChannel;
+	@:overload @:public override public function accept() : com.sun.nio.sctp.SctpChannel;
 	
-	@:overload private function implConfigureBlocking(block : Bool) : Void;
+	@:overload @:protected override private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload public function implCloseSelectableChannel() : Void;
+	@:overload @:public override public function implCloseSelectableChannel() : Void;
 	
-	@:overload public function kill() : Void;
+	@:overload @:public public function kill() : Void;
 	
-	@:overload public function getFD() : java.io.FileDescriptor;
+	@:overload @:public public function getFD() : java.io.FileDescriptor;
 	
-	@:overload public function getFDVal() : Int;
+	@:overload @:public public function getFDVal() : Int;
 	
-	@:overload public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:public public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload override public function setOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, value : T) : com.sun.nio.sctp.SctpServerChannel;
+	@:overload @:public override public function setOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, value : T) : com.sun.nio.sctp.SctpServerChannel;
 	
-	@:overload override public function getOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>) : T;
+	@:overload @:public override public function getOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>) : T;
 	
-	@:overload @:final override public function supportedOptions() : java.util.Set<com.sun.nio.sctp.SctpSocketOption<Dynamic>>;
+	@:overload @:public @:final override public function supportedOptions() : java.util.Set<com.sun.nio.sctp.SctpSocketOption<Dynamic>>;
 	
-	@:overload override public function getAllLocalAddresses() : java.util.Set<java.net.SocketAddress>;
+	@:overload @:public override public function getAllLocalAddresses() : java.util.Set<java.net.SocketAddress>;
 	
 	
 }

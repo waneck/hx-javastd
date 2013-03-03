@@ -25,21 +25,21 @@ package com.sun.codemodel.internal;
 */
 extern class JNullType extends com.sun.codemodel.internal.JClass
 {
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function fullName() : String;
+	@:overload @:public override public function fullName() : String;
 	
-	@:overload override public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public override public function _package() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload override public function _extends() : com.sun.codemodel.internal.JClass;
+	@:overload @:public override public function _extends() : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
+	@:overload @:public override public function _implements() : java.util.Iterator<com.sun.codemodel.internal.JClass>;
 	
-	@:overload override public function isInterface() : Bool;
+	@:overload @:public override public function isInterface() : Bool;
 	
-	@:overload override public function isAbstract() : Bool;
+	@:overload @:public override public function isAbstract() : Bool;
 	
-	@:overload override private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
+	@:overload @:protected override private function substituteParams(variables : java.NativeArray<com.sun.codemodel.internal.JTypeVar>, bindings : java.util.List<com.sun.codemodel.internal.JClass>) : com.sun.codemodel.internal.JClass;
 	
 	
 }

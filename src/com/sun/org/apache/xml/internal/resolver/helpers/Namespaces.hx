@@ -39,7 +39,7 @@ extern class Namespaces
 	* @param element The QName of an element.
 	* @return The prefix part of the element name.
 	*/
-	@:overload public static function getPrefix(element : org.w3c.dom.Element) : String;
+	@:overload @:public @:static public static function getPrefix(element : org.w3c.dom.Element) : String;
 	
 	/**
 	* Returns the "localname" part of a QName, which is the whole
@@ -48,7 +48,7 @@ extern class Namespaces
 	* @param element The QName of an element.
 	* @return The local part of a QName.
 	*/
-	@:overload public static function getLocalName(element : org.w3c.dom.Element) : String;
+	@:overload @:public @:static public static function getLocalName(element : org.w3c.dom.Element) : String;
 	
 	/**
 	* Returns the namespace URI for the specified prefix at the
@@ -59,7 +59,7 @@ extern class Namespaces
 	* @return The namespace URI associated with the prefix, or
 	* null if no namespace declaration exists for the prefix.
 	*/
-	@:overload public static function getNamespaceURI(node : org.w3c.dom.Node, prefix : String) : String;
+	@:overload @:public @:static public static function getNamespaceURI(node : org.w3c.dom.Node, prefix : String) : String;
 	
 	/**
 	* Returns the namespace URI for the namespace to which the
@@ -69,7 +69,7 @@ extern class Namespaces
 	* @return The namespace URI associated with the namespace of the
 	* element, or null if no namespace declaration exists for it.
 	*/
-	@:overload public static function getNamespaceURI(element : org.w3c.dom.Element) : String;
+	@:overload @:public @:static public static function getNamespaceURI(element : org.w3c.dom.Element) : String;
 	
 	
 }

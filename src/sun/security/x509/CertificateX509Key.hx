@@ -36,21 +36,21 @@ extern class CertificateX509Key implements sun.security.x509.CertAttrSet<String>
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Sub attributes name for this CertAttrSet.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var KEY(default, null) : String;
+	@:public @:static @:final public static var KEY(default, null) : String;
 	
 	/**
 	* Default constructor for the certificate attribute.
 	*
 	* @param key the X509Key
 	*/
-	@:overload public function new(key : java.security.PublicKey) : Void;
+	@:overload @:public public function new(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -58,7 +58,7 @@ extern class CertificateX509Key implements sun.security.x509.CertAttrSet<String>
 	* @param in the DerInputStream to read the X509Key from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed stream.
@@ -66,12 +66,12 @@ extern class CertificateX509Key implements sun.security.x509.CertAttrSet<String>
 	* @param in the InputStream to read the X509Key from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Return the key as printable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Encode the key in DER form to the stream.
@@ -79,33 +79,33 @@ extern class CertificateX509Key implements sun.security.x509.CertAttrSet<String>
 	* @param out the OutputStream to marshal the contents to.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

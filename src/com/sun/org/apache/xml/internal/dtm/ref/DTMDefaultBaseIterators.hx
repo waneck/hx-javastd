@@ -35,7 +35,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @param doIndexing true if the caller considers it worth it to use
 	*                   indexing schemes.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool) : Void;
 	
 	/**
 	* Construct a DTMDefaultBaseTraversers object from a DOM node.
@@ -52,7 +52,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @param usePrevsib true if we want to build the previous sibling node array.
 	* @param newNameTable true if we want to use a new ExpandedNameTable for this DTM.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, newNameTable : Bool) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, source : javax.xml.transform.Source, dtmIdentity : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory, doIndexing : Bool, blocksize : Int, usePrevsib : Bool, newNameTable : Bool) : Void;
 	
 	/**
 	* Get an iterator that can navigate over an XPath Axis, predicated by
@@ -65,7 +65,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator, or null if the given axis isn't supported.
 	*/
-	@:overload override public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* This is a shortcut to the iterators that implement the
@@ -77,7 +77,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator, or null if the given axis isn't supported.
 	*/
-	@:overload override public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
@@ -96,21 +96,21 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* returned (starting point for the next() search); for single-node
 	* iterators it may instead be initialized to point to that single node.
 	*/
-	private var _currentNode : Int;
+	@:protected private var _currentNode : Int;
 	
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*
 	* %REVIEW% Should this save _position too?
 	*/
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*
 	* %REVEIW% Should this restore _position too?
 	*/
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }
@@ -131,7 +131,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
@@ -139,7 +139,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @return The next node handle in the iteration, or END if no more
 	* are available.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -158,7 +158,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set the node type of the parent that we're looking for.
@@ -170,7 +170,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return ParentIterator configured with the type filter set.
 	*/
-	@:overload public function setNodeType(type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function setNodeType(type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration. In this case, we return
@@ -178,7 +178,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -196,7 +196,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -206,14 +206,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -231,7 +231,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -241,14 +241,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -261,7 +261,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	/**
 	* Constructor NamespaceAttributeIterator
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -271,14 +271,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -294,14 +294,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -314,7 +314,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	/**
 	* Constructor RootIterator
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -324,14 +324,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -346,14 +346,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -368,7 +368,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nsType The extended type ID being requested.
 	*/
-	@:overload public function new(nsType : Int) : Void;
+	@:overload @:public public function new(nsType : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -378,14 +378,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -402,14 +402,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -424,14 +424,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -448,14 +448,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -470,7 +470,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nodeType The extended type ID that is requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -480,14 +480,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -499,14 +499,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	/**
 	* The node identity of _startNode for this iterator
 	*/
-	private var _startNodeID : Int;
+	@:protected private var _startNodeID : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true.
 	*/
-	@:overload override public function isReverse() : Bool;
+	@:overload @:public override public function isReverse() : Bool;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -516,14 +516,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -539,14 +539,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -561,26 +561,32 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* The stack of start node + ancestors up to the root of the tree,
 	*  which we must avoid.
 	*/
-	private var _stack : java.NativeArray<Int>;
+	@:protected private var _stack : java.NativeArray<Int>;
 	
 	/** (not sure yet... -sb) */
-	private var _sp : Int;
+	@:protected private var _sp : Int;
 	
-	private var _markedsp : Int;
+	@:protected private var _oldsp : Int;
+	
+	@:protected private var _markedsp : Int;
+	
+	@:protected private var _markedNode : Int;
+	
+	@:protected private var _markedDescendant : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true since this iterator is a reversed axis.
 	*/
-	@:overload override public function isReverse() : Bool;
+	@:overload @:public override public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.   The cloned iterator is not reset.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -590,14 +596,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -605,11 +611,11 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }
@@ -626,14 +632,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -642,7 +648,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 */
 @:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$FollowingIterator') extern class DTMDefaultBaseIterators_FollowingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -652,14 +658,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -674,14 +680,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -697,21 +703,21 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return The root node of the iteration.
 	*/
-	@:overload override public function getStartNode() : Int;
+	@:overload @:public override public function getStartNode() : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true since this iterator is a reversed axis.
 	*/
-	@:overload @:final override public function isReverse() : Bool;
+	@:overload @:public @:final override public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.  The cloned iterator is not reset.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -721,7 +727,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -729,18 +735,18 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }
@@ -755,7 +761,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param type The extended type ID being requested.
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -765,7 +771,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
@@ -782,7 +788,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Tell if this node identity is a descendant.  Assumes that
@@ -798,20 +804,20 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @param identity The index number of the node in question.
 	* @return true if the index is a descendant of _startNode.
 	*/
-	@:overload private function isDescendant(identity : Int) : Bool;
+	@:overload @:protected private function isDescendant(identity : Int) : Bool;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Reset.
 	*
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
@@ -826,14 +832,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nodeType Extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -849,14 +855,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param pos The nth position being requested.
 	*/
-	@:overload public function new(pos : Int) : Void;
+	@:overload @:public public function new(pos : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -869,7 +875,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* Constructor SingletonIterator
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor SingletonIterator
@@ -877,7 +883,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param node The node handle to return.
 	*/
-	@:overload public function new(node : Int) : Void;
+	@:overload @:public public function new(node : Int) : Void;
 	
 	/**
 	* Constructor SingletonIterator
@@ -886,7 +892,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @param node the node handle to return.
 	* @param constant (Not sure what this is yet.  -sb)
 	*/
-	@:overload public function new(node : Int, constant : Bool) : Void;
+	@:overload @:public public function new(node : Int, constant : Bool) : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -896,7 +902,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -904,14 +910,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }
@@ -926,14 +932,14 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 	*
 	* @param nodeType The extended type ID being requested.
 	*/
-	@:overload public function new(nodeType : Int) : Void;
+	@:overload @:public public function new(nodeType : Int) : Void;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	
 }

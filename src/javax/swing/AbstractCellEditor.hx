@@ -46,46 +46,46 @@ extern class AbstractCellEditor implements javax.swing.CellEditor implements jav
 	* @author Philip Milne
 	* @since 1.3
 	*/
-	@:require(java3) private var listenerList : javax.swing.event.EventListenerList;
+	@:require(java3) @:protected private var listenerList : javax.swing.event.EventListenerList;
 	
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:transient @:protected private var changeEvent : javax.swing.event.ChangeEvent;
 	
 	/**
 	* Returns true.
 	* @param e  an event object
 	* @return true
 	*/
-	@:overload public function isCellEditable(e : java.util.EventObject) : Bool;
+	@:overload @:public public function isCellEditable(e : java.util.EventObject) : Bool;
 	
 	/**
 	* Returns true.
 	* @param anEvent  an event object
 	* @return true
 	*/
-	@:overload public function shouldSelectCell(anEvent : java.util.EventObject) : Bool;
+	@:overload @:public public function shouldSelectCell(anEvent : java.util.EventObject) : Bool;
 	
 	/**
 	* Calls <code>fireEditingStopped</code> and returns true.
 	* @return true
 	*/
-	@:overload public function stopCellEditing() : Bool;
+	@:overload @:public public function stopCellEditing() : Bool;
 	
 	/**
 	* Calls <code>fireEditingCanceled</code>.
 	*/
-	@:overload public function cancelCellEditing() : Void;
+	@:overload @:public public function cancelCellEditing() : Void;
 	
 	/**
 	* Adds a <code>CellEditorListener</code> to the listener list.
 	* @param l  the new listener to be added
 	*/
-	@:overload public function addCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
+	@:overload @:public public function addCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
 	
 	/**
 	* Removes a <code>CellEditorListener</code> from the listener list.
 	* @param l  the listener to be removed
 	*/
-	@:overload public function removeCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
+	@:overload @:public public function removeCellEditorListener(l : javax.swing.event.CellEditorListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>CellEditorListener</code>s added
@@ -95,7 +95,7 @@ extern class AbstractCellEditor implements javax.swing.CellEditor implements jav
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCellEditorListeners() : java.NativeArray<javax.swing.event.CellEditorListener>;
+	@:require(java4) @:overload @:public public function getCellEditorListeners() : java.NativeArray<javax.swing.event.CellEditorListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -104,7 +104,7 @@ extern class AbstractCellEditor implements javax.swing.CellEditor implements jav
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireEditingStopped() : Void;
+	@:overload @:protected private function fireEditingStopped() : Void;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -113,13 +113,13 @@ extern class AbstractCellEditor implements javax.swing.CellEditor implements jav
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireEditingCanceled() : Void;
+	@:overload @:protected private function fireEditingCanceled() : Void;
 	
 	/**
 	* Returns the value contained in the editor.
 	* @return the value contained in the editor
 	*/
-	@:overload @:public public function getCellEditorValue() : Dynamic;
+	@:overload @:public @:public public function getCellEditorValue() : Dynamic;
 	
 	
 }

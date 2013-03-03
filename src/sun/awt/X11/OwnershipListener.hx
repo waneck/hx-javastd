@@ -25,7 +25,7 @@ package sun.awt.X11;
 */
 @:internal extern interface OwnershipListener
 {
-	@:overload public function ownershipChanged(isOwner : Bool) : Void;
+	@:overload @:public public function ownershipChanged(isOwner : Bool) : Void;
 	
 	
 }

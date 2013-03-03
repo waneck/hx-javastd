@@ -27,14 +27,14 @@ extern class DTMAxisIterNodeList extends com.sun.org.apache.xml.internal.dtm.ref
 	* Public constructor: Wrap a DTMNodeList around an existing
 	* and preconfigured DTMAxisIterator
 	*/
-	@:overload public function new(dtm : com.sun.org.apache.xml.internal.dtm.DTM, dtmAxisIterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
+	@:overload @:public public function new(dtm : com.sun.org.apache.xml.internal.dtm.DTM, dtmAxisIterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
 	
 	/**
 	* Access the wrapped DTMIterator. I'm not sure whether anyone will
 	* need this or not, but let's write it and think about it.
 	*
 	*/
-	@:overload public function getDTMAxisIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function getDTMAxisIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection. If
@@ -45,13 +45,13 @@ extern class DTMAxisIterNodeList extends com.sun.org.apache.xml.internal.dtm.ref
 	*   <code>NodeList</code>, or <code>null</code> if that is not a valid
 	*   index.
 	*/
-	@:overload override public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public override public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* The number of nodes in the list. The range of valid child node indices
 	* is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	
 }

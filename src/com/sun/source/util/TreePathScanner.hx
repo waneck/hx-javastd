@@ -39,19 +39,19 @@ package com.sun.source.util;
 	/**
 	* Scan a tree from a position identified by a TreePath.
 	*/
-	@:overload public function scan(path : com.sun.source.util.TreePath, p : P) : R;
+	@:overload @:public public function scan(path : com.sun.source.util.TreePath, p : P) : R;
 	
 	/**
 	* Scan a single node.
 	* The current path is updated for the duration of the scan.
 	*/
-	@:overload override public function scan(tree : com.sun.source.tree.Tree, p : P) : R;
+	@:overload @:public override public function scan(tree : com.sun.source.tree.Tree, p : P) : R;
 	
 	/**
 	* Get the current path for the node, as built up by the currently
 	* active set of scan calls.
 	*/
-	@:overload public function getCurrentPath() : com.sun.source.util.TreePath;
+	@:overload @:public public function getCurrentPath() : com.sun.source.util.TreePath;
 	
 	
 }

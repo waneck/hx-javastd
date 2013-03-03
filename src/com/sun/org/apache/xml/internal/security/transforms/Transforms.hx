@@ -22,48 +22,48 @@ package com.sun.org.apache.xml.internal.security.transforms;
 extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.SignatureElementProxy
 {
 	/** Canonicalization - Required Canonical XML (omits comments) */
-	public static var TRANSFORM_C14N_OMIT_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_C14N_OMIT_COMMENTS(default, null) : String;
 	
 	/** Canonicalization - Recommended Canonical XML with Comments */
-	public static var TRANSFORM_C14N_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_C14N_WITH_COMMENTS(default, null) : String;
 	
 	/** Canonicalization - Required Canonical XML 1.1 (omits comments) */
-	public static var TRANSFORM_C14N11_OMIT_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_C14N11_OMIT_COMMENTS(default, null) : String;
 	
 	/** Canonicalization - Recommended Canonical XML 1.1 with Comments */
-	public static var TRANSFORM_C14N11_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_C14N11_WITH_COMMENTS(default, null) : String;
 	
 	/** Canonicalization - Required Exclusive Canonicalization (omits comments) */
-	public static var TRANSFORM_C14N_EXCL_OMIT_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_C14N_EXCL_OMIT_COMMENTS(default, null) : String;
 	
 	/** Canonicalization - Recommended Exclusive Canonicalization with Comments */
-	public static var TRANSFORM_C14N_EXCL_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_C14N_EXCL_WITH_COMMENTS(default, null) : String;
 	
 	/** Transform - Optional XSLT */
-	public static var TRANSFORM_XSLT(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_XSLT(default, null) : String;
 	
 	/** Transform - Required base64 decoding */
-	public static var TRANSFORM_BASE64_DECODE(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_BASE64_DECODE(default, null) : String;
 	
 	/** Transform - Recommended XPath */
-	public static var TRANSFORM_XPATH(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_XPATH(default, null) : String;
 	
 	/** Transform - Required Enveloped Signature */
-	public static var TRANSFORM_ENVELOPED_SIGNATURE(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_ENVELOPED_SIGNATURE(default, null) : String;
 	
 	/** Transform - XPointer */
-	public static var TRANSFORM_XPOINTER(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_XPOINTER(default, null) : String;
 	
 	/** Transform - XPath Filter v2.0 */
-	public static var TRANSFORM_XPATH2FILTER04(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_XPATH2FILTER04(default, null) : String;
 	
 	/** Transform - XPath Filter */
-	public static var TRANSFORM_XPATH2FILTER(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_XPATH2FILTER(default, null) : String;
 	
 	/** Transform - XPath Filter  CHGP private */
-	public static var TRANSFORM_XPATHFILTERCHGP(default, null) : String;
+	@:public @:static @:final public static var TRANSFORM_XPATHFILTERCHGP(default, null) : String;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs {@link Transforms}.
@@ -71,7 +71,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @param doc the {@link Document} in which <code>XMLSignature</code> will
 	* be placed
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructs {@link Transforms} from {@link Element} which is
@@ -85,7 +85,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @throws XMLSecurityException
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Adds the <code>Transform</code> with the specified <code>Transform
@@ -95,7 +95,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* transformation is applied to data
 	* @throws TransformationException
 	*/
-	@:overload public function addTransform(transformURI : String) : Void;
+	@:overload @:public public function addTransform(transformURI : String) : Void;
 	
 	/**
 	* Adds the <code>Transform</code> with the specified <code>Transform
@@ -107,7 +107,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @throws TransformationException
 	* @see Transform#getInstance(Document doc, String algorithmURI, Element childElement)
 	*/
-	@:overload public function addTransform(transformURI : String, contextElement : org.w3c.dom.Element) : Void;
+	@:overload @:public public function addTransform(transformURI : String, contextElement : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Adds the <code>Transform</code> with the specified <code>Transform
@@ -119,7 +119,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @throws TransformationException
 	* @see Transform#getInstance(Document doc, String algorithmURI, NodeList contextNodes)
 	*/
-	@:overload public function addTransform(transformURI : String, contextNodes : org.w3c.dom.NodeList) : Void;
+	@:overload @:public public function addTransform(transformURI : String, contextNodes : org.w3c.dom.NodeList) : Void;
 	
 	/**
 	* Applies all included <code>Transform</code>s to xmlSignatureInput and
@@ -129,7 +129,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @return the result of the <code>Transforms</code>
 	* @throws TransformationException
 	*/
-	@:overload public function performTransforms(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function performTransforms(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Applies all included <code>Transform</code>s to xmlSignatureInput and
@@ -140,14 +140,14 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @return the result of the <code>Transforms</code>
 	* @throws TransformationException
 	*/
-	@:overload public function performTransforms(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function performTransforms(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Return the nonnegative number of transformations.
 	*
 	* @return the number of transformations
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return the <it>i</it><sup>th</sup> <code>{@link Transform}</code>.
@@ -157,10 +157,10 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	* @return the <it>i</it><sup>th</sup> Transform
 	* @throws TransformationException
 	*/
-	@:overload public function item(i : Int) : com.sun.org.apache.xml.internal.security.transforms.Transform;
+	@:overload @:public public function item(i : Int) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

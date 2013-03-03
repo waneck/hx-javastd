@@ -32,7 +32,7 @@ extern class CallSite
 	* not have the previous target's type.
 	* @return the type of the current target, which is also the type of any future target
 	*/
-	@:overload public function type() : java.lang.invoke.MethodType;
+	@:overload @:public public function type() : java.lang.invoke.MethodType;
 	
 	/**
 	* Returns the target method of the call site, according to the
@@ -48,7 +48,7 @@ extern class CallSite
 	* @see MutableCallSite#getTarget
 	* @see VolatileCallSite#getTarget
 	*/
-	@:overload @:abstract public function getTarget() : java.lang.invoke.MethodHandle;
+	@:overload @:public @:abstract public function getTarget() : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Updates the target method of this call site, according to the
@@ -68,7 +68,7 @@ extern class CallSite
 	* @see MutableCallSite#setTarget
 	* @see VolatileCallSite#setTarget
 	*/
-	@:overload @:abstract public function setTarget(newTarget : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:public @:abstract public function setTarget(newTarget : java.lang.invoke.MethodHandle) : Void;
 	
 	/**
 	* Produces a method handle equivalent to an invokedynamic instruction
@@ -84,7 +84,7 @@ extern class CallSite
 	*
 	* @return a method handle which always invokes this call site's current target
 	*/
-	@:overload @:abstract public function dynamicInvoker() : java.lang.invoke.MethodHandle;
+	@:overload @:public @:abstract public function dynamicInvoker() : java.lang.invoke.MethodHandle;
 	
 	
 }

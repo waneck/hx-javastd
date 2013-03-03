@@ -50,14 +50,14 @@ extern class CompoundBorder extends javax.swing.border.AbstractBorder
 	*
 	* @author David Kloba
 	*/
-	private var outsideBorder : javax.swing.border.Border;
+	@:protected private var outsideBorder : javax.swing.border.Border;
 	
-	private var insideBorder : javax.swing.border.Border;
+	@:protected private var insideBorder : javax.swing.border.Border;
 	
 	/**
 	* Creates a compound border with null outside and inside borders.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a compound border with the specified outside and
@@ -65,7 +65,7 @@ extern class CompoundBorder extends javax.swing.border.AbstractBorder
 	* @param outsideBorder the outside border
 	* @param insideBorder the inside border to be nested
 	*/
-	@:overload public function new(outsideBorder : javax.swing.border.Border, insideBorder : javax.swing.border.Border) : Void;
+	@:overload @:public public function new(outsideBorder : javax.swing.border.Border, insideBorder : javax.swing.border.Border) : Void;
 	
 	/**
 	* Returns whether or not the compound border is opaque.
@@ -74,7 +74,7 @@ extern class CompoundBorder extends javax.swing.border.AbstractBorder
 	*         are each either {@code null} or opaque;
 	*         or {@code false} otherwise
 	*/
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	/**
 	* Paints the compound border by painting the outside border
@@ -88,24 +88,24 @@ extern class CompoundBorder extends javax.swing.border.AbstractBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the outside border object.
 	*/
-	@:overload public function getOutsideBorder() : javax.swing.border.Border;
+	@:overload @:public public function getOutsideBorder() : javax.swing.border.Border;
 	
 	/**
 	* Returns the inside border object.
 	*/
-	@:overload public function getInsideBorder() : javax.swing.border.Border;
+	@:overload @:public public function getInsideBorder() : javax.swing.border.Border;
 	
 	
 }

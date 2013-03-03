@@ -45,11 +45,11 @@ extern class TransitedEncoding
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var trType : Int;
+	@:public public var trType : Int;
 	
-	public var contents : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var contents : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(type : Int, cont : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(type : Int, cont : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a TransitedEncoding object.
@@ -57,7 +57,7 @@ extern class TransitedEncoding
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes a TransitedEncoding object.
@@ -65,7 +65,7 @@ extern class TransitedEncoding
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) a TransitedEncoding object from a DER input stream.  This form
@@ -79,7 +79,7 @@ extern class TransitedEncoding
 	* @return an instance of TransitedEncoding.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.TransitedEncoding;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.TransitedEncoding;
 	
 	
 }

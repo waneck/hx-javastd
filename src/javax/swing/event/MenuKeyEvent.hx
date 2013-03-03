@@ -42,21 +42,21 @@ extern class MenuKeyEvent extends java.awt.event.KeyEvent
 	*                     to a menu item affected by the drag
 	* @param m          a MenuSelectionManager object that handles selections
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, keyCode : Int, keyChar : java.StdTypes.Char16, p : java.NativeArray<javax.swing.MenuElement>, m : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, when : haxe.Int64, modifiers : Int, keyCode : Int, keyChar : java.StdTypes.Char16, p : java.NativeArray<javax.swing.MenuElement>, m : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Returns the path to the menu item referenced by this event.
 	*
 	* @return an array of MenuElement objects representing the path value
 	*/
-	@:overload public function getPath() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getPath() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Returns the current menu selection manager.
 	*
 	* @return a MenuSelectionManager object
 	*/
-	@:overload public function getMenuSelectionManager() : javax.swing.MenuSelectionManager;
+	@:overload @:public public function getMenuSelectionManager() : javax.swing.MenuSelectionManager;
 	
 	
 }

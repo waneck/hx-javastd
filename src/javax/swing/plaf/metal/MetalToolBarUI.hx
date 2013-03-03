@@ -38,7 +38,7 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 	*
 	* @see #createContainerListener
 	*/
-	private var contListener : java.awt.event.ContainerListener;
+	@:protected private var contListener : java.awt.event.ContainerListener;
 	
 	/**
 	* This protected field is implemenation specific. Do not access directly
@@ -46,23 +46,23 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 	*
 	* @see #createRolloverListener
 	*/
-	private var rolloverListener : java.beans.PropertyChangeListener;
+	@:protected private var rolloverListener : java.beans.PropertyChangeListener;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload override private function createRolloverBorder() : javax.swing.border.Border;
+	@:overload @:protected override private function createRolloverBorder() : javax.swing.border.Border;
 	
-	@:overload override private function createNonRolloverBorder() : javax.swing.border.Border;
+	@:overload @:protected override private function createNonRolloverBorder() : javax.swing.border.Border;
 	
-	@:overload override private function setBorderToNonRollover(c : java.awt.Component) : Void;
+	@:overload @:protected override private function setBorderToNonRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* Creates a container listener that will be added to the JToolBar.
@@ -71,7 +71,7 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 	*
 	* @return an instance of a <code>ContainerListener</code> or null
 	*/
-	@:overload private function createContainerListener() : java.awt.event.ContainerListener;
+	@:overload @:protected private function createContainerListener() : java.awt.event.ContainerListener;
 	
 	/**
 	* Creates a property change listener that will be added to the JToolBar.
@@ -80,11 +80,11 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 	*
 	* @return an instance of a <code>PropertyChangeListener</code> or null
 	*/
-	@:overload private function createRolloverListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createRolloverListener() : java.beans.PropertyChangeListener;
 	
-	@:overload override private function createDockingListener() : javax.swing.event.MouseInputListener;
+	@:overload @:protected override private function createDockingListener() : javax.swing.event.MouseInputListener;
 	
-	@:overload private function setDragOffset(p : java.awt.Point) : Void;
+	@:overload @:protected private function setDragOffset(p : java.awt.Point) : Void;
 	
 	/**
 	* If necessary paints the background of the component, then invokes
@@ -98,7 +98,7 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 	* @see javax.swing.plaf.ComponentUI#paint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }
@@ -112,11 +112,11 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 }
 @:native('javax$swing$plaf$metal$MetalToolBarUI$MetalDockingListener') extern class MetalToolBarUI_MetalDockingListener extends javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DockingListener
 {
-	@:overload public function new(t : javax.swing.JToolBar) : Void;
+	@:overload @:public public function new(t : javax.swing.JToolBar) : Void;
 	
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

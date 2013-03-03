@@ -48,24 +48,24 @@ extern interface HTMLLabelElement extends org.w3c.dom.html.HTMLElement
 	*  Returns the <code>FORM</code> element containing this control. Returns
 	* <code>null</code> if this control is not within the context of a form.
 	*/
-	@:overload public function getForm() : org.w3c.dom.html.HTMLFormElement;
+	@:overload @:public public function getForm() : org.w3c.dom.html.HTMLFormElement;
 	
 	/**
 	*  A single character access key to give access to the form control. See
 	* the  accesskey attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAccessKey() : String;
+	@:overload @:public public function getAccessKey() : String;
 	
-	@:overload public function setAccessKey(accessKey : String) : Void;
+	@:overload @:public public function setAccessKey(accessKey : String) : Void;
 	
 	/**
 	*  This attribute links this label with another form control by
 	* <code>id</code> attribute. See the  for attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getHtmlFor() : String;
+	@:overload @:public public function getHtmlFor() : String;
 	
-	@:overload public function setHtmlFor(htmlFor : String) : Void;
+	@:overload @:public public function setHtmlFor(htmlFor : String) : Void;
 	
 	
 }

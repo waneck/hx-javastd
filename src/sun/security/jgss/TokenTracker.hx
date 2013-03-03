@@ -25,7 +25,7 @@ package sun.security.jgss;
 */
 extern class TokenTracker
 {
-	@:overload public function new(initNumber : Int) : Void;
+	@:overload @:public public function new(initNumber : Int) : Void;
 	
 	/**
 	* Sets the sequencing and replay information for the given token
@@ -73,9 +73,9 @@ extern class TokenTracker
 	* (This analysis leaves out the possibility that expectedNumber passes
 	* initNumber after wrapping around. That may be added later.)
 	*/
-	@:overload @:synchronized @:final public function getProps(number : Int, prop : org.ietf.jgss.MessageProp) : Void;
+	@:overload @:synchronized @:public @:final public function getProps(number : Int, prop : org.ietf.jgss.MessageProp) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -86,7 +86,7 @@ extern class TokenTracker
 */
 @:native('sun$security$jgss$TokenTracker$Entry') @:internal extern class TokenTracker_Entry
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

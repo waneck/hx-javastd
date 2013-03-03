@@ -15,17 +15,17 @@ package org.omg.CORBA;
 */
 extern class ParameterModeHelper
 {
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : org.omg.CORBA.ParameterMode) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : org.omg.CORBA.ParameterMode) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : org.omg.CORBA.ParameterMode;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : org.omg.CORBA.ParameterMode;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.CORBA.ParameterMode;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.CORBA.ParameterMode;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.CORBA.ParameterMode) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.CORBA.ParameterMode) : Void;
 	
 	
 }

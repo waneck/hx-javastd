@@ -31,7 +31,7 @@ package com.sun.rowset;
 */
 extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax.sql.rowset.JdbcRowSet implements javax.sql.rowset.Joinable
 {
-	@:transient private var resBundle : com.sun.rowset.JdbcRowSetResourceBundle;
+	@:protected @:transient private var resBundle : com.sun.rowset.JdbcRowSetResourceBundle;
 	
 	/**
 	* Constructs a default <code>JdbcRowSet</code> object.
@@ -64,7 +64,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* to calling the <code>execute</code> method; [2] if invalid JDBC driver
 	* properties are set or [3] if no connection to a data source exists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a default <code>JdbcRowSet</code> object given a
@@ -98,7 +98,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* to calling the <code>execute</code> method, [2] if invalid JDBC driver
 	* properties are set, or [3] if no connection to a data source exists.
 	*/
-	@:overload public function new(con : java.sql.Connection) : Void;
+	@:overload @:public public function new(con : java.sql.Connection) : Void;
 	
 	/**
 	* Constructs a default <code>JdbcRowSet</code> object using the
@@ -135,7 +135,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function new(url : String, user : String, password : String) : Void;
+	@:overload @:public public function new(url : String, user : String, password : String) : Void;
 	
 	/**
 	* Constructs a <code>JdbcRowSet</code> object using the given valid
@@ -167,7 +167,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access occurs due to a non
 	* valid ResultSet handle.
 	*/
-	@:overload public function new(res : java.sql.ResultSet) : Void;
+	@:overload @:public public function new(res : java.sql.ResultSet) : Void;
 	
 	/**
 	* Initializes the given <code>RowSetMetaData</code> object with the values
@@ -180,9 +180,9 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             values for md will be read
 	* @throws SQLException if an error occurs
 	*/
-	@:overload private function initMetaData(md : javax.sql.RowSetMetaData, rsmd : java.sql.ResultSetMetaData) : Void;
+	@:overload @:protected private function initMetaData(md : javax.sql.RowSetMetaData, rsmd : java.sql.ResultSetMetaData) : Void;
 	
-	@:overload private function checkState() : Void;
+	@:overload @:protected private function checkState() : Void;
 	
 	/**
 	* Creates the internal <code>ResultSet</code> object for which this
@@ -211,13 +211,13 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* (2) any required JDBC properties are not set, or (3) if an
 	* invalid connection exists.
 	*/
-	@:overload public function execute() : Void;
+	@:overload @:public public function execute() : Void;
 	
-	@:overload private function setProperties(ps : java.sql.PreparedStatement) : Void;
+	@:overload @:protected private function setProperties(ps : java.sql.PreparedStatement) : Void;
 	
-	@:overload private function connect() : java.sql.Connection;
+	@:overload @:protected private function connect() : java.sql.Connection;
 	
-	@:overload private function prepare() : java.sql.PreparedStatement;
+	@:overload @:protected private function prepare() : java.sql.PreparedStatement;
 	
 	/**
 	* Moves the cursor for this rowset's <code>ResultSet</code>
@@ -238,7 +238,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function next() : Bool;
+	@:overload @:public public function next() : Bool;
 	
 	/**
 	* Releases this rowset's <code>ResultSet</code> object's database and
@@ -255,7 +255,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Reports whether the last column read from this rowset's
@@ -271,7 +271,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function wasNull() : Bool;
+	@:overload @:public public function wasNull() : Bool;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -285,7 +285,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getString(columnIndex : Int) : String;
+	@:overload @:public public function getString(columnIndex : Int) : String;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -299,7 +299,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBoolean(columnIndex : Int) : Bool;
+	@:overload @:public public function getBoolean(columnIndex : Int) : Bool;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -313,7 +313,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getByte(columnIndex : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getByte(columnIndex : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -327,7 +327,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getShort(columnIndex : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(columnIndex : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -341,7 +341,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getInt(columnIndex : Int) : Int;
+	@:overload @:public public function getInt(columnIndex : Int) : Int;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -355,7 +355,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getLong(columnIndex : Int) : haxe.Int64;
+	@:overload @:public public function getLong(columnIndex : Int) : haxe.Int64;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -369,7 +369,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getFloat(columnIndex : Int) : Single;
+	@:overload @:public public function getFloat(columnIndex : Int) : Single;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -383,7 +383,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getDouble(columnIndex : Int) : Float;
+	@:overload @:public public function getDouble(columnIndex : Int) : Float;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -399,7 +399,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	* @deprecated
 	*/
-	@:overload public function getBigDecimal(columnIndex : Int, scale : Int) : java.math.BigDecimal;
+	@:overload @:public public function getBigDecimal(columnIndex : Int, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -414,7 +414,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBytes(columnIndex : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes(columnIndex : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -428,7 +428,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getDate(columnIndex : Int) : java.sql.Date;
+	@:overload @:public public function getDate(columnIndex : Int) : java.sql.Date;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -442,7 +442,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTime(columnIndex : Int) : java.sql.Time;
+	@:overload @:public public function getTime(columnIndex : Int) : java.sql.Time;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -456,7 +456,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTimestamp(columnIndex : Int) : java.sql.Timestamp;
+	@:overload @:public public function getTimestamp(columnIndex : Int) : java.sql.Timestamp;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -483,7 +483,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getAsciiStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public public function getAsciiStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -513,7 +513,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @deprecated use <code>getCharacterStream</code> in place of
 	*              <code>getUnicodeStream</code>
 	*/
-	@:overload public function getUnicodeStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public public function getUnicodeStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* Gets the value of a column in the current row as a stream of
@@ -538,7 +538,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBinaryStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public public function getBinaryStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -552,7 +552,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getString(columnName : String) : String;
+	@:overload @:public public function getString(columnName : String) : String;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -566,7 +566,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBoolean(columnName : String) : Bool;
+	@:overload @:public public function getBoolean(columnName : String) : Bool;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -580,7 +580,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getByte(columnName : String) : java.StdTypes.Int8;
+	@:overload @:public public function getByte(columnName : String) : java.StdTypes.Int8;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -594,7 +594,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getShort(columnName : String) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(columnName : String) : java.StdTypes.Int16;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -608,7 +608,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getInt(columnName : String) : Int;
+	@:overload @:public public function getInt(columnName : String) : Int;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -622,7 +622,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getLong(columnName : String) : haxe.Int64;
+	@:overload @:public public function getLong(columnName : String) : haxe.Int64;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -636,7 +636,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getFloat(columnName : String) : Single;
+	@:overload @:public public function getFloat(columnName : String) : Single;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -650,7 +650,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getDouble(columnName : String) : Float;
+	@:overload @:public public function getDouble(columnName : String) : Float;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -666,7 +666,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	* @deprecated
 	*/
-	@:overload public function getBigDecimal(columnName : String, scale : Int) : java.math.BigDecimal;
+	@:overload @:public public function getBigDecimal(columnName : String, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -681,7 +681,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBytes(columnName : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes(columnName : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -695,7 +695,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getDate(columnName : String) : java.sql.Date;
+	@:overload @:public public function getDate(columnName : String) : java.sql.Date;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -710,7 +710,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTime(columnName : String) : java.sql.Time;
+	@:overload @:public public function getTime(columnName : String) : java.sql.Time;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -724,7 +724,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTimestamp(columnName : String) : java.sql.Timestamp;
+	@:overload @:public public function getTimestamp(columnName : String) : java.sql.Timestamp;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -750,7 +750,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getAsciiStream(columnName : String) : java.io.InputStream;
+	@:overload @:public public function getAsciiStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -779,7 +779,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	* @deprecated
 	*/
-	@:overload public function getUnicodeStream(columnName : String) : java.io.InputStream;
+	@:overload @:public public function getUnicodeStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -804,7 +804,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBinaryStream(columnName : String) : java.io.InputStream;
+	@:overload @:public public function getBinaryStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* Returns the first warning reported by calls on this rowset's
@@ -827,7 +827,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getWarnings() : java.sql.SQLWarning;
+	@:overload @:public public function getWarnings() : java.sql.SQLWarning;
 	
 	/**
 	* Clears all warnings reported on this rowset's <code>ResultSet</code> object.
@@ -839,7 +839,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function clearWarnings() : Void;
+	@:overload @:public public function clearWarnings() : Void;
 	
 	/**
 	* Gets the name of the SQL cursor used by this rowset's <code>ResultSet</code>
@@ -866,7 +866,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) xthis rowset does not have a currently valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getCursorName() : String;
+	@:overload @:public public function getCursorName() : String;
 	
 	/**
 	* Retrieves the  number, types and properties of
@@ -878,7 +878,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*     or (2) this rowset does not have a currently valid connection,
 	*     prepared statement, and result set
 	*/
-	@:overload public function getMetaData() : java.sql.ResultSetMetaData;
+	@:overload @:public public function getMetaData() : java.sql.ResultSetMetaData;
 	
 	/**
 	* <p>Gets the value of the designated column in the current row
@@ -907,7 +907,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getObject(columnIndex : Int) : Dynamic;
+	@:overload @:public public function getObject(columnIndex : Int) : Dynamic;
 	
 	/**
 	* <p>Gets the value of the designated column in the current row
@@ -936,7 +936,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getObject(columnName : String) : Dynamic;
+	@:overload @:public public function getObject(columnName : String) : Dynamic;
 	
 	/**
 	* Maps the given <code>JdbcRowSetImpl</code> column name to its
@@ -949,7 +949,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* (2) this rowset does not have a currently valid connection,
 	* prepared statement, and result set
 	*/
-	@:overload public function findColumn(columnName : String) : Int;
+	@:overload @:public public function findColumn(columnName : String) : Int;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -961,7 +961,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @param columnIndex the first column is 1, the second is 2, and so on
 	*
 	*/
-	@:overload public function getCharacterStream(columnIndex : Int) : java.io.Reader;
+	@:overload @:public public function getCharacterStream(columnIndex : Int) : java.io.Reader;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -975,7 +975,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @return the value in the specified column as a <code>java.io.Reader</code>
 	*
 	*/
-	@:overload public function getCharacterStream(columnName : String) : java.io.Reader;
+	@:overload @:public public function getCharacterStream(columnName : String) : java.io.Reader;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -990,7 +990,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function getBigDecimal(columnIndex : Int) : java.math.BigDecimal;
+	@:overload @:public public function getBigDecimal(columnIndex : Int) : java.math.BigDecimal;
 	
 	/**
 	* Gets the value of the designated column in the current row
@@ -1005,7 +1005,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function getBigDecimal(columnName : String) : java.math.BigDecimal;
+	@:overload @:public public function getBigDecimal(columnName : String) : java.math.BigDecimal;
 	
 	/**
 	* Indicates whether the cursor is before the first row in
@@ -1018,7 +1018,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function isBeforeFirst() : Bool;
+	@:overload @:public public function isBeforeFirst() : Bool;
 	
 	/**
 	* Indicates whether the cursor is after the last row in
@@ -1031,7 +1031,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function isAfterLast() : Bool;
+	@:overload @:public public function isAfterLast() : Bool;
 	
 	/**
 	* Indicates whether the cursor is on the first row of
@@ -1043,7 +1043,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function isFirst() : Bool;
+	@:overload @:public public function isFirst() : Bool;
 	
 	/**
 	* Indicates whether the cursor is on the last row of
@@ -1060,7 +1060,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            connection, prepared statement, and result set
 	*
 	*/
-	@:overload public function isLast() : Bool;
+	@:overload @:public public function isLast() : Bool;
 	
 	/**
 	* Moves the cursor to the front of
@@ -1072,7 +1072,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (3) this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function beforeFirst() : Void;
+	@:overload @:public public function beforeFirst() : Void;
 	
 	/**
 	* Moves the cursor to the end of
@@ -1083,7 +1083,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (3) this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function afterLast() : Void;
+	@:overload @:public public function afterLast() : Void;
 	
 	/**
 	* Moves the cursor to the first row in
@@ -1096,7 +1096,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (3) this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function first() : Bool;
+	@:overload @:public public function first() : Bool;
 	
 	/**
 	* Moves the cursor to the last row in
@@ -1109,7 +1109,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (3) this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function last() : Bool;
+	@:overload @:public public function last() : Bool;
 	
 	/**
 	* Retrieves the current row number.  The first row is number 1, the
@@ -1120,7 +1120,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getRow() : Int;
+	@:overload @:public public function getRow() : Int;
 	
 	/**
 	* Moves the cursor to the given row number in
@@ -1154,7 +1154,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function absolute(row : Int) : Bool;
+	@:overload @:public public function absolute(row : Int) : Bool;
 	
 	/**
 	* Moves the cursor a relative number of rows, either positive or negative.
@@ -1178,7 +1178,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function relative(rows : Int) : Bool;
+	@:overload @:public public function relative(rows : Int) : Bool;
 	
 	/**
 	* Moves the cursor to the previous row in this
@@ -1195,7 +1195,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (3) this rowset does not currently have a valid
 	*            connection, prepared statement, and result set
 	*/
-	@:overload public function previous() : Bool;
+	@:overload @:public public function previous() : Bool;
 	
 	/**
 	* Gives a hint as to the direction in which the rows in this
@@ -1212,7 +1212,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            connection, prepared statement, and result set
 	* @see java.sql.Statement#setFetchDirection
 	*/
-	@:overload public function setFetchDirection(direction : Int) : Void;
+	@:overload @:public override public function setFetchDirection(direction : Int) : Void;
 	
 	/**
 	* Returns the fetch direction for this
@@ -1224,7 +1224,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getFetchDirection() : Int;
+	@:overload @:public override public function getFetchDirection() : Int;
 	
 	/**
 	* Gives the JDBC driver a hint as to the number of rows that should
@@ -1243,7 +1243,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            connection, prepared statement, and result set
 	*
 	*/
-	@:overload public function setFetchSize(rows : Int) : Void;
+	@:overload @:public override public function setFetchSize(rows : Int) : Void;
 	
 	/**
 	*
@@ -1255,7 +1255,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
 	/**
 	* Returns the concurrency mode of this rowset's <code>ResultSet</code> object.
@@ -1268,7 +1268,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getConcurrency() : Int;
+	@:overload @:public override public function getConcurrency() : Int;
 	
 	/**
 	* Indicates whether the current row has been updated.  The value returned
@@ -1281,7 +1281,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	* @see java.sql.DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function rowUpdated() : Bool;
+	@:overload @:public public function rowUpdated() : Bool;
 	
 	/**
 	* Indicates whether the current row has had an insertion.
@@ -1296,7 +1296,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see java.sql.DatabaseMetaData#insertsAreDetected
 	*
 	*/
-	@:overload public function rowInserted() : Bool;
+	@:overload @:public public function rowInserted() : Bool;
 	
 	/**
 	* Indicates whether a row has been deleted.  A deleted row may leave
@@ -1311,7 +1311,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	* @see java.sql.DatabaseMetaData#deletesAreDetected
 	*/
-	@:overload public function rowDeleted() : Bool;
+	@:overload @:public public function rowDeleted() : Bool;
 	
 	/**
 	* Gives a nullable column a null value.
@@ -1326,7 +1326,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function updateNull(columnIndex : Int) : Void;
+	@:overload @:public public function updateNull(columnIndex : Int) : Void;
 	
 	/**
 	* Updates the designated column with a <code>boolean</code> value.
@@ -1342,7 +1342,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateBoolean(columnIndex : Int, x : Bool) : Void;
+	@:overload @:public public function updateBoolean(columnIndex : Int, x : Bool) : Void;
 	
 	/**
 	* Updates the designated column with a <code>byte</code> value.
@@ -1359,7 +1359,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
+	@:overload @:public public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Updates the designated column with a <code>short</code> value.
@@ -1375,7 +1375,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
+	@:overload @:public public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Updates the designated column with an <code>int</code> value.
@@ -1390,7 +1390,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function updateInt(columnIndex : Int, x : Int) : Void;
+	@:overload @:public public function updateInt(columnIndex : Int, x : Int) : Void;
 	
 	/**
 	* Updates the designated column with a <code>long</code> value.
@@ -1406,7 +1406,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
+	@:overload @:public public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a <code>float</code> value.
@@ -1422,7 +1422,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateFloat(columnIndex : Int, x : Single) : Void;
+	@:overload @:public public function updateFloat(columnIndex : Int, x : Single) : Void;
 	
 	/**
 	* Updates the designated column with a <code>double</code> value.
@@ -1438,7 +1438,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateDouble(columnIndex : Int, x : Float) : Void;
+	@:overload @:public public function updateDouble(columnIndex : Int, x : Float) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.math.BigDecimal</code>
@@ -1455,7 +1455,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
+	@:overload @:public public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Updates the designated column with a <code>String</code> value.
@@ -1471,7 +1471,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateString(columnIndex : Int, x : String) : Void;
+	@:overload @:public public function updateString(columnIndex : Int, x : String) : Void;
 	
 	/**
 	* Updates the designated column with a <code>byte</code> array value.
@@ -1487,7 +1487,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.Date</code> value.
@@ -1503,7 +1503,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
+	@:overload @:public public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.Time</code> value.
@@ -1519,7 +1519,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
+	@:overload @:public public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.Timestamp</code>
@@ -1536,7 +1536,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
+	@:overload @:public public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Updates the designated column with an ascii stream value.
@@ -1553,7 +1553,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with a binary stream value.
@@ -1570,7 +1570,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value.
@@ -1587,7 +1587,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
+	@:overload @:public public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with an <code>Object</code> value.
@@ -1607,7 +1607,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
+	@:overload @:public public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Updates the designated column with an <code>Object</code> value.
@@ -1623,7 +1623,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateObject(columnIndex : Int, x : Dynamic) : Void;
+	@:overload @:public public function updateObject(columnIndex : Int, x : Dynamic) : Void;
 	
 	/**
 	* Updates the designated column with a <code>null</code> value.
@@ -1638,7 +1638,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function updateNull(columnName : String) : Void;
+	@:overload @:public public function updateNull(columnName : String) : Void;
 	
 	/**
 	* Updates the designated column with a <code>boolean</code> value.
@@ -1652,7 +1652,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateBoolean(columnName : String, x : Bool) : Void;
+	@:overload @:public public function updateBoolean(columnName : String, x : Bool) : Void;
 	
 	/**
 	* Updates the designated column with a <code>byte</code> value.
@@ -1666,7 +1666,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
+	@:overload @:public public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Updates the designated column with a <code>short</code> value.
@@ -1680,7 +1680,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
+	@:overload @:public public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Updates the designated column with an <code>int</code> value.
@@ -1694,7 +1694,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateInt(columnName : String, x : Int) : Void;
+	@:overload @:public public function updateInt(columnName : String, x : Int) : Void;
 	
 	/**
 	* Updates the designated column with a <code>long</code> value.
@@ -1708,7 +1708,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateLong(columnName : String, x : haxe.Int64) : Void;
+	@:overload @:public public function updateLong(columnName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a <code>float </code> value.
@@ -1722,7 +1722,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateFloat(columnName : String, x : Single) : Void;
+	@:overload @:public public function updateFloat(columnName : String, x : Single) : Void;
 	
 	/**
 	* Updates the designated column with a <code>double</code> value.
@@ -1736,7 +1736,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateDouble(columnName : String, x : Float) : Void;
+	@:overload @:public public function updateDouble(columnName : String, x : Float) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.BigDecimal</code>
@@ -1751,7 +1751,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
+	@:overload @:public public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Updates the designated column with a <code>String</code> value.
@@ -1765,7 +1765,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateString(columnName : String, x : String) : Void;
+	@:overload @:public public function updateString(columnName : String, x : String) : Void;
 	
 	/**
 	* Updates the designated column with a <code>boolean</code> value.
@@ -1788,7 +1788,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.Date</code> value.
@@ -1802,7 +1802,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateDate(columnName : String, x : java.sql.Date) : Void;
+	@:overload @:public public function updateDate(columnName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.Time</code> value.
@@ -1816,7 +1816,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateTime(columnName : String, x : java.sql.Time) : Void;
+	@:overload @:public public function updateTime(columnName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.Timestamp</code>
@@ -1831,7 +1831,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
+	@:overload @:public public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Updates the designated column with an ascii stream value.
@@ -1846,7 +1846,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with a binary stream value.
@@ -1861,7 +1861,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value.
@@ -1877,7 +1877,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateCharacterStream(columnName : String, reader : java.io.Reader, length : Int) : Void;
+	@:overload @:public public function updateCharacterStream(columnName : String, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Updates the designated column with an <code>Object</code> value.
@@ -1895,7 +1895,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
+	@:overload @:public public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Updates the designated column with an <code>Object</code> value.
@@ -1909,7 +1909,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	*
 	*/
-	@:overload public function updateObject(columnName : String, x : Dynamic) : Void;
+	@:overload @:public public function updateObject(columnName : String, x : Dynamic) : Void;
 	
 	/**
 	* Inserts the contents of the insert row into this
@@ -1924,7 +1924,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             rowset does not currently have a valid connection,
 	*             prepared statement, and result set
 	*/
-	@:overload public function insertRow() : Void;
+	@:overload @:public public function insertRow() : Void;
 	
 	/**
 	* Updates the underlying database with the new contents of the
@@ -1939,7 +1939,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             (4) this rowset does not currently have a valid connection,
 	*             prepared statement, and result set
 	*/
-	@:overload public function updateRow() : Void;
+	@:overload @:public public function updateRow() : Void;
 	
 	/**
 	* Deletes the current row from this rowset's <code>ResultSet</code> object
@@ -1957,7 +1957,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            (4) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function deleteRow() : Void;
+	@:overload @:public public function deleteRow() : Void;
 	
 	/**
 	* Refreshes the current row of this rowset's <code>ResultSet</code>
@@ -1986,7 +1986,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             and result set
 	*
 	*/
-	@:overload public function refreshRow() : Void;
+	@:overload @:public public function refreshRow() : Void;
 	
 	/**
 	* Cancels the updates made to the current row in this
@@ -2004,7 +2004,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             currently have a valid connection, prepared statement,
 	*             and result set
 	*/
-	@:overload public function cancelRowUpdates() : Void;
+	@:overload @:public public function cancelRowUpdates() : Void;
 	
 	/**
 	* Moves the cursor to the insert row.  The current cursor position is
@@ -2030,7 +2030,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             and result set
 	*
 	*/
-	@:overload public function moveToInsertRow() : Void;
+	@:overload @:public public function moveToInsertRow() : Void;
 	
 	/**
 	* Moves the cursor to the remembered cursor position, usually the
@@ -2043,7 +2043,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*             currently have a valid connection, prepared statement,
 	*             and result set
 	*/
-	@:overload public function moveToCurrentRow() : Void;
+	@:overload @:public public function moveToCurrentRow() : Void;
 	
 	/**
 	* Returns the <code>Statement</code> object that produced this
@@ -2057,7 +2057,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* if the result set was produced some other way
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getStatement() : java.sql.Statement;
+	@:overload @:public public function getStatement() : java.sql.Statement;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2075,7 +2075,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getObject(i : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public public function getObject(i : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2087,7 +2087,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getRef(i : Int) : java.sql.Ref;
+	@:overload @:public public function getRef(i : Int) : java.sql.Ref;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2100,7 +2100,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBlob(i : Int) : java.sql.Blob;
+	@:overload @:public public function getBlob(i : Int) : java.sql.Blob;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2113,7 +2113,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getClob(i : Int) : java.sql.Clob;
+	@:overload @:public public function getClob(i : Int) : java.sql.Clob;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2126,7 +2126,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getArray(i : Int) : java.sql.Array;
+	@:overload @:public public function getArray(i : Int) : java.sql.Array;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2143,7 +2143,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getObject(colName : String, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public public function getObject(colName : String, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2156,7 +2156,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getRef(colName : String) : java.sql.Ref;
+	@:overload @:public public function getRef(colName : String) : java.sql.Ref;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2169,7 +2169,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getBlob(colName : String) : java.sql.Blob;
+	@:overload @:public public function getBlob(colName : String) : java.sql.Blob;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2182,7 +2182,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getClob(colName : String) : java.sql.Clob;
+	@:overload @:public public function getClob(colName : String) : java.sql.Clob;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2195,7 +2195,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getArray(colName : String) : java.sql.Array;
+	@:overload @:public public function getArray(colName : String) : java.sql.Array;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2214,7 +2214,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getDate(columnIndex : Int, cal : java.util.Calendar) : java.sql.Date;
+	@:overload @:public public function getDate(columnIndex : Int, cal : java.util.Calendar) : java.sql.Date;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2234,7 +2234,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            prepared statement, and result set
 	*
 	*/
-	@:overload public function getDate(columnName : String, cal : java.util.Calendar) : java.sql.Date;
+	@:overload @:public public function getDate(columnName : String, cal : java.util.Calendar) : java.sql.Date;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2253,7 +2253,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTime(columnIndex : Int, cal : java.util.Calendar) : java.sql.Time;
+	@:overload @:public public function getTime(columnIndex : Int, cal : java.util.Calendar) : java.sql.Time;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2272,7 +2272,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTime(columnName : String, cal : java.util.Calendar) : java.sql.Time;
+	@:overload @:public public function getTime(columnName : String, cal : java.util.Calendar) : java.sql.Time;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2292,7 +2292,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTimestamp(columnIndex : Int, cal : java.util.Calendar) : java.sql.Timestamp;
+	@:overload @:public public function getTimestamp(columnIndex : Int, cal : java.util.Calendar) : java.sql.Timestamp;
 	
 	/**
 	* Returns the value of the designated column in the current row
@@ -2312,7 +2312,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload public function getTimestamp(columnName : String, cal : java.util.Calendar) : java.sql.Timestamp;
+	@:overload @:public public function getTimestamp(columnName : String, cal : java.util.Calendar) : java.sql.Timestamp;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2337,7 +2337,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRef(columnIndex : Int, ref : java.sql.Ref) : Void;
+	@:overload @:public public function updateRef(columnIndex : Int, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2361,7 +2361,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRef(columnName : String, ref : java.sql.Ref) : Void;
+	@:overload @:public public function updateRef(columnName : String, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2386,7 +2386,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateClob(columnIndex : Int, c : java.sql.Clob) : Void;
+	@:overload @:public public function updateClob(columnIndex : Int, c : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2410,7 +2410,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateClob(columnName : String, c : java.sql.Clob) : Void;
+	@:overload @:public public function updateClob(columnName : String, c : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2435,7 +2435,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBlob(columnIndex : Int, b : java.sql.Blob) : Void;
+	@:overload @:public public function updateBlob(columnIndex : Int, b : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2459,7 +2459,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBlob(columnName : String, b : java.sql.Blob) : Void;
+	@:overload @:public public function updateBlob(columnName : String, b : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2484,7 +2484,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateArray(columnIndex : Int, a : java.sql.Array) : Void;
+	@:overload @:public public function updateArray(columnIndex : Int, a : java.sql.Array) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2508,23 +2508,23 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateArray(columnName : String, a : java.sql.Array) : Void;
+	@:overload @:public public function updateArray(columnName : String, a : java.sql.Array) : Void;
 	
 	/**
 	* Provide interface coverage for getURL(int) in ResultSet->RowSet
 	*/
-	@:overload public function getURL(columnIndex : Int) : java.net.URL;
+	@:overload @:public public function getURL(columnIndex : Int) : java.net.URL;
 	
 	/**
 	* Provide interface coverage for getURL(String) in ResultSet->RowSet
 	*/
-	@:overload public function getURL(columnName : String) : java.net.URL;
+	@:overload @:public public function getURL(columnName : String) : java.net.URL;
 	
 	/**
 	* Return the RowSetWarning object for the current row of a
 	* <code>JdbcRowSetImpl</code>
 	*/
-	@:overload public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
+	@:overload @:public public function getRowSetWarnings() : javax.sql.rowset.RowSetWarning;
 	
 	/**
 	* Unsets the designated parameter to the given int array.
@@ -2540,7 +2540,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  parameter index is out of bounds or if the columnIdx is
 	*  not the same as set using <code>setMatchColumn(int [])</code>
 	*/
-	@:overload public function unsetMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function unsetMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given String array.
@@ -2556,7 +2556,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  parameter index is out of bounds or if the columnName is
 	*  not the same as set using <code>setMatchColumn(String [])</code>
 	*/
-	@:overload public function unsetMatchColumn(columnIdxes : java.NativeArray<String>) : Void;
+	@:overload @:public public function unsetMatchColumn(columnIdxes : java.NativeArray<String>) : Void;
 	
 	/**
 	* Retrieves the column name as <code>String</code> array
@@ -2568,7 +2568,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @throws SQLException if an error occurs or column name is not set
 	*/
-	@:overload public function getMatchColumnNames() : java.NativeArray<String>;
+	@:overload @:public public function getMatchColumnNames() : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the column id as <code>int</code> array that was set using
@@ -2579,7 +2579,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @throws SQLException if an error occurs or column index is not set
 	*/
-	@:overload public function getMatchColumnIndexes() : java.NativeArray<Int>;
+	@:overload @:public public function getMatchColumnIndexes() : java.NativeArray<Int>;
 	
 	/**
 	* Sets the designated parameter to the given int array.
@@ -2598,7 +2598,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if an error occurs or the
 	*                         parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given String array.
@@ -2615,7 +2615,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if an error occurs or the
 	*  parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnNames : java.NativeArray<String>) : Void;
+	@:overload @:public public function setMatchColumn(columnNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>int</code>
@@ -2634,7 +2634,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if an error occurs or the
 	*                         parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnIdx : Int) : Void;
+	@:overload @:public public function setMatchColumn(columnIdx : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>String</code>
@@ -2651,7 +2651,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if an error occurs or the
 	*  parameter index is out of bounds
 	*/
-	@:overload public function setMatchColumn(columnName : String) : Void;
+	@:overload @:public public function setMatchColumn(columnName : String) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given <code>int</code>
@@ -2667,7 +2667,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  parameter index is out of bounds or if the columnIdx is
 	*  not the same as set using <code>setMatchColumn(int)</code>
 	*/
-	@:overload public function unsetMatchColumn(columnIdx : Int) : Void;
+	@:overload @:public public function unsetMatchColumn(columnIdx : Int) : Void;
 	
 	/**
 	* Unsets the designated parameter to the given <code>String</code>
@@ -2684,7 +2684,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  not the same as set using <code>setMatchColumn(String)</code>
 	*
 	*/
-	@:overload public function unsetMatchColumn(columnName : String) : Void;
+	@:overload @:public public function unsetMatchColumn(columnName : String) : Void;
 	
 	/**
 	* Retrieves the <code>DatabaseMetaData</code> associated with
@@ -2695,7 +2695,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  with the rowset's connection.
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getDatabaseMetaData() : java.sql.DatabaseMetaData;
+	@:overload @:public public function getDatabaseMetaData() : java.sql.DatabaseMetaData;
 	
 	/**
 	* Retrieves the <code>ParameterMetaData</code> associated with
@@ -2706,7 +2706,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  with the rowset's connection.
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getParameterMetaData() : java.sql.ParameterMetaData;
+	@:overload @:public public function getParameterMetaData() : java.sql.ParameterMetaData;
 	
 	/**
 	* Commits all updates in this <code>JdbcRowSet</code> object by
@@ -2722,7 +2722,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if autoCommit is set to true or if a database
 	* access error occurs
 	*/
-	@:overload public function commit() : Void;
+	@:overload @:public public function commit() : Void;
 	
 	/**
 	* Sets auto-commit on the internal <code>Connection</code> object with this
@@ -2730,7 +2730,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function setAutoCommit(autoCommit : Bool) : Void;
+	@:overload @:public public function setAutoCommit(autoCommit : Bool) : Void;
 	
 	/**
 	* Returns the auto-commit status with this <code>JdbcRowSet</code>.
@@ -2738,7 +2738,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @return true if auto commit is true; false otherwise
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getAutoCommit() : Bool;
+	@:overload @:public public function getAutoCommit() : Bool;
 	
 	/**
 	* Rolls back all the updates in this <code>JdbcRowSet</code> object by
@@ -2752,7 +2752,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if autoCommit is set to true or a database
 	* access error occurs
 	*/
-	@:overload public function rollback() : Void;
+	@:overload @:public public function rollback() : Void;
 	
 	/**
 	* Rollbacks all the updates in the <code>JdbcRowSet</code> back to the
@@ -2764,9 +2764,9 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if autoCommit is set to true; or ia a database
 	* access error occurs
 	*/
-	@:overload public function rollback(s : java.sql.Savepoint) : Void;
+	@:overload @:public public function rollback(s : java.sql.Savepoint) : Void;
 	
-	@:overload private function setParams() : Void;
+	@:overload @:protected private function setParams() : Void;
 	
 	/**
 	* Gets this <code>JdbcRowSet</code> object's Connection property
@@ -2774,7 +2774,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @return the <code>Connection</code> object associated with this rowset;
 	*/
-	@:overload private function getConnection() : java.sql.Connection;
+	@:overload @:protected private function getConnection() : java.sql.Connection;
 	
 	/**
 	* Sets this <code>JdbcRowSet</code> object's connection property
@@ -2782,7 +2782,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @param connection the <code>Connection</code> object.
 	*/
-	@:overload private function setConnection(connection : java.sql.Connection) : Void;
+	@:overload @:protected private function setConnection(connection : java.sql.Connection) : Void;
 	
 	/**
 	* Gets this <code>JdbcRowSet</code> object's PreparedStatement property
@@ -2790,7 +2790,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @return the <code>PreparedStatement</code> object associated with this rowset;
 	*/
-	@:overload private function getPreparedStatement() : java.sql.PreparedStatement;
+	@:overload @:protected private function getPreparedStatement() : java.sql.PreparedStatement;
 	
 	/**
 	* Sets this <code>JdbcRowSet</code> object's preparedtsatement property
@@ -2799,7 +2799,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @param preparedStatement the <code>PreparedStatement</code> object
 	*
 	*/
-	@:overload private function setPreparedStatement(preparedStatement : java.sql.PreparedStatement) : Void;
+	@:overload @:protected private function setPreparedStatement(preparedStatement : java.sql.PreparedStatement) : Void;
 	
 	/**
 	* Gets this <code>JdbcRowSet</code> object's ResultSet property
@@ -2807,7 +2807,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @return the <code>ResultSet</code> object associated with this rowset;
 	*/
-	@:overload private function getResultSet() : java.sql.ResultSet;
+	@:overload @:protected private function getResultSet() : java.sql.ResultSet;
 	
 	/**
 	* Sets this <code>JdbcRowSet</code> object's resultset property
@@ -2816,7 +2816,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @param resultSet the <code>ResultSet</code> object
 	*
 	*/
-	@:overload private function setResultSet(resultSet : java.sql.ResultSet) : Void;
+	@:overload @:protected private function setResultSet(resultSet : java.sql.ResultSet) : Void;
 	
 	/**
 	* Sets this <code>JdbcRowSet</code> object's <code>command</code> property to
@@ -2841,7 +2841,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if an empty string is provided as the command value
 	* @see #getCommand
 	*/
-	@:overload public function setCommand(command : String) : Void;
+	@:overload @:public override public function setCommand(command : String) : Void;
 	
 	/**
 	* Sets the <code>dataSourceName</code> property for this <code>JdbcRowSet</code>
@@ -2872,7 +2872,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*          <code>dataSourceName</code> property
 	* @see #getDataSourceName
 	*/
-	@:overload public function setDataSourceName(dsName : String) : Void;
+	@:overload @:public override public function setDataSourceName(dsName : String) : Void;
 	
 	/**
 	* Sets the Url property for this <code>JdbcRowSet</code> object
@@ -2914,7 +2914,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*         empty string)
 	* @see #getUrl
 	*/
-	@:overload public function setUrl(url : String) : Void;
+	@:overload @:public override public function setUrl(url : String) : Void;
 	
 	/**
 	* Sets the username property for this <code>JdbcRowSet</code> object
@@ -2936,7 +2936,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*     is supplied to the data source to create a connection. It may be null.
 	* @see #getUsername
 	*/
-	@:overload public function setUsername(uname : String) : Void;
+	@:overload @:public override public function setUsername(uname : String) : Void;
 	
 	/**
 	* Sets the password property for this <code>JdbcRowSet</code> object
@@ -2957,7 +2957,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @param password the <code>String</code> object that represents the password
 	*     that must be supplied to the database to create a connection
 	*/
-	@:overload public function setPassword(password : String) : Void;
+	@:overload @:public override public function setPassword(password : String) : Void;
 	
 	/**
 	* Sets the type for this <code>RowSet</code> object to the specified type.
@@ -2975,7 +2975,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see #getConcurrency
 	* @see #getType
 	*/
-	@:overload public function setType(type : Int) : Void;
+	@:overload @:public override public function setType(type : Int) : Void;
 	
 	/**
 	* Sets the concurrency for this <code>RowSet</code> object to
@@ -2993,7 +2993,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see #getConcurrency
 	* @see #isReadOnly
 	*/
-	@:overload public function setConcurrency(concur : Int) : Void;
+	@:overload @:public override public function setConcurrency(concur : Int) : Void;
 	
 	/**
 	* Sets the transaction isolation property for this JDBC <code>RowSet</code> object to the given
@@ -3019,7 +3019,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see javax.sql.rowset.spi.SyncProvider
 	* @see #getTransactionIsolation
 	*/
-	@:overload public function setTransactionIsolation(transIso : Int) : Void;
+	@:overload @:public override public function setTransactionIsolation(transIso : Int) : Void;
 	
 	/**
 	* Sets the maximum number of rows that this <code>RowSet</code> object may contain to
@@ -3034,7 +3034,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*     if <i>max</i> is less than the <code>fetchSize</code> of the
 	*     <code>RowSet</code>
 	*/
-	@:overload public function setMaxRows(mRows : Int) : Void;
+	@:overload @:public override public function setMaxRows(mRows : Int) : Void;
 	
 	/**
 	* Retrieves the value of the designated <code>SQL XML</code> parameter as a
@@ -3044,7 +3044,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function getSQLXML(columnIndex : Int) : java.sql.SQLXML;
+	@:require(java0) @:overload @:public public function getSQLXML(columnIndex : Int) : java.sql.SQLXML;
 	
 	/**
 	* Retrieves the value of the designated <code>SQL XML</code> parameter as a
@@ -3053,7 +3053,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @return a SQLXML object that maps an SQL XML value
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function getSQLXML(colName : String) : java.sql.SQLXML;
+	@:overload @:public public function getSQLXML(colName : String) : java.sql.SQLXML;
 	
 	/**
 	* Retrieves the value of the designated column in the current row of this
@@ -3066,7 +3066,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function getRowId(columnIndex : Int) : java.sql.RowId;
+	@:require(java0) @:overload @:public public function getRowId(columnIndex : Int) : java.sql.RowId;
 	
 	/**
 	* Retrieves the value of the designated column in the current row of this
@@ -3079,7 +3079,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function getRowId(columnName : String) : java.sql.RowId;
+	@:require(java0) @:overload @:public public function getRowId(columnName : String) : java.sql.RowId;
 	
 	/**
 	* Updates the designated column with a <code>RowId</code> value. The updater
@@ -3093,7 +3093,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function updateRowId(columnIndex : Int, x : java.sql.RowId) : Void;
+	@:require(java0) @:overload @:public public function updateRowId(columnIndex : Int, x : java.sql.RowId) : Void;
 	
 	/**
 	* Updates the designated column with a <code>RowId</code> value. The updater
@@ -3107,7 +3107,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function updateRowId(columnName : String, x : java.sql.RowId) : Void;
+	@:require(java0) @:overload @:public public function updateRowId(columnName : String, x : java.sql.RowId) : Void;
 	
 	/**
 	* Retrieves the holdability of this ResultSet object
@@ -3115,7 +3115,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function getHoldability() : Int;
+	@:require(java0) @:overload @:public public function getHoldability() : Int;
 	
 	/**
 	* Retrieves whether this ResultSet object has been closed. A ResultSet is closed if the
@@ -3124,7 +3124,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function isClosed() : Bool;
+	@:require(java0) @:overload @:public public function isClosed() : Bool;
 	
 	/**
 	* This method is used for updating columns that support National Character sets.
@@ -3134,7 +3134,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function updateNString(columnIndex : Int, nString : String) : Void;
+	@:require(java0) @:overload @:public public function updateNString(columnIndex : Int, nString : String) : Void;
 	
 	/**
 	* This method is used for updating columns that support National Character sets.
@@ -3144,7 +3144,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function updateNString(columnName : String, nString : String) : Void;
+	@:require(java0) @:overload @:public public function updateNString(columnName : String, nString : String) : Void;
 	
 	/*o
 	* This method is used for updating SQL <code>NCLOB</code>  type that maps
@@ -3154,7 +3154,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function updateNClob(columnIndex : Int, nClob : java.sql.NClob) : Void;
+	@:require(java0) @:overload @:public public function updateNClob(columnIndex : Int, nClob : java.sql.NClob) : Void;
 	
 	/**
 	* This method is used for updating SQL <code>NCLOB</code>  type that maps
@@ -3164,7 +3164,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function updateNClob(columnName : String, nClob : java.sql.NClob) : Void;
+	@:require(java0) @:overload @:public public function updateNClob(columnName : String, nClob : java.sql.NClob) : Void;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3177,7 +3177,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function getNClob(i : Int) : java.sql.NClob;
+	@:require(java0) @:overload @:public public function getNClob(i : Int) : java.sql.NClob;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3190,11 +3190,11 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 6.0
 	*/
-	@:require(java0) @:overload public function getNClob(colName : String) : java.sql.NClob;
+	@:require(java0) @:overload @:public public function getNClob(colName : String) : java.sql.NClob;
 	
-	@:overload public function unwrap<T>(iface : Class<T>) : T;
+	@:overload @:public public function unwrap<T>(iface : Class<T>) : T;
 	
-	@:overload public function isWrapperFor(interfaces : Class<Dynamic>) : Bool;
+	@:overload @:public public function isWrapperFor(interfaces : Class<Dynamic>) : Bool;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
@@ -3204,7 +3204,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setSQLXML(parameterIndex : Int, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public override public function setSQLXML(parameterIndex : Int, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
@@ -3214,7 +3214,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setSQLXML(parameterName : String, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public override public function setSQLXML(parameterName : String, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
@@ -3227,7 +3227,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRowId(parameterIndex : Int, x : java.sql.RowId) : Void;
+	@:require(java6) @:overload @:public override public function setRowId(parameterIndex : Int, x : java.sql.RowId) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
@@ -3239,7 +3239,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRowId(parameterName : String, x : java.sql.RowId) : Void;
+	@:require(java6) @:overload @:public override public function setRowId(parameterName : String, x : java.sql.RowId) : Void;
 	
 	/**
 	* Sets the designated paramter to the given <code>String</code> object.
@@ -3256,7 +3256,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNString(parameterIndex : Int, value : String) : Void;
+	@:require(java6) @:overload @:public override public function setNString(parameterIndex : Int, value : String) : Void;
 	
 	/**
 	* Sets the designated parameter in this <code>RowSet</code> object's command
@@ -3281,7 +3281,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>java.sql.NClob</code> object. The object
@@ -3294,7 +3294,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterName : String, value : java.sql.NClob) : Void;
+	@:require(java6) @:overload @:public override public function setNClob(parameterName : String, value : java.sql.NClob) : Void;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3311,7 +3311,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getNCharacterStream(columnIndex : Int) : java.io.Reader;
+	@:require(java6) @:overload @:public public function getNCharacterStream(columnIndex : Int) : java.io.Reader;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3328,7 +3328,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getNCharacterStream(columnName : String) : java.io.Reader;
+	@:require(java6) @:overload @:public public function getNCharacterStream(columnName : String) : java.io.Reader;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.SQLXML</code> value.
@@ -3342,7 +3342,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateSQLXML(columnIndex : Int, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public public function updateSQLXML(columnIndex : Int, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Updates the designated column with a <code>java.sql.SQLXML</code> value.
@@ -3357,7 +3357,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateSQLXML(columnName : String, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public public function updateSQLXML(columnName : String, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3373,7 +3373,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getNString(columnIndex : Int) : String;
+	@:require(java6) @:overload @:public public function getNString(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -3389,7 +3389,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getNString(columnName : String) : String;
+	@:require(java6) @:overload @:public public function getNString(columnName : String) : String;
 	
 	/**
 	* Updates the designated column with a character stream value, which will
@@ -3406,7 +3406,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNCharacterStream(columnIndex : Int, x : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateNCharacterStream(columnIndex : Int, x : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value, which will
@@ -3423,7 +3423,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNCharacterStream(columnName : String, x : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateNCharacterStream(columnName : String, x : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value.   The
@@ -3450,7 +3450,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNCharacterStream(columnIndex : Int, x : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateNCharacterStream(columnIndex : Int, x : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value.  The
@@ -3479,7 +3479,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNCharacterStream(columnLabel : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateNCharacterStream(columnLabel : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column using the given input stream, which
@@ -3510,7 +3510,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBlob(columnIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateBlob(columnIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column using the given input stream, which
@@ -3541,7 +3541,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBlob(columnLabel : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateBlob(columnLabel : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column using the given input stream.
@@ -3574,7 +3574,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBlob(columnIndex : Int, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function updateBlob(columnIndex : Int, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Updates the designated column using the given input stream.
@@ -3607,7 +3607,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBlob(columnLabel : String, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function updateBlob(columnLabel : String, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3637,7 +3637,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateClob(columnIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateClob(columnIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3667,7 +3667,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateClob(columnLabel : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateClob(columnLabel : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3699,7 +3699,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateClob(columnIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateClob(columnIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3732,7 +3732,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateClob(columnLabel : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateClob(columnLabel : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3764,7 +3764,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNClob(columnIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateNClob(columnIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3796,7 +3796,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNClob(columnLabel : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateNClob(columnLabel : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3830,7 +3830,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNClob(columnIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateNClob(columnIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column using the given <code>Reader</code>
@@ -3865,7 +3865,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateNClob(columnLabel : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateNClob(columnLabel : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column with an ascii stream value, which will have
@@ -3885,7 +3885,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a binary stream value, which will have
@@ -3905,7 +3905,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value, which will have
@@ -3925,7 +3925,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with an ascii stream value, which will have
@@ -3945,7 +3945,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateAsciiStream(columnLabel : String, x : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateAsciiStream(columnLabel : String, x : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with an ascii stream value.
@@ -3967,7 +3967,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream) : Void;
 	
 	/**
 	* Updates the designated column with an ascii stream value.
@@ -3990,7 +3990,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateAsciiStream(columnLabel : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function updateAsciiStream(columnLabel : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Updates the designated column with a binary stream value, which will have
@@ -4010,7 +4010,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBinaryStream(columnLabel : String, x : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateBinaryStream(columnLabel : String, x : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a binary stream value.
@@ -4032,7 +4032,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream) : Void;
 	
 	/**
 	* Updates the designated column with a binary stream value.
@@ -4055,7 +4055,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateBinaryStream(columnLabel : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function updateBinaryStream(columnLabel : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value, which will have
@@ -4076,7 +4076,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateCharacterStream(columnLabel : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function updateCharacterStream(columnLabel : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value.
@@ -4098,7 +4098,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateCharacterStream(columnIndex : Int, x : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateCharacterStream(columnIndex : Int, x : java.io.Reader) : Void;
 	
 	/**
 	* Updates the designated column with a character stream value.
@@ -4122,7 +4122,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function updateCharacterStream(columnLabel : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function updateCharacterStream(columnLabel : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.net.URL</code> value.
@@ -4136,7 +4136,7 @@ bel is the name of the column
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setURL(parameterIndex : Int, x : java.net.URL) : Void;
+	@:require(java4) @:overload @:public override public function setURL(parameterIndex : Int, x : java.net.URL) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4161,7 +4161,7 @@ bel is the name of the column
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setNClob(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain the number
@@ -4186,7 +4186,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setNClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4209,7 +4209,7 @@ bel is the name of the column
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setNClob(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	** of characters specified by length otherwise a <code>SQLException</code> will becontain  the number
@@ -4232,7 +4232,7 @@ bel is the name of the column
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setNClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>java.sql.NClob</code> object. The driver converts this to
@@ -4245,7 +4245,7 @@ a
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterIndex : Int, value : java.sql.NClob) : Void;
+	@:require(java6) @:overload @:public override public function setNClob(parameterIndex : Int, value : java.sql.NClob) : Void;
 	
 	/**
 	* Sets the designated paramter to the given <code>String</code> object.
@@ -4258,7 +4258,7 @@ a
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNString(parameterName : String, value : String) : Void;
+	@:require(java6) @:overload @:public override public function setNString(parameterName : String, value : String) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -4273,7 +4273,7 @@ a
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -4288,7 +4288,7 @@ a
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -4312,7 +4312,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setNCharacterStream(parameterName : String, value : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Timestamp</code> value,
@@ -4335,7 +4335,7 @@ a
 	* @see #getTimestamp
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTimestamp(parameterName : String, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload @:public override public function setTimestamp(parameterName : String, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain  the number
@@ -4358,7 +4358,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Clob</code> object.
@@ -4373,7 +4373,7 @@ a
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterName : String, x : java.sql.Clob) : Void;
+	@:require(java6) @:overload @:public override public function setClob(parameterName : String, x : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4395,7 +4395,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setClob(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code> value
@@ -4413,7 +4413,7 @@ a
 	* @see #getDate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDate(parameterName : String, x : java.sql.Date) : Void;
+	@:require(java4) @:overload @:public override public function setDate(parameterName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code> value,
@@ -4436,7 +4436,7 @@ a
 	* @see #getDate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDate(parameterName : String, x : java.sql.Date, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload @:public override public function setDate(parameterName : String, x : java.sql.Date, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code> value.
@@ -4452,7 +4452,7 @@ a
 	* @see #getTime
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTime(parameterName : String, x : java.sql.Time) : Void;
+	@:require(java4) @:overload @:public override public function setTime(parameterName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code> value,
@@ -4475,7 +4475,7 @@ a
 	* @see #getTime
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTime(parameterName : String, x : java.sql.Time, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload @:public override public function setTime(parameterName : String, x : java.sql.Time, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4498,7 +4498,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setClob(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The reader must contain  the number
@@ -4519,7 +4519,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.  The inputstream must contain  the number
@@ -4545,7 +4545,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.
@@ -4574,7 +4574,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public override public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.  The <code>inputstream</code> must contain  the number
@@ -4602,7 +4602,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterName : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public override public function setBlob(parameterName : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Blob</code> object.
@@ -4617,7 +4617,7 @@ a
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterName : String, x : java.sql.Blob) : Void;
+	@:require(java6) @:overload @:public override public function setBlob(parameterName : String, x : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.
@@ -4640,7 +4640,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterName : String, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public override public function setBlob(parameterName : String, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object. The second
@@ -4683,7 +4683,7 @@ a
 	* @see #getObject
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
+	@:require(java4) @:overload @:public override public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object.
@@ -4706,7 +4706,7 @@ a
 	* @see #getObject
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int) : Void;
+	@:require(java4) @:overload @:public override public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object.
@@ -4744,7 +4744,7 @@ a
 	* @see #getObject
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic) : Void;
+	@:require(java4) @:overload @:public override public function setObject(parameterName : String, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream, which will have
@@ -4768,7 +4768,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setAsciiStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
+	@:require(java4) @:overload @:public override public function setAsciiStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream, which will have
@@ -4791,7 +4791,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBinaryStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
+	@:require(java4) @:overload @:public override public function setBinaryStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Reader</code>
@@ -4816,7 +4816,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setCharacterStream(parameterName : String, reader : java.io.Reader, length : Int) : Void;
+	@:require(java4) @:overload @:public override public function setCharacterStream(parameterName : String, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream.
@@ -4840,7 +4840,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setAsciiStream(parameterName : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public override public function setAsciiStream(parameterName : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream.
@@ -4863,7 +4863,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBinaryStream(parameterName : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public override public function setBinaryStream(parameterName : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Reader</code>
@@ -4889,7 +4889,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setCharacterStream(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public override public function setCharacterStream(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -4906,7 +4906,7 @@ a
 	* @see #getBigDecimal
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBigDecimal(parameterName : String, x : java.math.BigDecimal) : Void;
+	@:require(java4) @:overload @:public override public function setBigDecimal(parameterName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>String</code> value.
@@ -4925,7 +4925,7 @@ a
 	* @see #getString
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setString(parameterName : String, x : String) : Void;
+	@:require(java4) @:overload @:public override public function setString(parameterName : String, x : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java array of bytes.
@@ -4943,7 +4943,7 @@ a
 	* @see #getBytes
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBytes(parameterName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java4) @:overload @:public override public function setBytes(parameterName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Timestamp</code> value.
@@ -4960,7 +4960,7 @@ a
 	* @see #getTimestamp
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTimestamp(parameterName : String, x : java.sql.Timestamp) : Void;
+	@:require(java4) @:overload @:public override public function setTimestamp(parameterName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -4975,7 +4975,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setNull(parameterName : String, sqlType : Int) : Void;
+	@:require(java4) @:overload @:public override public function setNull(parameterName : String, sqlType : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -5009,7 +5009,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setNull(parameterName : String, sqlType : Int, typeName : String) : Void;
+	@:require(java4) @:overload @:public override public function setNull(parameterName : String, sqlType : Int, typeName : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>boolean</code> value.
@@ -5025,7 +5025,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBoolean(parameterName : String, x : Bool) : Void;
+	@:require(java4) @:overload @:public override public function setBoolean(parameterName : String, x : Bool) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>byte</code> value.
@@ -5041,7 +5041,7 @@ a
 	* @see #getByte
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setByte(parameterName : String, x : java.StdTypes.Int8) : Void;
+	@:require(java4) @:overload @:public override public function setByte(parameterName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>short</code> value.
@@ -5057,7 +5057,7 @@ a
 	* @see #getShort
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setShort(parameterName : String, x : java.StdTypes.Int16) : Void;
+	@:require(java4) @:overload @:public override public function setShort(parameterName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>int</code> value.
@@ -5073,7 +5073,7 @@ a
 	* @see #getInt
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setInt(parameterName : String, x : Int) : Void;
+	@:require(java4) @:overload @:public override public function setInt(parameterName : String, x : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>long</code> value.
@@ -5089,7 +5089,7 @@ a
 	* @see #getLong
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setLong(parameterName : String, x : haxe.Int64) : Void;
+	@:require(java4) @:overload @:public override public function setLong(parameterName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>float</code> value.
@@ -5105,7 +5105,7 @@ a
 	* @see #getFloat
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setFloat(parameterName : String, x : Single) : Void;
+	@:require(java4) @:overload @:public override public function setFloat(parameterName : String, x : Single) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>double</code> value.
@@ -5121,11 +5121,11 @@ a
 	* @see #getDouble
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDouble(parameterName : String, x : Float) : Void;
+	@:require(java4) @:overload @:public override public function setDouble(parameterName : String, x : Float) : Void;
 	
-	@:overload public function getObject<T>(columnIndex : Int, type : Class<T>) : T;
+	@:overload @:public public function getObject<T>(columnIndex : Int, type : Class<T>) : T;
 	
-	@:overload public function getObject<T>(columnLabel : String, type : Class<T>) : T;
+	@:overload @:public public function getObject<T>(columnLabel : String, type : Class<T>) : T;
 	
 	
 }

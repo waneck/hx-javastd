@@ -29,7 +29,7 @@ extern class UID implements java.io.Serializable
 	* Generates a <code>UID</code> that is unique over time with
 	* respect to the host that it was generated on.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a "well-known" <code>UID</code>.
@@ -42,14 +42,14 @@ extern class UID implements java.io.Serializable
 	*
 	* @param   num number for well-known <code>UID</code>
 	*/
-	@:overload public function new(num : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(num : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Returns the hash code value for this <code>UID</code>.
 	*
 	* @return  the hash code value for this <code>UID</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the specified object with this <code>UID</code> for
@@ -65,14 +65,14 @@ extern class UID implements java.io.Serializable
 	* @return  <code>true</code> if the given object is equivalent to
 	* this one, and <code>false</code> otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this <code>UID</code>.
 	*
 	* @return  a string representation of this <code>UID</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Marshals a binary representation of this <code>UID</code> to
@@ -92,7 +92,7 @@ extern class UID implements java.io.Serializable
 	* @throws  IOException if an I/O error occurs while performing
 	* this operation
 	*/
-	@:overload public function write(out : java.io.DataOutput) : Void;
+	@:overload @:public public function write(out : java.io.DataOutput) : Void;
 	
 	/**
 	* Constructs and returns a new <code>UID</code> instance by
@@ -117,7 +117,7 @@ extern class UID implements java.io.Serializable
 	* @throws  IOException if an I/O error occurs while performing
 	* this operation
 	*/
-	@:overload public static function read(_in : java.io.DataInput) : java.rmi.server.UID;
+	@:overload @:public @:static public static function read(_in : java.io.DataInput) : java.rmi.server.UID;
 	
 	
 }

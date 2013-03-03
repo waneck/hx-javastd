@@ -25,15 +25,15 @@ package com.sun.jndi.ldap.sasl;
 */
 @:internal extern class SaslOutputStream extends java.io.FilterOutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Override this method to "wrap" the outgoing buffer before
 	* writing it to the underlying output stream.
 	*/
-	@:overload override public function write(buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, total : Int) : Void;
+	@:overload @:public override public function write(buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, total : Int) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

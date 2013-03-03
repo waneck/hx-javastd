@@ -29,21 +29,21 @@ extern interface Definitions extends com.sun.xml.internal.txw2.TypedXmlWriter ex
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Definitions;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Definitions;
 	
-	@:overload public function targetNamespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Definitions;
+	@:overload @:public public function targetNamespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Definitions;
 	
-	@:overload public function service() : com.sun.xml.internal.ws.wsdl.writer.document.Service;
+	@:overload @:public public function service() : com.sun.xml.internal.ws.wsdl.writer.document.Service;
 	
-	@:overload public function binding() : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
+	@:overload @:public public function binding() : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
 	
-	@:overload public function portType() : com.sun.xml.internal.ws.wsdl.writer.document.PortType;
+	@:overload @:public public function portType() : com.sun.xml.internal.ws.wsdl.writer.document.PortType;
 	
-	@:overload public function message() : com.sun.xml.internal.ws.wsdl.writer.document.Message;
+	@:overload @:public public function message() : com.sun.xml.internal.ws.wsdl.writer.document.Message;
 	
-	@:overload public function types() : com.sun.xml.internal.ws.wsdl.writer.document.Types;
+	@:overload @:public public function types() : com.sun.xml.internal.ws.wsdl.writer.document.Types;
 	
-	@:overload public function _import() : com.sun.xml.internal.ws.wsdl.writer.document.Import;
+	@:overload @:public public function _import() : com.sun.xml.internal.ws.wsdl.writer.document.Import;
 	
 	
 }

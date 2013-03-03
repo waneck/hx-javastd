@@ -28,25 +28,25 @@ extern class BMPImageWriter extends javax.imageio.ImageWriter implements com.sun
 	/** Constructs <code>BMPImageWriter</code> based on the provided
 	*  <code>ImageWriterSpi</code>.
 	*/
-	@:overload public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
+	@:overload @:public public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
 	
-	@:overload public function setOutput(output : Dynamic) : Void;
+	@:overload @:public override public function setOutput(output : Dynamic) : Void;
 	
-	@:overload public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
+	@:overload @:public override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
 	
-	@:overload public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function convertImageMetadata(metadata : javax.imageio.metadata.IIOMetadata, type : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertImageMetadata(metadata : javax.imageio.metadata.IIOMetadata, type : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function canWriteRasters() : Bool;
+	@:overload @:public override public function canWriteRasters() : Bool;
 	
-	@:overload public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/*
 	* Returns preferred compression type for given image.
@@ -58,9 +58,9 @@ extern class BMPImageWriter extends javax.imageio.ImageWriter implements com.sun
 	* NB: we probably need to extend this method if we encounter other image
 	* types which can not be encoded with BI_RGB compression type.
 	*/
-	@:overload private function getPreferredCompressionType(cm : java.awt.image.ColorModel, sm : java.awt.image.SampleModel) : Int;
+	@:overload @:protected private function getPreferredCompressionType(cm : java.awt.image.ColorModel, sm : java.awt.image.SampleModel) : Int;
 	
-	@:overload private function getPreferredCompressionType(imageType : javax.imageio.ImageTypeSpecifier) : Int;
+	@:overload @:protected private function getPreferredCompressionType(imageType : javax.imageio.ImageTypeSpecifier) : Int;
 	
 	/*
 	* Check whether we can encode image of given type using compression method in question.
@@ -70,29 +70,29 @@ extern class BMPImageWriter extends javax.imageio.ImageWriter implements com.sun
 	* NB: method should be extended if other cases when we can not encode
 	*     with given compression will be discovered.
 	*/
-	@:overload private function canEncodeImage(compression : Int, cm : java.awt.image.ColorModel, sm : java.awt.image.SampleModel) : Bool;
+	@:overload @:protected private function canEncodeImage(compression : Int, cm : java.awt.image.ColorModel, sm : java.awt.image.SampleModel) : Bool;
 	
-	@:overload private function canEncodeImage(compression : Int, imgType : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:protected private function canEncodeImage(compression : Int, imgType : javax.imageio.ImageTypeSpecifier) : Bool;
 	
-	@:overload private function writeMaskToPalette(mask : Int, i : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>, a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function writeMaskToPalette(mask : Int, i : Int, r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>, a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }
 @:native('com$sun$imageio$plugins$bmp$BMPImageWriter$IIOWriteProgressAdapter') @:internal extern class BMPImageWriter_IIOWriteProgressAdapter implements javax.imageio.event.IIOWriteProgressListener
 {
-	@:overload public function imageComplete(source : javax.imageio.ImageWriter) : Void;
+	@:overload @:public public function imageComplete(source : javax.imageio.ImageWriter) : Void;
 	
-	@:overload public function imageProgress(source : javax.imageio.ImageWriter, percentageDone : Single) : Void;
+	@:overload @:public public function imageProgress(source : javax.imageio.ImageWriter, percentageDone : Single) : Void;
 	
-	@:overload public function imageStarted(source : javax.imageio.ImageWriter, imageIndex : Int) : Void;
+	@:overload @:public public function imageStarted(source : javax.imageio.ImageWriter, imageIndex : Int) : Void;
 	
-	@:overload public function thumbnailComplete(source : javax.imageio.ImageWriter) : Void;
+	@:overload @:public public function thumbnailComplete(source : javax.imageio.ImageWriter) : Void;
 	
-	@:overload public function thumbnailProgress(source : javax.imageio.ImageWriter, percentageDone : Single) : Void;
+	@:overload @:public public function thumbnailProgress(source : javax.imageio.ImageWriter, percentageDone : Single) : Void;
 	
-	@:overload public function thumbnailStarted(source : javax.imageio.ImageWriter, imageIndex : Int, thumbnailIndex : Int) : Void;
+	@:overload @:public public function thumbnailStarted(source : javax.imageio.ImageWriter, imageIndex : Int, thumbnailIndex : Int) : Void;
 	
-	@:overload public function writeAborted(source : javax.imageio.ImageWriter) : Void;
+	@:overload @:public public function writeAborted(source : javax.imageio.ImageWriter) : Void;
 	
 	
 }

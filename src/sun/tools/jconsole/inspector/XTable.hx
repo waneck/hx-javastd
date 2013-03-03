@@ -25,55 +25,55 @@ package sun.tools.jconsole.inspector;
 */
 extern class XTable extends javax.swing.JTable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* This returns the select index as the table was at initialization
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	/*
 	* Converts the row into index (before sorting)
 	*/
-	@:overload public function convertRowToIndex(row : Int) : Int;
+	@:overload @:public public function convertRowToIndex(row : Int) : Int;
 	
-	@:overload public function emptyTable() : Void;
+	@:overload @:public public function emptyTable() : Void;
 	
-	@:overload @:abstract public function isTableEditable() : Bool;
+	@:overload @:public @:abstract public function isTableEditable() : Bool;
 	
-	@:overload @:abstract public function isColumnEditable(column : Int) : Bool;
+	@:overload @:public @:abstract public function isColumnEditable(column : Int) : Bool;
 	
-	@:overload @:abstract public function isReadable(row : Int) : Bool;
+	@:overload @:public @:abstract public function isReadable(row : Int) : Bool;
 	
-	@:overload @:abstract public function isWritable(row : Int) : Bool;
+	@:overload @:public @:abstract public function isWritable(row : Int) : Bool;
 	
-	@:overload @:abstract public function isCellError(row : Int, col : Int) : Bool;
+	@:overload @:public @:abstract public function isCellError(row : Int, col : Int) : Bool;
 	
-	@:overload @:abstract public function isAttributeViewable(row : Int, col : Int) : Bool;
+	@:overload @:public @:abstract public function isAttributeViewable(row : Int, col : Int) : Bool;
 	
-	@:overload @:abstract public function setTableValue(value : Dynamic, row : Int) : Void;
+	@:overload @:public @:abstract public function setTableValue(value : Dynamic, row : Int) : Void;
 	
-	@:overload @:abstract public function getValue(row : Int) : Dynamic;
+	@:overload @:public @:abstract public function getValue(row : Int) : Dynamic;
 	
-	@:overload @:abstract public function getClassName(row : Int) : String;
+	@:overload @:public @:abstract public function getClassName(row : Int) : String;
 	
-	@:overload @:abstract public function getValueName(row : Int) : String;
+	@:overload @:public @:abstract public function getValueName(row : Int) : String;
 	
-	@:overload public function isReadWrite(row : Int) : Bool;
+	@:overload @:public public function isReadWrite(row : Int) : Bool;
 	
-	@:overload public function isCellEditable(row : Int, col : Int) : Bool;
+	@:overload @:public override public function isCellEditable(row : Int, col : Int) : Bool;
 	
-	@:overload public function isCellDroppable(row : Int, col : Int) : Bool;
+	@:overload @:public public function isCellDroppable(row : Int, col : Int) : Bool;
 	
-	@:overload public function getToolTip(row : Int, column : Int) : String;
+	@:overload @:public public function getToolTip(row : Int, column : Int) : String;
 	
 	/**
 	* This method sets read write rows to be blue, and other rows to be their
 	* default rendered colour.
 	*/
-	@:overload public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload @:public override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
-	@:overload public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
 	
 }

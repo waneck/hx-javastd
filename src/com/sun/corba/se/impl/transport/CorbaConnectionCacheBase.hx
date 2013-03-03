@@ -28,29 +28,29 @@ extern class CorbaConnectionCacheBase implements com.sun.corba.se.pept.transport
 	/**
 	* @author Harold Carr
 	*/
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var timestamp : haxe.Int64;
+	@:protected private var timestamp : haxe.Int64;
 	
-	private var cacheType : String;
+	@:protected private var cacheType : String;
 	
-	private var monitoringName : String;
+	@:protected private var monitoringName : String;
 	
-	private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:protected private var wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, cacheType : String, monitoringName : String) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, cacheType : String, monitoringName : String) : Void;
 	
-	@:overload public function getCacheType() : String;
+	@:overload @:public public function getCacheType() : String;
 	
-	@:overload @:synchronized public function stampTime(c : com.sun.corba.se.pept.transport.Connection) : Void;
+	@:overload @:public @:synchronized public function stampTime(c : com.sun.corba.se.pept.transport.Connection) : Void;
 	
-	@:overload public function numberOfConnections() : haxe.Int64;
+	@:overload @:public public function numberOfConnections() : haxe.Int64;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function numberOfIdleConnections() : haxe.Int64;
+	@:overload @:public public function numberOfIdleConnections() : haxe.Int64;
 	
-	@:overload public function numberOfBusyConnections() : haxe.Int64;
+	@:overload @:public public function numberOfBusyConnections() : haxe.Int64;
 	
 	/**
 	* Discarding least recently used Connections that are not busy
@@ -69,21 +69,21 @@ extern class CorbaConnectionCacheBase implements com.sun.corba.se.pept.transport
 	* it for SocketChannels and WorkerThreads for Sockets by updating the
 	* ParserTable.
 	*/
-	@:overload @:synchronized public function reclaim() : Bool;
+	@:overload @:synchronized @:public public function reclaim() : Bool;
 	
-	@:overload public function getMonitoringName() : String;
+	@:overload @:public public function getMonitoringName() : String;
 	
-	@:overload @:abstract public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public @:abstract public function values() : java.util.Collection<Dynamic>;
 	
-	@:overload @:abstract private function backingStore() : Dynamic;
+	@:overload @:protected @:abstract private function backingStore() : Dynamic;
 	
-	@:overload @:abstract private function registerWithMonitoring() : Void;
+	@:overload @:protected @:abstract private function registerWithMonitoring() : Void;
 	
-	@:overload private function dprintCreation() : Void;
+	@:overload @:protected private function dprintCreation() : Void;
 	
-	@:overload private function dprintStatistics() : Void;
+	@:overload @:protected private function dprintStatistics() : Void;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
 	
 }

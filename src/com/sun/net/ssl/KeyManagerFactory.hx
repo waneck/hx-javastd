@@ -46,7 +46,7 @@ extern class KeyManagerFactory
 	* Java security properties file, or an implementation-specific default
 	* if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultAlgorithm() : String;
+	@:overload @:public @:final @:static public static function getDefaultAlgorithm() : String;
 	
 	/**
 	* Creates a KeyManagerFactory object.
@@ -55,7 +55,7 @@ extern class KeyManagerFactory
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(factorySpi : com.sun.net.ssl.KeyManagerFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(factorySpi : com.sun.net.ssl.KeyManagerFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the algorithm name of this <code>KeyManagerFactory</code> object.
@@ -66,7 +66,7 @@ extern class KeyManagerFactory
 	*
 	* @return the algorithm name of this <code>KeyManagerFactory</code> object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Generates a <code>KeyManagerFactory</code> object that implements the
@@ -86,7 +86,7 @@ extern class KeyManagerFactory
 	* available in the default provider package or any of the other provider
 	* packages that were searched.
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : com.sun.net.ssl.KeyManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : com.sun.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Generates a <code>KeyManagerFactory</code> object for the specified
@@ -103,7 +103,7 @@ extern class KeyManagerFactory
 	* @exception NoSuchProviderException if the specified provider has not
 	* been configured.
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : com.sun.net.ssl.KeyManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : com.sun.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Generates a <code>KeyManagerFactory</code> object for the specified
@@ -118,14 +118,14 @@ extern class KeyManagerFactory
 	* @exception NoSuchAlgorithmException if the specified algorithm is not
 	* available from the specified provider.
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : com.sun.net.ssl.KeyManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : com.sun.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns the provider of this <code>KeyManagerFactory</code> object.
 	*
 	* @return the provider of this <code>KeyManagerFactory</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this factory with a source of key material. The
@@ -135,13 +135,13 @@ extern class KeyManagerFactory
 	* @param ks the key store or null
 	* @param password the password for recovering keys
 	*/
-	@:overload public function init(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function init(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Returns one key manager for each type of key material.
 	* @return the key managers
 	*/
-	@:overload public function getKeyManagers() : java.NativeArray<com.sun.net.ssl.KeyManager>;
+	@:overload @:public public function getKeyManagers() : java.NativeArray<com.sun.net.ssl.KeyManager>;
 	
 	
 }

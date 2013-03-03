@@ -29,16 +29,16 @@ extern class WrapperInfo
 	*
 	* @author  dkohlert
 	*/
-	public var wrapperName : String;
+	@:public public var wrapperName : String;
 	
 	/** Creates a new instance of FaultInfo */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(wrapperName : String) : Void;
+	@:overload @:public public function new(wrapperName : String) : Void;
 	
-	@:overload public function setWrapperName(wrapperName : String) : Void;
+	@:overload @:public public function setWrapperName(wrapperName : String) : Void;
 	
-	@:overload public function getWrapperName() : String;
+	@:overload @:public public function getWrapperName() : String;
 	
 	
 }

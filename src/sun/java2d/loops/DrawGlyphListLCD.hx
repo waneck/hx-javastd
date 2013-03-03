@@ -31,31 +31,31 @@ extern class DrawGlyphListLCD extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	public static var methodSignature(default, null) : String;
+	@:public @:final @:static public static var methodSignature(default, null) : String;
 	
-	public static var primTypeID(default, null) : Int;
+	@:public @:final @:static public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawGlyphListLCD;
+	@:overload @:public @:static public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawGlyphListLCD;
 	
-	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload @:native public function new(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, srcData : sun.font.GlyphList) : Void;
+	@:overload @:public @:native public function new(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, srcData : sun.font.GlyphList) : Void;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }
 @:native('sun$java2d$loops$DrawGlyphListLCD$TraceDrawGlyphListLCD') @:internal extern class DrawGlyphListLCD_TraceDrawGlyphListLCD extends sun.java2d.loops.DrawGlyphListLCD
 {
-	@:overload public function new(target : sun.java2d.loops.DrawGlyphListLCD) : Void;
+	@:overload @:public public function new(target : sun.java2d.loops.DrawGlyphListLCD) : Void;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function DrawGlyphListLCD(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, glyphs : sun.font.GlyphList) : Void;
+	@:overload @:public override public function DrawGlyphListLCD(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, glyphs : sun.font.GlyphList) : Void;
 	
 	
 }

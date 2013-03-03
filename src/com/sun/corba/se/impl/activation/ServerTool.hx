@@ -25,137 +25,137 @@ package com.sun.corba.se.impl.activation;
 */
 extern class ServerTool
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
 @:internal extern class RegisterServer implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class UnRegisterServer implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class LocateServer implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class LocateServerForORB implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class GetServerID implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class ListServers implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class ListActiveServers implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class ListAliases implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class ShutdownServer implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class StartServer implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class Quit implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class Help implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }
 @:internal extern class ListORBs implements com.sun.corba.se.impl.activation.CommandHandler
 {
-	@:overload public function getCommandName() : String;
+	@:overload @:public public function getCommandName() : String;
 	
-	@:overload public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
+	@:overload @:public public function printCommandHelp(out : java.io.PrintStream, helpType : Bool) : Void;
 	
-	@:overload public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
+	@:overload @:public public function processCommand(cmdArgs : java.NativeArray<String>, orb : org.omg.CORBA.ORB, out : java.io.PrintStream) : Bool;
 	
 	
 }

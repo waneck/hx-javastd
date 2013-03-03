@@ -33,13 +33,13 @@ extern class WSDLOperationFinder
 	*
 	* @author Rama Pulavarthi
 	*/
-	private var wsdlModel(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:protected @:final private var wsdlModel(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
+	@:protected @:final private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
 	
-	private var seiModel(default, null) : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:protected @:final private var seiModel(default, null) : com.sun.xml.internal.ws.api.model.SEIModel;
 	
-	@:overload public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
+	@:overload @:public public function new(wsdlModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel) : Void;
 	
 	/**
 	* This methods returns the QName of the WSDL operation correponding to a request Packet.
@@ -52,7 +52,7 @@ extern class WSDLOperationFinder
 	*          null when it cannot find a unique operation to dispatch to.
 	* @throws DispatchException When the information in the Packet is invalid
 	*/
-	@:overload @:abstract public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
 	
 	
 }

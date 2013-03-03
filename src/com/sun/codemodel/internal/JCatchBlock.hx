@@ -28,11 +28,11 @@ package com.sun.codemodel.internal;
 */
 extern class JCatchBlock implements com.sun.codemodel.internal.JGenerable
 {
-	@:overload public function param(name : String) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function param(name : String) : com.sun.codemodel.internal.JVar;
 	
-	@:overload public function body() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function body() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

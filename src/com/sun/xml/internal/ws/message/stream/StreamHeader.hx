@@ -30,20 +30,20 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	*
 	* @author Paul.Sandoz@Sun.Com
 	*/
-	private var _mark(default, null) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
+	@:protected @:final private var _mark(default, null) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
-	private var _isMustUnderstand : Bool;
+	@:protected private var _isMustUnderstand : Bool;
 	
 	/**
 	* Role or actor value.
 	*/
-	private var _role : String;
+	@:protected private var _role : String;
 	
-	private var _isRelay : Bool;
+	@:protected private var _isRelay : Bool;
 	
-	private var _localName : String;
+	@:protected private var _localName : String;
 	
-	private var _namespaceURI : String;
+	@:protected private var _namespaceURI : String;
 	
 	/**
 	* Creates a {@link StreamHeader}.
@@ -55,7 +55,7 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	* @param mark
 	*      The start of the buffered header content.
 	*/
-	@:overload private function new(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:protected private function new(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
 	/**
 	* Creates a {@link StreamHeader}.
@@ -65,30 +65,30 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	*      By the end of this method, the parser will point at
 	*      the end tag of this element.
 	*/
-	@:overload private function new(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload @:final public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
+	@:overload @:public @:final override public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
 	
-	@:overload public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public override public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
-	@:overload public function isRelay() : Bool;
+	@:overload @:public override public function isRelay() : Bool;
 	
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload override public function getLocalPart() : String;
+	@:overload @:public override public function getLocalPart() : String;
 	
-	@:overload public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public override public function getAttribute(nsUri : String, localName : String) : String;
 	
 	/**
 	* Reads the header as a {@link XMLStreamReader}
 	*/
-	@:overload override public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Creates an EPR without copying infoset.
@@ -96,9 +96,9 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	* This is the most common implementation on which {@link Header#readAsEPR(AddressingVersion)}
 	* is invoked on.
 	*/
-	@:overload public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload @:public override public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
-	@:overload @:abstract private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<com.sun.xml.internal.ws.message.stream.StreamHeader.StreamHeader_Attribute>;
+	@:overload @:protected @:abstract private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<com.sun.xml.internal.ws.message.stream.StreamHeader.StreamHeader_Attribute>;
 	
 	
 }
@@ -109,7 +109,7 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 */
 @:native('com$sun$xml$internal$ws$message$stream$StreamHeader$Attribute') extern class StreamHeader_Attribute
 {
-	@:overload public function new(nsUri : String, localName : String, value : String) : Void;
+	@:overload @:public public function new(nsUri : String, localName : String, value : String) : Void;
 	
 	
 }

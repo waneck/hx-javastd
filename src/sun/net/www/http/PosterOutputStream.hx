@@ -39,14 +39,14 @@ extern class PosterOutputStream extends java.io.ByteArrayOutputStream
 	/**
 	* Creates a new output stream for POST user data
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Writes the specified byte to this output stream.
 	*
 	* @param   b   the byte to be written.
 	*/
-	@:overload @:synchronized public function write(b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -56,7 +56,7 @@ extern class PosterOutputStream extends java.io.ByteArrayOutputStream
 	* @param   off   the start offset in the data.
 	* @param   len   the number of bytes to write.
 	*/
-	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Resets the <code>count</code> field of this output
@@ -67,13 +67,13 @@ extern class PosterOutputStream extends java.io.ByteArrayOutputStream
 	*
 	* @see     java.io.ByteArrayInputStream#count
 	*/
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	/**
 	* After close() has been called, it is no longer possible to write
 	* to this stream. Further calls to write will have no effect.
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	
 }

@@ -46,7 +46,7 @@ package javax.xml.bind;
 	*
 	* @param message a description of the exception
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Construct an ValidationException with the specified detail message and vendor
@@ -55,7 +55,7 @@ package javax.xml.bind;
 	* @param message a description of the exception
 	* @param errorCode a string specifying the vendor specific error code
 	*/
-	@:overload public function new(message : String, errorCode : String) : Void;
+	@:overload @:public public function new(message : String, errorCode : String) : Void;
 	
 	/**
 	* Construct an ValidationException with a linkedException.  The detail message and
@@ -63,7 +63,7 @@ package javax.xml.bind;
 	*
 	* @param exception the linked exception
 	*/
-	@:overload public function new(exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct an ValidationException with the specified detail message and
@@ -72,7 +72,7 @@ package javax.xml.bind;
 	* @param message a description of the exception
 	* @param exception the linked exception
 	*/
-	@:overload public function new(message : String, exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct an ValidationException with the specified detail message, vendor
@@ -82,7 +82,7 @@ package javax.xml.bind;
 	* @param errorCode a string specifying the vendor specific error code
 	* @param exception the linked exception
 	*/
-	@:overload public function new(message : String, errorCode : String, exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, errorCode : String, exception : java.lang.Throwable) : Void;
 	
 	
 }

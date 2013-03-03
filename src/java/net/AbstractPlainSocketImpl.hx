@@ -26,23 +26,23 @@ package java.net;
 @:internal extern class AbstractPlainSocketImpl extends java.net.SocketImpl
 {
 	/* number of threads using the FileDescriptor */
-	private var fdUseCount : Int;
+	@:protected private var fdUseCount : Int;
 	
 	/* lock when increment/decrementing fdUseCount */
-	private var fdLock(default, null) : Dynamic;
+	@:protected @:final private var fdLock(default, null) : Dynamic;
 	
 	/* indicates a close is pending on the file descriptor */
-	private var closePending : Bool;
+	@:protected private var closePending : Bool;
 	
 	/* whether this Socket is a stream (TCP) socket or not (UDP)
 	*/
-	private var stream : Bool;
+	@:protected private var stream : Bool;
 	
 	/**
 	* Creates a socket with a boolean that specifies whether this
 	* is a stream socket (true) or an unconnected UDP socket (false).
 	*/
-	@:overload @:synchronized override private function create(stream : Bool) : Void;
+	@:overload @:protected @:synchronized override private function create(stream : Bool) : Void;
 	
 	/**
 	* Creates a socket and connects it to the specified port on
@@ -50,7 +50,7 @@ package java.net;
 	* @param host the specified host
 	* @param port the specified port
 	*/
-	@:overload override private function connect(host : String, port : Int) : Void;
+	@:overload @:protected override private function connect(host : String, port : Int) : Void;
 	
 	/**
 	* Creates a socket and connects it to the specified address on
@@ -58,7 +58,7 @@ package java.net;
 	* @param address the address
 	* @param port the specified port
 	*/
-	@:overload override private function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected override private function connect(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Creates a socket and connects it to the specified address on
@@ -70,96 +70,96 @@ package java.net;
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function connect(address : java.net.SocketAddress, timeout : Int) : Void;
+	@:require(java4) @:overload @:protected override private function connect(address : java.net.SocketAddress, timeout : Int) : Void;
 	
-	@:overload override public function setOption(opt : Int, val : Dynamic) : Void;
+	@:overload @:public override public function setOption(opt : Int, val : Dynamic) : Void;
 	
-	@:overload override public function getOption(opt : Int) : Dynamic;
+	@:overload @:public override public function getOption(opt : Int) : Dynamic;
 	
 	/**
 	* Binds the socket to the specified address of the specified local port.
 	* @param address the address
 	* @param port the port
 	*/
-	@:overload @:synchronized override private function bind(address : java.net.InetAddress, lport : Int) : Void;
+	@:overload @:protected @:synchronized override private function bind(address : java.net.InetAddress, lport : Int) : Void;
 	
 	/**
 	* Listens, for a specified amount of time, for connections.
 	* @param count the amount of time to listen for connections
 	*/
-	@:overload @:synchronized override private function listen(count : Int) : Void;
+	@:overload @:protected @:synchronized override private function listen(count : Int) : Void;
 	
 	/**
 	* Accepts connections.
 	* @param s the connection
 	*/
-	@:overload override private function accept(s : java.net.SocketImpl) : Void;
+	@:overload @:protected override private function accept(s : java.net.SocketImpl) : Void;
 	
 	/**
 	* Gets an InputStream for this socket.
 	*/
-	@:overload @:synchronized override private function getInputStream() : java.io.InputStream;
+	@:overload @:protected @:synchronized override private function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Gets an OutputStream for this socket.
 	*/
-	@:overload @:synchronized override private function getOutputStream() : java.io.OutputStream;
+	@:overload @:protected @:synchronized override private function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the number of bytes that can be read without blocking.
 	*/
-	@:overload @:synchronized override private function available() : Int;
+	@:overload @:protected @:synchronized override private function available() : Int;
 	
 	/**
 	* Closes the socket.
 	*/
-	@:overload override private function close() : Void;
+	@:overload @:protected override private function close() : Void;
 	
 	/**
 	* Shutdown read-half of the socket connection;
 	*/
-	@:overload override private function shutdownInput() : Void;
+	@:overload @:protected override private function shutdownInput() : Void;
 	
 	/**
 	* Shutdown write-half of the socket connection;
 	*/
-	@:overload override private function shutdownOutput() : Void;
+	@:overload @:protected override private function shutdownOutput() : Void;
 	
-	@:overload override private function supportsUrgentData() : Bool;
+	@:overload @:protected override private function supportsUrgentData() : Bool;
 	
-	@:overload override private function sendUrgentData(data : Int) : Void;
+	@:overload @:protected override private function sendUrgentData(data : Int) : Void;
 	
 	/**
 	* Cleans up if the user forgets to close it.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function isConnectionReset() : Bool;
+	@:overload @:public public function isConnectionReset() : Bool;
 	
-	@:overload public function isConnectionResetPending() : Bool;
+	@:overload @:public public function isConnectionResetPending() : Bool;
 	
-	@:overload public function setConnectionReset() : Void;
+	@:overload @:public public function setConnectionReset() : Void;
 	
-	@:overload public function setConnectionResetPending() : Void;
+	@:overload @:public public function setConnectionResetPending() : Void;
 	
 	/*
 	* Return true if already closed or close is pending
 	*/
-	@:overload public function isClosedOrPending() : Bool;
+	@:overload @:public public function isClosedOrPending() : Bool;
 	
 	/*
 	* Return the current value of SO_TIMEOUT
 	*/
-	@:overload public function getTimeout() : Int;
+	@:overload @:public public function getTimeout() : Int;
 	
 	/*
 	* Close the socket (and release the file descriptor).
 	*/
-	@:overload private function socketClose() : Void;
+	@:overload @:protected private function socketClose() : Void;
 	
-	public static var SHUT_RD(default, null) : Int;
+	@:public @:final @:static public static var SHUT_RD(default, null) : Int;
 	
-	public static var SHUT_WR(default, null) : Int;
+	@:public @:final @:static public static var SHUT_WR(default, null) : Int;
 	
 	
 }

@@ -37,15 +37,15 @@ exception statement from your version.
 */
 @:internal extern class Stream
 {
-	public static var STATE_UNCONNECTED : haxe.Int64;
+	@:public @:static public static var STATE_UNCONNECTED : haxe.Int64;
 	
-	@:overload public static function checkNativeStreamState(value : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function checkNativeStreamState(value : haxe.Int64) : haxe.Int64;
 	
-	public static var FLAG_NOFLAGS : haxe.Int64;
+	@:public @:static public static var FLAG_NOFLAGS : haxe.Int64;
 	
-	public static var DEFAULT_DEVICE(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_DEVICE(default, null) : String;
 	
-	@:overload @:native public function bytesInBuffer() : Int;
+	@:overload @:public @:native public function bytesInBuffer() : Int;
 	
 	
 }
@@ -61,67 +61,67 @@ exception statement from your version.
 */
 @:native('org$classpath$icedtea$pulseaudio$Stream$StateListener') extern interface Stream_StateListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$CorkListener') extern interface Stream_CorkListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$WriteListener') extern interface Stream_WriteListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$ReadListener') extern interface Stream_ReadListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$OverflowListener') extern interface Stream_OverflowListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$UnderflowListener') extern interface Stream_UnderflowListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$PlaybackStartedListener') extern interface Stream_PlaybackStartedListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$LatencyUpdateListener') extern interface Stream_LatencyUpdateListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$MovedListener') extern interface Stream_MovedListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$UpdateTimingInfoListener') extern interface Stream_UpdateTimingInfoListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }
 @:native('org$classpath$icedtea$pulseaudio$Stream$SuspendedListener') extern interface Stream_SuspendedListener
 {
-	@:overload public function update() : Void;
+	@:overload @:public public function update() : Void;
 	
 	
 }

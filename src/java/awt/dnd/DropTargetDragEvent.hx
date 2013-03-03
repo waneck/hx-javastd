@@ -45,7 +45,7 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	*         a bitwise mask of <code>DnDConstants</code>.
 	* @throws <code>IllegalArgumentException</code> if dtc is <code>null</code>.
 	*/
-	@:overload public function new(dtc : java.awt.dnd.DropTargetContext, cursorLocn : java.awt.Point, dropAction : Int, srcActions : Int) : Void;
+	@:overload @:public public function new(dtc : java.awt.dnd.DropTargetContext, cursorLocn : java.awt.Point, dropAction : Int, srcActions : Int) : Void;
 	
 	/**
 	* This method returns a <code>Point</code>
@@ -56,7 +56,7 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	* @return the current cursor location in
 	* <code>Component</code>'s coords.
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* This method returns the current <code>DataFlavor</code>s from the
@@ -64,7 +64,7 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return current DataFlavors from the DropTargetContext
 	*/
-	@:overload public function getCurrentDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getCurrentDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* This method returns the current <code>DataFlavor</code>s
@@ -72,7 +72,7 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return a <code>java.util.List</code> of the Current <code>DataFlavor</code>s
 	*/
-	@:overload public function getCurrentDataFlavorsAsList() : java.util.List<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getCurrentDataFlavorsAsList() : java.util.List<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* This method returns a <code>boolean</code> indicating
@@ -82,21 +82,21 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	* <P>
 	* @return if a particular DataFlavor is supported
 	*/
-	@:overload public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* This method returns the source drop actions.
 	*
 	* @return the source drop actions
 	*/
-	@:overload public function getSourceActions() : Int;
+	@:overload @:public public function getSourceActions() : Int;
 	
 	/**
 	* This method returns the user drop action.
 	*
 	* @return the user drop action
 	*/
-	@:overload public function getDropAction() : Int;
+	@:overload @:public public function getDropAction() : Int;
 	
 	/**
 	* This method returns the Transferable object that represents
@@ -108,7 +108,7 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTransferable() : java.awt.datatransfer.Transferable;
+	@:require(java5) @:overload @:public public function getTransferable() : java.awt.datatransfer.Transferable;
 	
 	/**
 	* Accepts the drag.
@@ -122,14 +122,14 @@ extern class DropTargetDragEvent extends java.awt.dnd.DropTargetEvent
 	*
 	* @param dragOperation the operation accepted by the target
 	*/
-	@:overload public function acceptDrag(dragOperation : Int) : Void;
+	@:overload @:public public function acceptDrag(dragOperation : Int) : Void;
 	
 	/**
 	* Rejects the drag as a result of examining either the
 	* <code>dropAction</code> or the available <code>DataFlavor</code>
 	* types.
 	*/
-	@:overload public function rejectDrag() : Void;
+	@:overload @:public public function rejectDrag() : Void;
 	
 	
 }

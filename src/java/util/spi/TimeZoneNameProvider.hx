@@ -29,7 +29,7 @@ extern class TimeZoneNameProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a name for the given time zone ID that's suitable for
@@ -60,7 +60,7 @@ extern class TimeZoneNameProvider extends java.util.spi.LocaleServiceProvider
 	*     is null
 	* @see java.util.TimeZone#getDisplayName(boolean, int, java.util.Locale)
 	*/
-	@:overload @:abstract public function getDisplayName(ID : String, daylight : Bool, style : Int, locale : java.util.Locale) : String;
+	@:overload @:public @:abstract public function getDisplayName(ID : String, daylight : Bool, style : Int, locale : java.util.Locale) : String;
 	
 	
 }

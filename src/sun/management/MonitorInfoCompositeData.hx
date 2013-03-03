@@ -25,25 +25,25 @@ package sun.management;
 */
 extern class MonitorInfoCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function getMonitorInfo() : java.lang.management.MonitorInfo;
+	@:overload @:public public function getMonitorInfo() : java.lang.management.MonitorInfo;
 	
-	@:overload public static function toCompositeData(mi : java.lang.management.MonitorInfo) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(mi : java.lang.management.MonitorInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public static function getClassName(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getClassName(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getIdentityHashCode(cd : javax.management.openmbean.CompositeData) : Int;
+	@:overload @:public @:static public static function getIdentityHashCode(cd : javax.management.openmbean.CompositeData) : Int;
 	
-	@:overload public static function getLockedStackFrame(cd : javax.management.openmbean.CompositeData) : java.lang.StackTraceElement;
+	@:overload @:public @:static public static function getLockedStackFrame(cd : javax.management.openmbean.CompositeData) : java.lang.StackTraceElement;
 	
-	@:overload public static function getLockedStackDepth(cd : javax.management.openmbean.CompositeData) : Int;
+	@:overload @:public @:static public static function getLockedStackDepth(cd : javax.management.openmbean.CompositeData) : Int;
 	
 	/** Validate if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

@@ -25,25 +25,25 @@ package sun.management;
 */
 extern class VMOptionCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function getVMOption() : com.sun.management.VMOption;
+	@:overload @:public public function getVMOption() : com.sun.management.VMOption;
 	
-	@:overload public static function toCompositeData(option : com.sun.management.VMOption) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(option : com.sun.management.VMOption) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public static function getName(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getName(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getValue(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getValue(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getOrigin(cd : javax.management.openmbean.CompositeData) : com.sun.management.VMOption.VMOption_Origin;
+	@:overload @:public @:static public static function getOrigin(cd : javax.management.openmbean.CompositeData) : com.sun.management.VMOption.VMOption_Origin;
 	
-	@:overload public static function isWriteable(cd : javax.management.openmbean.CompositeData) : Bool;
+	@:overload @:public @:static public static function isWriteable(cd : javax.management.openmbean.CompositeData) : Bool;
 	
 	/** Validate if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

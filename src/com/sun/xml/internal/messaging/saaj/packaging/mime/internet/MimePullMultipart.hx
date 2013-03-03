@@ -25,15 +25,15 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.internet;
 */
 extern class MimePullMultipart extends com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart
 {
-	@:overload public function new(ds : javax.activation.DataSource, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Void;
+	@:overload @:public public function new(ds : javax.activation.DataSource, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Void;
 	
-	@:overload public function readAndReturnSOAPPart() : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart;
+	@:overload @:public public function readAndReturnSOAPPart() : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart;
 	
-	@:overload private function readSOAPPart() : Void;
+	@:overload @:protected private function readSOAPPart() : Void;
 	
-	@:overload public function parseAll() : Void;
+	@:overload @:public public function parseAll() : Void;
 	
-	@:overload private function parse() : Void;
+	@:overload @:protected override private function parse() : Void;
 	
 	
 }

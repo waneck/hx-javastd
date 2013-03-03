@@ -30,7 +30,7 @@ extern class Random implements java.io.Serializable
 	* the seed of the random number generator to a value very likely
 	* to be distinct from any other invocation of this constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new random number generator using a single {@code long} seed.
@@ -45,7 +45,7 @@ extern class Random implements java.io.Serializable
 	* @param seed the initial seed
 	* @see   #setSeed(long)
 	*/
-	@:overload public function new(seed : haxe.Int64) : Void;
+	@:overload @:public public function new(seed : haxe.Int64) : Void;
 	
 	/**
 	* Sets the seed of this random number generator using a single
@@ -66,7 +66,7 @@ extern class Random implements java.io.Serializable
 	*
 	* @param seed the initial seed
 	*/
-	@:overload @:synchronized public function setSeed(seed : haxe.Int64) : Void;
+	@:overload @:synchronized @:public public function setSeed(seed : haxe.Int64) : Void;
 	
 	/**
 	* Generates the next pseudorandom number. Subclasses should
@@ -93,7 +93,7 @@ extern class Random implements java.io.Serializable
 	*         generator's sequence
 	* @since  1.1
 	*/
-	@:require(java1) @:overload private function next(bits : Int) : Int;
+	@:require(java1) @:overload @:protected private function next(bits : Int) : Int;
 	
 	/**
 	* Generates random bytes and places them into a user-supplied
@@ -114,7 +114,7 @@ extern class Random implements java.io.Serializable
 	* @throws NullPointerException if the byte array is null
 	* @since  1.1
 	*/
-	@:require(java1) @:overload public function nextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java1) @:overload @:public public function nextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the next pseudorandom, uniformly distributed {@code int}
@@ -134,7 +134,7 @@ extern class Random implements java.io.Serializable
 	* @return the next pseudorandom, uniformly distributed {@code int}
 	*         value from this random number generator's sequence
 	*/
-	@:overload public function nextInt() : Int;
+	@:overload @:public public function nextInt() : Int;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed {@code int} value
@@ -191,7 +191,7 @@ extern class Random implements java.io.Serializable
 	* @throws IllegalArgumentException if n is not positive
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function nextInt(n : Int) : Int;
+	@:require(java2) @:overload @:public public function nextInt(n : Int) : Int;
 	
 	/**
 	* Returns the next pseudorandom, uniformly distributed {@code long}
@@ -212,7 +212,7 @@ extern class Random implements java.io.Serializable
 	* @return the next pseudorandom, uniformly distributed {@code long}
 	*         value from this random number generator's sequence
 	*/
-	@:overload public function nextLong() : haxe.Int64;
+	@:overload @:public public function nextLong() : haxe.Int64;
 	
 	/**
 	* Returns the next pseudorandom, uniformly distributed
@@ -234,7 +234,7 @@ extern class Random implements java.io.Serializable
 	*         sequence
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function nextBoolean() : Bool;
+	@:require(java2) @:overload @:public public function nextBoolean() : Bool;
 	
 	/**
 	* Returns the next pseudorandom, uniformly distributed {@code float}
@@ -275,7 +275,7 @@ extern class Random implements java.io.Serializable
 	*         value between {@code 0.0} and {@code 1.0} from this
 	*         random number generator's sequence
 	*/
-	@:overload public function nextFloat() : Single;
+	@:overload @:public public function nextFloat() : Single;
 	
 	/**
 	* Returns the next pseudorandom, uniformly distributed
@@ -316,7 +316,7 @@ extern class Random implements java.io.Serializable
 	*         random number generator's sequence
 	* @see Math#random
 	*/
-	@:overload public function nextDouble() : Float;
+	@:overload @:public public function nextDouble() : Float;
 	
 	/**
 	* Returns the next pseudorandom, Gaussian ("normally") distributed
@@ -363,7 +363,7 @@ extern class Random implements java.io.Serializable
 	*         standard deviation {@code 1.0} from this random number
 	*         generator's sequence
 	*/
-	@:overload @:synchronized public function nextGaussian() : Float;
+	@:overload @:synchronized @:public public function nextGaussian() : Float;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class ImageIconUIResource extends javax.swing.ImageIcon implements javax.
 	* @param imageData an array of pixels
 	* @see javax.swing.ImageIcon#ImageIcon(byte[])
 	*/
-	@:overload public function new(imageData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(imageData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Calls the superclass constructor with the same parameter.
@@ -39,7 +39,7 @@ extern class ImageIconUIResource extends javax.swing.ImageIcon implements javax.
 	* @param image an image
 	* @see javax.swing.ImageIcon#ImageIcon(Image)
 	*/
-	@:overload public function new(image : java.awt.Image) : Void;
+	@:overload @:public public function new(image : java.awt.Image) : Void;
 	
 	
 }

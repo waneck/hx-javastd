@@ -25,39 +25,39 @@ package sun.management;
 */
 @:internal extern class RuntimeImpl implements java.lang.management.RuntimeMXBean
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getManagementSpecVersion() : String;
+	@:overload @:public public function getManagementSpecVersion() : String;
 	
-	@:overload public function getVmName() : String;
+	@:overload @:public public function getVmName() : String;
 	
-	@:overload public function getVmVendor() : String;
+	@:overload @:public public function getVmVendor() : String;
 	
-	@:overload public function getVmVersion() : String;
+	@:overload @:public public function getVmVersion() : String;
 	
-	@:overload public function getSpecName() : String;
+	@:overload @:public public function getSpecName() : String;
 	
-	@:overload public function getSpecVendor() : String;
+	@:overload @:public public function getSpecVendor() : String;
 	
-	@:overload public function getSpecVersion() : String;
+	@:overload @:public public function getSpecVersion() : String;
 	
-	@:overload public function getClassPath() : String;
+	@:overload @:public public function getClassPath() : String;
 	
-	@:overload public function getLibraryPath() : String;
+	@:overload @:public public function getLibraryPath() : String;
 	
-	@:overload public function getBootClassPath() : String;
+	@:overload @:public public function getBootClassPath() : String;
 	
-	@:overload public function getInputArguments() : java.util.List<String>;
+	@:overload @:public public function getInputArguments() : java.util.List<String>;
 	
-	@:overload public function getUptime() : haxe.Int64;
+	@:overload @:public public function getUptime() : haxe.Int64;
 	
-	@:overload public function getStartTime() : haxe.Int64;
+	@:overload @:public public function getStartTime() : haxe.Int64;
 	
-	@:overload public function isBootClassPathSupported() : Bool;
+	@:overload @:public public function isBootClassPathSupported() : Bool;
 	
-	@:overload public function getSystemProperties() : java.util.Map<String, String>;
+	@:overload @:public public function getSystemProperties() : java.util.Map<String, String>;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

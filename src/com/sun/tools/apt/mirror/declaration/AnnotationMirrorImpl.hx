@@ -28,11 +28,11 @@ extern class AnnotationMirrorImpl implements com.sun.mirror.declaration.Annotati
 	/**
 	* Implementation of AnnotationMirror
 	*/
-	private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
+	@:protected @:final private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
 	
-	private var anno(default, null) : com.sun.tools.javac.code.Attribute.Attribute_Compound;
+	@:protected @:final private var anno(default, null) : com.sun.tools.javac.code.Attribute.Attribute_Compound;
 	
-	private var decl(default, null) : com.sun.mirror.declaration.Declaration;
+	@:protected @:final private var decl(default, null) : com.sun.mirror.declaration.Declaration;
 	
 	/**
 	* Returns a string representation of this annotation.
@@ -42,21 +42,21 @@ extern class AnnotationMirrorImpl implements com.sun.mirror.declaration.Annotati
 	*     @com.example.foo
 	* Omit parens for marker annotations, and omit "value=" when allowed.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationType() : com.sun.mirror.type.AnnotationType;
+	@:overload @:public public function getAnnotationType() : com.sun.mirror.type.AnnotationType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getElementValues() : java.util.Map<com.sun.mirror.declaration.AnnotationTypeElementDeclaration, com.sun.mirror.declaration.AnnotationValue>;
+	@:overload @:public public function getElementValues() : java.util.Map<com.sun.mirror.declaration.AnnotationTypeElementDeclaration, com.sun.mirror.declaration.AnnotationValue>;
 	
-	@:overload public function getPosition() : com.sun.mirror.util.SourcePosition;
+	@:overload @:public public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
-	@:overload public function getDeclaration() : com.sun.mirror.declaration.Declaration;
+	@:overload @:public public function getDeclaration() : com.sun.mirror.declaration.Declaration;
 	
 	
 }

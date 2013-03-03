@@ -25,7 +25,7 @@ package sun.font;
 */
 extern class PhysicalStrike extends sun.font.FontStrike
 {
-	private var mapper : sun.font.CharToGlyphMapper;
+	@:protected private var mapper : sun.font.CharToGlyphMapper;
 	
 	/* the ScalerContext is a native structure pre-filled with the
 	* info needed to setup the scaler for this strike. Its immutable
@@ -33,27 +33,27 @@ extern class PhysicalStrike extends sun.font.FontStrike
 	* strike is disposed. There's then no need to pass the info down
 	* separately to native on every call to the scaler.
 	*/
-	private var pScalerContext : haxe.Int64;
+	@:protected private var pScalerContext : haxe.Int64;
 	
 	/* Only one of these two arrays is non-null.
 	* use the one that matches size of an address (32 or 64 bits)
 	*/
-	private var longGlyphImages : java.NativeArray<haxe.Int64>;
+	@:protected private var longGlyphImages : java.NativeArray<haxe.Int64>;
 	
-	private var intGlyphImages : java.NativeArray<Int>;
+	@:protected private var intGlyphImages : java.NativeArray<Int>;
 	
-	private var getImageWithAdvance : Bool;
+	@:protected private var getImageWithAdvance : Bool;
 	
-	private static var complexTX(default, null) : Int;
+	@:protected @:static @:final private static var complexTX(default, null) : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/* A number of methods are delegated by the strike to the scaler
 	* context which is a shared resource on a physical font.
 	*/
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload private function adjustPoint(pt : java.awt.geom.Point2D.Point2D_Float) : Void;
+	@:overload @:protected private function adjustPoint(pt : java.awt.geom.Point2D.Point2D_Float) : Void;
 	
 	
 }

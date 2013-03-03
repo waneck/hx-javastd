@@ -28,37 +28,37 @@ extern class Cipher
 	/**
 	* Constant used to initialize cipher to encryption mode.
 	*/
-	public static var ENCRYPT_MODE(default, null) : Int;
+	@:public @:static @:final public static var ENCRYPT_MODE(default, null) : Int;
 	
 	/**
 	* Constant used to initialize cipher to decryption mode.
 	*/
-	public static var DECRYPT_MODE(default, null) : Int;
+	@:public @:static @:final public static var DECRYPT_MODE(default, null) : Int;
 	
 	/**
 	* Constant used to initialize cipher to key-wrapping mode.
 	*/
-	public static var WRAP_MODE(default, null) : Int;
+	@:public @:static @:final public static var WRAP_MODE(default, null) : Int;
 	
 	/**
 	* Constant used to initialize cipher to key-unwrapping mode.
 	*/
-	public static var UNWRAP_MODE(default, null) : Int;
+	@:public @:static @:final public static var UNWRAP_MODE(default, null) : Int;
 	
 	/**
 	* Constant used to indicate the to-be-unwrapped key is a "public key".
 	*/
-	public static var PUBLIC_KEY(default, null) : Int;
+	@:public @:static @:final public static var PUBLIC_KEY(default, null) : Int;
 	
 	/**
 	* Constant used to indicate the to-be-unwrapped key is a "private key".
 	*/
-	public static var PRIVATE_KEY(default, null) : Int;
+	@:public @:static @:final public static var PRIVATE_KEY(default, null) : Int;
 	
 	/**
 	* Constant used to indicate the to-be-unwrapped key is a "secret key".
 	*/
-	public static var SECRET_KEY(default, null) : Int;
+	@:public @:static @:final public static var SECRET_KEY(default, null) : Int;
 	
 	/**
 	* Creates a Cipher object.
@@ -67,7 +67,7 @@ extern class Cipher
 	* @param provider the provider
 	* @param transformation the transformation
 	*/
-	@:overload private function new(cipherSpi : javax.crypto.CipherSpi, provider : java.security.Provider, transformation : String) : Void;
+	@:overload @:protected private function new(cipherSpi : javax.crypto.CipherSpi, provider : java.security.Provider, transformation : String) : Void;
 	
 	/**
 	* Returns a <code>Cipher</code> object that implements the specified
@@ -101,7 +101,7 @@ extern class Cipher
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(transformation : String) : javax.crypto.Cipher;
+	@:overload @:public @:static @:final public static function getInstance(transformation : String) : javax.crypto.Cipher;
 	
 	/**
 	* Returns a <code>Cipher</code> object that implements the specified
@@ -142,7 +142,7 @@ extern class Cipher
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(transformation : String, provider : String) : javax.crypto.Cipher;
+	@:overload @:public @:static @:final public static function getInstance(transformation : String, provider : String) : javax.crypto.Cipher;
 	
 	/**
 	* Returns a <code>Cipher</code> object that implements the specified
@@ -177,14 +177,14 @@ extern class Cipher
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(transformation : String, provider : java.security.Provider) : javax.crypto.Cipher;
+	@:overload @:public @:static @:final public static function getInstance(transformation : String, provider : java.security.Provider) : javax.crypto.Cipher;
 	
 	/**
 	* Returns the provider of this <code>Cipher</code> object.
 	*
 	* @return the provider of this <code>Cipher</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the algorithm name of this <code>Cipher</code> object.
@@ -195,7 +195,7 @@ extern class Cipher
 	*
 	* @return the algorithm name of this <code>Cipher</code> object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns the block size (in bytes).
@@ -203,7 +203,7 @@ extern class Cipher
 	* @return the block size (in bytes), or 0 if the underlying algorithm is
 	* not a block cipher
 	*/
-	@:overload @:final public function getBlockSize() : Int;
+	@:overload @:public @:final public function getBlockSize() : Int;
 	
 	/**
 	* Returns the length in bytes that an output buffer would need to be in
@@ -225,7 +225,7 @@ extern class Cipher
 	* @exception IllegalStateException if this cipher is in a wrong state
 	* (e.g., has not yet been initialized)
 	*/
-	@:overload @:final public function getOutputSize(inputLen : Int) : Int;
+	@:overload @:public @:final public function getOutputSize(inputLen : Int) : Int;
 	
 	/**
 	* Returns the initialization vector (IV) in a new buffer.
@@ -238,7 +238,7 @@ extern class Cipher
 	* underlying algorithm does not use an IV, or if the IV has not yet
 	* been set.
 	*/
-	@:overload @:final public function getIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the parameters used with this cipher.
@@ -251,7 +251,7 @@ extern class Cipher
 	* @return the parameters used with this cipher, or null if this cipher
 	* does not use any parameters.
 	*/
-	@:overload @:final public function getParameters() : java.security.AlgorithmParameters;
+	@:overload @:public @:final public function getParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns the exemption mechanism object used with this cipher.
@@ -259,7 +259,7 @@ extern class Cipher
 	* @return the exemption mechanism object used with this cipher, or
 	* null if this cipher does not use any exemption mechanism.
 	*/
-	@:overload @:final public function getExemptionMechanism() : javax.crypto.ExemptionMechanism;
+	@:overload @:public @:final public function getExemptionMechanism() : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Initializes this cipher with a key.
@@ -310,7 +310,7 @@ extern class Cipher
 	* exceeds the maximum allowable keysize (as determined from the
 	* configured jurisdiction policy files).
 	*/
-	@:overload @:final public function init(opmode : Int, key : java.security.Key) : Void;
+	@:overload @:public @:final public function init(opmode : Int, key : java.security.Key) : Void;
 	
 	/**
 	* Initializes this cipher with a key and a source of randomness.
@@ -358,7 +358,7 @@ extern class Cipher
 	* exceeds the maximum allowable keysize (as determined from the
 	* configured jurisdiction policy files).
 	*/
-	@:overload @:final public function init(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key and a set of algorithm
@@ -415,7 +415,7 @@ extern class Cipher
 	* the legal limits (as determined from the configured jurisdiction
 	* policy files).
 	*/
-	@:overload @:final public function init(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of algorithm
@@ -469,7 +469,7 @@ extern class Cipher
 	* the legal limits (as determined from the configured jurisdiction
 	* policy files).
 	*/
-	@:overload @:final public function init(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key and a set of algorithm
@@ -526,7 +526,7 @@ extern class Cipher
 	* the legal limits (as determined from the configured jurisdiction
 	* policy files).
 	*/
-	@:overload @:final public function init(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters) : Void;
+	@:overload @:public @:final public function init(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of algorithm
@@ -580,7 +580,7 @@ extern class Cipher
 	* the legal limits (as determined from the configured jurisdiction
 	* policy files).
 	*/
-	@:overload @:final public function init(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with the public key from the given certificate.
@@ -642,7 +642,7 @@ extern class Cipher
 	* allowable keysize (as determined by the configured jurisdiction policy
 	* files).
 	*/
-	@:overload @:final public function init(opmode : Int, certificate : java.security.cert.Certificate) : Void;
+	@:overload @:public @:final public function init(opmode : Int, certificate : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Initializes this cipher with the public key from the given certificate
@@ -705,7 +705,7 @@ extern class Cipher
 	* allowable keysize (as determined by the configured jurisdiction policy
 	* files).
 	*/
-	@:overload @:final public function init(opmode : Int, certificate : java.security.cert.Certificate, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(opmode : Int, certificate : java.security.cert.Certificate, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -727,7 +727,7 @@ extern class Cipher
 	* @exception IllegalStateException if this cipher is in a wrong state
 	* (e.g., has not been initialized)
 	*/
-	@:overload @:final public function update(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function update(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -753,7 +753,7 @@ extern class Cipher
 	* @exception IllegalStateException if this cipher is in a wrong state
 	* (e.g., has not been initialized)
 	*/
-	@:overload @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -791,7 +791,7 @@ extern class Cipher
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the result
 	*/
-	@:overload @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -832,7 +832,7 @@ extern class Cipher
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the result
 	*/
-	@:overload @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:public @:final public function update(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -872,7 +872,7 @@ extern class Cipher
 	* output buffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function update(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
+	@:require(java5) @:overload @:public @:final public function update(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Finishes a multiple-part encryption or decryption operation, depending
@@ -911,7 +911,7 @@ extern class Cipher
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:final public function doFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function doFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Finishes a multiple-part encryption or decryption operation, depending
@@ -963,7 +963,7 @@ extern class Cipher
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:final public function doFinal(output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:public @:final public function doFinal(output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation, or finishes a
@@ -1005,7 +1005,7 @@ extern class Cipher
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation, or finishes a
@@ -1051,7 +1051,7 @@ extern class Cipher
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation, or finishes a
@@ -1111,7 +1111,7 @@ extern class Cipher
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation, or finishes a
@@ -1175,7 +1175,7 @@ extern class Cipher
 	* AEAD mode (such as GCM/CCM), and the received authentication tag
 	* does not match the calculated value
 	*/
-	@:overload @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:public @:final public function doFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation, or finishes a
@@ -1239,7 +1239,7 @@ extern class Cipher
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function doFinal(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
+	@:require(java5) @:overload @:public @:final public function doFinal(input : java.nio.ByteBuffer, output : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Wrap a key.
@@ -1260,7 +1260,7 @@ extern class Cipher
 	* wrap the key with this cipher (e.g., a hardware protected key is
 	* being passed to a software-only cipher).
 	*/
-	@:overload @:final public function wrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function wrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unwrap a previously wrapped key.
@@ -1287,7 +1287,7 @@ extern class Cipher
 	* represent a wrapped key of type <code>wrappedKeyType</code> for
 	* the <code>wrappedKeyAlgorithm</code>.
 	*/
-	@:overload @:final public function unwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload @:public @:final public function unwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
 	/**
 	* Returns the maximum key length for the specified transformation
@@ -1308,7 +1308,7 @@ extern class Cipher
 	* "algorithm/mode/padding".
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public static function getMaxAllowedKeyLength(transformation : String) : Int;
+	@:require(java5) @:overload @:public @:static @:final public static function getMaxAllowedKeyLength(transformation : String) : Int;
 	
 	/**
 	* Returns an AlgorithmParameterSpec object which contains
@@ -1328,7 +1328,7 @@ extern class Cipher
 	* "algorithm/mode/padding".
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public static function getMaxAllowedParameterSpec(transformation : String) : java.security.spec.AlgorithmParameterSpec;
+	@:require(java5) @:overload @:public @:static @:final public static function getMaxAllowedParameterSpec(transformation : String) : java.security.spec.AlgorithmParameterSpec;
 	
 	/**
 	* Continues a multi-part update of the Additional Authentication
@@ -1355,7 +1355,7 @@ extern class Cipher
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function updateAAD(src : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java7) @:overload @:public @:final public function updateAAD(src : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Continues a multi-part update of the Additional Authentication
@@ -1387,7 +1387,7 @@ extern class Cipher
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function updateAAD(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:require(java7) @:overload @:public @:final public function updateAAD(src : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Continues a multi-part update of the Additional Authentication
@@ -1419,7 +1419,7 @@ extern class Cipher
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function updateAAD(src : java.nio.ByteBuffer) : Void;
+	@:require(java7) @:overload @:public @:final public function updateAAD(src : java.nio.ByteBuffer) : Void;
 	
 	
 }

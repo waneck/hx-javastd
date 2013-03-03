@@ -43,7 +43,7 @@ extern class MXBeanSupport extends com.sun.jmx.mbeanserver.MBeanSupport<com.sun.
 	if it does not implement the class {@code mxbeanInterface} or if
 	that class is not a valid MXBean interface.
 	*/
-	@:overload public function new<T>(resource : T, mxbeanInterface : Class<T>) : Void;
+	@:overload @:public public function new<T>(resource : T, mxbeanInterface : Class<T>) : Void;
 	
 	/*
 	* The sequence of events for tracking inter-MXBean references is
@@ -63,9 +63,9 @@ extern class MXBeanSupport extends com.sun.jmx.mbeanserver.MBeanSupport<com.sun.
 	* If this method succeeds but registration subsequently fails,
 	* StandardMBean calls unregister from its postRegister(false) method.
 	*/
-	@:overload override public function register(server : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
+	@:overload @:public override public function register(server : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
 	
-	@:overload override public function unregister() : Void;
+	@:overload @:public override public function unregister() : Void;
 	
 	
 }

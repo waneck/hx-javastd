@@ -25,11 +25,11 @@ package com.sun.tools.javac.file;
 */
 extern class SymbolArchive extends com.sun.tools.javac.file.ZipArchive
 {
-	@:overload public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, orig : java.io.File, zdir : java.util.zip.ZipFile, prefix : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory) : Void;
+	@:overload @:public public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, orig : java.io.File, zdir : java.util.zip.ZipFile, prefix : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory) : Void;
 	
-	@:overload override public function getFileObject(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, file : String) : javax.tools.JavaFileObject;
+	@:overload @:public override public function getFileObject(subdirectory : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, file : String) : javax.tools.JavaFileObject;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -38,9 +38,9 @@ extern class SymbolArchive extends com.sun.tools.javac.file.ZipArchive
 */
 @:native('com$sun$tools$javac$file$SymbolArchive$SymbolFileObject') extern class SymbolArchive_SymbolFileObject extends com.sun.tools.javac.file.ZipArchive.ZipArchive_ZipFileObject
 {
-	@:overload private function new(zarch : com.sun.tools.javac.file.SymbolArchive, name : String, entry : java.util.zip.ZipEntry) : Void;
+	@:overload @:protected private function new(zarch : com.sun.tools.javac.file.SymbolArchive, name : String, entry : java.util.zip.ZipEntry) : Void;
 	
-	@:overload override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
+	@:overload @:protected override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	
 	
 }

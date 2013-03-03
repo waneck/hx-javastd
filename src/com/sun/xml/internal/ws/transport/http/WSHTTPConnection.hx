@@ -41,15 +41,15 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	*
 	* @author Jitendra Kotamraju
 	*/
-	public static var OK(default, null) : Int;
+	@:public @:static @:final public static var OK(default, null) : Int;
 	
-	public static var ONEWAY(default, null) : Int;
+	@:public @:static @:final public static var ONEWAY(default, null) : Int;
 	
-	public static var UNSUPPORTED_MEDIA(default, null) : Int;
+	@:public @:static @:final public static var UNSUPPORTED_MEDIA(default, null) : Int;
 	
-	public static var MALFORMED_XML(default, null) : Int;
+	@:public @:static @:final public static var MALFORMED_XML(default, null) : Int;
 	
-	public static var INTERNAL_ERR(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_ERR(default, null) : Int;
 	
 	/**
 	* Overwrites all the HTTP response headers written thus far.
@@ -79,7 +79,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	*      an helpful error message should be provided if it's actually null.
 	* @see #setContentTypeResponseHeader(String)
 	*/
-	@:overload @:abstract public function setResponseHeaders(headers : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public @:abstract public function setResponseHeaders(headers : java.util.Map<String, java.util.List<String>>) : Void;
 	
 	/**
 	* Sets the <tt>"Content-Type"</tt> header.
@@ -96,7 +96,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	*      strings like <tt>"application/xml; charset=UTF-8"</tt> or
 	*      <tt>"image/jpeg"</tt>.
 	*/
-	@:overload @:abstract public function setContentTypeResponseHeader(value : String) : Void;
+	@:overload @:public @:abstract public function setContentTypeResponseHeader(value : String) : Void;
 	
 	/**
 	* Sets the HTTP response code like {@link #OK}.
@@ -108,7 +108,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* so do not consider the value to be final until {@link #getOutput()}
 	* is invoked.
 	*/
-	@:overload @:abstract public function setStatus(status : Int) : Void;
+	@:overload @:public @:abstract public function setStatus(status : Int) : Void;
 	
 	/**
 	* Gets the last value set by {@link #setStatus(int)}.
@@ -117,7 +117,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	*      if {@link #setStatus(int)} has not been invoked yet,
 	*      return 0.
 	*/
-	@:overload @:abstract public function getStatus() : Int;
+	@:overload @:public @:abstract public function getStatus() : Int;
 	
 	/**
 	* Transport's underlying input stream.
@@ -130,7 +130,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      the stream from which the request body will be read.
 	*/
-	@:overload @:abstract public function getInput() : java.io.InputStream;
+	@:overload @:public @:abstract public function getInput() : java.io.InputStream;
 	
 	/**
 	* Transport's underlying output stream
@@ -147,17 +147,17 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* {@link #setResponseHeaders}, and {@link #setContentTypeResponseHeader(String)}
 	* will never be invoked.
 	*/
-	@:overload @:abstract public function getOutput() : java.io.OutputStream;
+	@:overload @:public @:abstract public function getOutput() : java.io.OutputStream;
 	
 	/**
 	* Returns the {@link WebServiceContextDelegate} for this connection.
 	*/
-	@:overload @:abstract public function getWebServiceContextDelegate() : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
+	@:overload @:public @:abstract public function getWebServiceContextDelegate() : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
 	
 	/**
 	* HTTP request method, such as "GET" or "POST".
 	*/
-	@:overload @:abstract public function getRequestMethod() : String;
+	@:overload @:public @:abstract public function getRequestMethod() : String;
 	
 	/**
 	* HTTP request headers.
@@ -170,13 +170,13 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      can be empty but never null.
 	*/
-	@:overload @:abstract public function getRequestHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public @:abstract public function getRequestHeaders() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* @return
 	*      HTTP response headers.
 	*/
-	@:overload @:abstract public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public @:abstract public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Gets an HTTP request header.
@@ -188,17 +188,17 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* @return
 	*      null if no header exists.
 	*/
-	@:overload @:abstract public function getRequestHeader(headerName : String) : String;
+	@:overload @:public @:abstract public function getRequestHeader(headerName : String) : String;
 	
 	/**
 	* HTTP Query string, such as "foo=bar", or null if none exists.
 	*/
-	@:overload @:abstract public function getQueryString() : String;
+	@:overload @:public @:abstract public function getQueryString() : String;
 	
 	/**
 	* Requested path. A string like "/foo/bar/baz"
 	*/
-	@:overload @:abstract public function getPathInfo() : String;
+	@:overload @:public @:abstract public function getPathInfo() : String;
 	
 	/**
 	* Gets the absolute URL up to the context path.
@@ -206,7 +206,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	*      String like "http://myhost/myapp"
 	* @since 2.1.2
 	*/
-	@:require(java1) @:overload public function getBaseAddress() : String;
+	@:require(java1) @:overload @:public public function getBaseAddress() : String;
 	
 	/**
 	* Whether connection is HTTPS or not
@@ -214,24 +214,24 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* @return if the received request is on HTTPS, return true
 	*         else false
 	*/
-	@:overload @:abstract public function isSecure() : Bool;
+	@:overload @:public @:abstract public function isSecure() : Bool;
 	
 	/**
 	* Close the connection
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Retuns whether connection is closed or not.
 	*/
-	@:overload public function isClosed() : Bool;
+	@:overload @:public public function isClosed() : Bool;
 	
 	/**
 	* Subclasses are expected to override
 	*
 	* @return
 	*/
-	@:overload public function getProtocol() : String;
+	@:overload @:public public function getProtocol() : String;
 	
 	/**
 	* Subclasses are expected to override
@@ -239,7 +239,7 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	* @since JAX-WS RI 2.2.2
 	* @return
 	*/
-	@:require(java2) @:overload public function getCookie(name : String) : String;
+	@:require(java2) @:overload @:public public function getCookie(name : String) : String;
 	
 	/**
 	* Subclasses are expected to override
@@ -247,14 +247,14 @@ extern class WSHTTPConnection extends com.sun.xml.internal.ws.api.PropertySet
 	*
 	* @since JAX-WS RI 2.2.2
 	*/
-	@:require(java2) @:overload public function setCookie(name : String, value : String) : Void;
+	@:require(java2) @:overload @:public public function setCookie(name : String, value : String) : Void;
 	
 	/**
 	* Subclasses are expected to override
 	*
 	* @return
 	*/
-	@:overload public function setContentLengthResponseHeader(value : Int) : Void;
+	@:overload @:public public function setContentLengthResponseHeader(value : Int) : Void;
 	
 	
 }

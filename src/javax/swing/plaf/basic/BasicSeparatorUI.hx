@@ -32,31 +32,31 @@ extern class BasicSeparatorUI extends javax.swing.plaf.SeparatorUI
 	* @author Georges Saab
 	* @author Jeff Shapiro
 	*/
-	private var shadow : java.awt.Color;
+	@:protected private var shadow : java.awt.Color;
 	
-	private var highlight : java.awt.Color;
+	@:protected private var highlight : java.awt.Color;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults(s : javax.swing.JSeparator) : Void;
+	@:overload @:protected private function installDefaults(s : javax.swing.JSeparator) : Void;
 	
-	@:overload private function uninstallDefaults(s : javax.swing.JSeparator) : Void;
+	@:overload @:protected private function uninstallDefaults(s : javax.swing.JSeparator) : Void;
 	
-	@:overload private function installListeners(s : javax.swing.JSeparator) : Void;
+	@:overload @:protected private function installListeners(s : javax.swing.JSeparator) : Void;
 	
-	@:overload private function uninstallListeners(s : javax.swing.JSeparator) : Void;
+	@:overload @:protected private function uninstallListeners(s : javax.swing.JSeparator) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

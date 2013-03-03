@@ -25,13 +25,13 @@ package sun.applet;
 */
 extern class AppletEvent extends java.util.EventObject
 {
-	@:overload public function new(source : Dynamic, id : Int, argument : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic, id : Int, argument : Dynamic) : Void;
 	
-	@:overload public function getID() : Int;
+	@:overload @:public public function getID() : Int;
 	
-	@:overload public function getArgument() : Dynamic;
+	@:overload @:public public function getArgument() : Dynamic;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

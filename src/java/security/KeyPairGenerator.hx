@@ -34,7 +34,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	* Java Cryptography Architecture Standard Algorithm Name Documentation</a>
 	* for information about standard algorithm names.
 	*/
-	@:overload private function new(algorithm : String) : Void;
+	@:overload @:protected private function new(algorithm : String) : Void;
 	
 	/**
 	* Returns the standard name of the algorithm for this key pair generator.
@@ -45,7 +45,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @return the standard string name of the algorithm.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns a KeyPairGenerator object that generates public/private
@@ -74,7 +74,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.KeyPairGenerator;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.KeyPairGenerator;
 	
 	/**
 	* Returns a KeyPairGenerator object that generates public/private
@@ -110,7 +110,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.KeyPairGenerator;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.KeyPairGenerator;
 	
 	/**
 	* Returns a KeyPairGenerator object that generates public/private
@@ -141,14 +141,14 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.KeyPairGenerator;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.KeyPairGenerator;
 	
 	/**
 	* Returns the provider of this key pair generator object.
 	*
 	* @return the provider of this key pair generator object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes the key pair generator for a certain keysize using
@@ -166,7 +166,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	* @exception InvalidParameterException if the <code>keysize</code> is not
 	* supported by this KeyPairGenerator object.
 	*/
-	@:overload public function initialize(keysize : Int) : Void;
+	@:overload @:public public function initialize(keysize : Int) : Void;
 	
 	/**
 	* Initializes the key pair generator for a certain keysize with
@@ -182,7 +182,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:require(java2) @:overload @:public override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the key pair generator using the specified parameter
@@ -212,7 +212,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function initialize(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:require(java2) @:overload @:public public function initialize(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes the key pair generator with the given parameter
@@ -237,7 +237,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:require(java2) @:overload @:public override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a key pair.
@@ -255,7 +255,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:final public function genKeyPair() : java.security.KeyPair;
+	@:require(java2) @:overload @:public @:final public function genKeyPair() : java.security.KeyPair;
 	
 	/**
 	* Generates a key pair.
@@ -271,7 +271,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @return the generated key pair
 	*/
-	@:overload override public function generateKeyPair() : java.security.KeyPair;
+	@:overload @:public override public function generateKeyPair() : java.security.KeyPair;
 	
 	
 }
@@ -291,11 +291,11 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 */
 @:native('java$security$KeyPairGenerator$Delegate') @:internal extern class KeyPairGenerator_Delegate extends java.security.KeyPairGenerator
 {
-	@:overload override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
 	
-	@:overload override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public override public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override public function generateKeyPair() : java.security.KeyPair;
+	@:overload @:public override public function generateKeyPair() : java.security.KeyPair;
 	
 	
 }

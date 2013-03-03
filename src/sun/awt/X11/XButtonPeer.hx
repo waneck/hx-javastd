@@ -25,50 +25,50 @@ package sun.awt.X11;
 */
 extern class XButtonPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.ButtonPeer
 {
-	private var focusColor : java.awt.Color;
+	@:protected private var focusColor : java.awt.Color;
 	
-	@:overload private function getPropertyPrefix() : String;
+	@:overload @:protected private function getPropertyPrefix() : String;
 	
-	@:overload public function new(target : java.awt.Button) : Void;
+	@:overload @:public public function new(target : java.awt.Button) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload override public function isFocusable() : Bool;
+	@:overload @:public override public function isFocusable() : Bool;
 	
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload public function action(when : haxe.Int64, modifiers : Int) : Void;
+	@:overload @:public public function action(when : haxe.Int64, modifiers : Int) : Void;
 	
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* DEPRECATED
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/*
 	This method is called from Toolkit Thread and so it should not call any client code
 
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : java.awt.Component) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics, c : java.awt.Component) : Void;
 	
-	@:overload public function paintBorder(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : java.awt.Component) : Void;
+	@:overload @:protected private function paintButtonPressed(g : java.awt.Graphics, b : java.awt.Component) : Void;
 	
-	@:overload private function paintText(g : java.awt.Graphics, c : java.awt.Component, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload @:protected private function paintText(g : java.awt.Graphics, c : java.awt.Component, textRect : java.awt.Rectangle, text : String) : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class UsesJAXBContextFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the {@link UsesJAXBContext} feature.
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
 	/**
 	* Creates {@link UsesJAXBContextFeature}.
@@ -38,7 +38,7 @@ extern class UsesJAXBContextFeature extends javax.xml.ws.WebServiceFeature
 	*      a new instance. {@link JAXBContextFactory#createJAXBContext(SEIModel, List, List)} will
 	*      be then called to create {@link JAXBContext}.
 	*/
-	@:overload public function new(factoryClass : Class<com.sun.xml.internal.ws.developer.JAXBContextFactory>) : Void;
+	@:overload @:public public function new(factoryClass : Class<com.sun.xml.internal.ws.developer.JAXBContextFactory>) : Void;
 	
 	/**
 	* Creates {@link UsesJAXBContextFeature}.
@@ -47,13 +47,13 @@ extern class UsesJAXBContextFeature extends javax.xml.ws.WebServiceFeature
 	* @param factory
 	*      Uses a specific instance of {@link JAXBContextFactory} to create {@link JAXBContext}.
 	*/
-	@:overload public function new(factory : com.sun.xml.internal.ws.developer.JAXBContextFactory) : Void;
+	@:overload @:public public function new(factory : com.sun.xml.internal.ws.developer.JAXBContextFactory) : Void;
 	
 	/**
 	* Creates {@link UsesJAXBContextFeature}.
 	* This version allows you to create {@link JAXBRIContext} upfront and uses it.
 	*/
-	@:overload public function new(context : com.sun.xml.internal.bind.api.JAXBRIContext) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.api.JAXBRIContext) : Void;
 	
 	/**
 	* Gets the {@link JAXBContextFactory} instance to be used for creating {@link JAXBContext} for SEI.
@@ -61,9 +61,9 @@ extern class UsesJAXBContextFeature extends javax.xml.ws.WebServiceFeature
 	* @return
 	*      null if the default {@link JAXBContext} shall be used.
 	*/
-	@:overload public function getFactory() : com.sun.xml.internal.ws.developer.JAXBContextFactory;
+	@:overload @:public public function getFactory() : com.sun.xml.internal.ws.developer.JAXBContextFactory;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	
 }

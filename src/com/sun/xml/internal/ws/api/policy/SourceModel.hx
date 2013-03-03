@@ -31,7 +31,7 @@ extern class SourceModel extends com.sun.xml.internal.ws.policy.sourcemodel.Poli
 	* @param nsVersion The policy version
 	* @return Newly created policy source model instance.
 	*/
-	@:overload public static function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public @:static public static function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Factory method that creates new policy source model instance and initializes it according to parameters provided.
@@ -41,7 +41,7 @@ extern class SourceModel extends com.sun.xml.internal.ws.policy.sourcemodel.Poli
 	* @param policyName global policy identifier - absolute policy expression URI. May be {@code null}.
 	* @return Newly created policy source model instance with its name and id properly set.
 	*/
-	@:overload public static function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public @:static public static function createSourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	
 }

@@ -35,20 +35,20 @@ extern interface XSDeclaration extends com.sun.xml.internal.xsom.XSComponent
 	* Target namespace to which this component belongs.
 	* <code>""</code> is used to represent the default no namespace.
 	*/
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
 	/**
 	* Gets the (local) name of the declaration.
 	*
 	* @return null if this component is anonymous.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* @deprecated use the isGlobal method, which always returns
 	* the opposite of this function. Or the isLocal method.
 	*/
-	@:overload public function isAnonymous() : Bool;
+	@:overload @:public public function isAnonymous() : Bool;
 	
 	/**
 	* Returns true if this declaration is a global declaration.
@@ -56,13 +56,13 @@ extern interface XSDeclaration extends com.sun.xml.internal.xsom.XSComponent
 	* Global declarations are those declaration that can be enumerated
 	* through the schema object.
 	*/
-	@:overload public function isGlobal() : Bool;
+	@:overload @:public public function isGlobal() : Bool;
 	
 	/**
 	* Returns true if this declaration is a local declaration.
 	* Equivalent of <code>!isGlobal()</code>
 	*/
-	@:overload public function isLocal() : Bool;
+	@:overload @:public public function isLocal() : Bool;
 	
 	
 }

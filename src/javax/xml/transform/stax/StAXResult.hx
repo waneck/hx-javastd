@@ -29,7 +29,7 @@ extern class StAXResult implements javax.xml.transform.Result
 	* returns true when passed this value as an argument,
 	* the Transformer supports Result output of this type.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* <p>Creates a new instance of a <code>StAXResult</code>
@@ -44,7 +44,7 @@ extern class StAXResult implements javax.xml.transform.Result
 	* @throws IllegalArgumentException If <code>xmlEventWriter</code> ==
 	*   <code>null</code>.
 	*/
-	@:overload public function new(xmlEventWriter : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload @:public public function new(xmlEventWriter : javax.xml.stream.XMLEventWriter) : Void;
 	
 	/**
 	* <p>Creates a new instance of a <code>StAXResult</code>
@@ -59,7 +59,7 @@ extern class StAXResult implements javax.xml.transform.Result
 	* @throws IllegalArgumentException If <code>xmlStreamWriter</code> ==
 	*   <code>null</code>.
 	*/
-	@:overload public function new(xmlStreamWriter : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(xmlStreamWriter : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* <p>Get the <code>XMLEventWriter</code> used by this
@@ -72,7 +72,7 @@ extern class StAXResult implements javax.xml.transform.Result
 	* @return <code>XMLEventWriter</code> used by this
 	*   <code>StAXResult</code>.
 	*/
-	@:overload public function getXMLEventWriter() : javax.xml.stream.XMLEventWriter;
+	@:overload @:public public function getXMLEventWriter() : javax.xml.stream.XMLEventWriter;
 	
 	/**
 	* <p>Get the <code>XMLStreamWriter</code> used by this
@@ -85,7 +85,7 @@ extern class StAXResult implements javax.xml.transform.Result
 	* @return <code>XMLStreamWriter</code> used by this
 	*   <code>StAXResult</code>.
 	*/
-	@:overload public function getXMLStreamWriter() : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public public function getXMLStreamWriter() : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* <p>In the context of a <code>StAXResult</code>, it is not appropriate
@@ -102,14 +102,14 @@ extern class StAXResult implements javax.xml.transform.Result
 	* @throws UnsupportedOperationException Is <strong>always</strong>
 	*   thrown by this method.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* <p>The returned system identifier is always <code>null</code>.</p>
 	*
 	* @return The returned system identifier is always <code>null</code>.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

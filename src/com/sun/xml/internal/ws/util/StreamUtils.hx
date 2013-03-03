@@ -31,7 +31,7 @@ extern class StreamUtils
 	* @return null if there is no data
 	*         else stream to be used
 	*/
-	@:overload public static function hasSomeData(_in : java.io.InputStream) : java.io.InputStream;
+	@:overload @:public @:static public static function hasSomeData(_in : java.io.InputStream) : java.io.InputStream;
 	
 	
 }

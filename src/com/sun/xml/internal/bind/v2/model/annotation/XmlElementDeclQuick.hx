@@ -25,25 +25,25 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 @:internal extern class XmlElementDeclQuick extends com.sun.xml.internal.bind.v2.model.annotation.Quick implements javax.xml.bind.annotation.XmlElementDecl
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlElementDecl) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlElementDecl) : Void;
 	
-	@:overload override private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected override private function getAnnotation() : java.lang.annotation.Annotation;
 	
-	@:overload override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload override public function annotationType() : Class<javax.xml.bind.annotation.XmlElementDecl>;
+	@:overload @:public override public function annotationType() : Class<javax.xml.bind.annotation.XmlElementDecl>;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function scope() : Class<Dynamic>;
+	@:overload @:public public function scope() : Class<Dynamic>;
 	
-	@:overload public function namespace() : String;
+	@:overload @:public public function namespace() : String;
 	
-	@:overload public function defaultValue() : String;
+	@:overload @:public public function defaultValue() : String;
 	
-	@:overload public function substitutionHeadNamespace() : String;
+	@:overload @:public public function substitutionHeadNamespace() : String;
 	
-	@:overload public function substitutionHeadName() : String;
+	@:overload @:public public function substitutionHeadName() : String;
 	
 	
 }

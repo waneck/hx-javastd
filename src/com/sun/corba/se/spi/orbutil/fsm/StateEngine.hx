@@ -51,11 +51,11 @@ extern interface StateEngine
 	* This method can only be called before done().  An attempt to
 	* call it after done() results in an IllegalStateException.
 	*/
-	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Add a transition with a guard that always evaluates to true.
 	*/
-	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Set the default transition and action for a state.
 	* This transition will be used if no more specific transition was
@@ -64,16 +64,16 @@ extern interface StateEngine
 	* This method can only be called before done().  An attempt to
 	* call it after done() results in an IllegalStateException.
 	*/
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Equivalent to setDefault( oldState, act, newState ) where act is an
 	* action that does nothing.
 	*/
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Euaivalent to setDefault( oldState, oldState )
 	*/
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
+	@:overload @:public public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Set the default action used in this state engine.  This is the
 	* action that is called whenever there is no applicable transition.
@@ -81,7 +81,7 @@ extern interface StateEngine
 	* be called before done().  An attempt to
 	* call it after done() results in an IllegalStateException.
 	*/
-	@:overload public function setDefaultAction(act : com.sun.corba.se.spi.orbutil.fsm.Action) : Void;
+	@:overload @:public public function setDefaultAction(act : com.sun.corba.se.spi.orbutil.fsm.Action) : Void;
 	
 	/** Called after all transitions have been added to the state engine.
 	* This provides an opportunity for the implementation to optimize
@@ -89,14 +89,14 @@ extern interface StateEngine
 	* may only be called once.  An attempt to call it more than once
 	* results in an IllegalStateException.
 	*/
-	@:overload public function done() : Void;
+	@:overload @:public public function done() : Void;
 	
 	/** Create an instance of a FSM that uses this state engine.
 	* The initial state of the FSM will be the stateState specified
 	* here.  This method can only be called after done().  An attempt
 	* to call it before done results in an IllegalStateException.
 	*/
-	@:overload public function makeFSM(startState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.FSM;
+	@:overload @:public public function makeFSM(startState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.FSM;
 	
 	
 }

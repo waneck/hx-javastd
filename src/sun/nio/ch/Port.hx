@@ -25,9 +25,9 @@ package sun.nio.ch;
 */
 @:internal extern class Port extends sun.nio.ch.AsynchronousChannelGroupImpl
 {
-	private var fdToChannelLock(default, null) : java.util.concurrent.locks.ReadWriteLock;
+	@:protected @:final private var fdToChannelLock(default, null) : java.util.concurrent.locks.ReadWriteLock;
 	
-	private var fdToChannel(default, null) : java.util.Map<Null<Int>, sun.nio.ch.Port.Port_PollableChannel>;
+	@:protected @:final private var fdToChannel(default, null) : java.util.Map<Null<Int>, sun.nio.ch.Port.Port_PollableChannel>;
 	
 	
 }

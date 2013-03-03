@@ -35,7 +35,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null. Null is never a
 	*/
-	@:overload public static function unmodifiableView(attributeSet : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
+	@:overload @:public @:static public static function unmodifiableView(attributeSet : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
 	
 	/**
 	* Creates an unmodifiable view of the given doc attribute set.
@@ -47,7 +47,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function unmodifiableView(attributeSet : javax.print.attribute.DocAttributeSet) : javax.print.attribute.DocAttributeSet;
+	@:overload @:public @:static public static function unmodifiableView(attributeSet : javax.print.attribute.DocAttributeSet) : javax.print.attribute.DocAttributeSet;
 	
 	/**
 	* Creates an unmodifiable view of the given print request attribute set.
@@ -59,7 +59,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function unmodifiableView(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : javax.print.attribute.PrintRequestAttributeSet;
+	@:overload @:public @:static public static function unmodifiableView(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : javax.print.attribute.PrintRequestAttributeSet;
 	
 	/**
 	* Creates an unmodifiable view of the given print job attribute set.
@@ -71,7 +71,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function unmodifiableView(attributeSet : javax.print.attribute.PrintJobAttributeSet) : javax.print.attribute.PrintJobAttributeSet;
+	@:overload @:public @:static public static function unmodifiableView(attributeSet : javax.print.attribute.PrintJobAttributeSet) : javax.print.attribute.PrintJobAttributeSet;
 	
 	/**
 	* Creates an unmodifiable view of the given print service attribute set.
@@ -83,7 +83,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function unmodifiableView(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : javax.print.attribute.PrintServiceAttributeSet;
+	@:overload @:public @:static public static function unmodifiableView(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : javax.print.attribute.PrintServiceAttributeSet;
 	
 	/**
 	* Creates a synchronized view of the given attribute set.
@@ -95,7 +95,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function synchronizedView(attributeSet : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
+	@:overload @:public @:static public static function synchronizedView(attributeSet : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
 	
 	/**
 	* Creates a synchronized view of the given doc attribute set.
@@ -107,7 +107,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function synchronizedView(attributeSet : javax.print.attribute.DocAttributeSet) : javax.print.attribute.DocAttributeSet;
+	@:overload @:public @:static public static function synchronizedView(attributeSet : javax.print.attribute.DocAttributeSet) : javax.print.attribute.DocAttributeSet;
 	
 	/**
 	* Creates a synchronized view of the given print request attribute set.
@@ -119,7 +119,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function synchronizedView(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : javax.print.attribute.PrintRequestAttributeSet;
+	@:overload @:public @:static public static function synchronizedView(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : javax.print.attribute.PrintRequestAttributeSet;
 	
 	/**
 	* Creates a synchronized view of the given print job attribute set.
@@ -131,7 +131,7 @@ extern class AttributeSetUtilities
 	* @exception  NullPointerException
 	*     Thrown if <CODE>attributeSet</CODE> is null.
 	*/
-	@:overload public static function synchronizedView(attributeSet : javax.print.attribute.PrintJobAttributeSet) : javax.print.attribute.PrintJobAttributeSet;
+	@:overload @:public @:static public static function synchronizedView(attributeSet : javax.print.attribute.PrintJobAttributeSet) : javax.print.attribute.PrintJobAttributeSet;
 	
 	/**
 	* Creates a synchronized view of the given print service attribute set.
@@ -140,7 +140,7 @@ extern class AttributeSetUtilities
 	*
 	* @return  Synchronized view of <CODE>attributeSet</CODE>.
 	*/
-	@:overload public static function synchronizedView(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : javax.print.attribute.PrintServiceAttributeSet;
+	@:overload @:public @:static public static function synchronizedView(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : javax.print.attribute.PrintServiceAttributeSet;
 	
 	/**
 	* Verify that the given object is a {@link java.lang.Class Class} that
@@ -162,7 +162,7 @@ extern class AttributeSetUtilities
 	*     {@link java.lang.Class Class} that implements
 	*     <CODE>interfaceName</CODE>.
 	*/
-	@:overload public static function verifyAttributeCategory(object : Dynamic, interfaceName : Class<Dynamic>) : Class<Dynamic>;
+	@:overload @:public @:static public static function verifyAttributeCategory(object : Dynamic, interfaceName : Class<Dynamic>) : Class<Dynamic>;
 	
 	/**
 	* Verify that the given object is an instance of the given interface, which
@@ -183,7 +183,7 @@ extern class AttributeSetUtilities
 	*     (unchecked exception) Thrown if <CODE>object</CODE> is not an
 	*     instance of <CODE>interfaceName</CODE>.
 	*/
-	@:overload public static function verifyAttributeValue(object : Dynamic, interfaceName : Class<Dynamic>) : javax.print.attribute.Attribute;
+	@:overload @:public @:static public static function verifyAttributeValue(object : Dynamic, interfaceName : Class<Dynamic>) : javax.print.attribute.Attribute;
 	
 	/**
 	* Verify that the given attribute category object is equal to the
@@ -200,7 +200,7 @@ extern class AttributeSetUtilities
 	*     (unchecked exception) Thrown if the <CODE>category</CODE> is not
 	*     equal to the category of the <CODE>attribute</CODE>.
 	*/
-	@:overload public static function verifyCategoryForValue(category : Class<Dynamic>, attribute : javax.print.attribute.Attribute) : Void;
+	@:overload @:public @:static public static function verifyCategoryForValue(category : Class<Dynamic>, attribute : javax.print.attribute.Attribute) : Void;
 	
 	
 }
@@ -211,33 +211,33 @@ extern class AttributeSetUtilities
 {
 	/* Unmodifiable view of the underlying attribute set.
 	*/
-	@:overload public function new(attributeSet : javax.print.attribute.AttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.AttributeSet) : Void;
 	
-	@:overload public function get(key : Class<Dynamic>) : javax.print.attribute.Attribute;
+	@:overload @:public public function get(key : Class<Dynamic>) : javax.print.attribute.Attribute;
 	
-	@:overload public function add(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function add(attribute : javax.print.attribute.Attribute) : Bool;
 	
-	@:overload @:synchronized public function remove(category : Class<Dynamic>) : Bool;
+	@:overload @:public @:synchronized public function remove(category : Class<Dynamic>) : Bool;
 	
-	@:overload public function remove(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function remove(attribute : javax.print.attribute.Attribute) : Bool;
 	
-	@:overload public function containsKey(category : Class<Dynamic>) : Bool;
+	@:overload @:public public function containsKey(category : Class<Dynamic>) : Bool;
 	
-	@:overload public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
 	
-	@:overload public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -246,7 +246,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$UnmodifiableDocAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiableDocAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.DocAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.DocAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.DocAttributeSet) : Void;
 	
 	
 }
@@ -255,7 +255,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintRequestAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintRequestAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintRequestAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	
 }
@@ -264,7 +264,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintJobAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintJobAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintJobAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
 	
 }
@@ -273,7 +273,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintServiceAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintServiceAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintServiceAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : Void;
 	
 	
 }
@@ -282,33 +282,33 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$SynchronizedAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.AttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.AttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.AttributeSet) : Void;
 	
-	@:overload @:synchronized public function get(category : Class<Dynamic>) : javax.print.attribute.Attribute;
+	@:overload @:public @:synchronized public function get(category : Class<Dynamic>) : javax.print.attribute.Attribute;
 	
-	@:overload @:synchronized public function add(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public @:synchronized public function add(attribute : javax.print.attribute.Attribute) : Bool;
 	
-	@:overload @:synchronized public function remove(category : Class<Dynamic>) : Bool;
+	@:overload @:public @:synchronized public function remove(category : Class<Dynamic>) : Bool;
 	
-	@:overload @:synchronized public function remove(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public @:synchronized public function remove(attribute : javax.print.attribute.Attribute) : Bool;
 	
-	@:overload @:synchronized public function containsKey(category : Class<Dynamic>) : Bool;
+	@:overload @:public @:synchronized public function containsKey(category : Class<Dynamic>) : Bool;
 	
-	@:overload @:synchronized public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public @:synchronized public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
 	
-	@:overload @:synchronized public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public @:synchronized public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
 	
-	@:overload @:synchronized public function size() : Int;
+	@:overload @:public @:synchronized public function size() : Int;
 	
-	@:overload @:synchronized public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
+	@:overload @:public @:synchronized public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
 	
-	@:overload @:synchronized public function clear() : Void;
+	@:overload @:public @:synchronized public function clear() : Void;
 	
-	@:overload @:synchronized public function isEmpty() : Bool;
+	@:overload @:public @:synchronized public function isEmpty() : Bool;
 	
-	@:overload @:synchronized public function equals(o : Dynamic) : Bool;
+	@:overload @:public @:synchronized public function equals(o : Dynamic) : Bool;
 	
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized public function hashCode() : Int;
 	
 	
 }
@@ -317,7 +317,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$SynchronizedDocAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedDocAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.DocAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.DocAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.DocAttributeSet) : Void;
 	
 	
 }
@@ -326,7 +326,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintRequestAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintRequestAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintRequestAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	
 }
@@ -335,7 +335,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintJobAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintJobAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintJobAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
 	
 }
@@ -344,7 +344,7 @@ extern class AttributeSetUtilities
 */
 @:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintServiceAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintServiceAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintServiceAttributeSet implements java.io.Serializable
 {
-	@:overload public function new(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : Void;
+	@:overload @:public public function new(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : Void;
 	
 	
 }

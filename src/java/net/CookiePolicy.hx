@@ -43,7 +43,7 @@ package java.net;
 	* @return          <tt>true</tt> if this cookie should be accepted;
 	*                  otherwise, <tt>false</tt>
 	*/
-	@:overload public function shouldAccept(uri : java.net.URI, cookie : java.net.HttpCookie) : Bool;
+	@:overload @:public public function shouldAccept(uri : java.net.URI, cookie : java.net.HttpCookie) : Bool;
 	
 	
 }

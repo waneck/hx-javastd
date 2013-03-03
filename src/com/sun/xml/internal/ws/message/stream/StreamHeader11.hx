@@ -30,15 +30,15 @@ extern class StreamHeader11 extends com.sun.xml.internal.ws.message.stream.Strea
 	*
 	* @author Paul.Sandoz@Sun.Com
 	*/
-	private static var SOAP_1_1_MUST_UNDERSTAND(default, null) : String;
+	@:protected @:static @:final private static var SOAP_1_1_MUST_UNDERSTAND(default, null) : String;
 	
-	private static var SOAP_1_1_ROLE(default, null) : String;
+	@:protected @:static @:final private static var SOAP_1_1_ROLE(default, null) : String;
 	
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : Void;
 	
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload @:final override private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<com.sun.xml.internal.ws.message.stream.StreamHeader.StreamHeader_Attribute>;
+	@:overload @:protected @:final override private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<com.sun.xml.internal.ws.message.stream.StreamHeader.StreamHeader_Attribute>;
 	
 	
 }

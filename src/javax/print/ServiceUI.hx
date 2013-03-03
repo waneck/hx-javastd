@@ -104,7 +104,7 @@ extern class ServiceUI
 	* or attributes is null, or the initial PrintService is not in the
 	* list of browsable services.
 	*/
-	@:overload public static function printDialog(gc : java.awt.GraphicsConfiguration, x : Int, y : Int, services : java.NativeArray<javax.print.PrintService>, defaultService : javax.print.PrintService, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.PrintRequestAttributeSet) : javax.print.PrintService;
+	@:overload @:public @:static public static function printDialog(gc : java.awt.GraphicsConfiguration, x : Int, y : Int, services : java.NativeArray<javax.print.PrintService>, defaultService : javax.print.PrintService, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.PrintRequestAttributeSet) : javax.print.PrintService;
 	
 	
 }

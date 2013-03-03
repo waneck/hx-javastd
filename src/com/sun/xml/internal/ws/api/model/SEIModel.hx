@@ -71,14 +71,14 @@ extern interface SEIModel
 	* @return the <code>JavaMethod</code> associated with the
 	*         operation named name
 	*/
-	@:overload public function getJavaMethod(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.JavaMethod;
+	@:overload @:public public function getJavaMethod(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.JavaMethod;
 	
 	/**
 	* Gives the JavaMethod associated with the wsdl operation
 	* @param operationName QName of the wsdl operation
 	* @return
 	*/
-	@:overload public function getJavaMethodForWsdlOperation(operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.JavaMethod;
+	@:overload @:public public function getJavaMethodForWsdlOperation(operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.model.JavaMethod;
 	
 	/**
 	* Gives all the {@link JavaMethod} for a wsdl:port for which this {@link SEIModel} is

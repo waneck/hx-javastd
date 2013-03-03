@@ -32,37 +32,37 @@ package com.sun.tools.example.debug.gui;
 */
 extern class Environment
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getSourceManager() : com.sun.tools.example.debug.gui.SourceManager;
+	@:overload @:public public function getSourceManager() : com.sun.tools.example.debug.gui.SourceManager;
 	
-	@:overload public function getClassManager() : com.sun.tools.example.debug.gui.ClassManager;
+	@:overload @:public public function getClassManager() : com.sun.tools.example.debug.gui.ClassManager;
 	
-	@:overload public function getContextManager() : com.sun.tools.example.debug.gui.ContextManager;
+	@:overload @:public public function getContextManager() : com.sun.tools.example.debug.gui.ContextManager;
 	
-	@:overload public function getMonitorListModel() : com.sun.tools.example.debug.gui.MonitorListModel;
+	@:overload @:public public function getMonitorListModel() : com.sun.tools.example.debug.gui.MonitorListModel;
 	
-	@:overload public function getExecutionManager() : com.sun.tools.example.debug.bdi.ExecutionManager;
+	@:overload @:public public function getExecutionManager() : com.sun.tools.example.debug.bdi.ExecutionManager;
 	
-	@:overload public function terminate() : Void;
+	@:overload @:public public function terminate() : Void;
 	
-	@:overload public function setTypeScript(writer : java.io.PrintWriter) : Void;
+	@:overload @:public public function setTypeScript(writer : java.io.PrintWriter) : Void;
 	
-	@:overload public function error(message : String) : Void;
+	@:overload @:public public function error(message : String) : Void;
 	
-	@:overload public function failure(message : String) : Void;
+	@:overload @:public public function failure(message : String) : Void;
 	
-	@:overload public function notice(message : String) : Void;
+	@:overload @:public public function notice(message : String) : Void;
 	
-	@:overload public function getOutputSink() : com.sun.tools.example.debug.gui.OutputSink;
+	@:overload @:public public function getOutputSink() : com.sun.tools.example.debug.gui.OutputSink;
 	
-	@:overload public function viewSource(fileName : String) : Void;
+	@:overload @:public public function viewSource(fileName : String) : Void;
 	
-	@:overload public function viewLocation(locn : com.sun.jdi.Location) : Void;
+	@:overload @:public public function viewLocation(locn : com.sun.jdi.Location) : Void;
 	
-	@:overload public function getVerboseFlag() : Bool;
+	@:overload @:public public function getVerboseFlag() : Bool;
 	
-	@:overload public function setVerboseFlag(verbose : Bool) : Void;
+	@:overload @:public public function setVerboseFlag(verbose : Bool) : Void;
 	
 	
 }

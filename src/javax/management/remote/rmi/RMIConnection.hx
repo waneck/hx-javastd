@@ -35,7 +35,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function getConnectionId() : String;
+	@:overload @:public public function getConnectionId() : String;
 	
 	/**
 	* <p>Closes this connection.  On return from this method, the RMI
@@ -47,7 +47,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* communication failure when transmitting the remote close
 	* request.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Handles the method {@link
@@ -89,7 +89,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
 	/**
 	* Handles the method {@link
@@ -134,7 +134,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
 	/**
 	* Handles the method {@link
@@ -184,7 +184,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
 	/**
 	* Handles the method {@link
@@ -238,7 +238,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
 	/**
 	* Handles the method
@@ -263,7 +263,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function unregisterMBean(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* Handles the method
@@ -288,7 +288,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function getObjectInstance(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.ObjectInstance;
 	
 	/**
 	* Handles the method {@link
@@ -315,7 +315,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectInstance>;
 	
 	/**
 	* Handles the method {@link
@@ -342,7 +342,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function queryNames(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : java.util.Set<javax.management.ObjectName>;
 	
 	/**
 	* Handles the method
@@ -363,7 +363,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function isRegistered(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Bool;
 	
 	/**
 	* Handles the method
@@ -379,7 +379,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function getMBeanCount(delegationSubject : javax.security.auth.Subject) : Null<Int>;
+	@:overload @:public public function getMBeanCount(delegationSubject : javax.security.auth.Subject) : Null<Int>;
 	
 	/**
 	* Handles the method {@link
@@ -417,7 +417,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @see #setAttribute
 	*/
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String, delegationSubject : javax.security.auth.Subject) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String, delegationSubject : javax.security.auth.Subject) : Dynamic;
 	
 	/**
 	* Handles the method {@link
@@ -446,7 +446,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @see #setAttributes
 	*/
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
 	
 	/**
 	* Handles the method {@link
@@ -484,7 +484,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @see #getAttribute
 	*/
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* Handles the method {@link
@@ -517,7 +517,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @see #getAttributes
 	*/
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : javax.management.AttributeList;
 	
 	/**
 	* Handles the method {@link
@@ -558,7 +558,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* IllegalArgumentException} when <code>name</code> or
 	* <code>operationName</code> is null.
 	*/
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.rmi.MarshalledObject<Dynamic>, signature : java.NativeArray<String>, delegationSubject : javax.security.auth.Subject) : Dynamic;
 	
 	/**
 	* Handles the method
@@ -574,7 +574,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function getDefaultDomain(delegationSubject : javax.security.auth.Subject) : String;
+	@:overload @:public public function getDefaultDomain(delegationSubject : javax.security.auth.Subject) : String;
 	
 	/**
 	* Handles the method
@@ -590,7 +590,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* if any, does not have permission to perform this operation.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function getDomains(delegationSubject : javax.security.auth.Subject) : java.NativeArray<String>;
+	@:overload @:public public function getDomains(delegationSubject : javax.security.auth.Subject) : java.NativeArray<String>;
 	
 	/**
 	* Handles the method
@@ -617,7 +617,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* <code>java.lang.IllegalArgumentException</code>: The object
 	* name in parameter is null.
 	*/
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : javax.management.MBeanInfo;
 	
 	/**
 	* Handles the method {@link
@@ -642,7 +642,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* <code>java.lang.IllegalArgumentException</code>: The object
 	* name in parameter is null.
 	*/
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String, delegationSubject : javax.security.auth.Subject) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String, delegationSubject : javax.security.auth.Subject) : Bool;
 	
 	/**
 	* Handles the method {@link
@@ -684,7 +684,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* @see #removeNotificationListener(ObjectName, ObjectName,
 	* MarshalledObject, MarshalledObject, Subject)
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* Handles the method {@link
@@ -711,7 +711,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @see #addNotificationListener
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, delegationSubject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* Handles the method {@link
@@ -747,7 +747,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @see #addNotificationListener
 	*/
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : java.rmi.MarshalledObject<Dynamic>, handback : java.rmi.MarshalledObject<Dynamic>, delegationSubject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* <p>Handles the method {@link
@@ -801,7 +801,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* permission to add a listener.
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function addNotificationListeners(names : java.NativeArray<javax.management.ObjectName>, filters : java.NativeArray<java.rmi.MarshalledObject<Dynamic>>, delegationSubjects : java.NativeArray<javax.security.auth.Subject>) : java.NativeArray<Null<Int>>;
+	@:overload @:public public function addNotificationListeners(names : java.NativeArray<javax.management.ObjectName>, filters : java.NativeArray<java.rmi.MarshalledObject<Dynamic>>, delegationSubjects : java.NativeArray<javax.security.auth.Subject>) : java.NativeArray<Null<Int>>;
 	
 	/**
 	* <p>Handles the
@@ -840,7 +840,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	* <code>listenerIds</code> is null or if <code>listenerIds</code>
 	* contains a null element.
 	*/
-	@:overload public function removeNotificationListeners(name : javax.management.ObjectName, listenerIDs : java.NativeArray<Null<Int>>, delegationSubject : javax.security.auth.Subject) : Void;
+	@:overload @:public public function removeNotificationListeners(name : javax.management.ObjectName, listenerIDs : java.NativeArray<Null<Int>>, delegationSubject : javax.security.auth.Subject) : Void;
 	
 	/**
 	* <p>Retrieves notifications from the connector server.  This
@@ -880,7 +880,7 @@ extern interface RMIConnection extends java.io.Closeable extends java.rmi.Remote
 	*
 	* @throws IOException if a general communication exception occurred.
 	*/
-	@:overload public function fetchNotifications(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifications(clientSequenceNumber : haxe.Int64, maxNotifications : Int, timeout : haxe.Int64) : javax.management.remote.NotificationResult;
 	
 	
 }

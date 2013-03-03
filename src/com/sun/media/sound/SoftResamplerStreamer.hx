@@ -30,7 +30,7 @@ extern interface SoftResamplerStreamer extends com.sun.media.sound.ModelOscillat
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function open(osc : com.sun.media.sound.ModelWavetable, outputsamplerate : Single) : Void;
+	@:overload @:public public function open(osc : com.sun.media.sound.ModelWavetable, outputsamplerate : Single) : Void;
 	
 	
 }

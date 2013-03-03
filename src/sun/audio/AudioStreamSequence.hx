@@ -29,7 +29,7 @@ extern class AudioStreamSequence extends java.io.SequenceInputStream
 	* Create an AudioStreamSequence given an
 	* enumeration of streams.
 	*/
-	@:overload public function new(e : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function new(e : java.util.Enumeration<Dynamic>) : Void;
 	
 	
 }

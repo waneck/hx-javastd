@@ -30,25 +30,25 @@ extern class JAXWSUtils
 	*
 	* Wrapper utility class to be used from the generated code or run time.
 	*/
-	@:overload public static function getUUID() : String;
+	@:overload @:public @:static public static function getUUID() : String;
 	
-	@:overload public static function getFileOrURLName(fileOrURL : String) : String;
+	@:overload @:public @:static public static function getFileOrURLName(fileOrURL : String) : String;
 	
-	@:overload public static function getFileOrURL(fileOrURL : String) : java.net.URL;
+	@:overload @:public @:static public static function getFileOrURL(fileOrURL : String) : java.net.URL;
 	
-	@:overload public static function absolutize(name : String) : String;
+	@:overload @:public @:static public static function absolutize(name : String) : String;
 	
 	/**
 	* Checks if the system ID is absolute.
 	*/
-	@:overload public static function checkAbsoluteness(systemId : String) : Void;
+	@:overload @:public @:static public static function checkAbsoluteness(systemId : String) : Void;
 	
 	/*
 	* To match, both QNames must have the same namespace and the local
 	* part of the target must match the local part of the 'pattern'
 	* QName, which may contain wildcard characters.
 	*/
-	@:overload public static function matchQNames(target : javax.xml.namespace.QName, pattern : javax.xml.namespace.QName) : Bool;
+	@:overload @:public @:static public static function matchQNames(target : javax.xml.namespace.QName, pattern : javax.xml.namespace.QName) : Bool;
 	
 	
 }

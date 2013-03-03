@@ -70,7 +70,7 @@ extern class PMGClass extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.PMGClass) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.PMGClass) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to CONSTANT_Utf8
@@ -78,7 +78,7 @@ extern class PMGClass extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	* @param constant_pool Array of constants
 	* @param PMGClass_index Index in constant pool to CONSTANT_Utf8
 	*/
-	@:overload public function new(name_index : Int, length : Int, pmg_index : Int, pmg_class_index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, pmg_index : Int, pmg_class_index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -87,7 +87,7 @@ extern class PMGClass extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump source file attribute to file stream in binary format.
@@ -95,47 +95,47 @@ extern class PMGClass extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Index in constant pool of source file name.
 	*/
-	@:overload @:final public function getPMGClassIndex() : Int;
+	@:overload @:public @:final public function getPMGClassIndex() : Int;
 	
 	/**
 	* @param PMGClass_index.
 	*/
-	@:overload @:final public function setPMGClassIndex(pmg_class_index : Int) : Void;
+	@:overload @:public @:final public function setPMGClassIndex(pmg_class_index : Int) : Void;
 	
 	/**
 	* @return Index in constant pool of source file name.
 	*/
-	@:overload @:final public function getPMGIndex() : Int;
+	@:overload @:public @:final public function getPMGIndex() : Int;
 	
 	/**
 	* @param PMGClass_index.
 	*/
-	@:overload @:final public function setPMGIndex(pmg_index : Int) : Void;
+	@:overload @:public @:final public function setPMGIndex(pmg_index : Int) : Void;
 	
 	/**
 	* @return PMG name.
 	*/
-	@:overload @:final public function getPMGName() : String;
+	@:overload @:public @:final public function getPMGName() : String;
 	
 	/**
 	* @return PMG class name.
 	*/
-	@:overload @:final public function getPMGClassName() : String;
+	@:overload @:public @:final public function getPMGClassName() : String;
 	
 	/**
 	* @return String representation
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

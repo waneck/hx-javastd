@@ -44,7 +44,7 @@ package javax.swing.table;
 	* @throws IndexOutOfBoundsException if the arguments are outside the
 	*         bounds of the model
 	*/
-	@:overload @:abstract public function toString(model : javax.swing.table.TableModel, row : Int, column : Int) : String;
+	@:overload @:public @:abstract public function toString(model : javax.swing.table.TableModel, row : Int, column : Int) : String;
 	
 	
 }

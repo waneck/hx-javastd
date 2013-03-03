@@ -31,13 +31,13 @@ extern class LZWCompressor
 	* @param TIFF flag indicating that TIFF lzw fudge needs to be applied
 	* @exception IOException if underlying output stream error
 	**/
-	@:overload public function new(out : javax.imageio.stream.ImageOutputStream, codeSize : Int, TIFF : Bool) : Void;
+	@:overload @:public public function new(out : javax.imageio.stream.ImageOutputStream, codeSize : Int, TIFF : Bool) : Void;
 	
 	/**
 	* @param buf data to be compressed to output stream
 	* @exception IOException if underlying output stream error
 	**/
-	@:overload public function compress(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:public public function compress(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/*
 	* Indicate to compressor that no more data to go so write out
@@ -45,9 +45,9 @@ extern class LZWCompressor
 	*
 	* @exception IOException if underlying output stream error
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function dump(out : java.io.PrintStream) : Void;
+	@:overload @:public public function dump(out : java.io.PrintStream) : Void;
 	
 	
 }

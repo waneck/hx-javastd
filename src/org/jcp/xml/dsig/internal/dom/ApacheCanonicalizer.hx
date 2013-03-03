@@ -27,29 +27,29 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class ApacheCanonicalizer extends javax.xml.crypto.dsig.TransformService
 {
-	private var apacheCanonicalizer : com.sun.org.apache.xml.internal.security.c14n.Canonicalizer;
+	@:protected private var apacheCanonicalizer : com.sun.org.apache.xml.internal.security.c14n.Canonicalizer;
 	
-	private var inclusiveNamespaces : String;
+	@:protected private var inclusiveNamespaces : String;
 	
-	private var params : javax.xml.crypto.dsig.spec.C14NMethodParameterSpec;
+	@:protected private var params : javax.xml.crypto.dsig.spec.C14NMethodParameterSpec;
 	
-	private var ownerDoc : org.w3c.dom.Document;
+	@:protected private var ownerDoc : org.w3c.dom.Document;
 	
-	private var transformElem : org.w3c.dom.Element;
+	@:protected private var transformElem : org.w3c.dom.Element;
 	
-	@:overload @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:public @:final override public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
 	
-	@:overload public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public override public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public override public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
-	@:overload public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload @:final public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public @:final override public function isFeatureSupported(feature : String) : Bool;
 	
 	
 }

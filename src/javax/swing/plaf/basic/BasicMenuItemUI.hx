@@ -33,33 +33,33 @@ package javax.swing.plaf.basic;
 */
 extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 {
-	private var menuItem : javax.swing.JMenuItem;
+	@:protected private var menuItem : javax.swing.JMenuItem;
 	
-	private var selectionBackground : java.awt.Color;
+	@:protected private var selectionBackground : java.awt.Color;
 	
-	private var selectionForeground : java.awt.Color;
+	@:protected private var selectionForeground : java.awt.Color;
 	
-	private var disabledForeground : java.awt.Color;
+	@:protected private var disabledForeground : java.awt.Color;
 	
-	private var acceleratorForeground : java.awt.Color;
+	@:protected private var acceleratorForeground : java.awt.Color;
 	
-	private var acceleratorSelectionForeground : java.awt.Color;
+	@:protected private var acceleratorSelectionForeground : java.awt.Color;
 	
 	/**
 	* Accelerator delimiter string, such as {@code '+'} in {@code 'Ctrl+C'}.
 	* @since 1.7
 	*/
-	@:require(java7) private var acceleratorDelimiter : String;
+	@:require(java7) @:protected private var acceleratorDelimiter : String;
 	
-	private var defaultTextIconGap : Int;
+	@:protected private var defaultTextIconGap : Int;
 	
-	private var acceleratorFont : java.awt.Font;
+	@:protected private var acceleratorFont : java.awt.Font;
 	
-	private var mouseInputListener : javax.swing.event.MouseInputListener;
+	@:protected private var mouseInputListener : javax.swing.event.MouseInputListener;
 	
-	private var menuDragMouseListener : javax.swing.event.MenuDragMouseListener;
+	@:protected private var menuDragMouseListener : javax.swing.event.MenuDragMouseListener;
 	
-	private var menuKeyListener : javax.swing.event.MenuKeyListener;
+	@:protected private var menuKeyListener : javax.swing.event.MenuKeyListener;
 	
 	/**
 	* <code>PropertyChangeListener</code> returned from
@@ -71,49 +71,49 @@ extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 	* @since 1.6
 	* @see #createPropertyChangeListener
 	*/
-	@:require(java6) private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:require(java6) @:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
-	private var arrowIcon : javax.swing.Icon;
+	@:protected private var arrowIcon : javax.swing.Icon;
 	
-	private var checkIcon : javax.swing.Icon;
+	@:protected private var checkIcon : javax.swing.Icon;
 	
-	private var oldBorderPainted : Bool;
+	@:protected private var oldBorderPainted : Bool;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
-	
-	/**
-	* @since 1.3
-	*/
-	@:require(java3) @:overload private function installComponents(menuItem : javax.swing.JMenuItem) : Void;
-	
-	@:overload private function getPropertyPrefix() : String;
-	
-	@:overload private function installListeners() : Void;
-	
-	@:overload private function installKeyboardActions() : Void;
-	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
-	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
 	/**
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function uninstallComponents(menuItem : javax.swing.JMenuItem) : Void;
+	@:require(java3) @:overload @:protected private function installComponents(menuItem : javax.swing.JMenuItem) : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function getPropertyPrefix() : String;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
-	@:overload private function createMenuDragMouseListener(c : javax.swing.JComponent) : javax.swing.event.MenuDragMouseListener;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function createMenuKeyListener(c : javax.swing.JComponent) : javax.swing.event.MenuKeyListener;
+	@:overload @:protected private function uninstallDefaults() : Void;
+	
+	/**
+	* @since 1.3
+	*/
+	@:require(java3) @:overload @:protected private function uninstallComponents(menuItem : javax.swing.JMenuItem) : Void;
+	
+	@:overload @:protected private function uninstallListeners() : Void;
+	
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
+	
+	@:overload @:protected private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
+	
+	@:overload @:protected private function createMenuDragMouseListener(c : javax.swing.JComponent) : javax.swing.event.MenuDragMouseListener;
+	
+	@:overload @:protected private function createMenuKeyListener(c : javax.swing.JComponent) : javax.swing.event.MenuKeyListener;
 	
 	/**
 	* Creates a <code>PropertyChangeListener</code> which will be added to
@@ -123,15 +123,15 @@ extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 	* @return an instance of a <code>PropertyChangeListener</code> or null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function createPropertyChangeListener(c : javax.swing.JComponent) : java.beans.PropertyChangeListener;
+	@:require(java6) @:overload @:protected private function createPropertyChangeListener(c : javax.swing.JComponent) : java.beans.PropertyChangeListener;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function getPreferredMenuItemSize(c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, defaultTextIconGap : Int) : java.awt.Dimension;
+	@:overload @:protected private function getPreferredMenuItemSize(c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, defaultTextIconGap : Int) : java.awt.Dimension;
 	
 	/**
 	* We draw the background in paintMenuItem()
@@ -139,11 +139,11 @@ extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 	* components by default) to just call paint().
 	*
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintMenuItem(g : java.awt.Graphics, c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, background : java.awt.Color, foreground : java.awt.Color, defaultTextIconGap : Int) : Void;
+	@:overload @:protected private function paintMenuItem(g : java.awt.Graphics, c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, background : java.awt.Color, foreground : java.awt.Color, defaultTextIconGap : Int) : Void;
 	
 	/**
 	* Draws the background of the menu item.
@@ -153,7 +153,7 @@ extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 	* @param bgColor selection background color
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
+	@:require(java4) @:overload @:protected private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
 	
 	/**
 	* Renders the text of the current menu item.
@@ -164,9 +164,9 @@ extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 	* @param text string to render
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
+	@:require(java4) @:overload @:protected private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload public function getPath() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getPath() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Call this method when a menu item is to be activated.
@@ -184,59 +184,59 @@ extern class BasicMenuItemUI extends javax.swing.plaf.MenuItemUI
 	* @see JMenuItem#doClick(int)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function doClick(msm : javax.swing.MenuSelectionManager) : Void;
+	@:require(java4) @:overload @:protected private function doClick(msm : javax.swing.MenuSelectionManager) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicMenuItemUI$MouseInputHandler') extern class BasicMenuItemUI_MouseInputHandler implements javax.swing.event.MouseInputListener
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicMenuItemUI$Actions') @:internal extern class BasicMenuItemUI_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicMenuItemUI$Handler') @:internal extern class BasicMenuItemUI_Handler implements javax.swing.event.MenuDragMouseListener implements javax.swing.event.MouseInputListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function menuDragMouseEntered(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public public function menuDragMouseEntered(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload public function menuDragMouseDragged(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public public function menuDragMouseDragged(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload public function menuDragMouseExited(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public public function menuDragMouseExited(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload public function menuDragMouseReleased(e : javax.swing.event.MenuDragMouseEvent) : Void;
+	@:overload @:public public function menuDragMouseReleased(e : javax.swing.event.MenuDragMouseEvent) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

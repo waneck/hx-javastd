@@ -28,7 +28,7 @@ extern interface CorbaServerRequestDispatcher extends com.sun.corba.se.pept.prot
 	/**
 	* Handle a locate request.
 	*/
-	@:overload public function locate(key : com.sun.corba.se.spi.ior.ObjectKey) : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function locate(key : com.sun.corba.se.spi.ior.ObjectKey) : com.sun.corba.se.spi.ior.IOR;
 	
 	
 }

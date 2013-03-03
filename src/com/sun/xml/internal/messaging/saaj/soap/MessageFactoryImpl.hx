@@ -33,23 +33,23 @@ extern class MessageFactoryImpl extends javax.xml.soap.MessageFactory
 	*
 	* @author Phil Goodwin (phil.goodwin@sun.com)
 	*/
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	private var listener : java.io.OutputStream;
+	@:protected private var listener : java.io.OutputStream;
 	
-	private var lazyAttachments : Bool;
+	@:protected private var lazyAttachments : Bool;
 	
-	@:overload public function listen(newListener : java.io.OutputStream) : java.io.OutputStream;
+	@:overload @:public public function listen(newListener : java.io.OutputStream) : java.io.OutputStream;
 	
-	@:overload public function createMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function createMessage() : javax.xml.soap.SOAPMessage;
 	
-	@:overload public function createMessage(isFastInfoset : Bool, acceptFastInfoset : Bool) : javax.xml.soap.SOAPMessage;
+	@:overload @:public public function createMessage(isFastInfoset : Bool, acceptFastInfoset : Bool) : javax.xml.soap.SOAPMessage;
 	
-	@:overload public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
 	
-	@:overload @:final private static function getContentType(headers : javax.xml.soap.MimeHeaders) : String;
+	@:overload @:protected @:static @:final private static function getContentType(headers : javax.xml.soap.MimeHeaders) : String;
 	
-	@:overload public function setLazyAttachmentOptimization(flag : Bool) : Void;
+	@:overload @:public public function setLazyAttachmentOptimization(flag : Bool) : Void;
 	
 	
 }

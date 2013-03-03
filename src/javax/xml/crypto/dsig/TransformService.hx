@@ -31,7 +31,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	/**
 	* Default constructor, for invocation by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a <code>TransformService</code> that supports the specified
@@ -61,7 +61,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*   algorithm and mechanism type
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, mechanismType : String) : javax.xml.crypto.dsig.TransformService;
+	@:overload @:public @:static public static function getInstance(algorithm : String, mechanismType : String) : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Returns a <code>TransformService</code> that supports the specified
@@ -83,7 +83,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*   available from the specified <code>Provider</code> object
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.TransformService;
+	@:overload @:public @:static public static function getInstance(algorithm : String, mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Returns a <code>TransformService</code> that supports the specified
@@ -109,14 +109,14 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*   available from the specified provider
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, mechanismType : String, provider : String) : javax.xml.crypto.dsig.TransformService;
+	@:overload @:public @:static public static function getInstance(algorithm : String, mechanismType : String, provider : String) : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Returns the mechanism type supported by this <code>TransformService</code>.
 	*
 	* @return the mechanism type
 	*/
-	@:overload @:final public function getMechanismType() : String;
+	@:overload @:public @:final public function getMechanismType() : String;
 	
 	/**
 	* Returns the URI of the algorithm supported by this
@@ -124,14 +124,14 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*
 	* @return the algorithm URI
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns the provider of this <code>TransformService</code>.
 	*
 	* @return the provider
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this <code>TransformService</code> with the specified
@@ -146,7 +146,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws InvalidAlgorithmParameterException if the specified parameters
 	*   are invalid for this algorithm
 	*/
-	@:overload @:abstract public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload @:public @:abstract public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
 	/**
 	* Marshals the algorithm-specific parameters. If there are no parameters
@@ -162,7 +162,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws NullPointerException if <code>parent</code> is <code>null</code>
 	* @throws MarshalException if the parameters cannot be marshalled
 	*/
-	@:overload @:abstract public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public @:abstract public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
 	/**
 	* Initializes this <code>TransformService</code> with the specified
@@ -179,7 +179,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws InvalidAlgorithmParameterException if the specified parameters
 	*   are invalid for this algorithm
 	*/
-	@:overload @:abstract public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public @:abstract public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
 	/**
 	* Transforms the specified data using the underlying transform algorithm.
@@ -201,7 +201,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws TransformException if an error occurs while executing the
 	*    transform
 	*/
-	@:overload @:abstract @:public public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public @:abstract @:public public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
 	/**
 	* Indicates whether a specified feature is supported.
@@ -211,7 +211,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Transforms the specified data using the underlying transform algorithm.
@@ -224,7 +224,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws TransformException if an error occurs while executing the
 	*    transform
 	*/
-	@:overload @:abstract @:public public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public @:abstract @:public public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
 	/**
 	* Returns the algorithm-specific input parameters associated with this
@@ -236,21 +236,21 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @return the algorithm-specific input parameters (may be <code>null</code>
 	*    if not specified)
 	*/
-	@:overload public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:public public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
 	
 	
 }
 @:native('javax$xml$crypto$dsig$TransformService$MechanismMapEntry') @:internal extern class TransformService_MechanismMapEntry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -45,13 +45,13 @@ package javax.naming;
 	*
 	* @param  explanation     Possibly null detail explaining the exception.
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of PartialResultException.
 	* All fields default to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

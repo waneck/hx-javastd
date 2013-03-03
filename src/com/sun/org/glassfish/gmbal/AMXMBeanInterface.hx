@@ -28,18 +28,18 @@ extern interface AMXMBeanInterface
 	/** Get all metadata about this MBean.
 	* @return The descriptor, which will be a ModelMBeanInfoSupport instance.
 	*/
-	@:overload public function getMeta() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getMeta() : java.util.Map<String, Dynamic>;
 	
 	/** Usually the same as the ObjectName 'name' property, but can differ
 	if the actual name contains characters that must be escaped for an ObjectName and/or
 	if the MBean has a mutable name attribute.
 	The type property can be obtained from the ObjectName */
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/** "go up one level": the MBean containing this one, can be null for root
 	* @return The container of this MBean (null if already at root).
 	*/
-	@:overload public function getParent() : com.sun.org.glassfish.gmbal.AMXMBeanInterface;
+	@:overload @:public public function getParent() : com.sun.org.glassfish.gmbal.AMXMBeanInterface;
 	
 	/** Containment hierarchy:
 	Get all AMXMBeanInterface contained by this one, in no particular order.
@@ -47,7 +47,7 @@ extern interface AMXMBeanInterface
 	* Note that using an array sidesteps Map/Set/OpenType issues
 	* @return All children of this AMXMBeanInterface MBean.
 	*/
-	@:overload public function getChildren() : java.NativeArray<com.sun.org.glassfish.gmbal.AMXMBeanInterface>;
+	@:overload @:public public function getChildren() : java.NativeArray<com.sun.org.glassfish.gmbal.AMXMBeanInterface>;
 	
 	
 }

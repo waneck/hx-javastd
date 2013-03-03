@@ -25,13 +25,13 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface NestedParticle extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function element() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
+	@:overload @:public public function element() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
 	
-	@:overload public function any() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Any;
+	@:overload @:public public function any() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Any;
 	
-	@:overload public function sequence() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
+	@:overload @:public public function sequence() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
 	
-	@:overload public function choice() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
+	@:overload @:public public function choice() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ExplicitGroup;
 	
 	
 }

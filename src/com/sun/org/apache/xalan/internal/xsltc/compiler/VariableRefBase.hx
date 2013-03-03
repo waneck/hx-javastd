@@ -26,22 +26,22 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* A reference to the associated variable.
 	*/
-	private var _variable : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase;
+	@:protected private var _variable : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase;
 	
 	/**
 	* A reference to the enclosing expression/instruction for which a
 	* closure is needed (Predicate, Number or Sort).
 	*/
-	private var _closure : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
+	@:protected private var _closure : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
 	
-	@:overload public function new(variable : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase) : Void;
+	@:overload @:public public function new(variable : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a reference to the associated variable
 	*/
-	@:overload public function getVariable() : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase;
+	@:overload @:public public function getVariable() : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase;
 	
 	/**
 	* If this variable reference is in a top-level element like
@@ -55,22 +55,22 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* and assuming this class represents "$x", add a reference
 	* between variable y and variable x.
 	*/
-	@:overload public function addParentDependency() : Void;
+	@:overload @:public public function addParentDependency() : Void;
 	
 	/**
 	* Two variable references are deemed equal if they refer to the
 	* same variable.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this variable reference on the
 	* format 'variable-ref(<var-name>)'.
 	* @return Variable reference description
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	
 }

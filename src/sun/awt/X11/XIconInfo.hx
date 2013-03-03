@@ -25,7 +25,7 @@ package sun.awt.X11;
 */
 @:internal extern class XIconInfo
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

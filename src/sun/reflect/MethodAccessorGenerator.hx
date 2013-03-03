@@ -26,13 +26,13 @@ package sun.reflect;
 @:internal extern class MethodAccessorGenerator extends sun.reflect.AccessorGenerator
 {
 	/** This routine is not thread-safe */
-	@:overload public function generateMethod(declaringClass : Class<Dynamic>, name : String, parameterTypes : java.NativeArray<Class<Dynamic>>, returnType : Class<Dynamic>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int) : sun.reflect.MethodAccessor;
+	@:overload @:public public function generateMethod(declaringClass : Class<Dynamic>, name : String, parameterTypes : java.NativeArray<Class<Dynamic>>, returnType : Class<Dynamic>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int) : sun.reflect.MethodAccessor;
 	
 	/** This routine is not thread-safe */
-	@:overload public function generateConstructor(declaringClass : Class<Dynamic>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int) : sun.reflect.ConstructorAccessor;
+	@:overload @:public public function generateConstructor(declaringClass : Class<Dynamic>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int) : sun.reflect.ConstructorAccessor;
 	
 	/** This routine is not thread-safe */
-	@:overload public function generateSerializationConstructor(declaringClass : Class<Dynamic>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, targetConstructorClass : Class<Dynamic>) : sun.reflect.SerializationConstructorAccessorImpl;
+	@:overload @:public public function generateSerializationConstructor(declaringClass : Class<Dynamic>, parameterTypes : java.NativeArray<Class<Dynamic>>, checkedExceptions : java.NativeArray<Class<Dynamic>>, modifiers : Int, targetConstructorClass : Class<Dynamic>) : sun.reflect.SerializationConstructorAccessorImpl;
 	
 	
 }

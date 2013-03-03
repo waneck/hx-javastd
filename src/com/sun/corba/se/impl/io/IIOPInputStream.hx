@@ -31,34 +31,34 @@ package com.sun.corba.se.impl.io;
 */
 extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 {
-	public static var kRemoteTypeCode(default, null) : org.omg.CORBA.TypeCode;
+	@:public @:static @:final public static var kRemoteTypeCode(default, null) : org.omg.CORBA.TypeCode;
 	
-	public static var kValueTypeCode(default, null) : org.omg.CORBA.TypeCode;
+	@:public @:static @:final public static var kValueTypeCode(default, null) : org.omg.CORBA.TypeCode;
 	
-	@:overload private function getStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload @:protected override private function getStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload public static function setTestFVDFlag(val : Bool) : Void;
+	@:overload @:public @:static public static function setTestFVDFlag(val : Bool) : Void;
 	
 	/**
 	* Dummy constructor; passes upper stream a dummy stream;
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function setOrbStream(os : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public @:final public function setOrbStream(os : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload @:final public function getOrbStream() : org.omg.CORBA_2_3.portable.InputStream;
+	@:overload @:public @:final override public function getOrbStream() : org.omg.CORBA_2_3.portable.InputStream;
 	
-	@:overload @:final public function setSender(cb : com.sun.org.omg.SendingContext.CodeBase) : Void;
+	@:overload @:public @:final public function setSender(cb : com.sun.org.omg.SendingContext.CodeBase) : Void;
 	
-	@:overload @:final public function getSender() : com.sun.org.omg.SendingContext.CodeBase;
+	@:overload @:public @:final public function getSender() : com.sun.org.omg.SendingContext.CodeBase;
 	
-	@:overload @:final public function setValueHandler(vh : javax.rmi.CORBA.ValueHandler) : Void;
+	@:overload @:public @:final public function setValueHandler(vh : javax.rmi.CORBA.ValueHandler) : Void;
 	
-	@:overload @:final public function getValueHandler() : javax.rmi.CORBA.ValueHandler;
+	@:overload @:public @:final public function getValueHandler() : javax.rmi.CORBA.ValueHandler;
 	
-	@:overload @:final public function increaseRecursionDepth() : Void;
+	@:overload @:public @:final public function increaseRecursionDepth() : Void;
 	
-	@:overload @:final public function decreaseRecursionDepth() : Int;
+	@:overload @:public @:final public function decreaseRecursionDepth() : Int;
 	
 	/**
 	* Override the actions of the final method "readObject()"
@@ -95,10 +95,10 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	* @exception IOException Any of the usual Input/Output related exceptions.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:final public function readObjectDelegate() : Dynamic;
+	@:require(java1) @:overload @:public @:final public function readObjectDelegate() : Dynamic;
 	
 	/* throws OptionalDataException, ClassNotFoundException, IOException */
-	@:overload @:final public function simpleSkipObject(repositoryID : String, sender : com.sun.org.omg.SendingContext.CodeBase) : Void;
+	@:overload @:public @:final public function simpleSkipObject(repositoryID : String, sender : com.sun.org.omg.SendingContext.CodeBase) : Void;
 	
 	/**
 	* This method is called by trusted subclasses of ObjectOutputStream
@@ -112,7 +112,7 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	* @see #readObject
 	* @since JDK 1.2
 	*/
-	@:require(java2) @:overload @:final override private function readObjectOverride() : Dynamic;
+	@:require(java2) @:overload @:protected @:final override private function readObjectOverride() : Dynamic;
 	
 	/**
 	* Override the actions of the final method "defaultReadObject()"
@@ -131,7 +131,7 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	*              objects.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:final public function defaultReadObjectDelegate() : Void;
+	@:require(java1) @:overload @:public @:final override public function defaultReadObjectDelegate() : Void;
 	
 	/**
 	* Override the actions of the final method "enableResolveObject()"
@@ -148,50 +148,50 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	* @exception SecurityException The classloader of this stream object is non-null.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:final public function enableResolveObjectDelegate(enable : Bool) : Bool;
+	@:require(java1) @:overload @:public @:final public function enableResolveObjectDelegate(enable : Bool) : Bool;
 	
 	/* throws SecurityException */
-	@:overload @:final public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public @:final override public function mark(readAheadLimit : Int) : Void;
 	
-	@:overload @:final public function markSupported() : Bool;
+	@:overload @:public @:final override public function markSupported() : Bool;
 	
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final override public function reset() : Void;
 	
-	@:overload @:final override public function available() : Int;
+	@:overload @:public @:final override public function available() : Int;
 	
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
-	@:overload @:final override public function read() : Int;
+	@:overload @:public @:final override public function read() : Int;
 	
-	@:overload @:final override public function read(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload @:public @:final override public function read(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
-	@:overload @:final override public function readBoolean() : Bool;
+	@:overload @:public @:final override public function readBoolean() : Bool;
 	
-	@:overload @:final override public function readByte() : java.StdTypes.Int8;
+	@:overload @:public @:final override public function readByte() : java.StdTypes.Int8;
 	
-	@:overload @:final override public function readChar() : java.StdTypes.Char16;
+	@:overload @:public @:final override public function readChar() : java.StdTypes.Char16;
 	
-	@:overload @:final override public function readDouble() : Float;
+	@:overload @:public @:final override public function readDouble() : Float;
 	
-	@:overload @:final override public function readFloat() : Single;
+	@:overload @:public @:final override public function readFloat() : Single;
 	
-	@:overload @:final override public function readFully(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final override public function readFully(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final override public function readFully(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, size : Int) : Void;
+	@:overload @:public @:final override public function readFully(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, size : Int) : Void;
 	
-	@:overload @:final override public function readInt() : Int;
+	@:overload @:public @:final override public function readInt() : Int;
 	
-	@:overload @:final override public function readLine() : String;
+	@:overload @:public @:final override public function readLine() : String;
 	
-	@:overload @:final override public function readLong() : haxe.Int64;
+	@:overload @:public @:final override public function readLong() : haxe.Int64;
 	
-	@:overload @:final override public function readShort() : java.StdTypes.Int16;
+	@:overload @:public @:final override public function readShort() : java.StdTypes.Int16;
 	
-	@:overload @:final override private function readStreamHeader() : Void;
+	@:overload @:protected @:final override private function readStreamHeader() : Void;
 	
-	@:overload @:final override public function readUnsignedByte() : Int;
+	@:overload @:public @:final override public function readUnsignedByte() : Int;
 	
-	@:overload @:final override public function readUnsignedShort() : Int;
+	@:overload @:public @:final override public function readUnsignedShort() : Int;
 	
 	/**
 	* Helper method for correcting the Kestrel bug 4367783 (dealing
@@ -199,17 +199,17 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	* in orbutil.IIOPInputStream_1_3 in order to interoperate with
 	* our legacy ORBs.
 	*/
-	@:overload private function internalReadUTF(stream : org.omg.CORBA.portable.InputStream) : String;
+	@:overload @:protected private function internalReadUTF(stream : org.omg.CORBA.portable.InputStream) : String;
 	
-	@:overload @:final override public function readUTF() : String;
+	@:overload @:public @:final override public function readUTF() : String;
 	
-	@:overload @:final @:synchronized override public function registerValidation(obj : java.io.ObjectInputValidation, prio : Int) : Void;
+	@:overload @:public @:final @:synchronized override public function registerValidation(obj : java.io.ObjectInputValidation, prio : Int) : Void;
 	
-	@:overload @:final private function resolveClass(v : com.sun.corba.se.impl.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected @:final private function resolveClass(v : com.sun.corba.se.impl.io.ObjectStreamClass) : Class<Dynamic>;
 	
-	@:overload @:final override private function resolveObject(obj : Dynamic) : Dynamic;
+	@:overload @:protected @:final override private function resolveObject(obj : Dynamic) : Dynamic;
 	
-	@:overload @:final override public function skipBytes(len : Int) : Int;
+	@:overload @:public @:final override public function skipBytes(len : Int) : Int;
 	
 	
 }
@@ -223,15 +223,15 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 */
 @:native('com$sun$corba$se$impl$io$IIOPInputStream$ActiveRecursionManager') @:internal extern class IIOPInputStream_ActiveRecursionManager
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addObject(offset : Int, value : Dynamic) : Void;
+	@:overload @:public public function addObject(offset : Int, value : Dynamic) : Void;
 	
-	@:overload public function getObject(offset : Int) : Dynamic;
+	@:overload @:public public function getObject(offset : Int) : Dynamic;
 	
-	@:overload public function removeObject(offset : Int) : Void;
+	@:overload @:public public function removeObject(offset : Int) : Void;
 	
-	@:overload public function containsObject(offset : Int) : Bool;
+	@:overload @:public public function containsObject(offset : Int) : Bool;
 	
 	
 }

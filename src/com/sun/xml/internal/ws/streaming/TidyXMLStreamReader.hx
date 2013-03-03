@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.streaming;
 */
 extern class TidyXMLStreamReader extends com.sun.xml.internal.ws.util.xml.XMLStreamReaderFilter
 {
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, closeableSource : java.io.Closeable) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, closeableSource : java.io.Closeable) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

@@ -25,33 +25,33 @@ package javax.swing.border;
 */
 extern class LineBorder extends javax.swing.border.AbstractBorder
 {
-	private var thickness : Int;
+	@:protected private var thickness : Int;
 	
-	private var lineColor : java.awt.Color;
+	@:protected private var lineColor : java.awt.Color;
 	
-	private var roundedCorners : Bool;
+	@:protected private var roundedCorners : Bool;
 	
 	/** Convenience method for getting the Color.black LineBorder of thickness 1.
 	*/
-	@:overload public static function createBlackLineBorder() : javax.swing.border.Border;
+	@:overload @:public @:static public static function createBlackLineBorder() : javax.swing.border.Border;
 	
 	/** Convenience method for getting the Color.gray LineBorder of thickness 1.
 	*/
-	@:overload public static function createGrayLineBorder() : javax.swing.border.Border;
+	@:overload @:public @:static public static function createGrayLineBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates a line border with the specified color and a
 	* thickness = 1.
 	* @param color the color for the border
 	*/
-	@:overload public function new(color : java.awt.Color) : Void;
+	@:overload @:public public function new(color : java.awt.Color) : Void;
 	
 	/**
 	* Creates a line border with the specified color and thickness.
 	* @param color the color of the border
 	* @param thickness the thickness of the border
 	*/
-	@:overload public function new(color : java.awt.Color, thickness : Int) : Void;
+	@:overload @:public public function new(color : java.awt.Color, thickness : Int) : Void;
 	
 	/**
 	* Creates a line border with the specified color, thickness,
@@ -61,7 +61,7 @@ extern class LineBorder extends javax.swing.border.AbstractBorder
 	* @param roundedCorners whether or not border corners should be round
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(color : java.awt.Color, thickness : Int, roundedCorners : Bool) : Void;
+	@:require(java3) @:overload @:public public function new(color : java.awt.Color, thickness : Int, roundedCorners : Bool) : Void;
 	
 	/**
 	* Paints the border for the specified component with the
@@ -73,35 +73,35 @@ extern class LineBorder extends javax.swing.border.AbstractBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the color of the border.
 	*/
-	@:overload public function getLineColor() : java.awt.Color;
+	@:overload @:public public function getLineColor() : java.awt.Color;
 	
 	/**
 	* Returns the thickness of the border.
 	*/
-	@:overload public function getThickness() : Int;
+	@:overload @:public public function getThickness() : Int;
 	
 	/**
 	* Returns whether this border will be drawn with rounded corners.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getRoundedCorners() : Bool;
+	@:require(java3) @:overload @:public public function getRoundedCorners() : Bool;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

@@ -31,73 +31,73 @@ package com.sun.media.sound;
 */
 extern class ModelDestination
 {
-	public static var DESTINATION_NONE(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_NONE(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_KEYNUMBER(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_KEYNUMBER(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_VELOCITY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_VELOCITY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_PITCH(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_PITCH(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_GAIN(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_GAIN(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_PAN(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_PAN(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_REVERB(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_REVERB(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_CHORUS(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_CHORUS(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_LFO1_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_LFO1_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_LFO1_FREQ(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_LFO1_FREQ(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_LFO2_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_LFO2_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_LFO2_FREQ(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_LFO2_FREQ(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_ATTACK(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_ATTACK(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_HOLD(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_HOLD(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_DECAY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_DECAY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_SUSTAIN(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_SUSTAIN(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_RELEASE(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_RELEASE(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG1_SHUTDOWN(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG1_SHUTDOWN(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_DELAY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_ATTACK(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_ATTACK(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_HOLD(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_HOLD(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_DECAY(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_DECAY(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_SUSTAIN(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_SUSTAIN(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_RELEASE(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_RELEASE(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_EG2_SHUTDOWN(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_EG2_SHUTDOWN(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_FILTER_FREQ(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_FILTER_FREQ(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	public static var DESTINATION_FILTER_Q(default, null) : com.sun.media.sound.ModelIdentifier;
+	@:public @:static @:final public static var DESTINATION_FILTER_Q(default, null) : com.sun.media.sound.ModelIdentifier;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(id : com.sun.media.sound.ModelIdentifier) : Void;
+	@:overload @:public public function new(id : com.sun.media.sound.ModelIdentifier) : Void;
 	
-	@:overload public function getIdentifier() : com.sun.media.sound.ModelIdentifier;
+	@:overload @:public public function getIdentifier() : com.sun.media.sound.ModelIdentifier;
 	
-	@:overload public function setIdentifier(destination : com.sun.media.sound.ModelIdentifier) : Void;
+	@:overload @:public public function setIdentifier(destination : com.sun.media.sound.ModelIdentifier) : Void;
 	
-	@:overload public function getTransform() : com.sun.media.sound.ModelTransform;
+	@:overload @:public public function getTransform() : com.sun.media.sound.ModelTransform;
 	
-	@:overload public function setTransform(transform : com.sun.media.sound.ModelTransform) : Void;
+	@:overload @:public public function setTransform(transform : com.sun.media.sound.ModelTransform) : Void;
 	
 	
 }

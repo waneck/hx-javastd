@@ -49,13 +49,13 @@ extern class Client extends com.sun.security.ntlm.NTLM
 	* or {@code version} is illegal.
 	*
 	*/
-	@:overload public function new(version : String, hostname : String, username : String, domain : String, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(version : String, hostname : String, username : String, domain : String, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Generates the Type 1 message
 	* @return the message generated
 	*/
-	@:overload public function type1() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function type1() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates the Type 3 message
@@ -66,19 +66,19 @@ extern class Client extends com.sun.security.ntlm.NTLM
 	* @throws NTLMException if the incoming message is invalid, or
 	* {@code nonce} is null for NTLM v1.
 	*/
-	@:overload public function type3(type2 : java.NativeArray<java.StdTypes.Int8>, nonce : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function type3(type2 : java.NativeArray<java.StdTypes.Int8>, nonce : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the domain value provided by server after the authentication
 	* is complete, or the domain value provided by the client before it.
 	* @return the domain
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	* Disposes any password-derived information.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

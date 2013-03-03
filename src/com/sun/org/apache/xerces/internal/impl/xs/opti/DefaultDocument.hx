@@ -20,50 +20,50 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 */
 extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.opti.NodeImpl implements org.w3c.dom.Document
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload @:public public function getDoctype() : org.w3c.dom.DocumentType;
 	
-	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
-	@:overload public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload @:public public function getDocumentElement() : org.w3c.dom.Element;
 	
-	@:overload public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
-	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
-	@:overload public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
-	@:overload public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
-	@:overload public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload @:public public function createElement(tagName : String) : org.w3c.dom.Element;
 	
-	@:overload public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
-	@:overload public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload @:public public function createTextNode(data : String) : org.w3c.dom.Text;
 	
-	@:overload public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload @:public public function createComment(data : String) : org.w3c.dom.Comment;
 	
-	@:overload public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload @:public public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
-	@:overload public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
-	@:overload public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
-	@:overload public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload @:public public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
-	@:overload public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload @:public public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
-	@:overload public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
-	@:overload public function getInputEncoding() : String;
+	@:overload @:public public function getInputEncoding() : String;
 	
 	/**
 	public void setInputEncoding(String actualEncoding){
 	throw new DOMException(DOMException.NOT_SUPPORTED_ERR, "Method not supported");
 	}
 	*/
-	@:overload public function getXmlEncoding() : String;
+	@:overload @:public public function getXmlEncoding() : String;
 	
 	/**
 	* An attribute specifying, as part of the XML declaration, whether this
@@ -71,7 +71,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	* <br> This attribute represents the property [standalone] defined in .
 	* @since DOM Level 3
 	*/
-	@:overload public function getXmlStandalone() : Bool;
+	@:overload @:public public function getXmlStandalone() : Bool;
 	
 	/**
 	* An attribute specifying, as part of the XML declaration, whether this
@@ -79,7 +79,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	* <br> This attribute represents the property [standalone] defined in .
 	* @since DOM Level 3
 	*/
-	@:overload public function setXmlStandalone(standalone : Bool) : Void;
+	@:overload @:public public function setXmlStandalone(standalone : Bool) : Void;
 	
 	/**
 	* An attribute specifying, as part of the XML declaration, the version
@@ -90,7 +90,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	*   not supported by this <code>Document</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function getXmlVersion() : String;
+	@:overload @:public public function getXmlVersion() : String;
 	
 	/**
 	* An attribute specifying, as part of the XML declaration, the version
@@ -101,7 +101,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	*   not supported by this <code>Document</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function setXmlVersion(version : String) : Void;
+	@:overload @:public public function setXmlVersion(version : String) : Void;
 	
 	/**
 	* An attribute specifying whether errors checking is enforced or not.
@@ -112,7 +112,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	* defaults.
 	* @since DOM Level 3
 	*/
-	@:overload public function getStrictErrorChecking() : Bool;
+	@:overload @:public public function getStrictErrorChecking() : Bool;
 	
 	/**
 	* An attribute specifying whether errors checking is enforced or not.
@@ -123,7 +123,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	* defaults.
 	* @since DOM Level 3
 	*/
-	@:overload public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
+	@:overload @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
 	
 	/**
 	* The location of the document or <code>null</code> if undefined.
@@ -132,7 +132,7 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	* over this attribute.
 	* @since DOM Level 3
 	*/
-	@:overload public function getDocumentURI() : String;
+	@:overload @:public public function getDocumentURI() : String;
 	
 	/**
 	* The location of the document or <code>null</code> if undefined.
@@ -141,23 +141,23 @@ extern class DefaultDocument extends com.sun.org.apache.xerces.internal.impl.xs.
 	* over this attribute.
 	* @since DOM Level 3
 	*/
-	@:overload public function setDocumentURI(documentURI : String) : Void;
+	@:overload @:public public function setDocumentURI(documentURI : String) : Void;
 	
 	/** DOM Level 3*/
-	@:overload public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/** DOM Level 3*/
-	@:overload public function normalizeDocument() : Void;
+	@:overload @:public public function normalizeDocument() : Void;
 	
 	/**
 	*  The configuration used when <code>Document.normalizeDocument</code> is
 	* invoked.
 	* @since DOM Level 3
 	*/
-	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/** DOM Level 3*/
-	@:overload public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, name : String) : org.w3c.dom.Node;
+	@:overload @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, name : String) : org.w3c.dom.Node;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class Plugin
 	* from this method, XJC will then invoke {@link #parseArgument(Options, String[], int)},
 	* allowing plugins to handle arguments to this option.
 	*/
-	@:overload @:abstract public function getOptionName() : String;
+	@:overload @:public @:abstract public function getOptionName() : String;
 	
 	/**
 	* Gets the description of this add-on. Used to generate
@@ -48,7 +48,7 @@ extern class Plugin
 	* @return
 	*      localized description message. should be terminated by \n.
 	*/
-	@:overload @:abstract public function getUsage() : String;
+	@:overload @:public @:abstract public function getUsage() : String;
 	
 	/**
 	* Parses an option <code>args[i]</code> and augment
@@ -84,7 +84,7 @@ extern class Plugin
 	*      This halts the argument parsing process and causes
 	*      XJC to abort, reporting an error.
 	*/
-	@:overload public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
 	
 	/**
 	* Returns the list of namespace URIs that are supported by this plug-in
@@ -105,7 +105,7 @@ extern class Plugin
 	* @return
 	*      can be empty, be never be null.
 	*/
-	@:overload public function getCustomizationURIs() : java.util.List<String>;
+	@:overload @:public public function getCustomizationURIs() : java.util.List<String>;
 	
 	/**
 	* Checks if the given tag name is a valid tag name for the customization element in this plug-in.
@@ -124,7 +124,7 @@ extern class Plugin
 	* @param localName
 	*      the local name of the element. Never null.
 	*/
-	@:overload public function isCustomizationTagName(nsUri : String, localName : String) : Bool;
+	@:overload @:public public function isCustomizationTagName(nsUri : String, localName : String) : Bool;
 	
 	/**
 	* Notifies a plugin that it's activated.
@@ -143,7 +143,7 @@ extern class Plugin
 	*
 	* @since JAXB 2.0 EA4
 	*/
-	@:require(java0) @:overload public function onActivated(opts : com.sun.tools.internal.xjc.Options) : Void;
+	@:require(java0) @:overload @:public public function onActivated(opts : com.sun.tools.internal.xjc.Options) : Void;
 	
 	/**
 	* Performs the post-processing of the {@link Model}.
@@ -172,7 +172,7 @@ extern class Plugin
 	*
 	* @since JAXB 2.0.2
 	*/
-	@:require(java0) @:overload public function postProcessModel(model : com.sun.tools.internal.xjc.model.Model, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:require(java0) @:overload @:public public function postProcessModel(model : com.sun.tools.internal.xjc.model.Model, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Run the add-on.
@@ -203,7 +203,7 @@ extern class Plugin
 	*      error. {@link ErrorHandler} itself may throw it, if it chooses
 	*      not to recover from the error.
 	*/
-	@:overload @:abstract public function run(outline : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
+	@:overload @:public @:abstract public function run(outline : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
 	
 	
 }

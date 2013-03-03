@@ -30,15 +30,15 @@ extern class XMLOutputFactory
 	/**
 	* Property used to set prefix defaulting on the output side
 	*/
-	public static var IS_REPAIRING_NAMESPACES(default, null) : String;
+	@:public @:static @:final public static var IS_REPAIRING_NAMESPACES(default, null) : String;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Create a new instance of the factory.
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newInstance() : javax.xml.stream.XMLOutputFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.stream.XMLOutputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -65,7 +65,7 @@ extern class XMLOutputFactory
 	*
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory() : javax.xml.stream.XMLOutputFactory;
+	@:overload @:public @:static public static function newFactory() : javax.xml.stream.XMLOutputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -81,7 +81,7 @@ extern class XMLOutputFactory
 	*              Use the new method {@link #newFactory(java.lang.String,
 	*              java.lang.ClassLoader)} instead.
 	*/
-	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
+	@:overload @:public @:static public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -100,21 +100,21 @@ extern class XMLOutputFactory
 	* @return the factory implementation
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLOutputFactory;
+	@:overload @:public @:static public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLOutputFactory;
 	
 	/**
 	* Create a new XMLStreamWriter that writes to a writer
 	* @param stream the writer to write to
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamWriter(stream : java.io.Writer) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:abstract public function createXMLStreamWriter(stream : java.io.Writer) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* Create a new XMLStreamWriter that writes to a stream
 	* @param stream the stream to write to
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamWriter(stream : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:abstract public function createXMLStreamWriter(stream : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* Create a new XMLStreamWriter that writes to a stream
@@ -122,7 +122,7 @@ extern class XMLOutputFactory
 	* @param encoding the encoding to use
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamWriter(stream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:abstract public function createXMLStreamWriter(stream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* Create a new XMLStreamWriter that writes to a JAXP result.  This method is optional.
@@ -131,7 +131,7 @@ extern class XMLOutputFactory
 	* supported by this XMLOutputFactory
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:abstract public function createXMLStreamWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* Create a new XMLEventWriter that writes to a JAXP result.  This method is optional.
@@ -140,14 +140,14 @@ extern class XMLOutputFactory
 	* supported by this XMLOutputFactory
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public @:abstract public function createXMLEventWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLEventWriter;
 	
 	/**
 	* Create a new XMLEventWriter that writes to a stream
 	* @param stream the stream to write to
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventWriter(stream : java.io.OutputStream) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public @:abstract public function createXMLEventWriter(stream : java.io.OutputStream) : javax.xml.stream.XMLEventWriter;
 	
 	/**
 	* Create a new XMLEventWriter that writes to a stream
@@ -155,14 +155,14 @@ extern class XMLOutputFactory
 	* @param encoding the encoding to use
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventWriter(stream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public @:abstract public function createXMLEventWriter(stream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLEventWriter;
 	
 	/**
 	* Create a new XMLEventWriter that writes to a writer
 	* @param stream the stream to write to
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventWriter(stream : java.io.Writer) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public @:abstract public function createXMLEventWriter(stream : java.io.Writer) : javax.xml.stream.XMLEventWriter;
 	
 	/**
 	* Allows the user to set specific features/properties on the underlying implementation.
@@ -170,7 +170,7 @@ extern class XMLOutputFactory
 	* @param value The value of the property
 	* @throws java.lang.IllegalArgumentException if the property is not supported
 	*/
-	@:overload @:abstract public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get a feature/property on the underlying implementation
@@ -178,7 +178,7 @@ extern class XMLOutputFactory
 	* @return The value of the property
 	* @throws java.lang.IllegalArgumentException if the property is not supported
 	*/
-	@:overload @:abstract public function getProperty(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Query the set of properties that this factory supports.
@@ -186,7 +186,7 @@ extern class XMLOutputFactory
 	* @param name The name of the property (may not be null)
 	* @return true if the property is supported and false otherwise
 	*/
-	@:overload @:abstract public function isPropertySupported(name : String) : Bool;
+	@:overload @:public @:abstract public function isPropertySupported(name : String) : Bool;
 	
 	
 }

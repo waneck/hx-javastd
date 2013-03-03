@@ -35,7 +35,7 @@ extern class GeneralSecurityException extends java.lang.Exception
 	/**
 	* Constructs a GeneralSecurityException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a GeneralSecurityException with the specified detail
@@ -45,7 +45,7 @@ extern class GeneralSecurityException extends java.lang.Exception
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Creates a <code>GeneralSecurityException</code> with the specified
@@ -58,7 +58,7 @@ extern class GeneralSecurityException extends java.lang.Exception
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>GeneralSecurityException</code> with the specified cause
@@ -71,7 +71,7 @@ extern class GeneralSecurityException extends java.lang.Exception
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

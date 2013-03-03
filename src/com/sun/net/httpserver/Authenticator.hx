@@ -49,7 +49,7 @@ extern class Authenticator
 	* given HttpExchange. The response code to be returned must be provided
 	* in the Retry object. Retry may occur multiple times.
 	*/
-	@:overload @:abstract public function authenticate(exch : com.sun.net.httpserver.HttpExchange) : com.sun.net.httpserver.Authenticator.Authenticator_Result;
+	@:overload @:public @:abstract public function authenticate(exch : com.sun.net.httpserver.HttpExchange) : com.sun.net.httpserver.Authenticator.Authenticator_Result;
 	
 	
 }
@@ -66,12 +66,12 @@ extern class Authenticator
 */
 @:native('com$sun$net$httpserver$Authenticator$Failure') extern class Authenticator_Failure extends com.sun.net.httpserver.Authenticator.Authenticator_Result
 {
-	@:overload public function new(responseCode : Int) : Void;
+	@:overload @:public public function new(responseCode : Int) : Void;
 	
 	/**
 	* returns the response code to send to the client
 	*/
-	@:overload public function getResponseCode() : Int;
+	@:overload @:public public function getResponseCode() : Int;
 	
 	
 }
@@ -82,12 +82,12 @@ extern class Authenticator
 */
 @:native('com$sun$net$httpserver$Authenticator$Success') extern class Authenticator_Success extends com.sun.net.httpserver.Authenticator.Authenticator_Result
 {
-	@:overload public function new(p : com.sun.net.httpserver.HttpPrincipal) : Void;
+	@:overload @:public public function new(p : com.sun.net.httpserver.HttpPrincipal) : Void;
 	
 	/**
 	* returns the authenticated user Principal
 	*/
-	@:overload public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
+	@:overload @:public public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
 	
 	
 }
@@ -100,12 +100,12 @@ extern class Authenticator
 */
 @:native('com$sun$net$httpserver$Authenticator$Retry') extern class Authenticator_Retry extends com.sun.net.httpserver.Authenticator.Authenticator_Result
 {
-	@:overload public function new(responseCode : Int) : Void;
+	@:overload @:public public function new(responseCode : Int) : Void;
 	
 	/**
 	* returns the response code to send to the client
 	*/
-	@:overload public function getResponseCode() : Int;
+	@:overload @:public public function getResponseCode() : Int;
 	
 	
 }

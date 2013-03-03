@@ -29,7 +29,7 @@ extern class NumberFormatProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new <code>NumberFormat</code> instance which formats
@@ -44,7 +44,7 @@ extern class NumberFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a currency formatter
 	* @see java.text.NumberFormat#getCurrencyInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getCurrencyInstance(locale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:abstract public function getCurrencyInstance(locale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a new <code>NumberFormat</code> instance which formats
@@ -65,7 +65,7 @@ extern class NumberFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a number format for integer values
 	* @see java.text.NumberFormat#getIntegerInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getIntegerInstance(locale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:abstract public function getIntegerInstance(locale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a new general-purpose <code>NumberFormat</code> instance for
@@ -80,7 +80,7 @@ extern class NumberFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a general-purpose number formatter
 	* @see java.text.NumberFormat#getNumberInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getNumberInstance(locale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:abstract public function getNumberInstance(locale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a new <code>NumberFormat</code> instance which formats
@@ -95,7 +95,7 @@ extern class NumberFormatProvider extends java.util.spi.LocaleServiceProvider
 	* @return a percent formatter
 	* @see java.text.NumberFormat#getPercentInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getPercentInstance(locale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:abstract public function getPercentInstance(locale : java.util.Locale) : java.text.NumberFormat;
 	
 	
 }

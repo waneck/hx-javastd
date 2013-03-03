@@ -28,7 +28,7 @@ extern interface AWTEventListener extends java.util.EventListener
 	/**
 	* Invoked when an event is dispatched in the AWT.
 	*/
-	@:overload public function eventDispatched(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(event : java.awt.AWTEvent) : Void;
 	
 	
 }

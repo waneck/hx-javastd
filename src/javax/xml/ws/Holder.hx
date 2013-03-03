@@ -28,19 +28,19 @@ extern class Holder<T> implements java.io.Serializable
 	/**
 	* The value contained in the holder.
 	*/
-	public var value : T;
+	@:public public var value : T;
 	
 	/**
 	* Creates a new holder with a <code>null</code> value.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new holder with the specified value.
 	*
 	* @param value The value to be stored in the holder.
 	*/
-	@:overload public function new(value : T) : Void;
+	@:overload @:public public function new(value : T) : Void;
 	
 	
 }

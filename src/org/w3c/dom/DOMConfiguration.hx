@@ -400,7 +400,7 @@ extern interface DOMConfiguration
 	*   <br> TYPE_MISMATCH_ERR: Raised if the value type for this parameter
 	*   name is incompatible with the expected value type.
 	*/
-	@:overload public function setParameter(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setParameter(name : String, value : Dynamic) : Void;
 	
 	/**
 	*  Return the value of a parameter if known.
@@ -411,7 +411,7 @@ extern interface DOMConfiguration
 	* @exception DOMException
 	*    NOT_FOUND_ERR: Raised when the parameter name is not recognized.
 	*/
-	@:overload public function getParameter(name : String) : Dynamic;
+	@:overload @:public public function getParameter(name : String) : Dynamic;
 	
 	/**
 	* Check if setting a parameter to a specific value is supported.
@@ -423,7 +423,7 @@ extern interface DOMConfiguration
 	*   not recognized or the requested value is not supported. This does
 	*   not change the current value of the parameter itself.
 	*/
-	@:overload public function canSetParameter(name : String, value : Dynamic) : Bool;
+	@:overload @:public public function canSetParameter(name : String, value : Dynamic) : Bool;
 	
 	/**
 	*  The list of the parameters supported by this
@@ -431,7 +431,7 @@ extern interface DOMConfiguration
 	* can be set by the application. Note that this list can also contain
 	* parameter names defined outside this specification.
 	*/
-	@:overload public function getParameterNames() : org.w3c.dom.DOMStringList;
+	@:overload @:public public function getParameterNames() : org.w3c.dom.DOMStringList;
 	
 	
 }

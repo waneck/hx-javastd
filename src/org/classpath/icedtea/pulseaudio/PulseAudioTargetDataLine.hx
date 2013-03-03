@@ -37,40 +37,40 @@ exception statement from your version.
 */
 extern class PulseAudioTargetDataLine extends org.classpath.icedtea.pulseaudio.PulseAudioDataLine implements javax.sound.sampled.TargetDataLine
 {
-	public static var DEFAULT_TARGETDATALINE_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_TARGETDATALINE_NAME(default, null) : String;
 	
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:synchronized @:public override public function close() : Void;
 	
-	@:overload @:synchronized override public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
+	@:overload @:synchronized @:public override public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
 	
-	@:overload @:synchronized override public function open(format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:synchronized @:public override public function open(format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload override private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
+	@:overload @:protected override private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
 	
-	@:overload public function read(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload @:public public function read(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
-	@:overload override public function drain() : Void;
+	@:overload @:public override public function drain() : Void;
 	
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:public @:synchronized override public function flush() : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function getFramePosition() : Int;
+	@:overload @:public override public function getFramePosition() : Int;
 	
-	@:overload override public function getLongFramePosition() : haxe.Int64;
+	@:overload @:public override public function getLongFramePosition() : haxe.Int64;
 	
-	@:overload override public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public override public function getMicrosecondPosition() : haxe.Int64;
 	
 	/*
 	* A TargetData starts when we ask it to and continues playing until we ask
 	* it to stop. There are no buffer underruns/overflows or anything so we
 	* will just fire the LineEvents manually
 	*/
-	@:overload @:synchronized override public function start() : Void;
+	@:overload @:synchronized @:public override public function start() : Void;
 	
-	@:overload @:synchronized override public function stop() : Void;
+	@:overload @:synchronized @:public override public function stop() : Void;
 	
-	@:overload override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	
 }

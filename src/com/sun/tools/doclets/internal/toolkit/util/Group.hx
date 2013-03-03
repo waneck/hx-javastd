@@ -50,7 +50,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class Group
 {
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Depending upon the format of the package name provided in the "-group"
@@ -66,7 +66,7 @@ extern class Group
 	* @param groupname       The name of the group from -group option.
 	* @param pkgNameFormList List of the package name formats.
 	*/
-	@:overload public function checkPackageGroups(groupname : String, pkgNameFormList : String) : Bool;
+	@:overload @:public public function checkPackageGroups(groupname : String, pkgNameFormList : String) : Bool;
 	
 	/**
 	* Group the packages according the grouping information provided on the
@@ -81,13 +81,13 @@ extern class Group
 	*
 	* @param packages Packages specified on the command line.
 	*/
-	@:overload public function groupPackages(packages : java.NativeArray<com.sun.javadoc.PackageDoc>) : java.util.Map<String, java.util.List<com.sun.javadoc.PackageDoc>>;
+	@:overload @:public public function groupPackages(packages : java.NativeArray<com.sun.javadoc.PackageDoc>) : java.util.Map<String, java.util.List<com.sun.javadoc.PackageDoc>>;
 	
 	/**
 	* Return the list of groups, in the same order as specified
 	* on the command line.
 	*/
-	@:overload public function getGroupList() : java.util.List<String>;
+	@:overload @:public public function getGroupList() : java.util.List<String>;
 	
 	
 }
@@ -98,7 +98,7 @@ extern class Group
 */
 @:native('com$sun$tools$doclets$internal$toolkit$util$Group$MapKeyComparator') @:internal extern class Group_MapKeyComparator implements java.util.Comparator<String>
 {
-	@:overload public function compare(key1 : String, key2 : String) : Int;
+	@:overload @:public public function compare(key1 : String, key2 : String) : Int;
 	
 	
 }

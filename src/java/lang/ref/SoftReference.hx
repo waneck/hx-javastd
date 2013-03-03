@@ -65,7 +65,7 @@ package java.lang.ref;
 	*
 	* @param referent object the new soft reference will refer to
 	*/
-	@:overload public function new(referent : T) : Void;
+	@:overload @:public public function new(referent : T) : Void;
 	
 	/**
 	* Creates a new soft reference that refers to the given object and is
@@ -76,7 +76,7 @@ package java.lang.ref;
 	*          or <tt>null</tt> if registration is not required
 	*
 	*/
-	@:overload public function new(referent : T, q : java.lang.ref.ReferenceQueue<T>) : Void;
+	@:overload @:public public function new(referent : T, q : java.lang.ref.ReferenceQueue<T>) : Void;
 	
 	/**
 	* Returns this reference object's referent.  If this reference object has
@@ -86,7 +86,7 @@ package java.lang.ref;
 	* @return   The object to which this reference refers, or
 	*           <code>null</code> if this reference object has been cleared
 	*/
-	@:overload override public function get() : T;
+	@:overload @:public override public function get() : T;
 	
 	
 }

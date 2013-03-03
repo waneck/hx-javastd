@@ -30,14 +30,14 @@ extern class TagName
 	*
 	* Can be empty, but never null. Interned.
 	*/
-	public var uri : String;
+	@:public public var uri : String;
 	
 	/**
 	* Local part of the attribute/element name.
 	*
 	* Never be null. Interned.
 	*/
-	public var local : String;
+	@:public public var local : String;
 	
 	/**
 	* Used only for the enterElement event.
@@ -45,40 +45,40 @@ extern class TagName
 	*
 	* This might be {@link AttributesEx}.
 	*/
-	public var atts : org.xml.sax.Attributes;
+	@:public public var atts : org.xml.sax.Attributes;
 	
-	@:overload public function new() : Void;
-	
-	/**
-	* Checks if the given name pair matches this name.
-	*/
-	@:overload @:final public function matches(nsUri : String, local : String) : Bool;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Checks if the given name pair matches this name.
 	*/
-	@:overload @:final public function matches(name : com.sun.xml.internal.bind.v2.runtime.Name) : Bool;
+	@:overload @:public @:final public function matches(nsUri : String, local : String) : Bool;
 	
-	@:overload public function toString() : String;
+	/**
+	* Checks if the given name pair matches this name.
+	*/
+	@:overload @:public @:final public function matches(name : com.sun.xml.internal.bind.v2.runtime.Name) : Bool;
+	
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets the qualified name of the tag.
 	*
 	* @return never null.
 	*/
-	@:overload @:abstract public function getQname() : String;
+	@:overload @:public @:abstract public function getQname() : String;
 	
 	/**
 	* Gets the prefix. This is slow.
 	*
 	* @return can be "" but never null.
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Creates {@link QName}.
 	*/
-	@:overload public function createQName() : javax.xml.namespace.QName;
+	@:overload @:public public function createQName() : javax.xml.namespace.QName;
 	
 	
 }

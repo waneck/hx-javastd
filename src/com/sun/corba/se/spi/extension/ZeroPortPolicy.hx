@@ -25,17 +25,17 @@ package com.sun.corba.se.spi.extension;
 */
 extern class ZeroPortPolicy extends org.omg.CORBA.LocalObject implements org.omg.CORBA.Policy
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function forceZeroPort() : Bool;
+	@:overload @:public public function forceZeroPort() : Bool;
 	
-	@:overload @:synchronized public static function getPolicy() : com.sun.corba.se.spi.extension.ZeroPortPolicy;
+	@:overload @:public @:synchronized @:static public static function getPolicy() : com.sun.corba.se.spi.extension.ZeroPortPolicy;
 	
-	@:overload public function policy_type() : Int;
+	@:overload @:public public function policy_type() : Int;
 	
-	@:overload public function copy() : org.omg.CORBA.Policy;
+	@:overload @:public public function copy() : org.omg.CORBA.Policy;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

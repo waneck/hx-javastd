@@ -34,7 +34,7 @@ extern class Currency implements java.io.Serializable
 	* @exception IllegalArgumentException if <code>currencyCode</code> is not
 	* a supported ISO 4217 code.
 	*/
-	@:overload public static function getInstance(currencyCode : String) : java.util.Currency;
+	@:overload @:public @:static public static function getInstance(currencyCode : String) : java.util.Currency;
 	
 	/**
 	* Returns the <code>Currency</code> instance for the country of the
@@ -57,7 +57,7 @@ extern class Currency implements java.io.Serializable
 	* @exception IllegalArgumentException if the country of the given locale
 	* is not a supported ISO 3166 country code.
 	*/
-	@:overload public static function getInstance(locale : java.util.Locale) : java.util.Currency;
+	@:overload @:public @:static public static function getInstance(locale : java.util.Locale) : java.util.Currency;
 	
 	/**
 	* Gets the set of available currencies.  The returned set of currencies
@@ -69,14 +69,14 @@ extern class Currency implements java.io.Serializable
 	*    available in the runtime, the returned set is empty.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getAvailableCurrencies() : java.util.Set<java.util.Currency>;
+	@:require(java7) @:overload @:public @:static public static function getAvailableCurrencies() : java.util.Set<java.util.Currency>;
 	
 	/**
 	* Gets the ISO 4217 currency code of this currency.
 	*
 	* @return the ISO 4217 currency code of this currency.
 	*/
-	@:overload public function getCurrencyCode() : String;
+	@:overload @:public public function getCurrencyCode() : String;
 	
 	/**
 	* Gets the symbol of this currency for the default locale.
@@ -86,7 +86,7 @@ extern class Currency implements java.io.Serializable
 	*
 	* @return the symbol of this currency for the default locale
 	*/
-	@:overload public function getSymbol() : String;
+	@:overload @:public public function getSymbol() : String;
 	
 	/**
 	* Gets the symbol of this currency for the specified locale.
@@ -99,7 +99,7 @@ extern class Currency implements java.io.Serializable
 	* @return the symbol of this currency for the specified locale
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public function getSymbol(locale : java.util.Locale) : String;
+	@:overload @:public public function getSymbol(locale : java.util.Locale) : String;
 	
 	/**
 	* Gets the default number of fraction digits used with this currency.
@@ -110,7 +110,7 @@ extern class Currency implements java.io.Serializable
 	*
 	* @return the default number of fraction digits used with this currency
 	*/
-	@:overload public function getDefaultFractionDigits() : Int;
+	@:overload @:public public function getDefaultFractionDigits() : Int;
 	
 	/**
 	* Returns the ISO 4217 numeric code of this currency.
@@ -118,7 +118,7 @@ extern class Currency implements java.io.Serializable
 	* @return the ISO 4217 numeric code of this currency
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getNumericCode() : Int;
+	@:require(java7) @:overload @:public public function getNumericCode() : Int;
 	
 	/**
 	* Gets the name that is suitable for displaying this currency for
@@ -128,7 +128,7 @@ extern class Currency implements java.io.Serializable
 	* @return the display name of this currency for the default locale
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDisplayName() : String;
+	@:require(java7) @:overload @:public public function getDisplayName() : String;
 	
 	/**
 	* Gets the name that is suitable for displaying this currency for
@@ -141,14 +141,14 @@ extern class Currency implements java.io.Serializable
 	* @exception NullPointerException if <code>locale</code> is null
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getDisplayName(locale : java.util.Locale) : String;
+	@:require(java7) @:overload @:public public function getDisplayName(locale : java.util.Locale) : String;
 	
 	/**
 	* Returns the ISO 4217 currency code of this currency.
 	*
 	* @return the ISO 4217 currency code of this currency
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -158,7 +158,7 @@ extern class Currency implements java.io.Serializable
 */
 @:native('java$util$Currency$CurrencyNameGetter') @:internal extern class Currency_CurrencyNameGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.util.spi.CurrencyNameProvider, String>
 {
-	@:overload public function getObject(currencyNameProvider : java.util.spi.CurrencyNameProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getObject(currencyNameProvider : java.util.spi.CurrencyNameProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : String;
 	
 	
 }

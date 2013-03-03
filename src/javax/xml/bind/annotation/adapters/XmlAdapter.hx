@@ -165,7 +165,7 @@ package javax.xml.bind.annotation.adapters;
 	/**
 	* Do-nothing constructor for the derived classes.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Convert a value type to a bound type.
@@ -176,7 +176,7 @@ package javax.xml.bind.annotation.adapters;
 	*      if there's an error during the conversion. The caller is responsible for
 	*      reporting the error to the user through {@link javax.xml.bind.ValidationEventHandler}.
 	*/
-	@:overload @:abstract public function unmarshal(v : ValueType) : BoundType;
+	@:overload @:public @:abstract public function unmarshal(v : ValueType) : BoundType;
 	
 	/**
 	* Convert a bound type to a value type.
@@ -187,7 +187,7 @@ package javax.xml.bind.annotation.adapters;
 	*      if there's an error during the conversion. The caller is responsible for
 	*      reporting the error to the user through {@link javax.xml.bind.ValidationEventHandler}.
 	*/
-	@:overload @:abstract public function marshal(v : BoundType) : ValueType;
+	@:overload @:public @:abstract public function marshal(v : BoundType) : ValueType;
 	
 	
 }

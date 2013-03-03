@@ -59,7 +59,7 @@ extern class DOMCatalogReader implements com.sun.org.apache.xml.internal.resolve
 	* or "{namespaceuri}elementname". The former is used if the
 	* namespace URI is null.</p>
 	*/
-	private var namespaceMap : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var namespaceMap : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Add a new parser to the reader.
@@ -72,7 +72,7 @@ extern class DOMCatalogReader implements com.sun.org.apache.xml.internal.resolve
 	* @param parserClass The name of the parserClass to instantiate
 	* for this kind of catalog.
 	*/
-	@:overload public function setCatalogParser(namespaceURI : String, rootElement : String, parserClass : String) : Void;
+	@:overload @:public public function setCatalogParser(namespaceURI : String, rootElement : String, parserClass : String) : Void;
 	
 	/**
 	* Get the name of the parser class for a given catalog type.
@@ -84,12 +84,12 @@ extern class DOMCatalogReader implements com.sun.org.apache.xml.internal.resolve
 	* @param rootElement The name of the root element.
 	* @return The parser class.
 	*/
-	@:overload public function getCatalogParser(namespaceURI : String, rootElement : String) : String;
+	@:overload @:public public function getCatalogParser(namespaceURI : String, rootElement : String) : String;
 	
 	/**
 	* Null constructor; something for subclasses to call.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Read a catalog from an input stream.
@@ -117,7 +117,7 @@ extern class DOMCatalogReader implements com.sun.org.apache.xml.internal.resolve
 	* (For example, if it is supposed to be XML and isn't well-formed or
 	* if the parser class cannot be instantiated.)
 	*/
-	@:overload public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
+	@:overload @:public public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
 	
 	/**
 	* Read the catalog behind the specified URL.
@@ -135,7 +135,7 @@ extern class DOMCatalogReader implements com.sun.org.apache.xml.internal.resolve
 	* @throws UnparseableCatalogException if the catalog cannot be parsed.
 	* (For example, if it is supposed to be XML and isn't well-formed.)
 	*/
-	@:overload public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, fileUrl : String) : Void;
+	@:overload @:public public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, fileUrl : String) : Void;
 	
 	
 }

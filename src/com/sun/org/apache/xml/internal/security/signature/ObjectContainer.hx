@@ -26,7 +26,7 @@ extern class ObjectContainer extends com.sun.org.apache.xml.internal.security.ut
 	*
 	* @param doc the {@link Document} in which <code>Object</code> element is placed
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructs {@link ObjectContainer} from {@link Element}
@@ -35,49 +35,49 @@ extern class ObjectContainer extends com.sun.org.apache.xml.internal.security.ut
 	* @param BaseURI the URI of the resource where the XML instance was stored
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Sets the <code>Id</code> attribute
 	*
 	* @param Id <code>Id</code> attribute
 	*/
-	@:overload public function setId(Id : String) : Void;
+	@:overload @:public public function setId(Id : String) : Void;
 	
 	/**
 	* Returns the <code>Id</code> attribute
 	*
 	* @return the <code>Id</code> attribute
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Sets the <code>MimeType</code> attribute
 	*
 	* @param MimeType the <code>MimeType</code> attribute
 	*/
-	@:overload public function setMimeType(MimeType : String) : Void;
+	@:overload @:public public function setMimeType(MimeType : String) : Void;
 	
 	/**
 	* Returns the <code>MimeType</code> attribute
 	*
 	* @return the <code>MimeType</code> attribute
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	* Sets the <code>Encoding</code> attribute
 	*
 	* @param Encoding the <code>Encoding</code> attribute
 	*/
-	@:overload public function setEncoding(Encoding : String) : Void;
+	@:overload @:public public function setEncoding(Encoding : String) : Void;
 	
 	/**
 	* Returns the <code>Encoding</code> attribute
 	*
 	* @return the <code>Encoding</code> attribute
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Adds child Node
@@ -85,10 +85,10 @@ extern class ObjectContainer extends com.sun.org.apache.xml.internal.security.ut
 	* @param node child Node
 	* @return the new node in the tree.
 	*/
-	@:overload public function appendChild(node : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(node : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

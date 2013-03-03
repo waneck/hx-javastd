@@ -34,41 +34,41 @@ package javax.management.relation;
 	/**
 	* Problem type when trying to access an unknown role.
 	*/
-	public static var NO_ROLE_WITH_NAME(default, null) : Int;
+	@:public @:static @:final public static var NO_ROLE_WITH_NAME(default, null) : Int;
 	
 	/**
 	* Problem type when trying to read a non-readable attribute.
 	*/
-	public static var ROLE_NOT_READABLE(default, null) : Int;
+	@:public @:static @:final public static var ROLE_NOT_READABLE(default, null) : Int;
 	
 	/**
 	* Problem type when trying to update a non-writable attribute.
 	*/
-	public static var ROLE_NOT_WRITABLE(default, null) : Int;
+	@:public @:static @:final public static var ROLE_NOT_WRITABLE(default, null) : Int;
 	
 	/**
 	* Problem type when trying to set a role value with less ObjectNames than
 	* the minimum expected cardinality.
 	*/
-	public static var LESS_THAN_MIN_ROLE_DEGREE(default, null) : Int;
+	@:public @:static @:final public static var LESS_THAN_MIN_ROLE_DEGREE(default, null) : Int;
 	
 	/**
 	* Problem type when trying to set a role value with more ObjectNames than
 	* the maximum expected cardinality.
 	*/
-	public static var MORE_THAN_MAX_ROLE_DEGREE(default, null) : Int;
+	@:public @:static @:final public static var MORE_THAN_MAX_ROLE_DEGREE(default, null) : Int;
 	
 	/**
 	* Problem type when trying to set a role value including the ObjectName of
 	* a MBean not of the class expected for that role.
 	*/
-	public static var REF_MBEAN_OF_INCORRECT_CLASS(default, null) : Int;
+	@:public @:static @:final public static var REF_MBEAN_OF_INCORRECT_CLASS(default, null) : Int;
 	
 	/**
 	* Problem type when trying to set a role value including the ObjectName of
 	* a MBean not registered in the MBean Server.
 	*/
-	public static var REF_MBEAN_NOT_REGISTERED(default, null) : Int;
+	@:public @:static @:final public static var REF_MBEAN_NOT_REGISTERED(default, null) : Int;
 	
 	/**
 	* Returns true if given value corresponds to a known role status, false
@@ -78,7 +78,7 @@ package javax.management.relation;
 	*
 	* @return true if this value is a known role status.
 	*/
-	@:overload public static function isRoleStatus(status : Int) : Bool;
+	@:overload @:public @:static public static function isRoleStatus(status : Int) : Bool;
 	
 	
 }

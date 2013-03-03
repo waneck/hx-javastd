@@ -36,7 +36,7 @@ package com.sun.xml.internal.stream.util;
 */
 extern class ThreadLocalBufferAllocator
 {
-	@:overload public static function getBufferAllocator() : com.sun.xml.internal.stream.util.BufferAllocator;
+	@:overload @:public @:static public static function getBufferAllocator() : com.sun.xml.internal.stream.util.BufferAllocator;
 	
 	
 }

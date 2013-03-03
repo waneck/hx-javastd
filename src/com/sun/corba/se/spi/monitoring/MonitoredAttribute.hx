@@ -45,7 +45,7 @@ extern interface MonitoredAttribute
 	* @param monitoredAttributeInfo for this Monitored Attribute.
 	* </p>
 	*/
-	@:overload public function getAttributeInfo() : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo;
+	@:overload @:public public function getAttributeInfo() : com.sun.corba.se.spi.monitoring.MonitoredAttributeInfo;
 	
 	/**
 	* <p>
@@ -61,7 +61,7 @@ extern interface MonitoredAttribute
 	* Long, Double, Float, String, Integer, Short, Character, Byte.
 	* </p>
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* <p>
@@ -81,7 +81,7 @@ extern interface MonitoredAttribute
 	* @param value is the current value for this MonitoredAttribute
 	* </p>
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* <p>
@@ -92,7 +92,7 @@ extern interface MonitoredAttribute
 	* @param name of this Attribute
 	* </p>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* <p>
@@ -103,7 +103,7 @@ extern interface MonitoredAttribute
 	* </p>
 	*
 	*/
-	@:overload public function clearState() : Void;
+	@:overload @:public public function clearState() : Void;
 	
 	
 }

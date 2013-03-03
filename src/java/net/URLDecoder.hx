@@ -83,7 +83,7 @@ package java.net;
 	*          to specify the encoding.
 	* @return the newly decoded <code>String</code>
 	*/
-	@:overload public static function decode(s : String) : String;
+	@:overload @:public @:static public static function decode(s : String) : String;
 	
 	/**
 	* Decodes a <code>application/x-www-form-urlencoded</code> string using a specific
@@ -109,7 +109,7 @@ package java.net;
 	* @see URLEncoder#encode(java.lang.String, java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function decode(s : String, enc : String) : String;
+	@:require(java4) @:overload @:public @:static public static function decode(s : String, enc : String) : String;
 	
 	
 }

@@ -29,7 +29,7 @@ extern interface Types extends com.sun.xml.internal.txw2.TypedXmlWriter extends 
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function schema() : com.sun.xml.internal.ws.wsdl.writer.document.xsd.Schema;
+	@:overload @:public public function schema() : com.sun.xml.internal.ws.wsdl.writer.document.xsd.Schema;
 	
 	
 }

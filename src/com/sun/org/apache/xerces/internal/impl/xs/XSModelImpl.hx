@@ -26,9 +26,9 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	*
 	* @param grammars   the array of schema grammars
 	*/
-	@:overload public function new(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>) : Void;
+	@:overload @:public public function new(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>) : Void;
 	
-	@:overload public function new(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>, s4sVersion : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>, s4sVersion : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Convenience method. Returns a list of all namespaces that belong to
@@ -36,7 +36,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A list of all namespaces that belong to this schema or
 	*   <code>null</code> if all components don't have a targetNamespace.
 	*/
-	@:overload public function getNamespaces() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getNamespaces() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* A set of namespace schema information information items (of type
@@ -46,7 +46,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* in the schema had no target namespace. For more information see
 	* schema information.
 	*/
-	@:overload public function getNamespaceItems() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItemList;
+	@:overload @:public public function getNamespaceItems() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItemList;
 	
 	/**
 	* Returns a list of top-level components, i.e. element declarations,
@@ -61,7 +61,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	*   <code>objectType</code> or an empty <code>XSNamedMap</code> if no
 	*   such definitions exist.
 	*/
-	@:overload @:synchronized public function getComponents(objectType : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
+	@:overload @:public @:synchronized public function getComponents(objectType : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
 	
 	/**
 	* Convenience method. Returns a list of top-level component declarations
@@ -75,7 +75,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	*   <code>objectType</code> and defined in the specified
 	*   <code>namespace</code> or an empty <code>XSNamedMap</code>.
 	*/
-	@:overload @:synchronized public function getComponentsByNamespace(objectType : java.StdTypes.Int16, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
+	@:overload @:public @:synchronized public function getComponentsByNamespace(objectType : java.StdTypes.Int16, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNamedMap;
 	
 	/**
 	* Convenience method. Returns a top-level simple or complex type
@@ -85,7 +85,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return An <code>XSTypeDefinition</code> or null if such definition
 	*   does not exist.
 	*/
-	@:overload public function getTypeDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level simple or complex type
@@ -96,7 +96,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return An <code>XSTypeDefinition</code> or null if such definition
 	*   does not exist.
 	*/
-	@:overload public function getTypeDefinition(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level attribute declaration.
@@ -105,7 +105,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level attribute declaration or null if such declaration
 	*   does not exist.
 	*/
-	@:overload public function getAttributeDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttributeDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level attribute declaration.
@@ -115,7 +115,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level attribute declaration or null if such declaration
 	*   does not exist.
 	*/
-	@:overload public function getAttributeDeclaration(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
+	@:overload @:public public function getAttributeDeclaration(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level element declaration.
@@ -124,7 +124,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level element declaration or null if such declaration
 	*   does not exist.
 	*/
-	@:overload public function getElementDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getElementDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level element declaration.
@@ -134,7 +134,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level element declaration or null if such declaration
 	*   does not exist.
 	*/
-	@:overload public function getElementDeclaration(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
+	@:overload @:public public function getElementDeclaration(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* Convenience method. Returns a top-level attribute group definition.
@@ -143,7 +143,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level attribute group definition or null if such
 	*   definition does not exist.
 	*/
-	@:overload public function getAttributeGroup(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
+	@:overload @:public public function getAttributeGroup(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level attribute group definition.
@@ -153,7 +153,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level attribute group definition or null if such
 	*   definition does not exist.
 	*/
-	@:overload public function getAttributeGroup(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
+	@:overload @:public public function getAttributeGroup(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSAttributeGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level model group definition.
@@ -163,7 +163,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level model group definition definition or null if such
 	*         definition does not exist.
 	*/
-	@:overload public function getModelGroupDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
+	@:overload @:public public function getModelGroupDefinition(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
 	
 	/**
 	* Convenience method. Returns a top-level model group definition.
@@ -174,20 +174,20 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* @return A top-level model group definition definition or null if such
 	*         definition does not exist.
 	*/
-	@:overload public function getModelGroupDefinition(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
+	@:overload @:public public function getModelGroupDefinition(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSModelGroupDefinition;
 	
 	/**
 	* @see org.apache.xerces.xs.XSModel#getNotationDeclaration(String, String)
 	*/
-	@:overload public function getNotationDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:overload @:public public function getNotationDeclaration(name : String, namespace : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
-	@:overload public function getNotationDeclaration(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
+	@:overload @:public public function getNotationDeclaration(name : String, namespace : String, loc : String) : com.sun.org.apache.xerces.internal.xs.XSNotationDeclaration;
 	
 	/**
 	*  [annotations]: a set of annotations if it exists, otherwise an empty
 	* <code>XSObjectList</code>.
 	*/
-	@:overload @:synchronized public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public @:synchronized public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* REVISIT: to expose identity constraints from XSModel.
@@ -195,7 +195,7 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	* We also need to add these methods to the public
 	* XSModel interface.
 	*/
-	@:overload public function hasIDConstraints() : Bool;
+	@:overload @:public public function hasIDConstraints() : Bool;
 	
 	/**
 	* Convenience method. Returns a list containing the members of the
@@ -208,13 +208,13 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	*  <code>XSObjectList</code> if the substitution group contains
 	*  no members.
 	*/
-	@:overload public function getSubstitutionGroup(head : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration) : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getSubstitutionGroup(head : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration) : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* The number of <code>XSNamespaceItem</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection or
@@ -225,45 +225,45 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	*   position in the <code>XSNamespaceItemList</code>, or
 	*   <code>null</code> if the index specified is not valid.
 	*/
-	@:overload public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator() : java.util.ListIterator<Dynamic>;
 	
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XSModelImpl$XSNamespaceItemListIterator') @:internal extern class XSModelImpl_XSNamespaceItemListIterator implements java.util.ListIterator<Dynamic>
 {
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function previous() : Dynamic;
+	@:overload @:public public function previous() : Dynamic;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function set(o : Dynamic) : Void;
+	@:overload @:public public function set(o : Dynamic) : Void;
 	
-	@:overload public function add(o : Dynamic) : Void;
+	@:overload @:public public function add(o : Dynamic) : Void;
 	
 	
 }

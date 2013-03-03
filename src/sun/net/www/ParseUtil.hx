@@ -34,30 +34,30 @@ extern class ParseUtil
 	* 0x7F or those defined in RFC2396 as reserved or excluded in the path
 	* component of a URL.
 	*/
-	@:overload public static function encodePath(path : String) : String;
+	@:overload @:public @:static public static function encodePath(path : String) : String;
 	
 	/*
 	* flag indicates whether path uses platform dependent
 	* File.separatorChar or not. True indicates path uses platform
 	* dependent File.separatorChar.
 	*/
-	@:overload public static function encodePath(path : String, flag : Bool) : String;
+	@:overload @:public @:static public static function encodePath(path : String, flag : Bool) : String;
 	
 	/**
 	* Returns a new String constructed from the specified String by replacing
 	* the URL escape sequences and UTF8 encoding with the characters they
 	* represent.
 	*/
-	@:overload public static function decode(s : String) : String;
+	@:overload @:public @:static public static function decode(s : String) : String;
 	
 	/**
 	* Returns a canonical version of the specified string.
 	*/
-	@:overload public function canonizeString(file : String) : String;
+	@:overload @:public public function canonizeString(file : String) : String;
 	
-	@:overload public static function fileToEncodedURL(file : java.io.File) : java.net.URL;
+	@:overload @:public @:static public static function fileToEncodedURL(file : java.io.File) : java.net.URL;
 	
-	@:overload public static function toURI(url : java.net.URL) : java.net.URI;
+	@:overload @:public @:static public static function toURI(url : java.net.URL) : java.net.URI;
 	
 	
 }

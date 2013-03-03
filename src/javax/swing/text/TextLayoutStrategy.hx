@@ -29,7 +29,7 @@ package javax.swing.text;
 	* Constructs a layout strategy for paragraphs based
 	* upon java.awt.font.LineBreakMeasurer.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -42,7 +42,7 @@ package javax.swing.text;
 	*   This value will be null if the view has not yet been displayed.
 	* @see View#insertUpdate
 	*/
-	@:overload public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload @:public override public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -52,7 +52,7 @@ package javax.swing.text;
 	* @param alloc the current allocation of the view inside of the insets.
 	* @see View#removeUpdate
 	*/
-	@:overload public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload @:public override public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -63,7 +63,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload @:public override public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Does a a full layout on the given View.  This causes all of
@@ -73,7 +73,7 @@ package javax.swing.text;
 	*
 	* @param fv the view to reflow
 	*/
-	@:overload public function layout(fv : javax.swing.text.FlowView) : Void;
+	@:overload @:public override public function layout(fv : javax.swing.text.FlowView) : Void;
 	
 	/**
 	* Creates a row of views that will fit within the
@@ -88,7 +88,7 @@ package javax.swing.text;
 	*   this views element from which to start.
 	* @return the position to start the next row
 	*/
-	@:overload private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, p0 : Int) : Int;
+	@:overload @:protected override private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, p0 : Int) : Int;
 	
 	/**
 	* Adjusts the given row if possible to fit within the
@@ -101,7 +101,7 @@ package javax.swing.text;
 	* @param desiredSpan the current layout span >= 0
 	* @param x the location r starts at.
 	*/
-	@:overload private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
+	@:overload @:protected override private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
 	
 	/**
 	* Creates a unidirectional view that can be used to represent the
@@ -113,7 +113,7 @@ package javax.swing.text;
 	* @param spanLeft the about of span left to fill in the row
 	* @param rowIndex the row the view will be placed into
 	*/
-	@:overload private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
+	@:overload @:protected override private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
 	
 	
 }
@@ -128,57 +128,57 @@ package javax.swing.text;
 	* Returns the index of the first character of the run
 	* with respect to all attributes containing the current character.
 	*/
-	@:overload public function getRunStart() : Int;
+	@:overload @:public public function getRunStart() : Int;
 	
 	/**
 	* Returns the index of the first character of the run
 	* with respect to the given attribute containing the current character.
 	*/
-	@:overload public function getRunStart(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
+	@:overload @:public public function getRunStart(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
 	
 	/**
 	* Returns the index of the first character of the run
 	* with respect to the given attributes containing the current character.
 	*/
-	@:overload public function getRunStart(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
+	@:overload @:public public function getRunStart(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
 	* with respect to all attributes containing the current character.
 	*/
-	@:overload public function getRunLimit() : Int;
+	@:overload @:public public function getRunLimit() : Int;
 	
 	/**
 	* Returns the index of the first character following the run
 	* with respect to the given attribute containing the current character.
 	*/
-	@:overload public function getRunLimit(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
+	@:overload @:public public function getRunLimit(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
 	* with respect to the given attributes containing the current character.
 	*/
-	@:overload public function getRunLimit(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
+	@:overload @:public public function getRunLimit(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns a map with the attributes defined on the current
 	* character.
 	*/
-	@:overload public function getAttributes() : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>;
 	
 	/**
 	* Returns the value of the named attribute for the current character.
 	* Returns null if the attribute is not defined.
 	* @param attribute the key of the attribute whose value is requested.
 	*/
-	@:overload public function getAttribute(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Dynamic;
+	@:overload @:public public function getAttribute(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Dynamic;
 	
 	/**
 	* Returns the keys of all attributes defined on the
 	* iterator's text range. The set is empty if no
 	* attributes are defined.
 	*/
-	@:overload public function getAllAttributeKeys() : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>;
+	@:overload @:public public function getAllAttributeKeys() : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>;
 	
 	
 }

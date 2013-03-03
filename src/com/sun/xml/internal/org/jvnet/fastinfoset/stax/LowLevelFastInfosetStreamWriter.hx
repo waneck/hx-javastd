@@ -32,7 +32,7 @@ extern interface LowLevelFastInfosetStreamWriter
 	* <p>
 	* This method must be invoked before other low level method.
 	*/
-	@:overload public function initiateLowLevelWriting() : Void;
+	@:overload @:public public function initiateLowLevelWriting() : Void;
 	
 	/**
 	* Get the next index to apply to an Element Information Item.
@@ -45,7 +45,7 @@ extern interface LowLevelFastInfosetStreamWriter
 	* </pre>
 	* @return the index.
 	*/
-	@:overload public function getNextElementIndex() : Int;
+	@:overload @:public public function getNextElementIndex() : Int;
 	
 	/**
 	* Get the next index to apply to an Attribute Information Item.
@@ -57,7 +57,7 @@ extern interface LowLevelFastInfosetStreamWriter
 	* </pre>
 	* @return the index.
 	*/
-	@:overload public function getNextAttributeIndex() : Int;
+	@:overload @:public public function getNextAttributeIndex() : Int;
 	
 	/**
 	* Get the current index that was applied to an [local name] of an
@@ -65,7 +65,7 @@ extern interface LowLevelFastInfosetStreamWriter
 	* </pre>
 	* @return the index.
 	*/
-	@:overload public function getLocalNameIndex() : Int;
+	@:overload @:public public function getLocalNameIndex() : Int;
 	
 	/**
 	* Get the next index to apply to an [local name] of an Element or Attribute
@@ -78,51 +78,51 @@ extern interface LowLevelFastInfosetStreamWriter
 	* </pre>
 	* @return the index.
 	*/
-	@:overload public function getNextLocalNameIndex() : Int;
+	@:overload @:public public function getNextLocalNameIndex() : Int;
 	
-	@:overload public function writeLowLevelTerminationAndMark() : Void;
+	@:overload @:public public function writeLowLevelTerminationAndMark() : Void;
 	
-	@:overload public function writeLowLevelStartElementIndexed(type : Int, index : Int) : Void;
+	@:overload @:public public function writeLowLevelStartElementIndexed(type : Int, index : Int) : Void;
 	
 	/**
 	* Write the start of an element.
 	*
 	* @return true if element is indexed, otherwise false.
 	*/
-	@:overload public function writeLowLevelStartElement(type : Int, prefix : String, localName : String, namespaceURI : String) : Bool;
+	@:overload @:public public function writeLowLevelStartElement(type : Int, prefix : String, localName : String, namespaceURI : String) : Bool;
 	
-	@:overload public function writeLowLevelStartNamespaces() : Void;
+	@:overload @:public public function writeLowLevelStartNamespaces() : Void;
 	
-	@:overload public function writeLowLevelNamespace(prefix : String, namespaceName : String) : Void;
+	@:overload @:public public function writeLowLevelNamespace(prefix : String, namespaceName : String) : Void;
 	
-	@:overload public function writeLowLevelEndNamespaces() : Void;
+	@:overload @:public public function writeLowLevelEndNamespaces() : Void;
 	
-	@:overload public function writeLowLevelStartAttributes() : Void;
+	@:overload @:public public function writeLowLevelStartAttributes() : Void;
 	
-	@:overload public function writeLowLevelAttributeIndexed(index : Int) : Void;
+	@:overload @:public public function writeLowLevelAttributeIndexed(index : Int) : Void;
 	
 	/**
 	* Write an attribute.
 	*
 	* @return true if attribute is indexed, otherwise false.
 	*/
-	@:overload public function writeLowLevelAttribute(prefix : String, namespaceURI : String, localName : String) : Bool;
+	@:overload @:public public function writeLowLevelAttribute(prefix : String, namespaceURI : String, localName : String) : Bool;
 	
-	@:overload public function writeLowLevelAttributeValue(value : String) : Void;
+	@:overload @:public public function writeLowLevelAttributeValue(value : String) : Void;
 	
-	@:overload public function writeLowLevelStartNameLiteral(type : Int, prefix : String, utf8LocalName : java.NativeArray<java.StdTypes.Int8>, namespaceURI : String) : Void;
+	@:overload @:public public function writeLowLevelStartNameLiteral(type : Int, prefix : String, utf8LocalName : java.NativeArray<java.StdTypes.Int8>, namespaceURI : String) : Void;
 	
-	@:overload public function writeLowLevelStartNameLiteral(type : Int, prefix : String, localNameIndex : Int, namespaceURI : String) : Void;
+	@:overload @:public public function writeLowLevelStartNameLiteral(type : Int, prefix : String, localNameIndex : Int, namespaceURI : String) : Void;
 	
-	@:overload public function writeLowLevelEndStartElement() : Void;
+	@:overload @:public public function writeLowLevelEndStartElement() : Void;
 	
-	@:overload public function writeLowLevelEndElement() : Void;
+	@:overload @:public public function writeLowLevelEndElement() : Void;
 	
-	@:overload public function writeLowLevelText(text : java.NativeArray<java.StdTypes.Char16>, length : Int) : Void;
+	@:overload @:public public function writeLowLevelText(text : java.NativeArray<java.StdTypes.Char16>, length : Int) : Void;
 	
-	@:overload public function writeLowLevelText(text : String) : Void;
+	@:overload @:public public function writeLowLevelText(text : String) : Void;
 	
-	@:overload public function writeLowLevelOctets(octets : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public public function writeLowLevelOctets(octets : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	
 }

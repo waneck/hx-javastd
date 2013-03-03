@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.xml.util;
 */
 extern class EncodingMap
 {
-	@:overload public static function getJavaName(enc : String) : String;
+	@:overload @:static @:public public static function getJavaName(enc : String) : String;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:static @:public public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

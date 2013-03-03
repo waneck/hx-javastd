@@ -52,7 +52,7 @@ extern class DDataPattern extends com.sun.xml.internal.rngom.digested.DPattern
 	* @return
 	*      Can be empty (which represents the built-in datatypes), but never null.
 	*/
-	@:overload public function getDatatypeLibrary() : String;
+	@:overload @:public public function getDatatypeLibrary() : String;
 	
 	/**
 	* Gets the datatype name, such as "int" or "token".
@@ -60,7 +60,7 @@ extern class DDataPattern extends com.sun.xml.internal.rngom.digested.DPattern
 	* @return
 	*      never null.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Gets the parameters of this &lt;data pattern.
@@ -68,18 +68,18 @@ extern class DDataPattern extends com.sun.xml.internal.rngom.digested.DPattern
 	* @return
 	*      can be empty but never null.
 	*/
-	@:overload public function getParams() : java.util.List<com.sun.xml.internal.rngom.digested.DDataPattern.DDataPattern_Param>;
+	@:overload @:public public function getParams() : java.util.List<com.sun.xml.internal.rngom.digested.DDataPattern.DDataPattern_Param>;
 	
 	/**
 	* Gets the pattern that reprsents the &lt;except> child of this data pattern.
 	*
 	* @return null if not exist.
 	*/
-	@:overload public function getExcept() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function getExcept() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }
@@ -88,19 +88,19 @@ extern class DDataPattern extends com.sun.xml.internal.rngom.digested.DPattern
 */
 @:native('com$sun$xml$internal$rngom$digested$DDataPattern$Param') extern class DDataPattern_Param
 {
-	@:overload public function new(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.digested.Annotation) : Void;
+	@:overload @:public public function new(name : String, value : String, context : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.digested.Annotation) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function getContext() : com.sun.xml.internal.rngom.parse.Context;
+	@:overload @:public public function getContext() : com.sun.xml.internal.rngom.parse.Context;
 	
-	@:overload public function getNs() : String;
+	@:overload @:public public function getNs() : String;
 	
-	@:overload public function getLoc() : com.sun.xml.internal.rngom.ast.om.Location;
+	@:overload @:public public function getLoc() : com.sun.xml.internal.rngom.ast.om.Location;
 	
-	@:overload public function getAnno() : com.sun.xml.internal.rngom.digested.Annotation;
+	@:overload @:public public function getAnno() : com.sun.xml.internal.rngom.digested.Annotation;
 	
 	
 }

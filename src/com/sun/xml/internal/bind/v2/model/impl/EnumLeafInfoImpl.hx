@@ -28,7 +28,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* Used to recognize token vs string.
 	*/
-	private var tokenStringType : Bool;
+	@:protected private var tokenStringType : Bool;
 	
 	/**
 	* @param clazz
@@ -37,22 +37,22 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	*      that this {@link EnumLeafInfo} represents.
 	*      Because of the type parameterization we have to take them separately.
 	*/
-	@:overload public function new(builder : com.sun.xml.internal.bind.v2.model.impl.ModelBuilder<T, C, F, M>, upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, clazz : C, type : T) : Void;
+	@:overload @:public public function new(builder : com.sun.xml.internal.bind.v2.model.impl.ModelBuilder<T, C, F, M>, upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, clazz : C, type : T) : Void;
 	
 	/**
 	* Build {@link EnumConstant}s and discover/report any error in it.
 	*/
-	@:overload private function calcConstants() : Void;
+	@:overload @:protected private function calcConstants() : Void;
 	
-	@:overload private function createEnumConstant(name : String, literal : String, constant : F, last : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>;
+	@:overload @:protected private function createEnumConstant(name : String, literal : String, constant : F, last : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>) : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>;
 	
-	@:overload override public function getType() : T;
+	@:overload @:public override public function getType() : T;
 	
 	/**
 	*
 	* @return true if enum is restriction/extension from xs:token type, otherwise false
 	*/
-	@:overload public function isToken() : Bool;
+	@:overload @:public public function isToken() : Bool;
 	
 	/**
 	* Leaf-type cannot be referenced from IDREF.
@@ -60,34 +60,34 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @deprecated
 	*      why are you calling a method whose return value is always known?
 	*/
-	@:overload @:final override public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public @:final override public function canBeReferencedByIDREF() : Bool;
 	
-	@:overload public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function getClazz() : C;
+	@:overload @:public public function getClazz() : C;
 	
-	@:overload public function getBaseType() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
+	@:overload @:public public function getBaseType() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
 	
-	@:overload public function isSimpleType() : Bool;
+	@:overload @:public public function isSimpleType() : Bool;
 	
-	@:overload override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
-	@:overload public function getConstants() : java.lang.Iterable<com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>>;
+	@:overload @:public public function getConstants() : java.lang.Iterable<com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>>;
 	
-	@:overload public function link() : Void;
+	@:overload @:public public function link() : Void;
 	
 	/**
 	* No substitution.
 	*
 	* @deprecated if you are invoking this method directly, there's something wrong.
 	*/
-	@:overload public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
+	@:overload @:public public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function isElement() : Bool;
+	@:overload @:public public function isElement() : Bool;
 	
-	@:overload public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
+	@:overload @:public public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
 	/**
 	* When a bean binds to an element, it's always through {@link XmlRootElement},
@@ -96,9 +96,9 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @deprecated
 	*      you shouldn't be invoking this method on {@link ClassInfoImpl}.
 	*/
-	@:overload public function getScope() : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>;
+	@:overload @:public public function getScope() : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>>;
 	
 	
 }

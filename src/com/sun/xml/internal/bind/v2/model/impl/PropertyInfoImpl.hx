@@ -28,70 +28,89 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* Object that reads annotations.
 	*/
-	private var seed(default, null) : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
+	@:protected @:final private var seed(default, null) : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
 	
-	@:overload private function new(parent : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, spi : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
+	@:overload @:protected private function new(parent : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, spi : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
 	
-	@:overload public function parent() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
+	@:overload @:public public function parent() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
 	
-	@:overload @:final private function nav() : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, F, M>;
+	@:overload @:protected @:final private function nav() : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, F, M>;
 	
-	@:overload @:final private function reader() : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, F, M>;
+	@:overload @:protected @:final private function reader() : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, F, M>;
 	
-	@:overload public function getRawType() : T;
+	@:overload @:public public function getRawType() : T;
 	
-	@:overload public function getIndividualType() : T;
+	@:overload @:public public function getIndividualType() : T;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* This is the default implementation of the getAdapter method
 	* defined on many of the {@link PropertyInfo}-derived classes.
 	*/
-	@:overload public function getAdapter() : com.sun.xml.internal.bind.v2.model.core.Adapter<T, C>;
+	@:overload @:public public function getAdapter() : com.sun.xml.internal.bind.v2.model.core.Adapter<T, C>;
 	
-	@:overload @:final public function displayName() : String;
+	@:overload @:public @:final public function displayName() : String;
 	
-	@:overload @:final public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public @:final public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload @:final public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public @:final public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload @:final public function inlineBinaryData() : Bool;
+	@:overload @:public @:final public function inlineBinaryData() : Bool;
 	
-	@:overload @:final public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getSchemaType() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function isCollection() : Bool;
+	@:overload @:public @:final public function isCollection() : Bool;
 	
 	/**
 	* Called after all the {@link TypeInfo}s are collected into the governing {@link TypeInfoSet}.
 	*
 	* Derived class can do additional actions to complete the model.
 	*/
-	@:overload private function link() : Void;
+	@:overload @:protected private function link() : Void;
 	
 	/**
 	* A {@link PropertyInfoImpl} is always referenced by its enclosing class,
 	* so return that as the upstream.
 	*/
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Computes the tag name from a {@link XmlElement} by taking the defaulting into account.
 	*/
-	@:overload @:final private function calcXmlName(e : javax.xml.bind.annotation.XmlElement) : javax.xml.namespace.QName;
+	@:overload @:protected @:final private function calcXmlName(e : javax.xml.bind.annotation.XmlElement) : javax.xml.namespace.QName;
 	
 	/**
 	* Computes the tag name from a {@link XmlElementWrapper} by taking the defaulting into account.
 	*/
-	@:overload @:final private function calcXmlName(e : javax.xml.bind.annotation.XmlElementWrapper) : javax.xml.namespace.QName;
+	@:overload @:protected @:final private function calcXmlName(e : javax.xml.bind.annotation.XmlElementWrapper) : javax.xml.namespace.QName;
 	
-	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>) : Int;
+	@:overload @:public public function compareTo(that : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>) : Int;
 	
-	@:overload @:final public function readAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
+	@:overload @:public @:final public function readAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	
-	@:overload @:final public function hasAnnotation(annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	@:overload @:public @:final public function hasAnnotation(annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	
+	/**
+	* Gets the kind of this proeprty.
+	*
+	* @return
+	*      always non-null.
+	*/
+	@:overload @:public @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	
+	/**
+	* List of {@link TypeInfo}s that this property references.
+	*
+	* This allows the caller to traverse the reference graph without
+	* getting into the details of each different property type.
+	*
+	* @return
+	*      non-null read-only collection.
+	*/
+	@:overload @:public public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -132,7 +151,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function compareTo(o : T) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : T) : Int;
 	
 	
 }

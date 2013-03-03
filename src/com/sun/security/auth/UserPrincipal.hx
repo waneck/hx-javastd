@@ -32,7 +32,7 @@ extern class UserPrincipal implements java.security.Principal implements java.io
 	* @exception NullPointerException If the <code>name</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Compares this principal to the specified object.
@@ -40,28 +40,28 @@ extern class UserPrincipal implements java.security.Principal implements java.io
 	* @param object The object to compare this principal against.
 	* @return true if they are equal; false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this principal.
 	*
 	* @return The principal's hash code.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the name of this principal.
 	*
 	* @return The principal's name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns a string representation of this principal.
 	*
 	* @return The principal's name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

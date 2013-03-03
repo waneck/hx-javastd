@@ -39,9 +39,9 @@ package javax.swing.colorchooser;
 */
 @:internal extern class DefaultSwatchChooserPanel extends javax.swing.colorchooser.AbstractColorChooserPanel
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getDisplayName() : String;
+	@:overload @:public override public function getDisplayName() : String;
 	
 	/**
 	* Provides a hint to the look and feel as to the
@@ -62,7 +62,7 @@ package javax.swing.colorchooser;
 	* @see #getDisplayedMnemonicIndex
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getMnemonic() : Int;
+	@:require(java4) @:overload @:public override public function getMnemonic() : Int;
 	
 	/**
 	* Provides a hint to the look and feel as to the index of the character in
@@ -88,81 +88,81 @@ package javax.swing.colorchooser;
 	* @see #getMnemonic
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getDisplayedMnemonicIndex() : Int;
+	@:require(java4) @:overload @:public override public function getDisplayedMnemonicIndex() : Int;
 	
-	@:overload override public function getSmallDisplayIcon() : javax.swing.Icon;
+	@:overload @:public override public function getSmallDisplayIcon() : javax.swing.Icon;
 	
-	@:overload override public function getLargeDisplayIcon() : javax.swing.Icon;
+	@:overload @:public override public function getLargeDisplayIcon() : javax.swing.Icon;
 	
 	/**
 	* The background color, foreground color, and font are already set to the
 	* defaults from the defaults table before this method is called.
 	*/
-	@:overload override public function installChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
+	@:overload @:public override public function installChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
 	
-	@:overload override private function buildChooser() : Void;
+	@:overload @:protected override private function buildChooser() : Void;
 	
-	@:overload override public function uninstallChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
+	@:overload @:public override public function uninstallChooserPanel(enclosingChooser : javax.swing.JColorChooser) : Void;
 	
-	@:overload override public function updateChooser() : Void;
+	@:overload @:public override public function updateChooser() : Void;
 	
 	
 }
 @:native('javax$swing$colorchooser$DefaultSwatchChooserPanel$RecentSwatchListener') @:internal extern class DefaultSwatchChooserPanel_RecentSwatchListener extends java.awt.event.MouseAdapter implements java.io.Serializable
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$colorchooser$DefaultSwatchChooserPanel$MainSwatchListener') @:internal extern class DefaultSwatchChooserPanel_MainSwatchListener extends java.awt.event.MouseAdapter implements java.io.Serializable
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:internal extern class SwatchPanel extends javax.swing.JPanel
 {
-	private var colors : java.NativeArray<java.awt.Color>;
+	@:protected private var colors : java.NativeArray<java.awt.Color>;
 	
-	private var swatchSize : java.awt.Dimension;
+	@:protected private var swatchSize : java.awt.Dimension;
 	
-	private var numSwatches : java.awt.Dimension;
+	@:protected private var numSwatches : java.awt.Dimension;
 	
-	private var gap : java.awt.Dimension;
+	@:protected private var gap : java.awt.Dimension;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload private function initValues() : Void;
+	@:overload @:protected private function initValues() : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload private function initColors() : Void;
+	@:overload @:protected private function initColors() : Void;
 	
-	@:overload public function getToolTipText(e : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(e : java.awt.event.MouseEvent) : String;
 	
-	@:overload public function getColorForLocation(x : Int, y : Int) : java.awt.Color;
+	@:overload @:public public function getColorForLocation(x : Int, y : Int) : java.awt.Color;
 	
 	
 }
 @:internal extern class RecentSwatchPanel extends javax.swing.colorchooser.DefaultSwatchChooserPanel.SwatchPanel
 {
-	@:overload override private function initValues() : Void;
+	@:overload @:protected override private function initValues() : Void;
 	
-	@:overload override private function initColors() : Void;
+	@:overload @:protected override private function initColors() : Void;
 	
-	@:overload public function setMostRecentColor(c : java.awt.Color) : Void;
+	@:overload @:public public function setMostRecentColor(c : java.awt.Color) : Void;
 	
 	
 }
 @:internal extern class MainSwatchPanel extends javax.swing.colorchooser.DefaultSwatchChooserPanel.SwatchPanel
 {
-	@:overload override private function initValues() : Void;
+	@:overload @:protected override private function initValues() : Void;
 	
-	@:overload override private function initColors() : Void;
+	@:overload @:protected override private function initColors() : Void;
 	
 	
 }

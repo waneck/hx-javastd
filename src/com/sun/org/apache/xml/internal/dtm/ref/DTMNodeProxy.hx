@@ -24,7 +24,7 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Document implements org.w3c.dom.Text implements org.w3c.dom.Element implements org.w3c.dom.Attr implements org.w3c.dom.ProcessingInstruction implements org.w3c.dom.Comment implements org.w3c.dom.DocumentFragment
 {
 	/** The DTM for this node. */
-	public var dtm : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:public public var dtm : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Create a DTMNodeProxy Node representing a specific Node in a DTM
@@ -32,21 +32,21 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @param dtm The DTM Reference, must be non-null.
 	* @param node The DTM node handle.
 	*/
-	@:overload public function new(dtm : com.sun.org.apache.xml.internal.dtm.DTM, node : Int) : Void;
+	@:overload @:public public function new(dtm : com.sun.org.apache.xml.internal.dtm.DTM, node : Int) : Void;
 	
 	/**
 	* NON-DOM: Return the DTM model
 	*
 	* @return The DTM that this proxy is a representative for.
 	*/
-	@:overload @:final public function getDTM() : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public @:final public function getDTM() : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* NON-DOM: Return the DTM node number
 	*
 	* @return The DTM node handle.
 	*/
-	@:overload @:final public function getDTMNodeNumber() : Int;
+	@:overload @:public @:final public function getDTMNodeNumber() : Int;
 	
 	/**
 	* Test for equality based on node number.
@@ -55,7 +55,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @return true if the given node has the same handle as this node.
 	*/
-	@:overload @:final public function equals(node : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:final public function equals(node : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Test for equality based on node number.
@@ -64,7 +64,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @return true if the given node has the same handle as this node.
 	*/
-	@:overload @:final public function equals(node : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(node : Dynamic) : Bool;
 	
 	/**
 	* FUTURE DOM: Test node identity, in lieu of Node==Node
@@ -73,14 +73,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @return true if the given node has the same handle as this node.
 	*/
-	@:overload @:final public function sameNodeAs(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public @:final public function sameNodeAs(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getNodeName() : String;
+	@:overload @:public @:final public function getNodeName() : String;
 	
 	/**
 	* A PI's "target" states what processor channel the PI's data
@@ -95,20 +95,20 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	*
 	*/
-	@:overload @:final public function getTarget() : String;
+	@:overload @:public @:final public function getTarget() : String;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node as of DOM Level 2
 	*/
-	@:overload @:final public function getLocalName() : String;
+	@:overload @:public @:final public function getLocalName() : String;
 	
 	/**
 	* @return The prefix for this node.
 	* @see org.w3c.dom.Node as of DOM Level 2
 	*/
-	@:overload @:final public function getPrefix() : String;
+	@:overload @:public @:final public function getPrefix() : String;
 	
 	/**
 	*
@@ -117,14 +117,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node as of DOM Level 2 -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function setPrefix(prefix : String) : Void;
+	@:overload @:public @:final public function setPrefix(prefix : String) : Void;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node as of DOM Level 2
 	*/
-	@:overload @:final public function getNamespaceURI() : String;
+	@:overload @:public @:final public function getNamespaceURI() : String;
 	
 	/** Ask whether we support a given DOM feature.
 	* In fact, we do not _fully_ support any DOM feature -- we're a
@@ -142,7 +142,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @return false
 	*/
-	@:overload @:final public function supports(feature : String, version : String) : Bool;
+	@:overload @:public @:final public function supports(feature : String, version : String) : Bool;
 	
 	/** Ask whether we support a given DOM feature.
 	* In fact, we do not _fully_ support any DOM feature -- we're a
@@ -154,7 +154,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @return false
 	* @see org.w3c.dom.Node as of DOM Level 2
 	*/
-	@:overload @:final public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public @:final public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	*
@@ -163,14 +163,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getNodeValue() : String;
+	@:overload @:public @:final public function getNodeValue() : String;
 	
 	/**
 	* @return The string value of the node
 	*
 	* @throws DOMException
 	*/
-	@:overload @:final public function getStringValue() : String;
+	@:overload @:public @:final public function getStringValue() : String;
 	
 	/**
 	*
@@ -179,70 +179,70 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public @:final public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public @:final public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public @:final public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getOwnerNode() : org.w3c.dom.Node;
+	@:overload @:public @:final public function getOwnerNode() : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public @:final public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public @:final public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public @:final public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public @:final public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public @:final public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public @:final public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* Method hasAttribute
@@ -251,7 +251,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @param name
 	*
 	*/
-	@:overload public function hasAttribute(name : String) : Bool;
+	@:overload @:public public function hasAttribute(name : String) : Bool;
 	
 	/**
 	* Method hasAttributeNS
@@ -262,14 +262,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	*
 	*/
-	@:overload public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public @:final public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	*
@@ -281,7 +281,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:final public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*
@@ -293,7 +293,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:final public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*
@@ -304,7 +304,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:final public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*
@@ -315,14 +315,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Node -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:final public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Node
 	*/
-	@:overload @:final public function hasChildNodes() : Bool;
+	@:overload @:public @:final public function hasChildNodes() : Bool;
 	
 	/**
 	*
@@ -331,21 +331,21 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Node -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public @:final public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload @:public @:final public function getDoctype() : org.w3c.dom.DocumentType;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:final public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/** This is a bit of a problem in DTM, since a DTM may be a Document
 	* Fragment and hence not have a clear-cut Document Element. We can
@@ -354,7 +354,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload @:public @:final public function getDocumentElement() : org.w3c.dom.Element;
 	
 	/**
 	*
@@ -365,23 +365,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload @:public @:final public function createElement(tagName : String) : org.w3c.dom.Element;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
-	
-	/**
-	*
-	* @param data
-	*
-	*
-	* @see org.w3c.dom.Document
-	*/
-	@:overload @:final public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload @:public @:final public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	*
@@ -390,7 +381,16 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload @:public @:final public function createTextNode(data : String) : org.w3c.dom.Text;
+	
+	/**
+	*
+	* @param data
+	*
+	*
+	* @see org.w3c.dom.Document
+	*/
+	@:overload @:public @:final public function createComment(data : String) : org.w3c.dom.Comment;
 	
 	/**
 	*
@@ -401,7 +401,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload @:public @:final public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
 	/**
 	*
@@ -413,7 +413,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload @:public @:final public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
 	/**
 	*
@@ -424,7 +424,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	*
@@ -435,7 +435,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload @:public @:final public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
 	/**
 	*
@@ -444,7 +444,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Document
 	*/
-	@:overload @:final public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:final public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
 	/**
 	*
@@ -456,7 +456,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document as of DOM Level 2 -- DTMNodeProxy is read-only
 	*/
-	@:overload @:final public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public @:final public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	*
@@ -468,7 +468,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document as of DOM Level 2
 	*/
-	@:overload @:final public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload @:public @:final public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
 	/**
 	*
@@ -480,7 +480,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Document as of DOM Level 2
 	*/
-	@:overload @:final public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
 	/**
 	*
@@ -490,7 +490,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Document as of DOM Level 2
 	*/
-	@:overload @:final public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:final public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	*
@@ -499,7 +499,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Document as of DOM Level 2
 	*/
-	@:overload @:final public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload @:public @:final public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
 	/**
 	*
@@ -510,7 +510,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Text
 	*/
-	@:overload @:final public function splitText(offset : Int) : org.w3c.dom.Text;
+	@:overload @:public @:final public function splitText(offset : Int) : org.w3c.dom.Text;
 	
 	/**
 	*
@@ -519,7 +519,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function getData() : String;
+	@:overload @:public @:final public function getData() : String;
 	
 	/**
 	*
@@ -528,14 +528,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function setData(data : String) : Void;
+	@:overload @:public @:final public function setData(data : String) : Void;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
 	/**
 	*
@@ -547,7 +547,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function substringData(offset : Int, count : Int) : String;
+	@:overload @:public @:final public function substringData(offset : Int, count : Int) : String;
 	
 	/**
 	*
@@ -556,7 +556,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function appendData(arg : String) : Void;
+	@:overload @:public @:final public function appendData(arg : String) : Void;
 	
 	/**
 	*
@@ -566,7 +566,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function insertData(offset : Int, arg : String) : Void;
+	@:overload @:public @:final public function insertData(offset : Int, arg : String) : Void;
 	
 	/**
 	*
@@ -576,7 +576,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function deleteData(offset : Int, count : Int) : Void;
+	@:overload @:public @:final public function deleteData(offset : Int, count : Int) : Void;
 	
 	/**
 	*
@@ -587,14 +587,14 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.CharacterData
 	*/
-	@:overload @:final public function replaceData(offset : Int, count : Int, arg : String) : Void;
+	@:overload @:public @:final public function replaceData(offset : Int, count : Int, arg : String) : Void;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function getTagName() : String;
+	@:overload @:public @:final public function getTagName() : String;
 	
 	/**
 	*
@@ -603,7 +603,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function getAttribute(name : String) : String;
+	@:overload @:public @:final public function getAttribute(name : String) : String;
 	
 	/**
 	*
@@ -613,7 +613,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public @:final public function setAttribute(name : String, value : String) : Void;
 	
 	/**
 	*
@@ -622,7 +622,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function removeAttribute(name : String) : Void;
+	@:overload @:public @:final public function removeAttribute(name : String) : Void;
 	
 	/**
 	*
@@ -631,7 +631,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	*
@@ -642,7 +642,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	*
@@ -653,17 +653,17 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	* Introduced in DOM Level 2.
 	*
 	*
 	*/
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
 	/** @see org.w3c.dom.Element */
-	@:overload @:final public function normalize() : Void;
+	@:overload @:public @:final public function normalize() : Void;
 	
 	/**
 	*
@@ -673,7 +673,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public @:final public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
 	/**
 	*
@@ -684,7 +684,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public @:final public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
 	/**
 	*
@@ -694,7 +694,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public @:final public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	*
@@ -704,7 +704,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	*
@@ -715,35 +715,35 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @throws DOMException
 	* @see org.w3c.dom.Element
 	*/
-	@:overload @:final public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public @:final public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Attr
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Attr
 	*/
-	@:overload @:final public function getSpecified() : Bool;
+	@:overload @:public @:final public function getSpecified() : Bool;
 	
 	/**
 	*
 	*
 	* @see org.w3c.dom.Attr
 	*/
-	@:overload @:final public function getValue() : String;
+	@:overload @:public @:final public function getValue() : String;
 	
 	/**
 	*
 	* @param value
 	* @see org.w3c.dom.Attr
 	*/
-	@:overload @:final public function setValue(value : String) : Void;
+	@:overload @:public @:final public function setValue(value : String) : Void;
 	
 	/**
 	* Get the owner element of an attribute.
@@ -751,7 +751,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @see org.w3c.dom.Attr as of DOM Level 2
 	*/
-	@:overload @:final public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public @:final public function getOwnerElement() : org.w3c.dom.Element;
 	
 	/**
 	* NEEDSDOC Method adoptNode
@@ -763,7 +763,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* @throws DOMException
 	*/
-	@:overload public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -776,7 +776,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getInputEncoding() : String;
+	@:overload @:public public function getInputEncoding() : String;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -789,7 +789,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC @param encoding
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -802,7 +802,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getStandalone() : Bool;
+	@:overload @:public public function getStandalone() : Bool;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -815,7 +815,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC @param standalone
 	*/
-	@:overload public function setStandalone(standalone : Bool) : Void;
+	@:overload @:public public function setStandalone(standalone : Bool) : Void;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -832,7 +832,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getStrictErrorChecking() : Bool;
+	@:overload @:public public function getStrictErrorChecking() : Bool;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -849,7 +849,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC @param strictErrorChecking
 	*/
-	@:overload public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
+	@:overload @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -862,7 +862,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* <p>EXPERIMENTAL! Based on the <a
@@ -875,9 +875,9 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*
 	* NEEDSDOC @param version
 	*/
-	@:overload public function setVersion(version : String) : Void;
+	@:overload @:public public function setVersion(version : String) : Void;
 	
-	@:overload public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -888,7 +888,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   on this node, or <code>null</code> if there was none.
 	* @since DOM Level 3
 	*/
-	@:overload public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -910,7 +910,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   childNodes, etc.
 	* @since DOM Level 3
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -954,7 +954,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   <code>true</code> otherwise <code>false</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* DOM Level 3
@@ -965,7 +965,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @return th URI for the namespace
 	* @since DOM Level 3
 	*/
-	@:overload public function lookupNamespaceURI(specifiedPrefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(specifiedPrefix : String) : String;
 	
 	/**
 	*  DOM Level 3
@@ -976,7 +976,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   is the default namespace, <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	*
@@ -986,7 +986,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* @param namespaceURI
 	* @return the prefix for the namespace
 	*/
-	@:overload public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -1002,7 +1002,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   <code>false</code> otherwise.
 	* @since DOM Level 3
 	*/
-	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -1049,7 +1049,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -1096,7 +1096,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   platform.
 	* @since DOM Level 3
 	*/
-	@:overload public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
 	/**
 	* Compares a node with this node with regard to their position in the
@@ -1106,7 +1106,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   node.
 	* @since DOM Level 3
 	*/
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if undefined.
@@ -1132,34 +1132,34 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* Yes. (F2F 26 Sep 2001)
 	* @since DOM Level 3
 	*/
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	* DOM Level 3
 	* Renaming node
 	*/
-	@:overload public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, name : String) : org.w3c.dom.Node;
+	@:overload @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, name : String) : org.w3c.dom.Node;
 	
 	/**
 	*  DOM Level 3
 	*  Normalize document.
 	*/
-	@:overload public function normalizeDocument() : Void;
+	@:overload @:public public function normalizeDocument() : Void;
 	
 	/**
 	*  The configuration used when <code>Document.normalizeDocument</code> is
 	* invoked.
 	* @since DOM Level 3
 	*/
-	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/** DOM Level 3 feature: documentURI */
-	private var fDocumentURI : String;
+	@:protected private var fDocumentURI : String;
 	
 	/**
 	* DOM Level 3
 	*/
-	@:overload public function setDocumentURI(documentURI : String) : Void;
+	@:overload @:public public function setDocumentURI(documentURI : String) : Void;
 	
 	/**
 	* DOM Level 3
@@ -1169,10 +1169,10 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* over this attribute.
 	* @since DOM Level 3
 	*/
-	@:overload public function getDocumentURI() : String;
+	@:overload @:public public function getDocumentURI() : String;
 	
 	/**DOM Level 3 feature: Document actualEncoding */
-	private var actualEncoding : String;
+	@:protected private var actualEncoding : String;
 	
 	/**
 	* DOM Level 3
@@ -1182,7 +1182,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* defined in .
 	* @since DOM Level 3
 	*/
-	@:overload public function getActualEncoding() : String;
+	@:overload @:public public function getActualEncoding() : String;
 	
 	/**
 	* DOM Level 3
@@ -1192,12 +1192,12 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* defined in .
 	* @since DOM Level 3
 	*/
-	@:overload public function setActualEncoding(value : String) : Void;
+	@:overload @:public public function setActualEncoding(value : String) : Void;
 	
 	/**
 	* DOM Level 3
 	*/
-	@:overload public function replaceWholeText(content : String) : org.w3c.dom.Text;
+	@:overload @:public public function replaceWholeText(content : String) : org.w3c.dom.Text;
 	
 	/**
 	* DOM Level 3
@@ -1205,56 +1205,56 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* nodes to this node, concatenated in document order.
 	* @since DOM Level 3
 	*/
-	@:overload public function getWholeText() : String;
+	@:overload @:public public function getWholeText() : String;
 	
 	/**
 	* DOM Level 3
 	* Returns whether this text node contains whitespace in element content,
 	* often abusively called "ignorable whitespace".
 	*/
-	@:overload public function isElementContentWhitespace() : Bool;
+	@:overload @:public public function isElementContentWhitespace() : Bool;
 	
 	/**
 	* NON-DOM: set the type of this attribute to be ID type.
 	*
 	* @param id
 	*/
-	@:overload public function setIdAttribute(id : Bool) : Void;
+	@:overload @:public public function setIdAttribute(id : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttribute(name : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttribute(name : String, makeId : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
 	
 	/**
 	* DOM Level 3: register the given attribute node as an ID attribute
 	*/
-	@:overload public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
 	
 	/**
 	* Method getSchemaTypeInfo.
 	* @return TypeInfo
 	*/
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
-	@:overload public function isId() : Bool;
+	@:overload @:public public function isId() : Bool;
 	
-	@:overload public function getXmlEncoding() : String;
+	@:overload @:public public function getXmlEncoding() : String;
 	
-	@:overload public function setXmlEncoding(xmlEncoding : String) : Void;
+	@:overload @:public public function setXmlEncoding(xmlEncoding : String) : Void;
 	
-	@:overload public function getXmlStandalone() : Bool;
+	@:overload @:public public function getXmlStandalone() : Bool;
 	
-	@:overload public function setXmlStandalone(xmlStandalone : Bool) : Void;
+	@:overload @:public public function setXmlStandalone(xmlStandalone : Bool) : Void;
 	
-	@:overload public function getXmlVersion() : String;
+	@:overload @:public public function getXmlVersion() : String;
 	
-	@:overload public function setXmlVersion(xmlVersion : String) : Void;
+	@:overload @:public public function setXmlVersion(xmlVersion : String) : Void;
 	
 	
 }
@@ -1262,9 +1262,9 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 */
 @:native('com$sun$org$apache$xml$internal$dtm$ref$DTMNodeProxy$DTMNodeProxyImplementation') @:internal extern class DTMNodeProxy_DTMNodeProxyImplementation implements org.w3c.dom.DOMImplementation
 {
-	@:overload public function createDocumentType(qualifiedName : String, publicId : String, systemId : String) : org.w3c.dom.DocumentType;
+	@:overload @:public public function createDocumentType(qualifiedName : String, publicId : String, systemId : String) : org.w3c.dom.DocumentType;
 	
-	@:overload public function createDocument(namespaceURI : String, qualfiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
+	@:overload @:public public function createDocument(namespaceURI : String, qualfiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
 	
 	/** Ask whether we support a given DOM feature.
 	*
@@ -1275,7 +1275,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	* methods we can't support. I'm not sure which would be more useful
 	* to the caller.
 	*/
-	@:overload public function hasFeature(feature : String, version : String) : Bool;
+	@:overload @:public public function hasFeature(feature : String, version : String) : Bool;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -1298,7 +1298,7 @@ extern class DTMNodeProxy implements org.w3c.dom.Node implements org.w3c.dom.Doc
 	*   childNodes, etc.
 	* @since DOM Level 3
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	
 }

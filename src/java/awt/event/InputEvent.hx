@@ -29,98 +29,98 @@ extern class InputEvent extends java.awt.event.ComponentEvent
 	* The Shift key modifier constant.
 	* It is recommended that SHIFT_DOWN_MASK be used instead.
 	*/
-	public static var SHIFT_MASK(default, null) : Int;
+	@:public @:static @:final public static var SHIFT_MASK(default, null) : Int;
 	
 	/**
 	* The Control key modifier constant.
 	* It is recommended that CTRL_DOWN_MASK be used instead.
 	*/
-	public static var CTRL_MASK(default, null) : Int;
+	@:public @:static @:final public static var CTRL_MASK(default, null) : Int;
 	
 	/**
 	* The Meta key modifier constant.
 	* It is recommended that META_DOWN_MASK be used instead.
 	*/
-	public static var META_MASK(default, null) : Int;
+	@:public @:static @:final public static var META_MASK(default, null) : Int;
 	
 	/**
 	* The Alt key modifier constant.
 	* It is recommended that ALT_DOWN_MASK be used instead.
 	*/
-	public static var ALT_MASK(default, null) : Int;
+	@:public @:static @:final public static var ALT_MASK(default, null) : Int;
 	
 	/**
 	* The AltGraph key modifier constant.
 	*/
-	public static var ALT_GRAPH_MASK(default, null) : Int;
+	@:public @:static @:final public static var ALT_GRAPH_MASK(default, null) : Int;
 	
 	/**
 	* The Mouse Button1 modifier constant.
 	* It is recommended that BUTTON1_DOWN_MASK be used instead.
 	*/
-	public static var BUTTON1_MASK(default, null) : Int;
+	@:public @:static @:final public static var BUTTON1_MASK(default, null) : Int;
 	
 	/**
 	* The Mouse Button2 modifier constant.
 	* It is recommended that BUTTON2_DOWN_MASK be used instead.
 	* Note that BUTTON2_MASK has the same value as ALT_MASK.
 	*/
-	public static var BUTTON2_MASK(default, null) : Int;
+	@:public @:static @:final public static var BUTTON2_MASK(default, null) : Int;
 	
 	/**
 	* The Mouse Button3 modifier constant.
 	* It is recommended that BUTTON3_DOWN_MASK be used instead.
 	* Note that BUTTON3_MASK has the same value as META_MASK.
 	*/
-	public static var BUTTON3_MASK(default, null) : Int;
+	@:public @:static @:final public static var BUTTON3_MASK(default, null) : Int;
 	
 	/**
 	* The Shift key extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var SHIFT_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var SHIFT_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The Control key extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var CTRL_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var CTRL_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The Meta key extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var META_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var META_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The Alt key extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var ALT_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var ALT_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The Mouse Button1 extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BUTTON1_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var BUTTON1_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The Mouse Button2 extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BUTTON2_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var BUTTON2_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The Mouse Button3 extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BUTTON3_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var BUTTON3_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* The AltGraph key extended modifier constant.
 	* @since 1.4
 	*/
-	@:require(java4) public static var ALT_GRAPH_DOWN_MASK(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var ALT_GRAPH_DOWN_MASK(default, null) : Int;
 	
 	/**
 	* A method to obtain a mask for any existing mouse button.
@@ -170,43 +170,43 @@ extern class InputEvent extends java.awt.event.ComponentEvent
 	* @see MouseEvent#getModifiers()
 	* @see MouseEvent#getModifiersEx()
 	*/
-	@:require(java0) @:overload public static function getMaskForButton(button : Int) : Int;
+	@:require(java0) @:overload @:public @:static public static function getMaskForButton(button : Int) : Int;
 	
 	/**
 	* Returns whether or not the Shift modifier is down on this event.
 	*/
-	@:overload public function isShiftDown() : Bool;
+	@:overload @:public public function isShiftDown() : Bool;
 	
 	/**
 	* Returns whether or not the Control modifier is down on this event.
 	*/
-	@:overload public function isControlDown() : Bool;
+	@:overload @:public public function isControlDown() : Bool;
 	
 	/**
 	* Returns whether or not the Meta modifier is down on this event.
 	*/
-	@:overload public function isMetaDown() : Bool;
+	@:overload @:public public function isMetaDown() : Bool;
 	
 	/**
 	* Returns whether or not the Alt modifier is down on this event.
 	*/
-	@:overload public function isAltDown() : Bool;
+	@:overload @:public public function isAltDown() : Bool;
 	
 	/**
 	* Returns whether or not the AltGraph modifier is down on this event.
 	*/
-	@:overload public function isAltGraphDown() : Bool;
+	@:overload @:public public function isAltGraphDown() : Bool;
 	
 	/**
 	* Returns the difference in milliseconds between the timestamp of when this event occurred and
 	* midnight, January 1, 1970 UTC.
 	*/
-	@:overload public function getWhen() : haxe.Int64;
+	@:overload @:public public function getWhen() : haxe.Int64;
 	
 	/**
 	* Returns the modifier mask for this event.
 	*/
-	@:overload public function getModifiers() : Int;
+	@:overload @:public public function getModifiers() : Int;
 	
 	/**
 	* Returns the extended modifier mask for this event.
@@ -241,19 +241,19 @@ extern class InputEvent extends java.awt.event.ComponentEvent
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getModifiersEx() : Int;
+	@:require(java4) @:overload @:public public function getModifiersEx() : Int;
 	
 	/**
 	* Consumes this event so that it will not be processed
 	* in the default manner by the source which originated it.
 	*/
-	@:overload override public function consume() : Void;
+	@:overload @:public override public function consume() : Void;
 	
 	/**
 	* Returns whether or not this event has been consumed.
 	* @see #consume
 	*/
-	@:overload override public function isConsumed() : Bool;
+	@:overload @:public override public function isConsumed() : Bool;
 	
 	/**
 	* Returns a String describing the extended modifier keys and
@@ -273,7 +273,7 @@ extern class InputEvent extends java.awt.event.ComponentEvent
 	*         during the event.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getModifiersExText(modifiers : Int) : String;
+	@:require(java4) @:overload @:public @:static public static function getModifiersExText(modifiers : Int) : String;
 	
 	
 }

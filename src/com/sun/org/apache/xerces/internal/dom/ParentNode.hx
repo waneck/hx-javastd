@@ -21,19 +21,19 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 {
 	/** First child. */
-	private var firstChild : com.sun.org.apache.xerces.internal.dom.ChildNode;
+	@:protected private var firstChild : com.sun.org.apache.xerces.internal.dom.ChildNode;
 	
 	/** NodeList cache */
-	@:transient private var fNodeListCache : com.sun.org.apache.xerces.internal.dom.NodeListCache;
+	@:protected @:transient private var fNodeListCache : com.sun.org.apache.xerces.internal.dom.NodeListCache;
 	
 	/**
 	* No public constructor; only subclasses of ParentNode should be
 	* instantiated, and those normally via a Document's factory methods
 	*/
-	@:overload private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
+	@:overload @:protected private function new(ownerDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl) : Void;
 	
 	/** Constructor for serialization. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a duplicate of a given node. You can consider this a
@@ -53,20 +53,20 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* is read-only, to permit applications using only the DOM API to obtain
 	* editable copies of locked portions of the tree.
 	*/
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Find the Document that this Node belongs to (the document in
 	* whose context the Node was created). The Node may or may not
 	* currently be part of that Document's actual contents.
 	*/
-	@:overload override public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public override public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Test whether this node has any children. Convenience shorthand
 	* for (Node.getFirstChild()!=null)
 	*/
-	@:overload override public function hasChildNodes() : Bool;
+	@:overload @:public override public function hasChildNodes() : Bool;
 	
 	/**
 	* Obtain a NodeList enumerating all children of this node. If there
@@ -81,13 +81,13 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* provide their own getChildNodes() support. Other DOMs may solve this
 	* differently.
 	*/
-	@:overload override public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public override public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/** The first child of this Node, or null if none. */
-	@:overload override public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public override public function getFirstChild() : org.w3c.dom.Node;
 	
 	/** The last child of this Node, or null if none. */
-	@:overload override public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public override public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* Move one or more node(s) to our list of children. Note that this
@@ -117,7 +117,7 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload override public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public override public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Remove a child from this Node. The removed child's subtree
@@ -131,7 +131,7 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload override public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public override public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Make newChild occupy the location that oldChild used to
@@ -154,25 +154,25 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if this node is
 	* read-only.
 	*/
-	@:overload override public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public override public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/*
 	* Get Node text content
 	* @since DOM Level 3
 	*/
-	@:overload override public function getTextContent() : String;
+	@:overload @:public override public function getTextContent() : String;
 	
 	/*
 	* Set Node text content
 	* @since DOM Level 3
 	*/
-	@:overload override public function setTextContent(textContent : String) : Void;
+	@:overload @:public override public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* NodeList method: Count the immediate children of this node
 	* @return int
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	/**
 	* NodeList method: Return the Nth immediate child of this node, or
@@ -180,7 +180,7 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* @return org.w3c.dom.Node
 	* @param index int
 	*/
-	@:overload override public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public override public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Create a NodeList to access children that is use by subclass elements
@@ -194,20 +194,20 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* shared and cached in a transient field, but the cached value must be
 	* cleared if the node is cloned.
 	*/
-	@:overload @:final private function getChildNodesUnoptimized() : org.w3c.dom.NodeList;
+	@:overload @:protected @:final private function getChildNodesUnoptimized() : org.w3c.dom.NodeList;
 	
 	/**
 	* Override default behavior to call normalize() on this Node's
 	* children. It is up to implementors or Node to override normalize()
 	* to take action.
 	*/
-	@:overload override public function normalize() : Void;
+	@:overload @:public override public function normalize() : Void;
 	
 	/**
 	* DOM Level 3 WD- Experimental.
 	* Override inherited behavior from NodeImpl to support deep equal.
 	*/
-	@:overload override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Override default behavior so that if deep is true, children are also
@@ -217,13 +217,13 @@ extern class ParentNode extends com.sun.org.apache.xerces.internal.dom.ChildNode
 	* Note: this will not change the state of an EntityReference or its
 	* children, which are always read-only.
 	*/
-	@:overload override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
+	@:overload @:public override public function setReadOnly(readOnly : Bool, deep : Bool) : Void;
 	
 	/**
 	* Override this method in subclass to hook in efficient
 	* internal data structure.
 	*/
-	@:overload private function synchronizeChildren() : Void;
+	@:overload @:protected private function synchronizeChildren() : Void;
 	
 	
 }

@@ -35,9 +35,9 @@ package java.util.prefs;
 */
 @:require(java4) @:internal extern class FileSystemPreferencesFactory implements java.util.prefs.PreferencesFactory
 {
-	@:overload public function userRoot() : java.util.prefs.Preferences;
+	@:overload @:public public function userRoot() : java.util.prefs.Preferences;
 	
-	@:overload public function systemRoot() : java.util.prefs.Preferences;
+	@:overload @:public public function systemRoot() : java.util.prefs.Preferences;
 	
 	
 }

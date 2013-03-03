@@ -47,7 +47,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	*                         from a byte stream or character stream
 	*                         supplied by the parser.
 	*/
-	@:overload public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Allows a parser to add parser specific features to be recognized
@@ -56,7 +56,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @param featureIds An array of the additional feature identifiers
 	*                   to be recognized.
 	*/
-	@:overload public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
+	@:overload @:public @:public public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the state of a feature. This method is called by the parser
@@ -68,7 +68,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns the state of a feature.
@@ -78,7 +78,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public @:public public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Allows a parser to add parser specific properties to be recognized
@@ -87,7 +87,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @param propertyIds An array of the additional property identifiers
 	*                    to be recognized.
 	*/
-	@:overload public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
+	@:overload @:public @:public public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the value of a property. This method is called by the parser
@@ -99,7 +99,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the value of a property.
@@ -109,57 +109,57 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public @:public public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Sets the error handler.
 	*
 	* @param errorHandler The error resolver.
 	*/
-	@:overload public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
 	
 	/** Returns the registered error handler. */
-	@:overload public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:overload @:public public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/**
 	* Sets the document handler to receive information about the document.
 	*
 	* @param documentHandler The document handler.
 	*/
-	@:overload public function setDocumentHandler(documentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(documentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
 	/** Returns the registered document handler. */
-	@:overload public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:overload @:public public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
 	/**
 	* Sets the DTD handler.
 	*
 	* @param dtdHandler The DTD handler.
 	*/
-	@:overload public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(dtdHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler) : Void;
 	
 	/** Returns the registered DTD handler. */
-	@:overload public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
+	@:overload @:public public function getDTDHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDHandler;
 	
 	/**
 	* Sets the DTD content model handler.
 	*
 	* @param dtdContentModelHandler The DTD content model handler.
 	*/
-	@:overload public function setDTDContentModelHandler(dtdContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
+	@:overload @:public public function setDTDContentModelHandler(dtdContentModelHandler : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler) : Void;
 	
 	/** Returns the registered DTD content model handler. */
-	@:overload public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
+	@:overload @:public public function getDTDContentModelHandler() : com.sun.org.apache.xerces.internal.xni.XMLDTDContentModelHandler;
 	
 	/**
 	* Sets the entity resolver.
 	*
 	* @param entityResolver The new entity resolver.
 	*/
-	@:overload public function setEntityResolver(entityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
 	
 	/** Returns the registered entity resolver. */
-	@:overload public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:overload @:public public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
 	/**
 	* Set the locale to use for messages.
@@ -169,10 +169,10 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/** Returns the locale. */
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	
 }

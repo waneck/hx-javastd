@@ -29,7 +29,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @author Shannon Hickey
 	* @author Leif Samuelsson
 	*/
-	public static var CHARS_DIGITS(default, null) : String;
+	@:public @:static @:final public static var CHARS_DIGITS(default, null) : String;
 	
 	
 }

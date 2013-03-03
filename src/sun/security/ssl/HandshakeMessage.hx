@@ -26,7 +26,7 @@ package sun.security.ssl;
 extern class HandshakeMessage
 {
 	/* Class and subclass dynamic debugging support */
-	public static var debug(default, null) : sun.security.ssl.Debug;
+	@:public @:static @:final public static var debug(default, null) : sun.security.ssl.Debug;
 	
 	
 }

@@ -25,53 +25,53 @@ package sun.awt.image;
 */
 extern class BufImgSurfaceData extends sun.java2d.SurfaceData
 {
-	@:overload public static function createData(bufImg : java.awt.image.BufferedImage) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function createData(bufImg : java.awt.image.BufferedImage) : sun.java2d.SurfaceData;
 	
-	@:overload public static function createData(ras : java.awt.image.Raster, cm : java.awt.image.ColorModel) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function createData(ras : java.awt.image.Raster, cm : java.awt.image.ColorModel) : sun.java2d.SurfaceData;
 	
-	@:overload public static function createDataIC(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function createDataIC(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType) : sun.java2d.SurfaceData;
 	
-	@:overload public static function createDataSC(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType, icm : java.awt.image.IndexColorModel) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function createDataSC(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType, icm : java.awt.image.IndexColorModel) : sun.java2d.SurfaceData;
 	
-	@:overload public static function createDataBC(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType, primaryBank : Int) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function createDataBC(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType, primaryBank : Int) : sun.java2d.SurfaceData;
 	
-	@:overload public static function createDataBP(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function createDataBP(bImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType) : sun.java2d.SurfaceData;
 	
-	@:overload override public function getRenderLoops(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.RenderLoops;
+	@:overload @:public override public function getRenderLoops(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.RenderLoops;
 	
-	@:overload override public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public override public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
 	/**
 	* Initializes the native Ops pointer.
 	*/
-	@:overload @:native private function initRaster(theArray : Dynamic, offset : Int, bitoffset : Int, width : Int, height : Int, pixStr : Int, scanStr : Int, icm : java.awt.image.IndexColorModel) : Void;
+	@:overload @:protected @:native private function initRaster(theArray : Dynamic, offset : Int, bitoffset : Int, width : Int, height : Int, pixStr : Int, scanStr : Int, icm : java.awt.image.IndexColorModel) : Void;
 	
-	@:overload public function new(db : java.awt.image.DataBuffer, bufImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(db : java.awt.image.DataBuffer, bufImg : java.awt.image.BufferedImage, sType : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload private function new(surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
+	@:overload @:protected private function new(surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload public function initSolidLoops() : Void;
+	@:overload @:public public function initSolidLoops() : Void;
 	
-	@:overload @:synchronized public static function getSolidLoops(type : sun.java2d.loops.SurfaceType) : sun.java2d.loops.RenderLoops;
+	@:overload @:public @:static @:synchronized public static function getSolidLoops(type : sun.java2d.loops.SurfaceType) : sun.java2d.loops.RenderLoops;
 	
-	@:overload override public function getReplacement() : sun.java2d.SurfaceData;
+	@:overload @:public override public function getReplacement() : sun.java2d.SurfaceData;
 	
-	@:overload @:synchronized override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public @:synchronized override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
 	
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
-	@:overload override private function checkCustomComposite() : Void;
+	@:overload @:protected override private function checkCustomComposite() : Void;
 	
 	/**
 	* Returns destination Image associated with this SurfaceData.
 	*/
-	@:overload override public function getDestination() : Dynamic;
+	@:overload @:public override public function getDestination() : Dynamic;
 	
 	
 }
 @:native('sun$awt$image$BufImgSurfaceData$ICMColorData') extern class BufImgSurfaceData_ICMColorData
 {
-	@:overload public function finalize() : Void;
+	@:overload @:public public function finalize() : Void;
 	
 	
 }

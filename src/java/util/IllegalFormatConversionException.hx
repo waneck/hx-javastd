@@ -45,23 +45,23 @@ package java.util;
 	* @param  arg
 	*         Class of the mismatched argument
 	*/
-	@:overload public function new(c : java.StdTypes.Char16, arg : Class<Dynamic>) : Void;
+	@:overload @:public public function new(c : java.StdTypes.Char16, arg : Class<Dynamic>) : Void;
 	
 	/**
 	* Returns the inapplicable conversion.
 	*
 	* @return  The inapplicable conversion
 	*/
-	@:overload public function getConversion() : java.StdTypes.Char16;
+	@:overload @:public public function getConversion() : java.StdTypes.Char16;
 	
 	/**
 	* Returns the class of the mismatched argument.
 	*
 	* @return   The class of the mismatched argument
 	*/
-	@:overload public function getArgumentClass() : Class<Dynamic>;
+	@:overload @:public public function getArgumentClass() : Class<Dynamic>;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

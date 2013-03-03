@@ -29,7 +29,7 @@ extern interface WSDLPortType extends com.sun.xml.internal.ws.api.model.wsdl.WSD
 	* Gets the name of the wsdl:portType@name attribute value as local name and wsdl:definitions@targetNamespace
 	* as the namespace uri.
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the {@link WSDLOperation} for a given operation name
@@ -37,12 +37,12 @@ extern interface WSDLPortType extends com.sun.xml.internal.ws.api.model.wsdl.WSD
 	* @param operationName non-null operationName
 	* @return null if a {@link WSDLOperation} is not found
 	*/
-	@:overload public function get(operationName : String) : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation;
+	@:overload @:public public function get(operationName : String) : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation;
 	
 	/**
 	* Gets {@link Iterable}<{@link WSDLOperation}>
 	*/
-	@:overload public function getOperations() : java.lang.Iterable<com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation>;
+	@:overload @:public public function getOperations() : java.lang.Iterable<com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation>;
 	
 	
 }

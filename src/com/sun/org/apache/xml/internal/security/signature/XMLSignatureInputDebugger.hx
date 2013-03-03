@@ -26,7 +26,7 @@ extern class XMLSignatureInputDebugger
 	*
 	* @param xmlSignatureInput the signatur to pretty print
 	*/
-	@:overload public function new(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : Void;
+	@:overload @:public public function new(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : Void;
 	
 	/**
 	* Constructor XMLSignatureInputDebugger
@@ -34,7 +34,7 @@ extern class XMLSignatureInputDebugger
 	* @param xmlSignatureInput the signatur to pretty print
 	* @param inclusiveNamespace
 	*/
-	@:overload public function new(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, inclusiveNamespace : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(xmlSignatureInput : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, inclusiveNamespace : java.util.Set<Dynamic>) : Void;
 	
 	/**
 	* Method getHTMLRepresentation
@@ -42,7 +42,7 @@ extern class XMLSignatureInputDebugger
 	* @return The HTML Representation.
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getHTMLRepresentation() : String;
+	@:overload @:public public function getHTMLRepresentation() : String;
 	
 	
 }

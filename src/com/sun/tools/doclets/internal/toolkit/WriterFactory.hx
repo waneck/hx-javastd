@@ -41,7 +41,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the writer for the constant summary.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getConstantsSummaryWriter() : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter;
+	@:overload @:public @:abstract public function getConstantsSummaryWriter() : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter;
 	
 	/**
 	* Return the writer for the package summary.
@@ -52,7 +52,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the writer for the package summary.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getPackageSummaryWriter(packageDoc : com.sun.javadoc.PackageDoc, prevPkg : com.sun.javadoc.PackageDoc, nextPkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter;
+	@:overload @:public @:abstract public function getPackageSummaryWriter(packageDoc : com.sun.javadoc.PackageDoc, prevPkg : com.sun.javadoc.PackageDoc, nextPkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter;
 	
 	/**
 	* Return the writer for a class.
@@ -64,7 +64,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the writer for the class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getClassWriter(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : com.sun.tools.doclets.internal.toolkit.ClassWriter;
+	@:overload @:public @:abstract public function getClassWriter(classDoc : com.sun.javadoc.ClassDoc, prevClass : com.sun.javadoc.ClassDoc, nextClass : com.sun.javadoc.ClassDoc, classTree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : com.sun.tools.doclets.internal.toolkit.ClassWriter;
 	
 	/**
 	* Return the writer for an annotation type.
@@ -75,7 +75,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the writer for the annotation type.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getAnnotationTypeWriter(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter;
+	@:overload @:public @:abstract public function getAnnotationTypeWriter(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter;
 	
 	/**
 	* Return the method writer for a given class.
@@ -84,7 +84,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the method writer for the give class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getMethodWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.MethodWriter;
+	@:overload @:public @:abstract public function getMethodWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.MethodWriter;
 	
 	/**
 	* Return the annotation type optional member writer for a given annotation
@@ -95,7 +95,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the member writer for the given annotation type.  Return null if
 	*         this writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getAnnotationTypeOptionalMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter;
+	@:overload @:public @:abstract public function getAnnotationTypeOptionalMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter;
 	
 	/**
 	* Return the annotation type required member writer for a given annotation type.
@@ -105,7 +105,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the member writer for the given annotation type.  Return null if
 	*         this writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getAnnotationTypeRequiredMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
+	@:overload @:public @:abstract public function getAnnotationTypeRequiredMemberWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
 	
 	/**
 	* Return the enum constant writer for a given class.
@@ -114,7 +114,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the enum constant writer for the give class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getEnumConstantWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.EnumConstantWriter;
+	@:overload @:public @:abstract public function getEnumConstantWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.EnumConstantWriter;
 	
 	/**
 	* Return the field writer for a given class.
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the field writer for the give class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getFieldWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.FieldWriter;
+	@:overload @:public @:abstract public function getFieldWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.FieldWriter;
 	
 	/**
 	* Return the property writer for a given class.
@@ -132,7 +132,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the property writer for the give class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getPropertyWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.PropertyWriter;
+	@:overload @:public @:abstract public function getPropertyWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.PropertyWriter;
 	
 	/**
 	* Return the constructor writer for a given class.
@@ -141,7 +141,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @return the method writer for the give class.  Return null if this
 	* writer is not supported by the doclet.
 	*/
-	@:overload @:abstract public function getConstructorWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.ConstructorWriter;
+	@:overload @:public @:abstract public function getConstructorWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.ConstructorWriter;
 	
 	/**
 	* Return the specified member summary writer for a given class.
@@ -155,7 +155,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @see VisibleMemberMap
 	* @throws IllegalArgumentException if memberType is unknown.
 	*/
-	@:overload @:abstract public function getMemberSummaryWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
+	@:overload @:public @:abstract public function getMemberSummaryWriter(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
 	
 	/**
 	* Return the specified member summary writer for a given annotation type.
@@ -170,14 +170,14 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @see VisibleMemberMap
 	* @throws IllegalArgumentException if memberType is unknown.
 	*/
-	@:overload @:abstract public function getMemberSummaryWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
+	@:overload @:public @:abstract public function getMemberSummaryWriter(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, memberType : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
 	
 	/**
 	* Return the writer for the serialized form.
 	*
 	* @return the writer for the serialized form.
 	*/
-	@:overload public function getSerializedFormWriter() : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter;
+	@:overload @:public public function getSerializedFormWriter() : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter;
 	
 	
 }

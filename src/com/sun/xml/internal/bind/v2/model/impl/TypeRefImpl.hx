@@ -25,21 +25,21 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class TypeRefImpl<TypeT, ClassDeclT> implements com.sun.xml.internal.bind.v2.model.core.TypeRef<TypeT, ClassDeclT>
 {
-	private var owner(default, null) : com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<TypeT, ClassDeclT, Dynamic, Dynamic>;
+	@:protected @:final private var owner(default, null) : com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<TypeT, ClassDeclT, Dynamic, Dynamic>;
 	
-	@:overload public function new(owner : com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<TypeT, ClassDeclT, Dynamic, Dynamic>, elementName : javax.xml.namespace.QName, type : TypeT, isNillable : Bool, defaultValue : String) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.bind.v2.model.impl.ElementPropertyInfoImpl<TypeT, ClassDeclT, Dynamic, Dynamic>, elementName : javax.xml.namespace.QName, type : TypeT, isNillable : Bool, defaultValue : String) : Void;
 	
-	@:overload public function getTarget() : com.sun.xml.internal.bind.v2.model.core.NonElement<TypeT, ClassDeclT>;
+	@:overload @:public public function getTarget() : com.sun.xml.internal.bind.v2.model.core.NonElement<TypeT, ClassDeclT>;
 	
-	@:overload public function getTagName() : javax.xml.namespace.QName;
+	@:overload @:public public function getTagName() : javax.xml.namespace.QName;
 	
-	@:overload public function isNillable() : Bool;
+	@:overload @:public public function isNillable() : Bool;
 	
-	@:overload public function getDefaultValue() : String;
+	@:overload @:public public function getDefaultValue() : String;
 	
-	@:overload private function link() : Void;
+	@:overload @:protected private function link() : Void;
 	
-	@:overload public function getSource() : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<TypeT, ClassDeclT>;
+	@:overload @:public public function getSource() : com.sun.xml.internal.bind.v2.model.core.PropertyInfo<TypeT, ClassDeclT>;
 	
 	
 }

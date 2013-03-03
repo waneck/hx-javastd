@@ -26,10 +26,10 @@ package javax.swing.event;
 extern interface CellEditorListener extends java.util.EventListener
 {
 	/** This tells the listeners the editor has ended editing */
-	@:overload public function editingStopped(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function editingStopped(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/** This tells the listeners the editor has canceled editing */
-	@:overload public function editingCanceled(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function editingCanceled(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }

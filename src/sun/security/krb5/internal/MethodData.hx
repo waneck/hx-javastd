@@ -29,7 +29,7 @@ package sun.security.krb5.internal;
 */
 extern class MethodData
 {
-	@:overload public function new(type : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(type : Int, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a MethodData object.
@@ -37,7 +37,7 @@ extern class MethodData
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an MethodData object.
@@ -45,7 +45,7 @@ extern class MethodData
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

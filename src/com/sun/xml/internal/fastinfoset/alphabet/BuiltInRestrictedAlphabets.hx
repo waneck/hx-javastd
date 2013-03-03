@@ -27,7 +27,7 @@ package com.sun.xml.internal.fastinfoset.alphabet;
 */
 extern class BuiltInRestrictedAlphabets
 {
-	public static var table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>;
+	@:public @:final @:static public static var table(default, null) : java.NativeArray<java.NativeArray<java.StdTypes.Char16>>;
 	
 	
 }

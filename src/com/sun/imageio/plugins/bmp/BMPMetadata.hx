@@ -25,95 +25,95 @@ package com.sun.imageio.plugins.bmp;
 */
 extern class BMPMetadata extends javax.imageio.metadata.IIOMetadata implements com.sun.imageio.plugins.bmp.BMPConstants
 {
-	public static var nativeMetadataFormatName(default, null) : String;
+	@:native('nativeMetadataFormatName') @:public @:static @:final public static var _nativeMetadataFormatName(default, null) : String;
 	
-	public var bmpVersion : String;
+	@:public public var bmpVersion : String;
 	
-	public var width : Int;
+	@:public public var width : Int;
 	
-	public var height : Int;
+	@:public public var height : Int;
 	
-	public var bitsPerPixel : java.StdTypes.Int16;
+	@:public public var bitsPerPixel : java.StdTypes.Int16;
 	
-	public var compression : Int;
+	@:public public var compression : Int;
 	
-	public var imageSize : Int;
+	@:public public var imageSize : Int;
 	
-	public var xPixelsPerMeter : Int;
+	@:public public var xPixelsPerMeter : Int;
 	
-	public var yPixelsPerMeter : Int;
+	@:public public var yPixelsPerMeter : Int;
 	
-	public var colorsUsed : Int;
+	@:public public var colorsUsed : Int;
 	
-	public var colorsImportant : Int;
+	@:public public var colorsImportant : Int;
 	
-	public var redMask : Int;
+	@:public public var redMask : Int;
 	
-	public var greenMask : Int;
+	@:public public var greenMask : Int;
 	
-	public var blueMask : Int;
+	@:public public var blueMask : Int;
 	
-	public var alphaMask : Int;
+	@:public public var alphaMask : Int;
 	
-	public var colorSpace : Int;
+	@:public public var colorSpace : Int;
 	
-	public var redX : Float;
+	@:public public var redX : Float;
 	
-	public var redY : Float;
+	@:public public var redY : Float;
 	
-	public var redZ : Float;
+	@:public public var redZ : Float;
 	
-	public var greenX : Float;
+	@:public public var greenX : Float;
 	
-	public var greenY : Float;
+	@:public public var greenY : Float;
 	
-	public var greenZ : Float;
+	@:public public var greenZ : Float;
 	
-	public var blueX : Float;
+	@:public public var blueX : Float;
 	
-	public var blueY : Float;
+	@:public public var blueY : Float;
 	
-	public var blueZ : Float;
+	@:public public var blueZ : Float;
 	
-	public var gammaRed : Int;
+	@:public public var gammaRed : Int;
 	
-	public var gammaGreen : Int;
+	@:public public var gammaGreen : Int;
 	
-	public var gammaBlue : Int;
+	@:public public var gammaBlue : Int;
 	
-	public var intent : Int;
+	@:public public var intent : Int;
 	
-	public var palette : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var palette : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var paletteSize : Int;
+	@:public public var paletteSize : Int;
 	
-	public var red : Int;
+	@:public public var red : Int;
 	
-	public var green : Int;
+	@:public public var green : Int;
 	
-	public var blue : Int;
+	@:public public var blue : Int;
 	
-	public var comments : java.util.List<Dynamic>;
+	@:public public var comments : java.util.List<Dynamic>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload @:public override public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload private function getStandardChromaNode() : IIOMetadataNode;
+	@:overload @:protected override private function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload private function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload @:protected override private function getStandardCompressionNode() : IIOMetadataNode;
 	
-	@:overload private function getStandardDataNode() : IIOMetadataNode;
+	@:overload @:protected override private function getStandardDataNode() : IIOMetadataNode;
 	
-	@:overload private function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload @:protected override private function getStandardDimensionNode() : IIOMetadataNode;
 	
-	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload @:public override public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

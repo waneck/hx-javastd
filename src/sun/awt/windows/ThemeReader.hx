@@ -33,35 +33,35 @@ package sun.awt.windows;
 */
 extern class ThemeReader
 {
-	@:overload public static function isThemed() : Bool;
+	@:overload @:public @:static public static function isThemed() : Bool;
 	
-	@:overload public static function paintBackground(buffer : java.NativeArray<Int>, widget : String, part : Int, state : Int, x : Int, y : Int, w : Int, h : Int, stride : Int) : Void;
+	@:overload @:public @:static public static function paintBackground(buffer : java.NativeArray<Int>, widget : String, part : Int, state : Int, x : Int, y : Int, w : Int, h : Int, stride : Int) : Void;
 	
-	@:overload public static function getThemeMargins(widget : String, part : Int, state : Int, marginType : Int) : java.awt.Insets;
+	@:overload @:public @:static public static function getThemeMargins(widget : String, part : Int, state : Int, marginType : Int) : java.awt.Insets;
 	
-	@:overload public static function isThemePartDefined(widget : String, part : Int, state : Int) : Bool;
+	@:overload @:public @:static public static function isThemePartDefined(widget : String, part : Int, state : Int) : Bool;
 	
-	@:overload public static function getColor(widget : String, part : Int, state : Int, property : Int) : java.awt.Color;
+	@:overload @:public @:static public static function getColor(widget : String, part : Int, state : Int, property : Int) : java.awt.Color;
 	
-	@:overload public static function getInt(widget : String, part : Int, state : Int, property : Int) : Int;
+	@:overload @:public @:static public static function getInt(widget : String, part : Int, state : Int, property : Int) : Int;
 	
-	@:overload public static function getEnum(widget : String, part : Int, state : Int, property : Int) : Int;
+	@:overload @:public @:static public static function getEnum(widget : String, part : Int, state : Int, property : Int) : Int;
 	
-	@:overload public static function getBoolean(widget : String, part : Int, state : Int, property : Int) : Bool;
+	@:overload @:public @:static public static function getBoolean(widget : String, part : Int, state : Int, property : Int) : Bool;
 	
-	@:overload public static function getSysBoolean(widget : String, property : Int) : Bool;
+	@:overload @:public @:static public static function getSysBoolean(widget : String, property : Int) : Bool;
 	
-	@:overload public static function getPoint(widget : String, part : Int, state : Int, property : Int) : java.awt.Point;
+	@:overload @:public @:static public static function getPoint(widget : String, part : Int, state : Int, property : Int) : java.awt.Point;
 	
-	@:overload public static function getPosition(widget : String, part : Int, state : Int, property : Int) : java.awt.Dimension;
+	@:overload @:public @:static public static function getPosition(widget : String, part : Int, state : Int, property : Int) : java.awt.Dimension;
 	
-	@:overload public static function getPartSize(widget : String, part : Int, state : Int) : java.awt.Dimension;
+	@:overload @:public @:static public static function getPartSize(widget : String, part : Int, state : Int) : java.awt.Dimension;
 	
-	@:overload public static function getThemeTransitionDuration(widget : String, part : Int, stateFrom : Int, stateTo : Int, propId : Int) : haxe.Int64;
+	@:overload @:public @:static public static function getThemeTransitionDuration(widget : String, part : Int, stateFrom : Int, stateTo : Int, propId : Int) : haxe.Int64;
 	
-	@:overload public static function isGetThemeTransitionDurationDefined() : Bool;
+	@:overload @:public @:static public static function isGetThemeTransitionDurationDefined() : Bool;
 	
-	@:overload public static function getThemeBackgroundContentMargins(widget : String, part : Int, state : Int, boundingWidth : Int, boundingHeight : Int) : java.awt.Insets;
+	@:overload @:public @:static public static function getThemeBackgroundContentMargins(widget : String, part : Int, state : Int, boundingWidth : Int, boundingHeight : Int) : java.awt.Insets;
 	
 	
 }

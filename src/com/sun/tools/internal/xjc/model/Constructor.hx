@@ -54,10 +54,10 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class Constructor
 {
-	@:overload public function new(_fields : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(_fields : java.NativeArray<String>) : Void;
 	
 	/** array of field names to be initialized. */
-	public var fields(default, null) : java.NativeArray<String>;
+	@:public @:final public var fields(default, null) : java.NativeArray<String>;
 	
 	
 }

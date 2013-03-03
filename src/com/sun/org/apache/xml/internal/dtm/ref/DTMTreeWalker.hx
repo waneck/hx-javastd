@@ -24,40 +24,40 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 extern class DTMTreeWalker
 {
 	/** DomHelper for this TreeWalker          */
-	private var m_dtm : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:protected private var m_dtm : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Set the DTM to be traversed.
 	*
 	* @param dtm The Document Table Model to be used.
 	*/
-	@:overload public function setDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Void;
+	@:overload @:public public function setDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Void;
 	
 	/**
 	* Get the ContentHandler used for the tree walk.
 	*
 	* @return the ContentHandler used for the tree walk
 	*/
-	@:overload public function getcontentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getcontentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Set the ContentHandler used for the tree walk.
 	*
 	* @param ch the ContentHandler to be the result of the tree walk.
 	*/
-	@:overload public function setcontentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setcontentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor.
 	* @param   contentHandler The implemention of the
 	* contentHandler operation (toXMLString, digest, ...)
 	*/
-	@:overload public function new(contentHandler : org.xml.sax.ContentHandler, dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Void;
+	@:overload @:public public function new(contentHandler : org.xml.sax.ContentHandler, dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Void;
 	
 	/** Perform a non-recursive pre-order/post-order traversal,
 	* operating as a Visitor. startNode (preorder) and endNode
@@ -68,7 +68,7 @@ extern class DTMTreeWalker
 	* in other words, the root of the subtree to traverse over.
 	*
 	* @throws TransformerException */
-	@:overload public function traverse(pos : Int) : Void;
+	@:overload @:public public function traverse(pos : Int) : Void;
 	
 	/** Perform a non-recursive pre-order/post-order traversal,
 	* operating as a Visitor. startNode (preorder) and endNode
@@ -81,7 +81,7 @@ extern class DTMTreeWalker
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function traverse(pos : Int, top : Int) : Void;
+	@:overload @:public public function traverse(pos : Int, top : Int) : Void;
 	
 	/**
 	* Start processing given node
@@ -91,7 +91,7 @@ extern class DTMTreeWalker
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function startNode(node : Int) : Void;
+	@:overload @:protected private function startNode(node : Int) : Void;
 	
 	/**
 	* End processing of given node
@@ -101,7 +101,7 @@ extern class DTMTreeWalker
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function endNode(node : Int) : Void;
+	@:overload @:protected private function endNode(node : Int) : Void;
 	
 	
 }

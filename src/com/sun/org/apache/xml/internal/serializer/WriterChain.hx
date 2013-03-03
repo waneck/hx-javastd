@@ -24,25 +24,25 @@ package com.sun.org.apache.xml.internal.serializer;
 @:internal extern interface WriterChain
 {
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function write(val : Int) : Void;
+	@:overload @:public public function write(val : Int) : Void;
 	
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function write(chars : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function write(chars : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function write(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
+	@:overload @:public public function write(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int) : Void;
 	
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function write(chars : String) : Void;
+	@:overload @:public public function write(chars : String) : Void;
 	
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function write(chars : String, start : Int, count : Int) : Void;
+	@:overload @:public public function write(chars : String, start : Int, count : Int) : Void;
 	
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/** This method forces us to over-ride the method defined in java.io.Writer */
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* If this method returns null, getOutputStream() must return non-null.
@@ -51,13 +51,13 @@ package com.sun.org.apache.xml.internal.serializer;
 	* It is possible that the Writer returned by this method does not
 	* implement the WriterChain interface.
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* If this method returns null, getWriter() must return non-null.
 	* Get the OutputStream that this writer sends its output to.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	
 }

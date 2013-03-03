@@ -63,13 +63,13 @@ extern interface ValidationContext
 	*              If the specified prefix is not declared,
 	*              the implementation must return null.
 	*/
-	@:overload public function resolveNamespacePrefix(prefix : String) : String;
+	@:overload @:public public function resolveNamespacePrefix(prefix : String) : String;
 	
 	/**
 	* Returns the base URI of the context.  The null string may be returned
 	* if no base URI is known.
 	*/
-	@:overload public function getBaseUri() : String;
+	@:overload @:public @:public public function getBaseUri() : String;
 	
 	/**
 	* Checks if an unparsed entity is declared with the
@@ -82,7 +82,7 @@ extern interface ValidationContext
 	*  false
 	*              otherwise.
 	*/
-	@:overload public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload @:public public function isUnparsedEntity(entityName : String) : Bool;
 	
 	/**
 	* Checks if a notation is declared with the
@@ -94,7 +94,7 @@ extern interface ValidationContext
 	*  false
 	*              otherwise.
 	*/
-	@:overload public function isNotation(notationName : String) : Bool;
+	@:overload @:public public function isNotation(notationName : String) : Bool;
 	
 	
 }

@@ -25,54 +25,54 @@ package sun.print;
 */
 extern class CUPSPrinter
 {
-	public var nPageSizes : Int;
+	@:public public var nPageSizes : Int;
 	
-	public var nTrays : Int;
+	@:public public var nTrays : Int;
 	
 	/**
 	* Returns array of MediaSizeNames derived from PPD.
 	*/
-	@:overload public function getMediaSizeNames() : java.NativeArray<javax.print.attribute.standard.MediaSizeName>;
+	@:overload @:public public function getMediaSizeNames() : java.NativeArray<javax.print.attribute.standard.MediaSizeName>;
 	
 	/**
 	* Returns array of Custom MediaSizeNames derived from PPD.
 	*/
-	@:overload public function getCustomMediaSizeNames() : java.NativeArray<sun.print.CustomMediaSizeName>;
+	@:overload @:public public function getCustomMediaSizeNames() : java.NativeArray<sun.print.CustomMediaSizeName>;
 	
 	/**
 	* Returns array of MediaPrintableArea derived from PPD.
 	*/
-	@:overload public function getMediaPrintableArea() : java.NativeArray<javax.print.attribute.standard.MediaPrintableArea>;
+	@:overload @:public public function getMediaPrintableArea() : java.NativeArray<javax.print.attribute.standard.MediaPrintableArea>;
 	
 	/**
 	* Returns array of MediaTrays derived from PPD.
 	*/
-	@:overload public function getMediaTrays() : java.NativeArray<javax.print.attribute.standard.MediaTray>;
+	@:overload @:public public function getMediaTrays() : java.NativeArray<javax.print.attribute.standard.MediaTray>;
 	
 	/**
 	* Get CUPS default printer using IPP.
 	*/
-	@:overload public static function getDefaultPrinter() : String;
+	@:overload @:public @:static public static function getDefaultPrinter() : String;
 	
 	/**
 	* Get list of all CUPS printers using IPP.
 	*/
-	@:overload public static function getAllPrinters() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getAllPrinters() : java.NativeArray<String>;
 	
 	/**
 	* Returns CUPS server name.
 	*/
-	@:overload public static function getServer() : String;
+	@:overload @:public @:static public static function getServer() : String;
 	
 	/**
 	* Returns CUPS port number.
 	*/
-	@:overload public static function getPort() : Int;
+	@:overload @:public @:static public static function getPort() : Int;
 	
 	/**
 	* Detects if CUPS is running.
 	*/
-	@:overload public static function isCupsRunning() : Bool;
+	@:overload @:public @:static public static function isCupsRunning() : Bool;
 	
 	
 }

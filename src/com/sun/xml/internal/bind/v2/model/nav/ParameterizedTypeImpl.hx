@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.model.nav;
 */
 @:internal extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedType
 {
-	@:overload public function getActualTypeArguments() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getActualTypeArguments() : java.NativeArray<java.lang.reflect.Type>;
 	
-	@:overload public function getRawType() : Class<Dynamic>;
+	@:overload @:public public function getRawType() : Class<Dynamic>;
 	
-	@:overload public function getOwnerType() : java.lang.reflect.Type;
+	@:overload @:public public function getOwnerType() : java.lang.reflect.Type;
 	
 	/*
 	* From the JavaDoc for java.lang.reflect.ParameterizedType
@@ -38,11 +38,11 @@ package com.sun.xml.internal.bind.v2.model.nav;
 	* that share the same generic type declaration and have equal
 	* type parameters."
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -45,12 +45,12 @@ extern class BasicTextPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI
 	* @param c the JTextPane object
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates a new BasicTextPaneUI.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the
@@ -59,9 +59,9 @@ extern class BasicTextPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI
 	*
 	* @return the name ("TextPane")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* This method gets called when a bound property is changed
@@ -74,7 +74,7 @@ extern class BasicTextPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI
 	*
 	* @param evt the property change event
 	*/
-	@:overload override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected override private function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

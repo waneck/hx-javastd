@@ -32,42 +32,42 @@ package javax.swing.plaf.synth;
 */
 @:require(java7) extern class SynthScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI implements java.beans.PropertyChangeListener implements javax.swing.plaf.synth.SynthUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function configureScrollBarColors() : Void;
+	@:overload @:protected override private function configureScrollBarColors() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getSupportsAbsolutePositioning() : Bool;
+	@:overload @:public override public function getSupportsAbsolutePositioning() : Bool;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -81,7 +81,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -92,7 +92,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -101,12 +101,12 @@ package javax.swing.plaf.synth;
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the scrollbar track.
@@ -115,7 +115,7 @@ package javax.swing.plaf.synth;
 	* @param g {@code Graphics} object used for painting
 	* @param trackBounds bounding box for the track
 	*/
-	@:overload private function paintTrack(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, trackBounds : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintTrack(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, trackBounds : java.awt.Rectangle) : Void;
 	
 	/**
 	* Paints the scrollbar thumb.
@@ -124,7 +124,7 @@ package javax.swing.plaf.synth;
 	* @param g {@code Graphics} object used for painting
 	* @param thumbBounds bounding box for the thumb
 	*/
-	@:overload private function paintThumb(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, thumbBounds : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintThumb(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, thumbBounds : java.awt.Rectangle) : Void;
 	
 	/**
 	* A vertical scrollbar's preferred width is the maximum of
@@ -142,29 +142,29 @@ package javax.swing.plaf.synth;
 	* @see #getMaximumSize
 	* @see #getMinimumSize
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getMinimumThumbSize() : java.awt.Dimension;
+	@:overload @:protected override private function getMinimumThumbSize() : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createDecreaseButton(orientation : Int) : javax.swing.JButton;
+	@:overload @:protected override private function createDecreaseButton(orientation : Int) : javax.swing.JButton;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createIncreaseButton(orientation : Int) : javax.swing.JButton;
+	@:overload @:protected override private function createIncreaseButton(orientation : Int) : javax.swing.JButton;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function setThumbRollover(active : Bool) : Void;
+	@:overload @:protected override private function setThumbRollover(active : Bool) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

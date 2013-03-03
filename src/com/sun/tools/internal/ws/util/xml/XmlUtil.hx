@@ -28,9 +28,9 @@ extern class XmlUtil extends com.sun.xml.internal.ws.util.xml.XmlUtil
 	/**
 	* @author WS Development Team
 	*/
-	@:overload public static function matchesTagNS(e : org.w3c.dom.Element, tag : String, nsURI : String) : Bool;
+	@:overload @:public @:static public static function matchesTagNS(e : org.w3c.dom.Element, tag : String, nsURI : String) : Bool;
 	
-	@:overload public static function matchesTagNS(e : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public @:static public static function matchesTagNS(e : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Bool;
 	
 	
 }

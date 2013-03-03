@@ -25,53 +25,53 @@ package com.sun.xml.internal.ws.resources;
 */
 extern class SoapMessages
 {
-	@:overload public static function localizableSOAP_FAULT_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSOAP_FAULT_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Couldn''t create SOAP Fault due to exception: {0}
 	*
 	*/
-	@:overload public static function SOAP_FAULT_CREATE_ERR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SOAP_FAULT_CREATE_ERR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSOAP_MSG_FACTORY_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSOAP_MSG_FACTORY_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Couldn''t create SOAP message factory due to exception: {0}
 	*
 	*/
-	@:overload public static function SOAP_MSG_FACTORY_CREATE_ERR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SOAP_MSG_FACTORY_CREATE_ERR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSOAP_MSG_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSOAP_MSG_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Couldn''t create SOAP message due to exception: {0}
 	*
 	*/
-	@:overload public static function SOAP_MSG_CREATE_ERR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SOAP_MSG_CREATE_ERR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSOAP_FACTORY_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSOAP_FACTORY_CREATE_ERR(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Couldn''t create SOAP factory due to exception: {0}
 	*
 	*/
-	@:overload public static function SOAP_FACTORY_CREATE_ERR(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SOAP_FACTORY_CREATE_ERR(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSOAP_PROTOCOL_INVALID_FAULT_CODE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSOAP_PROTOCOL_INVALID_FAULT_CODE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Invalid fault code: {0}
 	*
 	*/
-	@:overload public static function SOAP_PROTOCOL_INVALID_FAULT_CODE(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function SOAP_PROTOCOL_INVALID_FAULT_CODE(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableSOAP_VERSION_MISMATCH_ERR(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableSOAP_VERSION_MISMATCH_ERR(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Couldn''t create SOAP message. Expecting Envelope in namespace {0}, but got {1}
 	*
 	*/
-	@:overload public static function SOAP_VERSION_MISMATCH_ERR(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function SOAP_VERSION_MISMATCH_ERR(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
 	
 }

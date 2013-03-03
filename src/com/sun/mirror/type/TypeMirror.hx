@@ -30,7 +30,7 @@ extern interface TypeMirror
 	*
 	* @param v the visitor operating on this type
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

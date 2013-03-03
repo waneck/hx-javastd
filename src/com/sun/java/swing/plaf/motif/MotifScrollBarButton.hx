@@ -35,17 +35,17 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifScrollBarButton extends javax.swing.plaf.basic.BasicArrowButton
 {
-	@:overload public function new(direction : Int) : Void;
+	@:overload @:public public function new(direction : Int) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

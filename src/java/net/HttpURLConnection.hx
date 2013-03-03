@@ -28,14 +28,14 @@ extern class HttpURLConnection extends java.net.URLConnection
 	/**
 	* The HTTP method (GET,POST,PUT,etc.).
 	*/
-	private var method : String;
+	@:protected private var method : String;
 	
 	/**
 	* The chunk-length when using chunked encoding streaming mode for output.
 	* A value of <code>-1</code> means chunked encoding is disabled for output.
 	* @since 1.5
 	*/
-	@:require(java5) private var chunkLength : Int;
+	@:require(java5) @:protected private var chunkLength : Int;
 	
 	/**
 	* The fixed content-length when using fixed-length streaming mode.
@@ -47,7 +47,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	*
 	* @since 1.5
 	*/
-	@:require(java5) private var fixedContentLength : Int;
+	@:require(java5) @:protected private var fixedContentLength : Int;
 	
 	/**
 	* The fixed content-length when using fixed-length streaming mode.
@@ -56,7 +56,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	*
 	* @since 1.7
 	*/
-	@:require(java7) private var fixedContentLengthLong : haxe.Int64;
+	@:require(java7) @:protected private var fixedContentLengthLong : haxe.Int64;
 	
 	/**
 	* Returns the key for the <code>n</code><sup>th</sup> header field.
@@ -69,7 +69,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @return  the key for the <code>n</code><sup>th</sup> header field,
 	*          or <code>null</code> if the key does not exist.
 	*/
-	@:overload override public function getHeaderFieldKey(n : Int) : String;
+	@:overload @:public override public function getHeaderFieldKey(n : Int) : String;
 	
 	/**
 	* This method is used to enable streaming of a HTTP request body
@@ -104,7 +104,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @see     #setChunkedStreamingMode(int)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setFixedLengthStreamingMode(contentLength : Int) : Void;
+	@:require(java5) @:overload @:public public function setFixedLengthStreamingMode(contentLength : Int) : Void;
 	
 	/**
 	* This method is used to enable streaming of a HTTP request body
@@ -138,7 +138,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setFixedLengthStreamingMode(contentLength : haxe.Int64) : Void;
+	@:require(java7) @:overload @:public public function setFixedLengthStreamingMode(contentLength : haxe.Int64) : Void;
 	
 	/**
 	* This method is used to enable streaming of a HTTP request body
@@ -165,7 +165,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @see     #setFixedLengthStreamingMode(int)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setChunkedStreamingMode(chunklen : Int) : Void;
+	@:require(java5) @:overload @:public public function setChunkedStreamingMode(chunklen : Int) : Void;
 	
 	/**
 	* Returns the value for the <code>n</code><sup>th</sup> header field.
@@ -182,7 +182,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	*          or <code>null</code> if the value does not exist.
 	* @see     java.net.HttpURLConnection#getHeaderFieldKey(int)
 	*/
-	@:overload override public function getHeaderField(n : Int) : String;
+	@:overload @:public override public function getHeaderField(n : Int) : String;
 	
 	/**
 	* An <code>int</code> representing the three digit HTTP Status-Code.
@@ -194,12 +194,12 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* <li> 5xx: Server Error
 	* </ul>
 	*/
-	private var responseCode : Int;
+	@:protected private var responseCode : Int;
 	
 	/**
 	* The HTTP response message.
 	*/
-	private var responseMessage : String;
+	@:protected private var responseMessage : String;
 	
 	/**
 	* If <code>true</code>, the protocol will automatically follow redirects.
@@ -217,13 +217,13 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @see     java.net.HttpURLConnection#getInstanceFollowRedirects()
 	* @see     java.net.HttpURLConnection#setFollowRedirects(boolean)
 	*/
-	private var instanceFollowRedirects : Bool;
+	@:protected private var instanceFollowRedirects : Bool;
 	
 	/**
 	* Constructor for the HttpURLConnection.
 	* @param u the URL
 	*/
-	@:overload private function new(u : java.net.URL) : Void;
+	@:overload @:protected private function new(u : java.net.URL) : Void;
 	
 	/**
 	* Sets whether HTTP redirects  (requests with response code 3xx) should
@@ -243,7 +243,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @see        SecurityManager#checkSetFactory
 	* @see #getFollowRedirects()
 	*/
-	@:overload public static function setFollowRedirects(set : Bool) : Void;
+	@:overload @:public @:static public static function setFollowRedirects(set : Bool) : Void;
 	
 	/**
 	* Returns a <code>boolean</code> indicating
@@ -254,7 +254,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* be automatically followed, <tt>false</tt> if not.
 	* @see #setFollowRedirects(boolean)
 	*/
-	@:overload public static function getFollowRedirects() : Bool;
+	@:overload @:public @:static public static function getFollowRedirects() : Bool;
 	
 	/**
 	* Sets whether HTTP redirects (requests with response code 3xx) should
@@ -271,7 +271,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @see #getInstanceFollowRedirects
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setInstanceFollowRedirects(followRedirects : Bool) : Void;
+	@:require(java3) @:overload @:public public function setInstanceFollowRedirects(followRedirects : Bool) : Void;
 	
 	/**
 	* Returns the value of this <code>HttpURLConnection</code>'s
@@ -283,7 +283,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @see #setInstanceFollowRedirects(boolean)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getInstanceFollowRedirects() : Bool;
+	@:require(java3) @:overload @:public public function getInstanceFollowRedirects() : Bool;
 	
 	/**
 	* Set the method for the URL request, one of:
@@ -306,14 +306,14 @@ extern class HttpURLConnection extends java.net.URLConnection
 	*              NetPermission is not granted.
 	* @see #getRequestMethod()
 	*/
-	@:overload public function setRequestMethod(method : String) : Void;
+	@:overload @:public public function setRequestMethod(method : String) : Void;
 	
 	/**
 	* Get the request method.
 	* @return the HTTP request method
 	* @see #setRequestMethod(java.lang.String)
 	*/
-	@:overload public function getRequestMethod() : String;
+	@:overload @:public public function getRequestMethod() : String;
 	
 	/**
 	* Gets the status code from an HTTP response message.
@@ -328,7 +328,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @throws IOException if an error occurred connecting to the server.
 	* @return the HTTP Status-Code, or -1
 	*/
-	@:overload public function getResponseCode() : Int;
+	@:overload @:public public function getResponseCode() : Int;
 	
 	/**
 	* Gets the HTTP response message, if any, returned along with the
@@ -343,9 +343,9 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* @throws IOException if an error occurred connecting to the server.
 	* @return the HTTP response message, or <code>null</code>
 	*/
-	@:overload public function getResponseMessage() : String;
+	@:overload @:public public function getResponseMessage() : String;
 	
-	@:overload override public function getHeaderFieldDate(name : String, Default : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function getHeaderFieldDate(name : String, Default : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Indicates that other requests to the server
@@ -353,14 +353,14 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* should not imply that this HttpURLConnection
 	* instance can be reused for other requests.
 	*/
-	@:overload @:abstract public function disconnect() : Void;
+	@:overload @:public @:abstract public function disconnect() : Void;
 	
 	/**
 	* Indicates if the connection is going through a proxy.
 	* @return a boolean indicating if the connection is
 	* using a proxy.
 	*/
-	@:overload @:abstract public function usingProxy() : Bool;
+	@:overload @:public @:abstract public function usingProxy() : Bool;
 	
 	/**
 	* Returns a {@link SocketPermission} object representing the
@@ -373,7 +373,7 @@ extern class HttpURLConnection extends java.net.URLConnection
 	*         permission necessary to connect to the destination
 	*         host and port.
 	*/
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
 	/**
 	* Returns the error stream if the connection failed
@@ -393,188 +393,188 @@ extern class HttpURLConnection extends java.net.URLConnection
 	* errors, the connection is not connected or the server sent no
 	* useful data.
 	*/
-	@:overload public function getErrorStream() : java.io.InputStream;
+	@:overload @:public public function getErrorStream() : java.io.InputStream;
 	
 	/**
 	* HTTP Status-Code 200: OK.
 	*/
-	public static var HTTP_OK(default, null) : Int;
+	@:public @:static @:final public static var HTTP_OK(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 201: Created.
 	*/
-	public static var HTTP_CREATED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CREATED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 202: Accepted.
 	*/
-	public static var HTTP_ACCEPTED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_ACCEPTED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 203: Non-Authoritative Information.
 	*/
-	public static var HTTP_NOT_AUTHORITATIVE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_AUTHORITATIVE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 204: No Content.
 	*/
-	public static var HTTP_NO_CONTENT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NO_CONTENT(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 205: Reset Content.
 	*/
-	public static var HTTP_RESET(default, null) : Int;
+	@:public @:static @:final public static var HTTP_RESET(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 206: Partial Content.
 	*/
-	public static var HTTP_PARTIAL(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PARTIAL(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 300: Multiple Choices.
 	*/
-	public static var HTTP_MULT_CHOICE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_MULT_CHOICE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 301: Moved Permanently.
 	*/
-	public static var HTTP_MOVED_PERM(default, null) : Int;
+	@:public @:static @:final public static var HTTP_MOVED_PERM(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 302: Temporary Redirect.
 	*/
-	public static var HTTP_MOVED_TEMP(default, null) : Int;
+	@:public @:static @:final public static var HTTP_MOVED_TEMP(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 303: See Other.
 	*/
-	public static var HTTP_SEE_OTHER(default, null) : Int;
+	@:public @:static @:final public static var HTTP_SEE_OTHER(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 304: Not Modified.
 	*/
-	public static var HTTP_NOT_MODIFIED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_MODIFIED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 305: Use Proxy.
 	*/
-	public static var HTTP_USE_PROXY(default, null) : Int;
+	@:public @:static @:final public static var HTTP_USE_PROXY(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 400: Bad Request.
 	*/
-	public static var HTTP_BAD_REQUEST(default, null) : Int;
+	@:public @:static @:final public static var HTTP_BAD_REQUEST(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 401: Unauthorized.
 	*/
-	public static var HTTP_UNAUTHORIZED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_UNAUTHORIZED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 402: Payment Required.
 	*/
-	public static var HTTP_PAYMENT_REQUIRED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PAYMENT_REQUIRED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 403: Forbidden.
 	*/
-	public static var HTTP_FORBIDDEN(default, null) : Int;
+	@:public @:static @:final public static var HTTP_FORBIDDEN(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 404: Not Found.
 	*/
-	public static var HTTP_NOT_FOUND(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_FOUND(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 405: Method Not Allowed.
 	*/
-	public static var HTTP_BAD_METHOD(default, null) : Int;
+	@:public @:static @:final public static var HTTP_BAD_METHOD(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 406: Not Acceptable.
 	*/
-	public static var HTTP_NOT_ACCEPTABLE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_ACCEPTABLE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 407: Proxy Authentication Required.
 	*/
-	public static var HTTP_PROXY_AUTH(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PROXY_AUTH(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 408: Request Time-Out.
 	*/
-	public static var HTTP_CLIENT_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CLIENT_TIMEOUT(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 409: Conflict.
 	*/
-	public static var HTTP_CONFLICT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_CONFLICT(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 410: Gone.
 	*/
-	public static var HTTP_GONE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_GONE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 411: Length Required.
 	*/
-	public static var HTTP_LENGTH_REQUIRED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_LENGTH_REQUIRED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 412: Precondition Failed.
 	*/
-	public static var HTTP_PRECON_FAILED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_PRECON_FAILED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 413: Request Entity Too Large.
 	*/
-	public static var HTTP_ENTITY_TOO_LARGE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_ENTITY_TOO_LARGE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 414: Request-URI Too Large.
 	*/
-	public static var HTTP_REQ_TOO_LONG(default, null) : Int;
+	@:public @:static @:final public static var HTTP_REQ_TOO_LONG(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 415: Unsupported Media Type.
 	*/
-	public static var HTTP_UNSUPPORTED_TYPE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_UNSUPPORTED_TYPE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 500: Internal Server Error.
 	* @deprecated   it is misplaced and shouldn't have existed.
 	*/
-	public static var HTTP_SERVER_ERROR(default, null) : Int;
+	@:public @:static @:final public static var HTTP_SERVER_ERROR(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 500: Internal Server Error.
 	*/
-	public static var HTTP_INTERNAL_ERROR(default, null) : Int;
+	@:public @:static @:final public static var HTTP_INTERNAL_ERROR(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 501: Not Implemented.
 	*/
-	public static var HTTP_NOT_IMPLEMENTED(default, null) : Int;
+	@:public @:static @:final public static var HTTP_NOT_IMPLEMENTED(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 502: Bad Gateway.
 	*/
-	public static var HTTP_BAD_GATEWAY(default, null) : Int;
+	@:public @:static @:final public static var HTTP_BAD_GATEWAY(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 503: Service Unavailable.
 	*/
-	public static var HTTP_UNAVAILABLE(default, null) : Int;
+	@:public @:static @:final public static var HTTP_UNAVAILABLE(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 504: Gateway Timeout.
 	*/
-	public static var HTTP_GATEWAY_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var HTTP_GATEWAY_TIMEOUT(default, null) : Int;
 	
 	/**
 	* HTTP Status-Code 505: HTTP Version Not Supported.
 	*/
-	public static var HTTP_VERSION(default, null) : Int;
+	@:public @:static @:final public static var HTTP_VERSION(default, null) : Int;
 	
 	
 }

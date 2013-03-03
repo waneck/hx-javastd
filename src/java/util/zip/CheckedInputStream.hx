@@ -30,14 +30,14 @@ extern class CheckedInputStream extends java.io.FilterInputStream
 	* @param in the input stream
 	* @param cksum the Checksum
 	*/
-	@:overload public function new(_in : java.io.InputStream, cksum : java.util.zip.Checksum) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, cksum : java.util.zip.Checksum) : Void;
 	
 	/**
 	* Reads a byte. Will block if no input is available.
 	* @return the byte read, or -1 if the end of the stream is reached.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads into an array of bytes. If <code>len</code> is not zero, the method
@@ -54,7 +54,7 @@ extern class CheckedInputStream extends java.io.FilterInputStream
 	* <code>buf.length - off</code>
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips specified number of bytes of input.
@@ -62,13 +62,13 @@ extern class CheckedInputStream extends java.io.FilterInputStream
 	* @return the actual number of bytes skipped
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the Checksum for this input stream.
 	* @return the Checksum value
 	*/
-	@:overload public function getChecksum() : java.util.zip.Checksum;
+	@:overload @:public public function getChecksum() : java.util.zip.Checksum;
 	
 	
 }

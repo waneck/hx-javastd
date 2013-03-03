@@ -36,28 +36,28 @@ extern class Utils
 	/**
 	* Return the thread status description.
 	*/
-	@:overload public static function getStatus(thr : com.sun.jdi.ThreadReference) : String;
+	@:overload @:public @:static public static function getStatus(thr : com.sun.jdi.ThreadReference) : String;
 	
 	/**
 	* Return a description of an object.
 	*/
-	@:overload public static function description(ref : com.sun.jdi.ObjectReference) : String;
+	@:overload @:public @:static public static function description(ref : com.sun.jdi.ObjectReference) : String;
 	
 	/**
 	* Convert a long to a hexadecimal string.
 	*/
-	@:overload public static function toHex(n : haxe.Int64) : String;
+	@:overload @:public @:static public static function toHex(n : haxe.Int64) : String;
 	
 	/**
 	* Convert hexadecimal strings to longs.
 	*/
-	@:overload public static function fromHex(hexStr : String) : haxe.Int64;
+	@:overload @:public @:static public static function fromHex(hexStr : String) : haxe.Int64;
 	
 	/*
 	* The next two methods are used by this class and by EventHandler
 	* to print consistent locations and error messages.
 	*/
-	@:overload public static function locationString(loc : com.sun.jdi.Location) : String;
+	@:overload @:public @:static public static function locationString(loc : com.sun.jdi.Location) : String;
 	
 	/************************
 	private String typedName(Method method) {
@@ -77,9 +77,9 @@ extern class Utils
 	return buf.toString();
 	}
 ************************/
-	@:overload public static function isValidMethodName(s : String) : Bool;
+	@:overload @:public @:static public static function isValidMethodName(s : String) : Bool;
 	
-	@:overload public static function isJavaIdentifier(s : String) : Bool;
+	@:overload @:public @:static public static function isJavaIdentifier(s : String) : Bool;
 	
 	
 }

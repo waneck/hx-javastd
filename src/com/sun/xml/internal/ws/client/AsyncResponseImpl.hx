@@ -33,15 +33,15 @@ extern class AsyncResponseImpl<T> extends java.util.concurrent.FutureTask<T> imp
 	*      Optional {@link AsyncHandler} to invoke at the end
 	*      of the processing. Can be null.
 	*/
-	@:overload public function new(runnable : java.lang.Runnable, handler : javax.xml.ws.AsyncHandler<T>) : Void;
+	@:overload @:public public function new(runnable : java.lang.Runnable, handler : javax.xml.ws.AsyncHandler<T>) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
-	@:overload public function getContext() : com.sun.xml.internal.ws.client.ResponseContext;
+	@:overload @:public public function getContext() : com.sun.xml.internal.ws.client.ResponseContext;
 	
-	@:overload public function setResponseContext(rc : com.sun.xml.internal.ws.client.ResponseContext) : Void;
+	@:overload @:public public function setResponseContext(rc : com.sun.xml.internal.ws.client.ResponseContext) : Void;
 	
-	@:overload public function set(v : T, t : java.lang.Throwable) : Void;
+	@:overload @:public public function set(v : T, t : java.lang.Throwable) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class JavaThing
 	* Represents a java "Thing".  A thing is anything that can be the value of
 	* a field.  This includes JavaHeapObject, JavaObjectRef, and JavaValue.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* If this is a forward reference, figure out what it really
@@ -44,35 +44,35 @@ extern class JavaThing
 	* @param field     The field this thing represents.  If null, it is
 	*                  assumed this thing is an object (and never a value).
 	*/
-	@:overload public function dereference(shapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField) : com.sun.tools.hat.internal.model.JavaThing;
+	@:overload @:public public function dereference(shapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField) : com.sun.tools.hat.internal.model.JavaThing;
 	
 	/**
 	* Are we the same type as other?
 	*
 	* @see JavaObject.isSameTypeAs()
 	*/
-	@:overload public function isSameTypeAs(other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
+	@:overload @:public public function isSameTypeAs(other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
 	
 	/**
 	* @return true iff this represents a heap-allocated object
 	*/
-	@:overload @:abstract public function isHeapAllocated() : Bool;
+	@:overload @:abstract @:public public function isHeapAllocated() : Bool;
 	
 	/**
 	* @return the size of this object, in bytes, including VM overhead
 	*/
-	@:overload @:abstract public function getSize() : Int;
+	@:overload @:abstract @:public public function getSize() : Int;
 	
 	/**
 	* @return a human-readable string representation of this thing
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:abstract @:public public function toString() : String;
 	
 	/**
 	* Compare our string representation to other's
 	* @see java.lang.String.compareTo()
 	*/
-	@:overload public function compareTo(other : com.sun.tools.hat.internal.model.JavaThing) : Int;
+	@:overload @:public public function compareTo(other : com.sun.tools.hat.internal.model.JavaThing) : Int;
 	
 	
 }

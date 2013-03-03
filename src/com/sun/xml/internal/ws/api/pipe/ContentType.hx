@@ -36,7 +36,7 @@ extern interface ContentType
 	/**
 	* Gives non-null Content-Type header value.
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Gives SOAPAction transport header value. It will be non-null only for SOAP 1.1 messages. In other cases
@@ -44,7 +44,7 @@ extern interface ContentType
 	*
 	* @return It can be null, in that case SOAPAction header should be written.
 	*/
-	@:overload public function getSOAPActionHeader() : String;
+	@:overload @:public public function getSOAPActionHeader() : String;
 	
 	/**
 	* Controls the Accept transport header, if the transport supports it.
@@ -55,7 +55,7 @@ extern interface ContentType
 	* this would do for now. If another person comes and asks for
 	* a similar functionality, we'll define a real abstraction.
 	*/
-	@:overload public function getAcceptHeader() : String;
+	@:overload @:public public function getAcceptHeader() : String;
 	
 	
 }

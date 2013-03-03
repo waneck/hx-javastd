@@ -31,7 +31,7 @@ extern class AreaAveragingScaleFilter extends java.awt.image.ReplicateScaleFilte
 	* @param width the target width to scale the image
 	* @param height the target height to scale the image
 	*/
-	@:overload public function new(width : Int, height : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int) : Void;
 	
 	/**
 	* Detect if the data is being delivered with the necessary hints
@@ -45,7 +45,7 @@ extern class AreaAveragingScaleFilter extends java.awt.image.ReplicateScaleFilte
 	* with the filtering operation.
 	* @see ImageConsumer#setHints
 	*/
-	@:overload public function setHints(hints : Int) : Void;
+	@:overload @:public override public function setHints(hints : Int) : Void;
 	
 	/**
 	* Combine the components for the delivered byte pixels into the
@@ -63,7 +63,7 @@ extern class AreaAveragingScaleFilter extends java.awt.image.ReplicateScaleFilte
 	* with the filtering operation.
 	* @see ReplicateScaleFilter
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Combine the components for the delivered int pixels into the
@@ -81,7 +81,7 @@ extern class AreaAveragingScaleFilter extends java.awt.image.ReplicateScaleFilte
 	* with the filtering operation.
 	* @see ReplicateScaleFilter
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	
 }

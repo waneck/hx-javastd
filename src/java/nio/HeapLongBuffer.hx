@@ -36,37 +36,37 @@ package java.nio;
 */
 @:internal extern class HeapLongBuffer extends java.nio.LongBuffer
 {
-	@:overload private function new(buf : java.NativeArray<haxe.Int64>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
+	@:overload @:protected private function new(buf : java.NativeArray<haxe.Int64>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload override public function slice() : java.nio.LongBuffer;
+	@:overload @:public override public function slice() : java.nio.LongBuffer;
 	
-	@:overload override public function duplicate() : java.nio.LongBuffer;
+	@:overload @:public override public function duplicate() : java.nio.LongBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.LongBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.LongBuffer;
 	
-	@:overload private function ix(i : Int) : Int;
+	@:overload @:protected private function ix(i : Int) : Int;
 	
-	@:overload override public function get() : haxe.Int64;
+	@:overload @:public override public function get() : haxe.Int64;
 	
-	@:overload override public function get(i : Int) : haxe.Int64;
+	@:overload @:public override public function get(i : Int) : haxe.Int64;
 	
-	@:overload override public function get(dst : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
+	@:overload @:public override public function get(dst : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function put(x : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public override public function put(x : haxe.Int64) : java.nio.LongBuffer;
 	
-	@:overload override public function put(i : Int, x : haxe.Int64) : java.nio.LongBuffer;
+	@:overload @:public override public function put(i : Int, x : haxe.Int64) : java.nio.LongBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : java.nio.LongBuffer;
 	
-	@:overload override public function put(src : java.nio.LongBuffer) : java.nio.LongBuffer;
+	@:overload @:public override public function put(src : java.nio.LongBuffer) : java.nio.LongBuffer;
 	
-	@:overload override public function compact() : java.nio.LongBuffer;
+	@:overload @:public override public function compact() : java.nio.LongBuffer;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

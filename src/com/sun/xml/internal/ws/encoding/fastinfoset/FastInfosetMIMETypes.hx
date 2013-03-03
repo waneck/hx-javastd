@@ -33,32 +33,32 @@ extern class FastInfosetMIMETypes
 	/**
 	* MIME type for a generic Infoset encoded as a fast infoset document.
 	*/
-	public static var INFOSET(default, null) : String;
+	@:static @:public @:final public static var INFOSET(default, null) : String;
 	
 	/**
 	* MIME type for a SOAP 1.1 Infoset encoded as a fast infoset document.
 	*/
-	public static var SOAP_11(default, null) : String;
+	@:static @:public @:final public static var SOAP_11(default, null) : String;
 	
 	/**
 	* MIME type for a SOAP 1.2 Infoset encoded as a fast infoset document.
 	*/
-	public static var SOAP_12(default, null) : String;
+	@:static @:public @:final public static var SOAP_12(default, null) : String;
 	
 	/**
 	* MIME type for a generic Infoset encoded as a stateful fast infoset document.
 	*/
-	public static var STATEFUL_INFOSET(default, null) : String;
+	@:static @:public @:final public static var STATEFUL_INFOSET(default, null) : String;
 	
 	/**
 	* MIME type for a SOAP 1.1 Infoset encoded as a stateful fast infoset document.
 	*/
-	public static var STATEFUL_SOAP_11(default, null) : String;
+	@:static @:public @:final public static var STATEFUL_SOAP_11(default, null) : String;
 	
 	/**
 	* MIME type for a SOAP 1.2 Infoset encoded as a stateful fast infoset document.
 	*/
-	public static var STATEFUL_SOAP_12(default, null) : String;
+	@:static @:public @:final public static var STATEFUL_SOAP_12(default, null) : String;
 	
 	
 }

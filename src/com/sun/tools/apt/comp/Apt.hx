@@ -26,20 +26,20 @@ package com.sun.tools.apt.comp;
 //// import com.sun.mirror.apt.AnnotationProcessorFactory;
 extern class Apt extends com.sun.tools.javac.util.ListBuffer<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>
 {
-	@:overload public function getSourceFileNames() : java.util.Set<String>;
+	@:overload @:public public function getSourceFileNames() : java.util.Set<String>;
 	
-	@:overload public function getClassFileNames() : java.util.Set<String>;
+	@:overload @:public public function getClassFileNames() : java.util.Set<String>;
 	
 	/** The context key for the todo list. */
-	private static var aptKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.comp.Apt>;
+	@:protected @:static @:final private static var aptKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.comp.Apt>;
 	
 	/** Get the Apt instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.comp.Apt;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.comp.Apt;
 	
 	/** Create a new apt list. */
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function main(treeList : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit>, classes : com.sun.tools.javac.util.ListBuffer<ClassSymbol>, origOptions : java.util.Map<String, String>, aptCL : java.lang.ClassLoader, providedFactory : com.sun.mirror.apt.AnnotationProcessorFactory, productiveFactories : java.util.Set<Class<com.sun.mirror.apt.AnnotationProcessorFactory>>) : Void;
+	@:overload @:public public function main(treeList : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit>, classes : com.sun.tools.javac.util.ListBuffer<ClassSymbol>, origOptions : java.util.Map<String, String>, aptCL : java.lang.ClassLoader, providedFactory : com.sun.mirror.apt.AnnotationProcessorFactory, productiveFactories : java.util.Set<Class<com.sun.mirror.apt.AnnotationProcessorFactory>>) : Void;
 	
 	
 }
@@ -59,21 +59,21 @@ extern class Apt extends com.sun.tools.javac.util.ListBuffer<com.sun.tools.javac
 */
 @:native('com$sun$tools$apt$comp$Apt$AptTreeScanner') @:internal extern class Apt_AptTreeScanner extends com.sun.tools.javac.tree.TreeScanner
 {
-	@:overload public function getAnnotationSet() : java.util.Set<String>;
+	@:overload @:public public function getAnnotationSet() : java.util.Set<String>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
+	@:overload @:public public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload public function visitBlock(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
+	@:overload @:public public function visitBlock(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
 	
-	@:overload public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
+	@:overload @:public public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
-	@:overload public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
+	@:overload @:public public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
 	
-	@:overload public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
+	@:overload @:public public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
 	
-	@:overload public function visitAnnotation(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation) : Void;
+	@:overload @:public public function visitAnnotation(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation) : Void;
 	
 	
 }

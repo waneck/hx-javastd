@@ -29,13 +29,13 @@ extern class XSCMUniOp extends com.sun.org.apache.xerces.internal.impl.dtd.model
 	* @author Neil Graham, IBM
 	* @version $$
 	*/
-	@:overload public function new(type : Int, childNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : Void;
+	@:overload @:public public function new(type : Int, childNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : Void;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload @:protected override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	/**
 	* Allows the user to set arbitrary data on this content model
@@ -43,7 +43,7 @@ extern class XSCMUniOp extends com.sun.org.apache.xerces.internal.impl.dtd.model
 	* in constant space. For convenience, set user data in
 	* children node too.
 	*/
-	@:overload override public function setUserData(userData : Dynamic) : Void;
+	@:overload @:public override public function setUserData(userData : Dynamic) : Void;
 	
 	
 }

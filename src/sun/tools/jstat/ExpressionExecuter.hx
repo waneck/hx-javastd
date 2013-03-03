@@ -35,7 +35,7 @@ package sun.tools.jstat;
 	/*
 	* evaluate the given expression.
 	*/
-	@:overload public function evaluate(e : sun.tools.jstat.Expression) : Dynamic;
+	@:overload @:public public function evaluate(e : sun.tools.jstat.Expression) : Dynamic;
 	
 	
 }

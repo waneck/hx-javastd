@@ -25,45 +25,45 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 @:internal extern class DefaultClassBinder implements com.sun.tools.internal.xjc.reader.xmlschema.ClassBinder
 {
-	private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:protected @:final private var builder(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
-	private var selector(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
+	@:protected @:final private var selector(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.ClassSelector;
 	
-	private var schemas(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:protected @:final private var schemas(default, null) : com.sun.xml.internal.xsom.XSSchemaSet;
 	
-	@:overload public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function modelGroup(mgroup : com.sun.xml.internal.xsom.XSModelGroup) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function modelGroup(mgroup : com.sun.xml.internal.xsom.XSModelGroup) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function empty(ct : com.sun.xml.internal.xsom.XSContentType) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function empty(ct : com.sun.xml.internal.xsom.XSContentType) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function identityConstraint(xsIdentityConstraint : com.sun.xml.internal.xsom.XSIdentityConstraint) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function identityConstraint(xsIdentityConstraint : com.sun.xml.internal.xsom.XSIdentityConstraint) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function xpath(xsxPath : com.sun.xml.internal.xsom.XSXPath) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function xpath(xsxPath : com.sun.xml.internal.xsom.XSXPath) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function simpleType(type : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload @:public public function simpleType(type : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function annotation(annon : com.sun.xml.internal.xsom.XSAnnotation) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function annotation(annon : com.sun.xml.internal.xsom.XSAnnotation) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function notation(not : com.sun.xml.internal.xsom.XSNotation) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function notation(not : com.sun.xml.internal.xsom.XSNotation) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function facet(decl : com.sun.xml.internal.xsom.XSFacet) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function facet(decl : com.sun.xml.internal.xsom.XSFacet) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
-	@:overload public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	
 }

@@ -35,12 +35,12 @@ extern class PrintEvent extends java.util.EventObject
 	* @throws IllegalArgumentException if <code>source</code> is
 	*         <code>null</code>.
 	*/
-	@:overload public function new(source : Dynamic) : Void;
+	@:overload @:public public function new(source : Dynamic) : Void;
 	
 	/**
 	* @return a message describing the event
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

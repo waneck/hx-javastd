@@ -25,17 +25,17 @@ package sun.font;
 */
 extern class CreatedFontTracker
 {
-	public static var MAX_FILE_SIZE(default, null) : Int;
+	@:public @:static @:final public static var MAX_FILE_SIZE(default, null) : Int;
 	
-	public static var MAX_TOTAL_BYTES(default, null) : Int;
+	@:public @:static @:final public static var MAX_TOTAL_BYTES(default, null) : Int;
 	
-	@:overload @:synchronized public static function getTracker() : sun.font.CreatedFontTracker;
+	@:overload @:public @:static @:synchronized public static function getTracker() : sun.font.CreatedFontTracker;
 	
-	@:overload @:synchronized public function getNumBytes() : Int;
+	@:overload @:public @:synchronized public function getNumBytes() : Int;
 	
-	@:overload @:synchronized public function addBytes(sz : Int) : Void;
+	@:overload @:public @:synchronized public function addBytes(sz : Int) : Void;
 	
-	@:overload @:synchronized public function subBytes(sz : Int) : Void;
+	@:overload @:public @:synchronized public function subBytes(sz : Int) : Void;
 	
 	
 }

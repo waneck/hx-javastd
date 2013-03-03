@@ -30,7 +30,7 @@ extern class XPathVisitor
 	* @param path The LocationPath object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitLocationPath(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, path : com.sun.org.apache.xpath.internal.axes.LocPathIterator) : Bool;
+	@:overload @:public public function visitLocationPath(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, path : com.sun.org.apache.xpath.internal.axes.LocPathIterator) : Bool;
 	
 	/**
 	* Visit a UnionPath.
@@ -39,7 +39,7 @@ extern class XPathVisitor
 	* @param path The UnionPath object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitUnionPath(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, path : com.sun.org.apache.xpath.internal.axes.UnionPathIterator) : Bool;
+	@:overload @:public public function visitUnionPath(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, path : com.sun.org.apache.xpath.internal.axes.UnionPathIterator) : Bool;
 	
 	/**
 	* Visit a step within a location path.
@@ -48,7 +48,7 @@ extern class XPathVisitor
 	* @param step The Step object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitStep(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, step : com.sun.org.apache.xpath.internal.patterns.NodeTest) : Bool;
+	@:overload @:public public function visitStep(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, step : com.sun.org.apache.xpath.internal.patterns.NodeTest) : Bool;
 	
 	/**
 	* Visit a predicate within a location path.  Note that there isn't a
@@ -60,7 +60,7 @@ extern class XPathVisitor
 	* @param pred The predicate object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitPredicate(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pred : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public public function visitPredicate(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pred : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* Visit a binary operation.
@@ -69,7 +69,7 @@ extern class XPathVisitor
 	* @param op The operation object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitBinaryOperation(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, op : com.sun.org.apache.xpath.internal.operations.Operation) : Bool;
+	@:overload @:public public function visitBinaryOperation(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, op : com.sun.org.apache.xpath.internal.operations.Operation) : Bool;
 	
 	/**
 	* Visit a unary operation.
@@ -78,7 +78,7 @@ extern class XPathVisitor
 	* @param op The operation object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitUnaryOperation(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, op : com.sun.org.apache.xpath.internal.operations.UnaryOperation) : Bool;
+	@:overload @:public public function visitUnaryOperation(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, op : com.sun.org.apache.xpath.internal.operations.UnaryOperation) : Bool;
 	
 	/**
 	* Visit a variable reference.
@@ -87,7 +87,7 @@ extern class XPathVisitor
 	* @param var The variable reference object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitVariableRef(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, _var : com.sun.org.apache.xpath.internal.operations.Variable) : Bool;
+	@:overload @:public public function visitVariableRef(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, _var : com.sun.org.apache.xpath.internal.operations.Variable) : Bool;
 	
 	/**
 	* Visit a function.
@@ -96,7 +96,7 @@ extern class XPathVisitor
 	* @param func The function reference object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitFunction(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, func : com.sun.org.apache.xpath.internal.functions.Function) : Bool;
+	@:overload @:public public function visitFunction(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, func : com.sun.org.apache.xpath.internal.functions.Function) : Bool;
 	
 	/**
 	* Visit a match pattern.
@@ -105,7 +105,7 @@ extern class XPathVisitor
 	* @param pattern The match pattern object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitMatchPattern(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pattern : com.sun.org.apache.xpath.internal.patterns.StepPattern) : Bool;
+	@:overload @:public public function visitMatchPattern(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pattern : com.sun.org.apache.xpath.internal.patterns.StepPattern) : Bool;
 	
 	/**
 	* Visit a union pattern.
@@ -114,7 +114,7 @@ extern class XPathVisitor
 	* @param pattern The union pattern object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitUnionPattern(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pattern : com.sun.org.apache.xpath.internal.patterns.UnionPattern) : Bool;
+	@:overload @:public public function visitUnionPattern(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, pattern : com.sun.org.apache.xpath.internal.patterns.UnionPattern) : Bool;
 	
 	/**
 	* Visit a string literal.
@@ -123,7 +123,7 @@ extern class XPathVisitor
 	* @param str The string literal object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitStringLiteral(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, str : com.sun.org.apache.xpath.internal.objects.XString) : Bool;
+	@:overload @:public public function visitStringLiteral(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, str : com.sun.org.apache.xpath.internal.objects.XString) : Bool;
 	
 	/**
 	* Visit a number literal.
@@ -132,7 +132,7 @@ extern class XPathVisitor
 	* @param num The number literal object.
 	* @return true if the sub expressions should be traversed.
 	*/
-	@:overload public function visitNumberLiteral(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, num : com.sun.org.apache.xpath.internal.objects.XNumber) : Bool;
+	@:overload @:public public function visitNumberLiteral(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, num : com.sun.org.apache.xpath.internal.objects.XNumber) : Bool;
 	
 	
 }

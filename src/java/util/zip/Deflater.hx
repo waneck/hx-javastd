@@ -74,44 +74,44 @@ extern class Deflater
 	* Compression method for the deflate algorithm (the only one currently
 	* supported).
 	*/
-	public static var DEFLATED(default, null) : Int;
+	@:public @:static @:final public static var DEFLATED(default, null) : Int;
 	
 	/**
 	* Compression level for no compression.
 	*/
-	public static var NO_COMPRESSION(default, null) : Int;
+	@:public @:static @:final public static var NO_COMPRESSION(default, null) : Int;
 	
 	/**
 	* Compression level for fastest compression.
 	*/
-	public static var BEST_SPEED(default, null) : Int;
+	@:public @:static @:final public static var BEST_SPEED(default, null) : Int;
 	
 	/**
 	* Compression level for best compression.
 	*/
-	public static var BEST_COMPRESSION(default, null) : Int;
+	@:public @:static @:final public static var BEST_COMPRESSION(default, null) : Int;
 	
 	/**
 	* Default compression level.
 	*/
-	public static var DEFAULT_COMPRESSION(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_COMPRESSION(default, null) : Int;
 	
 	/**
 	* Compression strategy best used for data consisting mostly of small
 	* values with a somewhat random distribution. Forces more Huffman coding
 	* and less string matching.
 	*/
-	public static var FILTERED(default, null) : Int;
+	@:public @:static @:final public static var FILTERED(default, null) : Int;
 	
 	/**
 	* Compression strategy for Huffman coding only.
 	*/
-	public static var HUFFMAN_ONLY(default, null) : Int;
+	@:public @:static @:final public static var HUFFMAN_ONLY(default, null) : Int;
 	
 	/**
 	* Default compression strategy.
 	*/
-	public static var DEFAULT_STRATEGY(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_STRATEGY(default, null) : Int;
 	
 	/**
 	* Compression flush mode used to achieve best compression result.
@@ -119,7 +119,7 @@ extern class Deflater
 	* @see Deflater#deflate(byte[], int, int, int)
 	* @since 1.7
 	*/
-	@:require(java7) public static var NO_FLUSH(default, null) : Int;
+	@:require(java7) @:public @:static @:final public static var NO_FLUSH(default, null) : Int;
 	
 	/**
 	* Compression flush mode used to flush out all pending output; may
@@ -128,7 +128,7 @@ extern class Deflater
 	* @see Deflater#deflate(byte[], int, int, int)
 	* @since 1.7
 	*/
-	@:require(java7) public static var SYNC_FLUSH(default, null) : Int;
+	@:require(java7) @:public @:static @:final public static var SYNC_FLUSH(default, null) : Int;
 	
 	/**
 	* Compression flush mode used to flush out all pending output and
@@ -138,7 +138,7 @@ extern class Deflater
 	* @see Deflater#deflate(byte[], int, int, int)
 	* @since 1.7
 	*/
-	@:require(java7) public static var FULL_FLUSH(default, null) : Int;
+	@:require(java7) @:public @:static @:final public static var FULL_FLUSH(default, null) : Int;
 	
 	/**
 	* Creates a new compressor using the specified compression level.
@@ -148,20 +148,20 @@ extern class Deflater
 	* @param level the compression level (0-9)
 	* @param nowrap if true then use GZIP compatible compression
 	*/
-	@:overload public function new(level : Int, nowrap : Bool) : Void;
+	@:overload @:public public function new(level : Int, nowrap : Bool) : Void;
 	
 	/**
 	* Creates a new compressor using the specified compression level.
 	* Compressed data will be generated in ZLIB format.
 	* @param level the compression level (0-9)
 	*/
-	@:overload public function new(level : Int) : Void;
+	@:overload @:public public function new(level : Int) : Void;
 	
 	/**
 	* Creates a new compressor with the default compression level.
 	* Compressed data will be generated in ZLIB format.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets input data for compression. This should be called whenever
@@ -171,7 +171,7 @@ extern class Deflater
 	* @param len the length of the data
 	* @see Deflater#needsInput
 	*/
-	@:overload public function setInput(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function setInput(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Sets input data for compression. This should be called whenever
@@ -179,7 +179,7 @@ extern class Deflater
 	* @param b the input data bytes
 	* @see Deflater#needsInput
 	*/
-	@:overload public function setInput(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setInput(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets preset dictionary for compression. A preset dictionary is used
@@ -193,7 +193,7 @@ extern class Deflater
 	* @see Inflater#inflate
 	* @see Inflater#getAdler
 	*/
-	@:overload public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Sets preset dictionary for compression. A preset dictionary is used
@@ -205,7 +205,7 @@ extern class Deflater
 	* @see Inflater#inflate
 	* @see Inflater#getAdler
 	*/
-	@:overload public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setDictionary(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the compression strategy to the specified value.
@@ -213,14 +213,14 @@ extern class Deflater
 	* @exception IllegalArgumentException if the compression strategy is
 	*                                     invalid
 	*/
-	@:overload public function setStrategy(strategy : Int) : Void;
+	@:overload @:public public function setStrategy(strategy : Int) : Void;
 	
 	/**
 	* Sets the current compression level to the specified value.
 	* @param level the new compression level (0-9)
 	* @exception IllegalArgumentException if the compression level is invalid
 	*/
-	@:overload public function setLevel(level : Int) : Void;
+	@:overload @:public public function setLevel(level : Int) : Void;
 	
 	/**
 	* Returns true if the input data buffer is empty and setInput()
@@ -228,13 +228,13 @@ extern class Deflater
 	* @return true if the input data buffer is empty and setInput()
 	* should be called in order to provide more input
 	*/
-	@:overload public function needsInput() : Bool;
+	@:overload @:public public function needsInput() : Bool;
 	
 	/**
 	* When called, indicates that compression should end with the current
 	* contents of the input buffer.
 	*/
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
 	/**
 	* Returns true if the end of the compressed data output stream has
@@ -242,7 +242,7 @@ extern class Deflater
 	* @return true if the end of the compressed data output stream has
 	* been reached
 	*/
-	@:overload public function finished() : Bool;
+	@:overload @:public public function finished() : Bool;
 	
 	/**
 	* Compresses the input data and fills specified buffer with compressed
@@ -261,7 +261,7 @@ extern class Deflater
 	* @return the actual number of bytes of compressed data written to the
 	*         output buffer
 	*/
-	@:overload public function deflate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function deflate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Compresses the input data and fills specified buffer with compressed
@@ -278,7 +278,7 @@ extern class Deflater
 	* @return the actual number of bytes of compressed data written to the
 	*         output buffer
 	*/
-	@:overload public function deflate(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function deflate(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Compresses the input data and fills the specified buffer with compressed
@@ -324,13 +324,13 @@ extern class Deflater
 	* @throws IllegalArgumentException if the flush mode is invalid
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function deflate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, flush : Int) : Int;
+	@:require(java7) @:overload @:public public function deflate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, flush : Int) : Int;
 	
 	/**
 	* Returns the ADLER-32 value of the uncompressed data.
 	* @return the ADLER-32 value of the uncompressed data
 	*/
-	@:overload public function getAdler() : Int;
+	@:overload @:public public function getAdler() : Int;
 	
 	/**
 	* Returns the total number of uncompressed bytes input so far.
@@ -341,7 +341,7 @@ extern class Deflater
 	*
 	* @return the total number of uncompressed bytes input so far
 	*/
-	@:overload public function getTotalIn() : Int;
+	@:overload @:public public function getTotalIn() : Int;
 	
 	/**
 	* Returns the total number of uncompressed bytes input so far.</p>
@@ -349,7 +349,7 @@ extern class Deflater
 	* @return the total (non-negative) number of uncompressed bytes input so far
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getBytesRead() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getBytesRead() : haxe.Int64;
 	
 	/**
 	* Returns the total number of compressed bytes output so far.
@@ -360,7 +360,7 @@ extern class Deflater
 	*
 	* @return the total number of compressed bytes output so far
 	*/
-	@:overload public function getTotalOut() : Int;
+	@:overload @:public public function getTotalOut() : Int;
 	
 	/**
 	* Returns the total number of compressed bytes output so far.</p>
@@ -368,13 +368,13 @@ extern class Deflater
 	* @return the total (non-negative) number of compressed bytes output so far
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getBytesWritten() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getBytesWritten() : haxe.Int64;
 	
 	/**
 	* Resets deflater so that a new set of input data can be processed.
 	* Keeps current compression level and strategy settings.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Closes the compressor and discards any unprocessed input.
@@ -383,12 +383,12 @@ extern class Deflater
 	* finalize() method. Once this method is called, the behavior
 	* of the Deflater object is undefined.
 	*/
-	@:overload public function end() : Void;
+	@:overload @:public public function end() : Void;
 	
 	/**
 	* Closes the compressor when garbage is collected.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

@@ -32,33 +32,33 @@ package com.sun.tools.example.debug.bdi;
 */
 @:internal extern class JDIEventSource extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$bdi$JDIEventSource$FirstListener') @:internal extern class JDIEventSource_FirstListener implements com.sun.tools.example.debug.event.JDIListener
 {
-	@:overload public function accessWatchpoint(e : com.sun.tools.example.debug.event.AccessWatchpointEventSet) : Void;
+	@:overload @:public public function accessWatchpoint(e : com.sun.tools.example.debug.event.AccessWatchpointEventSet) : Void;
 	
-	@:overload public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
+	@:overload @:public public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
 	
-	@:overload public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
+	@:overload @:public public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
 	
-	@:overload public function exception(e : com.sun.tools.example.debug.event.ExceptionEventSet) : Void;
+	@:overload @:public public function exception(e : com.sun.tools.example.debug.event.ExceptionEventSet) : Void;
 	
-	@:overload public function locationTrigger(e : com.sun.tools.example.debug.event.LocationTriggerEventSet) : Void;
+	@:overload @:public public function locationTrigger(e : com.sun.tools.example.debug.event.LocationTriggerEventSet) : Void;
 	
-	@:overload public function modificationWatchpoint(e : com.sun.tools.example.debug.event.ModificationWatchpointEventSet) : Void;
+	@:overload @:public public function modificationWatchpoint(e : com.sun.tools.example.debug.event.ModificationWatchpointEventSet) : Void;
 	
-	@:overload public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
+	@:overload @:public public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
 	
-	@:overload public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
+	@:overload @:public public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
 	
-	@:overload public function vmDeath(e : com.sun.tools.example.debug.event.VMDeathEventSet) : Void;
+	@:overload @:public public function vmDeath(e : com.sun.tools.example.debug.event.VMDeathEventSet) : Void;
 	
-	@:overload public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload @:public public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
-	@:overload public function vmStart(e : com.sun.tools.example.debug.event.VMStartEventSet) : Void;
+	@:overload @:public public function vmStart(e : com.sun.tools.example.debug.event.VMStartEventSet) : Void;
 	
 	
 }

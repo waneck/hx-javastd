@@ -28,7 +28,7 @@ extern class CRLExtensions
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -37,7 +37,7 @@ extern class CRLExtensions
 	*        sequence of extensions.
 	* @exception CRLException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Encode the extensions in DER form to the stream.
@@ -47,14 +47,14 @@ extern class CRLExtensions
 	* extension (false) or a CRL extension (true).
 	* @exception CRLException on encoding errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream, isExplicit : Bool) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream, isExplicit : Bool) : Void;
 	
 	/**
 	* Get the extension with this alias.
 	*
 	* @param alias the identifier string for the extension to retrieve.
 	*/
-	@:overload public function get(alias : String) : sun.security.x509.Extension;
+	@:overload @:public public function get(alias : String) : sun.security.x509.Extension;
 	
 	/**
 	* Set the extension value with this alias.
@@ -63,32 +63,32 @@ extern class CRLExtensions
 	* @param obj the Object to set the extension identified by the
 	*        alias.
 	*/
-	@:overload public function set(alias : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(alias : String, obj : Dynamic) : Void;
 	
 	/**
 	* Delete the extension value with this alias.
 	*
 	* @param alias the identifier string for the extension to delete.
 	*/
-	@:overload public function delete(alias : String) : Void;
+	@:overload @:public public function delete(alias : String) : Void;
 	
 	/**
 	* Return an enumeration of the extensions.
 	* @return an enumeration of the extensions in this CRL.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<sun.security.x509.Extension>;
+	@:overload @:public public function getElements() : java.util.Enumeration<sun.security.x509.Extension>;
 	
 	/**
 	* Return a collection view of the extensions.
 	* @return a collection view of the extensions in this CRL.
 	*/
-	@:overload public function getAllExtensions() : java.util.Collection<sun.security.x509.Extension>;
+	@:overload @:public public function getAllExtensions() : java.util.Collection<sun.security.x509.Extension>;
 	
 	/**
 	* Return true if a critical extension is found that is
 	* not supported, otherwise return false.
 	*/
-	@:overload public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public public function hasUnsupportedCriticalExtension() : Bool;
 	
 	/**
 	* Compares this CRLExtensions for equality with the specified
@@ -100,14 +100,14 @@ extern class CRLExtensions
 	* @return true iff all the entries match that of the Other,
 	* false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this CRLExtensions.
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <tt>CRLExtensions</tt> object
@@ -117,7 +117,7 @@ extern class CRLExtensions
 	*
 	* @return  a string representation of this CRLExtensions.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

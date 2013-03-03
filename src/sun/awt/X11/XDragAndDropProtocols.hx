@@ -25,21 +25,21 @@ package sun.awt.X11;
 */
 @:internal extern class XDragAndDropProtocols
 {
-	public static var XDnD(default, null) : String;
+	@:public @:static @:final public static var XDnD(default, null) : String;
 	
-	public static var MotifDnD(default, null) : String;
+	@:public @:static @:final public static var MotifDnD(default, null) : String;
 	
 	/*
 	* Returns a XDragSourceProtocol whose name equals to the specified string
 	* or null if no such protocol is registered.
 	*/
-	@:overload public static function getDragSourceProtocol(name : String) : sun.awt.X11.XDragSourceProtocol;
+	@:overload @:public @:static public static function getDragSourceProtocol(name : String) : sun.awt.X11.XDragSourceProtocol;
 	
 	/*
 	* Returns a XDropTargetProtocol which name equals to the specified string
 	* or null if no such protocol is registered.
 	*/
-	@:overload public static function getDropTargetProtocol(name : String) : sun.awt.X11.XDropTargetProtocol;
+	@:overload @:public @:static public static function getDropTargetProtocol(name : String) : sun.awt.X11.XDropTargetProtocol;
 	
 	
 }

@@ -71,7 +71,7 @@ extern class SourceFile extends com.sun.org.apache.bcel.internal.classfile.Attri
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.SourceFile) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.SourceFile) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to CONSTANT_Utf8, which
@@ -86,7 +86,7 @@ extern class SourceFile extends com.sun.org.apache.bcel.internal.classfile.Attri
 	* information has to be supplied the consumer of this attribute - in
 	* many cases, the JVM.
 	*/
-	@:overload public function new(name_index : Int, length : Int, sourcefile_index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, sourcefile_index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -95,7 +95,7 @@ extern class SourceFile extends com.sun.org.apache.bcel.internal.classfile.Attri
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump source file attribute to file stream in binary format.
@@ -103,32 +103,32 @@ extern class SourceFile extends com.sun.org.apache.bcel.internal.classfile.Attri
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Index in constant pool of source file name.
 	*/
-	@:overload @:final public function getSourceFileIndex() : Int;
+	@:overload @:public @:final public function getSourceFileIndex() : Int;
 	
 	/**
 	* @param sourcefile_index.
 	*/
-	@:overload @:final public function setSourceFileIndex(sourcefile_index : Int) : Void;
+	@:overload @:public @:final public function setSourceFileIndex(sourcefile_index : Int) : Void;
 	
 	/**
 	* @return Source file name.
 	*/
-	@:overload @:final public function getSourceFileName() : String;
+	@:overload @:public @:final public function getSourceFileName() : String;
 	
 	/**
 	* @return String representation
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

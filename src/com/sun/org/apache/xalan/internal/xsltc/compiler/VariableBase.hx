@@ -30,40 +30,40 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @author Erwin Bolwidt <ejb@klomp.org>
 	* @author John Howard <JohnH@schemasoft.com>
 	*/
-	private var _name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:protected private var _name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
-	private var _escapedName : String;
+	@:protected private var _escapedName : String;
 	
-	private var _type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:protected private var _type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	private var _isLocal : Bool;
+	@:protected private var _isLocal : Bool;
 	
-	private var _local : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:protected private var _local : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
-	private var _loadInstruction : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:protected private var _loadInstruction : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	private var _storeInstruction : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:protected private var _storeInstruction : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	private var _select : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:protected private var _select : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	private var select : String;
+	@:protected private var select : String;
 	
-	private var _refs : java.util.Vector<Dynamic>;
+	@:protected private var _refs : java.util.Vector<Dynamic>;
 	
-	private var _dependencies : java.util.Vector<Dynamic>;
+	@:protected private var _dependencies : java.util.Vector<Dynamic>;
 	
-	private var _ignore : Bool;
+	@:protected private var _ignore : Bool;
 	
 	/**
 	* Disable this variable/parameter
 	*/
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
 	/**
 	* Add a reference to this variable. Called by VariableRef when an
 	* expression contains a reference to this variable.
 	*/
-	@:overload public function addReference(vref : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
+	@:overload @:public public function addReference(vref : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
 	
 	/**
 	* When a variable is overriden by another, e.g. via xsl:import,
@@ -71,82 +71,82 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* compiled away as dead code. This method can be used for that
 	* purpose.
 	*/
-	@:overload public function copyReferences(_var : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase) : Void;
+	@:overload @:public public function copyReferences(_var : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase) : Void;
 	
 	/**
 	* Map this variable to a register
 	*/
-	@:overload public function mapRegister(methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function mapRegister(methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Remove the mapping of this variable to a register.
 	* Called when we leave the AST scope of the variable's declaration
 	*/
-	@:overload public function unmapRegister(methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function unmapRegister(methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Returns an instruction for loading the value of this variable onto
 	* the JVM stack.
 	*/
-	@:overload public function loadInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Returns an instruction for storing a value from the JVM stack
 	* into this variable.
 	*/
-	@:overload public function storeInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Returns the expression from this variable's select attribute (if any)
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
 	/**
 	* Display variable as single string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Display variable in a full AST dump
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Returns the type of the variable
 	*/
-	@:overload public function getType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public public function getType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Returns the name of the variable or parameter as it will occur in the
 	* compiled translet.
 	*/
-	@:overload public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
 	/**
 	* Returns the escaped qname of the variable or parameter
 	*/
-	@:overload public function getEscapedName() : String;
+	@:overload @:public public function getEscapedName() : String;
 	
 	/**
 	* Set the name of the variable or paremeter. Escape all special chars.
 	*/
-	@:overload public function setName(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
+	@:overload @:public public function setName(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
 	
 	/**
 	* Returns the true if the variable is local
 	*/
-	@:overload public function isLocal() : Bool;
+	@:overload @:public public function isLocal() : Bool;
 	
 	/**
 	* Parse the contents of the <xsl:decimal-format> element.
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Compile the value of the variable, which is either in an expression in
 	* a 'select' attribute, or in the variable elements body
 	*/
-	@:overload public function translateValue(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateValue(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

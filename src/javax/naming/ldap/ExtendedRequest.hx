@@ -31,7 +31,7 @@ extern interface ExtendedRequest extends java.io.Serializable
 	* @return The non-null object identifier string representing the LDAP
 	*         <tt>ExtendedRequest.requestName</tt> component.
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Retrieves the ASN.1 BER encoded value of the LDAP extended operation
@@ -48,7 +48,7 @@ extern interface ExtendedRequest extends java.io.Serializable
 	* @exception IllegalStateException If the encoded value cannot be retrieved
 	* because the request contains insufficient or invalid data/state.
 	*/
-	@:overload public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates the response object that corresponds to this request.
@@ -80,7 +80,7 @@ extern interface ExtendedRequest extends java.io.Serializable
 	*     due to an error.
 	* @see ExtendedResponse
 	*/
-	@:overload public function createExtendedResponse(id : String, berValue : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : javax.naming.ldap.ExtendedResponse;
+	@:overload @:public public function createExtendedResponse(id : String, berValue : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : javax.naming.ldap.ExtendedResponse;
 	
 	
 }

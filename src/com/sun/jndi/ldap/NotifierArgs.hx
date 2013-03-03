@@ -36,9 +36,9 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class NotifierArgs
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

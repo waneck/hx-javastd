@@ -39,7 +39,7 @@ extern class JdbcRowSetResourceBundle implements java.io.Serializable
 	*
 	* @throws IOException if unable to find the RowSetResourceBundle.properties
 	*/
-	@:overload public static function getJdbcRowSetResourceBundle() : com.sun.rowset.JdbcRowSetResourceBundle;
+	@:overload @:public @:static public static function getJdbcRowSetResourceBundle() : com.sun.rowset.JdbcRowSetResourceBundle;
 	
 	/**
 	* This method returns an enumerated handle of the keys
@@ -48,7 +48,7 @@ extern class JdbcRowSetResourceBundle implements java.io.Serializable
 	* @return an enumeration of keys which have messages tranlated to
 	* corresponding locales.
 	*/
-	@:overload public function getKeys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getKeys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* This method takes the key as an argument and
@@ -58,7 +58,7 @@ extern class JdbcRowSetResourceBundle implements java.io.Serializable
 	* @return value in locale specific language
 	* according to the key passed.
 	*/
-	@:overload public function handleGetObject(key : String) : Dynamic;
+	@:overload @:public public function handleGetObject(key : String) : Dynamic;
 	
 	
 }

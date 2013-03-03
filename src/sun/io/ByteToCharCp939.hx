@@ -25,9 +25,9 @@ package sun.io;
 */
 extern class ByteToCharCp939 extends sun.io.ByteToCharDBCS_EBCDIC
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

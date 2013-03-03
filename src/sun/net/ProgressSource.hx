@@ -28,70 +28,70 @@ extern class ProgressSource
 	/**
 	* Construct progress source object.
 	*/
-	@:overload public function new(url : java.net.URL, method : String) : Void;
+	@:overload @:public public function new(url : java.net.URL, method : String) : Void;
 	
 	/**
 	* Construct progress source object.
 	*/
-	@:overload public function new(url : java.net.URL, method : String, expected : haxe.Int64) : Void;
+	@:overload @:public public function new(url : java.net.URL, method : String, expected : haxe.Int64) : Void;
 	
-	@:overload public function connected() : Bool;
+	@:overload @:public public function connected() : Bool;
 	
 	/**
 	* Close progress source.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Return URL of progress source.
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	/**
 	* Return method of URL.
 	*/
-	@:overload public function getMethod() : String;
+	@:overload @:public public function getMethod() : String;
 	
 	/**
 	* Return content type of URL.
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function setContentType(ct : String) : Void;
+	@:overload @:public public function setContentType(ct : String) : Void;
 	
 	/**
 	* Return current progress.
 	*/
-	@:overload public function getProgress() : haxe.Int64;
+	@:overload @:public public function getProgress() : haxe.Int64;
 	
 	/**
 	* Return expected maximum progress; -1 if expected is unknown.
 	*/
-	@:overload public function getExpected() : haxe.Int64;
+	@:overload @:public public function getExpected() : haxe.Int64;
 	
 	/**
 	* Return state.
 	*/
-	@:overload public function getState() : sun.net.ProgressSource.ProgressSource_State;
+	@:overload @:public public function getState() : sun.net.ProgressSource.ProgressSource_State;
 	
 	/**
 	* Begin progress tracking.
 	*/
-	@:overload public function beginTracking() : Void;
+	@:overload @:public public function beginTracking() : Void;
 	
 	/**
 	* Finish progress tracking.
 	*/
-	@:overload public function finishTracking() : Void;
+	@:overload @:public public function finishTracking() : Void;
 	
 	/**
 	* Update progress.
 	*/
-	@:overload public function updateProgress(latestProgress : haxe.Int64, expectedProgress : haxe.Int64) : Void;
+	@:overload @:public public function updateProgress(latestProgress : haxe.Int64, expectedProgress : haxe.Int64) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

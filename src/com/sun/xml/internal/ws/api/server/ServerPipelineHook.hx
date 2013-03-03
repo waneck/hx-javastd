@@ -47,7 +47,7 @@ extern class ServerPipelineHook
 	*      no additional pipe is inserted. If the implementation adds
 	*      new pipes, return the new head pipe.
 	*/
-	@:overload public function createMonitoringPipe(ctxt : com.sun.xml.internal.ws.api.pipe.ServerPipeAssemblerContext, tail : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createMonitoringPipe(ctxt : com.sun.xml.internal.ws.api.pipe.ServerPipeAssemblerContext, tail : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Called during the pipeline construction process once to allow a container
@@ -71,7 +71,7 @@ extern class ServerPipelineHook
 	*      no additional pipe is inserted. If the implementation adds
 	*      new pipes, return the new head pipe.
 	*/
-	@:overload public function createSecurityPipe(ctxt : com.sun.xml.internal.ws.api.pipe.ServerPipeAssemblerContext, tail : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createSecurityPipe(ctxt : com.sun.xml.internal.ws.api.pipe.ServerPipeAssemblerContext, tail : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	
 }

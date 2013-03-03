@@ -35,7 +35,7 @@ extern class FocusingTextField extends java.awt.TextField
 	* Create a FocusingTextField.
 	* @param cols number of columns of text.
 	*/
-	@:overload public function new(cols : Int) : Void;
+	@:overload @:public public function new(cols : Int) : Void;
 	
 	/**
 	* Create a FocusingTextField.
@@ -43,32 +43,32 @@ extern class FocusingTextField extends java.awt.TextField
 	* @param willSelect if true, will select all contents of field when
 	* focus is gained.
 	*/
-	@:overload public function new(cols : Int, willSelect : Bool) : Void;
+	@:overload @:public public function new(cols : Int, willSelect : Bool) : Void;
 	
-	@:overload public function setWillSelect(will : Bool) : Void;
+	@:overload @:public public function setWillSelect(will : Bool) : Void;
 	
-	@:overload public function getWillSelect() : Bool;
+	@:overload @:public public function getWillSelect() : Bool;
 	
 	/**
 	* Call this to set the next field to receive the input focus.
 	* @param next the next TextField in order - can be null.
 	*/
-	@:overload public function setNextField(next : java.awt.TextField) : Void;
+	@:overload @:public public function setNextField(next : java.awt.TextField) : Void;
 	
 	/**
 	* We got the focus.  If willSelect is true, select everything.
 	*/
-	@:overload override public function gotFocus(e : java.awt.Event, arg : Dynamic) : Bool;
+	@:overload @:public override public function gotFocus(e : java.awt.Event, arg : Dynamic) : Bool;
 	
 	/**
 	* We lost the focus.  If willSelect is true, deselect everything.
 	*/
-	@:overload override public function lostFocus(e : java.awt.Event, arg : Dynamic) : Bool;
+	@:overload @:public override public function lostFocus(e : java.awt.Event, arg : Dynamic) : Bool;
 	
 	/**
 	* Pass the focus to the next guy, if any.
 	*/
-	@:overload override public function nextFocus() : Void;
+	@:overload @:public override public function nextFocus() : Void;
 	
 	
 }

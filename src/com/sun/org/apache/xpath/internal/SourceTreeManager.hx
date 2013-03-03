@@ -27,7 +27,7 @@ extern class SourceTreeManager
 	* Reset the list of SourceTree objects that this manager manages.
 	*
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set an object that will be used to resolve URIs used in
@@ -35,7 +35,7 @@ extern class SourceTreeManager
 	* @param resolver An object that implements the URIResolver interface,
 	* or null.
 	*/
-	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* Get the object that will be used to resolve URIs used in
@@ -43,7 +43,7 @@ extern class SourceTreeManager
 	* @return An object that implements the URIResolver interface,
 	* or null.
 	*/
-	@:overload public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* Given a document, find the URL associated with that document.
@@ -51,7 +51,7 @@ extern class SourceTreeManager
 	*
 	* @return The base URI of the owner argument.
 	*/
-	@:overload public function findURIFromDoc(owner : Int) : String;
+	@:overload @:public public function findURIFromDoc(owner : Int) : String;
 	
 	/**
 	* This will be called by the processor when it encounters
@@ -66,14 +66,14 @@ extern class SourceTreeManager
 	* @throws IOException
 	* @throws TransformerException
 	*/
-	@:overload public function resolveURI(base : String, urlString : String, locator : javax.xml.transform.SourceLocator) : javax.xml.transform.Source;
+	@:overload @:public public function resolveURI(base : String, urlString : String, locator : javax.xml.transform.SourceLocator) : javax.xml.transform.Source;
 	
 	/** JJK: Support  <?xalan:doc_cache_off?> kluge in ElemForEach.
 	* TODO: This function is highly dangerous. Cache management must be improved.
 	*
 	* @param n The node to remove.
 	*/
-	@:overload public function removeDocumentFromCache(n : Int) : Void;
+	@:overload @:public public function removeDocumentFromCache(n : Int) : Void;
 	
 	/**
 	* Put the source tree root node in the document cache.
@@ -82,7 +82,7 @@ extern class SourceTreeManager
 	* @param n The node to cache.
 	* @param source The Source object to cache.
 	*/
-	@:overload public function putDocumentInCache(n : Int, source : javax.xml.transform.Source) : Void;
+	@:overload @:public public function putDocumentInCache(n : Int, source : javax.xml.transform.Source) : Void;
 	
 	/**
 	* Given a Source object, find the node associated with it.
@@ -91,7 +91,7 @@ extern class SourceTreeManager
 	*
 	* @return The node that is associated with the Source, or null if not found.
 	*/
-	@:overload public function getNode(source : javax.xml.transform.Source) : Int;
+	@:overload @:public public function getNode(source : javax.xml.transform.Source) : Int;
 	
 	/**
 	* Get the source tree from the a base URL and a URL string.
@@ -105,7 +105,7 @@ extern class SourceTreeManager
 	*
 	* @throws TransformerException If the URL can not resolve to a node.
 	*/
-	@:overload public function getSourceTree(base : String, urlString : String, locator : javax.xml.transform.SourceLocator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getSourceTree(base : String, urlString : String, locator : javax.xml.transform.SourceLocator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Get the source tree from the input source.
@@ -118,7 +118,7 @@ extern class SourceTreeManager
 	* @throws TransformerException if the Source argument can't be resolved to
 	*         a node.
 	*/
-	@:overload public function getSourceTree(source : javax.xml.transform.Source, locator : javax.xml.transform.SourceLocator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getSourceTree(source : javax.xml.transform.Source, locator : javax.xml.transform.SourceLocator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Try to create a DOM source tree from the input source.
@@ -131,7 +131,7 @@ extern class SourceTreeManager
 	* @throws TransformerException if the source argument can not be resolved
 	*         to a source node.
 	*/
-	@:overload public function parseToNode(source : javax.xml.transform.Source, locator : javax.xml.transform.SourceLocator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function parseToNode(source : javax.xml.transform.Source, locator : javax.xml.transform.SourceLocator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* This method returns the SAX2 parser to use with the InputSource
@@ -147,7 +147,7 @@ extern class SourceTreeManager
 	*
 	* @throws TransformerException if the reader can not be created.
 	*/
-	@:overload public static function getXMLReader(inputSource : javax.xml.transform.Source, locator : javax.xml.transform.SourceLocator) : org.xml.sax.XMLReader;
+	@:overload @:public @:static public static function getXMLReader(inputSource : javax.xml.transform.Source, locator : javax.xml.transform.SourceLocator) : org.xml.sax.XMLReader;
 	
 	
 }

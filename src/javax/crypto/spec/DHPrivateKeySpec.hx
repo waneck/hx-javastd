@@ -32,28 +32,28 @@ extern class DHPrivateKeySpec implements java.security.spec.KeySpec
 	* @param p prime modulus p
 	* @param g base generator g
 	*/
-	@:overload public function new(x : java.math.BigInteger, p : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(x : java.math.BigInteger, p : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the private value <code>x</code>.
 	*
 	* @return the private value <code>x</code>
 	*/
-	@:overload public function getX() : java.math.BigInteger;
+	@:overload @:public public function getX() : java.math.BigInteger;
 	
 	/**
 	* Returns the prime modulus <code>p</code>.
 	*
 	* @return the prime modulus <code>p</code>
 	*/
-	@:overload public function getP() : java.math.BigInteger;
+	@:overload @:public public function getP() : java.math.BigInteger;
 	
 	/**
 	* Returns the base generator <code>g</code>.
 	*
 	* @return the base generator <code>g</code>
 	*/
-	@:overload public function getG() : java.math.BigInteger;
+	@:overload @:public public function getG() : java.math.BigInteger;
 	
 	
 }

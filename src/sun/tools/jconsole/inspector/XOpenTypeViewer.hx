@@ -31,33 +31,33 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 	* - it's a non-empty array of CompositeData/TabularData, or
 	* - it's a non-empty Collection of CompositeData/TabularData.
 	*/
-	@:overload public static function isViewableValue(value : Dynamic) : Bool;
+	@:overload @:public @:static public static function isViewableValue(value : Dynamic) : Bool;
 	
-	@:overload public static function loadOpenType(value : Dynamic) : java.awt.Component;
+	@:overload @:public @:static public static function loadOpenType(value : Dynamic) : java.awt.Component;
 	
-	@:overload public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XOpenTypeDataListener') @:internal extern class XOpenTypeViewer_XOpenTypeDataListener extends java.awt.event.MouseAdapter
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$Navigatable') @:internal extern interface XOpenTypeViewer_Navigatable
 {
-	@:overload public function incrElement() : Void;
+	@:overload @:public public function incrElement() : Void;
 	
-	@:overload public function decrElement() : Void;
+	@:overload @:public public function decrElement() : Void;
 	
-	@:overload public function canDecrement() : Bool;
+	@:overload @:public public function canDecrement() : Bool;
 	
-	@:overload public function canIncrement() : Bool;
+	@:overload @:public public function canIncrement() : Bool;
 	
-	@:overload public function getElementCount() : Int;
+	@:overload @:public public function getElementCount() : Int;
 	
-	@:overload public function getSelectedElementIndex() : Int;
+	@:overload @:public public function getSelectedElementIndex() : Int;
 	
 	
 }
@@ -71,105 +71,105 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XOpenTypeData') @:internal extern class XOpenTypeViewer_XOpenTypeData extends javax.swing.JTable
 {
-	private var col1Width : Int;
+	@:protected private var col1Width : Int;
 	
-	private var col2Width : Int;
+	@:protected private var col2Width : Int;
 	
-	@:overload private function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData) : Void;
+	@:overload @:protected private function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData) : Void;
 	
-	@:overload public function getViewedParent() : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData;
+	@:overload @:public public function getViewedParent() : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData;
 	
-	@:overload public function getToolTip(row : Int, col : Int) : String;
+	@:overload @:public public function getToolTip(row : Int, col : Int) : String;
 	
-	@:overload public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload @:public override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
-	@:overload public function renderKey(key : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function renderKey(key : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public override public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload private function isClickableElement(obj : Dynamic) : Bool;
+	@:overload @:protected private function isClickableElement(obj : Dynamic) : Bool;
 	
-	@:overload private function updateColumnWidth() : Void;
+	@:overload @:protected private function updateColumnWidth() : Void;
 	
-	@:overload @:abstract public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
+	@:overload @:public @:abstract public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
 	
-	@:overload private function initTable(columnNames : java.NativeArray<String>) : Void;
+	@:overload @:protected private function initTable(columnNames : java.NativeArray<String>) : Void;
 	
-	@:overload private function emptyTable() : Void;
+	@:overload @:protected private function emptyTable() : Void;
 	
-	@:overload public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
+	@:overload @:public override public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$TabularDataComparator') @:internal extern class XOpenTypeViewer_TabularDataComparator implements java.util.Comparator<javax.management.openmbean.CompositeData>
 {
-	@:overload public function new(type : javax.management.openmbean.TabularType) : Void;
+	@:overload @:public public function new(type : javax.management.openmbean.TabularType) : Void;
 	
-	@:overload public function compare(o1 : javax.management.openmbean.CompositeData, o2 : javax.management.openmbean.CompositeData) : Int;
+	@:overload @:public public function compare(o1 : javax.management.openmbean.CompositeData, o2 : javax.management.openmbean.CompositeData) : Int;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XTabularData') @:internal extern class XOpenTypeViewer_XTabularData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XCompositeData implements sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XViewedTabularData
 {
-	@:overload public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData, tabular : javax.management.openmbean.TabularData) : Void;
+	@:overload @:public public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData, tabular : javax.management.openmbean.TabularData) : Void;
 	
-	@:overload override public function renderKey(key : String, comp : java.awt.Component) : Void;
+	@:overload @:public override public function renderKey(key : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function getElementCount() : Int;
+	@:overload @:public public function getElementCount() : Int;
 	
-	@:overload public function getSelectedElementIndex() : Int;
+	@:overload @:public public function getSelectedElementIndex() : Int;
 	
-	@:overload public function incrElement() : Void;
+	@:overload @:public public function incrElement() : Void;
 	
-	@:overload public function decrElement() : Void;
+	@:overload @:public public function decrElement() : Void;
 	
-	@:overload public function canDecrement() : Bool;
+	@:overload @:public public function canDecrement() : Bool;
 	
-	@:overload public function canIncrement() : Bool;
+	@:overload @:public public function canIncrement() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XCompositeData') @:internal extern class XOpenTypeViewer_XCompositeData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData
 {
-	private var columnNames(default, null) : java.NativeArray<String>;
+	@:protected @:final private var columnNames(default, null) : java.NativeArray<String>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData) : Void;
+	@:overload @:public public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData) : Void;
 	
-	@:overload public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData, composite : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData, composite : javax.management.openmbean.CompositeData) : Void;
 	
-	@:overload override public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
+	@:overload @:public override public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function formatKey(key : String) : Dynamic;
+	@:overload @:protected private function formatKey(key : String) : Dynamic;
 	
-	@:overload private function loadCompositeData(data : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:protected private function loadCompositeData(data : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XArrayData') @:internal extern class XOpenTypeViewer_XArrayData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XCompositeData implements sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XViewedArrayData
 {
-	@:overload override public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
+	@:overload @:public override public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
 	
-	@:overload public function getElementCount() : Int;
+	@:overload @:public public function getElementCount() : Int;
 	
-	@:overload public function getSelectedElementIndex() : Int;
+	@:overload @:public public function getSelectedElementIndex() : Int;
 	
-	@:overload override public function renderKey(key : String, comp : java.awt.Component) : Void;
+	@:overload @:public override public function renderKey(key : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function incrElement() : Void;
+	@:overload @:public public function incrElement() : Void;
 	
-	@:overload public function decrElement() : Void;
+	@:overload @:public public function decrElement() : Void;
 	
-	@:overload public function canDecrement() : Bool;
+	@:overload @:public public function canDecrement() : Bool;
 	
-	@:overload public function canIncrement() : Bool;
+	@:overload @:public public function canIncrement() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

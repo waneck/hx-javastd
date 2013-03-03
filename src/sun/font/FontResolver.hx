@@ -36,9 +36,9 @@ extern class FontResolver
 	* @return a value for consumption by getFont()
 	* @see #getFont
 	*/
-	@:overload public function getFontIndex(c : java.StdTypes.Char16) : Int;
+	@:overload @:public public function getFontIndex(c : java.StdTypes.Char16) : Int;
 	
-	@:overload public function getFontIndex(cp : Int) : Int;
+	@:overload @:public public function getFontIndex(cp : Int) : Int;
 	
 	/**
 	* Determines the font index for the code point at the current position in the
@@ -49,7 +49,7 @@ extern class FontResolver
 	* @return the font index for the initial code point found, or 1 if the iterator
 	* was empty.
 	*/
-	@:overload public function nextFontRunIndex(iter : sun.text.CodePointIterator) : Int;
+	@:overload @:public public function nextFontRunIndex(iter : sun.text.CodePointIterator) : Int;
 	
 	/**
 	* Return a Font from a given font index with properties
@@ -65,12 +65,12 @@ extern class FontResolver
 	*        is Font.PLAIN
 	* @see #getFontIndex
 	*/
-	@:overload public function getFont(index : Int, attributes : java.util.Map<Dynamic, Dynamic>) : java.awt.Font;
+	@:overload @:public public function getFont(index : Int, attributes : java.util.Map<Dynamic, Dynamic>) : java.awt.Font;
 	
 	/**
 	* Return a shared instance of FontResolver.
 	*/
-	@:overload public static function getInstance() : sun.font.FontResolver;
+	@:overload @:public @:static public static function getInstance() : sun.font.FontResolver;
 	
 	
 }

@@ -26,7 +26,7 @@ package com.sun.xml.internal.stream.writers;
 extern class XMLOutputSource
 {
 	/** Creates a new instance of XMLOutputSource */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -40,7 +40,13 @@ extern class EmptyBorder extends javax.swing.border.AbstractBorder implements ja
 	*
 	* @author David Kloba
 	*/
-	private var left : Int;
+	@:protected private var left : Int;
+	
+	@:protected private var right : Int;
+	
+	@:protected private var top : Int;
+	
+	@:protected private var bottom : Int;
 	
 	/**
 	* Creates an empty border with the specified insets.
@@ -49,37 +55,37 @@ extern class EmptyBorder extends javax.swing.border.AbstractBorder implements ja
 	* @param bottom the bottom inset of the border
 	* @param right the right inset of the border
 	*/
-	@:overload public function new(top : Int, left : Int, bottom : Int, right : Int) : Void;
+	@:overload @:public public function new(top : Int, left : Int, bottom : Int, right : Int) : Void;
 	
 	/**
 	* Creates an empty border with the specified insets.
 	* @param borderInsets the insets of the border
 	*/
-	@:overload public function new(borderInsets : java.awt.Insets) : Void;
+	@:overload @:public public function new(borderInsets : java.awt.Insets) : Void;
 	
 	/**
 	* Does no drawing by default.
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the insets of the border.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getBorderInsets() : java.awt.Insets;
+	@:require(java3) @:overload @:public public function getBorderInsets() : java.awt.Insets;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	* Returns false by default.
 	*/
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

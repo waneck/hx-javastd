@@ -28,21 +28,21 @@ package java.net;
 	/**
 	* Creates a datagram socket
 	*/
-	@:overload @:synchronized private function create() : Void;
+	@:overload @:protected @:synchronized override private function create() : Void;
 	
 	/**
 	* Binds a datagram socket to a local port.
 	*/
-	@:overload @:synchronized private function bind(lport : Int, laddr : java.net.InetAddress) : Void;
+	@:overload @:protected @:synchronized override private function bind(lport : Int, laddr : java.net.InetAddress) : Void;
 	
-	@:overload @:abstract private function bind0(lport : Int, laddr : java.net.InetAddress) : Void;
+	@:overload @:protected @:abstract private function bind0(lport : Int, laddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Sends a datagram packet. The packet contains the data and the
 	* destination address to send the packet to.
 	* @param packet to be sent.
 	*/
-	@:overload @:abstract private function send(p : java.net.DatagramPacket) : Void;
+	@:overload @:protected @:abstract override private function send(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Connects a datagram socket to a remote destination. This associates the remote
@@ -51,63 +51,63 @@ package java.net;
 	* @param address the remote InetAddress to connect to
 	* @param port the remote port number
 	*/
-	@:overload private function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected override private function connect(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Disconnects a previously connected socket. Does nothing if the socket was
 	* not connected already.
 	*/
-	@:overload private function disconnect() : Void;
+	@:overload @:protected override private function disconnect() : Void;
 	
 	/**
 	* Peek at the packet to see who it is from.
 	* @param return the address which the packet came from.
 	*/
-	@:overload @:abstract private function peek(i : java.net.InetAddress) : Int;
+	@:overload @:protected @:abstract override private function peek(i : java.net.InetAddress) : Int;
 	
-	@:overload @:abstract private function peekData(p : java.net.DatagramPacket) : Int;
+	@:overload @:protected @:abstract override private function peekData(p : java.net.DatagramPacket) : Int;
 	
 	/**
 	* Receive the datagram packet.
 	* @param Packet Received.
 	*/
-	@:overload @:synchronized private function receive(p : java.net.DatagramPacket) : Void;
+	@:overload @:protected @:synchronized override private function receive(p : java.net.DatagramPacket) : Void;
 	
-	@:overload @:abstract private function receive0(p : java.net.DatagramPacket) : Void;
-	
-	/**
-	* Set the TTL (time-to-live) option.
-	* @param TTL to be set.
-	*/
-	@:overload @:abstract private function setTimeToLive(ttl : Int) : Void;
-	
-	/**
-	* Get the TTL (time-to-live) option.
-	*/
-	@:overload @:abstract private function getTimeToLive() : Int;
+	@:overload @:protected @:abstract private function receive0(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Set the TTL (time-to-live) option.
 	* @param TTL to be set.
 	*/
-	@:overload @:abstract private function setTTL(ttl : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:abstract override private function setTimeToLive(ttl : Int) : Void;
 	
 	/**
 	* Get the TTL (time-to-live) option.
 	*/
-	@:overload @:abstract private function getTTL() : java.StdTypes.Int8;
+	@:overload @:protected @:abstract override private function getTimeToLive() : Int;
+	
+	/**
+	* Set the TTL (time-to-live) option.
+	* @param TTL to be set.
+	*/
+	@:overload @:protected @:abstract override private function setTTL(ttl : java.StdTypes.Int8) : Void;
+	
+	/**
+	* Get the TTL (time-to-live) option.
+	*/
+	@:overload @:protected @:abstract override private function getTTL() : java.StdTypes.Int8;
 	
 	/**
 	* Join the multicast group.
 	* @param multicast address to join.
 	*/
-	@:overload private function join(inetaddr : java.net.InetAddress) : Void;
+	@:overload @:protected override private function join(inetaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Leave the multicast group.
 	* @param multicast address to leave.
 	*/
-	@:overload private function leave(inetaddr : java.net.InetAddress) : Void;
+	@:overload @:protected override private function leave(inetaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Join the multicast group.
@@ -118,9 +118,9 @@ package java.net;
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:protected override private function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
-	@:overload @:abstract private function join(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
+	@:overload @:protected @:abstract private function join(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Leave the multicast group.
@@ -130,43 +130,43 @@ package java.net;
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload @:protected override private function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
-	@:overload @:abstract private function leave(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
+	@:overload @:protected @:abstract private function leave(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Close the socket.
 	*/
-	@:overload private function close() : Void;
+	@:overload @:protected override private function close() : Void;
 	
-	@:overload private function isClosed() : Bool;
+	@:overload @:protected private function isClosed() : Bool;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	/**
 	* set a value - since we only support (setting) binary options
 	* here, o must be a Boolean
 	*/
-	@:overload override public function setOption(optID : Int, o : Dynamic) : Void;
+	@:overload @:public override public function setOption(optID : Int, o : Dynamic) : Void;
 	
 	/*
 	* get option's state - set or not
 	*/
-	@:overload override public function getOption(optID : Int) : Dynamic;
+	@:overload @:public override public function getOption(optID : Int) : Dynamic;
 	
-	@:overload @:abstract private function datagramSocketCreate() : Void;
+	@:overload @:protected @:abstract private function datagramSocketCreate() : Void;
 	
-	@:overload @:abstract private function datagramSocketClose() : Void;
+	@:overload @:protected @:abstract private function datagramSocketClose() : Void;
 	
-	@:overload @:abstract private function socketSetOption(opt : Int, val : Dynamic) : Void;
+	@:overload @:protected @:abstract private function socketSetOption(opt : Int, val : Dynamic) : Void;
 	
-	@:overload @:abstract private function socketGetOption(opt : Int) : Dynamic;
+	@:overload @:protected @:abstract private function socketGetOption(opt : Int) : Dynamic;
 	
-	@:overload @:abstract private function connect0(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected @:abstract private function connect0(address : java.net.InetAddress, port : Int) : Void;
 	
-	@:overload @:abstract private function disconnect0(family : Int) : Void;
+	@:overload @:protected @:abstract private function disconnect0(family : Int) : Void;
 	
-	@:overload private function nativeConnectDisabled() : Bool;
+	@:overload @:protected private function nativeConnectDisabled() : Bool;
 	
 	
 }

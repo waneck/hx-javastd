@@ -45,9 +45,9 @@ package sun.security.jgss.spnego;
 */
 @:require(java6) extern class NegTokenTarg extends sun.security.jgss.spnego.SpNegoToken
 {
-	@:overload public function new(_in : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(_in : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getSupportedMech() : org.ietf.jgss.Oid;
+	@:overload @:public public function getSupportedMech() : org.ietf.jgss.Oid;
 	
 	
 }

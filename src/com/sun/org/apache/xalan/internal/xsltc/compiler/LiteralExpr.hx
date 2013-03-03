@@ -27,26 +27,26 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Creates a new literal expression node.
 	* @param value the literal expression content/value.
 	*/
-	@:overload public function new(value : String) : Void;
+	@:overload @:public public function new(value : String) : Void;
 	
 	/**
 	* Creates a new literal expression node.
 	* @param value the literal expression content/value.
 	* @param namespace the namespace in which the expression exists.
 	*/
-	@:overload public function new(value : String, namespace : String) : Void;
+	@:overload @:public public function new(value : String, namespace : String) : Void;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function contextDependent() : Bool;
+	@:overload @:protected override private function contextDependent() : Bool;
 	
-	@:overload private function getValue() : String;
+	@:overload @:protected private function getValue() : String;
 	
-	@:overload private function getNamespace() : String;
+	@:overload @:protected private function getNamespace() : String;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

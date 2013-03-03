@@ -37,127 +37,127 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class AnnotationTypeWriterImpl extends com.sun.tools.doclets.formats.html.SubWriterHolderWriter implements com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter
 {
-	private var annotationType : com.sun.javadoc.AnnotationTypeDoc;
+	@:protected private var annotationType : com.sun.javadoc.AnnotationTypeDoc;
 	
-	private var prev : com.sun.javadoc.Type;
+	@:protected private var prev : com.sun.javadoc.Type;
 	
-	private var next : com.sun.javadoc.Type;
+	@:protected private var next : com.sun.javadoc.Type;
 	
 	/**
 	* @param annotationType the annotation type being documented.
 	* @param prevType the previous class that was documented.
 	* @param nextType the next class being documented.
 	*/
-	@:overload public function new(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : Void;
+	@:overload @:public public function new(annotationType : com.sun.javadoc.AnnotationTypeDoc, prevType : com.sun.javadoc.Type, nextType : com.sun.javadoc.Type) : Void;
 	
 	/**
 	* Get this package link.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class link.
 	*
 	* @return a content tree for the class link
 	*/
-	@:overload private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class use link.
 	*
 	* @return a content tree for the class use link
 	*/
-	@:overload private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to previous class.
 	*
 	* @return a content tree for the previous class link
 	*/
-	@:overload public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to next class.
 	*
 	* @return a content tree for the next class link
 	*/
-	@:overload public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationInfoTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationInfoTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAnnotationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addAnnotationTypeSignature(modifiers : String, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeSignature(modifiers : String, annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addAnnotationTypeDescription(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeDescription(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addAnnotationTypeTagInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeTagInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addAnnotationTypeDeprecationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationTypeDeprecationInfo(annotationInfoTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addAnnotationDetailsMarker(memberDetails : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationDetailsMarker(memberDetails : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add summary details to the navigation bar.
 	*
 	* @param subDiv the content tree to which the summary detail links will be added
 	*/
-	@:overload private function addSummaryDetailLinks(subDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected override private function addSummaryDetailLinks(subDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get summary links for navigation bar.
 	*
 	* @return the content tree for the navigation summary links
 	*/
-	@:overload private function getNavSummaryLinks() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavSummaryLinks() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the navigation summary link.
@@ -167,26 +167,26 @@ extern class AnnotationTypeWriterImpl extends com.sun.tools.doclets.formats.html
 	* @param type type to be documented
 	* @param liNav the content tree to which the navigation summary link will be added
 	*/
-	@:overload private function addNavSummaryLink(builder : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder, label : String, type : Int, liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addNavSummaryLink(builder : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder, label : String, type : Int, liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get detail links for the navigation bar.
 	*
 	* @return the content tree for the detail links
 	*/
-	@:overload private function getNavDetailLinks() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavDetailLinks() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add gap between navigation bar elements.
 	*
 	* @param liNav the content tree to which the gap will be added
 	*/
-	@:overload private function addNavGap(liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addNavGap(liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function getAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	
 }

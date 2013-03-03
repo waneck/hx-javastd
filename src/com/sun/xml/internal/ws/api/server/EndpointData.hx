@@ -28,13 +28,13 @@ extern class EndpointData
 	/**
 	* @author Jitendra Kotamraju
 	*/
-	@:overload @:abstract public function getNamespace() : String;
+	@:overload @:public @:abstract public function getNamespace() : String;
 	
-	@:overload @:abstract public function getServiceName() : String;
+	@:overload @:public @:abstract public function getServiceName() : String;
 	
-	@:overload @:abstract public function getPortName() : String;
+	@:overload @:public @:abstract public function getPortName() : String;
 	
-	@:overload @:abstract public function getImplClass() : String;
+	@:overload @:public @:abstract public function getImplClass() : String;
 	
 	
 }

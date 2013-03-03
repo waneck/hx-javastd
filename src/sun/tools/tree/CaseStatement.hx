@@ -28,17 +28,17 @@ extern class CaseStatement extends sun.tools.tree.Statement
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, expr : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, expr : sun.tools.tree.Expression) : Void;
 	
 	/**
 	* The cost of inlining this statement
 	*/
-	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Print
 	*/
-	@:overload public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
 	
 }

@@ -59,7 +59,7 @@ extern interface NamedNodeMap
 	*   <code>nodeName</code>, or <code>null</code> if it does not identify
 	*   any node in this map.
 	*/
-	@:overload public function getNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a node using its <code>nodeName</code> attribute. If a node with
@@ -89,7 +89,7 @@ extern interface NamedNodeMap
 	*   of attributes, or a non-Entity node into the DocumentType's map of
 	*   Entities.
 	*/
-	@:overload public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes a node specified by name. When this map contains the attributes
@@ -105,7 +105,7 @@ extern interface NamedNodeMap
 	*   this map.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this map is readonly.
 	*/
-	@:overload public function removeNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItem(name : String) : org.w3c.dom.Node;
 	
 	/**
 	* Returns the <code>index</code>th item in the map. If <code>index</code>
@@ -115,13 +115,13 @@ extern interface NamedNodeMap
 	* @return The node at the <code>index</code>th position in the map, or
 	*   <code>null</code> if that is not a valid index.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
 	/**
 	* The number of nodes in this map. The range of valid child node indices
 	* is <code>0</code> to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Retrieves a node specified by local name and namespace URI.
@@ -139,7 +139,7 @@ extern interface NamedNodeMap
 	*   Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a node using its <code>namespaceURI</code> and
@@ -173,7 +173,7 @@ extern interface NamedNodeMap
 	*   Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes a node specified by local name and namespace URI. A removed
@@ -198,7 +198,7 @@ extern interface NamedNodeMap
 	*   Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	
 }

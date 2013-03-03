@@ -25,13 +25,13 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 */
 @:internal extern class ChunkInputStream extends java.io.InputStream
 {
-	@:overload public function new(msg : com.sun.xml.internal.org.jvnet.mimepull.MIMEMessage, part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart, startPos : com.sun.xml.internal.org.jvnet.mimepull.Chunk) : Void;
+	@:overload @:public public function new(msg : com.sun.xml.internal.org.jvnet.mimepull.MIMEMessage, part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart, startPos : com.sun.xml.internal.org.jvnet.mimepull.Chunk) : Void;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

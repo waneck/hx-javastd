@@ -43,7 +43,7 @@ extern class TrayIcon
 	* @see SecurityManager#checkPermission
 	* @see AWTPermission
 	*/
-	@:overload public function new(image : java.awt.Image) : Void;
+	@:overload @:public public function new(image : java.awt.Image) : Void;
 	
 	/**
 	* Creates a <code>TrayIcon</code> with the specified image and
@@ -66,7 +66,7 @@ extern class TrayIcon
 	* @see SecurityManager#checkPermission
 	* @see AWTPermission
 	*/
-	@:overload public function new(image : java.awt.Image, tooltip : String) : Void;
+	@:overload @:public public function new(image : java.awt.Image, tooltip : String) : Void;
 	
 	/**
 	* Creates a <code>TrayIcon</code> with the specified image,
@@ -93,7 +93,7 @@ extern class TrayIcon
 	* @see SecurityManager#checkPermission
 	* @see AWTPermission
 	*/
-	@:overload public function new(image : java.awt.Image, tooltip : String, popup : java.awt.PopupMenu) : Void;
+	@:overload @:public public function new(image : java.awt.Image, tooltip : String, popup : java.awt.PopupMenu) : Void;
 	
 	/**
 	* Sets the image for this <code>TrayIcon</code>.  The previous
@@ -117,7 +117,7 @@ extern class TrayIcon
 	* @see SystemTray#add(TrayIcon)
 	* @see TrayIcon#TrayIcon(Image, String)
 	*/
-	@:overload public function setImage(image : java.awt.Image) : Void;
+	@:overload @:public public function setImage(image : java.awt.Image) : Void;
 	
 	/**
 	* Returns the current image used for this <code>TrayIcon</code>.
@@ -126,7 +126,7 @@ extern class TrayIcon
 	* @see #setImage(Image)
 	* @see Image
 	*/
-	@:overload public function getImage() : java.awt.Image;
+	@:overload @:public public function getImage() : java.awt.Image;
 	
 	/**
 	* Sets the popup menu for this <code>TrayIcon</code>.  If
@@ -154,7 +154,7 @@ extern class TrayIcon
 	* remove any popup menu
 	* @see #getPopupMenu
 	*/
-	@:overload public function setPopupMenu(popup : java.awt.PopupMenu) : Void;
+	@:overload @:public public function setPopupMenu(popup : java.awt.PopupMenu) : Void;
 	
 	/**
 	* Returns the popup menu associated with this <code>TrayIcon</code>.
@@ -162,7 +162,7 @@ extern class TrayIcon
 	* @return the popup menu or <code>null</code> if none exists
 	* @see #setPopupMenu(PopupMenu)
 	*/
-	@:overload public function getPopupMenu() : java.awt.PopupMenu;
+	@:overload @:public public function getPopupMenu() : java.awt.PopupMenu;
 	
 	/**
 	* Sets the tooltip string for this <code>TrayIcon</code>. The
@@ -177,7 +177,7 @@ extern class TrayIcon
 	* <code>null</code> no tooltip is shown
 	* @see #getToolTip
 	*/
-	@:overload public function setToolTip(tooltip : String) : Void;
+	@:overload @:public public function setToolTip(tooltip : String) : Void;
 	
 	/**
 	* Returns the tooltip string associated with this
@@ -186,7 +186,7 @@ extern class TrayIcon
 	* @return the tooltip string or <code>null</code> if none exists
 	* @see #setToolTip(String)
 	*/
-	@:overload public function getToolTip() : String;
+	@:overload @:public public function getToolTip() : String;
 	
 	/**
 	* Sets the auto-size property.  Auto-size determines whether the
@@ -206,7 +206,7 @@ extern class TrayIcon
 	* <code>false</code> otherwise
 	* @see #isImageAutoSize
 	*/
-	@:overload public function setImageAutoSize(autosize : Bool) : Void;
+	@:overload @:public public function setImageAutoSize(autosize : Bool) : Void;
 	
 	/**
 	* Returns the value of the auto-size property.
@@ -215,7 +215,7 @@ extern class TrayIcon
 	* <code>false</code> otherwise
 	* @see #setImageAutoSize(boolean)
 	*/
-	@:overload public function isImageAutoSize() : Bool;
+	@:overload @:public public function isImageAutoSize() : Bool;
 	
 	/**
 	* Adds the specified mouse listener to receive mouse events from
@@ -237,7 +237,7 @@ extern class TrayIcon
 	* @see      #removeMouseListener(MouseListener)
 	* @see      #getMouseListeners
 	*/
-	@:overload @:synchronized public function addMouseListener(listener : java.awt.event.MouseListener) : Void;
+	@:overload @:public @:synchronized public function addMouseListener(listener : java.awt.event.MouseListener) : Void;
 	
 	/**
 	* Removes the specified mouse listener.  Calling this method with
@@ -251,7 +251,7 @@ extern class TrayIcon
 	* @see      #addMouseListener(MouseListener)
 	* @see      #getMouseListeners
 	*/
-	@:overload @:synchronized public function removeMouseListener(listener : java.awt.event.MouseListener) : Void;
+	@:overload @:public @:synchronized public function removeMouseListener(listener : java.awt.event.MouseListener) : Void;
 	
 	/**
 	* Returns an array of all the mouse listeners
@@ -265,7 +265,7 @@ extern class TrayIcon
 	* @see      #removeMouseListener(MouseListener)
 	* @see      java.awt.event.MouseListener
 	*/
-	@:overload @:synchronized public function getMouseListeners() : java.NativeArray<java.awt.event.MouseListener>;
+	@:overload @:public @:synchronized public function getMouseListeners() : java.NativeArray<java.awt.event.MouseListener>;
 	
 	/**
 	* Adds the specified mouse listener to receive mouse-motion
@@ -286,7 +286,7 @@ extern class TrayIcon
 	* @see      #removeMouseMotionListener(MouseMotionListener)
 	* @see      #getMouseMotionListeners
 	*/
-	@:overload @:synchronized public function addMouseMotionListener(listener : java.awt.event.MouseMotionListener) : Void;
+	@:overload @:public @:synchronized public function addMouseMotionListener(listener : java.awt.event.MouseMotionListener) : Void;
 	
 	/**
 	* Removes the specified mouse-motion listener.  Calling this method with
@@ -300,7 +300,7 @@ extern class TrayIcon
 	* @see      #addMouseMotionListener(MouseMotionListener)
 	* @see      #getMouseMotionListeners
 	*/
-	@:overload @:synchronized public function removeMouseMotionListener(listener : java.awt.event.MouseMotionListener) : Void;
+	@:overload @:public @:synchronized public function removeMouseMotionListener(listener : java.awt.event.MouseMotionListener) : Void;
 	
 	/**
 	* Returns an array of all the mouse-motion listeners
@@ -314,7 +314,7 @@ extern class TrayIcon
 	* @see      #removeMouseMotionListener(MouseMotionListener)
 	* @see      java.awt.event.MouseMotionListener
 	*/
-	@:overload @:synchronized public function getMouseMotionListeners() : java.NativeArray<java.awt.event.MouseMotionListener>;
+	@:overload @:public @:synchronized public function getMouseMotionListeners() : java.NativeArray<java.awt.event.MouseMotionListener>;
 	
 	/**
 	* Returns the command name of the action event fired by this tray icon.
@@ -323,7 +323,7 @@ extern class TrayIcon
 	* @see #addActionListener(ActionListener)
 	* @see #setActionCommand(String)
 	*/
-	@:overload public function getActionCommand() : String;
+	@:overload @:public public function getActionCommand() : String;
 	
 	/**
 	* Sets the command name for the action event fired by this tray
@@ -336,7 +336,7 @@ extern class TrayIcon
 	* @see #addActionListener(ActionListener)
 	* @see #getActionCommand
 	*/
-	@:overload public function setActionCommand(command : String) : Void;
+	@:overload @:public public function setActionCommand(command : String) : Void;
 	
 	/**
 	* Adds the specified action listener to receive
@@ -356,7 +356,7 @@ extern class TrayIcon
 	* @see           java.awt.event.ActionListener
 	* @see #setActionCommand(String)
 	*/
-	@:overload @:synchronized public function addActionListener(listener : java.awt.event.ActionListener) : Void;
+	@:overload @:public @:synchronized public function addActionListener(listener : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener.  Calling this method with
@@ -371,7 +371,7 @@ extern class TrayIcon
 	* @see      #getActionListeners
 	* @see #setActionCommand(String)
 	*/
-	@:overload @:synchronized public function removeActionListener(listener : java.awt.event.ActionListener) : Void;
+	@:overload @:public @:synchronized public function removeActionListener(listener : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -385,7 +385,7 @@ extern class TrayIcon
 	* @see      #removeActionListener(ActionListener)
 	* @see      java.awt.event.ActionListener
 	*/
-	@:overload @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:overload @:public @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Displays a popup message near the tray icon.  The message will
@@ -411,7 +411,7 @@ extern class TrayIcon
 	* @throws NullPointerException if both <code>caption</code>
 	* and <code>text</code> are <code>null</code>
 	*/
-	@:overload public function displayMessage(caption : String, text : String, messageType : java.awt.TrayIcon.TrayIcon_MessageType) : Void;
+	@:overload @:public public function displayMessage(caption : String, text : String, messageType : java.awt.TrayIcon.TrayIcon_MessageType) : Void;
 	
 	/**
 	* Returns the size, in pixels, of the space that the tray icon
@@ -424,7 +424,7 @@ extern class TrayIcon
 	* @see java.awt.Image
 	* @see TrayIcon#getSize()
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
 	
 }

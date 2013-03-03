@@ -40,13 +40,13 @@ extern class WrongTransaction extends org.omg.CORBA.UserException
 	/**
 	* Constructs a WrongTransaction object with an empty detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a WrongTransaction object with the given detail message.
 	* @param reason The detail message explaining what caused this exception to be thrown.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

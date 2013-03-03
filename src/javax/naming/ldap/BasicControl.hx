@@ -38,21 +38,21 @@ package javax.naming.ldap;
 	*
 	* @serial
 	*/
-	private var id : String;
+	@:protected private var id : String;
 	
 	/**
 	* The control's criticality.
 	*
 	* @serial
 	*/
-	private var criticality : Bool;
+	@:protected private var criticality : Bool;
 	
 	/**
 	* The control's ASN.1 BER encoded value.
 	*
 	* @serial
 	*/
-	private var value : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var value : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs a non-critical control.
@@ -60,7 +60,7 @@ package javax.naming.ldap;
 	* @param   id      The control's object identifier string.
 	*
 	*/
-	@:overload public function new(id : String) : Void;
+	@:overload @:public public function new(id : String) : Void;
 	
 	/**
 	* Constructs a control using the supplied arguments.
@@ -72,21 +72,21 @@ package javax.naming.ldap;
 	*                          will affect the contents of the control.
 	*                          It may be null.
 	*/
-	@:overload public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Retrieves the control's object identifier string.
 	*
 	* @return The non-null object identifier string.
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Determines the control's criticality.
 	*
 	* @return true if the control is critical; false otherwise.
 	*/
-	@:overload public function isCritical() : Bool;
+	@:overload @:public public function isCritical() : Bool;
 	
 	/**
 	* Retrieves the control's ASN.1 BER encoded value.
@@ -97,7 +97,7 @@ package javax.naming.ldap;
 	*          ASN.1 BER encoded value. It is not cloned - any changes to the
 	*          returned value will affect the contents of the control.
 	*/
-	@:overload public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

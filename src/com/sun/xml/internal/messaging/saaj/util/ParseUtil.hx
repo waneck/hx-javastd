@@ -31,7 +31,7 @@ extern class ParseUtil
 	* the URL escape sequences and UTF8 encoding with the characters they
 	* represent.
 	*/
-	@:overload public static function decode(s : String) : String;
+	@:overload @:public @:static public static function decode(s : String) : String;
 	
 	
 }

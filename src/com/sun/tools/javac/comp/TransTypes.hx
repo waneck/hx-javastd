@@ -33,99 +33,99 @@ package com.sun.tools.javac.comp;
 extern class TransTypes extends com.sun.tools.javac.tree.TreeTranslator
 {
 	/** The context key for the TransTypes phase. */
-	private static var transTypesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.TransTypes>;
+	@:protected @:static @:final private static var transTypesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.TransTypes>;
 	
 	/** Get the instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.TransTypes;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.TransTypes;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Visitor method: perform a type translation on tree.
 	*/
-	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T, pt : com.sun.tools.javac.code.Type) : T;
+	@:overload @:public public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T, pt : com.sun.tools.javac.code.Type) : T;
 	
 	/** Visitor method: perform a type translation on list of trees.
 	*/
-	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, pt : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.List<T>;
+	@:overload @:public public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, pt : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.List<T>;
 	
-	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload @:public public function visitClassDef(tree : JCClassDecl) : Void;
 	
-	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload @:public public function visitMethodDef(tree : JCMethodDecl) : Void;
 	
-	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload @:public public function visitVarDef(tree : JCVariableDecl) : Void;
 	
-	@:overload public function visitDoLoop(tree : JCDoWhileLoop) : Void;
+	@:overload @:public public function visitDoLoop(tree : JCDoWhileLoop) : Void;
 	
-	@:overload public function visitWhileLoop(tree : JCWhileLoop) : Void;
+	@:overload @:public public function visitWhileLoop(tree : JCWhileLoop) : Void;
 	
-	@:overload public function visitForLoop(tree : JCForLoop) : Void;
+	@:overload @:public public function visitForLoop(tree : JCForLoop) : Void;
 	
-	@:overload public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
+	@:overload @:public public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
 	
-	@:overload public function visitSwitch(tree : JCSwitch) : Void;
+	@:overload @:public public function visitSwitch(tree : JCSwitch) : Void;
 	
-	@:overload public function visitCase(tree : JCCase) : Void;
+	@:overload @:public public function visitCase(tree : JCCase) : Void;
 	
-	@:overload public function visitSynchronized(tree : JCSynchronized) : Void;
+	@:overload @:public public function visitSynchronized(tree : JCSynchronized) : Void;
 	
-	@:overload public function visitTry(tree : JCTry) : Void;
+	@:overload @:public public function visitTry(tree : JCTry) : Void;
 	
-	@:overload public function visitConditional(tree : JCConditional) : Void;
+	@:overload @:public public function visitConditional(tree : JCConditional) : Void;
 	
-	@:overload public function visitIf(tree : JCIf) : Void;
+	@:overload @:public public function visitIf(tree : JCIf) : Void;
 	
-	@:overload public function visitExec(tree : JCExpressionStatement) : Void;
+	@:overload @:public public function visitExec(tree : JCExpressionStatement) : Void;
 	
-	@:overload public function visitReturn(tree : JCReturn) : Void;
+	@:overload @:public public function visitReturn(tree : JCReturn) : Void;
 	
-	@:overload public function visitThrow(tree : JCThrow) : Void;
+	@:overload @:public public function visitThrow(tree : JCThrow) : Void;
 	
-	@:overload public function visitAssert(tree : JCAssert) : Void;
+	@:overload @:public public function visitAssert(tree : JCAssert) : Void;
 	
-	@:overload public function visitApply(tree : JCMethodInvocation) : Void;
+	@:overload @:public public function visitApply(tree : JCMethodInvocation) : Void;
 	
-	@:overload public function visitNewClass(tree : JCNewClass) : Void;
+	@:overload @:public public function visitNewClass(tree : JCNewClass) : Void;
 	
-	@:overload public function visitNewArray(tree : JCNewArray) : Void;
+	@:overload @:public public function visitNewArray(tree : JCNewArray) : Void;
 	
-	@:overload public function visitParens(tree : JCParens) : Void;
+	@:overload @:public public function visitParens(tree : JCParens) : Void;
 	
-	@:overload public function visitAssign(tree : JCAssign) : Void;
+	@:overload @:public public function visitAssign(tree : JCAssign) : Void;
 	
-	@:overload public function visitAssignop(tree : JCAssignOp) : Void;
+	@:overload @:public public function visitAssignop(tree : JCAssignOp) : Void;
 	
-	@:overload public function visitUnary(tree : JCUnary) : Void;
+	@:overload @:public public function visitUnary(tree : JCUnary) : Void;
 	
-	@:overload public function visitBinary(tree : JCBinary) : Void;
+	@:overload @:public public function visitBinary(tree : JCBinary) : Void;
 	
-	@:overload public function visitTypeCast(tree : JCTypeCast) : Void;
+	@:overload @:public public function visitTypeCast(tree : JCTypeCast) : Void;
 	
-	@:overload public function visitTypeTest(tree : JCInstanceOf) : Void;
+	@:overload @:public public function visitTypeTest(tree : JCInstanceOf) : Void;
 	
-	@:overload public function visitIndexed(tree : JCArrayAccess) : Void;
+	@:overload @:public public function visitIndexed(tree : JCArrayAccess) : Void;
 	
-	@:overload public function visitAnnotation(tree : JCAnnotation) : Void;
+	@:overload @:public public function visitAnnotation(tree : JCAnnotation) : Void;
 	
-	@:overload public function visitIdent(tree : JCIdent) : Void;
+	@:overload @:public public function visitIdent(tree : JCIdent) : Void;
 	
-	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload @:public public function visitSelect(tree : JCFieldAccess) : Void;
 	
-	@:overload public function visitTypeArray(tree : JCArrayTypeTree) : Void;
+	@:overload @:public public function visitTypeArray(tree : JCArrayTypeTree) : Void;
 	
 	/** Visitor method for parameterized types.
 	*/
-	@:overload public function visitTypeApply(tree : JCTypeApply) : Void;
+	@:overload @:public public function visitTypeApply(tree : JCTypeApply) : Void;
 	
 	/** Translate a toplevel class definition.
 	*  @param cdef    The definition to be translated.
 	*/
-	@:overload public function translateTopLevelClass(cdef : com.sun.tools.javac.tree.JCTree, make : com.sun.tools.javac.tree.TreeMaker) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public public function translateTopLevelClass(cdef : com.sun.tools.javac.tree.JCTree, make : com.sun.tools.javac.tree.TreeMaker) : com.sun.tools.javac.tree.JCTree;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$TransTypes$NeedsOverridBridgeFilter') @:internal extern class TransTypes_NeedsOverridBridgeFilter implements com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>
 {
-	@:overload public function accepts(s : com.sun.tools.javac.code.Symbol) : Bool;
+	@:overload @:public public function accepts(s : com.sun.tools.javac.code.Symbol) : Bool;
 	
 	
 }

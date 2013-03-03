@@ -27,16 +27,16 @@ package org.jcp.xml.dsig.internal;
 */
 extern class SignerOutputStream extends java.io.ByteArrayOutputStream
 {
-	@:overload public function new(sig : java.security.Signature) : Void;
+	@:overload @:public public function new(sig : java.security.Signature) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function write(arg0 : Int) : Void;
+	@:overload @:public override public function write(arg0 : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
+	@:overload @:public override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
 	
 	
 }

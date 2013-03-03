@@ -39,7 +39,7 @@ extern class DefaultLoaderRepository
 	* @exception ClassNotFoundException The specified class could not be
 	*            found.
 	*/
-	@:overload public static function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(className : String) : Class<Dynamic>;
 	
 	/**
 	* Go through the list of class loaders but exclude the given
@@ -57,7 +57,7 @@ extern class DefaultLoaderRepository
 	* @exception ClassNotFoundException The specified class could not be
 	*    found.
 	*/
-	@:overload public static function loadClassWithout(loader : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClassWithout(loader : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
 	
 }

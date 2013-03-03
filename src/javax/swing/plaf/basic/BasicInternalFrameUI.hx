@@ -31,27 +31,27 @@ extern class BasicInternalFrameUI extends javax.swing.plaf.InternalFrameUI
 	* @author David Kloba
 	* @author Rich Schiavi
 	*/
-	private var frame : javax.swing.JInternalFrame;
+	@:protected private var frame : javax.swing.JInternalFrame;
 	
-	private var borderListener : javax.swing.event.MouseInputAdapter;
+	@:protected private var borderListener : javax.swing.event.MouseInputAdapter;
 	
-	private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
-	private var internalFrameLayout : java.awt.LayoutManager;
+	@:protected private var internalFrameLayout : java.awt.LayoutManager;
 	
-	private var componentListener : java.awt.event.ComponentListener;
+	@:protected private var componentListener : java.awt.event.ComponentListener;
 	
-	private var glassPaneDispatcher : javax.swing.event.MouseInputListener;
+	@:protected private var glassPaneDispatcher : javax.swing.event.MouseInputListener;
 	
-	private var northPane : javax.swing.JComponent;
+	@:protected private var northPane : javax.swing.JComponent;
 	
-	private var southPane : javax.swing.JComponent;
+	@:protected private var southPane : javax.swing.JComponent;
 	
-	private var westPane : javax.swing.JComponent;
+	@:protected private var westPane : javax.swing.JComponent;
 	
-	private var eastPane : javax.swing.JComponent;
+	@:protected private var eastPane : javax.swing.JComponent;
 	
-	private var titlePane : javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+	@:protected private var titlePane : javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 	
 	/**
 	* As of Java 2 platform v1.3 this previously undocumented field is no
@@ -61,156 +61,156 @@ extern class BasicInternalFrameUI extends javax.swing.plaf.InternalFrameUI
 	*
 	* @deprecated As of Java 2 platform v1.3.
 	*/
-	private var openMenuKey : javax.swing.KeyStroke;
+	@:protected private var openMenuKey : javax.swing.KeyStroke;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new(b : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(b : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected private function installKeyboardActions() : Void;
 	
-	@:overload private function installComponents() : Void;
-	
-	/**
-	* @since 1.3
-	*/
-	@:require(java3) @:overload private function installListeners() : Void;
-	
-	@:overload private function uninstallDefaults() : Void;
-	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected private function installComponents() : Void;
 	
 	/**
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function uninstallListeners() : Void;
+	@:require(java3) @:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected private function uninstallComponents() : Void;
 	
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	/**
+	* @since 1.3
+	*/
+	@:require(java3) @:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload override public function getPreferredSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:protected private function uninstallKeyboardActions() : Void;
 	
-	@:overload override public function getMinimumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:protected private function createLayoutManager() : java.awt.LayoutManager;
 	
-	@:overload override public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:protected private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	
+	@:overload @:public override public function getPreferredSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	
+	@:overload @:public override public function getMinimumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	
+	@:overload @:public override public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Installs necessary mouse handlers on <code>newPane</code>
 	* and adds it to the frame.
 	* Reverse process for the <code>currentPane</code>.
 	*/
-	@:overload private function replacePane(currentPane : javax.swing.JComponent, newPane : javax.swing.JComponent) : Void;
+	@:overload @:protected private function replacePane(currentPane : javax.swing.JComponent, newPane : javax.swing.JComponent) : Void;
 	
-	@:overload private function deinstallMouseHandlers(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function deinstallMouseHandlers(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installMouseHandlers(c : javax.swing.JComponent) : Void;
+	@:overload @:protected private function installMouseHandlers(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:protected private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload private function createSouthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:protected private function createSouthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload private function createWestPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:protected private function createWestPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload private function createEastPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:protected private function createEastPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload private function createBorderListener(w : javax.swing.JInternalFrame) : javax.swing.event.MouseInputAdapter;
+	@:overload @:protected private function createBorderListener(w : javax.swing.JInternalFrame) : javax.swing.event.MouseInputAdapter;
 	
-	@:overload private function createInternalFrameListener() : Void;
+	@:overload @:protected private function createInternalFrameListener() : Void;
 	
-	@:overload @:final private function isKeyBindingRegistered() : Bool;
+	@:overload @:protected @:final private function isKeyBindingRegistered() : Bool;
 	
-	@:overload @:final private function setKeyBindingRegistered(b : Bool) : Void;
+	@:overload @:protected @:final private function setKeyBindingRegistered(b : Bool) : Void;
 	
-	@:overload @:final public function isKeyBindingActive() : Bool;
+	@:overload @:public @:final public function isKeyBindingActive() : Bool;
 	
-	@:overload @:final private function setKeyBindingActive(b : Bool) : Void;
+	@:overload @:protected @:final private function setKeyBindingActive(b : Bool) : Void;
 	
-	@:overload private function setupMenuOpenKey() : Void;
+	@:overload @:protected private function setupMenuOpenKey() : Void;
 	
-	@:overload private function setupMenuCloseKey() : Void;
+	@:overload @:protected private function setupMenuCloseKey() : Void;
 	
-	@:overload public function getNorthPane() : javax.swing.JComponent;
+	@:overload @:public public function getNorthPane() : javax.swing.JComponent;
 	
-	@:overload public function setNorthPane(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function setNorthPane(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function getSouthPane() : javax.swing.JComponent;
+	@:overload @:public public function getSouthPane() : javax.swing.JComponent;
 	
-	@:overload public function setSouthPane(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function setSouthPane(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function getWestPane() : javax.swing.JComponent;
+	@:overload @:public public function getWestPane() : javax.swing.JComponent;
 	
-	@:overload public function setWestPane(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function setWestPane(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function getEastPane() : javax.swing.JComponent;
+	@:overload @:public public function getEastPane() : javax.swing.JComponent;
 	
-	@:overload public function setEastPane(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function setEastPane(c : javax.swing.JComponent) : Void;
 	
 	/** Returns the proper DesktopManager. Calls getDesktopPane() to
 	* find the JDesktop component and returns the desktopManager from
 	* it. If this fails, it will return a default DesktopManager that
 	* should work in arbitrary parents.
 	*/
-	@:overload private function getDesktopManager() : javax.swing.DesktopManager;
+	@:overload @:protected private function getDesktopManager() : javax.swing.DesktopManager;
 	
-	@:overload private function createDesktopManager() : javax.swing.DesktopManager;
+	@:overload @:protected private function createDesktopManager() : javax.swing.DesktopManager;
 	
 	/**
 	* This method is called when the user wants to close the frame.
 	* The <code>playCloseSound</code> Action is fired.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function closeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function closeFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* This method is called when the user wants to maximize the frame.
 	* The <code>playMaximizeSound</code> Action is fired.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function maximizeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function maximizeFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* This method is called when the user wants to minimize the frame.
 	* The <code>playRestoreDownSound</code> Action is fired.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function minimizeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function minimizeFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* This method is called when the user wants to iconify the frame.
 	* The <code>playMinimizeSound</code> Action is fired.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function iconifyFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function iconifyFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* This method is called when the user wants to deiconify the frame.
 	* The <code>playRestoreUpSound</code> Action is fired.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function deiconifyFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function deiconifyFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/** This method is called when the frame becomes selected.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function activateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function activateFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/** This method is called when the frame is no longer selected.
 	* This action is delegated to the desktopManager.
 	*/
-	@:overload private function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected private function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function createComponentListener() : java.awt.event.ComponentListener;
+	@:overload @:protected private function createComponentListener() : java.awt.event.ComponentListener;
 	
-	@:overload private function createGlassPaneDispatcher() : javax.swing.event.MouseInputListener;
+	@:overload @:protected private function createGlassPaneDispatcher() : javax.swing.event.MouseInputListener;
 	
 	
 }
@@ -220,21 +220,21 @@ extern class BasicInternalFrameUI extends javax.swing.plaf.InternalFrameUI
 	* Detects changes in state from the JInternalFrame and handles
 	* actions.
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameUI$InternalFrameLayout') extern class BasicInternalFrameUI_InternalFrameLayout implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
@@ -243,127 +243,127 @@ extern class BasicInternalFrameUI extends javax.swing.plaf.InternalFrameUI
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameUI$BorderListener') extern class BasicInternalFrameUI_BorderListener extends javax.swing.event.MouseInputAdapter implements javax.swing.SwingConstants
 {
-	private var RESIZE_NONE(default, null) : Int;
+	@:protected @:final private var RESIZE_NONE(default, null) : Int;
 	
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameUI$ComponentHandler') extern class BasicInternalFrameUI_ComponentHandler implements java.awt.event.ComponentListener
 {
 	/** Invoked when a JInternalFrame's parent's size changes. */
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameUI$GlassPaneDispatcher') extern class BasicInternalFrameUI_GlassPaneDispatcher implements javax.swing.event.MouseInputListener
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameUI$BasicInternalFrameListener') extern class BasicInternalFrameUI_BasicInternalFrameListener implements javax.swing.event.InternalFrameListener
 {
-	@:overload public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicInternalFrameUI$Handler') @:internal extern class BasicInternalFrameUI_Handler implements java.awt.event.ComponentListener implements javax.swing.event.InternalFrameListener implements java.awt.LayoutManager implements javax.swing.event.MouseInputListener implements java.beans.PropertyChangeListener implements java.awt.event.WindowFocusListener implements javax.swing.SwingConstants
 {
-	@:overload public function windowGainedFocus(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowGainedFocus(e : java.awt.event.WindowEvent) : Void;
 	
-	@:overload public function windowLostFocus(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowLostFocus(e : java.awt.event.WindowEvent) : Void;
 	
 	/** Invoked when a JInternalFrame's parent's size changes. */
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosed(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameActivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeactivated(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameClosing(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameOpened(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameIconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
+	@:overload @:public public function internalFrameDeiconified(e : javax.swing.event.InternalFrameEvent) : Void;
 	
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

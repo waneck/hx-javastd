@@ -40,7 +40,7 @@ extern interface Timeable
 	* which timer has ticked.
 	* @param timer a handle to the timer that has just ticked.
 	*/
-	@:overload public function tick(timer : sun.misc.Timer) : Void;
+	@:overload @:public public function tick(timer : sun.misc.Timer) : Void;
 	
 	
 }

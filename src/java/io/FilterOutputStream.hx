@@ -44,7 +44,7 @@ package java.io;
 	/**
 	* The underlying output stream to be filtered.
 	*/
-	private var out : java.io.OutputStream;
+	@:protected private var out : java.io.OutputStream;
 	
 	/**
 	* Creates an output stream filter built on top of the specified
@@ -55,7 +55,7 @@ package java.io;
 	*                <code>null</code> if this instance is to be
 	*                created without an underlying stream.
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes the specified <code>byte</code> to this output stream.
@@ -69,7 +69,7 @@ package java.io;
 	* @param      b   the <code>byte</code>.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>b.length</code> bytes to this output stream.
@@ -87,7 +87,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#write(byte[], int, int)
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified
@@ -109,7 +109,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#write(int)
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output bytes
@@ -121,7 +121,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Closes this output stream and releases any system resources
@@ -135,7 +135,7 @@ package java.io;
 	* @see        java.io.FilterOutputStream#flush()
 	* @see        java.io.FilterOutputStream#out
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

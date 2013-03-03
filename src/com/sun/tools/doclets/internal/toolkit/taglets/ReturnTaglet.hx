@@ -35,12 +35,12 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 */
 @:require(java4) extern class ReturnTaglet extends com.sun.tools.doclets.internal.toolkit.taglets.BaseExecutableMemberTaglet implements com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function inherit(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input, output : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output) : Void;
+	@:overload @:public public function inherit(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input, output : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output) : Void;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -49,12 +49,12 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload public function inConstructor() : Bool;
+	@:overload @:public override public function inConstructor() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	/**
 	* Creates a new StringContent object.  Initial size defaults to 10.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new StringContent object, with the initial
@@ -36,7 +36,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	*
 	* @param initialLength the initial size
 	*/
-	@:overload public function new(initialLength : Int) : Void;
+	@:overload @:public public function new(initialLength : Int) : Void;
 	
 	/**
 	* Returns the length of the content.
@@ -44,7 +44,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @return the length >= 1
 	* @see AbstractDocument.Content#length
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Inserts a string into the content.
@@ -55,7 +55,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#insertString
 	*/
-	@:overload public function insertString(where : Int, str : String) : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function insertString(where : Int, str : String) : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Removes part of the content.  where + nitems must be < length().
@@ -66,7 +66,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#remove
 	*/
-	@:overload public function remove(where : Int, nitems : Int) : javax.swing.undo.UndoableEdit;
+	@:overload @:public public function remove(where : Int, nitems : Int) : javax.swing.undo.UndoableEdit;
 	
 	/**
 	* Retrieves a portion of the content.  where + len must be <= length().
@@ -77,7 +77,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#getString
 	*/
-	@:overload public function getString(where : Int, len : Int) : String;
+	@:overload @:public public function getString(where : Int, len : Int) : String;
 	
 	/**
 	* Retrieves a portion of the content.  where + len must be <= length()
@@ -88,7 +88,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @exception BadLocationException if the specified position is invalid
 	* @see AbstractDocument.Content#getChars
 	*/
-	@:overload public function getChars(where : Int, len : Int, chars : javax.swing.text.Segment) : Void;
+	@:overload @:public public function getChars(where : Int, len : Int, chars : javax.swing.text.Segment) : Void;
 	
 	/**
 	* Creates a position within the content that will
@@ -98,7 +98,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @return the position
 	* @exception BadLocationException if the specified position is invalid
 	*/
-	@:overload public function createPosition(offset : Int) : javax.swing.text.Position;
+	@:overload @:public public function createPosition(offset : Int) : javax.swing.text.Position;
 	
 	/**
 	* Returns a Vector containing instances of UndoPosRef for the
@@ -115,7 +115,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* @param length the length >= 0
 	* @return the set of instances
 	*/
-	@:overload private function getPositionsInRange(v : java.util.Vector<Dynamic>, offset : Int, length : Int) : java.util.Vector<Dynamic>;
+	@:overload @:protected private function getPositionsInRange(v : java.util.Vector<Dynamic>, offset : Int, length : Int) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Resets the location for all the UndoPosRef instances
@@ -126,7 +126,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	*
 	* @param positions the positions of the instances
 	*/
-	@:overload private function updateUndoPositions(positions : java.util.Vector<Dynamic>) : Void;
+	@:overload @:protected private function updateUndoPositions(positions : java.util.Vector<Dynamic>) : Void;
 	
 	
 }
@@ -149,11 +149,11 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 */
 @:native('javax$swing$text$StringContent$StickyPosition') @:internal extern class StringContent_StickyPosition implements javax.swing.text.Position
 {
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -167,13 +167,13 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	* Resets the location of the Position to the offset when the
 	* receiver was instantiated.
 	*/
-	@:overload private function resetLocation() : Void;
+	@:overload @:protected private function resetLocation() : Void;
 	
 	/** Location to reset to when resetLocatino is invoked. */
-	private var undoLocation : Int;
+	@:protected private var undoLocation : Int;
 	
 	/** Position to reset offset. */
-	private var rec : javax.swing.text.StringContent.StringContent_PosRec;
+	@:protected private var rec : javax.swing.text.StringContent.StringContent_PosRec;
 	
 	
 }
@@ -182,19 +182,19 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 */
 @:native('javax$swing$text$StringContent$InsertUndo') @:internal extern class StringContent_InsertUndo extends javax.swing.undo.AbstractUndoableEdit
 {
-	@:overload private function new(offset : Int, length : Int) : Void;
+	@:overload @:protected private function new(offset : Int, length : Int) : Void;
 	
-	@:overload public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
-	@:overload public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
-	private var offset : Int;
+	@:protected private var offset : Int;
 	
-	private var length : Int;
+	@:protected private var length : Int;
 	
-	private var string : String;
+	@:protected private var string : String;
 	
-	private var posRefs : java.util.Vector<Dynamic>;
+	@:protected private var posRefs : java.util.Vector<Dynamic>;
 	
 	
 }
@@ -203,19 +203,19 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 */
 @:native('javax$swing$text$StringContent$RemoveUndo') @:internal extern class StringContent_RemoveUndo extends javax.swing.undo.AbstractUndoableEdit
 {
-	@:overload private function new(offset : Int, string : String) : Void;
+	@:overload @:protected private function new(offset : Int, string : String) : Void;
 	
-	@:overload public function undo() : Void;
+	@:overload @:public override public function undo() : Void;
 	
-	@:overload public function redo() : Void;
+	@:overload @:public override public function redo() : Void;
 	
-	private var offset : Int;
+	@:protected private var offset : Int;
 	
-	private var length : Int;
+	@:protected private var length : Int;
 	
-	private var string : String;
+	@:protected private var string : String;
 	
-	private var posRefs : java.util.Vector<Dynamic>;
+	@:protected private var posRefs : java.util.Vector<Dynamic>;
 	
 	
 }

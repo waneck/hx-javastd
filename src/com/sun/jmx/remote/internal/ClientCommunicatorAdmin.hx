@@ -25,38 +25,38 @@ package com.sun.jmx.remote.internal;
 */
 extern class ClientCommunicatorAdmin
 {
-	@:overload public function new(period : haxe.Int64) : Void;
+	@:overload @:public public function new(period : haxe.Int64) : Void;
 	
 	/**
 	* Called by a client to inform of getting an IOException.
 	*/
-	@:overload public function gotIOException(ioe : java.io.IOException) : Void;
+	@:overload @:public public function gotIOException(ioe : java.io.IOException) : Void;
 	
 	/**
 	* Called by this class to check a client connection.
 	*/
-	@:overload @:abstract private function checkConnection() : Void;
+	@:overload @:protected @:abstract private function checkConnection() : Void;
 	
 	/**
 	* Tells a client to re-start again.
 	*/
-	@:overload @:abstract private function doStart() : Void;
+	@:overload @:protected @:abstract private function doStart() : Void;
 	
 	/**
 	* Tells a client to stop because failing to call checkConnection.
 	*/
-	@:overload @:abstract private function doStop() : Void;
+	@:overload @:protected @:abstract private function doStop() : Void;
 	
 	/**
 	* Terminates this object.
 	*/
-	@:overload public function terminate() : Void;
+	@:overload @:public public function terminate() : Void;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ClientCommunicatorAdmin$Checker') @:internal extern class ClientCommunicatorAdmin_Checker implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -32,14 +32,14 @@ package com.sun.tools.example.debug.gui;
 */
 extern class CommandInterpreter
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment, echo : Bool) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment, echo : Bool) : Void;
 	
 	/*
 	* Execute a command.
 	*/
-	@:overload public function executeCommand(command : String) : Void;
+	@:overload @:public public function executeCommand(command : String) : Void;
 	
 	
 }

@@ -38,7 +38,7 @@ package sun.jvmstat.monitor;
 	* @return String - a String object containing a copy of the value of
 	*                  the associated StringInstrument.
 	*/
-	@:overload public function stringValue() : String;
+	@:overload @:public public function stringValue() : String;
 	
 	
 }

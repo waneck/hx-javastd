@@ -25,21 +25,21 @@ package sun.management;
 */
 @:internal extern class MemoryImpl extends sun.management.NotificationEmitterSupport implements java.lang.management.MemoryMXBean
 {
-	@:overload public function getObjectPendingFinalizationCount() : Int;
+	@:overload @:public public function getObjectPendingFinalizationCount() : Int;
 	
-	@:overload public function gc() : Void;
+	@:overload @:public public function gc() : Void;
 	
-	@:overload public function getHeapMemoryUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getHeapMemoryUsage() : java.lang.management.MemoryUsage;
 	
-	@:overload public function getNonHeapMemoryUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getNonHeapMemoryUsage() : java.lang.management.MemoryUsage;
 	
-	@:overload public function isVerbose() : Bool;
+	@:overload @:public public function isVerbose() : Bool;
 	
-	@:overload public function setVerbose(value : Bool) : Void;
+	@:overload @:public public function setVerbose(value : Bool) : Void;
 	
-	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

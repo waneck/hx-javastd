@@ -30,14 +30,14 @@ extern class HttpExchange
 	* over HTTPS
 	* <p>Type: String
 	*/
-	public static var REQUEST_CIPHER_SUITE(default, null) : String;
+	@:public @:static @:final public static var REQUEST_CIPHER_SUITE(default, null) : String;
 	
 	/**
 	* Standard property: bit size of the algorithm when the request is
 	* received over HTTPS
 	* <p>Type: Integer
 	*/
-	public static var REQUEST_KEY_SIZE(default, null) : String;
+	@:public @:static @:final public static var REQUEST_KEY_SIZE(default, null) : String;
 	
 	/**
 	* Standard property: A SSL certificate, if any, associated with the request
@@ -47,7 +47,7 @@ extern class HttpExchange
 	* The first certificate in the chain is the one set by the client, the next
 	* is the one used to authenticate the first, and so on.
 	*/
-	public static var REQUEST_X509CERTIFICATE(default, null) : String;
+	@:public @:static @:final public static var REQUEST_X509CERTIFICATE(default, null) : String;
 	
 	/**
 	* Returns an immutable Map containing the HTTP headers that were
@@ -62,7 +62,7 @@ extern class HttpExchange
 	*
 	* @return an immutable Map which can be used to access request headers
 	*/
-	@:overload @:abstract public function getRequestHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public @:abstract public function getRequestHeaders() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Returns the value of the specified request header. If the request
@@ -76,7 +76,7 @@ extern class HttpExchange
 	* @return returns the value of the requested header,
 	*         or null if the request does not have a header of that name
 	*/
-	@:overload @:abstract public function getRequestHeader(name : String) : String;
+	@:overload @:public @:abstract public function getRequestHeader(name : String) : String;
 	
 	/**
 	* Returns a mutable Map into which the HTTP response headers can be stored
@@ -89,7 +89,7 @@ extern class HttpExchange
 	*
 	* @return a mutable Map which can be used to set response headers.
 	*/
-	@:overload @:abstract public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public @:abstract public function getResponseHeaders() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Adds a response header with the given name and value. This method
@@ -104,7 +104,7 @@ extern class HttpExchange
 	*
 	* @see #getResponseHeaders
 	*/
-	@:overload @:abstract public function addResponseHeader(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function addResponseHeader(name : String, value : String) : Void;
 	
 	/**
 	* Returns the part of the request's URI from the protocol
@@ -113,7 +113,7 @@ extern class HttpExchange
 	*
 	* @return the request URI
 	*/
-	@:overload @:abstract public function getRequestURI() : String;
+	@:overload @:public @:abstract public function getRequestURI() : String;
 	
 	/**
 	* Returns the context path of all the endpoints in an application.
@@ -130,14 +130,14 @@ extern class HttpExchange
 	* @return context path of all the endpoints in an application
 	* @see HttpContext#getPath
 	*/
-	@:overload @:abstract public function getContextPath() : String;
+	@:overload @:public @:abstract public function getContextPath() : String;
 	
 	/**
 	* Get the HTTP request method
 	*
 	* @return the request method
 	*/
-	@:overload @:abstract public function getRequestMethod() : String;
+	@:overload @:public @:abstract public function getRequestMethod() : String;
 	
 	/**
 	* Returns a {@link HttpContext} for this exchange.
@@ -145,7 +145,7 @@ extern class HttpExchange
 	*
 	* @return the HttpContext for this exchange
 	*/
-	@:overload @:abstract public function getHttpContext() : javax.xml.ws.spi.http.HttpContext;
+	@:overload @:public @:abstract public function getHttpContext() : javax.xml.ws.spi.http.HttpContext;
 	
 	/**
 	* This must be called to end an exchange. Container takes care of
@@ -154,7 +154,7 @@ extern class HttpExchange
 	*
 	* @throws IOException if any i/o error
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Returns a stream from which the request body can be read.
@@ -163,7 +163,7 @@ extern class HttpExchange
 	* @return the stream from which the request body can be read.
 	* @throws IOException if any i/o error during request processing
 	*/
-	@:overload @:abstract public function getRequestBody() : java.io.InputStream;
+	@:overload @:public @:abstract public function getRequestBody() : java.io.InputStream;
 	
 	/**
 	* Returns a stream to which the response body must be
@@ -174,7 +174,7 @@ extern class HttpExchange
 	* @return the stream to which the response body is written
 	* @throws IOException if any i/o error during response processing
 	*/
-	@:overload @:abstract public function getResponseBody() : java.io.OutputStream;
+	@:overload @:public @:abstract public function getResponseBody() : java.io.OutputStream;
 	
 	/**
 	* Sets the HTTP status code for the response.
@@ -185,7 +185,7 @@ extern class HttpExchange
 	* @param status the response code to send
 	* @see #getResponseBody
 	*/
-	@:overload @:abstract public function setStatus(status : Int) : Void;
+	@:overload @:public @:abstract public function setStatus(status : Int) : Void;
 	
 	/**
 	* Returns the unresolved address of the remote entity invoking
@@ -193,14 +193,14 @@ extern class HttpExchange
 	*
 	* @return the InetSocketAddress of the caller
 	*/
-	@:overload @:abstract public function getRemoteAddress() : java.net.InetSocketAddress;
+	@:overload @:public @:abstract public function getRemoteAddress() : java.net.InetSocketAddress;
 	
 	/**
 	* Returns the unresolved local address on which the request was received.
 	*
 	* @return the InetSocketAddress of the local interface
 	*/
-	@:overload @:abstract public function getLocalAddress() : java.net.InetSocketAddress;
+	@:overload @:public @:abstract public function getLocalAddress() : java.net.InetSocketAddress;
 	
 	/**
 	* Returns the protocol string from the request in the form
@@ -209,7 +209,7 @@ extern class HttpExchange
 	*
 	* @return the protocol string from the request
 	*/
-	@:overload @:abstract public function getProtocol() : String;
+	@:overload @:public @:abstract public function getProtocol() : String;
 	
 	/**
 	* Returns the name of the scheme used to make this request,
@@ -217,7 +217,7 @@ extern class HttpExchange
 	*
 	* @return name of the scheme used to make this request
 	*/
-	@:overload @:abstract public function getScheme() : String;
+	@:overload @:public @:abstract public function getScheme() : String;
 	
 	/**
 	* Returns the extra path information that follows the web service
@@ -233,7 +233,7 @@ extern class HttpExchange
 	*         request URI
 	*         <tt>null</tt> if there is no extra path in the request URI
 	*/
-	@:overload @:abstract public function getPathInfo() : String;
+	@:overload @:public @:abstract public function getPathInfo() : String;
 	
 	/**
 	* Returns the query string that is contained in the request URI
@@ -245,7 +245,7 @@ extern class HttpExchange
 	* @return undecoded query string of request URI, or
 	*         <tt>null</tt> if the request URI doesn't have one
 	*/
-	@:overload @:abstract public function getQueryString() : String;
+	@:overload @:public @:abstract public function getQueryString() : String;
 	
 	/**
 	* Returns an attribute that is associated with this
@@ -267,7 +267,7 @@ extern class HttpExchange
 	* @return the attribute value, or <tt>null</tt> if the attribute doesn't
 	*         exist
 	*/
-	@:overload @:abstract public function getAttribute(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Gives all the attribute names that are associated with
@@ -276,7 +276,7 @@ extern class HttpExchange
 	* @return set of all attribute names
 	* @see #getAttribute(String)
 	*/
-	@:overload @:abstract public function getAttributeNames() : java.util.Set<String>;
+	@:overload @:public @:abstract public function getAttributeNames() : java.util.Set<String>;
 	
 	/**
 	* Returns the {@link Principal} that represents the authenticated
@@ -285,7 +285,7 @@ extern class HttpExchange
 	* @return Principal for an authenticated user, or
 	*         <tt>null</tt> if not authenticated
 	*/
-	@:overload @:abstract public function getUserPrincipal() : java.security.Principal;
+	@:overload @:public @:abstract public function getUserPrincipal() : java.security.Principal;
 	
 	/**
 	* Indicates whether an authenticated user is included in the specified
@@ -295,7 +295,7 @@ extern class HttpExchange
 	* @return <tt>true</tt> if the user making this request belongs to a
 	*         given role
 	*/
-	@:overload @:abstract public function isUserInRole(role : String) : Bool;
+	@:overload @:public @:abstract public function isUserInRole(role : String) : Bool;
 	
 	
 }

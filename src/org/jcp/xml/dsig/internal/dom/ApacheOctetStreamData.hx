@@ -27,9 +27,9 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class ApacheOctetStreamData extends javax.xml.crypto.OctetStreamData implements org.jcp.xml.dsig.internal.dom.ApacheData
 {
-	@:overload public function new(xi : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : Void;
+	@:overload @:public public function new(xi : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : Void;
 	
-	@:overload public function getXMLSignatureInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getXMLSignatureInput() : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

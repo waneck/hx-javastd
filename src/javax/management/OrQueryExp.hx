@@ -35,22 +35,22 @@ package javax.management;
 	/**
 	* Basic Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new OrQueryExp with the specified ValueExps
 	*/
-	@:overload public function new(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : Void;
+	@:overload @:public public function new(q1 : javax.management.QueryExp, q2 : javax.management.QueryExp) : Void;
 	
 	/**
 	* Returns the left query expression.
 	*/
-	@:overload public function getLeftExp() : javax.management.QueryExp;
+	@:overload @:public public function getLeftExp() : javax.management.QueryExp;
 	
 	/**
 	* Returns the right query expression.
 	*/
-	@:overload public function getRightExp() : javax.management.QueryExp;
+	@:overload @:public public function getRightExp() : javax.management.QueryExp;
 	
 	/**
 	* Applies the OrQueryExp on a MBean.
@@ -64,12 +64,12 @@ package javax.management;
 	* @exception BadBinaryOpValueExpException The expression passed to the method is invalid.
 	* @exception BadAttributeValueExpException The attribute value passed to the method is invalid.
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns a string representation of this OrQueryExp
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

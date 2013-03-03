@@ -25,17 +25,17 @@ package com.sun.tools.internal.ws.processor.model;
 */
 extern class HeaderFault extends com.sun.tools.internal.ws.processor.model.Fault
 {
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(name : String, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : String, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getMessage() : javax.xml.namespace.QName;
+	@:overload @:public public function getMessage() : javax.xml.namespace.QName;
 	
-	@:overload public function setMessage(message : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setMessage(message : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getPart() : String;
+	@:overload @:public public function getPart() : String;
 	
-	@:overload public function setPart(part : String) : Void;
+	@:overload @:public public function setPart(part : String) : Void;
 	
 	
 }

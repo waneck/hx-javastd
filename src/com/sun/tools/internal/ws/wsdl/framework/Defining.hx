@@ -30,7 +30,7 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern interface Defining extends com.sun.tools.internal.ws.wsdl.framework.Elemental
 {
-	@:overload public function getTargetNamespaceURI() : String;
+	@:overload @:public public function getTargetNamespaceURI() : String;
 	
 	
 }

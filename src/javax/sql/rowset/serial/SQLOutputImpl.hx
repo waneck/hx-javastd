@@ -46,7 +46,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	* @throws SQLException if the <code>attributes</code> or the <code>map</code>
 	*        is a <code>null</code> value
 	*/
-	@:overload public function new(attributes : java.util.Vector<Dynamic>, map : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(attributes : java.util.Vector<Dynamic>, map : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Writes a <code>String</code> in the Java programming language
@@ -59,7 +59,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeString(x : String) : Void;
+	@:overload @:public public function writeString(x : String) : Void;
 	
 	/**
 	* Writes a <code>boolean</code> in the Java programming language
@@ -71,7 +71,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeBoolean(x : Bool) : Void;
+	@:overload @:public public function writeBoolean(x : Bool) : Void;
 	
 	/**
 	* Writes a <code>byte</code> in the Java programming language
@@ -83,7 +83,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeByte(x : java.StdTypes.Int8) : Void;
+	@:overload @:public public function writeByte(x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Writes a <code>short</code> in the Java programming language
@@ -95,7 +95,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeShort(x : java.StdTypes.Int16) : Void;
+	@:overload @:public public function writeShort(x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Writes an <code>int</code> in the Java programming language
@@ -107,7 +107,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeInt(x : Int) : Void;
+	@:overload @:public public function writeInt(x : Int) : Void;
 	
 	/**
 	* Writes a <code>long</code> in the Java programming language
@@ -119,7 +119,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeLong(x : haxe.Int64) : Void;
+	@:overload @:public public function writeLong(x : haxe.Int64) : Void;
 	
 	/**
 	* Writes a <code>float</code> in the Java programming language
@@ -131,7 +131,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeFloat(x : Single) : Void;
+	@:overload @:public public function writeFloat(x : Single) : Void;
 	
 	/**
 	* Writes a <code>double</code> in the Java programming language
@@ -143,7 +143,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeDouble(x : Float) : Void;
+	@:overload @:public public function writeDouble(x : Float) : Void;
 	
 	/**
 	* Writes a <code>java.math.BigDecimal</code> object in the Java programming
@@ -155,7 +155,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeBigDecimal(x : java.math.BigDecimal) : Void;
+	@:overload @:public public function writeBigDecimal(x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Writes an array of <code>bytes</code> in the Java programming language
@@ -168,7 +168,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeBytes(x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function writeBytes(x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes a <code>java.sql.Date</code> object in the Java programming
@@ -180,7 +180,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeDate(x : java.sql.Date) : Void;
+	@:overload @:public public function writeDate(x : java.sql.Date) : Void;
 	
 	/**
 	* Writes a <code>java.sql.Time</code> object in the Java programming
@@ -192,7 +192,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeTime(x : java.sql.Time) : Void;
+	@:overload @:public public function writeTime(x : java.sql.Time) : Void;
 	
 	/**
 	* Writes a <code>java.sql.Timestamp</code> object in the Java programming
@@ -204,7 +204,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeTimestamp(x : java.sql.Timestamp) : Void;
+	@:overload @:public public function writeTimestamp(x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Writes a stream of Unicode characters to this
@@ -216,7 +216,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeCharacterStream(x : java.io.Reader) : Void;
+	@:overload @:public public function writeCharacterStream(x : java.io.Reader) : Void;
 	
 	/**
 	* Writes a stream of ASCII characters to this
@@ -228,7 +228,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeAsciiStream(x : java.io.InputStream) : Void;
+	@:overload @:public public function writeAsciiStream(x : java.io.InputStream) : Void;
 	
 	/**
 	* Writes a stream of uninterpreted bytes to this <code>SQLOutputImpl</code>
@@ -239,7 +239,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeBinaryStream(x : java.io.InputStream) : Void;
+	@:overload @:public public function writeBinaryStream(x : java.io.InputStream) : Void;
 	
 	/**
 	* Writes to the stream the data contained in the given
@@ -264,7 +264,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeObject(x : java.sql.SQLData) : Void;
+	@:overload @:public public function writeObject(x : java.sql.SQLData) : Void;
 	
 	/**
 	* Writes a <code>Ref</code> object in the Java programming language
@@ -277,7 +277,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeRef(x : java.sql.Ref) : Void;
+	@:overload @:public public function writeRef(x : java.sql.Ref) : Void;
 	
 	/**
 	* Writes a <code>Blob</code> object in the Java programming language
@@ -290,7 +290,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeBlob(x : java.sql.Blob) : Void;
+	@:overload @:public public function writeBlob(x : java.sql.Blob) : Void;
 	
 	/**
 	* Writes a <code>Clob</code> object in the Java programming language
@@ -303,7 +303,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeClob(x : java.sql.Clob) : Void;
+	@:overload @:public public function writeClob(x : java.sql.Clob) : Void;
 	
 	/**
 	* Writes a <code>Struct</code> object in the Java
@@ -322,7 +322,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeStruct(x : java.sql.Struct) : Void;
+	@:overload @:public public function writeStruct(x : java.sql.Struct) : Void;
 	
 	/**
 	* Writes an <code>Array</code> object in the Java
@@ -336,7 +336,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeArray(x : java.sql.Array) : Void;
+	@:overload @:public public function writeArray(x : java.sql.Array) : Void;
 	
 	/**
 	* Writes an <code>java.sql.Type.DATALINK</code> object in the Java
@@ -349,7 +349,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	*        use by a <code>SQLData</code> object attempting to write the attribute
 	*        values of a UDT to the database.
 	*/
-	@:overload public function writeURL(url : java.net.URL) : Void;
+	@:overload @:public public function writeURL(url : java.net.URL) : Void;
 	
 	/**
 	* Writes the next attribute to the stream as a <code>String</code>
@@ -364,7 +364,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function writeNString(x : String) : Void;
+	@:require(java6) @:overload @:public public function writeNString(x : String) : Void;
 	
 	/**
 	* Writes an SQL <code>NCLOB</code> value to the stream.
@@ -375,7 +375,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function writeNClob(x : java.sql.NClob) : Void;
+	@:require(java6) @:overload @:public public function writeNClob(x : java.sql.NClob) : Void;
 	
 	/**
 	* Writes an SQL <code>ROWID</code> value to the stream.
@@ -386,7 +386,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function writeRowId(x : java.sql.RowId) : Void;
+	@:require(java6) @:overload @:public public function writeRowId(x : java.sql.RowId) : Void;
 	
 	/**
 	* Writes an SQL <code>XML</code> value to the stream.
@@ -397,7 +397,7 @@ extern class SQLOutputImpl implements java.sql.SQLOutput
 	* @exception SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function writeSQLXML(x : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public public function writeSQLXML(x : java.sql.SQLXML) : Void;
 	
 	
 }

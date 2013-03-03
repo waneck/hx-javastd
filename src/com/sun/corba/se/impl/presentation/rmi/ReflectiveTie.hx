@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class ReflectiveTie extends org.omg.PortableServer.Servant implements javax.rmi.CORBA.Tie
 {
-	@:overload public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException) : Void;
+	@:overload @:public public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException) : Void;
 	
-	@:overload public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:public override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload public function setTarget(target : java.rmi.Remote) : Void;
+	@:overload @:public public function setTarget(target : java.rmi.Remote) : Void;
 	
-	@:overload public function getTarget() : java.rmi.Remote;
+	@:overload @:public public function getTarget() : java.rmi.Remote;
 	
-	@:overload public function thisObject() : org.omg.CORBA.Object;
+	@:overload @:public public function thisObject() : org.omg.CORBA.Object;
 	
-	@:overload public function deactivate() : Void;
+	@:overload @:public public function deactivate() : Void;
 	
-	@:overload public function orb() : org.omg.CORBA.ORB;
+	@:overload @:public public function orb() : org.omg.CORBA.ORB;
 	
-	@:overload public function orb(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function orb(orb : org.omg.CORBA.ORB) : Void;
 	
-	@:overload public function _invoke(method : String, _in : org.omg.CORBA.portable.InputStream, reply : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function _invoke(method : String, _in : org.omg.CORBA.portable.InputStream, reply : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
 	
 	
 }

@@ -52,7 +52,7 @@ extern class MouseInfo
 	* @return    location of the mouse pointer
 	* @since     1.5
 	*/
-	@:require(java5) @:overload public static function getPointerInfo() : java.awt.PointerInfo;
+	@:require(java5) @:overload @:public @:static public static function getPointerInfo() : java.awt.PointerInfo;
 	
 	/**
 	* Returns the number of buttons on the mouse.
@@ -62,7 +62,7 @@ extern class MouseInfo
 	* @return number of buttons on the mouse
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getNumberOfButtons() : Int;
+	@:require(java5) @:overload @:public @:static public static function getNumberOfButtons() : Int;
 	
 	
 }

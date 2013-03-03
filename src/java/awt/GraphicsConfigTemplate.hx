@@ -43,7 +43,7 @@ package java.awt;
 	* This class is an abstract class so only subclasses can be
 	* instantiated.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Value used for "Enum" (Integer) type.  States that this
@@ -51,7 +51,7 @@ package java.awt;
 	* object.  If this feature is not available, do not select the
 	* <code>GraphicsConfiguration</code> object.
 	*/
-	public static var REQUIRED(default, null) : Int;
+	@:public @:static @:final public static var REQUIRED(default, null) : Int;
 	
 	/**
 	* Value used for "Enum" (Integer) type.  States that this
@@ -60,7 +60,7 @@ package java.awt;
 	* selection that does not include this feature, although both
 	* selections can be considered valid matches.
 	*/
-	public static var PREFERRED(default, null) : Int;
+	@:public @:static @:final public static var PREFERRED(default, null) : Int;
 	
 	/**
 	* Value used for "Enum" (Integer) type.  States that this
@@ -69,7 +69,7 @@ package java.awt;
 	* without this feature is preferred over a selection that
 	* includes this feature since it is not used.
 	*/
-	public static var UNNECESSARY(default, null) : Int;
+	@:public @:static @:final public static var UNNECESSARY(default, null) : Int;
 	
 	/**
 	* Returns the "best" configuration possible that passes the
@@ -80,7 +80,7 @@ package java.awt;
 	* the best configuration possible.
 	* @see GraphicsConfiguration
 	*/
-	@:overload @:abstract public function getBestConfiguration(gc : java.NativeArray<java.awt.GraphicsConfiguration>) : java.awt.GraphicsConfiguration;
+	@:overload @:public @:abstract public function getBestConfiguration(gc : java.NativeArray<java.awt.GraphicsConfiguration>) : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Returns a <code>boolean</code> indicating whether or
@@ -95,7 +95,7 @@ package java.awt;
 	* not be used to create a drawing surface usable by this Java(tm)
 	* API.
 	*/
-	@:overload @:abstract public function isGraphicsConfigSupported(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload @:public @:abstract public function isGraphicsConfigSupported(gc : java.awt.GraphicsConfiguration) : Bool;
 	
 	
 }

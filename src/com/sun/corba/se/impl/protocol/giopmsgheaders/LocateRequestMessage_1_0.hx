@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class LocateRequestMessage_1_0 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_0 implements com.sun.corba.se.impl.protocol.giopmsgheaders.LocateRequestMessage
 {
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
-	@:overload public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
+	@:overload @:public public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
 	
-	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

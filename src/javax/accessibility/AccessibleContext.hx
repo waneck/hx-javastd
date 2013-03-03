@@ -33,7 +33,7 @@ extern class AccessibleContext
 	* @see #getAccessibleName
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_NAME_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_NAME_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the accessibleDescription property has
@@ -44,7 +44,7 @@ extern class AccessibleContext
 	* @see #getAccessibleDescription
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_DESCRIPTION_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_DESCRIPTION_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the accessibleStateSet property has
@@ -63,7 +63,7 @@ extern class AccessibleContext
 	* @see AccessibleStateSet
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_STATE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_STATE_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the accessibleValue property has
@@ -74,7 +74,7 @@ extern class AccessibleContext
 	* @see #getAccessibleValue
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_VALUE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_VALUE_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the accessibleSelection has changed.
@@ -84,7 +84,7 @@ extern class AccessibleContext
 	* @see #getAccessibleSelection
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_SELECTION_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_SELECTION_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the accessibleText caret has changed.
@@ -94,7 +94,7 @@ extern class AccessibleContext
 	*
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_CARET_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_CARET_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the visual appearance of the object
@@ -103,7 +103,7 @@ extern class AccessibleContext
 	*
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_VISIBLE_DATA_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_VISIBLE_DATA_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when Accessible children are added/removed
@@ -114,7 +114,7 @@ extern class AccessibleContext
 	*
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_CHILD_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_CHILD_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to determine when the active descendant of a component
@@ -127,7 +127,7 @@ extern class AccessibleContext
 	*
 	* @see #addPropertyChangeListener
 	*/
-	public static var ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the table caption has changed
@@ -137,7 +137,7 @@ extern class AccessibleContext
 	* @see Accessible
 	* @see AccessibleTable
 	*/
-	public static var ACCESSIBLE_TABLE_CAPTION_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_CAPTION_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the table summary has changed
@@ -147,7 +147,7 @@ extern class AccessibleContext
 	* @see Accessible
 	* @see AccessibleTable
 	*/
-	public static var ACCESSIBLE_TABLE_SUMMARY_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_SUMMARY_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that table data has changed.
@@ -157,7 +157,7 @@ extern class AccessibleContext
 	* @see AccessibleTable
 	* @see AccessibleTableModelChange
 	*/
-	public static var ACCESSIBLE_TABLE_MODEL_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_MODEL_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the row header has changed
@@ -167,7 +167,7 @@ extern class AccessibleContext
 	* @see AccessibleTable
 	* @see AccessibleTableModelChange
 	*/
-	public static var ACCESSIBLE_TABLE_ROW_HEADER_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_ROW_HEADER_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the row description has changed
@@ -175,7 +175,7 @@ extern class AccessibleContext
 	* new value will be an Integer representing the row index.
 	* @see AccessibleTable
 	*/
-	public static var ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the column header has changed
@@ -185,7 +185,7 @@ extern class AccessibleContext
 	* @see AccessibleTable
 	* @see AccessibleTableModelChange
 	*/
-	public static var ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the column description has changed
@@ -193,7 +193,7 @@ extern class AccessibleContext
 	* new value will be an Integer representing the column index.
 	* @see AccessibleTable
 	*/
-	public static var ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED(default, null) : String;
 	
 	/**
 	* Constant used to indicate that the supported set of actions
@@ -203,7 +203,7 @@ extern class AccessibleContext
 	* number of actions supported.
 	* @see AccessibleAction
 	*/
-	public static var ACCESSIBLE_ACTION_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_ACTION_PROPERTY(default, null) : String;
 	
 	/**
 	* Constant used to indicate that a hypertext element has received focus.
@@ -215,7 +215,7 @@ extern class AccessibleContext
 	* not have focus.
 	* @see AccessibleHyperlink
 	*/
-	public static var ACCESSIBLE_HYPERTEXT_OFFSET(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_HYPERTEXT_OFFSET(default, null) : String;
 	
 	/**
 	* PropertyChangeEvent which indicates that text has changed.
@@ -235,7 +235,7 @@ extern class AccessibleContext
 	* @see #addPropertyChangeListener
 	* @see AccessibleTextSequence
 	*/
-	public static var ACCESSIBLE_TEXT_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSIBLE_TEXT_PROPERTY(default, null) : String;
 	
 	/**
 	* PropertyChangeEvent which indicates that a significant change
@@ -251,7 +251,7 @@ extern class AccessibleContext
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var ACCESSIBLE_INVALIDATE_CHILDREN(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var ACCESSIBLE_INVALIDATE_CHILDREN(default, null) : String;
 	
 	/**
 	* PropertyChangeEvent which indicates that text attributes have changed.
@@ -273,7 +273,7 @@ extern class AccessibleContext
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED(default, null) : String;
 	
 	/**
 	* PropertyChangeEvent which indicates that a change has occurred
@@ -285,7 +285,7 @@ extern class AccessibleContext
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var ACCESSIBLE_COMPONENT_BOUNDS_CHANGED(default, null) : String;
+	@:require(java5) @:public @:static @:final public static var ACCESSIBLE_COMPONENT_BOUNDS_CHANGED(default, null) : String;
 	
 	/**
 	* The accessible parent of this object.
@@ -293,7 +293,7 @@ extern class AccessibleContext
 	* @see #getAccessibleParent
 	* @see #setAccessibleParent
 	*/
-	private var accessibleParent : javax.accessibility.Accessible;
+	@:protected private var accessibleParent : javax.accessibility.Accessible;
 	
 	/**
 	* A localized String containing the name of the object.
@@ -301,7 +301,7 @@ extern class AccessibleContext
 	* @see #getAccessibleName
 	* @see #setAccessibleName
 	*/
-	private var accessibleName : String;
+	@:protected private var accessibleName : String;
 	
 	/**
 	* A localized String containing the description of the object.
@@ -309,7 +309,7 @@ extern class AccessibleContext
 	* @see #getAccessibleDescription
 	* @see #setAccessibleDescription
 	*/
-	private var accessibleDescription : String;
+	@:protected private var accessibleDescription : String;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -326,7 +326,7 @@ extern class AccessibleContext
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public public function getAccessibleName() : String;
 	
 	/**
 	* Sets the localized accessible name of this object.  Changing the
@@ -342,7 +342,7 @@ extern class AccessibleContext
 	*    preferred:   true
 	*    description: Sets the accessible name for the component.
 	*/
-	@:overload public function setAccessibleName(s : String) : Void;
+	@:overload @:public public function setAccessibleName(s : String) : Void;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  The
@@ -356,7 +356,7 @@ extern class AccessibleContext
 	*
 	* @see #setAccessibleDescription
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public public function getAccessibleDescription() : String;
 	
 	/**
 	* Sets the accessible description of this object.  Changing the
@@ -372,7 +372,7 @@ extern class AccessibleContext
 	*    preferred:   true
 	*    description: Sets the accessible description for the component.
 	*/
-	@:overload public function setAccessibleDescription(s : String) : Void;
+	@:overload @:public public function setAccessibleDescription(s : String) : Void;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -392,7 +392,7 @@ extern class AccessibleContext
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload @:abstract public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public @:abstract public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.  The AccessibleStateSet of an object
@@ -406,7 +406,7 @@ extern class AccessibleContext
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload @:abstract public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public @:abstract public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the Accessible parent of this object.
@@ -414,7 +414,7 @@ extern class AccessibleContext
 	* @return the Accessible parent of this object; null if this
 	* object does not have an Accessible parent
 	*/
-	@:overload public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the Accessible parent of this object.  This is meant to be used
@@ -424,7 +424,7 @@ extern class AccessibleContext
 	*
 	* @param a - Accessible to be set as the parent
 	*/
-	@:overload public function setAccessibleParent(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleParent(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -436,14 +436,14 @@ extern class AccessibleContext
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload @:abstract public function getAccessibleIndexInParent() : Int;
+	@:overload @:public @:abstract public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload @:abstract public function getAccessibleChildrenCount() : Int;
+	@:overload @:public @:abstract public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -455,7 +455,7 @@ extern class AccessibleContext
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload @:abstract public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public @:abstract public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have a
@@ -469,7 +469,7 @@ extern class AccessibleContext
 	* added to a containment hierarchy such that the locale can be
 	* determined from the containing parent.
 	*/
-	@:overload @:abstract public function getLocale() : java.util.Locale;
+	@:overload @:public @:abstract public function getLocale() : java.util.Locale;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list.
@@ -486,7 +486,7 @@ extern class AccessibleContext
 	*
 	* @param listener  The PropertyChangeListener to be added
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list.
@@ -495,7 +495,7 @@ extern class AccessibleContext
 	*
 	* @param listener  The PropertyChangeListener to be removed
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Gets the AccessibleAction associated with this object that supports
@@ -504,7 +504,7 @@ extern class AccessibleContext
 	* @return AccessibleAction if supported by object; else return null
 	* @see AccessibleAction
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the AccessibleComponent associated with this object that has a
@@ -513,7 +513,7 @@ extern class AccessibleContext
 	* @return AccessibleComponent if supported by object; else return null
 	* @see AccessibleComponent
 	*/
-	@:overload public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the AccessibleSelection associated with this object which allows its
@@ -522,7 +522,7 @@ extern class AccessibleContext
 	* @return AccessibleSelection if supported by object; else return null
 	* @see AccessibleSelection
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -531,7 +531,7 @@ extern class AccessibleContext
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the AccessibleEditableText associated with this object
@@ -541,7 +541,7 @@ extern class AccessibleContext
 	* @see AccessibleEditableText
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
+	@:require(java4) @:overload @:public public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
 	
 	/**
 	* Gets the AccessibleValue associated with this object that supports a
@@ -550,7 +550,7 @@ extern class AccessibleContext
 	* @return AccessibleValue if supported by object; else return null
 	* @see AccessibleValue
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the AccessibleIcons associated with an object that has
@@ -561,7 +561,7 @@ extern class AccessibleContext
 	* @see AccessibleIcon
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:require(java3) @:overload @:public public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Gets the AccessibleRelationSet associated with an object
@@ -571,7 +571,7 @@ extern class AccessibleContext
 	* @see AccessibleRelationSet
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
+	@:require(java3) @:overload @:public public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
 	
 	/**
 	* Gets the AccessibleTable associated with an object
@@ -581,7 +581,7 @@ extern class AccessibleContext
 	* @see AccessibleTable
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleTable() : javax.accessibility.AccessibleTable;
+	@:require(java3) @:overload @:public public function getAccessibleTable() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Support for reporting bound property changes.  If oldValue and
@@ -604,7 +604,7 @@ extern class AccessibleContext
 	* @see #ACCESSIBLE_TEXT_PROPERTY
 	* @see #ACCESSIBLE_VISIBLE_DATA_PROPERTY
 	*/
-	@:overload public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public public function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	
 }

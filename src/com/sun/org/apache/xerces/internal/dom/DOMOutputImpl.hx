@@ -48,18 +48,18 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* @author Arun Yadav, Sun Microsytems
 	* @author Gopal Sharma, Sun Microsystems
 	**/
-	private var fCharStream : java.io.Writer;
+	@:protected private var fCharStream : java.io.Writer;
 	
-	private var fByteStream : java.io.OutputStream;
+	@:protected private var fByteStream : java.io.OutputStream;
 	
-	private var fSystemId : String;
+	@:protected private var fSystemId : String;
 	
-	private var fEncoding : String;
+	@:protected private var fEncoding : String;
 	
 	/**
 	* Default Constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* An attribute of a language and binding dependent type that represents a
@@ -68,7 +68,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* encoding in this way will override any encoding specified in an XML
 	* declaration in the data.
 	*/
-	@:overload public function getCharacterStream() : java.io.Writer;
+	@:overload @:public public function getCharacterStream() : java.io.Writer;
 	
 	/**
 	* An attribute of a language and binding dependent type that represents a
@@ -77,7 +77,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* encoding in this way will override any encoding specified in an XML
 	* declaration in the data.
 	*/
-	@:overload public function setCharacterStream(characterStream : java.io.Writer) : Void;
+	@:overload @:public public function setCharacterStream(characterStream : java.io.Writer) : Void;
 	
 	/**
 	* Depending on the language binding in use, this attribute may not be
@@ -86,7 +86,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* application must encode the stream using UTF-16 (defined in [Unicode] and
 	*  Amendment 1 of [ISO/IEC 10646]).
 	*/
-	@:overload public function getByteStream() : java.io.OutputStream;
+	@:overload @:public public function getByteStream() : java.io.OutputStream;
 	
 	/**
 	* Depending on the language binding in use, this attribute may not be
@@ -95,7 +95,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* application must encode the stream using UTF-16 (defined in [Unicode] and
 	*  Amendment 1 of [ISO/IEC 10646]).
 	*/
-	@:overload public function setByteStream(byteStream : java.io.OutputStream) : Void;
+	@:overload @:public public function setByteStream(byteStream : java.io.OutputStream) : Void;
 	
 	/**
 	* The system identifier, a URI reference [IETF RFC 2396], for this output
@@ -105,7 +105,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	*  reference (see section 5 in [IETF RFC 2396]), the behavior is
 	*  implementation dependent.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* The system identifier, a URI reference [IETF RFC 2396], for this output
@@ -115,7 +115,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	*  reference (see section 5 in [IETF RFC 2396]), the behavior is
 	*  implementation dependent.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* The character encoding, if known. The encoding must be a string
@@ -127,7 +127,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* an encoding obtained from a higher level protocol, such as HTTP
 	* [IETF RFC 2616].
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* The character encoding, if known. The encoding must be a string
@@ -139,7 +139,7 @@ extern class DOMOutputImpl implements org.w3c.dom.ls.LSOutput
 	* an encoding obtained from a higher level protocol, such as HTTP
 	* [IETF RFC 2616].
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	
 }

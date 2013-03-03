@@ -211,7 +211,7 @@ extern class SyncProvider
 	/**
 	* Creates a default <code>SyncProvider</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the unique identifier for this <code>SyncProvider</code> object.
@@ -219,7 +219,7 @@ extern class SyncProvider
 	* @return a <code>String</code> object with the fully qualified class name of
 	*         this <code>SyncProvider</code> object
 	*/
-	@:overload @:abstract public function getProviderID() : String;
+	@:overload @:public @:abstract public function getProviderID() : String;
 	
 	/**
 	* Returns a <code>javax.sql.RowSetReader</code> object, which can be used to
@@ -227,7 +227,7 @@ extern class SyncProvider
 	*
 	* @return a <code>javax.sql.RowSetReader</code> object
 	*/
-	@:overload @:abstract public function getRowSetReader() : javax.sql.RowSetReader;
+	@:overload @:public @:abstract public function getRowSetReader() : javax.sql.RowSetReader;
 	
 	/**
 	* Returns a <code>javax.sql.RowSetWriter</code> object, which can be
@@ -236,7 +236,7 @@ extern class SyncProvider
 	*
 	* @return a <code>javax.sql.RowSetWriter</code> object
 	*/
-	@:overload @:abstract public function getRowSetWriter() : javax.sql.RowSetWriter;
+	@:overload @:public @:abstract public function getRowSetWriter() : javax.sql.RowSetWriter;
 	
 	/**
 	* Returns a constant indicating the
@@ -250,7 +250,7 @@ extern class SyncProvider
 	*           SyncProvider.GRADE_LOCK_WHEN_MODIFIED,
 	*           SyncProvider.GRADE_LOCK_WHEN_LOADED
 	*/
-	@:overload @:abstract public function getProviderGrade() : Int;
+	@:overload @:public @:abstract public function getProviderGrade() : Int;
 	
 	/**
 	* Sets a lock on the underlying data source at the level indicated by
@@ -271,7 +271,7 @@ extern class SyncProvider
 	*           is set.
 	* @see #getDataSourceLock
 	*/
-	@:overload @:abstract public function setDataSourceLock(datasource_lock : Int) : Void;
+	@:overload @:public @:abstract public function setDataSourceLock(datasource_lock : Int) : Void;
 	
 	/**
 	* Returns the current data source lock severity level active in this
@@ -291,7 +291,7 @@ extern class SyncProvider
 	* @see #setDataSourceLock
 
 	*/
-	@:overload @:abstract public function getDataSourceLock() : Int;
+	@:overload @:public @:abstract public function getDataSourceLock() : Int;
 	
 	/**
 	* Returns whether this <code>SyncProvider</code> implementation
@@ -305,7 +305,7 @@ extern class SyncProvider
 	*            SyncProvider.UPDATABLE_VIEW_SYNC,
 	*            SyncProvider.NONUPDATABLE_VIEW_SYNC
 	*/
-	@:overload @:abstract public function supportsUpdatableView() : Int;
+	@:overload @:public @:abstract public function supportsUpdatableView() : Int;
 	
 	/**
 	* Returns the release version of this <code>SyncProvider</code> instance.
@@ -313,7 +313,7 @@ extern class SyncProvider
 	* @return a <code>String</code> detailing the release version of the
 	*     <code>SyncProvider</code> implementation
 	*/
-	@:overload @:abstract public function getVersion() : String;
+	@:overload @:public @:abstract public function getVersion() : String;
 	
 	/**
 	* Returns the vendor name of this <code>SyncProvider</code> instance
@@ -321,7 +321,7 @@ extern class SyncProvider
 	* @return a <code>String</code> detailing the vendor name of this
 	*     <code>SyncProvider</code> implementation
 	*/
-	@:overload @:abstract public function getVendor() : String;
+	@:overload @:public @:abstract public function getVendor() : String;
 	
 	/**
 	* Indicates that no synchronization with the originating data source is
@@ -331,7 +331,7 @@ extern class SyncProvider
 	* source without checking the validity of any data.
 	*
 	*/
-	public static var GRADE_NONE(default, null) : Int;
+	@:public @:static @:final public static var GRADE_NONE(default, null) : Int;
 	
 	/**
 	* Indicates a low level optimistic synchronization grade with
@@ -341,7 +341,7 @@ extern class SyncProvider
 	* returning this grade will check only rows that have changed.
 	*
 	*/
-	public static var GRADE_CHECK_MODIFIED_AT_COMMIT(default, null) : Int;
+	@:public @:static @:final public static var GRADE_CHECK_MODIFIED_AT_COMMIT(default, null) : Int;
 	
 	/**
 	* Indicates a high level optimistic synchronization grade with
@@ -351,7 +351,7 @@ extern class SyncProvider
 	* returning this grade will check all rows, including rows that have not
 	* changed.
 	*/
-	public static var GRADE_CHECK_ALL_AT_COMMIT(default, null) : Int;
+	@:public @:static @:final public static var GRADE_CHECK_ALL_AT_COMMIT(default, null) : Int;
 	
 	/**
 	* Indicates a pessimistic synchronization grade with
@@ -361,7 +361,7 @@ extern class SyncProvider
 	* implementation returning this grade will lock the row in the originating
 	* data source.
 	*/
-	public static var GRADE_LOCK_WHEN_MODIFIED(default, null) : Int;
+	@:public @:static @:final public static var GRADE_LOCK_WHEN_MODIFIED(default, null) : Int;
 	
 	/**
 	* Indicates the most pessimistic synchronization grade with
@@ -371,49 +371,49 @@ extern class SyncProvider
 	* table affected by the original statement used to populate a
 	* <code>RowSet</code> object.
 	*/
-	public static var GRADE_LOCK_WHEN_LOADED(default, null) : Int;
+	@:public @:static @:final public static var GRADE_LOCK_WHEN_LOADED(default, null) : Int;
 	
 	/**
 	* Indicates that no locks remain on the originating data source. This is the default
 	* lock setting for all <code>SyncProvider</code> implementations unless
 	* otherwise directed by a <code>RowSet</code> object.
 	*/
-	public static var DATASOURCE_NO_LOCK(default, null) : Int;
+	@:public @:static @:final public static var DATASOURCE_NO_LOCK(default, null) : Int;
 	
 	/**
 	* Indicates that a lock is placed on the rows that are touched by the original
 	* SQL statement used to populate the <code>RowSet</code> object
 	* that is using this <code>SyncProvider</code> object.
 	*/
-	public static var DATASOURCE_ROW_LOCK(default, null) : Int;
+	@:public @:static @:final public static var DATASOURCE_ROW_LOCK(default, null) : Int;
 	
 	/**
 	* Indicates that a lock is placed on all tables that are touched by the original
 	* SQL statement used to populate the <code>RowSet</code> object
 	* that is using this <code>SyncProvider</code> object.
 	*/
-	public static var DATASOURCE_TABLE_LOCK(default, null) : Int;
+	@:public @:static @:final public static var DATASOURCE_TABLE_LOCK(default, null) : Int;
 	
 	/**
 	* Indicates that a lock is placed on the entire data source that is the source of
 	* data for the <code>RowSet</code> object
 	* that is using this <code>SyncProvider</code> object.
 	*/
-	public static var DATASOURCE_DB_LOCK(default, null) : Int;
+	@:public @:static @:final public static var DATASOURCE_DB_LOCK(default, null) : Int;
 	
 	/**
 	* Indicates that a <code>SyncProvider</code> implementation
 	* supports synchronization between a <code>RowSet</code> object and
 	* the SQL <code>VIEW</code> used to populate it.
 	*/
-	public static var UPDATABLE_VIEW_SYNC(default, null) : Int;
+	@:public @:static @:final public static var UPDATABLE_VIEW_SYNC(default, null) : Int;
 	
 	/**
 	* Indicates that a <code>SyncProvider</code> implementation
 	* does <B>not</B> support synchronization between a <code>RowSet</code>
 	* object and the SQL <code>VIEW</code> used to populate it.
 	*/
-	public static var NONUPDATABLE_VIEW_SYNC(default, null) : Int;
+	@:public @:static @:final public static var NONUPDATABLE_VIEW_SYNC(default, null) : Int;
 	
 	
 }

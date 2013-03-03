@@ -28,7 +28,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	/**
 	* Creates an empty <code>DefaultRowSorter</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the model wrapper providing the data that is being sorted and
@@ -39,7 +39,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IllegalArgumentException if {@code modelWrapper} is
 	*         {@code null}
 	*/
-	@:overload @:final private function setModelWrapper(modelWrapper : javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<M, I>) : Void;
+	@:overload @:protected @:final private function setModelWrapper(modelWrapper : javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<M, I>) : Void;
 	
 	/**
 	* Returns the model wrapper providing the data that is being sorted and
@@ -48,14 +48,14 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @return the model wrapper responsible for providing the data that
 	*         gets sorted and filtered
 	*/
-	@:overload @:final private function getModelWrapper() : javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<M, I>;
+	@:overload @:protected @:final private function getModelWrapper() : javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<M, I>;
 	
 	/**
 	* Returns the underlying model.
 	*
 	* @return the underlying model
 	*/
-	@:overload @:final override public function getModel() : M;
+	@:overload @:public @:final override public function getModel() : M;
 	
 	/**
 	* Sets whether or not the specified column is sortable.  The specified
@@ -72,7 +72,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @see #toggleSortOrder
 	* @see #setSortKeys
 	*/
-	@:overload public function setSortable(column : Int, sortable : Bool) : Void;
+	@:overload @:public public function setSortable(column : Int, sortable : Bool) : Void;
 	
 	/**
 	* Returns true if the specified column is sortable; otherwise, false.
@@ -83,7 +83,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IndexOutOfBoundsException if column is outside
 	*         the range of the underlying model
 	*/
-	@:overload public function isSortable(column : Int) : Bool;
+	@:overload @:public public function isSortable(column : Int) : Bool;
 	
 	/**
 	* Sets the sort keys. This creates a copy of the supplied
@@ -98,7 +98,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*         <code>sortKeys</code> are null or have a column index outside
 	*         the range of the model
 	*/
-	@:overload override public function setSortKeys(sortKeys : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>) : Void;
+	@:overload @:public override public function setSortKeys(sortKeys : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>) : Void;
 	
 	/**
 	* Returns the current sort keys.  This returns an unmodifiable
@@ -108,7 +108,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*
 	* @return the current sort order
 	*/
-	@:overload override public function getSortKeys() : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>;
+	@:overload @:public override public function getSortKeys() : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>;
 	
 	/**
 	* Sets the maximum number of sort keys.  The number of sort keys
@@ -138,14 +138,14 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @param max the maximum number of sort keys
 	* @throws IllegalArgumentException if <code>max</code> &lt; 1
 	*/
-	@:overload public function setMaxSortKeys(max : Int) : Void;
+	@:overload @:public public function setMaxSortKeys(max : Int) : Void;
 	
 	/**
 	* Returns the maximum number of sort keys.
 	*
 	* @return the maximum number of sort keys
 	*/
-	@:overload public function getMaxSortKeys() : Int;
+	@:overload @:public public function getMaxSortKeys() : Int;
 	
 	/**
 	* If true, specifies that a sort should happen when the underlying
@@ -156,7 +156,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*
 	* @param sortsOnUpdates whether or not to sort on update events
 	*/
-	@:overload public function setSortsOnUpdates(sortsOnUpdates : Bool) : Void;
+	@:overload @:public public function setSortsOnUpdates(sortsOnUpdates : Bool) : Void;
 	
 	/**
 	* Returns true if  a sort should happen when the underlying
@@ -164,7 +164,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*
 	* @return whether or not to sort when the model is updated
 	*/
-	@:overload public function getSortsOnUpdates() : Bool;
+	@:overload @:public public function getSortsOnUpdates() : Bool;
 	
 	/**
 	* Sets the filter that determines which rows, if any, should be
@@ -183,7 +183,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @param filter the filter used to determine what entries should be
 	*        included
 	*/
-	@:overload public function setRowFilter(filter : javax.swing.RowFilter<M, I>) : Void;
+	@:overload @:public public function setRowFilter(filter : javax.swing.RowFilter<M, I>) : Void;
 	
 	/**
 	* Returns the filter that determines which rows, if any, should
@@ -191,7 +191,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*
 	* @return the filter
 	*/
-	@:overload public function getRowFilter() : javax.swing.RowFilter<M, I>;
+	@:overload @:public public function getRowFilter() : javax.swing.RowFilter<M, I>;
 	
 	/**
 	* Reverses the sort order from ascending to descending (or
@@ -207,21 +207,21 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @see #setSortable(int,boolean)
 	* @see #setMaxSortKeys(int)
 	*/
-	@:overload override public function toggleSortOrder(column : Int) : Void;
+	@:overload @:public override public function toggleSortOrder(column : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function convertRowIndexToView(index : Int) : Int;
+	@:overload @:public override public function convertRowIndexToView(index : Int) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function convertRowIndexToModel(index : Int) : Int;
+	@:overload @:public override public function convertRowIndexToModel(index : Int) : Int;
 	
 	/**
 	* Sorts and filters the rows in the view based on the sort keys
@@ -232,7 +232,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @see #setRowFilter
 	* @see #setSortKeys
 	*/
-	@:overload public function sort() : Void;
+	@:overload @:public public function sort() : Void;
 	
 	/**
 	* Returns whether or not to convert the value to a string before
@@ -246,7 +246,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*        underlying model
 	* @throws IndexOutOfBoundsException if <code>column</code> is not valid
 	*/
-	@:overload private function useToString(column : Int) : Bool;
+	@:overload @:protected private function useToString(column : Int) : Bool;
 	
 	/**
 	* Sets the <code>Comparator</code> to use when sorting the specified
@@ -259,7 +259,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IndexOutOfBoundsException if <code>column</code> is outside
 	*         the range of the underlying model
 	*/
-	@:overload public function setComparator(column : Int, comparator : java.util.Comparator<Dynamic>) : Void;
+	@:overload @:public public function setComparator(column : Int, comparator : java.util.Comparator<Dynamic>) : Void;
 	
 	/**
 	* Returns the <code>Comparator</code> for the specified
@@ -272,55 +272,55 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IndexOutOfBoundsException if column is outside
 	*         the range of the underlying model
 	*/
-	@:overload public function getComparator(column : Int) : java.util.Comparator<Dynamic>;
+	@:overload @:public public function getComparator(column : Int) : java.util.Comparator<Dynamic>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getViewRowCount() : Int;
+	@:overload @:public override public function getViewRowCount() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getModelRowCount() : Int;
+	@:overload @:public override public function getModelRowCount() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function modelStructureChanged() : Void;
+	@:overload @:public override public function modelStructureChanged() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function allRowsChanged() : Void;
-	
-	/**
-	* {@inheritDoc}
-	*
-	* @throws IndexOutOfBoundsException {@inheritDoc}
-	*/
-	@:overload override public function rowsInserted(firstRow : Int, endRow : Int) : Void;
+	@:overload @:public override public function allRowsChanged() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function rowsDeleted(firstRow : Int, endRow : Int) : Void;
+	@:overload @:public override public function rowsInserted(firstRow : Int, endRow : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function rowsUpdated(firstRow : Int, endRow : Int) : Void;
+	@:overload @:public override public function rowsDeleted(firstRow : Int, endRow : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function rowsUpdated(firstRow : Int, endRow : Int, column : Int) : Void;
+	@:overload @:public override public function rowsUpdated(firstRow : Int, endRow : Int) : Void;
+	
+	/**
+	* {@inheritDoc}
+	*
+	* @throws IndexOutOfBoundsException {@inheritDoc}
+	*/
+	@:overload @:public override public function rowsUpdated(firstRow : Int, endRow : Int, column : Int) : Void;
 	
 	
 }
@@ -351,7 +351,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	/**
 	* Creates a new <code>ModelWrapper</code>.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the underlying model that this <code>Model</code> is
@@ -359,21 +359,21 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*
 	* @return the underlying model
 	*/
-	@:overload @:abstract public function getModel() : M;
+	@:overload @:public @:abstract public function getModel() : M;
 	
 	/**
 	* Returns the number of columns in the model.
 	*
 	* @return the number of columns in the model
 	*/
-	@:overload @:abstract public function getColumnCount() : Int;
+	@:overload @:public @:abstract public function getColumnCount() : Int;
 	
 	/**
 	* Returns the number of rows in the model.
 	*
 	* @return the number of rows in the model
 	*/
-	@:overload @:abstract public function getRowCount() : Int;
+	@:overload @:public @:abstract public function getRowCount() : Int;
 	
 	/**
 	* Returns the value at the specified index.
@@ -384,7 +384,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IndexOutOfBoundsException if the indices are outside
 	*         the range of the model
 	*/
-	@:overload @:abstract public function getValueAt(row : Int, column : Int) : Dynamic;
+	@:overload @:public @:abstract public function getValueAt(row : Int, column : Int) : Dynamic;
 	
 	/**
 	* Returns the value as a <code>String</code> at the specified
@@ -399,7 +399,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IndexOutOfBoundsException if the indices are outside
 	*         the range of the model
 	*/
-	@:overload public function getStringValueAt(row : Int, column : Int) : String;
+	@:overload @:public public function getStringValueAt(row : Int, column : Int) : String;
 	
 	/**
 	* Returns the identifier for the specified row.  The return value
@@ -412,7 +412,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @return the identifier
 	* @see RowFilter.Entry#getIdentifier
 	*/
-	@:overload @:abstract public function getIdentifier(row : Int) : I;
+	@:overload @:public @:abstract public function getIdentifier(row : Int) : I;
 	
 	
 }
@@ -424,15 +424,15 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 */
 @:native('javax$swing$DefaultRowSorter$FilterEntry') @:internal extern class DefaultRowSorter_FilterEntry extends javax.swing.RowFilter.RowFilter_Entry<Dynamic, Dynamic>
 {
-	@:overload override public function getModel() : Dynamic;
+	@:overload @:public override public function getModel() : Dynamic;
 	
-	@:overload override public function getValueCount() : Int;
+	@:overload @:public override public function getValueCount() : Int;
 	
-	@:overload override public function getValue(index : Int) : Dynamic;
+	@:overload @:public override public function getValue(index : Int) : Dynamic;
 	
-	@:overload override public function getStringValue(index : Int) : String;
+	@:overload @:public override public function getStringValue(index : Int) : String;
 	
-	@:overload override public function getIdentifier() : Dynamic;
+	@:overload @:public override public function getIdentifier() : Dynamic;
 	
 	
 }
@@ -442,9 +442,9 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 */
 @:native('javax$swing$DefaultRowSorter$Row') @:internal extern class DefaultRowSorter_Row implements java.lang.Comparable<javax.swing.DefaultRowSorter.DefaultRowSorter_Row>
 {
-	@:overload public function new(sorter : javax.swing.DefaultRowSorter<Dynamic, Dynamic>, index : Int) : Void;
+	@:overload @:public public function new(sorter : javax.swing.DefaultRowSorter<Dynamic, Dynamic>, index : Int) : Void;
 	
-	@:overload public function compareTo(o : javax.swing.DefaultRowSorter.DefaultRowSorter_Row) : Int;
+	@:overload @:public public function compareTo(o : javax.swing.DefaultRowSorter.DefaultRowSorter_Row) : Int;
 	
 	
 }

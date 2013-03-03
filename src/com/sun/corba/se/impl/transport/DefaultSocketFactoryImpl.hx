@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.transport;
 */
 extern class DefaultSocketFactoryImpl implements com.sun.corba.se.spi.transport.ORBSocketFactory
 {
-	@:overload public function setORB(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function setORB(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function createServerSocket(type : String, inetSocketAddress : java.net.InetSocketAddress) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(type : String, inetSocketAddress : java.net.InetSocketAddress) : java.net.ServerSocket;
 	
-	@:overload public function createSocket(type : String, inetSocketAddress : java.net.InetSocketAddress) : java.net.Socket;
+	@:overload @:public public function createSocket(type : String, inetSocketAddress : java.net.InetSocketAddress) : java.net.Socket;
 	
-	@:overload public function setAcceptedSocketOptions(acceptor : com.sun.corba.se.pept.transport.Acceptor, serverSocket : java.net.ServerSocket, socket : java.net.Socket) : Void;
+	@:overload @:public public function setAcceptedSocketOptions(acceptor : com.sun.corba.se.pept.transport.Acceptor, serverSocket : java.net.ServerSocket, socket : java.net.Socket) : Void;
 	
 	
 }

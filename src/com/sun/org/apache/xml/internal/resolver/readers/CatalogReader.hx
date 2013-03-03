@@ -37,7 +37,7 @@ extern interface CatalogReader
 	* @throws UnparseableCatalogException if the catalog cannot be parsed.
 	* (For example, if it is supposed to be XML and isn't well-formed.)
 	*/
-	@:overload public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, fileUrl : String) : Void;
+	@:overload @:public public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, fileUrl : String) : Void;
 	
 	/**
 	* Read a catalog from an input stream.
@@ -52,7 +52,7 @@ extern interface CatalogReader
 	* @throws UnparseableCatalogException if the catalog cannot be parsed.
 	* (For example, if it is supposed to be XML and isn't well-formed.)
 	*/
-	@:overload public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
+	@:overload @:public public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
 	
 	
 }

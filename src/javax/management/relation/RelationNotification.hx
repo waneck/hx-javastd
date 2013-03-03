@@ -28,32 +28,32 @@ extern class RelationNotification extends javax.management.Notification
 	/**
 	* Type for the creation of an internal relation.
 	*/
-	public static var RELATION_BASIC_CREATION(default, null) : String;
+	@:public @:static @:final public static var RELATION_BASIC_CREATION(default, null) : String;
 	
 	/**
 	* Type for the relation MBean added into the Relation Service.
 	*/
-	public static var RELATION_MBEAN_CREATION(default, null) : String;
+	@:public @:static @:final public static var RELATION_MBEAN_CREATION(default, null) : String;
 	
 	/**
 	* Type for an update of an internal relation.
 	*/
-	public static var RELATION_BASIC_UPDATE(default, null) : String;
+	@:public @:static @:final public static var RELATION_BASIC_UPDATE(default, null) : String;
 	
 	/**
 	* Type for the update of a relation MBean.
 	*/
-	public static var RELATION_MBEAN_UPDATE(default, null) : String;
+	@:public @:static @:final public static var RELATION_MBEAN_UPDATE(default, null) : String;
 	
 	/**
 	* Type for the removal from the Relation Service of an internal relation.
 	*/
-	public static var RELATION_BASIC_REMOVAL(default, null) : String;
+	@:public @:static @:final public static var RELATION_BASIC_REMOVAL(default, null) : String;
 	
 	/**
 	* Type for the removal from the Relation Service of a relation MBean.
 	*/
-	public static var RELATION_MBEAN_REMOVAL(default, null) : String;
+	@:public @:static @:final public static var RELATION_MBEAN_REMOVAL(default, null) : String;
 	
 	/**
 	* Creates a notification for either a relation creation (RelationSupport
@@ -91,7 +91,7 @@ extern class RelationNotification extends javax.management.Notification
 	* <P>- no relation id
 	* <P>- no relation type name
 	*/
-	@:overload public function new(notifType : String, sourceObj : Dynamic, sequence : haxe.Int64, timeStamp : haxe.Int64, message : String, id : String, typeName : String, objectName : javax.management.ObjectName, unregMBeanList : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function new(notifType : String, sourceObj : Dynamic, sequence : haxe.Int64, timeStamp : haxe.Int64, message : String, id : String, typeName : String, objectName : javax.management.ObjectName, unregMBeanList : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Creates a notification for a role update in a relation.
@@ -117,21 +117,21 @@ extern class RelationNotification extends javax.management.Notification
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function new(notifType : String, sourceObj : Dynamic, sequence : haxe.Int64, timeStamp : haxe.Int64, message : String, id : String, typeName : String, objectName : javax.management.ObjectName, name : String, newValue : java.util.List<javax.management.ObjectName>, oldValue : java.util.List<javax.management.ObjectName>) : Void;
+	@:overload @:public public function new(notifType : String, sourceObj : Dynamic, sequence : haxe.Int64, timeStamp : haxe.Int64, message : String, id : String, typeName : String, objectName : javax.management.ObjectName, name : String, newValue : java.util.List<javax.management.ObjectName>, oldValue : java.util.List<javax.management.ObjectName>) : Void;
 	
 	/**
 	* Returns the relation identifier of created/removed/updated relation.
 	*
 	* @return the relation id.
 	*/
-	@:overload public function getRelationId() : String;
+	@:overload @:public public function getRelationId() : String;
 	
 	/**
 	* Returns the relation type name of created/removed/updated relation.
 	*
 	* @return the relation type name.
 	*/
-	@:overload public function getRelationTypeName() : String;
+	@:overload @:public public function getRelationTypeName() : String;
 	
 	/**
 	* Returns the ObjectName of the
@@ -139,7 +139,7 @@ extern class RelationNotification extends javax.management.Notification
 	*
 	* @return the ObjectName if the relation is an MBean, otherwise null.
 	*/
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	/**
 	* Returns the list of ObjectNames of MBeans expected to be unregistered
@@ -147,28 +147,28 @@ extern class RelationNotification extends javax.management.Notification
 	*
 	* @return a {@link List} of {@link ObjectName}.
 	*/
-	@:overload public function getMBeansToUnregister() : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getMBeansToUnregister() : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Returns name of updated role of updated relation (only for role update).
 	*
 	* @return the name of the updated role.
 	*/
-	@:overload public function getRoleName() : String;
+	@:overload @:public public function getRoleName() : String;
 	
 	/**
 	* Returns old value of updated role (only for role update).
 	*
 	* @return the old value of the updated role.
 	*/
-	@:overload public function getOldRoleValue() : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getOldRoleValue() : java.util.List<javax.management.ObjectName>;
 	
 	/**
 	* Returns new value of updated role (only for role update).
 	*
 	* @return the new value of the updated role.
 	*/
-	@:overload public function getNewRoleValue() : java.util.List<javax.management.ObjectName>;
+	@:overload @:public public function getNewRoleValue() : java.util.List<javax.management.ObjectName>;
 	
 	
 }

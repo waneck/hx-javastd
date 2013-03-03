@@ -44,17 +44,17 @@ extern interface DrawImagePipe
 	*      background color for any transparent pixels.
 	*    - transformImage....
 	*/
-	@:overload public function copyImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, x : Int, y : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function copyImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, x : Int, y : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function copyImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, dx : Int, dy : Int, sx : Int, sy : Int, w : Int, h : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function copyImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, dx : Int, dy : Int, sx : Int, sy : Int, w : Int, h : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function scaleImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function scaleImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function scaleImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function scaleImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgColor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function transformImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, atfm : java.awt.geom.AffineTransform, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public public function transformImage(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, atfm : java.awt.geom.AffineTransform, observer : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload public function transformImage(sg : sun.java2d.SunGraphics2D, img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
+	@:overload @:public public function transformImage(sg : sun.java2d.SunGraphics2D, img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
 	
 	
 }

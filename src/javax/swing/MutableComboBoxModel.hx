@@ -39,7 +39,7 @@ extern interface MutableComboBoxModel<E> extends javax.swing.ComboBoxModel<E>
 	*
 	* @param item the item to be added
 	*/
-	@:overload public function addElement(item : E) : Void;
+	@:overload @:public public function addElement(item : E) : Void;
 	
 	/**
 	* Removes an item from the model. The implementation of this method should
@@ -48,7 +48,7 @@ extern interface MutableComboBoxModel<E> extends javax.swing.ComboBoxModel<E>
 	*
 	* @param obj the <code>Object</code> to be removed
 	*/
-	@:overload public function removeElement(obj : Dynamic) : Void;
+	@:overload @:public public function removeElement(obj : Dynamic) : Void;
 	
 	/**
 	* Adds an item at a specific index.  The implementation of this method
@@ -58,7 +58,7 @@ extern interface MutableComboBoxModel<E> extends javax.swing.ComboBoxModel<E>
 	* @param item  the item to be added
 	* @param index  location to add the object
 	*/
-	@:overload public function insertElementAt(item : E, index : Int) : Void;
+	@:overload @:public public function insertElementAt(item : E, index : Int) : Void;
 	
 	/**
 	* Removes an item at a specific index. The implementation of this method
@@ -67,7 +67,7 @@ extern interface MutableComboBoxModel<E> extends javax.swing.ComboBoxModel<E>
 	*
 	* @param index  location of the item to be removed
 	*/
-	@:overload public function removeElementAt(index : Int) : Void;
+	@:overload @:public public function removeElementAt(index : Int) : Void;
 	
 	
 }

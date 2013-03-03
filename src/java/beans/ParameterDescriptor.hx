@@ -36,7 +36,7 @@ extern class ParameterDescriptor extends java.beans.FeatureDescriptor
 	/**
 	* Public default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

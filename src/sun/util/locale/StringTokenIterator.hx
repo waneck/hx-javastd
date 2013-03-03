@@ -31,25 +31,25 @@ package sun.util.locale;
 */
 extern class StringTokenIterator
 {
-	@:overload public function new(text : String, dlms : String) : Void;
+	@:overload @:public public function new(text : String, dlms : String) : Void;
 	
-	@:overload public function first() : String;
+	@:overload @:public public function first() : String;
 	
-	@:overload public function current() : String;
+	@:overload @:public public function current() : String;
 	
-	@:overload public function currentStart() : Int;
+	@:overload @:public public function currentStart() : Int;
 	
-	@:overload public function currentEnd() : Int;
+	@:overload @:public public function currentEnd() : Int;
 	
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
-	@:overload public function next() : String;
+	@:overload @:public public function next() : String;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function setStart(offset : Int) : sun.util.locale.StringTokenIterator;
+	@:overload @:public public function setStart(offset : Int) : sun.util.locale.StringTokenIterator;
 	
-	@:overload public function setText(text : String) : sun.util.locale.StringTokenIterator;
+	@:overload @:public public function setText(text : String) : sun.util.locale.StringTokenIterator;
 	
 	
 }

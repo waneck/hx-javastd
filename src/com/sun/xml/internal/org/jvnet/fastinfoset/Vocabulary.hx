@@ -30,62 +30,62 @@ extern class Vocabulary
 	/**
 	* The restricted alphabet table, containing String objects.
 	*/
-	public var restrictedAlphabets(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var restrictedAlphabets(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The encoding algorithm table, containing String objects.
 	*/
-	public var encodingAlgorithms(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var encodingAlgorithms(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The prefix table, containing String objects.
 	*/
-	public var prefixes(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var prefixes(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The namespace name table, containing String objects.
 	*/
-	public var namespaceNames(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var namespaceNames(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The local name table, containing String objects.
 	*/
-	public var localNames(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var localNames(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The "other NCName" table, containing String objects.
 	*/
-	public var otherNCNames(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var otherNCNames(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The "other URI" table, containing String objects.
 	*/
-	public var otherURIs(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var otherURIs(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The "attribute value" table, containing String objects.
 	*/
-	public var attributeValues(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var attributeValues(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The "other string" table, containing String objects.
 	*/
-	public var otherStrings(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var otherStrings(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The "character content chunk" table, containing String objects.
 	*/
-	public var characterContentChunks(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var characterContentChunks(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The element table, containing QName objects.
 	*/
-	public var elements(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var elements(default, null) : java.util.Set<Dynamic>;
 	
 	/**
 	* The attribute table, containing QName objects.
 	*/
-	public var attributes(default, null) : java.util.Set<Dynamic>;
+	@:public @:final public var attributes(default, null) : java.util.Set<Dynamic>;
 	
 	
 }

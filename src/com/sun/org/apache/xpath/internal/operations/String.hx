@@ -33,7 +33,7 @@ extern class String extends com.sun.org.apache.xpath.internal.operations.UnaryOp
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function operate(right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function operate(right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

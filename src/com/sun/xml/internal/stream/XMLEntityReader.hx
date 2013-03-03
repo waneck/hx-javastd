@@ -56,20 +56,20 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isValidIANAEncoding
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isValidJavaEncoding
 	*/
-	@:overload @:abstract public function setEncoding(encoding : String) : Void;
+	@:overload @:public @:abstract public function setEncoding(encoding : String) : Void;
 	
-	@:overload @:abstract public function getEncoding() : String;
+	@:overload @:public @:abstract public function getEncoding() : String;
 	
-	@:overload @:abstract public function getCharacterOffset() : Int;
+	@:overload @:public @:abstract public function getCharacterOffset() : Int;
 	
 	/** the version of the current entity being scanned or the version of the entity on which reader is operating */
-	@:overload @:abstract public function setVersion(version : String) : Void;
+	@:overload @:public @:abstract public function setVersion(version : String) : Void;
 	
 	/** get the version of the entity on which reader is operating */
-	@:overload @:abstract public function getVersion() : String;
+	@:overload @:public @:abstract public function getVersion() : String;
 	
 	/** Returns true if the current entity being scanned is external. */
-	@:overload @:abstract public function isExternal() : Bool;
+	@:overload @:public @:abstract public function isExternal() : Bool;
 	
 	/**
 	* Returns the next character on the input.
@@ -79,7 +79,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function peekChar() : Int;
+	@:overload @:public @:abstract public function peekChar() : Int;
 	
 	/**
 	* Returns the next character on the input.
@@ -89,7 +89,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function scanChar() : Int;
+	@:overload @:public @:abstract public function scanChar() : Int;
 	
 	/**
 	* Returns a string matching the NMTOKEN production appearing immediately
@@ -106,7 +106,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @see com.sun.org.apache.xerces.internal.util.SymbolTable
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
 	*/
-	@:overload @:abstract public function scanNmtoken() : String;
+	@:overload @:public @:abstract public function scanNmtoken() : String;
 	
 	/**
 	* Returns a string matching the Name production appearing immediately
@@ -124,7 +124,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isNameStart
 	*/
-	@:overload @:abstract public function scanName() : String;
+	@:overload @:public @:abstract public function scanName() : String;
 	
 	/**
 	* Scans a qualified name from the input, setting the fields of the
@@ -148,7 +148,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isName
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isNameStart
 	*/
-	@:overload @:abstract public function scanQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
+	@:overload @:public @:abstract public function scanQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
 	
 	/**
 	* CHANGED:
@@ -172,7 +172,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function scanContent(content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload @:public @:abstract public function scanContent(content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Scans a range of attribute value data, setting the fields of the
@@ -202,7 +202,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function scanLiteral(quote : Int, content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload @:public @:abstract public function scanLiteral(quote : Int, content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Scans a range of character data up to the specicied delimiter,
@@ -234,7 +234,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function scanData(delimiter : String, data : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
+	@:overload @:public @:abstract public function scanData(delimiter : String, data : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
 	
 	/**
 	* Skips a character appearing immediately on the input.
@@ -249,7 +249,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function skipChar(c : Int) : Bool;
+	@:overload @:public @:abstract public function skipChar(c : Int) : Bool;
 	
 	/**
 	* Skips space characters appearing immediately on the input.
@@ -264,7 +264,7 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	*
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isSpace
 	*/
-	@:overload @:abstract public function skipSpaces() : Bool;
+	@:overload @:public @:abstract public function skipSpaces() : Bool;
 	
 	/**
 	* Skips the specified string appearing immediately on the input.
@@ -279,24 +279,24 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload @:abstract public function skipString(s : String) : Bool;
+	@:overload @:public @:abstract public function skipString(s : String) : Bool;
 	
-	@:overload @:abstract public function registerListener(listener : com.sun.xml.internal.stream.XMLBufferListener) : Void;
+	@:overload @:public @:abstract public function registerListener(listener : com.sun.xml.internal.stream.XMLBufferListener) : Void;
 	
 	/** Returns the expanded system identifier. */
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public @:public public function getExpandedSystemId() : String;
 	
 	/** Returns the base system identifier. */
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public @:public public function getBaseSystemId() : String;
 	
 	/** Returns the line number, or <code>-1</code> if no line number is available. */
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public @:public public function getLineNumber() : Int;
 	
 	/** Returns the column number, or <code>-1</code> if no column number is available. */
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public @:public public function getColumnNumber() : Int;
 	
 	/** Returns the literal system identifier. */
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public @:public public function getLiteralSystemId() : String;
 	
 	/**
 	* Returns the XML version of the current entity. This will normally be the
@@ -308,10 +308,10 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* final once the XML or text declaration has been read or once it has been
 	* determined that there is no such declaration.
 	*/
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public @:public public function getXMLVersion() : String;
 	
 	/** Returns the public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public @:public public function getPublicId() : String;
 	
 	
 }

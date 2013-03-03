@@ -37,42 +37,42 @@ package com.sun.tools.doclets.formats.html;
 	* @param configuration the configuration used in this run
 	*        of the standard doclet.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getContentsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getContentsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addLinkToPackageContent(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, printedPackageHeaders : java.util.Set<String>, contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addLinkToPackageContent(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, printedPackageHeaders : java.util.Set<String>, contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getContentsList(contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getContentsList(contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getConstantSummaries() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getConstantSummaries() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addPackageName(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPackageName(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getClassConstantHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassConstantHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the table caption and header for the constant summary table
@@ -80,7 +80,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param cd classdoc to be documented
 	* @return constant members header content
 	*/
-	@:overload public function getConstantMembersHeader(cd : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getConstantMembersHeader(cd : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class name in the table caption and the table header.
@@ -88,22 +88,22 @@ package com.sun.tools.doclets.formats.html;
 	* @param classStr the class name to print.
 	* @return the table caption and header
 	*/
-	@:overload private function getClassName(classStr : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getClassName(classStr : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addConstantMembers(cd : com.sun.javadoc.ClassDoc, fields : java.util.List<com.sun.javadoc.FieldDoc>, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addConstantMembers(cd : com.sun.javadoc.ClassDoc, fields : java.util.List<com.sun.javadoc.FieldDoc>, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

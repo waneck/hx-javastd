@@ -28,32 +28,32 @@ extern class ParameterDeclarationImpl extends com.sun.tools.apt.mirror.declarati
 	/**
 	* Implementation of ParameterDeclaration
 	*/
-	private var sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
+	@:protected private var sym : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
 	
 	/**
 	* Returns the simple name of the parameter.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getType() : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getType() : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

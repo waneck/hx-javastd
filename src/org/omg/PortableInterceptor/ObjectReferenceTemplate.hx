@@ -14,11 +14,11 @@ package org.omg.PortableInterceptor;
 */
 extern interface ObjectReferenceTemplate extends org.omg.PortableInterceptor.ObjectReferenceFactory
 {
-	@:overload @:abstract public function server_id() : String;
+	@:overload @:public @:abstract public function server_id() : String;
 	
-	@:overload @:abstract public function orb_id() : String;
+	@:overload @:public @:abstract public function orb_id() : String;
 	
-	@:overload @:abstract public function adapter_name() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function adapter_name() : java.NativeArray<String>;
 	
 	
 }

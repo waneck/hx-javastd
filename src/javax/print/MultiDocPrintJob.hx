@@ -49,7 +49,7 @@ extern interface MultiDocPrintJob extends javax.print.DocPrintJob
 	*  If one or more of the attributes are not valid for this print job.
 	* </ul>
 	*/
-	@:overload public function print(multiDoc : javax.print.MultiDoc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload @:public public function print(multiDoc : javax.print.MultiDoc, attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	
 }

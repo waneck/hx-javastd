@@ -45,14 +45,14 @@ package java.net;
 	* @param userName the user name
 	* @param password the user's password
 	*/
-	@:overload public function new(userName : String, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(userName : String, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Returns the user name.
 	*
 	* @return the user name
 	*/
-	@:overload public function getUserName() : String;
+	@:overload @:public public function getUserName() : String;
 	
 	/**
 	* Returns the user password.
@@ -63,7 +63,7 @@ package java.net;
 	*
 	* @return the password
 	*/
-	@:overload public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getPassword() : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }

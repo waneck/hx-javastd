@@ -25,69 +25,69 @@ package com.sun.xml.internal.ws.resources;
 */
 extern class UtilMessages
 {
-	@:overload public static function localizableUTIL_LOCATION(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_LOCATION(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* at line {0} of {1}
 	*
 	*/
-	@:overload public static function UTIL_LOCATION(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_LOCATION(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_FAILED_TO_PARSE_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_FAILED_TO_PARSE_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Could not parse handler chain file {1} for class {0}
 	*
 	*/
-	@:overload public static function UTIL_FAILED_TO_PARSE_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_FAILED_TO_PARSE_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_PARSER_WRONG_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_PARSER_WRONG_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* found element "{1}", expected "{2}" in handler chain configuration (line {0})
 	*
 	*/
-	@:overload public static function UTIL_PARSER_WRONG_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_PARSER_WRONG_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_HANDLER_CLASS_NOT_FOUND(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_HANDLER_CLASS_NOT_FOUND(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* "Class: {0} could not be found"
 	*
 	*/
-	@:overload public static function UTIL_HANDLER_CLASS_NOT_FOUND(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_HANDLER_CLASS_NOT_FOUND(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_HANDLER_ENDPOINT_INTERFACE_NO_WEBSERVICE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_HANDLER_ENDPOINT_INTERFACE_NO_WEBSERVICE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* "The Endpoint Interface: {0} does not have WebService Annotation"
 	*
 	*/
-	@:overload public static function UTIL_HANDLER_ENDPOINT_INTERFACE_NO_WEBSERVICE(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_HANDLER_ENDPOINT_INTERFACE_NO_WEBSERVICE(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_HANDLER_NO_WEBSERVICE_ANNOTATION(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_HANDLER_NO_WEBSERVICE_ANNOTATION(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* "A WebService annotation is not present on class: {0}"
 	*
 	*/
-	@:overload public static function UTIL_HANDLER_NO_WEBSERVICE_ANNOTATION(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_HANDLER_NO_WEBSERVICE_ANNOTATION(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_FAILED_TO_FIND_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_FAILED_TO_FIND_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Could not find handler chain file {1} for class {0}
 	*
 	*/
-	@:overload public static function UTIL_FAILED_TO_FIND_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function UTIL_FAILED_TO_FIND_HANDLERCHAIN_FILE(arg0 : Dynamic, arg1 : Dynamic) : String;
 	
-	@:overload public static function localizableUTIL_HANDLER_CANNOT_COMBINE_SOAPMESSAGEHANDLERS() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUTIL_HANDLER_CANNOT_COMBINE_SOAPMESSAGEHANDLERS() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* You must use HanlderChain annotation, not SOAPMessageHandlers
 	*
 	*/
-	@:overload public static function UTIL_HANDLER_CANNOT_COMBINE_SOAPMESSAGEHANDLERS() : String;
+	@:overload @:public @:static public static function UTIL_HANDLER_CANNOT_COMBINE_SOAPMESSAGEHANDLERS() : String;
 	
 	
 }

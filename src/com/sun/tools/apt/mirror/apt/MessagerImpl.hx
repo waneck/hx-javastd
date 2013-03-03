@@ -25,37 +25,37 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class MessagerImpl implements com.sun.mirror.apt.Messager
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.apt.MessagerImpl;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.apt.MessagerImpl;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printError(msg : String) : Void;
+	@:overload @:public public function printError(msg : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printError(pos : com.sun.mirror.util.SourcePosition, msg : String) : Void;
+	@:overload @:public public function printError(pos : com.sun.mirror.util.SourcePosition, msg : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printWarning(msg : String) : Void;
+	@:overload @:public public function printWarning(msg : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printWarning(pos : com.sun.mirror.util.SourcePosition, msg : String) : Void;
+	@:overload @:public public function printWarning(pos : com.sun.mirror.util.SourcePosition, msg : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printNotice(msg : String) : Void;
+	@:overload @:public public function printNotice(msg : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function printNotice(pos : com.sun.mirror.util.SourcePosition, msg : String) : Void;
+	@:overload @:public public function printNotice(pos : com.sun.mirror.util.SourcePosition, msg : String) : Void;
 	
 	
 }

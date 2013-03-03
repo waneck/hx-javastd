@@ -35,7 +35,7 @@ extern class PerfLongMonitor extends sun.jvmstat.monitor.AbstractMonitor impleme
 	* @param supported support level indicator
 	* @param lb the buffer containing the long instrument data.
 	*/
-	@:overload public function new(name : String, u : sun.jvmstat.monitor.Units, v : sun.jvmstat.monitor.Variability, supported : Bool, lb : java.nio.LongBuffer) : Void;
+	@:overload @:public public function new(name : String, u : sun.jvmstat.monitor.Units, v : sun.jvmstat.monitor.Variability, supported : Bool, lb : java.nio.LongBuffer) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -45,14 +45,14 @@ extern class PerfLongMonitor extends sun.jvmstat.monitor.AbstractMonitor impleme
 	* @return Object - the current value of the the LongInstrument. The
 	*                  return type is guaranteed to be of type Long.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Return the current value of the LongInstrument as an long.
 	*
 	* @return long - the current value of the LongInstrument
 	*/
-	@:overload public function longValue() : haxe.Int64;
+	@:overload @:public public function longValue() : haxe.Int64;
 	
 	
 }

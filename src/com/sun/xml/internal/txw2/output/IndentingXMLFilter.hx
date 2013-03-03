@@ -25,15 +25,15 @@ package com.sun.xml.internal.txw2.output;
 */
 extern class IndentingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl implements org.xml.sax.ext.LexicalHandler
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function new(handler : org.xml.sax.ContentHandler, lexical : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler, lexical : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
-	@:overload public function setLexicalHandler(lexical : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(lexical : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Return the current indent step.
@@ -49,7 +49,7 @@ extern class IndentingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl implem
 	* @deprecated
 	*      Only return the length of the indent string.
 	*/
-	@:overload public function getIndentStep() : Int;
+	@:overload @:public public function getIndentStep() : Int;
 	
 	/**
 	* Set the current indent step.
@@ -61,9 +61,9 @@ extern class IndentingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl implem
 	* @deprecated
 	*      Should use the version that takes string.
 	*/
-	@:overload public function setIndentStep(indentStep : Int) : Void;
+	@:overload @:public public function setIndentStep(indentStep : Int) : Void;
 	
-	@:overload public function setIndentStep(s : String) : Void;
+	@:overload @:public public function setIndentStep(s : String) : Void;
 	
 	/**
 	* Write a start tag.
@@ -84,7 +84,7 @@ extern class IndentingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl implem
 	*            down the chain raises an exception.
 	* @see XMLWriter#startElement(String, String, String,Attributes)
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Write an end tag.
@@ -104,7 +104,7 @@ extern class IndentingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl implem
 	*            down the chain raises an exception.
 	* @see XMLWriter#endElement(String, String, String)
 	*/
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Write a sequence of characters.
@@ -117,21 +117,21 @@ extern class IndentingXMLFilter extends org.xml.sax.helpers.XMLFilterImpl implem
 	*            down the chain raises an exception.
 	* @see XMLWriter#characters(char[], int, int)
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
 	
 }

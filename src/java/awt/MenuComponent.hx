@@ -32,7 +32,7 @@ extern class MenuComponent implements java.io.Serializable
 	*    returns <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the name of the menu component.
@@ -40,7 +40,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @see           java.awt.MenuComponent#setName(java.lang.String)
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload public function getName() : String;
+	@:require(java1) @:overload @:public public function getName() : String;
 	
 	/**
 	* Sets the name of the component to the specified string.
@@ -48,7 +48,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @see           java.awt.MenuComponent#getName
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload public function setName(name : String) : Void;
+	@:require(java1) @:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* Returns the parent container for this menu component.
@@ -56,13 +56,13 @@ extern class MenuComponent implements java.io.Serializable
 	*                 or <code>null</code> if this menu component
 	*                 is the outermost component, the menu bar itself
 	*/
-	@:overload public function getParent() : java.awt.MenuContainer;
+	@:overload @:public public function getParent() : java.awt.MenuContainer;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* programs should not directly manipulate peers.
 	*/
-	@:overload public function getPeer() : java.awt.peer.MenuComponentPeer;
+	@:overload @:public public function getPeer() : java.awt.peer.MenuComponentPeer;
 	
 	/**
 	* Gets the font used for this menu component.
@@ -70,7 +70,7 @@ extern class MenuComponent implements java.io.Serializable
 	*                  <code>null</code> otherwise
 	* @see     java.awt.MenuComponent#setFont
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the font to be used for this menu component to the specified
@@ -89,14 +89,14 @@ extern class MenuComponent implements java.io.Serializable
 	* @see       Font#getAttributes
 	* @see       java.awt.font.TextAttribute
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Removes the menu component's peer.  The peer allows us to modify the
 	* appearance of the menu component without changing the functionality of
 	* the menu component.
 	*/
-	@:overload public function removeNotify() : Void;
+	@:overload @:public public function removeNotify() : Void;
 	
 	/**
 	* Posts the specified event to the menu.
@@ -108,13 +108,13 @@ extern class MenuComponent implements java.io.Serializable
 	* @deprecated As of JDK version 1.1, replaced by {@link
 	* #dispatchEvent(AWTEvent) dispatchEvent}.
 	*/
-	@:overload public function postEvent(evt : java.awt.Event) : Bool;
+	@:overload @:public public function postEvent(evt : java.awt.Event) : Bool;
 	
 	/**
 	* Delivers an event to this component or one of its sub components.
 	* @param e the event
 	*/
-	@:overload @:final public function dispatchEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:public @:final public function dispatchEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes events occurring on this menu component.
@@ -125,7 +125,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @param e the event
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this
@@ -136,13 +136,13 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @return     the parameter string of this menu component
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected private function paramString() : String;
 	
 	/**
 	* Returns a representation of this menu component as a string.
 	* @return  a string representation of this menu component
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Gets this component's locking object (the object that owns the thread
@@ -150,7 +150,7 @@ extern class MenuComponent implements java.io.Serializable
 	* operations.
 	* @return this component's locking object
 	*/
-	@:overload @:final private function getTreeLock() : Dynamic;
+	@:overload @:protected @:final private function getTreeLock() : Dynamic;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with
@@ -165,7 +165,7 @@ extern class MenuComponent implements java.io.Serializable
 	*     <code>MenuComponent</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -184,7 +184,7 @@ extern class MenuComponent implements java.io.Serializable
 	* Although the class is abstract, this should be called by
 	* all sub-classes.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the <code>AccessibleSelection</code> associated with this
@@ -194,7 +194,7 @@ extern class MenuComponent implements java.io.Serializable
 	*      else return <code>null</code>
 	* @see AccessibleSelection
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the accessible name of this object.  This should almost never
@@ -209,7 +209,7 @@ extern class MenuComponent implements java.io.Serializable
 	*         if this object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessible description of this object.  This should be
@@ -226,7 +226,7 @@ extern class MenuComponent implements java.io.Serializable
 	*     <code>null</code> if this object does not have a description
 	* @see AccessibleContext#setAccessibleDescription
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.
@@ -235,7 +235,7 @@ extern class MenuComponent implements java.io.Serializable
 	*     describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state of this object.
@@ -244,7 +244,7 @@ extern class MenuComponent implements java.io.Serializable
 	*     containing the current state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the <code>Accessible</code> parent of this object.
@@ -255,7 +255,7 @@ extern class MenuComponent implements java.io.Serializable
 	*    be <code>null</code> if this object does not have an
 	*    <code>Accessible</code> parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the index of this object in its accessible parent.
@@ -264,7 +264,7 @@ extern class MenuComponent implements java.io.Serializable
 	*     object does not have an accessible parent
 	* @see #getAccessibleParent
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -273,7 +273,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth <code>Accessible</code> child of the object.
@@ -281,14 +281,14 @@ extern class MenuComponent implements java.io.Serializable
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the locale of this object.
 	*
 	* @return the locale of this object
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Gets the <code>AccessibleComponent</code> associated with
@@ -296,7 +296,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @return the component
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the background color of this object.
@@ -304,7 +304,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @return the background color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this object.
@@ -313,7 +313,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @param c the new <code>Color</code> for the background
 	* @see Component#isOpaque
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -321,14 +321,14 @@ extern class MenuComponent implements java.io.Serializable
 	* @return the foreground color, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this object.
 	*
 	* @param c the new <code>Color</code> for the foreground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the <code>Cursor</code> of this object.
@@ -336,7 +336,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @return the <code>Curso</code>, if supported, of the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the <code>Cursor</code> of this object.
@@ -346,7 +346,7 @@ extern class MenuComponent implements java.io.Serializable
 	* changing the mouse cursor shape.
 	* @param cursor the new <code>Cursor</code> for the object
 	*/
-	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the <code>Font</code> of this object.
@@ -354,14 +354,14 @@ extern class MenuComponent implements java.io.Serializable
 	* @return the <code>Font</code>,if supported, for the object;
 	*     otherwise, <code>null</code>
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the <code>Font</code> of this object.
 	*
 	* @param f the new <code>Font</code> for the object
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the <code>FontMetrics</code> of this object.
@@ -371,21 +371,21 @@ extern class MenuComponent implements java.io.Serializable
 	*              otherwise, <code>null</code>
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines if the object is enabled.
 	*
 	* @return true if object is enabled; otherwise, false
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets the enabled state of the object.
 	*
 	* @param b if true, enables this object; otherwise, disables it
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -396,14 +396,14 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @return true if object is visible; otherwise, false
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
 	*
 	* @param b if true, shows this object; otherwise, hides it
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -414,7 +414,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -425,7 +425,7 @@ extern class MenuComponent implements java.io.Serializable
 	*     system of the object
 	* @return true if object contains <code>Point</code>; otherwise false
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -433,7 +433,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @return location of object on screen -- can be <code>null</code>
 	*     if this object is not on the screen
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -445,12 +445,12 @@ extern class MenuComponent implements java.io.Serializable
 	*    space of the screen; <code>null</code> if
 	*    this object or its parent are not on the screen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a
@@ -461,7 +461,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @return a rectangle indicating this component's bounds;
 	*     <code>null</code> if this object is not on the screen
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a
@@ -471,7 +471,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @param r a rectangle indicating this component's bounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a
@@ -484,7 +484,7 @@ extern class MenuComponent implements java.io.Serializable
 	*         size of this component; <code>null</code>
 	*         if this object is not on the screen
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object.
@@ -492,7 +492,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @param d - the <code>Dimension</code> specifying the
 	*    new size of the object
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -506,19 +506,19 @@ extern class MenuComponent implements java.io.Serializable
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.
 	*
 	* @return true if object can accept focus; otherwise false
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -526,7 +526,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @param l the focus listener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -534,7 +534,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @param l the focus listener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Returns the number of <code>Accessible</code> children currently selected.
@@ -542,7 +542,7 @@ extern class MenuComponent implements java.io.Serializable
 	*
 	* @return the number of items currently selected
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an <code>Accessible</code> representing the specified
@@ -556,7 +556,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @return the i-th selected child
 	* @see #getAccessibleSelectionCount
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Determines if the current child of this object is selected.
@@ -567,7 +567,7 @@ extern class MenuComponent implements java.io.Serializable
 	*      <code>Accessible</code> object
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified <code>Accessible</code> child of the object
@@ -579,7 +579,7 @@ extern class MenuComponent implements java.io.Serializable
 	* @param i the zero-based index of the child
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified child of the object from the object's
@@ -589,19 +589,19 @@ extern class MenuComponent implements java.io.Serializable
 	* @param i the zero-based index of the child
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that no children in the
 	* object are selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every child of the object to be selected
 	* if the object supports multiple selections.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }

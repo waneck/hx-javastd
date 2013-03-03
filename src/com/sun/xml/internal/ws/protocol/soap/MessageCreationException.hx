@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.protocol.soap;
 */
 extern class MessageCreationException extends com.sun.xml.internal.ws.api.message.ExceptionHasMessage
 {
-	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
-	@:overload override public function getFaultMessage() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public override public function getFaultMessage() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

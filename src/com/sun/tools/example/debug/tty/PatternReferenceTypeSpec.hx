@@ -35,20 +35,20 @@ package com.sun.tools.example.debug.tty;
 	/**
 	* Is this spec unique or is it a class pattern?
 	*/
-	@:overload public function isUnique() : Bool;
+	@:overload @:public public function isUnique() : Bool;
 	
 	/**
 	* Does the specified ReferenceType match this spec.
 	*/
-	@:overload public function matches(refType : com.sun.jdi.ReferenceType) : Bool;
+	@:overload @:public public function matches(refType : com.sun.jdi.ReferenceType) : Bool;
 	
-	@:overload public function createPrepareRequest() : com.sun.jdi.request.ClassPrepareRequest;
+	@:overload @:public public function createPrepareRequest() : com.sun.jdi.request.ClassPrepareRequest;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

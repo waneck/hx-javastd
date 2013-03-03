@@ -33,9 +33,9 @@ package com.sun.org.glassfish.gmbal;
 */
 extern class GmbalException extends java.lang.RuntimeException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(msg : String, thr : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, thr : java.lang.Throwable) : Void;
 	
 	
 }

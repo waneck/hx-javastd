@@ -22,14 +22,14 @@ package com.sun.org.apache.xml.internal.security.utils.resolver;
 extern class ResourceResolver
 {
 	/** Field transformSpi */
-	private var _resolverSpi : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi;
+	@:protected private var _resolverSpi : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi;
 	
 	/**
 	* Constructor ResourceResolver
 	*
 	* @param resourceResolver
 	*/
-	@:overload public function new(resourceResolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi) : Void;
+	@:overload @:public public function new(resourceResolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi) : Void;
 	
 	/**
 	* Method getInstance
@@ -40,7 +40,7 @@ extern class ResourceResolver
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
+	@:overload @:public @:static @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
 	
 	/**
 	* Method getInstance
@@ -52,12 +52,12 @@ extern class ResourceResolver
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String, individualResolvers : java.util.List<Dynamic>) : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
+	@:overload @:public @:static @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String, individualResolvers : java.util.List<Dynamic>) : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
 	
 	/**
 	* The init() function is called by com.sun.org.apache.xml.internal.security.Init.init()
 	*/
-	@:overload public static function init() : Void;
+	@:overload @:public @:static public static function init() : Void;
 	
 	/**
 	* Registers a ResourceResolverSpi class. This method logs a warning if
@@ -66,7 +66,7 @@ extern class ResourceResolver
 	* @param className the name of the ResourceResolverSpi class to be
 	*    registered
 	*/
-	@:overload public static function register(className : String) : Void;
+	@:overload @:public @:static public static function register(className : String) : Void;
 	
 	/**
 	* Registers a ResourceResolverSpi class at the beginning of the provider
@@ -75,7 +75,7 @@ extern class ResourceResolver
 	* @param className the name of the ResourceResolverSpi class to be
 	*    registered
 	*/
-	@:overload public static function registerAtStart(className : String) : Void;
+	@:overload @:public @:static public static function registerAtStart(className : String) : Void;
 	
 	/**
 	* Method resolve
@@ -86,7 +86,7 @@ extern class ResourceResolver
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload public static function resolveStatic(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public @:static public static function resolveStatic(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method resolve
@@ -97,7 +97,7 @@ extern class ResourceResolver
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload public function resolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function resolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method setProperty
@@ -105,7 +105,7 @@ extern class ResourceResolver
 	* @param key
 	* @param value
 	*/
-	@:overload public function setProperty(key : String, value : String) : Void;
+	@:overload @:public public function setProperty(key : String, value : String) : Void;
 	
 	/**
 	* Method getProperty
@@ -113,21 +113,21 @@ extern class ResourceResolver
 	* @param key
 	* @return the value of the property
 	*/
-	@:overload public function getProperty(key : String) : String;
+	@:overload @:public public function getProperty(key : String) : String;
 	
 	/**
 	* Method addProperties
 	*
 	* @param properties
 	*/
-	@:overload public function addProperties(properties : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function addProperties(properties : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Method getPropertyKeys
 	*
 	* @return all property keys.
 	*/
-	@:overload public function getPropertyKeys() : java.NativeArray<String>;
+	@:overload @:public public function getPropertyKeys() : java.NativeArray<String>;
 	
 	/**
 	* Method understandsProperty
@@ -135,7 +135,7 @@ extern class ResourceResolver
 	* @param propertyToTest
 	* @return true if the resolver understands the property
 	*/
-	@:overload public function understandsProperty(propertyToTest : String) : Bool;
+	@:overload @:public public function understandsProperty(propertyToTest : String) : Bool;
 	
 	
 }

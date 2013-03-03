@@ -29,13 +29,13 @@ extern class PrincipalHolder implements org.omg.CORBA.portable.Streamable
 	* The <code>Principal</code> value held by this <code>PrincipalHolder</code>
 	* object.
 	*/
-	public var value : org.omg.CORBA.Principal;
+	@:public public var value : org.omg.CORBA.Principal;
 	
 	/**
 	* Constructs a new <code>PrincipalHolder</code> object with its
 	* <code>value</code> field initialized to <code>null</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>PrincipalHolder</code> object with its
@@ -45,13 +45,13 @@ extern class PrincipalHolder implements org.omg.CORBA.portable.Streamable
 	*                the <code>value</code> field of the newly-created
 	*                <code>PrincipalHolder</code> object
 	*/
-	@:overload public function new(initial : org.omg.CORBA.Principal) : Void;
+	@:overload @:public public function new(initial : org.omg.CORBA.Principal) : Void;
 	
-	@:overload public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

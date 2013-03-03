@@ -33,12 +33,12 @@ extern class ValidationEventCollector implements javax.xml.bind.ValidationEventH
 	*      a copy of all the collected errors and warnings or an empty array
 	*      if there weren't any
 	*/
-	@:overload public function getEvents() : java.NativeArray<javax.xml.bind.ValidationEvent>;
+	@:overload @:public public function getEvents() : java.NativeArray<javax.xml.bind.ValidationEvent>;
 	
 	/**
 	* Clear all collected errors and warnings.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns true if this event collector contains at least one
@@ -47,9 +47,9 @@ extern class ValidationEventCollector implements javax.xml.bind.ValidationEventH
 	* @return true if this event collector contains at least one
 	*         ValidationEvent, false otherwise
 	*/
-	@:overload public function hasEvents() : Bool;
+	@:overload @:public public function hasEvents() : Bool;
 	
-	@:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
+	@:overload @:public public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
 	
 }

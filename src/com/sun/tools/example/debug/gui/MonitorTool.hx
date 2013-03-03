@@ -32,19 +32,19 @@ package com.sun.tools.example.debug.gui;
 */
 extern class MonitorTool extends javax.swing.JPanel
 {
-	@:overload public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
+	@:overload @:public public function new(env : com.sun.tools.example.debug.gui.Environment) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$MonitorTool$MonitorToolListener') @:internal extern class MonitorTool_MonitorToolListener implements javax.swing.event.ListSelectionListener
 {
-	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$MonitorTool$MonitorRenderer') @:internal extern class MonitorTool_MonitorRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }

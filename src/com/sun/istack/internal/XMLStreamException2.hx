@@ -30,20 +30,20 @@ extern class XMLStreamException2 extends javax.xml.stream.XMLStreamException
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(th : java.lang.Throwable) : Void;
+	@:overload @:public public function new(th : java.lang.Throwable) : Void;
 	
-	@:overload public function new(msg : String, th : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, th : java.lang.Throwable) : Void;
 	
-	@:overload public function new(msg : String, location : javax.xml.stream.Location) : Void;
+	@:overload @:public public function new(msg : String, location : javax.xml.stream.Location) : Void;
 	
-	@:overload public function new(msg : String, location : javax.xml.stream.Location, th : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, location : javax.xml.stream.Location, th : java.lang.Throwable) : Void;
 	
 	/**
 	* {@link XMLStreamException} doesn't return the correct cause.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

@@ -31,7 +31,7 @@ extern interface XPointerProcessor
 	*         not conform to its definition for its scheme.
 	*
 	*/
-	@:overload public function parseXPointer(xpointer : String) : Void;
+	@:overload @:public public function parseXPointer(xpointer : String) : Void;
 	
 	/**
 	* Evaluates an XML resource with respect to an XPointer expressions
@@ -49,7 +49,7 @@ extern interface XPointerProcessor
 	* @throws XNIException Thrown to signal an error
 	*
 	*/
-	@:overload public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
+	@:overload @:public public function resolveXPointer(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, event : Int) : Bool;
 	
 	/**
 	* Returns true if the XPointer expression resolves to the current resource fragment
@@ -60,7 +60,7 @@ extern interface XPointerProcessor
 	* @throws XNIException Thrown to signal an error
 	*
 	*/
-	@:overload public function isFragmentResolved() : Bool;
+	@:overload @:public public function isFragmentResolved() : Bool;
 	
 	/**
 	* Returns true if the XPointer expression resolves any subresource of the
@@ -71,7 +71,7 @@ extern interface XPointerProcessor
 	* @throws XNIException Thrown to signal an error
 	*
 	*/
-	@:overload public function isXPointerResolved() : Bool;
+	@:overload @:public public function isXPointerResolved() : Bool;
 	
 	
 }

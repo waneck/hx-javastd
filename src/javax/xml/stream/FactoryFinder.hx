@@ -32,7 +32,7 @@ package javax.xml.stream;
 	/**
 	* use the exception chaining mechanism of JDK1.4
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

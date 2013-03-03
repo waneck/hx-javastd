@@ -35,13 +35,13 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	* @param fTable  The FunctionTable object where the xpath build-in
 	*                functions are stored.
 	*/
-	@:overload public function new(errorHandler : javax.xml.transform.ErrorListener, locator : javax.xml.transform.SourceLocator, fTable : com.sun.org.apache.xpath.internal.compiler.FunctionTable) : Void;
+	@:overload @:public public function new(errorHandler : javax.xml.transform.ErrorListener, locator : javax.xml.transform.SourceLocator, fTable : com.sun.org.apache.xpath.internal.compiler.FunctionTable) : Void;
 	
 	/**
 	* Construct a Compiler instance that has a null error listener and a
 	* null source locator.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Execute the XPath object from a given opcode position.
@@ -51,7 +51,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	* @throws TransformerException if there is a syntax or other error.
 	* @xsl.usage advanced
 	*/
-	@:overload public function compile(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function compile(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile an 'or' operation.
@@ -62,7 +62,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function or(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function or(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile an 'and' operation.
@@ -73,7 +73,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function and(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function and(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '!=' operation.
@@ -84,7 +84,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function notequals(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function notequals(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '=' operation.
@@ -95,7 +95,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function equals(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function equals(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '<=' operation.
@@ -106,7 +106,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function lte(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function lte(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '<' operation.
@@ -117,7 +117,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function lt(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function lt(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '>=' operation.
@@ -128,7 +128,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function gte(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function gte(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '>' operation.
@@ -139,7 +139,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function gt(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function gt(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '+' operation.
@@ -150,7 +150,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function plus(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function plus(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '-' operation.
@@ -161,7 +161,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function minus(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function minus(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a '*' operation.
@@ -172,7 +172,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function mult(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function mult(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a 'div' operation.
@@ -183,7 +183,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function div(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function div(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a 'mod' operation.
@@ -194,7 +194,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function mod(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function mod(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a unary '-' operation.
@@ -205,7 +205,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function neg(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function neg(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a 'string(...)' operation.
@@ -216,7 +216,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function string(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function string(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a 'boolean(...)' operation.
@@ -227,7 +227,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function bool(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function bool(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a 'number(...)' operation.
@@ -238,7 +238,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function number(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function number(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a literal string value.
@@ -249,7 +249,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function literal(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function literal(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a literal number value.
@@ -260,7 +260,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function numberlit(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function numberlit(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a variable reference.
@@ -271,7 +271,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function variable(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function variable(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile an expression group.
@@ -282,7 +282,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function group(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function group(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a function argument.
@@ -293,7 +293,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function arg(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function arg(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a location path union. The UnionPathIterator itself may create
@@ -305,13 +305,13 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function union(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function union(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Get the level of the location path or union being constructed.
 	* @return 0 if it is a top-level path.
 	*/
-	@:overload public function getLocationPathDepth() : Int;
+	@:overload @:public public function getLocationPathDepth() : Int;
 	
 	/**
 	* Compile a location path.  The LocPathIterator itself may create
@@ -323,7 +323,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload public function locationPath(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function locationPath(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a location step predicate expression.
@@ -334,7 +334,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload public function predicate(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function predicate(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile an entire match pattern expression.
@@ -345,7 +345,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function matchPattern(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:protected private function matchPattern(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Compile a location match pattern unit expression.
@@ -356,7 +356,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload public function locationPathPattern(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function locationPathPattern(opPos : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Get a {@link org.w3c.dom.traversal.NodeFilter} bit set that tells what
@@ -367,7 +367,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	* @return {@link org.w3c.dom.traversal.NodeFilter} bit set that tells what
 	*         to show for a given node test.
 	*/
-	@:overload public function getWhatToShow(opPos : Int) : Int;
+	@:overload @:public public function getWhatToShow(opPos : Int) : Int;
 	
 	/**
 	* Compile a step pattern unit expression, used for both location paths
@@ -381,7 +381,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload private function stepPattern(opPos : Int, stepCount : Int, ancestorPattern : com.sun.org.apache.xpath.internal.patterns.StepPattern) : com.sun.org.apache.xpath.internal.patterns.StepPattern;
+	@:overload @:protected private function stepPattern(opPos : Int, stepCount : Int, ancestorPattern : com.sun.org.apache.xpath.internal.patterns.StepPattern) : com.sun.org.apache.xpath.internal.patterns.StepPattern;
 	
 	/**
 	* Compile a zero or more predicates for a given match pattern.
@@ -392,7 +392,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload public function getCompiledPredicates(opPos : Int) : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>;
+	@:overload @:public public function getCompiledPredicates(opPos : Int) : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>;
 	
 	/**
 	* Count the number of predicates in the step.
@@ -403,7 +403,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws TransformerException if a error occurs creating the Expression.
 	*/
-	@:overload public function countPredicates(opPos : Int) : Int;
+	@:overload @:public public function countPredicates(opPos : Int) : Int;
 	
 	/**
 	* Warn the user of an problem.
@@ -417,7 +417,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	* @throws TransformerException if the current ErrorListoner determines to
 	*                              throw an exception.
 	*/
-	@:overload public function warn(msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warn(msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Tell the user of an assertion error, and probably throw an
@@ -428,7 +428,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	*
 	* @throws RuntimeException if the b argument is false.
 	*/
-	@:overload public function assertion(b : Bool, msg : String) : Void;
+	@:overload @:public public function assertion(b : Bool, msg : String) : Void;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -443,21 +443,21 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	* @throws TransformerException if the current ErrorListoner determines to
 	*                              throw an exception.
 	*/
-	@:overload public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public override public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Get the current namespace context for the xpath.
 	*
 	* @return The current prefix resolver, *may* be null, though hopefully not.
 	*/
-	@:overload public function getNamespaceContext() : com.sun.org.apache.xml.internal.utils.PrefixResolver;
+	@:overload @:public public function getNamespaceContext() : com.sun.org.apache.xml.internal.utils.PrefixResolver;
 	
 	/**
 	* Set the current namespace context for the xpath.
 	*
 	* @param pr The resolver for prefixes in the XPath expression.
 	*/
-	@:overload public function setNamespaceContext(pr : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public public function setNamespaceContext(pr : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	
 }

@@ -51,13 +51,13 @@ package java.io;
 	* The default size of the pipe's circular input buffer.
 	* @since   JDK1.1
 	*/
-	@:require(java1) private static var PIPE_SIZE(default, null) : Int;
+	@:require(java1) @:protected @:static @:final private static var PIPE_SIZE(default, null) : Int;
 	
 	/**
 	* The circular buffer into which incoming data is placed.
 	* @since   JDK1.1
 	*/
-	@:require(java1) private var buffer : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java1) @:protected private var buffer : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The index of the position in the circular buffer at which the
@@ -66,14 +66,14 @@ package java.io;
 	* <code>in==out</code> implies the buffer is full
 	* @since   JDK1.1
 	*/
-	@:require(java1) //private var _in : Int;
+	@:require(java1) //@:protected private var _in : Int;
 	
 	/**
 	* The index of the position in the circular buffer at which the next
 	* byte of data will be read by this piped input stream.
 	* @since   JDK1.1
 	*/
-	@:require(java1) private var out : Int;
+	@:require(java1) @:protected private var out : Int;
 	
 	/**
 	* Creates a <code>PipedInputStream</code> so
@@ -85,7 +85,7 @@ package java.io;
 	* @param      src   the stream to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function new(src : java.io.PipedOutputStream) : Void;
+	@:overload @:public public function new(src : java.io.PipedOutputStream) : Void;
 	
 	/**
 	* Creates a <code>PipedInputStream</code> so that it is
@@ -101,7 +101,7 @@ package java.io;
 	* @exception  IllegalArgumentException if <code>pipeSize <= 0</code>.
 	* @since      1.6
 	*/
-	@:require(java6) @:overload public function new(src : java.io.PipedOutputStream, pipeSize : Int) : Void;
+	@:require(java6) @:overload @:public public function new(src : java.io.PipedOutputStream, pipeSize : Int) : Void;
 	
 	/**
 	* Creates a <code>PipedInputStream</code> so
@@ -111,7 +111,7 @@ package java.io;
 	* java.io.PipedInputStream) connected} to a
 	* <code>PipedOutputStream</code> before being used.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>PipedInputStream</code> so that it is not yet
@@ -125,7 +125,7 @@ package java.io;
 	* @exception  IllegalArgumentException if <code>pipeSize <= 0</code>.
 	* @since      1.6
 	*/
-	@:require(java6) @:overload public function new(pipeSize : Int) : Void;
+	@:require(java6) @:overload @:public public function new(pipeSize : Int) : Void;
 	
 	/**
 	* Causes this piped input stream to be connected
@@ -151,7 +151,7 @@ package java.io;
 	* @param      src   The piped output stream to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function connect(src : java.io.PipedOutputStream) : Void;
+	@:overload @:public public function connect(src : java.io.PipedOutputStream) : Void;
 	
 	/**
 	* Receives a byte of data.  This method will block if no input is
@@ -162,7 +162,7 @@ package java.io;
 	*          closed, or if an I/O error occurs.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized private function receive(b : Int) : Void;
+	@:require(java1) @:overload @:protected @:synchronized private function receive(b : Int) : Void;
 	
 	/**
 	* Reads the next byte of data from this piped input stream. The
@@ -178,7 +178,7 @@ package java.io;
 	*           <a href=#BROKEN> <code>broken</code></a>, closed,
 	*           or if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this piped input
@@ -204,7 +204,7 @@ package java.io;
 	*           {@link #connect(java.io.PipedOutputStream) unconnected},
 	*           closed, or if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns the number of bytes that can be read from this input
@@ -219,7 +219,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload @:synchronized override public function available() : Int;
+	@:require(java0) @:overload @:public @:synchronized override public function available() : Int;
 	
 	/**
 	* Closes this piped input stream and releases any system resources
@@ -227,7 +227,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

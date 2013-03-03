@@ -26,7 +26,7 @@ extern class UnionPattern extends com.sun.org.apache.xpath.internal.Expression
 	/**
 	* No arguments to process, so this does nothing.
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -34,7 +34,7 @@ extern class UnionPattern extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* Set the contained step patterns to be tested.
@@ -42,7 +42,7 @@ extern class UnionPattern extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @param patterns the contained step patterns to be tested.
 	*/
-	@:overload public function setPatterns(patterns : java.NativeArray<com.sun.org.apache.xpath.internal.patterns.StepPattern>) : Void;
+	@:overload @:public public function setPatterns(patterns : java.NativeArray<com.sun.org.apache.xpath.internal.patterns.StepPattern>) : Void;
 	
 	/**
 	* Get the contained step patterns to be tested.
@@ -50,7 +50,7 @@ extern class UnionPattern extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @return an array of the contained step patterns to be tested.
 	*/
-	@:overload public function getPatterns() : java.NativeArray<com.sun.org.apache.xpath.internal.patterns.StepPattern>;
+	@:overload @:public public function getPatterns() : java.NativeArray<com.sun.org.apache.xpath.internal.patterns.StepPattern>;
 	
 	/**
 	* Test a node to see if it matches any of the patterns in the union.
@@ -65,17 +65,17 @@ extern class UnionPattern extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -84,12 +84,12 @@ extern class UnionPattern extends com.sun.org.apache.xpath.internal.Expression
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

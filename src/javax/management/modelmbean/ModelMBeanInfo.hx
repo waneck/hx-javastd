@@ -46,7 +46,7 @@ extern interface ModelMBeanInfo
 	*
 	* @see #setDescriptors
 	*/
-	@:overload public function getDescriptors(inDescriptorType : String) : java.NativeArray<javax.management.Descriptor>;
+	@:overload @:public public function getDescriptors(inDescriptorType : String) : java.NativeArray<javax.management.Descriptor>;
 	
 	/**
 	* Adds or replaces descriptors in the ModelMBeanInfo.
@@ -59,7 +59,7 @@ extern interface ModelMBeanInfo
 	*
 	* @see #getDescriptors
 	*/
-	@:overload public function setDescriptors(inDescriptors : java.NativeArray<javax.management.Descriptor>) : Void;
+	@:overload @:public public function setDescriptors(inDescriptors : java.NativeArray<javax.management.Descriptor>) : Void;
 	
 	/**
 	* Returns a Descriptor requested by name and descriptorType.
@@ -81,7 +81,7 @@ extern interface ModelMBeanInfo
 	*
 	* @see #setDescriptor
 	*/
-	@:overload public function getDescriptor(inDescriptorName : String, inDescriptorType : String) : javax.management.Descriptor;
+	@:overload @:public public function getDescriptor(inDescriptorName : String, inDescriptorType : String) : javax.management.Descriptor;
 	
 	/**
 	* Sets descriptors in the info array of type inDescriptorType
@@ -109,7 +109,7 @@ extern interface ModelMBeanInfo
 	*
 	* @see #getDescriptor
 	*/
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor, inDescriptorType : String) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor, inDescriptorType : String) : Void;
 	
 	/**
 	* <p>Returns the ModelMBean's descriptor which contains MBean wide
@@ -180,7 +180,7 @@ extern interface ModelMBeanInfo
 	*
 	* @see #setMBeanDescriptor
 	*/
-	@:overload public function getMBeanDescriptor() : javax.management.Descriptor;
+	@:overload @:public public function getMBeanDescriptor() : javax.management.Descriptor;
 	
 	/**
 	* Sets the ModelMBean's descriptor.  This descriptor contains default, MBean wide
@@ -201,7 +201,7 @@ extern interface ModelMBeanInfo
 	*
 	* @see #getMBeanDescriptor
 	*/
-	@:overload public function setMBeanDescriptor(inDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setMBeanDescriptor(inDescriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns a ModelMBeanAttributeInfo requested by name.
@@ -218,7 +218,7 @@ extern interface ModelMBeanInfo
 	* IllegalArgumentException for a null attribute name.
 	*
 	*/
-	@:overload public function getAttribute(inName : String) : javax.management.modelmbean.ModelMBeanAttributeInfo;
+	@:overload @:public public function getAttribute(inName : String) : javax.management.modelmbean.ModelMBeanAttributeInfo;
 	
 	/**
 	* Returns a ModelMBeanOperationInfo requested by name.
@@ -233,7 +233,7 @@ extern interface ModelMBeanInfo
 	* @exception RuntimeOperationsException Wraps an IllegalArgumentException for a null operation name.
 	*
 	*/
-	@:overload public function getOperation(inName : String) : javax.management.modelmbean.ModelMBeanOperationInfo;
+	@:overload @:public public function getOperation(inName : String) : javax.management.modelmbean.ModelMBeanOperationInfo;
 	
 	/**
 	* Returns a ModelMBeanNotificationInfo requested by name.
@@ -248,7 +248,7 @@ extern interface ModelMBeanInfo
 	* @exception RuntimeOperationsException Wraps an IllegalArgumentException for a null notification name.
 	*
 	*/
-	@:overload public function getNotification(inName : String) : javax.management.modelmbean.ModelMBeanNotificationInfo;
+	@:overload @:public public function getNotification(inName : String) : javax.management.modelmbean.ModelMBeanNotificationInfo;
 	
 	/**
 	* Returns the list of attributes exposed for management.
@@ -256,7 +256,7 @@ extern interface ModelMBeanInfo
 	*
 	* @return  An array of <CODE>MBeanAttributeInfo</CODE> objects.
 	*/
-	@:overload public function getAttributes() : java.NativeArray<javax.management.MBeanAttributeInfo>;
+	@:overload @:public public function getAttributes() : java.NativeArray<javax.management.MBeanAttributeInfo>;
 	
 	/**
 	* Returns the name of the Java class of the MBean described by
@@ -264,7 +264,7 @@ extern interface ModelMBeanInfo
 	*
 	* @return the Java class name.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the list of the public constructors  of the MBean.
@@ -272,14 +272,14 @@ extern interface ModelMBeanInfo
 	*
 	* @return  An array of <CODE>MBeanConstructorInfo</CODE> objects.
 	*/
-	@:overload public function getConstructors() : java.NativeArray<javax.management.MBeanConstructorInfo>;
+	@:overload @:public public function getConstructors() : java.NativeArray<javax.management.MBeanConstructorInfo>;
 	
 	/**
 	* Returns a human readable description of the MBean.
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Returns the list of the notifications emitted by the MBean.
@@ -297,7 +297,7 @@ extern interface ModelMBeanInfo
 	*
 	* @return  An array of <CODE>MBeanNotificationInfo</CODE> objects.
 	*/
-	@:overload public function getNotifications() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotifications() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	/**
 	* Returns the list of operations  of the MBean.
@@ -305,7 +305,7 @@ extern interface ModelMBeanInfo
 	*
 	* @return  An array of <CODE>MBeanOperationInfo</CODE> objects.
 	*/
-	@:overload public function getOperations() : java.NativeArray<javax.management.MBeanOperationInfo>;
+	@:overload @:public public function getOperations() : java.NativeArray<javax.management.MBeanOperationInfo>;
 	
 	
 }

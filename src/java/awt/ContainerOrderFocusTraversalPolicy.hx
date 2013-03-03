@@ -47,7 +47,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	*         root of aComponent or focus traversal policy provider, or if either aContainer or
 	*         aComponent is null
 	*/
-	@:overload override public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the Component that should receive the focus before aComponent.
@@ -64,7 +64,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	*         root of aComponent or focus traversal policy provider, or if either aContainer or
 	*         aComponent is null
 	*/
-	@:overload override public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the first Component in the traversal cycle. This method is used
@@ -77,7 +77,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the last Component in the traversal cycle. This method is used
@@ -90,7 +90,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the default Component to focus. This Component will be the first
@@ -105,7 +105,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	* @see #getFirstComponent
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getDefaultComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getDefaultComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Sets whether this ContainerOrderFocusTraversalPolicy transfers focus
@@ -122,7 +122,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	* @see #getImplicitDownCycleTraversal
 	* @see #getFirstComponent
 	*/
-	@:overload public function setImplicitDownCycleTraversal(implicitDownCycleTraversal : Bool) : Void;
+	@:overload @:public public function setImplicitDownCycleTraversal(implicitDownCycleTraversal : Bool) : Void;
 	
 	/**
 	* Returns whether this ContainerOrderFocusTraversalPolicy transfers focus
@@ -137,7 +137,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	* @see #setImplicitDownCycleTraversal
 	* @see #getFirstComponent
 	*/
-	@:overload public function getImplicitDownCycleTraversal() : Bool;
+	@:overload @:public public function getImplicitDownCycleTraversal() : Bool;
 	
 	/**
 	* Determines whether a Component is an acceptable choice as the new
@@ -149,7 +149,7 @@ extern class ContainerOrderFocusTraversalPolicy extends java.awt.FocusTraversalP
 	* @return <code>true</code> if aComponent is visible, displayable,
 	*         enabled, and focusable; <code>false</code> otherwise
 	*/
-	@:overload private function accept(aComponent : java.awt.Component) : Bool;
+	@:overload @:protected private function accept(aComponent : java.awt.Component) : Bool;
 	
 	
 }

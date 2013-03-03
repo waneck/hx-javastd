@@ -291,7 +291,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* <code>SyncProvider</code> abstract class defined in the
 	* <code>SyncFactory</code> static factory SPI mechanism.
 	*/
-	public static var UNICODE_STREAM_PARAM(default, null) : Int;
+	@:public @:static @:final public static var UNICODE_STREAM_PARAM(default, null) : Int;
 	
 	/**
 	* A constant indicating to a <code>RowSetReaderImpl</code> object
@@ -300,7 +300,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* <code>SyncProvider</code> abstract class defined in the
 	* <code>SyncFactory</code> static factory SPI mechanism.
 	*/
-	public static var BINARY_STREAM_PARAM(default, null) : Int;
+	@:public @:static @:final public static var BINARY_STREAM_PARAM(default, null) : Int;
 	
 	/**
 	* A constant indicating to a <code>RowSetReaderImpl</code> object
@@ -309,7 +309,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* <code>SyncProvider</code> abstract class defined in the
 	* <code>SyncFactory</code> static factory SPI mechanism.
 	*/
-	public static var ASCII_STREAM_PARAM(default, null) : Int;
+	@:public @:static @:final public static var ASCII_STREAM_PARAM(default, null) : Int;
 	
 	/**
 	* The <code>InputStream</code> object that will be
@@ -317,7 +317,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* specified in the <code>ResultSet</code> interface.
 	* @serial
 	*/
-	private var binaryStream : java.io.InputStream;
+	@:protected private var binaryStream : java.io.InputStream;
 	
 	/**
 	* The <code>InputStream</code> object that will be
@@ -325,7 +325,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* which is specified in the <code>ResultSet</code> interface.
 	* @serial
 	*/
-	private var unicodeStream : java.io.InputStream;
+	@:protected private var unicodeStream : java.io.InputStream;
 	
 	/**
 	* The <code>InputStream</code> object that will be
@@ -333,7 +333,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* which is specified in the <code>ResultSet</code> interface.
 	* @serial
 	*/
-	private var asciiStream : java.io.InputStream;
+	@:protected private var asciiStream : java.io.InputStream;
 	
 	/**
 	* The <code>Reader</code> object that will be
@@ -341,7 +341,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* which is specified in the <code>ResultSet</code> interface.
 	* @serial
 	*/
-	private var charStream : java.io.Reader;
+	@:protected private var charStream : java.io.Reader;
 	
 	/**
 	* Constructs a new <code>BaseRowSet</code> object initialized with
@@ -349,7 +349,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* field. The other default values with which it is initialized are listed
 	* in Section 6.0 of the class comment for this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Performs the necessary internal configurations and initializations
@@ -360,7 +360,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* <b>should</b> never be called by an application, but is called from with
 	* a <code>RowSet</code> implementation extending this class.
 	*/
-	@:overload private function initParams() : Void;
+	@:overload @:protected private function initParams() : Void;
 	
 	/**
 	* The listener will be notified whenever an event occurs on this <code>RowSet</code>
@@ -384,7 +384,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     null.
 	* @see #removeRowSetListener
 	*/
-	@:overload public function addRowSetListener(listener : javax.sql.RowSetListener) : Void;
+	@:overload @:public public function addRowSetListener(listener : javax.sql.RowSetListener) : Void;
 	
 	/**
 	* Removes the designated object from this <code>RowSet</code> object's list of listeners.
@@ -399,7 +399,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*        of listeners for this <code>RowSet</code> object
 	* @see #addRowSetListener
 	*/
-	@:overload public function removeRowSetListener(listener : javax.sql.RowSetListener) : Void;
+	@:overload @:public public function removeRowSetListener(listener : javax.sql.RowSetListener) : Void;
 	
 	/**
 	* Notifies all of the listeners registered with this
@@ -414,7 +414,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     abstract class does not implement the <code>RowSet</code> interface or
 	*     one of it's sub-interfaces.
 	*/
-	@:overload private function notifyCursorMoved() : Void;
+	@:overload @:protected private function notifyCursorMoved() : Void;
 	
 	/**
 	* Notifies all of the listeners registered with this <code>RowSet</code> object that
@@ -431,7 +431,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     abstract class does not implement the <code>RowSet</code> interface or
 	*     one of it's sub-interfaces.
 	*/
-	@:overload private function notifyRowChanged() : Void;
+	@:overload @:protected private function notifyRowChanged() : Void;
 	
 	/**
 	* Notifies all of the listeners registered with this <code>RowSet</code>
@@ -448,7 +448,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     abstract class does not implement the <code>RowSet</code> interface or
 	*     one of it's sub-interfaces.
 	*/
-	@:overload private function notifyRowSetChanged() : Void;
+	@:overload @:protected private function notifyRowSetChanged() : Void;
 	
 	/**
 	* Retrieves the SQL query that is the command for this
@@ -473,7 +473,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*         may be <code>null</code>
 	* @see #setCommand
 	*/
-	@:overload public function getCommand() : String;
+	@:overload @:public public function getCommand() : String;
 	
 	/**
 	* Sets this <code>RowSet</code> object's <code>command</code> property to
@@ -491,7 +491,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an empty string is provided as the command value
 	* @see #getCommand
 	*/
-	@:overload public function setCommand(cmd : String) : Void;
+	@:overload @:public public function setCommand(cmd : String) : Void;
 	
 	/**
 	* Retrieves the JDBC URL that this <code>RowSet</code> object's
@@ -508,7 +508,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs retrieving the URL value
 	* @see #setUrl
 	*/
-	@:overload public function getUrl() : String;
+	@:overload @:public public function getUrl() : String;
 	
 	/**
 	* Sets the Url property for this <code>RowSet</code> object
@@ -542,7 +542,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     empty string)
 	* @see #getUrl
 	*/
-	@:overload public function setUrl(url : String) : Void;
+	@:overload @:public public function setUrl(url : String) : Void;
 	
 	/**
 	* Returns the logical name that when supplied to a naming service
@@ -561,7 +561,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*         is returned.
 	* @see #setDataSourceName
 	*/
-	@:overload public function getDataSourceName() : String;
+	@:overload @:public public function getDataSourceName() : String;
 	
 	/**
 	* Sets the <code>DataSource</code> name property for this <code>RowSet</code>
@@ -584,7 +584,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*    name
 	* @see #getDataSourceName
 	*/
-	@:overload public function setDataSourceName(name : String) : Void;
+	@:overload @:public public function setDataSourceName(name : String) : Void;
 	
 	/**
 	* Returns the user name used to create a database connection.  Because it
@@ -596,7 +596,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*         <code>null</code> (default value) if not set
 	* @see #setUsername
 	*/
-	@:overload public function getUsername() : String;
+	@:overload @:public public function getUsername() : String;
 	
 	/**
 	* Sets the username property for this <code>RowSet</code> object
@@ -608,7 +608,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     is supplied to the data source to create a connection. It may be null.
 	* @see #getUsername
 	*/
-	@:overload public function setUsername(name : String) : Void;
+	@:overload @:public public function setUsername(name : String) : Void;
 	
 	/**
 	* Returns the password used to create a database connection for this
@@ -620,7 +620,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*         that must be supplied to the database to create a connection
 	* @see #setPassword
 	*/
-	@:overload public function getPassword() : String;
+	@:overload @:public public function getPassword() : String;
 	
 	/**
 	* Sets the password used to create a database connection for this
@@ -634,7 +634,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     null.
 	* @see #getPassword
 	*/
-	@:overload public function setPassword(pass : String) : Void;
+	@:overload @:public public function setPassword(pass : String) : Void;
 	
 	/**
 	* Sets the type for this <code>RowSet</code> object to the specified type.
@@ -652,7 +652,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getConcurrency
 	* @see #getType
 	*/
-	@:overload public function setType(type : Int) : Void;
+	@:overload @:public public function setType(type : Int) : Void;
 	
 	/**
 	* Returns the type of this <code>RowSet</code> object. The type is initially
@@ -670,7 +670,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     of this <code>RowSet</code> object
 	* @see #setType
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Sets the concurrency for this <code>RowSet</code> object to
@@ -688,7 +688,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getConcurrency
 	* @see #isReadOnly
 	*/
-	@:overload public function setConcurrency(concurrency : Int) : Void;
+	@:overload @:public public function setConcurrency(concurrency : Int) : Void;
 	
 	/**
 	* Returns a <code>boolean</code> indicating whether this
@@ -702,7 +702,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #setConcurrency
 	* @see #setReadOnly
 	*/
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public public function isReadOnly() : Bool;
 	
 	/**
 	* Sets this <code>RowSet</code> object's readOnly  property to the given <code>boolean</code>.
@@ -711,7 +711,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*              <code>RowSet</code> object is read-only;
 	*              <code>false</code> to indicate that it is updatable
 	*/
-	@:overload public function setReadOnly(value : Bool) : Void;
+	@:overload @:public public function setReadOnly(value : Bool) : Void;
 	
 	/**
 	* Returns the transaction isolation property for this
@@ -736,7 +736,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #setTransactionIsolation
 
 	*/
-	@:overload public function getTransactionIsolation() : Int;
+	@:overload @:public public function getTransactionIsolation() : Int;
 	
 	/**
 	* Sets the transaction isolation property for this JDBC <code>RowSet</code> object to the given
@@ -762,7 +762,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see javax.sql.rowset.spi.SyncProvider
 	* @see #getTransactionIsolation
 	*/
-	@:overload public function setTransactionIsolation(level : Int) : Void;
+	@:overload @:public public function setTransactionIsolation(level : Int) : Void;
 	
 	/**
 	* Retrieves the type map associated with the <code>Connection</code>
@@ -782,7 +782,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @return the <code>java.util.Map</code> object that is the type map
 	*         for this <code>RowSet</code> object's connection
 	*/
-	@:overload public function getTypeMap() : java.util.Map<String, Class<Dynamic>>;
+	@:overload @:public public function getTypeMap() : java.util.Map<String, Class<Dynamic>>;
 	
 	/**
 	* Installs the given <code>java.util.Map</code> object as the type map
@@ -798,7 +798,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     <code>Class</code> object for the <code>SQLData</code> implementation
 	*     of that UDT. May be <code>null</code>.
 	*/
-	@:overload public function setTypeMap(map : java.util.Map<String, Class<Dynamic>>) : Void;
+	@:overload @:public public function setTypeMap(map : java.util.Map<String, Class<Dynamic>>) : Void;
 	
 	/**
 	* Retrieves the maximum number of bytes that can be used for a column
@@ -814,7 +814,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs internally determining the
 	*    maximum limit of the column size
 	*/
-	@:overload public function getMaxFieldSize() : Int;
+	@:overload @:public public function getMaxFieldSize() : Int;
 	
 	/**
 	* Sets the maximum number of bytes that can be used for a column
@@ -831,7 +831,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if (1) an error occurs internally setting the
 	*     maximum limit of the column size or (2) a size of less than 0 is set
 	*/
-	@:overload public function setMaxFieldSize(max : Int) : Void;
+	@:overload @:public public function setMaxFieldSize(max : Int) : Void;
 	
 	/**
 	* Retrieves the maximum number of rows that this <code>RowSet</code> object may contain. If
@@ -842,7 +842,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs internally determining the
 	*     maximum limit of rows that a <code>Rowset</code> object can contain
 	*/
-	@:overload public function getMaxRows() : Int;
+	@:overload @:public public function getMaxRows() : Int;
 	
 	/**
 	* Sets the maximum number of rows that this <code>RowSet</code> object may contain to
@@ -857,7 +857,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     if <i>max</i> is less than the <code>fetchSize</code> of the
 	*     <code>RowSet</code>
 	*/
-	@:overload public function setMaxRows(max : Int) : Void;
+	@:overload @:public public function setMaxRows(max : Int) : Void;
 	
 	/**
 	* Sets to the given <code>boolean</code> whether or not the driver will
@@ -874,7 +874,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs setting the underlying JDBC
 	* technology-enabled driver to process the escape syntax
 	*/
-	@:overload public function setEscapeProcessing(enable : Bool) : Void;
+	@:overload @:public public function setEscapeProcessing(enable : Bool) : Void;
 	
 	/**
 	* Retrieves the maximum number of seconds the driver will wait for a
@@ -886,7 +886,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs in determining the query
 	*     time-out value
 	*/
-	@:overload public function getQueryTimeout() : Int;
+	@:overload @:public public function getQueryTimeout() : Int;
 	
 	/**
 	* Sets to the given number the maximum number of seconds the driver will
@@ -898,7 +898,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs setting the query
 	*     time-out or if the query time-out value is less than 0
 	*/
-	@:overload public function setQueryTimeout(seconds : Int) : Void;
+	@:overload @:public public function setQueryTimeout(seconds : Int) : Void;
 	
 	/**
 	* Retrieves a <code>boolean</code> indicating whether rows marked
@@ -916,7 +916,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* are visible or not
 	* @see #setShowDeleted
 	*/
-	@:overload public function getShowDeleted() : Bool;
+	@:overload @:public public function getShowDeleted() : Bool;
 	
 	/**
 	* Sets the property <code>showDeleted</code> to the given
@@ -929,7 +929,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     rows are visible or not
 	* @see #getShowDeleted
 	*/
-	@:overload public function setShowDeleted(value : Bool) : Void;
+	@:overload @:public public function setShowDeleted(value : Bool) : Void;
 	
 	/**
 	* Ascertains whether escape processing is enabled for this
@@ -941,7 +941,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     processing is enabled or not or if the internal escape
 	*     processing trigger has not been enabled
 	*/
-	@:overload public function getEscapeProcessing() : Bool;
+	@:overload @:public public function getEscapeProcessing() : Bool;
 	
 	/**
 	* Gives the driver a performance hint as to the direction in
@@ -971,7 +971,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*        ResultSet.FETCH_UNKNOWN
 	* @see #getFetchDirection
 	*/
-	@:overload public function setFetchDirection(direction : Int) : Void;
+	@:overload @:public public function setFetchDirection(direction : Int) : Void;
 	
 	/**
 	* Retrieves this <code>RowSet</code> object's current setting for the
@@ -984,7 +984,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     current fetch direction for fetching rows
 	* @see #setFetchDirection
 	*/
-	@:overload public function getFetchDirection() : Int;
+	@:overload @:public public function getFetchDirection() : Int;
 	
 	/**
 	* Sets the fetch size for this <code>RowSet</code> object to the given number of
@@ -1028,7 +1028,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*        or more than the limit for the maximum number of rows
 	* @see #getFetchSize
 	*/
-	@:overload public function setFetchSize(rows : Int) : Void;
+	@:overload @:public public function setFetchSize(rows : Int) : Void;
 	
 	/**
 	* Returns the fetch size for this <code>RowSet</code> object. The default
@@ -1040,7 +1040,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*     current fetch size
 	* @see #setFetchSize
 	*/
-	@:overload public function getFetchSize() : Int;
+	@:overload @:public public function getFetchSize() : Int;
 	
 	/**
 	* Returns the concurrency for this <code>RowSet</code> object.
@@ -1059,7 +1059,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #setConcurrency
 	* @see #isReadOnly
 	*/
-	@:overload public function getConcurrency() : Int;
+	@:overload @:public public function getConcurrency() : Int;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -1113,7 +1113,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*        parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setNull(parameterIndex : Int, sqlType : Int) : Void;
+	@:overload @:public public function setNull(parameterIndex : Int, sqlType : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -1179,7 +1179,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*            is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setNull(parameterIndex : Int, sqlType : Int, typeName : String) : Void;
+	@:overload @:public public function setNull(parameterIndex : Int, sqlType : Int, typeName : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>boolean</code> in the
@@ -1205,7 +1205,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setBoolean(parameterIndex : Int, x : Bool) : Void;
+	@:overload @:public public function setBoolean(parameterIndex : Int, x : Bool) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>byte</code> in the Java
@@ -1231,7 +1231,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setByte(parameterIndex : Int, x : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setByte(parameterIndex : Int, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>short</code> in the
@@ -1257,7 +1257,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setShort(parameterIndex : Int, x : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setShort(parameterIndex : Int, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated parameter to an <code>int</code> in the Java
@@ -1283,7 +1283,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setInt(parameterIndex : Int, x : Int) : Void;
+	@:overload @:public public function setInt(parameterIndex : Int, x : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>long</code> in the Java
@@ -1309,7 +1309,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setLong(parameterIndex : Int, x : haxe.Int64) : Void;
+	@:overload @:public public function setLong(parameterIndex : Int, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>float</code> in the
@@ -1335,7 +1335,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setFloat(parameterIndex : Int, x : Single) : Void;
+	@:overload @:public public function setFloat(parameterIndex : Int, x : Single) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>double</code> in the
@@ -1361,7 +1361,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setDouble(parameterIndex : Int, x : Float) : Void;
+	@:overload @:public public function setDouble(parameterIndex : Int, x : Float) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -1387,7 +1387,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setBigDecimal(parameterIndex : Int, x : java.math.BigDecimal) : Void;
+	@:overload @:public public function setBigDecimal(parameterIndex : Int, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>String</code>
@@ -1415,7 +1415,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setString(parameterIndex : Int, x : String) : Void;
+	@:overload @:public public function setString(parameterIndex : Int, x : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given array of bytes.
@@ -1443,7 +1443,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setBytes(parameterIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setBytes(parameterIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code>
@@ -1478,7 +1478,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setDate(parameterIndex : Int, x : java.sql.Date) : Void;
+	@:overload @:public public function setDate(parameterIndex : Int, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code>
@@ -1516,7 +1516,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setTime(parameterIndex : Int, x : java.sql.Time) : Void;
+	@:overload @:public public function setTime(parameterIndex : Int, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -1552,7 +1552,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setTimestamp(parameterIndex : Int, x : java.sql.Timestamp) : Void;
+	@:overload @:public public function setTimestamp(parameterIndex : Int, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -1618,7 +1618,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*       in <i>length</i>
 	* @see #getParams
 	*/
-	@:overload public function setAsciiStream(parameterIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function setAsciiStream(parameterIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter in this <code>RowSet</code> object's command
@@ -1643,7 +1643,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setAsciiStream(parameterIndex : Int, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function setAsciiStream(parameterIndex : Int, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.io.InputStream</code>
@@ -1706,7 +1706,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*         specified in <i>length</i>
 	* @see #getParams
 	*/
-	@:overload public function setBinaryStream(parameterIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function setBinaryStream(parameterIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter in this <code>RowSet</code> object's command
@@ -1730,7 +1730,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBinaryStream(parameterIndex : Int, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function setBinaryStream(parameterIndex : Int, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -1793,7 +1793,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @deprecated getCharacterStream should be used in its place
 	* @see #getParams
 	*/
-	@:overload public function setUnicodeStream(parameterIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function setUnicodeStream(parameterIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.io.Reader</code>
@@ -1860,7 +1860,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*        specified in <i>length</i>
 	* @see #getParams
 	*/
-	@:overload public function setCharacterStream(parameterIndex : Int, reader : java.io.Reader, length : Int) : Void;
+	@:overload @:public public function setCharacterStream(parameterIndex : Int, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter in this <code>RowSet</code> object's command
@@ -1887,7 +1887,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setCharacterStream(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setCharacterStream(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to an <code>Object</code> in the Java
@@ -1962,7 +1962,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if an error occurs or the parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setObject(parameterIndex : Int, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
+	@:overload @:public public function setObject(parameterIndex : Int, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given
@@ -2013,7 +2013,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*        is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setObject(parameterIndex : Int, x : Dynamic, targetSqlType : Int) : Void;
+	@:overload @:public public function setObject(parameterIndex : Int, x : Dynamic, targetSqlType : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to an <code>Object</code> in the Java
@@ -2075,7 +2075,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         object being set
 	* @see #getParams
 	*/
-	@:overload public function setObject(parameterIndex : Int, x : Dynamic) : Void;
+	@:overload @:public public function setObject(parameterIndex : Int, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Ref</code> object in
@@ -2116,7 +2116,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @see javax.sql.rowset.serial.SerialRef
 	*/
-	@:overload public function setRef(parameterIndex : Int, ref : java.sql.Ref) : Void;
+	@:overload @:public public function setRef(parameterIndex : Int, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Blob</code> object in
@@ -2154,7 +2154,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @see javax.sql.rowset.serial.SerialBlob
 	*/
-	@:overload public function setBlob(parameterIndex : Int, x : java.sql.Blob) : Void;
+	@:overload @:public public function setBlob(parameterIndex : Int, x : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Clob</code> object in
@@ -2193,7 +2193,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @see javax.sql.rowset.serial.SerialBlob
 	*/
-	@:overload public function setClob(parameterIndex : Int, x : java.sql.Clob) : Void;
+	@:overload @:public public function setClob(parameterIndex : Int, x : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated parameter to an <code>Array</code> object in the
@@ -2235,7 +2235,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @see javax.sql.rowset.serial.SerialArray
 	*/
-	@:overload public function setArray(parameterIndex : Int, array : java.sql.Array) : Void;
+	@:overload @:public public function setArray(parameterIndex : Int, array : java.sql.Array) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code>
@@ -2289,7 +2289,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setDate(parameterIndex : Int, x : java.sql.Date, cal : java.util.Calendar) : Void;
+	@:overload @:public public function setDate(parameterIndex : Int, x : java.sql.Date, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code>
@@ -2344,7 +2344,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setTime(parameterIndex : Int, x : java.sql.Time, cal : java.util.Calendar) : Void;
+	@:overload @:public public function setTime(parameterIndex : Int, x : java.sql.Time, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -2399,7 +2399,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*                         parameter index is out of bounds
 	* @see #getParams
 	*/
-	@:overload public function setTimestamp(parameterIndex : Int, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
+	@:overload @:public public function setTimestamp(parameterIndex : Int, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Clears all of the current parameter values in this <code>RowSet</code>
@@ -2419,7 +2419,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @throws SQLException if an error occurs clearing the parameters
 	*/
-	@:overload public function clearParameters() : Void;
+	@:overload @:public public function clearParameters() : Void;
 	
 	/**
 	* Retrieves an array containing the parameter values (both Objects and
@@ -2455,7 +2455,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*         parameters of this <code>RowSet</code> object or if not all parameters have
 	*         been set
 	*/
-	@:overload public function getParams() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getParams() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -2470,7 +2470,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setNull(parameterName : String, sqlType : Int) : Void;
+	@:require(java4) @:overload @:public public function setNull(parameterName : String, sqlType : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -2504,7 +2504,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setNull(parameterName : String, sqlType : Int, typeName : String) : Void;
+	@:require(java4) @:overload @:public public function setNull(parameterName : String, sqlType : Int, typeName : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>boolean</code> value.
@@ -2520,7 +2520,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBoolean(parameterName : String, x : Bool) : Void;
+	@:require(java4) @:overload @:public public function setBoolean(parameterName : String, x : Bool) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>byte</code> value.
@@ -2536,7 +2536,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setByte(parameterName : String, x : java.StdTypes.Int8) : Void;
+	@:require(java4) @:overload @:public public function setByte(parameterName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>short</code> value.
@@ -2552,7 +2552,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setShort(parameterName : String, x : java.StdTypes.Int16) : Void;
+	@:require(java4) @:overload @:public public function setShort(parameterName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>int</code> value.
@@ -2568,7 +2568,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setInt(parameterName : String, x : Int) : Void;
+	@:require(java4) @:overload @:public public function setInt(parameterName : String, x : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>long</code> value.
@@ -2584,7 +2584,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setLong(parameterName : String, x : haxe.Int64) : Void;
+	@:require(java4) @:overload @:public public function setLong(parameterName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>float</code> value.
@@ -2600,7 +2600,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setFloat(parameterName : String, x : Single) : Void;
+	@:require(java4) @:overload @:public public function setFloat(parameterName : String, x : Single) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>double</code> value.
@@ -2616,7 +2616,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDouble(parameterName : String, x : Float) : Void;
+	@:require(java4) @:overload @:public public function setDouble(parameterName : String, x : Float) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -2633,7 +2633,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBigDecimal(parameterName : String, x : java.math.BigDecimal) : Void;
+	@:require(java4) @:overload @:public public function setBigDecimal(parameterName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>String</code> value.
@@ -2652,7 +2652,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setString(parameterName : String, x : String) : Void;
+	@:require(java4) @:overload @:public public function setString(parameterName : String, x : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java array of bytes.
@@ -2670,7 +2670,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBytes(parameterName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java4) @:overload @:public public function setBytes(parameterName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Timestamp</code> value.
@@ -2687,7 +2687,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTimestamp(parameterName : String, x : java.sql.Timestamp) : Void;
+	@:require(java4) @:overload @:public public function setTimestamp(parameterName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream, which will have
@@ -2711,7 +2711,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setAsciiStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
+	@:require(java4) @:overload @:public public function setAsciiStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream, which will have
@@ -2734,7 +2734,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setBinaryStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
+	@:require(java4) @:overload @:public public function setBinaryStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Reader</code>
@@ -2759,7 +2759,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setCharacterStream(parameterName : String, reader : java.io.Reader, length : Int) : Void;
+	@:require(java4) @:overload @:public public function setCharacterStream(parameterName : String, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream.
@@ -2783,7 +2783,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setAsciiStream(parameterName : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function setAsciiStream(parameterName : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream.
@@ -2806,7 +2806,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBinaryStream(parameterName : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function setBinaryStream(parameterName : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Reader</code>
@@ -2832,7 +2832,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setCharacterStream(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setCharacterStream(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter in this <code>RowSet</code> object's command
@@ -2857,7 +2857,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object. The second
@@ -2900,7 +2900,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
+	@:require(java4) @:overload @:public public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object.
@@ -2923,7 +2923,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int) : Void;
+	@:require(java4) @:overload @:public public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object.
@@ -2961,7 +2961,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic) : Void;
+	@:require(java4) @:overload @:public public function setObject(parameterName : String, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.  The inputstream must contain  the number
@@ -2987,7 +2987,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.
@@ -3013,7 +3013,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.  The <code>inputstream</code> must contain  the number
@@ -3041,7 +3041,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterName : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setBlob(parameterName : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Blob</code> object.
@@ -3056,7 +3056,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterName : String, x : java.sql.Blob) : Void;
+	@:require(java6) @:overload @:public public function setBlob(parameterName : String, x : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.
@@ -3079,7 +3079,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setBlob(parameterName : String, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload @:public public function setBlob(parameterName : String, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The reader must contain  the number
@@ -3100,7 +3100,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -3123,7 +3123,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setClob(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain  the number
@@ -3146,7 +3146,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Clob</code> object.
@@ -3161,7 +3161,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterName : String, x : java.sql.Clob) : Void;
+	@:require(java6) @:overload @:public public function setClob(parameterName : String, x : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -3183,7 +3183,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setClob(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setClob(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code> value
@@ -3201,7 +3201,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDate(parameterName : String, x : java.sql.Date) : Void;
+	@:require(java4) @:overload @:public public function setDate(parameterName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code> value,
@@ -3224,7 +3224,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDate(parameterName : String, x : java.sql.Date, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload @:public public function setDate(parameterName : String, x : java.sql.Date, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code> value.
@@ -3240,7 +3240,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTime(parameterName : String, x : java.sql.Time) : Void;
+	@:require(java4) @:overload @:public public function setTime(parameterName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code> value,
@@ -3263,7 +3263,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTime(parameterName : String, x : java.sql.Time, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload @:public public function setTime(parameterName : String, x : java.sql.Time, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Timestamp</code> value,
@@ -3286,7 +3286,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @see #getParams
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setTimestamp(parameterName : String, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload @:public public function setTimestamp(parameterName : String, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
@@ -3303,7 +3303,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  stream does not contain valid XML.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setSQLXML(parameterIndex : Int, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public public function setSQLXML(parameterIndex : Int, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
@@ -3320,7 +3320,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  stream does not contain valid XML.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setSQLXML(parameterName : String, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload @:public public function setSQLXML(parameterName : String, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
@@ -3333,7 +3333,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRowId(parameterIndex : Int, x : java.sql.RowId) : Void;
+	@:require(java6) @:overload @:public public function setRowId(parameterIndex : Int, x : java.sql.RowId) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
@@ -3345,7 +3345,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRowId(parameterName : String, x : java.sql.RowId) : Void;
+	@:require(java6) @:overload @:public public function setRowId(parameterName : String, x : java.sql.RowId) : Void;
 	
 	/**
 	* Sets the designated paramter to the given <code>String</code> object.
@@ -3362,7 +3362,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNString(parameterIndex : Int, value : String) : Void;
+	@:require(java6) @:overload @:public public function setNString(parameterIndex : Int, value : String) : Void;
 	
 	/**
 	* Sets the designated paramter to the given <code>String</code> object.
@@ -3375,7 +3375,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNString(parameterName : String, value : String) : Void;
+	@:require(java6) @:overload @:public public function setNString(parameterName : String, value : String) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -3390,7 +3390,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -3405,7 +3405,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -3429,7 +3429,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setNCharacterStream(parameterName : String, value : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>java.sql.NClob</code> object. The object
@@ -3442,7 +3442,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterName : String, value : java.sql.NClob) : Void;
+	@:require(java6) @:overload @:public public function setNClob(parameterName : String, value : java.sql.NClob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain    * the number
@@ -3467,7 +3467,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setNClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -3490,7 +3490,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setNClob(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The reader must contain  the number
@@ -3514,7 +3514,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public public function setNClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>java.sql.NClob</code> object. The driver converts this oa
@@ -3526,7 +3526,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterIndex : Int, value : java.sql.NClob) : Void;
+	@:require(java6) @:overload @:public public function setNClob(parameterIndex : Int, value : java.sql.NClob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -3551,7 +3551,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setNClob(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload @:public public function setNClob(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.net.URL</code> value.
@@ -3565,7 +3565,7 @@ extern class BaseRowSet implements java.io.Serializable implements java.lang.Clo
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setURL(parameterIndex : Int, x : java.net.URL) : Void;
+	@:require(java4) @:overload @:public public function setURL(parameterIndex : Int, x : java.net.URL) : Void;
 	
 	
 }

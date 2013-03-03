@@ -35,7 +35,7 @@ extern interface InputMethodWindow
 	* null to unattach the window.
 	* @see java.awt.im.spi.InputMethodContext#createInputMethodWindow
 	*/
-	@:overload public function setInputContext(inputContext : sun.awt.im.InputContext) : Void;
+	@:overload @:public public function setInputContext(inputContext : sun.awt.im.InputContext) : Void;
 	
 	
 }

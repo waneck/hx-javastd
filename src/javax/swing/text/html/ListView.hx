@@ -35,7 +35,7 @@ extern class ListView extends javax.swing.text.html.BlockView
 	*
 	* @param elem the element to create a view for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Calculates the desired shape of the list.
@@ -43,7 +43,7 @@ extern class ListView extends javax.swing.text.html.BlockView
 	* @return the desired span
 	* @see View#getPreferredSpan
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -53,7 +53,7 @@ extern class ListView extends javax.swing.text.html.BlockView
 	* @param allocation the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Paints one of the children; called by paint().  By default
@@ -64,9 +64,9 @@ extern class ListView extends javax.swing.text.html.BlockView
 	* @param alloc the allocated region to render the child into
 	* @param index the index of the child
 	*/
-	@:overload private function paintChild(g : java.awt.Graphics, alloc : java.awt.Rectangle, index : Int) : Void;
+	@:overload @:protected override private function paintChild(g : java.awt.Graphics, alloc : java.awt.Rectangle, index : Int) : Void;
 	
-	@:overload override private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected override private function setPropertiesFromAttributes() : Void;
 	
 	
 }

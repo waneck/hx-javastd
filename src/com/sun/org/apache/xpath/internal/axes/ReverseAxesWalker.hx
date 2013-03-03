@@ -29,28 +29,28 @@ extern class ReverseAxesWalker extends com.sun.org.apache.xpath.internal.axes.Ax
 	*
 	* @param root The context node of this step.
 	*/
-	@:overload override public function setRoot(root : Int) : Void;
+	@:overload @:public override public function setRoot(root : Int) : Void;
 	
 	/**
 	* Detaches the walker from the set which it iterated over, releasing
 	* any computational resources and placing the iterator in the INVALID
 	* state.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	/**
 	* Get the next node in document order on the axes.
 	*
 	* @return the next node in document order on the axes, or null.
 	*/
-	@:overload override private function getNextNode() : Int;
+	@:overload @:protected override private function getNextNode() : Int;
 	
 	/**
 	* Tells if this is a reverse axes.  Overrides AxesWalker#isReverseAxes.
 	*
 	* @return true for this class.
 	*/
-	@:overload override public function isReverseAxes() : Bool;
+	@:overload @:public override public function isReverseAxes() : Bool;
 	
 	/**
 	* Get the current sub-context position.  In order to do the
@@ -63,14 +63,14 @@ extern class ReverseAxesWalker extends com.sun.org.apache.xpath.internal.axes.Ax
 	*
 	* @return The pridicate index, or -1.
 	*/
-	@:overload override private function getProximityPosition(predicateIndex : Int) : Int;
+	@:overload @:protected override private function getProximityPosition(predicateIndex : Int) : Int;
 	
 	/**
 	* Count backwards one proximity position.
 	*
 	* @param i The predicate index.
 	*/
-	@:overload override private function countProximityPosition(i : Int) : Void;
+	@:overload @:protected override private function countProximityPosition(i : Int) : Void;
 	
 	/**
 	* Get the number of nodes in this node list.  The function is probably ill
@@ -81,7 +81,7 @@ extern class ReverseAxesWalker extends com.sun.org.apache.xpath.internal.axes.Ax
 	*
 	* @return the number of nodes in this node list.
 	*/
-	@:overload override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -90,10 +90,10 @@ extern class ReverseAxesWalker extends com.sun.org.apache.xpath.internal.axes.Ax
 	*
 	* @return false.
 	*/
-	@:overload override public function isDocOrdered() : Bool;
+	@:overload @:public override public function isDocOrdered() : Bool;
 	
 	/** The DTM inner traversal class, that corresponds to the super axis. */
-	private var m_iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:protected private var m_iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }

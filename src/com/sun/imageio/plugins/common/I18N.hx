@@ -25,7 +25,7 @@ package com.sun.imageio.plugins.common;
 */
 extern class I18N extends com.sun.imageio.plugins.common.I18NImpl
 {
-	@:overload public static function getString(key : String) : String;
+	@:overload @:public @:static public static function getString(key : String) : String;
 	
 	
 }

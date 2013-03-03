@@ -25,35 +25,35 @@ package sun.tools.jconsole.inspector;
 */
 extern class XTextFieldEditor extends sun.tools.jconsole.inspector.XTextField implements javax.swing.table.TableCellEditor
 {
-	private var evtListenerList : javax.swing.event.EventListenerList;
+	@:protected private var evtListenerList : javax.swing.event.EventListenerList;
 	
-	private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected private var changeEvent : javax.swing.event.ChangeEvent;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload private function dropSuccess() : Void;
+	@:overload @:protected private function dropSuccess() : Void;
 	
-	@:overload public function addCellEditorListener(listener : javax.swing.event.CellEditorListener) : Void;
+	@:overload @:public public function addCellEditorListener(listener : javax.swing.event.CellEditorListener) : Void;
 	
-	@:overload public function removeCellEditorListener(listener : javax.swing.event.CellEditorListener) : Void;
+	@:overload @:public public function removeCellEditorListener(listener : javax.swing.event.CellEditorListener) : Void;
 	
-	@:overload private function fireEditingStopped() : Void;
+	@:overload @:protected private function fireEditingStopped() : Void;
 	
-	@:overload private function fireEditingCanceled() : Void;
+	@:overload @:protected private function fireEditingCanceled() : Void;
 	
-	@:overload public function cancelCellEditing() : Void;
+	@:overload @:public public function cancelCellEditing() : Void;
 	
-	@:overload public function stopCellEditing() : Bool;
+	@:overload @:public public function stopCellEditing() : Bool;
 	
-	@:overload public function isCellEditable(event : java.util.EventObject) : Bool;
+	@:overload @:public public function isCellEditable(event : java.util.EventObject) : Bool;
 	
-	@:overload public function shouldSelectCell(event : java.util.EventObject) : Bool;
+	@:overload @:public public function shouldSelectCell(event : java.util.EventObject) : Bool;
 	
-	@:overload public function getCellEditorValue() : Dynamic;
+	@:overload @:public public function getCellEditorValue() : Dynamic;
 	
-	@:overload public function getTableCellEditorComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public public function getTableCellEditorComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	
 }

@@ -28,13 +28,13 @@ extern class ByteArrayBuffer extends java.io.OutputStream
 	/**
 	* The buffer where data is stored.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates a new byte array output stream. The buffer capacity is
 	* initially 32 bytes, though its size increases if necessary.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new byte array output stream, with a buffer capacity of
@@ -43,11 +43,11 @@ extern class ByteArrayBuffer extends java.io.OutputStream
 	* @param size the initial size.
 	* @throws IllegalArgumentException if size is negative.
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Reads all the data of the given {@link InputStream} and appends them
@@ -56,15 +56,15 @@ extern class ByteArrayBuffer extends java.io.OutputStream
 	* @throws IOException
 	*      if the read operation fails with an {@link IOException}.
 	*/
-	@:overload @:final public function write(_in : java.io.InputStream) : Void;
+	@:overload @:public @:final public function write(_in : java.io.InputStream) : Void;
 	
-	@:overload @:final override public function write(b : Int) : Void;
+	@:overload @:public @:final override public function write(b : Int) : Void;
 	
-	@:overload @:final override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:final override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload @:final public function writeTo(out : java.io.OutputStream) : Void;
+	@:overload @:public @:final public function writeTo(out : java.io.OutputStream) : Void;
 	
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final public function reset() : Void;
 	
 	/**
 	* Gets the <b>copy</b> of exact-size byte[] that represents the written data.
@@ -76,9 +76,9 @@ extern class ByteArrayBuffer extends java.io.OutputStream
 	*      this method causes a buffer reallocation. Use it only when
 	*      you have to.
 	*/
-	@:overload @:final public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Gets the underlying buffer that this {@link ByteArrayBuffer} uses.
@@ -86,19 +86,19 @@ extern class ByteArrayBuffer extends java.io.OutputStream
 	*
 	* Use with caution.
 	*/
-	@:overload @:final public function getRawData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getRawData() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Creates a new {@link InputStream} that reads from this buffer.
 	*/
-	@:overload @:final public function newInputStream() : java.io.InputStream;
+	@:overload @:public @:final public function newInputStream() : java.io.InputStream;
 	
 	/**
 	* Creates a new {@link InputStream} that reads a part of this bfufer.
 	*/
-	@:overload @:final public function newInputStream(start : Int, length : Int) : java.io.InputStream;
+	@:overload @:public @:final public function newInputStream(start : Int, length : Int) : java.io.InputStream;
 	
 	/**
 	* Decodes the contents of this buffer by the default encoding
@@ -107,7 +107,7 @@ extern class ByteArrayBuffer extends java.io.OutputStream
 	* <p>
 	* Meant to aid debugging, but no more.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

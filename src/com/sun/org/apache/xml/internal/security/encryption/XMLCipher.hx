@@ -22,79 +22,79 @@ package com.sun.org.apache.xml.internal.security.encryption;
 extern class XMLCipher
 {
 	/** Triple DES EDE (192 bit key) in CBC mode */
-	public static var TRIPLEDES(default, null) : String;
+	@:public @:static @:final public static var TRIPLEDES(default, null) : String;
 	
 	/** AES 128 Cipher */
-	public static var AES_128(default, null) : String;
+	@:public @:static @:final public static var AES_128(default, null) : String;
 	
 	/** AES 256 Cipher */
-	public static var AES_256(default, null) : String;
+	@:public @:static @:final public static var AES_256(default, null) : String;
 	
 	/** AES 192 Cipher */
-	public static var AES_192(default, null) : String;
+	@:public @:static @:final public static var AES_192(default, null) : String;
 	
 	/** RSA 1.5 Cipher */
-	public static var RSA_v1dot5(default, null) : String;
+	@:public @:static @:final public static var RSA_v1dot5(default, null) : String;
 	
 	/** RSA OAEP Cipher */
-	public static var RSA_OAEP(default, null) : String;
+	@:public @:static @:final public static var RSA_OAEP(default, null) : String;
 	
 	/** DIFFIE_HELLMAN Cipher */
-	public static var DIFFIE_HELLMAN(default, null) : String;
+	@:public @:static @:final public static var DIFFIE_HELLMAN(default, null) : String;
 	
 	/** Triple DES EDE (192 bit key) in CBC mode KEYWRAP*/
-	public static var TRIPLEDES_KeyWrap(default, null) : String;
+	@:public @:static @:final public static var TRIPLEDES_KeyWrap(default, null) : String;
 	
 	/** AES 128 Cipher KeyWrap */
-	public static var AES_128_KeyWrap(default, null) : String;
+	@:public @:static @:final public static var AES_128_KeyWrap(default, null) : String;
 	
 	/** AES 256 Cipher KeyWrap */
-	public static var AES_256_KeyWrap(default, null) : String;
+	@:public @:static @:final public static var AES_256_KeyWrap(default, null) : String;
 	
 	/** AES 192 Cipher KeyWrap */
-	public static var AES_192_KeyWrap(default, null) : String;
+	@:public @:static @:final public static var AES_192_KeyWrap(default, null) : String;
 	
 	/** SHA1 Cipher */
-	public static var SHA1(default, null) : String;
+	@:public @:static @:final public static var SHA1(default, null) : String;
 	
 	/** SHA256 Cipher */
-	public static var SHA256(default, null) : String;
+	@:public @:static @:final public static var SHA256(default, null) : String;
 	
 	/** SHA512 Cipher */
-	public static var SHA512(default, null) : String;
+	@:public @:static @:final public static var SHA512(default, null) : String;
 	
 	/** RIPEMD Cipher */
-	public static var RIPEMD_160(default, null) : String;
+	@:public @:static @:final public static var RIPEMD_160(default, null) : String;
 	
 	/** XML Signature NS */
-	public static var XML_DSIG(default, null) : String;
+	@:public @:static @:final public static var XML_DSIG(default, null) : String;
 	
 	/** N14C_XML */
-	public static var N14C_XML(default, null) : String;
+	@:public @:static @:final public static var N14C_XML(default, null) : String;
 	
 	/** N14C_XML with comments*/
-	public static var N14C_XML_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var N14C_XML_WITH_COMMENTS(default, null) : String;
 	
 	/** N14C_XML excluisve */
-	public static var EXCL_XML_N14C(default, null) : String;
+	@:public @:static @:final public static var EXCL_XML_N14C(default, null) : String;
 	
 	/** N14C_XML exclusive with commetns*/
-	public static var EXCL_XML_N14C_WITH_COMMENTS(default, null) : String;
+	@:public @:static @:final public static var EXCL_XML_N14C_WITH_COMMENTS(default, null) : String;
 	
 	/** Base64 encoding */
-	public static var BASE64_ENCODING(default, null) : String;
+	@:public @:static @:final public static var BASE64_ENCODING(default, null) : String;
 	
 	/** ENCRYPT Mode */
-	public static var ENCRYPT_MODE(default, null) : Int;
+	@:public @:static @:final public static var ENCRYPT_MODE(default, null) : Int;
 	
 	/** DECRYPT Mode */
-	public static var DECRYPT_MODE(default, null) : Int;
+	@:public @:static @:final public static var DECRYPT_MODE(default, null) : Int;
 	
 	/** UNWRAP Mode */
-	public static var UNWRAP_MODE(default, null) : Int;
+	@:public @:static @:final public static var UNWRAP_MODE(default, null) : Int;
 	
 	/** WRAP Mode */
-	public static var WRAP_MODE(default, null) : Int;
+	@:public @:static @:final public static var WRAP_MODE(default, null) : Int;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -124,7 +124,7 @@ extern class XMLCipher
 	* @return the XMLCipher
 	* @see javax.crypto.Cipher#getInstance(java.lang.String)
 	*/
-	@:overload public static function getInstance(transformation : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getInstance(transformation : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -142,9 +142,9 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getInstance(transformation : String, canon : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getInstance(transformation : String, canon : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
-	@:overload public static function getInstance(transformation : String, cipher : javax.crypto.Cipher) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getInstance(transformation : String, cipher : javax.crypto.Cipher) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -157,7 +157,7 @@ extern class XMLCipher
 	* @return the XMLCipher
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getProviderInstance(transformation : String, provider : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getProviderInstance(transformation : String, provider : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -176,7 +176,7 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getProviderInstance(transformation : String, provider : String, canon : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getProviderInstance(transformation : String, provider : String, canon : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements no specific
@@ -187,7 +187,7 @@ extern class XMLCipher
 	* @return The XMLCipher
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getInstance() : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getInstance() : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements no specific
@@ -203,7 +203,7 @@ extern class XMLCipher
 	* @return the XMLCipher
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getProviderInstance(provider : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
+	@:overload @:public @:static public static function getProviderInstance(provider : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Initializes this cipher with a key.
@@ -225,7 +225,7 @@ extern class XMLCipher
 	* @see javax.crypto.Cipher#init(int, java.security.Key)
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function init(opmode : Int, key : java.security.Key) : Void;
+	@:overload @:public public function init(opmode : Int, key : java.security.Key) : Void;
 	
 	/**
 	* Get the EncryptedData being build
@@ -236,7 +236,7 @@ extern class XMLCipher
 	*
 	* @return The EncryptedData being built
 	*/
-	@:overload public function getEncryptedData() : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
+	@:overload @:public public function getEncryptedData() : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
 	
 	/**
 	* Get the EncryptedData being build
@@ -247,7 +247,7 @@ extern class XMLCipher
 	*
 	* @return The EncryptedData being built
 	*/
-	@:overload public function getEncryptedKey() : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
+	@:overload @:public public function getEncryptedKey() : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
 	
 	/**
 	* Set a Key Encryption Key.
@@ -259,7 +259,7 @@ extern class XMLCipher
 	*
 	* @param kek The key to use for de/encrypting key data
 	*/
-	@:overload public function setKEK(kek : java.security.Key) : Void;
+	@:overload @:public public function setKEK(kek : java.security.Key) : Void;
 	
 	/**
 	* Martial an EncryptedData
@@ -274,7 +274,7 @@ extern class XMLCipher
 	* @return the DOM <code>Element</code> representing the passed in
 	* object
 	*/
-	@:overload public function martial(encryptedData : com.sun.org.apache.xml.internal.security.encryption.EncryptedData) : org.w3c.dom.Element;
+	@:overload @:public public function martial(encryptedData : com.sun.org.apache.xml.internal.security.encryption.EncryptedData) : org.w3c.dom.Element;
 	
 	/**
 	* Martial an EncryptedKey
@@ -289,7 +289,7 @@ extern class XMLCipher
 	* @param encryptedKey EncryptedKey object to martial
 	* @return the DOM <code>Element</code> representing the passed in
 	* object */
-	@:overload public function martial(encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey) : org.w3c.dom.Element;
+	@:overload @:public public function martial(encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey) : org.w3c.dom.Element;
 	
 	/**
 	* Martial an EncryptedData
@@ -301,7 +301,7 @@ extern class XMLCipher
 	* @param encryptedData EncryptedData object to martial
 	* @return the DOM <code>Element</code> representing the passed in
 	* object */
-	@:overload public function martial(context : org.w3c.dom.Document, encryptedData : com.sun.org.apache.xml.internal.security.encryption.EncryptedData) : org.w3c.dom.Element;
+	@:overload @:public public function martial(context : org.w3c.dom.Document, encryptedData : com.sun.org.apache.xml.internal.security.encryption.EncryptedData) : org.w3c.dom.Element;
 	
 	/**
 	* Martial an EncryptedKey
@@ -313,7 +313,7 @@ extern class XMLCipher
 	* @param encryptedKey EncryptedKey object to martial
 	* @return the DOM <code>Element</code> representing the passed in
 	* object */
-	@:overload public function martial(context : org.w3c.dom.Document, encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey) : org.w3c.dom.Element;
+	@:overload @:public public function martial(context : org.w3c.dom.Document, encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey) : org.w3c.dom.Element;
 	
 	/**
 	* Process a DOM <code>Document</code> node. The processing depends on the
@@ -324,7 +324,7 @@ extern class XMLCipher
 	* @return the processed <code>Document</code>.
 	* @throws Exception to indicate any exceptional conditions.
 	*/
-	@:overload public function doFinal(context : org.w3c.dom.Document, source : org.w3c.dom.Document) : org.w3c.dom.Document;
+	@:overload @:public public function doFinal(context : org.w3c.dom.Document, source : org.w3c.dom.Document) : org.w3c.dom.Document;
 	
 	/**
 	* Process a DOM <code>Element</code> node. The processing depends on the
@@ -335,7 +335,7 @@ extern class XMLCipher
 	* @return the processed <code>Document</code>.
 	* @throws Exception to indicate any exceptional conditions.
 	*/
-	@:overload public function doFinal(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : org.w3c.dom.Document;
+	@:overload @:public public function doFinal(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : org.w3c.dom.Document;
 	
 	/**
 	* Process the contents of a DOM <code>Element</code> node. The processing
@@ -349,7 +349,7 @@ extern class XMLCipher
 	* @return the processed <code>Document</code>.
 	* @throws Exception to indicate any exceptional conditions.
 	*/
-	@:overload public function doFinal(context : org.w3c.dom.Document, element : org.w3c.dom.Element, content : Bool) : org.w3c.dom.Document;
+	@:overload @:public public function doFinal(context : org.w3c.dom.Document, element : org.w3c.dom.Element, content : Bool) : org.w3c.dom.Document;
 	
 	/**
 	* Returns an <code>EncryptedData</code> interface. Use this operation if
@@ -363,7 +363,7 @@ extern class XMLCipher
 	* @return the <code>EncryptedData</code>
 	* @throws Exception
 	*/
-	@:overload public function encryptData(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
+	@:overload @:public public function encryptData(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
 	
 	/**
 	* Returns an <code>EncryptedData</code> interface. Use this operation if
@@ -379,7 +379,7 @@ extern class XMLCipher
 	* @return the <code>EncryptedData</code>
 	* @throws Exception
 	*/
-	@:overload public function encryptData(context : org.w3c.dom.Document, type : String, serializedData : java.io.InputStream) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
+	@:overload @:public public function encryptData(context : org.w3c.dom.Document, type : String, serializedData : java.io.InputStream) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
 	
 	/**
 	* Returns an <code>EncryptedData</code> interface. Use this operation if
@@ -395,7 +395,7 @@ extern class XMLCipher
 	* @return the <code>EncryptedData</code>
 	* @throws Exception
 	*/
-	@:overload public function encryptData(context : org.w3c.dom.Document, element : org.w3c.dom.Element, contentMode : Bool) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
+	@:overload @:public public function encryptData(context : org.w3c.dom.Document, element : org.w3c.dom.Element, contentMode : Bool) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
 	
 	/**
 	* Returns an <code>EncryptedData</code> interface. Use this operation if
@@ -407,7 +407,7 @@ extern class XMLCipher
 	* @throws XMLEncryptionException
 	* @return
 	*/
-	@:overload public function loadEncryptedData(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
+	@:overload @:public public function loadEncryptedData(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
 	
 	/**
 	* Returns an <code>EncryptedKey</code> interface. Use this operation if
@@ -419,7 +419,7 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function loadEncryptedKey(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
+	@:overload @:public public function loadEncryptedKey(context : org.w3c.dom.Document, element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
 	
 	/**
 	* Returns an <code>EncryptedKey</code> interface. Use this operation if
@@ -432,7 +432,7 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function loadEncryptedKey(element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
+	@:overload @:public public function loadEncryptedKey(element : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
 	
 	/**
 	* Encrypts a key to an EncryptedKey structure
@@ -443,7 +443,7 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function encryptKey(doc : org.w3c.dom.Document, key : java.security.Key) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
+	@:overload @:public public function encryptKey(doc : org.w3c.dom.Document, key : java.security.Key) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
 	
 	/**
 	* Decrypt a key from a passed in EncryptedKey structure
@@ -454,7 +454,7 @@ extern class XMLCipher
 	* @return a key corresponding to the give type
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function decryptKey(encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey, algorithm : String) : java.security.Key;
+	@:overload @:public public function decryptKey(encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey, algorithm : String) : java.security.Key;
 	
 	/**
 	* Decrypt a key from a passed in EncryptedKey structure.  This version
@@ -467,7 +467,7 @@ extern class XMLCipher
 	* @return a key corresponding to the give type
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function decryptKey(encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey) : java.security.Key;
+	@:overload @:public public function decryptKey(encryptedKey : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey) : java.security.Key;
 	
 	/**
 	* Decrypt an EncryptedData element to a byte array
@@ -480,7 +480,7 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function decryptToByteArray(element : org.w3c.dom.Element) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function decryptToByteArray(element : org.w3c.dom.Element) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates an <code>EncryptedData</code> <code>Element</code>.
@@ -516,7 +516,7 @@ extern class XMLCipher
 	* -->
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function createEncryptedData(type : Int, value : String) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
+	@:overload @:public public function createEncryptedData(type : Int, value : String) : com.sun.org.apache.xml.internal.security.encryption.EncryptedData;
 	
 	/**
 	* Creates an <code>EncryptedKey</code> <code>Element</code>.
@@ -552,7 +552,7 @@ extern class XMLCipher
 	* -->
 	* @throws XMLEncryptionException
 	*/
-	@:overload public function createEncryptedKey(type : Int, value : String) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
+	@:overload @:public public function createEncryptedKey(type : Int, value : String) : com.sun.org.apache.xml.internal.security.encryption.EncryptedKey;
 	
 	/**
 	* Create an AgreementMethod object
@@ -560,7 +560,7 @@ extern class XMLCipher
 	* @param algorithm Algorithm of the agreement method
 	* @return
 	*/
-	@:overload public function createAgreementMethod(algorithm : String) : com.sun.org.apache.xml.internal.security.encryption.AgreementMethod;
+	@:overload @:public public function createAgreementMethod(algorithm : String) : com.sun.org.apache.xml.internal.security.encryption.AgreementMethod;
 	
 	/**
 	* Create a CipherData object
@@ -569,7 +569,7 @@ extern class XMLCipher
 	* REFERENCE_TYPE)
 	* @return
 	*/
-	@:overload public function createCipherData(type : Int) : com.sun.org.apache.xml.internal.security.encryption.CipherData;
+	@:overload @:public public function createCipherData(type : Int) : com.sun.org.apache.xml.internal.security.encryption.CipherData;
 	
 	/**
 	* Create a CipherReference object
@@ -577,7 +577,7 @@ extern class XMLCipher
 	* @return
 	* @param uri The URI that the reference will refer
 	*/
-	@:overload public function createCipherReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.CipherReference;
+	@:overload @:public public function createCipherReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.CipherReference;
 	
 	/**
 	* Create a CipherValue element
@@ -585,7 +585,7 @@ extern class XMLCipher
 	* @param value The value to set the ciphertext to
 	* @return
 	*/
-	@:overload public function createCipherValue(value : String) : com.sun.org.apache.xml.internal.security.encryption.CipherValue;
+	@:overload @:public public function createCipherValue(value : String) : com.sun.org.apache.xml.internal.security.encryption.CipherValue;
 	
 	/**
 	* Create an EncryptedMethod object
@@ -593,26 +593,26 @@ extern class XMLCipher
 	* @param algorithm Algorithm for the encryption
 	* @return
 	*/
-	@:overload public function createEncryptionMethod(algorithm : String) : com.sun.org.apache.xml.internal.security.encryption.EncryptionMethod;
+	@:overload @:public public function createEncryptionMethod(algorithm : String) : com.sun.org.apache.xml.internal.security.encryption.EncryptionMethod;
 	
 	/**
 	* Create an EncryptedProperties element
 	* @return
 	*/
-	@:overload public function createEncryptionProperties() : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperties;
+	@:overload @:public public function createEncryptionProperties() : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperties;
 	
 	/**
 	* Create a new EncryptionProperty element
 	* @return
 	*/
-	@:overload public function createEncryptionProperty() : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperty;
+	@:overload @:public public function createEncryptionProperty() : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperty;
 	
 	/**
 	* Create a new ReferenceList object
 	* @return
 	* @param type
 	*/
-	@:overload public function createReferenceList(type : Int) : com.sun.org.apache.xml.internal.security.encryption.ReferenceList;
+	@:overload @:public public function createReferenceList(type : Int) : com.sun.org.apache.xml.internal.security.encryption.ReferenceList;
 	
 	/**
 	* Create a new Transforms object
@@ -622,7 +622,7 @@ extern class XMLCipher
 	* createTransforms(Document) method.
 	* @return
 	*/
-	@:overload public function createTransforms() : com.sun.org.apache.xml.internal.security.encryption.Transforms;
+	@:overload @:public public function createTransforms() : com.sun.org.apache.xml.internal.security.encryption.Transforms;
 	
 	/**
 	* Create a new Transforms object
@@ -634,7 +634,7 @@ extern class XMLCipher
 	* @param doc Document that will own the created Transforms node
 	* @return
 	*/
-	@:overload public function createTransforms(doc : org.w3c.dom.Document) : com.sun.org.apache.xml.internal.security.encryption.Transforms;
+	@:overload @:public public function createTransforms(doc : org.w3c.dom.Document) : com.sun.org.apache.xml.internal.security.encryption.Transforms;
 	
 	
 }
@@ -662,40 +662,40 @@ extern class XMLCipher
 	/**
 	* @param algorithm
 	*/
-	@:overload public function new(algorithm : String) : Void;
+	@:overload @:public public function new(algorithm : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getKANonce() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getKANonce() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload public function setKANonce(kanonce : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setKANonce(kanonce : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getAgreementMethodInformation() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getAgreementMethodInformation() : java.util.Iterator<Dynamic>;
 	
 	/** @inheritDoc */
-	@:overload public function addAgreementMethodInformation(info : org.w3c.dom.Element) : Void;
+	@:overload @:public public function addAgreementMethodInformation(info : org.w3c.dom.Element) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function revoveAgreementMethodInformation(info : org.w3c.dom.Element) : Void;
+	@:overload @:public public function revoveAgreementMethodInformation(info : org.w3c.dom.Element) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getOriginatorKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
+	@:overload @:public public function getOriginatorKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
 	
 	/** @inheritDoc */
-	@:overload public function setOriginatorKeyInfo(keyInfo : com.sun.org.apache.xml.internal.security.keys.KeyInfo) : Void;
+	@:overload @:public public function setOriginatorKeyInfo(keyInfo : com.sun.org.apache.xml.internal.security.keys.KeyInfo) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getRecipientKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
+	@:overload @:public public function getRecipientKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
 	
 	/** @inheritDoc */
-	@:overload public function setRecipientKeyInfo(keyInfo : com.sun.org.apache.xml.internal.security.keys.KeyInfo) : Void;
+	@:overload @:public public function setRecipientKeyInfo(keyInfo : com.sun.org.apache.xml.internal.security.keys.KeyInfo) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/** @param algorithm*/
-	@:overload public function setAlgorithm(algorithm : String) : Void;
+	@:overload @:public public function setAlgorithm(algorithm : String) : Void;
 	
 	
 }
@@ -704,22 +704,22 @@ extern class XMLCipher
 	/**
 	* @param type
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getCipherValue() : com.sun.org.apache.xml.internal.security.encryption.CipherValue;
+	@:overload @:public public function getCipherValue() : com.sun.org.apache.xml.internal.security.encryption.CipherValue;
 	
 	/** @inheritDoc */
-	@:overload public function setCipherValue(value : com.sun.org.apache.xml.internal.security.encryption.CipherValue) : Void;
+	@:overload @:public public function setCipherValue(value : com.sun.org.apache.xml.internal.security.encryption.CipherValue) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getCipherReference() : com.sun.org.apache.xml.internal.security.encryption.CipherReference;
+	@:overload @:public public function getCipherReference() : com.sun.org.apache.xml.internal.security.encryption.CipherReference;
 	
 	/** @inheritDoc */
-	@:overload public function setCipherReference(reference : com.sun.org.apache.xml.internal.security.encryption.CipherReference) : Void;
+	@:overload @:public public function setCipherReference(reference : com.sun.org.apache.xml.internal.security.encryption.CipherReference) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getDataType() : Int;
+	@:overload @:public public function getDataType() : Int;
 	
 	
 }
@@ -728,24 +728,24 @@ extern class XMLCipher
 	/**
 	* @param uri
 	*/
-	@:overload public function new(uri : String) : Void;
+	@:overload @:public public function new(uri : String) : Void;
 	
 	/**
 	* @param uri
 	*/
-	@:overload public function new(uri : org.w3c.dom.Attr) : Void;
+	@:overload @:public public function new(uri : org.w3c.dom.Attr) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/** @inheritDoc */
-	@:overload public function getURIAsAttr() : org.w3c.dom.Attr;
+	@:overload @:public public function getURIAsAttr() : org.w3c.dom.Attr;
 	
 	/** @inheritDoc */
-	@:overload public function getTransforms() : com.sun.org.apache.xml.internal.security.encryption.Transforms;
+	@:overload @:public public function getTransforms() : com.sun.org.apache.xml.internal.security.encryption.Transforms;
 	
 	/** @inheritDoc */
-	@:overload public function setTransforms(transforms : com.sun.org.apache.xml.internal.security.encryption.Transforms) : Void;
+	@:overload @:public public function setTransforms(transforms : com.sun.org.apache.xml.internal.security.encryption.Transforms) : Void;
 	
 	
 }
@@ -754,13 +754,13 @@ extern class XMLCipher
 	/**
 	* @param value
 	*/
-	@:overload public function new(value : String) : Void;
+	@:overload @:public public function new(value : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/** @inheritDoc */
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	
 }
@@ -769,7 +769,7 @@ extern class XMLCipher
 	/**
 	* @param data
 	*/
-	@:overload public function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
+	@:overload @:public public function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
 	
 	
 }
@@ -778,121 +778,121 @@ extern class XMLCipher
 	/**
 	* @param data
 	*/
-	@:overload public function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
+	@:overload @:public public function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getRecipient() : String;
+	@:overload @:public public function getRecipient() : String;
 	
 	/** @inheritDoc */
-	@:overload public function setRecipient(recipient : String) : Void;
+	@:overload @:public public function setRecipient(recipient : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getReferenceList() : com.sun.org.apache.xml.internal.security.encryption.ReferenceList;
+	@:overload @:public public function getReferenceList() : com.sun.org.apache.xml.internal.security.encryption.ReferenceList;
 	
 	/** @inheritDoc */
-	@:overload public function setReferenceList(list : com.sun.org.apache.xml.internal.security.encryption.ReferenceList) : Void;
+	@:overload @:public public function setReferenceList(list : com.sun.org.apache.xml.internal.security.encryption.ReferenceList) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getCarriedName() : String;
+	@:overload @:public public function getCarriedName() : String;
 	
 	/** @inheritDoc */
-	@:overload public function setCarriedName(name : String) : Void;
+	@:overload @:public public function setCarriedName(name : String) : Void;
 	
 	
 }
 @:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$EncryptedTypeImpl') @:internal extern class XMLCipher_Factory_EncryptedTypeImpl
 {
-	@:overload private function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
+	@:overload @:protected private function new(data : com.sun.org.apache.xml.internal.security.encryption.CipherData) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	*
 	* @param id
 	*/
-	@:overload public function setId(id : String) : Void;
+	@:overload @:public public function setId(id : String) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	*
 	* @param type
 	*/
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	*
 	* @param type
 	*/
-	@:overload public function setMimeType(type : String) : Void;
+	@:overload @:public public function setMimeType(type : String) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	*
 	* @param encoding
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getEncryptionMethod() : com.sun.org.apache.xml.internal.security.encryption.EncryptionMethod;
+	@:overload @:public public function getEncryptionMethod() : com.sun.org.apache.xml.internal.security.encryption.EncryptionMethod;
 	
 	/**
 	*
 	* @param method
 	*/
-	@:overload public function setEncryptionMethod(method : com.sun.org.apache.xml.internal.security.encryption.EncryptionMethod) : Void;
+	@:overload @:public public function setEncryptionMethod(method : com.sun.org.apache.xml.internal.security.encryption.EncryptionMethod) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
+	@:overload @:public public function getKeyInfo() : com.sun.org.apache.xml.internal.security.keys.KeyInfo;
 	
 	/**
 	*
 	* @param info
 	*/
-	@:overload public function setKeyInfo(info : com.sun.org.apache.xml.internal.security.keys.KeyInfo) : Void;
+	@:overload @:public public function setKeyInfo(info : com.sun.org.apache.xml.internal.security.keys.KeyInfo) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getCipherData() : com.sun.org.apache.xml.internal.security.encryption.CipherData;
+	@:overload @:public public function getCipherData() : com.sun.org.apache.xml.internal.security.encryption.CipherData;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getEncryptionProperties() : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperties;
+	@:overload @:public public function getEncryptionProperties() : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperties;
 	
 	/**
 	*
 	* @param properties
 	*/
-	@:overload public function setEncryptionProperties(properties : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperties) : Void;
+	@:overload @:public public function setEncryptionProperties(properties : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperties) : Void;
 	
 	
 }
@@ -902,31 +902,31 @@ extern class XMLCipher
 	*
 	* @param algorithm
 	*/
-	@:overload public function new(algorithm : String) : Void;
+	@:overload @:public public function new(algorithm : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/** @inheritDoc */
-	@:overload public function getKeySize() : Int;
+	@:overload @:public public function getKeySize() : Int;
 	
 	/** @inheritDoc */
-	@:overload public function setKeySize(size : Int) : Void;
+	@:overload @:public public function setKeySize(size : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getOAEPparams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getOAEPparams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload public function setOAEPparams(params : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setOAEPparams(params : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getEncryptionMethodInformation() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getEncryptionMethodInformation() : java.util.Iterator<Dynamic>;
 	
 	/** @inheritDoc */
-	@:overload public function addEncryptionMethodInformation(info : org.w3c.dom.Element) : Void;
+	@:overload @:public public function addEncryptionMethodInformation(info : org.w3c.dom.Element) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function removeEncryptionMethodInformation(info : org.w3c.dom.Element) : Void;
+	@:overload @:public public function removeEncryptionMethodInformation(info : org.w3c.dom.Element) : Void;
 	
 	
 }
@@ -936,22 +936,22 @@ extern class XMLCipher
 	*
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/** @inheritDoc */
-	@:overload public function setId(id : String) : Void;
+	@:overload @:public public function setId(id : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getEncryptionProperties() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getEncryptionProperties() : java.util.Iterator<Dynamic>;
 	
 	/** @inheritDoc */
-	@:overload public function addEncryptionProperty(property : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperty) : Void;
+	@:overload @:public public function addEncryptionProperty(property : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperty) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function removeEncryptionProperty(property : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperty) : Void;
+	@:overload @:public public function removeEncryptionProperty(property : com.sun.org.apache.xml.internal.security.encryption.EncryptionProperty) : Void;
 	
 	
 }
@@ -961,34 +961,34 @@ extern class XMLCipher
 	*
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
 	/** @inheritDoc */
-	@:overload public function setTarget(target : String) : Void;
+	@:overload @:public public function setTarget(target : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/** @inheritDoc */
-	@:overload public function setId(id : String) : Void;
+	@:overload @:public public function setId(id : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getAttribute(attribute : String) : String;
+	@:overload @:public public function getAttribute(attribute : String) : String;
 	
 	/** @inheritDoc */
-	@:overload public function setAttribute(attribute : String, value : String) : Void;
+	@:overload @:public public function setAttribute(attribute : String, value : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function getEncryptionInformation() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getEncryptionInformation() : java.util.Iterator<Dynamic>;
 	
 	/** @inheritDoc */
-	@:overload public function addEncryptionInformation(info : org.w3c.dom.Element) : Void;
+	@:overload @:public public function addEncryptionInformation(info : org.w3c.dom.Element) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function removeEncryptionInformation(info : org.w3c.dom.Element) : Void;
+	@:overload @:public public function removeEncryptionInformation(info : org.w3c.dom.Element) : Void;
 	
 	
 }
@@ -997,13 +997,13 @@ extern class XMLCipher
 	/**
 	* Construct Transforms
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	* @param doc
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	*
@@ -1013,19 +1013,19 @@ extern class XMLCipher
 	* @throws XMLSecurityException
 	* @throws TransformationException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function toElement() : org.w3c.dom.Element;
+	@:overload @:public public function toElement() : org.w3c.dom.Element;
 	
 	/** @inheritDoc */
-	@:overload public function getDSTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
+	@:overload @:public public function getDSTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseNamespace() : String;
+	@:overload @:public override public function getBaseNamespace() : String;
 	
 	
 }
@@ -1035,28 +1035,28 @@ extern class XMLCipher
 	*
 	* @param type
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function add(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
+	@:overload @:public public function add(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function remove(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
+	@:overload @:public public function remove(reference : com.sun.org.apache.xml.internal.security.encryption.Reference) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/** @inheritDoc */
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/** @inheritDoc */
-	@:overload public function getReferences() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getReferences() : java.util.Iterator<Dynamic>;
 	
 	/** @inheritDoc */
-	@:overload public function newDataReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
+	@:overload @:public public function newDataReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
 	
 	/** @inheritDoc */
-	@:overload public function newKeyReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
+	@:overload @:public public function newKeyReference(uri : String) : com.sun.org.apache.xml.internal.security.encryption.Reference;
 	
 	
 }
@@ -1069,39 +1069,39 @@ extern class XMLCipher
 @:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$ReferenceImpl') @:internal extern class XMLCipher_Factory_ReferenceListImpl_ReferenceImpl implements com.sun.org.apache.xml.internal.security.encryption.Reference
 {
 	/** @inheritDoc */
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/** @inheritDoc */
-	@:overload public function getElementRetrievalInformation() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getElementRetrievalInformation() : java.util.Iterator<Dynamic>;
 	
 	/** @inheritDoc */
-	@:overload public function setURI(_uri : String) : Void;
+	@:overload @:public public function setURI(_uri : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function removeElementRetrievalInformation(node : org.w3c.dom.Element) : Void;
+	@:overload @:public public function removeElementRetrievalInformation(node : org.w3c.dom.Element) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function addElementRetrievalInformation(node : org.w3c.dom.Element) : Void;
+	@:overload @:public public function addElementRetrievalInformation(node : org.w3c.dom.Element) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload @:abstract public function toElement() : org.w3c.dom.Element;
+	@:overload @:public @:abstract public function toElement() : org.w3c.dom.Element;
 	
 	
 }
 @:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$DataReference') @:internal extern class XMLCipher_Factory_ReferenceListImpl_DataReference extends com.sun.org.apache.xml.internal.security.encryption.XMLCipher.XMLCipher_Factory_ReferenceListImpl_ReferenceImpl
 {
 	/** @inheritDoc */
-	@:overload override public function toElement() : org.w3c.dom.Element;
+	@:overload @:public override public function toElement() : org.w3c.dom.Element;
 	
 	
 }
 @:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$KeyReference') @:internal extern class XMLCipher_Factory_ReferenceListImpl_KeyReference extends com.sun.org.apache.xml.internal.security.encryption.XMLCipher.XMLCipher_Factory_ReferenceListImpl_ReferenceImpl
 {
 	/** @inheritDoc */
-	@:overload override public function toElement() : org.w3c.dom.Element;
+	@:overload @:public override public function toElement() : org.w3c.dom.Element;
 	
 	
 }

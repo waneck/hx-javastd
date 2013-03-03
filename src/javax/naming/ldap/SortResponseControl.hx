@@ -29,7 +29,7 @@ extern class SortResponseControl extends javax.naming.ldap.BasicControl
 	* The server-side sort response control's assigned object identifier
 	* is 1.2.840.113556.1.4.474.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a control to indicate the outcome of a sort request.
@@ -42,7 +42,7 @@ extern class SortResponseControl extends javax.naming.ldap.BasicControl
 	* @exception               IOException if an error is encountered
 	*                          while decoding the control's value.
 	*/
-	@:overload public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Determines if the search results have been successfully sorted.
@@ -50,14 +50,14 @@ extern class SortResponseControl extends javax.naming.ldap.BasicControl
 	*
 	* @return    true if the search results have been sorted.
 	*/
-	@:overload public function isSorted() : Bool;
+	@:overload @:public public function isSorted() : Bool;
 	
 	/**
 	* Retrieves the LDAP result code of the sort operation.
 	*
 	* @return    The result code. A zero value indicates success.
 	*/
-	@:overload public function getResultCode() : Int;
+	@:overload @:public public function getResultCode() : Int;
 	
 	/**
 	* Retrieves the ID of the attribute that caused the sort to fail.
@@ -65,7 +65,7 @@ extern class SortResponseControl extends javax.naming.ldap.BasicControl
 	*
 	* @return The possibly null ID of the bad attribute.
 	*/
-	@:overload public function getAttributeID() : String;
+	@:overload @:public public function getAttributeID() : String;
 	
 	/**
 	* Retrieves the NamingException appropriate for the result code.
@@ -73,7 +73,7 @@ extern class SortResponseControl extends javax.naming.ldap.BasicControl
 	* @return A NamingException or null if the result code indicates
 	*         success.
 	*/
-	@:overload public function getException() : javax.naming.NamingException;
+	@:overload @:public public function getException() : javax.naming.NamingException;
 	
 	
 }

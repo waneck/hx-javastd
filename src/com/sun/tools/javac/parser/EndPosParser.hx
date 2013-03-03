@@ -34,21 +34,21 @@ package com.sun.tools.javac.parser;
 */
 extern class EndPosParser extends com.sun.tools.javac.parser.JavacParser
 {
-	@:overload public function new(fac : com.sun.tools.javac.parser.ParserFactory, S : com.sun.tools.javac.parser.Lexer, keepDocComments : Bool, keepLineMap : Bool) : Void;
+	@:overload @:public public function new(fac : com.sun.tools.javac.parser.ParserFactory, S : com.sun.tools.javac.parser.Lexer, keepDocComments : Bool, keepLineMap : Bool) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload private function storeEnd(tree : com.sun.tools.javac.tree.JCTree, endpos : Int) : Void;
+	@:overload @:protected override private function storeEnd(tree : com.sun.tools.javac.tree.JCTree, endpos : Int) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload private function to<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
+	@:overload @:protected override private function to<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
 	
 	/** {@inheritDoc} */
-	@:overload private function toP<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
+	@:overload @:protected override private function toP<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
 	
-	@:overload public function parseCompilationUnit() : JCCompilationUnit;
+	@:overload @:public override public function parseCompilationUnit() : JCCompilationUnit;
 	
 	/** {@inheritDoc} */
-	@:overload public function getEndPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
+	@:overload @:public override public function getEndPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
 	
 	
 }

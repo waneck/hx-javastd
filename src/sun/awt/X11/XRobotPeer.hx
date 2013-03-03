@@ -25,23 +25,23 @@ package sun.awt.X11;
 */
 @:internal extern class XRobotPeer implements java.awt.peer.RobotPeer
 {
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function mouseMove(x : Int, y : Int) : Void;
+	@:overload @:public public function mouseMove(x : Int, y : Int) : Void;
 	
-	@:overload public function mousePress(buttons : Int) : Void;
+	@:overload @:public public function mousePress(buttons : Int) : Void;
 	
-	@:overload public function mouseRelease(buttons : Int) : Void;
+	@:overload @:public public function mouseRelease(buttons : Int) : Void;
 	
-	@:overload public function mouseWheel(wheelAmt : Int) : Void;
+	@:overload @:public public function mouseWheel(wheelAmt : Int) : Void;
 	
-	@:overload public function keyPress(keycode : Int) : Void;
+	@:overload @:public public function keyPress(keycode : Int) : Void;
 	
-	@:overload public function keyRelease(keycode : Int) : Void;
+	@:overload @:public public function keyRelease(keycode : Int) : Void;
 	
-	@:overload public function getRGBPixel(x : Int, y : Int) : Int;
+	@:overload @:public public function getRGBPixel(x : Int, y : Int) : Int;
 	
-	@:overload public function getRGBPixels(bounds : java.awt.Rectangle) : java.NativeArray<Int>;
+	@:overload @:public public function getRGBPixels(bounds : java.awt.Rectangle) : java.NativeArray<Int>;
 	
 	
 }

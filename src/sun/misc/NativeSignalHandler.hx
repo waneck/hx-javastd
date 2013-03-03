@@ -26,7 +26,7 @@ package sun.misc;
 /* A package-private class implementing a signal handler in native code. */
 @:internal extern class NativeSignalHandler implements sun.misc.SignalHandler
 {
-	@:overload public function handle(sig : sun.misc.Signal) : Void;
+	@:overload @:public public function handle(sig : sun.misc.Signal) : Void;
 	
 	
 }

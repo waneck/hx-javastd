@@ -32,7 +32,7 @@ extern class RTFIterator extends com.sun.org.apache.xpath.internal.NodeSetDTM
 	/**
 	* Constructor for RTFIterator
 	*/
-	@:overload public function new(root : Int, manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload @:public public function new(root : Int, manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	
 }

@@ -48,7 +48,7 @@ package java.util.concurrent.atomic;
 	*
 	* @param length the length of the array
 	*/
-	@:overload public function new(length : Int) : Void;
+	@:overload @:public public function new(length : Int) : Void;
 	
 	/**
 	* Creates a new AtomicIntegerArray with the same length as, and
@@ -57,14 +57,14 @@ package java.util.concurrent.atomic;
 	* @param array the array to copy elements from
 	* @throws NullPointerException if array is null
 	*/
-	@:overload public function new(array : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(array : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the length of the array.
 	*
 	* @return the length of the array
 	*/
-	@:overload @:final public function length() : Int;
+	@:overload @:public @:final public function length() : Int;
 	
 	/**
 	* Gets the current value at position {@code i}.
@@ -72,7 +72,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the current value
 	*/
-	@:overload @:final public function get(i : Int) : Int;
+	@:overload @:public @:final public function get(i : Int) : Int;
 	
 	/**
 	* Sets the element at position {@code i} to the given value.
@@ -80,7 +80,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @param newValue the new value
 	*/
-	@:overload @:final public function set(i : Int, newValue : Int) : Void;
+	@:overload @:public @:final public function set(i : Int, newValue : Int) : Void;
 	
 	/**
 	* Eventually sets the element at position {@code i} to the given value.
@@ -89,7 +89,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function lazySet(i : Int, newValue : Int) : Void;
+	@:require(java6) @:overload @:public @:final public function lazySet(i : Int, newValue : Int) : Void;
 	
 	/**
 	* Atomically sets the element at position {@code i} to the given
@@ -99,7 +99,7 @@ package java.util.concurrent.atomic;
 	* @param newValue the new value
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndSet(i : Int, newValue : Int) : Int;
+	@:overload @:public @:final public function getAndSet(i : Int, newValue : Int) : Int;
 	
 	/**
 	* Atomically sets the element at position {@code i} to the given
@@ -111,7 +111,7 @@ package java.util.concurrent.atomic;
 	* @return true if successful. False return indicates that
 	* the actual value was not equal to the expected value.
 	*/
-	@:overload @:final public function compareAndSet(i : Int, expect : Int, update : Int) : Bool;
+	@:overload @:public @:final public function compareAndSet(i : Int, expect : Int, update : Int) : Bool;
 	
 	/**
 	* Atomically sets the element at position {@code i} to the given
@@ -126,7 +126,7 @@ package java.util.concurrent.atomic;
 	* @param update the new value
 	* @return true if successful.
 	*/
-	@:overload @:final public function weakCompareAndSet(i : Int, expect : Int, update : Int) : Bool;
+	@:overload @:public @:final public function weakCompareAndSet(i : Int, expect : Int, update : Int) : Bool;
 	
 	/**
 	* Atomically increments by one the element at index {@code i}.
@@ -134,7 +134,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndIncrement(i : Int) : Int;
+	@:overload @:public @:final public function getAndIncrement(i : Int) : Int;
 	
 	/**
 	* Atomically decrements by one the element at index {@code i}.
@@ -142,7 +142,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndDecrement(i : Int) : Int;
+	@:overload @:public @:final public function getAndDecrement(i : Int) : Int;
 	
 	/**
 	* Atomically adds the given value to the element at index {@code i}.
@@ -151,7 +151,7 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the previous value
 	*/
-	@:overload @:final public function getAndAdd(i : Int, delta : Int) : Int;
+	@:overload @:public @:final public function getAndAdd(i : Int, delta : Int) : Int;
 	
 	/**
 	* Atomically increments by one the element at index {@code i}.
@@ -159,7 +159,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the updated value
 	*/
-	@:overload @:final public function incrementAndGet(i : Int) : Int;
+	@:overload @:public @:final public function incrementAndGet(i : Int) : Int;
 	
 	/**
 	* Atomically decrements by one the element at index {@code i}.
@@ -167,7 +167,7 @@ package java.util.concurrent.atomic;
 	* @param i the index
 	* @return the updated value
 	*/
-	@:overload @:final public function decrementAndGet(i : Int) : Int;
+	@:overload @:public @:final public function decrementAndGet(i : Int) : Int;
 	
 	/**
 	* Atomically adds the given value to the element at index {@code i}.
@@ -176,13 +176,13 @@ package java.util.concurrent.atomic;
 	* @param delta the value to add
 	* @return the updated value
 	*/
-	@:overload @:final public function addAndGet(i : Int, delta : Int) : Int;
+	@:overload @:public @:final public function addAndGet(i : Int, delta : Int) : Int;
 	
 	/**
 	* Returns the String representation of the current values of array.
 	* @return the String representation of the current values of array
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

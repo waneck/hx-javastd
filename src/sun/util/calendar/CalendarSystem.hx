@@ -31,7 +31,7 @@ extern class CalendarSystem
 	*
 	* @return the <code>Gregorian</code> instance
 	*/
-	@:overload public static function getGregorianCalendar() : sun.util.calendar.Gregorian;
+	@:overload @:public @:static public static function getGregorianCalendar() : sun.util.calendar.Gregorian;
 	
 	/**
 	* Returns a <code>CalendarSystem</code> specified by the calendar
@@ -43,14 +43,14 @@ extern class CalendarSystem
 	* <code>calendarName</code>, or null if there is no
 	* <code>CalendarSystem</code> associated with the given calendar name.
 	*/
-	@:overload public static function forName(calendarName : String) : sun.util.calendar.CalendarSystem;
+	@:overload @:public @:static public static function forName(calendarName : String) : sun.util.calendar.CalendarSystem;
 	
 	/**
 	* Returns the name of this calendar system.
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
-	@:overload @:abstract public function getCalendarDate() : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function getCalendarDate() : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Calculates calendar fields from the specified number of
@@ -65,11 +65,11 @@ extern class CalendarSystem
 	* @return a <code>CalendarDate</code> instance that contains the
 	* calculated calendar field values.
 	*/
-	@:overload @:abstract public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.CalendarDate;
 	
-	@:overload @:abstract public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
 	
-	@:overload @:abstract public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Constructs a <code>CalendarDate</code> that is specific to this
@@ -80,9 +80,9 @@ extern class CalendarSystem
 	* @return a <code>CalendarDate</code> instance that contains the initial
 	* calendar field values.
 	*/
-	@:overload @:abstract public function newCalendarDate() : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function newCalendarDate() : sun.util.calendar.CalendarDate;
 	
-	@:overload @:abstract public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Returns the number of milliseconds since the Epoch, January 1,
@@ -93,7 +93,7 @@ extern class CalendarSystem
 	* value is calculated
 	* @return the number of milliseconds since the Epoch.
 	*/
-	@:overload @:abstract public function getTime(date : sun.util.calendar.CalendarDate) : haxe.Int64;
+	@:overload @:public @:abstract public function getTime(date : sun.util.calendar.CalendarDate) : haxe.Int64;
 	
 	/**
 	* Returns the length in days of the specified year by
@@ -102,7 +102,7 @@ extern class CalendarSystem
 	* <code>CalendarDate</code> must be normalized to get a correct
 	* value.
 	*/
-	@:overload @:abstract public function getYearLength(date : sun.util.calendar.CalendarDate) : Int;
+	@:overload @:public @:abstract public function getYearLength(date : sun.util.calendar.CalendarDate) : Int;
 	
 	/**
 	* Returns the number of months of the specified year. This method
@@ -110,7 +110,7 @@ extern class CalendarSystem
 	* <code>CalendarDate</code>. The <code>CalendarDate</code> must
 	* be normalized to get a correct value.
 	*/
-	@:overload @:abstract public function getYearLengthInMonths(date : sun.util.calendar.CalendarDate) : Int;
+	@:overload @:public @:abstract public function getYearLengthInMonths(date : sun.util.calendar.CalendarDate) : Int;
 	
 	/**
 	* Returns the length in days of the month specified by the calendar
@@ -123,14 +123,14 @@ extern class CalendarSystem
 	* @exception IllegalArgumentException if the specified calendar date
 	* doesn't have a valid month value in this calendar system.
 	*/
-	@:overload @:abstract public function getMonthLength(date : sun.util.calendar.CalendarDate) : Int;
+	@:overload @:public @:abstract public function getMonthLength(date : sun.util.calendar.CalendarDate) : Int;
 	
 	/**
 	* Returns the length in days of a week in this calendar
 	* system. If this calendar system has multiple radix weeks, this
 	* method returns only one of them.
 	*/
-	@:overload @:abstract public function getWeekLength() : Int;
+	@:overload @:public @:abstract public function getWeekLength() : Int;
 	
 	/**
 	* Returns the <code>Era</code> designated by the era name that
@@ -143,7 +143,7 @@ extern class CalendarSystem
 	* applicable to this calendar system or the specified era name is
 	* not known to this calendar system.
 	*/
-	@:overload @:abstract public function getEra(eraName : String) : sun.util.calendar.Era;
+	@:overload @:public @:abstract public function getEra(eraName : String) : sun.util.calendar.Era;
 	
 	/**
 	* Returns valid <code>Era</code>s of this calendar system. The
@@ -155,14 +155,14 @@ extern class CalendarSystem
 	* <code>null</code> if no era is applicable to this calendar
 	* system.
 	*/
-	@:overload @:abstract public function getEras() : java.NativeArray<sun.util.calendar.Era>;
+	@:overload @:public @:abstract public function getEras() : java.NativeArray<sun.util.calendar.Era>;
 	
 	/**
 	* @throws IllegalArgumentException if the specified era name is
 	* unknown to this calendar system.
 	* @see Era
 	*/
-	@:overload @:abstract public function setEra(date : sun.util.calendar.CalendarDate, eraName : String) : Void;
+	@:overload @:public @:abstract public function setEra(date : sun.util.calendar.CalendarDate, eraName : String) : Void;
 	
 	/**
 	* Returns a <code>CalendarDate</code> of the n-th day of week
@@ -189,9 +189,9 @@ extern class CalendarSystem
 	* @return the date of the nth <code>dayOfWeek</code> after
 	* or before the specified <code>CalendarDate</code>
 	*/
-	@:overload @:abstract public function getNthDayOfWeek(nth : Int, dayOfWeek : Int, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function getNthDayOfWeek(nth : Int, dayOfWeek : Int, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
 	
-	@:overload @:abstract public function setTimeOfDay(date : sun.util.calendar.CalendarDate, timeOfDay : Int) : sun.util.calendar.CalendarDate;
+	@:overload @:public @:abstract public function setTimeOfDay(date : sun.util.calendar.CalendarDate, timeOfDay : Int) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Checks whether the calendar fields specified by <code>date</code>
@@ -204,7 +204,7 @@ extern class CalendarSystem
 	* @exception NullPointerException if the specified
 	* <code>date</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function validate(date : sun.util.calendar.CalendarDate) : Bool;
+	@:overload @:public @:abstract public function validate(date : sun.util.calendar.CalendarDate) : Bool;
 	
 	/**
 	* Normalizes calendar fields in the specified
@@ -218,7 +218,7 @@ extern class CalendarSystem
 	* @exception NullPointerException if the specified
 	* <code>date</code> is <code>null</code>
 	*/
-	@:overload @:abstract public function normalize(date : sun.util.calendar.CalendarDate) : Bool;
+	@:overload @:public @:abstract public function normalize(date : sun.util.calendar.CalendarDate) : Bool;
 	
 	
 }

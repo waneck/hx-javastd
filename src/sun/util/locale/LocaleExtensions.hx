@@ -31,35 +31,35 @@ package sun.util.locale;
 */
 extern class LocaleExtensions
 {
-	public static var CALENDAR_JAPANESE(default, null) : sun.util.locale.LocaleExtensions;
+	@:public @:static @:final public static var CALENDAR_JAPANESE(default, null) : sun.util.locale.LocaleExtensions;
 	
-	public static var NUMBER_THAI(default, null) : sun.util.locale.LocaleExtensions;
+	@:public @:static @:final public static var NUMBER_THAI(default, null) : sun.util.locale.LocaleExtensions;
 	
-	@:overload public function getKeys() : java.util.Set<Null<java.StdTypes.Char16>>;
+	@:overload @:public public function getKeys() : java.util.Set<Null<java.StdTypes.Char16>>;
 	
-	@:overload public function getExtension(key : Null<java.StdTypes.Char16>) : sun.util.locale.Extension;
+	@:overload @:public public function getExtension(key : Null<java.StdTypes.Char16>) : sun.util.locale.Extension;
 	
-	@:overload public function getExtensionValue(key : Null<java.StdTypes.Char16>) : String;
+	@:overload @:public public function getExtensionValue(key : Null<java.StdTypes.Char16>) : String;
 	
-	@:overload public function getUnicodeLocaleAttributes() : java.util.Set<String>;
+	@:overload @:public public function getUnicodeLocaleAttributes() : java.util.Set<String>;
 	
-	@:overload public function getUnicodeLocaleKeys() : java.util.Set<String>;
+	@:overload @:public public function getUnicodeLocaleKeys() : java.util.Set<String>;
 	
-	@:overload public function getUnicodeLocaleType(unicodeLocaleKey : String) : String;
+	@:overload @:public public function getUnicodeLocaleType(unicodeLocaleKey : String) : String;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public static function isValidKey(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isValidKey(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function isValidUnicodeLocaleKey(ukey : String) : Bool;
+	@:overload @:public @:static public static function isValidUnicodeLocaleKey(ukey : String) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

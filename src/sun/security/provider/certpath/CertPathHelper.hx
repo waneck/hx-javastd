@@ -28,13 +28,13 @@ extern class CertPathHelper
 	/**
 	* Object used to tunnel the calls. Initialized by CertPathHelperImpl.
 	*/
-	private static var instance : sun.security.provider.certpath.CertPathHelper;
+	@:protected @:static private static var instance : sun.security.provider.certpath.CertPathHelper;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload @:abstract private function implSetPathToNames(sel : java.security.cert.X509CertSelector, names : java.util.Set<sun.security.x509.GeneralNameInterface>) : Void;
+	@:overload @:protected @:abstract private function implSetPathToNames(sel : java.security.cert.X509CertSelector, names : java.util.Set<sun.security.x509.GeneralNameInterface>) : Void;
 	
-	@:overload @:abstract private function implSetDateAndTime(sel : java.security.cert.X509CRLSelector, date : java.util.Date, skew : haxe.Int64) : Void;
+	@:overload @:protected @:abstract private function implSetDateAndTime(sel : java.security.cert.X509CRLSelector, date : java.util.Date, skew : haxe.Int64) : Void;
 	
 	
 }

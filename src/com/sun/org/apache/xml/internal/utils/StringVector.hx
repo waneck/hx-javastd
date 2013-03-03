@@ -29,50 +29,50 @@ package com.sun.org.apache.xml.internal.utils;
 extern class StringVector implements java.io.Serializable
 {
 	/** @serial Size of blocks to allocate           */
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** @serial Array of strings this contains          */
-	private var m_map : java.NativeArray<String>;
+	@:protected private var m_map : java.NativeArray<String>;
 	
 	/** @serial Number of strings this contains          */
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/** @serial Size of the array          */
-	private var m_mapSize : Int;
+	@:protected private var m_mapSize : Int;
 	
 	/**
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a StringVector, using the given block size.
 	*
 	* @param blocksize Size of the blocks to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of strings in the list
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of strings in the list
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Append a string onto the vector.
 	*
 	* @param value Sting to add to the vector
 	*/
-	@:overload @:final public function addElement(value : String) : Void;
+	@:overload @:public @:final public function addElement(value : String) : Void;
 	
 	/**
 	* Get the nth element.
@@ -81,7 +81,7 @@ extern class StringVector implements java.io.Serializable
 	*
 	* @return String at given index
 	*/
-	@:overload @:final public function elementAt(i : Int) : String;
+	@:overload @:public @:final public function elementAt(i : Int) : String;
 	
 	/**
 	* Tell if the table contains the given string.
@@ -90,7 +90,7 @@ extern class StringVector implements java.io.Serializable
 	*
 	* @return True if the string is in this table
 	*/
-	@:overload @:final public function contains(s : String) : Bool;
+	@:overload @:public @:final public function contains(s : String) : Bool;
 	
 	/**
 	* Tell if the table contains the given string. Ignore case.
@@ -99,14 +99,14 @@ extern class StringVector implements java.io.Serializable
 	*
 	* @return True if the String is in this vector
 	*/
-	@:overload @:final public function containsIgnoreCase(s : String) : Bool;
+	@:overload @:public @:final public function containsIgnoreCase(s : String) : Bool;
 	
 	/**
 	* Tell if the table contains the given string.
 	*
 	* @param s String to push into the vector
 	*/
-	@:overload @:final public function push(s : String) : Void;
+	@:overload @:public @:final public function push(s : String) : Void;
 	
 	/**
 	* Pop the tail of this vector.
@@ -114,14 +114,14 @@ extern class StringVector implements java.io.Serializable
 	* @return The String last added to this vector or null not found.
 	* The string is removed from the vector.
 	*/
-	@:overload @:final public function pop() : String;
+	@:overload @:public @:final public function pop() : String;
 	
 	/**
 	* Get the string at the tail of this vector without popping.
 	*
 	* @return The string at the tail of this vector.
 	*/
-	@:overload @:final public function peek() : String;
+	@:overload @:public @:final public function peek() : String;
 	
 	
 }

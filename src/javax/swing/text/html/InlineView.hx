@@ -36,7 +36,7 @@ extern class InlineView extends javax.swing.text.LabelView
 	*
 	* @param elem the element
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Gives notification that something was inserted into
@@ -50,7 +50,7 @@ extern class InlineView extends javax.swing.text.LabelView
 	* @since 1.5
 	* @see View#insertUpdate
 	*/
-	@:require(java5) @:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java5) @:overload @:public override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -64,7 +64,7 @@ extern class InlineView extends javax.swing.text.LabelView
 	* @since 1.5
 	* @see View#removeUpdate
 	*/
-	@:require(java5) @:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java5) @:overload @:public override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -75,14 +75,14 @@ extern class InlineView extends javax.swing.text.LabelView
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This is
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Determines how attractive a break opportunity in
@@ -122,7 +122,7 @@ extern class InlineView extends javax.swing.text.LabelView
 	* @see javax.swing.text.View#ExcellentBreakWeight
 	* @see javax.swing.text.View#ForcedBreakWeight
 	*/
-	@:overload override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
+	@:overload @:public override public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
 	
 	/**
 	* Tries to break this view on the given axis. Refer to
@@ -149,14 +149,14 @@ extern class InlineView extends javax.swing.text.LabelView
 	* @since 1.5
 	* @see javax.swing.text.View#breakView
 	*/
-	@:require(java5) @:overload override public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
+	@:require(java5) @:overload @:public override public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
 	
 	/**
 	* Set the cached properties from the attributes.
 	*/
-	@:overload override private function setPropertiesFromAttributes() : Void;
+	@:overload @:protected override private function setPropertiesFromAttributes() : Void;
 	
-	@:overload private function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:protected private function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	
 }

@@ -40,7 +40,7 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Returns the result of method execution.
@@ -50,7 +50,7 @@ package com.sun.beans.decoder;
 	* @return the value of this element
 	* @throws Exception if calculation is failed
 	*/
-	@:overload private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
 	
 	
 }

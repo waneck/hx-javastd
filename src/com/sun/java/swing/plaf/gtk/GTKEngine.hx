@@ -25,35 +25,35 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:internal extern class GTKEngine
 {
-	@:overload public function paintArrow(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, direction : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ArrowType, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintArrow(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, direction : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ArrowType, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintBox(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBox(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintBoxGap(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, boxGapType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_PositionType, tabBegin : Int, size : Int) : Void;
+	@:overload @:public public function paintBoxGap(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, boxGapType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_PositionType, tabBegin : Int, size : Int) : Void;
 	
-	@:overload public function paintCheck(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintCheck(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintExpander(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, expanderStyle : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ExpanderStyle, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintExpander(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, expanderStyle : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ExpanderStyle, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintExtension(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, placement : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_PositionType, tabIndex : Int) : Void;
+	@:overload @:public public function paintExtension(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, placement : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_PositionType, tabIndex : Int) : Void;
 	
-	@:overload public function paintFlatBox(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, colorType : javax.swing.plaf.synth.ColorType) : Void;
+	@:overload @:public public function paintFlatBox(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, colorType : javax.swing.plaf.synth.ColorType) : Void;
 	
-	@:overload public function paintFocus(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintFocus(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintHandle(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, orientation : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_Orientation) : Void;
+	@:overload @:public public function paintHandle(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, orientation : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_Orientation) : Void;
 	
-	@:overload public function paintHline(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintHline(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintOption(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintOption(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintShadow(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintShadow(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintSlider(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, orientation : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_Orientation) : Void;
+	@:overload @:public public function paintSlider(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, shadowType : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_ShadowType, detail : String, x : Int, y : Int, w : Int, h : Int, orientation : com.sun.java.swing.plaf.gtk.GTKConstants.GTKConstants_Orientation) : Void;
 	
-	@:overload public function paintVline(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintVline(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, detail : String, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function paintBackground(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, color : java.awt.Color, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBackground(g : java.awt.Graphics, context : javax.swing.plaf.synth.SynthContext, id : javax.swing.plaf.synth.Region, state : Int, color : java.awt.Color, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paint a cached image identified by its size and a set of additional
@@ -61,33 +61,33 @@ package com.sun.java.swing.plaf.gtk;
 	*
 	* @return true if a cached image has been painted, false otherwise
 	*/
-	@:overload public function paintCachedImage(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public public function paintCachedImage(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
 	
 	/*
 	* Allocate a native offscreen buffer of the specified size.
 	*/
-	@:overload public function startPainting(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function startPainting(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Convenience method that delegates to finishPainting() with
 	* caching enabled.
 	*/
-	@:overload public function finishPainting() : Void;
+	@:overload @:public public function finishPainting() : Void;
 	
 	/**
 	* Called to indicate that painting is finished. We create a new
 	* BufferedImage from the offscreen buffer, (optionally) cache it,
 	* and paint it.
 	*/
-	@:overload public function finishPainting(useCache : Bool) : Void;
+	@:overload @:public public function finishPainting(useCache : Bool) : Void;
 	
 	/**
 	* Notify native layer of theme change, and flush cache
 	*/
-	@:overload public function themeChanged() : Void;
+	@:overload @:public public function themeChanged() : Void;
 	
 	/* GtkSettings enum mirrors that in gtk2_interface.h */
-	@:overload public function getSetting(property : com.sun.java.swing.plaf.gtk.GTKEngine.GTKEngine_Settings) : Dynamic;
+	@:overload @:public public function getSetting(property : com.sun.java.swing.plaf.gtk.GTKEngine.GTKEngine_Settings) : Dynamic;
 	
 	
 }

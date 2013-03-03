@@ -38,36 +38,36 @@ extern class WindowsButtonUI extends javax.swing.plaf.basic.BasicButtonUI
 	* @author Jeff Dinkins
 	*
 	*/
-	private var dashedRectGapX : Int;
+	@:protected private var dashedRectGapX : Int;
 	
-	private var dashedRectGapY : Int;
+	@:protected private var dashedRectGapY : Int;
 	
-	private var dashedRectGapWidth : Int;
+	@:protected private var dashedRectGapWidth : Int;
 	
-	private var dashedRectGapHeight : Int;
+	@:protected private var dashedRectGapHeight : Int;
 	
-	private var focusColor : java.awt.Color;
+	@:protected private var focusColor : java.awt.Color;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function getFocusColor() : java.awt.Color;
+	@:overload @:protected private function getFocusColor() : java.awt.Color;
 	
 	/**
 	* Overridden method to render the text without the mnemonic
 	*/
-	@:overload private function paintText(g : java.awt.Graphics, b : javax.swing.AbstractButton, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload @:protected override private function paintText(g : java.awt.Graphics, b : javax.swing.AbstractButton, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
 	
-	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
-	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }

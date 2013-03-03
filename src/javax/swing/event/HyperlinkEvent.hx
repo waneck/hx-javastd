@@ -35,7 +35,7 @@ extern class HyperlinkEvent extends java.util.EventObject
 	* @param type the event type
 	* @param u the affected URL
 	*/
-	@:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL) : Void;
+	@:overload @:public public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -49,7 +49,7 @@ extern class HyperlinkEvent extends java.util.EventObject
 	*   The description provides the text used when attempting to form the
 	*   URL.
 	*/
-	@:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL, desc : String) : Void;
+	@:overload @:public public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL, desc : String) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -66,7 +66,7 @@ extern class HyperlinkEvent extends java.util.EventObject
 	*   anchor
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL, desc : String, sourceElement : javax.swing.text.Element) : Void;
+	@:require(java4) @:overload @:public public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL, desc : String, sourceElement : javax.swing.text.Element) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -84,14 +84,14 @@ extern class HyperlinkEvent extends java.util.EventObject
 	* @param inputEvent  InputEvent that triggered the hyperlink event
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL, desc : String, sourceElement : javax.swing.text.Element, inputEvent : java.awt.event.InputEvent) : Void;
+	@:require(java7) @:overload @:public public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, u : java.net.URL, desc : String, sourceElement : javax.swing.text.Element, inputEvent : java.awt.event.InputEvent) : Void;
 	
 	/**
 	* Gets the type of event.
 	*
 	* @return the type
 	*/
-	@:overload public function getEventType() : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
+	@:overload @:public public function getEventType() : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
 	
 	/**
 	* Get the description of the link as a string.
@@ -99,14 +99,14 @@ extern class HyperlinkEvent extends java.util.EventObject
 	* from the description, in which case the associated
 	* URL would be null.
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Gets the URL that the link refers to.
 	*
 	* @return the URL
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	/**
 	* Returns the <code>Element</code> that corresponds to the source of the
@@ -118,7 +118,7 @@ extern class HyperlinkEvent extends java.util.EventObject
 	* @return Element indicating source of event, or null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getSourceElement() : javax.swing.text.Element;
+	@:require(java4) @:overload @:public public function getSourceElement() : javax.swing.text.Element;
 	
 	/**
 	* Returns the {@code InputEvent} that triggered the hyperlink event.
@@ -129,7 +129,7 @@ extern class HyperlinkEvent extends java.util.EventObject
 	* @return  InputEvent that triggered the hyperlink event, or null
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getInputEvent() : java.awt.event.InputEvent;
+	@:require(java7) @:overload @:public public function getInputEvent() : java.awt.event.InputEvent;
 	
 	
 }
@@ -142,24 +142,24 @@ extern class HyperlinkEvent extends java.util.EventObject
 	/**
 	* Entered type.
 	*/
-	public static var ENTERED(default, null) : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
+	@:public @:static @:final public static var ENTERED(default, null) : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
 	
 	/**
 	* Exited type.
 	*/
-	public static var EXITED(default, null) : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
+	@:public @:static @:final public static var EXITED(default, null) : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
 	
 	/**
 	* Activated type.
 	*/
-	public static var ACTIVATED(default, null) : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
+	@:public @:static @:final public static var ACTIVATED(default, null) : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType;
 	
 	/**
 	* Converts the type to a string.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

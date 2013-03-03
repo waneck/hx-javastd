@@ -28,7 +28,7 @@ extern class OldObjectKeyTemplateBase extends com.sun.corba.se.impl.ior.ObjectKe
 	/**
 	* @author Ken Cavanaugh
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : String, oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : String, oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
 	
 	
 }

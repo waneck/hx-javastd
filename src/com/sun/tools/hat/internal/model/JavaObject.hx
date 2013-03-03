@@ -36,38 +36,38 @@ extern class JavaObject extends com.sun.tools.hat.internal.model.JavaLazyReadObj
 	* @param classID id of the class object
 	* @param offset The offset of field data
 	*/
-	@:overload public function new(classID : haxe.Int64, offset : haxe.Int64) : Void;
+	@:overload @:public public function new(classID : haxe.Int64, offset : haxe.Int64) : Void;
 	
-	@:overload override public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public override public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
 	/**
 	* Are we the same type as other?  We are iff our clazz is the
 	* same type as other's.
 	*/
-	@:overload override public function isSameTypeAs(other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
+	@:overload @:public override public function isSameTypeAs(other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
 	
 	/**
 	* Return our JavaClass object.  This may only be called after resolve.
 	*/
-	@:overload override public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
+	@:overload @:public override public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
 	
-	@:overload public function getFields() : java.NativeArray<com.sun.tools.hat.internal.model.JavaThing>;
+	@:overload @:public public function getFields() : java.NativeArray<com.sun.tools.hat.internal.model.JavaThing>;
 	
-	@:overload public function getField(name : String) : com.sun.tools.hat.internal.model.JavaThing;
+	@:overload @:public public function getField(name : String) : com.sun.tools.hat.internal.model.JavaThing;
 	
-	@:overload override public function compareTo(other : com.sun.tools.hat.internal.model.JavaThing) : Int;
+	@:overload @:public override public function compareTo(other : com.sun.tools.hat.internal.model.JavaThing) : Int;
 	
-	@:overload override public function visitReferencedObjects(v : com.sun.tools.hat.internal.model.JavaHeapObjectVisitor) : Void;
+	@:overload @:public override public function visitReferencedObjects(v : com.sun.tools.hat.internal.model.JavaHeapObjectVisitor) : Void;
 	
-	@:overload override public function refersOnlyWeaklyTo(ss : com.sun.tools.hat.internal.model.Snapshot, other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
+	@:overload @:public override public function refersOnlyWeaklyTo(ss : com.sun.tools.hat.internal.model.Snapshot, other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
 	
 	/**
 	* Describe the reference that this thing has to target.  This will only
 	* be called if target is in the array returned by getChildrenForRootset.
 	*/
-	@:overload override public function describeReferenceTo(target : com.sun.tools.hat.internal.model.JavaThing, ss : com.sun.tools.hat.internal.model.Snapshot) : String;
+	@:overload @:public override public function describeReferenceTo(target : com.sun.tools.hat.internal.model.JavaThing, ss : com.sun.tools.hat.internal.model.Snapshot) : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/*
 	* Java instance record (HPROF_GC_INSTANCE_DUMP) looks as below:
@@ -78,9 +78,9 @@ extern class JavaObject extends com.sun.tools.hat.internal.model.JavaLazyReadObj
 	*     data length (int)
 	*     byte[length]
 	*/
-	@:overload @:final override private function readValueLength() : Int;
+	@:overload @:protected @:final override private function readValueLength() : Int;
 	
-	@:overload @:final override private function readValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:final override private function readValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

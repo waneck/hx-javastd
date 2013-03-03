@@ -36,38 +36,38 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI implements java.io.Serializable
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function createPopup() : javax.swing.plaf.basic.ComboPopup;
+	@:overload @:protected override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
 	
-	@:overload private function installComponents() : Void;
+	@:overload @:protected override private function installComponents() : Void;
 	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected override private function uninstallComponents() : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:overload @:public override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
-	@:overload private function rectangleForArrowIcon() : java.awt.Rectangle;
+	@:overload @:protected private function rectangleForArrowIcon() : java.awt.Rectangle;
 	
-	@:overload private function rectangleForCurrentValue() : java.awt.Rectangle;
+	@:overload @:protected override private function rectangleForCurrentValue() : java.awt.Rectangle;
 	
-	@:overload public function iconAreaWidth() : Int;
+	@:overload @:public public function iconAreaWidth() : Int;
 	
-	@:overload public function configureEditor() : Void;
+	@:overload @:public override public function configureEditor() : Void;
 	
-	@:overload private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayoutManager() : java.awt.LayoutManager;
 	
 	/**
 	*{@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:require(java6) @:overload @:protected override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	
 }
@@ -76,20 +76,20 @@ extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 */
 @:native('com$sun$java$swing$plaf$motif$MotifComboBoxUI$MotifComboPopup') extern class MotifComboBoxUI_MotifComboPopup extends javax.swing.plaf.basic.BasicComboPopup
 {
-	@:overload public function new(comboBox : javax.swing.JComboBox<Dynamic>) : Void;
+	@:overload @:public public function new(comboBox : javax.swing.JComboBox<Dynamic>) : Void;
 	
 	/**
 	* Motif combo popup should not track the mouse in the list.
 	*/
-	@:overload override public function createListMouseMotionListener() : java.awt.event.MouseMotionListener;
+	@:overload @:public override public function createListMouseMotionListener() : java.awt.event.MouseMotionListener;
 	
-	@:overload override public function createKeyListener() : java.awt.event.KeyListener;
+	@:overload @:public override public function createKeyListener() : java.awt.event.KeyListener;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifComboBoxUI$MotifComboPopup$InvocationKeyHandler') extern class MotifComboBoxUI_MotifComboPopup_InvocationKeyHandler extends javax.swing.plaf.basic.BasicComboPopup.BasicComboPopup_InvocationKeyHandler
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }
@@ -100,21 +100,21 @@ extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 */
 @:native('com$sun$java$swing$plaf$motif$MotifComboBoxUI$ComboBoxLayoutManager') extern class MotifComboBoxUI_ComboBoxLayoutManager extends javax.swing.plaf.basic.BasicComboBoxUI.BasicComboBoxUI_ComboBoxLayoutManager
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifComboBoxUI$MotifComboBoxArrowIcon') @:internal extern class MotifComboBoxUI_MotifComboBoxArrowIcon implements javax.swing.Icon implements java.io.Serializable
 {
-	@:overload public function new(lightShadow : java.awt.Color, darkShadow : java.awt.Color, fill : java.awt.Color) : Void;
+	@:overload @:public public function new(lightShadow : java.awt.Color, darkShadow : java.awt.Color, fill : java.awt.Color) : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, xo : Int, yo : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, xo : Int, yo : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
@@ -123,7 +123,7 @@ extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 */
 @:native('com$sun$java$swing$plaf$motif$MotifComboBoxUI$MotifPropertyChangeListener') @:internal extern class MotifComboBoxUI_MotifPropertyChangeListener extends javax.swing.plaf.basic.BasicComboBoxUI.BasicComboBoxUI_PropertyChangeHandler
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

@@ -25,38 +25,38 @@ package com.sun.jmx.remote.internal;
 */
 extern class ProxyRef implements java.rmi.server.RemoteRef
 {
-	@:overload public function new(ref : java.rmi.server.RemoteRef) : Void;
+	@:overload @:public public function new(ref : java.rmi.server.RemoteRef) : Void;
 	
-	@:overload public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public public function readExternal(_in : java.io.ObjectInput) : Void;
 	
-	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
-	
-	/**
-	* @deprecated
-	*/
-	@:overload public function invoke(call : java.rmi.server.RemoteCall) : Void;
-	
-	@:overload public function invoke(obj : java.rmi.Remote, method : java.lang.reflect.Method, params : java.NativeArray<Dynamic>, opnum : haxe.Int64) : Dynamic;
+	@:overload @:public public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* @deprecated
 	*/
-	@:overload public function done(call : java.rmi.server.RemoteCall) : Void;
+	@:overload @:public public function invoke(call : java.rmi.server.RemoteCall) : Void;
 	
-	@:overload public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public public function invoke(obj : java.rmi.Remote, method : java.lang.reflect.Method, params : java.NativeArray<Dynamic>, opnum : haxe.Int64) : Dynamic;
 	
 	/**
 	* @deprecated
 	*/
-	@:overload public function newCall(obj : java.rmi.server.RemoteObject, op : java.NativeArray<java.rmi.server.Operation>, opnum : Int, hash : haxe.Int64) : java.rmi.server.RemoteCall;
+	@:overload @:public public function done(call : java.rmi.server.RemoteCall) : Void;
 	
-	@:overload public function remoteEquals(obj : java.rmi.server.RemoteRef) : Bool;
+	@:overload @:public public function getRefClass(out : java.io.ObjectOutput) : String;
 	
-	@:overload public function remoteHashCode() : Int;
+	/**
+	* @deprecated
+	*/
+	@:overload @:public public function newCall(obj : java.rmi.server.RemoteObject, op : java.NativeArray<java.rmi.server.Operation>, opnum : Int, hash : haxe.Int64) : java.rmi.server.RemoteCall;
 	
-	@:overload public function remoteToString() : String;
+	@:overload @:public public function remoteEquals(obj : java.rmi.server.RemoteRef) : Bool;
 	
-	private var ref : java.rmi.server.RemoteRef;
+	@:overload @:public public function remoteHashCode() : Int;
+	
+	@:overload @:public public function remoteToString() : String;
+	
+	@:protected private var ref : java.rmi.server.RemoteRef;
 	
 	
 }

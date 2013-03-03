@@ -36,27 +36,27 @@ extern class Era
 	* specifies a local time; <code>false</code> if
 	* <code>since</code> specifies UTC
 	*/
-	@:overload public function new(name : String, abbr : String, since : haxe.Int64, localTime : Bool) : Void;
+	@:overload @:public public function new(name : String, abbr : String, since : haxe.Int64, localTime : Bool) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getDisplayName(locale : java.util.Locale) : String;
+	@:overload @:public public function getDisplayName(locale : java.util.Locale) : String;
 	
-	@:overload public function getAbbreviation() : String;
+	@:overload @:public public function getAbbreviation() : String;
 	
-	@:overload public function getDiaplayAbbreviation(locale : java.util.Locale) : String;
+	@:overload @:public public function getDiaplayAbbreviation(locale : java.util.Locale) : String;
 	
-	@:overload public function getSince(zone : java.util.TimeZone) : haxe.Int64;
+	@:overload @:public public function getSince(zone : java.util.TimeZone) : haxe.Int64;
 	
-	@:overload public function getSinceDate() : sun.util.calendar.CalendarDate;
+	@:overload @:public public function getSinceDate() : sun.util.calendar.CalendarDate;
 	
-	@:overload public function isLocalTime() : Bool;
+	@:overload @:public public function isLocalTime() : Bool;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

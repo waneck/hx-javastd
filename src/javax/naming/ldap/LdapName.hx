@@ -35,7 +35,7 @@ extern class LdapName implements javax.naming.Name
 	* @throws InvalidNameException if a syntax violation is detected.
 	* @see Rdn#escapeValue(Object value)
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs an LDAP name given its parsed RDN components.
@@ -45,20 +45,20 @@ extern class LdapName implements javax.naming.Name
 	*
 	* @param rdns The non-null list of <tt>Rdn</tt>s forming this LDAP name.
 	*/
-	@:overload public function new(rdns : java.util.List<javax.naming.ldap.Rdn>) : Void;
+	@:overload @:public public function new(rdns : java.util.List<javax.naming.ldap.Rdn>) : Void;
 	
 	/**
 	* Retrieves the number of components in this LDAP name.
 	* @return The non-negative number of components in this LDAP name.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Determines whether this LDAP name is empty.
 	* An empty name is one with zero components.
 	* @return true if this LDAP name is empty, false otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Retrieves the components of this name as an enumeration
@@ -72,7 +72,7 @@ extern class LdapName implements javax.naming.Name
 	* @return A non-null enumeration of the components of this LDAP name.
 	* Each element of the enumeration is of class String.
 	*/
-	@:overload public function getAll() : java.util.Enumeration<String>;
+	@:overload @:public public function getAll() : java.util.Enumeration<String>;
 	
 	/**
 	* Retrieves a component of this LDAP name as a string.
@@ -82,7 +82,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception IndexOutOfBoundsException if posn is outside the
 	*          specified range.
 	*/
-	@:overload public function get(posn : Int) : String;
+	@:overload @:public public function get(posn : Int) : String;
 	
 	/**
 	* Retrieves an RDN of this LDAP name as an Rdn.
@@ -92,7 +92,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception IndexOutOfBoundsException if posn is outside the
 	*            specified range.
 	*/
-	@:overload public function getRdn(posn : Int) : javax.naming.ldap.Rdn;
+	@:overload @:public public function getRdn(posn : Int) : javax.naming.ldap.Rdn;
 	
 	/**
 	* Creates a name whose components consist of a prefix of the
@@ -107,7 +107,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception   IndexOutOfBoundsException
 	*              If posn is outside the specified range.
 	*/
-	@:overload public function getPrefix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getPrefix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Creates a name whose components consist of a suffix of the
@@ -124,7 +124,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception IndexOutOfBoundsException
 	*          If posn is outside the specified range.
 	*/
-	@:overload public function getSuffix(posn : Int) : javax.naming.Name;
+	@:overload @:public public function getSuffix(posn : Int) : javax.naming.Name;
 	
 	/**
 	* Determines whether this LDAP name starts with a specified LDAP name
@@ -139,7 +139,7 @@ extern class LdapName implements javax.naming.Name
 	* false otherwise.
 	* @see #getPrefix(int posn)
 	*/
-	@:overload public function startsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function startsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Determines whether the specified RDN sequence forms a prefix of this
@@ -152,7 +152,7 @@ extern class LdapName implements javax.naming.Name
 	* @return  true if <tt>rdns</tt> form a prefix of this LDAP name,
 	*          false otherwise.
 	*/
-	@:overload public function startsWith(rdns : java.util.List<javax.naming.ldap.Rdn>) : Bool;
+	@:overload @:public public function startsWith(rdns : java.util.List<javax.naming.ldap.Rdn>) : Bool;
 	
 	/**
 	* Determines whether this LDAP name ends with a specified
@@ -166,7 +166,7 @@ extern class LdapName implements javax.naming.Name
 	* @return true if <tt>n</tt> is a suffix of this name, false otherwise.
 	* @see #getSuffix(int posn)
 	*/
-	@:overload public function endsWith(n : javax.naming.Name) : Bool;
+	@:overload @:public public function endsWith(n : javax.naming.Name) : Bool;
 	
 	/**
 	* Determines whether the specified RDN sequence forms a suffix of this
@@ -179,7 +179,7 @@ extern class LdapName implements javax.naming.Name
 	* @return  true if <tt>rdns</tt> form a suffix of this LDAP name,
 	*          false otherwise.
 	*/
-	@:overload public function endsWith(rdns : java.util.List<javax.naming.ldap.Rdn>) : Bool;
+	@:overload @:public public function endsWith(rdns : java.util.List<javax.naming.ldap.Rdn>) : Bool;
 	
 	/**
 	* Adds the components of a name -- in order -- to the end of this name.
@@ -191,7 +191,7 @@ extern class LdapName implements javax.naming.Name
 	*          name, or if the addition of the components would violate the
 	*          syntax rules of this LDAP name.
 	*/
-	@:overload public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(suffix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds the RDNs of a name -- in order -- to the end of this name.
@@ -199,7 +199,7 @@ extern class LdapName implements javax.naming.Name
 	* @param   suffixRdns The non-null suffix <tt>Rdn</tt>s to add.
 	* @return  The updated name (not a new instance).
 	*/
-	@:overload public function addAll(suffixRdns : java.util.List<javax.naming.ldap.Rdn>) : javax.naming.Name;
+	@:overload @:public public function addAll(suffixRdns : java.util.List<javax.naming.ldap.Rdn>) : javax.naming.Name;
 	
 	/**
 	* Adds the components of a name -- in order -- at a specified position
@@ -219,7 +219,7 @@ extern class LdapName implements javax.naming.Name
 	* @throws  IndexOutOfBoundsException.
 	*          If posn is outside the specified range.
 	*/
-	@:overload public function addAll(posn : Int, suffix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function addAll(posn : Int, suffix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Adds the RDNs of a name -- in order -- at a specified position
@@ -235,7 +235,7 @@ extern class LdapName implements javax.naming.Name
 	* @throws  IndexOutOfBoundsException.
 	*          If posn is outside the specified range.
 	*/
-	@:overload public function addAll(posn : Int, suffixRdns : java.util.List<javax.naming.ldap.Rdn>) : javax.naming.Name;
+	@:overload @:public public function addAll(posn : Int, suffixRdns : java.util.List<javax.naming.ldap.Rdn>) : javax.naming.Name;
 	
 	/**
 	* Adds a single component to the end of this LDAP name.
@@ -246,7 +246,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception       InvalidNameException If adding comp at end of the name
 	*                  would violate the name's syntax.
 	*/
-	@:overload public function add(comp : String) : javax.naming.Name;
+	@:overload @:public public function add(comp : String) : javax.naming.Name;
 	
 	/**
 	* Adds a single RDN to the end of this LDAP name.
@@ -256,7 +256,7 @@ extern class LdapName implements javax.naming.Name
 	* @return          The updated LdapName, not a new instance.
 	*                  Cannot be null.
 	*/
-	@:overload public function add(comp : javax.naming.ldap.Rdn) : javax.naming.Name;
+	@:overload @:public public function add(comp : javax.naming.ldap.Rdn) : javax.naming.Name;
 	
 	/**
 	* Adds a single component at a specified position within this
@@ -275,7 +275,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception       InvalidNameException If adding comp at the
 	*                  specified position would violate the name's syntax.
 	*/
-	@:overload public function add(posn : Int, comp : String) : javax.naming.Name;
+	@:overload @:public public function add(posn : Int, comp : String) : javax.naming.Name;
 	
 	/**
 	* Adds a single RDN at a specified position within this
@@ -292,7 +292,7 @@ extern class LdapName implements javax.naming.Name
 	* @exception       IndexOutOfBoundsException
 	*                  If posn is outside the specified range.
 	*/
-	@:overload public function add(posn : Int, comp : javax.naming.ldap.Rdn) : javax.naming.Name;
+	@:overload @:public public function add(posn : Int, comp : javax.naming.ldap.Rdn) : javax.naming.Name;
 	
 	/**
 	* Removes a component from this LDAP name.
@@ -309,7 +309,7 @@ extern class LdapName implements javax.naming.Name
 	* @throws          InvalidNameException if deleting the component
 	*                  would violate the syntax rules of the name.
 	*/
-	@:overload public function remove(posn : Int) : Dynamic;
+	@:overload @:public public function remove(posn : Int) : Dynamic;
 	
 	/**
 	* Retrieves the list of relative distinguished names.
@@ -321,7 +321,7 @@ extern class LdapName implements javax.naming.Name
 	* @return  The name as a list of RDNs which are instances of
 	*          the class {@link Rdn Rdn}.
 	*/
-	@:overload public function getRdns() : java.util.List<javax.naming.ldap.Rdn>;
+	@:overload @:public public function getRdns() : java.util.List<javax.naming.ldap.Rdn>;
 	
 	/**
 	* Generates a new copy of this name.
@@ -330,7 +330,7 @@ extern class LdapName implements javax.naming.Name
 	*
 	* @return A copy of the this LDAP name.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a string representation of this LDAP name in a format
@@ -340,7 +340,7 @@ extern class LdapName implements javax.naming.Name
 	*
 	* @return The string representation of the LdapName.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Determines whether two LDAP names are equal.
@@ -358,7 +358,7 @@ extern class LdapName implements javax.naming.Name
 	*                  false otherwise.
 	* @see #hashCode
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares this LdapName with the specified Object for order.
@@ -385,7 +385,7 @@ extern class LdapName implements javax.naming.Name
 	*          is less than, equal to, or greater than the given obj.
 	* @exception ClassCastException if obj is null or not a LdapName.
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Computes the hash code of this LDAP name.
@@ -395,7 +395,7 @@ extern class LdapName implements javax.naming.Name
 	* @return An int representing the hash code of this name.
 	* @see #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

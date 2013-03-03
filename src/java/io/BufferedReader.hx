@@ -67,7 +67,7 @@ package java.io;
 	*
 	* @exception  IllegalArgumentException  If sz is <= 0
 	*/
-	@:overload public function new(_in : java.io.Reader, sz : Int) : Void;
+	@:overload @:public public function new(_in : java.io.Reader, sz : Int) : Void;
 	
 	/**
 	* Creates a buffering character-input stream that uses a default-sized
@@ -75,7 +75,7 @@ package java.io;
 	*
 	* @param  in   A Reader
 	*/
-	@:overload public function new(_in : java.io.Reader) : Void;
+	@:overload @:public public function new(_in : java.io.Reader) : Void;
 	
 	/**
 	* Reads a single character.
@@ -85,7 +85,7 @@ package java.io;
 	*         end of the stream has been reached
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads characters into a portion of an array.
@@ -132,7 +132,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Reads a line of text.  A line is considered to be terminated by any one
@@ -147,7 +147,7 @@ package java.io;
 	*
 	* @see java.nio.file.Files#readAllLines
 	*/
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
 	/**
 	* Skips characters.
@@ -159,7 +159,7 @@ package java.io;
 	* @exception  IllegalArgumentException  If <code>n</code> is negative.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tells whether this stream is ready to be read.  A buffered character
@@ -168,12 +168,12 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Tells whether this stream supports the mark() operation, which it does.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Marks the present position in the stream.  Subsequent calls to reset()
@@ -191,7 +191,7 @@ package java.io;
 	* @exception  IllegalArgumentException  If readAheadLimit is < 0
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the stream to the most recent mark.
@@ -199,9 +199,9 @@ package java.io;
 	* @exception  IOException  If the stream has never been marked,
 	*                          or if the mark has been invalidated
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

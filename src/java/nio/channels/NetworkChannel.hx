@@ -73,7 +73,7 @@ extern interface NetworkChannel extends java.nio.channels.Channel
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Sets the value of a socket option.
@@ -117,7 +117,7 @@ extern interface NetworkChannel extends java.nio.channels.Channel
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -127,7 +127,7 @@ extern interface NetworkChannel extends java.nio.channels.Channel
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	
 }

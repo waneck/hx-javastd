@@ -50,7 +50,7 @@ package java.security;
 	*
 	* @return boolean true if the permission is granted to the domain.
 	*/
-	@:overload @:abstract private function engineImplies(domain : java.security.ProtectionDomain, permission : java.security.Permission) : Bool;
+	@:overload @:protected @:abstract private function engineImplies(domain : java.security.ProtectionDomain, permission : java.security.Permission) : Bool;
 	
 	/**
 	* Refreshes/reloads the policy configuration. The behavior of this method
@@ -61,7 +61,7 @@ package java.security;
 	* This method should be overridden if a refresh operation is supported
 	* by the policy implementation.
 	*/
-	@:overload private function engineRefresh() : Void;
+	@:overload @:protected private function engineRefresh() : Void;
 	
 	/**
 	* Return a PermissionCollection object containing the set of
@@ -82,7 +82,7 @@ package java.security;
 	*          If this operation is not supported,
 	*          Policy.UNSUPPORTED_EMPTY_COLLECTION is returned.
 	*/
-	@:overload private function engineGetPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected private function engineGetPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	/**
 	* Return a PermissionCollection object containing the set of
@@ -103,7 +103,7 @@ package java.security;
 	*          If this operation is not supported,
 	*          Policy.UNSUPPORTED_EMPTY_COLLECTION is returned.
 	*/
-	@:overload private function engineGetPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
+	@:overload @:protected private function engineGetPermissions(domain : java.security.ProtectionDomain) : java.security.PermissionCollection;
 	
 	
 }

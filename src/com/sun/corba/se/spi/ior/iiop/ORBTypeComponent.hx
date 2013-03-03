@@ -28,7 +28,7 @@ extern interface ORBTypeComponent extends com.sun.corba.se.spi.ior.TaggedCompone
 	/**
 	* @author Ken Cavanaugh
 	*/
-	@:overload public function getORBType() : Int;
+	@:overload @:public public function getORBType() : Int;
 	
 	
 }

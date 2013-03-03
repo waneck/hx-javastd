@@ -64,7 +64,7 @@ package java.rmi.server;
 	* @exception IOException if an I/O error occurs during socket creation
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:require(java2) @:overload @:public public function createSocket(host : String, port : Int) : java.net.Socket;
 	
 	
 }

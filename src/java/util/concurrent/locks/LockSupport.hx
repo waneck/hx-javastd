@@ -45,7 +45,7 @@ extern class LockSupport
 	* @param thread the thread to unpark, or {@code null}, in which case
 	*        this operation has no effect
 	*/
-	@:overload public static function unpark(thread : java.lang.Thread) : Void;
+	@:overload @:public @:static public static function unpark(thread : java.lang.Thread) : Void;
 	
 	/**
 	* Disables the current thread for thread scheduling purposes unless the
@@ -75,7 +75,7 @@ extern class LockSupport
 	*        thread parking
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function park(blocker : Dynamic) : Void;
+	@:require(java6) @:overload @:public @:static public static function park(blocker : Dynamic) : Void;
 	
 	/**
 	* Disables the current thread for thread scheduling purposes, for up to
@@ -109,7 +109,7 @@ extern class LockSupport
 	* @param nanos the maximum number of nanoseconds to wait
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function parkNanos(blocker : Dynamic, nanos : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public @:static public static function parkNanos(blocker : Dynamic, nanos : haxe.Int64) : Void;
 	
 	/**
 	* Disables the current thread for thread scheduling purposes, until
@@ -144,7 +144,7 @@ extern class LockSupport
 	*        to wait until
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function parkUntil(blocker : Dynamic, deadline : haxe.Int64) : Void;
+	@:require(java6) @:overload @:public @:static public static function parkUntil(blocker : Dynamic, deadline : haxe.Int64) : Void;
 	
 	/**
 	* Returns the blocker object supplied to the most recent
@@ -158,7 +158,7 @@ extern class LockSupport
 	* @throws NullPointerException if argument is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getBlocker(t : java.lang.Thread) : Dynamic;
+	@:require(java6) @:overload @:public @:static public static function getBlocker(t : java.lang.Thread) : Dynamic;
 	
 	/**
 	* Disables the current thread for thread scheduling purposes unless the
@@ -185,7 +185,7 @@ extern class LockSupport
 	* the thread to park in the first place. Callers may also determine,
 	* for example, the interrupt status of the thread upon return.
 	*/
-	@:overload public static function park() : Void;
+	@:overload @:public @:static public static function park() : Void;
 	
 	/**
 	* Disables the current thread for thread scheduling purposes, for up to
@@ -216,7 +216,7 @@ extern class LockSupport
 	*
 	* @param nanos the maximum number of nanoseconds to wait
 	*/
-	@:overload public static function parkNanos(nanos : haxe.Int64) : Void;
+	@:overload @:public @:static public static function parkNanos(nanos : haxe.Int64) : Void;
 	
 	/**
 	* Disables the current thread for thread scheduling purposes, until
@@ -248,7 +248,7 @@ extern class LockSupport
 	* @param deadline the absolute time, in milliseconds from the Epoch,
 	*        to wait until
 	*/
-	@:overload public static function parkUntil(deadline : haxe.Int64) : Void;
+	@:overload @:public @:static public static function parkUntil(deadline : haxe.Int64) : Void;
 	
 	
 }

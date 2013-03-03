@@ -50,13 +50,13 @@ extern class FastInfosetSource extends javax.xml.transform.sax.SAXSource
 	*   </UL>
 	*  </P>
 	*/
-	@:overload public function new(inputStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream) : Void;
 	
-	@:overload override public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public override public function getXMLReader() : org.xml.sax.XMLReader;
 	
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function setInputStream(inputStream : java.io.InputStream) : Void;
+	@:overload @:public public function setInputStream(inputStream : java.io.InputStream) : Void;
 	
 	
 }

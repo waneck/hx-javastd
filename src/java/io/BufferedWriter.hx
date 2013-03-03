@@ -67,7 +67,7 @@ package java.io;
 	*
 	* @param  out  A Writer
 	*/
-	@:overload public function new(out : java.io.Writer) : Void;
+	@:overload @:public public function new(out : java.io.Writer) : Void;
 	
 	/**
 	* Creates a new buffered character-output stream that uses an output
@@ -78,14 +78,14 @@ package java.io;
 	*
 	* @exception  IllegalArgumentException  If sz is <= 0
 	*/
-	@:overload public function new(out : java.io.Writer, sz : Int) : Void;
+	@:overload @:public public function new(out : java.io.Writer, sz : Int) : Void;
 	
 	/**
 	* Writes a single character.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Writes a portion of an array of characters.
@@ -103,7 +103,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes a portion of a String.
@@ -120,7 +120,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(s : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(s : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes a line separator.  The line separator string is defined by the
@@ -129,16 +129,16 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function newLine() : Void;
+	@:overload @:public public function newLine() : Void;
 	
 	/**
 	* Flushes the stream.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

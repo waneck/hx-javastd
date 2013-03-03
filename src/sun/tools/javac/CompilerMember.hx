@@ -25,7 +25,7 @@ package sun.tools.javac;
 */
 @:internal extern class CompilerMember implements java.lang.Comparable<Dynamic>
 {
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

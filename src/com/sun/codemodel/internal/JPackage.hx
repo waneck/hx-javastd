@@ -25,18 +25,18 @@ package com.sun.codemodel.internal;
 */
 extern class JPackage implements com.sun.codemodel.internal.JDeclaration implements com.sun.codemodel.internal.JGenerable implements com.sun.codemodel.internal.JClassContainer implements com.sun.codemodel.internal.JAnnotatable implements java.lang.Comparable<com.sun.codemodel.internal.JPackage> implements com.sun.codemodel.internal.JDocCommentable
 {
-	@:overload public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
+	@:overload @:public public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
 	
 	/**
 	* Gets the parent package, or null if this class is the root package.
 	*/
-	@:overload public function parent() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function parent() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload public function isClass() : Bool;
+	@:overload @:public public function isClass() : Bool;
 	
-	@:overload public function isPackage() : Bool;
+	@:overload @:public public function isPackage() : Bool;
 	
-	@:overload public function getPackage() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getPackage() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Add a class to this package.
@@ -52,20 +52,20 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	* @exception JClassAlreadyExistsException
 	*      When the specified class/interface was already created.
 	*/
-	@:overload public function _class(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* {@inheritDoc}
 	* @deprecated
 	*/
-	@:overload public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _class(mods : Int, name : String, classTypeVal : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(mods : Int, name : String, classTypeVal : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Adds a public class to this package.
 	*/
-	@:overload public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Gets a reference to the already created {@link JDefinedClass}.
@@ -73,12 +73,12 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	* @return null
 	*      If the class is not yet created.
 	*/
-	@:overload public function _getClass(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _getClass(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Order is based on the lexicological order of the package name.
 	*/
-	@:overload public function compareTo(that : com.sun.codemodel.internal.JPackage) : Int;
+	@:overload @:public public function compareTo(that : com.sun.codemodel.internal.JPackage) : Int;
 	
 	/**
 	* Add an interface to this package.
@@ -91,12 +91,12 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	*
 	* @return Newly generated interface
 	*/
-	@:overload public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Adds a public interface to this package.
 	*/
-	@:overload public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add an annotationType Declaration to this package
@@ -108,7 +108,7 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a public enum to this package
@@ -120,22 +120,22 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Adds a new resource file to this package.
 	*/
-	@:overload public function addResourceFile(rsrc : com.sun.codemodel.internal.JResourceFile) : com.sun.codemodel.internal.JResourceFile;
+	@:overload @:public public function addResourceFile(rsrc : com.sun.codemodel.internal.JResourceFile) : com.sun.codemodel.internal.JResourceFile;
 	
 	/**
 	* Checks if a resource of the given name exists.
 	*/
-	@:overload public function hasResourceFile(name : String) : Bool;
+	@:overload @:public public function hasResourceFile(name : String) : Bool;
 	
 	/**
 	* Iterates all resource files in this package.
 	*/
-	@:overload public function propertyFiles() : java.util.Iterator<com.sun.codemodel.internal.JResourceFile>;
+	@:overload @:public public function propertyFiles() : java.util.Iterator<com.sun.codemodel.internal.JResourceFile>;
 	
 	/**
 	* Creates, if necessary, and returns the package javadoc for this
@@ -143,38 +143,38 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	*
 	* @return JDocComment containing javadocs for this class
 	*/
-	@:overload public function javadoc() : com.sun.codemodel.internal.JDocComment;
+	@:overload @:public public function javadoc() : com.sun.codemodel.internal.JDocComment;
 	
 	/**
 	* Removes a class from this package.
 	*/
-	@:overload public function remove(c : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:public public function remove(c : com.sun.codemodel.internal.JClass) : Void;
 	
 	/**
 	* Reference a class within this package.
 	*/
-	@:overload public function ref(name : String) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function ref(name : String) : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Gets a reference to a sub package of this package.
 	*/
-	@:overload public function subPackage(pkg : String) : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function subPackage(pkg : String) : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Returns an iterator that walks the top-level classes defined in this
 	* package.
 	*/
-	@:overload public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
+	@:overload @:public public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
 	
 	/**
 	* Checks if a given name is already defined as a class/interface
 	*/
-	@:overload public function isDefined(classLocalName : String) : Bool;
+	@:overload @:public public function isDefined(classLocalName : String) : Bool;
 	
 	/**
 	* Checks if this package is the root, unnamed package.
 	*/
-	@:overload @:final public function isUnnamed() : Bool;
+	@:overload @:public @:final public function isUnnamed() : Bool;
 	
 	/**
 	* Get the name of this package
@@ -184,24 +184,24 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	*          null package. For example, this method returns strings like
 	*          <code>"java.lang"</code>
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Return the code model root object being used to create this package.
 	*/
-	@:overload @:final public function owner() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public @:final public function owner() : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
+	@:overload @:public public function annotate(clazz : Class<java.lang.annotation.Annotation>) : com.sun.codemodel.internal.JAnnotationUse;
 	
-	@:overload public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
+	@:overload @:public public function annotate2<W : com.sun.codemodel.internal.JAnnotationWriter<Dynamic>>(clazz : Class<W>) : W;
 	
-	@:overload public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
+	@:overload @:public public function annotations() : java.util.Collection<com.sun.codemodel.internal.JAnnotationUse>;
 	
-	@:overload public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function declare(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

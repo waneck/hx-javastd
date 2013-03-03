@@ -67,11 +67,11 @@ package com.sun.jdi;
 */
 @:require(java3) extern class ClassNotLoadedException extends java.lang.Exception
 {
-	@:overload public function new(className : String) : Void;
+	@:overload @:public public function new(className : String) : Void;
 	
-	@:overload public function new(className : String, message : String) : Void;
+	@:overload @:public public function new(className : String, message : String) : Void;
 	
-	@:overload public function className() : String;
+	@:overload @:public public function className() : String;
 	
 	
 }

@@ -46,9 +46,9 @@ extern class TextMeasurer implements java.lang.Cloneable
 	* @param frc the information about a graphics device which is needed
 	*       to measure the text correctly.  Cannot be null.
 	*/
-	@:overload public function new(text : java.text.AttributedCharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(text : java.text.AttributedCharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	/**
 	* Returns the index of the first character which will not fit on
@@ -65,7 +65,7 @@ extern class TextMeasurer implements java.lang.Cloneable
 	* @throws IllegalArgumentException if <code>start</code> is
 	*          less than the beginning of the paragraph.
 	*/
-	@:overload public function getLineBreakIndex(start : Int, maxAdvance : Single) : Int;
+	@:overload @:public public function getLineBreakIndex(start : Int, maxAdvance : Single) : Int;
 	
 	/**
 	* Returns the graphical width of a line beginning at <code>start</code>
@@ -83,7 +83,7 @@ extern class TextMeasurer implements java.lang.Cloneable
 	*          <code>limit</code> is not between the beginning of
 	*          the paragraph and the end of the paragraph.
 	*/
-	@:overload public function getAdvanceBetween(start : Int, limit : Int) : Single;
+	@:overload @:public public function getAdvanceBetween(start : Int, limit : Int) : Single;
 	
 	/**
 	* Returns a <code>TextLayout</code> on the given character range.
@@ -99,7 +99,7 @@ extern class TextMeasurer implements java.lang.Cloneable
 	*          <code>limit</code> is not between the beginning of
 	*          the paragraph and the end of the paragraph.
 	*/
-	@:overload public function getLayout(start : Int, limit : Int) : java.awt.font.TextLayout;
+	@:overload @:public public function getLayout(start : Int, limit : Int) : java.awt.font.TextLayout;
 	
 	/**
 	* Updates the <code>TextMeasurer</code> after a single character has
@@ -123,7 +123,7 @@ extern class TextMeasurer implements java.lang.Cloneable
 	* @throws NullPointerException if <code>newParagraph</code> is
 	*         <code>null</code>
 	*/
-	@:overload public function insertChar(newParagraph : java.text.AttributedCharacterIterator, insertPos : Int) : Void;
+	@:overload @:public public function insertChar(newParagraph : java.text.AttributedCharacterIterator, insertPos : Int) : Void;
 	
 	/**
 	* Updates the <code>TextMeasurer</code> after a single character has
@@ -147,7 +147,7 @@ extern class TextMeasurer implements java.lang.Cloneable
 	* @throws NullPointerException if <code>newParagraph</code> is
 	*         <code>null</code>
 	*/
-	@:overload public function deleteChar(newParagraph : java.text.AttributedCharacterIterator, deletePos : Int) : Void;
+	@:overload @:public public function deleteChar(newParagraph : java.text.AttributedCharacterIterator, deletePos : Int) : Void;
 	
 	
 }

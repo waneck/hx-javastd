@@ -36,65 +36,65 @@ extern class ByteBuffer
 {
 	/** An array holding the bytes in this buffer; can be grown.
 	*/
-	public var elems : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var elems : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** The current number of defined bytes in this buffer.
 	*/
-	public var length : Int;
+	@:public public var length : Int;
 	
 	/** Create a new byte buffer.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Create a new byte buffer with an initial elements array
 	*  of given size.
 	*/
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
 	/** Append byte to this buffer.
 	*/
-	@:overload public function appendByte(b : Int) : Void;
+	@:overload @:public public function appendByte(b : Int) : Void;
 	
 	/** Append `len' bytes from byte array,
 	*  starting at given `start' offset.
 	*/
-	@:overload public function appendBytes(bs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Void;
+	@:overload @:public public function appendBytes(bs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Void;
 	
 	/** Append all bytes from given byte array.
 	*/
-	@:overload public function appendBytes(bs : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function appendBytes(bs : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** Append a character as a two byte number.
 	*/
-	@:overload public function appendChar(x : Int) : Void;
+	@:overload @:public public function appendChar(x : Int) : Void;
 	
 	/** Append an integer as a four byte number.
 	*/
-	@:overload public function appendInt(x : Int) : Void;
+	@:overload @:public public function appendInt(x : Int) : Void;
 	
 	/** Append a long as an eight byte number.
 	*/
-	@:overload public function appendLong(x : haxe.Int64) : Void;
+	@:overload @:public public function appendLong(x : haxe.Int64) : Void;
 	
 	/** Append a float as a four byte number.
 	*/
-	@:overload public function appendFloat(x : Single) : Void;
+	@:overload @:public public function appendFloat(x : Single) : Void;
 	
 	/** Append a double as a eight byte number.
 	*/
-	@:overload public function appendDouble(x : Float) : Void;
+	@:overload @:public public function appendDouble(x : Float) : Void;
 	
 	/** Append a name.
 	*/
-	@:overload public function appendName(name : com.sun.tools.javac.util.Name) : Void;
+	@:overload @:public public function appendName(name : com.sun.tools.javac.util.Name) : Void;
 	
 	/** Reset to zero length.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/** Convert contents to name.
 	*/
-	@:overload public function toName(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.Name;
+	@:overload @:public public function toName(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.Name;
 	
 	
 }

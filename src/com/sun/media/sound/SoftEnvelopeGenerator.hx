@@ -30,31 +30,31 @@ package com.sun.media.sound;
 */
 extern class SoftEnvelopeGenerator implements com.sun.media.sound.SoftProcess
 {
-	public static var EG_OFF(default, null) : Int;
+	@:public @:final @:static public static var EG_OFF(default, null) : Int;
 	
-	public static var EG_DELAY(default, null) : Int;
+	@:public @:final @:static public static var EG_DELAY(default, null) : Int;
 	
-	public static var EG_ATTACK(default, null) : Int;
+	@:public @:final @:static public static var EG_ATTACK(default, null) : Int;
 	
-	public static var EG_HOLD(default, null) : Int;
+	@:public @:final @:static public static var EG_HOLD(default, null) : Int;
 	
-	public static var EG_DECAY(default, null) : Int;
+	@:public @:final @:static public static var EG_DECAY(default, null) : Int;
 	
-	public static var EG_SUSTAIN(default, null) : Int;
+	@:public @:final @:static public static var EG_SUSTAIN(default, null) : Int;
 	
-	public static var EG_RELEASE(default, null) : Int;
+	@:public @:final @:static public static var EG_RELEASE(default, null) : Int;
 	
-	public static var EG_SHUTDOWN(default, null) : Int;
+	@:public @:final @:static public static var EG_SHUTDOWN(default, null) : Int;
 	
-	public static var EG_END(default, null) : Int;
+	@:public @:final @:static public static var EG_END(default, null) : Int;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function init(synth : com.sun.media.sound.SoftSynthesizer) : Void;
+	@:overload @:public public function init(synth : com.sun.media.sound.SoftSynthesizer) : Void;
 	
-	@:overload public function get(instance : Int, name : String) : java.NativeArray<Float>;
+	@:overload @:public public function get(instance : Int, name : String) : java.NativeArray<Float>;
 	
-	@:overload public function processControlLogic() : Void;
+	@:overload @:public public function processControlLogic() : Void;
 	
 	
 }

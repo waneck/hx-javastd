@@ -32,7 +32,7 @@ extern interface HasControls
 	* @return A possibly null array of <tt>Control</tt> objects.
 	* @throws NamingException If cannot return controls due to an error.
 	*/
-	@:overload public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.naming.ldap.Control>;
 	
 	
 }

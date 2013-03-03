@@ -25,26 +25,26 @@ package sun.awt.X11;
 */
 @:internal extern class XScrollbarPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.ScrollbarPeer implements sun.awt.X11.XScrollbarClient
 {
-	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	/**
 	* Compute the minimum size for the scrollbar.
 	*/
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function repaint() : Void;
+	@:overload @:public override public function repaint() : Void;
 	
 	/**
 	* Paint the scrollbar.
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function repaintScrollbarRequest(sb : sun.awt.X11.XScrollbar) : Void;
+	@:overload @:public public function repaintScrollbarRequest(sb : sun.awt.X11.XScrollbar) : Void;
 	
 	/**
 	* The value has changed.
 	*/
-	@:overload public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, value : Int, isAdjusting : Bool) : Void;
+	@:overload @:public public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, value : Int, isAdjusting : Bool) : Void;
 	
 	/**
 	*
@@ -57,19 +57,19 @@ package sun.awt.X11;
 	* MouseEvent.MOUSE_EXITED
 	* MouseEvent.MOUSE_DRAGGED
 	*/
-	@:overload public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function handleJavaKeyEvent(event : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function handleJavaKeyEvent(event : java.awt.event.KeyEvent) : Void;
 	
-	@:overload public function setValue(value : Int) : Void;
+	@:overload @:public public function setValue(value : Int) : Void;
 	
-	@:overload public function setValues(value : Int, visible : Int, minimum : Int, maximum : Int) : Void;
+	@:overload @:public public function setValues(value : Int, visible : Int, minimum : Int, maximum : Int) : Void;
 	
-	@:overload public function setLineIncrement(l : Int) : Void;
+	@:overload @:public public function setLineIncrement(l : Int) : Void;
 	
-	@:overload public function setPageIncrement(p : Int) : Void;
+	@:overload @:public public function setPageIncrement(p : Int) : Void;
 	
-	@:overload public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
 	
 }

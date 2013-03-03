@@ -26,9 +26,9 @@ package sun.awt;
 extern class UNIXToolkit extends sun.awt.SunToolkit
 {
 	/** All calls into GTK should be synchronized on this lock */
-	public static var GTK_LOCK(default, null) : Dynamic;
+	@:public @:static @:final public static var GTK_LOCK(default, null) : Dynamic;
 	
-	@:overload public static function getDatatransferTimeout() : Int;
+	@:overload @:public @:static public static function getDatatransferTimeout() : Int;
 	
 	/**
 	* Returns true if the native GTK libraries are capable of being
@@ -39,7 +39,7 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* leaving the native libraries loaded.  To attempt long-term loading
 	* of the native GTK libraries, use the loadGTK() method instead.
 	*/
-	@:overload override public function isNativeGTKAvailable() : Bool;
+	@:overload @:public override public function isNativeGTKAvailable() : Bool;
 	
 	/**
 	* Loads the GTK libraries, if necessary.  The first time this method
@@ -49,12 +49,12 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* this method, the status of the first attempt is returned (a simple
 	* lightweight boolean check, no native calls required).
 	*/
-	@:overload public function loadGTK() : Bool;
+	@:overload @:public public function loadGTK() : Bool;
 	
 	/**
 	* Overridden to handle GTK icon loading
 	*/
-	@:overload override private function lazilyLoadDesktopProperty(name : String) : Dynamic;
+	@:overload @:protected override private function lazilyLoadDesktopProperty(name : String) : Dynamic;
 	
 	/**
 	* Load a native Gtk stock icon.
@@ -64,7 +64,7 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* @return an <code>Image</code> for the icon, or <code>null</code> if the
 	*         icon could not be loaded
 	*/
-	@:overload private function lazilyLoadGTKIcon(longname : String) : Dynamic;
+	@:overload @:protected private function lazilyLoadGTKIcon(longname : String) : Dynamic;
 	
 	/**
 	* Returns a BufferedImage which contains the Gtk icon requested.  If no
@@ -74,7 +74,7 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* @param filename
 	* @return The icon or null if it was not found or loaded.
 	*/
-	@:overload public function getGTKIcon(filename : String) : java.awt.image.BufferedImage;
+	@:overload @:public public function getGTKIcon(filename : String) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a BufferedImage which contains the Gtk stock icon requested.
@@ -91,7 +91,7 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* free to pass null)
 	* @return The stock icon or null if it was not found or loaded.
 	*/
-	@:overload public function getStockIcon(widgetType : Int, stockId : String, iconSize : Int, direction : Int, detail : String) : java.awt.image.BufferedImage;
+	@:overload @:public public function getStockIcon(widgetType : Int, stockId : String, iconSize : Int, direction : Int, detail : String) : java.awt.image.BufferedImage;
 	
 	/**
 	* This method is used by JNI as a callback from load_stock_icon.
@@ -100,9 +100,9 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	*
 	* Do NOT call this method directly.
 	*/
-	@:overload public function loadIconCallback(data : java.NativeArray<java.StdTypes.Int8>, width : Int, height : Int, rowStride : Int, bps : Int, channels : Int, alpha : Bool) : Void;
+	@:overload @:public public function loadIconCallback(data : java.NativeArray<java.StdTypes.Int8>, width : Int, height : Int, rowStride : Int, bps : Int, channels : Int, alpha : Bool) : Void;
 	
-	@:overload override public function sync() : Void;
+	@:overload @:public override public function sync() : Void;
 	
 	/*
 	* This returns the value for the desktop property "awt.font.desktophints"
@@ -110,9 +110,9 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* them as platform independent hints.
 	* This requires that the Gnome properties have already been gathered.
 	*/
-	public static var FONTCONFIGAAHINT(default, null) : String;
+	@:public @:static @:final public static var FONTCONFIGAAHINT(default, null) : String;
 	
-	@:overload override private function getDesktopAAHints() : java.awt.RenderingHints;
+	@:overload @:protected override private function getDesktopAAHints() : java.awt.RenderingHints;
 	
 	/**
 	* Returns {@code true} if the GTK+ library is compatible with the given
@@ -127,7 +127,7 @@ extern class UNIXToolkit extends sun.awt.SunToolkit
 	* @return {@code true} if the GTK+ library is compatible with the given
 	*         version.
 	*/
-	@:overload public function checkGtkVersion(major : Int, minor : Int, micro : Int) : Bool;
+	@:overload @:public public function checkGtkVersion(major : Int, minor : Int, micro : Int) : Bool;
 	
 	
 }

@@ -54,7 +54,7 @@ extern class NTSidDomainPrincipal extends com.sun.security.auth.NTSid
 	* @exception NullPointerException if the <code>name</code>
 	*                  is <code>null</code>.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Return a string representation of this <code>NTSidDomainPrincipal</code>.
@@ -64,7 +64,7 @@ extern class NTSidDomainPrincipal extends com.sun.security.auth.NTSid
 	* @return a string representation of this
 	*          <code>NTSidDomainPrincipal</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>NTSidDomainPrincipal</code>
@@ -80,7 +80,7 @@ extern class NTSidDomainPrincipal extends com.sun.security.auth.NTSid
 	* @return true if the specified Object is equal equal to this
 	*          <code>NTSidDomainPrincipal</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }

@@ -37,12 +37,12 @@ package java.io;
 	*
 	* @param reason  String describing the reason for the exception.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Create a StreamCorruptedException and list no reason why thrown.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

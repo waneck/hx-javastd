@@ -30,42 +30,42 @@ extern interface ContentSignerParameters
 	*
 	* @return The command-line arguments. May be null.
 	*/
-	@:overload public function getCommandLine() : java.NativeArray<String>;
+	@:overload @:public public function getCommandLine() : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the identifier for a Timestamping Authority (TSA).
 	*
 	* @return The TSA identifier. May be null.
 	*/
-	@:overload public function getTimestampingAuthority() : java.net.URI;
+	@:overload @:public public function getTimestampingAuthority() : java.net.URI;
 	
 	/**
 	* Retrieves the certificate for a Timestamping Authority (TSA).
 	*
 	* @return The TSA certificate. May be null.
 	*/
-	@:overload public function getTimestampingAuthorityCertificate() : java.security.cert.X509Certificate;
+	@:overload @:public public function getTimestampingAuthorityCertificate() : java.security.cert.X509Certificate;
 	
 	/**
 	* Retrieves the JAR file's signature.
 	*
 	* @return The non-null array of signature bytes.
 	*/
-	@:overload public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSignature() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the name of the signature algorithm.
 	*
 	* @return The non-null string name of the signature algorithm.
 	*/
-	@:overload public function getSignatureAlgorithm() : String;
+	@:overload @:public public function getSignatureAlgorithm() : String;
 	
 	/**
 	* Retrieves the signer's X.509 certificate chain.
 	*
 	* @return The non-null array of X.509 public-key certificates.
 	*/
-	@:overload public function getSignerCertificateChain() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getSignerCertificateChain() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Retrieves the content that was signed.
@@ -73,14 +73,14 @@ extern interface ContentSignerParameters
 	*
 	* @return The content bytes. May be null.
 	*/
-	@:overload public function getContent() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getContent() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the original source ZIP file before it was signed.
 	*
 	* @return The original ZIP file. May be null.
 	*/
-	@:overload public function getSource() : java.util.zip.ZipFile;
+	@:overload @:public public function getSource() : java.util.zip.ZipFile;
 	
 	
 }

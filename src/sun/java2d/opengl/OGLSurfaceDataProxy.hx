@@ -30,13 +30,13 @@ extern class OGLSurfaceDataProxy extends sun.java2d.SurfaceDataProxy
 	* SurfaceData with a cached OGL Texture and the code to create
 	* the accelerated surfaces.
 	*/
-	@:overload public static function createProxy(srcData : sun.java2d.SurfaceData, dstConfig : sun.java2d.opengl.OGLGraphicsConfig) : sun.java2d.SurfaceDataProxy;
+	@:overload @:public @:static public static function createProxy(srcData : sun.java2d.SurfaceData, dstConfig : sun.java2d.opengl.OGLGraphicsConfig) : sun.java2d.SurfaceDataProxy;
 	
-	@:overload public function new(oglgc : sun.java2d.opengl.OGLGraphicsConfig, transparency : Int) : Void;
+	@:overload @:public public function new(oglgc : sun.java2d.opengl.OGLGraphicsConfig, transparency : Int) : Void;
 	
-	@:overload override public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
+	@:overload @:public override public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
 	
-	@:overload override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
+	@:overload @:public override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
 	
 	
 }

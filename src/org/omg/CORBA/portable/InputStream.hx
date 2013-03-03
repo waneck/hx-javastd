@@ -30,49 +30,49 @@ extern class InputStream extends java.io.InputStream
 	*
 	* @return the <code>boolean</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_boolean() : Bool;
+	@:overload @:public @:abstract public function read_boolean() : Bool;
 	
 	/**
 	* Reads a char value from this input stream.
 	*
 	* @return the <code>char</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_char() : java.StdTypes.Char16;
+	@:overload @:public @:abstract public function read_char() : java.StdTypes.Char16;
 	
 	/**
 	* Reads a wide char value from this input stream.
 	*
 	* @return the <code>char</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_wchar() : java.StdTypes.Char16;
+	@:overload @:public @:abstract public function read_wchar() : java.StdTypes.Char16;
 	
 	/**
 	* Reads an octet (that is, a byte) value from this input stream.
 	*
 	* @return the <code>byte</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_octet() : java.StdTypes.Int8;
+	@:overload @:public @:abstract public function read_octet() : java.StdTypes.Int8;
 	
 	/**
 	* Reads a short value from this input stream.
 	*
 	* @return the <code>short</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_short() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function read_short() : java.StdTypes.Int16;
 	
 	/**
 	* Reads a unsigned short value from this input stream.
 	*
 	* @return the <code>short</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_ushort() : java.StdTypes.Int16;
+	@:overload @:public @:abstract public function read_ushort() : java.StdTypes.Int16;
 	
 	/**
 	* Reads a CORBA long (that is, Java int) value from this input stream.
 	*
 	* @return the <code>int</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_long() : Int;
+	@:overload @:public @:abstract public function read_long() : Int;
 	
 	/**
 	* Reads an unsigned CORBA long (that is, Java int) value from this input
@@ -80,14 +80,14 @@ stream.
 	*
 	* @return the <code>int</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_ulong() : Int;
+	@:overload @:public @:abstract public function read_ulong() : Int;
 	
 	/**
 	* Reads a CORBA longlong (that is, Java long) value from this input stream.
 	*
 	* @return the <code>long</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_longlong() : haxe.Int64;
+	@:overload @:public @:abstract public function read_longlong() : haxe.Int64;
 	
 	/**
 	* Reads a CORBA unsigned longlong (that is, Java long) value from this input
@@ -95,35 +95,35 @@ stream.
 	*
 	* @return the <code>long</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_ulonglong() : haxe.Int64;
+	@:overload @:public @:abstract public function read_ulonglong() : haxe.Int64;
 	
 	/**
 	* Reads a float value from this input stream.
 	*
 	* @return the <code>float</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_float() : Single;
+	@:overload @:public @:abstract public function read_float() : Single;
 	
 	/**
 	* Reads a double value from this input stream.
 	*
 	* @return the <code>double</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_double() : Float;
+	@:overload @:public @:abstract public function read_double() : Float;
 	
 	/**
 	* Reads a string value from this input stream.
 	*
 	* @return the <code>String</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_string() : String;
+	@:overload @:public @:abstract public function read_string() : String;
 	
 	/**
 	* Reads a wide string value from this input stream.
 	*
 	* @return the <code>String</code> value read from this input stream
 	*/
-	@:overload @:abstract public function read_wstring() : String;
+	@:overload @:public @:abstract public function read_wstring() : String;
 	
 	/**
 	* Reads an array of booleans from this input stream.
@@ -131,7 +131,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_boolean_array(value : java.NativeArray<Bool>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_boolean_array(value : java.NativeArray<Bool>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of chars from this input stream.
@@ -139,7 +139,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_char_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_char_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of wide chars from this input stream.
@@ -147,7 +147,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of octets (that is, bytes) from this input stream.
@@ -155,7 +155,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_octet_array(value : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_octet_array(value : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of shorts from this input stream.
@@ -163,7 +163,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_short_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_short_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of unsigned shorts from this input stream.
@@ -171,7 +171,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_ushort_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_ushort_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of CORBA longs (that is, Java ints) from this input stream.
@@ -179,7 +179,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_long_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_long_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of unsigned CORBA longs (that is, Java ints) from this input
@@ -188,7 +188,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_ulong_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_ulong_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of CORBA longlongs (that is, Java longs) from this input
@@ -197,7 +197,7 @@ stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_longlong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_longlong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of unsigned CORBA longlongs (that is, Java longs) from this
@@ -206,7 +206,7 @@ input stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_ulonglong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_ulonglong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of floats from this input stream.
@@ -214,7 +214,7 @@ input stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_float_array(value : java.NativeArray<Single>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_float_array(value : java.NativeArray<Single>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads an array of doubles from this input stream.
@@ -222,47 +222,47 @@ input stream.
 	* @param offset offset on the stream.
 	* @param length length of buffer to read.
 	*/
-	@:overload @:abstract public function read_double_array(value : java.NativeArray<Float>, offset : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function read_double_array(value : java.NativeArray<Float>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Reads a CORBA object from this input stream.
 	*
 	* @return the <code>Object</code> instance read from this input stream.
 	*/
-	@:overload @:abstract public function read_Object() : org.omg.CORBA.Object;
+	@:overload @:public @:abstract public function read_Object() : org.omg.CORBA.Object;
 	
 	/**
 	* Reads a <code>TypeCode</code> from this input stream.
 	*
 	* @return the <code>TypeCode</code> instance read from this input stream.
 	*/
-	@:overload @:abstract public function read_TypeCode() : org.omg.CORBA.TypeCode;
+	@:overload @:public @:abstract public function read_TypeCode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Reads an Any from this input stream.
 	*
 	* @return the <code>Any</code> instance read from this input stream.
 	*/
-	@:overload @:abstract public function read_any() : org.omg.CORBA.Any;
+	@:overload @:public @:abstract public function read_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Returns principal for invocation.
 	* @return Principal for invocation.
 	* @deprecated Deprecated by CORBA 2.2.
 	*/
-	@:overload public function read_Principal() : org.omg.CORBA.Principal;
+	@:overload @:public public function read_Principal() : org.omg.CORBA.Principal;
 	
 	/**
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads a BigDecimal number.
 	* @return a java.math.BigDecimal number
 	*/
-	@:overload public function read_fixed() : java.math.BigDecimal;
+	@:overload @:public public function read_fixed() : java.math.BigDecimal;
 	
 	/**
 	* Reads a CORBA context from the stream.
@@ -270,7 +270,7 @@ input stream.
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function read_Context() : org.omg.CORBA.Context;
+	@:overload @:public public function read_Context() : org.omg.CORBA.Context;
 	
 	/**
 	* Unmarshals an object and returns a CORBA Object,
@@ -286,7 +286,7 @@ input stream.
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function read_Object(clz : Class<Dynamic>) : org.omg.CORBA.Object;
+	@:overload @:public public function read_Object(clz : Class<Dynamic>) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the ORB that created this InputStream.
@@ -296,7 +296,7 @@ input stream.
 	* @see <a href="package-summary.html#unimpl"><code>portable</code>
 	* package comments for unimplemented features</a>
 	*/
-	@:overload public function orb() : org.omg.CORBA.ORB;
+	@:overload @:public public function orb() : org.omg.CORBA.ORB;
 	
 	
 }

@@ -35,14 +35,14 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	/**
 	* Creates a new DefaultHighlighther object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Renders the highlights.
 	*
 	* @param g the graphics context
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Called when the UI is being installed into the
@@ -52,7 +52,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @param c the editor component
 	* @see Highlighter#install
 	*/
-	@:overload override public function install(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public override public function install(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Called when the UI is being removed from the interface of
@@ -61,7 +61,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @param c the component
 	* @see Highlighter#deinstall
 	*/
-	@:overload override public function deinstall(c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public override public function deinstall(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Adds a highlight to the view.  Returns a tag that can be used
@@ -74,19 +74,19 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	*   to refer to the highlight
 	* @exception BadLocationException if the specified location is invalid
 	*/
-	@:overload override public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
+	@:overload @:public override public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
 	
 	/**
 	* Removes a highlight from the view.
 	*
 	* @param tag the reference to the highlight
 	*/
-	@:overload override public function removeHighlight(tag : Dynamic) : Void;
+	@:overload @:public override public function removeHighlight(tag : Dynamic) : Void;
 	
 	/**
 	* Removes all highlights.
 	*/
-	@:overload override public function removeAllHighlights() : Void;
+	@:overload @:public override public function removeAllHighlights() : Void;
 	
 	/**
 	* Changes a highlight.
@@ -96,7 +96,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @param p1 the end of the range >= p0
 	* @exception BadLocationException if the specified location is invalid
 	*/
-	@:overload override public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
+	@:overload @:public override public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
 	
 	/**
 	* Makes a copy of the highlights.  Does not actually clone each highlight,
@@ -105,7 +105,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @return the copy
 	* @see Highlighter#getHighlights
 	*/
-	@:overload override public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
+	@:overload @:public override public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
 	
 	/**
 	* When leaf Views (such as LabelView) are rendering they should
@@ -119,7 +119,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @param editor JTextComponent
 	* @param view View instance being rendered
 	*/
-	@:overload override public function paintLayeredHighlights(g : java.awt.Graphics, p0 : Int, p1 : Int, viewBounds : java.awt.Shape, editor : javax.swing.text.JTextComponent, view : javax.swing.text.View) : Void;
+	@:overload @:public override public function paintLayeredHighlights(g : java.awt.Graphics, p0 : Int, p1 : Int, viewBounds : java.awt.Shape, editor : javax.swing.text.JTextComponent, view : javax.swing.text.View) : Void;
 	
 	/**
 	* If true, highlights are drawn as the Views draw the text. That is
@@ -129,9 +129,9 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* work the painter supplied must be an instance of
 	* LayeredHighlightPainter.
 	*/
-	@:overload public function setDrawsLayeredHighlights(newValue : Bool) : Void;
+	@:overload @:public public function setDrawsLayeredHighlights(newValue : Bool) : Void;
 	
-	@:overload public function getDrawsLayeredHighlights() : Bool;
+	@:overload @:public public function getDrawsLayeredHighlights() : Bool;
 	
 	/**
 	* Default implementation of LayeredHighlighter.LayerPainter that can
@@ -139,7 +139,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* <p>
 	* As of 1.4 this field is final.
 	*/
-	public static var DefaultPainter(default, null) : javax.swing.text.LayeredHighlighter.LayeredHighlighter_LayerPainter;
+	@:public @:static @:final public static var DefaultPainter(default, null) : javax.swing.text.LayeredHighlighter.LayeredHighlighter_LayerPainter;
 	
 	
 }
@@ -155,14 +155,14 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	*
 	* @param c the color for the highlight
 	*/
-	@:overload public function new(c : java.awt.Color) : Void;
+	@:overload @:public public function new(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns the color of the highlight.
 	*
 	* @return the color
 	*/
-	@:overload public function getColor() : java.awt.Color;
+	@:overload @:public public function getColor() : java.awt.Color;
 	
 	/**
 	* Paints a highlight.
@@ -173,7 +173,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @param bounds the bounding box for the highlight
 	* @param c the editor
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
 	* Paints a portion of a highlight.
@@ -187,17 +187,17 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* @param view View painting for
 	* @return region drawing occured in
 	*/
-	@:overload override public function paintLayer(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
+	@:overload @:public override public function paintLayer(g : java.awt.Graphics, offs0 : Int, offs1 : Int, bounds : java.awt.Shape, c : javax.swing.text.JTextComponent, view : javax.swing.text.View) : java.awt.Shape;
 	
 	
 }
 @:native('javax$swing$text$DefaultHighlighter$HighlightInfo') @:internal extern class DefaultHighlighter_HighlightInfo implements javax.swing.text.Highlighter.Highlighter_Highlight
 {
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public public function getStartOffset() : Int;
 	
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public public function getEndOffset() : Int;
 	
-	@:overload public function getPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
+	@:overload @:public public function getPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	
 }
@@ -222,7 +222,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	/**
 	* Executes range(s) damage and cleans range queue.
 	*/
-	@:overload @:synchronized public function run() : Void;
+	@:overload @:public @:synchronized public function run() : Void;
 	
 	/**
 	* Adds the range to be damaged into the range queue. If the
@@ -234,7 +234,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	* component is null. In this case it removes all ranges added
 	* before from range queue.
 	*/
-	@:overload @:synchronized public function damageRange(pos0 : javax.swing.text.Position, pos1 : javax.swing.text.Position) : Void;
+	@:overload @:public @:synchronized public function damageRange(pos0 : javax.swing.text.Position, pos1 : javax.swing.text.Position) : Void;
 	
 	
 }

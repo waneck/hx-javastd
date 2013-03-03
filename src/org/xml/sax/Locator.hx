@@ -75,7 +75,7 @@ package org.xml.sax;
 	*         null if none is available.
 	* @see #getSystemId
 	*/
-	@:overload @:abstract public function getPublicId() : String;
+	@:overload @:public @:abstract public function getPublicId() : String;
 	
 	/**
 	* Return the system identifier for the current document event.
@@ -93,7 +93,7 @@ package org.xml.sax;
 	*         if none is available.
 	* @see #getPublicId
 	*/
-	@:overload @:abstract public function getSystemId() : String;
+	@:overload @:public @:abstract public function getSystemId() : String;
 	
 	/**
 	* Return the line number where the current document event ends.
@@ -119,7 +119,7 @@ package org.xml.sax;
 	* @return The line number, or -1 if none is available.
 	* @see #getColumnNumber
 	*/
-	@:overload @:abstract public function getLineNumber() : Int;
+	@:overload @:public @:abstract public function getLineNumber() : Int;
 	
 	/**
 	* Return the column number where the current document event ends.
@@ -145,7 +145,7 @@ package org.xml.sax;
 	* @return The column number, or -1 if none is available.
 	* @see #getLineNumber
 	*/
-	@:overload @:abstract public function getColumnNumber() : Int;
+	@:overload @:public @:abstract public function getColumnNumber() : Int;
 	
 	
 }

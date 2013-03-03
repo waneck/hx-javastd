@@ -25,37 +25,37 @@ package com.sun.corba.se.spi.orb;
 */
 extern class ParserImplTableBase extends com.sun.corba.se.spi.orb.ParserImplBase
 {
-	@:overload public function new(entries : java.NativeArray<com.sun.corba.se.spi.orb.ParserData>) : Void;
+	@:overload @:public public function new(entries : java.NativeArray<com.sun.corba.se.spi.orb.ParserData>) : Void;
 	
-	@:overload override private function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
+	@:overload @:protected override private function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
 	
-	@:overload private function setDefaultValues() : Void;
+	@:overload @:protected private function setDefaultValues() : Void;
 	
-	@:overload public function setTestValues() : Void;
+	@:overload @:public public function setTestValues() : Void;
 	
 	
 }
 @:native('com$sun$corba$se$spi$orb$ParserImplTableBase$MapEntry') @:internal extern class ParserImplTableBase_MapEntry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function new(key : Dynamic) : Void;
+	@:overload @:public public function new(key : Dynamic) : Void;
 	
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:native('com$sun$corba$se$spi$orb$ParserImplTableBase$FieldMap') @:internal extern class ParserImplTableBase_FieldMap extends java.util.AbstractMap<Dynamic, Dynamic>
 {
-	@:overload public function new(entries : java.NativeArray<com.sun.corba.se.spi.orb.ParserData>, useDefault : Bool) : Void;
+	@:overload @:public public function new(entries : java.NativeArray<com.sun.corba.se.spi.orb.ParserData>, useDefault : Bool) : Void;
 	
-	@:overload override public function entrySet() : java.util.Set<Dynamic>;
+	@:overload @:public override public function entrySet() : java.util.Set<Dynamic>;
 	
 	
 }

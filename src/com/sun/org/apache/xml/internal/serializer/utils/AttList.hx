@@ -30,7 +30,7 @@ extern class AttList implements org.xml.sax.Attributes
 	* @param attrs List of attributes this will contain
 	* @param dh DOMHelper
 	*/
-	@:overload public function new(attrs : org.w3c.dom.NamedNodeMap, dh : com.sun.org.apache.xml.internal.serializer.utils.DOM2Helper) : Void;
+	@:overload @:public public function new(attrs : org.w3c.dom.NamedNodeMap, dh : com.sun.org.apache.xml.internal.serializer.utils.DOM2Helper) : Void;
 	
 	/**
 	* Get the number of attribute nodes in the list
@@ -38,7 +38,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*
 	* @return number of attribute nodes
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Look up an attribute's Namespace URI by index.
@@ -48,7 +48,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*         is available, or null if the index is out of
 	*         range.
 	*/
-	@:overload public function getURI(index : Int) : String;
+	@:overload @:public public function getURI(index : Int) : String;
 	
 	/**
 	* Look up an attribute's local name by index.
@@ -58,7 +58,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*         processing is not being performed, or null
 	*         if the index is out of range.
 	*/
-	@:overload public function getLocalName(index : Int) : String;
+	@:overload @:public public function getLocalName(index : Int) : String;
 	
 	/**
 	* Look up an attribute's qualified name by index.
@@ -68,7 +68,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*
 	* @return The attribute's qualified name
 	*/
-	@:overload public function getQName(i : Int) : String;
+	@:overload @:public public function getQName(i : Int) : String;
 	
 	/**
 	* Get the attribute's node type by index
@@ -78,7 +78,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*
 	* @return the attribute's node type
 	*/
-	@:overload public function getType(i : Int) : String;
+	@:overload @:public public function getType(i : Int) : String;
 	
 	/**
 	* Get the attribute's node value by index
@@ -88,7 +88,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*
 	* @return the attribute's node value
 	*/
-	@:overload public function getValue(i : Int) : String;
+	@:overload @:public public function getValue(i : Int) : String;
 	
 	/**
 	* Get the attribute's node type by name
@@ -98,7 +98,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*
 	* @return the attribute's node type
 	*/
-	@:overload public function getType(name : String) : String;
+	@:overload @:public public function getType(name : String) : String;
 	
 	/**
 	* Look up an attribute's type by Namespace name.
@@ -110,7 +110,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*         attribute is not in the list or if Namespace
 	*         processing is not being performed.
 	*/
-	@:overload public function getType(uri : String, localName : String) : String;
+	@:overload @:public public function getType(uri : String, localName : String) : String;
 	
 	/**
 	* Look up an attribute's value by name.
@@ -120,7 +120,7 @@ extern class AttList implements org.xml.sax.Attributes
 	*
 	* @return The attribute node's value
 	*/
-	@:overload public function getValue(name : String) : String;
+	@:overload @:public public function getValue(name : String) : String;
 	
 	/**
 	* Look up an attribute's value by Namespace name.
@@ -131,7 +131,7 @@ extern class AttList implements org.xml.sax.Attributes
 	* @return The attribute value as a string, or null if the
 	*         attribute is not in the list.
 	*/
-	@:overload public function getValue(uri : String, localName : String) : String;
+	@:overload @:public public function getValue(uri : String, localName : String) : String;
 	
 	/**
 	* Look up the index of an attribute by Namespace name.
@@ -142,7 +142,7 @@ extern class AttList implements org.xml.sax.Attributes
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndex(uri : String, localPart : String) : Int;
+	@:overload @:public public function getIndex(uri : String, localPart : String) : Int;
 	
 	/**
 	* Look up the index of an attribute by raw XML 1.0 name.
@@ -151,7 +151,7 @@ extern class AttList implements org.xml.sax.Attributes
 	* @return The index of the attribute, or -1 if it does not
 	*         appear in the list.
 	*/
-	@:overload public function getIndex(qName : String) : Int;
+	@:overload @:public public function getIndex(qName : String) : Int;
 	
 	
 }

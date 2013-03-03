@@ -31,21 +31,21 @@ extern class NodeChangeEvent extends java.util.EventObject
 	* @param parent  The parent of the node that was added or removed.
 	* @param child   The node that was added or removed.
 	*/
-	@:overload public function new(parent : java.util.prefs.Preferences, child : java.util.prefs.Preferences) : Void;
+	@:overload @:public public function new(parent : java.util.prefs.Preferences, child : java.util.prefs.Preferences) : Void;
 	
 	/**
 	* Returns the parent of the node that was added or removed.
 	*
 	* @return  The parent Preferences node whose child was added or removed
 	*/
-	@:overload public function getParent() : java.util.prefs.Preferences;
+	@:overload @:public public function getParent() : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the node that was added or removed.
 	*
 	* @return  The node that was added or removed.
 	*/
-	@:overload public function getChild() : java.util.prefs.Preferences;
+	@:overload @:public public function getChild() : java.util.prefs.Preferences;
 	
 	
 }

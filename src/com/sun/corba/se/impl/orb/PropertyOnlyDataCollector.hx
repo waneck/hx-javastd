@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.orb;
 */
 extern class PropertyOnlyDataCollector extends com.sun.corba.se.impl.orb.DataCollectorBase
 {
-	@:overload public function new(props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
+	@:overload @:public public function new(props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
 	
-	@:overload override public function isApplet() : Bool;
+	@:overload @:public override public function isApplet() : Bool;
 	
-	@:overload override private function collect() : Void;
+	@:overload @:protected override private function collect() : Void;
 	
 	
 }

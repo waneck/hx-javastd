@@ -39,7 +39,7 @@ extern class XPathException extends java.lang.Exception
 	* @throws NullPointerException When <code>message</code> is
 	*   <code>null</code>.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* <p>Constructs a new <code>XPathException</code>
@@ -52,33 +52,33 @@ extern class XPathException extends java.lang.Exception
 	*
 	* @throws NullPointerException if <code>cause</code> is <code>null</code>.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* <p>Get the cause of this XPathException.</p>
 	*
 	* @return Cause of this XPathException.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* <p>Print stack trace to specified <code>PrintStream</code>.</p>
 	*
 	* @param s Print stack trace to this <code>PrintStream</code>.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* <p>Print stack trace to <code>System.err</code>.</p>
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	/**
 	* <p>Print stack trace to specified <code>PrintWriter</code>.</p>
 	*
 	* @param s Print stack trace to this <code>PrintWriter</code>.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	
 }

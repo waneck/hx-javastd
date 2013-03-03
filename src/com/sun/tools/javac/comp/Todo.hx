@@ -26,41 +26,41 @@ package com.sun.tools.javac.comp;
 extern class Todo extends java.util.AbstractQueue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>
 {
 	/** The context key for the todo list. */
-	private static var todoKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Todo>;
+	@:protected @:static @:final private static var todoKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Todo>;
 	
 	/** Get the Todo instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Todo;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Todo;
 	
 	/** Create a new todo list. */
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function append(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
+	@:overload @:public public function append(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
 	
-	@:overload override public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function offer(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Bool;
+	@:overload @:public public function offer(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Bool;
 	
-	@:overload override public function poll() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public override public function poll() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload override public function peek() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public override public function peek() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function groupByFile() : java.util.Queue<java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>>;
+	@:overload @:public public function groupByFile() : java.util.Queue<java.util.Queue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>>;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$Todo$FileQueue') @:internal extern class Todo_FileQueue extends java.util.AbstractQueue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>
 {
-	@:overload override public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function offer(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Bool;
+	@:overload @:public public function offer(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Bool;
 	
-	@:overload override public function poll() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public override public function poll() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload override public function peek() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload @:public override public function peek() : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
 	
 }

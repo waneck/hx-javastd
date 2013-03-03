@@ -30,17 +30,17 @@ package com.sun.jndi.toolkit.ctx;
 */
 extern class StringHeadTail
 {
-	@:overload public function new(head : String, tail : String) : Void;
+	@:overload @:public public function new(head : String, tail : String) : Void;
 	
-	@:overload public function new(head : String, tail : String, status : Int) : Void;
+	@:overload @:public public function new(head : String, tail : String, status : Int) : Void;
 	
-	@:overload public function setStatus(status : Int) : Void;
+	@:overload @:public public function setStatus(status : Int) : Void;
 	
-	@:overload public function getHead() : String;
+	@:overload @:public public function getHead() : String;
 	
-	@:overload public function getTail() : String;
+	@:overload @:public public function getTail() : String;
 	
-	@:overload public function getStatus() : Int;
+	@:overload @:public public function getStatus() : Int;
 	
 	
 }

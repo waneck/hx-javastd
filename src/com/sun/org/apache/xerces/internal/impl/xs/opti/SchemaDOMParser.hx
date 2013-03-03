@@ -21,19 +21,19 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultXMLDocumentHandler
 {
 	/** Property identifier: error reporter. */
-	public static var ERROR_REPORTER(default, null) : String;
+	@:public @:static @:final public static var ERROR_REPORTER(default, null) : String;
 	
 	/** Feature identifier: generate synthetic annotations. */
-	public static var GENERATE_SYNTHETIC_ANNOTATION(default, null) : String;
+	@:public @:static @:final public static var GENERATE_SYNTHETIC_ANNOTATION(default, null) : String;
 	
-	private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
+	@:protected private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
 	
-	private var fNamespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+	@:protected private var fNamespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** Default constructor. */
-	@:overload public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:public public function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
-	@:overload override public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the document.
@@ -41,7 +41,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A comment.
@@ -52,7 +52,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by application to signal an error.
 	*/
-	@:overload override public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -72,7 +72,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -83,7 +83,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element.
@@ -95,7 +95,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An empty element.
@@ -107,7 +107,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -118,7 +118,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -134,7 +134,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -144,7 +144,7 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -154,46 +154,46 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Returns the DOM document object.
 	*/
-	@:overload public function getDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Delegates to SchemaParsingConfig.setFeature
 	* @param featureId
 	* @param state
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Delegates to SchemaParsingConfig.getFeature
 	* @param featureId
 	* @return boolean
 	*/
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Delegates to SchemaParsingConfig.setProperty.
 	* @param propertyId
 	* @param value
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Delegates to SchemaParsingConfig.getProperty.
 	* @param propertyId
 	* @return Object
 	*/
-	@:overload public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Delegates to SchemaParsingConfig.setEntityResolver.
 	* @param er XMLEntityResolver
 	*/
-	@:overload public function setEntityResolver(er : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(er : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
 	
 	/**
 	* Delegates parsing to SchemaParsingConfig
@@ -201,17 +201,17 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 	* @param inputSource
 	* @throws IOException
 	*/
-	@:overload public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function parse(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Reset SchemaParsingConfig
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* ResetNodePool on SchemaParsingConfig
 	*/
-	@:overload public function resetNodePool() : Void;
+	@:overload @:public public function resetNodePool() : Void;
 	
 	
 }
@@ -222,19 +222,19 @@ extern class SchemaDOMParser extends com.sun.org.apache.xerces.internal.impl.xs.
 */
 @:native('com$sun$org$apache$xerces$internal$impl$xs$opti$SchemaDOMParser$BooleanStack') @:internal extern class SchemaDOMParser_BooleanStack
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Returns the size of the stack. */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/** Pushes a value onto the stack. */
-	@:overload public function push(value : Bool) : Void;
+	@:overload @:public public function push(value : Bool) : Void;
 	
 	/** Pops a value off of the stack. */
-	@:overload public function pop() : Bool;
+	@:overload @:public public function pop() : Bool;
 	
 	/** Clears the stack. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

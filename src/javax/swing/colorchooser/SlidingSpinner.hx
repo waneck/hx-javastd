@@ -25,7 +25,7 @@ package javax.swing.colorchooser;
 */
 @:internal extern class SlidingSpinner implements javax.swing.event.ChangeListener
 {
-	@:overload public function stateChanged(event : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(event : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }

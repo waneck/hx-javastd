@@ -29,35 +29,35 @@ package sun.io;
 */
 extern class ByteToCharDoubleByte extends sun.io.ByteToCharConverter
 {
-	private var savedByte : java.StdTypes.Int8;
+	@:protected private var savedByte : java.StdTypes.Int8;
 	
 	/*
 	* 1st level index, provided by subclass
 	*/
-	private var index1 : java.NativeArray<java.StdTypes.Int16>;
+	@:protected private var index1 : java.NativeArray<java.StdTypes.Int16>;
 	
 	/*
 	* 2nd level index, provided by subclass
 	* every string has 0x10*(end-start+1) characters.
 	*/
-	private var index2 : java.NativeArray<String>;
+	@:protected private var index2 : java.NativeArray<String>;
 	
-	private var start : Int;
+	@:protected private var start : Int;
 	
-	private var end : Int;
+	@:protected private var end : Int;
 	
 	/*
 	* Size of bad input that caused conversion to stop
 	*/
-	private var badInputLength : Int;
+	@:protected private var badInputLength : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getIndex2() : java.NativeArray<String>;
+	@:overload @:public public function getIndex2() : java.NativeArray<String>;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Converts sequences of bytes to characters.
@@ -73,25 +73,25 @@ extern class ByteToCharDoubleByte extends sun.io.ByteToCharConverter
 	* @throw UnsupportedCharacterException for any bytes
 	* that cannot be converted to the external character set.
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	* Resets the converter.
 	* Call this method to reset the converter to its initial state
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/*
 	* Can be changed by subclass
 	*/
-	@:overload private function convSingleByte(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
 	/*
 	* Can be changed by subclass
 	*/
-	@:overload private function getUnicode(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function getUnicode(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
-	private static var REPLACE_CHAR(default, null) : java.StdTypes.Char16;
+	@:protected @:final @:static private static var REPLACE_CHAR(default, null) : java.StdTypes.Char16;
 	
 	
 }

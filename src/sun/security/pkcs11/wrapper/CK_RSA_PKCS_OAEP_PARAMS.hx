@@ -70,7 +70,7 @@ extern class CK_RSA_PKCS_OAEP_PARAMS
 	*   CK_MECHANISM_TYPE hashAlg;
 	* </PRE>
 	*/
-	public var hashAlg : haxe.Int64;
+	@:public public var hashAlg : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -78,7 +78,7 @@ extern class CK_RSA_PKCS_OAEP_PARAMS
 	*   CK_RSA_PKCS_OAEP_MGF_TYPE mgf;
 	* </PRE>
 	*/
-	public var mgf : haxe.Int64;
+	@:public public var mgf : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -86,7 +86,7 @@ extern class CK_RSA_PKCS_OAEP_PARAMS
 	*   CK_RSA_PKCS_OAEP_SOURCE_TYPE source;
 	* </PRE>
 	*/
-	public var source : haxe.Int64;
+	@:public public var source : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -95,14 +95,14 @@ extern class CK_RSA_PKCS_OAEP_PARAMS
 	*   CK_ULONG ulSourceDataLen;
 	* </PRE>
 	*/
-	public var pSourceData : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pSourceData : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the string representation of CK_RSA_PKCS_OAEP_PARAMS.
 	*
 	* @return the string representation of CK_RSA_PKCS_OAEP_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

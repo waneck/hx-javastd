@@ -41,7 +41,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*                          <code>SOAPElement</code> object
 	* @see SOAPElement#addChildElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the given
@@ -58,7 +58,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#addChildElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -72,7 +72,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -89,7 +89,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*         context of this <code>SOAPElement</code> or  if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -107,7 +107,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Add a <code>SOAPElement</code> as a child of this
@@ -140,7 +140,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return an instance representing the new SOAP element that was
 	*         actually added to the tree.
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Detaches all children of this <code>SOAPElement</code>.
@@ -153,7 +153,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:abstract @:public @:public @:public @:public public function removeContents() : Void;
+	@:require(java2) @:overload @:public @:abstract @:public @:public @:public @:public @:public public function removeContents() : Void;
 	
 	/**
 	* Creates a new <code>Text</code> object initialized with the given
@@ -168,7 +168,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*                      attach it as a child to this
 	*                      <code>SOAPElement</code>
 	*/
-	@:overload @:public @:public @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -185,7 +185,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	<code>name</code> on this SOAPElement.
 	* @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
 	*/
-	@:overload @:public @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -203,7 +203,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#addAttribute(Name, String)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Adds a namespace declaration with the specified prefix and URI to this
@@ -217,7 +217,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if there is an error in creating the
 	*                          namespace
 	*/
-	@:overload @:public @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public @:public @:public @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified name.
@@ -227,7 +227,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*         attribute, Null if there is no such attribute
 	* @see SOAPElement#getAttributeValue(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
+	@:overload @:public @:public @:public @:public @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
 	
 	/**
 	* Returns the value of the attribute with the specified qname.
@@ -238,7 +238,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#getAttributeValue(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Returns an <code>Iterator</code> over all of the attribute
@@ -251,7 +251,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#getAllAttributesAsQNames()
 	* @return an iterator over the names of the attributes
 	*/
-	@:overload @:public @:public @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all of the attributes
@@ -264,7 +264,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#getAllAttributes()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns the URI of the namespace that has the given prefix.
@@ -274,7 +274,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return a <code>String</code> with the uri of the namespace that has
 	*        the given prefix
 	*/
-	@:overload @:public @:public @:public @:public public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public @:public @:public @:public @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
@@ -285,7 +285,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return an iterator over the namespace prefixes in this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
@@ -298,7 +298,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public @:public @:public @:public @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Creates a <code>QName</code> whose namespace URI is the one associated
@@ -324,7 +324,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the name of this <code>SOAPElement</code> object.
@@ -332,7 +332,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return a <code>Name</code> object with the name of this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function getElementName() : javax.xml.soap.Name;
+	@:overload @:public @:public @:public @:public @:public @:public public function getElementName() : javax.xml.soap.Name;
 	
 	/**
 	* Returns the qname of this <code>SOAPElement</code> object.
@@ -342,7 +342,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#getElementName()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function getElementQName() : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function getElementQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Changes the name of this <code>Element</code> to <code>newName</code> if
@@ -362,7 +362,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Removes the attribute with the specified name.
@@ -373,7 +373,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*         removed successfully; <code>false</code> if it was not
 	* @see SOAPElement#removeAttribute(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
 	
 	/**
 	* Removes the attribute with the specified qname.
@@ -385,7 +385,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#removeAttribute(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	* Removes the namespace declaration corresponding to the given prefix.
@@ -395,7 +395,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return <code>true</code> if the namespace declaration was
 	*         removed successfully; <code>false</code> if it was not
 	*/
-	@:overload @:public @:public @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -417,7 +417,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return an iterator with the content of this <code>SOAPElement</code>
 	*         object
 	*/
-	@:overload @:public @:public @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -444,7 +444,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*         specified name
 	* @see SOAPElement#getChildElements(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public @:public @:public @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -472,7 +472,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#getChildElements(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public @:public @:public @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Sets the encoding style for this <code>SOAPElement</code> object
@@ -485,7 +485,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if setting the encodingStyle is invalid for this SOAPElement.
 	* @see #getEncodingStyle
 	*/
-	@:overload @:public @:public @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
 	
 	/**
 	* Returns the encoding style for this <code>SOAPElement</code> object.
@@ -494,7 +494,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*
 	* @see #setEncodingStyle
 	*/
-	@:overload @:public @:public @:public @:public public function getEncodingStyle() : String;
+	@:overload @:public @:public @:public @:public @:public @:public public function getEncodingStyle() : String;
 	
 	
 }

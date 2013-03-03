@@ -633,7 +633,7 @@ extern interface ImageOutputStream extends javax.imageio.stream.ImageInputStream
 	* position.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function flushBefore(pos : haxe.Int64) : Void;
+	@:overload @:public public function flushBefore(pos : haxe.Int64) : Void;
 	
 	
 }

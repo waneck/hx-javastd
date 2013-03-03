@@ -80,23 +80,23 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class ClassLoader extends java.lang.ClassLoader
 {
-	@:overload public function new() : Void;
+	@:overload @:public override public function new() : Void;
 	
-	@:overload public function new(deferTo : java.lang.ClassLoader) : Void;
+	@:overload @:public override public function new(deferTo : java.lang.ClassLoader) : Void;
 	
 	/** @param ignored_packages classes contained in these packages will be loaded
 	* with the system class loader
 	*/
-	@:overload public function new(ignored_packages : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(ignored_packages : java.NativeArray<String>) : Void;
 	
-	@:overload public function new(deferTo : java.lang.ClassLoader, ignored_packages : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(deferTo : java.lang.ClassLoader, ignored_packages : java.NativeArray<String>) : Void;
 	
-	@:overload private function loadClass(class_name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:protected override private function loadClass(class_name : String, resolve : Bool) : Class<Dynamic>;
 	
 	/** Override this method if you want to alter a class before it gets actually
 	* loaded. Does nothing by default.
 	*/
-	@:overload private function modifyClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:protected private function modifyClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Override this method to create you own classes on the fly. The
@@ -112,7 +112,7 @@ extern class ClassLoader extends java.lang.ClassLoader
 	*
 	* @param class_name compressed byte code with "$$BCEL$$" in it
 	*/
-	@:overload private function createClass(class_name : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:protected private function createClass(class_name : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	
 }

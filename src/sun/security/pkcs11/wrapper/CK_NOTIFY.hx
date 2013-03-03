@@ -61,7 +61,7 @@ extern interface CK_NOTIFY
 	* @param pApplication
 	* @exception PKCS11Exception
 	*/
-	@:overload public function new(hSession : haxe.Int64, event : haxe.Int64, pApplication : Dynamic) : Void;
+	@:overload @:public public function new(hSession : haxe.Int64, event : haxe.Int64, pApplication : Dynamic) : Void;
 	
 	
 }

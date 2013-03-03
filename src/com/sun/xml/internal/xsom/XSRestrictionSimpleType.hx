@@ -26,7 +26,7 @@ package com.sun.xml.internal.xsom;
 extern interface XSRestrictionSimpleType extends com.sun.xml.internal.xsom.XSSimpleType
 {
 	/** Iterates facets that are specified in this step of derivation. */
-	@:overload public function iterateDeclaredFacets() : java.util.Iterator<com.sun.xml.internal.xsom.XSFacet>;
+	@:overload @:public public function iterateDeclaredFacets() : java.util.Iterator<com.sun.xml.internal.xsom.XSFacet>;
 	
 	/**
 	* Gets all the facets that are declared on this restriction.
@@ -34,7 +34,7 @@ extern interface XSRestrictionSimpleType extends com.sun.xml.internal.xsom.XSSim
 	* @return
 	*      Can be empty but always non-null.
 	*/
-	@:overload public function getDeclaredFacets() : java.util.Collection<com.sun.xml.internal.xsom.XSFacet>;
+	@:overload @:public public function getDeclaredFacets() : java.util.Collection<com.sun.xml.internal.xsom.XSFacet>;
 	
 	/**
 	* Gets the declared facet object of the given name.

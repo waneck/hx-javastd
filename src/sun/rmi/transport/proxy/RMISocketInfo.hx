@@ -34,7 +34,7 @@ extern interface RMISocketInfo
 	* RMI call.  If a socket does not implement this interface, then
 	* it is assumed to be reusable.
 	*/
-	@:overload public function isReusable() : Bool;
+	@:overload @:public public function isReusable() : Bool;
 	
 	
 }

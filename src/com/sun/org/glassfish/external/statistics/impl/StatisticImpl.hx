@@ -25,47 +25,47 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class StatisticImpl implements com.sun.org.glassfish.external.statistics.Statistic
 {
-	private var sampleTime : haxe.Int64;
+	@:protected private var sampleTime : haxe.Int64;
 	
-	public static var UNIT_COUNT(default, null) : String;
+	@:public @:static @:final public static var UNIT_COUNT(default, null) : String;
 	
-	public static var UNIT_SECOND(default, null) : String;
+	@:public @:static @:final public static var UNIT_SECOND(default, null) : String;
 	
-	public static var UNIT_MILLISECOND(default, null) : String;
+	@:public @:static @:final public static var UNIT_MILLISECOND(default, null) : String;
 	
-	public static var UNIT_MICROSECOND(default, null) : String;
+	@:public @:static @:final public static var UNIT_MICROSECOND(default, null) : String;
 	
-	public static var UNIT_NANOSECOND(default, null) : String;
+	@:public @:static @:final public static var UNIT_NANOSECOND(default, null) : String;
 	
-	public static var START_TIME(default, null) : String;
+	@:public @:static @:final public static var START_TIME(default, null) : String;
 	
-	public static var LAST_SAMPLE_TIME(default, null) : String;
+	@:public @:static @:final public static var LAST_SAMPLE_TIME(default, null) : String;
 	
-	private var statMap(default, null) : java.util.Map<String, Dynamic>;
+	@:protected @:final private var statMap(default, null) : java.util.Map<String, Dynamic>;
 	
-	private static var NEWLINE(default, null) : String;
+	@:protected @:static @:final private static var NEWLINE(default, null) : String;
 	
-	@:overload private function new(name : String, unit : String, desc : String, start_time : haxe.Int64, sample_time : haxe.Int64) : Void;
+	@:overload @:protected private function new(name : String, unit : String, desc : String, start_time : haxe.Int64, sample_time : haxe.Int64) : Void;
 	
-	@:overload private function new(name : String, unit : String, desc : String) : Void;
+	@:overload @:protected private function new(name : String, unit : String, desc : String) : Void;
 	
-	@:overload @:synchronized public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:synchronized public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
-	@:overload public function getUnit() : String;
+	@:overload @:public public function getUnit() : String;
 	
-	@:overload @:synchronized public function getLastSampleTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getLastSampleTime() : haxe.Int64;
 	
-	@:overload @:synchronized public function getStartTime() : haxe.Int64;
+	@:overload @:public @:synchronized public function getStartTime() : haxe.Int64;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized public function reset() : Void;
 	
-	@:overload @:synchronized public function toString() : String;
+	@:overload @:public @:synchronized public function toString() : String;
 	
-	@:overload private static function isValidString(str : String) : Bool;
+	@:overload @:protected @:static private static function isValidString(str : String) : Bool;
 	
 	
 }

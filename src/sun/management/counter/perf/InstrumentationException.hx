@@ -29,7 +29,7 @@ extern class InstrumentationException extends java.lang.RuntimeException
 	* Constructs a <tt>InstrumentationException</tt> with no
 	* detail mesage.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <tt>InstrumentationException</tt> with a specified
@@ -37,7 +37,7 @@ extern class InstrumentationException extends java.lang.RuntimeException
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

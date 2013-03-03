@@ -31,7 +31,7 @@ extern class RC2ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	*
 	* @param effectiveKeyBits the effective key size in bits.
 	*/
-	@:overload public function new(effectiveKeyBits : Int) : Void;
+	@:overload @:public public function new(effectiveKeyBits : Int) : Void;
 	
 	/**
 	* Constructs a parameter set for RC2 from the given effective key size
@@ -45,7 +45,7 @@ extern class RC2ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* the buffer are copied to protect against subsequent modification.
 	* @exception IllegalArgumentException if <code>iv</code> is null.
 	*/
-	@:overload public function new(effectiveKeyBits : Int, iv : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(effectiveKeyBits : Int, iv : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a parameter set for RC2 from the given effective key size
@@ -64,14 +64,14 @@ extern class RC2ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* starts.
 	* @exception IllegalArgumentException if <code>iv</code> is null.
 	*/
-	@:overload public function new(effectiveKeyBits : Int, iv : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
+	@:overload @:public public function new(effectiveKeyBits : Int, iv : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Void;
 	
 	/**
 	* Returns the effective key size in bits.
 	*
 	* @return the effective key size in bits.
 	*/
-	@:overload public function getEffectiveKeyBits() : Int;
+	@:overload @:public public function getEffectiveKeyBits() : Int;
 	
 	/**
 	* Returns the IV or null if this parameter set does not contain an IV.
@@ -79,7 +79,7 @@ extern class RC2ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return the IV or null if this parameter set does not contain an IV.
 	* Returns a new array each time this method is called.
 	*/
-	@:overload public function getIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -92,13 +92,13 @@ extern class RC2ParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* @return true if the objects are considered equal, false if
 	* <code>obj</code> is null or otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Calculates a hash code value for the object.
 	* Objects that are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

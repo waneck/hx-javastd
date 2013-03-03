@@ -54,7 +54,7 @@ package javax.swing.text;
 	/**
 	* Creates a DefaultFormatter.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Installs the <code>DefaultFormatter</code> onto a particular
@@ -86,7 +86,7 @@ package javax.swing.text;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload override public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload @:public override public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	/**
 	* Sets when edits are published back to the
@@ -102,7 +102,7 @@ package javax.swing.text;
 	* @param commit Used to indicate when edits are commited back to the
 	*               JTextComponent
 	*/
-	@:overload public function setCommitsOnValidEdit(commit : Bool) : Void;
+	@:overload @:public public function setCommitsOnValidEdit(commit : Bool) : Void;
 	
 	/**
 	* Returns when edits are published back to the
@@ -110,7 +110,7 @@ package javax.swing.text;
 	*
 	* @return true if edits are commited after evey valid edit
 	*/
-	@:overload public function getCommitsOnValidEdit() : Bool;
+	@:overload @:public public function getCommitsOnValidEdit() : Bool;
 	
 	/**
 	* Configures the behavior when inserting characters. If
@@ -119,14 +119,14 @@ package javax.swing.text;
 	*
 	* @param overwriteMode Indicates if overwrite or overstrike mode is used
 	*/
-	@:overload public function setOverwriteMode(overwriteMode : Bool) : Void;
+	@:overload @:public public function setOverwriteMode(overwriteMode : Bool) : Void;
 	
 	/**
 	* Returns the behavior when inserting characters.
 	*
 	* @return true if newly inserted characters overwrite existing characters
 	*/
-	@:overload public function getOverwriteMode() : Bool;
+	@:overload @:public public function getOverwriteMode() : Bool;
 	
 	/**
 	* Sets whether or not the value being edited is allowed to be invalid
@@ -138,7 +138,7 @@ package javax.swing.text;
 	* @param allowsInvalid Used to indicate if the edited value must always
 	*        be valid
 	*/
-	@:overload public function setAllowsInvalid(allowsInvalid : Bool) : Void;
+	@:overload @:public public function setAllowsInvalid(allowsInvalid : Bool) : Void;
 	
 	/**
 	* Returns whether or not the value being edited is allowed to be invalid
@@ -146,7 +146,7 @@ package javax.swing.text;
 	*
 	* @return false if the edited value must always be valid
 	*/
-	@:overload public function getAllowsInvalid() : Bool;
+	@:overload @:public public function getAllowsInvalid() : Bool;
 	
 	/**
 	* Sets that class that is used to create new Objects. If the
@@ -156,14 +156,14 @@ package javax.swing.text;
 	* @param valueClass Class used to construct return value from
 	*        stringToValue
 	*/
-	@:overload public function setValueClass(valueClass : Class<Dynamic>) : Void;
+	@:overload @:public public function setValueClass(valueClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Returns that class that is used to create new Objects.
 	*
 	* @return Class used to constuct return value from stringToValue
 	*/
-	@:overload public function getValueClass() : Class<Dynamic>;
+	@:overload @:public public function getValueClass() : Class<Dynamic>;
 	
 	/**
 	* Converts the passed in String into an instance of
@@ -179,7 +179,7 @@ package javax.swing.text;
 	* @param string String to convert
 	* @return Object representation of text
 	*/
-	@:overload override public function stringToValue(string : String) : Dynamic;
+	@:overload @:public override public function stringToValue(string : String) : Dynamic;
 	
 	/**
 	* Converts the passed in Object into a String by way of the
@@ -189,7 +189,7 @@ package javax.swing.text;
 	* @param value Value to convert
 	* @return String representation of value
 	*/
-	@:overload override public function valueToString(value : Dynamic) : String;
+	@:overload @:public override public function valueToString(value : Dynamic) : String;
 	
 	/**
 	* Returns the <code>DocumentFilter</code> used to restrict the characters
@@ -197,7 +197,7 @@ package javax.swing.text;
 	*
 	* @return DocumentFilter to restrict edits
 	*/
-	@:overload override private function getDocumentFilter() : javax.swing.text.DocumentFilter;
+	@:overload @:protected override private function getDocumentFilter() : javax.swing.text.DocumentFilter;
 	
 	/**
 	* Returns the <code>NavigationFilter</code> used to restrict where the
@@ -205,14 +205,14 @@ package javax.swing.text;
 	*
 	* @return NavigationFilter to restrict navigation
 	*/
-	@:overload override private function getNavigationFilter() : javax.swing.text.NavigationFilter;
+	@:overload @:protected override private function getNavigationFilter() : javax.swing.text.NavigationFilter;
 	
 	/**
 	* Creates a copy of the DefaultFormatter.
 	*
 	* @return copy of the DefaultFormatter
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }
@@ -230,11 +230,11 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$DefaultFormatter$DefaultNavigationFilter') @:internal extern class DefaultFormatter_DefaultNavigationFilter extends javax.swing.text.NavigationFilter implements java.io.Serializable
 {
-	@:overload override public function setDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public override public function setDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
-	@:overload override public function moveDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public override public function moveDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
-	@:overload override public function getNextVisualPositionFrom(text : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function getNextVisualPositionFrom(text : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	
 }
@@ -244,11 +244,11 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$DefaultFormatter$DefaultDocumentFilter') @:internal extern class DefaultFormatter_DefaultDocumentFilter extends javax.swing.text.DocumentFilter implements java.io.Serializable
 {
-	@:overload override public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
+	@:overload @:public override public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
 	
-	@:overload override public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload override public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

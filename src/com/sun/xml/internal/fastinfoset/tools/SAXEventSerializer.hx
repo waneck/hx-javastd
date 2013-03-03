@@ -27,59 +27,59 @@ package com.sun.xml.internal.fastinfoset.tools;
 */
 extern class SAXEventSerializer extends org.xml.sax.helpers.DefaultHandler implements org.xml.sax.ext.LexicalHandler
 {
-	private var _namespaceAttributes : java.util.List<Dynamic>;
+	@:protected private var _namespaceAttributes : java.util.List<Dynamic>;
 	
-	@:overload public function new(s : java.io.OutputStream) : Void;
+	@:overload @:public public function new(s : java.io.OutputStream) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$fastinfoset$tools$SAXEventSerializer$AttributeValueHolder') extern class SAXEventSerializer_AttributeValueHolder implements java.lang.Comparable<Dynamic>
 {
-	public var qName(default, null) : String;
+	@:public @:final public var qName(default, null) : String;
 	
-	public var localName(default, null) : String;
+	@:public @:final public var localName(default, null) : String;
 	
-	public var uri(default, null) : String;
+	@:public @:final public var uri(default, null) : String;
 	
-	public var type(default, null) : String;
+	@:public @:final public var type(default, null) : String;
 	
-	public var value(default, null) : String;
+	@:public @:final public var value(default, null) : String;
 	
-	@:overload public function new(qName : String, localName : String, uri : String, type : String, value : String) : Void;
+	@:overload @:public public function new(qName : String, localName : String, uri : String, type : String, value : String) : Void;
 	
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

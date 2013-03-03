@@ -33,79 +33,79 @@ extern class LLNI extends com.sun.tools.javah.Gen
 	*
 	* @author  Sucheta Dambalkar(Revised)
 	*/
-	private var innerDelim(default, null) : java.StdTypes.Char16;
+	@:protected @:final private var innerDelim(default, null) : java.StdTypes.Char16;
 	
 	/* For inner classes */
-	private var doneHandleTypes : java.util.Set<String>;
+	@:protected private var doneHandleTypes : java.util.Set<String>;
 	
-	@:overload private function getIncludes() : String;
+	@:overload @:protected override private function getIncludes() : String;
 	
-	@:overload private function write(o : java.io.OutputStream, clazz : javax.lang.model.element.TypeElement) : Void;
+	@:overload @:protected override private function write(o : java.io.OutputStream, clazz : javax.lang.model.element.TypeElement) : Void;
 	
-	@:overload private function generateDeclsForClass(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement, cname : String) : Void;
+	@:overload @:protected private function generateDeclsForClass(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement, cname : String) : Void;
 	
-	@:overload private function genHandleType(pw : java.io.PrintWriter, clazzname : String) : Void;
+	@:overload @:protected private function genHandleType(pw : java.io.PrintWriter, clazzname : String) : Void;
 	
-	@:overload private function mangleClassName(s : String) : String;
+	@:overload @:protected private function mangleClassName(s : String) : String;
 	
-	@:overload private function forwardDecls(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement) : Void;
+	@:overload @:protected private function forwardDecls(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement) : Void;
 	
-	@:overload private function forwardDeclsFromSig(pw : java.io.PrintWriter, sig : String) : Void;
+	@:overload @:protected private function forwardDeclsFromSig(pw : java.io.PrintWriter, sig : String) : Void;
 	
-	@:overload private function structSectionForClass(pw : java.io.PrintWriter, jclazz : javax.lang.model.element.TypeElement, cname : String) : Void;
+	@:overload @:protected private function structSectionForClass(pw : java.io.PrintWriter, jclazz : javax.lang.model.element.TypeElement, cname : String) : Void;
 	
 	/* OVERRIDE: This method handles instance fields */
-	@:overload private function addStructMember(member : javax.lang.model.element.VariableElement, cname : String, padWord : Bool) : String;
+	@:overload @:protected private function addStructMember(member : javax.lang.model.element.VariableElement, cname : String, padWord : Bool) : String;
 	
 	/*
 	* This method only handles static final fields.
 	*/
-	@:overload private function addStaticStructMember(field : javax.lang.model.element.VariableElement, cname : String) : String;
+	@:overload @:protected private function addStaticStructMember(field : javax.lang.model.element.VariableElement, cname : String) : String;
 	
-	@:overload private function methodSectionForClass(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement, cname : String) : Void;
+	@:overload @:protected private function methodSectionForClass(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement, cname : String) : Void;
 	
-	@:overload private function methodDecls(clazz : javax.lang.model.element.TypeElement, cname : String) : String;
+	@:overload @:protected private function methodDecls(clazz : javax.lang.model.element.TypeElement, cname : String) : String;
 	
-	@:overload private function methodDecl(method : javax.lang.model.element.ExecutableElement, clazz : javax.lang.model.element.TypeElement, cname : String) : String;
+	@:overload @:protected private function methodDecl(method : javax.lang.model.element.ExecutableElement, clazz : javax.lang.model.element.TypeElement, cname : String) : String;
 	
-	@:overload @:final private function needLongName(method : javax.lang.model.element.ExecutableElement, clazz : javax.lang.model.element.TypeElement) : Bool;
+	@:overload @:protected @:final private function needLongName(method : javax.lang.model.element.ExecutableElement, clazz : javax.lang.model.element.TypeElement) : Bool;
 	
-	@:overload @:final private function jniMethodName(method : javax.lang.model.element.ExecutableElement, cname : String, longName : Bool) : String;
+	@:overload @:protected @:final private function jniMethodName(method : javax.lang.model.element.ExecutableElement, cname : String, longName : Bool) : String;
 	
-	@:overload @:final private function jniType(t : javax.lang.model.type.TypeMirror) : String;
+	@:overload @:protected @:final private function jniType(t : javax.lang.model.type.TypeMirror) : String;
 	
-	@:overload private function llniType(t : javax.lang.model.type.TypeMirror, handleize : Bool, longDoubleOK : Bool) : String;
+	@:overload @:protected private function llniType(t : javax.lang.model.type.TypeMirror, handleize : Bool, longDoubleOK : Bool) : String;
 	
-	@:overload @:final private function cRcvrDecl(field : javax.lang.model.element.Element, cname : String) : String;
+	@:overload @:protected @:final private function cRcvrDecl(field : javax.lang.model.element.Element, cname : String) : String;
 	
-	@:overload private function maskName(s : String) : String;
+	@:overload @:protected private function maskName(s : String) : String;
 	
-	@:overload private function llniFieldName(field : javax.lang.model.element.VariableElement) : String;
+	@:overload @:protected private function llniFieldName(field : javax.lang.model.element.VariableElement) : String;
 	
-	@:overload @:final private function isLongOrDouble(t : javax.lang.model.type.TypeMirror) : Bool;
+	@:overload @:protected @:final private function isLongOrDouble(t : javax.lang.model.type.TypeMirror) : Bool;
 	
 	/* Do unicode to ansi C identifier conversion.
 	%%% This may not be right, but should be called more often. */
-	@:overload @:final private function nameToIdentifier(name : String) : String;
+	@:overload @:protected @:final private function nameToIdentifier(name : String) : String;
 	
-	@:overload @:final private function isASCIILetterOrDigit(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:final private function isASCIILetterOrDigit(c : java.StdTypes.Char16) : Bool;
 	
 	
 }
 @:native('com$sun$tools$javah$LLNI$FieldDefsRes') @:internal extern class LLNI_FieldDefsRes
 {
-	public var className : String;
+	@:public public var className : String;
 	
 	/* Name of the current class. */
-	public var parent : com.sun.tools.javah.LLNI.LLNI_FieldDefsRes;
+	@:public public var parent : com.sun.tools.javah.LLNI.LLNI_FieldDefsRes;
 	
-	public var s : String;
+	@:public public var s : String;
 	
-	public var byteSize : Int;
+	@:public public var byteSize : Int;
 	
-	public var bottomMost : Bool;
+	@:public public var bottomMost : Bool;
 	
-	public var printedOne : Bool;
+	@:public public var printedOne : Bool;
 	
 	
 }

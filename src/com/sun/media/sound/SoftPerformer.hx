@@ -25,45 +25,45 @@ package com.sun.media.sound;
 */
 extern class SoftPerformer
 {
-	public var keyFrom : Int;
+	@:public public var keyFrom : Int;
 	
-	public var keyTo : Int;
+	@:public public var keyTo : Int;
 	
-	public var velFrom : Int;
+	@:public public var velFrom : Int;
 	
-	public var velTo : Int;
+	@:public public var velTo : Int;
 	
-	public var exclusiveClass : Int;
+	@:public public var exclusiveClass : Int;
 	
-	public var selfNonExclusive : Bool;
+	@:public public var selfNonExclusive : Bool;
 	
-	public var forcedVelocity : Bool;
+	@:public public var forcedVelocity : Bool;
 	
-	public var forcedKeynumber : Bool;
+	@:public public var forcedKeynumber : Bool;
 	
-	public var performer : com.sun.media.sound.ModelPerformer;
+	@:public public var performer : com.sun.media.sound.ModelPerformer;
 	
-	public var connections : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>;
+	@:public public var connections : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>;
 	
-	public var oscillators : java.NativeArray<com.sun.media.sound.ModelOscillator>;
+	@:public public var oscillators : java.NativeArray<com.sun.media.sound.ModelOscillator>;
 	
-	public var midi_rpn_connections : java.util.Map<Null<Int>, java.NativeArray<Int>>;
+	@:public public var midi_rpn_connections : java.util.Map<Null<Int>, java.NativeArray<Int>>;
 	
-	public var midi_nrpn_connections : java.util.Map<Null<Int>, java.NativeArray<Int>>;
+	@:public public var midi_nrpn_connections : java.util.Map<Null<Int>, java.NativeArray<Int>>;
 	
-	public var midi_ctrl_connections : java.NativeArray<java.NativeArray<Int>>;
+	@:public public var midi_ctrl_connections : java.NativeArray<java.NativeArray<Int>>;
 	
-	public var midi_connections : java.NativeArray<java.NativeArray<Int>>;
+	@:public public var midi_connections : java.NativeArray<java.NativeArray<Int>>;
 	
-	public var ctrl_connections : java.NativeArray<Int>;
+	@:public public var ctrl_connections : java.NativeArray<Int>;
 	
-	@:overload public function new(performer : com.sun.media.sound.ModelPerformer) : Void;
+	@:overload @:public public function new(performer : com.sun.media.sound.ModelPerformer) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftPerformer$KeySortComparator') @:internal extern class SoftPerformer_KeySortComparator implements java.util.Comparator<com.sun.media.sound.ModelSource>
 {
-	@:overload public function compare(o1 : com.sun.media.sound.ModelSource, o2 : com.sun.media.sound.ModelSource) : Int;
+	@:overload @:public public function compare(o1 : com.sun.media.sound.ModelSource, o2 : com.sun.media.sound.ModelSource) : Int;
 	
 	
 }

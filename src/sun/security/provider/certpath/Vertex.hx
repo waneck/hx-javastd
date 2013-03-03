@@ -30,7 +30,7 @@ extern class Vertex
 	*
 	* @returns Certificate
 	*/
-	@:overload public function getCertificate() : java.security.cert.Certificate;
+	@:overload @:public public function getCertificate() : java.security.cert.Certificate;
 	
 	/**
 	* get the index for this vertex, where the index is the row of the
@@ -39,7 +39,7 @@ extern class Vertex
 	*
 	* @returns int index for this vertex, or -1 if no following certificates.
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* return the throwable associated with this vertex;
@@ -47,14 +47,14 @@ extern class Vertex
 	*
 	* @returns Throwable
 	*/
-	@:overload public function getThrowable() : java.lang.Throwable;
+	@:overload @:public public function getThrowable() : java.lang.Throwable;
 	
 	/**
 	* Return full string representation of vertex
 	*
 	* @returns String representation of vertex
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return string representation of this vertex's
@@ -62,7 +62,7 @@ extern class Vertex
 	*
 	* @returns String representation of certificate info
 	*/
-	@:overload public function certToString() : String;
+	@:overload @:public public function certToString() : String;
 	
 	/**
 	* return Vertex throwable as String compatible with
@@ -70,7 +70,7 @@ extern class Vertex
 	*
 	* @returns String form of exception (or "none")
 	*/
-	@:overload public function throwableToString() : String;
+	@:overload @:public public function throwableToString() : String;
 	
 	/**
 	* return Vertex index as String compatible with
@@ -79,7 +79,7 @@ extern class Vertex
 	*
 	* @returns String form of index as "Last cert?  [Yes/No]
 	*/
-	@:overload public function moreToString() : String;
+	@:overload @:public public function moreToString() : String;
 	
 	/**
 	* return Vertex index as String compatible with
@@ -87,7 +87,7 @@ extern class Vertex
 	*
 	* @returns String form of index as "Index:     [numeric index]"
 	*/
-	@:overload public function indexToString() : String;
+	@:overload @:public public function indexToString() : String;
 	
 	
 }

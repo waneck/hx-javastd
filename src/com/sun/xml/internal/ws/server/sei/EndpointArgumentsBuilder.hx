@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.server.sei;
 	* The singleton instance that produces null return value.
 	* Used for operations that doesn't have any output.
 	*/
-	public static var NONE : com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder;
+	@:public @:static public static var NONE : com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder;
 	
 	/**
 	* Returns the 'uninitialized' value for the given type.
@@ -37,7 +37,7 @@ package com.sun.xml.internal.ws.server.sei;
 	* <p>
 	* For primitive types, it's '0', and for reference types, it's null.
 	*/
-	@:overload public static function getVMUninitializedValue(type : java.lang.reflect.Type) : Dynamic;
+	@:overload @:public @:static public static function getVMUninitializedValue(type : java.lang.reflect.Type) : Dynamic;
 	
 	/**
 	* Gets the WSDL part name of this attachment.
@@ -64,13 +64,13 @@ package com.sun.xml.internal.ws.server.sei;
 	* @return null
 	*      if the parsing fails.
 	*/
-	@:overload @:final public static function getWSDLPartName(att : com.sun.xml.internal.ws.api.message.Attachment) : String;
+	@:overload @:public @:static @:final public static function getWSDLPartName(att : com.sun.xml.internal.ws.api.message.Attachment) : String;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$None') @:internal extern class EndpointArgumentsBuilder_None extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -79,9 +79,9 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$NullSetter') @:internal extern class EndpointArgumentsBuilder_NullSetter extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload public function new(setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter, nullValue : Dynamic) : Void;
+	@:overload @:public public function new(setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter, nullValue : Dynamic) : Void;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -102,11 +102,11 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Composite') @:internal extern class EndpointArgumentsBuilder_Composite extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload public function new(builders : java.NativeArray<com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder>) : Void;
+	@:overload @:public public function new(builders : java.NativeArray<com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder>) : Void;
 	
-	@:overload public function new(builders : java.util.Collection<com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder>) : Void;
+	@:overload @:public public function new(builders : java.util.Collection<com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder>) : Void;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -115,13 +115,13 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$AttachmentBuilder') @:internal extern class EndpointArgumentsBuilder_AttachmentBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	private var setter(default, null) : com.sun.xml.internal.ws.server.sei.EndpointValueSetter;
+	@:protected @:final private var setter(default, null) : com.sun.xml.internal.ws.server.sei.EndpointValueSetter;
 	
-	private var param(default, null) : com.sun.xml.internal.ws.model.ParameterImpl;
+	@:protected @:final private var param(default, null) : com.sun.xml.internal.ws.model.ParameterImpl;
 	
-	private var pname(default, null) : String;
+	@:protected @:final private var pname(default, null) : String;
 	
-	private var pname1(default, null) : String;
+	@:protected @:final private var pname1(default, null) : String;
 	
 	/**
 	* Creates an AttachmentBuilder based on the parameter type
@@ -132,9 +132,9 @@ package com.sun.xml.internal.ws.server.sei;
 	*      specifies how the obtained value is set into the argument. Takes
 	*      care of Holder arguments.
 	*/
-	@:overload public static function createAttachmentBuilder(param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder;
+	@:overload @:public @:static public static function createAttachmentBuilder(param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -179,11 +179,11 @@ package com.sun.xml.internal.ws.server.sei;
 	* @param setter
 	*      specifies how the obtained value is returned to the client.
 	*/
-	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, name : javax.xml.namespace.QName, bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
+	@:overload @:public public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, name : javax.xml.namespace.QName, bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
-	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
+	@:overload @:public public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -198,9 +198,9 @@ package com.sun.xml.internal.ws.server.sei;
 	* @param setter
 	*      specifies how the obtained value is returned to the client.
 	*/
-	@:overload public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
+	@:overload @:public public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -210,9 +210,9 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$DocLit') @:internal extern class EndpointArgumentsBuilder_DocLit extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, skipMode : Mode) : Void;
+	@:overload @:public public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, skipMode : Mode) : Void;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -228,7 +228,7 @@ package com.sun.xml.internal.ws.server.sei;
 	* @param setter
 	*      specifies how the obtained value is returned to the client.
 	*/
-	@:overload public function new(accessor : com.sun.xml.internal.bind.api.RawAccessor<Dynamic, Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
+	@:overload @:public public function new(accessor : com.sun.xml.internal.bind.api.RawAccessor<Dynamic, Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
 	
 }
@@ -238,9 +238,9 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$RpcLit') @:internal extern class EndpointArgumentsBuilder_RpcLit extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter) : Void;
+	@:overload @:public public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter) : Void;
 	
-	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -256,7 +256,7 @@ package com.sun.xml.internal.ws.server.sei;
 	* @param setter
 	*      specifies how the obtained value is returned to the endpoint.
 	*/
-	@:overload public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
+	@:overload @:public public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
 	
 }

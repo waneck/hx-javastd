@@ -25,85 +25,85 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifInternalFrameTitlePane extends javax.swing.plaf.basic.BasicInternalFrameTitlePane implements java.awt.LayoutManager implements java.awt.event.ActionListener implements java.beans.PropertyChangeListener
 {
-	public static var BUTTON_SIZE(default, null) : Int;
+	@:public @:final @:static public static var BUTTON_SIZE(default, null) : Int;
 	
-	@:overload public function new(frame : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(frame : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayout() : java.awt.LayoutManager;
 	
-	@:overload private function assembleSystemMenu() : Void;
+	@:overload @:protected override private function assembleSystemMenu() : Void;
 	
-	@:overload private function createButtons() : Void;
+	@:overload @:protected override private function createButtons() : Void;
 	
-	@:overload private function addSubComponents() : Void;
+	@:overload @:protected override private function addSubComponents() : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(c : java.awt.Container) : Void;
 	
-	@:overload private function showSystemMenu() : Void;
+	@:overload @:protected override private function showSystemMenu() : Void;
 	
-	@:overload private function hideSystemMenu() : Void;
+	@:overload @:protected private function hideSystemMenu() : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifInternalFrameTitlePane$FrameButton') @:internal extern class MotifInternalFrameTitlePane_FrameButton extends javax.swing.JButton
 {
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifInternalFrameTitlePane$MinimizeButton') @:internal extern class MotifInternalFrameTitlePane_MinimizeButton extends com.sun.java.swing.plaf.motif.MotifInternalFrameTitlePane.MotifInternalFrameTitlePane_FrameButton
 {
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifInternalFrameTitlePane$MaximizeButton') @:internal extern class MotifInternalFrameTitlePane_MaximizeButton extends com.sun.java.swing.plaf.motif.MotifInternalFrameTitlePane.MotifInternalFrameTitlePane_FrameButton
 {
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifInternalFrameTitlePane$SystemButton') @:internal extern class MotifInternalFrameTitlePane_SystemButton extends com.sun.java.swing.plaf.motif.MotifInternalFrameTitlePane.MotifInternalFrameTitlePane_FrameButton
 {
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload override public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifInternalFrameTitlePane$Title') @:internal extern class MotifInternalFrameTitlePane_Title extends com.sun.java.swing.plaf.motif.MotifInternalFrameTitlePane.MotifInternalFrameTitlePane_FrameButton
 {
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }

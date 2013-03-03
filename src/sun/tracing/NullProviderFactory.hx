@@ -33,23 +33,23 @@ extern class NullProviderFactory extends com.sun.tracing.ProviderFactory
 	*
 	* @return a provider whose probe trigger are no-ops.
 	*/
-	@:overload override public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
+	@:overload @:public override public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
 	
 	
 }
 @:internal extern class NullProvider extends sun.tracing.ProviderSkeleton
 {
-	@:overload override private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
+	@:overload @:protected override private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
 	
 	
 }
 @:internal extern class NullProbe extends sun.tracing.ProbeSkeleton
 {
-	@:overload public function new(parameters : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:public public function new(parameters : java.NativeArray<Class<Dynamic>>) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
-	@:overload override public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public override public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

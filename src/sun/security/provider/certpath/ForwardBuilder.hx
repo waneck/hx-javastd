@@ -81,7 +81,7 @@ package sun.security.provider.certpath;
 	* @throws ClassCastException if either argument is not of type
 	* X509Certificate
 	*/
-	@:overload public function compare(oCert1 : java.security.cert.X509Certificate, oCert2 : java.security.cert.X509Certificate) : Int;
+	@:overload @:public public function compare(oCert1 : java.security.cert.X509Certificate, oCert2 : java.security.cert.X509Certificate) : Int;
 	
 	
 }

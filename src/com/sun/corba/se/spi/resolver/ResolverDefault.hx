@@ -27,32 +27,32 @@ extern class ResolverDefault
 {
 	/** Return a local resolver that simply stores bindings in a map.
 	*/
-	@:overload public static function makeLocalResolver() : com.sun.corba.se.spi.resolver.LocalResolver;
+	@:overload @:public @:static public static function makeLocalResolver() : com.sun.corba.se.spi.resolver.LocalResolver;
 	
 	/** Return a resolver that relies on configured values of ORBInitRef for data.
 	*/
-	@:overload public static function makeORBInitRefResolver(urlOperation : com.sun.corba.se.spi.orb.Operation, initRefs : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>) : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload @:public @:static public static function makeORBInitRefResolver(urlOperation : com.sun.corba.se.spi.orb.Operation, initRefs : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>) : com.sun.corba.se.spi.resolver.Resolver;
 	
-	@:overload public static function makeORBDefaultInitRefResolver(urlOperation : com.sun.corba.se.spi.orb.Operation, defaultInitRef : String) : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload @:public @:static public static function makeORBDefaultInitRefResolver(urlOperation : com.sun.corba.se.spi.orb.Operation, defaultInitRef : String) : com.sun.corba.se.spi.resolver.Resolver;
 	
 	/** Return a resolver that uses the proprietary bootstrap protocol
 	* to implement a resolver.  Obtains the necessary host and port
 	* information from the ORB.
 	*/
-	@:overload public static function makeBootstrapResolver(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload @:public @:static public static function makeBootstrapResolver(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : com.sun.corba.se.spi.resolver.Resolver;
 	
 	/** Return a resolver composed of the two given resolvers.  result.list() is the
 	* union of first.list() and second.list().  result.resolve( name ) returns
 	* first.resolve( name ) if that is not null, otherwise returns the result of
 	* second.resolve( name ).
 	*/
-	@:overload public static function makeCompositeResolver(first : com.sun.corba.se.spi.resolver.Resolver, second : com.sun.corba.se.spi.resolver.Resolver) : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload @:public @:static public static function makeCompositeResolver(first : com.sun.corba.se.spi.resolver.Resolver, second : com.sun.corba.se.spi.resolver.Resolver) : com.sun.corba.se.spi.resolver.Resolver;
 	
-	@:overload public static function makeINSURLOperation(orb : com.sun.corba.se.spi.orb.ORB, bootstrapResolver : com.sun.corba.se.spi.resolver.Resolver) : com.sun.corba.se.spi.orb.Operation;
+	@:overload @:public @:static public static function makeINSURLOperation(orb : com.sun.corba.se.spi.orb.ORB, bootstrapResolver : com.sun.corba.se.spi.resolver.Resolver) : com.sun.corba.se.spi.orb.Operation;
 	
-	@:overload public static function makeSplitLocalResolver(resolver : com.sun.corba.se.spi.resolver.Resolver, localResolver : com.sun.corba.se.spi.resolver.LocalResolver) : com.sun.corba.se.spi.resolver.LocalResolver;
+	@:overload @:public @:static public static function makeSplitLocalResolver(resolver : com.sun.corba.se.spi.resolver.Resolver, localResolver : com.sun.corba.se.spi.resolver.LocalResolver) : com.sun.corba.se.spi.resolver.LocalResolver;
 	
-	@:overload public static function makeFileResolver(orb : com.sun.corba.se.spi.orb.ORB, file : java.io.File) : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload @:public @:static public static function makeFileResolver(orb : com.sun.corba.se.spi.orb.ORB, file : java.io.File) : com.sun.corba.se.spi.resolver.Resolver;
 	
 	
 }

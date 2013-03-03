@@ -40,14 +40,14 @@ package org.omg.CORBA;
 	* Constructs a <code>BAD_OPERATION</code> exception with a default
 	* minor code of 0 and a completion state of COMPLETED_NO.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>BAD_OPERATION</code> exception with the specified detail
 	* message, a minor code of 0, and a completion state of COMPLETED_NO.
 	* @param s the String containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>BAD_OPERATION</code> exception with the specified
@@ -56,7 +56,7 @@ package org.omg.CORBA;
 	* @param completed an instance of <code>CompletionStatus</code> indicating
 	*                  the completion status
 	*/
-	@:overload public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs a <code>BAD_OPERATION</code> exception with the specified detail
@@ -67,7 +67,7 @@ package org.omg.CORBA;
 	* @param completed an instance of <code>CompletionStatus</code> indicating
 	*                  the completion status
 	*/
-	@:overload public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

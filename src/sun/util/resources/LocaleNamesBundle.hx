@@ -29,7 +29,7 @@ extern class LocaleNamesBundle extends sun.util.resources.OpenListResourceBundle
 	* Implements ResourceBundle for LocaleNames bundles that don't provide
 	* the complete set of locale names.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

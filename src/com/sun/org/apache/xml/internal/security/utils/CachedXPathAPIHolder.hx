@@ -25,12 +25,12 @@ extern class CachedXPathAPIHolder
 	* Sets the doc for the xpath transformation. Resets the cache if needed
 	* @param doc
 	*/
-	@:overload public static function setDoc(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public @:static public static function setDoc(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* @return the cachexpathapi for this thread
 	*/
-	@:overload public static function getCachedXPathAPI() : com.sun.org.apache.xpath.internal.CachedXPathAPI;
+	@:overload @:public @:static public static function getCachedXPathAPI() : com.sun.org.apache.xpath.internal.CachedXPathAPI;
 	
 	
 }

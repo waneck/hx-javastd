@@ -42,7 +42,7 @@ package java.text;
 	* is, in a Java double.  This must not be increased, or garbage digits
 	* will be generated, and should not be decreased, or accuracy will be lost.
 	*/
-	public static var MAX_COUNT(default, null) : Int;
+	@:public @:static @:final public static var MAX_COUNT(default, null) : Int;
 	
 	/**
 	* These data members are intentionally public and can be set directly.
@@ -65,11 +65,11 @@ package java.text;
 	* Zero is represented by any DigitList with count == 0 or with each digits[i]
 	* for all i <= count == '0'.
 	*/
-	public var decimalAt : Int;
+	@:public public var decimalAt : Int;
 	
-	public var count : Int;
+	@:public public var count : Int;
 	
-	public var digits : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var digits : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Clears out the digits.
@@ -78,27 +78,27 @@ package java.text;
 	* you hit the decimal point, you set myDigitList.decimalAt = myDigitList.count;
 	* then go on appending digits.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Appends a digit to the list, extending the list when necessary.
 	*/
-	@:overload public function append(digit : java.StdTypes.Char16) : Void;
+	@:overload @:public public function append(digit : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Utility routine to get the value of the digit list
 	* If (count == 0) this throws a NumberFormatException, which
 	* mimics Long.parseLong().
 	*/
-	@:overload @:final public function getDouble() : Float;
+	@:overload @:public @:final public function getDouble() : Float;
 	
 	/**
 	* Utility routine to get the value of the digit list.
 	* If (count == 0) this returns 0, unlike Long.parseLong().
 	*/
-	@:overload @:final public function getLong() : haxe.Int64;
+	@:overload @:public @:final public function getLong() : haxe.Int64;
 	
-	@:overload @:final public function getBigDecimal() : java.math.BigDecimal;
+	@:overload @:public @:final public function getBigDecimal() : java.math.BigDecimal;
 	
 	/**
 	* Set the digit list to a representation of the given double value.
@@ -109,12 +109,12 @@ package java.text;
 	* @param maximumFractionDigits The most fractional digits which should
 	* be converted.
 	*/
-	@:overload @:final public function set(isNegative : Bool, source : Float, maximumFractionDigits : Int) : Void;
+	@:overload @:public @:final public function set(isNegative : Bool, source : Float, maximumFractionDigits : Int) : Void;
 	
 	/**
 	* Utility routine to set the value of the digit list from a long
 	*/
-	@:overload @:final public function set(isNegative : Bool, source : haxe.Int64) : Void;
+	@:overload @:public @:final public function set(isNegative : Bool, source : haxe.Int64) : Void;
 	
 	/**
 	* Set the digit list to a representation of the given long value.
@@ -125,25 +125,25 @@ package java.text;
 	* If maximumDigits is lower than the number of significant digits
 	* in source, the representation will be rounded.  Ignored if <= 0.
 	*/
-	@:overload @:final public function set(isNegative : Bool, source : haxe.Int64, maximumDigits : Int) : Void;
+	@:overload @:public @:final public function set(isNegative : Bool, source : haxe.Int64, maximumDigits : Int) : Void;
 	
 	/**
 	* equality test between two digit lists.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Generates the hash code for the digit list.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Creates a copy of this object.
 	* @return a clone of this instance.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

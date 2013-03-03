@@ -32,9 +32,9 @@ extern class DOMStructure implements javax.xml.crypto.XMLStructure
 	*
 	* @author Sean Mullan
 	*/
-	@:overload @:final public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public @:final public function isFeatureSupported(feature : String) : Bool;
 	
-	@:overload @:abstract public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public @:abstract public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	
 }

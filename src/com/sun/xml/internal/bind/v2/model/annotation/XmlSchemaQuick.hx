@@ -25,23 +25,23 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 @:internal extern class XmlSchemaQuick extends com.sun.xml.internal.bind.v2.model.annotation.Quick implements javax.xml.bind.annotation.XmlSchema
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlSchema) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlSchema) : Void;
 	
-	@:overload private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected override private function getAnnotation() : java.lang.annotation.Annotation;
 	
-	@:overload private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload public function annotationType() : Class<javax.xml.bind.annotation.XmlSchema>;
+	@:overload @:public override public function annotationType() : Class<javax.xml.bind.annotation.XmlSchema>;
 	
-	@:overload public function location() : String;
+	@:overload @:public public function location() : String;
 	
-	@:overload public function namespace() : String;
+	@:overload @:public public function namespace() : String;
 	
-	@:overload public function xmlns() : java.NativeArray<javax.xml.bind.annotation.XmlNs>;
+	@:overload @:public public function xmlns() : java.NativeArray<javax.xml.bind.annotation.XmlNs>;
 	
-	@:overload public function elementFormDefault() : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function elementFormDefault() : javax.xml.bind.annotation.XmlNsForm;
 	
-	@:overload public function attributeFormDefault() : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function attributeFormDefault() : javax.xml.bind.annotation.XmlNsForm;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class CodeSetConversion
 	/**
 	* CTB converter factory for single byte or variable length encodings.
 	*/
-	@:overload public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload @:public public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	/**
 	* CTB converter factory for multibyte (mainly fixed) encodings.
@@ -42,28 +42,28 @@ extern class CodeSetConversion
 	* will use the endianness specified.
 	*
 	*/
-	@:overload public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, littleEndian : Bool, useByteOrderMarkers : Bool) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload @:public public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, littleEndian : Bool, useByteOrderMarkers : Bool) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	/**
 	* BTCConverter factory for single byte or variable width encodings.
 	*/
-	@:overload public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
+	@:overload @:public public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
 	/**
 	* BTCConverter factory for fixed width multibyte encodings.
 	*/
-	@:overload public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, defaultToLittleEndian : Bool) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
+	@:overload @:public public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, defaultToLittleEndian : Bool) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
 	/**
 	* Perform the code set negotiation algorithm and come up with
 	* the two encodings to use.
 	*/
-	@:overload public function negotiate(client : com.sun.corba.se.impl.encoding.CodeSetComponentInfo, server : com.sun.corba.se.impl.encoding.CodeSetComponentInfo) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
+	@:overload @:public public function negotiate(client : com.sun.corba.se.impl.encoding.CodeSetComponentInfo, server : com.sun.corba.se.impl.encoding.CodeSetComponentInfo) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
 	
 	/**
 	* CodeSetConversion is a singleton, and this is the access point.
 	*/
-	@:overload @:final public static function impl() : com.sun.corba.se.impl.encoding.CodeSetConversion;
+	@:overload @:public @:final @:static public static function impl() : com.sun.corba.se.impl.encoding.CodeSetConversion;
 	
 	
 }
@@ -78,19 +78,19 @@ extern class CodeSetConversion
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetConversion$CTBConverter') extern class CodeSetConversion_CTBConverter
 {
-	@:overload @:abstract public function convert(chToConvert : java.StdTypes.Char16) : Void;
+	@:overload @:public @:abstract public function convert(chToConvert : java.StdTypes.Char16) : Void;
 	
-	@:overload @:abstract public function convert(strToConvert : String) : Void;
+	@:overload @:public @:abstract public function convert(strToConvert : String) : Void;
 	
-	@:overload @:abstract public function getNumBytes() : Int;
+	@:overload @:public @:abstract public function getNumBytes() : Int;
 	
-	@:overload @:abstract public function getMaxBytesPerChar() : Single;
+	@:overload @:public @:abstract public function getMaxBytesPerChar() : Single;
 	
-	@:overload @:abstract public function isFixedWidthEncoding() : Bool;
+	@:overload @:public @:abstract public function isFixedWidthEncoding() : Bool;
 	
-	@:overload @:abstract public function getAlignment() : Int;
+	@:overload @:public @:abstract public function getAlignment() : Int;
 	
-	@:overload @:abstract public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -99,13 +99,13 @@ extern class CodeSetConversion
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetConversion$BTCConverter') extern class CodeSetConversion_BTCConverter
 {
-	@:overload @:abstract public function isFixedWidthEncoding() : Bool;
+	@:overload @:public @:abstract public function isFixedWidthEncoding() : Bool;
 	
-	@:overload @:abstract public function getFixedCharWidth() : Int;
+	@:overload @:public @:abstract public function getFixedCharWidth() : Int;
 	
-	@:overload @:abstract public function getNumChars() : Int;
+	@:overload @:public @:abstract public function getNumChars() : Int;
 	
-	@:overload @:abstract public function getChars(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:abstract public function getChars(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }
@@ -116,21 +116,21 @@ extern class CodeSetConversion
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetConversion$JavaCTBConverter') @:internal extern class CodeSetConversion_JavaCTBConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter
 {
-	@:overload public function new(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, alignmentForEncoding : Int) : Void;
+	@:overload @:public public function new(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, alignmentForEncoding : Int) : Void;
 	
-	@:overload @:final override public function getMaxBytesPerChar() : Single;
+	@:overload @:public @:final override public function getMaxBytesPerChar() : Single;
 	
-	@:overload override public function convert(chToConvert : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function convert(chToConvert : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function convert(strToConvert : String) : Void;
+	@:overload @:public override public function convert(strToConvert : String) : Void;
 	
-	@:overload @:final override public function getNumBytes() : Int;
+	@:overload @:public @:final override public function getNumBytes() : Int;
 	
-	@:overload @:final override public function getAlignment() : Int;
+	@:overload @:public @:final override public function getAlignment() : Int;
 	
-	@:overload @:final override public function isFixedWidthEncoding() : Bool;
+	@:overload @:public @:final override public function isFixedWidthEncoding() : Bool;
 	
-	@:overload override public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -140,9 +140,9 @@ extern class CodeSetConversion
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetConversion$UTF16CTBConverter') @:internal extern class CodeSetConversion_UTF16CTBConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_JavaCTBConverter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(littleEndian : Bool) : Void;
+	@:overload @:public public function new(littleEndian : Bool) : Void;
 	
 	
 }
@@ -153,24 +153,24 @@ extern class CodeSetConversion
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetConversion$JavaBTCConverter') @:internal extern class CodeSetConversion_JavaBTCConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter
 {
-	private var btc : java.nio.charset.CharsetDecoder;
+	@:protected private var btc : java.nio.charset.CharsetDecoder;
 	
-	@:overload public function new(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : Void;
+	@:overload @:public public function new(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : Void;
 	
-	@:overload @:final override public function isFixedWidthEncoding() : Bool;
+	@:overload @:public @:final override public function isFixedWidthEncoding() : Bool;
 	
-	@:overload @:final override public function getFixedCharWidth() : Int;
+	@:overload @:public @:final override public function getFixedCharWidth() : Int;
 	
-	@:overload @:final override public function getNumChars() : Int;
+	@:overload @:public @:final override public function getNumChars() : Int;
 	
-	@:overload override public function getChars(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, numBytes : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public override public function getChars(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, numBytes : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Utility method to find a CharsetDecoder in the
 	* cache or create a new one if necessary.  Throws an
 	* INTERNAL if the code set is unknown.
 	*/
-	@:overload private function getConverter(javaCodeSetName : String) : java.nio.charset.CharsetDecoder;
+	@:overload @:protected private function getConverter(javaCodeSetName : String) : java.nio.charset.CharsetDecoder;
 	
 	
 }
@@ -184,9 +184,9 @@ extern class CodeSetConversion
 */
 @:native('com$sun$corba$se$impl$encoding$CodeSetConversion$UTF16BTCConverter') @:internal extern class CodeSetConversion_UTF16BTCConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_JavaBTCConverter
 {
-	@:overload public function new(defaultToLittleEndian : Bool) : Void;
+	@:overload @:public public function new(defaultToLittleEndian : Bool) : Void;
 	
-	@:overload override public function getChars(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, numBytes : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public override public function getChars(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, numBytes : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }

@@ -28,22 +28,22 @@ extern class MediaName extends javax.print.attribute.standard.Media implements j
 	/**
 	*  white letter paper.
 	*/
-	public static var NA_LETTER_WHITE(default, null) : javax.print.attribute.standard.MediaName;
+	@:public @:static @:final public static var NA_LETTER_WHITE(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	*  letter transparency.
 	*/
-	public static var NA_LETTER_TRANSPARENT(default, null) : javax.print.attribute.standard.MediaName;
+	@:public @:static @:final public static var NA_LETTER_TRANSPARENT(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	* white A4 paper.
 	*/
-	public static var ISO_A4_WHITE(default, null) : javax.print.attribute.standard.MediaName;
+	@:public @:static @:final public static var ISO_A4_WHITE(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	*  A4 transparency.
 	*/
-	public static var ISO_A4_TRANSPARENT(default, null) : javax.print.attribute.standard.MediaName;
+	@:public @:static @:final public static var ISO_A4_TRANSPARENT(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	* Constructs a new media name enumeration value with the given integer
@@ -51,19 +51,19 @@ extern class MediaName extends javax.print.attribute.standard.Media implements j
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class MediaTray.
 	* @return the String table.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class MediaTray.
 	* @return the enumeration value table.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	
 }

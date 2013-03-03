@@ -28,13 +28,13 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	/**
 	* The first number in the range of ids used for window events.
 	*/
-	public static var WINDOW_FIRST(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_FIRST(default, null) : Int;
 	
 	/**
 	* The window opened event.  This event is delivered only
 	* the first time a window is made visible.
 	*/
-	public static var WINDOW_OPENED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_OPENED(default, null) : Int;
 	
 	/**
 	* The "window is closing" event. This event is delivered when
@@ -43,13 +43,13 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* while processing this event, the window close operation will be
 	* cancelled.
 	*/
-	public static var WINDOW_CLOSING(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_CLOSING(default, null) : Int;
 	
 	/**
 	* The window closed event. This event is delivered after
 	* the window has been closed as the result of a call to dispose.
 	*/
-	public static var WINDOW_CLOSED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_CLOSED(default, null) : Int;
 	
 	/**
 	* The window iconified event. This event is delivered when
@@ -58,13 +58,13 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* the icon specified in the window's iconImage property.
 	* @see java.awt.Frame#setIconImage
 	*/
-	public static var WINDOW_ICONIFIED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_ICONIFIED(default, null) : Int;
 	
 	/**
 	* The window deiconified event type. This event is delivered when
 	* the window has been changed from a minimized to a normal state.
 	*/
-	public static var WINDOW_DEICONIFIED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_DEICONIFIED(default, null) : Int;
 	
 	/**
 	* The window-activated event type. This event is delivered when the Window
@@ -74,7 +74,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* active Window is always either the focused Window, or the first Frame or
 	* Dialog that is an owner of the focused Window.
 	*/
-	public static var WINDOW_ACTIVATED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_ACTIVATED(default, null) : Int;
 	
 	/**
 	* The window-deactivated event type. This event is delivered when the
@@ -84,21 +84,21 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* title bar. The active Window is always either the focused Window, or the
 	* first Frame or Dialog that is an owner of the focused Window.
 	*/
-	public static var WINDOW_DEACTIVATED(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_DEACTIVATED(default, null) : Int;
 	
 	/**
 	* The window-gained-focus event type. This event is delivered when the
 	* Window becomes the focused Window, which means that the Window, or one
 	* of its subcomponents, will receive keyboard events.
 	*/
-	public static var WINDOW_GAINED_FOCUS(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_GAINED_FOCUS(default, null) : Int;
 	
 	/**
 	* The window-lost-focus event type. This event is delivered when a Window
 	* is no longer the focused Window, which means keyboard events will no
 	* longer be delivered to the Window or any of its subcomponents.
 	*/
-	public static var WINDOW_LOST_FOCUS(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_LOST_FOCUS(default, null) : Int;
 	
 	/**
 	* The window-state-changed event type.  This event is delivered
@@ -106,12 +106,12 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* iconified, maximized etc.
 	* @since 1.4
 	*/
-	@:require(java4) public static var WINDOW_STATE_CHANGED(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var WINDOW_STATE_CHANGED(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for window events.
 	*/
-	public static var WINDOW_LAST(default, null) : Int;
+	@:public @:static @:final public static var WINDOW_LAST(default, null) : Int;
 	
 	/**
 	* Constructs a <code>WindowEvent</code> object.
@@ -138,7 +138,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* @see #getNewState()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window, oldState : Int, newState : Int) : Void;
+	@:require(java4) @:overload @:public public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window, oldState : Int, newState : Int) : Void;
 	
 	/**
 	* Constructs a <code>WindowEvent</code> object with the
@@ -178,7 +178,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* @see #getOppositeWindow()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window) : Void;
+	@:require(java4) @:overload @:public public function new(source : java.awt.Window, id : Int, opposite : java.awt.Window) : Void;
 	
 	/**
 	* Constructs a <code>WindowEvent</code> object with the specified
@@ -209,7 +209,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* @see #getNewState()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : java.awt.Window, id : Int, oldState : Int, newState : Int) : Void;
+	@:require(java4) @:overload @:public public function new(source : java.awt.Window, id : Int, oldState : Int, newState : Int) : Void;
 	
 	/**
 	* Constructs a <code>WindowEvent</code> object.
@@ -225,14 +225,14 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* @see #getWindow()
 	* @see #getID()
 	*/
-	@:overload public function new(source : java.awt.Window, id : Int) : Void;
+	@:overload @:public public function new(source : java.awt.Window, id : Int) : Void;
 	
 	/**
 	* Returns the originator of the event.
 	*
 	* @return the Window object that originated the event
 	*/
-	@:overload public function getWindow() : java.awt.Window;
+	@:overload @:public public function getWindow() : java.awt.Window;
 	
 	/**
 	* Returns the other Window involved in this focus or activation change.
@@ -247,7 +247,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	*         null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getOppositeWindow() : java.awt.Window;
+	@:require(java4) @:overload @:public public function getOppositeWindow() : java.awt.Window;
 	
 	/**
 	* For <code>WINDOW_STATE_CHANGED</code> events returns the
@@ -268,7 +268,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* @see java.awt.Frame#getExtendedState()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getOldState() : Int;
+	@:require(java4) @:overload @:public public function getOldState() : Int;
 	
 	/**
 	* For <code>WINDOW_STATE_CHANGED</code> events returns the
@@ -289,7 +289,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	* @see java.awt.Frame#getExtendedState()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getNewState() : Int;
+	@:require(java4) @:overload @:public public function getNewState() : Int;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -297,7 +297,7 @@ extern class WindowEvent extends java.awt.event.ComponentEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

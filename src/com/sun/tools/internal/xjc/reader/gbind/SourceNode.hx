@@ -29,7 +29,7 @@ package com.sun.tools.internal.xjc.reader.gbind;
 */
 extern class SourceNode extends com.sun.tools.internal.xjc.reader.gbind.Element
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

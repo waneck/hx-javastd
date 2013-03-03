@@ -34,23 +34,23 @@ extern class Reflection
 	java.lang.reflect.Method.invoke() and its implementation are
 	completely ignored and do not count toward the number of "real"
 	frames skipped. */
-	@:overload @:native public static function getCallerClass(realFramesToSkip : Int) : Class<Dynamic>;
+	@:overload @:public @:static @:native public static function getCallerClass(realFramesToSkip : Int) : Class<Dynamic>;
 	
 	/** A quick "fast-path" check to try to avoid getCallerClass()
 	calls. */
-	@:overload public static function quickCheckMemberAccess(memberClass : Class<Dynamic>, modifiers : Int) : Bool;
+	@:overload @:public @:static public static function quickCheckMemberAccess(memberClass : Class<Dynamic>, modifiers : Int) : Bool;
 	
-	@:overload public static function ensureMemberAccess(currentClass : Class<Dynamic>, memberClass : Class<Dynamic>, target : Dynamic, modifiers : Int) : Void;
+	@:overload @:public @:static public static function ensureMemberAccess(currentClass : Class<Dynamic>, memberClass : Class<Dynamic>, target : Dynamic, modifiers : Int) : Void;
 	
-	@:overload public static function verifyMemberAccess(currentClass : Class<Dynamic>, memberClass : Class<Dynamic>, target : Dynamic, modifiers : Int) : Bool;
+	@:overload @:public @:static public static function verifyMemberAccess(currentClass : Class<Dynamic>, memberClass : Class<Dynamic>, target : Dynamic, modifiers : Int) : Bool;
 	
-	@:overload @:synchronized public static function registerFieldsToFilter(containingClass : Class<Dynamic>, fieldNames : java.NativeArray<String>) : Void;
+	@:overload @:public @:static @:synchronized public static function registerFieldsToFilter(containingClass : Class<Dynamic>, fieldNames : java.NativeArray<String>) : Void;
 	
-	@:overload @:synchronized public static function registerMethodsToFilter(containingClass : Class<Dynamic>, methodNames : java.NativeArray<String>) : Void;
+	@:overload @:public @:static @:synchronized public static function registerMethodsToFilter(containingClass : Class<Dynamic>, methodNames : java.NativeArray<String>) : Void;
 	
-	@:overload public static function filterFields(containingClass : Class<Dynamic>, fields : java.NativeArray<java.lang.reflect.Field>) : java.NativeArray<java.lang.reflect.Field>;
+	@:overload @:public @:static public static function filterFields(containingClass : Class<Dynamic>, fields : java.NativeArray<java.lang.reflect.Field>) : java.NativeArray<java.lang.reflect.Field>;
 	
-	@:overload public static function filterMethods(containingClass : Class<Dynamic>, methods : java.NativeArray<java.lang.reflect.Method>) : java.NativeArray<java.lang.reflect.Method>;
+	@:overload @:public @:static public static function filterMethods(containingClass : Class<Dynamic>, methods : java.NativeArray<java.lang.reflect.Method>) : java.NativeArray<java.lang.reflect.Method>;
 	
 	
 }

@@ -25,18 +25,18 @@ package com.sun.xml.internal.ws.server.sei;
 */
 extern class SEIInvokerTube extends com.sun.xml.internal.ws.server.InvokerTube<Dynamic>
 {
-	@:overload public function new(model : com.sun.xml.internal.ws.model.AbstractSEIModelImpl, invoker : com.sun.xml.internal.ws.api.server.Invoker, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function new(model : com.sun.xml.internal.ws.model.AbstractSEIModelImpl, invoker : com.sun.xml.internal.ws.api.server.Invoker, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
 	/**
 	* This binds the parameters for SEI endpoints and invokes the endpoint method. The
 	* return value, and response Holder arguments are used to create a new {@link Message}
 	* that traverses through the Pipeline to transport.
 	*/
-	@:overload public function processRequest(req : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(req : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }

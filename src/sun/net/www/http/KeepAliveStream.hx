@@ -25,44 +25,44 @@ package sun.net.www.http;
 */
 extern class KeepAliveStream extends sun.net.www.MeteredStream implements sun.net.www.http.Hurryable
 {
-	private var queuedForCleanup : Bool;
+	@:protected private var queuedForCleanup : Bool;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(is : java.io.InputStream, pi : sun.net.ProgressSource, expected : haxe.Int64, hc : sun.net.www.http.HttpClient) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, pi : sun.net.ProgressSource, expected : haxe.Int64, hc : sun.net.www.http.HttpClient) : Void;
 	
 	/**
 	* Attempt to cache this connection
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/* we explicitly do not support mark/reset */
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function mark(limit : Int) : Void;
+	@:overload @:public override public function mark(limit : Int) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload @:synchronized public function hurry() : Bool;
+	@:overload @:public @:synchronized public function hurry() : Bool;
 	
-	@:overload private function remainingToRead() : haxe.Int64;
+	@:overload @:protected private function remainingToRead() : haxe.Int64;
 	
-	@:overload private function setClosed() : Void;
+	@:overload @:protected private function setClosed() : Void;
 	
 	
 }
 @:internal extern class KeepAliveCleanerEntry
 {
-	@:overload public function new(kas : sun.net.www.http.KeepAliveStream, hc : sun.net.www.http.HttpClient) : Void;
+	@:overload @:public public function new(kas : sun.net.www.http.KeepAliveStream, hc : sun.net.www.http.HttpClient) : Void;
 	
-	@:overload private function getKeepAliveStream() : sun.net.www.http.KeepAliveStream;
+	@:overload @:protected private function getKeepAliveStream() : sun.net.www.http.KeepAliveStream;
 	
-	@:overload private function getHttpClient() : sun.net.www.http.HttpClient;
+	@:overload @:protected private function getHttpClient() : sun.net.www.http.HttpClient;
 	
-	@:overload private function setQueuedForCleanup() : Void;
+	@:overload @:protected private function setQueuedForCleanup() : Void;
 	
-	@:overload private function getQueuedForCleanup() : Bool;
+	@:overload @:protected private function getQueuedForCleanup() : Bool;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class Oid
 	* @exception GSSException may be thrown when the string is incorrectly
 	*     formatted
 	*/
-	@:overload public function new(strOid : String) : Void;
+	@:overload @:public public function new(strOid : String) : Void;
 	
 	/**
 	* Creates an Oid object from its ASN.1 DER encoding.  This refers to
@@ -46,7 +46,7 @@ extern class Oid
 	* @exception GSSException may be thrown when the DER encoding does not
 	*  follow the prescribed format.
 	*/
-	@:overload public function new(derOid : java.io.InputStream) : Void;
+	@:overload @:public public function new(derOid : java.io.InputStream) : Void;
 	
 	/**
 	* Creates an Oid object from its ASN.1 DER encoding.  This refers to
@@ -58,7 +58,7 @@ extern class Oid
 	* @exception GSSException may be thrown when the DER encoding does not
 	*     follow the prescribed format.
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns a string representation of the oid's integer components
@@ -66,7 +66,7 @@ extern class Oid
 	*
 	* @return string representation in the following format: "1.2.3.4.5"
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Tests if two Oid objects represent the same Object identifier
@@ -76,7 +76,7 @@ extern class Oid
 	* value, <code>false</code> otherwise.
 	* @param other the Oid object that has to be compared to this one
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the full ASN.1 DER encoding for this oid object, which
@@ -85,7 +85,7 @@ extern class Oid
 	* @return byte array containing the DER encoding of this oid object.
 	* @exception GSSException may be thrown when the oid can't be encoded
 	*/
-	@:overload public function getDER() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDER() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* A utility method to test if this Oid value is contained within the
@@ -94,14 +94,14 @@ extern class Oid
 	* @param oids the array of Oid's to search
 	* @return true if the array contains this Oid value, false otherwise
 	*/
-	@:overload public function containedIn(oids : java.NativeArray<org.ietf.jgss.Oid>) : Bool;
+	@:overload @:public public function containedIn(oids : java.NativeArray<org.ietf.jgss.Oid>) : Bool;
 	
 	/**
 	* Returns a hashcode value for this Oid.
 	*
 	* @return a hashCode value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

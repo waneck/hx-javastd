@@ -23,30 +23,30 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class TestGenerator extends com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator
 {
-	@:overload public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
-	@:overload public function getHandlerIndex() : Int;
+	@:overload @:public public function getHandlerIndex() : Int;
 	
-	@:overload public function getIteratorIndex() : Int;
+	@:overload @:public public function getIteratorIndex() : Int;
 	
-	@:overload public function setDomIndex(domIndex : Int) : Void;
+	@:overload @:public public function setDomIndex(domIndex : Int) : Void;
 	
-	@:overload override public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/** by default context node is the same as current node. MK437 */
-	@:overload override public function loadContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function loadContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function storeContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function storeContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function storeIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function storeIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function loadIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public override public function loadIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function getLocalIndex(name : String) : Int;
+	@:overload @:public override public function getLocalIndex(name : String) : Int;
 	
 	
 }

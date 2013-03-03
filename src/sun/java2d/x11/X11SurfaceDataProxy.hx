@@ -30,18 +30,18 @@ extern class X11SurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements 
 	* SurfaceData with a cached X11 Pixmap and the code to create
 	* the accelerated surfaces.
 	*/
-	@:overload public static function createProxy(srcData : sun.java2d.SurfaceData, dstConfig : sun.awt.X11GraphicsConfig) : sun.java2d.SurfaceDataProxy;
+	@:overload @:public @:static public static function createProxy(srcData : sun.java2d.SurfaceData, dstConfig : sun.awt.X11GraphicsConfig) : sun.java2d.SurfaceDataProxy;
 	
-	@:overload public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
+	@:overload @:public public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
 	
-	@:overload override public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
+	@:overload @:public override public function validateSurfaceData(srcData : sun.java2d.SurfaceData, cachedData : sun.java2d.SurfaceData, w : Int, h : Int) : sun.java2d.SurfaceData;
 	
 	/**
 	* Returns the type of this <code>Transparency</code>.
 	* @return the field type of this <code>Transparency</code>, which is
 	*          either OPAQUE, BITMASK or TRANSLUCENT.
 	*/
-	@:overload @:public public function getTransparency() : Int;
+	@:overload @:public @:public public function getTransparency() : Int;
 	
 	
 }
@@ -51,11 +51,11 @@ extern class X11SurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements 
 */
 @:native('sun$java2d$x11$X11SurfaceDataProxy$Opaque') extern class X11SurfaceDataProxy_Opaque extends sun.java2d.x11.X11SurfaceDataProxy
 {
-	@:overload public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
+	@:overload @:public public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
 	
-	@:overload override public function getTransparency() : Int;
+	@:overload @:public override public function getTransparency() : Int;
 	
-	@:overload override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
+	@:overload @:public override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
 	
 	
 }
@@ -66,11 +66,11 @@ extern class X11SurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements 
 */
 @:native('sun$java2d$x11$X11SurfaceDataProxy$Bitmask') extern class X11SurfaceDataProxy_Bitmask extends sun.java2d.x11.X11SurfaceDataProxy
 {
-	@:overload public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
+	@:overload @:public public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
 	
-	@:overload override public function getTransparency() : Int;
+	@:overload @:public override public function getTransparency() : Int;
 	
-	@:overload override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
+	@:overload @:public override public function isSupportedOperation(srcData : sun.java2d.SurfaceData, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : Bool;
 	
 	
 }

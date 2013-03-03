@@ -28,11 +28,11 @@ package com.sun.xml.internal.ws.handler;
 */
 extern class ServerMessageHandlerTube extends com.sun.xml.internal.ws.handler.HandlerTube
 {
-	@:overload public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
+	@:overload @:public public function new(seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
 	
-	@:overload override private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:protected override private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
 	
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
 	
 	
 }

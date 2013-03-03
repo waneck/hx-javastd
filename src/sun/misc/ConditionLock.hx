@@ -41,12 +41,12 @@ extern class ConditionLock extends sun.misc.Lock
 	/**
 	* Creates a ConditionLock.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a ConditionLock in an initialState.
 	*/
-	@:overload public function new(initialState : Int) : Void;
+	@:overload @:public public function new(initialState : Int) : Void;
 	
 	/**
 	* Acquires the lock when the state variable equals the desired state.
@@ -55,13 +55,13 @@ extern class ConditionLock extends sun.misc.Lock
 	* @exception  java.lang.InterruptedException if any thread has
 	*               interrupted this thread.
 	*/
-	@:overload @:synchronized public function lockWhen(desiredState : Int) : Void;
+	@:overload @:public @:synchronized public function lockWhen(desiredState : Int) : Void;
 	
 	/**
 	* Releases the lock, and sets the state to a new value.
 	* @param newState the new state
 	*/
-	@:overload @:synchronized public function unlockWith(newState : Int) : Void;
+	@:overload @:public @:synchronized public function unlockWith(newState : Int) : Void;
 	
 	
 }

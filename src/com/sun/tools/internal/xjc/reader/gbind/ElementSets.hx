@@ -30,7 +30,7 @@ extern class ElementSets
 	*
 	* This method performs better if lhs is bigger than rhs
 	*/
-	@:overload public static function union(lhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet, rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : com.sun.tools.internal.xjc.reader.gbind.ElementSet;
+	@:overload @:public @:static public static function union(lhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet, rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : com.sun.tools.internal.xjc.reader.gbind.ElementSet;
 	
 	
 }
@@ -41,11 +41,11 @@ extern class ElementSets
 */
 @:native('com$sun$tools$internal$xjc$reader$gbind$ElementSets$MultiValueSet') @:internal extern class ElementSets_MultiValueSet extends java.util.LinkedHashSet<com.sun.tools.internal.xjc.reader.gbind.Element> implements com.sun.tools.internal.xjc.reader.gbind.ElementSet
 {
-	@:overload public function new(lhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet, rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Void;
+	@:overload @:public public function new(lhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet, rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Void;
 	
-	@:overload public function contains(rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Bool;
+	@:overload @:public public function contains(rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Bool;
 	
-	@:overload public function addNext(element : com.sun.tools.internal.xjc.reader.gbind.Element) : Void;
+	@:overload @:public public function addNext(element : com.sun.tools.internal.xjc.reader.gbind.Element) : Void;
 	
 	
 }

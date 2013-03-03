@@ -70,7 +70,7 @@ extern interface LoadClass
 	* @return object type that may be loaded or null if a primitive is
 	* referenced
 	*/
-	@:overload public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
+	@:overload @:public public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
 	
 	/**
 	* Returns the type associated with this instruction.
@@ -84,7 +84,7 @@ extern interface LoadClass
 	* an int[][].
 	* @see #getLoadClassType(ConstantPoolGen)
 	*/
-	@:overload public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

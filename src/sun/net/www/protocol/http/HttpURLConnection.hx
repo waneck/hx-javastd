@@ -25,29 +25,29 @@ package sun.net.www.protocol.http;
 */
 extern class HttpURLConnection extends java.net.HttpURLConnection
 {
-	public static var userAgent(default, null) : String;
+	@:public @:static @:final public static var userAgent(default, null) : String;
 	
-	private var http : sun.net.www.http.HttpClient;
+	@:protected private var http : sun.net.www.http.HttpClient;
 	
-	private var handler : sun.net.www.protocol.http.Handler;
+	@:protected private var handler : sun.net.www.protocol.http.Handler;
 	
-	private var instProxy : java.net.Proxy;
+	@:protected private var instProxy : java.net.Proxy;
 	
-	private var cachedResponse : java.net.CacheResponse;
+	@:protected private var cachedResponse : java.net.CacheResponse;
 	
 	/* output stream to server */
-	private var ps : java.io.PrintStream;
+	@:protected private var ps : java.io.PrintStream;
 	
 	/* Progress source */
-	private var pi : sun.net.ProgressSource;
+	@:protected private var pi : sun.net.ProgressSource;
 	
 	/* Logging support */
-	@:overload public static function getHttpLogger() : sun.util.logging.PlatformLogger;
+	@:overload @:public @:static public static function getHttpLogger() : sun.util.logging.PlatformLogger;
 	
 	/* Used for Windows NTLM implementation */
-	@:overload public function authObj() : Dynamic;
+	@:overload @:public public function authObj() : Dynamic;
 	
-	@:overload public function authObj(authObj : Dynamic) : Void;
+	@:overload @:public public function authObj(authObj : Dynamic) : Void;
 	
 	/**
 	* Create a new HttpClient object, bypassing the cache of
@@ -55,7 +55,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	*
 	* @param url       the URL being accessed
 	*/
-	@:overload private function setNewClient(url : java.net.URL) : Void;
+	@:overload @:protected private function setNewClient(url : java.net.URL) : Void;
 	
 	/**
 	* Obtain a HttpsClient object. Use the cached copy if specified.
@@ -64,7 +64,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @param useCache  whether the cached connection should be used
 	*        if present
 	*/
-	@:overload private function setNewClient(url : java.net.URL, useCache : Bool) : Void;
+	@:overload @:protected private function setNewClient(url : java.net.URL, useCache : Bool) : Void;
 	
 	/**
 	* Create a new HttpClient object, set up so that it uses
@@ -75,7 +75,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @param proxyHost the proxy host to use
 	* @param proxyPort the proxy port to use
 	*/
-	@:overload private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
+	@:overload @:protected private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
 	
 	/**
 	* Obtain a HttpClient object, set up so that it uses per-instance
@@ -88,37 +88,37 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @param useCache  whether the cached connection should be used
 	*        if present
 	*/
-	@:overload private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
+	@:overload @:protected private function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
-	@:overload private function proxiedConnect(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
+	@:overload @:protected private function proxiedConnect(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
-	@:overload private function new(u : java.net.URL, handler : sun.net.www.protocol.http.Handler) : Void;
+	@:overload @:protected private function new(u : java.net.URL, handler : sun.net.www.protocol.http.Handler) : Void;
 	
-	@:overload public function new(u : java.net.URL, host : String, port : Int) : Void;
+	@:overload @:public public function new(u : java.net.URL, host : String, port : Int) : Void;
 	
 	/** this constructor is used by other protocol handlers such as ftp
 	that want to use http to fetch urls on their behalf.*/
-	@:overload public function new(u : java.net.URL, p : java.net.Proxy) : Void;
+	@:overload @:public public function new(u : java.net.URL, p : java.net.Proxy) : Void;
 	
-	@:overload private function new(u : java.net.URL, p : java.net.Proxy, handler : sun.net.www.protocol.http.Handler) : Void;
+	@:overload @:protected private function new(u : java.net.URL, p : java.net.Proxy, handler : sun.net.www.protocol.http.Handler) : Void;
 	
 	/**
 	* @deprecated.  Use java.net.Authenticator.setDefault() instead.
 	*/
-	@:overload public static function setDefaultAuthenticator(a : sun.net.www.protocol.http.HttpAuthenticator) : Void;
+	@:overload @:public @:static public static function setDefaultAuthenticator(a : sun.net.www.protocol.http.HttpAuthenticator) : Void;
 	
 	/**
 	* opens a stream allowing redirects only to the same host.
 	*/
-	@:overload public static function openConnectionCheckRedirects(c : java.net.URLConnection) : java.io.InputStream;
+	@:overload @:public @:static public static function openConnectionCheckRedirects(c : java.net.URLConnection) : java.io.InputStream;
 	
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
-	@:overload private function plainConnect() : Void;
+	@:overload @:protected private function plainConnect() : Void;
 	
-	@:overload private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int) : sun.net.www.http.HttpClient;
+	@:overload @:protected private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int) : sun.net.www.http.HttpClient;
 	
-	@:overload private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int, useCache : Bool) : sun.net.www.http.HttpClient;
+	@:overload @:protected private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int, useCache : Bool) : sun.net.www.http.HttpClient;
 	
 	/*
 	* Allowable input/output sequences:
@@ -130,29 +130,29 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* Disallowed:
 	* - get input, [read input,] get output, [write output]
 	*/
-	@:overload @:synchronized override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public @:synchronized override public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload @:synchronized override public function getInputStream() : java.io.InputStream;
+	@:overload @:public @:synchronized override public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getErrorStream() : java.io.InputStream;
+	@:overload @:public override public function getErrorStream() : java.io.InputStream;
 	
 	/**
 	* establish a tunnel through proxy server
 	*/
-	@:overload @:synchronized public function doTunneling() : Void;
+	@:overload @:public @:synchronized public function doTunneling() : Void;
 	
 	/**
 	* Disconnect from the server (public API)
 	*/
-	@:overload override public function disconnect() : Void;
+	@:overload @:public override public function disconnect() : Void;
 	
-	@:overload override public function usingProxy() : Bool;
+	@:overload @:public override public function usingProxy() : Bool;
 	
 	/**
 	* Gets a header field by name. Returns null if not known.
 	* @param name the name of the header field
 	*/
-	@:overload override public function getHeaderField(name : String) : String;
+	@:overload @:public override public function getHeaderField(name : String) : String;
 	
 	/**
 	* Returns an unmodifiable Map of the header fields.
@@ -164,26 +164,26 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @return a Map of header fields
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getHeaderFields() : java.util.Map<String, java.util.List<String>>;
+	@:require(java4) @:overload @:public override public function getHeaderFields() : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Gets a header field by index. Returns null if not known.
 	* @param n the index of the header field
 	*/
-	@:overload override public function getHeaderField(n : Int) : String;
+	@:overload @:public override public function getHeaderField(n : Int) : String;
 	
 	/**
 	* Gets a header field by index. Returns null if not known.
 	* @param n the index of the header field
 	*/
-	@:overload override public function getHeaderFieldKey(n : Int) : String;
+	@:overload @:public override public function getHeaderFieldKey(n : Int) : String;
 	
 	/**
 	* Sets request property. If a property with the key already
 	* exists, overwrite its value with the new value.
 	* @param value the value to be set
 	*/
-	@:overload override public function setRequestProperty(key : String, value : String) : Void;
+	@:overload @:public override public function setRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Adds a general request property specified by a
@@ -196,11 +196,11 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @see #getRequestProperties(java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function addRequestProperty(key : String, value : String) : Void;
+	@:require(java4) @:overload @:public override public function addRequestProperty(key : String, value : String) : Void;
 	
-	@:overload public function setAuthenticationProperty(key : String, value : String) : Void;
+	@:overload @:public public function setAuthenticationProperty(key : String, value : String) : Void;
 	
-	@:overload @:synchronized override public function getRequestProperty(key : String) : String;
+	@:overload @:public @:synchronized override public function getRequestProperty(key : String) : String;
 	
 	/**
 	* Returns an unmodifiable Map of general request
@@ -214,9 +214,9 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @throws IllegalStateException if already connected
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized override public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
+	@:require(java4) @:overload @:public @:synchronized override public function getRequestProperties() : java.util.Map<String, java.util.List<String>>;
 	
-	@:overload override public function setConnectTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setConnectTimeout(timeout : Int) : Void;
 	
 	/**
 	* Returns setting for connect timeout.
@@ -230,7 +230,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @see java.net.URLConnection#connect()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getConnectTimeout() : Int;
+	@:require(java5) @:overload @:public override public function getConnectTimeout() : Int;
 	
 	/**
 	* Sets the read timeout to a specified timeout, in
@@ -252,7 +252,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @see java.io.InputStream#read()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function setReadTimeout(timeout : Int) : Void;
+	@:require(java5) @:overload @:public override public function setReadTimeout(timeout : Int) : Void;
 	
 	/**
 	* Returns setting for read timeout. 0 return implies that the
@@ -265,9 +265,9 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @see java.io.InputStream#read()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getReadTimeout() : Int;
+	@:require(java5) @:overload @:public override public function getReadTimeout() : Int;
 	
-	@:overload public function getCookieHandler() : java.net.CookieHandler;
+	@:overload @:public public function getCookieHandler() : java.net.CookieHandler;
 	
 	
 }
@@ -289,9 +289,9 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 */
 @:native('sun$net$www$protocol$http$HttpURLConnection$HttpInputStream') @:internal extern class HttpURLConnection_HttpInputStream extends java.io.FilterInputStream
 {
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
-	@:overload public function new(is : java.io.InputStream, cacheRequest : java.net.CacheRequest) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, cacheRequest : java.net.CacheRequest) : Void;
 	
 	/**
 	* Marks the current position in this input stream. A subsequent
@@ -310,7 +310,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @see     java.io.FilterInputStream#in
 	* @see     java.io.FilterInputStream#reset()
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -333,45 +333,45 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.FilterInputStream#mark(int)
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('sun$net$www$protocol$http$HttpURLConnection$StreamingOutputStream') @:internal extern class HttpURLConnection_StreamingOutputStream extends java.io.FilterOutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('sun$net$www$protocol$http$HttpURLConnection$ErrorStream') @:internal extern class HttpURLConnection_ErrorStream extends java.io.InputStream
 {
-	@:overload public static function getErrorStream(is : java.io.InputStream, cl : haxe.Int64, http : sun.net.www.http.HttpClient) : java.io.InputStream;
+	@:overload @:public @:static public static function getErrorStream(is : java.io.InputStream, cl : haxe.Int64, http : sun.net.www.http.HttpClient) : java.io.InputStream;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -381,9 +381,9 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	* HTTP URLConnections that are KeepAlive && use the
 	* HEAD method - i.e., stream not dead, but nothing to be read.
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }

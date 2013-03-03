@@ -28,37 +28,37 @@ extern class SwitchData
 	/**
 	* Get a label
 	*/
-	@:overload public function get(n : Int) : sun.tools.asm.Label;
+	@:overload @:public public function get(n : Int) : sun.tools.asm.Label;
 	
 	/**
 	* Get a label
 	*/
-	@:overload public function get(n : Null<Int>) : sun.tools.asm.Label;
+	@:overload @:public public function get(n : Null<Int>) : sun.tools.asm.Label;
 	
 	/**
 	* Add a label
 	*/
-	@:overload public function add(n : Int, lbl : sun.tools.asm.Label) : Void;
+	@:overload @:public public function add(n : Int, lbl : sun.tools.asm.Label) : Void;
 	
 	/**
 	* Get the default label
 	*/
-	@:overload public function getDefaultLabel() : sun.tools.asm.Label;
+	@:overload @:public public function getDefaultLabel() : sun.tools.asm.Label;
 	
 	/**
 	* Return the keys of this enumaration sorted in ascending order
 	*/
-	@:overload @:synchronized public function sortedKeys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:synchronized public function sortedKeys() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function initTableCase() : Void;
+	@:overload @:public public function initTableCase() : Void;
 	
-	@:overload public function addTableCase(index : Int, where : haxe.Int64) : Void;
+	@:overload @:public public function addTableCase(index : Int, where : haxe.Int64) : Void;
 	
-	@:overload public function addTableDefault(where : haxe.Int64) : Void;
+	@:overload @:public public function addTableDefault(where : haxe.Int64) : Void;
 	
-	@:overload public function whereCase(key : Dynamic) : haxe.Int64;
+	@:overload @:public public function whereCase(key : Dynamic) : haxe.Int64;
 	
-	@:overload public function getDefault() : Bool;
+	@:overload @:public public function getDefault() : Bool;
 	
 	
 }
@@ -67,12 +67,12 @@ extern class SwitchData
 	/**
 	* Are there more keys to return?
 	*/
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	/**
 	* Return the next key.
 	*/
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

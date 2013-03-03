@@ -27,27 +27,27 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class StringArray extends com.sun.xml.internal.fastinfoset.util.ValueArray
 {
-	public var _array : java.NativeArray<String>;
+	@:public public var _array : java.NativeArray<String>;
 	
-	@:overload public function new(initialCapacity : Int, maximumCapacity : Int, clear : Bool) : Void;
+	@:overload @:public public function new(initialCapacity : Int, maximumCapacity : Int, clear : Bool) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
-	@:overload @:final public function getArray() : java.NativeArray<String>;
+	@:overload @:public @:final public function getArray() : java.NativeArray<String>;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
+	@:overload @:public @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.StringArray, clear : Bool) : Void;
+	@:overload @:public @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.StringArray, clear : Bool) : Void;
 	
-	@:overload @:final public function getCompleteArray() : java.NativeArray<String>;
+	@:overload @:public @:final public function getCompleteArray() : java.NativeArray<String>;
 	
-	@:overload @:final public function get(i : Int) : String;
+	@:overload @:public @:final public function get(i : Int) : String;
 	
-	@:overload @:final public function add(s : String) : Int;
+	@:overload @:public @:final public function add(s : String) : Int;
 	
-	@:overload @:final private function resize() : Void;
+	@:overload @:protected @:final private function resize() : Void;
 	
 	
 }

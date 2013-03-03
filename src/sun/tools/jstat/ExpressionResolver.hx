@@ -38,7 +38,7 @@ package sun.tools.jstat;
 	* evaluate the given expression. evaluation in this case means
 	* to resolve the counter names in the expression
 	*/
-	@:overload public function evaluate(e : sun.tools.jstat.Expression) : Dynamic;
+	@:overload @:public public function evaluate(e : sun.tools.jstat.Expression) : Dynamic;
 	
 	
 }

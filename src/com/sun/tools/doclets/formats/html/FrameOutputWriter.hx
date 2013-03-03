@@ -42,7 +42,7 @@ extern class FrameOutputWriter extends com.sun.tools.doclets.formats.html.HtmlDo
 	*
 	* @param filename File to be generated.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
 	
 	/**
 	* Construct FrameOutputWriter object and then use it to generate the Html
@@ -51,13 +51,13 @@ extern class FrameOutputWriter extends com.sun.tools.doclets.formats.html.HtmlDo
 	* the default first file for Html documents.
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl) : Void;
 	
 	/**
 	* Generate the contants in the "index.html" file. Print the frame details
 	* as well as warning if browser is not supporting the Html frames.
 	*/
-	@:overload private function generateFrameFile() : Void;
+	@:overload @:protected private function generateFrameFile() : Void;
 	
 	/**
 	* Add the code for issueing the warning for a non-frame capable web
@@ -65,14 +65,14 @@ extern class FrameOutputWriter extends com.sun.tools.doclets.formats.html.HtmlDo
 	*
 	* @param contentTree the content tree to which the non-frames information will be added
 	*/
-	@:overload private function addFrameWarning(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addFrameWarning(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the frame sizes and their contents.
 	*
 	* @return a content tree for the frame details
 	*/
-	@:overload private function getFrameDetails() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getFrameDetails() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

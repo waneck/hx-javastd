@@ -25,9 +25,9 @@ package sun.awt.geom;
 */
 @:internal extern class Order2 extends sun.awt.geom.Curve
 {
-	@:overload public static function insert(curves : java.util.Vector<Dynamic>, tmp : java.NativeArray<Float>, x0 : Float, y0 : Float, cx0 : Float, cy0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
+	@:overload @:public @:static public static function insert(curves : java.util.Vector<Dynamic>, tmp : java.NativeArray<Float>, x0 : Float, y0 : Float, cx0 : Float, cy0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
 	
-	@:overload public static function addInstance(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, cx0 : Float, cy0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
+	@:overload @:public @:static public static function addInstance(curves : java.util.Vector<Dynamic>, x0 : Float, y0 : Float, cx0 : Float, cy0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
 	
 	/*
 	* Return the count of the number of horizontal sections of the
@@ -51,7 +51,7 @@ package sun.awt.geom;
 	* Completely horizontal curves need to be eliminated by other
 	* means outside of this method.
 	*/
-	@:overload public static function getHorizontalParams(c0 : Float, cp : Float, c1 : Float, ret : java.NativeArray<Float>) : Int;
+	@:overload @:public @:static public static function getHorizontalParams(c0 : Float, cp : Float, c1 : Float, ret : java.NativeArray<Float>) : Int;
 	
 	/*
 	* Split the quadratic Bezier stored at coords[pos...pos+5] representing
@@ -59,61 +59,61 @@ package sun.awt.geom;
 	* parametric subranges [0..t] and [t..1].  Store the results back
 	* into the array at coords[pos...pos+5] and coords[pos+4...pos+9].
 	*/
-	@:overload public static function split(coords : java.NativeArray<Float>, pos : Int, t : Float) : Void;
+	@:overload @:public @:static public static function split(coords : java.NativeArray<Float>, pos : Int, t : Float) : Void;
 	
-	@:overload public function new(x0 : Float, y0 : Float, cx0 : Float, cy0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
+	@:overload @:public public function new(x0 : Float, y0 : Float, cx0 : Float, cy0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
 	
-	@:overload public function getOrder() : Int;
+	@:overload @:public override public function getOrder() : Int;
 	
-	@:overload public function getXTop() : Float;
+	@:overload @:public override public function getXTop() : Float;
 	
-	@:overload public function getYTop() : Float;
+	@:overload @:public override public function getYTop() : Float;
 	
-	@:overload public function getXBot() : Float;
+	@:overload @:public override public function getXBot() : Float;
 	
-	@:overload public function getYBot() : Float;
+	@:overload @:public override public function getYBot() : Float;
 	
-	@:overload public function getXMin() : Float;
+	@:overload @:public override public function getXMin() : Float;
 	
-	@:overload public function getXMax() : Float;
+	@:overload @:public override public function getXMax() : Float;
 	
-	@:overload public function getX0() : Float;
+	@:overload @:public override public function getX0() : Float;
 	
-	@:overload public function getY0() : Float;
+	@:overload @:public override public function getY0() : Float;
 	
-	@:overload public function getCX0() : Float;
+	@:overload @:public public function getCX0() : Float;
 	
-	@:overload public function getCY0() : Float;
+	@:overload @:public public function getCY0() : Float;
 	
-	@:overload public function getX1() : Float;
+	@:overload @:public override public function getX1() : Float;
 	
-	@:overload public function getY1() : Float;
+	@:overload @:public override public function getY1() : Float;
 	
-	@:overload public function XforY(y : Float) : Float;
+	@:overload @:public override public function XforY(y : Float) : Float;
 	
-	@:overload public function TforY(y : Float) : Float;
+	@:overload @:public override public function TforY(y : Float) : Float;
 	
-	@:native('TforY') @:overload public static function _TforY(y : Float, ycoeff0 : Float, ycoeff1 : Float, ycoeff2 : Float) : Float;
+	@:native('TforY') @:overload @:public @:static public static function _TforY(y : Float, ycoeff0 : Float, ycoeff1 : Float, ycoeff2 : Float) : Float;
 	
-	@:overload public function XforT(t : Float) : Float;
+	@:overload @:public override public function XforT(t : Float) : Float;
 	
-	@:overload public function YforT(t : Float) : Float;
+	@:overload @:public override public function YforT(t : Float) : Float;
 	
-	@:overload public function dXforT(t : Float, deriv : Int) : Float;
+	@:overload @:public override public function dXforT(t : Float, deriv : Int) : Float;
 	
-	@:overload public function dYforT(t : Float, deriv : Int) : Float;
+	@:overload @:public override public function dYforT(t : Float, deriv : Int) : Float;
 	
-	@:overload public function nextVertical(t0 : Float, t1 : Float) : Float;
+	@:overload @:public override public function nextVertical(t0 : Float, t1 : Float) : Float;
 	
-	@:overload public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
+	@:overload @:public override public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
 	
-	@:overload public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
+	@:overload @:public override public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
 	
-	@:overload public function getReversedCurve() : sun.awt.geom.Curve;
+	@:overload @:public override public function getReversedCurve() : sun.awt.geom.Curve;
 	
-	@:overload public function getSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public override public function getSegment(coords : java.NativeArray<Float>) : Int;
 	
-	@:overload public function controlPointString() : String;
+	@:overload @:public override public function controlPointString() : String;
 	
 	
 }

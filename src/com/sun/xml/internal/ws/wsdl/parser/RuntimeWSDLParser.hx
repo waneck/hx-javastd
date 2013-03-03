@@ -34,7 +34,7 @@ extern class RuntimeWSDLParser
 	*      Either this or <tt>wsdl</tt> parameter must be given.
 	*      Null location means the system won't be able to resolve relative references in the WSDL,
 	*/
-	@:overload public static function parse(wsdlLoc : java.net.URL, wsdlSource : javax.xml.transform.Source, resolver : org.xml.sax.EntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
+	@:overload @:public @:static public static function parse(wsdlLoc : java.net.URL, wsdlSource : javax.xml.transform.Source, resolver : org.xml.sax.EntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
 	
 	/**
 	* Parses the WSDL and gives WSDLModel. If wsdl parameter is null, then wsdlLoc is used to get the WSDL. If the WSDL
@@ -45,13 +45,13 @@ extern class RuntimeWSDLParser
 	*      Either this or <tt>wsdl</tt> parameter must be given.
 	*      Null location means the system won't be able to resolve relative references in the WSDL,
 	*/
-	@:overload public static function parse(wsdlLoc : java.net.URL, wsdlSource : javax.xml.transform.Source, resolver : org.xml.sax.EntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, policyResolver : com.sun.xml.internal.ws.api.policy.PolicyResolver, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
+	@:overload @:public @:static public static function parse(wsdlLoc : java.net.URL, wsdlSource : javax.xml.transform.Source, resolver : org.xml.sax.EntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, policyResolver : com.sun.xml.internal.ws.api.policy.PolicyResolver, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
 	
-	@:overload public static function parse(wsdl : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, policyResolver : com.sun.xml.internal.ws.api.policy.PolicyResolver, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
+	@:overload @:public @:static public static function parse(wsdl : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, policyResolver : com.sun.xml.internal.ws.api.policy.PolicyResolver, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
 	
-	@:overload public static function parse(wsdl : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
+	@:overload @:public @:static public static function parse(wsdl : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
 	
-	@:overload private function parseImport(baseURL : java.net.URL, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:protected private function parseImport(baseURL : java.net.URL, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }

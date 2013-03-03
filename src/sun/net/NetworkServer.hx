@@ -26,41 +26,41 @@ package sun.net;
 extern class NetworkServer implements java.lang.Runnable implements java.lang.Cloneable
 {
 	/** Socket for communicating with client. */
-	public var clientSocket : java.net.Socket;
+	@:public public var clientSocket : java.net.Socket;
 	
 	/** Stream for printing to the client. */
-	public var clientOutput : java.io.PrintStream;
+	@:public public var clientOutput : java.io.PrintStream;
 	
 	/** Buffered stream for reading replies from client. */
-	public var clientInput : java.io.InputStream;
+	@:public public var clientInput : java.io.InputStream;
 	
 	/** Close an open connection to the client. */
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/** Return client connection status */
-	@:overload public function clientIsOpen() : Bool;
+	@:overload @:public public function clientIsOpen() : Bool;
 	
-	@:overload @:final public function run() : Void;
+	@:overload @:final @:public public function run() : Void;
 	
 	/** Start a server on port <i>port</i>.  It will call serviceRequest()
 	for each new connection. */
-	@:overload @:final public function startServer(port : Int) : Void;
+	@:overload @:final @:public public function startServer(port : Int) : Void;
 	
 	/** Service one request.  It is invoked with the clientInput and
 	clientOutput streams initialized.  This method handles one client
 	connection. When it is done, it can simply exit. The default
 	server just echoes it's input. It is invoked in it's own private
 	thread. */
-	@:overload public function serviceRequest() : Void;
+	@:overload @:public public function serviceRequest() : Void;
 	
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	/**
 	* Clone this object;
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

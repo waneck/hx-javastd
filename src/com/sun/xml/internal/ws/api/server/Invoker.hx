@@ -37,13 +37,13 @@ extern class Invoker
 	*      to the user instances.
 	* @param endpoint
 	*/
-	@:overload public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
 	/**
 	* @deprecated
 	*      Use {@link #start(WSWebServiceContext,WSEndpoint)}
 	*/
-	@:overload public function start(wsc : javax.xml.ws.WebServiceContext) : Void;
+	@:overload @:public public function start(wsc : javax.xml.ws.WebServiceContext) : Void;
 	
 	/**
 	* Called by {@link WSEndpoint}
@@ -54,22 +54,22 @@ extern class Invoker
 	* <p>
 	* This method is guaranteed to be only called once by {@link WSEndpoint}.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	*
 	*/
-	@:overload @:abstract public function invoke(p : com.sun.xml.internal.ws.api.message.Packet, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:abstract public function invoke(p : com.sun.xml.internal.ws.api.message.Packet, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Invokes {@link Provider#invoke(Object)}
 	*/
-	@:overload public function invokeProvider<T>(p : com.sun.xml.internal.ws.api.message.Packet, arg : T) : T;
+	@:overload @:public public function invokeProvider<T>(p : com.sun.xml.internal.ws.api.message.Packet, arg : T) : T;
 	
 	/**
 	* Invokes {@link AsyncProvider#invoke(Object, AsyncProviderCallback, WebServiceContext)}
 	*/
-	@:overload public function invokeAsyncProvider<T>(p : com.sun.xml.internal.ws.api.message.Packet, arg : T, cbak : com.sun.xml.internal.ws.api.server.AsyncProviderCallback<Dynamic>, ctxt : javax.xml.ws.WebServiceContext) : Void;
+	@:overload @:public public function invokeAsyncProvider<T>(p : com.sun.xml.internal.ws.api.message.Packet, arg : T, cbak : com.sun.xml.internal.ws.api.server.AsyncProviderCallback<Dynamic>, ctxt : javax.xml.ws.WebServiceContext) : Void;
 	
 	
 }

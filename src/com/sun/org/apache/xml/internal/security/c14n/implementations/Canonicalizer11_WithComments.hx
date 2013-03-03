@@ -24,11 +24,11 @@ extern class Canonicalizer11_WithComments extends com.sun.org.apache.xml.interna
 	/**
 	* @author Sean Mullan
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final override public function engineGetURI() : String;
+	@:overload @:public @:final override public function engineGetURI() : String;
 	
-	@:overload @:final override public function engineGetIncludeComments() : Bool;
+	@:overload @:public @:final override public function engineGetIncludeComments() : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.tty;
 */
 @:internal extern class EventRequestSpec
 {
-	@:overload private function isJavaIdentifier(s : String) : Bool;
+	@:overload @:protected private function isJavaIdentifier(s : String) : Bool;
 	
 	
 }

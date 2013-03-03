@@ -7,19 +7,19 @@ package com.sun.corba.se.spi.activation.RepositoryPackage;
 */
 extern class ServerDef implements org.omg.CORBA.portable.IDLEntity
 {
-	public var applicationName : String;
+	@:public public var applicationName : String;
 	
-	public var serverName : String;
+	@:public public var serverName : String;
 	
-	public var serverClassPath : String;
+	@:public public var serverClassPath : String;
 	
-	public var serverArgs : String;
+	@:public public var serverArgs : String;
 	
-	public var serverVmArgs : String;
+	@:public public var serverVmArgs : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_applicationName : String, _serverName : String, _serverClassPath : String, _serverArgs : String, _serverVmArgs : String) : Void;
+	@:overload @:public public function new(_applicationName : String, _serverName : String, _serverClassPath : String, _serverArgs : String, _serverVmArgs : String) : Void;
 	
 	
 }

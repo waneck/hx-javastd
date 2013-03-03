@@ -25,11 +25,11 @@ package sun.security.action;
 */
 extern class OpenFileInputStreamAction implements java.security.PrivilegedExceptionAction<java.io.FileInputStream>
 {
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
-	@:overload public function new(filename : String) : Void;
+	@:overload @:public public function new(filename : String) : Void;
 	
-	@:overload public function run() : java.io.FileInputStream;
+	@:overload @:public public function run() : java.io.FileInputStream;
 	
 	
 }

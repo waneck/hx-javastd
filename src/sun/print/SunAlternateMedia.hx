@@ -25,21 +25,21 @@ package sun.print;
 */
 extern class SunAlternateMedia implements javax.print.attribute.PrintRequestAttribute
 {
-	@:overload public function new(altMedia : javax.print.attribute.standard.Media) : Void;
+	@:overload @:public public function new(altMedia : javax.print.attribute.standard.Media) : Void;
 	
-	@:overload public function getMedia() : javax.print.attribute.standard.Media;
+	@:overload @:public public function getMedia() : javax.print.attribute.standard.Media;
 	
-	@:overload @:final public function getCategory() : Class<Dynamic>;
+	@:overload @:public @:final public function getCategory() : Class<Dynamic>;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code value for this enumeration value. The hash code is
 	* just this enumeration value's integer value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

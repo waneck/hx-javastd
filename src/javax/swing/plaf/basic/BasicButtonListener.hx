@@ -25,42 +25,42 @@ package javax.swing.plaf.basic;
 */
 extern class BasicButtonListener implements java.awt.event.MouseListener implements java.awt.event.MouseMotionListener implements java.awt.event.FocusListener implements javax.swing.event.ChangeListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public public function new(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function checkOpacity(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected private function checkOpacity(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* Register default key actions: pressing space to "click" a
 	* button and registring the keyboard mnemonic (if any).
 	*/
-	@:overload public function installKeyboardActions(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function installKeyboardActions(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Unregister's default key actions
 	*/
-	@:overload public function uninstallKeyboardActions(c : javax.swing.JComponent) : Void;
+	@:overload @:public public function uninstallKeyboardActions(c : javax.swing.JComponent) : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -71,9 +71,9 @@ extern class BasicButtonListener implements java.awt.event.MouseListener impleme
 */
 @:native('javax$swing$plaf$basic$BasicButtonListener$Actions') @:internal extern class BasicButtonListener_Actions extends sun.swing.UIAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled(sender : Dynamic) : Bool;
+	@:overload @:public override public function isEnabled(sender : Dynamic) : Bool;
 	
 	
 }

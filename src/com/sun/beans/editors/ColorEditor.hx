@@ -25,37 +25,37 @@ package com.sun.beans.editors;
 */
 extern class ColorEditor extends java.awt.Panel implements java.beans.PropertyEditor
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setValue(o : Dynamic) : Void;
+	@:overload @:public public function setValue(o : Dynamic) : Void;
 	
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
-	@:overload public function keyUp(e : java.awt.Event, key : Int) : Bool;
+	@:overload @:public override public function keyUp(e : java.awt.Event, key : Int) : Bool;
 	
-	@:overload public function setAsText(s : String) : Void;
+	@:overload @:public public function setAsText(s : String) : Void;
 	
-	@:overload public function action(e : java.awt.Event, arg : Dynamic) : Bool;
+	@:overload @:public override public function action(e : java.awt.Event, arg : Dynamic) : Bool;
 	
-	@:overload public function getJavaInitializationString() : String;
+	@:overload @:public public function getJavaInitializationString() : String;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function isPaintable() : Bool;
+	@:overload @:public public function isPaintable() : Bool;
 	
-	@:overload public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
+	@:overload @:public public function paintValue(gfx : java.awt.Graphics, box : java.awt.Rectangle) : Void;
 	
-	@:overload public function getAsText() : String;
+	@:overload @:public public function getAsText() : String;
 	
-	@:overload public function getTags() : java.NativeArray<String>;
+	@:overload @:public public function getTags() : java.NativeArray<String>;
 	
-	@:overload public function getCustomEditor() : java.awt.Component;
+	@:overload @:public public function getCustomEditor() : java.awt.Component;
 	
-	@:overload public function supportsCustomEditor() : Bool;
+	@:overload @:public public function supportsCustomEditor() : Bool;
 	
-	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

@@ -30,11 +30,11 @@ extern class NoCloseOutputStream extends java.io.FilterOutputStream
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function doClose() : Void;
+	@:overload @:public public function doClose() : Void;
 	
 	
 }

@@ -88,21 +88,21 @@ package java.lang.management;
 	*
 	* @return the ID of the associated thread.
 	*/
-	@:overload public function getThreadId() : haxe.Int64;
+	@:overload @:public public function getThreadId() : haxe.Int64;
 	
 	/**
 	* Returns the name of the thread associated with this <tt>ThreadInfo</tt>.
 	*
 	* @return the name of the associated thread.
 	*/
-	@:overload public function getThreadName() : String;
+	@:overload @:public public function getThreadName() : String;
 	
 	/**
 	* Returns the state of the thread associated with this <tt>ThreadInfo</tt>.
 	*
 	* @return <tt>Thread.State</tt> of the associated thread.
 	*/
-	@:overload public function getThreadState() : java.lang.Thread.Thread_State;
+	@:overload @:public public function getThreadState() : java.lang.Thread.Thread_State;
 	
 	/**
 	* Returns the approximate accumulated elapsed time (in milliseconds)
@@ -129,7 +129,7 @@ package java.lang.management;
 	* @see ThreadMXBean#isThreadContentionMonitoringSupported
 	* @see ThreadMXBean#setThreadContentionMonitoringEnabled
 	*/
-	@:overload public function getBlockedTime() : haxe.Int64;
+	@:overload @:public public function getBlockedTime() : haxe.Int64;
 	
 	/**
 	* Returns the total number of times that
@@ -141,7 +141,7 @@ package java.lang.management;
 	* @return the total number of times that the thread
 	* entered the <tt>BLOCKED</tt> state.
 	*/
-	@:overload public function getBlockedCount() : haxe.Int64;
+	@:overload @:public public function getBlockedCount() : haxe.Int64;
 	
 	/**
 	* Returns the approximate accumulated elapsed time (in milliseconds)
@@ -170,7 +170,7 @@ package java.lang.management;
 	* @see ThreadMXBean#isThreadContentionMonitoringSupported
 	* @see ThreadMXBean#setThreadContentionMonitoringEnabled
 	*/
-	@:overload public function getWaitedTime() : haxe.Int64;
+	@:overload @:public public function getWaitedTime() : haxe.Int64;
 	
 	/**
 	* Returns the total number of times that
@@ -183,7 +183,7 @@ package java.lang.management;
 	* @return the total number of times that the thread
 	* was in the <tt>WAITING</tt> or <tt>TIMED_WAITING</tt> state.
 	*/
-	@:overload public function getWaitedCount() : haxe.Int64;
+	@:overload @:public public function getWaitedCount() : haxe.Int64;
 	
 	/**
 	* Returns the <tt>LockInfo</tt> of an object for which
@@ -222,7 +222,7 @@ package java.lang.management;
 	*         is blocked waiting if any; <tt>null</tt> otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLockInfo() : java.lang.management.LockInfo;
+	@:require(java6) @:overload @:public public function getLockInfo() : java.lang.management.LockInfo;
 	
 	/**
 	* Returns the {@link LockInfo#toString string representation}
@@ -243,7 +243,7 @@ package java.lang.management;
 	*
 	* @see #getLockInfo
 	*/
-	@:overload public function getLockName() : String;
+	@:overload @:public public function getLockName() : String;
 	
 	/**
 	* Returns the ID of the thread which owns the object
@@ -259,7 +259,7 @@ package java.lang.management;
 	*
 	* @see #getLockInfo
 	*/
-	@:overload public function getLockOwnerId() : haxe.Int64;
+	@:overload @:public public function getLockOwnerId() : haxe.Int64;
 	
 	/**
 	* Returns the name of the thread which owns the object
@@ -275,7 +275,7 @@ package java.lang.management;
 	*
 	* @see #getLockInfo
 	*/
-	@:overload public function getLockOwnerName() : String;
+	@:overload @:public public function getLockOwnerName() : String;
 	
 	/**
 	* Returns the stack trace of the thread
@@ -296,7 +296,7 @@ package java.lang.management;
 	*
 	* @return an array of <tt>StackTraceElement</tt> objects of the thread.
 	*/
-	@:overload public function getStackTrace() : java.NativeArray<java.lang.StackTraceElement>;
+	@:overload @:public public function getStackTrace() : java.NativeArray<java.lang.StackTraceElement>;
 	
 	/**
 	* Tests if the thread associated with this <tt>ThreadInfo</tt>
@@ -306,7 +306,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if the thread is suspended;
 	*         <tt>false</tt> otherwise.
 	*/
-	@:overload public function isSuspended() : Bool;
+	@:overload @:public public function isSuspended() : Bool;
 	
 	/**
 	* Tests if the thread associated with this <tt>ThreadInfo</tt>
@@ -318,7 +318,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if the thread is executing native code;
 	*         <tt>false</tt> otherwise.
 	*/
-	@:overload public function isInNative() : Bool;
+	@:overload @:public public function isInNative() : Bool;
 	
 	/**
 	* Returns a string representation of this thread info.
@@ -331,7 +331,7 @@ package java.lang.management;
 	*
 	* @return a string representation of this thread info.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a <tt>ThreadInfo</tt> object represented by the
@@ -475,7 +475,7 @@ package java.lang.management;
 	*         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.ThreadInfo;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.ThreadInfo;
 	
 	/**
 	* Returns an array of {@link MonitorInfo} objects, each of which
@@ -490,7 +490,7 @@ package java.lang.management;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLockedMonitors() : java.NativeArray<java.lang.management.MonitorInfo>;
+	@:require(java6) @:overload @:public public function getLockedMonitors() : java.NativeArray<java.lang.management.MonitorInfo>;
 	
 	/**
 	* Returns an array of {@link LockInfo} objects, each of which
@@ -505,7 +505,7 @@ package java.lang.management;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getLockedSynchronizers() : java.NativeArray<java.lang.management.LockInfo>;
+	@:require(java6) @:overload @:public public function getLockedSynchronizers() : java.NativeArray<java.lang.management.LockInfo>;
 	
 	
 }

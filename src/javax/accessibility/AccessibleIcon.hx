@@ -51,7 +51,7 @@ package javax.accessibility;
 	*
 	* @return the description of the icon
 	*/
-	@:overload public function getAccessibleIconDescription() : String;
+	@:overload @:public public function getAccessibleIconDescription() : String;
 	
 	/**
 	* Sets the description of the icon.  This is meant to be a brief
@@ -61,21 +61,21 @@ package javax.accessibility;
 	*
 	* @param description the description of the icon
 	*/
-	@:overload public function setAccessibleIconDescription(description : String) : Void;
+	@:overload @:public public function setAccessibleIconDescription(description : String) : Void;
 	
 	/**
 	* Gets the width of the icon
 	*
 	* @return the width of the icon.
 	*/
-	@:overload public function getAccessibleIconWidth() : Int;
+	@:overload @:public public function getAccessibleIconWidth() : Int;
 	
 	/**
 	* Gets the height of the icon
 	*
 	* @return the height of the icon.
 	*/
-	@:overload public function getAccessibleIconHeight() : Int;
+	@:overload @:public public function getAccessibleIconHeight() : Int;
 	
 	
 }

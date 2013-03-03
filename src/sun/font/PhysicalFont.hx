@@ -25,15 +25,15 @@ package sun.font;
 */
 extern class PhysicalFont extends sun.font.Font2D
 {
-	private var platName : String;
+	@:protected private var platName : String;
 	
-	private var nativeNames : Dynamic;
+	@:protected private var nativeNames : Dynamic;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

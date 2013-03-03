@@ -25,15 +25,15 @@ extern interface IncrementalSAXSource
 {
 	/** Register a SAX-style content handler for us to output to
 	*/
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**  Register a SAX-style lexical handler for us to output to
 	*/
-	@:overload public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**  Register a SAX-style DTD handler for us to output to
 	*/
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/** deliverMoreNodes() is a simple API which tells the thread in which the
 	* IncrementalSAXSource is running to deliver more events (true),
@@ -49,7 +49,7 @@ extern interface IncrementalSAXSource
 	* may be available for further parsing. Boolean.FALSE if parsing
 	* ran to completion, or was ended by deliverMoreNodes(false).
 	* */
-	@:overload public function deliverMoreNodes(parsemore : Bool) : Dynamic;
+	@:overload @:public public function deliverMoreNodes(parsemore : Bool) : Dynamic;
 	
 	/** Launch an XMLReader's parsing operation, feeding events to this
 	* IncrementalSAXSource. In some implementations, this may launch a
@@ -59,7 +59,7 @@ extern interface IncrementalSAXSource
 	* @throws SAXException is parse thread is already in progress
 	* or parsing can not be started.
 	* */
-	@:overload public function startParse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function startParse(source : org.xml.sax.InputSource) : Void;
 	
 	
 }

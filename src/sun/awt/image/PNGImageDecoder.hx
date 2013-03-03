@@ -25,27 +25,27 @@ package sun.awt.image;
 */
 extern class PNGImageDecoder extends sun.awt.image.ImageDecoder
 {
-	@:overload private function handleChunk(key : Int, buf : java.NativeArray<java.StdTypes.Int8>, st : Int, len : Int) : Bool;
+	@:overload @:protected private function handleChunk(key : Int, buf : java.NativeArray<java.StdTypes.Int8>, st : Int, len : Int) : Bool;
 	
 	/* this is changed
 	public void run() {
 	*/
-	@:overload override public function produceImage() : Void;
+	@:overload @:public override public function produceImage() : Void;
 	
 	/* code changed
 	public PNGImageDecoder(InputStream in, ImageConsumer t) throws IOException {
 	*/
-	@:overload public function new(src : sun.awt.image.InputStreamImageSource, input : java.io.InputStream) : Void;
+	@:overload @:public public function new(src : sun.awt.image.InputStreamImageSource, input : java.io.InputStream) : Void;
 	
-	@:overload public static function getCheckCRC() : Bool;
+	@:overload @:public @:static public static function getCheckCRC() : Bool;
 	
-	@:overload public static function setCheckCRC(c : Bool) : Void;
+	@:overload @:public @:static public static function setCheckCRC(c : Bool) : Void;
 	
-	@:overload private function wrc(c : Int) : Void;
+	@:overload @:protected private function wrc(c : Int) : Void;
 	
-	@:overload private function wrk(n : Int) : Void;
+	@:overload @:protected private function wrk(n : Int) : Void;
 	
-	@:overload public function print() : Void;
+	@:overload @:public public function print() : Void;
 	
 	
 }
@@ -55,29 +55,43 @@ extern class PNGImageDecoder extends sun.awt.image.ImageDecoder
 }
 @:native('sun$awt$image$PNGImageDecoder$Chromaticities') extern class PNGImageDecoder_Chromaticities
 {
-	public var whiteX : Single;
+	@:public public var whiteX : Single;
 	
-	@:overload public function toString() : String;
+	@:public public var whiteY : Single;
+	
+	@:public public var redX : Single;
+	
+	@:public public var redY : Single;
+	
+	@:public public var greenX : Single;
+	
+	@:public public var greenY : Single;
+	
+	@:public public var blueX : Single;
+	
+	@:public public var blueY : Single;
+	
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class PNGFilterInputStream extends java.io.FilterInputStream
 {
-	public var underlyingInputStream : java.io.InputStream;
+	@:public public var underlyingInputStream : java.io.InputStream;
 	
-	@:overload public function new(owner : sun.awt.image.PNGImageDecoder, is : java.io.InputStream) : Void;
+	@:overload @:public public function new(owner : sun.awt.image.PNGImageDecoder, is : java.io.InputStream) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, st : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, st : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

@@ -28,22 +28,22 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 extern class NamespaceBase extends com.sun.xml.internal.fastinfoset.stax.events.AttributeBase implements javax.xml.stream.events.Namespace
 {
 	/** a namespace attribute has a form: xmlns:NCName="URI reference" */
-	@:overload public function new(namespaceURI : String) : Void;
+	@:overload @:public public function new(namespaceURI : String) : Void;
 	
 	/**
 	* Create a new Namespace
 	* @param prefix prefix of a namespace is the local name for an attribute
 	* @param namespaceURI the uri reference of a namespace is the value for an attribute
 	*/
-	@:overload public function new(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function new(prefix : String, namespaceURI : String) : Void;
 	
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function isNamespace() : Bool;
+	@:overload @:public override public function isNamespace() : Bool;
 	
-	@:overload public function isDefaultNamespaceDeclaration() : Bool;
+	@:overload @:public public function isDefaultNamespaceDeclaration() : Bool;
 	
 	
 }

@@ -40,14 +40,14 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* Protected default constructor for the subclasses
 	* @stable ICU 2.4
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Indicator that we have reached the ends of the UTF16 text.
 	* Moved from UForwardCharacterIterator.java
 	* @stable ICU 2.4
 	*/
-	public static var DONE(default, null) : Int;
+	@:public @:static @:final public static var DONE(default, null) : Int;
 	
 	/**
 	* Returns a <code>UCharacterIterator</code> object given a
@@ -57,7 +57,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @exception IllegalArgumentException if the argument is null
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public static function getInstance(source : String) : sun.text.normalizer.UCharacterIterator;
+	@:overload @:public @:static @:final public static function getInstance(source : String) : sun.text.normalizer.UCharacterIterator;
 	
 	/**
 	* Returns a <code>UCharacterIterator</code> object given a
@@ -67,7 +67,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @exception IllegalArgumentException if the argument is null
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public static function getInstance(source : java.lang.StringBuffer) : sun.text.normalizer.UCharacterIterator;
+	@:overload @:public @:static @:final public static function getInstance(source : java.lang.StringBuffer) : sun.text.normalizer.UCharacterIterator;
 	
 	/**
 	* Returns a <code>UCharacterIterator</code> object given a
@@ -77,7 +77,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @exception IllegalArgumentException if the argument is null
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public static function getInstance(source : java.text.CharacterIterator) : sun.text.normalizer.UCharacterIterator;
+	@:overload @:public @:static @:final public static function getInstance(source : java.text.CharacterIterator) : sun.text.normalizer.UCharacterIterator;
 	
 	/**
 	* Returns the code unit at the current index.  If index is out
@@ -85,21 +85,21 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @return current code unit
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function current() : Int;
+	@:overload @:public @:abstract public function current() : Int;
 	
 	/**
 	* Returns the length of the text
 	* @return length of the text
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function getLength() : Int;
+	@:overload @:public @:abstract public function getLength() : Int;
 	
 	/**
 	* Gets the current index in text.
 	* @return current index in text.
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function getIndex() : Int;
+	@:overload @:public @:abstract public function getIndex() : Int;
 	
 	/**
 	* Returns the UTF16 code unit at index, and increments to the next
@@ -110,7 +110,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	*         of the text.
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function next() : Int;
+	@:overload @:public @:abstract public function next() : Int;
 	
 	/**
 	* Returns the code point at index, and increments to the next code
@@ -123,7 +123,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	*         the limit of the text.
 	* @stable ICU 2.4
 	*/
-	@:overload public function nextCodePoint() : Int;
+	@:overload @:public public function nextCodePoint() : Int;
 	
 	/**
 	* Decrement to the position of the previous code unit in the
@@ -134,7 +134,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	*         index is before the start of the text.
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function previous() : Int;
+	@:overload @:public @:abstract public function previous() : Int;
 	
 	/**
 	* Sets the index to the specified index in the text.
@@ -143,7 +143,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	*            supplied
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function setIndex(index : Int) : Void;
+	@:overload @:public @:abstract public function setIndex(index : Int) : Void;
 	
 	/**
 	* Fills the buffer with the underlying text storage of the iterator
@@ -180,7 +180,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	*            room after offset in the array, or if offset < 0.
 	* @stable ICU 2.4
 	*/
-	@:overload @:abstract public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>, offset : Int) : Int;
+	@:overload @:public @:abstract public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>, offset : Int) : Int;
 	
 	/**
 	* Convenience override for <code>getText(char[], int)</code> that provides
@@ -192,14 +192,14 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	*            room in the array.
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public @:final public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	/**
 	* Convenience method for returning the underlying text storage as as string
 	* @return the underlying text storage in the iterator as a string
 	* @stable ICU 2.4
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Moves the current position by the number of code units
@@ -217,7 +217,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @stable ICU 2.4
 	*
 	*/
-	@:overload public function moveIndex(delta : Int) : Int;
+	@:overload @:public public function moveIndex(delta : Int) : Int;
 	
 	/**
 	* Creates a copy of this iterator, independent from other iterators.
@@ -225,7 +225,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @return copy of this iterator
 	* @stable ICU 2.4
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

@@ -88,7 +88,7 @@ extern interface DirObjectFactory extends javax.naming.spi.ObjectFactory
 	* @see DirectoryManager#getObjectInstance
 	* @see NamingManager#getURLContext
 	*/
-	@:overload public function getObjectInstance(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, attrs : javax.naming.directory.Attributes) : Dynamic;
+	@:overload @:public public function getObjectInstance(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, attrs : javax.naming.directory.Attributes) : Dynamic;
 	
 	
 }

@@ -29,19 +29,19 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class SOAPPart1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl implements javax.xml.soap.SOAPConstants
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(message : com.sun.xml.internal.messaging.saaj.soap.MessageImpl) : Void;
+	@:overload @:public public function new(message : com.sun.xml.internal.messaging.saaj.soap.MessageImpl) : Void;
 	
-	@:overload private function getContentType() : String;
+	@:overload @:protected override private function getContentType() : String;
 	
-	@:overload private function createEmptyEnvelope(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.Envelope;
+	@:overload @:protected override private function createEmptyEnvelope(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.Envelope;
 	
-	@:overload private function createEnvelopeFromSource() : com.sun.xml.internal.messaging.saaj.soap.Envelope;
+	@:overload @:protected override private function createEnvelopeFromSource() : com.sun.xml.internal.messaging.saaj.soap.Envelope;
 	
-	@:overload private function duplicateType() : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl;
+	@:overload @:protected override private function duplicateType() : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl;
 	
 	
 }

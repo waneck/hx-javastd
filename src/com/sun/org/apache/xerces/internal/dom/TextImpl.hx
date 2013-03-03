@@ -21,10 +21,10 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDataImpl implements org.w3c.dom.CharacterData implements org.w3c.dom.Text
 {
 	/** Default constructor */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Factory constructor. */
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
 	
 	/**
 	* NON-DOM: resets node and sets specified values for the current node
@@ -32,21 +32,21 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDa
 	* @param ownerDoc
 	* @param data
 	*/
-	@:overload public function setValues(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
+	@:overload @:public public function setValues(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, data : String) : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/** Returns the node name. */
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/**
 	* NON-DOM: Set whether this Text is ignorable whitespace.
 	*/
-	@:overload public function setIgnorableWhitespace(ignore : Bool) : Void;
+	@:overload @:public public function setIgnorableWhitespace(ignore : Bool) : Void;
 	
 	/**
 	* DOM L3 Core CR - Experimental
@@ -58,7 +58,7 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDa
 	* <code>Document.normalizeDocument()</code>.
 	* @since DOM Level 3
 	*/
-	@:overload public function isElementContentWhitespace() : Bool;
+	@:overload @:public public function isElementContentWhitespace() : Bool;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
@@ -66,7 +66,7 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDa
 	* nodes to this node, concatenated in document order.
 	* @since DOM Level 3
 	*/
-	@:overload public function getWholeText() : String;
+	@:overload @:public public function getWholeText() : String;
 	
 	/**
 	* internal method taking a StringBuffer in parameter and inserts the
@@ -74,7 +74,7 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDa
 	*
 	* @param buf
 	*/
-	@:overload private function insertTextContent(buf : java.lang.StringBuffer) : Void;
+	@:overload @:protected private function insertTextContent(buf : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Replaces the text of the current node and all logically-adjacent text
@@ -87,12 +87,12 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDa
 	* @return text - The Text node created with the specified content.
 	* @since DOM Level 3
 	*/
-	@:overload public function replaceWholeText(content : String) : org.w3c.dom.Text;
+	@:overload @:public public function replaceWholeText(content : String) : org.w3c.dom.Text;
 	
 	/**
 	* NON-DOM: Returns whether this Text is ignorable whitespace.
 	*/
-	@:overload public function isIgnorableWhitespace() : Bool;
+	@:overload @:public public function isIgnorableWhitespace() : Bool;
 	
 	/**
 	* Break a text node into two sibling nodes. (Note that if the current node
@@ -112,18 +112,18 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDa
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR)
 	*             if node is read-only.
 	*/
-	@:overload public function splitText(offset : Int) : org.w3c.dom.Text;
+	@:overload @:public public function splitText(offset : Int) : org.w3c.dom.Text;
 	
 	/**
 	* NON-DOM (used by DOMParser): Reset data for the node.
 	*/
-	@:overload public function replaceData(value : String) : Void;
+	@:overload @:public public function replaceData(value : String) : Void;
 	
 	/**
 	* NON-DOM (used by DOMParser: Sets data to empty string.
 	*  Returns the value the data was set to.
 	*/
-	@:overload public function removeData() : String;
+	@:overload @:public public function removeData() : String;
 	
 	
 }

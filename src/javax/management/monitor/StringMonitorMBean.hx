@@ -33,7 +33,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	* @return The derived gauge.
 	* @deprecated As of JMX 1.2, replaced by {@link #getDerivedGauge(ObjectName)}
 	*/
-	@:overload public function getDerivedGauge() : String;
+	@:overload @:public public function getDerivedGauge() : String;
 	
 	/**
 	* Gets the derived gauge timestamp.
@@ -41,7 +41,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	* @return The derived gauge timestamp.
 	* @deprecated As of JMX 1.2, replaced by {@link #getDerivedGaugeTimeStamp(ObjectName)}
 	*/
-	@:overload public function getDerivedGaugeTimeStamp() : haxe.Int64;
+	@:overload @:public public function getDerivedGaugeTimeStamp() : haxe.Int64;
 	
 	/**
 	* Gets the derived gauge for the specified MBean.
@@ -51,7 +51,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*         set of observed MBeans, or <code>null</code> otherwise.
 	*
 	*/
-	@:overload public function getDerivedGauge(object : javax.management.ObjectName) : String;
+	@:overload @:public public function getDerivedGauge(object : javax.management.ObjectName) : String;
 	
 	/**
 	* Gets the derived gauge timestamp for the specified MBean.
@@ -61,7 +61,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*         is in the set of observed MBeans, or <code>null</code> otherwise.
 	*
 	*/
-	@:overload public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:public public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Gets the string to compare with the observed attribute.
@@ -70,7 +70,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*
 	* @see #setStringToCompare
 	*/
-	@:overload public function getStringToCompare() : String;
+	@:overload @:public public function getStringToCompare() : String;
 	
 	/**
 	* Sets the string to compare with the observed attribute.
@@ -81,7 +81,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*
 	* @see #getStringToCompare
 	*/
-	@:overload public function setStringToCompare(value : String) : Void;
+	@:overload @:public public function setStringToCompare(value : String) : Void;
 	
 	/**
 	* Gets the matching notification's on/off switch value.
@@ -91,7 +91,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*
 	* @see #setNotifyMatch
 	*/
-	@:overload public function getNotifyMatch() : Bool;
+	@:overload @:public public function getNotifyMatch() : Bool;
 	
 	/**
 	* Sets the matching notification's on/off switch value.
@@ -100,7 +100,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*
 	* @see #getNotifyMatch
 	*/
-	@:overload public function setNotifyMatch(value : Bool) : Void;
+	@:overload @:public public function setNotifyMatch(value : Bool) : Void;
 	
 	/**
 	* Gets the differing notification's on/off switch value.
@@ -110,7 +110,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*
 	* @see #setNotifyDiffer
 	*/
-	@:overload public function getNotifyDiffer() : Bool;
+	@:overload @:public public function getNotifyDiffer() : Bool;
 	
 	/**
 	* Sets the differing notification's on/off switch value.
@@ -119,7 +119,7 @@ extern interface StringMonitorMBean extends javax.management.monitor.MonitorMBea
 	*
 	* @see #getNotifyDiffer
 	*/
-	@:overload public function setNotifyDiffer(value : Bool) : Void;
+	@:overload @:public public function setNotifyDiffer(value : Bool) : Void;
 	
 	
 }

@@ -25,47 +25,47 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsInternalFrameTitlePane extends javax.swing.plaf.basic.BasicInternalFrameTitlePane
 {
-	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload private function addSubComponents() : Void;
+	@:overload @:protected override private function addSubComponents() : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload private function createButtons() : Void;
+	@:overload @:protected override private function createButtons() : Void;
 	
-	@:overload private function setButtonIcons() : Void;
+	@:overload @:protected override private function setButtonIcons() : Void;
 	
-	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload private function paintTitleBackground(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintTitleBackground(g : java.awt.Graphics) : Void;
 	
-	@:overload private function assembleSystemMenu() : Void;
+	@:overload @:protected override private function assembleSystemMenu() : Void;
 	
-	@:overload private function addSystemMenuItems(menu : javax.swing.JPopupMenu) : Void;
+	@:overload @:protected private function addSystemMenuItems(menu : javax.swing.JPopupMenu) : Void;
 	
-	@:overload private function showSystemMenu() : Void;
+	@:overload @:protected override private function showSystemMenu() : Void;
 	
-	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayout() : java.awt.LayoutManager;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsInternalFrameTitlePane$WindowsTitlePaneLayout') extern class WindowsInternalFrameTitlePane_WindowsTitlePaneLayout extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_TitlePaneLayout
 {
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsInternalFrameTitlePane$WindowsPropertyChangeHandler') extern class WindowsInternalFrameTitlePane_WindowsPropertyChangeHandler extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_PropertyChangeHandler
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -85,18 +85,18 @@ extern class WindowsInternalFrameTitlePane extends javax.swing.plaf.basic.BasicI
 	* <p>
 	* The constructor is public so it can be called by UIDefaults.ProxyLazyValue.
 	*/
-	@:overload public function new(objects : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(objects : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* @return the <code>Icon</code> closest to the requested size
 	*/
-	@:overload private function getBestIcon(size : Int) : javax.swing.Icon;
+	@:overload @:protected private function getBestIcon(size : Int) : javax.swing.Icon;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

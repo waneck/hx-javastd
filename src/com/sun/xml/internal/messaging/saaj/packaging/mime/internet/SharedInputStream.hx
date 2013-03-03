@@ -34,7 +34,7 @@ extern interface SharedInputStream
 	*
 	* @return  the current position
 	*/
-	@:overload public function getPosition() : haxe.Int64;
+	@:overload @:public public function getPosition() : haxe.Int64;
 	
 	/**
 	* Return a new InputStream representing a subset of the data
@@ -48,12 +48,12 @@ extern interface SharedInputStream
 	* @param   end     the ending position + 1
 	* @return          the new stream
 	*/
-	@:overload public function newStream(start : haxe.Int64, end : haxe.Int64) : java.io.InputStream;
+	@:overload @:public public function newStream(start : haxe.Int64, end : haxe.Int64) : java.io.InputStream;
 	
 	/**
 	* Writes the specified region to another {@link OutputStream}.
 	*/
-	@:overload public function writeTo(start : haxe.Int64, end : haxe.Int64, out : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(start : haxe.Int64, end : haxe.Int64, out : java.io.OutputStream) : Void;
 	
 	
 }

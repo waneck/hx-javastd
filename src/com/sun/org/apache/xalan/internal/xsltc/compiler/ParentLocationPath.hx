@@ -23,34 +23,34 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class ParentLocationPath extends com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath
 {
-	@:overload public function new(path : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath, step : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
+	@:overload @:public public function new(path : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath, step : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression) : Void;
 	
-	@:overload public function setAxis(axis : Int) : Void;
+	@:overload @:public override public function setAxis(axis : Int) : Void;
 	
-	@:overload public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
-	@:overload public function getPath() : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath;
+	@:overload @:public public function getPath() : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativeLocationPath;
 	
-	@:overload public function getStep() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:public public function getStep() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function enableNodeOrdering() : Void;
+	@:overload @:public public function enableNodeOrdering() : Void;
 	
 	/**
 	* This method is used to determine if this parent location path is a
 	* combination of two step's with axes that will create duplicate or
 	* unordered nodes.
 	*/
-	@:overload public function checkAxisMismatch() : Bool;
+	@:overload @:public public function checkAxisMismatch() : Bool;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function translateStep(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateStep(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

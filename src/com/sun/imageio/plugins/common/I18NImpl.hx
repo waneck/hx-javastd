@@ -30,7 +30,7 @@ extern class I18NImpl
 	* "properties" file in the package containing the class with
 	* the specified name.
 	*/
-	@:overload @:final private static function getString(className : String, resource_name : String, key : String) : String;
+	@:overload @:protected @:static @:final private static function getString(className : String, resource_name : String, key : String) : String;
 	
 	
 }

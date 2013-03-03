@@ -25,15 +25,15 @@ package com.sun.tools.internal.xjc.generator.bean;
 */
 extern class ClassOutlineImpl extends com.sun.tools.internal.xjc.outline.ClassOutline
 {
-	@:overload public function createMethodWriter() : com.sun.tools.internal.xjc.generator.bean.MethodWriter;
+	@:overload @:public public function createMethodWriter() : com.sun.tools.internal.xjc.generator.bean.MethodWriter;
 	
 	/**
 	* Gets {@link #_package} as {@link PackageOutlineImpl},
 	* since it's guaranteed to be of that type.
 	*/
-	@:overload override public function _package() : com.sun.tools.internal.xjc.generator.bean.PackageOutlineImpl;
+	@:overload @:public override public function _package() : com.sun.tools.internal.xjc.generator.bean.PackageOutlineImpl;
 	
-	@:overload override public function parent() : com.sun.tools.internal.xjc.generator.bean.BeanGenerator;
+	@:overload @:public override public function parent() : com.sun.tools.internal.xjc.generator.bean.BeanGenerator;
 	
 	
 }

@@ -25,39 +25,39 @@ package java.net;
 */
 @:internal extern class PlainDatagramSocketImpl extends java.net.AbstractPlainDatagramSocketImpl
 {
-	@:overload @:synchronized @:native override private function bind0(lport : Int, laddr : java.net.InetAddress) : Void;
+	@:overload @:protected @:synchronized @:native override private function bind0(lport : Int, laddr : java.net.InetAddress) : Void;
 	
-	@:overload @:native override private function send(p : java.net.DatagramPacket) : Void;
+	@:overload @:protected @:native override private function send(p : java.net.DatagramPacket) : Void;
 	
-	@:overload @:synchronized @:native override private function peek(i : java.net.InetAddress) : Int;
+	@:overload @:protected @:synchronized @:native override private function peek(i : java.net.InetAddress) : Int;
 	
-	@:overload @:synchronized @:native override private function peekData(p : java.net.DatagramPacket) : Int;
+	@:overload @:protected @:synchronized @:native override private function peekData(p : java.net.DatagramPacket) : Int;
 	
-	@:overload @:synchronized @:native override private function receive0(p : java.net.DatagramPacket) : Void;
+	@:overload @:protected @:synchronized @:native override private function receive0(p : java.net.DatagramPacket) : Void;
 	
-	@:overload @:native override private function setTimeToLive(ttl : Int) : Void;
+	@:overload @:protected @:native override private function setTimeToLive(ttl : Int) : Void;
 	
-	@:overload @:native override private function getTimeToLive() : Int;
+	@:overload @:protected @:native override private function getTimeToLive() : Int;
 	
-	@:overload @:native override private function setTTL(ttl : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:native override private function setTTL(ttl : java.StdTypes.Int8) : Void;
 	
-	@:overload @:native override private function getTTL() : java.StdTypes.Int8;
+	@:overload @:protected @:native override private function getTTL() : java.StdTypes.Int8;
 	
-	@:overload @:native override private function join(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
+	@:overload @:protected @:native override private function join(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
 	
-	@:overload @:native override private function leave(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
+	@:overload @:protected @:native override private function leave(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
 	
-	@:overload @:native override private function datagramSocketCreate() : Void;
+	@:overload @:protected @:native override private function datagramSocketCreate() : Void;
 	
-	@:overload @:native override private function datagramSocketClose() : Void;
+	@:overload @:protected @:native override private function datagramSocketClose() : Void;
 	
-	@:overload @:native override private function socketSetOption(opt : Int, val : Dynamic) : Void;
+	@:overload @:protected @:native override private function socketSetOption(opt : Int, val : Dynamic) : Void;
 	
-	@:overload @:native override private function socketGetOption(opt : Int) : Dynamic;
+	@:overload @:protected @:native override private function socketGetOption(opt : Int) : Dynamic;
 	
-	@:overload @:native override private function connect0(address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:protected @:native override private function connect0(address : java.net.InetAddress, port : Int) : Void;
 	
-	@:overload @:native override private function disconnect0(family : Int) : Void;
+	@:overload @:protected @:native override private function disconnect0(family : Int) : Void;
 	
 	
 }

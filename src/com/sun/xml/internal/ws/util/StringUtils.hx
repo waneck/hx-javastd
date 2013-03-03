@@ -42,7 +42,7 @@ extern class StringUtils
 	* @param  name The string to be decapitalized.
 	* @return  The decapitalized version of the string.
 	*/
-	@:overload public static function decapitalize(name : String) : String;
+	@:overload @:public @:static public static function decapitalize(name : String) : String;
 	
 	/**
 	* Utility method to take a string and convert it to normal a string
@@ -53,7 +53,7 @@ extern class StringUtils
 	* @param  name The string to be capitalized.
 	* @return  The capitalized version of the string.
 	*/
-	@:overload public static function capitalize(name : String) : String;
+	@:overload @:public @:static public static function capitalize(name : String) : String;
 	
 	
 }

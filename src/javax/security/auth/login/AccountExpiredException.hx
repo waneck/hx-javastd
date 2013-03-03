@@ -40,7 +40,7 @@ extern class AccountExpiredException extends javax.security.auth.login.AccountEx
 	* Constructs a AccountExpiredException with no detail message. A detail
 	* message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a AccountExpiredException with the specified detail
@@ -51,7 +51,7 @@ extern class AccountExpiredException extends javax.security.auth.login.AccountEx
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

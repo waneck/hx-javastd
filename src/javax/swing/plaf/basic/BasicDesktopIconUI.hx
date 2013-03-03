@@ -32,42 +32,42 @@ package javax.swing.plaf.basic;
 */
 extern class BasicDesktopIconUI extends javax.swing.plaf.DesktopIconUI
 {
-	private var desktopIcon : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
+	@:protected private var desktopIcon : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
 	
-	private var frame : javax.swing.JInternalFrame;
+	@:protected private var frame : javax.swing.JInternalFrame;
 	
 	/**
 	* The title pane component used in the desktop icon.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) private var iconPane : javax.swing.JComponent;
+	@:require(java5) @:protected private var iconPane : javax.swing.JComponent;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installComponents() : Void;
+	@:overload @:protected private function installComponents() : Void;
 	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected private function uninstallComponents() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected private function installListeners() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected private function uninstallListeners() : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected private function installDefaults() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected private function uninstallDefaults() : Void;
 	
-	@:overload private function createMouseInputListener() : javax.swing.event.MouseInputListener;
+	@:overload @:protected private function createMouseInputListener() : javax.swing.event.MouseInputListener;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Desktop icons can not be resized.  Therefore, we should always
@@ -75,11 +75,11 @@ extern class BasicDesktopIconUI extends javax.swing.plaf.DesktopIconUI
 	*
 	* @see #getMinimumSize
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getInsets(c : javax.swing.JComponent) : java.awt.Insets;
+	@:overload @:public public function getInsets(c : javax.swing.JComponent) : java.awt.Insets;
 	
-	@:overload public function deiconize() : Void;
+	@:overload @:public public function deiconize() : Void;
 	
 	
 }
@@ -91,15 +91,15 @@ extern class BasicDesktopIconUI extends javax.swing.plaf.DesktopIconUI
 */
 @:native('javax$swing$plaf$basic$BasicDesktopIconUI$MouseInputHandler') extern class BasicDesktopIconUI_MouseInputHandler extends javax.swing.event.MouseInputAdapter
 {
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function moveAndRepaint(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
+	@:overload @:public public function moveAndRepaint(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
 	
 	
 }

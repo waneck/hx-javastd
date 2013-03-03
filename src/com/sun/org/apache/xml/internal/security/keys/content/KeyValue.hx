@@ -27,7 +27,7 @@ extern class KeyValue extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param doc
 	* @param dsaKeyValue
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, dsaKeyValue : com.sun.org.apache.xml.internal.security.keys.content.keyvalues.DSAKeyValue) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, dsaKeyValue : com.sun.org.apache.xml.internal.security.keys.content.keyvalues.DSAKeyValue) : Void;
 	
 	/**
 	* Constructor KeyValue
@@ -35,7 +35,7 @@ extern class KeyValue extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param doc
 	* @param rsaKeyValue
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, rsaKeyValue : com.sun.org.apache.xml.internal.security.keys.content.keyvalues.RSAKeyValue) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, rsaKeyValue : com.sun.org.apache.xml.internal.security.keys.content.keyvalues.RSAKeyValue) : Void;
 	
 	/**
 	* Constructor KeyValue
@@ -43,7 +43,7 @@ extern class KeyValue extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param doc
 	* @param unknownKeyValue
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, unknownKeyValue : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, unknownKeyValue : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Constructor KeyValue
@@ -51,7 +51,7 @@ extern class KeyValue extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param doc
 	* @param pk
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, pk : java.security.PublicKey) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, pk : java.security.PublicKey) : Void;
 	
 	/**
 	* Constructor KeyValue
@@ -60,7 +60,7 @@ extern class KeyValue extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Method getPublicKey
@@ -68,10 +68,10 @@ extern class KeyValue extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @return the public key
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

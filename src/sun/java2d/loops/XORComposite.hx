@@ -25,15 +25,15 @@ package sun.java2d.loops;
 */
 extern class XORComposite implements java.awt.Composite
 {
-	@:overload public function new(xorColor : java.awt.Color, sd : sun.java2d.SurfaceData) : Void;
+	@:overload @:public public function new(xorColor : java.awt.Color, sd : sun.java2d.SurfaceData) : Void;
 	
-	@:overload public function getXorColor() : java.awt.Color;
+	@:overload @:public public function getXorColor() : java.awt.Color;
 	
-	@:overload public function getXorPixel() : Int;
+	@:overload @:public public function getXorPixel() : Int;
 	
-	@:overload public function getAlphaMask() : Int;
+	@:overload @:public public function getAlphaMask() : Int;
 	
-	@:overload public function createContext(srcColorModel : java.awt.image.ColorModel, dstColorModel : java.awt.image.ColorModel, hints : java.awt.RenderingHints) : java.awt.CompositeContext;
+	@:overload @:public public function createContext(srcColorModel : java.awt.image.ColorModel, dstColorModel : java.awt.image.ColorModel, hints : java.awt.RenderingHints) : java.awt.CompositeContext;
 	
 	
 }

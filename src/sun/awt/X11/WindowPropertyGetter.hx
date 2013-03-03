@@ -25,29 +25,29 @@ package sun.awt.X11;
 */
 extern class WindowPropertyGetter
 {
-	@:overload public function new(window : haxe.Int64, property : sun.awt.X11.XAtom, offset : haxe.Int64, length : haxe.Int64, auto_delete : Bool, type : haxe.Int64) : Void;
+	@:overload @:public public function new(window : haxe.Int64, property : sun.awt.X11.XAtom, offset : haxe.Int64, length : haxe.Int64, auto_delete : Bool, type : haxe.Int64) : Void;
 	
-	@:overload public function new(window : haxe.Int64, property : sun.awt.X11.XAtom, offset : haxe.Int64, length : haxe.Int64, auto_delete : Bool, type : sun.awt.X11.XAtom) : Void;
+	@:overload @:public public function new(window : haxe.Int64, property : sun.awt.X11.XAtom, offset : haxe.Int64, length : haxe.Int64, auto_delete : Bool, type : sun.awt.X11.XAtom) : Void;
 	
-	@:overload public function execute() : Int;
+	@:overload @:public public function execute() : Int;
 	
-	@:overload public function execute(errorHandler : sun.awt.X11.XErrorHandler) : Int;
+	@:overload @:public public function execute(errorHandler : sun.awt.X11.XErrorHandler) : Int;
 	
-	@:overload public function isExecuted() : Bool;
+	@:overload @:public public function isExecuted() : Bool;
 	
-	@:overload public function isDisposed() : Bool;
+	@:overload @:public public function isDisposed() : Bool;
 	
-	@:overload public function getActualFormat() : Int;
+	@:overload @:public public function getActualFormat() : Int;
 	
-	@:overload public function getActualType() : haxe.Int64;
+	@:overload @:public public function getActualType() : haxe.Int64;
 	
-	@:overload public function getNumberOfItems() : Int;
+	@:overload @:public public function getNumberOfItems() : Int;
 	
-	@:overload public function getData() : haxe.Int64;
+	@:overload @:public public function getData() : haxe.Int64;
 	
-	@:overload public function getBytesAfter() : haxe.Int64;
+	@:overload @:public public function getBytesAfter() : haxe.Int64;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

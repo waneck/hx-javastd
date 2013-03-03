@@ -31,55 +31,55 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* Character encoding scheme system property for the encoding
 	* of content and attribute values.
 	*/
-	public static var CHARACTER_ENCODING_SCHEME_SYSTEM_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CHARACTER_ENCODING_SCHEME_SYSTEM_PROPERTY(default, null) : String;
 	
 	/**
 	* Default character encoding scheme system property for the encoding
 	* of content and attribute values.
 	*/
-	private static var _characterEncodingSchemeSystemDefault(default, null) : String;
+	@:protected @:static @:final private static var _characterEncodingSchemeSystemDefault(default, null) : String;
 	
 	/**
 	* The vocabulary that is used by the encoder
 	*/
-	private var _v : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
+	@:protected private var _v : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
 	
 	/**
 	* The vocabulary application data that is used by the encoder
 	*/
-	private var _vData : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData;
+	@:protected private var _vData : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData;
 	
 	/**
 	* True if terminatation of an information item is required
 	*/
-	private var _terminate : Bool;
+	@:protected private var _terminate : Bool;
 	
 	/**
 	* The current octet that is to be written.
 	*/
-	private var _b : Int;
+	@:protected private var _b : Int;
 	
 	/**
 	* The {@link java.io.OutputStream} that the encoded XML infoset (the
 	* fast infoset document) is written to.
 	*/
-	private var _s : java.io.OutputStream;
+	@:protected private var _s : java.io.OutputStream;
 	
 	/**
 	* The internal buffer of characters used for the UTF-8 or UTF-16 encoding
 	* of characters.
 	*/
-	private var _charBuffer : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var _charBuffer : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* The internal buffer of bytes.
 	*/
-	private var _octetBuffer : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var _octetBuffer : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The current position in the internal buffer.
 	*/
-	private var _octetBufferIndex : Int;
+	@:protected private var _octetBufferIndex : Int;
 	
 	/**
 	* The current mark in the internal buffer.
@@ -87,142 +87,142 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* <p>
 	* If the value of the mark is < 0 then the mark is not set.
 	*/
-	private var _markIndex : Int;
+	@:protected private var _markIndex : Int;
 	
 	/**
 	* The minimum size of [normalized value] of Attribute Information
 	* Items that will be indexed.
 	*/
-	private var minAttributeValueSize : Int;
+	@:protected private var minAttributeValueSize : Int;
 	
 	/**
 	* The maximum size of [normalized value] of Attribute Information
 	* Items that will be indexed.
 	*/
-	private var maxAttributeValueSize : Int;
+	@:protected private var maxAttributeValueSize : Int;
 	
 	/**
 	* The limit on the size of indexed Map for attribute values
 	* Limit is measured in characters number
 	*/
-	private var attributeValueMapTotalCharactersConstraint : Int;
+	@:protected private var attributeValueMapTotalCharactersConstraint : Int;
 	
 	/**
 	* The minimum size of character content chunks
 	* of Character Information Items or Comment Information Items that
 	* will be indexed.
 	*/
-	private var minCharacterContentChunkSize : Int;
+	@:protected private var minCharacterContentChunkSize : Int;
 	
 	/**
 	* The maximum size of character content chunks
 	* of Character Information Items or Comment Information Items that
 	* will be indexed.
 	*/
-	private var maxCharacterContentChunkSize : Int;
+	@:protected private var maxCharacterContentChunkSize : Int;
 	
 	/**
 	* The limit on the size of indexed Map for character content chunks
 	* Limit is measured in characters number
 	*/
-	private var characterContentChunkMapTotalCharactersConstraint : Int;
+	@:protected private var characterContentChunkMapTotalCharactersConstraint : Int;
 	
 	/**
 	* Default constructor for the Encoder.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(useLocalNameAsKeyForQualifiedNameLookup : Bool) : Void;
-	
-	/**
-	* {@inheritDoc}
-	*/
-	@:overload @:final public function setIgnoreDTD(ignoreDTD : Bool) : Void;
+	@:overload @:protected private function new(useLocalNameAsKeyForQualifiedNameLookup : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function getIgnoreDTD() : Bool;
+	@:overload @:public @:final public function setIgnoreDTD(ignoreDTD : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function setIgnoreComments(ignoreComments : Bool) : Void;
+	@:overload @:public @:final public function getIgnoreDTD() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function getIgnoreComments() : Bool;
+	@:overload @:public @:final public function setIgnoreComments(ignoreComments : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function setIgnoreProcesingInstructions(ignoreProcesingInstructions : Bool) : Void;
+	@:overload @:public @:final public function getIgnoreComments() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function getIgnoreProcesingInstructions() : Bool;
+	@:overload @:public @:final public function setIgnoreProcesingInstructions(ignoreProcesingInstructions : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function setIgnoreWhiteSpaceTextContent(ignoreWhiteSpaceTextContent : Bool) : Void;
+	@:overload @:public @:final public function getIgnoreProcesingInstructions() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final public function getIgnoreWhiteSpaceTextContent() : Bool;
+	@:overload @:public @:final public function setIgnoreWhiteSpaceTextContent(ignoreWhiteSpaceTextContent : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setCharacterEncodingScheme(characterEncodingScheme : String) : Void;
+	@:overload @:public @:final public function getIgnoreWhiteSpaceTextContent() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function setCharacterEncodingScheme(characterEncodingScheme : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setRegisteredEncodingAlgorithms(algorithms : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getRegisteredEncodingAlgorithms() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function setRegisteredEncodingAlgorithms(algorithms : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMinCharacterContentChunkSize() : Int;
+	@:overload @:public public function getRegisteredEncodingAlgorithms() : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setMinCharacterContentChunkSize(size : Int) : Void;
+	@:overload @:public public function getMinCharacterContentChunkSize() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMaxCharacterContentChunkSize() : Int;
+	@:overload @:public public function setMinCharacterContentChunkSize(size : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setMaxCharacterContentChunkSize(size : Int) : Void;
+	@:overload @:public public function getMaxCharacterContentChunkSize() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getCharacterContentChunkMapMemoryLimit() : Int;
+	@:overload @:public public function setMaxCharacterContentChunkSize(size : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setCharacterContentChunkMapMemoryLimit(size : Int) : Void;
+	@:overload @:public public function getCharacterContentChunkMapMemoryLimit() : Int;
+	
+	/**
+	* {@inheritDoc}
+	*/
+	@:overload @:public public function setCharacterContentChunkMapMemoryLimit(size : Int) : Void;
 	
 	/**
 	* Checks whether character content chunk (its length) matches length limit
@@ -230,7 +230,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of character content chunk is checking to be added to Map.
 	* @return whether character content chunk length matches limit
 	*/
-	@:overload public function isCharacterContentChunkLengthMatchesLimit(length : Int) : Bool;
+	@:overload @:public public function isCharacterContentChunkLengthMatchesLimit(length : Int) : Bool;
 	
 	/**
 	* Checks whether character content table has enough memory to
@@ -240,37 +240,37 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param map the custom CharArrayIntMap, which memory limits will be checked.
 	* @return whether character content map has enough memory
 	*/
-	@:overload public function canAddCharacterContentToTable(length : Int, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap) : Bool;
+	@:overload @:public public function canAddCharacterContentToTable(length : Int, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMinAttributeValueSize() : Int;
+	@:overload @:public public function getMinAttributeValueSize() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setMinAttributeValueSize(size : Int) : Void;
+	@:overload @:public public function setMinAttributeValueSize(size : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMaxAttributeValueSize() : Int;
+	@:overload @:public public function getMaxAttributeValueSize() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setMaxAttributeValueSize(size : Int) : Void;
+	@:overload @:public public function setMaxAttributeValueSize(size : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setAttributeValueMapMemoryLimit(size : Int) : Void;
+	@:overload @:public public function setAttributeValueMapMemoryLimit(size : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getAttributeValueMapMemoryLimit() : Int;
+	@:overload @:public public function getAttributeValueMapMemoryLimit() : Int;
 	
 	/**
 	* Checks whether attribute value (its length) matches length limit
@@ -278,7 +278,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of attribute
 	* @return whether attribute value matches limit
 	*/
-	@:overload public function isAttributeValueLengthMatchesLimit(length : Int) : Bool;
+	@:overload @:public public function isAttributeValueLengthMatchesLimit(length : Int) : Bool;
 	
 	/**
 	* Checks whether attribute table has enough memory to
@@ -287,27 +287,27 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of attribute value is checking to be added to Map.
 	* @return whether attribute map has enough memory
 	*/
-	@:overload public function canAddAttributeToTable(length : Int) : Bool;
+	@:overload @:public public function canAddAttributeToTable(length : Int) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setExternalVocabulary(v : com.sun.xml.internal.org.jvnet.fastinfoset.ExternalVocabulary) : Void;
+	@:overload @:public public function setExternalVocabulary(v : com.sun.xml.internal.org.jvnet.fastinfoset.ExternalVocabulary) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setVocabularyApplicationData(data : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData) : Void;
+	@:overload @:public public function setVocabularyApplicationData(data : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getVocabularyApplicationData() : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData;
+	@:overload @:public public function getVocabularyApplicationData() : com.sun.xml.internal.org.jvnet.fastinfoset.VocabularyApplicationData;
 	
 	/**
 	* Reset the encoder for reuse encoding another XML infoset.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set the OutputStream to encode the XML infoset to a
@@ -315,45 +315,45 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*
 	* @param s the OutputStream where the fast infoset document is written to.
 	*/
-	@:overload public function setOutputStream(s : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(s : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the SerializerVocabulary to be used for encoding.
 	*
 	* @param vocabulary the vocabulary to be used for encoding.
 	*/
-	@:overload public function setVocabulary(vocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary) : Void;
+	@:overload @:public public function setVocabulary(vocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary) : Void;
 	
 	/**
 	* Encode the header of a fast infoset document.
 	*
 	* @param encodeXmlDecl true if the XML declaration should be encoded.
 	*/
-	@:overload @:final private function encodeHeader(encodeXmlDecl : Bool) : Void;
+	@:overload @:protected @:final private function encodeHeader(encodeXmlDecl : Bool) : Void;
 	
 	/**
 	* Encode the initial vocabulary of a fast infoset document.
 	*
 	*/
-	@:overload @:final private function encodeInitialVocabulary() : Void;
+	@:overload @:protected @:final private function encodeInitialVocabulary() : Void;
 	
 	/**
 	* Encode the termination of the Document Information Item.
 	*
 	*/
-	@:overload @:final private function encodeDocumentTermination() : Void;
+	@:overload @:protected @:final private function encodeDocumentTermination() : Void;
 	
 	/**
 	* Encode the termination of an Element Information Item.
 	*
 	*/
-	@:overload @:final private function encodeElementTermination() : Void;
+	@:overload @:protected @:final private function encodeElementTermination() : Void;
 	
 	/**
 	* Encode a termination if required.
 	*
 	*/
-	@:overload @:final private function encodeTermination() : Void;
+	@:overload @:protected @:final private function encodeTermination() : Void;
 	
 	/**
 	* Encode a Attribute Information Item that is a namespace declaration.
@@ -363,7 +363,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param uri the URI of the namespace declaration,
 	* if "" then there is no URI for the namespace declaration.
 	*/
-	@:overload @:final private function encodeNamespaceAttribute(prefix : String, uri : String) : Void;
+	@:overload @:protected @:final private function encodeNamespaceAttribute(prefix : String, uri : String) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items.
@@ -373,7 +373,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of characters.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeCharacters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeCharacters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items.
@@ -387,7 +387,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of characters.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeCharactersNoClone(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeCharactersNoClone(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using a numeric
@@ -402,7 +402,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param addToTable if characters should be added to table.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeNumericFourBitCharacters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeNumericFourBitCharacters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using a date-time
@@ -417,7 +417,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param addToTable if characters should be added to table.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeDateTimeFourBitCharacters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeDateTimeFourBitCharacters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using a restricted
@@ -432,7 +432,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param addToTable if characters should be added to table.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeFourBitCharacters(id : Int, table : java.NativeArray<Int>, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeFourBitCharacters(id : Int, table : java.NativeArray<Int>, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using a restricted
@@ -448,7 +448,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @throws FastInfosetException if the alphabet is not present in the
 	*         vocabulary.
 	*/
-	@:overload @:final private function encodeAlphabetCharacters(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeAlphabetCharacters(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, addToTable : Bool) : Void;
 	
 	/**
 	* Encode a Processing Instruction Information Item.
@@ -456,7 +456,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param target the target of the processing instruction.
 	* @param data the data of the processing instruction.
 	*/
-	@:overload @:final private function encodeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:protected @:final private function encodeProcessingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Encode a Document Type Declaration.
@@ -464,7 +464,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param systemId the system identifier of the external subset.
 	* @param publicId the public identifier of the external subset.
 	*/
-	@:overload @:final private function encodeDocumentTypeDeclaration(systemId : String, publicId : String) : Void;
+	@:overload @:protected @:final private function encodeDocumentTypeDeclaration(systemId : String, publicId : String) : Void;
 	
 	/**
 	* Encode a Comment Information Item.
@@ -474,7 +474,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of characters.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeComment(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeComment(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a Comment Information Item.
@@ -488,7 +488,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the length of characters.
 	* @throws ArrayIndexOutOfBoundsException.
 	*/
-	@:overload @:final private function encodeCommentNoClone(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeCommentNoClone(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a qualified name of an Element Informaiton Item on the third bit
@@ -504,7 +504,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param prefix the prefix of the qualified name.
 	* @param localName the local name of the qualified name.
 	*/
-	@:overload @:final private function encodeElementQualifiedNameOnThirdBit(namespaceURI : String, prefix : String, localName : String) : Void;
+	@:overload @:protected @:final private function encodeElementQualifiedNameOnThirdBit(namespaceURI : String, prefix : String, localName : String) : Void;
 	
 	/**
 	* Encode a literal qualified name of an Element Informaiton Item on the
@@ -515,7 +515,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param prefix the prefix of the qualified name.
 	* @param localName the local name of the qualified name.
 	*/
-	@:overload @:final private function encodeLiteralElementQualifiedNameOnThirdBit(namespaceURI : String, prefix : String, localName : String, entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry) : Void;
+	@:overload @:protected @:final private function encodeLiteralElementQualifiedNameOnThirdBit(namespaceURI : String, prefix : String, localName : String, entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry) : Void;
 	
 	/**
 	* Encode a qualified name of an Attribute Informaiton Item on the third bit
@@ -531,7 +531,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param prefix the prefix of the qualified name.
 	* @param localName the local name of the qualified name.
 	*/
-	@:overload @:final private function encodeAttributeQualifiedNameOnSecondBit(namespaceURI : String, prefix : String, localName : String) : Void;
+	@:overload @:protected @:final private function encodeAttributeQualifiedNameOnSecondBit(namespaceURI : String, prefix : String, localName : String) : Void;
 	
 	/**
 	* Encode a literal qualified name of an Attribute Informaiton Item on the
@@ -542,7 +542,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param prefix the prefix of the qualified name.
 	* @param localName the local name of the qualified name.
 	*/
-	@:overload @:final private function encodeLiteralAttributeQualifiedNameOnSecondBit(namespaceURI : String, prefix : String, localName : String, entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry) : Bool;
+	@:overload @:protected @:final private function encodeLiteralAttributeQualifiedNameOnSecondBit(namespaceURI : String, prefix : String, localName : String, entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry) : Bool;
 	
 	/**
 	* Encode a non identifying string on the first bit of an octet.
@@ -555,7 +555,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param mustBeAddedToTable true if the string must be added to the vocabulary
 	*                   table (if not already present in the table).
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnFirstBit(s : String, map : com.sun.xml.internal.fastinfoset.util.StringIntMap, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnFirstBit(s : String, map : com.sun.xml.internal.fastinfoset.util.StringIntMap, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
 	
 	/**
 	* Encode a non identifying string on the first bit of an octet.
@@ -566,7 +566,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param addToTable true if the string should be added to the vocabulary
 	*                   table (if not already present in the table).
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnFirstBit(s : String, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, addToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnFirstBit(s : String, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, addToTable : Bool) : Void;
 	
 	/**
 	* Encode a non identifying string on the first bit of an octet.
@@ -581,13 +581,13 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param clone true if the array of characters should be cloned if added
 	*              to the vocabulary table.
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnFirstBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, addToTable : Bool, clone : Bool) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnFirstBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, addToTable : Bool, clone : Bool) : Void;
 	
-	@:overload @:final private function encodeNumericNonIdentifyingStringOnFirstBit(s : String, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeNumericNonIdentifyingStringOnFirstBit(s : String, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
 	
-	@:overload @:final private function encodeDateTimeNonIdentifyingStringOnFirstBit(s : String, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeDateTimeNonIdentifyingStringOnFirstBit(s : String, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
 	
-	@:overload @:final private function encodeNonIdentifyingStringOnFirstBit(id : Int, table : java.NativeArray<Int>, s : String, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnFirstBit(id : Int, table : java.NativeArray<Int>, s : String, addToTable : Bool, mustBeAddedToTable : Bool) : Void;
 	
 	/**
 	* Encode a non identifying string on the first bit of an octet as binary
@@ -602,7 +602,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*         present in the vocabulary, or the encoding algorithm identifier
 	*         is not with the required range.
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnFirstBit(URI : String, id : Int, data : Dynamic) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnFirstBit(URI : String, id : Int, data : Dynamic) : Void;
 	
 	/**
 	* Encode the [normalized value] of an Attribute Information Item using
@@ -614,7 +614,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of bytes.
 	* @param length the length of bytes.
 	*/
-	@:overload @:final private function encodeAIIOctetAlgorithmData(id : Int, d : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeAIIOctetAlgorithmData(id : Int, d : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode the [normalized value] of an Attribute Information Item using
@@ -626,7 +626,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param ea the encoding algorithm to use to encode the data into an
 	*           array of bytes.
 	*/
-	@:overload @:final private function encodeAIIObjectAlgorithmData(id : Int, data : Dynamic, ea : com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithm) : Void;
+	@:overload @:protected @:final private function encodeAIIObjectAlgorithmData(id : Int, data : Dynamic, ea : com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithm) : Void;
 	
 	/**
 	* Encode the [normalized value] of an Attribute Information Item using
@@ -640,7 +640,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of bytes.
 	* @param length the length of bytes.
 	*/
-	@:overload @:final private function encodeAIIBuiltInAlgorithmData(id : Int, data : Dynamic, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeAIIBuiltInAlgorithmData(id : Int, data : Dynamic, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a non identifying string on the third bit of an octet.
@@ -655,7 +655,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param clone true if the array of characters should be cloned if added
 	*              to the vocabulary table.
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnThirdBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, addToTable : Bool, clone : Bool) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnThirdBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, map : com.sun.xml.internal.fastinfoset.util.CharArrayIntMap, addToTable : Bool, clone : Bool) : Void;
 	
 	/**
 	* Encode a non identifying string on the third bit of an octet as binary
@@ -670,7 +670,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*         present in the vocabulary, or the encoding algorithm identifier
 	*         is not with the required range.
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnThirdBit(URI : String, id : Int, data : Dynamic) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnThirdBit(URI : String, id : Int, data : Dynamic) : Void;
 	
 	/**
 	* Encode a non identifying string on the third bit of an octet as binary
@@ -686,7 +686,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @throws EncodingAlgorithmException if the encoding algorithm URI is not
 	*         present in the vocabulary.
 	*/
-	@:overload @:final private function encodeNonIdentifyingStringOnThirdBit(URI : String, id : Int, d : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonIdentifyingStringOnThirdBit(URI : String, id : Int, d : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using
@@ -698,7 +698,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of bytes.
 	* @param length the length of bytes.
 	*/
-	@:overload @:final private function encodeCIIOctetAlgorithmData(id : Int, d : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeCIIOctetAlgorithmData(id : Int, d : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using
@@ -710,7 +710,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param ea the encoding algorithm to use to encode the data into an
 	*           array of bytes.
 	*/
-	@:overload @:final private function encodeCIIObjectAlgorithmData(id : Int, data : Dynamic, ea : com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithm) : Void;
+	@:overload @:protected @:final private function encodeCIIObjectAlgorithmData(id : Int, data : Dynamic, ea : com.sun.xml.internal.org.jvnet.fastinfoset.EncodingAlgorithm) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using
@@ -724,7 +724,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of bytes.
 	* @param length the length of bytes.
 	*/
-	@:overload @:final private function encodeCIIBuiltInAlgorithmData(id : Int, data : Dynamic, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeCIIBuiltInAlgorithmData(id : Int, data : Dynamic, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a chunk of Character Information Items using
@@ -735,7 +735,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeCIIBuiltInAlgorithmDataAsCDATA(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeCIIBuiltInAlgorithmDataAsCDATA(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a non empty identifying string on the first bit of an octet.
@@ -745,7 +745,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param map the vocabulary table to use to determin the index of the
 	*        identifying string
 	*/
-	@:overload @:final private function encodeIdentifyingNonEmptyStringOnFirstBit(s : String, map : com.sun.xml.internal.fastinfoset.util.StringIntMap) : Void;
+	@:overload @:protected @:final private function encodeIdentifyingNonEmptyStringOnFirstBit(s : String, map : com.sun.xml.internal.fastinfoset.util.StringIntMap) : Void;
 	
 	/**
 	* Encode a non empty string on the second bit of an octet using the UTF-8
@@ -754,7 +754,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*
 	* @param s the string.
 	*/
-	@:overload @:final private function encodeNonEmptyOctetStringOnSecondBit(s : String) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyOctetStringOnSecondBit(s : String) : Void;
 	
 	/**
 	* Encode the length of a UTF-8 encoded string on the second bit of an octet.
@@ -762,7 +762,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*
 	* @param length the length to encode.
 	*/
-	@:overload @:final private function encodeNonZeroOctetStringLengthOnSecondBit(length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroOctetStringLengthOnSecondBit(length : Int) : Void;
 	
 	/**
 	* Encode a non empty string on the fifth bit of an octet using the UTF-8
@@ -771,7 +771,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*
 	* @param s the string.
 	*/
-	@:overload @:final private function encodeNonEmptyCharacterStringOnFifthBit(s : String) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyCharacterStringOnFifthBit(s : String) : Void;
 	
 	/**
 	* Encode a non empty string on the fifth bit of an octet using the UTF-8
@@ -782,7 +782,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeNonEmptyCharacterStringOnFifthBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyCharacterStringOnFifthBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode the length of a UTF-8 or UTF-16 encoded string on the fifth bit
@@ -791,7 +791,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*
 	* @param length the length to encode.
 	*/
-	@:overload @:final private function encodeNonZeroOctetStringLengthOnFifthBit(length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroOctetStringLengthOnFifthBit(length : Int) : Void;
 	
 	/**
 	* Encode a non empty string on the seventh bit of an octet using the UTF-8
@@ -802,7 +802,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeNonEmptyCharacterStringOnSeventhBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyCharacterStringOnSeventhBit(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a non empty string on the seventh bit of an octet using a restricted
@@ -815,9 +815,9 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeNonEmptyFourBitCharacterStringOnSeventhBit(table : java.NativeArray<Int>, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyFourBitCharacterStringOnSeventhBit(table : java.NativeArray<Int>, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final private function encodeNonEmptyFourBitCharacterString(table : java.NativeArray<Int>, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, octetPairLength : Int, octetSingleLength : Int) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyFourBitCharacterString(table : java.NativeArray<Int>, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, octetPairLength : Int, octetSingleLength : Int) : Void;
 	
 	/**
 	* Encode a non empty string on the seventh bit of an octet using a restricted
@@ -830,7 +830,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeNonEmptyNBitCharacterStringOnSeventhBit(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyNBitCharacterStringOnSeventhBit(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode the length of a encoded string on the seventh bit
@@ -839,7 +839,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*
 	* @param length the length to encode.
 	*/
-	@:overload @:final private function encodeNonZeroOctetStringLengthOnSenventhBit(length : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroOctetStringLengthOnSenventhBit(length : Int) : Void;
 	
 	/**
 	* Encode a non zero integer on the second bit of an octet, setting
@@ -854,7 +854,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*          [0, 1048575]. In the specification the interval is [1, 1048576]
 	*
 	*/
-	@:overload @:final private function encodeNonZeroIntegerOnSecondBitFirstBitOne(i : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroIntegerOnSecondBitFirstBitOne(i : Int) : Void;
 	
 	/**
 	* Encode a non zero integer on the second bit of an octet, setting
@@ -869,7 +869,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*          [0, 1048575]. In the specification the interval is [1, 1048576]
 	*
 	*/
-	@:overload @:final private function encodeNonZeroIntegerOnSecondBitFirstBitZero(i : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroIntegerOnSecondBitFirstBitZero(i : Int) : Void;
 	
 	/**
 	* Encode a non zero integer on the third bit of an octet.
@@ -879,7 +879,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*          [0, 1048575]. In the specification the interval is [1, 1048576]
 	*
 	*/
-	@:overload @:final private function encodeNonZeroIntegerOnThirdBit(i : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroIntegerOnThirdBit(i : Int) : Void;
 	
 	/**
 	* Encode a non zero integer on the fourth bit of an octet.
@@ -889,7 +889,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	*          [0, 1048575]. In the specification the interval is [1, 1048576]
 	*
 	*/
-	@:overload @:final private function encodeNonZeroIntegerOnFourthBit(i : Int) : Void;
+	@:overload @:protected @:final private function encodeNonZeroIntegerOnFourthBit(i : Int) : Void;
 	
 	/**
 	* Encode a non empty string using the UTF-8 encoding.
@@ -899,7 +899,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param constants the array of constants to use when encoding to determin
 	*        how the length of the UTF-8 encoded string is encoded.
 	*/
-	@:overload @:final private function encodeNonEmptyUTF8StringAsOctetString(b : Int, s : String, constants : java.NativeArray<Int>) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyUTF8StringAsOctetString(b : Int, s : String, constants : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Encode a non empty string using the UTF-8 encoding.
@@ -912,7 +912,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param constants the array of constants to use when encoding to determin
 	*        how the length of the UTF-8 encoded string is encoded.
 	*/
-	@:overload @:final private function encodeNonEmptyUTF8StringAsOctetString(b : Int, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, constants : java.NativeArray<Int>) : Void;
+	@:overload @:protected @:final private function encodeNonEmptyUTF8StringAsOctetString(b : Int, ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, constants : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Encode the length of non empty UTF-8 encoded string.
@@ -923,7 +923,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param constants the array of constants to use when encoding to determin
 	*        how the length of the UTF-8 encoded string is encoded.
 	*/
-	@:overload @:final private function encodeNonZeroOctetStringLength(b : Int, length : Int, constants : java.NativeArray<Int>) : Void;
+	@:overload @:protected @:final private function encodeNonZeroOctetStringLength(b : Int, length : Int, constants : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Encode a non zero integer.
@@ -933,28 +933,28 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param constants the array of constants to use when encoding to determin
 	*        how the non zero integer is encoded.
 	*/
-	@:overload @:final private function encodeNonZeroInteger(b : Int, i : Int, constants : java.NativeArray<Int>) : Void;
+	@:overload @:protected @:final private function encodeNonZeroInteger(b : Int, i : Int, constants : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Mark the current position in the buffered stream.
 	*/
-	@:overload @:final private function mark() : Void;
+	@:overload @:protected @:final private function mark() : Void;
 	
 	/**
 	* Reset the marked position in the buffered stream.
 	*/
-	@:overload @:final private function resetMark() : Void;
+	@:overload @:protected @:final private function resetMark() : Void;
 	
 	/**
 	* @return true if the mark has been set, otherwise false if the mark
 	*         has not been set.
 	*/
-	@:overload @:final private function hasMark() : Bool;
+	@:overload @:protected @:final private function hasMark() : Bool;
 	
 	/**
 	* Write a byte to the buffered stream.
 	*/
-	@:overload @:final private function write(i : Int) : Void;
+	@:overload @:protected @:final private function write(i : Int) : Void;
 	
 	/**
 	* Write an array of bytes to the buffered stream.
@@ -962,7 +962,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param b the array of bytes.
 	* @param length the length of bytes.
 	*/
-	@:overload @:final private function write(b : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:protected @:final private function write(b : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Write an array of bytes to the buffered stream.
@@ -971,14 +971,14 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of bytes.
 	* @param length the length of bytes.
 	*/
-	@:overload @:final private function write(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:protected @:final private function write(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Encode a string using the UTF-8 encoding.
 	*
 	* @param s the string to encode.
 	*/
-	@:overload @:final private function encodeUTF8String(s : String) : Int;
+	@:overload @:protected @:final private function encodeUTF8String(s : String) : Int;
 	
 	/**
 	* Encode a string using the UTF-8 encoding.
@@ -987,14 +987,14 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeUTF8String(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:protected @:final private function encodeUTF8String(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Encode a string using the UTF-16 encoding.
 	*
 	* @param s the string to encode.
 	*/
-	@:overload @:final private function encodeUtf16String(s : String) : Int;
+	@:overload @:protected @:final private function encodeUtf16String(s : String) : Int;
 	
 	/**
 	* Encode a string using the UTF-16 encoding.
@@ -1003,7 +1003,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param offset the offset into the array of characters.
 	* @param length the length of characters.
 	*/
-	@:overload @:final private function encodeUtf16String(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:protected @:final private function encodeUtf16String(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Obtain the prefix from a qualified name.
@@ -1011,7 +1011,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param qName the qualified name
 	* @return the prefix, or "" if there is no prefix.
 	*/
-	@:overload public static function getPrefixFromQualifiedName(qName : String) : String;
+	@:overload @:public @:static public static function getPrefixFromQualifiedName(qName : String) : String;
 	
 	/**
 	* Check if character array contains characters that are all white space.
@@ -1021,7 +1021,7 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param length the number of characters to check
 	* @return true if all characters are white space, false otherwise
 	*/
-	@:overload public static function isWhiteSpace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
+	@:overload @:public @:static public static function isWhiteSpace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
 	
 	/**
 	* Check if a String contains characters that are all white space.
@@ -1029,19 +1029,19 @@ extern class Encoder extends org.xml.sax.helpers.DefaultHandler implements com.s
 	* @param s the string
 	* @return true if all characters are white space, false otherwise
 	*/
-	@:overload public static function isWhiteSpace(s : String) : Bool;
+	@:overload @:public @:static public static function isWhiteSpace(s : String) : Bool;
 	
 	
 }
 @:native('com$sun$xml$internal$fastinfoset$Encoder$EncodingBufferOutputStream') @:internal extern class Encoder_EncodingBufferOutputStream extends java.io.OutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

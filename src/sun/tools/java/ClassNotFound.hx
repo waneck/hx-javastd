@@ -36,12 +36,12 @@ extern class ClassNotFound extends java.lang.Exception
 	/**
 	* The class that was not found
 	*/
-	public var name : sun.tools.java.Identifier;
+	@:public public var name : sun.tools.java.Identifier;
 	
 	/**
 	* Create a ClassNotFound exception
 	*/
-	@:overload public function new(nm : sun.tools.java.Identifier) : Void;
+	@:overload @:public public function new(nm : sun.tools.java.Identifier) : Void;
 	
 	
 }

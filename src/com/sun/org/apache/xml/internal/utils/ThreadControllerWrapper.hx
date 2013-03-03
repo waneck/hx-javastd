@@ -27,9 +27,9 @@ package com.sun.org.apache.xml.internal.utils;
 */
 extern class ThreadControllerWrapper
 {
-	@:overload public static function runThread(runnable : java.lang.Runnable, priority : Int) : java.lang.Thread;
+	@:overload @:public @:static public static function runThread(runnable : java.lang.Runnable, priority : Int) : java.lang.Thread;
 	
-	@:overload public static function waitThread(worker : java.lang.Thread, task : java.lang.Runnable) : Void;
+	@:overload @:public @:static public static function waitThread(worker : java.lang.Thread, task : java.lang.Runnable) : Void;
 	
 	
 }
@@ -54,7 +54,7 @@ extern class ThreadControllerWrapper
 	* @return  The thread that is running the task, can be used
 	*          to wait for completion
 	*/
-	@:overload public function run(task : java.lang.Runnable, priority : Int) : java.lang.Thread;
+	@:overload @:public public function run(task : java.lang.Runnable, priority : Int) : java.lang.Thread;
 	
 	/**
 	*  Wait until the task is completed on the worker
@@ -65,7 +65,7 @@ extern class ThreadControllerWrapper
 	*
 	* @throws InterruptedException
 	*/
-	@:overload public function waitThread(worker : java.lang.Thread, task : java.lang.Runnable) : Void;
+	@:overload @:public public function waitThread(worker : java.lang.Thread, task : java.lang.Runnable) : Void;
 	
 	
 }
@@ -74,9 +74,9 @@ extern class ThreadControllerWrapper
 */
 @:native('com$sun$org$apache$xml$internal$utils$ThreadControllerWrapper$ThreadController$SafeThread') @:internal extern class ThreadControllerWrapper_ThreadController_SafeThread extends java.lang.Thread
 {
-	@:overload public function new(target : java.lang.Runnable) : Void;
+	@:overload @:public public function new(target : java.lang.Runnable) : Void;
 	
-	@:overload @:final override public function run() : Void;
+	@:overload @:public @:final override public function run() : Void;
 	
 	
 }

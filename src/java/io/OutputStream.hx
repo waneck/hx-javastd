@@ -58,7 +58,7 @@ package java.io;
 	*             an <code>IOException</code> may be thrown if the
 	*             output stream has been closed.
 	*/
-	@:overload @:abstract public function write(b : Int) : Void;
+	@:overload @:public @:abstract public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>b.length</code> bytes from the specified byte array
@@ -70,7 +70,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.OutputStream#write(byte[], int, int)
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -100,7 +100,7 @@ package java.io;
 	*             an <code>IOException</code> is thrown if the output
 	*             stream is closed.
 	*/
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output bytes
@@ -120,7 +120,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Closes this output stream and releases any system resources
@@ -132,7 +132,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

@@ -26,21 +26,21 @@ package com.sun.corba.se.impl.orbutil;
 //// for computing the structural UID
 extern class ObjectStreamClassUtil_1_3
 {
-	@:overload public static function computeSerialVersionUID(cl : Class<Dynamic>) : haxe.Int64;
+	@:overload @:public @:static public static function computeSerialVersionUID(cl : Class<Dynamic>) : haxe.Int64;
 	
-	@:overload public static function computeStructuralUID(hasWriteObject : Bool, cl : Class<Dynamic>) : haxe.Int64;
+	@:overload @:public @:static public static function computeStructuralUID(hasWriteObject : Bool, cl : Class<Dynamic>) : haxe.Int64;
 	
 	
 }
 @:native('com$sun$corba$se$impl$orbutil$ObjectStreamClassUtil_1_3$CompareClassByName') @:internal extern class ObjectStreamClassUtil_1_3_CompareClassByName implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }
 @:native('com$sun$corba$se$impl$orbutil$ObjectStreamClassUtil_1_3$CompareMemberByName') @:internal extern class ObjectStreamClassUtil_1_3_CompareMemberByName implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }
@@ -48,7 +48,7 @@ extern class ObjectStreamClassUtil_1_3
 {
 	/* Assumes that o1 and o2 are either both methods
 	or both constructors.*/
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }

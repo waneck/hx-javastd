@@ -41,49 +41,49 @@ extern class RSAPrivateCrtKeySpec extends java.security.spec.RSAPrivateKeySpec
 	* @param crtCoefficient the Chinese Remainder Theorem
 	* coefficient q-1 mod p
 	*/
-	@:overload public function new(modulus : java.math.BigInteger, publicExponent : java.math.BigInteger, privateExponent : java.math.BigInteger, primeP : java.math.BigInteger, primeQ : java.math.BigInteger, primeExponentP : java.math.BigInteger, primeExponentQ : java.math.BigInteger, crtCoefficient : java.math.BigInteger) : Void;
+	@:overload @:public public function new(modulus : java.math.BigInteger, publicExponent : java.math.BigInteger, privateExponent : java.math.BigInteger, primeP : java.math.BigInteger, primeQ : java.math.BigInteger, primeExponentP : java.math.BigInteger, primeExponentQ : java.math.BigInteger, crtCoefficient : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the public exponent.
 	*
 	* @return the public exponent
 	*/
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeP.
 
 	* @return the primeP
 	*/
-	@:overload public function getPrimeP() : java.math.BigInteger;
+	@:overload @:public public function getPrimeP() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeQ.
 	*
 	* @return the primeQ
 	*/
-	@:overload public function getPrimeQ() : java.math.BigInteger;
+	@:overload @:public public function getPrimeQ() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeExponentP.
 	*
 	* @return the primeExponentP
 	*/
-	@:overload public function getPrimeExponentP() : java.math.BigInteger;
+	@:overload @:public public function getPrimeExponentP() : java.math.BigInteger;
 	
 	/**
 	* Returns the primeExponentQ.
 	*
 	* @return the primeExponentQ
 	*/
-	@:overload public function getPrimeExponentQ() : java.math.BigInteger;
+	@:overload @:public public function getPrimeExponentQ() : java.math.BigInteger;
 	
 	/**
 	* Returns the crtCoefficient.
 	*
 	* @return the crtCoefficient
 	*/
-	@:overload public function getCrtCoefficient() : java.math.BigInteger;
+	@:overload @:public public function getCrtCoefficient() : java.math.BigInteger;
 	
 	
 }

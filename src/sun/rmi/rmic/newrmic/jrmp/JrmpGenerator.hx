@@ -38,29 +38,29 @@ extern class JrmpGenerator implements sun.rmi.rmic.newrmic.Generator
 	/**
 	* Creates a new JrmpGenerator.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The JRMP generator recognizes command line options for
 	* selecting the JRMP stub protocol version to generate classes
 	* for.  Only one such option is allowed.
 	**/
-	@:overload public function parseArgs(args : java.NativeArray<String>, main : sun.rmi.rmic.newrmic.Main) : Bool;
+	@:overload @:public public function parseArgs(args : java.NativeArray<String>, main : sun.rmi.rmic.newrmic.Main) : Bool;
 	
 	/**
 	* The JRMP generator does not require an environment class more
 	* specific than BatchEnvironment.
 	**/
-	@:overload public function envClass() : Class<sun.rmi.rmic.newrmic.BatchEnvironment>;
+	@:overload @:public public function envClass() : Class<sun.rmi.rmic.newrmic.BatchEnvironment>;
 	
-	@:overload public function bootstrapClassNames() : java.util.Set<String>;
+	@:overload @:public public function bootstrapClassNames() : java.util.Set<String>;
 	
 	/**
 	* Generates the source file(s) for the JRMP stub class and
 	* (optionally) skeleton class for the specified remote
 	* implementation class.
 	**/
-	@:overload public function generate(env : sun.rmi.rmic.newrmic.BatchEnvironment, inputClass : com.sun.javadoc.ClassDoc, destDir : java.io.File) : Void;
+	@:overload @:public public function generate(env : sun.rmi.rmic.newrmic.BatchEnvironment, inputClass : com.sun.javadoc.ClassDoc, destDir : java.io.File) : Void;
 	
 	
 }

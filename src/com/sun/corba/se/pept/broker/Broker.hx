@@ -28,13 +28,13 @@ extern interface Broker
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function createOrIncrementInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
+	@:overload @:public public function createOrIncrementInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
-	@:overload public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
+	@:overload @:public public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
-	@:overload public function releaseOrDecrementInvocationInfo() : Void;
+	@:overload @:public public function releaseOrDecrementInvocationInfo() : Void;
 	
-	@:overload @:abstract public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
+	@:overload @:public @:abstract public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
 	
 	
 }

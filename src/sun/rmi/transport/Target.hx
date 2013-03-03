@@ -35,18 +35,18 @@ extern class Target
 	* collection. Permanent objects do not keep a server from
 	* exiting.
 	*/
-	@:overload public function new(impl : java.rmi.Remote, disp : sun.rmi.server.Dispatcher, stub : java.rmi.Remote, id : java.rmi.server.ObjID, permanent : Bool) : Void;
+	@:overload @:public public function new(impl : java.rmi.Remote, disp : sun.rmi.server.Dispatcher, stub : java.rmi.Remote, id : java.rmi.server.ObjID, permanent : Bool) : Void;
 	
 	/** Get the stub (proxy) object for this target
 	*/
-	@:overload public function getStub() : java.rmi.Remote;
+	@:overload @:public public function getStub() : java.rmi.Remote;
 	
 	/**
 	* This method is called if the address space associated with the
 	* vmid dies.  In that case, the vmid should be removed
 	* from the reference set.
 	*/
-	@:overload @:synchronized public function vmidDead(vmid : java.rmi.dgc.VMID) : Void;
+	@:overload @:synchronized @:public public function vmidDead(vmid : java.rmi.dgc.VMID) : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	/**
 	* Create a new AbstractRegionPainter
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload @:final public function paint(g : java.awt.Graphics2D, c : javax.swing.JComponent, w : Int, h : Int) : Void;
+	@:overload @:public @:final public function paint(g : java.awt.Graphics2D, c : javax.swing.JComponent, w : Int, h : Int) : Void;
 	
 	/**
 	* Get any extra attributes which the painter implementation would like
@@ -43,7 +43,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @param c The component on the current paint call
 	* @return Array of extra objects to be included in the cache key
 	*/
-	@:overload private function getExtendedCacheKeys(c : javax.swing.JComponent) : java.NativeArray<Dynamic>;
+	@:overload @:protected private function getExtendedCacheKeys(c : javax.swing.JComponent) : java.NativeArray<Dynamic>;
 	
 	/**
 	* <p>Gets the PaintContext for this painting operation. This method is called on every
@@ -57,7 +57,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*
 	* @return a PaintContext associated with this paint operation.
 	*/
-	@:overload @:abstract private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
+	@:overload @:protected @:abstract private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	/**
 	* <p>Configures the given Graphics2D. Often, rendering hints or compositiing rules are
@@ -68,7 +68,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*
 	* @param g The Graphics2D object to configure. Will not be null.
 	*/
-	@:overload private function configureGraphics(g : java.awt.Graphics2D) : Void;
+	@:overload @:protected private function configureGraphics(g : java.awt.Graphics2D) : Void;
 	
 	/**
 	* Actually performs the painting operation. Subclasses must implement this method.
@@ -89,7 +89,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*               painting the foreground, this value may differ from c.getHeight().
 	* @param extendedCacheKeys The result of the call to getExtendedCacheKeys()
 	*/
-	@:overload @:abstract private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected @:abstract private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Decodes and returns a float value representing the actual pixel location for
@@ -100,7 +100,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @throws IllegalArgumentException
 	*      if {@code x < 0} or {@code x > 3}
 	*/
-	@:overload @:final private function decodeX(x : Single) : Single;
+	@:overload @:protected @:final private function decodeX(x : Single) : Single;
 	
 	/**
 	* Decodes and returns a float value representing the actual pixel location for
@@ -111,7 +111,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @throws IllegalArgumentException
 	*      if {@code y < 0} or {@code y > 3}
 	*/
-	@:overload @:final private function decodeY(y : Single) : Single;
+	@:overload @:protected @:final private function decodeY(y : Single) : Single;
 	
 	/**
 	* Decodes and returns a float value representing the actual pixel location for
@@ -124,7 +124,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @throws IllegalArgumentException
 	*      if {@code x < 0} or {@code x > 3}
 	*/
-	@:overload @:final private function decodeAnchorX(x : Single, dx : Single) : Single;
+	@:overload @:protected @:final private function decodeAnchorX(x : Single, dx : Single) : Single;
 	
 	/**
 	* Decodes and returns a float value representing the actual pixel location for
@@ -137,7 +137,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @throws IllegalArgumentException
 	*      if {@code y < 0} or {@code y > 3}
 	*/
-	@:overload @:final private function decodeAnchorY(y : Single, dy : Single) : Single;
+	@:overload @:protected @:final private function decodeAnchorY(y : Single, dy : Single) : Single;
 	
 	/**
 	* Decodes and returns a color, which is derived from a base color in UI
@@ -152,7 +152,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @return The derived color, whos color value will change if the parent
 	*         uiDefault color changes.
 	*/
-	@:overload @:final private function decodeColor(key : String, hOffset : Single, sOffset : Single, bOffset : Single, aOffset : Int) : java.awt.Color;
+	@:overload @:protected @:final private function decodeColor(key : String, hOffset : Single, sOffset : Single, bOffset : Single, aOffset : Int) : java.awt.Color;
 	
 	/**
 	* Decodes and returns a color, which is derived from a offset between two
@@ -164,7 +164,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*                 color 1 and 1.0 is color 2;
 	* @return The derived color
 	*/
-	@:overload @:final private function decodeColor(color1 : java.awt.Color, color2 : java.awt.Color, midPoint : Single) : java.awt.Color;
+	@:overload @:protected @:final private function decodeColor(color1 : java.awt.Color, color2 : java.awt.Color, midPoint : Single) : java.awt.Color;
 	
 	/**
 	* Given parameters for creating a LinearGradientPaint, this method will
@@ -190,7 +190,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*      or a {@code midpoints} value is less than 0.0 or greater than 1.0,
 	*      or the {@code midpoints} are not provided in strictly increasing order
 	*/
-	@:overload @:final private function decodeGradient(x1 : Single, y1 : Single, x2 : Single, y2 : Single, midpoints : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : java.awt.LinearGradientPaint;
+	@:overload @:protected @:final private function decodeGradient(x1 : Single, y1 : Single, x2 : Single, y2 : Single, midpoints : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : java.awt.LinearGradientPaint;
 	
 	/**
 	* Given parameters for creating a RadialGradientPaint, this method will
@@ -215,7 +215,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*      or a {@code midpoints} value is less than 0.0 or greater than 1.0,
 	*      or the {@code midpoints} are not provided in strictly increasing order
 	*/
-	@:overload @:final private function decodeRadialGradient(x : Single, y : Single, r : Single, midpoints : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : java.awt.RadialGradientPaint;
+	@:overload @:protected @:final private function decodeRadialGradient(x : Single, y : Single, r : Single, midpoints : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>) : java.awt.RadialGradientPaint;
 	
 	/**
 	* Get a color property from the given JComponent. First checks for a
@@ -229,7 +229,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*        the component.
 	* @return The color that was obtained from the component or defaultColor
 	*/
-	@:overload @:final private function getComponentColor(c : javax.swing.JComponent, property : String, defaultColor : java.awt.Color, saturationOffset : Single, brightnessOffset : Single, alphaOffset : Int) : java.awt.Color;
+	@:overload @:protected @:final private function getComponentColor(c : javax.swing.JComponent, property : String, defaultColor : java.awt.Color, saturationOffset : Single, brightnessOffset : Single, alphaOffset : Int) : java.awt.Color;
 	
 	/**
 	* <p>Renders to the given {@link java.awt.Graphics2D} object. Implementations
@@ -273,7 +273,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @param width width of the area to paint.
 	* @param height height of the area to paint.
 	*/
-	@:overload @:public public function paint(g : java.awt.Graphics2D, object : Dynamic, width : Int, height : Int) : Void;
+	@:overload @:public @:public public function paint(g : java.awt.Graphics2D, object : Dynamic, width : Int, height : Int) : Void;
 	
 	
 }
@@ -295,7 +295,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*                   to one of the "decode" methods will return the passed in value.
 	* @param inverted Whether to "invert" the meaning of the 9-square grid and stretching insets
 	*/
-	@:overload public function new(insets : java.awt.Insets, canvasSize : java.awt.Dimension, inverted : Bool) : Void;
+	@:overload @:public public function new(insets : java.awt.Insets, canvasSize : java.awt.Dimension, inverted : Bool) : Void;
 	
 	/**
 	* Creates a new PaintContext.
@@ -315,7 +315,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*             height before redrawing from scratch. Reasonable maxV values may improve painting performance.
 	*             If set too high, then you may get poor looking graphics at higher zoom levels. Must be >= 1.
 	*/
-	@:overload public function new(insets : java.awt.Insets, canvasSize : java.awt.Dimension, inverted : Bool, cacheMode : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext_CacheMode, maxH : Float, maxV : Float) : Void;
+	@:overload @:public public function new(insets : java.awt.Insets, canvasSize : java.awt.Dimension, inverted : Bool, cacheMode : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext_CacheMode, maxH : Float, maxV : Float) : Void;
 	
 	
 }

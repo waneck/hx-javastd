@@ -29,16 +29,16 @@ extern class TaggedComponentBase extends com.sun.corba.se.spi.ior.IdentifiableBa
 	* the getIOPComponent method using the TaggedComponent.write() method.
 	* @author Ken Cavanaugh
 	*/
-	@:overload public function getIOPComponent(orb : org.omg.CORBA.ORB) : org.omg.IOP.TaggedComponent;
+	@:overload @:public public function getIOPComponent(orb : org.omg.CORBA.ORB) : org.omg.IOP.TaggedComponent;
 	
 	/** Write this object directly to the output stream.
 	*/
-	@:overload override public function write(arg0 : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function write(arg0 : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Return the (type) identity of this entity.
 	* @return int
 	*/
-	@:overload public function getId() : Int;
+	@:overload @:public @:public @:public @:public public function getId() : Int;
 	
 	
 }

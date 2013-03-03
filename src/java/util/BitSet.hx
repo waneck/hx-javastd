@@ -28,7 +28,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	/**
 	* Creates a new bit set. All bits are initially {@code false}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a bit set whose initial size is large enough to explicitly
@@ -39,7 +39,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws NegativeArraySizeException if the specified initial size
 	*         is negative
 	*/
-	@:overload public function new(nbits : Int) : Void;
+	@:overload @:public public function new(nbits : Int) : Void;
 	
 	/**
 	* Returns a new bit set containing all the bits in the given long array.
@@ -56,7 +56,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*        new bit set
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function valueOf(longs : java.NativeArray<haxe.Int64>) : java.util.BitSet;
+	@:require(java7) @:overload @:public @:static public static function valueOf(longs : java.NativeArray<haxe.Int64>) : java.util.BitSet;
 	
 	/**
 	* Returns a new bit set containing all the bits in the given long
@@ -74,7 +74,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*        used as the initial bits of the new bit set
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function valueOf(lb : java.nio.LongBuffer) : java.util.BitSet;
+	@:require(java7) @:overload @:public @:static public static function valueOf(lb : java.nio.LongBuffer) : java.util.BitSet;
 	
 	/**
 	* Returns a new bit set containing all the bits in the given byte array.
@@ -91,7 +91,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*        initial bits of the new bit set
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function valueOf(bytes : java.NativeArray<java.StdTypes.Int8>) : java.util.BitSet;
+	@:require(java7) @:overload @:public @:static public static function valueOf(bytes : java.NativeArray<java.StdTypes.Int8>) : java.util.BitSet;
 	
 	/**
 	* Returns a new bit set containing all the bits in the given byte
@@ -109,7 +109,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*        used as the initial bits of the new bit set
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function valueOf(bb : java.nio.ByteBuffer) : java.util.BitSet;
+	@:require(java7) @:overload @:public @:static public static function valueOf(bb : java.nio.ByteBuffer) : java.util.BitSet;
 	
 	/**
 	* Returns a new byte array containing all the bits in this bit set.
@@ -124,7 +124,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         of all the bits in this bit set
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java7) @:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a new long array containing all the bits in this bit set.
@@ -139,7 +139,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         of all the bits in this bit set
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function toLongArray() : java.NativeArray<haxe.Int64>;
+	@:require(java7) @:overload @:public public function toLongArray() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Sets the bit at the specified index to the complement of its
@@ -149,7 +149,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function flip(bitIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function flip(bitIndex : Int) : Void;
 	
 	/**
 	* Sets each bit from the specified {@code fromIndex} (inclusive) to the
@@ -163,7 +163,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         larger than {@code toIndex}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function flip(fromIndex : Int, toIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function flip(fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sets the bit at the specified index to {@code true}.
@@ -172,7 +172,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @since  JDK1.0
 	*/
-	@:require(java0) @:overload public function set(bitIndex : Int) : Void;
+	@:require(java0) @:overload @:public public function set(bitIndex : Int) : Void;
 	
 	/**
 	* Sets the bit at the specified index to the specified value.
@@ -182,7 +182,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function set(bitIndex : Int, value : Bool) : Void;
+	@:require(java4) @:overload @:public public function set(bitIndex : Int, value : Bool) : Void;
 	
 	/**
 	* Sets the bits from the specified {@code fromIndex} (inclusive) to the
@@ -195,7 +195,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         larger than {@code toIndex}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function set(fromIndex : Int, toIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function set(fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sets the bits from the specified {@code fromIndex} (inclusive) to the
@@ -209,7 +209,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         larger than {@code toIndex}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function set(fromIndex : Int, toIndex : Int, value : Bool) : Void;
+	@:require(java4) @:overload @:public public function set(fromIndex : Int, toIndex : Int, value : Bool) : Void;
 	
 	/**
 	* Sets the bit specified by the index to {@code false}.
@@ -218,7 +218,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @since  JDK1.0
 	*/
-	@:require(java0) @:overload public function clear(bitIndex : Int) : Void;
+	@:require(java0) @:overload @:public public function clear(bitIndex : Int) : Void;
 	
 	/**
 	* Sets the bits from the specified {@code fromIndex} (inclusive) to the
@@ -231,14 +231,14 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         larger than {@code toIndex}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function clear(fromIndex : Int, toIndex : Int) : Void;
+	@:require(java4) @:overload @:public public function clear(fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sets all of the bits in this BitSet to {@code false}.
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function clear() : Void;
+	@:require(java4) @:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the value of the bit with the specified index. The value
@@ -250,7 +250,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @return the value of the bit with the specified index
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	*/
-	@:overload public function get(bitIndex : Int) : Bool;
+	@:overload @:public public function get(bitIndex : Int) : Bool;
 	
 	/**
 	* Returns a new {@code BitSet} composed of bits from this {@code BitSet}
@@ -264,7 +264,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         larger than {@code toIndex}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function get(fromIndex : Int, toIndex : Int) : java.util.BitSet;
+	@:require(java4) @:overload @:public public function get(fromIndex : Int, toIndex : Int) : java.util.BitSet;
 	
 	/**
 	* Returns the index of the first bit that is set to {@code true}
@@ -285,7 +285,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function nextSetBit(fromIndex : Int) : Int;
+	@:require(java4) @:overload @:public public function nextSetBit(fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index of the first bit that is set to {@code false}
@@ -296,7 +296,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function nextClearBit(fromIndex : Int) : Int;
+	@:require(java4) @:overload @:public public function nextClearBit(fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index of the nearest bit that is set to {@code true}
@@ -319,7 +319,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         than {@code -1}
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function previousSetBit(fromIndex : Int) : Int;
+	@:require(java7) @:overload @:public public function previousSetBit(fromIndex : Int) : Int;
 	
 	/**
 	* Returns the index of the nearest bit that is set to {@code false}
@@ -334,7 +334,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         than {@code -1}
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function previousClearBit(fromIndex : Int) : Int;
+	@:require(java7) @:overload @:public public function previousClearBit(fromIndex : Int) : Int;
 	
 	/**
 	* Returns the "logical size" of this {@code BitSet}: the index of
@@ -344,7 +344,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @return the logical size of this {@code BitSet}
 	* @since  1.2
 	*/
-	@:require(java2) @:overload public function length() : Int;
+	@:require(java2) @:overload @:public public function length() : Int;
 	
 	/**
 	* Returns true if this {@code BitSet} contains no bits that are set
@@ -353,7 +353,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @return boolean indicating whether this {@code BitSet} is empty
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function isEmpty() : Bool;
+	@:require(java4) @:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns true if the specified {@code BitSet} has any bits set to
@@ -364,7 +364,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         the specified {@code BitSet}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function intersects(set : java.util.BitSet) : Bool;
+	@:require(java4) @:overload @:public public function intersects(set : java.util.BitSet) : Bool;
 	
 	/**
 	* Returns the number of bits set to {@code true} in this {@code BitSet}.
@@ -372,7 +372,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @return the number of bits set to {@code true} in this {@code BitSet}
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function cardinality() : Int;
+	@:require(java4) @:overload @:public public function cardinality() : Int;
 	
 	/**
 	* Performs a logical <b>AND</b> of this target bit set with the
@@ -383,7 +383,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @param set a bit set
 	*/
-	@:overload public function and(set : java.util.BitSet) : Void;
+	@:overload @:public public function and(set : java.util.BitSet) : Void;
 	
 	/**
 	* Performs a logical <b>OR</b> of this bit set with the bit set
@@ -394,7 +394,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @param set a bit set
 	*/
-	@:overload public function or(set : java.util.BitSet) : Void;
+	@:overload @:public public function or(set : java.util.BitSet) : Void;
 	
 	/**
 	* Performs a logical <b>XOR</b> of this bit set with the bit set
@@ -410,7 +410,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @param  set a bit set
 	*/
-	@:overload public function xor(set : java.util.BitSet) : Void;
+	@:overload @:public public function xor(set : java.util.BitSet) : Void;
 	
 	/**
 	* Clears all of the bits in this {@code BitSet} whose corresponding
@@ -420,7 +420,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         {@code BitSet}
 	* @since  1.2
 	*/
-	@:require(java2) @:overload public function andNot(set : java.util.BitSet) : Void;
+	@:require(java2) @:overload @:public public function andNot(set : java.util.BitSet) : Void;
 	
 	/**
 	* Returns the hash code value for this bit set. The hash code depends
@@ -440,7 +440,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return the hash code value for this bit set
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the number of bits of space actually in use by this
@@ -449,7 +449,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return the number of bits currently in this bit set
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Compares this object against the specified object.
@@ -465,7 +465,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*         {@code false} otherwise
 	* @see    #size()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Cloning this {@code BitSet} produces a new {@code BitSet}
@@ -476,7 +476,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	* @return a clone of this bit set
 	* @see    #size()
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a string representation of this bit set. For every index
@@ -501,7 +501,7 @@ extern class BitSet implements java.lang.Cloneable implements java.io.Serializab
 	*
 	* @return a string representation of this bit set
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

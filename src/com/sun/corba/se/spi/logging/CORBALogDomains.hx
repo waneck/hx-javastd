@@ -54,106 +54,106 @@ package com.sun.corba.se.spi.logging;
 */
 extern class CORBALogDomains
 {
-	public static var TOP_LEVEL_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var TOP_LEVEL_DOMAIN(default, null) : String;
 	
-	public static var RPC(default, null) : String;
+	@:public @:static @:final public static var RPC(default, null) : String;
 	
 	/** Log domain for code directly implementing the CORBA API and
 	* the typecode/any machinery.
 	*/
-	public static var RPC_PRESENTATION(default, null) : String;
+	@:public @:static @:final public static var RPC_PRESENTATION(default, null) : String;
 	
 	/** Log domain for any sort of wire encoding used in marshalling
 	*/
-	public static var RPC_ENCODING(default, null) : String;
+	@:public @:static @:final public static var RPC_ENCODING(default, null) : String;
 	
 	/** Log domain for the code used to handle any kind of invocation
 	* protocol.  This includes client and server delegates, client and
 	* server request dispatchers, service contexts, portable interceptors,
 	* and the GIOP protocol (but not CDR representation of data).
 	*/
-	public static var RPC_PROTOCOL(default, null) : String;
+	@:public @:static @:final public static var RPC_PROTOCOL(default, null) : String;
 	
 	/** Log domain for low-level transport details, which are
 	* independent of encoding and presentation details.  This
 	* includes selectors, acceptors, connections, connection management,
 	* and any other transport management functions.
 	*/
-	public static var RPC_TRANSPORT(default, null) : String;
+	@:public @:static @:final public static var RPC_TRANSPORT(default, null) : String;
 	
-	public static var NAMING(default, null) : String;
+	@:public @:static @:final public static var NAMING(default, null) : String;
 	
 	/** Log domain for naming context creation and destruction.
 	*/
-	public static var NAMING_LIFECYCLE(default, null) : String;
+	@:public @:static @:final public static var NAMING_LIFECYCLE(default, null) : String;
 	
 	/** Log domain for name service lookup.
 	*/
-	public static var NAMING_READ(default, null) : String;
+	@:public @:static @:final public static var NAMING_READ(default, null) : String;
 	
 	/** Log domain for name service bind, rebind, destroy, and other state
 	* change operations.
 	*/
-	public static var NAMING_UPDATE(default, null) : String;
+	@:public @:static @:final public static var NAMING_UPDATE(default, null) : String;
 	
-	public static var ORBD(default, null) : String;
+	@:public @:static @:final public static var ORBD(default, null) : String;
 	
 	/** Log domain for the ORBD locator function, which forwards
 	* client requests to their current server incarnation.
 	*/
-	public static var ORBD_LOCATOR(default, null) : String;
+	@:public @:static @:final public static var ORBD_LOCATOR(default, null) : String;
 	
 	/** Log domain for the ORBD activator function, which starts
 	* server instances on demand.
 	*/
-	public static var ORBD_ACTIVATOR(default, null) : String;
+	@:public @:static @:final public static var ORBD_ACTIVATOR(default, null) : String;
 	
 	/** Log domain for the Implementation Repository.
 	*/
-	public static var ORBD_REPOSITORY(default, null) : String;
+	@:public @:static @:final public static var ORBD_REPOSITORY(default, null) : String;
 	
 	/** Log domain for the servertool utilitiy used to update the
 	* implementation repository.
 	*/
-	public static var ORBD_SERVERTOOL(default, null) : String;
+	@:public @:static @:final public static var ORBD_SERVERTOOL(default, null) : String;
 	
-	public static var ORB(default, null) : String;
+	@:public @:static @:final public static var ORB(default, null) : String;
 	
 	/** Log domain for ORB initialization, configuration, startup,
 	* and shutdown.
 	*/
-	public static var ORB_LIFECYCLE(default, null) : String;
+	@:public @:static @:final public static var ORB_LIFECYCLE(default, null) : String;
 	
 	/** Log domain for ORB client side name resolution and supporting
 	* functions such as INS.
 	*/
-	public static var ORB_RESOLVER(default, null) : String;
+	@:public @:static @:final public static var ORB_RESOLVER(default, null) : String;
 	
-	public static var OA(default, null) : String;
+	@:public @:static @:final public static var OA(default, null) : String;
 	
 	/** Log domain for creation, destruction, and state change of
 	* Object Adapters and related classes (e.g. POAManager).
 	*/
-	public static var OA_LIFECYCLE(default, null) : String;
+	@:public @:static @:final public static var OA_LIFECYCLE(default, null) : String;
 	
 	/** Log domain for all IOR related code.
 	*/
-	public static var OA_IOR(default, null) : String;
+	@:public @:static @:final public static var OA_IOR(default, null) : String;
 	
 	/** Log domain for object adapter request dispatch.
 	*/
-	public static var OA_INVOCATION(default, null) : String;
+	@:public @:static @:final public static var OA_INVOCATION(default, null) : String;
 	
-	public static var RMIIIOP(default, null) : String;
+	@:public @:static @:final public static var RMIIIOP(default, null) : String;
 	
 	/** Log domain for the RMI-IIOP implementation in the Stub, Util, and
 	* PortableRemoteObject delegates.
 	*/
-	public static var RMIIIOP_DELEGATE(default, null) : String;
+	@:public @:static @:final public static var RMIIIOP_DELEGATE(default, null) : String;
 	
 	/** Log domain for utility classes.
 	*/
-	public static var UTIL(default, null) : String;
+	@:public @:static @:final public static var UTIL(default, null) : String;
 	
 	
 }

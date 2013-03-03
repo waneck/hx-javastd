@@ -25,34 +25,41 @@ package com.sun.tools.internal.xjc.model;
 */
 @:internal extern class AbstractCTypeInfoImpl implements com.sun.tools.internal.xjc.model.CTypeInfo
 {
-	@:overload private function new(model : com.sun.tools.internal.xjc.model.Model, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
+	@:overload @:protected private function new(model : com.sun.tools.internal.xjc.model.Model, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations) : Void;
 	
-	@:overload @:final public function isCollection() : Bool;
+	@:overload @:public @:final public function isCollection() : Bool;
 	
-	@:overload @:final public function getAdapterUse() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload @:public @:final public function getAdapterUse() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload @:final public function idUse() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public @:final public function idUse() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload @:final public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public @:final public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* @deprecated
 	*      why are you calling an unimplemented method?
 	*/
-	@:overload @:final public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public @:final public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* No default {@link MimeType}.
 	*/
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
-	@:overload public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function createConstant(outline : com.sun.tools.internal.xjc.outline.Outline, lexical : com.sun.xml.internal.xsom.XmlString) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload @:final public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public @:final public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload @:final public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public @:final public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	
+	/**
+	* Gets the source location in the schema from which this model component is created.
+	*
+	* @return never null.
+	*/
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* Returns the {@link JClass} that represents the class being bound,
@@ -60,7 +67,7 @@ package com.sun.tools.internal.xjc.model;
 	*
 	* @see NType#toType(Outline, Aspect)
 	*/
-	@:overload @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -68,7 +75,7 @@ package com.sun.tools.internal.xjc.model;
 	* @return
 	*      always non-null.
 	*/
-	@:overload override public function getType() : Dynamic;
+	@:overload @:public @:public @:public @:public override public function getType() : Dynamic;
 	
 	
 }

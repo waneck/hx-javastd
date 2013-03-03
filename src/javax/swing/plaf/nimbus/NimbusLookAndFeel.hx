@@ -28,18 +28,18 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	/**
 	* Create a new NimbusLookAndFeel.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Called by UIManager when this look and feel is installed. */
-	@:overload override public function initialize() : Void;
+	@:overload @:public override public function initialize() : Void;
 	
 	/** Called by UIManager when this look and feel is uninstalled. */
-	@:overload override public function uninitialize() : Void;
+	@:overload @:public override public function uninitialize() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public override public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Gets the style associated with the given component and region. This
@@ -50,7 +50,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	* @param r a non-null reference to the region of the component c
 	* @return a non-null reference to a NimbusStyle.
 	*/
-	@:overload public static function getStyle(c : javax.swing.JComponent, r : javax.swing.plaf.synth.Region) : javax.swing.plaf.nimbus.NimbusStyle;
+	@:overload @:public @:static public static function getStyle(c : javax.swing.JComponent, r : javax.swing.plaf.synth.Region) : javax.swing.plaf.nimbus.NimbusStyle;
 	
 	/**
 	* Return a short string that identifies this look and feel. This
@@ -58,7 +58,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	*
 	* @return a short string identifying this look and feel.
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Return a string that identifies this look and feel. This String will
@@ -66,20 +66,20 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	*
 	* @return a short string identifying this look and feel.
 	*/
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Returns a textual description of this look and feel.
 	*
 	* @return textual description of this look and feel.
 	*/
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	/**
 	* @inheritDoc
 	* @return {@code true}
 	*/
-	@:overload override public function shouldUpdateStyleOnAncestorChanged() : Bool;
+	@:overload @:public override public function shouldUpdateStyleOnAncestorChanged() : Bool;
 	
 	/**
 	* @inheritDoc
@@ -94,7 +94,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override private function shouldUpdateStyleOnEvent(ev : java.beans.PropertyChangeEvent) : Bool;
+	@:require(java7) @:overload @:protected override private function shouldUpdateStyleOnEvent(ev : java.beans.PropertyChangeEvent) : Bool;
 	
 	/**
 	* <p>Registers a third party component with the NimbusLookAndFeel.</p>
@@ -140,9 +140,9 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	*        a named components, "MyComboBox", or even something like
 	*        ToolBar."MyComboBox"."ComboBox.arrowButton"
 	*/
-	@:overload public function register(region : javax.swing.plaf.synth.Region, prefix : String) : Void;
+	@:overload @:public public function register(region : javax.swing.plaf.synth.Region, prefix : String) : Void;
 	
-	@:overload override public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:overload @:public override public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Get a derived color, derived colors are shared instances and is color
@@ -157,7 +157,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	*                            UIResource, false if it should not be
 	* @return The stored derived color
 	*/
-	@:overload public function getDerivedColor(uiDefaultParentName : String, hOffset : Single, sOffset : Single, bOffset : Single, aOffset : Int, uiResource : Bool) : java.awt.Color;
+	@:overload @:public public function getDerivedColor(uiDefaultParentName : String, hOffset : Single, sOffset : Single, bOffset : Single, aOffset : Int, uiResource : Bool) : java.awt.Color;
 	
 	/**
 	* Decodes and returns a color, which is derived from an offset between two
@@ -170,7 +170,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	* @param uiResource True if the derived color should be a UIResource
 	* @return The derived color
 	*/
-	@:overload @:final private function getDerivedColor(color1 : java.awt.Color, color2 : java.awt.Color, midPoint : Single, uiResource : Bool) : java.awt.Color;
+	@:overload @:protected @:final private function getDerivedColor(color1 : java.awt.Color, color2 : java.awt.Color, midPoint : Single, uiResource : Bool) : java.awt.Color;
 	
 	/**
 	* Decodes and returns a color, which is derived from a offset between two
@@ -182,7 +182,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	*                 color 1 and 1.0 is color 2;
 	* @return The derived color, which will be a UIResource
 	*/
-	@:overload @:final private function getDerivedColor(color1 : java.awt.Color, color2 : java.awt.Color, midPoint : Single) : java.awt.Color;
+	@:overload @:protected @:final private function getDerivedColor(color1 : java.awt.Color, color2 : java.awt.Color, midPoint : Single) : java.awt.Color;
 	
 	
 }
@@ -191,7 +191,7 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 */
 @:native('javax$swing$plaf$nimbus$NimbusLookAndFeel$LinkProperty') @:internal extern class NimbusLookAndFeel_LinkProperty implements javax.swing.UIDefaults.UIDefaults_ActiveValue implements javax.swing.plaf.UIResource
 {
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -208,13 +208,13 @@ extern class NimbusLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	* @param table a <code>UIDefaults</code> table
 	* @return the created <code>Object</code>
 	*/
-	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
+	@:overload @:public public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
 @:native('javax$swing$plaf$nimbus$NimbusLookAndFeel$DefaultsListener') @:internal extern class NimbusLookAndFeel_DefaultsListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

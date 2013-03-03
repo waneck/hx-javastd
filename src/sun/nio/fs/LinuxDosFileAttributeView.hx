@@ -30,21 +30,21 @@ package sun.nio.fs;
 */
 @:internal extern class LinuxDosFileAttributeView extends sun.nio.fs.UnixFileAttributeViews.UnixFileAttributeViews_Basic implements java.nio.file.attribute.DosFileAttributeView
 {
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public override public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload override public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public override public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
 	
-	@:overload override public function readAttributes() : java.nio.file.attribute.DosFileAttributes;
+	@:overload @:public override public function readAttributes() : java.nio.file.attribute.DosFileAttributes;
 	
-	@:overload public function setReadOnly(value : Bool) : Void;
+	@:overload @:public public function setReadOnly(value : Bool) : Void;
 	
-	@:overload public function setHidden(value : Bool) : Void;
+	@:overload @:public public function setHidden(value : Bool) : Void;
 	
-	@:overload public function setArchive(value : Bool) : Void;
+	@:overload @:public public function setArchive(value : Bool) : Void;
 	
-	@:overload public function setSystem(value : Bool) : Void;
+	@:overload @:public public function setSystem(value : Bool) : Void;
 	
 	
 }

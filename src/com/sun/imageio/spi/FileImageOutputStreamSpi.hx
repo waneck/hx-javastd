@@ -25,11 +25,11 @@ package com.sun.imageio.spi;
 */
 extern class FileImageOutputStreamSpi extends javax.imageio.spi.ImageOutputStreamSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload @:public override public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload override public function createOutputStreamInstance(output : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageOutputStream;
+	@:overload @:public override public function createOutputStreamInstance(output : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageOutputStream;
 	
 	
 }

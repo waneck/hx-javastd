@@ -25,25 +25,25 @@ package sun.management.counter.perf;
 */
 @:internal extern class Prologue
 {
-	@:overload public function getMagic() : Int;
+	@:overload @:public public function getMagic() : Int;
 	
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
-	@:overload public function getByteOrder() : java.nio.ByteOrder;
+	@:overload @:public public function getByteOrder() : java.nio.ByteOrder;
 	
-	@:overload public function getEntryOffset() : Int;
+	@:overload @:public public function getEntryOffset() : Int;
 	
-	@:overload public function getUsed() : Int;
+	@:overload @:public public function getUsed() : Int;
 	
-	@:overload public function getOverflow() : Int;
+	@:overload @:public public function getOverflow() : Int;
 	
-	@:overload public function getModificationTimeStamp() : haxe.Int64;
+	@:overload @:public public function getModificationTimeStamp() : haxe.Int64;
 	
-	@:overload public function getNumEntries() : Int;
+	@:overload @:public public function getNumEntries() : Int;
 	
-	@:overload public function isAccessible() : Bool;
+	@:overload @:public public function isAccessible() : Bool;
 	
 	
 }

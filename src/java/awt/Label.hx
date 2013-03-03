@@ -50,18 +50,18 @@ package java.awt;
 	/**
 	* Indicates that the label should be left justified.
 	*/
-	public static var LEFT(default, null) : Int;
+	@:public @:static @:final public static var LEFT(default, null) : Int;
 	
 	/**
 	* Indicates that the label should be centered.
 	*/
-	public static var CENTER(default, null) : Int;
+	@:public @:static @:final public static var CENTER(default, null) : Int;
 	
 	/**
 	* Indicates that the label should be right justified.
 	* @since   JDK1.0t.
 	*/
-	@:require(java0) public static var RIGHT(default, null) : Int;
+	@:require(java0) @:public @:static @:final public static var RIGHT(default, null) : Int;
 	
 	/**
 	* Constructs an empty label.
@@ -70,7 +70,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new label with the specified string of text,
@@ -83,7 +83,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs a new label that presents the specified string of
@@ -99,14 +99,14 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(text : String, alignment : Int) : Void;
+	@:overload @:public public function new(text : String, alignment : Int) : Void;
 	
 	/**
 	* Creates the peer for this label.  The peer allows us to
 	* modify the appearance of the label without changing its
 	* functionality.
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Gets the current alignment of this label. Possible values are
@@ -114,7 +114,7 @@ package java.awt;
 	* <code>Label.CENTER</code>.
 	* @see        java.awt.Label#setAlignment
 	*/
-	@:overload public function getAlignment() : Int;
+	@:overload @:public public function getAlignment() : Int;
 	
 	/**
 	* Sets the alignment for this label to the specified alignment.
@@ -125,7 +125,7 @@ package java.awt;
 	*                          <code>alignment</code> is given.
 	* @see        java.awt.Label#getAlignment
 	*/
-	@:overload @:synchronized public function setAlignment(alignment : Int) : Void;
+	@:overload @:public @:synchronized public function setAlignment(alignment : Int) : Void;
 	
 	/**
 	* Gets the text of this label.
@@ -133,7 +133,7 @@ package java.awt;
 	*             the text has been set to <code>null</code>.
 	* @see        java.awt.Label#setText
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Sets the text for this label to the specified text.
@@ -143,7 +143,7 @@ package java.awt;
 	*             string <code>""</code>.
 	* @see        java.awt.Label#getText
 	*/
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Label</code>.
@@ -154,7 +154,7 @@ package java.awt;
 	*
 	* @return     the parameter string of this label
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this Label.
@@ -166,7 +166,7 @@ package java.awt;
 	*         AccessibleContext of this Label
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -178,7 +178,7 @@ package java.awt;
 */
 @:require(java3) @:native('java$awt$Label$AccessibleAWTLabel') extern class Label_AccessibleAWTLabel extends java.awt.Component.Component_AccessibleAWTComponent
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the accessible name of this object.
@@ -187,7 +187,7 @@ package java.awt;
 	* object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -195,7 +195,7 @@ package java.awt;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

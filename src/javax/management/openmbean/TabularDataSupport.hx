@@ -38,7 +38,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @throws IllegalArgumentException  if the tabular type is null.
 	*/
-	@:overload public function new(tabularType : javax.management.openmbean.TabularType) : Void;
+	@:overload @:public public function new(tabularType : javax.management.openmbean.TabularType) : Void;
 	
 	/**
 	* Creates an empty <tt>TabularDataSupport</tt> instance whose open-type is <var>tabularType</var>,
@@ -55,12 +55,12 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*                                   or the load factor is nonpositive,
 	*                                   or the tabular type is null.
 	*/
-	@:overload public function new(tabularType : javax.management.openmbean.TabularType, initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(tabularType : javax.management.openmbean.TabularType, initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Returns the <i>tabular type</i> describing this <tt>TabularData</tt> instance.
 	*/
-	@:overload public function getTabularType() : javax.management.openmbean.TabularType;
+	@:overload @:public public function getTabularType() : javax.management.openmbean.TabularType;
 	
 	/**
 	* Calculates the index that would be used in this <tt>TabularData</tt> instance to refer to the specified
@@ -80,7 +80,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @throws InvalidOpenTypeException   if <var>value</var> does not conform to this <tt>TabularData</tt> instance's
 	*                                    row type definition.
 	*/
-	@:overload public function calculateIndex(value : javax.management.openmbean.CompositeData) : java.NativeArray<Dynamic>;
+	@:overload @:public public function calculateIndex(value : javax.management.openmbean.CompositeData) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains a <tt>CompositeData</tt> value
@@ -92,7 +92,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  <tt>true</tt> if this <tt>TabularData</tt> indexes a row value with the specified key.
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains a <tt>CompositeData</tt> value
@@ -103,7 +103,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  <tt>true</tt> if this <tt>TabularData</tt> indexes a row value with the specified key.
 	*/
-	@:overload public function containsKey(key : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public public function containsKey(key : java.NativeArray<Dynamic>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains the specified
@@ -114,7 +114,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  <tt>true</tt> if this <tt>TabularData</tt> instance contains the specified row value.
 	*/
-	@:overload public function containsValue(value : javax.management.openmbean.CompositeData) : Bool;
+	@:overload @:public public function containsValue(value : javax.management.openmbean.CompositeData) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains the specified
@@ -124,7 +124,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  <tt>true</tt> if this <tt>TabularData</tt> instance contains the specified row value.
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* This method simply calls <tt>get((Object[]) key)</tt>.
@@ -134,7 +134,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @throws InvalidKeyException   if the <var>key</var> does not conform to this <tt>TabularData</tt> instance's
 	*                               <tt>TabularType</tt> definition
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the <tt>CompositeData</tt> value whose index is
@@ -152,7 +152,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @throws InvalidKeyException   if the <var>key</var> does not conform to this <tt>TabularData</tt> instance's
 	*                               <tt>TabularType</tt> type definition.
 	*/
-	@:overload public function get(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function get(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
 	
 	/**
 	* This method simply calls <tt>put((CompositeData) value)</tt> and
@@ -174,9 +174,9 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* <tt>TabularData</tt> instance's <tt>TabularType</tt> definition
 	* already maps to an existing value
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
-	@:overload public function put(value : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public public function put(value : javax.management.openmbean.CompositeData) : Void;
 	
 	/**
 	* This method simply calls <tt>remove((Object[]) key)</tt>.
@@ -191,7 +191,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @throws InvalidKeyException   if the <var>key</var> does not conform to this <tt>TabularData</tt> instance's
 	*                               <tt>TabularType</tt> definition
 	*/
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the <tt>CompositeData</tt> value whose index is <var>key</var> from this <tt>TabularData</tt> instance,
@@ -208,7 +208,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @throws InvalidKeyException   if the <var>key</var> does not conform to this <tt>TabularData</tt> instance's
 	*                               <tt>TabularType</tt> definition
 	*/
-	@:overload public function remove(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function remove(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
 	
 	/**
 	* Add all the values contained in the specified map <var>t</var>
@@ -239,7 +239,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* already maps to an existing value in this instance, or two
 	* values in <var>t</var> have the same index.
 	*/
-	@:overload public function putAll(t : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function putAll(t : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Add all the elements in <var>values</var> to this
@@ -270,26 +270,26 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* already maps to an existing value in this instance, or two
 	* elements of <var>values</var> have the same index
 	*/
-	@:overload public function putAll(values : java.NativeArray<javax.management.openmbean.CompositeData>) : Void;
+	@:overload @:public public function putAll(values : java.NativeArray<javax.management.openmbean.CompositeData>) : Void;
 	
 	/**
 	* Removes all rows from this <code>TabularDataSupport</code> instance.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the number of rows in this <code>TabularDataSupport</code> instance.
 	*
 	* @return the number of rows in this <code>TabularDataSupport</code> instance.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this <code>TabularDataSupport</code> instance contains no rows.
 	*
 	* @return <tt>true</tt> if this <code>TabularDataSupport</code> instance contains no rows.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns a set view of the keys contained in the underlying map of this
@@ -311,7 +311,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @return a set view ({@code Set<List<?>>}) of the keys used to index
 	* the rows of this {@code TabularDataSupport} instance.
 	*/
-	@:overload public function keySet() : java.util.Set<Dynamic>;
+	@:overload @:public public function keySet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns a collection view of the rows contained in this
@@ -333,7 +333,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* @return a collection view ({@code Collection<CompositeData>}) of
 	* the values contained in this {@code TabularDataSupport} instance.
 	*/
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns a collection view of the index to row mappings
@@ -364,13 +364,13 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	* of the mappings contained in this map.
 	* @see java.util.Map.Entry
 	*/
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
 	/* We cannot use covariance here and return TabularDataSupport
 	because this would fail with existing code that subclassed
 	TabularDataSupport and overrode Object clone().  It would not
 	override the new clone().  */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Compares the specified <var>obj</var> parameter with this <code>TabularDataSupport</code> instance for equality.
@@ -389,7 +389,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  <code>true</code> if the specified object is equal to this <code>TabularDataSupport</code> instance.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this <code>TabularDataSupport</code> instance.
@@ -409,7 +409,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  the hash code value for this <code>TabularDataSupport</code> instance
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>TabularDataSupport</code> instance.
@@ -421,7 +421,7 @@ extern class TabularDataSupport implements javax.management.openmbean.TabularDat
 	*
 	* @return  a string representation of this <code>TabularDataSupport</code> instance
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

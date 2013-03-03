@@ -43,16 +43,16 @@ package java.util;
 	* @param  s
 	*         Format specifier which does not have a corresponding argument
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the unmatched format specifier.
 	*
 	* @return  The unmatched format specifier
 	*/
-	@:overload public function getFormatSpecifier() : String;
+	@:overload @:public public function getFormatSpecifier() : String;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

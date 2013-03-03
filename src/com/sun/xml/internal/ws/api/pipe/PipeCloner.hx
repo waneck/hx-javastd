@@ -28,22 +28,22 @@ extern class PipeCloner extends com.sun.xml.internal.ws.api.pipe.TubeCloner
 	/**
 	* {@link Pipe} version of {@link #clone(Tube)}
 	*/
-	@:overload public static function clone(p : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public @:static public static function clone(p : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* {@link Pipe} version of {@link #copy(Tube)}
 	*/
-	@:overload override public function copy<T : com.sun.xml.internal.ws.api.pipe.Pipe>(p : T) : T;
+	@:overload @:public override public function copy<T : com.sun.xml.internal.ws.api.pipe.Pipe>(p : T) : T;
 	
 	/**
 	* The {@link Pipe} version of {@link #add(Tube, Tube)}.
 	*/
-	@:overload public function add(original : com.sun.xml.internal.ws.api.pipe.Pipe, copy : com.sun.xml.internal.ws.api.pipe.Pipe) : Void;
+	@:overload @:public public function add(original : com.sun.xml.internal.ws.api.pipe.Pipe, copy : com.sun.xml.internal.ws.api.pipe.Pipe) : Void;
 	
 	/**
 	* Disambiguation version.
 	*/
-	@:overload public function add(original : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl, copy : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl) : Void;
+	@:overload @:public public function add(original : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl, copy : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl) : Void;
 	
 	
 }

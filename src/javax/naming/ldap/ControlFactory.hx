@@ -28,7 +28,7 @@ extern class ControlFactory
 	/*
 	* Creates a new instance of a control factory.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a control using this control factory.
@@ -65,7 +65,7 @@ extern class ControlFactory
 	* an exception if it knows how to produce the control (identified by the OID)
 	* but is unable to because of, for example invalid BER data.
 	*/
-	@:overload @:abstract public function getControlInstance(ctl : javax.naming.ldap.Control) : javax.naming.ldap.Control;
+	@:overload @:public @:abstract public function getControlInstance(ctl : javax.naming.ldap.Control) : javax.naming.ldap.Control;
 	
 	/**
 	* Creates a control using known control factories.
@@ -104,7 +104,7 @@ extern class ControlFactory
 	* and instantiating the factory and object classes, the exception
 	* is wrapped inside a <tt>NamingException</tt> and then rethrown.
 	*/
-	@:native('getControlInstance') @:overload public static function _getControlInstance(ctl : javax.naming.ldap.Control, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.ldap.Control;
+	@:native('getControlInstance') @:overload @:public @:static public static function _getControlInstance(ctl : javax.naming.ldap.Control, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : javax.naming.ldap.Control;
 	
 	
 }

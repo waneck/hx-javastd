@@ -34,7 +34,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	* @return a copy of the array of floats used by this gradient to
 	* calculate color distribution
 	*/
-	@:overload @:final public function getFractions() : java.NativeArray<Single>;
+	@:overload @:public @:final public function getFractions() : java.NativeArray<Single>;
 	
 	/**
 	* Returns a copy of the array of colors used by this gradient.
@@ -43,14 +43,14 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	*
 	* @return a copy of the array of colors used by this gradient
 	*/
-	@:overload @:final public function getColors() : java.NativeArray<java.awt.Color>;
+	@:overload @:public @:final public function getColors() : java.NativeArray<java.awt.Color>;
 	
 	/**
 	* Returns the enumerated type which specifies cycling behavior.
 	*
 	* @return the enumerated type which specifies cycling behavior
 	*/
-	@:overload @:final public function getCycleMethod() : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod;
+	@:overload @:public @:final public function getCycleMethod() : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod;
 	
 	/**
 	* Returns the enumerated type which specifies color space for
@@ -59,7 +59,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	* @return the enumerated type which specifies color space for
 	* interpolation
 	*/
-	@:overload @:final public function getColorSpace() : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType;
+	@:overload @:public @:final public function getColorSpace() : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType;
 	
 	/**
 	* Returns a copy of the transform applied to the gradient.
@@ -70,7 +70,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	*
 	* @return a copy of the transform applied to the gradient
 	*/
-	@:overload @:final public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public @:final public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns the transparency mode for this {@code Paint} object.
@@ -81,7 +81,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	*         colors used by this {@code Paint} object is not opaque.
 	* @see java.awt.Transparency
 	*/
-	@:overload @:final public function getTransparency() : Int;
+	@:overload @:public @:final public function getTransparency() : Int;
 	
 	/**
 	* Creates and returns a {@link PaintContext} used to
@@ -132,7 +132,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload @:public public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload @:public @:public public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	
 }

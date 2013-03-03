@@ -25,17 +25,17 @@ package com.sun.media.sound;
 */
 @:internal extern class Platform
 {
-	public static var LIB_MAIN(default, null) : Int;
+	@:public @:static @:final public static var LIB_MAIN(default, null) : Int;
 	
-	public static var LIB_ALSA(default, null) : Int;
+	@:public @:static @:final public static var LIB_ALSA(default, null) : Int;
 	
-	public static var LIB_DSOUND(default, null) : Int;
+	@:public @:static @:final public static var LIB_DSOUND(default, null) : Int;
 	
-	public static var FEATURE_MIDIIO(default, null) : Int;
+	@:public @:static @:final public static var FEATURE_MIDIIO(default, null) : Int;
 	
-	public static var FEATURE_PORTS(default, null) : Int;
+	@:public @:static @:final public static var FEATURE_PORTS(default, null) : Int;
 	
-	public static var FEATURE_DIRECT_AUDIO(default, null) : Int;
+	@:public @:static @:final public static var FEATURE_DIRECT_AUDIO(default, null) : Int;
 	
 	
 }

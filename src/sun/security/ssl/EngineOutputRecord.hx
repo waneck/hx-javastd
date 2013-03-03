@@ -25,7 +25,7 @@ package sun.security.ssl;
 */
 @:internal extern class EngineOutputRecord extends sun.security.ssl.OutputRecord
 {
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	
 }

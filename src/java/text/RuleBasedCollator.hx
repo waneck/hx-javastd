@@ -48,27 +48,27 @@ extern class RuleBasedCollator extends java.text.Collator
 	* example, build rule "a < ? < d" will cause the constructor to
 	* throw the ParseException because the '?' is not quoted.
 	*/
-	@:overload public function new(rules : String) : Void;
+	@:overload @:public public function new(rules : String) : Void;
 	
 	/**
 	* Gets the table-based rules for the collation object.
 	* @return returns the collation rules that the table collation object
 	* was created from.
 	*/
-	@:overload public function getRules() : String;
+	@:overload @:public public function getRules() : String;
 	
 	/**
 	* Return a CollationElementIterator for the given String.
 	* @see java.text.CollationElementIterator
 	*/
-	@:overload public function getCollationElementIterator(source : String) : java.text.CollationElementIterator;
+	@:overload @:public public function getCollationElementIterator(source : String) : java.text.CollationElementIterator;
 	
 	/**
 	* Return a CollationElementIterator for the given String.
 	* @see java.text.CollationElementIterator
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCollationElementIterator(source : java.text.CharacterIterator) : java.text.CollationElementIterator;
+	@:require(java2) @:overload @:public public function getCollationElementIterator(source : java.text.CharacterIterator) : java.text.CollationElementIterator;
 	
 	/**
 	* Compares the character data stored in two different strings based on the
@@ -78,19 +78,19 @@ extern class RuleBasedCollator extends java.text.Collator
 	*
 	* @exception NullPointerException if <code>source</code> or <code>target</code> is null.
 	*/
-	@:overload @:synchronized public function compare(source : String, target : String) : Int;
+	@:overload @:public @:synchronized override public function compare(source : String, target : String) : Int;
 	
 	/**
 	* Transforms the string into a series of characters that can be compared
 	* with CollationKey.compareTo. This overrides java.text.Collator.getCollationKey.
 	* It can be overriden in a subclass.
 	*/
-	@:overload @:synchronized public function getCollationKey(source : String) : java.text.CollationKey;
+	@:overload @:public @:synchronized override public function getCollationKey(source : String) : java.text.CollationKey;
 	
 	/**
 	* Standard override; no change in semantics.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Compares the equality of two collation objects.
@@ -98,12 +98,12 @@ extern class RuleBasedCollator extends java.text.Collator
 	* @return true if the current table-based collation object is the same
 	* as the table-based collation object obj; false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Generates the hash code for the table-based collation object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

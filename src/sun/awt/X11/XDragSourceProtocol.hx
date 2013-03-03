@@ -25,14 +25,14 @@ package sun.awt.X11;
 */
 @:internal extern class XDragSourceProtocol
 {
-	@:overload private function new(listener : sun.awt.X11.XDragSourceProtocolListener) : Void;
+	@:overload @:protected private function new(listener : sun.awt.X11.XDragSourceProtocolListener) : Void;
 	
-	@:overload @:final private function getProtocolListener() : sun.awt.X11.XDragSourceProtocolListener;
+	@:overload @:protected @:final private function getProtocolListener() : sun.awt.X11.XDragSourceProtocolListener;
 	
 	/**
 	* Returns the protocol name. The protocol name cannot be null.
 	*/
-	@:overload @:abstract public function getProtocolName() : String;
+	@:overload @:public @:abstract public function getProtocolName() : String;
 	
 	/**
 	* Initalizes a drag operation with the specified supported drop actions,
@@ -48,10 +48,10 @@ package sun.awt.X11;
 	* @throws IllegalArgumentException if some argument has invalid value.
 	* @throws XException if some X call failed.
 	*/
-	@:overload @:final public function initializeDrag(actions : Int, contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public @:final public function initializeDrag(actions : Int, contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>) : Void;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract private function initializeDragImpl(actions : Int, contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:protected @:abstract private function initializeDragImpl(actions : Int, contents : java.awt.datatransfer.Transferable, formatMap : java.util.Map<Dynamic, Dynamic>, formats : java.NativeArray<haxe.Int64>) : Void;
 	
 	/**
 	* Terminates the current drag operation (if any) and resets the internal
@@ -59,61 +59,61 @@ package sun.awt.X11;
 	*
 	* @throws XException if some X call failed.
 	*/
-	@:overload public function cleanup() : Void;
+	@:overload @:public public function cleanup() : Void;
 	
 	/**
 	* Clears the information on the current drop target.
 	*
 	* @throws XException if some X call failed.
 	*/
-	@:overload public function cleanupTargetInfo() : Void;
+	@:overload @:public public function cleanupTargetInfo() : Void;
 	
 	/**
 	* Processes the specified client message event.
 	*
 	* @returns true if the event was successfully processed.
 	*/
-	@:overload @:abstract public function processClientMessage(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
+	@:overload @:public @:abstract public function processClientMessage(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:final public function attachTargetWindow(window : haxe.Int64, time : haxe.Int64) : Bool;
+	@:overload @:public @:final public function attachTargetWindow(window : haxe.Int64, time : haxe.Int64) : Bool;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract public function getTargetWindowInfo(window : haxe.Int64) : sun.awt.X11.XDragSourceProtocol.XDragSourceProtocol_TargetWindowInfo;
+	@:overload @:public @:abstract public function getTargetWindowInfo(window : haxe.Int64) : sun.awt.X11.XDragSourceProtocol.XDragSourceProtocol_TargetWindowInfo;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract public function sendEnterMessage(formats : java.NativeArray<haxe.Int64>, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function sendEnterMessage(formats : java.NativeArray<haxe.Int64>, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract public function sendMoveMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function sendMoveMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract public function sendLeaveMessage(time : haxe.Int64) : Void;
+	@:overload @:public @:abstract public function sendLeaveMessage(time : haxe.Int64) : Void;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract private function sendDropMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:protected @:abstract private function sendDropMessage(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
-	@:overload @:final public function initiateDrop(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
+	@:overload @:public @:final public function initiateDrop(xRoot : Int, yRoot : Int, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	
-	@:overload @:final private function finalizeDrop() : Void;
+	@:overload @:protected @:final private function finalizeDrop() : Void;
 	
-	@:overload @:abstract public function processProxyModeEvent(xclient : sun.awt.X11.XClientMessageEvent, sourceWindow : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function processProxyModeEvent(xclient : sun.awt.X11.XClientMessageEvent, sourceWindow : haxe.Int64) : Bool;
 	
-	@:overload @:final private function getTargetWindow() : haxe.Int64;
+	@:overload @:protected @:final private function getTargetWindow() : haxe.Int64;
 	
-	@:overload @:final private function getTargetProxyWindow() : haxe.Int64;
+	@:overload @:protected @:final private function getTargetProxyWindow() : haxe.Int64;
 	
-	@:overload @:final private function getTargetProtocolVersion() : Int;
+	@:overload @:protected @:final private function getTargetProtocolVersion() : Int;
 	
 	
 }
 @:native('sun$awt$X11$XDragSourceProtocol$TargetWindowInfo') extern class XDragSourceProtocol_TargetWindowInfo
 {
-	@:overload public function new(proxy : haxe.Int64, version : Int) : Void;
+	@:overload @:public public function new(proxy : haxe.Int64, version : Int) : Void;
 	
-	@:overload public function getProxyWindow() : haxe.Int64;
+	@:overload @:public public function getProxyWindow() : haxe.Int64;
 	
-	@:overload public function getProtocolVersion() : Int;
+	@:overload @:public public function getProtocolVersion() : Int;
 	
 	
 }

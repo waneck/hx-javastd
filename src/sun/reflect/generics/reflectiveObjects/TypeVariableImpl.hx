@@ -37,7 +37,7 @@ extern class TypeVariableImpl<D> extends sun.reflect.generics.reflectiveObjects.
 	* @return A type variable with name, bounds, declaration and factory
 	* specified
 	*/
-	@:overload public static function make<T : java.lang.reflect.GenericDeclaration>(decl : T, name : String, bs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.reflectiveObjects.TypeVariableImpl<T>;
+	@:overload @:public @:static public static function make<T : java.lang.reflect.GenericDeclaration>(decl : T, name : String, bs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.reflectiveObjects.TypeVariableImpl<T>;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the
@@ -60,7 +60,7 @@ extern class TypeVariableImpl<D> extends sun.reflect.generics.reflectiveObjects.
 	* @return an array of Types representing the upper bound(s) of this
 	*     type variable
 	*/
-	@:overload public function getBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns the <tt>GenericDeclaration</tt>  object representing the
@@ -70,20 +70,20 @@ extern class TypeVariableImpl<D> extends sun.reflect.generics.reflectiveObjects.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getGenericDeclaration() : D;
+	@:require(java5) @:overload @:public public function getGenericDeclaration() : D;
 	
 	/**
 	* Returns the name of this type variable, as it occurs in the source code.
 	*
 	* @return the name of this type variable, as it appears in the source code
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

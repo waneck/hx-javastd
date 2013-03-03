@@ -45,7 +45,7 @@ package java.awt.font;
 */
 @:internal extern class TextJustifier
 {
-	public static var MAX_PRIORITY(default, null) : Int;
+	@:public @:static @:final public static var MAX_PRIORITY(default, null) : Int;
 	
 	/**
 	* Return an array of deltas twice as long as the original info array,
@@ -54,7 +54,7 @@ package java.awt.font;
 	*
 	* Delta should be positive to expand the line, and negative to compress it.
 	*/
-	@:overload public function justify(delta : Single) : java.NativeArray<Single>;
+	@:overload @:public public function justify(delta : Single) : java.NativeArray<Single>;
 	
 	
 }

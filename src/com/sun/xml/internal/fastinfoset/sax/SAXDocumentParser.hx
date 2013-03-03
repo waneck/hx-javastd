@@ -30,130 +30,130 @@ extern class SAXDocumentParser extends com.sun.xml.internal.fastinfoset.Decoder 
 	/**
 	* SAX Namespace attributes features
 	*/
-	private var _namespacePrefixesFeature : Bool;
+	@:protected private var _namespacePrefixesFeature : Bool;
 	
 	/**
 	* Reference to entity resolver.
 	*/
-	private var _entityResolver : org.xml.sax.EntityResolver;
+	@:protected private var _entityResolver : org.xml.sax.EntityResolver;
 	
 	/**
 	* Reference to dtd handler.
 	*/
-	private var _dtdHandler : org.xml.sax.DTDHandler;
+	@:protected private var _dtdHandler : org.xml.sax.DTDHandler;
 	
 	/**
 	* Reference to content handler.
 	*/
-	private var _contentHandler : org.xml.sax.ContentHandler;
+	@:protected private var _contentHandler : org.xml.sax.ContentHandler;
 	
 	/**
 	* Reference to error handler.
 	*/
-	private var _errorHandler : org.xml.sax.ErrorHandler;
+	@:protected private var _errorHandler : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Reference to lexical handler.
 	*/
-	private var _lexicalHandler : org.xml.sax.ext.LexicalHandler;
+	@:protected private var _lexicalHandler : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Reference to DTD declaration handler.
 	*/
-	private var _declHandler : org.xml.sax.ext.DeclHandler;
+	@:protected private var _declHandler : org.xml.sax.ext.DeclHandler;
 	
-	private var _algorithmHandler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler;
+	@:protected private var _algorithmHandler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler;
 	
-	private var _primitiveHandler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler;
+	@:protected private var _primitiveHandler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler;
 	
-	private var builtInAlgorithmState : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithmState;
+	@:protected private var builtInAlgorithmState : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithmState;
 	
-	private var _attributes : com.sun.xml.internal.fastinfoset.sax.AttributesHolder;
+	@:protected private var _attributes : com.sun.xml.internal.fastinfoset.sax.AttributesHolder;
 	
-	private var _namespacePrefixes : java.NativeArray<Int>;
+	@:protected private var _namespacePrefixes : java.NativeArray<Int>;
 	
-	private var _namespacePrefixesIndex : Int;
+	@:protected private var _namespacePrefixesIndex : Int;
 	
-	private var _clearAttributes : Bool;
+	@:protected private var _clearAttributes : Bool;
 	
 	/** Creates a new instance of DocumetParser2 */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function resetOnError() : Void;
+	@:overload @:protected private function resetOnError() : Void;
 	
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(input : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
-	@:overload @:final public function parse(s : java.io.InputStream) : Void;
+	@:overload @:public @:final public function parse(s : java.io.InputStream) : Void;
 	
-	@:overload public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
-	@:overload public function setDeclHandler(handler : org.xml.sax.ext.DeclHandler) : Void;
+	@:overload @:public public function setDeclHandler(handler : org.xml.sax.ext.DeclHandler) : Void;
 	
-	@:overload public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
-	@:overload public function setEncodingAlgorithmContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler) : Void;
+	@:overload @:public public function setEncodingAlgorithmContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler) : Void;
 	
-	@:overload public function getEncodingAlgorithmContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler;
+	@:overload @:public public function getEncodingAlgorithmContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmContentHandler;
 	
-	@:overload public function setPrimitiveTypeContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler) : Void;
+	@:overload @:public public function setPrimitiveTypeContentHandler(handler : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler) : Void;
 	
-	@:overload public function getPrimitiveTypeContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler;
+	@:overload @:public public function getPrimitiveTypeContentHandler() : com.sun.xml.internal.org.jvnet.fastinfoset.sax.PrimitiveTypeContentHandler;
 	
-	@:overload @:final public function parse() : Void;
+	@:overload @:public @:final public function parse() : Void;
 	
-	@:overload @:final private function processDII() : Void;
+	@:overload @:protected @:final private function processDII() : Void;
 	
-	@:overload @:final private function processDIIFragment() : Void;
+	@:overload @:protected @:final private function processDIIFragment() : Void;
 	
-	@:overload @:final private function processDIIOptionalProperties() : Void;
+	@:overload @:protected @:final private function processDIIOptionalProperties() : Void;
 	
-	@:overload @:final private function processEII(name : com.sun.xml.internal.fastinfoset.QualifiedName, hasAttributes : Bool) : Void;
+	@:overload @:protected @:final private function processEII(name : com.sun.xml.internal.fastinfoset.QualifiedName, hasAttributes : Bool) : Void;
 	
-	@:overload @:final private function processEIIWithNamespaces() : Void;
+	@:overload @:protected @:final private function processEIIWithNamespaces() : Void;
 	
-	@:overload @:final private function processAIIs() : Void;
+	@:overload @:protected @:final private function processAIIs() : Void;
 	
-	@:overload @:final private function processCommentII() : Void;
+	@:overload @:protected @:final private function processCommentII() : Void;
 	
-	@:overload @:final private function processProcessingII() : Void;
+	@:overload @:protected @:final private function processProcessingII() : Void;
 	
-	@:overload @:final private function processCIIEncodingAlgorithm(addToTable : Bool) : Void;
+	@:overload @:protected @:final private function processCIIEncodingAlgorithm(addToTable : Bool) : Void;
 	
-	@:overload @:final private function processCIIBuiltInEncodingAlgorithmAsPrimitive() : Void;
+	@:overload @:protected @:final private function processCIIBuiltInEncodingAlgorithmAsPrimitive() : Void;
 	
-	@:overload @:final private function processAIIEncodingAlgorithm(name : com.sun.xml.internal.fastinfoset.QualifiedName, addToTable : Bool) : Void;
+	@:overload @:protected @:final private function processAIIEncodingAlgorithm(name : com.sun.xml.internal.fastinfoset.QualifiedName, addToTable : Bool) : Void;
 	
-	@:overload @:final private function processBuiltInEncodingAlgorithmAsCharacters(buffer : java.lang.StringBuffer) : Void;
+	@:overload @:protected @:final private function processBuiltInEncodingAlgorithmAsCharacters(buffer : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final private function processBuiltInEncodingAlgorithmAsObject() : Dynamic;
+	@:overload @:protected @:final private function processBuiltInEncodingAlgorithmAsObject() : Dynamic;
 	
 	
 }
@@ -163,19 +163,19 @@ extern class SAXDocumentParser extends com.sun.xml.internal.fastinfoset.Decoder 
 */
 @:native('com$sun$xml$internal$fastinfoset$sax$SAXDocumentParser$LexicalHandlerImpl') @:internal extern class SAXDocumentParser_LexicalHandlerImpl implements org.xml.sax.ext.LexicalHandler
 {
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, end : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, end : Int) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
 	
 }
@@ -185,13 +185,13 @@ extern class SAXDocumentParser extends com.sun.xml.internal.fastinfoset.Decoder 
 */
 @:native('com$sun$xml$internal$fastinfoset$sax$SAXDocumentParser$DeclHandlerImpl') @:internal extern class SAXDocumentParser_DeclHandlerImpl implements org.xml.sax.ext.DeclHandler
 {
-	@:overload public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public public function elementDecl(name : String, model : String) : Void;
 	
-	@:overload public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
+	@:overload @:public public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
 	
-	@:overload public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public public function internalEntityDecl(name : String, value : String) : Void;
 	
-	@:overload public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	
 }

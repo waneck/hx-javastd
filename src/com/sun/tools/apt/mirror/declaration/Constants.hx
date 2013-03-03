@@ -38,7 +38,7 @@ package com.sun.tools.apt.mirror.declaration;
 */
 @:native('com$sun$tools$apt$mirror$declaration$Constants$Formatter') @:internal extern class Constants_Formatter
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

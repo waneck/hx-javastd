@@ -54,7 +54,7 @@ extern class FocusManager extends java.awt.DefaultKeyboardFocusManager
 	* @see java.awt.KeyboardFocusManager#getCurrentKeyboardFocusManager
 	* @see <a href="../../java/awt/doc-files/FocusSpec.html">Focus Specification</a>
 	*/
-	public static var FOCUS_MANAGER_CLASS_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FOCUS_MANAGER_CLASS_PROPERTY(default, null) : String;
 	
 	/**
 	* Returns the current <code>KeyboardFocusManager</code> instance
@@ -63,7 +63,7 @@ extern class FocusManager extends java.awt.DefaultKeyboardFocusManager
 	* @return this thread's context's <code>KeyboardFocusManager</code>
 	* @see #setCurrentManager
 	*/
-	@:overload public static function getCurrentManager() : javax.swing.FocusManager;
+	@:overload @:public @:static public static function getCurrentManager() : javax.swing.FocusManager;
 	
 	/**
 	* Sets the current <code>KeyboardFocusManager</code> instance
@@ -87,7 +87,7 @@ extern class FocusManager extends java.awt.DefaultKeyboardFocusManager
 	* @throws SecurityException if the calling thread does not have permission
 	*         to replace the current <code>KeyboardFocusManager</code>
 	*/
-	@:overload public static function setCurrentManager(aFocusManager : javax.swing.FocusManager) : Void;
+	@:overload @:public @:static public static function setCurrentManager(aFocusManager : javax.swing.FocusManager) : Void;
 	
 	/**
 	* Changes the current <code>KeyboardFocusManager</code>'s default
@@ -99,7 +99,7 @@ extern class FocusManager extends java.awt.DefaultKeyboardFocusManager
 	* @deprecated as of 1.4, replaced by
 	* <code>KeyboardFocusManager.setDefaultFocusTraversalPolicy(FocusTraversalPolicy)</code>
 	*/
-	@:overload public static function disableSwingFocusManager() : Void;
+	@:overload @:public @:static public static function disableSwingFocusManager() : Void;
 	
 	/**
 	* Returns whether the application has invoked
@@ -109,7 +109,7 @@ extern class FocusManager extends java.awt.DefaultKeyboardFocusManager
 	* @deprecated As of 1.4, replaced by
 	*   <code>KeyboardFocusManager.getDefaultFocusTraversalPolicy()</code>
 	*/
-	@:overload public static function isFocusManagerEnabled() : Bool;
+	@:overload @:public @:static public static function isFocusManagerEnabled() : Bool;
 	
 	
 }

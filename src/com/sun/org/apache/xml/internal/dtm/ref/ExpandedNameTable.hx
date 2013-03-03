@@ -23,36 +23,36 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 */
 extern class ExpandedNameTable
 {
-	public static var ELEMENT(default, null) : Int;
+	@:public @:static @:final public static var ELEMENT(default, null) : Int;
 	
-	public static var ATTRIBUTE(default, null) : Int;
+	@:public @:static @:final public static var ATTRIBUTE(default, null) : Int;
 	
-	public static var TEXT(default, null) : Int;
+	@:public @:static @:final public static var TEXT(default, null) : Int;
 	
-	public static var CDATA_SECTION(default, null) : Int;
+	@:public @:static @:final public static var CDATA_SECTION(default, null) : Int;
 	
-	public static var ENTITY_REFERENCE(default, null) : Int;
+	@:public @:static @:final public static var ENTITY_REFERENCE(default, null) : Int;
 	
-	public static var ENTITY(default, null) : Int;
+	@:public @:static @:final public static var ENTITY(default, null) : Int;
 	
-	public static var PROCESSING_INSTRUCTION(default, null) : Int;
+	@:public @:static @:final public static var PROCESSING_INSTRUCTION(default, null) : Int;
 	
-	public static var COMMENT(default, null) : Int;
+	@:public @:static @:final public static var COMMENT(default, null) : Int;
 	
-	public static var DOCUMENT(default, null) : Int;
+	@:public @:static @:final public static var DOCUMENT(default, null) : Int;
 	
-	public static var DOCUMENT_TYPE(default, null) : Int;
+	@:public @:static @:final public static var DOCUMENT_TYPE(default, null) : Int;
 	
-	public static var DOCUMENT_FRAGMENT(default, null) : Int;
+	@:public @:static @:final public static var DOCUMENT_FRAGMENT(default, null) : Int;
 	
-	public static var NOTATION(default, null) : Int;
+	@:public @:static @:final public static var NOTATION(default, null) : Int;
 	
-	public static var NAMESPACE(default, null) : Int;
+	@:public @:static @:final public static var NAMESPACE(default, null) : Int;
 	
 	/**
 	* Create an expanded name table.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Given an expanded name represented by namespace, local name and node type,
@@ -66,7 +66,7 @@ extern class ExpandedNameTable
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(namespace : String, localName : String, type : Int) : Int;
+	@:overload @:public public function getExpandedTypeID(namespace : String, localName : String, type : Int) : Int;
 	
 	/**
 	* Given an expanded name represented by namespace, local name and node type,
@@ -86,7 +86,7 @@ extern class ExpandedNameTable
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(namespace : String, localName : String, type : Int, searchOnly : Bool) : Int;
+	@:overload @:public public function getExpandedTypeID(namespace : String, localName : String, type : Int, searchOnly : Bool) : Int;
 	
 	/**
 	* Given a type, return an expanded name ID.Any additional nodes that are
@@ -94,7 +94,7 @@ extern class ExpandedNameTable
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(type : Int) : Int;
+	@:overload @:public public function getExpandedTypeID(type : Int) : Int;
 	
 	/**
 	* Given an expanded-name ID, return the local name part.
@@ -102,7 +102,7 @@ extern class ExpandedNameTable
 	* @param ExpandedNameID an ID that represents an expanded-name.
 	* @return String Local name of this node, or null if the node has no name.
 	*/
-	@:overload public function getLocalName(ExpandedNameID : Int) : String;
+	@:overload @:public public function getLocalName(ExpandedNameID : Int) : String;
 	
 	/**
 	* Given an expanded-name ID, return the local name ID.
@@ -110,7 +110,7 @@ extern class ExpandedNameTable
 	* @param ExpandedNameID an ID that represents an expanded-name.
 	* @return The id of this local name.
 	*/
-	@:overload @:final public function getLocalNameID(ExpandedNameID : Int) : Int;
+	@:overload @:public @:final public function getLocalNameID(ExpandedNameID : Int) : Int;
 	
 	/**
 	* Given an expanded-name ID, return the namespace URI part.
@@ -119,7 +119,7 @@ extern class ExpandedNameTable
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload public function getNamespace(ExpandedNameID : Int) : String;
+	@:overload @:public public function getNamespace(ExpandedNameID : Int) : String;
 	
 	/**
 	* Given an expanded-name ID, return the namespace URI ID.
@@ -127,7 +127,7 @@ extern class ExpandedNameTable
 	* @param ExpandedNameID an ID that represents an expanded-name.
 	* @return The id of this namespace.
 	*/
-	@:overload @:final public function getNamespaceID(ExpandedNameID : Int) : Int;
+	@:overload @:public @:final public function getNamespaceID(ExpandedNameID : Int) : Int;
 	
 	/**
 	* Given an expanded-name ID, return the local name ID.
@@ -135,21 +135,21 @@ extern class ExpandedNameTable
 	* @param ExpandedNameID an ID that represents an expanded-name.
 	* @return The id of this local name.
 	*/
-	@:overload @:final public function getType(ExpandedNameID : Int) : java.StdTypes.Int16;
+	@:overload @:public @:final public function getType(ExpandedNameID : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Return the size of the ExpandedNameTable
 	*
 	* @return The size of the ExpandedNameTable
 	*/
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	/**
 	* Return the array of extended types
 	*
 	* @return The array of extended types
 	*/
-	@:overload public function getExtendedTypes() : java.NativeArray<com.sun.org.apache.xml.internal.dtm.ref.ExtendedType>;
+	@:overload @:public public function getExtendedTypes() : java.NativeArray<com.sun.org.apache.xml.internal.dtm.ref.ExtendedType>;
 	
 	
 }
@@ -160,7 +160,7 @@ extern class ExpandedNameTable
 */
 @:native('com$sun$org$apache$xml$internal$dtm$ref$ExpandedNameTable$HashEntry') @:internal extern class ExpandedNameTable_HashEntry
 {
-	@:overload private function new(key : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType, value : Int, hash : Int, next : com.sun.org.apache.xml.internal.dtm.ref.ExpandedNameTable.ExpandedNameTable_HashEntry) : Void;
+	@:overload @:protected private function new(key : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType, value : Int, hash : Int, next : com.sun.org.apache.xml.internal.dtm.ref.ExpandedNameTable.ExpandedNameTable_HashEntry) : Void;
 	
 	
 }

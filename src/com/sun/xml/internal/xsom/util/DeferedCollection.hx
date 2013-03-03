@@ -25,33 +25,33 @@ package com.sun.xml.internal.xsom.util;
 */
 extern class DeferedCollection<T> implements java.util.Collection<T>
 {
-	@:overload public function new(result : java.util.Iterator<T>) : Void;
+	@:overload @:public public function new(result : java.util.Iterator<T>) : Void;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<T>;
+	@:overload @:public public function iterator() : java.util.Iterator<T>;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function add(o : T) : Bool;
+	@:overload @:public public function add(o : T) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function addAll(c : java.util.Collection<T>) : Bool;
+	@:overload @:public public function addAll(c : java.util.Collection<T>) : Bool;
 	
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

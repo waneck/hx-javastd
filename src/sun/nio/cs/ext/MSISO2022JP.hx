@@ -25,25 +25,25 @@ package sun.nio.cs.ext;
 */
 extern class MSISO2022JP extends sun.nio.cs.ext.ISO2022_JP
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function historicalName() : String;
+	@:overload @:public override public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override private function getDecIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:protected override private function getDecIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload override private function getDecIndex2() : java.NativeArray<String>;
+	@:overload @:protected override private function getDecIndex2() : java.NativeArray<String>;
 	
-	@:overload override private function get0212Decoder() : sun.nio.cs.ext.DoubleByteDecoder;
+	@:overload @:protected override private function get0212Decoder() : sun.nio.cs.ext.DoubleByteDecoder;
 	
-	@:overload override private function getEncIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:protected override private function getEncIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload override private function getEncIndex2() : java.NativeArray<String>;
+	@:overload @:protected override private function getEncIndex2() : java.NativeArray<String>;
 	
-	@:overload override private function get0212Encoder() : sun.nio.cs.ext.DoubleByteEncoder;
+	@:overload @:protected override private function get0212Encoder() : sun.nio.cs.ext.DoubleByteEncoder;
 	
-	@:overload override private function doSBKANA() : Bool;
+	@:overload @:protected override private function doSBKANA() : Bool;
 	
 	
 }

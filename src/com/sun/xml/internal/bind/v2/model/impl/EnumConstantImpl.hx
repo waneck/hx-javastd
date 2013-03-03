@@ -28,24 +28,24 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	private var lexical(default, null) : String;
+	@:protected @:final private var lexical(default, null) : String;
 	
-	private var owner(default, null) : com.sun.xml.internal.bind.v2.model.impl.EnumLeafInfoImpl<T, C, F, M>;
+	@:protected @:final private var owner(default, null) : com.sun.xml.internal.bind.v2.model.impl.EnumLeafInfoImpl<T, C, F, M>;
 	
-	private var name(default, null) : String;
+	@:protected @:final private var name(default, null) : String;
 	
 	/**
 	* All the constants of the {@link EnumConstantImpl} is linked in one list.
 	*/
-	private var next(default, null) : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>;
+	@:protected @:final private var next(default, null) : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>;
 	
-	@:overload public function new(owner : com.sun.xml.internal.bind.v2.model.impl.EnumLeafInfoImpl<T, C, F, M>, name : String, lexical : String, next : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.bind.v2.model.impl.EnumLeafInfoImpl<T, C, F, M>, name : String, lexical : String, next : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>) : Void;
 	
-	@:overload public function getEnclosingClass() : com.sun.xml.internal.bind.v2.model.core.EnumLeafInfo<T, C>;
+	@:overload @:public public function getEnclosingClass() : com.sun.xml.internal.bind.v2.model.core.EnumLeafInfo<T, C>;
 	
-	@:overload @:final public function getLexicalValue() : String;
+	@:overload @:public @:final public function getLexicalValue() : String;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

@@ -90,7 +90,7 @@ package javax.swing.text;
 	* Creates an <code>InternationalFormatter</code> with no
 	* <code>Format</code> specified.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an <code>InternationalFormatter</code> with the specified
@@ -98,7 +98,7 @@ package javax.swing.text;
 	*
 	* @param format Format instance used for converting from/to Strings
 	*/
-	@:overload public function new(format : java.text.Format) : Void;
+	@:overload @:public public function new(format : java.text.Format) : Void;
 	
 	/**
 	* Sets the format that dictates the legal values that can be edited
@@ -107,7 +107,7 @@ package javax.swing.text;
 	* @param format <code>Format</code> instance used for converting
 	* from/to Strings
 	*/
-	@:overload public function setFormat(format : java.text.Format) : Void;
+	@:overload @:public public function setFormat(format : java.text.Format) : Void;
 	
 	/**
 	* Returns the format that dictates the legal values that can be edited
@@ -115,7 +115,7 @@ package javax.swing.text;
 	*
 	* @return Format instance used for converting from/to Strings
 	*/
-	@:overload public function getFormat() : java.text.Format;
+	@:overload @:public public function getFormat() : java.text.Format;
 	
 	/**
 	* Sets the minimum permissible value. If the <code>valueClass</code> has
@@ -126,14 +126,14 @@ package javax.swing.text;
 	* @param minimum Minimum legal value that can be input
 	* @see #setValueClass
 	*/
-	@:overload public function setMinimum(minimum : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public public function setMinimum(minimum : java.lang.Comparable<Dynamic>) : Void;
 	
 	/**
 	* Returns the minimum permissible value.
 	*
 	* @return Minimum legal value that can be input
 	*/
-	@:overload public function getMinimum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMinimum() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Sets the maximum permissible value. If the <code>valueClass</code> has
@@ -144,14 +144,14 @@ package javax.swing.text;
 	* @param max Maximum legal value that can be input
 	* @see #setValueClass
 	*/
-	@:overload public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
 	
 	/**
 	* Returns the maximum permissible value.
 	*
 	* @return Maximum legal value that can be input
 	*/
-	@:overload public function getMaximum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMaximum() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Installs the <code>DefaultFormatter</code> onto a particular
@@ -183,7 +183,7 @@ package javax.swing.text;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload @:public override public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	/**
 	* Returns a String representation of the Object <code>value</code>.
@@ -193,7 +193,7 @@ package javax.swing.text;
 	* @param value Value to convert
 	* @return String representation of value
 	*/
-	@:overload public function valueToString(value : Dynamic) : String;
+	@:overload @:public override public function valueToString(value : Dynamic) : String;
 	
 	/**
 	* Returns the <code>Object</code> representation of the
@@ -203,7 +203,7 @@ package javax.swing.text;
 	* @return <code>Object</code> representation of text
 	* @throws ParseException if there is an error in the conversion
 	*/
-	@:overload public function stringToValue(text : String) : Dynamic;
+	@:overload @:public override public function stringToValue(text : String) : Dynamic;
 	
 	/**
 	* Returns the <code>Format.Field</code> constants associated with
@@ -215,20 +215,20 @@ package javax.swing.text;
 	* @return Format.Field constants associated with the text at the
 	*         given position.
 	*/
-	@:overload public function getFields(offset : Int) : java.NativeArray<java.text.Format.Format_Field>;
+	@:overload @:public public function getFields(offset : Int) : java.NativeArray<java.text.Format.Format_Field>;
 	
 	/**
 	* Creates a copy of the DefaultFormatter.
 	*
 	* @return copy of the DefaultFormatter
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* If <code>getSupportsIncrement</code> returns true, this returns
 	* two Actions suitable for incrementing/decrementing the value.
 	*/
-	@:overload private function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:protected override private function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	
 }
@@ -248,7 +248,7 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$InternationalFormatter$IncrementAction') @:internal extern class InternationalFormatter_IncrementAction extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	
 }

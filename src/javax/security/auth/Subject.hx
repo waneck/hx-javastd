@@ -42,7 +42,7 @@ extern class Subject implements java.io.Serializable
 	* To modify the private credential Set, the caller must have
 	* <code>AuthPermission("modifyPrivateCredentials")</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an instance of a <code>Subject</code> with
@@ -79,7 +79,7 @@ extern class Subject implements java.io.Serializable
 	*          <code>principals</code>, <code>pubCredentials</code>,
 	*          or <code>privCredentials</code> are <code>null</code>.
 	*/
-	@:overload public function new(readOnly : Bool, principals : java.util.Set<java.security.Principal>, pubCredentials : java.util.Set<Dynamic>, privCredentials : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(readOnly : Bool, principals : java.util.Set<java.security.Principal>, pubCredentials : java.util.Set<Dynamic>, privCredentials : java.util.Set<Dynamic>) : Void;
 	
 	/**
 	* Set this <code>Subject</code> to be read-only.
@@ -101,7 +101,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*          to set this <code>Subject</code> to be read-only.
 	*/
-	@:overload public function setReadOnly() : Void;
+	@:overload @:public public function setReadOnly() : Void;
 	
 	/**
 	* Query whether this <code>Subject</code> is read-only.
@@ -110,7 +110,7 @@ extern class Subject implements java.io.Serializable
 	*
 	* @return true if this <code>Subject</code> is read-only, false otherwise.
 	*/
-	@:overload public function isReadOnly() : Bool;
+	@:overload @:public public function isReadOnly() : Bool;
 	
 	/**
 	* Get the <code>Subject</code> associated with the provided
@@ -137,7 +137,7 @@ extern class Subject implements java.io.Serializable
 	* @exception NullPointerException if the provided
 	*          <code>AccessControlContext</code> is <code>null</code>.
 	*/
-	@:overload public static function getSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function getSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
 	/**
 	* Perform work as a particular <code>Subject</code>.
@@ -171,7 +171,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAs<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedAction<T>) : T;
+	@:overload @:public @:static public static function doAs<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedAction<T>) : T;
 	
 	/**
 	* Perform work as a particular <code>Subject</code>.
@@ -210,7 +210,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAs<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedExceptionAction<T>) : T;
+	@:overload @:public @:static public static function doAs<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedExceptionAction<T>) : T;
 	
 	/**
 	* Perform privileged work as a particular <code>Subject</code>.
@@ -244,7 +244,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAsPrivileged<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedAction<T>, acc : java.security.AccessControlContext) : T;
+	@:overload @:public @:static public static function doAsPrivileged<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedAction<T>, acc : java.security.AccessControlContext) : T;
 	
 	/**
 	* Perform privileged work as a particular <code>Subject</code>.
@@ -283,7 +283,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAsPrivileged<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedExceptionAction<T>, acc : java.security.AccessControlContext) : T;
+	@:overload @:public @:static public static function doAsPrivileged<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedExceptionAction<T>, acc : java.security.AccessControlContext) : T;
 	
 	/**
 	* Return the <code>Set</code> of Principals associated with this
@@ -300,7 +300,7 @@ extern class Subject implements java.io.Serializable
 	* @return  The <code>Set</code> of Principals associated with this
 	*          <code>Subject</code>.
 	*/
-	@:overload public function getPrincipals() : java.util.Set<java.security.Principal>;
+	@:overload @:public public function getPrincipals() : java.util.Set<java.security.Principal>;
 	
 	/**
 	* Return a <code>Set</code> of Principals associated with this
@@ -324,7 +324,7 @@ extern class Subject implements java.io.Serializable
 	* @exception NullPointerException if the specified <code>Class</code>
 	*                  is <code>null</code>.
 	*/
-	@:overload public function getPrincipals<T : java.security.Principal>(c : Class<T>) : java.util.Set<T>;
+	@:overload @:public public function getPrincipals<T : java.security.Principal>(c : Class<T>) : java.util.Set<T>;
 	
 	/**
 	* Return the <code>Set</code> of public credentials held by this
@@ -340,7 +340,7 @@ extern class Subject implements java.io.Serializable
 	* @return  A <code>Set</code> of public credentials held by this
 	*          <code>Subject</code>.
 	*/
-	@:overload public function getPublicCredentials() : java.util.Set<Dynamic>;
+	@:overload @:public public function getPublicCredentials() : java.util.Set<Dynamic>;
 	
 	/**
 	* Return the <code>Set</code> of private credentials held by this
@@ -367,7 +367,7 @@ extern class Subject implements java.io.Serializable
 	* @return  A <code>Set</code> of private credentials held by this
 	*          <code>Subject</code>.
 	*/
-	@:overload public function getPrivateCredentials() : java.util.Set<Dynamic>;
+	@:overload @:public public function getPrivateCredentials() : java.util.Set<Dynamic>;
 	
 	/**
 	* Return a <code>Set</code> of public credentials associated with this
@@ -391,7 +391,7 @@ extern class Subject implements java.io.Serializable
 	* @exception NullPointerException if the specified <code>Class</code>
 	*          is <code>null</code>.
 	*/
-	@:overload public function getPublicCredentials<T>(c : Class<T>) : java.util.Set<T>;
+	@:overload @:public public function getPublicCredentials<T>(c : Class<T>) : java.util.Set<T>;
 	
 	/**
 	* Return a <code>Set</code> of private credentials associated with this
@@ -419,7 +419,7 @@ extern class Subject implements java.io.Serializable
 	* @exception NullPointerException if the specified <code>Class</code>
 	*          is <code>null</code>.
 	*/
-	@:overload public function getPrivateCredentials<T>(c : Class<T>) : java.util.Set<T>;
+	@:overload @:public public function getPrivateCredentials<T>(c : Class<T>) : java.util.Set<T>;
 	
 	/**
 	* Compares the specified Object with this <code>Subject</code>
@@ -442,7 +442,7 @@ extern class Subject implements java.io.Serializable
 	*          or if the caller does not have permission to access the
 	*          private credentials for the provided <code>Subject</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return the String representation of this <code>Subject</code>.
@@ -451,7 +451,7 @@ extern class Subject implements java.io.Serializable
 	*
 	* @return the String representation of this <code>Subject</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode for this <code>Subject</code>.
@@ -463,7 +463,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*          to access this Subject's private credentials.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -474,21 +474,21 @@ extern class Subject implements java.io.Serializable
 */
 @:native('javax$security$auth$Subject$SecureSet') @:internal extern class Subject_SecureSet<E> extends java.util.AbstractSet<E> implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function add(o : E) : Bool;
+	@:overload @:public override public function add(o : E) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
@@ -498,11 +498,11 @@ extern class Subject implements java.io.Serializable
 */
 @:native('javax$security$auth$Subject$ClassSet') @:internal extern class Subject_ClassSet<T> extends java.util.AbstractSet<T>
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<T>;
+	@:overload @:public override public function iterator() : java.util.Iterator<T>;
 	
-	@:overload public function add(o : T) : Bool;
+	@:overload @:public override public function add(o : T) : Bool;
 	
 	
 }

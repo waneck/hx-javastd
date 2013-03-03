@@ -31,85 +31,85 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Void</code>.
 	*/
-	public static var VOID(default, null) : javax.management.openmbean.SimpleType<java.lang.Void>;
+	@:public @:static @:final public static var VOID(default, null) : javax.management.openmbean.SimpleType<java.lang.Void>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Boolean</code>.
 	*/
-	public static var BOOLEAN(default, null) : javax.management.openmbean.SimpleType<Null<Bool>>;
+	@:public @:static @:final public static var BOOLEAN(default, null) : javax.management.openmbean.SimpleType<Null<Bool>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Character</code>.
 	*/
-	public static var CHARACTER(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Char16>>;
+	@:public @:static @:final public static var CHARACTER(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Char16>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Byte</code>.
 	*/
-	public static var BYTE(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Int8>>;
+	@:public @:static @:final public static var BYTE(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Int8>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Short</code>.
 	*/
-	public static var SHORT(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Int16>>;
+	@:public @:static @:final public static var SHORT(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Int16>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Integer</code>.
 	*/
-	public static var INTEGER(default, null) : javax.management.openmbean.SimpleType<Null<Int>>;
+	@:public @:static @:final public static var INTEGER(default, null) : javax.management.openmbean.SimpleType<Null<Int>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Long</code>.
 	*/
-	public static var LONG(default, null) : javax.management.openmbean.SimpleType<Null<haxe.Int64>>;
+	@:public @:static @:final public static var LONG(default, null) : javax.management.openmbean.SimpleType<Null<haxe.Int64>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Float</code>.
 	*/
-	public static var FLOAT(default, null) : javax.management.openmbean.SimpleType<java.lang.Float>;
+	@:public @:static @:final public static var FLOAT(default, null) : javax.management.openmbean.SimpleType<java.lang.Float>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Double</code>.
 	*/
-	public static var DOUBLE(default, null) : javax.management.openmbean.SimpleType<Null<Float>>;
+	@:public @:static @:final public static var DOUBLE(default, null) : javax.management.openmbean.SimpleType<Null<Float>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.String</code>.
 	*/
-	public static var STRING(default, null) : javax.management.openmbean.SimpleType<String>;
+	@:public @:static @:final public static var STRING(default, null) : javax.management.openmbean.SimpleType<String>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.math.BigDecimal</code>.
 	*/
-	public static var BIGDECIMAL(default, null) : javax.management.openmbean.SimpleType<java.math.BigDecimal>;
+	@:public @:static @:final public static var BIGDECIMAL(default, null) : javax.management.openmbean.SimpleType<java.math.BigDecimal>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.math.BigInteger</code>.
 	*/
-	public static var BIGINTEGER(default, null) : javax.management.openmbean.SimpleType<java.math.BigInteger>;
+	@:public @:static @:final public static var BIGINTEGER(default, null) : javax.management.openmbean.SimpleType<java.math.BigInteger>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.util.Date</code>.
 	*/
-	public static var DATE(default, null) : javax.management.openmbean.SimpleType<java.util.Date>;
+	@:public @:static @:final public static var DATE(default, null) : javax.management.openmbean.SimpleType<java.util.Date>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>javax.management.ObjectName</code>.
 	*/
-	public static var OBJECTNAME(default, null) : javax.management.openmbean.SimpleType<javax.management.ObjectName>;
+	@:public @:static @:final public static var OBJECTNAME(default, null) : javax.management.openmbean.SimpleType<javax.management.ObjectName>;
 	
 	/**
 	* Tests whether <var>obj</var> is a value for this
@@ -125,7 +125,7 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	* @return <code>true</code> if <var>obj</var> is a value for this
 	* <code>SimpleType</code> instance.
 	*/
-	@:overload override public function isValue(obj : Dynamic) : Bool;
+	@:overload @:public override public function isValue(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares the specified <code>obj</code> parameter with this <code>SimpleType</code> instance for equality.
@@ -139,7 +139,7 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	*
 	* @return  <code>true</code> if the specified object is equal to this <code>SimpleType</code> instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this <code>SimpleType</code> instance.
@@ -151,7 +151,7 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	*
 	* @return  the hash code value for this <code>SimpleType</code> instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>SimpleType</code> instance.
@@ -165,7 +165,7 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	*
 	* @return  a string representation of this <code>SimpleType</code> instance
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Replace an object read from an {@link
@@ -177,7 +177,7 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	* @exception ObjectStreamException if the read object cannot be
 	* resolved.
 	*/
-	@:overload public function readResolve() : Dynamic;
+	@:overload @:public public function readResolve() : Dynamic;
 	
 	
 }

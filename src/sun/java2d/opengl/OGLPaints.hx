@@ -40,7 +40,7 @@ package sun.java2d.opengl;
 /****************** Shared MultipleGradientPaint support ********************/
 @:native('sun$java2d$opengl$OGLPaints$MultiGradient') @:internal extern class OGLPaints_MultiGradient extends sun.java2d.opengl.OGLPaints
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }

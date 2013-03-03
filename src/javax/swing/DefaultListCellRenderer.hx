@@ -25,15 +25,15 @@ package javax.swing;
 */
 extern class DefaultListCellRenderer extends javax.swing.JLabel implements javax.swing.ListCellRenderer<Dynamic> implements java.io.Serializable
 {
-	private static var noFocusBorder : javax.swing.border.Border;
+	@:protected @:static private static var noFocusBorder : javax.swing.border.Border;
 	
 	/**
 	* Constructs a default renderer object for an item
 	* in a list.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	/**
 	* Overridden for performance reasons.
@@ -45,23 +45,14 @@ extern class DefaultListCellRenderer extends javax.swing.JLabel implements javax
 	*         and differs from the JList's background;
 	*         <code>false</code> otherwise
 	*/
-	@:require(java5) @:overload override public function isOpaque() : Bool;
+	@:require(java5) @:overload @:public override public function isOpaque() : Bool;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function validate() : Void;
-	
-	/**
-	* Overridden for performance reasons.
-	* See the <a href="#override">Implementation Note</a>
-	* for more information.
-	*
-	* @since 1.5
-	*/
-	@:require(java5) @:overload override public function invalidate() : Void;
+	@:overload @:public override public function validate() : Void;
 	
 	/**
 	* Overridden for performance reasons.
@@ -70,91 +61,100 @@ extern class DefaultListCellRenderer extends javax.swing.JLabel implements javax
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function repaint() : Void;
+	@:require(java5) @:overload @:public override public function invalidate() : Void;
+	
+	/**
+	* Overridden for performance reasons.
+	* See the <a href="#override">Implementation Note</a>
+	* for more information.
+	*
+	* @since 1.5
+	*/
+	@:require(java5) @:overload @:public override public function repaint() : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function revalidate() : Void;
+	@:overload @:public override public function revalidate() : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function repaint(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function repaint(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected override private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int8, newValue : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int8, newValue : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Char16, newValue : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Char16, newValue : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int16, newValue : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Int16, newValue : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : haxe.Int64, newValue : haxe.Int64) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : haxe.Int64, newValue : haxe.Int64) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Single, newValue : Single) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Single, newValue : Single) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Float, newValue : Float) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Float, newValue : Float) : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ package javax.management.timer;
 	*
 	* @param source the source.
 	*/
-	@:overload public function new(source : TimerAlarmClock) : Void;
+	@:overload @:public public function new(source : TimerAlarmClock) : Void;
 	
 	
 }

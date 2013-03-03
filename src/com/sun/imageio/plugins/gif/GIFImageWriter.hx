@@ -25,45 +25,45 @@ package com.sun.imageio.plugins.gif;
 */
 extern class GIFImageWriter extends javax.imageio.ImageWriter
 {
-	@:overload public function new(originatingProvider : com.sun.imageio.plugins.gif.GIFImageWriterSpi) : Void;
+	@:overload @:public public function new(originatingProvider : com.sun.imageio.plugins.gif.GIFImageWriterSpi) : Void;
 	
-	@:overload public function canWriteSequence() : Bool;
+	@:overload @:public override public function canWriteSequence() : Bool;
 	
 	/**
 	* Creates a default stream metadata object and merges in the
 	* supplied metadata.
 	*/
-	@:overload public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
 	/**
 	* Creates a default image metadata object and merges in the
 	* supplied metadata.
 	*/
-	@:overload public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertImageMetadata(inData : javax.imageio.metadata.IIOMetadata, imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function endWriteSequence() : Void;
+	@:overload @:public override public function endWriteSequence() : Void;
 	
-	@:overload public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
+	@:overload @:public override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
 	
-	@:overload public function prepareWriteSequence(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
+	@:overload @:public override public function prepareWriteSequence(streamMetadata : javax.imageio.metadata.IIOMetadata) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function setOutput(output : Dynamic) : Void;
+	@:overload @:public override public function setOutput(output : Dynamic) : Void;
 	
-	@:overload public function write(sm : javax.imageio.metadata.IIOMetadata, iioimage : javax.imageio.IIOImage, p : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function write(sm : javax.imageio.metadata.IIOMetadata, iioimage : javax.imageio.IIOImage, p : javax.imageio.ImageWriteParam) : Void;
 	
-	@:overload public function writeToSequence(image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function writeToSequence(image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
 	
 }
 @:internal extern class GIFImageWriteParam extends javax.imageio.ImageWriteParam
 {
-	@:overload public function setCompressionMode(mode : Int) : Void;
+	@:overload @:public override public function setCompressionMode(mode : Int) : Void;
 	
 	
 }

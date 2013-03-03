@@ -30,29 +30,29 @@ extern class RawTypeSet
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var refs(default, null) : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>;
+	@:public @:final public var refs(default, null) : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>;
 	
 	/**
 	* The occurence of the whole references.
 	*/
-	public var mul(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
+	@:public @:final public var mul(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	/**
 	* Should be called from one of the raw type set builders.
 	*/
-	@:overload public function new(refs : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>, m : com.sun.tools.internal.xjc.model.Multiplicity) : Void;
+	@:overload @:public public function new(refs : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>, m : com.sun.tools.internal.xjc.model.Multiplicity) : Void;
 	
-	@:overload public function getCollectionMode() : com.sun.tools.internal.xjc.model.CElementPropertyInfo.CElementPropertyInfo_CollectionMode;
+	@:overload @:public public function getCollectionMode() : com.sun.tools.internal.xjc.model.CElementPropertyInfo.CElementPropertyInfo_CollectionMode;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload public function addTo(prop : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : Void;
+	@:overload @:public public function addTo(prop : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : Void;
 	
-	@:overload public function addTo(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:public public function addTo(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public public function getExpectedMimeType() : javax.activation.MimeType;
 	
 	
 }
@@ -92,30 +92,30 @@ extern class RawTypeSet
 	*      the property to which the returned {@link CTypeRef} will be
 	*      added to.
 	*/
-	@:overload @:abstract private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
+	@:overload @:protected @:abstract private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
 	
-	@:overload @:abstract private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:protected @:abstract private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
 	/**
 	* Can this {@link Ref} be a type ref?
 	* @return false to veto.
 	* @param parent
 	*/
-	@:overload @:abstract private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload @:protected @:abstract private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
-	@:overload @:abstract private function isListOfValues() : Bool;
+	@:overload @:protected @:abstract private function isListOfValues() : Bool;
 	
 	/**
 	* When this {@link RawTypeSet} binds to a {@link CElementPropertyInfo},
 	* this method is used to determine if the property is ID or not.
 	*/
-	@:overload @:abstract private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:protected @:abstract private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	/**
 	* When this {@link RawTypeSet} binds to a {@link CElementPropertyInfo},
 	* this method is used to determine if the property has an associated expected MIME type or not.
 	*/
-	@:overload private function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:protected private function getExpectedMimeType() : javax.activation.MimeType;
 	
 	
 }

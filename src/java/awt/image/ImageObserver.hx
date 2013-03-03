@@ -76,7 +76,7 @@ extern interface ImageObserver
 	* @see Image#getHeight
 	* @see java.awt.Graphics#drawImage
 	*/
-	@:overload public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload @:public public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	
 }

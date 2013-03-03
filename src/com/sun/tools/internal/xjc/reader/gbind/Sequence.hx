@@ -31,9 +31,9 @@ package com.sun.tools.internal.xjc.reader.gbind;
 */
 extern class Sequence extends com.sun.tools.internal.xjc.reader.gbind.Expression
 {
-	@:overload public function new(lhs : com.sun.tools.internal.xjc.reader.gbind.Expression, rhs : com.sun.tools.internal.xjc.reader.gbind.Expression) : Void;
+	@:overload @:public public function new(lhs : com.sun.tools.internal.xjc.reader.gbind.Expression, rhs : com.sun.tools.internal.xjc.reader.gbind.Expression) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

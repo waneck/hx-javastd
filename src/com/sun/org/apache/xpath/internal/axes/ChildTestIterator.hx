@@ -24,7 +24,7 @@ package com.sun.org.apache.xpath.internal.axes;
 extern class ChildTestIterator extends com.sun.org.apache.xpath.internal.axes.BasicTestIterator
 {
 	/** The traverser to use to navigate over the descendants. */
-	@:transient private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:transient @:protected private var m_traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	/**
 	* Create a ChildTestIterator object.
@@ -33,13 +33,13 @@ extern class ChildTestIterator extends com.sun.org.apache.xpath.internal.axes.Ba
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function new(traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser) : Void;
+	@:overload @:public public function new(traverser : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser) : Void;
 	
 	/**
 	* Get the next node via getNextXXX.  Bottlenecked for derived class override.
 	* @return The next node on the axis, or DTM.NULL.
 	*/
-	@:overload override private function getNextNode() : Int;
+	@:overload @:protected override private function getNextNode() : Int;
 	
 	/**
 	*  Get a cloned Iterator that is reset to the beginning
@@ -49,7 +49,7 @@ extern class ChildTestIterator extends com.sun.org.apache.xpath.internal.axes.Ba
 	*
 	*  @throws CloneNotSupportedException
 	*/
-	@:overload override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Initialize the context values for this expression
@@ -58,7 +58,7 @@ extern class ChildTestIterator extends com.sun.org.apache.xpath.internal.axes.Ba
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload override public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public override public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -66,7 +66,7 @@ extern class ChildTestIterator extends com.sun.org.apache.xpath.internal.axes.Ba
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload override public function getAxis() : Int;
+	@:overload @:public override public function getAxis() : Int;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -75,7 +75,7 @@ extern class ChildTestIterator extends com.sun.org.apache.xpath.internal.axes.Ba
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	
 }

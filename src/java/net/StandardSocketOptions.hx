@@ -55,7 +55,7 @@ package java.net;
 	* Broadcasting Internet Datagrams</a>
 	* @see DatagramSocket#setBroadcast
 	*/
-	public static var SO_BROADCAST(default, null) : java.net.SocketOption<Null<Bool>>;
+	@:public @:static @:final public static var SO_BROADCAST(default, null) : java.net.SocketOption<Null<Bool>>;
 	
 	/**
 	* Keep connection alive.
@@ -74,7 +74,7 @@ package java.net;
 	* Requirements for Internet Hosts -- Communication Layers</a>
 	* @see Socket#setKeepAlive
 	*/
-	public static var SO_KEEPALIVE(default, null) : java.net.SocketOption<Null<Bool>>;
+	@:public @:static @:final public static var SO_KEEPALIVE(default, null) : java.net.SocketOption<Null<Bool>>;
 	
 	/**
 	* The size of the socket send buffer.
@@ -104,7 +104,7 @@ package java.net;
 	*
 	* @see Socket#setSendBufferSize
 	*/
-	public static var SO_SNDBUF(default, null) : java.net.SocketOption<Null<Int>>;
+	@:public @:static @:final public static var SO_SNDBUF(default, null) : java.net.SocketOption<Null<Int>>;
 	
 	/**
 	* The size of the socket receive buffer.
@@ -142,7 +142,7 @@ package java.net;
 	* @see Socket#setReceiveBufferSize
 	* @see ServerSocket#setReceiveBufferSize
 	*/
-	public static var SO_RCVBUF(default, null) : java.net.SocketOption<Null<Int>>;
+	@:public @:static @:final public static var SO_RCVBUF(default, null) : java.net.SocketOption<Null<Int>>;
 	
 	/**
 	* Re-use address.
@@ -172,7 +172,7 @@ package java.net;
 	* Control Protocol</a>
 	* @see ServerSocket#setReuseAddress
 	*/
-	public static var SO_REUSEADDR(default, null) : java.net.SocketOption<Null<Bool>>;
+	@:public @:static @:final public static var SO_REUSEADDR(default, null) : java.net.SocketOption<Null<Bool>>;
 	
 	/**
 	* Linger on close if data is present.
@@ -203,7 +203,7 @@ package java.net;
 	*
 	* @see Socket#setSoLinger
 	*/
-	public static var SO_LINGER(default, null) : java.net.SocketOption<Null<Int>>;
+	@:public @:static @:final public static var SO_LINGER(default, null) : java.net.SocketOption<Null<Int>>;
 	
 	/**
 	* The Type of Service (ToS) octet in the Internet Protocol (IP) header.
@@ -231,7 +231,7 @@ package java.net;
 	*
 	* @see DatagramSocket#setTrafficClass
 	*/
-	public static var IP_TOS(default, null) : java.net.SocketOption<Null<Int>>;
+	@:public @:static @:final public static var IP_TOS(default, null) : java.net.SocketOption<Null<Int>>;
 	
 	/**
 	* The network interface for Internet Protocol (IP) multicast datagrams.
@@ -253,7 +253,7 @@ package java.net;
 	* @see java.nio.channels.MulticastChannel
 	* @see MulticastSocket#setInterface
 	*/
-	public static var IP_MULTICAST_IF(default, null) : java.net.SocketOption<java.net.NetworkInterface>;
+	@:public @:static @:final public static var IP_MULTICAST_IF(default, null) : java.net.SocketOption<java.net.NetworkInterface>;
 	
 	/**
 	* The <em>time-to-live</em> for Internet Protocol (IP) multicast datagrams.
@@ -279,7 +279,7 @@ package java.net;
 	* @see java.nio.channels.MulticastChannel
 	* @see MulticastSocket#setTimeToLive
 	*/
-	public static var IP_MULTICAST_TTL(default, null) : java.net.SocketOption<Null<Int>>;
+	@:public @:static @:final public static var IP_MULTICAST_TTL(default, null) : java.net.SocketOption<Null<Int>>;
 	
 	/**
 	* Loopback for Internet Protocol (IP) multicast datagrams.
@@ -303,7 +303,7 @@ package java.net;
 	* @see java.nio.channels.MulticastChannel
 	*  @see MulticastSocket#setLoopbackMode
 	*/
-	public static var IP_MULTICAST_LOOP(default, null) : java.net.SocketOption<Null<Bool>>;
+	@:public @:static @:final public static var IP_MULTICAST_LOOP(default, null) : java.net.SocketOption<Null<Bool>>;
 	
 	/**
 	* Disable the Nagle algorithm.
@@ -326,17 +326,17 @@ package java.net;
 	* Requirements for Internet Hosts -- Communication Layers</a>
 	* @see Socket#setTcpNoDelay
 	*/
-	public static var TCP_NODELAY(default, null) : java.net.SocketOption<Null<Bool>>;
+	@:public @:static @:final public static var TCP_NODELAY(default, null) : java.net.SocketOption<Null<Bool>>;
 	
 	
 }
 @:native('java$net$StandardSocketOptions$StdSocketOption') @:internal extern class StandardSocketOptions_StdSocketOption<T> implements java.net.SocketOption<T>
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function type() : Class<T>;
+	@:overload @:public public function type() : Class<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

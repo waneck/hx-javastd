@@ -30,68 +30,68 @@ extern class Type implements sun.tools.java.Constants
 	* of the TC_* contant values defined in Constants.
 	* @see Constants
 	*/
-	private var typeCode : Int;
+	@:protected private var typeCode : Int;
 	
 	/**
 	* The TypeSignature of this type. This type signature is
 	* equivalent to the runtime type signatures used by the
 	* interpreter.
 	*/
-	private var typeSig : String;
+	@:protected private var typeSig : String;
 	
 	/*
 	* Predefined types.
 	*/
-	public static var noArgs(default, null) : java.NativeArray<sun.tools.java.Type>;
+	@:public @:static @:final public static var noArgs(default, null) : java.NativeArray<sun.tools.java.Type>;
 	
-	public static var tError(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tError(default, null) : sun.tools.java.Type;
 	
-	public static var tPackage(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tPackage(default, null) : sun.tools.java.Type;
 	
-	public static var tNull(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tNull(default, null) : sun.tools.java.Type;
 	
-	public static var tVoid(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tVoid(default, null) : sun.tools.java.Type;
 	
-	public static var tBoolean(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tBoolean(default, null) : sun.tools.java.Type;
 	
-	public static var tByte(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tByte(default, null) : sun.tools.java.Type;
 	
-	public static var tChar(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tChar(default, null) : sun.tools.java.Type;
 	
-	public static var tShort(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tShort(default, null) : sun.tools.java.Type;
 	
-	public static var tInt(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tInt(default, null) : sun.tools.java.Type;
 	
-	public static var tFloat(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tFloat(default, null) : sun.tools.java.Type;
 	
-	public static var tLong(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tLong(default, null) : sun.tools.java.Type;
 	
-	public static var tDouble(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tDouble(default, null) : sun.tools.java.Type;
 	
-	public static var tObject(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tObject(default, null) : sun.tools.java.Type;
 	
-	public static var tClassDesc(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tClassDesc(default, null) : sun.tools.java.Type;
 	
-	public static var tString(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tString(default, null) : sun.tools.java.Type;
 	
-	public static var tCloneable(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tCloneable(default, null) : sun.tools.java.Type;
 	
-	public static var tSerializable(default, null) : sun.tools.java.Type;
+	@:public @:static @:final public static var tSerializable(default, null) : sun.tools.java.Type;
 	
 	/**
 	* Create a type given a typecode and a type signature.
 	*/
-	@:overload private function new(typeCode : Int, typeSig : String) : Void;
+	@:overload @:protected private function new(typeCode : Int, typeSig : String) : Void;
 	
 	/**
 	* Return the Java type signature.
 	*/
-	@:overload @:final public function getTypeSignature() : String;
+	@:overload @:public @:final public function getTypeSignature() : String;
 	
 	/**
 	* Return the type code.
 	*/
-	@:overload @:final public function getTypeCode() : Int;
+	@:overload @:public @:final public function getTypeCode() : Int;
 	
 	/**
 	* Return the type mask. The bits in this mask correspond
@@ -99,12 +99,12 @@ extern class Type implements sun.tools.java.Constants
 	* is set at a type.
 	* @see Constants
 	*/
-	@:overload @:final public function getTypeMask() : Int;
+	@:overload @:public @:final public function getTypeMask() : Int;
 	
 	/**
 	* Check for a certain type.
 	*/
-	@:overload @:final public function isType(tc : Int) : Bool;
+	@:overload @:public @:final public function isType(tc : Int) : Bool;
 	
 	/**
 	* Check to see if this is the bogus type "array of void"
@@ -114,40 +114,40 @@ extern class Type implements sun.tools.java.Constants
 	* Parser, we check for the bogus type at specific points and give
 	* a nice error.
 	*/
-	@:overload public function isVoidArray() : Bool;
+	@:overload @:public public function isVoidArray() : Bool;
 	
 	/**
 	* Check for a certain set of types.
 	*/
-	@:overload @:final public function inMask(tm : Int) : Bool;
+	@:overload @:public @:final public function inMask(tm : Int) : Bool;
 	
 	/**
 	* Create an array type.
 	*/
-	@:overload @:synchronized public static function tArray(elem : sun.tools.java.Type) : sun.tools.java.Type;
+	@:overload @:public @:static @:synchronized public static function tArray(elem : sun.tools.java.Type) : sun.tools.java.Type;
 	
 	/**
 	* Return the element type of an array type. Only works
 	* for array types.
 	*/
-	@:overload public function getElementType() : sun.tools.java.Type;
+	@:overload @:public public function getElementType() : sun.tools.java.Type;
 	
 	/**
 	* Return the array dimension. Only works for
 	* array types.
 	*/
-	@:overload public function getArrayDimension() : Int;
+	@:overload @:public public function getArrayDimension() : Int;
 	
 	/**
 	* Create a class type.
 	* @arg className the fully qualified class name
 	*/
-	@:overload @:synchronized public static function tClass(className : sun.tools.java.Identifier) : sun.tools.java.Type;
+	@:overload @:public @:static @:synchronized public static function tClass(className : sun.tools.java.Identifier) : sun.tools.java.Type;
 	
 	/**
 	* Return the ClassName. Only works on class types.
 	*/
-	@:overload public function getClassName() : sun.tools.java.Identifier;
+	@:overload @:public public function getClassName() : sun.tools.java.Identifier;
 	
 	/**
 	* Given an inner identifier, return the non-inner, mangled
@@ -156,47 +156,47 @@ extern class Type implements sun.tools.java.Constants
 	* Note: It is changed to 'public' for Jcov file generation.
 	* (see Assembler.java)
 	*/
-	@:overload public static function mangleInnerType(className : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public @:static public static function mangleInnerType(className : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Create a method type with no arguments.
 	*/
-	@:overload @:synchronized public static function tMethod(ret : sun.tools.java.Type) : sun.tools.java.Type;
+	@:overload @:public @:static @:synchronized public static function tMethod(ret : sun.tools.java.Type) : sun.tools.java.Type;
 	
 	/**
 	* Create a method type with arguments.
 	*/
-	@:overload @:synchronized public static function tMethod(returnType : sun.tools.java.Type, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.java.Type;
+	@:overload @:public @:static @:synchronized public static function tMethod(returnType : sun.tools.java.Type, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.java.Type;
 	
 	/**
 	* Return the return type. Only works for method types.
 	*/
-	@:overload public function getReturnType() : sun.tools.java.Type;
+	@:overload @:public public function getReturnType() : sun.tools.java.Type;
 	
 	/**
 	* Return the argument types. Only works for method types.
 	*/
-	@:overload public function getArgumentTypes() : java.NativeArray<sun.tools.java.Type>;
+	@:overload @:public public function getArgumentTypes() : java.NativeArray<sun.tools.java.Type>;
 	
 	/**
 	* Create a Type from an Java type signature.
 	* @exception CompilerError invalid type signature.
 	*/
-	@:overload @:synchronized public static function tType(sig : String) : sun.tools.java.Type;
+	@:overload @:public @:static @:synchronized public static function tType(sig : String) : sun.tools.java.Type;
 	
 	/**
 	* Check if the type arguments are the same.
 	* @return true if both types are method types and the
 	* argument types are identical.
 	*/
-	@:overload public function equalArguments(t : sun.tools.java.Type) : Bool;
+	@:overload @:public public function equalArguments(t : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Return the amount of space this type takes up on the
 	* Java operand stack. For a method this is equal to the
 	* total space taken up by the arguments.
 	*/
-	@:overload public function stackSize() : Int;
+	@:overload @:public public function stackSize() : Int;
 	
 	/**
 	* Return the type code offset. This offset can be added to
@@ -205,23 +205,23 @@ extern class Type implements sun.tools.java.Constants
 	* example: iload, lload fload, dload, aload. So the
 	* appropriate opcode is iadd + type.getTypeCodeOffset().
 	*/
-	@:overload public function getTypeCodeOffset() : Int;
+	@:overload @:public public function getTypeCodeOffset() : Int;
 	
 	/**
 	* Convert a Type to a string, if abbrev is true class names are
 	* not fully qualified, if ret is true the return type is included.
 	*/
-	@:overload public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
+	@:overload @:public public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
 	
 	/**
 	* Create a type string, given an identifier.
 	*/
-	@:overload public function typeString(id : String) : String;
+	@:overload @:public public function typeString(id : String) : String;
 	
 	/**
 	* Convert to a String
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

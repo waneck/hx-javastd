@@ -26,12 +26,12 @@ extern class VariableStack implements java.lang.Cloneable
 	/**
 	* limitation for 1K
 	*/
-	public static var CLEARLIMITATION(default, null) : Int;
+	@:public @:static @:final public static var CLEARLIMITATION(default, null) : Int;
 	
 	/**
 	* Constructor for a variable stack.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a clone of this variable stack.
@@ -40,7 +40,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload @:synchronized public function clone() : Dynamic;
+	@:overload @:public @:synchronized public function clone() : Dynamic;
 	
 	/**
 	* Get the element at the given index, regardless of stackframe.
@@ -49,28 +49,28 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @return The item at the given index.
 	*/
-	@:overload public function elementAt(i : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function elementAt(i : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get size of the stack.
 	*
 	* @return the total size of the execution stack.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Reset the stack to a start position.
 	*
 	* @return the total size of the execution stack.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set the current stack frame.
 	*
 	* @param sf The new stack frame position.
 	*/
-	@:overload public function setStackFrame(sf : Int) : Void;
+	@:overload @:public public function setStackFrame(sf : Int) : Void;
 	
 	/**
 	* Get the position from where the search should start,
@@ -79,7 +79,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @return The current stack frame position.
 	*/
-	@:overload public function getStackFrame() : Int;
+	@:overload @:public public function getStackFrame() : Int;
 	
 	/**
 	* Allocates memory (called a stackframe) on the stack; used to store
@@ -96,13 +96,13 @@ extern class VariableStack implements java.lang.Cloneable
 	* @return The bottom of the stack frame, from where local variable addressing
 	* should start from.
 	*/
-	@:overload public function link(size : Int) : Int;
+	@:overload @:public public function link(size : Int) : Int;
 	
 	/**
 	* Free up the stack frame that was last allocated with
 	* {@link #link(int size)}.
 	*/
-	@:overload public function unlink() : Void;
+	@:overload @:public public function unlink() : Void;
 	
 	/**
 	* Free up the stack frame that was last allocated with
@@ -110,7 +110,7 @@ extern class VariableStack implements java.lang.Cloneable
 	* @param currentFrame The current frame to set to
 	* after the unlink.
 	*/
-	@:overload public function unlink(currentFrame : Int) : Void;
+	@:overload @:public public function unlink(currentFrame : Int) : Void;
 	
 	/**
 	* Set a local variable or parameter in the current stack frame.
@@ -121,7 +121,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @param val The value of the variable that is being set.
 	*/
-	@:overload public function setLocalVariable(index : Int, val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
+	@:overload @:public public function setLocalVariable(index : Int, val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
 	
 	/**
 	* Set a local variable or parameter in the specified stack frame.
@@ -133,7 +133,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @param val The value of the variable that is being set.
 	*/
-	@:overload public function setLocalVariable(index : Int, val : com.sun.org.apache.xpath.internal.objects.XObject, stackFrame : Int) : Void;
+	@:overload @:public public function setLocalVariable(index : Int, val : com.sun.org.apache.xpath.internal.objects.XObject, stackFrame : Int) : Void;
 	
 	/**
 	* Get a local variable or parameter in the current stack frame.
@@ -149,7 +149,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function getLocalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getLocalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get a local variable or parameter in the current stack frame.
@@ -163,7 +163,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function getLocalVariable(index : Int, frame : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getLocalVariable(index : Int, frame : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get a local variable or parameter in the current stack frame.
@@ -179,7 +179,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function getLocalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getLocalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Tell if a local variable has been set or not.
@@ -191,7 +191,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function isLocalSet(index : Int) : Bool;
+	@:overload @:public public function isLocalSet(index : Int) : Bool;
 	
 	/**
 	* Use this to clear the variables in a section of the stack.  This is
@@ -202,7 +202,7 @@ extern class VariableStack implements java.lang.Cloneable
 	* @param start The start position, relative to the current local stack frame.
 	* @param len The number of slots to be cleared.
 	*/
-	@:overload public function clearLocalSlots(start : Int, len : Int) : Void;
+	@:overload @:public public function clearLocalSlots(start : Int, len : Int) : Void;
 	
 	/**
 	* Set a global variable or parameter in the global stack frame.
@@ -213,7 +213,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @param val The value of the variable that is being set.
 	*/
-	@:overload public function setGlobalVariable(index : Int, val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
+	@:overload @:public public function setGlobalVariable(index : Int, val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
 	
 	/**
 	* Get a global variable or parameter from the global stack frame.
@@ -229,7 +229,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function getGlobalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getGlobalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get a global variable or parameter from the global stack frame.
@@ -245,7 +245,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function getGlobalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getGlobalVariable(xctxt : com.sun.org.apache.xpath.internal.XPathContext, index : Int, destructiveOK : Bool) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get a variable based on it's qualified name.
@@ -260,7 +260,7 @@ extern class VariableStack implements java.lang.Cloneable
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function getVariableOrParam(xctxt : com.sun.org.apache.xpath.internal.XPathContext, qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function getVariableOrParam(xctxt : com.sun.org.apache.xpath.internal.XPathContext, qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

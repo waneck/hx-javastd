@@ -20,13 +20,13 @@ package com.sun.org.apache.xml.internal.serialize;
 */
 @:internal extern class SerializerFactoryImpl extends com.sun.org.apache.xml.internal.serialize.SerializerFactory
 {
-	@:overload override public function makeSerializer(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
+	@:overload @:public override public function makeSerializer(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
 	
-	@:overload override public function makeSerializer(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
+	@:overload @:public override public function makeSerializer(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
 	
-	@:overload override public function makeSerializer(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
+	@:overload @:public override public function makeSerializer(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
 	
-	@:overload override private function getSupportedMethod() : String;
+	@:overload @:protected override private function getSupportedMethod() : String;
 	
 	
 }

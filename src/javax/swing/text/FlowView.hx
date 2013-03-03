@@ -31,7 +31,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param elem the element that this view is responsible for
 	* @param axis may be either View.X_AXIS or View.Y_AXIS
 	*/
-	@:overload public function new(elem : javax.swing.text.Element, axis : Int) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, axis : Int) : Void;
 	
 	/**
 	* Fetches the axis along which views should be
@@ -41,7 +41,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* rows themselves).  This is typically used
 	* by the <code>FlowStrategy</code>.
 	*/
-	@:overload public function getFlowAxis() : Int;
+	@:overload @:public public function getFlowAxis() : Int;
 	
 	/**
 	* Fetch the constraining span to flow against for
@@ -56,7 +56,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   This should be a value >= 0 and < getViewCount().
 	* @see #getFlowStart
 	*/
-	@:overload public function getFlowSpan(index : Int) : Int;
+	@:overload @:public public function getFlowSpan(index : Int) : Int;
 	
 	/**
 	* Fetch the location along the flow axis that the
@@ -69,7 +69,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   This should be a value >= 0 and < getViewCount().
 	* @see #getFlowSpan
 	*/
-	@:overload public function getFlowStart(index : Int) : Int;
+	@:overload @:public public function getFlowStart(index : Int) : Int;
 	
 	/**
 	* Create a View that should be used to hold a
@@ -78,7 +78,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* are added or removed (i.e. rows are added or
 	* removed) in the process of updating the flow.
 	*/
-	@:overload @:abstract private function createRow() : javax.swing.text.View;
+	@:overload @:protected @:abstract private function createRow() : javax.swing.text.View;
 	
 	/**
 	* Loads all of the children to initialize the view.
@@ -91,7 +91,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*
 	* @param f the view factory
 	*/
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Fetches the child view index representing the given position in
@@ -101,7 +101,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @return  index of the view representing the given position, or
 	*   -1 if no view represents that position
 	*/
-	@:overload override private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected override private function getViewIndexAtPosition(pos : Int) : Int;
 	
 	/**
 	* Lays out the children.  If the span along the flow
@@ -119,7 +119,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param height the height to lay out against >= 0 This
 	*   is the height inside of the inset area.
 	*/
-	@:overload override private function layout(width : Int, height : Int) : Void;
+	@:overload @:protected override private function layout(width : Int, height : Int) : Void;
 	
 	/**
 	* Calculate equirements along the minor axis.  This
@@ -127,7 +127,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* view by calling getMinimumSpan, getPreferredSpan, and
 	* getMaximumSpan on it.
 	*/
-	@:overload override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -138,7 +138,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -149,7 +149,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -160,16 +160,16 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function changedUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Default constraint against which the flow is
 	* created against.
 	*/
-	private var layoutSpan : Int;
+	@:protected private var layoutSpan : Int;
 	
 	/**
 	* These are the views that represent the child elements
@@ -180,7 +180,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* of breaking into smaller chunks, to form the physical
 	* view.
 	*/
-	private var layoutPool : javax.swing.text.View;
+	@:protected private var layoutPool : javax.swing.text.View;
 	
 	/**
 	* The behavior for keeping the flow updated.  By
@@ -189,7 +189,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* can create an alternative strategy, which might keep
 	* state.
 	*/
-	private var strategy : javax.swing.text.FlowView.FlowView_FlowStrategy;
+	@:protected private var strategy : javax.swing.text.FlowView.FlowView_FlowStrategy;
 	
 	
 }
@@ -217,7 +217,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   This value will be null if the view has not yet been displayed.
 	* @see View#insertUpdate
 	*/
-	@:overload public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload @:public public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -227,7 +227,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param alloc the current allocation of the view inside of the insets.
 	* @see View#removeUpdate
 	*/
-	@:overload public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload @:public public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -239,13 +239,13 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param alloc  Bounds of the View
 	* @see View#changedUpdate
 	*/
-	@:overload public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload @:public public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* This method gives flow strategies access to the logical
 	* view of the FlowView.
 	*/
-	@:overload private function getLogicalView(fv : javax.swing.text.FlowView) : javax.swing.text.View;
+	@:overload @:protected private function getLogicalView(fv : javax.swing.text.FlowView) : javax.swing.text.View;
 	
 	/**
 	* Update the flow on the given FlowView.  By default, this causes
@@ -255,7 +255,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*
 	* @param fv the view to reflow
 	*/
-	@:overload public function layout(fv : javax.swing.text.FlowView) : Void;
+	@:overload @:public public function layout(fv : javax.swing.text.FlowView) : Void;
 	
 	/**
 	* Creates a row of views that will fit within the
@@ -273,7 +273,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   this views element from which to start.
 	* @return the position to start the next row
 	*/
-	@:overload private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, pos : Int) : Int;
+	@:overload @:protected private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, pos : Int) : Int;
 	
 	/**
 	* Adjusts the given row if possible to fit within the
@@ -287,7 +287,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param desiredSpan the current layout span >= 0
 	* @param x the location r starts at.
 	*/
-	@:overload private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
+	@:overload @:protected private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
 	
 	/**
 	* Creates a view that can be used to represent the current piece
@@ -299,7 +299,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param spanLeft the about of span left to fill in the row
 	* @param rowIndex the row the view will be placed into
 	*/
-	@:overload private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
+	@:overload @:protected private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
 	
 	
 }
@@ -312,16 +312,16 @@ extern class FlowView extends javax.swing.text.BoxView
 */
 @:native('javax$swing$text$FlowView$LogicalView') @:internal extern class FlowView_LogicalView extends javax.swing.text.CompositeView
 {
-	@:overload override private function getViewIndexAtPosition(pos : Int) : Int;
+	@:overload @:protected override private function getViewIndexAtPosition(pos : Int) : Int;
 	
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This view
 	* isn't directly responsible for an element so it returns
 	* the outer classes attributes.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -334,7 +334,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*           The parent may choose to resize or break the view.
 	* @see View#getPreferredSpan
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -348,7 +348,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*           The parent may choose to resize or break the view.
 	* @see View#getPreferredSpan
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Forward the DocumentEvent to the given child view.  This
@@ -364,7 +364,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload @:protected override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -375,7 +375,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param allocation the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Tests whether a point lies before the rectangle range.
@@ -387,7 +387,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param alloc the rectangle
 	* @return true if the point is before the specified range
 	*/
-	@:overload override private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isBefore(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Tests whether a point lies after the rectangle range.
@@ -399,7 +399,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param alloc the rectangle
 	* @return true if the point is after the specified range
 	*/
-	@:overload override private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
+	@:overload @:protected override private function isAfter(x : Int, y : Int, alloc : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Fetches the child view at the given point.
@@ -412,7 +412,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   be changed to the child's allocation on exit
 	* @return the child view
 	*/
-	@:overload override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPoint(x : Int, y : Int, alloc : java.awt.Rectangle) : javax.swing.text.View;
 	
 	/**
 	* Returns the allocation for a given child.
@@ -423,7 +423,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param a  the allocation to the interior of the box on entry,
 	*   and the allocation of the child view at the index on exit.
 	*/
-	@:overload override private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function childAllocation(index : Int, a : java.awt.Rectangle) : Void;
 	
 	
 }

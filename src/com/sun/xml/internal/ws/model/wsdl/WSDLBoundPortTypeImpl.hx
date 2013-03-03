@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLBoundPortTypeImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractFeaturedObjectImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl, name : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl, name : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl;
 	
-	@:overload public function get(operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl;
+	@:overload @:public public function get(operationName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl;
 	
 	/**
 	* Populates the Map that holds operation name as key and {@link WSDLBoundOperation} as the value.
@@ -40,25 +40,25 @@ extern class WSDLBoundPortTypeImpl extends com.sun.xml.internal.ws.model.wsdl.Ab
 	* @param ptOp   Must be non-null
 	* @throws NullPointerException if either opName or ptOp is null
 	*/
-	@:overload public function put(opName : javax.xml.namespace.QName, ptOp : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl) : Void;
+	@:overload @:public public function put(opName : javax.xml.namespace.QName, ptOp : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl) : Void;
 	
-	@:overload public function getPortTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getPortTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function getPortType() : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl;
+	@:overload @:public public function getPortType() : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl;
 	
-	@:overload public function getBindingOperations() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl>;
+	@:overload @:public public function getBindingOperations() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl>;
 	
-	@:overload public function getBindingId() : com.sun.xml.internal.ws.api.BindingID;
+	@:overload @:public public function getBindingId() : com.sun.xml.internal.ws.api.BindingID;
 	
-	@:overload public function setBindingId(bindingId : com.sun.xml.internal.ws.api.BindingID) : Void;
+	@:overload @:public public function setBindingId(bindingId : com.sun.xml.internal.ws.api.BindingID) : Void;
 	
-	@:overload public function setStyle(style : Style) : Void;
+	@:overload @:public public function setStyle(style : Style) : Void;
 	
-	@:overload public function getStyle() : SOAPBinding.Style;
+	@:overload @:public public function getStyle() : SOAPBinding.Style;
 	
-	@:overload public function isRpcLit() : Bool;
+	@:overload @:public public function isRpcLit() : Bool;
 	
-	@:overload public function isDoclit() : Bool;
+	@:overload @:public public function isDoclit() : Bool;
 	
 	/**
 	* Gets the {@link ParameterBinding} for a given operation, part name and the direction - IN/OUT
@@ -68,7 +68,7 @@ extern class WSDLBoundPortTypeImpl extends com.sun.xml.internal.ws.model.wsdl.Ab
 	* @param mode      {@link Mode#IN} or {@link Mode@OUT}. Must be non-null.
 	* @return null if the binding could not be resolved for the part.
 	*/
-	@:overload public function getBinding(operation : javax.xml.namespace.QName, part : String, mode : Mode) : com.sun.xml.internal.ws.api.model.ParameterBinding;
+	@:overload @:public public function getBinding(operation : javax.xml.namespace.QName, part : String, mode : Mode) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Gets mime:content@part value which is the MIME type for a given operation, part and {@link Mode}.
@@ -78,15 +78,15 @@ extern class WSDLBoundPortTypeImpl extends com.sun.xml.internal.ws.model.wsdl.Ab
 	* @param mode      {@link Mode#IN} or {@link Mode@OUT}. Must be non-null.
 	* @return null if the binding could not be resolved for the part.
 	*/
-	@:overload public function getMimeType(operation : javax.xml.namespace.QName, part : String, mode : Mode) : String;
+	@:overload @:public public function getMimeType(operation : javax.xml.namespace.QName, part : String, mode : Mode) : String;
 	
-	@:overload public function getOperation(namespaceUri : String, localName : String) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl;
+	@:overload @:public public function getOperation(namespaceUri : String, localName : String) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundOperationImpl;
 	
-	@:overload public function enableMTOM() : Void;
+	@:overload @:public public function enableMTOM() : Void;
 	
-	@:overload public function isMTOMEnabled() : Bool;
+	@:overload @:public public function isMTOMEnabled() : Bool;
 	
-	@:overload public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:overload @:public public function getSOAPVersion() : com.sun.xml.internal.ws.api.SOAPVersion;
 	
 	
 }

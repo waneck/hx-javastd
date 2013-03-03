@@ -34,27 +34,27 @@ extern class Warner
 	* This code and its internal interfaces are subject to change or
 	* deletion without notice.</b>
 	*/
-	public static var noWarnings(default, null) : com.sun.tools.javac.util.Warner;
+	@:public @:static @:final public static var noWarnings(default, null) : com.sun.tools.javac.util.Warner;
 	
-	private var warned : Bool;
+	@:protected private var warned : Bool;
 	
-	@:overload public function pos() : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition;
+	@:overload @:public public function pos() : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition;
 	
-	@:overload public function warn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
+	@:overload @:public public function warn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
 	
-	@:overload public function silentWarn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
+	@:overload @:public public function silentWarn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
 	
-	@:overload public function new(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : Void;
+	@:overload @:public public function new(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : Void;
 	
-	@:overload public function hasSilentLint(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
+	@:overload @:public public function hasSilentLint(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
-	@:overload public function hasNonSilentLint(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
+	@:overload @:public public function hasNonSilentLint(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
-	@:overload public function hasLint(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
+	@:overload @:public public function hasLint(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

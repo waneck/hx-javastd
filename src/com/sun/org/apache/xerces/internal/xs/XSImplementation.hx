@@ -29,7 +29,7 @@ extern interface XSImplementation
 	* A list containing the versions of XML Schema documents recognized by
 	* this <code>XSImplemenation</code>.
 	*/
-	@:overload public function getRecognizedVersions() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getRecognizedVersions() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* Creates a new XSLoader. The newly constructed loader may then be
@@ -43,7 +43,7 @@ extern interface XSImplementation
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support one
 	*   of the specified versions.
 	*/
-	@:overload public function createXSLoader(versions : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSLoader;
+	@:overload @:public public function createXSLoader(versions : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSLoader;
 	
 	
 }

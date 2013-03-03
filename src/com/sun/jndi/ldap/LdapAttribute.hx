@@ -32,7 +32,7 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class LdapAttribute extends javax.naming.directory.BasicAttribute
 {
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Adds a new value to this attribute.
@@ -41,20 +41,20 @@ package com.sun.jndi.ldap;
 	*                the attribute.
 	* @return true Always returns true.
 	*/
-	@:overload public function add(attrVal : Dynamic) : Bool;
+	@:overload @:public override public function add(attrVal : Dynamic) : Bool;
 	
 	/**
 	* Retrieves the syntax definition associated with this attribute.
 	* @return This attribute's syntax definition.
 	*/
-	@:overload public function getAttributeSyntaxDefinition() : javax.naming.directory.DirContext;
+	@:overload @:public override public function getAttributeSyntaxDefinition() : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves this attribute's schema definition.
 	*
 	* @return This attribute's schema definition.
 	*/
-	@:overload public function getAttributeDefinition() : javax.naming.directory.DirContext;
+	@:overload @:public override public function getAttributeDefinition() : javax.naming.directory.DirContext;
 	
 	
 }

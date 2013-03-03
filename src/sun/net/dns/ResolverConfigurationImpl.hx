@@ -25,11 +25,11 @@ package sun.net.dns;
 */
 extern class ResolverConfigurationImpl extends sun.net.dns.ResolverConfiguration
 {
-	@:overload public function searchlist() : java.util.List<String>;
+	@:overload @:public override public function searchlist() : java.util.List<String>;
 	
-	@:overload public function nameservers() : java.util.List<String>;
+	@:overload @:public override public function nameservers() : java.util.List<String>;
 	
-	@:overload public function options() : sun.net.dns.ResolverConfiguration.ResolverConfiguration_Options;
+	@:overload @:public override public function options() : sun.net.dns.ResolverConfiguration.ResolverConfiguration_Options;
 	
 	
 }

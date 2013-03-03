@@ -31,7 +31,7 @@ extern interface ClientDelegate
 	*
 	* @return {@link com.sun.corba.se.pept.broker.Broker Broker}
 	*/
-	@:overload public function getBroker() : com.sun.corba.se.pept.broker.Broker;
+	@:overload @:public public function getBroker() : com.sun.corba.se.pept.broker.Broker;
 	
 	/**
 	* Get the
@@ -42,7 +42,7 @@ extern interface ClientDelegate
 	* @return
 	* {@link com.sun.corba.se.pept.transport.ContactInfoList ContactInfoList}
 	*/
-	@:overload public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
 	
 }

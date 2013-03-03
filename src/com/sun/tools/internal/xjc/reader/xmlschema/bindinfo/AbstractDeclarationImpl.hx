@@ -31,29 +31,35 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload private function new(loc : org.xml.sax.Locator) : Void;
+	@:overload @:protected private function new(loc : org.xml.sax.Locator) : Void;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getLocation() : org.xml.sax.Locator;
 	
-	private var parent : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
+	@:protected private var parent : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
 	
-	@:overload public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
-	@:overload @:final private function getOwner() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:protected @:final private function getOwner() : com.sun.xml.internal.xsom.XSComponent;
 	
-	@:overload @:final private function getBuilder() : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:overload @:protected @:final private function getBuilder() : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
-	@:overload @:final private function getCodeModel() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:protected @:final private function getCodeModel() : com.sun.codemodel.internal.JCodeModel;
 	
-	@:overload @:final public function isAcknowledged() : Bool;
+	@:overload @:public @:final public function isAcknowledged() : Bool;
 	
-	@:overload public function onSetOwner() : Void;
+	@:overload @:public public function onSetOwner() : Void;
 	
-	@:overload public function getChildren() : java.util.Collection<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
+	@:overload @:public public function getChildren() : java.util.Collection<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
 	
-	@:overload public function markAsAcknowledged() : Void;
+	@:overload @:public public function markAsAcknowledged() : Void;
+	
+	/**
+	* Gets the name of this binding declaration,
+	* which is the same as the tag name of the binding element.
+	*/
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	
 }

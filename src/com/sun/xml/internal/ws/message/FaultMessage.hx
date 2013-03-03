@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.message;
 */
 extern class FaultMessage extends com.sun.xml.internal.ws.api.message.FilterMessageImpl
 {
-	@:overload public function new(delegate : com.sun.xml.internal.ws.api.message.Message, detailEntryName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(delegate : com.sun.xml.internal.ws.api.message.Message, detailEntryName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getFirstDetailEntryName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getFirstDetailEntryName() : javax.xml.namespace.QName;
 	
 	
 }

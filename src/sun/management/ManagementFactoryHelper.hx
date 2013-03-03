@@ -29,60 +29,60 @@ package sun.management;
 */
 extern class ManagementFactoryHelper
 {
-	@:overload @:synchronized public static function getClassLoadingMXBean() : java.lang.management.ClassLoadingMXBean;
+	@:overload @:public @:static @:synchronized public static function getClassLoadingMXBean() : java.lang.management.ClassLoadingMXBean;
 	
-	@:overload @:synchronized public static function getMemoryMXBean() : java.lang.management.MemoryMXBean;
+	@:overload @:public @:static @:synchronized public static function getMemoryMXBean() : java.lang.management.MemoryMXBean;
 	
-	@:overload @:synchronized public static function getThreadMXBean() : java.lang.management.ThreadMXBean;
+	@:overload @:public @:static @:synchronized public static function getThreadMXBean() : java.lang.management.ThreadMXBean;
 	
-	@:overload @:synchronized public static function getRuntimeMXBean() : java.lang.management.RuntimeMXBean;
+	@:overload @:public @:static @:synchronized public static function getRuntimeMXBean() : java.lang.management.RuntimeMXBean;
 	
-	@:overload @:synchronized public static function getCompilationMXBean() : java.lang.management.CompilationMXBean;
+	@:overload @:public @:static @:synchronized public static function getCompilationMXBean() : java.lang.management.CompilationMXBean;
 	
-	@:overload @:synchronized public static function getOperatingSystemMXBean() : java.lang.management.OperatingSystemMXBean;
+	@:overload @:public @:static @:synchronized public static function getOperatingSystemMXBean() : java.lang.management.OperatingSystemMXBean;
 	
-	@:overload public static function getMemoryPoolMXBeans() : java.util.List<java.lang.management.MemoryPoolMXBean>;
+	@:overload @:public @:static public static function getMemoryPoolMXBeans() : java.util.List<java.lang.management.MemoryPoolMXBean>;
 	
-	@:overload public static function getMemoryManagerMXBeans() : java.util.List<java.lang.management.MemoryManagerMXBean>;
+	@:overload @:public @:static public static function getMemoryManagerMXBeans() : java.util.List<java.lang.management.MemoryManagerMXBean>;
 	
-	@:overload public static function getGarbageCollectorMXBeans() : java.util.List<java.lang.management.GarbageCollectorMXBean>;
+	@:overload @:public @:static public static function getGarbageCollectorMXBeans() : java.util.List<java.lang.management.GarbageCollectorMXBean>;
 	
-	@:overload public static function getPlatformLoggingMXBean() : java.lang.management.PlatformLoggingMXBean;
+	@:overload @:public @:static public static function getPlatformLoggingMXBean() : java.lang.management.PlatformLoggingMXBean;
 	
-	@:overload @:synchronized public static function getBufferPoolMXBeans() : java.util.List<java.lang.management.BufferPoolMXBean>;
+	@:overload @:public @:static @:synchronized public static function getBufferPoolMXBeans() : java.util.List<java.lang.management.BufferPoolMXBean>;
 	
-	@:overload @:synchronized public static function getDiagnosticMXBean() : com.sun.management.HotSpotDiagnosticMXBean;
-	
-	/**
-	* This method is for testing only.
-	*/
-	@:overload @:synchronized public static function getHotspotRuntimeMBean() : sun.management.HotspotRuntimeMBean;
+	@:overload @:public @:static @:synchronized public static function getDiagnosticMXBean() : com.sun.management.HotSpotDiagnosticMXBean;
 	
 	/**
 	* This method is for testing only.
 	*/
-	@:overload @:synchronized public static function getHotspotClassLoadingMBean() : sun.management.HotspotClassLoadingMBean;
+	@:overload @:public @:static @:synchronized public static function getHotspotRuntimeMBean() : sun.management.HotspotRuntimeMBean;
 	
 	/**
 	* This method is for testing only.
 	*/
-	@:overload @:synchronized public static function getHotspotThreadMBean() : sun.management.HotspotThreadMBean;
+	@:overload @:public @:static @:synchronized public static function getHotspotClassLoadingMBean() : sun.management.HotspotClassLoadingMBean;
 	
 	/**
 	* This method is for testing only.
 	*/
-	@:overload @:synchronized public static function getHotspotMemoryMBean() : sun.management.HotspotMemoryMBean;
+	@:overload @:public @:static @:synchronized public static function getHotspotThreadMBean() : sun.management.HotspotThreadMBean;
 	
 	/**
 	* This method is for testing only.
 	*/
-	@:overload @:synchronized public static function getHotspotCompilationMBean() : sun.management.HotspotCompilationMBean;
+	@:overload @:public @:static @:synchronized public static function getHotspotMemoryMBean() : sun.management.HotspotMemoryMBean;
 	
-	@:overload public static function isThreadSuspended(state : Int) : Bool;
+	/**
+	* This method is for testing only.
+	*/
+	@:overload @:public @:static @:synchronized public static function getHotspotCompilationMBean() : sun.management.HotspotCompilationMBean;
 	
-	@:overload public static function isThreadRunningNative(state : Int) : Bool;
+	@:overload @:public @:static public static function isThreadSuspended(state : Int) : Bool;
 	
-	@:overload public static function toThreadState(state : Int) : java.lang.Thread.Thread_State;
+	@:overload @:public @:static public static function isThreadRunningNative(state : Int) : Bool;
+	
+	@:overload @:public @:static public static function toThreadState(state : Int) : java.lang.Thread.Thread_State;
 	
 	
 }
@@ -92,15 +92,15 @@ extern class ManagementFactoryHelper
 }
 @:native('sun$management$ManagementFactoryHelper$PlatformLoggingImpl') @:internal extern class ManagementFactoryHelper_PlatformLoggingImpl implements java.util.logging.LoggingMXBean
 {
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
-	@:overload public function getLoggerNames() : java.util.List<String>;
+	@:overload @:public public function getLoggerNames() : java.util.List<String>;
 	
-	@:overload public function getLoggerLevel(loggerName : String) : String;
+	@:overload @:public public function getLoggerLevel(loggerName : String) : String;
 	
-	@:overload public function setLoggerLevel(loggerName : String, levelName : String) : Void;
+	@:overload @:public public function setLoggerLevel(loggerName : String, levelName : String) : Void;
 	
-	@:overload public function getParentLoggerName(loggerName : String) : String;
+	@:overload @:public public function getParentLoggerName(loggerName : String) : String;
 	
 	
 }

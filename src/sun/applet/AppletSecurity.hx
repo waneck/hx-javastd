@@ -28,38 +28,38 @@ extern class AppletSecurity extends sun.awt.AWTSecurityManager
 	/**
 	* Construct and initialize.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Reset from Properties
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns true if this threadgroup is in the applet's own thread
 	* group. This will return false if there is no current class
 	* loader.
 	*/
-	@:overload private function inThreadGroup(g : java.lang.ThreadGroup) : Bool;
+	@:overload @:protected private function inThreadGroup(g : java.lang.ThreadGroup) : Bool;
 	
 	/**
 	* Returns true of the threadgroup of thread is in the applet's
 	* own threadgroup.
 	*/
-	@:overload private function inThreadGroup(thread : java.lang.Thread) : Bool;
+	@:overload @:protected private function inThreadGroup(thread : java.lang.Thread) : Bool;
 	
 	/**
 	* Applets are not allowed to manipulate threads outside
 	* applet thread groups. However a terminated thread no longer belongs
 	* to any group.
 	*/
-	@:overload override public function checkAccess(t : java.lang.Thread) : Void;
+	@:overload @:public override public function checkAccess(t : java.lang.Thread) : Void;
 	
 	/**
 	* Applets are not allowed to manipulate thread groups outside
 	* applet thread groups.
 	*/
-	@:overload @:synchronized override public function checkAccess(g : java.lang.ThreadGroup) : Void;
+	@:overload @:public @:synchronized override public function checkAccess(g : java.lang.ThreadGroup) : Void;
 	
 	/**
 	* Throws a <code>SecurityException</code> if the
@@ -80,7 +80,7 @@ extern class AppletSecurity extends sun.awt.AWTSecurityManager
 	*             permission to access the specified package.
 	* @see        java.lang.ClassLoader#loadClass(java.lang.String, boolean)
 	*/
-	@:overload override public function checkPackageAccess(pkgname : String) : Void;
+	@:overload @:public override public function checkPackageAccess(pkgname : String) : Void;
 	
 	/**
 	* Tests if a client can get access to the AWT event queue.
@@ -92,13 +92,13 @@ extern class AppletSecurity extends sun.awt.AWTSecurityManager
 	* @exception  SecurityException  if the caller does not have
 	*             permission to accesss the AWT event queue.
 	*/
-	@:require(java1) @:overload override public function checkAwtEventQueueAccess() : Void;
+	@:require(java1) @:overload @:public override public function checkAwtEventQueueAccess() : Void;
 	
 	/**
 	* Returns the thread group of the applet. We consult the classloader
 	* if there is one.
 	*/
-	@:overload override public function getThreadGroup() : java.lang.ThreadGroup;
+	@:overload @:public override public function getThreadGroup() : java.lang.ThreadGroup;
 	
 	/**
 	* Get the AppContext corresponding to the current context.
@@ -112,7 +112,7 @@ extern class AppletSecurity extends sun.awt.AWTSecurityManager
 	* @see     java.lang.SecurityManager
 	* @since   JDK1.2.1
 	*/
-	@:require(java2) @:overload override public function getAppContext() : sun.awt.AppContext;
+	@:require(java2) @:overload @:public override public function getAppContext() : sun.awt.AppContext;
 	
 	
 }

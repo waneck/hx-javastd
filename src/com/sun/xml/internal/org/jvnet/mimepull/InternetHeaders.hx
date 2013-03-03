@@ -32,12 +32,12 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	/*
 	* Return the "name" part of the header line.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/*
 	* Return the "value" part of the header line.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

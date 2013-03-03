@@ -26,19 +26,19 @@ package com.sun.xml.internal.stream.events;
 extern class NotationDeclarationImpl extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.NotationDeclaration
 {
 	/** Creates a new instance of NotationDeclarationImpl */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function new(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function new(notation : com.sun.xml.internal.stream.dtd.nonvalidating.XMLNotationDecl) : Void;
+	@:overload @:public public function new(notation : com.sun.xml.internal.stream.dtd.nonvalidating.XMLNotationDecl) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

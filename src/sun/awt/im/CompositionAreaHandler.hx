@@ -25,23 +25,23 @@ package sun.awt.im;
 */
 @:internal extern class CompositionAreaHandler implements java.awt.event.InputMethodListener implements java.awt.im.InputMethodRequests
 {
-	@:overload public function inputMethodTextChanged(event : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:public public function inputMethodTextChanged(event : java.awt.event.InputMethodEvent) : Void;
 	
-	@:overload public function caretPositionChanged(event : java.awt.event.InputMethodEvent) : Void;
+	@:overload @:public public function caretPositionChanged(event : java.awt.event.InputMethodEvent) : Void;
 	
-	@:overload public function getTextLocation(offset : java.awt.font.TextHitInfo) : java.awt.Rectangle;
+	@:overload @:public public function getTextLocation(offset : java.awt.font.TextHitInfo) : java.awt.Rectangle;
 	
-	@:overload public function getLocationOffset(x : Int, y : Int) : java.awt.font.TextHitInfo;
+	@:overload @:public public function getLocationOffset(x : Int, y : Int) : java.awt.font.TextHitInfo;
 	
-	@:overload public function getInsertPositionOffset() : Int;
+	@:overload @:public public function getInsertPositionOffset() : Int;
 	
-	@:overload public function getCommittedText(beginIndex : Int, endIndex : Int, attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getCommittedText(beginIndex : Int, endIndex : Int, attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
 	
-	@:overload public function getCommittedTextLength() : Int;
+	@:overload @:public public function getCommittedTextLength() : Int;
 	
-	@:overload public function cancelLatestCommittedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function cancelLatestCommittedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
 	
-	@:overload public function getSelectedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
+	@:overload @:public public function getSelectedText(attributes : java.NativeArray<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : java.text.AttributedCharacterIterator;
 	
 	
 }

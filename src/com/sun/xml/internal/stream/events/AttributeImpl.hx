@@ -25,45 +25,45 @@ package com.sun.xml.internal.stream.events;
 */
 extern class AttributeImpl extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.Attribute
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, value : String) : Void;
+	@:overload @:public public function new(name : String, value : String) : Void;
 	
-	@:overload public function new(prefix : String, name : String, value : String) : Void;
+	@:overload @:public public function new(prefix : String, name : String, value : String) : Void;
 	
-	@:overload public function new(prefix : String, uri : String, localPart : String, value : String, type : String) : Void;
+	@:overload @:public public function new(prefix : String, uri : String, localPart : String, value : String, type : String) : Void;
 	
-	@:overload public function new(prefix : String, uri : String, localPart : String, value : String, nonNormalizedvalue : String, type : String, isSpecified : Bool) : Void;
+	@:overload @:public public function new(prefix : String, uri : String, localPart : String, value : String, nonNormalizedvalue : String, type : String, isSpecified : Bool) : Void;
 	
-	@:overload public function new(qname : javax.xml.namespace.QName, value : String, nonNormalizedvalue : String, type : String, isSpecified : Bool) : Void;
+	@:overload @:public public function new(qname : javax.xml.namespace.QName, value : String, nonNormalizedvalue : String, type : String, isSpecified : Bool) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function setName(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setNonNormalizedValue(nonNormalizedvalue : String) : Void;
+	@:overload @:public public function setNonNormalizedValue(nonNormalizedvalue : String) : Void;
 	
-	@:overload public function getNonNormalizedValue() : String;
+	@:overload @:public public function getNonNormalizedValue() : String;
 	
-	@:overload public function setAttributeType(attributeType : String) : Void;
+	@:overload @:public public function setAttributeType(attributeType : String) : Void;
 	
 	/** Gets the type of this attribute, default is "CDATA   */
-	@:overload public function getDTDType() : String;
+	@:overload @:public public function getDTDType() : String;
 	
 	/** is this attribute is specified in the instance document */
-	@:overload public function setSpecified(isSpecified : Bool) : Void;
+	@:overload @:public public function setSpecified(isSpecified : Bool) : Void;
 	
-	@:overload public function isSpecified() : Bool;
+	@:overload @:public public function isSpecified() : Bool;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	
 }

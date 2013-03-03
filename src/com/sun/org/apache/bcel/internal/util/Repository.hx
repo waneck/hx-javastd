@@ -61,33 +61,33 @@ extern interface Repository extends java.io.Serializable
 	/**
 	* Store the provided class under "clazz.getClassName()"
 	*/
-	@:overload public function storeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function storeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Remove class from repository
 	*/
-	@:overload public function removeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function removeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Find the class with the name provided, if the class
 	* isn't there, return NULL.
 	*/
-	@:overload public function findClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function findClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Find the class with the name provided, if the class
 	* isn't there, make an attempt to load it.
 	*/
-	@:overload public function loadClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function loadClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Find the JavaClass instance for the given run-time class object
 	*/
-	@:overload public function loadClass(clazz : Class<Dynamic>) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function loadClass(clazz : Class<Dynamic>) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/** Clear all entries from cache.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

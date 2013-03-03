@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class StubInvocationHandlerImpl implements com.sun.corba.se.spi.orbutil.proxy.LinkedInvocationHandler
 {
-	@:overload public function setProxy(self : java.lang.reflect.Proxy) : Void;
+	@:overload @:public public function setProxy(self : java.lang.reflect.Proxy) : Void;
 	
-	@:overload public function getProxy() : java.lang.reflect.Proxy;
+	@:overload @:public public function getProxy() : java.lang.reflect.Proxy;
 	
-	@:overload public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, stub : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, stub : org.omg.CORBA.Object) : Void;
 	
 	/** Invoke the given method with the args and return the result.
 	*  This may result in a remote invocation.
 	*  @param proxy The proxy used for this class (null if not using java.lang.reflect.Proxy)
 	*/
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

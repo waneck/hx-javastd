@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class TextAreaNotInScrollPaneState extends javax.swing.plaf.nimbus.State<Dynamic>
 {
-	@:overload private function isInState(c : javax.swing.JComponent) : Bool;
+	@:overload @:protected private function isInState(c : javax.swing.JComponent) : Bool;
 	
 	
 }

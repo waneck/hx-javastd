@@ -118,7 +118,7 @@ extern interface WSBindingProvider extends javax.xml.ws.BindingProvider extends 
 	/**
 	* Get the ManagedObjectManager for this provider.
 	*/
-	@:overload public function getManagedObjectManager() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
+	@:overload @:public public function getManagedObjectManager() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
 	
 	
 }

@@ -56,7 +56,7 @@ extern class DTMAxisTraverser
 	* that the traversal starts from.
 	* @return the first node in the traversal.
 	*/
-	@:overload public function first(context : Int) : Int;
+	@:overload @:public public function first(context : Int) : Int;
 	
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -72,7 +72,7 @@ extern class DTMAxisTraverser
 	*
 	* @return the first node in the traversal.
 	*/
-	@:overload public function first(context : Int, extendedTypeID : Int) : Int;
+	@:overload @:public public function first(context : Int, extendedTypeID : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node.
@@ -88,7 +88,7 @@ extern class DTMAxisTraverser
 	* @return the next node in the iteration, or DTM.NULL.
 	* @see #first(int)
 	*/
-	@:overload @:abstract public function next(context : Int, current : Int) : Int;
+	@:overload @:public @:abstract public function next(context : Int, current : Int) : Int;
 	
 	/**
 	* Traverse to the next node after the current node that is matched
@@ -106,7 +106,7 @@ extern class DTMAxisTraverser
 	* @return the next node in the iteration, or DTM.NULL.
 	* @see #first(int,int)
 	*/
-	@:overload @:abstract public function next(context : Int, current : Int, extendedTypeID : Int) : Int;
+	@:overload @:public @:abstract public function next(context : Int, current : Int, extendedTypeID : Int) : Int;
 	
 	
 }

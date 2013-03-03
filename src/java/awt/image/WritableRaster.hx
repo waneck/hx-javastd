@@ -46,7 +46,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*          <code>origin.y + sampleModel.getHeight()</code> results
 	*          in integer overflow
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
+	@:overload @:protected private function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
 	
 	/**
 	*  Constructs a WritableRaster with the given SampleModel and DataBuffer.
@@ -61,7 +61,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*          <code>origin.y + sampleModel.getHeight()</code> results
 	*          in integer overflow
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
+	@:overload @:protected private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
 	
 	/**
 	* Constructs a WritableRaster with the given SampleModel, DataBuffer,
@@ -86,14 +86,14 @@ extern class WritableRaster extends java.awt.image.Raster
 	*         <code>aRegion.y + aRegion.height</code> results in integer
 	*         overflow
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.WritableRaster) : Void;
+	@:overload @:protected private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.WritableRaster) : Void;
 	
 	/** Returns the parent WritableRaster (if any) of this WritableRaster,
 	*  or else null.
 	*  @return the parent of this <code>WritableRaster</code>, or
 	*          <code>null</code>.
 	*/
-	@:overload public function getWritableParent() : java.awt.image.WritableRaster;
+	@:overload @:public public function getWritableParent() : java.awt.image.WritableRaster;
 	
 	/**
 	* Create a WritableRaster with the same size, SampleModel and DataBuffer
@@ -110,7 +110,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*         <code>childMinY + this.getHeight()</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createWritableTranslatedChild(childMinX : Int, childMinY : Int) : java.awt.image.WritableRaster;
+	@:overload @:public public function createWritableTranslatedChild(childMinX : Int, childMinY : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns a new WritableRaster which shares all or part of this
@@ -167,7 +167,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*         <code>childMinY + h</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createWritableChild(parentX : Int, parentY : Int, w : Int, h : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
+	@:overload @:public public function createWritableChild(parentX : Int, parentY : Int, w : Int, h : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
 	
 	/**
 	* Sets the data for a single pixel from a
@@ -192,7 +192,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if inData is too small to hold the input.
 	*/
-	@:overload public function setDataElements(x : Int, y : Int, inData : Dynamic) : Void;
+	@:overload @:public public function setDataElements(x : Int, y : Int, inData : Dynamic) : Void;
 	
 	/**
 	* Sets the data for a rectangle of pixels from an input Raster.
@@ -212,7 +212,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds.
 	*/
-	@:overload public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
+	@:overload @:public public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Sets the data for a rectangle of pixels from a
@@ -241,7 +241,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if inData is too small to hold the input.
 	*/
-	@:overload public function setDataElements(x : Int, y : Int, w : Int, h : Int, inData : Dynamic) : Void;
+	@:overload @:public public function setDataElements(x : Int, y : Int, w : Int, h : Int, inData : Dynamic) : Void;
 	
 	/**
 	* Copies pixels from Raster srcRaster to this WritableRaster.  Each pixel
@@ -282,7 +282,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*
 	* @throws NullPointerException if srcRaster is null.
 	*/
-	@:overload public function setRect(srcRaster : java.awt.image.Raster) : Void;
+	@:overload @:public public function setRect(srcRaster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Copies pixels from Raster srcRaster to this WritableRaster.
@@ -302,7 +302,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*
 	* @throws NullPointerException if srcRaster is null.
 	*/
-	@:overload public function setRect(dx : Int, dy : Int, srcRaster : java.awt.image.Raster) : Void;
+	@:overload @:public public function setRect(dx : Int, dy : Int, srcRaster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using an int array of samples for input.
@@ -317,7 +317,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if iArray is too small to hold the input.
 	*/
-	@:overload public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setPixel(x : Int, y : Int, iArray : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using a float array of samples for input.
@@ -332,7 +332,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if fArray is too small to hold the input.
 	*/
-	@:overload public function setPixel(x : Int, y : Int, fArray : java.NativeArray<Single>) : Void;
+	@:overload @:public public function setPixel(x : Int, y : Int, fArray : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Sets a pixel in the DataBuffer using a double array of samples for input.
@@ -347,7 +347,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if dArray is too small to hold the input.
 	*/
-	@:overload public function setPixel(x : Int, y : Int, dArray : java.NativeArray<Float>) : Void;
+	@:overload @:public public function setPixel(x : Int, y : Int, dArray : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from an int array containing
@@ -365,7 +365,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if iArray is too small to hold the input.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from a float array containing
@@ -383,7 +383,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if fArray is too small to hold the input.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, fArray : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Sets all samples for a rectangle of pixels from a double array containing
@@ -401,7 +401,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates are not
 	* in bounds, or if dArray is too small to hold the input.
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>) : Void;
+	@:overload @:public public function setPixels(x : Int, y : Int, w : Int, h : Int, dArray : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -417,7 +417,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function setSample(x : Int, y : Int, b : Int, s : Int) : Void;
+	@:overload @:public public function setSample(x : Int, y : Int, b : Int, s : Int) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -433,7 +433,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function setSample(x : Int, y : Int, b : Int, s : Single) : Void;
+	@:overload @:public public function setSample(x : Int, y : Int, b : Int, s : Single) : Void;
 	
 	/**
 	* Sets a sample in the specified band for the pixel located at (x,y)
@@ -449,7 +449,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* @throws ArrayIndexOutOfBoundsException if the coordinates or
 	* the band index are not in bounds.
 	*/
-	@:overload public function setSample(x : Int, y : Int, b : Int, s : Float) : Void;
+	@:overload @:public public function setSample(x : Int, y : Int, b : Int, s : Float) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -469,7 +469,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* the band index are not in bounds, or if iArray is too small to
 	* hold the input.
 	*/
-	@:overload public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, iArray : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -489,7 +489,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* the band index are not in bounds, or if fArray is too small to
 	* hold the input.
 	*/
-	@:overload public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>) : Void;
+	@:overload @:public public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, fArray : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Sets the samples in the specified band for the specified rectangle
@@ -509,7 +509,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	* the band index are not in bounds, or if dArray is too small to
 	* hold the input.
 	*/
-	@:overload public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>) : Void;
+	@:overload @:public public function setSamples(x : Int, y : Int, w : Int, h : Int, b : Int, dArray : java.NativeArray<Float>) : Void;
 	
 	
 }

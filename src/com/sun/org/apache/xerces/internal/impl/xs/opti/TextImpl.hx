@@ -20,13 +20,13 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 */
 extern class TextImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultText
 {
-	@:overload public function new(str : java.lang.StringBuffer, sDOM : com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOM, row : Int, col : Int) : Void;
+	@:overload @:public public function new(str : java.lang.StringBuffer, sDOM : com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOM, row : Int, col : Int) : Void;
 	
-	@:overload override public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public override public function getParentNode() : org.w3c.dom.Node;
 	
-	@:overload override public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public override public function getPreviousSibling() : org.w3c.dom.Node;
 	
-	@:overload override public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public override public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* The character data of the node that implements this interface. The DOM
@@ -43,14 +43,14 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.De
 	*   fit in a <code>DOMString</code> variable on the implementation
 	*   platform.
 	*/
-	@:overload override public function getData() : String;
+	@:overload @:public override public function getData() : String;
 	
 	/**
 	* The number of 16-bit units that are available through <code>data</code>
 	* and the <code>substringData</code> method below. This may have the
 	* value zero, i.e., <code>CharacterData</code> nodes may be empty.
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	/**
 	* Extracts a range of data from the node.
@@ -67,7 +67,7 @@ extern class TextImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.De
 	*   <br>DOMSTRING_SIZE_ERR: Raised if the specified range of text does
 	*   not fit into a <code>DOMString</code>.
 	*/
-	@:overload override public function substringData(offset : Int, count : Int) : String;
+	@:overload @:public override public function substringData(offset : Int, count : Int) : String;
 	
 	
 }

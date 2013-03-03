@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CDROutputStream_1_1 extends com.sun.corba.se.impl.encoding.CDROutputStream_1_0
 {
-	private var fragmentOffset : Int;
+	@:protected private var fragmentOffset : Int;
 	
-	@:overload override private function alignAndReserve(align : Int, n : Int) : Void;
+	@:overload @:protected override private function alignAndReserve(align : Int, n : Int) : Void;
 	
-	@:overload override private function grow(align : Int, n : Int) : Void;
+	@:overload @:protected override private function grow(align : Int, n : Int) : Void;
 	
-	@:overload override public function get_offset() : Int;
+	@:overload @:public override public function get_offset() : Int;
 	
-	@:overload override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload override public function write_wchar(x : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function write_wchar(x : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function write_wstring(value : String) : Void;
+	@:overload @:public override public function write_wstring(value : String) : Void;
 	
 	
 }

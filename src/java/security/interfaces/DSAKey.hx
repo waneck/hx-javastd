@@ -44,7 +44,7 @@ extern interface DSAKey
 	*
 	* @see DSAParams
 	*/
-	@:overload public function getParams() : java.security.interfaces.DSAParams;
+	@:overload @:public public function getParams() : java.security.interfaces.DSAParams;
 	
 	
 }

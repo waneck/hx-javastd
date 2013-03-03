@@ -28,7 +28,7 @@ extern class Permissions extends java.security.PermissionCollection implements j
 	/**
 	* Creates a new Permissions object containing no PermissionCollections.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission object to the PermissionCollection for the class the
@@ -47,7 +47,7 @@ extern class Permissions extends java.security.PermissionCollection implements j
 	*
 	* @see PermissionCollection#isReadOnly()
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Checks to see if this object's PermissionCollection for permissions of
@@ -76,7 +76,7 @@ extern class Permissions extends java.security.PermissionCollection implements j
 	* PermissionCollection it
 	* belongs to, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the Permission objects in all the
@@ -84,15 +84,15 @@ extern class Permissions extends java.security.PermissionCollection implements j
 	*
 	* @return an enumeration of all the Permissions.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }
 @:internal extern class PermissionsEnumerator implements java.util.Enumeration<java.security.Permission>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : java.security.Permission;
+	@:overload @:public public function nextElement() : java.security.Permission;
 	
 	
 }
@@ -103,7 +103,7 @@ extern class Permissions extends java.security.PermissionCollection implements j
 	*
 	* @param permission the Permission object to add.
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -114,14 +114,14 @@ extern class Permissions extends java.security.PermissionCollection implements j
 	* @return true if "permission" is a proper subset of a permission in
 	* the set, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the Permission objects in the container.
 	*
 	* @return an enumeration of all the Permissions.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

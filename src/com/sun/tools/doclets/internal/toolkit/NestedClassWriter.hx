@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	/**
 	* Close the writer.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

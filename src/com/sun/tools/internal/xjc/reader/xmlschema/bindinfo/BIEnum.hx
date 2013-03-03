@@ -26,20 +26,20 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 extern class BIEnum extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.AbstractDeclarationImpl
 {
 	/** Gets the specified class name, or null if not specified. */
-	public var className : String;
+	@:public public var className : String;
 	
 	/**
 	* @see BIClass#getExistingClassRef()
 	*/
-	public var ref : String;
+	@:public public var ref : String;
 	
 	/**
 	* Gets the javadoc comment specified in the customization.
 	* Can be null if none is specified.
 	*/
-	public var javadoc(default, null) : String;
+	@:public @:final public var javadoc(default, null) : String;
 	
-	@:overload public function isMapped() : Bool;
+	@:overload @:public public function isMapped() : Bool;
 	
 	/**
 	* Gets the map that contains XML value->BIEnumMember pairs.
@@ -47,14 +47,14 @@ extern class BIEnum extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo
 	*
 	* Always return non-null.
 	*/
-	public var members(default, null) : java.util.Map<String, com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIEnumMember>;
+	@:public @:final public var members(default, null) : java.util.Map<String, com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIEnumMember>;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
-	@:overload override public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public override public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	/** Name of this declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	
 }

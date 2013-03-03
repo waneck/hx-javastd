@@ -45,7 +45,7 @@ package javax.net.ssl;
 	* @throws KeyManagementException if this operation fails
 	* @see SSLContext#init(KeyManager [], TrustManager [], SecureRandom)
 	*/
-	@:overload @:abstract private function engineInit(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
 	
 	/**
 	* Returns a <code>SocketFactory</code> object for this
@@ -57,7 +57,7 @@ package javax.net.ssl;
 	*         has not been called
 	* @see javax.net.ssl.SSLContext#getSocketFactory()
 	*/
-	@:overload @:abstract private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:protected @:abstract private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	/**
 	* Returns a <code>ServerSocketFactory</code> object for
@@ -69,7 +69,7 @@ package javax.net.ssl;
 	*         has not been called
 	* @see javax.net.ssl.SSLContext#getServerSocketFactory()
 	*/
-	@:overload @:abstract private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload @:protected @:abstract private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
 	/**
 	* Creates a new <code>SSLEngine</code> using this context.
@@ -91,7 +91,7 @@ package javax.net.ssl;
 	*
 	* @since   1.5
 	*/
-	@:require(java5) @:overload @:abstract private function engineCreateSSLEngine() : javax.net.ssl.SSLEngine;
+	@:require(java5) @:overload @:protected @:abstract private function engineCreateSSLEngine() : javax.net.ssl.SSLEngine;
 	
 	/**
 	* Creates a <code>SSLEngine</code> using this context.
@@ -113,7 +113,7 @@ package javax.net.ssl;
 	*
 	* @since   1.5
 	*/
-	@:require(java5) @:overload @:abstract private function engineCreateSSLEngine(host : String, port : Int) : javax.net.ssl.SSLEngine;
+	@:require(java5) @:overload @:protected @:abstract private function engineCreateSSLEngine(host : String, port : Int) : javax.net.ssl.SSLEngine;
 	
 	/**
 	* Returns a server <code>SSLSessionContext</code> object for
@@ -122,7 +122,7 @@ package javax.net.ssl;
 	* @return the <code>SSLSessionContext</code> object
 	* @see javax.net.ssl.SSLContext#getServerSessionContext()
 	*/
-	@:overload @:abstract private function engineGetServerSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:protected @:abstract private function engineGetServerSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns a client <code>SSLSessionContext</code> object for
@@ -131,7 +131,7 @@ package javax.net.ssl;
 	* @return the <code>SSLSessionContext</code> object
 	* @see javax.net.ssl.SSLContext#getClientSessionContext()
 	*/
-	@:overload @:abstract private function engineGetClientSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload @:protected @:abstract private function engineGetClientSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	/**
 	* Returns a copy of the SSLParameters indicating the default
@@ -151,7 +151,7 @@ package javax.net.ssl;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function engineGetDefaultSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java6) @:overload @:protected private function engineGetDefaultSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Returns a copy of the SSLParameters indicating the maximum supported
@@ -172,7 +172,7 @@ package javax.net.ssl;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function engineGetSupportedSSLParameters() : javax.net.ssl.SSLParameters;
+	@:require(java6) @:overload @:protected private function engineGetSupportedSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	
 }

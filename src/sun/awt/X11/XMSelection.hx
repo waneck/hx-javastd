@@ -30,22 +30,22 @@ package sun.awt.X11;
 */
 extern class XMSelection
 {
-	@:overload public function getNumberOfScreens() : Int;
+	@:overload @:public public function getNumberOfScreens() : Int;
 	
 	/*
 	* Default constructor specifies PropertyChangeMask as well
 	*/
-	@:overload public function new(selname : String) : Void;
+	@:overload @:public public function new(selname : String) : Void;
 	
 	/*
 	* Some users may not need to know about selection changes,
 	* just owner ship changes, They would specify a zero extra mask.
 	*/
-	@:overload public function new(selname : String, extraMask : haxe.Int64) : Void;
+	@:overload @:public public function new(selname : String, extraMask : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function addSelectionListener(listener : sun.awt.X11.XMSelectionListener) : Void;
+	@:overload @:public @:synchronized public function addSelectionListener(listener : sun.awt.X11.XMSelectionListener) : Void;
 	
-	@:overload @:synchronized public function removeSelectionListener(listener : sun.awt.X11.XMSelectionListener) : Void;
+	@:overload @:public @:synchronized public function removeSelectionListener(listener : sun.awt.X11.XMSelectionListener) : Void;
 	
 	
 }

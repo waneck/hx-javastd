@@ -25,66 +25,66 @@ package com.sun.corba.se.spi.orb;
 */
 extern interface ORBData
 {
-	@:overload public function getORBInitialHost() : String;
+	@:overload @:public public function getORBInitialHost() : String;
 	
-	@:overload public function getORBInitialPort() : Int;
+	@:overload @:public public function getORBInitialPort() : Int;
 	
-	@:overload public function getORBServerHost() : String;
+	@:overload @:public public function getORBServerHost() : String;
 	
-	@:overload public function getORBServerPort() : Int;
+	@:overload @:public public function getORBServerPort() : Int;
 	
-	@:overload public function getListenOnAllInterfaces() : String;
+	@:overload @:public public function getListenOnAllInterfaces() : String;
 	
-	@:overload public function getLegacySocketFactory() : com.sun.corba.se.spi.legacy.connection.ORBSocketFactory;
+	@:overload @:public public function getLegacySocketFactory() : com.sun.corba.se.spi.legacy.connection.ORBSocketFactory;
 	
-	@:overload public function getSocketFactory() : com.sun.corba.se.spi.transport.ORBSocketFactory;
+	@:overload @:public public function getSocketFactory() : com.sun.corba.se.spi.transport.ORBSocketFactory;
 	
-	@:overload public function getUserSpecifiedListenPorts() : java.NativeArray<com.sun.corba.se.impl.legacy.connection.USLPort>;
+	@:overload @:public public function getUserSpecifiedListenPorts() : java.NativeArray<com.sun.corba.se.impl.legacy.connection.USLPort>;
 	
-	@:overload public function getIORToSocketInfo() : com.sun.corba.se.spi.transport.IORToSocketInfo;
+	@:overload @:public public function getIORToSocketInfo() : com.sun.corba.se.spi.transport.IORToSocketInfo;
 	
-	@:overload public function getIIOPPrimaryToContactInfo() : com.sun.corba.se.spi.transport.IIOPPrimaryToContactInfo;
+	@:overload @:public public function getIIOPPrimaryToContactInfo() : com.sun.corba.se.spi.transport.IIOPPrimaryToContactInfo;
 	
-	@:overload public function getORBId() : String;
+	@:overload @:public public function getORBId() : String;
 	
-	@:overload public function getORBServerIdPropertySpecified() : Bool;
+	@:overload @:public public function getORBServerIdPropertySpecified() : Bool;
 	
-	@:overload public function isLocalOptimizationAllowed() : Bool;
+	@:overload @:public public function isLocalOptimizationAllowed() : Bool;
 	
-	@:overload public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload public function getHighWaterMark() : Int;
+	@:overload @:public public function getHighWaterMark() : Int;
 	
-	@:overload public function getLowWaterMark() : Int;
+	@:overload @:public public function getLowWaterMark() : Int;
 	
-	@:overload public function getNumberToReclaim() : Int;
+	@:overload @:public public function getNumberToReclaim() : Int;
 	
-	@:overload public function getGIOPFragmentSize() : Int;
+	@:overload @:public public function getGIOPFragmentSize() : Int;
 	
-	@:overload public function getGIOPBufferSize() : Int;
+	@:overload @:public public function getGIOPBufferSize() : Int;
 	
-	@:overload public function getGIOPBuffMgrStrategy(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Int;
+	@:overload @:public public function getGIOPBuffMgrStrategy(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Int;
 	
 	/**
 	* @return the GIOP Target Addressing preference of the ORB.
 	* This ORB by default supports all addressing dispositions unless specified
 	* otherwise via a java system property ORBConstants.GIOP_TARGET_ADDRESSING
 	*/
-	@:overload public function getGIOPTargetAddressPreference() : java.StdTypes.Int16;
+	@:overload @:public public function getGIOPTargetAddressPreference() : java.StdTypes.Int16;
 	
-	@:overload public function getGIOPAddressDisposition() : java.StdTypes.Int16;
+	@:overload @:public public function getGIOPAddressDisposition() : java.StdTypes.Int16;
 	
-	@:overload public function useByteOrderMarkers() : Bool;
+	@:overload @:public public function useByteOrderMarkers() : Bool;
 	
-	@:overload public function useByteOrderMarkersInEncapsulations() : Bool;
+	@:overload @:public public function useByteOrderMarkersInEncapsulations() : Bool;
 	
-	@:overload public function alwaysSendCodeSetServiceContext() : Bool;
+	@:overload @:public public function alwaysSendCodeSetServiceContext() : Bool;
 	
-	@:overload public function getPersistentPortInitialized() : Bool;
+	@:overload @:public public function getPersistentPortInitialized() : Bool;
 	
-	@:overload public function getPersistentServerPort() : Int;
+	@:overload @:public public function getPersistentServerPort() : Int;
 	
-	@:overload public function getPersistentServerIdInitialized() : Bool;
+	@:overload @:public public function getPersistentServerIdInitialized() : Bool;
 	
 	/** Return the persistent-server-id of this server. This id is the same
 	*  across multiple activations of this server. This is in contrast to
@@ -97,49 +97,49 @@ extern interface ORBData
 	*  The user is also required to ensure that no two persistent servers
 	*  on the same host have the same server-id.
 	*/
-	@:overload public function getPersistentServerId() : Int;
+	@:overload @:public public function getPersistentServerId() : Int;
 	
-	@:overload public function getServerIsORBActivated() : Bool;
+	@:overload @:public public function getServerIsORBActivated() : Bool;
 	
-	@:overload public function getBadServerIdHandler() : Class<Dynamic>;
+	@:overload @:public public function getBadServerIdHandler() : Class<Dynamic>;
 	
 	/**
 	* Get the prefered code sets for connections. Should the client send the
 	* code set service context on every request?
 	*/
-	@:overload public function getCodeSetComponentInfo() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
+	@:overload @:public public function getCodeSetComponentInfo() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
 	
-	@:overload public function getORBInitializers() : java.NativeArray<org.omg.PortableInterceptor.ORBInitializer>;
+	@:overload @:public public function getORBInitializers() : java.NativeArray<org.omg.PortableInterceptor.ORBInitializer>;
 	
-	@:overload public function getORBInitialReferences() : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>;
+	@:overload @:public public function getORBInitialReferences() : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>;
 	
-	@:overload public function getORBDefaultInitialReference() : String;
+	@:overload @:public public function getORBDefaultInitialReference() : String;
 	
-	@:overload public function getORBDebugFlags() : java.NativeArray<String>;
+	@:overload @:public public function getORBDebugFlags() : java.NativeArray<String>;
 	
-	@:overload public function getAcceptors() : java.NativeArray<com.sun.corba.se.pept.transport.Acceptor>;
+	@:overload @:public public function getAcceptors() : java.NativeArray<com.sun.corba.se.pept.transport.Acceptor>;
 	
-	@:overload public function getCorbaContactInfoListFactory() : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
+	@:overload @:public public function getCorbaContactInfoListFactory() : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
 	
-	@:overload public function acceptorSocketType() : String;
+	@:overload @:public public function acceptorSocketType() : String;
 	
-	@:overload public function acceptorSocketUseSelectThreadToWait() : Bool;
+	@:overload @:public public function acceptorSocketUseSelectThreadToWait() : Bool;
 	
-	@:overload public function acceptorSocketUseWorkerThreadForEvent() : Bool;
+	@:overload @:public public function acceptorSocketUseWorkerThreadForEvent() : Bool;
 	
-	@:overload public function connectionSocketType() : String;
+	@:overload @:public public function connectionSocketType() : String;
 	
-	@:overload public function connectionSocketUseSelectThreadToWait() : Bool;
+	@:overload @:public public function connectionSocketUseSelectThreadToWait() : Bool;
 	
-	@:overload public function connectionSocketUseWorkerThreadForEvent() : Bool;
+	@:overload @:public public function connectionSocketUseWorkerThreadForEvent() : Bool;
 	
-	@:overload public function getTransportTCPReadTimeouts() : com.sun.corba.se.spi.transport.ReadTimeouts;
+	@:overload @:public public function getTransportTCPReadTimeouts() : com.sun.corba.se.spi.transport.ReadTimeouts;
 	
-	@:overload public function disableDirectByteBufferUse() : Bool;
+	@:overload @:public public function disableDirectByteBufferUse() : Bool;
 	
-	@:overload public function isJavaSerializationEnabled() : Bool;
+	@:overload @:public public function isJavaSerializationEnabled() : Bool;
 	
-	@:overload public function useRepId() : Bool;
+	@:overload @:public public function useRepId() : Bool;
 	
 	
 }

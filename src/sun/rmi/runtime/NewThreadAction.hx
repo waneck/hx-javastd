@@ -36,7 +36,7 @@ extern class NewThreadAction implements java.security.PrivilegedAction<java.lang
 	* @param   daemon if true, new thread will be a daemon thread;
 	* if false, new thread will not be a daemon thread
 	*/
-	@:overload public function new(runnable : java.lang.Runnable, name : String, daemon : Bool) : Void;
+	@:overload @:public public function new(runnable : java.lang.Runnable, name : String, daemon : Bool) : Void;
 	
 	/**
 	* Creates an action that will create a new thread.
@@ -52,9 +52,9 @@ extern class NewThreadAction implements java.security.PrivilegedAction<java.lang
 	* thread group; if false, thread will be created in the system
 	* thread group
 	*/
-	@:overload public function new(runnable : java.lang.Runnable, name : String, daemon : Bool, user : Bool) : Void;
+	@:overload @:public public function new(runnable : java.lang.Runnable, name : String, daemon : Bool, user : Bool) : Void;
 	
-	@:overload public function run() : java.lang.Thread;
+	@:overload @:public public function run() : java.lang.Thread;
 	
 	
 }

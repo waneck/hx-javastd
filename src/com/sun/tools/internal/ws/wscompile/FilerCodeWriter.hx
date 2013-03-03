@@ -25,11 +25,11 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class FilerCodeWriter extends com.sun.tools.internal.ws.wscompile.WSCodeWriter
 {
-	@:overload public function new(outDir : java.io.File, options : com.sun.tools.internal.ws.wscompile.WsgenOptions) : Void;
+	@:overload @:public public function new(outDir : java.io.File, options : com.sun.tools.internal.ws.wscompile.WsgenOptions) : Void;
 	
-	@:overload public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
+	@:overload @:public override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

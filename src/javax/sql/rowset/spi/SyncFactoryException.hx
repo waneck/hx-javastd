@@ -28,7 +28,7 @@ extern class SyncFactoryException extends java.sql.SQLException
 	/**
 	* Creates new <code>SyncFactoryException</code> without detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>SyncFactoryException</code> with the specified
@@ -36,7 +36,7 @@ extern class SyncFactoryException extends java.sql.SQLException
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

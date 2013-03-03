@@ -25,15 +25,15 @@ package sun.tools.jconsole;
 */
 extern class LabeledComponent extends javax.swing.JPanel
 {
-	@:overload public function new(text : String, comp : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(text : String, comp : javax.swing.JComponent) : Void;
 	
-	@:overload public function new(text : String, mnemonic : Int, comp : javax.swing.JComponent) : Void;
+	@:overload @:public public function new(text : String, mnemonic : Int, comp : javax.swing.JComponent) : Void;
 	
-	@:overload public function setLabel(str : String) : Void;
+	@:overload @:public public function setLabel(str : String) : Void;
 	
-	@:overload public function setValueLabel(str : String) : Void;
+	@:overload @:public public function setValueLabel(str : String) : Void;
 	
-	@:native('layout') @:overload public static function _layout(container : java.awt.Container) : Void;
+	@:native('layout') @:overload @:public @:static public static function _layout(container : java.awt.Container) : Void;
 	
 	
 }

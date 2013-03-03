@@ -35,14 +35,14 @@ package javax.management.openmbean;
 	/**
 	* A KeyAlreadyExistsException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* A KeyAlreadyExistsException with a detail message.
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

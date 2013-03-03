@@ -32,7 +32,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var NONE(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var NONE(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -41,7 +41,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var FRAME(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FRAME(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -50,7 +50,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var PLAIN_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var PLAIN_DIALOG(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -59,7 +59,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var INFORMATION_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var INFORMATION_DIALOG(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -68,7 +68,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var ERROR_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var ERROR_DIALOG(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -77,7 +77,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var COLOR_CHOOSER_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var COLOR_CHOOSER_DIALOG(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -86,7 +86,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var FILE_CHOOSER_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var FILE_CHOOSER_DIALOG(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -95,7 +95,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var QUESTION_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var QUESTION_DIALOG(default, null) : Int;
 	
 	/**
 	* Constant used for the windowDecorationStyle property. Indicates that
@@ -104,28 +104,28 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) public static var WARNING_DIALOG(default, null) : Int;
+	@:require(java4) @:public @:static @:final public static var WARNING_DIALOG(default, null) : Int;
 	
 	/** The menu bar. */
-	private var menuBar : javax.swing.JMenuBar;
+	@:protected private var menuBar : javax.swing.JMenuBar;
 	
 	/** The content pane. */
-	private var contentPane : java.awt.Container;
+	@:protected private var contentPane : java.awt.Container;
 	
 	/** The layered pane that manages the menu bar and content pane. */
-	private var layeredPane : javax.swing.JLayeredPane;
+	@:protected private var layeredPane : javax.swing.JLayeredPane;
 	
 	/**
 	* The glass pane that overlays the menu bar and content pane,
 	*  so it can intercept mouse movements and such.
 	*/
-	private var glassPane : java.awt.Component;
+	@:protected private var glassPane : java.awt.Component;
 	
 	/**
 	* The button that gets activated when the pane has the focus and
 	* a UI-specific action like pressing the <b>Enter</b> key occurs.
 	*/
-	private var defaultButton : javax.swing.JButton;
+	@:protected private var defaultButton : javax.swing.JButton;
 	
 	/**
 	* As of Java 2 platform v1.3 this unusable field is no longer used.
@@ -136,7 +136,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3.
 	*  @see #defaultButton
 	*/
-	private var defaultPressAction : javax.swing.JRootPane.JRootPane_DefaultAction;
+	@:protected private var defaultPressAction : javax.swing.JRootPane.JRootPane_DefaultAction;
 	
 	/**
 	* As of Java 2 platform v1.3 this unusable field is no longer used.
@@ -147,20 +147,20 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3.
 	*  @see #defaultButton
 	*/
-	private var defaultReleaseAction : javax.swing.JRootPane.JRootPane_DefaultAction;
+	@:protected private var defaultReleaseAction : javax.swing.JRootPane.JRootPane_DefaultAction;
 	
 	/**
 	* Creates a <code>JRootPane</code>, setting up its
 	* <code>glassPane</code>, <code>layeredPane</code>,
 	* and <code>contentPane</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setDoubleBuffered(aFlag : Bool) : Void;
+	@:require(java6) @:overload @:public override public function setDoubleBuffered(aFlag : Bool) : Void;
 	
 	/**
 	* Returns a constant identifying the type of Window decorations the
@@ -174,7 +174,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @see #setWindowDecorationStyle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getWindowDecorationStyle() : Int;
+	@:require(java4) @:overload @:public public function getWindowDecorationStyle() : Int;
 	
 	/**
 	* Sets the type of Window decorations (such as borders, widgets for
@@ -213,7 +213,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*    attribute: visualUpdate true
 	*  description: Identifies the type of Window decorations to provide
 	*/
-	@:require(java4) @:overload public function setWindowDecorationStyle(windowDecorationStyle : Int) : Void;
+	@:require(java4) @:overload @:public public function setWindowDecorationStyle(windowDecorationStyle : Int) : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
@@ -221,7 +221,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return <code>LabelUI</code> object
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getUI() : javax.swing.plaf.RootPaneUI;
+	@:require(java3) @:overload @:public public function getUI() : javax.swing.plaf.RootPaneUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -236,14 +236,14 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*  description: The UI object that implements the Component's LookAndFeel.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setUI(ui : javax.swing.plaf.RootPaneUI) : Void;
+	@:require(java3) @:overload @:public public function setUI(ui : javax.swing.plaf.RootPaneUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -254,7 +254,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Called by the constructor methods to create the default
@@ -262,7 +262,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* Bt default it creates a new <code>JLayeredPane</code>.
 	* @return the default <code>layeredPane</code>
 	*/
-	@:overload private function createLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:protected private function createLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Called by the constructor methods to create the default
@@ -271,7 +271,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* <code>BorderLayout</code> as its <code>LayoutManager</code>.
 	* @return the default <code>contentPane</code>
 	*/
-	@:overload private function createContentPane() : java.awt.Container;
+	@:overload @:protected private function createContentPane() : java.awt.Container;
 	
 	/**
 	* Called by the constructor methods to create the default
@@ -280,20 +280,20 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* with visibility set to false.
 	* @return the default <code>glassPane</code>
 	*/
-	@:overload private function createGlassPane() : java.awt.Component;
+	@:overload @:protected private function createGlassPane() : java.awt.Component;
 	
 	/**
 	* Called by the constructor methods to create the default
 	* <code>layoutManager</code>.
 	* @return the default <code>layoutManager</code>.
 	*/
-	@:overload private function createRootLayout() : java.awt.LayoutManager;
+	@:overload @:protected private function createRootLayout() : java.awt.LayoutManager;
 	
 	/**
 	* Adds or changes the menu bar used in the layered pane.
 	* @param menu the <code>JMenuBar</code> to add
 	*/
-	@:overload public function setJMenuBar(menu : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setJMenuBar(menu : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Specifies the menu bar value.
@@ -301,13 +301,13 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*  replaced by <code>setJMenuBar(JMenuBar menu)</code>.
 	* @param menu the <code>JMenuBar</code> to add.
 	*/
-	@:overload public function setMenuBar(menu : javax.swing.JMenuBar) : Void;
+	@:overload @:public public function setMenuBar(menu : javax.swing.JMenuBar) : Void;
 	
 	/**
 	* Returns the menu bar from the layered pane.
 	* @return the <code>JMenuBar</code> used in the pane
 	*/
-	@:overload public function getJMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getJMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Returns the menu bar value.
@@ -315,7 +315,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*  replaced by <code>getJMenuBar()</code>.
 	* @return the <code>JMenuBar</code> used in the pane
 	*/
-	@:overload public function getMenuBar() : javax.swing.JMenuBar;
+	@:overload @:public public function getMenuBar() : javax.swing.JMenuBar;
 	
 	/**
 	* Sets the content pane -- the container that holds the components
@@ -330,7 +330,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @exception java.awt.IllegalComponentStateException (a runtime
 	*            exception) if the content pane parameter is <code>null</code>
 	*/
-	@:overload public function setContentPane(content : java.awt.Container) : Void;
+	@:overload @:public public function setContentPane(content : java.awt.Container) : Void;
 	
 	/**
 	* Returns the content pane -- the container that holds the components
@@ -338,7 +338,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return the <code>Container</code> that holds the component-contents
 	*/
-	@:overload public function getContentPane() : java.awt.Container;
+	@:overload @:public public function getContentPane() : java.awt.Container;
 	
 	/**
 	* Sets the layered pane for the root pane. The layered pane
@@ -348,7 +348,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @exception java.awt.IllegalComponentStateException (a runtime
 	*            exception) if the layered pane parameter is <code>null</code>
 	*/
-	@:overload public function setLayeredPane(layered : javax.swing.JLayeredPane) : Void;
+	@:overload @:public public function setLayeredPane(layered : javax.swing.JLayeredPane) : Void;
 	
 	/**
 	* Gets the layered pane used by the root pane. The layered pane
@@ -356,7 +356,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return the <code>JLayeredPane</code> currently in use
 	*/
-	@:overload public function getLayeredPane() : javax.swing.JLayeredPane;
+	@:overload @:public public function getLayeredPane() : javax.swing.JLayeredPane;
 	
 	/**
 	* Sets a specified <code>Component</code> to be the glass pane for this
@@ -383,14 +383,14 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @exception NullPointerException if the <code>glass</code> parameter is
 	*          <code>null</code>
 	*/
-	@:overload public function setGlassPane(glass : java.awt.Component) : Void;
+	@:overload @:public public function setGlassPane(glass : java.awt.Component) : Void;
 	
 	/**
 	* Returns the current glass pane for this <code>JRootPane</code>.
 	* @return the current glass pane
 	* @see #setGlassPane
 	*/
-	@:overload public function getGlassPane() : java.awt.Component;
+	@:overload @:public public function getGlassPane() : java.awt.Component;
 	
 	/**
 	* If a descendant of this <code>JRootPane</code> calls
@@ -405,7 +405,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @see java.awt.Container#isValidateRoot
 	* @return true
 	*/
-	@:overload override public function isValidateRoot() : Bool;
+	@:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* The <code>glassPane</code> and <code>contentPane</code>
@@ -419,17 +419,17 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return true if this component's children don't overlap
 	*/
-	@:overload public function isOptimizedDrawingEnabled() : Bool;
+	@:overload @:public override public function isOptimizedDrawingEnabled() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Sets the <code>defaultButton</code> property,
@@ -451,14 +451,14 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @beaninfo
 	*  description: The button activated by default in this root pane
 	*/
-	@:overload public function setDefaultButton(defaultButton : javax.swing.JButton) : Void;
+	@:overload @:public public function setDefaultButton(defaultButton : javax.swing.JButton) : Void;
 	
 	/**
 	* Returns the value of the <code>defaultButton</code> property.
 	* @return the <code>JButton</code> which is currently the default button
 	* @see #setDefaultButton
 	*/
-	@:overload public function getDefaultButton() : javax.swing.JButton;
+	@:overload @:public public function getDefaultButton() : javax.swing.JButton;
 	
 	/**
 	* Overridden to enforce the position of the glass component as
@@ -468,7 +468,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @param constraints the constraints to be respected
 	* @param index the index
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JRootPane</code>.
@@ -479,7 +479,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return  a string representation of this <code>JRootPane</code>.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -491,17 +491,17 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return an <code>AccessibleJRootPane</code> that serves as the
 	*         <code>AccessibleContext</code> of this <code>JRootPane</code>
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JRootPane$DefaultAction') @:internal extern class JRootPane_DefaultAction extends javax.swing.AbstractAction
 {
-	@:overload public function setOwner(owner : javax.swing.JButton) : Void;
+	@:overload @:public public function setOwner(owner : javax.swing.JButton) : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -527,7 +527,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* is being used
 	* @return a Dimension object containing the layout's preferred size
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum amount of space the layout needs.
@@ -536,7 +536,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* is being used
 	* @return a Dimension object containing the layout's minimum size
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum amount of space the layout can use.
@@ -545,7 +545,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* is being used
 	* @return a Dimension object containing the layout's maximum size
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Instructs the layout manager to perform the layout for the specified
@@ -554,19 +554,19 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @param parent the Container for which this layout manager
 	* is being used
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
-	@:overload public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
-	@:overload public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	
 }
@@ -592,14 +592,14 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -611,7 +611,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	
 }

@@ -43,9 +43,9 @@ extern class ListResourceBundle extends java.util.ResourceBundle
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final override public function handleGetObject(key : String) : Dynamic;
+	@:overload @:public @:final override public function handleGetObject(key : String) : Dynamic;
 	
 	/**
 	* Returns an <code>Enumeration</code> of the keys contained in
@@ -55,7 +55,7 @@ extern class ListResourceBundle extends java.util.ResourceBundle
 	*         this <code>ResourceBundle</code> and its parent bundles.
 	* @see #keySet()
 	*/
-	@:overload override public function getKeys() : java.util.Enumeration<String>;
+	@:overload @:public override public function getKeys() : java.util.Enumeration<String>;
 	
 	/**
 	* Returns a <code>Set</code> of the keys contained
@@ -66,7 +66,7 @@ extern class ListResourceBundle extends java.util.ResourceBundle
 	* @since 1.6
 	* @see #keySet()
 	*/
-	@:require(java6) @:overload override private function handleKeySet() : java.util.Set<String>;
+	@:require(java6) @:overload @:protected override private function handleKeySet() : java.util.Set<String>;
 	
 	/**
 	* Returns an array in which each item is a pair of objects in an
@@ -78,7 +78,7 @@ extern class ListResourceBundle extends java.util.ResourceBundle
 	* @return an array of an <code>Object</code> array representing a
 	* key-value pair.
 	*/
-	@:overload @:abstract private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:abstract @:protected private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

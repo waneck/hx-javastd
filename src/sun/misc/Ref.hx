@@ -33,7 +33,7 @@ extern class Ref
 	* never override this method. The get() method effectively caches calls to
 	* reconstitute().
 	*/
-	@:overload @:synchronized public function get() : Dynamic;
+	@:overload @:public @:synchronized public function get() : Dynamic;
 	
 	/**
 	* Returns a pointer to the object referenced by this Ref by
@@ -45,34 +45,34 @@ extern class Ref
 	* also add a constructor to set them up, and write a version of
 	* reconstitute().
 	*/
-	@:overload @:abstract public function reconstitute() : Dynamic;
+	@:overload @:public @:abstract public function reconstitute() : Dynamic;
 	
 	/**
 	* Flushes the cached object.  Forces the next invocation of get() to
 	* invoke reconstitute().
 	*/
-	@:overload @:synchronized public function flush() : Void;
+	@:overload @:public @:synchronized public function flush() : Void;
 	
 	/**
 	* Sets the thing to the specified object.
 	* @param thing the specified object
 	*/
-	@:overload @:synchronized public function setThing(thing : Dynamic) : Void;
+	@:overload @:public @:synchronized public function setThing(thing : Dynamic) : Void;
 	
 	/**
 	* Checks to see what object is being pointed at by this Ref and returns it.
 	*/
-	@:overload @:synchronized public function check() : Dynamic;
+	@:overload @:public @:synchronized public function check() : Dynamic;
 	
 	/**
 	* Constructs a new Ref.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new Ref that initially points to thing.
 	*/
-	@:overload public function new(thing : Dynamic) : Void;
+	@:overload @:public public function new(thing : Dynamic) : Void;
 	
 	
 }

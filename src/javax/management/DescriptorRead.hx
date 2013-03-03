@@ -36,7 +36,7 @@ package javax.management;
 	* @return Descriptor associated with the component implementing this interface.
 	* The return value is never null, but the returned descriptor may be empty.
 	*/
-	@:overload public function getDescriptor() : javax.management.Descriptor;
+	@:overload @:public public function getDescriptor() : javax.management.Descriptor;
 	
 	
 }

@@ -36,12 +36,12 @@ extern class RequestProcessor implements java.lang.Runnable
 	* Queues a Request instance for execution by the request procesor
 	* thread.
 	*/
-	@:overload public static function postRequest(req : sun.misc.Request) : Void;
+	@:overload @:public @:static public static function postRequest(req : sun.misc.Request) : Void;
 	
 	/**
 	* Process requests as they are queued.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/**
 	* This method initiates the request processor thread.  It is safe
@@ -49,7 +49,7 @@ extern class RequestProcessor implements java.lang.Runnable
 	* clients to deliberately control the context in which the request
 	* processor thread is created
 	*/
-	@:overload @:synchronized public static function startProcessing() : Void;
+	@:overload @:public @:static @:synchronized public static function startProcessing() : Void;
 	
 	
 }

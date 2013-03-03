@@ -25,13 +25,13 @@ package sun.java2d;
 */
 extern class SurfaceData implements java.awt.Transparency implements sun.java2d.DisposerTarget implements sun.java2d.StateTrackable implements sun.java2d.Surface
 {
-	@:overload private function new(surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
+	@:overload @:protected private function new(surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload private function new(state : sun.java2d.StateTrackable.StateTrackable_State, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
+	@:overload @:protected private function new(state : sun.java2d.StateTrackable.StateTrackable_State, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload private function new(trackable : sun.java2d.StateTrackableDelegate, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
+	@:overload @:protected private function new(trackable : sun.java2d.StateTrackableDelegate, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload private function new(state : sun.java2d.StateTrackable.StateTrackable_State) : Void;
+	@:overload @:protected private function new(state : sun.java2d.StateTrackable.StateTrackable_State) : Void;
 	
 	/**
 	* Subclasses can set a "blit proxy key" which will be used
@@ -61,7 +61,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* and shared across all screens and pixel formats - such
 	* implementations could use a single heavily shared key Object.
 	*/
-	@:overload private function setBlitProxyKey(key : Dynamic) : Void;
+	@:overload @:protected private function setBlitProxyKey(key : Dynamic) : Void;
 	
 	/**
 	* This method is called on a destination SurfaceData to choose
@@ -96,7 +96,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	*      a cached copy if appropriate, or the original if not).
 	* </ol>
 	*/
-	@:overload public function getSourceSurfaceData(img : java.awt.Image, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : sun.java2d.SurfaceData;
+	@:overload @:public public function getSourceSurfaceData(img : java.awt.Image, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : sun.java2d.SurfaceData;
 	
 	/**
 	* This method is called on a destination SurfaceData to choose
@@ -123,54 +123,54 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* always returns the original sourceSD object as the replacement
 	* copy so no caching is ever performed.
 	*/
-	@:overload public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
+	@:overload @:public public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
 	
 	/**
 	* Extracts the SurfaceManager from the given Image, and then
 	* returns the SurfaceData object that would best be suited as the
 	* destination surface in some rendering operation.
 	*/
-	@:overload public static function getPrimarySurfaceData(img : java.awt.Image) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function getPrimarySurfaceData(img : java.awt.Image) : sun.java2d.SurfaceData;
 	
 	/**
 	* Restores the contents of the given Image and then returns the new
 	* SurfaceData object in use by the Image's SurfaceManager.
 	*/
-	@:overload public static function restoreContents(img : java.awt.Image) : sun.java2d.SurfaceData;
+	@:overload @:public @:static public static function restoreContents(img : java.awt.Image) : sun.java2d.SurfaceData;
 	
-	@:overload public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
+	@:overload @:public public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
 	
-	@:overload public function getStateTracker() : sun.java2d.StateTracker;
+	@:overload @:public public function getStateTracker() : sun.java2d.StateTracker;
 	
 	/**
 	* Marks this surface as dirty.
 	*/
-	@:overload @:final public function markDirty() : Void;
+	@:overload @:public @:final public function markDirty() : Void;
 	
 	/**
 	* Sets the value of the surfaceLost variable, which indicates whether
 	* something has happened to the rendering surface such that it needs
 	* to be restored and re-rendered.
 	*/
-	@:overload public function setSurfaceLost(lost : Bool) : Void;
+	@:overload @:public public function setSurfaceLost(lost : Bool) : Void;
 	
-	@:overload public function isSurfaceLost() : Bool;
+	@:overload @:public public function isSurfaceLost() : Bool;
 	
 	/**
 	* Returns a boolean indicating whether or not this SurfaceData is valid.
 	*/
-	@:overload @:final public function isValid() : Bool;
+	@:overload @:public @:final public function isValid() : Bool;
 	
-	@:overload public function getDisposerReferent() : Dynamic;
+	@:overload @:public public function getDisposerReferent() : Dynamic;
 	
-	@:overload public function getNativeOps() : haxe.Int64;
+	@:overload @:public public function getNativeOps() : haxe.Int64;
 	
 	/**
 	* Sets this SurfaceData object to the invalid state.  All Graphics
 	* objects must get a new SurfaceData object via the refresh method
 	* and revalidate their pipelines before continuing.
 	*/
-	@:overload public function invalidate() : Void;
+	@:overload @:public public function invalidate() : Void;
 	
 	/**
 	* Certain changes in the configuration of a surface require the
@@ -193,87 +193,87 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* step.  Thus, only window based surfaces really need to deal
 	* with this form of replacement.
 	*/
-	@:overload @:abstract public function getReplacement() : sun.java2d.SurfaceData;
+	@:overload @:public @:abstract public function getReplacement() : sun.java2d.SurfaceData;
 	
-	private static var colorPrimitives(default, null) : sun.java2d.pipe.LoopPipe;
+	@:protected @:static @:final private static var colorPrimitives(default, null) : sun.java2d.pipe.LoopPipe;
 	
-	public static var outlineTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
+	@:public @:static @:final public static var outlineTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
 	
-	public static var solidTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
+	@:public @:static @:final public static var solidTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
 	
-	public static var aaTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
+	@:public @:static @:final public static var aaTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
 	
-	public static var lcdTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
+	@:public @:static @:final public static var lcdTextRenderer(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var colorPipe(default, null) : sun.java2d.pipe.AlphaColorPipe;
+	@:protected @:static @:final private static var colorPipe(default, null) : sun.java2d.pipe.AlphaColorPipe;
 	
-	private static var colorViaShape(default, null) : sun.java2d.pipe.PixelToShapeConverter;
+	@:protected @:static @:final private static var colorViaShape(default, null) : sun.java2d.pipe.PixelToShapeConverter;
 	
-	private static var colorViaPgram(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var colorViaPgram(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var colorText(default, null) : sun.java2d.pipe.TextPipe;
+	@:protected @:static @:final private static var colorText(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var clipColorPipe(default, null) : sun.java2d.pipe.CompositePipe;
+	@:protected @:static @:final private static var clipColorPipe(default, null) : sun.java2d.pipe.CompositePipe;
 	
-	private static var clipColorText(default, null) : sun.java2d.pipe.TextPipe;
+	@:protected @:static @:final private static var clipColorText(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var AAColorShape(default, null) : sun.java2d.pipe.AAShapePipe;
+	@:protected @:static @:final private static var AAColorShape(default, null) : sun.java2d.pipe.AAShapePipe;
 	
-	private static var AAColorViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AAColorViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var AAColorViaPgram(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AAColorViaPgram(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var AAClipColorShape(default, null) : sun.java2d.pipe.AAShapePipe;
+	@:protected @:static @:final private static var AAClipColorShape(default, null) : sun.java2d.pipe.AAShapePipe;
 	
-	private static var AAClipColorViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AAClipColorViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var paintPipe(default, null) : sun.java2d.pipe.CompositePipe;
+	@:protected @:static @:final private static var paintPipe(default, null) : sun.java2d.pipe.CompositePipe;
 	
-	private static var paintShape(default, null) : sun.java2d.pipe.SpanShapeRenderer;
+	@:protected @:static @:final private static var paintShape(default, null) : sun.java2d.pipe.SpanShapeRenderer;
 	
-	private static var paintViaShape(default, null) : sun.java2d.pipe.PixelToShapeConverter;
+	@:protected @:static @:final private static var paintViaShape(default, null) : sun.java2d.pipe.PixelToShapeConverter;
 	
-	private static var paintText(default, null) : sun.java2d.pipe.TextPipe;
+	@:protected @:static @:final private static var paintText(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var clipPaintPipe(default, null) : sun.java2d.pipe.CompositePipe;
+	@:protected @:static @:final private static var clipPaintPipe(default, null) : sun.java2d.pipe.CompositePipe;
 	
-	private static var clipPaintText(default, null) : sun.java2d.pipe.TextPipe;
+	@:protected @:static @:final private static var clipPaintText(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var AAPaintShape(default, null) : sun.java2d.pipe.AAShapePipe;
+	@:protected @:static @:final private static var AAPaintShape(default, null) : sun.java2d.pipe.AAShapePipe;
 	
-	private static var AAPaintViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AAPaintViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var AAClipPaintShape(default, null) : sun.java2d.pipe.AAShapePipe;
+	@:protected @:static @:final private static var AAClipPaintShape(default, null) : sun.java2d.pipe.AAShapePipe;
 	
-	private static var AAClipPaintViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AAClipPaintViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var compPipe(default, null) : sun.java2d.pipe.CompositePipe;
+	@:protected @:static @:final private static var compPipe(default, null) : sun.java2d.pipe.CompositePipe;
 	
-	private static var compShape(default, null) : sun.java2d.pipe.SpanShapeRenderer;
+	@:protected @:static @:final private static var compShape(default, null) : sun.java2d.pipe.SpanShapeRenderer;
 	
-	private static var compViaShape(default, null) : sun.java2d.pipe.PixelToShapeConverter;
+	@:protected @:static @:final private static var compViaShape(default, null) : sun.java2d.pipe.PixelToShapeConverter;
 	
-	private static var compText(default, null) : sun.java2d.pipe.TextPipe;
+	@:protected @:static @:final private static var compText(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var clipCompPipe(default, null) : sun.java2d.pipe.CompositePipe;
+	@:protected @:static @:final private static var clipCompPipe(default, null) : sun.java2d.pipe.CompositePipe;
 	
-	private static var clipCompText(default, null) : sun.java2d.pipe.TextPipe;
+	@:protected @:static @:final private static var clipCompText(default, null) : sun.java2d.pipe.TextPipe;
 	
-	private static var AACompShape(default, null) : sun.java2d.pipe.AAShapePipe;
+	@:protected @:static @:final private static var AACompShape(default, null) : sun.java2d.pipe.AAShapePipe;
 	
-	private static var AACompViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AACompViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var AAClipCompShape(default, null) : sun.java2d.pipe.AAShapePipe;
+	@:protected @:static @:final private static var AAClipCompShape(default, null) : sun.java2d.pipe.AAShapePipe;
 	
-	private static var AAClipCompViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
+	@:protected @:static @:final private static var AAClipCompViaShape(default, null) : sun.java2d.pipe.PixelToParallelogramConverter;
 	
-	private static var imagepipe(default, null) : sun.java2d.pipe.DrawImagePipe;
+	@:protected @:static @:final private static var imagepipe(default, null) : sun.java2d.pipe.DrawImagePipe;
 	
-	@:overload public function canRenderLCDText(sg2d : sun.java2d.SunGraphics2D) : Bool;
+	@:overload @:public public function canRenderLCDText(sg2d : sun.java2d.SunGraphics2D) : Bool;
 	
-	@:overload public function canRenderParallelograms(sg2d : sun.java2d.SunGraphics2D) : Bool;
+	@:overload @:public public function canRenderParallelograms(sg2d : sun.java2d.SunGraphics2D) : Bool;
 	
-	@:overload public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
+	@:overload @:public public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
 	/**
 	* Returns a MaskFill object that can be used on this destination
@@ -283,14 +283,14 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* attributes (such as the hardware capabilities of the destination
 	* surface) before returning a specific MaskFill object.
 	*/
-	@:overload private function getMaskFill(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.MaskFill;
+	@:overload @:protected private function getMaskFill(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.MaskFill;
 	
 	/**
 	* Return a RenderLoops object containing all of the basic
 	* GraphicsPrimitive objects for rendering to the destination
 	* surface with the current attributes of the given SunGraphics2D.
 	*/
-	@:overload public function getRenderLoops(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.RenderLoops;
+	@:overload @:public public function getRenderLoops(sg2d : sun.java2d.SunGraphics2D) : sun.java2d.loops.RenderLoops;
 	
 	/**
 	* Construct and return a RenderLoops object containing all of
@@ -298,31 +298,31 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* destination surface with the given source, destination, and
 	* composite types.
 	*/
-	@:overload public static function makeRenderLoops(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.RenderLoops;
+	@:overload @:public @:static public static function makeRenderLoops(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.RenderLoops;
 	
 	/**
 	* Return the GraphicsConfiguration object that describes this
 	* destination surface.
 	*/
-	@:overload @:abstract public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public @:abstract public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Return the SurfaceType object that describes the destination
 	* surface.
 	*/
-	@:overload @:final public function getSurfaceType() : sun.java2d.loops.SurfaceType;
+	@:overload @:public @:final public function getSurfaceType() : sun.java2d.loops.SurfaceType;
 	
 	/**
 	* Return the ColorModel for the destination surface.
 	*/
-	@:overload @:final public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public @:final public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the type of this <code>Transparency</code>.
 	* @return the field type of this <code>Transparency</code>, which is
 	*          either OPAQUE, BITMASK or TRANSLUCENT.
 	*/
-	@:overload public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	/**
 	* Return a readable Raster which contains the pixels for the
@@ -335,7 +335,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	*
 	* @see useTightBBoxes
 	*/
-	@:overload @:abstract public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public @:abstract public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
 	/**
 	* Does the pixel accessibility of the destination surface
@@ -348,13 +348,13 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	*
 	* @see getRaster
 	*/
-	@:overload public function useTightBBoxes() : Bool;
+	@:overload @:public public function useTightBBoxes() : Bool;
 	
 	/**
 	* Returns the pixel data for the specified Argb value packed
 	* into an integer for easy storage and conveyance.
 	*/
-	@:overload public function pixelFor(rgb : Int) : Int;
+	@:overload @:public public function pixelFor(rgb : Int) : Int;
 	
 	/**
 	* Returns the pixel data for the specified color packed into an
@@ -370,69 +370,69 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* can be done using the additional information in the Color
 	* object.
 	*/
-	@:overload public function pixelFor(c : java.awt.Color) : Int;
+	@:overload @:public public function pixelFor(c : java.awt.Color) : Int;
 	
 	/**
 	* Returns the Argb representation for the specified integer value
 	* which is packed in the format of the associated ColorModel.
 	*/
-	@:overload public function rgbFor(pixel : Int) : Int;
+	@:overload @:public public function rgbFor(pixel : Int) : Int;
 	
 	/**
 	* Returns the bounds of the destination surface.
 	*/
-	@:overload @:abstract public function getBounds() : java.awt.Rectangle;
+	@:overload @:public @:abstract public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Performs Security Permissions checks to see if a Custom
 	* Composite object should be allowed access to the pixels
 	* of this surface.
 	*/
-	@:overload private function checkCustomComposite() : Void;
+	@:overload @:protected private function checkCustomComposite() : Void;
 	
 	/**
 	* Fetches private field IndexColorModel.allgrayopaque
 	* which is true when all palette entries in the color
 	* model are gray and opaque.
 	*/
-	@:overload @:native private static function isOpaqueGray(icm : java.awt.image.IndexColorModel) : Bool;
+	@:overload @:protected @:static @:native private static function isOpaqueGray(icm : java.awt.image.IndexColorModel) : Bool;
 	
 	/**
 	* For our purposes null and NullSurfaceData are the same as
 	* they represent a disposed surface.
 	*/
-	@:overload public static function isNull(sd : sun.java2d.SurfaceData) : Bool;
+	@:overload @:public @:static public static function isNull(sd : sun.java2d.SurfaceData) : Bool;
 	
 	/**
 	* Performs a copyarea within this surface.  Returns
 	* false if there is no algorithm to perform the copyarea
 	* given the current settings of the SunGraphics2D.
 	*/
-	@:overload public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Bool;
+	@:overload @:public public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Bool;
 	
 	/**
 	* Synchronously releases resources associated with this surface.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Returns destination associated with this SurfaceData.  This could be
 	* either an Image or a Component; subclasses of SurfaceData are
 	* responsible for returning the appropriate object.
 	*/
-	@:overload @:abstract public function getDestination() : Dynamic;
+	@:overload @:public @:abstract public function getDestination() : Dynamic;
 	
 	
 }
 @:native('sun$java2d$SurfaceData$PixelToShapeLoopConverter') @:internal extern class SurfaceData_PixelToShapeLoopConverter extends sun.java2d.pipe.PixelToShapeConverter implements sun.java2d.pipe.LoopBasedPipe
 {
-	@:overload public function new(pipe : sun.java2d.pipe.ShapeDrawPipe) : Void;
+	@:overload @:public public function new(pipe : sun.java2d.pipe.ShapeDrawPipe) : Void;
 	
 	
 }
 @:native('sun$java2d$SurfaceData$PixelToPgramLoopConverter') @:internal extern class SurfaceData_PixelToPgramLoopConverter extends sun.java2d.pipe.PixelToParallelogramConverter implements sun.java2d.pipe.LoopBasedPipe
 {
-	@:overload public function new(shapepipe : sun.java2d.pipe.ShapeDrawPipe, pgrampipe : sun.java2d.pipe.ParallelogramPipe, minPenSize : Float, normPosition : Float, adjustfill : Bool) : Void;
+	@:overload @:public public function new(shapepipe : sun.java2d.pipe.ShapeDrawPipe, pgrampipe : sun.java2d.pipe.ParallelogramPipe, minPenSize : Float, normPosition : Float, adjustfill : Bool) : Void;
 	
 	
 }

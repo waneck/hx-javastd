@@ -15,23 +15,23 @@ package org.omg.CORBA;
 */
 extern class ParameterMode implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _PARAM_IN(default, null) : Int;
+	@:public @:static @:final public static var _PARAM_IN(default, null) : Int;
 	
-	public static var PARAM_IN(default, null) : org.omg.CORBA.ParameterMode;
+	@:public @:static @:final public static var PARAM_IN(default, null) : org.omg.CORBA.ParameterMode;
 	
-	public static var _PARAM_OUT(default, null) : Int;
+	@:public @:static @:final public static var _PARAM_OUT(default, null) : Int;
 	
-	public static var PARAM_OUT(default, null) : org.omg.CORBA.ParameterMode;
+	@:public @:static @:final public static var PARAM_OUT(default, null) : org.omg.CORBA.ParameterMode;
 	
-	public static var _PARAM_INOUT(default, null) : Int;
+	@:public @:static @:final public static var _PARAM_INOUT(default, null) : Int;
 	
-	public static var PARAM_INOUT(default, null) : org.omg.CORBA.ParameterMode;
+	@:public @:static @:final public static var PARAM_INOUT(default, null) : org.omg.CORBA.ParameterMode;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : org.omg.CORBA.ParameterMode;
+	@:overload @:public @:static public static function from_int(value : Int) : org.omg.CORBA.ParameterMode;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

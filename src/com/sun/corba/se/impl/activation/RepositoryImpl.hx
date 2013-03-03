@@ -25,31 +25,31 @@ package com.sun.corba.se.impl.activation;
 */
 extern class RepositoryImpl extends _RepositoryImplBase implements java.io.Serializable
 {
-	@:overload public function registerServer(serverDef : com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef, theServerId : Int) : Int;
+	@:overload @:public public function registerServer(serverDef : com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef, theServerId : Int) : Int;
 	
-	@:overload public function registerServer(serverDef : com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef) : Int;
+	@:overload @:public public function registerServer(serverDef : com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef) : Int;
 	
-	@:overload public function unregisterServer(serverId : Int) : Void;
+	@:overload @:public public function unregisterServer(serverId : Int) : Void;
 	
-	@:overload public function getServer(serverId : Int) : com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef;
+	@:overload @:public public function getServer(serverId : Int) : com.sun.corba.se.spi.activation.RepositoryPackage.ServerDef;
 	
-	@:overload public function isInstalled(serverId : Int) : Bool;
+	@:overload @:public public function isInstalled(serverId : Int) : Bool;
 	
-	@:overload public function install(serverId : Int) : Void;
+	@:overload @:public public function install(serverId : Int) : Void;
 	
-	@:overload public function uninstall(serverId : Int) : Void;
+	@:overload @:public public function uninstall(serverId : Int) : Void;
 	
-	@:overload public function listRegisteredServers() : java.NativeArray<Int>;
+	@:overload @:public public function listRegisteredServers() : java.NativeArray<Int>;
 	
-	@:overload public function getServerID(applicationName : String) : Int;
+	@:overload @:public public function getServerID(applicationName : String) : Int;
 	
-	@:overload public function getApplicationNames() : java.NativeArray<String>;
+	@:overload @:public public function getApplicationNames() : java.NativeArray<String>;
 	
 	/**
 	* Typically the Repositoy is created within the ORBd VM but it can
 	* be independently started as well.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -59,7 +59,7 @@ extern class RepositoryImpl extends _RepositoryImplBase implements java.io.Seria
 }
 @:native('com$sun$corba$se$impl$activation$RepositoryImpl$DBServerDef') @:internal extern class RepositoryImpl_DBServerDef implements java.io.Serializable
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

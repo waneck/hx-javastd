@@ -50,7 +50,7 @@ extern class BaseRow implements java.io.Serializable implements java.lang.Clonea
 	* object.
 	* @serial
 	*/
-	private var origVals : java.NativeArray<Dynamic>;
+	@:protected private var origVals : java.NativeArray<Dynamic>;
 	
 	/**
 	* Retrieves the values that this row contained immediately
@@ -59,7 +59,7 @@ extern class BaseRow implements java.io.Serializable implements java.lang.Clonea
 	* @return an array of <code>Object</code> values containing this row's
 	* original values
 	*/
-	@:overload public function getOrigRow() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getOrigRow() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Retrieves the array element at the given index, which is
@@ -70,7 +70,7 @@ extern class BaseRow implements java.io.Serializable implements java.lang.Clonea
 	*         row's array of original values
 	* @throws <code>SQLException</code> if there is an error
 	*/
-	@:overload @:abstract public function getColumnObject(idx : Int) : Dynamic;
+	@:overload @:public @:abstract public function getColumnObject(idx : Int) : Dynamic;
 	
 	/**
 	* Sets the element at the given index into this row's array of
@@ -83,7 +83,7 @@ extern class BaseRow implements java.io.Serializable implements java.lang.Clonea
 	*              <code>idx</code> to be set
 	* @throws <code>SQLException</code> if there is an error
 	*/
-	@:overload @:abstract public function setColumnObject(idx : Int, obj : Dynamic) : Void;
+	@:overload @:public @:abstract public function setColumnObject(idx : Int, obj : Dynamic) : Void;
 	
 	
 }

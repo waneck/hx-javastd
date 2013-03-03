@@ -67,7 +67,7 @@ extern class CK_RSA_PKCS_PSS_PARAMS
 	*   CK_MECHANISM_TYPE hashAlg;
 	* </PRE>
 	*/
-	public var hashAlg : haxe.Int64;
+	@:public public var hashAlg : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -75,7 +75,7 @@ extern class CK_RSA_PKCS_PSS_PARAMS
 	*   CK_RSA_PKCS_MGF_TYPE mgf;
 	* </PRE>
 	*/
-	public var mgf : haxe.Int64;
+	@:public public var mgf : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -83,14 +83,14 @@ extern class CK_RSA_PKCS_PSS_PARAMS
 	*   CK_ULONG sLen;
 	* </PRE>
 	*/
-	public var sLen : haxe.Int64;
+	@:public public var sLen : haxe.Int64;
 	
 	/**
 	* Returns the string representation of CK_PKCS5_PBKD2_PARAMS.
 	*
 	* @return the string representation of CK_PKCS5_PBKD2_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

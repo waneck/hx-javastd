@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 @:internal extern class StAXExConnector extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.StAXStreamConnector
 {
-	@:overload public function new(_in : com.sun.xml.internal.org.jvnet.staxex.XMLStreamReaderEx, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
+	@:overload @:public public function new(_in : com.sun.xml.internal.org.jvnet.staxex.XMLStreamReaderEx, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload private function handleCharacters() : Void;
+	@:overload @:protected override private function handleCharacters() : Void;
 	
 	
 }

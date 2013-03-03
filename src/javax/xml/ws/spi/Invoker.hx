@@ -41,7 +41,7 @@ extern class Invoker
 	* @throws InvocationTargetException if the injection done
 	*         by reflection API throws this exception
 	*/
-	@:overload @:abstract public function inject(webServiceContext : javax.xml.ws.WebServiceContext) : Void;
+	@:overload @:public @:abstract public function inject(webServiceContext : javax.xml.ws.WebServiceContext) : Void;
 	
 	/**
 	* JAX-WS runtime calls this method to do the actual web service
@@ -61,7 +61,7 @@ extern class Invoker
 
 	* @see Method#invoke
 	*/
-	@:overload @:abstract public function invoke(m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:abstract public function invoke(m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

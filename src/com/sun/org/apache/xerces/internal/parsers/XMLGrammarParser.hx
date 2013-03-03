@@ -21,14 +21,14 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class XMLGrammarParser extends com.sun.org.apache.xerces.internal.parsers.XMLParser
 {
 	/** fDatatypeValidatorFactory */
-	private var fDatatypeValidatorFactory : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
+	@:protected private var fDatatypeValidatorFactory : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
 	
 	/**
 	* Construct an XMLGrammarParser with the specified symbol table
 	*
 	* @param symbolTable
 	*/
-	@:overload private function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:protected private function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	
 }

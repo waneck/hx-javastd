@@ -44,7 +44,7 @@ extern interface WSDLPart extends com.sun.xml.internal.ws.api.model.wsdl.WSDLObj
 	/**
 	* Gives the XML Schema descriptor referenced using either wsdl:part@element or wsdl:part@type.
 	*/
-	@:overload public function getDescriptor() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPartDescriptor;
+	@:overload @:public public function getDescriptor() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPartDescriptor;
 	
 	
 }

@@ -25,19 +25,19 @@ package sun.security.ssl;
 */
 @:internal extern class X509TrustManagerImpl extends javax.net.ssl.X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 {
-	@:overload override public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public override public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
-	@:overload override public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public override public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
-	@:overload override public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public override public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
 	
-	@:overload override public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
+	@:overload @:public override public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
 	
-	@:overload override public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
+	@:overload @:public override public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
 	
-	@:overload override public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
+	@:overload @:public override public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
 	
-	@:overload override public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
+	@:overload @:public override public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
 	
 	
 }

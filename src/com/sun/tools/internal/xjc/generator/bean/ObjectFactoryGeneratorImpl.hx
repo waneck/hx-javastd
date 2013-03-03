@@ -28,16 +28,16 @@ package com.sun.tools.internal.xjc.generator.bean;
 	/**
 	* Returns a reference to the generated (public) ObjectFactory
 	*/
-	@:overload override public function getObjectFactory() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public override public function getObjectFactory() : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function new(outline : com.sun.tools.internal.xjc.generator.bean.BeanGenerator, model : com.sun.tools.internal.xjc.model.Model, targetPackage : com.sun.codemodel.internal.JPackage) : Void;
+	@:overload @:public public function new(outline : com.sun.tools.internal.xjc.generator.bean.BeanGenerator, model : com.sun.tools.internal.xjc.model.Model, targetPackage : com.sun.codemodel.internal.JPackage) : Void;
 	
 	/**
 	* Adds code for the given {@link CElementInfo} to ObjectFactory.
 	*/
-	@:overload @:final private function populate(ei : com.sun.tools.internal.xjc.model.CElementInfo, impl : com.sun.tools.internal.xjc.outline.Aspect, exposed : com.sun.tools.internal.xjc.outline.Aspect) : Void;
+	@:overload @:protected @:final private function populate(ei : com.sun.tools.internal.xjc.model.CElementInfo, impl : com.sun.tools.internal.xjc.outline.Aspect, exposed : com.sun.tools.internal.xjc.outline.Aspect) : Void;
 	
-	@:overload @:final private function populate(cc : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, sigType : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:protected @:final private function populate(cc : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, sigType : com.sun.codemodel.internal.JClass) : Void;
 	
 	
 }

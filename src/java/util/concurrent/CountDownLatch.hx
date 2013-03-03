@@ -162,7 +162,7 @@ package java.util.concurrent;
 	*        before threads can pass through {@link #await}
 	* @throws IllegalArgumentException if {@code count} is negative
 	*/
-	@:overload public function new(count : Int) : Void;
+	@:overload @:public public function new(count : Int) : Void;
 	
 	/**
 	* Causes the current thread to wait until the latch has counted down to
@@ -191,7 +191,7 @@ package java.util.concurrent;
 	* @throws InterruptedException if the current thread is interrupted
 	*         while waiting
 	*/
-	@:overload public function await() : Void;
+	@:overload @:public public function await() : Void;
 	
 	/**
 	* Causes the current thread to wait until the latch has counted down to
@@ -234,7 +234,7 @@ package java.util.concurrent;
 	* @throws InterruptedException if the current thread is interrupted
 	*         while waiting
 	*/
-	@:overload public function await(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function await(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Decrements the count of the latch, releasing all waiting threads if
@@ -246,7 +246,7 @@ package java.util.concurrent;
 	*
 	* <p>If the current count equals zero then nothing happens.
 	*/
-	@:overload public function countDown() : Void;
+	@:overload @:public public function countDown() : Void;
 	
 	/**
 	* Returns the current count.
@@ -255,7 +255,7 @@ package java.util.concurrent;
 	*
 	* @return the current count
 	*/
-	@:overload public function getCount() : haxe.Int64;
+	@:overload @:public public function getCount() : haxe.Int64;
 	
 	/**
 	* Returns a string identifying this latch, as well as its state.
@@ -264,7 +264,7 @@ package java.util.concurrent;
 	*
 	* @return a string identifying this latch, as well as its state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -274,9 +274,9 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$CountDownLatch$Sync') @:internal extern class CountDownLatch_Sync extends java.util.concurrent.locks.AbstractQueuedSynchronizer
 {
-	@:overload private function tryAcquireShared(acquires : Int) : Int;
+	@:overload @:protected override private function tryAcquireShared(acquires : Int) : Int;
 	
-	@:overload private function tryReleaseShared(releases : Int) : Bool;
+	@:overload @:protected override private function tryReleaseShared(releases : Int) : Bool;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.orb;
 */
 extern class ORBConfiguratorImpl implements com.sun.corba.se.spi.orb.ORBConfigurator
 {
-	@:overload public function configure(collector : com.sun.corba.se.spi.orb.DataCollector, orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function configure(collector : com.sun.corba.se.spi.orb.DataCollector, orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$orb$ORBConfiguratorImpl$ConfigParser') extern class ORBConfiguratorImpl_ConfigParser extends com.sun.corba.se.spi.orb.ParserImplBase
 {
-	public var userConfigurators : java.NativeArray<Class<Dynamic>>;
+	@:public public var userConfigurators : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
+	@:overload @:public override public function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
 	
 	
 }

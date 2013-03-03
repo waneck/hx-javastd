@@ -38,7 +38,7 @@ extern interface ManagedEndpointFactory
 	* @return A WSEndpoint that wraps the original WSEndpoint instance or the
 	*   original WSEndpoint instance.
 	*/
-	@:overload public function createEndpoint<T>(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<T>, attributes : com.sun.xml.internal.ws.api.config.management.EndpointCreationAttributes) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
+	@:overload @:public public function createEndpoint<T>(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<T>, attributes : com.sun.xml.internal.ws.api.config.management.EndpointCreationAttributes) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	
 }

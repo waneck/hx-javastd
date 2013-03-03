@@ -38,35 +38,35 @@ package java.lang.invoke;
 */
 @:internal extern class MethodTypeForm
 {
-	@:overload public function erasedType() : java.lang.invoke.MethodType;
+	@:overload @:public public function erasedType() : java.lang.invoke.MethodType;
 	
-	@:overload private function new(erasedType : java.lang.invoke.MethodType) : Void;
+	@:overload @:protected private function new(erasedType : java.lang.invoke.MethodType) : Void;
 	
 	/** Turn all primitive types to corresponding wrapper types.
 	*/
-	@:overload public function primsAsBoxes() : java.lang.invoke.MethodType;
+	@:overload @:public public function primsAsBoxes() : java.lang.invoke.MethodType;
 	
 	/** Turn all primitive argument types to corresponding wrapper types.
 	*  Subword and void return types are promoted to int.
 	*/
-	@:overload public function primArgsAsBoxes() : java.lang.invoke.MethodType;
+	@:overload @:public public function primArgsAsBoxes() : java.lang.invoke.MethodType;
 	
 	/** Turn all primitive types to either int or long.
 	*  Floating point return types are not changed, because
 	*  they may require special calling sequences.
 	*  A void return value is turned to int.
 	*/
-	@:overload public function primsAsInts() : java.lang.invoke.MethodType;
+	@:overload @:public public function primsAsInts() : java.lang.invoke.MethodType;
 	
 	/** Turn all primitive types to either int or long.
 	*  Floating point return types are not changed, because
 	*  they may require special calling sequences.
 	*  A void return value is turned to int.
 	*/
-	@:overload public function primsAsLongs() : java.lang.invoke.MethodType;
+	@:overload @:public public function primsAsLongs() : java.lang.invoke.MethodType;
 	
 	/** Stably sort parameters into 3 buckets: ref, int, long. */
-	@:overload public function primsAtEnd() : java.lang.invoke.MethodType;
+	@:overload @:public public function primsAtEnd() : java.lang.invoke.MethodType;
 	
 	/** Compute a new ordering of parameters so that all references
 	*  are before all ints or longs, and all ints are before all longs.
@@ -81,38 +81,38 @@ package java.lang.invoke;
 	*  {@code (long,int,String)void} produces {@code {2,1,2}}, and
 	*  the type {@code (Object,int)Object} produces {@code null}.
 	*/
-	@:overload public static function primsAtEndOrder(mt : java.lang.invoke.MethodType) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function primsAtEndOrder(mt : java.lang.invoke.MethodType) : java.NativeArray<Int>;
 	
 	/** Put the existing parameters of mt into a new order, given by newParamOrder.
 	*  The third argument is logically appended to mt.parameterArray,
 	*  so that elements of newParamOrder can index either pre-existing or
 	*  new parameter types.
 	*/
-	@:overload public static function reorderParameters(mt : java.lang.invoke.MethodType, newParamOrder : java.NativeArray<Int>, moreParams : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodType;
+	@:overload @:public @:static public static function reorderParameters(mt : java.lang.invoke.MethodType, newParamOrder : java.NativeArray<Int>, moreParams : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
-	@:overload public function parameterCount() : Int;
+	@:overload @:public public function parameterCount() : Int;
 	
-	@:overload public function parameterSlotCount() : Int;
+	@:overload @:public public function parameterSlotCount() : Int;
 	
-	@:overload public function returnCount() : Int;
+	@:overload @:public public function returnCount() : Int;
 	
-	@:overload public function returnSlotCount() : Int;
+	@:overload @:public public function returnSlotCount() : Int;
 	
-	@:overload public function primitiveParameterCount() : Int;
+	@:overload @:public public function primitiveParameterCount() : Int;
 	
-	@:overload public function longPrimitiveParameterCount() : Int;
+	@:overload @:public public function longPrimitiveParameterCount() : Int;
 	
-	@:overload public function primitiveReturnCount() : Int;
+	@:overload @:public public function primitiveReturnCount() : Int;
 	
-	@:overload public function longPrimitiveReturnCount() : Int;
+	@:overload @:public public function longPrimitiveReturnCount() : Int;
 	
-	@:overload public function hasPrimitives() : Bool;
+	@:overload @:public public function hasPrimitives() : Bool;
 	
-	@:overload public function hasLongPrimitives() : Bool;
+	@:overload @:public public function hasLongPrimitives() : Bool;
 	
-	@:overload public function parameterToArgSlot(i : Int) : Int;
+	@:overload @:public public function parameterToArgSlot(i : Int) : Int;
 	
-	@:overload public function argSlotToParameter(argSlot : Int) : Int;
+	@:overload @:public public function argSlotToParameter(argSlot : Int) : Int;
 	
 	/** Codes for {@link #canonicalize(java.lang.Class, int)}.
 	* ERASE means change every reference to {@code Object}.
@@ -124,15 +124,15 @@ package java.lang.invoke;
 	* (assumed to be a return type) to int if it is smaller than an int,
 	* or if it is void.
 	*/
-	public static var NO_CHANGE(default, null) : Int;
+	@:public @:static @:final public static var NO_CHANGE(default, null) : Int;
 	
 	/** Canonicalize the types in the given method type.
 	* If any types change, intern the new type, and return it.
 	* Otherwise return null.
 	*/
-	@:overload public static function canonicalize(mt : java.lang.invoke.MethodType, howRet : Int, howArgs : Int) : java.lang.invoke.MethodType;
+	@:overload @:public @:static public static function canonicalize(mt : java.lang.invoke.MethodType, howRet : Int, howArgs : Int) : java.lang.invoke.MethodType;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

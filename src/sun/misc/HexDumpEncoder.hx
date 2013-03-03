@@ -25,17 +25,17 @@ package sun.misc;
 */
 extern class HexDumpEncoder extends sun.misc.CharacterEncoder
 {
-	@:overload override private function bytesPerAtom() : Int;
+	@:overload @:protected override private function bytesPerAtom() : Int;
 	
-	@:overload override private function bytesPerLine() : Int;
+	@:overload @:protected override private function bytesPerLine() : Int;
 	
-	@:overload override private function encodeBufferPrefix(o : java.io.OutputStream) : Void;
+	@:overload @:protected override private function encodeBufferPrefix(o : java.io.OutputStream) : Void;
 	
-	@:overload override private function encodeLinePrefix(o : java.io.OutputStream, len : Int) : Void;
+	@:overload @:protected override private function encodeLinePrefix(o : java.io.OutputStream, len : Int) : Void;
 	
-	@:overload override private function encodeAtom(o : java.io.OutputStream, buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected override private function encodeAtom(o : java.io.OutputStream, buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override private function encodeLineSuffix(o : java.io.OutputStream) : Void;
+	@:overload @:protected override private function encodeLineSuffix(o : java.io.OutputStream) : Void;
 	
 	
 }

@@ -123,7 +123,7 @@ package javax.management.openmbean;
 	*
 	* @return the {@code CompositeData}.
 	*/
-	@:overload public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
 	
 	
 }

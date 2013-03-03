@@ -49,9 +49,9 @@ extern class DElementPattern extends com.sun.xml.internal.rngom.digested.DXmlTok
 	/**
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function new(name : com.sun.xml.internal.rngom.nc.NameClass) : Void;
+	@:overload @:public public function new(name : com.sun.xml.internal.rngom.nc.NameClass) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

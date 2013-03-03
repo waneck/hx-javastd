@@ -33,7 +33,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @see java.io.PrintWriter#PrintWriter(java.io.OutputStream)
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new print stream.
@@ -47,7 +47,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @see java.io.PrintWriter#PrintWriter(java.io.OutputStream, boolean)
 	*/
-	@:overload public function new(out : java.io.OutputStream, autoFlush : Bool) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, autoFlush : Bool) : Void;
 	
 	/**
 	* Creates a new print stream.
@@ -67,7 +67,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function new(out : java.io.OutputStream, autoFlush : Bool, encoding : String) : Void;
+	@:require(java4) @:overload @:public public function new(out : java.io.OutputStream, autoFlush : Bool, encoding : String) : Void;
 	
 	/**
 	* Creates a new print stream, without automatic line flushing, with the
@@ -96,7 +96,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(fileName : String) : Void;
+	@:require(java5) @:overload @:public public function new(fileName : String) : Void;
 	
 	/**
 	* Creates a new print stream, without automatic line flushing, with the
@@ -131,7 +131,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(fileName : String, csn : String) : Void;
+	@:require(java5) @:overload @:public public function new(fileName : String, csn : String) : Void;
 	
 	/**
 	* Creates a new print stream, without automatic line flushing, with the
@@ -160,7 +160,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(file : java.io.File) : Void;
+	@:require(java5) @:overload @:public public function new(file : java.io.File) : Void;
 	
 	/**
 	* Creates a new print stream, without automatic line flushing, with the
@@ -195,7 +195,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(file : java.io.File, csn : String) : Void;
+	@:require(java5) @:overload @:public public function new(file : java.io.File, csn : String) : Void;
 	
 	/**
 	* Flushes the stream.  This is done by writing any buffered output bytes to
@@ -203,7 +203,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @see        java.io.OutputStream#flush()
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Closes the stream.  This is done by flushing the stream and then closing
@@ -211,7 +211,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @see        java.io.OutputStream#close()
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Flushes the stream and checks its error state. The internal error state
@@ -231,7 +231,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*         <code>InterruptedIOException</code>, or the
 	*         <code>setError</code> method has been invoked
 	*/
-	@:overload public function checkError() : Bool;
+	@:overload @:public public function checkError() : Bool;
 	
 	/**
 	* Sets the error state of the stream to <code>true</code>.
@@ -242,7 +242,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function setError() : Void;
+	@:require(java1) @:overload @:protected private function setError() : Void;
 	
 	/**
 	* Clears the internal error state of this stream.
@@ -253,7 +253,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function clearError() : Void;
+	@:require(java6) @:overload @:protected private function clearError() : Void;
 	
 	/**
 	* Writes the specified byte to this stream.  If the byte is a newline and
@@ -269,7 +269,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @see #print(char)
 	* @see #println(char)
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array starting at
@@ -285,7 +285,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @param  off   Offset from which to start taking bytes
 	* @param  len   Number of bytes to write
 	*/
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Prints a boolean value.  The string produced by <code>{@link
@@ -296,7 +296,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param      b   The <code>boolean</code> to be printed
 	*/
-	@:overload public function print(b : Bool) : Void;
+	@:overload @:public public function print(b : Bool) : Void;
 	
 	/**
 	* Prints a character.  The character is translated into one or more bytes
@@ -306,7 +306,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param      c   The <code>char</code> to be printed
 	*/
-	@:overload public function print(c : java.StdTypes.Char16) : Void;
+	@:overload @:public public function print(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Prints an integer.  The string produced by <code>{@link
@@ -318,7 +318,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @param      i   The <code>int</code> to be printed
 	* @see        java.lang.Integer#toString(int)
 	*/
-	@:overload public function print(i : Int) : Void;
+	@:overload @:public public function print(i : Int) : Void;
 	
 	/**
 	* Prints a long integer.  The string produced by <code>{@link
@@ -330,7 +330,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @param      l   The <code>long</code> to be printed
 	* @see        java.lang.Long#toString(long)
 	*/
-	@:overload public function print(l : haxe.Int64) : Void;
+	@:overload @:public public function print(l : haxe.Int64) : Void;
 	
 	/**
 	* Prints a floating-point number.  The string produced by <code>{@link
@@ -342,7 +342,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @param      f   The <code>float</code> to be printed
 	* @see        java.lang.Float#toString(float)
 	*/
-	@:overload public function print(f : Single) : Void;
+	@:overload @:public public function print(f : Single) : Void;
 	
 	/**
 	* Prints a double-precision floating-point number.  The string produced by
@@ -354,7 +354,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @param      d   The <code>double</code> to be printed
 	* @see        java.lang.Double#toString(double)
 	*/
-	@:overload public function print(d : Float) : Void;
+	@:overload @:public public function print(d : Float) : Void;
 	
 	/**
 	* Prints an array of characters.  The characters are converted into bytes
@@ -366,7 +366,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @throws  NullPointerException  If <code>s</code> is <code>null</code>
 	*/
-	@:overload public function print(s : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function print(s : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Prints a string.  If the argument is <code>null</code> then the string
@@ -377,7 +377,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param      s   The <code>String</code> to be printed
 	*/
-	@:overload public function print(s : String) : Void;
+	@:overload @:public public function print(s : String) : Void;
 	
 	/**
 	* Prints an object.  The string produced by the <code>{@link
@@ -389,7 +389,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* @param      obj   The <code>Object</code> to be printed
 	* @see        java.lang.Object#toString()
 	*/
-	@:overload public function print(obj : Dynamic) : Void;
+	@:overload @:public public function print(obj : Dynamic) : Void;
 	
 	/**
 	* Terminates the current line by writing the line separator string.  The
@@ -397,7 +397,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	* <code>line.separator</code>, and is not necessarily a single newline
 	* character (<code>'\n'</code>).
 	*/
-	@:overload public function println() : Void;
+	@:overload @:public public function println() : Void;
 	
 	/**
 	* Prints a boolean and then terminate the line.  This method behaves as
@@ -406,7 +406,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>boolean</code> to be printed
 	*/
-	@:overload public function println(x : Bool) : Void;
+	@:overload @:public public function println(x : Bool) : Void;
 	
 	/**
 	* Prints a character and then terminate the line.  This method behaves as
@@ -415,7 +415,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>char</code> to be printed.
 	*/
-	@:overload public function println(x : java.StdTypes.Char16) : Void;
+	@:overload @:public public function println(x : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Prints an integer and then terminate the line.  This method behaves as
@@ -424,7 +424,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>int</code> to be printed.
 	*/
-	@:overload public function println(x : Int) : Void;
+	@:overload @:public public function println(x : Int) : Void;
 	
 	/**
 	* Prints a long and then terminate the line.  This method behaves as
@@ -433,7 +433,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  a The <code>long</code> to be printed.
 	*/
-	@:overload public function println(x : haxe.Int64) : Void;
+	@:overload @:public public function println(x : haxe.Int64) : Void;
 	
 	/**
 	* Prints a float and then terminate the line.  This method behaves as
@@ -442,7 +442,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>float</code> to be printed.
 	*/
-	@:overload public function println(x : Single) : Void;
+	@:overload @:public public function println(x : Single) : Void;
 	
 	/**
 	* Prints a double and then terminate the line.  This method behaves as
@@ -451,7 +451,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>double</code> to be printed.
 	*/
-	@:overload public function println(x : Float) : Void;
+	@:overload @:public public function println(x : Float) : Void;
 	
 	/**
 	* Prints an array of characters and then terminate the line.  This method
@@ -460,7 +460,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  an array of chars to print.
 	*/
-	@:overload public function println(x : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function println(x : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Prints a String and then terminate the line.  This method behaves as
@@ -469,7 +469,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>String</code> to be printed.
 	*/
-	@:overload public function println(x : String) : Void;
+	@:overload @:public public function println(x : String) : Void;
 	
 	/**
 	* Prints an Object and then terminate the line.  This method calls
@@ -480,7 +480,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @param x  The <code>Object</code> to be printed.
 	*/
-	@:overload public function println(x : Dynamic) : Void;
+	@:overload @:public public function println(x : Dynamic) : Void;
 	
 	/**
 	* A convenience method to write a formatted string to this output stream
@@ -523,7 +523,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* A convenience method to write a formatted string to this output stream
@@ -571,7 +571,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* Writes a formatted string to this output stream using the specified
@@ -612,7 +612,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function format(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* Writes a formatted string to this output stream using the specified
@@ -654,7 +654,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* Appends the specified character sequence to this output stream.
@@ -680,7 +680,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function append(csq : java.lang.CharSequence) : java.io.PrintStream;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this output
@@ -715,7 +715,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.PrintStream;
 	
 	/**
 	* Appends the specified character to this output stream.
@@ -733,7 +733,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : java.io.PrintStream;
+	@:require(java5) @:overload @:public public function append(c : java.StdTypes.Char16) : java.io.PrintStream;
 	
 	
 }

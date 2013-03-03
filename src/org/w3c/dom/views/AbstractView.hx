@@ -49,7 +49,7 @@ extern interface AbstractView
 	* The source <code>DocumentView</code> of which this is an
 	* <code>AbstractView</code>.
 	*/
-	@:overload public function getDocument() : org.w3c.dom.views.DocumentView;
+	@:overload @:public public function getDocument() : org.w3c.dom.views.DocumentView;
 	
 	
 }

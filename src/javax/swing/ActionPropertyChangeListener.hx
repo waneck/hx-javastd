@@ -25,30 +25,30 @@ package javax.swing;
 */
 @:internal extern class ActionPropertyChangeListener<T> implements java.beans.PropertyChangeListener implements java.io.Serializable
 {
-	@:overload public function new(c : T, a : javax.swing.Action) : Void;
+	@:overload @:public public function new(c : T, a : javax.swing.Action) : Void;
 	
 	/**
 	* PropertyChangeListener method.  If the target has been gc'ed this
 	* will remove the <code>PropertyChangeListener</code> from the Action,
 	* otherwise this will invoke actionPropertyChanged.
 	*/
-	@:overload @:final public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public @:final public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* Invoked when a property changes on the Action and the target
 	* still exists.
 	*/
-	@:overload @:abstract private function actionPropertyChanged(target : T, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:protected @:abstract private function actionPropertyChanged(target : T, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function getTarget() : T;
+	@:overload @:public public function getTarget() : T;
 	
-	@:overload public function getAction() : javax.swing.Action;
+	@:overload @:public public function getAction() : javax.swing.Action;
 	
 	
 }
 @:native('javax$swing$ActionPropertyChangeListener$OwnedWeakReference') @:internal extern class ActionPropertyChangeListener_OwnedWeakReference<U> extends java.lang.ref.WeakReference<U>
 {
-	@:overload public function getOwner() : javax.swing.ActionPropertyChangeListener<Dynamic>;
+	@:overload @:public public function getOwner() : javax.swing.ActionPropertyChangeListener<Dynamic>;
 	
 	
 }

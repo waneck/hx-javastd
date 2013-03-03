@@ -26,7 +26,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Basic consutrcor - stores element uri/prefix/localname
 	*/
-	@:overload public function new(uri : String, prefix : String, local : String, isExtension : Bool) : Void;
+	@:overload @:public public function new(uri : String, prefix : String, local : String, isExtension : Bool) : Void;
 	
 	/**
 	* There are different categories of unsupported elements (believe it
@@ -37,27 +37,27 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* should describe the unsupported element itself and what category
 	* the element belongs in.
 	*/
-	@:overload public function setErrorMessage(message : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg) : Void;
+	@:overload @:public public function setErrorMessage(message : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg) : Void;
 	
 	/**
 	* Displays the contents of this element
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Find any fallback in the descendant nodes; then activate & parse it
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Run type check on the fallback element (if any).
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate the fallback element (if any).
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

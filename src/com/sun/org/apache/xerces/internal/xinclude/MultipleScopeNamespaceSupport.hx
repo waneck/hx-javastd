@@ -33,62 +33,62 @@ extern class MultipleScopeNamespaceSupport extends com.sun.org.apache.xerces.int
 	* @author Peter McCracken, IBM
 	*
 	*/
-	private var fScope : java.NativeArray<Int>;
+	@:protected private var fScope : java.NativeArray<Int>;
 	
-	private var fCurrentScope : Int;
+	@:protected private var fCurrentScope : Int;
 	
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @param context
 	*/
-	@:overload public function new(context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public public function new(context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getAllPrefixes()
 	*/
-	@:overload override public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getScopeForContext(context : Int) : Int;
+	@:overload @:public public function getScopeForContext(context : Int) : Int;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getPrefix(java.lang.String)
 	*/
-	@:overload override public function getPrefix(uri : String) : String;
+	@:overload @:public override public function getPrefix(uri : String) : String;
 	
 	/* (non-Javadoc)
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getURI(java.lang.String)
 	*/
-	@:overload override public function getURI(prefix : String) : String;
+	@:overload @:public override public function getURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(uri : String, context : Int) : String;
+	@:overload @:public public function getPrefix(uri : String, context : Int) : String;
 	
-	@:overload public function getURI(prefix : String, context : Int) : String;
+	@:overload @:public public function getURI(prefix : String, context : Int) : String;
 	
-	@:overload public function getPrefix(uri : String, start : Int, end : Int) : String;
+	@:overload @:public public function getPrefix(uri : String, start : Int, end : Int) : String;
 	
-	@:overload public function getURI(prefix : String, start : Int, end : Int) : String;
+	@:overload @:public public function getURI(prefix : String, start : Int, end : Int) : String;
 	
 	/**
 	* Only resets the current scope -- all namespaces defined in lower scopes
 	* remain valid after a call to reset.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Begins a new scope.  None of the previous namespace bindings will be used,
 	* until the new scope is popped with popScope()
 	*/
-	@:overload public function pushScope() : Void;
+	@:overload @:public public function pushScope() : Void;
 	
 	/**
 	* Pops the current scope.  The namespace bindings from the new current scope
 	* are then used for searching for namespaces and prefixes.
 	*/
-	@:overload public function popScope() : Void;
+	@:overload @:public public function popScope() : Void;
 	
 	
 }

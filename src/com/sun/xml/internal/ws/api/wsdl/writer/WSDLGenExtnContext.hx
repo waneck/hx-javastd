@@ -36,17 +36,17 @@ extern class WSDLGenExtnContext
 	*                  If this extension is used at the runtime to generate WSDL, you get a {@link Container}
 	*                  that was given to {@link com.sun.xml.internal.ws.api.server.WSEndpoint#create}.
 	*/
-	@:overload public function new(root : com.sun.xml.internal.txw2.TypedXmlWriter, model : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, container : com.sun.xml.internal.ws.api.server.Container, endpointClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(root : com.sun.xml.internal.txw2.TypedXmlWriter, model : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding, container : com.sun.xml.internal.ws.api.server.Container, endpointClass : Class<Dynamic>) : Void;
 	
-	@:overload public function getRoot() : com.sun.xml.internal.txw2.TypedXmlWriter;
+	@:overload @:public public function getRoot() : com.sun.xml.internal.txw2.TypedXmlWriter;
 	
-	@:overload public function getModel() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public public function getModel() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
-	@:overload public function getBinding() : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public public function getBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	
-	@:overload public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
-	@:overload public function getEndpointClass() : Class<Dynamic>;
+	@:overload @:public public function getEndpointClass() : Class<Dynamic>;
 	
 	
 }

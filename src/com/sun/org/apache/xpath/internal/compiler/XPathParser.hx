@@ -28,21 +28,21 @@ extern class XPathParser
 	* XPathParserImpl, and may be renamed in the future.
 	* @xsl.usage general
 	*/
-	public static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
+	@:static @:public @:final public static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
 	
 	/**
 	* Results from checking FilterExpr syntax
 	*/
-	private static var FILTER_MATCH_FAILED(default, null) : Int;
+	@:protected @:final @:static private static var FILTER_MATCH_FAILED(default, null) : Int;
 	
-	private static var FILTER_MATCH_PRIMARY(default, null) : Int;
+	@:protected @:final @:static private static var FILTER_MATCH_PRIMARY(default, null) : Int;
 	
-	private static var FILTER_MATCH_PREDICATES(default, null) : Int;
+	@:protected @:final @:static private static var FILTER_MATCH_PREDICATES(default, null) : Int;
 	
 	/**
 	* The parser constructor.
 	*/
-	@:overload public function new(errorListener : javax.xml.transform.ErrorListener, sourceLocator : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function new(errorListener : javax.xml.transform.ErrorListener, sourceLocator : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Given an string, init an XPath object for selections,
@@ -56,7 +56,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function initXPath(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, expression : String, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public public function initXPath(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, expression : String, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Given an string, init an XPath object for pattern matches,
@@ -69,7 +69,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function initMatchPattern(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, expression : String, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public public function initMatchPattern(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, expression : String, namespaceContext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Allow an application to register an error event handler, where syntax
@@ -79,14 +79,14 @@ extern class XPathParser
 	* @param handler Reference to error listener where syntax errors will be
 	*                sent.
 	*/
-	@:overload public function setErrorHandler(handler : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public public function setErrorHandler(handler : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* Return the current error listener.
 	*
 	* @return The error listener, which should not normally be null, but may be.
 	*/
-	@:overload public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	/**
 	* Dump the remaining token queue.
@@ -95,7 +95,7 @@ extern class XPathParser
 	* @return A dump of the remaining token queue, which may be appended to
 	*         an error message.
 	*/
-	@:overload private function dumpRemainingTokenQueue() : String;
+	@:overload @:protected private function dumpRemainingTokenQueue() : String;
 	
 	/**
 	*
@@ -105,7 +105,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Expr() : Void;
+	@:overload @:protected private function Expr() : Void;
 	
 	/**
 	*
@@ -116,7 +116,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function OrExpr() : Void;
+	@:overload @:protected private function OrExpr() : Void;
 	
 	/**
 	*
@@ -127,7 +127,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function AndExpr() : Void;
+	@:overload @:protected private function AndExpr() : Void;
 	
 	/**
 	*
@@ -144,7 +144,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function EqualityExpr(addPos : Int) : Int;
+	@:overload @:protected private function EqualityExpr(addPos : Int) : Int;
 	
 	/**
 	* .
@@ -164,7 +164,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function RelationalExpr(addPos : Int) : Int;
+	@:overload @:protected private function RelationalExpr(addPos : Int) : Int;
 	
 	/**
 	* This has to handle construction of the operations so that they are evaluated
@@ -182,7 +182,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function AdditiveExpr(addPos : Int) : Int;
+	@:overload @:protected private function AdditiveExpr(addPos : Int) : Int;
 	
 	/**
 	* This has to handle construction of the operations so that they are evaluated
@@ -201,7 +201,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function MultiplicativeExpr(addPos : Int) : Int;
+	@:overload @:protected private function MultiplicativeExpr(addPos : Int) : Int;
 	
 	/**
 	*
@@ -211,7 +211,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function UnaryExpr() : Void;
+	@:overload @:protected private function UnaryExpr() : Void;
 	
 	/**
 	*
@@ -220,7 +220,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function StringExpr() : Void;
+	@:overload @:protected private function StringExpr() : Void;
 	
 	/**
 	*
@@ -230,7 +230,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function BooleanExpr() : Void;
+	@:overload @:protected private function BooleanExpr() : Void;
 	
 	/**
 	*
@@ -240,7 +240,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function NumberExpr() : Void;
+	@:overload @:protected private function NumberExpr() : Void;
 	
 	/**
 	* The context of the right hand side expressions is the context of the
@@ -255,7 +255,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function UnionExpr() : Void;
+	@:overload @:protected private function UnionExpr() : Void;
 	
 	/**
 	* PathExpr  ::=  LocationPath
@@ -268,7 +268,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function PathExpr() : Void;
+	@:overload @:protected private function PathExpr() : Void;
 	
 	/**
 	*
@@ -287,7 +287,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function FilterExpr() : Int;
+	@:overload @:protected private function FilterExpr() : Int;
 	
 	/**
 	*
@@ -302,7 +302,7 @@ extern class XPathParser
 	* @throws javax.xml.transform.TransformerException
 	*
 	*/
-	@:overload private function PrimaryExpr() : Bool;
+	@:overload @:protected private function PrimaryExpr() : Bool;
 	
 	/**
 	*
@@ -311,7 +311,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Argument() : Void;
+	@:overload @:protected private function Argument() : Void;
 	
 	/**
 	*
@@ -321,7 +321,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function FunctionCall() : Bool;
+	@:overload @:protected private function FunctionCall() : Bool;
 	
 	/**
 	*
@@ -331,7 +331,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function LocationPath() : Void;
+	@:overload @:protected private function LocationPath() : Void;
 	
 	/**
 	*
@@ -343,7 +343,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function RelativeLocationPath() : Bool;
+	@:overload @:protected private function RelativeLocationPath() : Bool;
 	
 	/**
 	*
@@ -354,7 +354,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Step() : Bool;
+	@:overload @:protected private function Step() : Bool;
 	
 	/**
 	*
@@ -363,7 +363,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Basis() : Void;
+	@:overload @:protected private function Basis() : Void;
 	
 	/**
 	*
@@ -374,7 +374,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function AxisName() : Int;
+	@:overload @:protected private function AxisName() : Int;
 	
 	/**
 	*
@@ -386,7 +386,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function NodeTest(axesType : Int) : Void;
+	@:overload @:protected private function NodeTest(axesType : Int) : Void;
 	
 	/**
 	*
@@ -395,7 +395,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Predicate() : Void;
+	@:overload @:protected private function Predicate() : Void;
 	
 	/**
 	*
@@ -404,7 +404,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function PredicateExpr() : Void;
+	@:overload @:protected private function PredicateExpr() : Void;
 	
 	/**
 	* QName ::=  (Prefix ':')? LocalPart
@@ -413,13 +413,13 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function QName() : Void;
+	@:overload @:protected private function QName() : Void;
 	
 	/**
 	* NCName ::=  (Letter | '_') (NCNameChar)
 	* NCNameChar ::=  Letter | Digit | '.' | '-' | '_' | CombiningChar | Extender
 	*/
-	@:overload private function NCName() : Void;
+	@:overload @:protected private function NCName() : Void;
 	
 	/**
 	* The value of the Literal is the sequence of characters inside
@@ -431,7 +431,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Literal() : Void;
+	@:overload @:protected private function Literal() : Void;
 	
 	/**
 	*
@@ -440,7 +440,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Number() : Void;
+	@:overload @:protected private function Number() : Void;
 	
 	/**
 	*
@@ -450,7 +450,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function Pattern() : Void;
+	@:overload @:protected private function Pattern() : Void;
 	
 	/**
 	*
@@ -462,7 +462,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function LocationPathPattern() : Void;
+	@:overload @:protected private function LocationPathPattern() : Void;
 	
 	/**
 	*
@@ -473,7 +473,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function IdKeyPattern() : Void;
+	@:overload @:protected private function IdKeyPattern() : Void;
 	
 	/**
 	*
@@ -483,7 +483,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function RelativePathPattern() : Void;
+	@:overload @:protected private function RelativePathPattern() : Void;
 	
 	/**
 	*
@@ -496,7 +496,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function StepPattern(isLeadingSlashPermitted : Bool) : Bool;
+	@:overload @:protected private function StepPattern(isLeadingSlashPermitted : Bool) : Bool;
 	
 	/**
 	*
@@ -509,7 +509,7 @@ extern class XPathParser
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function AbbreviatedNodeTestStep(isLeadingSlashPermitted : Bool) : Bool;
+	@:overload @:protected private function AbbreviatedNodeTestStep(isLeadingSlashPermitted : Bool) : Bool;
 	
 	
 }

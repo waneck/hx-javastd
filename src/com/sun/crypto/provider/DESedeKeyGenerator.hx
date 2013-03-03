@@ -28,14 +28,14 @@ extern class DESedeKeyGenerator extends javax.crypto.KeyGeneratorSpi
 	/**
 	* Empty constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Initializes this key generator.
 	*
 	* @param random the source of randomness for this generator
 	*/
-	@:overload private function engineInit(random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key generator with the specified parameter
@@ -47,7 +47,7 @@ extern class DESedeKeyGenerator extends javax.crypto.KeyGeneratorSpi
 	* @exception InvalidAlgorithmParameterException if <code>params</code> is
 	* inappropriate for this key generator
 	*/
-	@:overload private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key generator for a certain keysize, using the given
@@ -60,14 +60,14 @@ extern class DESedeKeyGenerator extends javax.crypto.KeyGeneratorSpi
 	* intermediate keys.
 	* @param random the source of randomness for this key generator
 	*/
-	@:overload private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates the Triple DES key.
 	*
 	* @return the new Triple DES key
 	*/
-	@:overload private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }

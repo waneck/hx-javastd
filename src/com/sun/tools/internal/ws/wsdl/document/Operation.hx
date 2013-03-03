@@ -30,69 +30,69 @@ package com.sun.tools.internal.ws.wsdl.document;
 */
 extern class Operation extends com.sun.tools.internal.ws.wsdl.framework.Entity implements com.sun.tools.internal.ws.api.wsdl.TWSDLOperation
 {
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function getUniqueKey() : String;
+	@:overload @:public public function getUniqueKey() : String;
 	
-	@:overload public function getStyle() : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
+	@:overload @:public public function getStyle() : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
 	
-	@:overload public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.OperationStyle) : Void;
+	@:overload @:public public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.OperationStyle) : Void;
 	
-	@:overload public function getInput() : com.sun.tools.internal.ws.wsdl.document.Input;
+	@:overload @:public public function getInput() : com.sun.tools.internal.ws.wsdl.document.Input;
 	
-	@:overload public function setInput(i : com.sun.tools.internal.ws.wsdl.document.Input) : Void;
+	@:overload @:public public function setInput(i : com.sun.tools.internal.ws.wsdl.document.Input) : Void;
 	
-	@:overload public function getOutput() : com.sun.tools.internal.ws.wsdl.document.Output;
+	@:overload @:public public function getOutput() : com.sun.tools.internal.ws.wsdl.document.Output;
 	
-	@:overload public function setOutput(o : com.sun.tools.internal.ws.wsdl.document.Output) : Void;
+	@:overload @:public public function setOutput(o : com.sun.tools.internal.ws.wsdl.document.Output) : Void;
 	
-	@:overload public function addFault(f : com.sun.tools.internal.ws.wsdl.document.Fault) : Void;
+	@:overload @:public public function addFault(f : com.sun.tools.internal.ws.wsdl.document.Fault) : Void;
 	
-	@:overload public function faults() : java.lang.Iterable<com.sun.tools.internal.ws.wsdl.document.Fault>;
+	@:overload @:public public function faults() : java.lang.Iterable<com.sun.tools.internal.ws.wsdl.document.Fault>;
 	
-	@:overload public function getParameterOrder() : String;
+	@:overload @:public public function getParameterOrder() : String;
 	
-	@:overload public function setParameterOrder(s : String) : Void;
+	@:overload @:public public function setParameterOrder(s : String) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
+	@:overload @:public public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
-	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
+	@:overload @:public public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
-	@:overload public function getNameValue() : String;
+	@:overload @:public public function getNameValue() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getWSDLElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLElementName() : javax.xml.namespace.QName;
 	
 	/* (non-Javadoc)
 	* @see TWSDLExtensible#addExtension(ExtensionImpl)
 	*/
-	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
 	/* (non-Javadoc)
 	* @see TWSDLExtensible#extensions()
 	*/
-	@:overload public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
+	@:overload @:public public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
 	
-	@:overload public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
+	@:overload @:public public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
 	
-	@:overload public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
+	@:overload @:public public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
 	
-	@:overload public function getFaults() : java.util.Map<String, com.sun.codemodel.internal.JClass>;
+	@:overload @:public public function getFaults() : java.util.Map<String, com.sun.codemodel.internal.JClass>;
 	
-	@:overload public function putFault(faultName : String, exception : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:public public function putFault(faultName : String, exception : com.sun.codemodel.internal.JClass) : Void;
 	
 	
 }

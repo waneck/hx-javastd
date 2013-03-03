@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.handler;
 */
 @:internal extern class SOAPMessageContextImpl extends com.sun.xml.internal.ws.handler.MessageUpdatableContext implements javax.xml.ws.handler.soap.SOAPMessageContext
 {
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, packet : com.sun.xml.internal.ws.api.message.Packet, roles : java.util.Set<String>) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, packet : com.sun.xml.internal.ws.api.message.Packet, roles : java.util.Set<String>) : Void;
 	
-	@:overload public function getMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public public function getMessage() : javax.xml.soap.SOAPMessage;
 	
-	@:overload public function setMessage(soapMsg : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function setMessage(soapMsg : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload private function updateMessage() : Void;
+	@:overload @:protected private function updateMessage() : Void;
 	
-	@:overload public function getHeaders(header : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, allRoles : Bool) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getHeaders(header : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, allRoles : Bool) : java.NativeArray<Dynamic>;
 	
-	@:overload public function getRoles() : java.util.Set<String>;
+	@:overload @:public public function getRoles() : java.util.Set<String>;
 	
 	
 }

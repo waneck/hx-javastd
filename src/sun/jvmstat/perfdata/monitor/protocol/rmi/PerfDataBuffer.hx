@@ -35,7 +35,7 @@ extern class PerfDataBuffer extends sun.jvmstat.perfdata.monitor.AbstractPerfDat
 	*
 	* @throws MonitorException
 	*/
-	@:overload public function new(rvm : sun.jvmstat.monitor.remote.RemoteVm, lvmid : Int) : Void;
+	@:overload @:public public function new(rvm : sun.jvmstat.monitor.remote.RemoteVm, lvmid : Int) : Void;
 	
 	/**
 	* Get a copy of the remote instrumentation buffer.
@@ -48,7 +48,7 @@ extern class PerfDataBuffer extends sun.jvmstat.perfdata.monitor.AbstractPerfDat
 	* @throws RemoteException Thrown on any communications errors with
 	*                         the remote system.
 	*/
-	@:overload public function sample(buffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function sample(buffer : java.nio.ByteBuffer) : Void;
 	
 	
 }

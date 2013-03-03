@@ -31,23 +31,23 @@ package com.sun.tools.internal.xjc.util;
 extern class DOMUtils
 {
 	/** Gets the fist child of the given name, or null. */
-	@:overload public static function getFirstChildElement(parent : org.w3c.dom.Element, nsUri : String, localPart : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getFirstChildElement(parent : org.w3c.dom.Element, nsUri : String, localPart : String) : org.w3c.dom.Element;
 	
 	/** Gets the child elements of the given name. */
-	@:overload public static function getChildElements(parent : org.w3c.dom.Element, nsUri : String, localPart : String) : java.NativeArray<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function getChildElements(parent : org.w3c.dom.Element, nsUri : String, localPart : String) : java.NativeArray<org.w3c.dom.Element>;
 	
 	/** Gets all the child elements. */
-	@:overload public static function getChildElements(parent : org.w3c.dom.Element) : java.NativeArray<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function getChildElements(parent : org.w3c.dom.Element) : java.NativeArray<org.w3c.dom.Element>;
 	
-	@:overload public static function getElementText(element : org.w3c.dom.Element) : String;
+	@:overload @:public @:static public static function getElementText(element : org.w3c.dom.Element) : String;
 	
-	@:overload public static function getElement(parent : org.w3c.dom.Document, name : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getElement(parent : org.w3c.dom.Document, name : String) : org.w3c.dom.Element;
 	
-	@:overload public static function getElement(parent : org.w3c.dom.Document, qname : javax.xml.namespace.QName) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getElement(parent : org.w3c.dom.Document, qname : javax.xml.namespace.QName) : org.w3c.dom.Element;
 	
-	@:overload public static function getElement(parent : org.w3c.dom.Document, namespaceURI : String, localName : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getElement(parent : org.w3c.dom.Document, namespaceURI : String, localName : String) : org.w3c.dom.Element;
 	
-	@:overload public static function getElements(children : org.w3c.dom.NodeList) : java.NativeArray<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function getElements(children : org.w3c.dom.NodeList) : java.NativeArray<org.w3c.dom.Element>;
 	
 	
 }

@@ -31,105 +31,105 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function new(c : javax.swing.JSlider) : Void;
+	@:overload @:protected private function new(c : javax.swing.JSlider) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected override private function installDefaults(slider : javax.swing.JSlider) : Void;
 	
 	/**
 	* Uninstalls default setting. This method is called when a
 	* {@code LookAndFeel} is uninstalled.
 	*/
-	@:overload override private function uninstallDefaults(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected override private function uninstallDefaults(slider : javax.swing.JSlider) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected override private function installListeners(slider : javax.swing.JSlider) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected override private function uninstallListeners(slider : javax.swing.JSlider) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createTrackListener(s : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
+	@:overload @:protected override private function createTrackListener(s : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function calculateGeometry() : Void;
+	@:overload @:protected override private function calculateGeometry() : Void;
 	
 	/**
 	* Lays out the slider.
 	*/
-	@:overload private function layout() : Void;
+	@:overload @:protected private function layout() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function calculateThumbLocation() : Void;
+	@:overload @:protected override private function calculateThumbLocation() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function setThumbLocation(x : Int, y : Int) : Void;
+	@:overload @:public override public function setThumbLocation(x : Int, y : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function xPositionForValue(value : Int) : Int;
+	@:overload @:protected override private function xPositionForValue(value : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function yPositionForValue(value : Int, trackY : Int, trackHeight : Int) : Int;
+	@:overload @:protected override private function yPositionForValue(value : Int, trackY : Int, trackHeight : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function valueForYPosition(yPos : Int) : Int;
+	@:overload @:public override public function valueForYPosition(yPos : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function valueForXPosition(xPos : Int) : Int;
+	@:overload @:public override public function valueForXPosition(xPos : Int) : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getThumbSize() : java.awt.Dimension;
+	@:overload @:protected override private function getThumbSize() : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function recalculateIfInsetsChanged() : Void;
+	@:overload @:protected override private function recalculateIfInsetsChanged() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -143,7 +143,7 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -154,7 +154,7 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -163,12 +163,12 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the slider thumb.
@@ -177,7 +177,7 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	* @param g {@code Graphics} object used for painting
 	* @param thumbBounds bounding box for the thumb
 	*/
-	@:overload private function paintThumb(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, thumbBounds : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintThumb(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, thumbBounds : java.awt.Rectangle) : Void;
 	
 	/**
 	* Paints the slider track.
@@ -186,12 +186,12 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	* @param g {@code Graphics} object used for painting
 	* @param trackBounds bounding box for the track
 	*/
-	@:overload private function paintTrack(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, trackBounds : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintTrack(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, trackBounds : java.awt.Rectangle) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -200,15 +200,15 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 */
 @:native('javax$swing$plaf$synth$SynthSliderUI$SynthTrackListener') @:internal extern class SynthSliderUI_SynthTrackListener extends javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener
 {
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

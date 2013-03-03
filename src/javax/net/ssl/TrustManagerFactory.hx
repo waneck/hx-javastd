@@ -38,7 +38,7 @@ extern class TrustManagerFactory
 	* Java security properties, or an implementation-specific default
 	* if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultAlgorithm() : String;
+	@:overload @:public @:final @:static public static function getDefaultAlgorithm() : String;
 	
 	/**
 	* Creates a TrustManagerFactory object.
@@ -47,7 +47,7 @@ extern class TrustManagerFactory
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(factorySpi : javax.net.ssl.TrustManagerFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(factorySpi : javax.net.ssl.TrustManagerFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the algorithm name of this <code>TrustManagerFactory</code>
@@ -60,7 +60,7 @@ extern class TrustManagerFactory
 	* @return the algorithm name of this <code>TrustManagerFactory</code>
 	*          object
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a <code>TrustManagerFactory</code> object that acts as a
@@ -90,7 +90,7 @@ extern class TrustManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.net.ssl.TrustManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns a <code>TrustManagerFactory</code> object that acts as a
@@ -126,7 +126,7 @@ extern class TrustManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.net.ssl.TrustManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns a <code>TrustManagerFactory</code> object that acts as a
@@ -156,14 +156,14 @@ extern class TrustManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.net.ssl.TrustManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns the provider of this <code>TrustManagerFactory</code> object.
 	*
 	* @return the provider of this <code>TrustManagerFactory</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this factory with a source of certificate
@@ -178,7 +178,7 @@ extern class TrustManagerFactory
 	* @param ks the key store, or null
 	* @throws KeyStoreException if this operation fails
 	*/
-	@:overload @:final public function init(ks : java.security.KeyStore) : Void;
+	@:overload @:public @:final public function init(ks : java.security.KeyStore) : Void;
 	
 	/**
 	* Initializes this factory with a source of provider-specific
@@ -197,7 +197,7 @@ extern class TrustManagerFactory
 	* @throws InvalidAlgorithmParameterException if an error is
 	*          encountered
 	*/
-	@:overload @:final public function init(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:public @:final public function init(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	/**
 	* Returns one trust manager for each type of trust material.
@@ -206,7 +206,7 @@ extern class TrustManagerFactory
 	*
 	* @return the trust managers
 	*/
-	@:overload @:final public function getTrustManagers() : java.NativeArray<javax.net.ssl.TrustManager>;
+	@:overload @:public @:final public function getTrustManagers() : java.NativeArray<javax.net.ssl.TrustManager>;
 	
 	
 }

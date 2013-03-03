@@ -31,13 +31,13 @@ extern class InvalidAttributeIdentifierException extends javax.naming.NamingExce
 	* @param   explanation     Possibly null string containing additional detail about this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of InvalidAttributeIdentifierException.
 	* All fields are set to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

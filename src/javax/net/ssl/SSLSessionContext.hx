@@ -34,7 +34,7 @@ extern interface SSLSessionContext
 	*
 	* @throws NullPointerException if <code>sessionId</code> is null.
 	*/
-	@:overload public function getSession(sessionId : java.NativeArray<java.StdTypes.Int8>) : javax.net.ssl.SSLSession;
+	@:overload @:public public function getSession(sessionId : java.NativeArray<java.StdTypes.Int8>) : javax.net.ssl.SSLSession;
 	
 	/**
 	* Returns an Enumeration of all session id's grouped under this
@@ -42,7 +42,7 @@ extern interface SSLSessionContext
 	*
 	* @return an enumeration of all the Session id's
 	*/
-	@:overload public function getIds() : java.util.Enumeration<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function getIds() : java.util.Enumeration<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/**
 	* Sets the timeout limit for <code>SSLSession</code> objects grouped
@@ -62,7 +62,7 @@ extern interface SSLSessionContext
 	* @exception IllegalArgumentException if the timeout specified is < 0.
 	* @see #getSessionTimeout
 	*/
-	@:overload public function setSessionTimeout(seconds : Int) : Void;
+	@:overload @:public public function setSessionTimeout(seconds : Int) : Void;
 	
 	/**
 	* Returns the timeout limit of <code>SSLSession</code> objects grouped
@@ -81,7 +81,7 @@ extern interface SSLSessionContext
 	* limit.
 	* @see #setSessionTimeout
 	*/
-	@:overload public function getSessionTimeout() : Int;
+	@:overload @:public public function getSessionTimeout() : Int;
 	
 	/**
 	* Sets the size of the cache used for storing
@@ -93,7 +93,7 @@ extern interface SSLSessionContext
 	* @exception IllegalArgumentException if the specified size is < 0.
 	* @see #getSessionCacheSize
 	*/
-	@:overload public function setSessionCacheSize(size : Int) : Void;
+	@:overload @:public public function setSessionCacheSize(size : Int) : Void;
 	
 	/**
 	* Returns the size of the cache used for storing
@@ -103,7 +103,7 @@ extern interface SSLSessionContext
 	* @return size of the session cache; zero means there is no size limit.
 	* @see #setSessionCacheSize
 	*/
-	@:overload public function getSessionCacheSize() : Int;
+	@:overload @:public public function getSessionCacheSize() : Int;
 	
 	
 }

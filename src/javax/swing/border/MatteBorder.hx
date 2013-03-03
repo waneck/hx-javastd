@@ -40,9 +40,9 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	*
 	* @author Amy Fowler
 	*/
-	private var color : java.awt.Color;
+	@:protected private var color : java.awt.Color;
 	
-	private var tileIcon : javax.swing.Icon;
+	@:protected private var tileIcon : javax.swing.Icon;
 	
 	/**
 	* Creates a matte border with the specified insets and color.
@@ -52,7 +52,7 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	* @param right the right inset of the border
 	* @param matteColor the color rendered for the border
 	*/
-	@:overload public function new(top : Int, left : Int, bottom : Int, right : Int, matteColor : java.awt.Color) : Void;
+	@:overload @:public public function new(top : Int, left : Int, bottom : Int, right : Int, matteColor : java.awt.Color) : Void;
 	
 	/**
 	* Creates a matte border with the specified insets and color.
@@ -60,7 +60,7 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	* @param matteColor the color rendered for the border
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(borderInsets : java.awt.Insets, matteColor : java.awt.Color) : Void;
+	@:require(java3) @:overload @:public public function new(borderInsets : java.awt.Insets, matteColor : java.awt.Color) : Void;
 	
 	/**
 	* Creates a matte border with the specified insets and tile icon.
@@ -70,7 +70,7 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	* @param right the right inset of the border
 	* @param tileIcon the icon to be used for tiling the border
 	*/
-	@:overload public function new(top : Int, left : Int, bottom : Int, right : Int, tileIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(top : Int, left : Int, bottom : Int, right : Int, tileIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a matte border with the specified insets and tile icon.
@@ -78,7 +78,7 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	* @param tileIcon the icon to be used for tiling the border
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(borderInsets : java.awt.Insets, tileIcon : javax.swing.Icon) : Void;
+	@:require(java3) @:overload @:public public function new(borderInsets : java.awt.Insets, tileIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a matte border with the specified tile icon.  The
@@ -88,12 +88,12 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	* the tile icon's width.
 	* @param tileIcon the icon to be used for tiling the border
 	*/
-	@:overload public function new(tileIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(tileIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Paints the matte border.
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
@@ -101,32 +101,32 @@ extern class MatteBorder extends javax.swing.border.EmptyBorder
 	* @param insets the object to be reinitialized
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:require(java3) @:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the insets of the border.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getBorderInsets() : java.awt.Insets;
+	@:require(java3) @:overload @:public override public function getBorderInsets() : java.awt.Insets;
 	
 	/**
 	* Returns the color used for tiling the border or null
 	* if a tile icon is being used.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getMatteColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getMatteColor() : java.awt.Color;
 	
 	/**
 	* Returns the icon used for tiling the border or null
 	* if a solid color is being used.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getTileIcon() : javax.swing.Icon;
+	@:require(java3) @:overload @:public public function getTileIcon() : javax.swing.Icon;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

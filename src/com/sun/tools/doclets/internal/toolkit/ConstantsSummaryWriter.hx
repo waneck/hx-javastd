@@ -39,21 +39,21 @@ package com.sun.tools.doclets.internal.toolkit;
 	/**
 	* Close the writer.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Get the header for the constant summary documentation.
 	*
 	* @return header that needs to be added to the documentation
 	*/
-	@:overload @:abstract public function getHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the header for the constant content list.
 	*
 	* @return content header that needs to be added to the documentation
 	*/
-	@:overload @:abstract public function getContentsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getContentsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the given package name link to the constant content list tree.
@@ -68,7 +68,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	*                              something more than once.
 	* @param contentListTree the content tree to which the link will be added
 	*/
-	@:overload @:abstract public function addLinkToPackageContent(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, WriteedPackageHeaders : java.util.Set<String>, contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addLinkToPackageContent(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, WriteedPackageHeaders : java.util.Set<String>, contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the content list to be added to the documentation tree.
@@ -76,14 +76,14 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param contentListTree the content that will be added to the list
 	* @return content list that will be added to the documentation tree
 	*/
-	@:overload @:abstract public function getContentsList(contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getContentsList(contentListTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the constant summaries for the document.
 	*
 	* @return constant summaries header to be added to the documentation tree
 	*/
-	@:overload @:abstract public function getConstantSummaries() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getConstantSummaries() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the given package name.
@@ -96,14 +96,14 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param summariesTree the documentation tree to which the package name will
 	*                    be written
 	*/
-	@:overload @:abstract public function addPackageName(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addPackageName(pkg : com.sun.javadoc.PackageDoc, parsedPackageName : String, summariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the class summary header for the constants summary.
 	*
 	* @return the header content for the class constants summary
 	*/
-	@:overload @:abstract public function getClassConstantHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getClassConstantHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the constant member table to the documentation tree.
@@ -113,21 +113,21 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param classConstantTree the documentation tree to which theconstant member
 	*                    table content will be added
 	*/
-	@:overload @:abstract public function addConstantMembers(cd : com.sun.javadoc.ClassDoc, fields : java.util.List<com.sun.javadoc.FieldDoc>, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addConstantMembers(cd : com.sun.javadoc.ClassDoc, fields : java.util.List<com.sun.javadoc.FieldDoc>, classConstantTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the footer for the summary documentation.
 	*
 	* @param contentTree content tree to which the footer will be added
 	*/
-	@:overload @:abstract public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the constants summary document.
 	*
 	* @param contentTree content tree which should be printed
 	*/
-	@:overload @:abstract public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

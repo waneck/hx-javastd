@@ -36,14 +36,14 @@ package java.awt.dnd;
 	/**
 	* Create a default Exception
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an Exception with its own descriptive message
 	* <P>
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

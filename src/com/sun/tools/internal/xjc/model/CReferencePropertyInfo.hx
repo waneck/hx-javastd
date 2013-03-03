@@ -25,62 +25,62 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CReferencePropertyInfo extends com.sun.tools.internal.xjc.model.CPropertyInfo implements com.sun.xml.internal.bind.v2.model.core.ReferencePropertyInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>
 {
-	@:overload public function new(name : String, collection : Bool, required : Bool, isMixed : Bool, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, dummy : Bool, content : Bool, isMixedExtended : Bool) : Void;
+	@:overload @:public public function new(name : String, collection : Bool, required : Bool, isMixed : Bool, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, dummy : Bool, content : Bool, isMixedExtended : Bool) : Void;
 	
-	@:overload public function ref() : java.util.Set<com.sun.tools.internal.xjc.model.CTypeInfo>;
+	@:overload @:public override public function ref() : java.util.Set<com.sun.tools.internal.xjc.model.CTypeInfo>;
 	
-	@:overload public function getElements() : java.util.Set<com.sun.tools.internal.xjc.model.CElement>;
+	@:overload @:public public function getElements() : java.util.Set<com.sun.tools.internal.xjc.model.CElement>;
 	
-	@:overload public function isMixed() : Bool;
+	@:overload @:public public function isMixed() : Bool;
 	
-	@:overload public function isDummy() : Bool;
+	@:overload @:public public function isDummy() : Bool;
 	
-	@:overload public function isContent() : Bool;
+	@:overload @:public public function isContent() : Bool;
 	
-	@:overload public function isMixedExtendedCust() : Bool;
+	@:overload @:public public function isMixedExtendedCust() : Bool;
 	
 	/**
 	* We'll never use a wrapper element in XJC. Always return null.
 	*/
-	@:overload public function getXmlName() : javax.xml.namespace.QName;
+	@:overload @:public public function getXmlName() : javax.xml.namespace.QName;
 	
 	/**
 	* Reference properties refer to elements, and none of the Java primitive type
 	* maps to an element. Thus a reference property is always unboxable.
 	*/
-	@:overload public function isUnboxable() : Bool;
+	@:overload @:public override public function isUnboxable() : Bool;
 	
-	@:overload public function isOptionalPrimitive() : Bool;
+	@:overload @:public override public function isOptionalPrimitive() : Bool;
 	
-	@:overload public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
 	
-	@:overload public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload @:public override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* A reference property can never be ID/IDREF because they always point to
 	* other element classes.
 	*/
-	@:overload public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public override public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload public function getWildcard() : com.sun.xml.internal.bind.v2.model.core.WildcardMode;
+	@:overload @:public public function getWildcard() : com.sun.xml.internal.bind.v2.model.core.WildcardMode;
 	
-	@:overload public function setWildcard(mode : com.sun.xml.internal.bind.v2.model.core.WildcardMode) : Void;
+	@:overload @:public public function setWildcard(mode : com.sun.xml.internal.bind.v2.model.core.WildcardMode) : Void;
 	
-	@:overload public function getDOMHandler() : com.sun.tools.internal.xjc.model.nav.NClass;
+	@:overload @:public public function getDOMHandler() : com.sun.tools.internal.xjc.model.nav.NClass;
 	
-	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public override public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload public function isCollectionNillable() : Bool;
+	@:overload @:public public function isCollectionNillable() : Bool;
 	
-	@:overload public function isCollectionRequired() : Bool;
+	@:overload @:public public function isCollectionRequired() : Bool;
 	
-	@:overload public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public override public function getSchemaType() : javax.xml.namespace.QName;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
+	@:overload @:public override public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
 	
 	
 }

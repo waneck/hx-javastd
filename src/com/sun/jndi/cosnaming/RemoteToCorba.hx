@@ -30,7 +30,7 @@ extern class RemoteToCorba implements javax.naming.spi.StateFactory
 	*
 	* @author Rosanna Lee
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the CORBA object for a Remote object.
@@ -48,7 +48,7 @@ extern class RemoteToCorba implements javax.naming.spi.StateFactory
 	* @exception NamingException If some other problem prevented a CORBA
 	*    object from being obtained from the Remote object.
 	*/
-	@:overload public function getStateToBind(orig : Dynamic, name : javax.naming.Name, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:overload @:public public function getStateToBind(orig : Dynamic, name : javax.naming.Name, ctx : javax.naming.Context, env : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
 	
 }

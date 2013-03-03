@@ -71,7 +71,7 @@ extern class InnerClasses extends com.sun.org.apache.bcel.internal.classfile.Att
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.InnerClasses) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.InnerClasses) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to CONSTANT_Utf8
@@ -80,7 +80,7 @@ extern class InnerClasses extends com.sun.org.apache.bcel.internal.classfile.Att
 	* @param constant_pool Array of constants
 	* @param sourcefile_index Index in constant pool to CONSTANT_Utf8
 	*/
-	@:overload public function new(name_index : Int, length : Int, inner_classes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.InnerClass>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, inner_classes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.InnerClass>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -89,7 +89,7 @@ extern class InnerClasses extends com.sun.org.apache.bcel.internal.classfile.Att
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump source file attribute to file stream in binary format.
@@ -97,27 +97,27 @@ extern class InnerClasses extends com.sun.org.apache.bcel.internal.classfile.Att
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return array of inner class "records"
 	*/
-	@:overload @:final public function getInnerClasses() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.InnerClass>;
+	@:overload @:public @:final public function getInnerClasses() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.InnerClass>;
 	
 	/**
 	* @param inner_classes.
 	*/
-	@:overload @:final public function setInnerClasses(inner_classes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.InnerClass>) : Void;
+	@:overload @:public @:final public function setInnerClasses(inner_classes : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.InnerClass>) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

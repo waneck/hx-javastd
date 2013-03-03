@@ -25,35 +25,35 @@ extern class SAXParserFactoryImpl extends javax.xml.parsers.SAXParserFactory
 	* configured factory parameters.
 	* @return javax.xml.parsers.SAXParser
 	*/
-	@:overload override public function newSAXParser() : javax.xml.parsers.SAXParser;
+	@:overload @:public override public function newSAXParser() : javax.xml.parsers.SAXParser;
 	
 	/**
 	* Sets the particular feature in the underlying implementation of
 	* org.xml.sax.XMLReader.
 	*/
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* returns the particular property requested for in the underlying
 	* implementation of org.xml.sax.XMLReader.
 	*/
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
-	@:overload override public function getSchema() : javax.xml.validation.Schema;
+	@:overload @:public override public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload override public function setSchema(grammar : javax.xml.validation.Schema) : Void;
+	@:overload @:public override public function setSchema(grammar : javax.xml.validation.Schema) : Void;
 	
-	@:overload override public function isXIncludeAware() : Bool;
+	@:overload @:public override public function isXIncludeAware() : Bool;
 	
-	@:overload override public function setXIncludeAware(state : Bool) : Void;
+	@:overload @:public override public function setXIncludeAware(state : Bool) : Void;
 	
-	@:overload override public function setValidating(validating : Bool) : Void;
+	@:overload @:public override public function setValidating(validating : Bool) : Void;
 	
-	@:overload override public function isValidating() : Bool;
+	@:overload @:public override public function isValidating() : Bool;
 	
-	@:overload override public function isNamespaceAware() : Bool;
+	@:overload @:public override public function isNamespaceAware() : Bool;
 	
-	@:overload override public function setNamespaceAware(awareness : Bool) : Void;
+	@:overload @:public override public function setNamespaceAware(awareness : Bool) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ package com.sun.beans;
 	* @return an array of types representing
 	*         the upper bound(s) of this type variable
 	*/
-	@:overload public function getUpperBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getUpperBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns an array of {@link Type Type} objects
@@ -46,7 +46,7 @@ package com.sun.beans;
 	* @return an array of types representing
 	*         the lower bound(s) of this type variable
 	*/
-	@:overload public function getLowerBounds() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getLowerBounds() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Indicates whether some other object is "equal to" this one.
@@ -58,7 +58,7 @@ package com.sun.beans;
 	*         {@code false} otherwise
 	* @see sun.reflect.generics.reflectiveObjects.WildcardTypeImpl#equals
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for the object.
@@ -68,7 +68,7 @@ package com.sun.beans;
 	* @return a hash code value for this object
 	* @see sun.reflect.generics.reflectiveObjects.WildcardTypeImpl#hashCode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of the object.
@@ -78,7 +78,7 @@ package com.sun.beans;
 	* @return a string representation of the object
 	* @see sun.reflect.generics.reflectiveObjects.WildcardTypeImpl#toString
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

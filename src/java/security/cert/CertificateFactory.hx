@@ -33,7 +33,7 @@ extern class CertificateFactory
 	* @param provider the provider.
 	* @param type the certificate type.
 	*/
-	@:overload private function new(certFacSpi : java.security.cert.CertificateFactorySpi, provider : java.security.Provider, type : String) : Void;
+	@:overload @:protected private function new(certFacSpi : java.security.cert.CertificateFactorySpi, provider : java.security.Provider, type : String) : Void;
 	
 	/**
 	* Returns a certificate factory object that implements the
@@ -62,7 +62,7 @@ extern class CertificateFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(type : String) : java.security.cert.CertificateFactory;
+	@:overload @:public @:static @:final public static function getInstance(type : String) : java.security.cert.CertificateFactory;
 	
 	/**
 	* Returns a certificate factory object for the specified
@@ -98,7 +98,7 @@ extern class CertificateFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(type : String, provider : String) : java.security.cert.CertificateFactory;
+	@:overload @:public @:static @:final public static function getInstance(type : String, provider : String) : java.security.cert.CertificateFactory;
 	
 	/**
 	* Returns a certificate factory object for the specified
@@ -129,14 +129,14 @@ extern class CertificateFactory
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public static function getInstance(type : String, provider : java.security.Provider) : java.security.cert.CertificateFactory;
+	@:require(java4) @:overload @:public @:static @:final public static function getInstance(type : String, provider : java.security.Provider) : java.security.cert.CertificateFactory;
 	
 	/**
 	* Returns the provider of this certificate factory.
 	*
 	* @return the provider of this certificate factory.
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the name of the certificate type associated with this
@@ -145,7 +145,7 @@ extern class CertificateFactory
 	* @return the name of the certificate type associated with this
 	* certificate factory.
 	*/
-	@:overload @:final public function getType() : String;
+	@:overload @:public @:final public function getType() : String;
 	
 	/**
 	* Generates a certificate object and initializes it with
@@ -183,7 +183,7 @@ extern class CertificateFactory
 	*
 	* @exception CertificateException on parsing errors.
 	*/
-	@:overload @:final public function generateCertificate(inStream : java.io.InputStream) : java.security.cert.Certificate;
+	@:overload @:public @:final public function generateCertificate(inStream : java.io.InputStream) : java.security.cert.Certificate;
 	
 	/**
 	* Returns an iteration of the <code>CertPath</code> encodings supported
@@ -201,7 +201,7 @@ extern class CertificateFactory
 	*         <code>CertPath</code> encodings (as <code>String</code>s)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function getCertPathEncodings() : java.util.Iterator<String>;
+	@:require(java4) @:overload @:public @:final public function getCertPathEncodings() : java.util.Iterator<String>;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -216,7 +216,7 @@ extern class CertificateFactory
 	* @exception CertificateException if an exception occurs while decoding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function generateCertPath(inStream : java.io.InputStream) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public @:final public function generateCertPath(inStream : java.io.InputStream) : java.security.cert.CertPath;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -235,7 +235,7 @@ extern class CertificateFactory
 	*   the encoding requested is not supported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function generateCertPath(inStream : java.io.InputStream, encoding : String) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public @:final public function generateCertPath(inStream : java.io.InputStream, encoding : String) : java.security.cert.CertPath;
 	
 	/**
 	* Generates a <code>CertPath</code> object and initializes it with
@@ -251,7 +251,7 @@ extern class CertificateFactory
 	* @exception CertificateException if an exception occurs
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function generateCertPath(certificates : java.util.List<java.security.cert.Certificate>) : java.security.cert.CertPath;
+	@:require(java4) @:overload @:public @:final public function generateCertPath(certificates : java.util.List<java.security.cert.Certificate>) : java.security.cert.CertPath;
 	
 	/**
 	* Returns a (possibly empty) collection view of the certificates read
@@ -288,7 +288,7 @@ extern class CertificateFactory
 	*
 	* @exception CertificateException on parsing errors.
 	*/
-	@:overload @:final public function generateCertificates(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload @:public @:final public function generateCertificates(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Generates a certificate revocation list (CRL) object and initializes it
@@ -319,7 +319,7 @@ extern class CertificateFactory
 	*
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload @:final public function generateCRL(inStream : java.io.InputStream) : java.security.cert.CRL;
+	@:overload @:public @:final public function generateCRL(inStream : java.io.InputStream) : java.security.cert.CRL;
 	
 	/**
 	* Returns a (possibly empty) collection view of the CRLs read
@@ -354,7 +354,7 @@ extern class CertificateFactory
 	*
 	* @exception CRLException on parsing errors.
 	*/
-	@:overload @:final public function generateCRLs(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public @:final public function generateCRLs(inStream : java.io.InputStream) : java.util.Collection<java.security.cert.CRL>;
 	
 	
 }

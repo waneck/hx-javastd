@@ -29,9 +29,9 @@ extern class StringUtil
 	* with the underscore removed, and all characters exception in lower
 	* case except the characters after the underscores.
 	*/
-	@:overload public static function toMixedCase(str : String) : String;
+	@:overload @:public @:static public static function toMixedCase(str : String) : String;
 	
-	@:overload public static function countArgs(str : String) : Int;
+	@:overload @:public @:static public static function countArgs(str : String) : Int;
 	
 	
 }

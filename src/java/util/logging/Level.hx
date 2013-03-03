@@ -29,7 +29,7 @@ extern class Level implements java.io.Serializable
 	* OFF is a special level that can be used to turn off logging.
 	* This level is initialized to <CODE>Integer.MAX_VALUE</CODE>.
 	*/
-	public static var OFF(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var OFF(default, null) : java.util.logging.Level;
 	
 	/**
 	* SEVERE is a message level indicating a serious failure.
@@ -40,7 +40,7 @@ extern class Level implements java.io.Serializable
 	* to end users and to system administrators.
 	* This level is initialized to <CODE>1000</CODE>.
 	*/
-	public static var SEVERE(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var SEVERE(default, null) : java.util.logging.Level;
 	
 	/**
 	* WARNING is a message level indicating a potential problem.
@@ -50,7 +50,7 @@ extern class Level implements java.io.Serializable
 	* indicate potential problems.
 	* This level is initialized to <CODE>900</CODE>.
 	*/
-	public static var WARNING(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var WARNING(default, null) : java.util.logging.Level;
 	
 	/**
 	* INFO is a message level for informational messages.
@@ -61,7 +61,7 @@ extern class Level implements java.io.Serializable
 	* make sense to end users and system administrators.
 	* This level is initialized to <CODE>800</CODE>.
 	*/
-	public static var INFO(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var INFO(default, null) : java.util.logging.Level;
 	
 	/**
 	* CONFIG is a message level for static configuration messages.
@@ -73,7 +73,7 @@ extern class Level implements java.io.Serializable
 	* the graphics depth, the GUI look-and-feel, etc.
 	* This level is initialized to <CODE>700</CODE>.
 	*/
-	public static var CONFIG(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var CONFIG(default, null) : java.util.logging.Level;
 	
 	/**
 	* FINE is a message level providing tracing information.
@@ -94,7 +94,7 @@ extern class Level implements java.io.Serializable
 	* are also worth logging as FINE.
 	* This level is initialized to <CODE>500</CODE>.
 	*/
-	public static var FINE(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var FINE(default, null) : java.util.logging.Level;
 	
 	/**
 	* FINER indicates a fairly detailed tracing message.
@@ -102,19 +102,19 @@ extern class Level implements java.io.Serializable
 	* an exception are traced at this level.
 	* This level is initialized to <CODE>400</CODE>.
 	*/
-	public static var FINER(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var FINER(default, null) : java.util.logging.Level;
 	
 	/**
 	* FINEST indicates a highly detailed tracing message.
 	* This level is initialized to <CODE>300</CODE>.
 	*/
-	public static var FINEST(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var FINEST(default, null) : java.util.logging.Level;
 	
 	/**
 	* ALL indicates that all messages should be logged.
 	* This level is initialized to <CODE>Integer.MIN_VALUE</CODE>.
 	*/
-	public static var ALL(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var ALL(default, null) : java.util.logging.Level;
 	
 	/**
 	* Create a named Level with a given integer value.
@@ -128,7 +128,7 @@ extern class Level implements java.io.Serializable
 	* @param value an integer value for the level.
 	* @throws NullPointerException if the name is null
 	*/
-	@:overload private function new(name : String, value : Int) : Void;
+	@:overload @:protected private function new(name : String, value : Int) : Void;
 	
 	/**
 	* Create a named Level with a given integer value and a
@@ -141,7 +141,7 @@ extern class Level implements java.io.Serializable
 	*    or an empty string, it is ignored.
 	* @throws NullPointerException if the name is null
 	*/
-	@:overload private function new(name : String, value : Int, resourceBundleName : String) : Void;
+	@:overload @:protected private function new(name : String, value : Int, resourceBundleName : String) : Void;
 	
 	/**
 	* Return the level's localization resource bundle name, or
@@ -149,14 +149,14 @@ extern class Level implements java.io.Serializable
 	*
 	* @return localization resource bundle name
 	*/
-	@:overload public function getResourceBundleName() : String;
+	@:overload @:public public function getResourceBundleName() : String;
 	
 	/**
 	* Return the non-localized string name of the Level.
 	*
 	* @return non-localized name
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the localized string name of the Level, for
@@ -167,14 +167,14 @@ extern class Level implements java.io.Serializable
 	*
 	* @return localized name
 	*/
-	@:overload public function getLocalizedName() : String;
+	@:overload @:public public function getLocalizedName() : String;
 	
 	/**
 	* Returns a string representation of this Level.
 	*
 	* @return the non-localized name of the Level, for example "INFO".
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Get the integer value for this level.  This integer value
@@ -182,7 +182,7 @@ extern class Level implements java.io.Serializable
 	* Level objects.
 	* @return the integer value for this level.
 	*/
-	@:overload @:final public function intValue() : Int;
+	@:overload @:public @:final public function intValue() : Int;
 	
 	/**
 	* Parse a level name string into a Level.
@@ -211,19 +211,19 @@ extern class Level implements java.io.Serializable
 	* Passing an integer that does not (e.g., 1) will return a new level name
 	* initialized to that value.
 	*/
-	@:overload @:synchronized public static function parse(name : String) : java.util.logging.Level;
+	@:overload @:public @:static @:synchronized public static function parse(name : String) : java.util.logging.Level;
 	
 	/**
 	* Compare two objects for value equality.
 	* @return true if and only if the two objects have the same level value.
 	*/
-	@:overload public function equals(ox : Dynamic) : Bool;
+	@:overload @:public public function equals(ox : Dynamic) : Bool;
 	
 	/**
 	* Generate a hashcode.
 	* @return a hashcode based on the level value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

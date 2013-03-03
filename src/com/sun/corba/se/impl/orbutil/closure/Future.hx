@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.orbutil.closure;
 */
 extern class Future implements com.sun.corba.se.spi.orbutil.closure.Closure
 {
-	@:overload public function new(value : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
+	@:overload @:public public function new(value : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
 	
-	@:overload @:synchronized public function evaluate() : Dynamic;
+	@:overload @:public @:synchronized public function evaluate() : Dynamic;
 	
 	
 }

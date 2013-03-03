@@ -55,7 +55,7 @@ package com.sun.beans.decoder;
 	* @param argument  the text of the body
 	* @return evaluated {@code int} value
 	*/
-	@:overload override public function getValue(argument : String) : Dynamic;
+	@:overload @:public override public function getValue(argument : String) : Dynamic;
 	
 	
 }

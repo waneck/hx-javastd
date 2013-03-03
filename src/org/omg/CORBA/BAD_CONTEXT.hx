@@ -41,7 +41,7 @@ package org.omg.CORBA;
 	* with a default minor code
 	* of 0 and a completion state of COMPLETED_NO.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>BAD_CONTEXT</code> exception
@@ -49,7 +49,7 @@ package org.omg.CORBA;
 	* of 0 and a completion state of COMPLETED_NO.
 	* @param s a <code>String</code> object containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>BAD_CONTEXT</code> exception
@@ -59,7 +59,7 @@ package org.omg.CORBA;
 	* @param completed an instance of <code>CompletionStatus</code> indicating
 	*                  the completion status
 	*/
-	@:overload public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs a <code>BAD_CONTEXT</code> exception
@@ -71,7 +71,7 @@ package org.omg.CORBA;
 	* @param completed an instance of <code>CompletionStatus</code> indicating
 	*                  the completion status
 	*/
-	@:overload public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

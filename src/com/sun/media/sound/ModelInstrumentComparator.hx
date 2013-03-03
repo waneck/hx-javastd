@@ -31,7 +31,7 @@ extern class ModelInstrumentComparator implements java.util.Comparator<javax.sou
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function compare(arg0 : javax.sound.midi.Instrument, arg1 : javax.sound.midi.Instrument) : Int;
+	@:overload @:public public function compare(arg0 : javax.sound.midi.Instrument, arg1 : javax.sound.midi.Instrument) : Int;
 	
 	
 }

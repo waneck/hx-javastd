@@ -66,33 +66,33 @@ extern class FileView
 	* The name of the file. Normally this would be simply
 	* <code>f.getName()</code>.
 	*/
-	@:overload public function getName(f : java.io.File) : String;
+	@:overload @:public public function getName(f : java.io.File) : String;
 	
 	/**
 	* A human readable description of the file. For example,
 	* a file named <i>jag.jpg</i> might have a description that read:
 	* "A JPEG image file of James Gosling's face".
 	*/
-	@:overload public function getDescription(f : java.io.File) : String;
+	@:overload @:public public function getDescription(f : java.io.File) : String;
 	
 	/**
 	* A human readable description of the type of the file. For
 	* example, a <code>jpg</code> file might have a type description of:
 	* "A JPEG Compressed Image File"
 	*/
-	@:overload public function getTypeDescription(f : java.io.File) : String;
+	@:overload @:public public function getTypeDescription(f : java.io.File) : String;
 	
 	/**
 	* The icon that represents this file in the <code>JFileChooser</code>.
 	*/
-	@:overload public function getIcon(f : java.io.File) : javax.swing.Icon;
+	@:overload @:public public function getIcon(f : java.io.File) : javax.swing.Icon;
 	
 	/**
 	* Whether the directory is traversable or not. This might be
 	* useful, for example, if you want a directory to represent
 	* a compound document and don't want the user to descend into it.
 	*/
-	@:overload public function isTraversable(f : java.io.File) : Null<Bool>;
+	@:overload @:public public function isTraversable(f : java.io.File) : Null<Bool>;
 	
 	
 }

@@ -31,26 +31,26 @@ extern class StAXEventWriter implements javax.xml.stream.XMLEventWriter
 	*
 	* @param streamWriter
 	*/
-	@:overload public function new(streamWriter : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(streamWriter : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes any cached events to the underlying output mechanism
 	* @throws XMLStreamException
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Frees any resources associated with this stream
 	* @throws XMLStreamException
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	*
 	* @param eventReader
 	* @throws XMLStreamException
 	*/
-	@:overload public function add(eventReader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function add(eventReader : javax.xml.stream.XMLEventReader) : Void;
 	
 	/**
 	* Add an event to the output stream
@@ -60,20 +60,20 @@ extern class StAXEventWriter implements javax.xml.stream.XMLEventWriter
 	* @param event
 	* @throws XMLStreamException
 	*/
-	@:overload public function add(event : javax.xml.stream.events.XMLEvent) : Void;
+	@:overload @:public public function add(event : javax.xml.stream.events.XMLEvent) : Void;
 	
 	/**
 	* Gets the prefix the uri is bound to
 	* @param uri the uri to look up
 	* @throws XMLStreamException
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Returns the current namespace context.
 	* @return the current namespace context
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* Binds a URI to the default namespace
@@ -84,7 +84,7 @@ extern class StAXEventWriter implements javax.xml.stream.XMLEventWriter
 	* @param uri the uri to bind to the default namespace
 	* @throws XMLStreamException
 	*/
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	* Sets the current namespace context for prefix and uri bindings.
@@ -96,7 +96,7 @@ extern class StAXEventWriter implements javax.xml.stream.XMLEventWriter
 	* @param namespaceContext the namespace context to use for this writer
 	* @throws XMLStreamException
 	*/
-	@:overload public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* Sets the prefix the uri is bound to.  This prefix is bound
@@ -107,7 +107,7 @@ extern class StAXEventWriter implements javax.xml.stream.XMLEventWriter
 	* @param uri the uri to bind to the prefix
 	* @throws XMLStreamException
 	*/
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class DragSourceEvent extends java.util.EventObject
 	*
 	* @see #getLocation
 	*/
-	@:overload public function new(dsc : java.awt.dnd.DragSourceContext) : Void;
+	@:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext) : Void;
 	
 	/**
 	* Construct a <code>DragSourceEvent</code> given a specified
@@ -53,7 +53,7 @@ extern class DragSourceEvent extends java.util.EventObject
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(dsc : java.awt.dnd.DragSourceContext, x : Int, y : Int) : Void;
+	@:require(java4) @:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext, x : Int, y : Int) : Void;
 	
 	/**
 	* This method returns the <code>DragSourceContext</code> that
@@ -61,7 +61,7 @@ extern class DragSourceEvent extends java.util.EventObject
 	* <P>
 	* @return the <code>DragSourceContext</code> that originated the event
 	*/
-	@:overload public function getDragSourceContext() : java.awt.dnd.DragSourceContext;
+	@:overload @:public public function getDragSourceContext() : java.awt.dnd.DragSourceContext;
 	
 	/**
 	* This method returns a <code>Point</code> indicating the cursor
@@ -73,7 +73,7 @@ extern class DragSourceEvent extends java.util.EventObject
 	*         or <code>null</code> if the cursor location is not specified
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getLocation() : java.awt.Point;
+	@:require(java4) @:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* This method returns the horizontal coordinate of the cursor location in
@@ -84,7 +84,7 @@ extern class DragSourceEvent extends java.util.EventObject
 	*         location or zero if the cursor location is not specified
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getX() : Int;
+	@:require(java4) @:overload @:public public function getX() : Int;
 	
 	/**
 	* This method returns the vertical coordinate of the cursor location in
@@ -95,7 +95,7 @@ extern class DragSourceEvent extends java.util.EventObject
 	*         location or zero if the cursor location is not specified
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getY() : Int;
+	@:require(java4) @:overload @:public public function getY() : Int;
 	
 	
 }

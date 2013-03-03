@@ -28,7 +28,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	/**
 	* The XML root for this builder.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
 	/**
 	* Construct a new MemberSummaryBuilder.
@@ -37,7 +37,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	*                      summarized.
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function getInstance(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder;
+	@:overload @:public @:static public static function getInstance(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder;
 	
 	/**
 	* Construct a new MemberSummaryBuilder.
@@ -46,12 +46,12 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	*                             being summarized.
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function getInstance(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder;
+	@:overload @:public @:static public static function getInstance(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Return the specified visible member map.
@@ -61,7 +61,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @throws ArrayIndexOutOfBoundsException when the type is invalid.
 	* @see VisibleMemberMap
 	*/
-	@:overload public function getVisibleMemberMap(type : Int) : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
+	@:overload @:public public function getVisibleMemberMap(type : Int) : com.sun.tools.doclets.internal.toolkit.util.VisibleMemberMap;
 	
 	/**
 	* Return the specified member summary writer.
@@ -71,7 +71,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @throws ArrayIndexOutOfBoundsException when the type is invalid.
 	* @see VisibleMemberMap
 	*/
-	@:overload public function getMemberSummaryWriter(type : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
+	@:overload @:public public function getMemberSummaryWriter(type : Int) : com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
 	
 	/**
 	* Returns a list of methods that will be documented for the given class.
@@ -83,14 +83,14 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @return a list of methods that will be documented.
 	* @see VisibleMemberMap
 	*/
-	@:overload public function members(type : Int) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public public function members(type : Int) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Return true it there are any members to summarize.
 	*
 	* @return true if there are any members to summarize.
 	*/
-	@:overload override public function hasMembersToDocument() : Bool;
+	@:overload @:public override public function hasMembersToDocument() : Bool;
 	
 	/**
 	* Build the summary for the enum constants.
@@ -98,7 +98,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildEnumConstantsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildEnumConstantsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the optional members.
@@ -106,7 +106,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeOptionalMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeOptionalMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the optional members.
@@ -114,7 +114,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildAnnotationTypeRequiredMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildAnnotationTypeRequiredMemberSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the fields.
@@ -122,12 +122,12 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the fields.
 	*/
-	@:overload public function buildPropertiesSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPropertiesSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summary for the nested classes.
@@ -135,7 +135,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildNestedClassesSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildNestedClassesSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the method summary.
@@ -143,7 +143,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildMethodsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMethodsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the constructor summary.
@@ -151,7 +151,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	* @param node the XML element that specifies which components to document
 	* @param memberSummaryTree the content tree to which the documentation will be added
 	*/
-	@:overload public function buildConstructorsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildConstructorsSummary(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

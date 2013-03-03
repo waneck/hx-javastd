@@ -32,7 +32,7 @@ extern class InvalidPreferencesFormatException extends java.lang.Exception
 	* @param  cause the cause (which is saved for later retrieval by the
 	*         {@link Throwable#getCause()} method).
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs an InvalidPreferencesFormatException with the specified
@@ -41,7 +41,7 @@ extern class InvalidPreferencesFormatException extends java.lang.Exception
 	* @param   message   the detail message. The detail message is saved for
 	*          later retrieval by the {@link Throwable#getMessage()} method.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs an InvalidPreferencesFormatException with the specified
@@ -52,7 +52,7 @@ extern class InvalidPreferencesFormatException extends java.lang.Exception
 	* @param  cause the cause (which is saved for later retrieval by the
 	*         {@link Throwable#getCause()} method).
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

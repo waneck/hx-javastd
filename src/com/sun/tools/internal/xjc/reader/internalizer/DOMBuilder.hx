@@ -33,13 +33,13 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 	*      This set will receive newly found outermost
 	*      jaxb:bindings customizations.
 	*/
-	@:overload public function new(dom : org.w3c.dom.Document, ltable : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable, outerMostBindings : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(dom : org.w3c.dom.Document, ltable : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable, outerMostBindings : java.util.Set<Dynamic>) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	
 }

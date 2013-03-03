@@ -106,7 +106,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new scrolling list initialized with the specified
@@ -121,7 +121,7 @@ package java.awt;
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function new(rows : Int) : Void;
+	@:require(java1) @:overload @:public public function new(rows : Int) : Void;
 	
 	/**
 	* Creates a new scrolling list initialized to display the specified
@@ -141,19 +141,19 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(rows : Int, multipleMode : Bool) : Void;
+	@:overload @:public public function new(rows : Int, multipleMode : Bool) : Void;
 	
 	/**
 	* Creates the peer for the list.  The peer allows us to modify the
 	* list's appearance without changing its functionality.
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Removes the peer for this list.  The peer allows us to modify the
 	* list's appearance without changing its functionality.
 	*/
-	@:overload public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Gets the number of items in the list.
@@ -161,13 +161,13 @@ package java.awt;
 	* @see        #getItem
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getItemCount() : Int;
+	@:require(java1) @:overload @:public public function getItemCount() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getItemCount()</code>.
 	*/
-	@:overload public function countItems() : Int;
+	@:overload @:public public function countItems() : Int;
 	
 	/**
 	* Gets the item associated with the specified index.
@@ -176,7 +176,7 @@ package java.awt;
 	* @param        index the position of the item
 	* @see          #getItemCount
 	*/
-	@:overload public function getItem(index : Int) : String;
+	@:overload @:public public function getItem(index : Int) : String;
 	
 	/**
 	* Gets the items in the list.
@@ -186,19 +186,19 @@ package java.awt;
 	* @see          #isIndexSelected
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function getItems() : java.NativeArray<String>;
+	@:require(java1) @:overload @:public @:synchronized public function getItems() : java.NativeArray<String>;
 	
 	/**
 	* Adds the specified item to the end of scrolling list.
 	* @param item the item to be added
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function add(item : String) : Void;
+	@:require(java1) @:overload @:public public function add(item : String) : Void;
 	
 	/**
 	* @deprecated      replaced by <code>add(String)</code>.
 	*/
-	@:overload public function addItem(item : String) : Void;
+	@:overload @:public public function addItem(item : String) : Void;
 	
 	/**
 	* Adds the specified item to the the scrolling list
@@ -213,12 +213,12 @@ package java.awt;
 	* @param       index  the position at which to add the item
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function add(item : String, index : Int) : Void;
+	@:require(java1) @:overload @:public public function add(item : String, index : Int) : Void;
 	
 	/**
 	* @deprecated      replaced by <code>add(String, int)</code>.
 	*/
-	@:overload @:synchronized public function addItem(item : String, index : Int) : Void;
+	@:overload @:public @:synchronized public function addItem(item : String, index : Int) : Void;
 	
 	/**
 	* Replaces the item at the specified index in the scrolling list
@@ -228,7 +228,7 @@ package java.awt;
 	* @exception ArrayIndexOutOfBoundsException if <code>index</code>
 	*          is out of range
 	*/
-	@:overload @:synchronized public function replaceItem(newValue : String, index : Int) : Void;
+	@:overload @:public @:synchronized public function replaceItem(newValue : String, index : Int) : Void;
 	
 	/**
 	* Removes all items from this list.
@@ -236,13 +236,13 @@ package java.awt;
 	* @see #delItems
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function removeAll() : Void;
+	@:require(java1) @:overload @:public public function removeAll() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>removeAll()</code>.
 	*/
-	@:overload @:synchronized public function clear() : Void;
+	@:overload @:public @:synchronized public function clear() : Void;
 	
 	/**
 	* Removes the first occurrence of an item from the list.
@@ -253,7 +253,7 @@ package java.awt;
 	*                     if the item doesn't exist in the list
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function remove(item : String) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function remove(item : String) : Void;
 	
 	/**
 	* Removes the item at the specified position
@@ -267,13 +267,13 @@ package java.awt;
 	*               if the <code>position</code> is less than 0 or
 	*               greater than <code>getItemCount()-1</code>
 	*/
-	@:require(java1) @:overload public function remove(position : Int) : Void;
+	@:require(java1) @:overload @:public public function remove(position : Int) : Void;
 	
 	/**
 	* @deprecated     replaced by <code>remove(String)</code>
 	*                         and <code>remove(int)</code>.
 	*/
-	@:overload public function delItem(position : Int) : Void;
+	@:overload @:public public function delItem(position : Int) : Void;
 	
 	/**
 	* Gets the index of the selected item on the list,
@@ -285,7 +285,7 @@ package java.awt;
 	* @see           #deselect
 	* @see           #isIndexSelected
 	*/
-	@:overload @:synchronized public function getSelectedIndex() : Int;
+	@:overload @:public @:synchronized public function getSelectedIndex() : Int;
 	
 	/**
 	* Gets the selected indexes on the list.
@@ -296,7 +296,7 @@ package java.awt;
 	* @see           #deselect
 	* @see           #isIndexSelected
 	*/
-	@:overload @:synchronized public function getSelectedIndexes() : java.NativeArray<Int>;
+	@:overload @:public @:synchronized public function getSelectedIndexes() : java.NativeArray<Int>;
 	
 	/**
 	* Gets the selected item on this scrolling list.
@@ -308,7 +308,7 @@ package java.awt;
 	* @see           #deselect
 	* @see           #isIndexSelected
 	*/
-	@:overload @:synchronized public function getSelectedItem() : String;
+	@:overload @:public @:synchronized public function getSelectedItem() : String;
 	
 	/**
 	* Gets the selected items on this scrolling list.
@@ -319,7 +319,7 @@ package java.awt;
 	* @see           #deselect
 	* @see           #isIndexSelected
 	*/
-	@:overload @:synchronized public function getSelectedItems() : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function getSelectedItems() : java.NativeArray<String>;
 	
 	/**
 	* Gets the selected items on this scrolling list in an array of Objects.
@@ -329,7 +329,7 @@ package java.awt;
 	* @see #getSelectedItems
 	* @see ItemSelectable
 	*/
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Selects the item at the specified index in the scrolling list.
@@ -348,7 +348,7 @@ package java.awt;
 	* @see          #deselect
 	* @see          #isIndexSelected
 	*/
-	@:overload public function select(index : Int) : Void;
+	@:overload @:public public function select(index : Int) : Void;
 	
 	/**
 	* Deselects the item at the specified index.
@@ -363,7 +363,7 @@ package java.awt;
 	* @see          #getSelectedItem
 	* @see          #isIndexSelected
 	*/
-	@:overload @:synchronized public function deselect(index : Int) : Void;
+	@:overload @:public @:synchronized public function deselect(index : Int) : Void;
 	
 	/**
 	* Determines if the specified item in this scrolling list is
@@ -375,13 +375,13 @@ package java.awt;
 	* @see        #deselect
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function isIndexSelected(index : Int) : Bool;
+	@:require(java1) @:overload @:public public function isIndexSelected(index : Int) : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>isIndexSelected(int)</code>.
 	*/
-	@:overload public function isSelected(index : Int) : Bool;
+	@:overload @:public public function isSelected(index : Int) : Bool;
 	
 	/**
 	* Gets the number of visible lines in this list.  Note that
@@ -389,7 +389,7 @@ package java.awt;
 	* will never change.
 	* @return     the number of visible lines in this scrolling list
 	*/
-	@:overload public function getRows() : Int;
+	@:overload @:public public function getRows() : Int;
 	
 	/**
 	* Determines whether this list allows multiple selections.
@@ -398,13 +398,13 @@ package java.awt;
 	* @see        #setMultipleMode
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function isMultipleMode() : Bool;
+	@:require(java1) @:overload @:public public function isMultipleMode() : Bool;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>isMultipleMode()</code>.
 	*/
-	@:overload public function allowsMultipleSelections() : Bool;
+	@:overload @:public public function allowsMultipleSelections() : Bool;
 	
 	/**
 	* Sets the flag that determines whether this list
@@ -420,13 +420,13 @@ package java.awt;
 	* @see         #isMultipleMode
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setMultipleMode(b : Bool) : Void;
+	@:require(java1) @:overload @:public public function setMultipleMode(b : Bool) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setMultipleMode(boolean)</code>.
 	*/
-	@:overload @:synchronized public function setMultipleSelections(b : Bool) : Void;
+	@:overload @:public @:synchronized public function setMultipleSelections(b : Bool) : Void;
 	
 	/**
 	* Gets the index of the item that was last made visible by
@@ -434,14 +434,14 @@ package java.awt;
 	* @return      the index of the item that was last made visible
 	* @see         #makeVisible
 	*/
-	@:overload public function getVisibleIndex() : Int;
+	@:overload @:public public function getVisibleIndex() : Int;
 	
 	/**
 	* Makes the item at the specified index visible.
 	* @param       index    the position of the item
 	* @see         #getVisibleIndex
 	*/
-	@:overload @:synchronized public function makeVisible(index : Int) : Void;
+	@:overload @:public @:synchronized public function makeVisible(index : Int) : Void;
 	
 	/**
 	* Gets the preferred dimensions for a list with the specified
@@ -452,13 +452,13 @@ package java.awt;
 	* @see        java.awt.Component#getPreferredSize
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getPreferredSize(rows : Int) : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getPreferredSize(rows : Int) : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize(int)</code>.
 	*/
-	@:overload public function preferredSize(rows : Int) : java.awt.Dimension;
+	@:overload @:public public function preferredSize(rows : Int) : java.awt.Dimension;
 	
 	/**
 	* Gets the preferred size of this scrolling list.
@@ -466,13 +466,13 @@ package java.awt;
 	* @see        java.awt.Component#getPreferredSize
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getPreferredSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Gets the minumum dimensions for a list with the specified
@@ -483,13 +483,13 @@ package java.awt;
 	* @see        java.awt.Component#getMinimumSize
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getMinimumSize(rows : Int) : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getMinimumSize(rows : Int) : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize(int)</code>.
 	*/
-	@:overload public function minimumSize(rows : Int) : java.awt.Dimension;
+	@:overload @:public public function minimumSize(rows : Int) : java.awt.Dimension;
 	
 	/**
 	* Determines the minimum size of this scrolling list.
@@ -498,13 +498,13 @@ package java.awt;
 	* @see          java.awt.Component#getMinimumSize()
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function getMinimumSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Adds the specified item listener to receive item events from
@@ -524,7 +524,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Removes the specified item listener so that it no longer
@@ -541,7 +541,7 @@ package java.awt;
 	* @see             java.awt.event.ItemListener
 	* @since           JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the item listeners
@@ -557,7 +557,7 @@ package java.awt;
 	* @see             java.awt.event.ItemListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Adds the specified action listener to receive action events from
@@ -577,7 +577,7 @@ package java.awt;
 	* @see           java.awt.event.ActionListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener so that it no longer
@@ -595,7 +595,7 @@ package java.awt;
 	* @see             java.awt.event.ActionListener
 	* @since           JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -611,7 +611,7 @@ package java.awt;
 	* @see             java.awt.event.ActionListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -646,7 +646,7 @@ package java.awt;
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this scrolling list. If an event is
@@ -667,7 +667,7 @@ package java.awt;
 	* @see          #processItemEvent
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this list by
@@ -693,7 +693,7 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
+	@:require(java1) @:overload @:protected private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Processes action events occurring on this component
@@ -719,14 +719,14 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
+	@:require(java1) @:overload @:protected private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Returns the parameter string representing the state of this
 	* scrolling list. This string is useful for debugging.
 	* @return    the parameter string of this scrolling list
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
@@ -734,7 +734,7 @@ package java.awt;
 	* This method is expected to be retained only as a package
 	* private method.
 	*/
-	@:overload @:synchronized public function delItems(start : Int, end : Int) : Void;
+	@:overload @:public @:synchronized public function delItems(start : Int, end : Int) : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -746,7 +746,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>List</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -758,11 +758,11 @@ package java.awt;
 */
 @:require(java3) @:native('java$awt$List$AccessibleAWTList') extern class List_AccessibleAWTList extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleSelection implements java.awt.event.ItemListener implements java.awt.event.ActionListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(event : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function itemStateChanged(event : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(event : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Get the state set of this object.
@@ -771,7 +771,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -780,7 +780,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the Accessible child contained at the local coordinate
@@ -788,7 +788,7 @@ package java.awt;
 	*
 	* @return the Accessible at the specified location, if it exists
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -797,7 +797,7 @@ package java.awt;
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -805,7 +805,7 @@ package java.awt;
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -815,7 +815,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of items currently selected.
@@ -823,7 +823,7 @@ package java.awt;
 	*
 	* @return the number of items currently selected.
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an Accessible representing the specified selected item
@@ -834,7 +834,7 @@ package java.awt;
 	* @param i the zero-based index of selected items
 	* @return an Accessible containing the selected item
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns true if the current child of this object is selected.
@@ -843,7 +843,7 @@ package java.awt;
 	* object.
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified selected item in the object to the object's
@@ -854,7 +854,7 @@ package java.awt;
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified selected item in the object from the object's
@@ -863,19 +863,19 @@ package java.awt;
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that nothing in the
 	* object is selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every selected item in the object to be selected
 	* if the object supports multiple selections.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }
@@ -888,7 +888,7 @@ package java.awt;
 */
 @:require(java3) @:native('java$awt$List$AccessibleAWTList$AccessibleAWTListChild') extern class List_AccessibleAWTList_AccessibleAWTListChild extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.Accessible
 {
-	@:overload public function new(parent : java.awt.List, indexInParent : Int) : Void;
+	@:overload @:public public function new(parent : java.awt.List, indexInParent : Int) : Void;
 	
 	/**
 	* Gets the AccessibleContext for this object.  In the
@@ -897,7 +897,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Get the role of this object.
@@ -906,7 +906,7 @@ package java.awt;
 	* the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state set of this object.  The AccessibleStateSet of an
@@ -921,7 +921,7 @@ package java.awt;
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the locale of the component. If the component does not
@@ -935,7 +935,7 @@ package java.awt;
 	* been added to a containment hierarchy such that the locale can
 	* be determined from the containing parent.
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Get the 0-based index of this object in its accessible parent.
@@ -947,14 +947,14 @@ package java.awt;
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the specified Accessible child of the object.  The
@@ -966,7 +966,7 @@ package java.awt;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the background color of this object.
@@ -975,7 +975,7 @@ package java.awt;
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Set the background color of this object.
@@ -983,7 +983,7 @@ package java.awt;
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the foreground color of this object.
@@ -992,7 +992,7 @@ package java.awt;
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Set the foreground color of this object.
@@ -1000,7 +1000,7 @@ package java.awt;
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the Cursor of this object.
@@ -1008,7 +1008,7 @@ package java.awt;
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public override public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Set the Cursor of this object.
@@ -1019,7 +1019,7 @@ package java.awt;
 	* @param cursor the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Get the Font of this object.
@@ -1027,7 +1027,7 @@ package java.awt;
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Set the Font of this object.
@@ -1035,7 +1035,7 @@ package java.awt;
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Get the FontMetrics of this object.
@@ -1044,7 +1044,7 @@ package java.awt;
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determine if the object is enabled.  Objects that are enabled
@@ -1057,7 +1057,7 @@ package java.awt;
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	/**
 	* Set the enabled state of the object.
@@ -1065,7 +1065,7 @@ package java.awt;
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determine if the object is visible.  Note: this means that the
@@ -1082,7 +1082,7 @@ package java.awt;
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Set the visible state of the object.
@@ -1090,7 +1090,7 @@ package java.awt;
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determine if the object is showing.  This is determined by
@@ -1102,7 +1102,7 @@ package java.awt;
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public override public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's
@@ -1114,7 +1114,7 @@ package java.awt;
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public override public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -1124,7 +1124,7 @@ package java.awt;
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public override public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the
@@ -1137,14 +1137,14 @@ package java.awt;
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public override public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -1155,7 +1155,7 @@ package java.awt;
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle
@@ -1165,7 +1165,7 @@ package java.awt;
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension
@@ -1177,7 +1177,7 @@ package java.awt;
 	* component; null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public override public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -1185,7 +1185,7 @@ package java.awt;
 	* @param d - The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -1196,7 +1196,7 @@ package java.awt;
 	* @return the <code>Accessible</code>, if it exists,
 	*     at the specified location; otherwise <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects
@@ -1210,7 +1210,7 @@ package java.awt;
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept
@@ -1218,7 +1218,7 @@ package java.awt;
 	* to take focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from
@@ -1227,7 +1227,7 @@ package java.awt;
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives
@@ -1236,7 +1236,7 @@ package java.awt;
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }

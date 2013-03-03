@@ -28,9 +28,9 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	* @author TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;
 	* @version $Id: ParserForXMLSchema.java,v 1.9 2010-11-12 18:09:45 joehw Exp $
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	/**
 	* Parses a character-class-expression, not a character-class-escape.
@@ -49,11 +49,11 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	* @param useNrage Ignored.
 	* @return This returns no NrageToken.
 	*/
-	@:overload private function parseCharacterClass(useNrange : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload @:protected override private function parseCharacterClass(useNrange : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
-	@:overload private function parseSetOperations() : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload @:protected override private function parseSetOperations() : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
-	@:overload @:synchronized private static function getRange(name : String, positive : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload @:static @:synchronized @:protected private static function getRange(name : String, positive : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
 	
 }

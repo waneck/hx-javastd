@@ -26,156 +26,156 @@ package com.sun.org.apache.xpath.internal.domapi;
 	/**
 	* @see com.sun.org.apache.xalan.internal.dom3.xpath.XPathNamespace#getOwnerElement()
 	*/
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
 	/**
 	* @see org.w3c.dom.Node#getNodeName()
 	*/
-	@:overload public function getNodeName() : String;
+	@:overload @:public public function getNodeName() : String;
 	
 	/**
 	* @see org.w3c.dom.Node#getNodeValue()
 	*/
-	@:overload public function getNodeValue() : String;
+	@:overload @:public public function getNodeValue() : String;
 	
 	/**
 	* @see org.w3c.dom.Node#setNodeValue(String)
 	*/
-	@:overload public function setNodeValue(arg0 : String) : Void;
+	@:overload @:public public function setNodeValue(arg0 : String) : Void;
 	
 	/**
 	* @see org.w3c.dom.Node#getNodeType()
 	*/
-	@:overload public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* @see org.w3c.dom.Node#getParentNode()
 	*/
-	@:overload public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#getChildNodes()
 	*/
-	@:overload public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* @see org.w3c.dom.Node#getFirstChild()
 	*/
-	@:overload public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#getLastChild()
 	*/
-	@:overload public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#getPreviousSibling()
 	*/
-	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#getNextSibling()
 	*/
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#getAttributes()
 	*/
-	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* @see org.w3c.dom.Node#getOwnerDocument()
 	*/
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* @see org.w3c.dom.Node#insertBefore(Node, Node)
 	*/
-	@:overload public function insertBefore(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function insertBefore(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#replaceChild(Node, Node)
 	*/
-	@:overload public function replaceChild(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function replaceChild(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#removeChild(Node)
 	*/
-	@:overload public function removeChild(arg0 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function removeChild(arg0 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#appendChild(Node)
 	*/
-	@:overload public function appendChild(arg0 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(arg0 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#hasChildNodes()
 	*/
-	@:overload public function hasChildNodes() : Bool;
+	@:overload @:public public function hasChildNodes() : Bool;
 	
 	/**
 	* @see org.w3c.dom.Node#cloneNode(boolean)
 	*/
-	@:overload public function cloneNode(arg0 : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function cloneNode(arg0 : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* @see org.w3c.dom.Node#normalize()
 	*/
-	@:overload public function normalize() : Void;
+	@:overload @:public public function normalize() : Void;
 	
 	/**
 	* @see org.w3c.dom.Node#isSupported(String, String)
 	*/
-	@:overload public function isSupported(arg0 : String, arg1 : String) : Bool;
+	@:overload @:public public function isSupported(arg0 : String, arg1 : String) : Bool;
 	
 	/**
 	* @see org.w3c.dom.Node#getNamespaceURI()
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* @see org.w3c.dom.Node#getPrefix()
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* @see org.w3c.dom.Node#setPrefix(String)
 	*/
-	@:overload public function setPrefix(arg0 : String) : Void;
+	@:overload @:public public function setPrefix(arg0 : String) : Void;
 	
 	/**
 	* @see org.w3c.dom.Node#getLocalName()
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* @see org.w3c.dom.Node#hasAttributes()
 	*/
-	@:overload public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
-	@:overload public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
-	@:overload public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
-	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
-	@:overload public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
-	@:overload public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
-	@:overload public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(prefix : String) : String;
 	
-	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
-	@:overload public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
-	@:overload public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
 	
 }

@@ -30,7 +30,7 @@ extern interface RSAKey
 	*
 	* @return the modulus
 	*/
-	@:overload public function getModulus() : java.math.BigInteger;
+	@:overload @:public public function getModulus() : java.math.BigInteger;
 	
 	
 }

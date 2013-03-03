@@ -27,21 +27,21 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class Operators
 {
-	public static var EQ(default, null) : Int;
+	@:public @:static @:final public static var EQ(default, null) : Int;
 	
-	public static var NE(default, null) : Int;
+	@:public @:static @:final public static var NE(default, null) : Int;
 	
-	public static var GT(default, null) : Int;
+	@:public @:static @:final public static var GT(default, null) : Int;
 	
-	public static var LT(default, null) : Int;
+	@:public @:static @:final public static var LT(default, null) : Int;
 	
-	public static var GE(default, null) : Int;
+	@:public @:static @:final public static var GE(default, null) : Int;
 	
-	public static var LE(default, null) : Int;
+	@:public @:static @:final public static var LE(default, null) : Int;
 	
-	@:overload @:final public static function getOpNames(operator : Int) : String;
+	@:overload @:public @:static @:final public static function getOpNames(operator : Int) : String;
 	
-	@:overload @:final public static function swapOp(operator : Int) : Int;
+	@:overload @:public @:static @:final public static function swapOp(operator : Int) : Int;
 	
 	
 }

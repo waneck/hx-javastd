@@ -29,13 +29,13 @@ extern interface StateEditable
 	* Upon receiving this message the receiver should place any relevant
 	* state into <EM>state</EM>.
 	*/
-	@:overload public function storeState(state : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function storeState(state : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Upon receiving this message the receiver should extract any relevant
 	* state out of <EM>state</EM>.
 	*/
-	@:overload public function restoreState(state : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function restoreState(state : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	
 }

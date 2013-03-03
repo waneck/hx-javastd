@@ -43,33 +43,33 @@ extern class SAXDocumentSerializerWithPrefixMapping extends com.sun.xml.internal
 	* the map are added.
 	* <p>
 	*/
-	private var _namespaceToPrefixMapping : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var _namespaceToPrefixMapping : java.util.Map<Dynamic, Dynamic>;
 	
-	private var _prefixToPrefixMapping : java.util.Map<Dynamic, Dynamic>;
+	@:protected private var _prefixToPrefixMapping : java.util.Map<Dynamic, Dynamic>;
 	
-	private var _lastCheckedNamespace : String;
+	@:protected private var _lastCheckedNamespace : String;
 	
-	private var _lastCheckedPrefix : String;
+	@:protected private var _lastCheckedPrefix : String;
 	
-	private var _declaredNamespaces : com.sun.xml.internal.fastinfoset.util.StringIntMap;
+	@:protected private var _declaredNamespaces : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	@:overload public function new(namespaceToPrefixMapping : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(namespaceToPrefixMapping : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload @:final public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public @:final override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload @:final private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
+	@:overload @:protected @:final override private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
 	
-	@:overload private function encodeElementMapEntry(entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry, namespaceURI : String) : Bool;
+	@:overload @:protected private function encodeElementMapEntry(entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry, namespaceURI : String) : Bool;
 	
-	@:overload @:final private function encodeAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:protected @:final override private function encodeAttributes(atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload @:final private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Bool;
+	@:overload @:protected @:final override private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Bool;
 	
-	@:overload private function encodeAttributeMapEntry(entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry, namespaceURI : String) : Bool;
+	@:overload @:protected private function encodeAttributeMapEntry(entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry, namespaceURI : String) : Bool;
 	
-	@:overload @:final private function getPrefix(namespaceURI : String) : String;
+	@:overload @:protected @:final private function getPrefix(namespaceURI : String) : String;
 	
-	@:overload @:final private function putPrefix(namespaceURI : String, prefix : String) : Void;
+	@:overload @:protected @:final private function putPrefix(namespaceURI : String, prefix : String) : Void;
 	
 	
 }

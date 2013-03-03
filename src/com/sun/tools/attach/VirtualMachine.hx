@@ -36,7 +36,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>provider</code> or <code>id</code> is <code>null</code>.
 	*/
-	@:overload private function new(provider : com.sun.tools.attach.spi.AttachProvider, id : String) : Void;
+	@:overload @:protected private function new(provider : com.sun.tools.attach.spi.AttachProvider, id : String) : Void;
 	
 	/**
 	* Return a list of Java virtual machines.
@@ -53,7 +53,7 @@ extern class VirtualMachine
 	*
 	* @return  The list of virtual machine descriptors.
 	*/
-	@:overload public static function list() : java.util.List<com.sun.tools.attach.VirtualMachineDescriptor>;
+	@:overload @:public @:static public static function list() : java.util.List<com.sun.tools.attach.VirtualMachineDescriptor>;
 	
 	/**
 	* Attaches to a Java virtual machine.
@@ -98,7 +98,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>id</code> is <code>null</code>.
 	*/
-	@:overload public static function attach(id : String) : com.sun.tools.attach.VirtualMachine;
+	@:overload @:public @:static public static function attach(id : String) : com.sun.tools.attach.VirtualMachine;
 	
 	/**
 	* Attaches to a Java virtual machine.
@@ -131,7 +131,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>vmd</code> is <code>null</code>.
 	*/
-	@:overload public static function attach(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
+	@:overload @:public @:static public static function attach(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
 	
 	/**
 	* Detach from the virtual machine.
@@ -150,21 +150,21 @@ extern class VirtualMachine
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function detach() : Void;
+	@:overload @:public @:abstract public function detach() : Void;
 	
 	/**
 	* Returns the provider that created this virtual machine.
 	*
 	* @return  The provider that created this virtual machine.
 	*/
-	@:overload @:final public function provider() : com.sun.tools.attach.spi.AttachProvider;
+	@:overload @:public @:final public function provider() : com.sun.tools.attach.spi.AttachProvider;
 	
 	/**
 	* Returns the identifier for this Java virtual machine.
 	*
 	* @return  The identifier for this Java virtual machine.
 	*/
-	@:overload @:final public function id() : String;
+	@:overload @:public @:final public function id() : String;
 	
 	/**
 	* Loads an agent library.
@@ -217,7 +217,7 @@ extern class VirtualMachine
 	*
 	* @see     com.sun.tools.attach.AgentInitializationException#returnValue()
 	*/
-	@:overload @:abstract public function loadAgentLibrary(agentLibrary : String, options : String) : Void;
+	@:overload @:public @:abstract public function loadAgentLibrary(agentLibrary : String, options : String) : Void;
 	
 	/**
 	* Loads an agent library.
@@ -244,7 +244,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>agentLibrary</code> is <code>null</code>.
 	*/
-	@:overload public function loadAgentLibrary(agentLibrary : String) : Void;
+	@:overload @:public public function loadAgentLibrary(agentLibrary : String) : Void;
 	
 	/**
 	* Load a native agent library by full pathname.
@@ -294,7 +294,7 @@ extern class VirtualMachine
 	*
 	* @see     com.sun.tools.attach.AgentInitializationException#returnValue()
 	*/
-	@:overload @:abstract public function loadAgentPath(agentPath : String, options : String) : Void;
+	@:overload @:public @:abstract public function loadAgentPath(agentPath : String, options : String) : Void;
 	
 	/**
 	* Load a native agent library by full pathname.
@@ -321,7 +321,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>agentPath</code> is <code>null</code>.
 	*/
-	@:overload public function loadAgentPath(agentPath : String) : Void;
+	@:overload @:public public function loadAgentPath(agentPath : String) : Void;
 	
 	/**
 	* Loads an agent.
@@ -355,7 +355,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>agent</code> is <code>null</code>.
 	*/
-	@:overload @:abstract public function loadAgent(agent : String, options : String) : Void;
+	@:overload @:public @:abstract public function loadAgent(agent : String, options : String) : Void;
 	
 	/**
 	* Loads an agent.
@@ -382,7 +382,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>agent</code> is <code>null</code>.
 	*/
-	@:overload public function loadAgent(agent : String) : Void;
+	@:overload @:public public function loadAgent(agent : String) : Void;
 	
 	/**
 	* Returns the current system properties in the target virtual machine.
@@ -409,7 +409,7 @@ extern class VirtualMachine
 	* @see     #loadAgentLibrary
 	* @see     #loadAgent
 	*/
-	@:overload @:abstract public function getSystemProperties() : java.util.Properties;
+	@:overload @:public @:abstract public function getSystemProperties() : java.util.Properties;
 	
 	/**
 	* Returns the current <i>agent properties</i> in the target virtual
@@ -432,7 +432,7 @@ extern class VirtualMachine
 	* @throws       IOException
 	*               If an I/O error occurs
 	*/
-	@:overload @:abstract public function getAgentProperties() : java.util.Properties;
+	@:overload @:public @:abstract public function getAgentProperties() : java.util.Properties;
 	
 	/**
 	* Returns a hash-code value for this VirtualMachine. The hash
@@ -442,7 +442,7 @@ extern class VirtualMachine
 	*
 	* @return  A hash-code value for this virtual machine
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests this VirtualMachine for equality with another object.
@@ -461,12 +461,12 @@ extern class VirtualMachine
 	*                a VirtualMachine that is equal to this
 	*                VirtualMachine.
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Returns the string representation of the <code>VirtualMachine</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

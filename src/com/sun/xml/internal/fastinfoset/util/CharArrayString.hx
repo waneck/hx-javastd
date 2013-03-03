@@ -27,17 +27,17 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class CharArrayString extends com.sun.xml.internal.fastinfoset.util.CharArray
 {
-	private var _s : String;
+	@:protected private var _s : String;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function new(s : String, createArray : Bool) : Void;
+	@:overload @:public public function new(s : String, createArray : Bool) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

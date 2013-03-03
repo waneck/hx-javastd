@@ -28,7 +28,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the AddressingFeature
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
 	/**
 	* If addressing is enabled, this property determines whether the endpoint
@@ -36,7 +36,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	* be present on incoming and outgoing messages.
 	*/
 	/* final */
-	private var required : Bool;
+	@:protected private var required : Bool;
 	
 	/**
 	* Creates and configures an <code>AddressingFeature</code> with the
@@ -44,7 +44,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	* ws-addressing i.e. supports ws-addressing but doesn't require
 	* its use. It is also configured to accept all the response types.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates and configures an <code>AddressingFeature</code> with the
@@ -55,7 +55,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	* @param enabled true enables ws-addressing i.e.ws-addressing
 	* is supported but doesn't require its use
 	*/
-	@:overload public function new(enabled : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool) : Void;
 	
 	/**
 	* Creates and configures an <code>AddressingFeature</code> with the
@@ -67,7 +67,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	* is supported but doesn't require its use
 	* @param required true means requires the use of ws-addressing .
 	*/
-	@:overload public function new(enabled : Bool, required : Bool) : Void;
+	@:overload @:public public function new(enabled : Bool, required : Bool) : Void;
 	
 	/**
 	* Creates and configures an <code>AddressingFeature</code> with the
@@ -83,12 +83,12 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function new(enabled : Bool, required : Bool, responses : javax.xml.ws.soap.AddressingFeature.AddressingFeature_Responses) : Void;
+	@:require(java2) @:overload @:public public function new(enabled : Bool, required : Bool, responses : javax.xml.ws.soap.AddressingFeature.AddressingFeature_Responses) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* If addressing is enabled, this property determines whether the endpoint
@@ -97,7 +97,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @return the current required value
 	*/
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
 	/**
 	* If addressing is enabled, this property determines whether endpoint
@@ -114,7 +114,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function getResponses() : javax.xml.ws.soap.AddressingFeature.AddressingFeature_Responses;
+	@:require(java2) @:overload @:public public function getResponses() : javax.xml.ws.soap.AddressingFeature.AddressingFeature_Responses;
 	
 	
 }

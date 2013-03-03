@@ -34,11 +34,11 @@ package com.sun.jdi.connect;
 */
 @:require(java3) extern class VMStartException extends java.lang.Exception
 {
-	@:overload public function new(process : java.lang.Process) : Void;
+	@:overload @:public public function new(process : java.lang.Process) : Void;
 	
-	@:overload public function new(message : String, process : java.lang.Process) : Void;
+	@:overload @:public public function new(message : String, process : java.lang.Process) : Void;
 	
-	@:overload public function process() : java.lang.Process;
+	@:overload @:public public function process() : java.lang.Process;
 	
 	
 }

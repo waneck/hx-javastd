@@ -42,7 +42,7 @@ extern class SDDocumentSource
 	* @throws IOException
 	*      if something goes wrong trying to read the document.
 	*/
-	@:overload @:abstract public function read(xif : javax.xml.stream.XMLInputFactory) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function read(xif : javax.xml.stream.XMLInputFactory) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Returns the {@link XMLStreamReader} that reads the document.
@@ -58,22 +58,22 @@ extern class SDDocumentSource
 	* @throws IOException
 	*      if something goes wrong trying to read the document.
 	*/
-	@:overload @:abstract public function read() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function read() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* System ID of this document.
 	*/
-	@:overload @:abstract public function getSystemId() : java.net.URL;
+	@:overload @:public @:abstract public function getSystemId() : java.net.URL;
 	
 	/**
 	* Creates {@link SDDocumentSource} from an URL.
 	*/
-	@:overload public static function create(url : java.net.URL) : com.sun.xml.internal.ws.api.server.SDDocumentSource;
+	@:overload @:public @:static public static function create(url : java.net.URL) : com.sun.xml.internal.ws.api.server.SDDocumentSource;
 	
 	/**
 	* Creates a {@link SDDocumentSource} from {@link XMLStreamBuffer}.
 	*/
-	@:overload public static function create(systemId : java.net.URL, xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.api.server.SDDocumentSource;
+	@:overload @:public @:static public static function create(systemId : java.net.URL, xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.api.server.SDDocumentSource;
 	
 	
 }

@@ -25,27 +25,27 @@ package com.sun.corba.se.spi.oa;
 */
 extern class OAInvocationInfo extends org.omg.CORBA.portable.ServantObject
 {
-	@:overload public function new(oa : com.sun.corba.se.spi.oa.ObjectAdapter, id : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(oa : com.sun.corba.se.spi.oa.ObjectAdapter, id : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(info : com.sun.corba.se.spi.oa.OAInvocationInfo, operation : String) : Void;
+	@:overload @:public public function new(info : com.sun.corba.se.spi.oa.OAInvocationInfo, operation : String) : Void;
 	
-	@:overload public function oa() : com.sun.corba.se.spi.oa.ObjectAdapter;
+	@:overload @:public public function oa() : com.sun.corba.se.spi.oa.ObjectAdapter;
 	
-	@:overload public function id() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function id() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getServantContainer() : Dynamic;
+	@:overload @:public public function getServantContainer() : Dynamic;
 	
-	@:overload public function getCookieHolder() : org.omg.PortableServer.ServantLocatorPackage.CookieHolder;
+	@:overload @:public public function getCookieHolder() : org.omg.PortableServer.ServantLocatorPackage.CookieHolder;
 	
-	@:overload public function getOperation() : String;
+	@:overload @:public public function getOperation() : String;
 	
-	@:overload public function getCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload @:public public function getCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload public function setOperation(operation : String) : Void;
+	@:overload @:public public function setOperation(operation : String) : Void;
 	
-	@:overload public function setCopierFactory(factory : com.sun.corba.se.spi.copyobject.ObjectCopierFactory) : Void;
+	@:overload @:public public function setCopierFactory(factory : com.sun.corba.se.spi.copyobject.ObjectCopierFactory) : Void;
 	
-	@:overload public function setServant(servant : Dynamic) : Void;
+	@:overload @:public public function setServant(servant : Dynamic) : Void;
 	
 	
 }

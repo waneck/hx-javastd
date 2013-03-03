@@ -49,7 +49,7 @@ extern class Executors
 	* @return the newly created thread pool
 	* @throws IllegalArgumentException if {@code nThreads <= 0}
 	*/
-	@:overload public static function newFixedThreadPool(nThreads : Int) : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function newFixedThreadPool(nThreads : Int) : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Creates a thread pool that reuses a fixed number of threads
@@ -70,7 +70,7 @@ extern class Executors
 	* @throws NullPointerException if threadFactory is null
 	* @throws IllegalArgumentException if {@code nThreads <= 0}
 	*/
-	@:overload public static function newFixedThreadPool(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function newFixedThreadPool(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Creates an Executor that uses a single worker thread operating
@@ -85,7 +85,7 @@ extern class Executors
 	*
 	* @return the newly created single-threaded Executor
 	*/
-	@:overload public static function newSingleThreadExecutor() : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function newSingleThreadExecutor() : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Creates an Executor that uses a single worker thread operating
@@ -101,7 +101,7 @@ extern class Executors
 	* @return the newly created single-threaded Executor
 	* @throws NullPointerException if threadFactory is null
 	*/
-	@:overload public static function newSingleThreadExecutor(threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function newSingleThreadExecutor(threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Creates a thread pool that creates new threads as needed, but
@@ -119,7 +119,7 @@ extern class Executors
 	*
 	* @return the newly created thread pool
 	*/
-	@:overload public static function newCachedThreadPool() : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function newCachedThreadPool() : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Creates a thread pool that creates new threads as needed, but
@@ -130,7 +130,7 @@ extern class Executors
 	* @return the newly created thread pool
 	* @throws NullPointerException if threadFactory is null
 	*/
-	@:overload public static function newCachedThreadPool(threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function newCachedThreadPool(threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Creates a single-threaded executor that can schedule commands
@@ -145,7 +145,7 @@ extern class Executors
 	* guaranteed not to be reconfigurable to use additional threads.
 	* @return the newly created scheduled executor
 	*/
-	@:overload public static function newSingleThreadScheduledExecutor() : java.util.concurrent.ScheduledExecutorService;
+	@:overload @:public @:static public static function newSingleThreadScheduledExecutor() : java.util.concurrent.ScheduledExecutorService;
 	
 	/**
 	* Creates a single-threaded executor that can schedule commands
@@ -163,7 +163,7 @@ extern class Executors
 	* @return a newly created scheduled executor
 	* @throws NullPointerException if threadFactory is null
 	*/
-	@:overload public static function newSingleThreadScheduledExecutor(threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ScheduledExecutorService;
+	@:overload @:public @:static public static function newSingleThreadScheduledExecutor(threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ScheduledExecutorService;
 	
 	/**
 	* Creates a thread pool that can schedule commands to run after a
@@ -173,7 +173,7 @@ extern class Executors
 	* @return a newly created scheduled thread pool
 	* @throws IllegalArgumentException if {@code corePoolSize < 0}
 	*/
-	@:overload public static function newScheduledThreadPool(corePoolSize : Int) : java.util.concurrent.ScheduledExecutorService;
+	@:overload @:public @:static public static function newScheduledThreadPool(corePoolSize : Int) : java.util.concurrent.ScheduledExecutorService;
 	
 	/**
 	* Creates a thread pool that can schedule commands to run after a
@@ -186,7 +186,7 @@ extern class Executors
 	* @throws IllegalArgumentException if {@code corePoolSize < 0}
 	* @throws NullPointerException if threadFactory is null
 	*/
-	@:overload public static function newScheduledThreadPool(corePoolSize : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ScheduledExecutorService;
+	@:overload @:public @:static public static function newScheduledThreadPool(corePoolSize : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.util.concurrent.ScheduledExecutorService;
 	
 	/**
 	* Returns an object that delegates all defined {@link
@@ -198,7 +198,7 @@ extern class Executors
 	* @return an <tt>ExecutorService</tt> instance
 	* @throws NullPointerException if executor null
 	*/
-	@:overload public static function unconfigurableExecutorService(executor : java.util.concurrent.ExecutorService) : java.util.concurrent.ExecutorService;
+	@:overload @:public @:static public static function unconfigurableExecutorService(executor : java.util.concurrent.ExecutorService) : java.util.concurrent.ExecutorService;
 	
 	/**
 	* Returns an object that delegates all defined {@link
@@ -210,7 +210,7 @@ extern class Executors
 	* @return a <tt>ScheduledExecutorService</tt> instance
 	* @throws NullPointerException if executor null
 	*/
-	@:overload public static function unconfigurableScheduledExecutorService(executor : java.util.concurrent.ScheduledExecutorService) : java.util.concurrent.ScheduledExecutorService;
+	@:overload @:public @:static public static function unconfigurableScheduledExecutorService(executor : java.util.concurrent.ScheduledExecutorService) : java.util.concurrent.ScheduledExecutorService;
 	
 	/**
 	* Returns a default thread factory used to create new threads.
@@ -228,7 +228,7 @@ extern class Executors
 	* of the thread created by this factory.
 	* @return a thread factory
 	*/
-	@:overload public static function defaultThreadFactory() : java.util.concurrent.ThreadFactory;
+	@:overload @:public @:static public static function defaultThreadFactory() : java.util.concurrent.ThreadFactory;
 	
 	/**
 	* Returns a thread factory used to create new threads that
@@ -262,7 +262,7 @@ extern class Executors
 	* context does not have permission to both get and set context
 	* class loader.
 	*/
-	@:overload public static function privilegedThreadFactory() : java.util.concurrent.ThreadFactory;
+	@:overload @:public @:static public static function privilegedThreadFactory() : java.util.concurrent.ThreadFactory;
 	
 	/**
 	* Returns a {@link Callable} object that, when
@@ -274,7 +274,7 @@ extern class Executors
 	* @return a callable object
 	* @throws NullPointerException if task null
 	*/
-	@:overload public static function callable<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Callable<T>;
+	@:overload @:public @:static public static function callable<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Callable<T>;
 	
 	/**
 	* Returns a {@link Callable} object that, when
@@ -283,7 +283,7 @@ extern class Executors
 	* @return a callable object
 	* @throws NullPointerException if task null
 	*/
-	@:overload public static function callable(task : java.lang.Runnable) : java.util.concurrent.Callable<Dynamic>;
+	@:overload @:public @:static public static function callable(task : java.lang.Runnable) : java.util.concurrent.Callable<Dynamic>;
 	
 	/**
 	* Returns a {@link Callable} object that, when
@@ -292,7 +292,7 @@ extern class Executors
 	* @return a callable object
 	* @throws NullPointerException if action null
 	*/
-	@:overload public static function callable(action : java.security.PrivilegedAction<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
+	@:overload @:public @:static public static function callable(action : java.security.PrivilegedAction<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
 	
 	/**
 	* Returns a {@link Callable} object that, when
@@ -302,7 +302,7 @@ extern class Executors
 	* @return a callable object
 	* @throws NullPointerException if action null
 	*/
-	@:overload public static function callable(action : java.security.PrivilegedExceptionAction<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
+	@:overload @:public @:static public static function callable(action : java.security.PrivilegedExceptionAction<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
 	
 	/**
 	* Returns a {@link Callable} object that will, when
@@ -318,7 +318,7 @@ extern class Executors
 	* @throws NullPointerException if callable null
 	*
 	*/
-	@:overload public static function privilegedCallable<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.Callable<T>;
+	@:overload @:public @:static public static function privilegedCallable<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.Callable<T>;
 	
 	/**
 	* Returns a {@link Callable} object that will, when
@@ -338,7 +338,7 @@ extern class Executors
 	* context does not have permission to both set and get context
 	* class loader.
 	*/
-	@:overload public static function privilegedCallableUsingCurrentClassLoader<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.Callable<T>;
+	@:overload @:public @:static public static function privilegedCallableUsingCurrentClassLoader<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.Callable<T>;
 	
 	
 }
@@ -347,7 +347,7 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$RunnableAdapter') @:internal extern class Executors_RunnableAdapter<T> implements java.util.concurrent.Callable<T>
 {
-	@:overload public function call() : T;
+	@:overload @:public public function call() : T;
 	
 	
 }
@@ -356,7 +356,7 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$PrivilegedCallable') @:internal extern class Executors_PrivilegedCallable<T> implements java.util.concurrent.Callable<T>
 {
-	@:overload public function call() : T;
+	@:overload @:public public function call() : T;
 	
 	
 }
@@ -366,7 +366,7 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$PrivilegedCallableUsingCurrentClassLoader') @:internal extern class Executors_PrivilegedCallableUsingCurrentClassLoader<T> implements java.util.concurrent.Callable<T>
 {
-	@:overload public function call() : T;
+	@:overload @:public public function call() : T;
 	
 	
 }
@@ -375,7 +375,7 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$DefaultThreadFactory') @:internal extern class Executors_DefaultThreadFactory implements java.util.concurrent.ThreadFactory
 {
-	@:overload public function newThread(r : java.lang.Runnable) : java.lang.Thread;
+	@:overload @:public public function newThread(r : java.lang.Runnable) : java.lang.Thread;
 	
 	
 }
@@ -384,7 +384,7 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$PrivilegedThreadFactory') @:internal extern class Executors_PrivilegedThreadFactory extends java.util.concurrent.Executors.Executors_DefaultThreadFactory
 {
-	@:overload override public function newThread(r : java.lang.Runnable) : java.lang.Thread;
+	@:overload @:public override public function newThread(r : java.lang.Runnable) : java.lang.Thread;
 	
 	
 }
@@ -394,37 +394,37 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$DelegatedExecutorService') @:internal extern class Executors_DelegatedExecutorService extends java.util.concurrent.AbstractExecutorService
 {
-	@:overload public function execute(command : java.lang.Runnable) : Void;
+	@:overload @:public override public function execute(command : java.lang.Runnable) : Void;
 	
-	@:overload public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
-	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload @:public override public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
-	@:overload public function isShutdown() : Bool;
+	@:overload @:public override public function isShutdown() : Bool;
 	
-	@:overload public function isTerminated() : Bool;
+	@:overload @:public override public function isTerminated() : Bool;
 	
-	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
+	@:overload @:public override public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
 	
-	@:overload public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
+	@:overload @:public override public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
 	
-	@:overload public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
+	@:overload @:public override public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
 	
-	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload @:public override public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
 	
-	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload @:public override public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.List<java.util.concurrent.Future<T>>;
 	
-	@:overload public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : T;
+	@:overload @:public override public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : T;
 	
-	@:overload public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
+	@:overload @:public override public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
 	
 	
 }
 @:native('java$util$concurrent$Executors$FinalizableDelegatedExecutorService') @:internal extern class Executors_FinalizableDelegatedExecutorService extends java.util.concurrent.Executors.Executors_DelegatedExecutorService
 {
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }
@@ -434,13 +434,13 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$DelegatedScheduledExecutorService') @:internal extern class Executors_DelegatedScheduledExecutorService extends java.util.concurrent.Executors.Executors_DelegatedExecutorService implements java.util.concurrent.ScheduledExecutorService
 {
-	@:overload public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
-	@:overload public function schedule<V>(callable : java.util.concurrent.Callable<V>, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<V>;
+	@:overload @:public public function schedule<V>(callable : java.util.concurrent.Callable<V>, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<V>;
 	
-	@:overload public function scheduleAtFixedRate(command : java.lang.Runnable, initialDelay : haxe.Int64, period : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function scheduleAtFixedRate(command : java.lang.Runnable, initialDelay : haxe.Int64, period : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
-	@:overload public function scheduleWithFixedDelay(command : java.lang.Runnable, initialDelay : haxe.Int64, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
+	@:overload @:public public function scheduleWithFixedDelay(command : java.lang.Runnable, initialDelay : haxe.Int64, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	
 	
 }

@@ -32,23 +32,23 @@ extern class SunGraphicsEnvironment extends java.awt.GraphicsEnvironment impleme
 	* @see GraphicsDevice
 	* @see GraphicsConfiguration
 	*/
-	public static var isOpenSolaris : Bool;
+	@:public @:static public static var isOpenSolaris : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	private var screens : java.NativeArray<java.awt.GraphicsDevice>;
+	@:protected private var screens : java.NativeArray<java.awt.GraphicsDevice>;
 	
 	/**
 	* Returns an array of all of the screen devices.
 	*/
-	@:overload @:synchronized override public function getScreenDevices() : java.NativeArray<java.awt.GraphicsDevice>;
+	@:overload @:public @:synchronized override public function getScreenDevices() : java.NativeArray<java.awt.GraphicsDevice>;
 	
 	/**
 	* Returns the number of screen devices of this graphics environment.
 	*
 	* @return the number of screen devices of this graphics environment
 	*/
-	@:overload @:abstract private function getNumScreens() : Int;
+	@:overload @:protected @:abstract private function getNumScreens() : Int;
 	
 	/**
 	* Create and return the screen device with the specified number. The
@@ -59,21 +59,21 @@ extern class SunGraphicsEnvironment extends java.awt.GraphicsEnvironment impleme
 	*
 	* @return the created screen device
 	*/
-	@:overload @:abstract private function makeScreenDevice(screennum : Int) : java.awt.GraphicsDevice;
+	@:overload @:protected @:abstract private function makeScreenDevice(screennum : Int) : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns the default screen graphics device.
 	*/
-	@:overload override public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
+	@:overload @:public override public function getDefaultScreenDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns a Graphics2D object for rendering into the
 	* given BufferedImage.
 	* @throws NullPointerException if BufferedImage argument is null
 	*/
-	@:overload override public function createGraphics(img : java.awt.image.BufferedImage) : java.awt.Graphics2D;
+	@:overload @:public override public function createGraphics(img : java.awt.image.BufferedImage) : java.awt.Graphics2D;
 	
-	@:overload public static function getFontManagerForSGE() : sun.font.FontManagerForSGE;
+	@:overload @:public @:static public static function getFontManagerForSGE() : sun.font.FontManagerForSGE;
 	
 	/* Modifies the behaviour of a subsequent call to preferLocaleFonts()
 	* to use Mincho instead of Gothic for dialoginput in JA locales
@@ -82,57 +82,57 @@ extern class SunGraphicsEnvironment extends java.awt.GraphicsEnvironment impleme
 	* DO NOT MOVE OR RENAME OR OTHERWISE ALTER THIS METHOD.
 	* ITS USED BY SOME NON-JRE INTERNAL CODE.
 	*/
-	@:overload public static function useAlternateFontforJALocales() : Void;
+	@:overload @:public @:static public static function useAlternateFontforJALocales() : Void;
 	
 	/**
 	* Returns all fonts available in this environment.
 	*/
-	@:overload override public function getAllFonts() : java.NativeArray<java.awt.Font>;
+	@:overload @:public override public function getAllFonts() : java.NativeArray<java.awt.Font>;
 	
-	@:overload override public function getAvailableFontFamilyNames(requestedLocale : java.util.Locale) : java.NativeArray<String>;
+	@:overload @:public override public function getAvailableFontFamilyNames(requestedLocale : java.util.Locale) : java.NativeArray<String>;
 	
-	@:overload override public function getAvailableFontFamilyNames() : java.NativeArray<String>;
+	@:overload @:public override public function getAvailableFontFamilyNames() : java.NativeArray<String>;
 	
 	/**
 	* Return the bounds of a GraphicsDevice, less its screen insets.
 	* See also java.awt.GraphicsEnvironment.getUsableBounds();
 	*/
-	@:overload public static function getUsableBounds(gd : java.awt.GraphicsDevice) : java.awt.Rectangle;
+	@:overload @:public @:static public static function getUsableBounds(gd : java.awt.GraphicsDevice) : java.awt.Rectangle;
 	
 	/**
 	* From the DisplayChangedListener interface; called
 	* when the display mode has been changed.
 	*/
-	@:overload public function displayChanged() : Void;
+	@:overload @:public public function displayChanged() : Void;
 	
 	/**
 	* Part of the DisplayChangedListener interface:
 	* propagate this event to listeners
 	*/
-	@:overload public function paletteChanged() : Void;
+	@:overload @:public public function paletteChanged() : Void;
 	
 	/**
 	* Returns true when the display is local, false for remote displays.
 	*
 	* @return true when the display is local, false for remote displays
 	*/
-	@:overload @:abstract public function isDisplayLocal() : Bool;
+	@:overload @:public @:abstract public function isDisplayLocal() : Bool;
 	
 	/*
 	* ----DISPLAY CHANGE SUPPORT----
 	*/
-	private var displayChanger : sun.awt.SunDisplayChanger;
+	@:protected private var displayChanger : sun.awt.SunDisplayChanger;
 	
 	/**
 	* Add a DisplayChangeListener to be notified when the display settings
 	* are changed.
 	*/
-	@:overload public function addDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
+	@:overload @:public public function addDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
 	
 	/**
 	* Remove a DisplayChangeListener from Win32GraphicsEnvironment
 	*/
-	@:overload public function removeDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
+	@:overload @:public public function removeDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
 	
 	/**
 	* Returns true if FlipBufferStrategy with COPIED buffer contents
@@ -144,7 +144,7 @@ extern class SunGraphicsEnvironment extends java.awt.GraphicsEnvironment impleme
 	*
 	* @return true if flip strategy should be used, false otherwise
 	*/
-	@:overload public function isFlipStrategyPreferred(peer : java.awt.peer.ComponentPeer) : Bool;
+	@:overload @:public public function isFlipStrategyPreferred(peer : java.awt.peer.ComponentPeer) : Bool;
 	
 	
 }

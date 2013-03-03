@@ -25,7 +25,7 @@ package sun.security.rsa;
 */
 extern class SunRsaSignEntries
 {
-	@:overload public static function putEntries(map : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:static public static function putEntries(map : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	
 }

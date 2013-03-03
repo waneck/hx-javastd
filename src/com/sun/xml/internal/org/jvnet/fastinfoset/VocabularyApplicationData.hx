@@ -41,7 +41,7 @@ extern interface VocabularyApplicationData
 	*  This method will be invoked when a parser or serializer clears
 	*  the vocabulary.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

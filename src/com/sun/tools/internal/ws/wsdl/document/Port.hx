@@ -30,49 +30,49 @@ extern class Port extends com.sun.tools.internal.ws.wsdl.framework.GlobalEntity 
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(defining : com.sun.tools.internal.ws.wsdl.framework.Defining, locator : org.xml.sax.Locator, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(defining : com.sun.tools.internal.ws.wsdl.framework.Defining, locator : org.xml.sax.Locator, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getService() : com.sun.tools.internal.ws.wsdl.document.Service;
+	@:overload @:public public function getService() : com.sun.tools.internal.ws.wsdl.document.Service;
 	
-	@:overload public function setService(s : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
+	@:overload @:public public function setService(s : com.sun.tools.internal.ws.wsdl.document.Service) : Void;
 	
-	@:overload public function getBinding() : javax.xml.namespace.QName;
+	@:overload @:public public function getBinding() : javax.xml.namespace.QName;
 	
-	@:overload public function setBinding(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setBinding(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function resolveBinding(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument) : com.sun.tools.internal.ws.wsdl.document.Binding;
+	@:overload @:public public function resolveBinding(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument) : com.sun.tools.internal.ws.wsdl.document.Binding;
 	
-	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload @:public override public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	@:overload public function getNameValue() : String;
+	@:overload @:public public function getNameValue() : String;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getWSDLElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getWSDLElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
+	@:overload @:public public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
-	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
+	@:overload @:public public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload @:public override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
+	@:overload @:public override public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
-	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
-	@:overload public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
+	@:overload @:public public function extensions() : java.lang.Iterable<com.sun.tools.internal.ws.api.wsdl.TWSDLExtension>;
 	
-	@:overload public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
+	@:overload @:public public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
 	
-	@:overload public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
+	@:overload @:public public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
 	
-	@:overload public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

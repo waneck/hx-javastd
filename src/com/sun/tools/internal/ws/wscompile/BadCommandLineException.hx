@@ -25,18 +25,18 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class BadCommandLineException extends java.lang.Exception
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function initOptions(opt : com.sun.tools.internal.ws.wscompile.Options) : Void;
+	@:overload @:public public function initOptions(opt : com.sun.tools.internal.ws.wscompile.Options) : Void;
 	
 	/**
 	* Gets the partly parsed option object, if any.
 	*/
-	@:overload public function getOptions() : com.sun.tools.internal.ws.wscompile.Options;
+	@:overload @:public public function getOptions() : com.sun.tools.internal.ws.wscompile.Options;
 	
 	
 }

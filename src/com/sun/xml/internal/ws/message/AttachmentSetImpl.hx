@@ -28,20 +28,20 @@ extern class AttachmentSetImpl implements com.sun.xml.internal.ws.api.message.At
 	/**
 	* Creates an empty {@link AttachmentSet}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an {@link AttachmentSet} by copying contents from another.
 	*/
-	@:overload public function new(base : java.lang.Iterable<com.sun.xml.internal.ws.api.message.Attachment>) : Void;
+	@:overload @:public public function new(base : java.lang.Iterable<com.sun.xml.internal.ws.api.message.Attachment>) : Void;
 	
-	@:overload public function get(contentId : String) : com.sun.xml.internal.ws.api.message.Attachment;
+	@:overload @:public public function get(contentId : String) : com.sun.xml.internal.ws.api.message.Attachment;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
+	@:overload @:public public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.message.Attachment>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.message.Attachment>;
 	
 	
 }

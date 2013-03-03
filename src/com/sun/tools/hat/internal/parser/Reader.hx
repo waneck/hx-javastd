@@ -36,15 +36,15 @@ package com.sun.tools.hat.internal.parser;
 */
 extern class Reader
 {
-	//private var _in : com.sun.tools.hat.internal.parser.PositionDataInputStream;
+	//@:protected private var _in : com.sun.tools.hat.internal.parser.PositionDataInputStream;
 	
-	@:overload private function new(_in : com.sun.tools.hat.internal.parser.PositionDataInputStream) : Void;
+	@:overload @:protected private function new(_in : com.sun.tools.hat.internal.parser.PositionDataInputStream) : Void;
 	
 	/**
 	* Read a snapshot from a data input stream.  It is assumed that the magic
 	* number has already been read.
 	*/
-	@:overload @:abstract public function read() : com.sun.tools.hat.internal.model.Snapshot;
+	@:overload @:abstract @:public public function read() : com.sun.tools.hat.internal.model.Snapshot;
 	
 	/**
 	* Read a snapshot from a file.
@@ -52,7 +52,7 @@ extern class Reader
 	* @param heapFile The name of a file containing a heap dump
 	* @param callStack If true, read the call stack of allocaation sites
 	*/
-	@:overload public static function readFile(heapFile : String, callStack : Bool, debugLevel : Int) : com.sun.tools.hat.internal.model.Snapshot;
+	@:overload @:public @:static public static function readFile(heapFile : String, callStack : Bool, debugLevel : Int) : com.sun.tools.hat.internal.model.Snapshot;
 	
 	
 }

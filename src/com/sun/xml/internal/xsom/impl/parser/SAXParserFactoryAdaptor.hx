@@ -25,13 +25,13 @@ package com.sun.xml.internal.xsom.impl.parser;
 */
 extern class SAXParserFactoryAdaptor extends javax.xml.parsers.SAXParserFactory
 {
-	@:overload public function new(_parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
+	@:overload @:public public function new(_parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
 	
-	@:overload public function newSAXParser() : javax.xml.parsers.SAXParser;
+	@:overload @:public override public function newSAXParser() : javax.xml.parsers.SAXParser;
 	
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
 	
 }
@@ -40,25 +40,25 @@ extern class SAXParserFactoryAdaptor extends javax.xml.parsers.SAXParserFactory
 	/**
 	* @deprecated
 	*/
-	@:overload public function getParser() : org.xml.sax.Parser;
+	@:overload @:public override public function getParser() : org.xml.sax.Parser;
 	
-	@:overload public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public override public function getXMLReader() : org.xml.sax.XMLReader;
 	
-	@:overload public function isNamespaceAware() : Bool;
+	@:overload @:public override public function isNamespaceAware() : Bool;
 	
-	@:overload public function isValidating() : Bool;
+	@:overload @:public override public function isValidating() : Bool;
 	
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$parser$SAXParserFactoryAdaptor$XMLReaderImpl') @:internal extern class SAXParserFactoryAdaptor_XMLReaderImpl extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload override public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public override public function parse(input : org.xml.sax.InputSource) : Void;
 	
-	@:overload override public function parse(systemId : String) : Void;
+	@:overload @:public override public function parse(systemId : String) : Void;
 	
 	
 }

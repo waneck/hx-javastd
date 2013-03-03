@@ -52,7 +52,7 @@ package java.rmi;
 	* @deprecated no replacement
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(s : String, ex : java.lang.Exception) : Void;
+	@:require(java1) @:overload @:public public function new(s : String, ex : java.lang.Exception) : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* indicates whether a node change event should be fired when
 	* creation is complete.
 	*/
-	private var newNode : Bool;
+	@:protected private var newNode : Bool;
 	
 	/**
 	* An object whose monitor is used to lock this node.  This object
@@ -42,7 +42,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* To avoid deadlock, a node is <i>never</i> locked by a thread that
 	* holds a lock on a descendant of that node.
 	*/
-	private var lock(default, null) : Dynamic;
+	@:protected @:final private var lock(default, null) : Dynamic;
 	
 	/**
 	* Creates a preference node with the specified parent and the specified
@@ -56,7 +56,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*          (<tt>'/'</tt>),  or <tt>parent</tt> is <tt>null</tt> and
 	*          name isn't <tt>""</tt>.
 	*/
-	@:overload private function new(parent : java.util.prefs.AbstractPreferences, name : String) : Void;
+	@:overload @:protected private function new(parent : java.util.prefs.AbstractPreferences, name : String) : Void;
 	
 	/**
 	* Implements the <tt>put</tt> method as per the specification in
@@ -77,7 +77,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function put(key : String, value : String) : Void;
+	@:overload @:public override public function put(key : String, value : String) : Void;
 	
 	/**
 	* Implements the <tt>get</tt> method as per the specification in
@@ -101,7 +101,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws NullPointerException if key is <tt>null</tt>.  (A
 	*         <tt>null</tt> default <i>is</i> permitted.)
 	*/
-	@:overload override public function get(key : String, def : String) : String;
+	@:overload @:public override public function get(key : String, def : String) : String;
 	
 	/**
 	* Implements the <tt>remove(String)</tt> method as per the specification
@@ -117,7 +117,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function remove(key : String) : Void;
+	@:overload @:public override public function remove(key : String) : Void;
 	
 	/**
 	* Implements the <tt>clear</tt> method as per the specification in
@@ -133,7 +133,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Implements the <tt>putInt</tt> method as per the specification in
@@ -151,7 +151,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function putInt(key : String, value : Int) : Void;
+	@:overload @:public override public function putInt(key : String, value : Int) : Void;
 	
 	/**
 	* Implements the <tt>getInt</tt> method as per the specification in
@@ -175,7 +175,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
 	*/
-	@:overload override public function getInt(key : String, def : Int) : Int;
+	@:overload @:public override public function getInt(key : String, def : Int) : Int;
 	
 	/**
 	* Implements the <tt>putLong</tt> method as per the specification in
@@ -193,7 +193,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function putLong(key : String, value : haxe.Int64) : Void;
+	@:overload @:public override public function putLong(key : String, value : haxe.Int64) : Void;
 	
 	/**
 	* Implements the <tt>getLong</tt> method as per the specification in
@@ -217,7 +217,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
 	*/
-	@:overload override public function getLong(key : String, def : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function getLong(key : String, def : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Implements the <tt>putBoolean</tt> method as per the specification in
@@ -235,7 +235,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function putBoolean(key : String, value : Bool) : Void;
+	@:overload @:public override public function putBoolean(key : String, value : Bool) : Void;
 	
 	/**
 	* Implements the <tt>getBoolean</tt> method as per the specification in
@@ -262,7 +262,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
 	*/
-	@:overload override public function getBoolean(key : String, def : Bool) : Bool;
+	@:overload @:public override public function getBoolean(key : String, def : Bool) : Bool;
 	
 	/**
 	* Implements the <tt>putFloat</tt> method as per the specification in
@@ -280,7 +280,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function putFloat(key : String, value : Single) : Void;
+	@:overload @:public override public function putFloat(key : String, value : Single) : Void;
 	
 	/**
 	* Implements the <tt>getFloat</tt> method as per the specification in
@@ -304,7 +304,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
 	*/
-	@:overload override public function getFloat(key : String, def : Single) : Single;
+	@:overload @:public override public function getFloat(key : String, def : Single) : Single;
 	
 	/**
 	* Implements the <tt>putDouble</tt> method as per the specification in
@@ -322,7 +322,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function putDouble(key : String, value : Float) : Void;
+	@:overload @:public override public function putDouble(key : String, value : Float) : Void;
 	
 	/**
 	* Implements the <tt>getDouble</tt> method as per the specification in
@@ -346,7 +346,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
 	*/
-	@:overload override public function getDouble(key : String, def : Float) : Float;
+	@:overload @:public override public function getDouble(key : String, def : Float) : Float;
 	
 	/**
 	* Implements the <tt>putByteArray</tt> method as per the specification in
@@ -360,7 +360,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function putByteArray(key : String, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function putByteArray(key : String, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Implements the <tt>getByteArray</tt> method as per the specification in
@@ -379,7 +379,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.  (A
 	*         <tt>null</tt> value for <tt>def</tt> <i>is</i> permitted.)
 	*/
-	@:overload override public function getByteArray(key : String, def : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getByteArray(key : String, def : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Implements the <tt>keys</tt> method as per the specification in
@@ -396,7 +396,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function keys() : java.NativeArray<String>;
+	@:overload @:public override public function keys() : java.NativeArray<String>;
 	
 	/**
 	* Implements the <tt>children</tt> method as per the specification in
@@ -418,14 +418,14 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #cachedChildren()
 	*/
-	@:overload override public function childrenNames() : java.NativeArray<String>;
+	@:overload @:public override public function childrenNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns all known unremoved children of this node.
 	*
 	* @return all known unremoved children of this node.
 	*/
-	@:overload @:final private function cachedChildren() : java.NativeArray<java.util.prefs.AbstractPreferences>;
+	@:overload @:protected @:final private function cachedChildren() : java.NativeArray<java.util.prefs.AbstractPreferences>;
 	
 	/**
 	* Implements the <tt>parent</tt> method as per the specification in
@@ -439,7 +439,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function parent() : java.util.prefs.Preferences;
+	@:overload @:public override public function parent() : java.util.prefs.Preferences;
 	
 	/**
 	* Implements the <tt>node</tt> method as per the specification in
@@ -486,7 +486,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload override public function node(path : String) : java.util.prefs.Preferences;
+	@:overload @:public override public function node(path : String) : java.util.prefs.Preferences;
 	
 	/**
 	* Implements the <tt>nodeExists</tt> method as per the specification in
@@ -508,7 +508,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method and
 	*         <tt>pathname</tt> is not the empty string (<tt>""</tt>).
 	*/
-	@:overload override public function nodeExists(path : String) : Bool;
+	@:overload @:public override public function nodeExists(path : String) : Bool;
 	
 	/**
 
@@ -542,7 +542,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload override public function removeNode() : Void;
+	@:overload @:public override public function removeNode() : Void;
 	
 	/**
 	* Implements the <tt>name</tt> method as per the specification in
@@ -553,7 +553,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*
 	* @return this preference node's name, relative to its parent.
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Implements the <tt>absolutePath</tt> method as per the specification in
@@ -566,7 +566,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*
 	* @return this preference node's absolute path name.
 	*/
-	@:overload override public function absolutePath() : String;
+	@:overload @:public override public function absolutePath() : String;
 	
 	/**
 	* Implements the <tt>isUserNode</tt> method as per the specification in
@@ -581,15 +581,15 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         preference tree, <tt>false</tt> if it's in the system
 	*         preference tree.
 	*/
-	@:overload override public function isUserNode() : Bool;
+	@:overload @:public override public function isUserNode() : Bool;
 	
-	@:overload override public function addPreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
+	@:overload @:public override public function addPreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
 	
-	@:overload override public function removePreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
+	@:overload @:public override public function removePreferenceChangeListener(pcl : java.util.prefs.PreferenceChangeListener) : Void;
 	
-	@:overload override public function addNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
+	@:overload @:public override public function addNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
 	
-	@:overload override public function removeNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
+	@:overload @:public override public function removeNodeChangeListener(ncl : java.util.prefs.NodeChangeListener) : Void;
 	
 	/**
 	* Put the given key-value association into this preference node.  It is
@@ -599,7 +599,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*
 	* <p>This method is invoked with the lock on this node held.
 	*/
-	@:overload @:abstract private function putSpi(key : String, value : String) : Void;
+	@:overload @:protected @:abstract private function putSpi(key : String, value : String) : Void;
 	
 	/**
 	* Return the value associated with the specified key at this preference
@@ -620,7 +620,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*          node, or <tt>null</tt> if there is no association for this
 	*          key, or the association cannot be determined at this time.
 	*/
-	@:overload @:abstract private function getSpi(key : String) : String;
+	@:overload @:protected @:abstract private function getSpi(key : String) : String;
 	
 	/**
 	* Remove the association (if any) for the specified key at this
@@ -630,7 +630,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*
 	* <p>This method is invoked with the lock on this node held.
 	*/
-	@:overload @:abstract private function removeSpi(key : String) : Void;
+	@:overload @:protected @:abstract private function removeSpi(key : String) : Void;
 	
 	/**
 	* Removes this preference node, invalidating it and any preferences that
@@ -654,7 +654,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload @:abstract private function removeNodeSpi() : Void;
+	@:overload @:protected @:abstract private function removeNodeSpi() : Void;
 	
 	/**
 	* Returns all of the keys that have an associated value in this
@@ -673,7 +673,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload @:abstract private function keysSpi() : java.NativeArray<String>;
+	@:overload @:protected @:abstract private function keysSpi() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the children of this preference node.  (The
@@ -693,7 +693,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload @:abstract private function childrenNamesSpi() : java.NativeArray<String>;
+	@:overload @:protected @:abstract private function childrenNamesSpi() : java.NativeArray<String>;
 	
 	/**
 	* Returns the named child if it exists, or <tt>null</tt> if it does not.
@@ -724,7 +724,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload private function getChild(nodeName : String) : java.util.prefs.AbstractPreferences;
+	@:overload @:protected private function getChild(nodeName : String) : java.util.prefs.AbstractPreferences;
 	
 	/**
 	* Returns the named child of this preference node, creating it if it does
@@ -757,12 +757,12 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*        this preference node.
 	* @return The named child node.
 	*/
-	@:overload @:abstract private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
+	@:overload @:protected @:abstract private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
 	
 	/**
 	* Returns the absolute path name of this preferences node.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Implements the <tt>sync</tt> method as per the specification in
@@ -784,7 +784,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #flush()
 	*/
-	@:overload override public function sync() : Void;
+	@:overload @:public override public function sync() : Void;
 	
 	/**
 	* This method is invoked with this node locked.  The contract of this
@@ -804,7 +804,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload @:abstract private function syncSpi() : Void;
+	@:overload @:protected @:abstract private function syncSpi() : Void;
 	
 	/**
 	* Implements the <tt>flush</tt> method as per the specification in
@@ -828,7 +828,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         communicate with it.
 	* @see #flush()
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* This method is invoked with this node locked.  The contract of this
@@ -849,7 +849,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload @:abstract private function flushSpi() : Void;
+	@:overload @:protected @:abstract private function flushSpi() : Void;
 	
 	/**
 	* Returns <tt>true</tt> iff this node (or an ancestor) has been
@@ -860,7 +860,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @return <tt>true</tt> iff this node (or an ancestor) has been
 	*       removed with the {@link #removeNode()} method.
 	*/
-	@:overload private function isRemoved() : Bool;
+	@:overload @:protected private function isRemoved() : Bool;
 	
 	/**
 	* Implements the <tt>exportNode</tt> method as per the specification in
@@ -872,7 +872,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws BackingStoreException if preference data cannot be read from
 	*         backing store.
 	*/
-	@:overload override public function exportNode(os : java.io.OutputStream) : Void;
+	@:overload @:public override public function exportNode(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Implements the <tt>exportSubtree</tt> method as per the specification in
@@ -884,7 +884,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	* @throws BackingStoreException if preference data cannot be read from
 	*         backing store.
 	*/
-	@:overload override public function exportSubtree(os : java.io.OutputStream) : Void;
+	@:overload @:public override public function exportSubtree(os : java.io.OutputStream) : Void;
 	
 	
 }
@@ -907,7 +907,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 */
 @:native('java$util$prefs$AbstractPreferences$EventDispatchThread') @:internal extern class AbstractPreferences_EventDispatchThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

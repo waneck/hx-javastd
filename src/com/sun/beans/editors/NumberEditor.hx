@@ -29,7 +29,7 @@ package com.sun.beans.editors;
 */
 extern class NumberEditor extends java.beans.PropertyEditorSupport
 {
-	@:overload override public function getJavaInitializationString() : String;
+	@:overload @:public override public function getJavaInitializationString() : String;
 	
 	
 }

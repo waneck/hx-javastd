@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.policy.jaxws;
 */
 @:internal extern class WSDLBoundFaultContainer implements com.sun.xml.internal.ws.api.model.wsdl.WSDLObject
 {
-	@:overload public function new(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault, operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation) : Void;
+	@:overload @:public public function new(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault, operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation) : Void;
 	
-	@:overload public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getLocation() : org.xml.sax.Locator;
 	
-	@:overload public function getBoundFault() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault;
+	@:overload @:public public function getBoundFault() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault;
 	
-	@:overload public function getBoundOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+	@:overload @:public public function getBoundOperation() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 	
 	
 }

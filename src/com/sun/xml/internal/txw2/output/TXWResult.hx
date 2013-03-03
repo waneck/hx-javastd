@@ -25,15 +25,15 @@ package com.sun.xml.internal.txw2.output;
 */
 extern class TXWResult implements javax.xml.transform.Result
 {
-	@:overload public function new(writer : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function new(writer : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
-	@:overload public function getWriter() : com.sun.xml.internal.txw2.TypedXmlWriter;
+	@:overload @:public public function getWriter() : com.sun.xml.internal.txw2.TypedXmlWriter;
 	
-	@:overload public function setWriter(writer : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
+	@:overload @:public public function setWriter(writer : com.sun.xml.internal.txw2.TypedXmlWriter) : Void;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	
 }

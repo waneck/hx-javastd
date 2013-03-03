@@ -37,7 +37,7 @@ extern class TokenMgrError extends java.lang.Error
 	* Replaces unprintable characters by their espaced (or unicode escaped)
 	* equivalents in the given string
 	*/
-	@:overload @:final private static function addEscapes(str : String) : String;
+	@:overload @:protected @:static @:final private static function addEscapes(str : String) : String;
 	
 	/**
 	* You can also modify the body of this method to customize your error messages.
@@ -48,16 +48,16 @@ extern class TokenMgrError extends java.lang.Error
 	*
 	* from this method for such cases in the release version of your parser.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/*
 	* Constructors of various flavors follow.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(message : String, reason : Int) : Void;
+	@:overload @:public public function new(message : String, reason : Int) : Void;
 	
-	@:overload public function new(EOFSeen : Bool, lexState : Int, errorLine : Int, errorColumn : Int, errorAfter : String, curChar : java.StdTypes.Char16, reason : Int) : Void;
+	@:overload @:public public function new(EOFSeen : Bool, lexState : Int, errorLine : Int, errorColumn : Int, errorAfter : String, curChar : java.StdTypes.Char16, reason : Int) : Void;
 	
 	
 }

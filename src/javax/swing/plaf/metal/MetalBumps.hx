@@ -25,50 +25,50 @@ package javax.swing.plaf.metal;
 */
 @:internal extern class MetalBumps implements javax.swing.Icon
 {
-	private var xBumps : Int;
+	@:protected private var xBumps : Int;
 	
-	private var yBumps : Int;
+	@:protected private var yBumps : Int;
 	
-	private var topColor : java.awt.Color;
+	@:protected private var topColor : java.awt.Color;
 	
-	private var shadowColor : java.awt.Color;
+	@:protected private var shadowColor : java.awt.Color;
 	
-	private var backColor : java.awt.Color;
+	@:protected private var backColor : java.awt.Color;
 	
-	private var buffer : javax.swing.plaf.metal.MetalBumps.BumpBuffer;
+	@:protected private var buffer : javax.swing.plaf.metal.MetalBumps.BumpBuffer;
 	
 	/**
 	* Creates MetalBumps of the specified size with the specified colors.
 	* If <code>newBackColor</code> is null, the background will be
 	* transparent.
 	*/
-	@:overload public function new(width : Int, height : Int, newTopColor : java.awt.Color, newShadowColor : java.awt.Color, newBackColor : java.awt.Color) : Void;
+	@:overload @:public public function new(width : Int, height : Int, newTopColor : java.awt.Color, newShadowColor : java.awt.Color, newBackColor : java.awt.Color) : Void;
 	
-	@:overload public function setBumpArea(bumpArea : java.awt.Dimension) : Void;
+	@:overload @:public public function setBumpArea(bumpArea : java.awt.Dimension) : Void;
 	
-	@:overload public function setBumpArea(width : Int, height : Int) : Void;
+	@:overload @:public public function setBumpArea(width : Int, height : Int) : Void;
 	
-	@:overload public function setBumpColors(newTopColor : java.awt.Color, newShadowColor : java.awt.Color, newBackColor : java.awt.Color) : Void;
+	@:overload @:public public function setBumpColors(newTopColor : java.awt.Color, newShadowColor : java.awt.Color, newBackColor : java.awt.Color) : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }
 @:internal extern class BumpBuffer
 {
-	@:overload public function new(gc : java.awt.GraphicsConfiguration, aTopColor : java.awt.Color, aShadowColor : java.awt.Color, aBackColor : java.awt.Color) : Void;
+	@:overload @:public public function new(gc : java.awt.GraphicsConfiguration, aTopColor : java.awt.Color, aShadowColor : java.awt.Color, aBackColor : java.awt.Color) : Void;
 	
-	@:overload public function hasSameConfiguration(gc : java.awt.GraphicsConfiguration, aTopColor : java.awt.Color, aShadowColor : java.awt.Color, aBackColor : java.awt.Color) : Bool;
+	@:overload @:public public function hasSameConfiguration(gc : java.awt.GraphicsConfiguration, aTopColor : java.awt.Color, aShadowColor : java.awt.Color, aBackColor : java.awt.Color) : Bool;
 	
 	/**
 	* Returns the Image containing the bumps appropriate for the passed in
 	* <code>GraphicsConfiguration</code>.
 	*/
-	@:overload public function getImage() : java.awt.Image;
+	@:overload @:public public function getImage() : java.awt.Image;
 	
 	
 }

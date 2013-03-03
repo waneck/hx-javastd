@@ -130,13 +130,13 @@ Date       Who                What
 extern class Mutex implements com.sun.corba.se.impl.orbutil.concurrent.Sync
 {
 	/** The lock status **/
-	private var inuse_ : Bool;
+	@:protected private var inuse_ : Bool;
 	
-	@:overload public function acquire() : Void;
+	@:overload @:public public function acquire() : Void;
 	
-	@:overload @:synchronized public function release() : Void;
+	@:overload @:public @:synchronized public function release() : Void;
 	
-	@:overload public function attempt(msecs : haxe.Int64) : Bool;
+	@:overload @:public public function attempt(msecs : haxe.Int64) : Bool;
 	
 	
 }

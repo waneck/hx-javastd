@@ -42,7 +42,7 @@ extern interface AccelDeviceEventListener
 	* Note: this method is called on the rendering thread,
 	* do not call into user code, do not take RQ lock!
 	*/
-	@:overload public function onDeviceReset() : Void;
+	@:overload @:public public function onDeviceReset() : Void;
 	
 	/**
 	* Called when the device is about to be disposed of.
@@ -54,7 +54,7 @@ extern interface AccelDeviceEventListener
 	* Note: this method is called on the rendering thread,
 	* do not call into user code, do not take RQ lock!
 	*/
-	@:overload public function onDeviceDispose() : Void;
+	@:overload @:public public function onDeviceDispose() : Void;
 	
 	
 }

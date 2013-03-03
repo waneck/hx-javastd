@@ -41,7 +41,7 @@ extern class MethodGen24 extends com.sun.tools.corba.se.idl.MethodGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Print the parameter list for the factory method.
@@ -49,36 +49,36 @@ extern class MethodGen24 extends com.sun.tools.corba.se.idl.MethodGen
 	* @param listTypes If try, declare the parms, otherwise just list them
 	* @param stream The PrintWriter to print on
 	*/
-	@:overload private function writeParmList(m : com.sun.tools.corba.se.idl.MethodEntry, listTypes : Bool, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function writeParmList(m : com.sun.tools.corba.se.idl.MethodEntry, listTypes : Bool, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023> Write the methodEntry for a valuetype factory method into
 	*          the Value Helper class. Contents from email from Simon,
 	*          4/25/99.
 	**/
-	@:overload private function helperFactoryMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, t : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function helperFactoryMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, t : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023> - write an abstract method definition
 	**/
-	@:overload private function abstractMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function abstractMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023> - write a default factory method implementation for the
 	*            <value>DefaultFactory. m is a methodEntry for a factory
 	*            method contained in a non-abstract ValueEntry.
 	**/
-	@:overload private function defaultFactoryMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function defaultFactoryMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023> - remove all valueInitializer junk
 	**/
-	@:overload private function writeMethodSignature() : Void;
+	@:overload @:protected private function writeMethodSignature() : Void;
 	
 	/**
 	* <d62023> - delete method templates for valuetypes
 	**/
-	@:overload private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload @:protected private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	
 }

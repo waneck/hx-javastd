@@ -21,20 +21,20 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class KeyRef extends com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint
 {
 	/** The key (or unique) being referred to. */
-	private var fKey : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey;
+	@:protected private var fKey : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey;
 	
 	/** Constructs a keyref with the specified name. */
-	@:overload public function new(namespace : String, identityConstraintName : String, elemName : String, key : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
+	@:overload @:public public function new(namespace : String, identityConstraintName : String, elemName : String, key : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
 	
 	/** Returns the key being referred to.  */
-	@:overload public function getKey() : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey;
+	@:overload @:public public function getKey() : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey;
 	
 	/**
 	* {referenced key} Required if {identity-constraint category} is keyref,
 	* forbidden otherwise. An identity-constraint definition with
 	* {identity-constraint category} equal to key or unique.
 	*/
-	@:overload public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
+	@:overload @:public override public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
 	
 	
 }

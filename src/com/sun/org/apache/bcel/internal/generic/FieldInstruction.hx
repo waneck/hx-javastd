@@ -66,28 +66,28 @@ extern class FieldInstruction extends com.sun.org.apache.bcel.internal.classfile
 	/**
 	* @param index to constant pool
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, index : Int) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, index : Int) : Void;
 	
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/** @return size of field (1 or 2)
 	*/
-	@:overload private function getFieldSize(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:protected private function getFieldSize(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	/** @return return type of referenced field
 	*/
-	@:overload public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return type of field
 	*/
-	@:overload public function getFieldType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getFieldType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/** @return name of referenced field.
 	*/
-	@:overload public function getFieldName(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : String;
+	@:overload @:public public function getFieldName(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : String;
 	
 	
 }

@@ -74,7 +74,7 @@ package java.security.cert;
 	* Creates an <code>X509CertSelector</code>. Initially, no criteria are set
 	* so any <code>X509Certificate</code> will match.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the certificateEquals criterion. The specified
@@ -91,7 +91,7 @@ package java.security.cert;
 	* <code>null</code>)
 	* @see #getCertificate
 	*/
-	@:overload public function setCertificate(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function setCertificate(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Sets the serialNumber criterion. The specified serial number
@@ -103,7 +103,7 @@ package java.security.cert;
 	*        (or <code>null</code>)
 	* @see #getSerialNumber
 	*/
-	@:overload public function setSerialNumber(serial : java.math.BigInteger) : Void;
+	@:overload @:public public function setSerialNumber(serial : java.math.BigInteger) : Void;
 	
 	/**
 	* Sets the issuer criterion. The specified distinguished name
@@ -115,7 +115,7 @@ package java.security.cert;
 	*                 (or <code>null</code>)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setIssuer(issuer : javax.security.auth.x500.X500Principal) : Void;
+	@:require(java5) @:overload @:public public function setIssuer(issuer : javax.security.auth.x500.X500Principal) : Void;
 	
 	/**
 	* <strong>Denigrated</strong>, use {@linkplain #setIssuer(X500Principal)}
@@ -137,7 +137,7 @@ package java.security.cert;
 	*                 (or <code>null</code>)
 	* @throws IOException if a parsing error occurs (incorrect form for DN)
 	*/
-	@:overload public function setIssuer(issuerDN : String) : Void;
+	@:overload @:public public function setIssuer(issuerDN : String) : Void;
 	
 	/**
 	* Sets the issuer criterion. The specified distinguished name
@@ -181,7 +181,7 @@ package java.security.cert;
 	*                 in ASN.1 DER encoded form (or <code>null</code>)
 	* @throws IOException if an encoding error occurs (incorrect form for DN)
 	*/
-	@:overload public function setIssuer(issuerDN : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setIssuer(issuerDN : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the subject criterion. The specified distinguished name
@@ -193,7 +193,7 @@ package java.security.cert;
 	*                  (or <code>null</code>)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setSubject(subject : javax.security.auth.x500.X500Principal) : Void;
+	@:require(java5) @:overload @:public public function setSubject(subject : javax.security.auth.x500.X500Principal) : Void;
 	
 	/**
 	* <strong>Denigrated</strong>, use {@linkplain #setSubject(X500Principal)}
@@ -214,7 +214,7 @@ package java.security.cert;
 	*                  (or <code>null</code>)
 	* @throws IOException if a parsing error occurs (incorrect form for DN)
 	*/
-	@:overload public function setSubject(subjectDN : String) : Void;
+	@:overload @:public public function setSubject(subjectDN : String) : Void;
 	
 	/**
 	* Sets the subject criterion. The specified distinguished name
@@ -231,7 +231,7 @@ package java.security.cert;
 	*                  ASN.1 DER format (or <code>null</code>)
 	* @throws IOException if an encoding error occurs (incorrect form for DN)
 	*/
-	@:overload public function setSubject(subjectDN : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setSubject(subjectDN : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the subjectKeyIdentifier criterion. The
@@ -265,7 +265,7 @@ package java.security.cert;
 	* @param subjectKeyID the subject key identifier (or <code>null</code>)
 	* @see #getSubjectKeyIdentifier
 	*/
-	@:overload public function setSubjectKeyIdentifier(subjectKeyID : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setSubjectKeyIdentifier(subjectKeyID : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the authorityKeyIdentifier criterion. The
@@ -320,7 +320,7 @@ package java.security.cert;
 	*        (or <code>null</code>)
 	* @see #getAuthorityKeyIdentifier
 	*/
-	@:overload public function setAuthorityKeyIdentifier(authorityKeyID : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setAuthorityKeyIdentifier(authorityKeyID : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the certificateValid criterion. The specified date must fall
@@ -334,7 +334,7 @@ package java.security.cert;
 	* @param certValid the <code>Date</code> to check (or <code>null</code>)
 	* @see #getCertificateValid
 	*/
-	@:overload public function setCertificateValid(certValid : java.util.Date) : Void;
+	@:overload @:public public function setCertificateValid(certValid : java.util.Date) : Void;
 	
 	/**
 	* Sets the privateKeyValid criterion. The specified date must fall
@@ -349,7 +349,7 @@ package java.security.cert;
 	*                        <code>null</code>)
 	* @see #getPrivateKeyValid
 	*/
-	@:overload public function setPrivateKeyValid(privateKeyValid : java.util.Date) : Void;
+	@:overload @:public public function setPrivateKeyValid(privateKeyValid : java.util.Date) : Void;
 	
 	/**
 	* Sets the subjectPublicKeyAlgID criterion. The
@@ -366,7 +366,7 @@ package java.security.cert;
 	*
 	* @see #getSubjectPublicKeyAlgID
 	*/
-	@:overload public function setSubjectPublicKeyAlgID(oid : String) : Void;
+	@:overload @:public public function setSubjectPublicKeyAlgID(oid : String) : Void;
 	
 	/**
 	* Sets the subjectPublicKey criterion. The
@@ -376,7 +376,7 @@ package java.security.cert;
 	* @param key the subject public key to check for (or <code>null</code>)
 	* @see #getSubjectPublicKey
 	*/
-	@:overload public function setSubjectPublicKey(key : java.security.PublicKey) : Void;
+	@:overload @:public public function setSubjectPublicKey(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Sets the subjectPublicKey criterion. The <code>X509Certificate</code>
@@ -411,7 +411,7 @@ package java.security.cert;
 	* subject public key)
 	* @see #getSubjectPublicKey
 	*/
-	@:overload public function setSubjectPublicKey(key : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setSubjectPublicKey(key : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the keyUsage criterion. The <code>X509Certificate</code>
@@ -428,7 +428,7 @@ package java.security.cert;
 	*                 Or <code>null</code>.
 	* @see #getKeyUsage
 	*/
-	@:overload public function setKeyUsage(keyUsage : java.NativeArray<Bool>) : Void;
+	@:overload @:public public function setKeyUsage(keyUsage : java.NativeArray<Bool>) : Void;
 	
 	/**
 	* Sets the extendedKeyUsage criterion. The <code>X509Certificate</code>
@@ -449,7 +449,7 @@ package java.security.cert;
 	* being greater than 39.
 	* @see #getExtendedKeyUsage
 	*/
-	@:overload public function setExtendedKeyUsage(keyPurposeSet : java.util.Set<String>) : Void;
+	@:overload @:public public function setExtendedKeyUsage(keyPurposeSet : java.util.Set<String>) : Void;
 	
 	/**
 	* Enables/disables matching all of the subjectAlternativeNames
@@ -467,7 +467,7 @@ package java.security.cert;
 	* if <code>false</code>, the flag is disabled.
 	* @see #getMatchAllSubjectAltNames
 	*/
-	@:overload public function setMatchAllSubjectAltNames(matchAllNames : Bool) : Void;
+	@:overload @:public public function setMatchAllSubjectAltNames(matchAllNames : Bool) : Void;
 	
 	/**
 	* Sets the subjectAlternativeNames criterion. The
@@ -516,7 +516,7 @@ package java.security.cert;
 	* @throws IOException if a parsing error occurs
 	* @see #getSubjectAlternativeNames
 	*/
-	@:overload public function setSubjectAlternativeNames(names : java.util.Collection<java.util.List<Dynamic>>) : Void;
+	@:overload @:public public function setSubjectAlternativeNames(names : java.util.Collection<java.util.List<Dynamic>>) : Void;
 	
 	/**
 	* Adds a name to the subjectAlternativeNames criterion. The
@@ -556,7 +556,7 @@ package java.security.cert;
 	* @param name the name in string form (not <code>null</code>)
 	* @throws IOException if a parsing error occurs
 	*/
-	@:overload public function addSubjectAlternativeName(type : Int, name : String) : Void;
+	@:overload @:public public function addSubjectAlternativeName(type : Int, name : String) : Void;
 	
 	/**
 	* Adds a name to the subjectAlternativeNames criterion. The
@@ -597,7 +597,7 @@ package java.security.cert;
 	* @param name a byte array containing the name in ASN.1 DER encoded form
 	* @throws IOException if a parsing error occurs
 	*/
-	@:overload public function addSubjectAlternativeName(type : Int, name : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function addSubjectAlternativeName(type : Int, name : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the name constraints criterion. The <code>X509Certificate</code>
@@ -647,7 +647,7 @@ package java.security.cert;
 	* @throws IOException if a parsing error occurs
 	* @see #getNameConstraints
 	*/
-	@:overload public function setNameConstraints(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setNameConstraints(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the basic constraints constraint. If the value is greater than or
@@ -665,7 +665,7 @@ package java.security.cert;
 	* @throws IllegalArgumentException if the value is less than -2
 	* @see #getBasicConstraints
 	*/
-	@:overload public function setBasicConstraints(minMaxPathLen : Int) : Void;
+	@:overload @:public public function setBasicConstraints(minMaxPathLen : Int) : Void;
 	
 	/**
 	* Sets the policy constraint. The <code>X509Certificate</code> must
@@ -687,7 +687,7 @@ package java.security.cert;
 	* greater than 39.
 	* @see #getPolicy
 	*/
-	@:overload public function setPolicy(certPolicySet : java.util.Set<String>) : Void;
+	@:overload @:public public function setPolicy(certPolicySet : java.util.Set<String>) : Void;
 	
 	/**
 	* Sets the pathToNames criterion. The <code>X509Certificate</code> must
@@ -740,7 +740,7 @@ package java.security.cert;
 	* @throws IOException if a parsing error occurs
 	* @see #getPathToNames
 	*/
-	@:overload public function setPathToNames(names : java.util.Collection<java.util.List<Dynamic>>) : Void;
+	@:overload @:public public function setPathToNames(names : java.util.Collection<java.util.List<Dynamic>>) : Void;
 	
 	/**
 	* Adds a name to the pathToNames criterion. The <code>X509Certificate</code>
@@ -775,7 +775,7 @@ package java.security.cert;
 	* @param name the name in string form
 	* @throws IOException if a parsing error occurs
 	*/
-	@:overload public function addPathToName(type : Int, name : String) : Void;
+	@:overload @:public public function addPathToName(type : Int, name : String) : Void;
 	
 	/**
 	* Adds a name to the pathToNames criterion. The <code>X509Certificate</code>
@@ -802,7 +802,7 @@ package java.security.cert;
 	* @param name a byte array containing the name in ASN.1 DER encoded form
 	* @throws IOException if a parsing error occurs
 	*/
-	@:overload public function addPathToName(type : Int, name : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function addPathToName(type : Int, name : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the certificateEquals criterion. The specified
@@ -813,7 +813,7 @@ package java.security.cert;
 	* @return the <code>X509Certificate</code> to match (or <code>null</code>)
 	* @see #setCertificate
 	*/
-	@:overload public function getCertificate() : java.security.cert.X509Certificate;
+	@:overload @:public public function getCertificate() : java.security.cert.X509Certificate;
 	
 	/**
 	* Returns the serialNumber criterion. The specified serial number
@@ -825,7 +825,7 @@ package java.security.cert;
 	*                (or <code>null</code>)
 	* @see #setSerialNumber
 	*/
-	@:overload public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Returns the issuer criterion as an <code>X500Principal</code>. This
@@ -837,7 +837,7 @@ package java.security.cert;
 	*         (or <code>null</code>)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getIssuer() : javax.security.auth.x500.X500Principal;
+	@:require(java5) @:overload @:public public function getIssuer() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* <strong>Denigrated</strong>, use {@linkplain #getIssuer()} or
@@ -857,7 +857,7 @@ package java.security.cert;
 	* @return the required issuer distinguished name in RFC 2253 format
 	*         (or <code>null</code>)
 	*/
-	@:overload public function getIssuerAsString() : String;
+	@:overload @:public public function getIssuerAsString() : String;
 	
 	/**
 	* Returns the issuer criterion as a byte array. This distinguished name
@@ -878,7 +878,7 @@ package java.security.cert;
 	*         in ASN.1 DER format (or <code>null</code>)
 	* @throws IOException if an encoding error occurs
 	*/
-	@:overload public function getIssuerAsBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIssuerAsBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the subject criterion as an <code>X500Principal</code>. This
@@ -890,7 +890,7 @@ package java.security.cert;
 	*         (or <code>null</code>)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSubject() : javax.security.auth.x500.X500Principal;
+	@:require(java5) @:overload @:public public function getSubject() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* <strong>Denigrated</strong>, use {@linkplain #getSubject()} or
@@ -910,7 +910,7 @@ package java.security.cert;
 	* @return the required subject distinguished name in RFC 2253 format
 	*         (or <code>null</code>)
 	*/
-	@:overload public function getSubjectAsString() : String;
+	@:overload @:public public function getSubjectAsString() : String;
 	
 	/**
 	* Returns the subject criterion as a byte array. This distinguished name
@@ -931,7 +931,7 @@ package java.security.cert;
 	*         in ASN.1 DER format (or <code>null</code>)
 	* @throws IOException if an encoding error occurs
 	*/
-	@:overload public function getSubjectAsBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSubjectAsBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the subjectKeyIdentifier criterion. The
@@ -945,7 +945,7 @@ package java.security.cert;
 	* @return the key identifier (or <code>null</code>)
 	* @see #setSubjectKeyIdentifier
 	*/
-	@:overload public function getSubjectKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSubjectKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the authorityKeyIdentifier criterion. The
@@ -959,7 +959,7 @@ package java.security.cert;
 	* @return the key identifier (or <code>null</code>)
 	* @see #setAuthorityKeyIdentifier
 	*/
-	@:overload public function getAuthorityKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getAuthorityKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the certificateValid criterion. The specified date must fall
@@ -973,7 +973,7 @@ package java.security.cert;
 	* @return the <code>Date</code> to check (or <code>null</code>)
 	* @see #setCertificateValid
 	*/
-	@:overload public function getCertificateValid() : java.util.Date;
+	@:overload @:public public function getCertificateValid() : java.util.Date;
 	
 	/**
 	* Returns the privateKeyValid criterion. The specified date must fall
@@ -987,7 +987,7 @@ package java.security.cert;
 	* @return the <code>Date</code> to check (or <code>null</code>)
 	* @see #setPrivateKeyValid
 	*/
-	@:overload public function getPrivateKeyValid() : java.util.Date;
+	@:overload @:public public function getPrivateKeyValid() : java.util.Date;
 	
 	/**
 	* Returns the subjectPublicKeyAlgID criterion. The
@@ -1000,7 +1000,7 @@ package java.security.cert;
 	*         nonnegative integers separated by periods.
 	* @see #setSubjectPublicKeyAlgID
 	*/
-	@:overload public function getSubjectPublicKeyAlgID() : String;
+	@:overload @:public public function getSubjectPublicKeyAlgID() : String;
 	
 	/**
 	* Returns the subjectPublicKey criterion. The
@@ -1010,7 +1010,7 @@ package java.security.cert;
 	* @return the subject public key to check for (or <code>null</code>)
 	* @see #setSubjectPublicKey
 	*/
-	@:overload public function getSubjectPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getSubjectPublicKey() : java.security.PublicKey;
 	
 	/**
 	* Returns the keyUsage criterion. The <code>X509Certificate</code>
@@ -1026,7 +1026,7 @@ package java.security.cert;
 	*                 Or <code>null</code>.
 	* @see #setKeyUsage
 	*/
-	@:overload public function getKeyUsage() : java.NativeArray<Bool>;
+	@:overload @:public public function getKeyUsage() : java.NativeArray<Bool>;
 	
 	/**
 	* Returns the extendedKeyUsage criterion. The <code>X509Certificate</code>
@@ -1040,7 +1040,7 @@ package java.security.cert;
 	* format (or <code>null</code>)
 	* @see #setExtendedKeyUsage
 	*/
-	@:overload public function getExtendedKeyUsage() : java.util.Set<String>;
+	@:overload @:public public function getExtendedKeyUsage() : java.util.Set<String>;
 	
 	/**
 	* Indicates if the <code>X509Certificate</code> must contain all
@@ -1058,7 +1058,7 @@ package java.security.cert;
 	* <code>true</code> by default.
 	* @see #setMatchAllSubjectAltNames
 	*/
-	@:overload public function getMatchAllSubjectAltNames() : Bool;
+	@:overload @:public public function getMatchAllSubjectAltNames() : Bool;
 	
 	/**
 	* Returns a copy of the subjectAlternativeNames criterion.
@@ -1093,7 +1093,7 @@ package java.security.cert;
 	* @return a <code>Collection</code> of names (or <code>null</code>)
 	* @see #setSubjectAlternativeNames
 	*/
-	@:overload public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:overload @:public public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* Returns the name constraints criterion. The <code>X509Certificate</code>
@@ -1115,7 +1115,7 @@ package java.security.cert;
 	*         <code>null</code> if no name constraints check will be performed.
 	* @see #setNameConstraints
 	*/
-	@:overload public function getNameConstraints() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getNameConstraints() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the basic constraints constraint. If the value is greater than
@@ -1127,7 +1127,7 @@ package java.security.cert;
 	* @return the value for the basic constraints constraint
 	* @see #setBasicConstraints
 	*/
-	@:overload public function getBasicConstraints() : Int;
+	@:overload @:public public function getBasicConstraints() : Int;
 	
 	/**
 	* Returns the policy criterion. The <code>X509Certificate</code> must
@@ -1141,7 +1141,7 @@ package java.security.cert;
 	*         string format (or <code>null</code>)
 	* @see #setPolicy
 	*/
-	@:overload public function getPolicy() : java.util.Set<String>;
+	@:overload @:public public function getPolicy() : java.util.Set<String>;
 	
 	/**
 	* Returns a copy of the pathToNames criterion. The
@@ -1174,7 +1174,7 @@ package java.security.cert;
 	* @return a <code>Collection</code> of names (or <code>null</code>)
 	* @see #setPathToNames
 	*/
-	@:overload public function getPathToNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:overload @:public public function getPathToNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
 	/**
 	* Return a printable representation of the <code>CertSelector</code>.
@@ -1182,7 +1182,7 @@ package java.security.cert;
 	* @return a <code>String</code> describing the contents of the
 	*         <code>CertSelector</code>
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Decides whether a <code>Certificate</code> should be selected.
@@ -1191,14 +1191,14 @@ package java.security.cert;
 	* @return <code>true</code> if the <code>Certificate</code> should be
 	*         selected, <code>false</code> otherwise
 	*/
-	@:overload public function match(cert : java.security.cert.Certificate) : Bool;
+	@:overload @:public public function match(cert : java.security.cert.Certificate) : Bool;
 	
 	/**
 	* Returns a copy of this object.
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

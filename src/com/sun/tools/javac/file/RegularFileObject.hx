@@ -25,44 +25,44 @@ package com.sun.tools.javac.file;
 */
 @:internal extern class RegularFileObject extends com.sun.tools.javac.file.BaseFileObject
 {
-	@:overload public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, f : java.io.File) : Void;
+	@:overload @:public public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, f : java.io.File) : Void;
 	
-	@:overload public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, name : String, f : java.io.File) : Void;
+	@:overload @:public public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, name : String, f : java.io.File) : Void;
 	
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public override public function toUri() : java.net.URI;
 	
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function getShortName() : String;
+	@:overload @:public override public function getShortName() : String;
 	
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public override public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public override public function openInputStream() : java.io.InputStream;
 	
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
+	@:overload @:public override public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
 	
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public override public function openWriter() : java.io.Writer;
 	
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public override public function getLastModified() : haxe.Int64;
 	
-	@:overload public function delete() : Bool;
+	@:overload @:public override public function delete() : Bool;
 	
-	@:overload private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
+	@:overload @:protected override private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
 	
-	@:overload private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
+	@:overload @:protected override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	
-	@:overload public function isNameCompatible(cn : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public override public function isNameCompatible(cn : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* Check if two file objects are equal.
 	* Two RegularFileObjects are equal if the absolute paths of the underlying
 	* files are equal.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public override public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

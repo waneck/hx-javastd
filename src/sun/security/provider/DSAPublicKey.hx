@@ -28,7 +28,7 @@ extern class DSAPublicKey extends sun.security.x509.X509Key implements java.secu
 	/*
 	* Keep this constructor for backwards compatibility with JDK1.1.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Make a DSA public key out of a public key and three parameters.
@@ -43,29 +43,29 @@ extern class DSAPublicKey extends sun.security.x509.X509Key implements java.secu
 	* @param q DSA parameter q, may be null if all of p, q, and g are null.
 	* @param g DSA parameter g, may be null if all of p, q, and g are null.
 	*/
-	@:overload public function new(y : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
+	@:overload @:public public function new(y : java.math.BigInteger, p : java.math.BigInteger, q : java.math.BigInteger, g : java.math.BigInteger) : Void;
 	
 	/**
 	* Make a DSA public key from its DER encoding (X.509).
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the DSA parameters associated with this key, or null if the
 	* parameters could not be parsed.
 	*/
-	@:overload public function getParams() : java.security.interfaces.DSAParams;
+	@:overload @:public public function getParams() : java.security.interfaces.DSAParams;
 	
 	/**
 	* Get the raw public value, y, without the parameters.
 	*
 	* @see getParameters
 	*/
-	@:overload public function getY() : java.math.BigInteger;
+	@:overload @:public public function getY() : java.math.BigInteger;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function parseKeyBits() : Void;
+	@:overload @:protected override private function parseKeyBits() : Void;
 	
 	
 }

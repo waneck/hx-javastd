@@ -24,21 +24,21 @@ package com.sun.org.apache.xml.internal.utils;
 extern class TreeWalker
 {
 	/** DomHelper for this TreeWalker          */
-	private var m_dh : com.sun.org.apache.xml.internal.utils.DOMHelper;
+	@:protected private var m_dh : com.sun.org.apache.xml.internal.utils.DOMHelper;
 	
 	/**
 	* Get the ContentHandler used for the tree walk.
 	*
 	* @return the ContentHandler used for the tree walk
 	*/
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Get the ContentHandler used for the tree walk.
 	*
 	* @return the ContentHandler used for the tree walk
 	*/
-	@:overload public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Constructor.
@@ -46,21 +46,21 @@ extern class TreeWalker
 	* @param   systemId System identifier for the document.
 	* contentHandler operation (toXMLString, digest, ...)
 	*/
-	@:overload public function new(contentHandler : org.xml.sax.ContentHandler, dh : com.sun.org.apache.xml.internal.utils.DOMHelper, systemId : String) : Void;
+	@:overload @:public public function new(contentHandler : org.xml.sax.ContentHandler, dh : com.sun.org.apache.xml.internal.utils.DOMHelper, systemId : String) : Void;
 	
 	/**
 	* Constructor.
 	* @param   contentHandler The implemention of the
 	* contentHandler operation (toXMLString, digest, ...)
 	*/
-	@:overload public function new(contentHandler : org.xml.sax.ContentHandler, dh : com.sun.org.apache.xml.internal.utils.DOMHelper) : Void;
+	@:overload @:public public function new(contentHandler : org.xml.sax.ContentHandler, dh : com.sun.org.apache.xml.internal.utils.DOMHelper) : Void;
 	
 	/**
 	* Constructor.
 	* @param   contentHandler The implemention of the
 	* contentHandler operation (toXMLString, digest, ...)
 	*/
-	@:overload public function new(contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Perform a pre-order traversal non-recursive style.
@@ -74,7 +74,7 @@ extern class TreeWalker
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function traverse(pos : org.w3c.dom.Node) : Void;
+	@:overload @:public public function traverse(pos : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Perform a pre-order traversal non-recursive style.
@@ -86,7 +86,7 @@ extern class TreeWalker
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function traverseFragment(pos : org.w3c.dom.Node) : Void;
+	@:overload @:public public function traverseFragment(pos : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Perform a pre-order traversal non-recursive style.
@@ -101,7 +101,7 @@ extern class TreeWalker
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function traverse(pos : org.w3c.dom.Node, top : org.w3c.dom.Node) : Void;
+	@:overload @:public public function traverse(pos : org.w3c.dom.Node, top : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Start processing given node
@@ -111,7 +111,7 @@ extern class TreeWalker
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function startNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function startNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* End processing of given node
@@ -121,7 +121,7 @@ extern class TreeWalker
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function endNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function endNode(node : org.w3c.dom.Node) : Void;
 	
 	
 }

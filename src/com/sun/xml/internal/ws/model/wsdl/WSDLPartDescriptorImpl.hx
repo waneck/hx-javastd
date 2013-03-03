@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLPartDescriptorImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractObjectImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLPartDescriptor
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, name : javax.xml.namespace.QName, kind : com.sun.xml.internal.ws.api.model.wsdl.WSDLDescriptorKind) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, name : javax.xml.namespace.QName, kind : com.sun.xml.internal.ws.api.model.wsdl.WSDLDescriptorKind) : Void;
 	
-	@:overload public function name() : javax.xml.namespace.QName;
+	@:overload @:public public function name() : javax.xml.namespace.QName;
 	
-	@:overload public function type() : com.sun.xml.internal.ws.api.model.wsdl.WSDLDescriptorKind;
+	@:overload @:public public function type() : com.sun.xml.internal.ws.api.model.wsdl.WSDLDescriptorKind;
 	
 	
 }

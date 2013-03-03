@@ -46,15 +46,15 @@ package com.sun.xml.internal.rngom.util;
 */
 extern class Uri
 {
-	@:overload public static function isValid(s : String) : Bool;
+	@:overload @:public @:static public static function isValid(s : String) : Bool;
 	
-	@:overload public static function escapeDisallowedChars(s : String) : String;
+	@:overload @:public @:static public static function escapeDisallowedChars(s : String) : String;
 	
-	@:overload public static function resolve(baseUri : String, uriReference : String) : String;
+	@:overload @:public @:static public static function resolve(baseUri : String, uriReference : String) : String;
 	
-	@:overload public static function hasFragmentId(uri : String) : Bool;
+	@:overload @:public @:static public static function hasFragmentId(uri : String) : Bool;
 	
-	@:overload public static function isAbsolute(uri : String) : Bool;
+	@:overload @:public @:static public static function isAbsolute(uri : String) : Bool;
 	
 	
 }

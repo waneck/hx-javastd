@@ -33,7 +33,7 @@ extern class XPATHMessages extends com.sun.org.apache.xml.internal.res.XMLMessag
 	*
 	* @return The formatted message string.
 	*/
-	@:overload @:final public static function createXPATHMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createXPATHMessage(msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Creates a message from the specified key and replacement
@@ -45,7 +45,7 @@ extern class XPATHMessages extends com.sun.org.apache.xml.internal.res.XMLMessag
 	*
 	* @return The formatted warning string.
 	*/
-	@:overload @:final public static function createXPATHWarning(msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createXPATHWarning(msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Creates a message from the specified key and replacement
@@ -58,7 +58,7 @@ extern class XPATHMessages extends com.sun.org.apache.xml.internal.res.XMLMessag
 	*
 	* @return The formatted message string.
 	*/
-	@:overload @:final public static function createXPATHMsg(fResourceBundle : java.util.ListResourceBundle, msgKey : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function createXPATHMsg(fResourceBundle : java.util.ListResourceBundle, msgKey : String, args : java.NativeArray<Dynamic>) : String;
 	
 	
 }

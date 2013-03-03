@@ -25,7 +25,7 @@ package sun.reflect;
 */
 @:internal extern class UnsafeStaticFieldAccessorImpl extends sun.reflect.UnsafeFieldAccessorImpl
 {
-	private var base : Dynamic;
+	@:protected private var base : Dynamic;
 	
 	
 }

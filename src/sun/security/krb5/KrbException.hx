@@ -30,29 +30,29 @@ package sun.security.krb5;
 */
 extern class KrbException extends java.lang.Exception
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function new(i : Int) : Void;
+	@:overload @:public public function new(i : Int) : Void;
 	
-	@:overload public function new(i : Int, s : String) : Void;
+	@:overload @:public public function new(i : Int, s : String) : Void;
 	
-	@:overload public function new(e : sun.security.krb5.internal.KRBError) : Void;
+	@:overload @:public public function new(e : sun.security.krb5.internal.KRBError) : Void;
 	
-	@:overload public function new(e : sun.security.krb5.internal.KRBError, s : String) : Void;
+	@:overload @:public public function new(e : sun.security.krb5.internal.KRBError, s : String) : Void;
 	
-	@:overload public function getError() : sun.security.krb5.internal.KRBError;
+	@:overload @:public public function getError() : sun.security.krb5.internal.KRBError;
 	
-	@:overload public function returnCode() : Int;
+	@:overload @:public public function returnCode() : Int;
 	
-	@:overload public function returnCodeSymbol() : String;
+	@:overload @:public public function returnCodeSymbol() : String;
 	
-	@:native('returnCodeSymbol') @:overload public static function _returnCodeSymbol(i : Int) : String;
+	@:native('returnCodeSymbol') @:overload @:public @:static public static function _returnCodeSymbol(i : Int) : String;
 	
-	@:overload public function returnCodeMessage() : String;
+	@:overload @:public public function returnCodeMessage() : String;
 	
-	@:overload public static function errorMessage(i : Int) : String;
+	@:overload @:public @:static public static function errorMessage(i : Int) : String;
 	
-	@:overload public function krbErrorMessage() : String;
+	@:overload @:public public function krbErrorMessage() : String;
 	
 	/**
 	* Returns messages like:
@@ -60,13 +60,13 @@ extern class KrbException extends java.lang.Exception
 	*                         Could not decrypt service ticket"
 	* If the error code is 0 then the first half is skipped.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

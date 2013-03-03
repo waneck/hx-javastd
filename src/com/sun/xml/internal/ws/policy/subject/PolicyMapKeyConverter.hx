@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.policy.subject;
 */
 extern class PolicyMapKeyConverter
 {
-	@:overload public function new(serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getPolicyMapKey(subject : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject) : com.sun.xml.internal.ws.policy.PolicyMapKey;
+	@:overload @:public public function getPolicyMapKey(subject : com.sun.xml.internal.ws.policy.subject.WsdlBindingSubject) : com.sun.xml.internal.ws.policy.PolicyMapKey;
 	
 	
 }

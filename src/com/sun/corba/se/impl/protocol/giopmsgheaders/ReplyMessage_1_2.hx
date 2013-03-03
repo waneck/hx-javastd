@@ -25,29 +25,29 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class ReplyMessage_1_2 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_2 implements com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage
 {
-	@:overload public function getRequestId() : Int;
+	@:overload @:public public function getRequestId() : Int;
 	
-	@:overload public function getReplyStatus() : Int;
+	@:overload @:public public function getReplyStatus() : Int;
 	
-	@:overload public function getAddrDisposition() : java.StdTypes.Int16;
+	@:overload @:public public function getAddrDisposition() : java.StdTypes.Int16;
 	
-	@:overload public function getServiceContexts() : com.sun.corba.se.spi.servicecontext.ServiceContexts;
+	@:overload @:public public function getServiceContexts() : com.sun.corba.se.spi.servicecontext.ServiceContexts;
 	
-	@:overload public function setServiceContexts(sc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : Void;
+	@:overload @:public public function setServiceContexts(sc : com.sun.corba.se.spi.servicecontext.ServiceContexts) : Void;
 	
-	@:overload public function getSystemException(message : String) : org.omg.CORBA.SystemException;
+	@:overload @:public public function getSystemException(message : String) : org.omg.CORBA.SystemException;
 	
-	@:overload public function getIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function setIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function setIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public static function isValidReplyStatus(replyStatus : Int) : Void;
+	@:overload @:public @:static public static function isValidReplyStatus(replyStatus : Int) : Void;
 	
-	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload @:public override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

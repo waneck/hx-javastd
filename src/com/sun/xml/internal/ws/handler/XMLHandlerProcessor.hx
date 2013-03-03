@@ -34,7 +34,7 @@ package com.sun.xml.internal.ws.handler;
 	/**
 	* Creates a new instance of LogicalHandlerProcessor
 	*/
-	@:overload public function new(owner : com.sun.xml.internal.ws.handler.HandlerTube, binding : com.sun.xml.internal.ws.api.WSBinding, chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.handler.HandlerTube, binding : com.sun.xml.internal.ws.api.WSBinding, chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	
 }

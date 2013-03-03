@@ -29,7 +29,7 @@ extern class PagedResultsResponseControl extends javax.naming.ldap.BasicControl
 	* The paged-results response control's assigned object identifier
 	* is 1.2.840.113556.1.4.319.
 	*/
-	public static var OID(default, null) : String;
+	@:public @:static @:final public static var OID(default, null) : String;
 	
 	/**
 	* Constructs a paged-results response control.
@@ -42,14 +42,14 @@ extern class PagedResultsResponseControl extends javax.naming.ldap.BasicControl
 	* @exception IOException   If an error was encountered while decoding
 	*                          the control's value.
 	*/
-	@:overload public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(id : String, criticality : Bool, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Retrieves (an estimate of) the number of entries in the search result.
 	*
 	* @return The number of entries in the search result, or zero if unknown.
 	*/
-	@:overload public function getResultSize() : Int;
+	@:overload @:public public function getResultSize() : Int;
 	
 	/**
 	* Retrieves the server-generated cookie. Null is returned when there are
@@ -59,7 +59,7 @@ extern class PagedResultsResponseControl extends javax.naming.ldap.BasicControl
 	*         changes to the cookie will update the control's state and thus
 	*         are not recommended.
 	*/
-	@:overload public function getCookie() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getCookie() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

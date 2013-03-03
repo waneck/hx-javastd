@@ -37,29 +37,29 @@ extern class CertificatePolicyMap
 	* @param issuer the CertificatePolicyId for the issuer CA.
 	* @param subject the CertificatePolicyId for the subject CA.
 	*/
-	@:overload public function new(issuer : sun.security.x509.CertificatePolicyId, subject : sun.security.x509.CertificatePolicyId) : Void;
+	@:overload @:public public function new(issuer : sun.security.x509.CertificatePolicyId, subject : sun.security.x509.CertificatePolicyId) : Void;
 	
 	/**
 	* Create the CertificatePolicyMap from the DER encoded value.
 	*
 	* @param val the DER encoded value of the same.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the issuer CA part of the policy map.
 	*/
-	@:overload public function getIssuerIdentifier() : sun.security.x509.CertificatePolicyId;
+	@:overload @:public public function getIssuerIdentifier() : sun.security.x509.CertificatePolicyId;
 	
 	/**
 	* Return the subject CA part of the policy map.
 	*/
-	@:overload public function getSubjectIdentifier() : sun.security.x509.CertificatePolicyId;
+	@:overload @:public public function getSubjectIdentifier() : sun.security.x509.CertificatePolicyId;
 	
 	/**
 	* Returns a printable representation of the CertificatePolicyId.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the CertificatePolicyMap to the DerOutputStream.
@@ -67,7 +67,7 @@ extern class CertificatePolicyMap
 	* @param out the DerOutputStream to write the object to.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	
 }

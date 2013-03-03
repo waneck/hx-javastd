@@ -28,22 +28,22 @@ extern interface Scope
 	/**
 	* Returns the enclosing scope.
 	*/
-	@:overload public function getEnclosingScope() : com.sun.source.tree.Scope;
+	@:overload @:public public function getEnclosingScope() : com.sun.source.tree.Scope;
 	
 	/**
 	* Returns the innermost type element containing the position of this scope
 	*/
-	@:overload public function getEnclosingClass() : javax.lang.model.element.TypeElement;
+	@:overload @:public public function getEnclosingClass() : javax.lang.model.element.TypeElement;
 	
 	/**
 	* Returns the innermost executable element containing the position of this scope.
 	*/
-	@:overload public function getEnclosingMethod() : javax.lang.model.element.ExecutableElement;
+	@:overload @:public public function getEnclosingMethod() : javax.lang.model.element.ExecutableElement;
 	
 	/**
 	* Returns the elements directly contained in this scope.
 	*/
-	@:overload public function getLocalElements() : java.lang.Iterable<javax.lang.model.element.Element>;
+	@:overload @:public public function getLocalElements() : java.lang.Iterable<javax.lang.model.element.Element>;
 	
 	
 }

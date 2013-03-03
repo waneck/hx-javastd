@@ -63,7 +63,7 @@ package com.sun.jdi;
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

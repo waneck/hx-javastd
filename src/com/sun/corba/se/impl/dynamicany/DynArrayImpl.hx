@@ -25,20 +25,20 @@ package com.sun.corba.se.impl.dynamicany;
 */
 extern class DynArrayImpl extends com.sun.corba.se.impl.dynamicany.DynAnyCollectionImpl implements org.omg.DynamicAny.DynArray
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload private function initializeComponentsFromAny() : Bool;
+	@:overload @:protected override private function initializeComponentsFromAny() : Bool;
 	
-	@:overload private function initializeComponentsFromTypeCode() : Bool;
+	@:overload @:protected override private function initializeComponentsFromTypeCode() : Bool;
 	
 	/*
 	public void set_elements (org.omg.CORBA.Any[] value)
 	throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
 	org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 */
-	@:overload override private function checkValue(value : java.NativeArray<org.omg.CORBA.Object>) : Void;
+	@:overload @:protected override private function checkValue(value : java.NativeArray<org.omg.CORBA.Object>) : Void;
 	
 	
 }

@@ -70,7 +70,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintArrowButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintArrowButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of an arrow button. Arrow buttons are created by
@@ -84,7 +84,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintArrowButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintArrowButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the foreground of an arrow button. This method is responsible
@@ -102,7 +102,7 @@ package javax.swing.plaf.synth;
 	* @param direction One of SwingConstants.NORTH, SwingConstants.SOUTH
 	*                  SwingConstants.EAST or SwingConstants.WEST
 	*/
-	@:overload public function paintArrowButtonForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, direction : Int) : Void;
+	@:overload @:public public function paintArrowButtonForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, direction : Int) : Void;
 	
 	/**
 	* Paints the background of a button.
@@ -115,7 +115,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a button.
@@ -128,7 +128,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a check box menu item.
@@ -141,7 +141,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintCheckBoxMenuItemBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintCheckBoxMenuItemBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a check box menu item.
@@ -154,7 +154,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintCheckBoxMenuItemBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintCheckBoxMenuItemBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a check box.
@@ -167,7 +167,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintCheckBoxBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintCheckBoxBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a check box.
@@ -180,7 +180,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintCheckBoxBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintCheckBoxBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a color chooser.
@@ -193,7 +193,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintColorChooserBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintColorChooserBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a color chooser.
@@ -206,7 +206,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintColorChooserBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintColorChooserBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a combo box.
@@ -219,7 +219,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintComboBoxBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintComboBoxBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a combo box.
@@ -232,7 +232,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintComboBoxBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintComboBoxBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a desktop icon.
@@ -245,7 +245,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintDesktopIconBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintDesktopIconBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a desktop icon.
@@ -258,7 +258,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintDesktopIconBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintDesktopIconBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a desktop pane.
@@ -271,7 +271,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintDesktopPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintDesktopPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a desktop pane.
@@ -284,7 +284,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintDesktopPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintDesktopPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of an editor pane.
@@ -297,7 +297,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintEditorPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintEditorPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of an editor pane.
@@ -310,7 +310,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintEditorPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintEditorPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a file chooser.
@@ -323,7 +323,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintFileChooserBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintFileChooserBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a file chooser.
@@ -336,7 +336,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintFileChooserBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintFileChooserBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a formatted text field.
@@ -349,7 +349,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintFormattedTextFieldBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintFormattedTextFieldBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a formatted text field.
@@ -362,7 +362,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintFormattedTextFieldBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintFormattedTextFieldBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of an internal frame title pane.
@@ -375,7 +375,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintInternalFrameTitlePaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintInternalFrameTitlePaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of an internal frame title pane.
@@ -388,7 +388,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintInternalFrameTitlePaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintInternalFrameTitlePaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of an internal frame.
@@ -401,7 +401,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintInternalFrameBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintInternalFrameBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of an internal frame.
@@ -414,7 +414,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintInternalFrameBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintInternalFrameBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a label.
@@ -427,7 +427,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintLabelBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintLabelBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a label.
@@ -440,7 +440,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintLabelBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintLabelBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a list.
@@ -453,7 +453,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintListBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintListBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a list.
@@ -466,7 +466,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintListBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintListBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a menu bar.
@@ -479,7 +479,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintMenuBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintMenuBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a menu bar.
@@ -492,7 +492,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintMenuBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintMenuBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a menu item.
@@ -505,7 +505,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintMenuItemBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintMenuItemBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a menu item.
@@ -518,7 +518,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintMenuItemBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintMenuItemBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a menu.
@@ -531,7 +531,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintMenuBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintMenuBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a menu.
@@ -544,7 +544,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintMenuBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintMenuBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of an option pane.
@@ -557,7 +557,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintOptionPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintOptionPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of an option pane.
@@ -570,7 +570,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintOptionPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintOptionPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a panel.
@@ -583,7 +583,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintPanelBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintPanelBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a panel.
@@ -596,7 +596,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintPanelBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintPanelBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a password field.
@@ -609,7 +609,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintPasswordFieldBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintPasswordFieldBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a password field.
@@ -622,7 +622,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintPasswordFieldBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintPasswordFieldBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a popup menu.
@@ -635,7 +635,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintPopupMenuBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintPopupMenuBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a popup menu.
@@ -648,7 +648,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintPopupMenuBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintPopupMenuBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a progress bar.
@@ -661,7 +661,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintProgressBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintProgressBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a progress bar. This implementation invokes the
@@ -678,7 +678,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JProgressBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintProgressBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintProgressBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of a progress bar.
@@ -691,7 +691,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintProgressBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintProgressBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a progress bar. This implementation invokes the
@@ -708,7 +708,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JProgressBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintProgressBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintProgressBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the foreground of a progress bar. is responsible for
@@ -724,7 +724,7 @@ package javax.swing.plaf.synth;
 	* @param orientation one of <code>JProgressBar.HORIZONTAL</code> or
 	*                    <code>JProgressBar.VERTICAL</code>
 	*/
-	@:overload public function paintProgressBarForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintProgressBarForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a radio button menu item.
@@ -737,7 +737,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintRadioButtonMenuItemBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRadioButtonMenuItemBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a radio button menu item.
@@ -750,7 +750,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintRadioButtonMenuItemBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRadioButtonMenuItemBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a radio button.
@@ -763,7 +763,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintRadioButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRadioButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a radio button.
@@ -776,7 +776,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintRadioButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRadioButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a root pane.
@@ -789,7 +789,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintRootPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRootPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a root pane.
@@ -802,7 +802,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintRootPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRootPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a scrollbar.
@@ -815,7 +815,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintScrollBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintScrollBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a scrollbar. This implementation invokes the
@@ -833,7 +833,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JScrollBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintScrollBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintScrollBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of a scrollbar.
@@ -846,7 +846,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintScrollBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintScrollBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a scrollbar. This implementation invokes the
@@ -864,7 +864,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JScrollBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintScrollBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintScrollBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the thumb of a scrollbar. The thumb provides
@@ -882,7 +882,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JScrollBar.HORIZONTAL</code> or
 	*                    <code>JScrollBar.VERTICAL</code>
 	*/
-	@:overload public function paintScrollBarThumbBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintScrollBarThumbBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the thumb of a scrollbar. The thumb provides
@@ -900,7 +900,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JScrollBar.HORIZONTAL</code> or
 	*                    <code>JScrollBar.VERTICAL</code>
 	*/
-	@:overload public function paintScrollBarThumbBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintScrollBarThumbBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the track of a scrollbar. The track contains
@@ -914,7 +914,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintScrollBarTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintScrollBarTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the track of a scrollbar. The track contains
@@ -933,7 +933,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JScrollBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintScrollBarTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintScrollBarTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the track of a scrollbar. The track contains
@@ -947,7 +947,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintScrollBarTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintScrollBarTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the track of a scrollbar. The track contains
@@ -966,7 +966,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JScrollBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintScrollBarTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintScrollBarTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a scroll pane.
@@ -979,7 +979,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintScrollPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintScrollPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a scroll pane.
@@ -992,7 +992,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintScrollPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintScrollPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a separator.
@@ -1005,7 +1005,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSeparatorBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSeparatorBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a separator. This implementation invokes the
@@ -1022,7 +1022,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSeparator.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSeparatorBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSeparatorBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of a separator.
@@ -1035,7 +1035,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSeparatorBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSeparatorBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a separator. This implementation invokes the
@@ -1052,7 +1052,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSeparator.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSeparatorBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSeparatorBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the foreground of a separator.
@@ -1067,7 +1067,7 @@ package javax.swing.plaf.synth;
 	* @param orientation One of <code>JSeparator.HORIZONTAL</code> or
 	*                           <code>JSeparator.VERTICAL</code>
 	*/
-	@:overload public function paintSeparatorForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintSeparatorForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a slider.
@@ -1080,7 +1080,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSliderBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSliderBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a slider. This implementation invokes the
@@ -1097,7 +1097,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSlider.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSliderBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSliderBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of a slider.
@@ -1110,7 +1110,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSliderBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSliderBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a slider. This implementation invokes the
@@ -1127,7 +1127,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSlider.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSliderBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSliderBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the thumb of a slider.
@@ -1142,7 +1142,7 @@ package javax.swing.plaf.synth;
 	* @param orientation One of <code>JSlider.HORIZONTAL</code> or
 	*                           <code>JSlider.VERTICAL</code>
 	*/
-	@:overload public function paintSliderThumbBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintSliderThumbBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the thumb of a slider.
@@ -1157,7 +1157,7 @@ package javax.swing.plaf.synth;
 	* @param orientation One of <code>JSlider.HORIZONTAL</code> or
 	*                           <code>JSlider.VERTICAL</code>
 	*/
-	@:overload public function paintSliderThumbBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintSliderThumbBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the track of a slider.
@@ -1170,7 +1170,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSliderTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSliderTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the track of a slider. This implementation invokes
@@ -1187,7 +1187,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSlider.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSliderTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSliderTrackBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the track of a slider.
@@ -1200,7 +1200,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSliderTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSliderTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the track of a slider. This implementation invokes the
@@ -1217,7 +1217,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSlider.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSliderTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSliderTrackBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a spinner.
@@ -1230,7 +1230,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSpinnerBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSpinnerBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a spinner.
@@ -1243,7 +1243,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSpinnerBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSpinnerBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the divider of a split pane.
@@ -1256,7 +1256,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSplitPaneDividerBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSplitPaneDividerBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the divider of a split pane. This implementation
@@ -1273,7 +1273,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JSplitPane.VERTICAL_SPLIT</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintSplitPaneDividerBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintSplitPaneDividerBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the foreground of the divider of a split pane.
@@ -1288,7 +1288,7 @@ package javax.swing.plaf.synth;
 	* @param orientation One of <code>JSplitPane.HORIZONTAL_SPLIT</code> or
 	*                           <code>JSplitPane.VERTICAL_SPLIT</code>
 	*/
-	@:overload public function paintSplitPaneDividerForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintSplitPaneDividerForeground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the divider, when the user is dragging the divider, of a
@@ -1304,7 +1304,7 @@ package javax.swing.plaf.synth;
 	* @param orientation One of <code>JSplitPane.HORIZONTAL_SPLIT</code> or
 	*                           <code>JSplitPane.VERTICAL_SPLIT</code>
 	*/
-	@:overload public function paintSplitPaneDragDivider(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:overload @:public public function paintSplitPaneDragDivider(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a split pane.
@@ -1317,7 +1317,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSplitPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSplitPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a split pane.
@@ -1330,7 +1330,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintSplitPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintSplitPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a tabbed pane.
@@ -1343,7 +1343,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTabbedPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTabbedPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a tabbed pane.
@@ -1356,7 +1356,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTabbedPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTabbedPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the area behind the tabs of a tabbed pane.
@@ -1369,7 +1369,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTabbedPaneTabAreaBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTabbedPaneTabAreaBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the area behind the tabs of a tabbed pane.
@@ -1389,7 +1389,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JTabbedPane.RIGHT</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintTabbedPaneTabAreaBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintTabbedPaneTabAreaBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the area behind the tabs of a tabbed pane.
@@ -1402,7 +1402,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTabbedPaneTabAreaBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTabbedPaneTabAreaBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the area behind the tabs of a tabbed pane. This
@@ -1421,7 +1421,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JTabbedPane.RIGHT</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintTabbedPaneTabAreaBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintTabbedPaneTabAreaBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a tab of a tabbed pane.
@@ -1435,7 +1435,7 @@ package javax.swing.plaf.synth;
 	* @param h Height of the area to paint to
 	* @param tabIndex Index of tab being painted.
 	*/
-	@:overload public function paintTabbedPaneTabBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int) : Void;
+	@:overload @:public public function paintTabbedPaneTabBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int) : Void;
 	
 	/**
 	* Paints the background of a tab of a tabbed pane. This implementation
@@ -1455,7 +1455,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JTabbedPane.RIGHT</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintTabbedPaneTabBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintTabbedPaneTabBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of a tab of a tabbed pane.
@@ -1469,7 +1469,7 @@ package javax.swing.plaf.synth;
 	* @param h Height of the area to paint to
 	* @param tabIndex Index of tab being painted.
 	*/
-	@:overload public function paintTabbedPaneTabBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int) : Void;
+	@:overload @:public public function paintTabbedPaneTabBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int) : Void;
 	
 	/**
 	* Paints the border of a tab of a tabbed pane. This implementation invokes
@@ -1489,7 +1489,7 @@ package javax.swing.plaf.synth;
 	*                    <code>JTabbedPane.RIGHT</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintTabbedPaneTabBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintTabbedPaneTabBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, tabIndex : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the area that contains the content of the
@@ -1503,7 +1503,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTabbedPaneContentBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTabbedPaneContentBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the area that contains the content of the
@@ -1517,7 +1517,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTabbedPaneContentBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTabbedPaneContentBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the header of a table.
@@ -1530,7 +1530,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTableHeaderBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTableHeaderBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the header of a table.
@@ -1543,7 +1543,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTableHeaderBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTableHeaderBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a table.
@@ -1556,7 +1556,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTableBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTableBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a table.
@@ -1569,7 +1569,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTableBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTableBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a text area.
@@ -1582,7 +1582,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTextAreaBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTextAreaBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a text area.
@@ -1595,7 +1595,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTextAreaBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTextAreaBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a text pane.
@@ -1608,7 +1608,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTextPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTextPaneBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a text pane.
@@ -1621,7 +1621,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTextPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTextPaneBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a text field.
@@ -1634,7 +1634,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTextFieldBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTextFieldBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a text field.
@@ -1647,7 +1647,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTextFieldBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTextFieldBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a toggle button.
@@ -1660,7 +1660,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToggleButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToggleButtonBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a toggle button.
@@ -1673,7 +1673,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToggleButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToggleButtonBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a tool bar.
@@ -1686,7 +1686,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a tool bar. This implementation invokes the
@@ -1703,7 +1703,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JToolBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintToolBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintToolBarBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of a tool bar.
@@ -1716,7 +1716,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a tool bar. This implementation invokes the
@@ -1733,7 +1733,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JToolBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintToolBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintToolBarBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the tool bar's content area.
@@ -1746,7 +1746,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolBarContentBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolBarContentBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the tool bar's content area. This implementation
@@ -1763,7 +1763,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JToolBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintToolBarContentBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintToolBarContentBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the content area of a tool bar.
@@ -1776,7 +1776,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolBarContentBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolBarContentBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the content area of a tool bar. This implementation
@@ -1793,7 +1793,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JToolBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintToolBarContentBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintToolBarContentBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of the window containing the tool bar when it
@@ -1807,7 +1807,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolBarDragWindowBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolBarDragWindowBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the window containing the tool bar when it
@@ -1825,7 +1825,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JToolBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintToolBarDragWindowBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintToolBarDragWindowBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the border of the window containing the tool bar when it
@@ -1839,7 +1839,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolBarDragWindowBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolBarDragWindowBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the window containing the tool bar when it
@@ -1857,7 +1857,7 @@ package javax.swing.plaf.synth;
 	*                           <code>JToolBar.VERTICAL</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function paintToolBarDragWindowBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
+	@:require(java6) @:overload @:public public function paintToolBarDragWindowBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, orientation : Int) : Void;
 	
 	/**
 	* Paints the background of a tool tip.
@@ -1870,7 +1870,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolTipBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolTipBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a tool tip.
@@ -1883,7 +1883,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintToolTipBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintToolTipBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of a tree.
@@ -1896,7 +1896,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTreeBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTreeBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a tree.
@@ -1909,7 +1909,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTreeBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTreeBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the row containing a cell in a tree.
@@ -1922,7 +1922,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTreeCellBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTreeCellBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of the row containing a cell in a tree.
@@ -1935,7 +1935,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTreeCellBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTreeCellBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the focus indicator for a cell in a tree when it has focus.
@@ -1948,7 +1948,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintTreeCellFocus(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintTreeCellFocus(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the background of the viewport.
@@ -1961,7 +1961,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintViewportBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintViewportBackground(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the border of a viewport.
@@ -1974,7 +1974,7 @@ package javax.swing.plaf.synth;
 	* @param w Width of the area to paint to
 	* @param h Height of the area to paint to
 	*/
-	@:overload public function paintViewportBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintViewportBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

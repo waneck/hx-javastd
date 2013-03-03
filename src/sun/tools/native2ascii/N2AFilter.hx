@@ -32,11 +32,11 @@ package sun.tools.native2ascii;
 */
 @:internal extern class N2AFilter extends java.io.FilterWriter
 {
-	@:overload public function new(out : java.io.Writer) : Void;
+	@:overload @:public public function new(out : java.io.Writer) : Void;
 	
-	@:overload public function write(b : java.StdTypes.Char16) : Void;
+	@:overload @:public public function write(b : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	
 }

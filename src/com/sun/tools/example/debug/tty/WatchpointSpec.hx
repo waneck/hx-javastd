@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.tty;
 */
 @:internal extern class WatchpointSpec extends com.sun.tools.example.debug.tty.EventRequestSpec
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

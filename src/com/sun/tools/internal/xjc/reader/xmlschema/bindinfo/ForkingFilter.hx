@@ -25,36 +25,36 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 */
 extern class ForkingFilter extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(next : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(next : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function getSideHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getSideHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getDocumentLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getDocumentLocator() : org.xml.sax.Locator;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public override public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Starts the event forking.
 	*/
-	@:overload public function startForking(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes, side : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function startForking(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes, side : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

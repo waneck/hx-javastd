@@ -25,13 +25,13 @@ package sun.security.provider;
 */
 extern class NativePRNG extends java.security.SecureRandomSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function engineNextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineNextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

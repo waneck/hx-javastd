@@ -25,17 +25,17 @@ package com.sun.tools.javac.file;
 */
 extern class ZipFileIndexCache
 {
-	@:overload @:synchronized public static function getSharedInstance() : com.sun.tools.javac.file.ZipFileIndexCache;
+	@:overload @:public @:synchronized @:static public static function getSharedInstance() : com.sun.tools.javac.file.ZipFileIndexCache;
 	
 	/** Get a context-specific instance of a cache. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.file.ZipFileIndexCache;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.file.ZipFileIndexCache;
 	
 	/**
 	* Returns a list of all ZipFileIndex entries
 	*
 	* @return A list of ZipFileIndex entries, or an empty list
 	*/
-	@:overload public function getZipFileIndexes() : java.util.List<com.sun.tools.javac.file.ZipFileIndex>;
+	@:overload @:public public function getZipFileIndexes() : java.util.List<com.sun.tools.javac.file.ZipFileIndex>;
 	
 	/**
 	* Returns a list of all ZipFileIndex entries
@@ -44,22 +44,22 @@ extern class ZipFileIndexCache
 	*                   all ZipFileEntry(s) are included into the list.
 	* @return A list of ZipFileIndex entries, or an empty list
 	*/
-	@:overload @:synchronized public function getZipFileIndexes(openedOnly : Bool) : java.util.List<com.sun.tools.javac.file.ZipFileIndex>;
+	@:overload @:public @:synchronized public function getZipFileIndexes(openedOnly : Bool) : java.util.List<com.sun.tools.javac.file.ZipFileIndex>;
 	
-	@:overload @:synchronized public function getZipFileIndex(zipFile : java.io.File, symbolFilePrefix : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, useCache : Bool, cacheLocation : String, writeIndex : Bool) : com.sun.tools.javac.file.ZipFileIndex;
+	@:overload @:public @:synchronized public function getZipFileIndex(zipFile : java.io.File, symbolFilePrefix : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, useCache : Bool, cacheLocation : String, writeIndex : Bool) : com.sun.tools.javac.file.ZipFileIndex;
 	
-	@:overload @:synchronized public function getExistingZipIndex(zipFile : java.io.File) : com.sun.tools.javac.file.ZipFileIndex;
+	@:overload @:public @:synchronized public function getExistingZipIndex(zipFile : java.io.File) : com.sun.tools.javac.file.ZipFileIndex;
 	
-	@:overload @:synchronized public function clearCache() : Void;
+	@:overload @:public @:synchronized public function clearCache() : Void;
 	
-	@:overload @:synchronized public function clearCache(timeNotUsed : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function clearCache(timeNotUsed : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function removeFromCache(file : java.io.File) : Void;
+	@:overload @:public @:synchronized public function removeFromCache(file : java.io.File) : Void;
 	
 	/** Sets already opened list of ZipFileIndexes from an outside client
 	* of the compiler. This functionality should be used in a non-batch clients of the compiler.
 	*/
-	@:overload @:synchronized public function setOpenedIndexes(indexes : java.util.List<com.sun.tools.javac.file.ZipFileIndex>) : Void;
+	@:overload @:public @:synchronized public function setOpenedIndexes(indexes : java.util.List<com.sun.tools.javac.file.ZipFileIndex>) : Void;
 	
 	
 }

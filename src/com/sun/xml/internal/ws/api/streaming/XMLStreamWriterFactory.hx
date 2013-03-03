@@ -29,19 +29,19 @@ extern class XMLStreamWriterFactory
 	* See {@link #create(OutputStream)} for the contract.
 	* This method may be invoked concurrently.
 	*/
-	@:overload @:abstract public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:abstract public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* See {@link #create(OutputStream,String)} for the contract.
 	* This method may be invoked concurrently.
 	*/
-	@:overload @:abstract public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:abstract public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* See {@link #recycle(XMLStreamWriter)} for the contract.
 	* This method may be invoked concurrently.
 	*/
-	@:overload @:abstract public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:abstract public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Should be invoked when the code finished using an {@link XMLStreamWriter}.
@@ -66,12 +66,12 @@ extern class XMLStreamWriterFactory
 	*      the ones that were created from this factory. So the implementation
 	*      of this class needs to be aware of that.
 	*/
-	@:overload public static function recycle(r : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:static public static function recycle(r : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Gets the singleton instance.
 	*/
-	@:overload public static function get() : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
+	@:overload @:public @:static public static function get() : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
 	
 	/**
 	* Overrides the singleton {@link XMLStreamWriterFactory} instance that
@@ -80,32 +80,32 @@ extern class XMLStreamWriterFactory
 	* @param f
 	*      must not be null.
 	*/
-	@:overload public static function set(f : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory) : Void;
+	@:overload @:public @:static public static function set(f : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory) : Void;
 	
 	/**
 	* Short-cut for {@link #create(OutputStream, String)} with UTF-8.
 	*/
-	@:overload public static function create(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:static public static function create(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public static function create(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:static public static function create(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* @deprecated
 	*      Use {@link #create(OutputStream)}
 	*/
-	@:overload public static function createXMLStreamWriter(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:static public static function createXMLStreamWriter(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* @deprecated
 	*      Use {@link #create(OutputStream, String)}
 	*/
-	@:overload public static function createXMLStreamWriter(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:static public static function createXMLStreamWriter(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
 	/**
 	* @deprecated
 	*      Use {@link #create(OutputStream, String)}. The boolean flag was unused anyway.
 	*/
-	@:overload public static function createXMLStreamWriter(out : java.io.OutputStream, encoding : String, declare : Bool) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:static public static function createXMLStreamWriter(out : java.io.OutputStream, encoding : String, declare : Bool) : javax.xml.stream.XMLStreamWriter;
 	
 	
 }
@@ -133,13 +133,13 @@ extern class XMLStreamWriterFactory
 */
 @:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$Default') extern class XMLStreamWriterFactory_Default extends com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory
 {
-	@:overload public function new(xof : javax.xml.stream.XMLOutputFactory) : Void;
+	@:overload @:public public function new(xof : javax.xml.stream.XMLOutputFactory) : Void;
 	
-	@:overload override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload @:synchronized override public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public @:synchronized override public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload override public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }
@@ -151,13 +151,13 @@ extern class XMLStreamWriterFactory
 */
 @:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$Zephyr') extern class XMLStreamWriterFactory_Zephyr extends com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory
 {
-	@:overload public static function newInstance(xof : javax.xml.stream.XMLOutputFactory) : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
+	@:overload @:public @:static public static function newInstance(xof : javax.xml.stream.XMLOutputFactory) : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
 	
-	@:overload override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload override public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload override public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }
@@ -167,13 +167,13 @@ extern class XMLStreamWriterFactory
 */
 @:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$NoLock') extern class XMLStreamWriterFactory_NoLock extends com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory
 {
-	@:overload public function new(xof : javax.xml.stream.XMLOutputFactory) : Void;
+	@:overload @:public public function new(xof : javax.xml.stream.XMLOutputFactory) : Void;
 	
-	@:overload override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload override public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function doCreate(out : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload override public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function doRecycle(r : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }

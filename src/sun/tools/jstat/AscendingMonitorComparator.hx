@@ -31,7 +31,7 @@ package sun.tools.jstat;
 */
 @:require(java5) @:internal extern class AscendingMonitorComparator implements java.util.Comparator<sun.jvmstat.monitor.Monitor>
 {
-	@:overload public function compare(o1 : sun.jvmstat.monitor.Monitor, o2 : sun.jvmstat.monitor.Monitor) : Int;
+	@:overload @:public public function compare(o1 : sun.jvmstat.monitor.Monitor, o2 : sun.jvmstat.monitor.Monitor) : Int;
 	
 	
 }

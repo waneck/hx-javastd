@@ -24,9 +24,9 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 */
 extern class SchemaDateTimeException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

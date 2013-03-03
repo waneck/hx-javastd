@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class DUP_X1 extends com.sun.org.apache.bcel.internal.generic.StackInstruction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -74,7 +74,7 @@ extern class DUP_X1 extends com.sun.org.apache.bcel.internal.generic.StackInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

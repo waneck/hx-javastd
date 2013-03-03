@@ -28,7 +28,7 @@ extern class PopupMenuUI extends javax.swing.plaf.ComponentUI
 	/**
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isPopupTrigger(e : java.awt.event.MouseEvent) : Bool;
+	@:require(java3) @:overload @:public public function isPopupTrigger(e : java.awt.event.MouseEvent) : Bool;
 	
 	/**
 	* Returns the <code>Popup</code> that will be responsible for
@@ -40,7 +40,7 @@ extern class PopupMenuUI extends javax.swing.plaf.ComponentUI
 	* @return Popup that will show the JPopupMenu
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getPopup(popup : javax.swing.JPopupMenu, x : Int, y : Int) : javax.swing.Popup;
+	@:require(java4) @:overload @:public public function getPopup(popup : javax.swing.JPopupMenu, x : Int, y : Int) : javax.swing.Popup;
 	
 	
 }

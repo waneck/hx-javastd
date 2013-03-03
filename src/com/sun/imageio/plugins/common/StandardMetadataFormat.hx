@@ -25,9 +25,9 @@ package com.sun.imageio.plugins.common;
 */
 extern class StandardMetadataFormat extends javax.imageio.metadata.IIOMetadataFormatImpl
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:public override public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
 	
 	
 }

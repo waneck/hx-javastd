@@ -31,7 +31,7 @@ extern interface EndElement extends javax.xml.stream.events.XMLEvent
 	* Get the name of this event
 	* @return the qualified name of this event
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns an Iterator of namespaces that have gone out
@@ -40,7 +40,7 @@ extern interface EndElement extends javax.xml.stream.events.XMLEvent
 	* @return an Iterator over Namespace interfaces, or an
 	* empty iterator
 	*/
-	@:overload public function getNamespaces() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getNamespaces() : java.util.Iterator<Dynamic>;
 	
 	
 }

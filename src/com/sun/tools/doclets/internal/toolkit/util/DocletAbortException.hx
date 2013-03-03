@@ -25,7 +25,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class DocletAbortException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

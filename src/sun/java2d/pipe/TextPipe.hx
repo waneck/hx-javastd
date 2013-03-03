@@ -33,11 +33,11 @@ extern interface TextPipe
 	* can use to pass on responsibility for drawing various text
 	* representations.
 	*/
-	@:overload public function drawString(g2d : sun.java2d.SunGraphics2D, s : String, x : Float, y : Float) : Void;
+	@:overload @:public public function drawString(g2d : sun.java2d.SunGraphics2D, s : String, x : Float, y : Float) : Void;
 	
-	@:overload public function drawGlyphVector(g2d : sun.java2d.SunGraphics2D, g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public public function drawGlyphVector(g2d : sun.java2d.SunGraphics2D, g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
-	@:overload public function drawChars(g2d : sun.java2d.SunGraphics2D, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function drawChars(g2d : sun.java2d.SunGraphics2D, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
 	
 }

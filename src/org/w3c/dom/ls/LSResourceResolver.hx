@@ -99,7 +99,7 @@ extern interface LSResourceResolver
 	*   source, or <code>null</code> to request that the parser open a
 	*   regular URI connection to the resource.
 	*/
-	@:overload public function resolveResource(type : String, namespaceURI : String, publicId : String, systemId : String, baseURI : String) : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function resolveResource(type : String, namespaceURI : String, publicId : String, systemId : String, baseURI : String) : org.w3c.dom.ls.LSInput;
 	
 	
 }

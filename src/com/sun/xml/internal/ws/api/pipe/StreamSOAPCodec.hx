@@ -32,7 +32,7 @@ extern interface StreamSOAPCodec extends com.sun.xml.internal.ws.api.pipe.Codec
 	* @param reader that represents SOAP envelope infoset
 	* @return a {@link Message} for SOAP envelope
 	*/
-	@:overload public function decode(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function decode(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Reads events from {@link XMLStreamReader} and constructs a
@@ -42,7 +42,7 @@ extern interface StreamSOAPCodec extends com.sun.xml.internal.ws.api.pipe.Codec
 	* @param att attachments for the message
 	* @return a {@link Message} for SOAP envelope
 	*/
-	@:overload public function decode(reader : javax.xml.stream.XMLStreamReader, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function decode(reader : javax.xml.stream.XMLStreamReader, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

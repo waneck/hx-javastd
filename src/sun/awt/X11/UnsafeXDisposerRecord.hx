@@ -25,11 +25,11 @@ package sun.awt.X11;
 */
 @:internal extern class UnsafeXDisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(name : String, unsafe_ptrs : java.NativeArray<haxe.Int64>, x_ptrs : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function new(name : String, unsafe_ptrs : java.NativeArray<haxe.Int64>, x_ptrs : java.NativeArray<haxe.Int64>) : Void;
 	
-	@:overload public function new(name : String, unsafe_ptrs : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function new(name : String, unsafe_ptrs : java.NativeArray<haxe.Int64>) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

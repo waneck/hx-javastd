@@ -42,13 +42,13 @@ package com.sun.tools.doclets.formats.html;
 	* This string can be empty if the file getting generated is in
 	* the destination directory.
 	*/
-	public var relativePath : String;
+	@:public public var relativePath : String;
 	
 	/**
 	* Same as relativepath, but normalized to never be empty or
 	* end with a slash.
 	*/
-	public var relativepathNoSlash : String;
+	@:public public var relativepathNoSlash : String;
 	
 	/**
 	* Platform-dependent directory path from the current or the
@@ -57,30 +57,30 @@ package com.sun.tools.doclets.formats.html;
 	* For example, if the file getting generated is
 	* "java/lang/Object.html", then the path string is "java/lang".
 	*/
-	public var path : String;
+	@:public public var path : String;
 	
 	/**
 	* Name of the file getting generated. If the file getting generated is
 	* "java/lang/Object.html", then the filename is "Object.html".
 	*/
-	public var filename : String;
+	@:public public var filename : String;
 	
 	/**
 	* The display length used for indentation while generating the class page.
 	*/
-	public var displayLength : Int;
+	@:public public var displayLength : Int;
 	
 	/**
 	* To check whether annotation heading is printed or not.
 	*/
-	private var printedAnnotationHeading : Bool;
+	@:protected private var printedAnnotationHeading : Bool;
 	
 	/**
 	* Constructor to construct the HtmlStandardWriter object.
 	*
 	* @param filename File to be generated.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, filename : String) : Void;
 	
 	/**
 	* Constructor to construct the HtmlStandardWriter object.
@@ -90,7 +90,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param filename     Name of file to be generated.
 	* @param relativePath Value for the variable {@link #relativePath}.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relativePath : String) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, relativePath : String) : Void;
 	
 	/**
 	* Replace {&#064;docRoot} tag used in options that accept HTML text, such
@@ -111,7 +111,7 @@ package com.sun.tools.doclets.formats.html;
 	* Note: This doc comment was written with '&amp;#064;' representing '@'
 	* to prevent the inline tag from being interpreted.
 	*/
-	@:overload public function replaceDocRootDir(htmlstr : String) : String;
+	@:overload @:public public function replaceDocRootDir(htmlstr : String) : String;
 	
 	/**
 	* Print Html Hyper Link, with target frame.  This
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param label Tag for the link.
 	* @param strong Whether the label should be strong or not?
 	*/
-	@:overload public function printNoFramesTargetHyperLink(link : String, where : String, target : String, label : String, strong : Bool) : Void;
+	@:overload @:public public function printNoFramesTargetHyperLink(link : String, where : String, target : String, label : String, strong : Bool) : Void;
 	
 	/**
 	* Get the script to show or hide the All classes link.
@@ -131,7 +131,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param id id of the element to show or hide
 	* @return a content tree for the script
 	*/
-	@:overload public function getAllClassesLinkScript(id : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getAllClassesLinkScript(id : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the tags information.
@@ -139,7 +139,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param doc the doc for which the tags will be generated
 	* @param htmltree the documentation tree to which the tags will be added
 	*/
-	@:overload private function addTagsInfo(doc : com.sun.javadoc.Doc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addTagsInfo(doc : com.sun.javadoc.Doc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Check whether there are any tags for Serialization Overview
@@ -148,18 +148,18 @@ package com.sun.tools.doclets.formats.html;
 	* @param field the FieldDoc object to check for tags.
 	* @return true if there are tags to be printed else return false.
 	*/
-	@:overload private function hasSerializationOverviewTags(field : com.sun.javadoc.FieldDoc) : Bool;
+	@:overload @:protected private function hasSerializationOverviewTags(field : com.sun.javadoc.FieldDoc) : Bool;
 	
 	/**
 	* Returns a TagletWriter that knows how to write HTML.
 	*
 	* @return a TagletWriter that knows how to write HTML.
 	*/
-	@:overload public function getTagletWriterInstance(isFirstSentence : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter;
+	@:overload @:public public function getTagletWriterInstance(isFirstSentence : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter;
 	
-	@:overload private function printTagsInfoHeader() : Void;
+	@:overload @:protected private function printTagsInfoHeader() : Void;
 	
-	@:overload private function printTagsInfoFooter() : Void;
+	@:overload @:protected private function printTagsInfoFooter() : Void;
 	
 	/**
 	* Get Package link, with target frame.
@@ -169,7 +169,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param label tag for the link
 	* @return a content for the target package link
 	*/
-	@:overload public function getTargetPackageLink(pd : com.sun.javadoc.PackageDoc, target : String, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getTargetPackageLink(pd : com.sun.javadoc.PackageDoc, target : String, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the html file header. Also print Html page title and stylesheet
@@ -182,7 +182,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param includeScript boolean true if printing windowtitle script.
 	*             False for files that appear in the left-hand frames.
 	*/
-	@:overload public function printHtmlHeader(title : String, metakeywords : java.NativeArray<String>, includeScript : Bool) : Void;
+	@:overload @:public public function printHtmlHeader(title : String, metakeywords : java.NativeArray<String>, includeScript : Bool) : Void;
 	
 	/**
 	* Generates the HTML document tree and prints it out.
@@ -194,7 +194,7 @@ package com.sun.tools.doclets.formats.html;
 	*                      false for files that appear in the left-hand frames
 	* @param body the body htmltree to be included in the document
 	*/
-	@:overload public function printHtmlDocument(metakeywords : java.NativeArray<String>, includeScript : Bool, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function printHtmlDocument(metakeywords : java.NativeArray<String>, includeScript : Bool, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the window title.
@@ -202,7 +202,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param title the title string to construct the complete window title
 	* @return the window title string
 	*/
-	@:overload public function getWindowTitle(title : String) : String;
+	@:overload @:public public function getWindowTitle(title : String) : String;
 	
 	/**
 	* Print user specified header and the footer.
@@ -210,7 +210,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param header if true print the user provided header else print the
 	* user provided footer.
 	*/
-	@:overload public function printUserHeaderFooter(header : Bool) : Void;
+	@:overload @:public public function printUserHeaderFooter(header : Bool) : Void;
 	
 	/**
 	* Get user specified header and the footer.
@@ -218,31 +218,31 @@ package com.sun.tools.doclets.formats.html;
 	* @param header if true print the user provided header else print the
 	* user provided footer.
 	*/
-	@:overload public function getUserHeaderFooter(header : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getUserHeaderFooter(header : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the user specified top.
 	*/
-	@:overload public function printTop() : Void;
+	@:overload @:public public function printTop() : Void;
 	
 	/**
 	* Adds the user specified top.
 	*
 	* @param body the content tree to which user specified top will be added
 	*/
-	@:overload public function addTop(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addTop(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the user specified bottom.
 	*/
-	@:overload public function printBottom() : Void;
+	@:overload @:public public function printBottom() : Void;
 	
 	/**
 	* Adds the user specified bottom.
 	*
 	* @param body the content tree to which user specified bottom will be added
 	*/
-	@:overload public function addBottom(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addBottom(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the navigation bar for the Html page at the top and and the bottom.
@@ -250,7 +250,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param header If true print navigation bar at the top of the page else
 	* print the nevigation bar at the bottom.
 	*/
-	@:overload private function navLinks(header : Bool) : Void;
+	@:overload @:protected private function navLinks(header : Bool) : Void;
 	
 	/**
 	* Adds the navigation bar for the Html page at the top and and the bottom.
@@ -258,13 +258,13 @@ package com.sun.tools.doclets.formats.html;
 	* @param header If true print navigation bar at the top of the page else
 	* @param body the HtmlTree to which the nav links will be added
 	*/
-	@:overload private function addNavLinks(header : Bool, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addNavLinks(header : Bool, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the word "NEXT" to indicate that no link is available.  Override
 	* this method to customize next link.
 	*/
-	@:overload private function navLinkNext() : Void;
+	@:overload @:protected private function navLinkNext() : Void;
 	
 	/**
 	* Get the word "NEXT" to indicate that no link is available.  Override
@@ -272,13 +272,13 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the word "PREV" to indicate that no link is available.  Override
 	* this method to customize prev link.
 	*/
-	@:overload private function navLinkPrevious() : Void;
+	@:overload @:protected private function navLinkPrevious() : Void;
 	
 	/**
 	* Get the word "PREV" to indicate that no link is available.  Override
@@ -286,52 +286,52 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Do nothing. This is the default method.
 	*/
-	@:overload private function printSummaryDetailLinks() : Void;
+	@:overload @:protected private function printSummaryDetailLinks() : Void;
 	
 	/**
 	* Do nothing. This is the default method.
 	*/
-	@:overload private function addSummaryDetailLinks(navDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addSummaryDetailLinks(navDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print link to the "overview-summary.html" page.
 	*/
-	@:overload private function navLinkContents() : Void;
+	@:overload @:protected private function navLinkContents() : Void;
 	
 	/**
 	* Get link to the "overview-summary.html" page.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkContents() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkContents() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Description for a cell in the navigation bar.
 	*/
-	@:overload private function navCellStart() : Void;
+	@:overload @:protected private function navCellStart() : Void;
 	
 	/**
 	* Description for a cell in the navigation bar, but with reverse
 	* high-light effect.
 	*/
-	@:overload private function navCellRevStart() : Void;
+	@:overload @:protected private function navCellRevStart() : Void;
 	
 	/**
 	* Closing tag for navigation bar cell.
 	*/
-	@:overload private function navCellEnd() : Void;
+	@:overload @:protected private function navCellEnd() : Void;
 	
 	/**
 	* Print link to the "package-summary.html" page for the package passed.
 	*
 	* @param pkg Package to which link will be generated.
 	*/
-	@:overload private function navLinkPackage(pkg : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:protected private function navLinkPackage(pkg : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Get link to the "package-summary.html" page for the package passed.
@@ -339,40 +339,40 @@ package com.sun.tools.doclets.formats.html;
 	* @param pkg Package to which link will be generated
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkPackage(pkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkPackage(pkg : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the word "Package" in the navigation bar cell, to indicate that
 	* link is not available here.
 	*/
-	@:overload private function navLinkPackage() : Void;
+	@:overload @:protected private function navLinkPackage() : Void;
 	
 	/**
 	* Get the word "Package" , to indicate that link is not available here.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the word "Use" in the navigation bar cell, to indicate that link
 	* is not available.
 	*/
-	@:overload private function navLinkClassUse() : Void;
+	@:overload @:protected private function navLinkClassUse() : Void;
 	
 	/**
 	* Get the word "Use", to indicate that link is not available.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print link for previous file.
 	*
 	* @param prev File name for the prev link.
 	*/
-	@:overload public function navLinkPrevious(prev : String) : Void;
+	@:overload @:public public function navLinkPrevious(prev : String) : Void;
 	
 	/**
 	* Get link for previous file.
@@ -380,7 +380,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param prev File name for the prev link
 	* @return a content tree for the link
 	*/
-	@:overload public function getNavLinkPrevious(prev : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getNavLinkPrevious(prev : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print link for next file.  If next is null, just print the label
@@ -388,7 +388,7 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @param next File name for the next link.
 	*/
-	@:overload public function navLinkNext(next : String) : Void;
+	@:overload @:public public function navLinkNext(next : String) : Void;
 	
 	/**
 	* Get link for next file.  If next is null, just print the label
@@ -397,14 +397,14 @@ package com.sun.tools.doclets.formats.html;
 	* @param next File name for the next link
 	* @return a content tree for the link
 	*/
-	@:overload public function getNavLinkNext(next : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getNavLinkNext(next : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print "FRAMES" link, to switch to the frame version of the output.
 	*
 	* @param link File to be linked, "index.html".
 	*/
-	@:overload private function navShowLists(link : String) : Void;
+	@:overload @:protected private function navShowLists(link : String) : Void;
 	
 	/**
 	* Get "FRAMES" link, to switch to the frame version of the output.
@@ -412,26 +412,26 @@ package com.sun.tools.doclets.formats.html;
 	* @param link File to be linked, "index.html"
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavShowLists(link : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavShowLists(link : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print "FRAMES" link, to switch to the frame version of the output.
 	*/
-	@:overload private function navShowLists() : Void;
+	@:overload @:protected private function navShowLists() : Void;
 	
 	/**
 	* Get "FRAMES" link, to switch to the frame version of the output.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavShowLists() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavShowLists() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print "NO FRAMES" link, to switch to the non-frame version of the output.
 	*
 	* @param link File to be linked.
 	*/
-	@:overload private function navHideLists(link : String) : Void;
+	@:overload @:protected private function navHideLists(link : String) : Void;
 	
 	/**
 	* Get "NO FRAMES" link, to switch to the non-frame version of the output.
@@ -439,7 +439,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param link File to be linked
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavHideLists(link : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavHideLists(link : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print "Tree" link in the navigation bar. If there is only one package
@@ -447,7 +447,7 @@ package com.sun.tools.doclets.formats.html;
 	* only "package-tree.html" file otherwise it will be to the
 	* "overview-tree.html" file.
 	*/
-	@:overload private function navLinkTree() : Void;
+	@:overload @:protected private function navLinkTree() : Void;
 	
 	/**
 	* Get "Tree" link in the navigation bar. If there is only one package
@@ -457,7 +457,7 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the overview tree link for the main tree.
@@ -465,39 +465,39 @@ package com.sun.tools.doclets.formats.html;
 	* @param label the label for the link
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkMainTree(label : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkMainTree(label : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the word "Class" in the navigation bar cell, to indicate that
 	* class link is not available.
 	*/
-	@:overload private function navLinkClass() : Void;
+	@:overload @:protected private function navLinkClass() : Void;
 	
 	/**
 	* Get the word "Class", to indicate that class link is not available.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print "Deprecated" API link in the navigation bar.
 	*/
-	@:overload private function navLinkDeprecated() : Void;
+	@:overload @:protected private function navLinkDeprecated() : Void;
 	
 	/**
 	* Get "Deprecated" API link in the navigation bar.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkDeprecated() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkDeprecated() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print link for generated index. If the user has used "-splitindex"
 	* command line option, then link to file "index-files/index-1.html" is
 	* generated otherwise link to file "index-all.html" is generated.
 	*/
-	@:overload private function navLinkClassIndex() : Void;
+	@:overload @:protected private function navLinkClassIndex() : Void;
 	
 	/**
 	* Get link for generated index. If the user has used "-splitindex"
@@ -506,26 +506,26 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkClassIndex() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkClassIndex() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print link for generated class index.
 	*/
-	@:overload private function navLinkIndex() : Void;
+	@:overload @:protected private function navLinkIndex() : Void;
 	
 	/**
 	* Get link for generated class index.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkIndex() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkIndex() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print help file link. If user has provided a help file, then generate a
 	* link to the user given file, which is already copied to current or
 	* destination directory.
 	*/
-	@:overload private function navLinkHelp() : Void;
+	@:overload @:protected private function navLinkHelp() : Void;
 	
 	/**
 	* Get help file link. If user has provided a help file, then generate a
@@ -534,62 +534,62 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkHelp() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getNavLinkHelp() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the word "Detail" in the navigation bar. No link is available.
 	*/
-	@:overload private function navDetail() : Void;
+	@:overload @:protected private function navDetail() : Void;
 	
 	/**
 	* Print the word "Summary" in the navigation bar. No link is available.
 	*/
-	@:overload private function navSummary() : Void;
+	@:overload @:protected private function navSummary() : Void;
 	
 	/**
 	* Print the Html table tag for the index summary tables. The table tag
 	* printed is
 	* &lt;TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
 	*/
-	@:overload public function tableIndexSummary() : Void;
+	@:overload @:public public function tableIndexSummary() : Void;
 	
 	/**
 	* Print the Html table tag for the index summary tables.
 	*
 	* @param summary the summary for the table tag summary attribute.
 	*/
-	@:overload public function tableIndexSummary(summary : String) : Void;
+	@:overload @:public public function tableIndexSummary(summary : String) : Void;
 	
 	/**
 	* Same as {@link #tableIndexSummary()}.
 	*/
-	@:overload public function tableIndexDetail() : Void;
+	@:overload @:public public function tableIndexDetail() : Void;
 	
 	/**
 	* Print Html tag for table elements. The tag printed is
 	* &lt;TD ALIGN="right" VALIGN="top" WIDTH="1%"&gt;.
 	*/
-	@:overload public function tdIndex() : Void;
+	@:overload @:public public function tdIndex() : Void;
 	
 	/**
 	* Print table caption.
 	*/
-	@:overload public function tableCaptionStart() : Void;
+	@:overload @:public public function tableCaptionStart() : Void;
 	
 	/**
 	* Print table sub-caption.
 	*/
-	@:overload public function tableSubCaptionStart() : Void;
+	@:overload @:public public function tableSubCaptionStart() : Void;
 	
 	/**
 	* Print table caption end tags.
 	*/
-	@:overload public function tableCaptionEnd() : Void;
+	@:overload @:public public function tableCaptionEnd() : Void;
 	
 	/**
 	* Print summary table header.
 	*/
-	@:overload public function summaryTableHeader(header : java.NativeArray<String>, scope : String) : Void;
+	@:overload @:public public function summaryTableHeader(header : java.NativeArray<String>, scope : String) : Void;
 	
 	/**
 	* Get summary table header.
@@ -598,7 +598,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param scope the scope of the headers
 	* @return a content tree for the header
 	*/
-	@:overload public function getSummaryTableHeader(header : java.NativeArray<String>, scope : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSummaryTableHeader(header : java.NativeArray<String>, scope : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get table caption.
@@ -606,7 +606,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param rawText the caption for the table which could be raw Html
 	* @return a content tree for the caption
 	*/
-	@:overload public function getTableCaption(rawText : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getTableCaption(rawText : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the marker anchor which will be added to the documentation tree.
@@ -614,7 +614,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param anchorName the anchor name attribute
 	* @return a content tree for the marker anchor
 	*/
-	@:overload public function getMarkerAnchor(anchorName : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMarkerAnchor(anchorName : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the marker anchor which will be added to the documentation tree.
@@ -623,7 +623,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param anchorContent the content that should be added to the anchor
 	* @return a content tree for the marker anchor
 	*/
-	@:overload public function getMarkerAnchor(anchorName : String, anchorContent : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMarkerAnchor(anchorName : String, anchorContent : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Returns a packagename content.
@@ -631,7 +631,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param packageDoc the package to check
 	* @return package name content
 	*/
-	@:overload public function getPackageName(packageDoc : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getPackageName(packageDoc : com.sun.javadoc.PackageDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Returns a package name label.
@@ -639,7 +639,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param parsedName the package name
 	* @return the package name content
 	*/
-	@:overload public function getPackageLabel(packageName : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getPackageLabel(packageName : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add package deprecation information to the documentation tree
@@ -650,7 +650,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param tableHeader table headers for the deprecated package table
 	* @param contentTree the content tree to which the deprecated package table will be added
 	*/
-	@:overload private function addPackageDeprecatedAPI(deprPkgs : java.util.List<com.sun.javadoc.Doc>, headingKey : String, tableSummary : String, tableHeader : java.NativeArray<String>, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addPackageDeprecatedAPI(deprPkgs : java.util.List<com.sun.javadoc.Doc>, headingKey : String, tableSummary : String, tableHeader : java.NativeArray<String>, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Prine table header information about color, column span and the font.
@@ -658,7 +658,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param color Background color.
 	* @param span  Column span.
 	*/
-	@:overload public function tableHeaderStart(color : String, span : Int) : Void;
+	@:overload @:public public function tableHeaderStart(color : String, span : Int) : Void;
 	
 	/**
 	* Print table header for the inherited members summary tables. Print the
@@ -666,86 +666,86 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @param color Background color.
 	*/
-	@:overload public function tableInheritedHeaderStart(color : String) : Void;
+	@:overload @:public public function tableInheritedHeaderStart(color : String) : Void;
 	
 	/**
 	* Print "Use" table header. Print the background color and the column span.
 	*
 	* @param color Background color.
 	*/
-	@:overload public function tableUseInfoHeaderStart(color : String) : Void;
+	@:overload @:public public function tableUseInfoHeaderStart(color : String) : Void;
 	
 	/**
 	* Print table header with the background color with default column span 2.
 	*
 	* @param color Background color.
 	*/
-	@:overload public function tableHeaderStart(color : String) : Void;
+	@:overload @:public public function tableHeaderStart(color : String) : Void;
 	
 	/**
 	* Print table header with the column span, with the default color #CCCCFF.
 	*
 	* @param span Column span.
 	*/
-	@:overload public function tableHeaderStart(span : Int) : Void;
+	@:overload @:public public function tableHeaderStart(span : Int) : Void;
 	
 	/**
 	* Print table header with default column span 2 and default color #CCCCFF.
 	*/
-	@:overload public function tableHeaderStart() : Void;
+	@:overload @:public public function tableHeaderStart() : Void;
 	
 	/**
 	* Print table header end tags for font, column and row.
 	*/
-	@:overload public function tableHeaderEnd() : Void;
+	@:overload @:public public function tableHeaderEnd() : Void;
 	
 	/**
 	* Print table header end tags in inherited tables for column and row.
 	*/
-	@:overload public function tableInheritedHeaderEnd() : Void;
+	@:overload @:public public function tableInheritedHeaderEnd() : Void;
 	
 	/**
 	* Print the summary table row cell attribute width.
 	*
 	* @param width Width of the table cell.
 	*/
-	@:overload public function summaryRow(width : Int) : Void;
+	@:overload @:public public function summaryRow(width : Int) : Void;
 	
 	/**
 	* Print the summary table row cell end tag.
 	*/
-	@:overload public function summaryRowEnd() : Void;
+	@:overload @:public public function summaryRowEnd() : Void;
 	
 	/**
 	* Print the heading in Html &lt;H2> format.
 	*
 	* @param str The Header string.
 	*/
-	@:overload public function printIndexHeading(str : String) : Void;
+	@:overload @:public public function printIndexHeading(str : String) : Void;
 	
 	/**
 	* Print Html tag &lt;FRAMESET=arg&gt;.
 	*
 	* @param arg Argument for the tag.
 	*/
-	@:overload public function frameSet(arg : String) : Void;
+	@:overload @:public public function frameSet(arg : String) : Void;
 	
 	/**
 	* Print Html closing tag &lt;/FRAMESET&gt;.
 	*/
-	@:overload public function frameSetEnd() : Void;
+	@:overload @:public public function frameSetEnd() : Void;
 	
 	/**
 	* Print Html tag &lt;FRAME=arg&gt;.
 	*
 	* @param arg Argument for the tag.
 	*/
-	@:overload public function frame(arg : String) : Void;
+	@:overload @:public public function frame(arg : String) : Void;
 	
 	/**
 	* Print Html closing tag &lt;/FRAME&gt;.
 	*/
-	@:overload public function frameEnd() : Void;
+	@:overload @:public public function frameEnd() : Void;
 	
 	/**
 	* Return path to the class page for a classdoc. For example, the class
@@ -755,7 +755,7 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @param cd Class to which the path is requested.
 	*/
-	@:overload private function pathToClass(cd : com.sun.javadoc.ClassDoc) : String;
+	@:overload @:protected private function pathToClass(cd : com.sun.javadoc.ClassDoc) : String;
 	
 	/**
 	* Return the path to the class page for a classdoc. Works same as
@@ -764,7 +764,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param cd   Class to which the path is requested.
 	* @param name Name of the file(doesn't include path).
 	*/
-	@:overload private function pathString(cd : com.sun.javadoc.ClassDoc, name : String) : String;
+	@:overload @:protected private function pathString(cd : com.sun.javadoc.ClassDoc, name : String) : String;
 	
 	/**
 	* Return path to the given file name in the given package. So if the name
@@ -775,7 +775,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param pd Package in which the file name is assumed to be.
 	* @param name File name, to which path string is.
 	*/
-	@:overload private function pathString(pd : com.sun.javadoc.PackageDoc, name : String) : String;
+	@:overload @:protected private function pathString(pd : com.sun.javadoc.PackageDoc, name : String) : String;
 	
 	/**
 	* Print the link to the given package.
@@ -784,7 +784,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param label the label for the link.
 	* @param isStrong true if the label should be strong.
 	*/
-	@:overload public function printPackageLink(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool) : Void;
+	@:overload @:public public function printPackageLink(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool) : Void;
 	
 	/**
 	* Print the link to the given package.
@@ -794,7 +794,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param isStrong true if the label should be strong.
 	* @param style  the font of the package link label.
 	*/
-	@:overload public function printPackageLink(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool, style : String) : Void;
+	@:overload @:public public function printPackageLink(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool, style : String) : Void;
 	
 	/**
 	* Return the link to the given package.
@@ -804,7 +804,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param isStrong true if the label should be strong.
 	* @return the link to the given package.
 	*/
-	@:overload public function getPackageLinkString(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool) : String;
+	@:overload @:public public function getPackageLinkString(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool) : String;
 	
 	/**
 	* Return the link to the given package.
@@ -815,7 +815,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param style  the font of the package link label.
 	* @return the link to the given package.
 	*/
-	@:overload public function getPackageLinkString(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool, style : String) : String;
+	@:overload @:public public function getPackageLinkString(pkg : com.sun.javadoc.PackageDoc, label : String, isStrong : Bool, style : String) : String;
 	
 	/**
 	* Return the link to the given package.
@@ -824,11 +824,11 @@ package com.sun.tools.doclets.formats.html;
 	* @param label the label for the link.
 	* @return a content tree for the package link.
 	*/
-	@:overload public function getPackageLink(pkg : com.sun.javadoc.PackageDoc, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getPackageLink(pkg : com.sun.javadoc.PackageDoc, label : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
-	@:overload public function italicsClassName(cd : com.sun.javadoc.ClassDoc, qual : Bool) : String;
+	@:overload @:public public function italicsClassName(cd : com.sun.javadoc.ClassDoc, qual : Bool) : String;
 	
-	@:overload public function printSrcLink(d : com.sun.javadoc.ProgramElementDoc, label : String) : Void;
+	@:overload @:public public function printSrcLink(d : com.sun.javadoc.ProgramElementDoc, label : String) : Void;
 	
 	/**
 	* Add the link to the content tree.
@@ -837,7 +837,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param label label for the link
 	* @param htmltree the content tree to which the link will be added
 	*/
-	@:overload public function addSrcLink(doc : com.sun.javadoc.ProgramElementDoc, label : com.sun.tools.doclets.internal.toolkit.Content, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSrcLink(doc : com.sun.javadoc.ProgramElementDoc, label : com.sun.tools.doclets.internal.toolkit.Content, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Return the link to the given class.
@@ -846,7 +846,7 @@ package com.sun.tools.doclets.formats.html;
 	*
 	* @return the link for the given class.
 	*/
-	@:overload public function getLink(linkInfo : com.sun.tools.doclets.formats.html.LinkInfoImpl) : String;
+	@:overload @:public public function getLink(linkInfo : com.sun.tools.doclets.formats.html.LinkInfoImpl) : String;
 	
 	/**
 	* Return the type parameters for the given class.
@@ -854,12 +854,12 @@ package com.sun.tools.doclets.formats.html;
 	* @param linkInfo the information about the link.
 	* @return the type for the given class.
 	*/
-	@:overload public function getTypeParameterLinks(linkInfo : com.sun.tools.doclets.formats.html.LinkInfoImpl) : String;
+	@:overload @:public public function getTypeParameterLinks(linkInfo : com.sun.tools.doclets.formats.html.LinkInfoImpl) : String;
 	
 	/**
 	* Print the link to the given class.
 	*/
-	@:overload public function printLink(linkInfo : com.sun.tools.doclets.formats.html.LinkInfoImpl) : Void;
+	@:overload @:public public function printLink(linkInfo : com.sun.tools.doclets.formats.html.LinkInfoImpl) : Void;
 	
 	/*************************************************************
 	* Return a class cross link to external class documentation.
@@ -875,11 +875,11 @@ package com.sun.tools.doclets.formats.html;
 	* @param style the style of the link.
 	* @param code true if the label should be code font.
 	*/
-	@:overload public function getCrossClassLink(qualifiedClassName : String, refMemName : String, label : String, strong : Bool, style : String, code : Bool) : String;
+	@:overload @:public public function getCrossClassLink(qualifiedClassName : String, refMemName : String, label : String, strong : Bool, style : String, code : Bool) : String;
 	
-	@:overload public function isClassLinkable(cd : com.sun.javadoc.ClassDoc) : Bool;
+	@:overload @:public public function isClassLinkable(cd : com.sun.javadoc.ClassDoc) : Bool;
 	
-	@:overload public function getCrossPackageLink(pkgName : String) : String;
+	@:overload @:public public function getCrossPackageLink(pkgName : String) : String;
 	
 	/**
 	* Get the class link.
@@ -888,7 +888,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param cd the class doc to link to
 	* @return a content tree for the link
 	*/
-	@:overload public function getQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the class link.
@@ -897,7 +897,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param cd the class doc to link to
 	* @param contentTree the content tree to which the link will be added
 	*/
-	@:overload public function addPreQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPreQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Retrieve the class link with the package portion of the label in
@@ -908,7 +908,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param isStrong true if the link should be strong.
 	* @return the link with the package portion of the label in plain text.
 	*/
-	@:overload public function getPreQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, isStrong : Bool) : String;
+	@:overload @:public public function getPreQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, isStrong : Bool) : String;
 	
 	/**
 	* Add the class link with the package portion of the label in
@@ -920,7 +920,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param isStrong true if the link should be strong
 	* @param contentTree the content tree to which the link with be added
 	*/
-	@:overload public function addPreQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, isStrong : Bool, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPreQualifiedClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, isStrong : Bool, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the class link, with only class name as the strong link and prefixing
@@ -930,19 +930,19 @@ package com.sun.tools.doclets.formats.html;
 	* @param cd the class to link to
 	* @param contentTree the content tree to which the link with be added
 	*/
-	@:overload public function addPreQualifiedStrongClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addPreQualifiedStrongClassLink(context : Int, cd : com.sun.javadoc.ClassDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printText(key : String) : Void;
+	@:overload @:public public function printText(key : String) : Void;
 	
-	@:overload public function printText(key : String, a1 : String) : Void;
+	@:overload @:public public function printText(key : String, a1 : String) : Void;
 	
-	@:overload public function printText(key : String, a1 : String, a2 : String) : Void;
+	@:overload @:public public function printText(key : String, a1 : String, a2 : String) : Void;
 	
-	@:overload public function strongText(key : String) : Void;
+	@:overload @:public public function strongText(key : String) : Void;
 	
-	@:overload public function strongText(key : String, a1 : String) : Void;
+	@:overload @:public public function strongText(key : String, a1 : String) : Void;
 	
-	@:overload public function strongText(key : String, a1 : String, a2 : String) : Void;
+	@:overload @:public public function strongText(key : String, a1 : String, a2 : String) : Void;
 	
 	/**
 	* Get the link for the given member.
@@ -952,7 +952,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param label the label for the link
 	* @return a content tree for the doc link
 	*/
-	@:overload public function getDocLink(context : Int, doc : com.sun.javadoc.MemberDoc, label : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getDocLink(context : Int, doc : com.sun.javadoc.MemberDoc, label : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Print the link for the given member.
@@ -965,7 +965,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param label the label for the link.
 	* @param strong true if the link should be strong.
 	*/
-	@:overload public function printDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool) : Void;
+	@:overload @:public public function printDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool) : Void;
 	
 	/**
 	* Print the link for the given member.
@@ -979,7 +979,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param strong true if the link should be strong.
 	* @param isProperty true if the doc parameter is a JavaFX property.
 	*/
-	@:overload public function printDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool, isProperty : Bool) : Void;
+	@:overload @:public public function printDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool, isProperty : Bool) : Void;
 	
 	/**
 	* Return the link for the given member.
@@ -990,7 +990,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param strong true if the link should be strong.
 	* @return the link for the given member.
 	*/
-	@:overload public function getDocLink(context : Int, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool) : String;
+	@:overload @:public public function getDocLink(context : Int, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool) : String;
 	
 	/**
 	* Return the link for the given member.
@@ -1004,7 +1004,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param strong true if the link should be strong.
 	* @return the link for the given member.
 	*/
-	@:overload public function getDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool) : String;
+	@:overload @:public public function getDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool) : String;
 	
 	/**
 	* Return the link for the given member.
@@ -1019,7 +1019,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param isProperty true if the doc parameter is a JavaFX property.
 	* @return the link for the given member.
 	*/
-	@:overload public function getDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool, isProperty : Bool) : String;
+	@:overload @:public public function getDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String, strong : Bool, isProperty : Bool) : String;
 	
 	/**
 	* Return the link for the given member.
@@ -1032,17 +1032,17 @@ package com.sun.tools.doclets.formats.html;
 	* @param label the label for the link
 	* @return the link for the given member
 	*/
-	@:overload public function getDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getDocLink(context : Int, classDoc : com.sun.javadoc.ClassDoc, doc : com.sun.javadoc.MemberDoc, label : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
-	@:overload public function anchor(emd : com.sun.javadoc.ExecutableMemberDoc) : Void;
+	@:overload @:public public function anchor(emd : com.sun.javadoc.ExecutableMemberDoc) : Void;
 	
-	@:overload public function getAnchor(emd : com.sun.javadoc.ExecutableMemberDoc) : String;
+	@:overload @:public public function getAnchor(emd : com.sun.javadoc.ExecutableMemberDoc) : String;
 	
-	@:overload public function getAnchor(emd : com.sun.javadoc.ExecutableMemberDoc, isProperty : Bool) : String;
+	@:overload @:public public function getAnchor(emd : com.sun.javadoc.ExecutableMemberDoc, isProperty : Bool) : String;
 	
-	@:overload public function seeTagToString(see : com.sun.javadoc.SeeTag) : String;
+	@:overload @:public public function seeTagToString(see : com.sun.javadoc.SeeTag) : String;
 	
-	@:overload public function printInlineComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag) : Void;
+	@:overload @:public public function printInlineComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag) : Void;
 	
 	/**
 	* Add the inline comment.
@@ -1051,9 +1051,9 @@ package com.sun.tools.doclets.formats.html;
 	* @param tag the inline tag to be added
 	* @param htmltree the content tree to which the comment will be added
 	*/
-	@:overload public function addInlineComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addInlineComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printInlineDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag) : Void;
+	@:overload @:public public function printInlineDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag) : Void;
 	
 	/**
 	* Add the inline deprecated comment.
@@ -1062,9 +1062,9 @@ package com.sun.tools.doclets.formats.html;
 	* @param tag the inline tag to be added
 	* @param htmltree the content tree to which the comment will be added
 	*/
-	@:overload public function addInlineDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addInlineDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printSummaryComment(doc : com.sun.javadoc.Doc) : Void;
+	@:overload @:public public function printSummaryComment(doc : com.sun.javadoc.Doc) : Void;
 	
 	/**
 	* Adds the summary content.
@@ -1072,9 +1072,9 @@ package com.sun.tools.doclets.formats.html;
 	* @param doc the doc for which the summary will be generated
 	* @param htmltree the documentation tree to which the summary will be added
 	*/
-	@:overload public function addSummaryComment(doc : com.sun.javadoc.Doc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryComment(doc : com.sun.javadoc.Doc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printSummaryComment(doc : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>) : Void;
+	@:overload @:public public function printSummaryComment(doc : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>) : Void;
 	
 	/**
 	* Adds the summary content.
@@ -1083,15 +1083,15 @@ package com.sun.tools.doclets.formats.html;
 	* @param firstSentenceTags the first sentence tags for the doc
 	* @param htmltree the documentation tree to which the summary will be added
 	*/
-	@:overload public function addSummaryComment(doc : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryComment(doc : com.sun.javadoc.Doc, firstSentenceTags : java.NativeArray<com.sun.javadoc.Tag>, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printSummaryDeprecatedComment(doc : com.sun.javadoc.Doc) : Void;
+	@:overload @:public public function printSummaryDeprecatedComment(doc : com.sun.javadoc.Doc) : Void;
 	
-	@:overload public function printSummaryDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag) : Void;
+	@:overload @:public public function printSummaryDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag) : Void;
 	
-	@:overload public function addSummaryDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSummaryDeprecatedComment(doc : com.sun.javadoc.Doc, tag : com.sun.javadoc.Tag, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printInlineComment(doc : com.sun.javadoc.Doc) : Void;
+	@:overload @:public public function printInlineComment(doc : com.sun.javadoc.Doc) : Void;
 	
 	/**
 	* Adds the inline comment.
@@ -1099,9 +1099,9 @@ package com.sun.tools.doclets.formats.html;
 	* @param doc the doc for which the inline comments will be generated
 	* @param htmltree the documentation tree to which the inline comments will be added
 	*/
-	@:overload public function addInlineComment(doc : com.sun.javadoc.Doc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addInlineComment(doc : com.sun.javadoc.Doc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
-	@:overload public function printInlineDeprecatedComment(doc : com.sun.javadoc.Doc) : Void;
+	@:overload @:public public function printInlineDeprecatedComment(doc : com.sun.javadoc.Doc) : Void;
 	
 	/**
 	* Converts inline tags and text to text strings, expanding the
@@ -1115,34 +1115,34 @@ package com.sun.tools.doclets.formats.html;
 	*               present in the text of interest for this doc
 	* @param isFirstSentence  true if text is first sentence
 	*/
-	@:overload public function commentTagsToString(holderTag : com.sun.javadoc.Tag, doc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>, isFirstSentence : Bool) : String;
+	@:overload @:public public function commentTagsToString(holderTag : com.sun.javadoc.Tag, doc : com.sun.javadoc.Doc, tags : java.NativeArray<com.sun.javadoc.Tag>, isFirstSentence : Bool) : String;
 	
-	@:overload public function removeNonInlineHtmlTags(text : String) : String;
+	@:overload @:public public function removeNonInlineHtmlTags(text : String) : String;
 	
-	@:overload public function replace(text : String, tobe : String, by : String) : String;
+	@:overload @:public public function replace(text : String, tobe : String, by : String) : String;
 	
-	@:overload public function printStyleSheetProperties() : Void;
+	@:overload @:public public function printStyleSheetProperties() : Void;
 	
 	/**
 	* Returns a link to the stylesheet file.
 	*
 	* @return an HtmlTree for the lINK tag which provides the stylesheet location
 	*/
-	@:overload public function getStyleSheetProperties() : com.sun.tools.doclets.formats.html.markup.HtmlTree;
+	@:overload @:public public function getStyleSheetProperties() : com.sun.tools.doclets.formats.html.markup.HtmlTree;
 	
 	/**
 	* According to
 	* <cite>The Java&trade; Language Specification</cite>,
 	* all the outer classes and static nested classes are core classes.
 	*/
-	@:overload public function isCoreClass(cd : com.sun.javadoc.ClassDoc) : Bool;
+	@:overload @:public public function isCoreClass(cd : com.sun.javadoc.ClassDoc) : Bool;
 	
 	/**
 	* Write the annotatation types for the given packageDoc.
 	*
 	* @param packageDoc the package to write annotations for.
 	*/
-	@:overload public function writeAnnotationInfo(packageDoc : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public public function writeAnnotationInfo(packageDoc : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Adds the annotatation types for the given packageDoc.
@@ -1151,14 +1151,14 @@ package com.sun.tools.doclets.formats.html;
 	* @param htmltree the documentation tree to which the annotation info will be
 	*        added
 	*/
-	@:overload public function addAnnotationInfo(packageDoc : com.sun.javadoc.PackageDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationInfo(packageDoc : com.sun.javadoc.PackageDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Write the annotatation types for the given doc.
 	*
 	* @param doc the doc to write annotations for.
 	*/
-	@:overload public function writeAnnotationInfo(doc : com.sun.javadoc.ProgramElementDoc) : Void;
+	@:overload @:public public function writeAnnotationInfo(doc : com.sun.javadoc.ProgramElementDoc) : Void;
 	
 	/**
 	* Adds the annotatation types for the given doc.
@@ -1166,7 +1166,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param packageDoc the package to write annotations for
 	* @param htmltree the content tree to which the annotation types will be added
 	*/
-	@:overload public function addAnnotationInfo(doc : com.sun.javadoc.ProgramElementDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addAnnotationInfo(doc : com.sun.javadoc.ProgramElementDoc, htmltree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Write the annotatation types for the given doc and parameter.
@@ -1175,7 +1175,7 @@ package com.sun.tools.doclets.formats.html;
 	* @param doc the doc to write annotations for.
 	* @param param the parameter to write annotations for.
 	*/
-	@:overload public function writeAnnotationInfo(indent : Int, doc : com.sun.javadoc.Doc, param : com.sun.javadoc.Parameter) : Bool;
+	@:overload @:public public function writeAnnotationInfo(indent : Int, doc : com.sun.javadoc.Doc, param : com.sun.javadoc.Parameter) : Bool;
 	
 	/**
 	* Add the annotatation types for the given doc and parameter.
@@ -1185,14 +1185,14 @@ package com.sun.tools.doclets.formats.html;
 	* @param param the parameter to write annotations for.
 	* @param tree the content tree to which the annotation types will be added
 	*/
-	@:overload public function addAnnotationInfo(indent : Int, doc : com.sun.javadoc.Doc, param : com.sun.javadoc.Parameter, tree : com.sun.tools.doclets.internal.toolkit.Content) : Bool;
+	@:overload @:public public function addAnnotationInfo(indent : Int, doc : com.sun.javadoc.Doc, param : com.sun.javadoc.Parameter, tree : com.sun.tools.doclets.internal.toolkit.Content) : Bool;
 	
 	/**
 	* Return the configuation for this doclet.
 	*
 	* @return the configuration for this doclet.
 	*/
-	@:overload override public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
+	@:overload @:public override public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
 	
 	
 }

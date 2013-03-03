@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.monitoring;
 */
 extern class MonitoredObjectFactoryImpl implements com.sun.corba.se.spi.monitoring.MonitoredObjectFactory
 {
-	@:overload public function createMonitoredObject(name : String, description : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public public function createMonitoredObject(name : String, description : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
 	
 }

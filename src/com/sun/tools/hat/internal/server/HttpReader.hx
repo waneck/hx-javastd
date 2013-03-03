@@ -36,9 +36,9 @@ package com.sun.tools.hat.internal.server;
 */
 extern class HttpReader implements java.lang.Runnable
 {
-	@:overload public function new(s : java.net.Socket, snapshot : com.sun.tools.hat.internal.model.Snapshot, engine : com.sun.tools.hat.internal.oql.OQLEngine) : Void;
+	@:overload @:public public function new(s : java.net.Socket, snapshot : com.sun.tools.hat.internal.model.Snapshot, engine : com.sun.tools.hat.internal.oql.OQLEngine) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

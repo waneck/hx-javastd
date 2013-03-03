@@ -28,53 +28,53 @@ extern class TypeDeclarationImpl extends com.sun.tools.apt.mirror.declaration.Me
 	/**
 	* Implementation of TypeDeclaration
 	*/
-	public var sym : ClassSymbol;
+	@:public public var sym : ClassSymbol;
 	
 	/**
 	* "sym" should be completed before this constructor is called.
 	*/
-	@:overload private function new(env : com.sun.tools.apt.mirror.AptEnv, sym : ClassSymbol) : Void;
+	@:overload @:protected private function new(env : com.sun.tools.apt.mirror.AptEnv, sym : ClassSymbol) : Void;
 	
 	/**
 	* Returns the type's name, with any type parameters (including those
 	* of outer classes).  Type names are qualified.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getPackage() : com.sun.mirror.declaration.PackageDeclaration;
+	@:overload @:public public function getPackage() : com.sun.mirror.declaration.PackageDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getQualifiedName() : String;
+	@:overload @:public public function getQualifiedName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSuperinterfaces() : java.util.Collection<com.sun.mirror.type.InterfaceType>;
+	@:overload @:public public function getSuperinterfaces() : java.util.Collection<com.sun.mirror.type.InterfaceType>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getFields() : java.util.Collection<com.sun.mirror.declaration.FieldDeclaration>;
+	@:overload @:public public function getFields() : java.util.Collection<com.sun.mirror.declaration.FieldDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMethods() : java.util.Collection<com.sun.mirror.declaration.MethodDeclaration>;
+	@:overload @:public public function getMethods() : java.util.Collection<com.sun.mirror.declaration.MethodDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getNestedTypes() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
+	@:overload @:public public function getNestedTypes() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

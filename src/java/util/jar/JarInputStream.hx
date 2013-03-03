@@ -32,7 +32,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @param in the actual input stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Creates a new <code>JarInputStream</code> and reads the optional
@@ -44,7 +44,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* it is signed.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function new(_in : java.io.InputStream, verify : Bool) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, verify : Bool) : Void;
 	
 	/**
 	* Returns the <code>Manifest</code> for this JAR file, or
@@ -53,7 +53,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @return the <code>Manifest</code> for this JAR file, or
 	*         <code>null</code> if none.
 	*/
-	@:overload public function getManifest() : java.util.jar.Manifest;
+	@:overload @:public public function getManifest() : java.util.jar.Manifest;
 	
 	/**
 	* Reads the next ZIP file entry and positions the stream at the
@@ -65,7 +65,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @exception SecurityException if any of the jar file entries
 	*         are incorrectly signed.
 	*/
-	@:overload public function getNextEntry() : java.util.zip.ZipEntry;
+	@:overload @:public override public function getNextEntry() : java.util.zip.ZipEntry;
 	
 	/**
 	* Reads the next JAR file entry and positions the stream at the
@@ -78,7 +78,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @exception SecurityException if any of the jar file entries
 	*         are incorrectly signed.
 	*/
-	@:overload public function getNextJarEntry() : java.util.jar.JarEntry;
+	@:overload @:public public function getNextJarEntry() : java.util.jar.JarEntry;
 	
 	/**
 	* Reads from the current JAR file entry into an array of bytes.
@@ -102,7 +102,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @exception SecurityException if any of the jar file entries
 	*         are incorrectly signed.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Creates a new <code>JarEntry</code> (<code>ZipEntry</code>) for the
@@ -113,7 +113,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @param name the name of the JAR/ZIP file entry
 	* @return the <code>JarEntry</code> object just created
 	*/
-	@:overload private function createZipEntry(name : String) : java.util.zip.ZipEntry;
+	@:overload @:protected override private function createZipEntry(name : String) : java.util.zip.ZipEntry;
 	
 	
 }

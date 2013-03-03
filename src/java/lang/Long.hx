@@ -51,13 +51,13 @@ package java.lang;
 	* A constant holding the minimum value a {@code long} can
 	* have, -2<sup>63</sup>.
 	*/
-	public static var MIN_VALUE(default, null) : haxe.Int64;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : haxe.Int64;
 	
 	/**
 	* A constant holding the maximum value a {@code long} can
 	* have, 2<sup>63</sup>-1.
 	*/
-	public static var MAX_VALUE(default, null) : haxe.Int64;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : haxe.Int64;
 	
 	/**
 	* The {@code Class} instance representing the primitive type
@@ -65,7 +65,7 @@ package java.lang;
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Null<haxe.Int64>>;
+	@:require(java1) @:public @:static @:final public static var TYPE(default, null) : Class<Null<haxe.Int64>>;
 	
 	/**
 	* Returns a string representation of the first argument in the
@@ -111,7 +111,7 @@ package java.lang;
 	* @see     java.lang.Character#MAX_RADIX
 	* @see     java.lang.Character#MIN_RADIX
 	*/
-	@:native('toString') @:overload public static function _toString(i : haxe.Int64, radix : Int) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(i : haxe.Int64, radix : Int) : String;
 	
 	/**
 	* Returns a string representation of the {@code long}
@@ -148,7 +148,7 @@ package java.lang;
 	*          (base&nbsp;16).
 	* @since   JDK 1.0.2
 	*/
-	@:require(java0) @:overload public static function toHexString(i : haxe.Int64) : String;
+	@:require(java0) @:overload @:public @:static public static function toHexString(i : haxe.Int64) : String;
 	
 	/**
 	* Returns a string representation of the {@code long}
@@ -179,7 +179,7 @@ package java.lang;
 	*          value represented by the argument in octal (base&nbsp;8).
 	* @since   JDK 1.0.2
 	*/
-	@:require(java0) @:overload public static function toOctalString(i : haxe.Int64) : String;
+	@:require(java0) @:overload @:public @:static public static function toOctalString(i : haxe.Int64) : String;
 	
 	/**
 	* Returns a string representation of the {@code long}
@@ -202,7 +202,7 @@ package java.lang;
 	*          value represented by the argument in binary (base&nbsp;2).
 	* @since   JDK 1.0.2
 	*/
-	@:require(java0) @:overload public static function toBinaryString(i : haxe.Int64) : String;
+	@:require(java0) @:overload @:public @:static public static function toBinaryString(i : haxe.Int64) : String;
 	
 	/**
 	* Returns a {@code String} object representing the specified
@@ -214,7 +214,7 @@ package java.lang;
 	* @param   i   a {@code long} to be converted.
 	* @return  a string representation of the argument in base&nbsp;10.
 	*/
-	@:native('toString') @:overload public static function _toString(i : haxe.Int64) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(i : haxe.Int64) : String;
 	
 	/**
 	* Parses the string argument as a signed {@code long} in the
@@ -277,7 +277,7 @@ package java.lang;
 	* @throws     NumberFormatException  if the string does not contain a
 	*             parsable {@code long}.
 	*/
-	@:overload public static function parseLong(s : String, radix : Int) : haxe.Int64;
+	@:overload @:public @:static public static function parseLong(s : String, radix : Int) : haxe.Int64;
 	
 	/**
 	* Parses the string argument as a signed decimal {@code long}.
@@ -303,7 +303,7 @@ package java.lang;
 	* @throws     NumberFormatException  if the string does not contain a
 	*             parsable {@code long}.
 	*/
-	@:overload public static function parseLong(s : String) : haxe.Int64;
+	@:overload @:public @:static public static function parseLong(s : String) : haxe.Int64;
 	
 	/**
 	* Returns a {@code Long} object holding the value
@@ -331,7 +331,7 @@ package java.lang;
 	* @throws     NumberFormatException  If the {@code String} does not
 	*             contain a parsable {@code long}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Null<haxe.Int64>;
+	@:overload @:public @:static public static function valueOf(s : String, radix : Int) : Null<haxe.Int64>;
 	
 	/**
 	* Returns a {@code Long} object holding the value
@@ -355,7 +355,7 @@ package java.lang;
 	* @throws     NumberFormatException  If the string cannot be parsed
 	*             as a {@code long}.
 	*/
-	@:overload public static function valueOf(s : String) : Null<haxe.Int64>;
+	@:overload @:public @:static public static function valueOf(s : String) : Null<haxe.Int64>;
 	
 	/**
 	* Returns a {@code Long} instance representing the specified
@@ -375,7 +375,7 @@ package java.lang;
 	* @return a {@code Long} instance representing {@code l}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(l : haxe.Int64) : Null<haxe.Int64>;
+	@:require(java5) @:overload @:public @:static public static function valueOf(l : haxe.Int64) : Null<haxe.Int64>;
 	
 	/**
 	* Decodes a {@code String} into a {@code Long}.
@@ -420,7 +420,7 @@ package java.lang;
 	* @see java.lang.Long#parseLong(String, int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function decode(nm : String) : Null<haxe.Int64>;
+	@:require(java2) @:overload @:public @:static public static function decode(nm : String) : Null<haxe.Int64>;
 	
 	/**
 	* Constructs a newly allocated {@code Long} object that
@@ -429,7 +429,7 @@ package java.lang;
 	* @param   value   the value to be represented by the
 	*          {@code Long} object.
 	*/
-	@:overload public function new(value : haxe.Int64) : Void;
+	@:overload @:public public function new(value : haxe.Int64) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Long} object that
@@ -444,43 +444,43 @@ package java.lang;
 	*             contain a parsable {@code long}.
 	* @see        java.lang.Long#parseLong(java.lang.String, int)
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the value of this {@code Long} as a
 	* {@code byte}.
 	*/
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of this {@code Long} as a
 	* {@code short}.
 	*/
-	@:overload override public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of this {@code Long} as an
 	* {@code int}.
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Returns the value of this {@code Long} as a
 	* {@code long} value.
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the value of this {@code Long} as a
 	* {@code float}.
 	*/
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Returns the value of this {@code Long} as a
 	* {@code double}.
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	/**
 	* Returns a {@code String} object representing this
@@ -492,7 +492,7 @@ package java.lang;
 	* @return  a string representation of the value of this object in
 	*          base&nbsp;10.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this {@code Long}. The result is
@@ -506,7 +506,7 @@ package java.lang;
 	*
 	* @return  a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specified object.  The result is
@@ -518,7 +518,7 @@ package java.lang;
 	* @return  {@code true} if the objects are the same;
 	*          {@code false} otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Determines the {@code long} value of the system property
@@ -550,7 +550,7 @@ package java.lang;
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getLong(nm : String) : Null<haxe.Int64>;
+	@:overload @:public @:static public static function getLong(nm : String) : Null<haxe.Int64>;
 	
 	/**
 	* Determines the {@code long} value of the system property
@@ -593,7 +593,7 @@ package java.lang;
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getLong(nm : String, val : haxe.Int64) : Null<haxe.Int64>;
+	@:overload @:public @:static public static function getLong(nm : String, val : haxe.Int64) : Null<haxe.Int64>;
 	
 	/**
 	* Returns the {@code long} value of the system property with
@@ -638,7 +638,7 @@ package java.lang;
 	* @see java.lang.System#getProperty(java.lang.String, java.lang.String)
 	* @see java.lang.Long#decode
 	*/
-	@:overload public static function getLong(nm : String, val : Null<haxe.Int64>) : Null<haxe.Int64>;
+	@:overload @:public @:static public static function getLong(nm : String, val : Null<haxe.Int64>) : Null<haxe.Int64>;
 	
 	/**
 	* Compares two {@code Long} objects numerically.
@@ -653,7 +653,7 @@ package java.lang;
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherLong : Null<haxe.Int64>) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherLong : Null<haxe.Int64>) : Int;
 	
 	/**
 	* Compares two {@code long} values numerically.
@@ -669,7 +669,7 @@ package java.lang;
 	*         a value greater than {@code 0} if {@code x > y}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function compare(x : haxe.Int64, y : haxe.Int64) : Int;
+	@:require(java7) @:overload @:public @:static public static function compare(x : haxe.Int64, y : haxe.Int64) : Int;
 	
 	/**
 	* The number of bits used to represent a {@code long} value in two's
@@ -677,7 +677,7 @@ package java.lang;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SIZE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var SIZE(default, null) : Int;
 	
 	/**
 	* Returns a {@code long} value with at most a single one-bit, in the
@@ -691,7 +691,7 @@ package java.lang;
 	*     the specified value is itself equal to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function highestOneBit(i : haxe.Int64) : haxe.Int64;
+	@:require(java5) @:overload @:public @:static public static function highestOneBit(i : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns a {@code long} value with at most a single one-bit, in the
@@ -705,7 +705,7 @@ package java.lang;
 	*     the specified value is itself equal to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function lowestOneBit(i : haxe.Int64) : haxe.Int64;
+	@:require(java5) @:overload @:public @:static public static function lowestOneBit(i : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of zero bits preceding the highest-order
@@ -727,7 +727,7 @@ package java.lang;
 	*     is equal to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function numberOfLeadingZeros(i : haxe.Int64) : Int;
+	@:require(java5) @:overload @:public @:static public static function numberOfLeadingZeros(i : haxe.Int64) : Int;
 	
 	/**
 	* Returns the number of zero bits following the lowest-order ("rightmost")
@@ -742,7 +742,7 @@ package java.lang;
 	*     to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function numberOfTrailingZeros(i : haxe.Int64) : Int;
+	@:require(java5) @:overload @:public @:static public static function numberOfTrailingZeros(i : haxe.Int64) : Int;
 	
 	/**
 	* Returns the number of one-bits in the two's complement binary
@@ -753,7 +753,7 @@ package java.lang;
 	*     representation of the specified {@code long} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function bitCount(i : haxe.Int64) : Int;
+	@:require(java5) @:overload @:public @:static public static function bitCount(i : haxe.Int64) : Int;
 	
 	/**
 	* Returns the value obtained by rotating the two's complement binary
@@ -773,7 +773,7 @@ package java.lang;
 	*     specified number of bits.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function rotateLeft(i : haxe.Int64, distance : Int) : haxe.Int64;
+	@:require(java5) @:overload @:public @:static public static function rotateLeft(i : haxe.Int64, distance : Int) : haxe.Int64;
 	
 	/**
 	* Returns the value obtained by rotating the two's complement binary
@@ -793,7 +793,7 @@ package java.lang;
 	*     specified number of bits.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function rotateRight(i : haxe.Int64, distance : Int) : haxe.Int64;
+	@:require(java5) @:overload @:public @:static public static function rotateRight(i : haxe.Int64, distance : Int) : haxe.Int64;
 	
 	/**
 	* Returns the value obtained by reversing the order of the bits in the
@@ -804,7 +804,7 @@ package java.lang;
 	*     specified {@code long} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function reverse(i : haxe.Int64) : haxe.Int64;
+	@:require(java5) @:overload @:public @:static public static function reverse(i : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the signum function of the specified {@code long} value.  (The
@@ -814,7 +814,7 @@ package java.lang;
 	* @return the signum function of the specified {@code long} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function signum(i : haxe.Int64) : Int;
+	@:require(java5) @:overload @:public @:static public static function signum(i : haxe.Int64) : Int;
 	
 	/**
 	* Returns the value obtained by reversing the order of the bytes in the
@@ -824,7 +824,7 @@ package java.lang;
 	*     {@code long} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function reverseBytes(i : haxe.Int64) : haxe.Int64;
+	@:require(java5) @:overload @:public @:static public static function reverseBytes(i : haxe.Int64) : haxe.Int64;
 	
 	
 }

@@ -84,7 +84,7 @@ package javax.swing;
 */
 extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingConstants implements javax.accessibility.Accessible
 {
-	private var labelFor : java.awt.Component;
+	@:protected private var labelFor : java.awt.Component;
 	
 	/**
 	* Creates a <code>JLabel</code> instance with the specified
@@ -102,7 +102,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*           <code>LEADING</code> or
 	*           <code>TRAILING</code>.
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon, horizontalAlignment : Int) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon, horizontalAlignment : Int) : Void;
 	
 	/**
 	* Creates a <code>JLabel</code> instance with the specified
@@ -118,7 +118,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*           <code>LEADING</code> or
 	*           <code>TRAILING</code>.
 	*/
-	@:overload public function new(text : String, horizontalAlignment : Int) : Void;
+	@:overload @:public public function new(text : String, horizontalAlignment : Int) : Void;
 	
 	/**
 	* Creates a <code>JLabel</code> instance with the specified text.
@@ -127,7 +127,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*
 	* @param text  The text to be displayed by the label.
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a <code>JLabel</code> instance with the specified
@@ -143,7 +143,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*           <code>LEADING</code> or
 	*           <code>TRAILING</code>.
 	*/
-	@:overload public function new(image : javax.swing.Icon, horizontalAlignment : Int) : Void;
+	@:overload @:public public function new(image : javax.swing.Icon, horizontalAlignment : Int) : Void;
 	
 	/**
 	* Creates a <code>JLabel</code> instance with the specified image.
@@ -152,7 +152,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*
 	* @param image  The image to be displayed by the label.
 	*/
-	@:overload public function new(image : javax.swing.Icon) : Void;
+	@:overload @:public public function new(image : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a <code>JLabel</code> instance with
@@ -162,14 +162,14 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* The label's contents, once set, will be displayed on the leading edge
 	* of the label's display area.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the L&F object that renders this component.
 	*
 	* @return LabelUI object
 	*/
-	@:overload public function getUI() : javax.swing.plaf.LabelUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.LabelUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -182,14 +182,14 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.LabelUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.LabelUI) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the l&f class
@@ -200,7 +200,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the text string that the label displays.
@@ -208,7 +208,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return a String
 	* @see #setText
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Defines the single line of text this component will display.  If
@@ -227,7 +227,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: Defines the single line of text this component will display.
 	*/
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	* Returns the graphic image (glyph, icon) that the label displays.
@@ -235,7 +235,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return an Icon
 	* @see #setIcon
 	*/
-	@:overload public function getIcon() : javax.swing.Icon;
+	@:overload @:public public function getIcon() : javax.swing.Icon;
 	
 	/**
 	* Defines the icon this component will display.  If
@@ -254,7 +254,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The icon this component will display.
 	*/
-	@:overload public function setIcon(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function setIcon(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the icon used by the label when it's disabled.
@@ -269,7 +269,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see javax.swing.LookAndFeel#getDisabledIcon
 	* @see ImageIcon
 	*/
-	@:overload public function getDisabledIcon() : javax.swing.Icon;
+	@:overload @:public public function getDisabledIcon() : javax.swing.Icon;
 	
 	/**
 	* Set the icon to be displayed if this JLabel is "disabled"
@@ -285,7 +285,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The icon to display if the label is disabled.
 	*/
-	@:overload public function setDisabledIcon(disabledIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setDisabledIcon(disabledIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Specify a keycode that indicates a mnemonic key.
@@ -301,7 +301,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The mnemonic keycode.
 	*/
-	@:overload public function setDisplayedMnemonic(key : Int) : Void;
+	@:overload @:public public function setDisplayedMnemonic(key : Int) : Void;
 	
 	/**
 	* Specifies the displayedMnemonic as a char value.
@@ -309,7 +309,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @param aChar  a char specifying the mnemonic to display
 	* @see #setDisplayedMnemonic(int)
 	*/
-	@:overload public function setDisplayedMnemonic(aChar : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setDisplayedMnemonic(aChar : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Return the keycode that indicates a mnemonic key.
@@ -323,7 +323,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see #getLabelFor
 	* @see #setLabelFor
 	*/
-	@:overload public function getDisplayedMnemonic() : Int;
+	@:overload @:public public function getDisplayedMnemonic() : Int;
 	
 	/**
 	* Provides a hint to the look and feel as to which character in the
@@ -352,7 +352,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*  description: the index into the String to draw the keyboard character
 	*               mnemonic at
 	*/
-	@:require(java4) @:overload public function setDisplayedMnemonicIndex(index : Int) : Void;
+	@:require(java4) @:overload @:public public function setDisplayedMnemonicIndex(index : Int) : Void;
 	
 	/**
 	* Returns the character, as an index, that the look and feel should
@@ -362,7 +362,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return index representing mnemonic character
 	* @see #setDisplayedMnemonicIndex
 	*/
-	@:require(java4) @:overload public function getDisplayedMnemonicIndex() : Int;
+	@:require(java4) @:overload @:public public function getDisplayedMnemonicIndex() : Int;
 	
 	/**
 	* Verify that key is a legal value for the horizontalAlignment properties.
@@ -374,7 +374,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see #setHorizontalTextPosition
 	* @see #setHorizontalAlignment
 	*/
-	@:overload private function checkHorizontalKey(key : Int, message : String) : Int;
+	@:overload @:protected private function checkHorizontalKey(key : Int, message : String) : Int;
 	
 	/**
 	* Verify that key is a legal value for the
@@ -386,7 +386,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see #setVerticalAlignment
 	* @see #setVerticalTextPosition
 	*/
-	@:overload private function checkVerticalKey(key : Int, message : String) : Int;
+	@:overload @:protected private function checkVerticalKey(key : Int, message : String) : Int;
 	
 	/**
 	* Returns the amount of space between the text and the icon
@@ -396,7 +396,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*         and the icon.
 	* @see #setIconTextGap
 	*/
-	@:overload public function getIconTextGap() : Int;
+	@:overload @:public public function getIconTextGap() : Int;
 	
 	/**
 	* If both the icon and text properties are set, this property
@@ -413,7 +413,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*  description: If both the icon and text properties are set, this
 	*               property defines the space between them.
 	*/
-	@:overload public function setIconTextGap(iconTextGap : Int) : Void;
+	@:overload @:public public function setIconTextGap(iconTextGap : Int) : Void;
 	
 	/**
 	* Returns the alignment of the label's contents along the Y axis.
@@ -427,7 +427,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see SwingConstants
 	* @see #setVerticalAlignment
 	*/
-	@:overload public function getVerticalAlignment() : Int;
+	@:overload @:public public function getVerticalAlignment() : Int;
 	
 	/**
 	* Sets the alignment of the label's contents along the Y axis.
@@ -450,7 +450,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The alignment of the label's contents along the Y axis.
 	*/
-	@:overload public function setVerticalAlignment(alignment : Int) : Void;
+	@:overload @:public public function setVerticalAlignment(alignment : Int) : Void;
 	
 	/**
 	* Returns the alignment of the label's contents along the X axis.
@@ -466,7 +466,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see #setHorizontalAlignment
 	* @see SwingConstants
 	*/
-	@:overload public function getHorizontalAlignment() : Int;
+	@:overload @:public public function getHorizontalAlignment() : Int;
 	
 	/**
 	* Sets the alignment of the label's contents along the X axis.
@@ -493,7 +493,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The alignment of the label's content along the X axis.
 	*/
-	@:overload public function setHorizontalAlignment(alignment : Int) : Void;
+	@:overload @:public public function setHorizontalAlignment(alignment : Int) : Void;
 	
 	/**
 	* Returns the vertical position of the label's text,
@@ -508,7 +508,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see #setVerticalTextPosition
 	* @see SwingConstants
 	*/
-	@:overload public function getVerticalTextPosition() : Int;
+	@:overload @:public public function getVerticalTextPosition() : Int;
 	
 	/**
 	* Sets the vertical position of the label's text,
@@ -535,7 +535,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*    attribute: visualUpdate true
 	*  description: The vertical position of the text relative to it's image.
 	*/
-	@:overload public function setVerticalTextPosition(textPosition : Int) : Void;
+	@:overload @:public public function setVerticalTextPosition(textPosition : Int) : Void;
 	
 	/**
 	* Returns the horizontal position of the label's text,
@@ -551,7 +551,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*
 	* @see SwingConstants
 	*/
-	@:overload public function getHorizontalTextPosition() : Int;
+	@:overload @:public public function getHorizontalTextPosition() : Int;
 	
 	/**
 	* Sets the horizontal position of the label's text,
@@ -579,7 +579,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*  description: The horizontal position of the label's text,
 	*               relative to its image.
 	*/
-	@:overload public function setHorizontalTextPosition(textPosition : Int) : Void;
+	@:overload @:public public function setHorizontalTextPosition(textPosition : Int) : Void;
 	
 	/**
 	* This is overridden to return false if the current Icon's Image is
@@ -588,7 +588,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see     java.awt.image.ImageObserver
 	* @see     java.awt.Component#imageUpdate(java.awt.Image, int, int, int, int, int)
 	*/
-	@:overload override public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public override public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
 	/**
 	* Returns a string representation of this JLabel. This method
@@ -599,7 +599,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*
 	* @return  a string representation of this JLabel.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Get the component this is labelling.
@@ -613,7 +613,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see #getDisplayedMnemonic
 	* @see #setDisplayedMnemonic
 	*/
-	@:overload public function getLabelFor() : java.awt.Component;
+	@:overload @:public public function getLabelFor() : java.awt.Component;
 	
 	/**
 	* Set the component this is labelling.  Can be null if this does not
@@ -632,7 +632,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*        bound: true
 	*  description: The component this is labelling.
 	*/
-	@:overload public function setLabelFor(c : java.awt.Component) : Void;
+	@:overload @:public public function setLabelFor(c : java.awt.Component) : Void;
 	
 	/**
 	* Get the AccessibleContext of this object
@@ -642,7 +642,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*       expert: true
 	*  description: The AccessibleContext associated with this Label.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -667,7 +667,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -676,14 +676,14 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleIcons associated with this object if one
 	* or more exist.  Otherwise return null.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:require(java3) @:overload @:public override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Get the AccessibleRelationSet associated with this object if one
@@ -691,10 +691,10 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see AccessibleRelation
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
+	@:require(java3) @:overload @:public override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
 	
 	/* AccessibleText ---------- */
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -706,7 +706,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* Point is invalid returns -1.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:require(java3) @:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determine the bounding box of the character at the given
@@ -719,7 +719,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* if index is invalid returns an empty rectangle.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:require(java3) @:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Return the number of characters (valid indicies)
@@ -727,7 +727,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return the number of characters
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCharCount() : Int;
+	@:require(java3) @:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Return the zero-based offset of the caret.
@@ -737,7 +737,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return the zero-based offset of the caret.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCaretPosition() : Int;
+	@:require(java3) @:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the String at a given index.
@@ -749,7 +749,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*   null for an invalid index or part
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:require(java3) @:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index.
@@ -761,7 +761,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*  index or part
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:require(java3) @:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index.
@@ -773,7 +773,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*  or part
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:require(java3) @:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Return the AttributeSet for a given character at a given index
@@ -782,7 +782,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return the AttributeSet of the character
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:require(java3) @:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -792,7 +792,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return the index into the text of the start of the selection
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectionStart() : Int;
+	@:require(java3) @:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -802,7 +802,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return the index into teh text of the end of the selection
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectionEnd() : Int;
+	@:require(java3) @:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
@@ -810,7 +810,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @return the String portion of the text that is selected
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getSelectedText() : String;
+	@:require(java3) @:overload @:public public function getSelectedText() : String;
 	
 	/**
 	* Returns the tool tip text
@@ -819,7 +819,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getToolTipText() : String;
+	@:require(java4) @:overload @:public override public function getToolTipText() : String;
 	
 	/**
 	* Returns the titled border text
@@ -828,7 +828,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getTitledBorderText() : String;
+	@:require(java4) @:overload @:public override public function getTitledBorderText() : String;
 	
 	/**
 	* Returns key bindings associated with this object
@@ -838,7 +838,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see AccessibleKeyBinding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
+	@:require(java4) @:overload @:public override public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
 	
 	
 }
@@ -849,7 +849,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	*
 	* @return the zero-based number of key bindings for this object
 	*/
-	@:overload public function getAccessibleKeyBindingCount() : Int;
+	@:overload @:public public function getAccessibleKeyBindingCount() : Int;
 	
 	/**
 	* Returns a key binding for this object.  The value returned is an
@@ -876,7 +876,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* out of bounds
 	* @see #getAccessibleKeyBindingCount
 	*/
-	@:overload public function getAccessibleKeyBinding(i : Int) : Dynamic;
+	@:overload @:public public function getAccessibleKeyBinding(i : Int) : Dynamic;
 	
 	
 }

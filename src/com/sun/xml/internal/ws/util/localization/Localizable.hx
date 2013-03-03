@@ -39,7 +39,7 @@ extern interface Localizable
 	*      the first item of {@link #getArguments()} array
 	*      holds a String.
 	*/
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	/**
 	* Returns the arguments for message formatting.
@@ -47,9 +47,9 @@ extern interface Localizable
 	* @return
 	*      can be an array of length 0 but never be null.
 	*/
-	@:overload public function getArguments() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArguments() : java.NativeArray<Dynamic>;
 	
-	@:overload public function getResourceBundleName() : String;
+	@:overload @:public public function getResourceBundleName() : String;
 	
 	
 }

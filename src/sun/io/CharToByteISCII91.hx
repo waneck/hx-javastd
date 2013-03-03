@@ -31,33 +31,33 @@ extern class CharToByteISCII91 extends sun.io.CharToByteConverter
 	* @see sun.io.CharToByteConverter#canConvert
 	*
 	*/
-	@:overload public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Converts both Devanagari and ASCII range of characters.
 	* @see sun.io.CharToByteConverter#convert
 	*/
-	@:overload public function convert(input : java.NativeArray<java.StdTypes.Char16>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inStart : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 * @see sun.io.CharToByteConverter#flush
 */
-	@:overload public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* @return The character encoding as a String.
 	*/
-	@:overload public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
 	/**
 	* @see sun.io.CharToByteConverter#getMaxBytesPerChar
 	*/
-	@:overload public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	/**
 	* @see sun.io.CharToByteConverter#reset
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

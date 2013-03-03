@@ -29,7 +29,7 @@ extern class DocumentBuilderFactory
 	* <p>Protected constructor to prevent instantiation.
 	* Use {@link #newInstance()}.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Obtain a new instance of a
@@ -88,7 +88,7 @@ extern class DocumentBuilderFactory
 	* @throws FactoryConfigurationError if the implementation is not
 	*   available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance() : javax.xml.parsers.DocumentBuilderFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.parsers.DocumentBuilderFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>DocumentBuilderFactory</code> from class name.
@@ -124,7 +124,7 @@ extern class DocumentBuilderFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.parsers.DocumentBuilderFactory;
+	@:require(java6) @:overload @:public @:static public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.parsers.DocumentBuilderFactory;
 	
 	/**
 	* Creates a new instance of a {@link javax.xml.parsers.DocumentBuilder}
@@ -135,7 +135,7 @@ extern class DocumentBuilderFactory
 	* @throws ParserConfigurationException if a DocumentBuilder
 	*   cannot be created which satisfies the configuration requested.
 	*/
-	@:overload @:abstract public function newDocumentBuilder() : javax.xml.parsers.DocumentBuilder;
+	@:overload @:public @:abstract public function newDocumentBuilder() : javax.xml.parsers.DocumentBuilder;
 	
 	/**
 	* Specifies that the parser produced by this code will
@@ -145,7 +145,7 @@ extern class DocumentBuilderFactory
 	* @param awareness true if the parser produced will provide support
 	*                  for XML namespaces; false otherwise.
 	*/
-	@:overload public function setNamespaceAware(awareness : Bool) : Void;
+	@:overload @:public public function setNamespaceAware(awareness : Bool) : Void;
 	
 	/**
 	* Specifies that the parser produced by this code will
@@ -171,7 +171,7 @@ extern class DocumentBuilderFactory
 	* @param validating true if the parser produced will validate documents
 	*                   as they are parsed; false otherwise.
 	*/
-	@:overload public function setValidating(validating : Bool) : Void;
+	@:overload @:public public function setValidating(validating : Bool) : Void;
 	
 	/**
 	* Specifies that the parsers created by this  factory must eliminate
@@ -187,7 +187,7 @@ extern class DocumentBuilderFactory
 	*                   in the element content when parsing XML documents;
 	*                   false otherwise.
 	*/
-	@:overload public function setIgnoringElementContentWhitespace(whitespace : Bool) : Void;
+	@:overload @:public public function setIgnoringElementContentWhitespace(whitespace : Bool) : Void;
 	
 	/**
 	* Specifies that the parser produced by this code will
@@ -197,7 +197,7 @@ extern class DocumentBuilderFactory
 	* @param expandEntityRef true if the parser produced will expand entity
 	*                        reference nodes; false otherwise.
 	*/
-	@:overload public function setExpandEntityReferences(expandEntityRef : Bool) : Void;
+	@:overload @:public public function setExpandEntityReferences(expandEntityRef : Bool) : Void;
 	
 	/**
 	* <p>Specifies that the parser produced by this code will
@@ -206,7 +206,7 @@ extern class DocumentBuilderFactory
 	*
 	* @param ignoreComments <code>boolean</code> value to ignore comments during processing
 	*/
-	@:overload public function setIgnoringComments(ignoreComments : Bool) : Void;
+	@:overload @:public public function setIgnoringComments(ignoreComments : Bool) : Void;
 	
 	/**
 	* Specifies that the parser produced by this code will
@@ -218,7 +218,7 @@ extern class DocumentBuilderFactory
 	*                    to Text nodes and append it to the adjacent (if any)
 	*                    text node; false otherwise.
 	*/
-	@:overload public function setCoalescing(coalescing : Bool) : Void;
+	@:overload @:public public function setCoalescing(coalescing : Bool) : Void;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -227,7 +227,7 @@ extern class DocumentBuilderFactory
 	* @return  true if the factory is configured to produce parsers which
 	*          are namespace aware; false otherwise.
 	*/
-	@:overload public function isNamespaceAware() : Bool;
+	@:overload @:public public function isNamespaceAware() : Bool;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -236,7 +236,7 @@ extern class DocumentBuilderFactory
 	* @return  true if the factory is configured to produce parsers
 	*          which validate the XML content during parse; false otherwise.
 	*/
-	@:overload public function isValidating() : Bool;
+	@:overload @:public public function isValidating() : Bool;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -246,7 +246,7 @@ extern class DocumentBuilderFactory
 	*          which ignore ignorable whitespace in element content;
 	*          false otherwise.
 	*/
-	@:overload public function isIgnoringElementContentWhitespace() : Bool;
+	@:overload @:public public function isIgnoringElementContentWhitespace() : Bool;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -255,7 +255,7 @@ extern class DocumentBuilderFactory
 	* @return  true if the factory is configured to produce parsers
 	*          which expand entity reference nodes; false otherwise.
 	*/
-	@:overload public function isExpandEntityReferences() : Bool;
+	@:overload @:public public function isExpandEntityReferences() : Bool;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -264,7 +264,7 @@ extern class DocumentBuilderFactory
 	* @return  true if the factory is configured to produce parsers
 	*          which ignores comments; false otherwise.
 	*/
-	@:overload public function isIgnoringComments() : Bool;
+	@:overload @:public public function isIgnoringComments() : Bool;
 	
 	/**
 	* Indicates whether or not the factory is configured to produce
@@ -275,7 +275,7 @@ extern class DocumentBuilderFactory
 	*          which converts CDATA nodes to Text nodes and appends it to
 	*          the adjacent (if any) Text node; false otherwise.
 	*/
-	@:overload public function isCoalescing() : Bool;
+	@:overload @:public public function isCoalescing() : Bool;
 	
 	/**
 	* Allows the user to set specific attributes on the underlying
@@ -287,7 +287,7 @@ extern class DocumentBuilderFactory
 	* @throws IllegalArgumentException thrown if the underlying
 	*   implementation doesn't recognize the attribute.
 	*/
-	@:overload @:abstract public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Allows the user to retrieve specific attributes on the underlying
@@ -300,7 +300,7 @@ extern class DocumentBuilderFactory
 	* @throws IllegalArgumentException thrown if the underlying
 	*   implementation doesn't recognize the attribute.
 	*/
-	@:overload @:abstract public function getAttribute(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* <p>Set a feature for this <code>DocumentBuilderFactory</code> and <code>DocumentBuilder</code>s created by this factory.</p>
@@ -337,7 +337,7 @@ extern class DocumentBuilderFactory
 	*   it creates cannot support this feature.
 	* @throws NullPointerException If the <code>name</code> parameter is null.
 	*/
-	@:overload @:abstract public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public @:abstract public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* <p>Get the state of the named feature.</p>
@@ -357,7 +357,7 @@ extern class DocumentBuilderFactory
 	* @throws ParserConfigurationException if this <code>DocumentBuilderFactory</code>
 	*   or the <code>DocumentBuilder</code>s it creates cannot support this feature.
 	*/
-	@:overload @:abstract public function getFeature(name : String) : Bool;
+	@:overload @:public @:abstract public function getFeature(name : String) : Bool;
 	
 	/**
 	* Gets the {@link Schema} object specified through
@@ -374,7 +374,7 @@ extern class DocumentBuilderFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSchema() : javax.xml.validation.Schema;
+	@:require(java5) @:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* <p>Set the {@link Schema} to be used by parsers created
@@ -432,7 +432,7 @@ extern class DocumentBuilderFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:require(java5) @:overload @:public public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* <p>Set state of XInclude processing.</p>
@@ -451,7 +451,7 @@ extern class DocumentBuilderFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setXIncludeAware(state : Bool) : Void;
+	@:require(java5) @:overload @:public public function setXIncludeAware(state : Bool) : Void;
 	
 	/**
 	* <p>Get state of XInclude processing.</p>
@@ -463,7 +463,7 @@ extern class DocumentBuilderFactory
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isXIncludeAware() : Bool;
+	@:require(java5) @:overload @:public public function isXIncludeAware() : Bool;
 	
 	
 }

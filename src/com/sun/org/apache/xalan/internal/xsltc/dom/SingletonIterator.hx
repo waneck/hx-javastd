@@ -23,25 +23,25 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class SingletonIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIteratorBase
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(node : Int) : Void;
+	@:overload @:public public function new(node : Int) : Void;
 	
-	@:overload public function new(node : Int, constant : Bool) : Void;
+	@:overload @:public public function new(node : Int, constant : Bool) : Void;
 	
 	/**
 	* Override the value of <tt>_node</tt> only when this
 	* object was constructed using the empty constructor.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }

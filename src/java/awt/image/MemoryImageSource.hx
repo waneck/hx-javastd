@@ -38,7 +38,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	*        the array
 	* @see java.awt.Component#createImage
 	*/
-	@:overload public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scan : Int) : Void;
+	@:overload @:public public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scan : Int) : Void;
 	
 	/**
 	* Constructs an ImageProducer object which uses an array of bytes
@@ -55,7 +55,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	*        uses to process an image
 	* @see java.awt.Component#createImage
 	*/
-	@:overload public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scan : Int, props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<java.StdTypes.Int8>, off : Int, scan : Int, props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Constructs an ImageProducer object which uses an array of integers
@@ -70,7 +70,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	*        the array
 	* @see java.awt.Component#createImage
 	*/
-	@:overload public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scan : Int) : Void;
+	@:overload @:public public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scan : Int) : Void;
 	
 	/**
 	* Constructs an ImageProducer object which uses an array of integers
@@ -87,7 +87,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	*        uses to process an image
 	* @see java.awt.Component#createImage
 	*/
-	@:overload public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scan : Int, props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(w : Int, h : Int, cm : java.awt.image.ColorModel, pix : java.NativeArray<Int>, off : Int, scan : Int, props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Constructs an ImageProducer object which uses an array of integers
@@ -102,7 +102,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see java.awt.Component#createImage
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload public function new(w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scan : Int) : Void;
+	@:overload @:public public function new(w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scan : Int) : Void;
 	
 	/**
 	* Constructs an ImageProducer object which uses an array of integers
@@ -119,7 +119,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see java.awt.Component#createImage
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload public function new(w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scan : Int, props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scan : Int, props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Adds an ImageConsumer to the list of consumers interested in
@@ -129,7 +129,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	*           <code>ImageConsumer</code> is null
 	* @see ImageConsumer
 	*/
-	@:overload @:synchronized public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Determines if an ImageConsumer is on the list of consumers currently
@@ -139,7 +139,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* is on the list; <code>false</code> otherwise.
 	* @see ImageConsumer
 	*/
-	@:overload @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
+	@:overload @:public @:synchronized public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
 	
 	/**
 	* Removes an ImageConsumer from the list of consumers interested in
@@ -147,7 +147,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @param ic the specified <code>ImageConsumer</code>
 	* @see ImageConsumer
 	*/
-	@:overload @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public @:synchronized public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Adds an ImageConsumer to the list of consumers interested in
@@ -157,7 +157,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* image data through the ImageConsumer interface.
 	* @see ImageConsumer
 	*/
-	@:overload public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Requests that a given ImageConsumer have the image data delivered
@@ -165,7 +165,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @param ic the specified <code>ImageConsumer</code>
 	* @see ImageConsumer
 	*/
-	@:overload public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Changes this memory image into a multi-frame animation or a
@@ -180,7 +180,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @param animated <code>true</code> if the image is a
 	*       multi-frame animation
 	*/
-	@:overload @:synchronized public function setAnimated(animated : Bool) : Void;
+	@:overload @:public @:synchronized public function setAnimated(animated : Bool) : Void;
 	
 	/**
 	* Specifies whether this animated memory image should always be
@@ -197,7 +197,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* be sent
 	* @see #setAnimated
 	*/
-	@:overload @:synchronized public function setFullBufferUpdates(fullbuffers : Bool) : Void;
+	@:overload @:public @:synchronized public function setFullBufferUpdates(fullbuffers : Bool) : Void;
 	
 	/**
 	* Sends a whole new buffer of pixels to any ImageConsumers that
@@ -209,7 +209,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see ImageConsumer
 	* @see #setAnimated
 	*/
-	@:overload public function newPixels() : Void;
+	@:overload @:public public function newPixels() : Void;
 	
 	/**
 	* Sends a rectangular region of the buffer of pixels to any
@@ -231,7 +231,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see #setAnimated
 	* @see #setFullBufferUpdates
 	*/
-	@:overload @:synchronized public function newPixels(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:synchronized public function newPixels(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Sends a rectangular region of the buffer of pixels to any
@@ -256,7 +256,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see #setAnimated
 	* @see #setFullBufferUpdates
 	*/
-	@:overload @:synchronized public function newPixels(x : Int, y : Int, w : Int, h : Int, framenotify : Bool) : Void;
+	@:overload @:public @:synchronized public function newPixels(x : Int, y : Int, w : Int, h : Int, framenotify : Bool) : Void;
 	
 	/**
 	* Changes to a new byte array to hold the pixels for this image.
@@ -272,7 +272,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see #newPixels(int, int, int, int, boolean)
 	* @see #setAnimated
 	*/
-	@:overload @:synchronized public function newPixels(newpix : java.NativeArray<java.StdTypes.Int8>, newmodel : java.awt.image.ColorModel, offset : Int, scansize : Int) : Void;
+	@:overload @:public @:synchronized public function newPixels(newpix : java.NativeArray<java.StdTypes.Int8>, newmodel : java.awt.image.ColorModel, offset : Int, scansize : Int) : Void;
 	
 	/**
 	* Changes to a new int array to hold the pixels for this image.
@@ -288,7 +288,7 @@ extern class MemoryImageSource implements java.awt.image.ImageProducer
 	* @see #newPixels(int, int, int, int, boolean)
 	* @see #setAnimated
 	*/
-	@:overload @:synchronized public function newPixels(newpix : java.NativeArray<Int>, newmodel : java.awt.image.ColorModel, offset : Int, scansize : Int) : Void;
+	@:overload @:public @:synchronized public function newPixels(newpix : java.NativeArray<Int>, newmodel : java.awt.image.ColorModel, offset : Int, scansize : Int) : Void;
 	
 	
 }

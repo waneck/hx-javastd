@@ -30,19 +30,19 @@ extern class BridgeContextImpl extends com.sun.xml.internal.bind.api.BridgeConte
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var unmarshaller(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl;
+	@:public @:final public var unmarshaller(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl;
 	
-	public var marshaller(default, null) : com.sun.xml.internal.bind.v2.runtime.MarshallerImpl;
+	@:public @:final public var marshaller(default, null) : com.sun.xml.internal.bind.v2.runtime.MarshallerImpl;
 	
-	@:overload override public function setErrorHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public override public function setErrorHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
-	@:overload override public function setAttachmentMarshaller(m : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:overload @:public override public function setAttachmentMarshaller(m : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
-	@:overload override public function setAttachmentUnmarshaller(u : javax.xml.bind.attachment.AttachmentUnmarshaller) : Void;
+	@:overload @:public override public function setAttachmentUnmarshaller(u : javax.xml.bind.attachment.AttachmentUnmarshaller) : Void;
 	
-	@:overload override public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
+	@:overload @:public override public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
-	@:overload override public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
+	@:overload @:public override public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
 	
 	
 }

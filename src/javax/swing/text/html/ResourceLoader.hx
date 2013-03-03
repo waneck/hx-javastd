@@ -25,9 +25,9 @@ package javax.swing.text.html;
 */
 @:internal extern class ResourceLoader implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
-	@:overload public static function getResourceAsStream(name : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getResourceAsStream(name : String) : java.io.InputStream;
 	
 	
 }

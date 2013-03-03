@@ -53,7 +53,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startDocumentFragment(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDocumentFragment(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the start of a general entity.
@@ -73,7 +73,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of a TextDecl line in an entity. If present,
@@ -93,7 +93,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function textDecl(version : String, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function textDecl(version : String, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of a general entity.
@@ -107,7 +107,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endGeneralEntity(name : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGeneralEntity(name : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A comment.
@@ -118,7 +118,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by application to signal an error.
 	*/
-	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -138,7 +138,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element.
@@ -150,7 +150,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An empty element.
@@ -162,7 +162,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -173,7 +173,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -189,7 +189,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -200,7 +200,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -210,7 +210,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startCDATA(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startCDATA(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -220,7 +220,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endCDATA(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endCDATA(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the document fragment.
@@ -230,7 +230,7 @@ extern interface XMLDocumentFragmentHandler
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endDocumentFragment(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDocumentFragment(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	
 }

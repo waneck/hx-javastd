@@ -25,13 +25,13 @@ package sun.tools.jconsole;
 */
 extern class HTMLPane extends javax.swing.JEditorPane
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:synchronized public function setHasSelection(b : Bool) : Void;
+	@:overload @:public @:synchronized public function setHasSelection(b : Bool) : Void;
 	
-	@:overload @:synchronized public function getHasSelection() : Bool;
+	@:overload @:public @:synchronized public function getHasSelection() : Bool;
 	
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public override public function setText(text : String) : Void;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class ResourceInjector
 	* @throws WebServiceException
 	*      If the resource injection fails.
 	*/
-	@:overload @:abstract public function inject(context : com.sun.xml.internal.ws.api.server.WSWebServiceContext, instance : Dynamic) : Void;
+	@:overload @:public @:abstract public function inject(context : com.sun.xml.internal.ws.api.server.WSWebServiceContext, instance : Dynamic) : Void;
 	
 	/**
 	* Fallback {@link ResourceInjector} implementation used when the {@link Container}
@@ -45,7 +45,7 @@ extern class ResourceInjector
 	* <p>
 	* Just inject {@link WSWebServiceContext} and done.
 	*/
-	public static var STANDALONE(default, null) : com.sun.xml.internal.ws.api.server.ResourceInjector;
+	@:public @:static @:final public static var STANDALONE(default, null) : com.sun.xml.internal.ws.api.server.ResourceInjector;
 	
 	
 }

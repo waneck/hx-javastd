@@ -28,71 +28,71 @@ extern class JavaSimpleTypeCreator implements com.sun.tools.internal.ws.processo
 	/*
 	* Mapped JavaSimpleTypes
 	*/
-	public var BOOLEAN_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOOLEAN_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_BOOLEAN_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_BOOLEAN_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BYTE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BYTE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BYTE_ARRAY_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BYTE_ARRAY_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_BYTE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_BYTE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_BYTE_ARRAY_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_BYTE_ARRAY_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var DOUBLE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var DOUBLE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_DOUBLE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_DOUBLE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var FLOAT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var FLOAT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_FLOAT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_FLOAT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var INT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var INT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_INTEGER_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_INTEGER_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var LONG_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var LONG_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_LONG_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_LONG_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var SHORT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var SHORT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BOXED_SHORT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BOXED_SHORT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var DECIMAL_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var DECIMAL_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var BIG_INTEGER_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var BIG_INTEGER_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var CALENDAR_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var CALENDAR_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var DATE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var DATE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var STRING_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var STRING_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var STRING_ARRAY_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var STRING_ARRAY_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var QNAME_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var QNAME_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var VOID_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var VOID_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var OBJECT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var OBJECT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var SOAPELEMENT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var SOAPELEMENT_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var URI_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var URI_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var IMAGE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var IMAGE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var MIME_MULTIPART_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var MIME_MULTIPART_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var SOURCE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var SOURCE_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	public var DATA_HANDLER_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:public public var DATA_HANDLER_JAVATYPE : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getJavaSimpleType(classname : String) : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
+	@:overload @:public public function getJavaSimpleType(classname : String) : com.sun.tools.internal.ws.processor.model.java.JavaSimpleType;
 	
 	
 }

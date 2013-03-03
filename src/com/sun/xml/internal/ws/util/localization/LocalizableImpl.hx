@@ -30,13 +30,13 @@ package com.sun.xml.internal.ws.util.localization;
 */
 extern class LocalizableImpl implements com.sun.xml.internal.ws.util.localization.Localizable
 {
-	@:overload public function new(key : String, arguments : java.NativeArray<Dynamic>, resourceBundleName : String) : Void;
+	@:overload @:public public function new(key : String, arguments : java.NativeArray<Dynamic>, resourceBundleName : String) : Void;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function getArguments() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArguments() : java.NativeArray<Dynamic>;
 	
-	@:overload public function getResourceBundleName() : String;
+	@:overload @:public public function getResourceBundleName() : String;
 	
 	
 }

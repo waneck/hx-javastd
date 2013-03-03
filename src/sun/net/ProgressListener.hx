@@ -28,17 +28,17 @@ extern interface ProgressListener extends java.util.EventListener
 	/**
 	* Start progress.
 	*/
-	@:overload public function progressStart(evt : sun.net.ProgressEvent) : Void;
+	@:overload @:public public function progressStart(evt : sun.net.ProgressEvent) : Void;
 	
 	/**
 	* Update progress.
 	*/
-	@:overload public function progressUpdate(evt : sun.net.ProgressEvent) : Void;
+	@:overload @:public public function progressUpdate(evt : sun.net.ProgressEvent) : Void;
 	
 	/**
 	* Finish progress.
 	*/
-	@:overload public function progressFinish(evt : sun.net.ProgressEvent) : Void;
+	@:overload @:public public function progressFinish(evt : sun.net.ProgressEvent) : Void;
 	
 	
 }

@@ -64,11 +64,11 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class FCMPL extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.TypedInstruction implements com.sun.org.apache.bcel.internal.generic.StackProducer implements com.sun.org.apache.bcel.internal.generic.StackConsumer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @return Type.FLOAT
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -78,7 +78,7 @@ extern class FCMPL extends com.sun.org.apache.bcel.internal.generic.Instruction 
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

@@ -28,14 +28,14 @@ extern class Arg
 	*
 	* @return QName object containing the qualified name
 	*/
-	@:overload @:final public function getQName() : com.sun.org.apache.xml.internal.utils.QName;
+	@:overload @:public @:final public function getQName() : com.sun.org.apache.xml.internal.utils.QName;
 	
 	/**
 	* Set the qualified name for this argument.
 	*
 	* @param name QName object representing the new Qualified Name.
 	*/
-	@:overload @:final public function setQName(name : com.sun.org.apache.xml.internal.utils.QName) : Void;
+	@:overload @:public @:final public function setQName(name : com.sun.org.apache.xml.internal.utils.QName) : Void;
 	
 	/**
 	* Get the value for this argument.
@@ -43,7 +43,7 @@ extern class Arg
 	* @return the argument's stored XObject value.
 	* @see #setVal(XObject)
 	*/
-	@:overload @:final public function getVal() : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:final public function getVal() : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Set the value of this argument.
@@ -51,13 +51,13 @@ extern class Arg
 	* @param val an XObject representing the arguments's value.
 	* @see #getVal()
 	*/
-	@:overload @:final public function setVal(val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
+	@:overload @:public @:final public function setVal(val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
 	
 	/**
 	* Have the object release it's resources.
 	* Call only when the variable or argument is going out of scope.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* Get the value expression for this argument.
@@ -66,7 +66,7 @@ extern class Arg
 	* argument
 	* @see #setExpression
 	*/
-	@:overload public function getExpression() : String;
+	@:overload @:public public function getExpression() : String;
 	
 	/**
 	* Set the value expression for this argument.
@@ -75,30 +75,30 @@ extern class Arg
 	* argument's value.
 	* @see #getExpression
 	*/
-	@:overload public function setExpression(expr : String) : Void;
+	@:overload @:public public function setExpression(expr : String) : Void;
 	
 	/**
 	* Tell if this variable is a parameter passed with a with-param or as
 	* a top-level parameter.
 	*/
-	@:overload public function isFromWithParam() : Bool;
+	@:overload @:public public function isFromWithParam() : Bool;
 	
 	/**
 	* Tell if this variable is currently visible.
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Update visibility status of this variable.
 	*/
-	@:overload public function setIsVisible(b : Bool) : Void;
+	@:overload @:public public function setIsVisible(b : Bool) : Void;
 	
 	/**
 	* Construct a dummy parameter argument, with no QName and no
 	* value (either expression string or value XObject). isVisible
 	* defaults to true.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a parameter argument that contains an expression.
@@ -107,7 +107,7 @@ extern class Arg
 	* @param expression String to be stored as this argument's value expression.
 	* @param isFromWithParam True if this is a parameter variable.
 	*/
-	@:overload public function new(qname : com.sun.org.apache.xml.internal.utils.QName, expression : String, isFromWithParam : Bool) : Void;
+	@:overload @:public public function new(qname : com.sun.org.apache.xml.internal.utils.QName, expression : String, isFromWithParam : Bool) : Void;
 	
 	/**
 	* Construct a parameter argument which has an XObject value.
@@ -116,7 +116,7 @@ extern class Arg
 	* @param qname Name of the argument, expressed as a QName object.
 	* @param val Value of the argument, expressed as an XObject
 	*/
-	@:overload public function new(qname : com.sun.org.apache.xml.internal.utils.QName, val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
+	@:overload @:public public function new(qname : com.sun.org.apache.xml.internal.utils.QName, val : com.sun.org.apache.xpath.internal.objects.XObject) : Void;
 	
 	/**
 	* Equality function specialized for the variable name.  If the argument
@@ -126,7 +126,7 @@ extern class Arg
 	* @return  <code>true</code> if this object is the same as the obj
 	*          argument; <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Construct a parameter argument.
@@ -135,7 +135,7 @@ extern class Arg
 	* @param val Value of the argument, expressed as an XObject
 	* @param isFromWithParam True if this is a parameter variable.
 	*/
-	@:overload public function new(qname : com.sun.org.apache.xml.internal.utils.QName, val : com.sun.org.apache.xpath.internal.objects.XObject, isFromWithParam : Bool) : Void;
+	@:overload @:public public function new(qname : com.sun.org.apache.xml.internal.utils.QName, val : com.sun.org.apache.xpath.internal.objects.XObject, isFromWithParam : Bool) : Void;
 	
 	
 }

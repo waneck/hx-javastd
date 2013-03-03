@@ -37,7 +37,7 @@ extern interface BufferManagerRead
 	*  constructor of the same name. There are going to be some variations.
 	*
 	*/
-	@:overload public function processFragment(byteBuffer : java.nio.ByteBuffer, header : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage) : Void;
+	@:overload @:public public function processFragment(byteBuffer : java.nio.ByteBuffer, header : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage) : Void;
 	
 	/**
 	* Case: called from CDRInputStream.grow.
@@ -48,28 +48,28 @@ extern interface BufferManagerRead
 	*
 	*  If streaming then sync on bufQ and wait if empty.
 	*/
-	@:overload public function underflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload @:public public function underflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
 	/**
 	* Called once after creating this buffer manager and before
 	* it begins processing.
 	*/
-	@:overload public function init(header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
+	@:overload @:public public function init(header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : Void;
 	
 	/**
 	* Returns the mark/reset handler for this stream.
 	*/
-	@:overload public function getMarkAndResetHandler() : com.sun.corba.se.impl.encoding.MarkAndResetHandler;
+	@:overload @:public public function getMarkAndResetHandler() : com.sun.corba.se.impl.encoding.MarkAndResetHandler;
 	
 	/*
 	* Signals that the processing be cancelled.
 	*/
-	@:overload public function cancelProcessing(requestId : Int) : Void;
+	@:overload @:public public function cancelProcessing(requestId : Int) : Void;
 	
 	/*
 	* Close BufferManagerRead and perform any oustanding cleanup.
 	*/
-	@:overload public function close(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public public function close(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	
 }

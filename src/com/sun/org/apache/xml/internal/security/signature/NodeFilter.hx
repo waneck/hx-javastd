@@ -29,7 +29,7 @@ extern interface NodeFilter
 	*                -1 if the node and all it's child must not be output.
 	*
 	*/
-	@:overload public function isNodeInclude(n : org.w3c.dom.Node) : Int;
+	@:overload @:public public function isNodeInclude(n : org.w3c.dom.Node) : Int;
 	
 	/**
 	* Tells if a node must be outputed in a c14n.
@@ -42,7 +42,7 @@ extern interface NodeFilter
 	*                 0 if node must not be outputed,
 	*                -1 if the node and all it's child must not be output.
 	*/
-	@:overload public function isNodeIncludeDO(n : org.w3c.dom.Node, level : Int) : Int;
+	@:overload @:public public function isNodeIncludeDO(n : org.w3c.dom.Node, level : Int) : Int;
 	
 	
 }

@@ -25,35 +25,35 @@ package com.sun.corba.se.impl.orbutil.threadpool;
 */
 extern class WorkQueueImpl implements com.sun.corba.se.spi.orbutil.threadpool.WorkQueue
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(workerThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool) : Void;
+	@:overload @:public public function new(workerThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool) : Void;
 	
-	@:overload public function new(workerThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool, name : String) : Void;
+	@:overload @:public public function new(workerThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool, name : String) : Void;
 	
-	@:overload @:synchronized public function addWork(work : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
+	@:overload @:public @:synchronized public function addWork(work : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
 	
-	@:overload public function setThreadPool(workerThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool) : Void;
+	@:overload @:public public function setThreadPool(workerThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool) : Void;
 	
-	@:overload public function getThreadPool() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
+	@:overload @:public public function getThreadPool() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
 	
 	/**
 	* Returns the total number of Work items added to the Queue.
 	* This method is unsynchronized and only gives a snapshot of the
 	* state when it is called
 	*/
-	@:overload public function totalWorkItemsAdded() : haxe.Int64;
+	@:overload @:public public function totalWorkItemsAdded() : haxe.Int64;
 	
 	/**
 	* Returns the total number of Work items in the Queue to be processed
 	* This method is unsynchronized and only gives a snapshot of the
 	* state when it is called
 	*/
-	@:overload public function workItemsInQueue() : Int;
+	@:overload @:public public function workItemsInQueue() : Int;
 	
-	@:overload @:synchronized public function averageTimeInQueue() : haxe.Int64;
+	@:overload @:public @:synchronized public function averageTimeInQueue() : haxe.Int64;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

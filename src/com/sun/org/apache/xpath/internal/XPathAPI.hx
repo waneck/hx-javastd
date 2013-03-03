@@ -34,7 +34,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function selectSingleNode(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.Node;
+	@:overload @:public @:static public static function selectSingleNode(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.Node;
 	
 	/**
 	* Use an XPath string to select a single node.
@@ -47,7 +47,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function selectSingleNode(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public @:static public static function selectSingleNode(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -59,7 +59,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public @:static public static function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -72,7 +72,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public @:static public static function selectNodeIterator(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -84,7 +84,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function selectNodeList(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function selectNodeList(contextNode : org.w3c.dom.Node, str : String) : org.w3c.dom.NodeList;
 	
 	/**
 	*  Use an XPath string to select a nodelist.
@@ -97,7 +97,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function selectNodeList(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function selectNodeList(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : org.w3c.dom.NodeList;
 	
 	/**
 	*  Evaluate XPath string to an XObject.  Using this method,
@@ -114,7 +114,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function eval(contextNode : org.w3c.dom.Node, str : String) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:static public static function eval(contextNode : org.w3c.dom.Node, str : String) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	*  Evaluate XPath string to an XObject.
@@ -136,7 +136,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function eval(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:static public static function eval(contextNode : org.w3c.dom.Node, str : String, namespaceNode : org.w3c.dom.Node) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	*   Evaluate XPath string to an XObject.
@@ -159,7 +159,7 @@ extern class XPathAPI
 	*
 	* @throws TransformerException
 	*/
-	@:overload public static function eval(contextNode : org.w3c.dom.Node, str : String, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:static public static function eval(contextNode : org.w3c.dom.Node, str : String, prefixResolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

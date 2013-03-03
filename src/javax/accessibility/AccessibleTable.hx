@@ -37,42 +37,42 @@ package javax.accessibility;
 	*
 	* @return the caption for the table
 	*/
-	@:overload public function getAccessibleCaption() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleCaption() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the caption for the table.
 	*
 	* @param a the caption for the table
 	*/
-	@:overload public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the summary description of the table.
 	*
 	* @return the summary description of the table
 	*/
-	@:overload public function getAccessibleSummary() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSummary() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the summary description of the table
 	*
 	* @param a the summary description of the table
 	*/
-	@:overload public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the number of rows in the table.
 	*
 	* @return the number of rows in the table
 	*/
-	@:overload public function getAccessibleRowCount() : Int;
+	@:overload @:public public function getAccessibleRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the table.
 	*
 	* @return the number of columns in the table
 	*/
-	@:overload public function getAccessibleColumnCount() : Int;
+	@:overload @:public public function getAccessibleColumnCount() : Int;
 	
 	/**
 	* Returns the Accessible at a specified row and column
@@ -82,7 +82,7 @@ package javax.accessibility;
 	* @param c zero-based column of the table
 	* @return the Accessible at the specified row and column
 	*/
-	@:overload public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of rows occupied by the Accessible at
@@ -91,7 +91,7 @@ package javax.accessibility;
 	* @return the number of rows occupied by the Accessible at a
 	* given specified (row, column)
 	*/
-	@:overload public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the number of columns occupied by the Accessible at
@@ -100,7 +100,7 @@ package javax.accessibility;
 	* @return the number of columns occupied by the Accessible at a
 	* given specified row and column
 	*/
-	@:overload public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the row headers as an AccessibleTable.
@@ -108,7 +108,7 @@ package javax.accessibility;
 	* @return an AccessibleTable representing the row
 	* headers
 	*/
-	@:overload public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the row headers.
@@ -116,7 +116,7 @@ package javax.accessibility;
 	* @param table an AccessibleTable representing the
 	* row headers
 	*/
-	@:overload public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the column headers as an AccessibleTable.
@@ -124,7 +124,7 @@ package javax.accessibility;
 	* @return an AccessibleTable representing the column
 	* headers
 	*/
-	@:overload public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the column headers.
@@ -132,7 +132,7 @@ package javax.accessibility;
 	* @param table an AccessibleTable representing the
 	* column headers
 	*/
-	@:overload public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the description of the specified row in the table.
@@ -140,7 +140,7 @@ package javax.accessibility;
 	* @param r zero-based row of the table
 	* @return the description of the row
 	*/
-	@:overload public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified row of the table.
@@ -148,7 +148,7 @@ package javax.accessibility;
 	* @param r zero-based row of the table
 	* @param a the description of the row
 	*/
-	@:overload public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the description text of the specified column in the table.
@@ -156,7 +156,7 @@ package javax.accessibility;
 	* @param c zero-based column of the table
 	* @return the text description of the column
 	*/
-	@:overload public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified column in the table.
@@ -164,7 +164,7 @@ package javax.accessibility;
 	* @param c zero-based column of the table
 	* @param a the text description of the column
 	*/
-	@:overload public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns a boolean value indicating whether the accessible at
@@ -176,7 +176,7 @@ package javax.accessibility;
 	* row and column is selected. Otherwise, the boolean value
 	* false
 	*/
-	@:overload public function isAccessibleSelected(r : Int, c : Int) : Bool;
+	@:overload @:public public function isAccessibleSelected(r : Int, c : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified row
@@ -186,7 +186,7 @@ package javax.accessibility;
 	* @return the boolean value true if the specified row is selected.
 	* Otherwise, false.
 	*/
-	@:overload public function isAccessibleRowSelected(r : Int) : Bool;
+	@:overload @:public public function isAccessibleRowSelected(r : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified column
@@ -196,7 +196,7 @@ package javax.accessibility;
 	* @return the boolean value true if the specified column is selected.
 	* Otherwise, false.
 	*/
-	@:overload public function isAccessibleColumnSelected(c : Int) : Bool;
+	@:overload @:public public function isAccessibleColumnSelected(c : Int) : Bool;
 	
 	/**
 	* Returns the selected rows in a table.
@@ -204,7 +204,7 @@ package javax.accessibility;
 	* @return an array of selected rows where each element is a
 	* zero-based row of the table
 	*/
-	@:overload public function getSelectedAccessibleRows() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedAccessibleRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the selected columns in a table.
@@ -212,7 +212,7 @@ package javax.accessibility;
 	* @return an array of selected columns where each element is a
 	* zero-based column of the table
 	*/
-	@:overload public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
 	
 	
 }

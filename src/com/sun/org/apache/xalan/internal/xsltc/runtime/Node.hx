@@ -29,11 +29,11 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class Node
 {
-	public var node : Int;
+	@:public public var node : Int;
 	
-	public var type : Int;
+	@:public public var type : Int;
 	
-	@:overload public function new(n : Int, t : Int) : Void;
+	@:overload @:public public function new(n : Int, t : Int) : Void;
 	
 	
 }

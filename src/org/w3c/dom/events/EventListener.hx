@@ -63,7 +63,7 @@ extern interface EventListener
 	*   and <code>preventDefault</code> methods which are used in
 	*   determining the event's flow and default action.
 	*/
-	@:overload public function handleEvent(evt : org.w3c.dom.events.Event) : Void;
+	@:overload @:public public function handleEvent(evt : org.w3c.dom.events.Event) : Void;
 	
 	
 }

@@ -39,76 +39,76 @@ extern class MetalTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI
 	*
 	* @author Tom Santos
 	*/
-	private var minTabWidth : Int;
+	@:protected private var minTabWidth : Int;
 	
-	private var tabAreaBackground : java.awt.Color;
+	@:protected private var tabAreaBackground : java.awt.Color;
 	
-	private var selectColor : java.awt.Color;
+	@:protected private var selectColor : java.awt.Color;
 	
-	private var selectHighlight : java.awt.Color;
+	@:protected private var selectHighlight : java.awt.Color;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayoutManager() : java.awt.LayoutManager;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function paintTabBorder(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintTabBorder(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	
-	@:overload private function paintTopTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
+	@:overload @:protected private function paintTopTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
 	
-	@:overload private function shouldFillGap(currentRun : Int, tabIndex : Int, x : Int, y : Int) : Bool;
+	@:overload @:protected private function shouldFillGap(currentRun : Int, tabIndex : Int, x : Int, y : Int) : Bool;
 	
-	@:overload private function getColorForGap(currentRun : Int, x : Int, y : Int) : java.awt.Color;
+	@:overload @:protected private function getColorForGap(currentRun : Int, x : Int, y : Int) : java.awt.Color;
 	
-	@:overload private function paintLeftTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
+	@:overload @:protected private function paintLeftTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
 	
-	@:overload private function paintBottomTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
+	@:overload @:protected private function paintBottomTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
 	
-	@:overload private function paintRightTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
+	@:overload @:protected private function paintRightTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
 	
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
-	
-	/**
-	* Overridden to do nothing for the Java L&F.
-	*/
-	@:overload override private function getTabLabelShiftX(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
+	@:overload @:protected override private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	
 	/**
 	* Overridden to do nothing for the Java L&F.
 	*/
-	@:overload override private function getTabLabelShiftY(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
+	@:overload @:protected override private function getTabLabelShiftX(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
+	
+	/**
+	* Overridden to do nothing for the Java L&F.
+	*/
+	@:overload @:protected override private function getTabLabelShiftY(tabPlacement : Int, tabIndex : Int, isSelected : Bool) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function getBaselineOffset() : Int;
+	@:require(java6) @:overload @:protected override private function getBaselineOffset() : Int;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintHighlightBelowTab() : Void;
+	@:overload @:protected private function paintHighlightBelowTab() : Void;
 	
-	@:overload override private function paintFocusIndicator(g : java.awt.Graphics, tabPlacement : Int, rects : java.NativeArray<java.awt.Rectangle>, tabIndex : Int, iconRect : java.awt.Rectangle, textRect : java.awt.Rectangle, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintFocusIndicator(g : java.awt.Graphics, tabPlacement : Int, rects : java.NativeArray<java.awt.Rectangle>, tabIndex : Int, iconRect : java.awt.Rectangle, textRect : java.awt.Rectangle, isSelected : Bool) : Void;
 	
-	@:overload override private function paintContentBorderTopEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderTopEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function paintContentBorderBottomEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderBottomEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function paintContentBorderLeftEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderLeftEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function paintContentBorderRightEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderRightEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function calculateMaxTabHeight(tabPlacement : Int) : Int;
+	@:overload @:protected override private function calculateMaxTabHeight(tabPlacement : Int) : Int;
 	
-	@:overload override private function getTabRunOverlay(tabPlacement : Int) : Int;
+	@:overload @:protected override private function getTabRunOverlay(tabPlacement : Int) : Int;
 	
-	@:overload private function shouldRotateTabRuns(tabPlacement : Int, selectedRun : Int) : Bool;
+	@:overload @:protected private function shouldRotateTabRuns(tabPlacement : Int, selectedRun : Int) : Bool;
 	
-	@:overload override private function shouldPadTabRun(tabPlacement : Int, run : Int) : Bool;
+	@:overload @:protected override private function shouldPadTabRun(tabPlacement : Int, run : Int) : Bool;
 	
 	
 }
@@ -118,13 +118,13 @@ extern class MetalTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI
 */
 @:native('javax$swing$plaf$metal$MetalTabbedPaneUI$TabbedPaneLayout') extern class MetalTabbedPaneUI_TabbedPaneLayout extends javax.swing.plaf.basic.BasicTabbedPaneUI.BasicTabbedPaneUI_TabbedPaneLayout
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function normalizeTabRuns(tabPlacement : Int, tabCount : Int, start : Int, max : Int) : Void;
+	@:overload @:protected override private function normalizeTabRuns(tabPlacement : Int, tabCount : Int, start : Int, max : Int) : Void;
 	
-	@:overload override private function rotateTabRuns(tabPlacement : Int, selectedRun : Int) : Void;
+	@:overload @:protected override private function rotateTabRuns(tabPlacement : Int, selectedRun : Int) : Void;
 	
-	@:overload override private function padSelectedTab(tabPlacement : Int, selectedIndex : Int) : Void;
+	@:overload @:protected override private function padSelectedTab(tabPlacement : Int, selectedIndex : Int) : Void;
 	
 	
 }

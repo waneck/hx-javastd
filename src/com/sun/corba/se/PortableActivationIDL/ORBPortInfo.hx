@@ -7,13 +7,13 @@ package com.sun.corba.se.PortableActivationIDL;
 */
 extern class ORBPortInfo implements org.omg.CORBA.portable.IDLEntity
 {
-	public var orbId : String;
+	@:public public var orbId : String;
 	
-	public var port : Int;
+	@:public public var port : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_orbId : String, _port : Int) : Void;
+	@:overload @:public public function new(_orbId : String, _port : Int) : Void;
 	
 	
 }

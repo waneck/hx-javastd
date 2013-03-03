@@ -27,9 +27,9 @@ package com.sun.corba.se.impl.orbutil.graph;
 */
 extern class NodeData
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

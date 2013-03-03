@@ -28,13 +28,13 @@ extern class SdpSupport
 	/**
 	* Creates a SDP socket, returning file descriptor referencing the socket.
 	*/
-	@:overload public static function createSocket() : java.io.FileDescriptor;
+	@:overload @:public @:static public static function createSocket() : java.io.FileDescriptor;
 	
 	/**
 	* Converts an existing file descriptor, that references an unbound TCP socket,
 	* to SDP.
 	*/
-	@:overload public static function convertSocket(fd : java.io.FileDescriptor) : Void;
+	@:overload @:public @:static public static function convertSocket(fd : java.io.FileDescriptor) : Void;
 	
 	
 }

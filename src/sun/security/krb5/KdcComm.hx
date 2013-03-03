@@ -33,11 +33,11 @@ extern class KdcComm
 	/**
 	* Read global settings
 	*/
-	@:overload public static function initStatic() : Void;
+	@:overload @:public @:static public static function initStatic() : Void;
 	
-	@:overload public function new(realm : String) : Void;
+	@:overload @:public public function new(realm : String) : Void;
 	
-	@:overload public function send(obuf : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function send(obuf : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -56,9 +56,9 @@ extern class KdcComm
 
 @:native('sun$security$krb5$KdcComm$KdcCommunication') @:internal extern class KdcComm_KdcCommunication implements java.security.PrivilegedExceptionAction<java.NativeArray<java.StdTypes.Int8>>
 {
-	@:overload public function new(kdc : String, port : Int, useTCP : Bool, timeout : Int, retries : Int, obuf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(kdc : String, port : Int, useTCP : Bool, timeout : Int, retries : Int, obuf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function run() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function run() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

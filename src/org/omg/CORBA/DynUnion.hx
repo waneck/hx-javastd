@@ -40,53 +40,53 @@ extern interface DynUnion extends org.omg.CORBA.Object extends org.omg.CORBA.Dyn
 	* @return <code>true</code> if the discriminator has a default value;
 	* <code>false</code> otherwise
 	*/
-	@:overload public function set_as_default() : Bool;
+	@:overload @:public public function set_as_default() : Bool;
 	
 	/**
 	* Determines whether the discriminator associated with this union gets assigned
 	* a valid default value.
 	* @param arg <code>true</code> if the discriminator gets assigned a default value
 	*/
-	@:overload public function set_as_default(arg : Bool) : Void;
+	@:overload @:public public function set_as_default(arg : Bool) : Void;
 	
 	/**
 	* Returns a DynAny object reference that must be narrowed to the type
 	* of the discriminator in order to insert/get the discriminator value.
 	* @return a <code>DynAny</code> object reference representing the discriminator value
 	*/
-	@:overload public function discriminator() : org.omg.CORBA.DynAny;
+	@:overload @:public public function discriminator() : org.omg.CORBA.DynAny;
 	
 	/**
 	* Returns the TCKind object associated with the discriminator of this union.
 	* @return the <code>TCKind</code> object associated with the discriminator of this union
 	*/
-	@:overload public function discriminator_kind() : org.omg.CORBA.TCKind;
+	@:overload @:public public function discriminator_kind() : org.omg.CORBA.TCKind;
 	
 	/**
 	* Returns a DynAny object reference that is used in order to insert/get
 	* a member of this union.
 	* @return the <code>DynAny</code> object representing a member of this union
 	*/
-	@:overload public function member() : org.omg.CORBA.DynAny;
+	@:overload @:public public function member() : org.omg.CORBA.DynAny;
 	
 	/**
 	* Allows for the inspection of the name of this union member
 	* without checking the value of the discriminator.
 	* @return the name of this union member
 	*/
-	@:overload public function member_name() : String;
+	@:overload @:public public function member_name() : String;
 	
 	/**
 	* Allows for the assignment of the name of this union member.
 	* @param arg the new name of this union member
 	*/
-	@:overload public function member_name(arg : String) : Void;
+	@:overload @:public public function member_name(arg : String) : Void;
 	
 	/**
 	* Returns the TCKind associated with the member of this union.
 	* @return the <code>TCKind</code> object associated with the member of this union
 	*/
-	@:overload public function member_kind() : org.omg.CORBA.TCKind;
+	@:overload @:public public function member_kind() : org.omg.CORBA.TCKind;
 	
 	
 }

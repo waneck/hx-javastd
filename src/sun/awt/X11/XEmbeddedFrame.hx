@@ -25,31 +25,31 @@ package sun.awt.X11;
 */
 extern class XEmbeddedFrame extends sun.awt.EmbeddedFrame
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(handle : haxe.Int64) : Void;
+	@:overload @:public public function new(handle : haxe.Int64) : Void;
 	
-	@:overload public function new(handle : haxe.Int64, supportsXEmbed : Bool, isTrayIconWindow : Bool) : Void;
+	@:overload @:public public function new(handle : haxe.Int64, supportsXEmbed : Bool, isTrayIconWindow : Bool) : Void;
 	
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
-	@:overload public function new(handle : haxe.Int64, supportsXEmbed : Bool) : Void;
-	
-	/*
-	* The method shouldn't be called in case of active XEmbed.
-	*/
-	@:overload public function traverseIn(direction : Bool) : Bool;
-	
-	@:overload private function traverseOut(direction : Bool) : Bool;
+	@:overload @:public public function new(handle : haxe.Int64, supportsXEmbed : Bool) : Void;
 	
 	/*
 	* The method shouldn't be called in case of active XEmbed.
 	*/
-	@:overload public function synthesizeWindowActivation(doActivate : Bool) : Void;
+	@:overload @:public override public function traverseIn(direction : Bool) : Bool;
 	
-	@:overload public function registerAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	@:overload @:protected override private function traverseOut(direction : Bool) : Bool;
 	
-	@:overload public function unregisterAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	/*
+	* The method shouldn't be called in case of active XEmbed.
+	*/
+	@:overload @:public override public function synthesizeWindowActivation(doActivate : Bool) : Void;
+	
+	@:overload @:public override public function registerAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	
+	@:overload @:public override public function unregisterAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
 	
 	
 }

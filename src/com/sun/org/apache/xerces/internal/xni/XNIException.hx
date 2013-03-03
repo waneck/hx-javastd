@@ -39,14 +39,14 @@ extern class XNIException extends java.lang.RuntimeException
 	*
 	* @param message The exception message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs an XNI exception with a wrapped exception.
 	*
 	* @param exception The wrapped exception.
 	*/
-	@:overload public function new(exception : java.lang.Exception) : Void;
+	@:overload @:public public function new(exception : java.lang.Exception) : Void;
 	
 	/**
 	* Constructs an XNI exception with a message and wrapped exception.
@@ -54,12 +54,12 @@ extern class XNIException extends java.lang.RuntimeException
 	* @param message The exception message.
 	* @param exception The wrapped exception.
 	*/
-	@:overload public function new(message : String, exception : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, exception : java.lang.Exception) : Void;
 	
 	/** Returns the wrapped exception. */
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

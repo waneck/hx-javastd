@@ -28,23 +28,23 @@ extern class BufImgSurfaceManager extends sun.awt.image.SurfaceManager
 	/**
 	* A reference to the BufferedImage whose contents are being managed.
 	*/
-	private var bImg : java.awt.image.BufferedImage;
+	@:protected private var bImg : java.awt.image.BufferedImage;
 	
 	/**
 	* The default (software) surface containing the contents of the
 	* BufferedImage.
 	*/
-	private var sdDefault : sun.java2d.SurfaceData;
+	@:protected private var sdDefault : sun.java2d.SurfaceData;
 	
-	@:overload public function new(bImg : java.awt.image.BufferedImage) : Void;
+	@:overload @:public public function new(bImg : java.awt.image.BufferedImage) : Void;
 	
-	@:overload override public function getPrimarySurfaceData() : sun.java2d.SurfaceData;
+	@:overload @:public override public function getPrimarySurfaceData() : sun.java2d.SurfaceData;
 	
 	/**
 	* Called from platform-specific SurfaceData objects to attempt to
 	* auto-restore the contents of an accelerated surface that has been lost.
 	*/
-	@:overload override public function restoreContents() : sun.java2d.SurfaceData;
+	@:overload @:public override public function restoreContents() : sun.java2d.SurfaceData;
 	
 	
 }

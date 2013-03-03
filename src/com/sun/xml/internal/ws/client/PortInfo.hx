@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.client;
 */
 extern class PortInfo implements com.sun.xml.internal.ws.api.client.WSPortInfo
 {
-	public var portName(default, null) : javax.xml.namespace.QName;
+	@:public @:final public var portName(default, null) : javax.xml.namespace.QName;
 	
-	public var targetEndpoint(default, null) : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:public @:final public var targetEndpoint(default, null) : com.sun.xml.internal.ws.api.EndpointAddress;
 	
-	public var bindingId(default, null) : com.sun.xml.internal.ws.api.BindingID;
+	@:public @:final public var bindingId(default, null) : com.sun.xml.internal.ws.api.BindingID;
 	
-	public var policyMap(default, null) : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:public @:final public var policyMap(default, null) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	/**
 	* If a port is known statically to a WSDL, {@link PortInfo} may
@@ -41,15 +41,15 @@ extern class PortInfo implements com.sun.xml.internal.ws.api.client.WSPortInfo
 	* <p/>
 	* If this is a {@link SEIPortInfo}, then this is always non-null.
 	*/
-	public var portModel(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:public @:final public var portModel(default, null) : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	@:overload public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, targetEndpoint : com.sun.xml.internal.ws.api.EndpointAddress, name : javax.xml.namespace.QName, bindingId : com.sun.xml.internal.ws.api.BindingID) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, targetEndpoint : com.sun.xml.internal.ws.api.EndpointAddress, name : javax.xml.namespace.QName, bindingId : com.sun.xml.internal.ws.api.BindingID) : Void;
 	
-	@:overload public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
 	
-	@:overload public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
-	@:overload public function createPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function createPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	/**
 	* Creates {@link BindingImpl} for this {@link PortInfo}.
@@ -61,36 +61,36 @@ extern class PortInfo implements com.sun.xml.internal.ws.api.client.WSPortInfo
 	* @return
 	*      The initialized BindingImpl
 	*/
-	@:overload public function createBinding(webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>, portInterface : Class<Dynamic>) : com.sun.xml.internal.ws.binding.BindingImpl;
+	@:overload @:public public function createBinding(webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>, portInterface : Class<Dynamic>) : com.sun.xml.internal.ws.binding.BindingImpl;
 	
-	@:overload public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.ws.api.WSService;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.ws.api.WSService;
 	
-	@:overload public function getBindingId() : com.sun.xml.internal.ws.api.BindingID;
+	@:overload @:public public function getBindingId() : com.sun.xml.internal.ws.api.BindingID;
 	
-	@:overload public function getEndpointAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:overload @:public public function getEndpointAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
 	
 	/**
 	* @deprecated
 	*      Only meant to be used via {@link javax.xml.ws.handler.PortInfo}.
 	*      Use {@link WSServiceDelegate#getServiceName()}.
 	*/
-	@:overload public function getServiceName() : javax.xml.namespace.QName;
+	@:overload @:public public function getServiceName() : javax.xml.namespace.QName;
 	
 	/**
 	* @deprecated
 	*      Only meant to be used via {@link javax.xml.ws.handler.PortInfo}.
 	*      Use {@link #portName}.
 	*/
-	@:overload public function getPortName() : javax.xml.namespace.QName;
+	@:overload @:public public function getPortName() : javax.xml.namespace.QName;
 	
 	/**
 	* @deprecated
 	*      Only meant to be used via {@link javax.xml.ws.handler.PortInfo}.
 	*      Use {@link #bindingId}.
 	*/
-	@:overload public function getBindingID() : String;
+	@:overload @:public public function getBindingID() : String;
 	
 	
 }

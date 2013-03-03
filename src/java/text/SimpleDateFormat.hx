@@ -392,7 +392,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* For full coverage, use the factory methods in the {@link DateFormat}
 	* class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SimpleDateFormat</code> using the given pattern and
@@ -405,7 +405,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @exception NullPointerException if the given pattern is null
 	* @exception IllegalArgumentException if the given pattern is invalid
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* Constructs a <code>SimpleDateFormat</code> using the given pattern and
@@ -419,7 +419,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @exception NullPointerException if the given pattern or locale is null
 	* @exception IllegalArgumentException if the given pattern is invalid
 	*/
-	@:overload public function new(pattern : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(pattern : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a <code>SimpleDateFormat</code> using the given pattern and
@@ -430,7 +430,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @exception NullPointerException if the given pattern or formatSymbols is null
 	* @exception IllegalArgumentException if the given pattern is invalid
 	*/
-	@:overload public function new(pattern : String, formatSymbols : java.text.DateFormatSymbols) : Void;
+	@:overload @:public public function new(pattern : String, formatSymbols : java.text.DateFormatSymbols) : Void;
 	
 	/**
 	* Sets the 100-year period 2-digit years will be interpreted as being in
@@ -441,7 +441,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @see #get2DigitYearStart
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function set2DigitYearStart(startDate : java.util.Date) : Void;
+	@:require(java2) @:overload @:public public function set2DigitYearStart(startDate : java.util.Date) : Void;
 	
 	/**
 	* Returns the beginning date of the 100-year period 2-digit years are interpreted
@@ -452,7 +452,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @see #set2DigitYearStart
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function get2DigitYearStart() : java.util.Date;
+	@:require(java2) @:overload @:public public function get2DigitYearStart() : java.util.Date;
 	
 	/**
 	* Formats the given <code>Date</code> into a date/time string and appends
@@ -465,7 +465,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @return the formatted date-time string.
 	* @exception NullPointerException if the given {@code date} is {@code null}.
 	*/
-	@:overload override public function format(date : java.util.Date, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public override public function format(date : java.util.Date, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats an Object producing an <code>AttributedCharacterIterator</code>.
@@ -484,7 +484,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @return AttributedCharacterIterator describing the formatted value.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
+	@:require(java4) @:overload @:public override public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Parses text from a string to produce a <code>Date</code>.
@@ -521,21 +521,21 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	*         error, returns null.
 	* @exception NullPointerException if <code>text</code> or <code>pos</code> is null.
 	*/
-	@:overload override public function parse(text : String, pos : java.text.ParsePosition) : java.util.Date;
+	@:overload @:public override public function parse(text : String, pos : java.text.ParsePosition) : java.util.Date;
 	
 	/**
 	* Returns a pattern string describing this date format.
 	*
 	* @return a pattern string describing this date format.
 	*/
-	@:overload public function toPattern() : String;
+	@:overload @:public public function toPattern() : String;
 	
 	/**
 	* Returns a localized pattern string describing this date format.
 	*
 	* @return a localized pattern string describing this date format.
 	*/
-	@:overload public function toLocalizedPattern() : String;
+	@:overload @:public public function toLocalizedPattern() : String;
 	
 	/**
 	* Applies the given pattern string to this date format.
@@ -544,7 +544,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @exception NullPointerException if the given pattern is null
 	* @exception IllegalArgumentException if the given pattern is invalid
 	*/
-	@:overload public function applyPattern(pattern : String) : Void;
+	@:overload @:public public function applyPattern(pattern : String) : Void;
 	
 	/**
 	* Applies the given localized pattern string to this date format.
@@ -554,7 +554,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @exception NullPointerException if the given pattern is null
 	* @exception IllegalArgumentException if the given pattern is invalid
 	*/
-	@:overload public function applyLocalizedPattern(pattern : String) : Void;
+	@:overload @:public public function applyLocalizedPattern(pattern : String) : Void;
 	
 	/**
 	* Gets a copy of the date and time format symbols of this date format.
@@ -562,7 +562,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @return the date and time format symbols of this date format
 	* @see #setDateFormatSymbols
 	*/
-	@:overload public function getDateFormatSymbols() : java.text.DateFormatSymbols;
+	@:overload @:public public function getDateFormatSymbols() : java.text.DateFormatSymbols;
 	
 	/**
 	* Sets the date and time format symbols of this date format.
@@ -571,7 +571,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @exception NullPointerException if the given newFormatSymbols is null
 	* @see #getDateFormatSymbols
 	*/
-	@:overload public function setDateFormatSymbols(newFormatSymbols : java.text.DateFormatSymbols) : Void;
+	@:overload @:public public function setDateFormatSymbols(newFormatSymbols : java.text.DateFormatSymbols) : Void;
 	
 	/**
 	* Creates a copy of this <code>SimpleDateFormat</code>. This also
@@ -579,14 +579,14 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	*
 	* @return a clone of this <code>SimpleDateFormat</code>
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns the hash code value for this <code>SimpleDateFormat</code> object.
 	*
 	* @return the hash code value for this <code>SimpleDateFormat</code> object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Compares the given object with this <code>SimpleDateFormat</code> for
@@ -595,7 +595,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @return true if the given object is equal to this
 	* <code>SimpleDateFormat</code>
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

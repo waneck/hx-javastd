@@ -31,7 +31,7 @@ extern interface DTM
 	* @param featureId A feature URL.
 	* @param state true if this feature should be on, false otherwise.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Set a run time property for this DTM instance.
@@ -39,7 +39,7 @@ extern interface DTM
 	* @param property a <code>String</code> value
 	* @param value an <code>Object</code> value
 	*/
-	@:overload public function setProperty(property : String, value : Dynamic) : Void;
+	@:overload @:public @:public public function setProperty(property : String, value : Dynamic) : Void;
 	
 	/**
 	* This returns a stateless "traverser", that can navigate over an
@@ -49,7 +49,7 @@ extern interface DTM
 	*
 	* @return A DTMAxisIterator, or null if the givin axis isn't supported.
 	*/
-	@:overload public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:overload @:public @:public public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	/**
 	* This is a shortcut to the iterators that implement
@@ -61,7 +61,7 @@ extern interface DTM
 	*
 	* @return A DTMAxisIterator, or null if the givin axis isn't supported.
 	*/
-	@:overload public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:public public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get an iterator that can navigate over an XPath Axis, predicated by
@@ -72,7 +72,7 @@ extern interface DTM
 	*
 	* @return A DTMAxisIterator, or null if the givin axis isn't supported.
 	*/
-	@:overload public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:public public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Given a node handle, test if it has child nodes.
@@ -86,7 +86,7 @@ extern interface DTM
 	* @param nodeHandle int Handle of the node.
 	* @return int true if the given node has child nodes.
 	*/
-	@:overload public function hasChildNodes(nodeHandle : Int) : Bool;
+	@:overload @:public public function hasChildNodes(nodeHandle : Int) : Bool;
 	
 	/**
 	* Given a node handle, get the handle of the node's first child.
@@ -95,7 +95,7 @@ extern interface DTM
 	* @return int DTM node-number of first child,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getFirstChild(nodeHandle : Int) : Int;
+	@:overload @:public public function getFirstChild(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, get the handle of the node's last child.
@@ -104,7 +104,7 @@ extern interface DTM
 	* @return int Node-number of last child,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getLastChild(nodeHandle : Int) : Int;
+	@:overload @:public public function getLastChild(nodeHandle : Int) : Int;
 	
 	/**
 	* Retrieves an attribute node by local name and namespace URI
@@ -121,7 +121,7 @@ extern interface DTM
 	*   <code>nodeName</code>) or <code>DTM.NULL</code> if there is no such
 	*   attribute.
 	*/
-	@:overload public function getAttributeNode(elementHandle : Int, namespaceURI : String, name : String) : Int;
+	@:overload @:public public function getAttributeNode(elementHandle : Int, namespaceURI : String, name : String) : Int;
 	
 	/**
 	* Given a node handle, get the index of the node's first attribute.
@@ -129,7 +129,7 @@ extern interface DTM
 	* @param nodeHandle int Handle of the node.
 	* @return Handle of first attribute, or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getFirstAttribute(nodeHandle : Int) : Int;
+	@:overload @:public public function getFirstAttribute(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, get the index of the node's first namespace node.
@@ -143,7 +143,7 @@ extern interface DTM
 	* @return handle of first namespace,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getFirstNamespaceNode(nodeHandle : Int, inScope : Bool) : Int;
+	@:overload @:public public function getFirstNamespaceNode(nodeHandle : Int, inScope : Bool) : Int;
 	
 	/**
 	* Given a node handle, advance to its next sibling.
@@ -151,7 +151,7 @@ extern interface DTM
 	* @return int Node-number of next sibling,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextSibling(nodeHandle : Int) : Int;
+	@:overload @:public public function getNextSibling(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, find its preceeding sibling.
@@ -162,7 +162,7 @@ extern interface DTM
 	* @return int Node-number of the previous sib,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getPreviousSibling(nodeHandle : Int) : Int;
+	@:overload @:public public function getPreviousSibling(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, advance to the next attribute. If an
@@ -173,7 +173,7 @@ extern interface DTM
 	* @return int DTM node-number of the resolved attr,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextAttribute(nodeHandle : Int) : Int;
+	@:overload @:public public function getNextAttribute(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a namespace handle, advance to the next namespace in the same scope
@@ -187,7 +187,7 @@ extern interface DTM
 	* @return handle of next namespace,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextNamespaceNode(baseHandle : Int, namespaceHandle : Int, inScope : Bool) : Int;
+	@:overload @:public public function getNextNamespaceNode(baseHandle : Int, namespaceHandle : Int, inScope : Bool) : Int;
 	
 	/**
 	* Given a node handle, find its parent node.
@@ -196,7 +196,7 @@ extern interface DTM
 	* @return int Node handle of parent,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getParent(nodeHandle : Int) : Int;
+	@:overload @:public public function getParent(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a DTM which contains only a single document,
@@ -210,7 +210,7 @@ extern interface DTM
 	* @return int Node handle of document, or DTM.NULL if a shared DTM
 	* can not tell us which Document is currently active.
 	*/
-	@:overload public function getDocument() : Int;
+	@:overload @:public public function getDocument() : Int;
 	
 	/**
 	* Given a node handle, find the owning document node. This version mimics
@@ -221,7 +221,7 @@ extern interface DTM
 	* a Document.
 	* @see #getDocumentRoot(int nodeHandle)
 	*/
-	@:overload public function getOwnerDocument(nodeHandle : Int) : Int;
+	@:overload @:public public function getOwnerDocument(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, find the owning document node.
@@ -232,7 +232,7 @@ extern interface DTM
 	* null for the Document node.)
 	* @see #getOwnerDocument(int nodeHandle)
 	*/
-	@:overload public function getDocumentRoot(nodeHandle : Int) : Int;
+	@:overload @:public public function getDocumentRoot(nodeHandle : Int) : Int;
 	
 	/**
 	* Get the string-value of a node as a String object
@@ -243,7 +243,7 @@ extern interface DTM
 	*
 	* @return A string object that represents the string-value of the given node.
 	*/
-	@:overload public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Get number of character array chunks in
@@ -257,7 +257,7 @@ extern interface DTM
 	* @return number of character array chunks in
 	*         the string-value of a node.
 	*/
-	@:overload public function getStringValueChunkCount(nodeHandle : Int) : Int;
+	@:overload @:public public function getStringValueChunkCount(nodeHandle : Int) : Int;
 	
 	/**
 	* Get a character array chunk in the string-value of a node.
@@ -273,7 +273,7 @@ extern interface DTM
 	* @return The character array buffer within which the chunk occurs,
 	* setting startAndLen's contents as a side-effect.
 	*/
-	@:overload public function getStringValueChunk(nodeHandle : Int, chunkIndex : Int, startAndLen : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getStringValueChunk(nodeHandle : Int, chunkIndex : Int, startAndLen : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Given a node handle, return an ID that represents the node's expanded name.
@@ -282,7 +282,7 @@ extern interface DTM
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(nodeHandle : Int) : Int;
+	@:overload @:public public function getExpandedTypeID(nodeHandle : Int) : Int;
 	
 	/**
 	* Given an expanded name, return an ID.  If the expanded-name does not
@@ -296,7 +296,7 @@ extern interface DTM
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(namespace : String, localName : String, type : Int) : Int;
+	@:overload @:public public function getExpandedTypeID(namespace : String, localName : String, type : Int) : Int;
 	
 	/**
 	* Given an expanded-name ID, return the local name part.
@@ -304,7 +304,7 @@ extern interface DTM
 	* @param ExpandedNameID an ID that represents an expanded-name.
 	* @return String Local name of this node.
 	*/
-	@:overload public function getLocalNameFromExpandedNameID(ExpandedNameID : Int) : String;
+	@:overload @:public public function getLocalNameFromExpandedNameID(ExpandedNameID : Int) : String;
 	
 	/**
 	* Given an expanded-name ID, return the namespace URI part.
@@ -313,7 +313,7 @@ extern interface DTM
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload public function getNamespaceFromExpandedNameID(ExpandedNameID : Int) : String;
+	@:overload @:public public function getNamespaceFromExpandedNameID(ExpandedNameID : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style node name. This will
@@ -323,7 +323,7 @@ extern interface DTM
 	* @return String Name of this node, which may be an empty string.
 	* %REVIEW% Document when empty string is possible...
 	*/
-	@:overload public function getNodeName(nodeHandle : Int) : String;
+	@:overload @:public public function getNodeName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return the XPath node name.  This should be
@@ -333,7 +333,7 @@ extern interface DTM
 	* @param nodeHandle the id of the node.
 	* @return String Name of this node.
 	*/
-	@:overload public function getNodeNameX(nodeHandle : Int) : String;
+	@:overload @:public public function getNodeNameX(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style localname.
@@ -343,7 +343,7 @@ extern interface DTM
 	* @param nodeHandle the id of the node.
 	* @return String Local name of this node.
 	*/
-	@:overload public function getLocalName(nodeHandle : Int) : String;
+	@:overload @:public public function getLocalName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a namespace handle, return the prefix that the namespace decl is
@@ -358,7 +358,7 @@ extern interface DTM
 	* @return String prefix of this node's name, or "" if no explicit
 	* namespace prefix was given.
 	*/
-	@:overload public function getPrefix(nodeHandle : Int) : String;
+	@:overload @:public public function getPrefix(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style namespace URI
@@ -368,7 +368,7 @@ extern interface DTM
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload public function getNamespaceURI(nodeHandle : Int) : String;
+	@:overload @:public public function getNamespaceURI(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its node value. This is mostly
@@ -378,7 +378,7 @@ extern interface DTM
 	* @return String Value of this node, or null if not
 	* meaningful for this node type.
 	*/
-	@:overload public function getNodeValue(nodeHandle : Int) : String;
+	@:overload @:public public function getNodeValue(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style node type.
@@ -388,7 +388,7 @@ extern interface DTM
 	* @param nodeHandle The node id.
 	* @return int Node type, as per the DOM's Node._NODE constants.
 	*/
-	@:overload public function getNodeType(nodeHandle : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType(nodeHandle : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Get the depth level of this node in the tree (equals 1 for
@@ -398,7 +398,7 @@ extern interface DTM
 	* @return the number of ancestors, plus one
 	* @xsl.usage internal
 	*/
-	@:overload public function getLevel(nodeHandle : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getLevel(nodeHandle : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Tests whether DTM DOM implementation implements a specific feature and
@@ -411,7 +411,7 @@ extern interface DTM
 	* @return Returns <code>true</code> if the specified feature is
 	*   supported on this node, <code>false</code> otherwise.
 	*/
-	@:overload public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Return the base URI of the document entity. If it is not known
@@ -420,14 +420,14 @@ extern interface DTM
 	*
 	* @return the document base URI String object or null if unknown.
 	*/
-	@:overload public function getDocumentBaseURI() : String;
+	@:overload @:public public function getDocumentBaseURI() : String;
 	
 	/**
 	* Set the base URI of the document entity.
 	*
 	* @param baseURI the document base URI String object or null if unknown.
 	*/
-	@:overload public function setDocumentBaseURI(baseURI : String) : Void;
+	@:overload @:public public function setDocumentBaseURI(baseURI : String) : Void;
 	
 	/**
 	* Return the system identifier of the document entity. If
@@ -436,7 +436,7 @@ extern interface DTM
 	* @param nodeHandle The node id, which can be any valid node handle.
 	* @return the system identifier String object or null if unknown.
 	*/
-	@:overload public function getDocumentSystemIdentifier(nodeHandle : Int) : String;
+	@:overload @:public public function getDocumentSystemIdentifier(nodeHandle : Int) : String;
 	
 	/**
 	* Return the name of the character encoding scheme
@@ -445,7 +445,7 @@ extern interface DTM
 	* @param nodeHandle The node id, which can be any valid node handle.
 	* @return the document encoding String object.
 	*/
-	@:overload public function getDocumentEncoding(nodeHandle : Int) : String;
+	@:overload @:public public function getDocumentEncoding(nodeHandle : Int) : String;
 	
 	/**
 	* Return an indication of the standalone status of the document,
@@ -457,7 +457,7 @@ extern interface DTM
 	* @param nodeHandle The node id, which can be any valid node handle.
 	* @return the document standalone String object, either "yes", "no", or null.
 	*/
-	@:overload public function getDocumentStandalone(nodeHandle : Int) : String;
+	@:overload @:public public function getDocumentStandalone(nodeHandle : Int) : String;
 	
 	/**
 	* Return a string representing the XML version of the document. This
@@ -468,7 +468,7 @@ extern interface DTM
 	* @param documentHandle the document handle
 	* @return the document version String object
 	*/
-	@:overload public function getDocumentVersion(documentHandle : Int) : String;
+	@:overload @:public public function getDocumentVersion(documentHandle : Int) : String;
 	
 	/**
 	* Return an indication of
@@ -480,7 +480,7 @@ extern interface DTM
 	* @return <code>true</code> if all declarations were processed;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function getDocumentAllDeclarationsProcessed() : Bool;
+	@:overload @:public public function getDocumentAllDeclarationsProcessed() : Bool;
 	
 	/**
 	*   A document type declaration information item has the following properties:
@@ -490,7 +490,7 @@ extern interface DTM
 	*
 	* @return the system identifier String object, or null if there is none.
 	*/
-	@:overload public function getDocumentTypeDeclarationSystemIdentifier() : String;
+	@:overload @:public public function getDocumentTypeDeclarationSystemIdentifier() : String;
 	
 	/**
 	* Return the public identifier of the external subset,
@@ -500,7 +500,7 @@ extern interface DTM
 	*
 	* @return the public identifier String object, or null if there is none.
 	*/
-	@:overload public function getDocumentTypeDeclarationPublicIdentifier() : String;
+	@:overload @:public public function getDocumentTypeDeclarationPublicIdentifier() : String;
 	
 	/**
 	* Returns the <code>Element</code> whose <code>ID</code> is given by
@@ -519,7 +519,7 @@ extern interface DTM
 	* @param elementId The unique <code>id</code> value for an element.
 	* @return The handle of the matching element.
 	*/
-	@:overload public function getElementById(elementId : String) : Int;
+	@:overload @:public public function getElementById(elementId : String) : Int;
 	
 	/**
 	* The getUnparsedEntityURI function returns the URI of the unparsed
@@ -555,7 +555,7 @@ extern interface DTM
 	* @return String containing the URI of the Unparsed Entity, or an
 	* empty string if no such entity exists.
 	*/
-	@:overload public function getUnparsedEntityURI(name : String) : String;
+	@:overload @:public public function getUnparsedEntityURI(name : String) : String;
 	
 	/**
 	* Return true if the xsl:strip-space or xsl:preserve-space was processed
@@ -563,7 +563,7 @@ extern interface DTM
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function supportsPreStripping() : Bool;
+	@:overload @:public public function supportsPreStripping() : Bool;
 	
 	/**
 	* Figure out whether nodeHandle2 should be considered as being later
@@ -585,7 +585,7 @@ extern interface DTM
 	* You can think of this as
 	* <code>(firstNode.documentOrderPosition &lt;= secondNode.documentOrderPosition)</code>.
 	*/
-	@:overload public function isNodeAfter(firstNodeHandle : Int, secondNodeHandle : Int) : Bool;
+	@:overload @:public public function isNodeAfter(firstNodeHandle : Int, secondNodeHandle : Int) : Bool;
 	
 	/**
 	* 2. [element content whitespace] A boolean indicating whether a
@@ -614,7 +614,7 @@ extern interface DTM
 	* @return <code>true</code> if the node definitely represents whitespace in
 	* element content; <code>false</code> otherwise.
 	*/
-	@:overload public function isCharacterElementContentWhitespace(nodeHandle : Int) : Bool;
+	@:overload @:public public function isCharacterElementContentWhitespace(nodeHandle : Int) : Bool;
 	
 	/**
 	*    10. [all declarations processed] This property is not strictly speaking
@@ -628,7 +628,7 @@ extern interface DTM
 	* @return <code>true</code> if all declarations were processed;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isDocumentAllDeclarationsProcessed(documentHandle : Int) : Bool;
+	@:overload @:public public function isDocumentAllDeclarationsProcessed(documentHandle : Int) : Bool;
 	
 	/**
 	*     5. [specified] A flag indicating whether this attribute was actually
@@ -640,7 +640,7 @@ extern interface DTM
 	*         <code>false</code> if it was defaulted or the handle doesn't
 	*            refer to an attribute node.
 	*/
-	@:overload public function isAttributeSpecified(attributeHandle : Int) : Bool;
+	@:overload @:public public function isAttributeSpecified(attributeHandle : Int) : Bool;
 	
 	/**
 	* Directly call the
@@ -659,7 +659,7 @@ extern interface DTM
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
+	@:overload @:public public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
 	
 	/**
 	* Directly create SAX parser events representing the XML content of
@@ -670,7 +670,7 @@ extern interface DTM
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Return an DOM node for the given node.
@@ -679,7 +679,7 @@ extern interface DTM
 	*
 	* @return A node representation of the DTM node.
 	*/
-	@:overload public function getNode(nodeHandle : Int) : org.w3c.dom.Node;
+	@:overload @:public public function getNode(nodeHandle : Int) : org.w3c.dom.Node;
 	
 	/**
 	* @return true iff we're building this model incrementally (eg
@@ -687,14 +687,14 @@ extern interface DTM
 	* transformation and the parse run simultaneously. Guidance to the
 	* DTMManager.
 	*/
-	@:overload public function needsTwoThreads() : Bool;
+	@:overload @:public @:public public function needsTwoThreads() : Bool;
 	
 	/**
 	* Return this DTM's content handler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX events.
 	*/
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return this DTM's lexical handler, if it has one.
@@ -703,35 +703,35 @@ extern interface DTM
 	*
 	* @return null if this model doesn't respond to lexical SAX events.
 	*/
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Return this DTM's EntityResolver, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX entity ref events.
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Return this DTM's DTDHandler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX dtd events.
 	*/
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Return this DTM's ErrorHandler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX error events.
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Return this DTM's DeclHandler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX Decl events.
 	*/
-	@:overload public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public @:public public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/**
 	* Append a child to "the end of the document". Please note that
@@ -751,7 +751,7 @@ extern interface DTM
 	* @param cloneDepth if the clone argument is true, specifies that the
 	*                   clone should include all it's children.
 	*/
-	@:overload public function appendChild(newChild : Int, clone : Bool, cloneDepth : Bool) : Void;
+	@:overload @:public public function appendChild(newChild : Int, clone : Bool, cloneDepth : Bool) : Void;
 	
 	/**
 	* Append a text node child that will be constructed from a string,
@@ -759,7 +759,7 @@ extern interface DTM
 	*
 	* @param str Non-null reference to a string.
 	*/
-	@:overload public function appendTextChild(str : String) : Void;
+	@:overload @:public public function appendTextChild(str : String) : Void;
 	
 	/**
 	* Get the location of a node in the source document.
@@ -768,7 +768,7 @@ extern interface DTM
 	* @return a <code>SourceLocator</code> value or null if no location
 	* is available
 	*/
-	@:overload public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
+	@:overload @:public @:public public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
 	
 	/**
 	* As the DTM is registered with the DTMManager, this method
@@ -776,7 +776,7 @@ extern interface DTM
 	* chance to initialize any subsystems that are required to
 	* build the DTM
 	*/
-	@:overload public function documentRegistration() : Void;
+	@:overload @:public public function documentRegistration() : Void;
 	
 	/**
 	* As documents are released from the DTMManager, the DTM implementation
@@ -784,7 +784,7 @@ extern interface DTM
 	* to shutdown any subsystem activity that may of been assoiated with
 	* the active DTM Implementation.
 	*/
-	@:overload public function documentRelease() : Void;
+	@:overload @:public public function documentRelease() : Void;
 	
 	/**
 	* Migrate a DTM built with an old DTMManager to a new DTMManager.
@@ -793,7 +793,7 @@ extern interface DTM
 	* This is used to support DTM sharing between multiple transformations.
 	* @param manager the DTMManager
 	*/
-	@:overload public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload @:public public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	
 }

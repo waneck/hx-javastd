@@ -28,13 +28,13 @@ extern class FileFilter
 	/**
 	* Whether the given file is accepted by this filter.
 	*/
-	@:overload @:abstract public function accept(f : java.io.File) : Bool;
+	@:overload @:public @:abstract public function accept(f : java.io.File) : Bool;
 	
 	/**
 	* The description of this filter. For example: "JPG and GIF Images"
 	* @see FileView#getName
 	*/
-	@:overload @:abstract public function getDescription() : String;
+	@:overload @:public @:abstract public function getDescription() : String;
 	
 	
 }

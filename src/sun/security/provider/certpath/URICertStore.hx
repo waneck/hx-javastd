@@ -37,7 +37,7 @@ package sun.security.provider.certpath;
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:synchronized public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.X509Certificate>;
+	@:overload @:public @:synchronized override public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>X509CRL</code>s that
@@ -51,7 +51,7 @@ package sun.security.provider.certpath;
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:synchronized public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.X509CRL>;
+	@:overload @:public @:synchronized override public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.X509CRL>;
 	
 	
 }
@@ -67,11 +67,11 @@ package sun.security.provider.certpath;
 */
 @:native('sun$security$provider$certpath$URICertStore$URICertStoreParameters') @:internal extern class URICertStore_URICertStoreParameters implements java.security.cert.CertStoreParameters
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -80,7 +80,7 @@ package sun.security.provider.certpath;
 */
 @:native('sun$security$provider$certpath$URICertStore$UCS') @:internal extern class URICertStore_UCS extends java.security.cert.CertStore
 {
-	@:overload private function new(spi : java.security.cert.CertStoreSpi, p : java.security.Provider, type : String, params : java.security.cert.CertStoreParameters) : Void;
+	@:overload @:protected private function new(spi : java.security.cert.CertStoreSpi, p : java.security.Provider, type : String, params : java.security.cert.CertStoreParameters) : Void;
 	
 	
 }

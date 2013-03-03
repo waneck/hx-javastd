@@ -29,9 +29,9 @@ extern interface Message extends com.sun.xml.internal.txw2.TypedXmlWriter extend
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Message;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Message;
 	
-	@:overload public function part() : com.sun.xml.internal.ws.wsdl.writer.document.Part;
+	@:overload @:public public function part() : com.sun.xml.internal.ws.wsdl.writer.document.Part;
 	
 	
 }

@@ -32,7 +32,7 @@ package javax.security.auth.kerberos;
 	* @param keyType the key type for the secret key as defined by the
 	* Kerberos protocol specification.
 	*/
-	@:overload public function new(keyBytes : java.NativeArray<java.StdTypes.Int8>, keyType : Int) : Void;
+	@:overload @:public public function new(keyBytes : java.NativeArray<java.StdTypes.Int8>, keyType : Int) : Void;
 	
 	/**
 	* Constructs a KeyImpl from a password.
@@ -44,31 +44,31 @@ package javax.security.auth.kerberos;
 	* used for. This parameter may be null in which case "DES" will be
 	* assumed.
 	*/
-	@:overload public function new(principal : javax.security.auth.kerberos.KerberosPrincipal, password : java.NativeArray<java.StdTypes.Char16>, algorithm : String) : Void;
+	@:overload @:public public function new(principal : javax.security.auth.kerberos.KerberosPrincipal, password : java.NativeArray<java.StdTypes.Char16>, algorithm : String) : Void;
 	
 	/**
 	* Returns the keyType for this key as defined in the Kerberos Spec.
 	*/
-	@:overload @:final public function getKeyType() : Int;
+	@:overload @:public @:final public function getKeyType() : Int;
 	
 	/*
 	* Methods from java.security.Key
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
-	@:overload @:final public function getFormat() : String;
+	@:overload @:public @:final public function getFormat() : String;
 	
-	@:overload @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
-	@:overload public function isDestroyed() : Bool;
+	@:overload @:public public function isDestroyed() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

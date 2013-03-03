@@ -25,47 +25,47 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class CorbaClientDelegateImpl extends com.sun.corba.se.spi.protocol.CorbaClientDelegate
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList) : Void;
 	
-	@:overload override public function getBroker() : com.sun.corba.se.pept.broker.Broker;
+	@:overload @:public override public function getBroker() : com.sun.corba.se.pept.broker.Broker;
 	
-	@:overload override public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public override public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
-	@:overload override public function request(self : org.omg.CORBA.Object, operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public override public function request(self : org.omg.CORBA.Object, operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
-	@:overload override public function invoke(self : org.omg.CORBA.Object, output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
+	@:overload @:public override public function invoke(self : org.omg.CORBA.Object, output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
 	
-	@:overload override public function releaseReply(self : org.omg.CORBA.Object, input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function releaseReply(self : org.omg.CORBA.Object, input : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload override public function get_interface_def(obj : org.omg.CORBA.Object) : org.omg.CORBA.Object;
+	@:overload @:public override public function get_interface_def(obj : org.omg.CORBA.Object) : org.omg.CORBA.Object;
 	
-	@:overload override public function is_a(obj : org.omg.CORBA.Object, dest : String) : Bool;
+	@:overload @:public override public function is_a(obj : org.omg.CORBA.Object, dest : String) : Bool;
 	
-	@:overload override public function non_existent(obj : org.omg.CORBA.Object) : Bool;
+	@:overload @:public override public function non_existent(obj : org.omg.CORBA.Object) : Bool;
 	
-	@:overload override public function duplicate(obj : org.omg.CORBA.Object) : org.omg.CORBA.Object;
+	@:overload @:public override public function duplicate(obj : org.omg.CORBA.Object) : org.omg.CORBA.Object;
 	
-	@:overload override public function release(obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public override public function release(obj : org.omg.CORBA.Object) : Void;
 	
-	@:overload override public function is_equivalent(obj : org.omg.CORBA.Object, ref : org.omg.CORBA.Object) : Bool;
+	@:overload @:public override public function is_equivalent(obj : org.omg.CORBA.Object, ref : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* This method overrides the org.omg.CORBA.portable.Delegate.equals method,
 	* and does the equality check based on IOR equality.
 	*/
-	@:overload override public function equals(self : org.omg.CORBA.Object, other : Dynamic) : Bool;
+	@:overload @:public override public function equals(self : org.omg.CORBA.Object, other : Dynamic) : Bool;
 	
-	@:overload override public function hashCode(obj : org.omg.CORBA.Object) : Int;
+	@:overload @:public override public function hashCode(obj : org.omg.CORBA.Object) : Int;
 	
-	@:overload override public function hash(obj : org.omg.CORBA.Object, maximum : Int) : Int;
+	@:overload @:public override public function hash(obj : org.omg.CORBA.Object, maximum : Int) : Int;
 	
-	@:overload override public function request(obj : org.omg.CORBA.Object, operation : String) : org.omg.CORBA.Request;
+	@:overload @:public override public function request(obj : org.omg.CORBA.Object, operation : String) : org.omg.CORBA.Request;
 	
-	@:overload override public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public override public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
-	@:overload override public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public override public function create_request(obj : org.omg.CORBA.Object, ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
-	@:overload override public function orb(obj : org.omg.CORBA.Object) : org.omg.CORBA.ORB;
+	@:overload @:public override public function orb(obj : org.omg.CORBA.Object) : org.omg.CORBA.ORB;
 	
 	/**
 	* Returns true if this object is implemented by a local servant.
@@ -77,22 +77,22 @@ extern class CorbaClientDelegateImpl extends com.sun.corba.se.spi.protocol.Corba
 	* @return true only if the servant incarnating this object is located in
 	* this ORB.
 	*/
-	@:overload override public function is_local(self : org.omg.CORBA.Object) : Bool;
+	@:overload @:public override public function is_local(self : org.omg.CORBA.Object) : Bool;
 	
-	@:overload override public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public override public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload override public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public override public function servant_postinvoke(self : org.omg.CORBA.Object, servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	/* Returns the codebase for object reference provided.
 	* @param self the object reference whose codebase needs to be returned.
 	* @return the codebase as a space delimited list of url strings or
 	* null if none.
 	*/
-	@:overload public function get_codebase(self : org.omg.CORBA.Object) : String;
+	@:overload @:public override public function get_codebase(self : org.omg.CORBA.Object) : String;
 	
-	@:overload override public function toString(self : org.omg.CORBA.Object) : String;
+	@:overload @:public override public function toString(self : org.omg.CORBA.Object) : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

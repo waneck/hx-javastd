@@ -29,11 +29,11 @@ extern class BitFile
 	* @param output destination for output data
 	* @param blocks GIF LZW requires block counts for output data
 	*/
-	@:overload public function new(output : javax.imageio.stream.ImageOutputStream, blocks : Bool) : Void;
+	@:overload @:public public function new(output : javax.imageio.stream.ImageOutputStream, blocks : Bool) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function writeBits(bits : Int, numbits : Int) : Void;
+	@:overload @:public public function writeBits(bits : Int, numbits : Int) : Void;
 	
 	
 }

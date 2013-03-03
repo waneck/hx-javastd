@@ -39,14 +39,14 @@ package java.io;
 	* @param   size The size of the pushback buffer
 	* @exception IllegalArgumentException if size is <= 0
 	*/
-	@:overload public function new(_in : java.io.Reader, size : Int) : Void;
+	@:overload @:public public function new(_in : java.io.Reader, size : Int) : Void;
 	
 	/**
 	* Creates a new pushback reader with a one-character pushback buffer.
 	*
 	* @param   in  The reader from which characters will be read
 	*/
-	@:overload public function new(_in : java.io.Reader) : Void;
+	@:overload @:public public function new(_in : java.io.Reader) : Void;
 	
 	/**
 	* Reads a single character.
@@ -56,7 +56,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads characters into a portion of an array.
@@ -70,7 +70,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Pushes back a single character by copying it to the front of the
@@ -82,7 +82,7 @@ package java.io;
 	* @exception  IOException  If the pushback buffer is full,
 	*                          or if some other I/O error occurs
 	*/
-	@:overload public function unread(c : Int) : Void;
+	@:overload @:public public function unread(c : Int) : Void;
 	
 	/**
 	* Pushes back a portion of an array of characters by copying it to the
@@ -98,7 +98,7 @@ package java.io;
 	* @exception  IOException  If there is insufficient room in the pushback
 	*                          buffer, or if some other I/O error occurs
 	*/
-	@:overload public function unread(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public public function unread(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Pushes back an array of characters by copying it to the front of the
@@ -111,14 +111,14 @@ package java.io;
 	* @exception  IOException  If there is insufficient room in the pushback
 	*                          buffer, or if some other I/O error occurs
 	*/
-	@:overload public function unread(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function unread(cbuf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Tells whether this stream is ready to be read.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Marks the present position in the stream. The <code>mark</code>
@@ -126,7 +126,7 @@ package java.io;
 	*
 	* @exception  IOException  Always, since mark is not supported
 	*/
-	@:overload public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the stream. The <code>reset</code> method of
@@ -134,13 +134,13 @@ package java.io;
 	*
 	* @exception  IOException  Always, since reset is not supported
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Tells whether this stream supports the mark() operation, which it does
 	* not.
 	*/
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Closes the stream and releases any system resources associated with
@@ -150,7 +150,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Skips characters.  This method will block until some characters are
@@ -163,7 +163,7 @@ package java.io;
 	* @exception  IllegalArgumentException  If <code>n</code> is negative.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

@@ -7,15 +7,15 @@ package org.omg.CosNaming.NamingContextPackage;
 */
 extern class CannotProceed extends org.omg.CORBA.UserException
 {
-	public var cxt : org.omg.CosNaming.NamingContext;
+	@:public public var cxt : org.omg.CosNaming.NamingContext;
 	
-	public var rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:public public var rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_cxt : org.omg.CosNaming.NamingContext, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public public function new(_cxt : org.omg.CosNaming.NamingContext, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
-	@:overload public function new($reason : String, _cxt : org.omg.CosNaming.NamingContext, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public public function new($reason : String, _cxt : org.omg.CosNaming.NamingContext, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
 	
 }

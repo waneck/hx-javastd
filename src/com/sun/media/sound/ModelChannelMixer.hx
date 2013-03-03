@@ -38,9 +38,9 @@ extern interface ModelChannelMixer extends javax.sound.midi.MidiChannel
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function process(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Bool;
+	@:overload @:public public function process(buffer : java.NativeArray<java.NativeArray<Single>>, offset : Int, len : Int) : Bool;
 	
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	
 }

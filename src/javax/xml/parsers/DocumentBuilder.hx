@@ -26,7 +26,7 @@ package javax.xml.parsers;
 extern class DocumentBuilder
 {
 	/** Protected constructor */
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Reset this <code>DocumentBuilder</code> to its original configuration.</p>
@@ -45,7 +45,7 @@ extern class DocumentBuilder
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function reset() : Void;
+	@:require(java5) @:overload @:public public function reset() : Void;
 	
 	/**
 	* Parse the content of the given <code>InputStream</code> as an XML
@@ -64,7 +64,7 @@ extern class DocumentBuilder
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(is : java.io.InputStream) : org.w3c.dom.Document;
+	@:overload @:public public function parse(is : java.io.InputStream) : org.w3c.dom.Document;
 	
 	/**
 	* Parse the content of the given <code>InputStream</code> as an
@@ -83,7 +83,7 @@ extern class DocumentBuilder
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(is : java.io.InputStream, systemId : String) : org.w3c.dom.Document;
+	@:overload @:public public function parse(is : java.io.InputStream, systemId : String) : org.w3c.dom.Document;
 	
 	/**
 	* Parse the content of the given URI as an XML document
@@ -101,7 +101,7 @@ extern class DocumentBuilder
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(uri : String) : org.w3c.dom.Document;
+	@:overload @:public public function parse(uri : String) : org.w3c.dom.Document;
 	
 	/**
 	* Parse the content of the given file as an XML document
@@ -118,7 +118,7 @@ extern class DocumentBuilder
 	* @see org.xml.sax.DocumentHandler
 	* @return A new DOM Document object.
 	*/
-	@:overload public function parse(f : java.io.File) : org.w3c.dom.Document;
+	@:overload @:public public function parse(f : java.io.File) : org.w3c.dom.Document;
 	
 	/**
 	* Parse the content of the given input source as an XML document
@@ -136,7 +136,7 @@ extern class DocumentBuilder
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload @:abstract public function parse(is : org.xml.sax.InputSource) : org.w3c.dom.Document;
+	@:overload @:public @:abstract public function parse(is : org.xml.sax.InputSource) : org.w3c.dom.Document;
 	
 	/**
 	* Indicates whether or not this parser is configured to
@@ -145,7 +145,7 @@ extern class DocumentBuilder
 	* @return true if this parser is configured to understand
 	*         namespaces; false otherwise.
 	*/
-	@:overload @:abstract public function isNamespaceAware() : Bool;
+	@:overload @:public @:abstract public function isNamespaceAware() : Bool;
 	
 	/**
 	* Indicates whether or not this parser is configured to
@@ -154,7 +154,7 @@ extern class DocumentBuilder
 	* @return true if this parser is configured to validate
 	*         XML documents; false otherwise.
 	*/
-	@:overload @:abstract public function isValidating() : Bool;
+	@:overload @:public @:abstract public function isValidating() : Bool;
 	
 	/**
 	* Specify the {@link EntityResolver} to be used to resolve
@@ -166,7 +166,7 @@ extern class DocumentBuilder
 	* @param er The <code>EntityResolver</code> to be used to resolve entities
 	*           present in the XML document to be parsed.
 	*/
-	@:overload @:abstract public function setEntityResolver(er : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public @:abstract public function setEntityResolver(er : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Specify the {@link ErrorHandler} to be used by the parser.
@@ -176,7 +176,7 @@ extern class DocumentBuilder
 	*
 	* @param eh The <code>ErrorHandler</code> to be used by the parser.
 	*/
-	@:overload @:abstract public function setErrorHandler(eh : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:abstract public function setErrorHandler(eh : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Obtain a new instance of a DOM {@link Document} object
@@ -184,14 +184,14 @@ extern class DocumentBuilder
 	*
 	* @return A new instance of a DOM Document object.
 	*/
-	@:overload @:abstract public function newDocument() : org.w3c.dom.Document;
+	@:overload @:public @:abstract public function newDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Obtain an instance of a {@link DOMImplementation} object.
 	*
 	* @return A new instance of a <code>DOMImplementation</code>.
 	*/
-	@:overload @:abstract public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:abstract public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/** <p>Get a reference to the the {@link Schema} being used by
 	* the XML processor.</p>
@@ -206,7 +206,7 @@ extern class DocumentBuilder
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSchema() : javax.xml.validation.Schema;
+	@:require(java5) @:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* <p>Get the XInclude processing mode for this parser.</p>
@@ -223,7 +223,7 @@ extern class DocumentBuilder
 	*
 	* @see DocumentBuilderFactory#setXIncludeAware(boolean)
 	*/
-	@:require(java5) @:overload public function isXIncludeAware() : Bool;
+	@:require(java5) @:overload @:public public function isXIncludeAware() : Bool;
 	
 	
 }

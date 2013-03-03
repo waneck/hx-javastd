@@ -27,21 +27,21 @@ package sun.nio.cs.ext;
 */
 extern class ISO2022_CN_GB extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISO2022_CN_GB$Encoder') @:internal extern class ISO2022_CN_GB_Encoder extends sun.nio.cs.ext.ISO2022.ISO2022_Encoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public override public function new(cs : java.nio.charset.Charset) : Void;
 	
 	/*
 	* Since ISO2022-CN-GB possesses a CharsetEncoder
@@ -50,7 +50,7 @@ extern class ISO2022_CN_GB extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs.
 	* since the parent class version attempts to
 	* decode 0x3f (?).
 	*/
-	@:overload override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }

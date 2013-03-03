@@ -62,7 +62,7 @@ package java.lang.reflect;
 	* @param   undeclaredThrowable the undeclared checked exception
 	*          that was thrown
 	*/
-	@:overload public function new(undeclaredThrowable : java.lang.Throwable) : Void;
+	@:overload @:public public function new(undeclaredThrowable : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs an {@code UndeclaredThrowableException} with the
@@ -72,7 +72,7 @@ package java.lang.reflect;
 	*          that was thrown
 	* @param   s the detail message
 	*/
-	@:overload public function new(undeclaredThrowable : java.lang.Throwable, s : String) : Void;
+	@:overload @:public public function new(undeclaredThrowable : java.lang.Throwable, s : String) : Void;
 	
 	/**
 	* Returns the {@code Throwable} instance wrapped in this
@@ -84,7 +84,7 @@ package java.lang.reflect;
 	*
 	* @return the undeclared checked exception that was thrown
 	*/
-	@:overload public function getUndeclaredThrowable() : java.lang.Throwable;
+	@:overload @:public public function getUndeclaredThrowable() : java.lang.Throwable;
 	
 	/**
 	* Returns the cause of this exception (the {@code Throwable}
@@ -94,7 +94,7 @@ package java.lang.reflect;
 	* @return  the cause of this exception.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

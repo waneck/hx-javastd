@@ -37,13 +37,13 @@ exception statement from your version.
 */
 @:internal extern class EventLoop implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload @:synchronized private function updateSourcePortNameList() : java.util.List<String>;
+	@:overload @:protected @:synchronized private function updateSourcePortNameList() : java.util.List<String>;
 	
-	@:overload public function source_callback(name : String) : Void;
+	@:overload @:public public function source_callback(name : String) : Void;
 	
-	@:overload public function sink_callback(name : String) : Void;
+	@:overload @:public public function sink_callback(name : String) : Void;
 	
 	
 }

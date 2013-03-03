@@ -32,7 +32,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @param contextNodes the child node list of <code>Transform</code> element
 	* @throws InvalidTransformException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, algorithmURI : String, contextNodes : org.w3c.dom.NodeList) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, algorithmURI : String, contextNodes : org.w3c.dom.NodeList) : Void;
 	
 	/**
 	* This constructor can only be called from the {@link Transforms} object,
@@ -44,7 +44,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws TransformationException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Generates a Transform object that implements the specified
@@ -57,7 +57,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @return <code>{@link Transform}</code> object
 	* @throws InvalidTransformException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : com.sun.org.apache.xml.internal.security.transforms.Transform;
+	@:overload @:public @:static public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Generates a Transform object that implements the specified
@@ -71,7 +71,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @return <code>{@link Transform}</code> object
 	* @throws InvalidTransformException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextChild : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.transforms.Transform;
+	@:overload @:public @:static public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextChild : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Generates a Transform object that implements the specified
@@ -85,12 +85,12 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @return <code>{@link Transform}</code> object
 	* @throws InvalidTransformException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextNodes : org.w3c.dom.NodeList) : com.sun.org.apache.xml.internal.security.transforms.Transform;
+	@:overload @:public @:static public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextNodes : org.w3c.dom.NodeList) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Initalizes for this {@link Transform}.
 	*/
-	@:overload public static function init() : Void;
+	@:overload @:public @:static public static function init() : Void;
 	
 	/**
 	* Registers implementing class of the Transform algorithm with algorithmURI
@@ -103,14 +103,14 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws AlgorithmAlreadyRegisteredException if specified algorithmURI
 	* is already registered
 	*/
-	@:overload public static function register(algorithmURI : String, implementingClass : String) : Void;
+	@:overload @:public @:static public static function register(algorithmURI : String, implementingClass : String) : Void;
 	
 	/**
 	* Returns the URI representation of Transformation algorithm
 	*
 	* @return the URI representation of Transformation algorithm
 	*/
-	@:overload public function getURI() : String;
+	@:overload @:public public function getURI() : String;
 	
 	/**
 	* Transforms the input, and generates {@link XMLSignatureInput} as output.
@@ -124,7 +124,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws InvalidCanonicalizerException
 	* @throws TransformationException
 	*/
-	@:overload public function performTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function performTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Transforms the input, and generates {@link XMLSignatureInput} as output.
@@ -139,10 +139,10 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @throws InvalidCanonicalizerException
 	* @throws TransformationException
 	*/
-	@:overload public function performTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function performTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

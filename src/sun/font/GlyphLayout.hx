@@ -70,13 +70,13 @@ extern class GlyphLayout
 	* Return a new instance of GlyphLayout, using the provided layout engine factory.
 	* If null, the system layout engine factory will be used.
 	*/
-	@:overload public static function get(lef : sun.font.GlyphLayout.GlyphLayout_LayoutEngineFactory) : sun.font.GlyphLayout;
+	@:overload @:public @:static public static function get(lef : sun.font.GlyphLayout.GlyphLayout_LayoutEngineFactory) : sun.font.GlyphLayout;
 	
 	/**
 	* Return the old instance of GlyphLayout when you are done.  This enables reuse
 	* of GlyphLayout objects.
 	*/
-	@:overload public static function done(gl : sun.font.GlyphLayout) : Void;
+	@:overload @:public @:static public static function done(gl : sun.font.GlyphLayout) : Void;
 	
 	/**
 	* Create a glyph vector.
@@ -89,15 +89,15 @@ extern class GlyphLayout
 	* @param result a StandardGlyphVector to modify, can be null
 	* @return the layed out glyphvector, if result was passed in, it is returned
 	*/
-	@:overload public function layout(font : java.awt.Font, frc : java.awt.font.FontRenderContext, text : java.NativeArray<java.StdTypes.Char16>, offset : Int, count : Int, flags : Int, result : sun.font.StandardGlyphVector) : sun.font.StandardGlyphVector;
+	@:overload @:public public function layout(font : java.awt.Font, frc : java.awt.font.FontRenderContext, text : java.NativeArray<java.StdTypes.Char16>, offset : Int, count : Int, flags : Int, result : sun.font.StandardGlyphVector) : sun.font.StandardGlyphVector;
 	
 	
 }
 @:native('sun$font$GlyphLayout$LayoutEngineKey') extern class GlyphLayout_LayoutEngineKey
 {
-	@:overload public function equals(rhs : Dynamic) : Bool;
+	@:overload @:public public function equals(rhs : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -106,12 +106,12 @@ extern class GlyphLayout
 	/**
 	* Given a font, script, and language, determine a layout engine to use.
 	*/
-	@:overload public function getEngine(font : sun.font.Font2D, script : Int, lang : Int) : sun.font.GlyphLayout.GlyphLayout_LayoutEngine;
+	@:overload @:public public function getEngine(font : sun.font.Font2D, script : Int, lang : Int) : sun.font.GlyphLayout.GlyphLayout_LayoutEngine;
 	
 	/**
 	* Given a key, determine a layout engine to use.
 	*/
-	@:overload public function getEngine(key : sun.font.GlyphLayout.GlyphLayout_LayoutEngineKey) : sun.font.GlyphLayout.GlyphLayout_LayoutEngine;
+	@:overload @:public public function getEngine(key : sun.font.GlyphLayout.GlyphLayout_LayoutEngineKey) : sun.font.GlyphLayout.GlyphLayout_LayoutEngine;
 	
 	
 }
@@ -124,35 +124,35 @@ extern class GlyphLayout
 	* If the GVData does not have room for the glyphs, throws an IndexOutOfBoundsException and
 	* leave pt and the gvdata unchanged.
 	*/
-	@:overload public function layout(sd : sun.font.FontStrikeDesc, mat : java.NativeArray<Single>, gmask : Int, baseIndex : Int, text : sun.font.TextRecord, typo_flags : Int, pt : java.awt.geom.Point2D.Point2D_Float, data : sun.font.GlyphLayout.GlyphLayout_GVData) : Void;
+	@:overload @:public public function layout(sd : sun.font.FontStrikeDesc, mat : java.NativeArray<Single>, gmask : Int, baseIndex : Int, text : sun.font.TextRecord, typo_flags : Int, pt : java.awt.geom.Point2D.Point2D_Float, data : sun.font.GlyphLayout.GlyphLayout_GVData) : Void;
 	
 	
 }
 @:native('sun$font$GlyphLayout$SDCache') @:internal extern class GlyphLayout_SDCache
 {
-	public var key_font : java.awt.Font;
+	@:public public var key_font : java.awt.Font;
 	
-	public var key_frc : java.awt.font.FontRenderContext;
+	@:public public var key_frc : java.awt.font.FontRenderContext;
 	
-	public var dtx : java.awt.geom.AffineTransform;
+	@:public public var dtx : java.awt.geom.AffineTransform;
 	
-	public var invdtx : java.awt.geom.AffineTransform;
+	@:public public var invdtx : java.awt.geom.AffineTransform;
 	
-	public var gtx : java.awt.geom.AffineTransform;
+	@:public public var gtx : java.awt.geom.AffineTransform;
 	
-	public var delta : java.awt.geom.Point2D.Point2D_Float;
+	@:public public var delta : java.awt.geom.Point2D.Point2D_Float;
 	
-	public var sd : sun.font.FontStrikeDesc;
+	@:public public var sd : sun.font.FontStrikeDesc;
 	
-	@:overload public static function get(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.font.GlyphLayout.GlyphLayout_SDCache;
+	@:overload @:public @:static public static function get(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.font.GlyphLayout.GlyphLayout_SDCache;
 	
 	
 }
 @:native('sun$font$GlyphLayout$SDCache$SDKey') @:internal extern class GlyphLayout_SDCache_SDKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
@@ -161,25 +161,25 @@ extern class GlyphLayout
 */
 @:native('sun$font$GlyphLayout$GVData') extern class GlyphLayout_GVData
 {
-	public var _count : Int;
+	@:public public var _count : Int;
 	
-	public var _flags : Int;
+	@:public public var _flags : Int;
 	
-	public var _glyphs : java.NativeArray<Int>;
+	@:public public var _glyphs : java.NativeArray<Int>;
 	
-	public var _positions : java.NativeArray<Single>;
+	@:public public var _positions : java.NativeArray<Single>;
 	
-	public var _indices : java.NativeArray<Int>;
+	@:public public var _indices : java.NativeArray<Int>;
 	
-	@:overload public function init(size : Int) : Void;
+	@:overload @:public public function init(size : Int) : Void;
 	
-	@:overload public function grow() : Void;
+	@:overload @:public public function grow() : Void;
 	
-	@:overload public function grow(delta : Int) : Void;
+	@:overload @:public public function grow(delta : Int) : Void;
 	
-	@:overload public function adjustPositions(invdtx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function adjustPositions(invdtx : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload public function createGlyphVector(font : java.awt.Font, frc : java.awt.font.FontRenderContext, result : sun.font.StandardGlyphVector) : sun.font.StandardGlyphVector;
+	@:overload @:public public function createGlyphVector(font : java.awt.Font, frc : java.awt.font.FontRenderContext, result : sun.font.StandardGlyphVector) : sun.font.StandardGlyphVector;
 	
 	
 }

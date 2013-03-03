@@ -29,26 +29,26 @@ package com.sun.activation.registries;
 */
 extern class MailcapTokenizer
 {
-	public static var UNKNOWN_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_TOKEN(default, null) : Int;
 	
-	public static var START_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var START_TOKEN(default, null) : Int;
 	
-	public static var STRING_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var STRING_TOKEN(default, null) : Int;
 	
-	public static var EOI_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var EOI_TOKEN(default, null) : Int;
 	
-	public static var SLASH_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var SLASH_TOKEN(default, null) : Int;
 	
-	public static var SEMICOLON_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var SEMICOLON_TOKEN(default, null) : Int;
 	
-	public static var EQUALS_TOKEN(default, null) : Int;
+	@:public @:static @:final public static var EQUALS_TOKEN(default, null) : Int;
 	
 	/**
 	*  Constructor
 	*
 	*  @parameter  inputString the string to tokenize
 	*/
-	@:overload public function new(inputString : String) : Void;
+	@:overload @:public public function new(inputString : String) : Void;
 	
 	/**
 	*  Set whether auto-quoting is on or off.
@@ -60,33 +60,33 @@ extern class MailcapTokenizer
 	*
 	*  This is required for handling command strings in a mailcap entry.
 	*/
-	@:overload public function setIsAutoquoting(value : Bool) : Void;
+	@:overload @:public public function setIsAutoquoting(value : Bool) : Void;
 	
 	/**
 	*  Retrieve current token.
 	*
 	*  @returns    The current token value
 	*/
-	@:overload public function getCurrentToken() : Int;
+	@:overload @:public public function getCurrentToken() : Int;
 	
 	/*
 	*  Get a String that describes the given token.
 	*/
-	@:overload public static function nameForToken(token : Int) : String;
+	@:overload @:public @:static public static function nameForToken(token : Int) : String;
 	
 	/*
 	*  Retrieve current token value.
 	*
 	*  @returns    A String containing the current token value
 	*/
-	@:overload public function getCurrentTokenValue() : String;
+	@:overload @:public public function getCurrentTokenValue() : String;
 	
 	/*
 	*  Process the next token.
 	*
 	*  @returns    the next token
 	*/
-	@:overload public function nextToken() : Int;
+	@:overload @:public public function nextToken() : Int;
 	
 	
 }

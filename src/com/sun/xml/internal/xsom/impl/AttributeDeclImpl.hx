@@ -25,19 +25,19 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class AttributeDeclImpl extends com.sun.xml.internal.xsom.impl.DeclarationImpl implements com.sun.xml.internal.xsom.XSAttributeDecl implements com.sun.xml.internal.xsom.impl.Ref.Ref_Attribute
 {
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _targetNamespace : String, _name : String, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _anonymous : Bool, _defValue : com.sun.xml.internal.xsom.XmlString, _fixedValue : com.sun.xml.internal.xsom.XmlString, _type : com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _targetNamespace : String, _name : String, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _anonymous : Bool, _defValue : com.sun.xml.internal.xsom.XmlString, _fixedValue : com.sun.xml.internal.xsom.XmlString, _type : com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType) : Void;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function getAttribute() : com.sun.xml.internal.xsom.XSAttributeDecl;
+	@:overload @:public public function getAttribute() : com.sun.xml.internal.xsom.XSAttributeDecl;
 	
 	
 }

@@ -25,35 +25,35 @@ package com.sun.xml.internal.ws.message;
 */
 extern class DOMMessage extends com.sun.xml.internal.ws.message.AbstractMessageImpl
 {
-	@:overload public function new(ver : com.sun.xml.internal.ws.api.SOAPVersion, payload : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(ver : com.sun.xml.internal.ws.api.SOAPVersion, payload : org.w3c.dom.Element) : Void;
 	
-	@:overload public function new(ver : com.sun.xml.internal.ws.api.SOAPVersion, headers : com.sun.xml.internal.ws.api.message.HeaderList, payload : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(ver : com.sun.xml.internal.ws.api.SOAPVersion, headers : com.sun.xml.internal.ws.api.message.HeaderList, payload : org.w3c.dom.Element) : Void;
 	
-	@:overload public function new(ver : com.sun.xml.internal.ws.api.SOAPVersion, headers : com.sun.xml.internal.ws.api.message.HeaderList, payload : org.w3c.dom.Element, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:public public function new(ver : com.sun.xml.internal.ws.api.SOAPVersion, headers : com.sun.xml.internal.ws.api.message.HeaderList, payload : org.w3c.dom.Element, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload override public function hasHeaders() : Bool;
+	@:overload @:public override public function hasHeaders() : Bool;
 	
-	@:overload override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
-	@:overload override public function getPayloadLocalPart() : String;
+	@:overload @:public override public function getPayloadLocalPart() : String;
 	
-	@:overload override public function getPayloadNamespaceURI() : String;
+	@:overload @:public override public function getPayloadNamespaceURI() : String;
 	
-	@:overload override public function hasPayload() : Bool;
+	@:overload @:public override public function hasPayload() : Bool;
 	
-	@:overload override public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
-	@:overload override public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
+	@:overload @:protected override private function writePayloadTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, fragment : Bool) : Void;
 	
-	@:overload override public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

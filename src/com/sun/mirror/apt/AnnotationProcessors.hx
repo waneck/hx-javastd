@@ -42,7 +42,7 @@ package com.sun.mirror.apt;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var NO_OP(default, null) : com.sun.mirror.apt.AnnotationProcessor;
+	@:require(java5) @:public @:final @:static public static var NO_OP(default, null) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	/**
 	* Constructs a new composite annotation processor.  A composite
@@ -53,7 +53,7 @@ package com.sun.mirror.apt;
 	* @param aps The processors to create a composite of
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getCompositeAnnotationProcessor(aps : java.NativeArray<com.sun.mirror.apt.AnnotationProcessor>) : com.sun.mirror.apt.AnnotationProcessor;
+	@:require(java5) @:overload @:public @:static public static function getCompositeAnnotationProcessor(aps : java.NativeArray<com.sun.mirror.apt.AnnotationProcessor>) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	/**
 	* Constructs a new composite annotation processor.  A composite
@@ -65,13 +65,13 @@ package com.sun.mirror.apt;
 	* @param aps A collection of processors to create a composite of
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getCompositeAnnotationProcessor(aps : java.util.Collection<com.sun.mirror.apt.AnnotationProcessor>) : com.sun.mirror.apt.AnnotationProcessor;
+	@:require(java5) @:overload @:public @:static public static function getCompositeAnnotationProcessor(aps : java.util.Collection<com.sun.mirror.apt.AnnotationProcessor>) : com.sun.mirror.apt.AnnotationProcessor;
 	
 	
 }
 @:native('com$sun$mirror$apt$AnnotationProcessors$NoOpAP') @:internal extern class AnnotationProcessors_NoOpAP implements com.sun.mirror.apt.AnnotationProcessor
 {
-	@:overload public function process() : Void;
+	@:overload @:public public function process() : Void;
 	
 	
 }
@@ -87,19 +87,19 @@ package com.sun.mirror.apt;
 	* Constructs a new composite annotation processor.
 	* @param aps  the component annotation processors
 	*/
-	@:overload public function new(aps : java.util.Collection<com.sun.mirror.apt.AnnotationProcessor>) : Void;
+	@:overload @:public public function new(aps : java.util.Collection<com.sun.mirror.apt.AnnotationProcessor>) : Void;
 	
 	/**
 	* Constructs a new composite annotation processor.
 	* @param aps  the component annotation processors
 	*/
-	@:overload public function new(aps : java.NativeArray<com.sun.mirror.apt.AnnotationProcessor>) : Void;
+	@:overload @:public public function new(aps : java.NativeArray<com.sun.mirror.apt.AnnotationProcessor>) : Void;
 	
 	/**
 	* Invokes the <tt>process</tt> method of each component processor,
 	* in the order in which the processors were passed to the constructor.
 	*/
-	@:overload public function process() : Void;
+	@:overload @:public public function process() : Void;
 	
 	
 }

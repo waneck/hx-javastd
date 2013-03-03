@@ -31,7 +31,7 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	*            <code>Adjustable.HORIZONTAL</code> or
 	*            <code>Adjustable.VERTICAL</code>
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* This method should <strong>NOT</strong> be called by user code.
@@ -40,28 +40,9 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	*
 	* @throws <code>AWTError</code>  Always throws an error when called.
 	*/
-	@:overload public function setMinimum(min : Int) : Void;
+	@:overload @:public public function setMinimum(min : Int) : Void;
 	
-	@:overload public function getMinimum() : Int;
-	
-	/**
-	* This method should <strong>NOT</strong> be called by user code.
-	* This method is public for this class to properly implement
-	* <code>Adjustable</code> interface.
-	*
-	* @throws <code>AWTError</code>  Always throws an error when called.
-	*/
-	@:overload public function setMaximum(max : Int) : Void;
-	
-	@:overload public function getMaximum() : Int;
-	
-	@:overload @:synchronized public function setUnitIncrement(u : Int) : Void;
-	
-	@:overload public function getUnitIncrement() : Int;
-	
-	@:overload @:synchronized public function setBlockIncrement(b : Int) : Void;
-	
-	@:overload public function getBlockIncrement() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* This method should <strong>NOT</strong> be called by user code.
@@ -70,9 +51,28 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	*
 	* @throws <code>AWTError</code>  Always throws an error when called.
 	*/
-	@:overload public function setVisibleAmount(v : Int) : Void;
+	@:overload @:public public function setMaximum(max : Int) : Void;
 	
-	@:overload public function getVisibleAmount() : Int;
+	@:overload @:public public function getMaximum() : Int;
+	
+	@:overload @:public @:synchronized public function setUnitIncrement(u : Int) : Void;
+	
+	@:overload @:public public function getUnitIncrement() : Int;
+	
+	@:overload @:public @:synchronized public function setBlockIncrement(b : Int) : Void;
+	
+	@:overload @:public public function getBlockIncrement() : Int;
+	
+	/**
+	* This method should <strong>NOT</strong> be called by user code.
+	* This method is public for this class to properly implement
+	* <code>Adjustable</code> interface.
+	*
+	* @throws <code>AWTError</code>  Always throws an error when called.
+	*/
+	@:overload @:public public function setVisibleAmount(v : Int) : Void;
+	
+	@:overload @:public public function getVisibleAmount() : Int;
 	
 	/**
 	* Sets the <code>valueIsAdjusting</code> property.
@@ -81,7 +81,7 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	* @see #getValueIsAdjusting
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setValueIsAdjusting(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setValueIsAdjusting(b : Bool) : Void;
 	
 	/**
 	* Returns true if the value is in the process of changing as a
@@ -90,7 +90,7 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	* @return the value of the <code>valueIsAdjusting</code> property
 	* @see #setValueIsAdjusting
 	*/
-	@:overload public function getValueIsAdjusting() : Bool;
+	@:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Sets the value of this scrollbar to the specified value.
@@ -101,9 +101,9 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	*
 	* @param v the new value of the scrollbar
 	*/
-	@:overload public function setValue(v : Int) : Void;
+	@:overload @:public public function setValue(v : Int) : Void;
 	
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Adds the specified adjustment listener to receive adjustment
@@ -119,7 +119,7 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	* @see      java.awt.event.AdjustmentListener
 	* @see      java.awt.event.AdjustmentEvent
 	*/
-	@:overload @:synchronized public function addAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
+	@:overload @:public @:synchronized public function addAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
 	
 	/**
 	* Removes the specified adjustment listener so that it no longer
@@ -136,7 +136,7 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	* @see           java.awt.event.AdjustmentEvent
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
 	
 	/**
 	* Returns an array of all the adjustment listeners
@@ -153,13 +153,13 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	* @see           java.awt.event.AdjustmentEvent
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getAdjustmentListeners() : java.NativeArray<java.awt.event.AdjustmentListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getAdjustmentListeners() : java.NativeArray<java.awt.event.AdjustmentListener>;
 	
 	/**
 	* Returns a string representation of this scrollbar and its values.
 	* @return    a string representation of this scrollbar.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a string representing the state of this scrollbar.
@@ -170,7 +170,7 @@ extern class ScrollPaneAdjustable implements java.awt.Adjustable implements java
 	*
 	* @return      the parameter string of this scrollbar.
 	*/
-	@:overload public function paramString() : String;
+	@:overload @:public public function paramString() : String;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class MirroredTypeException extends javax.lang.model.type.MirroredTypesEx
 	*
 	* @param type  the type being accessed
 	*/
-	@:overload public function new(type : javax.lang.model.type.TypeMirror) : Void;
+	@:overload @:public public function new(type : javax.lang.model.type.TypeMirror) : Void;
 	
 	/**
 	* Returns the type mirror corresponding to the type being accessed.
@@ -39,7 +39,7 @@ extern class MirroredTypeException extends javax.lang.model.type.MirroredTypesEx
 	*
 	* @return the type mirror, or {@code null} if unavailable
 	*/
-	@:overload public function getTypeMirror() : javax.lang.model.type.TypeMirror;
+	@:overload @:public public function getTypeMirror() : javax.lang.model.type.TypeMirror;
 	
 	
 }

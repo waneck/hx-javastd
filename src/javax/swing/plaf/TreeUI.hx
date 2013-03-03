@@ -30,25 +30,25 @@ extern class TreeUI extends javax.swing.plaf.ComponentUI
 	* last item in path will be drawn into.  Will return null if
 	* any component in path is currently valid.
 	*/
-	@:overload @:abstract public function getPathBounds(tree : javax.swing.JTree, path : javax.swing.tree.TreePath) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function getPathBounds(tree : javax.swing.JTree, path : javax.swing.tree.TreePath) : java.awt.Rectangle;
 	
 	/**
 	* Returns the path for passed in row.  If row is not visible
 	* null is returned.
 	*/
-	@:overload @:abstract public function getPathForRow(tree : javax.swing.JTree, row : Int) : javax.swing.tree.TreePath;
+	@:overload @:public @:abstract public function getPathForRow(tree : javax.swing.JTree, row : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row that the last item identified in path is visible
 	* at.  Will return -1 if any of the elements in path are not
 	* currently visible.
 	*/
-	@:overload @:abstract public function getRowForPath(tree : javax.swing.JTree, path : javax.swing.tree.TreePath) : Int;
+	@:overload @:public @:abstract public function getRowForPath(tree : javax.swing.JTree, path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Returns the number of rows that are being displayed.
 	*/
-	@:overload @:abstract public function getRowCount(tree : javax.swing.JTree) : Int;
+	@:overload @:public @:abstract public function getRowCount(tree : javax.swing.JTree) : Int;
 	
 	/**
 	* Returns the path to the node that is closest to x,y.  If
@@ -57,38 +57,38 @@ extern class TreeUI extends javax.swing.plaf.ComponentUI
 	* returned object is exactly at x, y you should get the bounds for
 	* the returned path and test x, y against that.
 	*/
-	@:overload @:abstract public function getClosestPathForLocation(tree : javax.swing.JTree, x : Int, y : Int) : javax.swing.tree.TreePath;
+	@:overload @:public @:abstract public function getClosestPathForLocation(tree : javax.swing.JTree, x : Int, y : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns true if the tree is being edited.  The item that is being
 	* edited can be returned by getEditingPath().
 	*/
-	@:overload @:abstract public function isEditing(tree : javax.swing.JTree) : Bool;
+	@:overload @:public @:abstract public function isEditing(tree : javax.swing.JTree) : Bool;
 	
 	/**
 	* Stops the current editing session.  This has no effect if the
 	* tree isn't being edited.  Returns true if the editor allows the
 	* editing session to stop.
 	*/
-	@:overload @:abstract public function stopEditing(tree : javax.swing.JTree) : Bool;
+	@:overload @:public @:abstract public function stopEditing(tree : javax.swing.JTree) : Bool;
 	
 	/**
 	* Cancels the current editing session. This has no effect if the
 	* tree isn't being edited.  Returns true if the editor allows the
 	* editing session to stop.
 	*/
-	@:overload @:abstract public function cancelEditing(tree : javax.swing.JTree) : Void;
+	@:overload @:public @:abstract public function cancelEditing(tree : javax.swing.JTree) : Void;
 	
 	/**
 	* Selects the last item in path and tries to edit it.  Editing will
 	* fail if the CellEditor won't allow it for the selected item.
 	*/
-	@:overload @:abstract public function startEditingAtPath(tree : javax.swing.JTree, path : javax.swing.tree.TreePath) : Void;
+	@:overload @:public @:abstract public function startEditingAtPath(tree : javax.swing.JTree, path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Returns the path to the element that is being edited.
 	*/
-	@:overload @:abstract public function getEditingPath(tree : javax.swing.JTree) : javax.swing.tree.TreePath;
+	@:overload @:public @:abstract public function getEditingPath(tree : javax.swing.JTree) : javax.swing.tree.TreePath;
 	
 	
 }

@@ -31,14 +31,14 @@ extern class StreamReaderBufferCreator extends com.sun.xml.internal.stream.buffe
 	* A stream buffer will be created for storing the infoset
 	* from a stream reader.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a stream reader buffer creator using a mutable stream buffer.
 	* <p>
 	* @param buffer the mutable stream buffer.
 	*/
-	@:overload public function new(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
+	@:overload @:public public function new(buffer : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer) : Void;
 	
 	/**
 	* Create the buffer from a stream reader.
@@ -58,7 +58,7 @@ extern class StreamReaderBufferCreator extends com.sun.xml.internal.stream.buffe
 	* @throws XMLStreamException if the stream reader is not positioned at
 	*         the start of the document or at an element.
 	*/
-	@:overload public function create(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
+	@:overload @:public public function create(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
 	
 	/**
 	* Creates the buffer from a stream reader that is an element fragment.
@@ -76,7 +76,7 @@ extern class StreamReaderBufferCreator extends com.sun.xml.internal.stream.buffe
 	* @throws XMLStreamException if the stream reader cannot be positioned at
 	*         the start of an element.
 	*/
-	@:overload public function createElementFragment(reader : javax.xml.stream.XMLStreamReader, storeInScopeNamespaces : Bool) : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
+	@:overload @:public public function createElementFragment(reader : javax.xml.stream.XMLStreamReader, storeInScopeNamespaces : Bool) : com.sun.xml.internal.stream.buffer.MutableXMLStreamBuffer;
 	
 	/**
 	* A low level method a create a structure element explicitly. This is useful when xsb is
@@ -95,7 +95,7 @@ extern class StreamReaderBufferCreator extends com.sun.xml.internal.stream.buffe
 	*
 	* @param ns an array of the even length of the form { prefix0, uri0, prefix1, uri1, ... }.
 	*/
-	@:overload public function storeElement(nsURI : String, localName : String, prefix : String, ns : java.NativeArray<String>) : Void;
+	@:overload @:public public function storeElement(nsURI : String, localName : String, prefix : String, ns : java.NativeArray<String>) : Void;
 	
 	/**
 	* A low level method a create a structure element explicitly. This is
@@ -104,7 +104,7 @@ extern class StreamReaderBufferCreator extends com.sun.xml.internal.stream.buffe
 	* WARNING: Instead of using this, try other methods(if you don't know what
 	* you are doing).
 	*/
-	@:overload public function storeEndElement() : Void;
+	@:overload @:public public function storeEndElement() : Void;
 	
 	
 }

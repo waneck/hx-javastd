@@ -26,21 +26,21 @@ package sun.rmi.runtime;
 extern class Log
 {
 	/** Logger re-definition of old RMI log values */
-	public static var BRIEF(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var BRIEF(default, null) : java.util.logging.Level;
 	
-	public static var VERBOSE(default, null) : java.util.logging.Level;
+	@:public @:static @:final public static var VERBOSE(default, null) : java.util.logging.Level;
 	
 	/** "logger like" API to be used by RMI implementation */
-	@:overload @:abstract public function isLoggable(level : java.util.logging.Level) : Bool;
+	@:overload @:public @:abstract public function isLoggable(level : java.util.logging.Level) : Bool;
 	
-	@:overload @:abstract public function log(level : java.util.logging.Level, message : String) : Void;
+	@:overload @:public @:abstract public function log(level : java.util.logging.Level, message : String) : Void;
 	
-	@:overload @:abstract public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public @:abstract public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
 	
 	/** get and set the RMI server call output stream */
-	@:overload @:abstract public function setOutputStream(stream : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function setOutputStream(stream : java.io.OutputStream) : Void;
 	
-	@:overload @:abstract public function getPrintStream() : java.io.PrintStream;
+	@:overload @:public @:abstract public function getPrintStream() : java.io.PrintStream;
 	
 	/**
 	* Access log for a tri-state system property.
@@ -62,7 +62,7 @@ extern class Log
 	* Since this is an internal API, no checks are made to ensure
 	* that multiple logs do not exist for the same logger.
 	*/
-	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Int) : sun.rmi.runtime.Log;
+	@:overload @:public @:static public static function getLog(loggerName : String, oldLogName : String, _override : Int) : sun.rmi.runtime.Log;
 	
 	/**
 	* Access logs associated with boolean properties
@@ -71,7 +71,7 @@ extern class Log
 	* Since this is an internal API, no checks are made to ensure
 	* that multiple logs do not exist for the same logger.
 	*/
-	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Bool) : sun.rmi.runtime.Log;
+	@:overload @:public @:static public static function getLog(loggerName : String, oldLogName : String, _override : Bool) : sun.rmi.runtime.Log;
 	
 	
 }
@@ -94,7 +94,7 @@ extern class Log
 	* level for the system property with name, the logger level
 	* will be set to the value of system property.
 	*/
-	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
+	@:overload @:public public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
 	
 	
 }
@@ -103,11 +103,11 @@ extern class Log
 */
 @:native('sun$rmi$runtime$Log$LoggerLog') @:internal extern class Log_LoggerLog extends sun.rmi.runtime.Log
 {
-	@:overload override public function isLoggable(level : java.util.logging.Level) : Bool;
+	@:overload @:public override public function isLoggable(level : java.util.logging.Level) : Bool;
 	
-	@:overload override public function log(level : java.util.logging.Level, message : String) : Void;
+	@:overload @:public override public function log(level : java.util.logging.Level, message : String) : Void;
 	
-	@:overload override public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public override public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
 	
 	/**
 	* Set the output stream associated with the RMI server call
@@ -115,9 +115,9 @@ extern class Log
 	*
 	* Calling code needs LoggingPermission "control".
 	*/
-	@:overload @:synchronized override public function setOutputStream(out : java.io.OutputStream) : Void;
+	@:overload @:public @:synchronized override public function setOutputStream(out : java.io.OutputStream) : Void;
 	
-	@:overload @:synchronized override public function getPrintStream() : java.io.PrintStream;
+	@:overload @:public @:synchronized override public function getPrintStream() : java.io.PrintStream;
 	
 	
 }
@@ -127,9 +127,9 @@ extern class Log
 */
 @:native('sun$rmi$runtime$Log$InternalStreamHandler') @:internal extern class Log_InternalStreamHandler extends java.util.logging.StreamHandler
 {
-	@:overload override public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public override public function publish(record : java.util.logging.LogRecord) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -140,11 +140,11 @@ extern class Log
 */
 @:native('sun$rmi$runtime$Log$LoggerPrintStream') @:internal extern class Log_LoggerPrintStream extends java.io.PrintStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -155,7 +155,7 @@ extern class Log
 @:native('sun$rmi$runtime$Log$LogStreamLogFactory') @:internal extern class Log_LogStreamLogFactory implements sun.rmi.runtime.Log.Log_LogFactory
 {
 	/* create a new LogStreamLog for the specified log */
-	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
+	@:overload @:public public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
 	
 	
 }
@@ -165,15 +165,15 @@ extern class Log
 */
 @:native('sun$rmi$runtime$Log$LogStreamLog') @:internal extern class Log_LogStreamLog extends sun.rmi.runtime.Log
 {
-	@:overload @:synchronized override public function isLoggable(level : java.util.logging.Level) : Bool;
+	@:overload @:public @:synchronized override public function isLoggable(level : java.util.logging.Level) : Bool;
 	
-	@:overload override public function log(messageLevel : java.util.logging.Level, message : String) : Void;
+	@:overload @:public override public function log(messageLevel : java.util.logging.Level, message : String) : Void;
 	
-	@:overload override public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
+	@:overload @:public override public function log(level : java.util.logging.Level, message : String, thrown : java.lang.Throwable) : Void;
 	
-	@:overload override public function getPrintStream() : java.io.PrintStream;
+	@:overload @:public override public function getPrintStream() : java.io.PrintStream;
 	
-	@:overload @:synchronized override public function setOutputStream(out : java.io.OutputStream) : Void;
+	@:overload @:public @:synchronized override public function setOutputStream(out : java.io.OutputStream) : Void;
 	
 	
 }

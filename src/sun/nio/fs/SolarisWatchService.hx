@@ -36,17 +36,17 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$SolarisWatchService$SolarisWatchKey') @:internal extern class SolarisWatchService_SolarisWatchKey extends sun.nio.fs.AbstractWatchKey implements sun.nio.fs.SolarisWatchService.SolarisWatchService_DirectoryNode
 {
-	@:overload public function object() : haxe.Int64;
+	@:overload @:public public function object() : haxe.Int64;
 	
-	@:overload public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
-	@:overload public function cancel() : Void;
+	@:overload @:public override public function cancel() : Void;
 	
-	@:overload public function addChild(name : java.nio.file.Path, node : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode) : Void;
+	@:overload @:public public function addChild(name : java.nio.file.Path, node : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode) : Void;
 	
-	@:overload public function removeChild(name : java.nio.file.Path) : Void;
+	@:overload @:public public function removeChild(name : java.nio.file.Path) : Void;
 	
-	@:overload public function getChild(name : java.nio.file.Path) : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode;
+	@:overload @:public public function getChild(name : java.nio.file.Path) : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode;
 	
 	
 }
@@ -59,7 +59,7 @@ package sun.nio.fs;
 	* Poller main loop. Blocks on port_getn waiting for events and then
 	* processes them.
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
@@ -90,7 +90,7 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$SolarisWatchService$EntryNode') @:internal extern class SolarisWatchService_EntryNode implements sun.nio.fs.SolarisWatchService.SolarisWatchService_Node
 {
-	@:overload public function object() : haxe.Int64;
+	@:overload @:public public function object() : haxe.Int64;
 	
 	
 }

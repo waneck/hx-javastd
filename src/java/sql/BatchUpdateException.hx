@@ -48,7 +48,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* failure
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(reason : String, SQLState : String, vendorCode : Int, updateCounts : java.NativeArray<Int>) : Void;
+	@:require(java2) @:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int, updateCounts : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with a given
@@ -72,7 +72,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* failure
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(reason : String, SQLState : String, updateCounts : java.NativeArray<Int>) : Void;
+	@:require(java2) @:overload @:public public function new(reason : String, SQLState : String, updateCounts : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with a given
@@ -96,7 +96,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* failure
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(reason : String, updateCounts : java.NativeArray<Int>) : Void;
+	@:require(java2) @:overload @:public public function new(reason : String, updateCounts : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with a given
@@ -117,7 +117,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* failure
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(updateCounts : java.NativeArray<Int>) : Void;
+	@:require(java2) @:overload @:public public function new(updateCounts : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object.
@@ -130,7 +130,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with
@@ -146,7 +146,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* may be null indicating the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with a
@@ -170,7 +170,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with
@@ -192,7 +192,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with
@@ -214,7 +214,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>BatchUpdateException</code> object initialized with
@@ -238,7 +238,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* the cause is non-existent or unknown.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(reason : String, SQLState : String, vendorCode : Int, updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
+	@:require(java6) @:overload @:public public function new(reason : String, SQLState : String, vendorCode : Int, updateCounts : java.NativeArray<Int>, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Retrieves the update count for each update statement in the batch
@@ -270,7 +270,7 @@ extern class BatchUpdateException extends java.sql.SQLException
 	* </OL>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getUpdateCounts() : java.NativeArray<Int>;
+	@:require(java3) @:overload @:public public function getUpdateCounts() : java.NativeArray<Int>;
 	
 	
 }

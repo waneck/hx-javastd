@@ -41,7 +41,7 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	* @param constructorMethod The java.lang.reflect.Constructor object
 	* describing the MBean constructor.
 	*/
-	@:overload public function new(description : String, constructorMethod : java.lang.reflect.Constructor<Dynamic>) : Void;
+	@:overload @:public public function new(description : String, constructorMethod : java.lang.reflect.Constructor<Dynamic>) : Void;
 	
 	/**
 	* Constructs a ModelMBeanConstructorInfo object.  The {@link
@@ -67,7 +67,7 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	* not equal to "operation" or descriptor field "role" is
 	* present but not equal to "constructor".
 	*/
-	@:overload public function new(description : String, constructorMethod : java.lang.reflect.Constructor<Dynamic>, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(description : String, constructorMethod : java.lang.reflect.Constructor<Dynamic>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs a ModelMBeanConstructorInfo object with a default descriptor.
@@ -76,7 +76,7 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	* @param description A human readable description of the constructor.
 	* @param signature MBeanParameterInfo object array describing the parameters(arguments) of the constructor.
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>) : Void;
 	
 	/**
 	* Constructs a ModelMBeanConstructorInfo object.
@@ -96,13 +96,13 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	* not equal to "operation" or descriptor field "role" is
 	* present but not equal to "constructor".
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Creates and returns a new ModelMBeanConstructorInfo which is a duplicate of this ModelMBeanConstructorInfo.
 	*
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a copy of the associated Descriptor.
@@ -112,7 +112,7 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	*
 	* @see #setDescriptor
 	*/
-	@:overload override public function getDescriptor() : javax.management.Descriptor;
+	@:overload @:public override public function getDescriptor() : javax.management.Descriptor;
 	
 	/**
 	* Sets associated Descriptor (full replace) of
@@ -137,12 +137,12 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	*
 	* @see #getDescriptor
 	*/
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns a string containing the entire contents of the ModelMBeanConstructorInfo in human readable form.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

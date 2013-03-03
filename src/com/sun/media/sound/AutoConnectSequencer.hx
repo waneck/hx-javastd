@@ -31,7 +31,7 @@ extern interface AutoConnectSequencer
 	* needs to re-connect itself to a suitable
 	* device in open().
 	*/
-	@:overload public function setAutoConnect(autoConnectReceiver : javax.sound.midi.Receiver) : Void;
+	@:overload @:public public function setAutoConnect(autoConnectReceiver : javax.sound.midi.Receiver) : Void;
 	
 	
 }

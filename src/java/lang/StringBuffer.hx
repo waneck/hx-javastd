@@ -83,7 +83,7 @@ package java.lang;
 	* Constructs a string buffer with no characters in it and an
 	* initial capacity of 16 characters.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a string buffer with no characters in it and
@@ -93,7 +93,7 @@ package java.lang;
 	* @exception  NegativeArraySizeException  if the <code>capacity</code>
 	*               argument is less than <code>0</code>.
 	*/
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
 	/**
 	* Constructs a string buffer initialized to the contents of the
@@ -103,7 +103,7 @@ package java.lang;
 	* @param   str   the initial contents of the buffer.
 	* @exception NullPointerException if <code>str</code> is <code>null</code>
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Constructs a string buffer that contains the same characters
@@ -119,66 +119,66 @@ package java.lang;
 	* @exception NullPointerException if <code>seq</code> is <code>null</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(seq : java.lang.CharSequence) : Void;
+	@:require(java5) @:overload @:public public function new(seq : java.lang.CharSequence) : Void;
 	
-	@:overload @:synchronized override public function length() : Int;
+	@:overload @:public @:synchronized override public function length() : Int;
 	
-	@:overload @:synchronized override public function capacity() : Int;
+	@:overload @:public @:synchronized override public function capacity() : Int;
 	
-	@:overload @:synchronized override public function ensureCapacity(minimumCapacity : Int) : Void;
+	@:overload @:public @:synchronized override public function ensureCapacity(minimumCapacity : Int) : Void;
 	
 	/**
 	* @since      1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function trimToSize() : Void;
+	@:require(java5) @:overload @:public @:synchronized override public function trimToSize() : Void;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @see        #length()
 	*/
-	@:overload @:synchronized override public function setLength(newLength : Int) : Void;
+	@:overload @:public @:synchronized override public function setLength(newLength : Int) : Void;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @see        #length()
 	*/
-	@:overload @:synchronized override public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:synchronized override public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* @since      1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function codePointAt(index : Int) : Int;
+	@:require(java5) @:overload @:public @:synchronized override public function codePointAt(index : Int) : Int;
 	
 	/**
 	* @since     1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function codePointBefore(index : Int) : Int;
+	@:require(java5) @:overload @:public @:synchronized override public function codePointBefore(index : Int) : Int;
 	
 	/**
 	* @since     1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function codePointCount(beginIndex : Int, endIndex : Int) : Int;
+	@:require(java5) @:overload @:public @:synchronized override public function codePointCount(beginIndex : Int, endIndex : Int) : Int;
 	
 	/**
 	* @since     1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function offsetByCodePoints(index : Int, codePointOffset : Int) : Int;
+	@:require(java5) @:overload @:public @:synchronized override public function offsetByCodePoints(index : Int, codePointOffset : Int) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload @:public @:synchronized override public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @see        #length()
 	*/
-	@:overload @:synchronized override public function setCharAt(index : Int, ch : java.StdTypes.Char16) : Void;
+	@:overload @:public @:synchronized override public function setCharAt(index : Int, ch : java.StdTypes.Char16) : Void;
 	
-	@:overload @:synchronized override public function append(obj : Dynamic) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(obj : Dynamic) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(str : String) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(str : String) : java.lang.StringBuffer;
 	
 	/**
 	* Appends the specified <tt>StringBuffer</tt> to this sequence.
@@ -204,7 +204,7 @@ package java.lang;
 	* @return  a reference to this object.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized override public function append(sb : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:require(java4) @:overload @:public @:synchronized override public function append(sb : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
 	/**
 	* Appends the specified <code>CharSequence</code> to this
@@ -227,167 +227,167 @@ package java.lang;
 	* @return  a reference to this object.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(s : java.lang.CharSequence) : java.lang.StringBuffer;
+	@:require(java5) @:overload @:public override public function append(s : java.lang.CharSequence) : java.lang.StringBuffer;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @since      1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function append(s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuffer;
+	@:require(java5) @:overload @:public @:synchronized override public function append(s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuffer;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function append(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(b : Bool) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(b : Bool) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(c : java.StdTypes.Char16) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(c : java.StdTypes.Char16) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(i : Int) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(i : Int) : java.lang.StringBuffer;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function appendCodePoint(codePoint : Int) : java.lang.StringBuffer;
+	@:require(java5) @:overload @:public @:synchronized override public function appendCodePoint(codePoint : Int) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(lng : haxe.Int64) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(lng : haxe.Int64) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(f : Single) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(f : Single) : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function append(d : Float) : java.lang.StringBuffer;
-	
-	/**
-	* @throws StringIndexOutOfBoundsException {@inheritDoc}
-	* @since      1.2
-	*/
-	@:require(java2) @:overload @:synchronized override public function delete(start : Int, end : Int) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function append(d : Float) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function deleteCharAt(index : Int) : java.lang.StringBuffer;
+	@:require(java2) @:overload @:public @:synchronized override public function delete(start : Int, end : Int) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function replace(start : Int, end : Int, str : String) : java.lang.StringBuffer;
+	@:require(java2) @:overload @:public @:synchronized override public function deleteCharAt(index : Int) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function substring(start : Int) : String;
+	@:require(java2) @:overload @:public @:synchronized override public function replace(start : Int, end : Int, str : String) : java.lang.StringBuffer;
+	
+	/**
+	* @throws StringIndexOutOfBoundsException {@inheritDoc}
+	* @since      1.2
+	*/
+	@:require(java2) @:overload @:public @:synchronized override public function substring(start : Int) : String;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @since      1.4
 	*/
-	@:require(java4) @:overload @:synchronized override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:require(java4) @:overload @:public @:synchronized override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function substring(start : Int, end : Int) : String;
+	@:require(java2) @:overload @:public @:synchronized override public function substring(start : Int, end : Int) : String;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function insert(index : Int, str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuffer;
+	@:require(java2) @:overload @:public @:synchronized override public function insert(index : Int, str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function insert(offset : Int, obj : Dynamic) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function insert(offset : Int, obj : Dynamic) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function insert(offset : Int, str : String) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function insert(offset : Int, str : String) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function insert(offset : Int, str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuffer;
-	
-	/**
-	* @throws IndexOutOfBoundsException {@inheritDoc}
-	* @since      1.5
-	*/
-	@:require(java5) @:overload override public function insert(dstOffset : Int, s : java.lang.CharSequence) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function insert(offset : Int, str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuffer;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	* @since      1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function insert(dstOffset : Int, s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuffer;
+	@:require(java5) @:overload @:public override public function insert(dstOffset : Int, s : java.lang.CharSequence) : java.lang.StringBuffer;
+	
+	/**
+	* @throws IndexOutOfBoundsException {@inheritDoc}
+	* @since      1.5
+	*/
+	@:require(java5) @:overload @:public @:synchronized override public function insert(dstOffset : Int, s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function insert(offset : Int, b : Bool) : java.lang.StringBuffer;
+	@:overload @:public override public function insert(offset : Int, b : Bool) : java.lang.StringBuffer;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function insert(offset : Int, c : java.StdTypes.Char16) : java.lang.StringBuffer;
+	@:overload @:public @:synchronized override public function insert(offset : Int, c : java.StdTypes.Char16) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function insert(offset : Int, i : Int) : java.lang.StringBuffer;
+	@:overload @:public override public function insert(offset : Int, i : Int) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function insert(offset : Int, l : haxe.Int64) : java.lang.StringBuffer;
+	@:overload @:public override public function insert(offset : Int, l : haxe.Int64) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function insert(offset : Int, f : Single) : java.lang.StringBuffer;
+	@:overload @:public override public function insert(offset : Int, f : Single) : java.lang.StringBuffer;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function insert(offset : Int, d : Float) : java.lang.StringBuffer;
+	@:overload @:public override public function insert(offset : Int, d : Float) : java.lang.StringBuffer;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since      1.4
 	*/
-	@:require(java4) @:overload override public function indexOf(str : String) : Int;
+	@:require(java4) @:overload @:public override public function indexOf(str : String) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since      1.4
 	*/
-	@:require(java4) @:overload @:synchronized override public function indexOf(str : String, fromIndex : Int) : Int;
+	@:require(java4) @:overload @:public @:synchronized override public function indexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since      1.4
 	*/
-	@:require(java4) @:overload override public function lastIndexOf(str : String) : Int;
+	@:require(java4) @:overload @:public override public function lastIndexOf(str : String) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since      1.4
 	*/
-	@:require(java4) @:overload @:synchronized override public function lastIndexOf(str : String, fromIndex : Int) : Int;
+	@:require(java4) @:overload @:public @:synchronized override public function lastIndexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload @:synchronized override public function reverse() : java.lang.StringBuffer;
+	@:require(java0) @:overload @:public @:synchronized override public function reverse() : java.lang.StringBuffer;
 	
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
 	
 }

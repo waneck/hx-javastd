@@ -27,7 +27,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* Create a LocPathIterator object.
 	*
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Create a LocPathIterator object.
@@ -35,7 +35,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param nscontext The namespace context for this iterator,
 	* should be OK if null.
 	*/
-	@:overload private function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:protected private function new(nscontext : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Create a LocPathIterator object, including creation
@@ -49,7 +49,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int) : Void;
+	@:overload @:protected private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int) : Void;
 	
 	/**
 	* Create a LocPathIterator object, including creation
@@ -66,13 +66,13 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int, shouldLoadWalkers : Bool) : Void;
+	@:overload @:protected private function new(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int, analysis : Int, shouldLoadWalkers : Bool) : Void;
 	
 	/**
 	* Get the analysis bits for this walker, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload public function getAnalysisBits() : Int;
+	@:overload @:public public function getAnalysisBits() : Int;
 	
 	/**
 	* Set the environment in which this iterator operates, which should provide:
@@ -87,7 +87,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @param environment The environment object.
 	*/
-	@:overload public function setEnvironment(environment : Dynamic) : Void;
+	@:overload @:public public function setEnvironment(environment : Dynamic) : Void;
 	
 	/**
 	* Get an instance of a DTM that "owns" a node handle.  Since a node
@@ -98,7 +98,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of the DTMManager.  Since a node
@@ -107,7 +107,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return a non-null DTMManager reference.
 	*/
-	@:overload public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Execute this iterator, meaning create a clone that can
@@ -121,7 +121,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -137,7 +137,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*         occurs.
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function executeCharsToContentHandler(xctxt : com.sun.org.apache.xpath.internal.XPathContext, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function executeCharsToContentHandler(xctxt : com.sun.org.apache.xpath.internal.XPathContext, handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Given an select expression and a context, evaluate the XPath
@@ -151,14 +151,14 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @throws javax.xml.transform.TransformerException
 	* @xsl.usage experimental
 	*/
-	@:overload override public function asIterator(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function asIterator(xctxt : com.sun.org.apache.xpath.internal.XPathContext, contextNode : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Tell if the expression is a nodeset expression.
 	*
 	* @return true if the expression can be represented as a nodeset.
 	*/
-	@:overload override public function isNodesetExpr() : Bool;
+	@:overload @:public override public function isNodesetExpr() : Bool;
 	
 	/**
 	* Return the first node out of the nodeset, if this expression is
@@ -168,7 +168,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param xctxt The XPath runtime context.
 	* @return the first node out of the nodeset, or DTM.NULL.
 	*/
-	@:overload override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function asNode(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Evaluate this operation directly to a boolean.
@@ -179,7 +179,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
+	@:overload @:public override public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
 	
 	/**
 	* Set if this is an iterator at the upper level of
@@ -189,7 +189,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*          expression.
 	* @xsl.usage advanced
 	*/
-	@:overload public function setIsTopLevel(b : Bool) : Void;
+	@:overload @:public public function setIsTopLevel(b : Bool) : Void;
 	
 	/**
 	* Get if this is an iterator at the upper level of
@@ -199,7 +199,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*          expression.
 	* @xsl.usage advanced
 	*/
-	@:overload public function getIsTopLevel() : Bool;
+	@:overload @:public public function getIsTopLevel() : Bool;
 	
 	/**
 	* Initialize the context values for this expression
@@ -208,7 +208,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param context The XPath runtime context for this
 	* transformation.
 	*/
-	@:overload public function setRoot(context : Int, environment : Dynamic) : Void;
+	@:overload @:public public function setRoot(context : Int, environment : Dynamic) : Void;
 	
 	/**
 	* Set the next position index of this iterator.
@@ -216,7 +216,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param next A value greater than or equal to zero that indicates the next
 	* node position to fetch.
 	*/
-	@:overload private function setNextPosition(next : Int) : Void;
+	@:overload @:protected private function setNextPosition(next : Int) : Void;
 	
 	/**
 	* Get the current position, which is one less than
@@ -227,7 +227,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return A value greater than or equal to zero that indicates the next
 	* node position to fetch.
 	*/
-	@:overload @:final public function getCurrentPos() : Int;
+	@:overload @:public @:final public function getCurrentPos() : Int;
 	
 	/**
 	* If setShouldCacheNodes(true) is called, then nodes will
@@ -235,7 +235,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @param b True if this iterator should cache nodes.
 	*/
-	@:overload public function setShouldCacheNodes(b : Bool) : Void;
+	@:overload @:public public function setShouldCacheNodes(b : Bool) : Void;
 	
 	/**
 	* Tells if this iterator can have nodes added to it or set via
@@ -243,7 +243,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return True if the nodelist can be mutated.
 	*/
-	@:overload public function isMutable() : Bool;
+	@:overload @:public public function isMutable() : Bool;
 	
 	/**
 	* Set the current position in the node set.
@@ -251,12 +251,12 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param i Must be a valid index greater
 	* than or equal to zero and less than m_cachedNodes.size().
 	*/
-	@:overload public function setCurrentPos(i : Int) : Void;
+	@:overload @:public public function setCurrentPos(i : Int) : Void;
 	
 	/**
 	* Increment the current position in the node set.
 	*/
-	@:overload public function incrementCurrentPos() : Void;
+	@:overload @:public public function incrementCurrentPos() : Void;
 	
 	/**
 	* Get the length of the cached nodes.
@@ -268,7 +268,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return The size of the current cache list.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	*  Returns the <code>index</code> th item in the collection. If
@@ -279,7 +279,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*   <code>NodeList</code> , or <code>null</code> if that is not a valid
 	*   index.
 	*/
-	@:overload public function item(index : Int) : Int;
+	@:overload @:public public function item(index : Int) : Int;
 	
 	/**
 	* Sets the node at the specified index of this vector to be the
@@ -294,7 +294,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param node Node to set
 	* @param index Index of where to set the node
 	*/
-	@:overload public function setItem(node : Int, index : Int) : Void;
+	@:overload @:public public function setItem(node : Int, index : Int) : Void;
 	
 	/**
 	*  The number of nodes in the list. The range of valid child node indices
@@ -302,7 +302,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return The number of nodes in the list, always greater or equal to zero.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Tells if this NodeSetDTM is "fresh", in other words, if
@@ -311,7 +311,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return true of nextNode has not been called.
 	*/
-	@:overload public function isFresh() : Bool;
+	@:overload @:public public function isFresh() : Bool;
 	
 	/**
 	*  Returns the previous node in the set and moves the position of the
@@ -319,7 +319,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return  The previous <code>Node</code> in the set being iterated over,
 	*   or<code>null</code> if there are no more members in that set.
 	*/
-	@:overload public function previousNode() : Int;
+	@:overload @:public public function previousNode() : Int;
 	
 	/**
 	* This attribute determines which node types are presented via the
@@ -334,7 +334,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return For now, always NodeFilter.SHOW_ALL & ~NodeFilter.SHOW_ENTITY_REFERENCE.
 	* @see org.w3c.dom.traversal.NodeIterator
 	*/
-	@:overload override public function getWhatToShow() : Int;
+	@:overload @:public override public function getWhatToShow() : Int;
 	
 	/**
 	*  The filter used to screen nodes.  Not used at this time,
@@ -344,7 +344,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return Always null.
 	* @see org.w3c.dom.traversal.NodeIterator
 	*/
-	@:overload public function getFilter() : com.sun.org.apache.xml.internal.dtm.DTMFilter;
+	@:overload @:public public function getFilter() : com.sun.org.apache.xml.internal.dtm.DTMFilter;
 	
 	/**
 	* The root node of the Iterator, as specified when it was created.
@@ -352,7 +352,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return The "root" of this iterator, which, in XPath terms,
 	* is the node context for this iterator.
 	*/
-	@:overload public function getRoot() : Int;
+	@:overload @:public public function getRoot() : Int;
 	
 	/**
 	*  The value of this flag determines whether the children of entity
@@ -369,10 +369,10 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return Always true, since entity reference nodes are not
 	* visible in the XPath model.
 	*/
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/** Control over whether it is OK for detach to reset the iterator. */
-	private var m_allowDetach : Bool;
+	@:protected private var m_allowDetach : Bool;
 	
 	/**
 	* Specify if it's OK for detach to release the iterator for reuse.
@@ -380,7 +380,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param allowRelease true if it is OK for detach to release this iterator
 	* for pooling.
 	*/
-	@:overload public function allowDetachToRelease(allowRelease : Bool) : Void;
+	@:overload @:public public function allowDetachToRelease(allowRelease : Bool) : Void;
 	
 	/**
 	*  Detaches the iterator from the set which it iterated over, releasing
@@ -389,12 +389,12 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* <code>nextNode</code> or<code>previousNode</code> will raise the
 	* exception INVALID_STATE_ERR.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/**
 	* Reset the iterator.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Get a cloned Iterator that is reset to the beginning
@@ -404,7 +404,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	*  Returns the next node in the set and advances the position of the
@@ -413,7 +413,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return  The next <code>Node</code> in the set being iterated over, or
 	*   <code>null</code> if there are no more members in that set.
 	*/
-	@:overload @:abstract public function nextNode() : Int;
+	@:overload @:public @:abstract public function nextNode() : Int;
 	
 	/**
 	* Bottleneck the return of a next node, to make returns
@@ -423,14 +423,14 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return The same node that was passed as an argument.
 	*/
-	@:overload private function returnNextNode(nextNode : Int) : Int;
+	@:overload @:protected private function returnNextNode(nextNode : Int) : Int;
 	
 	/**
 	* Return the last fetched node.  Needed to support the UnionPathIterator.
 	*
 	* @return The last fetched node, or null if the last fetch was null.
 	*/
-	@:overload public function getCurrentNode() : Int;
+	@:overload @:public public function getCurrentNode() : Int;
 	
 	/**
 	* If an index is requested, NodeSetDTM will call this method
@@ -441,14 +441,14 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @param index The index to run to, or -1 if the iterator
 	* should run to the end.
 	*/
-	@:overload public function runTo(index : Int) : Void;
+	@:overload @:public public function runTo(index : Int) : Void;
 	
 	/**
 	* Tells if we've found the last node yet.
 	*
 	* @return true if the last nextNode returned null.
 	*/
-	@:overload @:final public function getFoundLast() : Bool;
+	@:overload @:public @:final public function getFoundLast() : Bool;
 	
 	/**
 	* The XPath execution context we are operating on.
@@ -456,14 +456,14 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return XPath execution context this iterator is operating on,
 	* or null if setRoot has not been called.
 	*/
-	@:overload @:final public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
+	@:overload @:public @:final public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	/**
 	* The node context for the iterator.
 	*
 	* @return The node context, same as getRoot().
 	*/
-	@:overload @:final public function getContext() : Int;
+	@:overload @:public @:final public function getContext() : Int;
 	
 	/**
 	* The node context from where the expression is being
@@ -471,14 +471,14 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return The top-level node context of the entire expression.
 	*/
-	@:overload @:final public function getCurrentContextNode() : Int;
+	@:overload @:public @:final public function getCurrentContextNode() : Int;
 	
 	/**
 	* Set the current context node for this iterator.
 	*
 	* @param n Must be a non-null reference to the node context.
 	*/
-	@:overload @:final public function setCurrentContextNode(n : Int) : Void;
+	@:overload @:public @:final public function setCurrentContextNode(n : Int) : Void;
 	
 	/**
 	* Return the saved reference to the prefix resolver that
@@ -486,34 +486,34 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return The prefix resolver or this iterator, which may be null.
 	*/
-	@:overload @:final public function getPrefixResolver() : com.sun.org.apache.xml.internal.utils.PrefixResolver;
+	@:overload @:public @:final public function getPrefixResolver() : com.sun.org.apache.xml.internal.utils.PrefixResolver;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* The pool for cloned iterators.  Iterators need to be cloned
 	* because the hold running state, and thus the original iterator
 	* expression from the stylesheet pool can not be used.
 	*/
-	@:transient private var m_clones : com.sun.org.apache.xpath.internal.axes.IteratorPool;
+	@:transient @:protected private var m_clones : com.sun.org.apache.xpath.internal.axes.IteratorPool;
 	
 	/**
 	* The dtm of the context node.  Careful about using this... it may not
 	* be the dtm of the current node.
 	*/
-	@:transient private var m_cdtm : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:transient @:protected private var m_cdtm : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/** The last node that was fetched, usually by nextNode. */
-	@:transient public var m_lastFetched : Int;
+	@:transient @:public public var m_lastFetched : Int;
 	
 	/**
 	* The context node for this iterator, which doesn't change through
 	* the course of the iteration.
 	*/
-	@:transient private var m_context : Int;
+	@:transient @:protected private var m_context : Int;
 	
 	/**
 	* The node context from where the expression is being
@@ -521,20 +521,20 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* from m_context in that this is the context for the entire
 	* expression, rather than the context for the subexpression.
 	*/
-	@:transient private var m_currentContextNode : Int;
+	@:transient @:protected private var m_currentContextNode : Int;
 	
 	/**
 	* The current position of the context node.
 	*/
-	@:transient private var m_pos : Int;
+	@:transient @:protected private var m_pos : Int;
 	
-	@:transient private var m_length : Int;
+	@:transient @:protected private var m_length : Int;
 	
 	/**
 	* The XPathContext reference, needed for execution of many
 	* operations.
 	*/
-	@:transient private var m_execContext : com.sun.org.apache.xpath.internal.XPathContext;
+	@:transient @:protected private var m_execContext : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document
@@ -542,7 +542,7 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	*
 	* @return true as a default.
 	*/
-	@:overload public function isDocOrdered() : Bool;
+	@:overload @:public public function isDocOrdered() : Bool;
 	
 	/**
 	* Returns the axis being iterated, if it is known.
@@ -550,12 +550,12 @@ extern class LocPathIterator extends com.sun.org.apache.xpath.internal.axes.Pred
 	* @return Axis.CHILD, etc., or -1 if the axis is not known or is of multiple
 	* types.
 	*/
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
 	/**
 	* @see PredicatedNodeTest#getLastPos(XPathContext)
 	*/
-	@:overload override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public override public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class AdjacencyList
 	* @param list a <code>List</code> of <code>List</code>s of
 	*             <code>Vertex</code> objects
 	*/
-	@:overload public function new(list : java.util.List<java.util.List<sun.security.provider.certpath.Vertex>>) : Void;
+	@:overload @:public public function new(list : java.util.List<java.util.List<sun.security.provider.certpath.Vertex>>) : Void;
 	
 	/**
 	* Gets an <code>Iterator</code> to iterate over the set of
@@ -41,14 +41,14 @@ extern class AdjacencyList
 	*
 	* @return an <code>Iterator</code> over the <code>BuildStep</code>s
 	*/
-	@:overload public function iterator() : java.util.Iterator<sun.security.provider.certpath.BuildStep>;
+	@:overload @:public public function iterator() : java.util.Iterator<sun.security.provider.certpath.BuildStep>;
 	
 	/**
 	* Prints out a string representation of this AdjacencyList.
 	*
 	* @return String representation
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

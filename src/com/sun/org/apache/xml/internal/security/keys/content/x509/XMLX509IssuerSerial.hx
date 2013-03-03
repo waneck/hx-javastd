@@ -28,7 +28,7 @@ extern class XMLX509IssuerSerial extends com.sun.org.apache.xml.internal.securit
 	* @param baseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, baseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, baseURI : String) : Void;
 	
 	/**
 	* Constructor XMLX509IssuerSerial
@@ -37,7 +37,7 @@ extern class XMLX509IssuerSerial extends com.sun.org.apache.xml.internal.securit
 	* @param x509IssuerName
 	* @param x509SerialNumber
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509IssuerName : String, x509SerialNumber : java.math.BigInteger) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509IssuerName : String, x509SerialNumber : java.math.BigInteger) : Void;
 	
 	/**
 	* Constructor XMLX509IssuerSerial
@@ -46,7 +46,7 @@ extern class XMLX509IssuerSerial extends com.sun.org.apache.xml.internal.securit
 	* @param x509IssuerName
 	* @param x509SerialNumber
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509IssuerName : String, x509SerialNumber : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509IssuerName : String, x509SerialNumber : String) : Void;
 	
 	/**
 	* Constructor XMLX509IssuerSerial
@@ -55,7 +55,7 @@ extern class XMLX509IssuerSerial extends com.sun.org.apache.xml.internal.securit
 	* @param x509IssuerName
 	* @param x509SerialNumber
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509IssuerName : String, x509SerialNumber : Int) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509IssuerName : String, x509SerialNumber : Int) : Void;
 	
 	/**
 	* Constructor XMLX509IssuerSerial
@@ -63,34 +63,34 @@ extern class XMLX509IssuerSerial extends com.sun.org.apache.xml.internal.securit
 	* @param doc
 	* @param x509certificate
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Method getSerialNumber
 	*
 	* @return the serial number
 	*/
-	@:overload public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Method getSerialNumberInteger
 	*
 	* @return the serial number as plain int
 	*/
-	@:overload public function getSerialNumberInteger() : Int;
+	@:overload @:public public function getSerialNumberInteger() : Int;
 	
 	/**
 	* Method getIssuerName
 	*
 	* @return the issuer name
 	*/
-	@:overload public function getIssuerName() : String;
+	@:overload @:public public function getIssuerName() : String;
 	
 	/** @inheritDoc */
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

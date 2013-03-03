@@ -80,7 +80,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #setEnd
 	* @see #setCalendarField
 	*/
-	@:overload public function new(value : java.util.Date, start : java.lang.Comparable<Dynamic>, end : java.lang.Comparable<Dynamic>, calendarField : Int) : Void;
+	@:overload @:public public function new(value : java.util.Date, start : java.lang.Comparable<Dynamic>, end : java.lang.Comparable<Dynamic>, calendarField : Int) : Void;
 	
 	/**
 	* Constructs a <code>SpinnerDateModel</code> whose initial
@@ -88,7 +88,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* is equal to <code>Calendar.DAY_OF_MONTH</code>, and for which
 	* there are no <code>start</code>/<code>end</code> limits.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Changes the lower limit for Dates in this sequence.
@@ -127,7 +127,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #setEnd
 	* @see #addChangeListener
 	*/
-	@:overload public function setStart(start : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public public function setStart(start : java.lang.Comparable<Dynamic>) : Void;
 	
 	/**
 	* Returns the first <code>Date</code> in the sequence.
@@ -135,7 +135,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @return the value of the <code>start</code> property
 	* @see #setStart
 	*/
-	@:overload public function getStart() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getStart() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Changes the upper limit for <code>Date</code>s in this sequence.
@@ -159,7 +159,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #setStart
 	* @see #addChangeListener
 	*/
-	@:overload public function setEnd(end : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public public function setEnd(end : java.lang.Comparable<Dynamic>) : Void;
 	
 	/**
 	* Returns the last <code>Date</code> in the sequence.
@@ -167,7 +167,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @return the value of the <code>end</code> property
 	* @see #setEnd
 	*/
-	@:overload public function getEnd() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getEnd() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Changes the size of the date value change computed
@@ -211,7 +211,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see Calendar#add
 	* @see #addChangeListener
 	*/
-	@:overload public function setCalendarField(calendarField : Int) : Void;
+	@:overload @:public public function setCalendarField(calendarField : Int) : Void;
 	
 	/**
 	* Returns the <code>Calendar</code> field that is added to or subtracted from
@@ -220,7 +220,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @return the value of the <code>calendarField</code> property
 	* @see #setCalendarField
 	*/
-	@:overload public function getCalendarField() : Int;
+	@:overload @:public public function getCalendarField() : Int;
 	
 	/**
 	* Returns the next <code>Date</code> in the sequence, or <code>null</code> if
@@ -233,7 +233,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #getPreviousValue
 	* @see #setCalendarField
 	*/
-	@:overload public function getNextValue() : Dynamic;
+	@:overload @:public override public function getNextValue() : Dynamic;
 	
 	/**
 	* Returns the previous <code>Date</code> in the sequence, or <code>null</code>
@@ -247,7 +247,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #getNextValue
 	* @see #setCalendarField
 	*/
-	@:overload public function getPreviousValue() : Dynamic;
+	@:overload @:public override public function getPreviousValue() : Dynamic;
 	
 	/**
 	* Returns the current element in this sequence of <code>Date</code>s.
@@ -256,7 +256,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @return the <code>value</code> property
 	* @see #setValue
 	*/
-	@:overload public function getDate() : java.util.Date;
+	@:overload @:public public function getDate() : java.util.Date;
 	
 	/**
 	* Returns the current element in this sequence of <code>Date</code>s.
@@ -265,7 +265,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #setValue
 	* @see #getDate
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Sets the current <code>Date</code> for this sequence.
@@ -289,7 +289,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #getValue
 	* @see #addChangeListener
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public override public function setValue(value : Dynamic) : Void;
 	
 	
 }

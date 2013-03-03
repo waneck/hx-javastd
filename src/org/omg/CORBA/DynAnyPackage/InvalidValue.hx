@@ -35,14 +35,14 @@ extern class InvalidValue extends org.omg.CORBA.UserException
 	/**
 	* Constructs an <code>InvalidValue</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>InvalidValue</code> object.
 	* @param reason  a <code>String</code> giving more information
 	* regarding the exception.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

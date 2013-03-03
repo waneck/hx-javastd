@@ -45,7 +45,7 @@ extern interface Unmarshaller
 	* @throws IllegalArgumentException
 	*      If the file parameter is null
 	*/
-	@:overload public function unmarshal(f : java.io.File) : Dynamic;
+	@:overload @:public public function unmarshal(f : java.io.File) : Dynamic;
 	
 	/**
 	* Unmarshal XML data from the specified InputStream and return the
@@ -68,7 +68,7 @@ extern interface Unmarshaller
 	* @throws IllegalArgumentException
 	*      If the InputStream parameter is null
 	*/
-	@:overload public function unmarshal(is : java.io.InputStream) : Dynamic;
+	@:overload @:public public function unmarshal(is : java.io.InputStream) : Dynamic;
 	
 	/**
 	* Unmarshal XML data from the specified Reader and return the
@@ -93,7 +93,7 @@ extern interface Unmarshaller
 	*      If the InputStream parameter is null
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function unmarshal(reader : java.io.Reader) : Dynamic;
+	@:require(java0) @:overload @:public public function unmarshal(reader : java.io.Reader) : Dynamic;
 	
 	/**
 	* Unmarshal XML data from the specified URL and return the resulting
@@ -115,7 +115,7 @@ extern interface Unmarshaller
 	* @throws IllegalArgumentException
 	*      If the URL parameter is null
 	*/
-	@:overload public function unmarshal(url : java.net.URL) : Dynamic;
+	@:overload @:public public function unmarshal(url : java.net.URL) : Dynamic;
 	
 	/**
 	* Unmarshal XML data from the specified SAX InputSource and return the
@@ -137,7 +137,7 @@ extern interface Unmarshaller
 	* @throws IllegalArgumentException
 	*      If the InputSource parameter is null
 	*/
-	@:overload public function unmarshal(source : org.xml.sax.InputSource) : Dynamic;
+	@:overload @:public public function unmarshal(source : org.xml.sax.InputSource) : Dynamic;
 	
 	/**
 	* Unmarshal global XML data from the specified DOM tree and return the resulting
@@ -162,7 +162,7 @@ extern interface Unmarshaller
 	*      If the Node parameter is null
 	* @see #unmarshal(org.w3c.dom.Node, Class)
 	*/
-	@:overload public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
+	@:overload @:public @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
 	
 	/**
 	* Unmarshal XML data by JAXB mapped <tt>declaredType</tt>
@@ -190,7 +190,7 @@ extern interface Unmarshaller
 	*      If any parameter is null
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function unmarshal<T>(node : org.w3c.dom.Node, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:require(java0) @:overload @:public public function unmarshal<T>(node : org.w3c.dom.Node, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
 	/**
 	* Unmarshal XML data from the specified XML Source and return the
@@ -248,7 +248,7 @@ extern interface Unmarshaller
 	*      If the Source parameter is null
 	* @see #unmarshal(javax.xml.transform.Source, Class)
 	*/
-	@:overload public function unmarshal(source : javax.xml.transform.Source) : Dynamic;
+	@:overload @:public public function unmarshal(source : javax.xml.transform.Source) : Dynamic;
 	
 	/**
 	* Unmarshal XML data from the specified XML Source by <tt>declaredType</tt> and return the
@@ -277,7 +277,7 @@ extern interface Unmarshaller
 	*      If any parameter is null
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function unmarshal<T>(source : javax.xml.transform.Source, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:require(java0) @:overload @:public public function unmarshal<T>(source : javax.xml.transform.Source, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
 	/**
 	* Unmarshal XML data from the specified pull parser and return the
@@ -313,7 +313,7 @@ extern interface Unmarshaller
 	* @since JAXB2.0
 	* @see #unmarshal(javax.xml.stream.XMLStreamReader, Class)
 	*/
-	@:require(java0) @:overload public function unmarshal(reader : javax.xml.stream.XMLStreamReader) : Dynamic;
+	@:require(java0) @:overload @:public public function unmarshal(reader : javax.xml.stream.XMLStreamReader) : Dynamic;
 	
 	/**
 	* Unmarshal root element to JAXB mapped <tt>declaredType</tt>
@@ -346,7 +346,7 @@ extern interface Unmarshaller
 	*      If any parameter is null
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function unmarshal<T>(reader : javax.xml.stream.XMLStreamReader, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:require(java0) @:overload @:public public function unmarshal<T>(reader : javax.xml.stream.XMLStreamReader, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
 	/**
 	* Unmarshal XML data from the specified pull parser and return the
@@ -382,7 +382,7 @@ extern interface Unmarshaller
 	* @since JAXB2.0
 	* @see #unmarshal(javax.xml.stream.XMLEventReader, Class)
 	*/
-	@:require(java0) @:overload public function unmarshal(reader : javax.xml.stream.XMLEventReader) : Dynamic;
+	@:require(java0) @:overload @:public public function unmarshal(reader : javax.xml.stream.XMLEventReader) : Dynamic;
 	
 	/**
 	* Unmarshal root element to JAXB mapped <tt>declaredType</tt>
@@ -416,7 +416,7 @@ extern interface Unmarshaller
 	*      If any parameter is null
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function unmarshal<T>(reader : javax.xml.stream.XMLEventReader, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:require(java0) @:overload @:public public function unmarshal<T>(reader : javax.xml.stream.XMLEventReader, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
 	/**
 	* Get an unmarshaller handler object that can be used as a component in
@@ -432,7 +432,7 @@ extern interface Unmarshaller
 	* @return the unmarshaller handler object
 	* @see UnmarshallerHandler
 	*/
-	@:overload public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
+	@:overload @:public @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
 	
 	/**
 	* Specifies whether or not the default validation mechanism of the
@@ -461,7 +461,7 @@ extern interface Unmarshaller
 	*         JAXB 2.0 mapped classes
 	* @deprecated since JAXB2.0, please see {@link #setSchema(javax.xml.validation.Schema)}
 	*/
-	@:overload public function setValidating(validating : Bool) : Void;
+	@:overload @:public public function setValidating(validating : Bool) : Void;
 	
 	/**
 	* Indicates whether or not the <tt>Unmarshaller</tt> is configured to
@@ -482,7 +482,7 @@ extern interface Unmarshaller
 	*         JAXB 2.0 mapped classes
 	* @deprecated since JAXB2.0, please see {@link #getSchema()}
 	*/
-	@:overload public function isValidating() : Bool;
+	@:overload @:public public function isValidating() : Bool;
 	
 	/**
 	* Allow an application to register a <tt>ValidationEventHandler</tt>.
@@ -502,7 +502,7 @@ extern interface Unmarshaller
 	* @throws JAXBException if an error was encountered while setting the
 	*         event handler
 	*/
-	@:overload public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Return the current event handler or the default event handler if one
@@ -513,7 +513,7 @@ extern interface Unmarshaller
 	* @throws JAXBException if an error was encountered while getting the
 	*         current event handler
 	*/
-	@:overload public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
+	@:overload @:public public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
 	
 	/**
 	* Set the particular property in the underlying implementation of
@@ -533,7 +533,7 @@ extern interface Unmarshaller
 	* @throws IllegalArgumentException
 	*      If the name parameter is null
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get the particular property in the underlying implementation of
@@ -552,7 +552,7 @@ extern interface Unmarshaller
 	* @throws IllegalArgumentException
 	*      If the name parameter is null
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Specify the JAXP 1.3 {@link javax.xml.validation.Schema Schema}
@@ -571,7 +571,7 @@ extern interface Unmarshaller
 	*         JAXB 1.0 mapped classes
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:require(java0) @:overload @:public public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* Get the JAXP 1.3 {@link javax.xml.validation.Schema Schema} object
@@ -595,7 +595,7 @@ extern interface Unmarshaller
 	*         JAXB 1.0 mapped classes
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getSchema() : javax.xml.validation.Schema;
+	@:require(java0) @:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* Associates a configured instance of {@link XmlAdapter} with this unmarshaller.
@@ -610,7 +610,7 @@ extern interface Unmarshaller
 	*      if invoked agains a JAXB 1.0 implementation.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setAdapter(adapter : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : Void;
+	@:require(java0) @:overload @:public public function setAdapter(adapter : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Associates a configured instance of {@link XmlAdapter} with this unmarshaller.
@@ -639,7 +639,7 @@ extern interface Unmarshaller
 	*      if invoked agains a JAXB 1.0 implementation.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
+	@:require(java0) @:overload @:public public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
 	
 	/**
 	* Gets the adapter associated with the specified type.
@@ -652,7 +652,7 @@ extern interface Unmarshaller
 	*      if invoked agains a JAXB 1.0 implementation.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
+	@:require(java0) @:overload @:public public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
 	
 	/**
 	* <p>Associate a context that resolves cid's, content-id URIs, to
@@ -680,7 +680,7 @@ extern interface Unmarshaller
 	* @param listener  provides unmarshal event callbacks for this {@link Unmarshaller}
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
+	@:require(java0) @:overload @:public public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
 	
 	/**
 	* <p>Return {@link Listener} registered with this {@link Unmarshaller}.
@@ -688,7 +688,7 @@ extern interface Unmarshaller
 	* @return registered {@link Listener} or <code>null</code> if no Listener is registered with this Unmarshaller.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
+	@:require(java0) @:overload @:public public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
 	
 	
 }
@@ -729,7 +729,7 @@ extern interface Unmarshaller
 	* @param parent instance of JAXB mapped class that will eventually reference <tt>target</tt>.
 	*               <tt>null</tt> when <tt>target</tt> is root element.
 	*/
-	@:overload public function beforeUnmarshal(target : Dynamic, parent : Dynamic) : Void;
+	@:overload @:public public function beforeUnmarshal(target : Dynamic, parent : Dynamic) : Void;
 	
 	/**
 	* <p/>
@@ -745,7 +745,7 @@ extern interface Unmarshaller
 	* @param parent instance of JAXB mapped class that will reference <tt>target</tt>.
 	*               <tt>null</tt> when <tt>target</tt> is root element.
 	*/
-	@:overload public function afterUnmarshal(target : Dynamic, parent : Dynamic) : Void;
+	@:overload @:public public function afterUnmarshal(target : Dynamic, parent : Dynamic) : Void;
 	
 	
 }

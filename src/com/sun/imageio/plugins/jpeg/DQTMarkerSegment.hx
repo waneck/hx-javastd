@@ -25,7 +25,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:internal extern class DQTMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	
 }
@@ -34,7 +34,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$DQTMarkerSegment$Qtable') @:internal extern class DQTMarkerSegment_Qtable implements java.lang.Cloneable
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }

@@ -61,27 +61,27 @@ package com.sun.org.apache.xerces.internal.xinclude;
 */
 extern class XPointerFramework
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(xpointerschema : java.NativeArray<com.sun.org.apache.xerces.internal.xinclude.XPointerSchema>) : Void;
+	@:overload @:public public function new(xpointerschema : java.NativeArray<com.sun.org.apache.xerces.internal.xinclude.XPointerSchema>) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function setXPointerSchema(xpointerschema : java.NativeArray<com.sun.org.apache.xerces.internal.xinclude.XPointerSchema>) : Void;
+	@:overload @:public public function setXPointerSchema(xpointerschema : java.NativeArray<com.sun.org.apache.xerces.internal.xinclude.XPointerSchema>) : Void;
 	
-	@:overload public function setSchemaPointer(schemaPointer : String) : Void;
+	@:overload @:public public function setSchemaPointer(schemaPointer : String) : Void;
 	
-	@:overload public function getNextXPointerSchema() : com.sun.org.apache.xerces.internal.xinclude.XPointerSchema;
+	@:overload @:public public function getNextXPointerSchema() : com.sun.org.apache.xerces.internal.xinclude.XPointerSchema;
 	
-	@:overload public function getDefaultSchema() : com.sun.org.apache.xerces.internal.xinclude.XPointerSchema;
+	@:overload @:public public function getDefaultSchema() : com.sun.org.apache.xerces.internal.xinclude.XPointerSchema;
 	
-	@:overload public function getSchemaNames() : Void;
+	@:overload @:public public function getSchemaNames() : Void;
 	
-	@:overload public function getEscapedURI(URI : String) : String;
+	@:overload @:public public function getEscapedURI(URI : String) : String;
 	
-	@:overload public function getSchemaCount() : Int;
+	@:overload @:public public function getSchemaCount() : Int;
 	
-	@:overload public function getCurrentPointer() : Int;
+	@:overload @:public public function getCurrentPointer() : Int;
 	
 	
 }

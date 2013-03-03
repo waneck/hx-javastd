@@ -31,7 +31,7 @@ package sun.security.pkcs12;
 	* @exception IOException if error occurs when constructing its
 	* ASN.1 encoding.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

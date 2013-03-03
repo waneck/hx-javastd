@@ -33,9 +33,9 @@ extern class XMLStreamWriterUtil
 	* @return  underlying OutputStream, null if writer doesn't provide a way to get it
 	* @throws XMLStreamException if any of writer operations throw the exception
 	*/
-	@:overload public static function getOutputStream(writer : javax.xml.stream.XMLStreamWriter) : java.io.OutputStream;
+	@:overload @:public @:static public static function getOutputStream(writer : javax.xml.stream.XMLStreamWriter) : java.io.OutputStream;
 	
-	@:overload public static function encodeQName(writer : javax.xml.stream.XMLStreamWriter, qname : javax.xml.namespace.QName, prefixFactory : com.sun.xml.internal.ws.streaming.PrefixFactory) : String;
+	@:overload @:public @:static public static function encodeQName(writer : javax.xml.stream.XMLStreamWriter, qname : javax.xml.namespace.QName, prefixFactory : com.sun.xml.internal.ws.streaming.PrefixFactory) : String;
 	
 	
 }

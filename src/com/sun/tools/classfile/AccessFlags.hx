@@ -33,69 +33,69 @@ extern class AccessFlags
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	public static var ACC_PUBLIC(default, null) : Int;
+	@:public @:static @:final public static var ACC_PUBLIC(default, null) : Int;
 	
-	public static var ACC_PRIVATE(default, null) : Int;
+	@:public @:static @:final public static var ACC_PRIVATE(default, null) : Int;
 	
-	public static var ACC_PROTECTED(default, null) : Int;
+	@:public @:static @:final public static var ACC_PROTECTED(default, null) : Int;
 	
-	public static var ACC_STATIC(default, null) : Int;
+	@:public @:static @:final public static var ACC_STATIC(default, null) : Int;
 	
-	public static var ACC_FINAL(default, null) : Int;
+	@:public @:static @:final public static var ACC_FINAL(default, null) : Int;
 	
-	public static var ACC_SUPER(default, null) : Int;
+	@:public @:static @:final public static var ACC_SUPER(default, null) : Int;
 	
-	public static var ACC_SYNCHRONIZED(default, null) : Int;
+	@:public @:static @:final public static var ACC_SYNCHRONIZED(default, null) : Int;
 	
-	public static var ACC_VOLATILE(default, null) : Int;
+	@:public @:static @:final public static var ACC_VOLATILE(default, null) : Int;
 	
-	public static var ACC_BRIDGE(default, null) : Int;
+	@:public @:static @:final public static var ACC_BRIDGE(default, null) : Int;
 	
-	public static var ACC_TRANSIENT(default, null) : Int;
+	@:public @:static @:final public static var ACC_TRANSIENT(default, null) : Int;
 	
-	public static var ACC_VARARGS(default, null) : Int;
+	@:public @:static @:final public static var ACC_VARARGS(default, null) : Int;
 	
-	public static var ACC_NATIVE(default, null) : Int;
+	@:public @:static @:final public static var ACC_NATIVE(default, null) : Int;
 	
-	public static var ACC_INTERFACE(default, null) : Int;
+	@:public @:static @:final public static var ACC_INTERFACE(default, null) : Int;
 	
-	public static var ACC_ABSTRACT(default, null) : Int;
+	@:public @:static @:final public static var ACC_ABSTRACT(default, null) : Int;
 	
-	public static var ACC_STRICT(default, null) : Int;
+	@:public @:static @:final public static var ACC_STRICT(default, null) : Int;
 	
-	public static var ACC_SYNTHETIC(default, null) : Int;
+	@:public @:static @:final public static var ACC_SYNTHETIC(default, null) : Int;
 	
-	public static var ACC_ANNOTATION(default, null) : Int;
+	@:public @:static @:final public static var ACC_ANNOTATION(default, null) : Int;
 	
-	public static var ACC_ENUM(default, null) : Int;
+	@:public @:static @:final public static var ACC_ENUM(default, null) : Int;
 	
-	public static var ACC_MODULE(default, null) : Int;
+	@:public @:static @:final public static var ACC_MODULE(default, null) : Int;
 	
-	@:overload public function new(flags : Int) : Void;
+	@:overload @:public public function new(flags : Int) : Void;
 	
-	@:overload public function ignore(mask : Int) : com.sun.tools.classfile.AccessFlags;
+	@:overload @:public public function ignore(mask : Int) : com.sun.tools.classfile.AccessFlags;
 	
-	@:overload public function is(mask : Int) : Bool;
+	@:overload @:public public function is(mask : Int) : Bool;
 	
-	@:overload public function byteLength() : Int;
+	@:overload @:public public function byteLength() : Int;
 	
-	@:overload public function getClassModifiers() : java.util.Set<String>;
+	@:overload @:public public function getClassModifiers() : java.util.Set<String>;
 	
-	@:overload public function getClassFlags() : java.util.Set<String>;
+	@:overload @:public public function getClassFlags() : java.util.Set<String>;
 	
-	@:overload public function getInnerClassModifiers() : java.util.Set<String>;
+	@:overload @:public public function getInnerClassModifiers() : java.util.Set<String>;
 	
-	@:overload public function getInnerClassFlags() : java.util.Set<String>;
+	@:overload @:public public function getInnerClassFlags() : java.util.Set<String>;
 	
-	@:overload public function getFieldModifiers() : java.util.Set<String>;
+	@:overload @:public public function getFieldModifiers() : java.util.Set<String>;
 	
-	@:overload public function getFieldFlags() : java.util.Set<String>;
+	@:overload @:public public function getFieldFlags() : java.util.Set<String>;
 	
-	@:overload public function getMethodModifiers() : java.util.Set<String>;
+	@:overload @:public public function getMethodModifiers() : java.util.Set<String>;
 	
-	@:overload public function getMethodFlags() : java.util.Set<String>;
+	@:overload @:public public function getMethodFlags() : java.util.Set<String>;
 	
-	public var flags(default, null) : Int;
+	@:public @:final public var flags(default, null) : Int;
 	
 	
 }

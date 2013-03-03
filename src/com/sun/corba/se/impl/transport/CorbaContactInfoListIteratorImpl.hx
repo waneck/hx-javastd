@@ -25,49 +25,49 @@ package com.sun.corba.se.impl.transport;
 */
 extern class CorbaContactInfoListIteratorImpl implements com.sun.corba.se.spi.transport.CorbaContactInfoListIterator
 {
-	private var orb : com.sun.corba.se.spi.orb.ORB;
+	@:protected private var orb : com.sun.corba.se.spi.orb.ORB;
 	
-	private var contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList;
+	@:protected private var contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList;
 	
-	private var successContactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo;
+	@:protected private var successContactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo;
 	
-	private var failureContactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo;
+	@:protected private var failureContactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo;
 	
-	private var failureException : java.lang.RuntimeException;
+	@:protected private var failureException : java.lang.RuntimeException;
 	
-	private var effectiveTargetIORIterator : java.util.Iterator<Dynamic>;
+	@:protected private var effectiveTargetIORIterator : java.util.Iterator<Dynamic>;
 	
-	private var previousContactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo;
+	@:protected private var previousContactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo;
 	
-	private var isAddrDispositionRetry : Bool;
+	@:protected private var isAddrDispositionRetry : Bool;
 	
-	private var primaryToContactInfo : com.sun.corba.se.spi.transport.IIOPPrimaryToContactInfo;
+	@:protected private var primaryToContactInfo : com.sun.corba.se.spi.transport.IIOPPrimaryToContactInfo;
 	
-	private var primaryContactInfo : com.sun.corba.se.pept.transport.ContactInfo;
+	@:protected private var primaryContactInfo : com.sun.corba.se.pept.transport.ContactInfo;
 	
-	private var listOfContactInfos : java.util.List<Dynamic>;
+	@:protected private var listOfContactInfos : java.util.List<Dynamic>;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, corbaContactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, primaryContactInfo : com.sun.corba.se.pept.transport.ContactInfo, listOfContactInfos : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, corbaContactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, primaryContactInfo : com.sun.corba.se.pept.transport.ContactInfo, listOfContactInfos : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
-	@:overload public function reportSuccess(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : Void;
+	@:overload @:public public function reportSuccess(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : Void;
 	
-	@:overload public function reportException(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, ex : java.lang.RuntimeException) : Bool;
+	@:overload @:public public function reportException(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, ex : java.lang.RuntimeException) : Bool;
 	
-	@:overload public function getFailureException() : java.lang.RuntimeException;
+	@:overload @:public public function getFailureException() : java.lang.RuntimeException;
 	
-	@:overload public function reportAddrDispositionRetry(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, disposition : java.StdTypes.Int16) : Void;
+	@:overload @:public public function reportAddrDispositionRetry(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, disposition : java.StdTypes.Int16) : Void;
 	
-	@:overload public function reportRedirect(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, forwardedIOR : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function reportRedirect(contactInfo : com.sun.corba.se.spi.transport.CorbaContactInfo, forwardedIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function updateEffectiveTargetIOR(newIOR : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function updateEffectiveTargetIOR(newIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
 	
 }

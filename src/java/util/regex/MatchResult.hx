@@ -46,7 +46,7 @@ package java.util.regex;
 	*          If no match has yet been attempted,
 	*          or if the previous match operation failed
 	*/
-	@:overload public function start() : Int;
+	@:overload @:public public function start() : Int;
 	
 	/**
 	* Returns the start index of the subsequence captured by the given group
@@ -72,7 +72,7 @@ package java.util.regex;
 	*          If there is no capturing group in the pattern
 	*          with the given index
 	*/
-	@:overload public function start(group : Int) : Int;
+	@:overload @:public public function start(group : Int) : Int;
 	
 	/**
 	* Returns the offset after the last character matched.  </p>
@@ -83,7 +83,7 @@ package java.util.regex;
 	*          If no match has yet been attempted,
 	*          or if the previous match operation failed
 	*/
-	@:overload public function end() : Int;
+	@:overload @:public public function end() : Int;
 	
 	/**
 	* Returns the offset after the last character of the subsequence
@@ -109,7 +109,7 @@ package java.util.regex;
 	*          If there is no capturing group in the pattern
 	*          with the given index
 	*/
-	@:overload public function end(group : Int) : Int;
+	@:overload @:public public function end(group : Int) : Int;
 	
 	/**
 	* Returns the input subsequence matched by the previous match.
@@ -130,7 +130,7 @@ package java.util.regex;
 	*          If no match has yet been attempted,
 	*          or if the previous match operation failed
 	*/
-	@:overload public function group() : String;
+	@:overload @:public public function group() : String;
 	
 	/**
 	* Returns the input subsequence captured by the given group during the
@@ -167,7 +167,7 @@ package java.util.regex;
 	*          If there is no capturing group in the pattern
 	*          with the given index
 	*/
-	@:overload public function group(group : Int) : String;
+	@:overload @:public public function group(group : Int) : String;
 	
 	/**
 	* Returns the number of capturing groups in this match result's pattern.
@@ -181,7 +181,7 @@ package java.util.regex;
 	*
 	* @return The number of capturing groups in this matcher's pattern
 	*/
-	@:overload public function groupCount() : Int;
+	@:overload @:public public function groupCount() : Int;
 	
 	
 }

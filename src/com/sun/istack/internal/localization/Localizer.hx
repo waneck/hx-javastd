@@ -25,13 +25,13 @@ package com.sun.istack.internal.localization;
 */
 extern class Localizer
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(l : java.util.Locale) : Void;
+	@:overload @:public public function new(l : java.util.Locale) : Void;
 	
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
-	@:overload public function localize(l : com.sun.istack.internal.localization.Localizable) : String;
+	@:overload @:public public function localize(l : com.sun.istack.internal.localization.Localizable) : String;
 	
 	
 }

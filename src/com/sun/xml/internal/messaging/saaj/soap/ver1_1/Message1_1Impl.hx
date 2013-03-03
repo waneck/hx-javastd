@@ -29,33 +29,33 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_1;
 */
 extern class Message1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.MessageImpl implements javax.xml.soap.SOAPConstants
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(isFastInfoset : Bool, acceptFastInfoset : Bool) : Void;
+	@:overload @:public public function new(isFastInfoset : Bool, acceptFastInfoset : Bool) : Void;
 	
-	@:overload public function new(msg : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function new(msg : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload public function new(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : Void;
 	
-	@:overload public function new(headers : javax.xml.soap.MimeHeaders, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType, stat : Int, _in : java.io.InputStream) : Void;
+	@:overload @:public public function new(headers : javax.xml.soap.MimeHeaders, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType, stat : Int, _in : java.io.InputStream) : Void;
 	
-	@:overload override public function getSOAPPart() : javax.xml.soap.SOAPPart;
+	@:overload @:public override public function getSOAPPart() : javax.xml.soap.SOAPPart;
 	
-	@:overload private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
+	@:overload @:protected override private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
 	
-	@:overload public function getAction() : String;
+	@:overload @:public override public function getAction() : String;
 	
-	@:overload public function setAction(type : String) : Void;
+	@:overload @:public override public function setAction(type : String) : Void;
 	
-	@:overload public function getCharset() : String;
+	@:overload @:public override public function getCharset() : String;
 	
-	@:overload public function setCharset(charset : String) : Void;
+	@:overload @:public override public function setCharset(charset : String) : Void;
 	
-	@:overload private function getExpectedContentType() : String;
+	@:overload @:protected override private function getExpectedContentType() : String;
 	
-	@:overload private function getExpectedAcceptHeader() : String;
+	@:overload @:protected override private function getExpectedAcceptHeader() : String;
 	
 	
 }

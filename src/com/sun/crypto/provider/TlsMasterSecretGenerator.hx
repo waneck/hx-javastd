@@ -31,29 +31,29 @@ package com.sun.crypto.provider;
 */
 @:require(java6) extern class TlsMasterSecretGenerator extends javax.crypto.KeyGeneratorSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineInit(random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }
 @:native('com$sun$crypto$provider$TlsMasterSecretGenerator$TlsMasterSecretKey') @:internal extern class TlsMasterSecretGenerator_TlsMasterSecretKey implements sun.security.internal.interfaces.TlsMasterSecret
 {
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

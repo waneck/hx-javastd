@@ -43,7 +43,7 @@ extern class URLStreamHandler
 	* @exception  IOException  if an I/O error occurs while opening the
 	*               connection.
 	*/
-	@:overload @:abstract private function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:abstract @:protected private function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
 	/**
 	* Same as openConnection(URL), except that the connection will be
@@ -67,7 +67,7 @@ extern class URLStreamHandler
 	*               implements the protocol doesn't support this method.
 	* @since      1.5
 	*/
-	@:require(java5) @:overload private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:require(java5) @:overload @:protected private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
 	/**
 	* Parses the string representation of a <code>URL</code> into a
@@ -94,7 +94,7 @@ extern class URLStreamHandler
 	*                  "<code>#</code>" character, if present. All information
 	*                  after the sharp sign indicates an anchor.
 	*/
-	@:overload private function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
+	@:overload @:protected private function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
 	
 	/**
 	* Returns the default port for a URL parsed by this handler. This method
@@ -102,7 +102,7 @@ extern class URLStreamHandler
 	* @return the default port for a <code>URL</code> parsed by this handler.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function getDefaultPort() : Int;
+	@:require(java3) @:overload @:protected private function getDefaultPort() : Int;
 	
 	/**
 	* Provides the default equals calculation. May be overidden by handlers
@@ -116,7 +116,7 @@ extern class URLStreamHandler
 	* fragment in the same file.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function equals(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:require(java3) @:overload @:protected private function equals(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
 	/**
 	* Provides the default hash calculation. May be overidden by handlers for
@@ -126,7 +126,7 @@ extern class URLStreamHandler
 	* @return an <tt>int</tt> suitable for hash table indexing
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function hashCode(u : java.net.URL) : Int;
+	@:require(java3) @:overload @:protected private function hashCode(u : java.net.URL) : Int;
 	
 	/**
 	* Compare two urls to see whether they refer to the same file,
@@ -139,7 +139,7 @@ extern class URLStreamHandler
 	* @return true if u1 and u2 refer to the same file
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function sameFile(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:require(java3) @:overload @:protected private function sameFile(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
 	/**
 	* Get the IP address of our host. An empty host field or a DNS failure
@@ -150,7 +150,7 @@ extern class URLStreamHandler
 	* IP address.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:synchronized private function getHostAddress(u : java.net.URL) : java.net.InetAddress;
+	@:require(java3) @:overload @:protected @:synchronized private function getHostAddress(u : java.net.URL) : java.net.InetAddress;
 	
 	/**
 	* Compares the host components of two URLs.
@@ -160,7 +160,7 @@ extern class URLStreamHandler
 	* are equal, <tt>false</tt> otherwise.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function hostsEqual(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:require(java3) @:overload @:protected private function hostsEqual(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
 	/**
 	* Converts a <code>URL</code> of a specific protocol to a
@@ -169,7 +169,7 @@ extern class URLStreamHandler
 	* @param   u   the URL.
 	* @return  a string representation of the <code>URL</code> argument.
 	*/
-	@:overload private function toExternalForm(u : java.net.URL) : String;
+	@:overload @:protected private function toExternalForm(u : java.net.URL) : String;
 	
 	/**
 	* Sets the fields of the <code>URL</code> argument to the indicated values.
@@ -190,7 +190,7 @@ extern class URLStreamHandler
 	* @see     java.net.URL#set(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function setURL(u : java.net.URL, protocol : String, host : String, port : Int, authority : String, userInfo : String, path : String, query : String, ref : String) : Void;
+	@:require(java3) @:overload @:protected private function setURL(u : java.net.URL, protocol : String, host : String, port : Int, authority : String, userInfo : String, path : String, query : String, ref : String) : Void;
 	
 	/**
 	* Sets the fields of the <code>URL</code> argument to the indicated values.
@@ -208,7 +208,7 @@ extern class URLStreamHandler
 	* @deprecated Use setURL(URL, String, String, int, String, String, String,
 	*             String);
 	*/
-	@:overload private function setURL(u : java.net.URL, protocol : String, host : String, port : Int, file : String, ref : String) : Void;
+	@:overload @:protected private function setURL(u : java.net.URL, protocol : String, host : String, port : Int, file : String, ref : String) : Void;
 	
 	
 }

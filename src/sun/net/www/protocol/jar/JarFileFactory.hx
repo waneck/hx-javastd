@@ -25,14 +25,14 @@ package sun.net.www.protocol.jar;
 */
 @:internal extern class JarFileFactory implements sun.net.www.protocol.jar.URLJarFile.URLJarFile_URLJarFileCloseController
 {
-	@:overload public function get(url : java.net.URL) : java.util.jar.JarFile;
+	@:overload @:public public function get(url : java.net.URL) : java.util.jar.JarFile;
 	
 	/**
 	* Callback method of the URLJarFileCloseController to
 	* indicate that the JarFile is close. This way we can
 	* remove the JarFile from the cache
 	*/
-	@:overload public function close(jarFile : java.util.jar.JarFile) : Void;
+	@:overload @:public public function close(jarFile : java.util.jar.JarFile) : Void;
 	
 	
 }

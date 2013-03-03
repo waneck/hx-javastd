@@ -31,7 +31,7 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	/**
 	* Default constructor. (For invocation by subclass constructors).
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* This implementation uses an internal {@link HashMap} to get the prefix
@@ -40,7 +40,7 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function getNamespacePrefix(namespaceURI : String, defaultPrefix : String) : String;
+	@:overload @:public public function getNamespacePrefix(namespaceURI : String, defaultPrefix : String) : String;
 	
 	/**
 	* This implementation uses an internal {@link HashMap} to map the URI
@@ -48,22 +48,22 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function putNamespacePrefix(namespaceURI : String, prefix : String) : String;
+	@:overload @:public public function putNamespacePrefix(namespaceURI : String, prefix : String) : String;
 	
-	@:overload public function getDefaultNamespacePrefix() : String;
+	@:overload @:public public function getDefaultNamespacePrefix() : String;
 	
-	@:overload public function setDefaultNamespacePrefix(defaultPrefix : String) : Void;
+	@:overload @:public public function setDefaultNamespacePrefix(defaultPrefix : String) : Void;
 	
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function setBaseURI(baseURI : String) : Void;
+	@:overload @:public public function setBaseURI(baseURI : String) : Void;
 	
-	@:overload public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
+	@:overload @:public public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
 	
-	@:overload public function setURIDereferencer(dereferencer : javax.xml.crypto.URIDereferencer) : Void;
+	@:overload @:public public function setURIDereferencer(dereferencer : javax.xml.crypto.URIDereferencer) : Void;
 	
 	/**
 	* This implementation uses an internal {@link HashMap} to get the object
@@ -71,7 +71,7 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* This implementation uses an internal {@link HashMap} to map the name
@@ -79,11 +79,11 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Dynamic;
 	
-	@:overload public function getKeySelector() : javax.xml.crypto.KeySelector;
+	@:overload @:public public function getKeySelector() : javax.xml.crypto.KeySelector;
 	
-	@:overload public function setKeySelector(ks : javax.xml.crypto.KeySelector) : Void;
+	@:overload @:public public function setKeySelector(ks : javax.xml.crypto.KeySelector) : Void;
 	
 	/**
 	* Returns the <code>Element</code> with the specified ID attribute value.
@@ -97,7 +97,7 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	* @throws NullPointerException if <code>idValue</code> is <code>null</code>
 	* @see #setIdAttributeNS
 	*/
-	@:overload public function getElementById(idValue : String) : org.w3c.dom.Element;
+	@:overload @:public public function getElementById(idValue : String) : org.w3c.dom.Element;
 	
 	/**
 	* Registers the element's attribute specified by the namespace URI and
@@ -117,7 +117,7 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*    <code>localName</code> is <code>null</code>
 	* @see #getElementById
 	*/
-	@:overload public function setIdAttributeNS(element : org.w3c.dom.Element, namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function setIdAttributeNS(element : org.w3c.dom.Element, namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Returns a read-only iterator over the set of Id/Element mappings of
@@ -131,13 +131,13 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*
 	* @return a read-only iterator over the set of mappings
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* This implementation uses an internal {@link HashMap} to get the object
 	* that the specified key maps to.
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* This implementation uses an internal {@link HashMap} to map the key
@@ -145,7 +145,7 @@ extern class DOMCryptoContext implements javax.xml.crypto.XMLCryptoContext
 	*
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	
 }

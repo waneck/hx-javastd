@@ -133,7 +133,7 @@ package java.util;
 	* Constructs a new, empty identity hash map with a default expected
 	* maximum size (21).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new, empty map with the specified expected maximum size.
@@ -144,7 +144,7 @@ package java.util;
 	* @param expectedMaxSize the expected maximum size of the map
 	* @throws IllegalArgumentException if <tt>expectedMaxSize</tt> is negative
 	*/
-	@:overload public function new(expectedMaxSize : Int) : Void;
+	@:overload @:public public function new(expectedMaxSize : Int) : Void;
 	
 	/**
 	* Constructs a new identity hash map containing the keys-value mappings
@@ -153,14 +153,14 @@ package java.util;
 	* @param m the map whose mappings are to be placed into this map
 	* @throws NullPointerException if the specified map is null
 	*/
-	@:overload public function new(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function new(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns the number of key-value mappings in this identity hash map.
 	*
 	* @return the number of key-value mappings in this map
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this identity hash map contains no key-value
@@ -169,7 +169,7 @@ package java.util;
 	* @return <tt>true</tt> if this identity hash map contains no key-value
 	*         mappings
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -188,7 +188,7 @@ package java.util;
 	*
 	* @see #put(Object, Object)
 	*/
-	@:overload public function get(key : Dynamic) : V;
+	@:overload @:public override public function get(key : Dynamic) : V;
 	
 	/**
 	* Tests whether the specified object reference is a key in this identity
@@ -199,7 +199,7 @@ package java.util;
 	*          in this map
 	* @see     #containsValue(Object)
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Tests whether the specified object reference is a value in this identity
@@ -210,7 +210,7 @@ package java.util;
 	*         specified object reference
 	* @see     #containsKey(Object)
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Associates the specified value with the specified key in this identity
@@ -227,7 +227,7 @@ package java.util;
 	* @see     #get(Object)
 	* @see     #containsKey(Object)
 	*/
-	@:overload public function put(key : K, value : V) : V;
+	@:overload @:public override public function put(key : K, value : V) : V;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map.
@@ -237,7 +237,7 @@ package java.util;
 	* @param m mappings to be stored in this map
 	* @throws NullPointerException if the specified map is null
 	*/
-	@:overload public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public override public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Removes the mapping for this key from this map if present.
@@ -248,13 +248,13 @@ package java.util;
 	*         (A <tt>null</tt> return can also indicate that the map
 	*         previously associated <tt>null</tt> with <tt>key</tt>.)
 	*/
-	@:overload public function remove(key : Dynamic) : V;
+	@:overload @:public override public function remove(key : Dynamic) : V;
 	
 	/**
 	* Removes all of the mappings from this map.
 	* The map will be empty after this call returns.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Compares the specified object with this map for equality.  Returns
@@ -273,7 +273,7 @@ package java.util;
 	* @return <tt>true</tt> if the specified object is equal to this map
 	* @see Object#equals(Object)
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this map.  The hash code of a map is
@@ -294,7 +294,7 @@ package java.util;
 	* @see Object#equals(Object)
 	* @see #equals(Object)
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a shallow copy of this identity hash map: the keys and values
@@ -302,7 +302,7 @@ package java.util;
 	*
 	* @return a shallow copy of this map
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns an identity-based set view of the keys contained in this map.
@@ -342,7 +342,7 @@ package java.util;
 	* @see Object#equals(Object)
 	* @see System#identityHashCode(Object)
 	*/
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public override public function keySet() : java.util.Set<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -364,7 +364,7 @@ package java.util;
 	* behavior of its <tt>contains</tt>, <tt>remove</tt> and
 	* <tt>containsAll</tt> methods.</b>
 	*/
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public override public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -404,17 +404,17 @@ package java.util;
 	*
 	* @return a set view of the identity-mappings contained in this map
 	*/
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }
 @:native('java$util$IdentityHashMap$IdentityHashMapIterator') @:internal extern class IdentityHashMap_IdentityHashMapIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload private function nextIndex() : Int;
+	@:overload @:protected private function nextIndex() : Int;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Returns the next element in the iteration.
@@ -422,105 +422,105 @@ package java.util;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$IdentityHashMap$KeyIterator') @:internal extern class IdentityHashMap_KeyIterator extends java.util.IdentityHashMap.IdentityHashMap_IdentityHashMapIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$IdentityHashMap$ValueIterator') @:internal extern class IdentityHashMap_ValueIterator extends java.util.IdentityHashMap.IdentityHashMap_IdentityHashMapIterator<Dynamic>
 {
-	@:overload override public function next() : Dynamic;
+	@:overload @:public override public function next() : Dynamic;
 	
 	
 }
 @:native('java$util$IdentityHashMap$EntryIterator') @:internal extern class IdentityHashMap_EntryIterator extends java.util.IdentityHashMap.IdentityHashMap_IdentityHashMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
+	@:overload @:public override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
-	@:overload override public function remove() : Void;
+	@:overload @:public override public function remove() : Void;
 	
 	
 }
 @:native('java$util$IdentityHashMap$EntryIterator$Entry') @:internal extern class IdentityHashMap_EntryIterator_Entry implements java.util.Map.Map_Entry<Dynamic, Dynamic>
 {
-	@:overload public function getKey() : Dynamic;
+	@:overload @:public public function getKey() : Dynamic;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function setValue(value : Dynamic) : Dynamic;
+	@:overload @:public public function setValue(value : Dynamic) : Dynamic;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('java$util$IdentityHashMap$KeySet') @:internal extern class IdentityHashMap_KeySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/*
 	* Must revert from AbstractSet's impl to AbstractCollection's, as
 	* the former contains an optimization that results in incorrect
 	* behavior when c is a smaller "normal" (non-identity-based) Set.
 	*/
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }
 @:native('java$util$IdentityHashMap$Values') @:internal extern class IdentityHashMap_Values extends java.util.AbstractCollection<Dynamic>
 {
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:native('java$util$IdentityHashMap$EntrySet') @:internal extern class IdentityHashMap_EntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
-	@:overload public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/*
 	* Must revert from AbstractSet's impl to AbstractCollection's, as
 	* the former contains an optimization that results in incorrect
 	* behavior when c is a smaller "normal" (non-identity-based) Set.
 	*/
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }

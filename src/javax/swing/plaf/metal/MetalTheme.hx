@@ -65,91 +65,91 @@ extern class MetalTheme
 	*
 	* @return the name of this theme
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Returns the primary 1 color.
 	*
 	* @return the primary 1 color
 	*/
-	@:overload @:abstract private function getPrimary1() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected @:abstract private function getPrimary1() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary 2 color.
 	*
 	* @return the primary 2 color
 	*/
-	@:overload @:abstract private function getPrimary2() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected @:abstract private function getPrimary2() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary 3 color.
 	*
 	* @return the primary 3 color
 	*/
-	@:overload @:abstract private function getPrimary3() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected @:abstract private function getPrimary3() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 1 color.
 	*
 	* @return the secondary 1 color
 	*/
-	@:overload @:abstract private function getSecondary1() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected @:abstract private function getSecondary1() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 2 color.
 	*
 	* @return the secondary 2 color
 	*/
-	@:overload @:abstract private function getSecondary2() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected @:abstract private function getSecondary2() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 3 color.
 	*
 	* @return the secondary 3 color
 	*/
-	@:overload @:abstract private function getSecondary3() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected @:abstract private function getSecondary3() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control text font.
 	*
 	* @return the control text font
 	*/
-	@:overload @:abstract public function getControlTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:abstract public function getControlTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the system text font.
 	*
 	* @return the system text font
 	*/
-	@:overload @:abstract public function getSystemTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:abstract public function getSystemTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the user text font.
 	*
 	* @return the user text font
 	*/
-	@:overload @:abstract public function getUserTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:abstract public function getUserTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the menu text font.
 	*
 	* @return the menu text font
 	*/
-	@:overload @:abstract public function getMenuTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:abstract public function getMenuTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the window title font.
 	*
 	* @return the window title font
 	*/
-	@:overload @:abstract public function getWindowTitleFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:abstract public function getWindowTitleFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the sub-text font.
 	*
 	* @return the sub-text font
 	*/
-	@:overload @:abstract public function getSubTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:abstract public function getSubTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the white color. This returns opaque white
@@ -157,7 +157,7 @@ extern class MetalTheme
 	*
 	* @return the white color
 	*/
-	@:overload private function getWhite() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected private function getWhite() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the black color. This returns opaque black
@@ -165,7 +165,7 @@ extern class MetalTheme
 	*
 	* @return the black color
 	*/
-	@:overload private function getBlack() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected private function getBlack() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the focus color. This returns the value of
@@ -173,7 +173,7 @@ extern class MetalTheme
 	*
 	* @return the focus color
 	*/
-	@:overload public function getFocusColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getFocusColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the desktop color. This returns the value of
@@ -181,7 +181,7 @@ extern class MetalTheme
 	*
 	* @return the desktop color
 	*/
-	@:overload public function getDesktopColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getDesktopColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control color. This returns the value of
@@ -189,7 +189,7 @@ extern class MetalTheme
 	*
 	* @return the control color
 	*/
-	@:overload public function getControl() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControl() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control shadow color. This returns
@@ -197,7 +197,7 @@ extern class MetalTheme
 	*
 	* @return the control shadow color
 	*/
-	@:overload public function getControlShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControlShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control dark shadow color. This returns
@@ -205,7 +205,7 @@ extern class MetalTheme
 	*
 	* @return the control dark shadow color
 	*/
-	@:overload public function getControlDarkShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControlDarkShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control info color. This returns
@@ -213,7 +213,7 @@ extern class MetalTheme
 	*
 	* @return the control info color
 	*/
-	@:overload public function getControlInfo() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControlInfo() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control highlight color. This returns
@@ -221,7 +221,7 @@ extern class MetalTheme
 	*
 	* @return the control highlight color
 	*/
-	@:overload public function getControlHighlight() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControlHighlight() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control disabled color. This returns
@@ -229,7 +229,7 @@ extern class MetalTheme
 	*
 	* @return the control disabled color
 	*/
-	@:overload public function getControlDisabled() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControlDisabled() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control color. This returns
@@ -237,7 +237,7 @@ extern class MetalTheme
 	*
 	* @return the primary control color
 	*/
-	@:overload public function getPrimaryControl() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getPrimaryControl() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control shadow color. This returns
@@ -245,7 +245,7 @@ extern class MetalTheme
 	*
 	* @return the primary control shadow color
 	*/
-	@:overload public function getPrimaryControlShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getPrimaryControlShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control dark shadow color. This
@@ -253,7 +253,7 @@ extern class MetalTheme
 	*
 	* @return the primary control dark shadow color
 	*/
-	@:overload public function getPrimaryControlDarkShadow() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getPrimaryControlDarkShadow() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control info color. This
@@ -261,7 +261,7 @@ extern class MetalTheme
 	*
 	* @return the primary control info color
 	*/
-	@:overload public function getPrimaryControlInfo() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getPrimaryControlInfo() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary control highlight color. This
@@ -269,7 +269,7 @@ extern class MetalTheme
 	*
 	* @return the primary control highlight color
 	*/
-	@:overload public function getPrimaryControlHighlight() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getPrimaryControlHighlight() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the system text color. This returns the value of
@@ -277,7 +277,7 @@ extern class MetalTheme
 	*
 	* @return the system text color
 	*/
-	@:overload public function getSystemTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getSystemTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control text color. This returns the value of
@@ -285,7 +285,7 @@ extern class MetalTheme
 	*
 	* @return the control text color
 	*/
-	@:overload public function getControlTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getControlTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the inactive control text color. This returns the value of
@@ -293,7 +293,7 @@ extern class MetalTheme
 	*
 	* @return the inactive control text color
 	*/
-	@:overload public function getInactiveControlTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getInactiveControlTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the inactive system text color. This returns the value of
@@ -301,7 +301,7 @@ extern class MetalTheme
 	*
 	* @return the inactive system text color
 	*/
-	@:overload public function getInactiveSystemTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getInactiveSystemTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the user text color. This returns the value of
@@ -309,7 +309,7 @@ extern class MetalTheme
 	*
 	* @return the user text color
 	*/
-	@:overload public function getUserTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getUserTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the text highlight color. This returns the value of
@@ -317,7 +317,7 @@ extern class MetalTheme
 	*
 	* @return the text highlight color
 	*/
-	@:overload public function getTextHighlightColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getTextHighlightColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the highlighted text color. This returns the value of
@@ -325,7 +325,7 @@ extern class MetalTheme
 	*
 	* @return the highlighted text color
 	*/
-	@:overload public function getHighlightedTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getHighlightedTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window background color. This returns the value of
@@ -333,7 +333,7 @@ extern class MetalTheme
 	*
 	* @return the window background color
 	*/
-	@:overload public function getWindowBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getWindowBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title background color. This returns the value of
@@ -341,7 +341,7 @@ extern class MetalTheme
 	*
 	* @return the window title background color
 	*/
-	@:overload public function getWindowTitleBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getWindowTitleBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title foreground color. This returns the value of
@@ -349,7 +349,7 @@ extern class MetalTheme
 	*
 	* @return the window title foreground color
 	*/
-	@:overload public function getWindowTitleForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getWindowTitleForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title inactive background color. This
@@ -357,7 +357,7 @@ extern class MetalTheme
 	*
 	* @return the window title inactive background color
 	*/
-	@:overload public function getWindowTitleInactiveBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getWindowTitleInactiveBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the window title inactive foreground color. This
@@ -365,7 +365,7 @@ extern class MetalTheme
 	*
 	* @return the window title inactive foreground color
 	*/
-	@:overload public function getWindowTitleInactiveForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getWindowTitleInactiveForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu background color. This
@@ -373,7 +373,7 @@ extern class MetalTheme
 	*
 	* @return the menu background color
 	*/
-	@:overload public function getMenuBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getMenuBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu foreground color. This
@@ -381,7 +381,7 @@ extern class MetalTheme
 	*
 	* @return the menu foreground color
 	*/
-	@:overload public function getMenuForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getMenuForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu selected background color. This
@@ -389,7 +389,7 @@ extern class MetalTheme
 	*
 	* @return the menu selected background color
 	*/
-	@:overload public function getMenuSelectedBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getMenuSelectedBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu selected foreground color. This
@@ -397,7 +397,7 @@ extern class MetalTheme
 	*
 	* @return the menu selected foreground color
 	*/
-	@:overload public function getMenuSelectedForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getMenuSelectedForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu disabled foreground color. This
@@ -405,7 +405,7 @@ extern class MetalTheme
 	*
 	* @return the menu disabled foreground color
 	*/
-	@:overload public function getMenuDisabledForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getMenuDisabledForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the separator background color. This
@@ -413,7 +413,7 @@ extern class MetalTheme
 	*
 	* @return the separator background color
 	*/
-	@:overload public function getSeparatorBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getSeparatorBackground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the separator foreground color. This
@@ -421,7 +421,7 @@ extern class MetalTheme
 	*
 	* @return the separator foreground color
 	*/
-	@:overload public function getSeparatorForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getSeparatorForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the accelerator foreground color. This
@@ -429,7 +429,7 @@ extern class MetalTheme
 	*
 	* @return the accelerator foreground color
 	*/
-	@:overload public function getAcceleratorForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getAcceleratorForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the accelerator selected foreground color. This
@@ -437,7 +437,7 @@ extern class MetalTheme
 	*
 	* @return the accelerator selected foreground color
 	*/
-	@:overload public function getAcceleratorSelectedForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload @:public public function getAcceleratorSelectedForeground() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Adds values specific to this theme to the defaults table. This method
@@ -451,7 +451,7 @@ extern class MetalTheme
 	*
 	* @see MetalLookAndFeel#getDefaults
 	*/
-	@:overload public function addCustomEntriesToTable(table : javax.swing.UIDefaults) : Void;
+	@:overload @:public public function addCustomEntriesToTable(table : javax.swing.UIDefaults) : Void;
 	
 	
 }

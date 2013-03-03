@@ -40,14 +40,14 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Adds the argument to the list of readed objects.
 	*
 	* @param argument  the value of the element that contained in this one
 	*/
-	@:overload private function addArgument(argument : Dynamic) : Void;
+	@:overload @:protected override private function addArgument(argument : Dynamic) : Void;
 	
 	/**
 	* Tests whether the value of this element can be used
@@ -57,14 +57,14 @@ package com.sun.beans.decoder;
 	*         as an argument of the element that contained in this one,
 	*         {@code false} otherwise
 	*/
-	@:overload private function isArgument() : Bool;
+	@:overload @:protected override private function isArgument() : Bool;
 	
 	/**
 	* Returns the value of this element.
 	*
 	* @return the value of this element
 	*/
-	@:overload private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected override private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	
 }

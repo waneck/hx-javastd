@@ -28,7 +28,7 @@ extern class MgmtData extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor MgmtData
@@ -36,17 +36,17 @@ extern class MgmtData extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param doc
 	* @param mgmtData
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, mgmtData : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, mgmtData : String) : Void;
 	
 	/**
 	* Method getMgmtData
 	*
 	* @return the managment data
 	*/
-	@:overload public function getMgmtData() : String;
+	@:overload @:public public function getMgmtData() : String;
 	
 	/** @inheritDoc */
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

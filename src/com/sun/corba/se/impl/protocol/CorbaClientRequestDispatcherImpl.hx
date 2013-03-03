@@ -31,39 +31,39 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class CorbaClientRequestDispatcherImpl implements com.sun.corba.se.pept.protocol.ClientRequestDispatcher
 {
-	@:overload public function beginRequest(self : Dynamic, opName : String, isOneWay : Bool, contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function beginRequest(self : Dynamic, opName : String, isOneWay : Bool, contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.encoding.OutputObject;
 	
-	@:overload public function marshalingComplete(self : Dynamic, outputObject : com.sun.corba.se.pept.encoding.OutputObject) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function marshalingComplete(self : Dynamic, outputObject : com.sun.corba.se.pept.encoding.OutputObject) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload public function marshalingComplete1(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function marshalingComplete1(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload private function processResponse(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, inputObject : com.sun.corba.se.pept.encoding.InputObject) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:protected private function processResponse(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, inputObject : com.sun.corba.se.pept.encoding.InputObject) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload private function continueOrThrowSystemOrRemarshal(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, exception : java.lang.Exception) : Void;
+	@:overload @:protected private function continueOrThrowSystemOrRemarshal(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, exception : java.lang.Exception) : Void;
 	
-	@:overload private function getContactInfoListIterator(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.transport.CorbaContactInfoListIterator;
+	@:overload @:protected private function getContactInfoListIterator(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.transport.CorbaContactInfoListIterator;
 	
-	@:overload private function registerWaiter(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:protected private function registerWaiter(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload private function unregisterWaiter(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:protected private function unregisterWaiter(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload private function addServiceContexts(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:protected private function addServiceContexts(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload private function consumeServiceContexts(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:protected private function consumeServiceContexts(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload private function getExceptionDetailMessage(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException) : Void;
+	@:overload @:protected private function getExceptionDetailMessage(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException) : Void;
 	
-	@:overload public function endRequest(broker : com.sun.corba.se.pept.broker.Broker, self : Dynamic, inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
+	@:overload @:public public function endRequest(broker : com.sun.corba.se.pept.broker.Broker, self : Dynamic, inputObject : com.sun.corba.se.pept.encoding.InputObject) : Void;
 	
-	@:overload private function performCodeSetNegotiation(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
+	@:overload @:protected private function performCodeSetNegotiation(messageMediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : Void;
 	
-	@:overload private function addCodeSetServiceContext(conn : com.sun.corba.se.spi.transport.CorbaConnection, ctxs : com.sun.corba.se.spi.servicecontext.ServiceContexts, giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload @:protected private function addCodeSetServiceContext(conn : com.sun.corba.se.spi.transport.CorbaConnection, ctxs : com.sun.corba.se.spi.servicecontext.ServiceContexts, giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
-	@:overload private function peekUserExceptionId(inputObject : com.sun.corba.se.pept.encoding.InputObject) : String;
+	@:overload @:protected private function peekUserExceptionId(inputObject : com.sun.corba.se.pept.encoding.InputObject) : String;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
-	@:overload private function opAndId(mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : String;
+	@:overload @:protected private function opAndId(mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator) : String;
 	
 	
 }

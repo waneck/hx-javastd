@@ -28,7 +28,7 @@ extern class DefaultFileSystemProvider
 	/**
 	* Returns the default FileSystemProvider.
 	*/
-	@:overload public static function create() : java.nio.file.spi.FileSystemProvider;
+	@:overload @:public @:static public static function create() : java.nio.file.spi.FileSystemProvider;
 	
 	
 }

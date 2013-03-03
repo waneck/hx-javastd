@@ -33,7 +33,7 @@ extern interface HttpHandler
 	*      client and used to send the response
 	* @throws NullPointerException if exchange is <code>null</code>
 	*/
-	@:overload @:abstract public function handle(exchange : com.sun.net.httpserver.HttpExchange) : Void;
+	@:overload @:public @:abstract public function handle(exchange : com.sun.net.httpserver.HttpExchange) : Void;
 	
 	
 }

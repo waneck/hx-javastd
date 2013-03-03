@@ -30,9 +30,9 @@ package javax.swing.plaf.synth;
 	*
 	* @author Georges Saab
 	*/
-	@:overload public function new(target : java.awt.Container, axis : Int) : Void;
+	@:overload @:public public function new(target : java.awt.Container, axis : Int) : Void;
 	
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	
 }

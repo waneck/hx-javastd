@@ -30,36 +30,36 @@ package com.sun.xml.internal.messaging.saaj.util.transform;
 */
 extern class EfficientStreamingTransformer extends javax.xml.transform.Transformer
 {
-	@:overload override public function clearParameters() : Void;
+	@:overload @:public override public function clearParameters() : Void;
 	
-	@:overload override public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public override public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
-	@:overload override public function getOutputProperties() : java.util.Properties;
+	@:overload @:public override public function getOutputProperties() : java.util.Properties;
 	
-	@:overload override public function getOutputProperty(str : String) : String;
+	@:overload @:public override public function getOutputProperty(str : String) : String;
 	
-	@:overload override public function getParameter(str : String) : Dynamic;
+	@:overload @:public override public function getParameter(str : String) : Dynamic;
 	
-	@:overload override public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public override public function getURIResolver() : javax.xml.transform.URIResolver;
 	
-	@:overload override public function setErrorListener(errorListener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public override public function setErrorListener(errorListener : javax.xml.transform.ErrorListener) : Void;
 	
-	@:overload override public function setOutputProperties(properties : java.util.Properties) : Void;
+	@:overload @:public override public function setOutputProperties(properties : java.util.Properties) : Void;
 	
-	@:overload override public function setOutputProperty(str : String, str1 : String) : Void;
+	@:overload @:public override public function setOutputProperty(str : String, str1 : String) : Void;
 	
-	@:overload override public function setParameter(str : String, obj : Dynamic) : Void;
+	@:overload @:public override public function setParameter(str : String, obj : Dynamic) : Void;
 	
-	@:overload override public function setURIResolver(uRIResolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public override public function setURIResolver(uRIResolver : javax.xml.transform.URIResolver) : Void;
 	
-	@:overload override public function transform(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload @:public override public function transform(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Return Transformer instance for this thread, allocating a new one if
 	* necessary. Note that this method does not clear global parameters,
 	* properties or any other data set on a previously used transformer.
 	*/
-	@:overload public static function newTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public @:static public static function newTransformer() : javax.xml.transform.Transformer;
 	
 	
 }

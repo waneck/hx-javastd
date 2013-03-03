@@ -83,7 +83,7 @@ extern class CK_TOKEN_INFO
 	*   CK_UTF8CHAR label[32];
 	* </PRE>
 	*/
-	public var label : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var label : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* must be blank padded and only the first 32 chars will be used<p>
@@ -92,7 +92,7 @@ extern class CK_TOKEN_INFO
 	*   CK_UTF8CHAR manufacturerID[32];
 	* </PRE>
 	*/
-	public var manufacturerID : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var manufacturerID : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* must be blank padded and only the first 16 chars will be used<p>
@@ -101,7 +101,7 @@ extern class CK_TOKEN_INFO
 	*   CK_UTF8CHAR model[16];
 	* </PRE>
 	*/
-	public var model : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var model : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* must be blank padded and only the first 16 chars will be used<p>
@@ -110,7 +110,7 @@ extern class CK_TOKEN_INFO
 	*   CK_CHAR serialNumber[16];
 	* </PRE>
 	*/
-	public var serialNumber : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var serialNumber : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -118,7 +118,7 @@ extern class CK_TOKEN_INFO
 	*   CK_FLAGS flags;
 	* </PRE>
 	*/
-	public var flags : haxe.Int64;
+	@:public public var flags : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -126,7 +126,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulMaxSessionCount;
 	* </PRE>
 	*/
-	public var ulMaxSessionCount : haxe.Int64;
+	@:public public var ulMaxSessionCount : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -134,7 +134,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulSessionCount;
 	* </PRE>
 	*/
-	public var ulSessionCount : haxe.Int64;
+	@:public public var ulSessionCount : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -142,7 +142,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulMaxRwSessionCount;
 	* </PRE>
 	*/
-	public var ulMaxRwSessionCount : haxe.Int64;
+	@:public public var ulMaxRwSessionCount : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -150,7 +150,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulRwSessionCount;
 	* </PRE>
 	*/
-	public var ulRwSessionCount : haxe.Int64;
+	@:public public var ulRwSessionCount : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -158,7 +158,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulMaxPinLen;
 	* </PRE>
 	*/
-	public var ulMaxPinLen : haxe.Int64;
+	@:public public var ulMaxPinLen : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -166,7 +166,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulMinPinLen;
 	* </PRE>
 	*/
-	public var ulMinPinLen : haxe.Int64;
+	@:public public var ulMinPinLen : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -174,7 +174,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulTotalPublicMemory;
 	* </PRE>
 	*/
-	public var ulTotalPublicMemory : haxe.Int64;
+	@:public public var ulTotalPublicMemory : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -182,7 +182,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulFreePublicMemory;
 	* </PRE>
 	*/
-	public var ulFreePublicMemory : haxe.Int64;
+	@:public public var ulFreePublicMemory : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -190,7 +190,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulTotalPrivateMemory;
 	* </PRE>
 	*/
-	public var ulTotalPrivateMemory : haxe.Int64;
+	@:public public var ulTotalPrivateMemory : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -198,7 +198,7 @@ extern class CK_TOKEN_INFO
 	*   CK_ULONG ulFreePrivateMemory;
 	* </PRE>
 	*/
-	public var ulFreePrivateMemory : haxe.Int64;
+	@:public public var ulFreePrivateMemory : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -206,7 +206,7 @@ extern class CK_TOKEN_INFO
 	*   CK_VERSION hardwareVersion;
 	* </PRE>
 	*/
-	public var hardwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var hardwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -214,7 +214,7 @@ extern class CK_TOKEN_INFO
 	*   CK_VERSION firmwareVersion;
 	* </PRE>
 	*/
-	public var firmwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
+	@:public public var firmwareVersion : sun.security.pkcs11.wrapper.CK_VERSION;
 	
 	/**
 	* only the first 16 chars will be used
@@ -223,17 +223,17 @@ extern class CK_TOKEN_INFO
 	*   CK_CHAR utcTime[16];
 	* </PRE>
 	*/
-	public var utcTime : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var utcTime : java.NativeArray<java.StdTypes.Char16>;
 	
 	/* time */
-	@:overload public function new(label : java.NativeArray<java.StdTypes.Char16>, vendor : java.NativeArray<java.StdTypes.Char16>, model : java.NativeArray<java.StdTypes.Char16>, serialNo : java.NativeArray<java.StdTypes.Char16>, flags : haxe.Int64, sessionMax : haxe.Int64, session : haxe.Int64, rwSessionMax : haxe.Int64, rwSession : haxe.Int64, pinLenMax : haxe.Int64, pinLenMin : haxe.Int64, totalPubMem : haxe.Int64, freePubMem : haxe.Int64, totalPrivMem : haxe.Int64, freePrivMem : haxe.Int64, hwVer : sun.security.pkcs11.wrapper.CK_VERSION, fwVer : sun.security.pkcs11.wrapper.CK_VERSION, utcTime : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(label : java.NativeArray<java.StdTypes.Char16>, vendor : java.NativeArray<java.StdTypes.Char16>, model : java.NativeArray<java.StdTypes.Char16>, serialNo : java.NativeArray<java.StdTypes.Char16>, flags : haxe.Int64, sessionMax : haxe.Int64, session : haxe.Int64, rwSessionMax : haxe.Int64, rwSession : haxe.Int64, pinLenMax : haxe.Int64, pinLenMin : haxe.Int64, totalPubMem : haxe.Int64, freePubMem : haxe.Int64, totalPrivMem : haxe.Int64, freePrivMem : haxe.Int64, hwVer : sun.security.pkcs11.wrapper.CK_VERSION, fwVer : sun.security.pkcs11.wrapper.CK_VERSION, utcTime : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Returns the string representation of CK_TOKEN_INFO.
 	*
 	* @return the string representation of CK_TOKEN_INFO
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

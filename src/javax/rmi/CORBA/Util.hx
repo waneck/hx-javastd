@@ -36,21 +36,21 @@ extern class Util
 	* @param ex the SystemException to map.
 	* @return the mapped exception.
 	*/
-	@:overload public static function mapSystemException(ex : org.omg.CORBA.SystemException) : java.rmi.RemoteException;
+	@:overload @:public @:static public static function mapSystemException(ex : org.omg.CORBA.SystemException) : java.rmi.RemoteException;
 	
 	/**
 	* Writes any java.lang.Object as a CORBA any.
 	* @param out the stream in which to write the any.
 	* @param obj the object to write as an any.
 	*/
-	@:overload public static function writeAny(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
+	@:overload @:public @:static public static function writeAny(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
 	
 	/**
 	* Reads a java.lang.Object as a CORBA any.
 	* @param in the stream from which to read the any.
 	* @return the object read from the stream.
 	*/
-	@:overload public static function readAny(_in : org.omg.CORBA.portable.InputStream) : Dynamic;
+	@:overload @:public @:static public static function readAny(_in : org.omg.CORBA.portable.InputStream) : Dynamic;
 	
 	/**
 	* Writes a java.lang.Object as a CORBA Object. If <code>obj</code> is
@@ -62,7 +62,7 @@ extern class Util
 	* @param out the stream in which to write the object.
 	* @param obj the object to write.
 	*/
-	@:overload public static function writeRemoteObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
+	@:overload @:public @:static public static function writeRemoteObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
 	
 	/**
 	* Writes a java.lang.Object as either a value or a CORBA Object.
@@ -75,7 +75,7 @@ an exported
 	* @param out the stream in which to write the object.
 	* @param obj the object to write.
 	*/
-	@:overload public static function writeAbstractObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
+	@:overload @:public @:static public static function writeAbstractObject(out : org.omg.CORBA.portable.OutputStream, obj : Dynamic) : Void;
 	
 	/**
 	* Registers a target for a tie. Adds the tie to an internal table and calls
@@ -83,7 +83,7 @@ an exported
 	* @param tie the tie to register.
 	* @param target the target for the tie.
 	*/
-	@:overload public static function registerTarget(tie : javax.rmi.CORBA.Tie, target : java.rmi.Remote) : Void;
+	@:overload @:public @:static public static function registerTarget(tie : javax.rmi.CORBA.Tie, target : java.rmi.Remote) : Void;
 	
 	/**
 	* Removes the associated tie from an internal table and calls {@link
@@ -91,27 +91,27 @@ Tie#deactivate}
 	* to deactivate the object.
 	* @param target the object to unexport.
 	*/
-	@:overload public static function unexportObject(target : java.rmi.Remote) : Void;
+	@:overload @:public @:static public static function unexportObject(target : java.rmi.Remote) : Void;
 	
 	/**
 	* Returns the tie (if any) for a given target object.
 	* @return the tie or null if no tie is registered for the given target.
 	*/
-	@:overload public static function getTie(target : java.rmi.Remote) : javax.rmi.CORBA.Tie;
+	@:overload @:public @:static public static function getTie(target : java.rmi.Remote) : javax.rmi.CORBA.Tie;
 	
 	/**
 	* Returns a singleton instance of a class that implements the
 	* {@link ValueHandler} interface.
 	* @return a class which implements the ValueHandler interface.
 	*/
-	@:overload public static function createValueHandler() : javax.rmi.CORBA.ValueHandler;
+	@:overload @:public @:static public static function createValueHandler() : javax.rmi.CORBA.ValueHandler;
 	
 	/**
 	* Returns the codebase, if any, for the given class.
 	* @param clz the class to get a codebase for.
 	* @return a space-separated list of URLs, or null.
 	*/
-	@:overload public static function getCodebase(clz : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getCodebase(clz : Class<Dynamic>) : String;
 	
 	/**
 	* Returns a class instance for the specified class.
@@ -139,7 +139,7 @@ Tie#deactivate}
 	* @return the <code>Class</code> object representing the loaded class.
 	* @exception ClassNotFoundException if class cannot be loaded.
 	*/
-	@:overload public static function loadClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(className : String, remoteCodebase : String, loader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* The <tt>isLocal</tt> method has the same semantics as the
@@ -161,7 +161,7 @@ Tie#deactivate}
 	* @throws RemoteException The Java to IDL specification does not
 	* specify the conditions that cause a <tt>RemoteException</tt> to be thrown.
 	*/
-	@:overload public static function isLocal(stub : javax.rmi.CORBA.Stub) : Bool;
+	@:overload @:public @:static public static function isLocal(stub : javax.rmi.CORBA.Stub) : Bool;
 	
 	/**
 	* Wraps an exception thrown by an implementation
@@ -169,7 +169,7 @@ Tie#deactivate}
 	* @param orig the exception to wrap.
 	* @return the wrapped exception.
 	*/
-	@:overload public static function wrapException(orig : java.lang.Throwable) : java.rmi.RemoteException;
+	@:overload @:public @:static public static function wrapException(orig : java.lang.Throwable) : java.rmi.RemoteException;
 	
 	/**
 	* Copies or connects an array of objects. Used by local stubs
@@ -180,7 +180,7 @@ Tie#deactivate}
 	* @return the copied or connected objects.
 	* @exception RemoteException if any object could not be copied or connected.
 	*/
-	@:overload public static function copyObjects(obj : java.NativeArray<Dynamic>, orb : org.omg.CORBA.ORB) : java.NativeArray<Dynamic>;
+	@:overload @:public @:static public static function copyObjects(obj : java.NativeArray<Dynamic>, orb : org.omg.CORBA.ORB) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Copies or connects an object. Used by local stubs to copy
@@ -190,7 +190,7 @@ Tie#deactivate}
 	* @return the copy or connected object.
 	* @exception RemoteException if the object could not be copied or connected.
 	*/
-	@:overload public static function copyObject(obj : Dynamic, orb : org.omg.CORBA.ORB) : Dynamic;
+	@:overload @:public @:static public static function copyObject(obj : Dynamic, orb : org.omg.CORBA.ORB) : Dynamic;
 	
 	
 }

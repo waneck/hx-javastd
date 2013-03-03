@@ -80,13 +80,13 @@ extern class SWITCH implements com.sun.org.apache.bcel.internal.generic.Compound
 	* @param target the default target
 	* @param max_gap maximum gap that may between case branches
 	*/
-	@:overload public function new(match : java.NativeArray<Int>, targets : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, max_gap : Int) : Void;
+	@:overload @:public public function new(match : java.NativeArray<Int>, targets : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, max_gap : Int) : Void;
 	
-	@:overload public function new(match : java.NativeArray<Int>, targets : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function new(match : java.NativeArray<Int>, targets : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
-	@:overload @:final public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public @:final public function getInstructionList() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
-	@:overload @:final public function getInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function getInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	
 }

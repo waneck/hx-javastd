@@ -30,12 +30,12 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the name of this theme.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Creates and returns an instance of {@code DefaultMetalTheme}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the primary 1 color. This returns a color with rgb values
@@ -43,7 +43,7 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the primary 1 color
 	*/
-	@:overload private function getPrimary1() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected override private function getPrimary1() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary 2 color. This returns a color with rgb values
@@ -51,7 +51,7 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the primary 2 color
 	*/
-	@:overload private function getPrimary2() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected override private function getPrimary2() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary 3 color. This returns a color with rgb values
@@ -59,7 +59,7 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the primary 3 color
 	*/
-	@:overload private function getPrimary3() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected override private function getPrimary3() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 1 color. This returns a color with rgb values
@@ -67,7 +67,7 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the secondary 1 color
 	*/
-	@:overload private function getSecondary1() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected override private function getSecondary1() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 2 color. This returns a color with rgb values
@@ -75,7 +75,7 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the secondary 2 color
 	*/
-	@:overload private function getSecondary2() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected override private function getSecondary2() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 3 color. This returns a color with rgb values
@@ -83,7 +83,7 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the secondary 3 color
 	*/
-	@:overload private function getSecondary3() : javax.swing.plaf.ColorUIResource;
+	@:overload @:protected override private function getSecondary3() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control text font. This returns Dialog, 12pt. If
@@ -93,21 +93,21 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the control text font
 	*/
-	@:overload public function getControlTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getControlTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the system text font. This returns Dialog, 12pt, plain.
 	*
 	* @return the sytem text font
 	*/
-	@:overload public function getSystemTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getSystemTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the user text font. This returns Dialog, 12pt, plain.
 	*
 	* @return the user text font
 	*/
-	@:overload public function getUserTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getUserTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the menu text font. This returns Dialog, 12pt. If
@@ -117,21 +117,21 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 	*
 	* @return the menu text font
 	*/
-	@:overload public function getMenuTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getMenuTextFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the window title font. This returns Dialog, 12pt, bold.
 	*
 	* @return the window title font
 	*/
-	@:overload public function getWindowTitleFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getWindowTitleFont() : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Returns the sub-text font. This returns Dialog, 10pt, plain.
 	*
 	* @return the sub-text font
 	*/
-	@:overload public function getSubTextFont() : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getSubTextFont() : javax.swing.plaf.FontUIResource;
 	
 	
 }
@@ -140,16 +140,16 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 */
 @:native('javax$swing$plaf$metal$DefaultMetalTheme$FontDelegate') @:internal extern class DefaultMetalTheme_FontDelegate
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getFont(type : Int) : javax.swing.plaf.FontUIResource;
+	@:overload @:public public function getFont(type : Int) : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* This is the same as invoking
 	* <code>Font.getFont(key)</code>, with the exception
 	* that it is wrapped inside a <code>doPrivileged</code> call.
 	*/
-	@:overload private function getPrivilegedFont(key : Int) : java.awt.Font;
+	@:overload @:protected private function getPrivilegedFont(key : Int) : java.awt.Font;
 	
 	
 }
@@ -158,9 +158,9 @@ extern class DefaultMetalTheme extends javax.swing.plaf.metal.MetalTheme
 */
 @:native('javax$swing$plaf$metal$DefaultMetalTheme$WindowsFontDelegate') @:internal extern class DefaultMetalTheme_WindowsFontDelegate extends javax.swing.plaf.metal.DefaultMetalTheme.DefaultMetalTheme_FontDelegate
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getFont(type : Int) : javax.swing.plaf.FontUIResource;
+	@:overload @:public override public function getFont(type : Int) : javax.swing.plaf.FontUIResource;
 	
 	
 }

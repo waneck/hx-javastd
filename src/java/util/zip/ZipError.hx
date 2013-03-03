@@ -35,7 +35,7 @@ package java.util.zip;
 	* Constructs a ZipError with the given detail message.
 	* @param s the {@code String} containing a detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

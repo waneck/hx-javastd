@@ -25,15 +25,15 @@ package com.sun.codemodel.internal;
 */
 extern class JSwitch implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function test() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function test() : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function cases() : java.util.Iterator<com.sun.codemodel.internal.JCase>;
+	@:overload @:public public function cases() : java.util.Iterator<com.sun.codemodel.internal.JCase>;
 	
-	@:overload public function _case(label : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JCase;
+	@:overload @:public public function _case(label : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JCase;
 	
-	@:overload public function _default() : com.sun.codemodel.internal.JCase;
+	@:overload @:public public function _default() : com.sun.codemodel.internal.JCase;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

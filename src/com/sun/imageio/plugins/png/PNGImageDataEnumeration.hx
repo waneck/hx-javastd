@@ -25,27 +25,27 @@ package com.sun.imageio.plugins.png;
 */
 @:internal extern class PNGImageDataEnumeration implements java.util.Enumeration<java.io.InputStream>
 {
-	@:overload public function new(stream : javax.imageio.stream.ImageInputStream) : Void;
+	@:overload @:public public function new(stream : javax.imageio.stream.ImageInputStream) : Void;
 	
-	@:overload public function nextElement() : java.io.InputStream;
+	@:overload @:public public function nextElement() : java.io.InputStream;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	
 }
 extern class PNGImageReader extends javax.imageio.ImageReader
 {
-	@:overload public function new(originatingProvider : javax.imageio.spi.ImageReaderSpi) : Void;
+	@:overload @:public public function new(originatingProvider : javax.imageio.spi.ImageReaderSpi) : Void;
 	
-	@:overload override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
+	@:overload @:public override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
 	
-	@:overload override public function getNumImages(allowSearch : Bool) : Int;
+	@:overload @:public override public function getNumImages(allowSearch : Bool) : Int;
 	
-	@:overload override public function getWidth(imageIndex : Int) : Int;
+	@:overload @:public override public function getWidth(imageIndex : Int) : Int;
 	
-	@:overload override public function getHeight(imageIndex : Int) : Int;
+	@:overload @:public override public function getHeight(imageIndex : Int) : Int;
 	
-	@:overload override public function getImageTypes(imageIndex : Int) : java.util.Iterator<javax.imageio.ImageTypeSpecifier>;
+	@:overload @:public override public function getImageTypes(imageIndex : Int) : java.util.Iterator<javax.imageio.ImageTypeSpecifier>;
 	
 	/*
 	* Super class implementation uses first element
@@ -67,17 +67,17 @@ extern class PNGImageReader extends javax.imageio.ImageReader
 	* After this changes we should override getRawImageType()
 	* to return last element of image types list.
 	*/
-	@:overload override public function getRawImageType(imageIndex : Int) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public override public function getRawImageType(imageIndex : Int) : javax.imageio.ImageTypeSpecifier;
 	
-	@:overload override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
+	@:overload @:public override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
 	
-	@:overload override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
+	@:overload @:public override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

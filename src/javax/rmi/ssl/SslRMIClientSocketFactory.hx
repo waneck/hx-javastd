@@ -28,7 +28,7 @@ extern class SslRMIClientSocketFactory implements java.rmi.server.RMIClientSocke
 	/**
 	* <p>Creates a new <code>SslRMIClientSocketFactory</code>.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Creates an SSL socket.</p>
@@ -49,7 +49,7 @@ extern class SslRMIClientSocketFactory implements java.rmi.server.RMIClientSocke
 	* comma-separated list of SSL/TLS protocol versions to
 	* enable.</p>
 	*/
-	@:overload public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public public function createSocket(host : String, port : Int) : java.net.Socket;
 	
 	/**
 	* <p>Indicates whether some other object is "equal to" this one.</p>
@@ -63,7 +63,7 @@ extern class SslRMIClientSocketFactory implements java.rmi.server.RMIClientSocke
 	* as {@link #hashCode()}) if its instances are not all
 	* functionally equivalent.</p>
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns a hash code value for this
@@ -72,7 +72,7 @@ extern class SslRMIClientSocketFactory implements java.rmi.server.RMIClientSocke
 	* @return a hash code value for this
 	* <code>SslRMIClientSocketFactory</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

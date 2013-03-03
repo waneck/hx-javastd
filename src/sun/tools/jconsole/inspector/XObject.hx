@@ -33,21 +33,21 @@ displayed/manipulated as a GUI object.
 */
 extern class XObject extends javax.swing.JLabel
 {
-	public static var NULL_OBJECT(default, null) : sun.tools.jconsole.inspector.XObject;
+	@:public @:final @:static public static var NULL_OBJECT(default, null) : sun.tools.jconsole.inspector.XObject;
 	
-	@:overload public function new(object : Dynamic, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(object : Dynamic, icon : javax.swing.Icon) : Void;
 	
-	@:overload public function new(object : Dynamic) : Void;
+	@:overload @:public public function new(object : Dynamic) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
-	@:overload public static function useHashCodeRepresentation(useHashCodeRepresentation : Bool) : Void;
+	@:overload @:public @:static public static function useHashCodeRepresentation(useHashCodeRepresentation : Bool) : Void;
 	
-	@:overload public static function hashCodeRepresentation() : Bool;
+	@:overload @:public @:static public static function hashCodeRepresentation() : Bool;
 	
-	@:overload public function setObject(object : Dynamic) : Void;
+	@:overload @:public public function setObject(object : Dynamic) : Void;
 	
 	
 }

@@ -31,7 +31,7 @@ extern interface PathComponent
 	* Get the analysis bits for this path component, as defined in the WalkerFactory.
 	* @return One of WalkerFactory#BIT_DESCENDANT, etc.
 	*/
-	@:overload public function getAnalysisBits() : Int;
+	@:overload @:public public function getAnalysisBits() : Int;
 	
 	
 }

@@ -38,14 +38,14 @@ extern class OutputStreamWriter extends java.io.Writer
 	* @exception  UnsupportedEncodingException
 	*             If the named encoding is not supported
 	*/
-	@:overload public function new(out : java.io.OutputStream, charsetName : String) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, charsetName : String) : Void;
 	
 	/**
 	* Creates an OutputStreamWriter that uses the default character encoding.
 	*
 	* @param  out  An OutputStream
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates an OutputStreamWriter that uses the given charset. </p>
@@ -59,7 +59,7 @@ extern class OutputStreamWriter extends java.io.Writer
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function new(out : java.io.OutputStream, cs : java.nio.charset.Charset) : Void;
+	@:require(java4) @:overload @:public public function new(out : java.io.OutputStream, cs : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Creates an OutputStreamWriter that uses the given charset encoder.  </p>
@@ -73,7 +73,7 @@ extern class OutputStreamWriter extends java.io.Writer
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload public function new(out : java.io.OutputStream, enc : java.nio.charset.CharsetEncoder) : Void;
+	@:require(java4) @:overload @:public public function new(out : java.io.OutputStream, enc : java.nio.charset.CharsetEncoder) : Void;
 	
 	/**
 	* Returns the name of the character encoding being used by this stream.
@@ -95,14 +95,14 @@ extern class OutputStreamWriter extends java.io.Writer
 	* @revised 1.4
 	* @spec JSR-51
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Writes a single character.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
 	/**
 	* Writes a portion of an array of characters.
@@ -113,7 +113,7 @@ extern class OutputStreamWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Writes a portion of a string.
@@ -124,16 +124,16 @@ extern class OutputStreamWriter extends java.io.Writer
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes the stream.
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

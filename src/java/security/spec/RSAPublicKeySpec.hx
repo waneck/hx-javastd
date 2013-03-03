@@ -31,21 +31,21 @@ extern class RSAPublicKeySpec implements java.security.spec.KeySpec
 	* @param modulus the modulus
 	* @param publicExponent the public exponent
 	*/
-	@:overload public function new(modulus : java.math.BigInteger, publicExponent : java.math.BigInteger) : Void;
+	@:overload @:public public function new(modulus : java.math.BigInteger, publicExponent : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the modulus.
 	*
 	* @return the modulus
 	*/
-	@:overload public function getModulus() : java.math.BigInteger;
+	@:overload @:public public function getModulus() : java.math.BigInteger;
 	
 	/**
 	* Returns the public exponent.
 	*
 	* @return the public exponent
 	*/
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
 	
 }

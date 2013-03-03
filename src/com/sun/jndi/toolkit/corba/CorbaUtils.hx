@@ -57,7 +57,7 @@ extern class CorbaUtils
 	* @exception ConfigurationException The CORBA Object cannot be obtained
 	*         because of configuration problems.
 	*/
-	@:overload public static function remoteToCorba(remoteObj : java.rmi.Remote, orb : org.omg.CORBA.ORB) : org.omg.CORBA.Object;
+	@:overload @:public @:static public static function remoteToCorba(remoteObj : java.rmi.Remote, orb : org.omg.CORBA.ORB) : org.omg.CORBA.Object;
 	
 	/**
 	* Get ORB using given server and port number, and properties from environment.
@@ -70,7 +70,7 @@ extern class CorbaUtils
 	*               Use all String properties from env for initializing ORB
 	* @return A non-null ORB.
 	*/
-	@:overload public static function getOrb(server : String, port : Int, env : java.util.Hashtable<Dynamic, Dynamic>) : org.omg.CORBA.ORB;
+	@:overload @:public @:static public static function getOrb(server : String, port : Int, env : java.util.Hashtable<Dynamic, Dynamic>) : org.omg.CORBA.ORB;
 	
 	
 }

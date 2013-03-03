@@ -35,31 +35,31 @@ extern class RejectDoctypeSaxFilter extends org.xml.sax.helpers.XMLFilterImpl im
 	*
 	* @author Edwin Goei
 	*/
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new(saxParser : javax.xml.parsers.SAXParser) : Void;
+	@:overload @:public public function new(saxParser : javax.xml.parsers.SAXParser) : Void;
 	
 	/*
 	* Override setProperty() to capture any LexicalHandler that is set for
 	* forwarding of events.
 	*/
-	@:overload override public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	
 }

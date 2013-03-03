@@ -30,11 +30,11 @@ package sun.awt;
 */
 extern class CustomCursor extends java.awt.Cursor
 {
-	private var image : java.awt.Image;
+	@:protected private var image : java.awt.Image;
 	
-	@:overload public function new(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : Void;
+	@:overload @:public public function new(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : Void;
 	
-	@:overload @:abstract private function createNativeCursor(im : java.awt.Image, pixels : java.NativeArray<Int>, width : Int, height : Int, xHotSpot : Int, yHotSpot : Int) : Void;
+	@:overload @:protected @:abstract private function createNativeCursor(im : java.awt.Image, pixels : java.NativeArray<Int>, width : Int, height : Int, xHotSpot : Int, yHotSpot : Int) : Void;
 	
 	
 }

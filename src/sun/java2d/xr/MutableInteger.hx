@@ -30,15 +30,15 @@ package sun.java2d.xr;
 */
 extern class MutableInteger
 {
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function setValue(value : Int) : Void;
+	@:overload @:public public function setValue(value : Int) : Void;
 	
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	
 }

@@ -27,9 +27,9 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class EndDocumentEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.EndDocument
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

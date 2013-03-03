@@ -63,7 +63,7 @@ package javax.lang.model.util;
 	/**
 	* Constructor for concrete subclasses to call.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Visits any type mirror as if by passing itself to that type
@@ -75,7 +75,7 @@ package javax.lang.model.util;
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload @:final public function visit(t : javax.lang.model.type.TypeMirror, p : P) : R;
+	@:overload @:public @:final public function visit(t : javax.lang.model.type.TypeMirror, p : P) : R;
 	
 	/**
 	* Visits any type mirror as if by passing itself to that type
@@ -86,7 +86,7 @@ package javax.lang.model.util;
 	* @param t  the type to visit
 	* @return a visitor-specified result
 	*/
-	@:overload @:final public function visit(t : javax.lang.model.type.TypeMirror) : R;
+	@:overload @:public @:final public function visit(t : javax.lang.model.type.TypeMirror) : R;
 	
 	/**
 	* Visits a {@code UnionType} element by calling {@code
@@ -98,7 +98,7 @@ package javax.lang.model.util;
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
+	@:require(java7) @:overload @:public public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
 	
 	/**
 	* {@inheritDoc}
@@ -113,7 +113,7 @@ package javax.lang.model.util;
 	* @throws UnknownTypeException
 	*  a visitor implementation may optionally throw this exception
 	*/
-	@:overload public function visitUnknown(t : javax.lang.model.type.TypeMirror, p : P) : R;
+	@:overload @:public public function visitUnknown(t : javax.lang.model.type.TypeMirror, p : P) : R;
 	
 	/**
 	* Visits the null type.
@@ -121,7 +121,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitNull(t : javax.lang.model.type.NullType, p : P) : R;
+	@:overload @:public public function visitNull(t : javax.lang.model.type.NullType, p : P) : R;
 	
 	/**
 	* Visits a type variable.
@@ -129,7 +129,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitTypeVariable(t : javax.lang.model.type.TypeVariable, p : P) : R;
+	@:overload @:public public function visitTypeVariable(t : javax.lang.model.type.TypeVariable, p : P) : R;
 	
 	/**
 	* Visits an error type.
@@ -137,7 +137,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitError(t : javax.lang.model.type.ErrorType, p : P) : R;
+	@:overload @:public public function visitError(t : javax.lang.model.type.ErrorType, p : P) : R;
 	
 	/**
 	* Visits an executable type.
@@ -145,7 +145,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitExecutable(t : javax.lang.model.type.ExecutableType, p : P) : R;
+	@:overload @:public public function visitExecutable(t : javax.lang.model.type.ExecutableType, p : P) : R;
 	
 	/**
 	* Visits a {@link NoType} instance.
@@ -153,7 +153,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitNoType(t : javax.lang.model.type.NoType, p : P) : R;
+	@:overload @:public public function visitNoType(t : javax.lang.model.type.NoType, p : P) : R;
 	
 	/**
 	* Visits a primitive type.
@@ -161,7 +161,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitPrimitive(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitive(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a declared type.
@@ -169,7 +169,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitDeclared(t : javax.lang.model.type.DeclaredType, p : P) : R;
+	@:overload @:public public function visitDeclared(t : javax.lang.model.type.DeclaredType, p : P) : R;
 	
 	/**
 	* Visits an array type.
@@ -177,7 +177,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitArray(t : javax.lang.model.type.ArrayType, p : P) : R;
+	@:overload @:public public function visitArray(t : javax.lang.model.type.ArrayType, p : P) : R;
 	
 	/**
 	* Visits a wildcard type.
@@ -185,7 +185,7 @@ package javax.lang.model.util;
 	* @param p a visitor-specified parameter
 	* @return  a visitor-specified result
 	*/
-	@:overload public function visitWildcard(t : javax.lang.model.type.WildcardType, p : P) : R;
+	@:overload @:public public function visitWildcard(t : javax.lang.model.type.WildcardType, p : P) : R;
 	
 	
 }

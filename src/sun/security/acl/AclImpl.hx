@@ -32,7 +32,7 @@ extern class AclImpl extends sun.security.acl.OwnerImpl implements java.security
 	/**
 	* Constructor for creating an empty ACL.
 	*/
-	@:overload public function new(owner : java.security.Principal, name : String) : Void;
+	@:overload @:public public function new(owner : java.security.Principal, name : String) : Void;
 	
 	/**
 	* Sets the name of the ACL.
@@ -41,13 +41,13 @@ extern class AclImpl extends sun.security.acl.OwnerImpl implements java.security
 	* @exception NotOwnerException if the caller principal is
 	* not on the owners list of the Acl.
 	*/
-	@:overload public function setName(caller : java.security.Principal, name : String) : Void;
+	@:overload @:public public function setName(caller : java.security.Principal, name : String) : Void;
 	
 	/**
 	* Returns the name of the ACL.
 	* @return the name of the ACL.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Adds an ACL entry to this ACL. An entry associates a
@@ -63,7 +63,7 @@ extern class AclImpl extends sun.security.acl.OwnerImpl implements java.security
 	* @exception NotOwnerException if the caller principal
 	* is not on the owners list of the Acl.
 	*/
-	@:overload @:synchronized public function addEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
+	@:overload @:public @:synchronized public function addEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
 	
 	/**
 	* Removes an ACL entry from this ACL.
@@ -75,7 +75,7 @@ extern class AclImpl extends sun.security.acl.OwnerImpl implements java.security
 	* @exception NotOwnerException if the caller principal is not
 	* the owners list of the Acl.
 	*/
-	@:overload @:synchronized public function removeEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
+	@:overload @:public @:synchronized public function removeEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
 	
 	/**
 	* This method returns the set of allowed permissions for the
@@ -108,7 +108,7 @@ extern class AclImpl extends sun.security.acl.OwnerImpl implements java.security
 	* @param user the principal for which the ACL entry is returned.
 	* @return The resulting permission set that the principal is allowed.
 	*/
-	@:overload @:synchronized public function getPermissions(user : java.security.Principal) : java.util.Enumeration<java.security.acl.Permission>;
+	@:overload @:public @:synchronized public function getPermissions(user : java.security.Principal) : java.util.Enumeration<java.security.acl.Permission>;
 	
 	/**
 	* This method checks whether or not the specified principal
@@ -121,26 +121,26 @@ extern class AclImpl extends sun.security.acl.OwnerImpl implements java.security
 	* @return true of the principal has the permission desired, false
 	* otherwise.
 	*/
-	@:overload public function checkPermission(principal : java.security.Principal, permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function checkPermission(principal : java.security.Principal, permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* returns an enumeration of the entries in this ACL.
 	*/
-	@:overload @:synchronized public function entries() : java.util.Enumeration<java.security.acl.AclEntry>;
+	@:overload @:public @:synchronized public function entries() : java.util.Enumeration<java.security.acl.AclEntry>;
 	
 	/**
 	* return a stringified version of the
 	* ACL.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class AclEnumerator implements java.util.Enumeration<java.security.acl.AclEntry>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : java.security.acl.AclEntry;
+	@:overload @:public public function nextElement() : java.security.acl.AclEntry;
 	
 	
 }

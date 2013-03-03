@@ -72,7 +72,7 @@ extern class CK_SSL3_KEY_MAT_OUT
 	*   CK_OBJECT_HANDLE hClientMacSecret;
 	* </PRE>
 	*/
-	public var hClientMacSecret : haxe.Int64;
+	@:public public var hClientMacSecret : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -80,7 +80,7 @@ extern class CK_SSL3_KEY_MAT_OUT
 	*   CK_OBJECT_HANDLE hServerMacSecret;
 	* </PRE>
 	*/
-	public var hServerMacSecret : haxe.Int64;
+	@:public public var hServerMacSecret : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -88,7 +88,7 @@ extern class CK_SSL3_KEY_MAT_OUT
 	*   CK_OBJECT_HANDLE hClientKey;
 	* </PRE>
 	*/
-	public var hClientKey : haxe.Int64;
+	@:public public var hClientKey : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -96,7 +96,7 @@ extern class CK_SSL3_KEY_MAT_OUT
 	*   CK_OBJECT_HANDLE hServerKey;
 	* </PRE>
 	*/
-	public var hServerKey : haxe.Int64;
+	@:public public var hServerKey : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -104,7 +104,7 @@ extern class CK_SSL3_KEY_MAT_OUT
 	*   CK_BYTE_PTR pIVClient;
 	* </PRE>
 	*/
-	public var pIVClient : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pIVClient : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -112,14 +112,14 @@ extern class CK_SSL3_KEY_MAT_OUT
 	*   CK_BYTE_PTR pIVServer;
 	* </PRE>
 	*/
-	public var pIVServer : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var pIVServer : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the string representation of CK_SSL3_KEY_MAT_OUT.
 	*
 	* @return the string representation of CK_SSL3_KEY_MAT_OUT
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

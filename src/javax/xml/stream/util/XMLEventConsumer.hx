@@ -36,7 +36,7 @@ extern interface XMLEventConsumer
 	*
 	* @param event the event to add, may not be null
 	*/
-	@:overload public function add(event : javax.xml.stream.events.XMLEvent) : Void;
+	@:overload @:public public function add(event : javax.xml.stream.events.XMLEvent) : Void;
 	
 	
 }

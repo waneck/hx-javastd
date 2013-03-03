@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CWildcardTypeInfo extends com.sun.tools.internal.xjc.model.AbstractCTypeInfoImpl implements com.sun.xml.internal.bind.v2.model.core.WildcardTypeInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>
 {
-	public static var INSTANCE(default, null) : com.sun.tools.internal.xjc.model.CWildcardTypeInfo;
+	@:public @:static @:final public static var INSTANCE(default, null) : com.sun.tools.internal.xjc.model.CWildcardTypeInfo;
 	
-	@:overload override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
-	@:overload public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
+	@:overload @:public override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public override public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

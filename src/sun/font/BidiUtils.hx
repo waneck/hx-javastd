@@ -44,13 +44,13 @@ extern class BidiUtils
 	* @throws IndexOutOfBoundsException if <code>start</code> is less than 0 or
 	* <code>start + getLength()</code> is greater than <code>levels.length</code>.
 	*/
-	@:overload public static function getLevels(bidi : java.text.Bidi, levels : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:static public static function getLevels(bidi : java.text.Bidi, levels : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
 	/**
 	* Return an array containing the resolved bidi level of each character, in logical order.
 	* @return an array containing the level of each character, in logical order.
 	*/
-	@:overload public static function getLevels(bidi : java.text.Bidi) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getLevels(bidi : java.text.Bidi) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Given level data, compute a a visual to logical mapping.
@@ -60,7 +60,7 @@ extern class BidiUtils
 	* @param levels the levels array
 	* @return the mapping array from visual to logical
 	*/
-	@:overload public static function createVisualToLogicalMap(levels : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function createVisualToLogicalMap(levels : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<Int>;
 	
 	/**
 	* Return the inverse position map.  The source array must map one-to-one (each value
@@ -69,7 +69,7 @@ extern class BidiUtils
 	* @param values the source ordering array
 	* @return the inverse array
 	*/
-	@:overload public static function createInverseMap(values : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function createInverseMap(values : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Return an array containing contiguous values from 0 to length
@@ -80,7 +80,7 @@ extern class BidiUtils
 	* @param values an array containing the discontiguous values
 	* @return the contiguous values
 	*/
-	@:overload public static function createContiguousOrder(values : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function createContiguousOrder(values : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Return an array containing the data in the values array from start up to limit,
@@ -94,7 +94,7 @@ extern class BidiUtils
 	* @param limit the limiting offset in the values and levels arrays
 	* @return the normlized map
 	*/
-	@:overload public static function createNormalizedMap(values : java.NativeArray<Int>, levels : java.NativeArray<java.StdTypes.Int8>, start : Int, limit : Int) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function createNormalizedMap(values : java.NativeArray<Int>, levels : java.NativeArray<java.StdTypes.Int8>, start : Int, limit : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Reorder the objects in the array into visual order based on their levels.
@@ -106,7 +106,7 @@ extern class BidiUtils
 	* @param levels an array representing the bidi level of each object
 	* @param objects the array of objects to be reordered into visual order
 	*/
-	@:overload public static function reorderVisually(levels : java.NativeArray<java.StdTypes.Int8>, objects : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:static public static function reorderVisually(levels : java.NativeArray<java.StdTypes.Int8>, objects : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

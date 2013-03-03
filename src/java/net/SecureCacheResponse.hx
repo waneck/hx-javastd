@@ -31,7 +31,7 @@ extern class SecureCacheResponse extends java.net.CacheResponse
 	*
 	* @return a string representing the cipher suite
 	*/
-	@:overload @:abstract public function getCipherSuite() : String;
+	@:overload @:public @:abstract public function getCipherSuite() : String;
 	
 	/**
 	* Returns the certificate chain that were sent to the server during
@@ -44,7 +44,7 @@ extern class SecureCacheResponse extends java.net.CacheResponse
 	*           certificate chain was sent, null will be returned.
 	* @see #getLocalPrincipal()
 	*/
-	@:overload @:abstract public function getLocalCertificateChain() : java.util.List<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function getLocalCertificateChain() : java.util.List<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's certificate chain, which was established as
@@ -59,7 +59,7 @@ extern class SecureCacheResponse extends java.net.CacheResponse
 	* @throws SSLPeerUnverifiedException if the peer is not verified.
 	* @see #getPeerPrincipal()
 	*/
-	@:overload @:abstract public function getServerCertificateChain() : java.util.List<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function getServerCertificateChain() : java.util.List<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's principal which was established as part of
@@ -75,7 +75,7 @@ extern class SecureCacheResponse extends java.net.CacheResponse
 	* @see #getServerCertificateChain()
 	* @see #getLocalPrincipal()
 	*/
-	@:overload @:abstract public function getPeerPrincipal() : java.security.Principal;
+	@:overload @:public @:abstract public function getPeerPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the principal that was sent to the server during
@@ -90,7 +90,7 @@ extern class SecureCacheResponse extends java.net.CacheResponse
 	* @see #getLocalCertificateChain()
 	* @see #getPeerPrincipal()
 	*/
-	@:overload @:abstract public function getLocalPrincipal() : java.security.Principal;
+	@:overload @:public @:abstract public function getLocalPrincipal() : java.security.Principal;
 	
 	
 }

@@ -25,7 +25,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	*
 	* <p>Use {@link DatatypeFactory#newInstance()} to create a <code>DatatypeFactory</code>.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Obtain a new instance of a <code>Duration</code>
@@ -55,7 +55,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	* @throws NullPointerException if <code>lexicalRepresentation</code> is <code>null</code>.
 	*/
-	@:overload override public function newDuration(lexicalRepresentation : String) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDuration(lexicalRepresentation : String) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Obtain a new instance of a <code>Duration</code>
@@ -92,7 +92,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	*
 	* @return New <code>Duration</code> representing <code>durationInMilliseconds</code>.
 	*/
-	@:overload override public function newDuration(durationInMilliseconds : haxe.Int64) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDuration(durationInMilliseconds : haxe.Int64) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Obtain a new instance of a <code>Duration</code>
@@ -121,7 +121,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @see #newDuration(boolean isPositive, BigInteger years, BigInteger months, BigInteger days,
 	*   BigInteger hours, BigInteger minutes, BigDecimal seconds)
 	*/
-	@:overload override public function newDuration(isPositive : Bool, years : java.math.BigInteger, months : java.math.BigInteger, days : java.math.BigInteger, hours : java.math.BigInteger, minutes : java.math.BigInteger, seconds : java.math.BigDecimal) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDuration(isPositive : Bool, years : java.math.BigInteger, months : java.math.BigInteger, days : java.math.BigInteger, hours : java.math.BigInteger, minutes : java.math.BigInteger, seconds : java.math.BigDecimal) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified
@@ -148,7 +148,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* if any of the fields is negative.
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	*/
-	@:overload override public function newDurationYearMonth(isPositive : Bool, year : java.math.BigInteger, month : java.math.BigInteger) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationYearMonth(isPositive : Bool, year : java.math.BigInteger, month : java.math.BigInteger) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified
@@ -168,7 +168,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws IllegalArgumentException If the values are not a valid representation of a
 	* <code>Duration</code>: if any of the fields (year, month) is negative.
 	*/
-	@:overload override public function newDurationYearMonth(isPositive : Bool, year : Int, month : Int) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationYearMonth(isPositive : Bool, year : Int, month : Int) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> by parsing its <code>String</code> representation,
@@ -194,7 +194,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	* @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
 	*/
-	@:overload override public function newDurationYearMonth(lexicalRepresentation : String) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationYearMonth(lexicalRepresentation : String) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified milliseconds as defined in
@@ -230,7 +230,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	*
 	* @return New <code>Duration</code> created using the specified <code>durationInMilliseconds</code>.
 	*/
-	@:overload override public function newDurationYearMonth(durationInMilliseconds : haxe.Int64) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationYearMonth(durationInMilliseconds : haxe.Int64) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> by parsing its <code>String</code> representation,
@@ -256,7 +256,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	* @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
 	*/
-	@:overload override public function newDurationDayTime(lexicalRepresentation : String) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationDayTime(lexicalRepresentation : String) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified milliseconds as defined in
@@ -295,7 +295,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @see <a href="http://www.w3.org/TR/xpath-datamodel#dayTimeDuration">
 	*   XQuery 1.0 and XPath 2.0 Data Model, xdt:dayTimeDuration</a>
 	*/
-	@:overload override public function newDurationDayTime(durationInMilliseconds : haxe.Int64) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationDayTime(durationInMilliseconds : haxe.Int64) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified
@@ -329,7 +329,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* if any of the fields is negative.
 	* @throws UnsupportedOperationException If implementation cannot support requested values.
 	*/
-	@:overload override public function newDurationDayTime(isPositive : Bool, day : java.math.BigInteger, hour : java.math.BigInteger, minute : java.math.BigInteger, second : java.math.BigInteger) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationDayTime(isPositive : Bool, day : java.math.BigInteger, hour : java.math.BigInteger, minute : java.math.BigInteger, second : java.math.BigInteger) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified
@@ -356,7 +356,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws IllegalArgumentException If the values are not a valid representation of a
 	* <code>Duration</code>: if any of the fields (day, hour, ...) is negative.
 	*/
-	@:overload override public function newDurationDayTime(isPositive : Bool, day : Int, hour : Int, minute : Int, second : Int) : javax.xml.datatype.Duration;
+	@:overload @:public override public function newDurationDayTime(isPositive : Bool, day : Int, hour : Int, minute : Int, second : Int) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Create a new instance of an <code>XMLGregorianCalendar</code>.</p>
@@ -366,7 +366,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @return New <code>XMLGregorianCalendar</code> with all date/time datatype fields set to
 	*   {@link DatatypeConstants#FIELD_UNDEFINED} or null.
 	*/
-	@:overload override public function newXMLGregorianCalendar() : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public override public function newXMLGregorianCalendar() : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create a new XMLGregorianCalendar by parsing the String as a lexical representation.</p>
@@ -393,7 +393,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws IllegalArgumentException If the <code>lexicalRepresentation</code> is not a valid <code>XMLGregorianCalendar</code>.
 	* @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
 	*/
-	@:overload override public function newXMLGregorianCalendar(lexicalRepresentation : String) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public override public function newXMLGregorianCalendar(lexicalRepresentation : String) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Create an <code>XMLGregorianCalendar</code> from a {@link GregorianCalendar}.</p>
@@ -457,7 +457,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	*
 	* @throws NullPointerException If <code>cal</code> is <code>null</code>.
 	*/
-	@:overload override public function newXMLGregorianCalendar(cal : java.util.GregorianCalendar) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public override public function newXMLGregorianCalendar(cal : java.util.GregorianCalendar) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Constructor allowing for complete value spaces allowed by
@@ -484,7 +484,7 @@ extern class DatatypeFactoryImpl extends javax.xml.datatype.DatatypeFactory
 	* @throws NullPointerException If any parameters are <code>null</code>.
 	*
 	*/
-	@:overload override public function newXMLGregorianCalendar(year : java.math.BigInteger, month : Int, day : Int, hour : Int, minute : Int, second : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public override public function newXMLGregorianCalendar(year : java.math.BigInteger, month : Int, day : Int, hour : Int, minute : Int, second : Int, fractionalSecond : java.math.BigDecimal, timezone : Int) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

@@ -40,7 +40,7 @@ extern interface JMXAuthenticator
 	* @exception SecurityException if the server cannot authenticate the user
 	* with the provided credentials.
 	*/
-	@:overload public function authenticate(credentials : Dynamic) : javax.security.auth.Subject;
+	@:overload @:public public function authenticate(credentials : Dynamic) : javax.security.auth.Subject;
 	
 	
 }

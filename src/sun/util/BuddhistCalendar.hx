@@ -29,21 +29,21 @@ extern class BuddhistCalendar extends java.util.GregorianCalendar
 	* Constructs a default BuddhistCalendar using the current time
 	* in the default time zone with the default locale.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a BuddhistCalendar based on the current time
 	* in the given time zone with the default locale.
 	* @param zone the given time zone.
 	*/
-	@:overload public function new(zone : java.util.TimeZone) : Void;
+	@:overload @:public public function new(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Constructs a BuddhistCalendar based on the current time
 	* in the default time zone with the given locale.
 	* @param aLocale the given locale.
 	*/
-	@:overload public function new(aLocale : java.util.Locale) : Void;
+	@:overload @:public public function new(aLocale : java.util.Locale) : Void;
 	
 	/**
 	* Constructs a BuddhistCalendar based on the current time
@@ -51,41 +51,41 @@ extern class BuddhistCalendar extends java.util.GregorianCalendar
 	* @param zone the given time zone.
 	* @param aLocale the given locale.
 	*/
-	@:overload public function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
+	@:overload @:public public function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
 	
 	/**
 	* Compares this BuddhistCalendar to an object reference.
 	* @param obj the object reference with which to compare
 	* @return true if this object is equal to <code>obj</code>; false otherwise
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Override hashCode.
 	* Generates the hash code for the BuddhistCalendar object
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Gets the value for a given time field.
 	* @param field the given time field.
 	* @return the value for the given time field.
 	*/
-	@:overload override public function get(field : Int) : Int;
+	@:overload @:public override public function get(field : Int) : Int;
 	
 	/**
 	* Sets the time field with the given value.
 	* @param field the given time field.
 	* @param value the value to be set for the given time field.
 	*/
-	@:overload override public function set(field : Int, value : Int) : Void;
+	@:overload @:public override public function set(field : Int, value : Int) : Void;
 	
 	/**
 	* Adds the specified (signed) amount of time to the given time field.
 	* @param field the time field.
 	* @param amount the amount of date or time to be added to the field.
 	*/
-	@:overload override public function add(field : Int, amount : Int) : Void;
+	@:overload @:public override public function add(field : Int, amount : Int) : Void;
 	
 	/**
 	* Add to field a signed amount without changing larger fields.
@@ -94,11 +94,11 @@ extern class BuddhistCalendar extends java.util.GregorianCalendar
 	* @param field the time field.
 	* @param amount the signed amount to add to <code>field</code>.
 	*/
-	@:overload override public function roll(field : Int, amount : Int) : Void;
+	@:overload @:public override public function roll(field : Int, amount : Int) : Void;
 	
-	@:overload override public function getDisplayName(field : Int, style : Int, locale : java.util.Locale) : String;
+	@:overload @:public override public function getDisplayName(field : Int, style : Int, locale : java.util.Locale) : String;
 	
-	@:overload override public function getDisplayNames(field : Int, style : Int, locale : java.util.Locale) : java.util.Map<String, Null<Int>>;
+	@:overload @:public override public function getDisplayNames(field : Int, style : Int, locale : java.util.Locale) : java.util.Map<String, Null<Int>>;
 	
 	/**
 	* Returns the maximum value that this field could have, given the
@@ -109,9 +109,9 @@ extern class BuddhistCalendar extends java.util.GregorianCalendar
 	* @param field the field to determine the maximum of
 	* @return the maximum of the given field for the current date of this Calendar
 	*/
-	@:overload override public function getActualMaximum(field : Int) : Int;
+	@:overload @:public override public function getActualMaximum(field : Int) : Int;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

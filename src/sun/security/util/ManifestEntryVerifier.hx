@@ -28,7 +28,7 @@ extern class ManifestEntryVerifier
 	/**
 	* Create a new ManifestEntryVerifier object.
 	*/
-	@:overload public function new(man : java.util.jar.Manifest) : Void;
+	@:overload @:public public function new(man : java.util.jar.Manifest) : Void;
 	
 	/**
 	* Find the hashes in the
@@ -36,22 +36,22 @@ extern class ManifestEntryVerifier
 	* objects to calculate the hashes on the fly. If name is
 	* null it signifies that update/verify should ignore this entry.
 	*/
-	@:overload public function setEntry(name : String, entry : java.util.jar.JarEntry) : Void;
+	@:overload @:public public function setEntry(name : String, entry : java.util.jar.JarEntry) : Void;
 	
 	/**
 	* update the digests for the digests we are interested in
 	*/
-	@:overload public function update(buffer : java.StdTypes.Int8) : Void;
+	@:overload @:public public function update(buffer : java.StdTypes.Int8) : Void;
 	
 	/**
 	* update the digests for the digests we are interested in
 	*/
-	@:overload public function update(buffer : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function update(buffer : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* get the JarEntry for this object
 	*/
-	@:overload public function getEntry() : java.util.jar.JarEntry;
+	@:overload @:public public function getEntry() : java.util.jar.JarEntry;
 	
 	/**
 	* go through all the digests, calculating the final digest
@@ -61,7 +61,7 @@ extern class ManifestEntryVerifier
 	*
 	*
 	*/
-	@:overload public function verify(verifiedSigners : java.util.Hashtable<String, java.NativeArray<java.security.CodeSigner>>, sigFileSigners : java.util.Hashtable<String, java.NativeArray<java.security.CodeSigner>>) : java.NativeArray<java.security.CodeSigner>;
+	@:overload @:public public function verify(verifiedSigners : java.util.Hashtable<String, java.NativeArray<java.security.CodeSigner>>, sigFileSigners : java.util.Hashtable<String, java.NativeArray<java.security.CodeSigner>>) : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }

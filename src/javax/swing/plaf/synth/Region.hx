@@ -32,73 +32,73 @@ extern class Region
 	* To bind a style to this <code>Region</code> use the name
 	* <code>ArrowButton</code>.
 	*/
-	public static var ARROW_BUTTON(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var ARROW_BUTTON(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Button region. To bind a style to this <code>Region</code> use the name
 	* <code>Button</code>.
 	*/
-	public static var BUTTON(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var BUTTON(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* CheckBox region. To bind a style to this <code>Region</code> use the name
 	* <code>CheckBox</code>.
 	*/
-	public static var CHECK_BOX(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var CHECK_BOX(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* CheckBoxMenuItem region. To bind a style to this <code>Region</code> use
 	* the name <code>CheckBoxMenuItem</code>.
 	*/
-	public static var CHECK_BOX_MENU_ITEM(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var CHECK_BOX_MENU_ITEM(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ColorChooser region. To bind a style to this <code>Region</code> use
 	* the name <code>ColorChooser</code>.
 	*/
-	public static var COLOR_CHOOSER(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var COLOR_CHOOSER(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ComboBox region. To bind a style to this <code>Region</code> use
 	* the name <code>ComboBox</code>.
 	*/
-	public static var COMBO_BOX(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var COMBO_BOX(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* DesktopPane region. To bind a style to this <code>Region</code> use
 	* the name <code>DesktopPane</code>.
 	*/
-	public static var DESKTOP_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var DESKTOP_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* DesktopIcon region. To bind a style to this <code>Region</code> use
 	* the name <code>DesktopIcon</code>.
 	*/
-	public static var DESKTOP_ICON(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var DESKTOP_ICON(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* EditorPane region. To bind a style to this <code>Region</code> use
 	* the name <code>EditorPane</code>.
 	*/
-	public static var EDITOR_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var EDITOR_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* FileChooser region. To bind a style to this <code>Region</code> use
 	* the name <code>FileChooser</code>.
 	*/
-	public static var FILE_CHOOSER(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var FILE_CHOOSER(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* FormattedTextField region. To bind a style to this <code>Region</code> use
 	* the name <code>FormattedTextField</code>.
 	*/
-	public static var FORMATTED_TEXT_FIELD(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var FORMATTED_TEXT_FIELD(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* InternalFrame region. To bind a style to this <code>Region</code> use
 	* the name <code>InternalFrame</code>.
 	*/
-	public static var INTERNAL_FRAME(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var INTERNAL_FRAME(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* TitlePane of an InternalFrame. The TitlePane typically
@@ -106,109 +106,109 @@ extern class Region
 	* To bind a style to this <code>Region</code> use the name
 	* <code>InternalFrameTitlePane</code>.
 	*/
-	public static var INTERNAL_FRAME_TITLE_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var INTERNAL_FRAME_TITLE_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Label region. To bind a style to this <code>Region</code> use the name
 	* <code>Label</code>.
 	*/
-	public static var LABEL(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var LABEL(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* List region. To bind a style to this <code>Region</code> use the name
 	* <code>List</code>.
 	*/
-	public static var LIST(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var LIST(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Menu region. To bind a style to this <code>Region</code> use the name
 	* <code>Menu</code>.
 	*/
-	public static var MENU(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var MENU(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* MenuBar region. To bind a style to this <code>Region</code> use the name
 	* <code>MenuBar</code>.
 	*/
-	public static var MENU_BAR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var MENU_BAR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* MenuItem region. To bind a style to this <code>Region</code> use the name
 	* <code>MenuItem</code>.
 	*/
-	public static var MENU_ITEM(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var MENU_ITEM(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Accelerator region of a MenuItem. To bind a style to this
 	* <code>Region</code> use the name <code>MenuItemAccelerator</code>.
 	*/
-	public static var MENU_ITEM_ACCELERATOR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var MENU_ITEM_ACCELERATOR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* OptionPane region. To bind a style to this <code>Region</code> use
 	* the name <code>OptionPane</code>.
 	*/
-	public static var OPTION_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var OPTION_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Panel region. To bind a style to this <code>Region</code> use the name
 	* <code>Panel</code>.
 	*/
-	public static var PANEL(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var PANEL(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* PasswordField region. To bind a style to this <code>Region</code> use
 	* the name <code>PasswordField</code>.
 	*/
-	public static var PASSWORD_FIELD(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var PASSWORD_FIELD(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* PopupMenu region. To bind a style to this <code>Region</code> use
 	* the name <code>PopupMenu</code>.
 	*/
-	public static var POPUP_MENU(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var POPUP_MENU(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* PopupMenuSeparator region. To bind a style to this <code>Region</code>
 	* use the name <code>PopupMenuSeparator</code>.
 	*/
-	public static var POPUP_MENU_SEPARATOR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var POPUP_MENU_SEPARATOR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ProgressBar region. To bind a style to this <code>Region</code>
 	* use the name <code>ProgressBar</code>.
 	*/
-	public static var PROGRESS_BAR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var PROGRESS_BAR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* RadioButton region. To bind a style to this <code>Region</code>
 	* use the name <code>RadioButton</code>.
 	*/
-	public static var RADIO_BUTTON(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var RADIO_BUTTON(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* RegionButtonMenuItem region. To bind a style to this <code>Region</code>
 	* use the name <code>RadioButtonMenuItem</code>.
 	*/
-	public static var RADIO_BUTTON_MENU_ITEM(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var RADIO_BUTTON_MENU_ITEM(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* RootPane region. To bind a style to this <code>Region</code> use
 	* the name <code>RootPane</code>.
 	*/
-	public static var ROOT_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var ROOT_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ScrollBar region. To bind a style to this <code>Region</code> use
 	* the name <code>ScrollBar</code>.
 	*/
-	public static var SCROLL_BAR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SCROLL_BAR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Track of the ScrollBar. To bind a style to this <code>Region</code> use
 	* the name <code>ScrollBarTrack</code>.
 	*/
-	public static var SCROLL_BAR_TRACK(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SCROLL_BAR_TRACK(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Thumb of the ScrollBar. The thumb is the region of the ScrollBar
@@ -216,164 +216,164 @@ extern class Region
 	* currently visible. To bind a style to this <code>Region</code> use
 	* the name <code>ScrollBarThumb</code>.
 	*/
-	public static var SCROLL_BAR_THUMB(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SCROLL_BAR_THUMB(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ScrollPane region. To bind a style to this <code>Region</code> use
 	* the name <code>ScrollPane</code>.
 	*/
-	public static var SCROLL_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SCROLL_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Separator region. To bind a style to this <code>Region</code> use
 	* the name <code>Separator</code>.
 	*/
-	public static var SEPARATOR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SEPARATOR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Slider region. To bind a style to this <code>Region</code> use
 	* the name <code>Slider</code>.
 	*/
-	public static var SLIDER(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SLIDER(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Track of the Slider. To bind a style to this <code>Region</code> use
 	* the name <code>SliderTrack</code>.
 	*/
-	public static var SLIDER_TRACK(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SLIDER_TRACK(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Thumb of the Slider. The thumb of the Slider identifies the current
 	* value. To bind a style to this <code>Region</code> use the name
 	* <code>SliderThumb</code>.
 	*/
-	public static var SLIDER_THUMB(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SLIDER_THUMB(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Spinner region. To bind a style to this <code>Region</code> use the name
 	* <code>Spinner</code>.
 	*/
-	public static var SPINNER(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SPINNER(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* SplitPane region. To bind a style to this <code>Region</code> use the name
 	* <code>SplitPane</code>.
 	*/
-	public static var SPLIT_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SPLIT_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Divider of the SplitPane. To bind a style to this <code>Region</code>
 	* use the name <code>SplitPaneDivider</code>.
 	*/
-	public static var SPLIT_PANE_DIVIDER(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var SPLIT_PANE_DIVIDER(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* TabbedPane region. To bind a style to this <code>Region</code> use
 	* the name <code>TabbedPane</code>.
 	*/
-	public static var TABBED_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TABBED_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Region of a TabbedPane for one tab. To bind a style to this
 	* <code>Region</code> use the name <code>TabbedPaneTab</code>.
 	*/
-	public static var TABBED_PANE_TAB(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TABBED_PANE_TAB(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Region of a TabbedPane containing the tabs. To bind a style to this
 	* <code>Region</code> use the name <code>TabbedPaneTabArea</code>.
 	*/
-	public static var TABBED_PANE_TAB_AREA(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TABBED_PANE_TAB_AREA(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Region of a TabbedPane containing the content. To bind a style to this
 	* <code>Region</code> use the name <code>TabbedPaneContent</code>.
 	*/
-	public static var TABBED_PANE_CONTENT(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TABBED_PANE_CONTENT(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Table region. To bind a style to this <code>Region</code> use
 	* the name <code>Table</code>.
 	*/
-	public static var TABLE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TABLE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* TableHeader region. To bind a style to this <code>Region</code> use
 	* the name <code>TableHeader</code>.
 	*/
-	public static var TABLE_HEADER(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TABLE_HEADER(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* TextArea region. To bind a style to this <code>Region</code> use
 	* the name <code>TextArea</code>.
 	*/
-	public static var TEXT_AREA(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TEXT_AREA(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* TextField region. To bind a style to this <code>Region</code> use
 	* the name <code>TextField</code>.
 	*/
-	public static var TEXT_FIELD(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TEXT_FIELD(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* TextPane region. To bind a style to this <code>Region</code> use
 	* the name <code>TextPane</code>.
 	*/
-	public static var TEXT_PANE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TEXT_PANE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ToggleButton region. To bind a style to this <code>Region</code> use
 	* the name <code>ToggleButton</code>.
 	*/
-	public static var TOGGLE_BUTTON(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TOGGLE_BUTTON(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ToolBar region. To bind a style to this <code>Region</code> use
 	* the name <code>ToolBar</code>.
 	*/
-	public static var TOOL_BAR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TOOL_BAR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Region of the ToolBar containing the content. To bind a style to this
 	* <code>Region</code> use the name <code>ToolBarContent</code>.
 	*/
-	public static var TOOL_BAR_CONTENT(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TOOL_BAR_CONTENT(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Region for the Window containing the ToolBar. To bind a style to this
 	* <code>Region</code> use the name <code>ToolBarDragWindow</code>.
 	*/
-	public static var TOOL_BAR_DRAG_WINDOW(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TOOL_BAR_DRAG_WINDOW(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ToolTip region. To bind a style to this <code>Region</code> use
 	* the name <code>ToolTip</code>.
 	*/
-	public static var TOOL_TIP(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TOOL_TIP(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* ToolBar separator region. To bind a style to this <code>Region</code> use
 	* the name <code>ToolBarSeparator</code>.
 	*/
-	public static var TOOL_BAR_SEPARATOR(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TOOL_BAR_SEPARATOR(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Tree region. To bind a style to this <code>Region</code> use the name
 	* <code>Tree</code>.
 	*/
-	public static var TREE(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TREE(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Region of the Tree for one cell. To bind a style to this
 	* <code>Region</code> use the name <code>TreeCell</code>.
 	*/
-	public static var TREE_CELL(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var TREE_CELL(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Viewport region. To bind a style to this <code>Region</code> use
 	* the name <code>Viewport</code>.
 	*/
-	public static var VIEWPORT(default, null) : javax.swing.plaf.synth.Region;
+	@:public @:static @:final public static var VIEWPORT(default, null) : javax.swing.plaf.synth.Region;
 	
 	/**
 	* Creates a Region with the specified name. This should only be
@@ -386,7 +386,7 @@ extern class Region
 	*           if this is a subregion.
 	* @param subregion Whether or not this is a subregion.
 	*/
-	@:overload private function new(name : String, ui : String, subregion : Bool) : Void;
+	@:overload @:protected private function new(name : String, ui : String, subregion : Bool) : Void;
 	
 	/**
 	* Returns true if the Region is a subregion of a Component, otherwise
@@ -396,21 +396,21 @@ extern class Region
 	*
 	* @return true if the Region is a subregion of a Component.
 	*/
-	@:overload public function isSubregion() : Bool;
+	@:overload @:public public function isSubregion() : Bool;
 	
 	/**
 	* Returns the name of the region.
 	*
 	* @return name of the Region.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the name of the Region.
 	*
 	* @return name of the Region.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

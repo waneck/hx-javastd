@@ -29,11 +29,11 @@ extern class JavaSimpleType extends com.sun.tools.internal.ws.processor.model.ja
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : String, initString : String) : Void;
+	@:overload @:public public function new(name : String, initString : String) : Void;
 	
-	@:overload public function new(jtype : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeAndAnnotation) : Void;
+	@:overload @:public public function new(jtype : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeAndAnnotation) : Void;
 	
 	
 }

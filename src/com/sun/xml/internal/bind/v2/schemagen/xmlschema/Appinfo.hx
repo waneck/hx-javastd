@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Appinfo extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function source(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Appinfo;
+	@:overload @:public public function source(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Appinfo;
 	
 	
 }

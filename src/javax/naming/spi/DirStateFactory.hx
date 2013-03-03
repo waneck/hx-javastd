@@ -83,7 +83,7 @@ extern interface DirStateFactory extends javax.naming.spi.StateFactory
 	*
 	* @see DirectoryManager#getStateToBind
 	*/
-	@:overload public function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, inAttrs : javax.naming.directory.Attributes) : javax.naming.spi.DirStateFactory.DirStateFactory_Result;
+	@:overload @:public public function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, inAttrs : javax.naming.directory.Attributes) : javax.naming.spi.DirStateFactory.DirStateFactory_Result;
 	
 	
 }
@@ -99,19 +99,19 @@ extern interface DirStateFactory extends javax.naming.spi.StateFactory
 	* @param obj The possibly null object to be bound.
 	* @param outAttrs The possibly null attributes to be bound.
 	*/
-	@:overload public function new(obj : Dynamic, outAttrs : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function new(obj : Dynamic, outAttrs : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Retrieves the object to be bound.
 	* @return The possibly null object to be bound.
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	/**
 	* Retrieves the attributes to be bound.
 	* @return The possibly null attributes to be bound.
 	*/
-	@:overload public function getAttributes() : javax.naming.directory.Attributes;
+	@:overload @:public public function getAttributes() : javax.naming.directory.Attributes;
 	
 	
 }

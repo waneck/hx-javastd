@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class LocalResolverImpl implements com.sun.corba.se.spi.resolver.LocalResolver
 {
-	@:overload @:synchronized public function resolve(name : String) : org.omg.CORBA.Object;
+	@:overload @:public @:synchronized public function resolve(name : String) : org.omg.CORBA.Object;
 	
-	@:overload @:synchronized public function list() : java.util.Set<Dynamic>;
+	@:overload @:public @:synchronized public function list() : java.util.Set<Dynamic>;
 	
-	@:overload @:synchronized public function register(name : String, closure : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
+	@:overload @:public @:synchronized public function register(name : String, closure : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
 	
 	
 }

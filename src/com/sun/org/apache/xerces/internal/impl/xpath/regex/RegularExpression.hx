@@ -25,7 +25,7 @@ extern class RegularExpression implements java.io.Serializable
 	*
 	* @return true if the target is matched to this regular expression.
 	*/
-	@:overload public function matches(target : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public public function matches(target : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	/**
 	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern
@@ -35,7 +35,7 @@ extern class RegularExpression implements java.io.Serializable
 	* @param end  End offset +1 of the range.
 	* @return true if the target is matched to this regular expression.
 	*/
-	@:overload public function matches(target : java.NativeArray<java.StdTypes.Char16>, start : Int, end : Int) : Bool;
+	@:overload @:public public function matches(target : java.NativeArray<java.StdTypes.Char16>, start : Int, end : Int) : Bool;
 	
 	/**
 	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
@@ -43,43 +43,7 @@ extern class RegularExpression implements java.io.Serializable
 	* @param match A Match instance for storing matching result.
 	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
 	*/
-	@:overload public function matches(target : java.NativeArray<java.StdTypes.Char16>, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
-	
-	/**
-	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern
-	* in specified range or not.
-	*
-	* @param start Start offset of the range.
-	* @param end  End offset +1 of the range.
-	* @param match A Match instance for storing matching result.
-	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
-	*/
-	@:overload public function matches(target : java.NativeArray<java.StdTypes.Char16>, start : Int, end : Int, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
-	
-	/**
-	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
-	*
-	* @return true if the target is matched to this regular expression.
-	*/
-	@:overload public function matches(target : String) : Bool;
-	
-	/**
-	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern
-	* in specified range or not.
-	*
-	* @param start Start offset of the range.
-	* @param end  End offset +1 of the range.
-	* @return true if the target is matched to this regular expression.
-	*/
-	@:overload public function matches(target : String, start : Int, end : Int) : Bool;
-	
-	/**
-	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
-	*
-	* @param match A Match instance for storing matching result.
-	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
-	*/
-	@:overload public function matches(target : String, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
+	@:overload @:public public function matches(target : java.NativeArray<java.StdTypes.Char16>, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
 	
 	/**
 	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern
@@ -90,14 +54,24 @@ extern class RegularExpression implements java.io.Serializable
 	* @param match A Match instance for storing matching result.
 	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
 	*/
-	@:overload public function matches(target : String, start : Int, end : Int, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
+	@:overload @:public public function matches(target : java.NativeArray<java.StdTypes.Char16>, start : Int, end : Int, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
 	
 	/**
 	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
 	*
 	* @return true if the target is matched to this regular expression.
 	*/
-	@:overload public function matches(target : java.text.CharacterIterator) : Bool;
+	@:overload @:public public function matches(target : String) : Bool;
+	
+	/**
+	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern
+	* in specified range or not.
+	*
+	* @param start Start offset of the range.
+	* @param end  End offset +1 of the range.
+	* @return true if the target is matched to this regular expression.
+	*/
+	@:overload @:public public function matches(target : String, start : Int, end : Int) : Bool;
 	
 	/**
 	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
@@ -105,7 +79,33 @@ extern class RegularExpression implements java.io.Serializable
 	* @param match A Match instance for storing matching result.
 	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
 	*/
-	@:overload public function matches(target : java.text.CharacterIterator, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
+	@:overload @:public public function matches(target : String, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
+	
+	/**
+	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern
+	* in specified range or not.
+	*
+	* @param start Start offset of the range.
+	* @param end  End offset +1 of the range.
+	* @param match A Match instance for storing matching result.
+	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
+	*/
+	@:overload @:public public function matches(target : String, start : Int, end : Int, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
+	
+	/**
+	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
+	*
+	* @return true if the target is matched to this regular expression.
+	*/
+	@:overload @:public public function matches(target : java.text.CharacterIterator) : Bool;
+	
+	/**
+	* Checks whether the <var>target</var> text <strong>contains</strong> this pattern or not.
+	*
+	* @param match A Match instance for storing matching result.
+	* @return Offset of the start position in <VAR>target</VAR>; or -1 if not match.
+	*/
+	@:overload @:public public function matches(target : java.text.CharacterIterator, match : com.sun.org.apache.xerces.internal.impl.xpath.regex.Match) : Bool;
 	
 	/**
 	* Creates a new RegularExpression instance.
@@ -113,7 +113,7 @@ extern class RegularExpression implements java.io.Serializable
 	* @param regex A regular expression
 	* @exception org.apache.xerces.utils.regex.ParseException <VAR>regex</VAR> is not conforming to the syntax.
 	*/
-	@:overload public function new(regex : String) : Void;
+	@:overload @:public public function new(regex : String) : Void;
 	
 	/**
 	* Creates a new RegularExpression instance with options.
@@ -122,7 +122,7 @@ extern class RegularExpression implements java.io.Serializable
 	* @param options A String consisted of "i" "m" "s" "u" "w" "," "X"
 	* @exception org.apache.xerces.utils.regex.ParseException <VAR>regex</VAR> is not conforming to the syntax.
 	*/
-	@:overload public function new(regex : String, options : String) : Void;
+	@:overload @:public public function new(regex : String, options : String) : Void;
 	
 	/**
 	* Creates a new RegularExpression instance with options.
@@ -131,31 +131,31 @@ extern class RegularExpression implements java.io.Serializable
 	* @param options A String consisted of "i" "m" "s" "u" "w" "," "X"
 	* @exception org.apache.xerces.utils.regex.ParseException <VAR>regex</VAR> is not conforming to the syntax.
 	*/
-	@:overload public function new(regex : String, options : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(regex : String, options : String, locale : java.util.Locale) : Void;
 	
 	/**
 	*
 	*/
-	@:overload public function setPattern(newPattern : String) : Void;
+	@:overload @:public public function setPattern(newPattern : String) : Void;
 	
-	@:overload public function setPattern(newPattern : String, locale : java.util.Locale) : Void;
-	
-	/**
-	*
-	*/
-	@:overload public function setPattern(newPattern : String, options : String) : Void;
-	
-	@:overload public function setPattern(newPattern : String, options : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function setPattern(newPattern : String, locale : java.util.Locale) : Void;
 	
 	/**
 	*
 	*/
-	@:overload public function getPattern() : String;
+	@:overload @:public public function setPattern(newPattern : String, options : String) : Void;
+	
+	@:overload @:public public function setPattern(newPattern : String, options : String, locale : java.util.Locale) : Void;
+	
+	/**
+	*
+	*/
+	@:overload @:public public function getPattern() : String;
 	
 	/**
 	* Represents this instence in String.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a option string.
@@ -165,24 +165,24 @@ extern class RegularExpression implements java.io.Serializable
 	* @see #RegularExpression(java.lang.String,java.lang.String)
 	* @see #setPattern(java.lang.String,java.lang.String)
 	*/
-	@:overload public function getOptions() : String;
+	@:overload @:public public function getOptions() : String;
 	
 	/**
 	*  Return true if patterns are the same and the options are equivalent.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	*
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return the number of regular expression groups.
 	* This method returns 1 when the regular expression has no capturing-parenthesis.
 	*
 	*/
-	@:overload public function getNumberOfGroups() : Int;
+	@:overload @:public public function getNumberOfGroups() : Int;
 	
 	
 }

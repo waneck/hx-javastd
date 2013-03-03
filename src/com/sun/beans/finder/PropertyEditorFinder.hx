@@ -25,13 +25,13 @@ package com.sun.beans.finder;
 */
 extern class PropertyEditorFinder extends com.sun.beans.finder.InstanceFinder<java.beans.PropertyEditor>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function register(type : Class<Dynamic>, editor : Class<Dynamic>) : Void;
+	@:overload @:public public function register(type : Class<Dynamic>, editor : Class<Dynamic>) : Void;
 	
-	@:overload override public function find(type : Class<Dynamic>) : java.beans.PropertyEditor;
+	@:overload @:public override public function find(type : Class<Dynamic>) : java.beans.PropertyEditor;
 	
-	@:overload override private function instantiate(type : Class<Dynamic>, prefix : String, name : String) : java.beans.PropertyEditor;
+	@:overload @:protected override private function instantiate(type : Class<Dynamic>, prefix : String, name : String) : java.beans.PropertyEditor;
 	
 	
 }

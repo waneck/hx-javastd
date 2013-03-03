@@ -33,12 +33,12 @@ package javax.management;
 @:require(java5) @:internal extern class BooleanValueExp extends javax.management.QueryEval implements javax.management.ValueExp
 {
 	/** Returns the  Boolean object representing the value of the BooleanValueExp object.*/
-	@:overload public function getValue() : Null<Bool>;
+	@:overload @:public public function getValue() : Null<Bool>;
 	
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Applies the ValueExp on a MBean.
@@ -52,9 +52,9 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public override public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	
 }

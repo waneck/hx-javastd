@@ -27,15 +27,15 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class DOMSignatureMethod extends org.jcp.xml.dsig.internal.dom.DOMStructure implements javax.xml.crypto.dsig.SignatureMethod
 {
-	@:overload @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:public @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
 	
 	/**
 	* This method invokes the abstract {@link #marshalParams marshalParams}
 	* method to marshal any algorithm-specific parameters.
 	*/
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Indicates whether a specified feature is supported.
@@ -45,44 +45,44 @@ extern class DOMSignatureMethod extends org.jcp.xml.dsig.internal.dom.DOMStructu
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public @:public @:public override public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Returns the algorithm URI of this <code>AlgorithmMethod</code>.
 	*
 	* @return the algorithm URI of this <code>AlgorithmMethod</code>
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public @:public public function getAlgorithm() : String;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMSignatureMethod$SHA1withRSA') @:internal extern class DOMSignatureMethod_SHA1withRSA extends org.jcp.xml.dsig.internal.dom.DOMSignatureMethod
 {
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMSignatureMethod$SHA256withRSA') @:internal extern class DOMSignatureMethod_SHA256withRSA extends org.jcp.xml.dsig.internal.dom.DOMSignatureMethod
 {
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMSignatureMethod$SHA384withRSA') @:internal extern class DOMSignatureMethod_SHA384withRSA extends org.jcp.xml.dsig.internal.dom.DOMSignatureMethod
 {
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMSignatureMethod$SHA512withRSA') @:internal extern class DOMSignatureMethod_SHA512withRSA extends org.jcp.xml.dsig.internal.dom.DOMSignatureMethod
 {
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
 	
 }
 @:native('org$jcp$xml$dsig$internal$dom$DOMSignatureMethod$SHA1withDSA') @:internal extern class DOMSignatureMethod_SHA1withDSA extends org.jcp.xml.dsig.internal.dom.DOMSignatureMethod
 {
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
 	
 }

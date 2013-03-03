@@ -45,13 +45,13 @@ package javax.naming;
 	* @param  explanation     A possibly null string containing additional
 	*                         detail about this exception.
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of Malformed LinkException.
 	* All fields are initialized to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

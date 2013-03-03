@@ -46,15 +46,15 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class ElementPattern extends com.sun.xml.internal.rngom.binary.Pattern
 {
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
 	
-	@:overload override public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
+	@:overload @:public override public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
 	
-	@:overload public function getContent() : com.sun.xml.internal.rngom.binary.Pattern;
+	@:overload @:public public function getContent() : com.sun.xml.internal.rngom.binary.Pattern;
 	
-	@:overload public function getNameClass() : com.sun.xml.internal.rngom.nc.NameClass;
+	@:overload @:public public function getNameClass() : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

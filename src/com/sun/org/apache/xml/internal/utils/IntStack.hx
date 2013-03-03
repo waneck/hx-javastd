@@ -27,21 +27,21 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Copy constructor for IntStack
 	*
 	* @param v IntStack to copy
 	*/
-	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
+	@:overload @:public public function new(v : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
 	
 	/**
 	* Pushes an item onto the top of this stack.
@@ -49,7 +49,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	* @param   i   the int to be pushed onto this stack.
 	* @return  the <code>item</code> argument.
 	*/
-	@:overload public function push(i : Int) : Int;
+	@:overload @:public public function push(i : Int) : Int;
 	
 	/**
 	* Removes the object at the top of this stack and returns that
@@ -57,12 +57,12 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	*
 	* @return     The object at the top of this stack.
 	*/
-	@:overload @:final public function pop() : Int;
+	@:overload @:public @:final public function pop() : Int;
 	
 	/**
 	* Quickly pops a number of items from the stack.
 	*/
-	@:overload @:final public function quickPop(n : Int) : Void;
+	@:overload @:public @:final public function quickPop(n : Int) : Void;
 	
 	/**
 	* Looks at the object at the top of this stack without removing it
@@ -71,7 +71,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	* @return     the object at the top of this stack.
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload @:final public function peek() : Int;
+	@:overload @:public @:final public function peek() : Int;
 	
 	/**
 	* Looks at the object at the position the stack counting down n items.
@@ -80,7 +80,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	* @return     the object at n items down.
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload public function peek(n : Int) : Int;
+	@:overload @:public public function peek(n : Int) : Int;
 	
 	/**
 	* Sets an object at a the top of the statck
@@ -89,7 +89,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	* @param val object to set at the top
 	* @throws  EmptyStackException  if this stack is empty.
 	*/
-	@:overload public function setTop(val : Int) : Void;
+	@:overload @:public public function setTop(val : Int) : Void;
 	
 	/**
 	* Tests if this stack is empty.
@@ -98,7 +98,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function empty() : Bool;
+	@:require(java0) @:overload @:public public function empty() : Bool;
 	
 	/**
 	* Returns where an object is on this stack.
@@ -109,14 +109,14 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	*          object is not on the stack.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function search(o : Int) : Int;
+	@:require(java0) @:overload @:public public function search(o : Int) : Int;
 	
 	/**
 	* Returns clone of current IntStack
 	*
 	* @return clone of current IntStack
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

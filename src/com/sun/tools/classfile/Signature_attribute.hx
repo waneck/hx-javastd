@@ -25,17 +25,17 @@ package com.sun.tools.classfile;
 */
 extern class Signature_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, signature_index : Int) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, signature_index : Int) : Void;
 	
-	@:overload public function new(name_index : Int, signature_index : Int) : Void;
+	@:overload @:public public function new(name_index : Int, signature_index : Int) : Void;
 	
-	@:overload public function getSignature(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getSignature(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function getParsedSignature() : com.sun.tools.classfile.Signature;
+	@:overload @:public public function getParsedSignature() : com.sun.tools.classfile.Signature;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var signature_index(default, null) : Int;
+	@:public @:final public var signature_index(default, null) : Int;
 	
 	
 }

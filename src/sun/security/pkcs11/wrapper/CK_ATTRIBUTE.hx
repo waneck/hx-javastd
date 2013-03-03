@@ -60,59 +60,59 @@ package sun.security.pkcs11.wrapper;
 */
 extern class CK_ATTRIBUTE
 {
-	public static var TOKEN_FALSE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var TOKEN_FALSE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var SENSITIVE_FALSE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var SENSITIVE_FALSE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var EXTRACTABLE_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var EXTRACTABLE_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var ENCRYPT_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var ENCRYPT_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var DECRYPT_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var DECRYPT_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var WRAP_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var WRAP_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var UNWRAP_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var UNWRAP_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var SIGN_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var SIGN_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var VERIFY_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var VERIFY_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var SIGN_RECOVER_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var SIGN_RECOVER_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var VERIFY_RECOVER_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var VERIFY_RECOVER_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var DERIVE_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var DERIVE_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var ENCRYPT_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var ENCRYPT_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var DECRYPT_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var DECRYPT_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var WRAP_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var WRAP_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var UNWRAP_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
+	@:public @:final @:static public static var UNWRAP_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(type : haxe.Int64) : Void;
+	@:overload @:public public function new(type : haxe.Int64) : Void;
 	
-	@:overload public function new(type : haxe.Int64, pValue : Dynamic) : Void;
+	@:overload @:public public function new(type : haxe.Int64, pValue : Dynamic) : Void;
 	
-	@:overload public function new(type : haxe.Int64, value : Bool) : Void;
+	@:overload @:public public function new(type : haxe.Int64, value : Bool) : Void;
 	
-	@:overload public function new(type : haxe.Int64, value : haxe.Int64) : Void;
+	@:overload @:public public function new(type : haxe.Int64, value : haxe.Int64) : Void;
 	
-	@:overload public function new(type : haxe.Int64, value : java.math.BigInteger) : Void;
+	@:overload @:public public function new(type : haxe.Int64, value : java.math.BigInteger) : Void;
 	
-	@:overload public function getBigInteger() : java.math.BigInteger;
+	@:overload @:public public function getBigInteger() : java.math.BigInteger;
 	
-	@:overload public function getBoolean() : Bool;
+	@:overload @:public public function getBoolean() : Bool;
 	
-	@:overload public function getCharArray() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getCharArray() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getLong() : haxe.Int64;
+	@:overload @:public public function getLong() : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -120,7 +120,7 @@ extern class CK_ATTRIBUTE
 	*   CK_ATTRIBUTE_TYPE type;
 	* </PRE>
 	*/
-	public var type : haxe.Int64;
+	@:public public var type : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -129,14 +129,14 @@ extern class CK_ATTRIBUTE
 	*   CK_ULONG ulValueLen;
 	* </PRE>
 	*/
-	public var pValue : Dynamic;
+	@:public public var pValue : Dynamic;
 	
 	/**
 	* Returns the string representation of CK_ATTRIBUTE.
 	*
 	* @return the string representation of CK_ATTRIBUTE
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

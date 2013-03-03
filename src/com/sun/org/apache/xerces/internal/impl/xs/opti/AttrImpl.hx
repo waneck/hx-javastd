@@ -62,7 +62,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 extern class AttrImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.NodeImpl implements org.w3c.dom.Attr
 {
 	/** Default Constructor */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an attribute.
@@ -74,35 +74,35 @@ extern class AttrImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.No
 	* @param uri The uri binding for the associated prefix.
 	* @param value The value of the attribute.
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, prefix : String, localpart : String, rawname : String, uri : String, value : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, prefix : String, localpart : String, rawname : String, uri : String, value : String) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getSpecified() : Bool;
+	@:overload @:public public function getSpecified() : Bool;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function getNodeValue() : String;
+	@:overload @:public override public function getNodeValue() : String;
 	
-	@:overload public function getOwnerElement() : org.w3c.dom.Element;
+	@:overload @:public public function getOwnerElement() : org.w3c.dom.Element;
 	
-	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public override public function getOwnerDocument() : org.w3c.dom.Document;
 	
-	@:overload public function setValue(value : String) : Void;
+	@:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	* @since DOM Level 3
 	*/
-	@:overload public function isId() : Bool;
+	@:overload @:public public function isId() : Bool;
 	
 	/**
 	* Method getSchemaTypeInfo.
 	* @return TypeInfo
 	*/
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
 	/** NON-DOM method for debugging convenience */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -47,7 +47,7 @@ extern class KeyManagementException extends java.security.KeyException
 	* detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a KeyManagementException with the specified detail
@@ -56,7 +56,7 @@ extern class KeyManagementException extends java.security.KeyException
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Creates a <code>KeyManagementException</code> with the specified
@@ -69,7 +69,7 @@ extern class KeyManagementException extends java.security.KeyException
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>KeyManagementException</code> with the specified cause
@@ -82,7 +82,7 @@ extern class KeyManagementException extends java.security.KeyException
 	*        and indicates that the cause is nonexistent or unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

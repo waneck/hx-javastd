@@ -28,21 +28,21 @@ extern class IteratorPool implements java.io.Serializable
 	*
 	* @param original The original iterator from which all others will be cloned.
 	*/
-	@:overload public function new(original : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
+	@:overload @:public public function new(original : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
 	
 	/**
 	* Get an instance of the given object in this pool
 	*
 	* @return An instance of the given object
 	*/
-	@:overload @:synchronized public function getInstanceOrThrow() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:synchronized public function getInstanceOrThrow() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Get an instance of the given object in this pool
 	*
 	* @return An instance of the given object
 	*/
-	@:overload @:synchronized public function getInstance() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:synchronized public function getInstance() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Add an instance of the given object to the pool
@@ -50,7 +50,7 @@ extern class IteratorPool implements java.io.Serializable
 	*
 	* @param obj Object to add.
 	*/
-	@:overload @:synchronized public function freeInstance(obj : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
+	@:overload @:public @:synchronized public function freeInstance(obj : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
 	
 	
 }

@@ -54,7 +54,7 @@ package javax.naming.ldap;
 	*
 	* @return The non-null object identifier string.
 	*/
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	/**
 	* Determines the criticality of the LDAP control.
@@ -65,7 +65,7 @@ package javax.naming.ldap;
 	* and an <tt>OperationNotSupportedException</tt> will be thrown.
 	* @return true if this control is critical; false otherwise.
 	*/
-	@:overload public function isCritical() : Bool;
+	@:overload @:public public function isCritical() : Bool;
 	
 	/**
 	* Retrieves the ASN.1 BER encoded value of the LDAP control.
@@ -77,7 +77,7 @@ package javax.naming.ldap;
 	* @return A possibly null byte array representing the ASN.1 BER encoded
 	*         value of the LDAP control.
 	*/
-	@:overload public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

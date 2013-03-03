@@ -31,7 +31,7 @@ extern class MetaMessage extends javax.sound.midi.MidiMessage
 	* is used in the real-time "MIDI wire" protocol.
 	* @see MidiMessage#getStatus
 	*/
-	public static var META(default, null) : Int;
+	@:public @:static @:final public static var META(default, null) : Int;
 	
 	/**
 	* Constructs a new <code>MetaMessage</code>. The contents of
@@ -39,7 +39,7 @@ extern class MetaMessage extends javax.sound.midi.MidiMessage
 	* {@link #setMessage(int, byte[], int) setMessage}
 	* to set them subsequently.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new {@code MetaMessage} and sets the message parameters.
@@ -58,7 +58,7 @@ extern class MetaMessage extends javax.sound.midi.MidiMessage
 	* @see #getData()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(type : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:require(java7) @:overload @:public public function new(type : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Constructs a new <code>MetaMessage</code>.
@@ -67,7 +67,7 @@ extern class MetaMessage extends javax.sound.midi.MidiMessage
 	* method.
 	* @see #setMessage
 	*/
-	@:overload private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected private function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the message parameters for a <code>MetaMessage</code>.
@@ -87,13 +87,13 @@ extern class MetaMessage extends javax.sound.midi.MidiMessage
 	* @throws                  <code>InvalidMidiDataException</code>  if the
 	* parameter values do not specify a valid MIDI meta message
 	*/
-	@:overload public function setMessage(type : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public public function setMessage(type : Int, data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Obtains the type of the <code>MetaMessage</code>.
 	* @return an integer representing the <code>MetaMessage</code> type
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Obtains a copy of the data for the meta message.  The returned
@@ -105,14 +105,14 @@ extern class MetaMessage extends javax.sound.midi.MidiMessage
 	* @return array containing the meta message data.
 	* @see MidiMessage#getLength
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
 	* as this object.
 	* @return a clone of this instance
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

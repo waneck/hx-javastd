@@ -25,7 +25,7 @@ package sun.misc;
 */
 extern class CEFormatException extends java.io.IOException
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

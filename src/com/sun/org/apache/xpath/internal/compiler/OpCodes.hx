@@ -46,13 +46,13 @@ extern class OpCodes
 	* Some operators may like to have a terminator.
 	* @xsl.usage advanced
 	*/
-	public static var ENDOP(default, null) : Int;
+	@:public @:static @:final public static var ENDOP(default, null) : Int;
 	
 	/**
 	* [EMPTY]
 	* Empty slot to indicate NULL.
 	*/
-	public static var EMPTY(default, null) : Int;
+	@:public @:static @:final public static var EMPTY(default, null) : Int;
 	
 	/**
 	* [ELEMWILDCARD]
@@ -60,7 +60,7 @@ extern class OpCodes
 	* of string index in some places.
 	* @xsl.usage advanced
 	*/
-	public static var ELEMWILDCARD(default, null) : Int;
+	@:public @:static @:final public static var ELEMWILDCARD(default, null) : Int;
 	
 	/**
 	* [OP_XPATH]
@@ -76,7 +76,7 @@ extern class OpCodes
 	*  XObject
 	* @xsl.usage advanced
 	*/
-	public static var OP_XPATH(default, null) : Int;
+	@:public @:static @:final public static var OP_XPATH(default, null) : Int;
 	
 	/**
 	* [OP_OR]
@@ -88,7 +88,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_OR(default, null) : Int;
+	@:public @:static @:final public static var OP_OR(default, null) : Int;
 	
 	/**
 	* [OP_AND]
@@ -100,7 +100,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_AND(default, null) : Int;
+	@:public @:static @:final public static var OP_AND(default, null) : Int;
 	
 	/**
 	* [OP_NOTEQUALS]
@@ -112,7 +112,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_NOTEQUALS(default, null) : Int;
+	@:public @:static @:final public static var OP_NOTEQUALS(default, null) : Int;
 	
 	/**
 	* [OP_EQUALS]
@@ -124,7 +124,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_EQUALS(default, null) : Int;
+	@:public @:static @:final public static var OP_EQUALS(default, null) : Int;
 	
 	/**
 	* [OP_LTE] (less-than-or-equals)
@@ -136,7 +136,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_LTE(default, null) : Int;
+	@:public @:static @:final public static var OP_LTE(default, null) : Int;
 	
 	/**
 	* [OP_LT] (less-than)
@@ -148,7 +148,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_LT(default, null) : Int;
+	@:public @:static @:final public static var OP_LT(default, null) : Int;
 	
 	/**
 	* [OP_GTE] (greater-than-or-equals)
@@ -160,7 +160,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_GTE(default, null) : Int;
+	@:public @:static @:final public static var OP_GTE(default, null) : Int;
 	
 	/**
 	* [OP_GT] (greater-than)
@@ -172,7 +172,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_GT(default, null) : Int;
+	@:public @:static @:final public static var OP_GT(default, null) : Int;
 	
 	/**
 	* [OP_PLUS]
@@ -184,7 +184,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_PLUS(default, null) : Int;
+	@:public @:static @:final public static var OP_PLUS(default, null) : Int;
 	
 	/**
 	* [OP_MINUS]
@@ -196,7 +196,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_MINUS(default, null) : Int;
+	@:public @:static @:final public static var OP_MINUS(default, null) : Int;
 	
 	/**
 	* [OP_MULT]
@@ -208,7 +208,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_MULT(default, null) : Int;
+	@:public @:static @:final public static var OP_MULT(default, null) : Int;
 	
 	/**
 	* [OP_DIV]
@@ -220,7 +220,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_DIV(default, null) : Int;
+	@:public @:static @:final public static var OP_DIV(default, null) : Int;
 	
 	/**
 	* [OP_MOD]
@@ -232,7 +232,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_MOD(default, null) : Int;
+	@:public @:static @:final public static var OP_MOD(default, null) : Int;
 	
 	/**
 	* [OP_QUO]
@@ -244,7 +244,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_QUO(default, null) : Int;
+	@:public @:static @:final public static var OP_QUO(default, null) : Int;
 	
 	/**
 	* [OP_NEG]
@@ -255,7 +255,7 @@ extern class OpCodes
 	*  XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_NEG(default, null) : Int;
+	@:public @:static @:final public static var OP_NEG(default, null) : Int;
 	
 	/**
 	* [OP_STRING] (cast operation)
@@ -266,7 +266,7 @@ extern class OpCodes
 	*  XString
 	* @xsl.usage advanced
 	*/
-	public static var OP_STRING(default, null) : Int;
+	@:public @:static @:final public static var OP_STRING(default, null) : Int;
 	
 	/**
 	* [OP_BOOL] (cast operation)
@@ -277,7 +277,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_BOOL(default, null) : Int;
+	@:public @:static @:final public static var OP_BOOL(default, null) : Int;
 	
 	/**
 	* [OP_NUMBER] (cast operation)
@@ -288,7 +288,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var OP_NUMBER(default, null) : Int;
+	@:public @:static @:final public static var OP_NUMBER(default, null) : Int;
 	
 	/**
 	* [OP_UNION]
@@ -299,7 +299,7 @@ extern class OpCodes
 	*  XNodeSet
 	* @xsl.usage advanced
 	*/
-	public static var OP_UNION(default, null) : Int;
+	@:public @:static @:final public static var OP_UNION(default, null) : Int;
 	
 	/**
 	* [OP_LITERAL]
@@ -310,7 +310,7 @@ extern class OpCodes
 	*  XString
 	* @xsl.usage advanced
 	*/
-	public static var OP_LITERAL(default, null) : Int;
+	@:public @:static @:final public static var OP_LITERAL(default, null) : Int;
 	
 	/**
 	* [OP_VARIABLE]
@@ -322,7 +322,7 @@ extern class OpCodes
 	*  XString
 	* @xsl.usage advanced
 	*/
-	public static var OP_VARIABLE(default, null) : Int;
+	@:public @:static @:final public static var OP_VARIABLE(default, null) : Int;
 	
 	/**
 	* [OP_GROUP]
@@ -338,7 +338,7 @@ extern class OpCodes
 	*  XObject
 	* @xsl.usage advanced
 	*/
-	public static var OP_GROUP(default, null) : Int;
+	@:public @:static @:final public static var OP_GROUP(default, null) : Int;
 	
 	/**
 	* [OP_EXTFUNCTION] (Extension function.)
@@ -356,7 +356,7 @@ extern class OpCodes
 	*  XObject
 	* @xsl.usage advanced
 	*/
-	public static var OP_EXTFUNCTION(default, null) : Int;
+	@:public @:static @:final public static var OP_EXTFUNCTION(default, null) : Int;
 	
 	/**
 	* [OP_FUNCTION]
@@ -374,7 +374,7 @@ extern class OpCodes
 	*  XObject
 	* @xsl.usage advanced
 	*/
-	public static var OP_FUNCTION(default, null) : Int;
+	@:public @:static @:final public static var OP_FUNCTION(default, null) : Int;
 	
 	/**
 	* [OP_ARGUMENT] (Function argument.)
@@ -390,7 +390,7 @@ extern class OpCodes
 	*  XObject
 	* @xsl.usage advanced
 	*/
-	public static var OP_ARGUMENT(default, null) : Int;
+	@:public @:static @:final public static var OP_ARGUMENT(default, null) : Int;
 	
 	/**
 	* [OP_NUMBERLIT] (Number literal.)
@@ -401,7 +401,7 @@ extern class OpCodes
 	*  XString
 	* @xsl.usage advanced
 	*/
-	public static var OP_NUMBERLIT(default, null) : Int;
+	@:public @:static @:final public static var OP_NUMBERLIT(default, null) : Int;
 	
 	/**
 	* [OP_LOCATIONPATH]
@@ -418,7 +418,7 @@ extern class OpCodes
 	*  XNodeSet
 	* @xsl.usage advanced
 	*/
-	public static var OP_LOCATIONPATH(default, null) : Int;
+	@:public @:static @:final public static var OP_LOCATIONPATH(default, null) : Int;
 	
 	/**
 	* [OP_PREDICATE]
@@ -430,7 +430,7 @@ extern class OpCodes
 	*  XBoolean or XNumber
 	* @xsl.usage advanced
 	*/
-	public static var OP_PREDICATE(default, null) : Int;
+	@:public @:static @:final public static var OP_PREDICATE(default, null) : Int;
 	
 	/**
 	* [OP_MATCHPATTERN]
@@ -441,7 +441,7 @@ extern class OpCodes
 	*  XNodeSet
 	* @xsl.usage advanced
 	*/
-	public static var OP_MATCHPATTERN(default, null) : Int;
+	@:public @:static @:final public static var OP_MATCHPATTERN(default, null) : Int;
 	
 	/**
 	* [OP_LOCATIONPATHPATTERN]
@@ -453,7 +453,7 @@ extern class OpCodes
 	*  XNodeSet
 	* @xsl.usage advanced
 	*/
-	public static var OP_LOCATIONPATHPATTERN(default, null) : Int;
+	@:public @:static @:final public static var OP_LOCATIONPATHPATTERN(default, null) : Int;
 	
 	/**
 	* [NODETYPE_COMMENT]
@@ -464,7 +464,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_COMMENT(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_COMMENT(default, null) : Int;
 	
 	/**
 	* [NODETYPE_TEXT]
@@ -475,7 +475,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_TEXT(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_TEXT(default, null) : Int;
 	
 	/**
 	* [NODETYPE_PI]
@@ -486,7 +486,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_PI(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_PI(default, null) : Int;
 	
 	/**
 	* [NODETYPE_NODE]
@@ -497,7 +497,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_NODE(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_NODE(default, null) : Int;
 	
 	/**
 	* [NODENAME]
@@ -508,7 +508,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODENAME(default, null) : Int;
+	@:public @:static @:final public static var NODENAME(default, null) : Int;
 	
 	/**
 	* [NODETYPE_ROOT]
@@ -518,7 +518,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_ROOT(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_ROOT(default, null) : Int;
 	
 	/**
 	* [NODETYPE_ANY]
@@ -528,7 +528,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_ANYELEMENT(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_ANYELEMENT(default, null) : Int;
 	
 	/**
 	* [NODETYPE_ANY]
@@ -538,7 +538,7 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var NODETYPE_FUNCTEST(default, null) : Int;
+	@:public @:static @:final public static var NODETYPE_FUNCTEST(default, null) : Int;
 	
 	/**
 	* [FROM_stepType]
@@ -551,70 +551,70 @@ extern class OpCodes
 	*  XBoolean
 	* @xsl.usage advanced
 	*/
-	public static var AXES_START_TYPES(default, null) : Int;
+	@:public @:static @:final public static var AXES_START_TYPES(default, null) : Int;
 	
 	/** ancestor axes opcode.         */
-	public static var FROM_ANCESTORS(default, null) : Int;
+	@:public @:static @:final public static var FROM_ANCESTORS(default, null) : Int;
 	
 	/** ancestor-or-self axes opcode.         */
-	public static var FROM_ANCESTORS_OR_SELF(default, null) : Int;
+	@:public @:static @:final public static var FROM_ANCESTORS_OR_SELF(default, null) : Int;
 	
 	/** attribute axes opcode.         */
-	public static var FROM_ATTRIBUTES(default, null) : Int;
+	@:public @:static @:final public static var FROM_ATTRIBUTES(default, null) : Int;
 	
 	/** children axes opcode.         */
-	public static var FROM_CHILDREN(default, null) : Int;
+	@:public @:static @:final public static var FROM_CHILDREN(default, null) : Int;
 	
 	/** descendants axes opcode.         */
-	public static var FROM_DESCENDANTS(default, null) : Int;
+	@:public @:static @:final public static var FROM_DESCENDANTS(default, null) : Int;
 	
 	/** descendants-of-self axes opcode.         */
-	public static var FROM_DESCENDANTS_OR_SELF(default, null) : Int;
+	@:public @:static @:final public static var FROM_DESCENDANTS_OR_SELF(default, null) : Int;
 	
 	/** following axes opcode.         */
-	public static var FROM_FOLLOWING(default, null) : Int;
+	@:public @:static @:final public static var FROM_FOLLOWING(default, null) : Int;
 	
 	/** following-siblings axes opcode.         */
-	public static var FROM_FOLLOWING_SIBLINGS(default, null) : Int;
+	@:public @:static @:final public static var FROM_FOLLOWING_SIBLINGS(default, null) : Int;
 	
 	/** parent axes opcode.         */
-	public static var FROM_PARENT(default, null) : Int;
+	@:public @:static @:final public static var FROM_PARENT(default, null) : Int;
 	
 	/** preceding axes opcode.         */
-	public static var FROM_PRECEDING(default, null) : Int;
+	@:public @:static @:final public static var FROM_PRECEDING(default, null) : Int;
 	
 	/** preceding-sibling axes opcode.         */
-	public static var FROM_PRECEDING_SIBLINGS(default, null) : Int;
+	@:public @:static @:final public static var FROM_PRECEDING_SIBLINGS(default, null) : Int;
 	
 	/** self axes opcode.         */
-	public static var FROM_SELF(default, null) : Int;
+	@:public @:static @:final public static var FROM_SELF(default, null) : Int;
 	
 	/** namespace axes opcode.         */
-	public static var FROM_NAMESPACE(default, null) : Int;
+	@:public @:static @:final public static var FROM_NAMESPACE(default, null) : Int;
 	
 	/** '/' axes opcode.         */
-	public static var FROM_ROOT(default, null) : Int;
+	@:public @:static @:final public static var FROM_ROOT(default, null) : Int;
 	
 	/**
 	* For match patterns.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_ATTRIBUTE(default, null) : Int;
+	@:public @:static @:final public static var MATCH_ATTRIBUTE(default, null) : Int;
 	
 	/**
 	* For match patterns.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_ANY_ANCESTOR(default, null) : Int;
+	@:public @:static @:final public static var MATCH_ANY_ANCESTOR(default, null) : Int;
 	
 	/**
 	* For match patterns.
 	* @xsl.usage advanced
 	*/
-	public static var MATCH_IMMEDIATE_ANCESTOR(default, null) : Int;
+	@:public @:static @:final public static var MATCH_IMMEDIATE_ANCESTOR(default, null) : Int;
 	
 	/** The end of the axes types.    */
-	public static var AXES_END_TYPES(default, null) : Int;
+	@:public @:static @:final public static var AXES_END_TYPES(default, null) : Int;
 	
 	
 }

@@ -28,38 +28,38 @@ extern interface WorkQueue
 	/**
 	* This method is used to add work to the WorkQueue
 	*/
-	@:overload public function addWork(aWorkItem : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
+	@:overload @:public public function addWork(aWorkItem : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
 	
 	/**
 	* This method will return the name of the WorkQueue.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the total number of Work items added to the Queue.
 	*/
-	@:overload public function totalWorkItemsAdded() : haxe.Int64;
+	@:overload @:public public function totalWorkItemsAdded() : haxe.Int64;
 	
 	/**
 	* Returns the total number of Work items in the Queue to be processed.
 	*/
-	@:overload public function workItemsInQueue() : Int;
+	@:overload @:public public function workItemsInQueue() : Int;
 	
 	/**
 	* Returns the average time a work item is waiting in the queue before
 	* getting processed.
 	*/
-	@:overload public function averageTimeInQueue() : haxe.Int64;
+	@:overload @:public public function averageTimeInQueue() : haxe.Int64;
 	
 	/**
 	* Set the ThreadPool instance servicing this WorkQueue
 	*/
-	@:overload public function setThreadPool(aThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool) : Void;
+	@:overload @:public public function setThreadPool(aThreadPool : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool) : Void;
 	
 	/**
 	* Get the ThreadPool instance servicing this WorkQueue
 	*/
-	@:overload public function getThreadPool() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
+	@:overload @:public public function getThreadPool() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
 	
 	
 }

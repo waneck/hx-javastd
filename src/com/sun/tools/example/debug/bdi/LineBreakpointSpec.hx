@@ -32,15 +32,15 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class LineBreakpointSpec extends com.sun.tools.example.debug.bdi.BreakpointSpec
 {
-	@:overload public function lineNumber() : Int;
+	@:overload @:public public function lineNumber() : Int;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function errorMessageFor(e : java.lang.Exception) : String;
+	@:overload @:public override public function errorMessageFor(e : java.lang.Exception) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -25,22 +25,22 @@ package com.sun.tools.internal.ws.processor.model.java;
 */
 extern class JavaMethod
 {
-	@:overload public function new(name : String, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(name : String, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getReturnType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
+	@:overload @:public public function getReturnType() : com.sun.tools.internal.ws.processor.model.java.JavaType;
 	
-	@:overload public function setReturnType(returnType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
+	@:overload @:public public function setReturnType(returnType : com.sun.tools.internal.ws.processor.model.java.JavaType) : Void;
 	
-	@:overload public function addParameter(param : com.sun.tools.internal.ws.processor.model.java.JavaParameter) : Void;
+	@:overload @:public public function addParameter(param : com.sun.tools.internal.ws.processor.model.java.JavaParameter) : Void;
 	
-	@:overload public function getParametersList() : java.util.List<com.sun.tools.internal.ws.processor.model.java.JavaParameter>;
+	@:overload @:public public function getParametersList() : java.util.List<com.sun.tools.internal.ws.processor.model.java.JavaParameter>;
 	
-	@:overload public function addException(exception : String) : Void;
+	@:overload @:public public function addException(exception : String) : Void;
 	
 	/** TODO: NB uses it, remove it once we expose it thru some API **/
-	@:overload public function getExceptions() : java.util.Iterator<String>;
+	@:overload @:public public function getExceptions() : java.util.Iterator<String>;
 	
 	
 }

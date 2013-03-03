@@ -37,7 +37,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*
 	* @return the name of this enum constant
 	*/
-	@:overload @:final public function name() : String;
+	@:overload @:public @:final public function name() : String;
 	
 	/**
 	* Returns the ordinal of this enumeration constant (its position
@@ -50,7 +50,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*
 	* @return the ordinal of this enumeration constant
 	*/
-	@:overload @:final public function ordinal() : Int;
+	@:overload @:public @:final public function ordinal() : Int;
 	
 	/**
 	* Sole constructor.  Programmers cannot invoke this constructor.
@@ -63,7 +63,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*         in the enum declaration, where the initial constant is assigned
 	*         an ordinal of zero).
 	*/
-	@:overload private function new(name : String, ordinal : Int) : Void;
+	@:overload @:protected private function new(name : String, ordinal : Int) : Void;
 	
 	/**
 	* Returns the name of this enum constant, as contained in the
@@ -73,7 +73,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*
 	* @return the name of this enum constant
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns true if the specified object is equal to this
@@ -83,14 +83,14 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	* @return  true if the specified object is equal to this
 	*          enum constant.
 	*/
-	@:overload @:final public function equals(other : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this enum constant.
 	*
 	* @return a hash code for this enum constant.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Throws CloneNotSupportedException.  This guarantees that enums
@@ -99,7 +99,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*
 	* @return (never returns)
 	*/
-	@:overload @:final private function clone() : Dynamic;
+	@:overload @:protected @:final private function clone() : Dynamic;
 	
 	/**
 	* Compares this enum with the specified object for order.  Returns a
@@ -110,7 +110,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	* same enum type.  The natural order implemented by this
 	* method is the order in which the constants are declared.
 	*/
-	@:overload @:final public function compareTo(o : E) : Int;
+	@:overload @:public @:final public function compareTo(o : E) : Int;
 	
 	/**
 	* Returns the Class object corresponding to this enum constant's
@@ -124,7 +124,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	* @return the Class object corresponding to this enum constant's
 	*     enum type
 	*/
-	@:overload @:final public function getDeclaringClass() : Class<E>;
+	@:overload @:public @:final public function getDeclaringClass() : Class<E>;
 	
 	/**
 	* Returns the enum constant of the specified enum type with the
@@ -153,12 +153,12 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*         is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function valueOf<T : java.lang.Enum<T>>(enumType : Class<T>, name : String) : T;
+	@:require(java5) @:overload @:public @:static public static function valueOf<T : java.lang.Enum<T>>(enumType : Class<T>, name : String) : T;
 	
 	/**
 	* enum classes cannot have finalize methods.
 	*/
-	@:overload @:final private function finalize() : Void;
+	@:overload @:protected @:final private function finalize() : Void;
 	
 	
 }

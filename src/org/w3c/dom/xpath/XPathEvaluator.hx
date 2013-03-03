@@ -61,7 +61,7 @@ extern interface XPathEvaluator
 	*   which cannot be resolved by the specified
 	*   <code>XPathNSResolver</code>.
 	*/
-	@:overload public function createExpression(expression : String, resolver : org.w3c.dom.xpath.XPathNSResolver) : org.w3c.dom.xpath.XPathExpression;
+	@:overload @:public public function createExpression(expression : String, resolver : org.w3c.dom.xpath.XPathNSResolver) : org.w3c.dom.xpath.XPathExpression;
 	
 	/**
 	* Adapts any DOM node to resolve namespaces so that an XPath expression
@@ -76,7 +76,7 @@ extern interface XPathEvaluator
 	* @return <code>XPathNSResolver</code> which resolves namespaces with
 	*   respect to the definitions in scope for a specified node.
 	*/
-	@:overload public function createNSResolver(nodeResolver : org.w3c.dom.Node) : org.w3c.dom.xpath.XPathNSResolver;
+	@:overload @:public public function createNSResolver(nodeResolver : org.w3c.dom.Node) : org.w3c.dom.xpath.XPathNSResolver;
 	
 	/**
 	* Evaluates an XPath expression string and returns a result of the
@@ -126,7 +126,7 @@ extern interface XPathEvaluator
 	*   context node or the request type is not permitted by this
 	*   <code>XPathEvaluator</code>.
 	*/
-	@:overload public function evaluate(expression : String, contextNode : org.w3c.dom.Node, resolver : org.w3c.dom.xpath.XPathNSResolver, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
+	@:overload @:public public function evaluate(expression : String, contextNode : org.w3c.dom.Node, resolver : org.w3c.dom.xpath.XPathNSResolver, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
 	
 	
 }

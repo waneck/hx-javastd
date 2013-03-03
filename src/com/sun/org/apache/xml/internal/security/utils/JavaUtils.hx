@@ -30,7 +30,7 @@ extern class JavaUtils
 	* @throws FileNotFoundException
 	* @throws IOException
 	*/
-	@:overload public static function getBytesFromFile(fileName : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getBytesFromFile(fileName : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method writeBytesToFilename
@@ -38,7 +38,7 @@ extern class JavaUtils
 	* @param filename
 	* @param bytes
 	*/
-	@:overload public static function writeBytesToFilename(filename : String, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static public static function writeBytesToFilename(filename : String, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* This method reads all bytes from the given InputStream till EOF and
@@ -50,7 +50,7 @@ extern class JavaUtils
 	* @throws FileNotFoundException
 	* @throws IOException
 	*/
-	@:overload public static function getBytesFromStream(inputStream : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getBytesFromStream(inputStream : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

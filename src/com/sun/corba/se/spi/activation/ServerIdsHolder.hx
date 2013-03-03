@@ -7,17 +7,17 @@ package com.sun.corba.se.spi.activation;
 */
 extern class ServerIdsHolder implements org.omg.CORBA.portable.Streamable
 {
-	public var value : java.NativeArray<Int>;
+	@:public public var value : java.NativeArray<Int>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialValue : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(initialValue : java.NativeArray<Int>) : Void;
 	
-	@:overload public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

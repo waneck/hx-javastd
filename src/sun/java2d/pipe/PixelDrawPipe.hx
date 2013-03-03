@@ -37,19 +37,19 @@ extern interface PixelDrawPipe
 	* are possible in Graphics since many of the rendering calls can
 	* be transformed into one or more variants of these calls.
 	*/
-	@:overload public function drawLine(sg : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function drawLine(sg : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function drawRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function drawRoundRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public public function drawRoundRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
-	@:overload public function drawOval(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function drawOval(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function drawArc(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public public function drawArc(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
-	@:overload public function drawPolyline(sg : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public public function drawPolyline(sg : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload public function drawPolygon(sg : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public public function drawPolygon(sg : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	
 }

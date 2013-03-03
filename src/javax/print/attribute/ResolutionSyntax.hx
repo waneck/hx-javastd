@@ -29,13 +29,13 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* Value to indicate units of dots per inch (dpi). It is actually the
 	* conversion factor by which to multiply dpi to yield dphi (100).
 	*/
-	public static var DPI(default, null) : Int;
+	@:public @:static @:final public static var DPI(default, null) : Int;
 	
 	/**
 	* Value to indicate units of dots per centimeter (dpcm). It is actually
 	* the conversion factor by which to multiply dpcm to yield dphi (254).
 	*/
-	public static var DPCM(default, null) : Int;
+	@:public @:static @:final public static var DPCM(default, null) : Int;
 	
 	/**
 	* Construct a new resolution attribute from the given items.
@@ -52,7 +52,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	*     (unchecked exception) Thrown if <CODE>crossFeedResolution</CODE> <
 	*     1 or <CODE>feedResolution</CODE> < 1 or <CODE>units</CODE> < 1.
 	*/
-	@:overload public function new(crossFeedResolution : Int, feedResolution : Int, units : Int) : Void;
+	@:overload @:public public function new(crossFeedResolution : Int, feedResolution : Int, units : Int) : Void;
 	
 	/**
 	* Get this resolution attribute's resolution values in the given units.
@@ -68,7 +68,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getResolution(units : Int) : java.NativeArray<Int>;
+	@:overload @:public public function getResolution(units : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns this resolution attribute's cross feed direction resolution in
@@ -83,7 +83,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getCrossFeedResolution(units : Int) : Int;
+	@:overload @:public public function getCrossFeedResolution(units : Int) : Int;
 	
 	/**
 	* Returns this resolution attribute's feed direction resolution in the
@@ -98,7 +98,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function getFeedResolution(units : Int) : Int;
+	@:overload @:public public function getFeedResolution(units : Int) : Int;
 	
 	/**
 	* Returns a string version of this resolution attribute in the given units.
@@ -119,7 +119,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @exception  IllegalArgumentException
 	*     (unchecked exception) Thrown if <CODE>units</CODE> < 1.
 	*/
-	@:overload public function toString(units : Int, unitsName : String) : String;
+	@:overload @:public public function toString(units : Int, unitsName : String) : String;
 	
 	/**
 	* Determine whether this resolution attribute's value is less than or
@@ -142,7 +142,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>other</CODE> is null.
 	*/
-	@:overload public function lessThanOrEquals(other : javax.print.attribute.ResolutionSyntax) : Bool;
+	@:overload @:public public function lessThanOrEquals(other : javax.print.attribute.ResolutionSyntax) : Bool;
 	
 	/**
 	* Returns whether this resolution attribute is equivalent to the passed in
@@ -165,12 +165,12 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @return  True if <CODE>object</CODE> is equivalent to this resolution
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this resolution attribute.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string version of this resolution attribute. The string takes
@@ -178,7 +178,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* cross feed direction resolution and <I>F</I> is the feed direction
 	* resolution. The values are reported in the internal units of dphi.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns this resolution attribute's cross feed direction resolution in
@@ -186,7 +186,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	*
 	* @return  Cross feed direction resolution.
 	*/
-	@:overload private function getCrossFeedResolutionDphi() : Int;
+	@:overload @:protected private function getCrossFeedResolutionDphi() : Int;
 	
 	/**
 	* Returns this resolution attribute's feed direction resolution in units
@@ -194,7 +194,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	*
 	* @return  Feed direction resolution.
 	*/
-	@:overload private function getFeedResolutionDphi() : Int;
+	@:overload @:protected private function getFeedResolutionDphi() : Int;
 	
 	
 }

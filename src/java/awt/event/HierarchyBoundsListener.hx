@@ -28,12 +28,12 @@ extern interface HierarchyBoundsListener extends java.util.EventListener
 	/**
 	* Called when an ancestor of the source is moved.
 	*/
-	@:overload public function ancestorMoved(e : java.awt.event.HierarchyEvent) : Void;
+	@:overload @:public public function ancestorMoved(e : java.awt.event.HierarchyEvent) : Void;
 	
 	/**
 	* Called when an ancestor of the source is resized.
 	*/
-	@:overload public function ancestorResized(e : java.awt.event.HierarchyEvent) : Void;
+	@:overload @:public public function ancestorResized(e : java.awt.event.HierarchyEvent) : Void;
 	
 	
 }

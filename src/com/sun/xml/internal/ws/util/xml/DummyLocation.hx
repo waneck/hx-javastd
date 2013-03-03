@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.util.xml;
 */
 extern class DummyLocation implements javax.xml.stream.Location
 {
-	public static var INSTANCE(default, null) : javax.xml.stream.Location;
+	@:public @:static @:final public static var INSTANCE(default, null) : javax.xml.stream.Location;
 	
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

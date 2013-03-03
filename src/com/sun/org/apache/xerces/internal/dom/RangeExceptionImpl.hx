@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.dom;
 */
 extern class RangeExceptionImpl extends org.w3c.dom.ranges.RangeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
 	
 }

@@ -36,13 +36,13 @@ package javax.xml.ws.http;
 	/** Constructor for the HTTPException
 	*  @param statusCode   <code>int</code> for the HTTP status code
 	**/
-	@:overload public function new(statusCode : Int) : Void;
+	@:overload @:public public function new(statusCode : Int) : Void;
 	
 	/** Gets the HTTP status code.
 	*
 	*  @return HTTP status code
 	**/
-	@:overload public function getStatusCode() : Int;
+	@:overload @:public public function getStatusCode() : Int;
 	
 	
 }

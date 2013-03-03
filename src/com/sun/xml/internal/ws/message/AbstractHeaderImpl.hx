@@ -34,40 +34,40 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* @deprecated
 	*/
-	@:overload @:final public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>, context : com.sun.xml.internal.bind.api.BridgeContext) : T;
+	@:overload @:public @:final public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>, context : com.sun.xml.internal.bind.api.BridgeContext) : T;
 	
-	@:overload public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
 	/**
 	* Default implementation that copies the infoset. Not terribly efficient.
 	*/
-	@:overload public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload @:public public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
-	@:overload public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
+	@:overload @:public public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
 	
-	@:overload public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
-	@:overload public function isRelay() : Bool;
+	@:overload @:public public function isRelay() : Bool;
 	
-	@:overload public function getAttribute(name : javax.xml.namespace.QName) : String;
+	@:overload @:public public function getAttribute(name : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Parses a string that looks like <tt>xs:boolean</tt> into boolean.
 	*
 	* This method assumes that the whilespace normalization has already taken place.
 	*/
-	@:overload @:final private function parseBool(value : String) : Bool;
+	@:overload @:protected @:final private function parseBool(value : String) : Bool;
 	
-	@:overload public function getStringContent() : String;
+	@:overload @:public public function getStringContent() : String;
 	
-	private static var EMPTY_ATTS(default, null) : org.xml.sax.helpers.AttributesImpl;
+	@:protected @:static @:final private static var EMPTY_ATTS(default, null) : org.xml.sax.helpers.AttributesImpl;
 	
 	/**
 	* Gets the namespace URI of this header element.
@@ -75,7 +75,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload @:public public function getNamespaceURI() : String;
+	@:overload @:public @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Reads the header as a {@link XMLStreamReader}.
@@ -105,7 +105,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @return
 	*      must not null.
 	*/
-	@:overload @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Writes out the header as a fragment.
@@ -114,7 +114,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes out the header to the given SOAPMessage.
@@ -128,7 +128,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	/**
 	* Gets the local name of this header element.
@@ -136,7 +136,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload @:public public function getLocalPart() : String;
+	@:overload @:public @:public public function getLocalPart() : String;
 	
 	/**
 	* Writes out the header as SAX events.
@@ -163,7 +163,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @param errorHandler
 	*      The {@link ErrorHandler} that receives parsing errors.
 	*/
-	@:overload @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Gets the attribute value on the header element.
@@ -180,7 +180,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	*      whitespace-normalizing attributes, so {@link Header} implementation
 	*      doesn't have to do anything.
 	*/
-	@:overload public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public public function getAttribute(nsUri : String, localName : String) : String;
 	
 	
 }

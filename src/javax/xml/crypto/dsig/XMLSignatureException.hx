@@ -32,7 +32,7 @@ extern class XMLSignatureException extends java.lang.Exception
 	* Constructs a new <code>XMLSignatureException</code> with
 	* <code>null</code> as its detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>XMLSignatureException</code> with the specified
@@ -40,7 +40,7 @@ extern class XMLSignatureException extends java.lang.Exception
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new <code>XMLSignatureException</code> with the
@@ -53,7 +53,7 @@ extern class XMLSignatureException extends java.lang.Exception
 	* @param cause the cause (A <tt>null</tt> value is permitted, and
 	*        indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new <code>XMLSignatureException</code> with the specified
@@ -65,7 +65,7 @@ extern class XMLSignatureException extends java.lang.Exception
 	* @param cause the cause (A <tt>null</tt> value is permitted, and
 	*        indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the cause of this <code>XMLSignatureException</code> or
@@ -76,13 +76,13 @@ extern class XMLSignatureException extends java.lang.Exception
 	* @return the cause of this <code>XMLSignatureException</code> or
 	*         <code>null</code> if the cause is nonexistent or unknown.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Prints this <code>XMLSignatureException</code>, its backtrace and
 	* the cause's backtrace to the standard error stream.
 	*/
-	@:overload public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	/**
 	* Prints this <code>XMLSignatureException</code>, its backtrace and
@@ -90,7 +90,7 @@ extern class XMLSignatureException extends java.lang.Exception
 	*
 	* @param s <code>PrintStream</code> to use for output
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this <code>XMLSignatureException</code>, its backtrace and
@@ -98,7 +98,7 @@ extern class XMLSignatureException extends java.lang.Exception
 	*
 	* @param s <code>PrintWriter</code> to use for output
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	
 }

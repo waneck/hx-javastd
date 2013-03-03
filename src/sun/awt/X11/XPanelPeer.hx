@@ -28,26 +28,26 @@ extern class XPanelPeer extends sun.awt.X11.XCanvasPeer implements java.awt.peer
 	/**
 	* Embeds the given window into container using XEmbed protocol
 	*/
-	@:overload public function xembed(window : haxe.Int64) : Void;
+	@:overload @:public public function xembed(window : haxe.Int64) : Void;
 	
-	@:overload override public function getInsets() : java.awt.Insets;
+	@:overload @:public override public function getInsets() : java.awt.Insets;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function print(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload override public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* DEPRECATED:  Replaced by getInsets().
 	*/
-	@:overload override public function insets() : java.awt.Insets;
+	@:overload @:public override public function insets() : java.awt.Insets;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload override private function shouldFocusOnClick() : Bool;
+	@:overload @:protected override private function shouldFocusOnClick() : Bool;
 	
 	
 }

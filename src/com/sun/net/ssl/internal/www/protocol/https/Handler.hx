@@ -31,13 +31,13 @@ extern class Handler extends sun.net.www.protocol.https.Handler
 	* sun.net.www.protocol.https.
 	*
 	*/
-	@:overload override public function new() : Void;
+	@:overload @:public override public function new() : Void;
 	
-	@:overload override public function new(proxy : String, port : Int) : Void;
+	@:overload @:public override public function new(proxy : String, port : Int) : Void;
 	
-	@:overload override private function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
-	@:overload override private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
 	
 }

@@ -25,68 +25,68 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ElementDecl extends com.sun.xml.internal.xsom.impl.DeclarationImpl implements com.sun.xml.internal.xsom.XSElementDecl implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
-	@:overload public function new(reader : com.sun.xml.internal.xsom.impl.parser.PatcherManager, owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _tns : String, _name : String, _anonymous : Bool, _defv : com.sun.xml.internal.xsom.XmlString, _fixedv : com.sun.xml.internal.xsom.XmlString, _nillable : Bool, _abstract : Bool, _form : Null<Bool>, _type : com.sun.xml.internal.xsom.impl.Ref.Ref_Type, _substHead : com.sun.xml.internal.xsom.impl.Ref.Ref_Element, _substDisallowed : Int, _substExcluded : Int, idConstraints : java.util.List<com.sun.xml.internal.xsom.impl.IdentityConstraintImpl>) : Void;
+	@:overload @:public public function new(reader : com.sun.xml.internal.xsom.impl.parser.PatcherManager, owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _tns : String, _name : String, _anonymous : Bool, _defv : com.sun.xml.internal.xsom.XmlString, _fixedv : com.sun.xml.internal.xsom.XmlString, _nillable : Bool, _abstract : Bool, _form : Null<Bool>, _type : com.sun.xml.internal.xsom.impl.Ref.Ref_Type, _substHead : com.sun.xml.internal.xsom.impl.Ref.Ref_Element, _substDisallowed : Int, _substExcluded : Int, idConstraints : java.util.List<com.sun.xml.internal.xsom.impl.IdentityConstraintImpl>) : Void;
 	
-	@:overload public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload public function isNillable() : Bool;
+	@:overload @:public public function isNillable() : Bool;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function getType() : com.sun.xml.internal.xsom.XSType;
+	@:overload @:public public function getType() : com.sun.xml.internal.xsom.XSType;
 	
-	@:overload public function getSubstAffiliation() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function getSubstAffiliation() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload public function isSubstitutionDisallowed(method : Int) : Bool;
+	@:overload @:public public function isSubstitutionDisallowed(method : Int) : Bool;
 	
-	@:overload public function isSubstitutionExcluded(method : Int) : Bool;
+	@:overload @:public public function isSubstitutionExcluded(method : Int) : Bool;
 	
-	@:overload public function getIdentityConstraints() : java.util.List<com.sun.xml.internal.xsom.XSIdentityConstraint>;
+	@:overload @:public public function getIdentityConstraints() : java.util.List<com.sun.xml.internal.xsom.XSIdentityConstraint>;
 	
-	@:overload public function getForm() : Null<Bool>;
+	@:overload @:public public function getForm() : Null<Bool>;
 	
 	/**
 	* @deprecated
 	*/
-	@:overload public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSElementDecl>;
+	@:overload @:public public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSElementDecl>;
 	
-	@:overload public function getSubstitutables() : java.util.Set<com.sun.xml.internal.xsom.XSElementDecl>;
+	@:overload @:public public function getSubstitutables() : java.util.Set<com.sun.xml.internal.xsom.XSElementDecl>;
 	
-	@:overload private function addSubstitutable(decl : com.sun.xml.internal.xsom.impl.ElementDecl) : Void;
+	@:overload @:protected private function addSubstitutable(decl : com.sun.xml.internal.xsom.impl.ElementDecl) : Void;
 	
-	@:overload public function updateSubstitutabilityMap() : Void;
+	@:overload @:public public function updateSubstitutabilityMap() : Void;
 	
-	@:overload public function canBeSubstitutedBy(e : com.sun.xml.internal.xsom.XSElementDecl) : Bool;
+	@:overload @:public public function canBeSubstitutedBy(e : com.sun.xml.internal.xsom.XSElementDecl) : Bool;
 	
-	@:overload public function isWildcard() : Bool;
+	@:overload @:public public function isWildcard() : Bool;
 	
-	@:overload public function isModelGroupDecl() : Bool;
+	@:overload @:public public function isModelGroupDecl() : Bool;
 	
-	@:overload public function isModelGroup() : Bool;
+	@:overload @:public public function isModelGroup() : Bool;
 	
-	@:overload public function isElementDecl() : Bool;
+	@:overload @:public public function isElementDecl() : Bool;
 	
-	@:overload public function asWildcard() : com.sun.xml.internal.xsom.XSWildcard;
+	@:overload @:public public function asWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
-	@:overload public function asModelGroupDecl() : com.sun.xml.internal.xsom.XSModelGroupDecl;
+	@:overload @:public public function asModelGroupDecl() : com.sun.xml.internal.xsom.XSModelGroupDecl;
 	
-	@:overload public function asModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
+	@:overload @:public public function asModelGroup() : com.sun.xml.internal.xsom.XSModelGroup;
 	
-	@:overload public function asElementDecl() : com.sun.xml.internal.xsom.XSElementDecl;
+	@:overload @:public public function asElementDecl() : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
+	@:overload @:public public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
 	
-	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSTermFunction<Dynamic>) : Dynamic;
+	@:overload @:public public function apply(_function : com.sun.xml.internal.xsom.visitor.XSTermFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
+	@:overload @:public public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload @:public override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.xml.internal.xsom.XSTerm;
 	
 	
 }

@@ -65,10 +65,10 @@ extern class ErrorHandlerAdaptor implements com.sun.org.apache.xerces.internal.x
 	* returns if there was an error since the last invocation of
 	* the resetError method.
 	*/
-	@:overload public function hadError() : Bool;
+	@:overload @:public public function hadError() : Bool;
 	
 	/** resets the error flag. */
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Implemented by the derived class to return the actual
@@ -76,13 +76,13 @@ extern class ErrorHandlerAdaptor implements com.sun.org.apache.xerces.internal.x
 	*
 	* @return always return non-null valid object.
 	*/
-	@:overload @:abstract private function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:protected @:abstract private function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload public function fatalError(domain : String, key : String, e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function fatalError(domain : String, key : String, e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
-	@:overload public function error(domain : String, key : String, e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function error(domain : String, key : String, e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
-	@:overload public function warning(domain : String, key : String, e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function warning(domain : String, key : String, e : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	
 }

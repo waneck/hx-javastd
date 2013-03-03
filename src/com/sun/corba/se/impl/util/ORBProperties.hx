@@ -31,11 +31,11 @@ package com.sun.corba.se.impl.util;
 */
 extern class ORBProperties
 {
-	public static var ORB_CLASS(default, null) : String;
+	@:public @:static @:final public static var ORB_CLASS(default, null) : String;
 	
-	public static var ORB_SINGLETON_CLASS(default, null) : String;
+	@:public @:static @:final public static var ORB_SINGLETON_CLASS(default, null) : String;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

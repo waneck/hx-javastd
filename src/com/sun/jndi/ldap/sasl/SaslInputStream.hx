@@ -25,13 +25,13 @@ package com.sun.jndi.ldap.sasl;
 */
 extern class SaslInputStream extends java.io.InputStream
 {
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(inBuf : java.NativeArray<java.StdTypes.Int8>, start : Int, count : Int) : Int;
+	@:overload @:public override public function read(inBuf : java.NativeArray<java.StdTypes.Int8>, start : Int, count : Int) : Int;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

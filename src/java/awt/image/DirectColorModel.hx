@@ -47,7 +47,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*         integer pixel contain the blue component
 	*
 	*/
-	@:overload public function new(bits : Int, rmask : Int, gmask : Int, bmask : Int) : Void;
+	@:overload @:public public function new(bits : Int, rmask : Int, gmask : Int, bmask : Int) : Void;
 	
 	/**
 	* Constructs a <code>DirectColorModel</code> from the specified masks
@@ -74,7 +74,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @param amask specifies a mask indicating which bits in an
 	*         integer pixel contain the alpha component
 	*/
-	@:overload public function new(bits : Int, rmask : Int, gmask : Int, bmask : Int, amask : Int) : Void;
+	@:overload @:public public function new(bits : Int, rmask : Int, gmask : Int, bmask : Int, amask : Int) : Void;
 	
 	/**
 	* Constructs a <code>DirectColorModel</code> from the specified
@@ -117,7 +117,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*         TYPE_RGB space or if the min/max normalized component
 	*         values are not 0.0/1.0.
 	*/
-	@:overload public function new(space : java.awt.color.ColorSpace, bits : Int, rmask : Int, gmask : Int, bmask : Int, amask : Int, isAlphaPremultiplied : Bool, transferType : Int) : Void;
+	@:overload @:public public function new(space : java.awt.color.ColorSpace, bits : Int, rmask : Int, gmask : Int, bmask : Int, amask : Int, isAlphaPremultiplied : Bool, transferType : Int) : Void;
 	
 	/**
 	* Returns the mask indicating which bits in an <code>int</code> pixel
@@ -125,7 +125,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the mask, which indicates which bits of the <code>int</code>
 	*         pixel representation contain the red color sample.
 	*/
-	@:overload @:final public function getRedMask() : Int;
+	@:overload @:final @:public public function getRedMask() : Int;
 	
 	/**
 	* Returns the mask indicating which bits in an <code>int</code> pixel
@@ -133,7 +133,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the mask, which indicates which bits of the <code>int</code>
 	*         pixel representation contain the green color sample.
 	*/
-	@:overload @:final public function getGreenMask() : Int;
+	@:overload @:final @:public public function getGreenMask() : Int;
 	
 	/**
 	* Returns the mask indicating which bits in an <code>int</code> pixel
@@ -141,7 +141,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the mask, which indicates which bits of the <code>int</code>
 	*         pixel representation contain the blue color sample.
 	*/
-	@:overload @:final public function getBlueMask() : Int;
+	@:overload @:final @:public public function getBlueMask() : Int;
 	
 	/**
 	* Returns the mask indicating which bits in an <code>int</code> pixel
@@ -149,7 +149,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the mask, which indicates which bits of the <code>int</code>
 	*         pixel representation contain the alpha sample.
 	*/
-	@:overload @:final public function getAlphaMask() : Int;
+	@:overload @:final @:public public function getAlphaMask() : Int;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -164,7 +164,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the red color component for the specified pixel, from
 	*         0 to 255 in the sRGB <code>ColorSpace</code>.
 	*/
-	@:overload @:final override public function getRed(pixel : Int) : Int;
+	@:overload @:final @:public override public function getRed(pixel : Int) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -179,7 +179,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the green color component for the specified pixel, from
 	*         0 to 255 in the sRGB <code>ColorSpace</code>.
 	*/
-	@:overload @:final override public function getGreen(pixel : Int) : Int;
+	@:overload @:final @:public override public function getGreen(pixel : Int) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -194,7 +194,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the blue color component for the specified pixel, from
 	*         0 to 255 in the sRGB <code>ColorSpace</code>.
 	*/
-	@:overload @:final override public function getBlue(pixel : Int) : Int;
+	@:overload @:final @:public override public function getBlue(pixel : Int) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled
@@ -203,7 +203,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return the value of the alpha component of <code>pixel</code>
 	*         from 0 to 255.
 	*/
-	@:overload @:final override public function getAlpha(pixel : Int) : Int;
+	@:overload @:final @:public override public function getAlpha(pixel : Int) : Int;
 	
 	/**
 	* Returns the color/alpha components of the pixel in the default
@@ -218,7 +218,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*         pixel.
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload @:final override public function getRGB(pixel : Int) : Int;
+	@:overload @:final @:public override public function getRGB(pixel : Int) : Int;
 	
 	/**
 	* Returns the red color component for the specified pixel, scaled
@@ -251,7 +251,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @throws UnsupportedOperationException if this <code>transferType</code>
 	*         is not supported by this color model
 	*/
-	@:overload override public function getRed(inData : Dynamic) : Int;
+	@:overload @:public override public function getRed(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the green color component for the specified pixel, scaled
@@ -283,7 +283,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @throws UnsupportedOperationException if this <code>transferType</code>
 	*         is not supported by this color model
 	*/
-	@:overload override public function getGreen(inData : Dynamic) : Int;
+	@:overload @:public override public function getGreen(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the blue color component for the specified pixel, scaled
@@ -315,7 +315,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @throws UnsupportedOperationException if this <code>transferType</code>
 	*         is not supported by this color model
 	*/
-	@:overload override public function getBlue(inData : Dynamic) : Int;
+	@:overload @:public override public function getBlue(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the alpha component for the specified pixel, scaled
@@ -345,7 +345,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*  <code>tranferType</code> is not supported by this
 	*  <code>ColorModel</code>
 	*/
-	@:overload override public function getAlpha(inData : Dynamic) : Int;
+	@:overload @:public override public function getAlpha(inData : Dynamic) : Int;
 	
 	/**
 	* Returns the color/alpha components for the specified pixel in the
@@ -373,7 +373,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*            <code>ColorModel</code>
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload override public function getRGB(inData : Dynamic) : Int;
+	@:overload @:public override public function getRGB(inData : Dynamic) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -409,7 +409,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload override public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(rgb : Int, pixel : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components given a pixel
@@ -431,7 +431,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return an array containing the color and alpha components of the
 	* specified pixel starting at the specified offset.
 	*/
-	@:overload @:final override public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:final @:public override public function getComponents(pixel : Int, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of unnormalized color/alpha components given a pixel
@@ -472,7 +472,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*            <code>transferType</code> is not supported by this
 	*            color model
 	*/
-	@:overload @:final override public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
+	@:overload @:final @:public override public function getComponents(pixel : Dynamic, components : java.NativeArray<Int>, offset : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Creates a <code>WritableRaster</code> with the specified width and
@@ -487,7 +487,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @see WritableRaster
 	* @see SampleModel
 	*/
-	@:overload @:final override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:final @:public override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns a pixel value represented as an <code>int</code> in this
@@ -507,7 +507,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*  hold all of the color and alpha components starting at
 	*  <code>offset</code>
 	*/
-	@:overload override public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
+	@:overload @:public override public function getDataElement(components : java.NativeArray<Int>, offset : Int) : Int;
 	
 	/**
 	* Returns a data element array representation of a pixel in this
@@ -551,7 +551,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @see WritableRaster#setDataElements
 	* @see SampleModel#setDataElements
 	*/
-	@:overload override public function getDataElements(components : java.NativeArray<Int>, offset : Int, obj : Dynamic) : Dynamic;
+	@:overload @:public override public function getDataElements(components : java.NativeArray<Int>, offset : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Forces the raster data to match the state specified in the
@@ -577,7 +577,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	*            <code>transferType</code> is not supported by this
 	*            color model
 	*/
-	@:overload @:final override public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
+	@:overload @:final @:public override public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns <code>true</code> if <code>raster</code> is compatible
@@ -587,7 +587,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return <code>true</code> if <code>raster</code> is compatible
 	* with this <code>ColorModel</code>; <code>false</code> otherwise.
 	*/
-	@:overload override public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
+	@:overload @:public override public function isCompatibleRaster(raster : java.awt.image.Raster) : Bool;
 	
 	/**
 	* Returns a <code>String</code> that represents this
@@ -595,7 +595,7 @@ extern class DirectColorModel extends java.awt.image.PackedColorModel
 	* @return a <code>String</code> representing this
 	* <code>DirectColorModel</code>.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

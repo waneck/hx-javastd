@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.message;
 */
 extern class RootElementSniffer extends org.xml.sax.helpers.DefaultHandler
 {
-	@:overload public function new(parseAttributes : Bool) : Void;
+	@:overload @:public public function new(parseAttributes : Bool) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function startElement(uri : String, localName : String, qName : String, a : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, a : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function getNsUri() : String;
+	@:overload @:public public function getNsUri() : String;
 	
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
-	@:overload public function getAttributes() : org.xml.sax.Attributes;
+	@:overload @:public public function getAttributes() : org.xml.sax.Attributes;
 	
 	
 }

@@ -75,7 +75,7 @@ package java.util.logging;
 	* Create a <tt>MemoryHandler</tt> and configure it based on
 	* <tt>LogManager</tt> configuration properties.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a <tt>MemoryHandler</tt>.
@@ -90,7 +90,7 @@ package java.util.logging;
 	*
 	* @throws IllegalArgumentException if size is <= 0
 	*/
-	@:overload public function new(target : java.util.logging.Handler, size : Int, pushLevel : java.util.logging.Level) : Void;
+	@:overload @:public public function new(target : java.util.logging.Handler, size : Int, pushLevel : java.util.logging.Level) : Void;
 	
 	/**
 	* Store a <tt>LogRecord</tt> in an internal buffer.
@@ -107,14 +107,14 @@ package java.util.logging;
 	* @param  record  description of the log event. A null record is
 	*                 silently ignored and is not published
 	*/
-	@:overload @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public @:synchronized override public function publish(record : java.util.logging.LogRecord) : Void;
 	
 	/**
 	* Push any buffered output to the target <tt>Handler</tt>.
 	* <p>
 	* The buffer is then cleared.
 	*/
-	@:overload @:synchronized public function push() : Void;
+	@:overload @:public @:synchronized public function push() : Void;
 	
 	/**
 	* Causes a flush on the target <tt>Handler</tt>.
@@ -122,7 +122,7 @@ package java.util.logging;
 	* Note that the current contents of the <tt>MemoryHandler</tt>
 	* buffer are <b>not</b> written out.  That requires a "push".
 	*/
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	/**
 	* Close the <tt>Handler</tt> and free all associated resources.
@@ -131,7 +131,7 @@ package java.util.logging;
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Set the <tt>pushLevel</tt>.  After a <tt>LogRecord</tt> is copied
@@ -142,14 +142,14 @@ package java.util.logging;
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have <tt>LoggingPermission("control")</tt>.
 	*/
-	@:overload public function setPushLevel(newLevel : java.util.logging.Level) : Void;
+	@:overload @:public public function setPushLevel(newLevel : java.util.logging.Level) : Void;
 	
 	/**
 	* Get the <tt>pushLevel</tt>.
 	*
 	* @return the value of the <tt>pushLevel</tt>
 	*/
-	@:overload @:synchronized public function getPushLevel() : java.util.logging.Level;
+	@:overload @:public @:synchronized public function getPushLevel() : java.util.logging.Level;
 	
 	/**
 	* Check if this <tt>Handler</tt> would actually log a given
@@ -164,7 +164,7 @@ package java.util.logging;
 	* @return true if the <tt>LogRecord</tt> would be logged.
 	*
 	*/
-	@:overload override public function isLoggable(record : java.util.logging.LogRecord) : Bool;
+	@:overload @:public override public function isLoggable(record : java.util.logging.LogRecord) : Bool;
 	
 	
 }

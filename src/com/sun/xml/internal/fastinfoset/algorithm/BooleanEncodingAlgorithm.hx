@@ -27,27 +27,27 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class BooleanEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm
 {
-	@:overload public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload @:public override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload public function getPrimtiveLengthFromOctetLength(octetLength : Int, firstOctet : Int) : Int;
+	@:overload @:public public function getPrimtiveLengthFromOctetLength(octetLength : Int, firstOctet : Int) : Int;
 	
-	@:overload @:final public function decodeFromBytesToBooleanArray(bdata : java.NativeArray<Bool>, bstart : Int, blength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function decodeFromBytesToBooleanArray(bdata : java.NativeArray<Bool>, bstart : Int, blength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload public function encodeToBytesFromBooleanArray(array : java.NativeArray<Bool>, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public public function encodeToBytesFromBooleanArray(array : java.NativeArray<Bool>, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
 	
 }

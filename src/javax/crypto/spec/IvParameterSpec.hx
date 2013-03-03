@@ -33,7 +33,7 @@ extern class IvParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* buffer are copied to protect against subsequent modification.
 	* @throws NullPointerException if <code>iv</code> is <code>null</code>
 	*/
-	@:overload public function new(iv : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(iv : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates an IvParameterSpec object using the first <code>len</code>
@@ -54,7 +54,7 @@ extern class IvParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* @throws ArrayIndexOutOfBoundsException is thrown if <code>offset</code>
 	* or <code>len</code> index bytes outside the <code>iv</code>.
 	*/
-	@:overload public function new(iv : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function new(iv : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Returns the initialization vector (IV).
@@ -62,7 +62,7 @@ extern class IvParameterSpec implements java.security.spec.AlgorithmParameterSpe
 	* @return the initialization vector (IV). Returns a new array
 	* each time this method is called.
 	*/
-	@:overload public function getIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

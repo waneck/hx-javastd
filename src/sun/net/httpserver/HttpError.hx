@@ -28,7 +28,7 @@ package sun.net.httpserver;
 */
 @:internal extern class HttpError extends java.lang.RuntimeException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

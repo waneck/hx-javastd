@@ -36,7 +36,7 @@ extern class DTMDOMException extends org.w3c.dom.DOMException
 	* @param code
 	* @param message
 	*/
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
 	/**
 	* Constructor DTMDOMException
@@ -44,7 +44,7 @@ extern class DTMDOMException extends org.w3c.dom.DOMException
 	*
 	* @param code
 	*/
-	@:overload public function new(code : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16) : Void;
 	
 	
 }

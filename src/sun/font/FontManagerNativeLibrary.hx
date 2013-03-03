@@ -33,7 +33,7 @@ extern class FontManagerNativeLibrary
 	* Actual loading is performed by static initializer.
 	* (no need to execute doPrivilledged block more than once)
 	*/
-	@:overload public static function load() : Void;
+	@:overload @:public @:static public static function load() : Void;
 	
 	
 }

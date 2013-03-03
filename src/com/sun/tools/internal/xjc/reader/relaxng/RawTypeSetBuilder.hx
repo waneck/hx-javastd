@@ -30,17 +30,17 @@ extern class RawTypeSetBuilder extends com.sun.xml.internal.rngom.digested.DPatt
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public static function build(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler, contentModel : com.sun.xml.internal.rngom.digested.DPattern, mul : com.sun.tools.internal.xjc.model.Multiplicity) : com.sun.tools.internal.xjc.reader.RawTypeSet;
+	@:overload @:public @:static public static function build(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler, contentModel : com.sun.xml.internal.rngom.digested.DPattern, mul : com.sun.tools.internal.xjc.model.Multiplicity) : com.sun.tools.internal.xjc.reader.RawTypeSet;
 	
-	@:overload public function new(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler, mul : com.sun.tools.internal.xjc.model.Multiplicity) : Void;
+	@:overload @:public public function new(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler, mul : com.sun.tools.internal.xjc.model.Multiplicity) : Void;
 	
-	@:overload override public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
+	@:overload @:public override public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
 	
-	@:overload override public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : java.lang.Void;
+	@:overload @:public override public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : java.lang.Void;
 	
-	@:overload override public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
+	@:overload @:public override public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
 	
-	@:overload override public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
+	@:overload @:public override public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
 	
 	
 }
@@ -49,15 +49,15 @@ extern class RawTypeSetBuilder extends com.sun.xml.internal.rngom.digested.DPatt
 */
 @:native('com$sun$tools$internal$xjc$reader$relaxng$RawTypeSetBuilder$CClassInfoRef') @:internal extern class RawTypeSetBuilder_CClassInfoRef extends com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref
 {
-	@:overload override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:protected override private function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload override private function isListOfValues() : Bool;
+	@:overload @:protected override private function isListOfValues() : Bool;
 	
-	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload @:protected override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
-	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
+	@:overload @:protected override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
+	@:overload @:protected override private function toTypeRef(ep : com.sun.tools.internal.xjc.model.CElementPropertyInfo) : com.sun.tools.internal.xjc.model.CTypeRef;
 	
 	
 }

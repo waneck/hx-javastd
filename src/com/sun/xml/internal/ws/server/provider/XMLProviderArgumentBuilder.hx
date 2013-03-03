@@ -28,27 +28,27 @@ package com.sun.xml.internal.ws.server.provider;
 	/**
 	* @author Jitendra Kotamraju
 	*/
-	@:overload override private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, e : java.lang.Exception, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:protected override private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, e : java.lang.Exception, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$provider$XMLProviderArgumentBuilder$PayloadSource') @:internal extern class XMLProviderArgumentBuilder_PayloadSource extends com.sun.xml.internal.ws.server.provider.XMLProviderArgumentBuilder<javax.xml.transform.Source>
 {
-	@:overload override public function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
+	@:overload @:public override public function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
 	
-	@:overload public function getResponseMessage(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function getResponseMessage(source : javax.xml.transform.Source) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$provider$XMLProviderArgumentBuilder$DataSourceParameter') @:internal extern class XMLProviderArgumentBuilder_DataSourceParameter extends com.sun.xml.internal.ws.server.provider.XMLProviderArgumentBuilder<javax.activation.DataSource>
 {
-	@:overload override public function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.activation.DataSource;
+	@:overload @:public override public function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.activation.DataSource;
 	
-	@:overload public function getResponseMessage(ds : javax.activation.DataSource) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function getResponseMessage(ds : javax.activation.DataSource) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:protected override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

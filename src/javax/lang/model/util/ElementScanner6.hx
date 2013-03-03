@@ -88,19 +88,19 @@ package javax.lang.model.util;
 	/**
 	* The specified default value.
 	*/
-	private var DEFAULT_VALUE(default, null) : R;
+	@:protected @:final private var DEFAULT_VALUE(default, null) : R;
 	
 	/**
 	* Constructor for concrete subclasses; uses {@code null} for the
 	* default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses; uses the argument for the
 	* default value.
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* Iterates over the given elements and calls {@link
@@ -112,20 +112,20 @@ package javax.lang.model.util;
 	* @param  p additional parameter
 	* @return the scan of the last element or {@code DEFAULT_VALUE} if no elements
 	*/
-	@:overload @:final public function scan(iterable : java.lang.Iterable<javax.lang.model.element.Element>, p : P) : R;
+	@:overload @:public @:final public function scan(iterable : java.lang.Iterable<javax.lang.model.element.Element>, p : P) : R;
 	
 	/**
 	* Processes an element by calling {@code e.accept(this, p)};
 	* this method may be overridden by subclasses.
 	* @return the result of visiting {@code e}.
 	*/
-	@:overload public function scan(e : javax.lang.model.element.Element, p : P) : R;
+	@:overload @:public public function scan(e : javax.lang.model.element.Element, p : P) : R;
 	
 	/**
 	* Convenience method equivalent to {@code v.scan(e, null)}.
 	* @return the result of scanning {@code e}.
 	*/
-	@:overload @:final public function scan(e : javax.lang.model.element.Element) : R;
+	@:overload @:public @:final public function scan(e : javax.lang.model.element.Element) : R;
 	
 	/**
 	* {@inheritDoc} This implementation scans the enclosed elements.
@@ -134,7 +134,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of scanning
 	*/
-	@:overload override public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
+	@:overload @:public override public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation scans the enclosed elements.
@@ -143,7 +143,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of scanning
 	*/
-	@:overload override public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public override public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* {@inheritDoc}
@@ -156,7 +156,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of scanning
 	*/
-	@:overload override public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public override public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation scans the parameters.
@@ -165,7 +165,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of scanning
 	*/
-	@:overload override public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public override public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation scans the enclosed elements.
@@ -174,7 +174,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of scanning
 	*/
-	@:overload override public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
+	@:overload @:public override public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
 	
 	
 }

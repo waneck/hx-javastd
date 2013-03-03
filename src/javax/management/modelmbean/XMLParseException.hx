@@ -33,14 +33,14 @@ extern class XMLParseException extends java.lang.Exception
 	/**
 	* Default constructor .
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor taking a string.
 	*
 	* @param s the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructor taking a string and an exception.
@@ -48,7 +48,7 @@ extern class XMLParseException extends java.lang.Exception
 	* @param e the nested exception.
 	* @param s the detail message.
 	*/
-	@:overload public function new(e : java.lang.Exception, s : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, s : String) : Void;
 	
 	
 }

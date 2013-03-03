@@ -30,7 +30,7 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern interface Identifiable extends com.sun.tools.internal.ws.wsdl.framework.Elemental
 {
-	@:overload public function getID() : String;
+	@:overload @:public public function getID() : String;
 	
 	
 }

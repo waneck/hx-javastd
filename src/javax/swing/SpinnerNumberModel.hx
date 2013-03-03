@@ -55,7 +55,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	*     <code>null</code> or if the following expression is false:
 	*     <code>minimum &lt;= value &lt;= maximum</code>
 	*/
-	@:overload public function new(value : java.lang.Number, minimum : java.lang.Comparable<Dynamic>, maximum : java.lang.Comparable<Dynamic>, stepSize : java.lang.Number) : Void;
+	@:overload @:public public function new(value : java.lang.Number, minimum : java.lang.Comparable<Dynamic>, maximum : java.lang.Comparable<Dynamic>, stepSize : java.lang.Number) : Void;
 	
 	/**
 	* Constructs a <code>SpinnerNumberModel</code> with the specified
@@ -69,7 +69,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @throws IllegalArgumentException if the following expression is false:
 	*     <code>minimum &lt;= value &lt;= maximum</code>
 	*/
-	@:overload public function new(value : Int, minimum : Int, maximum : Int, stepSize : Int) : Void;
+	@:overload @:public public function new(value : Int, minimum : Int, maximum : Int, stepSize : Int) : Void;
 	
 	/**
 	* Constructs a <code>SpinnerNumberModel</code> with the specified
@@ -83,14 +83,14 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @throws IllegalArgumentException   if the following expression is false:
 	*     <code>minimum &lt;= value &lt;= maximum</code>
 	*/
-	@:overload public function new(value : Float, minimum : Float, maximum : Float, stepSize : Float) : Void;
+	@:overload @:public public function new(value : Float, minimum : Float, maximum : Float, stepSize : Float) : Void;
 	
 	/**
 	* Constructs a <code>SpinnerNumberModel</code> with no
 	* <code>minimum</code> or <code>maximum</code> value,
 	* <code>stepSize</code> equal to one, and an initial value of zero.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Changes the lower bound for numbers in this sequence.
@@ -128,7 +128,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #setMaximum
 	* @see SpinnerModel#addChangeListener
 	*/
-	@:overload public function setMinimum(minimum : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public public function setMinimum(minimum : java.lang.Comparable<Dynamic>) : Void;
 	
 	/**
 	* Returns the first number in this sequence.
@@ -136,7 +136,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @return the value of the <code>minimum</code> property
 	* @see #setMinimum
 	*/
-	@:overload public function getMinimum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMinimum() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Changes the upper bound for numbers in this sequence.
@@ -166,7 +166,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #setMinimum
 	* @see SpinnerModel#addChangeListener
 	*/
-	@:overload public function setMaximum(maximum : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public public function setMaximum(maximum : java.lang.Comparable<Dynamic>) : Void;
 	
 	/**
 	* Returns the last number in the sequence.
@@ -174,7 +174,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @return the value of the <code>maximum</code> property
 	* @see #setMaximum
 	*/
-	@:overload public function getMaximum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getMaximum() : java.lang.Comparable<Dynamic>;
 	
 	/**
 	* Changes the size of the value change computed by the
@@ -192,7 +192,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getStepSize
 	* @see SpinnerModel#addChangeListener
 	*/
-	@:overload public function setStepSize(stepSize : java.lang.Number) : Void;
+	@:overload @:public public function setStepSize(stepSize : java.lang.Number) : Void;
 	
 	/**
 	* Returns the size of the value change computed by the
@@ -202,7 +202,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @return the value of the <code>stepSize</code> property
 	* @see #setStepSize
 	*/
-	@:overload public function getStepSize() : java.lang.Number;
+	@:overload @:public public function getStepSize() : java.lang.Number;
 	
 	/**
 	* Returns the next number in the sequence.
@@ -214,7 +214,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getPreviousValue
 	* @see #setStepSize
 	*/
-	@:overload public function getNextValue() : Dynamic;
+	@:overload @:public override public function getNextValue() : Dynamic;
 	
 	/**
 	* Returns the previous number in the sequence.
@@ -227,7 +227,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getNextValue
 	* @see #setStepSize
 	*/
-	@:overload public function getPreviousValue() : Dynamic;
+	@:overload @:public override public function getPreviousValue() : Dynamic;
 	
 	/**
 	* Returns the value of the current element of the sequence.
@@ -235,7 +235,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @return the value property
 	* @see #setValue
 	*/
-	@:overload public function getNumber() : java.lang.Number;
+	@:overload @:public public function getNumber() : java.lang.Number;
 	
 	/**
 	* Returns the value of the current element of the sequence.
@@ -244,7 +244,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #setValue
 	* @see #getNumber
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Sets the current value for this sequence.  If <code>value</code> is
@@ -272,7 +272,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getValue
 	* @see SpinnerModel#addChangeListener
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public override public function setValue(value : Dynamic) : Void;
 	
 	
 }

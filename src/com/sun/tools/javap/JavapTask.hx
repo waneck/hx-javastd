@@ -25,61 +25,61 @@ package com.sun.tools.javap;
 */
 extern class JavapTask implements com.sun.tools.javap.DisassemblerTool.DisassemblerTool_DisassemblerTask implements com.sun.tools.javap.Messages
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>) : Void;
+	@:overload @:public public function new(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>) : Void;
 	
-	@:overload public function new(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : Void;
+	@:overload @:public public function new(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : Void;
 	
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
-	@:overload public function setLog(log : java.io.PrintWriter) : Void;
+	@:overload @:public public function setLog(log : java.io.PrintWriter) : Void;
 	
-	@:overload public function setLog(s : java.io.OutputStream) : Void;
+	@:overload @:public public function setLog(s : java.io.OutputStream) : Void;
 	
-	@:overload public function setDiagnosticListener(dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>) : Void;
+	@:overload @:public public function setDiagnosticListener(dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>) : Void;
 	
-	@:overload public function setDiagnosticListener(s : java.io.OutputStream) : Void;
+	@:overload @:public public function setDiagnosticListener(s : java.io.OutputStream) : Void;
 	
-	@:overload public function handleOptions(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function handleOptions(args : java.NativeArray<String>) : Void;
 	
-	@:overload public function call() : Null<Bool>;
+	@:overload @:public public function call() : Null<Bool>;
 	
-	@:overload public function run() : Bool;
+	@:overload @:public public function run() : Bool;
 	
-	@:overload private function writeClass(classWriter : com.sun.tools.classfile.ClassWriter, className : String) : Bool;
+	@:overload @:protected private function writeClass(classWriter : com.sun.tools.classfile.ClassWriter, className : String) : Bool;
 	
-	@:overload private function open(className : String) : javax.tools.JavaFileObject;
+	@:overload @:protected private function open(className : String) : javax.tools.JavaFileObject;
 	
-	@:overload public function read(fo : javax.tools.JavaFileObject) : com.sun.tools.javap.JavapTask.JavapTask_ClassFileInfo;
+	@:overload @:public public function read(fo : javax.tools.JavaFileObject) : com.sun.tools.javap.JavapTask.JavapTask_ClassFileInfo;
 	
-	@:overload public function write(info : com.sun.tools.javap.JavapTask.JavapTask_ClassFileInfo) : Void;
+	@:overload @:public public function write(info : com.sun.tools.javap.JavapTask.JavapTask_ClassFileInfo) : Void;
 	
-	@:overload private function setClassFile(classFile : com.sun.tools.classfile.ClassFile) : Void;
+	@:overload @:protected private function setClassFile(classFile : com.sun.tools.classfile.ClassFile) : Void;
 	
-	@:overload private function setMethod(enclosingMethod : com.sun.tools.classfile.Method) : Void;
+	@:overload @:protected private function setMethod(enclosingMethod : com.sun.tools.classfile.Method) : Void;
 	
-	@:overload private function write(value : com.sun.tools.classfile.Attribute) : Void;
+	@:overload @:protected private function write(value : com.sun.tools.classfile.Attribute) : Void;
 	
-	@:overload private function write(attrs : com.sun.tools.classfile.Attributes) : Void;
+	@:overload @:protected private function write(attrs : com.sun.tools.classfile.Attributes) : Void;
 	
-	@:overload private function write(constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
+	@:overload @:protected private function write(constant_pool : com.sun.tools.classfile.ConstantPool) : Void;
 	
-	@:overload private function write(constant_pool : com.sun.tools.classfile.ConstantPool, value : Int) : Void;
+	@:overload @:protected private function write(constant_pool : com.sun.tools.classfile.ConstantPool, value : Int) : Void;
 	
-	@:overload private function write(value : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo) : Void;
+	@:overload @:protected private function write(value : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo) : Void;
 	
-	@:overload private function write(value : com.sun.tools.classfile.Field) : Void;
+	@:overload @:protected private function write(value : com.sun.tools.classfile.Field) : Void;
 	
-	@:overload private function write(value : com.sun.tools.classfile.Method) : Void;
+	@:overload @:protected private function write(value : com.sun.tools.classfile.Method) : Void;
 	
-	@:overload public function getMessage(key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getMessage(key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload public function getMessage(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function getMessage(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	private var context : com.sun.tools.javap.Context;
+	@:protected private var context : com.sun.tools.javap.Context;
 	
-	private var attributeFactory : com.sun.tools.classfile.Attribute.Attribute_Factory;
+	@:protected private var attributeFactory : com.sun.tools.classfile.Attribute.Attribute_Factory;
 	
 	
 }
@@ -102,21 +102,21 @@ extern class JavapTask implements com.sun.tools.javap.DisassemblerTool.Disassemb
 }
 @:native('com$sun$tools$javap$JavapTask$ClassFileInfo') extern class JavapTask_ClassFileInfo
 {
-	public var fo(default, null) : javax.tools.JavaFileObject;
+	@:public @:final public var fo(default, null) : javax.tools.JavaFileObject;
 	
-	public var cf(default, null) : com.sun.tools.classfile.ClassFile;
+	@:public @:final public var cf(default, null) : com.sun.tools.classfile.ClassFile;
 	
-	public var digest(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:final public var digest(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var size(default, null) : Int;
+	@:public @:final public var size(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$javap$JavapTask$SizeInputStream') @:internal extern class JavapTask_SizeInputStream extends java.io.FilterInputStream
 {
-	@:overload public function read(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	
 }

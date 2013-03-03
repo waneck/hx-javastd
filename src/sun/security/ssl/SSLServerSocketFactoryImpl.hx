@@ -30,7 +30,7 @@ extern class SSLServerSocketFactoryImpl extends javax.net.ssl.SSLServerSocketFac
 	* only called if the old "ssl.ServerSocketFactory.provider" property in the
 	* java.security file is set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns an unbound server socket.
@@ -39,13 +39,13 @@ extern class SSLServerSocketFactoryImpl extends javax.net.ssl.SSLServerSocketFac
 	* @throws IOException if the socket cannot be created
 	* @see java.net.Socket#bind(java.net.SocketAddress)
 	*/
-	@:overload public function createServerSocket() : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket() : java.net.ServerSocket;
 	
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
-	@:overload public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
 	
-	@:overload public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
+	@:overload @:public override public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
 	
 	/**
 	* Returns the subset of the supported cipher suites which are
@@ -54,7 +54,7 @@ extern class SSLServerSocketFactoryImpl extends javax.net.ssl.SSLServerSocketFac
 	* (preventing person-in-the-middle attacks) and where traffic
 	* is encrypted to provide confidentiality.
 	*/
-	@:overload public function getDefaultCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getDefaultCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -66,7 +66,7 @@ extern class SSLServerSocketFactoryImpl extends javax.net.ssl.SSLServerSocketFac
 	*
 	* @return an array of cipher suite names
 	*/
-	@:overload public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	
 }

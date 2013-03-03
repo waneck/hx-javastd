@@ -61,24 +61,24 @@ extern class ButtonGroup implements java.io.Serializable
 	*
 	* @author Jeff Dinkins
 	*/
-	private var buttons : java.util.Vector<javax.swing.AbstractButton>;
+	@:protected private var buttons : java.util.Vector<javax.swing.AbstractButton>;
 	
 	/**
 	* Creates a new <code>ButtonGroup</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds the button to the group.
 	* @param b the button to be added
 	*/
-	@:overload public function add(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public public function add(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* Removes the button from the group.
 	* @param b the button to be removed
 	*/
-	@:overload public function remove(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public public function remove(b : javax.swing.AbstractButton) : Void;
 	
 	/**
 	* Clears the selection such that none of the buttons
@@ -86,20 +86,20 @@ extern class ButtonGroup implements java.io.Serializable
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function clearSelection() : Void;
+	@:require(java6) @:overload @:public public function clearSelection() : Void;
 	
 	/**
 	* Returns all the buttons that are participating in
 	* this group.
 	* @return an <code>Enumeration</code> of the buttons in this group
 	*/
-	@:overload public function getElements() : java.util.Enumeration<javax.swing.AbstractButton>;
+	@:overload @:public public function getElements() : java.util.Enumeration<javax.swing.AbstractButton>;
 	
 	/**
 	* Returns the model of the selected button.
 	* @return the selected button model
 	*/
-	@:overload public function getSelection() : javax.swing.ButtonModel;
+	@:overload @:public public function getSelection() : javax.swing.ButtonModel;
 	
 	/**
 	* Sets the selected value for the <code>ButtonModel</code>.
@@ -108,21 +108,21 @@ extern class ButtonGroup implements java.io.Serializable
 	* @param b <code>true</code> if this button is to be
 	*   selected, otherwise <code>false</code>
 	*/
-	@:overload public function setSelected(m : javax.swing.ButtonModel, b : Bool) : Void;
+	@:overload @:public public function setSelected(m : javax.swing.ButtonModel, b : Bool) : Void;
 	
 	/**
 	* Returns whether a <code>ButtonModel</code> is selected.
 	* @return <code>true</code> if the button is selected,
 	*   otherwise returns <code>false</code>
 	*/
-	@:overload public function isSelected(m : javax.swing.ButtonModel) : Bool;
+	@:overload @:public public function isSelected(m : javax.swing.ButtonModel) : Bool;
 	
 	/**
 	* Returns the number of buttons in the group.
 	* @return the button count
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getButtonCount() : Int;
+	@:require(java3) @:overload @:public public function getButtonCount() : Int;
 	
 	
 }

@@ -25,43 +25,43 @@ package com.sun.tools.apt.mirror.declaration;
 */
 extern class DeclarationMaker
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.declaration.DeclarationMaker;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.declaration.DeclarationMaker;
 	
 	/**
 	* Returns the package declaration for a package symbol.
 	*/
-	@:overload public function getPackageDeclaration(p : PackageSymbol) : com.sun.mirror.declaration.PackageDeclaration;
+	@:overload @:public public function getPackageDeclaration(p : PackageSymbol) : com.sun.mirror.declaration.PackageDeclaration;
 	
 	/**
 	* Returns the package declaration for the package with the given name.
 	* Name is fully-qualified, or "" for the unnamed package.
 	* Returns null if package declaration not found.
 	*/
-	@:overload public function getPackageDeclaration(name : String) : com.sun.mirror.declaration.PackageDeclaration;
+	@:overload @:public public function getPackageDeclaration(name : String) : com.sun.mirror.declaration.PackageDeclaration;
 	
 	/**
 	* Returns the type declaration for a class symbol.
 	* Forces completion, and returns null on error.
 	*/
-	@:overload public function getTypeDeclaration(c : ClassSymbol) : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getTypeDeclaration(c : ClassSymbol) : com.sun.mirror.declaration.TypeDeclaration;
 	
 	/**
 	* Returns the type declaration for the type with the given canonical name.
 	* Returns null if type declaration not found.
 	*/
-	@:overload public function getTypeDeclaration(name : String) : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getTypeDeclaration(name : String) : com.sun.mirror.declaration.TypeDeclaration;
 	
 	/**
 	* Returns a type parameter declaration.
 	*/
-	@:overload public function getTypeParameterDeclaration(t : TypeSymbol) : com.sun.mirror.declaration.TypeParameterDeclaration;
+	@:overload @:public public function getTypeParameterDeclaration(t : TypeSymbol) : com.sun.mirror.declaration.TypeParameterDeclaration;
 	
 	/**
 	* Is a string a valid Java identifier?
 	*/
-	@:overload public static function isJavaIdentifier(id : String) : Bool;
+	@:overload @:public @:static public static function isJavaIdentifier(id : String) : Bool;
 	
-	@:overload public static function isJavaName(name : String) : Bool;
+	@:overload @:public @:static public static function isJavaName(name : String) : Bool;
 	
 	
 }

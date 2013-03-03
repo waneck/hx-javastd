@@ -25,13 +25,13 @@ package com.sun.tools.classfile;
 */
 extern class AnnotationDefault_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, default_value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, default_value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
 	
-	@:overload public function new(name_index : Int, default_value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
+	@:overload @:public public function new(name_index : Int, default_value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var default_value(default, null) : com.sun.tools.classfile.Annotation.Annotation_element_value;
+	@:public @:final public var default_value(default, null) : com.sun.tools.classfile.Annotation.Annotation_element_value;
 	
 	
 }

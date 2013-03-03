@@ -33,15 +33,15 @@ package java.lang.invoke;
 	* final method type is the responsibility of a JVM-level adapter.
 	* @author jrose
 	*/
-	private var filter(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var filter(default, null) : java.lang.invoke.MethodHandle;
 	
-	private var target(default, null) : java.lang.invoke.MethodHandle;
+	@:protected @:final private var target(default, null) : java.lang.invoke.MethodHandle;
 	
-	@:overload private function invoke(argument : Dynamic) : Dynamic;
+	@:overload @:protected private function invoke(argument : Dynamic) : Dynamic;
 	
-	@:overload private function new(filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
+	@:overload @:protected private function new(filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload public static function make(filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function make(filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.MethodHandle;
 	
 	
 }

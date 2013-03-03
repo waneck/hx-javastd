@@ -51,7 +51,7 @@ extern interface AppletStub
 	*          applet.
 	* @see     java.applet.AppletStub#getCodeBase()
 	*/
-	@:overload public function getDocumentBase() : java.net.URL;
+	@:overload @:public public function getDocumentBase() : java.net.URL;
 	
 	/**
 	* Gets the base URL. This is the URL of the directory which contains the applet.
@@ -60,7 +60,7 @@ extern interface AppletStub
 	*          the directory which contains the applet.
 	* @see     java.applet.AppletStub#getDocumentBase()
 	*/
-	@:overload public function getCodeBase() : java.net.URL;
+	@:overload @:public public function getCodeBase() : java.net.URL;
 	
 	/**
 	* Returns the value of the named parameter in the HTML tag. For
@@ -78,14 +78,14 @@ extern interface AppletStub
 	* @return  the value of the named parameter,
 	* or <tt>null</tt> if not set.
 	*/
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Returns the applet's context.
 	*
 	* @return  the applet's context.
 	*/
-	@:overload public function getAppletContext() : java.applet.AppletContext;
+	@:overload @:public public function getAppletContext() : java.applet.AppletContext;
 	
 	/**
 	* Called when the applet wants to be resized.

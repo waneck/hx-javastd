@@ -31,21 +31,21 @@ package com.sun.org.omg.SendingContext;
 */
 extern class CodeBaseHelper
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : com.sun.org.omg.SendingContext.CodeBase) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : com.sun.org.omg.SendingContext.CodeBase) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : com.sun.org.omg.SendingContext.CodeBase;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : com.sun.org.omg.SendingContext.CodeBase;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : com.sun.org.omg.SendingContext.CodeBase;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : com.sun.org.omg.SendingContext.CodeBase;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : com.sun.org.omg.SendingContext.CodeBase) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : com.sun.org.omg.SendingContext.CodeBase) : Void;
 	
-	@:overload public static function narrow(obj : org.omg.CORBA.Object) : com.sun.org.omg.SendingContext.CodeBase;
+	@:overload @:public @:static public static function narrow(obj : org.omg.CORBA.Object) : com.sun.org.omg.SendingContext.CodeBase;
 	
 	
 }

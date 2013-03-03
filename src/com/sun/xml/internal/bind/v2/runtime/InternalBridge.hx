@@ -29,9 +29,9 @@ package com.sun.xml.internal.bind.v2.runtime;
 	* Additional methods on {@link Bridge} that are only available for the JAXB runtime.
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:protected private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	@:overload override public function getContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
+	@:overload @:public override public function getContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
 	
 }

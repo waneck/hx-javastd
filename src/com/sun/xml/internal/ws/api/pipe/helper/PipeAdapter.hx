@@ -25,25 +25,25 @@ package com.sun.xml.internal.ws.api.pipe.helper;
 */
 extern class PipeAdapter extends com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl
 {
-	@:overload public static function adapt(p : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public @:static public static function adapt(p : com.sun.xml.internal.ws.api.pipe.Pipe) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
-	@:overload public static function adapt(p : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public @:static public static function adapt(p : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Uses the current fiber and runs the whole pipe to the completion
 	* (meaning everything from now on will run synchronously.)
 	*/
-	@:overload public function processRequest(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processResponse(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function preDestroy() : Void;
+	@:overload @:public override public function preDestroy() : Void;
 	
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.PipeAdapter;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.PipeAdapter;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

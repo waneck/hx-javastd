@@ -51,23 +51,23 @@ extern class Authenticator
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var authenticator_vno : Int;
+	@:public public var authenticator_vno : Int;
 	
-	public var crealm : sun.security.krb5.Realm;
+	@:public public var crealm : sun.security.krb5.Realm;
 	
-	public var cname : sun.security.krb5.PrincipalName;
+	@:public public var cname : sun.security.krb5.PrincipalName;
 	
-	public var cusec : Int;
+	@:public public var cusec : Int;
 	
-	public var ctime : sun.security.krb5.internal.KerberosTime;
+	@:public public var ctime : sun.security.krb5.internal.KerberosTime;
 	
-	public var authorizationData : sun.security.krb5.internal.AuthorizationData;
+	@:public public var authorizationData : sun.security.krb5.internal.AuthorizationData;
 	
-	@:overload public function new(new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_cksum : sun.security.krb5.Checksum, new_cusec : Int, new_ctime : sun.security.krb5.internal.KerberosTime, new_subKey : sun.security.krb5.EncryptionKey, new_seqNumber : Null<Int>, new_authorizationData : sun.security.krb5.internal.AuthorizationData) : Void;
+	@:overload @:public public function new(new_crealm : sun.security.krb5.Realm, new_cname : sun.security.krb5.PrincipalName, new_cksum : sun.security.krb5.Checksum, new_cusec : Int, new_ctime : sun.security.krb5.internal.KerberosTime, new_subKey : sun.security.krb5.EncryptionKey, new_seqNumber : Null<Int>, new_authorizationData : sun.security.krb5.internal.AuthorizationData) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an Authenticator object.
@@ -75,13 +75,13 @@ extern class Authenticator
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final public function getChecksum() : sun.security.krb5.Checksum;
+	@:overload @:public @:final public function getChecksum() : sun.security.krb5.Checksum;
 	
-	@:overload @:final public function getSeqNumber() : Null<Int>;
+	@:overload @:public @:final public function getSeqNumber() : Null<Int>;
 	
-	@:overload @:final public function getSubKey() : sun.security.krb5.EncryptionKey;
+	@:overload @:public @:final public function getSubKey() : sun.security.krb5.EncryptionKey;
 	
 	
 }

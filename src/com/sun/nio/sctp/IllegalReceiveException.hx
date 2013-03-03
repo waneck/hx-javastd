@@ -35,12 +35,12 @@ package com.sun.nio.sctp;
 	/**
 	* Constructs an instance of this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an instance of this class with the specified message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

@@ -34,7 +34,7 @@ extern interface VM_CUSTOM
 	/** The value representing a custom marshalled value type in
 	* a typecode.
 	*/
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

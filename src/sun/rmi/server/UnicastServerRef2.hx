@@ -34,24 +34,24 @@ extern class UnicastServerRef2 extends sun.rmi.server.UnicastServerRef
 	/**
 	* Create a new (empty) Unicast server remote reference.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a Unicast server remote reference for a specified
 	* liveRef.
 	*/
-	@:overload public function new(ref : sun.rmi.transport.LiveRef) : Void;
+	@:overload @:public public function new(ref : sun.rmi.transport.LiveRef) : Void;
 	
 	/**
 	* Construct a Unicast server remote reference to be exported
 	* on the specified port.
 	*/
-	@:overload public function new(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:overload @:public public function new(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Returns the class of the ref type to be serialized
 	*/
-	@:overload override public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public override public function getRefClass(out : java.io.ObjectOutput) : String;
 	
 	/**
 	* Return the client remote reference for this remoteRef.
@@ -59,7 +59,7 @@ extern class UnicastServerRef2 extends sun.rmi.server.UnicastServerRef
 	* For  a server remote reference, a client side one will have to
 	* found or created.
 	*/
-	@:overload override private function getClientRef() : java.rmi.server.RemoteRef;
+	@:overload @:protected override private function getClientRef() : java.rmi.server.RemoteRef;
 	
 	
 }

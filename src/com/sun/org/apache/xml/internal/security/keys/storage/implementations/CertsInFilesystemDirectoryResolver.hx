@@ -27,10 +27,10 @@ extern class CertsInFilesystemDirectoryResolver extends com.sun.org.apache.xml.i
 	* @param directoryName
 	* @throws StorageResolverException
 	*/
-	@:overload public function new(directoryName : String) : Void;
+	@:overload @:public public function new(directoryName : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function getIterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getIterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Method main
@@ -38,7 +38,7 @@ extern class CertsInFilesystemDirectoryResolver extends com.sun.org.apache.xml.i
 	* @param unused
 	* @throws Exception
 	*/
-	@:overload public static function main(unused : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(unused : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -55,19 +55,19 @@ extern class CertsInFilesystemDirectoryResolver extends com.sun.org.apache.xml.i
 	*
 	* @param certs
 	*/
-	@:overload public function new(certs : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(certs : java.util.List<Dynamic>) : Void;
 	
 	/** @inheritDoc */
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/** @inheritDoc */
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	/**
 	* Method remove
 	*
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

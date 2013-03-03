@@ -37,7 +37,7 @@ extern class AudioFileFormat
 	*
 	* @see #getType
 	*/
-	@:overload private function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, byteLength : Int, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
+	@:overload @:protected private function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, byteLength : Int, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
 	
 	/**
 	* Constructs an audio file format object.
@@ -47,7 +47,7 @@ extern class AudioFileFormat
 	* @param format the format of the audio data contained in the file
 	* @param frameLength the audio data length in sample frames, or <code>AudioSystem.NOT_SPECIFIED</code>
 	*/
-	@:overload public function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
+	@:overload @:public public function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
 	
 	/**
 	* Construct an audio file format object with a set of
@@ -65,7 +65,7 @@ extern class AudioFileFormat
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int, properties : java.util.Map<String, Dynamic>) : Void;
+	@:require(java5) @:overload @:public public function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int, properties : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Obtains the audio file type, such as <code>WAVE</code> or <code>AU</code>.
@@ -77,27 +77,27 @@ extern class AudioFileFormat
 	* @see Type#AIFC
 	* @see Type#SND
 	*/
-	@:overload public function getType() : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:overload @:public public function getType() : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Obtains the size in bytes of the entire audio file (not just its audio data).
 	* @return the audio file length in bytes
 	* @see AudioSystem#NOT_SPECIFIED
 	*/
-	@:overload public function getByteLength() : Int;
+	@:overload @:public public function getByteLength() : Int;
 	
 	/**
 	* Obtains the format of the audio data contained in the audio file.
 	* @return the audio data format
 	*/
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
 	/**
 	* Obtains the length of the audio data contained in the file, expressed in sample frames.
 	* @return the number of sample frames of audio data in the file
 	* @see AudioSystem#NOT_SPECIFIED
 	*/
-	@:overload public function getFrameLength() : Int;
+	@:overload @:public public function getFrameLength() : Int;
 	
 	/**
 	* Obtain an unmodifiable map of properties.
@@ -111,7 +111,7 @@ extern class AudioFileFormat
 	* @see #getProperty(String)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function properties() : java.util.Map<String, Dynamic>;
+	@:require(java5) @:overload @:public public function properties() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Obtain the property value specified by the key.
@@ -129,13 +129,13 @@ extern class AudioFileFormat
 	* @see #properties()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getProperty(key : String) : Dynamic;
+	@:require(java5) @:overload @:public public function getProperty(key : String) : Dynamic;
 	
 	/**
 	* Provides a string representation of the file format.
 	* @return the file format as a string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -149,27 +149,27 @@ extern class AudioFileFormat
 	/**
 	* Specifies a WAVE file.
 	*/
-	public static var WAVE(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:public @:static @:final public static var WAVE(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies an AU file.
 	*/
-	public static var AU(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:public @:static @:final public static var AU(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies an AIFF file.
 	*/
-	public static var AIFF(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:public @:static @:final public static var AIFF(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies an AIFF-C file.
 	*/
-	public static var AIFC(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:public @:static @:final public static var AIFC(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies a SND file.
 	*/
-	public static var SND(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:public @:static @:final public static var SND(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Constructs a file type.
@@ -177,30 +177,30 @@ extern class AudioFileFormat
 	* @param extension the string that commonly marks the file type
 	* without leading dot.
 	*/
-	@:overload public function new(name : String, extension : String) : Void;
+	@:overload @:public public function new(name : String, extension : String) : Void;
 	
 	/**
 	* Finalizes the equals method
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashCode method
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Provides the file type's name as the <code>String</code> representation
 	* of the file type.
 	* @return the file type's name
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Obtains the common file name extension for this file type.
 	* @return file type extension
 	*/
-	@:overload public function getExtension() : String;
+	@:overload @:public public function getExtension() : String;
 	
 	
 }

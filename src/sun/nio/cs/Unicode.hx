@@ -25,11 +25,11 @@ package sun.nio.cs;
 */
 @:internal extern class Unicode extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new(name : String, aliases : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(name : String, aliases : java.NativeArray<String>) : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload @:public public function historicalName() : String;
+	@:overload @:public @:public public function historicalName() : String;
 	
 	
 }

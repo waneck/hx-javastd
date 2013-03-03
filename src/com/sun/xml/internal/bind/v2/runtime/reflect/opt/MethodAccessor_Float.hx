@@ -33,11 +33,11 @@ extern class MethodAccessor_Float extends com.sun.xml.internal.bind.v2.runtime.r
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function get(bean : Dynamic) : Dynamic;
+	@:overload @:public override public function get(bean : Dynamic) : Dynamic;
 	
-	@:overload public function set(bean : Dynamic, value : Dynamic) : Void;
+	@:overload @:public override public function set(bean : Dynamic, value : Dynamic) : Void;
 	
 	
 }

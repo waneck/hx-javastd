@@ -29,27 +29,27 @@ extern class RSAPublicKeyImpl extends sun.security.x509.X509Key implements java.
 	* Construct a key from its components. Used by the
 	* RSAKeyFactory and the RSAKeyPairGenerator.
 	*/
-	@:overload public function new(n : java.math.BigInteger, e : java.math.BigInteger) : Void;
+	@:overload @:public public function new(n : java.math.BigInteger, e : java.math.BigInteger) : Void;
 	
 	/**
 	* Construct a key from its encoding. Used by RSAKeyFactory.
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
-	@:overload public function getModulus() : java.math.BigInteger;
+	@:overload @:public public function getModulus() : java.math.BigInteger;
 	
-	@:overload public function getPublicExponent() : java.math.BigInteger;
+	@:overload @:public public function getPublicExponent() : java.math.BigInteger;
 	
 	/**
 	* Parse the key. Called by X509Key.
 	*/
-	@:overload override private function parseKeyBits() : Void;
+	@:overload @:protected override private function parseKeyBits() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload private function writeReplace() : Dynamic;
+	@:overload @:protected private function writeReplace() : Dynamic;
 	
 	
 }

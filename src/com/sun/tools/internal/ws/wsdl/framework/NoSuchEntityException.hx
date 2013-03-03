@@ -30,11 +30,11 @@ extern class NoSuchEntityException extends com.sun.tools.internal.ws.wsdl.framew
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new(id : String) : Void;
+	@:overload @:public public function new(id : String) : Void;
 	
-	@:overload public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
 	
 }

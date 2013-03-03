@@ -34,7 +34,7 @@ extern class JAXBResult extends javax.xml.transform.sax.SAXResult
 	* @exception JAXBException if an error is encountered while creating the
 	* JAXBResult or if the context parameter is null.
 	*/
-	@:overload public function new(context : javax.xml.bind.JAXBContext) : Void;
+	@:overload @:public public function new(context : javax.xml.bind.JAXBContext) : Void;
 	
 	/**
 	* Creates a new instance that uses the specified
@@ -55,7 +55,7 @@ extern class JAXBResult extends javax.xml.transform.sax.SAXResult
 	* @throws JAXBException if an error is encountered while creating the
 	* JAXBResult or the Unmarshaller parameter is null.
 	*/
-	@:overload public function new(_unmarshaller : javax.xml.bind.Unmarshaller) : Void;
+	@:overload @:public public function new(_unmarshaller : javax.xml.bind.Unmarshaller) : Void;
 	
 	/**
 	* Gets the unmarshalled object created by the transformation.
@@ -71,7 +71,7 @@ extern class JAXBResult extends javax.xml.transform.sax.SAXResult
 	*      Note that the implementation is allowed to throw SAXException
 	*      during the parsing when it finds an error.
 	*/
-	@:overload public function getResult() : Dynamic;
+	@:overload @:public public function getResult() : Dynamic;
 	
 	
 }

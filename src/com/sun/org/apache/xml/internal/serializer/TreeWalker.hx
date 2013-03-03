@@ -24,23 +24,23 @@ package com.sun.org.apache.xml.internal.serializer;
 extern class TreeWalker
 {
 	/** DomHelper for this TreeWalker          */
-	private var m_dh(default, null) : com.sun.org.apache.xml.internal.serializer.utils.DOM2Helper;
+	@:final @:protected private var m_dh(default, null) : com.sun.org.apache.xml.internal.serializer.utils.DOM2Helper;
 	
 	/**
 	* Get the ContentHandler used for the tree walk.
 	*
 	* @return the ContentHandler used for the tree walk
 	*/
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload public function new(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Constructor.
 	* @param   contentHandler The implemention of the
 	* contentHandler operation (toXMLString, digest, ...)
 	*/
-	@:overload public function new(contentHandler : org.xml.sax.ContentHandler, systemId : String) : Void;
+	@:overload @:public public function new(contentHandler : org.xml.sax.ContentHandler, systemId : String) : Void;
 	
 	/**
 	* Perform a pre-order traversal non-recursive style.
@@ -54,7 +54,7 @@ extern class TreeWalker
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function traverse(pos : org.w3c.dom.Node) : Void;
+	@:overload @:public public function traverse(pos : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Perform a pre-order traversal non-recursive style.
@@ -69,7 +69,7 @@ extern class TreeWalker
 	*
 	* @throws TransformerException
 	*/
-	@:overload public function traverse(pos : org.w3c.dom.Node, top : org.w3c.dom.Node) : Void;
+	@:overload @:public public function traverse(pos : org.w3c.dom.Node, top : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Start processing given node
@@ -79,7 +79,7 @@ extern class TreeWalker
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function startNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function startNode(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* End processing of given node
@@ -89,7 +89,7 @@ extern class TreeWalker
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function endNode(node : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function endNode(node : org.w3c.dom.Node) : Void;
 	
 	
 }

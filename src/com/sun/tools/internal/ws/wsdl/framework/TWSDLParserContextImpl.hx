@@ -25,41 +25,41 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern class TWSDLParserContextImpl implements com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext
 {
-	@:overload public function new(forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest, doc : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, listeners : java.util.ArrayList<com.sun.tools.internal.ws.wsdl.framework.ParserListener>, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest, doc : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument, listeners : java.util.ArrayList<com.sun.tools.internal.ws.wsdl.framework.ParserListener>, errReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getDocument() : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument;
+	@:overload @:public public function getDocument() : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument;
 	
-	@:overload public function getFollowImports() : Bool;
+	@:overload @:public public function getFollowImports() : Bool;
 	
-	@:overload public function setFollowImports(b : Bool) : Void;
+	@:overload @:public public function setFollowImports(b : Bool) : Void;
 	
-	@:overload public function push() : Void;
+	@:overload @:public public function push() : Void;
 	
-	@:overload public function pop() : Void;
+	@:overload @:public public function pop() : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefixes() : java.lang.Iterable<String>;
+	@:overload @:public public function getPrefixes() : java.lang.Iterable<String>;
 	
-	@:overload public function getDefaultNamespaceURI() : String;
+	@:overload @:public public function getDefaultNamespaceURI() : String;
 	
-	@:overload public function registerNamespaces(e : org.w3c.dom.Element) : Void;
+	@:overload @:public public function registerNamespaces(e : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getLocation(e : org.w3c.dom.Element) : org.xml.sax.Locator;
+	@:overload @:public public function getLocation(e : org.w3c.dom.Element) : org.xml.sax.Locator;
 	
-	@:overload public function translateQualifiedName(locator : org.xml.sax.Locator, s : String) : javax.xml.namespace.QName;
+	@:overload @:public public function translateQualifiedName(locator : org.xml.sax.Locator, s : String) : javax.xml.namespace.QName;
 	
-	@:overload public function fireIgnoringExtension(e : org.w3c.dom.Element, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function fireIgnoringExtension(e : org.w3c.dom.Element, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function fireDoneParsingEntity(element : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function fireDoneParsingEntity(element : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function pushWSDLLocation() : Void;
+	@:overload @:public public function pushWSDLLocation() : Void;
 	
-	@:overload public function popWSDLLocation() : Void;
+	@:overload @:public public function popWSDLLocation() : Void;
 	
-	@:overload public function setWSDLLocation(loc : String) : Void;
+	@:overload @:public public function setWSDLLocation(loc : String) : Void;
 	
-	@:overload public function getWSDLLocation() : String;
+	@:overload @:public public function getWSDLLocation() : String;
 	
 	
 }

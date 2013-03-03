@@ -28,13 +28,13 @@ extern class Book implements java.awt.print.Pageable
 	/**
 	*  Creates a new, empty <code>Book</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of pages in this <code>Book</code>.
 	* @return the number of pages this <code>Book</code> contains.
 	*/
-	@:overload public function getNumberOfPages() : Int;
+	@:overload @:public public function getNumberOfPages() : Int;
 	
 	/**
 	* Returns the {@link PageFormat} of the page specified by
@@ -46,7 +46,7 @@ extern class Book implements java.awt.print.Pageable
 	* @throws IndexOutOfBoundsException if the <code>Pageable</code>
 	*          does not contain the requested page
 	*/
-	@:overload public function getPageFormat(pageIndex : Int) : java.awt.print.PageFormat;
+	@:overload @:public public function getPageFormat(pageIndex : Int) : java.awt.print.PageFormat;
 	
 	/**
 	* Returns the {@link Printable} instance responsible for rendering
@@ -57,7 +57,7 @@ extern class Book implements java.awt.print.Pageable
 	* @throws IndexOutOfBoundsException if the <code>Pageable</code>
 	*            does not contain the requested page
 	*/
-	@:overload public function getPrintable(pageIndex : Int) : java.awt.print.Printable;
+	@:overload @:public public function getPrintable(pageIndex : Int) : java.awt.print.Printable;
 	
 	/**
 	* Sets the <code>PageFormat</code> and the <code>Painter</code> for a
@@ -72,7 +72,7 @@ extern class Book implements java.awt.print.Pageable
 	* @throws NullPointerException if the <code>painter</code> or
 	*          <code>page</code> argument is <code>null</code>
 	*/
-	@:overload public function setPage(pageIndex : Int, painter : java.awt.print.Printable, page : java.awt.print.PageFormat) : Void;
+	@:overload @:public public function setPage(pageIndex : Int, painter : java.awt.print.Printable, page : java.awt.print.PageFormat) : Void;
 	
 	/**
 	* Appends a single page to the end of this <code>Book</code>.
@@ -83,7 +83,7 @@ extern class Book implements java.awt.print.Pageable
 	*          If the <code>painter</code> or <code>page</code>
 	*          argument is <code>null</code>
 	*/
-	@:overload public function append(painter : java.awt.print.Printable, page : java.awt.print.PageFormat) : Void;
+	@:overload @:public public function append(painter : java.awt.print.Printable, page : java.awt.print.PageFormat) : Void;
 	
 	/**
 	* Appends <code>numPages</code> pages to the end of this
@@ -98,7 +98,7 @@ extern class Book implements java.awt.print.Pageable
 	*          If the <code>painter</code> or <code>page</code>
 	*          argument is <code>null</code>
 	*/
-	@:overload public function append(painter : java.awt.print.Printable, page : java.awt.print.PageFormat, numPages : Int) : Void;
+	@:overload @:public public function append(painter : java.awt.print.Printable, page : java.awt.print.PageFormat, numPages : Int) : Void;
 	
 	
 }

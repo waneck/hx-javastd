@@ -28,7 +28,7 @@ extern class AnnotationDescImpl implements com.sun.javadoc.AnnotationDesc
 	/**
 	* Returns the annotation type of this annotation.
 	*/
-	@:overload public function annotationType() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function annotationType() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	/**
 	* Returns this annotation's elements and their values.
@@ -36,7 +36,7 @@ extern class AnnotationDescImpl implements com.sun.javadoc.AnnotationDesc
 	* included, not those assuming their default values.
 	* Returns an empty array if there are none.
 	*/
-	@:overload public function elementValues() : java.NativeArray<com.sun.javadoc.AnnotationDesc.AnnotationDesc_ElementValuePair>;
+	@:overload @:public public function elementValues() : java.NativeArray<com.sun.javadoc.AnnotationDesc.AnnotationDesc_ElementValuePair>;
 	
 	/**
 	* Returns a string representation of this annotation.
@@ -46,7 +46,7 @@ extern class AnnotationDescImpl implements com.sun.javadoc.AnnotationDesc
 	*     @com.example.foo
 	* Omit parens for marker annotations, and omit "value=" when allowed.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -59,18 +59,18 @@ extern class AnnotationDescImpl implements com.sun.javadoc.AnnotationDesc
 	/**
 	* Returns the annotation type element.
 	*/
-	@:overload public function element() : com.sun.javadoc.AnnotationTypeElementDoc;
+	@:overload @:public public function element() : com.sun.javadoc.AnnotationTypeElementDoc;
 	
 	/**
 	* Returns the value associated with the annotation type element.
 	*/
-	@:overload public function value() : com.sun.javadoc.AnnotationValue;
+	@:overload @:public public function value() : com.sun.javadoc.AnnotationValue;
 	
 	/**
 	* Returns a string representation of this pair
 	* of the form "name=value".
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

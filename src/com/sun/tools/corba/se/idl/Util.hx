@@ -46,7 +46,7 @@ extern class Util
 	* @return the version number contained within the appropriate properties
 	*  file, which indicates the build of this IDL Parser Framework.
 	**/
-	@:overload public static function getVersion() : String;
+	@:overload @:public @:static public static function getVersion() : String;
 	
 	/**
 	* Fetch the version number of this build of the IDL Parser Framework.
@@ -56,47 +56,47 @@ extern class Util
 	* from the indicated messages file.
 	* @return the version number.
 	**/
-	@:overload public static function getVersion(filename : String) : String;
+	@:overload @:public @:static public static function getVersion(filename : String) : String;
 	
-	@:overload public static function isAttribute(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isAttribute(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isConst(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isConst(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isEnum(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isEnum(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isException(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isException(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isInterface(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isInterface(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isMethod(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isMethod(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isModule(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isModule(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isParameter(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isParameter(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isPrimitive(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isPrimitive(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isSequence(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isSequence(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isStruct(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isStruct(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isString(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isString(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isTypedef(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isTypedef(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function isUnion(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isUnion(name : String, symbolTable : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function getMessage(key : String) : String;
+	@:overload @:public @:static public static function getMessage(key : String) : String;
 	
-	@:overload public static function getMessage(key : String, fill : String) : String;
+	@:overload @:public @:static public static function getMessage(key : String, fill : String) : String;
 	
-	@:overload public static function getMessage(key : String, fill : java.NativeArray<String>) : String;
+	@:overload @:public @:static public static function getMessage(key : String, fill : java.NativeArray<String>) : String;
 	
 	/** Register a message file.  This file will be searched for
 	in the CLASSPATH. */
-	@:overload public static function registerMessageFile(filename : String) : Void;
+	@:overload @:public @:static public static function registerMessageFile(filename : String) : Void;
 	
-	@:overload public static function capitalize(lc : String) : String;
+	@:overload @:public @:static public static function capitalize(lc : String) : String;
 	
 	/** Searches the current user directory and a list of directories for
 	a given short file name and returns its absolute file specification.
@@ -104,14 +104,14 @@ extern class Util
 	@throws FileNotFoundException The file does not exist in the
 	current user or specified directories.
 	@see java.io.File.getAbsolutePath */
-	@:overload public static function getAbsolutePath(filename : String, includePaths : java.util.Vector<Dynamic>) : String;
+	@:overload @:public @:static public static function getAbsolutePath(filename : String, includePaths : java.util.Vector<Dynamic>) : String;
 	
 	/**
 	* Compute the absolute value of the difference between two floating-point
 	* numbers having single precision.
 	* @return the absolute value of the difference between two floats.
 	**/
-	@:overload public static function absDelta(f1 : Single, f2 : Single) : Single;
+	@:overload @:public @:static public static function absDelta(f1 : Single, f2 : Single) : Single;
 	
 	
 }

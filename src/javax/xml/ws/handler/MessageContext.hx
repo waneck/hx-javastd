@@ -34,7 +34,7 @@ extern interface MessageContext extends java.util.Map<String, Dynamic>
 	* @throws java.lang.IllegalArgumentException if an illegal
 	*             property name is specified
 	*/
-	@:overload public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
+	@:overload @:public public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
 	
 	/**
 	* Gets the scope of a property.
@@ -44,7 +44,7 @@ extern interface MessageContext extends java.util.Map<String, Dynamic>
 	* @throws java.lang.IllegalArgumentException if a non-existant
 	*             property name is specified
 	*/
-	@:overload public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
+	@:overload @:public public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
 	
 	
 }

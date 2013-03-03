@@ -31,12 +31,12 @@ package com.sun.org.apache.xml.internal.utils;
 extern class Trie
 {
 	/** Size of the m_nextChar array.  */
-	public static var ALPHA_SIZE(default, null) : Int;
+	@:public @:static @:final public static var ALPHA_SIZE(default, null) : Int;
 	
 	/**
 	* Construct the trie.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Put an object into the trie for lookup.
@@ -46,7 +46,7 @@ extern class Trie
 	*
 	* @return The old object that matched key, or null.
 	*/
-	@:overload public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* Get an object that matches the key.
@@ -55,7 +55,7 @@ extern class Trie
 	*
 	* @return The object that matches the key, or null.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	
 }

@@ -39,7 +39,7 @@ package java.io;
 	*
 	* @param desc  a String describing the exception.
 	*/
-	@:overload public function new(desc : String) : Void;
+	@:overload @:public public function new(desc : String) : Void;
 	
 	
 }

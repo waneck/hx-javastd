@@ -25,11 +25,11 @@ package com.sun.xml.internal.txw2;
 */
 @:internal extern class StartTag extends com.sun.xml.internal.txw2.Content implements com.sun.xml.internal.txw2.NamespaceResolver
 {
-	@:overload public function new(owner : com.sun.xml.internal.txw2.ContainerElement, uri : String, localName : String) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.txw2.ContainerElement, uri : String, localName : String) : Void;
 	
-	@:overload public function new(document : com.sun.xml.internal.txw2.Document, uri : String, localName : String) : Void;
+	@:overload @:public public function new(document : com.sun.xml.internal.txw2.Document, uri : String, localName : String) : Void;
 	
-	@:overload public function addAttribute(nsUri : String, localName : String, arg : Dynamic) : Void;
+	@:overload @:public public function addAttribute(nsUri : String, localName : String, arg : Dynamic) : Void;
 	
 	/**
 	* Declares a new namespace URI on this tag.
@@ -50,11 +50,11 @@ package com.sun.xml.internal.txw2;
 	*      <p>
 	*      Normally you just need to set it to false.
 	*/
-	@:overload public function addNamespaceDecl(uri : String, prefix : String, requirePrefix : Bool) : com.sun.xml.internal.txw2.NamespaceDecl;
+	@:overload @:public public function addNamespaceDecl(uri : String, prefix : String, requirePrefix : Bool) : com.sun.xml.internal.txw2.NamespaceDecl;
 	
-	@:overload override public function written() : Void;
+	@:overload @:public override public function written() : Void;
 	
-	@:overload public function getPrefix(nsUri : String) : String;
+	@:overload @:public public function getPrefix(nsUri : String) : String;
 	
 	
 }

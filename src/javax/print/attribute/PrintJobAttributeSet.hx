@@ -64,7 +64,7 @@ extern interface PrintJobAttributeSet extends javax.print.attribute.AttributeSet
 	* @throws  NullPointerException
 	*    (unchecked exception) Thrown if the <CODE>attribute</CODE> is null.
 	*/
-	@:overload public function add(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function add(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified set to this attribute.
@@ -102,7 +102,7 @@ extern interface PrintJobAttributeSet extends javax.print.attribute.AttributeSet
 	*
 	* @see #add(Attribute)
 	*/
-	@:overload public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
 	
 	
 }

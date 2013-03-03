@@ -23,96 +23,96 @@ extern class XSFacets
 	/**
 	* value of length facet.
 	*/
-	public var length : Int;
+	@:public public var length : Int;
 	
 	/**
 	* value of minLength facet.
 	*/
-	public var minLength : Int;
+	@:public public var minLength : Int;
 	
 	/**
 	* value of maxLength facet.
 	*/
-	public var maxLength : Int;
+	@:public public var maxLength : Int;
 	
 	/**
 	* value of whiteSpace facet.
 	*/
-	public var whiteSpace : java.StdTypes.Int16;
+	@:public public var whiteSpace : java.StdTypes.Int16;
 	
 	/**
 	* value of totalDigits facet.
 	*/
-	public var totalDigits : Int;
+	@:public public var totalDigits : Int;
 	
 	/**
 	* value of fractionDigits facet.
 	*/
-	public var fractionDigits : Int;
+	@:public public var fractionDigits : Int;
 	
 	/**
 	* string containing value of pattern facet, for multiple patterns values
 	* are ORed together.
 	*/
-	public var pattern : String;
+	@:public public var pattern : String;
 	
 	/**
 	* Vector containing values of Enumeration facet, as String's.
 	*/
-	public var enumeration : java.util.Vector<Dynamic>;
+	@:public public var enumeration : java.util.Vector<Dynamic>;
 	
 	/**
 	* An array parallel to "Vector enumeration". It contains namespace context
 	* of each enumeration value. Elements of this vector are NamespaceContext
 	* objects.
 	*/
-	public var enumNSDecls : java.util.Vector<Dynamic>;
+	@:public public var enumNSDecls : java.util.Vector<Dynamic>;
 	
 	/**
 	* value of maxInclusive facet.
 	*/
-	public var maxInclusive : String;
+	@:public public var maxInclusive : String;
 	
 	/**
 	* value of maxExclusive facet.
 	*/
-	public var maxExclusive : String;
+	@:public public var maxExclusive : String;
 	
 	/**
 	* value of minInclusive facet.
 	*/
-	public var minInclusive : String;
+	@:public public var minInclusive : String;
 	
 	/**
 	* value of minExclusive facet.
 	*/
-	public var minExclusive : String;
+	@:public public var minExclusive : String;
 	
-	public var lengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var lengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var minLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var minLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var maxLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var maxLengthAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var whiteSpaceAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var whiteSpaceAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var totalDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var totalDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var fractionDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var fractionDigitsAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var patternAnnotations : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
+	@:public public var patternAnnotations : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
 	
-	public var enumAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:public public var enumAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	public var maxInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var maxInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var maxExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var maxExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var minInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var minInclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	public var minExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:public public var minExclusiveAnnotation : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

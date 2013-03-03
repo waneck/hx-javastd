@@ -40,7 +40,7 @@ package java.rmi.server;
 	* becomes empty.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function unreferenced() : Void;
+	@:require(java1) @:overload @:public public function unreferenced() : Void;
 	
 	
 }

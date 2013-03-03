@@ -34,7 +34,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @throws  RemoteException if this group could not be exported
 	* @since   1.2
 	*/
-	@:require(java2) @:overload private function new(groupID : java.rmi.activation.ActivationGroupID) : Void;
+	@:require(java2) @:overload @:protected private function new(groupID : java.rmi.activation.ActivationGroupID) : Void;
 	
 	/**
 	* The group's <code>inactiveObject</code> method is called
@@ -74,7 +74,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @exception ActivationException if group is inactive
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function inactiveObject(id : java.rmi.activation.ActivationID) : Bool;
+	@:require(java2) @:overload @:public public function inactiveObject(id : java.rmi.activation.ActivationID) : Bool;
 	
 	/**
 	* The group's <code>activeObject</code> method is called when an
@@ -92,7 +92,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @exception ActivationException if group is inactive
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function activeObject(id : java.rmi.activation.ActivationID, obj : java.rmi.Remote) : Void;
+	@:require(java2) @:overload @:public @:abstract public function activeObject(id : java.rmi.activation.ActivationID, obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Create and set the activation group for the current VM.  The
@@ -157,7 +157,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @see SecurityManager#checkSetFactory
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public static function createGroup(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc, incarnation : haxe.Int64) : java.rmi.activation.ActivationGroup;
+	@:require(java2) @:overload @:public @:static @:synchronized public static function createGroup(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc, incarnation : haxe.Int64) : java.rmi.activation.ActivationGroup;
 	
 	/**
 	* Returns the current activation group's identifier.  Returns null
@@ -165,7 +165,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @return the activation group's identifier
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public static function currentGroupID() : java.rmi.activation.ActivationGroupID;
+	@:require(java2) @:overload @:public @:static @:synchronized public static function currentGroupID() : java.rmi.activation.ActivationGroupID;
 	
 	/**
 	* Set the activation system for the VM.  The activation system can
@@ -193,7 +193,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @see SecurityManager#checkSetFactory
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public static function setSystem(system : java.rmi.activation.ActivationSystem) : Void;
+	@:require(java2) @:overload @:public @:static @:synchronized public static function setSystem(system : java.rmi.activation.ActivationSystem) : Void;
 	
 	/**
 	* Returns the activation system for the VM. The activation system
@@ -215,7 +215,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @see #setSystem
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public static function getSystem() : java.rmi.activation.ActivationSystem;
+	@:require(java2) @:overload @:public @:static @:synchronized public static function getSystem() : java.rmi.activation.ActivationSystem;
 	
 	/**
 	* This protected method is necessary for subclasses to
@@ -230,7 +230,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @exception ActivationException if an activation error occurs
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function activeObject(id : java.rmi.activation.ActivationID, mobj : java.rmi.MarshalledObject<java.rmi.Remote>) : Void;
+	@:require(java2) @:overload @:protected private function activeObject(id : java.rmi.activation.ActivationID, mobj : java.rmi.MarshalledObject<java.rmi.Remote>) : Void;
 	
 	/**
 	* This protected method is necessary for subclasses to
@@ -243,7 +243,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @exception RemoteException if call informing monitor fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function inactiveGroup() : Void;
+	@:require(java2) @:overload @:protected private function inactiveGroup() : Void;
 	
 	/**
 	* The activator calls an instantiator's <code>newInstance</code>
@@ -274,7 +274,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @exception RemoteException if remote call fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function newInstance(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.MarshalledObject<java.rmi.Remote>;
+	@:require(java2) @:overload @:public @:public public function newInstance(id : java.rmi.activation.ActivationID, desc : java.rmi.activation.ActivationDesc) : java.rmi.MarshalledObject<java.rmi.Remote>;
 	
 	
 }

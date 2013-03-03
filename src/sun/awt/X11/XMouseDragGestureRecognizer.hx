@@ -29,9 +29,9 @@ package sun.awt.X11;
 	* constant for number of pixels hysterisis before drag is determined
 	* to have started
 	*/
-	private static var motionThreshold : Int;
+	@:protected @:static private static var motionThreshold : Int;
 	
-	private static var ButtonMask(default, null) : Int;
+	@:protected @:static @:final private static var ButtonMask(default, null) : Int;
 	
 	/**
 	* construct a new XMouseDragGestureRecognizer
@@ -42,7 +42,7 @@ package sun.awt.X11;
 	* @param dgl The DragGestureRecognizer to notify when a gesture is detected
 	*
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int, dgl : java.awt.dnd.DragGestureListener) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int, dgl : java.awt.dnd.DragGestureListener) : Void;
 	
 	/**
 	* construct a new XMouseDragGestureRecognizer
@@ -51,7 +51,7 @@ package sun.awt.X11;
 	* @param c   The Component to observe
 	* @param act The actions permitted for this Drag
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, act : Int) : Void;
 	
 	/**
 	* construct a new XMouseDragGestureRecognizer
@@ -59,55 +59,55 @@ package sun.awt.X11;
 	* @param ds  The DragSource for the Component c
 	* @param c   The Component to observe
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component) : Void;
 	
 	/**
 	* construct a new XMouseDragGestureRecognizer
 	*
 	* @param ds  The DragSource for the Component c
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource) : Void;
 	
 	/**
 	* determine the drop action from the event
 	*/
-	@:overload private function mapDragOperationFromModifiers(e : java.awt.event.MouseEvent) : Int;
+	@:overload @:protected private function mapDragOperationFromModifiers(e : java.awt.event.MouseEvent) : Int;
 	
 	/**
 	* Invoked when the mouse has been clicked on a component.
 	*/
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been pressed on a component.
 	*/
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been released on a component.
 	*/
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse enters a component.
 	*/
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits a component.
 	*/
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button is pressed on a component.
 	*/
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse button has been moved on a component
 	* (with no buttons no down).
 	*/
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

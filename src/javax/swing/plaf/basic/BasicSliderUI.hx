@@ -25,55 +25,55 @@ package javax.swing.plaf.basic;
 */
 extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 {
-	public static var POSITIVE_SCROLL(default, null) : Int;
+	@:public @:static @:final public static var POSITIVE_SCROLL(default, null) : Int;
 	
-	public static var NEGATIVE_SCROLL(default, null) : Int;
+	@:public @:static @:final public static var NEGATIVE_SCROLL(default, null) : Int;
 	
-	public static var MIN_SCROLL(default, null) : Int;
+	@:public @:static @:final public static var MIN_SCROLL(default, null) : Int;
 	
-	public static var MAX_SCROLL(default, null) : Int;
+	@:public @:static @:final public static var MAX_SCROLL(default, null) : Int;
 	
-	private var scrollTimer : javax.swing.Timer;
+	@:protected private var scrollTimer : javax.swing.Timer;
 	
-	private var slider : javax.swing.JSlider;
+	@:protected private var slider : javax.swing.JSlider;
 	
-	private var focusInsets : java.awt.Insets;
+	@:protected private var focusInsets : java.awt.Insets;
 	
-	private var insetCache : java.awt.Insets;
+	@:protected private var insetCache : java.awt.Insets;
 	
-	private var leftToRightCache : Bool;
+	@:protected private var leftToRightCache : Bool;
 	
-	private var focusRect : java.awt.Rectangle;
+	@:protected private var focusRect : java.awt.Rectangle;
 	
-	private var contentRect : java.awt.Rectangle;
+	@:protected private var contentRect : java.awt.Rectangle;
 	
-	private var labelRect : java.awt.Rectangle;
+	@:protected private var labelRect : java.awt.Rectangle;
 	
-	private var tickRect : java.awt.Rectangle;
+	@:protected private var tickRect : java.awt.Rectangle;
 	
-	private var trackRect : java.awt.Rectangle;
+	@:protected private var trackRect : java.awt.Rectangle;
 	
-	private var thumbRect : java.awt.Rectangle;
+	@:protected private var thumbRect : java.awt.Rectangle;
 	
-	private var trackBuffer : Int;
+	@:protected private var trackBuffer : Int;
 	
-	private var trackListener : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
+	@:protected private var trackListener : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
-	private var changeListener : javax.swing.event.ChangeListener;
+	@:protected private var changeListener : javax.swing.event.ChangeListener;
 	
-	private var componentListener : java.awt.event.ComponentListener;
+	@:protected private var componentListener : java.awt.event.ComponentListener;
 	
-	private var focusListener : java.awt.event.FocusListener;
+	@:protected private var focusListener : java.awt.event.FocusListener;
 	
-	private var scrollListener : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_ScrollListener;
+	@:protected private var scrollListener : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_ScrollListener;
 	
-	private var propertyChangeListener : java.beans.PropertyChangeListener;
+	@:protected private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
-	@:overload private function getShadowColor() : java.awt.Color;
+	@:overload @:protected private function getShadowColor() : java.awt.Color;
 	
-	@:overload private function getHighlightColor() : java.awt.Color;
+	@:overload @:protected private function getHighlightColor() : java.awt.Color;
 	
-	@:overload private function getFocusColor() : java.awt.Color;
+	@:overload @:protected private function getFocusColor() : java.awt.Color;
 	
 	/**
 	* Returns true if the user is dragging the slider.
@@ -81,39 +81,39 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* @return true if the user is dragging the slider
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function isDragging() : Bool;
+	@:require(java5) @:overload @:protected private function isDragging() : Bool;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new(b : javax.swing.JSlider) : Void;
+	@:overload @:public public function new(b : javax.swing.JSlider) : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected private function installDefaults(slider : javax.swing.JSlider) : Void;
 	
-	@:overload private function uninstallDefaults(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected private function uninstallDefaults(slider : javax.swing.JSlider) : Void;
 	
-	@:overload private function createTrackListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
+	@:overload @:protected private function createTrackListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
-	@:overload private function createChangeListener(slider : javax.swing.JSlider) : javax.swing.event.ChangeListener;
+	@:overload @:protected private function createChangeListener(slider : javax.swing.JSlider) : javax.swing.event.ChangeListener;
 	
-	@:overload private function createComponentListener(slider : javax.swing.JSlider) : java.awt.event.ComponentListener;
+	@:overload @:protected private function createComponentListener(slider : javax.swing.JSlider) : java.awt.event.ComponentListener;
 	
-	@:overload private function createFocusListener(slider : javax.swing.JSlider) : java.awt.event.FocusListener;
+	@:overload @:protected private function createFocusListener(slider : javax.swing.JSlider) : java.awt.event.FocusListener;
 	
-	@:overload private function createScrollListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_ScrollListener;
+	@:overload @:protected private function createScrollListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_ScrollListener;
 	
-	@:overload private function createPropertyChangeListener(slider : javax.swing.JSlider) : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createPropertyChangeListener(slider : javax.swing.JSlider) : java.beans.PropertyChangeListener;
 	
-	@:overload private function installListeners(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected private function installListeners(slider : javax.swing.JSlider) : Void;
 	
-	@:overload private function uninstallListeners(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected private function uninstallListeners(slider : javax.swing.JSlider) : Void;
 	
-	@:overload private function installKeyboardActions(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected private function installKeyboardActions(slider : javax.swing.JSlider) : Void;
 	
-	@:overload private function uninstallKeyboardActions(slider : javax.swing.JSlider) : Void;
+	@:overload @:protected private function uninstallKeyboardActions(slider : javax.swing.JSlider) : Void;
 	
 	/**
 	* Returns the baseline.
@@ -123,7 +123,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -133,7 +133,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior(c : javax.swing.JComponent) : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* Returns true if all the labels from the label table have the same
@@ -143,35 +143,35 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	*         same baseline
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function labelsHaveSameBaselines() : Bool;
+	@:require(java6) @:overload @:protected private function labelsHaveSameBaselines() : Bool;
 	
-	@:overload public function getPreferredHorizontalSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredHorizontalSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredVerticalSize() : java.awt.Dimension;
+	@:overload @:public public function getPreferredVerticalSize() : java.awt.Dimension;
 	
-	@:overload public function getMinimumHorizontalSize() : java.awt.Dimension;
+	@:overload @:public public function getMinimumHorizontalSize() : java.awt.Dimension;
 	
-	@:overload public function getMinimumVerticalSize() : java.awt.Dimension;
+	@:overload @:public public function getMinimumVerticalSize() : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function calculateGeometry() : Void;
+	@:overload @:protected private function calculateGeometry() : Void;
 	
-	@:overload private function calculateFocusRect() : Void;
+	@:overload @:protected private function calculateFocusRect() : Void;
 	
-	@:overload private function calculateThumbSize() : Void;
+	@:overload @:protected private function calculateThumbSize() : Void;
 	
-	@:overload private function calculateContentRect() : Void;
+	@:overload @:protected private function calculateContentRect() : Void;
 	
-	@:overload private function calculateThumbLocation() : Void;
+	@:overload @:protected private function calculateThumbLocation() : Void;
 	
-	@:overload private function calculateTrackBuffer() : Void;
+	@:overload @:protected private function calculateTrackBuffer() : Void;
 	
-	@:overload private function calculateTrackRect() : Void;
+	@:overload @:protected private function calculateTrackRect() : Void;
 	
 	/**
 	* Gets the height of the tick area for horizontal sliders and the width of the
@@ -179,27 +179,27 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* determine the tick area rectangle.  If you want to give your ticks some room,
 	* make this larger than you need and paint your ticks away from the sides in paintTicks().
 	*/
-	@:overload private function getTickLength() : Int;
+	@:overload @:protected private function getTickLength() : Int;
 	
-	@:overload private function calculateTickRect() : Void;
+	@:overload @:protected private function calculateTickRect() : Void;
 	
-	@:overload private function calculateLabelRect() : Void;
+	@:overload @:protected private function calculateLabelRect() : Void;
 	
-	@:overload private function getThumbSize() : java.awt.Dimension;
+	@:overload @:protected private function getThumbSize() : java.awt.Dimension;
 	
-	@:overload private function getWidthOfWidestLabel() : Int;
+	@:overload @:protected private function getWidthOfWidestLabel() : Int;
 	
-	@:overload private function getHeightOfTallestLabel() : Int;
+	@:overload @:protected private function getHeightOfTallestLabel() : Int;
 	
-	@:overload private function getWidthOfHighValueLabel() : Int;
+	@:overload @:protected private function getWidthOfHighValueLabel() : Int;
 	
-	@:overload private function getWidthOfLowValueLabel() : Int;
+	@:overload @:protected private function getWidthOfLowValueLabel() : Int;
 	
-	@:overload private function getHeightOfHighValueLabel() : Int;
+	@:overload @:protected private function getHeightOfHighValueLabel() : Int;
 	
-	@:overload private function getHeightOfLowValueLabel() : Int;
+	@:overload @:protected private function getHeightOfLowValueLabel() : Int;
 	
-	@:overload private function drawInverted() : Bool;
+	@:overload @:protected private function drawInverted() : Bool;
 	
 	/**
 	* Returns the biggest value that has an entry in the label table.
@@ -208,7 +208,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	*         null.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getHighestValue() : Null<Int>;
+	@:require(java6) @:overload @:protected private function getHighestValue() : Null<Int>;
 	
 	/**
 	* Returns the smallest value that has an entry in the label table.
@@ -217,74 +217,74 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	*         null.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function getLowestValue() : Null<Int>;
+	@:require(java6) @:overload @:protected private function getLowestValue() : Null<Int>;
 	
 	/**
 	* Returns the label that corresponds to the highest slider value in the label table.
 	* @see JSlider#setLabelTable
 	*/
-	@:overload private function getLowestValueLabel() : java.awt.Component;
+	@:overload @:protected private function getLowestValueLabel() : java.awt.Component;
 	
 	/**
 	* Returns the label that corresponds to the lowest slider value in the label table.
 	* @see JSlider#setLabelTable
 	*/
-	@:overload private function getHighestValueLabel() : java.awt.Component;
+	@:overload @:protected private function getHighestValueLabel() : java.awt.Component;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function recalculateIfInsetsChanged() : Void;
+	@:overload @:protected private function recalculateIfInsetsChanged() : Void;
 	
-	@:overload private function recalculateIfOrientationChanged() : Void;
+	@:overload @:protected private function recalculateIfOrientationChanged() : Void;
 	
-	@:overload public function paintFocus(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintFocus(g : java.awt.Graphics) : Void;
 	
-	@:overload public function paintTrack(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintTrack(g : java.awt.Graphics) : Void;
 	
-	@:overload public function paintTicks(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintTicks(g : java.awt.Graphics) : Void;
 	
-	@:overload private function paintMinorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
+	@:overload @:protected private function paintMinorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
 	
-	@:overload private function paintMajorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
+	@:overload @:protected private function paintMajorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
 	
-	@:overload private function paintMinorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
+	@:overload @:protected private function paintMinorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
 	
-	@:overload private function paintMajorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
+	@:overload @:protected private function paintMajorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
 	
-	@:overload public function paintLabels(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintLabels(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Called for every label in the label table.  Used to draw the labels for horizontal sliders.
 	* The graphics have been translated to labelRect.y already.
 	* @see JSlider#setLabelTable
 	*/
-	@:overload private function paintHorizontalLabel(g : java.awt.Graphics, value : Int, label : java.awt.Component) : Void;
+	@:overload @:protected private function paintHorizontalLabel(g : java.awt.Graphics, value : Int, label : java.awt.Component) : Void;
 	
 	/**
 	* Called for every label in the label table.  Used to draw the labels for vertical sliders.
 	* The graphics have been translated to labelRect.x already.
 	* @see JSlider#setLabelTable
 	*/
-	@:overload private function paintVerticalLabel(g : java.awt.Graphics, value : Int, label : java.awt.Component) : Void;
+	@:overload @:protected private function paintVerticalLabel(g : java.awt.Graphics, value : Int, label : java.awt.Component) : Void;
 	
-	@:overload public function paintThumb(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintThumb(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setThumbLocation(x : Int, y : Int) : Void;
+	@:overload @:public public function setThumbLocation(x : Int, y : Int) : Void;
 	
-	@:overload public function scrollByBlock(direction : Int) : Void;
+	@:overload @:public public function scrollByBlock(direction : Int) : Void;
 	
-	@:overload public function scrollByUnit(direction : Int) : Void;
+	@:overload @:public public function scrollByUnit(direction : Int) : Void;
 	
 	/**
 	* This function is called when a mousePressed was detected in the track, not
 	* in the thumb.  The default behavior is to scroll by block.  You can
 	*  override this method to stop it from scrolling or to add additional behavior.
 	*/
-	@:overload private function scrollDueToClickInTrack(dir : Int) : Void;
+	@:overload @:protected private function scrollDueToClickInTrack(dir : Int) : Void;
 	
-	@:overload private function xPositionForValue(value : Int) : Int;
+	@:overload @:protected private function xPositionForValue(value : Int) : Int;
 	
-	@:overload private function yPositionForValue(value : Int) : Int;
+	@:overload @:protected private function yPositionForValue(value : Int) : Int;
 	
 	/**
 	* Returns the y location for the specified value.  No checking is
@@ -296,7 +296,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* @param trackHeight the height of the track
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function yPositionForValue(value : Int, trackY : Int, trackHeight : Int) : Int;
+	@:require(java6) @:overload @:protected private function yPositionForValue(value : Int, trackY : Int, trackHeight : Int) : Int;
 	
 	/**
 	* Returns the value at the y position. If {@code yPos} is beyond the
@@ -304,7 +304,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* the minimum or maximum value of the slider, depending on if the slider
 	* is inverted or not.
 	*/
-	@:overload public function valueForYPosition(yPos : Int) : Int;
+	@:overload @:public public function valueForYPosition(yPos : Int) : Int;
 	
 	/**
 	* Returns the value at the x position.  If {@code xPos} is beyond the
@@ -312,33 +312,33 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* minimum or maximum value of the slider, depending on if the slider is
 	* inverted or not.
 	*/
-	@:overload public function valueForXPosition(xPos : Int) : Int;
+	@:overload @:public public function valueForXPosition(xPos : Int) : Int;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicSliderUI$PropertyChangeHandler') extern class BasicSliderUI_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicSliderUI$Handler') @:internal extern class BasicSliderUI_Handler implements javax.swing.event.ChangeListener implements java.awt.event.ComponentListener implements java.awt.event.FocusListener implements java.beans.PropertyChangeListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -350,7 +350,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$ChangeHandler') extern class BasicSliderUI_ChangeHandler implements javax.swing.event.ChangeListener
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -362,11 +362,13 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$TrackListener') extern class BasicSliderUI_TrackListener extends javax.swing.event.MouseInputAdapter
 {
-	@:transient private var offset : Int;
+	@:protected @:transient private var offset : Int;
 	
-	@:transient private var currentMouseX : Int;
+	@:protected @:transient private var currentMouseX : Int;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:protected @:transient private var currentMouseY : Int;
+	
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* If the mouse is pressed above the "thumb" component
@@ -375,17 +377,17 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	* thumb then page up if the mouse is in the upper half
 	* of the track.
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function shouldScroll(direction : Int) : Bool;
+	@:overload @:public public function shouldScroll(direction : Int) : Bool;
 	
 	/**
 	* Set the models value to the position of the top/left
 	* of the thumb relative to the origin of the track.
 	*/
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -397,15 +399,15 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$ScrollListener') extern class BasicSliderUI_ScrollListener implements java.awt.event.ActionListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(dir : Int, block : Bool) : Void;
+	@:overload @:public public function new(dir : Int, block : Bool) : Void;
 	
-	@:overload public function setDirection(direction : Int) : Void;
+	@:overload @:public public function setDirection(direction : Int) : Void;
 	
-	@:overload public function setScrollByBlock(block : Bool) : Void;
+	@:overload @:public public function setScrollByBlock(block : Bool) : Void;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -417,7 +419,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$ComponentHandler') extern class BasicSliderUI_ComponentHandler extends java.awt.event.ComponentAdapter
 {
-	@:overload override public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public override public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }
@@ -429,9 +431,9 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$FocusHandler') extern class BasicSliderUI_FocusHandler implements java.awt.event.FocusListener
 {
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	
 }
@@ -450,11 +452,11 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$ActionScroller') extern class BasicSliderUI_ActionScroller extends javax.swing.AbstractAction
 {
-	@:overload public function new(slider : javax.swing.JSlider, dir : Int, block : Bool) : Void;
+	@:overload @:public public function new(slider : javax.swing.JSlider, dir : Int, block : Bool) : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	
 }
@@ -463,29 +465,29 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 */
 @:native('javax$swing$plaf$basic$BasicSliderUI$SharedActionScroller') @:internal extern class BasicSliderUI_SharedActionScroller extends javax.swing.AbstractAction
 {
-	@:overload public function new(dir : Int, block : Bool) : Void;
+	@:overload @:public public function new(dir : Int, block : Bool) : Void;
 	
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$basic$BasicSliderUI$Actions') @:internal extern class BasicSliderUI_Actions extends sun.swing.UIAction
 {
-	public static var POSITIVE_UNIT_INCREMENT(default, null) : String;
+	@:public @:static @:final public static var POSITIVE_UNIT_INCREMENT(default, null) : String;
 	
-	public static var POSITIVE_BLOCK_INCREMENT(default, null) : String;
+	@:public @:static @:final public static var POSITIVE_BLOCK_INCREMENT(default, null) : String;
 	
-	public static var NEGATIVE_UNIT_INCREMENT(default, null) : String;
+	@:public @:static @:final public static var NEGATIVE_UNIT_INCREMENT(default, null) : String;
 	
-	public static var NEGATIVE_BLOCK_INCREMENT(default, null) : String;
+	@:public @:static @:final public static var NEGATIVE_BLOCK_INCREMENT(default, null) : String;
 	
-	public static var MIN_SCROLL_INCREMENT(default, null) : String;
+	@:public @:static @:final public static var MIN_SCROLL_INCREMENT(default, null) : String;
 	
-	public static var MAX_SCROLL_INCREMENT(default, null) : String;
+	@:public @:static @:final public static var MAX_SCROLL_INCREMENT(default, null) : String;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	
 }

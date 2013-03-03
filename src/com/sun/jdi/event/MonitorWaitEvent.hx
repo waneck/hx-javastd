@@ -43,21 +43,21 @@ package com.sun.jdi.event;
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
 	/**
 	* Returns the monitor object that the thread about to wait.
 	*
 	* @return an {@link ObjectReference} for the monitor.
 	*/
-	@:overload public function monitor() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function monitor() : com.sun.jdi.ObjectReference;
 	
 	/**
 	* Returns the number of millisecond the thread will wait.
 	*
 	* @return a <code>jlong</code> containing monitor wait time in milliseconds.
 	*/
-	@:overload public function timeout() : haxe.Int64;
+	@:overload @:public public function timeout() : haxe.Int64;
 	
 	
 }

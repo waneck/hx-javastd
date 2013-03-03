@@ -25,7 +25,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:internal extern class JPEGMetadataFormat extends javax.imageio.metadata.IIOMetadataFormatImpl
 {
-	@:overload override public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:public override public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
 	
 	/**
 	* Returns <code>true</code> if the named element occurs in the
@@ -35,7 +35,7 @@ package com.sun.imageio.plugins.jpeg;
 	* the format.  If it is not, an
 	* <code>IllegalArgumentException</code> is thrown.
 	*/
-	@:overload private function isInSubtree(elementName : String, subtreeName : String) : Bool;
+	@:overload @:protected private function isInSubtree(elementName : String, subtreeName : String) : Bool;
 	
 	
 }

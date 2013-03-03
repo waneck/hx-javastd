@@ -32,41 +32,41 @@ package com.sun.tools.javac.comp;
 */
 extern class Check
 {
-	private static var checkKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Check>;
+	@:protected @:static @:final private static var checkKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Check>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Check;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Check;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** A table mapping flat names of all compiled classes in this run to their
 	*  symbols; maintained from outside.
 	*/
-	public var compiled : java.util.Map<com.sun.tools.javac.util.Name, ClassSymbol>;
+	@:public public var compiled : java.util.Map<com.sun.tools.javac.util.Name, ClassSymbol>;
 	
 	/** Warn about unchecked operation.
 	*  @param pos        Position to be used for error reporting.
 	*  @param msg        A string describing the problem.
 	*/
-	@:overload public function warnUnchecked(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warnUnchecked(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/** Warn about using proprietary API.
 	*  @param pos        Position to be used for error reporting.
 	*  @param msg        A string describing the problem.
 	*/
-	@:overload public function warnSunApi(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warnSunApi(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function warnStatic(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function warnStatic(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Report any deferred diagnostics.
 	*/
-	@:overload public function reportDeferredDiagnostics() : Void;
+	@:overload @:public public function reportDeferredDiagnostics() : Void;
 	
 	/** Report a failure to complete a class.
 	*  @param pos        Position to be used for error reporting.
 	*  @param ex         The failure to report.
 	*/
-	@:overload public function completionError(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, ex : CompletionFailure) : com.sun.tools.javac.code.Type;
+	@:overload @:public public function completionError(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, ex : CompletionFailure) : com.sun.tools.javac.code.Type;
 	
 	/**
 	* Check that type 't' is a valid instantiation of a generic class
@@ -75,18 +75,18 @@ extern class Check
 	* @param t class type to be checked
 	* @return true if 't' is well-formed
 	*/
-	@:overload public function checkValidGenericType(t : com.sun.tools.javac.code.Type) : Bool;
+	@:overload @:public public function checkValidGenericType(t : com.sun.tools.javac.code.Type) : Bool;
 	
 	/** Form the intersection of two type lists.
 	*/
-	@:overload public function intersect(ts1 : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, ts2 : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
+	@:overload @:public public function intersect(ts1 : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, ts2 : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** Check that a class does not inherit two concrete methods
 	*  with the same signature.
 	*  @param pos          Position to be used for error reporting.
 	*  @param site         The class type to be checked.
 	*/
-	@:overload public function checkCompatibleConcretes(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, site : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function checkCompatibleConcretes(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, site : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Check that classes (or interfaces) do not each define an abstract
 	*  method with same name and arguments but incompatible return types.
@@ -94,29 +94,29 @@ extern class Check
 	*  @param t1           The first argument type.
 	*  @param t2           The second argument type.
 	*/
-	@:overload public function checkCompatibleAbstracts(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, t1 : com.sun.tools.javac.code.Type, t2 : com.sun.tools.javac.code.Type) : Bool;
+	@:overload @:public public function checkCompatibleAbstracts(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, t1 : com.sun.tools.javac.code.Type, t2 : com.sun.tools.javac.code.Type) : Bool;
 	
-	@:overload public function checkCompatibleAbstracts(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, t1 : com.sun.tools.javac.code.Type, t2 : com.sun.tools.javac.code.Type, site : com.sun.tools.javac.code.Type) : Bool;
+	@:overload @:public public function checkCompatibleAbstracts(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, t1 : com.sun.tools.javac.code.Type, t2 : com.sun.tools.javac.code.Type, site : com.sun.tools.javac.code.Type) : Bool;
 	
 	/** Check the annotations of a symbol.
 	*/
-	@:overload public function validateAnnotations(annotations : com.sun.tools.javac.util.List<JCAnnotation>, s : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:public public function validateAnnotations(annotations : com.sun.tools.javac.util.List<JCAnnotation>, s : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Check an annotation of a symbol.
 	*/
-	@:overload public function validateAnnotation(a : JCAnnotation, s : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:public public function validateAnnotation(a : JCAnnotation, s : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Check an annotation value.
 	*/
-	@:overload public function validateAnnotation(a : JCAnnotation) : Void;
+	@:overload @:public public function validateAnnotation(a : JCAnnotation) : Void;
 	
 	/** Check that a qualified name is in canonical form (for import decls).
 	*/
-	@:overload public function checkCanonical(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public public function checkCanonical(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload public function castWarner(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.Warner;
+	@:overload @:public public function castWarner(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.Warner;
 	
-	@:overload public function convertWarner(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.Warner;
+	@:overload @:public public function convertWarner(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.Warner;
 	
 	
 }
@@ -124,53 +124,53 @@ extern class Check
 */
 @:native('com$sun$tools$javac$comp$Check$Validator') @:internal extern class Check_Validator extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 {
-	@:overload override public function visitTypeArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree) : Void;
+	@:overload @:public override public function visitTypeArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree) : Void;
 	
-	@:overload override public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
+	@:overload @:public override public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
 	
-	@:overload override public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
+	@:overload @:public override public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
 	
-	@:overload override public function visitWildcard(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard) : Void;
+	@:overload @:public override public function visitWildcard(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard) : Void;
 	
-	@:overload override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload @:public override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
-	@:overload public function visitSelectInternal(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload @:public public function visitSelectInternal(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
 	/** Default visitor method: do nothing.
 	*/
-	@:overload override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload @:public override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload public function validateTree(tree : com.sun.tools.javac.tree.JCTree, checkRaw : Bool, isOuter : Bool) : Void;
+	@:overload @:public public function validateTree(tree : com.sun.tools.javac.tree.JCTree, checkRaw : Bool, isOuter : Bool) : Void;
 	
-	@:overload public function validateTrees(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>, checkRaw : Bool, isOuter : Bool) : Void;
+	@:overload @:public public function validateTrees(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>, checkRaw : Bool, isOuter : Bool) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$Check$CycleChecker') @:internal extern class Check_CycleChecker extends com.sun.tools.javac.tree.TreeScanner
 {
-	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload @:public override public function visitSelect(tree : JCFieldAccess) : Void;
 	
-	@:overload public function visitIdent(tree : JCIdent) : Void;
+	@:overload @:public override public function visitIdent(tree : JCIdent) : Void;
 	
-	@:overload public function visitTypeApply(tree : JCTypeApply) : Void;
+	@:overload @:public override public function visitTypeApply(tree : JCTypeApply) : Void;
 	
-	@:overload public function visitTypeArray(tree : JCArrayTypeTree) : Void;
+	@:overload @:public override public function visitTypeArray(tree : JCArrayTypeTree) : Void;
 	
-	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload @:public override public function visitClassDef(tree : JCClassDecl) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$Check$ClashFilter') @:internal extern class Check_ClashFilter implements com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>
 {
-	@:overload public function accepts(s : com.sun.tools.javac.code.Symbol) : Bool;
+	@:overload @:public public function accepts(s : com.sun.tools.javac.code.Symbol) : Bool;
 	
 	
 }
 @:native('com$sun$tools$javac$comp$Check$ConversionWarner') @:internal extern class Check_ConversionWarner extends com.sun.tools.javac.util.Warner
 {
-	@:overload public function new(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, uncheckedKey : String, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function new(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, uncheckedKey : String, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function warn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
+	@:overload @:public override public function warn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
 	
 	
 }

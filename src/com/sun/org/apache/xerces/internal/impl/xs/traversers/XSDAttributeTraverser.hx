@@ -42,11 +42,11 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 	* @author Neeraj Bajaj, Sun Microsystems, inc.
 	* @version $Id: XSDAttributeTraverser.java,v 1.7 2010-11-01 04:40:02 joehw Exp $
 	*/
-	@:overload public function new(handler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler, gAttrCheck : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker) : Void;
+	@:overload @:public public function new(handler : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler, gAttrCheck : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker) : Void;
 	
-	@:overload private function traverseLocal(attrDecl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, enclosingCT : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl) : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl;
+	@:overload @:protected private function traverseLocal(attrDecl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, enclosingCT : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl) : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl;
 	
-	@:overload private function traverseGlobal(attrDecl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeDecl;
+	@:overload @:protected private function traverseGlobal(attrDecl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeDecl;
 	
 	
 }

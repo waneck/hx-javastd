@@ -34,10 +34,10 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	/**
 	* Obtains a reference to the primitive type object from a type name.
 	*/
-	@:overload public static function parse(codeModel : com.sun.codemodel.internal.JCodeModel, typeName : String) : com.sun.codemodel.internal.JPrimitiveType;
+	@:overload @:public @:static public static function parse(codeModel : com.sun.codemodel.internal.JCodeModel, typeName : String) : com.sun.codemodel.internal.JPrimitiveType;
 	
 	/** Gets the owner code model object. */
-	@:overload @:abstract public function owner() : com.sun.codemodel.internal.JCodeModel;
+	@:overload @:public @:abstract public function owner() : com.sun.codemodel.internal.JCodeModel;
 	
 	/**
 	* Gets the full name of the type.
@@ -48,7 +48,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	*      Strings like "int", "java.lang.String",
 	*      "java.io.File[]". Never null.
 	*/
-	@:overload @:abstract public function fullName() : String;
+	@:overload @:public @:abstract public function fullName() : String;
 	
 	/**
 	* Gets the binary name of the type.
@@ -58,7 +58,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* @return
 	*      Name like "Foo$Bar", "int", "java.lang.String", "java.io.File[]". Never null.
 	*/
-	@:overload public function binaryName() : String;
+	@:overload @:public public function binaryName() : String;
 	
 	/**
 	* Gets the name of this type.
@@ -66,7 +66,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* @return
 	*     Names like "int", "void", "BigInteger".
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Create an array type of this type.
@@ -77,13 +77,13 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* @return A {@link JClass} representing the array type
 	*         whose element type is this type
 	*/
-	@:overload @:abstract public function array() : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:abstract public function array() : com.sun.codemodel.internal.JClass;
 	
 	/** Tell whether or not this is an array type. */
-	@:overload public function isArray() : Bool;
+	@:overload @:public public function isArray() : Bool;
 	
 	/** Tell whether or not this is a built-in primitive type, such as int or void. */
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
 	/**
 	* If this class is a primitive type, return the boxed class. Otherwise return <tt>this</tt>.
@@ -91,7 +91,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* <p>
 	* For example, for "int", this method returns "java.lang.Integer".
 	*/
-	@:overload @:abstract public function boxify() : com.sun.codemodel.internal.JClass;
+	@:overload @:public @:abstract public function boxify() : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* If this class is a wrapper type for a primitive, return the primitive type.
@@ -100,25 +100,25 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* <p>
 	* For example, for "java.lang.Integer", this method returns "int".
 	*/
-	@:overload @:abstract public function unboxify() : com.sun.codemodel.internal.JType;
+	@:overload @:public @:abstract public function unboxify() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Returns the erasure of this type.
 	*/
-	@:overload public function erasure() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function erasure() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Returns true if this is a referenced type.
 	*/
-	@:overload @:final public function isReference() : Bool;
+	@:overload @:public @:final public function isReference() : Bool;
 	
 	/**
 	* If this is an array, returns the component type of the array.
 	* (T of T[])
 	*/
-	@:overload public function elementType() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function elementType() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare two JTypes by FQCN, giving sorting precedence to types
@@ -127,9 +127,9 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* This method is used to sort generated import statments in a
 	* conventional way for readability.
 	*/
-	@:overload public function compareTo(o : com.sun.codemodel.internal.JType) : Int;
+	@:overload @:public public function compareTo(o : com.sun.codemodel.internal.JType) : Int;
 	
-	@:overload @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -170,7 +170,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

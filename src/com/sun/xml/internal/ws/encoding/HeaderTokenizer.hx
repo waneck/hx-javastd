@@ -36,32 +36,32 @@ package com.sun.xml.internal.ws.encoding;
 	/**
 	* Token type indicating an ATOM.
 	*/
-	public static var ATOM(default, null) : Int;
+	@:public @:static @:final public static var ATOM(default, null) : Int;
 	
 	/**
 	* Token type indicating a quoted string. The value
 	* field contains the string without the quotes.
 	*/
-	public static var QUOTEDSTRING(default, null) : Int;
+	@:public @:static @:final public static var QUOTEDSTRING(default, null) : Int;
 	
 	/**
 	* Token type indicating a comment. The value field
 	* contains the comment string without the comment
 	* start and end symbols.
 	*/
-	public static var COMMENT(default, null) : Int;
+	@:public @:static @:final public static var COMMENT(default, null) : Int;
 	
 	/**
 	* Token type indicating end of input.
 	*/
-	public static var EOF(default, null) : Int;
+	@:public @:static @:final public static var EOF(default, null) : Int;
 	
 	/**
 	* Constructor.
 	* @param       type    Token type
 	* @param       value   Token value
 	*/
-	@:overload public function new(type : Int, value : String) : Void;
+	@:overload @:public public function new(type : Int, value : String) : Void;
 	
 	/**
 	* Return the type of the token. If the token represents a
@@ -79,7 +79,7 @@ package com.sun.xml.internal.ws.encoding;
 	* <li><code>EOF</code> End of header
 	* </ul>
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the value of the token just read. When the current
@@ -89,7 +89,7 @@ package com.sun.xml.internal.ws.encoding;
 	*
 	* @return      token value
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

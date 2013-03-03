@@ -28,17 +28,17 @@ extern class PrintQuality extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Lowest quality available on the printer.
 	*/
-	public static var DRAFT(default, null) : javax.print.attribute.standard.PrintQuality;
+	@:public @:static @:final public static var DRAFT(default, null) : javax.print.attribute.standard.PrintQuality;
 	
 	/**
 	* Normal or intermediate quality on the printer.
 	*/
-	public static var NORMAL(default, null) : javax.print.attribute.standard.PrintQuality;
+	@:public @:static @:final public static var NORMAL(default, null) : javax.print.attribute.standard.PrintQuality;
 	
 	/**
 	* Highest quality available on the printer.
 	*/
-	public static var HIGH(default, null) : javax.print.attribute.standard.PrintQuality;
+	@:public @:static @:final public static var HIGH(default, null) : javax.print.attribute.standard.PrintQuality;
 	
 	/**
 	* Construct a new print quality enumeration value with the given integer
@@ -46,22 +46,22 @@ extern class PrintQuality extends javax.print.attribute.EnumSyntax implements ja
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class PrintQuality.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PrintQuality.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Returns the lowest integer value used by class PrintQuality.
 	*/
-	@:overload override private function getOffset() : Int;
+	@:overload @:protected override private function getOffset() : Int;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -73,7 +73,7 @@ extern class PrintQuality extends javax.print.attribute.EnumSyntax implements ja
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -84,7 +84,7 @@ extern class PrintQuality extends javax.print.attribute.EnumSyntax implements ja
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

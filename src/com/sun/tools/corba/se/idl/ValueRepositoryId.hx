@@ -36,16 +36,16 @@ package com.sun.tools.corba.se.idl;
 //// NOTES:
 extern class ValueRepositoryId
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**Add a value to the hashcode being computed.
 	@param value the value to be added to the value RepositoryID. */
-	@:overload public function addValue(value : Int) : Void;
+	@:overload @:public public function addValue(value : Int) : Void;
 	
 	/** Add a type to the list of types which have already been included.
 	Note that the type should be added prior to its value.
 	@param entry the type to be added to the value RepositoryID. */
-	@:overload public function addType(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function addType(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** Check to see if a specified type has already been processed. If so,
 	add the appropriate 'previously processed' code (0xFFFFFFFF) and
@@ -54,14 +54,14 @@ extern class ValueRepositoryId
 	@param entry the type to be checked
 	@return true if the symbol table entry has not been previously added;
 	and false otherwise. */
-	@:overload public function isNewType(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Bool;
+	@:overload @:public public function isNewType(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Bool;
 	
 	/** Get the hashcode computed for the value type. This method MUST not be
 	called until all fields have been added, since it computes the hash
 	code from the values entered for each field.
 	@return the 64 bit hashcode for the value type represented as a
 	16 character hexadecimal string. */
-	@:overload public function getHashcode() : String;
+	@:overload @:public public function getHashcode() : String;
 	
 	
 }

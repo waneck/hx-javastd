@@ -29,11 +29,11 @@ package sun.java2d.xr;
 */
 extern class XRGraphicsConfig extends sun.awt.X11GraphicsConfig implements sun.awt.image.SurfaceManager.SurfaceManager_ProxiedGraphicsConfig
 {
-	@:overload override public function createSurfaceData(peer : sun.awt.X11ComponentPeer) : sun.java2d.SurfaceData;
+	@:overload @:public override public function createSurfaceData(peer : sun.awt.X11ComponentPeer) : sun.java2d.SurfaceData;
 	
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : sun.java2d.xr.XRGraphicsConfig;
+	@:overload @:public @:static public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : sun.java2d.xr.XRGraphicsConfig;
 	
-	@:overload override public function getProxyKey() : Dynamic;
+	@:overload @:public override public function getProxyKey() : Dynamic;
 	
 	
 }

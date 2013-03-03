@@ -41,7 +41,7 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* describing the MBean operation.
 	* @param description A human readable description of the operation.
 	*/
-	@:overload public function new(description : String, operationMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(description : String, operationMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Constructs a ModelMBeanOperationInfo object. The {@link
@@ -70,7 +70,7 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* "getter", or "setter".
 	*
 	*/
-	@:overload public function new(description : String, operationMethod : java.lang.reflect.Method, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(description : String, operationMethod : java.lang.reflect.Method, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs a ModelMBeanOperationInfo object with a default descriptor.
@@ -83,7 +83,7 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* @param impact The impact of the method, one of INFO, ACTION,
 	* ACTION_INFO, UNKNOWN.
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int) : Void;
 	
 	/**
 	* Constructs a ModelMBeanOperationInfo object.
@@ -110,7 +110,7 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* field "role" is present but not equal to "operation", "getter", or
 	* "setter".
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.MBeanParameterInfo>, type : String, impact : Int, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs a new ModelMBeanOperationInfo object from this
@@ -119,14 +119,14 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* @param inInfo the ModelMBeanOperationInfo to be duplicated
 	*
 	*/
-	@:overload public function new(inInfo : javax.management.modelmbean.ModelMBeanOperationInfo) : Void;
+	@:overload @:public public function new(inInfo : javax.management.modelmbean.ModelMBeanOperationInfo) : Void;
 	
 	/**
 	* Creates and returns a new ModelMBeanOperationInfo which is a
 	* duplicate of this ModelMBeanOperationInfo.
 	*
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a copy of the associated Descriptor of the
@@ -137,7 +137,7 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	*
 	* @see #setDescriptor
 	*/
-	@:overload override public function getDescriptor() : javax.management.Descriptor;
+	@:overload @:public override public function getDescriptor() : javax.management.Descriptor;
 	
 	/**
 	* Sets associated Descriptor (full replace) for the
@@ -156,13 +156,13 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	*
 	* @see #getDescriptor
 	*/
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns a string containing the entire contents of the
 	* ModelMBeanOperationInfo in human readable form.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

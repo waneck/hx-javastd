@@ -35,7 +35,7 @@ extern interface MessageFormatter
 	* @throws MissingResourceException Thrown if the message with the
 	*                                  specified key cannot be found.
 	*/
-	@:overload public function formatMessage(locale : java.util.Locale, key : String, arguments : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function formatMessage(locale : java.util.Locale, key : String, arguments : java.NativeArray<Dynamic>) : String;
 	
 	
 }

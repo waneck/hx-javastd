@@ -23,90 +23,90 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 */
 @:internal extern class IncrementalSAXSource_Filter implements com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource implements org.xml.sax.ContentHandler implements org.xml.sax.DTDHandler implements org.xml.sax.ext.LexicalHandler implements org.xml.sax.ErrorHandler implements java.lang.Runnable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Create a IncrementalSAXSource_Filter which is not yet bound to a specific
 	* SAX event source.
 	* */
-	@:overload public function new(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, controllerCoroutineID : Int) : Void;
+	@:overload @:public public function new(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, controllerCoroutineID : Int) : Void;
 	
-	@:overload public static function createIncrementalSAXSource(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, controllerCoroutineID : Int) : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource;
+	@:overload @:static @:public public static function createIncrementalSAXSource(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, controllerCoroutineID : Int) : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource;
 	
-	@:overload public function init(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, controllerCoroutineID : Int, sourceCoroutineID : Int) : Void;
+	@:overload @:public public function init(co : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager, controllerCoroutineID : Int, sourceCoroutineID : Int) : Void;
 	
 	/** Bind our input streams to an XMLReader.
 	*
 	* Just a convenience routine; obviously you can explicitly register
 	* this as a listener with the same effect.
 	* */
-	@:overload public function setXMLReader(eventsource : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function setXMLReader(eventsource : org.xml.sax.XMLReader) : Void;
 	
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
-	@:overload public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function setErrHandler(handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrHandler(handler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function setReturnFrequency(events : Int) : Void;
+	@:overload @:public public function setReturnFrequency(events : Int) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function notationDecl(a : String, b : String, c : String) : Void;
+	@:overload @:public public function notationDecl(a : String, b : String, c : String) : Void;
 	
-	@:overload public function unparsedEntityDecl(a : String, b : String, c : String, d : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(a : String, b : String, c : String, d : String) : Void;
 	
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function getSourceCoroutineID() : Int;
+	@:overload @:public public function getSourceCoroutineID() : Int;
 	
-	@:overload public function getControllerCoroutineID() : Int;
+	@:overload @:public public function getControllerCoroutineID() : Int;
 	
 	/** @return the CoroutineManager this CoroutineFilter object is bound to.
 	* If you're using the do...() methods, applications should only
 	* need to talk to the CoroutineManager once, to obtain the
 	* application's Coroutine ID.
 	* */
-	@:overload public function getCoroutineManager() : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager;
+	@:overload @:public public function getCoroutineManager() : com.sun.org.apache.xml.internal.dtm.ref.CoroutineManager;
 	
 	/** <p>In the SAX delegation code, I've inlined the count-down in
 	* the hope of encouraging compilers to deliver better
@@ -119,7 +119,7 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 	* @param moreExepected Should always be true unless this is being called
 	* at the end of endDocument() handling.
 	* */
-	@:overload private function count_and_yield(moreExpected : Bool) : Void;
+	@:overload @:protected private function count_and_yield(moreExpected : Bool) : Void;
 	
 	/** Launch a thread that will run an XMLReader's parse() operation within
 	*  a thread, feeding events to this IncrementalSAXSource_Filter. Mostly a convenience
@@ -130,11 +130,11 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 	* @throws SAXException is parse thread is already in progress
 	* or parsing can not be started.
 	* */
-	@:overload public function startParse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function startParse(source : org.xml.sax.InputSource) : Void;
 	
 	/* Thread logic to support startParseThread()
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/** deliverMoreNodes() is a simple API which tells the coroutine
 	* parser that we need more nodes.  This is intended to be called
@@ -153,7 +153,7 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 	* applications, exception will be simply be treated as "not TRUE" in
 	* any case.
 	* */
-	@:overload public function deliverMoreNodes(parsemore : Bool) : Dynamic;
+	@:overload @:public public function deliverMoreNodes(parsemore : Bool) : Dynamic;
 	
 	
 }

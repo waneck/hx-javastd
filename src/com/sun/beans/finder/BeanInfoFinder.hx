@@ -25,9 +25,9 @@ package com.sun.beans.finder;
 */
 extern class BeanInfoFinder extends com.sun.beans.finder.InstanceFinder<java.beans.BeanInfo>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function instantiate(type : Class<Dynamic>, prefix : String, name : String) : java.beans.BeanInfo;
+	@:overload @:protected override private function instantiate(type : Class<Dynamic>, prefix : String, name : String) : java.beans.BeanInfo;
 	
 	
 }

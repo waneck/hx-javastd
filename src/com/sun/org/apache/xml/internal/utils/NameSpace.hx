@@ -25,15 +25,15 @@ extern class NameSpace implements java.io.Serializable
 {
 	/** Next NameSpace element on the stack.
 	*  @serial             */
-	public var m_next : com.sun.org.apache.xml.internal.utils.NameSpace;
+	@:public public var m_next : com.sun.org.apache.xml.internal.utils.NameSpace;
 	
 	/** Prefix of this NameSpace element.
 	*  @serial          */
-	public var m_prefix : String;
+	@:public public var m_prefix : String;
 	
 	/** Namespace URI of this NameSpace element.
 	*  @serial           */
-	public var m_uri : String;
+	@:public public var m_uri : String;
 	
 	/**
 	* Construct a namespace for placement on the
@@ -42,7 +42,7 @@ extern class NameSpace implements java.io.Serializable
 	* @param prefix Prefix of this element
 	* @param uri URI of  this element
 	*/
-	@:overload public function new(prefix : String, uri : String) : Void;
+	@:overload @:public public function new(prefix : String, uri : String) : Void;
 	
 	
 }

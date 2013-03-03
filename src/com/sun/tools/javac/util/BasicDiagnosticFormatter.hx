@@ -54,38 +54,38 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* @param opts list of command-line options
 	* @param msgs JavacMessages object used for i18n
 	*/
-	@:overload public function new(options : com.sun.tools.javac.util.Options, msgs : com.sun.tools.javac.util.JavacMessages) : Void;
+	@:overload @:public public function new(options : com.sun.tools.javac.util.Options, msgs : com.sun.tools.javac.util.JavacMessages) : Void;
 	
 	/**
 	* Create a standard basic formatter
 	*
 	* @param msgs JavacMessages object used for i18n
 	*/
-	@:overload public function new(msgs : com.sun.tools.javac.util.JavacMessages) : Void;
+	@:overload @:public public function new(msgs : com.sun.tools.javac.util.JavacMessages) : Void;
 	
-	@:overload override public function formatDiagnostic(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:public override public function formatDiagnostic(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload public function formatMessage(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:public public function formatMessage(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload private function addSourceLineIfNeeded(d : com.sun.tools.javac.util.JCDiagnostic, msg : String) : String;
+	@:overload @:protected private function addSourceLineIfNeeded(d : com.sun.tools.javac.util.JCDiagnostic, msg : String) : String;
 	
-	@:overload private function formatMeta(c : java.StdTypes.Char16, d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:protected private function formatMeta(c : java.StdTypes.Char16, d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload override public function getConfiguration() : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration;
+	@:overload @:public override public function getConfiguration() : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration;
 	
 	
 }
 @:native('com$sun$tools$javac$util$BasicDiagnosticFormatter$BasicConfiguration') extern class BasicDiagnosticFormatter_BasicConfiguration extends com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration
 {
-	private var indentationLevels : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, Null<Int>>;
+	@:protected private var indentationLevels : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, Null<Int>>;
 	
-	private var availableFormats : java.util.Map<com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, String>;
+	@:protected private var availableFormats : java.util.Map<com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, String>;
 	
-	private var sourcePosition : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
+	@:protected private var sourcePosition : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
 	
-	@:overload public function new(options : com.sun.tools.javac.util.Options) : Void;
+	@:overload @:public public function new(options : com.sun.tools.javac.util.Options) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the amount of spaces for a given indentation kind
@@ -93,7 +93,7 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* to be retrieved
 	* @return the amount of spaces used for the specified indentation kind
 	*/
-	@:overload public function getIndentation(diagPart : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart) : Int;
+	@:overload @:public public function getIndentation(diagPart : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart) : Int;
 	
 	/**
 	* Set the indentation level for various element of a given diagnostic -
@@ -102,21 +102,21 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* @param indentationKind kind of indentation to be set
 	* @param nSpaces amount of spaces for the specified diagnostic part
 	*/
-	@:overload public function setIndentation(diagPart : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, nSpaces : Int) : Void;
+	@:overload @:public public function setIndentation(diagPart : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, nSpaces : Int) : Void;
 	
 	/**
 	* Set the source line positioning used by this formatter
 	*
 	* @param sourcePos a positioning value for source line
 	*/
-	@:overload public function setSourcePosition(sourcePos : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition) : Void;
+	@:overload @:public public function setSourcePosition(sourcePos : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition) : Void;
 	
 	/**
 	* Get the source line positioning used by this formatter
 	*
 	* @return the positioning value used by this formatter
 	*/
-	@:overload public function getSourcePosition() : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
+	@:overload @:public public function getSourcePosition() : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
 	
 	/**
 	* Set a metachar string for a specific format
@@ -124,14 +124,14 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* @param kind the format kind to be set
 	* @param s the metachar string specifying the format
 	*/
-	@:overload public function setFormat(kind : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, s : String) : Void;
+	@:overload @:public public function setFormat(kind : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, s : String) : Void;
 	
 	/**
 	* Get a metachar string for a specific format
 	*
 	* @param sourcePos a positioning value for source line
 	*/
-	@:overload public function getFormat(kind : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind) : String;
+	@:overload @:public public function getFormat(kind : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind) : String;
 	
 	
 }

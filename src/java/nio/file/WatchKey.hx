@@ -33,7 +33,7 @@ extern interface WatchKey
 	*
 	* @return  {@code true} if, and only if, this watch key is valid
 	*/
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
 	/**
 	* Retrieves and removes all pending events for this watch key, returning
@@ -72,7 +72,7 @@ extern interface WatchKey
 	* <p> If this watch key has already been cancelled then invoking this
 	* method has no effect.  Once cancelled, a watch key remains forever invalid.
 	*/
-	@:overload public function cancel() : Void;
+	@:overload @:public public function cancel() : Void;
 	
 	/**
 	* Returns the object for which this watch key was created. This method will

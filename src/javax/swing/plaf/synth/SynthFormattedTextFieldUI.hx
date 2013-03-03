@@ -31,7 +31,7 @@ extern class SynthFormattedTextFieldUI extends javax.swing.plaf.synth.SynthTextF
 	* @param c the formatted text field
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the
@@ -40,12 +40,12 @@ extern class SynthFormattedTextFieldUI extends javax.swing.plaf.synth.SynthTextF
 	*
 	* @return the name "FormattedTextField"
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }

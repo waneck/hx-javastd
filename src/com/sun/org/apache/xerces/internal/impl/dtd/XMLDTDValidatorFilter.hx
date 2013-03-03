@@ -66,14 +66,14 @@ extern interface XMLDTDValidatorFilter extends com.sun.org.apache.xerces.interna
 	*
 	* @return true if the validator has a DTD grammar
 	*/
-	@:overload public function hasGrammar() : Bool;
+	@:overload @:public public function hasGrammar() : Bool;
 	
 	/**
 	* Return true if validator must validate the document
 	*
 	* @return true if validator must validate the document
 	*/
-	@:overload public function validate() : Bool;
+	@:overload @:public public function validate() : Bool;
 	
 	
 }

@@ -87,39 +87,39 @@ package sun.nio.cs.ext;
 */
 extern class DoubleByte
 {
-	public static var B2C_UNMAPPABLE(default, null) : java.NativeArray<java.StdTypes.Char16>;
+	@:public @:final @:static public static var B2C_UNMAPPABLE(default, null) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }
 @:native('sun$nio$cs$ext$DoubleByte$Decoder') extern class DoubleByte_Decoder extends java.nio.charset.CharsetDecoder implements sun.nio.cs.ext.DelegatableDecoder
 {
-	@:overload private function crMalformedOrUnderFlow(b : Int) : java.nio.charset.CoderResult;
+	@:overload @:protected private function crMalformedOrUnderFlow(b : Int) : java.nio.charset.CoderResult;
 	
-	@:overload private function crMalformedOrUnmappable(b : Int) : java.nio.charset.CoderResult;
+	@:overload @:protected private function crMalformedOrUnmappable(b : Int) : java.nio.charset.CoderResult;
 	
-	@:overload private function decodeArrayLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function decodeArrayLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload private function decodeBufferLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function decodeBufferLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override public function implReset() : Void;
+	@:overload @:public override public function implReset() : Void;
 	
-	@:overload override public function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:public override public function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload public function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload public function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload @:public public function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
 	
 }
 @:native('sun$nio$cs$ext$DoubleByte$Decoder_EBCDIC') extern class DoubleByte_Decoder_EBCDIC extends sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder
 {
-	@:overload override public function implReset() : Void;
+	@:overload @:public override public function implReset() : Void;
 	
-	@:overload override private function decodeArrayLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeArrayLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function decodeBufferLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeBufferLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
@@ -129,45 +129,45 @@ extern class DoubleByte
 }
 @:native('sun$nio$cs$ext$DoubleByte$Decoder_EUC_SIM') extern class DoubleByte_Decoder_EUC_SIM extends sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder
 {
-	@:overload override private function crMalformedOrUnderFlow(b : Int) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function crMalformedOrUnderFlow(b : Int) : java.nio.charset.CoderResult;
 	
-	@:overload override private function crMalformedOrUnmappable(b : Int) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function crMalformedOrUnmappable(b : Int) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$DoubleByte$Encoder') extern class DoubleByte_Encoder extends java.nio.charset.CharsetEncoder
 {
-	@:overload private function new(cs : java.nio.charset.Charset, c2b : java.NativeArray<java.StdTypes.Char16>, c2bIndex : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, c2b : java.NativeArray<java.StdTypes.Char16>, c2bIndex : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload public function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
 	
 }
 @:native('sun$nio$cs$ext$DoubleByte$Encoder_EBCDIC_DBCSONLY') extern class DoubleByte_Encoder_EBCDIC_DBCSONLY extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
-	@:overload override public function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public override public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
 	
 }
 @:native('sun$nio$cs$ext$DoubleByte$Encoder_EBCDIC') extern class DoubleByte_Encoder_EBCDIC extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
-	private var currentState : Int;
+	@:protected private var currentState : Int;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeArrayLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeBufferLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	
 }

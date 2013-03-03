@@ -35,7 +35,7 @@ extern class AttributeChangeNotificationFilter implements javax.management.Notif
 	* @param notification The attribute change notification to be sent.
 	* @return <CODE>true</CODE> if the notification has to be sent to the listener, <CODE>false</CODE> otherwise.
 	*/
-	@:overload @:synchronized public function isNotificationEnabled(notification : javax.management.Notification) : Bool;
+	@:overload @:public @:synchronized public function isNotificationEnabled(notification : javax.management.Notification) : Bool;
 	
 	/**
 	* Enables all the attribute change notifications the attribute name of which equals
@@ -46,7 +46,7 @@ extern class AttributeChangeNotificationFilter implements javax.management.Notif
 	* @param name The attribute name.
 	* @exception java.lang.IllegalArgumentException The attribute name parameter is null.
 	*/
-	@:overload @:synchronized public function enableAttribute(name : String) : Void;
+	@:overload @:public @:synchronized public function enableAttribute(name : String) : Void;
 	
 	/**
 	* Disables all the attribute change notifications the attribute name of which equals
@@ -56,19 +56,19 @@ extern class AttributeChangeNotificationFilter implements javax.management.Notif
 	*
 	* @param name The attribute name.
 	*/
-	@:overload @:synchronized public function disableAttribute(name : String) : Void;
+	@:overload @:public @:synchronized public function disableAttribute(name : String) : Void;
 	
 	/**
 	* Disables all the attribute names.
 	*/
-	@:overload @:synchronized public function disableAllAttributes() : Void;
+	@:overload @:public @:synchronized public function disableAllAttributes() : Void;
 	
 	/**
 	* Gets all the enabled attribute names for this filter.
 	*
 	* @return The list containing all the enabled attribute names.
 	*/
-	@:overload @:synchronized public function getEnabledAttributes() : java.util.Vector<String>;
+	@:overload @:public @:synchronized public function getEnabledAttributes() : java.util.Vector<String>;
 	
 	
 }

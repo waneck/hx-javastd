@@ -28,23 +28,23 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	/**
 	* True to allow new URIs to be declared. False otherwise.
 	*/
-	public var collectionMode : Bool;
+	@:public public var collectionMode : Bool;
 	
-	@:overload public function new(owner : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function setPrefixMapper(mapper : com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper) : Void;
+	@:overload @:public public function setPrefixMapper(mapper : com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper) : Void;
 	
-	@:overload public function getPrefixMapper() : com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
+	@:overload @:public public function getPrefixMapper() : com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns the prefix index to the specified URI.
 	* This method allocates a new URI if necessary.
 	*/
-	@:overload public function declareNsUri(uri : String, preferedPrefix : String, requirePrefix : Bool) : Int;
+	@:overload @:public public function declareNsUri(uri : String, preferedPrefix : String, requirePrefix : Bool) : Int;
 	
-	@:overload public function force(uri : String, prefix : String) : Int;
+	@:overload @:public public function force(uri : String, prefix : String) : Int;
 	
 	/**
 	* Puts this new binding into the declared prefixes list
@@ -58,24 +58,24 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	* @return
 	*      the index of this new binding.
 	*/
-	@:overload public function put(uri : String, prefix : String) : Int;
+	@:overload @:public public function put(uri : String, prefix : String) : Int;
 	
-	@:overload public function getCurrent() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
+	@:overload @:public public function getCurrent() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
 	/**
 	* Returns the prefix index of the specified URI.
 	* It is an error if the URI is not declared.
 	*/
-	@:overload public function getPrefixIndex(uri : String) : Int;
+	@:overload @:public public function getPrefixIndex(uri : String) : Int;
 	
 	/**
 	* Gets the prefix from a prefix index.
 	*
 	* The behavior is undefined if the index is out of range.
 	*/
-	@:overload public function getPrefix(prefixIndex : Int) : String;
+	@:overload @:public public function getPrefix(prefixIndex : Int) : String;
 	
-	@:overload public function getNamespaceURI(prefixIndex : Int) : String;
+	@:overload @:public public function getNamespaceURI(prefixIndex : Int) : String;
 	
 	/**
 	* Gets the namespace URI that is bound to the specified prefix.
@@ -83,22 +83,22 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	* @return null
 	*      if the prefix is unbound.
 	*/
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Returns the prefix of the specified URI,
 	* or null if none exists.
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
-	@:overload public function getPrefixes(uri : String) : java.util.Iterator<String>;
+	@:overload @:public public function getPrefixes(uri : String) : java.util.Iterator<String>;
 	
-	@:overload public function declareNamespace(namespaceUri : String, preferedPrefix : String, requirePrefix : Bool) : String;
+	@:overload @:public public function declareNamespace(namespaceUri : String, preferedPrefix : String, requirePrefix : Bool) : String;
 	
 	/**
 	* Number of total bindings declared.
 	*/
-	@:overload public function count() : Int;
+	@:overload @:public public function count() : Int;
 	
 	
 }
@@ -111,30 +111,30 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$output$NamespaceContextImpl$Element') extern class NamespaceContextImpl_Element
 {
-	public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl;
+	@:public @:final public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl;
 	
 	/**
 	* Returns true if this {@link Element} represents the root element that
 	* we are marshalling.
 	*/
-	@:overload public function isRootElement() : Bool;
+	@:overload @:public public function isRootElement() : Bool;
 	
-	@:overload public function push() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
+	@:overload @:public public function push() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
-	@:overload public function pop() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
+	@:overload @:public public function pop() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
-	@:overload public function setTagName(prefix : Int, localName : String, outerPeer : Dynamic) : Void;
+	@:overload @:public public function setTagName(prefix : Int, localName : String, outerPeer : Dynamic) : Void;
 	
-	@:overload public function setTagName(tagName : com.sun.xml.internal.bind.v2.runtime.Name, outerPeer : Dynamic) : Void;
+	@:overload @:public public function setTagName(tagName : com.sun.xml.internal.bind.v2.runtime.Name, outerPeer : Dynamic) : Void;
 	
-	@:overload public function startElement(out : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput, innerPeer : Dynamic) : Void;
+	@:overload @:public public function startElement(out : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput, innerPeer : Dynamic) : Void;
 	
-	@:overload public function endElement(out : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput) : Void;
+	@:overload @:public public function endElement(out : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput) : Void;
 	
 	/**
 	* Gets the number of bindings declared on this element.
 	*/
-	@:overload @:final public function count() : Int;
+	@:overload @:public @:final public function count() : Int;
 	
 	/**
 	* Gets the prefix declared in this context.
@@ -142,7 +142,7 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	* @param idx
 	*      between 0 and {@link #count()}
 	*/
-	@:overload @:final public function getPrefix(idx : Int) : String;
+	@:overload @:public @:final public function getPrefix(idx : Int) : String;
 	
 	/**
 	* Gets the namespace URI declared in this context.
@@ -150,18 +150,18 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	* @param idx
 	*      between 0 and {@link #count()}
 	*/
-	@:overload @:final public function getNsUri(idx : Int) : String;
+	@:overload @:public @:final public function getNsUri(idx : Int) : String;
 	
-	@:overload public function getBase() : Int;
+	@:overload @:public public function getBase() : Int;
 	
-	@:overload public function getOuterPeer() : Dynamic;
+	@:overload @:public public function getOuterPeer() : Dynamic;
 	
-	@:overload public function getInnerPeer() : Dynamic;
+	@:overload @:public public function getInnerPeer() : Dynamic;
 	
 	/**
 	* Gets the parent {@link Element}.
 	*/
-	@:overload public function getParent() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
+	@:overload @:public public function getParent() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
 	
 }

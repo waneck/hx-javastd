@@ -31,49 +31,49 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function installComponents() : Void;
+	@:overload @:protected override private function installComponents() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected override private function uninstallComponents() : Void;
 	
 	/**
 	* Creates a {@code LayoutManager} to use with the toolbar.
 	*
 	* @return a {@code LayoutManager} instance
 	*/
-	@:overload private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected private function createLayout() : java.awt.LayoutManager;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -87,7 +87,7 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -98,33 +98,33 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* This implementation does nothing, because the {@code rollover}
 	* property of the {@code JToolBar} class is not used
 	* in the Synth Look and Feel.
 	*/
-	@:overload private function setBorderToNonRollover(c : java.awt.Component) : Void;
+	@:overload @:protected override private function setBorderToNonRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* This implementation does nothing, because the {@code rollover}
 	* property of the {@code JToolBar} class is not used
 	* in the Synth Look and Feel.
 	*/
-	@:overload private function setBorderToRollover(c : java.awt.Component) : Void;
+	@:overload @:protected override private function setBorderToRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* This implementation does nothing, because the {@code rollover}
 	* property of the {@code JToolBar} class is not used
 	* in the Synth Look and Feel.
 	*/
-	@:overload private function setBorderToNormal(c : java.awt.Component) : Void;
+	@:overload @:protected override private function setBorderToNormal(c : java.awt.Component) : Void;
 	
 	/**
 	* Paints the toolbar.
@@ -133,7 +133,7 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* Paints the toolbar content.
@@ -142,31 +142,31 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param g {@code Graphics} object used for painting
 	* @param bounds bounding box for the toolbar
 	*/
-	@:overload private function paintContent(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, bounds : java.awt.Rectangle) : Void;
+	@:overload @:protected private function paintContent(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, bounds : java.awt.Rectangle) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload private function paintDragWindow(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintDragWindow(g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthToolBarUI$SynthToolBarLayoutManager') @:internal extern class SynthToolBarUI_SynthToolBarLayoutManager implements java.awt.LayoutManager
 {
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	
 }

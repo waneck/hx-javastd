@@ -29,14 +29,14 @@ extern class NativeGen implements com.sun.tools.corba.se.idl.NativeGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Generate Java code for an IDL constant.  A constant is written to
 	* a new class only when it is not a member of an interface; otherwise
 	* it written to the interface class in which it resides.
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, c : com.sun.tools.corba.se.idl.NativeEntry, s : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, c : com.sun.tools.corba.se.idl.NativeEntry, s : java.io.PrintWriter) : Void;
 	
 	
 }

@@ -51,14 +51,14 @@ extern class GeneralName
 	* @param name the selected CHOICE from the list.
 	* @throws NullPointerException if name is null
 	*/
-	@:overload public function new(name : sun.security.x509.GeneralNameInterface) : Void;
+	@:overload @:public public function new(name : sun.security.x509.GeneralNameInterface) : Void;
 	
 	/**
 	* Create the object from its DER encoded value.
 	*
 	* @param encName the DER encoded GeneralName.
 	*/
-	@:overload public function new(encName : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encName : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Create the object from its DER encoded value.
@@ -66,22 +66,22 @@ extern class GeneralName
 	* @param encName the DER encoded GeneralName.
 	* @param nameConstraint true if general name is a name constraint
 	*/
-	@:overload public function new(encName : sun.security.util.DerValue, nameConstraint : Bool) : Void;
+	@:overload @:public public function new(encName : sun.security.util.DerValue, nameConstraint : Bool) : Void;
 	
 	/**
 	* Return the type of the general name.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Return the GeneralNameInterface name.
 	*/
-	@:overload public function getName() : sun.security.x509.GeneralNameInterface;
+	@:overload @:public public function getName() : sun.security.x509.GeneralNameInterface;
 	
 	/**
 	* Return the name as user readable string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this GeneralName with another
@@ -89,14 +89,14 @@ extern class GeneralName
 	* @param other GeneralName to compare to this
 	* @returns true if match
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this GeneralName.
 	*
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Encode the name to the specified DerOutputStream.
@@ -104,7 +104,7 @@ extern class GeneralName
 	* @param out the DerOutputStream to encode the the GeneralName to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	
 }

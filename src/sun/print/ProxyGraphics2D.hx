@@ -29,26 +29,26 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* The new ProxyGraphics2D will forward all graphics
 	* calls to 'graphics'.
 	*/
-	@:overload public function new(graphics : java.awt.Graphics2D, printerJob : java.awt.print.PrinterJob) : Void;
+	@:overload @:public public function new(graphics : java.awt.Graphics2D, printerJob : java.awt.print.PrinterJob) : Void;
 	
 	/**
 	* Return the Graphics2D object that does the drawing
 	* for this instance.
 	*/
-	@:overload public function getDelegate() : java.awt.Graphics2D;
+	@:overload @:public public function getDelegate() : java.awt.Graphics2D;
 	
 	/**
 	* Set the Graphics2D instance which will do the
 	* drawing.
 	*/
-	@:overload public function setDelegate(graphics : java.awt.Graphics2D) : Void;
+	@:overload @:public public function setDelegate(graphics : java.awt.Graphics2D) : Void;
 	
-	@:overload public function getPrinterJob() : java.awt.print.PrinterJob;
+	@:overload @:public public function getPrinterJob() : java.awt.print.PrinterJob;
 	
 	/**
 	* Returns the device configuration associated with this Graphics2D.
 	*/
-	@:overload override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public override public function getDeviceConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Creates a new <code>Graphics</code> object that is
@@ -57,7 +57,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	*                       this graphics context.
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function create() : java.awt.Graphics;
+	@:require(java0) @:overload @:public override public function create() : java.awt.Graphics;
 	
 	/**
 	* Translates the origin of the graphics context to the point
@@ -71,7 +71,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param  y   the <i>y</i> coordinate.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload override public function translate(x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public override public function translate(x : Int, y : Int) : Void;
 	
 	/**
 	* Concatenates the current transform of this Graphics2D with a
@@ -84,7 +84,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	*          [   0    0    1   ]
 	* </pre>
 	*/
-	@:overload override public function translate(tx : Float, ty : Float) : Void;
+	@:overload @:public override public function translate(tx : Float, ty : Float) : Void;
 	
 	/**
 	* Concatenates the current transform of this Graphics2D with a
@@ -100,7 +100,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* x axis toward the positive y axis.
 	* @param theta The angle of rotation in radians.
 	*/
-	@:overload override public function rotate(theta : Float) : Void;
+	@:overload @:public override public function rotate(theta : Float) : Void;
 	
 	/**
 	* Concatenates the current transform of this Graphics2D with a
@@ -117,7 +117,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param x The x coordinate of the origin of the rotation
 	* @param y The x coordinate of the origin of the rotation
 	*/
-	@:overload override public function rotate(theta : Float, x : Float, y : Float) : Void;
+	@:overload @:public override public function rotate(theta : Float, x : Float, y : Float) : Void;
 	
 	/**
 	* Concatenates the current transform of this Graphics2D with a
@@ -130,7 +130,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	*          [   0    0    1   ]
 	* </pre>
 	*/
-	@:overload override public function scale(sx : Float, sy : Float) : Void;
+	@:overload @:public override public function scale(sx : Float, sy : Float) : Void;
 	
 	/**
 	* Concatenates the current transform of this Graphics2D with a
@@ -147,7 +147,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param shy The factor by which coordinates are shifted towards the
 	* positive Y axis direction according to their X coordinate
 	*/
-	@:overload override public function shear(shx : Float, shy : Float) : Void;
+	@:overload @:public override public function shear(shx : Float, shy : Float) : Void;
 	
 	/**
 	* Gets this graphics context's current color.
@@ -156,7 +156,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see       java.awt.Graphics#setColor
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getColor() : java.awt.Color;
+	@:require(java0) @:overload @:public override public function getColor() : java.awt.Color;
 	
 	/**
 	* Sets this graphics context's current color to the specified
@@ -167,7 +167,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see       java.awt.Graphics#getColor
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function setColor(c : java.awt.Color) : Void;
+	@:require(java0) @:overload @:public override public function setColor(c : java.awt.Color) : Void;
 	
 	/**
 	* Sets the paint mode of this graphics context to overwrite the
@@ -177,7 +177,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* overwrite the destination with the current color.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function setPaintMode() : Void;
+	@:require(java0) @:overload @:public override public function setPaintMode() : Void;
 	
 	/**
 	* Sets the paint mode of this graphics context to alternate between
@@ -195,7 +195,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param     c1 the XOR alternation color
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function setXORMode(c1 : java.awt.Color) : Void;
+	@:require(java0) @:overload @:public override public function setXORMode(c1 : java.awt.Color) : Void;
 	
 	/**
 	* Gets the current font.
@@ -204,7 +204,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see       java.awt.Graphics#setFont
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getFont() : java.awt.Font;
+	@:require(java0) @:overload @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets this graphics context's font to the specified font.
@@ -217,7 +217,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see     java.awt.Graphics#drawBytes(char[], int, int, int, int)
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function setFont(font : java.awt.Font) : Void;
+	@:require(java0) @:overload @:public override public function setFont(font : java.awt.Font) : Void;
 	
 	/**
 	* Gets the font metrics for the specified font.
@@ -228,13 +228,13 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see       java.awt.Graphics#getFontMetrics()
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:require(java0) @:overload @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Get the rendering context of the font
 	* within this Graphics2D context.
 	*/
-	@:overload override public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:overload @:public override public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
 	/**
 	* Returns the bounding rectangle of the current clipping area.
@@ -247,7 +247,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#setClip(Shape)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getClipBounds() : java.awt.Rectangle;
+	@:require(java1) @:overload @:public override public function getClipBounds() : java.awt.Rectangle;
 	
 	/**
 	* Intersects the current clip with the specified rectangle.
@@ -263,7 +263,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #setClip(int, int, int, int)
 	* @see #setClip(Shape)
 	*/
-	@:overload public function clipRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function clipRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Sets the current clip to the rectangle specified by the given
@@ -277,7 +277,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#setClip(Shape)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setClip(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public override public function setClip(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Gets the current clipping area.
@@ -289,7 +289,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#setClip(Shape)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getClip() : java.awt.Shape;
+	@:require(java1) @:overload @:public override public function getClip() : java.awt.Shape;
 	
 	/**
 	* Sets the current clipping area to an arbitrary clip shape.
@@ -304,7 +304,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#setClip(int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setClip(clip : java.awt.Shape) : Void;
+	@:require(java1) @:overload @:public override public function setClip(clip : java.awt.Shape) : Void;
 	
 	/**
 	* Copies an area of the component by a distance specified by
@@ -326,7 +326,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param       dy the vertical distance to copy the pixels.
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function copyArea(x : Int, y : Int, width : Int, height : Int, dx : Int, dy : Int) : Void;
+	@:require(java0) @:overload @:public override public function copyArea(x : Int, y : Int, width : Int, height : Int, dx : Int, dy : Int) : Void;
 	
 	/**
 	* Draws a line, using the current color, between the points
@@ -338,7 +338,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param   y2  the second point's <i>y</i> coordinate.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	/**
 	* Fills the specified rectangle.
@@ -360,7 +360,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see           java.awt.Graphics#clearRect
 	* @since         JDK1.0
 	*/
-	@:require(java0) @:overload public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public override public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Clears the specified rectangle by filling it with the background
@@ -382,7 +382,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#setXORMode(java.awt.Color)
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public override public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws an outlined round-cornered rectangle using this graphics
@@ -401,7 +401,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see        java.awt.Graphics#fillRoundRect
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Fills the specified rounded corner rectangle with the current color.
@@ -420,7 +420,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#drawRoundRect
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:require(java0) @:overload @:public override public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Draws the outline of an oval.
@@ -440,7 +440,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#fillOval
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Fills an oval bounded by the specified rectangle with the
@@ -454,7 +454,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#drawOval
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java0) @:overload @:public override public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Draws the outline of a circular or elliptical arc
@@ -486,7 +486,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#fillArc
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Fills a circular or elliptical arc covering the specified rectangle.
@@ -517,7 +517,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#drawArc
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:require(java0) @:overload @:public override public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Draws a sequence of connected lines defined by
@@ -531,7 +531,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#drawPolygon(int[], int[], int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:require(java1) @:overload @:public override public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Draws a closed polygon defined by
@@ -553,7 +553,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see          java.awt.Graphics#drawPolyline
 	* @since        JDK1.0
 	*/
-	@:require(java0) @:overload public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Fills a closed polygon defined by
@@ -576,7 +576,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see          java.awt.Graphics#drawPolygon(int[], int[], int)
 	* @since        JDK1.0
 	*/
-	@:require(java0) @:overload public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:require(java0) @:overload @:public override public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Draws the text given by the specified string, using this
@@ -590,7 +590,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#drawChars
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload override public function drawString(str : String, x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public override public function drawString(str : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws the text given by the specified iterator, using this
@@ -612,7 +612,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
+	@:overload @:public override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws the text given by the specified iterator, using this
@@ -634,7 +634,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Single, y : Single) : Void;
 	
 	/**
 	* Draws as much of the specified image as is currently available.
@@ -661,7 +661,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as has already been scaled
@@ -697,7 +697,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as is currently available.
@@ -730,7 +730,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified image as has already been scaled
@@ -771,7 +771,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see      java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java0) @:overload @:public override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified area of the specified image as is
@@ -820,7 +820,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java1) @:overload @:public override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws as much of the specified area of the specified image as is
@@ -875,7 +875,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:require(java1) @:overload @:public override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws an image, applying a transform from image space into user space
@@ -895,9 +895,9 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawRenderedImage(img : java.awt.image.RenderedImage, xform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function drawRenderedImage(img : java.awt.image.RenderedImage, xform : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload override public function drawRenderableImage(img : java.awt.image.renderable.RenderableImage, xform : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function drawRenderableImage(img : java.awt.image.renderable.RenderableImage, xform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Disposes of this graphics context and releases
@@ -927,12 +927,12 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see         java.awt.Graphics#create
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload public function dispose() : Void;
+	@:require(java0) @:overload @:public override public function dispose() : Void;
 	
 	/**
 	* Empty finalizer as no clean up needed here.
 	*/
-	@:overload public function finalize() : Void;
+	@:overload @:public override public function finalize() : Void;
 	
 	/**
 	* Strokes the outline of a Shape using the settings of the current
@@ -948,7 +948,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #setClip
 	* @see #setComposite
 	*/
-	@:overload override public function draw(s : java.awt.Shape) : Void;
+	@:overload @:public override public function draw(s : java.awt.Shape) : Void;
 	
 	/**
 	* Draws an image, applying a transform from image space into user space
@@ -970,7 +970,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, xform : java.awt.geom.AffineTransform, obs : java.awt.image.ImageObserver) : Bool;
+	@:overload @:public override public function drawImage(img : java.awt.Image, xform : java.awt.geom.AffineTransform, obs : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws a BufferedImage that is filtered with a BufferedImageOp.
@@ -989,7 +989,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawImage(img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
+	@:overload @:public override public function drawImage(img : java.awt.image.BufferedImage, op : java.awt.image.BufferedImageOp, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws a string of text.
@@ -1006,7 +1006,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawString(str : String, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawString(str : String, x : Single, y : Single) : Void;
 	
 	/**
 	* Draws a GlyphVector.
@@ -1023,7 +1023,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function drawGlyphVector(g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawGlyphVector(g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
 	/**
 	* Fills the interior of a Shape using the settings of the current
@@ -1037,7 +1037,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function fill(s : java.awt.Shape) : Void;
+	@:overload @:public override public function fill(s : java.awt.Shape) : Void;
 	
 	/**
 	* Checks to see if the outline of a Shape intersects the specified
@@ -1057,7 +1057,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see #clip
 	* @see #setClip
 	*/
-	@:overload override public function hit(rect : java.awt.Rectangle, s : java.awt.Shape, onStroke : Bool) : Bool;
+	@:overload @:public override public function hit(rect : java.awt.Rectangle, s : java.awt.Shape, onStroke : Bool) : Bool;
 	
 	/**
 	* Sets the Composite in the current graphics state. Composite is used
@@ -1069,7 +1069,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see java.awt.Graphics#setPaintMode
 	* @see AlphaComposite
 	*/
-	@:overload override public function setComposite(comp : java.awt.Composite) : Void;
+	@:overload @:public override public function setComposite(comp : java.awt.Composite) : Void;
 	
 	/**
 	* Sets the Paint in the current graphics state.
@@ -1079,7 +1079,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see GradientPaint
 	* @see TexturePaint
 	*/
-	@:overload override public function setPaint(paint : java.awt.Paint) : Void;
+	@:overload @:public override public function setPaint(paint : java.awt.Paint) : Void;
 	
 	/**
 	* Sets the Stroke in the current graphics state.
@@ -1087,7 +1087,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* the rendering process.
 	* @see BasicStroke
 	*/
-	@:overload override public function setStroke(s : java.awt.Stroke) : Void;
+	@:overload @:public override public function setStroke(s : java.awt.Stroke) : Void;
 	
 	/**
 	* Sets the preferences for the rendering algorithms.
@@ -1098,7 +1098,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* hint category.
 	* @see RenderingHints
 	*/
-	@:overload override public function setRenderingHint(hintCategory : java.awt.RenderingHints.RenderingHints_Key, hintValue : Dynamic) : Void;
+	@:overload @:public override public function setRenderingHint(hintCategory : java.awt.RenderingHints.RenderingHints_Key, hintValue : Dynamic) : Void;
 	
 	/**
 	* Returns the preferences for the rendering algorithms.
@@ -1106,7 +1106,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @return The preferences for rendering algorithms.
 	* @see RenderingHings
 	*/
-	@:overload override public function getRenderingHint(hintCategory : java.awt.RenderingHints.RenderingHints_Key) : Dynamic;
+	@:overload @:public override public function getRenderingHint(hintCategory : java.awt.RenderingHints.RenderingHints_Key) : Dynamic;
 	
 	/**
 	* Sets the preferences for the rendering algorithms.
@@ -1115,7 +1115,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param hints The rendering hints to be set
 	* @see RenderingHints
 	*/
-	@:overload override public function setRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function setRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Adds a number of preferences for the rendering algorithms.
@@ -1124,7 +1124,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @param hints The rendering hints to be set
 	* @see RenderingHints
 	*/
-	@:overload override public function addRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function addRenderingHints(hints : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Gets the preferences for the rendering algorithms.
@@ -1132,7 +1132,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* overall time/quality trade-off in the rendering process.
 	* @see RenderingHints
 	*/
-	@:overload override public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public override public function getRenderingHints() : java.awt.RenderingHints;
 	
 	/**
 	* Composes a Transform object with the transform in this
@@ -1152,7 +1152,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see TransformChain
 	* @see AffineTransform
 	*/
-	@:overload override public function transform(Tx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function transform(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Sets the Transform in the current graphics state.
@@ -1161,27 +1161,27 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see TransformChain
 	* @see AffineTransform
 	*/
-	@:overload override public function setTransform(Tx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public override public function setTransform(Tx : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns the current Transform in the Graphics2D state.
 	* @see #transform
 	* @see #setTransform
 	*/
-	@:overload override public function getTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public override public function getTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	* Returns the current Paint in the Graphics2D state.
 	* @see #setPaint
 	* @see java.awt.Graphics#setColor
 	*/
-	@:overload override public function getPaint() : java.awt.Paint;
+	@:overload @:public override public function getPaint() : java.awt.Paint;
 	
 	/**
 	* Returns the current Composite in the Graphics2D state.
 	* @see #setComposite
 	*/
-	@:overload override public function getComposite() : java.awt.Composite;
+	@:overload @:public override public function getComposite() : java.awt.Composite;
 	
 	/**
 	* Sets the background color in this context used for clearing a region.
@@ -1195,19 +1195,19 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* @see getBackground
 	* @see Graphics.clearRect()
 	*/
-	@:overload override public function setBackground(color : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(color : java.awt.Color) : Void;
 	
 	/**
 	* Returns the background color used for clearing a region.
 	* @see setBackground
 	*/
-	@:overload override public function getBackground() : java.awt.Color;
+	@:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Returns the current Stroke in the Graphics2D state.
 	* @see setStroke
 	*/
-	@:overload override public function getStroke() : java.awt.Stroke;
+	@:overload @:public override public function getStroke() : java.awt.Stroke;
 	
 	/**
 	* Intersects the current clip with the interior of the specified Shape
@@ -1218,7 +1218,7 @@ extern class ProxyGraphics2D extends java.awt.Graphics2D implements java.awt.pri
 	* To make the clip larger, use any setClip method.
 	* @param s The Shape to be intersected with the current clip.
 	*/
-	@:overload override public function clip(s : java.awt.Shape) : Void;
+	@:overload @:public override public function clip(s : java.awt.Shape) : Void;
 	
 	
 }

@@ -73,7 +73,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	* @throws OpenDataException  If <var>itemNames</var> contains duplicate item names
 	*                            (case sensitive, but leading and trailing whitespaces removed).
 	*/
-	@:overload public function new(typeName : String, description : String, itemNames : java.NativeArray<String>, itemDescriptions : java.NativeArray<String>, itemTypes : java.NativeArray<javax.management.openmbean.OpenType<Dynamic>>) : Void;
+	@:overload @:public public function new(typeName : String, description : String, itemNames : java.NativeArray<String>, itemDescriptions : java.NativeArray<String>, itemTypes : java.NativeArray<javax.management.openmbean.OpenType<Dynamic>>) : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>CompositeType</code> instance defines an item
@@ -83,7 +83,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return true if an item of this name is present.
 	*/
-	@:overload public function containsKey(itemName : String) : Bool;
+	@:overload @:public public function containsKey(itemName : String) : Bool;
 	
 	/**
 	* Returns the description of the item whose name is <var>itemName</var>,
@@ -94,7 +94,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return the description.
 	*/
-	@:overload public function getDescription(itemName : String) : String;
+	@:overload @:public public function getDescription(itemName : String) : String;
 	
 	/**
 	* Returns the <i>open type</i> of the item whose name is <var>itemName</var>,
@@ -105,7 +105,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return the type.
 	*/
-	@:overload public function getType(itemName : String) : javax.management.openmbean.OpenType<Dynamic>;
+	@:overload @:public public function getType(itemName : String) : javax.management.openmbean.OpenType<Dynamic>;
 	
 	/**
 	* Returns an unmodifiable Set view of all the item names defined by this <code>CompositeType</code> instance.
@@ -113,7 +113,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return a {@link Set} of {@link String}.
 	*/
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
 	/**
 	* Tests whether <var>obj</var> is a value which could be
@@ -167,7 +167,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	* @return <code>true</code> if <var>obj</var> is a value for this
 	* composite type, <code>false</code> otherwise.
 	*/
-	@:overload override public function isValue(obj : Dynamic) : Bool;
+	@:overload @:public override public function isValue(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares the specified <code>obj</code> parameter with this <code>CompositeType</code> instance for equality.
@@ -183,7 +183,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return  <code>true</code> if the specified object is equal to this <code>CompositeType</code> instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this <code>CompositeType</code> instance.
@@ -201,7 +201,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return  the hash code value for this <code>CompositeType</code> instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>CompositeType</code> instance.
@@ -215,7 +215,7 @@ extern class CompositeType extends javax.management.openmbean.OpenType<javax.man
 	*
 	* @return  a string representation of this <code>CompositeType</code> instance
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -25,25 +25,25 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class ReferencePropertyInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.model.impl.ERPropertyInfoImpl<T, C, F, M> implements com.sun.xml.internal.bind.v2.model.core.ReferencePropertyInfo<T, C> implements com.sun.xml.internal.bind.v2.model.impl.DummyPropertyInfo<T, C, F, M>
 {
-	@:overload public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
+	@:overload @:public public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
 	
-	@:overload public function ref() : java.util.Set<com.sun.xml.internal.bind.v2.model.core.Element<T, C>>;
+	@:overload @:public override public function ref() : java.util.Set<com.sun.xml.internal.bind.v2.model.core.Element<T, C>>;
 	
-	@:overload public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload public function getElements() : java.util.Set<com.sun.xml.internal.bind.v2.model.core.Element<T, C>>;
+	@:overload @:public public function getElements() : java.util.Set<com.sun.xml.internal.bind.v2.model.core.Element<T, C>>;
 	
-	@:overload public function isRequired() : Bool;
+	@:overload @:public public function isRequired() : Bool;
 	
-	@:overload override private function link() : Void;
+	@:overload @:protected override private function link() : Void;
 	
-	@:overload @:final public function addType(info : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<T, C, F, M>) : Void;
+	@:overload @:public @:final public function addType(info : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<T, C, F, M>) : Void;
 	
-	@:overload @:final public function isMixed() : Bool;
+	@:overload @:public @:final public function isMixed() : Bool;
 	
-	@:overload @:final public function getWildcard() : com.sun.xml.internal.bind.v2.model.core.WildcardMode;
+	@:overload @:public @:final public function getWildcard() : com.sun.xml.internal.bind.v2.model.core.WildcardMode;
 	
-	@:overload @:final public function getDOMHandler() : C;
+	@:overload @:public @:final public function getDOMHandler() : C;
 	
 	
 }

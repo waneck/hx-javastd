@@ -25,31 +25,31 @@ package sun.nio.fs;
 */
 @:internal extern class UnixFileStore extends java.nio.file.FileStore
 {
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function type() : String;
+	@:overload @:public override public function type() : String;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function getTotalSpace() : haxe.Int64;
+	@:overload @:public override public function getTotalSpace() : haxe.Int64;
 	
-	@:overload override public function getUsableSpace() : haxe.Int64;
+	@:overload @:public override public function getUsableSpace() : haxe.Int64;
 	
-	@:overload override public function getUnallocatedSpace() : haxe.Int64;
+	@:overload @:public override public function getUnallocatedSpace() : haxe.Int64;
 	
-	@:overload override public function getFileStoreAttributeView<V : java.nio.file.attribute.FileStoreAttributeView>(view : Class<V>) : V;
+	@:overload @:public override public function getFileStoreAttributeView<V : java.nio.file.attribute.FileStoreAttributeView>(view : Class<V>) : V;
 	
-	@:overload override public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public override public function getAttribute(attribute : String) : Dynamic;
 	
-	@:overload override public function supportsFileAttributeView(type : Class<java.nio.file.attribute.FileAttributeView>) : Bool;
+	@:overload @:public override public function supportsFileAttributeView(type : Class<java.nio.file.attribute.FileAttributeView>) : Bool;
 	
-	@:overload override public function supportsFileAttributeView(name : String) : Bool;
+	@:overload @:public override public function supportsFileAttributeView(name : String) : Bool;
 	
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

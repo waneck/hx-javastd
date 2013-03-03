@@ -65,33 +65,33 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	* @param lvmid the Local Java Virtual Machine Identifier for this
 	*              instrumentation buffer.
 	*/
-	@:overload public function new(buffer : java.nio.ByteBuffer, lvmid : Int) : Void;
+	@:overload @:public public function new(buffer : java.nio.ByteBuffer, lvmid : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function buildMonitorMap(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
+	@:overload @:protected override private function buildMonitorMap(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getNewMonitors(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
+	@:overload @:protected override private function getNewMonitors(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getMonitorStatus(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : sun.jvmstat.perfdata.monitor.MonitorStatus;
+	@:overload @:protected override private function getMonitorStatus(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : sun.jvmstat.perfdata.monitor.MonitorStatus;
 	
 	/**
 	* Build the pseudo monitors used to map the prolog data into counters.
 	*/
-	@:overload private function buildPseudoMonitors(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
+	@:overload @:protected private function buildPseudoMonitors(map : java.util.Map<String, sun.jvmstat.monitor.Monitor>) : Void;
 	
 	/**
 	* Method that waits until the target jvm indicates that
 	* its shared memory is safe to access.
 	*/
-	@:overload private function synchWithTarget() : Void;
+	@:overload @:protected private function synchWithTarget() : Void;
 	
 	/**
 	* method to extract the next monitor entry from the instrumentation memory.
@@ -99,7 +99,7 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	* at which to start the search for the next entry. method leaves
 	* next entry pointing to the next entry or to the end of data.
 	*/
-	@:overload private function getNextMonitorEntry() : sun.jvmstat.monitor.Monitor;
+	@:overload @:protected private function getNextMonitorEntry() : sun.jvmstat.monitor.Monitor;
 	
 	
 }

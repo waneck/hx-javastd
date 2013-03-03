@@ -37,7 +37,7 @@ extern class JAXBIntrospector
 	*
 	* @see #getElementName(Object)
 	*/
-	@:overload @:abstract public function isElement(object : Dynamic) : Bool;
+	@:overload @:public @:abstract public function isElement(object : Dynamic) : Bool;
 	
 	/**
 	* <p>Get xml element qname for <code>jaxbElement</code>.</p>
@@ -47,7 +47,7 @@ extern class JAXBIntrospector
 	* @return xml element qname associated with jaxbElement;
 	*         null if <code>jaxbElement</code> is not a JAXB Element.
 	*/
-	@:overload @:abstract public function getElementName(jaxbElement : Dynamic) : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getElementName(jaxbElement : Dynamic) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Get the element value of a JAXB element.</p>
@@ -60,7 +60,7 @@ extern class JAXBIntrospector
 	*
 	* @return The element value of the <code>jaxbElement</code>.
 	*/
-	@:overload public static function getValue(jaxbElement : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function getValue(jaxbElement : Dynamic) : Dynamic;
 	
 	
 }

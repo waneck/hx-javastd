@@ -37,11 +37,11 @@ exception statement from your version.
 */
 @:internal extern class StreamBufferAttributes
 {
-	public static var SANE_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var SANE_DEFAULT(default, null) : Int;
 	
-	public static var MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Int;
 	
-	public static var MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Int;
 	
 	
 }

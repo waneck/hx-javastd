@@ -597,14 +597,14 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified element is null
 	*         (<a href="../Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of elements in this deque.
 	*
 	* @return the number of elements in this deque
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns an iterator over the elements in this deque in proper sequence.

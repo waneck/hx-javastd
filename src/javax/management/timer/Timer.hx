@@ -29,36 +29,36 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* Number of milliseconds in one second.
 	* Useful constant for the <CODE>addNotification</CODE> method.
 	*/
-	public static var ONE_SECOND(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ONE_SECOND(default, null) : haxe.Int64;
 	
 	/**
 	* Number of milliseconds in one minute.
 	* Useful constant for the <CODE>addNotification</CODE> method.
 	*/
-	public static var ONE_MINUTE(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ONE_MINUTE(default, null) : haxe.Int64;
 	
 	/**
 	* Number of milliseconds in one hour.
 	* Useful constant for the <CODE>addNotification</CODE> method.
 	*/
-	public static var ONE_HOUR(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ONE_HOUR(default, null) : haxe.Int64;
 	
 	/**
 	* Number of milliseconds in one day.
 	* Useful constant for the <CODE>addNotification</CODE> method.
 	*/
-	public static var ONE_DAY(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ONE_DAY(default, null) : haxe.Int64;
 	
 	/**
 	* Number of milliseconds in one week.
 	* Useful constant for the <CODE>addNotification</CODE> method.
 	*/
-	public static var ONE_WEEK(default, null) : haxe.Int64;
+	@:public @:static @:final public static var ONE_WEEK(default, null) : haxe.Int64;
 	
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Allows the timer MBean to perform any operations it needs before being registered
@@ -73,7 +73,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @exception java.lang.Exception
 	*/
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Allows the timer MBean to perform any operations needed after having been
@@ -81,7 +81,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* <P>
 	* Not used in this context.
 	*/
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* Allows the timer MBean to perform any operations it needs before being unregistered
@@ -91,7 +91,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @exception java.lang.Exception
 	*/
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
 	/**
 	* Allows the timer MBean to perform any operations needed after having been
@@ -99,7 +99,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* <P>
 	* Not used in this context.
 	*/
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	/*
 	* This overrides the method in NotificationBroadcasterSupport.
@@ -109,7 +109,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* associated with this entry is a snapshot of the current types
 	* that were given to addNotification.
 	*/
-	@:overload @:synchronized override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public @:synchronized override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	/**
 	* Starts the timer.
@@ -120,12 +120,12 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* If the timer notification date remains earlier than the current date, this notification is just removed
 	* from the list of notifications.
 	*/
-	@:overload @:synchronized public function start() : Void;
+	@:overload @:public @:synchronized public function start() : Void;
 	
 	/**
 	* Stops the timer.
 	*/
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -163,7 +163,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @see #addNotification(String, String, Object, Date, long, long)
 	*/
-	@:overload @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64, fixedRate : Bool) : Null<Int>;
+	@:overload @:public @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64, fixedRate : Bool) : Null<Int>;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -197,7 +197,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @see #addNotification(String, String, Object, Date, long, long, boolean)
 	*/
-	@:overload @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64) : Null<Int>;
+	@:overload @:public @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64, nbOccurences : haxe.Int64) : Null<Int>;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -225,7 +225,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @exception java.lang.IllegalArgumentException The date is {@code null} or
 	* the period is negative.
 	*/
-	@:overload @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64) : Null<Int>;
+	@:overload @:public @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date, period : haxe.Int64) : Null<Int>;
 	
 	/**
 	* Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
@@ -247,7 +247,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @exception java.lang.IllegalArgumentException The date is {@code null}.
 	*/
-	@:overload @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date) : Null<Int>;
+	@:overload @:public @:synchronized public function addNotification(type : String, message : String, userData : Dynamic, date : java.util.Date) : Null<Int>;
 	
 	/**
 	* Removes the timer notification corresponding to the specified identifier from the list of notifications.
@@ -257,7 +257,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @exception InstanceNotFoundException The specified identifier does not correspond to any timer notification
 	* in the list of notifications of this timer MBean.
 	*/
-	@:overload @:synchronized public function removeNotification(id : Null<Int>) : Void;
+	@:overload @:public @:synchronized public function removeNotification(id : Null<Int>) : Void;
 	
 	/**
 	* Removes all the timer notifications corresponding to the specified type from the list of notifications.
@@ -267,20 +267,20 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @exception InstanceNotFoundException The specified type does not correspond to any timer notification
 	* in the list of notifications of this timer MBean.
 	*/
-	@:overload @:synchronized public function removeNotifications(type : String) : Void;
+	@:overload @:public @:synchronized public function removeNotifications(type : String) : Void;
 	
 	/**
 	* Removes all the timer notifications from the list of notifications
 	* and resets the counter used to update the timer notification identifiers.
 	*/
-	@:overload @:synchronized public function removeAllNotifications() : Void;
+	@:overload @:public @:synchronized public function removeAllNotifications() : Void;
 	
 	/**
 	* Gets the number of timer notifications registered into the list of notifications.
 	*
 	* @return The number of timer notifications.
 	*/
-	@:overload public function getNbNotifications() : Int;
+	@:overload @:public public function getNbNotifications() : Int;
 	
 	/**
 	* Gets all timer notification identifiers registered into the list of notifications.
@@ -288,7 +288,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return A vector of <CODE>Integer</CODE> objects containing all the timer notification identifiers.
 	* <BR>The vector is empty if there is no timer notification registered for this timer MBean.
 	*/
-	@:overload @:synchronized public function getAllNotificationIDs() : java.util.Vector<Null<Int>>;
+	@:overload @:public @:synchronized public function getAllNotificationIDs() : java.util.Vector<Null<Int>>;
 	
 	/**
 	* Gets all the identifiers of timer notifications corresponding to the specified type.
@@ -300,7 +300,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* <BR>The vector is empty if there is no timer notifications registered for this timer MBean
 	* with the specified <CODE>type</CODE>.
 	*/
-	@:overload @:synchronized public function getNotificationIDs(type : String) : java.util.Vector<Null<Int>>;
+	@:overload @:public @:synchronized public function getNotificationIDs(type : String) : java.util.Vector<Null<Int>>;
 	
 	/**
 	* Gets the timer notification type corresponding to the specified identifier.
@@ -310,7 +310,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return The timer notification type or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNotificationType(id : Null<Int>) : String;
+	@:overload @:public public function getNotificationType(id : Null<Int>) : String;
 	
 	/**
 	* Gets the timer notification detailed message corresponding to the specified identifier.
@@ -320,7 +320,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return The timer notification detailed message or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNotificationMessage(id : Null<Int>) : String;
+	@:overload @:public public function getNotificationMessage(id : Null<Int>) : String;
 	
 	/**
 	* Gets the timer notification user data object corresponding to the specified identifier.
@@ -330,7 +330,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return The timer notification user data object or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNotificationUserData(id : Null<Int>) : Dynamic;
+	@:overload @:public public function getNotificationUserData(id : Null<Int>) : Dynamic;
 	
 	/**
 	* Gets a copy of the date associated to a timer notification.
@@ -340,7 +340,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return A copy of the date or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getDate(id : Null<Int>) : java.util.Date;
+	@:overload @:public public function getDate(id : Null<Int>) : java.util.Date;
 	
 	/**
 	* Gets a copy of the period (in milliseconds) associated to a timer notification.
@@ -350,7 +350,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return A copy of the period or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getPeriod(id : Null<Int>) : Null<haxe.Int64>;
+	@:overload @:public public function getPeriod(id : Null<Int>) : Null<haxe.Int64>;
 	
 	/**
 	* Gets a copy of the remaining number of occurrences associated to a timer notification.
@@ -360,7 +360,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return A copy of the remaining number of occurrences or null if the identifier is not mapped to any
 	* timer notification registered for this timer MBean.
 	*/
-	@:overload public function getNbOccurences(id : Null<Int>) : Null<haxe.Int64>;
+	@:overload @:public public function getNbOccurences(id : Null<Int>) : Null<haxe.Int64>;
 	
 	/**
 	* Gets a copy of the flag indicating whether a periodic notification is
@@ -371,7 +371,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	* @return A copy of the flag indicating whether a periodic notification is
 	*         executed at <i>fixed-delay</i> or at <i>fixed-rate</i>.
 	*/
-	@:overload public function getFixedRate(id : Null<Int>) : Null<Bool>;
+	@:overload @:public public function getFixedRate(id : Null<Int>) : Null<Bool>;
 	
 	/**
 	* Gets the flag indicating whether or not the timer sends past notifications.
@@ -381,7 +381,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @see #setSendPastNotifications
 	*/
-	@:overload public function getSendPastNotifications() : Bool;
+	@:overload @:public public function getSendPastNotifications() : Bool;
 	
 	/**
 	* Sets the flag indicating whether the timer sends past notifications or not.
@@ -391,7 +391,7 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @see #getSendPastNotifications
 	*/
-	@:overload public function setSendPastNotifications(value : Bool) : Void;
+	@:overload @:public public function setSendPastNotifications(value : Bool) : Void;
 	
 	/**
 	* Tests whether the timer MBean is active.
@@ -401,14 +401,14 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*
 	* @return <CODE>true</CODE> if the timer MBean is active, <CODE>false</CODE> otherwise.
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Tests whether the list of timer notifications is empty.
 	*
 	* @return <CODE>true</CODE> if the list of timer notifications is empty, <CODE>false</CODE> otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	
 }
@@ -419,14 +419,14 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*  CONSTRUCTORS
 	* ------------------------------------------
 	*/
-	@:overload public function new(listener : javax.management.timer.Timer, timeout : haxe.Int64) : Void;
+	@:overload @:public public function new(listener : javax.management.timer.Timer, timeout : haxe.Int64) : Void;
 	
-	@:overload public function new(listener : javax.management.timer.Timer, next : java.util.Date) : Void;
+	@:overload @:public public function new(listener : javax.management.timer.Timer, next : java.util.Date) : Void;
 	
 	/**
 	* This method is called by the timer when it is started.
 	*/
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

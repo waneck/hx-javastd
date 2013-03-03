@@ -28,7 +28,7 @@ package com.sun.imageio.plugins.jpeg;
 	/**
 	* Returns a deep-copy clone of this object.
 	*/
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	
 }
@@ -41,7 +41,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFExtensionMarkerSegment') @:internal extern class JFIFMarkerSegment_JFIFExtensionMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	
 }
@@ -51,11 +51,11 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumb') @:internal extern class JFIFMarkerSegment_JFIFThumb implements java.lang.Cloneable
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(buffer : com.sun.imageio.plugins.jpeg.JPEGBuffer) : Void;
+	@:overload @:protected private function new(buffer : com.sun.imageio.plugins.jpeg.JPEGBuffer) : Void;
 	
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }
@@ -87,29 +87,29 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbJPEG') @:internal extern class JFIFMarkerSegment_JFIFThumbJPEG extends com.sun.imageio.plugins.jpeg.JFIFMarkerSegment.JFIFMarkerSegment_JFIFThumb
 {
-	@:overload override private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	
 }
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbJPEG$ThumbnailReadListener') @:internal extern class JFIFMarkerSegment_JFIFThumbJPEG_ThumbnailReadListener implements javax.imageio.event.IIOReadProgressListener
 {
-	@:overload public function sequenceStarted(source : javax.imageio.ImageReader, minIndex : Int) : Void;
+	@:overload @:public public function sequenceStarted(source : javax.imageio.ImageReader, minIndex : Int) : Void;
 	
-	@:overload public function sequenceComplete(source : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function sequenceComplete(source : javax.imageio.ImageReader) : Void;
 	
-	@:overload public function imageStarted(source : javax.imageio.ImageReader, imageIndex : Int) : Void;
+	@:overload @:public public function imageStarted(source : javax.imageio.ImageReader, imageIndex : Int) : Void;
 	
-	@:overload public function imageProgress(source : javax.imageio.ImageReader, percentageDone : Single) : Void;
+	@:overload @:public public function imageProgress(source : javax.imageio.ImageReader, percentageDone : Single) : Void;
 	
-	@:overload public function imageComplete(source : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function imageComplete(source : javax.imageio.ImageReader) : Void;
 	
-	@:overload public function thumbnailStarted(source : javax.imageio.ImageReader, imageIndex : Int, thumbnailIndex : Int) : Void;
+	@:overload @:public public function thumbnailStarted(source : javax.imageio.ImageReader, imageIndex : Int, thumbnailIndex : Int) : Void;
 	
-	@:overload public function thumbnailProgress(source : javax.imageio.ImageReader, percentageDone : Single) : Void;
+	@:overload @:public public function thumbnailProgress(source : javax.imageio.ImageReader, percentageDone : Single) : Void;
 	
-	@:overload public function thumbnailComplete(source : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function thumbnailComplete(source : javax.imageio.ImageReader) : Void;
 	
-	@:overload public function readAborted(source : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function readAborted(source : javax.imageio.ImageReader) : Void;
 	
 	
 }
@@ -121,7 +121,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$ICCMarkerSegment') @:internal extern class JFIFMarkerSegment_ICCMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	
 }

@@ -33,9 +33,9 @@ package com.sun.tools.javac.comp;
 */
 @:internal extern class ConstFold
 {
-	private static var constFoldKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.ConstFold>;
+	@:protected @:static @:final private static var constFoldKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.ConstFold>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.ConstFold;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.ConstFold;
 	
 	
 }

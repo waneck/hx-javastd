@@ -35,17 +35,17 @@ extern interface ReadBuffer
 	*
 	* @author A. Sundararajan
 	*/
-	@:overload public function get(pos : haxe.Int64, buf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function get(pos : haxe.Int64, buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getChar(pos : haxe.Int64) : java.StdTypes.Char16;
+	@:overload @:public public function getChar(pos : haxe.Int64) : java.StdTypes.Char16;
 	
-	@:overload public function getByte(pos : haxe.Int64) : java.StdTypes.Int8;
+	@:overload @:public public function getByte(pos : haxe.Int64) : java.StdTypes.Int8;
 	
-	@:overload public function getShort(pos : haxe.Int64) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(pos : haxe.Int64) : java.StdTypes.Int16;
 	
-	@:overload public function getInt(pos : haxe.Int64) : Int;
+	@:overload @:public public function getInt(pos : haxe.Int64) : Int;
 	
-	@:overload public function getLong(pos : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getLong(pos : haxe.Int64) : haxe.Int64;
 	
 	
 }

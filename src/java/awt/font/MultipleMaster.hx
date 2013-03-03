@@ -30,7 +30,7 @@ extern interface MultipleMaster
 	* Design axes include things like width, weight and optical scaling.
 	* @return the number of multiple master design controls
 	*/
-	@:overload public function getNumDesignAxes() : Int;
+	@:overload @:public public function getNumDesignAxes() : Int;
 	
 	/**
 	* Returns an array of design limits interleaved in the form [from->to]
@@ -40,7 +40,7 @@ extern interface MultipleMaster
 	* <code>getDesignAxisNames</code>.
 	* @return an array of design limits for each axis.
 	*/
-	@:overload public function getDesignAxisRanges() : java.NativeArray<Single>;
+	@:overload @:public public function getDesignAxisRanges() : java.NativeArray<Single>;
 	
 	/**
 	* Returns an array of default design values for each axis.  For example,
@@ -48,14 +48,14 @@ extern interface MultipleMaster
 	* in the same order returned by <code>getDesignAxisNames</code>.
 	* @return an array of default design values for each axis.
 	*/
-	@:overload public function getDesignAxisDefaults() : java.NativeArray<Single>;
+	@:overload @:public public function getDesignAxisDefaults() : java.NativeArray<Single>;
 	
 	/**
 	* Returns the name for each design axis. This also determines the order in
 	* which the values for each axis are returned.
 	* @return an array containing the names of each design axis.
 	*/
-	@:overload public function getDesignAxisNames() : java.NativeArray<String>;
+	@:overload @:public public function getDesignAxisNames() : java.NativeArray<String>;
 	
 	/**
 	* Creates a new instance of a multiple master font based on the design
@@ -70,7 +70,7 @@ extern interface MultipleMaster
 	* <code>MultipleMaster</code> and is based on the design axis values
 	* provided by <code>axes</code>.
 	*/
-	@:overload public function deriveMMFont(axes : java.NativeArray<Single>) : java.awt.Font;
+	@:overload @:public public function deriveMMFont(axes : java.NativeArray<Single>) : java.awt.Font;
 	
 	/**
 	* Creates a new instance of a multiple master font based on detailed metric
@@ -87,7 +87,7 @@ extern interface MultipleMaster
 	* <code>MultipleMaster</code> and is based on the specified metric
 	* information.
 	*/
-	@:overload public function deriveMMFont(glyphWidths : java.NativeArray<Single>, avgStemWidth : Single, typicalCapHeight : Single, typicalXHeight : Single, italicAngle : Single) : java.awt.Font;
+	@:overload @:public public function deriveMMFont(glyphWidths : java.NativeArray<Single>, avgStemWidth : Single, typicalCapHeight : Single, typicalXHeight : Single, italicAngle : Single) : java.awt.Font;
 	
 	
 }

@@ -30,21 +30,21 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* {@code double}. It is equal to the value returned by
 	* {@code Double.longBitsToDouble(0x7ff0000000000000L)}.
 	*/
-	public static var POSITIVE_INFINITY(default, null) : Float;
+	@:public @:static @:final public static var POSITIVE_INFINITY(default, null) : Float;
 	
 	/**
 	* A constant holding the negative infinity of type
 	* {@code double}. It is equal to the value returned by
 	* {@code Double.longBitsToDouble(0xfff0000000000000L)}.
 	*/
-	public static var NEGATIVE_INFINITY(default, null) : Float;
+	@:public @:static @:final public static var NEGATIVE_INFINITY(default, null) : Float;
 	
 	/**
 	* A constant holding a Not-a-Number (NaN) value of type
 	* {@code double}. It is equivalent to the value returned by
 	* {@code Double.longBitsToDouble(0x7ff8000000000000L)}.
 	*/
-	public static var NaN(default, null) : Float;
+	@:public @:static @:final public static var NaN(default, null) : Float;
 	
 	/**
 	* A constant holding the largest positive finite value of type
@@ -54,7 +54,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* {@code 0x1.fffffffffffffP+1023} and also equal to
 	* {@code Double.longBitsToDouble(0x7fefffffffffffffL)}.
 	*/
-	public static var MAX_VALUE(default, null) : Float;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Float;
 	
 	/**
 	* A constant holding the smallest positive normal value of type
@@ -64,7 +64,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var MIN_NORMAL(default, null) : Float;
+	@:require(java6) @:public @:static @:final public static var MIN_NORMAL(default, null) : Float;
 	
 	/**
 	* A constant holding the smallest positive nonzero value of type
@@ -73,7 +73,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* {@code 0x0.0000000000001P-1022} and also equal to
 	* {@code Double.longBitsToDouble(0x1L)}.
 	*/
-	public static var MIN_VALUE(default, null) : Float;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Float;
 	
 	/**
 	* Maximum exponent a finite {@code double} variable may have.
@@ -82,7 +82,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var MAX_EXPONENT(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var MAX_EXPONENT(default, null) : Int;
 	
 	/**
 	* Minimum exponent a normalized {@code double} variable may
@@ -91,14 +91,14 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var MIN_EXPONENT(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var MIN_EXPONENT(default, null) : Int;
 	
 	/**
 	* The number of bits used to represent a {@code double} value.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SIZE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var SIZE(default, null) : Int;
 	
 	/**
 	* The {@code Class} instance representing the primitive type
@@ -106,7 +106,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Null<Float>>;
+	@:require(java1) @:public @:static @:final public static var TYPE(default, null) : Class<Null<Float>>;
 	
 	/**
 	* Returns a string representation of the {@code double}
@@ -170,7 +170,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @param   d   the {@code double} to be converted.
 	* @return a string representation of the argument.
 	*/
-	@:native('toString') @:overload public static function _toString(d : Float) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(d : Float) : String;
 	
 	/**
 	* Returns a hexadecimal string representation of the
@@ -246,7 +246,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @since 1.5
 	* @author Joseph D. Darcy
 	*/
-	@:require(java5) @:overload public static function toHexString(d : Float) : String;
+	@:require(java5) @:overload @:public @:static public static function toHexString(d : Float) : String;
 	
 	/**
 	* Returns a {@code Double} object holding the
@@ -420,7 +420,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @throws     NumberFormatException  if the string does not contain a
 	*             parsable number.
 	*/
-	@:overload public static function valueOf(s : String) : Null<Float>;
+	@:overload @:public @:static public static function valueOf(s : String) : Null<Float>;
 	
 	/**
 	* Returns a {@code Double} instance representing the specified
@@ -435,7 +435,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return a {@code Double} instance representing {@code d}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(d : Float) : Null<Float>;
+	@:require(java5) @:overload @:public @:static public static function valueOf(d : Float) : Null<Float>;
 	
 	/**
 	* Returns a new {@code double} initialized to the value
@@ -452,7 +452,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @see    java.lang.Double#valueOf(String)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function parseDouble(s : String) : Float;
+	@:require(java2) @:overload @:public @:static public static function parseDouble(s : String) : Float;
 	
 	/**
 	* Returns {@code true} if the specified number is a
@@ -462,7 +462,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  {@code true} if the value of the argument is NaN;
 	*          {@code false} otherwise.
 	*/
-	@:native('isNaN') @:overload public static function _isNaN(v : Float) : Bool;
+	@:native('isNaN') @:overload @:static @:public public static function _isNaN(v : Float) : Bool;
 	
 	/**
 	* Returns {@code true} if the specified number is infinitely
@@ -472,7 +472,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  {@code true} if the value of the argument is positive
 	*          infinity or negative infinity; {@code false} otherwise.
 	*/
-	@:native('isInfinite') @:overload public static function _isInfinite(v : Float) : Bool;
+	@:native('isInfinite') @:overload @:static @:public public static function _isInfinite(v : Float) : Bool;
 	
 	/**
 	* Constructs a newly allocated {@code Double} object that
@@ -480,7 +480,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @param   value   the value to be represented by the {@code Double}.
 	*/
-	@:overload public function new(value : Float) : Void;
+	@:overload @:public public function new(value : Float) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Double} object that
@@ -493,7 +493,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*            parsable number.
 	* @see       java.lang.Double#valueOf(java.lang.String)
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns {@code true} if this {@code Double} value is
@@ -502,7 +502,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  {@code true} if the value represented by this object is
 	*          NaN; {@code false} otherwise.
 	*/
-	@:overload public function isNaN() : Bool;
+	@:overload @:public public function isNaN() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code Double} value is
@@ -512,7 +512,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*          positive infinity or negative infinity;
 	*          {@code false} otherwise.
 	*/
-	@:overload public function isInfinite() : Bool;
+	@:overload @:public public function isInfinite() : Bool;
 	
 	/**
 	* Returns a string representation of this {@code Double} object.
@@ -523,7 +523,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  a {@code String} representation of this object.
 	* @see java.lang.Double#toString(double)
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the value of this {@code Double} as a {@code byte} (by
@@ -533,7 +533,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*          converted to type {@code byte}
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function byteValue() : java.StdTypes.Int8;
+	@:require(java1) @:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of this {@code Double} as a
@@ -543,7 +543,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*          converted to type {@code short}
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function shortValue() : java.StdTypes.Int16;
+	@:require(java1) @:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of this {@code Double} as an
@@ -552,7 +552,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  the {@code double} value represented by this object
 	*          converted to type {@code int}
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Returns the value of this {@code Double} as a
@@ -561,7 +561,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  the {@code double} value represented by this object
 	*          converted to type {@code long}
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the {@code float} value of this
@@ -571,7 +571,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*          converted to type {@code float}
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload override public function floatValue() : Single;
+	@:require(java0) @:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Returns the {@code double} value of this
@@ -579,7 +579,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @return the {@code double} value represented by this object
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	/**
 	* Returns a hash code for this {@code Double} object. The
@@ -602,7 +602,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @return  a {@code hash code} value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object against the specified object.  The result
@@ -643,7 +643,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*          {@code false} otherwise.
 	* @see java.lang.Double#doubleToLongBits(double)
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a representation of the specified floating-point value
@@ -677,7 +677,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @param   value   a {@code double} precision floating-point number.
 	* @return the bits that represent the floating-point number.
 	*/
-	@:overload public static function doubleToLongBits(value : Float) : haxe.Int64;
+	@:overload @:public @:static public static function doubleToLongBits(value : Float) : haxe.Int64;
 	
 	/**
 	* Returns a representation of the specified floating-point value
@@ -715,7 +715,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return the bits that represent the floating-point number.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:native public static function doubleToRawLongBits(value : Float) : haxe.Int64;
+	@:require(java3) @:overload @:public @:static @:native public static function doubleToRawLongBits(value : Float) : haxe.Int64;
 	
 	/**
 	* Returns the {@code double} value corresponding to a given
@@ -778,7 +778,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	* @return  the {@code double} floating-point value with the same
 	*          bit pattern.
 	*/
-	@:overload @:native public static function longBitsToDouble(bits : haxe.Int64) : Float;
+	@:overload @:public @:static @:native public static function longBitsToDouble(bits : haxe.Int64) : Float;
 	
 	/**
 	* Compares two {@code Double} objects numerically.  There
@@ -810,7 +810,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherDouble : Null<Float>) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherDouble : Null<Float>) : Int;
 	
 	/**
 	* Compares the two specified {@code double} values. The sign
@@ -830,7 +830,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Nul
 	*          {@code d2}.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function compare(d1 : Float, d2 : Float) : Int;
+	@:require(java4) @:overload @:public @:static public static function compare(d1 : Float, d2 : Float) : Int;
 	
 	
 }

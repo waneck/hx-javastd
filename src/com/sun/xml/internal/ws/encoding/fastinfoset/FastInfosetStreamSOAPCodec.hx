@@ -25,23 +25,23 @@ package com.sun.xml.internal.ws.encoding.fastinfoset;
 */
 extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.Codec
 {
-	private var _defaultContentType(default, null) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:protected @:final private var _defaultContentType(default, null) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
-	@:overload public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function decode(_in : java.io.InputStream, contentType : String, response : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream, contentType : String, response : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, response : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, response : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:abstract private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
+	@:overload @:protected @:abstract private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	
-	@:overload @:abstract private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:protected @:abstract private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
 	/**
 	* Creates a new {@link FastInfosetStreamSOAPCodec} instance.
@@ -49,7 +49,7 @@ extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.p
 	* @param version the SOAP version of the codec.
 	* @return a new {@link FastInfosetStreamSOAPCodec} instance.
 	*/
-	@:overload public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec;
+	@:overload @:public @:static public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec;
 	
 	/**
 	* Creates a new {@link FastInfosetStreamSOAPCodec} instance.
@@ -59,7 +59,7 @@ extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.p
 	*        vocabulary tables for multiple encode/decode invocations.
 	* @return a new {@link FastInfosetStreamSOAPCodec} instance.
 	*/
-	@:overload public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion, retainState : Bool) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec;
+	@:overload @:public @:static public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion, retainState : Bool) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec;
 	
 	/**
 	* Creates a copy of this {@link Codec}.
@@ -95,7 +95,7 @@ extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.p
 	*      re-entrant and multi-thread safe to begin with,
 	*      then this method may simply return <tt>this</tt>.
 	*/
-	@:overload public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	
 }

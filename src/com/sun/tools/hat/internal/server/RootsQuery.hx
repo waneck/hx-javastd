@@ -30,9 +30,9 @@ package com.sun.tools.hat.internal.server;
 */
 @:internal extern class RootsQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload public function new(includeWeak : Bool) : Void;
+	@:overload @:public public function new(includeWeak : Bool) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

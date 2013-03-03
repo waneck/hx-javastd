@@ -57,7 +57,7 @@ extern class Array
 	* @exception NegativeArraySizeException if the specified {@code length}
 	* is negative
 	*/
-	@:overload public static function newInstance(componentType : Class<Dynamic>, length : Int) : Dynamic;
+	@:overload @:public @:static public static function newInstance(componentType : Class<Dynamic>, length : Int) : Dynamic;
 	
 	/**
 	* Creates a new array
@@ -92,7 +92,7 @@ extern class Array
 	* @exception NegativeArraySizeException if any of the components in
 	* the specified {@code dimensions} argument is negative.
 	*/
-	@:overload public static function newInstance(componentType : Class<Dynamic>, dimensions : java.NativeArray<Int>) : Dynamic;
+	@:overload @:public @:static public static function newInstance(componentType : Class<Dynamic>, dimensions : java.NativeArray<Int>) : Dynamic;
 	
 	/**
 	* Returns the length of the specified array object, as an {@code int}.
@@ -102,7 +102,7 @@ extern class Array
 	* @exception IllegalArgumentException if the object argument is not
 	* an array
 	*/
-	@:overload @:native public static function getLength(array : Dynamic) : Int;
+	@:overload @:public @:static @:native public static function getLength(array : Dynamic) : Int;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -120,7 +120,7 @@ extern class Array
 	* argument is negative, or if it is greater than or equal to the
 	* length of the specified array
 	*/
-	@:overload @:native public static function get(array : Dynamic, index : Int) : Dynamic;
+	@:overload @:public @:static @:native public static function get(array : Dynamic, index : Int) : Dynamic;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -138,7 +138,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getBoolean(array : Dynamic, index : Int) : Bool;
+	@:overload @:public @:static @:native public static function getBoolean(array : Dynamic, index : Int) : Bool;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -156,7 +156,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getByte(array : Dynamic, index : Int) : java.StdTypes.Int8;
+	@:overload @:public @:static @:native public static function getByte(array : Dynamic, index : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -174,7 +174,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getChar(array : Dynamic, index : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static @:native public static function getChar(array : Dynamic, index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -192,7 +192,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getShort(array : Dynamic, index : Int) : java.StdTypes.Int16;
+	@:overload @:public @:static @:native public static function getShort(array : Dynamic, index : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -210,7 +210,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getInt(array : Dynamic, index : Int) : Int;
+	@:overload @:public @:static @:native public static function getInt(array : Dynamic, index : Int) : Int;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -228,7 +228,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getLong(array : Dynamic, index : Int) : haxe.Int64;
+	@:overload @:public @:static @:native public static function getLong(array : Dynamic, index : Int) : haxe.Int64;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -246,7 +246,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getFloat(array : Dynamic, index : Int) : Single;
+	@:overload @:public @:static @:native public static function getFloat(array : Dynamic, index : Int) : Single;
 	
 	/**
 	* Returns the value of the indexed component in the specified
@@ -264,7 +264,7 @@ extern class Array
 	* length of the specified array
 	* @see Array#get
 	*/
-	@:overload @:native public static function getDouble(array : Dynamic, index : Int) : Float;
+	@:overload @:public @:static @:native public static function getDouble(array : Dynamic, index : Int) : Float;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -283,7 +283,7 @@ extern class Array
 	* argument is negative, or if it is greater than or equal to
 	* the length of the specified array
 	*/
-	@:overload @:native public static function set(array : Dynamic, index : Int, value : Dynamic) : Void;
+	@:overload @:public @:static @:native public static function set(array : Dynamic, index : Int, value : Dynamic) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -302,7 +302,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setBoolean(array : Dynamic, index : Int, z : Bool) : Void;
+	@:overload @:public @:static @:native public static function setBoolean(array : Dynamic, index : Int, z : Bool) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -321,7 +321,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setByte(array : Dynamic, index : Int, b : java.StdTypes.Int8) : Void;
+	@:overload @:public @:static @:native public static function setByte(array : Dynamic, index : Int, b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -340,7 +340,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setChar(array : Dynamic, index : Int, c : java.StdTypes.Char16) : Void;
+	@:overload @:public @:static @:native public static function setChar(array : Dynamic, index : Int, c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -359,7 +359,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setShort(array : Dynamic, index : Int, s : java.StdTypes.Int16) : Void;
+	@:overload @:public @:static @:native public static function setShort(array : Dynamic, index : Int, s : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -378,7 +378,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setInt(array : Dynamic, index : Int, i : Int) : Void;
+	@:overload @:public @:static @:native public static function setInt(array : Dynamic, index : Int, i : Int) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -397,7 +397,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setLong(array : Dynamic, index : Int, l : haxe.Int64) : Void;
+	@:overload @:public @:static @:native public static function setLong(array : Dynamic, index : Int, l : haxe.Int64) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -416,7 +416,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setFloat(array : Dynamic, index : Int, f : Single) : Void;
+	@:overload @:public @:static @:native public static function setFloat(array : Dynamic, index : Int, f : Single) : Void;
 	
 	/**
 	* Sets the value of the indexed component of the specified array
@@ -435,7 +435,7 @@ extern class Array
 	* the length of the specified array
 	* @see Array#set
 	*/
-	@:overload @:native public static function setDouble(array : Dynamic, index : Int, d : Float) : Void;
+	@:overload @:public @:static @:native public static function setDouble(array : Dynamic, index : Int, d : Float) : Void;
 	
 	
 }

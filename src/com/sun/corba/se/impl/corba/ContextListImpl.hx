@@ -31,15 +31,15 @@ package com.sun.corba.se.impl.corba;
 */
 extern class ContextListImpl extends org.omg.CORBA.ContextList
 {
-	@:overload public function new(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB) : Void;
 	
-	@:overload override public function count() : Int;
+	@:overload @:public override public function count() : Int;
 	
-	@:overload override public function add(ctxt : String) : Void;
+	@:overload @:public override public function add(ctxt : String) : Void;
 	
-	@:overload override public function item(index : Int) : String;
+	@:overload @:public override public function item(index : Int) : String;
 	
-	@:overload override public function remove(index : Int) : Void;
+	@:overload @:public override public function remove(index : Int) : Void;
 	
 	
 }

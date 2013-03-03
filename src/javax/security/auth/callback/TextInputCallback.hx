@@ -43,7 +43,7 @@ extern class TextInputCallback implements javax.security.auth.callback.Callback 
 	* @exception IllegalArgumentException if <code>prompt</code> is null
 	*                  or if <code>prompt</code> has a length of 0.
 	*/
-	@:overload public function new(prompt : String) : Void;
+	@:overload @:public public function new(prompt : String) : Void;
 	
 	/**
 	* Construct a <code>TextInputCallback</code> with a prompt
@@ -61,7 +61,7 @@ extern class TextInputCallback implements javax.security.auth.callback.Callback 
 	*                  if <code>defaultText</code> is null
 	*                  or if <code>defaultText</code> has a length of 0.
 	*/
-	@:overload public function new(prompt : String, defaultText : String) : Void;
+	@:overload @:public public function new(prompt : String, defaultText : String) : Void;
 	
 	/**
 	* Get the prompt.
@@ -70,7 +70,7 @@ extern class TextInputCallback implements javax.security.auth.callback.Callback 
 	*
 	* @return the prompt.
 	*/
-	@:overload public function getPrompt() : String;
+	@:overload @:public public function getPrompt() : String;
 	
 	/**
 	* Get the default text.
@@ -80,7 +80,7 @@ extern class TextInputCallback implements javax.security.auth.callback.Callback 
 	* @return the default text, or null if this <code>TextInputCallback</code>
 	*          was not instantiated with <code>defaultText</code>.
 	*/
-	@:overload public function getDefaultText() : String;
+	@:overload @:public public function getDefaultText() : String;
 	
 	/**
 	* Set the retrieved text.
@@ -91,7 +91,7 @@ extern class TextInputCallback implements javax.security.auth.callback.Callback 
 	*
 	* @see #getText
 	*/
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	* Get the retrieved text.
@@ -102,7 +102,7 @@ extern class TextInputCallback implements javax.security.auth.callback.Callback 
 	*
 	* @see #setText
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	
 }

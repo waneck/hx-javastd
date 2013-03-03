@@ -29,24 +29,24 @@ extern class Signature extends java.security.SignatureSpi
 	* Possible {@link #state} value, signifying that
 	* this signature object has not yet been initialized.
 	*/
-	private static var UNINITIALIZED(default, null) : Int;
+	@:protected @:final @:static private static var UNINITIALIZED(default, null) : Int;
 	
 	/**
 	* Possible {@link #state} value, signifying that
 	* this signature object has been initialized for signing.
 	*/
-	private static var SIGN(default, null) : Int;
+	@:protected @:final @:static private static var SIGN(default, null) : Int;
 	
 	/**
 	* Possible {@link #state} value, signifying that
 	* this signature object has been initialized for verification.
 	*/
-	private static var VERIFY(default, null) : Int;
+	@:protected @:final @:static private static var VERIFY(default, null) : Int;
 	
 	/**
 	* Current state of this signature object.
 	*/
-	private var state : Int;
+	@:protected private var state : Int;
 	
 	/**
 	* Creates a Signature object for the specified algorithm.
@@ -57,7 +57,7 @@ extern class Signature extends java.security.SignatureSpi
 	* Java Cryptography Architecture Standard Algorithm Name Documentation</a>
 	* for information about standard algorithm names.
 	*/
-	@:overload private function new(algorithm : String) : Void;
+	@:overload @:protected private function new(algorithm : String) : Void;
 	
 	/**
 	* Returns a Signature object that implements the specified signature
@@ -86,7 +86,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.Signature;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.Signature;
 	
 	/**
 	* Returns a Signature object that implements the specified signature
@@ -122,7 +122,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.Signature;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.Signature;
 	
 	/**
 	* Returns a Signature object that implements the specified
@@ -153,14 +153,14 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.Signature;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.Signature;
 	
 	/**
 	* Returns the provider of this signature object.
 	*
 	* @return the provider of this signature object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this object for verification. If this method is called
@@ -172,7 +172,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @exception InvalidKeyException if the key is invalid.
 	*/
-	@:overload @:final public function initVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:public @:final public function initVerify(publicKey : java.security.PublicKey) : Void;
 	
 	/**
 	* Initializes this object for verification, using the public key from
@@ -192,7 +192,7 @@ extern class Signature extends java.security.SignatureSpi
 	* information or cannot be used for digital signature purposes.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function initVerify(certificate : java.security.cert.Certificate) : Void;
+	@:require(java3) @:overload @:public @:final public function initVerify(certificate : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Initialize this object for signing. If this method is called
@@ -204,7 +204,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @exception InvalidKeyException if the key is invalid.
 	*/
-	@:overload @:final public function initSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:public @:final public function initSign(privateKey : java.security.PrivateKey) : Void;
 	
 	/**
 	* Initialize this object for signing. If this method is called
@@ -218,7 +218,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @exception InvalidKeyException if the key is invalid.
 	*/
-	@:overload @:final public function initSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function initSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Returns the signature bytes of all the data updated.
@@ -238,7 +238,7 @@ extern class Signature extends java.security.SignatureSpi
 	* initialized properly or if this signature algorithm is unable to
 	* process the input data provided.
 	*/
-	@:overload @:final public function sign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function sign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Finishes the signature operation and stores the resulting signature
@@ -268,7 +268,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:final public function sign(outbuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:require(java2) @:overload @:public @:final public function sign(outbuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
 	/**
 	* Verifies the passed-in signature.
@@ -288,7 +288,7 @@ extern class Signature extends java.security.SignatureSpi
 	* encoded or of the wrong type, if this signature algorithm is unable to
 	* process the input data provided, etc.
 	*/
-	@:overload @:final public function verify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:final public function verify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Verifies the passed-in signature in the specified array
@@ -318,7 +318,7 @@ extern class Signature extends java.security.SignatureSpi
 	* <code>signature</code> byte array.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function verify(signature : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
+	@:require(java4) @:overload @:public @:final public function verify(signature : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
 	
 	/**
 	* Updates the data to be signed or verified by a byte.
@@ -328,7 +328,7 @@ extern class Signature extends java.security.SignatureSpi
 	* @exception SignatureException if this signature object is not
 	* initialized properly.
 	*/
-	@:overload @:final public function update(b : java.StdTypes.Int8) : Void;
+	@:overload @:public @:final public function update(b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Updates the data to be signed or verified, using the specified
@@ -339,7 +339,7 @@ extern class Signature extends java.security.SignatureSpi
 	* @exception SignatureException if this signature object is not
 	* initialized properly.
 	*/
-	@:overload @:final public function update(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function update(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Updates the data to be signed or verified, using the specified
@@ -352,7 +352,7 @@ extern class Signature extends java.security.SignatureSpi
 	* @exception SignatureException if this signature object is not
 	* initialized properly.
 	*/
-	@:overload @:final public function update(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:final public function update(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Updates the data to be signed or verified using the specified
@@ -367,14 +367,14 @@ extern class Signature extends java.security.SignatureSpi
 	* initialized properly.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function update(data : java.nio.ByteBuffer) : Void;
+	@:require(java5) @:overload @:public @:final public function update(data : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Returns the name of the algorithm for this signature object.
 	*
 	* @return the name of the algorithm for this signature object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a string representation of this signature object,
@@ -383,7 +383,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @return a string representation of this signature object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Sets the specified algorithm parameter to the specified value.
@@ -410,7 +410,7 @@ extern class Signature extends java.security.SignatureSpi
 	* {@link #setParameter(java.security.spec.AlgorithmParameterSpec)
 	* setParameter}.
 	*/
-	@:overload @:final public function setParameter(param : String, value : Dynamic) : Void;
+	@:overload @:public @:final public function setParameter(param : String, value : Dynamic) : Void;
 	
 	/**
 	* Initializes this signature engine with the specified parameter set.
@@ -422,7 +422,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @see #getParameters
 	*/
-	@:overload @:final public function setParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function setParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Returns the parameters used with this signature object.
@@ -439,7 +439,7 @@ extern class Signature extends java.security.SignatureSpi
 	* @see #setParameter(AlgorithmParameterSpec)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public function getParameters() : java.security.AlgorithmParameters;
+	@:require(java4) @:overload @:public @:final public function getParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Gets the value of the specified algorithm parameter. This method
@@ -464,7 +464,7 @@ extern class Signature extends java.security.SignatureSpi
 	*
 	* @deprecated
 	*/
-	@:overload @:final public function getParameter(param : String) : Dynamic;
+	@:overload @:public @:final public function getParameter(param : String) : Dynamic;
 	
 	/**
 	* Returns a clone if the implementation is cloneable.
@@ -474,7 +474,7 @@ extern class Signature extends java.security.SignatureSpi
 	* @exception CloneNotSupportedException if this is called
 	* on an implementation that does not support <code>Cloneable</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }
@@ -501,57 +501,57 @@ extern class Signature extends java.security.SignatureSpi
 	* @exception CloneNotSupportedException if this is called on a
 	* delegate that does not support <code>Cloneable</code>.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
-	@:overload private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey, sr : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey, sr : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload private function engineUpdate(data : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(data : java.nio.ByteBuffer) : Void;
 	
-	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineSign(outbuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:protected override private function engineSign(outbuf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
-	@:overload private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
+	@:overload @:protected override private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
 	
-	@:overload private function engineSetParameter(param : String, value : Dynamic) : Void;
+	@:overload @:protected override private function engineSetParameter(param : String, value : Dynamic) : Void;
 	
-	@:overload private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload private function engineGetParameter(param : String) : Dynamic;
+	@:overload @:protected override private function engineGetParameter(param : String) : Dynamic;
 	
-	@:overload private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload @:protected override private function engineGetParameters() : java.security.AlgorithmParameters;
 	
 	
 }
 @:native('java$security$Signature$CipherAdapter') @:internal extern class Signature_CipherAdapter extends java.security.SignatureSpi
 {
-	@:overload private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
-	@:overload private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
 	
-	@:overload private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(sigBytes : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload private function engineSetParameter(param : String, value : Dynamic) : Void;
+	@:overload @:protected override private function engineSetParameter(param : String, value : Dynamic) : Void;
 	
-	@:overload private function engineGetParameter(param : String) : Dynamic;
+	@:overload @:protected override private function engineGetParameter(param : String) : Dynamic;
 	
 	
 }

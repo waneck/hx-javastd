@@ -42,14 +42,14 @@ package org.omg.CORBA;
 	* of 0, a completion state of CompletionStatus.COMPLETED_NO,
 	* and a null description.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>NO_RESOURCES</code> exception with the specified description,
 	* a minor code of 0, and a completion state of COMPLETED_NO.
 	* @param s the String containing a description message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>NO_RESOURCES</code> exception with the specified
@@ -57,7 +57,7 @@ package org.omg.CORBA;
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs a <code>NO_RESOURCES</code> exception with the specified description
@@ -66,7 +66,7 @@ package org.omg.CORBA;
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(s : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

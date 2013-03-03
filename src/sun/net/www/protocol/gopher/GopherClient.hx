@@ -28,43 +28,43 @@ extern class GopherClient extends sun.net.NetworkClient implements java.lang.Run
 	/**
 	* @deprecated
 	*/
-	public static var useGopherProxy : Bool;
+	@:public @:static public static var useGopherProxy : Bool;
 	
 	/**
 	* @deprecated
 	*/
-	public static var gopherProxyHost : String;
+	@:public @:static public static var gopherProxyHost : String;
 	
 	/**
 	* @deprecated
 	*/
-	public static var gopherProxyPort : Int;
+	@:public @:static public static var gopherProxyPort : Int;
 	
 	/**
 	* @return true if gopher connections should go through a proxy, according
 	*          to system properties.
 	*/
-	@:overload public static function getUseGopherProxy() : Bool;
+	@:overload @:public @:static public static function getUseGopherProxy() : Bool;
 	
 	/**
 	* @return the proxy host to use, or null if nothing is set.
 	*/
-	@:overload public static function getGopherProxyHost() : String;
+	@:overload @:public @:static public static function getGopherProxyHost() : String;
 	
 	/**
 	* @return the proxy port to use.  Will default reasonably.
 	*/
-	@:overload public static function getGopherProxyPort() : Int;
+	@:overload @:public @:static public static function getGopherProxyPort() : Int;
 	
 	/** This method is run as a seperate thread when an incoming gopher
 	document requires translation to html */
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:internal extern class GopherInputStream extends java.io.FilterInputStream
 {
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

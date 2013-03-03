@@ -30,16 +30,16 @@ package sun.tools.asm;
 */
 extern class Cover
 {
-	public var Type : Int;
+	@:public public var Type : Int;
 	
-	public var Addr : haxe.Int64;
+	@:public public var Addr : haxe.Int64;
 	
-	public var NumCommand : Int;
+	@:public public var NumCommand : Int;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(type : Int, addr : haxe.Int64, command : Int) : Void;
+	@:overload @:public public function new(type : Int, addr : haxe.Int64, command : Int) : Void;
 	
 	
 }

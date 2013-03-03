@@ -47,7 +47,7 @@ package java.security.spec;
 	* @exception NullPointerException if <code>encodedKey</code>
 	* is null.
 	*/
-	@:overload public function new(encodedKey : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encodedKey : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the encoded key.
@@ -55,7 +55,7 @@ package java.security.spec;
 	* @return the encoded key. Returns a new array each time
 	* this method is called.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the name of the encoding format associated with this
@@ -72,7 +72,7 @@ package java.security.spec;
 	*
 	* @return a string representation of the encoding format.
 	*/
-	@:overload @:abstract public function getFormat() : String;
+	@:overload @:public @:abstract public function getFormat() : String;
 	
 	
 }

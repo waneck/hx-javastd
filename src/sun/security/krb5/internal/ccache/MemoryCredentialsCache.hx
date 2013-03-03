@@ -29,17 +29,17 @@ package sun.security.krb5.internal.ccache;
 */
 extern class MemoryCredentialsCache extends sun.security.krb5.internal.ccache.CredentialsCache
 {
-	@:overload @:abstract public function exists(cache : String) : Bool;
+	@:overload @:public @:abstract public function exists(cache : String) : Bool;
 	
-	@:overload @:abstract override public function update(c : sun.security.krb5.Credentials) : Void;
+	@:overload @:public @:abstract override public function update(c : sun.security.krb5.Credentials) : Void;
 	
-	@:overload @:abstract override public function save() : Void;
+	@:overload @:public @:abstract override public function save() : Void;
 	
-	@:overload @:abstract override public function getCredsList() : java.NativeArray<sun.security.krb5.Credentials>;
+	@:overload @:public @:abstract override public function getCredsList() : java.NativeArray<sun.security.krb5.Credentials>;
 	
-	@:overload @:abstract override public function getCreds(sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
+	@:overload @:public @:abstract override public function getCreds(sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
 	
-	@:overload @:abstract override public function getPrimaryPrincipal() : sun.security.krb5.PrincipalName;
+	@:overload @:public @:abstract override public function getPrimaryPrincipal() : sun.security.krb5.PrincipalName;
 	
 	
 }

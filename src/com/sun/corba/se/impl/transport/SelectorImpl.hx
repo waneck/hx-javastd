@@ -25,33 +25,33 @@ package com.sun.corba.se.impl.transport;
 */
 extern class SelectorImpl extends java.lang.Thread implements com.sun.corba.se.pept.transport.Selector
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function setTimeout(timeout : haxe.Int64) : Void;
+	@:overload @:public public function setTimeout(timeout : haxe.Int64) : Void;
 	
-	@:overload public function getTimeout() : haxe.Int64;
+	@:overload @:public public function getTimeout() : haxe.Int64;
 	
-	@:overload public function registerInterestOps(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
+	@:overload @:public public function registerInterestOps(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
 	
-	@:overload public function registerForEvent(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
+	@:overload @:public public function registerForEvent(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
 	
-	@:overload public function unregisterForEvent(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
+	@:overload @:public public function unregisterForEvent(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
-	@:overload private function dprint(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:protected private function dprint(msg : String, t : java.lang.Throwable) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$transport$SelectorImpl$SelectionKeyAndOp') @:internal extern class SelectorImpl_SelectionKeyAndOp
 {
-	public var keyOp : Int;
+	@:public public var keyOp : Int;
 	
-	public var selectionKey : java.nio.channels.SelectionKey;
+	@:public public var selectionKey : java.nio.channels.SelectionKey;
 	
-	@:overload public function new(selectionKey : java.nio.channels.SelectionKey, keyOp : Int) : Void;
+	@:overload @:public public function new(selectionKey : java.nio.channels.SelectionKey, keyOp : Int) : Void;
 	
 	
 }

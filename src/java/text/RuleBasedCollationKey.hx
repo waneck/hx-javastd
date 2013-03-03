@@ -51,7 +51,7 @@ package java.text;
 	* zero if this is greater than target.
 	* @see java.text.Collator#compare
 	*/
-	@:overload override public function compareTo(target : java.text.CollationKey) : Int;
+	@:overload @:public override public function compareTo(target : java.text.CollationKey) : Int;
 	
 	/**
 	* Compare this RuleBasedCollationKey and the target for equality.
@@ -61,7 +61,7 @@ package java.text;
 	* @param target the RuleBasedCollationKey to compare to.
 	* @return Returns true if two objects are equal, false otherwise.
 	*/
-	@:overload public function equals(target : Dynamic) : Bool;
+	@:overload @:public public function equals(target : Dynamic) : Bool;
 	
 	/**
 	* Creates a hash code for this RuleBasedCollationKey. The hash value is calculated on the
@@ -71,7 +71,7 @@ package java.text;
 	* See the CollatinKey class description for an example.
 	* @return the hash value based on the string's collation order.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Converts the RuleBasedCollationKey to a sequence of bits. If two RuleBasedCollationKeys
@@ -79,7 +79,7 @@ package java.text;
 	* for each of those keys to obtain the same result.  Byte arrays are
 	* organized most significant byte first.
 	*/
-	@:overload override public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

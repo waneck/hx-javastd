@@ -38,21 +38,21 @@ package com.sun.corba.se.impl.util;
 */
 @:native('com$sun$corba$se$impl$util$JDKClassLoader$JDKClassLoaderCache') @:internal extern class JDKClassLoader_JDKClassLoaderCache
 {
-	@:overload @:final public function recordFailure(key : Dynamic) : Void;
+	@:overload @:public @:final public function recordFailure(key : Dynamic) : Void;
 	
-	@:overload @:final public function createKey(className : String, latestLoader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public @:final public function createKey(className : String, latestLoader : java.lang.ClassLoader) : Dynamic;
 	
-	@:overload @:final public function knownToFail(key : Dynamic) : Bool;
+	@:overload @:public @:final public function knownToFail(key : Dynamic) : Bool;
 	
 	
 }
 @:native('com$sun$corba$se$impl$util$JDKClassLoader$JDKClassLoaderCache$CacheKey') @:internal extern class JDKClassLoader_JDKClassLoaderCache_CacheKey
 {
-	@:overload public function new(className : String, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(className : String, loader : java.lang.ClassLoader) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

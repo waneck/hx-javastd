@@ -46,7 +46,7 @@ extern interface Node extends org.w3c.dom.Node
 	*          <code>Text</code> object if such a child exists;
 	*          <code>null</code> otherwise.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	/**
 	* If this is a Text node then this method will set its value,
@@ -62,7 +62,7 @@ extern interface Node extends org.w3c.dom.Node
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function setValue(value : String) : Void;
+	@:require(java2) @:overload @:public public function setValue(value : String) : Void;
 	
 	/**
 	* Sets the parent of this <code>Node</code> object to the given
@@ -75,7 +75,7 @@ extern interface Node extends org.w3c.dom.Node
 	*                          parent to the given element
 	* @see #getParentElement
 	*/
-	@:overload public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
+	@:overload @:public public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
 	
 	/**
 	* Returns the parent element of this <code>Node</code> object.
@@ -90,12 +90,12 @@ extern interface Node extends org.w3c.dom.Node
 	*            kept in memory
 	* @see #setParentElement
 	*/
-	@:overload public function getParentElement() : javax.xml.soap.SOAPElement;
+	@:overload @:public public function getParentElement() : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Removes this <code>Node</code> object from the tree.
 	*/
-	@:overload public function detachNode() : Void;
+	@:overload @:public public function detachNode() : Void;
 	
 	/**
 	* Notifies the implementation that this <code>Node</code>
@@ -106,7 +106,7 @@ extern interface Node extends org.w3c.dom.Node
 	* Calling the method <code>recycleNode</code> implies that the method
 	* <code>detachNode</code> has been called previously.
 	*/
-	@:overload public function recycleNode() : Void;
+	@:overload @:public public function recycleNode() : Void;
 	
 	
 }

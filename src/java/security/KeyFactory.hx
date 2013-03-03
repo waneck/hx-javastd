@@ -33,7 +33,7 @@ extern class KeyFactory
 	* @param algorithm the name of the algorithm
 	* to associate with this <tt>KeyFactory</tt>
 	*/
-	@:overload private function new(keyFacSpi : java.security.KeyFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(keyFacSpi : java.security.KeyFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns a KeyFactory object that converts
@@ -62,7 +62,7 @@ extern class KeyFactory
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.KeyFactory;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.KeyFactory;
 	
 	/**
 	* Returns a KeyFactory object that converts
@@ -98,7 +98,7 @@ extern class KeyFactory
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.KeyFactory;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.KeyFactory;
 	
 	/**
 	* Returns a KeyFactory object that converts
@@ -129,14 +129,14 @@ extern class KeyFactory
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.KeyFactory;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.KeyFactory;
 	
 	/**
 	* Returns the provider of this key factory object.
 	*
 	* @return the provider of this key factory object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Gets the name of the algorithm
@@ -145,7 +145,7 @@ extern class KeyFactory
 	* @return the name of the algorithm associated with this
 	* <tt>KeyFactory</tt>
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Generates a public key object from the provided key specification
@@ -158,7 +158,7 @@ extern class KeyFactory
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a public key.
 	*/
-	@:overload @:final public function generatePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload @:public @:final public function generatePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
 	/**
 	* Generates a private key object from the provided key specification
@@ -171,7 +171,7 @@ extern class KeyFactory
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a private key.
 	*/
-	@:overload @:final public function generatePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload @:public @:final public function generatePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
 	/**
 	* Returns a specification (key material) of the given key object.
@@ -193,7 +193,7 @@ extern class KeyFactory
 	* inappropriate for the given key, or the given key cannot be processed
 	* (e.g., the given key has an unrecognized algorithm or format).
 	*/
-	@:overload @:final public function getKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
+	@:overload @:public @:final public function getKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
 	
 	/**
 	* Translates a key object, whose provider may be unknown or potentially
@@ -206,7 +206,7 @@ extern class KeyFactory
 	* @exception InvalidKeyException if the given key cannot be processed
 	* by this key factory.
 	*/
-	@:overload @:final public function translateKey(key : java.security.Key) : java.security.Key;
+	@:overload @:public @:final public function translateKey(key : java.security.Key) : java.security.Key;
 	
 	
 }

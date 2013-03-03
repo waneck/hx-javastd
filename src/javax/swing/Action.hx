@@ -214,7 +214,7 @@ extern interface Action extends java.awt.event.ActionListener
 	* using the associated key.
 	* @see #putValue
 	*/
-	@:overload public function getValue(key : String) : Dynamic;
+	@:overload @:public public function getValue(key : String) : Dynamic;
 	
 	/**
 	* Sets one of this object's properties
@@ -225,7 +225,7 @@ extern interface Action extends java.awt.event.ActionListener
 	* @param key    a <code>String</code> containing the key
 	* @param value  an <code>Object</code> value
 	*/
-	@:overload public function putValue(key : String, value : Dynamic) : Void;
+	@:overload @:public public function putValue(key : String, value : Dynamic) : Void;
 	
 	/**
 	* Sets the enabled state of the <code>Action</code>.  When enabled,
@@ -236,7 +236,7 @@ extern interface Action extends java.awt.event.ActionListener
 	*
 	* @param  b true to enable this <code>Action</code>, false to disable it
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns the enabled state of the <code>Action</code>. When enabled,
@@ -245,7 +245,7 @@ extern interface Action extends java.awt.event.ActionListener
 	*
 	* @return true if this <code>Action</code> is enabled
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Adds a <code>PropertyChange</code> listener. Containers and attached
@@ -255,7 +255,7 @@ extern interface Action extends java.awt.event.ActionListener
 	*
 	* @param listener  a <code>PropertyChangeListener</code> object
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a <code>PropertyChange</code> listener.
@@ -263,7 +263,7 @@ extern interface Action extends java.awt.event.ActionListener
 	* @param listener  a <code>PropertyChangeListener</code> object
 	* @see #addPropertyChangeListener
 	*/
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

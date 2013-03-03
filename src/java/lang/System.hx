@@ -31,7 +31,7 @@ extern class System
 	* corresponds to keyboard input or another input source specified by
 	* the host environment or user.
 	*/
-	@:native('in') public static var _in(default, null) : java.io.InputStream;
+	@:native('in') @:public @:final @:static public static var _in(default, null) : java.io.InputStream;
 	
 	/**
 	* The "standard" output stream. This stream is already
@@ -58,7 +58,7 @@ extern class System
 	* @see     java.io.PrintStream#println(java.lang.Object)
 	* @see     java.io.PrintStream#println(java.lang.String)
 	*/
-	public static var out(default, null) : java.io.PrintStream;
+	@:public @:final @:static public static var out(default, null) : java.io.PrintStream;
 	
 	/**
 	* The "standard" error output stream. This stream is already
@@ -72,7 +72,7 @@ extern class System
 	* variable <code>out</code>, has been redirected to a file or other
 	* destination that is typically not continuously monitored.
 	*/
-	public static var err(default, null) : java.io.PrintStream;
+	@:public @:final @:static public static var err(default, null) : java.io.PrintStream;
 	
 	/**
 	* Reassigns the "standard" input stream.
@@ -94,7 +94,7 @@ extern class System
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public static function setIn(_in : java.io.InputStream) : Void;
+	@:require(java1) @:overload @:public @:static public static function setIn(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Reassigns the "standard" output stream.
@@ -115,7 +115,7 @@ extern class System
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public static function setOut(out : java.io.PrintStream) : Void;
+	@:require(java1) @:overload @:public @:static public static function setOut(out : java.io.PrintStream) : Void;
 	
 	/**
 	* Reassigns the "standard" error output stream.
@@ -136,7 +136,7 @@ extern class System
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public static function setErr(err : java.io.PrintStream) : Void;
+	@:require(java1) @:overload @:public @:static public static function setErr(err : java.io.PrintStream) : Void;
 	
 	/**
 	* Returns the unique {@link java.io.Console Console} object associated
@@ -146,7 +146,7 @@ extern class System
 	*
 	* @since   1.6
 	*/
-	@:require(java6) @:overload public static function console() : java.io.Console;
+	@:require(java6) @:overload @:public @:static public static function console() : java.io.Console;
 	
 	/**
 	* Returns the channel inherited from the entity that created this
@@ -173,7 +173,7 @@ extern class System
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function inheritedChannel() : java.nio.channels.Channel;
+	@:require(java5) @:overload @:public @:static public static function inheritedChannel() : java.nio.channels.Channel;
 	
 	/**
 	* Sets the System security.
@@ -198,7 +198,7 @@ extern class System
 	* @see SecurityManager#checkPermission
 	* @see java.lang.RuntimePermission
 	*/
-	@:overload public static function setSecurityManager(s : java.lang.SecurityManager) : Void;
+	@:overload @:public @:static public static function setSecurityManager(s : java.lang.SecurityManager) : Void;
 	
 	/**
 	* Gets the system security interface.
@@ -208,7 +208,7 @@ extern class System
 	*          otherwise, <code>null</code> is returned.
 	* @see     #setSecurityManager
 	*/
-	@:overload public static function getSecurityManager() : java.lang.SecurityManager;
+	@:overload @:public @:static public static function getSecurityManager() : java.lang.SecurityManager;
 	
 	/**
 	* Returns the current time in milliseconds.  Note that
@@ -226,7 +226,7 @@ extern class System
 	*          the current time and midnight, January 1, 1970 UTC.
 	* @see     java.util.Date
 	*/
-	@:overload @:native public static function currentTimeMillis() : haxe.Int64;
+	@:overload @:public @:static @:native public static function currentTimeMillis() : haxe.Int64;
 	
 	/**
 	* Returns the current value of the running Java Virtual Machine's
@@ -272,7 +272,7 @@ extern class System
 	*         high-resolution time source, in nanoseconds
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:native public static function nanoTime() : haxe.Int64;
+	@:require(java5) @:overload @:public @:static @:native public static function nanoTime() : haxe.Int64;
 	
 	/**
 	* Copies an array from the specified source array, beginning at the
@@ -366,7 +366,7 @@ extern class System
 	* @exception  NullPointerException if either <code>src</code> or
 	*               <code>dest</code> is <code>null</code>.
 	*/
-	@:overload @:native public static function arraycopy(src : Dynamic, srcPos : Int, dest : Dynamic, destPos : Int, length : Int) : Void;
+	@:overload @:public @:static @:native public static function arraycopy(src : Dynamic, srcPos : Int, dest : Dynamic, destPos : Int, length : Int) : Void;
 	
 	/**
 	* Returns the same hash code for the given object as
@@ -379,7 +379,7 @@ extern class System
 	* @return  the hashCode
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:native public static function identityHashCode(x : Dynamic) : Int;
+	@:require(java1) @:overload @:public @:static @:native public static function identityHashCode(x : Dynamic) : Int;
 	
 	/**
 	* Determines the current system properties.
@@ -471,7 +471,7 @@ extern class System
 	* @see        java.lang.SecurityManager#checkPropertiesAccess()
 	* @see        java.util.Properties
 	*/
-	@:overload public static function getProperties() : java.util.Properties;
+	@:overload @:public @:static public static function getProperties() : java.util.Properties;
 	
 	/**
 	* Returns the system-dependent line separator string.  It always
@@ -481,7 +481,7 @@ extern class System
 	* <p>On UNIX systems, it returns {@code "\n"}; on Microsoft
 	* Windows systems it returns {@code "\r\n"}.
 	*/
-	@:overload public static function lineSeparator() : String;
+	@:overload @:public @:static public static function lineSeparator() : String;
 	
 	/**
 	* Sets the system properties to the <code>Properties</code>
@@ -505,7 +505,7 @@ extern class System
 	* @see        java.lang.SecurityException
 	* @see        java.lang.SecurityManager#checkPropertiesAccess()
 	*/
-	@:overload public static function setProperties(props : java.util.Properties) : Void;
+	@:overload @:public @:static public static function setProperties(props : java.util.Properties) : Void;
 	
 	/**
 	* Gets the system property indicated by the specified key.
@@ -533,7 +533,7 @@ extern class System
 	* @see        java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see        java.lang.System#getProperties()
 	*/
-	@:overload public static function getProperty(key : String) : String;
+	@:overload @:public @:static public static function getProperty(key : String) : String;
 	
 	/**
 	* Gets the system property indicated by the specified key.
@@ -561,7 +561,7 @@ extern class System
 	* @see        java.lang.SecurityManager#checkPropertyAccess(java.lang.String)
 	* @see        java.lang.System#getProperties()
 	*/
-	@:overload public static function getProperty(key : String, def : String) : String;
+	@:overload @:public @:static public static function getProperty(key : String, def : String) : String;
 	
 	/**
 	* Sets the system property indicated by the specified key.
@@ -592,7 +592,7 @@ extern class System
 	* @see        SecurityManager#checkPermission
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public static function setProperty(key : String, value : String) : String;
+	@:require(java2) @:overload @:public @:static public static function setProperty(key : String, value : String) : String;
 	
 	/**
 	* Removes the system property indicated by the specified key.
@@ -621,7 +621,7 @@ extern class System
 	* @see        java.lang.SecurityManager#checkPropertiesAccess()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function clearProperty(key : String) : String;
+	@:require(java5) @:overload @:public @:static public static function clearProperty(key : String) : String;
 	
 	/**
 	* Gets the value of the specified environment variable. An
@@ -669,7 +669,7 @@ extern class System
 	* @see    #getenv()
 	* @see    ProcessBuilder#environment()
 	*/
-	@:overload public static function getenv(name : String) : String;
+	@:overload @:public @:static public static function getenv(name : String) : String;
 	
 	/**
 	* Returns an unmodifiable string map view of the current system environment.
@@ -711,7 +711,7 @@ extern class System
 	* @see    ProcessBuilder#environment()
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function getenv() : java.util.Map<String, String>;
+	@:require(java5) @:overload @:public @:static public static function getenv() : java.util.Map<String, String>;
 	
 	/**
 	* Terminates the currently running Java Virtual Machine. The
@@ -733,7 +733,7 @@ extern class System
 	*        method doesn't allow exit with the specified status.
 	* @see        java.lang.Runtime#exit(int)
 	*/
-	@:overload public static function exit(status : Int) : Void;
+	@:overload @:public @:static public static function exit(status : Int) : Void;
 	
 	/**
 	* Runs the garbage collector.
@@ -753,7 +753,7 @@ extern class System
 	*
 	* @see     java.lang.Runtime#gc()
 	*/
-	@:overload public static function gc() : Void;
+	@:overload @:public @:static public static function gc() : Void;
 	
 	/**
 	* Runs the finalization methods of any objects pending finalization.
@@ -773,7 +773,7 @@ extern class System
 	*
 	* @see     java.lang.Runtime#runFinalization()
 	*/
-	@:overload public static function runFinalization() : Void;
+	@:overload @:public @:static public static function runFinalization() : Void;
 	
 	/**
 	* Enable or disable finalization on exit; doing so specifies that the
@@ -800,7 +800,7 @@ extern class System
 	* @see     java.lang.SecurityManager#checkExit(int)
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public static function runFinalizersOnExit(value : Bool) : Void;
+	@:require(java1) @:overload @:public @:static public static function runFinalizersOnExit(value : Bool) : Void;
 	
 	/**
 	* Loads a code file with the specified filename from the local file
@@ -823,7 +823,7 @@ extern class System
 	* @see        java.lang.Runtime#load(java.lang.String)
 	* @see        java.lang.SecurityManager#checkLink(java.lang.String)
 	*/
-	@:overload public static function load(filename : String) : Void;
+	@:overload @:public @:static public static function load(filename : String) : Void;
 	
 	/**
 	* Loads the system library specified by the <code>libname</code>
@@ -846,7 +846,7 @@ extern class System
 	* @see        java.lang.Runtime#loadLibrary(java.lang.String)
 	* @see        java.lang.SecurityManager#checkLink(java.lang.String)
 	*/
-	@:overload public static function loadLibrary(libname : String) : Void;
+	@:overload @:public @:static public static function loadLibrary(libname : String) : Void;
 	
 	/**
 	* Maps a library name into a platform-specific string representing
@@ -860,7 +860,7 @@ extern class System
 	* @see        java.lang.ClassLoader#findLibrary(java.lang.String)
 	* @since      1.2
 	*/
-	@:require(java2) @:overload @:native public static function mapLibraryName(libname : String) : String;
+	@:require(java2) @:overload @:public @:static @:native public static function mapLibraryName(libname : String) : String;
 	
 	
 }

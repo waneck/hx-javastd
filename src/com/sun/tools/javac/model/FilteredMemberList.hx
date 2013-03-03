@@ -35,13 +35,13 @@ package com.sun.tools.javac.model;
 */
 extern class FilteredMemberList extends java.util.AbstractList<com.sun.tools.javac.code.Symbol>
 {
-	@:overload public function new(scope : com.sun.tools.javac.code.Scope) : Void;
+	@:overload @:public public function new(scope : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function get(index : Int) : com.sun.tools.javac.code.Symbol;
+	@:overload @:public override public function get(index : Int) : com.sun.tools.javac.code.Symbol;
 	
-	@:overload override public function iterator() : java.util.Iterator<com.sun.tools.javac.code.Symbol>;
+	@:overload @:public override public function iterator() : java.util.Iterator<com.sun.tools.javac.code.Symbol>;
 	
 	
 }

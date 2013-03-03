@@ -39,7 +39,7 @@ extern class MotifSeparatorUI extends javax.swing.plaf.basic.BasicSeparatorUI
 	* @author Georges Saab
 	* @author Jeff Shapiro
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }

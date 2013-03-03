@@ -33,7 +33,7 @@ package com.sun.tools.doclets.formats.html;
 */
 extern class HtmlDoclet extends com.sun.tools.doclets.internal.toolkit.AbstractDoclet
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The "start" method as required by Javadoc.
@@ -42,14 +42,14 @@ extern class HtmlDoclet extends com.sun.tools.doclets.internal.toolkit.AbstractD
 	* @see com.sun.javadoc.RootDoc
 	* @return true if the doclet ran without encountering any errors.
 	*/
-	@:native('start') @:overload public static function _start(root : com.sun.javadoc.RootDoc) : Bool;
+	@:native('start') @:overload @:public @:static public static function _start(root : com.sun.javadoc.RootDoc) : Bool;
 	
 	/**
 	* Create the configuration instance.
 	* Override this method to use a different
 	* configuration.
 	*/
-	@:overload override public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
+	@:overload @:public override public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
 	
 	/**
 	* Start the generation of files. Call generate methods in the individual
@@ -61,17 +61,17 @@ extern class HtmlDoclet extends com.sun.tools.doclets.internal.toolkit.AbstractD
 	*
 	* @see com.sun.javadoc.RootDoc
 	*/
-	@:overload override private function generateOtherFiles(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected override private function generateOtherFiles(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function generateClassFiles(arr : java.NativeArray<com.sun.javadoc.ClassDoc>, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected override private function generateClassFiles(arr : java.NativeArray<com.sun.javadoc.ClassDoc>, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function generatePackageFiles(classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected override private function generatePackageFiles(classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Check for doclet added options here.
@@ -79,7 +79,7 @@ extern class HtmlDoclet extends com.sun.tools.doclets.internal.toolkit.AbstractD
 	* @return number of arguments to option. Zero return means
 	* option not known.  Negative value means error occurred.
 	*/
-	@:overload public static function optionLength(option : String) : Int;
+	@:overload @:public @:static public static function optionLength(option : String) : Int;
 	
 	/**
 	* Check that options have the correct arguments here.
@@ -92,7 +92,7 @@ extern class HtmlDoclet extends com.sun.tools.doclets.internal.toolkit.AbstractD
 	*
 	* @return true if the options are valid.
 	*/
-	@:overload public static function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
+	@:overload @:public @:static public static function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
 	
 	
 }

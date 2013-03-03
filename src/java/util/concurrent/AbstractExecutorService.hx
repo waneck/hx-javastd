@@ -78,7 +78,7 @@ package java.util.concurrent;
 	* the underlying task.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function newTaskFor<T>(runnable : java.lang.Runnable, value : T) : java.util.concurrent.RunnableFuture<T>;
+	@:require(java6) @:overload @:protected private function newTaskFor<T>(runnable : java.lang.Runnable, value : T) : java.util.concurrent.RunnableFuture<T>;
 	
 	/**
 	* Returns a <tt>RunnableFuture</tt> for the given callable task.
@@ -90,33 +90,33 @@ package java.util.concurrent;
 	* cancellation of the underlying task.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function newTaskFor<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.RunnableFuture<T>;
+	@:require(java6) @:overload @:protected private function newTaskFor<T>(callable : java.util.concurrent.Callable<T>) : java.util.concurrent.RunnableFuture<T>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
+	@:overload @:public public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
+	@:overload @:public public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
+	@:overload @:public public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
 	
-	@:overload public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : T;
+	@:overload @:public public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : T;
 	
-	@:overload public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
+	@:overload @:public public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
 	
-	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload @:public public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
 	
-	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload @:public public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.List<java.util.concurrent.Future<T>>;
 	
 	/**
 	* Executes the given command at some time in the future.  The command
@@ -128,14 +128,14 @@ package java.util.concurrent;
 	* accepted for execution.
 	* @throws NullPointerException if command is null
 	*/
-	@:overload public function execute(command : java.lang.Runnable) : Void;
+	@:overload @:public public function execute(command : java.lang.Runnable) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this executor has been shut down.
 	*
 	* @return <tt>true</tt> if this executor has been shut down
 	*/
-	@:overload public function isShutdown() : Bool;
+	@:overload @:public public function isShutdown() : Bool;
 	
 	/**
 	* Blocks until all tasks have completed execution after a shutdown
@@ -148,7 +148,7 @@ package java.util.concurrent;
 	*         <tt>false</tt> if the timeout elapsed before termination
 	* @throws InterruptedException if interrupted while waiting
 	*/
-	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Initiates an orderly shutdown in which previously submitted
@@ -167,7 +167,7 @@ package java.util.concurrent;
 	*         or the security manager's <tt>checkAccess</tt> method
 	*         denies access.
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public public function shutdown() : Void;
 	
 	/**
 	* Returns <tt>true</tt> if all tasks have completed following shut down.
@@ -176,7 +176,7 @@ package java.util.concurrent;
 	*
 	* @return <tt>true</tt> if all tasks have completed following shut down
 	*/
-	@:overload public function isTerminated() : Bool;
+	@:overload @:public public function isTerminated() : Bool;
 	
 	/**
 	* Attempts to stop all actively executing tasks, halts the
@@ -201,7 +201,7 @@ package java.util.concurrent;
 	*         or the security manager's <tt>checkAccess</tt> method
 	*         denies access.
 	*/
-	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload @:public public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
 	
 }

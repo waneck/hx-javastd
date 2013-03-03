@@ -25,19 +25,19 @@ package com.sun.tools.javac.api;
 */
 extern class ClientCodeWrapper
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.api.ClientCodeWrapper;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.api.ClientCodeWrapper;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function wrap(fm : javax.tools.JavaFileManager) : javax.tools.JavaFileManager;
+	@:overload @:public public function wrap(fm : javax.tools.JavaFileManager) : javax.tools.JavaFileManager;
 	
-	@:overload public function wrap(fo : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:public public function wrap(fo : javax.tools.FileObject) : javax.tools.FileObject;
 	
-	@:overload public function wrap(fo : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
+	@:overload @:public public function wrap(fo : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
 	
-	@:overload public function wrapJavaFileObjects(list : java.lang.Iterable<javax.tools.JavaFileObject>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function wrapJavaFileObjects(list : java.lang.Iterable<javax.tools.JavaFileObject>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload private function isTrusted(o : Dynamic) : Bool;
+	@:overload @:protected private function isTrusted(o : Dynamic) : Bool;
 	
 	
 }
@@ -73,114 +73,114 @@ extern class ClientCodeWrapper
 }
 @:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedJavaFileManager') extern class ClientCodeWrapper_WrappedJavaFileManager implements javax.tools.JavaFileManager
 {
-	private var clientJavaFileManager : javax.tools.JavaFileManager;
+	@:protected private var clientJavaFileManager : javax.tools.JavaFileManager;
 	
-	@:overload public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
 	
-	@:overload public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
-	@:overload public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
+	@:overload @:public public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
 	
-	@:overload public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
+	@:overload @:public public function isSameFile(a : javax.tools.FileObject, b : javax.tools.FileObject) : Bool;
 	
-	@:overload public function handleOption(current : String, remaining : java.util.Iterator<String>) : Bool;
+	@:overload @:public public function handleOption(current : String, remaining : java.util.Iterator<String>) : Bool;
 	
-	@:overload public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
+	@:overload @:public public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
 	
-	@:overload public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
 	
-	@:overload public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
+	@:overload @:public public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
 	
-	@:overload public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
+	@:overload @:public public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
 	
-	@:overload public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:public public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function isSupportedOption(option : String) : Int;
+	@:overload @:public public function isSupportedOption(option : String) : Int;
 	
 	
 }
 @:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedFileObject') extern class ClientCodeWrapper_WrappedFileObject implements javax.tools.FileObject
 {
-	private var clientFileObject : javax.tools.FileObject;
+	@:protected private var clientFileObject : javax.tools.FileObject;
 	
-	@:overload public function toUri() : java.net.URI;
+	@:overload @:public public function toUri() : java.net.URI;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload @:public public function openInputStream() : java.io.InputStream;
 	
-	@:overload public function openOutputStream() : java.io.OutputStream;
+	@:overload @:public public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload @:public public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
-	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload @:public public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
-	@:overload public function openWriter() : java.io.Writer;
+	@:overload @:public public function openWriter() : java.io.Writer;
 	
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
-	@:overload public function delete() : Bool;
+	@:overload @:public public function delete() : Bool;
 	
 	
 }
 @:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedJavaFileObject') extern class ClientCodeWrapper_WrappedJavaFileObject extends com.sun.tools.javac.api.ClientCodeWrapper.ClientCodeWrapper_WrappedFileObject implements javax.tools.JavaFileObject
 {
-	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload @:public public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
+	@:overload @:public public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
-	@:overload public function getNestingKind() : javax.lang.model.element.NestingKind;
+	@:overload @:public public function getNestingKind() : javax.lang.model.element.NestingKind;
 	
-	@:overload public function getAccessLevel() : javax.lang.model.element.Modifier;
+	@:overload @:public public function getAccessLevel() : javax.lang.model.element.Modifier;
 	
 	
 }
 @:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedDiagnosticListener') extern class ClientCodeWrapper_WrappedDiagnosticListener<T> implements javax.tools.DiagnosticListener<T>
 {
 	/*super JavaFileObject*/
-	private var clientDiagnosticListener : javax.tools.DiagnosticListener<T>;
+	@:protected private var clientDiagnosticListener : javax.tools.DiagnosticListener<T>;
 	
-	@:overload public function report(diagnostic : javax.tools.Diagnostic<T>) : Void;
+	@:overload @:public public function report(diagnostic : javax.tools.Diagnostic<T>) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$api$ClientCodeWrapper$DiagnosticSourceUnwrapper') extern class ClientCodeWrapper_DiagnosticSourceUnwrapper implements javax.tools.Diagnostic<javax.tools.JavaFileObject>
 {
-	public var d(default, null) : com.sun.tools.javac.util.JCDiagnostic;
+	@:public @:final public var d(default, null) : com.sun.tools.javac.util.JCDiagnostic;
 	
-	@:overload public function getKind() : javax.tools.Diagnostic.Diagnostic_Kind;
+	@:overload @:public public function getKind() : javax.tools.Diagnostic.Diagnostic_Kind;
 	
-	@:overload public function getSource() : javax.tools.JavaFileObject;
+	@:overload @:public public function getSource() : javax.tools.JavaFileObject;
 	
-	@:overload public function getPosition() : haxe.Int64;
+	@:overload @:public public function getPosition() : haxe.Int64;
 	
-	@:overload public function getStartPosition() : haxe.Int64;
+	@:overload @:public public function getStartPosition() : haxe.Int64;
 	
-	@:overload public function getEndPosition() : haxe.Int64;
+	@:overload @:public public function getEndPosition() : haxe.Int64;
 	
-	@:overload public function getLineNumber() : haxe.Int64;
+	@:overload @:public public function getLineNumber() : haxe.Int64;
 	
-	@:overload public function getColumnNumber() : haxe.Int64;
+	@:overload @:public public function getColumnNumber() : haxe.Int64;
 	
-	@:overload public function getCode() : String;
+	@:overload @:public public function getCode() : String;
 	
-	@:overload public function getMessage(locale : java.util.Locale) : String;
+	@:overload @:public public function getMessage(locale : java.util.Locale) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedTaskListener') extern class ClientCodeWrapper_WrappedTaskListener implements com.sun.source.util.TaskListener
 {
-	private var clientTaskListener : com.sun.source.util.TaskListener;
+	@:protected private var clientTaskListener : com.sun.source.util.TaskListener;
 	
-	@:overload public function started(ev : com.sun.source.util.TaskEvent) : Void;
+	@:overload @:public public function started(ev : com.sun.source.util.TaskEvent) : Void;
 	
-	@:overload public function finished(ev : com.sun.source.util.TaskEvent) : Void;
+	@:overload @:public public function finished(ev : com.sun.source.util.TaskEvent) : Void;
 	
 	
 }

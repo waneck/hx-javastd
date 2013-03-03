@@ -28,23 +28,23 @@ package sun.tools.jconsole;
 */
 extern class InternalDialog extends javax.swing.JInternalFrame
 {
-	private var statusBar : javax.swing.JLabel;
+	@:protected private var statusBar : javax.swing.JLabel;
 	
-	@:overload public function new(jConsole : sun.tools.jconsole.JConsole, title : String, modal : Bool) : Void;
+	@:overload @:public public function new(jConsole : sun.tools.jconsole.JConsole, title : String, modal : Bool) : Void;
 	
-	@:overload public function setLocationRelativeTo(c : java.awt.Component) : Void;
+	@:overload @:public public function setLocationRelativeTo(c : java.awt.Component) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$InternalDialog$MastheadIcon') extern class InternalDialog_MastheadIcon implements javax.swing.Icon
 {
-	@:overload public function new(title : String) : Void;
+	@:overload @:public public function new(title : String) : Void;
 	
-	@:overload @:synchronized public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public @:synchronized public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

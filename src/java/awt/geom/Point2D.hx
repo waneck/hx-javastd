@@ -37,7 +37,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @see java.awt.Point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the X coordinate of this <code>Point2D</code> in
@@ -45,7 +45,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @return the X coordinate of this <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getX() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getX() : Float;
 	
 	/**
 	* Returns the Y coordinate of this <code>Point2D</code> in
@@ -53,7 +53,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @return the Y coordinate of this <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getY() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getY() : Float;
 	
 	/**
 	* Sets the location of this <code>Point2D</code> to the
@@ -63,7 +63,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @param y the new Y coordinate of this {@code Point2D}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setLocation(x : Float, y : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setLocation(x : Float, y : Float) : Void;
 	
 	/**
 	* Sets the location of this <code>Point2D</code> to the same
@@ -72,7 +72,7 @@ extern class Point2D implements java.lang.Cloneable
 	* this <code>Point2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLocation(p : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setLocation(p : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Returns the square of the distance between two points.
@@ -85,7 +85,7 @@ extern class Point2D implements java.lang.Cloneable
 	* sets of specified coordinates.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('distanceSq') @:overload public static function _distanceSq(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Float;
+	@:require(java2) @:native('distanceSq') @:overload @:public @:static public static function _distanceSq(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Float;
 	
 	/**
 	* Returns the distance between two points.
@@ -98,7 +98,7 @@ extern class Point2D implements java.lang.Cloneable
 	* coordinates.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('distance') @:overload public static function _distance(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Float;
+	@:require(java2) @:native('distance') @:overload @:public @:static public static function _distance(x1 : Float, y1 : Float, x2 : Float, y2 : Float) : Float;
 	
 	/**
 	* Returns the square of the distance from this
@@ -112,7 +112,7 @@ extern class Point2D implements java.lang.Cloneable
 	* <code>Point2D</code> and the specified point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function distanceSq(px : Float, py : Float) : Float;
+	@:require(java2) @:overload @:public public function distanceSq(px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the square of the distance from this
@@ -124,7 +124,7 @@ extern class Point2D implements java.lang.Cloneable
 	* <code>Point2D</code> to a specified <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function distanceSq(pt : java.awt.geom.Point2D) : Float;
+	@:require(java2) @:overload @:public public function distanceSq(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Returns the distance from this <code>Point2D</code> to
@@ -138,7 +138,7 @@ extern class Point2D implements java.lang.Cloneable
 	* and a specified point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function distance(px : Float, py : Float) : Float;
+	@:require(java2) @:overload @:public public function distance(px : Float, py : Float) : Float;
 	
 	/**
 	* Returns the distance from this <code>Point2D</code> to a
@@ -150,7 +150,7 @@ extern class Point2D implements java.lang.Cloneable
 	* the specified <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function distance(pt : java.awt.geom.Point2D) : Float;
+	@:require(java2) @:overload @:public public function distance(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Creates a new object of the same class and with the
@@ -160,13 +160,13 @@ extern class Point2D implements java.lang.Cloneable
 	* @see        java.lang.Cloneable
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the hashcode for this <code>Point2D</code>.
 	* @return      a hash code for this <code>Point2D</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Determines whether or not two points are equal. Two instances of
@@ -179,7 +179,7 @@ extern class Point2D implements java.lang.Cloneable
 	*         the same values; <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -195,21 +195,21 @@ extern class Point2D implements java.lang.Cloneable
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Single;
+	@:require(java2) @:public public var x : Single;
 	
 	/**
 	* The Y coordinate of this <code>Point2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Single;
+	@:require(java2) @:public public var y : Single;
 	
 	/**
 	* Constructs and initializes a <code>Point2D</code> with
 	* coordinates (0,&nbsp;0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>Point2D</code> with
@@ -221,25 +221,25 @@ extern class Point2D implements java.lang.Cloneable
 	*          constructed <code>Point2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Single, y : Single) : Void;
+	@:require(java2) @:overload @:public public function new(x : Single, y : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setLocation(x : Float, y : Float) : Void;
+	@:require(java2) @:overload @:public override public function setLocation(x : Float, y : Float) : Void;
 	
 	/**
 	* Sets the location of this <code>Point2D</code> to the
@@ -249,7 +249,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @param y the new Y coordinate of this {@code Point2D}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLocation(x : Single, y : Single) : Void;
+	@:require(java2) @:overload @:public public function setLocation(x : Single, y : Single) : Void;
 	
 	/**
 	* Returns a <code>String</code> that represents the value
@@ -257,7 +257,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @return a string representation of this <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function toString() : String;
+	@:require(java2) @:overload @:public public function toString() : String;
 	
 	
 }
@@ -273,21 +273,21 @@ extern class Point2D implements java.lang.Cloneable
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Float;
+	@:require(java2) @:public public var x : Float;
 	
 	/**
 	* The Y coordinate of this <code>Point2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Float;
+	@:require(java2) @:public public var y : Float;
 	
 	/**
 	* Constructs and initializes a <code>Point2D</code> with
 	* coordinates (0,&nbsp;0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>Point2D</code> with the
@@ -299,25 +299,25 @@ extern class Point2D implements java.lang.Cloneable
 	*          constructed <code>Point2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Float, y : Float) : Void;
+	@:require(java2) @:overload @:public public function new(x : Float, y : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setLocation(x : Float, y : Float) : Void;
+	@:require(java2) @:overload @:public override public function setLocation(x : Float, y : Float) : Void;
 	
 	/**
 	* Returns a <code>String</code> that represents the value
@@ -325,7 +325,7 @@ extern class Point2D implements java.lang.Cloneable
 	* @return a string representation of this <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function toString() : String;
+	@:require(java2) @:overload @:public public function toString() : String;
 	
 	
 }

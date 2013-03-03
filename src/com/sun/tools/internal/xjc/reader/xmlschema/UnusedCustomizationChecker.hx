@@ -25,45 +25,45 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 */
 @:internal extern class UnusedCustomizationChecker extends com.sun.tools.internal.xjc.reader.xmlschema.BindingComponent implements com.sun.xml.internal.xsom.visitor.XSVisitor implements com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor
 {
-	@:overload public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : Void;
+	@:overload @:public public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : Void;
 	
-	@:overload public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
 	
-	@:overload public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
 	
-	@:overload public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
 	
-	@:overload public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
 	
-	@:overload public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : Void;
+	@:overload @:public public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : Void;
 	
-	@:overload public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : Void;
+	@:overload @:public public function facet(facet : com.sun.xml.internal.xsom.XSFacet) : Void;
 	
-	@:overload public function notation(notation : com.sun.xml.internal.xsom.XSNotation) : Void;
+	@:overload @:public public function notation(notation : com.sun.xml.internal.xsom.XSNotation) : Void;
 	
-	@:overload public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload @:public public function wildcard(wc : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload @:public public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload @:public public function modelGroup(group : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
-	@:overload public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function elementDecl(decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
+	@:overload @:public public function simpleType(simpleType : com.sun.xml.internal.xsom.XSSimpleType) : Void;
 	
-	@:overload public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : Void;
+	@:overload @:public public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : Void;
 	
-	@:overload public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : Void;
+	@:overload @:public public function empty(empty : com.sun.xml.internal.xsom.XSContentType) : Void;
 	
-	@:overload public function listSimpleType(type : com.sun.xml.internal.xsom.XSListSimpleType) : Void;
+	@:overload @:public public function listSimpleType(type : com.sun.xml.internal.xsom.XSListSimpleType) : Void;
 	
-	@:overload public function restrictionSimpleType(type : com.sun.xml.internal.xsom.XSRestrictionSimpleType) : Void;
+	@:overload @:public public function restrictionSimpleType(type : com.sun.xml.internal.xsom.XSRestrictionSimpleType) : Void;
 	
-	@:overload public function unionSimpleType(type : com.sun.xml.internal.xsom.XSUnionSimpleType) : Void;
+	@:overload @:public public function unionSimpleType(type : com.sun.xml.internal.xsom.XSUnionSimpleType) : Void;
 	
-	@:overload public function identityConstraint(id : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
+	@:overload @:public public function identityConstraint(id : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
 	
-	@:overload public function xpath(xp : com.sun.xml.internal.xsom.XSXPath) : Void;
+	@:overload @:public public function xpath(xp : com.sun.xml.internal.xsom.XSXPath) : Void;
 	
 	
 }

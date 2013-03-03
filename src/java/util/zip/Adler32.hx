@@ -28,7 +28,7 @@ extern class Adler32 implements java.util.zip.Checksum
 	/**
 	* Creates a new Adler32 object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Updates the checksum with the specified byte (the low eight
@@ -36,29 +36,29 @@ extern class Adler32 implements java.util.zip.Checksum
 	*
 	* @param b the byte to update the checksum with
 	*/
-	@:overload public function update(b : Int) : Void;
+	@:overload @:public public function update(b : Int) : Void;
 	
 	/**
 	* Updates the checksum with the specified array of bytes.
 	*/
-	@:overload public function update(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function update(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Updates the checksum with the specified array of bytes.
 	*
 	* @param b the byte array to update the checksum with
 	*/
-	@:overload public function update(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function update(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Resets the checksum to initial value.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns the checksum value.
 	*/
-	@:overload public function getValue() : haxe.Int64;
+	@:overload @:public public function getValue() : haxe.Int64;
 	
 	
 }

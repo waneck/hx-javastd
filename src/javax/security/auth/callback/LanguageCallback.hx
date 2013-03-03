@@ -28,7 +28,7 @@ extern class LanguageCallback implements javax.security.auth.callback.Callback i
 	/**
 	* Construct a <code>LanguageCallback</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set the retrieved <code>Locale</code>.
@@ -39,7 +39,7 @@ extern class LanguageCallback implements javax.security.auth.callback.Callback i
 	*
 	* @see #getLocale
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Get the retrieved <code>Locale</code>.
@@ -51,7 +51,7 @@ extern class LanguageCallback implements javax.security.auth.callback.Callback i
 	*
 	* @see #setLocale
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	
 }

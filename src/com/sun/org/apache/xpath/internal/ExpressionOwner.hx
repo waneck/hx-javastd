@@ -32,14 +32,14 @@ extern interface ExpressionOwner
 	*
 	* @return the raw Expression object, which should not normally be null.
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Set the raw expression object for this object.
 	*
 	* @param exp the raw Expression object, which should not normally be null.
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

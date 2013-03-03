@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.client;
 */
 @:internal extern class ClientContainer extends com.sun.xml.internal.ws.api.server.Container
 {
-	@:overload override public function getSPI<T>(spiType : Class<T>) : T;
+	@:overload @:public override public function getSPI<T>(spiType : Class<T>) : T;
 	
 	
 }

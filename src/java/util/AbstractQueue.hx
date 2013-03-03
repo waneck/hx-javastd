@@ -63,7 +63,7 @@ package java.util;
 	/**
 	* Constructor for use by subclasses.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Inserts the specified element into this queue if it is possible to do so
@@ -85,7 +85,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this queue
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Retrieves and removes the head of this queue.  This method differs
@@ -98,7 +98,7 @@ package java.util;
 	* @return the head of this queue
 	* @throws NoSuchElementException if this queue is empty
 	*/
-	@:overload public function remove() : E;
+	@:overload @:public public function remove() : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of this queue.  This method
@@ -111,7 +111,7 @@ package java.util;
 	* @return the head of this queue
 	* @throws NoSuchElementException if this queue is empty
 	*/
-	@:overload public function element() : E;
+	@:overload @:public public function element() : E;
 	
 	/**
 	* Removes all of the elements from this queue.
@@ -120,7 +120,7 @@ package java.util;
 	* <p>This implementation repeatedly invokes {@link #poll poll} until it
 	* returns <tt>null</tt>.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Adds all of the elements in the specified collection to this
@@ -151,7 +151,7 @@ package java.util;
 	*         this time due to insertion restrictions
 	* @see #add(Object)
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this collection;
@@ -195,7 +195,7 @@ package java.util;
 	*         this collection
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the number of elements in this collection.  If this collection
@@ -204,7 +204,7 @@ package java.util;
 	*
 	* @return the number of elements in this collection
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this collection contains all of the elements
@@ -224,7 +224,7 @@ package java.util;
 	*         or if the specified collection is null.
 	* @see    #contains(Object)
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this collection that are contained in the
@@ -248,7 +248,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of this collection's elements that are also contained in the
@@ -273,7 +273,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts the specified element into this queue if it is possible to do
@@ -292,7 +292,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this queue
 	*/
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public public function offer(e : E) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this collection.
@@ -310,14 +310,14 @@ package java.util;
 	*
 	* @return an array containing all of the elements in this collection
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if this collection contains no elements.
 	*
 	* @return <tt>true</tt> if this collection contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Removes a single instance of the specified element from this
@@ -339,7 +339,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this collection
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Retrieves and removes the head of this queue,
@@ -347,7 +347,7 @@ package java.util;
 	*
 	* @return the head of this queue, or <tt>null</tt> if this queue is empty
 	*/
-	@:overload public function poll() : E;
+	@:overload @:public public function poll() : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of this queue,
@@ -355,7 +355,7 @@ package java.util;
 	*
 	* @return the head of this queue, or <tt>null</tt> if this queue is empty
 	*/
-	@:overload public function peek() : E;
+	@:overload @:public public function peek() : E;
 	
 	/**
 	* Returns an iterator over the elements in this collection.  There are no
@@ -365,7 +365,7 @@ package java.util;
 	*
 	* @return an <tt>Iterator</tt> over the elements in this collection
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns <tt>true</tt> if this collection contains the specified element.
@@ -383,7 +383,7 @@ package java.util;
 	*         collection does not permit null elements
 	*         (<a href="#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	
 }

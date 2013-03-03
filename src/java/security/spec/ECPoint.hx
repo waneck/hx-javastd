@@ -28,7 +28,7 @@ extern class ECPoint
 	/**
 	* This defines the point at infinity.
 	*/
-	public static var POINT_INFINITY(default, null) : java.security.spec.ECPoint;
+	@:public @:static @:final public static var POINT_INFINITY(default, null) : java.security.spec.ECPoint;
 	
 	/**
 	* Creates an ECPoint from the specified affine x-coordinate
@@ -38,21 +38,21 @@ extern class ECPoint
 	* @exception NullPointerException if <code>x</code> or
 	* <code>y</code> is null.
 	*/
-	@:overload public function new(x : java.math.BigInteger, y : java.math.BigInteger) : Void;
+	@:overload @:public public function new(x : java.math.BigInteger, y : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the affine x-coordinate <code>x</code>.
 	* Note: POINT_INFINITY has a null affine x-coordinate.
 	* @return the affine x-coordinate.
 	*/
-	@:overload public function getAffineX() : java.math.BigInteger;
+	@:overload @:public public function getAffineX() : java.math.BigInteger;
 	
 	/**
 	* Returns the affine y-coordinate <code>y</code>.
 	* Note: POINT_INFINITY has a null affine y-coordinate.
 	* @return the affine y-coordinate.
 	*/
-	@:overload public function getAffineY() : java.math.BigInteger;
+	@:overload @:public public function getAffineY() : java.math.BigInteger;
 	
 	/**
 	* Compares this elliptic curve point for equality with
@@ -61,13 +61,13 @@ extern class ECPoint
 	* @return true if <code>obj</code> is an instance of
 	* ECPoint and the affine coordinates match, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this elliptic curve point.
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

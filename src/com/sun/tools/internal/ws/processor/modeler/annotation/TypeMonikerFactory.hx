@@ -29,41 +29,41 @@ extern class TypeMonikerFactory
 	*
 	* @author  dkohlert
 	*/
-	@:overload public static function getTypeMoniker(typeMirror : com.sun.mirror.type.TypeMirror) : com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker;
+	@:overload @:public @:static public static function getTypeMoniker(typeMirror : com.sun.mirror.type.TypeMirror) : com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker;
 	
-	@:overload public static function getTypeMoniker(typeName : String) : com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker;
+	@:overload @:public @:static public static function getTypeMoniker(typeName : String) : com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$TypeMonikerFactory$ArrayTypeMoniker') @:internal extern class TypeMonikerFactory_ArrayTypeMoniker implements com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker
 {
-	@:overload public function new(type : com.sun.mirror.type.ArrayType) : Void;
+	@:overload @:public public function new(type : com.sun.mirror.type.ArrayType) : Void;
 	
-	@:overload public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$TypeMonikerFactory$DeclaredTypeMoniker') @:internal extern class TypeMonikerFactory_DeclaredTypeMoniker implements com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker
 {
-	@:overload public function new(type : com.sun.mirror.type.DeclaredType) : Void;
+	@:overload @:public public function new(type : com.sun.mirror.type.DeclaredType) : Void;
 	
-	@:overload public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$TypeMonikerFactory$PrimitiveTypeMoniker') @:internal extern class TypeMonikerFactory_PrimitiveTypeMoniker implements com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker
 {
-	@:overload public function new(type : com.sun.mirror.type.PrimitiveType) : Void;
+	@:overload @:public public function new(type : com.sun.mirror.type.PrimitiveType) : Void;
 	
-	@:overload public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$TypeMonikerFactory$StringMoniker') @:internal extern class TypeMonikerFactory_StringMoniker implements com.sun.tools.internal.ws.processor.modeler.annotation.TypeMoniker
 {
-	@:overload public function new(typeName : String) : Void;
+	@:overload @:public public function new(typeName : String) : Void;
 	
-	@:overload public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
 	
 	
 }

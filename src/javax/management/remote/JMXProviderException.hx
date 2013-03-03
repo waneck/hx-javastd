@@ -29,7 +29,7 @@ extern class JMXProviderException extends java.io.IOException
 	* <p>Constructs a <code>JMXProviderException</code> with no
 	* specified detail message.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* <p>Constructs a <code>JMXProviderException</code> with the
@@ -37,7 +37,7 @@ extern class JMXProviderException extends java.io.IOException
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* <p>Constructs a <code>JMXProviderException</code> with the
@@ -46,9 +46,9 @@ extern class JMXProviderException extends java.io.IOException
 	* @param message the detail message
 	* @param cause the nested exception
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

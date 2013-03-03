@@ -28,22 +28,22 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	/**
 	* Creates an empty {@link HeaderList}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy constructor.
 	*/
-	@:overload public function new(that : com.sun.xml.internal.ws.api.message.HeaderList) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.api.message.HeaderList) : Void;
 	
 	/**
 	* The total number of headers.
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Adds all the headers.
 	*/
-	@:overload public function addAll(headers : java.NativeArray<com.sun.xml.internal.ws.api.message.Header>) : Void;
+	@:overload @:public public function addAll(headers : java.NativeArray<com.sun.xml.internal.ws.api.message.Header>) : Void;
 	
 	/**
 	* Gets the {@link Header} at the specified index.
@@ -53,19 +53,19 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*
 	* @see #understood(int)
 	*/
-	@:overload public function get(index : Int) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public override public function get(index : Int) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Marks the {@link Header} at the specified index as
 	* <a href="#MU">"understood"</a>.
 	*/
-	@:overload public function understood(index : Int) : Void;
+	@:overload @:public public function understood(index : Int) : Void;
 	
 	/**
 	* Returns true if a {@link Header} at the given index
 	* was <a href="#MU">"understood"</a>.
 	*/
-	@:overload public function isUnderstood(index : Int) : Bool;
+	@:overload @:public public function isUnderstood(index : Int) : Bool;
 	
 	/**
 	* Marks the specified {@link Header} as <a href="#MU">"understood"</a>.
@@ -81,7 +81,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*      if the given header is not {@link #contains(Object) contained}
 	*      in this header.
 	*/
-	@:overload public function understood(header : com.sun.xml.internal.ws.api.message.Header) : Void;
+	@:overload @:public public function understood(header : com.sun.xml.internal.ws.api.message.Header) : Void;
 	
 	/**
 	* Gets the first {@link Header} of the specified name.
@@ -91,13 +91,13 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*      be marked as <a href="#MU">"understood"</a>.
 	* @return null if not found.
 	*/
-	@:overload public function get(nsUri : String, localName : String, markAsUnderstood : Bool) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public public function get(nsUri : String, localName : String, markAsUnderstood : Bool) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* @deprecated
 	*      Use {@link #get(String, String, boolean)}
 	*/
-	@:overload public function get(nsUri : String, localName : String) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public public function get(nsUri : String, localName : String) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Gets the first {@link Header} of the specified name.
@@ -108,19 +108,19 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @return null
 	*      if not found.
 	*/
-	@:overload public function get(name : javax.xml.namespace.QName, markAsUnderstood : Bool) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public public function get(name : javax.xml.namespace.QName, markAsUnderstood : Bool) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* @deprecated
 	*      Use {@link #get(QName)}
 	*/
-	@:overload public function get(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public public function get(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* @deprecated
 	*      Use {@link #getHeaders(String, String, boolean)}
 	*/
-	@:overload public function getHeaders(nsUri : String, localName : String) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
+	@:overload @:public public function getHeaders(nsUri : String, localName : String) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
 	
 	/**
 	* Gets all the {@link Header}s of the specified name,
@@ -132,18 +132,18 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*      from {@link Iterator#next()}.
 	* @return empty iterator if not found.
 	*/
-	@:overload public function getHeaders(nsUri : String, localName : String, markAsUnderstood : Bool) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
+	@:overload @:public public function getHeaders(nsUri : String, localName : String, markAsUnderstood : Bool) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
 	
 	/**
 	* @see #getHeaders(String, String, boolean)
 	*/
-	@:overload public function getHeaders(headerName : javax.xml.namespace.QName, markAsUnderstood : Bool) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
+	@:overload @:public public function getHeaders(headerName : javax.xml.namespace.QName, markAsUnderstood : Bool) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
 	
 	/**
 	* @deprecated
 	*      use {@link #getHeaders(String, boolean)}.
 	*/
-	@:overload public function getHeaders(nsUri : String) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
+	@:overload @:public public function getHeaders(nsUri : String) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
 	
 	/**
 	* Gets an iteration of headers {@link Header} in the specified namespace,
@@ -156,7 +156,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @return
 	*      empty iterator if not found.
 	*/
-	@:overload public function getHeaders(nsUri : String, markAsUnderstood : Bool) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
+	@:overload @:public public function getHeaders(nsUri : String, markAsUnderstood : Bool) : java.util.Iterator<com.sun.xml.internal.ws.api.message.Header>;
 	
 	/**
 	* Returns the value of WS-Addressing <code>To</code> header. The <code>version</code>
@@ -169,7 +169,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @throws IllegalArgumentException if either <code>av</code> or <code>sv</code> is null.
 	* @return Value of WS-Addressing To header, anonymous URI if no header is present
 	*/
-	@:overload public function getTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	/**
 	* Returns the value of WS-Addressing <code>Action</code> header. The <code>version</code>
@@ -182,7 +182,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @throws IllegalArgumentException if either <code>av</code> or <code>sv</code> is null.
 	* @return Value of WS-Addressing Action header, null if no header is present
 	*/
-	@:overload public function getAction(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getAction(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	/**
 	* Returns the value of WS-Addressing <code>ReplyTo</code> header. The <code>version</code>
@@ -195,7 +195,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @throws IllegalArgumentException if either <code>av</code> or <code>sv</code> is null.
 	* @return Value of WS-Addressing ReplyTo header, null if no header is present
 	*/
-	@:overload public function getReplyTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload @:public public function getReplyTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* Returns the value of WS-Addressing <code>FaultTo</code> header. The <code>version</code>
@@ -208,7 +208,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @throws IllegalArgumentException if either <code>av</code> or <code>sv</code> is null.
 	* @return Value of WS-Addressing FaultTo header, null if no header is present
 	*/
-	@:overload public function getFaultTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload @:public public function getFaultTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* Returns the value of WS-Addressing <code>MessageID</code> header. The <code>version</code>
@@ -221,7 +221,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @throws WebServiceException if either <code>av</code> or <code>sv</code> is null.
 	* @return Value of WS-Addressing MessageID header, null if no header is present
 	*/
-	@:overload public function getMessageID(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getMessageID(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	/**
 	* Returns the value of WS-Addressing <code>RelatesTo</code> header. The <code>version</code>
@@ -234,7 +234,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @throws WebServiceException if either <code>av</code> or <code>sv</code> is null.
 	* @return Value of WS-Addressing RelatesTo header, null if no header is present
 	*/
-	@:overload public function getRelatesTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload @:public public function getRelatesTo(av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	/**
 	* Creates a set of outbound WS-Addressing headers on the client with the
@@ -253,9 +253,9 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @param action Action Message Addressing Property value
 	* @param mustUnderstand to indicate if the addressing headers are set with mustUnderstand attribute
 	*/
-	@:overload public function fillRequestAddressingHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion, oneway : Bool, action : String, mustUnderstand : Bool) : Void;
+	@:overload @:public public function fillRequestAddressingHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion, oneway : Bool, action : String, mustUnderstand : Bool) : Void;
 	
-	@:overload public function fillRequestAddressingHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion, oneway : Bool, action : String) : Void;
+	@:overload @:public public function fillRequestAddressingHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion, oneway : Bool, action : String) : Void;
 	
 	/**
 	* Creates a set of outbound WS-Addressing headers on the client with the
@@ -276,7 +276,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @param binding request WSBinding
 	* @param packet request packet
 	*/
-	@:overload public function fillRequestAddressingHeaders(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function fillRequestAddressingHeaders(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Adds a new {@link Header}.
@@ -289,7 +289,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @return
 	*      always true. Don't use the return value.
 	*/
-	@:overload public function add(header : com.sun.xml.internal.ws.api.message.Header) : Bool;
+	@:overload @:public public function add(header : com.sun.xml.internal.ws.api.message.Header) : Bool;
 	
 	/**
 	* Removes the first {@link Header} of the specified name.
@@ -299,7 +299,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*
 	* @return null if not found.
 	*/
-	@:overload public function remove(nsUri : String, localName : String) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public public function remove(nsUri : String, localName : String) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Removes the first {@link Header} of the specified name.
@@ -308,7 +308,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*
 	* @return null if not found.
 	*/
-	@:overload public function remove(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public public function remove(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Removes the first {@link Header} of the specified name.
@@ -317,7 +317,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*
 	* @return removed header
 	*/
-	@:overload public function remove(index : Int) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload @:public override public function remove(index : Int) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Removes a single instance of the specified element from this
@@ -332,7 +332,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @return <tt>true</tt> if the list contained the specified element.
 	* @see #remove(javax.xml.namespace.QName)
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Creates a copy.
@@ -342,9 +342,9 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @param original
 	*      Can be null, in which case null will be returned.
 	*/
-	@:overload public static function copy(original : com.sun.xml.internal.ws.api.message.HeaderList) : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public @:static public static function copy(original : com.sun.xml.internal.ws.api.message.HeaderList) : com.sun.xml.internal.ws.api.message.HeaderList;
 	
-	@:overload public function readResponseAddressingHeaders(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function readResponseAddressingHeaders(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
 	
 }

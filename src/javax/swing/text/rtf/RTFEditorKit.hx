@@ -36,7 +36,7 @@ extern class RTFEditorKit extends javax.swing.text.StyledEditorKit
 	/**
 	* Constructs an RTFEditorKit.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the MIME type of the data that this
@@ -45,7 +45,7 @@ extern class RTFEditorKit extends javax.swing.text.StyledEditorKit
 	*
 	* @return the type
 	*/
-	@:overload override public function getContentType() : String;
+	@:overload @:public override public function getContentType() : String;
 	
 	/**
 	* Insert content from the given stream which is expected
@@ -60,7 +60,7 @@ extern class RTFEditorKit extends javax.swing.text.StyledEditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function read(_in : java.io.InputStream, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public override public function read(_in : java.io.InputStream, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Write content from a document to the given stream
@@ -75,7 +75,7 @@ extern class RTFEditorKit extends javax.swing.text.StyledEditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function write(out : java.io.OutputStream, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public override public function write(out : java.io.OutputStream, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	/**
 	* Insert content from the given stream, which will be
@@ -89,7 +89,7 @@ extern class RTFEditorKit extends javax.swing.text.StyledEditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
+	@:overload @:public override public function read(_in : java.io.Reader, doc : javax.swing.text.Document, pos : Int) : Void;
 	
 	/**
 	* Write content from a document to the given stream
@@ -104,7 +104,7 @@ extern class RTFEditorKit extends javax.swing.text.StyledEditorKit
 	* @exception BadLocationException if pos represents an invalid
 	*   location within the document.
 	*/
-	@:overload override public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
+	@:overload @:public override public function write(out : java.io.Writer, doc : javax.swing.text.Document, pos : Int, len : Int) : Void;
 	
 	
 }

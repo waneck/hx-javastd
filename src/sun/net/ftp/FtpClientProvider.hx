@@ -30,7 +30,7 @@ extern class FtpClientProvider
 	*
 	* @return The created {@link FtpClient}.
 	*/
-	@:overload @:abstract public function createFtpClient() : sun.net.ftp.FtpClient;
+	@:overload @:public @:abstract public function createFtpClient() : sun.net.ftp.FtpClient;
 	
 	/**
 	* Initializes a new instance of this class.
@@ -38,7 +38,7 @@ extern class FtpClientProvider
 	* @throws SecurityException if a security manager is installed and it denies
 	*         {@link RuntimePermission}<tt>("ftpClientProvider")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the system wide default FtpClientProvider for this invocation of
@@ -75,7 +75,7 @@ extern class FtpClientProvider
 	*
 	* @return  The system-wide default FtpClientProvider
 	*/
-	@:overload public static function provider() : sun.net.ftp.FtpClientProvider;
+	@:overload @:public @:static public static function provider() : sun.net.ftp.FtpClientProvider;
 	
 	
 }

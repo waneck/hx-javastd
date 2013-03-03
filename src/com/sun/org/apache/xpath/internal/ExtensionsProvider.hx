@@ -26,22 +26,22 @@ extern interface ExtensionsProvider
 	/**
 	* Is the extension function available?
 	*/
-	@:overload public function functionAvailable(ns : String, funcName : String) : Bool;
+	@:overload @:public public function functionAvailable(ns : String, funcName : String) : Bool;
 	
 	/**
 	* Is the extension element available?
 	*/
-	@:overload public function elementAvailable(ns : String, elemName : String) : Bool;
+	@:overload @:public public function elementAvailable(ns : String, elemName : String) : Bool;
 	
 	/**
 	* Execute the extension function.
 	*/
-	@:overload public function extFunction(ns : String, funcName : String, argVec : java.util.Vector<Dynamic>, methodKey : Dynamic) : Dynamic;
+	@:overload @:public public function extFunction(ns : String, funcName : String, argVec : java.util.Vector<Dynamic>, methodKey : Dynamic) : Dynamic;
 	
 	/**
 	* Execute the extension function.
 	*/
-	@:overload public function extFunction(extFunction : com.sun.org.apache.xpath.internal.functions.FuncExtFunction, argVec : java.util.Vector<Dynamic>) : Dynamic;
+	@:overload @:public public function extFunction(extFunction : com.sun.org.apache.xpath.internal.functions.FuncExtFunction, argVec : java.util.Vector<Dynamic>) : Dynamic;
 	
 	
 }

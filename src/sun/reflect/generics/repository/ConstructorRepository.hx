@@ -25,9 +25,9 @@ package sun.reflect.generics.repository;
 */
 extern class ConstructorRepository extends sun.reflect.generics.repository.GenericDeclRepository<sun.reflect.generics.tree.MethodTypeSignature>
 {
-	@:overload private function new(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : Void;
+	@:overload @:protected private function new(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : Void;
 	
-	@:overload override private function parse(s : String) : sun.reflect.generics.tree.MethodTypeSignature;
+	@:overload @:protected override private function parse(s : String) : sun.reflect.generics.tree.MethodTypeSignature;
 	
 	/**
 	* Static factory method.
@@ -38,7 +38,7 @@ extern class ConstructorRepository extends sun.reflect.generics.repository.Gener
 	* @return a <tt>ConstructorRepository</tt> that manages the generic type
 	* information represented in the signature <tt>rawSig</tt>
 	*/
-	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.ConstructorRepository;
+	@:overload @:public @:static public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.ConstructorRepository;
 	
 	/*
 	* When queried for a particular piece of type information, the
@@ -50,9 +50,9 @@ extern class ConstructorRepository extends sun.reflect.generics.repository.Gener
 	* a visitor, which is created by feeding it the factory
 	* with which the repository was created.
 	*/
-	@:overload public function getParameterTypes() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getParameterTypes() : java.NativeArray<java.lang.reflect.Type>;
 	
-	@:overload public function getExceptionTypes() : java.NativeArray<java.lang.reflect.Type>;
+	@:overload @:public public function getExceptionTypes() : java.NativeArray<java.lang.reflect.Type>;
 	
 	
 }

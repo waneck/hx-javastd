@@ -35,20 +35,20 @@ extern class PolicyError extends org.omg.CORBA.UserException
 	* The reason for the <code>PolicyError</code> exception being thrown.
 	* @serial
 	*/
-	public var reason : java.StdTypes.Int16;
+	@:public public var reason : java.StdTypes.Int16;
 	
 	/**
 	* Constructs a default <code>PolicyError</code> user exception
 	* with no reason code and an empty reason detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>PolicyError</code> user exception
 	* initialized with the given reason code and an empty reason detail message.
 	* @param __reason the reason code.
 	*/
-	@:overload public function new(__reason : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(__reason : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Constructs a <code>PolicyError</code> user exception
@@ -56,7 +56,7 @@ extern class PolicyError extends org.omg.CORBA.UserException
 	* @param reason_string the reason detail message.
 	* @param __reason the reason code.
 	*/
-	@:overload public function new(reason_string : String, __reason : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(reason_string : String, __reason : java.StdTypes.Int16) : Void;
 	
 	
 }

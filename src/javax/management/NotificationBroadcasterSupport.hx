@@ -31,7 +31,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	* {@link NotificationBroadcasterSupport#NotificationBroadcasterSupport(Executor,
 	* MBeanNotificationInfo[] info) NotificationBroadcasterSupport(null, null)}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a NotificationBroadcasterSupport where each listener is invoked using
@@ -51,7 +51,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	* will invoke the <code>handleNotification</code> method itself.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(executor : java.util.concurrent.Executor) : Void;
+	@:require(java6) @:overload @:public public function new(executor : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* <p>Constructs a NotificationBroadcasterSupport with information
@@ -74,7 +74,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(info : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
+	@:require(java6) @:overload @:public public function new(info : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
 	
 	/**
 	* <p>Constructs a NotificationBroadcasterSupport with information about the notifications that may be sent,
@@ -109,7 +109,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(executor : java.util.concurrent.Executor, info : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
+	@:require(java6) @:overload @:public public function new(executor : java.util.concurrent.Executor, info : java.NativeArray<javax.management.MBeanNotificationInfo>) : Void;
 	
 	/**
 	* Adds a listener.
@@ -126,13 +126,13 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	*
 	* @see #removeNotificationListener
 	*/
-	@:overload public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	/**
 	* Sends a notification.
@@ -142,7 +142,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	*
 	* @param notification The notification to send.
 	*/
-	@:overload public function sendNotification(notification : javax.management.Notification) : Void;
+	@:overload @:public public function sendNotification(notification : javax.management.Notification) : Void;
 	
 	/**
 	* <p>This method is called by {@link #sendNotification
@@ -164,27 +164,27 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	* listener was added.
 	*
 	*/
-	@:overload private function handleNotification(listener : javax.management.NotificationListener, notif : javax.management.Notification, handback : Dynamic) : Void;
+	@:overload @:protected private function handleNotification(listener : javax.management.NotificationListener, notif : javax.management.Notification, handback : Dynamic) : Void;
 	
 	
 }
 @:native('javax$management$NotificationBroadcasterSupport$ListenerInfo') @:internal extern class NotificationBroadcasterSupport_ListenerInfo
 {
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }
 @:native('javax$management$NotificationBroadcasterSupport$WildcardListenerInfo') @:internal extern class NotificationBroadcasterSupport_WildcardListenerInfo extends javax.management.NotificationBroadcasterSupport.NotificationBroadcasterSupport_ListenerInfo
 {
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	
 }
 @:native('javax$management$NotificationBroadcasterSupport$SendNotifJob') @:internal extern class NotificationBroadcasterSupport_SendNotifJob implements java.lang.Runnable
 {
-	@:overload public function new(notif : javax.management.Notification, listenerInfo : javax.management.NotificationBroadcasterSupport.NotificationBroadcasterSupport_ListenerInfo) : Void;
+	@:overload @:public public function new(notif : javax.management.Notification, listenerInfo : javax.management.NotificationBroadcasterSupport.NotificationBroadcasterSupport_ListenerInfo) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

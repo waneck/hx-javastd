@@ -25,19 +25,19 @@ package com.sun.codemodel.internal;
 */
 extern class JForLoop implements com.sun.codemodel.internal.JStatement
 {
-	@:overload public function init(mods : Int, type : com.sun.codemodel.internal.JType, _var : String, e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function init(mods : Int, type : com.sun.codemodel.internal.JType, _var : String, e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
 	
-	@:overload public function init(type : com.sun.codemodel.internal.JType, _var : String, e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
+	@:overload @:public public function init(type : com.sun.codemodel.internal.JType, _var : String, e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
 	
-	@:overload public function init(v : com.sun.codemodel.internal.JVar, e : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function init(v : com.sun.codemodel.internal.JVar, e : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function test(e : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function test(e : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function update(e : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function update(e : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function body() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function body() : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

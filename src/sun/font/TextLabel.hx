@@ -32,14 +32,14 @@ extern class TextLabel
 	/**
 	* Return a rectangle that surrounds the text outline when this label is rendered at x, y.
 	*/
-	@:overload @:abstract public function getVisualBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:abstract public function getVisualBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Return a rectangle that corresponds to the logical bounds of the text
 	* when this label is rendered at x, y.
 	* This rectangle is used when positioning text next to other text.
 	*/
-	@:overload @:abstract public function getLogicalBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:abstract public function getLogicalBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Return a rectangle that corresponds to the alignment bounds of the text
@@ -47,53 +47,53 @@ extern class TextLabel
 	* to a margin.  It differs from the logical bounds in that it does not include leading or
 	* trailing whitespace.
 	*/
-	@:overload @:abstract public function getAlignBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:abstract public function getAlignBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Return a rectangle that corresponds to the logical bounds of the text, adjusted
 	* to angle the leading and trailing edges by the italic angle.
 	*/
-	@:overload @:abstract public function getItalicBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:abstract public function getItalicBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Return an outline of the characters in the label when rendered at x, y.
 	*/
-	@:overload @:abstract public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public @:abstract public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
 	/**
 	* Render the label at x, y in the graphics.
 	*/
-	@:overload @:abstract public function draw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public @:abstract public function draw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	/**
 	* A convenience method that returns the visual bounds when rendered at 0, 0.
 	*/
-	@:overload public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* A convenience method that returns the logical bounds when rendered at 0, 0.
 	*/
-	@:overload public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* A convenience method that returns the align bounds when rendered at 0, 0.
 	*/
-	@:overload public function getAlignBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getAlignBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* A convenience method that returns the italic bounds when rendered at 0, 0.
 	*/
-	@:overload public function getItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getItalicBounds() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* A convenience method that returns the outline when rendered at 0, 0.
 	*/
-	@:overload public function getOutline() : java.awt.Shape;
+	@:overload @:public public function getOutline() : java.awt.Shape;
 	
 	/**
 	* A convenience method that renders the label at 0, 0.
 	*/
-	@:overload public function draw(g : java.awt.Graphics2D) : Void;
+	@:overload @:public public function draw(g : java.awt.Graphics2D) : Void;
 	
 	
 }

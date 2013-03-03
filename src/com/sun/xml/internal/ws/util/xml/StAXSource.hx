@@ -34,7 +34,7 @@ extern class StAXSource extends javax.xml.transform.sax.SAXSource
 	*                  event that was fired (such as end element)
 	* @see #StAXSource(XMLStreamReader, boolean, String[])
 	*/
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, eagerQuit : Bool) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, eagerQuit : Bool) : Void;
 	
 	/**
 	* Creates a new {@link javax.xml.transform.Source} for the given
@@ -53,7 +53,7 @@ extern class StAXSource extends javax.xml.transform.sax.SAXSource
 	* @throws IllegalStateException iff the reader is not pointing at either a
 	* START_DOCUMENT or START_ELEMENT event
 	*/
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, eagerQuit : Bool, inscope : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, eagerQuit : Bool, inscope : java.NativeArray<String>) : Void;
 	
 	
 }

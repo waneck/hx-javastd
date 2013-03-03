@@ -28,59 +28,59 @@ extern class BMPImageReader extends javax.imageio.ImageReader implements com.sun
 	/** Constructs <code>BMPImageReader</code> from the provided
 	*  <code>ImageReaderSpi</code>.
 	*/
-	@:overload public function new(originator : javax.imageio.spi.ImageReaderSpi) : Void;
+	@:overload @:public public function new(originator : javax.imageio.spi.ImageReaderSpi) : Void;
 	
 	/** Overrides the method defined in the superclass. */
-	@:overload public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
+	@:overload @:public override public function setInput(input : Dynamic, seekForwardOnly : Bool, ignoreMetadata : Bool) : Void;
 	
 	/** Overrides the method defined in the superclass. */
-	@:overload public function getNumImages(allowSearch : Bool) : Int;
+	@:overload @:public override public function getNumImages(allowSearch : Bool) : Int;
 	
-	@:overload public function getWidth(imageIndex : Int) : Int;
+	@:overload @:public override public function getWidth(imageIndex : Int) : Int;
 	
-	@:overload public function getHeight(imageIndex : Int) : Int;
+	@:overload @:public override public function getHeight(imageIndex : Int) : Int;
 	
-	@:overload public function readHeader() : Void;
+	@:overload @:public public function readHeader() : Void;
 	
-	@:overload public function getImageTypes(imageIndex : Int) : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function getImageTypes(imageIndex : Int) : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getDefaultReadParam() : javax.imageio.ImageReadParam;
+	@:overload @:public override public function getDefaultReadParam() : javax.imageio.ImageReadParam;
 	
-	@:overload public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getImageMetadata(imageIndex : Int) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getStreamMetadata() : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function isRandomAccessEasy(imageIndex : Int) : Bool;
+	@:overload @:public override public function isRandomAccessEasy(imageIndex : Int) : Bool;
 	
-	@:overload public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
+	@:overload @:public override public function read(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.BufferedImage;
 	
-	@:overload public function canReadRaster() : Bool;
+	@:overload @:public override public function canReadRaster() : Bool;
 	
-	@:overload public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
+	@:overload @:public override public function readRaster(imageIndex : Int, param : javax.imageio.ImageReadParam) : java.awt.image.Raster;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }
 @:native('com$sun$imageio$plugins$bmp$BMPImageReader$EmbeddedProgressAdapter') @:internal extern class BMPImageReader_EmbeddedProgressAdapter implements javax.imageio.event.IIOReadProgressListener
 {
-	@:overload public function imageComplete(src : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function imageComplete(src : javax.imageio.ImageReader) : Void;
 	
-	@:overload public function imageProgress(src : javax.imageio.ImageReader, percentageDone : Single) : Void;
+	@:overload @:public public function imageProgress(src : javax.imageio.ImageReader, percentageDone : Single) : Void;
 	
-	@:overload public function imageStarted(src : javax.imageio.ImageReader, imageIndex : Int) : Void;
+	@:overload @:public public function imageStarted(src : javax.imageio.ImageReader, imageIndex : Int) : Void;
 	
-	@:overload public function thumbnailComplete(src : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function thumbnailComplete(src : javax.imageio.ImageReader) : Void;
 	
-	@:overload public function thumbnailProgress(src : javax.imageio.ImageReader, percentageDone : Single) : Void;
+	@:overload @:public public function thumbnailProgress(src : javax.imageio.ImageReader, percentageDone : Single) : Void;
 	
-	@:overload public function thumbnailStarted(src : javax.imageio.ImageReader, iIdx : Int, tIdx : Int) : Void;
+	@:overload @:public public function thumbnailStarted(src : javax.imageio.ImageReader, iIdx : Int, tIdx : Int) : Void;
 	
-	@:overload public function sequenceComplete(src : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function sequenceComplete(src : javax.imageio.ImageReader) : Void;
 	
-	@:overload public function sequenceStarted(src : javax.imageio.ImageReader, minIndex : Int) : Void;
+	@:overload @:public public function sequenceStarted(src : javax.imageio.ImageReader, minIndex : Int) : Void;
 	
-	@:overload public function readAborted(src : javax.imageio.ImageReader) : Void;
+	@:overload @:public public function readAborted(src : javax.imageio.ImageReader) : Void;
 	
 	
 }

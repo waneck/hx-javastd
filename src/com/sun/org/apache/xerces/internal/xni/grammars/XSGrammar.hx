@@ -27,7 +27,7 @@ extern interface XSGrammar extends com.sun.org.apache.xerces.internal.xni.gramma
 	*
 	* @return  an <code>XSModel</code> representing this schema grammar
 	*/
-	@:overload public function toXSModel() : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function toXSModel() : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	* Return an <code>XSModel</code> that represents components in this schema
@@ -36,7 +36,7 @@ extern interface XSGrammar extends com.sun.org.apache.xerces.internal.xni.gramma
 	*
 	* @return  an <code>XSModel</code> representing these schema grammars
 	*/
-	@:overload public function toXSModel(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.XSGrammar>) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function toXSModel(grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.XSGrammar>) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	
 }

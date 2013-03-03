@@ -43,21 +43,21 @@ package java.lang;
 	* @param enumType the type of the missing enum constant
 	* @param constantName the name of the missing enum constant
 	*/
-	@:overload public function new(enumType : Class<java.lang.Enum<Dynamic>>, constantName : String) : Void;
+	@:overload @:public public function new(enumType : Class<java.lang.Enum<Dynamic>>, constantName : String) : Void;
 	
 	/**
 	* Returns the type of the missing enum constant.
 	*
 	* @return the type of the missing enum constant
 	*/
-	@:overload public function enumType() : Class<java.lang.Enum<Dynamic>>;
+	@:overload @:public public function enumType() : Class<java.lang.Enum<Dynamic>>;
 	
 	/**
 	* Returns the name of the missing enum constant.
 	*
 	* @return the name of the missing enum constant
 	*/
-	@:overload public function constantName() : String;
+	@:overload @:public public function constantName() : String;
 	
 	
 }

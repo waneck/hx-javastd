@@ -25,15 +25,15 @@ package com.sun.imageio.spi;
 */
 extern class InputStreamImageInputStreamSpi extends javax.imageio.spi.ImageInputStreamSpi
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getDescription(locale : java.util.Locale) : String;
+	@:overload @:public override public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload public function canUseCacheFile() : Bool;
+	@:overload @:public override public function canUseCacheFile() : Bool;
 	
-	@:overload public function needsCacheFile() : Bool;
+	@:overload @:public override public function needsCacheFile() : Bool;
 	
-	@:overload public function createInputStreamInstance(input : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageInputStream;
+	@:overload @:public override public function createInputStreamInstance(input : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageInputStream;
 	
 	
 }

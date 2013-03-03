@@ -36,21 +36,21 @@ extern class CodeSigner implements java.io.Serializable
 	* @throws NullPointerException if <code>signerCertPath</code> is
 	*                              <code>null</code>.
 	*/
-	@:overload public function new(signerCertPath : java.security.cert.CertPath, timestamp : java.security.Timestamp) : Void;
+	@:overload @:public public function new(signerCertPath : java.security.cert.CertPath, timestamp : java.security.Timestamp) : Void;
 	
 	/**
 	* Returns the signer's certificate path.
 	*
 	* @return A certificate path.
 	*/
-	@:overload public function getSignerCertPath() : java.security.cert.CertPath;
+	@:overload @:public public function getSignerCertPath() : java.security.cert.CertPath;
 	
 	/**
 	* Returns the signature timestamp.
 	*
 	* @return The timestamp or <code>null</code> if none is present.
 	*/
-	@:overload public function getTimestamp() : java.security.Timestamp;
+	@:overload @:public public function getTimestamp() : java.security.Timestamp;
 	
 	/**
 	* Returns the hash code value for this code signer.
@@ -59,7 +59,7 @@ extern class CodeSigner implements java.io.Serializable
 	*
 	* @return a hash code value for this code signer.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -71,7 +71,7 @@ extern class CodeSigner implements java.io.Serializable
 	*
 	* @return true if the objects are considered equal, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string describing this code signer.
@@ -79,7 +79,7 @@ extern class CodeSigner implements java.io.Serializable
 	* @return A string comprising the signer's certificate and a timestamp,
 	*         if present.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

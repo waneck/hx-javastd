@@ -42,7 +42,7 @@ package java.util;
 	* Constructs a new <code>IllformedLocaleException</code> with no
 	* detail message and -1 as the error index.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>IllformedLocaleException</code> with the
@@ -50,7 +50,7 @@ package java.util;
 	*
 	* @param message the message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new <code>IllformedLocaleException</code> with the
@@ -62,7 +62,7 @@ package java.util;
 	* @param message the message
 	* @param errorIndex the index
 	*/
-	@:overload public function new(message : String, errorIndex : Int) : Void;
+	@:overload @:public public function new(message : String, errorIndex : Int) : Void;
 	
 	/**
 	* Returns the index where the error was found. A negative value indicates
@@ -70,7 +70,7 @@ package java.util;
 	*
 	* @return the error index
 	*/
-	@:overload public function getErrorIndex() : Int;
+	@:overload @:public public function getErrorIndex() : Int;
 	
 	
 }

@@ -25,49 +25,49 @@ package com.sun.corba.se.impl.protocol;
 */
 extern class SpecialMethod
 {
-	@:overload @:abstract public function isNonExistentMethod() : Bool;
+	@:overload @:public @:abstract public function isNonExistentMethod() : Bool;
 	
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
-	@:overload @:abstract public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public @:abstract public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload @:final public static function getSpecialMethod(operation : String) : com.sun.corba.se.impl.protocol.SpecialMethod;
+	@:overload @:public @:static @:final public static function getSpecialMethod(operation : String) : com.sun.corba.se.impl.protocol.SpecialMethod;
 	
 	
 }
 @:internal extern class NonExistent extends com.sun.corba.se.impl.protocol.SpecialMethod
 {
-	@:overload override public function isNonExistentMethod() : Bool;
+	@:overload @:public override public function isNonExistentMethod() : Bool;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public override public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
 	
 }
 @:internal extern class NotExistent extends com.sun.corba.se.impl.protocol.SpecialMethod.NonExistent
 {
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	
 }
 @:internal extern class IsA extends com.sun.corba.se.impl.protocol.SpecialMethod
 {
-	@:overload override public function isNonExistentMethod() : Bool;
+	@:overload @:public override public function isNonExistentMethod() : Bool;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public override public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
 	
 }
 @:internal extern class GetInterface extends com.sun.corba.se.impl.protocol.SpecialMethod
 {
-	@:overload override public function isNonExistentMethod() : Bool;
+	@:overload @:public override public function isNonExistentMethod() : Bool;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
+	@:overload @:public override public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
 	
 }

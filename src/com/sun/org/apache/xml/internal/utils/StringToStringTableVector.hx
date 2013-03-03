@@ -32,35 +32,35 @@ extern class StringToStringTableVector
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a StringToStringTableVector, using the given block size.
 	*
 	* @param blocksize Size of blocks to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of StringToStringTable objects in the list
 	*/
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return Number of StringToStringTable objects in the list
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Append a StringToStringTable object onto the vector.
 	*
 	* @param value StringToStringTable object to add
 	*/
-	@:overload @:final public function addElement(value : com.sun.org.apache.xml.internal.utils.StringToStringTable) : Void;
+	@:overload @:public @:final public function addElement(value : com.sun.org.apache.xml.internal.utils.StringToStringTable) : Void;
 	
 	/**
 	* Given a string, find the last added occurance value
@@ -71,7 +71,7 @@ extern class StringToStringTableVector
 	* @return the last added occurance value that matches the key
 	* or null if not found.
 	*/
-	@:overload @:final public function get(key : String) : String;
+	@:overload @:public @:final public function get(key : String) : String;
 	
 	/**
 	* Given a string, find out if there is a value in this table
@@ -81,12 +81,12 @@ extern class StringToStringTableVector
 	*
 	* @return True if the string was found in table, null if not
 	*/
-	@:overload @:final public function containsKey(key : String) : Bool;
+	@:overload @:public @:final public function containsKey(key : String) : Bool;
 	
 	/**
 	* Remove the last element.
 	*/
-	@:overload @:final public function removeLastElem() : Void;
+	@:overload @:public @:final public function removeLastElem() : Void;
 	
 	/**
 	* Get the nth element.
@@ -95,7 +95,7 @@ extern class StringToStringTableVector
 	*
 	* @return The StringToStringTable object at the given index
 	*/
-	@:overload @:final public function elementAt(i : Int) : com.sun.org.apache.xml.internal.utils.StringToStringTable;
+	@:overload @:public @:final public function elementAt(i : Int) : com.sun.org.apache.xml.internal.utils.StringToStringTable;
 	
 	/**
 	* Tell if the table contains the given StringToStringTable.
@@ -104,7 +104,7 @@ extern class StringToStringTableVector
 	*
 	* @return True if the StringToStringTable is found
 	*/
-	@:overload @:final public function contains(s : com.sun.org.apache.xml.internal.utils.StringToStringTable) : Bool;
+	@:overload @:public @:final public function contains(s : com.sun.org.apache.xml.internal.utils.StringToStringTable) : Bool;
 	
 	
 }

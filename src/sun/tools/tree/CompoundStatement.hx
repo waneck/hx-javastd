@@ -28,43 +28,43 @@ extern class CompoundStatement extends sun.tools.tree.Statement
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, args : java.NativeArray<sun.tools.tree.Statement>) : Void;
+	@:overload @:public public function new(where : haxe.Int64, args : java.NativeArray<sun.tools.tree.Statement>) : Void;
 	
 	/**
 	* Insert a new statement at the front.
 	* This is used to introduce an implicit super-class constructor call.
 	*/
-	@:overload public function insertStatement(s : sun.tools.tree.Statement) : Void;
+	@:overload @:public public function insertStatement(s : sun.tools.tree.Statement) : Void;
 	
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
 	
 	/**
 	* Create a copy of the statement for method inlining
 	*/
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
 	
 	/**
 	* The cost of inlining this statement
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Check if the first thing is a constructor invocation
 	*/
-	@:overload override public function firstConstructor() : sun.tools.tree.Expression;
+	@:overload @:public override public function firstConstructor() : sun.tools.tree.Expression;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
 	
 }

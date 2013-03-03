@@ -25,23 +25,23 @@ package com.sun.source.util;
 */
 extern class TaskEvent
 {
-	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind) : Void;
+	@:overload @:public public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind) : Void;
 	
-	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, sourceFile : javax.tools.JavaFileObject) : Void;
+	@:overload @:public public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, sourceFile : javax.tools.JavaFileObject) : Void;
 	
-	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree) : Void;
+	@:overload @:public public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree) : Void;
 	
-	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree, clazz : javax.lang.model.element.TypeElement) : Void;
+	@:overload @:public public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree, clazz : javax.lang.model.element.TypeElement) : Void;
 	
-	@:overload public function getKind() : com.sun.source.util.TaskEvent.TaskEvent_Kind;
+	@:overload @:public public function getKind() : com.sun.source.util.TaskEvent.TaskEvent_Kind;
 	
-	@:overload public function getSourceFile() : javax.tools.JavaFileObject;
+	@:overload @:public public function getSourceFile() : javax.tools.JavaFileObject;
 	
-	@:overload public function getCompilationUnit() : com.sun.source.tree.CompilationUnitTree;
+	@:overload @:public public function getCompilationUnit() : com.sun.source.tree.CompilationUnitTree;
 	
-	@:overload public function getTypeElement() : javax.lang.model.element.TypeElement;
+	@:overload @:public public function getTypeElement() : javax.lang.model.element.TypeElement;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

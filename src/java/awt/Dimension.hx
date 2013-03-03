@@ -33,7 +33,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see #setSize
 	* @since 1.0
 	*/
-	@:require(java0) public var width : Int;
+	@:require(java0) @:public public var width : Int;
 	
 	/**
 	* The height dimension; negative values can be used.
@@ -43,13 +43,13 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see #setSize
 	* @since 1.0
 	*/
-	@:require(java0) public var height : Int;
+	@:require(java0) @:public public var height : Int;
 	
 	/**
 	* Creates an instance of <code>Dimension</code> with a width
 	* of zero and a height of zero.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an instance of <code>Dimension</code> whose width
@@ -59,7 +59,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	*               <code>width</code> and
 	*               <code>height</code> values
 	*/
-	@:overload public function new(d : java.awt.Dimension) : Void;
+	@:overload @:public public function new(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Constructs a <code>Dimension</code> and initializes
@@ -68,19 +68,19 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @param width the specified width
 	* @param height the specified height
 	*/
-	@:overload public function new(width : Int, height : Int) : Void;
+	@:overload @:public public function new(width : Int, height : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* Sets the size of this <code>Dimension</code> object to
@@ -93,7 +93,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @param height the new height for the <code>Dimension</code> object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setSize(width : Float, height : Float) : Void;
+	@:require(java2) @:overload @:public override public function setSize(width : Float, height : Float) : Void;
 	
 	/**
 	* Gets the size of this <code>Dimension</code> object.
@@ -106,7 +106,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see      java.awt.Component#getSize
 	* @since    1.1
 	*/
-	@:require(java1) @:overload public function getSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the size of this <code>Dimension</code> object to the specified size.
@@ -117,7 +117,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see      java.awt.Component#setSize
 	* @since    1.1
 	*/
-	@:require(java1) @:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:require(java1) @:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Sets the size of this <code>Dimension</code> object
@@ -131,19 +131,19 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see      java.awt.Component#setSize
 	* @since    1.1
 	*/
-	@:require(java1) @:overload public function setSize(width : Int, height : Int) : Void;
+	@:require(java1) @:overload @:public public function setSize(width : Int, height : Int) : Void;
 	
 	/**
 	* Checks whether two dimension objects have equal values.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this <code>Dimension</code>.
 	*
 	* @return    a hash code for this <code>Dimension</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of the values of this
@@ -156,7 +156,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @return  a string representation of this <code>Dimension</code>
 	*          object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

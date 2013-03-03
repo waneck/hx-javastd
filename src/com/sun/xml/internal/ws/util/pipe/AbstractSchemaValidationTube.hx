@@ -25,21 +25,21 @@ package com.sun.xml.internal.ws.util.pipe;
 */
 extern class AbstractSchemaValidationTube extends com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl
 {
-	private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
+	@:protected @:final private var binding(default, null) : com.sun.xml.internal.ws.api.WSBinding;
 	
-	private var feature(default, null) : com.sun.xml.internal.ws.developer.SchemaValidationFeature;
+	@:protected @:final private var feature(default, null) : com.sun.xml.internal.ws.developer.SchemaValidationFeature;
 	
-	private var resolver(default, null) : com.sun.xml.internal.ws.api.server.DocumentAddressResolver;
+	@:protected @:final private var resolver(default, null) : com.sun.xml.internal.ws.api.server.DocumentAddressResolver;
 	
-	private var sf(default, null) : javax.xml.validation.SchemaFactory;
+	@:protected @:final private var sf(default, null) : javax.xml.validation.SchemaFactory;
 	
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload @:abstract private function getValidator() : javax.xml.validation.Validator;
+	@:overload @:protected @:abstract private function getValidator() : javax.xml.validation.Validator;
 	
-	@:overload @:abstract private function isNoValidation() : Bool;
+	@:overload @:protected @:abstract private function isNoValidation() : Bool;
 	
 	/*
 	* Using the following algorithm described in the xerces discussion thread:
@@ -54,27 +54,27 @@ extern class AbstractSchemaValidationTube extends com.sun.xml.internal.ws.api.pi
 	* That should work with any schema processor, not just those which
 	* honour multiple imports for the same namespace."
 	*/
-	@:overload private function getSchemaSources(docs : java.lang.Iterable<com.sun.xml.internal.ws.api.server.SDDocument>, mdresolver : com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube.AbstractSchemaValidationTube_MetadataResolverImpl) : java.NativeArray<javax.xml.transform.Source>;
+	@:overload @:protected private function getSchemaSources(docs : java.lang.Iterable<com.sun.xml.internal.ws.api.server.SDDocument>, mdresolver : com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube.AbstractSchemaValidationTube_MetadataResolverImpl) : java.NativeArray<javax.xml.transform.Source>;
 	
-	@:overload private function doProcess(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected private function doProcess(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$util$pipe$AbstractSchemaValidationTube$ValidationDocumentAddressResolver') @:internal extern class AbstractSchemaValidationTube_ValidationDocumentAddressResolver implements com.sun.xml.internal.ws.api.server.DocumentAddressResolver
 {
-	@:overload public function getRelativeAddressFor(current : com.sun.xml.internal.ws.api.server.SDDocument, referenced : com.sun.xml.internal.ws.api.server.SDDocument) : String;
+	@:overload @:public public function getRelativeAddressFor(current : com.sun.xml.internal.ws.api.server.SDDocument, referenced : com.sun.xml.internal.ws.api.server.SDDocument) : String;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$util$pipe$AbstractSchemaValidationTube$MetadataResolverImpl') extern class AbstractSchemaValidationTube_MetadataResolverImpl implements com.sun.xml.internal.ws.wsdl.SDDocumentResolver implements org.w3c.dom.ls.LSResourceResolver
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(it : java.lang.Iterable<com.sun.xml.internal.ws.api.server.SDDocument>) : Void;
+	@:overload @:public public function new(it : java.lang.Iterable<com.sun.xml.internal.ws.api.server.SDDocument>) : Void;
 	
-	@:overload public function resolve(systemId : String) : com.sun.xml.internal.ws.api.server.SDDocument;
+	@:overload @:public public function resolve(systemId : String) : com.sun.xml.internal.ws.api.server.SDDocument;
 	
-	@:overload public function resolveResource(type : String, namespaceURI : String, publicId : String, systemId : String, baseURI : String) : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function resolveResource(type : String, namespaceURI : String, publicId : String, systemId : String, baseURI : String) : org.w3c.dom.ls.LSInput;
 	
 	
 }

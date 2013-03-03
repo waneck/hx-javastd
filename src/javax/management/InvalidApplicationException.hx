@@ -39,7 +39,7 @@ package javax.management;
 	*
 	* @param val the detail message of this exception.
 	*/
-	@:overload public function new(val : Dynamic) : Void;
+	@:overload @:public public function new(val : Dynamic) : Void;
 	
 	
 }

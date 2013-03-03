@@ -21,109 +21,109 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class IdentityConstraint implements com.sun.org.apache.xerces.internal.xs.XSIDCDefinition
 {
 	/** type */
-	private var type : java.StdTypes.Int16;
+	@:protected private var type : java.StdTypes.Int16;
 	
 	/** target namespace */
-	private var fNamespace : String;
+	@:protected private var fNamespace : String;
 	
 	/** Identity constraint name. */
-	private var fIdentityConstraintName : String;
+	@:protected private var fIdentityConstraintName : String;
 	
 	/** name of owning element */
-	private var fElementName : String;
+	@:protected private var fElementName : String;
 	
 	/** Selector. */
-	private var fSelector : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector;
+	@:protected private var fSelector : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector;
 	
 	/** Field count. */
-	private var fFieldCount : Int;
+	@:protected private var fFieldCount : Int;
 	
 	/** Fields. */
-	private var fFields : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.identity.Field>;
+	@:protected private var fFields : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.identity.Field>;
 	
-	private var fAnnotations : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSAnnotationImpl>;
+	@:protected private var fAnnotations : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.XSAnnotationImpl>;
 	
-	private var fNumAnnotations : Int;
+	@:protected private var fNumAnnotations : Int;
 	
 	/** Default constructor. */
-	@:overload private function new(namespace : String, identityConstraintName : String, elemName : String) : Void;
+	@:overload @:protected private function new(namespace : String, identityConstraintName : String, elemName : String) : Void;
 	
 	/** Returns the identity constraint name. */
-	@:overload public function getIdentityConstraintName() : String;
+	@:overload @:public public function getIdentityConstraintName() : String;
 	
 	/** Sets the selector. */
-	@:overload public function setSelector(selector : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector) : Void;
+	@:overload @:public public function setSelector(selector : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector) : Void;
 	
 	/** Returns the selector. */
-	@:overload public function getSelector() : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector;
+	@:overload @:public public function getSelector() : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector;
 	
 	/** Adds a field. */
-	@:overload public function addField(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field) : Void;
+	@:overload @:public public function addField(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field) : Void;
 	
 	/** Returns the field count. */
-	@:overload public function getFieldCount() : Int;
+	@:overload @:public public function getFieldCount() : Int;
 	
 	/** Returns the field at the specified index. */
-	@:overload public function getFieldAt(index : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.Field;
+	@:overload @:public public function getFieldAt(index : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.Field;
 	
-	@:overload public function getElementName() : String;
+	@:overload @:public public function getElementName() : String;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Bool;
+	@:overload @:public public function equals(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Bool;
 	
 	/**
 	* Get the type of the object, i.e ELEMENT_DECLARATION.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The <code>name</code> of this <code>XSObject</code> depending on the
 	* <code>XSObject</code> type.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
 	* unspecified.  defines how a namespace URI is attached to schema
 	* components.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* {identity-constraint category} One of key, keyref or unique.
 	*/
-	@:overload public function getCategory() : java.StdTypes.Int16;
+	@:overload @:public public function getCategory() : java.StdTypes.Int16;
 	
 	/**
 	* {selector} A restricted XPath ([XPath]) expression
 	*/
-	@:overload public function getSelectorStr() : String;
+	@:overload @:public public function getSelectorStr() : String;
 	
 	/**
 	* {fields} A non-empty list of restricted XPath ([XPath]) expressions.
 	*/
-	@:overload public function getFieldStrs() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getFieldStrs() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* {referenced key} Required if {identity-constraint category} is keyref,
 	* forbidden otherwise. An identity-constraint definition with
 	* {identity-constraint category} equal to key or unique.
 	*/
-	@:overload public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
+	@:overload @:public public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
 	
 	/**
 	* Optional. Annotation.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
-	@:overload public function addAnnotation(annotation : com.sun.org.apache.xerces.internal.impl.xs.XSAnnotationImpl) : Void;
+	@:overload @:public public function addAnnotation(annotation : com.sun.org.apache.xerces.internal.impl.xs.XSAnnotationImpl) : Void;
 	
 	
 }

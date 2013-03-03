@@ -52,7 +52,7 @@ extern interface AccessibleText
 	* @return the zero-based index of the character under Point p; if
 	* Point is invalid return -1.
 	*/
-	@:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determines the bounding box of the character at the given
@@ -63,14 +63,14 @@ extern interface AccessibleText
 	* @return the screen coordinates of the character's bounding box,
 	* if index is invalid return an empty rectangle.
 	*/
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the number of characters (valid indicies)
 	*
 	* @return the number of characters
 	*/
-	@:overload public function getCharCount() : Int;
+	@:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Returns the zero-based offset of the caret.
@@ -79,7 +79,7 @@ extern interface AccessibleText
 	* value as the offset (the caret is between two characters).
 	* @return the zero-based offset of the caret.
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the String at a given index.
@@ -88,7 +88,7 @@ extern interface AccessibleText
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index.
@@ -97,7 +97,7 @@ extern interface AccessibleText
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index.
@@ -106,7 +106,7 @@ extern interface AccessibleText
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the AttributeSet for a given character at a given index
@@ -114,7 +114,7 @@ extern interface AccessibleText
 	* @param i the zero-based index into the text
 	* @return the AttributeSet of the character
 	*/
-	@:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -123,7 +123,7 @@ extern interface AccessibleText
 	*
 	* @return the index into the text of the start of the selection
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -132,14 +132,14 @@ extern interface AccessibleText
 	*
 	* @return the index into teh text of the end of the selection
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
 	*
 	* @return the String portion of the text that is selected
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	
 }

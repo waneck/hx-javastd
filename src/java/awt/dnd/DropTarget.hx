@@ -44,7 +44,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(c : java.awt.Component, ops : Int, dtl : java.awt.dnd.DropTargetListener, act : Bool, fm : java.awt.datatransfer.FlavorMap) : Void;
+	@:overload @:public public function new(c : java.awt.Component, ops : Int, dtl : java.awt.dnd.DropTargetListener, act : Bool, fm : java.awt.datatransfer.FlavorMap) : Void;
 	
 	/**
 	* Creates a <code>DropTarget</code> given the <code>Component</code>
@@ -63,7 +63,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(c : java.awt.Component, ops : Int, dtl : java.awt.dnd.DropTargetListener, act : Bool) : Void;
+	@:overload @:public public function new(c : java.awt.Component, ops : Int, dtl : java.awt.dnd.DropTargetListener, act : Bool) : Void;
 	
 	/**
 	* Creates a <code>DropTarget</code>.
@@ -71,7 +71,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>DropTarget</code> given the <code>Component</code>
@@ -85,7 +85,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(c : java.awt.Component, dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public public function new(c : java.awt.Component, dtl : java.awt.dnd.DropTargetListener) : Void;
 	
 	/**
 	* Creates a <code>DropTarget</code> given the <code>Component</code>
@@ -101,7 +101,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(c : java.awt.Component, ops : Int, dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public public function new(c : java.awt.Component, ops : Int, dtl : java.awt.dnd.DropTargetListener) : Void;
 	
 	/**
 	* Note: this interface is required to permit the safe association
@@ -113,7 +113,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* @param c The new <code>Component</code> this <code>DropTarget</code>
 	* is to be associated with.<P>
 	*/
-	@:overload @:synchronized public function setComponent(c : java.awt.Component) : Void;
+	@:overload @:public @:synchronized public function setComponent(c : java.awt.Component) : Void;
 	
 	/**
 	* Gets the <code>Component</code> associated
@@ -121,7 +121,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @return the current <code>Component</code>
 	*/
-	@:overload @:synchronized public function getComponent() : java.awt.Component;
+	@:overload @:public @:synchronized public function getComponent() : java.awt.Component;
 	
 	/**
 	* Sets the default acceptable actions for this <code>DropTarget</code>
@@ -130,7 +130,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @see java.awt.dnd.DnDConstants
 	*/
-	@:overload public function setDefaultActions(ops : Int) : Void;
+	@:overload @:public public function setDefaultActions(ops : Int) : Void;
 	
 	/**
 	* Gets an <code>int</code> representing the
@@ -138,7 +138,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @return the current default actions
 	*/
-	@:overload public function getDefaultActions() : Int;
+	@:overload @:public public function getDefaultActions() : Int;
 	
 	/**
 	* Sets the DropTarget active if <code>true</code>,
@@ -146,7 +146,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @param isActive sets the <code>DropTarget</code> (in)active.
 	*/
-	@:overload @:synchronized public function setActive(isActive : Bool) : Void;
+	@:overload @:public @:synchronized public function setActive(isActive : Bool) : Void;
 	
 	/**
 	* Reports whether or not
@@ -155,7 +155,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @return <CODE>true</CODE> if active, <CODE>false</CODE> if not
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Adds a new <code>DropTargetListener</code> (UNICAST SOURCE).
@@ -166,14 +166,14 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <code>DropTargetListener</code> is already added to this
 	* <code>DropTarget</code>.
 	*/
-	@:overload @:synchronized public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public @:synchronized public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
 	
 	/**
 	* Removes the current <code>DropTargetListener</code> (UNICAST SOURCE).
 	* <P>
 	* @param dtl the DropTargetListener to deregister.
 	*/
-	@:overload @:synchronized public function removeDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload @:public @:synchronized public function removeDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
 	
 	/**
 	* Calls <code>dragEnter</code> on the registered
@@ -189,7 +189,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*
 	* @see #isActive
 	*/
-	@:overload @:synchronized public function dragEnter(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public @:synchronized public function dragEnter(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	/**
 	* Calls <code>dragOver</code> on the registered
@@ -205,7 +205,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*
 	* @see #isActive
 	*/
-	@:overload @:synchronized public function dragOver(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public @:synchronized public function dragOver(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	/**
 	* Calls <code>dropActionChanged</code> on the registered
@@ -221,7 +221,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*
 	* @see #isActive
 	*/
-	@:overload @:synchronized public function dropActionChanged(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
+	@:overload @:public @:synchronized public function dropActionChanged(dtde : java.awt.dnd.DropTargetDragEvent) : Void;
 	
 	/**
 	* Calls <code>dragExit</code> on the registered
@@ -238,7 +238,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*
 	* @see #isActive
 	*/
-	@:overload @:synchronized public function dragExit(dte : java.awt.dnd.DropTargetEvent) : Void;
+	@:overload @:public @:synchronized public function dragExit(dte : java.awt.dnd.DropTargetEvent) : Void;
 	
 	/**
 	* Calls <code>drop</code> on the registered
@@ -255,7 +255,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	*
 	* @see #isActive
 	*/
-	@:overload @:synchronized public function drop(dtde : java.awt.dnd.DropTargetDropEvent) : Void;
+	@:overload @:public @:synchronized public function drop(dtde : java.awt.dnd.DropTargetDropEvent) : Void;
 	
 	/**
 	* Gets the <code>FlavorMap</code>
@@ -266,7 +266,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @return the FlavorMap for this DropTarget
 	*/
-	@:overload public function getFlavorMap() : java.awt.datatransfer.FlavorMap;
+	@:overload @:public public function getFlavorMap() : java.awt.datatransfer.FlavorMap;
 	
 	/**
 	* Sets the <code>FlavorMap</code> associated
@@ -275,7 +275,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* @param fm the new <code>FlavorMap</code>, or null to
 	* associate the default FlavorMap with this DropTarget.
 	*/
-	@:overload public function setFlavorMap(fm : java.awt.datatransfer.FlavorMap) : Void;
+	@:overload @:public public function setFlavorMap(fm : java.awt.datatransfer.FlavorMap) : Void;
 	
 	/**
 	* Notify the DropTarget that it has been associated with a Component
@@ -293,7 +293,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* @param peer The Peer of the Component we are associated with!
 	*
 	*/
-	@:overload public function addNotify(peer : java.awt.peer.ComponentPeer) : Void;
+	@:overload @:public public function addNotify(peer : java.awt.peer.ComponentPeer) : Void;
 	
 	/**
 	* Notify the DropTarget that it has been disassociated from a Component
@@ -310,7 +310,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @param peer The Peer of the Component we are being disassociated from!
 	*/
-	@:overload public function removeNotify(peer : java.awt.peer.ComponentPeer) : Void;
+	@:overload @:public public function removeNotify(peer : java.awt.peer.ComponentPeer) : Void;
 	
 	/**
 	* Gets the <code>DropTargetContext</code> associated
@@ -318,7 +318,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* <P>
 	* @return the <code>DropTargetContext</code> associated with this <code>DropTarget</code>.
 	*/
-	@:overload public function getDropTargetContext() : java.awt.dnd.DropTargetContext;
+	@:overload @:public public function getDropTargetContext() : java.awt.dnd.DropTargetContext;
 	
 	/**
 	* Creates the DropTargetContext associated with this DropTarget.
@@ -330,7 +330,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* DropTarget. Accessing the Context while no Drag is current
 	* has undefined results.
 	*/
-	@:overload private function createDropTargetContext() : java.awt.dnd.DropTargetContext;
+	@:overload @:protected private function createDropTargetContext() : java.awt.dnd.DropTargetContext;
 	
 	/**
 	* create an embedded autoscroller
@@ -338,26 +338,26 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* @param c the <code>Component</code>
 	* @param p the <code>Point</code>
 	*/
-	@:overload private function createDropTargetAutoScroller(c : java.awt.Component, p : java.awt.Point) : java.awt.dnd.DropTarget.DropTarget_DropTargetAutoScroller;
+	@:overload @:protected private function createDropTargetAutoScroller(c : java.awt.Component, p : java.awt.Point) : java.awt.dnd.DropTarget.DropTarget_DropTargetAutoScroller;
 	
 	/**
 	* initialize autoscrolling
 	* <P>
 	* @param p the <code>Point</code>
 	*/
-	@:overload private function initializeAutoscrolling(p : java.awt.Point) : Void;
+	@:overload @:protected private function initializeAutoscrolling(p : java.awt.Point) : Void;
 	
 	/**
 	* update autoscrolling with current cursor locn
 	* <P>
 	* @param dragCursorLocn the <code>Point</code>
 	*/
-	@:overload private function updateAutoscroll(dragCursorLocn : java.awt.Point) : Void;
+	@:overload @:protected private function updateAutoscroll(dragCursorLocn : java.awt.Point) : Void;
 	
 	/**
 	* clear autoscrolling
 	*/
-	@:overload private function clearAutoscroll() : Void;
+	@:overload @:protected private function clearAutoscroll() : Void;
 	
 	
 }
@@ -372,26 +372,26 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* @param c the <code>Component</code>
 	* @param p the <code>Point</code>
 	*/
-	@:overload private function new(c : java.awt.Component, p : java.awt.Point) : Void;
+	@:overload @:protected private function new(c : java.awt.Component, p : java.awt.Point) : Void;
 	
 	/**
 	* cause autoscroll to occur
 	* <P>
 	* @param newLocn the <code>Point</code>
 	*/
-	@:overload @:synchronized private function updateLocation(newLocn : java.awt.Point) : Void;
+	@:overload @:protected @:synchronized private function updateLocation(newLocn : java.awt.Point) : Void;
 	
 	/**
 	* cause autoscrolling to stop
 	*/
-	@:overload private function stop() : Void;
+	@:overload @:protected private function stop() : Void;
 	
 	/**
 	* cause autoscroll to occur
 	* <P>
 	* @param e the <code>ActionEvent</code>
 	*/
-	@:overload @:synchronized public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public @:synchronized public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

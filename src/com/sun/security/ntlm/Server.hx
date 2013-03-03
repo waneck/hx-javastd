@@ -39,7 +39,7 @@ extern class Server extends com.sun.security.ntlm.NTLM
 	* @param domain the domain, must not be null
 	* @throws NTLMException if {@code domain} is null.
 	*/
-	@:overload public function new(version : String, domain : String) : Void;
+	@:overload @:public public function new(version : String, domain : String) : Void;
 	
 	/**
 	* Generates the Type 2 message
@@ -50,7 +50,7 @@ extern class Server extends com.sun.security.ntlm.NTLM
 	* @throws NTLMException if the incoming message is invalid, or
 	* {@code nonce} is null.
 	*/
-	@:overload public function type2(type1 : java.NativeArray<java.StdTypes.Int8>, nonce : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function type2(type1 : java.NativeArray<java.StdTypes.Int8>, nonce : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Verifies the Type3 message received from client and returns
@@ -61,7 +61,7 @@ extern class Server extends com.sun.security.ntlm.NTLM
 	* @throws NTLMException if the incoming message is invalid, or
 	* {@code nonce} is null.
 	*/
-	@:overload public function verify(type3 : java.NativeArray<java.StdTypes.Int8>, nonce : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:public public function verify(type3 : java.NativeArray<java.StdTypes.Int8>, nonce : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	/**
 	* Retrieves the password for a given user. This method should be
@@ -70,7 +70,7 @@ extern class Server extends com.sun.security.ntlm.NTLM
 	* @param username must not be null
 	* @return the password for the user, or null if unknown
 	*/
-	@:overload @:abstract public function getPassword(domain : String, username : String) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public @:abstract public function getPassword(domain : String, username : String) : java.NativeArray<java.StdTypes.Char16>;
 	
 	
 }

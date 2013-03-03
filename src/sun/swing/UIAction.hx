@@ -25,20 +25,20 @@ package sun.swing;
 */
 extern class UIAction implements javax.swing.Action
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
-	@:overload public function getValue(key : String) : Dynamic;
+	@:overload @:public public function getValue(key : String) : Dynamic;
 	
-	@:overload public function putValue(key : String, value : Dynamic) : Void;
+	@:overload @:public public function putValue(key : String, value : Dynamic) : Void;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Cover method for <code>isEnabled(null)</code>.
 	*/
-	@:overload @:final public function isEnabled() : Bool;
+	@:overload @:public @:final public function isEnabled() : Bool;
 	
 	/**
 	* Subclasses that need to conditionalize the enabled state should
@@ -46,16 +46,16 @@ extern class UIAction implements javax.swing.Action
 	*
 	* @param sender Widget enabled state is being asked for, may be null.
 	*/
-	@:overload public function isEnabled(sender : Dynamic) : Bool;
+	@:overload @:public public function isEnabled(sender : Dynamic) : Bool;
 	
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Invoked when an action occurs.
 	*/
-	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public @:public @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

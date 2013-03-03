@@ -56,7 +56,7 @@ package javax.script;
 	* @throws IllegalArgumentException if the specified thiz is null or the specified Object is
 	* does not represent a scripting object.
 	*/
-	@:overload public function invokeMethod(thiz : Dynamic, name : String, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invokeMethod(thiz : Dynamic, name : String, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Used to call top-level procedures and functions defined in scripts.
@@ -68,7 +68,7 @@ package javax.script;
 	* @throws NoSuchMethodException if method with given name or matching argument types cannot be found.
 	* @throws NullPointerException if method name is null.
 	*/
-	@:overload public function invokeFunction(name : String, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invokeFunction(name : String, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Returns an implementation of an interface using functions compiled in
@@ -84,7 +84,7 @@ package javax.script;
 	* @throws IllegalArgumentException if the specified <code>Class</code> object
 	* is null or is not an interface.
 	*/
-	@:overload public function getInterface<T>(clasz : Class<T>) : T;
+	@:overload @:public public function getInterface<T>(clasz : Class<T>) : T;
 	
 	/**
 	* Returns an implementation of an interface using member functions of
@@ -102,7 +102,7 @@ package javax.script;
 	* is null or is not an interface, or if the specified Object is
 	* null or does not represent a scripting object.
 	*/
-	@:overload public function getInterface<T>(thiz : Dynamic, clasz : Class<T>) : T;
+	@:overload @:public public function getInterface<T>(thiz : Dynamic, clasz : Class<T>) : T;
 	
 	
 }

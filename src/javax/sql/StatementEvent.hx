@@ -41,7 +41,7 @@ extern class StatementEvent extends java.util.EventObject
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(con : javax.sql.PooledConnection, statement : java.sql.PreparedStatement) : Void;
+	@:require(java6) @:overload @:public public function new(con : javax.sql.PooledConnection, statement : java.sql.PreparedStatement) : Void;
 	
 	/**
 	* Constructs a <code>StatementEvent</code> with the specified <code>PooledConnection</code>,
@@ -57,7 +57,7 @@ extern class StatementEvent extends java.util.EventObject
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(con : javax.sql.PooledConnection, statement : java.sql.PreparedStatement, exception : java.sql.SQLException) : Void;
+	@:require(java6) @:overload @:public public function new(con : javax.sql.PooledConnection, statement : java.sql.PreparedStatement, exception : java.sql.SQLException) : Void;
 	
 	/**
 	* Returns the <code>PreparedStatement</code> that is being closed or is invalid
@@ -66,7 +66,7 @@ extern class StatementEvent extends java.util.EventObject
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getStatement() : java.sql.PreparedStatement;
+	@:require(java6) @:overload @:public public function getStatement() : java.sql.PreparedStatement;
 	
 	/**
 	* Returns the <code>SQLException</code> the driver is about to throw
@@ -75,7 +75,7 @@ extern class StatementEvent extends java.util.EventObject
 	* <p>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getSQLException() : java.sql.SQLException;
+	@:require(java6) @:overload @:public public function getSQLException() : java.sql.SQLException;
 	
 	
 }

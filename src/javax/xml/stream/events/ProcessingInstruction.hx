@@ -39,14 +39,14 @@ package javax.xml.stream.events;
 	*
 	* @return the String value of the PI or null
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
 	/**
 	* The data section of the processing instruction
 	*
 	* @return the String value of the PI's data or null
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	
 }

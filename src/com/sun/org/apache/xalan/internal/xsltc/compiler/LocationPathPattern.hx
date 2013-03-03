@@ -23,17 +23,17 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 extern class LocationPathPattern extends com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern
 {
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function setTemplate(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : Void;
+	@:overload @:public public function setTemplate(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : Void;
 	
-	@:overload public function getTemplate() : com.sun.org.apache.xalan.internal.xsltc.compiler.Template;
+	@:overload @:public override public function getTemplate() : com.sun.org.apache.xalan.internal.xsltc.compiler.Template;
 	
-	@:overload @:final override public function getPriority() : Float;
+	@:overload @:public @:final override public function getPriority() : Float;
 	
-	@:overload public function getDefaultPriority() : Float;
+	@:overload @:public public function getDefaultPriority() : Float;
 	
 	/**
 	* This method is used by the Mode class to prioritise patterns and
@@ -43,17 +43,17 @@ extern class LocationPathPattern extends com.sun.org.apache.xalan.internal.xsltc
 	*  o) then check priority - highest priority wins
 	*  o) then check the position - the template that occured last wins
 	*/
-	@:overload public function noSmallerThan(other : com.sun.org.apache.xalan.internal.xsltc.compiler.LocationPathPattern) : Bool;
+	@:overload @:public public function noSmallerThan(other : com.sun.org.apache.xalan.internal.xsltc.compiler.LocationPathPattern) : Bool;
 	
-	@:overload @:abstract public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
+	@:overload @:public @:abstract public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
-	@:overload @:abstract public function reduceKernelPattern() : Void;
+	@:overload @:public @:abstract public function reduceKernelPattern() : Void;
 	
-	@:overload @:abstract public function isWildcard() : Bool;
+	@:overload @:public @:abstract public function isWildcard() : Bool;
 	
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

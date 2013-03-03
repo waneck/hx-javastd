@@ -42,7 +42,7 @@ extern class CardPermission extends java.security.Permission
 	* @throws IllegalArgumentException if actions is an invalid actions
 	*   specification
 	*/
-	@:overload public function new(terminalName : String, actions : String) : Void;
+	@:overload @:public public function new(terminalName : String, actions : String) : Void;
 	
 	/**
 	* Returns the canonical string representation of the actions.
@@ -52,7 +52,7 @@ extern class CardPermission extends java.security.Permission
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Checks if this CardPermission object implies the specified permission.
@@ -70,7 +70,7 @@ extern class CardPermission extends java.security.Permission
 	* @return true if and only if this CardPermission object implies the
 	*   specified permission.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Compares the specified object with this CardPermission for equality.
@@ -88,14 +88,14 @@ extern class CardPermission extends java.security.Permission
 	* @return true if and only if the specified object is equal to this
 	*   CardPermission
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this CardPermission object.
 	*
 	* @return the hash code value for this CardPermission object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

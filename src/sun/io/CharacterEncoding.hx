@@ -25,7 +25,7 @@ package sun.io;
 */
 extern class CharacterEncoding
 {
-	@:overload public static function aliasName(name : String) : String;
+	@:overload @:public @:static public static function aliasName(name : String) : String;
 	
 	
 }

@@ -73,7 +73,7 @@ extern interface MidiChannel
 	*
 	* @see #noteOff(int, int)
 	*/
-	@:overload public function noteOn(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOn(noteNumber : Int, velocity : Int) : Void;
 	
 	/**
 	* Turns the specified note off.  The key-up velocity, if not ignored, can
@@ -94,7 +94,7 @@ extern interface MidiChannel
 	* @see #allNotesOff
 	* @see #allSoundOff
 	*/
-	@:overload public function noteOff(noteNumber : Int, velocity : Int) : Void;
+	@:overload @:public public function noteOff(noteNumber : Int, velocity : Int) : Void;
 	
 	/**
 	* Turns the specified note off.
@@ -103,7 +103,7 @@ extern interface MidiChannel
 	*
 	* @see #noteOff(int, int)
 	*/
-	@:overload public function noteOff(noteNumber : Int) : Void;
+	@:overload @:public public function noteOff(noteNumber : Int) : Void;
 	
 	/**
 	* Reacts to a change in the specified note's key pressure.
@@ -124,7 +124,7 @@ extern interface MidiChannel
 	*
 	* @see #getPolyPressure(int)
 	*/
-	@:overload public function setPolyPressure(noteNumber : Int, pressure : Int) : Void;
+	@:overload @:public public function setPolyPressure(noteNumber : Int, pressure : Int) : Void;
 	
 	/**
 	* Obtains the pressure with which the specified key is being depressed.
@@ -140,7 +140,7 @@ extern interface MidiChannel
 	*
 	* @see #setPolyPressure(int, int)
 	*/
-	@:overload public function getPolyPressure(noteNumber : Int) : Int;
+	@:overload @:public public function getPolyPressure(noteNumber : Int) : Int;
 	
 	/**
 	* Reacts to a change in the keyboard pressure.  Channel
@@ -162,7 +162,7 @@ extern interface MidiChannel
 	* @see #setPolyPressure(int, int)
 	* @see #getChannelPressure
 	*/
-	@:overload public function setChannelPressure(pressure : Int) : Void;
+	@:overload @:public public function setChannelPressure(pressure : Int) : Void;
 	
 	/**
 	* Obtains the channel's keyboard pressure.
@@ -175,7 +175,7 @@ extern interface MidiChannel
 	*
 	* @see #setChannelPressure(int)
 	*/
-	@:overload public function getChannelPressure() : Int;
+	@:overload @:public public function getChannelPressure() : Int;
 	
 	/**
 	* Reacts to a change in the specified controller's value.  A controller
@@ -224,7 +224,7 @@ extern interface MidiChannel
 	*
 	* @see #getController(int)
 	*/
-	@:overload public function controlChange(controller : Int, value : Int) : Void;
+	@:overload @:public public function controlChange(controller : Int, value : Int) : Void;
 	
 	/**
 	* Obtains the current value of the specified controller.  The return
@@ -247,7 +247,7 @@ extern interface MidiChannel
 	*
 	* @see #controlChange(int, int)
 	*/
-	@:overload public function getController(controller : Int) : Int;
+	@:overload @:public public function getController(controller : Int) : Int;
 	
 	/**
 	* Changes a program (patch).  This selects a specific
@@ -272,7 +272,7 @@ extern interface MidiChannel
 	* @see #programChange(int, int)
 	* @see #getProgram()
 	*/
-	@:overload public function programChange(program : Int) : Void;
+	@:overload @:public public function programChange(program : Int) : Void;
 	
 	/**
 	* Changes the program using bank and program (patch) numbers.
@@ -295,7 +295,7 @@ extern interface MidiChannel
 	* @see #programChange(int)
 	* @see #getProgram()
 	*/
-	@:overload public function programChange(bank : Int, program : Int) : Void;
+	@:overload @:public public function programChange(bank : Int, program : Int) : Void;
 	
 	/**
 	* Obtains the current program number for this channel.
@@ -304,7 +304,7 @@ extern interface MidiChannel
 	* @see Synthesizer#loadInstrument
 	* @see #programChange(int)
 	*/
-	@:overload public function getProgram() : Int;
+	@:overload @:public public function getProgram() : Int;
 	
 	/**
 	* Changes the pitch offset for all notes on this channel.
@@ -330,7 +330,7 @@ extern interface MidiChannel
 	*
 	* @see #getPitchBend
 	*/
-	@:overload public function setPitchBend(bend : Int) : Void;
+	@:overload @:public public function setPitchBend(bend : Int) : Void;
 	
 	/**
 	* Obtains the upward or downward pitch offset for this channel.
@@ -342,14 +342,14 @@ extern interface MidiChannel
 	*
 	* @see #setPitchBend(int)
 	*/
-	@:overload public function getPitchBend() : Int;
+	@:overload @:public public function getPitchBend() : Int;
 	
 	/**
 	* Resets all the implemented controllers to their default values.
 	*
 	* @see #controlChange(int, int)
 	*/
-	@:overload public function resetAllControllers() : Void;
+	@:overload @:public public function resetAllControllers() : Void;
 	
 	/**
 	* Turns off all notes that are currently sounding on this channel.
@@ -363,7 +363,7 @@ extern interface MidiChannel
 	* @see #allSoundOff
 	* @see #noteOff(int)
 	*/
-	@:overload public function allNotesOff() : Void;
+	@:overload @:public public function allNotesOff() : Void;
 	
 	/**
 	* Immediately turns off all sounding notes on this channel, ignoring the
@@ -372,7 +372,7 @@ extern interface MidiChannel
 	*
 	* @see #allNotesOff
 	*/
-	@:overload public function allSoundOff() : Void;
+	@:overload @:public public function allSoundOff() : Void;
 	
 	/**
 	* Turns local control on or off.  The default is for local control
@@ -395,7 +395,7 @@ extern interface MidiChannel
 	*         if local control is not supported
 	*
 	*/
-	@:overload public function localControl(on : Bool) : Bool;
+	@:overload @:public public function localControl(on : Bool) : Bool;
 	
 	/**
 	* Turns mono mode on or off.  In mono mode, the channel synthesizes
@@ -420,7 +420,7 @@ extern interface MidiChannel
 	* @see #getMono
 	* @see VoiceStatus
 	*/
-	@:overload public function setMono(on : Bool) : Void;
+	@:overload @:public public function setMono(on : Bool) : Void;
 	
 	/**
 	* Obtains the current mono/poly mode.
@@ -432,7 +432,7 @@ extern interface MidiChannel
 	*
 	* @see #setMono(boolean)
 	*/
-	@:overload public function getMono() : Bool;
+	@:overload @:public public function getMono() : Bool;
 	
 	/**
 	* Turns omni mode on or off.  In omni mode, the channel responds
@@ -451,7 +451,7 @@ extern interface MidiChannel
 	* @see #getOmni
 	* @see VoiceStatus
 	*/
-	@:overload public function setOmni(on : Bool) : Void;
+	@:overload @:public public function setOmni(on : Bool) : Void;
 	
 	/**
 	* Obtains the current omni mode.
@@ -463,7 +463,7 @@ extern interface MidiChannel
 	*
 	* @see #setOmni(boolean)
 	*/
-	@:overload public function getOmni() : Bool;
+	@:overload @:public public function getOmni() : Bool;
 	
 	/**
 	* Sets the mute state for this channel. A value of
@@ -485,7 +485,7 @@ extern interface MidiChannel
 	* @see #getMute
 	* @see #setSolo(boolean)
 	*/
-	@:overload public function setMute(mute : Bool) : Void;
+	@:overload @:public public function setMute(mute : Bool) : Void;
 	
 	/**
 	* Obtains the current mute state for this channel.
@@ -498,7 +498,7 @@ extern interface MidiChannel
 	*
 	* @see #setMute(boolean)
 	*/
-	@:overload public function getMute() : Bool;
+	@:overload @:public public function getMute() : Bool;
 	
 	/**
 	* Sets the solo state for this channel.
@@ -516,7 +516,7 @@ extern interface MidiChannel
 	* @param soloState new solo state for the channel
 	* @see #getSolo()
 	*/
-	@:overload public function setSolo(soloState : Bool) : Void;
+	@:overload @:public public function setSolo(soloState : Bool) : Void;
 	
 	/**
 	* Obtains the current solo state for this channel.
@@ -529,7 +529,7 @@ extern interface MidiChannel
 	*
 	* @see #setSolo(boolean)
 	*/
-	@:overload public function getSolo() : Bool;
+	@:overload @:public public function getSolo() : Bool;
 	
 	
 }

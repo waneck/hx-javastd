@@ -50,7 +50,7 @@ package javax.security.auth.login;
 	* @return an array of AppConfigurationEntries for the specified
 	*          <i>name</i>, or null if there are no entries.
 	*/
-	@:overload @:abstract private function engineGetAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:protected @:abstract private function engineGetAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	/**
 	* Refresh and reload the Configuration.
@@ -67,7 +67,7 @@ package javax.security.auth.login;
 	* @exception SecurityException if the caller does not have permission
 	*          to refresh its Configuration.
 	*/
-	@:overload private function engineRefresh() : Void;
+	@:overload @:protected private function engineRefresh() : Void;
 	
 	
 }

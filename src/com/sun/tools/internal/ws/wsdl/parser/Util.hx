@@ -30,31 +30,31 @@ extern class Util
 	*
 	* @author WS Development Team
 	*/
-	@:overload public static function getRequiredAttribute(element : org.w3c.dom.Element, name : String) : String;
+	@:overload @:public @:static public static function getRequiredAttribute(element : org.w3c.dom.Element, name : String) : String;
 	
-	@:overload public static function verifyTag(element : org.w3c.dom.Element, tag : String) : Void;
+	@:overload @:public @:static public static function verifyTag(element : org.w3c.dom.Element, tag : String) : Void;
 	
-	@:overload public static function verifyTagNS(element : org.w3c.dom.Element, tag : String, nsURI : String) : Void;
+	@:overload @:public @:static public static function verifyTagNS(element : org.w3c.dom.Element, tag : String, nsURI : String) : Void;
 	
-	@:overload public static function verifyTagNS(element : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public @:static public static function verifyTagNS(element : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public static function isTagName(element : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public @:static public static function isTagName(element : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Bool;
 	
-	@:overload public static function verifyTagNSRootElement(element : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public @:static public static function verifyTagNSRootElement(element : org.w3c.dom.Element, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public static function nextElementIgnoringCharacterContent(iter : java.util.Iterator<Dynamic>) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function nextElementIgnoringCharacterContent(iter : java.util.Iterator<Dynamic>) : org.w3c.dom.Element;
 	
-	@:overload public static function nextElement(iter : java.util.Iterator<Dynamic>) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function nextElement(iter : java.util.Iterator<Dynamic>) : org.w3c.dom.Element;
 	
-	@:overload public static function processSystemIdWithBase(baseSystemId : String, systemId : String) : String;
+	@:overload @:public @:static public static function processSystemIdWithBase(baseSystemId : String, systemId : String) : String;
 	
-	@:overload public static function fail(key : String) : Void;
+	@:overload @:public @:static public static function fail(key : String) : Void;
 	
-	@:overload public static function fail(key : String, arg : String) : Void;
+	@:overload @:public @:static public static function fail(key : String, arg : String) : Void;
 	
-	@:overload public static function fail(key : String, arg1 : String, arg2 : String) : Void;
+	@:overload @:public @:static public static function fail(key : String, arg1 : String, arg2 : String) : Void;
 	
-	@:overload public static function fail(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:static public static function fail(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

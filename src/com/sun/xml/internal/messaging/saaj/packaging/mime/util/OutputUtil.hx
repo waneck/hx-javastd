@@ -28,14 +28,14 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.util;
 */
 extern class OutputUtil
 {
-	@:overload public static function writeln(s : String, out : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function writeln(s : String, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes a string as ASCII string.
 	*/
-	@:overload public static function writeAsAscii(s : String, out : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function writeAsAscii(s : String, out : java.io.OutputStream) : Void;
 	
-	@:overload public static function writeln(out : java.io.OutputStream) : Void;
+	@:overload @:public @:static public static function writeln(out : java.io.OutputStream) : Void;
 	
 	
 }

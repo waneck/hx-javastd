@@ -37,7 +37,7 @@ extern class RequestingUserName extends javax.print.attribute.TextSyntax impleme
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>userName</CODE> is null.
 	*/
-	@:overload public function new(userName : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(userName : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns whether this requesting user name attribute is equivalent to
@@ -61,7 +61,7 @@ extern class RequestingUserName extends javax.print.attribute.TextSyntax impleme
 	* @return  True if <CODE>object</CODE> is equivalent to this requesting
 	*          user name attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -73,7 +73,7 @@ extern class RequestingUserName extends javax.print.attribute.TextSyntax impleme
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -84,7 +84,7 @@ extern class RequestingUserName extends javax.print.attribute.TextSyntax impleme
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

@@ -43,21 +43,21 @@ package com.sun.jdi.event;
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
 	/**
 	* Returns the monitor object this thread waited on.
 	*
 	* @return an {@link ObjectReference} for the monitor.
 	*/
-	@:overload public function monitor() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function monitor() : com.sun.jdi.ObjectReference;
 	
 	/**
 	* Returns whether the wait has timed out or been interrupted.
 	*
 	* @return <code>true</code> if the wait is timed out.
 	*/
-	@:overload public function timedout() : Bool;
+	@:overload @:public public function timedout() : Bool;
 	
 	
 }

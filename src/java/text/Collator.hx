@@ -45,7 +45,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#setStrength
 	* @see java.text.Collator#getStrength
 	*/
-	public static var PRIMARY(default, null) : Int;
+	@:public @:final @:static public static var PRIMARY(default, null) : Int;
 	
 	/**
 	* Collator strength value.  When set, only SECONDARY and above differences are
@@ -56,7 +56,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#setStrength
 	* @see java.text.Collator#getStrength
 	*/
-	public static var SECONDARY(default, null) : Int;
+	@:public @:final @:static public static var SECONDARY(default, null) : Int;
 	
 	/**
 	* Collator strength value.  When set, only TERTIARY and above differences are
@@ -66,7 +66,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#setStrength
 	* @see java.text.Collator#getStrength
 	*/
-	public static var TERTIARY(default, null) : Int;
+	@:public @:final @:static public static var TERTIARY(default, null) : Int;
 	
 	/**
 	* Collator strength value.  When set, all differences are
@@ -79,7 +79,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* (A, combining-grave) will be considered significant at the IDENTICAL
 	* level if decomposition is set to NO_DECOMPOSITION.
 	*/
-	public static var IDENTICAL(default, null) : Int;
+	@:public @:final @:static public static var IDENTICAL(default, null) : Int;
 	
 	/**
 	* Decomposition mode value. With NO_DECOMPOSITION
@@ -89,7 +89,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#getDecomposition
 	* @see java.text.Collator#setDecomposition
 	*/
-	public static var NO_DECOMPOSITION(default, null) : Int;
+	@:public @:final @:static public static var NO_DECOMPOSITION(default, null) : Int;
 	
 	/**
 	* Decomposition mode value. With CANONICAL_DECOMPOSITION
@@ -104,7 +104,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#getDecomposition
 	* @see java.text.Collator#setDecomposition
 	*/
-	public static var CANONICAL_DECOMPOSITION(default, null) : Int;
+	@:public @:final @:static public static var CANONICAL_DECOMPOSITION(default, null) : Int;
 	
 	/**
 	* Decomposition mode value. With FULL_DECOMPOSITION
@@ -123,7 +123,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#getDecomposition
 	* @see java.text.Collator#setDecomposition
 	*/
-	public static var FULL_DECOMPOSITION(default, null) : Int;
+	@:public @:final @:static public static var FULL_DECOMPOSITION(default, null) : Int;
 	
 	/**
 	* Gets the Collator for the current default locale.
@@ -131,7 +131,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @return the Collator for the default locale.(for example, en_US)
 	* @see java.util.Locale#getDefault
 	*/
-	@:overload @:synchronized public static function getInstance() : java.text.Collator;
+	@:overload @:public @:static @:synchronized public static function getInstance() : java.text.Collator;
 	
 	/**
 	* Gets the Collator for the desired locale.
@@ -140,7 +140,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.util.Locale
 	* @see java.util.ResourceBundle
 	*/
-	@:overload @:synchronized public static function getInstance(desiredLocale : java.util.Locale) : java.text.Collator;
+	@:overload @:public @:static @:synchronized public static function getInstance(desiredLocale : java.util.Locale) : java.text.Collator;
 	
 	/**
 	* Compares the source string to the target string according to the
@@ -161,7 +161,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.CollationKey
 	* @see java.text.Collator#getCollationKey
 	*/
-	@:overload @:abstract public function compare(source : String, target : String) : Int;
+	@:overload @:public @:abstract public function compare(source : String, target : String) : Int;
 	
 	/**
 	* Compares its two arguments for order.  Returns a negative integer,
@@ -178,7 +178,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.util.Comparator
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:require(java2) @:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	/**
 	* Transforms the String into a series of bits that can be compared bitwise
@@ -191,7 +191,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.CollationKey
 	* @see java.text.Collator#compare
 	*/
-	@:overload @:abstract public function getCollationKey(source : String) : java.text.CollationKey;
+	@:overload @:public @:abstract public function getCollationKey(source : String) : java.text.CollationKey;
 	
 	/**
 	* Convenience method for comparing the equality of two strings based on
@@ -202,7 +202,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* rules.  false, otherwise.
 	* @see java.text.Collator#compare
 	*/
-	@:overload public function equals(source : String, target : String) : Bool;
+	@:overload @:public public function equals(source : String, target : String) : Bool;
 	
 	/**
 	* Returns this Collator's strength property.  The strength property determines
@@ -215,7 +215,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#TERTIARY
 	* @see java.text.Collator#IDENTICAL
 	*/
-	@:overload @:synchronized public function getStrength() : Int;
+	@:overload @:public @:synchronized public function getStrength() : Int;
 	
 	/**
 	* Sets this Collator's strength property.  The strength property determines
@@ -230,7 +230,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @exception  IllegalArgumentException If the new strength value is not one of
 	* PRIMARY, SECONDARY, TERTIARY or IDENTICAL.
 	*/
-	@:overload @:synchronized public function setStrength(newStrength : Int) : Void;
+	@:overload @:public @:synchronized public function setStrength(newStrength : Int) : Void;
 	
 	/**
 	* Get the decomposition mode of this Collator. Decomposition mode
@@ -251,7 +251,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.text.Collator#CANONICAL_DECOMPOSITION
 	* @see java.text.Collator#FULL_DECOMPOSITION
 	*/
-	@:overload @:synchronized public function getDecomposition() : Int;
+	@:overload @:public @:synchronized public function getDecomposition() : Int;
 	
 	/**
 	* Set the decomposition mode of this Collator. See getDecomposition
@@ -264,7 +264,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @exception IllegalArgumentException If the given value is not a valid decomposition
 	* mode.
 	*/
-	@:overload @:synchronized public function setDecomposition(decompositionMode : Int) : Void;
+	@:overload @:public @:synchronized public function setDecomposition(decompositionMode : Int) : Void;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -279,12 +279,12 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @return An array of locales for which localized
 	*         <code>Collator</code> instances are available.
 	*/
-	@:overload @:synchronized public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static @:synchronized public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Compares the equality of two Collators.
@@ -292,12 +292,12 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @return true if this Collator is the same as that Collator;
 	* false otherwise.
 	*/
-	@:overload public function equals(that : Dynamic) : Bool;
+	@:overload @:public public function equals(that : Dynamic) : Bool;
 	
 	/**
 	* Generates the hash code for this Collator.
 	*/
-	@:overload @:abstract public function hashCode() : Int;
+	@:overload @:abstract @:public public function hashCode() : Int;
 	
 	/**
 	* Default constructor.  This constructor is
@@ -305,7 +305,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* a Collator sub-class by calling the factory method getInstance.
 	* @see java.text.Collator#getInstance
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }
@@ -315,7 +315,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 */
 @:native('java$text$Collator$CollatorGetter') @:internal extern class Collator_CollatorGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.CollatorProvider, java.text.Collator>
 {
-	@:overload public function getObject(collatorProvider : java.text.spi.CollatorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.Collator;
+	@:overload @:public public function getObject(collatorProvider : java.text.spi.CollatorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.Collator;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* the DTMManager, it really is a proxy for this object, which
 	* is the real DTMManager.
 	*/
-	private var m_dtmManager : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:protected private var m_dtmManager : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Return the DTMManager object.  Though XPathContext context extends
@@ -36,17 +36,17 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* caller needs to make a lot of calls to the DTMManager, it is faster
 	* if it gets the real one from this function.
 	*/
-	@:overload public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Set the state of the secure processing feature
 	*/
-	@:overload public function setSecureProcessing(flag : Bool) : Void;
+	@:overload @:public public function setSecureProcessing(flag : Bool) : Void;
 	
 	/**
 	* Return the state of the secure processing feature
 	*/
-	@:overload public function isSecureProcessing() : Bool;
+	@:overload @:public public function isSecureProcessing() : Bool;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -69,7 +69,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload override public function getDTM(source : javax.xml.transform.Source, unique : Bool, wsfilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public override public function getDTM(source : javax.xml.transform.Source, unique : Bool, wsfilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get an instance of a DTM that "owns" a node handle.
@@ -78,7 +78,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload override public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public override public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Given a W3C DOM node, try and return a DTM handle.
@@ -88,18 +88,18 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return a valid DTM handle.
 	*/
-	@:overload override public function getDTMHandleFromNode(node : org.w3c.dom.Node) : Int;
+	@:overload @:public override public function getDTMHandleFromNode(node : org.w3c.dom.Node) : Int;
 	
 	/**
 	* %TBD% Doc
 	*/
-	@:overload override public function getDTMIdentity(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Int;
+	@:overload @:public override public function getDTMIdentity(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Int;
 	
 	/**
 	* Creates an empty <code>DocumentFragment</code> object.
 	* @return A new <code>DocumentFragment handle</code>.
 	*/
-	@:overload override public function createDocumentFragment() : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public override public function createDocumentFragment() : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Release a DTM either to a lru pool, or completely remove reference.
@@ -110,7 +110,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param shouldHardDelete True if the DTM should be removed no matter what.
 	* @return true if the DTM was removed, false if it was put back in a lru pool.
 	*/
-	@:overload override public function release(dtm : com.sun.org.apache.xml.internal.dtm.DTM, shouldHardDelete : Bool) : Bool;
+	@:overload @:public override public function release(dtm : com.sun.org.apache.xml.internal.dtm.DTM, shouldHardDelete : Bool) : Bool;
 	
 	/**
 	* Create a new <code>DTMIterator</code> based on an XPath
@@ -124,7 +124,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param pos The position in the expression.
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload override public function createDTMIterator(xpathCompiler : Dynamic, pos : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function createDTMIterator(xpathCompiler : Dynamic, pos : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create a new <code>DTMIterator</code> based on an XPath
@@ -139,7 +139,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload override public function createDTMIterator(xpathString : String, presolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function createDTMIterator(xpathString : String, presolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create a new <code>DTMIterator</code> based only on a whatToShow and
@@ -158,7 +158,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return The newly created <code>NodeIterator</code>.
 	*/
-	@:overload override public function createDTMIterator(whatToShow : Int, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter, entityReferenceExpansion : Bool) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function createDTMIterator(whatToShow : Int, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter, entityReferenceExpansion : Bool) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create a new <code>DTMIterator</code> that holds exactly one node.
@@ -167,14 +167,14 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return The newly created <code>DTMIterator</code>.
 	*/
-	@:overload override public function createDTMIterator(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public override public function createDTMIterator(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Create an XPathContext instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(useServicesMechanism : Bool) : Void;
+	@:overload @:public public function new(useServicesMechanism : Bool) : Void;
 	
 	/**
 	**This constructor doesn't seem to be used anywhere -- huizhe wang**
@@ -182,45 +182,45 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param owner Value that can be retrieved via the getOwnerObject() method.
 	* @see #getOwnerObject
 	*/
-	@:overload public function new(owner : Dynamic) : Void;
+	@:overload @:public public function new(owner : Dynamic) : Void;
 	
 	/**
 	* Reset for new run.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Set the current locater in the stylesheet.
 	*
 	* @param location The location within the stylesheet.
 	*/
-	@:overload public function setSAXLocator(location : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function setSAXLocator(location : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Set the current locater in the stylesheet.
 	*
 	* @param location The location within the stylesheet.
 	*/
-	@:overload public function pushSAXLocator(location : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function pushSAXLocator(location : javax.xml.transform.SourceLocator) : Void;
 	
 	/**
 	* Push a slot on the locations stack so that setSAXLocator can be
 	* repeatedly called.
 	*
 	*/
-	@:overload public function pushSAXLocatorNull() : Void;
+	@:overload @:public public function pushSAXLocatorNull() : Void;
 	
 	/**
 	* Pop the current locater.
 	*/
-	@:overload public function popSAXLocator() : Void;
+	@:overload @:public public function popSAXLocator() : Void;
 	
 	/**
 	* Get the current locater in the stylesheet.
 	*
 	* @return The location within the stylesheet, or null if not known.
 	*/
-	@:overload public function getSAXLocator() : javax.xml.transform.SourceLocator;
+	@:overload @:public public function getSAXLocator() : javax.xml.transform.SourceLocator;
 	
 	/**
 	* Get the "owner" context of this context, which should be,
@@ -228,7 +228,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* so that XSLT functions can get the Transformer.
 	* @return The owner object passed into the constructor, or null.
 	*/
-	@:overload public function getOwnerObject() : Dynamic;
+	@:overload @:public public function getOwnerObject() : Dynamic;
 	
 	/**
 	* Get the variable stack, which is in charge of variables and
@@ -236,7 +236,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return the variable stack, which should not be null.
 	*/
-	@:overload @:final public function getVarStack() : com.sun.org.apache.xpath.internal.VariableStack;
+	@:overload @:public @:final public function getVarStack() : com.sun.org.apache.xpath.internal.VariableStack;
 	
 	/**
 	* Get the variable stack, which is in charge of variables and
@@ -244,14 +244,14 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @param varStack non-null reference to the variable stack.
 	*/
-	@:overload @:final public function setVarStack(varStack : com.sun.org.apache.xpath.internal.VariableStack) : Void;
+	@:overload @:public @:final public function setVarStack(varStack : com.sun.org.apache.xpath.internal.VariableStack) : Void;
 	
 	/**
 	* Get the SourceTreeManager associated with this execution context.
 	*
 	* @return the SourceTreeManager associated with this execution context.
 	*/
-	@:overload @:final public function getSourceTreeManager() : com.sun.org.apache.xpath.internal.SourceTreeManager;
+	@:overload @:public @:final public function getSourceTreeManager() : com.sun.org.apache.xpath.internal.SourceTreeManager;
 	
 	/**
 	* Set the SourceTreeManager associated with this execution context.
@@ -259,28 +259,28 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param mgr the SourceTreeManager to be associated with this
 	*        execution context.
 	*/
-	@:overload public function setSourceTreeManager(mgr : com.sun.org.apache.xpath.internal.SourceTreeManager) : Void;
+	@:overload @:public public function setSourceTreeManager(mgr : com.sun.org.apache.xpath.internal.SourceTreeManager) : Void;
 	
 	/**
 	* Get the ErrorListener where errors and warnings are to be reported.
 	*
 	* @return A non-null ErrorListener reference.
 	*/
-	@:overload @:final public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public @:final public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	/**
 	* Set the ErrorListener where errors and warnings are to be reported.
 	*
 	* @param listener A non-null ErrorListener reference.
 	*/
-	@:overload public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* Get the URIResolver associated with this execution context.
 	*
 	* @return a URI resolver, which may be null.
 	*/
-	@:overload @:final public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public @:final public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* Set the URIResolver associated with this execution context.
@@ -288,28 +288,28 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param resolver the URIResolver to be associated with this
 	*        execution context, may be null to clear an already set resolver.
 	*/
-	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/** The reader of the primary source tree.    */
-	public var m_primaryReader : org.xml.sax.XMLReader;
+	@:public public var m_primaryReader : org.xml.sax.XMLReader;
 	
 	/**
 	* Get primary XMLReader associated with this execution context.
 	*
 	* @return The reader of the primary source tree.
 	*/
-	@:overload @:final public function getPrimaryReader() : org.xml.sax.XMLReader;
+	@:overload @:public @:final public function getPrimaryReader() : org.xml.sax.XMLReader;
 	
 	/**
 	* Set primary XMLReader associated with this execution context.
 	*
 	* @param reader The reader of the primary source tree.
 	*/
-	@:overload public function setPrimaryReader(reader : org.xml.sax.XMLReader) : Void;
+	@:overload @:public public function setPrimaryReader(reader : org.xml.sax.XMLReader) : Void;
 	
-	@:overload public function getContextNodeListsStack() : java.util.Stack<Dynamic>;
+	@:overload @:public public function getContextNodeListsStack() : java.util.Stack<Dynamic>;
 	
-	@:overload public function setContextNodeListsStack(s : java.util.Stack<Dynamic>) : Void;
+	@:overload @:public public function setContextNodeListsStack(s : java.util.Stack<Dynamic>) : Void;
 	
 	/**
 	* Get the current context node list.
@@ -317,7 +317,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @return  the <a href="http://www.w3.org/TR/xslt#dt-current-node-list">current node list</a>,
 	* also refered to here as a <term>context node list</term>.
 	*/
-	@:overload @:final public function getContextNodeList() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:final public function getContextNodeList() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Set the current context node list.
@@ -326,30 +326,30 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* also refered to here as a <term>context node list</term>.
 	* @xsl.usage internal
 	*/
-	@:overload @:final public function pushContextNodeList(nl : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
+	@:overload @:public @:final public function pushContextNodeList(nl : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
 	
 	/**
 	* Pop the current context node list.
 	* @xsl.usage internal
 	*/
-	@:overload @:final public function popContextNodeList() : Void;
+	@:overload @:public @:final public function popContextNodeList() : Void;
 	
 	/**
 	* The ammount to use for stacks that record information during the
 	* recursive execution.
 	*/
-	public static var RECURSIONLIMIT(default, null) : Int;
+	@:public @:static @:final public static var RECURSIONLIMIT(default, null) : Int;
 	
-	@:overload public function getCurrentNodeStack() : com.sun.org.apache.xml.internal.utils.IntStack;
+	@:overload @:public public function getCurrentNodeStack() : com.sun.org.apache.xml.internal.utils.IntStack;
 	
-	@:overload public function setCurrentNodeStack(nv : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
+	@:overload @:public public function setCurrentNodeStack(nv : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
 	
 	/**
 	* Get the current context node.
 	*
 	* @return the <a href="http://www.w3.org/TR/xslt#dt-current-node">current node</a>.
 	*/
-	@:overload @:final public function getCurrentNode() : Int;
+	@:overload @:public @:final public function getCurrentNode() : Int;
 	
 	/**
 	* Set the current context node and expression node.
@@ -357,12 +357,12 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param cn the <a href="http://www.w3.org/TR/xslt#dt-current-node">current node</a>.
 	* @param en the sub-expression context node.
 	*/
-	@:overload @:final public function pushCurrentNodeAndExpression(cn : Int, en : Int) : Void;
+	@:overload @:public @:final public function pushCurrentNodeAndExpression(cn : Int, en : Int) : Void;
 	
 	/**
 	* Set the current context node.
 	*/
-	@:overload @:final public function popCurrentNodeAndExpression() : Void;
+	@:overload @:public @:final public function popCurrentNodeAndExpression() : Void;
 	
 	/**
 	* Push the current context node, expression node, and prefix resolver.
@@ -371,84 +371,84 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param en the sub-expression context node.
 	* @param nc the namespace context (prefix resolver.
 	*/
-	@:overload @:final public function pushExpressionState(cn : Int, en : Int, nc : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public @:final public function pushExpressionState(cn : Int, en : Int, nc : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Pop the current context node, expression node, and prefix resolver.
 	*/
-	@:overload @:final public function popExpressionState() : Void;
+	@:overload @:public @:final public function popExpressionState() : Void;
 	
 	/**
 	* Set the current context node.
 	*
 	* @param n the <a href="http://www.w3.org/TR/xslt#dt-current-node">current node</a>.
 	*/
-	@:overload @:final public function pushCurrentNode(n : Int) : Void;
+	@:overload @:public @:final public function pushCurrentNode(n : Int) : Void;
 	
 	/**
 	* Pop the current context node.
 	*/
-	@:overload @:final public function popCurrentNode() : Void;
+	@:overload @:public @:final public function popCurrentNode() : Void;
 	
 	/**
 	* Set the current predicate root.
 	*/
-	@:overload @:final public function pushPredicateRoot(n : Int) : Void;
+	@:overload @:public @:final public function pushPredicateRoot(n : Int) : Void;
 	
 	/**
 	* Pop the current predicate root.
 	*/
-	@:overload @:final public function popPredicateRoot() : Void;
+	@:overload @:public @:final public function popPredicateRoot() : Void;
 	
 	/**
 	* Get the current predicate root.
 	*/
-	@:overload @:final public function getPredicateRoot() : Int;
+	@:overload @:public @:final public function getPredicateRoot() : Int;
 	
 	/**
 	* Set the current location path iterator root.
 	*/
-	@:overload @:final public function pushIteratorRoot(n : Int) : Void;
+	@:overload @:public @:final public function pushIteratorRoot(n : Int) : Void;
 	
 	/**
 	* Pop the current location path iterator root.
 	*/
-	@:overload @:final public function popIteratorRoot() : Void;
+	@:overload @:public @:final public function popIteratorRoot() : Void;
 	
 	/**
 	* Get the current location path iterator root.
 	*/
-	@:overload @:final public function getIteratorRoot() : Int;
+	@:overload @:public @:final public function getIteratorRoot() : Int;
 	
-	@:overload public function getCurrentExpressionNodeStack() : com.sun.org.apache.xml.internal.utils.IntStack;
+	@:overload @:public public function getCurrentExpressionNodeStack() : com.sun.org.apache.xml.internal.utils.IntStack;
 	
-	@:overload public function setCurrentExpressionNodeStack(nv : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
+	@:overload @:public public function setCurrentExpressionNodeStack(nv : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
 	
-	@:overload @:final public function getPredicatePos() : Int;
+	@:overload @:public @:final public function getPredicatePos() : Int;
 	
-	@:overload @:final public function pushPredicatePos(n : Int) : Void;
+	@:overload @:public @:final public function pushPredicatePos(n : Int) : Void;
 	
-	@:overload @:final public function popPredicatePos() : Void;
+	@:overload @:public @:final public function popPredicatePos() : Void;
 	
 	/**
 	* Get the current node that is the expression's context (i.e. for current() support).
 	*
 	* @return The current sub-expression node.
 	*/
-	@:overload @:final public function getCurrentExpressionNode() : Int;
+	@:overload @:public @:final public function getCurrentExpressionNode() : Int;
 	
 	/**
 	* Set the current node that is the expression's context (i.e. for current() support).
 	*
 	* @param n The sub-expression node to be current.
 	*/
-	@:overload @:final public function pushCurrentExpressionNode(n : Int) : Void;
+	@:overload @:public @:final public function pushCurrentExpressionNode(n : Int) : Void;
 	
 	/**
 	* Pop the current node that is the expression's context
 	* (i.e. for current() support).
 	*/
-	@:overload @:final public function popCurrentExpressionNode() : Void;
+	@:overload @:public @:final public function popCurrentExpressionNode() : Void;
 	
 	/**
 	* Get the current namespace context for the xpath.
@@ -456,7 +456,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @return the current prefix resolver for resolving prefixes to
 	*         namespace URLs.
 	*/
-	@:overload @:final public function getNamespaceContext() : com.sun.org.apache.xml.internal.utils.PrefixResolver;
+	@:overload @:public @:final public function getNamespaceContext() : com.sun.org.apache.xml.internal.utils.PrefixResolver;
 	
 	/**
 	* Get the current namespace context for the xpath.
@@ -464,7 +464,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param pr the prefix resolver to be used for resolving prefixes to
 	*         namespace URLs.
 	*/
-	@:overload @:final public function setNamespaceContext(pr : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public @:final public function setNamespaceContext(pr : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Push a current namespace context for the xpath.
@@ -472,22 +472,22 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param pr the prefix resolver to be used for resolving prefixes to
 	*         namespace URLs.
 	*/
-	@:overload @:final public function pushNamespaceContext(pr : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
+	@:overload @:public @:final public function pushNamespaceContext(pr : com.sun.org.apache.xml.internal.utils.PrefixResolver) : Void;
 	
 	/**
 	* Just increment the namespace contest stack, so that setNamespaceContext
 	* can be used on the slot.
 	*/
-	@:overload @:final public function pushNamespaceContextNull() : Void;
+	@:overload @:public @:final public function pushNamespaceContextNull() : Void;
 	
 	/**
 	* Pop the current namespace context for the xpath.
 	*/
-	@:overload @:final public function popNamespaceContext() : Void;
+	@:overload @:public @:final public function popNamespaceContext() : Void;
 	
-	@:overload public function getAxesIteratorStackStacks() : java.util.Stack<Dynamic>;
+	@:overload @:public public function getAxesIteratorStackStacks() : java.util.Stack<Dynamic>;
 	
-	@:overload public function setAxesIteratorStackStacks(s : java.util.Stack<Dynamic>) : Void;
+	@:overload @:public public function setAxesIteratorStackStacks(s : java.util.Stack<Dynamic>) : Void;
 	
 	/**
 	* Push a TreeWalker on the stack.
@@ -495,13 +495,13 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param iter A sub-context AxesWalker.
 	* @xsl.usage internal
 	*/
-	@:overload @:final public function pushSubContextList(iter : com.sun.org.apache.xpath.internal.axes.SubContextList) : Void;
+	@:overload @:public @:final public function pushSubContextList(iter : com.sun.org.apache.xpath.internal.axes.SubContextList) : Void;
 	
 	/**
 	* Pop the last pushed axes iterator.
 	* @xsl.usage internal
 	*/
-	@:overload @:final public function popSubContextList() : Void;
+	@:overload @:public @:final public function popSubContextList() : Void;
 	
 	/**
 	* Get the current axes iterator, or return null if none.
@@ -509,7 +509,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @return the sub-context node list.
 	* @xsl.usage internal
 	*/
-	@:overload public function getSubContextList() : com.sun.org.apache.xpath.internal.axes.SubContextList;
+	@:overload @:public public function getSubContextList() : com.sun.org.apache.xpath.internal.axes.SubContextList;
 	
 	/**
 	* Get the <a href="http://www.w3.org/TR/xslt#dt-current-node-list">current node list</a>
@@ -518,27 +518,27 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @return the <a href="http://www.w3.org/TR/xslt#dt-current-node-list">current node list</a>.
 	* @xsl.usage internal
 	*/
-	@:overload public function getCurrentNodeList() : com.sun.org.apache.xpath.internal.axes.SubContextList;
+	@:overload @:public public function getCurrentNodeList() : com.sun.org.apache.xpath.internal.axes.SubContextList;
 	
 	/**
 	* Get the current context node.
 	* @return The current context node.
 	*/
-	@:overload @:final public function getContextNode() : Int;
+	@:overload @:public @:final public function getContextNode() : Int;
 	
 	/**
 	* Get the current context node list.
 	* @return An iterator for the current context list, as
 	* defined in XSLT.
 	*/
-	@:overload @:final public function getContextNodes() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public @:final public function getContextNodes() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* The the expression context for extensions for this context.
 	*
 	* @return An object that implements the ExpressionContext.
 	*/
-	@:overload public function getExpressionContext() : com.sun.org.apache.xalan.internal.extensions.ExpressionContext;
+	@:overload @:public public function getExpressionContext() : com.sun.org.apache.xalan.internal.extensions.ExpressionContext;
 	
 	/**
 	* Get a DTM to be used as a container for a global Result Tree
@@ -556,7 +556,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getGlobalRTFDTM() : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getGlobalRTFDTM() : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Get a DTM to be used as a container for a dynamic Result Tree
@@ -567,13 +567,13 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload public function getRTFDTM() : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:public public function getRTFDTM() : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/** Push the RTFDTM's context mark, to allows discarding RTFs added after this
 	* point. (If it doesn't exist we don't push, since we might still be able to
 	* get away with not creating it. That requires that excessive pops be harmless.)
 	* */
-	@:overload public function pushRTFContext() : Void;
+	@:overload @:public public function pushRTFContext() : Void;
 	
 	/** Pop the RTFDTM's context mark. This discards any RTFs added after the last
 	* mark was set.
@@ -589,7 +589,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* if one exists, in whatever state we left it in. UGLY, but hopefully the
 	* situation which forces us to consider this will arise exceedingly rarely.
 	* */
-	@:overload public function popRTFContext() : Void;
+	@:overload @:public public function popRTFContext() : Void;
 	
 	/**
 	* Gets DTMXRTreeFrag object if one has already been created.
@@ -598,7 +598,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @param dtmIdentity
 	* @return DTMXRTreeFrag
 	*/
-	@:overload public function getDTMXRTreeFrag(dtmIdentity : Int) : com.sun.org.apache.xpath.internal.objects.DTMXRTreeFrag;
+	@:overload @:public public function getDTMXRTreeFrag(dtmIdentity : Int) : com.sun.org.apache.xpath.internal.objects.DTMXRTreeFrag;
 	
 	
 }
@@ -611,7 +611,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* to the ExpressionContext interface to avoid having to call this method.
 	* @return the XPathContext associated with this XPathExpressionContext.
 	*/
-	@:overload public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
+	@:overload @:public public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	/**
 	* Return the DTMManager object.  Though XPathContext context extends
@@ -619,50 +619,50 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* caller needs to make a lot of calls to the DTMManager, it is faster
 	* if it gets the real one from this function.
 	*/
-	@:overload public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
+	@:overload @:public public function getDTMManager() : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Get the current context node.
 	* @return The current context node.
 	*/
-	@:overload public function getContextNode() : org.w3c.dom.Node;
+	@:overload @:public public function getContextNode() : org.w3c.dom.Node;
 	
 	/**
 	* Get the current context node list.
 	* @return An iterator for the current context list, as
 	* defined in XSLT.
 	*/
-	@:overload public function getContextNodes() : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function getContextNodes() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Get the error listener.
 	* @return The registered error listener.
 	*/
-	@:overload public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	/**
 	* Return the state of the services mechanism feature.
 	*/
-	@:overload public function useServicesMechnism() : Bool;
+	@:overload @:public public function useServicesMechnism() : Bool;
 	
 	/**
 	* Set the state of the services mechanism feature.
 	*/
-	@:overload public function setServicesMechnism(flag : Bool) : Void;
+	@:overload @:public public function setServicesMechnism(flag : Bool) : Void;
 	
 	/**
 	* Get the value of a node as a number.
 	* @param n Node to be converted to a number.  May be null.
 	* @return value of n as a number.
 	*/
-	@:overload public function toNumber(n : org.w3c.dom.Node) : Float;
+	@:overload @:public public function toNumber(n : org.w3c.dom.Node) : Float;
 	
 	/**
 	* Get the value of a node as a string.
 	* @param n Node to be converted to a string.  May be null.
 	* @return value of n as a string, or an empty string if n is null.
 	*/
-	@:overload public function toString(n : org.w3c.dom.Node) : String;
+	@:overload @:public public function toString(n : org.w3c.dom.Node) : String;
 	
 	/**
 	* Get a variable based on it's qualified name.
@@ -670,7 +670,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* @return The evaluated value of the variable.
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload @:final public function getVariableOrParam(qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:final public function getVariableOrParam(qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

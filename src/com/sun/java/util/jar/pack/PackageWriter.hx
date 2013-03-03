@@ -29,7 +29,7 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class PackageWriter extends com.sun.java.util.jar.pack.BandStructure
 {
-	@:overload override private function getCPIndex(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
+	@:overload @:protected override private function getCPIndex(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
 	
 }

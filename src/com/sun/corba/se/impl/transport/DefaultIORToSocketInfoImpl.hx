@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.transport;
 */
 extern class DefaultIORToSocketInfoImpl implements com.sun.corba.se.spi.transport.IORToSocketInfo
 {
-	@:overload public function getSocketInfo(ior : com.sun.corba.se.spi.ior.IOR) : java.util.List<Dynamic>;
+	@:overload @:public public function getSocketInfo(ior : com.sun.corba.se.spi.ior.IOR) : java.util.List<Dynamic>;
 	
 	
 }

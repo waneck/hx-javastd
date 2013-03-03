@@ -25,15 +25,15 @@ package sun.nio.fs;
 */
 @:internal extern class FileOwnerAttributeViewImpl implements java.nio.file.attribute.FileOwnerAttributeView implements sun.nio.fs.DynamicFileAttributeView
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function setAttribute(attribute : String, value : Dynamic) : Void;
+	@:overload @:public public function setAttribute(attribute : String, value : Dynamic) : Void;
 	
-	@:overload public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
+	@:overload @:public public function readAttributes(attributes : java.NativeArray<String>) : java.util.Map<String, Dynamic>;
 	
-	@:overload public function getOwner() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public public function getOwner() : java.nio.file.attribute.UserPrincipal;
 	
-	@:overload public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
+	@:overload @:public public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
 	
 	
 }

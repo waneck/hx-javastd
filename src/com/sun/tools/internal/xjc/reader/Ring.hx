@@ -25,26 +25,26 @@ package com.sun.tools.internal.xjc.reader;
 */
 extern class Ring
 {
-	@:overload public static function add<T>(clazz : Class<T>, instance : T) : Void;
+	@:overload @:public @:static public static function add<T>(clazz : Class<T>, instance : T) : Void;
 	
-	@:overload public static function add<T>(o : T) : Void;
+	@:overload @:public @:static public static function add<T>(o : T) : Void;
 	
-	@:overload public static function get<T>(key : Class<T>) : T;
+	@:overload @:public @:static public static function get<T>(key : Class<T>) : T;
 	
 	/**
 	* A {@link Ring} instance is associated with a thread.
 	*/
-	@:overload public static function get() : com.sun.tools.internal.xjc.reader.Ring;
+	@:overload @:public @:static public static function get() : com.sun.tools.internal.xjc.reader.Ring;
 	
 	/**
 	* Starts a new scope.
 	*/
-	@:overload public static function begin() : com.sun.tools.internal.xjc.reader.Ring;
+	@:overload @:public @:static public static function begin() : com.sun.tools.internal.xjc.reader.Ring;
 	
 	/**
 	* Ends a scope.
 	*/
-	@:overload public static function end(old : com.sun.tools.internal.xjc.reader.Ring) : Void;
+	@:overload @:public @:static public static function end(old : com.sun.tools.internal.xjc.reader.Ring) : Void;
 	
 	
 }

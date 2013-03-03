@@ -25,40 +25,40 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class ActiveObjectMap
 {
-	private var poa : com.sun.corba.se.impl.oa.poa.POAImpl;
+	@:protected private var poa : com.sun.corba.se.impl.oa.poa.POAImpl;
 	
-	@:overload private function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
+	@:overload @:protected private function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
 	
-	@:overload public static function create(poa : com.sun.corba.se.impl.oa.poa.POAImpl, multipleIDsAllowed : Bool) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap;
+	@:overload @:public @:static public static function create(poa : com.sun.corba.se.impl.oa.poa.POAImpl, multipleIDsAllowed : Bool) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap;
 	
-	@:overload @:final public function contains(value : org.omg.PortableServer.Servant) : Bool;
+	@:overload @:public @:final public function contains(value : org.omg.PortableServer.Servant) : Bool;
 	
-	@:overload @:final public function containsKey(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Bool;
+	@:overload @:public @:final public function containsKey(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Bool;
 	
 	/** get Returbs the entry assigned to the key, or creates a new
 	* entry in state INVALID if none is present.
 	*/
-	@:overload @:final public function get(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : com.sun.corba.se.impl.oa.poa.AOMEntry;
+	@:overload @:public @:final public function get(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : com.sun.corba.se.impl.oa.poa.AOMEntry;
 	
-	@:overload @:final public function getServant(entry : com.sun.corba.se.impl.oa.poa.AOMEntry) : org.omg.PortableServer.Servant;
+	@:overload @:public @:final public function getServant(entry : com.sun.corba.se.impl.oa.poa.AOMEntry) : org.omg.PortableServer.Servant;
 	
-	@:overload @:abstract public function getKey(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
+	@:overload @:public @:abstract public function getKey(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
 	
-	@:overload public function getKey(value : org.omg.PortableServer.Servant) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
+	@:overload @:public public function getKey(value : org.omg.PortableServer.Servant) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
 	
-	@:overload private function putEntry(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
+	@:overload @:protected private function putEntry(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
 	
-	@:overload @:final public function putServant(servant : org.omg.PortableServer.Servant, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
+	@:overload @:public @:final public function putServant(servant : org.omg.PortableServer.Servant, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
 	
-	@:overload @:abstract private function removeEntry(entry : com.sun.corba.se.impl.oa.poa.AOMEntry, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
+	@:overload @:protected @:abstract private function removeEntry(entry : com.sun.corba.se.impl.oa.poa.AOMEntry, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
 	
-	@:overload @:final public function remove(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
+	@:overload @:public @:final public function remove(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
 	
-	@:overload @:abstract public function hasMultipleIDs(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Bool;
+	@:overload @:public @:abstract public function hasMultipleIDs(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Bool;
 	
-	@:overload private function clear() : Void;
+	@:overload @:protected private function clear() : Void;
 	
-	@:overload @:final public function keySet() : java.util.Set<Dynamic>;
+	@:overload @:public @:final public function keySet() : java.util.Set<Dynamic>;
 	
 	
 }
@@ -70,45 +70,45 @@ extern class ActiveObjectMap
 */
 @:native('com$sun$corba$se$impl$oa$poa$ActiveObjectMap$Key') extern class ActiveObjectMap_Key
 {
-	public var id : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var id : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(key : Dynamic) : Bool;
+	@:overload @:public public function equals(key : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:internal extern class SingleObjectMap extends com.sun.corba.se.impl.oa.poa.ActiveObjectMap
 {
-	@:overload public function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
+	@:overload @:public public function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
 	
-	@:overload override public function getKey(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
+	@:overload @:public override public function getKey(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
 	
-	@:overload override private function putEntry(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
+	@:overload @:protected override private function putEntry(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
 	
-	@:overload override public function hasMultipleIDs(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Bool;
+	@:overload @:public override public function hasMultipleIDs(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Bool;
 	
-	@:overload override private function removeEntry(entry : com.sun.corba.se.impl.oa.poa.AOMEntry, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
+	@:overload @:protected override private function removeEntry(entry : com.sun.corba.se.impl.oa.poa.AOMEntry, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }
 @:internal extern class MultipleObjectMap extends com.sun.corba.se.impl.oa.poa.ActiveObjectMap
 {
-	@:overload public function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
+	@:overload @:public public function new(poa : com.sun.corba.se.impl.oa.poa.POAImpl) : Void;
 	
-	@:overload override public function getKey(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
+	@:overload @:public override public function getKey(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key;
 	
-	@:overload override private function putEntry(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
+	@:overload @:protected override private function putEntry(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Void;
 	
-	@:overload override public function hasMultipleIDs(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Bool;
+	@:overload @:public override public function hasMultipleIDs(value : com.sun.corba.se.impl.oa.poa.AOMEntry) : Bool;
 	
-	@:overload override private function removeEntry(entry : com.sun.corba.se.impl.oa.poa.AOMEntry, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
+	@:overload @:protected override private function removeEntry(entry : com.sun.corba.se.impl.oa.poa.AOMEntry, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }

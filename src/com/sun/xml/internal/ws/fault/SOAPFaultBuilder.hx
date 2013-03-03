@@ -25,12 +25,12 @@ package com.sun.xml.internal.ws.fault;
 */
 extern class SOAPFaultBuilder
 {
-	@:overload public function getFirstDetailEntryName() : javax.xml.namespace.QName;
+	@:overload @:public public function getFirstDetailEntryName() : javax.xml.namespace.QName;
 	
 	/**
 	* This should be called from the client side to throw an {@link Exception} for a given soap mesage
 	*/
-	@:overload public function createException(exceptions : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.CheckedExceptionImpl>) : java.lang.Throwable;
+	@:overload @:public public function createException(exceptions : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.CheckedExceptionImpl>) : java.lang.Throwable;
 	
 	/**
 	* To be called to convert a  {@link ProtocolException} and faultcode for a given {@link SOAPVersion} in to a {@link Message}.
@@ -41,7 +41,7 @@ extern class SOAPFaultBuilder
 	* faultcode present in the underlying {@link SOAPFault}.
 	* @return {@link Message} representing SOAP fault
 	*/
-	@:overload public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, ex : javax.xml.ws.ProtocolException, faultcode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, ex : javax.xml.ws.ProtocolException, faultcode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* To be called by the server runtime in the situations when there is an Exception that needs to be transformed in
@@ -62,14 +62,14 @@ extern class SOAPFaultBuilder
 	*                    </ul>
 	* @param soapVersion non-null
 	*/
-	@:overload public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, ceModel : com.sun.xml.internal.ws.model.CheckedExceptionImpl, ex : java.lang.Throwable) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, ceModel : com.sun.xml.internal.ws.model.CheckedExceptionImpl, ex : java.lang.Throwable) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Create the Message with the specified faultCode
 	*
 	* @see #createSOAPFaultMessage(SOAPVersion, CheckedExceptionImpl, Throwable)
 	*/
-	@:overload public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, ceModel : com.sun.xml.internal.ws.model.CheckedExceptionImpl, ex : java.lang.Throwable, faultCode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, ceModel : com.sun.xml.internal.ws.model.CheckedExceptionImpl, ex : java.lang.Throwable, faultCode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Server runtime will call this when there is some internal error not resulting from an exception.
@@ -94,11 +94,11 @@ extern class SOAPFaultBuilder
 	*                    </ul>
 	* @return non-null {@link Message}
 	*/
-	@:overload public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, faultString : String, faultCode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, faultString : String, faultCode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, fault : javax.xml.soap.SOAPFault) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createSOAPFaultMessage(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, fault : javax.xml.soap.SOAPFault) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload @:abstract private function getProtocolException() : java.lang.Throwable;
+	@:overload @:abstract @:protected private function getProtocolException() : java.lang.Throwable;
 	
 	/**
 	* Parses a fault {@link Message} and returns it as a {@link SOAPFaultBuilder}.
@@ -106,12 +106,12 @@ extern class SOAPFaultBuilder
 	* @return always non-null valid object.
 	* @throws JAXBException if the parsing fails.
 	*/
-	@:overload public static function create(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.fault.SOAPFaultBuilder;
+	@:overload @:public @:static public static function create(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.fault.SOAPFaultBuilder;
 	
 	/**
 	* Set to false if you don't want the generated faults to have stack trace in it.
 	*/
-	@:native('captureStackTrace') public static var _captureStackTrace : Bool;
+	@:native('captureStackTrace') @:public @:static public static var _captureStackTrace : Bool;
 	
 	
 }

@@ -25,31 +25,31 @@ package sun.tools.jconsole.inspector;
 */
 extern class XDataViewer
 {
-	public static var OPEN(default, null) : Int;
+	@:public @:static @:final public static var OPEN(default, null) : Int;
 	
-	public static var ARRAY(default, null) : Int;
+	@:public @:static @:final public static var ARRAY(default, null) : Int;
 	
-	public static var NUMERIC(default, null) : Int;
+	@:public @:static @:final public static var NUMERIC(default, null) : Int;
 	
-	public static var NOT_SUPPORTED(default, null) : Int;
+	@:public @:static @:final public static var NOT_SUPPORTED(default, null) : Int;
 	
-	@:overload public function new(tab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(tab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload public static function registerForMouseEvent(comp : java.awt.Component, mouseListener : java.awt.event.MouseListener) : Void;
+	@:overload @:public @:static public static function registerForMouseEvent(comp : java.awt.Component, mouseListener : java.awt.event.MouseListener) : Void;
 	
-	@:overload public static function dispose(tab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public @:static public static function dispose(tab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload public static function isViewableValue(value : Dynamic) : Bool;
+	@:overload @:public @:static public static function isViewableValue(value : Dynamic) : Bool;
 	
-	@:overload public static function getViewerType(data : Dynamic) : Int;
+	@:overload @:public @:static public static function getViewerType(data : Dynamic) : Int;
 	
-	@:overload public static function getActionLabel(type : Int) : String;
+	@:overload @:public @:static public static function getActionLabel(type : Int) : String;
 	
-	@:overload public function createOperationViewer(value : Dynamic, mbean : sun.tools.jconsole.inspector.XMBean) : java.awt.Component;
+	@:overload @:public public function createOperationViewer(value : Dynamic, mbean : sun.tools.jconsole.inspector.XMBean) : java.awt.Component;
 	
-	@:overload public static function createNotificationViewer(value : Dynamic) : java.awt.Component;
+	@:overload @:public @:static public static function createNotificationViewer(value : Dynamic) : java.awt.Component;
 	
-	@:overload public function createAttributeViewer(value : Dynamic, mbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, table : javax.swing.JTable) : java.awt.Component;
+	@:overload @:public public function createAttributeViewer(value : Dynamic, mbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, table : javax.swing.JTable) : java.awt.Component;
 	
 	
 }

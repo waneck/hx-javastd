@@ -34,7 +34,7 @@ extern class AudioSystem
 	* a value of <code>NOT_SPECIFIED</code> for such parameters.  Other
 	* methods may also accept or return this value, as documented.
 	*/
-	public static var NOT_SPECIFIED(default, null) : Int;
+	@:public @:static @:final public static var NOT_SPECIFIED(default, null) : Int;
 	
 	/**
 	* Obtains an array of mixer info objects that represents
@@ -43,7 +43,7 @@ extern class AudioSystem
 	* are available on the system, an array of length 0 is returned.
 	* @see #getMixer
 	*/
-	@:overload public static function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
+	@:overload @:public @:static public static function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
 	
 	/**
 	* Obtains the requested audio mixer.
@@ -56,7 +56,7 @@ extern class AudioSystem
 	* a mixer installed on the system
 	* @see #getMixerInfo
 	*/
-	@:overload public static function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
+	@:overload @:public @:static public static function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
 	
 	/**
 	* Obtains information about all source lines of a particular type that are supported
@@ -69,7 +69,7 @@ extern class AudioSystem
 	*
 	* @see Mixer#getSourceLineInfo(Line.Info)
 	*/
-	@:overload public static function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public @:static public static function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Obtains information about all target lines of a particular type that are supported
@@ -82,7 +82,7 @@ extern class AudioSystem
 	*
 	* @see Mixer#getTargetLineInfo(Line.Info)
 	*/
-	@:overload public static function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public @:static public static function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Indicates whether the system supports any lines that match
@@ -94,7 +94,7 @@ extern class AudioSystem
 	*
 	* @see Mixer#isLineSupported(Line.Info)
 	*/
-	@:overload public static function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public @:static public static function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Obtains a line that matches the description in the specified
@@ -133,7 +133,7 @@ extern class AudioSystem
 	* <code>Line.Info</code> object
 	* through any installed mixer
 	*/
-	@:overload public static function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload @:public @:static public static function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
 	/**
 	* Obtains a clip that can be used for playing back
@@ -168,7 +168,7 @@ extern class AudioSystem
 	* @see #getClip(Mixer.Info)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getClip() : javax.sound.sampled.Clip;
+	@:require(java5) @:overload @:public @:static public static function getClip() : javax.sound.sampled.Clip;
 	
 	/**
 	* Obtains a clip from the specified mixer that can be
@@ -195,7 +195,7 @@ extern class AudioSystem
 	* @see #getClip()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getClip(mixerInfo : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Clip;
+	@:require(java5) @:overload @:public @:static public static function getClip(mixerInfo : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Clip;
 	
 	/**
 	* Obtains a source data line that can be used for playing back
@@ -238,7 +238,7 @@ extern class AudioSystem
 	* @see #getSourceDataLine(AudioFormat, Mixer.Info)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getSourceDataLine(format : javax.sound.sampled.AudioFormat) : javax.sound.sampled.SourceDataLine;
+	@:require(java5) @:overload @:public @:static public static function getSourceDataLine(format : javax.sound.sampled.AudioFormat) : javax.sound.sampled.SourceDataLine;
 	
 	/**
 	* Obtains a source data line that can be used for playing back
@@ -277,7 +277,7 @@ extern class AudioSystem
 	* @see #getSourceDataLine(AudioFormat)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getSourceDataLine(format : javax.sound.sampled.AudioFormat, mixerinfo : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.SourceDataLine;
+	@:require(java5) @:overload @:public @:static public static function getSourceDataLine(format : javax.sound.sampled.AudioFormat, mixerinfo : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.SourceDataLine;
 	
 	/**
 	* Obtains a target data line that can be used for recording
@@ -321,7 +321,7 @@ extern class AudioSystem
 	* @see AudioPermission
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getTargetDataLine(format : javax.sound.sampled.AudioFormat) : javax.sound.sampled.TargetDataLine;
+	@:require(java5) @:overload @:public @:static public static function getTargetDataLine(format : javax.sound.sampled.AudioFormat) : javax.sound.sampled.TargetDataLine;
 	
 	/**
 	* Obtains a target data line that can be used for recording
@@ -360,7 +360,7 @@ extern class AudioSystem
 	* @see AudioPermission
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getTargetDataLine(format : javax.sound.sampled.AudioFormat, mixerinfo : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.TargetDataLine;
+	@:require(java5) @:overload @:public @:static public static function getTargetDataLine(format : javax.sound.sampled.AudioFormat, mixerinfo : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.TargetDataLine;
 	
 	/**
 	* Obtains the encodings that the system can obtain from an
@@ -372,7 +372,7 @@ extern class AudioSystem
 	* an array of length 0 is returned. Otherwise, the array will have a length
 	* of at least 1, representing <code>sourceEncoding</code> (no conversion).
 	*/
-	@:overload public static function getTargetEncodings(sourceEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public @:static public static function getTargetEncodings(sourceEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	* Obtains the encodings that the system can obtain from an
@@ -384,7 +384,7 @@ extern class AudioSystem
 	* an array of length 0 is returned. Otherwise, the array will have a length
 	* of at least 1, representing the encoding of <code>sourceFormat</code> (no conversion).
 	*/
-	@:overload public static function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public @:static public static function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	* Indicates whether an audio input stream of the specified encoding
@@ -395,7 +395,7 @@ extern class AudioSystem
 	* @return <code>true</code> if the conversion is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public static function isConversionSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public @:static public static function isConversionSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
 	
 	/**
 	* Obtains an audio input stream of the indicated encoding, by converting the
@@ -409,7 +409,7 @@ extern class AudioSystem
 	* @see #isConversionSupported(AudioFormat.Encoding, AudioFormat)
 	* @see #getAudioInputStream(AudioFormat, AudioInputStream)
 	*/
-	@:overload public static function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:static public static function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains the formats that have a particular encoding and that the system can
@@ -420,7 +420,7 @@ extern class AudioSystem
 	* @return array of formats.  If no formats of the specified
 	* encoding are supported, an array of length 0 is returned.
 	*/
-	@:overload public static function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:public @:static public static function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
 	/**
 	* Indicates whether an audio input stream of a specified format
@@ -430,7 +430,7 @@ extern class AudioSystem
 	* @return <code>true</code> if the conversion is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public static function isConversionSupported(targetFormat : javax.sound.sampled.AudioFormat, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public @:static public static function isConversionSupported(targetFormat : javax.sound.sampled.AudioFormat, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
 	
 	/**
 	* Obtains an audio input stream of the indicated format, by converting the
@@ -444,7 +444,7 @@ extern class AudioSystem
 	* @see #isConversionSupported(AudioFormat, AudioFormat)
 	* @see #getAudioInputStream(AudioFormat.Encoding, AudioInputStream)
 	*/
-	@:overload public static function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:static public static function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains the audio file format of the provided input stream.  The stream must
@@ -463,7 +463,7 @@ extern class AudioSystem
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload public static function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public @:static public static function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the specified URL.  The URL must
@@ -475,7 +475,7 @@ extern class AudioSystem
 	* file data recognized by the system
 	* @throws IOException if an input/output exception occurs
 	*/
-	@:overload public static function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public @:static public static function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains the audio file format of the specified <code>File</code>.  The <code>File</code> must
@@ -487,7 +487,7 @@ extern class AudioSystem
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload public static function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public @:static public static function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
 	/**
 	* Obtains an audio input stream from the provided input stream.  The stream must
@@ -508,7 +508,7 @@ extern class AudioSystem
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload public static function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:static public static function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio input stream from the URL provided.  The URL must
@@ -521,7 +521,7 @@ extern class AudioSystem
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload public static function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:static public static function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains an audio input stream from the provided <code>File</code>.  The <code>File</code> must
@@ -534,14 +534,14 @@ extern class AudioSystem
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload public static function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public @:static public static function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	* Obtains the file types for which file writing support is provided by the system.
 	* @return array of unique file types.  If no file types are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload public static function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public @:static public static function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
 	/**
 	* Indicates whether file writing support for the specified file type is provided
@@ -550,7 +550,7 @@ extern class AudioSystem
 	* @return <code>true</code> if the file type is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public static function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type) : Bool;
+	@:overload @:public @:static public static function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type) : Bool;
 	
 	/**
 	* Obtains the file types that the system can write from the
@@ -560,7 +560,7 @@ extern class AudioSystem
 	* @return array of file types.  If no file types are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload public static function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:public @:static public static function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
 	/**
 	* Indicates whether an audio file of the specified file type can be written
@@ -570,7 +570,7 @@ extern class AudioSystem
 	* @return <code>true</code> if the file type is supported for this audio input stream,
 	* otherwise <code>false</code>
 	*/
-	@:overload public static function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, stream : javax.sound.sampled.AudioInputStream) : Bool;
+	@:overload @:public @:static public static function isFileTypeSupported(fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, stream : javax.sound.sampled.AudioInputStream) : Bool;
 	
 	/**
 	* Writes a stream of bytes representing an audio file of the specified file type
@@ -591,7 +591,7 @@ extern class AudioSystem
 	* @see #isFileTypeSupported
 	* @see     #getAudioFileTypes
 	*/
-	@:overload public static function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
+	@:overload @:public @:static public static function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
 	
 	/**
 	* Writes a stream of bytes representing an audio file of the specified file type
@@ -607,7 +607,7 @@ extern class AudioSystem
 	* @see #isFileTypeSupported
 	* @see     #getAudioFileTypes
 	*/
-	@:overload public static function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
+	@:overload @:public @:static public static function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
 	
 	
 }

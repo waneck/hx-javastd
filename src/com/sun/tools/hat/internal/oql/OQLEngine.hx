@@ -34,9 +34,9 @@ package com.sun.tools.hat.internal.oql;
 */
 extern class OQLEngine
 {
-	@:overload public static function isOQLSupported() : Bool;
+	@:overload @:public @:static public static function isOQLSupported() : Bool;
 	
-	@:overload public function new(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public public function new(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
 	/**
 	Query is of the form
@@ -46,15 +46,15 @@ extern class OQLEngine
 	[ where &lt;java script boolean expression&gt; ]
 	]
 	*/
-	@:overload @:synchronized public function executeQuery(query : String, visitor : com.sun.tools.hat.internal.oql.ObjectVisitor) : Void;
+	@:overload @:public @:synchronized public function executeQuery(query : String, visitor : com.sun.tools.hat.internal.oql.ObjectVisitor) : Void;
 	
-	@:overload public function evalScript(script : String) : Dynamic;
+	@:overload @:public public function evalScript(script : String) : Dynamic;
 	
-	@:overload public function wrapJavaObject(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : Dynamic;
+	@:overload @:public public function wrapJavaObject(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : Dynamic;
 	
-	@:overload public function toHtml(obj : Dynamic) : Dynamic;
+	@:overload @:public public function toHtml(obj : Dynamic) : Dynamic;
 	
-	@:overload public function call(func : String, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function call(func : String, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

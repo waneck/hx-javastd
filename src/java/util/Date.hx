@@ -32,7 +32,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*
 	* @see     java.lang.System#currentTimeMillis()
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Allocates a <code>Date</code> object and initializes it to
@@ -43,7 +43,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @param   date   the milliseconds since January 1, 1970, 00:00:00 GMT.
 	* @see     java.lang.System#currentTimeMillis()
 	*/
-	@:overload public function new(date : haxe.Int64) : Void;
+	@:overload @:public public function new(date : haxe.Int64) : Void;
 	
 	/**
 	* Allocates a <code>Date</code> object and initializes it so that
@@ -59,7 +59,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* replaced by <code>Calendar.set(year + 1900, month, date)</code>
 	* or <code>GregorianCalendar(year + 1900, month, date)</code>.
 	*/
-	@:overload public function new(year : Int, month : Int, date : Int) : Void;
+	@:overload @:public public function new(year : Int, month : Int, date : Int) : Void;
 	
 	/**
 	* Allocates a <code>Date</code> object and initializes it so that
@@ -79,7 +79,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* hrs, min)</code> or <code>GregorianCalendar(year + 1900,
 	* month, date, hrs, min)</code>.
 	*/
-	@:overload public function new(year : Int, month : Int, date : Int, hrs : Int, min : Int) : Void;
+	@:overload @:public public function new(year : Int, month : Int, date : Int, hrs : Int, min : Int) : Void;
 	
 	/**
 	* Allocates a <code>Date</code> object and initializes it so that
@@ -100,7 +100,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* hrs, min, sec)</code> or <code>GregorianCalendar(year + 1900,
 	* month, date, hrs, min, sec)</code>.
 	*/
-	@:overload public function new(year : Int, month : Int, date : Int, hrs : Int, min : Int, sec : Int) : Void;
+	@:overload @:public public function new(year : Int, month : Int, date : Int, hrs : Int, min : Int, sec : Int) : Void;
 	
 	/**
 	* Allocates a <code>Date</code> object and initializes it so that
@@ -114,12 +114,12 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>DateFormat.parse(String s)</code>.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Return a copy of this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Determines the date and time based on the arguments. The
@@ -146,7 +146,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* month, date, hrs, min, sec)</code>, using a UTC
 	* <code>TimeZone</code>, followed by <code>Calendar.getTime().getTime()</code>.
 	*/
-	@:overload public static function UTC(year : Int, month : Int, date : Int, hrs : Int, min : Int, sec : Int) : haxe.Int64;
+	@:overload @:public @:static public static function UTC(year : Int, month : Int, date : Int, hrs : Int, min : Int, sec : Int) : haxe.Int64;
 	
 	/**
 	* Attempts to interpret the string <tt>s</tt> as a representation
@@ -261,7 +261,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>DateFormat.parse(String s)</code>.
 	*/
-	@:overload public static function parse(s : String) : haxe.Int64;
+	@:overload @:public @:static public static function parse(s : String) : haxe.Int64;
 	
 	/**
 	* Returns a value that is the result of subtracting 1900 from the
@@ -274,7 +274,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.get(Calendar.YEAR) - 1900</code>.
 	*/
-	@:overload public function getYear() : Int;
+	@:overload @:public public function getYear() : Int;
 	
 	/**
 	* Sets the year of this <tt>Date</tt> object to be the specified
@@ -291,7 +291,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.set(Calendar.YEAR, year + 1900)</code>.
 	*/
-	@:overload public function setYear(year : Int) : Void;
+	@:overload @:public public function setYear(year : Int) : Void;
 	
 	/**
 	* Returns a number representing the month that contains or begins
@@ -304,7 +304,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.get(Calendar.MONTH)</code>.
 	*/
-	@:overload public function getMonth() : Int;
+	@:overload @:public public function getMonth() : Int;
 	
 	/**
 	* Sets the month of this date to the specified value. This
@@ -320,7 +320,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.set(Calendar.MONTH, int month)</code>.
 	*/
-	@:overload public function setMonth(month : Int) : Void;
+	@:overload @:public public function setMonth(month : Int) : Void;
 	
 	/**
 	* Returns the day of the month represented by this <tt>Date</tt> object.
@@ -335,7 +335,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* replaced by <code>Calendar.get(Calendar.DAY_OF_MONTH)</code>.
 	* @deprecated
 	*/
-	@:overload public function getDate() : Int;
+	@:overload @:public public function getDate() : Int;
 	
 	/**
 	* Sets the day of the month of this <tt>Date</tt> object to the
@@ -352,7 +352,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.set(Calendar.DAY_OF_MONTH, int date)</code>.
 	*/
-	@:overload public function setDate(date : Int) : Void;
+	@:overload @:public public function setDate(date : Int) : Void;
 	
 	/**
 	* Returns the day of the week represented by this date. The
@@ -368,7 +368,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.get(Calendar.DAY_OF_WEEK)</code>.
 	*/
-	@:overload public function getDay() : Int;
+	@:overload @:public public function getDay() : Int;
 	
 	/**
 	* Returns the hour represented by this <tt>Date</tt> object. The
@@ -382,7 +382,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.get(Calendar.HOUR_OF_DAY)</code>.
 	*/
-	@:overload public function getHours() : Int;
+	@:overload @:public public function getHours() : Int;
 	
 	/**
 	* Sets the hour of this <tt>Date</tt> object to the specified value.
@@ -396,7 +396,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.set(Calendar.HOUR_OF_DAY, int hours)</code>.
 	*/
-	@:overload public function setHours(hours : Int) : Void;
+	@:overload @:public public function setHours(hours : Int) : Void;
 	
 	/**
 	* Returns the number of minutes past the hour represented by this date,
@@ -408,7 +408,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.get(Calendar.MINUTE)</code>.
 	*/
-	@:overload public function getMinutes() : Int;
+	@:overload @:public public function getMinutes() : Int;
 	
 	/**
 	* Sets the minutes of this <tt>Date</tt> object to the specified value.
@@ -422,7 +422,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.set(Calendar.MINUTE, int minutes)</code>.
 	*/
-	@:overload public function setMinutes(minutes : Int) : Void;
+	@:overload @:public public function setMinutes(minutes : Int) : Void;
 	
 	/**
 	* Returns the number of seconds past the minute represented by this date.
@@ -435,7 +435,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.get(Calendar.SECOND)</code>.
 	*/
-	@:overload public function getSeconds() : Int;
+	@:overload @:public public function getSeconds() : Int;
 	
 	/**
 	* Sets the seconds of this <tt>Date</tt> to the specified value.
@@ -449,7 +449,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>Calendar.set(Calendar.SECOND, int seconds)</code>.
 	*/
-	@:overload public function setSeconds(seconds : Int) : Void;
+	@:overload @:public public function setSeconds(seconds : Int) : Void;
 	
 	/**
 	* Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT
@@ -458,7 +458,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @return  the number of milliseconds since January 1, 1970, 00:00:00 GMT
 	*          represented by this date.
 	*/
-	@:overload public function getTime() : haxe.Int64;
+	@:overload @:public public function getTime() : haxe.Int64;
 	
 	/**
 	* Sets this <code>Date</code> object to represent a point in time that is
@@ -466,7 +466,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*
 	* @param   time   the number of milliseconds.
 	*/
-	@:overload public function setTime(time : haxe.Int64) : Void;
+	@:overload @:public public function setTime(time : haxe.Int64) : Void;
 	
 	/**
 	* Tests if this date is before the specified date.
@@ -478,7 +478,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @exception NullPointerException if <code>when</code> is null.
 	*/
-	@:overload public function before(when : java.util.Date) : Bool;
+	@:overload @:public public function before(when : java.util.Date) : Bool;
 	
 	/**
 	* Tests if this date is after the specified date.
@@ -490,7 +490,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @exception NullPointerException if <code>when</code> is null.
 	*/
-	@:overload public function after(when : java.util.Date) : Bool;
+	@:overload @:public public function after(when : java.util.Date) : Bool;
 	
 	/**
 	* Compares two dates for equality.
@@ -507,7 +507,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @see     java.util.Date#getTime()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares two Dates for ordering.
@@ -520,7 +520,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @since   1.2
 	* @exception NullPointerException if <code>anotherDate</code> is null.
 	*/
-	@:require(java2) @:overload public function compareTo(anotherDate : java.util.Date) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherDate : java.util.Date) : Int;
 	
 	/**
 	* Returns a hash code value for this object. The result is the
@@ -532,7 +532,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*
 	* @return  a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Converts this <code>Date</code> object to a <code>String</code>
@@ -564,7 +564,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @see     java.util.Date#toLocaleString()
 	* @see     java.util.Date#toGMTString()
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Creates a string representation of this <tt>Date</tt> object in an
@@ -582,7 +582,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>DateFormat.format(Date date)</code>.
 	*/
-	@:overload public function toLocaleString() : String;
+	@:overload @:public public function toLocaleString() : String;
 	
 	/**
 	* Creates a string representation of this <tt>Date</tt> object of
@@ -615,7 +615,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* replaced by <code>DateFormat.format(Date date)</code>, using a
 	* GMT <code>TimeZone</code>.
 	*/
-	@:overload public function toGMTString() : String;
+	@:overload @:public public function toGMTString() : String;
 	
 	/**
 	* Returns the offset, measured in minutes, for the local time zone
@@ -649,7 +649,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* replaced by <code>-(Calendar.get(Calendar.ZONE_OFFSET) +
 	* Calendar.get(Calendar.DST_OFFSET)) / (60 * 1000)</code>.
 	*/
-	@:overload public function getTimezoneOffset() : Int;
+	@:overload @:public public function getTimezoneOffset() : Int;
 	
 	
 }

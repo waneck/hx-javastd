@@ -63,7 +63,7 @@ package javax.crypto;
 	* @return true if the specified permission is equal to or
 	* implied by this permission, false otherwise.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two CryptoPermission objects for equality. Checks that
@@ -76,20 +76,20 @@ package javax.crypto;
 	* @param obj the object to test for equality with this object.
 	* @return true if <code>obj</code> is equal to this object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* There is no action defined for a CryptoPermission
 	* onject.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing
@@ -98,7 +98,7 @@ package javax.crypto;
 	* @return a new PermissionCollection object suitable for storing
 	* CryptoPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	/**
 	* Returns a string describing this CryptoPermission.  The convention is to
@@ -108,7 +108,7 @@ package javax.crypto;
 	*
 	* @return information about this CryptoPermission.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -122,7 +122,7 @@ package javax.crypto;
 	* @exception SecurityException - if this CryptoPermissionCollection
 	* object has been marked <i>readOnly</i>.
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this CryptoPermission object implies
@@ -133,7 +133,7 @@ package javax.crypto;
 	* @return true if the given permission  is implied by this
 	* CryptoPermissionCollection, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the CryptoPermission objects
@@ -141,7 +141,7 @@ package javax.crypto;
 	*
 	* @return an enumeration of all the CryptoPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }

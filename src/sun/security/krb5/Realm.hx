@@ -30,13 +30,13 @@ package sun.security.krb5;
 */
 extern class Realm implements java.lang.Cloneable
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Constructs a Realm object.
@@ -45,17 +45,17 @@ extern class Realm implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @exception RealmException if an error occurs while parsing a Realm object.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public static function parseRealmAtSeparator(name : String) : String;
+	@:overload @:public @:static public static function parseRealmAtSeparator(name : String) : String;
 	
-	@:overload public static function parseRealmComponent(name : String) : String;
+	@:overload @:public @:static public static function parseRealmComponent(name : String) : String;
 	
-	@:overload private static function parseRealm(name : String) : String;
+	@:overload @:protected @:static private static function parseRealm(name : String) : String;
 	
-	@:overload private static function isValidRealmString(name : String) : Bool;
+	@:overload @:protected @:static private static function isValidRealmString(name : String) : Bool;
 	
 	/**
 	* Encodes a Realm object.
@@ -64,7 +64,7 @@ extern class Realm implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) a realm from a DER input stream.  This form
@@ -78,7 +78,7 @@ extern class Realm implements java.lang.Cloneable
 	* @return an instance of Realm.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.Realm;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.Realm;
 	
 	/**
 	* Returns an array of realms that may be traversed to obtain
@@ -102,7 +102,7 @@ extern class Realm implements java.lang.Cloneable
 	* @returns array of realms
 	* @thows KrbException
 	*/
-	@:overload public static function getRealmsList(cRealm : String, sRealm : String) : java.NativeArray<String>;
+	@:overload @:public @:static public static function getRealmsList(cRealm : String, sRealm : String) : java.NativeArray<String>;
 	
 	
 }

@@ -56,7 +56,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	* @throws SerialException if an error occurs during serialization
 	* @throws SQLException if a SQL error occurs
 	*/
-	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(ch : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Constructs a <code>SerialClob</code> object that is a serialized
@@ -84,7 +84,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*     methods on the <code>Clob</code> returns a null
 	* @see java.sql.Clob
 	*/
-	@:overload public function new(clob : java.sql.Clob) : Void;
+	@:overload @:public public function new(clob : java.sql.Clob) : Void;
 	
 	/**
 	* Retrieves the number of characters in this <code>SerialClob</code>
@@ -94,7 +94,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*         <code>SerialClob</code> object's array of character
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
 	/**
 	* Returns this <code>SerialClob</code> object's data as a stream
@@ -106,7 +106,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*         <code>SerialClob</code> object's data
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getCharacterStream() : java.io.Reader;
+	@:overload @:public public function getCharacterStream() : java.io.Reader;
 	
 	/**
 	* Retrieves the <code>CLOB</code> value designated by this <code>SerialClob</code>
@@ -124,7 +124,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*     <code>CLOB</code> value represented by the <code>Clob</code> object that was
 	*     used to create this <code>SerialClob</code> object
 	*/
-	@:overload public function getAsciiStream() : java.io.InputStream;
+	@:overload @:public public function getAsciiStream() : java.io.InputStream;
 	
 	/**
 	* Returns a copy of the substring contained in this
@@ -150,7 +150,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*         consecutive characters
 	* @throws SerialException if either of the arguments is out of bounds
 	*/
-	@:overload public function getSubString(pos : haxe.Int64, length : Int) : String;
+	@:overload @:public public function getSubString(pos : haxe.Int64, length : Int) : String;
 	
 	/**
 	* Returns the position in this <code>SerialClob</code> object
@@ -173,7 +173,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	* @throws SQLException if there is an error accessing the Blob value
 	*         from the database.
 	*/
-	@:overload public function position(searchStr : String, start : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function position(searchStr : String, start : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the position in this <code>SerialClob</code> object
@@ -193,7 +193,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	* @throws SQLException if there is an error accessing the Blob value
 	*         from the database
 	*/
-	@:overload public function position(searchStr : java.sql.Clob, start : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function position(searchStr : java.sql.Clob, start : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Writes the given Java <code>String</code> to the <code>CLOB</code>
@@ -213,7 +213,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*     is greater than the <code>SerialClob</code> length; or the combined
 	*     values of the length and offset is greater than the Clob buffer
 	*/
-	@:overload public function setString(pos : haxe.Int64, str : String) : Int;
+	@:overload @:public public function setString(pos : haxe.Int64, str : String) : Int;
 	
 	/**
 	* Writes <code>len</code> characters of <code>str</code>, starting
@@ -236,7 +236,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*     is greater than the <code>SerialClob</code> length; or the combined
 	*     values of the length and offset is greater than the Clob buffer
 	*/
-	@:overload public function setString(pos : haxe.Int64, str : String, offset : Int, length : Int) : Int;
+	@:overload @:public public function setString(pos : haxe.Int64, str : String, offset : Int, length : Int) : Int;
 	
 	/**
 	* Retrieves a stream to be used to write Ascii characters to the
@@ -256,7 +256,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*     <code>CLOB</code> value
 	* @see #getAsciiStream
 	*/
-	@:overload public function setAsciiStream(pos : haxe.Int64) : java.io.OutputStream;
+	@:overload @:public public function setAsciiStream(pos : haxe.Int64) : java.io.OutputStream;
 	
 	/**
 	* Retrieves a stream to be used to write a stream of Unicode characters
@@ -277,7 +277,7 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	*            <code>CLOB</code> value
 	* @see #getCharacterStream
 	*/
-	@:overload public function setCharacterStream(pos : haxe.Int64) : java.io.Writer;
+	@:overload @:public public function setCharacterStream(pos : haxe.Int64) : java.io.Writer;
 	
 	/**
 	* Truncates the <code>CLOB</code> value that this <code>SerialClob</code>
@@ -292,11 +292,11 @@ extern class SerialClob implements java.sql.Clob implements java.io.Serializable
 	* @throws SQLException if there is an error accessing the
 	*        <code>CLOB</code> value
 	*/
-	@:overload public function truncate(length : haxe.Int64) : Void;
+	@:overload @:public public function truncate(length : haxe.Int64) : Void;
 	
-	@:overload public function getCharacterStream(pos : haxe.Int64, length : haxe.Int64) : java.io.Reader;
+	@:overload @:public public function getCharacterStream(pos : haxe.Int64, length : haxe.Int64) : java.io.Reader;
 	
-	@:overload public function free() : Void;
+	@:overload @:public public function free() : Void;
 	
 	
 }

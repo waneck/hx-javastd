@@ -30,31 +30,31 @@ extern interface EventHandler
 	*
 	* This should only be registered with ONE selector.
 	*/
-	@:overload public function setUseSelectThreadToWait(x : Bool) : Void;
+	@:overload @:public public function setUseSelectThreadToWait(x : Bool) : Void;
 	
-	@:overload public function shouldUseSelectThreadToWait() : Bool;
+	@:overload @:public public function shouldUseSelectThreadToWait() : Bool;
 	
-	@:overload @:public public function getChannel() : java.nio.channels.SelectableChannel;
+	@:overload @:public @:public public function getChannel() : java.nio.channels.SelectableChannel;
 	
-	@:overload @:public public function getInterestOps() : Int;
+	@:overload @:public @:public public function getInterestOps() : Int;
 	
-	@:overload public function setSelectionKey(selectionKey : java.nio.channels.SelectionKey) : Void;
+	@:overload @:public public function setSelectionKey(selectionKey : java.nio.channels.SelectionKey) : Void;
 	
-	@:overload public function getSelectionKey() : java.nio.channels.SelectionKey;
+	@:overload @:public public function getSelectionKey() : java.nio.channels.SelectionKey;
 	
-	@:overload public function handleEvent() : Void;
+	@:overload @:public public function handleEvent() : Void;
 	
-	@:overload public function setUseWorkerThreadForEvent(x : Bool) : Void;
+	@:overload @:public public function setUseWorkerThreadForEvent(x : Bool) : Void;
 	
-	@:overload public function shouldUseWorkerThreadForEvent() : Bool;
+	@:overload @:public public function shouldUseWorkerThreadForEvent() : Bool;
 	
-	@:overload public function setWork(work : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
+	@:overload @:public public function setWork(work : com.sun.corba.se.spi.orbutil.threadpool.Work) : Void;
 	
-	@:overload public function getWork() : com.sun.corba.se.spi.orbutil.threadpool.Work;
+	@:overload @:public public function getWork() : com.sun.corba.se.spi.orbutil.threadpool.Work;
 	
-	@:overload @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
-	@:overload @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	
 }

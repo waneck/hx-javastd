@@ -28,26 +28,26 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	/**
 	* Doc environment
 	*/
-	private var env(default, null) : com.sun.tools.javadoc.DocEnv;
+	@:protected @:final private var env(default, null) : com.sun.tools.javadoc.DocEnv;
 	
 	/**
 	* So subclasses have the option to do lazy initialization of
 	* "documentation" string.
 	*/
-	@:overload private function documentation() : String;
+	@:overload @:protected private function documentation() : String;
 	
 	/**
 	* Return the text of the comment for this doc item.
 	* TagImpls have been removed.
 	*/
-	@:overload public function commentText() : String;
+	@:overload @:public public function commentText() : String;
 	
 	/**
 	* Return all tags in this Doc item.
 	*
 	* @return an array of TagImpl containing all tags on this Doc item.
 	*/
-	@:overload public function tags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function tags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return tags of the specified kind in this Doc item.
@@ -56,51 +56,51 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	* @return an array of TagImpl containing all tags whose 'kind()'
 	* matches 'tagname'.
 	*/
-	@:overload public function tags(tagname : String) : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function tags(tagname : String) : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the see also tags in this Doc item.
 	*
 	* @return an array of SeeTag containing all &#64see tags.
 	*/
-	@:overload public function seeTags() : java.NativeArray<com.sun.javadoc.SeeTag>;
+	@:overload @:public public function seeTags() : java.NativeArray<com.sun.javadoc.SeeTag>;
 	
-	@:overload public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
-	@:overload public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
+	@:overload @:public public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the full unprocessed text of the comment.  Tags
 	* are included as text.  Used mainly for store and retrieve
 	* operations like internalization.
 	*/
-	@:overload public function getRawCommentText() : String;
+	@:overload @:public public function getRawCommentText() : String;
 	
 	/**
 	* Set the full unprocessed text of the comment.  Tags
 	* are included as text.  Used mainly for store and retrieve
 	* operations like internalization.
 	*/
-	@:overload public function setRawCommentText(rawDocumentation : String) : Void;
+	@:overload @:public public function setRawCommentText(rawDocumentation : String) : Void;
 	
 	/**
 	* Returns a string representation of this Doc item.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the name of this Doc item.
 	*
 	* @return  the name
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Returns the qualified name of this Doc item.
 	*
 	* @return  the name
 	*/
-	@:overload @:abstract public function qualifiedName() : String;
+	@:overload @:public @:abstract public function qualifiedName() : String;
 	
 	/**
 	* Compares this Object with the specified Object for order.  Returns a
@@ -115,28 +115,28 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	* @exception ClassCastException the specified Object's type prevents it
 	*            from being compared to this Object.
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Is this Doc item a field?  False until overridden.
 	*
 	* @return true if it represents a field
 	*/
-	@:overload public function isField() : Bool;
+	@:overload @:public public function isField() : Bool;
 	
 	/**
 	* Is this Doc item an enum constant?  False until overridden.
 	*
 	* @return true if it represents an enum constant
 	*/
-	@:overload public function isEnumConstant() : Bool;
+	@:overload @:public public function isEnumConstant() : Bool;
 	
 	/**
 	* Is this Doc item a constructor?  False until overridden.
 	*
 	* @return true if it represents a constructor
 	*/
-	@:overload public function isConstructor() : Bool;
+	@:overload @:public public function isConstructor() : Bool;
 	
 	/**
 	* Is this Doc item a method (but not a constructor or annotation
@@ -145,7 +145,7 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	*
 	* @return true if it represents a method
 	*/
-	@:overload public function isMethod() : Bool;
+	@:overload @:public public function isMethod() : Bool;
 	
 	/**
 	* Is this Doc item an annotation type element?
@@ -153,7 +153,7 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	*
 	* @return true if it represents an annotation type element
 	*/
-	@:overload public function isAnnotationTypeElement() : Bool;
+	@:overload @:public public function isAnnotationTypeElement() : Bool;
 	
 	/**
 	* Is this Doc item a interface (but not an annotation type)?
@@ -161,35 +161,35 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	*
 	* @return true if it represents a interface
 	*/
-	@:overload public function isInterface() : Bool;
+	@:overload @:public public function isInterface() : Bool;
 	
 	/**
 	* Is this Doc item a exception class?  False until overridden.
 	*
 	* @return true if it represents a exception
 	*/
-	@:overload public function isException() : Bool;
+	@:overload @:public public function isException() : Bool;
 	
 	/**
 	* Is this Doc item a error class?  False until overridden.
 	*
 	* @return true if it represents a error
 	*/
-	@:overload public function isError() : Bool;
+	@:overload @:public public function isError() : Bool;
 	
 	/**
 	* Is this Doc item an enum type?  False until overridden.
 	*
 	* @return true if it represents an enum type
 	*/
-	@:overload public function isEnum() : Bool;
+	@:overload @:public public function isEnum() : Bool;
 	
 	/**
 	* Is this Doc item an annotation type?  False until overridden.
 	*
 	* @return true if it represents an annotation type
 	*/
-	@:overload public function isAnnotationType() : Bool;
+	@:overload @:public public function isAnnotationType() : Bool;
 	
 	/**
 	* Is this Doc item an ordinary class (i.e. not an interface,
@@ -198,7 +198,7 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	*
 	* @return true if it represents an ordinary class
 	*/
-	@:overload public function isOrdinaryClass() : Bool;
+	@:overload @:public public function isOrdinaryClass() : Bool;
 	
 	/**
 	* Is this Doc item a class
@@ -208,18 +208,18 @@ extern class DocImpl implements com.sun.javadoc.Doc implements java.lang.Compara
 	*
 	* @return true if it represents a class
 	*/
-	@:overload public function isClass() : Bool;
+	@:overload @:public public function isClass() : Bool;
 	
 	/**
 	* return true if this Doc is include in the active set.
 	*/
-	@:overload @:abstract public function isIncluded() : Bool;
+	@:overload @:public @:abstract public function isIncluded() : Bool;
 	
 	/**
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

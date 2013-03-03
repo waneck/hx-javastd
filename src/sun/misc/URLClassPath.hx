@@ -35,11 +35,11 @@ extern class URLClassPath
 	*        and resources
 	* @param factory the URLStreamHandlerFactory to use when creating new URLs
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, factory : java.net.URLStreamHandlerFactory) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, factory : java.net.URLStreamHandlerFactory) : Void;
 	
-	@:overload public function new(urls : java.NativeArray<java.net.URL>) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>) : Void;
 	
-	@:overload @:synchronized public function closeLoaders() : java.util.List<java.io.IOException>;
+	@:overload @:public @:synchronized public function closeLoaders() : java.util.List<java.io.IOException>;
 	
 	/**
 	* Appends the specified URL to the search path of directory and JAR
@@ -48,12 +48,12 @@ extern class URLClassPath
 	* If the URL specified is null or is already in the list of
 	* URLs, then invoking this method has no effect.
 	*/
-	@:overload @:synchronized public function addURL(url : java.net.URL) : Void;
+	@:overload @:public @:synchronized public function addURL(url : java.net.URL) : Void;
 	
 	/**
 	* Returns the original search path of URLs.
 	*/
-	@:overload public function getURLs() : java.NativeArray<java.net.URL>;
+	@:overload @:public public function getURLs() : java.NativeArray<java.net.URL>;
 	
 	/**
 	* Finds the resource with the specified name on the URL search path
@@ -64,7 +64,7 @@ extern class URLClassPath
 	* @return a <code>URL</code> for the resource, or <code>null</code>
 	* if the resource could not be found.
 	*/
-	@:overload public function findResource(name : String, check : Bool) : java.net.URL;
+	@:overload @:public public function findResource(name : String, check : Bool) : java.net.URL;
 	
 	/**
 	* Finds the first Resource on the URL search path which has the specified
@@ -74,7 +74,7 @@ extern class URLClassPath
 	* @param check     whether to perform a security check
 	* @return the Resource, or null if not found
 	*/
-	@:overload public function getResource(name : String, check : Bool) : sun.misc.Resource;
+	@:overload @:public public function getResource(name : String, check : Bool) : sun.misc.Resource;
 	
 	/**
 	* Finds all resources on the URL search path with the given name.
@@ -83,9 +83,9 @@ extern class URLClassPath
 	* @param name the resource name
 	* @return an Enumeration of all the urls having the specified name
 	*/
-	@:overload public function findResources(name : String, check : Bool) : java.util.Enumeration<java.net.URL>;
+	@:overload @:public public function findResources(name : String, check : Bool) : java.util.Enumeration<java.net.URL>;
 	
-	@:overload public function getResource(name : String) : sun.misc.Resource;
+	@:overload @:public public function getResource(name : String) : sun.misc.Resource;
 	
 	/**
 	* Finds all resources on the URL search path with the given name.
@@ -94,9 +94,9 @@ extern class URLClassPath
 	* @param name the resource name
 	* @return an Enumeration of all the resources having the specified name
 	*/
-	@:overload public function getResources(name : String, check : Bool) : java.util.Enumeration<sun.misc.Resource>;
+	@:overload @:public public function getResources(name : String, check : Bool) : java.util.Enumeration<sun.misc.Resource>;
 	
-	@:overload public function getResources(name : String) : java.util.Enumeration<sun.misc.Resource>;
+	@:overload @:public public function getResources(name : String) : java.util.Enumeration<sun.misc.Resource>;
 	
 	/**
 	* Convert class path specification into an array of file URLs.
@@ -104,14 +104,14 @@ extern class URLClassPath
 	* The path of the file is encoded before conversion into URL
 	* form so that reserved characters can safely appear in the path.
 	*/
-	@:overload public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
+	@:overload @:public @:static public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
 	
 	/*
 	* Check whether the resource URL should be returned.
 	* Return null on security check failure.
 	* Called by java.net.URLClassLoader.
 	*/
-	@:overload public function checkURL(url : java.net.URL) : java.net.URL;
+	@:overload @:public public function checkURL(url : java.net.URL) : java.net.URL;
 	
 	
 }
@@ -125,7 +125,7 @@ extern class URLClassPath
 	* close this loader and release all resources
 	* method overridden in sub-classes
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
@@ -134,7 +134,7 @@ extern class URLClassPath
 */
 @:native('sun$misc$URLClassPath$JarLoader') @:internal extern class URLClassPath_JarLoader extends sun.misc.URLClassPath.URLClassPath_Loader
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

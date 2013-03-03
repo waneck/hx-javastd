@@ -69,7 +69,7 @@ extern class Utility
 	* @param  access_flags Access flags
 	* @return String representation of flags
 	*/
-	@:overload @:final public static function accessToString(access_flags : Int) : String;
+	@:overload @:public @:static @:final public static function accessToString(access_flags : Int) : String;
 	
 	/**
 	* Convert bit field of flags into string such as `static final'.
@@ -83,12 +83,12 @@ extern class Utility
 	* @param  for_class access flags are for class qualifiers ?
 	* @return String representation of flags
 	*/
-	@:overload @:final public static function accessToString(access_flags : Int, for_class : Bool) : String;
+	@:overload @:public @:static @:final public static function accessToString(access_flags : Int, for_class : Bool) : String;
 	
 	/**
 	* @return "class" or "interface", depending on the ACC_INTERFACE flag
 	*/
-	@:overload @:final public static function classOrInterface(access_flags : Int) : String;
+	@:overload @:public @:static @:final public static function classOrInterface(access_flags : Int) : String;
 	
 	/**
 	* Disassemble a byte array of JVM byte codes starting from code line
@@ -104,9 +104,9 @@ extern class Utility
 	* @param  verbose be verbose, e.g. print constant pool index
 	* @return String representation of byte codes
 	*/
-	@:overload @:final public static function codeToString(code : java.NativeArray<java.StdTypes.Int8>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, index : Int, length : Int, verbose : Bool) : String;
+	@:overload @:public @:static @:final public static function codeToString(code : java.NativeArray<java.StdTypes.Int8>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, index : Int, length : Int, verbose : Bool) : String;
 	
-	@:overload @:final public static function codeToString(code : java.NativeArray<java.StdTypes.Int8>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, index : Int, length : Int) : String;
+	@:overload @:public @:static @:final public static function codeToString(code : java.NativeArray<java.StdTypes.Int8>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, index : Int, length : Int) : String;
 	
 	/**
 	* Disassemble a stream of byte codes and return the
@@ -117,9 +117,9 @@ extern class Utility
 	* @param  verbose be verbose, e.g. print constant pool index
 	* @return String representation of byte code
 	*/
-	@:overload @:final public static function codeToString(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, verbose : Bool) : String;
+	@:overload @:public @:static @:final public static function codeToString(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool, verbose : Bool) : String;
 	
-	@:overload @:final public static function codeToString(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public @:static @:final public static function codeToString(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* Shorten long class names, <em>java/lang/String</em> becomes
@@ -128,7 +128,7 @@ extern class Utility
 	* @param str The long class name
 	* @return Compacted class name
 	*/
-	@:overload @:final public static function compactClassName(str : String) : String;
+	@:overload @:public @:static @:final public static function compactClassName(str : String) : String;
 	
 	/**
 	* Shorten long class name <em>str</em>, i.e., chop off the <em>prefix</em>,
@@ -141,7 +141,7 @@ extern class Utility
 	* @param chopit Flag that determines whether chopping is executed or not
 	* @return Compacted class name
 	*/
-	@:overload @:final public static function compactClassName(str : String, prefix : String, chopit : Bool) : String;
+	@:overload @:public @:static @:final public static function compactClassName(str : String, prefix : String, chopit : Bool) : String;
 	
 	/**
 	* Shorten long class names, <em>java/lang/String</em> becomes
@@ -153,22 +153,22 @@ extern class Utility
 	* @param chopit Flag that determines whether chopping is executed or not
 	* @return Compacted class name
 	*/
-	@:overload @:final public static function compactClassName(str : String, chopit : Bool) : String;
+	@:overload @:public @:static @:final public static function compactClassName(str : String, chopit : Bool) : String;
 	
 	/**
 	* @return `flag' with bit `i' set to 1
 	*/
-	@:overload @:final public static function setBit(flag : Int, i : Int) : Int;
+	@:overload @:public @:static @:final public static function setBit(flag : Int, i : Int) : Int;
 	
 	/**
 	* @return `flag' with bit `i' set to 0
 	*/
-	@:overload @:final public static function clearBit(flag : Int, i : Int) : Int;
+	@:overload @:public @:static @:final public static function clearBit(flag : Int, i : Int) : Int;
 	
 	/**
 	* @return true, if bit `i' in `flag' is set
 	*/
-	@:overload @:final public static function isSet(flag : Int, i : Int) : Bool;
+	@:overload @:public @:static @:final public static function isSet(flag : Int, i : Int) : Bool;
 	
 	/**
 	* Converts string containing the method return and argument types
@@ -178,14 +178,14 @@ extern class Utility
 	* @param  argv Types of method arguments
 	* @return Byte code representation of method signature
 	*/
-	@:overload @:final public static function methodTypeToSignature(ret : String, argv : java.NativeArray<String>) : String;
+	@:overload @:public @:final @:static public static function methodTypeToSignature(ret : String, argv : java.NativeArray<String>) : String;
 	
 	/**
 	* @param  signature    Method signature
 	* @return Array of argument types
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function methodSignatureArgumentTypes(signature : String) : java.NativeArray<String>;
+	@:overload @:public @:static @:final public static function methodSignatureArgumentTypes(signature : String) : java.NativeArray<String>;
 	
 	/**
 	* @param  signature    Method signature
@@ -193,14 +193,14 @@ extern class Utility
 	* @return Array of argument types
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function methodSignatureArgumentTypes(signature : String, chopit : Bool) : java.NativeArray<String>;
+	@:overload @:public @:static @:final public static function methodSignatureArgumentTypes(signature : String, chopit : Bool) : java.NativeArray<String>;
 	
 	/**
 	* @param  signature    Method signature
 	* @return return type of method
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function methodSignatureReturnType(signature : String) : String;
+	@:overload @:public @:static @:final public static function methodSignatureReturnType(signature : String) : String;
 	
 	/**
 	* @param  signature    Method signature
@@ -208,7 +208,7 @@ extern class Utility
 	* @return return type of method
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function methodSignatureReturnType(signature : String, chopit : Bool) : String;
+	@:overload @:public @:static @:final public static function methodSignatureReturnType(signature : String, chopit : Bool) : String;
 	
 	/**
 	* Converts method signature to string with all class names compacted.
@@ -218,9 +218,9 @@ extern class Utility
 	* @param access flags of method
 	* @return Human readable signature
 	*/
-	@:overload @:final public static function methodSignatureToString(signature : String, name : String, access : String) : String;
+	@:overload @:public @:static @:final public static function methodSignatureToString(signature : String, name : String, access : String) : String;
 	
-	@:overload @:final public static function methodSignatureToString(signature : String, name : String, access : String, chopit : Bool) : String;
+	@:overload @:public @:static @:final public static function methodSignatureToString(signature : String, name : String, access : String, chopit : Bool) : String;
 	
 	/**
 	* A return type signature represents the return value from a method.
@@ -249,7 +249,7 @@ extern class Utility
 	* @return Java type declaration
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function methodSignatureToString(signature : String, name : String, access : String, chopit : Bool, vars : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : String;
+	@:overload @:public @:static @:final public static function methodSignatureToString(signature : String, name : String, access : String, chopit : Bool, vars : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : String;
 	
 	/**
 	* Replace all occurences of <em>old</em> in <em>str</em> with <em>new</em>.
@@ -259,7 +259,7 @@ extern class Utility
 	* @param new Replacement string
 	* @return new String object
 	*/
-	@:overload @:final public static function replace(str : String, old : String, new_ : String) : String;
+	@:overload @:public @:static @:final public static function replace(str : String, old : String, new_ : String) : String;
 	
 	/**
 	* Converts signature to string with all class names compacted.
@@ -267,7 +267,7 @@ extern class Utility
 	* @param signature to convert
 	* @return Human readable signature
 	*/
-	@:overload @:final public static function signatureToString(signature : String) : String;
+	@:overload @:public @:static @:final public static function signatureToString(signature : String) : String;
 	
 	/**
 	* The field signature represents the value of an argument to a function or
@@ -303,7 +303,7 @@ extern class Utility
 	* @return Java type declaration
 	* @throws ClassFormatException
 	*/
-	@:overload @:final public static function signatureToString(signature : String, chopit : Bool) : String;
+	@:overload @:public @:static @:final public static function signatureToString(signature : String, chopit : Bool) : String;
 	
 	/** Parse Java type such as "char", or "java.lang.String[]" and return the
 	* signature in byte code format, e.g. "C" or "[Ljava/lang/String;" respectively.
@@ -311,7 +311,7 @@ extern class Utility
 	* @param  type Java type
 	* @return byte code signature
 	*/
-	@:overload public static function getSignature(type : String) : String;
+	@:overload @:public @:static public static function getSignature(type : String) : String;
 	
 	/**
 	* Return type of method signature as a byte value as defined in <em>Constants</em>
@@ -320,7 +320,7 @@ extern class Utility
 	* @return type of method signature
 	* @see    Constants
 	*/
-	@:overload @:final public static function typeOfMethodSignature(signature : String) : java.StdTypes.Int8;
+	@:overload @:public @:static @:final public static function typeOfMethodSignature(signature : String) : java.StdTypes.Int8;
 	
 	/**
 	* Return type of signature as a byte value as defined in <em>Constants</em>
@@ -329,17 +329,17 @@ extern class Utility
 	* @return type of signature
 	* @see    Constants
 	*/
-	@:overload @:final public static function typeOfSignature(signature : String) : java.StdTypes.Int8;
+	@:overload @:public @:static @:final public static function typeOfSignature(signature : String) : java.StdTypes.Int8;
 	
 	/** Map opcode names to opcode numbers. E.g., return Constants.ALOAD for "aload"
 	*/
-	@:overload public static function searchOpcode(name : String) : java.StdTypes.Int16;
+	@:overload @:public @:static public static function searchOpcode(name : String) : java.StdTypes.Int16;
 	
 	/** Convert bytes into hexidecimal string
 	*
 	* @return bytes as hexidecimal string, e.g. 00 FA 12 ...
 	*/
-	@:overload @:final public static function toHexString(bytes : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static @:final public static function toHexString(bytes : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* Return a string for an integer justified left or right and filled up with
@@ -351,7 +351,7 @@ extern class Utility
 	* @param fill fill character
 	* @return formatted int
 	*/
-	@:overload @:final public static function format(i : Int, length : Int, left_justify : Bool, fill : java.StdTypes.Char16) : String;
+	@:overload @:public @:static @:final public static function format(i : Int, length : Int, left_justify : Bool, fill : java.StdTypes.Char16) : String;
 	
 	/**
 	* Fillup char with up to length characters with char `fill' and justify it left or right.
@@ -362,21 +362,21 @@ extern class Utility
 	* @param fill fill character
 	* @return formatted string
 	*/
-	@:overload @:final public static function fillup(str : String, length : Int, left_justify : Bool, fill : java.StdTypes.Char16) : String;
+	@:overload @:public @:static @:final public static function fillup(str : String, length : Int, left_justify : Bool, fill : java.StdTypes.Char16) : String;
 	
-	@:overload @:final public static function printArray(out : java.io.PrintStream, obj : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:static @:final public static function printArray(out : java.io.PrintStream, obj : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload @:final public static function printArray(out : java.io.PrintWriter, obj : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:static @:final public static function printArray(out : java.io.PrintWriter, obj : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload @:final public static function printArray(obj : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static @:final public static function printArray(obj : java.NativeArray<Dynamic>) : String;
 	
-	@:overload @:final public static function printArray(obj : java.NativeArray<Dynamic>, braces : Bool) : String;
+	@:overload @:public @:static @:final public static function printArray(obj : java.NativeArray<Dynamic>, braces : Bool) : String;
 	
-	@:overload @:final public static function printArray(obj : java.NativeArray<Dynamic>, braces : Bool, quote : Bool) : String;
+	@:overload @:public @:static @:final public static function printArray(obj : java.NativeArray<Dynamic>, braces : Bool, quote : Bool) : String;
 	
 	/** @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)
 	*/
-	@:overload public static function isJavaIdentifierPart(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isJavaIdentifierPart(ch : java.StdTypes.Char16) : Bool;
 	
 	/** Encode byte array it into Java identifier string, i.e., a string
 	* that only contains the following characters: (a, ... z, A, ... Z,
@@ -394,19 +394,19 @@ extern class Utility
 	* @param bytes the byte array to convert
 	* @param compress use gzip to minimize string
 	*/
-	@:overload public static function encode(bytes : java.NativeArray<java.StdTypes.Int8>, compress : Bool) : String;
+	@:overload @:public @:static public static function encode(bytes : java.NativeArray<java.StdTypes.Int8>, compress : Bool) : String;
 	
 	/** Decode a string back to a byte array.
 	*
 	* @param bytes the byte array to convert
 	* @param uncompress use gzip to uncompress the stream of bytes
 	*/
-	@:overload public static function decode(s : String, uncompress : Bool) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function decode(s : String, uncompress : Bool) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Escape all occurences of newline chars '\n', quotes \", etc.
 	*/
-	@:overload @:final public static function convertString(label : String) : String;
+	@:overload @:public @:static @:final public static function convertString(label : String) : String;
 	
 	
 }
@@ -415,11 +415,11 @@ extern class Utility
 */
 @:native('com$sun$org$apache$bcel$internal$classfile$Utility$JavaReader') @:internal extern class Utility_JavaReader extends java.io.FilterReader
 {
-	@:overload public function new(_in : java.io.Reader) : Void;
+	@:overload @:public public function new(_in : java.io.Reader) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	
 }
@@ -428,13 +428,13 @@ extern class Utility
 */
 @:native('com$sun$org$apache$bcel$internal$classfile$Utility$JavaWriter') @:internal extern class Utility_JavaWriter extends java.io.FilterWriter
 {
-	@:overload public function new(out : java.io.Writer) : Void;
+	@:overload @:public public function new(out : java.io.Writer) : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
 	
 }

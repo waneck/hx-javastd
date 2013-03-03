@@ -43,7 +43,7 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* @throws SQLException if an error occurs in configuring the default
 	* synchronization providers for relational and XML providers.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>WebRowSet</code> object initialized with the the
@@ -54,7 +54,7 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* synchronization providers for the relational and XML providers; or
 	* if the Hashtanle is null
 	*/
-	@:overload public function new(env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(env : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Populates this <code>WebRowSet</code> object with the
@@ -65,7 +65,7 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* @throws SQLException if an error occurs writing out the rowset
 	*          contents to XML
 	*/
-	@:overload public function writeXml(rs : java.sql.ResultSet, writer : java.io.Writer) : Void;
+	@:overload @:public public function writeXml(rs : java.sql.ResultSet, writer : java.io.Writer) : Void;
 	
 	/**
 	* Writes this <code>WebRowSet</code> object to the given
@@ -75,14 +75,14 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* @throws SQLException if an error occurs writing out the rowset
 	*          contents to XML
 	*/
-	@:overload public function writeXml(writer : java.io.Writer) : Void;
+	@:overload @:public public function writeXml(writer : java.io.Writer) : Void;
 	
 	/**
 	* Reads this <code>WebRowSet</code> object in its XML format.
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload public function readXml(reader : java.io.Reader) : Void;
+	@:overload @:public public function readXml(reader : java.io.Reader) : Void;
 	
 	/**
 	* Reads a stream based XML input to populate this <code>WebRowSet</code>
@@ -91,7 +91,7 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* @throws SQLException if a data source access error occurs
 	* @throws IOException if a IO exception occurs
 	*/
-	@:overload public function readXml(iStream : java.io.InputStream) : Void;
+	@:overload @:public public function readXml(iStream : java.io.InputStream) : Void;
 	
 	/**
 	* Writes this <code>WebRowSet</code> object to the given <code> OutputStream</code>
@@ -102,7 +102,7 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* @throws SQLException if a datasource access error occurs
 	* @throws IOException if an IO exception occurs
 	*/
-	@:overload public function writeXml(oStream : java.io.OutputStream) : Void;
+	@:overload @:public public function writeXml(oStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Populates this <code>WebRowSet</code> object with the
@@ -113,7 +113,7 @@ extern class WebRowSetImpl extends com.sun.rowset.CachedRowSetImpl implements ja
 	* @throws SQLException if a datasource access error occurs
 	* @throws IOException if an IO exception occurs
 	*/
-	@:overload public function writeXml(rs : java.sql.ResultSet, oStream : java.io.OutputStream) : Void;
+	@:overload @:public public function writeXml(rs : java.sql.ResultSet, oStream : java.io.OutputStream) : Void;
 	
 	
 }

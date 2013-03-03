@@ -30,46 +30,46 @@ extern class Messages
 	*
 	* @since JAXB1.0
 	*/
-	@:require(java0) @:overload public static function format(property : String) : String;
+	@:require(java0) @:overload @:public @:static public static function format(property : String) : String;
 	
-	@:overload public static function format(property : String, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function format(property : String, arg1 : Dynamic) : String;
 	
-	@:overload public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public @:static public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : String;
+	@:overload @:public @:static public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : String;
 	
-	public static var NOT_MARSHALLABLE(default, null) : String;
+	@:public @:static @:final public static var NOT_MARSHALLABLE(default, null) : String;
 	
-	public static var UNSUPPORTED_RESULT(default, null) : String;
+	@:public @:static @:final public static var UNSUPPORTED_RESULT(default, null) : String;
 	
-	public static var UNSUPPORTED_ENCODING(default, null) : String;
+	@:public @:static @:final public static var UNSUPPORTED_ENCODING(default, null) : String;
 	
-	public static var NULL_WRITER(default, null) : String;
+	@:public @:static @:final public static var NULL_WRITER(default, null) : String;
 	
-	public static var ASSERT_FAILED(default, null) : String;
+	@:public @:static @:final public static var ASSERT_FAILED(default, null) : String;
 	
 	/**
 	* @deprecated use ERR_MISSING_OBJECT2
 	*/
-	public static var ERR_MISSING_OBJECT(default, null) : String;
+	@:public @:static @:final public static var ERR_MISSING_OBJECT(default, null) : String;
 	
 	/**
 	* @deprecated
 	*  use {@link com.sun.xml.internal.bind.v2.runtime.XMLSerializer#reportMissingObjectError(String)}
 	*/
-	public static var ERR_MISSING_OBJECT2(default, null) : String;
+	@:public @:static @:final public static var ERR_MISSING_OBJECT2(default, null) : String;
 	
 	/**
 	* @deprecated only used from 1.0
 	*/
-	public static var ERR_DANGLING_IDREF(default, null) : String;
+	@:public @:static @:final public static var ERR_DANGLING_IDREF(default, null) : String;
 	
 	/**
 	* @deprecated only used from 1.0
 	*/
-	public static var ERR_NOT_IDENTIFIABLE(default, null) : String;
+	@:public @:static @:final public static var ERR_NOT_IDENTIFIABLE(default, null) : String;
 	
-	public static var DOM_IMPL_DOESNT_SUPPORT_CREATELEMENTNS(default, null) : String;
+	@:public @:static @:final public static var DOM_IMPL_DOESNT_SUPPORT_CREATELEMENTNS(default, null) : String;
 	
 	
 }

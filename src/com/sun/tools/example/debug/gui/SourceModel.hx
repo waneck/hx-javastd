@@ -36,43 +36,43 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SourceModel extends javax.swing.AbstractListModel<Dynamic>
 {
-	public static var prototypeCellValue(default, null) : com.sun.tools.example.debug.gui.SourceModel.SourceModel_Line;
+	@:public @:static @:final public static var prototypeCellValue(default, null) : com.sun.tools.example.debug.gui.SourceModel.SourceModel_Line;
 	
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
-	@:overload public function getElementAt(index : Int) : Dynamic;
+	@:overload @:public override public function getElementAt(index : Int) : Dynamic;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload public function fileName() : java.io.File;
+	@:overload @:public public function fileName() : java.io.File;
 	
-	@:overload public function sourceReader() : java.io.BufferedReader;
+	@:overload @:public public function sourceReader() : java.io.BufferedReader;
 	
-	@:overload public function line(lineNo : Int) : com.sun.tools.example.debug.gui.SourceModel.SourceModel_Line;
+	@:overload @:public public function line(lineNo : Int) : com.sun.tools.example.debug.gui.SourceModel.SourceModel_Line;
 	
-	@:overload public function sourceLine(lineNo : Int) : String;
+	@:overload @:public public function sourceLine(lineNo : Int) : String;
 	
 	/**
 	* @return List of currently known {@link com.sun.jdi.ReferenceType}
 	* in this source file.
 	*/
-	@:overload public function referenceTypes() : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function referenceTypes() : java.util.List<com.sun.jdi.ReferenceType>;
 	
-	@:overload public function showBreakpoint(ln : Int, hasBreakpoint : Bool) : Void;
+	@:overload @:public public function showBreakpoint(ln : Int, hasBreakpoint : Bool) : Void;
 	
-	@:overload public function showExecutable(ln : Int, refType : com.sun.jdi.ReferenceType) : Void;
+	@:overload @:public public function showExecutable(ln : Int, refType : com.sun.jdi.ReferenceType) : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceModel$Line') extern class SourceModel_Line
 {
-	public var text : String;
+	@:public public var text : String;
 	
-	public var refType : com.sun.jdi.ReferenceType;
+	@:public public var refType : com.sun.jdi.ReferenceType;
 	
-	@:overload public function isExecutable() : Bool;
+	@:overload @:public public function isExecutable() : Bool;
 	
-	@:overload public function hasBreakpoint() : Bool;
+	@:overload @:public public function hasBreakpoint() : Bool;
 	
 	
 }

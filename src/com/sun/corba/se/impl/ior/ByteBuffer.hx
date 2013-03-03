@@ -32,7 +32,7 @@ extern class ByteBuffer
 	*
 	* Any array elements following the last element in the ByteBuffer are 0.
 	*/
-	private var elementData : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var elementData : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The number of valid components in this <tt>ByteBuffer</tt> object.
@@ -41,7 +41,7 @@ extern class ByteBuffer
 	*
 	* @serial
 	*/
-	private var elementCount : Int;
+	@:protected private var elementCount : Int;
 	
 	/**
 	* The amount by which the capacity of the ByteBuffer is automatically
@@ -51,7 +51,7 @@ extern class ByteBuffer
 	*
 	* @serial
 	*/
-	private var capacityIncrement : Int;
+	@:protected private var capacityIncrement : Int;
 	
 	/**
 	* Constructs an empty ByteBuffer with the specified initial capacity and
@@ -63,7 +63,7 @@ extern class ByteBuffer
 	* @exception IllegalArgumentException if the specified initial capacity
 	*               is negative
 	*/
-	@:overload public function new(initialCapacity : Int, capacityIncrement : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int, capacityIncrement : Int) : Void;
 	
 	/**
 	* Constructs an empty ByteBuffer with the specified initial capacity and
@@ -73,14 +73,14 @@ extern class ByteBuffer
 	* @exception IllegalArgumentException if the specified initial capacity
 	*               is negative
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs an empty ByteBuffer so that its internal data array
 	* has size <tt>10</tt> and its standard capacity increment is
 	* zero.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Trims the capacity of this ByteBuffer to be the ByteBuffer's current
@@ -90,7 +90,7 @@ extern class ByteBuffer
 	* with a smaller one. An application can use this operation to
 	* minimize the storage of a ByteBuffer.
 	*/
-	@:overload public function trimToSize() : Void;
+	@:overload @:public public function trimToSize() : Void;
 	
 	/**
 	* Returns the current capacity of this ByteBuffer.
@@ -99,14 +99,14 @@ extern class ByteBuffer
 	*          data arary, kept in the field <tt>elementData</tt>
 	*          of this ByteBuffer.
 	*/
-	@:overload public function capacity() : Int;
+	@:overload @:public public function capacity() : Int;
 	
 	/**
 	* Returns the number of components in this ByteBuffer.
 	*
 	* @return  the number of components in this ByteBuffer.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Tests if this ByteBuffer has no components.
@@ -115,13 +115,13 @@ extern class ByteBuffer
 	*          no components, that is, its size is zero;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function append(value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function append(value : java.StdTypes.Int8) : Void;
 	
-	@:overload public function append(value : Int) : Void;
+	@:overload @:public public function append(value : Int) : Void;
 	
-	@:overload public function append(value : String) : Void;
+	@:overload @:public public function append(value : String) : Void;
 	
 	/**
 	* Returns an array containing all of the elements in this ByteBuffer
@@ -129,7 +129,7 @@ extern class ByteBuffer
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function toArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java2) @:overload @:public public function toArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

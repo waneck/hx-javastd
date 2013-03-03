@@ -28,24 +28,24 @@ extern class SuperExpression extends sun.tools.tree.ThisExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64) : Void;
+	@:overload @:public public function new(where : haxe.Int64) : Void;
 	
 	/**
 	* Constructor for "outer.super()"
 	*/
-	@:overload public function new(where : haxe.Int64, outerArg : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, outerArg : sun.tools.tree.Expression) : Void;
 	
-	@:overload public function new(where : haxe.Int64, ctx : sun.tools.tree.Context) : Void;
+	@:overload @:public public function new(where : haxe.Int64, ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Check expression
 	*/
-	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Check if the present name is part of a scoping prefix.
 	*/
-	@:overload public function checkAmbigName(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, loc : sun.tools.tree.UnaryExpression) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkAmbigName(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, loc : sun.tools.tree.UnaryExpression) : sun.tools.tree.Vset;
 	
 	
 }

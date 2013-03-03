@@ -35,10 +35,10 @@ package java.text;
 extern class Bidi
 {
 	/** Constant indicating base direction is left-to-right. */
-	public static var DIRECTION_LEFT_TO_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var DIRECTION_LEFT_TO_RIGHT(default, null) : Int;
 	
 	/** Constant indicating base direction is right-to-left. */
-	public static var DIRECTION_RIGHT_TO_LEFT(default, null) : Int;
+	@:public @:static @:final public static var DIRECTION_RIGHT_TO_LEFT(default, null) : Int;
 	
 	/**
 	* Constant indicating that the base direction depends on the first strong
@@ -46,7 +46,7 @@ extern class Bidi
 	* Bidirectional Algorithm.  If no strong directional character is present,
 	* the base direction is left-to-right.
 	*/
-	public static var DIRECTION_DEFAULT_LEFT_TO_RIGHT(default, null) : Int;
+	@:public @:static @:final public static var DIRECTION_DEFAULT_LEFT_TO_RIGHT(default, null) : Int;
 	
 	/**
 	* Constant indicating that the base direction depends on the first strong
@@ -54,7 +54,7 @@ extern class Bidi
 	* Bidirectional Algorithm.  If no strong directional character is present,
 	* the base direction is right-to-left.
 	*/
-	public static var DIRECTION_DEFAULT_RIGHT_TO_LEFT(default, null) : Int;
+	@:public @:static @:final public static var DIRECTION_DEFAULT_RIGHT_TO_LEFT(default, null) : Int;
 	
 	/**
 	* Create Bidi from the given paragraph of text and base direction.
@@ -64,7 +64,7 @@ extern class Bidi
 	* DIRECTION_DEFAULT_LEFT_TO_RIGHT, and DIRECTION_DEFAULT_RIGHT_TO_LEFT.
 	* Other values are reserved.
 	*/
-	@:overload public function new(paragraph : String, flags : Int) : Void;
+	@:overload @:public public function new(paragraph : String, flags : Int) : Void;
 	
 	/**
 	* Create Bidi from the given paragraph of text.
@@ -91,7 +91,7 @@ extern class Bidi
 	* @see java.awt.font.TextAttribute#NUMERIC_SHAPING
 	* @see java.awt.font.TextAttribute#RUN_DIRECTION
 	*/
-	@:overload public function new(paragraph : java.text.AttributedCharacterIterator) : Void;
+	@:overload @:public public function new(paragraph : java.text.AttributedCharacterIterator) : Void;
 	
 	/**
 	* Create Bidi from the given text, embedding, and direction information.
@@ -110,7 +110,7 @@ extern class Bidi
 	* DIRECTION_DEFAULT_LEFT_TO_RIGHT, and DIRECTION_DEFAULT_RIGHT_TO_LEFT.
 	* Other values are reserved.
 	*/
-	@:overload public function new(text : java.NativeArray<java.StdTypes.Char16>, textStart : Int, embeddings : java.NativeArray<java.StdTypes.Int8>, embStart : Int, paragraphLength : Int, flags : Int) : Void;
+	@:overload @:public public function new(text : java.NativeArray<java.StdTypes.Char16>, textStart : Int, embeddings : java.NativeArray<java.StdTypes.Int8>, embStart : Int, paragraphLength : Int, flags : Int) : Void;
 	
 	/**
 	* Create a Bidi object representing the bidi information on a line of text within
@@ -119,44 +119,44 @@ extern class Bidi
 	* @param lineStart the offset from the start of the paragraph to the start of the line.
 	* @param lineLimit the offset from the start of the paragraph to the limit of the line.
 	*/
-	@:overload public function createLineBidi(lineStart : Int, lineLimit : Int) : java.text.Bidi;
+	@:overload @:public public function createLineBidi(lineStart : Int, lineLimit : Int) : java.text.Bidi;
 	
 	/**
 	* Return true if the line is not left-to-right or right-to-left.  This means it either has mixed runs of left-to-right
 	* and right-to-left text, or the base direction differs from the direction of the only run of text.
 	* @return true if the line is not left-to-right or right-to-left.
 	*/
-	@:overload public function isMixed() : Bool;
+	@:overload @:public public function isMixed() : Bool;
 	
 	/**
 	* Return true if the line is all left-to-right text and the base direction is left-to-right.
 	* @return true if the line is all left-to-right text and the base direction is left-to-right
 	*/
-	@:overload public function isLeftToRight() : Bool;
+	@:overload @:public public function isLeftToRight() : Bool;
 	
 	/**
 	* Return true if the line is all right-to-left text, and the base direction is right-to-left.
 	* @return true if the line is all right-to-left text, and the base direction is right-to-left
 	*/
-	@:overload public function isRightToLeft() : Bool;
+	@:overload @:public public function isRightToLeft() : Bool;
 	
 	/**
 	* Return the length of text in the line.
 	* @return the length of text in the line
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return true if the base direction is left-to-right.
 	* @return true if the base direction is left-to-right
 	*/
-	@:overload public function baseIsLeftToRight() : Bool;
+	@:overload @:public public function baseIsLeftToRight() : Bool;
 	
 	/**
 	* Return the base level (0 if left-to-right, 1 if right-to-left).
 	* @return the base level
 	*/
-	@:overload public function getBaseLevel() : Int;
+	@:overload @:public public function getBaseLevel() : Int;
 	
 	/**
 	* Return the resolved level of the character at offset.  If offset is <0 or >=
@@ -164,20 +164,20 @@ extern class Bidi
 	* @param offset the index of the character for which to return the level
 	* @return the resolved level of the character at offset
 	*/
-	@:overload public function getLevelAt(offset : Int) : Int;
+	@:overload @:public public function getLevelAt(offset : Int) : Int;
 	
 	/**
 	* Return the number of level runs.
 	* @return the number of level runs
 	*/
-	@:overload public function getRunCount() : Int;
+	@:overload @:public public function getRunCount() : Int;
 	
 	/**
 	* Return the level of the nth logical run in this line.
 	* @param run the index of the run, between 0 and <code>getRunCount()</code>
 	* @return the level of the run
 	*/
-	@:overload public function getRunLevel(run : Int) : Int;
+	@:overload @:public public function getRunLevel(run : Int) : Int;
 	
 	/**
 	* Return the index of the character at the start of the nth logical run in this line, as
@@ -185,7 +185,7 @@ extern class Bidi
 	* @param run the index of the run, between 0 and <code>getRunCount()</code>
 	* @return the start of the run
 	*/
-	@:overload public function getRunStart(run : Int) : Int;
+	@:overload @:public public function getRunStart(run : Int) : Int;
 	
 	/**
 	* Return the index of the character past the end of the nth logical run in this line, as
@@ -194,7 +194,7 @@ extern class Bidi
 	* @param run the index of the run, between 0 and <code>getRunCount()</code>
 	* @return limit the limit of the run
 	*/
-	@:overload public function getRunLimit(run : Int) : Int;
+	@:overload @:public public function getRunLimit(run : Int) : Int;
 	
 	/**
 	* Return true if the specified text requires bidi analysis.  If this returns false,
@@ -207,7 +207,7 @@ extern class Bidi
 	* @param limit the limit of the range of characters to test
 	* @return true if the range of characters requires bidi analysis
 	*/
-	@:overload public static function requiresBidi(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
+	@:overload @:public @:static public static function requiresBidi(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
 	
 	/**
 	* Reorder the objects in the array into visual order based on their levels.
@@ -225,12 +225,12 @@ extern class Bidi
 	* @param objectStart the start position in the objects array
 	* @param count the number of objects to reorder
 	*/
-	@:overload public static function reorderVisually(levels : java.NativeArray<java.StdTypes.Int8>, levelStart : Int, objects : java.NativeArray<Dynamic>, objectStart : Int, count : Int) : Void;
+	@:overload @:public @:static public static function reorderVisually(levels : java.NativeArray<java.StdTypes.Int8>, levelStart : Int, objects : java.NativeArray<Dynamic>, objectStart : Int, count : Int) : Void;
 	
 	/**
 	* Display the bidi internal state, used in debugging.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

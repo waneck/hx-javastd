@@ -45,7 +45,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	* an array for storing its current values, and a <code>BitSet</code>
 	* object for keeping track of which column values have been changed.
 	*/
-	@:overload public function new(numCols : Int) : Void;
+	@:overload @:public public function new(numCols : Int) : Void;
 	
 	/**
 	* Creates a new <code>Row</code> object with the given number of columns
@@ -54,7 +54,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	* current values and a <code>BitSet</code> object for keeping track
 	* of which column values have been changed.
 	*/
-	@:overload public function new(numCols : Int, vals : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(numCols : Int, vals : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	*
@@ -66,7 +66,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*            <code>1</code>
 	* @param val the new value to be set
 	*/
-	@:overload public function initColumnObject(idx : Int, val : Dynamic) : Void;
+	@:overload @:public public function initColumnObject(idx : Int, val : Dynamic) : Void;
 	
 	/**
 	*
@@ -78,7 +78,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*            <code>1</code>
 	* @param val the new value to be set
 	*/
-	@:overload override public function setColumnObject(idx : Int, val : Dynamic) : Void;
+	@:overload @:public override public function setColumnObject(idx : Int, val : Dynamic) : Void;
 	
 	/**
 	* Retrieves the column value stored in the designated column of this
@@ -90,7 +90,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*         represents the value stored in the designated column
 	* @throws SQLException if there is a database access error
 	*/
-	@:overload override public function getColumnObject(columnIndex : Int) : Dynamic;
+	@:overload @:public override public function getColumnObject(columnIndex : Int) : Dynamic;
 	
 	/**
 	* Indicates whether the designated column of this <code>Row</code> object
@@ -103,7 +103,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*         <code>false</code> otherwise
 	*
 	*/
-	@:overload public function getColUpdated(idx : Int) : Bool;
+	@:overload @:public public function getColUpdated(idx : Int) : Bool;
 	
 	/**
 	* Sets this <code>Row</code> object's <code>deleted</code> field
@@ -111,7 +111,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*
 	* @see #getDeleted
 	*/
-	@:overload public function setDeleted() : Void;
+	@:overload @:public public function setDeleted() : Void;
 	
 	/**
 	* Retrieves the value of this <code>Row</code> object's <code>deleted</code> field,
@@ -122,13 +122,13 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*
 	* @see #setDeleted
 	*/
-	@:overload public function getDeleted() : Bool;
+	@:overload @:public public function getDeleted() : Bool;
 	
 	/**
 	* Sets the <code>deleted</code> field for this <code>Row</code> object to
 	* <code>false</code>.
 	*/
-	@:overload public function clearDeleted() : Void;
+	@:overload @:public public function clearDeleted() : Void;
 	
 	/**
 	* Sets the value of this <code>Row</code> object's <code>inserted</code> field
@@ -136,7 +136,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*
 	* @see #getInserted
 	*/
-	@:overload public function setInserted() : Void;
+	@:overload @:public public function setInserted() : Void;
 	
 	/**
 	* Retrieves the value of this <code>Row</code> object's <code>inserted</code> field,
@@ -146,13 +146,13 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*
 	* @see #setInserted
 	*/
-	@:overload public function getInserted() : Bool;
+	@:overload @:public public function getInserted() : Bool;
 	
 	/**
 	* Sets the <code>inserted</code> field for this <code>Row</code> object to
 	* <code>false</code>.
 	*/
-	@:overload public function clearInserted() : Void;
+	@:overload @:public public function clearInserted() : Void;
 	
 	/**
 	* Retrieves the value of this <code>Row</code> object's
@@ -162,7 +162,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*
 	* @see #setUpdated
 	*/
-	@:overload public function getUpdated() : Bool;
+	@:overload @:public public function getUpdated() : Bool;
 	
 	/**
 	* Sets the <code>updated</code> field for this <code>Row</code> object to
@@ -170,7 +170,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	*
 	* @see #getUpdated
 	*/
-	@:overload public function setUpdated() : Void;
+	@:overload @:public public function setUpdated() : Void;
 	
 	/**
 	* Sets the <code>updated</code> field for this <code>Row</code> object to
@@ -179,7 +179,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	* all of the bits in the <code>BitSet</code> object maintained by this
 	* <code>Row</code> object.
 	*/
-	@:overload public function clearUpdated() : Void;
+	@:overload @:public public function clearUpdated() : Void;
 	
 	/**
 	* Sets the column values in this <code>Row</code> object's internal
@@ -192,7 +192,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	* This method is called internally by the <code>CachedRowSet</code>
 	* method <code>makeRowOriginal</code>.
 	*/
-	@:overload public function moveCurrentToOrig() : Void;
+	@:overload @:public public function moveCurrentToOrig() : Void;
 	
 	/**
 	* Returns the row on which the cursor is positioned.
@@ -200,7 +200,7 @@ extern class Row extends com.sun.rowset.internal.BaseRow implements java.io.Seri
 	* @return the <code>Row</code> object on which the <code>CachedRowSet</code>
 	*           implementation objects's cursor is positioned
 	*/
-	@:overload public function getCurrentRow() : com.sun.rowset.internal.BaseRow;
+	@:overload @:public public function getCurrentRow() : com.sun.rowset.internal.BaseRow;
 	
 	
 }

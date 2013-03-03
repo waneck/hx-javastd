@@ -29,7 +29,7 @@ extern class SAXParser
 	* <p>Protected constructor to prevent instaniation.
 	* Use {@link javax.xml.parsers.SAXParserFactory#newSAXParser()}.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Reset this <code>SAXParser</code> to its original configuration.</p>
@@ -48,7 +48,7 @@ extern class SAXParser
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function reset() : Void;
+	@:require(java5) @:overload @:public public function reset() : Void;
 	
 	/**
 	* <p>Parse the content of the given {@link java.io.InputStream}
@@ -66,7 +66,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(is : java.io.InputStream, hb : org.xml.sax.HandlerBase) : Void;
+	@:overload @:public public function parse(is : java.io.InputStream, hb : org.xml.sax.HandlerBase) : Void;
 	
 	/**
 	* <p>Parse the content of the given {@link java.io.InputStream}
@@ -86,7 +86,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler version of this method instead.
 	*/
-	@:overload public function parse(is : java.io.InputStream, hb : org.xml.sax.HandlerBase, systemId : String) : Void;
+	@:overload @:public public function parse(is : java.io.InputStream, hb : org.xml.sax.HandlerBase, systemId : String) : Void;
 	
 	/**
 	* Parse the content of the given {@link java.io.InputStream}
@@ -102,7 +102,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(is : java.io.InputStream, dh : org.xml.sax.helpers.DefaultHandler) : Void;
+	@:overload @:public public function parse(is : java.io.InputStream, dh : org.xml.sax.helpers.DefaultHandler) : Void;
 	
 	/**
 	* Parse the content of the given {@link java.io.InputStream}
@@ -119,7 +119,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler version of this method instead.
 	*/
-	@:overload public function parse(is : java.io.InputStream, dh : org.xml.sax.helpers.DefaultHandler, systemId : String) : Void;
+	@:overload @:public public function parse(is : java.io.InputStream, dh : org.xml.sax.helpers.DefaultHandler, systemId : String) : Void;
 	
 	/**
 	* Parse the content described by the giving Uniform Resource
@@ -137,7 +137,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(uri : String, hb : org.xml.sax.HandlerBase) : Void;
+	@:overload @:public public function parse(uri : String, hb : org.xml.sax.HandlerBase) : Void;
 	
 	/**
 	* Parse the content described by the giving Uniform Resource
@@ -153,7 +153,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(uri : String, dh : org.xml.sax.helpers.DefaultHandler) : Void;
+	@:overload @:public public function parse(uri : String, dh : org.xml.sax.helpers.DefaultHandler) : Void;
 	
 	/**
 	* Parse the content of the file specified as XML using the
@@ -170,7 +170,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(f : java.io.File, hb : org.xml.sax.HandlerBase) : Void;
+	@:overload @:public public function parse(f : java.io.File, hb : org.xml.sax.HandlerBase) : Void;
 	
 	/**
 	* Parse the content of the file specified as XML using the
@@ -185,7 +185,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(f : java.io.File, dh : org.xml.sax.helpers.DefaultHandler) : Void;
+	@:overload @:public public function parse(f : java.io.File, dh : org.xml.sax.helpers.DefaultHandler) : Void;
 	
 	/**
 	* Parse the content given {@link org.xml.sax.InputSource}
@@ -204,7 +204,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(is : org.xml.sax.InputSource, hb : org.xml.sax.HandlerBase) : Void;
+	@:overload @:public public function parse(is : org.xml.sax.InputSource, hb : org.xml.sax.HandlerBase) : Void;
 	
 	/**
 	* Parse the content given {@link org.xml.sax.InputSource}
@@ -221,7 +221,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.DocumentHandler
 	*/
-	@:overload public function parse(is : org.xml.sax.InputSource, dh : org.xml.sax.helpers.DefaultHandler) : Void;
+	@:overload @:public public function parse(is : org.xml.sax.InputSource, dh : org.xml.sax.helpers.DefaultHandler) : Void;
 	
 	/**
 	* Returns the SAX parser that is encapsultated by the
@@ -232,7 +232,7 @@ extern class SAXParser
 	*
 	* @throws SAXException If any SAX errors occur during processing.
 	*/
-	@:overload @:abstract public function getParser() : org.xml.sax.Parser;
+	@:overload @:public @:abstract public function getParser() : org.xml.sax.Parser;
 	
 	/**
 	* Returns the {@link org.xml.sax.XMLReader} that is encapsulated by the
@@ -243,7 +243,7 @@ extern class SAXParser
 	*
 	* @throws SAXException If any SAX errors occur during processing.
 	*/
-	@:overload @:abstract public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public @:abstract public function getXMLReader() : org.xml.sax.XMLReader;
 	
 	/**
 	* Indicates whether or not this parser is configured to
@@ -252,7 +252,7 @@ extern class SAXParser
 	* @return true if this parser is configured to
 	*         understand namespaces; false otherwise.
 	*/
-	@:overload @:abstract public function isNamespaceAware() : Bool;
+	@:overload @:public @:abstract public function isNamespaceAware() : Bool;
 	
 	/**
 	* Indicates whether or not this parser is configured to
@@ -261,7 +261,7 @@ extern class SAXParser
 	* @return true if this parser is configured to
 	*         validate XML documents; false otherwise.
 	*/
-	@:overload @:abstract public function isValidating() : Bool;
+	@:overload @:public @:abstract public function isValidating() : Bool;
 	
 	/**
 	* <p>Sets the particular property in the underlying implementation of
@@ -280,7 +280,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.XMLReader#setProperty
 	*/
-	@:overload @:abstract public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* <p>Returns the particular property requested for in the underlying
@@ -296,7 +296,7 @@ extern class SAXParser
 	*
 	* @see org.xml.sax.XMLReader#getProperty
 	*/
-	@:overload @:abstract public function getProperty(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getProperty(name : String) : Dynamic;
 	
 	/** <p>Get a reference to the the {@link Schema} being used by
 	* the XML processor.</p>
@@ -311,7 +311,7 @@ extern class SAXParser
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getSchema() : javax.xml.validation.Schema;
+	@:require(java5) @:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* <p>Get the XInclude processing mode for this parser.</p>
@@ -328,7 +328,7 @@ extern class SAXParser
 	*
 	* @see SAXParserFactory#setXIncludeAware(boolean)
 	*/
-	@:require(java5) @:overload public function isXIncludeAware() : Bool;
+	@:require(java5) @:overload @:public public function isXIncludeAware() : Bool;
 	
 	
 }

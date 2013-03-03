@@ -35,28 +35,28 @@ extern interface DynEnum extends org.omg.CORBA.Object extends org.omg.CORBA.DynA
 	*
 	* @return the stringified value.
 	*/
-	@:overload public function value_as_string() : String;
+	@:overload @:public public function value_as_string() : String;
 	
 	/**
 	* Set a particular enum in this <code>DynEnum</code>.
 	*
 	* @param arg the string corresponding to the value.
 	*/
-	@:overload public function value_as_string(arg : String) : Void;
+	@:overload @:public public function value_as_string(arg : String) : Void;
 	
 	/**
 	* Return the value of the IDL enum as a Java int.
 	*
 	* @return the integer value.
 	*/
-	@:overload public function value_as_ulong() : Int;
+	@:overload @:public public function value_as_ulong() : Int;
 	
 	/**
 	* Set the value of the IDL enum.
 	*
 	* @param arg the int value of the enum.
 	*/
-	@:overload public function value_as_ulong(arg : Int) : Void;
+	@:overload @:public public function value_as_ulong(arg : Int) : Void;
 	
 	
 }

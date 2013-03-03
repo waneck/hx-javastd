@@ -47,7 +47,7 @@ package com.sun.beans.decoder;
 	*
 	* @return the value of this element
 	*/
-	@:overload @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected @:final override private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	/**
 	* Returns {@code null}
@@ -57,14 +57,14 @@ package com.sun.beans.decoder;
 	*
 	* @return {@code null} by default
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Returns {@code void} state of this value object.
 	*
 	* @return {@code false} always
 	*/
-	@:overload @:final public function isVoid() : Bool;
+	@:overload @:public @:final public function isVoid() : Bool;
 	
 	
 }

@@ -27,9 +27,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class NumberType extends com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type
 {
-	@:overload override public function isNumber() : Bool;
+	@:overload @:public override public function isNumber() : Bool;
 	
-	@:overload override public function isSimple() : Bool;
+	@:overload @:public override public function isSimple() : Bool;
 	
 	
 }

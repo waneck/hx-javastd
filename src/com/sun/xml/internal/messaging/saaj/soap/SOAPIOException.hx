@@ -33,27 +33,27 @@ package com.sun.xml.internal.messaging.saaj.soap;
 */
 extern class SOAPIOException extends java.io.IOException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function new(reason : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(reason : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
-	@:overload override public function fillInStackTrace() : java.lang.Throwable;
+	@:overload @:public override public function fillInStackTrace() : java.lang.Throwable;
 	
-	@:overload override public function getLocalizedMessage() : String;
+	@:overload @:public override public function getLocalizedMessage() : String;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
-	@:overload override public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -42,7 +42,7 @@ package javax.crypto;
 	*
 	* @param random the source of randomness for this generator
 	*/
-	@:overload @:abstract private function engineInit(random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the key generator with the specified parameter
@@ -54,7 +54,7 @@ package javax.crypto;
 	* @exception InvalidAlgorithmParameterException if <code>params</code> is
 	* inappropriate for this key generator
 	*/
-	@:overload @:abstract private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key generator for a certain keysize, using the given
@@ -67,14 +67,14 @@ package javax.crypto;
 	* @exception InvalidParameterException if the keysize is wrong or not
 	* supported.
 	*/
-	@:overload @:abstract private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:protected @:abstract private function engineInit(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a secret key.
 	*
 	* @return the new key
 	*/
-	@:overload @:abstract private function engineGenerateKey() : javax.crypto.SecretKey;
+	@:overload @:protected @:abstract private function engineGenerateKey() : javax.crypto.SecretKey;
 	
 	
 }

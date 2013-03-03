@@ -38,7 +38,7 @@ extern interface JMXConnectorServerMBean
 	* @exception IllegalStateException if the connector server has
 	* not been attached to an MBean server.
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public @:public public function start() : Void;
 	
 	/**
 	* <p>Deactivates the connector server, that is, stops listening for
@@ -75,7 +75,7 @@ extern interface JMXConnectorServerMBean
 	* closed except possibly those that generated exceptions when the
 	* server attempted to close them.
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public @:public public function stop() : Void;
 	
 	/**
 	* <p>Determines whether the connector server is active.  A connector
@@ -86,7 +86,7 @@ extern interface JMXConnectorServerMBean
 	*
 	* @return true if the connector server is active.
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public @:public public function isActive() : Bool;
 	
 	/**
 	* <p>Inserts an object that intercepts requests for the MBean server
@@ -121,7 +121,7 @@ extern interface JMXConnectorServerMBean
 	* with <code>IllegalArgumentException</code>.  This includes the
 	* case where <code>mbsf</code> is null.
 	*/
-	@:overload public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
+	@:overload @:public public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
 	
 	/**
 	* <p>The list of IDs for currently-open connections to this
@@ -131,7 +131,7 @@ extern interface JMXConnectorServerMBean
 	* there are no currently-open connections, this array will be
 	* empty.
 	*/
-	@:overload public function getConnectionIds() : java.NativeArray<String>;
+	@:overload @:public public function getConnectionIds() : java.NativeArray<String>;
 	
 	/**
 	* <p>The address of this connector server.</p>
@@ -151,7 +151,7 @@ extern interface JMXConnectorServerMBean
 	* @return the address of this connector server, or null if it
 	* does not have one.
 	*/
-	@:overload public function getAddress() : javax.management.remote.JMXServiceURL;
+	@:overload @:public public function getAddress() : javax.management.remote.JMXServiceURL;
 	
 	/**
 	* <p>The attributes for this connector server.</p>
@@ -161,7 +161,7 @@ extern interface JMXConnectorServerMBean
 	* are omitted from this map.  If there are no serializable
 	* attributes, the returned map is empty.
 	*/
-	@:overload public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public @:public public function getAttributes() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* <p>Returns a client stub for this connector server.  A client
@@ -191,7 +191,7 @@ extern interface JMXConnectorServerMBean
 	* stub cannot be created.
 	*
 	*/
-	@:overload public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	
 }

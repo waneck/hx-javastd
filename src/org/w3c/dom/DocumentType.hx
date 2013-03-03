@@ -55,7 +55,7 @@ extern interface DocumentType extends org.w3c.dom.Node
 	* The name of DTD; i.e., the name immediately following the
 	* <code>DOCTYPE</code> keyword.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the general entities, both
@@ -72,7 +72,7 @@ extern interface DocumentType extends org.w3c.dom.Node
 	* <br>The DOM Level 2 does not support editing entities, therefore
 	* <code>entities</code> cannot be altered in any way.
 	*/
-	@:overload public function getEntities() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getEntities() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the notations declared in the
@@ -81,20 +81,20 @@ extern interface DocumentType extends org.w3c.dom.Node
 	* <br>The DOM Level 2 does not support editing notations, therefore
 	* <code>notations</code> cannot be altered in any way.
 	*/
-	@:overload public function getNotations() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getNotations() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* The public identifier of the external subset.
 	* @since DOM Level 2
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* The system identifier of the external subset. This may be an absolute
 	* URI or not.
 	* @since DOM Level 2
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* The internal subset as a string, or <code>null</code> if there is none.
@@ -105,7 +105,7 @@ extern interface DocumentType extends org.w3c.dom.Node
 	* build the document.
 	* @since DOM Level 2
 	*/
-	@:overload public function getInternalSubset() : String;
+	@:overload @:public public function getInternalSubset() : String;
 	
 	
 }

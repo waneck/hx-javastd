@@ -25,57 +25,57 @@ package com.sun.tools.apt.mirror.util;
 */
 extern class TypesImpl implements com.sun.mirror.util.Types
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.mirror.util.Types;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.mirror.util.Types;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isSubtype(t1 : com.sun.mirror.type.TypeMirror, t2 : com.sun.mirror.type.TypeMirror) : Bool;
+	@:overload @:public public function isSubtype(t1 : com.sun.mirror.type.TypeMirror, t2 : com.sun.mirror.type.TypeMirror) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isAssignable(t1 : com.sun.mirror.type.TypeMirror, t2 : com.sun.mirror.type.TypeMirror) : Bool;
+	@:overload @:public public function isAssignable(t1 : com.sun.mirror.type.TypeMirror, t2 : com.sun.mirror.type.TypeMirror) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getErasure(t : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getErasure(t : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getPrimitiveType(kind : com.sun.mirror.type.PrimitiveType.PrimitiveType_Kind) : com.sun.mirror.type.PrimitiveType;
+	@:overload @:public public function getPrimitiveType(kind : com.sun.mirror.type.PrimitiveType.PrimitiveType_Kind) : com.sun.mirror.type.PrimitiveType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getVoidType() : com.sun.mirror.type.VoidType;
+	@:overload @:public public function getVoidType() : com.sun.mirror.type.VoidType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getArrayType(componentType : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.ArrayType;
+	@:overload @:public public function getArrayType(componentType : com.sun.mirror.type.TypeMirror) : com.sun.mirror.type.ArrayType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTypeVariable(tparam : com.sun.mirror.declaration.TypeParameterDeclaration) : com.sun.mirror.type.TypeVariable;
+	@:overload @:public public function getTypeVariable(tparam : com.sun.mirror.declaration.TypeParameterDeclaration) : com.sun.mirror.type.TypeVariable;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getWildcardType(upperBounds : java.util.Collection<com.sun.mirror.type.ReferenceType>, lowerBounds : java.util.Collection<com.sun.mirror.type.ReferenceType>) : com.sun.mirror.type.WildcardType;
+	@:overload @:public public function getWildcardType(upperBounds : java.util.Collection<com.sun.mirror.type.ReferenceType>, lowerBounds : java.util.Collection<com.sun.mirror.type.ReferenceType>) : com.sun.mirror.type.WildcardType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaredType(decl : com.sun.mirror.declaration.TypeDeclaration, typeArgs : java.NativeArray<com.sun.mirror.type.TypeMirror>) : com.sun.mirror.type.DeclaredType;
+	@:overload @:public public function getDeclaredType(decl : com.sun.mirror.declaration.TypeDeclaration, typeArgs : java.NativeArray<com.sun.mirror.type.TypeMirror>) : com.sun.mirror.type.DeclaredType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDeclaredType(containing : com.sun.mirror.type.DeclaredType, decl : com.sun.mirror.declaration.TypeDeclaration, typeArgs : java.NativeArray<com.sun.mirror.type.TypeMirror>) : com.sun.mirror.type.DeclaredType;
+	@:overload @:public public function getDeclaredType(containing : com.sun.mirror.type.DeclaredType, decl : com.sun.mirror.declaration.TypeDeclaration, typeArgs : java.NativeArray<com.sun.mirror.type.TypeMirror>) : com.sun.mirror.type.DeclaredType;
 	
 	
 }

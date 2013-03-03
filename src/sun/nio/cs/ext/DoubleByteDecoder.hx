@@ -27,26 +27,26 @@ package sun.nio.cs.ext;
 */
 @:internal extern class DoubleByteDecoder extends java.nio.charset.CharsetDecoder
 {
-	private var start : Int;
+	@:protected private var start : Int;
 	
-	private var end : Int;
+	@:protected private var end : Int;
 	
-	private static var REPLACE_CHAR(default, null) : java.StdTypes.Char16;
+	@:protected @:static @:final private static var REPLACE_CHAR(default, null) : java.StdTypes.Char16;
 	
-	private var highSurrogate : java.StdTypes.Char16;
+	@:protected private var highSurrogate : java.StdTypes.Char16;
 	
-	private var lowSurrogate : java.StdTypes.Char16;
+	@:protected private var lowSurrogate : java.StdTypes.Char16;
 	
-	@:overload private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, start : Int, end : Int) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset, index1 : java.NativeArray<java.StdTypes.Int16>, index2 : java.NativeArray<String>, start : Int, end : Int) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	/*
 	* Can be changed by subclass
 	*/
-	@:overload private function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	
 }

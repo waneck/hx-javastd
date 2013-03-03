@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.encoding;
 */
 extern interface TypeCodeReader extends com.sun.corba.se.impl.encoding.MarshalInputStream
 {
-	@:overload public function addTypeCodeAtPosition(tc : com.sun.corba.se.impl.corba.TypeCodeImpl, position : Int) : Void;
+	@:overload @:public public function addTypeCodeAtPosition(tc : com.sun.corba.se.impl.corba.TypeCodeImpl, position : Int) : Void;
 	
-	@:overload public function getTypeCodeAtPosition(position : Int) : com.sun.corba.se.impl.corba.TypeCodeImpl;
+	@:overload @:public public function getTypeCodeAtPosition(position : Int) : com.sun.corba.se.impl.corba.TypeCodeImpl;
 	
-	@:overload public function setEnclosingInputStream(enclosure : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function setEnclosingInputStream(enclosure : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeReader;
+	@:overload @:public public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeReader;
 	
-	@:overload public function getTopLevelPosition() : Int;
+	@:overload @:public public function getTopLevelPosition() : Int;
 	
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
-	@:overload public function printTypeMap() : Void;
+	@:overload @:public public function printTypeMap() : Void;
 	
 	
 }

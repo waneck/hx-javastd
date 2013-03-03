@@ -21,83 +21,83 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser implements com.sun.org.apache.xerces.internal.xs.PSVIProvider implements org.xml.sax.Parser implements org.xml.sax.XMLReader
 {
 	/** Feature identifier: namespaces. */
-	private static var NAMESPACES(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACES(default, null) : String;
 	
 	/** Feature identifier: namespace prefixes. */
-	private static var NAMESPACE_PREFIXES(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_PREFIXES(default, null) : String;
 	
 	/** Feature id: string interning. */
-	private static var STRING_INTERNING(default, null) : String;
+	@:protected @:static @:final private static var STRING_INTERNING(default, null) : String;
 	
 	/** Feature identifier: allow notation and unparsed entity events to be sent out of order. */
-	private static var ALLOW_UE_AND_NOTATION_EVENTS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_UE_AND_NOTATION_EVENTS(default, null) : String;
 	
 	/** Property id: lexical handler. */
-	private static var LEXICAL_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var LEXICAL_HANDLER(default, null) : String;
 	
 	/** Property id: declaration handler. */
-	private static var DECLARATION_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var DECLARATION_HANDLER(default, null) : String;
 	
 	/** Property id: DOM node. */
-	private static var DOM_NODE(default, null) : String;
+	@:protected @:static @:final private static var DOM_NODE(default, null) : String;
 	
 	/** Namespaces. */
-	private var fNamespaces : Bool;
+	@:protected private var fNamespaces : Bool;
 	
 	/** Namespace prefixes. */
-	private var fNamespacePrefixes : Bool;
+	@:protected private var fNamespacePrefixes : Bool;
 	
 	/** Lexical handler parameter entities. */
-	private var fLexicalHandlerParameterEntities : Bool;
+	@:protected private var fLexicalHandlerParameterEntities : Bool;
 	
 	/** Standalone document declaration. */
-	private var fStandalone : Bool;
+	@:protected private var fStandalone : Bool;
 	
 	/** Resolve DTD URIs. */
-	private var fResolveDTDURIs : Bool;
+	@:protected private var fResolveDTDURIs : Bool;
 	
 	/** Use EntityResolver2. */
-	private var fUseEntityResolver2 : Bool;
+	@:protected private var fUseEntityResolver2 : Bool;
 	
 	/**
 	* XMLNS URIs: Namespace declarations in the
 	* http://www.w3.org/2000/xmlns/ namespace.
 	*/
-	private var fXMLNSURIs : Bool;
+	@:protected private var fXMLNSURIs : Bool;
 	
 	/** Content handler. */
-	private var fContentHandler : org.xml.sax.ContentHandler;
+	@:protected private var fContentHandler : org.xml.sax.ContentHandler;
 	
 	/** Document handler. */
-	private var fDocumentHandler : org.xml.sax.DocumentHandler;
+	@:protected private var fDocumentHandler : org.xml.sax.DocumentHandler;
 	
 	/** Namespace context */
-	private var fNamespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+	@:protected private var fNamespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** DTD handler. */
-	private var fDTDHandler : org.xml.sax.DTDHandler;
+	@:protected private var fDTDHandler : org.xml.sax.DTDHandler;
 	
 	/** Decl handler. */
-	private var fDeclHandler : org.xml.sax.ext.DeclHandler;
+	@:protected private var fDeclHandler : org.xml.sax.ext.DeclHandler;
 	
 	/** Lexical handler. */
-	private var fLexicalHandler : org.xml.sax.ext.LexicalHandler;
+	@:protected private var fLexicalHandler : org.xml.sax.ext.LexicalHandler;
 	
-	private var fQName : com.sun.org.apache.xerces.internal.xni.QName;
+	@:protected private var fQName : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* True if a parse is in progress. This state is needed because
 	* some features/properties cannot be set while parsing (e.g.
 	* validation and namespaces).
 	*/
-	private var fParseInProgress : Bool;
+	@:protected private var fParseInProgress : Bool;
 	
-	private var fVersion : String;
+	@:protected private var fVersion : String;
 	
-	private var fDeclaredAttrs : com.sun.org.apache.xerces.internal.util.SymbolHash;
+	@:protected private var fDeclaredAttrs : com.sun.org.apache.xerces.internal.util.SymbolHash;
 	
 	/** Default constructor. */
-	@:overload private function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
+	@:overload @:protected private function new(config : com.sun.org.apache.xerces.internal.xni.parser.XMLParserConfiguration) : Void;
 	
 	/**
 	* The start of the document.
@@ -125,7 +125,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of an XMLDecl line in the document. If
@@ -140,7 +140,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of the DOCTYPE line in the document.
@@ -154,7 +154,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies of the start of an entity. The DTD has the
@@ -180,7 +180,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity. The DTD has the pseudo-name
@@ -201,7 +201,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element. If the document specifies the start element
@@ -214,7 +214,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -224,7 +224,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -239,7 +239,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -249,7 +249,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -257,7 +257,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -265,7 +265,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A comment.
@@ -275,7 +275,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by application to signal an error.
 	*/
-	@:overload override public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -294,7 +294,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the document.
@@ -302,7 +302,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of the DTD external subset.
@@ -312,7 +312,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startExternalSubset(identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startExternalSubset(identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD external subset.
@@ -322,7 +322,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endExternalSubset(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endExternalSubset(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies of the start of parameter entity. The DTD has the
@@ -349,7 +349,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of an entity. The DTD has the pseudo-name
@@ -371,7 +371,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endParameterEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endParameterEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An element declaration.
@@ -384,7 +384,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function elementDecl(name : String, contentModel : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An attribute declaration.
@@ -412,7 +412,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function attributeDecl(elementName : String, attributeName : String, type : String, enumeration : java.NativeArray<String>, defaultType : String, defaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An internal entity declaration.
@@ -431,7 +431,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function internalEntityDecl(name : String, text : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedText : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function internalEntityDecl(name : String, text : com.sun.org.apache.xerces.internal.xni.XMLString, nonNormalizedText : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An external entity declaration.
@@ -446,7 +446,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function externalEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function externalEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An unparsed entity declaration.
@@ -461,7 +461,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function unparsedEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, notation : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function unparsedEntityDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, notation : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A notation declaration
@@ -474,7 +474,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function notationDecl(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the DTD.
@@ -484,7 +484,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload override public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public override public function endDTD(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Parses the input source specified by the given system identifier.
@@ -499,7 +499,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @exception org.xml.sax.SAXException Throws exception on SAX error.
 	* @exception java.io.IOException Throws exception on i/o error.
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	/**
 	* parse
@@ -509,7 +509,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @exception org.xml.sax.SAXException
 	* @exception java.io.IOException
 	*/
-	@:overload public function parse(inputSource : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(inputSource : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Sets the resolver used to resolve external entities. The EntityResolver
@@ -518,7 +518,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @param resolver The new entity resolver. Passing a null value will
 	*                 uninstall the currently installed resolver.
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
 	/**
 	* Return the current entity resolver.
@@ -527,7 +527,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*         has been registered.
 	* @see #setEntityResolver
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Allow an application to register an error event handler.
@@ -545,7 +545,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @param errorHandler The error handler.
 	* @see #getErrorHandler
 	*/
-	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Return the current error handler.
@@ -554,7 +554,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*         has been registered.
 	* @see #setErrorHandler
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Set the locale to use for messages.
@@ -566,7 +566,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @see org.xml.sax.Parser
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Allow an application to register a DTD event handler.
@@ -583,7 +583,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 
 	* @see #getDTDHandler
 	*/
-	@:overload public function setDTDHandler(dtdHandler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(dtdHandler : org.xml.sax.DTDHandler) : Void;
 	
 	/**
 	* Allow an application to register a document event handler.
@@ -599,7 +599,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @param documentHandler The document handler.
 	*/
-	@:overload public function setDocumentHandler(documentHandler : org.xml.sax.DocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(documentHandler : org.xml.sax.DocumentHandler) : Void;
 	
 	/**
 	* Allow an application to register a content event handler.
@@ -616,7 +616,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @see #getContentHandler
 	*/
-	@:overload public function setContentHandler(contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Return the current content handler.
@@ -626,7 +626,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*
 	* @see #setContentHandler
 	*/
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return the current DTD handler.
@@ -635,7 +635,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*         has been registered.
 	* @see #setDTDHandler
 	*/
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Set the state of any feature in a SAX2 parser.  The parser
@@ -651,7 +651,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*            requested feature is known, but the requested
 	*            state is not supported.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Query the state of a feature.
@@ -667,7 +667,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @exception SAXNotSupportedException If the
 	*            requested feature is known but not supported.
 	*/
-	@:overload override public function getFeature(featureId : String) : Bool;
+	@:overload @:public override public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Set the value of any property in a SAX2 parser.  The parser
@@ -684,7 +684,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	*            requested property is known, but the requested
 	*            value is not supported.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Query the value of a property.
@@ -700,7 +700,7 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @exception SAXNotSupportedException If the
 	*            requested property is known but not supported.
 	*/
-	@:overload public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Set the DTD declaration event handler.
@@ -715,14 +715,14 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @see #getDeclHandler
 	* @see #setProperty
 	*/
-	@:overload private function setDeclHandler(handler : org.xml.sax.ext.DeclHandler) : Void;
+	@:overload @:protected private function setDeclHandler(handler : org.xml.sax.ext.DeclHandler) : Void;
 	
 	/**
 	* Returns the DTD declaration event handler.
 	*
 	* @see #setDeclHandler
 	*/
-	@:overload private function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:protected private function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/**
 	* Set the lexical event handler.
@@ -737,111 +737,111 @@ extern class AbstractSAXParser extends com.sun.org.apache.xerces.internal.parser
 	* @see #getLexicalHandler
 	* @see #setProperty
 	*/
-	@:overload private function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:protected private function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Returns the lexical handler.
 	*
 	* @see #setLexicalHandler
 	*/
-	@:overload private function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:protected private function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Send startPrefixMapping events
 	*/
-	@:overload @:final private function startNamespaceMapping() : Void;
+	@:overload @:protected @:final private function startNamespaceMapping() : Void;
 	
 	/**
 	* Send endPrefixMapping events
 	*/
-	@:overload @:final private function endNamespaceMapping() : Void;
+	@:overload @:protected @:final private function endNamespaceMapping() : Void;
 	
 	/**
 	* Reset all components before parsing.
 	*
 	* @throws XNIException Thrown if an error occurs during initialization.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function getElementPSVI() : com.sun.org.apache.xerces.internal.xs.ElementPSVI;
+	@:overload @:public public function getElementPSVI() : com.sun.org.apache.xerces.internal.xs.ElementPSVI;
 	
-	@:overload public function getAttributePSVI(index : Int) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
+	@:overload @:public public function getAttributePSVI(index : Int) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
 	
-	@:overload public function getAttributePSVIByName(uri : String, localname : String) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
+	@:overload @:public public function getAttributePSVIByName(uri : String, localname : String) : com.sun.org.apache.xerces.internal.xs.AttributePSVI;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$parsers$AbstractSAXParser$LocatorProxy') extern class AbstractSAXParser_LocatorProxy implements org.xml.sax.ext.Locator2
 {
 	/** XML locator. */
-	private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
+	@:protected private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
 	
 	/** Constructs an XML locator proxy. */
-	@:overload public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator) : Void;
+	@:overload @:public public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator) : Void;
 	
 	/** Public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/** System identifier. */
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/** Line number. */
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/** Column number. */
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$parsers$AbstractSAXParser$AttributesProxy') extern class AbstractSAXParser_AttributesProxy implements org.xml.sax.AttributeList implements org.xml.sax.ext.Attributes2
 {
 	/** XML attributes. */
-	private var fAttributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
+	@:protected private var fAttributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
 	
 	/** Sets the XML attributes. */
-	@:overload public function setAttributes(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:public public function setAttributes(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getName(i : Int) : String;
+	@:overload @:public public function getName(i : Int) : String;
 	
-	@:overload public function getQName(index : Int) : String;
+	@:overload @:public public function getQName(index : Int) : String;
 	
-	@:overload public function getURI(index : Int) : String;
+	@:overload @:public public function getURI(index : Int) : String;
 	
-	@:overload public function getLocalName(index : Int) : String;
+	@:overload @:public public function getLocalName(index : Int) : String;
 	
-	@:overload public function getType(i : Int) : String;
+	@:overload @:public public function getType(i : Int) : String;
 	
-	@:overload public function getType(name : String) : String;
+	@:overload @:public public function getType(name : String) : String;
 	
-	@:overload public function getType(uri : String, localName : String) : String;
+	@:overload @:public public function getType(uri : String, localName : String) : String;
 	
-	@:overload public function getValue(i : Int) : String;
+	@:overload @:public public function getValue(i : Int) : String;
 	
-	@:overload public function getValue(name : String) : String;
+	@:overload @:public public function getValue(name : String) : String;
 	
-	@:overload public function getValue(uri : String, localName : String) : String;
+	@:overload @:public public function getValue(uri : String, localName : String) : String;
 	
-	@:overload public function getIndex(qName : String) : Int;
+	@:overload @:public public function getIndex(qName : String) : Int;
 	
-	@:overload public function getIndex(uri : String, localPart : String) : Int;
+	@:overload @:public public function getIndex(uri : String, localPart : String) : Int;
 	
-	@:overload public function isDeclared(index : Int) : Bool;
+	@:overload @:public public function isDeclared(index : Int) : Bool;
 	
-	@:overload public function isDeclared(qName : String) : Bool;
+	@:overload @:public public function isDeclared(qName : String) : Bool;
 	
-	@:overload public function isDeclared(uri : String, localName : String) : Bool;
+	@:overload @:public public function isDeclared(uri : String, localName : String) : Bool;
 	
-	@:overload public function isSpecified(index : Int) : Bool;
+	@:overload @:public public function isSpecified(index : Int) : Bool;
 	
-	@:overload public function isSpecified(qName : String) : Bool;
+	@:overload @:public public function isSpecified(qName : String) : Bool;
 	
-	@:overload public function isSpecified(uri : String, localName : String) : Bool;
+	@:overload @:public public function isSpecified(uri : String, localName : String) : Bool;
 	
 	
 }

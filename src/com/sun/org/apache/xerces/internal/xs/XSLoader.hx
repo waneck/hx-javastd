@@ -44,7 +44,7 @@ extern interface XSLoader
 	* </dl></dd>
 	* </dl>
 	*/
-	@:overload public function getConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**
 	* Parses the content of XML Schema documents specified as the list of URI
@@ -53,7 +53,7 @@ extern interface XSLoader
 	* @param uriList The list of URI locations.
 	* @return An XSModel representing the schema documents.
 	*/
-	@:overload public function loadURIList(uriList : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function loadURIList(uriList : com.sun.org.apache.xerces.internal.xs.StringList) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	*  Parses the content of XML Schema documents specified as a list of
@@ -62,7 +62,7 @@ extern interface XSLoader
 	*   Schema documents are to be read.
 	* @return An XSModel representing the schema documents.
 	*/
-	@:overload public function loadInputList(is : com.sun.org.apache.xerces.internal.xs.LSInputList) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function loadInputList(is : com.sun.org.apache.xerces.internal.xs.LSInputList) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	* Parse an XML Schema document from a location identified by a URI
@@ -71,7 +71,7 @@ extern interface XSLoader
 	* @param uri The location of the XML Schema document to be read.
 	* @return An XSModel representing this schema.
 	*/
-	@:overload public function loadURI(uri : String) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function loadURI(uri : String) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	/**
 	*  Parse an XML Schema document from a resource identified by a
@@ -80,7 +80,7 @@ extern interface XSLoader
 	*   document is to be read.
 	* @return An XSModel representing this schema.
 	*/
-	@:overload public function load(is : org.w3c.dom.ls.LSInput) : com.sun.org.apache.xerces.internal.xs.XSModel;
+	@:overload @:public public function load(is : org.w3c.dom.ls.LSInput) : com.sun.org.apache.xerces.internal.xs.XSModel;
 	
 	
 }

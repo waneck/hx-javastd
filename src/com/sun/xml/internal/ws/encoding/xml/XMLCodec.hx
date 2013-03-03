@@ -25,25 +25,25 @@ package com.sun.xml.internal.ws.encoding.xml;
 */
 extern class XMLCodec implements com.sun.xml.internal.ws.api.pipe.Codec
 {
-	public static var XML_APPLICATION_MIME_TYPE(default, null) : String;
+	@:public @:static @:final public static var XML_APPLICATION_MIME_TYPE(default, null) : String;
 	
-	public static var XML_TEXT_MIME_TYPE(default, null) : String;
+	@:public @:static @:final public static var XML_TEXT_MIME_TYPE(default, null) : String;
 	
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
-	@:overload public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
-	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	
 }

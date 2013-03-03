@@ -28,19 +28,19 @@ extern class SunPageSelection implements javax.print.attribute.PrintRequestAttri
 	/*
 	* A class used to determine the range of pages to be printed.
 	*/
-	public static var ALL(default, null) : sun.print.SunPageSelection;
+	@:public @:static @:final public static var ALL(default, null) : sun.print.SunPageSelection;
 	
-	public static var RANGE(default, null) : sun.print.SunPageSelection;
+	@:public @:static @:final public static var RANGE(default, null) : sun.print.SunPageSelection;
 	
-	public static var SELECTION(default, null) : sun.print.SunPageSelection;
+	@:public @:static @:final public static var SELECTION(default, null) : sun.print.SunPageSelection;
 	
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
-	@:overload @:final public function getCategory() : Class<Dynamic>;
+	@:overload @:public @:final public function getCategory() : Class<Dynamic>;
 	
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

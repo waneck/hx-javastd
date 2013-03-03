@@ -58,7 +58,7 @@ extern class LineBreakMeasurer
 	* @see LineBreakMeasurer#insertChar
 	* @see LineBreakMeasurer#deleteChar
 	*/
-	@:overload public function new(text : java.text.AttributedCharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(text : java.text.AttributedCharacterIterator, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/**
 	* Constructs a <code>LineBreakMeasurer</code> for the specified text.
@@ -82,7 +82,7 @@ extern class LineBreakMeasurer
 	* @see LineBreakMeasurer#insertChar
 	* @see LineBreakMeasurer#deleteChar
 	*/
-	@:overload public function new(text : java.text.AttributedCharacterIterator, breakIter : java.text.BreakIterator, frc : java.awt.font.FontRenderContext) : Void;
+	@:overload @:public public function new(text : java.text.AttributedCharacterIterator, breakIter : java.text.BreakIterator, frc : java.awt.font.FontRenderContext) : Void;
 	
 	/**
 	* Returns the position at the end of the next layout.  Does NOT
@@ -93,7 +93,7 @@ extern class LineBreakMeasurer
 	* @return an offset in the text representing the limit of the
 	*    next <code>TextLayout</code>.
 	*/
-	@:overload public function nextOffset(wrappingWidth : Single) : Int;
+	@:overload @:public public function nextOffset(wrappingWidth : Single) : Int;
 	
 	/**
 	* Returns the position at the end of the next layout.  Does NOT
@@ -112,7 +112,7 @@ extern class LineBreakMeasurer
 	* @return an offset in the text representing the limit of the
 	*    next <code>TextLayout</code>
 	*/
-	@:overload public function nextOffset(wrappingWidth : Single, offsetLimit : Int, requireNextWord : Bool) : Int;
+	@:overload @:public public function nextOffset(wrappingWidth : Single, offsetLimit : Int, requireNextWord : Bool) : Int;
 	
 	/**
 	* Returns the next layout, and updates the current position.
@@ -123,7 +123,7 @@ extern class LineBreakMeasurer
 	*     position, which represents the next line fitting within
 	*     <code>wrappingWidth</code>
 	*/
-	@:overload public function nextLayout(wrappingWidth : Single) : java.awt.font.TextLayout;
+	@:overload @:public public function nextLayout(wrappingWidth : Single) : java.awt.font.TextLayout;
 	
 	/**
 	* Returns the next layout, and updates the current position.
@@ -145,7 +145,7 @@ extern class LineBreakMeasurer
 	*    of the text used by this <code>LineBreakMeasurer</code>,
 	*    <code>null</code> is returned
 	*/
-	@:overload public function nextLayout(wrappingWidth : Single, offsetLimit : Int, requireNextWord : Bool) : java.awt.font.TextLayout;
+	@:overload @:public public function nextLayout(wrappingWidth : Single, offsetLimit : Int, requireNextWord : Bool) : java.awt.font.TextLayout;
 	
 	/**
 	* Returns the current position of this <code>LineBreakMeasurer</code>.
@@ -153,7 +153,7 @@ extern class LineBreakMeasurer
 	* @return the current position of this <code>LineBreakMeasurer</code>
 	* @see #setPosition
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* Sets the current position of this <code>LineBreakMeasurer</code>.
@@ -165,7 +165,7 @@ extern class LineBreakMeasurer
 	*    or <code>deleteChar</code>
 	* @see #getPosition
 	*/
-	@:overload public function setPosition(newPosition : Int) : Void;
+	@:overload @:public public function setPosition(newPosition : Int) : Void;
 	
 	/**
 	* Updates this <code>LineBreakMeasurer</code> after a single
@@ -182,7 +182,7 @@ extern class LineBreakMeasurer
 	*         <code>null</code>
 	* @see #deleteChar
 	*/
-	@:overload public function insertChar(newParagraph : java.text.AttributedCharacterIterator, insertPos : Int) : Void;
+	@:overload @:public public function insertChar(newParagraph : java.text.AttributedCharacterIterator, insertPos : Int) : Void;
 	
 	/**
 	* Updates this <code>LineBreakMeasurer</code> after a single
@@ -198,7 +198,7 @@ extern class LineBreakMeasurer
 	*         <code>null</code>
 	* @see #insertChar
 	*/
-	@:overload public function deleteChar(newParagraph : java.text.AttributedCharacterIterator, deletePos : Int) : Void;
+	@:overload @:public public function deleteChar(newParagraph : java.text.AttributedCharacterIterator, deletePos : Int) : Void;
 	
 	
 }

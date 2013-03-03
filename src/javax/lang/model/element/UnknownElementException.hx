@@ -35,7 +35,7 @@ extern class UnknownElementException extends javax.lang.model.UnknownEntityExcep
 	* @param e the unknown element, may be {@code null}
 	* @param p an additional parameter, may be {@code null}
 	*/
-	@:overload public function new(e : javax.lang.model.element.Element, p : Dynamic) : Void;
+	@:overload @:public public function new(e : javax.lang.model.element.Element, p : Dynamic) : Void;
 	
 	/**
 	* Returns the unknown element.
@@ -44,14 +44,14 @@ extern class UnknownElementException extends javax.lang.model.UnknownEntityExcep
 	*
 	* @return the unknown element, or {@code null} if unavailable
 	*/
-	@:overload public function getUnknownElement() : javax.lang.model.element.Element;
+	@:overload @:public public function getUnknownElement() : javax.lang.model.element.Element;
 	
 	/**
 	* Returns the additional argument.
 	*
 	* @return the additional argument
 	*/
-	@:overload public function getArgument() : Dynamic;
+	@:overload @:public public function getArgument() : Dynamic;
 	
 	
 }

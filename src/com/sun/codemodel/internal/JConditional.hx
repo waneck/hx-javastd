@@ -33,21 +33,21 @@ extern class JConditional implements com.sun.codemodel.internal.JStatement
 	*
 	* @return Then block
 	*/
-	@:overload public function _then() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function _then() : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Create a block to be executed by "else" branch
 	*
 	* @return Newly generated else block
 	*/
-	@:overload public function _else() : com.sun.codemodel.internal.JBlock;
+	@:overload @:public public function _else() : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Creates <tt>... else if(...) ...</tt> code.
 	*/
-	@:overload public function _elseif(boolExp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JConditional;
+	@:overload @:public public function _elseif(boolExp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JConditional;
 	
-	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

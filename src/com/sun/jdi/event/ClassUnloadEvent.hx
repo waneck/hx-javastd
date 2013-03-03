@@ -40,12 +40,12 @@ package com.sun.jdi.event;
 	/**
 	* Returns the name of the class that has been unloaded.
 	*/
-	@:overload public function className() : String;
+	@:overload @:public public function className() : String;
 	
 	/**
 	* Returns the JNI-style signature of the class that has been unloaded.
 	*/
-	@:overload public function classSignature() : String;
+	@:overload @:public public function classSignature() : String;
 	
 	
 }

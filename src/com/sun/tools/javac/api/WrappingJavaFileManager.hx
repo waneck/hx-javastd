@@ -47,7 +47,7 @@ package com.sun.tools.javac.api;
 	* Creates a new instance of WrappingJavaFileManager.
 	* @param fileManager file manager to be wrapped
 	*/
-	@:overload private function new(fileManager : M) : Void;
+	@:overload @:protected private function new(fileManager : M) : Void;
 	
 	/**
 	* This implementation returns the given file object.  Subclasses
@@ -55,7 +55,7 @@ package com.sun.tools.javac.api;
 	*
 	* @param fileObject a file object
 	*/
-	@:overload private function wrap(fileObject : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:protected private function wrap(fileObject : javax.tools.FileObject) : javax.tools.FileObject;
 	
 	/**
 	* This implementation forwards to {@link #wrap(FileObject)}.
@@ -65,7 +65,7 @@ package com.sun.tools.javac.api;
 	* @throws ClassCastException if the file object returned from the
 	* forwarded call is not a subtype of {@linkplain JavaFileObject}
 	*/
-	@:overload private function wrap(fileObject : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
+	@:overload @:protected private function wrap(fileObject : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
 	
 	/**
 	* This implementation returns the given file object.  Subclasses
@@ -73,7 +73,7 @@ package com.sun.tools.javac.api;
 	*
 	* @param fileObject a file object
 	*/
-	@:overload private function unwrap(fileObject : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:protected private function unwrap(fileObject : javax.tools.FileObject) : javax.tools.FileObject;
 	
 	/**
 	* This implementation forwards to {@link #unwrap(FileObject)}.
@@ -83,7 +83,7 @@ package com.sun.tools.javac.api;
 	* @throws ClassCastException if the file object returned from the
 	* forwarded call is not a subtype of {@linkplain JavaFileObject}
 	*/
-	@:overload private function unwrap(fileObject : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
+	@:overload @:protected private function unwrap(fileObject : javax.tools.JavaFileObject) : javax.tools.JavaFileObject;
 	
 	/**
 	* This implementation maps the given list of file objects by
@@ -92,7 +92,7 @@ package com.sun.tools.javac.api;
 	* @param fileObjects a list of file objects
 	* @return the mapping
 	*/
-	@:overload private function wrap(fileObjects : java.lang.Iterable<javax.tools.JavaFileObject>) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:protected private function wrap(fileObjects : java.lang.Iterable<javax.tools.JavaFileObject>) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
 	/**
 	* This implementation returns the given URI.  Subclasses may
@@ -100,43 +100,43 @@ package com.sun.tools.javac.api;
 	*
 	* @param uri a URI
 	*/
-	@:overload private function unwrap(uri : java.net.URI) : java.net.URI;
+	@:overload @:protected private function unwrap(uri : java.net.URI) : java.net.URI;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload override public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload @:public override public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<javax.tools.JavaFileObject.JavaFileObject_Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload override public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
-	
-	/**
-	* @throws IllegalArgumentException {@inheritDoc}
-	* @throws UnsupportedOperationException {@inheritDoc}
-	* @throws IllegalStateException {@inheritDoc}
-	*/
-	@:overload override public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
+	@:overload @:public override public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload override public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
+	@:overload @:public override public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : javax.tools.JavaFileObject;
+	
+	/**
+	* @throws IllegalArgumentException {@inheritDoc}
+	* @throws UnsupportedOperationException {@inheritDoc}
+	* @throws IllegalStateException {@inheritDoc}
+	*/
+	@:overload @:public override public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload override public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
+	@:overload @:public override public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
 	
 	/**
 	* @throws IllegalArgumentException {@inheritDoc}
 	* @throws IllegalStateException {@inheritDoc}
 	*/
-	@:overload override public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload @:public override public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
 	
 	
 }

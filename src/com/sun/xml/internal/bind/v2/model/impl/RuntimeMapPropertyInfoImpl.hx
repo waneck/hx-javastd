@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RuntimeMapPropertyInfoImpl extends com.sun.xml.internal.bind.v2.model.impl.MapPropertyInfoImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method> implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeMapPropertyInfo
 {
-	@:overload public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
-	@:overload public function elementOnlyContent() : Bool;
+	@:overload @:public public function elementOnlyContent() : Bool;
 	
-	@:overload override public function getKeyType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getKeyType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function getValueType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getValueType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo>;
+	@:overload @:public override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo>;
 	
 	
 }

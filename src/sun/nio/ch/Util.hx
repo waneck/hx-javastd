@@ -36,13 +36,13 @@ package sun.nio.ch;
 }
 @:native('sun$nio$ch$Util$SelectorWrapper') @:internal extern class Util_SelectorWrapper
 {
-	@:overload public function get() : java.nio.channels.Selector;
+	@:overload @:public public function get() : java.nio.channels.Selector;
 	
 	
 }
 @:native('sun$nio$ch$Util$SelectorWrapper$Closer') @:internal extern class Util_SelectorWrapper_Closer implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

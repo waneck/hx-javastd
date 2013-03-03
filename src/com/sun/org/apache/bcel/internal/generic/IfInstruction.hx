@@ -66,16 +66,16 @@ extern class IfInstruction extends com.sun.org.apache.bcel.internal.generic.Bran
 	/**
 	* @param instruction Target instruction to branch to
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return negation of instruction, e.g. IFEQ.negate() == IFNE
 	*/
-	@:overload @:abstract public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
+	@:overload @:public @:abstract public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
 	
 	/** @return how many words are consumed from stack
 	*/
-	@:overload @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

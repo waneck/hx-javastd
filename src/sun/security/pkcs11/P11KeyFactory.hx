@@ -36,9 +36,9 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11KeyFactory extends java.security.KeyFactorySpi
 {
-	@:overload @:final override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
+	@:overload @:protected @:final override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
 	
-	@:overload @:final override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
+	@:overload @:protected @:final override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
 	
 	
 }

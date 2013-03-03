@@ -36,7 +36,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	*     (Unchecked exception) Thrown if <CODE>members</CODE> does not
 	*    obey  the proper syntax.
 	*/
-	@:overload private function new(members : String) : Void;
+	@:overload @:protected private function new(members : String) : Void;
 	
 	/**
 	* Construct a new set-of-integer attribute with the given members in
@@ -54,7 +54,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	*     any non-null range in <CODE>members</CODE> has a lower bound less
 	*     than zero.
 	*/
-	@:overload private function new(members : java.NativeArray<java.NativeArray<Int>>) : Void;
+	@:overload @:protected private function new(members : java.NativeArray<java.NativeArray<Int>>) : Void;
 	
 	/**
 	* Construct a new set-of-integer attribute containing a single integer.
@@ -65,7 +65,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	*     (Unchecked exception) Thrown if <CODE>member</CODE> is less than
 	*     zero.
 	*/
-	@:overload private function new(member : Int) : Void;
+	@:overload @:protected private function new(member : Int) : Void;
 	
 	/**
 	* Construct a new set-of-integer attribute containing a single range of
@@ -79,7 +79,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	*     (Unchecked exception) Thrown if the range is non-null and
 	*     <CODE>lowerBound</CODE> is less than zero.
 	*/
-	@:overload private function new(lowerBound : Int, upperBound : Int) : Void;
+	@:overload @:protected private function new(lowerBound : Int, upperBound : Int) : Void;
 	
 	/**
 	* Obtain this set-of-integer attribute's members in canonical array form.
@@ -88,7 +88,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	*
 	* @return  This set-of-integer attribute's members in canonical array form.
 	*/
-	@:overload public function getMembers() : java.NativeArray<java.NativeArray<Int>>;
+	@:overload @:public public function getMembers() : java.NativeArray<java.NativeArray<Int>>;
 	
 	/**
 	* Determine if this set-of-integer attribute contains the given value.
@@ -98,7 +98,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	* @return  True if this set-of-integer attribute contains the value
 	*          <CODE>x</CODE>, false otherwise.
 	*/
-	@:overload public function contains(x : Int) : Bool;
+	@:overload @:public public function contains(x : Int) : Bool;
 	
 	/**
 	* Determine if this set-of-integer attribute contains the given integer
@@ -109,7 +109,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	* @return  True if this set-of-integer attribute contains
 	*          <CODE>theAttribute</CODE>'s value, false otherwise.
 	*/
-	@:overload public function contains(attribute : javax.print.attribute.IntegerSyntax) : Bool;
+	@:overload @:public public function contains(attribute : javax.print.attribute.IntegerSyntax) : Bool;
 	
 	/**
 	* Determine the smallest integer in this set-of-integer attribute that is
@@ -134,7 +134,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	*          greater than <CODE>x</CODE>, or <CODE>-1</CODE> if no integer in
 	*          this set-of-integer attribute is greater than <CODE>x</CODE>.
 	*/
-	@:overload public function next(x : Int) : Int;
+	@:overload @:public public function next(x : Int) : Int;
 	
 	/**
 	* Returns whether this set-of-integer attribute is equivalent to the passed
@@ -155,14 +155,14 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	* @return  True if <CODE>object</CODE> is equivalent to this
 	*          set-of-integer attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this set-of-integer attribute. The hash
 	* code is the sum of the lower and upper bounds of the ranges in the
 	* canonical array form, or 0 for an empty set.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string value corresponding to this set-of-integer attribute.
@@ -172,7 +172,7 @@ extern class SetOfIntegerSyntax implements java.io.Serializable implements java.
 	* the lower bound equals the upper bound or
 	* <CODE>"<I>i</I>-<I>j</I>"</CODE> otherwise.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

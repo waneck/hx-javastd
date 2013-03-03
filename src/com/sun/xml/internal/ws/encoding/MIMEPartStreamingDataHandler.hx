@@ -25,33 +25,33 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class MIMEPartStreamingDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
-	@:overload public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
+	@:overload @:public public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
 	
-	@:overload public function readOnce() : java.io.InputStream;
+	@:overload @:public override public function readOnce() : java.io.InputStream;
 	
-	@:overload public function moveTo(file : java.io.File) : Void;
+	@:overload @:public override public function moveTo(file : java.io.File) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$encoding$MIMEPartStreamingDataHandler$StreamingDataSource') @:internal extern class MIMEPartStreamingDataHandler_StreamingDataSource implements javax.activation.DataSource
 {
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$encoding$MIMEPartStreamingDataHandler$MyIOException') @:internal extern class MIMEPartStreamingDataHandler_MyIOException extends java.io.IOException
 {
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

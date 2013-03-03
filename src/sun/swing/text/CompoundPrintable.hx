@@ -32,9 +32,9 @@ package sun.swing.text;
 */
 @:require(java6) @:internal extern class CompoundPrintable implements sun.swing.text.CountingPrintable
 {
-	@:overload public function new(printables : java.util.List<sun.swing.text.CountingPrintable>) : Void;
+	@:overload @:public public function new(printables : java.util.List<sun.swing.text.CountingPrintable>) : Void;
 	
-	@:overload public function print(graphics : java.awt.Graphics, pf : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pf : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
 	/**
 	* Returns the number of pages in this printable.
@@ -43,7 +43,7 @@ package sun.swing.text;
 	*
 	* @return the number of pages.
 	*/
-	@:overload public function getNumberOfPages() : Int;
+	@:overload @:public public function getNumberOfPages() : Int;
 	
 	
 }

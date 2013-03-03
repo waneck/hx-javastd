@@ -25,15 +25,15 @@ package com.sun.tools.javac.model;
 */
 @:internal extern class JavacSourcePosition
 {
-	@:overload public function getFile() : javax.tools.JavaFileObject;
+	@:overload @:public public function getFile() : javax.tools.JavaFileObject;
 	
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
-	@:overload public function getLine() : Int;
+	@:overload @:public public function getLine() : Int;
 	
-	@:overload public function getColumn() : Int;
+	@:overload @:public public function getColumn() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

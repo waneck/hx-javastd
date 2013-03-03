@@ -33,59 +33,59 @@ extern class ServerRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	**********************************************************************
 	* Access protection
 	**********************************************************************/
-	private static var MID_SENDING_EXCEPTION(default, null) : Int;
+	@:protected @:static @:final private static var MID_SENDING_EXCEPTION(default, null) : Int;
 	
-	private static var MID_OBJECT_ID(default, null) : Int;
+	@:protected @:static @:final private static var MID_OBJECT_ID(default, null) : Int;
 	
-	private static var MID_ADAPTER_ID(default, null) : Int;
+	@:protected @:static @:final private static var MID_ADAPTER_ID(default, null) : Int;
 	
-	private static var MID_TARGET_MOST_DERIVED_INTERFACE(default, null) : Int;
+	@:protected @:static @:final private static var MID_TARGET_MOST_DERIVED_INTERFACE(default, null) : Int;
 	
-	private static var MID_GET_SERVER_POLICY(default, null) : Int;
+	@:protected @:static @:final private static var MID_GET_SERVER_POLICY(default, null) : Int;
 	
-	private static var MID_SET_SLOT(default, null) : Int;
+	@:protected @:static @:final private static var MID_SET_SLOT(default, null) : Int;
 	
-	private static var MID_TARGET_IS_A(default, null) : Int;
+	@:protected @:static @:final private static var MID_TARGET_IS_A(default, null) : Int;
 	
-	private static var MID_ADD_REPLY_SERVICE_CONTEXT(default, null) : Int;
+	@:protected @:static @:final private static var MID_ADD_REPLY_SERVICE_CONTEXT(default, null) : Int;
 	
-	private static var MID_SERVER_ID(default, null) : Int;
+	@:protected @:static @:final private static var MID_SERVER_ID(default, null) : Int;
 	
-	private static var MID_ORB_ID(default, null) : Int;
+	@:protected @:static @:final private static var MID_ORB_ID(default, null) : Int;
 	
-	private static var MID_ADAPTER_NAME(default, null) : Int;
+	@:protected @:static @:final private static var MID_ADAPTER_NAME(default, null) : Int;
 	
 	/**
 	* Any containing the exception to be returned to the client.
 	*/
-	@:overload public function sending_exception() : org.omg.CORBA.Any;
+	@:overload @:public public function sending_exception() : org.omg.CORBA.Any;
 	
 	/**
 	* The opaque object_id describing the target of the operation invocation.
 	*/
-	@:overload public function object_id() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function object_id() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function server_id() : String;
+	@:overload @:public public function server_id() : String;
 	
-	@:overload public function orb_id() : String;
+	@:overload @:public public function orb_id() : String;
 	
-	@:overload @:synchronized public function adapter_name() : java.NativeArray<String>;
+	@:overload @:synchronized @:public public function adapter_name() : java.NativeArray<String>;
 	
 	/**
 	* The opaque identifier for the object adapter.
 	*/
-	@:overload @:synchronized public function adapter_id() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:synchronized @:public public function adapter_id() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* The RepositoryID for the most derived interface of the servant.
 	*/
-	@:overload public function target_most_derived_interface() : String;
+	@:overload @:public public function target_most_derived_interface() : String;
 	
 	/**
 	* Returns the policy in effect for this operation for the given policy
 	* type.
 	*/
-	@:overload public function get_server_policy(type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function get_server_policy(type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Allows an Interceptor to set a slot in the Current that is in the scope
@@ -93,122 +93,122 @@ extern class ServerRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* overwritten.  If the ID does not define an allocated slot, InvalidSlot
 	* is raised.
 	*/
-	@:overload public function set_slot(id : Int, data : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function set_slot(id : Int, data : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Returns true if the servant is the given RepositoryId, false if it is
 	* not.
 	*/
-	@:overload public function target_is_a(id : String) : Bool;
+	@:overload @:public public function target_is_a(id : String) : Bool;
 	
 	/**
 	* Allows Interceptors to add service contexts to the request.
 	*/
-	@:overload public function add_reply_service_context(service_context : org.omg.IOP.ServiceContext, replace : Bool) : Void;
+	@:overload @:public public function add_reply_service_context(service_context : org.omg.IOP.ServiceContext, replace : Bool) : Void;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function request_id() : Int;
+	@:overload @:public override public function request_id() : Int;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function operation() : String;
+	@:overload @:public override public function operation() : String;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
+	@:overload @:public override public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
+	@:overload @:public override public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function contexts() : java.NativeArray<String>;
+	@:overload @:public override public function contexts() : java.NativeArray<String>;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function operation_context() : java.NativeArray<String>;
+	@:overload @:public override public function operation_context() : java.NativeArray<String>;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function result() : org.omg.CORBA.Any;
+	@:overload @:public override public function result() : org.omg.CORBA.Any;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function response_expected() : Bool;
+	@:overload @:public override public function response_expected() : Bool;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function forward_reference() : org.omg.CORBA.Object;
+	@:overload @:public override public function forward_reference() : org.omg.CORBA.Object;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:public override public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* See ServerRequestInfo for javadocs.
 	*/
-	@:overload override public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload @:public override public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* Overridden from RequestInfoImpl.  This version calls the super
 	* and then, if we are changing to ending points, executes all
 	* enqueued AddReplyServiceContextCommands.
 	*/
-	@:overload override private function setCurrentExecutionPoint(executionPoint : Int) : Void;
+	@:overload @:protected override private function setCurrentExecutionPoint(executionPoint : Int) : Void;
 	
 	/**
 	* Stores the various sources of information used for this info object.
 	*/
-	@:overload private function setInfo(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, oa : com.sun.corba.se.spi.oa.ObjectAdapter, objectId : java.NativeArray<java.StdTypes.Int8>, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate) : Void;
+	@:overload @:protected private function setInfo(request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, oa : com.sun.corba.se.spi.oa.ObjectAdapter, objectId : java.NativeArray<java.StdTypes.Int8>, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate) : Void;
 	
 	/**
 	* Stores the various sources of information used for this info object.
 	*/
-	@:overload private function setDSIArguments(arguments : org.omg.CORBA.NVList) : Void;
+	@:overload @:protected private function setDSIArguments(arguments : org.omg.CORBA.NVList) : Void;
 	
 	/**
 	* Stores the various sources of information used for this info object.
 	*/
-	@:overload private function setDSIException(exception : org.omg.CORBA.Any) : Void;
+	@:overload @:protected private function setDSIException(exception : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Stores the various sources of information used for this info object.
 	*/
-	@:overload private function setDSIResult(result : org.omg.CORBA.Any) : Void;
+	@:overload @:protected private function setDSIResult(result : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Sets the exception to be returned by received_exception and
 	* received_exception_id.
 	*/
-	@:overload override private function setException(exception : java.lang.Exception) : Void;
+	@:overload @:protected override private function setException(exception : java.lang.Exception) : Void;
 	
 	/**
 	* Stores the various sources of information used for this info object.
 	*/
-	@:overload private function setInfo(servant : Dynamic, targetMostDerivedInterface : String) : Void;
+	@:overload @:protected private function setInfo(servant : Dynamic, targetMostDerivedInterface : String) : Void;
 	
 	/**
 	* Overridden from RequestInfoImpl.  Calls the super class, then
 	* sets the ending point call depending on the reply status.
 	*/
-	@:overload override private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
+	@:overload @:protected override private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
 	
 	/**
 	* See description for RequestInfoImpl.checkAccess
 	*/
-	@:overload override private function checkAccess(methodID : Int) : Void;
+	@:overload @:protected override private function checkAccess(methodID : Int) : Void;
 	
 	
 }

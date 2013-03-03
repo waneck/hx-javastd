@@ -40,43 +40,43 @@ extern class JavaValueArray extends com.sun.tools.hat.internal.model.JavaLazyRea
 	*    element type (byte)
 	*    array data
 	*/
-	@:overload @:final override private function readValueLength() : Int;
+	@:overload @:protected @:final override private function readValueLength() : Int;
 	
-	@:overload @:final override private function readValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:final override private function readValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function new(elementSignature : java.StdTypes.Int8, offset : haxe.Int64) : Void;
+	@:overload @:public public function new(elementSignature : java.StdTypes.Int8, offset : haxe.Int64) : Void;
 	
-	@:overload override public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
+	@:overload @:public override public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
 	
-	@:overload override public function visitReferencedObjects(v : com.sun.tools.hat.internal.model.JavaHeapObjectVisitor) : Void;
+	@:overload @:public override public function visitReferencedObjects(v : com.sun.tools.hat.internal.model.JavaHeapObjectVisitor) : Void;
 	
-	@:overload override public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
+	@:overload @:public override public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getElements() : Dynamic;
+	@:overload @:public public function getElements() : Dynamic;
 	
-	@:overload public function getElementType() : java.StdTypes.Int8;
+	@:overload @:public public function getElementType() : java.StdTypes.Int8;
 	
-	@:overload public function getBooleanAt(index : Int) : Bool;
+	@:overload @:public public function getBooleanAt(index : Int) : Bool;
 	
-	@:overload public function getByteAt(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getByteAt(index : Int) : java.StdTypes.Int8;
 	
-	@:overload public function getCharAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function getCharAt(index : Int) : java.StdTypes.Char16;
 	
-	@:overload public function getShortAt(index : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getShortAt(index : Int) : java.StdTypes.Int16;
 	
-	@:overload public function getIntAt(index : Int) : Int;
+	@:overload @:public public function getIntAt(index : Int) : Int;
 	
-	@:overload public function getLongAt(index : Int) : haxe.Int64;
+	@:overload @:public public function getLongAt(index : Int) : haxe.Int64;
 	
-	@:overload public function getFloatAt(index : Int) : Single;
+	@:overload @:public public function getFloatAt(index : Int) : Single;
 	
-	@:overload public function getDoubleAt(index : Int) : Float;
+	@:overload @:public public function getDoubleAt(index : Int) : Float;
 	
-	@:overload public function valueString() : String;
+	@:overload @:public public function valueString() : String;
 	
-	@:overload public function valueString(bigLimit : Bool) : String;
+	@:overload @:public public function valueString(bigLimit : Bool) : String;
 	
 	
 }

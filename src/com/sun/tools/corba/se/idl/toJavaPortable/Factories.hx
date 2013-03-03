@@ -40,23 +40,23 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 **/
 extern class Factories extends com.sun.tools.corba.se.idl.Factories
 {
-	@:overload override public function genFactory() : com.sun.tools.corba.se.idl.GenFactory;
+	@:overload @:public override public function genFactory() : com.sun.tools.corba.se.idl.GenFactory;
 	
-	@:overload override public function arguments() : com.sun.tools.corba.se.idl.Arguments;
+	@:overload @:public override public function arguments() : com.sun.tools.corba.se.idl.Arguments;
 	
-	@:overload override public function languageKeywords() : java.NativeArray<String>;
+	@:overload @:public override public function languageKeywords() : java.NativeArray<String>;
 	
-	@:overload public function helper() : com.sun.tools.corba.se.idl.toJavaPortable.Helper;
+	@:overload @:public public function helper() : com.sun.tools.corba.se.idl.toJavaPortable.Helper;
 	
-	@:overload public function valueFactory() : com.sun.tools.corba.se.idl.toJavaPortable.ValueFactory;
+	@:overload @:public public function valueFactory() : com.sun.tools.corba.se.idl.toJavaPortable.ValueFactory;
 	
-	@:overload public function defaultFactory() : com.sun.tools.corba.se.idl.toJavaPortable.DefaultFactory;
+	@:overload @:public public function defaultFactory() : com.sun.tools.corba.se.idl.toJavaPortable.DefaultFactory;
 	
-	@:overload public function holder() : com.sun.tools.corba.se.idl.toJavaPortable.Holder;
+	@:overload @:public public function holder() : com.sun.tools.corba.se.idl.toJavaPortable.Holder;
 	
-	@:overload public function skeleton() : com.sun.tools.corba.se.idl.toJavaPortable.Skeleton;
+	@:overload @:public public function skeleton() : com.sun.tools.corba.se.idl.toJavaPortable.Skeleton;
 	
-	@:overload public function stub() : com.sun.tools.corba.se.idl.toJavaPortable.Stub;
+	@:overload @:public public function stub() : com.sun.tools.corba.se.idl.toJavaPortable.Stub;
 	
 	
 }

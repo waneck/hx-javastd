@@ -25,19 +25,19 @@ package javax.swing.text.html.parser;
 */
 extern class TagElement
 {
-	@:overload public function new(elem : javax.swing.text.html.parser.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.html.parser.Element) : Void;
 	
-	@:overload public function new(elem : javax.swing.text.html.parser.Element, fictional : Bool) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.html.parser.Element, fictional : Bool) : Void;
 	
-	@:overload public function breaksFlow() : Bool;
+	@:overload @:public public function breaksFlow() : Bool;
 	
-	@:overload public function isPreformatted() : Bool;
+	@:overload @:public public function isPreformatted() : Bool;
 	
-	@:overload public function getElement() : javax.swing.text.html.parser.Element;
+	@:overload @:public public function getElement() : javax.swing.text.html.parser.Element;
 	
-	@:overload public function getHTMLTag() : javax.swing.text.html.HTML.HTML_Tag;
+	@:overload @:public public function getHTMLTag() : javax.swing.text.html.HTML.HTML_Tag;
 	
-	@:overload public function fictional() : Bool;
+	@:overload @:public public function fictional() : Bool;
 	
 	
 }

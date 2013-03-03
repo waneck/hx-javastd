@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.digested;
 */
 @:internal extern class Annotation implements com.sun.xml.internal.rngom.ast.builder.Annotations<com.sun.xml.internal.rngom.digested.ElementWrapper, com.sun.xml.internal.rngom.ast.util.LocatorImpl, com.sun.xml.internal.rngom.digested.CommentListImpl>
 {
-	@:overload public function addAttribute(ns : String, localName : String, prefix : String, value : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl) : Void;
+	@:overload @:public public function addAttribute(ns : String, localName : String, prefix : String, value : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl) : Void;
 	
-	@:overload public function addElement(ea : com.sun.xml.internal.rngom.digested.ElementWrapper) : Void;
+	@:overload @:public public function addElement(ea : com.sun.xml.internal.rngom.digested.ElementWrapper) : Void;
 	
-	@:overload public function addComment(comments : com.sun.xml.internal.rngom.digested.CommentListImpl) : Void;
+	@:overload @:public public function addComment(comments : com.sun.xml.internal.rngom.digested.CommentListImpl) : Void;
 	
-	@:overload public function addLeadingComment(comments : com.sun.xml.internal.rngom.digested.CommentListImpl) : Void;
+	@:overload @:public public function addLeadingComment(comments : com.sun.xml.internal.rngom.digested.CommentListImpl) : Void;
 	
 	
 }

@@ -37,60 +37,60 @@ exception statement from your version.
 */
 extern class PulseAudioClip extends org.classpath.icedtea.pulseaudio.PulseAudioDataLine implements javax.sound.sampled.Clip implements org.classpath.icedtea.pulseaudio.PulseAudioPlaybackLine
 {
-	public static var DEFAULT_CLIP_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_CLIP_NAME(default, null) : String;
 	
-	@:overload private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
+	@:overload @:protected override private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/*
 	* 
 	* drain() on a Clip should block until the entire clip has finished playing
 	* http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4732218
 	*/
-	@:overload override public function drain() : Void;
+	@:overload @:public override public function drain() : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload public function getFrameLength() : Int;
+	@:overload @:public public function getFrameLength() : Int;
 	
-	@:overload override public function getFramePosition() : Int;
+	@:overload @:public override public function getFramePosition() : Int;
 	
-	@:overload override public function getLongFramePosition() : haxe.Int64;
+	@:overload @:public override public function getLongFramePosition() : haxe.Int64;
 	
-	@:overload public function getMicrosecondLength() : haxe.Int64;
+	@:overload @:public public function getMicrosecondLength() : haxe.Int64;
 	
-	@:overload override public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public override public function getMicrosecondPosition() : haxe.Int64;
 	
-	@:overload public function loop(count : Int) : Void;
+	@:overload @:public public function loop(count : Int) : Void;
 	
-	@:overload override public function open() : Void;
+	@:overload @:public override public function open() : Void;
 	
-	@:overload public function open(format : javax.sound.sampled.AudioFormat, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufferSize : Int) : Void;
+	@:overload @:public public function open(format : javax.sound.sampled.AudioFormat, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufferSize : Int) : Void;
 	
-	@:overload public function native_set_volume(value : Single) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function native_set_volume(value : Single) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getCachedVolume() : Single;
+	@:overload @:public public function getCachedVolume() : Single;
 	
-	@:overload public function setCachedVolume(value : Single) : Void;
+	@:overload @:public public function setCachedVolume(value : Single) : Void;
 	
-	@:overload public function open(stream : javax.sound.sampled.AudioInputStream) : Void;
+	@:overload @:public public function open(stream : javax.sound.sampled.AudioInputStream) : Void;
 	
-	@:overload public function setFramePosition(frames : Int) : Void;
+	@:overload @:public public function setFramePosition(frames : Int) : Void;
 	
-	@:overload public function setLoopPoints(start : Int, end : Int) : Void;
+	@:overload @:public public function setLoopPoints(start : Int, end : Int) : Void;
 	
-	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
+	@:overload @:public public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
-	@:overload public function start() : Void;
+	@:overload @:public override public function start() : Void;
 	
-	@:overload public function stop() : Void;
+	@:overload @:public override public function stop() : Void;
 	
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	
 }
@@ -100,7 +100,7 @@ extern class PulseAudioClip extends org.classpath.icedtea.pulseaudio.PulseAudioD
 */
 @:native('org$classpath$icedtea$pulseaudio$PulseAudioClip$ClipThread') @:internal extern class PulseAudioClip_ClipThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

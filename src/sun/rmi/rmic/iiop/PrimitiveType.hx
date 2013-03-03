@@ -38,18 +38,18 @@ extern class PrimitiveType extends sun.rmi.rmic.iiop.Type
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forPrimitive(type : sun.tools.java.Type, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.PrimitiveType;
+	@:overload @:public @:static public static function forPrimitive(type : sun.tools.java.Type, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.PrimitiveType;
 	
 	/**
 	* Return signature for this type  (e.g. com.acme.Dynamite
 	* would return "com.acme.Dynamite", byte = "B")
 	*/
-	@:overload public function getSignature() : String;
+	@:overload @:public override public function getSignature() : String;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload public function getTypeDescription() : String;
+	@:overload @:public override public function getTypeDescription() : String;
 	
 	/**
 	* IDL_Naming
@@ -57,12 +57,12 @@ extern class PrimitiveType extends sun.rmi.rmic.iiop.Type
 	* return "com::acme::Dynamite").
 	* @param global If true, prepends "::".
 	*/
-	@:overload public function getQualifiedIDLName(global : Bool) : String;
+	@:overload @:public override public function getQualifiedIDLName(global : Bool) : String;
 	
 	/*
 	* Load a Class instance. Return null if fail.
 	*/
-	@:overload private function loadClass() : Class<Dynamic>;
+	@:overload @:protected override private function loadClass() : Class<Dynamic>;
 	
 	
 }

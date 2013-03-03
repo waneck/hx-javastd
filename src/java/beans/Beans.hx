@@ -40,7 +40,7 @@ extern class Beans
 	*              object could not be found.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public static function instantiate(cls : java.lang.ClassLoader, beanName : String) : Dynamic;
+	@:overload @:public @:static public static function instantiate(cls : java.lang.ClassLoader, beanName : String) : Dynamic;
 	
 	/**
 	* <p>
@@ -58,7 +58,7 @@ extern class Beans
 	*              object could not be found.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public static function instantiate(cls : java.lang.ClassLoader, beanName : String, beanContext : java.beans.beancontext.BeanContext) : Dynamic;
+	@:overload @:public @:static public static function instantiate(cls : java.lang.ClassLoader, beanName : String, beanContext : java.beans.beancontext.BeanContext) : Dynamic;
 	
 	/**
 	* Instantiate a bean.
@@ -110,7 +110,7 @@ extern class Beans
 	*              object could not be found.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public static function instantiate(cls : java.lang.ClassLoader, beanName : String, beanContext : java.beans.beancontext.BeanContext, initializer : java.beans.AppletInitializer) : Dynamic;
+	@:overload @:public @:static public static function instantiate(cls : java.lang.ClassLoader, beanName : String, beanContext : java.beans.beancontext.BeanContext, initializer : java.beans.AppletInitializer) : Dynamic;
 	
 	/**
 	* From a given bean, obtain an object representing a specified
@@ -127,7 +127,7 @@ extern class Beans
 	* @param targetType  The type of view we'd like to get.
 	*
 	*/
-	@:overload public static function getInstanceOf(bean : Dynamic, targetType : Class<Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function getInstanceOf(bean : Dynamic, targetType : Class<Dynamic>) : Dynamic;
 	
 	/**
 	* Check if a bean can be viewed as a given target type.
@@ -140,7 +140,7 @@ extern class Beans
 	* @return "true" if the given bean supports the given targetType.
 	*
 	*/
-	@:overload public static function isInstanceOf(bean : Dynamic, targetType : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isInstanceOf(bean : Dynamic, targetType : Class<Dynamic>) : Bool;
 	
 	/**
 	* Test if we are in design-mode.
@@ -150,7 +150,7 @@ extern class Beans
 	*
 	* @see DesignMode
 	*/
-	@:overload public static function isDesignTime() : Bool;
+	@:overload @:public @:static public static function isDesignTime() : Bool;
 	
 	/**
 	* Determines whether beans can assume a GUI is available.
@@ -165,7 +165,7 @@ extern class Beans
 	* @see Visibility
 	*
 	*/
-	@:overload public static function isGuiAvailable() : Bool;
+	@:overload @:public @:static public static function isGuiAvailable() : Bool;
 	
 	/**
 	* Used to indicate whether of not we are running in an application
@@ -183,7 +183,7 @@ extern class Beans
 	*              of system properties.
 	* @see SecurityManager#checkPropertiesAccess
 	*/
-	@:overload public static function setDesignTime(isDesignTime : Bool) : Void;
+	@:overload @:public @:static public static function setDesignTime(isDesignTime : Bool) : Void;
 	
 	/**
 	* Used to indicate whether of not we are running in an environment
@@ -201,7 +201,7 @@ extern class Beans
 	*              of system properties.
 	* @see SecurityManager#checkPropertiesAccess
 	*/
-	@:overload public static function setGuiAvailable(isGuiAvailable : Bool) : Void;
+	@:overload @:public @:static public static function setGuiAvailable(isGuiAvailable : Bool) : Void;
 	
 	
 }
@@ -210,52 +210,52 @@ extern class Beans
 	/**
 	* Loader must be non-null;
 	*/
-	@:overload public function new(_in : java.io.InputStream, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Use the given ClassLoader rather than using the system class
 	*/
-	@:overload private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	
 }
 @:internal extern class BeansAppletContext implements java.applet.AppletContext
 {
-	@:overload public function getAudioClip(url : java.net.URL) : java.applet.AudioClip;
+	@:overload @:public public function getAudioClip(url : java.net.URL) : java.applet.AudioClip;
 	
-	@:overload @:synchronized public function getImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public @:synchronized public function getImage(url : java.net.URL) : java.awt.Image;
 	
-	@:overload public function getApplet(name : String) : java.applet.Applet;
+	@:overload @:public public function getApplet(name : String) : java.applet.Applet;
 	
-	@:overload public function getApplets() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getApplets() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function showDocument(url : java.net.URL) : Void;
+	@:overload @:public public function showDocument(url : java.net.URL) : Void;
 	
-	@:overload public function showDocument(url : java.net.URL, target : String) : Void;
+	@:overload @:public public function showDocument(url : java.net.URL, target : String) : Void;
 	
-	@:overload public function showStatus(status : String) : Void;
+	@:overload @:public public function showStatus(status : String) : Void;
 	
-	@:overload public function setStream(key : String, stream : java.io.InputStream) : Void;
+	@:overload @:public public function setStream(key : String, stream : java.io.InputStream) : Void;
 	
-	@:overload public function getStream(key : String) : java.io.InputStream;
+	@:overload @:public public function getStream(key : String) : java.io.InputStream;
 	
-	@:overload public function getStreamKeys() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getStreamKeys() : java.util.Iterator<Dynamic>;
 	
 	
 }
 @:internal extern class BeansAppletStub implements java.applet.AppletStub
 {
-	@:overload public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
-	@:overload public function getDocumentBase() : java.net.URL;
+	@:overload @:public public function getDocumentBase() : java.net.URL;
 	
-	@:overload public function getCodeBase() : java.net.URL;
+	@:overload @:public public function getCodeBase() : java.net.URL;
 	
-	@:overload public function getParameter(name : String) : String;
+	@:overload @:public public function getParameter(name : String) : String;
 	
-	@:overload public function getAppletContext() : java.applet.AppletContext;
+	@:overload @:public public function getAppletContext() : java.applet.AppletContext;
 	
-	@:overload public function appletResize(width : Int, height : Int) : Void;
+	@:overload @:public public function appletResize(width : Int, height : Int) : Void;
 	
 	
 }

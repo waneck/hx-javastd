@@ -36,7 +36,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @see java.awt.geom.QuadCurve2D.Double
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the X coordinate of the start point in
@@ -44,7 +44,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return the X coordinate of the start point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getX1() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getX1() : Float;
 	
 	/**
 	* Returns the Y coordinate of the start point in
@@ -52,7 +52,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return the Y coordinate of the start point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getY1() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getY1() : Float;
 	
 	/**
 	* Returns the start point.
@@ -60,7 +60,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          <code>QuadCurve2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getP1() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public @:abstract public function getP1() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the X coordinate of the control point in
@@ -68,7 +68,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return X coordinate the control point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getCtrlX() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getCtrlX() : Float;
 	
 	/**
 	* Returns the Y coordinate of the control point in
@@ -76,7 +76,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return the Y coordinate of the control point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getCtrlY() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getCtrlY() : Float;
 	
 	/**
 	* Returns the control point.
@@ -84,7 +84,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getCtrlPt() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public @:abstract public function getCtrlPt() : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the X coordinate of the end point in
@@ -92,7 +92,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return the x coordiante of the end point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getX2() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getX2() : Float;
 	
 	/**
 	* Returns the Y coordinate of the end point in
@@ -100,7 +100,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return the Y coordinate of the end point.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getY2() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getY2() : Float;
 	
 	/**
 	* Returns the end point.
@@ -108,7 +108,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          of this <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getP2() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public @:abstract public function getP2() : java.awt.geom.Point2D;
 	
 	/**
 	* Sets the location of the end points and control point of this curve
@@ -122,7 +122,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setCurve(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setCurve(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Sets the location of the end points and control points of this
@@ -134,7 +134,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          <code>QuadCurve2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(coords : java.NativeArray<Float>, offset : Int) : Void;
+	@:require(java2) @:overload @:public public function setCurve(coords : java.NativeArray<Float>, offset : Int) : Void;
 	
 	/**
 	* Sets the location of the end points and control point of this
@@ -145,7 +145,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param p2 the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(p1 : java.awt.geom.Point2D, cp : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
+	@:require(java2) @:overload @:public public function setCurve(p1 : java.awt.geom.Point2D, cp : java.awt.geom.Point2D, p2 : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Sets the location of the end points and control points of this
@@ -159,7 +159,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          <code>QuadCurve2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(pts : java.NativeArray<java.awt.geom.Point2D>, offset : Int) : Void;
+	@:require(java2) @:overload @:public public function setCurve(pts : java.NativeArray<java.awt.geom.Point2D>, offset : Int) : Void;
 	
 	/**
 	* Sets the location of the end points and control point of this
@@ -168,7 +168,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param c the specified <code>QuadCurve2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(c : java.awt.geom.QuadCurve2D) : Void;
+	@:require(java2) @:overload @:public public function setCurve(c : java.awt.geom.QuadCurve2D) : Void;
 	
 	/**
 	* Returns the square of the flatness, or maximum distance of a
@@ -185,7 +185,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          defined by the specified coordinates.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('getFlatnessSq') @:overload public static function _getFlatnessSq(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Float;
+	@:require(java2) @:native('getFlatnessSq') @:overload @:public @:static public static function _getFlatnessSq(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Float;
 	
 	/**
 	* Returns the flatness, or maximum distance of a
@@ -202,7 +202,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          specified coordinates.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('getFlatness') @:overload public static function _getFlatness(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Float;
+	@:require(java2) @:native('getFlatness') @:overload @:public @:static public static function _getFlatness(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Float;
 	
 	/**
 	* Returns the square of the flatness, or maximum distance of a
@@ -216,7 +216,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          values in the specified array at the specified index.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('getFlatnessSq') @:overload public static function _getFlatnessSq(coords : java.NativeArray<Float>, offset : Int) : Float;
+	@:require(java2) @:native('getFlatnessSq') @:overload @:public @:static public static function _getFlatnessSq(coords : java.NativeArray<Float>, offset : Int) : Float;
 	
 	/**
 	* Returns the flatness, or maximum distance of a
@@ -230,7 +230,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          specified array at the specified offset.
 	* @since 1.2
 	*/
-	@:require(java2) @:native('getFlatness') @:overload public static function _getFlatness(coords : java.NativeArray<Float>, offset : Int) : Float;
+	@:require(java2) @:native('getFlatness') @:overload @:public @:static public static function _getFlatness(coords : java.NativeArray<Float>, offset : Int) : Float;
 	
 	/**
 	* Returns the square of the flatness, or maximum distance of a
@@ -240,7 +240,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          <code>QuadCurve2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getFlatnessSq() : Float;
+	@:require(java2) @:overload @:public public function getFlatnessSq() : Float;
 	
 	/**
 	* Returns the flatness, or maximum distance of a
@@ -249,7 +249,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @return the flatness of this <code>QuadCurve2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getFlatness() : Float;
+	@:require(java2) @:overload @:public public function getFlatness() : Float;
 	
 	/**
 	* Subdivides this <code>QuadCurve2D</code> and stores the resulting
@@ -264,7 +264,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* right or second half of the subdivided curve
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function subdivide(left : java.awt.geom.QuadCurve2D, right : java.awt.geom.QuadCurve2D) : Void;
+	@:require(java2) @:overload @:public public function subdivide(left : java.awt.geom.QuadCurve2D, right : java.awt.geom.QuadCurve2D) : Void;
 	
 	/**
 	* Subdivides the quadratic curve specified by the <code>src</code>
@@ -280,7 +280,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          right or second half of the subdivided curve
 	* @since 1.2
 	*/
-	@:require(java2) @:native('subdivide') @:overload public static function _subdivide(src : java.awt.geom.QuadCurve2D, left : java.awt.geom.QuadCurve2D, right : java.awt.geom.QuadCurve2D) : Void;
+	@:require(java2) @:native('subdivide') @:overload @:public @:static public static function _subdivide(src : java.awt.geom.QuadCurve2D, left : java.awt.geom.QuadCurve2D, right : java.awt.geom.QuadCurve2D) : Void;
 	
 	/**
 	* Subdivides the quadratic curve specified by the coordinates
@@ -310,7 +310,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* the 6 right coordinates
 	* @since 1.2
 	*/
-	@:require(java2) @:native('subdivide') @:overload public static function _subdivide(src : java.NativeArray<Float>, srcoff : Int, left : java.NativeArray<Float>, leftoff : Int, right : java.NativeArray<Float>, rightoff : Int) : Void;
+	@:require(java2) @:native('subdivide') @:overload @:public @:static public static function _subdivide(src : java.NativeArray<Float>, srcoff : Int, left : java.NativeArray<Float>, leftoff : Int, right : java.NativeArray<Float>, rightoff : Int) : Void;
 	
 	/**
 	* Solves the quadratic whose coefficients are in the <code>eqn</code>
@@ -329,7 +329,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          a constant
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function solveQuadratic(eqn : java.NativeArray<Float>) : Int;
+	@:require(java2) @:overload @:public @:static public static function solveQuadratic(eqn : java.NativeArray<Float>) : Int;
 	
 	/**
 	* Solves the quadratic whose coefficients are in the <code>eqn</code>
@@ -351,49 +351,49 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*  a constant.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function solveQuadratic(eqn : java.NativeArray<Float>, res : java.NativeArray<Float>) : Int;
+	@:require(java3) @:overload @:public @:static public static function solveQuadratic(eqn : java.NativeArray<Float>, res : java.NativeArray<Float>) : Int;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds() : java.awt.Rectangle;
+	@:require(java2) @:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns an iteration object that defines the boundary of the
@@ -409,7 +409,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          of the shape.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns an iteration object that defines the boundary of the
@@ -429,7 +429,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          flattened boundary of the shape.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
@@ -440,7 +440,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @see        java.lang.Cloneable
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a high precision and more accurate bounding box of
@@ -485,7 +485,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -503,7 +503,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x1 : Single;
+	@:require(java2) @:public public var x1 : Single;
 	
 	/**
 	* The Y coordinate of the start point of the quadratic curve
@@ -511,7 +511,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y1 : Single;
+	@:require(java2) @:public public var y1 : Single;
 	
 	/**
 	* The X coordinate of the control point of the quadratic curve
@@ -519,7 +519,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var ctrlx : Single;
+	@:require(java2) @:public public var ctrlx : Single;
 	
 	/**
 	* The Y coordinate of the control point of the quadratic curve
@@ -527,7 +527,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var ctrly : Single;
+	@:require(java2) @:public public var ctrly : Single;
 	
 	/**
 	* The X coordinate of the end point of the quadratic curve
@@ -535,7 +535,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x2 : Single;
+	@:require(java2) @:public public var x2 : Single;
 	
 	/**
 	* The Y coordinate of the end point of the quadratic curve
@@ -543,14 +543,14 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y2 : Single;
+	@:require(java2) @:public public var y2 : Single;
 	
 	/**
 	* Constructs and initializes a <code>QuadCurve2D</code> with
 	* coordinates (0, 0, 0, 0, 0, 0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>QuadCurve2D</code> from the
@@ -564,67 +564,67 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x1 : Single, y1 : Single, ctrlx : Single, ctrly : Single, x2 : Single, y2 : Single) : Void;
+	@:require(java2) @:overload @:public public function new(x1 : Single, y1 : Single, ctrlx : Single, ctrly : Single, x2 : Single, y2 : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX1() : Float;
+	@:require(java2) @:overload @:public override public function getX1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY1() : Float;
+	@:require(java2) @:overload @:public override public function getY1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP1() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP1() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getCtrlX() : Float;
+	@:require(java2) @:overload @:public override public function getCtrlX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getCtrlY() : Float;
+	@:require(java2) @:overload @:public override public function getCtrlY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getCtrlPt() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getCtrlPt() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX2() : Float;
+	@:require(java2) @:overload @:public override public function getX2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY2() : Float;
+	@:require(java2) @:overload @:public override public function getY2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP2() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP2() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setCurve(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public override public function setCurve(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* Sets the location of the end points and control point of this curve
@@ -638,13 +638,13 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(x1 : Single, y1 : Single, ctrlx : Single, ctrly : Single, x2 : Single, y2 : Single) : Void;
+	@:require(java2) @:overload @:public public function setCurve(x1 : Single, y1 : Single, ctrlx : Single, ctrly : Single, x2 : Single, y2 : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -662,7 +662,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x1 : Float;
+	@:require(java2) @:public public var x1 : Float;
 	
 	/**
 	* The Y coordinate of the start point of the quadratic curve
@@ -670,7 +670,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y1 : Float;
+	@:require(java2) @:public public var y1 : Float;
 	
 	/**
 	* The X coordinate of the control point of the quadratic curve
@@ -678,7 +678,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var ctrlx : Float;
+	@:require(java2) @:public public var ctrlx : Float;
 	
 	/**
 	* The Y coordinate of the control point of the quadratic curve
@@ -686,7 +686,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var ctrly : Float;
+	@:require(java2) @:public public var ctrly : Float;
 	
 	/**
 	* The X coordinate of the end point of the quadratic curve
@@ -694,7 +694,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x2 : Float;
+	@:require(java2) @:public public var x2 : Float;
 	
 	/**
 	* The Y coordinate of the end point of the quadratic curve
@@ -702,14 +702,14 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y2 : Float;
+	@:require(java2) @:public public var y2 : Float;
 	
 	/**
 	* Constructs and initializes a <code>QuadCurve2D</code> with
 	* coordinates (0, 0, 0, 0, 0, 0).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>QuadCurve2D</code> from the
@@ -723,73 +723,73 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param y2 the Y coordinate of the end point
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public public function new(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX1() : Float;
+	@:require(java2) @:overload @:public override public function getX1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY1() : Float;
+	@:require(java2) @:overload @:public override public function getY1() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP1() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP1() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getCtrlX() : Float;
+	@:require(java2) @:overload @:public override public function getCtrlX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getCtrlY() : Float;
+	@:require(java2) @:overload @:public override public function getCtrlY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getCtrlPt() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getCtrlPt() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX2() : Float;
+	@:require(java2) @:overload @:public override public function getX2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY2() : Float;
+	@:require(java2) @:overload @:public override public function getY2() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getP2() : java.awt.geom.Point2D;
+	@:require(java2) @:overload @:public override public function getP2() : java.awt.geom.Point2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setCurve(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
+	@:require(java2) @:overload @:public override public function setCurve(x1 : Float, y1 : Float, ctrlx : Float, ctrly : Float, x2 : Float, y2 : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }

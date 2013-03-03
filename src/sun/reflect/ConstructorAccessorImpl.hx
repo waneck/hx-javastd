@@ -26,7 +26,7 @@ package sun.reflect;
 @:internal extern class ConstructorAccessorImpl extends sun.reflect.MagicAccessorImpl implements sun.reflect.ConstructorAccessor
 {
 	/** Matches specification in {@link java.lang.reflect.Constructor} */
-	@:overload @:abstract public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:abstract public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

@@ -35,99 +35,99 @@ extern class TypeTags
 {
 	/** The tag of the basic type `byte'.
 	*/
-	public static var BYTE(default, null) : Int;
+	@:public @:static @:final public static var BYTE(default, null) : Int;
 	
 	/** The tag of the basic type `char'.
 	*/
-	public static var CHAR(default, null) : Int;
+	@:public @:static @:final public static var CHAR(default, null) : Int;
 	
 	/** The tag of the basic type `short'.
 	*/
-	public static var SHORT(default, null) : Int;
+	@:public @:static @:final public static var SHORT(default, null) : Int;
 	
 	/** The tag of the basic type `int'.
 	*/
-	public static var INT(default, null) : Int;
+	@:public @:static @:final public static var INT(default, null) : Int;
 	
 	/** The tag of the basic type `long'.
 	*/
-	public static var LONG(default, null) : Int;
+	@:public @:static @:final public static var LONG(default, null) : Int;
 	
 	/** The tag of the basic type `float'.
 	*/
-	public static var FLOAT(default, null) : Int;
+	@:public @:static @:final public static var FLOAT(default, null) : Int;
 	
 	/** The tag of the basic type `double'.
 	*/
-	public static var DOUBLE(default, null) : Int;
+	@:public @:static @:final public static var DOUBLE(default, null) : Int;
 	
 	/** The tag of the basic type `boolean'.
 	*/
-	public static var BOOLEAN(default, null) : Int;
+	@:public @:static @:final public static var BOOLEAN(default, null) : Int;
 	
 	/** The tag of the type `void'.
 	*/
-	public static var VOID(default, null) : Int;
+	@:public @:static @:final public static var VOID(default, null) : Int;
 	
 	/** The tag of all class and interface types.
 	*/
-	public static var CLASS(default, null) : Int;
+	@:public @:static @:final public static var CLASS(default, null) : Int;
 	
 	/** The tag of all array types.
 	*/
-	public static var ARRAY(default, null) : Int;
+	@:public @:static @:final public static var ARRAY(default, null) : Int;
 	
 	/** The tag of all (monomorphic) method types.
 	*/
-	public static var METHOD(default, null) : Int;
+	@:public @:static @:final public static var METHOD(default, null) : Int;
 	
 	/** The tag of all package "types".
 	*/
-	public static var PACKAGE(default, null) : Int;
+	@:public @:static @:final public static var PACKAGE(default, null) : Int;
 	
 	/** The tag of all (source-level) type variables.
 	*/
-	public static var TYPEVAR(default, null) : Int;
+	@:public @:static @:final public static var TYPEVAR(default, null) : Int;
 	
 	/** The tag of all type arguments.
 	*/
-	public static var WILDCARD(default, null) : Int;
+	@:public @:static @:final public static var WILDCARD(default, null) : Int;
 	
 	/** The tag of all polymorphic (method-) types.
 	*/
-	public static var FORALL(default, null) : Int;
+	@:public @:static @:final public static var FORALL(default, null) : Int;
 	
 	/** The tag of the bottom type <null>.
 	*/
-	public static var BOT(default, null) : Int;
+	@:public @:static @:final public static var BOT(default, null) : Int;
 	
 	/** The tag of a missing type.
 	*/
-	public static var NONE(default, null) : Int;
+	@:public @:static @:final public static var NONE(default, null) : Int;
 	
 	/** The tag of the error type.
 	*/
-	public static var ERROR(default, null) : Int;
+	@:public @:static @:final public static var ERROR(default, null) : Int;
 	
 	/** The tag of an unknown type
 	*/
-	public static var UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN(default, null) : Int;
 	
 	/** The tag of all instantiatable type variables.
 	*/
-	public static var UNDETVAR(default, null) : Int;
+	@:public @:static @:final public static var UNDETVAR(default, null) : Int;
 	
 	/** The number of type tags.
 	*/
-	public static var TypeTagCount(default, null) : Int;
+	@:public @:static @:final public static var TypeTagCount(default, null) : Int;
 	
 	/** The maximum tag of a basic type.
 	*/
-	public static var lastBaseTag(default, null) : Int;
+	@:public @:static @:final public static var lastBaseTag(default, null) : Int;
 	
 	/** The minimum tag of a partial type
 	*/
-	public static var firstPartialTag(default, null) : Int;
+	@:public @:static @:final public static var firstPartialTag(default, null) : Int;
 	
 	
 }

@@ -27,10 +27,10 @@ package com.sun.xml.internal.fastinfoset;
 */
 extern class UnparsedEntity extends com.sun.xml.internal.fastinfoset.Notation
 {
-	public var notationName(default, null) : String;
+	@:public @:final public var notationName(default, null) : String;
 	
 	/** Creates a new instance of UnparsedEntityDeclaration */
-	@:overload public function new(_name : String, _systemIdentifier : String, _publicIdentifier : String, _notationName : String) : Void;
+	@:overload @:public public function new(_name : String, _systemIdentifier : String, _publicIdentifier : String, _notationName : String) : Void;
 	
 	
 }

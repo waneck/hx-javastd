@@ -28,13 +28,13 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	/**
 	* Default constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Clone constructor
 	* @param that needs to be cloned
 	*/
-	@:overload public function new(that : com.sun.xml.internal.org.jvnet.staxex.Base64Data) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.org.jvnet.staxex.Base64Data) : Void;
 	
 	/**
 	* Fills in the data object by a portion of the byte[].
@@ -46,7 +46,7 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	* @param cloneByRef
 	*      true if data[] can be cloned by reference
 	*/
-	@:overload public function set(data : java.NativeArray<java.StdTypes.Int8>, len : Int, mimeType : String, cloneByRef : Bool) : Void;
+	@:overload @:public public function set(data : java.NativeArray<java.StdTypes.Int8>, len : Int, mimeType : String, cloneByRef : Bool) : Void;
 	
 	/**
 	* Fills in the data object by a portion of the byte[].
@@ -56,7 +56,7 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	*      data[0] to data[len-1] are treated as the data.
 	* @param mimeType MIME type
 	*/
-	@:overload public function set(data : java.NativeArray<java.StdTypes.Int8>, len : Int, mimeType : String) : Void;
+	@:overload @:public public function set(data : java.NativeArray<java.StdTypes.Int8>, len : Int, mimeType : String) : Void;
 	
 	/**
 	* Fills in the data object by the byte[] of the exact length.
@@ -65,14 +65,14 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	*      this buffer may be owned directly by the unmarshaleld JAXB object.
 	* @param mimeType MIME type
 	*/
-	@:overload public function set(data : java.NativeArray<java.StdTypes.Int8>, mimeType : String) : Void;
+	@:overload @:public public function set(data : java.NativeArray<java.StdTypes.Int8>, mimeType : String) : Void;
 	
 	/**
 	* Fills in the data object by a {@link DataHandler}.
 	*
 	* @param data DataHandler for the data
 	*/
-	@:overload public function set(data : javax.activation.DataHandler) : Void;
+	@:overload @:public public function set(data : javax.activation.DataHandler) : Void;
 	
 	/**
 	* Gets the raw data. If the returned DataHandler is {@link StreamingDataHandler},
@@ -81,14 +81,14 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	* @see StreamingDataHandler
 	* @return DataHandler for the data
 	*/
-	@:overload public function getDataHandler() : javax.activation.DataHandler;
+	@:overload @:public public function getDataHandler() : javax.activation.DataHandler;
 	
 	/**
 	* Gets the byte[] of the exact length.
 	*
 	* @return byte[] for data
 	*/
-	@:overload public function getExact() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getExact() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the data as an {@link InputStream}.
@@ -96,7 +96,7 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	* @return data as InputStream
 	* @throws IOException if i/o error occurs
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns false if this object only has {@link DataHandler} and therefore
@@ -104,14 +104,14 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	*
 	* @return false if it has only DataHandler
 	*/
-	@:overload public function hasData() : Bool;
+	@:overload @:public public function hasData() : Bool;
 	
 	/**
 	* Gets the raw data. The size of the byte array maybe larger than the actual length.
 	*
 	* @return data as byte[], the array may be larger
 	*/
-	@:overload public function get() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function get() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the length of the binary data counted in bytes.
@@ -123,69 +123,69 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	*
 	* @return no of bytes
 	*/
-	@:overload public function getDataLen() : Int;
+	@:overload @:public public function getDataLen() : Int;
 	
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	* Gets the number of characters needed to represent
 	* this binary data in the base64 encoding.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Encode this binary data in the base64 encoding
 	* and returns the character at the specified position.
 	*/
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Internally this is only used to split a text to a list,
 	* which doesn't happen that much for base64.
 	* So this method should be smaller than faster.
 	*/
-	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/**
 	* Returns the base64 encoded string of this data.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function writeTo(buf : java.NativeArray<java.StdTypes.Char16>, start : Int) : Void;
+	@:overload @:public public function writeTo(buf : java.NativeArray<java.StdTypes.Char16>, start : Int) : Void;
 	
-	@:overload public function clone() : com.sun.xml.internal.org.jvnet.staxex.Base64Data;
+	@:overload @:public public function clone() : com.sun.xml.internal.org.jvnet.staxex.Base64Data;
 	
 	
 }
 @:native('com$sun$xml$internal$org$jvnet$staxex$Base64Data$Base64DataSource') @:internal extern class Base64Data_Base64DataSource implements javax.activation.DataSource
 {
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	
 }
 @:native('com$sun$xml$internal$org$jvnet$staxex$Base64Data$Base64StreamingDataHandler') @:internal extern class Base64Data_Base64StreamingDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
-	@:overload public function readOnce() : java.io.InputStream;
+	@:overload @:public override public function readOnce() : java.io.InputStream;
 	
-	@:overload public function moveTo(dst : java.io.File) : Void;
+	@:overload @:public override public function moveTo(dst : java.io.File) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$org$jvnet$staxex$Base64Data$FilterDataHandler') @:internal extern class Base64Data_FilterDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
-	@:overload public function readOnce() : java.io.InputStream;
+	@:overload @:public override public function readOnce() : java.io.InputStream;
 	
-	@:overload public function moveTo(dst : java.io.File) : Void;
+	@:overload @:public override public function moveTo(dst : java.io.File) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

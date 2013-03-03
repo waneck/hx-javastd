@@ -65,15 +65,15 @@ package com.sun.xml.internal.ws.org.objectweb.asm;
 */
 @:internal extern class AnnotationWriter implements com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor
 {
-	@:overload public function visit(name : String, value : Dynamic) : Void;
+	@:overload @:public public function visit(name : String, value : Dynamic) : Void;
 	
-	@:overload public function visitEnum(name : String, desc : String, value : String) : Void;
+	@:overload @:public public function visitEnum(name : String, desc : String, value : String) : Void;
 	
-	@:overload public function visitAnnotation(name : String, desc : String) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitAnnotation(name : String, desc : String) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitArray(name : String) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitArray(name : String) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitEnd() : Void;
+	@:overload @:public public function visitEnd() : Void;
 	
 	
 }

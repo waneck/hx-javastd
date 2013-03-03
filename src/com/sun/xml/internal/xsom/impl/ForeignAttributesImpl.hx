@@ -25,11 +25,11 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ForeignAttributesImpl extends org.xml.sax.helpers.AttributesImpl implements com.sun.xml.internal.xsom.ForeignAttributes
 {
-	@:overload public function new(context : org.relaxng.datatype.ValidationContext, locator : org.xml.sax.Locator, next : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl) : Void;
+	@:overload @:public public function new(context : org.relaxng.datatype.ValidationContext, locator : org.xml.sax.Locator, next : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl) : Void;
 	
-	@:overload public function getContext() : org.relaxng.datatype.ValidationContext;
+	@:overload @:public public function getContext() : org.relaxng.datatype.ValidationContext;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

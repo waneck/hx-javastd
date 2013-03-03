@@ -31,17 +31,17 @@ extern interface Namespace extends javax.xml.stream.events.Attribute
 	* Gets the prefix, returns "" if this is a default
 	* namespace declaration.
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Gets the uri bound to the prefix of this namespace
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* returns true if this attribute declares the default namespace
 	*/
-	@:overload public function isDefaultNamespaceDeclaration() : Bool;
+	@:overload @:public public function isDefaultNamespaceDeclaration() : Bool;
 	
 	
 }

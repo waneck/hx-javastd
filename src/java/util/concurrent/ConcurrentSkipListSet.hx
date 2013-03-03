@@ -38,7 +38,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	* Constructs a new, empty set that orders its elements according to
 	* their {@linkplain Comparable natural ordering}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new, empty set that orders its elements according to
@@ -48,7 +48,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*        If <tt>null</tt>, the {@linkplain Comparable natural
 	*        ordering} of the elements will be used.
 	*/
-	@:overload public function new(comparator : java.util.Comparator<E>) : Void;
+	@:overload @:public public function new(comparator : java.util.Comparator<E>) : Void;
 	
 	/**
 	* Constructs a new set containing the elements in the specified
@@ -61,7 +61,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Constructs a new set containing the same elements and using the
@@ -71,7 +71,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	* @throws NullPointerException if the specified sorted set or any
 	*         of its elements are null
 	*/
-	@:overload public function new(s : java.util.SortedSet<E>) : Void;
+	@:overload @:public public function new(s : java.util.SortedSet<E>) : Void;
 	
 	/**
 	* Returns a shallow copy of this <tt>ConcurrentSkipListSet</tt>
@@ -79,7 +79,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*
 	* @return a shallow copy of this set
 	*/
-	@:overload public function clone() : java.util.concurrent.ConcurrentSkipListSet<E>;
+	@:overload @:public public function clone() : java.util.concurrent.ConcurrentSkipListSet<E>;
 	
 	/**
 	* Returns the number of elements in this set.  If this set
@@ -97,13 +97,13 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*
 	* @return the number of elements in this set
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains no elements.
 	* @return <tt>true</tt> if this set contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this set contains the specified element.
@@ -116,7 +116,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*         compared with the elements currently in this set
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Adds the specified element to this set if it is not already present.
@@ -132,7 +132,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*         with the elements currently in this set
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Removes the specified element from this set if it is present.
@@ -148,26 +148,26 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*         with the elements currently in this set
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this set.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns an iterator over the elements in this set in ascending order.
 	*
 	* @return an iterator over the elements in this set in ascending order
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an iterator over the elements in this set in descending order.
 	*
 	* @return an iterator over the elements in this set in descending order
 	*/
-	@:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
 	/**
 	* Compares the specified object with this set for equality.  Returns
@@ -181,7 +181,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	* @param o the object to be compared for equality with this set
 	* @return <tt>true</tt> if the specified object is equal to this set
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Removes from this set all of its elements that are contained in
@@ -196,48 +196,48 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function lower(e : E) : E;
+	@:overload @:public public function lower(e : E) : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function floor(e : E) : E;
+	@:overload @:public public function floor(e : E) : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function ceiling(e : E) : E;
+	@:overload @:public public function ceiling(e : E) : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function higher(e : E) : E;
+	@:overload @:public public function higher(e : E) : E;
 	
-	@:overload public function pollFirst() : E;
+	@:overload @:public public function pollFirst() : E;
 	
-	@:overload public function pollLast() : E;
+	@:overload @:public public function pollLast() : E;
 	
 	/* ---------------- SortedSet operations -------------- */
-	@:overload public function comparator() : java.util.Comparator<E>;
+	@:overload @:public public function comparator() : java.util.Comparator<E>;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function first() : E;
+	@:overload @:public public function first() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function last() : E;
+	@:overload @:public public function last() : E;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -245,21 +245,21 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*         {@code toElement} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code toElement} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code fromElement} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
+	@:overload @:public public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
@@ -267,21 +267,21 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*         {@code toElement} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subSet(fromElement : E, toElement : E) : java.util.NavigableSet<E>;
+	@:overload @:public public function subSet(fromElement : E, toElement : E) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code toElement} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headSet(toElement : E) : java.util.NavigableSet<E>;
+	@:overload @:public public function headSet(toElement : E) : java.util.NavigableSet<E>;
 	
 	/**
 	* @throws ClassCastException {@inheritDoc}
 	* @throws NullPointerException if {@code fromElement} is null
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailSet(fromElement : E) : java.util.NavigableSet<E>;
+	@:overload @:public public function tailSet(fromElement : E) : java.util.NavigableSet<E>;
 	
 	/**
 	* Returns a reverse order view of the elements contained in this set.
@@ -295,7 +295,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*
 	* @return a reverse order view of this set
 	*/
-	@:overload public function descendingSet() : java.util.NavigableSet<E>;
+	@:overload @:public public function descendingSet() : java.util.NavigableSet<E>;
 	
 	
 }

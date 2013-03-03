@@ -25,11 +25,11 @@ package sun.java2d.opengl;
 */
 @:internal extern class OGLMaskFill extends sun.java2d.pipe.BufferedMaskFill
 {
-	@:overload private function new(srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType) : Void;
+	@:overload @:protected private function new(srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType) : Void;
 	
-	@:overload @:native private function maskFill(x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:native override private function maskFill(x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite, ctxflags : Int) : Void;
+	@:overload @:protected override private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite, ctxflags : Int) : Void;
 	
 	
 }

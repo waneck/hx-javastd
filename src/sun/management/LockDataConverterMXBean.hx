@@ -29,13 +29,13 @@ extern interface LockDataConverterMXBean
 	* This interface is used for data conversion from LockInfo
 	* to CompositeData (its mapped type) or vice versa.
 	*/
-	@:overload public function setLockInfo(l : java.lang.management.LockInfo) : Void;
+	@:overload @:public public function setLockInfo(l : java.lang.management.LockInfo) : Void;
 	
-	@:overload public function getLockInfo() : java.lang.management.LockInfo;
+	@:overload @:public public function getLockInfo() : java.lang.management.LockInfo;
 	
-	@:overload public function setLockedSynchronizers(l : java.NativeArray<java.lang.management.LockInfo>) : Void;
+	@:overload @:public public function setLockedSynchronizers(l : java.NativeArray<java.lang.management.LockInfo>) : Void;
 	
-	@:overload public function getLockedSynchronizers() : java.NativeArray<java.lang.management.LockInfo>;
+	@:overload @:public public function getLockedSynchronizers() : java.NativeArray<java.lang.management.LockInfo>;
 	
 	
 }

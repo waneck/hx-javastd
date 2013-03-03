@@ -32,14 +32,14 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* <code>RMIServerImpl</code>.  Can be null, which is equivalent
 	* to an empty Map.
 	*/
-	@:overload public function new(env : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(env : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* <p>Exports this RMI object.</p>
 	*
 	* @exception IOException if this RMI object cannot be exported.
 	*/
-	@:overload @:abstract private function export() : Void;
+	@:overload @:protected @:abstract private function export() : Void;
 	
 	/**
 	* Returns a remotable stub for this server object.
@@ -47,7 +47,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* @exception IOException if the stub cannot be obtained - e.g the
 	*            RMIServerImpl has not been exported yet.
 	**/
-	@:overload @:abstract public function toStub() : java.rmi.Remote;
+	@:overload @:public @:abstract public function toStub() : java.rmi.Remote;
 	
 	/**
 	* <p>Sets the default <code>ClassLoader</code> for this connector
@@ -59,7 +59,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	*
 	* @see #getDefaultClassLoader
 	*/
-	@:overload @:synchronized public function setDefaultClassLoader(cl : java.lang.ClassLoader) : Void;
+	@:overload @:public @:synchronized public function setDefaultClassLoader(cl : java.lang.ClassLoader) : Void;
 	
 	/**
 	* <p>Gets the default <code>ClassLoader</code> used by this connector
@@ -70,7 +70,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	*
 	* @see #setDefaultClassLoader
 	*/
-	@:overload @:synchronized public function getDefaultClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:synchronized public function getDefaultClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* <p>Sets the <code>MBeanServer</code> to which this connector
@@ -83,7 +83,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	*
 	* @see #getMBeanServer
 	*/
-	@:overload @:synchronized public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
+	@:overload @:public @:synchronized public function setMBeanServer(mbs : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>The <code>MBeanServer</code> to which this connector server
@@ -96,9 +96,9 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	*
 	* @see #setMBeanServer
 	*/
-	@:overload @:synchronized public function getMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public @:synchronized public function getMBeanServer() : javax.management.MBeanServer;
 	
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* <p>Creates a new client connection.  This method calls {@link
@@ -130,7 +130,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* @exception IllegalStateException if {@link #getMBeanServer()}
 	* is null.
 	*/
-	@:overload public function newClient(credentials : Dynamic) : javax.management.remote.rmi.RMIConnection;
+	@:overload @:public public function newClient(credentials : Dynamic) : javax.management.remote.rmi.RMIConnection;
 	
 	/**
 	* <p>Creates a new client connection.  This method is called by
@@ -148,7 +148,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* @exception IOException if the new client object cannot be
 	* created or exported.
 	*/
-	@:overload @:abstract private function makeClient(connectionId : String, subject : javax.security.auth.Subject) : javax.management.remote.rmi.RMIConnection;
+	@:overload @:protected @:abstract private function makeClient(connectionId : String, subject : javax.security.auth.Subject) : javax.management.remote.rmi.RMIConnection;
 	
 	/**
 	* <p>Closes a client connection made by {@link #makeClient makeClient}.
@@ -162,7 +162,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* @exception IOException if the client connection cannot be
 	* closed.
 	*/
-	@:overload @:abstract private function closeClient(client : javax.management.remote.rmi.RMIConnection) : Void;
+	@:overload @:protected @:abstract private function closeClient(client : javax.management.remote.rmi.RMIConnection) : Void;
 	
 	/**
 	* <p>Returns the protocol string for this object.  The string is
@@ -170,7 +170,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	*
 	* @return the protocol string for this object.
 	*/
-	@:overload @:abstract private function getProtocol() : String;
+	@:overload @:protected @:abstract private function getProtocol() : String;
 	
 	/**
 	* <p>Method called when a client connection created by {@link
@@ -193,7 +193,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	*
 	* @exception NullPointerException if <code>client</code> is null.
 	*/
-	@:overload private function clientClosed(client : javax.management.remote.rmi.RMIConnection) : Void;
+	@:overload @:protected private function clientClosed(client : javax.management.remote.rmi.RMIConnection) : Void;
 	
 	/**
 	* <p>Closes this connection server.  This method first calls the
@@ -223,7 +223,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* {@link RMIConnection#close()} calls threw
 	* <code>IOException</code>.
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized public function close() : Void;
 	
 	/**
 	* <p>Called by {@link #close()} to close the connector server.
@@ -233,7 +233,7 @@ extern class RMIServerImpl implements java.io.Closeable implements javax.managem
 	* @exception IOException if the attempt to close the connector
 	* server failed.
 	*/
-	@:overload @:abstract private function closeServer() : Void;
+	@:overload @:protected @:abstract private function closeServer() : Void;
 	
 	
 }

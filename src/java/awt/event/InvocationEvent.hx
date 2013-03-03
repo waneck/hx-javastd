@@ -28,22 +28,22 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	/**
 	* Marks the first integer id for the range of invocation event ids.
 	*/
-	public static var INVOCATION_FIRST(default, null) : Int;
+	@:public @:static @:final public static var INVOCATION_FIRST(default, null) : Int;
 	
 	/**
 	* The default id for all InvocationEvents.
 	*/
-	public static var INVOCATION_DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var INVOCATION_DEFAULT(default, null) : Int;
 	
 	/**
 	* Marks the last integer id for the range of invocation event ids.
 	*/
-	public static var INVOCATION_LAST(default, null) : Int;
+	@:public @:static @:final public static var INVOCATION_LAST(default, null) : Int;
 	
 	/**
 	* The Runnable whose run() method will be called.
 	*/
-	private var runnable : java.lang.Runnable;
+	@:protected private var runnable : java.lang.Runnable;
 	
 	/**
 	* The (potentially null) Object whose notifyAll() method will be called
@@ -51,14 +51,14 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	*
 	* @see #isDispatched
 	*/
-	private var notifier : Dynamic;
+	@:protected private var notifier : Dynamic;
 	
 	/**
 	* Set to true if dispatch() catches Throwable and stores it in the
 	* exception instance variable. If false, Throwables are propagated up
 	* to the EventDispatchThread's dispatch loop.
 	*/
-	private var catchExceptions : Bool;
+	@:protected private var catchExceptions : Bool;
 	
 	/**
 	* Constructs an <code>InvocationEvent</code> with the specified
@@ -79,7 +79,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	* @see #getSource()
 	* @see #InvocationEvent(Object, Runnable, Object, boolean)
 	*/
-	@:overload public function new(source : Dynamic, runnable : java.lang.Runnable) : Void;
+	@:overload @:public public function new(source : Dynamic, runnable : java.lang.Runnable) : Void;
 	
 	/**
 	* Constructs an <code>InvocationEvent</code> with the specified
@@ -114,7 +114,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	* @see #getSource()
 	* @see     #InvocationEvent(Object, int, Runnable, Object, boolean)
 	*/
-	@:overload public function new(source : Dynamic, runnable : java.lang.Runnable, notifier : Dynamic, catchThrowables : Bool) : Void;
+	@:overload @:public public function new(source : Dynamic, runnable : java.lang.Runnable, notifier : Dynamic, catchThrowables : Bool) : Void;
 	
 	/**
 	* Constructs an <code>InvocationEvent</code> with the specified
@@ -147,7 +147,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	* @see #getSource()
 	* @see #getID()
 	*/
-	@:overload private function new(source : Dynamic, id : Int, runnable : java.lang.Runnable, notifier : Dynamic, catchThrowables : Bool) : Void;
+	@:overload @:protected private function new(source : Dynamic, id : Int, runnable : java.lang.Runnable, notifier : Dynamic, catchThrowables : Bool) : Void;
 	
 	/**
 	* Executes the Runnable's <code>run()</code> method and notifies the
@@ -155,7 +155,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	*
 	* @see #isDispatched
 	*/
-	@:overload public function dispatch() : Void;
+	@:overload @:public public function dispatch() : Void;
 	
 	/**
 	* Returns any Exception caught while executing the Runnable's <code>run()
@@ -165,7 +165,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	*          Exception was thrown or if this InvocationEvent does not
 	*          catch exceptions
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	/**
 	* Returns any Throwable caught while executing the Runnable's <code>run()
@@ -176,7 +176,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	*          catch Throwables
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getThrowable() : java.lang.Throwable;
+	@:require(java5) @:overload @:public public function getThrowable() : java.lang.Throwable;
 	
 	/**
 	* Returns the timestamp of when this event occurred.
@@ -184,7 +184,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	* @return this event's timestamp
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getWhen() : haxe.Int64;
+	@:require(java4) @:overload @:public public function getWhen() : haxe.Int64;
 	
 	/**
 	* Returns {@code true} if the event is dispatched or any exception is
@@ -216,7 +216,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	* @see #catchExceptions
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isDispatched() : Bool;
+	@:require(java7) @:overload @:public public function isDispatched() : Bool;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -224,7 +224,7 @@ extern class InvocationEvent extends java.awt.AWTEvent implements java.awt.Activ
 	*
 	* @return  A string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

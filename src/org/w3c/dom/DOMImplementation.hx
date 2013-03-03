@@ -54,7 +54,7 @@ extern interface DOMImplementation
 	* @return <code>true</code> if the feature is implemented in the
 	*   specified version, <code>false</code> otherwise.
 	*/
-	@:overload public function hasFeature(feature : String, version : String) : Bool;
+	@:overload @:public public function hasFeature(feature : String, version : String) : Bool;
 	
 	/**
 	* Creates an empty <code>DocumentType</code> node. Entity declarations
@@ -76,7 +76,7 @@ extern interface DOMImplementation
 	*   Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload public function createDocumentType(qualifiedName : String, publicId : String, systemId : String) : org.w3c.dom.DocumentType;
+	@:overload @:public public function createDocumentType(qualifiedName : String, publicId : String, systemId : String) : org.w3c.dom.DocumentType;
 	
 	/**
 	* Creates a DOM Document object of the specified type with its document
@@ -125,7 +125,7 @@ extern interface DOMImplementation
 	*   Document does not support XML Namespaces (such as [<a href='http://www.w3.org/TR/1999/REC-html401-19991224/'>HTML 4.01</a>]).
 	* @since DOM Level 2
 	*/
-	@:overload public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
+	@:overload @:public public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -150,7 +150,7 @@ extern interface DOMImplementation
 	*   <code>getFeature</code>, etc.
 	* @since DOM Level 3
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	
 }

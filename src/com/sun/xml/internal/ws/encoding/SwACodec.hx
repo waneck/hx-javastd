@@ -30,13 +30,13 @@ extern class SwACodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, binding : com.sun.xml.internal.ws.api.WSBinding, rootCodec : com.sun.xml.internal.ws.api.pipe.Codec) : Void;
+	@:overload @:public public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, binding : com.sun.xml.internal.ws.api.WSBinding, rootCodec : com.sun.xml.internal.ws.api.pipe.Codec) : Void;
 	
-	@:overload override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function copy() : com.sun.xml.internal.ws.encoding.SwACodec;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.encoding.SwACodec;
 	
 	
 }

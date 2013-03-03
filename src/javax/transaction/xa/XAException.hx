@@ -35,12 +35,12 @@ extern class XAException extends java.lang.Exception
 	*
 	* @serial The error code for the exception
 	*/
-	public var errorCode : Int;
+	@:public public var errorCode : Int;
 	
 	/**
 	* Create an XAException.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create an XAException with a given string.
@@ -48,141 +48,141 @@ extern class XAException extends java.lang.Exception
 	* @param s The <code>String</code> object containing the exception
 	*          message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Create an XAException with a given error code.
 	*
 	* @param errcode The error code identifying the exception.
 	*/
-	@:overload public function new(errcode : Int) : Void;
+	@:overload @:public public function new(errcode : Int) : Void;
 	
 	/**
 	* The inclusive lower bound of the rollback codes.
 	*/
-	public static var XA_RBBASE(default, null) : Int;
+	@:public @:final @:static public static var XA_RBBASE(default, null) : Int;
 	
 	/**
 	* Indicates that the rollback was caused by an unspecified reason.
 	*/
-	public static var XA_RBROLLBACK(default, null) : Int;
+	@:public @:final @:static public static var XA_RBROLLBACK(default, null) : Int;
 	
 	/**
 	* Indicates that the rollback was caused by a communication failure.
 	*/
-	public static var XA_RBCOMMFAIL(default, null) : Int;
+	@:public @:final @:static public static var XA_RBCOMMFAIL(default, null) : Int;
 	
 	/**
 	* A deadlock was detected.
 	*/
-	public static var XA_RBDEADLOCK(default, null) : Int;
+	@:public @:final @:static public static var XA_RBDEADLOCK(default, null) : Int;
 	
 	/**
 	* A condition that violates the integrity of the resource was detected.
 	*/
-	public static var XA_RBINTEGRITY(default, null) : Int;
+	@:public @:final @:static public static var XA_RBINTEGRITY(default, null) : Int;
 	
 	/**
 	* The resource manager rolled back the transaction branch for a reason
 	* not on this list.
 	*/
-	public static var XA_RBOTHER(default, null) : Int;
+	@:public @:final @:static public static var XA_RBOTHER(default, null) : Int;
 	
 	/**
 	* A protocol error occurred in the resource manager.
 	*/
-	public static var XA_RBPROTO(default, null) : Int;
+	@:public @:final @:static public static var XA_RBPROTO(default, null) : Int;
 	
 	/**
 	* A transaction branch took too long.
 	*/
-	public static var XA_RBTIMEOUT(default, null) : Int;
+	@:public @:final @:static public static var XA_RBTIMEOUT(default, null) : Int;
 	
 	/**
 	* May retry the transaction branch.
 	*/
-	public static var XA_RBTRANSIENT(default, null) : Int;
+	@:public @:final @:static public static var XA_RBTRANSIENT(default, null) : Int;
 	
 	/**
 	* The inclusive upper bound of the rollback error code.
 	*/
-	public static var XA_RBEND(default, null) : Int;
+	@:public @:final @:static public static var XA_RBEND(default, null) : Int;
 	
 	/**
 	* Resumption must occur where the suspension occurred.
 	*/
-	public static var XA_NOMIGRATE(default, null) : Int;
+	@:public @:final @:static public static var XA_NOMIGRATE(default, null) : Int;
 	
 	/**
 	* The transaction branch may have been heuristically completed.
 	*/
-	public static var XA_HEURHAZ(default, null) : Int;
+	@:public @:final @:static public static var XA_HEURHAZ(default, null) : Int;
 	
 	/**
 	* The transaction branch has been heuristically committed.
 	*/
-	public static var XA_HEURCOM(default, null) : Int;
+	@:public @:final @:static public static var XA_HEURCOM(default, null) : Int;
 	
 	/**
 	* The transaction branch has been heuristically rolled back.
 	*/
-	public static var XA_HEURRB(default, null) : Int;
+	@:public @:final @:static public static var XA_HEURRB(default, null) : Int;
 	
 	/**
 	* The transaction branch has been heuristically committed and
 	* rolled back.
 	*/
-	public static var XA_HEURMIX(default, null) : Int;
+	@:public @:final @:static public static var XA_HEURMIX(default, null) : Int;
 	
 	/**
 	* Routine returned with no effect and may be reissued.
 	*/
-	public static var XA_RETRY(default, null) : Int;
+	@:public @:final @:static public static var XA_RETRY(default, null) : Int;
 	
 	/**
 	* The transaction branch was read-only and has been committed.
 	*/
-	public static var XA_RDONLY(default, null) : Int;
+	@:public @:final @:static public static var XA_RDONLY(default, null) : Int;
 	
 	/**
 	* There is an asynchronous operation already outstanding.
 	*/
-	public static var XAER_ASYNC(default, null) : Int;
+	@:public @:final @:static public static var XAER_ASYNC(default, null) : Int;
 	
 	/**
 	* A resource manager error has occurred in the transaction branch.
 	*/
-	public static var XAER_RMERR(default, null) : Int;
+	@:public @:final @:static public static var XAER_RMERR(default, null) : Int;
 	
 	/**
 	* The XID is not valid.
 	*/
-	public static var XAER_NOTA(default, null) : Int;
+	@:public @:final @:static public static var XAER_NOTA(default, null) : Int;
 	
 	/**
 	* Invalid arguments were given.
 	*/
-	public static var XAER_INVAL(default, null) : Int;
+	@:public @:final @:static public static var XAER_INVAL(default, null) : Int;
 	
 	/**
 	* Routine was invoked in an inproper context.
 	*/
-	public static var XAER_PROTO(default, null) : Int;
+	@:public @:final @:static public static var XAER_PROTO(default, null) : Int;
 	
 	/**
 	* Resource manager is unavailable.
 	*/
-	public static var XAER_RMFAIL(default, null) : Int;
+	@:public @:final @:static public static var XAER_RMFAIL(default, null) : Int;
 	
 	/**
 	* The XID already exists.
 	*/
-	public static var XAER_DUPID(default, null) : Int;
+	@:public @:final @:static public static var XAER_DUPID(default, null) : Int;
 	
 	/**
 	* The resource manager is doing work outside a global transaction.
 	*/
-	public static var XAER_OUTSIDE(default, null) : Int;
+	@:public @:final @:static public static var XAER_OUTSIDE(default, null) : Int;
 	
 	
 }

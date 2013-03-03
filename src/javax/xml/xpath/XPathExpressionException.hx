@@ -46,7 +46,7 @@ package javax.xml.xpath;
 	* @throws NullPointerException When <code>message</code> is
 	*   <code>null</code>.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* <p>Constructs a new <code>XPathExpressionException</code>
@@ -59,7 +59,7 @@ package javax.xml.xpath;
 	*
 	* @throws NullPointerException if <code>cause</code> is <code>null</code>.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

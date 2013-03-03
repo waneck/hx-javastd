@@ -28,40 +28,40 @@ extern class StringHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	/**
 	* Tag name.
 	*/
-	private var name(default, null) : javax.xml.namespace.QName;
+	@:protected @:final private var name(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* Header value.
 	*/
-	private var value(default, null) : String;
+	@:protected @:final private var value(default, null) : String;
 	
-	private var mustUnderstand : Bool;
+	@:protected private var mustUnderstand : Bool;
 	
-	private var soapVersion : com.sun.xml.internal.ws.api.SOAPVersion;
+	@:protected private var soapVersion : com.sun.xml.internal.ws.api.SOAPVersion;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, value : String) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, value : String) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, value : String, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, mustUnderstand : Bool) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, value : String, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, mustUnderstand : Bool) : Void;
 	
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload override public function getLocalPart() : String;
+	@:overload @:public override public function getLocalPart() : String;
 	
-	@:overload override public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public override public function getAttribute(nsUri : String, localName : String) : String;
 	
-	@:overload override public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload override public function writeTo(h : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(h : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	private static var MUST_UNDERSTAND(default, null) : String;
+	@:protected @:static @:final private static var MUST_UNDERSTAND(default, null) : String;
 	
-	private static var S12_MUST_UNDERSTAND_TRUE(default, null) : String;
+	@:protected @:static @:final private static var S12_MUST_UNDERSTAND_TRUE(default, null) : String;
 	
-	private static var S11_MUST_UNDERSTAND_TRUE(default, null) : String;
+	@:protected @:static @:final private static var S11_MUST_UNDERSTAND_TRUE(default, null) : String;
 	
 	
 }

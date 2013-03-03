@@ -28,7 +28,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	/**
 	* Construct a new, empty attribute set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new attribute set,
@@ -39,7 +39,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>attribute</CODE> is null.
 	*/
-	@:overload public function new(attribute : javax.print.attribute.Attribute) : Void;
+	@:overload @:public public function new(attribute : javax.print.attribute.Attribute) : Void;
 	
 	/**
 	* Construct a new attribute set,
@@ -57,7 +57,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*     (unchecked exception) Thrown if any element of
 	*     <CODE>attributes</CODE> is null.
 	*/
-	@:overload public function new(attributes : java.NativeArray<javax.print.attribute.Attribute>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<javax.print.attribute.Attribute>) : Void;
 	
 	/**
 	* Construct a new attribute set,
@@ -67,7 +67,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*                 If null, an empty attribute set is constructed.
 	*
 	*/
-	@:overload public function new(attributes : javax.print.attribute.AttributeSet) : Void;
+	@:overload @:public public function new(attributes : javax.print.attribute.AttributeSet) : Void;
 	
 	/**
 	* Construct a new, empty attribute set, where the members of
@@ -79,7 +79,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*                     subinterface thereof.
 	* @exception NullPointerException if interfaceName is null.
 	*/
-	@:overload private function new(interfaceName : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(interfaceName : Class<Dynamic>) : Void;
 	
 	/**
 	* Construct a new attribute set, initially populated with the given
@@ -99,7 +99,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*     (unchecked exception) Thrown if <CODE>attribute</CODE> is not an
 	*     instance of <CODE>interfaceName</CODE>.
 	*/
-	@:overload private function new(attribute : javax.print.attribute.Attribute, interfaceName : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(attribute : javax.print.attribute.Attribute, interfaceName : Class<Dynamic>) : Void;
 	
 	/**
 	* Construct a new attribute set, where the members of the attribute
@@ -126,7 +126,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	* <CODE>attributes</CODE> is not an instance of
 	* <CODE>interfaceName</CODE>.
 	*/
-	@:overload private function new(attributes : java.NativeArray<javax.print.attribute.Attribute>, interfaceName : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(attributes : java.NativeArray<javax.print.attribute.Attribute>, interfaceName : Class<Dynamic>) : Void;
 	
 	/**
 	* Construct a new attribute set, initially populated with the
@@ -145,7 +145,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	* <CODE>attributes</CODE> is not an instance of
 	* <CODE>interfaceName</CODE>.
 	*/
-	@:overload private function new(attributes : javax.print.attribute.AttributeSet, interfaceName : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(attributes : javax.print.attribute.AttributeSet, interfaceName : Class<Dynamic>) : Void;
 	
 	/**
 	* Returns the attribute value which this attribute set contains in the
@@ -170,7 +170,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*     {@link java.lang.Class Class} that implements interface {@link
 	*     Attribute Attribute}.
 	*/
-	@:overload public function get(category : Class<Dynamic>) : javax.print.attribute.Attribute;
+	@:overload @:public public function get(category : Class<Dynamic>) : javax.print.attribute.Attribute;
 	
 	/**
 	* Adds the specified attribute to this attribute set if it is not
@@ -189,7 +189,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*    (unchecked exception) Thrown if this attribute set does not support
 	*     the <CODE>add()</CODE> operation.
 	*/
-	@:overload public function add(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function add(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Removes any attribute for this category from this attribute set if
@@ -207,7 +207,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*     (unchecked exception) Thrown if this attribute set does not
 	*     support the <CODE>remove()</CODE> operation.
 	*/
-	@:overload public function remove(category : Class<Dynamic>) : Bool;
+	@:overload @:public public function remove(category : Class<Dynamic>) : Bool;
 	
 	/**
 	* Removes the specified attribute from this attribute set if
@@ -224,7 +224,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*     (unchecked exception) Thrown if this attribute set does not
 	*     support the <CODE>remove()</CODE> operation.
 	*/
-	@:overload public function remove(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function remove(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this attribute set contains an
@@ -236,7 +236,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	* @return  <tt>true</tt> if this attribute set contains an attribute
 	*         value for the specified category.
 	*/
-	@:overload public function containsKey(category : Class<Dynamic>) : Bool;
+	@:overload @:public public function containsKey(category : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this attribute set contains the given
@@ -248,7 +248,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	* @return  <tt>true</tt> if this attribute set contains the given
 	*      attribute    value.
 	*/
-	@:overload public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified set to this attribute.
@@ -280,7 +280,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*
 	* @see #add(Attribute)
 	*/
-	@:overload public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
 	
 	/**
 	* Returns the number of attributes in this attribute set. If this
@@ -289,14 +289,14 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*
 	* @return  The number of attributes in this attribute set.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	*
 	* @return the Attributes contained in this set as an array, zero length
 	* if the AttributeSet is empty.
 	*/
-	@:overload public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
 	
 	/**
 	* Removes all attributes from this attribute set.
@@ -305,14 +305,14 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*   (unchecked exception) Thrown if this attribute set does not support
 	*     the <CODE>clear()</CODE> operation.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns true if this attribute set contains no attributes.
 	*
 	* @return true if this attribute set contains no attributes.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Compares the specified object with this attribute set for equality.
@@ -327,7 +327,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	* @return  <tt>true</tt> if the specified object is equal to this
 	*       attribute   set.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this attribute set.
@@ -340,7 +340,7 @@ extern class HashAttributeSet implements javax.print.attribute.AttributeSet impl
 	*
 	* @return  The hash code value for this attribute set.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CDROutputObject extends com.sun.corba.se.spi.encoding.CorbaOutputObject
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message, streamFormatVersion : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message, streamFormatVersion : java.StdTypes.Int8) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message, streamFormatVersion : java.StdTypes.Int8, strategy : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message, streamFormatVersion : java.StdTypes.Int8, strategy : Int) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion, connection : com.sun.corba.se.spi.transport.CorbaConnection, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message, streamFormatVersion : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, mediator : com.sun.corba.se.spi.protocol.CorbaMessageMediator, giopVersion : com.sun.corba.se.spi.ior.iiop.GIOPVersion, connection : com.sun.corba.se.spi.transport.CorbaConnection, header : com.sun.corba.se.impl.protocol.giopmsgheaders.Message, streamFormatVersion : java.StdTypes.Int8) : Void;
 	
-	@:overload public function getMessageHeader() : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+	@:overload @:public public function getMessageHeader() : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 	
-	@:overload @:final public function finishSendingMessage() : Void;
+	@:overload @:public @:final public function finishSendingMessage() : Void;
 	
 	/**
 	* Write the contents of the CDROutputStream to the specified
@@ -41,16 +41,16 @@ extern class CDROutputObject extends com.sun.corba.se.spi.encoding.CorbaOutputOb
 	* Message onto the Message list.
 	* @param s The output stream to write to.
 	*/
-	@:overload override public function writeTo(connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
+	@:overload @:public override public function writeTo(connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
 	
 	/** overrides create_input_stream from CDROutputStream */
-	@:overload override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload @:public override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
-	@:overload public function getConnection() : com.sun.corba.se.spi.transport.CorbaConnection;
+	@:overload @:public public function getConnection() : com.sun.corba.se.spi.transport.CorbaConnection;
 	
-	@:overload @:final public function getByteBufferWithInfo() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload @:public @:final override public function getByteBufferWithInfo() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
-	@:overload @:final public function setByteBufferWithInfo(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:public @:final override public function setByteBufferWithInfo(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	/**
 	* Override the default CDR factory behavior to get the
@@ -61,11 +61,11 @@ extern class CDROutputObject extends com.sun.corba.se.spi.encoding.CorbaOutputOb
 	* In the local case, there is no Connection, so use the
 	* local code sets.
 	*/
-	@:overload private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload @:protected override private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
-	@:overload private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload @:protected override private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected private function dprint(msg : String) : Void;
 	
 	
 }

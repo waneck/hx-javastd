@@ -48,9 +48,9 @@ extern interface HTMLPreElement extends org.w3c.dom.html.HTMLElement
 	*  Fixed width for content. See the  width attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
-	@:overload public function setWidth(width : Int) : Void;
+	@:overload @:public public function setWidth(width : Int) : Void;
 	
 	
 }

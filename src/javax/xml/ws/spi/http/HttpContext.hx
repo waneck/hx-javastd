@@ -36,7 +36,7 @@ extern class HttpContext
 	* @author Jitendra Kotamraju
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) private var handler : javax.xml.ws.spi.http.HttpHandler;
+	@:require(java2) @:protected private var handler : javax.xml.ws.spi.http.HttpHandler;
 	
 	/**
 	* JAX-WS runtime sets its handler during
@@ -46,7 +46,7 @@ extern class HttpContext
 	*
 	* @param handler the handler to set for this context
 	*/
-	@:overload public function setHandler(handler : javax.xml.ws.spi.http.HttpHandler) : Void;
+	@:overload @:public public function setHandler(handler : javax.xml.ws.spi.http.HttpHandler) : Void;
 	
 	/**
 	* Returns the path for this context. This path uniquely identifies
@@ -70,7 +70,7 @@ extern class HttpContext
 	*
 	* @return this context's path
 	*/
-	@:overload @:abstract public function getPath() : String;
+	@:overload @:public @:abstract public function getPath() : String;
 	
 	/**
 	* Returns an attribute value for container's configuration
@@ -79,7 +79,7 @@ extern class HttpContext
 	* @param name attribute name
 	* @return attribute value
 	*/
-	@:overload @:abstract public function getAttribute(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Returns all attribute names for container's configuration
@@ -87,7 +87,7 @@ extern class HttpContext
 	*
 	* @return set of all attribute names
 	*/
-	@:overload @:abstract public function getAttributeNames() : java.util.Set<String>;
+	@:overload @:public @:abstract public function getAttributeNames() : java.util.Set<String>;
 	
 	
 }

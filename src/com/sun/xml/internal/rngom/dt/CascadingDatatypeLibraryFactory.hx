@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.dt;
 */
 extern class CascadingDatatypeLibraryFactory implements org.relaxng.datatype.DatatypeLibraryFactory
 {
-	@:overload public function new(factory1 : org.relaxng.datatype.DatatypeLibraryFactory, factory2 : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
+	@:overload @:public public function new(factory1 : org.relaxng.datatype.DatatypeLibraryFactory, factory2 : org.relaxng.datatype.DatatypeLibraryFactory) : Void;
 	
-	@:overload public function createDatatypeLibrary(namespaceURI : String) : org.relaxng.datatype.DatatypeLibrary;
+	@:overload @:public public function createDatatypeLibrary(namespaceURI : String) : org.relaxng.datatype.DatatypeLibrary;
 	
 	
 }

@@ -46,13 +46,13 @@ extern class OutlineTextRenderer implements sun.java2d.pipe.TextPipe
 	* produce AA text which perhaps isn't what the user expected.
 	* Note that the glyphvector obeys its FRC, not the G2D.
 	*/
-	public static var THRESHHOLD(default, null) : Int;
+	@:public @:static @:final public static var THRESHHOLD(default, null) : Int;
 	
-	@:overload public function drawChars(g2d : sun.java2d.SunGraphics2D, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function drawChars(g2d : sun.java2d.SunGraphics2D, data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
-	@:overload public function drawString(g2d : sun.java2d.SunGraphics2D, str : String, x : Float, y : Float) : Void;
+	@:overload @:public public function drawString(g2d : sun.java2d.SunGraphics2D, str : String, x : Float, y : Float) : Void;
 	
-	@:overload public function drawGlyphVector(g2d : sun.java2d.SunGraphics2D, gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public public function drawGlyphVector(g2d : sun.java2d.SunGraphics2D, gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
 	
 }

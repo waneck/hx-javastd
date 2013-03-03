@@ -34,75 +34,75 @@ package sun.text;
 */
 extern class CodePointIterator
 {
-	public static var DONE(default, null) : Int;
+	@:public @:static @:final public static var DONE(default, null) : Int;
 	
-	@:overload @:abstract public function setToStart() : Void;
+	@:overload @:public @:abstract public function setToStart() : Void;
 	
-	@:overload @:abstract public function setToLimit() : Void;
+	@:overload @:public @:abstract public function setToLimit() : Void;
 	
-	@:overload @:abstract public function next() : Int;
+	@:overload @:public @:abstract public function next() : Int;
 	
-	@:overload @:abstract public function prev() : Int;
+	@:overload @:public @:abstract public function prev() : Int;
 	
-	@:overload @:abstract public function charIndex() : Int;
+	@:overload @:public @:abstract public function charIndex() : Int;
 	
-	@:overload public static function create(text : java.NativeArray<java.StdTypes.Char16>) : sun.text.CodePointIterator;
+	@:overload @:public @:static public static function create(text : java.NativeArray<java.StdTypes.Char16>) : sun.text.CodePointIterator;
 	
-	@:overload public static function create(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : sun.text.CodePointIterator;
+	@:overload @:public @:static public static function create(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : sun.text.CodePointIterator;
 	
-	@:overload public static function create(text : java.lang.CharSequence) : sun.text.CodePointIterator;
+	@:overload @:public @:static public static function create(text : java.lang.CharSequence) : sun.text.CodePointIterator;
 	
-	@:overload public static function create(iter : java.text.CharacterIterator) : sun.text.CodePointIterator;
+	@:overload @:public @:static public static function create(iter : java.text.CharacterIterator) : sun.text.CodePointIterator;
 	
 	
 }
 @:internal extern class CharArrayCodePointIterator extends sun.text.CodePointIterator
 {
-	@:overload public function new(text : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public public function new(text : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function new(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Void;
+	@:overload @:public public function new(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Void;
 	
-	@:overload override public function setToStart() : Void;
+	@:overload @:public override public function setToStart() : Void;
 	
-	@:overload override public function setToLimit() : Void;
+	@:overload @:public override public function setToLimit() : Void;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function prev() : Int;
+	@:overload @:public override public function prev() : Int;
 	
-	@:overload override public function charIndex() : Int;
+	@:overload @:public override public function charIndex() : Int;
 	
 	
 }
 @:internal extern class CharSequenceCodePointIterator extends sun.text.CodePointIterator
 {
-	@:overload public function new(text : java.lang.CharSequence) : Void;
+	@:overload @:public public function new(text : java.lang.CharSequence) : Void;
 	
-	@:overload override public function setToStart() : Void;
+	@:overload @:public override public function setToStart() : Void;
 	
-	@:overload override public function setToLimit() : Void;
+	@:overload @:public override public function setToLimit() : Void;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function prev() : Int;
+	@:overload @:public override public function prev() : Int;
 	
-	@:overload override public function charIndex() : Int;
+	@:overload @:public override public function charIndex() : Int;
 	
 	
 }
 @:internal extern class CharacterIteratorCodePointIterator extends sun.text.CodePointIterator
 {
-	@:overload public function new(iter : java.text.CharacterIterator) : Void;
+	@:overload @:public public function new(iter : java.text.CharacterIterator) : Void;
 	
-	@:overload override public function setToStart() : Void;
+	@:overload @:public override public function setToStart() : Void;
 	
-	@:overload override public function setToLimit() : Void;
+	@:overload @:public override public function setToLimit() : Void;
 	
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload override public function prev() : Int;
+	@:overload @:public override public function prev() : Int;
 	
-	@:overload override public function charIndex() : Int;
+	@:overload @:public override public function charIndex() : Int;
 	
 	
 }

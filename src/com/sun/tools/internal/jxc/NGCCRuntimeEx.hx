@@ -25,7 +25,7 @@ package com.sun.tools.internal.jxc;
 */
 extern class NGCCRuntimeEx extends com.sun.tools.internal.jxc.gen.config.NGCCRuntime
 {
-	@:overload public function new(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	*  This will check if the baseDir provided by the user
@@ -35,7 +35,7 @@ extern class NGCCRuntimeEx extends com.sun.tools.internal.jxc.gen.config.NGCCRun
 	* @return
 	*     The file representation of the path name
 	*/
-	@:overload public function getBaseDir(baseDir : String) : java.io.File;
+	@:overload @:public public function getBaseDir(baseDir : String) : java.io.File;
 	
 	/**
 	* This takes the include list provided by the user in the config file
@@ -45,7 +45,7 @@ extern class NGCCRuntimeEx extends com.sun.tools.internal.jxc.gen.config.NGCCRun
 	* @return
 	*        A list of regular expression patterns {@link Pattern}
 	*/
-	@:overload public function getIncludePatterns(includeContent : java.util.List<Dynamic>) : java.util.List<java.util.regex.Pattern>;
+	@:overload @:public public function getIncludePatterns(includeContent : java.util.List<Dynamic>) : java.util.List<java.util.regex.Pattern>;
 	
 	/**
 	* This takes the exclude list provided by the user in the config file
@@ -55,9 +55,9 @@ extern class NGCCRuntimeEx extends com.sun.tools.internal.jxc.gen.config.NGCCRun
 	* @return
 	*        A list of regular expression patterns {@link Pattern}
 	*/
-	@:overload public function getExcludePatterns(excludeContent : java.util.List<Dynamic>) : java.util.List<Dynamic>;
+	@:overload @:public public function getExcludePatterns(excludeContent : java.util.List<Dynamic>) : java.util.List<Dynamic>;
 	
-	@:overload private function unexpectedX(token : String) : Void;
+	@:overload @:protected override private function unexpectedX(token : String) : Void;
 	
 	
 }

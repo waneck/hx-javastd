@@ -21,14 +21,14 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 @:internal extern class XMLSchema extends com.sun.org.apache.xerces.internal.jaxp.validation.AbstractXMLSchema
 {
 	/** Constructor */
-	@:overload public function new(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* <p>Returns the grammar pool contained inside the container.</p>
 	*
 	* @return the grammar pool contained inside the container
 	*/
-	@:overload override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
 	/**
 	* <p>Returns whether the schema components contained in this object
@@ -39,7 +39,7 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	* @return whether the schema components contained in this object
 	* can be considered to be a fully composed schema
 	*/
-	@:overload override public function isFullyComposed() : Bool;
+	@:overload @:public override public function isFullyComposed() : Bool;
 	
 	
 }

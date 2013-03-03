@@ -43,7 +43,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in field documentation and false
 	* otherwise.
 	*/
-	@:overload public function inField() : Bool;
+	@:overload @:public override public function inField() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -52,7 +52,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in overview documentation and false
 	* otherwise.
 	*/
-	@:overload public function inOverview() : Bool;
+	@:overload @:public override public function inOverview() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -61,7 +61,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in package documentation and false
 	* otherwise.
 	*/
-	@:overload public function inPackage() : Bool;
+	@:overload @:public override public function inPackage() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -70,7 +70,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in type documentation and false
 	* otherwise.
 	*/
-	@:overload public function inType() : Bool;
+	@:overload @:public override public function inType() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -78,7 +78,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @return true if this <code>Taglet</code>
 	* is an inline tag and false otherwise.
 	*/
-	@:overload public function isInlineTag() : Bool;
+	@:overload @:public override public function isInlineTag() : Bool;
 	
 	
 }

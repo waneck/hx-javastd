@@ -49,12 +49,12 @@ extern class TCOffsets
 	/**
 	* Return -1 if the given name is not in the list of types.
 	**/
-	@:overload public function offset(name : String) : Int;
+	@:overload @:public public function offset(name : String) : Int;
 	
 	/**
 	*
 	**/
-	@:overload public function set(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function set(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* Return the full length of the string type:  4 byte length, x bytes for
@@ -62,22 +62,22 @@ extern class TCOffsets
 	* boundary.  This method assumes the string starts at a 4-byte boundary
 	* since it doesn't do any leading alignment.
 	**/
-	@:overload public function alignStrLen(string : String) : Int;
+	@:overload @:public public function alignStrLen(string : String) : Int;
 	
 	/**
 	*
 	**/
-	@:overload public function setMember(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function setMember(entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	*
 	**/
-	@:overload public function currentOffset() : Int;
+	@:overload @:public public function currentOffset() : Int;
 	
 	/**
 	*
 	**/
-	@:overload public function bumpCurrentOffset(value : Int) : Void;
+	@:overload @:public public function bumpCurrentOffset(value : Int) : Void;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	/**
 	* The first number in the range of IDs used for internal frame events.
 	*/
-	public static var INTERNAL_FRAME_FIRST(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of IDs used for internal frame events.
 	*/
-	public static var INTERNAL_FRAME_LAST(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_LAST(default, null) : Int;
 	
 	/**
 	* The "window opened" event.  This event is delivered only
@@ -41,7 +41,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	*
 	* @see JInternalFrame#show
 	*/
-	public static var INTERNAL_FRAME_OPENED(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_OPENED(default, null) : Int;
 	
 	/**
 	* The "window is closing" event. This event is delivered when
@@ -54,7 +54,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	* @see JInternalFrame#doDefaultCloseAction
 	* @see JInternalFrame#setClosed
 	*/
-	public static var INTERNAL_FRAME_CLOSING(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_CLOSING(default, null) : Int;
 	
 	/**
 	* The "window closed" event. This event is delivered after
@@ -65,7 +65,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	* @see JInternalFrame#setClosed
 	* @see JInternalFrame#dispose
 	*/
-	public static var INTERNAL_FRAME_CLOSED(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_CLOSED(default, null) : Int;
 	
 	/**
 	* The "window iconified" event.
@@ -74,7 +74,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	*
 	* @see JInternalFrame#setIcon
 	*/
-	public static var INTERNAL_FRAME_ICONIFIED(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_ICONIFIED(default, null) : Int;
 	
 	/**
 	* The "window deiconified" event type. This event indicates that the
@@ -82,7 +82,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	*
 	* @see JInternalFrame#setIcon
 	*/
-	public static var INTERNAL_FRAME_DEICONIFIED(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_DEICONIFIED(default, null) : Int;
 	
 	/**
 	* The "window activated" event type. This event indicates that keystrokes
@@ -91,7 +91,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	* @see JInternalFrame#show
 	* @see JInternalFrame#setSelected
 	*/
-	public static var INTERNAL_FRAME_ACTIVATED(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_ACTIVATED(default, null) : Int;
 	
 	/**
 	* The "window deactivated" event type. This event indicates that keystrokes
@@ -99,14 +99,14 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	*
 	* @see JInternalFrame#setSelected
 	*/
-	public static var INTERNAL_FRAME_DEACTIVATED(default, null) : Int;
+	@:public @:static @:final public static var INTERNAL_FRAME_DEACTIVATED(default, null) : Int;
 	
 	/**
 	* Constructs an <code>InternalFrameEvent</code> object.
 	* @param source the <code>JInternalFrame</code> object that originated the event
 	* @param id     an integer indicating the type of event
 	*/
-	@:overload public function new(source : javax.swing.JInternalFrame, id : Int) : Void;
+	@:overload @:public public function new(source : javax.swing.JInternalFrame, id : Int) : Void;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -114,7 +114,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	/**
 	* Returns the originator of the event.
@@ -122,7 +122,7 @@ extern class InternalFrameEvent extends java.awt.AWTEvent
 	* @return the <code>JInternalFrame</code> object that originated the event
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getInternalFrame() : javax.swing.JInternalFrame;
+	@:require(java3) @:overload @:public public function getInternalFrame() : javax.swing.JInternalFrame;
 	
 	
 }

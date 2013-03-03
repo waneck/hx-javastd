@@ -40,7 +40,7 @@ extern class DOMXMLObject extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	* @throws ClassCastException if <code>content</code> contains any
 	*    entries that are not of type {@link XMLStructure}
 	*/
-	@:overload public function new(content : java.util.List<Dynamic>, id : String, mimeType : String, encoding : String) : Void;
+	@:overload @:public public function new(content : java.util.List<Dynamic>, id : String, mimeType : String, encoding : String) : Void;
 	
 	/**
 	* Creates an <code>XMLObject</code> from an element.
@@ -48,19 +48,19 @@ extern class DOMXMLObject extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	* @param objElem an Object element
 	* @throws MarshalException if there is an error when unmarshalling
 	*/
-	@:overload public function new(objElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
+	@:overload @:public public function new(objElem : org.w3c.dom.Element, context : javax.xml.crypto.XMLCryptoContext, provider : java.security.Provider) : Void;
 	
-	@:overload public function getContent() : java.util.List<Dynamic>;
+	@:overload @:public public function getContent() : java.util.List<Dynamic>;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

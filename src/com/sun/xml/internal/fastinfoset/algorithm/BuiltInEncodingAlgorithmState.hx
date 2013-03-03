@@ -27,19 +27,19 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class BuiltInEncodingAlgorithmState
 {
-	public static var INITIAL_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var INITIAL_LENGTH(default, null) : Int;
 	
-	public var booleanArray : java.NativeArray<Bool>;
+	@:public public var booleanArray : java.NativeArray<Bool>;
 	
-	public var shortArray : java.NativeArray<java.StdTypes.Int16>;
+	@:public public var shortArray : java.NativeArray<java.StdTypes.Int16>;
 	
-	public var intArray : java.NativeArray<Int>;
+	@:public public var intArray : java.NativeArray<Int>;
 	
-	public var longArray : java.NativeArray<haxe.Int64>;
+	@:public public var longArray : java.NativeArray<haxe.Int64>;
 	
-	public var floatArray : java.NativeArray<Single>;
+	@:public public var floatArray : java.NativeArray<Single>;
 	
-	public var doubleArray : java.NativeArray<Float>;
+	@:public public var doubleArray : java.NativeArray<Float>;
 	
 	
 }

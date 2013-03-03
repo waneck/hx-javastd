@@ -40,7 +40,7 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	* @param description A human readable description of the
 	*     Notification. Optional.
 	**/
-	@:overload public function new(notifTypes : java.NativeArray<String>, name : String, description : String) : Void;
+	@:overload @:public public function new(notifTypes : java.NativeArray<String>, name : String, description : String) : Void;
 	
 	/**
 	* Constructs a ModelMBeanNotificationInfo object.
@@ -63,7 +63,7 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	*    descriptor field "descriptorType" is not equal to "notification".
 	*
 	**/
-	@:overload public function new(notifTypes : java.NativeArray<String>, name : String, description : String, descriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(notifTypes : java.NativeArray<String>, name : String, description : String, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Constructs a new ModelMBeanNotificationInfo object from this
@@ -72,13 +72,13 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	* @param inInfo the ModelMBeanNotificationInfo to be duplicated
 	*
 	**/
-	@:overload public function new(inInfo : javax.management.modelmbean.ModelMBeanNotificationInfo) : Void;
+	@:overload @:public public function new(inInfo : javax.management.modelmbean.ModelMBeanNotificationInfo) : Void;
 	
 	/**
 	* Creates and returns a new ModelMBeanNotificationInfo which is a
 	* duplicate of this ModelMBeanNotificationInfo.
 	**/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns a copy of the associated Descriptor for the
@@ -89,7 +89,7 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	*
 	* @see #setDescriptor
 	**/
-	@:overload override public function getDescriptor() : javax.management.Descriptor;
+	@:overload @:public override public function getDescriptor() : javax.management.Descriptor;
 	
 	/**
 	* Sets associated Descriptor (full replace) for the
@@ -108,7 +108,7 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	*
 	* @see #getDescriptor
 	**/
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns a human readable string containing
@@ -116,7 +116,7 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	*
 	* @return a string describing this object.
 	**/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

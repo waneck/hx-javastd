@@ -47,7 +47,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 	*
 	* @version $Id: XSDElementTraverser.java,v 1.9 2010-11-01 04:40:02 joehw Exp $
 	*/
-	private var fTempElementDecl(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
+	@:protected @:final private var fTempElementDecl(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
 	
 	/**
 	* Traverse a locally declared element (or an element reference).
@@ -57,7 +57,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 	*
 	* @param  index
 	*/
-	@:overload private function traverseLocal(particle : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl, elmDecl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, allContextFlags : Int, parent : com.sun.org.apache.xerces.internal.xs.XSObject, localNSDecls : java.NativeArray<String>) : Void;
+	@:overload @:protected private function traverseLocal(particle : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl, elmDecl : org.w3c.dom.Element, schemaDoc : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDocumentInfo, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, allContextFlags : Int, parent : com.sun.org.apache.xerces.internal.xs.XSObject, localNSDecls : java.NativeArray<String>) : Void;
 	
 	
 }

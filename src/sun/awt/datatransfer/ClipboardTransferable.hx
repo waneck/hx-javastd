@@ -25,19 +25,19 @@ package sun.awt.datatransfer;
 */
 extern class ClipboardTransferable implements java.awt.datatransfer.Transferable
 {
-	@:overload public function new(clipboard : sun.awt.datatransfer.SunClipboard) : Void;
+	@:overload @:public public function new(clipboard : sun.awt.datatransfer.SunClipboard) : Void;
 	
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }
 @:native('sun$awt$datatransfer$ClipboardTransferable$DataFactory') @:internal extern class ClipboardTransferable_DataFactory
 {
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }

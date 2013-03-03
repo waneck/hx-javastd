@@ -38,35 +38,35 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @author Santiago.Pericas-Geertsen@sun.com
 	* @author Sunitha.Reddy@sun.com
 	*/
-	public static var START_COMMENT(default, null) : String;
+	@:public @:static @:final public static var START_COMMENT(default, null) : String;
 	
-	public static var END_COMMENT(default, null) : String;
+	@:public @:static @:final public static var END_COMMENT(default, null) : String;
 	
-	public static var DEFAULT_ENCODING(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_ENCODING(default, null) : String;
 	
-	public static var DEFAULT_XMLDECL(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_XMLDECL(default, null) : String;
 	
-	public static var DEFAULT_XML_VERSION(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_XML_VERSION(default, null) : String;
 	
-	public static var CLOSE_START_TAG(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var CLOSE_START_TAG(default, null) : java.StdTypes.Char16;
 	
-	public static var OPEN_START_TAG(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var OPEN_START_TAG(default, null) : java.StdTypes.Char16;
 	
-	public static var OPEN_END_TAG(default, null) : String;
+	@:public @:static @:final public static var OPEN_END_TAG(default, null) : String;
 	
-	public static var CLOSE_END_TAG(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var CLOSE_END_TAG(default, null) : java.StdTypes.Char16;
 	
-	public static var START_CDATA(default, null) : String;
+	@:public @:static @:final public static var START_CDATA(default, null) : String;
 	
-	public static var END_CDATA(default, null) : String;
+	@:public @:static @:final public static var END_CDATA(default, null) : String;
 	
-	public static var CLOSE_EMPTY_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var CLOSE_EMPTY_ELEMENT(default, null) : String;
 	
-	public static var SPACE(default, null) : String;
+	@:public @:static @:final public static var SPACE(default, null) : String;
 	
-	public static var UTF_8(default, null) : String;
+	@:public @:static @:final public static var UTF_8(default, null) : String;
 	
-	public static var OUTPUTSTREAM_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var OUTPUTSTREAM_PROPERTY(default, null) : String;
 	
 	/**
 	* Creates a new instance of XMLStreamWriterImpl. Uses platform's default
@@ -75,7 +75,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param outputStream Underlying stream to write the bytes to
 	* @param props        Properties used by this writer
 	*/
-	@:overload public function new(outputStream : java.io.OutputStream, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(outputStream : java.io.OutputStream, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Creates a new instance of XMLStreamWriterImpl.
@@ -84,7 +84,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param encoding     Encoding used to convert chars into bytes
 	* @param props        Properties used by this writer
 	*/
-	@:overload public function new(outputStream : java.io.OutputStream, encoding : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(outputStream : java.io.OutputStream, encoding : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Creates a new instance of XMLStreamWriterImpl using a Writer.
@@ -92,7 +92,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param writer  Underlying writer to which chars are written
 	* @param props   Properties used by this writer
 	*/
-	@:overload public function new(writer : java.io.Writer, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Creates a new instance of XMLStreamWriterImpl using a StreamResult.
@@ -101,14 +101,14 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param writer  Underlying writer to which chars are written
 	* @param props   Properties used by this writer
 	*/
-	@:overload public function new(sr : javax.xml.transform.stream.StreamResult, encoding : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload @:public public function new(sr : javax.xml.transform.stream.StreamResult, encoding : String, props : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* Reset this instance so that it can be re-used. Do not read properties
 	* again. The method <code>setOutput(StreamResult, encoding)</code> must
 	* be called after this one.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Use a StreamResult to initialize the output for this XMLStreamWriter. Check
@@ -117,34 +117,34 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param sr        StreamResult encapsulating output information
 	* @param encoding  Encoding to be used except when a Writer is available
 	*/
-	@:overload public function setOutput(sr : javax.xml.transform.stream.StreamResult, encoding : String) : Void;
+	@:overload @:public public function setOutput(sr : javax.xml.transform.stream.StreamResult, encoding : String) : Void;
 	
 	/** Can this instance be reused
 	*
 	* @return boolean boolean value to indicate if this instance can be reused or not
 	*/
-	@:overload public function canReuse() : Bool;
+	@:overload @:public public function canReuse() : Bool;
 	
-	@:overload public function setEscapeCharacters(escape : Bool) : Void;
+	@:overload @:public public function setEscapeCharacters(escape : Bool) : Void;
 	
-	@:overload public function getEscapeCharacters() : Bool;
+	@:overload @:public public function getEscapeCharacters() : Bool;
 	
 	/**
 	* Close this XMLStreamWriter by closing underlying writer.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Flush this XMLStreamWriter by flushin underlying writer.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Return <code>NamespaceContext</code> being used by the writer.
 	*
 	* @return NamespaceContext
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* Return a prefix associated with specified uri, or null if the
@@ -153,7 +153,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param  uri The namespace uri
 	* @throws XMLStreamException if uri specified is "" or null
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Returns value associated with the specified property name.
@@ -162,14 +162,14 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @throws IllegalArgumentException if the specified property is not supported
 	* @return value associated with the specified property.
 	*/
-	@:overload public function getProperty(str : String) : Dynamic;
+	@:overload @:public public function getProperty(str : String) : Dynamic;
 	
 	/**
 	* Set the specified URI as default namespace in the current namespace context.
 	*
 	* @param uri Namespace URI
 	*/
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
 	/**
 	* Sets the current <code>NamespaceContext</code> for prefix and uri bindings.
@@ -186,7 +186,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param namespaceContext the namespace context to use for this writer, may not be null
 	* @throws XMLStreamException
 	*/
-	@:overload public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(namespaceContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* Sets the prefix the uri is bound to. This prefix is bound in the scope of
@@ -197,23 +197,23 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param uri
 	* @throws XMLStreamException
 	*/
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
-	@:overload public function writeAttribute(localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(localName : String, value : String) : Void;
 	
-	@:overload public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
 	
-	@:overload public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
 	
-	@:overload public function writeCData(cdata : String) : Void;
+	@:overload @:public public function writeCData(cdata : String) : Void;
 	
-	@:overload public function writeCharacters(data : String) : Void;
+	@:overload @:public public function writeCharacters(data : String) : Void;
 	
-	@:overload public function writeCharacters(data : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public public function writeCharacters(data : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function writeComment(comment : String) : Void;
+	@:overload @:public public function writeComment(comment : String) : Void;
 	
-	@:overload public function writeDTD(dtd : String) : Void;
+	@:overload @:public public function writeDTD(dtd : String) : Void;
 	
 	/*
 	* Write default Namespace.
@@ -229,19 +229,19 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @see <a href="http://www.w3.org/TR/REC-xml-names/#defaulting">
 	*   Namespaces in XML, 5.2 Namespace Defaulting</a>
 	*/
-	@:overload public function writeDefaultNamespace(namespaceURI : String) : Void;
+	@:overload @:public public function writeDefaultNamespace(namespaceURI : String) : Void;
 	
-	@:overload public function writeEmptyElement(localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(localName : String) : Void;
 	
-	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEndDocument() : Void;
+	@:overload @:public public function writeEndDocument() : Void;
 	
-	@:overload public function writeEndElement() : Void;
+	@:overload @:public public function writeEndElement() : Void;
 	
-	@:overload public function writeEntityRef(refName : String) : Void;
+	@:overload @:public public function writeEntityRef(refName : String) : Void;
 	
 	/**
 	* Write a Namespace declaration.
@@ -258,47 +258,47 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @see <a href="http://www.w3.org/TR/REC-xml-names/#defaulting">
 	*   Namespaces in XML, 5.2 Namespace Defaulting</a>
 	*/
-	@:overload public function writeNamespace(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeNamespace(prefix : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeProcessingInstruction(target : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String) : Void;
 	
 	/**
 	* @param target
 	* @param data
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartDocument() : Void;
+	@:overload @:public public function writeStartDocument() : Void;
 	
 	/**
 	* @param version
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartDocument(version : String) : Void;
+	@:overload @:public public function writeStartDocument(version : String) : Void;
 	
 	/**
 	* @param encoding
 	* @param version
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload @:public public function writeStartDocument(encoding : String, version : String) : Void;
 	
 	/**
 	* @param localName
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartElement(localName : String) : Void;
+	@:overload @:public public function writeStartElement(localName : String) : Void;
 	
 	/**
 	* @param namespaceURI
 	* @param localName
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* @param prefix
@@ -306,26 +306,26 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param namespaceURI
 	* @throws XMLStreamException
 	*/
-	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
 	/**
 	* Correct's namespaces  as per requirements of isReparisingNamespace property.
 	*/
-	@:overload private function repair() : Void;
+	@:overload @:protected private function repair() : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value associated to an implementation-specific
 	* property.
 	*/
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload override public function entrySet() : java.util.Set<Dynamic>;
+	@:overload @:public override public function entrySet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Overrides the method defined in AbstractMap which is
@@ -333,19 +333,19 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* AbstractMap would cause an unsupported exection to
 	* be thrown.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Overrides the method defined in AbstractMap
 	* This is required by the toString() method
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Overrides the method defined in AbstractMap
 	* This is required to satisfy the contract for hashCode.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -356,13 +356,13 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 @:native('com$sun$xml$internal$stream$writers$XMLStreamWriterImpl$ElementStack') extern class XMLStreamWriterImpl_ElementStack
 {
 	/** The stack data. */
-	private var fElements : java.NativeArray<com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState>;
+	@:protected private var fElements : java.NativeArray<com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState>;
 	
 	/** The size of the stack. */
-	private var fDepth : java.StdTypes.Int16;
+	@:protected private var fDepth : java.StdTypes.Int16;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Pushes an element on the stack.
@@ -377,7 +377,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	*
 	* @return Returns the actual QName object that stores the
 	*/
-	@:overload public function push(element : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState) : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
+	@:overload @:public public function push(element : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState) : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/**
 	*
@@ -388,7 +388,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param isEmpty
 	* @return
 	*/
-	@:overload public function push(prefix : String, localpart : String, rawname : String, uri : String, isEmpty : Bool) : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
+	@:overload @:public public function push(prefix : String, localpart : String, rawname : String, uri : String, isEmpty : Bool) : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/**
 	* Pops an element off of the stack by setting the values of
@@ -398,10 +398,10 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* orphaned to the caller. Therefore, the caller should consider
 	* the object to be read-only.
 	*/
-	@:overload public function pop() : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
+	@:overload @:public public function pop() : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/** Clears the stack without throwing away existing QName objects. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* This function is as a result of optimization done for endElement --
@@ -410,13 +410,13 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* the values will be set only if application need to know about the endElement
 	* -- neeraj.bajaj@sun.com
 	*/
-	@:overload public function peek() : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
+	@:overload @:public public function peek() : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function empty() : Bool;
+	@:overload @:public public function empty() : Bool;
 	
 	
 }
@@ -425,13 +425,13 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 */
 @:native('com$sun$xml$internal$stream$writers$XMLStreamWriterImpl$ElementState') @:internal extern class XMLStreamWriterImpl_ElementState extends com.sun.org.apache.xerces.internal.xni.QName
 {
-	public var isEmpty : Bool;
+	@:public public var isEmpty : Bool;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String) : Void;
+	@:overload @:public public function new(prefix : String, localpart : String, rawname : String, uri : String) : Void;
 	
-	@:overload public function setValues(prefix : String, localpart : String, rawname : String, uri : String, isEmpty : Bool) : Void;
+	@:overload @:public public function setValues(prefix : String, localpart : String, rawname : String, uri : String, isEmpty : Bool) : Void;
 	
 	
 }
@@ -448,11 +448,11 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 */
 @:native('com$sun$xml$internal$stream$writers$XMLStreamWriterImpl$NamespaceContextImpl') @:internal extern class XMLStreamWriterImpl_NamespaceContextImpl implements javax.xml.namespace.NamespaceContext
 {
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
-	@:overload public function getPrefixes(uri : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(uri : String) : java.util.Iterator<Dynamic>;
 	
 	
 }

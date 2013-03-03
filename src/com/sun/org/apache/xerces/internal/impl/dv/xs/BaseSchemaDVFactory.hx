@@ -21,9 +21,9 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 */
 extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory
 {
-	private var fDeclPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool;
+	@:protected private var fDeclPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool;
 	
-	@:overload private static function createBuiltInTypes(builtInTypes : com.sun.org.apache.xerces.internal.util.SymbolHash, baseAtomicType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl) : Void;
+	@:overload @:protected @:static private static function createBuiltInTypes(builtInTypes : com.sun.org.apache.xerces.internal.util.SymbolHash, baseAtomicType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl) : Void;
 	
 	/**
 	* Create a new simple type which is derived by restriction from another
@@ -36,7 +36,7 @@ extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload public function createTypeRestriction(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, base : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function createTypeRestriction(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, base : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* Create a new simple type which is derived by list from another simple
@@ -49,7 +49,7 @@ extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload public function createTypeList(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function createTypeList(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* Create a new simple type which is derived by union from a list of other
@@ -62,12 +62,12 @@ extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload public function createTypeUnion(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function createTypeUnion(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
-	@:overload public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
+	@:overload @:public public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
 	
 	/** Implementation internal **/
-	@:overload public function newXSSimpleTypeDecl() : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
+	@:overload @:public public function newXSSimpleTypeDecl() : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
 	
 }

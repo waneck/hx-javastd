@@ -36,7 +36,7 @@ package com.sun.org.apache.xml.internal.resolver.readers;
 extern interface SAXCatalogParser extends org.xml.sax.ContentHandler extends org.xml.sax.DocumentHandler
 {
 	/** Set the Catalog for which parsing is being performed. */
-	@:overload public function setCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
+	@:overload @:public public function setCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
 	
 	
 }

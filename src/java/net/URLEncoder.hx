@@ -36,7 +36,7 @@ extern class URLEncoder
 	*             method to specify the encoding.
 	* @return  the translated <code>String</code>.
 	*/
-	@:overload public static function encode(s : String) : String;
+	@:overload @:public @:static public static function encode(s : String) : String;
 	
 	/**
 	* Translates a string into <code>application/x-www-form-urlencoded</code>
@@ -60,7 +60,7 @@ extern class URLEncoder
 	* @see URLDecoder#decode(java.lang.String, java.lang.String)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function encode(s : String, enc : String) : String;
+	@:require(java4) @:overload @:public @:static public static function encode(s : String, enc : String) : String;
 	
 	
 }

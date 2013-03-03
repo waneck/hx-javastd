@@ -32,7 +32,7 @@ extern class URLDataSource implements javax.activation.DataSource
 	*
 	* @param url The URL to be encapsulated in this object.
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Returns the value of the URL content-type header field.
@@ -45,7 +45,7 @@ extern class URLDataSource implements javax.activation.DataSource
 	*
 	* @return the content type.
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Calls the <code>getFile</code> method on the URL used to
@@ -53,7 +53,7 @@ extern class URLDataSource implements javax.activation.DataSource
 	*
 	* @return the result of calling the URL's getFile method.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* The getInputStream method from the URL. Calls the
@@ -61,7 +61,7 @@ extern class URLDataSource implements javax.activation.DataSource
 	*
 	* @return the InputStream.
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* The getOutputStream method from the URL. First an attempt is
@@ -71,14 +71,14 @@ extern class URLDataSource implements javax.activation.DataSource
 	*
 	* @return the OutputStream.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Return the URL used to create this DataSource.
 	*
 	* @return The URL.
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	
 }

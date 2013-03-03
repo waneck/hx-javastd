@@ -35,17 +35,17 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 */
 @:require(java4) extern class ThrowsTaglet extends com.sun.tools.doclets.internal.toolkit.taglets.BaseExecutableMemberTaglet implements com.sun.tools.doclets.internal.toolkit.taglets.InheritableTaglet
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function inherit(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input, output : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output) : Void;
+	@:overload @:public public function inherit(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input, output : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* Given an array of <code>Tag</code>s representing this custom
@@ -57,7 +57,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param allowDups True if we allow duplicate throws tags to be documented.
 	* @return the TagletOutput representation of this <code>Tag</code>.
 	*/
-	@:overload private function throwsTagsOutput(throwTags : java.NativeArray<com.sun.javadoc.ThrowsTag>, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter, alreadyDocumented : java.util.Set<String>, allowDups : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:protected private function throwsTagsOutput(throwTags : java.NativeArray<com.sun.javadoc.ThrowsTag>, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter, alreadyDocumented : java.util.Set<String>, allowDups : Bool) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

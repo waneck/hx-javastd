@@ -40,7 +40,7 @@ extern interface OpenType
 	* 1.0 is represented as 0x00010000.
 	* @return the version of the <code>OpenType</code> font.
 	*/
-	@:overload public function getVersion() : Int;
+	@:overload @:public public function getVersion() : Int;
 	
 	/**
 	* Returns the table as an array of bytes for a specified tag.
@@ -52,7 +52,7 @@ extern interface OpenType
 	* contains the font data corresponding to the specified
 	* tag.
 	*/
-	@:overload public function getFontTable(sfntTag : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getFontTable(sfntTag : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the table as an array of bytes for a specified tag.
@@ -65,7 +65,7 @@ extern interface OpenType
 	* contains the font data corresponding to the specified
 	* tag.
 	*/
-	@:overload public function getFontTable(strSfntTag : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getFontTable(strSfntTag : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a subset of the table as an array of bytes
@@ -81,7 +81,7 @@ extern interface OpenType
 	*            starting at <code>offset</code> byte and including
 	*            <code>count</code> bytes.
 	*/
-	@:overload public function getFontTable(sfntTag : Int, offset : Int, count : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getFontTable(sfntTag : Int, offset : Int, count : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a subset of the table as an array of bytes
@@ -98,7 +98,7 @@ extern interface OpenType
 	*            starting at <code>offset</code> byte and including
 	*            <code>count</code> bytes.
 	*/
-	@:overload public function getFontTable(strSfntTag : String, offset : Int, count : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getFontTable(strSfntTag : String, offset : Int, count : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the size of the table for a specified tag. Tags for sfnt
@@ -107,7 +107,7 @@ extern interface OpenType
 	* @return the size of the table corresponding to the specified
 	* tag.
 	*/
-	@:overload public function getFontTableSize(sfntTag : Int) : Int;
+	@:overload @:public public function getFontTableSize(sfntTag : Int) : Int;
 	
 	/**
 	* Returns the size of the table for a specified tag. Tags for sfnt
@@ -116,7 +116,7 @@ extern interface OpenType
 	* <code>String</code>
 	* @return the size of the table corresponding to the specified tag.
 	*/
-	@:overload public function getFontTableSize(strSfntTag : String) : Int;
+	@:overload @:public public function getFontTableSize(strSfntTag : String) : Int;
 	
 	
 }

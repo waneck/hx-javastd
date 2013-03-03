@@ -28,39 +28,39 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(modelBuilder : com.sun.xml.internal.bind.v2.model.impl.RuntimeModelBuilder, registry : com.sun.xml.internal.bind.v2.model.impl.RegistryInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>, method : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(modelBuilder : com.sun.xml.internal.bind.v2.model.impl.RuntimeModelBuilder, registry : com.sun.xml.internal.bind.v2.model.impl.RegistryInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>, method : java.lang.reflect.Method) : Void;
 	
-	@:overload private function createPropertyImpl() : com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl.ElementInfoImpl_PropertyImpl;
+	@:overload @:protected override private function createPropertyImpl() : com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl.ElementInfoImpl_PropertyImpl;
 	
-	@:overload public function getProperty() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo;
+	@:overload @:public override public function getProperty() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo;
 	
-	@:overload override public function getType() : Class<javax.xml.bind.JAXBElement<Dynamic>>;
+	@:overload @:public override public function getType() : Class<javax.xml.bind.JAXBElement<Dynamic>>;
 	
-	@:overload public function getScope() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeClassInfo;
+	@:overload @:public override public function getScope() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeClassInfo;
 	
-	@:overload public function getContentType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getContentType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeElementInfoImpl$RuntimePropertyImpl') @:internal extern class RuntimeElementInfoImpl_RuntimePropertyImpl extends com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl.ElementInfoImpl_PropertyImpl implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeRef
 {
-	@:overload public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
-	@:overload public function getRawType() : java.lang.reflect.Type;
+	@:overload @:public public function getRawType() : java.lang.reflect.Type;
 	
-	@:overload public function getIndividualType() : java.lang.reflect.Type;
+	@:overload @:public public function getIndividualType() : java.lang.reflect.Type;
 	
-	@:overload public function elementOnlyContent() : Bool;
+	@:overload @:public public function elementOnlyContent() : Bool;
 	
-	@:overload public function getTypes() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeRef>;
+	@:overload @:public override public function getTypes() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeRef>;
 	
-	@:overload public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement>;
+	@:overload @:public override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement>;
 	
-	@:overload public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
+	@:overload @:public override public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
 	
-	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
+	@:overload @:public public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
 	
 	
 }

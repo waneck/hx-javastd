@@ -25,21 +25,21 @@ package sun.java2d.loops;
 */
 extern class RenderCache
 {
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload @:synchronized public function get(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Dynamic;
+	@:overload @:public @:synchronized public function get(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Dynamic;
 	
-	@:overload @:synchronized public function put(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType, value : Dynamic) : Void;
+	@:overload @:public @:synchronized public function put(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType, value : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$RenderCache$Entry') @:internal extern class RenderCache_Entry
 {
-	@:overload public function new(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType, value : Dynamic) : Void;
+	@:overload @:public public function new(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType, value : Dynamic) : Void;
 	
-	@:overload public function matches(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Bool;
+	@:overload @:public public function matches(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Bool;
 	
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	
 }

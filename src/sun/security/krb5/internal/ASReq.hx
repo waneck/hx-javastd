@@ -29,11 +29,11 @@ package sun.security.krb5.internal;
 */
 extern class ASReq extends sun.security.krb5.internal.KDCReq
 {
-	@:overload public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_reqBody : sun.security.krb5.internal.KDCReqBody) : Void;
+	@:overload @:public public function new(new_pAData : java.NativeArray<sun.security.krb5.internal.PAData>, new_reqBody : sun.security.krb5.internal.KDCReqBody) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	
 }

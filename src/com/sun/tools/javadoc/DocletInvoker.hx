@@ -25,31 +25,31 @@ package com.sun.tools.javadoc;
 */
 extern class DocletInvoker
 {
-	@:overload public function new(messager : com.sun.tools.javadoc.Messager, docletClassName : String, docletPath : String, docletParentClassLoader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(messager : com.sun.tools.javadoc.Messager, docletClassName : String, docletPath : String, docletParentClassLoader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Generate documentation here.  Return true on success.
 	*/
-	@:overload public function start(root : com.sun.javadoc.RootDoc) : Bool;
+	@:overload @:public public function start(root : com.sun.javadoc.RootDoc) : Bool;
 	
 	/**
 	* Check for doclet added options here. Zero return means
 	* option not known.  Positive value indicates number of
 	* arguments to option.  Negative value means error occurred.
 	*/
-	@:overload public function optionLength(option : String) : Int;
+	@:overload @:public public function optionLength(option : String) : Int;
 	
 	/**
 	* Let doclet check that all options are OK. Returning true means
 	* options are OK.  If method does not exist, assume true.
 	*/
-	@:overload public function validOptions(optlist : com.sun.tools.javac.util.List<java.NativeArray<String>>) : Bool;
+	@:overload @:public public function validOptions(optlist : com.sun.tools.javac.util.List<java.NativeArray<String>>) : Bool;
 	
 	/**
 	* Return the language version supported by this doclet.
 	* If the method does not exist in the doclet, assume version 1.1.
 	*/
-	@:overload public function languageVersion() : com.sun.javadoc.LanguageVersion;
+	@:overload @:public public function languageVersion() : com.sun.javadoc.LanguageVersion;
 	
 	
 }

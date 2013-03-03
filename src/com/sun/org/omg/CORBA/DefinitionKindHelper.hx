@@ -32,19 +32,19 @@ package com.sun.org.omg.CORBA;
 //// This file has been manually _CHANGED_
 extern class DefinitionKindHelper
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : org.omg.CORBA.DefinitionKind) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : org.omg.CORBA.DefinitionKind) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : org.omg.CORBA.DefinitionKind;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : org.omg.CORBA.DefinitionKind;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.CORBA.DefinitionKind;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.CORBA.DefinitionKind;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.CORBA.DefinitionKind) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.CORBA.DefinitionKind) : Void;
 	
 	
 }

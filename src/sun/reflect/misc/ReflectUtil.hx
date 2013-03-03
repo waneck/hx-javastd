@@ -25,21 +25,21 @@ package sun.reflect.misc;
 */
 extern class ReflectUtil
 {
-	@:overload public static function forName(name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function forName(name : String) : Class<Dynamic>;
 	
-	@:overload public static function newInstance(cls : Class<Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function newInstance(cls : Class<Dynamic>) : Dynamic;
 	
 	/*
 	* Reflection.ensureMemberAccess is overly-restrictive
 	* due to a bug. We awkwardly work around it for now.
 	*/
-	@:overload public static function ensureMemberAccess(currentClass : Class<Dynamic>, memberClass : Class<Dynamic>, target : Dynamic, modifiers : Int) : Void;
+	@:overload @:public @:static public static function ensureMemberAccess(currentClass : Class<Dynamic>, memberClass : Class<Dynamic>, target : Dynamic, modifiers : Int) : Void;
 	
-	@:overload public static function checkPackageAccess(clazz : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function checkPackageAccess(clazz : Class<Dynamic>) : Void;
 	
-	@:overload public static function checkPackageAccess(name : String) : Void;
+	@:overload @:public @:static public static function checkPackageAccess(name : String) : Void;
 	
-	@:overload public static function isPackageAccessible(clazz : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isPackageAccessible(clazz : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns true if package access check is needed for reflective
@@ -52,7 +52,7 @@ extern class ReflectUtil
 	* attempts to access system domain classes, it requires package
 	* access check and this method will return true.
 	*/
-	@:overload public static function needsPackageAccessCheck(from : java.lang.ClassLoader, to : java.lang.ClassLoader) : Bool;
+	@:overload @:public @:static public static function needsPackageAccessCheck(from : java.lang.ClassLoader, to : java.lang.ClassLoader) : Bool;
 	
 	/**
 	* Access check on the interfaces that a proxy class implements and throw
@@ -63,9 +63,9 @@ extern class ReflectUtil
 	*
 	* @see Proxy#checkProxyAccess
 	*/
-	@:overload public static function checkProxyPackageAccess(ccl : java.lang.ClassLoader, interfaces : java.NativeArray<Class<Dynamic>>) : Void;
+	@:overload @:public @:static public static function checkProxyPackageAccess(ccl : java.lang.ClassLoader, interfaces : java.NativeArray<Class<Dynamic>>) : Void;
 	
-	public static var PROXY_PACKAGE(default, null) : String;
+	@:public @:static @:final public static var PROXY_PACKAGE(default, null) : String;
 	
 	
 }

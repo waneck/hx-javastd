@@ -25,43 +25,43 @@ package sun.security.ssl;
 */
 extern class Debug
 {
-	@:overload public static function Help() : Void;
+	@:overload @:public @:static public static function Help() : Void;
 	
 	/**
 	* Get a Debug object corresponding to whether or not the given
 	* option is set. Set the prefix to be the same as option.
 	*/
-	@:overload public static function getInstance(option : String) : sun.security.ssl.Debug;
+	@:overload @:public @:static public static function getInstance(option : String) : sun.security.ssl.Debug;
 	
 	/**
 	* Get a Debug object corresponding to whether or not the given
 	* option is set. Set the prefix to be prefix.
 	*/
-	@:overload public static function getInstance(option : String, prefix : String) : sun.security.ssl.Debug;
+	@:overload @:public @:static public static function getInstance(option : String, prefix : String) : sun.security.ssl.Debug;
 	
 	/**
 	* True if the property "javax.net.debug" contains the
 	* string "option".
 	*/
-	@:overload public static function isOn(option : String) : Bool;
+	@:overload @:public @:static public static function isOn(option : String) : Bool;
 	
 	/**
 	* print a message to stderr that is prefixed with the prefix
 	* created from the call to getInstance.
 	*/
-	@:overload public function println(message : String) : Void;
+	@:overload @:public public function println(message : String) : Void;
 	
 	/**
 	* print a blank line to stderr that is prefixed with the prefix.
 	*/
-	@:overload public function println() : Void;
+	@:overload @:public public function println() : Void;
 	
 	/**
 	* print a message to stderr that is prefixed with the prefix.
 	*/
-	@:native('println') @:overload public static function _println(prefix : String, message : String) : Void;
+	@:native('println') @:overload @:public @:static public static function _println(prefix : String, message : String) : Void;
 	
-	@:native('println') @:overload public static function _println(s : java.io.PrintStream, name : String, data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:native('println') @:overload @:public @:static public static function _println(s : java.io.PrintStream, name : String, data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

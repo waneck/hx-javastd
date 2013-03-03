@@ -130,7 +130,7 @@ extern interface Driver
 	* @throws SQLFeatureNotSupportedException if the driver does not use <code>java.util.logging<code>.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getParentLogger() : java.util.logging.Logger;
+	@:require(java7) @:overload @:public public function getParentLogger() : java.util.logging.Logger;
 	
 	
 }

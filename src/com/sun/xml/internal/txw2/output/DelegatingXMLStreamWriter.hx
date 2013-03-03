@@ -25,71 +25,71 @@ package com.sun.xml.internal.txw2.output;
 */
 @:internal extern class DelegatingXMLStreamWriter implements javax.xml.stream.XMLStreamWriter
 {
-	@:overload public function new(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writeStartElement(localName : String) : Void;
+	@:overload @:public public function writeStartElement(localName : String) : Void;
 	
-	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeEmptyElement(localName : String) : Void;
+	@:overload @:public public function writeEmptyElement(localName : String) : Void;
 	
-	@:overload public function writeEndElement() : Void;
+	@:overload @:public public function writeEndElement() : Void;
 	
-	@:overload public function writeEndDocument() : Void;
+	@:overload @:public public function writeEndDocument() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function writeAttribute(localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(localName : String, value : String) : Void;
 	
-	@:overload public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : Void;
 	
-	@:overload public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
+	@:overload @:public public function writeAttribute(namespaceURI : String, localName : String, value : String) : Void;
 	
-	@:overload public function writeNamespace(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function writeNamespace(prefix : String, namespaceURI : String) : Void;
 	
-	@:overload public function writeDefaultNamespace(namespaceURI : String) : Void;
+	@:overload @:public public function writeDefaultNamespace(namespaceURI : String) : Void;
 	
-	@:overload public function writeComment(data : String) : Void;
+	@:overload @:public public function writeComment(data : String) : Void;
 	
-	@:overload public function writeProcessingInstruction(target : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String) : Void;
 	
-	@:overload public function writeProcessingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function writeProcessingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function writeCData(data : String) : Void;
+	@:overload @:public public function writeCData(data : String) : Void;
 	
-	@:overload public function writeDTD(dtd : String) : Void;
+	@:overload @:public public function writeDTD(dtd : String) : Void;
 	
-	@:overload public function writeEntityRef(name : String) : Void;
+	@:overload @:public public function writeEntityRef(name : String) : Void;
 	
-	@:overload public function writeStartDocument() : Void;
+	@:overload @:public public function writeStartDocument() : Void;
 	
-	@:overload public function writeStartDocument(version : String) : Void;
+	@:overload @:public public function writeStartDocument(version : String) : Void;
 	
-	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload @:public public function writeStartDocument(encoding : String, version : String) : Void;
 	
-	@:overload public function writeCharacters(text : String) : Void;
+	@:overload @:public public function writeCharacters(text : String) : Void;
 	
-	@:overload public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
-	@:overload public function setPrefix(prefix : String, uri : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String, uri : String) : Void;
 	
-	@:overload public function setDefaultNamespace(uri : String) : Void;
+	@:overload @:public public function setDefaultNamespace(uri : String) : Void;
 	
-	@:overload public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(context : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class SunCertPathBuilderException extends java.security.cert.CertPathBuil
 	* Constructs a <code>SunCertPathBuilderException</code> with
 	* <code>null</code> as its detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SunCertPathBuilderException</code> with the specified
@@ -38,7 +38,7 @@ extern class SunCertPathBuilderException extends java.security.cert.CertPathBuil
 	*
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Constructs a <code>SunCertPathBuilderException</code> that wraps the
@@ -53,7 +53,7 @@ extern class SunCertPathBuilderException extends java.security.cert.CertPathBuil
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	* root cause.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>SunCertPathBuilderException</code> with the specified
@@ -62,14 +62,14 @@ extern class SunCertPathBuilderException extends java.security.cert.CertPathBuil
 	* @param msg the detail message
 	* @param cause the cause
 	*/
-	@:overload public function new(msg : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the adjacency list containing information about the build.
 	*
 	* @return the adjacency list containing information about the build
 	*/
-	@:overload public function getAdjacencyList() : sun.security.provider.certpath.AdjacencyList;
+	@:overload @:public public function getAdjacencyList() : sun.security.provider.certpath.AdjacencyList;
 	
 	
 }

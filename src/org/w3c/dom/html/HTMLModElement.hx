@@ -49,17 +49,17 @@ extern interface HTMLModElement extends org.w3c.dom.html.HTMLElement
 	*  A URI designating a document that describes the reason for the change.
 	* See the  cite attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCite() : String;
+	@:overload @:public public function getCite() : String;
 	
-	@:overload public function setCite(cite : String) : Void;
+	@:overload @:public public function setCite(cite : String) : Void;
 	
 	/**
 	*  The date and time of the change. See the  datetime attribute definition
 	*  in HTML 4.0.
 	*/
-	@:overload public function getDateTime() : String;
+	@:overload @:public public function getDateTime() : String;
 	
-	@:overload public function setDateTime(dateTime : String) : Void;
+	@:overload @:public public function setDateTime(dateTime : String) : Void;
 	
 	
 }

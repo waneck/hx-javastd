@@ -55,7 +55,7 @@ package com.sun.mirror.declaration;
 	* @return the documentation comment of this declaration, or <tt>null</tt>
 	*          if there is none
 	*/
-	@:overload @:public public function getDocComment() : String;
+	@:overload @:public @:public public function getDocComment() : String;
 	
 	/**
 	* Returns the annotations that are directly present on this declaration.
@@ -63,7 +63,7 @@ package com.sun.mirror.declaration;
 	* @return the annotations directly present on this declaration;
 	*          an empty collection if there are none
 	*/
-	@:overload @:public public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
+	@:overload @:public @:public public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
 	
 	/**
 	* Returns the annotation of this declaration having the specified
@@ -99,7 +99,7 @@ package com.sun.mirror.declaration;
 	*
 	* @see #getAnnotationMirrors()
 	*/
-	@:overload @:public public function getAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
+	@:overload @:public @:public public function getAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	
 	/**
 	* Returns the modifiers of this declaration, excluding annotations.
@@ -109,7 +109,7 @@ package com.sun.mirror.declaration;
 	* @return the modifiers of this declaration in undefined order;
 	*          an empty collection if there are none
 	*/
-	@:overload @:public public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
+	@:overload @:public @:public public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
 	
 	/**
 	* Returns the simple (unqualified) name of this declaration.
@@ -124,7 +124,7 @@ package com.sun.mirror.declaration;
 	*
 	* @return the simple name of this declaration
 	*/
-	@:overload @:public public function getSimpleName() : String;
+	@:overload @:public @:public public function getSimpleName() : String;
 	
 	/**
 	* Returns the source position of the beginning of this declaration.
@@ -137,14 +137,14 @@ package com.sun.mirror.declaration;
 	* @return the source position of the beginning of this declaration,
 	*          or null if the position is unknown or not applicable
 	*/
-	@:overload @:public public function getPosition() : com.sun.mirror.util.SourcePosition;
+	@:overload @:public @:public public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
 	/**
 	* Applies a visitor to this declaration.
 	*
 	* @param v the visitor operating on this declaration
 	*/
-	@:overload public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

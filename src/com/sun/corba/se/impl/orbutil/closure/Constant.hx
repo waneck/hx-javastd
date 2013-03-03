@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.orbutil.closure;
 */
 extern class Constant implements com.sun.corba.se.spi.orbutil.closure.Closure
 {
-	@:overload public function new(value : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic) : Void;
 	
-	@:overload public function evaluate() : Dynamic;
+	@:overload @:public public function evaluate() : Dynamic;
 	
 	
 }

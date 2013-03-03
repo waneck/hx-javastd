@@ -46,7 +46,7 @@ package sun.security.ssl;
 */
 @:native('sun$security$ssl$Handshaker$DelegatedTask') @:internal extern class Handshaker_DelegatedTask<E> implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

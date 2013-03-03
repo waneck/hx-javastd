@@ -44,7 +44,7 @@ package com.sun.jdi;
 	* <cite>The Java&trade; Virtual Machine Specification</cite>
 	* in the <code>access_flag</code> tables for classes(section 4.1), fields(section 4.5), and methods(section 4.6).
 	*/
-	@:overload @:public public function modifiers() : Int;
+	@:overload @:public @:public public function modifiers() : Int;
 	
 	/**
 	* Determines if this object mirrors a private item.
@@ -58,7 +58,7 @@ package com.sun.jdi;
 	* @return <code>true</code> for items with private access;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function isPrivate() : Bool;
+	@:overload @:public public function isPrivate() : Bool;
 	
 	/**
 	* Determines if this object mirrors a package private item.
@@ -73,7 +73,7 @@ package com.sun.jdi;
 	* @return <code>true</code> for items with package private access;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function isPackagePrivate() : Bool;
+	@:overload @:public public function isPackagePrivate() : Bool;
 	
 	/**
 	* Determines if this object mirrors a protected item.
@@ -87,7 +87,7 @@ package com.sun.jdi;
 	* @return <code>true</code> for items with private access;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function isProtected() : Bool;
+	@:overload @:public public function isProtected() : Bool;
 	
 	/**
 	* Determines if this object mirrors a public item.
@@ -101,7 +101,7 @@ package com.sun.jdi;
 	* @return <code>true</code> for items with public access;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function isPublic() : Bool;
+	@:overload @:public public function isPublic() : Bool;
 	
 	
 }

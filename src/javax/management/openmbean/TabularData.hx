@@ -33,7 +33,7 @@ extern interface TabularData
 	*
 	* @return the tabular type.
 	*/
-	@:overload public function getTabularType() : javax.management.openmbean.TabularType;
+	@:overload @:public public function getTabularType() : javax.management.openmbean.TabularType;
 	
 	/**
 	* Calculates the index that would be used in this <tt>TabularData</tt> instance to refer to the specified
@@ -53,7 +53,7 @@ extern interface TabularData
 	* @throws InvalidOpenTypeException   if <var>value</var> does not conform to this <tt>TabularData</tt> instance's
 	*                                    row type definition.
 	*/
-	@:overload public function calculateIndex(value : javax.management.openmbean.CompositeData) : java.NativeArray<Dynamic>;
+	@:overload @:public public function calculateIndex(value : javax.management.openmbean.CompositeData) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns the number of <tt>CompositeData</tt> values (ie the
@@ -62,7 +62,7 @@ extern interface TabularData
 	*
 	* @return the number of values contained.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if the number of <tt>CompositeData</tt>
@@ -71,7 +71,7 @@ extern interface TabularData
 	*
 	* @return true if this <tt>TabularData</tt> is empty.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains a <tt>CompositeData</tt> value
@@ -82,7 +82,7 @@ extern interface TabularData
 	*
 	* @return  <tt>true</tt> if this <tt>TabularData</tt> indexes a row value with the specified key.
 	*/
-	@:overload public function containsKey(key : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public public function containsKey(key : java.NativeArray<Dynamic>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains the specified
@@ -93,7 +93,7 @@ extern interface TabularData
 	*
 	* @return  <tt>true</tt> if this <tt>TabularData</tt> instance contains the specified row value.
 	*/
-	@:overload public function containsValue(value : javax.management.openmbean.CompositeData) : Bool;
+	@:overload @:public public function containsValue(value : javax.management.openmbean.CompositeData) : Bool;
 	
 	/**
 	* Returns the <tt>CompositeData</tt> value whose index is
@@ -110,7 +110,7 @@ extern interface TabularData
 	* conform to this <tt>TabularData</tt> instance's *
 	* <tt>TabularType</tt> definition
 	*/
-	@:overload public function get(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function get(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
 	
 	/**
 	* Adds <var>value</var> to this <tt>TabularData</tt> instance.
@@ -136,7 +136,7 @@ extern interface TabularData
 	*                                    this <tt>TabularData</tt> instance's <tt>TabularType</tt> definition
 	*                                    already maps to an existing value in the underlying HashMap.
 	*/
-	@:overload public function put(value : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public public function put(value : javax.management.openmbean.CompositeData) : Void;
 	
 	/**
 	* Removes the <tt>CompositeData</tt> value whose index is <var>key</var> from this <tt>TabularData</tt> instance,
@@ -153,7 +153,7 @@ extern interface TabularData
 	* @throws InvalidKeyException   if the <var>key</var> does not conform to this <tt>TabularData</tt> instance's
 	*                               <tt>TabularType</tt> definition
 	*/
-	@:overload public function remove(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function remove(key : java.NativeArray<Dynamic>) : javax.management.openmbean.CompositeData;
 	
 	/**
 	* Add all the elements in <var>values</var> to this <tt>TabularData</tt> instance.
@@ -173,12 +173,12 @@ extern interface TabularData
 	*                                    already maps to an existing value in this instance,
 	*                                    or two elements of <var>values</var> have the same index.
 	*/
-	@:overload public function putAll(values : java.NativeArray<javax.management.openmbean.CompositeData>) : Void;
+	@:overload @:public public function putAll(values : java.NativeArray<javax.management.openmbean.CompositeData>) : Void;
 	
 	/**
 	* Removes all <tt>CompositeData</tt> values (ie rows) from this <tt>TabularData</tt> instance.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns a set view of the keys (ie the index values) of the
@@ -191,7 +191,7 @@ extern interface TabularData
 	* @return a set view ({@code Set<List<?>>}) of the index values
 	* used in this {@code TabularData} instance.
 	*/
-	@:overload public function keySet() : java.util.Set<Dynamic>;
+	@:overload @:public public function keySet() : java.util.Set<Dynamic>;
 	
 	/**
 	* Returns a collection view of the {@code CompositeData} values
@@ -203,7 +203,7 @@ extern interface TabularData
 	* @return a collection view ({@code Collection<CompositeData>})
 	* of the rows contained in this {@code TabularData} instance.
 	*/
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	
 }

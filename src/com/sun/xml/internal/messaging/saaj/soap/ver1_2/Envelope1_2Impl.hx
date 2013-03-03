@@ -29,37 +29,37 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class Envelope1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.EnvelopeImpl
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String, createHeader : Bool, createBody : Bool) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String, createHeader : Bool, createBody : Bool) : Void;
 	
-	@:overload private function getBodyName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getBodyName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload private function getHeaderName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload @:protected override private function getHeaderName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/*
 	* Override setEncodingStyle of ElementImpl to restrict adding encodingStyle
 	* attribute to SOAP Envelope (SOAP 1.2 spec, part 1, section 5.1.1)
 	*/
-	@:overload override public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public override public function setEncodingStyle(encodingStyle : String) : Void;
 	
 	/*
 	* Override addAttribute of ElementImpl to restrict adding encodingStyle
 	* attribute to SOAP Envelope (SOAP 1.2 spec, part 1, section 5.1.1)
 	*/
-	@:overload override public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function addAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	/*
 	* Override addChildElement method to ensure that no element
 	* is added after body in SOAP 1.2.
 	*/
-	@:overload override public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function addChildElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addChildElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/*
 	* Ideally we should be overriding other addChildElement() methods as well
@@ -69,7 +69,7 @@ extern class Envelope1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.im
 	* all the rest of them as well.
 	*
 	*/
-	@:overload override public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
+	@:overload @:public override public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
 	
 }

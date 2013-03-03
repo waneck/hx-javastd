@@ -28,7 +28,7 @@ package com.sun.crypto.provider;
 	/*
 	* Returns a formatted string describing the parameters.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

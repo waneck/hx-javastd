@@ -47,7 +47,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @param scansize the distance from one row of pixels to the next in
 	* the array
 	*/
-	@:overload public function new(img : java.awt.Image, x : Int, y : Int, w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function new(img : java.awt.Image, x : Int, y : Int, w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Create a PixelGrabber object to grab the (x, y, w, h) rectangular
@@ -73,7 +73,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* the array
 	* @see ColorModel#getRGBdefault
 	*/
-	@:overload public function new(ip : java.awt.image.ImageProducer, x : Int, y : Int, w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public public function new(ip : java.awt.image.ImageProducer, x : Int, y : Int, w : Int, h : Int, pix : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Create a PixelGrabber object to grab the (x, y, w, h) rectangular
@@ -97,17 +97,17 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @param forceRGB true if the pixels should always be converted to
 	* the default RGB ColorModel
 	*/
-	@:overload public function new(img : java.awt.Image, x : Int, y : Int, w : Int, h : Int, forceRGB : Bool) : Void;
+	@:overload @:public public function new(img : java.awt.Image, x : Int, y : Int, w : Int, h : Int, forceRGB : Bool) : Void;
 	
 	/**
 	* Request the PixelGrabber to start fetching the pixels.
 	*/
-	@:overload @:synchronized public function startGrabbing() : Void;
+	@:overload @:public @:synchronized public function startGrabbing() : Void;
 	
 	/**
 	* Request the PixelGrabber to abort the image fetch.
 	*/
-	@:overload @:synchronized public function abortGrabbing() : Void;
+	@:overload @:public @:synchronized public function abortGrabbing() : Void;
 	
 	/**
 	* Request the Image or ImageProducer to start delivering pixels and
@@ -118,7 +118,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @exception InterruptedException
 	*            Another thread has interrupted this thread.
 	*/
-	@:overload public function grabPixels() : Bool;
+	@:overload @:public public function grabPixels() : Bool;
 	
 	/**
 	* Request the Image or ImageProducer to start delivering pixels and
@@ -140,7 +140,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @exception InterruptedException
 	*            Another thread has interrupted this thread.
 	*/
-	@:overload @:synchronized public function grabPixels(ms : haxe.Int64) : Bool;
+	@:overload @:public @:synchronized public function grabPixels(ms : haxe.Int64) : Bool;
 	
 	/**
 	* Return the status of the pixels.  The ImageObserver flags
@@ -148,7 +148,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @return the bitwise OR of all relevant ImageObserver flags
 	* @see ImageObserver
 	*/
-	@:overload @:synchronized public function getStatus() : Int;
+	@:overload @:public @:synchronized public function getStatus() : Int;
 	
 	/**
 	* Get the width of the pixel buffer (after adjusting for image width).
@@ -159,7 +159,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* is not yet known
 	* @see #getStatus
 	*/
-	@:overload @:synchronized public function getWidth() : Int;
+	@:overload @:public @:synchronized public function getWidth() : Int;
 	
 	/**
 	* Get the height of the pixel buffer (after adjusting for image height).
@@ -170,7 +170,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* is not yet known
 	* @see #getStatus
 	*/
-	@:overload @:synchronized public function getHeight() : Int;
+	@:overload @:public @:synchronized public function getHeight() : Int;
 	
 	/**
 	* Get the pixel buffer.  If the PixelGrabber was not constructed
@@ -187,7 +187,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @see #setPixels(int, int, int, int, ColorModel, byte[], int, int)
 	* @see #setPixels(int, int, int, int, ColorModel, int[], int, int)
 	*/
-	@:overload @:synchronized public function getPixels() : Dynamic;
+	@:overload @:public @:synchronized public function getPixels() : Dynamic;
 	
 	/**
 	* Get the ColorModel for the pixels stored in the array.  If the
@@ -206,7 +206,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @see ColorModel#getRGBdefault
 	* @see #setColorModel(ColorModel)
 	*/
-	@:overload @:synchronized public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public @:synchronized public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* The setDimensions method is part of the ImageConsumer API which
@@ -220,7 +220,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @param width the width of the dimension
 	* @param height the height of the dimension
 	*/
-	@:overload public function setDimensions(width : Int, height : Int) : Void;
+	@:overload @:public public function setDimensions(width : Int, height : Int) : Void;
 	
 	/**
 	* The setHints method is part of the ImageConsumer API which
@@ -233,7 +233,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* with retrieving the requested pixels.
 	* @param hints a set of hints used to process the pixels
 	*/
-	@:overload public function setHints(hints : Int) : Void;
+	@:overload @:public public function setHints(hints : Int) : Void;
 	
 	/**
 	* The setProperties method is part of the ImageConsumer API which
@@ -246,7 +246,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* with retrieving the requested pixels.
 	* @param props the list of properties
 	*/
-	@:overload public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* The setColorModel method is part of the ImageConsumer API which
@@ -260,7 +260,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @param model the specified <code>ColorModel</code>
 	* @see #getColorModel
 	*/
-	@:overload public function setColorModel(model : java.awt.image.ColorModel) : Void;
+	@:overload @:public public function setColorModel(model : java.awt.image.ColorModel) : Void;
 	
 	/**
 	* The setPixels method is part of the ImageConsumer API which
@@ -284,7 +284,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	*        in the pixels array
 	* @see #getPixels
 	*/
-	@:overload public function setPixels(srcX : Int, srcY : Int, srcW : Int, srcH : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, srcOff : Int, srcScan : Int) : Void;
+	@:overload @:public public function setPixels(srcX : Int, srcY : Int, srcW : Int, srcH : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, srcOff : Int, srcScan : Int) : Void;
 	
 	/**
 	* The setPixels method is part of the ImageConsumer API which
@@ -308,7 +308,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	*        in the pixels array
 	* @see #getPixels
 	*/
-	@:overload public function setPixels(srcX : Int, srcY : Int, srcW : Int, srcH : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, srcOff : Int, srcScan : Int) : Void;
+	@:overload @:public public function setPixels(srcX : Int, srcY : Int, srcW : Int, srcH : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, srcOff : Int, srcScan : Int) : Void;
 	
 	/**
 	* The imageComplete method is part of the ImageConsumer API which
@@ -321,7 +321,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* with retrieving the requested pixels.
 	* @param status the status of image loading
 	*/
-	@:overload @:synchronized public function imageComplete(status : Int) : Void;
+	@:overload @:public @:synchronized public function imageComplete(status : Int) : Void;
 	
 	/**
 	* Returns the status of the pixels.  The ImageObserver flags
@@ -335,7 +335,7 @@ extern class PixelGrabber implements java.awt.image.ImageConsumer
 	* @see ImageObserver
 	* @see #getStatus()
 	*/
-	@:overload @:synchronized public function status() : Int;
+	@:overload @:public @:synchronized public function status() : Int;
 	
 	
 }

@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.orbutil.graph;
 */
 extern class GraphImpl extends java.util.AbstractSet<Dynamic> implements com.sun.corba.se.impl.orbutil.graph.Graph
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(coll : java.util.Collection<Dynamic>) : Void;
-	
-	/***********************************************************************************/
-	@:overload public function add(obj : Dynamic) : Bool;
-	
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
-	
-	@:overload public function size() : Int;
+	@:overload @:public public function new(coll : java.util.Collection<Dynamic>) : Void;
 	
 	/***********************************************************************************/
-	@:overload public function getNodeData(node : com.sun.corba.se.impl.orbutil.graph.Node) : com.sun.corba.se.impl.orbutil.graph.NodeData;
+	@:overload @:public override public function add(obj : Dynamic) : Bool;
 	
-	@:overload public function getRoots() : java.util.Set<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
+	
+	@:overload @:public override public function size() : Int;
+	
+	/***********************************************************************************/
+	@:overload @:public public function getNodeData(node : com.sun.corba.se.impl.orbutil.graph.Node) : com.sun.corba.se.impl.orbutil.graph.NodeData;
+	
+	@:overload @:public public function getRoots() : java.util.Set<Dynamic>;
 	
 	
 }

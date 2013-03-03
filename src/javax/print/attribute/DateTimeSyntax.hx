@@ -34,14 +34,14 @@ extern class DateTimeSyntax implements java.io.Serializable implements java.lang
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>theValue</CODE> is null.
 	*/
-	@:overload private function new(value : java.util.Date) : Void;
+	@:overload @:protected private function new(value : java.util.Date) : Void;
 	
 	/**
 	* Returns this date-time attribute's <code>java.util.Date</code>
 	* value.
 	* @return the Date.
 	*/
-	@:overload public function getValue() : java.util.Date;
+	@:overload @:public public function getValue() : java.util.Date;
 	
 	/**
 	* Returns whether this date-time attribute is equivalent to the passed in
@@ -61,13 +61,13 @@ extern class DateTimeSyntax implements java.io.Serializable implements java.lang
 	* @return  True if <CODE>object</CODE> is equivalent to this date-time
 	*          attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this date-time attribute. The hashcode is
 	* that of this attribute's <code>java.util.Date</code> value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string value corresponding to this date-time attribute.
@@ -75,7 +75,7 @@ extern class DateTimeSyntax implements java.io.Serializable implements java.lang
 	* <code>java.util.Date</code>  value
 	* converted to a string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -36,7 +36,7 @@ extern interface VM_TRUNCATABLE
 	/** The value representing a truncatable value type in
 	* a typecode.
 	*/
-	public var value(default, null) : java.StdTypes.Int16;
+	@:final public var value(default, null) : java.StdTypes.Int16;
 	
 	
 }

@@ -38,7 +38,7 @@ package java.lang;
 	* Constructs an IllegalStateException with no detail message.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an IllegalStateException with the specified detail
@@ -47,7 +47,7 @@ package java.lang;
 	*
 	* @param s the String that contains a detailed message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a new exception with the specified detail message and
@@ -65,7 +65,7 @@ package java.lang;
 	*         unknown.)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new exception with the specified cause and a detail
@@ -81,7 +81,7 @@ package java.lang;
 	*         unknown.)
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java5) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

@@ -25,21 +25,21 @@ package com.sun.tools.internal.ws.resources;
 */
 extern class ConfigurationMessages
 {
-	@:overload public static function localizableCONFIGURATION_INVALID_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableCONFIGURATION_INVALID_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* invalid element "{2}" in file "{0}" (line {1})
 	*
 	*/
-	@:overload public static function CONFIGURATION_INVALID_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public @:static public static function CONFIGURATION_INVALID_ELEMENT(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public static function localizableCONFIGURATION_NOT_BINDING_FILE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableCONFIGURATION_NOT_BINDING_FILE(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Ignoring: binding file ""{0}". It is not a jaxws or a jaxb binding file.
 	*
 	*/
-	@:overload public static function CONFIGURATION_NOT_BINDING_FILE(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function CONFIGURATION_NOT_BINDING_FILE(arg0 : Dynamic) : String;
 	
 	
 }

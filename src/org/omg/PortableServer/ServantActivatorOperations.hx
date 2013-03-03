@@ -28,7 +28,7 @@ extern interface ServantActivatorOperations extends org.omg.PortableServer.Serva
 		 *            requests to the object denoted in the 
 		 *            forward_reference member of the exception.
 		 */
-	@:overload public function incarnate(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA) : org.omg.PortableServer.Servant;
+	@:overload @:public public function incarnate(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA) : org.omg.PortableServer.Servant;
 	
 	/**
 		 * This operation is invoked whenever a servant for 
@@ -51,7 +51,7 @@ extern interface ServantActivatorOperations extends org.omg.PortableServer.Serva
 		 *        until all invocations in progress have
 		 *        completed.
 		 */
-	@:overload public function etherealize(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, serv : org.omg.PortableServer.Servant, cleanup_in_progress : Bool, remaining_activations : Bool) : Void;
+	@:overload @:public public function etherealize(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, serv : org.omg.PortableServer.Servant, cleanup_in_progress : Bool, remaining_activations : Bool) : Void;
 	
 	
 }

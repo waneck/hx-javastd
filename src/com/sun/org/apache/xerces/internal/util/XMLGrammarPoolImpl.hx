@@ -21,20 +21,20 @@ package com.sun.org.apache.xerces.internal.util;
 extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool
 {
 	/** Default size. */
-	private static var TABLE_SIZE(default, null) : Int;
+	@:protected @:static @:final private static var TABLE_SIZE(default, null) : Int;
 	
 	/** Grammars. */
-	private var fGrammars : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry>;
+	@:protected private var fGrammars : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry>;
 	
-	private var fPoolIsLocked : Bool;
+	@:protected private var fPoolIsLocked : Bool;
 	
-	private var fGrammarCount : Int;
+	@:protected private var fGrammarCount : Int;
 	
 	/** Constructs a grammar pool with a default number of buckets. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs a grammar pool with a specified number of buckets. */
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/* <p> Retrieve the initial known set of grammars. This method is
 	* called by a validator before the validation starts. The application
@@ -46,7 +46,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	*                    interface.
 	* @return            The set of grammars the validator may put in its "bucket"
 	*/
-	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload @:public public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	/* <p> Return the final set of grammars that the validator ended up
 	* with. This method is called after the validation finishes. The
@@ -59,7 +59,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	* @param grammars    An array containing the set of grammars being
 	*                    returned; order is not significant.
 	*/
-	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload @:public public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
 	/* <p> This method requests that the application retrieve a grammar
 	* corresponding to the given GrammarIdentifier from its cache.
@@ -75,7 +75,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	* @return     The Grammar corresponding to this description or null if
 	*             no such Grammar is known.
 	*/
-	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Puts the specified grammar into the grammar pool and associates it to
@@ -83,7 +83,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param grammar The Grammar.
 	*/
-	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar) : Void;
+	@:overload @:public public function putGrammar(grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar) : Void;
 	
 	/**
 	* Returns the grammar associated to the specified grammar description.
@@ -92,7 +92,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param desc The Grammar Description.
 	*/
-	@:overload public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Removes the grammar associated to the specified grammar description from the
@@ -103,7 +103,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	* @param desc The Grammar Description.
 	* @return     The removed grammar.
 	*/
-	@:overload public function removeGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function removeGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Returns true if the grammar pool contains a grammar associated
@@ -113,24 +113,24 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param desc The Grammar Description.
 	*/
-	@:overload public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
+	@:overload @:public public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
 	
 	/* <p> Sets this grammar pool to a "locked" state--i.e.,
 	* no new grammars will be added until it is "unlocked".
 	*/
-	@:overload public function lockPool() : Void;
+	@:overload @:public public function lockPool() : Void;
 	
 	/* <p> Sets this grammar pool to an "unlocked" state--i.e.,
 	* new grammars will be added when putGrammar or cacheGrammars
 	* are called.
 	*/
-	@:overload public function unlockPool() : Void;
+	@:overload @:public public function unlockPool() : Void;
 	
 	/*
 	* <p>This method clears the pool-i.e., removes references
 	* to all the grammars in it.</p>
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* This method checks whether two grammars are the same. Currently, we compare
@@ -141,7 +141,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	* @param desc2 The grammar description of the grammar to be compared to
 	* @return      True if the grammars are equal, otherwise false
 	*/
-	@:overload public function equals(desc1 : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, desc2 : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
+	@:overload @:public public function equals(desc1 : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, desc2 : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
 	
 	/**
 	* Returns the hash code value for the given grammar description.
@@ -149,7 +149,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	* @param desc The grammar description
 	* @return     The hash code value
 	*/
-	@:overload public function hashCode(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Int;
+	@:overload @:public public function hashCode(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Int;
 	
 	
 }
@@ -159,17 +159,17 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 */
 @:native('com$sun$org$apache$xerces$internal$util$XMLGrammarPoolImpl$Entry') extern class XMLGrammarPoolImpl_Entry
 {
-	public var hash : Int;
+	@:public public var hash : Int;
 	
-	public var desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
+	@:public public var desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
 	
-	public var grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:public public var grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	public var next : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry;
+	@:public public var next : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry;
 	
-	@:overload private function new(hash : Int, desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, next : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry) : Void;
+	@:overload @:protected private function new(hash : Int, desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, next : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry) : Void;
 	
-	@:overload private function clear() : Void;
+	@:overload @:protected private function clear() : Void;
 	
 	
 }

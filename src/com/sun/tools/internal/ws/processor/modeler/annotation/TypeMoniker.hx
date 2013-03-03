@@ -29,7 +29,7 @@ extern interface TypeMoniker
 	*
 	* @author  dkohlert
 	*/
-	@:overload public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function create(apEnv : com.sun.mirror.apt.AnnotationProcessorEnvironment) : com.sun.mirror.type.TypeMirror;
 	
 	
 }

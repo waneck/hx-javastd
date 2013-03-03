@@ -20,29 +20,29 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 */
 extern class SchemaDOM extends com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultDocument
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int, offset : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int, offset : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
 	
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int, offset : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
+	@:overload @:public public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int, offset : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
 	
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
 	
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
+	@:overload @:public public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, line : Int, column : Int) : com.sun.org.apache.xerces.internal.impl.xs.opti.ElementImpl;
 	
-	@:overload public function endElement() : Void;
+	@:overload @:public public function endElement() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function printDOM() : Void;
+	@:overload @:public public function printDOM() : Void;
 	
-	@:overload public static function traverse(node : org.w3c.dom.Node, depth : Int) : Void;
+	@:overload @:public @:static public static function traverse(node : org.w3c.dom.Node, depth : Int) : Void;
 	
-	@:overload public static function indent(amount : Int) : Void;
+	@:overload @:public @:static public static function indent(amount : Int) : Void;
 	
-	@:overload override public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload @:public override public function getDocumentElement() : org.w3c.dom.Element;
 	
-	@:overload override public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public override public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	
 }

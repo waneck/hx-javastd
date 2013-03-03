@@ -26,27 +26,27 @@ package com.sun.tools.internal.xjc.model;
 extern class CEnumConstant implements com.sun.xml.internal.bind.v2.model.core.EnumConstant<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass> implements com.sun.tools.internal.xjc.model.CCustomizable
 {
 	/** Name of the constant. */
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
 	/** Javadoc comment. Can be null. */
-	public var javadoc(default, null) : String;
+	@:public @:final public var javadoc(default, null) : String;
 	
 	/**
 	* @param name
 	*/
-	@:overload public function new(name : String, javadoc : String, lexical : String, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(name : String, javadoc : String, lexical : String, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function getEnclosingClass() : com.sun.tools.internal.xjc.model.CEnumLeafInfo;
+	@:overload @:public public function getEnclosingClass() : com.sun.tools.internal.xjc.model.CEnumLeafInfo;
 	
-	@:overload public function getLexicalValue() : String;
+	@:overload @:public public function getLexicalValue() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
 	
-	@:overload public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

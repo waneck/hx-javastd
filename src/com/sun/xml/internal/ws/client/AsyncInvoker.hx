@@ -29,13 +29,13 @@ extern class AsyncInvoker implements java.lang.Runnable
 	* Because of the object instantiation order,
 	* we can't take this as a constructor parameter.
 	*/
-	private var responseImpl : com.sun.xml.internal.ws.client.AsyncResponseImpl<Dynamic>;
+	@:protected private var responseImpl : com.sun.xml.internal.ws.client.AsyncResponseImpl<Dynamic>;
 	
-	@:overload public function setReceiver(responseImpl : com.sun.xml.internal.ws.client.AsyncResponseImpl<Dynamic>) : Void;
+	@:overload @:public public function setReceiver(responseImpl : com.sun.xml.internal.ws.client.AsyncResponseImpl<Dynamic>) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload @:abstract public function do_run() : Void;
+	@:overload @:public @:abstract public function do_run() : Void;
 	
 	
 }

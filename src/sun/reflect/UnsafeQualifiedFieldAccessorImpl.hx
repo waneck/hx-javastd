@@ -35,7 +35,7 @@ package sun.reflect;
 	* underlying reordering rules and memory barriers, but preserve
 	* correctness.)
 	*/
-	private var isReadOnly(default, null) : Bool;
+	@:protected @:final private var isReadOnly(default, null) : Bool;
 	
 	
 }

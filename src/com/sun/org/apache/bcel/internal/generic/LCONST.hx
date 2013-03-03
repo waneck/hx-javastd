@@ -65,13 +65,13 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class LCONST extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.ConstantPushInstruction implements com.sun.org.apache.bcel.internal.generic.TypedInstruction
 {
-	@:overload public function new(l : haxe.Int64) : Void;
+	@:overload @:public public function new(l : haxe.Int64) : Void;
 	
-	@:overload public function getValue() : java.lang.Number;
+	@:overload @:public public function getValue() : java.lang.Number;
 	
 	/** @return Type.LONG
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -81,7 +81,7 @@ extern class LCONST extends com.sun.org.apache.bcel.internal.generic.Instruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

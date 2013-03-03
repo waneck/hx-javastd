@@ -29,11 +29,11 @@ package sun.security.krb5.internal;
 */
 extern class AuthorizationData implements java.lang.Cloneable
 {
-	@:overload public function new(new_entries : java.NativeArray<sun.security.krb5.internal.AuthorizationDataEntry>) : Void;
+	@:overload @:public public function new(new_entries : java.NativeArray<sun.security.krb5.internal.AuthorizationDataEntry>) : Void;
 	
-	@:overload public function new(new_entry : sun.security.krb5.internal.AuthorizationDataEntry) : Void;
+	@:overload @:public public function new(new_entry : sun.security.krb5.internal.AuthorizationDataEntry) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Constructs a new <code>AuthorizationData,</code> instance.
@@ -41,7 +41,7 @@ extern class AuthorizationData implements java.lang.Cloneable
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(der : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(der : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an <code>AuthorizationData</code> object.
@@ -49,7 +49,7 @@ extern class AuthorizationData implements java.lang.Cloneable
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Parse (unmarshal) an <code>AuthorizationData</code> object from a DER input stream.
@@ -64,7 +64,7 @@ extern class AuthorizationData implements java.lang.Cloneable
 	* @return an instance of AuthorizationData.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.AuthorizationData;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.AuthorizationData;
 	
 	/**
 	* Writes <code>AuthorizationData</code> data fields to a output stream.
@@ -72,13 +72,13 @@ extern class AuthorizationData implements java.lang.Cloneable
 	* @param cos a <code>CCacheOutputStream</code> to be written to.
 	* @exception IOException if an I/O exception occurs.
 	*/
-	@:overload public function writeAuth(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
+	@:overload @:public public function writeAuth(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function count() : Int;
+	@:overload @:public public function count() : Int;
 	
-	@:overload public function item(i : Int) : sun.security.krb5.internal.AuthorizationDataEntry;
+	@:overload @:public public function item(i : Int) : sun.security.krb5.internal.AuthorizationDataEntry;
 	
 	
 }

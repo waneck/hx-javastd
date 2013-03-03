@@ -25,13 +25,13 @@ package com.sun.org.apache.xerces.internal.impl.xs.util;
 */
 extern class XInt
 {
-	@:overload @:final public function intValue() : Int;
+	@:overload @:public @:final public function intValue() : Int;
 	
-	@:overload @:final public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public @:final public function shortValue() : java.StdTypes.Int16;
 	
-	@:overload @:final public function equals(compareVal : com.sun.org.apache.xerces.internal.impl.xs.util.XInt) : Bool;
+	@:overload @:public @:final public function equals(compareVal : com.sun.org.apache.xerces.internal.impl.xs.util.XInt) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -55,7 +55,7 @@ package java.lang.ref;
 	*
 	* @return  <code>null</code>
 	*/
-	@:overload override public function get() : T;
+	@:overload @:public override public function get() : T;
 	
 	/**
 	* Creates a new phantom reference that refers to the given object and
@@ -70,7 +70,7 @@ package java.lang.ref;
 	* @param q the queue with which the reference is to be registered,
 	*          or <tt>null</tt> if registration is not required
 	*/
-	@:overload public function new(referent : T, q : java.lang.ref.ReferenceQueue<T>) : Void;
+	@:overload @:public public function new(referent : T, q : java.lang.ref.ReferenceQueue<T>) : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 */
 extern class TreeException extends java.lang.RuntimeException
 {
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

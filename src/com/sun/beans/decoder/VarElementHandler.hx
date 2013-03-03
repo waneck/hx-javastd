@@ -56,14 +56,14 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Returns the value of this element.
 	*
 	* @return the value of this element
 	*/
-	@:overload override private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected override private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	
 }

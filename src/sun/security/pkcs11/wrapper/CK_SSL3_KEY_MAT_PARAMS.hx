@@ -70,7 +70,7 @@ extern class CK_SSL3_KEY_MAT_PARAMS
 	*   CK_ULONG ulMacSizeInBits;
 	* </PRE>
 	*/
-	public var ulMacSizeInBits : haxe.Int64;
+	@:public public var ulMacSizeInBits : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -78,7 +78,7 @@ extern class CK_SSL3_KEY_MAT_PARAMS
 	*   CK_ULONG ulKeySizeInBits;
 	* </PRE>
 	*/
-	public var ulKeySizeInBits : haxe.Int64;
+	@:public public var ulKeySizeInBits : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -86,7 +86,7 @@ extern class CK_SSL3_KEY_MAT_PARAMS
 	*   CK_ULONG ulIVSizeInBits;
 	* </PRE>
 	*/
-	public var ulIVSizeInBits : haxe.Int64;
+	@:public public var ulIVSizeInBits : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -94,7 +94,7 @@ extern class CK_SSL3_KEY_MAT_PARAMS
 	*   CK_BBOOL bIsExport;
 	* </PRE>
 	*/
-	public var bIsExport : Bool;
+	@:public public var bIsExport : Bool;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -102,7 +102,7 @@ extern class CK_SSL3_KEY_MAT_PARAMS
 	*   CK_SSL3_RANDOM_DATA RandomInfo;
 	* </PRE>
 	*/
-	public var RandomInfo : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA;
+	@:public public var RandomInfo : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -110,16 +110,16 @@ extern class CK_SSL3_KEY_MAT_PARAMS
 	*   CK_SSL3_KEY_MAT_OUT_PTR pReturnedKeyMaterial;
 	* </PRE>
 	*/
-	public var pReturnedKeyMaterial : sun.security.pkcs11.wrapper.CK_SSL3_KEY_MAT_OUT;
+	@:public public var pReturnedKeyMaterial : sun.security.pkcs11.wrapper.CK_SSL3_KEY_MAT_OUT;
 	
-	@:overload public function new(macSize : Int, keySize : Int, ivSize : Int, export : Bool, random : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA) : Void;
+	@:overload @:public public function new(macSize : Int, keySize : Int, ivSize : Int, export : Bool, random : sun.security.pkcs11.wrapper.CK_SSL3_RANDOM_DATA) : Void;
 	
 	/**
 	* Returns the string representation of CK_SSL3_KEY_MAT_PARAMS.
 	*
 	* @return the string representation of CK_SSL3_KEY_MAT_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

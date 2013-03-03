@@ -25,11 +25,11 @@ package sun.misc;
 */
 extern class CompoundEnumeration<E> implements java.util.Enumeration<E>
 {
-	@:overload public function new(enums : java.NativeArray<java.util.Enumeration<Dynamic>>) : Void;
+	@:overload @:public public function new(enums : java.NativeArray<java.util.Enumeration<Dynamic>>) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : E;
+	@:overload @:public public function nextElement() : E;
 	
 	
 }

@@ -39,7 +39,7 @@ extern interface MulticastChannel extends java.nio.channels.NetworkChannel
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Joins a multicast group to begin receiving all datagrams sent to the group,
@@ -80,7 +80,7 @@ extern interface MulticastChannel extends java.nio.channels.NetworkChannel
 	*          {@link SecurityManager#checkMulticast(InetAddress) checkMulticast}
 	*          method denies access to the multiast group
 	*/
-	@:overload public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface) : java.nio.channels.MembershipKey;
+	@:overload @:public public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface) : java.nio.channels.MembershipKey;
 	
 	/**
 	* Joins a multicast group to begin receiving datagrams sent to the group
@@ -127,7 +127,7 @@ extern interface MulticastChannel extends java.nio.channels.NetworkChannel
 	*          {@link SecurityManager#checkMulticast(InetAddress) checkMulticast}
 	*          method denies access to the multiast group
 	*/
-	@:overload public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface, source : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload @:public public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface, source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	
 }

@@ -55,7 +55,7 @@ extern class FileLocator
 	* @exception java.io.IOException The requested class file
 	* could not be opened.
 	*/
-	@:overload public static function locateClassFile(classFileName : String) : java.io.DataInputStream;
+	@:overload @:public @:static public static function locateClassFile(classFileName : String) : java.io.DataInputStream;
 	
 	/**
 	* locateLocaleSpecificFileInClassPath returns a DataInputStream that
@@ -89,7 +89,7 @@ extern class FileLocator
 	* @exception java.io.IOException The requested class file
 	* could not be opened.
 	*/
-	@:overload public static function locateLocaleSpecificFileInClassPath(fileName : String) : java.io.DataInputStream;
+	@:overload @:public @:static public static function locateLocaleSpecificFileInClassPath(fileName : String) : java.io.DataInputStream;
 	
 	/**
 	* locateFileInClassPath returns a DataInputStream that can be used
@@ -106,7 +106,7 @@ extern class FileLocator
 	* @exception java.io.IOException The requested class file
 	* could not be opened.
 	*/
-	@:overload public static function locateFileInClassPath(fileName : String) : java.io.DataInputStream;
+	@:overload @:public @:static public static function locateFileInClassPath(fileName : String) : java.io.DataInputStream;
 	
 	/**
 	* Returns the fully qualified file name associated with the passed
@@ -114,7 +114,7 @@ extern class FileLocator
 	* of the static locate methods supplied with this class</i>, otherwise
 	* returns a zero length string.
 	*/
-	@:overload public static function getFileNameFromStream(ds : java.io.DataInputStream) : String;
+	@:overload @:public @:static public static function getFileNameFromStream(ds : java.io.DataInputStream) : String;
 	
 	/**
 	* Returns an indication of whether the passed DataInputStream is
@@ -122,7 +122,7 @@ extern class FileLocator
 	* created using one of the static locate methods supplied with this
 	* class</i>, otherwise returns false.
 	*/
-	@:overload public static function isZipFileAssociatedWithStream(ds : java.io.DataInputStream) : Bool;
+	@:overload @:public @:static public static function isZipFileAssociatedWithStream(ds : java.io.DataInputStream) : Bool;
 	
 	
 }
@@ -131,15 +131,15 @@ extern class FileLocator
 	/**
 	* The name of the file associated with the DataInputStream.
 	*/
-	public var fullyQualifiedFileName : String;
+	@:public public var fullyQualifiedFileName : String;
 	
 	/**
 	* Indicates whether or not the file is contained in a .zip file.
 	*/
-	public var inZipFile : Bool;
+	@:public public var inZipFile : Bool;
 	
 	/* Constructors */
-	@:overload private function new(_in : java.io.InputStream, fullyQualifiedName : String, inZipFile : Bool) : Void;
+	@:overload @:protected private function new(_in : java.io.InputStream, fullyQualifiedName : String, inZipFile : Bool) : Void;
 	
 	
 }

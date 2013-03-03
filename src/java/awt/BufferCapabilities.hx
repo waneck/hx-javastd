@@ -44,18 +44,18 @@ package java.awt;
 	* @exception IllegalArgumentException if frontCaps or backCaps are
 	* <code>null</code>
 	*/
-	@:overload public function new(frontCaps : java.awt.ImageCapabilities, backCaps : java.awt.ImageCapabilities, flipContents : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
+	@:overload @:public public function new(frontCaps : java.awt.ImageCapabilities, backCaps : java.awt.ImageCapabilities, flipContents : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
 	/**
 	* @return the image capabilities of the front (displayed) buffer
 	*/
-	@:overload public function getFrontBufferCapabilities() : java.awt.ImageCapabilities;
+	@:overload @:public public function getFrontBufferCapabilities() : java.awt.ImageCapabilities;
 	
 	/**
 	* @return the image capabilities of all back buffers (intermediate buffers
 	* are considered back buffers)
 	*/
-	@:overload public function getBackBufferCapabilities() : java.awt.ImageCapabilities;
+	@:overload @:public public function getBackBufferCapabilities() : java.awt.ImageCapabilities;
 	
 	/**
 	* @return whether or not the buffer strategy uses page flipping; a set of
@@ -67,7 +67,7 @@ package java.awt;
 	* another; when this is the case, <code>getFlipContents</code> returns
 	* <code>null</code>
 	*/
-	@:overload public function isPageFlipping() : Bool;
+	@:overload @:public public function isPageFlipping() : Bool;
 	
 	/**
 	* @return the resulting contents of the back buffer after page-flipping.
@@ -83,7 +83,7 @@ package java.awt;
 	* @see FlipContents#PRIOR
 	* @see FlipContents#COPIED
 	*/
-	@:overload public function getFlipContents() : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
+	@:overload @:public public function getFlipContents() : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* @return whether page flipping is only available in full-screen mode.  If this
@@ -92,7 +92,7 @@ package java.awt;
 	* @see #isPageFlipping
 	* @see GraphicsDevice#setFullScreenWindow
 	*/
-	@:overload public function isFullScreenRequired() : Bool;
+	@:overload @:public public function isFullScreenRequired() : Bool;
 	
 	/**
 	* @return whether or not
@@ -100,12 +100,12 @@ package java.awt;
 	* intermediate buffers as well as the front and back buffer).
 	* @see #isPageFlipping
 	*/
-	@:overload public function isMultiBufferAvailable() : Bool;
+	@:overload @:public public function isMultiBufferAvailable() : Bool;
 	
 	/**
 	* @return a copy of this BufferCapabilities object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -125,7 +125,7 @@ package java.awt;
 	* @see #PRIOR
 	* @see #COPIED
 	*/
-	public static var UNDEFINED(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
+	@:public @:static @:final public static var UNDEFINED(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* When flip contents are <code>BACKGROUND</code>, the
@@ -137,7 +137,7 @@ package java.awt;
 	* @see #PRIOR
 	* @see #COPIED
 	*/
-	public static var BACKGROUND(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
+	@:public @:static @:final public static var BACKGROUND(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* When flip contents are <code>PRIOR</code>, the
@@ -149,7 +149,7 @@ package java.awt;
 	* @see #BACKGROUND
 	* @see #COPIED
 	*/
-	public static var PRIOR(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
+	@:public @:static @:final public static var PRIOR(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* When flip contents are <code>COPIED</code>, the
@@ -161,7 +161,7 @@ package java.awt;
 	* @see #BACKGROUND
 	* @see #PRIOR
 	*/
-	public static var COPIED(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
+	@:public @:static @:final public static var COPIED(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	
 }

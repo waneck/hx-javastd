@@ -34,35 +34,35 @@ extern class ForkContentHandler implements org.xml.sax.ContentHandler
 	*     This handler will receive a SAX event after the first handler
 	*     receives it.
 	*/
-	@:overload public function new(first : org.xml.sax.ContentHandler, second : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(first : org.xml.sax.ContentHandler, second : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Creates ForkContentHandlers so that the specified handlers
 	* will receive SAX events in the order of the array.
 	*/
-	@:overload public static function create(handlers : java.NativeArray<org.xml.sax.ContentHandler>) : org.xml.sax.ContentHandler;
+	@:overload @:public @:static public static function create(handlers : java.NativeArray<org.xml.sax.ContentHandler>) : org.xml.sax.ContentHandler;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	
 }

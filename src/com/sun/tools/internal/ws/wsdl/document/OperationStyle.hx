@@ -30,13 +30,13 @@ package com.sun.tools.internal.ws.wsdl.document;
 */
 extern class OperationStyle
 {
-	public static var ONE_WAY(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
+	@:public @:static @:final public static var ONE_WAY(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
 	
-	public static var REQUEST_RESPONSE(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
+	@:public @:static @:final public static var REQUEST_RESPONSE(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
 	
-	public static var SOLICIT_RESPONSE(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
+	@:public @:static @:final public static var SOLICIT_RESPONSE(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
 	
-	public static var NOTIFICATION(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
+	@:public @:static @:final public static var NOTIFICATION(default, null) : com.sun.tools.internal.ws.wsdl.document.OperationStyle;
 	
 	
 }

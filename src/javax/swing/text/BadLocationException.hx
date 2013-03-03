@@ -46,14 +46,14 @@ extern class BadLocationException extends java.lang.Exception
 	* @param s         a string indicating what was wrong with the arguments
 	* @param offs      offset within the document that was requested >= 0
 	*/
-	@:overload public function new(s : String, offs : Int) : Void;
+	@:overload @:public public function new(s : String, offs : Int) : Void;
 	
 	/**
 	* Returns the offset into the document that was not legal.
 	*
 	* @return the offset >= 0
 	*/
-	@:overload public function offsetRequested() : Int;
+	@:overload @:public public function offsetRequested() : Int;
 	
 	
 }

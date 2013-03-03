@@ -37,25 +37,25 @@ exception statement from your version.
 */
 @:internal extern class PulseAudioPort extends org.classpath.icedtea.pulseaudio.PulseAudioLine implements javax.sound.sampled.Port implements org.classpath.icedtea.pulseaudio.PulseAudioPlaybackLine
 {
-	@:overload @:abstract public function native_set_volume(newValue : Single) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function native_set_volume(newValue : Single) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* 
 	* @see {@link update_channels_and_volume}
 	*/
-	@:overload @:abstract public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getCachedVolume() : Single;
+	@:overload @:public public function getCachedVolume() : Single;
 	
-	@:overload public function setCachedVolume(value : Single) : Void;
+	@:overload @:public public function setCachedVolume(value : Single) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload @:abstract override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public @:abstract override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
-	@:overload override public function open() : Void;
+	@:overload @:public override public function open() : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Indicates whether the line supports a control of the specified type.
@@ -64,7 +64,7 @@ exception statement from your version.
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public @:public @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -73,7 +73,7 @@ exception statement from your version.
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public @:public @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -86,14 +86,14 @@ exception statement from your version.
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public @:public @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Check if a line is open
 	* 
 	* @return <code>true</code> if line is open
 	*/
-	@:overload override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Adds a listener to this line.  Whenever the line's status changes, the
@@ -104,14 +104,14 @@ exception statement from your version.
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

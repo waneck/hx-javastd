@@ -30,13 +30,13 @@ extern class MonitorInfoImpl extends com.sun.tools.jdi.MirrorImpl implements com
 	* Must be synchronized since we must protect against
 	* sending defunct (isValid == false) stack ids to the back-end.
 	*/
-	@:overload public function threadResumable(action : com.sun.tools.jdi.ThreadAction) : Bool;
+	@:overload @:public public function threadResumable(action : com.sun.tools.jdi.ThreadAction) : Bool;
 	
-	@:overload public function monitor() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function monitor() : com.sun.jdi.ObjectReference;
 	
-	@:overload public function stackDepth() : Int;
+	@:overload @:public public function stackDepth() : Int;
 	
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
 	
 }

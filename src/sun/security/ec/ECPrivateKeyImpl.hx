@@ -29,26 +29,26 @@ extern class ECPrivateKeyImpl extends sun.security.pkcs.PKCS8Key implements java
 	* Construct a key from its encoding. Called by the ECKeyFactory and
 	* the SunPKCS11 code.
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Construct a key from its components. Used by the
 	* KeyFactory and the SunPKCS11 code.
 	*/
-	@:overload public function new(s : java.math.BigInteger, params : java.security.spec.ECParameterSpec) : Void;
+	@:overload @:public public function new(s : java.math.BigInteger, params : java.security.spec.ECParameterSpec) : Void;
 	
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public override public function getAlgorithm() : String;
 	
-	@:overload public function getS() : java.math.BigInteger;
+	@:overload @:public public function getS() : java.math.BigInteger;
 	
-	@:overload public function getParams() : java.security.spec.ECParameterSpec;
+	@:overload @:public public function getParams() : java.security.spec.ECParameterSpec;
 	
 	/**
 	* Parse the key. Called by PKCS8Key.
 	*/
-	@:overload private function parseKeyBits() : Void;
+	@:overload @:protected override private function parseKeyBits() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

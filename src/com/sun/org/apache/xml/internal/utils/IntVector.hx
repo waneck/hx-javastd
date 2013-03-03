@@ -34,78 +34,78 @@ package com.sun.org.apache.xml.internal.utils;
 extern class IntVector implements java.lang.Cloneable
 {
 	/** Size of blocks to allocate          */
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** Array of ints          */
-	private var m_map : java.NativeArray<Int>;
+	@:protected private var m_map : java.NativeArray<Int>;
 	
 	/** Number of ints in array          */
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/** Size of array          */
-	private var m_mapSize : Int;
+	@:protected private var m_mapSize : Int;
 	
 	/**
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int, increaseSize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int, increaseSize : Int) : Void;
 	
 	/**
 	* Copy constructor for IntVector
 	*
 	* @param v Existing IntVector to copy
 	*/
-	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.IntVector) : Void;
+	@:overload @:public public function new(v : com.sun.org.apache.xml.internal.utils.IntVector) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return length of the list
 	*/
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return length of the list
 	*/
-	@:overload @:final public function setSize(sz : Int) : Void;
+	@:overload @:public @:final public function setSize(sz : Int) : Void;
 	
 	/**
 	* Append a int onto the vector.
 	*
 	* @param value Int to add to the list
 	*/
-	@:overload @:final public function addElement(value : Int) : Void;
+	@:overload @:public @:final public function addElement(value : Int) : Void;
 	
 	/**
 	* Append several int values onto the vector.
 	*
 	* @param value Int to add to the list
 	*/
-	@:overload @:final public function addElements(value : Int, numberOfElements : Int) : Void;
+	@:overload @:public @:final public function addElements(value : Int, numberOfElements : Int) : Void;
 	
 	/**
 	* Append several slots onto the vector, but do not set the values.
 	*
 	* @param numberOfElements Int to add to the list
 	*/
-	@:overload @:final public function addElements(numberOfElements : Int) : Void;
+	@:overload @:public @:final public function addElements(numberOfElements : Int) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.
@@ -116,7 +116,7 @@ extern class IntVector implements java.lang.Cloneable
 	* @param value Int to insert
 	* @param at Index of where to insert
 	*/
-	@:overload @:final public function insertElementAt(value : Int, at : Int) : Void;
+	@:overload @:public @:final public function insertElementAt(value : Int, at : Int) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.
@@ -124,7 +124,7 @@ extern class IntVector implements java.lang.Cloneable
 	* the specified index is shifted upward to have an index one greater
 	* than the value it had previously.
 	*/
-	@:overload @:final public function removeAllElements() : Void;
+	@:overload @:public @:final public function removeAllElements() : Void;
 	
 	/**
 	* Removes the first occurrence of the argument from this vector.
@@ -137,7 +137,7 @@ extern class IntVector implements java.lang.Cloneable
 	*
 	* @return True if the int was removed, false if it was not found
 	*/
-	@:overload @:final public function removeElement(s : Int) : Bool;
+	@:overload @:public @:final public function removeElement(s : Int) : Bool;
 	
 	/**
 	* Deletes the component at the specified index. Each component in
@@ -147,7 +147,7 @@ extern class IntVector implements java.lang.Cloneable
 	*
 	* @param i index of where to remove and int
 	*/
-	@:overload @:final public function removeElementAt(i : Int) : Void;
+	@:overload @:public @:final public function removeElementAt(i : Int) : Void;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -159,7 +159,7 @@ extern class IntVector implements java.lang.Cloneable
 	* @param value object to set
 	* @param index Index of where to set the object
 	*/
-	@:overload @:final public function setElementAt(value : Int, index : Int) : Void;
+	@:overload @:public @:final public function setElementAt(value : Int, index : Int) : Void;
 	
 	/**
 	* Get the nth element.
@@ -168,7 +168,7 @@ extern class IntVector implements java.lang.Cloneable
 	*
 	* @return object at given index
 	*/
-	@:overload @:final public function elementAt(i : Int) : Int;
+	@:overload @:public @:final public function elementAt(i : Int) : Int;
 	
 	/**
 	* Tell if the table contains the given node.
@@ -177,7 +177,7 @@ extern class IntVector implements java.lang.Cloneable
 	*
 	* @return true if the object is in the list
 	*/
-	@:overload @:final public function contains(s : Int) : Bool;
+	@:overload @:public @:final public function contains(s : Int) : Bool;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -190,7 +190,7 @@ extern class IntVector implements java.lang.Cloneable
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload @:final public function indexOf(elem : Int, index : Int) : Int;
+	@:overload @:public @:final public function indexOf(elem : Int, index : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -202,7 +202,7 @@ extern class IntVector implements java.lang.Cloneable
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload @:final public function indexOf(elem : Int) : Int;
+	@:overload @:public @:final public function indexOf(elem : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -214,14 +214,14 @@ extern class IntVector implements java.lang.Cloneable
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload @:final public function lastIndexOf(elem : Int) : Int;
+	@:overload @:public @:final public function lastIndexOf(elem : Int) : Int;
 	
 	/**
 	* Returns clone of current IntVector
 	*
 	* @return clone of current IntVector
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

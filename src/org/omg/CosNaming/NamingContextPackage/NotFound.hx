@@ -7,15 +7,15 @@ package org.omg.CosNaming.NamingContextPackage;
 */
 extern class NotFound extends org.omg.CORBA.UserException
 {
-	public var why : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
+	@:public public var why : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
-	public var rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>;
+	@:public public var rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_why : org.omg.CosNaming.NamingContextPackage.NotFoundReason, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public public function new(_why : org.omg.CosNaming.NamingContextPackage.NotFoundReason, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
-	@:overload public function new($reason : String, _why : org.omg.CosNaming.NamingContextPackage.NotFoundReason, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public public function new($reason : String, _why : org.omg.CosNaming.NamingContextPackage.NotFoundReason, _rest_of_name : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
 	
 }

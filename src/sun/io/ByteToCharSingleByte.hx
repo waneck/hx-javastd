@@ -35,11 +35,11 @@ extern class ByteToCharSingleByte extends sun.io.ByteToCharConverter
 	/**
 	* Mapping table. Values supplied by subclass
 	*/
-	private var byteToCharTable : String;
+	@:protected private var byteToCharTable : String;
 	
-	@:overload public function getByteToCharTable() : String;
+	@:overload @:public public function getByteToCharTable() : String;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Converts bytes to characters according to the selected character
@@ -65,15 +65,15 @@ extern class ByteToCharSingleByte extends sun.io.ByteToCharConverter
 	* before the input is exhausted.
 	* @see #reset
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
-	@:overload private function getUnicode(byteIndex : Int) : java.StdTypes.Char16;
+	@:overload @:protected private function getUnicode(byteIndex : Int) : java.StdTypes.Char16;
 	
 	/**
 	*  Resets the converter.
 	*  Call this method to reset the converter to its initial state
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

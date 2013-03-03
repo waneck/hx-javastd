@@ -78,7 +78,7 @@ extern class ConstantPoolVisitor
 	*
 	* @see ConstantPoolPatch#putUTF8(int, String)
 	*/
-	@:overload public function visitUTF8(index : Int, tag : java.StdTypes.Int8, utf8 : String) : Void;
+	@:overload @:public public function visitUTF8(index : Int, tag : java.StdTypes.Int8, utf8 : String) : Void;
 	
 	/** Called for each constant pool entry that encodes an integer,
 	*  a float, a long, or a double.
@@ -94,7 +94,7 @@ extern class ConstantPoolVisitor
 	*
 	* @see ConstantPoolPatch#putConstantValue(int, Object)
 	*/
-	@:overload public function visitConstantValue(index : Int, tag : java.StdTypes.Int8, value : Dynamic) : Void;
+	@:overload @:public public function visitConstantValue(index : Int, tag : java.StdTypes.Int8, value : Dynamic) : Void;
 	
 	/** Called for each constant pool entry that encodes a string or a class.
 	* @param index the constant pool index
@@ -105,7 +105,7 @@ extern class ConstantPoolVisitor
 	*
 	* @see ConstantPoolPatch#putConstantValue(int, byte, Object)
 	*/
-	@:overload public function visitConstantString(index : Int, tag : java.StdTypes.Int8, name : String, nameIndex : Int) : Void;
+	@:overload @:public public function visitConstantString(index : Int, tag : java.StdTypes.Int8, name : String, nameIndex : Int) : Void;
 	
 	/** Called for each constant pool entry that encodes a name and type.
 	* @param index the constant pool index
@@ -117,7 +117,7 @@ extern class ConstantPoolVisitor
 	*
 	* @see ConstantPoolPatch#putDescriptor(int, String, String)
 	*/
-	@:overload public function visitDescriptor(index : Int, tag : java.StdTypes.Int8, memberName : String, signature : String, memberNameIndex : Int, signatureIndex : Int) : Void;
+	@:overload @:public public function visitDescriptor(index : Int, tag : java.StdTypes.Int8, memberName : String, signature : String, memberNameIndex : Int, signatureIndex : Int) : Void;
 	
 	/** Called for each constant pool entry that encodes a field or method.
 	* @param index the constant pool index
@@ -132,11 +132,11 @@ extern class ConstantPoolVisitor
 	*
 	* @see ConstantPoolPatch#putMemberRef(int, byte, String, String, String)
 	*/
-	@:overload public function visitMemberRef(index : Int, tag : java.StdTypes.Int8, className : String, memberName : String, signature : String, classNameIndex : Int, descriptorIndex : Int) : Void;
+	@:overload @:public public function visitMemberRef(index : Int, tag : java.StdTypes.Int8, className : String, memberName : String, signature : String, classNameIndex : Int, descriptorIndex : Int) : Void;
 	
-	public static var CONSTANT_None(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var CONSTANT_None(default, null) : java.StdTypes.Int8;
 	
-	@:overload public static function tagName(tag : java.StdTypes.Int8) : String;
+	@:overload @:public @:static public static function tagName(tag : java.StdTypes.Int8) : String;
 	
 	
 }

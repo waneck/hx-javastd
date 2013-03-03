@@ -41,7 +41,7 @@ package java.util.logging;
 	/**
 	* Construct a new formatter.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Format the given log record and return the formatted string.
@@ -54,7 +54,7 @@ package java.util.logging;
 	* @param record the log record to be formatted.
 	* @return the formatted log record
 	*/
-	@:overload @:abstract public function format(record : java.util.logging.LogRecord) : String;
+	@:overload @:public @:abstract public function format(record : java.util.logging.LogRecord) : String;
 	
 	/**
 	* Return the header string for a set of formatted records.
@@ -65,7 +65,7 @@ package java.util.logging;
 	* @param   h  The target handler (can be null)
 	* @return  header string
 	*/
-	@:overload public function getHead(h : java.util.logging.Handler) : String;
+	@:overload @:public public function getHead(h : java.util.logging.Handler) : String;
 	
 	/**
 	* Return the tail string for a set of formatted records.
@@ -76,7 +76,7 @@ package java.util.logging;
 	* @param   h  The target handler (can be null)
 	* @return  tail string
 	*/
-	@:overload public function getTail(h : java.util.logging.Handler) : String;
+	@:overload @:public public function getTail(h : java.util.logging.Handler) : String;
 	
 	/**
 	* Localize and format the message string from a log record.  This
@@ -99,7 +99,7 @@ package java.util.logging;
 	* @param  record  the log record containing the raw message
 	* @return   a localized and formatted message
 	*/
-	@:overload @:synchronized public function formatMessage(record : java.util.logging.LogRecord) : String;
+	@:overload @:public @:synchronized public function formatMessage(record : java.util.logging.LogRecord) : String;
 	
 	
 }

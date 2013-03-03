@@ -30,151 +30,151 @@ extern class SF2Region
 	*
 	* @author Karl Helgason
 	*/
-	public static var GENERATOR_STARTADDRSOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_STARTADDRSOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_ENDADDRSOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ENDADDRSOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_STARTLOOPADDRSOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_STARTLOOPADDRSOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_ENDLOOPADDRSOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ENDLOOPADDRSOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_STARTADDRSCOARSEOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_STARTADDRSCOARSEOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_MODLFOTOPITCH(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_MODLFOTOPITCH(default, null) : Int;
 	
-	public static var GENERATOR_VIBLFOTOPITCH(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_VIBLFOTOPITCH(default, null) : Int;
 	
-	public static var GENERATOR_MODENVTOPITCH(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_MODENVTOPITCH(default, null) : Int;
 	
-	public static var GENERATOR_INITIALFILTERFC(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_INITIALFILTERFC(default, null) : Int;
 	
-	public static var GENERATOR_INITIALFILTERQ(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_INITIALFILTERQ(default, null) : Int;
 	
-	public static var GENERATOR_MODLFOTOFILTERFC(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_MODLFOTOFILTERFC(default, null) : Int;
 	
-	public static var GENERATOR_MODENVTOFILTERFC(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_MODENVTOFILTERFC(default, null) : Int;
 	
-	public static var GENERATOR_ENDADDRSCOARSEOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ENDADDRSCOARSEOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_MODLFOTOVOLUME(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_MODLFOTOVOLUME(default, null) : Int;
 	
-	public static var GENERATOR_UNUSED1(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_UNUSED1(default, null) : Int;
 	
-	public static var GENERATOR_CHORUSEFFECTSSEND(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_CHORUSEFFECTSSEND(default, null) : Int;
 	
-	public static var GENERATOR_REVERBEFFECTSSEND(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_REVERBEFFECTSSEND(default, null) : Int;
 	
-	public static var GENERATOR_PAN(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_PAN(default, null) : Int;
 	
-	public static var GENERATOR_UNUSED2(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_UNUSED2(default, null) : Int;
 	
-	public static var GENERATOR_UNUSED3(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_UNUSED3(default, null) : Int;
 	
-	public static var GENERATOR_UNUSED4(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_UNUSED4(default, null) : Int;
 	
-	public static var GENERATOR_DELAYMODLFO(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_DELAYMODLFO(default, null) : Int;
 	
-	public static var GENERATOR_FREQMODLFO(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_FREQMODLFO(default, null) : Int;
 	
-	public static var GENERATOR_DELAYVIBLFO(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_DELAYVIBLFO(default, null) : Int;
 	
-	public static var GENERATOR_FREQVIBLFO(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_FREQVIBLFO(default, null) : Int;
 	
-	public static var GENERATOR_DELAYMODENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_DELAYMODENV(default, null) : Int;
 	
-	public static var GENERATOR_ATTACKMODENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ATTACKMODENV(default, null) : Int;
 	
-	public static var GENERATOR_HOLDMODENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_HOLDMODENV(default, null) : Int;
 	
-	public static var GENERATOR_DECAYMODENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_DECAYMODENV(default, null) : Int;
 	
-	public static var GENERATOR_SUSTAINMODENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_SUSTAINMODENV(default, null) : Int;
 	
-	public static var GENERATOR_RELEASEMODENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_RELEASEMODENV(default, null) : Int;
 	
-	public static var GENERATOR_KEYNUMTOMODENVHOLD(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_KEYNUMTOMODENVHOLD(default, null) : Int;
 	
-	public static var GENERATOR_KEYNUMTOMODENVDECAY(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_KEYNUMTOMODENVDECAY(default, null) : Int;
 	
-	public static var GENERATOR_DELAYVOLENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_DELAYVOLENV(default, null) : Int;
 	
-	public static var GENERATOR_ATTACKVOLENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ATTACKVOLENV(default, null) : Int;
 	
-	public static var GENERATOR_HOLDVOLENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_HOLDVOLENV(default, null) : Int;
 	
-	public static var GENERATOR_DECAYVOLENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_DECAYVOLENV(default, null) : Int;
 	
-	public static var GENERATOR_SUSTAINVOLENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_SUSTAINVOLENV(default, null) : Int;
 	
-	public static var GENERATOR_RELEASEVOLENV(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_RELEASEVOLENV(default, null) : Int;
 	
-	public static var GENERATOR_KEYNUMTOVOLENVHOLD(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_KEYNUMTOVOLENVHOLD(default, null) : Int;
 	
-	public static var GENERATOR_KEYNUMTOVOLENVDECAY(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_KEYNUMTOVOLENVDECAY(default, null) : Int;
 	
-	public static var GENERATOR_INSTRUMENT(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_INSTRUMENT(default, null) : Int;
 	
-	public static var GENERATOR_RESERVED1(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_RESERVED1(default, null) : Int;
 	
-	public static var GENERATOR_KEYRANGE(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_KEYRANGE(default, null) : Int;
 	
-	public static var GENERATOR_VELRANGE(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_VELRANGE(default, null) : Int;
 	
-	public static var GENERATOR_STARTLOOPADDRSCOARSEOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_STARTLOOPADDRSCOARSEOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_KEYNUM(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_KEYNUM(default, null) : Int;
 	
-	public static var GENERATOR_VELOCITY(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_VELOCITY(default, null) : Int;
 	
-	public static var GENERATOR_INITIALATTENUATION(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_INITIALATTENUATION(default, null) : Int;
 	
-	public static var GENERATOR_RESERVED2(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_RESERVED2(default, null) : Int;
 	
-	public static var GENERATOR_ENDLOOPADDRSCOARSEOFFSET(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ENDLOOPADDRSCOARSEOFFSET(default, null) : Int;
 	
-	public static var GENERATOR_COARSETUNE(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_COARSETUNE(default, null) : Int;
 	
-	public static var GENERATOR_FINETUNE(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_FINETUNE(default, null) : Int;
 	
-	public static var GENERATOR_SAMPLEID(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_SAMPLEID(default, null) : Int;
 	
-	public static var GENERATOR_SAMPLEMODES(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_SAMPLEMODES(default, null) : Int;
 	
-	public static var GENERATOR_RESERVED3(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_RESERVED3(default, null) : Int;
 	
-	public static var GENERATOR_SCALETUNING(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_SCALETUNING(default, null) : Int;
 	
-	public static var GENERATOR_EXCLUSIVECLASS(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_EXCLUSIVECLASS(default, null) : Int;
 	
-	public static var GENERATOR_OVERRIDINGROOTKEY(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_OVERRIDINGROOTKEY(default, null) : Int;
 	
-	public static var GENERATOR_UNUSED5(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_UNUSED5(default, null) : Int;
 	
-	public static var GENERATOR_ENDOPR(default, null) : Int;
+	@:public @:final @:static public static var GENERATOR_ENDOPR(default, null) : Int;
 	
-	private var generators : java.util.Map<Null<Int>, Null<java.StdTypes.Int16>>;
+	@:protected private var generators : java.util.Map<Null<Int>, Null<java.StdTypes.Int16>>;
 	
-	private var modulators : java.util.List<com.sun.media.sound.SF2Modulator>;
+	@:protected private var modulators : java.util.List<com.sun.media.sound.SF2Modulator>;
 	
-	@:overload public function getGenerators() : java.util.Map<Null<Int>, Null<java.StdTypes.Int16>>;
+	@:overload @:public public function getGenerators() : java.util.Map<Null<Int>, Null<java.StdTypes.Int16>>;
 	
-	@:overload public function contains(generator : Int) : Bool;
+	@:overload @:public public function contains(generator : Int) : Bool;
 	
-	@:overload public static function getDefaultValue(generator : Int) : java.StdTypes.Int16;
+	@:overload @:static @:public public static function getDefaultValue(generator : Int) : java.StdTypes.Int16;
 	
-	@:overload public function getShort(generator : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getShort(generator : Int) : java.StdTypes.Int16;
 	
-	@:overload public function putShort(generator : Int, value : java.StdTypes.Int16) : Void;
+	@:overload @:public public function putShort(generator : Int, value : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getBytes(generator : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBytes(generator : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function putBytes(generator : Int, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function putBytes(generator : Int, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getInteger(generator : Int) : Int;
+	@:overload @:public public function getInteger(generator : Int) : Int;
 	
-	@:overload public function putInteger(generator : Int, value : Int) : Void;
+	@:overload @:public public function putInteger(generator : Int, value : Int) : Void;
 	
-	@:overload public function getModulators() : java.util.List<com.sun.media.sound.SF2Modulator>;
+	@:overload @:public public function getModulators() : java.util.List<com.sun.media.sound.SF2Modulator>;
 	
 	
 }

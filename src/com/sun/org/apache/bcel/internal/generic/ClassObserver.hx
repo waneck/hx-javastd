@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface ClassObserver
 {
-	@:overload public function notify(clazz : com.sun.org.apache.bcel.internal.generic.ClassGen) : Void;
+	@:overload @:public public function notify(clazz : com.sun.org.apache.bcel.internal.generic.ClassGen) : Void;
 	
 	
 }

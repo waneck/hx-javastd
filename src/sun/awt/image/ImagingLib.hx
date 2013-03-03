@@ -25,21 +25,21 @@ package sun.awt.image;
 */
 extern class ImagingLib
 {
-	@:overload @:native public static function transformBI(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage, matrix : java.NativeArray<Float>, interpType : Int) : Int;
+	@:overload @:static @:public @:native public static function transformBI(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage, matrix : java.NativeArray<Float>, interpType : Int) : Int;
 	
-	@:overload @:native public static function transformRaster(src : java.awt.image.Raster, dst : java.awt.image.Raster, matrix : java.NativeArray<Float>, interpType : Int) : Int;
+	@:overload @:static @:public @:native public static function transformRaster(src : java.awt.image.Raster, dst : java.awt.image.Raster, matrix : java.NativeArray<Float>, interpType : Int) : Int;
 	
-	@:overload @:native public static function convolveBI(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage, kernel : java.awt.image.Kernel, edgeHint : Int) : Int;
+	@:overload @:static @:public @:native public static function convolveBI(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage, kernel : java.awt.image.Kernel, edgeHint : Int) : Int;
 	
-	@:overload @:native public static function convolveRaster(src : java.awt.image.Raster, dst : java.awt.image.Raster, kernel : java.awt.image.Kernel, edgeHint : Int) : Int;
+	@:overload @:static @:public @:native public static function convolveRaster(src : java.awt.image.Raster, dst : java.awt.image.Raster, kernel : java.awt.image.Kernel, edgeHint : Int) : Int;
 	
-	@:overload @:native public static function lookupByteBI(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage, table : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>) : Int;
+	@:overload @:static @:public @:native public static function lookupByteBI(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage, table : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>) : Int;
 	
-	@:overload @:native public static function lookupByteRaster(src : java.awt.image.Raster, dst : java.awt.image.Raster, table : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>) : Int;
+	@:overload @:static @:public @:native public static function lookupByteRaster(src : java.awt.image.Raster, dst : java.awt.image.Raster, table : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>) : Int;
 	
-	@:overload public static function filter(op : java.awt.image.RasterOp, src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public @:static public static function filter(op : java.awt.image.RasterOp, src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
-	@:overload public static function filter(op : java.awt.image.BufferedImageOp, src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function filter(op : java.awt.image.BufferedImageOp, src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	
 }

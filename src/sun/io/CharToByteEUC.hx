@@ -25,47 +25,47 @@ package sun.io;
 */
 extern class CharToByteEUC extends sun.io.CharToByteConverter
 {
-	private var index1 : java.NativeArray<java.StdTypes.Int16>;
+	@:protected private var index1 : java.NativeArray<java.StdTypes.Int16>;
 	
-	private var index2 : String;
+	@:protected private var index2 : String;
 	
-	private var index2a : String;
+	@:protected private var index2a : String;
 	
-	private var index2b : String;
+	@:protected private var index2b : String;
 	
-	private var index2c : String;
+	@:protected private var index2c : String;
 	
-	private var mask1 : Int;
+	@:protected private var mask1 : Int;
 	
-	private var mask2 : Int;
+	@:protected private var mask2 : Int;
 	
-	private var shift : Int;
+	@:protected private var shift : Int;
 	
 	/**
 	* flush out any residual data and reset the buffer state
 	*/
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	* Resets converter to its initial state.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Returns the maximum number of bytes needed to convert a char.
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	/**
 	* Returns true if the given character can be converted to the
 	* target character encoding.
 	*/
-	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	
 }

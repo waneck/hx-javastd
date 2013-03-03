@@ -32,7 +32,7 @@ extern interface ThreadPoolChooser
 	* ThreadPools would be specified by passing the threadpool-ids
 	* configured in the ORB element of the domain.xml of the appserver.
 	*/
-	@:overload public function getThreadPool() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
+	@:overload @:public public function getThreadPool() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
 	
 	/**
 	* This method is used to return an instance of ThreadPool that is obtained
@@ -40,13 +40,13 @@ extern interface ThreadPoolChooser
 	* situations where the threadpool id is known to the caller e.g. by the
 	* connection object or looking at the high order bits of the request id
 	*/
-	@:overload public function getThreadPool(id : Int) : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
+	@:overload @:public public function getThreadPool(id : Int) : com.sun.corba.se.spi.orbutil.threadpool.ThreadPool;
 	
 	/**
 	* This method is a convenience method to see what threadpool-ids are being
 	* used by the ThreadPoolChooser
 	*/
-	@:overload public function getThreadPoolIds() : java.NativeArray<String>;
+	@:overload @:public public function getThreadPoolIds() : java.NativeArray<String>;
 	
 	
 }

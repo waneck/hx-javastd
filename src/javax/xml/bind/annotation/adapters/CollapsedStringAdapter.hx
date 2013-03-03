@@ -40,17 +40,17 @@ package javax.xml.bind.annotation.adapters;
 	* given as the parameter, then truncate any
 	* sequnce of tab, CR, LF, and SP by a single whitespace character ' '.
 	*/
-	@:overload public function unmarshal(text : String) : String;
+	@:overload @:public public function unmarshal(text : String) : String;
 	
 	/**
 	* No-op.
 	*
 	* Just return the same string given as the parameter.
 	*/
-	@:overload public function marshal(s : String) : String;
+	@:overload @:public public function marshal(s : String) : String;
 	
 	/** returns true if the specified char is a white space character. */
-	@:overload private static function isWhiteSpace(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isWhiteSpace(ch : java.StdTypes.Char16) : Bool;
 	
 	
 }

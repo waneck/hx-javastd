@@ -28,11 +28,11 @@ package com.sun.corba.se.pept.transport;
 */
 extern interface OutboundConnectionCache extends com.sun.corba.se.pept.transport.ConnectionCache
 {
-	@:overload public function get(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function get(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload public function put(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection) : Void;
+	@:overload @:public public function put(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection) : Void;
 	
-	@:overload public function remove(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : Void;
+	@:overload @:public public function remove(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : Void;
 	
 	
 }

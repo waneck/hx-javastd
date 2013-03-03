@@ -28,19 +28,19 @@ extern interface NameServiceDescriptor
 	/**
 	* Create a new instance of the corresponding name service.
 	*/
-	@:overload public function createNameService() : sun.net.spi.nameservice.NameService;
+	@:overload @:public public function createNameService() : sun.net.spi.nameservice.NameService;
 	
 	/**
 	* Returns this service provider's name
 	*
 	*/
-	@:overload public function getProviderName() : String;
+	@:overload @:public public function getProviderName() : String;
 	
 	/**
 	* Returns this name service type
 	* "dns" "nis" etc
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	
 }

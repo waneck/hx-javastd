@@ -76,7 +76,7 @@ package java.util.concurrent;
 	* @param capacity the capacity of this queue
 	* @throws IllegalArgumentException if {@code capacity < 1}
 	*/
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
 	/**
 	* Creates an {@code ArrayBlockingQueue} with the given (fixed)
@@ -88,7 +88,7 @@ package java.util.concurrent;
 	*        if {@code false} the access order is unspecified.
 	* @throws IllegalArgumentException if {@code capacity < 1}
 	*/
-	@:overload public function new(capacity : Int, fair : Bool) : Void;
+	@:overload @:public public function new(capacity : Int, fair : Bool) : Void;
 	
 	/**
 	* Creates an {@code ArrayBlockingQueue} with the given (fixed)
@@ -106,7 +106,7 @@ package java.util.concurrent;
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(capacity : Int, fair : Bool, c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(capacity : Int, fair : Bool, c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Inserts the specified element at the tail of this queue if it is
@@ -119,7 +119,7 @@ package java.util.concurrent;
 	* @throws IllegalStateException if this queue is full
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue if it is
@@ -130,7 +130,7 @@ package java.util.concurrent;
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue, waiting
@@ -139,7 +139,7 @@ package java.util.concurrent;
 	* @throws InterruptedException {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function put(e : E) : Void;
+	@:overload @:public public function put(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the tail of this queue, waiting
@@ -149,22 +149,22 @@ package java.util.concurrent;
 	* @throws InterruptedException {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
-	@:overload public function take() : E;
+	@:overload @:public public function take() : E;
 	
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
-	@:overload public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Returns the number of elements in this queue.
 	*
 	* @return the number of elements in this queue
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns the number of additional elements that this queue can ideally
@@ -177,7 +177,7 @@ package java.util.concurrent;
 	* because it may be the case that another thread is about to
 	* insert or remove an element.
 	*/
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
 	/**
 	* Removes a single instance of the specified element from this queue,
@@ -196,7 +196,7 @@ package java.util.concurrent;
 	* @param o element to be removed from this queue, if present
 	* @return {@code true} if this queue changed as a result of the call
 	*/
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this queue contains the specified element.
@@ -206,7 +206,7 @@ package java.util.concurrent;
 	* @param o object to be checked for containment in this queue
 	* @return {@code true} if this queue contains the specified element
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -221,7 +221,7 @@ package java.util.concurrent;
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -259,15 +259,15 @@ package java.util.concurrent;
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Atomically removes all of the elements from this queue.
 	* The queue will be empty after this call returns.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -275,7 +275,7 @@ package java.util.concurrent;
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>) : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -283,7 +283,7 @@ package java.util.concurrent;
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
 	
 	/**
 	* Returns an iterator over the elements in this queue in proper sequence.
@@ -298,7 +298,7 @@ package java.util.concurrent;
 	*
 	* @return an iterator over the elements in this queue in proper sequence
 	*/
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -320,11 +320,11 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ArrayBlockingQueue$Itr') @:internal extern class ArrayBlockingQueue_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

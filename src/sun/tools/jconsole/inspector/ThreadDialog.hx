@@ -27,9 +27,9 @@ package sun.tools.jconsole.inspector;
 ////
 extern class ThreadDialog implements java.lang.Runnable
 {
-	@:overload public function new(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : Void;
+	@:overload @:public public function new(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

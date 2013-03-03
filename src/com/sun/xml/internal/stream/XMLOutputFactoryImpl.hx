@@ -26,29 +26,29 @@ package com.sun.xml.internal.stream;
 extern class XMLOutputFactoryImpl extends javax.xml.stream.XMLOutputFactory
 {
 	/** Creates a new instance of XMLOutputFactory */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function createXMLEventWriter(outputStream : java.io.OutputStream) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public override public function createXMLEventWriter(outputStream : java.io.OutputStream) : javax.xml.stream.XMLEventWriter;
 	
-	@:overload public function createXMLEventWriter(outputStream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public override public function createXMLEventWriter(outputStream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLEventWriter;
 	
-	@:overload public function createXMLEventWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public override public function createXMLEventWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLEventWriter;
 	
-	@:overload public function createXMLEventWriter(writer : java.io.Writer) : javax.xml.stream.XMLEventWriter;
+	@:overload @:public override public function createXMLEventWriter(writer : java.io.Writer) : javax.xml.stream.XMLEventWriter;
 	
-	@:overload public function createXMLStreamWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function createXMLStreamWriter(result : javax.xml.transform.Result) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public function createXMLStreamWriter(writer : java.io.Writer) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function createXMLStreamWriter(writer : java.io.Writer) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public function createXMLStreamWriter(outputStream : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function createXMLStreamWriter(outputStream : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public function createXMLStreamWriter(outputStream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
+	@:overload @:public override public function createXMLStreamWriter(outputStream : java.io.OutputStream, encoding : String) : javax.xml.stream.XMLStreamWriter;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function isPropertySupported(name : String) : Bool;
+	@:overload @:public override public function isPropertySupported(name : String) : Bool;
 	
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, value : Dynamic) : Void;
 	
 	
 }

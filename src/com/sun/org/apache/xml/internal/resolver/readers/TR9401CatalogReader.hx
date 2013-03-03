@@ -37,7 +37,7 @@ extern class TR9401CatalogReader extends com.sun.org.apache.xml.internal.resolve
 	* @throws MalformedURLException Improper fileUrl
 	* @throws IOException Error reading catalog file
 	*/
-	@:overload override public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
+	@:overload @:public override public function readCatalog(catalog : com.sun.org.apache.xml.internal.resolver.Catalog, is : java.io.InputStream) : Void;
 	
 	
 }

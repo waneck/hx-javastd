@@ -25,13 +25,13 @@ package sun.management;
 */
 @:internal extern class CompilationImpl implements java.lang.management.CompilationMXBean
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function isCompilationTimeMonitoringSupported() : Bool;
+	@:overload @:public public function isCompilationTimeMonitoringSupported() : Bool;
 	
-	@:overload public function getTotalCompilationTime() : haxe.Int64;
+	@:overload @:public public function getTotalCompilationTime() : haxe.Int64;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

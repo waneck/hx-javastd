@@ -32,37 +32,37 @@ extern class MotifMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 	* @author Georges Saab
 	* @author Rich Schiavi
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
+	@:overload @:protected override private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
 	
-	@:overload override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
+	@:overload @:protected override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifMenuUI$MotifChangeHandler') extern class MotifMenuUI_MotifChangeHandler extends javax.swing.plaf.basic.BasicMenuUI.BasicMenuUI_ChangeHandler
 {
-	@:overload public function new(m : javax.swing.JMenu, ui : com.sun.java.swing.plaf.motif.MotifMenuUI) : Void;
+	@:overload @:public public function new(m : javax.swing.JMenu, ui : com.sun.java.swing.plaf.motif.MotifMenuUI) : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public override public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifMenuUI$MouseInputHandler') extern class MotifMenuUI_MouseInputHandler implements javax.swing.event.MouseInputListener
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

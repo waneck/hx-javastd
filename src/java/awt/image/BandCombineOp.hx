@@ -43,14 +43,14 @@ extern class BandCombineOp implements java.awt.image.RasterOp
 	* @param hints The <CODE>RenderingHints</CODE> object for this operation.
 	* Not currently used so it can be null.
 	*/
-	@:overload public function new(matrix : java.NativeArray<java.NativeArray<Single>>, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(matrix : java.NativeArray<java.NativeArray<Single>>, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Returns a copy of the linear combination matrix.
 	*
 	* @return The matrix associated with this band combine operation.
 	*/
-	@:overload @:final public function getMatrix() : java.NativeArray<java.NativeArray<Single>>;
+	@:overload @:public @:final public function getMatrix() : java.NativeArray<java.NativeArray<Single>>;
 	
 	/**
 	* Transforms the <CODE>Raster</CODE> using the matrix specified in the
@@ -71,7 +71,7 @@ extern class BandCombineOp implements java.awt.image.RasterOp
 	* @throws IllegalArgumentException If the number of bands in the
 	* source or destination is incompatible with the matrix.
 	*/
-	@:overload public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the transformed destination.  Since
@@ -89,7 +89,7 @@ extern class BandCombineOp implements java.awt.image.RasterOp
 	* @throws IllegalArgumentException If the number of bands in the source
 	* is incompatible with the matrix.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination <CODE>Raster</CODE> with the correct size
@@ -102,7 +102,7 @@ extern class BandCombineOp implements java.awt.image.RasterOp
 	*
 	* @return The zeroed destination <CODE>Raster</CODE>.
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the location of the corresponding destination point given a
@@ -118,7 +118,7 @@ extern class BandCombineOp implements java.awt.image.RasterOp
 	* @return The <CODE>Point2D</CODE> in the destination image that
 	* corresponds to the specified point in the source image.
 	*/
-	@:overload @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints for this operation.
@@ -126,7 +126,7 @@ extern class BandCombineOp implements java.awt.image.RasterOp
 	* @return The <CODE>RenderingHints</CODE> object associated with this
 	* operation.  Returns null if no hints have been set.
 	*/
-	@:overload @:final public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:final public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

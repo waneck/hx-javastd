@@ -31,7 +31,7 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public @:public public function next() : Int;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -39,28 +39,28 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* @return the number of nodes in this iterator.  This may be an expensive
 	* operation when called the first time.
 	*/
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
 	/**
 	* @return The position of the current node in the set, as defined by XPath.
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*/
-	@:overload public function setMark() : Void;
+	@:overload @:public @:public public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*/
-	@:overload public function gotoMark() : Void;
+	@:overload @:public @:public public function gotoMark() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -70,7 +70,7 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get start to END should 'close' the iterator,
@@ -78,23 +78,23 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	*
 	* @return The root node of the iteration.
 	*/
-	@:overload public function getStartNode() : Int;
+	@:overload @:public public function getStartNode() : Int;
 	
 	/**
 	* @return true if this iterator has a reversed axis, else false.
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload @:public public function isReverse() : Bool;
 	
 	/**
 	* @return a deep copy of this iterator. The clone should not be reset
 	* from its current position.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set if restartable.
 	*/
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public public function setRestartable(isRestartable : Bool) : Void;
 	
 	/**
 	* Return the node at the given position.
@@ -102,7 +102,7 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	* @param position The position
 	* @return The node at the given position.
 	*/
-	@:overload public function getNodeByPosition(position : Int) : Int;
+	@:overload @:public public function getNodeByPosition(position : Int) : Int;
 	
 	
 }

@@ -92,7 +92,7 @@ extern interface AttributeReader
 
 	@see Attribute#addAttributeReader( String, AttributeReader )
 	*/
-	@:overload public function createAttribute(name_index : Int, length : Int, file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public public function createAttribute(name_index : Int, length : Int, file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

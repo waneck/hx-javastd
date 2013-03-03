@@ -46,25 +46,25 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 @:internal extern class NameClassBuilderHost extends com.sun.xml.internal.rngom.parse.host.Base implements com.sun.xml.internal.rngom.ast.builder.NameClassBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function annotate(_nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function annotate(_nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function annotateAfter(_nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _e : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function annotateAfter(_nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _e : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function commentAfter(_nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function commentAfter(_nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeChoice(_nameClasses : java.util.List<Dynamic>, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeChoice(_nameClasses : java.util.List<Dynamic>, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeName(ns : String, localName : String, prefix : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeName(ns : String, localName : String, prefix : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeNsName(ns : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeNsName(ns : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeNsName(ns : String, _except : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeNsName(ns : String, _except : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeAnyName(_loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeAnyName(_loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeAnyName(_except : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeAnyName(_except : com.sun.xml.internal.rngom.ast.om.ParsedNameClass, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload public function makeErrorNameClass() : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
+	@:overload @:public public function makeErrorNameClass() : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
 	
 }

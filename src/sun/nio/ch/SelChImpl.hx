@@ -42,7 +42,7 @@ package sun.nio.ch;
 	*          contains at least one bit that the previous value did not
 	*          contain
 	*/
-	@:overload public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
 	/**
 	* Sets the specified ops if present in interestOps. The specified
@@ -52,7 +52,7 @@ package sun.nio.ch;
 	*          contains at least one bit that the previous value did not
 	*          contain
 	*/
-	@:overload public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
 	@:overload public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
 	

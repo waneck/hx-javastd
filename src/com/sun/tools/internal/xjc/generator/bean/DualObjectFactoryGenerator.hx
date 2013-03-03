@@ -35,14 +35,14 @@ extern class DualObjectFactoryGenerator extends com.sun.tools.internal.xjc.gener
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var publicOFG(default, null) : com.sun.tools.internal.xjc.generator.bean.ObjectFactoryGenerator;
+	@:public @:final public var publicOFG(default, null) : com.sun.tools.internal.xjc.generator.bean.ObjectFactoryGenerator;
 	
-	public var privateOFG(default, null) : com.sun.tools.internal.xjc.generator.bean.ObjectFactoryGenerator;
+	@:public @:final public var privateOFG(default, null) : com.sun.tools.internal.xjc.generator.bean.ObjectFactoryGenerator;
 	
 	/**
 	* Returns the private version (which is what gets used at runtime.)
 	*/
-	@:overload public function getObjectFactory() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public override public function getObjectFactory() : com.sun.codemodel.internal.JDefinedClass;
 	
 	
 }

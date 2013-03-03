@@ -31,19 +31,19 @@ extern class DOMForestScanner
 	* DOM node parameters to the scan method must be a part of
 	* this forest.
 	*/
-	@:overload public function new(_forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest) : Void;
+	@:overload @:public public function new(_forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest) : Void;
 	
 	/**
 	* Generates the whole set of SAX events by treating
 	* element e as if it's a root element.
 	*/
-	@:overload public function scan(e : org.w3c.dom.Element, contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function scan(e : org.w3c.dom.Element, contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Generates the whole set of SAX events from the given Document
 	* in the DOMForest.
 	*/
-	@:overload public function scan(d : org.w3c.dom.Document, contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function scan(d : org.w3c.dom.Document, contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	
 }
@@ -56,19 +56,19 @@ extern class DOMForestScanner
 */
 @:native('com$sun$tools$internal$ws$wsdl$parser$DOMForestScanner$LocationResolver') @:internal extern class DOMForestScanner_LocationResolver extends org.xml.sax.helpers.XMLFilterImpl implements org.xml.sax.Locator
 {
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

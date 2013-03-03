@@ -73,7 +73,7 @@ extern class AttachmentMarshaller
 	* @see <a href="http://www.w3.org/TR/2005/REC-xop10-20050125/">XML-binary Optimized Packaging</a>
 	* @see <a href="http://www.w3.org/TR/xml-media-types/">Describing Media Content of Binary Data in XML</a>
 	*/
-	@:overload @:abstract public function addMtomAttachment(data : javax.activation.DataHandler, elementNamespace : String, elementLocalName : String) : String;
+	@:overload @:public @:abstract public function addMtomAttachment(data : javax.activation.DataHandler, elementNamespace : String, elementLocalName : String) : String;
 	
 	/**
 	* <p>Consider binary <code>data</code> for optimized binary storage as an attachment.
@@ -116,7 +116,7 @@ extern class AttachmentMarshaller
 	*
 	* @see #addMtomAttachment(DataHandler, String, String)
 	*/
-	@:overload @:abstract public function addMtomAttachment(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, mimeType : String, elementNamespace : String, elementLocalName : String) : String;
+	@:overload @:public @:abstract public function addMtomAttachment(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, mimeType : String, elementNamespace : String, elementLocalName : String) : String;
 	
 	/**
 	* <p>Read-only property that returns true if JAXB marshaller should enable XOP creation.</p>
@@ -142,7 +142,7 @@ extern class AttachmentMarshaller
 	*
 	* @return true when MIME context is a XOP Package.
 	*/
-	@:overload public function isXOPPackage() : Bool;
+	@:overload @:public public function isXOPPackage() : Bool;
 	
 	/**
 	* <p>Add MIME <code>data</code> as an attachment and return attachment's content-id, cid.</p>
@@ -162,7 +162,7 @@ extern class AttachmentMarshaller
 	*       must be a valid URI used as cid. Must satisfy Conformance Requirement R2928 from
 	*       <a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-2004-08-24.html#Referencing_Attachments_from_the_SOAP_Envelope">WS-I Attachments Profile Version 1.0.</a>
 	*/
-	@:overload @:abstract public function addSwaRefAttachment(data : javax.activation.DataHandler) : String;
+	@:overload @:public @:abstract public function addSwaRefAttachment(data : javax.activation.DataHandler) : String;
 	
 	
 }

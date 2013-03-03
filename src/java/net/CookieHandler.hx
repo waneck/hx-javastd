@@ -35,7 +35,7 @@ extern class CookieHandler
 	* {@link NetPermission}<tt>("getCookieHandler")</tt>
 	* @see #setDefault(CookieHandler)
 	*/
-	@:overload @:synchronized public static function getDefault() : java.net.CookieHandler;
+	@:overload @:public @:synchronized @:static public static function getDefault() : java.net.CookieHandler;
 	
 	/**
 	* Sets (or unsets) the system-wide cookie handler.
@@ -49,7 +49,7 @@ extern class CookieHandler
 	* {@link NetPermission}<tt>("setCookieHandler")</tt>
 	* @see #getDefault()
 	*/
-	@:overload @:synchronized public static function setDefault(cHandler : java.net.CookieHandler) : Void;
+	@:overload @:public @:synchronized @:static public static function setDefault(cHandler : java.net.CookieHandler) : Void;
 	
 	/**
 	* Gets all the applicable cookies from a cookie cache for the
@@ -81,7 +81,7 @@ extern class CookieHandler
 	* @throws IllegalArgumentException if either argument is null
 	* @see #put(URI, Map)
 	*/
-	@:overload @:abstract public function get(uri : java.net.URI, requestHeaders : java.util.Map<String, java.util.List<String>>) : java.util.Map<String, java.util.List<String>>;
+	@:overload @:public @:abstract public function get(uri : java.net.URI, requestHeaders : java.util.Map<String, java.util.List<String>>) : java.util.Map<String, java.util.List<String>>;
 	
 	/**
 	* Sets all the applicable cookies, examples are response header
@@ -96,7 +96,7 @@ extern class CookieHandler
 	* @throws  IllegalArgumentException if either argument is null
 	* @see #get(URI, Map)
 	*/
-	@:overload @:abstract public function put(uri : java.net.URI, responseHeaders : java.util.Map<String, java.util.List<String>>) : Void;
+	@:overload @:public @:abstract public function put(uri : java.net.URI, responseHeaders : java.util.Map<String, java.util.List<String>>) : Void;
 	
 	
 }

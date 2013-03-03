@@ -43,7 +43,7 @@ extern class MidiFileReader
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload @:abstract public function getMidiFileFormat(stream : java.io.InputStream) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public @:abstract public function getMidiFileFormat(stream : java.io.InputStream) : javax.sound.midi.MidiFileFormat;
 	
 	/**
 	* Obtains the MIDI file format of the URL provided.  The URL must
@@ -55,7 +55,7 @@ extern class MidiFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getMidiFileFormat(url : java.net.URL) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public @:abstract public function getMidiFileFormat(url : java.net.URL) : javax.sound.midi.MidiFileFormat;
 	
 	/**
 	* Obtains the MIDI file format of the <code>File</code> provided.
@@ -67,7 +67,7 @@ extern class MidiFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getMidiFileFormat(file : java.io.File) : javax.sound.midi.MidiFileFormat;
+	@:overload @:public @:abstract public function getMidiFileFormat(file : java.io.File) : javax.sound.midi.MidiFileFormat;
 	
 	/**
 	* Obtains a MIDI sequence from the input stream provided.  The stream must
@@ -88,7 +88,7 @@ extern class MidiFileReader
 	* @see InputStream#markSupported
 	* @see InputStream#mark
 	*/
-	@:overload @:abstract public function getSequence(stream : java.io.InputStream) : javax.sound.midi.Sequence;
+	@:overload @:public @:abstract public function getSequence(stream : java.io.InputStream) : javax.sound.midi.Sequence;
 	
 	/**
 	* Obtains a MIDI sequence from the URL provided.  The URL must
@@ -101,7 +101,7 @@ extern class MidiFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getSequence(url : java.net.URL) : javax.sound.midi.Sequence;
+	@:overload @:public @:abstract public function getSequence(url : java.net.URL) : javax.sound.midi.Sequence;
 	
 	/**
 	* Obtains a MIDI sequence from the <code>File</code> provided.  The <code>File</code> must
@@ -114,7 +114,7 @@ extern class MidiFileReader
 	* file data recognized by the system
 	* @throws IOException if an I/O exception occurs
 	*/
-	@:overload @:abstract public function getSequence(file : java.io.File) : javax.sound.midi.Sequence;
+	@:overload @:public @:abstract public function getSequence(file : java.io.File) : javax.sound.midi.Sequence;
 	
 	
 }

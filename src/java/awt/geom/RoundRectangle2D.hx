@@ -36,7 +36,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* @see java.awt.geom.RoundRectangle2D.Double
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the width of the arc that rounds off the corners.
@@ -44,7 +44,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getArcWidth() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getArcWidth() : Float;
 	
 	/**
 	* Gets the height of the arc that rounds off the corners.
@@ -52,7 +52,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getArcHeight() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getArcHeight() : Float;
 	
 	/**
 	* Sets the location, size, and corner radii of this
@@ -73,7 +73,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	*                  <code>RoundRectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setRoundRect(x : Float, y : Float, w : Float, h : Float, arcWidth : Float, arcHeight : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setRoundRect(x : Float, y : Float, w : Float, h : Float, arcWidth : Float, arcHeight : Float) : Void;
 	
 	/**
 	* Sets this <code>RoundRectangle2D</code> to be the same as the
@@ -81,31 +81,31 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* @param rr the specified <code>RoundRectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
+	@:require(java2) @:overload @:public public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
+	@:require(java2) @:overload @:public override public function setFrame(x : Float, y : Float, w : Float, h : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public override public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public override public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public override public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Returns an iteration object that defines the boundary of this
@@ -123,14 +123,14 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	*          <code>RoundRectangle2D</code>, one segment at a time.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public override public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns the hashcode for this <code>RoundRectangle2D</code>.
 	* @return the hashcode for this <code>RoundRectangle2D</code>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hashCode() : Int;
+	@:require(java6) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Determines whether or not the specified <code>Object</code> is
@@ -146,7 +146,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	*          <code>false</code> otherwise.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -162,42 +162,42 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Single;
+	@:require(java2) @:public public var x : Single;
 	
 	/**
 	* The Y coordinate of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Single;
+	@:require(java2) @:public public var y : Single;
 	
 	/**
 	* The width of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var width : Single;
+	@:require(java2) @:public public var width : Single;
 	
 	/**
 	* The height of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var height : Single;
+	@:require(java2) @:public public var height : Single;
 	
 	/**
 	* The width of the arc that rounds off the corners.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var arcwidth : Single;
+	@:require(java2) @:public public var arcwidth : Single;
 	
 	/**
 	* The height of the arc that rounds off the corners.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var archeight : Single;
+	@:require(java2) @:public public var archeight : Single;
 	
 	/**
 	* Constructs a new <code>RoundRectangle2D</code>, initialized to
@@ -205,7 +205,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* of radius 0.0.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>RoundRectangle2D</code>
@@ -227,49 +227,49 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	*             <code>RoundRectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Single, y : Single, w : Single, h : Single, arcw : Single, arch : Single) : Void;
+	@:require(java2) @:overload @:public public function new(x : Single, y : Single, w : Single, h : Single, arcw : Single, arch : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getArcWidth() : Float;
+	@:require(java2) @:overload @:public override public function getArcWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getArcHeight() : Float;
+	@:require(java2) @:overload @:public override public function getArcHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Sets the location, size, and corner radii of this
@@ -290,25 +290,25 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	*             <code>RoundRectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setRoundRect(x : Single, y : Single, w : Single, h : Single, arcw : Single, arch : Single) : Void;
+	@:require(java2) @:overload @:public public function setRoundRect(x : Single, y : Single, w : Single, h : Single, arcw : Single, arch : Single) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRoundRect(x : Float, y : Float, w : Float, h : Float, arcw : Float, arch : Float) : Void;
+	@:require(java2) @:overload @:public override public function setRoundRect(x : Float, y : Float, w : Float, h : Float, arcw : Float, arch : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
+	@:require(java2) @:overload @:public override public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -324,42 +324,42 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var x : Float;
+	@:require(java2) @:public public var x : Float;
 	
 	/**
 	* The Y coordinate of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var y : Float;
+	@:require(java2) @:public public var y : Float;
 	
 	/**
 	* The width of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var width : Float;
+	@:require(java2) @:public public var width : Float;
 	
 	/**
 	* The height of this <code>RoundRectangle2D</code>.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var height : Float;
+	@:require(java2) @:public public var height : Float;
 	
 	/**
 	* The width of the arc that rounds off the corners.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var arcwidth : Float;
+	@:require(java2) @:public public var arcwidth : Float;
 	
 	/**
 	* The height of the arc that rounds off the corners.
 	* @since 1.2
 	* @serial
 	*/
-	@:require(java2) public var archeight : Float;
+	@:require(java2) @:public public var archeight : Float;
 	
 	/**
 	* Constructs a new <code>RoundRectangle2D</code>, initialized to
@@ -367,7 +367,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* of radius 0.0.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new() : Void;
+	@:require(java2) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>RoundRectangle2D</code>
@@ -389,67 +389,67 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	*             <code>RoundRectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(x : Float, y : Float, w : Float, h : Float, arcw : Float, arch : Float) : Void;
+	@:require(java2) @:overload @:public public function new(x : Float, y : Float, w : Float, h : Float, arcw : Float, arch : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getX() : Float;
+	@:require(java2) @:overload @:public override public function getX() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getY() : Float;
+	@:require(java2) @:overload @:public override public function getY() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getWidth() : Float;
+	@:require(java2) @:overload @:public override public function getWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getHeight() : Float;
+	@:require(java2) @:overload @:public override public function getHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getArcWidth() : Float;
+	@:require(java2) @:overload @:public override public function getArcWidth() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getArcHeight() : Float;
+	@:require(java2) @:overload @:public override public function getArcHeight() : Float;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function isEmpty() : Bool;
+	@:require(java2) @:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRoundRect(x : Float, y : Float, w : Float, h : Float, arcw : Float, arch : Float) : Void;
+	@:require(java2) @:overload @:public override public function setRoundRect(x : Float, y : Float, w : Float, h : Float, arcw : Float, arch : Float) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
+	@:require(java2) @:overload @:public override public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }

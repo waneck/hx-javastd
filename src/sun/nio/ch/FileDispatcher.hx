@@ -25,13 +25,13 @@ package sun.nio.ch;
 */
 @:internal extern class FileDispatcher extends sun.nio.ch.NativeDispatcher
 {
-	public static var NO_LOCK(default, null) : Int;
+	@:public @:static @:final public static var NO_LOCK(default, null) : Int;
 	
-	public static var LOCKED(default, null) : Int;
+	@:public @:static @:final public static var LOCKED(default, null) : Int;
 	
-	public static var RET_EX_LOCK(default, null) : Int;
+	@:public @:static @:final public static var RET_EX_LOCK(default, null) : Int;
 	
-	public static var INTERRUPTED(default, null) : Int;
+	@:public @:static @:final public static var INTERRUPTED(default, null) : Int;
 	
 	
 }

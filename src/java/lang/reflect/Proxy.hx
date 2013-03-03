@@ -29,7 +29,7 @@ extern class Proxy implements java.io.Serializable
 	* the invocation handler for this proxy instance.
 	* @serial
 	*/
-	private var h : java.lang.reflect.InvocationHandler;
+	@:protected private var h : java.lang.reflect.InvocationHandler;
 	
 	/**
 	* Constructs a new {@code Proxy} instance from a subclass
@@ -38,7 +38,7 @@ extern class Proxy implements java.io.Serializable
 	*
 	* @param   h the invocation handler for this proxy instance
 	*/
-	@:overload private function new(h : java.lang.reflect.InvocationHandler) : Void;
+	@:overload @:protected private function new(h : java.lang.reflect.InvocationHandler) : Void;
 	
 	/**
 	* Returns the {@code java.lang.Class} object for a proxy class
@@ -114,7 +114,7 @@ extern class Proxy implements java.io.Serializable
 	* @throws  NullPointerException if the {@code interfaces} array
 	*          argument or any of its elements are {@code null}
 	*/
-	@:overload public static function getProxyClass(loader : java.lang.ClassLoader, interfaces : java.NativeArray<Class<Dynamic>>) : Class<Dynamic>;
+	@:overload @:public @:static public static function getProxyClass(loader : java.lang.ClassLoader, interfaces : java.NativeArray<Class<Dynamic>>) : Class<Dynamic>;
 	
 	/**
 	* Returns an instance of a proxy class for the specified interfaces
@@ -145,7 +145,7 @@ extern class Proxy implements java.io.Serializable
 	*          if the invocation handler, {@code h}, is
 	*          {@code null}
 	*/
-	@:overload public static function newProxyInstance(loader : java.lang.ClassLoader, interfaces : java.NativeArray<Class<Dynamic>>, h : java.lang.reflect.InvocationHandler) : Dynamic;
+	@:overload @:public @:static public static function newProxyInstance(loader : java.lang.ClassLoader, interfaces : java.NativeArray<Class<Dynamic>>, h : java.lang.reflect.InvocationHandler) : Dynamic;
 	
 	/**
 	* Returns true if and only if the specified class was dynamically
@@ -161,7 +161,7 @@ extern class Proxy implements java.io.Serializable
 	*          {@code false} otherwise
 	* @throws  NullPointerException if {@code cl} is {@code null}
 	*/
-	@:overload public static function isProxyClass(cl : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isProxyClass(cl : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns the invocation handler for the specified proxy instance.
@@ -171,7 +171,7 @@ extern class Proxy implements java.io.Serializable
 	* @throws  IllegalArgumentException if the argument is not a
 	*          proxy instance
 	*/
-	@:overload public static function getInvocationHandler(proxy : Dynamic) : java.lang.reflect.InvocationHandler;
+	@:overload @:public @:static public static function getInvocationHandler(proxy : Dynamic) : java.lang.reflect.InvocationHandler;
 	
 	
 }

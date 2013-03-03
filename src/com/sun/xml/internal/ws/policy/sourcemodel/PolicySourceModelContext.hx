@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 */
 extern class PolicySourceModelContext
 {
-	@:overload public function addModel(modelUri : java.net.URI, model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel) : Void;
+	@:overload @:public public function addModel(modelUri : java.net.URI, model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel) : Void;
 	
-	@:overload public static function createContext() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModelContext;
+	@:overload @:public @:static public static function createContext() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModelContext;
 	
-	@:overload public function containsModel(modelUri : java.net.URI) : Bool;
+	@:overload @:public public function containsModel(modelUri : java.net.URI) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

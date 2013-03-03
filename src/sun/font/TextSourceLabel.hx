@@ -29,37 +29,37 @@ package sun.font;
 */
 extern class TextSourceLabel extends sun.font.TextLabel
 {
-	@:overload public function new(source : sun.font.TextSource) : Void;
+	@:overload @:public public function new(source : sun.font.TextSource) : Void;
 	
-	@:overload public function new(source : sun.font.TextSource, lb : java.awt.geom.Rectangle2D, ab : java.awt.geom.Rectangle2D, gv : java.awt.font.GlyphVector) : Void;
+	@:overload @:public public function new(source : sun.font.TextSource, lb : java.awt.geom.Rectangle2D, ab : java.awt.geom.Rectangle2D, gv : java.awt.font.GlyphVector) : Void;
 	
-	@:overload public function getSource() : sun.font.TextSource;
+	@:overload @:public public function getSource() : sun.font.TextSource;
 	
-	@:overload @:final override public function getLogicalBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final override public function getLogicalBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload @:final override public function getVisualBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final override public function getVisualBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload @:final override public function getAlignBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final override public function getAlignBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getItalicBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getItalicBounds(x : Single, y : Single) : java.awt.geom.Rectangle2D;
 	
-	@:overload public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload public function getBaselineTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload override public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public override public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload override public function draw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public override public function draw(g : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
-	@:overload private function createLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:protected private function createLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload private function createVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:protected private function createVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload private function createItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:protected private function createItalicBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload private function createAlignBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:protected private function createAlignBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload private function createGV() : java.awt.font.GlyphVector;
+	@:overload @:protected private function createGV() : java.awt.font.GlyphVector;
 	
 	
 }

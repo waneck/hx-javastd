@@ -74,7 +74,7 @@ package java.lang.reflect;
 	* @throws NullPointerException if {@code name} is {@code null}.
 	* @throws IllegalArgumentException if {@code name} is empty.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs a ReflectPermission with the specified name and actions.
@@ -87,7 +87,7 @@ package java.lang.reflect;
 	* @throws NullPointerException if {@code name} is {@code null}.
 	* @throws IllegalArgumentException if {@code name} is empty.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

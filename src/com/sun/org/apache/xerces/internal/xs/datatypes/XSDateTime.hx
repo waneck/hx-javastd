@@ -24,84 +24,84 @@ extern interface XSDateTime
 	* @return years - can be negative for date-time related types;
 	*
 	*/
-	@:overload public function getYears() : Int;
+	@:overload @:public public function getYears() : Int;
 	
 	/**
 	* @return months - can be negative only for duration types;
 	*                  For duration types, it returns years*12 + months
 	*/
-	@:overload public function getMonths() : Int;
+	@:overload @:public public function getMonths() : Int;
 	
 	/**
 	* @return days - cannot be negative;
 	*
 	*/
-	@:overload public function getDays() : Int;
+	@:overload @:public public function getDays() : Int;
 	
 	/**
 	* @return hours - cannot be negative;
 	*
 	*/
-	@:overload public function getHours() : Int;
+	@:overload @:public public function getHours() : Int;
 	
 	/**
 	* @return minutes - cannot be negative;
 	*
 	*/
-	@:overload public function getMinutes() : Int;
+	@:overload @:public public function getMinutes() : Int;
 	
 	/**
 	* @return seconds - can be negative only for durations;
 	*                   For duration types, it returns days*24*3600 + hours*3600
 	*                                                  + minutes*60 + seconds
 	*/
-	@:overload public function getSeconds() : Float;
+	@:overload @:public public function getSeconds() : Float;
 	
 	/**
 	* @return boolean (true when timezone is specified in the original lexical value)
 	*
 	*/
-	@:overload public function hasTimeZone() : Bool;
+	@:overload @:public public function hasTimeZone() : Bool;
 	
 	/**
 	* @return timezone hours (for GMT-xx:xx this will be negative),
 	*
 	*/
-	@:overload public function getTimeZoneHours() : Int;
+	@:overload @:public public function getTimeZoneHours() : Int;
 	
 	/**
 	* @return timezone minutes (for GMT-xx:xx this will be negative),
 	*
 	*/
-	@:overload public function getTimeZoneMinutes() : Int;
+	@:overload @:public public function getTimeZoneMinutes() : Int;
 	
 	/**
 	* @return the original lexical value
 	*/
-	@:overload public function getLexicalValue() : String;
+	@:overload @:public public function getLexicalValue() : String;
 	
 	/**
 	* @return a new date-time related object with normalized values
 	*         (has no effect on objects already
 	*          normalized)
 	*/
-	@:overload public function normalize() : com.sun.org.apache.xerces.internal.xs.datatypes.XSDateTime;
+	@:overload @:public public function normalize() : com.sun.org.apache.xerces.internal.xs.datatypes.XSDateTime;
 	
 	/**
 	* @return whether a date-time related object is normalized or not
 	*         (value is not useful for types where timezone is not specified)
 	*/
-	@:overload public function isNormalized() : Bool;
+	@:overload @:public public function isNormalized() : Bool;
 	
 	/**
 	* @return an un-normalized XMLGregorianCalendar (if applicable otherwise null)
 	*/
-	@:overload public function getXMLGregorianCalendar() : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload @:public public function getXMLGregorianCalendar() : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* @return a Duration (if applicable otherwise null)
 	*/
-	@:overload public function getDuration() : javax.xml.datatype.Duration;
+	@:overload @:public public function getDuration() : javax.xml.datatype.Duration;
 	
 	
 }

@@ -49,19 +49,19 @@ extern class NameClassWalker implements com.sun.xml.internal.rngom.nc.NameClassV
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitNsName(ns : String) : java.lang.Void;
+	@:overload @:public public function visitNsName(ns : String) : java.lang.Void;
 	
-	@:overload public function visitNsNameExcept(ns : String, nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitNsNameExcept(ns : String, nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitAnyName() : java.lang.Void;
+	@:overload @:public public function visitAnyName() : java.lang.Void;
 	
-	@:overload public function visitAnyNameExcept(nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitAnyNameExcept(nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitName(name : javax.xml.namespace.QName) : java.lang.Void;
+	@:overload @:public public function visitName(name : javax.xml.namespace.QName) : java.lang.Void;
 	
-	@:overload public function visitNull() : java.lang.Void;
+	@:overload @:public public function visitNull() : java.lang.Void;
 	
 	
 }

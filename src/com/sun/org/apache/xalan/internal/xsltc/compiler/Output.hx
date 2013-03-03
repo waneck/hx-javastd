@@ -26,33 +26,33 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Displays the contents of this element (for debugging)
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Disables this <xsl:output> element in case where there are some other
 	* <xsl:output> element (from a different imported/included stylesheet)
 	* with higher precedence.
 	*/
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
-	@:overload public function enabled() : Bool;
+	@:overload @:public public function enabled() : Bool;
 	
-	@:overload public function getCdata() : String;
+	@:overload @:public public function getCdata() : String;
 	
-	@:overload public function getOutputMethod() : String;
+	@:overload @:public public function getOutputMethod() : String;
 	
-	@:overload public function mergeOutput(previous : com.sun.org.apache.xalan.internal.xsltc.compiler.Output) : Void;
+	@:overload @:public public function mergeOutput(previous : com.sun.org.apache.xalan.internal.xsltc.compiler.Output) : Void;
 	
 	/**
 	* Scans the attribute list for the xsl:output instruction
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Compile code that passes the information in this <xsl:output> element
 	* to the appropriate fields in the translet
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

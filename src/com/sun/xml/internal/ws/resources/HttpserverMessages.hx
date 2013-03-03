@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.resources;
 */
 extern class HttpserverMessages
 {
-	@:overload public static function localizableUNEXPECTED_HTTP_METHOD(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableUNEXPECTED_HTTP_METHOD(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Cannot handle HTTP method: {0}
 	*
 	*/
-	@:overload public static function UNEXPECTED_HTTP_METHOD(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function UNEXPECTED_HTTP_METHOD(arg0 : Dynamic) : String;
 	
 	
 }

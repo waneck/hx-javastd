@@ -86,21 +86,21 @@ extern class DistributionPoint
 	* @since 1.4.2
 	* @see CRLDistributionPointsExtension
 	*/
-	@:require(java4) public static var KEY_COMPROMISE(default, null) : Int;
+	@:require(java4) @:public @:final @:static public static var KEY_COMPROMISE(default, null) : Int;
 	
-	public static var CA_COMPROMISE(default, null) : Int;
+	@:public @:final @:static public static var CA_COMPROMISE(default, null) : Int;
 	
-	public static var AFFILIATION_CHANGED(default, null) : Int;
+	@:public @:final @:static public static var AFFILIATION_CHANGED(default, null) : Int;
 	
-	public static var SUPERSEDED(default, null) : Int;
+	@:public @:final @:static public static var SUPERSEDED(default, null) : Int;
 	
-	public static var CESSATION_OF_OPERATION(default, null) : Int;
+	@:public @:final @:static public static var CESSATION_OF_OPERATION(default, null) : Int;
 	
-	public static var CERTIFICATE_HOLD(default, null) : Int;
+	@:public @:final @:static public static var CERTIFICATE_HOLD(default, null) : Int;
 	
-	public static var PRIVILEGE_WITHDRAWN(default, null) : Int;
+	@:public @:final @:static public static var PRIVILEGE_WITHDRAWN(default, null) : Int;
 	
-	public static var AA_COMPROMISE(default, null) : Int;
+	@:public @:final @:static public static var AA_COMPROMISE(default, null) : Int;
 	
 	/**
 	* Constructor for the class using GeneralNames for DistributionPointName
@@ -111,7 +111,7 @@ extern class DistributionPoint
 	* @param issuer the name(s) of the CRL issuer for the CRL at this
 	*        distribution point; may be null
 	*/
-	@:overload public function new(fullName : sun.security.x509.GeneralNames, reasonFlags : java.NativeArray<Bool>, crlIssuer : sun.security.x509.GeneralNames) : Void;
+	@:overload @:public public function new(fullName : sun.security.x509.GeneralNames, reasonFlags : java.NativeArray<Bool>, crlIssuer : sun.security.x509.GeneralNames) : Void;
 	
 	/**
 	* Constructor for the class using RelativeDistinguishedName for
@@ -124,7 +124,7 @@ extern class DistributionPoint
 	* @param issuer the name(s) of the CRL issuer for the CRL at this
 	*        distribution point; may not be null or empty.
 	*/
-	@:overload public function new(relativeName : sun.security.x509.RDN, reasonFlags : java.NativeArray<Bool>, crlIssuer : sun.security.x509.GeneralNames) : Void;
+	@:overload @:public public function new(relativeName : sun.security.x509.RDN, reasonFlags : java.NativeArray<Bool>, crlIssuer : sun.security.x509.GeneralNames) : Void;
 	
 	/**
 	* Create the object from the passed DER encoded form.
@@ -132,27 +132,27 @@ extern class DistributionPoint
 	* @param val the DER encoded form of the DistributionPoint
 	* @throws IOException on error
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the full distribution point name or null if not set.
 	*/
-	@:overload public function getFullName() : sun.security.x509.GeneralNames;
+	@:overload @:public public function getFullName() : sun.security.x509.GeneralNames;
 	
 	/**
 	* Return the relative distribution point name or null if not set.
 	*/
-	@:overload public function getRelativeName() : sun.security.x509.RDN;
+	@:overload @:public public function getRelativeName() : sun.security.x509.RDN;
 	
 	/**
 	* Return the reason flags or null if not set.
 	*/
-	@:overload public function getReasonFlags() : java.NativeArray<Bool>;
+	@:overload @:public public function getReasonFlags() : java.NativeArray<Bool>;
 	
 	/**
 	* Return the CRL issuer name or null if not set.
 	*/
-	@:overload public function getCRLIssuer() : sun.security.x509.GeneralNames;
+	@:overload @:public public function getCRLIssuer() : sun.security.x509.GeneralNames;
 	
 	/**
 	* Write the DistributionPoint value to the DerOutputStream.
@@ -160,7 +160,7 @@ extern class DistributionPoint
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on error.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Compare an object to this DistributionPoint for equality.
@@ -168,14 +168,14 @@ extern class DistributionPoint
 	* @param obj Object to be compared to this
 	* @return true if objects match; false otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return a printable string of the Distribution Point.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

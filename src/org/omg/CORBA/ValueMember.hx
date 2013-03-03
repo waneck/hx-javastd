@@ -40,52 +40,52 @@ extern class ValueMember implements org.omg.CORBA.portable.IDLEntity
 	* <code>ValueMember</code> object.
 	* @serial
 	*/
-	public var name : String;
+	@:public public var name : String;
 	
 	/**
 	* The repository ID of the <code>value</code> member described by
 	* this <code>ValueMember</code> object;
 	* @serial
 	*/
-	public var id : String;
+	@:public public var id : String;
 	
 	/**
 	* The repository ID of the <code>value</code> in which this member
 	* is defined.
 	* @serial
 	*/
-	public var defined_in : String;
+	@:public public var defined_in : String;
 	
 	/**
 	* The version of the <code>value</code> in which this member is defined.
 	* @serial
 	*/
-	public var version : String;
+	@:public public var version : String;
 	
 	/**
 	* The type of of this <code>value</code> member.
 	* @serial
 	*/
-	public var type : org.omg.CORBA.TypeCode;
+	@:public public var type : org.omg.CORBA.TypeCode;
 	
 	/**
 	* The typedef that represents the IDL type of the <code>value</code>
 	* member described by this <code>ValueMember</code> object.
 	* @serial
 	*/
-	public var type_def : org.omg.CORBA.IDLType;
+	@:public public var type_def : org.omg.CORBA.IDLType;
 	
 	/**
 	* The type of access (public, private) for the <code>value</code>
 	* member described by this <code>ValueMember</code> object.
 	* @serial
 	*/
-	public var access : java.StdTypes.Int16;
+	@:public public var access : java.StdTypes.Int16;
 	
 	/**
 	* Constructs a default <code>ValueMember</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>ValueMember</code> object initialized with
@@ -104,7 +104,7 @@ extern class ValueMember implements org.omg.CORBA.portable.IDLEntity
 	*@param __access The type of access (public, private) for the <code>value</code>
 	* member described by this <code>ValueMember</code> object.
 	*/
-	@:overload public function new(__name : String, __id : String, __defined_in : String, __version : String, __type : org.omg.CORBA.TypeCode, __type_def : org.omg.CORBA.IDLType, __access : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(__name : String, __id : String, __defined_in : String, __version : String, __type : org.omg.CORBA.TypeCode, __type_def : org.omg.CORBA.IDLType, __access : java.StdTypes.Int16) : Void;
 	
 	
 }

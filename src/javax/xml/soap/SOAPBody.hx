@@ -39,7 +39,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	* @return the new <code>SOAPFault</code> object
 	* @exception SOAPException if there is a SOAP error
 	*/
-	@:overload public function addFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public public function addFault() : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Creates a new <code>SOAPFault</code> object and adds it to
@@ -71,7 +71,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	* @see SOAPFault#setFaultString
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function addFault(faultCode : javax.xml.soap.Name, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
+	@:require(java2) @:overload @:public public function addFault(faultCode : javax.xml.soap.Name, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Creates a new <code>SOAPFault</code> object and adds it to this
@@ -108,7 +108,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addFault(faultCode : javax.xml.namespace.QName, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
+	@:require(java3) @:overload @:public public function addFault(faultCode : javax.xml.namespace.QName, faultString : String, locale : java.util.Locale) : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Creates a new  <code>SOAPFault</code> object and adds it to this
@@ -144,7 +144,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	* @see SOAPFault#setFaultString
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function addFault(faultCode : javax.xml.soap.Name, faultString : String) : javax.xml.soap.SOAPFault;
+	@:require(java2) @:overload @:public public function addFault(faultCode : javax.xml.soap.Name, faultString : String) : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Creates a new <code>SOAPFault</code> object and adds it to this <code>SOAPBody</code>
@@ -181,7 +181,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	* @see SOAPBody#addFault(Name faultCode, String faultString)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addFault(faultCode : javax.xml.namespace.QName, faultString : String) : javax.xml.soap.SOAPFault;
+	@:require(java3) @:overload @:public public function addFault(faultCode : javax.xml.namespace.QName, faultString : String) : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Indicates whether a <code>SOAPFault</code> object exists in this
@@ -191,7 +191,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	*         in this <code>SOAPBody</code> object; <code>false</code>
 	*         otherwise
 	*/
-	@:overload public function hasFault() : Bool;
+	@:overload @:public public function hasFault() : Bool;
 	
 	/**
 	* Returns the <code>SOAPFault</code> object in this <code>SOAPBody</code>
@@ -200,7 +200,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	* @return the <code>SOAPFault</code> object in this <code>SOAPBody</code>
 	*         object if present, null otherwise.
 	*/
-	@:overload public function getFault() : javax.xml.soap.SOAPFault;
+	@:overload @:public public function getFault() : javax.xml.soap.SOAPFault;
 	
 	/**
 	* Creates a new <code>SOAPBodyElement</code> object with the specified
@@ -214,7 +214,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	*                if a SOAP error occurs
 	* @see SOAPBody#addBodyElement(javax.xml.namespace.QName)
 	*/
-	@:overload public function addBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
+	@:overload @:public public function addBodyElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPBodyElement;
 	
 	/**
 	* Creates a new <code>SOAPBodyElement</code> object with the specified
@@ -229,7 +229,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	* @see SOAPBody#addBodyElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addBodyElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
+	@:require(java3) @:overload @:public public function addBodyElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
 	
 	/**
 	* Adds the root node of the DOM <code>{@link org.w3c.dom.Document}</code>
@@ -249,7 +249,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	*                if the <code>Document</code> cannot be added
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function addDocument(document : org.w3c.dom.Document) : javax.xml.soap.SOAPBodyElement;
+	@:require(java2) @:overload @:public public function addDocument(document : org.w3c.dom.Document) : javax.xml.soap.SOAPBodyElement;
 	
 	/**
 	* Creates a new DOM <code>{@link org.w3c.dom.Document}</code> and sets
@@ -266,7 +266,7 @@ extern interface SOAPBody extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function extractContentAsDocument() : org.w3c.dom.Document;
+	@:require(java3) @:overload @:public public function extractContentAsDocument() : org.w3c.dom.Document;
 	
 	
 }

@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface ComplexType extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexTypeModel extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function _final(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function _final(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
-	@:overload public function _final(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function _final(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
-	@:overload public function block(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function block(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
-	@:overload public function block(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function block(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
-	@:overload public function _abstract(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function _abstract(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
-	@:overload public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class ServerLogicalHandlerTube extends com.sun.xml.internal.ws.handler.Ha
 	/**
 	* Creates a new instance of LogicalHandlerTube
 	*/
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
 	/**
 	* This constructor is used on client-side where, SOAPHandlerTube is created
@@ -37,11 +37,11 @@ extern class ServerLogicalHandlerTube extends com.sun.xml.internal.ws.handler.Ha
 	* With this handle, LogicalHandlerTube can call
 	* SOAPHandlerTube.closeHandlers()
 	*/
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
 	
-	@:overload override private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
+	@:overload @:protected override private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
 	
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	* Java Cryptography Architecture Standard Algorithm Name Documentation</a>
 	* for information about standard algorithm names.
 	*/
-	@:overload private function new(algorithm : String) : Void;
+	@:overload @:protected private function new(algorithm : String) : Void;
 	
 	/**
 	* Returns a MessageDigest object that implements the specified digest
@@ -63,7 +63,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.MessageDigest;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.MessageDigest;
 	
 	/**
 	* Returns a MessageDigest object that implements the specified digest
@@ -99,7 +99,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.MessageDigest;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.MessageDigest;
 	
 	/**
 	* Returns a MessageDigest object that implements the specified digest
@@ -130,21 +130,21 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.MessageDigest;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.MessageDigest;
 	
 	/**
 	* Returns the provider of this message digest object.
 	*
 	* @return the provider of this message digest object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Updates the digest using the specified byte.
 	*
 	* @param input the byte with which to update the digest.
 	*/
-	@:overload public function update(input : java.StdTypes.Int8) : Void;
+	@:overload @:public public function update(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Updates the digest using the specified array of bytes, starting
@@ -157,14 +157,14 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	* @param len the number of bytes to use, starting at
 	* <code>offset</code>.
 	*/
-	@:overload public function update(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function update(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Updates the digest using the specified array of bytes.
 	*
 	* @param input the array of bytes.
 	*/
-	@:overload public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Update the digest using the specified ByteBuffer. The digest is
@@ -176,7 +176,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	* @param input the ByteBuffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function update(input : java.nio.ByteBuffer) : Void;
+	@:require(java5) @:overload @:public @:final public function update(input : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Completes the hash computation by performing final operations
@@ -184,7 +184,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @return the array of bytes for the resulting hash value.
 	*/
-	@:overload public function digest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function digest() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Completes the hash computation by performing final operations
@@ -200,7 +200,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @exception DigestException if an error occurs.
 	*/
-	@:overload public function digest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:public public function digest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
 	/**
 	* Performs a final update on the digest using the specified array
@@ -214,12 +214,12 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @return the array of bytes for the resulting hash value.
 	*/
-	@:overload public function digest(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function digest(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a string representation of this message digest object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares two digests for equality. Does a simple byte compare.
@@ -230,12 +230,12 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @return true if the digests are equal, false otherwise.
 	*/
-	@:overload public static function isEqual(digesta : java.NativeArray<java.StdTypes.Int8>, digestb : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static public static function isEqual(digesta : java.NativeArray<java.StdTypes.Int8>, digestb : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Resets the digest for further use.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns a string that identifies the algorithm, independent of
@@ -248,7 +248,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @return the name of the algorithm
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns the length of the digest in bytes, or 0 if this operation is
@@ -259,7 +259,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:final public function getDigestLength() : Int;
+	@:require(java2) @:overload @:public @:final public function getDigestLength() : Int;
 	
 	/**
 	* Returns a clone if the implementation is cloneable.
@@ -269,7 +269,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	* @exception CloneNotSupportedException if this is called on an
 	* implementation that does not support <code>Cloneable</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }
@@ -288,7 +288,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 */
 @:native('java$security$MessageDigest$Delegate') @:internal extern class MessageDigest_Delegate extends java.security.MessageDigest
 {
-	@:overload public function new(digestSpi : java.security.MessageDigestSpi, algorithm : String) : Void;
+	@:overload @:public public function new(digestSpi : java.security.MessageDigestSpi, algorithm : String) : Void;
 	
 	/**
 	* Returns a clone if the delegate is cloneable.
@@ -298,21 +298,21 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	* @exception CloneNotSupportedException if this is called on a
 	* delegate that does not support <code>Cloneable</code>.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
-	@:overload private function engineGetDigestLength() : Int;
+	@:overload @:protected override private function engineGetDigestLength() : Int;
 	
-	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:protected override private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
-	@:overload private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
 	
 }

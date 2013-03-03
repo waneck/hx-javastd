@@ -35,11 +35,11 @@ extern class TransducedAccessor_field_Short extends com.sun.xml.internal.bind.v2
 	*
 	* @see TransducedAccessor#get
 	*/
-	@:overload public function print(o : Dynamic) : String;
+	@:overload @:public override public function print(o : Dynamic) : String;
 	
-	@:overload public function parse(o : Dynamic, lexical : java.lang.CharSequence) : Void;
+	@:overload @:public override public function parse(o : Dynamic, lexical : java.lang.CharSequence) : Void;
 	
-	@:overload public function hasValue(o : Dynamic) : Bool;
+	@:overload @:public override public function hasValue(o : Dynamic) : Bool;
 	
 	
 }

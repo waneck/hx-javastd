@@ -30,7 +30,7 @@ extern class PolicyMerger
 	*
 	* @return policy merger instance.
 	*/
-	@:overload public static function getMerger() : com.sun.xml.internal.ws.policy.PolicyMerger;
+	@:overload @:public @:static public static function getMerger() : com.sun.xml.internal.ws.policy.PolicyMerger;
 	
 	/**
 	* Takes collection of policies and merges them into a single policy using algorithm described in
@@ -44,7 +44,7 @@ extern class PolicyMerger
 	*         If provided collection of policies is {@code null} or empty, returns {@code null}. If provided
 	*         collection of policies contains only single policy, the policy is returned.
 	*/
-	@:overload public function merge(policies : java.util.Collection<com.sun.xml.internal.ws.policy.Policy>) : com.sun.xml.internal.ws.policy.Policy;
+	@:overload @:public public function merge(policies : java.util.Collection<com.sun.xml.internal.ws.policy.Policy>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	
 }

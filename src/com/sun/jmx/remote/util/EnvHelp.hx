@@ -73,7 +73,7 @@ extern class EnvHelp
 	* <code>jmx.remote.default.class.loader.name</code> is specified
 	* and the ClassLoader MBean is not found in <var>mbs</var>.
 	*/
-	@:overload public static function resolveServerClassLoader(env : java.util.Map<String, Dynamic>, mbs : javax.management.MBeanServer) : java.lang.ClassLoader;
+	@:overload @:public @:static public static function resolveServerClassLoader(env : java.util.Map<String, Dynamic>, mbs : javax.management.MBeanServer) : java.lang.ClassLoader;
 	
 	/**
 	* Get the Connector Client default class loader.
@@ -102,7 +102,7 @@ extern class EnvHelp
 	* <code>jmx.remote.default.class.loader</code> is specified
 	* and is not an instance of {@link ClassLoader}.
 	*/
-	@:overload public static function resolveClientClassLoader(env : java.util.Map<String, Dynamic>) : java.lang.ClassLoader;
+	@:overload @:public @:static public static function resolveClientClassLoader(env : java.util.Map<String, Dynamic>) : java.lang.ClassLoader;
 	
 	/**
 	* Initialize the cause field of a {@code Throwable} object.
@@ -111,7 +111,7 @@ extern class EnvHelp
 	* @param cause The cause to set on the supplied {@code Throwable}.
 	* @return the {@code Throwable} with the cause field initialized.
 	*/
-	@:overload public static function initCause<T : java.lang.Throwable>(throwable : T, cause : java.lang.Throwable) : T;
+	@:overload @:public @:static public static function initCause<T : java.lang.Throwable>(throwable : T, cause : java.lang.Throwable) : T;
 	
 	/**
 	* Returns the cause field of a {@code Throwable} object.
@@ -121,19 +121,19 @@ extern class EnvHelp
 	* @return the cause if getCause() succeeded and the got value is not
 	* null, otherwise return the <var>t</var>.
 	*/
-	@:overload public static function getCause(t : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:public @:static public static function getCause(t : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* <p>Name of the attribute that specifies the size of a notification
 	* buffer for a connector server. The default value is 1000.
 	*/
-	public static var BUFFER_SIZE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var BUFFER_SIZE_PROPERTY(default, null) : String;
 	
 	/**
 	* Returns the size of a notification buffer for a connector server.
 	* The default value is 1000.
 	*/
-	@:overload public static function getNotifBufferSize(env : java.util.Map<String, Dynamic>) : Int;
+	@:overload @:public @:static public static function getNotifBufferSize(env : java.util.Map<String, Dynamic>) : Int;
 	
 	/**
 	* <p>Name of the attribute that specifies the maximum number of
@@ -141,13 +141,13 @@ extern class EnvHelp
 	* value associated with this attribute should be an
 	* <code>Integer</code> object.  The default value is 1000.</p>
 	*/
-	public static var MAX_FETCH_NOTIFS(default, null) : String;
+	@:public @:static @:final public static var MAX_FETCH_NOTIFS(default, null) : String;
 	
 	/**
 	* Returns the maximum notification number which a client will
 	* fetch every time.
 	*/
-	@:overload public static function getMaxFetchNotifNumber(env : java.util.Map<String, Dynamic>) : Int;
+	@:overload @:public @:static public static function getMaxFetchNotifNumber(env : java.util.Map<String, Dynamic>) : Int;
 	
 	/**
 	* <p>Name of the attribute that specifies the timeout for a
@@ -155,12 +155,12 @@ extern class EnvHelp
 	* associated with this attribute should be a <code>Long</code>
 	* object.  The default value is 60000 milliseconds.</p>
 	*/
-	public static var FETCH_TIMEOUT(default, null) : String;
+	@:public @:static @:final public static var FETCH_TIMEOUT(default, null) : String;
 	
 	/**
 	* Returns the timeout for a client to fetch notifications.
 	*/
-	@:overload public static function getFetchTimeout(env : java.util.Map<String, Dynamic>) : haxe.Int64;
+	@:overload @:public @:static public static function getFetchTimeout(env : java.util.Map<String, Dynamic>) : haxe.Int64;
 	
 	/**
 	* <p>Name of the attribute that specifies an object that will check
@@ -170,9 +170,9 @@ extern class EnvHelp
 	* The default value is null.</p>
 	* This field is not public because of its com.sun dependency.
 	*/
-	public static var NOTIF_ACCESS_CONTROLLER(default, null) : String;
+	@:public @:static @:final public static var NOTIF_ACCESS_CONTROLLER(default, null) : String;
 	
-	@:overload public static function getNotificationAccessController(env : java.util.Map<String, Dynamic>) : com.sun.jmx.remote.security.NotificationAccessController;
+	@:overload @:public @:static public static function getNotificationAccessController(env : java.util.Map<String, Dynamic>) : com.sun.jmx.remote.security.NotificationAccessController;
 	
 	/**
 	* Get an integer-valued attribute with name <code>name</code>
@@ -186,19 +186,19 @@ extern class EnvHelp
 	* an entry for <code>name</code> but it does not meet the
 	* constraints above.
 	*/
-	@:overload public static function getIntegerAttribute(env : java.util.Map<String, Dynamic>, name : String, defaultValue : haxe.Int64, minValue : haxe.Int64, maxValue : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function getIntegerAttribute(env : java.util.Map<String, Dynamic>, name : String, defaultValue : haxe.Int64, minValue : haxe.Int64, maxValue : haxe.Int64) : haxe.Int64;
 	
-	public static var DEFAULT_ORB(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_ORB(default, null) : String;
 	
 	/* Check that all attributes have a key that is a String.
 	Could make further checks, e.g. appropriate types for attributes.  */
-	@:overload public static function checkAttributes(attributes : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public @:static public static function checkAttributes(attributes : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/* Return a writable map containing only those attributes that are
 	serializable, and that are not hidden by
 	jmx.remote.x.hidden.attributes or the default list of hidden
 	attributes.  */
-	@:overload public static function filterAttributes<V>(attributes : java.util.Map<String, V>) : java.util.Map<String, V>;
+	@:overload @:public @:static public static function filterAttributes<V>(attributes : java.util.Map<String, V>) : java.util.Map<String, V>;
 	
 	/**
 	* The value of this attribute, if present, is a string specifying
@@ -213,38 +213,38 @@ extern class EnvHelp
 	* with an "=", then the remainder of the string defines the
 	* complete list of attribute patterns.
 	*/
-	public static var HIDDEN_ATTRIBUTES(default, null) : String;
+	@:public @:static @:final public static var HIDDEN_ATTRIBUTES(default, null) : String;
 	
 	/* This list is copied directly from the spec, plus
 	java.naming.security.*.  Most of the attributes here would have
 	been eliminated from the map anyway because they are typically
 	not serializable.  But just in case they are, we list them here
 	to conform to the spec.  */
-	public static var DEFAULT_HIDDEN_ATTRIBUTES(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_HIDDEN_ATTRIBUTES(default, null) : String;
 	
 	/**
 	* <p>Name of the attribute that specifies the timeout to keep a
 	* server side connection after answering last client request.
 	* The default value is 120000 milliseconds.</p>
 	*/
-	public static var SERVER_CONNECTION_TIMEOUT(default, null) : String;
+	@:public @:static @:final public static var SERVER_CONNECTION_TIMEOUT(default, null) : String;
 	
 	/**
 	* Returns the server side connection timeout.
 	*/
-	@:overload public static function getServerConnectionTimeout(env : java.util.Map<String, Dynamic>) : haxe.Int64;
+	@:overload @:public @:static public static function getServerConnectionTimeout(env : java.util.Map<String, Dynamic>) : haxe.Int64;
 	
 	/**
 	* <p>Name of the attribute that specifies the period in
 	* millisecond for a client to check its connection.  The default
 	* value is 60000 milliseconds.</p>
 	*/
-	public static var CLIENT_CONNECTION_CHECK_PERIOD(default, null) : String;
+	@:public @:static @:final public static var CLIENT_CONNECTION_CHECK_PERIOD(default, null) : String;
 	
 	/**
 	* Returns the client connection check period.
 	*/
-	@:overload public static function getConnectionCheckPeriod(env : java.util.Map<String, Dynamic>) : haxe.Int64;
+	@:overload @:public @:static public static function getConnectionCheckPeriod(env : java.util.Map<String, Dynamic>) : haxe.Int64;
 	
 	/**
 	* Computes a boolean value from a string value retrieved from a
@@ -269,7 +269,7 @@ extern class EnvHelp
 	* {@code ((String)env.get(prop)).equalsIgnoreCase("true")} are
 	* {@code false}.
 	*/
-	@:overload public static function computeBooleanFromString(stringBoolean : String) : Bool;
+	@:overload @:public @:static public static function computeBooleanFromString(stringBoolean : String) : Bool;
 	
 	/**
 	* Computes a boolean value from a string value retrieved from a
@@ -297,19 +297,19 @@ extern class EnvHelp
 	* {@code ((String)env.get(prop)).equalsIgnoreCase("true")} are
 	* {@code false}.
 	*/
-	@:overload public static function computeBooleanFromString(stringBoolean : String, defaultValue : Bool) : Bool;
+	@:overload @:public @:static public static function computeBooleanFromString(stringBoolean : String, defaultValue : Bool) : Bool;
 	
 	/**
 	* Converts a map into a valid hash table, i.e.
 	* it removes all the 'null' values from the map.
 	*/
-	@:overload public static function mapToHashtable<K, V>(map : java.util.Map<K, V>) : java.util.Hashtable<K, V>;
+	@:overload @:public @:static public static function mapToHashtable<K, V>(map : java.util.Map<K, V>) : java.util.Hashtable<K, V>;
 	
 	/**
 	* <p>Name of the attribute that specifies whether a connector server
 	* should not prevent the VM from exiting
 	*/
-	public static var JMX_SERVER_DAEMON(default, null) : String;
+	@:public @:static @:final public static var JMX_SERVER_DAEMON(default, null) : String;
 	
 	/**
 	* Returns true if {@value SERVER_DAEMON} is specified in the {@code env}
@@ -318,15 +318,15 @@ extern class EnvHelp
 	* @param env
 	* @return
 	*/
-	@:overload public static function isServerDaemon(env : java.util.Map<String, Dynamic>) : Bool;
+	@:overload @:public @:static public static function isServerDaemon(env : java.util.Map<String, Dynamic>) : Bool;
 	
 	
 }
 @:native('com$sun$jmx$remote$util$EnvHelp$SinkOutputStream') @:internal extern class EnvHelp_SinkOutputStream extends java.io.OutputStream
 {
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	
 }

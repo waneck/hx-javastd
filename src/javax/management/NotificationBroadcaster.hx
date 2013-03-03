@@ -41,7 +41,7 @@ extern interface NotificationBroadcaster
 	*
 	* @see #removeNotificationListener
 	*/
-	@:overload public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* Removes a listener from this MBean.  If the listener
@@ -58,7 +58,7 @@ extern interface NotificationBroadcaster
 	* @see #addNotificationListener
 	* @see NotificationEmitter#removeNotificationListener
 	*/
-	@:overload public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(listener : javax.management.NotificationListener) : Void;
 	
 	/**
 	* <p>Returns an array indicating, for each notification this
@@ -72,7 +72,7 @@ extern interface NotificationBroadcaster
 	*
 	* @return the array of possible notifications.
 	*/
-	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class SelectorProvider
 	*          If a security manager has been installed and it denies
 	*          {@link RuntimePermission}<tt>("selectorProvider")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the system-wide default selector provider for this invocation of
@@ -69,14 +69,14 @@ extern class SelectorProvider
 	*
 	* @return  The system-wide default selector provider
 	*/
-	@:overload public static function provider() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:public @:static public static function provider() : java.nio.channels.spi.SelectorProvider;
 	
 	/**
 	* Opens a datagram channel.  </p>
 	*
 	* @return  The new channel
 	*/
-	@:overload @:abstract public function openDatagramChannel() : java.nio.channels.DatagramChannel;
+	@:overload @:public @:abstract public function openDatagramChannel() : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Opens a datagram channel.
@@ -93,35 +93,35 @@ extern class SelectorProvider
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function openDatagramChannel(family : java.net.ProtocolFamily) : java.nio.channels.DatagramChannel;
+	@:require(java7) @:overload @:public @:abstract public function openDatagramChannel(family : java.net.ProtocolFamily) : java.nio.channels.DatagramChannel;
 	
 	/**
 	* Opens a pipe. </p>
 	*
 	* @return  The new pipe
 	*/
-	@:overload @:abstract public function openPipe() : java.nio.channels.Pipe;
+	@:overload @:public @:abstract public function openPipe() : java.nio.channels.Pipe;
 	
 	/**
 	* Opens a selector.  </p>
 	*
 	* @return  The new selector
 	*/
-	@:overload @:abstract public function openSelector() : java.nio.channels.spi.AbstractSelector;
+	@:overload @:public @:abstract public function openSelector() : java.nio.channels.spi.AbstractSelector;
 	
 	/**
 	* Opens a server-socket channel.  </p>
 	*
 	* @return  The new channel
 	*/
-	@:overload @:abstract public function openServerSocketChannel() : java.nio.channels.ServerSocketChannel;
+	@:overload @:public @:abstract public function openServerSocketChannel() : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Opens a socket channel. </p>
 	*
 	* @return  The new channel
 	*/
-	@:overload @:abstract public function openSocketChannel() : java.nio.channels.SocketChannel;
+	@:overload @:public @:abstract public function openSocketChannel() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Returns the channel inherited from the entity that created this
@@ -181,7 +181,7 @@ extern class SelectorProvider
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function inheritedChannel() : java.nio.channels.Channel;
+	@:require(java5) @:overload @:public public function inheritedChannel() : java.nio.channels.Channel;
 	
 	
 }

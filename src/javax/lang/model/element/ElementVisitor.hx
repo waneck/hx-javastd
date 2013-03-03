@@ -84,7 +84,7 @@ package javax.lang.model.element;
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
+	@:overload @:public public function visitPackage(e : javax.lang.model.element.PackageElement, p : P) : R;
 	
 	/**
 	* Visits a type element.
@@ -92,7 +92,7 @@ package javax.lang.model.element;
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
+	@:overload @:public public function visitType(e : javax.lang.model.element.TypeElement, p : P) : R;
 	
 	/**
 	* Visits a variable element.
@@ -100,7 +100,7 @@ package javax.lang.model.element;
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* Visits an executable element.
@@ -108,7 +108,7 @@ package javax.lang.model.element;
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
+	@:overload @:public public function visitExecutable(e : javax.lang.model.element.ExecutableElement, p : P) : R;
 	
 	/**
 	* Visits a type parameter element.
@@ -116,7 +116,7 @@ package javax.lang.model.element;
 	* @param p  a visitor-specified parameter
 	* @return a visitor-specified result
 	*/
-	@:overload public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
+	@:overload @:public public function visitTypeParameter(e : javax.lang.model.element.TypeParameterElement, p : P) : R;
 	
 	/**
 	* Visits an unknown kind of element.

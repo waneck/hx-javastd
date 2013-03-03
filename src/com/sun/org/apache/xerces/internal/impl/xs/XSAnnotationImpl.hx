@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 */
 extern class XSAnnotationImpl implements com.sun.org.apache.xerces.internal.xs.XSAnnotation
 {
-	@:overload public function new(contents : String, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Void;
+	@:overload @:public public function new(contents : String, grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Void;
 	
 	/**
 	*  Write contents of the annotation to the specified DOM object. If the
@@ -36,37 +36,37 @@ extern class XSAnnotationImpl implements com.sun.org.apache.xerces.internal.xs.X
 	* @return If the <code>target</code> is recognized type and supported by
 	*   this implementation return true, otherwise return false.
 	*/
-	@:overload public function writeAnnotation(target : Dynamic, targetType : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function writeAnnotation(target : Dynamic, targetType : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* A text representation of annotation.
 	*/
-	@:overload public function getAnnotationString() : String;
+	@:overload @:public public function getAnnotationString() : String;
 	
 	/**
 	*  The <code>type</code> of this object, i.e.
 	* <code>ELEMENT_DECLARATION</code>.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The name of type <code>NCName</code> of this declaration as defined in
 	* XML Namespaces.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	*  The [target namespace] of this object, or <code>null</code> if it is
 	* unspecified.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* A namespace schema information item corresponding to the target
 	* namespace of the component, if it's globally declared; or null
 	* otherwise.
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	
 }

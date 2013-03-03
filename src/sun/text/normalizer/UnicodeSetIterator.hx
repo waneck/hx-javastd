@@ -42,14 +42,14 @@ extern class UnicodeSetIterator
 	* <tt>string</tt> for the current iteration result.
 	* @stable ICU 2.0
 	*/
-	public static var IS_STRING : Int;
+	@:public @:static public static var IS_STRING : Int;
 	
 	/**
 	* Current code point, or the special value <tt>IS_STRING</tt>, if
 	* the iterator points to a string.
 	* @stable ICU 2.0
 	*/
-	public var codepoint : Int;
+	@:public public var codepoint : Int;
 	
 	/**
 	* When iterating over ranges using <tt>nextRange()</tt>,
@@ -60,7 +60,7 @@ extern class UnicodeSetIterator
 	* <tt>codepointEnd</tt> is undefined.
 	* @stable ICU 2.0
 	*/
-	public var codepointEnd : Int;
+	@:public public var codepointEnd : Int;
 	
 	/**
 	* If <tt>codepoint == IS_STRING</tt>, then <tt>string</tt> points
@@ -68,14 +68,14 @@ extern class UnicodeSetIterator
 	* value of <tt>string</tt> is undefined.
 	* @stable ICU 2.0
 	*/
-	public var string : String;
+	@:public public var string : String;
 	
 	/**
 	* Create an iterator over the given set.
 	* @param set set to iterate over
 	* @stable ICU 2.0
 	*/
-	@:overload public function new(set : sun.text.normalizer.UnicodeSet) : Void;
+	@:overload @:public public function new(set : sun.text.normalizer.UnicodeSet) : Void;
 	
 	/**
 	* Returns the next element in the set, either a code point range
@@ -97,7 +97,7 @@ extern class UnicodeSetIterator
 	* object contains the element.
 	* @stable ICU 2.0
 	*/
-	@:overload public function nextRange() : Bool;
+	@:overload @:public public function nextRange() : Bool;
 	
 	/**
 	* Sets this iterator to visit the elements of the given set and
@@ -106,28 +106,28 @@ extern class UnicodeSetIterator
 	* @param set the set to iterate over.
 	* @stable ICU 2.0
 	*/
-	@:overload public function reset(uset : sun.text.normalizer.UnicodeSet) : Void;
+	@:overload @:public public function reset(uset : sun.text.normalizer.UnicodeSet) : Void;
 	
 	/**
 	* Resets this iterator to the start of the set.
 	* @stable ICU 2.0
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* @internal
 	*/
-	private var endElement : Int;
+	@:protected private var endElement : Int;
 	
 	/**
 	* @internal
 	*/
-	private var nextElement : Int;
+	@:protected private var nextElement : Int;
 	
 	/**
 	* @internal
 	*/
-	@:overload private function loadRange(aRange : Int) : Void;
+	@:overload @:protected private function loadRange(aRange : Int) : Void;
 	
 	
 }

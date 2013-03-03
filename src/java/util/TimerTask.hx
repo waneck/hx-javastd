@@ -35,12 +35,12 @@ package java.util;
 	/**
 	* Creates a new timer task.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* The action to be performed by this timer task.
 	*/
-	@:overload @:abstract public function run() : Void;
+	@:overload @:public @:abstract public function run() : Void;
 	
 	/**
 	* Cancels this timer task.  If the task has been scheduled for one-time
@@ -64,7 +64,7 @@ package java.util;
 	*         returns <tt>true</tt> if it prevents one or more scheduled
 	*         executions from taking place.)
 	*/
-	@:overload public function cancel() : Bool;
+	@:overload @:public public function cancel() : Bool;
 	
 	/**
 	* Returns the <i>scheduled</i> execution time of the most recent
@@ -94,7 +94,7 @@ package java.util;
 	*         its first execution.
 	* @see Date#getTime()
 	*/
-	@:overload public function scheduledExecutionTime() : haxe.Int64;
+	@:overload @:public public function scheduledExecutionTime() : haxe.Int64;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class AbstractRepository<T>
 	* Accessor for <tt>tree</tt>.
 	* @return the cached AST this repository holds
 	*/
-	@:overload private function getTree() : T;
+	@:overload @:protected private function getTree() : T;
 	
 	/**
 	* Returns a <tt>Reifier</tt> used to convert parts of the
@@ -37,7 +37,7 @@ extern class AbstractRepository<T>
 	* @return  a <tt>Reifier</tt> used to convert parts of the
 	* AST into reflective objects
 	*/
-	@:overload private function getReifier() : sun.reflect.generics.visitor.Reifier;
+	@:overload @:protected private function getReifier() : sun.reflect.generics.visitor.Reifier;
 	
 	/**
 	* Constructor. Should only be used by subclasses. Concrete subclasses
@@ -48,7 +48,7 @@ extern class AbstractRepository<T>
 	* @param f - a factory that will provide instances of reflective
 	* objects when this repository converts its AST
 	*/
-	@:overload private function new(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : Void;
+	@:overload @:protected private function new(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : Void;
 	
 	/**
 	* Returns the AST for the genric type info of this entity.
@@ -56,7 +56,7 @@ extern class AbstractRepository<T>
 	* entity
 	* @return the AST for the generic type info of this entity.
 	*/
-	@:overload @:abstract private function parse(s : String) : T;
+	@:overload @:protected @:abstract private function parse(s : String) : T;
 	
 	
 }

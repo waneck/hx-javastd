@@ -37,7 +37,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*
 	* @see XMLDecoder#XMLDecoder(InputStream)
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new XML encoder to write out <em>JavaBeans</em>
@@ -71,7 +71,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(out : java.io.OutputStream, charset : String, declaration : Bool, indentation : Int) : Void;
+	@:require(java7) @:overload @:public public function new(out : java.io.OutputStream, charset : String, declaration : Bool, indentation : Int) : Void;
 	
 	/**
 	* Sets the owner of this encoder to <code>owner</code>.
@@ -80,7 +80,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*
 	* @see #getOwner
 	*/
-	@:overload public function setOwner(owner : Dynamic) : Void;
+	@:overload @:public public function setOwner(owner : Dynamic) : Void;
 	
 	/**
 	* Gets the owner of this encoder.
@@ -89,7 +89,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*
 	* @see #setOwner
 	*/
-	@:overload public function getOwner() : Dynamic;
+	@:overload @:public public function getOwner() : Dynamic;
 	
 	/**
 	* Write an XML representation of the specified object to the output.
@@ -98,7 +98,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*
 	* @see XMLDecoder#readObject
 	*/
-	@:overload override public function writeObject(o : Dynamic) : Void;
+	@:overload @:public override public function writeObject(o : Dynamic) : Void;
 	
 	/**
 	* Records the Statement so that the Encoder will
@@ -111,7 +111,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*               to the stream.
 	* @see java.beans.PersistenceDelegate#initialize
 	*/
-	@:overload override public function writeStatement(oldStm : java.beans.Statement) : Void;
+	@:overload @:public override public function writeStatement(oldStm : java.beans.Statement) : Void;
 	
 	/**
 	* Records the Expression so that the Encoder will
@@ -129,7 +129,7 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	*               to the stream.
 	* @see java.beans.PersistenceDelegate#initialize
 	*/
-	@:overload override public function writeExpression(oldExp : java.beans.Expression) : Void;
+	@:overload @:public override public function writeExpression(oldExp : java.beans.Expression) : Void;
 	
 	/**
 	* This method writes out the preamble associated with the
@@ -139,26 +139,26 @@ extern class XMLEncoder extends java.beans.Encoder implements java.lang.AutoClos
 	* was called. After flushing, all internal references to the
 	* values that were written to this stream are cleared.
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* This method calls <code>flush</code>, writes the closing
 	* postamble and then closes the output stream associated
 	* with this stream.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }
 @:native('java$beans$XMLEncoder$ValueData') @:internal extern class XMLEncoder_ValueData
 {
-	public var refs : Int;
+	@:public public var refs : Int;
 	
-	public var marked : Bool;
+	@:public public var marked : Bool;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	public var exp : java.beans.Expression;
+	@:public public var exp : java.beans.Expression;
 	
 	
 }

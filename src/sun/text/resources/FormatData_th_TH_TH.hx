@@ -30,7 +30,7 @@ extern class FormatData_th_TH_TH extends java.util.ListResourceBundle
 	/**
 	* Overrides ListResourceBundle
 	*/
-	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

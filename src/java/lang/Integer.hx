@@ -29,13 +29,13 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* A constant holding the minimum value an {@code int} can
 	* have, -2<sup>31</sup>.
 	*/
-	public static var MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MIN_VALUE(default, null) : Int;
 	
 	/**
 	* A constant holding the maximum value an {@code int} can
 	* have, 2<sup>31</sup>-1.
 	*/
-	public static var MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var MAX_VALUE(default, null) : Int;
 	
 	/**
 	* The {@code Class} instance representing the primitive type
@@ -43,7 +43,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Null<Int>>;
+	@:require(java1) @:public @:static @:final public static var TYPE(default, null) : Class<Null<Int>>;
 	
 	/**
 	* Returns a string representation of the first argument in the
@@ -89,7 +89,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @see     java.lang.Character#MAX_RADIX
 	* @see     java.lang.Character#MIN_RADIX
 	*/
-	@:native('toString') @:overload public static function _toString(i : Int, radix : Int) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(i : Int, radix : Int) : String;
 	
 	/**
 	* Returns a string representation of the integer argument as an
@@ -125,7 +125,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*          represented by the argument in hexadecimal (base&nbsp;16).
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload public static function toHexString(i : Int) : String;
+	@:require(java0) @:overload @:public @:static public static function toHexString(i : Int) : String;
 	
 	/**
 	* Returns a string representation of the integer argument as an
@@ -155,7 +155,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*          represented by the argument in octal (base&nbsp;8).
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload public static function toOctalString(i : Int) : String;
+	@:require(java0) @:overload @:public @:static public static function toOctalString(i : Int) : String;
 	
 	/**
 	* Returns a string representation of the integer argument as an
@@ -178,7 +178,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*          represented by the argument in binary (base&nbsp;2).
 	* @since   JDK1.0.2
 	*/
-	@:require(java0) @:overload public static function toBinaryString(i : Int) : String;
+	@:require(java0) @:overload @:public @:static public static function toBinaryString(i : Int) : String;
 	
 	/**
 	* Returns a {@code String} object representing the
@@ -190,7 +190,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @param   i   an integer to be converted.
 	* @return  a string representation of the argument in base&nbsp;10.
 	*/
-	@:native('toString') @:overload public static function _toString(i : Int) : String;
+	@:native('toString') @:overload @:public @:static public static function _toString(i : Int) : String;
 	
 	/**
 	* Parses the string argument as a signed integer in the radix
@@ -247,7 +247,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @exception  NumberFormatException if the {@code String}
 	*             does not contain a parsable {@code int}.
 	*/
-	@:overload public static function parseInt(s : String, radix : Int) : Int;
+	@:overload @:public @:static public static function parseInt(s : String, radix : Int) : Int;
 	
 	/**
 	* Parses the string argument as a signed decimal integer. The
@@ -266,7 +266,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @exception  NumberFormatException  if the string does not contain a
 	*               parsable integer.
 	*/
-	@:overload public static function parseInt(s : String) : Int;
+	@:overload @:public @:static public static function parseInt(s : String) : Int;
 	
 	/**
 	* Returns an {@code Integer} object holding the value
@@ -293,7 +293,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @exception NumberFormatException if the {@code String}
 	*            does not contain a parsable {@code int}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Null<Int>;
+	@:overload @:public @:static public static function valueOf(s : String, radix : Int) : Null<Int>;
 	
 	/**
 	* Returns an {@code Integer} object holding the
@@ -317,7 +317,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @exception  NumberFormatException  if the string cannot be parsed
 	*             as an integer.
 	*/
-	@:overload public static function valueOf(s : String) : Null<Int>;
+	@:overload @:public @:static public static function valueOf(s : String) : Null<Int>;
 	
 	/**
 	* Returns an {@code Integer} instance representing the specified
@@ -334,7 +334,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @return an {@code Integer} instance representing {@code i}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(i : Int) : Null<Int>;
+	@:require(java5) @:overload @:public @:static public static function valueOf(i : Int) : Null<Int>;
 	
 	/**
 	* Constructs a newly allocated {@code Integer} object that
@@ -343,7 +343,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @param   value   the value to be represented by the
 	*                  {@code Integer} object.
 	*/
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
 	/**
 	* Constructs a newly allocated {@code Integer} object that
@@ -358,43 +358,43 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*               contain a parsable integer.
 	* @see        java.lang.Integer#parseInt(java.lang.String, int)
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the value of this {@code Integer} as a
 	* {@code byte}.
 	*/
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload @:public override public function byteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns the value of this {@code Integer} as a
 	* {@code short}.
 	*/
-	@:overload override public function shortValue() : java.StdTypes.Int16;
+	@:overload @:public override public function shortValue() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value of this {@code Integer} as an
 	* {@code int}.
 	*/
-	@:overload override public function intValue() : Int;
+	@:overload @:public override public function intValue() : Int;
 	
 	/**
 	* Returns the value of this {@code Integer} as a
 	* {@code long}.
 	*/
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload @:public override public function longValue() : haxe.Int64;
 	
 	/**
 	* Returns the value of this {@code Integer} as a
 	* {@code float}.
 	*/
-	@:overload override public function floatValue() : Single;
+	@:overload @:public override public function floatValue() : Single;
 	
 	/**
 	* Returns the value of this {@code Integer} as a
 	* {@code double}.
 	*/
-	@:overload override public function doubleValue() : Float;
+	@:overload @:public override public function doubleValue() : Float;
 	
 	/**
 	* Returns a {@code String} object representing this
@@ -406,7 +406,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @return  a string representation of the value of this object in
 	*          base&nbsp;10.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hash code for this {@code Integer}.
@@ -415,7 +415,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*          primitive {@code int} value represented by this
 	*          {@code Integer} object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specified object.  The result is
@@ -427,7 +427,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @return  {@code true} if the objects are the same;
 	*          {@code false} otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Determines the integer value of the system property with the
@@ -457,7 +457,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getInteger(nm : String) : Null<Int>;
+	@:overload @:public @:static public static function getInteger(nm : String) : Null<Int>;
 	
 	/**
 	* Determines the integer value of the system property with the
@@ -500,7 +500,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getInteger(nm : String, val : Int) : Null<Int>;
+	@:overload @:public @:static public static function getInteger(nm : String, val : Int) : Null<Int>;
 	
 	/**
 	* Returns the integer value of the system property with the
@@ -538,7 +538,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @see java.lang.System#getProperty(java.lang.String, java.lang.String)
 	* @see java.lang.Integer#decode
 	*/
-	@:overload public static function getInteger(nm : String, val : Null<Int>) : Null<Int>;
+	@:overload @:public @:static public static function getInteger(nm : String, val : Null<Int>) : Null<Int>;
 	
 	/**
 	* Decodes a {@code String} into an {@code Integer}.
@@ -582,7 +582,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*            contain a parsable integer.
 	* @see java.lang.Integer#parseInt(java.lang.String, int)
 	*/
-	@:overload public static function decode(nm : String) : Null<Int>;
+	@:overload @:public @:static public static function decode(nm : String) : Null<Int>;
 	
 	/**
 	* Compares two {@code Integer} objects numerically.
@@ -597,7 +597,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherInteger : Null<Int>) : Int;
+	@:require(java2) @:overload @:public public function compareTo(anotherInteger : Null<Int>) : Int;
 	
 	/**
 	* Compares two {@code int} values numerically.
@@ -613,7 +613,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*         a value greater than {@code 0} if {@code x > y}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function compare(x : Int, y : Int) : Int;
+	@:require(java7) @:overload @:public @:static public static function compare(x : Int, y : Int) : Int;
 	
 	/**
 	* The number of bits used to represent an {@code int} value in two's
@@ -621,7 +621,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var SIZE(default, null) : Int;
+	@:require(java5) @:public @:static @:final public static var SIZE(default, null) : Int;
 	
 	/**
 	* Returns an {@code int} value with at most a single one-bit, in the
@@ -635,7 +635,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     the specified value is itself equal to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function highestOneBit(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function highestOneBit(i : Int) : Int;
 	
 	/**
 	* Returns an {@code int} value with at most a single one-bit, in the
@@ -649,7 +649,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     the specified value is itself equal to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function lowestOneBit(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function lowestOneBit(i : Int) : Int;
 	
 	/**
 	* Returns the number of zero bits preceding the highest-order
@@ -671,7 +671,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     is equal to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function numberOfLeadingZeros(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function numberOfLeadingZeros(i : Int) : Int;
 	
 	/**
 	* Returns the number of zero bits following the lowest-order ("rightmost")
@@ -686,7 +686,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     to zero.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function numberOfTrailingZeros(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function numberOfTrailingZeros(i : Int) : Int;
 	
 	/**
 	* Returns the number of one-bits in the two's complement binary
@@ -697,7 +697,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     representation of the specified {@code int} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function bitCount(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function bitCount(i : Int) : Int;
 	
 	/**
 	* Returns the value obtained by rotating the two's complement binary
@@ -717,7 +717,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     specified number of bits.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function rotateLeft(i : Int, distance : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function rotateLeft(i : Int, distance : Int) : Int;
 	
 	/**
 	* Returns the value obtained by rotating the two's complement binary
@@ -737,7 +737,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     specified number of bits.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function rotateRight(i : Int, distance : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function rotateRight(i : Int, distance : Int) : Int;
 	
 	/**
 	* Returns the value obtained by reversing the order of the bits in the
@@ -748,7 +748,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     specified {@code int} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function reverse(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function reverse(i : Int) : Int;
 	
 	/**
 	* Returns the signum function of the specified {@code int} value.  (The
@@ -758,7 +758,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	* @return the signum function of the specified {@code int} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function signum(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function signum(i : Int) : Int;
 	
 	/**
 	* Returns the value obtained by reversing the order of the bytes in the
@@ -768,7 +768,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<Nu
 	*     {@code int} value.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function reverseBytes(i : Int) : Int;
+	@:require(java5) @:overload @:public @:static public static function reverseBytes(i : Int) : Int;
 	
 	
 }

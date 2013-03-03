@@ -43,7 +43,7 @@ extern interface ContactInfoList
 	* @return a ContactInfoListIterator with ...
 	* </p>
 	*/
-	@:overload public function iterator() : com.sun.pept.ept.ContactInfoListIterator;
+	@:overload @:public public function iterator() : com.sun.pept.ept.ContactInfoListIterator;
 	
 	
 }

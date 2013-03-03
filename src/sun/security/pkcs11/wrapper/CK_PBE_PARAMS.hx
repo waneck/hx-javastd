@@ -71,7 +71,7 @@ extern class CK_PBE_PARAMS
 	*   CK_CHAR_PTR pInitVector;
 	* </PRE>
 	*/
-	public var pInitVector : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var pInitVector : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -80,7 +80,7 @@ extern class CK_PBE_PARAMS
 	*   CK_ULONG ulPasswordLen;
 	* </PRE>
 	*/
-	public var pPassword : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var pPassword : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -89,7 +89,7 @@ extern class CK_PBE_PARAMS
 	*   CK_ULONG ulSaltLen;
 	* </PRE>
 	*/
-	public var pSalt : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var pSalt : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -97,14 +97,14 @@ extern class CK_PBE_PARAMS
 	*   CK_ULONG ulIteration;
 	* </PRE>
 	*/
-	public var ulIteration : haxe.Int64;
+	@:public public var ulIteration : haxe.Int64;
 	
 	/**
 	* Returns the string representation of CK_PBE_PARAMS.
 	*
 	* @return the string representation of CK_PBE_PARAMS
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -155,7 +155,7 @@ extern interface LSParser
 	* , this parameter cannot be set to <code>false</code>. </dd>
 	* </dl>
 	*/
-	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**
 	*  When a filter is provided, the implementation will call out to the
@@ -168,7 +168,7 @@ extern interface LSParser
 	* validate</a>" is set to <code>true</code>, the validation is done before invoking the
 	* filter.
 	*/
-	@:overload public function getFilter() : org.w3c.dom.ls.LSParserFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.ls.LSParserFilter;
 	
 	/**
 	*  When a filter is provided, the implementation will call out to the
@@ -181,19 +181,19 @@ extern interface LSParser
 	* validate</a>" is set to <code>true</code>, the validation is done before invoking the
 	* filter.
 	*/
-	@:overload public function setFilter(filter : org.w3c.dom.ls.LSParserFilter) : Void;
+	@:overload @:public public function setFilter(filter : org.w3c.dom.ls.LSParserFilter) : Void;
 	
 	/**
 	*  <code>true</code> if the <code>LSParser</code> is asynchronous,
 	* <code>false</code> if it is synchronous.
 	*/
-	@:overload public function getAsync() : Bool;
+	@:overload @:public public function getAsync() : Bool;
 	
 	/**
 	*  <code>true</code> if the <code>LSParser</code> is currently busy
 	* loading a document, otherwise <code>false</code>.
 	*/
-	@:overload public function getBusy() : Bool;
+	@:overload @:public public function getBusy() : Bool;
 	
 	/**
 	* Parse an XML document from a resource identified by a
@@ -214,7 +214,7 @@ extern interface LSParser
 	*   <code>DOMErrorHandler</code> using the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
 	*   error-handler</a>" if they wish to get details on the error.
 	*/
-	@:overload public function parse(input : org.w3c.dom.ls.LSInput) : org.w3c.dom.Document;
+	@:overload @:public public function parse(input : org.w3c.dom.ls.LSInput) : org.w3c.dom.Document;
 	
 	/**
 	*  Parse an XML document from a location identified by a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]. If the URI
@@ -237,7 +237,7 @@ extern interface LSParser
 	*   <code>DOMErrorHandler</code> using the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
 	*   error-handler</a>" if they wish to get details on the error.
 	*/
-	@:overload public function parseURI(uri : String) : org.w3c.dom.Document;
+	@:overload @:public public function parseURI(uri : String) : org.w3c.dom.Document;
 	
 	/**
 	*  Parse an XML fragment from a resource identified by a
@@ -315,14 +315,14 @@ extern interface LSParser
 	*   <code>DOMErrorHandler</code> using the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
 	*   error-handler</a>" if they wish to get details on the error.
 	*/
-	@:overload public function parseWithContext(input : org.w3c.dom.ls.LSInput, contextArg : org.w3c.dom.Node, action : java.StdTypes.Int16) : org.w3c.dom.Node;
+	@:overload @:public public function parseWithContext(input : org.w3c.dom.ls.LSInput, contextArg : org.w3c.dom.Node, action : java.StdTypes.Int16) : org.w3c.dom.Node;
 	
 	/**
 	*  Abort the loading of the document that is currently being loaded by
 	* the <code>LSParser</code>. If the <code>LSParser</code> is currently
 	* not busy, a call to this method does nothing.
 	*/
-	@:overload public function abort() : Void;
+	@:overload @:public public function abort() : Void;
 	
 	
 }

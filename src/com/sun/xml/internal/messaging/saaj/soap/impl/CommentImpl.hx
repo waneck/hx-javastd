@@ -25,33 +25,33 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 */
 extern class CommentImpl extends com.sun.org.apache.xerces.internal.dom.CommentImpl implements javax.xml.soap.Text implements org.w3c.dom.Comment
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	private static var rb : java.util.ResourceBundle;
+	@:protected @:static private static var rb : java.util.ResourceBundle;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, text : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, text : String) : Void;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(text : String) : Void;
+	@:overload @:public public function setValue(text : String) : Void;
 	
-	@:overload public function setParentElement(element : javax.xml.soap.SOAPElement) : Void;
+	@:overload @:public public function setParentElement(element : javax.xml.soap.SOAPElement) : Void;
 	
-	@:overload public function getParentElement() : javax.xml.soap.SOAPElement;
+	@:overload @:public public function getParentElement() : javax.xml.soap.SOAPElement;
 	
-	@:overload public function detachNode() : Void;
+	@:overload @:public public function detachNode() : Void;
 	
-	@:overload public function recycleNode() : Void;
+	@:overload @:public public function recycleNode() : Void;
 	
-	@:overload public function isComment() : Bool;
+	@:overload @:public public function isComment() : Bool;
 	
-	@:overload public function splitText(offset : Int) : org.w3c.dom.Text;
+	@:overload @:public public function splitText(offset : Int) : org.w3c.dom.Text;
 	
-	@:overload public function replaceWholeText(content : String) : org.w3c.dom.Text;
+	@:overload @:public public function replaceWholeText(content : String) : org.w3c.dom.Text;
 	
-	@:overload public function getWholeText() : String;
+	@:overload @:public public function getWholeText() : String;
 	
-	@:overload public function isElementContentWhitespace() : Bool;
+	@:overload @:public public function isElementContentWhitespace() : Bool;
 	
 	
 }

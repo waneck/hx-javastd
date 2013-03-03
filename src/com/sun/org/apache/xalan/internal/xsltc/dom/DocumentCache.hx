@@ -26,23 +26,23 @@ extern class DocumentCache implements com.sun.org.apache.xalan.internal.xsltc.DO
 	/**
 	* DocumentCache constructor
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* DocumentCache constructor
 	*/
-	@:overload public function new(size : Int, dtmManager : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager) : Void;
+	@:overload @:public public function new(size : Int, dtmManager : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager) : Void;
 	
 	/**
 	* Returns a document either by finding it in the cache or
 	* downloading it and putting it in the cache.
 	*/
-	@:overload public function retrieveDocument(baseURI : String, href : String, trs : com.sun.org.apache.xalan.internal.xsltc.Translet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
+	@:overload @:public public function retrieveDocument(baseURI : String, href : String, trs : com.sun.org.apache.xalan.internal.xsltc.Translet) : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
 	/**
 	* Outputs the cache statistics
 	*/
-	@:overload public function getStatistics(out : java.io.PrintWriter) : Void;
+	@:overload @:public public function getStatistics(out : java.io.PrintWriter) : Void;
 	
 	
 }
@@ -54,34 +54,34 @@ extern class DocumentCache implements com.sun.org.apache.xalan.internal.xsltc.DO
 	/**
 	* Constructor - load document and initialise statistics
 	*/
-	@:overload public function new(uri : String) : Void;
+	@:overload @:public public function new(uri : String) : Void;
 	
 	/**
 	* Loads the document and updates build-time (latency) statistics
 	*/
-	@:overload public function loadDocument(uri : String) : Void;
+	@:overload @:public public function loadDocument(uri : String) : Void;
 	
-	@:overload public function getDocument() : com.sun.org.apache.xalan.internal.xsltc.DOM;
+	@:overload @:public public function getDocument() : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
-	@:overload public function getFirstReferenced() : haxe.Int64;
+	@:overload @:public public function getFirstReferenced() : haxe.Int64;
 	
-	@:overload public function getLastReferenced() : haxe.Int64;
+	@:overload @:public public function getLastReferenced() : haxe.Int64;
 	
-	@:overload public function getAccessCount() : haxe.Int64;
+	@:overload @:public public function getAccessCount() : haxe.Int64;
 	
-	@:overload public function incAccessCount() : Void;
+	@:overload @:public public function incAccessCount() : Void;
 	
-	@:overload public function getLastModified() : haxe.Int64;
+	@:overload @:public public function getLastModified() : haxe.Int64;
 	
-	@:overload public function setLastModified(t : haxe.Int64) : Void;
+	@:overload @:public public function setLastModified(t : haxe.Int64) : Void;
 	
-	@:overload public function getLatency() : haxe.Int64;
+	@:overload @:public public function getLatency() : haxe.Int64;
 	
-	@:overload public function getLastChecked() : haxe.Int64;
+	@:overload @:public public function getLastChecked() : haxe.Int64;
 	
-	@:overload public function setLastChecked(t : haxe.Int64) : Void;
+	@:overload @:public public function setLastChecked(t : haxe.Int64) : Void;
 	
-	@:overload public function getEstimatedSize() : haxe.Int64;
+	@:overload @:public public function getEstimatedSize() : haxe.Int64;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface Resolver
 	*
 	* @see #resolveToClass(String, Class)
 	*/
-	@:overload public function resolveToClass(name : javax.naming.Name, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
+	@:overload @:public public function resolveToClass(name : javax.naming.Name, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
 	
 	/**
 	* Partially resolves a name.
@@ -62,7 +62,7 @@ extern interface Resolver
 	*          if no context of the appropriate type is found
 	* @throws  NamingException if a naming exception was encountered
 	*/
-	@:overload public function resolveToClass(name : String, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
+	@:overload @:public public function resolveToClass(name : String, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
 	
 	
 }

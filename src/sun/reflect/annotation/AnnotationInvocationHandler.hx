@@ -25,7 +25,7 @@ package sun.reflect.annotation;
 */
 @:internal extern class AnnotationInvocationHandler implements java.lang.reflect.InvocationHandler implements java.io.Serializable
 {
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

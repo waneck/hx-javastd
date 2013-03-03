@@ -36,16 +36,16 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.util;
 */
 extern class QPDecoderStream extends java.io.FilterInputStream
 {
-	private var ba : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var ba : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var spaces : Int;
+	@:protected private var spaces : Int;
 	
 	/**
 	* Create a Quoted Printable decoder that decodes the specified
 	* input stream.
 	* @param in        the input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Read the next decoded byte from this input stream. The byte
@@ -59,7 +59,7 @@ extern class QPDecoderStream extends java.io.FilterInputStream
 	*             stream is reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> decoded bytes of data from this input stream
@@ -75,13 +75,13 @@ extern class QPDecoderStream extends java.io.FilterInputStream
 	*             the stream has been reached.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Tests if this input stream supports marks. Currently this class
 	* does not support marks
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Returns the number of bytes that can be read from this input
@@ -90,7 +90,7 @@ extern class QPDecoderStream extends java.io.FilterInputStream
 	* this method just invokes the <code>available</code> method
 	* of the original input stream.
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	
 }

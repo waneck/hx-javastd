@@ -28,11 +28,11 @@ package sun.applet;
 */
 extern interface AppletViewerFactory
 {
-	@:overload public function createAppletViewer(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>) : AppletViewer;
+	@:overload @:public public function createAppletViewer(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>) : AppletViewer;
 	
-	@:overload public function getBaseMenuBar() : java.awt.MenuBar;
+	@:overload @:public public function getBaseMenuBar() : java.awt.MenuBar;
 	
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
 	
 }

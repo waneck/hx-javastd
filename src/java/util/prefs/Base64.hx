@@ -33,7 +33,7 @@ package java.util.prefs;
 */
 @:require(java4) @:internal extern class Base64
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

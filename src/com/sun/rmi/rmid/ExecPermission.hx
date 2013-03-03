@@ -69,7 +69,7 @@ extern class ExecPermission extends java.security.Permission
 	*
 	* @param path the pathname of the file/directory.
 	*/
-	@:overload public function new(path : String) : Void;
+	@:overload @:public public function new(path : String) : Void;
 	
 	/**
 	* Creates a new ExecPermission object with the specified path.
@@ -91,7 +91,7 @@ extern class ExecPermission extends java.security.Permission
 	* @param path the pathname of the file/directory.
 	* @param actions the action string (unused)
 	*/
-	@:overload public function new(path : String, actions : String) : Void;
+	@:overload @:public public function new(path : String, actions : String) : Void;
 	
 	/**
 	* Checks if this ExecPermission object "implies" the specified permission.
@@ -109,7 +109,7 @@ extern class ExecPermission extends java.security.Permission
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two ExecPermission objects for equality.
@@ -120,21 +120,21 @@ extern class ExecPermission extends java.security.Permission
 	* @return true if <i>obj</i> is an ExecPermission, and has the same
 	* pathname as this ExecPermission object, false otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions.
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing
@@ -151,7 +151,7 @@ extern class ExecPermission extends java.security.Permission
 	* @return a new PermissionCollection object suitable for
 	* storing ExecPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -169,7 +169,7 @@ extern class ExecPermission extends java.security.Permission
 	/**
 	* Create an empty ExecPermissionCollection.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission to the collection.
@@ -182,7 +182,7 @@ extern class ExecPermission extends java.security.Permission
 	* @exception SecurityException - if this ExecPermissionCollection
 	*                                object has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -193,7 +193,7 @@ extern class ExecPermission extends java.security.Permission
 	* @return true if "permission" is a proper subset of a permission in
 	* the set, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the ExecPermission objects in the
@@ -201,7 +201,7 @@ extern class ExecPermission extends java.security.Permission
 	*
 	* @return an enumeration of all the ExecPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }

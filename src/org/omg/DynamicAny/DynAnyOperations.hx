@@ -83,7 +83,7 @@ extern interface DynAnyOperations
 	*
 	* @return The TypeCode associated with this DynAny object
 	*/
-	@:overload public function type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function type() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Initializes the value associated with a DynAny object with the value
@@ -94,7 +94,7 @@ extern interface DynAnyOperations
 	* @param dyn_any
 	* @exception TypeMismatch if the type of the passed DynAny is not equivalent to the type of target DynAny
 	*/
-	@:overload public function assign(dyn_any : org.omg.DynamicAny.DynAny) : Void;
+	@:overload @:public public function assign(dyn_any : org.omg.DynamicAny.DynAny) : Void;
 	
 	/**
 	* Initializes the value associated with a DynAny object with the value contained in an any.
@@ -104,7 +104,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if the type of the passed Any is not equivalent to the type of target DynAny
 	* @exception InvalidValue if the passed Any does not contain a legal value (such as a null string)
 	*/
-	@:overload public function from_any(value : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function from_any(value : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Creates an any value from a DynAny object.
@@ -113,7 +113,7 @@ extern interface DynAnyOperations
 	*
 	* @return a new Any object with the same value and TypeCode
 	*/
-	@:overload public function to_any() : org.omg.CORBA.Any;
+	@:overload @:public public function to_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Compares two DynAny values for equality.
@@ -123,7 +123,7 @@ extern interface DynAnyOperations
 	*
 	* @return true of the DynAnys are equal, false otherwise
 	*/
-	@:overload public function equal(dyn_any : org.omg.DynamicAny.DynAny) : Bool;
+	@:overload @:public public function equal(dyn_any : org.omg.DynamicAny.DynAny) : Bool;
 	
 	/**
 	* Destroys a DynAny object.
@@ -139,7 +139,7 @@ extern interface DynAnyOperations
 	* from which the component was obtained by making a copy of the component with the copy operation
 	* before destroying the DynAny from which the component was obtained.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Creates a new DynAny object whose value is a deep copy of the DynAny on which it is invoked.
@@ -148,7 +148,7 @@ extern interface DynAnyOperations
 	*
 	* @return a deep copy of the DynAny object
 	*/
-	@:overload public function copy() : org.omg.DynamicAny.DynAny;
+	@:overload @:public public function copy() : org.omg.DynamicAny.DynAny;
 	
 	/**
 	* Inserts a boolean value into the DynAny.
@@ -156,7 +156,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_boolean(value : Bool) : Void;
+	@:overload @:public @:public public function insert_boolean(value : Bool) : Void;
 	
 	/**
 	* Inserts a byte value into the DynAny. The IDL octet data type is mapped to the Java byte data type.
@@ -164,7 +164,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_octet(value : java.StdTypes.Int8) : Void;
+	@:overload @:public @:public public function insert_octet(value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Inserts a char value into the DynAny.
@@ -172,7 +172,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_char(value : java.StdTypes.Char16) : Void;
+	@:overload @:public @:public public function insert_char(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Inserts a short value into the DynAny.
@@ -180,7 +180,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_short(value : java.StdTypes.Int16) : Void;
+	@:overload @:public @:public public function insert_short(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Inserts a short value into the DynAny. The IDL ushort data type is mapped to the Java short data type.
@@ -188,7 +188,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_ushort(value : java.StdTypes.Int16) : Void;
+	@:overload @:public @:public public function insert_ushort(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Inserts an integer value into the DynAny. The IDL long data type is mapped to the Java int data type.
@@ -196,7 +196,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_long(value : Int) : Void;
+	@:overload @:public @:public public function insert_long(value : Int) : Void;
 	
 	/**
 	* Inserts an integer value into the DynAny. The IDL ulong data type is mapped to the Java int data type.
@@ -204,7 +204,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_ulong(value : Int) : Void;
+	@:overload @:public @:public public function insert_ulong(value : Int) : Void;
 	
 	/**
 	* Inserts a float value into the DynAny.
@@ -212,7 +212,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_float(value : Single) : Void;
+	@:overload @:public @:public public function insert_float(value : Single) : Void;
 	
 	/**
 	* Inserts a double value into the DynAny.
@@ -220,7 +220,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_double(value : Float) : Void;
+	@:overload @:public @:public public function insert_double(value : Float) : Void;
 	
 	/**
 	* Inserts a string value into the DynAny.
@@ -230,7 +230,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if the string inserted is longer than the bound of a bounded string
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_string(value : String) : Void;
+	@:overload @:public @:public public function insert_string(value : String) : Void;
 	
 	/**
 	* Inserts a reference to a CORBA object into the DynAny.
@@ -238,7 +238,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_reference(value : org.omg.CORBA.Object) : Void;
+	@:overload @:public @:public public function insert_reference(value : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Inserts a TypeCode object into the DynAny.
@@ -246,7 +246,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_typecode(value : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public @:public public function insert_typecode(value : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Inserts a long value into the DynAny. The IDL long long data type is mapped to the Java long data type.
@@ -254,7 +254,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_longlong(value : haxe.Int64) : Void;
+	@:overload @:public @:public public function insert_longlong(value : haxe.Int64) : Void;
 	
 	/**
 	* Inserts a long value into the DynAny.
@@ -263,7 +263,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_ulonglong(value : haxe.Int64) : Void;
+	@:overload @:public @:public public function insert_ulonglong(value : haxe.Int64) : Void;
 	
 	/**
 	* Inserts a char value into the DynAny. The IDL wchar data type is mapped to the Java char data type.
@@ -271,7 +271,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_wchar(value : java.StdTypes.Char16) : Void;
+	@:overload @:public @:public public function insert_wchar(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Inserts a string value into the DynAny.
@@ -280,7 +280,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception InvalidValue if the string inserted is longer than the bound of a bounded string
 	*/
-	@:overload @:public public function insert_wstring(value : String) : Void;
+	@:overload @:public @:public public function insert_wstring(value : String) : Void;
 	
 	/**
 	* Inserts an Any value into the Any represented by this DynAny.
@@ -288,7 +288,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_any(value : org.omg.CORBA.Any) : Void;
+	@:overload @:public @:public public function insert_any(value : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Inserts the Any value contained in the parameter DynAny into the Any represented by this DynAny.
@@ -296,7 +296,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_dyn_any(value : org.omg.DynamicAny.DynAny) : Void;
+	@:overload @:public @:public public function insert_dyn_any(value : org.omg.DynamicAny.DynAny) : Void;
 	
 	/**
 	* Inserts a reference to a Serializable object into this DynAny.
@@ -305,7 +305,7 @@ extern interface DynAnyOperations
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function insert_val(value : java.io.Serializable) : Void;
+	@:overload @:public @:public public function insert_val(value : java.io.Serializable) : Void;
 	
 	/**
 	* Extracts the boolean value from this DynAny.
@@ -315,7 +315,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_boolean() : Bool;
+	@:overload @:public @:public public function get_boolean() : Bool;
 	
 	/**
 	* Extracts the byte value from this DynAny. The IDL octet data type is mapped to the Java byte data type.
@@ -325,7 +325,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_octet() : java.StdTypes.Int8;
+	@:overload @:public @:public public function get_octet() : java.StdTypes.Int8;
 	
 	/**
 	* Extracts the char value from this DynAny.
@@ -335,7 +335,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_char() : java.StdTypes.Char16;
+	@:overload @:public @:public public function get_char() : java.StdTypes.Char16;
 	
 	/**
 	* Extracts the short value from this DynAny.
@@ -345,7 +345,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_short() : java.StdTypes.Int16;
+	@:overload @:public @:public public function get_short() : java.StdTypes.Int16;
 	
 	/**
 	* Extracts the short value from this DynAny. The IDL ushort data type is mapped to the Java short data type.
@@ -355,7 +355,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_ushort() : java.StdTypes.Int16;
+	@:overload @:public @:public public function get_ushort() : java.StdTypes.Int16;
 	
 	/**
 	* Extracts the integer value from this DynAny. The IDL long data type is mapped to the Java int data type.
@@ -365,7 +365,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_long() : Int;
+	@:overload @:public @:public public function get_long() : Int;
 	
 	/**
 	* Extracts the integer value from this DynAny. The IDL ulong data type is mapped to the Java int data type.
@@ -375,7 +375,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_ulong() : Int;
+	@:overload @:public @:public public function get_ulong() : Int;
 	
 	/**
 	* Extracts the float value from this DynAny.
@@ -385,7 +385,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_float() : Single;
+	@:overload @:public @:public public function get_float() : Single;
 	
 	/**
 	* Extracts the double value from this DynAny.
@@ -395,7 +395,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_double() : Float;
+	@:overload @:public @:public public function get_double() : Float;
 	
 	/**
 	* Extracts the string value from this DynAny.
@@ -406,7 +406,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_string() : String;
+	@:overload @:public @:public public function get_string() : String;
 	
 	/**
 	* Extracts the reference to a CORBA Object from this DynAny.
@@ -416,7 +416,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_reference() : org.omg.CORBA.Object;
+	@:overload @:public @:public public function get_reference() : org.omg.CORBA.Object;
 	
 	/**
 	* Extracts the TypeCode object from this DynAny.
@@ -426,7 +426,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_typecode() : org.omg.CORBA.TypeCode;
+	@:overload @:public @:public public function get_typecode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Extracts the long value from this DynAny. The IDL long long data type is mapped to the Java long data type.
@@ -436,7 +436,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_longlong() : haxe.Int64;
+	@:overload @:public @:public public function get_longlong() : haxe.Int64;
 	
 	/**
 	* Extracts the long value from this DynAny.
@@ -447,7 +447,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_ulonglong() : haxe.Int64;
+	@:overload @:public @:public public function get_ulonglong() : haxe.Int64;
 	
 	/**
 	* Extracts the long value from this DynAny. The IDL wchar data type is mapped to the Java char data type.
@@ -457,7 +457,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_wchar() : java.StdTypes.Char16;
+	@:overload @:public @:public public function get_wchar() : java.StdTypes.Char16;
 	
 	/**
 	* Extracts the string value from this DynAny.
@@ -467,7 +467,7 @@ extern interface DynAnyOperations
 	* that is not equivalent to the requested type.
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public public function get_wstring() : String;
+	@:overload @:public @:public public function get_wstring() : String;
 	
 	/**
 	* Extracts an Any value contained in the Any represented by this DynAny.
@@ -477,7 +477,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_any() : org.omg.CORBA.Any;
+	@:overload @:public @:public public function get_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Extracts the Any value contained in the Any represented by this DynAny and returns it wrapped
@@ -488,7 +488,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_dyn_any() : org.omg.DynamicAny.DynAny;
+	@:overload @:public @:public public function get_dyn_any() : org.omg.DynamicAny.DynAny;
 	
 	/**
 	* Extracts a Serializable object from this DynAny.
@@ -499,7 +499,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public public function get_val() : java.io.Serializable;
+	@:overload @:public @:public public function get_val() : java.io.Serializable;
 	
 	/**
 	* Sets the current position to index. The current position is indexed 0 to n-1, that is,
@@ -510,12 +510,12 @@ extern interface DynAnyOperations
 	* no component and returns false. Passing a non-negative index value for a DynAny that does not
 	* have a component at the corresponding position sets the current position to -1 and returns false.
 	*/
-	@:overload @:public public function seek(index : Int) : Bool;
+	@:overload @:public @:public public function seek(index : Int) : Bool;
 	
 	/**
 	* Is equivalent to seek(0).
 	*/
-	@:overload @:public public function rewind() : Void;
+	@:overload @:public @:public public function rewind() : Void;
 	
 	/**
 	* Advances the current position to the next component.
@@ -523,7 +523,7 @@ extern interface DynAnyOperations
 	* A false return value leaves the current position at -1.
 	* Invoking next on a DynAny without components leaves the current position at -1 and returns false.
 	*/
-	@:overload @:public public function next() : Bool;
+	@:overload @:public @:public public function next() : Bool;
 	
 	/**
 	* Returns the number of components of a DynAny.
@@ -540,7 +540,7 @@ extern interface DynAnyOperations
 	* <LI>For DynFixed and DynEnum, the operation returns zero.
 	* </UL>
 	*/
-	@:overload @:public public function component_count() : Int;
+	@:overload @:public @:public public function component_count() : Int;
 	
 	/**
 	* Returns the DynAny for the component at the current position.
@@ -560,7 +560,7 @@ extern interface DynAnyOperations
 	* @exception TypeMismatch If called on a DynAny that cannot have components,
 	* such as a DynEnum or an empty exception
 	*/
-	@:overload @:public public function current_component() : org.omg.DynamicAny.DynAny;
+	@:overload @:public @:public public function current_component() : org.omg.DynamicAny.DynAny;
 	
 	
 }

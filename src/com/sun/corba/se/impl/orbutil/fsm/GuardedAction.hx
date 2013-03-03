@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.orbutil.fsm;
 */
 extern class GuardedAction
 {
-	@:overload public function new(action : com.sun.corba.se.spi.orbutil.fsm.Action, nextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function new(action : com.sun.corba.se.spi.orbutil.fsm.Action, nextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
-	@:overload public function new(guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, nextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function new(guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, nextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getAction() : com.sun.corba.se.spi.orbutil.fsm.Action;
+	@:overload @:public public function getAction() : com.sun.corba.se.spi.orbutil.fsm.Action;
 	
-	@:overload public function getGuard() : com.sun.corba.se.spi.orbutil.fsm.Guard;
+	@:overload @:public public function getGuard() : com.sun.corba.se.spi.orbutil.fsm.Guard;
 	
-	@:overload public function getNextState() : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:overload @:public public function getNextState() : com.sun.corba.se.spi.orbutil.fsm.State;
 	
 	
 }

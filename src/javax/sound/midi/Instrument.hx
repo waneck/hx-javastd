@@ -38,14 +38,14 @@ extern class Instrument extends javax.sound.midi.SoundbankResource
 	*
 	* @see Synthesizer#loadInstrument(Instrument)
 	*/
-	@:overload private function new(soundbank : javax.sound.midi.Soundbank, patch : javax.sound.midi.Patch, name : String, dataClass : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(soundbank : javax.sound.midi.Soundbank, patch : javax.sound.midi.Patch, name : String, dataClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Obtains the <code>Patch</code> object that indicates the bank and program
 	* numbers where this instrument is to be stored in the synthesizer.
 	* @return this instrument's patch
 	*/
-	@:overload public function getPatch() : javax.sound.midi.Patch;
+	@:overload @:public public function getPatch() : javax.sound.midi.Patch;
 	
 	
 }

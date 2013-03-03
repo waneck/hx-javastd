@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.wsdl;
 */
 extern class ActionBasedOperationSignature
 {
-	@:overload public function new(action : String, payloadQName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(action : String, payloadQName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

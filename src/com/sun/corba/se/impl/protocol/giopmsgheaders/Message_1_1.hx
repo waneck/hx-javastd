@@ -25,28 +25,28 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class Message_1_1 extends com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase
 {
-	@:overload override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload override public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload override public function isLittleEndian() : Bool;
+	@:overload @:public override public function isLittleEndian() : Bool;
 	
-	@:overload override public function moreFragmentsToFollow() : Bool;
+	@:overload @:public override public function moreFragmentsToFollow() : Bool;
 	
-	@:overload public function setThreadPoolToUse(poolToUse : Int) : Void;
+	@:overload @:public public function setThreadPoolToUse(poolToUse : Int) : Void;
 	
-	@:overload override public function setSize(byteBuffer : java.nio.ByteBuffer, size : Int) : Void;
+	@:overload @:public override public function setSize(byteBuffer : java.nio.ByteBuffer, size : Int) : Void;
 	
 	/**
 	* Allows us to create a fragment message from any message type.
 	*/
-	@:overload override public function createFragmentMessage() : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
+	@:overload @:public override public function createFragmentMessage() : com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
 	
-	@:overload override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	
 }

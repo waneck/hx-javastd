@@ -46,15 +46,15 @@ package com.sun.xml.internal.rngom.xml.sax;
 */
 extern class XmlBaseHandler
 {
-	@:overload public function setLocator(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setLocator(loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function startElement() : Void;
+	@:overload @:public public function startElement() : Void;
 	
-	@:overload public function endElement() : Void;
+	@:overload @:public public function endElement() : Void;
 	
-	@:overload public function xmlBaseAttribute(value : String) : Void;
+	@:overload @:public public function xmlBaseAttribute(value : String) : Void;
 	
-	@:overload public function getBaseUri() : String;
+	@:overload @:public public function getBaseUri() : String;
 	
 	
 }

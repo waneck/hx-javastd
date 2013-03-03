@@ -31,7 +31,7 @@ extern class MidiFileWriter
 	* @return array of file types.  If no file types are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload @:abstract public function getMidiFileTypes() : java.NativeArray<Int>;
+	@:overload @:public @:abstract public function getMidiFileTypes() : java.NativeArray<Int>;
 	
 	/**
 	* Obtains the file types that this file writer can write from the
@@ -41,7 +41,7 @@ extern class MidiFileWriter
 	* @return array of file types.  If no file types are supported,
 	* returns an array of length 0.
 	*/
-	@:overload @:abstract public function getMidiFileTypes(sequence : javax.sound.midi.Sequence) : java.NativeArray<Int>;
+	@:overload @:public @:abstract public function getMidiFileTypes(sequence : javax.sound.midi.Sequence) : java.NativeArray<Int>;
 	
 	/**
 	* Indicates whether file writing support for the specified MIDI file type
@@ -50,7 +50,7 @@ extern class MidiFileWriter
 	* @return <code>true</code> if the file type is supported,
 	* otherwise <code>false</code>
 	*/
-	@:overload public function isFileTypeSupported(fileType : Int) : Bool;
+	@:overload @:public public function isFileTypeSupported(fileType : Int) : Bool;
 	
 	/**
 	* Indicates whether a MIDI file of the file type specified can be written
@@ -60,7 +60,7 @@ extern class MidiFileWriter
 	* @return <code>true</code> if the file type is supported for this sequence,
 	* otherwise <code>false</code>
 	*/
-	@:overload public function isFileTypeSupported(fileType : Int, sequence : javax.sound.midi.Sequence) : Bool;
+	@:overload @:public public function isFileTypeSupported(fileType : Int, sequence : javax.sound.midi.Sequence) : Bool;
 	
 	/**
 	* Writes a stream of bytes representing a MIDI file of the file type
@@ -75,7 +75,7 @@ extern class MidiFileWriter
 	* @see #isFileTypeSupported(int, Sequence)
 	* @see     #getMidiFileTypes(Sequence)
 	*/
-	@:overload @:abstract public function write(_in : javax.sound.midi.Sequence, fileType : Int, out : java.io.OutputStream) : Int;
+	@:overload @:public @:abstract public function write(_in : javax.sound.midi.Sequence, fileType : Int, out : java.io.OutputStream) : Int;
 	
 	/**
 	* Writes a stream of bytes representing a MIDI file of the file type
@@ -90,7 +90,7 @@ extern class MidiFileWriter
 	* @see #isFileTypeSupported(int, Sequence)
 	* @see     #getMidiFileTypes(Sequence)
 	*/
-	@:overload @:abstract public function write(_in : javax.sound.midi.Sequence, fileType : Int, out : java.io.File) : Int;
+	@:overload @:public @:abstract public function write(_in : javax.sound.midi.Sequence, fileType : Int, out : java.io.File) : Int;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class ZipException extends java.io.IOException
 	* Constructs a <code>ZipException</code> with <code>null</code>
 	* as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>ZipException</code> with the specified detail
@@ -37,7 +37,7 @@ extern class ZipException extends java.io.IOException
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

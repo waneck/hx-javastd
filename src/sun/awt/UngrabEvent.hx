@@ -25,9 +25,9 @@ package sun.awt;
 */
 extern class UngrabEvent extends java.awt.AWTEvent
 {
-	@:overload public function new(source : java.awt.Component) : Void;
+	@:overload @:public public function new(source : java.awt.Component) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class DefaultAuthenticator extends java.net.Authenticator
 {
-	public static var defaultAuthfile(default, null) : String;
+	@:public @:static @:final public static var defaultAuthfile(default, null) : String;
 	
-	@:overload public function new(receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, authfile : java.io.File) : Void;
+	@:overload @:public public function new(receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, authfile : java.io.File) : Void;
 	
-	@:overload override private function getPasswordAuthentication() : java.net.PasswordAuthentication;
+	@:overload @:protected override private function getPasswordAuthentication() : java.net.PasswordAuthentication;
 	
 	
 }

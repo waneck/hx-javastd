@@ -30,7 +30,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @return the maximum number of simultaneous notes
 	* @see #getVoiceStatus
 	*/
-	@:overload public function getMaxPolyphony() : Int;
+	@:overload @:public public function getMaxPolyphony() : Int;
 	
 	/**
 	* Obtains the processing latency incurred by this synthesizer, expressed in
@@ -44,7 +44,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	*
 	* @return the worst-case delay, in microseconds
 	*/
-	@:overload public function getLatency() : haxe.Int64;
+	@:overload @:public public function getLatency() : haxe.Int64;
 	
 	/**
 	* Obtains the set of MIDI channels controlled by this synthesizer.  Each
@@ -59,7 +59,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @return an array of the <code>MidiChannel</code> objects managed by this
 	* <code>Synthesizer</code>.  Some of the array elements may be <code>null</code>.
 	*/
-	@:overload public function getChannels() : java.NativeArray<javax.sound.midi.MidiChannel>;
+	@:overload @:public public function getChannels() : java.NativeArray<javax.sound.midi.MidiChannel>;
 	
 	/**
 	* Obtains the current status of the voices produced by this synthesizer.
@@ -74,7 +74,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #getMaxPolyphony
 	* @see VoiceStatus
 	*/
-	@:overload public function getVoiceStatus() : java.NativeArray<javax.sound.midi.VoiceStatus>;
+	@:overload @:public public function getVoiceStatus() : java.NativeArray<javax.sound.midi.VoiceStatus>;
 	
 	/**
 	* Informs the caller whether this synthesizer is capable of loading
@@ -89,7 +89,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #unloadAllInstruments
 	* @see #getDefaultSoundbank
 	*/
-	@:overload public function isSoundbankSupported(soundbank : javax.sound.midi.Soundbank) : Bool;
+	@:overload @:public public function isSoundbankSupported(soundbank : javax.sound.midi.Soundbank) : Bool;
 	
 	/**
 	* Makes a particular instrument available for synthesis.  This instrument
@@ -119,7 +119,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see SoundbankResource#getSoundbank
 	* @see MidiChannel#programChange(int, int)
 	*/
-	@:overload public function loadInstrument(instrument : javax.sound.midi.Instrument) : Bool;
+	@:overload @:public public function loadInstrument(instrument : javax.sound.midi.Instrument) : Bool;
 	
 	/**
 	* Unloads a particular instrument.
@@ -133,7 +133,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #getLoadedInstruments
 	* @see #remapInstrument
 	*/
-	@:overload public function unloadInstrument(instrument : javax.sound.midi.Instrument) : Void;
+	@:overload @:public public function unloadInstrument(instrument : javax.sound.midi.Instrument) : Void;
 	
 	/**
 	* Remaps an instrument. Instrument <code>to</code> takes the
@@ -160,7 +160,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #loadInstruments
 	* @see #loadAllInstruments
 	*/
-	@:overload public function remapInstrument(from : javax.sound.midi.Instrument, to : javax.sound.midi.Instrument) : Bool;
+	@:overload @:public public function remapInstrument(from : javax.sound.midi.Instrument, to : javax.sound.midi.Instrument) : Bool;
 	
 	/**
 	* Obtains the default soundbank for the synthesizer, if one exists.
@@ -170,7 +170,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @return default soundbank, or <code>null</code> if one does not exist.
 	* @see #isSoundbankSupported
 	*/
-	@:overload public function getDefaultSoundbank() : javax.sound.midi.Soundbank;
+	@:overload @:public public function getDefaultSoundbank() : javax.sound.midi.Soundbank;
 	
 	/**
 	* Obtains a list of instruments that come with the synthesizer.  These
@@ -192,7 +192,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #isSoundbankSupported(Soundbank)
 	* @see #loadInstrument
 	*/
-	@:overload public function getAvailableInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
+	@:overload @:public public function getAvailableInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
 	
 	/**
 	* Obtains a list of the instruments that are currently loaded onto this
@@ -202,7 +202,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #getAvailableInstruments
 	* @see Soundbank#getInstruments
 	*/
-	@:overload public function getLoadedInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
+	@:overload @:public public function getLoadedInstruments() : java.NativeArray<javax.sound.midi.Instrument>;
 	
 	/**
 	* Loads onto the <code>Synthesizer</code> all instruments contained
@@ -218,7 +218,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #loadInstrument
 	* @see #loadInstruments
 	*/
-	@:overload public function loadAllInstruments(soundbank : javax.sound.midi.Soundbank) : Bool;
+	@:overload @:public public function loadAllInstruments(soundbank : javax.sound.midi.Soundbank) : Bool;
 	
 	/**
 	* Unloads all instruments contained in the specified <code>Soundbank</code>.
@@ -228,7 +228,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see #unloadInstrument
 	* @see #unloadInstruments
 	*/
-	@:overload public function unloadAllInstruments(soundbank : javax.sound.midi.Soundbank) : Void;
+	@:overload @:public public function unloadAllInstruments(soundbank : javax.sound.midi.Soundbank) : Void;
 	
 	/**
 	* Loads the instruments referenced by the specified patches, from the
@@ -249,7 +249,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see Soundbank#getInstrument(Patch)
 	* @see Sequence#getPatchList()
 	*/
-	@:overload public function loadInstruments(soundbank : javax.sound.midi.Soundbank, patchList : java.NativeArray<javax.sound.midi.Patch>) : Bool;
+	@:overload @:public public function loadInstruments(soundbank : javax.sound.midi.Soundbank, patchList : java.NativeArray<javax.sound.midi.Patch>) : Bool;
 	
 	/**
 	* Unloads the instruments referenced by the specified patches, from the MIDI sound bank specified.
@@ -263,7 +263,7 @@ extern interface Synthesizer extends javax.sound.midi.MidiDevice
 	* @see Instrument#getPatch
 	* @see #loadInstruments
 	*/
-	@:overload public function unloadInstruments(soundbank : javax.sound.midi.Soundbank, patchList : java.NativeArray<javax.sound.midi.Patch>) : Void;
+	@:overload @:public public function unloadInstruments(soundbank : javax.sound.midi.Soundbank, patchList : java.NativeArray<javax.sound.midi.Patch>) : Void;
 	
 	
 }

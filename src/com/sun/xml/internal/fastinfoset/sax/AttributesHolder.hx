@@ -27,53 +27,53 @@ package com.sun.xml.internal.fastinfoset.sax;
 */
 extern class AttributesHolder implements com.sun.xml.internal.org.jvnet.fastinfoset.sax.EncodingAlgorithmAttributes
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(registeredEncodingAlgorithms : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(registeredEncodingAlgorithms : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload @:final public function getLength() : Int;
+	@:overload @:public @:final public function getLength() : Int;
 	
-	@:overload @:final public function getLocalName(index : Int) : String;
+	@:overload @:public @:final public function getLocalName(index : Int) : String;
 	
-	@:overload @:final public function getQName(index : Int) : String;
+	@:overload @:public @:final public function getQName(index : Int) : String;
 	
-	@:overload @:final public function getType(index : Int) : String;
+	@:overload @:public @:final public function getType(index : Int) : String;
 	
-	@:overload @:final public function getURI(index : Int) : String;
+	@:overload @:public @:final public function getURI(index : Int) : String;
 	
-	@:overload @:final public function getValue(index : Int) : String;
+	@:overload @:public @:final public function getValue(index : Int) : String;
 	
-	@:overload @:final public function getIndex(qName : String) : Int;
+	@:overload @:public @:final public function getIndex(qName : String) : Int;
 	
-	@:overload @:final public function getType(qName : String) : String;
+	@:overload @:public @:final public function getType(qName : String) : String;
 	
-	@:overload @:final public function getValue(qName : String) : String;
+	@:overload @:public @:final public function getValue(qName : String) : String;
 	
-	@:overload @:final public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public @:final public function getIndex(uri : String, localName : String) : Int;
 	
-	@:overload @:final public function getType(uri : String, localName : String) : String;
+	@:overload @:public @:final public function getType(uri : String, localName : String) : String;
 	
-	@:overload @:final public function getValue(uri : String, localName : String) : String;
+	@:overload @:public @:final public function getValue(uri : String, localName : String) : String;
 	
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final public function clear() : Void;
 	
-	@:overload @:final public function getAlgorithmURI(index : Int) : String;
+	@:overload @:public @:final public function getAlgorithmURI(index : Int) : String;
 	
-	@:overload @:final public function getAlgorithmIndex(index : Int) : Int;
+	@:overload @:public @:final public function getAlgorithmIndex(index : Int) : Int;
 	
-	@:overload @:final public function getAlgorithmData(index : Int) : Dynamic;
+	@:overload @:public @:final public function getAlgorithmData(index : Int) : Dynamic;
 	
-	@:overload public function getAlpababet(index : Int) : String;
+	@:overload @:public public function getAlpababet(index : Int) : String;
 	
-	@:overload public function getToIndex(index : Int) : Bool;
+	@:overload @:public public function getToIndex(index : Int) : Bool;
 	
-	@:overload @:final public function addAttribute(name : com.sun.xml.internal.fastinfoset.QualifiedName, value : String) : Void;
+	@:overload @:public @:final public function addAttribute(name : com.sun.xml.internal.fastinfoset.QualifiedName, value : String) : Void;
 	
-	@:overload @:final public function addAttributeWithAlgorithmData(name : com.sun.xml.internal.fastinfoset.QualifiedName, URI : String, id : Int, data : Dynamic) : Void;
+	@:overload @:public @:final public function addAttributeWithAlgorithmData(name : com.sun.xml.internal.fastinfoset.QualifiedName, URI : String, id : Int, data : Dynamic) : Void;
 	
-	@:overload @:final public function getQualifiedName(index : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
+	@:overload @:public @:final public function getQualifiedName(index : Int) : com.sun.xml.internal.fastinfoset.QualifiedName;
 	
-	@:overload @:final public function getPrefix(index : Int) : String;
+	@:overload @:public @:final public function getPrefix(index : Int) : String;
 	
 	
 }

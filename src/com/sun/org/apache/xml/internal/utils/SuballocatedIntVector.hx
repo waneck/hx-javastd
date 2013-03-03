@@ -44,40 +44,42 @@ package com.sun.org.apache.xml.internal.utils;
 extern class SuballocatedIntVector
 {
 	/** Size of blocks to allocate          */
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** Bitwise addressing (much faster than div/remainder */
-	private var m_SHIFT : Int;
+	@:protected private var m_SHIFT : Int;
+	
+	@:protected private var m_MASK : Int;
 	
 	/** The default number of blocks to (over)allocate by */
-	private static var NUMBLOCKS_DEFAULT(default, null) : Int;
+	@:protected @:static @:final private static var NUMBLOCKS_DEFAULT(default, null) : Int;
 	
 	/** The number of blocks to (over)allocate by */
-	private var m_numblocks : Int;
+	@:protected private var m_numblocks : Int;
 	
 	/** Array of arrays of ints          */
-	private var m_map : java.NativeArray<java.NativeArray<Int>>;
+	@:protected private var m_map : java.NativeArray<java.NativeArray<Int>>;
 	
 	/** Number of ints in array          */
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/** "Shortcut" handle to m_map[0]. Surprisingly helpful for short vectors. */
-	private var m_map0 : java.NativeArray<Int>;
+	@:protected private var m_map0 : java.NativeArray<Int>;
 	
 	/** "Shortcut" handle to most recently added row of m_map.
 	* Very helpful during construction.
 	* @xsl.usage internal
 	*/
-	private var m_buildCache : java.NativeArray<Int>;
+	@:protected private var m_buildCache : java.NativeArray<Int>;
 	
-	private var m_buildCacheStartIndex : Int;
+	@:protected private var m_buildCacheStartIndex : Int;
 	
 	/**
 	* Default constructor.  Note that the default
 	* block size is currently 2K, which may be overkill for
 	* small lists and undershootng for large ones.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a IntVector, using the given block size and number
@@ -87,21 +89,21 @@ extern class SuballocatedIntVector
 	* @param blocksize Size of block to allocate
 	* @param numblocks Number of blocks to allocate
 	* */
-	@:overload public function new(blocksize : Int, numblocks : Int) : Void;
+	@:overload @:public public function new(blocksize : Int, numblocks : Int) : Void;
 	
 	/** Construct a IntVector, using the given block size and
 	* the default number of blocks (32).
 	*
 	* @param blocksize Size of block to allocate
 	* */
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return length of the list
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Set the length of the list. This will only work to truncate the list, and
@@ -109,19 +111,19 @@ extern class SuballocatedIntVector
 	*
 	* @return length of the list
 	*/
-	@:overload public function setSize(sz : Int) : Void;
+	@:overload @:public public function setSize(sz : Int) : Void;
 	
 	/**
 	* Append a int onto the vector.
 	*
 	* @param value Int to add to the list
 	*/
-	@:overload public function addElement(value : Int) : Void;
+	@:overload @:public public function addElement(value : Int) : Void;
 	
 	/**
 	* Wipe it out. Currently defined as equivalent to setSize(0).
 	*/
-	@:overload public function removeAllElements() : Void;
+	@:overload @:public public function removeAllElements() : Void;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -133,7 +135,7 @@ extern class SuballocatedIntVector
 	* @param value object to set
 	* @param at    Index of where to set the object
 	*/
-	@:overload public function setElementAt(value : Int, at : Int) : Void;
+	@:overload @:public public function setElementAt(value : Int, at : Int) : Void;
 	
 	/**
 	* Get the nth element. This is often at the innermost loop of an
@@ -156,7 +158,7 @@ extern class SuballocatedIntVector
 	* Try/Catch is _supposed_ to be nearly free when not thrown to. Do we
 	* believe that? Should we have a separate safeElementAt?
 	*/
-	@:overload public function elementAt(i : Int) : Int;
+	@:overload @:public public function elementAt(i : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -169,7 +171,7 @@ extern class SuballocatedIntVector
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : Int, index : Int) : Int;
+	@:overload @:public public function indexOf(elem : Int, index : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -181,19 +183,19 @@ extern class SuballocatedIntVector
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : Int) : Int;
+	@:overload @:public public function indexOf(elem : Int) : Int;
 	
 	/**
 	* Return the internal m_map0 array
 	* @return the m_map0 array
 	*/
-	@:overload @:final public function getMap0() : java.NativeArray<Int>;
+	@:overload @:public @:final public function getMap0() : java.NativeArray<Int>;
 	
 	/**
 	* Return the m_map double array
 	* @return the internal map of array of arrays
 	*/
-	@:overload @:final public function getMap() : java.NativeArray<java.NativeArray<Int>>;
+	@:overload @:public @:final public function getMap() : java.NativeArray<java.NativeArray<Int>>;
 	
 	
 }

@@ -36,17 +36,17 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	/**
 	* The path we use for finding source files.
 	*/
-	private var sourcePath : sun.tools.java.ClassPath;
+	@:protected private var sourcePath : sun.tools.java.ClassPath;
 	
 	/**
 	* The path we use for finding class (binary) files.
 	*/
-	private var binaryPath : sun.tools.java.ClassPath;
+	@:protected private var binaryPath : sun.tools.java.ClassPath;
 	
 	/**
 	* flags
 	*/
-	public var flags : Int;
+	@:public public var flags : Int;
 	
 	/**
 	* Major and minor versions to use for generated class files.
@@ -56,100 +56,100 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	* javac itself may override these versions with values determined
 	* from the command line "-target" option.
 	*/
-	public var majorVersion : java.StdTypes.Int16;
+	@:public public var majorVersion : java.StdTypes.Int16;
 	
-	public var minorVersion : java.StdTypes.Int16;
+	@:public public var minorVersion : java.StdTypes.Int16;
 	
 	/**
 	* coverage data file
 	*/
-	public var covFile : java.io.File;
+	@:public public var covFile : java.io.File;
 	
 	/**
 	* The number of errors and warnings
 	*/
-	public var nerrors : Int;
+	@:public public var nerrors : Int;
 	
-	public var nwarnings : Int;
+	@:public public var nwarnings : Int;
 	
-	public var ndeprecations : Int;
+	@:public public var ndeprecations : Int;
 	
 	/**
 	* Old constructors -- these constructors build a BatchEnvironment
 	* with an old-style class path.
 	*/
-	@:overload public function new(path : sun.tools.java.ClassPath) : Void;
+	@:overload @:public public function new(path : sun.tools.java.ClassPath) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath, errorConsumer : sun.tools.javac.ErrorConsumer) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, path : sun.tools.java.ClassPath, errorConsumer : sun.tools.javac.ErrorConsumer) : Void;
 	
 	/**
 	* New constructors -- these constructors build a BatchEnvironment
 	* with a source path and a binary path.
 	*/
-	@:overload public function new(sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath) : Void;
+	@:overload @:public public function new(sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream, sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath) : Void;
 	
-	@:overload public function new(out : java.io.OutputStream, sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath, errorConsumer : sun.tools.javac.ErrorConsumer) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, sourcePath : sun.tools.java.ClassPath, binaryPath : sun.tools.java.ClassPath, errorConsumer : sun.tools.javac.ErrorConsumer) : Void;
 	
-	@:overload private static function classPaths(srcPathString : String, classPathString : String, sysClassPathString : String, extDirsString : String) : java.NativeArray<sun.tools.java.ClassPath>;
+	@:overload @:protected @:static private static function classPaths(srcPathString : String, classPathString : String, sysClassPathString : String, extDirsString : String) : java.NativeArray<sun.tools.java.ClassPath>;
 	
 	/**
 	* Return flags
 	*/
-	@:overload public function getFlags() : Int;
+	@:overload @:public override public function getFlags() : Int;
 	
 	/**
 	* Return major version to use for generated class files
 	*/
-	@:overload public function getMajorVersion() : java.StdTypes.Int16;
+	@:overload @:public override public function getMajorVersion() : java.StdTypes.Int16;
 	
 	/**
 	* Return minor version to use for generated class files
 	*/
-	@:overload public function getMinorVersion() : java.StdTypes.Int16;
+	@:overload @:public override public function getMinorVersion() : java.StdTypes.Int16;
 	
 	/**
 	* Return coverage data file
 	*/
-	@:overload public function getcovFile() : java.io.File;
+	@:overload @:public override public function getcovFile() : java.io.File;
 	
 	/**
 	* Return an enumeration of all the currently defined classes
 	* in order of appearance to getClassDeclaration().
 	*/
-	@:overload public function getClasses() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getClasses() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Tells whether an Identifier refers to a package which should be
 	* exempt from the "exists" check in Imports#resolve().
 	*/
-	@:overload public function isExemptPackage(id : sun.tools.java.Identifier) : Bool;
+	@:overload @:public override public function isExemptPackage(id : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Get a class, given the fully qualified class name
 	*/
-	@:overload public function getClassDeclaration(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDeclaration;
+	@:overload @:public override public function getClassDeclaration(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDeclaration;
 	
-	@:overload public function getClassDeclaration(t : sun.tools.java.Type) : sun.tools.java.ClassDeclaration;
+	@:overload @:public override public function getClassDeclaration(t : sun.tools.java.Type) : sun.tools.java.ClassDeclaration;
 	
 	/**
 	* Check if a class exists
 	* Applies only to package members (non-nested classes).
 	*/
-	@:overload public function classExists(nm : sun.tools.java.Identifier) : Bool;
+	@:overload @:public override public function classExists(nm : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Get the package path for a package
 	*/
-	@:overload public function getPackage(pkg : sun.tools.java.Identifier) : sun.tools.java.Package;
+	@:overload @:public override public function getPackage(pkg : sun.tools.java.Identifier) : sun.tools.java.Package;
 	
 	/**
 	* Parse a source file
 	*/
-	@:overload public function parseFile(file : sun.tools.java.ClassFile) : Void;
+	@:overload @:public public function parseFile(file : sun.tools.java.ClassFile) : Void;
 	
 	/**
 	* Load the definition of a class
@@ -158,27 +158,27 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	* until it the state converges to CS_BINARY, CS_PARSED, or the like..
 	* @see ClassDeclaration#getClassDefinition
 	*/
-	@:overload public function loadDefinition(c : sun.tools.java.ClassDeclaration) : Void;
+	@:overload @:public override public function loadDefinition(c : sun.tools.java.ClassDeclaration) : Void;
 	
 	/**
 	* Create a new class.
 	*/
-	@:overload public function makeClassDefinition(toplevelEnv : sun.tools.java.Environment, where : haxe.Int64, name : sun.tools.java.IdentifierToken, doc : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
+	@:overload @:public override public function makeClassDefinition(toplevelEnv : sun.tools.java.Environment, where : haxe.Int64, name : sun.tools.java.IdentifierToken, doc : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Create a new field.
 	*/
-	@:overload public function makeMemberDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, doc : String, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, argNames : java.NativeArray<sun.tools.java.IdentifierToken>, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : Dynamic) : sun.tools.java.MemberDefinition;
+	@:overload @:public override public function makeMemberDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, doc : String, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, argNames : java.NativeArray<sun.tools.java.IdentifierToken>, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : Dynamic) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Release resources in classpath.
 	*/
-	@:overload public function shutdown() : Void;
+	@:overload @:public override public function shutdown() : Void;
 	
 	/**
 	* Error String
 	*/
-	@:overload public function errorString(err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : String;
+	@:overload @:public public function errorString(err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : String;
 	
 	/**
 	* Insert an error message in the list of outstanding error messages.
@@ -192,35 +192,35 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	* at insertion time, so the functionality was moved here.  This also
 	* saves a miniscule number of allocations.
 	*/
-	@:overload private function insertError(where : haxe.Int64, message : String) : Bool;
+	@:overload @:protected private function insertError(where : haxe.Int64, message : String) : Bool;
 	
 	/**
 	* Maximum number of errors to print.
 	*/
-	public var errorLimit : Int;
+	@:public public var errorLimit : Int;
 	
 	/**
 	* Flush outstanding errors
 	*/
-	@:overload public function pushError(errorFileName : String, line : Int, message : String, referenceText : String, referenceTextPointer : String) : Void;
+	@:overload @:public public function pushError(errorFileName : String, line : Int, message : String, referenceText : String, referenceTextPointer : String) : Void;
 	
-	@:overload public function flushErrors() : Void;
+	@:overload @:public public function flushErrors() : Void;
 	
 	/**
 	* Report error
 	*/
-	@:overload public function reportError(src : Dynamic, where : haxe.Int64, err : String, msg : String) : Void;
+	@:overload @:public public function reportError(src : Dynamic, where : haxe.Int64, err : String, msg : String) : Void;
 	
 	/**
 	* Issue an error
 	*/
-	@:overload public function error(source : Dynamic, where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
+	@:overload @:public override public function error(source : Dynamic, where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
 	
 	/**
 	* Output a string. This can either be an error message or something
 	* for debugging.
 	*/
-	@:overload public function output(msg : String) : Void;
+	@:overload @:public override public function output(msg : String) : Void;
 	
 	
 }

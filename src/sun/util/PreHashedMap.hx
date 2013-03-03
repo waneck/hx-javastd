@@ -40,7 +40,7 @@ extern class PreHashedMap<V> extends java.util.AbstractMap<String, V>
 	* @param mask
 	*        The value with which hash codes are masked after being shifted
 	*/
-	@:overload private function new(rows : Int, size : Int, shift : Int, mask : Int) : Void;
+	@:overload @:protected private function new(rows : Int, size : Int, shift : Int, mask : Int) : Void;
 	
 	/**
 	* Initializes this map.
@@ -51,19 +51,19 @@ extern class PreHashedMap<V> extends java.util.AbstractMap<String, V>
 	* @param rows
 	*        The row array to be initialized
 	*/
-	@:overload @:abstract private function init(ht : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected @:abstract private function init(ht : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload override public function get(k : Dynamic) : V;
+	@:overload @:public override public function get(k : Dynamic) : V;
 	
 	/**
 	* @throws UnsupportedOperationException
 	*         If the given key is not part of this map's initial key set
 	*/
-	@:overload public function put(k : String, v : V) : V;
+	@:overload @:public public function put(k : String, v : V) : V;
 	
-	@:overload override public function keySet() : java.util.Set<String>;
+	@:overload @:public override public function keySet() : java.util.Set<String>;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, V>>;
+	@:overload @:public override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, V>>;
 	
 	
 }

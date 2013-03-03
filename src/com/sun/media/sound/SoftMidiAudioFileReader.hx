@@ -30,23 +30,23 @@ extern class SoftMidiAudioFileReader extends javax.sound.sampled.spi.AudioFileRe
 	*
 	* @author Karl Helgason
 	*/
-	public static var MIDI(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
+	@:public @:static @:final public static var MIDI(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
-	@:overload public function getAudioFileFormat(seq : javax.sound.midi.Sequence) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public public function getAudioFileFormat(seq : javax.sound.midi.Sequence) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload public function getAudioInputStream(seq : javax.sound.midi.Sequence) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public public function getAudioInputStream(seq : javax.sound.midi.Sequence) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function getAudioInputStream(inputstream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(inputstream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function getAudioFileFormat(inputstream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload @:public override public function getAudioFileFormat(inputstream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
 	
 }

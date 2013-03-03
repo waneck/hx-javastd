@@ -26,27 +26,27 @@ package javax.imageio.spi;
 @:internal extern class DigraphNode implements java.lang.Cloneable implements java.io.Serializable
 {
 	/** The data associated with this node. */
-	private var data : Dynamic;
+	@:protected private var data : Dynamic;
 	
 	/**
 	* A <code>Set</code> of neighboring nodes pointed to by this
 	* node.
 	*/
-	private var outNodes : java.util.Set<Dynamic>;
+	@:protected private var outNodes : java.util.Set<Dynamic>;
 	
 	/** The in-degree of the node. */
-	private var inDegree : Int;
+	@:protected private var inDegree : Int;
 	
-	@:overload public function new(data : Dynamic) : Void;
+	@:overload @:public public function new(data : Dynamic) : Void;
 	
 	/** Returns the <code>Object</code> referenced by this node. */
-	@:overload public function getData() : Dynamic;
+	@:overload @:public public function getData() : Dynamic;
 	
 	/**
 	* Returns an <code>Iterator</code> containing the nodes pointed
 	* to by this node.
 	*/
-	@:overload public function getOutNodes() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getOutNodes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Adds a directed edge to the graph.  The outNodes list of this
@@ -57,7 +57,7 @@ package javax.imageio.spi;
 	* @return <code>true</code> if the node was not previously the
 	* target of an edge.
 	*/
-	@:overload public function addEdge(node : javax.imageio.spi.DigraphNode) : Bool;
+	@:overload @:public public function addEdge(node : javax.imageio.spi.DigraphNode) : Bool;
 	
 	/**
 	* Returns <code>true</code> if an edge exists between this node
@@ -67,7 +67,7 @@ package javax.imageio.spi;
 	*
 	* @return <code>true</code> if the node is the target of an edge.
 	*/
-	@:overload public function hasEdge(node : javax.imageio.spi.DigraphNode) : Bool;
+	@:overload @:public public function hasEdge(node : javax.imageio.spi.DigraphNode) : Bool;
 	
 	/**
 	* Removes a directed edge from the graph.  The outNodes list of this
@@ -76,16 +76,16 @@ package javax.imageio.spi;
 	* @return <code>true</code> if the node was previously the target
 	* of an edge.
 	*/
-	@:overload public function removeEdge(node : javax.imageio.spi.DigraphNode) : Bool;
+	@:overload @:public public function removeEdge(node : javax.imageio.spi.DigraphNode) : Bool;
 	
 	/**
 	* Removes this node from the graph, updating neighboring nodes
 	* appropriately.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/** Returns the in-degree of this node. */
-	@:overload public function getInDegree() : Int;
+	@:overload @:public public function getInDegree() : Int;
 	
 	
 }

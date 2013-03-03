@@ -44,7 +44,7 @@ package java.net;
 	* <code>Socket s = new Socket(Proxy.NO_PROXY);</code><br>
 	* <P>
 	*/
-	public static var NO_PROXY(default, null) : java.net.Proxy;
+	@:public @:final @:static public static var NO_PROXY(default, null) : java.net.Proxy;
 	
 	/**
 	* Creates an entry representing a PROXY connection.
@@ -59,14 +59,14 @@ package java.net;
 	* @throws IllegalArgumentException when the type and the address are
 	* incompatible
 	*/
-	@:overload public function new(type : java.net.Proxy.Proxy_Type, sa : java.net.SocketAddress) : Void;
+	@:overload @:public public function new(type : java.net.Proxy.Proxy_Type, sa : java.net.SocketAddress) : Void;
 	
 	/**
 	* Returns the proxy type.
 	*
 	* @return a Type representing the proxy type
 	*/
-	@:overload public function type() : java.net.Proxy.Proxy_Type;
+	@:overload @:public public function type() : java.net.Proxy.Proxy_Type;
 	
 	/**
 	* Returns the socket address of the proxy, or
@@ -75,7 +75,7 @@ package java.net;
 	* @return a <code>SocketAddress</code> representing the socket end
 	*         point of the proxy
 	*/
-	@:overload public function address() : java.net.SocketAddress;
+	@:overload @:public public function address() : java.net.SocketAddress;
 	
 	/**
 	* Constructs a string representation of this Proxy.
@@ -85,7 +85,7 @@ package java.net;
 	*
 	* @return  a string representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares this object against the specified object.
@@ -101,14 +101,14 @@ package java.net;
 	*          <code>false</code> otherwise.
 	* @see java.net.InetSocketAddress#equals(java.lang.Object)
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this Proxy.
 	*
 	* @return  a hash code value for this Proxy.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	
 }

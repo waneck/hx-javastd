@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface ComplexTypeModel extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.AttrDecls extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.TypeDefParticle extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function simpleContent() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleContent;
+	@:overload @:public public function simpleContent() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleContent;
 	
-	@:overload public function complexContent() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexContent;
+	@:overload @:public public function complexContent() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexContent;
 	
-	@:overload public function mixed(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexTypeModel;
+	@:overload @:public public function mixed(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexTypeModel;
 	
 	
 }

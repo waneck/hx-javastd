@@ -34,29 +34,29 @@ extern class GenericListeningConnector extends com.sun.tools.jdi.ConnectorImpl i
 	* when sub-classing - the resulting connector will a "timeout" connector
 	* argument.
 	*/
-	@:overload private function new(ts : com.sun.jdi.connect.spi.TransportService) : Void;
+	@:overload @:protected private function new(ts : com.sun.jdi.connect.spi.TransportService) : Void;
 	
 	/**
 	* Create an instance of this Connector. The resulting ListeningConnector will
 	* have "address" and "timeout" connector arguments.
 	*/
-	@:overload public static function create(ts : com.sun.jdi.connect.spi.TransportService) : com.sun.tools.jdi.GenericListeningConnector;
+	@:overload @:public @:static public static function create(ts : com.sun.jdi.connect.spi.TransportService) : com.sun.tools.jdi.GenericListeningConnector;
 	
-	@:overload public function startListening(address : String, args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
+	@:overload @:public public function startListening(address : String, args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
 	
-	@:overload public function startListening(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
+	@:overload @:public public function startListening(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
 	
-	@:overload public function stopListening(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : Void;
+	@:overload @:public public function stopListening(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : Void;
 	
-	@:overload public function accept(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload @:public public function accept(args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function supportsMultipleConnections() : Bool;
+	@:overload @:public public function supportsMultipleConnections() : Bool;
 	
-	@:overload public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload public function description() : String;
+	@:overload @:public override public function description() : String;
 	
-	@:overload public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
 	
 }

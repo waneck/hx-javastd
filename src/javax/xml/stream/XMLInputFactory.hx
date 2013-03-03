@@ -32,58 +32,58 @@ extern class XMLInputFactory
 	* this is to support XML 1.0 documents,
 	* only the true setting must be supported
 	*/
-	public static var IS_NAMESPACE_AWARE(default, null) : String;
+	@:public @:static @:final public static var IS_NAMESPACE_AWARE(default, null) : String;
 	
 	/**
 	* The property used to turn on/off implementation specific validation
 	*/
-	public static var IS_VALIDATING(default, null) : String;
+	@:public @:static @:final public static var IS_VALIDATING(default, null) : String;
 	
 	/**
 	* The property that requires the parser to coalesce adjacent character data sections
 	*/
-	public static var IS_COALESCING(default, null) : String;
+	@:public @:static @:final public static var IS_COALESCING(default, null) : String;
 	
 	/**
 	* Requires the parser to replace internal
 	* entity references with their replacement
 	* text and report them as characters
 	*/
-	public static var IS_REPLACING_ENTITY_REFERENCES(default, null) : String;
+	@:public @:static @:final public static var IS_REPLACING_ENTITY_REFERENCES(default, null) : String;
 	
 	/**
 	*  The property that requires the parser to resolve external parsed entities
 	*/
-	public static var IS_SUPPORTING_EXTERNAL_ENTITIES(default, null) : String;
+	@:public @:static @:final public static var IS_SUPPORTING_EXTERNAL_ENTITIES(default, null) : String;
 	
 	/**
 	*  The property that requires the parser to support DTDs
 	*/
-	public static var SUPPORT_DTD(default, null) : String;
+	@:public @:static @:final public static var SUPPORT_DTD(default, null) : String;
 	
 	/**
 	* The property used to
 	* set/get the implementation of the XMLReporter interface
 	*/
-	public static var REPORTER(default, null) : String;
+	@:public @:static @:final public static var REPORTER(default, null) : String;
 	
 	/**
 	* The property used to set/get the implementation of the XMLResolver
 	*/
-	public static var RESOLVER(default, null) : String;
+	@:public @:static @:final public static var RESOLVER(default, null) : String;
 	
 	/**
 	* The property used to set/get the implementation of the allocator
 	*/
-	public static var ALLOCATOR(default, null) : String;
+	@:public @:static @:final public static var ALLOCATOR(default, null) : String;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Create a new instance of the factory.
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newInstance() : javax.xml.stream.XMLInputFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -110,7 +110,7 @@ extern class XMLInputFactory
 	*
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory() : javax.xml.stream.XMLInputFactory;
+	@:overload @:public @:static public static function newFactory() : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory
@@ -127,7 +127,7 @@ extern class XMLInputFactory
 	*              #newFactory(java.lang.String, java.lang.ClassLoader)} method
 	*              defines no changes in behavior.
 	*/
-	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
+	@:overload @:public @:static public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -144,14 +144,14 @@ extern class XMLInputFactory
 	* @return the factory implementation
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
+	@:overload @:public @:static public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new XMLStreamReader from a reader
 	* @param reader the XML data to read from
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamReader(reader : java.io.Reader) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createXMLStreamReader(reader : java.io.Reader) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new XMLStreamReader from a JAXP source.  This method is optional.
@@ -160,14 +160,14 @@ extern class XMLInputFactory
 	* supported by this XMLInputFactory
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamReader(source : javax.xml.transform.Source) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createXMLStreamReader(source : javax.xml.transform.Source) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new XMLStreamReader from a java.io.InputStream
 	* @param stream the InputStream to read from
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamReader(stream : java.io.InputStream) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createXMLStreamReader(stream : java.io.InputStream) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new XMLStreamReader from a java.io.InputStream
@@ -175,28 +175,28 @@ extern class XMLInputFactory
 	* @param encoding the character encoding of the stream
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLStreamReader(stream : java.io.InputStream, encoding : String) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createXMLStreamReader(stream : java.io.InputStream, encoding : String) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new XMLStreamReader from a java.io.InputStream
 	* @param systemId the system ID of the stream
 	* @param stream the InputStream to read from
 	*/
-	@:overload @:abstract public function createXMLStreamReader(systemId : String, stream : java.io.InputStream) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createXMLStreamReader(systemId : String, stream : java.io.InputStream) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new XMLStreamReader from a java.io.InputStream
 	* @param systemId the system ID of the stream
 	* @param reader the InputStream to read from
 	*/
-	@:overload @:abstract public function createXMLStreamReader(systemId : String, reader : java.io.Reader) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createXMLStreamReader(systemId : String, reader : java.io.Reader) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new XMLEventReader from a reader
 	* @param reader the XML data to read from
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventReader(reader : java.io.Reader) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(reader : java.io.Reader) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a new XMLEventReader from a reader
@@ -204,7 +204,7 @@ extern class XMLInputFactory
 	* @param reader the XML data to read from
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventReader(systemId : String, reader : java.io.Reader) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(systemId : String, reader : java.io.Reader) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a new XMLEventReader from an XMLStreamReader.  After being used
@@ -214,7 +214,7 @@ extern class XMLInputFactory
 	* @return a new XMLEventReader
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventReader(reader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(reader : javax.xml.stream.XMLStreamReader) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a new XMLEventReader from a JAXP source.
@@ -223,14 +223,14 @@ extern class XMLInputFactory
 	* @throws UnsupportedOperationException if this method is not
 	* supported by this XMLInputFactory
 	*/
-	@:overload @:abstract public function createXMLEventReader(source : javax.xml.transform.Source) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(source : javax.xml.transform.Source) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a new XMLEventReader from a java.io.InputStream
 	* @param stream the InputStream to read from
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventReader(stream : java.io.InputStream) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(stream : java.io.InputStream) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a new XMLEventReader from a java.io.InputStream
@@ -238,7 +238,7 @@ extern class XMLInputFactory
 	* @param encoding the character encoding of the stream
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventReader(stream : java.io.InputStream, encoding : String) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(stream : java.io.InputStream, encoding : String) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a new XMLEventReader from a java.io.InputStream
@@ -246,7 +246,7 @@ extern class XMLInputFactory
 	* @param stream the InputStream to read from
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createXMLEventReader(systemId : String, stream : java.io.InputStream) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createXMLEventReader(systemId : String, stream : java.io.InputStream) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* Create a filtered reader that wraps the filter around the reader
@@ -254,7 +254,7 @@ extern class XMLInputFactory
 	* @param filter the filter to apply to the reader
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createFilteredReader(reader : javax.xml.stream.XMLStreamReader, filter : javax.xml.stream.StreamFilter) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public @:abstract public function createFilteredReader(reader : javax.xml.stream.XMLStreamReader, filter : javax.xml.stream.StreamFilter) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a filtered event reader that wraps the filter around the event reader
@@ -262,33 +262,33 @@ extern class XMLInputFactory
 	* @param filter the filter to apply to the event reader
 	* @throws XMLStreamException
 	*/
-	@:overload @:abstract public function createFilteredReader(reader : javax.xml.stream.XMLEventReader, filter : javax.xml.stream.EventFilter) : javax.xml.stream.XMLEventReader;
+	@:overload @:public @:abstract public function createFilteredReader(reader : javax.xml.stream.XMLEventReader, filter : javax.xml.stream.EventFilter) : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* The resolver that will be set on any XMLStreamReader or XMLEventReader created
 	* by this factory instance.
 	*/
-	@:overload @:abstract public function getXMLResolver() : javax.xml.stream.XMLResolver;
+	@:overload @:public @:abstract public function getXMLResolver() : javax.xml.stream.XMLResolver;
 	
 	/**
 	* The resolver that will be set on any XMLStreamReader or XMLEventReader created
 	* by this factory instance.
 	* @param resolver the resolver to use to resolve references
 	*/
-	@:overload @:abstract public function setXMLResolver(resolver : javax.xml.stream.XMLResolver) : Void;
+	@:overload @:public @:abstract public function setXMLResolver(resolver : javax.xml.stream.XMLResolver) : Void;
 	
 	/**
 	* The reporter that will be set on any XMLStreamReader or XMLEventReader created
 	* by this factory instance.
 	*/
-	@:overload @:abstract public function getXMLReporter() : javax.xml.stream.XMLReporter;
+	@:overload @:public @:abstract public function getXMLReporter() : javax.xml.stream.XMLReporter;
 	
 	/**
 	* The reporter that will be set on any XMLStreamReader or XMLEventReader created
 	* by this factory instance.
 	* @param reporter the resolver to use to report non fatal errors
 	*/
-	@:overload @:abstract public function setXMLReporter(reporter : javax.xml.stream.XMLReporter) : Void;
+	@:overload @:public @:abstract public function setXMLReporter(reporter : javax.xml.stream.XMLReporter) : Void;
 	
 	/**
 	* Allows the user to set specific feature/property on the underlying implementation. The underlying implementation
@@ -298,7 +298,7 @@ extern class XMLInputFactory
 	* @param value The value of the property
 	* @throws java.lang.IllegalArgumentException if the property is not supported
 	*/
-	@:overload @:abstract public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get the value of a feature/property from the underlying implementation
@@ -306,7 +306,7 @@ extern class XMLInputFactory
 	* @return The value of the property
 	* @throws IllegalArgumentException if the property is not supported
 	*/
-	@:overload @:abstract public function getProperty(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Query the set of properties that this factory supports.
@@ -314,18 +314,18 @@ extern class XMLInputFactory
 	* @param name The name of the property (may not be null)
 	* @return true if the property is supported and false otherwise
 	*/
-	@:overload @:abstract public function isPropertySupported(name : String) : Bool;
+	@:overload @:public @:abstract public function isPropertySupported(name : String) : Bool;
 	
 	/**
 	* Set a user defined event allocator for events
 	* @param allocator the user defined allocator
 	*/
-	@:overload @:abstract public function setEventAllocator(allocator : javax.xml.stream.util.XMLEventAllocator) : Void;
+	@:overload @:public @:abstract public function setEventAllocator(allocator : javax.xml.stream.util.XMLEventAllocator) : Void;
 	
 	/**
 	* Gets the allocator used by streams created with this factory
 	*/
-	@:overload @:abstract public function getEventAllocator() : javax.xml.stream.util.XMLEventAllocator;
+	@:overload @:public @:abstract public function getEventAllocator() : javax.xml.stream.util.XMLEventAllocator;
 	
 	
 }

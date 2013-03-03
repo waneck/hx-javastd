@@ -61,7 +61,7 @@ extern class ImageIO
 	*
 	* @see ClassLoader#getResources
 	*/
-	@:overload public static function scanForPlugins() : Void;
+	@:overload @:public @:static public static function scanForPlugins() : Void;
 	
 	/**
 	* Sets a flag indicating whether a disk-based cache file should
@@ -89,7 +89,7 @@ extern class ImageIO
 	*
 	* @see #getUseCache
 	*/
-	@:overload public static function setUseCache(useCache : Bool) : Void;
+	@:overload @:public @:static public static function setUseCache(useCache : Bool) : Void;
 	
 	/**
 	* Returns the current value set by <code>setUseCache</code>, or
@@ -101,7 +101,7 @@ extern class ImageIO
 	*
 	* @see #setUseCache
 	*/
-	@:overload public static function getUseCache() : Bool;
+	@:overload @:public @:static public static function getUseCache() : Bool;
 	
 	/**
 	* Sets the directory where cache files are to be created.  A
@@ -120,7 +120,7 @@ extern class ImageIO
 	*
 	* @see #getCacheDirectory
 	*/
-	@:overload public static function setCacheDirectory(cacheDirectory : java.io.File) : Void;
+	@:overload @:public @:static public static function setCacheDirectory(cacheDirectory : java.io.File) : Void;
 	
 	/**
 	* Returns the current value set by
@@ -133,7 +133,7 @@ extern class ImageIO
 	*
 	* @see #setCacheDirectory
 	*/
-	@:overload public static function getCacheDirectory() : java.io.File;
+	@:overload @:public @:static public static function getCacheDirectory() : java.io.File;
 	
 	/**
 	* Returns an <code>ImageInputStream</code> that will take its
@@ -161,7 +161,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageInputStreamSpi
 	*/
-	@:overload public static function createImageInputStream(input : Dynamic) : javax.imageio.stream.ImageInputStream;
+	@:overload @:public @:static public static function createImageInputStream(input : Dynamic) : javax.imageio.stream.ImageInputStream;
 	
 	/**
 	* Returns an <code>ImageOutputStream</code> that will send its
@@ -190,7 +190,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageOutputStreamSpi
 	*/
-	@:overload public static function createImageOutputStream(output : Dynamic) : javax.imageio.stream.ImageOutputStream;
+	@:overload @:public @:static public static function createImageOutputStream(output : Dynamic) : javax.imageio.stream.ImageOutputStream;
 	
 	/**
 	* Returns an array of <code>String</code>s listing all of the
@@ -199,7 +199,7 @@ extern class ImageIO
 	*
 	* @return an array of <code>String</code>s.
 	*/
-	@:overload public static function getReaderFormatNames() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getReaderFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s listing all of the
@@ -208,7 +208,7 @@ extern class ImageIO
 	*
 	* @return an array of <code>String</code>s.
 	*/
-	@:overload public static function getReaderMIMETypes() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getReaderMIMETypes() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s listing all of the
@@ -218,7 +218,7 @@ extern class ImageIO
 	* @return an array of <code>String</code>s.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getReaderFileSuffixes() : java.NativeArray<String>;
+	@:require(java6) @:overload @:public @:static public static function getReaderFileSuffixes() : java.NativeArray<String>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -239,7 +239,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageReaderSpi#canDecodeInput
 	*/
-	@:overload public static function getImageReaders(input : Dynamic) : java.util.Iterator<javax.imageio.ImageReader>;
+	@:overload @:public @:static public static function getImageReaders(input : Dynamic) : java.util.Iterator<javax.imageio.ImageReader>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -257,7 +257,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageReaderSpi#getFormatNames
 	*/
-	@:overload public static function getImageReadersByFormatName(formatName : String) : java.util.Iterator<javax.imageio.ImageReader>;
+	@:overload @:public @:static public static function getImageReadersByFormatName(formatName : String) : java.util.Iterator<javax.imageio.ImageReader>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -275,7 +275,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageReaderSpi#getFileSuffixes
 	*/
-	@:overload public static function getImageReadersBySuffix(fileSuffix : String) : java.util.Iterator<javax.imageio.ImageReader>;
+	@:overload @:public @:static public static function getImageReadersBySuffix(fileSuffix : String) : java.util.Iterator<javax.imageio.ImageReader>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -293,7 +293,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageReaderSpi#getMIMETypes
 	*/
-	@:overload public static function getImageReadersByMIMEType(MIMEType : String) : java.util.Iterator<javax.imageio.ImageReader>;
+	@:overload @:public @:static public static function getImageReadersByMIMEType(MIMEType : String) : java.util.Iterator<javax.imageio.ImageReader>;
 	
 	/**
 	* Returns an array of <code>String</code>s listing all of the
@@ -302,7 +302,7 @@ extern class ImageIO
 	*
 	* @return an array of <code>String</code>s.
 	*/
-	@:overload public static function getWriterFormatNames() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getWriterFormatNames() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s listing all of the
@@ -311,7 +311,7 @@ extern class ImageIO
 	*
 	* @return an array of <code>String</code>s.
 	*/
-	@:overload public static function getWriterMIMETypes() : java.NativeArray<String>;
+	@:overload @:public @:static public static function getWriterMIMETypes() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of <code>String</code>s listing all of the
@@ -321,7 +321,7 @@ extern class ImageIO
 	* @return an array of <code>String</code>s.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getWriterFileSuffixes() : java.NativeArray<String>;
+	@:require(java6) @:overload @:public @:static public static function getWriterFileSuffixes() : java.NativeArray<String>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -339,7 +339,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageWriterSpi#getFormatNames
 	*/
-	@:overload public static function getImageWritersByFormatName(formatName : String) : java.util.Iterator<javax.imageio.ImageWriter>;
+	@:overload @:public @:static public static function getImageWritersByFormatName(formatName : String) : java.util.Iterator<javax.imageio.ImageWriter>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -356,7 +356,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageWriterSpi#getFileSuffixes
 	*/
-	@:overload public static function getImageWritersBySuffix(fileSuffix : String) : java.util.Iterator<javax.imageio.ImageWriter>;
+	@:overload @:public @:static public static function getImageWritersBySuffix(fileSuffix : String) : java.util.Iterator<javax.imageio.ImageWriter>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -373,7 +373,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageWriterSpi#getMIMETypes
 	*/
-	@:overload public static function getImageWritersByMIMEType(MIMEType : String) : java.util.Iterator<javax.imageio.ImageWriter>;
+	@:overload @:public @:static public static function getImageWritersByMIMEType(MIMEType : String) : java.util.Iterator<javax.imageio.ImageWriter>;
 	
 	/**
 	* Returns an <code>ImageWriter</code>corresponding to the given
@@ -404,7 +404,7 @@ extern class ImageIO
 	* @see #getImageReader(ImageWriter)
 	* @see javax.imageio.spi.ImageReaderSpi#getImageWriterSpiNames()
 	*/
-	@:overload public static function getImageWriter(reader : javax.imageio.ImageReader) : javax.imageio.ImageWriter;
+	@:overload @:public @:static public static function getImageWriter(reader : javax.imageio.ImageReader) : javax.imageio.ImageWriter;
 	
 	/**
 	* Returns an <code>ImageReader</code>corresponding to the given
@@ -428,7 +428,7 @@ extern class ImageIO
 	* @see #getImageWriter(ImageReader)
 	* @see javax.imageio.spi.ImageWriterSpi#getImageReaderSpiNames()
 	*/
-	@:overload public static function getImageReader(writer : javax.imageio.ImageWriter) : javax.imageio.ImageReader;
+	@:overload @:public @:static public static function getImageReader(writer : javax.imageio.ImageWriter) : javax.imageio.ImageReader;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -447,7 +447,7 @@ extern class ImageIO
 	*
 	* @see javax.imageio.spi.ImageWriterSpi#canEncodeImage(ImageTypeSpecifier)
 	*/
-	@:overload public static function getImageWriters(type : javax.imageio.ImageTypeSpecifier, formatName : String) : java.util.Iterator<javax.imageio.ImageWriter>;
+	@:overload @:public @:static public static function getImageWriters(type : javax.imageio.ImageTypeSpecifier, formatName : String) : java.util.Iterator<javax.imageio.ImageWriter>;
 	
 	/**
 	* Returns an <code>Iterator</code> containing all currently
@@ -464,7 +464,7 @@ extern class ImageIO
 	* @exception IllegalArgumentException if <code>reader</code> or
 	* <code>writer</code> is <code>null</code>.
 	*/
-	@:overload public static function getImageTranscoders(reader : javax.imageio.ImageReader, writer : javax.imageio.ImageWriter) : java.util.Iterator<javax.imageio.ImageTranscoder>;
+	@:overload @:public @:static public static function getImageTranscoders(reader : javax.imageio.ImageReader, writer : javax.imageio.ImageWriter) : java.util.Iterator<javax.imageio.ImageTranscoder>;
 	
 	/**
 	* Returns a <code>BufferedImage</code> as the result of decoding
@@ -497,7 +497,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public static function read(input : java.io.File) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function read(input : java.io.File) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a <code>BufferedImage</code> as the result of decoding
@@ -530,7 +530,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public static function read(input : java.io.InputStream) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function read(input : java.io.InputStream) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a <code>BufferedImage</code> as the result of decoding
@@ -559,7 +559,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public static function read(input : java.net.URL) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function read(input : java.net.URL) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns a <code>BufferedImage</code> as the result of decoding
@@ -583,7 +583,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during reading.
 	*/
-	@:overload public static function read(stream : javax.imageio.stream.ImageInputStream) : java.awt.image.BufferedImage;
+	@:overload @:public @:static public static function read(stream : javax.imageio.stream.ImageInputStream) : java.awt.image.BufferedImage;
 	
 	/**
 	* Writes an image using the an arbitrary <code>ImageWriter</code>
@@ -608,7 +608,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public static function write(im : java.awt.image.RenderedImage, formatName : String, output : javax.imageio.stream.ImageOutputStream) : Bool;
+	@:overload @:public @:static public static function write(im : java.awt.image.RenderedImage, formatName : String, output : javax.imageio.stream.ImageOutputStream) : Bool;
 	
 	/**
 	* Writes an image using an arbitrary <code>ImageWriter</code>
@@ -627,7 +627,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public static function write(im : java.awt.image.RenderedImage, formatName : String, output : java.io.File) : Bool;
+	@:overload @:public @:static public static function write(im : java.awt.image.RenderedImage, formatName : String, output : java.io.File) : Bool;
 	
 	/**
 	* Writes an image using an arbitrary <code>ImageWriter</code>
@@ -651,7 +651,7 @@ extern class ImageIO
 	* <code>null</code>.
 	* @exception IOException if an error occurs during writing.
 	*/
-	@:overload public static function write(im : java.awt.image.RenderedImage, formatName : String, output : java.io.OutputStream) : Bool;
+	@:overload @:public @:static public static function write(im : java.awt.image.RenderedImage, formatName : String, output : java.io.OutputStream) : Bool;
 	
 	
 }
@@ -662,19 +662,19 @@ extern class ImageIO
 */
 @:native('javax$imageio$ImageIO$CacheInfo') @:internal extern class ImageIO_CacheInfo
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getUseCache() : Bool;
+	@:overload @:public public function getUseCache() : Bool;
 	
-	@:overload public function setUseCache(useCache : Bool) : Void;
+	@:overload @:public public function setUseCache(useCache : Bool) : Void;
 	
-	@:overload public function getCacheDirectory() : java.io.File;
+	@:overload @:public public function getCacheDirectory() : java.io.File;
 	
-	@:overload public function setCacheDirectory(cacheDirectory : java.io.File) : Void;
+	@:overload @:public public function setCacheDirectory(cacheDirectory : java.io.File) : Void;
 	
-	@:overload public function getHasPermission() : Null<Bool>;
+	@:overload @:public public function getHasPermission() : Null<Bool>;
 	
-	@:overload public function setHasPermission(hasPermission : Null<Bool>) : Void;
+	@:overload @:public public function setHasPermission(hasPermission : Null<Bool>) : Void;
 	
 	
 }
@@ -688,75 +688,75 @@ extern class ImageIO
 
 @:native('javax$imageio$ImageIO$ImageReaderIterator') @:internal extern class ImageIO_ImageReaderIterator implements java.util.Iterator<javax.imageio.ImageReader>
 {
-	public var iter : java.util.Iterator<Dynamic>;
+	@:public public var iter : java.util.Iterator<Dynamic>;
 	
-	@:overload public function new(iter : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function new(iter : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.imageio.ImageReader;
+	@:overload @:public public function next() : javax.imageio.ImageReader;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('javax$imageio$ImageIO$CanDecodeInputFilter') @:internal extern class ImageIO_CanDecodeInputFilter implements javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter
 {
-	@:overload public function new(input : Dynamic) : Void;
+	@:overload @:public public function new(input : Dynamic) : Void;
 	
-	@:overload public function filter(elt : Dynamic) : Bool;
+	@:overload @:public public function filter(elt : Dynamic) : Bool;
 	
 	
 }
 @:native('javax$imageio$ImageIO$CanEncodeImageAndFormatFilter') @:internal extern class ImageIO_CanEncodeImageAndFormatFilter implements javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter
 {
-	@:overload public function new(type : javax.imageio.ImageTypeSpecifier, formatName : String) : Void;
+	@:overload @:public public function new(type : javax.imageio.ImageTypeSpecifier, formatName : String) : Void;
 	
-	@:overload public function filter(elt : Dynamic) : Bool;
+	@:overload @:public public function filter(elt : Dynamic) : Bool;
 	
 	
 }
 @:native('javax$imageio$ImageIO$ContainsFilter') @:internal extern class ImageIO_ContainsFilter implements javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter
 {
-	@:overload public function new(method : java.lang.reflect.Method, name : String) : Void;
+	@:overload @:public public function new(method : java.lang.reflect.Method, name : String) : Void;
 	
-	@:overload public function filter(elt : Dynamic) : Bool;
+	@:overload @:public public function filter(elt : Dynamic) : Bool;
 	
 	
 }
 @:native('javax$imageio$ImageIO$ImageWriterIterator') @:internal extern class ImageIO_ImageWriterIterator implements java.util.Iterator<javax.imageio.ImageWriter>
 {
-	public var iter : java.util.Iterator<Dynamic>;
+	@:public public var iter : java.util.Iterator<Dynamic>;
 	
-	@:overload public function new(iter : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function new(iter : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.imageio.ImageWriter;
+	@:overload @:public public function next() : javax.imageio.ImageWriter;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('javax$imageio$ImageIO$ImageTranscoderIterator') @:internal extern class ImageIO_ImageTranscoderIterator implements java.util.Iterator<javax.imageio.ImageTranscoder>
 {
-	public var iter : java.util.Iterator<Dynamic>;
+	@:public public var iter : java.util.Iterator<Dynamic>;
 	
-	@:overload public function new(iter : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function new(iter : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : javax.imageio.ImageTranscoder;
+	@:overload @:public public function next() : javax.imageio.ImageTranscoder;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
 @:native('javax$imageio$ImageIO$TranscoderFilter') @:internal extern class ImageIO_TranscoderFilter implements javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter
 {
-	@:overload public function new(readerSpi : javax.imageio.spi.ImageReaderSpi, writerSpi : javax.imageio.spi.ImageWriterSpi) : Void;
+	@:overload @:public public function new(readerSpi : javax.imageio.spi.ImageReaderSpi, writerSpi : javax.imageio.spi.ImageWriterSpi) : Void;
 	
-	@:overload public function filter(elt : Dynamic) : Bool;
+	@:overload @:public public function filter(elt : Dynamic) : Bool;
 	
 	
 }

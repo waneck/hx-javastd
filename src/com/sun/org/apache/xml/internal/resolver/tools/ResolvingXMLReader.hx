@@ -39,10 +39,10 @@ package com.sun.org.apache.xml.internal.resolver.tools;
 extern class ResolvingXMLReader extends com.sun.org.apache.xml.internal.resolver.tools.ResolvingXMLFilter
 {
 	/** Make the parser Namespace aware? */
-	public static var namespaceAware : Bool;
+	@:public @:static public static var namespaceAware : Bool;
 	
 	/** Make the parser validating? */
-	public static var validating : Bool;
+	@:public @:static public static var validating : Bool;
 	
 	/**
 	* Construct a new reader from the JAXP factory.
@@ -51,7 +51,7 @@ extern class ResolvingXMLReader extends com.sun.org.apache.xml.internal.resolver
 	* a filter. So the only difference between this code and the filter
 	* code is that the constructor builds a new reader.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new reader from the JAXP factory.
@@ -60,7 +60,7 @@ extern class ResolvingXMLReader extends com.sun.org.apache.xml.internal.resolver
 	* a filter. So the only difference between this code and the filter
 	* code is that the constructor builds a new reader.</p>
 	*/
-	@:overload public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	
 }

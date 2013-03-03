@@ -28,7 +28,7 @@ extern interface CodeSetsComponent extends com.sun.corba.se.spi.ior.TaggedCompon
 	/**
 	* @author Ken Cavanaugh
 	*/
-	@:overload public function getCodeSetComponentInfo() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
+	@:overload @:public public function getCodeSetComponentInfo() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
 	
 	
 }

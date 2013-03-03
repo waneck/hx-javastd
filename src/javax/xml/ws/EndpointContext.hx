@@ -33,7 +33,7 @@ extern class EndpointContext
 	*
 	* @return list of all endpoints in an application
 	*/
-	@:overload @:abstract public function getEndpoints() : java.util.Set<javax.xml.ws.Endpoint>;
+	@:overload @:public @:abstract public function getEndpoints() : java.util.Set<javax.xml.ws.Endpoint>;
 	
 	
 }

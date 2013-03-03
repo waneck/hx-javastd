@@ -25,45 +25,45 @@ package sun.management.counter;
 */
 extern class AbstractCounter implements sun.management.counter.Counter
 {
-	@:overload private function new(name : String, units : sun.management.counter.Units, variability : sun.management.counter.Variability, flags : Int, vectorLength : Int) : Void;
+	@:overload @:protected private function new(name : String, units : sun.management.counter.Units, variability : sun.management.counter.Variability, flags : Int, vectorLength : Int) : Void;
 	
-	@:overload private function new(name : String, units : sun.management.counter.Units, variability : sun.management.counter.Variability, flags : Int) : Void;
+	@:overload @:protected private function new(name : String, units : sun.management.counter.Units, variability : sun.management.counter.Variability, flags : Int) : Void;
 	
 	/**
 	* Returns the name of the Performance Counter
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the Units for this Performance Counter
 	*/
-	@:overload public function getUnits() : sun.management.counter.Units;
+	@:overload @:public public function getUnits() : sun.management.counter.Units;
 	
 	/**
 	* Returns the Variability for this performance Object
 	*/
-	@:overload public function getVariability() : sun.management.counter.Variability;
+	@:overload @:public public function getVariability() : sun.management.counter.Variability;
 	
 	/**
 	* Return true if this performance counter is a vector
 	*/
-	@:overload public function isVector() : Bool;
+	@:overload @:public public function isVector() : Bool;
 	
 	/**
 	* return the length of the vector
 	*/
-	@:overload public function getVectorLength() : Int;
+	@:overload @:public public function getVectorLength() : Int;
 	
-	@:overload public function isInternal() : Bool;
+	@:overload @:public public function isInternal() : Bool;
 	
 	/**
 	* return the flags associated with the counter.
 	*/
-	@:overload public function getFlags() : Int;
+	@:overload @:public public function getFlags() : Int;
 	
-	@:overload @:abstract public function getValue() : Dynamic;
+	@:overload @:public @:abstract public function getValue() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

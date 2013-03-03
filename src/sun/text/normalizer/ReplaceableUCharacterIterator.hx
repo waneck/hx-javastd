@@ -50,38 +50,38 @@ extern class ReplaceableUCharacterIterator extends sun.text.normalizer.UCharacte
 	* Public constructor
 	* @param str text which the iterator will be based on
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Public constructor
 	* @param buf buffer of text on which the iterator will be based
 	*/
-	@:overload public function new(buf : java.lang.StringBuffer) : Void;
+	@:overload @:public public function new(buf : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Creates a copy of this iterator, does not clone the underlying
 	* <code>Replaceable</code>object
 	* @return copy of this iterator
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns the current UTF16 character.
 	* @return current UTF16 character
 	*/
-	@:overload override public function current() : Int;
+	@:overload @:public override public function current() : Int;
 	
 	/**
 	* Returns the length of the text
 	* @return length of the text
 	*/
-	@:overload override public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
 	/**
 	* Gets the current currentIndex in text.
 	* @return current currentIndex in text.
 	*/
-	@:overload override public function getIndex() : Int;
+	@:overload @:public override public function getIndex() : Int;
 	
 	/**
 	* Returns next UTF16 character and increments the iterator's currentIndex by 1.
@@ -91,7 +91,7 @@ extern class ReplaceableUCharacterIterator extends sun.text.normalizer.UCharacte
 	* @return next UTF16 character in text or DONE if the new currentIndex is off the
 	*         end of the text range.
 	*/
-	@:overload override public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
 	/**
 	* Returns previous UTF16 character and decrements the iterator's currentIndex by
@@ -101,7 +101,7 @@ extern class ReplaceableUCharacterIterator extends sun.text.normalizer.UCharacte
 	* @return next UTF16 character in text or DONE if the new currentIndex is off the
 	*         start of the text range.
 	*/
-	@:overload override public function previous() : Int;
+	@:overload @:public override public function previous() : Int;
 	
 	/**
 	* <p>Sets the currentIndex to the specified currentIndex in the text and returns that
@@ -113,9 +113,9 @@ extern class ReplaceableUCharacterIterator extends sun.text.normalizer.UCharacte
 	* @return the character at the specified currentIndex or DONE if the specified
 	*         currentIndex is equal to the end of the text.
 	*/
-	@:overload override public function setIndex(currentIndex : Int) : Void;
+	@:overload @:public override public function setIndex(currentIndex : Int) : Void;
 	
-	@:overload override public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>, offset : Int) : Int;
+	@:overload @:public override public function getText(fillIn : java.NativeArray<java.StdTypes.Char16>, offset : Int) : Int;
 	
 	
 }

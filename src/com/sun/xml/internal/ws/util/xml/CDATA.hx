@@ -28,13 +28,13 @@ package com.sun.xml.internal.ws.util.xml;
 */
 extern class CDATA
 {
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

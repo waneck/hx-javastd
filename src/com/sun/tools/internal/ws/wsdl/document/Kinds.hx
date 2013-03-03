@@ -30,15 +30,15 @@ extern class Kinds
 	*
 	* @author WS Development Team
 	*/
-	public static var BINDING(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var BINDING(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var MESSAGE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var MESSAGE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var PORT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var PORT(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var PORT_TYPE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var PORT_TYPE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
-	public static var SERVICE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:public @:static @:final public static var SERVICE(default, null) : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
 	
 }

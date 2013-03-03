@@ -7,17 +7,17 @@ package com.sun.corba.se.PortableActivationIDL.RepositoryPackage;
 */
 extern class ServerDefHolder implements org.omg.CORBA.portable.Streamable
 {
-	public var value : com.sun.corba.se.PortableActivationIDL.RepositoryPackage.ServerDef;
+	@:public public var value : com.sun.corba.se.PortableActivationIDL.RepositoryPackage.ServerDef;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialValue : com.sun.corba.se.PortableActivationIDL.RepositoryPackage.ServerDef) : Void;
+	@:overload @:public public function new(initialValue : com.sun.corba.se.PortableActivationIDL.RepositoryPackage.ServerDef) : Void;
 	
-	@:overload public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

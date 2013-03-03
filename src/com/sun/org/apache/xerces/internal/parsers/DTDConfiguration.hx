@@ -21,121 +21,121 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers.BasicParserConfiguration implements com.sun.org.apache.xerces.internal.xni.parser.XMLPullParserConfiguration
 {
 	/** Feature identifier: warn on duplicate attribute definition. */
-	private static var WARN_ON_DUPLICATE_ATTDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_DUPLICATE_ATTDEF(default, null) : String;
 	
 	/** Feature identifier: warn on duplicate entity definition. */
-	private static var WARN_ON_DUPLICATE_ENTITYDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_DUPLICATE_ENTITYDEF(default, null) : String;
 	
 	/** Feature identifier: warn on undeclared element definition. */
-	private static var WARN_ON_UNDECLARED_ELEMDEF(default, null) : String;
+	@:protected @:static @:final private static var WARN_ON_UNDECLARED_ELEMDEF(default, null) : String;
 	
 	/** Feature identifier: allow Java encodings. */
-	private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
 	
 	/** Feature identifier: continue after fatal error. */
-	private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
+	@:protected @:static @:final private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
 	
 	/** Feature identifier: load external DTD. */
-	private static var LOAD_EXTERNAL_DTD(default, null) : String;
+	@:protected @:static @:final private static var LOAD_EXTERNAL_DTD(default, null) : String;
 	
 	/** Feature identifier: notify built-in refereces. */
-	private static var NOTIFY_BUILTIN_REFS(default, null) : String;
+	@:protected @:static @:final private static var NOTIFY_BUILTIN_REFS(default, null) : String;
 	
 	/** Feature identifier: notify character refereces. */
-	private static var NOTIFY_CHAR_REFS(default, null) : String;
+	@:protected @:static @:final private static var NOTIFY_CHAR_REFS(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var ERROR_REPORTER(default, null) : String;
+	@:protected @:static @:final private static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: entity manager. */
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Property identifier document scanner: */
-	private static var DOCUMENT_SCANNER(default, null) : String;
+	@:protected @:static @:final private static var DOCUMENT_SCANNER(default, null) : String;
 	
 	/** Property identifier: DTD scanner. */
-	private static var DTD_SCANNER(default, null) : String;
+	@:protected @:static @:final private static var DTD_SCANNER(default, null) : String;
 	
 	/** Property identifier: grammar pool. */
-	private static var XMLGRAMMAR_POOL(default, null) : String;
+	@:protected @:static @:final private static var XMLGRAMMAR_POOL(default, null) : String;
 	
 	/** Property identifier: DTD loader. */
-	private static var DTD_PROCESSOR(default, null) : String;
+	@:protected @:static @:final private static var DTD_PROCESSOR(default, null) : String;
 	
 	/** Property identifier: DTD validator. */
-	private static var DTD_VALIDATOR(default, null) : String;
+	@:protected @:static @:final private static var DTD_VALIDATOR(default, null) : String;
 	
 	/** Property identifier: namespace binder. */
-	private static var NAMESPACE_BINDER(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_BINDER(default, null) : String;
 	
 	/** Property identifier: datatype validator factory. */
-	private static var DATATYPE_VALIDATOR_FACTORY(default, null) : String;
+	@:protected @:static @:final private static var DATATYPE_VALIDATOR_FACTORY(default, null) : String;
 	
-	private static var VALIDATION_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION_MANAGER(default, null) : String;
 	
 	/** Property identifier: JAXP schema language / DOM schema-type. */
-	private static var JAXP_SCHEMA_LANGUAGE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_LANGUAGE(default, null) : String;
 	
 	/** Property identifier: JAXP schema source/ DOM schema-location. */
-	private static var JAXP_SCHEMA_SOURCE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_SOURCE(default, null) : String;
 	
 	/** Property identifier: locale. */
-	private static var LOCALE(default, null) : String;
+	@:protected @:static @:final private static var LOCALE(default, null) : String;
 	
 	/** Set to true and recompile to print exception stack trace. */
-	private static var PRINT_EXCEPTION_STACK_TRACE(default, null) : Bool;
+	@:protected @:static @:final private static var PRINT_EXCEPTION_STACK_TRACE(default, null) : Bool;
 	
 	/** Grammar pool. */
-	private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:protected private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
 	/** Datatype validator factory. */
-	private var fDatatypeValidatorFactory : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
+	@:protected private var fDatatypeValidatorFactory : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
 	
 	/** Error reporter. */
-	private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:protected private var fErrorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/** Entity manager. */
-	private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+	@:protected private var fEntityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 	
 	/** Document scanner. */
-	private var fScanner : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
+	@:protected private var fScanner : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
 	
 	/** Input Source */
-	private var fInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
+	@:protected private var fInputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource;
 	
 	/** DTD scanner. */
-	private var fDTDScanner : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner;
+	@:protected private var fDTDScanner : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner;
 	
 	/** DTD Processor . */
-	private var fDTDProcessor : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDProcessor;
+	@:protected private var fDTDProcessor : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDProcessor;
 	
 	/** DTD Validator. */
-	private var fDTDValidator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
+	@:protected private var fDTDValidator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
 	
 	/** Namespace binder. */
-	private var fNamespaceBinder : com.sun.org.apache.xerces.internal.impl.XMLNamespaceBinder;
+	@:protected private var fNamespaceBinder : com.sun.org.apache.xerces.internal.impl.XMLNamespaceBinder;
 	
-	private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:protected private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
 	/** Locator */
-	private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
+	@:protected private var fLocator : com.sun.org.apache.xerces.internal.xni.XMLLocator;
 	
 	/**
 	* True if a parse is in progress. This state is needed because
 	* some features/properties cannot be set while parsing (e.g.
 	* validation and namespaces).
 	*/
-	private var fParseInProgress : Bool;
+	@:protected private var fParseInProgress : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table and
@@ -148,7 +148,7 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	* @param symbolTable The symbol table to use.
 	* @param grammarPool The grammar pool to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table,
@@ -162,11 +162,11 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	* @param grammarPool    The grammar pool to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
-	@:overload override public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public override public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Set the locale to use for messages.
@@ -176,7 +176,7 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public override public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Sets the input source for the document to parse.
@@ -190,7 +190,7 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	*
 	* @see #parse(boolean)
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Parses the document in a pull parsing fashion.
@@ -208,14 +208,14 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	*
 	* @see #setInputSource
 	*/
-	@:overload public function parse(complete : Bool) : Bool;
+	@:overload @:public public function parse(complete : Bool) : Bool;
 	
 	/**
 	* If the application decides to terminate parsing before the xml document
 	* is fully parsed, the application should call this method to free any
 	* resource allocated during parsing. For example, close all opened streams.
 	*/
-	@:overload public function cleanup() : Void;
+	@:overload @:public public function cleanup() : Void;
 	
 	/**
 	* Parses the specified input source.
@@ -225,19 +225,19 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	* @exception XNIException Throws exception on XNI error.
 	* @exception java.io.IOException Throws exception on i/o error.
 	*/
-	@:overload public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public override public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Reset all components before parsing.
 	*
 	* @throws XNIException Thrown if an error occurs during initialization.
 	*/
-	@:overload private function reset() : Void;
+	@:overload @:protected override private function reset() : Void;
 	
 	/** Configures the pipeline. */
-	@:overload private function configurePipeline() : Void;
+	@:overload @:protected private function configurePipeline() : Void;
 	
-	@:overload private function configureDTDPipeline() : Void;
+	@:overload @:protected private function configureDTDPipeline() : Void;
 	
 	/**
 	* Check a feature. If feature is know and supported, this method simply
@@ -251,7 +251,7 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload override private function checkFeature(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:protected override private function checkFeature(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
 	/**
 	* Check a property. If the property is know and supported, this method
@@ -266,33 +266,33 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload override private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:protected override private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	/** Creates an entity manager. */
-	@:overload private function createEntityManager() : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+	@:overload @:protected private function createEntityManager() : com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 	
 	/** Creates an error reporter. */
-	@:overload private function createErrorReporter() : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
+	@:overload @:protected private function createErrorReporter() : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter;
 	
 	/** Create a document scanner. */
-	@:overload private function createDocumentScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
+	@:overload @:protected private function createDocumentScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
 	
 	/** Create a DTD scanner. */
-	@:overload private function createDTDScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner;
+	@:overload @:protected private function createDTDScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDScanner;
 	
 	/** Create a DTD loader . */
-	@:overload private function createDTDProcessor() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDProcessor;
+	@:overload @:protected private function createDTDProcessor() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDProcessor;
 	
 	/** Create a DTD validator. */
-	@:overload private function createDTDValidator() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
+	@:overload @:protected private function createDTDValidator() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
 	
 	/** Create a namespace binder. */
-	@:overload private function createNamespaceBinder() : com.sun.org.apache.xerces.internal.impl.XMLNamespaceBinder;
+	@:overload @:protected private function createNamespaceBinder() : com.sun.org.apache.xerces.internal.impl.XMLNamespaceBinder;
 	
 	/** Create a datatype validator factory. */
-	@:overload private function createDatatypeValidatorFactory() : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
+	@:overload @:protected private function createDatatypeValidatorFactory() : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
 	
-	@:overload private function createValidationManager() : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:overload @:protected private function createValidationManager() : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
 	
 }

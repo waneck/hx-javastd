@@ -36,19 +36,19 @@ package com.sun.tools.corba.se.idl;
 //// NOTES:
 extern class IDLID extends com.sun.tools.corba.se.idl.RepositoryID
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, name : String, version : String) : Void;
+	@:overload @:public public function new(prefix : String, name : String, version : String) : Void;
 	
-	@:overload override public function ID() : String;
+	@:overload @:public override public function ID() : String;
 	
-	@:overload public function prefix() : String;
+	@:overload @:public public function prefix() : String;
 	
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function version() : String;
+	@:overload @:public public function version() : String;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

@@ -34,25 +34,25 @@ extern class Transport
 	* @return the channel or null if the transport cannot
 	* generate connections to this endpoint
 	*/
-	@:overload @:abstract public function getChannel(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.Channel;
+	@:overload @:public @:abstract public function getChannel(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.Channel;
 	
 	/**
 	* Removes the <I>Channel</I> that generates connections to the
 	* endpoint <I>ep</I>.
 	*/
-	@:overload @:abstract public function free(ep : sun.rmi.transport.Endpoint) : Void;
+	@:overload @:public @:abstract public function free(ep : sun.rmi.transport.Endpoint) : Void;
 	
 	/**
 	* Export the object so that it can accept incoming calls.
 	*/
-	@:overload public function exportObject(target : sun.rmi.transport.Target) : Void;
+	@:overload @:public public function exportObject(target : sun.rmi.transport.Target) : Void;
 	
 	/**
 	* Invoked when an object that was exported on this transport has
 	* become unexported, either by being garbage collected or by
 	* being explicitly unexported.
 	**/
-	@:overload private function targetUnexported() : Void;
+	@:overload @:protected private function targetUnexported() : Void;
 	
 	/**
 	* Verify that the current access control context has permission to accept
@@ -60,7 +60,7 @@ extern class Transport
 	* access control context is passed as a parameter to avoid the overhead of
 	* an additional call to AccessController.getContext.
 	*/
-	@:overload @:abstract private function checkAcceptPermission(acc : java.security.AccessControlContext) : Void;
+	@:overload @:protected @:abstract private function checkAcceptPermission(acc : java.security.AccessControlContext) : Void;
 	
 	/**
 	* Service an incoming remote call. When a message arrives on the
@@ -79,7 +79,7 @@ extern class Transport
 	* occurred during the call, and the transport should destroy the
 	* connection.
 	*/
-	@:overload public function serviceCall(call : java.rmi.server.RemoteCall) : Bool;
+	@:overload @:public public function serviceCall(call : java.rmi.server.RemoteCall) : Bool;
 	
 	
 }

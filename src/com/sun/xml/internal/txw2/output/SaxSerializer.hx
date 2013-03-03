@@ -25,7 +25,7 @@ package com.sun.xml.internal.txw2.output;
 */
 extern class SaxSerializer implements com.sun.xml.internal.txw2.output.XmlSerializer
 {
-	@:overload public function new(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Creates an {@link XmlSerializer} that writes SAX events.
@@ -34,33 +34,33 @@ extern class SaxSerializer implements com.sun.xml.internal.txw2.output.XmlSerial
 	* Sepcifying a non-null {@link LexicalHandler} allows applications
 	* to write comments and CDATA sections.
 	*/
-	@:overload public function new(handler : org.xml.sax.ContentHandler, lex : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler, lex : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function new(handler : org.xml.sax.ContentHandler, lex : org.xml.sax.ext.LexicalHandler, indenting : Bool) : Void;
+	@:overload @:public public function new(handler : org.xml.sax.ContentHandler, lex : org.xml.sax.ext.LexicalHandler, indenting : Bool) : Void;
 	
-	@:overload public function new(result : javax.xml.transform.sax.SAXResult) : Void;
+	@:overload @:public public function new(result : javax.xml.transform.sax.SAXResult) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function writeXmlns(prefix : String, uri : String) : Void;
+	@:overload @:public public function writeXmlns(prefix : String, uri : String) : Void;
 	
-	@:overload public function beginStartTag(uri : String, localName : String, prefix : String) : Void;
+	@:overload @:public public function beginStartTag(uri : String, localName : String, prefix : String) : Void;
 	
-	@:overload public function writeAttribute(uri : String, localName : String, prefix : String, value : java.lang.StringBuilder) : Void;
+	@:overload @:public public function writeAttribute(uri : String, localName : String, prefix : String, value : java.lang.StringBuilder) : Void;
 	
-	@:overload public function endStartTag(uri : String, localName : String, prefix : String) : Void;
+	@:overload @:public public function endStartTag(uri : String, localName : String, prefix : String) : Void;
 	
-	@:overload public function endTag() : Void;
+	@:overload @:public public function endTag() : Void;
 	
-	@:overload public function text(text : java.lang.StringBuilder) : Void;
+	@:overload @:public public function text(text : java.lang.StringBuilder) : Void;
 	
-	@:overload public function cdata(text : java.lang.StringBuilder) : Void;
+	@:overload @:public public function cdata(text : java.lang.StringBuilder) : Void;
 	
-	@:overload public function comment(comment : java.lang.StringBuilder) : Void;
+	@:overload @:public public function comment(comment : java.lang.StringBuilder) : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	
 }

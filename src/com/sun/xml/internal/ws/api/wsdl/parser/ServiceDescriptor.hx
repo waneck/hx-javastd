@@ -30,14 +30,14 @@ extern class ServiceDescriptor
 	* @return List of WSDL documents as {@link Source}.
 	* {@link javax.xml.transform.Source#getSystemId()} must be Non-null
 	*/
-	@:overload @:abstract public function getWSDLs() : java.util.List<javax.xml.transform.Source>;
+	@:overload @:public @:abstract public function getWSDLs() : java.util.List<javax.xml.transform.Source>;
 	
 	/**
 	* Gives list of schemas.
 	* @return List of XML schema documents as {@link Source}. {@link javax.xml.transform.Source#getSystemId()} must be Non-null.
 	*
 	*/
-	@:overload @:abstract public function getSchemas() : java.util.List<javax.xml.transform.Source>;
+	@:overload @:public @:abstract public function getSchemas() : java.util.List<javax.xml.transform.Source>;
 	
 	
 }

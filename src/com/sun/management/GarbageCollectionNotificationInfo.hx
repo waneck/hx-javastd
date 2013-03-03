@@ -32,7 +32,7 @@ extern class GarbageCollectionNotificationInfo implements javax.management.openm
 	* The value of this notification type is
 	* {@code com.sun.management.gc.notification}.
 	*/
-	public static var GARBAGE_COLLECTION_NOTIFICATION(default, null) : String;
+	@:public @:static @:final public static var GARBAGE_COLLECTION_NOTIFICATION(default, null) : String;
 	
 	/**
 	* Constructs a {@code GarbageCollectionNotificationInfo} object.
@@ -42,28 +42,28 @@ extern class GarbageCollectionNotificationInfo implements javax.management.openm
 	* @param gcCause The cause the garbage collection action
 	* @param gcInfo  a GcInfo object providing statistics about the GC cycle
 	*/
-	@:overload public function new(gcName : String, gcAction : String, gcCause : String, gcInfo : com.sun.management.GcInfo) : Void;
+	@:overload @:public public function new(gcName : String, gcAction : String, gcCause : String, gcInfo : com.sun.management.GcInfo) : Void;
 	
 	/**
 	* Returns the name of the garbage collector used to perform the collection
 	*
 	* @return the name of the garbage collector used to perform the collection
 	*/
-	@:overload public function getGcName() : String;
+	@:overload @:public public function getGcName() : String;
 	
 	/**
 	* Returns the action of the performed by the garbage collector
 	*
 	* @return the the action of the performed by the garbage collector
 	*/
-	@:overload public function getGcAction() : String;
+	@:overload @:public public function getGcAction() : String;
 	
 	/**
 	* Returns the cause  the garbage collection
 	*
 	* @return the the cause  the garbage collection
 	*/
-	@:overload public function getGcCause() : String;
+	@:overload @:public public function getGcCause() : String;
 	
 	/**
 	* Returns the GC information related to the last garbage collection
@@ -71,7 +71,7 @@ extern class GarbageCollectionNotificationInfo implements javax.management.openm
 	* @return the GC information related to the
 	* last garbage collection
 	*/
-	@:overload public function getGcInfo() : com.sun.management.GcInfo;
+	@:overload @:public public function getGcInfo() : com.sun.management.GcInfo;
 	
 	/**
 	* Returns a {@code GarbageCollectionNotificationInfo} object represented by the
@@ -113,9 +113,9 @@ extern class GarbageCollectionNotificationInfo implements javax.management.openm
 	*         by {@code cd} if {@code cd} is not {@code null};
 	*         {@code null} otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.GarbageCollectionNotificationInfo;
+	@:overload @:public @:static public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.GarbageCollectionNotificationInfo;
 	
-	@:overload public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
+	@:overload @:public public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
 	
 	
 }

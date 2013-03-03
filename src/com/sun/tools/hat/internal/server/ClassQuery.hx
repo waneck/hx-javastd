@@ -34,13 +34,13 @@ package com.sun.tools.hat.internal.server;
 	*
 	* @author      Bill Foote
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload private function printFullClass(clazz : com.sun.tools.hat.internal.model.JavaClass) : Void;
+	@:overload @:protected private function printFullClass(clazz : com.sun.tools.hat.internal.model.JavaClass) : Void;
 	
-	@:overload private function printReferencesTo(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
+	@:overload @:protected private function printReferencesTo(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
 	
 	
 }

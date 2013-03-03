@@ -34,7 +34,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* <code>null</code> {@link ErrorHandler} and
 	* <code>null</code> {@link LSResourceResolver}.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Sets the {@link ContentHandler} which receives
@@ -84,7 +84,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @param receiver
 	*      A {@link ContentHandler} or a null value.
 	*/
-	@:overload @:abstract public function setContentHandler(receiver : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public @:abstract public function setContentHandler(receiver : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Gets the {@link ContentHandler} which receives the
@@ -98,7 +98,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*
 	* @see #setContentHandler(ContentHandler)
 	*/
-	@:overload @:abstract public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public @:abstract public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Sets the {@link ErrorHandler} to receive errors encountered
@@ -150,7 +150,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @param   errorHandler
 	*      A new error handler to be set. This parameter can be null.
 	*/
-	@:overload @:abstract public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public @:abstract public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Gets the current {@link ErrorHandler} set to this {@link ValidatorHandler}.
@@ -163,7 +163,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*
 	* @see #setErrorHandler(ErrorHandler)
 	*/
-	@:overload @:abstract public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public @:abstract public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Sets the {@link LSResourceResolver} to customize
@@ -202,7 +202,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @param   resourceResolver
 	*      A new resource resolver to be set. This parameter can be null.
 	*/
-	@:overload @:abstract public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload @:public @:abstract public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
 	/**
 	* Gets the current {@link LSResourceResolver} set to this {@link ValidatorHandler}.
@@ -215,7 +215,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*
 	* @see #setErrorHandler(ErrorHandler)
 	*/
-	@:overload @:abstract public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload @:public @:abstract public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
 	/**
 	* Obtains the {@link TypeInfoProvider} implementation of this
@@ -236,7 +236,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*      the notion of {@link org.w3c.dom.TypeInfo}.
 	*      Otherwise a non-null valid {@link TypeInfoProvider}.
 	*/
-	@:overload @:abstract public function getTypeInfoProvider() : javax.xml.validation.TypeInfoProvider;
+	@:overload @:public @:abstract public function getTypeInfoProvider() : javax.xml.validation.TypeInfoProvider;
 	
 	/**
 	* Look up the value of a feature flag.
@@ -263,7 +263,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*
 	* @see #setFeature(String, boolean)
 	*/
-	@:overload public function getFeature(name : String) : Bool;
+	@:overload @:public public function getFeature(name : String) : Bool;
 	
 	/**
 	* <p>Set a feature for this <code>ValidatorHandler</code>.</p>
@@ -305,7 +305,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*
 	* @see #getFeature(String)
 	*/
-	@:overload public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* Set the value of a property.
@@ -330,7 +330,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*   cannot set the requested value.
 	* @throws NullPointerException When <code>name</code> is <code>null</code>.
 	*/
-	@:overload public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, object : Dynamic) : Void;
 	
 	/**
 	* Look up the value of a property.
@@ -360,7 +360,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*
 	* @see #setProperty(String, Object)
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -373,7 +373,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see #endDocument
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload @:public @:public @:public override public function startDocument() : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping.
@@ -413,7 +413,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see #endPrefixMapping
 	* @see #startElement
 	*/
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public @:public @:public @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -440,7 +440,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload override public function skippedEntity(name : String) : Void;
+	@:overload @:public @:public @:public @:public override public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Receive an object for locating the origin of SAX document events.
@@ -469,7 +469,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*                any SAX document event
 	* @see org.xml.sax.Locator
 	*/
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public @:public @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -535,7 +535,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -580,7 +580,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:public @:public @:public @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -604,7 +604,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public @:public @:public @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* End the scope of a prefix-URI mapping.
@@ -622,7 +622,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see #startPrefixMapping
 	* @see #endElement
 	*/
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public @:public @:public @:public override public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -645,7 +645,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public @:public @:public @:public @:public @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -672,7 +672,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see #characters
 	*/
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:public @:public @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -695,7 +695,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see #startDocument
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload @:public @:public @:public @:public override public function endDocument() : Void;
 	
 	
 }

@@ -34,13 +34,13 @@ package javax.security.auth.callback;
 extern class TextOutputCallback implements javax.security.auth.callback.Callback implements java.io.Serializable
 {
 	/** Information message. */
-	public static var INFORMATION(default, null) : Int;
+	@:public @:static @:final public static var INFORMATION(default, null) : Int;
 	
 	/** Warning message. */
-	public static var WARNING(default, null) : Int;
+	@:public @:static @:final public static var WARNING(default, null) : Int;
 	
 	/** Error message. */
-	public static var ERROR(default, null) : Int;
+	@:public @:static @:final public static var ERROR(default, null) : Int;
 	
 	/**
 	* Construct a TextOutputCallback with a message type and message
@@ -59,7 +59,7 @@ extern class TextOutputCallback implements javax.security.auth.callback.Callback
 	*                  if <code>message</code> is null,
 	*                  or if <code>message</code> has a length of 0.
 	*/
-	@:overload public function new(messageType : Int, message : String) : Void;
+	@:overload @:public public function new(messageType : Int, message : String) : Void;
 	
 	/**
 	* Get the message type.
@@ -69,7 +69,7 @@ extern class TextOutputCallback implements javax.security.auth.callback.Callback
 	* @return the message type (<code>INFORMATION</code>,
 	*                  <code>WARNING</code> or <code>ERROR</code>).
 	*/
-	@:overload public function getMessageType() : Int;
+	@:overload @:public public function getMessageType() : Int;
 	
 	/**
 	* Get the message to be displayed.
@@ -78,7 +78,7 @@ extern class TextOutputCallback implements javax.security.auth.callback.Callback
 	*
 	* @return the message to be displayed.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	
 }

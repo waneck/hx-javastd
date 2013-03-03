@@ -24,15 +24,15 @@ extern class XPathExpressionImpl implements javax.xml.xpath.XPathExpression
 	/** Protected constructor to prevent direct instantiation; use compile()
 	* from the context.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(xpath : com.sun.org.apache.xpath.internal.XPath, prefixResolver : com.sun.org.apache.xpath.internal.jaxp.JAXPPrefixResolver, functionResolver : javax.xml.xpath.XPathFunctionResolver, variableResolver : javax.xml.xpath.XPathVariableResolver) : Void;
+	@:overload @:protected private function new(xpath : com.sun.org.apache.xpath.internal.XPath, prefixResolver : com.sun.org.apache.xpath.internal.jaxp.JAXPPrefixResolver, functionResolver : javax.xml.xpath.XPathFunctionResolver, variableResolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
-	@:overload private function new(xpath : com.sun.org.apache.xpath.internal.XPath, prefixResolver : com.sun.org.apache.xpath.internal.jaxp.JAXPPrefixResolver, functionResolver : javax.xml.xpath.XPathFunctionResolver, variableResolver : javax.xml.xpath.XPathVariableResolver, featureSecureProcessing : Bool, useServicesMechanism : Bool) : Void;
+	@:overload @:protected private function new(xpath : com.sun.org.apache.xpath.internal.XPath, prefixResolver : com.sun.org.apache.xpath.internal.jaxp.JAXPPrefixResolver, functionResolver : javax.xml.xpath.XPathFunctionResolver, variableResolver : javax.xml.xpath.XPathVariableResolver, featureSecureProcessing : Bool, useServicesMechanism : Bool) : Void;
 	
-	@:overload public function setXPath(xpath : com.sun.org.apache.xpath.internal.XPath) : Void;
+	@:overload @:public public function setXPath(xpath : com.sun.org.apache.xpath.internal.XPath) : Void;
 	
-	@:overload public function eval(item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function eval(item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the specified context and
@@ -65,7 +65,7 @@ extern class XPathExpressionImpl implements javax.xml.xpath.XPathExpression
 	* @throws NullPointerException If  <code>returnType</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function evaluate(item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the specified context and
@@ -91,7 +91,7 @@ extern class XPathExpressionImpl implements javax.xml.xpath.XPathExpression
 	*
 	* @throws XPathExpressionException If the expression cannot be evaluated.
 	*/
-	@:overload public function evaluate(item : Dynamic) : String;
+	@:overload @:public public function evaluate(item : Dynamic) : String;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the context of the
@@ -127,7 +127,7 @@ extern class XPathExpressionImpl implements javax.xml.xpath.XPathExpression
 	* @throws NullPointerException If  <code>source</code> or
 	* <code>returnType</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the context of the specified <code>InputSource</code> and return the result as a
@@ -150,7 +150,7 @@ extern class XPathExpressionImpl implements javax.xml.xpath.XPathExpression
 	* @throws XPathExpressionException If the expression cannot be evaluated.
 	* @throws NullPointerException If  <code>source</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(source : org.xml.sax.InputSource) : String;
+	@:overload @:public public function evaluate(source : org.xml.sax.InputSource) : String;
 	
 	
 }

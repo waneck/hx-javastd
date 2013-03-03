@@ -37,7 +37,7 @@ package java.lang;
 	* Constructs an <code>ArrayIndexOutOfBoundsException</code> with no
 	* detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>ArrayIndexOutOfBoundsException</code>
@@ -45,7 +45,7 @@ package java.lang;
 	*
 	* @param   index   the illegal index.
 	*/
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
 	/**
 	* Constructs an <code>ArrayIndexOutOfBoundsException</code> class
@@ -53,7 +53,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

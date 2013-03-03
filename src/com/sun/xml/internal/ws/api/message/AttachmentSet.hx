@@ -53,7 +53,7 @@ extern interface AttachmentSet extends java.lang.Iterable<com.sun.xml.internal.w
 	* @param att
 	*      must not be null.
 	*/
-	@:overload public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
+	@:overload @:public public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
 	
 	
 }

@@ -25,37 +25,37 @@ package com.sun.xml.internal.ws.encoding;
 */
 extern class XMLHTTPBindingCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 {
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload override public function getMimeType() : String;
+	@:overload @:public override public function getMimeType() : String;
 	
-	@:overload override public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:public override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public override public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:protected override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function copy() : com.sun.xml.internal.ws.encoding.MimeCodec;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.encoding.MimeCodec;
 	
-	@:overload public static function requiresTransformationOfDataSource(isFastInfoset : Bool, useFastInfoset : Bool) : Bool;
+	@:overload @:public @:static public static function requiresTransformationOfDataSource(isFastInfoset : Bool, useFastInfoset : Bool) : Bool;
 	
-	@:overload public static function transformDataSource(_in : javax.activation.DataSource, isFastInfoset : Bool, useFastInfoset : Bool, binding : com.sun.xml.internal.ws.api.WSBinding) : javax.activation.DataSource;
+	@:overload @:public @:static public static function transformDataSource(_in : javax.activation.DataSource, isFastInfoset : Bool, useFastInfoset : Bool, binding : com.sun.xml.internal.ws.api.WSBinding) : javax.activation.DataSource;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$encoding$XMLHTTPBindingCodec$AcceptContentType') @:internal extern class XMLHTTPBindingCodec_AcceptContentType implements com.sun.xml.internal.ws.api.pipe.ContentType
 {
-	@:overload public function set(p : com.sun.xml.internal.ws.api.message.Packet, c : com.sun.xml.internal.ws.api.pipe.ContentType) : com.sun.xml.internal.ws.encoding.XMLHTTPBindingCodec.XMLHTTPBindingCodec_AcceptContentType;
+	@:overload @:public public function set(p : com.sun.xml.internal.ws.api.message.Packet, c : com.sun.xml.internal.ws.api.pipe.ContentType) : com.sun.xml.internal.ws.encoding.XMLHTTPBindingCodec.XMLHTTPBindingCodec_AcceptContentType;
 	
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function getSOAPActionHeader() : String;
+	@:overload @:public public function getSOAPActionHeader() : String;
 	
-	@:overload public function getAcceptHeader() : String;
+	@:overload @:public public function getAcceptHeader() : String;
 	
 	
 }

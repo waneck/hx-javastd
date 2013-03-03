@@ -26,42 +26,42 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	*
 	* @param resolver Variable Resolver
 	*/
-	@:overload public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
+	@:overload @:public public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
 	/**
 	* <p>Returns the current variable resolver.</p>
 	*
 	* @return Current variable resolver
 	*/
-	@:overload public function getXPathVariableResolver() : javax.xml.xpath.XPathVariableResolver;
+	@:overload @:public public function getXPathVariableResolver() : javax.xml.xpath.XPathVariableResolver;
 	
 	/**
 	* <p>Establishes a function resolver.</p>
 	*
 	* @param resolver XPath function resolver
 	*/
-	@:overload public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
+	@:overload @:public public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
 	
 	/**
 	* <p>Returns the current function resolver.</p>
 	*
 	* @return Current function resolver
 	*/
-	@:overload public function getXPathFunctionResolver() : javax.xml.xpath.XPathFunctionResolver;
+	@:overload @:public public function getXPathFunctionResolver() : javax.xml.xpath.XPathFunctionResolver;
 	
 	/**
 	* <p>Establishes a namespace context.</p>
 	*
 	* @param nsContext Namespace context to use
 	*/
-	@:overload public function setNamespaceContext(nsContext : javax.xml.namespace.NamespaceContext) : Void;
+	@:overload @:public public function setNamespaceContext(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
 	/**
 	* <p>Returns the current namespace context.</p>
 	*
 	* @return Current Namespace context
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* <p>Evaluate an <code>XPath</code> expression in the specified context and return the result as the specified type.</p>
@@ -94,7 +94,7 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	* @throws IllegalArgumentException If <code>returnType</code> is not one of the types defined in {@link XPathConstants}.
 	* @throws NullPointerException If <code>expression</code> or <code>returnType</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(expression : String, item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate an XPath expression in the specified context and return the result as a <code>String</code>.</p>
@@ -120,7 +120,7 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	* @throws XPathExpressionException If <code>expression</code> cannot be evaluated.
 	* @throws NullPointerException If <code>expression</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, item : Dynamic) : String;
+	@:overload @:public public function evaluate(expression : String, item : Dynamic) : String;
 	
 	/**
 	* <p>Compile an XPath expression for later evaluation.</p>
@@ -139,7 +139,7 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	* @throws XPathExpressionException If <code>expression</code> cannot be compiled.
 	* @throws NullPointerException If <code>expression</code> is <code>null</code>.
 	*/
-	@:overload public function compile(expression : String) : javax.xml.xpath.XPathExpression;
+	@:overload @:public public function compile(expression : String) : javax.xml.xpath.XPathExpression;
 	
 	/**
 	* <p>Evaluate an XPath expression in the context of the specified <code>InputSource</code>
@@ -169,7 +169,7 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	* @throws NullPointerException If <code>expression</code>, <code>source</code> or <code>returnType</code>
 	*   is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(expression : String, source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate an XPath expression in the context of the specified <code>InputSource</code>
@@ -194,7 +194,7 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	* @throws XPathExpressionException If expression cannot be evaluated.
 	* @throws NullPointerException If <code>expression</code> or <code>source</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(expression : String, source : org.xml.sax.InputSource) : String;
+	@:overload @:public public function evaluate(expression : String, source : org.xml.sax.InputSource) : String;
 	
 	/**
 	* <p>Reset this <code>XPath</code> to its original configuration.</p>
@@ -211,7 +211,7 @@ extern class XPathImpl implements javax.xml.xpath.XPath
 	* <code>XPathVariableResolver</code>
 	* and <code>NamespaceContext</code>.</p>
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

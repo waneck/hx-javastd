@@ -30,25 +30,25 @@ extern class SAXOutput extends com.sun.xml.internal.bind.v2.runtime.output.XmlOu
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var out(default, null) : org.xml.sax.ContentHandler;
+	@:protected @:final private var out(default, null) : org.xml.sax.ContentHandler;
 	
-	@:overload public function new(out : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function new(out : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload @:public override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
-	@:overload override public function endDocument(fragment : Bool) : Void;
+	@:overload @:public override public function endDocument(fragment : Bool) : Void;
 	
-	@:overload override public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload @:public override public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload override public function endStartTag() : Void;
+	@:overload @:public override public function endStartTag() : Void;
 	
-	@:overload override public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function endTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function text(value : String, needsSP : Bool) : Void;
+	@:overload @:public override public function text(value : String, needsSP : Bool) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSP : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSP : Bool) : Void;
 	
 	
 }

@@ -23,17 +23,17 @@ extern class XIncludeNamespaceSupport extends com.sun.org.apache.xerces.internal
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @param context
 	*/
-	@:overload public function new(context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public public function new(context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	/**
 	* Pushes a new context onto the stack.
 	*/
-	@:overload override public function pushContext() : Void;
+	@:overload @:public override public function pushContext() : Void;
 	
 	/**
 	* This method is used to set a context invalid for XInclude namespace processing.
@@ -42,7 +42,7 @@ extern class XIncludeNamespaceSupport extends com.sun.org.apache.xerces.internal
 	* defined by these elements are set to invalid by the XInclude processor using
 	* this method.
 	*/
-	@:overload public function setContextInvalid() : Void;
+	@:overload @:public public function setContextInvalid() : Void;
 	
 	/**
 	* This returns the namespace URI which was associated with the given pretext, in
@@ -53,7 +53,7 @@ extern class XIncludeNamespaceSupport extends com.sun.org.apache.xerces.internal
 	* @param prefix the prefix of the desired URI
 	* @return the URI corresponding to the prefix in the context of the include parent
 	*/
-	@:overload public function getURIFromIncludeParent(prefix : String) : String;
+	@:overload @:public public function getURIFromIncludeParent(prefix : String) : String;
 	
 	
 }

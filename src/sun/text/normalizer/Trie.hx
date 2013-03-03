@@ -45,7 +45,7 @@ extern class Trie
 	* @throws IOException thrown when input stream does not have the
 	*                        right header.
 	*/
-	@:overload private function new(inputStream : java.io.InputStream, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
+	@:overload @:protected private function new(inputStream : java.io.InputStream, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Trie constructor
@@ -54,19 +54,19 @@ extern class Trie
 	* @param dataManipulate object containing the information to parse the
 	*                       trie data
 	*/
-	@:overload private function new(index : java.NativeArray<java.StdTypes.Char16>, options : Int, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
+	@:overload @:protected private function new(index : java.NativeArray<java.StdTypes.Char16>, options : Int, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Lead surrogate code points' index displacement in the index array.
 	* 0x10000-0xd800=0x2800
 	* 0x2800 >> INDEX_STAGE_1_SHIFT_
 	*/
-	private static var LEAD_INDEX_OFFSET_(default, null) : Int;
+	@:protected @:static @:final private static var LEAD_INDEX_OFFSET_(default, null) : Int;
 	
 	/**
 	* Shift size for shifting right the input index. 1..9
 	*/
-	private static var INDEX_STAGE_1_SHIFT_(default, null) : Int;
+	@:protected @:static @:final private static var INDEX_STAGE_1_SHIFT_(default, null) : Int;
 	
 	/**
 	* Shift size for shifting left the index array values.
@@ -76,48 +76,48 @@ extern class Trie
 	* DATA_GRANULARITY.
 	* 0..INDEX_STAGE_1_SHIFT
 	*/
-	private static var INDEX_STAGE_2_SHIFT_(default, null) : Int;
+	@:protected @:static @:final private static var INDEX_STAGE_2_SHIFT_(default, null) : Int;
 	
 	/**
 	* Number of data values in a stage 2 (data array) block.
 	*/
-	private static var DATA_BLOCK_LENGTH(default, null) : Int;
+	@:protected @:static @:final private static var DATA_BLOCK_LENGTH(default, null) : Int;
 	
 	/**
 	* Mask for getting the lower bits from the input index.
 	* DATA_BLOCK_LENGTH - 1.
 	*/
-	private static var INDEX_STAGE_3_MASK_(default, null) : Int;
+	@:protected @:static @:final private static var INDEX_STAGE_3_MASK_(default, null) : Int;
 	
 	/** Number of bits of a trail surrogate that are used in index table lookups. */
-	private static var SURROGATE_BLOCK_BITS(default, null) : Int;
+	@:protected @:static @:final private static var SURROGATE_BLOCK_BITS(default, null) : Int;
 	
 	/**
 	* Number of index (stage 1) entries per lead surrogate.
 	* Same as number of index entries for 1024 trail surrogates,
 	* ==0x400>>INDEX_STAGE_1_SHIFT_
 	*/
-	private static var SURROGATE_BLOCK_COUNT(default, null) : Int;
+	@:protected @:static @:final private static var SURROGATE_BLOCK_COUNT(default, null) : Int;
 	
 	/** Length of the BMP portion of the index (stage 1) array. */
-	private static var BMP_INDEX_LENGTH(default, null) : Int;
+	@:protected @:static @:final private static var BMP_INDEX_LENGTH(default, null) : Int;
 	
 	/**
 	* Surrogate mask to use when shifting offset to retrieve supplementary
 	* values
 	*/
-	private static var SURROGATE_MASK_(default, null) : Int;
+	@:protected @:static @:final private static var SURROGATE_MASK_(default, null) : Int;
 	
 	/**
 	* Index or UTF16 characters
 	*/
-	private var m_index_ : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var m_index_ : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Internal TrieValue which handles the parsing of the data value.
 	* This class is to be implemented by the user
 	*/
-	private var m_dataManipulate_ : sun.text.normalizer.Trie.Trie_DataManipulate;
+	@:protected private var m_dataManipulate_ : sun.text.normalizer.Trie.Trie_DataManipulate;
 	
 	/**
 	* Start index of the data portion of the trie. CharTrie combines
@@ -125,12 +125,12 @@ extern class Trie
 	* initial offset to the data portion.
 	* Note this index always points to the initial value.
 	*/
-	private var m_dataOffset_ : Int;
+	@:protected private var m_dataOffset_ : Int;
 	
 	/**
 	* Length of the data array
 	*/
-	private var m_dataLength_ : Int;
+	@:protected private var m_dataLength_ : Int;
 	
 	/**
 	* Gets the offset to the data which the surrogate pair points to.
@@ -138,20 +138,20 @@ extern class Trie
 	* @param trail trailing surrogate
 	* @return offset to data
 	*/
-	@:overload @:abstract private function getSurrogateOffset(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
+	@:overload @:protected @:abstract private function getSurrogateOffset(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Gets the value at the argument index
 	* @param index value at index will be retrieved
 	* @return 32 bit value
 	*/
-	@:overload @:abstract private function getValue(index : Int) : Int;
+	@:overload @:protected @:abstract private function getValue(index : Int) : Int;
 	
 	/**
 	* Gets the default initial value
 	* @return 32 bit value
 	*/
-	@:overload @:abstract private function getInitialValue() : Int;
+	@:overload @:protected @:abstract private function getInitialValue() : Int;
 	
 	/**
 	* Gets the offset to the data which the index ch after variable offset
@@ -167,7 +167,7 @@ extern class Trie
 	* @param ch index to be used after offset
 	* @return offset to the data
 	*/
-	@:overload @:final private function getRawOffset(offset : Int, ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected @:final private function getRawOffset(offset : Int, ch : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Gets the offset to data which the BMP character points to
@@ -175,7 +175,7 @@ extern class Trie
 	* @param ch BMP character
 	* @return offset to data
 	*/
-	@:overload @:final private function getBMPOffset(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected @:final private function getBMPOffset(ch : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Gets the offset to the data which this lead surrogate character points
@@ -185,7 +185,7 @@ extern class Trie
 	* @param ch lead surrogate character
 	* @return offset to data
 	*/
-	@:overload @:final private function getLeadOffset(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected @:final private function getLeadOffset(ch : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Internal trie getter from a code point.
@@ -195,7 +195,7 @@ extern class Trie
 	* @param ch codepoint
 	* @return offset to data
 	*/
-	@:overload @:final private function getCodePointOffset(ch : Int) : Int;
+	@:overload @:protected @:final private function getCodePointOffset(ch : Int) : Int;
 	
 	/**
 	* <p>Parses the inputstream and creates the trie index with it.</p>
@@ -203,33 +203,33 @@ extern class Trie
 	* @param inputStream input stream containing the trie information
 	* @exception IOException thrown when data reading fails.
 	*/
-	@:overload private function unserialize(inputStream : java.io.InputStream) : Void;
+	@:overload @:protected private function unserialize(inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Determines if this is a 32 bit trie
 	* @return true if options specifies this is a 32 bit trie
 	*/
-	@:overload @:final private function isIntTrie() : Bool;
+	@:overload @:protected @:final private function isIntTrie() : Bool;
 	
 	/**
 	* Determines if this is a 16 bit trie
 	* @return true if this is a 16 bit trie
 	*/
-	@:overload @:final private function isCharTrie() : Bool;
+	@:overload @:protected @:final private function isCharTrie() : Bool;
 	
 	/**
 	* Latin 1 option mask
 	*/
-	private static var HEADER_OPTIONS_LATIN1_IS_LINEAR_MASK_(default, null) : Int;
+	@:protected @:static @:final private static var HEADER_OPTIONS_LATIN1_IS_LINEAR_MASK_(default, null) : Int;
 	
 	/**
 	* Constant number to authenticate the byte block
 	*/
-	private static var HEADER_SIGNATURE_(default, null) : Int;
+	@:protected @:static @:final private static var HEADER_SIGNATURE_(default, null) : Int;
 	
-	private static var HEADER_OPTIONS_INDEX_SHIFT_(default, null) : Int;
+	@:protected @:static @:final private static var HEADER_OPTIONS_INDEX_SHIFT_(default, null) : Int;
 	
-	private static var HEADER_OPTIONS_DATA_IS_32_BIT_(default, null) : Int;
+	@:protected @:static @:final private static var HEADER_OPTIONS_DATA_IS_32_BIT_(default, null) : Int;
 	
 	
 }
@@ -250,13 +250,13 @@ extern class Trie
 	*        folding offset
 	* @return data offset or 0 if there is no data for the lead surrogate
 	*/
-	@:overload public function getFoldingOffset(value : Int) : Int;
+	@:overload @:public public function getFoldingOffset(value : Int) : Int;
 	
 	
 }
 @:native('sun$text$normalizer$Trie$DefaultGetFoldingOffset') @:internal extern class Trie_DefaultGetFoldingOffset implements sun.text.normalizer.Trie.Trie_DataManipulate
 {
-	@:overload public function getFoldingOffset(value : Int) : Int;
+	@:overload @:public public function getFoldingOffset(value : Int) : Int;
 	
 	
 }

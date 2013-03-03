@@ -25,14 +25,14 @@ package sun.java2d;
 */
 extern class Spans
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Add a span covering the half open interval
 	* including <code>start</code> up to
 	* but not including <code>end</code>.
 	*/
-	@:overload public function add(start : Single, end : Single) : Void;
+	@:overload @:public public function add(start : Single, end : Single) : Void;
 	
 	/**
 	* Add a span which covers the entire range.
@@ -43,7 +43,7 @@ extern class Spans
 	* and the <code>intersects</code> method always
 	* returns true.
 	*/
-	@:overload public function addInfinite() : Void;
+	@:overload @:public public function addInfinite() : Void;
 	
 	/**
 	* Returns true if the span defined by the half-open
@@ -51,7 +51,7 @@ extern class Spans
 	* but not including, <code>end</code> intersects
 	* any of the spans defined by this instance.
 	*/
-	@:overload public function intersects(start : Single, end : Single) : Bool;
+	@:overload @:public public function intersects(start : Single, end : Single) : Bool;
 	
 	
 }
@@ -65,9 +65,9 @@ extern class Spans
 	* position. The end position is ignored
 	* in this ranking.
 	*/
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -81,7 +81,7 @@ extern class Spans
 */
 @:native('sun$java2d$Spans$SpanIntersection') @:internal extern class Spans_SpanIntersection implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }

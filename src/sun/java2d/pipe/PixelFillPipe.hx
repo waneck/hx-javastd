@@ -37,15 +37,15 @@ extern interface PixelFillPipe
 	* are possible in Graphics since many of the rendering calls can
 	* be transformed into one or more variants of these calls.
 	*/
-	@:overload public function fillRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function fillRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function fillRoundRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload @:public public function fillRoundRect(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
-	@:overload public function fillOval(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function fillOval(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function fillArc(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload @:public public function fillArc(sg : sun.java2d.SunGraphics2D, x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
-	@:overload public function fillPolygon(sg : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload @:public public function fillPolygon(sg : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	
 }

@@ -31,35 +31,35 @@ package com.sun.corba.se.impl.io;
 */
 extern class OutputStreamHook extends java.io.ObjectOutputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function defaultWriteObject() : Void;
+	@:overload @:public override public function defaultWriteObject() : Void;
 	
-	@:overload @:abstract public function defaultWriteObjectDelegate() : Void;
+	@:overload @:public @:abstract public function defaultWriteObjectDelegate() : Void;
 	
-	@:overload public function putFields() : java.io.ObjectOutputStream.ObjectOutputStream_PutField;
+	@:overload @:public override public function putFields() : java.io.ObjectOutputStream.ObjectOutputStream_PutField;
 	
-	private var streamFormatVersion : java.StdTypes.Int8;
+	@:protected private var streamFormatVersion : java.StdTypes.Int8;
 	
-	@:overload public function getStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload @:public public function getStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload public function writeFields() : Void;
+	@:overload @:public override public function writeFields() : Void;
 	
-	@:overload @:abstract public function getOrbStream() : org.omg.CORBA_2_3.portable.OutputStream;
+	@:overload @:public @:abstract public function getOrbStream() : org.omg.CORBA_2_3.portable.OutputStream;
 	
-	@:overload @:abstract private function beginOptionalCustomData() : Void;
+	@:overload @:protected @:abstract private function beginOptionalCustomData() : Void;
 	
-	private var writeObjectState : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
+	@:protected private var writeObjectState : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
 	
-	@:overload private function setState(newState : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState) : Void;
+	@:overload @:protected private function setState(newState : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState) : Void;
 	
-	private static var NOT_IN_WRITE_OBJECT(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
+	@:protected @:static @:final private static var NOT_IN_WRITE_OBJECT(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
 	
-	private static var IN_WRITE_OBJECT(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
+	@:protected @:static @:final private static var IN_WRITE_OBJECT(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
 	
-	private static var WROTE_DEFAULT_DATA(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
+	@:protected @:static @:final private static var WROTE_DEFAULT_DATA(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
 	
-	private static var WROTE_CUSTOM_DATA(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
+	@:protected @:static @:final private static var WROTE_CUSTOM_DATA(default, null) : com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState;
 	
 	
 }
@@ -72,103 +72,103 @@ extern class OutputStreamHook extends java.io.ObjectOutputStream
 	/**
 	* Put the value of the named boolean field into the persistent field.
 	*/
-	@:overload public function put(name : String, value : Bool) : Void;
+	@:overload @:public override public function put(name : String, value : Bool) : Void;
 	
 	/**
 	* Put the value of the named char field into the persistent fields.
 	*/
-	@:overload public function put(name : String, value : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function put(name : String, value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Put the value of the named byte field into the persistent fields.
 	*/
-	@:overload public function put(name : String, value : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function put(name : String, value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Put the value of the named short field into the persistent fields.
 	*/
-	@:overload public function put(name : String, value : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function put(name : String, value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Put the value of the named int field into the persistent fields.
 	*/
-	@:overload public function put(name : String, value : Int) : Void;
+	@:overload @:public override public function put(name : String, value : Int) : Void;
 	
 	/**
 	* Put the value of the named long field into the persistent fields.
 	*/
-	@:overload public function put(name : String, value : haxe.Int64) : Void;
+	@:overload @:public override public function put(name : String, value : haxe.Int64) : Void;
 	
 	/**
 	* Put the value of the named float field into the persistent fields.
 	*
 	*/
-	@:overload public function put(name : String, value : Single) : Void;
+	@:overload @:public override public function put(name : String, value : Single) : Void;
 	
 	/**
 	* Put the value of the named double field into the persistent field.
 	*/
-	@:overload public function put(name : String, value : Float) : Void;
+	@:overload @:public override public function put(name : String, value : Float) : Void;
 	
 	/**
 	* Put the value of the named Object field into the persistent field.
 	*/
-	@:overload public function put(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function put(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Write the data and fields to the specified ObjectOutput stream.
 	*/
-	@:overload public function write(out : java.io.ObjectOutput) : Void;
+	@:overload @:public override public function write(out : java.io.ObjectOutput) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$OutputStreamHook$WriteObjectState') extern class OutputStreamHook_WriteObjectState
 {
-	@:overload public function enterWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public public function enterWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$OutputStreamHook$DefaultState') extern class OutputStreamHook_DefaultState extends com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState
 {
-	@:overload override public function enterWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function enterWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$OutputStreamHook$InWriteObjectState') extern class OutputStreamHook_InWriteObjectState extends com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_WriteObjectState
 {
-	@:overload override public function enterWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function enterWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$OutputStreamHook$WroteDefaultDataState') extern class OutputStreamHook_WroteDefaultDataState extends com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_InWriteObjectState
 {
-	@:overload override public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$io$OutputStreamHook$WroteCustomDataState') extern class OutputStreamHook_WroteCustomDataState extends com.sun.corba.se.impl.io.OutputStreamHook.OutputStreamHook_InWriteObjectState
 {
-	@:overload override public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function exitWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function defaultWriteObject(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
-	@:overload override public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
+	@:overload @:public override public function writeData(stream : com.sun.corba.se.impl.io.OutputStreamHook) : Void;
 	
 	
 }

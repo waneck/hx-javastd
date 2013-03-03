@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.api.addressing;
 */
 @:internal extern class OutboundReferenceParameterHeader extends com.sun.xml.internal.ws.message.AbstractHeaderImpl
 {
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
-	@:overload public function getLocalPart() : String;
+	@:overload @:public override public function getLocalPart() : String;
 	
-	@:overload public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public override public function getAttribute(nsUri : String, localName : String) : String;
 	
-	@:overload public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	
 }
@@ -46,7 +46,7 @@ package com.sun.xml.internal.ws.api.addressing;
 */
 @:native('com$sun$xml$internal$ws$api$addressing$OutboundReferenceParameterHeader$Attribute') @:internal extern class OutboundReferenceParameterHeader_Attribute
 {
-	@:overload public function new(nsUri : String, localName : String, value : String) : Void;
+	@:overload @:public public function new(nsUri : String, localName : String, value : String) : Void;
 	
 	
 }

@@ -42,7 +42,7 @@ extern interface BIDeclaration
 	* Gets the name of this binding declaration,
 	* which is the same as the tag name of the binding element.
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the source location where this declaration was written.

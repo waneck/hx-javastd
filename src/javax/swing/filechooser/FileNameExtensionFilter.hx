@@ -38,7 +38,7 @@ extern class FileNameExtensionFilter extends javax.swing.filechooser.FileFilter
 	*         contains {@code null}, or contains an empty string
 	* @see #accept
 	*/
-	@:overload public function new(description : String, extensions : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(description : String, extensions : java.NativeArray<String>) : Void;
 	
 	/**
 	* Tests the specified file, returning true if the file is
@@ -49,21 +49,21 @@ extern class FileNameExtensionFilter extends javax.swing.filechooser.FileFilter
 	* @param f the {@code File} to test
 	* @return true if the file is to be accepted, false otherwise
 	*/
-	@:overload override public function accept(f : java.io.File) : Bool;
+	@:overload @:public override public function accept(f : java.io.File) : Bool;
 	
 	/**
 	* The description of this filter. For example: "JPG and GIF Images."
 	*
 	* @return the description of this filter
 	*/
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
 	/**
 	* Returns the set of file name extensions files are tested against.
 	*
 	* @return the set of file name extensions files are tested against
 	*/
-	@:overload public function getExtensions() : java.NativeArray<String>;
+	@:overload @:public public function getExtensions() : java.NativeArray<String>;
 	
 	/**
 	* Returns a string representation of the {@code FileNameExtensionFilter}.
@@ -73,7 +73,7 @@ extern class FileNameExtensionFilter extends javax.swing.filechooser.FileFilter
 	*
 	* @return a string representation of this {@code FileNameExtensionFilter}
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

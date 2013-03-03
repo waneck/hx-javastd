@@ -25,7 +25,7 @@ package sun.reflect;
 */
 @:internal extern class DelegatingMethodAccessorImpl extends sun.reflect.MethodAccessorImpl
 {
-	@:overload override public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public override public function invoke(obj : Dynamic, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

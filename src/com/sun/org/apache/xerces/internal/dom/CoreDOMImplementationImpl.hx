@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation implements org.w3c.dom.ls.DOMImplementationLS
 {
 	/** NON-DOM: Obtain and return the single shared object */
-	@:overload public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public @:static public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Test if the DOM implementation supports a specific "feature" --
@@ -38,7 +38,7 @@ extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation 
 	* @return true iff this implementation is compatable with the specified
 	* feature and version.
 	*/
-	@:overload public function hasFeature(feature : String, version : String) : Bool;
+	@:overload @:public public function hasFeature(feature : String, version : String) : Bool;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -50,7 +50,7 @@ extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation 
 	* @param systemID The document type system identifier.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function createDocumentType(qualifiedName : String, publicID : String, systemID : String) : org.w3c.dom.DocumentType;
+	@:overload @:public public function createDocumentType(qualifiedName : String, publicID : String, systemID : String) : org.w3c.dom.DocumentType;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -72,12 +72,12 @@ extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation 
 	*                         already been used with a different document.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
+	@:overload @:public public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
 	
 	/**
 	* DOM Level 3 WD - Experimental.
 	*/
-	@:overload public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* DOM Level 3 LS CR - Experimental.
@@ -121,7 +121,7 @@ extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation 
 	*    NOT_SUPPORTED_ERR: Raised if the requested mode or schema type is
 	*   not supported.
 	*/
-	@:overload public function createLSParser(mode : java.StdTypes.Int16, schemaType : String) : org.w3c.dom.ls.LSParser;
+	@:overload @:public public function createLSParser(mode : java.StdTypes.Int16, schemaType : String) : org.w3c.dom.ls.LSParser;
 	
 	/**
 	* DOM Level 3 LS CR - Experimental.
@@ -136,20 +136,20 @@ extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation 
 	* parameter on the new created <code>LSSerializer</code> contains a
 	* reference to the default error handler.
 	*/
-	@:overload public function createLSSerializer() : org.w3c.dom.ls.LSSerializer;
+	@:overload @:public public function createLSSerializer() : org.w3c.dom.ls.LSSerializer;
 	
 	/**
 	* DOM Level 3 LS CR - Experimental.
 	* Create a new empty input source.
 	* @return  The newly created input object.
 	*/
-	@:overload public function createLSInput() : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function createLSInput() : org.w3c.dom.ls.LSInput;
 	
 	/** NON-DOM:  increment document/doctype counter */
-	@:overload @:synchronized private function assignDocumentNumber() : Int;
+	@:overload @:protected @:synchronized private function assignDocumentNumber() : Int;
 	
 	/** NON-DOM:  increment document/doctype counter */
-	@:overload @:synchronized private function assignDocTypeNumber() : Int;
+	@:overload @:protected @:synchronized private function assignDocTypeNumber() : Int;
 	
 	/* DOM Level 3 LS CR - Experimental.
 	*
@@ -160,7 +160,7 @@ extern class CoreDOMImplementationImpl implements org.w3c.dom.DOMImplementation 
 
 	* @return  The newly created output object.
 	*/
-	@:overload public function createLSOutput() : org.w3c.dom.ls.LSOutput;
+	@:overload @:public public function createLSOutput() : org.w3c.dom.ls.LSOutput;
 	
 	
 }

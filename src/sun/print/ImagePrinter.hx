@@ -25,7 +25,7 @@ package sun.print;
 */
 @:internal extern class ImagePrinter implements java.awt.print.Printable
 {
-	@:overload public function print(g : java.awt.Graphics, pf : java.awt.print.PageFormat, index : Int) : Int;
+	@:overload @:public public function print(g : java.awt.Graphics, pf : java.awt.print.PageFormat, index : Int) : Int;
 	
 	
 }

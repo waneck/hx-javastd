@@ -28,12 +28,12 @@ extern interface DOMAccessor
 	/**
 	* Returns the Document object of the DOM.
 	*/
-	@:overload public function getDocument(obj : Dynamic) : org.w3c.dom.Document;
+	@:overload @:public public function getDocument(obj : Dynamic) : org.w3c.dom.Document;
 	
 	/**
 	* Returns a DOMImplementation object.
 	*/
-	@:overload public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	
 }

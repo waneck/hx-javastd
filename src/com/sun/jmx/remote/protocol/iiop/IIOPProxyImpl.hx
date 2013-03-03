@@ -29,33 +29,33 @@ extern class IIOPProxyImpl implements com.sun.jmx.remote.internal.IIOPProxy
 	* An implementatin of IIOPProxy that simply delegates to the appropriate
 	* RMI-IIOP and CORBA APIs.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function isStub(obj : Dynamic) : Bool;
+	@:overload @:public public function isStub(obj : Dynamic) : Bool;
 	
-	@:overload public function getDelegate(stub : Dynamic) : Dynamic;
+	@:overload @:public public function getDelegate(stub : Dynamic) : Dynamic;
 	
-	@:overload public function setDelegate(stub : Dynamic, delegate : Dynamic) : Void;
+	@:overload @:public public function setDelegate(stub : Dynamic, delegate : Dynamic) : Void;
 	
-	@:overload public function getOrb(stub : Dynamic) : Dynamic;
+	@:overload @:public public function getOrb(stub : Dynamic) : Dynamic;
 	
-	@:overload public function connect(stub : Dynamic, orb : Dynamic) : Void;
+	@:overload @:public public function connect(stub : Dynamic, orb : Dynamic) : Void;
 	
-	@:overload public function isOrb(obj : Dynamic) : Bool;
+	@:overload @:public public function isOrb(obj : Dynamic) : Bool;
 	
-	@:overload public function createOrb(args : java.NativeArray<String>, props : java.util.Properties) : Dynamic;
+	@:overload @:public public function createOrb(args : java.NativeArray<String>, props : java.util.Properties) : Dynamic;
 	
-	@:overload public function stringToObject(orb : Dynamic, str : String) : Dynamic;
+	@:overload @:public public function stringToObject(orb : Dynamic, str : String) : Dynamic;
 	
-	@:overload public function objectToString(orb : Dynamic, obj : Dynamic) : String;
+	@:overload @:public public function objectToString(orb : Dynamic, obj : Dynamic) : String;
 	
-	@:overload public function narrow<T>(narrowFrom : Dynamic, narrowTo : Class<T>) : T;
+	@:overload @:public public function narrow<T>(narrowFrom : Dynamic, narrowTo : Class<T>) : T;
 	
-	@:overload public function exportObject(obj : java.rmi.Remote) : Void;
+	@:overload @:public public function exportObject(obj : java.rmi.Remote) : Void;
 	
-	@:overload public function unexportObject(obj : java.rmi.Remote) : Void;
+	@:overload @:public public function unexportObject(obj : java.rmi.Remote) : Void;
 	
-	@:overload public function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
+	@:overload @:public public function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
 	
 	
 }

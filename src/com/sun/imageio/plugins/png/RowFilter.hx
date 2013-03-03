@@ -25,13 +25,13 @@ package com.sun.imageio.plugins.png;
 */
 extern class RowFilter
 {
-	@:overload private static function subFilter(currRow : java.NativeArray<java.StdTypes.Int8>, subFilteredRow : java.NativeArray<java.StdTypes.Int8>, bytesPerPixel : Int, bytesPerRow : Int) : Int;
+	@:overload @:protected @:static private static function subFilter(currRow : java.NativeArray<java.StdTypes.Int8>, subFilteredRow : java.NativeArray<java.StdTypes.Int8>, bytesPerPixel : Int, bytesPerRow : Int) : Int;
 	
-	@:overload private static function upFilter(currRow : java.NativeArray<java.StdTypes.Int8>, prevRow : java.NativeArray<java.StdTypes.Int8>, upFilteredRow : java.NativeArray<java.StdTypes.Int8>, bytesPerPixel : Int, bytesPerRow : Int) : Int;
+	@:overload @:protected @:static private static function upFilter(currRow : java.NativeArray<java.StdTypes.Int8>, prevRow : java.NativeArray<java.StdTypes.Int8>, upFilteredRow : java.NativeArray<java.StdTypes.Int8>, bytesPerPixel : Int, bytesPerRow : Int) : Int;
 	
-	@:overload @:final private function paethPredictor(a : Int, b : Int, c : Int) : Int;
+	@:overload @:protected @:final private function paethPredictor(a : Int, b : Int, c : Int) : Int;
 	
-	@:overload public function filterRow(colorType : Int, currRow : java.NativeArray<java.StdTypes.Int8>, prevRow : java.NativeArray<java.StdTypes.Int8>, scratchRows : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, bytesPerRow : Int, bytesPerPixel : Int) : Int;
+	@:overload @:public public function filterRow(colorType : Int, currRow : java.NativeArray<java.StdTypes.Int8>, prevRow : java.NativeArray<java.StdTypes.Int8>, scratchRows : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, bytesPerRow : Int, bytesPerPixel : Int) : Int;
 	
 	
 }

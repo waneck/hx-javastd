@@ -22,16 +22,16 @@ package com.sun.org.apache.xml.internal.security.transforms.params;
 extern class XPathFilterCHGPContainer extends com.sun.org.apache.xml.internal.security.utils.ElementProxy implements com.sun.org.apache.xml.internal.security.transforms.TransformParam
 {
 	/** Field _TAG_XPATHCHGP */
-	public static var _TAG_XPATHCHGP(default, null) : String;
+	@:public @:static @:final public static var _TAG_XPATHCHGP(default, null) : String;
 	
 	/** Field _ATT_INCLUDESLASH */
-	public static var _ATT_INCLUDESLASH(default, null) : String;
+	@:public @:static @:final public static var _ATT_INCLUDESLASH(default, null) : String;
 	
 	/** Field IncludeSlash           */
-	public static var IncludeSlash(default, null) : Bool;
+	@:public @:static @:final public static var IncludeSlash(default, null) : Bool;
 	
 	/** Field ExcludeSlash           */
-	public static var ExcludeSlash(default, null) : Bool;
+	@:public @:static @:final public static var ExcludeSlash(default, null) : Bool;
 	
 	/**
 	* Creates a new XPathFilterCHGPContainer; needed for generation.
@@ -43,7 +43,7 @@ extern class XPathFilterCHGPContainer extends com.sun.org.apache.xml.internal.se
 	* @param exclude
 	* @return the created object
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, includeSlashPolicy : Bool, includeButSearch : String, excludeButSearch : String, exclude : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPathFilterCHGPContainer;
+	@:overload @:public @:static public static function getInstance(doc : org.w3c.dom.Document, includeSlashPolicy : Bool, includeButSearch : String, excludeButSearch : String, exclude : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPathFilterCHGPContainer;
 	
 	/**
 	* Creates a XPathFilterCHGPContainer from an existing Element; needed for verification.
@@ -54,70 +54,70 @@ extern class XPathFilterCHGPContainer extends com.sun.org.apache.xml.internal.se
 	* @throws XMLSecurityException
 	* @return the created object.
 	*/
-	@:overload public static function getInstance(element : org.w3c.dom.Element, BaseURI : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPathFilterCHGPContainer;
+	@:overload @:public @:static public static function getInstance(element : org.w3c.dom.Element, BaseURI : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPathFilterCHGPContainer;
 	
 	/**
 	* Method getIncludeButSearch
 	*
 	* @return the string
 	*/
-	@:overload public function getIncludeButSearch() : String;
+	@:overload @:public public function getIncludeButSearch() : String;
 	
 	/**
 	* Method getExcludeButSearch
 	*
 	* @return the string
 	*/
-	@:overload public function getExcludeButSearch() : String;
+	@:overload @:public public function getExcludeButSearch() : String;
 	
 	/**
 	* Method getExclude
 	*
 	* @return the string
 	*/
-	@:overload public function getExclude() : String;
+	@:overload @:public public function getExclude() : String;
 	
 	/**
 	* Method getIncludeSlashPolicy
 	*
 	* @return the string
 	*/
-	@:overload public function getIncludeSlashPolicy() : Bool;
+	@:overload @:public public function getIncludeSlashPolicy() : Bool;
 	
 	/**
 	* Method getHereContextNodeIncludeButSearch
 	*
 	* @return the string
 	*/
-	@:overload public function getHereContextNodeIncludeButSearch() : org.w3c.dom.Node;
+	@:overload @:public public function getHereContextNodeIncludeButSearch() : org.w3c.dom.Node;
 	
 	/**
 	* Method getHereContextNodeExcludeButSearch
 	*
 	* @return the string
 	*/
-	@:overload public function getHereContextNodeExcludeButSearch() : org.w3c.dom.Node;
+	@:overload @:public public function getHereContextNodeExcludeButSearch() : org.w3c.dom.Node;
 	
 	/**
 	* Method getHereContextNodeExclude
 	*
 	* @return the string
 	*/
-	@:overload public function getHereContextNodeExclude() : org.w3c.dom.Node;
+	@:overload @:public public function getHereContextNodeExclude() : org.w3c.dom.Node;
 	
 	/**
 	* Method getBaseLocalName
 	*
 	* @inheritDoc
 	*/
-	@:overload @:final public function getBaseLocalName() : String;
+	@:overload @:public @:final override public function getBaseLocalName() : String;
 	
 	/**
 	* Method getBaseNamespace
 	*
 	* @inheritDoc
 	*/
-	@:overload @:final public function getBaseNamespace() : String;
+	@:overload @:public @:final override public function getBaseNamespace() : String;
 	
 	
 }

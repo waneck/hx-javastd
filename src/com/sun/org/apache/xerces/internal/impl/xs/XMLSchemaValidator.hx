@@ -21,168 +21,168 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponent implements com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentFilter implements com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator implements com.sun.org.apache.xerces.internal.impl.RevalidationHandler
 {
 	/** Feature identifier: validation. */
-	private static var VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION(default, null) : String;
 	
 	/** Feature identifier: validation. */
-	private static var SCHEMA_VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_VALIDATION(default, null) : String;
 	
 	/** Feature identifier: schema full checking*/
-	private static var SCHEMA_FULL_CHECKING(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_FULL_CHECKING(default, null) : String;
 	
 	/** Feature identifier: dynamic validation. */
-	private static var DYNAMIC_VALIDATION(default, null) : String;
+	@:protected @:static @:final private static var DYNAMIC_VALIDATION(default, null) : String;
 	
 	/** Feature identifier: expose schema normalized value */
-	private static var NORMALIZE_DATA(default, null) : String;
+	@:protected @:static @:final private static var NORMALIZE_DATA(default, null) : String;
 	
 	/** Feature identifier: send element default value via characters() */
-	private static var SCHEMA_ELEMENT_DEFAULT(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_ELEMENT_DEFAULT(default, null) : String;
 	
 	/** Feature identifier: augment PSVI */
-	private static var SCHEMA_AUGMENT_PSVI(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_AUGMENT_PSVI(default, null) : String;
 	
 	/** Feature identifier: whether to recognize java encoding names */
-	private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_JAVA_ENCODINGS(default, null) : String;
 	
 	/** Feature identifier: standard uri conformant feature. */
-	private static var STANDARD_URI_CONFORMANT_FEATURE(default, null) : String;
+	@:protected @:static @:final private static var STANDARD_URI_CONFORMANT_FEATURE(default, null) : String;
 	
 	/** Feature: generate synthetic annotations */
-	private static var GENERATE_SYNTHETIC_ANNOTATIONS(default, null) : String;
+	@:protected @:static @:final private static var GENERATE_SYNTHETIC_ANNOTATIONS(default, null) : String;
 	
 	/** Feature identifier: validate annotations. */
-	private static var VALIDATE_ANNOTATIONS(default, null) : String;
+	@:protected @:static @:final private static var VALIDATE_ANNOTATIONS(default, null) : String;
 	
 	/** Feature identifier: honour all schemaLocations */
-	private static var HONOUR_ALL_SCHEMALOCATIONS(default, null) : String;
+	@:protected @:static @:final private static var HONOUR_ALL_SCHEMALOCATIONS(default, null) : String;
 	
 	/** Feature identifier: use grammar pool only */
-	private static var USE_GRAMMAR_POOL_ONLY(default, null) : String;
+	@:protected @:static @:final private static var USE_GRAMMAR_POOL_ONLY(default, null) : String;
 	
 	/** Feature identifier: whether to continue parsing a schema after a fatal error is encountered */
-	private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
+	@:protected @:static @:final private static var CONTINUE_AFTER_FATAL_ERROR(default, null) : String;
 	
-	private static var PARSER_SETTINGS(default, null) : String;
+	@:protected @:static @:final private static var PARSER_SETTINGS(default, null) : String;
 	
 	/** Feature identifier: namespace growth */
-	private static var NAMESPACE_GROWTH(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_GROWTH(default, null) : String;
 	
 	/** Feature identifier: tolerate duplicates */
-	private static var TOLERATE_DUPLICATES(default, null) : String;
+	@:protected @:static @:final private static var TOLERATE_DUPLICATES(default, null) : String;
 	
-	private static var REPORT_WHITESPACE(default, null) : String;
+	@:protected @:static @:final private static var REPORT_WHITESPACE(default, null) : String;
 	
 	/** Property identifier: symbol table. */
-	public static var SYMBOL_TABLE(default, null) : String;
+	@:public @:static @:final public static var SYMBOL_TABLE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	public static var ERROR_REPORTER(default, null) : String;
+	@:public @:static @:final public static var ERROR_REPORTER(default, null) : String;
 	
 	/** Property identifier: entity resolver. */
-	public static var ENTITY_RESOLVER(default, null) : String;
+	@:public @:static @:final public static var ENTITY_RESOLVER(default, null) : String;
 	
 	/** Property identifier: grammar pool. */
-	public static var XMLGRAMMAR_POOL(default, null) : String;
+	@:public @:static @:final public static var XMLGRAMMAR_POOL(default, null) : String;
 	
-	private static var VALIDATION_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var VALIDATION_MANAGER(default, null) : String;
 	
-	private static var ENTITY_MANAGER(default, null) : String;
+	@:protected @:static @:final private static var ENTITY_MANAGER(default, null) : String;
 	
 	/** Property identifier: schema location. */
-	private static var SCHEMA_LOCATION(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_LOCATION(default, null) : String;
 	
 	/** Property identifier: no namespace schema location. */
-	private static var SCHEMA_NONS_LOCATION(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_NONS_LOCATION(default, null) : String;
 	
 	/** Property identifier: JAXP schema source. */
-	private static var JAXP_SCHEMA_SOURCE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_SOURCE(default, null) : String;
 	
 	/** Property identifier: JAXP schema language. */
-	private static var JAXP_SCHEMA_LANGUAGE(default, null) : String;
+	@:protected @:static @:final private static var JAXP_SCHEMA_LANGUAGE(default, null) : String;
 	
 	/** Property identifier: Schema DV Factory */
-	private static var SCHEMA_DV_FACTORY(default, null) : String;
+	@:protected @:static @:final private static var SCHEMA_DV_FACTORY(default, null) : String;
 	
-	private static var USE_SERVICE_MECHANISM(default, null) : String;
+	@:protected @:static @:final private static var USE_SERVICE_MECHANISM(default, null) : String;
 	
-	private static var ID_CONSTRAINT_NUM(default, null) : Int;
+	@:protected @:static @:final private static var ID_CONSTRAINT_NUM(default, null) : Int;
 	
 	/** current PSVI element info */
-	private var fCurrentPSVI : com.sun.org.apache.xerces.internal.impl.xs.ElementPSVImpl;
+	@:protected private var fCurrentPSVI : com.sun.org.apache.xerces.internal.impl.xs.ElementPSVImpl;
 	
-	private var fAugmentations(default, null) : com.sun.org.apache.xerces.internal.util.AugmentationsImpl;
+	@:protected @:final private var fAugmentations(default, null) : com.sun.org.apache.xerces.internal.util.AugmentationsImpl;
 	
 	/**
 	* Map which is used to catch instance documents that try
 	* and match a field several times in the same scope.
 	*/
-	private var fMayMatchFieldMap(default, null) : java.util.HashMap<Dynamic, Dynamic>;
+	@:protected @:final private var fMayMatchFieldMap(default, null) : java.util.HashMap<Dynamic, Dynamic>;
 	
-	private var fDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString;
+	@:protected private var fDefaultValue : com.sun.org.apache.xerces.internal.xni.XMLString;
 	
-	private var fDynamicValidation : Bool;
+	@:protected private var fDynamicValidation : Bool;
 	
-	private var fSchemaDynamicValidation : Bool;
+	@:protected private var fSchemaDynamicValidation : Bool;
 	
-	private var fDoValidation : Bool;
+	@:protected private var fDoValidation : Bool;
 	
-	private var fFullChecking : Bool;
+	@:protected private var fFullChecking : Bool;
 	
-	private var fNormalizeData : Bool;
+	@:protected private var fNormalizeData : Bool;
 	
-	private var fSchemaElementDefault : Bool;
+	@:protected private var fSchemaElementDefault : Bool;
 	
-	private var fAugPSVI : Bool;
+	@:protected private var fAugPSVI : Bool;
 	
-	private var fIdConstraint : Bool;
+	@:protected private var fIdConstraint : Bool;
 	
-	private var fUseGrammarPoolOnly : Bool;
+	@:protected private var fUseGrammarPoolOnly : Bool;
 	
-	private var fNamespaceGrowth : Bool;
+	@:protected private var fNamespaceGrowth : Bool;
 	
-	private var fEntityRef : Bool;
+	@:protected private var fEntityRef : Bool;
 	
-	private var fInCDATA : Bool;
+	@:protected private var fInCDATA : Bool;
 	
-	private var fSawOnlyWhitespaceInElementContent : Bool;
+	@:protected private var fSawOnlyWhitespaceInElementContent : Bool;
 	
 	/** Symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Error reporter. */
-	private var fXSIErrorReporter(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_XSIErrorReporter;
+	@:protected @:final private var fXSIErrorReporter(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_XSIErrorReporter;
 	
 	/** Entity resolver */
-	private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:protected private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
-	private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
+	@:protected private var fValidationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager;
 	
-	private var fValidationState : com.sun.org.apache.xerces.internal.impl.validation.ValidationState;
+	@:protected private var fValidationState : com.sun.org.apache.xerces.internal.impl.validation.ValidationState;
 	
-	private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:protected private var fGrammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	private var fExternalSchemas : String;
+	@:protected private var fExternalSchemas : String;
 	
-	private var fExternalNoNamespaceSchema : String;
+	@:protected private var fExternalNoNamespaceSchema : String;
 	
-	private var fJaxpSchemaSource : Dynamic;
+	@:protected private var fJaxpSchemaSource : Dynamic;
 	
 	/** Schema Grammar Description passed,  to give a chance to application to supply the Grammar */
-	private var fXSDDescription(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription;
+	@:protected @:final private var fXSDDescription(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription;
 	
-	private var fLocationPairs(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected @:final private var fLocationPairs(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** Document handler. */
-	private var fDocumentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:protected private var fDocumentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
-	private var fDocumentSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+	@:protected private var fDocumentSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -199,14 +199,14 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -223,7 +223,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the default state for a feature, or null if this
@@ -234,7 +234,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -245,19 +245,19 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/** Sets the document handler to receive information about the document. */
-	@:overload public function setDocumentHandler(documentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
+	@:overload @:public public function setDocumentHandler(documentHandler : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler) : Void;
 	
 	/** Returns the document handler */
-	@:overload public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
+	@:overload @:public public function getDocumentHandler() : com.sun.org.apache.xerces.internal.xni.XMLDocumentHandler;
 	
 	/** Sets the document source */
-	@:overload public function setDocumentSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource) : Void;
+	@:overload @:public public function setDocumentSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource) : Void;
 	
 	/** Returns the document source */
-	@:overload public function getDocumentSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
+	@:overload @:public public function getDocumentSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentSource;
 	
 	/**
 	* The start of the document.
@@ -281,7 +281,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of an XMLDecl line in the document. If
@@ -296,7 +296,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of the DOCTYPE line in the document.
@@ -310,7 +310,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function doctypeDecl(rootElement : String, publicId : String, systemId : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element.
@@ -321,7 +321,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An empty element.
@@ -332,7 +332,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -342,7 +342,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -357,7 +357,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -367,7 +367,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -376,7 +376,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -385,7 +385,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of the document.
@@ -394,11 +394,11 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload public function characterData(data : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Bool;
+	@:overload @:public public function characterData(data : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Bool;
 	
-	@:overload public function elementDefault(data : String) : Void;
+	@:overload @:public public function elementDefault(data : String) : Void;
 	
 	/**
 	* This method notifies the start of a general entity.
@@ -417,7 +417,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @exception XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGeneralEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of a TextDecl line in an entity. If present,
@@ -436,7 +436,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function textDecl(version : String, encoding : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A comment.
@@ -446,7 +446,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by application to signal an error.
 	*/
-	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -465,7 +465,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies the end of a general entity.
@@ -479,7 +479,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGeneralEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Stack of active XPath matchers for identity constraints. All
@@ -495,13 +495,13 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* XPath matchers are automatically removed from the stack of
 	* active matchers and no longer receive callbacks.
 	*/
-	private var fMatcherStack : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_XPathMatcherStack;
+	@:protected private var fMatcherStack : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_XPathMatcherStack;
 	
 	/** Cache of value stores for identity constraint fields. */
-	private var fValueStoreCache : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreCache;
+	@:protected private var fValueStoreCache : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreCache;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Resets the component. The component can query the component manager
@@ -517,7 +517,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*                      SAXNotRecognizedException or a
 	*                      SAXNotSupportedException.
 	*/
-	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/**
 	* Start the value scope for the specified identity constraint. This
@@ -526,7 +526,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param identityConstraint The identity constraint.
 	*/
-	@:overload public function startValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
+	@:overload @:public public function startValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
 	
 	/**
 	* Request to activate the specified field. This method returns the
@@ -534,14 +534,14 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*
 	* @param field The field to activate.
 	*/
-	@:overload public function activateField(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
+	@:overload @:public public function activateField(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
 	
 	/**
 	* Ends the value scope for the specified identity constraint.
 	*
 	* @param identityConstraint The identity constraint.
 	*/
-	@:overload public function endValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
+	@:overload @:public public function endValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
 	
 	/**
 	* Sets whether the given field is permitted to match a value.
@@ -551,7 +551,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* @param field The field that may be permitted to be matched.
 	* @param state Boolean indiciating whether the field may be matched.
 	*/
-	@:overload public function setMayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, state : Null<Bool>) : Void;
+	@:overload @:public public function setMayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, state : Null<Bool>) : Void;
 	
 	/**
 	* Returns whether the given field is permitted to match a value.
@@ -559,7 +559,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* @param field The field that may be permitted to be matched.
 	* @return Boolean indicating whether the field may be matched.
 	*/
-	@:overload public function mayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field) : Null<Bool>;
+	@:overload @:public public function mayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field) : Null<Bool>;
 	
 	
 }
@@ -570,17 +570,17 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 */
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$XSIErrorReporter') extern class XMLSchemaValidator_XSIErrorReporter
 {
-	@:overload public function reset(errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
+	@:overload @:public public function reset(errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter) : Void;
 	
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
-	@:overload public function popContext() : java.NativeArray<String>;
+	@:overload @:public public function popContext() : java.NativeArray<String>;
 	
-	@:overload public function mergeContext() : java.NativeArray<String>;
+	@:overload @:public public function mergeContext() : java.NativeArray<String>;
 	
-	@:overload public function reportError(domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : Void;
+	@:overload @:public public function reportError(domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : Void;
 	
-	@:overload public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : Void;
+	@:overload @:public public function reportError(location : com.sun.org.apache.xerces.internal.xni.XMLLocator, domain : String, key : String, arguments : java.NativeArray<Dynamic>, severity : java.StdTypes.Int16) : Void;
 	
 	
 }
@@ -592,36 +592,36 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$XPathMatcherStack') extern class XMLSchemaValidator_XPathMatcherStack
 {
 	/** Active matchers. */
-	private var fMatchers : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher>;
+	@:protected private var fMatchers : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher>;
 	
 	/** Count of active matchers. */
-	private var fMatchersCount : Int;
+	@:protected private var fMatchersCount : Int;
 	
 	/** Offset stack for contexts. */
-	private var fContextStack : com.sun.org.apache.xerces.internal.util.IntStack;
+	@:protected private var fContextStack : com.sun.org.apache.xerces.internal.util.IntStack;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Resets the XPath matcher stack. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** Returns the size of the stack. */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/** Returns the count of XPath matchers. */
-	@:overload public function getMatcherCount() : Int;
+	@:overload @:public public function getMatcherCount() : Int;
 	
 	/** Adds a matcher. */
-	@:overload public function addMatcher(matcher : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher) : Void;
+	@:overload @:public public function addMatcher(matcher : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher) : Void;
 	
 	/** Returns the XPath matcher at the specified index. */
-	@:overload public function getMatcherAt(index : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
+	@:overload @:public public function getMatcherAt(index : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
 	
 	/** Pushes a new context onto the stack. */
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
 	/** Pops a context off of the stack. */
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
 	
 }
@@ -634,55 +634,55 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$ValueStoreBase') extern class XMLSchemaValidator_ValueStoreBase implements com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore
 {
 	/** Identity constraint. */
-	private var fIdentityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:protected private var fIdentityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
-	private var fFieldCount : Int;
+	@:protected private var fFieldCount : Int;
 	
-	private var fFields : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.identity.Field>;
+	@:protected private var fFields : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.identity.Field>;
 	
 	/** current data */
-	private var fLocalValues : java.NativeArray<Dynamic>;
+	@:protected private var fLocalValues : java.NativeArray<Dynamic>;
 	
-	private var fLocalValueTypes : java.NativeArray<java.StdTypes.Int16>;
+	@:protected private var fLocalValueTypes : java.NativeArray<java.StdTypes.Int16>;
 	
-	private var fLocalItemValueTypes : java.NativeArray<com.sun.org.apache.xerces.internal.xs.ShortList>;
+	@:protected private var fLocalItemValueTypes : java.NativeArray<com.sun.org.apache.xerces.internal.xs.ShortList>;
 	
 	/** Current data value count. */
-	private var fValuesCount : Int;
+	@:protected private var fValuesCount : Int;
 	
 	/** global data */
-	public var fValues(default, null) : java.util.Vector<Dynamic>;
+	@:public @:final public var fValues(default, null) : java.util.Vector<Dynamic>;
 	
-	public var fValueTypes : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ShortVector;
+	@:public public var fValueTypes : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ShortVector;
 	
-	public var fItemValueTypes : java.util.Vector<Dynamic>;
+	@:public public var fItemValueTypes : java.util.Vector<Dynamic>;
 	
 	/** Constructs a value store for the specified identity constraint. */
-	@:overload private function new(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
+	@:overload @:protected private function new(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function append(newVal : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase) : Void;
+	@:overload @:public public function append(newVal : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase) : Void;
 	
 	/** Start scope for value store. */
-	@:overload public function startValueScope() : Void;
+	@:overload @:public public function startValueScope() : Void;
 	
 	/** Ends scope for value store. */
-	@:overload public function endValueScope() : Void;
+	@:overload @:public public function endValueScope() : Void;
 	
-	@:overload public function endDocumentFragment() : Void;
+	@:overload @:public public function endDocumentFragment() : Void;
 	
 	/**
 	* Signals the end of the document. This is where the specific
 	* instances of value stores can verify the integrity of the
 	* identity constraints.
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/* reports an error if an element is matched
 	* has nillable true and is matched by a key.
 	*/
-	@:overload public function reportError(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function reportError(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Adds the specified value to the value store.
@@ -692,30 +692,30 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	*              once within a selection scope.
 	* @param actualValue The value to add.
 	*/
-	@:overload public function addValue(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload @:public public function addValue(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	/**
 	* Returns true if this value store contains the locally scoped value stores
 	*/
-	@:overload public function contains() : Bool;
+	@:overload @:public public function contains() : Bool;
 	
 	/**
 	* Returns -1 if this value store contains the specified
 	* values, otherwise the index of the first field in the
 	* key sequence.
 	*/
-	@:overload public function contains(vsb : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase) : Int;
+	@:overload @:public public function contains(vsb : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase) : Int;
 	
-	@:overload private function checkDuplicateValues() : Void;
-	
-	/** Returns a string of the specified values. */
-	@:overload private function toString(values : java.NativeArray<Dynamic>) : String;
+	@:overload @:protected private function checkDuplicateValues() : Void;
 	
 	/** Returns a string of the specified values. */
-	@:overload private function toString(values : java.util.Vector<Dynamic>, start : Int, length : Int) : String;
+	@:overload @:protected private function toString(values : java.NativeArray<Dynamic>) : String;
+	
+	/** Returns a string of the specified values. */
+	@:overload @:protected private function toString(values : java.util.Vector<Dynamic>, start : Int, length : Int) : String;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -727,12 +727,12 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$UniqueValueStore') extern class XMLSchemaValidator_UniqueValueStore extends com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase
 {
 	/** Constructs a unique value store. */
-	@:overload public function new(unique : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
+	@:overload @:public public function new(unique : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
 	
 	/**
 	* Called when a duplicate value is added.
 	*/
-	@:overload override private function checkDuplicateValues() : Void;
+	@:overload @:protected override private function checkDuplicateValues() : Void;
 	
 	
 }
@@ -744,12 +744,12 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$KeyValueStore') extern class XMLSchemaValidator_KeyValueStore extends com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase
 {
 	/** Constructs a key value store. */
-	@:overload public function new(key : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
+	@:overload @:public public function new(key : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
 	
 	/**
 	* Called when a duplicate value is added.
 	*/
-	@:overload override private function checkDuplicateValues() : Void;
+	@:overload @:protected override private function checkDuplicateValues() : Void;
 	
 	
 }
@@ -761,15 +761,15 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$KeyRefValueStore') extern class XMLSchemaValidator_KeyRefValueStore extends com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase
 {
 	/** Key value store. */
-	private var fKeyValueStore : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
+	@:protected private var fKeyValueStore : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
 	
 	/** Constructs a key value store. */
-	@:overload public function new(keyRef : com.sun.org.apache.xerces.internal.impl.xs.identity.KeyRef, keyValueStore : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_KeyValueStore) : Void;
+	@:overload @:public public function new(keyRef : com.sun.org.apache.xerces.internal.impl.xs.identity.KeyRef, keyValueStore : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_KeyValueStore) : Void;
 	
-	@:overload override public function endDocumentFragment() : Void;
+	@:overload @:public override public function endDocumentFragment() : Void;
 	
 	/** End document. */
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	
 }
@@ -782,7 +782,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$ValueStoreCache') extern class XMLSchemaValidator_ValueStoreCache
 {
 	/** stores all global Values stores. */
-	private var fValueStores(default, null) : java.util.Vector<Dynamic>;
+	@:protected @:final private var fValueStores(default, null) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Values stores associated to specific identity constraints.
@@ -793,60 +793,60 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* descendant-or-self axes occur on recursively-defined
 	* elements.
 	*/
-	private var fIdentityConstraint2ValueStoreMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected @:final private var fIdentityConstraint2ValueStoreMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var fGlobalMapStack(default, null) : java.util.Stack<Dynamic>;
+	@:protected @:final private var fGlobalMapStack(default, null) : java.util.Stack<Dynamic>;
 	
-	private var fGlobalIDConstraintMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected @:final private var fGlobalIDConstraintMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Resets the identity constraint cache. */
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function startElement() : Void;
+	@:overload @:public public function startElement() : Void;
 	
 	/** endElement():  merges contents of fGlobalIDConstraintMap with the
 	* top of fGlobalMapStack into fGlobalIDConstraintMap.
 	*/
-	@:overload public function endElement() : Void;
+	@:overload @:public public function endElement() : Void;
 	
 	/**
 	* Initializes the value stores for the specified element
 	* declaration.
 	*/
-	@:overload public function initValueStoresFor(eDecl : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator) : Void;
+	@:overload @:public public function initValueStoresFor(eDecl : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator) : Void;
 	
 	/** Returns the value store associated to the specified IdentityConstraint. */
-	@:overload public function getValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
+	@:overload @:public public function getValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
 	
 	/** Returns the global value store associated to the specified IdentityConstraint. */
-	@:overload public function getGlobalValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
+	@:overload @:public public function getGlobalValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
 	
-	@:overload public function transplant(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
+	@:overload @:public public function transplant(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
 	
 	/** Check identity constraints. */
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$LocalIDKey') extern class XMLSchemaValidator_LocalIDKey
 {
-	public var fId : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:public public var fId : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
-	public var fDepth : Int;
+	@:public public var fDepth : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, depth : Int) : Void;
+	@:overload @:public public function new(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, depth : Int) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(localIDKey : Dynamic) : Bool;
+	@:overload @:public public function equals(localIDKey : Dynamic) : Bool;
 	
 	
 }
@@ -855,24 +855,24 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 */
 @:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$ShortVector') extern class XMLSchemaValidator_ShortVector
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/** Returns the length of the vector. */
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/** Adds the value to the vector. */
-	@:overload public function add(value : java.StdTypes.Int16) : Void;
+	@:overload @:public public function add(value : java.StdTypes.Int16) : Void;
 	
 	/** Returns the short value at the specified position in the vector. */
-	@:overload public function valueAt(position : Int) : java.StdTypes.Int16;
+	@:overload @:public public function valueAt(position : Int) : java.StdTypes.Int16;
 	
 	/** Clears the vector. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** Returns whether the short is contained in the vector. */
-	@:overload public function contains(value : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function contains(value : java.StdTypes.Int16) : Bool;
 	
 	
 }

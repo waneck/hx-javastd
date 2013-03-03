@@ -28,9 +28,9 @@ extern class MD2 extends sun.security.provider.DigestBase
 	/**
 	* Create a new MD2 digest. Called by the JCA framework
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

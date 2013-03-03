@@ -28,23 +28,23 @@ extern class FontUtilities
 	/**
 	* A collection of utility methods.
 	*/
-	public static var isSolaris : Bool;
+	@:public @:static public static var isSolaris : Bool;
 	
-	public static var isLinux : Bool;
+	@:public @:static public static var isLinux : Bool;
 	
-	public static var isMacOSX : Bool;
+	@:public @:static public static var isMacOSX : Bool;
 	
-	public static var isSolaris8 : Bool;
+	@:public @:static public static var isSolaris8 : Bool;
 	
-	public static var isSolaris9 : Bool;
+	@:public @:static public static var isSolaris9 : Bool;
 	
-	public static var isOpenSolaris : Bool;
+	@:public @:static public static var isOpenSolaris : Bool;
 	
-	public static var useT2K : Bool;
+	@:public @:static public static var useT2K : Bool;
 	
-	public static var isWindows : Bool;
+	@:public @:static public static var isWindows : Bool;
 	
-	public static var isOpenJDK : Bool;
+	@:public @:static public static var isOpenJDK : Bool;
 	
 	/**
 	* Referenced by code in the JDK which wants to test for the
@@ -55,7 +55,7 @@ extern class FontUtilities
 	* The value here indicates the lowest char code for which failing
 	* to invoke layout would prevent acceptable rendering.
 	*/
-	public static var MIN_LAYOUT_CHARCODE(default, null) : Int;
+	@:public @:static @:final public static var MIN_LAYOUT_CHARCODE(default, null) : Int;
 	
 	/**
 	* Referenced by code in the JDK which wants to test for the
@@ -64,7 +64,7 @@ extern class FontUtilities
 	* where the caller interprets 'layout' to mean any case where
 	* one 'char' (ie the java type char) does not map to one glyph
 	*/
-	public static var MAX_LAYOUT_CHARCODE(default, null) : Int;
+	@:public @:static @:final public static var MAX_LAYOUT_CHARCODE(default, null) : Int;
 	
 	/**
 	* Calls the private getFont2D() method in java.awt.Font objects.
@@ -73,7 +73,7 @@ extern class FontUtilities
 	*
 	* @return the Font2D object returned by Font.getFont2D()
 	*/
-	@:overload public static function getFont2D(font : java.awt.Font) : sun.font.Font2D;
+	@:overload @:public @:static public static function getFont2D(font : java.awt.Font) : sun.font.Font2D;
 	
 	/**
 	* If there is anything in the text which triggers a case
@@ -92,7 +92,7 @@ extern class FontUtilities
 	* the number of chars, and how to index through them, then it may
 	* need the option to have a 'true' return in such a case.
 	*/
-	@:overload public static function isComplexText(chs : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
+	@:overload @:public @:static public static function isComplexText(chs : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : Bool;
 	
 	/* This is almost the same as the method above, except it takes a
 	* char which means it may include undecoded surrogate pairs.
@@ -105,7 +105,7 @@ extern class FontUtilities
 	* needs to be run, they need to know if they can assume 1->1
 	* char->glyph mapping.
 	*/
-	@:overload public static function isNonSimpleChar(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isNonSimpleChar(ch : java.StdTypes.Char16) : Bool;
 	
 	/* If the character code falls into any of a number of unicode ranges
 	* where we know that simple left->right layout mapping chars to glyphs
@@ -125,23 +125,23 @@ extern class FontUtilities
 	* can handle this case and doesn't need to be told such a case is
 	* 'complex'.
 	*/
-	@:overload public static function isComplexCharCode(code : Int) : Bool;
+	@:overload @:public @:static public static function isComplexCharCode(code : Int) : Bool;
 	
-	@:overload public static function getLogger() : sun.util.logging.PlatformLogger;
+	@:overload @:public @:static public static function getLogger() : sun.util.logging.PlatformLogger;
 	
-	@:overload public static function isLogging() : Bool;
+	@:overload @:public @:static public static function isLogging() : Bool;
 	
-	@:overload public static function debugFonts() : Bool;
+	@:overload @:public @:static public static function debugFonts() : Bool;
 	
 	/* Revise the implementation to in fact mean "font is a composite font.
 	* This ensures that Swing components will always benefit from the
 	* fall back fonts
 	*/
-	@:overload public static function fontSupportsDefaultEncoding(font : java.awt.Font) : Bool;
+	@:overload @:public @:static public static function fontSupportsDefaultEncoding(font : java.awt.Font) : Bool;
 	
-	@:overload public static function getCompositeFontUIResource(font : java.awt.Font) : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getCompositeFontUIResource(font : java.awt.Font) : javax.swing.plaf.FontUIResource;
 	
-	@:overload public static function mapFcName(name : String) : String;
+	@:overload @:public @:static public static function mapFcName(name : String) : String;
 	
 	/* This is called by Swing passing in a fontconfig family name
 	* such as "sans". In return Swing gets a FontUIResource instance
@@ -160,7 +160,7 @@ extern class FontUtilities
 	* such as whether we should prefer embedded bitmaps over antialiasing.
 	* There's no way to express that via a Font at present.
 	*/
-	@:overload public static function getFontConfigFUIR(fcFamily : String, style : Int, size : Int) : javax.swing.plaf.FontUIResource;
+	@:overload @:public @:static public static function getFontConfigFUIR(fcFamily : String, style : Int, size : Int) : javax.swing.plaf.FontUIResource;
 	
 	/**
 	* Used by windows printing to assess if a font is likely to
@@ -169,7 +169,7 @@ extern class FontUtilities
 	* but do have a GSUB table, then they are probably older
 	* fonts GDI handles differently.
 	*/
-	@:overload public static function textLayoutIsCompatible(font : java.awt.Font) : Bool;
+	@:overload @:public @:static public static function textLayoutIsCompatible(font : java.awt.Font) : Bool;
 	
 	
 }

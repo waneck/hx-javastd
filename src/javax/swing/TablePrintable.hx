@@ -39,7 +39,7 @@ package javax.swing;
 	*                       be used in printing a footer, or null for none
 	* @throws IllegalArgumentException if passed an invalid print mode
 	*/
-	@:overload public function new(table : javax.swing.JTable, printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : Void;
+	@:overload @:public public function new(table : javax.swing.JTable, printMode : javax.swing.JTable.JTable_PrintMode, headerFormat : java.text.MessageFormat, footerFormat : java.text.MessageFormat) : Void;
 	
 	/**
 	* Prints the specified page of the table into the given {@link Graphics}
@@ -52,7 +52,7 @@ package javax.swing;
 	*          NO_SUCH_PAGE if a non-existent page index is specified
 	* @throws  PrinterException if an error causes printing to be aborted
 	*/
-	@:overload public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
 	
 }

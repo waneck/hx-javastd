@@ -37,33 +37,33 @@ extern class SDDocumentImpl extends com.sun.xml.internal.ws.api.server.SDDocumen
 	* @return null
 	*      Always non-null.
 	*/
-	@:overload public static function create(src : com.sun.xml.internal.ws.api.server.SDDocumentSource, serviceName : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.server.SDDocumentImpl;
+	@:overload @:public @:static public static function create(src : com.sun.xml.internal.ws.api.server.SDDocumentSource, serviceName : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.server.SDDocumentImpl;
 	
-	@:overload private function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource) : Void;
+	@:overload @:protected private function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource) : Void;
 	
-	@:overload private function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, imports : java.util.Set<String>) : Void;
+	@:overload @:protected private function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, imports : java.util.Set<String>) : Void;
 	
-	@:overload public function getRootName() : javax.xml.namespace.QName;
+	@:overload @:public public function getRootName() : javax.xml.namespace.QName;
 	
-	@:overload public function isWSDL() : Bool;
+	@:overload @:public public function isWSDL() : Bool;
 	
-	@:overload public function isSchema() : Bool;
+	@:overload @:public public function isSchema() : Bool;
 	
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
-	@:overload override public function read(xif : javax.xml.stream.XMLInputFactory) : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function read(xif : javax.xml.stream.XMLInputFactory) : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function read() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function read() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function getSystemId() : java.net.URL;
+	@:overload @:public override public function getSystemId() : java.net.URL;
 	
-	@:overload public function getImports() : java.util.Set<String>;
+	@:overload @:public public function getImports() : java.util.Set<String>;
 	
-	@:overload public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(os : java.io.OutputStream) : Void;
 	
-	@:overload public function writeTo(portAddressResolver : com.sun.xml.internal.ws.api.server.PortAddressResolver, resolver : com.sun.xml.internal.ws.api.server.DocumentAddressResolver, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(portAddressResolver : com.sun.xml.internal.ws.api.server.PortAddressResolver, resolver : com.sun.xml.internal.ws.api.server.DocumentAddressResolver, os : java.io.OutputStream) : Void;
 	
-	@:overload public function writeTo(portAddressResolver : com.sun.xml.internal.ws.api.server.PortAddressResolver, resolver : com.sun.xml.internal.ws.api.server.DocumentAddressResolver, out : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeTo(portAddressResolver : com.sun.xml.internal.ws.api.server.PortAddressResolver, resolver : com.sun.xml.internal.ws.api.server.DocumentAddressResolver, out : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }
@@ -74,33 +74,33 @@ extern class SDDocumentImpl extends com.sun.xml.internal.ws.api.server.SDDocumen
 */
 @:native('com$sun$xml$internal$ws$server$SDDocumentImpl$SchemaImpl') @:internal extern class SDDocumentImpl_SchemaImpl extends com.sun.xml.internal.ws.server.SDDocumentImpl implements com.sun.xml.internal.ws.api.server.SDDocument.SDDocument_Schema
 {
-	@:overload public function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, targetNamespace : String, imports : java.util.Set<String>) : Void;
+	@:overload @:public public function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, targetNamespace : String, imports : java.util.Set<String>) : Void;
 	
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
-	@:overload override public function isSchema() : Bool;
+	@:overload @:public override public function isSchema() : Bool;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$SDDocumentImpl$WSDLImpl') @:internal extern class SDDocumentImpl_WSDLImpl extends com.sun.xml.internal.ws.server.SDDocumentImpl implements com.sun.xml.internal.ws.api.server.SDDocument.SDDocument_WSDL
 {
-	@:overload public function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, targetNamespace : String, hasPortType : Bool, hasService : Bool, imports : java.util.Set<String>, allServices : java.util.Set<javax.xml.namespace.QName>) : Void;
+	@:overload @:public public function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, targetNamespace : String, hasPortType : Bool, hasService : Bool, imports : java.util.Set<String>, allServices : java.util.Set<javax.xml.namespace.QName>) : Void;
 	
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
-	@:overload public function hasPortType() : Bool;
+	@:overload @:public public function hasPortType() : Bool;
 	
-	@:overload public function hasService() : Bool;
+	@:overload @:public public function hasService() : Bool;
 	
-	@:overload public function getAllServices() : java.util.Set<javax.xml.namespace.QName>;
+	@:overload @:public public function getAllServices() : java.util.Set<javax.xml.namespace.QName>;
 	
-	@:overload override public function isWSDL() : Bool;
+	@:overload @:public override public function isWSDL() : Bool;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$SDDocumentImpl$DocumentLocationResolverImpl') @:internal extern class SDDocumentImpl_DocumentLocationResolverImpl implements com.sun.xml.internal.ws.wsdl.writer.DocumentLocationResolver
 {
-	@:overload public function getLocationFor(namespaceURI : String, systemId : String) : String;
+	@:overload @:public public function getLocationFor(namespaceURI : String, systemId : String) : String;
 	
 	
 }

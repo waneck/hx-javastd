@@ -34,15 +34,15 @@ extern class DOMExcC14NMethod extends org.jcp.xml.dsig.internal.dom.ApacheCanoni
 	*
 	* @author Sean Mullan
 	*/
-	@:overload public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload @:public override public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
-	@:overload public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public override public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload @:public override public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload public function getParamsNSURI() : String;
+	@:overload @:public public function getParamsNSURI() : String;
 	
-	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see #addPoint(int, int)
 	* @since 1.0
 	*/
-	@:require(java0) public var npoints : Int;
+	@:require(java0) @:public public var npoints : Int;
 	
 	/**
 	* The array of X coordinates.  The number of elements in
@@ -50,7 +50,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see #addPoint(int, int)
 	* @since 1.0
 	*/
-	@:require(java0) public var xpoints : java.NativeArray<Int>;
+	@:require(java0) @:public public var xpoints : java.NativeArray<Int>;
 	
 	/**
 	* The array of Y coordinates.  The number of elements in
@@ -64,7 +64,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see #addPoint(int, int)
 	* @since 1.0
 	*/
-	@:require(java0) public var ypoints : java.NativeArray<Int>;
+	@:require(java0) @:public public var ypoints : java.NativeArray<Int>;
 	
 	/**
 	* The bounds of this {@code Polygon}.
@@ -75,13 +75,13 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see #getBounds()
 	* @since 1.0
 	*/
-	@:require(java0) private var bounds : java.awt.Rectangle;
+	@:require(java0) @:protected private var bounds : java.awt.Rectangle;
 	
 	/**
 	* Creates an empty polygon.
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function new() : Void;
+	@:require(java0) @:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs and initializes a <code>Polygon</code> from the specified
@@ -99,7 +99,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	*             <code>ypoints</code> is <code>null</code>.
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function new(xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
+	@:require(java0) @:overload @:public public function new(xpoints : java.NativeArray<Int>, ypoints : java.NativeArray<Int>, npoints : Int) : Void;
 	
 	/**
 	* Resets this <code>Polygon</code> object to an empty polygon.
@@ -118,7 +118,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see         java.awt.Polygon#invalidate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function reset() : Void;
+	@:require(java4) @:overload @:public public function reset() : Void;
 	
 	/**
 	* Invalidates or flushes any internally-cached data that depends
@@ -132,7 +132,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see         java.awt.Polygon#getBounds
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function invalidate() : Void;
+	@:require(java4) @:overload @:public public function invalidate() : Void;
 	
 	/**
 	* Translates the vertices of the <code>Polygon</code> by
@@ -142,7 +142,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @param deltaY the amount to translate along the Y axis
 	* @since 1.1
 	*/
-	@:require(java1) @:overload public function translate(deltaX : Int, deltaY : Int) : Void;
+	@:require(java1) @:overload @:public public function translate(deltaX : Int, deltaY : Int) : Void;
 	
 	/**
 	* Appends the specified coordinates to this <code>Polygon</code>.
@@ -157,7 +157,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see         java.awt.Polygon#contains
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function addPoint(x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:public public function addPoint(x : Int, y : Int) : Void;
 	
 	/**
 	* Gets the bounding box of this <code>Polygon</code>.
@@ -168,7 +168,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* <code>Polygon</code>.
 	* @since 1.1
 	*/
-	@:require(java1) @:overload public function getBounds() : java.awt.Rectangle;
+	@:require(java1) @:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns the bounds of this <code>Polygon</code>.
@@ -177,7 +177,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* replaced by <code>getBounds()</code>.
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function getBoundingBox() : java.awt.Rectangle;
+	@:require(java0) @:overload @:public public function getBoundingBox() : java.awt.Rectangle;
 	
 	/**
 	* Determines whether the specified {@link Point} is inside this
@@ -188,7 +188,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see #contains(double, double)
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function contains(p : java.awt.Point) : Bool;
+	@:require(java0) @:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Determines whether the specified coordinates are inside this
@@ -202,7 +202,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see #contains(double, double)
 	* @since 1.1
 	*/
-	@:require(java1) @:overload public function contains(x : Int, y : Int) : Bool;
+	@:require(java1) @:overload @:public public function contains(x : Int, y : Int) : Bool;
 	
 	/**
 	* Determines whether the specified coordinates are contained in this
@@ -217,49 +217,49 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* replaced by <code>contains(int, int)</code>.
 	* @since 1.0
 	*/
-	@:require(java0) @:overload public function inside(x : Int, y : Int) : Bool;
+	@:require(java0) @:overload @:public public function inside(x : Int, y : Int) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(p : java.awt.geom.Point2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(p : java.awt.geom.Point2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function intersects(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function contains(r : java.awt.geom.Rectangle2D) : Bool;
+	@:require(java2) @:overload @:public public function contains(r : java.awt.geom.Rectangle2D) : Bool;
 	
 	/**
 	* Returns an iterator object that iterates along the boundary of this
@@ -274,7 +274,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	*          geometry of this <code>Polygon</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns an iterator object that iterates along the boundary of
@@ -297,13 +297,13 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	*          <code>Shape</code> object's geometry.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform, flatness : Float) : java.awt.geom.PathIterator;
 	
 	
 }
 @:native('java$awt$Polygon$PolygonPathIterator') @:internal extern class Polygon_PolygonPathIterator implements java.awt.geom.PathIterator
 {
-	@:overload public function new(pg : java.awt.Polygon, at : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(pg : java.awt.Polygon, at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns the winding rule for determining the interior of the
@@ -311,21 +311,21 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @return an integer representing the current winding rule.
 	* @see PathIterator#WIND_NON_ZERO
 	*/
-	@:overload public function getWindingRule() : Int;
+	@:overload @:public public function getWindingRule() : Int;
 	
 	/**
 	* Tests if there are more points to read.
 	* @return <code>true</code> if there are more points to read;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function isDone() : Bool;
+	@:overload @:public public function isDone() : Bool;
 	
 	/**
 	* Moves the iterator forwards, along the primary direction of
 	* traversal, to the next segment of the path when there are
 	* more points in that direction.
 	*/
-	@:overload public function next() : Void;
+	@:overload @:public public function next() : Void;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -345,7 +345,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see PathIterator#SEG_LINETO
 	* @see PathIterator#SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -366,7 +366,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 	* @see PathIterator#SEG_LINETO
 	* @see PathIterator#SEG_CLOSE
 	*/
-	@:overload public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class GSSToken
 	* is assumed that the array will be large enough to hold the 4 bytes of
 	* the integer.
 	*/
-	@:overload @:final public static function writeLittleEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static @:final public static function writeLittleEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Copies an integer value to a byte array in little endian form.
@@ -46,11 +46,11 @@ extern class GSSToken
 	* the integer.
 	* @param pos the position at which to start writing
 	*/
-	@:overload @:final public static function writeLittleEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Void;
+	@:overload @:public @:static @:final public static function writeLittleEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Void;
 	
-	@:overload @:final public static function writeBigEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static @:final public static function writeBigEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final public static function writeBigEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Void;
+	@:overload @:public @:static @:final public static function writeBigEndian(value : Int, array : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Void;
 	
 	/**
 	* Reads an integer value from a byte array in little endian form. This
@@ -62,9 +62,9 @@ extern class GSSToken
 	* @size the number of bytes to read from the array.
 	* @return the integer value
 	*/
-	@:overload @:final public static function readLittleEndian(data : java.NativeArray<java.StdTypes.Int8>, pos : Int, size : Int) : Int;
+	@:overload @:public @:static @:final public static function readLittleEndian(data : java.NativeArray<java.StdTypes.Int8>, pos : Int, size : Int) : Int;
 	
-	@:overload @:final public static function readBigEndian(data : java.NativeArray<java.StdTypes.Int8>, pos : Int, size : Int) : Int;
+	@:overload @:public @:static @:final public static function readBigEndian(data : java.NativeArray<java.StdTypes.Int8>, pos : Int, size : Int) : Int;
 	
 	/**
 	* Writes a two byte integer value to a OutputStream.
@@ -73,7 +73,7 @@ extern class GSSToken
 	* @param os the OutputStream to write to
 	* @throws IOException if an error occurs while writing to the OutputStream
 	*/
-	@:overload @:final public static function writeInt(val : Int, os : java.io.OutputStream) : Void;
+	@:overload @:public @:static @:final public static function writeInt(val : Int, os : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes a two byte integer value to a byte array.
@@ -82,7 +82,7 @@ extern class GSSToken
 	* @param dest the byte array to write to
 	* @param pos the offset to start writing to
 	*/
-	@:overload @:final public static function writeInt(val : Int, dest : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Int;
+	@:overload @:public @:static @:final public static function writeInt(val : Int, dest : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Int;
 	
 	/**
 	* Reads a two byte integer value from an InputStream.
@@ -92,7 +92,7 @@ extern class GSSToken
 	* @throws IOException if some errors occurs while reading the integer
 	* bytes.
 	*/
-	@:overload @:final public static function readInt(is : java.io.InputStream) : Int;
+	@:overload @:public @:static @:final public static function readInt(is : java.io.InputStream) : Int;
 	
 	/**
 	* Reads a two byte integer value from a byte array.
@@ -101,7 +101,7 @@ extern class GSSToken
 	* @param pos the offset to start reading from
 	* @returns the integer value
 	*/
-	@:overload @:final public static function readInt(src : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Int;
+	@:overload @:public @:static @:final public static function readInt(src : java.NativeArray<java.StdTypes.Int8>, pos : Int) : Int;
 	
 	/**
 	* Blocks till the required number of bytes have been read from the
@@ -113,7 +113,7 @@ extern class GSSToken
 	* read.
 	* @throws IOException is an error occurs while reading
 	*/
-	@:overload @:final public static function readFully(is : java.io.InputStream, buffer : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static @:final public static function readFully(is : java.io.InputStream, buffer : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Blocks till the required number of bytes have been read from the
@@ -127,15 +127,15 @@ extern class GSSToken
 	* read.
 	* @throws IOException is an error occurs while reading
 	*/
-	@:overload @:final public static function readFully(is : java.io.InputStream, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public @:static @:final public static function readFully(is : java.io.InputStream, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload @:final public static function debug(str : String) : Void;
+	@:overload @:public @:static @:final public static function debug(str : String) : Void;
 	
-	@:overload @:final public static function getHexBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static @:final public static function getHexBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : String;
 	
-	@:overload @:final public static function getHexBytes(bytes : java.NativeArray<java.StdTypes.Int8>, len : Int) : String;
+	@:overload @:public @:static @:final public static function getHexBytes(bytes : java.NativeArray<java.StdTypes.Int8>, len : Int) : String;
 	
-	@:overload @:final public static function getHexBytes(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int) : String;
+	@:overload @:public @:static @:final public static function getHexBytes(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, len : Int) : String;
 	
 	
 }

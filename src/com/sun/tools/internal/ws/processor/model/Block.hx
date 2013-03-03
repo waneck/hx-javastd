@@ -29,27 +29,27 @@ extern class Block extends com.sun.tools.internal.ws.processor.model.ModelObject
 	*
 	* @author WS Development Team
 	*/
-	public static var UNBOUND(default, null) : Int;
+	@:public @:static @:final public static var UNBOUND(default, null) : Int;
 	
-	public static var BODY(default, null) : Int;
+	@:public @:static @:final public static var BODY(default, null) : Int;
 	
-	public static var HEADER(default, null) : Int;
+	@:public @:static @:final public static var HEADER(default, null) : Int;
 	
-	public static var ATTACHMENT(default, null) : Int;
+	@:public @:static @:final public static var ATTACHMENT(default, null) : Int;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.AbstractType, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.AbstractType, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.AbstractType;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.AbstractType;
 	
-	@:overload public function setType(type : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
+	@:overload @:public public function setType(type : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
 	
-	@:overload public function getLocation() : Int;
+	@:overload @:public public function getLocation() : Int;
 	
-	@:overload public function setLocation(i : Int) : Void;
+	@:overload @:public public function setLocation(i : Int) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ package sun.nio.ch;
 */
 extern interface Interruptible
 {
-	@:overload public function interrupt(t : java.lang.Thread) : Void;
+	@:overload @:public public function interrupt(t : java.lang.Thread) : Void;
 	
 	
 }

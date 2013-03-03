@@ -42,13 +42,13 @@ extern class XMLEventFactory
 	* @see javax.xml.stream.events.DTD
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function new() : Void;
+	@:require(java6) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Create a new instance of the factory
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newInstance() : javax.xml.stream.XMLEventFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -75,7 +75,7 @@ extern class XMLEventFactory
 	*
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory() : javax.xml.stream.XMLEventFactory;
+	@:overload @:public @:static public static function newFactory() : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* Create a new instance of the factory
@@ -92,7 +92,7 @@ extern class XMLEventFactory
 	*              #newFactory(java.lang.String, java.lang.ClassLoader)}
 	*              method defines no changes in behavior.
 	*/
-	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLEventFactory;
+	@:overload @:public @:static public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -109,7 +109,7 @@ extern class XMLEventFactory
 	* @return the factory implementation
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLEventFactory;
+	@:overload @:public @:static public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* This method allows setting of the Location on each event that
@@ -118,7 +118,7 @@ extern class XMLEventFactory
 	* information set the location to null.
 	* @param location the location to set on each event created
 	*/
-	@:overload @:abstract public function setLocation(location : javax.xml.stream.Location) : Void;
+	@:overload @:public @:abstract public function setLocation(location : javax.xml.stream.Location) : Void;
 	
 	/**
 	* Create a new Attribute
@@ -128,7 +128,7 @@ extern class XMLEventFactory
 	* @param value the attribute value to set, may not be null
 	* @return the Attribute with specified values
 	*/
-	@:overload @:abstract public function createAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : javax.xml.stream.events.Attribute;
+	@:overload @:public @:abstract public function createAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : javax.xml.stream.events.Attribute;
 	
 	/**
 	* Create a new Attribute
@@ -136,7 +136,7 @@ extern class XMLEventFactory
 	* @param value the attribute value to set, may not be null
 	* @return the Attribute with specified values
 	*/
-	@:overload @:abstract public function createAttribute(localName : String, value : String) : javax.xml.stream.events.Attribute;
+	@:overload @:public @:abstract public function createAttribute(localName : String, value : String) : javax.xml.stream.events.Attribute;
 	
 	/**
 	* Create a new Attribute
@@ -144,14 +144,14 @@ extern class XMLEventFactory
 	* @param value the attribute value to set, may not be null
 	* @return the Attribute with specified values
 	*/
-	@:overload @:abstract public function createAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.stream.events.Attribute;
+	@:overload @:public @:abstract public function createAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.stream.events.Attribute;
 	
 	/**
 	* Create a new default Namespace
 	* @param namespaceURI the default namespace uri
 	* @return the Namespace with the specified value
 	*/
-	@:overload @:abstract public function createNamespace(namespaceURI : String) : javax.xml.stream.events.Namespace;
+	@:overload @:public @:abstract public function createNamespace(namespaceURI : String) : javax.xml.stream.events.Namespace;
 	
 	/**
 	* Create a new Namespace
@@ -159,7 +159,7 @@ extern class XMLEventFactory
 	* @param namespaceUri the attribute value is set to this value, may not be null
 	* @return the Namespace with the specified values
 	*/
-	@:overload @:abstract public function createNamespace(prefix : String, namespaceUri : String) : javax.xml.stream.events.Namespace;
+	@:overload @:public @:abstract public function createNamespace(prefix : String, namespaceUri : String) : javax.xml.stream.events.Namespace;
 	
 	/**
 	* Create a new StartElement.  Namespaces can be added to this StartElement
@@ -174,7 +174,7 @@ extern class XMLEventFactory
 	* implement Namespace to add to the new StartElement, may be null
 	* @return an instance of the requested StartElement
 	*/
-	@:overload @:abstract public function createStartElement(name : javax.xml.namespace.QName, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
+	@:overload @:public @:abstract public function createStartElement(name : javax.xml.namespace.QName, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
 	
 	/**
 	* Create a new StartElement.  This defaults the NamespaceContext to
@@ -186,7 +186,7 @@ extern class XMLEventFactory
 	* @param prefix the prefix of the QName of the new StartElement
 	* @return an instance of the requested StartElement
 	*/
-	@:overload @:abstract public function createStartElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.StartElement;
+	@:overload @:public @:abstract public function createStartElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.StartElement;
 	
 	/**
 	* Create a new StartElement.  Namespaces can be added to this StartElement
@@ -203,7 +203,7 @@ extern class XMLEventFactory
 	* Namespace to add to the new StartElement
 	* @return an instance of the requested StartElement
 	*/
-	@:overload @:abstract public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
+	@:overload @:public @:abstract public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
 	
 	/**
 	* Create a new StartElement.  Namespaces can be added to this StartElement
@@ -221,7 +221,7 @@ extern class XMLEventFactory
 	* @param context the namespace context of this element
 	* @return an instance of the requested StartElement
 	*/
-	@:overload @:abstract public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>, context : javax.xml.namespace.NamespaceContext) : javax.xml.stream.events.StartElement;
+	@:overload @:public @:abstract public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>, context : javax.xml.namespace.NamespaceContext) : javax.xml.stream.events.StartElement;
 	
 	/**
 	* Create a new EndElement
@@ -230,7 +230,7 @@ extern class XMLEventFactory
 	* implement Namespace that have gone out of scope, may be null
 	* @return an instance of the requested EndElement
 	*/
-	@:overload @:abstract public function createEndElement(name : javax.xml.namespace.QName, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
+	@:overload @:public @:abstract public function createEndElement(name : javax.xml.namespace.QName, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
 	
 	/**
 	* Create a new EndElement
@@ -239,7 +239,7 @@ extern class XMLEventFactory
 	* @param prefix the prefix of the QName of the new StartElement
 	* @return an instance of the requested EndElement
 	*/
-	@:overload @:abstract public function createEndElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.EndElement;
+	@:overload @:public @:abstract public function createEndElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.EndElement;
 	
 	/**
 	* Create a new EndElement
@@ -250,7 +250,7 @@ extern class XMLEventFactory
 	* Namespace that have gone out of scope, may be null
 	* @return an instance of the requested EndElement
 	*/
-	@:overload @:abstract public function createEndElement(prefix : String, namespaceUri : String, localName : String, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
+	@:overload @:public @:abstract public function createEndElement(prefix : String, namespaceUri : String, localName : String, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
 	
 	/**
 	* Create a Characters event, this method does not check if the content
@@ -258,34 +258,34 @@ extern class XMLEventFactory
 	* @param content the string to create
 	* @return a Characters event
 	*/
-	@:overload @:abstract public function createCharacters(content : String) : javax.xml.stream.events.Characters;
+	@:overload @:public @:abstract public function createCharacters(content : String) : javax.xml.stream.events.Characters;
 	
 	/**
 	* Create a Characters event with the CData flag set to true
 	* @param content the string to create
 	* @return a Characters event
 	*/
-	@:overload @:abstract public function createCData(content : String) : javax.xml.stream.events.Characters;
+	@:overload @:public @:abstract public function createCData(content : String) : javax.xml.stream.events.Characters;
 	
 	/**
 	* Create a Characters event with the isSpace flag set to true
 	* @param content the content of the space to create
 	* @return a Characters event
 	*/
-	@:overload @:abstract public function createSpace(content : String) : javax.xml.stream.events.Characters;
+	@:overload @:public @:abstract public function createSpace(content : String) : javax.xml.stream.events.Characters;
 	
 	/**
 	* Create an ignorable space
 	* @param content the space to create
 	* @return a Characters event
 	*/
-	@:overload @:abstract public function createIgnorableSpace(content : String) : javax.xml.stream.events.Characters;
+	@:overload @:public @:abstract public function createIgnorableSpace(content : String) : javax.xml.stream.events.Characters;
 	
 	/**
 	* Creates a new instance of a StartDocument event
 	* @return a StartDocument event
 	*/
-	@:overload @:abstract public function createStartDocument() : javax.xml.stream.events.StartDocument;
+	@:overload @:public @:abstract public function createStartDocument() : javax.xml.stream.events.StartDocument;
 	
 	/**
 	* Creates a new instance of a StartDocument event
@@ -295,7 +295,7 @@ extern class XMLEventFactory
 	* @param standalone the status of standalone may be set to "true" or "false"
 	* @return a StartDocument event
 	*/
-	@:overload @:abstract public function createStartDocument(encoding : String, version : String, standalone : Bool) : javax.xml.stream.events.StartDocument;
+	@:overload @:public @:abstract public function createStartDocument(encoding : String, version : String, standalone : Bool) : javax.xml.stream.events.StartDocument;
 	
 	/**
 	* Creates a new instance of a StartDocument event
@@ -304,7 +304,7 @@ extern class XMLEventFactory
 	* @param version the XML version
 	* @return a StartDocument event
 	*/
-	@:overload @:abstract public function createStartDocument(encoding : String, version : String) : javax.xml.stream.events.StartDocument;
+	@:overload @:public @:abstract public function createStartDocument(encoding : String, version : String) : javax.xml.stream.events.StartDocument;
 	
 	/**
 	* Creates a new instance of a StartDocument event
@@ -312,13 +312,13 @@ extern class XMLEventFactory
 	* @param encoding the encoding style
 	* @return a StartDocument event
 	*/
-	@:overload @:abstract public function createStartDocument(encoding : String) : javax.xml.stream.events.StartDocument;
+	@:overload @:public @:abstract public function createStartDocument(encoding : String) : javax.xml.stream.events.StartDocument;
 	
 	/**
 	* Creates a new instance of an EndDocument event
 	* @return an EndDocument event
 	*/
-	@:overload @:abstract public function createEndDocument() : javax.xml.stream.events.EndDocument;
+	@:overload @:public @:abstract public function createEndDocument() : javax.xml.stream.events.EndDocument;
 	
 	/** Creates a new instance of a EntityReference event
 	*
@@ -326,14 +326,14 @@ extern class XMLEventFactory
 	* @param declaration the declaration for the event
 	* @return an EntityReference event
 	*/
-	@:overload @:abstract public function createEntityReference(name : String, declaration : javax.xml.stream.events.EntityDeclaration) : javax.xml.stream.events.EntityReference;
+	@:overload @:public @:abstract public function createEntityReference(name : String, declaration : javax.xml.stream.events.EntityDeclaration) : javax.xml.stream.events.EntityReference;
 	
 	/**
 	* Create a comment
 	* @param text The text of the comment
 	* a Comment event
 	*/
-	@:overload @:abstract public function createComment(text : String) : javax.xml.stream.events.Comment;
+	@:overload @:public @:abstract public function createComment(text : String) : javax.xml.stream.events.Comment;
 	
 	/**
 	* Create a processing instruction
@@ -341,7 +341,7 @@ extern class XMLEventFactory
 	* @param data The text of the processing instruction
 	* @return a ProcessingInstruction event
 	*/
-	@:overload @:abstract public function createProcessingInstruction(target : String, data : String) : javax.xml.stream.events.ProcessingInstruction;
+	@:overload @:public @:abstract public function createProcessingInstruction(target : String, data : String) : javax.xml.stream.events.ProcessingInstruction;
 	
 	/**
 	* Create a document type definition event
@@ -350,7 +350,7 @@ extern class XMLEventFactory
 	* @param dtd the text of the document type definition
 	* @return a DTD event
 	*/
-	@:overload @:abstract public function createDTD(dtd : String) : javax.xml.stream.events.DTD;
+	@:overload @:public @:abstract public function createDTD(dtd : String) : javax.xml.stream.events.DTD;
 	
 	
 }

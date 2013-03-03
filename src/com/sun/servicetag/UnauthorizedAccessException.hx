@@ -35,7 +35,7 @@ extern class UnauthorizedAccessException extends java.lang.RuntimeException
 	* Constructs an <code>UnauthorizedAccessException</code> object
 	* without detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>UnauthorizedAccessException</code> object
@@ -43,7 +43,7 @@ extern class UnauthorizedAccessException extends java.lang.RuntimeException
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

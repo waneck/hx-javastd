@@ -30,19 +30,19 @@ package com.sun.media.sound;
 */
 extern interface SoftAudioProcessor
 {
-	@:overload public function globalParameterControlChange(slothpath : java.NativeArray<Int>, param : haxe.Int64, value : haxe.Int64) : Void;
+	@:overload @:public public function globalParameterControlChange(slothpath : java.NativeArray<Int>, param : haxe.Int64, value : haxe.Int64) : Void;
 	
-	@:overload public function init(samplerate : Single, controlrate : Single) : Void;
+	@:overload @:public public function init(samplerate : Single, controlrate : Single) : Void;
 	
-	@:overload public function setInput(pin : Int, input : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function setInput(pin : Int, input : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function setOutput(pin : Int, output : com.sun.media.sound.SoftAudioBuffer) : Void;
+	@:overload @:public public function setOutput(pin : Int, output : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
-	@:overload public function setMixMode(mix : Bool) : Void;
+	@:overload @:public public function setMixMode(mix : Bool) : Void;
 	
-	@:overload public function processAudio() : Void;
+	@:overload @:public public function processAudio() : Void;
 	
-	@:overload public function processControlLogic() : Void;
+	@:overload @:public public function processControlLogic() : Void;
 	
 	
 }

@@ -36,79 +36,79 @@ package com.sun.tools.jdi;
 	/*
 	* Override superclass back to default equality
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function createClassPrepareRequest() : com.sun.jdi.request.ClassPrepareRequest;
+	@:overload @:public public function createClassPrepareRequest() : com.sun.jdi.request.ClassPrepareRequest;
 	
-	@:overload public function createClassUnloadRequest() : com.sun.jdi.request.ClassUnloadRequest;
+	@:overload @:public public function createClassUnloadRequest() : com.sun.jdi.request.ClassUnloadRequest;
 	
-	@:overload public function createExceptionRequest(refType : com.sun.jdi.ReferenceType, notifyCaught : Bool, notifyUncaught : Bool) : com.sun.jdi.request.ExceptionRequest;
+	@:overload @:public public function createExceptionRequest(refType : com.sun.jdi.ReferenceType, notifyCaught : Bool, notifyUncaught : Bool) : com.sun.jdi.request.ExceptionRequest;
 	
-	@:overload public function createStepRequest(thread : com.sun.jdi.ThreadReference, size : Int, depth : Int) : com.sun.jdi.request.StepRequest;
+	@:overload @:public public function createStepRequest(thread : com.sun.jdi.ThreadReference, size : Int, depth : Int) : com.sun.jdi.request.StepRequest;
 	
-	@:overload public function createThreadDeathRequest() : com.sun.jdi.request.ThreadDeathRequest;
+	@:overload @:public public function createThreadDeathRequest() : com.sun.jdi.request.ThreadDeathRequest;
 	
-	@:overload public function createThreadStartRequest() : com.sun.jdi.request.ThreadStartRequest;
+	@:overload @:public public function createThreadStartRequest() : com.sun.jdi.request.ThreadStartRequest;
 	
-	@:overload public function createMethodEntryRequest() : com.sun.jdi.request.MethodEntryRequest;
+	@:overload @:public public function createMethodEntryRequest() : com.sun.jdi.request.MethodEntryRequest;
 	
-	@:overload public function createMethodExitRequest() : com.sun.jdi.request.MethodExitRequest;
+	@:overload @:public public function createMethodExitRequest() : com.sun.jdi.request.MethodExitRequest;
 	
-	@:overload public function createMonitorContendedEnterRequest() : com.sun.jdi.request.MonitorContendedEnterRequest;
+	@:overload @:public public function createMonitorContendedEnterRequest() : com.sun.jdi.request.MonitorContendedEnterRequest;
 	
-	@:overload public function createMonitorContendedEnteredRequest() : com.sun.jdi.request.MonitorContendedEnteredRequest;
+	@:overload @:public public function createMonitorContendedEnteredRequest() : com.sun.jdi.request.MonitorContendedEnteredRequest;
 	
-	@:overload public function createMonitorWaitRequest() : com.sun.jdi.request.MonitorWaitRequest;
+	@:overload @:public public function createMonitorWaitRequest() : com.sun.jdi.request.MonitorWaitRequest;
 	
-	@:overload public function createMonitorWaitedRequest() : com.sun.jdi.request.MonitorWaitedRequest;
+	@:overload @:public public function createMonitorWaitedRequest() : com.sun.jdi.request.MonitorWaitedRequest;
 	
-	@:overload public function createBreakpointRequest(location : com.sun.jdi.Location) : com.sun.jdi.request.BreakpointRequest;
+	@:overload @:public public function createBreakpointRequest(location : com.sun.jdi.Location) : com.sun.jdi.request.BreakpointRequest;
 	
-	@:overload public function createAccessWatchpointRequest(field : com.sun.jdi.Field) : com.sun.jdi.request.AccessWatchpointRequest;
+	@:overload @:public public function createAccessWatchpointRequest(field : com.sun.jdi.Field) : com.sun.jdi.request.AccessWatchpointRequest;
 	
-	@:overload public function createModificationWatchpointRequest(field : com.sun.jdi.Field) : com.sun.jdi.request.ModificationWatchpointRequest;
+	@:overload @:public public function createModificationWatchpointRequest(field : com.sun.jdi.Field) : com.sun.jdi.request.ModificationWatchpointRequest;
 	
-	@:overload public function createVMDeathRequest() : com.sun.jdi.request.VMDeathRequest;
+	@:overload @:public public function createVMDeathRequest() : com.sun.jdi.request.VMDeathRequest;
 	
-	@:overload public function deleteEventRequest(eventRequest : com.sun.jdi.request.EventRequest) : Void;
+	@:overload @:public public function deleteEventRequest(eventRequest : com.sun.jdi.request.EventRequest) : Void;
 	
-	@:overload public function deleteEventRequests(eventRequests : java.util.List<com.sun.jdi.request.EventRequest>) : Void;
+	@:overload @:public public function deleteEventRequests(eventRequests : java.util.List<com.sun.jdi.request.EventRequest>) : Void;
 	
-	@:overload public function deleteAllBreakpoints() : Void;
+	@:overload @:public public function deleteAllBreakpoints() : Void;
 	
-	@:overload public function stepRequests() : java.util.List<com.sun.jdi.request.StepRequest>;
+	@:overload @:public public function stepRequests() : java.util.List<com.sun.jdi.request.StepRequest>;
 	
-	@:overload public function classPrepareRequests() : java.util.List<com.sun.jdi.request.ClassPrepareRequest>;
+	@:overload @:public public function classPrepareRequests() : java.util.List<com.sun.jdi.request.ClassPrepareRequest>;
 	
-	@:overload public function classUnloadRequests() : java.util.List<com.sun.jdi.request.ClassUnloadRequest>;
+	@:overload @:public public function classUnloadRequests() : java.util.List<com.sun.jdi.request.ClassUnloadRequest>;
 	
-	@:overload public function threadStartRequests() : java.util.List<com.sun.jdi.request.ThreadStartRequest>;
+	@:overload @:public public function threadStartRequests() : java.util.List<com.sun.jdi.request.ThreadStartRequest>;
 	
-	@:overload public function threadDeathRequests() : java.util.List<com.sun.jdi.request.ThreadDeathRequest>;
+	@:overload @:public public function threadDeathRequests() : java.util.List<com.sun.jdi.request.ThreadDeathRequest>;
 	
-	@:overload public function exceptionRequests() : java.util.List<com.sun.jdi.request.ExceptionRequest>;
+	@:overload @:public public function exceptionRequests() : java.util.List<com.sun.jdi.request.ExceptionRequest>;
 	
-	@:overload public function breakpointRequests() : java.util.List<com.sun.jdi.request.BreakpointRequest>;
+	@:overload @:public public function breakpointRequests() : java.util.List<com.sun.jdi.request.BreakpointRequest>;
 	
-	@:overload public function accessWatchpointRequests() : java.util.List<com.sun.jdi.request.AccessWatchpointRequest>;
+	@:overload @:public public function accessWatchpointRequests() : java.util.List<com.sun.jdi.request.AccessWatchpointRequest>;
 	
-	@:overload public function modificationWatchpointRequests() : java.util.List<com.sun.jdi.request.ModificationWatchpointRequest>;
+	@:overload @:public public function modificationWatchpointRequests() : java.util.List<com.sun.jdi.request.ModificationWatchpointRequest>;
 	
-	@:overload public function methodEntryRequests() : java.util.List<com.sun.jdi.request.MethodEntryRequest>;
+	@:overload @:public public function methodEntryRequests() : java.util.List<com.sun.jdi.request.MethodEntryRequest>;
 	
-	@:overload public function methodExitRequests() : java.util.List<com.sun.jdi.request.MethodExitRequest>;
+	@:overload @:public public function methodExitRequests() : java.util.List<com.sun.jdi.request.MethodExitRequest>;
 	
-	@:overload public function monitorContendedEnterRequests() : java.util.List<com.sun.jdi.request.MonitorContendedEnterRequest>;
+	@:overload @:public public function monitorContendedEnterRequests() : java.util.List<com.sun.jdi.request.MonitorContendedEnterRequest>;
 	
-	@:overload public function monitorContendedEnteredRequests() : java.util.List<com.sun.jdi.request.MonitorContendedEnteredRequest>;
+	@:overload @:public public function monitorContendedEnteredRequests() : java.util.List<com.sun.jdi.request.MonitorContendedEnteredRequest>;
 	
-	@:overload public function monitorWaitRequests() : java.util.List<com.sun.jdi.request.MonitorWaitRequest>;
+	@:overload @:public public function monitorWaitRequests() : java.util.List<com.sun.jdi.request.MonitorWaitRequest>;
 	
-	@:overload public function monitorWaitedRequests() : java.util.List<com.sun.jdi.request.MonitorWaitedRequest>;
+	@:overload @:public public function monitorWaitedRequests() : java.util.List<com.sun.jdi.request.MonitorWaitedRequest>;
 	
-	@:overload public function vmDeathRequests() : java.util.List<com.sun.jdi.request.VMDeathRequest>;
+	@:overload @:public public function vmDeathRequests() : java.util.List<com.sun.jdi.request.VMDeathRequest>;
 	
 	
 }
@@ -117,23 +117,23 @@ package com.sun.tools.jdi;
 	/*
 	* Override superclass back to default equality
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function enable() : Void;
+	@:overload @:public public function enable() : Void;
 	
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
-	@:overload @:synchronized public function setEnabled(val : Bool) : Void;
+	@:overload @:public @:synchronized public function setEnabled(val : Bool) : Void;
 	
-	@:overload @:synchronized public function addCountFilter(count : Int) : Void;
+	@:overload @:public @:synchronized public function addCountFilter(count : Int) : Void;
 	
-	@:overload public function setSuspendPolicy(policy : Int) : Void;
+	@:overload @:public public function setSuspendPolicy(policy : Int) : Void;
 	
-	@:overload public function suspendPolicy() : Int;
+	@:overload @:public public function suspendPolicy() : Int;
 	
 	/**
 	* Returns the value of the property with the specified key.  Only
@@ -143,14 +143,14 @@ package com.sun.tools.jdi;
 	* @return the value of this property or null
 	* @see #putProperty
 	*/
-	@:overload @:final public function getProperty(key : Dynamic) : Dynamic;
+	@:overload @:public @:final public function getProperty(key : Dynamic) : Dynamic;
 	
 	/**
 	* Add an arbitrary key/value "property" to this component.
 	*
 	* @see #getProperty
 	*/
-	@:overload @:final public function putProperty(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public @:final public function putProperty(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -159,132 +159,132 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadVisibleEventRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadVisibleEventRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_EventRequestImpl
 {
-	@:overload @:synchronized public function addThreadFilter(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public @:synchronized public function addThreadFilter(thread : com.sun.jdi.ThreadReference) : Void;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassVisibleEventRequestImpl') @:internal extern class EventRequestManagerImpl_ClassVisibleEventRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ThreadVisibleEventRequestImpl
 {
-	@:overload @:synchronized public function addClassFilter(clazz : com.sun.jdi.ReferenceType) : Void;
+	@:overload @:public @:synchronized public function addClassFilter(clazz : com.sun.jdi.ReferenceType) : Void;
 	
-	@:overload @:synchronized public function addClassFilter(classPattern : String) : Void;
+	@:overload @:public @:synchronized public function addClassFilter(classPattern : String) : Void;
 	
-	@:overload @:synchronized public function addClassExclusionFilter(classPattern : String) : Void;
+	@:overload @:public @:synchronized public function addClassExclusionFilter(classPattern : String) : Void;
 	
-	@:overload @:synchronized public function addInstanceFilter(instance : com.sun.jdi.ObjectReference) : Void;
+	@:overload @:public @:synchronized public function addInstanceFilter(instance : com.sun.jdi.ObjectReference) : Void;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$BreakpointRequestImpl') @:internal extern class EventRequestManagerImpl_BreakpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.BreakpointRequest
 {
-	@:overload public function location() : com.sun.jdi.Location;
+	@:overload @:public public function location() : com.sun.jdi.Location;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassPrepareRequestImpl') @:internal extern class EventRequestManagerImpl_ClassPrepareRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ClassPrepareRequest
 {
-	@:overload @:synchronized public function addSourceNameFilter(sourceNamePattern : String) : Void;
+	@:overload @:public @:synchronized public function addSourceNameFilter(sourceNamePattern : String) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassUnloadRequestImpl') @:internal extern class EventRequestManagerImpl_ClassUnloadRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ClassUnloadRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ExceptionRequestImpl') @:internal extern class EventRequestManagerImpl_ExceptionRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ExceptionRequest
 {
-	@:overload public function exception() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function exception() : com.sun.jdi.ReferenceType;
 	
-	@:overload public function notifyCaught() : Bool;
+	@:overload @:public public function notifyCaught() : Bool;
 	
-	@:overload public function notifyUncaught() : Bool;
+	@:overload @:public public function notifyUncaught() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$MethodEntryRequestImpl') @:internal extern class EventRequestManagerImpl_MethodEntryRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MethodEntryRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$MethodExitRequestImpl') @:internal extern class EventRequestManagerImpl_MethodExitRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MethodExitRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorContendedEnterRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorContendedEnterRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorContendedEnterRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorContendedEnteredRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorContendedEnteredRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorContendedEnteredRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorWaitRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorWaitRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorWaitRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorWaitedRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorWaitedRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorWaitedRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$StepRequestImpl') @:internal extern class EventRequestManagerImpl_StepRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.StepRequest
 {
-	@:overload public function depth() : Int;
+	@:overload @:public public function depth() : Int;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function thread() : com.sun.jdi.ThreadReference;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadDeathRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadDeathRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ThreadVisibleEventRequestImpl implements com.sun.jdi.request.ThreadDeathRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadStartRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadStartRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ThreadVisibleEventRequestImpl implements com.sun.jdi.request.ThreadStartRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$WatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_WatchpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.WatchpointRequest
 {
-	@:overload public function field() : com.sun.jdi.Field;
+	@:overload @:public public function field() : com.sun.jdi.Field;
 	
 	/**
 	* Same as {@link #setEnabled <CODE>setEnabled(false)</CODE>}.
 	* @throws InvalidRequestStateException if this request
 	* has been deleted.
 	*/
-	@:overload override public function disable() : Void;
+	@:overload @:public override public function disable() : Void;
 	
 	/**
 	* Enables or disables this event request. While this event request is
@@ -302,7 +302,7 @@ package com.sun.tools.jdi;
 	* <code>val</code> is <code>true</code>, and the
 	* thread named in the request has died.
 	*/
-	@:overload override public function setEnabled(val : Bool) : Void;
+	@:overload @:public override public function setEnabled(val : Bool) : Void;
 	
 	/**
 	* Restricts the events generated by this request to those in
@@ -322,7 +322,7 @@ package com.sun.tools.jdi;
 	* enabled or has been deleted.
 	* Filters may be added only to disabled requests.
 	*/
-	@:require(java4) @:overload override public function addInstanceFilter(instance : com.sun.jdi.ObjectReference) : Void;
+	@:require(java4) @:overload @:public override public function addInstanceFilter(instance : com.sun.jdi.ObjectReference) : Void;
 	
 	/**
 	* Same as {@link #setEnabled <CODE>setEnabled(true)</CODE>}.
@@ -331,7 +331,7 @@ package com.sun.tools.jdi;
 	* @throws IllegalThreadStateException if this is a StepRequest
 	* and the thread named in the request has died.
 	*/
-	@:overload override public function enable() : Void;
+	@:overload @:public override public function enable() : Void;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -340,7 +340,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Returns a value which describes the threads to suspend when the
@@ -350,7 +350,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the current suspend mode for this request
 	*/
-	@:overload override public function suspendPolicy() : Int;
+	@:overload @:public override public function suspendPolicy() : Int;
 	
 	/**
 	* Determines if this event request is currently enabled.
@@ -358,7 +358,7 @@ package com.sun.tools.jdi;
 	* @return <code>true</code> if enabled;
 	* <code>false</code> otherwise.
 	*/
-	@:overload override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	/**
 	* Restricts the events generated by this request to those in
@@ -368,7 +368,7 @@ package com.sun.tools.jdi;
 	* enabled or has been deleted.
 	* Filters may be added only to disabled requests.
 	*/
-	@:overload override public function addThreadFilter(thread : com.sun.jdi.ThreadReference) : Void;
+	@:overload @:public override public function addThreadFilter(thread : com.sun.jdi.ThreadReference) : Void;
 	
 	/**
 	* Restricts the events generated by this request to those whose
@@ -381,7 +381,7 @@ package com.sun.tools.jdi;
 	* enabled or has been deleted.
 	* Filters may be added only to disabled requests.
 	*/
-	@:overload override public function addClassFilter(refType : com.sun.jdi.ReferenceType) : Void;
+	@:overload @:public override public function addClassFilter(refType : com.sun.jdi.ReferenceType) : Void;
 	
 	/**
 	* Determines the threads to suspend when the requested event occurs
@@ -402,7 +402,7 @@ package com.sun.tools.jdi;
 	* @throws IllegalArgumentException if the policy argument
 	* contains an illegal value.
 	*/
-	@:overload override public function setSuspendPolicy(policy : Int) : Void;
+	@:overload @:public override public function setSuspendPolicy(policy : Int) : Void;
 	
 	/**
 	* Add an arbitrary key/value "property" to this request.
@@ -419,7 +419,7 @@ package com.sun.tools.jdi;
 	*
 	* @see #getProperty
 	*/
-	@:overload override public function putProperty(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public override public function putProperty(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Returns the value of the property with the specified key.  Only
@@ -429,7 +429,7 @@ package com.sun.tools.jdi;
 	* @return the value of this property or null
 	* @see #putProperty
 	*/
-	@:overload override public function getProperty(key : Dynamic) : Dynamic;
+	@:overload @:public override public function getProperty(key : Dynamic) : Dynamic;
 	
 	/**
 	* Restricts the events generated by this request to those
@@ -443,7 +443,7 @@ package com.sun.tools.jdi;
 	* enabled or has been deleted.
 	* Filters may be added only to disabled requests.
 	*/
-	@:overload override public function addClassFilter(classPattern : String) : Void;
+	@:overload @:public override public function addClassFilter(classPattern : String) : Void;
 	
 	/**
 	* Restricts the events generated by this request to those
@@ -457,7 +457,7 @@ package com.sun.tools.jdi;
 	* enabled or has been deleted.
 	* Filters may be added only to disabled requests.
 	*/
-	@:overload override public function addClassExclusionFilter(classPattern : String) : Void;
+	@:overload @:public override public function addClassExclusionFilter(classPattern : String) : Void;
 	
 	/**
 	* Limit the requested event to be reported at most once after a
@@ -478,25 +478,25 @@ package com.sun.tools.jdi;
 	* @throws IllegalArgumentException if <CODE>count</CODE>
 	* is less than one.
 	*/
-	@:overload override public function addCountFilter(count : Int) : Void;
+	@:overload @:public override public function addCountFilter(count : Int) : Void;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$AccessWatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_AccessWatchpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_WatchpointRequestImpl implements com.sun.jdi.request.AccessWatchpointRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$ModificationWatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_ModificationWatchpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_WatchpointRequestImpl implements com.sun.jdi.request.ModificationWatchpointRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('com$sun$tools$jdi$EventRequestManagerImpl$VMDeathRequestImpl') @:internal extern class EventRequestManagerImpl_VMDeathRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_EventRequestImpl implements com.sun.jdi.request.VMDeathRequest
 {
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

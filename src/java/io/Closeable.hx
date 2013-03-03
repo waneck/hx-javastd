@@ -32,7 +32,7 @@ extern interface Closeable extends java.lang.AutoCloseable
 	*
 	* @throws IOException if an I/O error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

@@ -34,20 +34,20 @@ extern class ApplicationException extends java.lang.Exception
 	* @param id the repository id of the user exception
 	* @param ins the stream which contains the user exception data
 	*/
-	@:overload public function new(id : String, ins : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function new(id : String, ins : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Returns the CORBA repository ID of the exception
 	* without removing it from the exceptions input stream.
 	* @return The CORBA repository ID of this exception
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Returns the input stream from which the exception data can be read as its parameters.
 	* @return The stream which contains the user exception data
 	*/
-	@:overload public function getInputStream() : org.omg.CORBA.portable.InputStream;
+	@:overload @:public public function getInputStream() : org.omg.CORBA.portable.InputStream;
 	
 	
 }

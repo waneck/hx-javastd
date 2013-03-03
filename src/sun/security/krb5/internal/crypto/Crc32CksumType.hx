@@ -29,29 +29,29 @@ package sun.security.krb5.internal.crypto;
 */
 extern class Crc32CksumType extends sun.security.krb5.internal.crypto.CksumType
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function confounderSize() : Int;
+	@:overload @:public override public function confounderSize() : Int;
 	
-	@:overload override public function cksumType() : Int;
+	@:overload @:public override public function cksumType() : Int;
 	
-	@:overload override public function isSafe() : Bool;
+	@:overload @:public override public function isSafe() : Bool;
 	
-	@:overload override public function cksumSize() : Int;
+	@:overload @:public override public function cksumSize() : Int;
 	
-	@:overload override public function keyType() : Int;
+	@:overload @:public override public function keyType() : Int;
 	
-	@:overload override public function keySize() : Int;
+	@:overload @:public override public function keySize() : Int;
 	
-	@:overload override public function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function calculateKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function calculateKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function verifyKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, checksum : java.NativeArray<java.StdTypes.Int8>, usage : Int) : Bool;
+	@:overload @:public override public function verifyKeyedChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int, key : java.NativeArray<java.StdTypes.Int8>, checksum : java.NativeArray<java.StdTypes.Int8>, usage : Int) : Bool;
 	
-	@:overload public static function int2quad(input : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function int2quad(input : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function bytes2long(input : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
+	@:overload @:public @:static public static function bytes2long(input : java.NativeArray<java.StdTypes.Int8>) : haxe.Int64;
 	
 	
 }

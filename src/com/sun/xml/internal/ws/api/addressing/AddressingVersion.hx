@@ -37,32 +37,55 @@ extern enum AddressingVersion
 
 @:native('com$sun$xml$internal$ws$api$addressing$AddressingVersion$EPR') extern class AddressingVersion_EPR
 {
-	public var eprClass(default, null) : Class<javax.xml.ws.EndpointReference>;
+	@:public @:final public var eprClass(default, null) : Class<javax.xml.ws.EndpointReference>;
 	
-	public var address(default, null) : String;
+	@:public @:final public var address(default, null) : String;
 	
-	public var serviceName(default, null) : String;
+	@:public @:final public var serviceName(default, null) : String;
 	
-	public var portName(default, null) : String;
+	@:public @:final public var portName(default, null) : String;
 	
-	public var portTypeName(default, null) : String;
+	@:public @:final public var portTypeName(default, null) : String;
 	
-	public var referenceParameters(default, null) : String;
+	@:public @:final public var referenceParameters(default, null) : String;
 	
 	/**
 	* Element under which metadata is specified.
 	* In W3C, it is wsa:Metadata
 	* In Member, it is directly under mex:MetadataSection
 	*/
-	public var wsdlMetadata(default, null) : javax.xml.namespace.QName;
+	@:public @:final public var wsdlMetadata(default, null) : javax.xml.namespace.QName;
 	
-	public var referenceProperties(default, null) : String;
+	@:public @:final public var referenceProperties(default, null) : String;
 	
-	@:overload public function new(eprClass : Class<javax.xml.ws.EndpointReference>, address : String, serviceName : String, portName : String, portTypeName : String, wsdlMetadata : javax.xml.namespace.QName, referenceParameters : String, referenceProperties : String) : Void;
+	@:overload @:public public function new(eprClass : Class<javax.xml.ws.EndpointReference>, address : String, serviceName : String, portName : String, portTypeName : String, wsdlMetadata : javax.xml.namespace.QName, referenceParameters : String, referenceProperties : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$api$addressing$AddressingVersion$EPR') extern class AddressingVersion_EPR
 {
+	@:public @:final public var eprClass(default, null) : Class<javax.xml.ws.EndpointReference>;
+	
+	@:public @:final public var address(default, null) : String;
+	
+	@:public @:final public var serviceName(default, null) : String;
+	
+	@:public @:final public var portName(default, null) : String;
+	
+	@:public @:final public var portTypeName(default, null) : String;
+	
+	@:public @:final public var referenceParameters(default, null) : String;
+	
+	/**
+	* Element under which metadata is specified.
+	* In W3C, it is wsa:Metadata
+	* In Member, it is directly under mex:MetadataSection
+	*/
+	@:public @:final public var wsdlMetadata(default, null) : javax.xml.namespace.QName;
+	
+	@:public @:final public var referenceProperties(default, null) : String;
+	
+	@:overload @:public public function new(eprClass : Class<javax.xml.ws.EndpointReference>, address : String, serviceName : String, portName : String, portTypeName : String, wsdlMetadata : javax.xml.namespace.QName, referenceParameters : String, referenceProperties : String) : Void;
+	
 	
 }

@@ -31,13 +31,13 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class IORAddressingInfo implements org.omg.CORBA.portable.IDLEntity
 {
-	public var selected_profile_index : Int;
+	@:public public var selected_profile_index : Int;
 	
-	public var ior : org.omg.IOP.IOR;
+	@:public public var ior : org.omg.IOP.IOR;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_selected_profile_index : Int, _ior : org.omg.IOP.IOR) : Void;
+	@:overload @:public public function new(_selected_profile_index : Int, _ior : org.omg.IOP.IOR) : Void;
 	
 	
 }

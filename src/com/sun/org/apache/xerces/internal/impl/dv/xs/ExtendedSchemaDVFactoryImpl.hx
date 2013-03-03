@@ -32,7 +32,7 @@ extern class ExtendedSchemaDVFactoryImpl extends com.sun.org.apache.xerces.inter
 	* @param name  the name of the datatype
 	* @return      the datatype validator of the given name
 	*/
-	@:overload public function getBuiltInType(name : String) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload @:public override public function getBuiltInType(name : String) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* get all built-in simple types, which are stored in a hashtable keyed by
@@ -40,7 +40,7 @@ extern class ExtendedSchemaDVFactoryImpl extends com.sun.org.apache.xerces.inter
 	*
 	* @return      a hashtable which contains all built-in simple types
 	*/
-	@:overload public function getBuiltInTypes() : com.sun.org.apache.xerces.internal.util.SymbolHash;
+	@:overload @:public override public function getBuiltInTypes() : com.sun.org.apache.xerces.internal.util.SymbolHash;
 	
 	
 }

@@ -46,7 +46,7 @@ extern interface UserDefinedFileAttributeView extends java.nio.file.attribute.Fi
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public function list() : java.util.List<String>;
+	@:overload @:public public function list() : java.util.List<String>;
 	
 	/**
 	* Returns the size of the value of a user-defined attribute.
@@ -67,7 +67,7 @@ extern interface UserDefinedFileAttributeView extends java.nio.file.attribute.Fi
 	*          or its {@link SecurityManager#checkRead(String) checkRead} method
 	*          denies read access to the file.
 	*/
-	@:overload public function size(name : String) : Int;
+	@:overload @:public public function size(name : String) : Int;
 	
 	/**
 	* Read the value of a user-defined attribute into a buffer.
@@ -115,7 +115,7 @@ extern interface UserDefinedFileAttributeView extends java.nio.file.attribute.Fi
 	*
 	* @see #size
 	*/
-	@:overload public function read(name : String, dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function read(name : String, dst : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Writes the value of a user-defined attribute from a buffer.
@@ -163,7 +163,7 @@ extern interface UserDefinedFileAttributeView extends java.nio.file.attribute.Fi
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the file.
 	*/
-	@:overload public function write(name : String, src : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function write(name : String, src : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Deletes a user-defined attribute.
@@ -180,7 +180,7 @@ extern interface UserDefinedFileAttributeView extends java.nio.file.attribute.Fi
 	*          or its {@link SecurityManager#checkWrite(String) checkWrite}
 	*          method denies write access to the file.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	
 }

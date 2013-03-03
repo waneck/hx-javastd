@@ -31,13 +31,13 @@ package com.sun.corba.se.impl.corba;
 */
 extern class EnvironmentImpl extends org.omg.CORBA.Environment
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function exception() : java.lang.Exception;
+	@:overload @:public override public function exception() : java.lang.Exception;
 	
-	@:overload public function exception(exc : java.lang.Exception) : Void;
+	@:overload @:public override public function exception(exc : java.lang.Exception) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	
 }

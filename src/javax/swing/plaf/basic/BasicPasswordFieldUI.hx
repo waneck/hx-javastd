@@ -40,7 +40,7 @@ extern class BasicPasswordFieldUI extends javax.swing.plaf.basic.BasicTextFieldU
 	* @param c the JPasswordField
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to look up properties through the
@@ -49,13 +49,13 @@ extern class BasicPasswordFieldUI extends javax.swing.plaf.basic.BasicTextFieldU
 	*
 	* @return the name ("PasswordField")
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
 	/**
 	* Installs the necessary properties on the JPasswordField.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function installDefaults() : Void;
+	@:require(java6) @:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* Creates a view (PasswordView) for an element.
@@ -63,7 +63,7 @@ extern class BasicPasswordFieldUI extends javax.swing.plaf.basic.BasicTextFieldU
 	* @param elem the element
 	* @return the view
 	*/
-	@:overload override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }

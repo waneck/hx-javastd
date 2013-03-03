@@ -42,41 +42,41 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	*
 	* @author Rosanna Lee
 	*/
-	private static var _PARTIAL(default, null) : Int;
+	@:protected @:static @:final private static var _PARTIAL(default, null) : Int;
 	
-	private static var _COMPONENT(default, null) : Int;
+	@:protected @:static @:final private static var _COMPONENT(default, null) : Int;
 	
-	private static var _ATOMIC(default, null) : Int;
+	@:protected @:static @:final private static var _ATOMIC(default, null) : Int;
 	
-	private var _contextType : Int;
+	@:protected private var _contextType : Int;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/* Equivalent to method in  Resolver interface */
-	@:overload @:abstract private function p_resolveToClass(name : javax.naming.Name, contextType : Class<Dynamic>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.spi.ResolveResult;
+	@:overload @:protected @:abstract private function p_resolveToClass(name : javax.naming.Name, contextType : Class<Dynamic>, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.spi.ResolveResult;
 	
 	/* Equivalent to methods in Context interface */
-	@:overload @:abstract private function p_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected @:abstract private function p_lookup(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload @:abstract private function p_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
+	@:overload @:protected @:abstract private function p_lookupLink(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Dynamic;
 	
-	@:overload @:abstract private function p_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function p_list(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function p_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
+	@:overload @:protected @:abstract private function p_listBindings(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload @:abstract private function p_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_bind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_rebind(name : javax.naming.Name, obj : Dynamic, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_unbind(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_destroySubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
+	@:overload @:protected @:abstract private function p_createSubcontext(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.Context;
 	
-	@:overload @:abstract private function p_rename(oldname : javax.naming.Name, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
+	@:overload @:protected @:abstract private function p_rename(oldname : javax.naming.Name, newname : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : Void;
 	
-	@:overload @:abstract private function p_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
+	@:overload @:protected @:abstract private function p_getNameParser(name : javax.naming.Name, cont : com.sun.jndi.toolkit.ctx.Continuation) : javax.naming.NameParser;
 	
 	/**
 	* A cheap way of getting the environment.
@@ -86,59 +86,59 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* The toolkit knows to clone when necessary.
 	* @return The possibly null environment of the context.
 	*/
-	@:overload private function p_getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:protected private function p_getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/* implementations for method in Resolver interface using p_ method */
-	@:overload public function resolveToClass(name : String, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
+	@:overload @:public public function resolveToClass(name : String, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
 	
-	@:overload public function resolveToClass(name : javax.naming.Name, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
+	@:overload @:public public function resolveToClass(name : javax.naming.Name, contextType : Class<javax.naming.Context>) : javax.naming.spi.ResolveResult;
 	
 	/* implementations for methods in Context interface using p_ methods */
-	@:overload public function lookup(name : String) : Dynamic;
+	@:overload @:public public function lookup(name : String) : Dynamic;
 	
-	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookup(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function bind(name : String, newObj : Dynamic) : Void;
+	@:overload @:public public function bind(name : String, newObj : Dynamic) : Void;
 	
-	@:overload public function bind(name : javax.naming.Name, newObj : Dynamic) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, newObj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : String, newObj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : String, newObj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : javax.naming.Name, newObj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, newObj : Dynamic) : Void;
 	
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public public function unbind(name : String) : Void;
 	
-	@:overload public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public public function unbind(name : javax.naming.Name) : Void;
 	
-	@:overload public function rename(oldName : String, newName : String) : Void;
+	@:overload @:public public function rename(oldName : String, newName : String) : Void;
 	
-	@:overload public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
-	@:overload public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
-	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
-	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
-	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
-	@:overload public function destroySubcontext(name : String) : Void;
+	@:overload @:public public function destroySubcontext(name : String) : Void;
 	
-	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public public function destroySubcontext(name : javax.naming.Name) : Void;
 	
-	@:overload public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : String) : javax.naming.Context;
 	
-	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
-	@:overload public function lookupLink(name : String) : Dynamic;
+	@:overload @:public public function lookupLink(name : String) : Dynamic;
 	
-	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : String) : javax.naming.NameParser;
 	
-	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
-	@:overload public function composeName(name : String, prefix : String) : String;
+	@:overload @:public public function composeName(name : String, prefix : String) : String;
 	
 	/**
 	* This default implementation simply concatenates the two names.
@@ -156,18 +156,18 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* {"a", ""} + {"", "b"}  =>  {"a", "", "", "b"}   {"a", "", "b"}
 	* </pre>
 	*/
-	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Tests whether a name contains a nonempty component.
 	*/
-	@:overload private static function allEmpty(name : javax.naming.Name) : Bool;
+	@:overload @:protected @:static private static function allEmpty(name : javax.naming.Name) : Bool;
 	
 	/**
 	* Retrieves a PartialCompositeContext for the resolved object in
 	* cont.  Throws CannotProceedException if not successful.
 	*/
-	@:overload private static function getPCContext(cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.PartialCompositeContext;
+	@:overload @:protected @:static private static function getPCContext(cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.PartialCompositeContext;
 	
 	/**
 	* Retrieves the full name of this context within its own namespace.
@@ -188,7 +188,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:public public function getNameInNamespace() : String;
+	@:require(java3) @:overload @:public @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Retrieves the environment in effect for this context.
@@ -205,7 +205,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* @see #addToEnvironment(String, Object)
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Closes this context.
@@ -218,7 +218,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public public function close() : Void;
+	@:overload @:public @:public public function close() : Void;
 	
 	/**
 	* Adds a new environment property to the environment of this
@@ -236,7 +236,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* @see #getEnvironment()
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
 	/**
 	* Removes an environment property from the environment of this
@@ -252,7 +252,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* @see #getEnvironment()
 	* @see #addToEnvironment(String, Object)
 	*/
-	@:overload @:public public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
 	
 }

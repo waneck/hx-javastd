@@ -28,45 +28,45 @@ extern class Reference
 	/**
 	* The JAXB type being referenced. Must not be null.
 	*/
-	public var type(default, null) : com.sun.mirror.type.TypeMirror;
+	@:public @:final public var type(default, null) : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* The declaration from which annotations for the {@link #type} is read.
 	* Must not be null.
 	*/
-	public var annotations(default, null) : com.sun.mirror.declaration.Declaration;
+	@:public @:final public var annotations(default, null) : com.sun.mirror.declaration.Declaration;
 	
 	/**
 	* Creates a reference from the return type of the method
 	* and annotations on the method.
 	*/
-	@:overload public function new(method : com.sun.mirror.declaration.MethodDeclaration) : Void;
+	@:overload @:public public function new(method : com.sun.mirror.declaration.MethodDeclaration) : Void;
 	
 	/**
 	* Creates a reference from the parameter type
 	* and annotations on the parameter.
 	*/
-	@:overload public function new(param : com.sun.mirror.declaration.ParameterDeclaration) : Void;
+	@:overload @:public public function new(param : com.sun.mirror.declaration.ParameterDeclaration) : Void;
 	
 	/**
 	* Creates a reference from a class declaration and its annotations.
 	*/
-	@:overload public function new(type : com.sun.mirror.declaration.TypeDeclaration, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
+	@:overload @:public public function new(type : com.sun.mirror.declaration.TypeDeclaration, env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
 	
 	/**
 	* Creates a reference by providing two values independently.
 	*/
-	@:overload public function new(type : com.sun.mirror.type.TypeMirror, annotations : com.sun.mirror.declaration.Declaration) : Void;
+	@:overload @:public public function new(type : com.sun.mirror.type.TypeMirror, annotations : com.sun.mirror.declaration.Declaration) : Void;
 	
 	/**
 	* Gets the source location that can be used to report error messages regarding
 	* this reference.
 	*/
-	@:overload public function getPosition() : com.sun.mirror.util.SourcePosition;
+	@:overload @:public public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -26,7 +26,7 @@ extern class XSGrammarBucket
 	* @param namespace
 	* @return SchemaGrammar associated with the namespace
 	*/
-	@:overload public function getGrammar(namespace : String) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
+	@:overload @:public public function getGrammar(namespace : String) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
 	
 	/**
 	* Put a schema grammar into the registry
@@ -35,7 +35,7 @@ extern class XSGrammarBucket
 	*
 	* @param grammar   the grammar to put in the registry
 	*/
-	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Void;
+	@:overload @:public public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Void;
 	
 	/**
 	* put a schema grammar and any grammars imported by it (directly or
@@ -47,7 +47,7 @@ extern class XSGrammarBucket
 	* @param deep      whether to add imported grammars
 	* @return          whether the process succeeded
 	*/
-	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, deep : Bool) : Bool;
+	@:overload @:public public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, deep : Bool) : Bool;
 	
 	/**
 	* put a schema grammar and any grammars imported by it (directly or
@@ -61,20 +61,20 @@ extern class XSGrammarBucket
 	*                       bucket or not - including 'grammar' parameter.
 	* @return               whether the process succeeded
 	*/
-	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, deep : Bool, ignoreConflict : Bool) : Bool;
+	@:overload @:public public function putGrammar(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar, deep : Bool, ignoreConflict : Bool) : Bool;
 	
 	/**
 	* get all grammars in the registry
 	*
 	* @return an array of SchemaGrammars.
 	*/
-	@:overload public function getGrammars() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>;
+	@:overload @:public public function getGrammars() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar>;
 	
 	/**
 	* Clear the registry.
 	* REVISIT: update to use another XSGrammarBucket
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

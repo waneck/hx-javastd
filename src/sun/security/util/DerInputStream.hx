@@ -26,7 +26,7 @@ package sun.security.util;
 extern class DerInputStream
 {
 	/** The DER tag of the value; one of the tag_ constants. */
-	public var tag : java.StdTypes.Int8;
+	@:public public var tag : java.StdTypes.Int8;
 	
 	/**
 	* Create a DER input stream from a data buffer.  The buffer is not
@@ -35,7 +35,7 @@ extern class DerInputStream
 	*
 	* @param data the buffer from which to create the string (CONSUMED)
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create a DER input stream from part of a data buffer.
@@ -48,7 +48,7 @@ extern class DerInputStream
 	* @param len how long a chunk of the buffer to use,
 	*          starting at "offset"
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Creates a new DER input stream from part of this input stream.
@@ -60,27 +60,27 @@ extern class DerInputStream
 	*          on this stream and the newly created stream will be the
 	*          same.
 	*/
-	@:overload public function subStream(len : Int, do_skip : Bool) : sun.security.util.DerInputStream;
+	@:overload @:public public function subStream(len : Int, do_skip : Bool) : sun.security.util.DerInputStream;
 	
 	/**
 	* Return what has been written to this DerInputStream
 	* as a byte array. Useful for debugging.
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get an integer from the input stream as an integer.
 	*
 	* @return the integer held in this DER input stream.
 	*/
-	@:overload public function getInteger() : Int;
+	@:overload @:public public function getInteger() : Int;
 	
 	/**
 	* Get a integer from the input stream as a BigInteger object.
 	*
 	* @return the integer held in this DER input stream.
 	*/
-	@:overload public function getBigInteger() : java.math.BigInteger;
+	@:overload @:public public function getBigInteger() : java.math.BigInteger;
 	
 	/**
 	* Returns an ASN.1 INTEGER value as a positive BigInteger.
@@ -89,46 +89,46 @@ extern class DerInputStream
 	*
 	* @return the integer held in this DER value as a BigInteger.
 	*/
-	@:overload public function getPositiveBigInteger() : java.math.BigInteger;
+	@:overload @:public public function getPositiveBigInteger() : java.math.BigInteger;
 	
 	/**
 	* Get an enumerated from the input stream.
 	*
 	* @return the integer held in this DER input stream.
 	*/
-	@:overload public function getEnumerated() : Int;
+	@:overload @:public public function getEnumerated() : Int;
 	
 	/**
 	* Get a bit string from the input stream. Padded bits (if any)
 	* will be stripped off before the bit string is returned.
 	*/
-	@:overload public function getBitString() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBitString() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get a bit string from the input stream.  The bit string need
 	* not be byte-aligned.
 	*/
-	@:overload public function getUnalignedBitString() : sun.security.util.BitArray;
+	@:overload @:public public function getUnalignedBitString() : sun.security.util.BitArray;
 	
 	/**
 	* Returns an ASN.1 OCTET STRING from the input stream.
 	*/
-	@:overload public function getOctetString() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getOctetString() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the asked number of bytes from the input stream.
 	*/
-	@:overload public function getBytes(val : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function getBytes(val : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Reads an encoded null value from the input stream.
 	*/
-	@:overload public function getNull() : Void;
+	@:overload @:public public function getNull() : Void;
 	
 	/**
 	* Reads an X.200 style Object Identifier from the stream.
 	*/
-	@:overload public function getOID() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getOID() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Return a sequence of encoded entities.  ASN.1 sequences are
@@ -140,7 +140,7 @@ extern class DerInputStream
 	*          (used to initialize an auto-growing data structure)
 	* @return array of the values in the sequence
 	*/
-	@:overload public function getSequence(startLen : Int) : java.NativeArray<sun.security.util.DerValue>;
+	@:overload @:public public function getSequence(startLen : Int) : java.NativeArray<sun.security.util.DerValue>;
 	
 	/**
 	* Return a set of encoded entities.  ASN.1 sets are unordered,
@@ -152,7 +152,7 @@ extern class DerInputStream
 	*          (used to initialize an auto-growing data structure)
 	* @return array of the values in the sequence
 	*/
-	@:overload public function getSet(startLen : Int) : java.NativeArray<sun.security.util.DerValue>;
+	@:overload @:public public function getSet(startLen : Int) : java.NativeArray<sun.security.util.DerValue>;
 	
 	/**
 	* Return a set of encoded entities.  ASN.1 sets are unordered,
@@ -165,14 +165,14 @@ extern class DerInputStream
 	* @param implicit if true tag is assumed implicit.
 	* @return array of the values in the sequence
 	*/
-	@:overload public function getSet(startLen : Int, implicit : Bool) : java.NativeArray<sun.security.util.DerValue>;
+	@:overload @:public public function getSet(startLen : Int, implicit : Bool) : java.NativeArray<sun.security.util.DerValue>;
 	
 	/*
 	* Read a "vector" of values ... set or sequence have the
 	* same encoding, except for the initial tag, so both use
 	* this same helper routine.
 	*/
-	@:overload private function readVector(startLen : Int) : java.NativeArray<sun.security.util.DerValue>;
+	@:overload @:protected private function readVector(startLen : Int) : java.NativeArray<sun.security.util.DerValue>;
 	
 	/**
 	* Get a single DER-encoded value from the input stream.
@@ -181,69 +181,69 @@ extern class DerInputStream
 	* sequence out with one call, and only examine its elements
 	* later when you really need to.
 	*/
-	@:overload public function getDerValue() : sun.security.util.DerValue;
+	@:overload @:public public function getDerValue() : sun.security.util.DerValue;
 	
 	/**
 	* Read a string that was encoded as a UTF8String DER value.
 	*/
-	@:overload public function getUTF8String() : String;
+	@:overload @:public public function getUTF8String() : String;
 	
 	/**
 	* Read a string that was encoded as a PrintableString DER value.
 	*/
-	@:overload public function getPrintableString() : String;
+	@:overload @:public public function getPrintableString() : String;
 	
 	/**
 	* Read a string that was encoded as a T61String DER value.
 	*/
-	@:overload public function getT61String() : String;
+	@:overload @:public public function getT61String() : String;
 	
 	/**
 	* Read a string that was encoded as a IA5tring DER value.
 	*/
-	@:overload public function getIA5String() : String;
+	@:overload @:public public function getIA5String() : String;
 	
 	/**
 	* Read a string that was encoded as a BMPString DER value.
 	*/
-	@:overload public function getBMPString() : String;
+	@:overload @:public public function getBMPString() : String;
 	
 	/**
 	* Read a string that was encoded as a GeneralString DER value.
 	*/
-	@:overload public function getGeneralString() : String;
+	@:overload @:public public function getGeneralString() : String;
 	
 	/**
 	* Get a UTC encoded time value from the input stream.
 	*/
-	@:overload public function getUTCTime() : java.util.Date;
+	@:overload @:public public function getUTCTime() : java.util.Date;
 	
 	/**
 	* Get a Generalized encoded time value from the input stream.
 	*/
-	@:overload public function getGeneralizedTime() : java.util.Date;
+	@:overload @:public public function getGeneralizedTime() : java.util.Date;
 	
-	@:overload public function peekByte() : Int;
+	@:overload @:public public function peekByte() : Int;
 	
 	/**
 	* Mark the current position in the buffer, so that
 	* a later call to <code>reset</code> will return here.
 	*/
-	@:overload public function mark(value : Int) : Void;
+	@:overload @:public public function mark(value : Int) : Void;
 	
 	/**
 	* Return to the position of the last <code>mark</code>
 	* call.  A mark is implicitly set at the beginning of
 	* the stream when it is created.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Returns the number of bytes available for reading.
 	* This is most useful for testing whether the stream is
 	* empty.
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public public function available() : Int;
 	
 	
 }

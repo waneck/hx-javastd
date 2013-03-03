@@ -46,23 +46,23 @@ package com.sun.xml.internal.rngom.nc;
 */
 extern class SimpleNameClass extends com.sun.xml.internal.rngom.nc.NameClass
 {
-	public var name(default, null) : javax.xml.namespace.QName;
+	@:public @:final public var name(default, null) : javax.xml.namespace.QName;
 	
-	@:overload public function new(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new(nsUri : String, localPart : String) : Void;
+	@:overload @:public public function new(nsUri : String, localPart : String) : Void;
 	
-	@:overload override public function contains(name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public override public function contains(name : javax.xml.namespace.QName) : Bool;
 	
-	@:overload override public function containsSpecificity(name : javax.xml.namespace.QName) : Int;
+	@:overload @:public override public function containsSpecificity(name : javax.xml.namespace.QName) : Int;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function accept<V>(visitor : com.sun.xml.internal.rngom.nc.NameClassVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.xml.internal.rngom.nc.NameClassVisitor<V>) : V;
 	
-	@:overload override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	
 }

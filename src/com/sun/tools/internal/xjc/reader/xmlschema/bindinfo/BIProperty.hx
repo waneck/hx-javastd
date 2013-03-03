@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 */
 extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.AbstractDeclarationImpl
 {
-	@:overload public function new(loc : org.xml.sax.Locator, _propName : String, _javadoc : String, _baseType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty.BIProperty_BaseTypeBean, collectionType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.CollectionTypeAttribute, isConst : Null<Bool>, optionalProperty : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode, genElemProp : Null<Bool>) : Void;
+	@:overload @:public public function new(loc : org.xml.sax.Locator, _propName : String, _javadoc : String, _baseType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty.BIProperty_BaseTypeBean, collectionType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.CollectionTypeAttribute, isConst : Null<Bool>, optionalProperty : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode, genElemProp : Null<Bool>) : Void;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function getChildren() : java.util.Collection<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
+	@:overload @:public override public function getChildren() : java.util.Collection<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
 	
-	@:overload override public function setParent(parent : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public override public function setParent(parent : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	/**
 	* Returns the customized property name.
@@ -50,7 +50,7 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	*      This method can return null if the customization doesn't
 	*      specify the name.
 	*/
-	@:overload public function getPropertyName(forConstant : Bool) : String;
+	@:overload @:public public function getPropertyName(forConstant : Bool) : String;
 	
 	/**
 	* Gets the associated javadoc.
@@ -58,11 +58,11 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	* @return
 	*      null if none is specfieid.
 	*/
-	@:overload public function getJavadoc() : String;
+	@:overload @:public public function getJavadoc() : String;
 	
-	@:overload public function getBaseType() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function getBaseType() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function getOptionalPropertyMode() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode;
+	@:overload @:public public function getOptionalPropertyMode() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode;
 	
 	/**
 	* Gets the inherited value of the "fixedAttrToConstantProperty" customization.
@@ -76,11 +76,11 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	* <p>
 	* I don't like this semantics but that's what the spec implies.
 	*/
-	@:overload public function isConstantProperty() : Bool;
+	@:overload @:public public function isConstantProperty() : Bool;
 	
-	@:overload public function createValueProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSComponent, tu : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.model.CValuePropertyInfo;
+	@:overload @:public public function createValueProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSComponent, tu : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName) : com.sun.tools.internal.xjc.model.CValuePropertyInfo;
 	
-	@:overload public function createAttributeProperty(use : com.sun.xml.internal.xsom.XSAttributeUse, tu : com.sun.tools.internal.xjc.model.TypeUse) : com.sun.tools.internal.xjc.model.CAttributePropertyInfo;
+	@:overload @:public public function createAttributeProperty(use : com.sun.xml.internal.xsom.XSAttributeUse, tu : com.sun.tools.internal.xjc.model.TypeUse) : com.sun.tools.internal.xjc.model.CAttributePropertyInfo;
 	
 	/**
 	*
@@ -92,17 +92,17 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	* @param source
 	*      Source schema component from which a field is built.
 	*/
-	@:overload public function createElementProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSParticle, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CElementPropertyInfo;
+	@:overload @:public public function createElementProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSParticle, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CElementPropertyInfo;
 	
-	@:overload public function createDummyExtendedMixedReferenceProperty(defaultName : String, source : com.sun.xml.internal.xsom.XSComponent, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CReferencePropertyInfo;
+	@:overload @:public public function createDummyExtendedMixedReferenceProperty(defaultName : String, source : com.sun.xml.internal.xsom.XSComponent, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CReferencePropertyInfo;
 	
-	@:overload public function createContentExtendedMixedReferenceProperty(defaultName : String, source : com.sun.xml.internal.xsom.XSComponent, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CReferencePropertyInfo;
+	@:overload @:public public function createContentExtendedMixedReferenceProperty(defaultName : String, source : com.sun.xml.internal.xsom.XSComponent, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CReferencePropertyInfo;
 	
-	@:overload public function createReferenceProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSComponent, types : com.sun.tools.internal.xjc.reader.RawTypeSet, isMixed : Bool, dummy : Bool, content : Bool, isMixedExtended : Bool) : com.sun.tools.internal.xjc.model.CReferencePropertyInfo;
+	@:overload @:public public function createReferenceProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSComponent, types : com.sun.tools.internal.xjc.reader.RawTypeSet, isMixed : Bool, dummy : Bool, content : Bool, isMixedExtended : Bool) : com.sun.tools.internal.xjc.model.CReferencePropertyInfo;
 	
-	@:overload public function createElementOrReferenceProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSParticle, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CPropertyInfo;
+	@:overload @:public public function createElementOrReferenceProperty(defaultName : String, forConstant : Bool, source : com.sun.xml.internal.xsom.XSParticle, types : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.model.CPropertyInfo;
 	
-	@:overload override public function markAsAcknowledged() : Void;
+	@:overload @:public override public function markAsAcknowledged() : Void;
 	
 	/**
 	* Finds a BIProperty which this object should delegate to.
@@ -112,7 +112,7 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	*      If this object is contained in the BIGlobalBinding, then
 	*      this method returns null to indicate that there's no more default.
 	*/
-	@:overload private function getDefault() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
+	@:overload @:protected private function getDefault() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
 	
 	/**
 	* Finds a property customization that describes how the given
@@ -143,14 +143,14 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	* @return
 	*      Always return non-null valid object.
 	*/
-	@:overload public static function getCustomization(c : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
+	@:overload @:public @:static public static function getCustomization(c : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of this declaration. */
-	public static var NAME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var NAME(default, null) : javax.xml.namespace.QName;
 	
-	@:overload public function getConv() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
+	@:overload @:public public function getConv() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 	
 	
 }

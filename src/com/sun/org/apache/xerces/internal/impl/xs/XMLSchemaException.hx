@@ -28,11 +28,11 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 */
 extern class XMLSchemaException extends java.lang.Exception
 {
-	@:overload public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function getArgs() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArgs() : java.NativeArray<Dynamic>;
 	
 	
 }

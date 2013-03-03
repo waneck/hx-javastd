@@ -32,13 +32,13 @@ extern class AbstractDelegateHttpsURLConnection extends java.net.HttpURLConnecti
 	* sun.net.www.protocol.http.HttpURLConnection by having this class
 	*
 	*/
-	@:overload private function new(url : java.net.URL, handler : sun.net.www.protocol.http.Handler) : Void;
+	@:overload @:protected private function new(url : java.net.URL, handler : sun.net.www.protocol.http.Handler) : Void;
 	
-	@:overload private function new(url : java.net.URL, p : java.net.Proxy, handler : sun.net.www.protocol.http.Handler) : Void;
+	@:overload @:protected private function new(url : java.net.URL, p : java.net.Proxy, handler : sun.net.www.protocol.http.Handler) : Void;
 	
-	@:overload @:abstract private function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:protected @:abstract private function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
-	@:overload @:abstract private function getHostnameVerifier() : javax.net.ssl.HostnameVerifier;
+	@:overload @:protected @:abstract private function getHostnameVerifier() : javax.net.ssl.HostnameVerifier;
 	
 	/**
 	* Create a new HttpClient object, bypassing the cache of
@@ -50,7 +50,7 @@ extern class AbstractDelegateHttpsURLConnection extends java.net.HttpURLConnecti
 	*
 	* @param url the URL being accessed
 	*/
-	@:overload public function setNewClient(url : java.net.URL) : Void;
+	@:overload @:public public function setNewClient(url : java.net.URL) : Void;
 	
 	/**
 	* Obtain a HttpClient object. Use the cached copy if specified.
@@ -63,7 +63,7 @@ extern class AbstractDelegateHttpsURLConnection extends java.net.HttpURLConnecti
 	* @param useCache  whether the cached connection should be used
 	*        if present
 	*/
-	@:overload public function setNewClient(url : java.net.URL, useCache : Bool) : Void;
+	@:overload @:public public function setNewClient(url : java.net.URL, useCache : Bool) : Void;
 	
 	/**
 	* Create a new HttpClient object, set up so that it uses
@@ -78,7 +78,7 @@ extern class AbstractDelegateHttpsURLConnection extends java.net.HttpURLConnecti
 	* @param proxyHost the proxy host to use
 	* @param proxyPort the proxy port to use
 	*/
-	@:overload public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
+	@:overload @:public public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
 	
 	/**
 	* Obtain a HttpClient object, set up so that it uses per-instance
@@ -95,53 +95,53 @@ extern class AbstractDelegateHttpsURLConnection extends java.net.HttpURLConnecti
 	* @param useCache  whether the cached connection should be used
 	*        if present
 	*/
-	@:overload public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
+	@:overload @:public public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
-	@:overload private function proxiedConnect(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
-	
-	/**
-	* Used by subclass to access "connected" variable.
-	*/
-	@:overload public function isConnected() : Bool;
+	@:overload @:protected private function proxiedConnect(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
 	/**
 	* Used by subclass to access "connected" variable.
 	*/
-	@:overload public function setConnected(conn : Bool) : Void;
+	@:overload @:public public function isConnected() : Bool;
+	
+	/**
+	* Used by subclass to access "connected" variable.
+	*/
+	@:overload @:public public function setConnected(conn : Bool) : Void;
 	
 	/**
 	* Implements the HTTP protocol handler's "connect" method,
 	* establishing an SSL connection to the server as necessary.
 	*/
-	@:overload override public function connect() : Void;
+	@:overload @:public override public function connect() : Void;
 	
-	@:overload private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int) : sun.net.www.http.HttpClient;
+	@:overload @:protected private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int) : sun.net.www.http.HttpClient;
 	
-	@:overload private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int, useCache : Bool) : sun.net.www.http.HttpClient;
+	@:overload @:protected private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int, useCache : Bool) : sun.net.www.http.HttpClient;
 	
 	/**
 	* Returns the cipher suite in use on this connection.
 	*/
-	@:overload public function getCipherSuite() : String;
+	@:overload @:public public function getCipherSuite() : String;
 	
 	/**
 	* Returns the certificate chain the client sent to the
 	* server, or null if the client did not authenticate.
 	*/
-	@:overload public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's certificate chain, or throws
 	* SSLPeerUnverified Exception if
 	* the server did not authenticate.
 	*/
-	@:overload public function getServerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public public function getServerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's X.509 certificate chain, or null if
 	* the server did not authenticate.
 	*/
-	@:overload public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	
 }

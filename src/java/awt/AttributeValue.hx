@@ -25,11 +25,11 @@ package java.awt;
 */
 @:internal extern class AttributeValue
 {
-	@:overload private function new(value : Int, names : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(value : Int, names : java.NativeArray<String>) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

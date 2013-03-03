@@ -49,7 +49,7 @@ extern interface XPathExpression
 	* @throws IllegalArgumentException If <code>returnType</code> is not one of the types defined in {@link XPathConstants}.
 	* @throws NullPointerException If  <code>returnType</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(item : Dynamic, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the specified context and return the result as a <code>String</code>.</p>
@@ -71,7 +71,7 @@ extern interface XPathExpression
 	*
 	* @throws XPathExpressionException If the expression cannot be evaluated.
 	*/
-	@:overload public function evaluate(item : Dynamic) : String;
+	@:overload @:public public function evaluate(item : Dynamic) : String;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the context of the specified <code>InputSource</code> and return the result as the
@@ -99,7 +99,7 @@ extern interface XPathExpression
 	* @throws IllegalArgumentException If <code>returnType</code> is not one of the types defined in {@link XPathConstants}.
 	* @throws NullPointerException If  <code>source</code> or <code>returnType</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
+	@:overload @:public public function evaluate(source : org.xml.sax.InputSource, returnType : javax.xml.namespace.QName) : Dynamic;
 	
 	/**
 	* <p>Evaluate the compiled XPath expression in the context of the specified <code>InputSource</code> and return the result as a
@@ -121,7 +121,7 @@ extern interface XPathExpression
 	* @throws XPathExpressionException If the expression cannot be evaluated.
 	* @throws NullPointerException If  <code>source</code> is <code>null</code>.
 	*/
-	@:overload public function evaluate(source : org.xml.sax.InputSource) : String;
+	@:overload @:public public function evaluate(source : org.xml.sax.InputSource) : String;
 	
 	
 }

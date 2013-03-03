@@ -20,23 +20,23 @@ package com.sun.org.apache.xerces.internal.impl.xs.opti;
 */
 extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap
 {
-	@:overload public function new(attrs : java.NativeArray<org.w3c.dom.Attr>) : Void;
+	@:overload @:public public function new(attrs : java.NativeArray<org.w3c.dom.Attr>) : Void;
 	
-	@:overload public function getNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItem(name : String) : org.w3c.dom.Node;
 	
-	@:overload public function item(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.Node;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
-	@:overload public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function getNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
-	@:overload public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItemNS(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function setNamedItem(arg : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function removeNamedItem(name : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItem(name : String) : org.w3c.dom.Node;
 	
-	@:overload public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
+	@:overload @:public public function removeNamedItemNS(namespaceURI : String, localName : String) : org.w3c.dom.Node;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	/**
 	* Creates a new EditorKit used for styled documents.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the input attributes for the pane.  When
@@ -41,7 +41,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @return the attribute set
 	*/
-	@:overload public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload @:public public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/**
 	* Fetches the element representing the current
@@ -49,7 +49,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @return the element
 	*/
-	@:overload public function getCharacterAttributeRun() : javax.swing.text.Element;
+	@:overload @:public public function getCharacterAttributeRun() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the command list for the editor.  This is
@@ -59,7 +59,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @return the command list
 	*/
-	@:overload override public function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload @:public override public function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	/**
 	* Creates an uninitialized text storage model
@@ -67,7 +67,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @return the model
 	*/
-	@:overload override public function createDefaultDocument() : javax.swing.text.Document;
+	@:overload @:public override public function createDefaultDocument() : javax.swing.text.Document;
 	
 	/**
 	* Called when the kit is being installed into
@@ -75,7 +75,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @param c the JEditorPane
 	*/
-	@:overload override public function install(c : javax.swing.JEditorPane) : Void;
+	@:overload @:public override public function install(c : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Called when the kit is being removed from the
@@ -84,7 +84,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @param c the JEditorPane
 	*/
-	@:overload override public function deinstall(c : javax.swing.JEditorPane) : Void;
+	@:overload @:public override public function deinstall(c : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Fetches a factory that is suitable for producing
@@ -101,14 +101,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @return the factory
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Creates a copy of the editor kit.
 	*
 	* @return the copy
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Copies the key/values in <code>element</code>s AttributeSet into
@@ -119,7 +119,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* This is called anytime the caret moves over a different location.
 	*
 	*/
-	@:overload private function createInputAttributes(element : javax.swing.text.Element, set : javax.swing.text.MutableAttributeSet) : Void;
+	@:overload @:protected private function createInputAttributes(element : javax.swing.text.Element, set : javax.swing.text.MutableAttributeSet) : Void;
 	
 	
 }
@@ -133,15 +133,15 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 */
 @:native('javax$swing$text$StyledEditorKit$AttributeTracker') @:internal extern class StyledEditorKit_AttributeTracker implements javax.swing.event.CaretListener implements java.beans.PropertyChangeListener implements java.io.Serializable
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function caretUpdate(e : javax.swing.event.CaretEvent) : Void;
+	@:overload @:public public function caretUpdate(e : javax.swing.event.CaretEvent) : Void;
 	
 	
 }
 @:native('javax$swing$text$StyledEditorKit$StyledViewFactory') @:internal extern class StyledEditorKit_StyledViewFactory implements javax.swing.text.ViewFactory
 {
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }
@@ -177,7 +177,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @param nm the name of the action
 	*/
-	@:overload public function new(nm : String) : Void;
+	@:overload @:public public function new(nm : String) : Void;
 	
 	/**
 	* Gets the target editor for an action.
@@ -185,7 +185,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param e the action event
 	* @return the editor
 	*/
-	@:overload @:final private function getEditor(e : java.awt.event.ActionEvent) : javax.swing.JEditorPane;
+	@:overload @:protected @:final private function getEditor(e : java.awt.event.ActionEvent) : javax.swing.JEditorPane;
 	
 	/**
 	* Gets the document associated with an editor pane.
@@ -194,7 +194,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @return the document
 	* @exception IllegalArgumentException for the wrong document type
 	*/
-	@:overload @:final private function getStyledDocument(e : javax.swing.JEditorPane) : javax.swing.text.StyledDocument;
+	@:overload @:protected @:final private function getStyledDocument(e : javax.swing.JEditorPane) : javax.swing.text.StyledDocument;
 	
 	/**
 	* Gets the editor kit associated with an editor pane.
@@ -203,7 +203,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @return the kit
 	* @exception IllegalArgumentException for the wrong document type
 	*/
-	@:overload @:final private function getStyledEditorKit(e : javax.swing.JEditorPane) : javax.swing.text.StyledEditorKit;
+	@:overload @:protected @:final private function getStyledEditorKit(e : javax.swing.JEditorPane) : javax.swing.text.StyledEditorKit;
 	
 	/**
 	* Applies the given attributes to character
@@ -217,7 +217,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param attr the attributes
 	* @param replace   if true, then replace the existing attributes first
 	*/
-	@:overload @:final private function setCharacterAttributes(editor : javax.swing.JEditorPane, attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:protected @:final private function setCharacterAttributes(editor : javax.swing.JEditorPane, attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	/**
 	* Applies the given attributes to paragraphs.  If
@@ -230,7 +230,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param attr the attributes
 	* @param replace   if true, replace the existing attributes first
 	*/
-	@:overload @:final private function setParagraphAttributes(editor : javax.swing.JEditorPane, attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
+	@:overload @:protected @:final private function setParagraphAttributes(editor : javax.swing.JEditorPane, attr : javax.swing.text.AttributeSet, replace : Bool) : Void;
 	
 	
 }
@@ -257,14 +257,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param nm the action name
 	* @param family the font family
 	*/
-	@:overload public function new(nm : String, family : String) : Void;
+	@:overload @:public public function new(nm : String, family : String) : Void;
 	
 	/**
 	* Sets the font family.
 	*
 	* @param e the event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -291,14 +291,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param nm the action name
 	* @param size the font size
 	*/
-	@:overload public function new(nm : String, size : Int) : Void;
+	@:overload @:public public function new(nm : String, size : Int) : Void;
 	
 	/**
 	* Sets the font size.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -335,14 +335,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param nm the action name
 	* @param fg the foreground color
 	*/
-	@:overload public function new(nm : String, fg : java.awt.Color) : Void;
+	@:overload @:public public function new(nm : String, fg : java.awt.Color) : Void;
 	
 	/**
 	* Sets the foreground color.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -378,14 +378,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @param nm the action name
 	* @param a the alignment >= 0
 	*/
-	@:overload public function new(nm : String, a : Int) : Void;
+	@:overload @:public public function new(nm : String, a : Int) : Void;
 	
 	/**
 	* Sets the alignment.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -406,14 +406,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	/**
 	* Constructs a new BoldAction.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Toggles the bold attribute.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -434,14 +434,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	/**
 	* Constructs a new ItalicAction.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Toggles the italic attribute.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -462,14 +462,14 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	/**
 	* Constructs a new UnderlineAction.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Toggles the Underline attribute.
 	*
 	* @param e the action event
 	*/
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -482,7 +482,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 */
 @:native('javax$swing$text$StyledEditorKit$StyledInsertBreakAction') @:internal extern class StyledEditorKit_StyledInsertBreakAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

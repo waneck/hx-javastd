@@ -35,16 +35,16 @@ package sun.security.krb5.internal.ccache;
 */
 extern class CCacheOutputStream extends sun.security.krb5.internal.util.KrbDataOutputStream implements sun.security.krb5.internal.ccache.FileCCacheConstants
 {
-	@:overload public function new(os : java.io.OutputStream) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream) : Void;
 	
-	@:overload public function writeHeader(p : sun.security.krb5.PrincipalName, version : Int) : Void;
+	@:overload @:public public function writeHeader(p : sun.security.krb5.PrincipalName, version : Int) : Void;
 	
 	/*For object data fields which themselves have multiple data fields, such as PrincipalName, EncryptionKey
 	HostAddresses, AuthorizationData, I created corresponding write methods (writePrincipal,
 	writeKey,...) in each class, since converting the object into FCC format data stream
 	should be encapsulated in object itself.
 	*/
-	@:overload public function addCreds(creds : sun.security.krb5.Credentials) : Void;
+	@:overload @:public public function addCreds(creds : sun.security.krb5.Credentials) : Void;
 	
 	
 }

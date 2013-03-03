@@ -47,7 +47,7 @@ package javax.lang.model;
 	*
 	* @param message the detail message
 	*/
-	@:overload private function new(message : String) : Void;
+	@:overload @:protected private function new(message : String) : Void;
 	
 	
 }

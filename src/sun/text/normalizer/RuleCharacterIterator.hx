@@ -46,21 +46,21 @@ extern class RuleCharacterIterator
 	/**
 	* Value returned when there are no more characters to iterate.
 	*/
-	public static var DONE(default, null) : Int;
+	@:public @:static @:final public static var DONE(default, null) : Int;
 	
 	/**
 	* Bitmask option to enable parsing of variable names.  If (options &
 	* PARSE_VARIABLES) != 0, then an embedded variable will be expanded to
 	* its value.  Variables are parsed using the SymbolTable API.
 	*/
-	public static var PARSE_VARIABLES(default, null) : Int;
+	@:public @:static @:final public static var PARSE_VARIABLES(default, null) : Int;
 	
 	/**
 	* Bitmask option to enable parsing of escape sequences.  If (options &
 	* PARSE_ESCAPES) != 0, then an embedded escape sequence will be expanded
 	* to its value.  Escapes are parsed using Utility.unescapeAt().
 	*/
-	public static var PARSE_ESCAPES(default, null) : Int;
+	@:public @:static @:final public static var PARSE_ESCAPES(default, null) : Int;
 	
 	/**
 	* Bitmask option to enable skipping of whitespace.  If (options &
@@ -68,7 +68,7 @@ extern class RuleCharacterIterator
 	* skipped, as if they were not present in the input.  Whitespace
 	* characters are defined by UCharacterProperty.isRuleWhiteSpace().
 	*/
-	public static var SKIP_WHITESPACE(default, null) : Int;
+	@:public @:static @:final public static var SKIP_WHITESPACE(default, null) : Int;
 	
 	/**
 	* Constructs an iterator over the given text, starting at the given
@@ -81,12 +81,12 @@ extern class RuleCharacterIterator
 	* variable has been dereferenced, then pos will <em>not</em> increment as
 	* characters of the variable value are iterated.
 	*/
-	@:overload public function new(text : String, sym : sun.text.normalizer.SymbolTable, pos : java.text.ParsePosition) : Void;
+	@:overload @:public public function new(text : String, sym : sun.text.normalizer.SymbolTable, pos : java.text.ParsePosition) : Void;
 	
 	/**
 	* Returns true if this iterator has no more characters to return.
 	*/
-	@:overload public function atEnd() : Bool;
+	@:overload @:public public function atEnd() : Bool;
 	
 	/**
 	* Returns the next character using the given options, or DONE if there
@@ -96,7 +96,7 @@ extern class RuleCharacterIterator
 	* together: PARSE_VARIABLES, PARSE_ESCAPES, SKIP_WHITESPACE.
 	* @return the current 32-bit code point, or DONE
 	*/
-	@:overload public function next(options : Int) : Int;
+	@:overload @:public public function next(options : Int) : Int;
 	
 	/**
 	* Returns true if the last character returned by next() was
@@ -104,12 +104,12 @@ extern class RuleCharacterIterator
 	* next() included PARSE_ESCAPED and the next character was an
 	* escape sequence.
 	*/
-	@:overload public function isEscaped() : Bool;
+	@:overload @:public public function isEscaped() : Bool;
 	
 	/**
 	* Returns true if this iterator is currently within a variable expansion.
 	*/
-	@:overload public function inVariable() : Bool;
+	@:overload @:public public function inVariable() : Bool;
 	
 	/**
 	* Returns an object which, when later passed to setPos(), will
@@ -130,14 +130,14 @@ extern class RuleCharacterIterator
 	* @return a position object which may be passed to setPos(),
 	* either `p,' or if `p' == null, a newly-allocated object
 	*/
-	@:overload public function getPos(p : Dynamic) : Dynamic;
+	@:overload @:public public function getPos(p : Dynamic) : Dynamic;
 	
 	/**
 	* Restores this iterator to the position it had when getPos()
 	* returned the given object.
 	* @param p a position object previously returned by getPos()
 	*/
-	@:overload public function setPos(p : Dynamic) : Void;
+	@:overload @:public public function setPos(p : Dynamic) : Void;
 	
 	/**
 	* Skips ahead past any ignored characters, as indicated by the given
@@ -147,7 +147,7 @@ extern class RuleCharacterIterator
 	* @param options one or more of the following options, bitwise-OR-ed
 	* together: PARSE_VARIABLES, PARSE_ESCAPES, SKIP_WHITESPACE.
 	*/
-	@:overload public function skipIgnored(options : Int) : Void;
+	@:overload @:public public function skipIgnored(options : Int) : Void;
 	
 	/**
 	* Returns a string containing the remainder of the characters to be
@@ -161,14 +161,14 @@ extern class RuleCharacterIterator
 	* @return a string containing the characters to be returned by future
 	* calls to next()
 	*/
-	@:overload public function lookahead() : String;
+	@:overload @:public public function lookahead() : String;
 	
 	/**
 	* Advances the position by the given number of 16-bit code units.
 	* This is useful in conjunction with the lookahead() method.
 	* @param count the number of 16-bit code units to jump over
 	*/
-	@:overload public function jumpahead(count : Int) : Void;
+	@:overload @:public public function jumpahead(count : Int) : Void;
 	
 	
 }

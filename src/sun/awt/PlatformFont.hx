@@ -25,39 +25,39 @@ package sun.awt;
 */
 extern class PlatformFont implements java.awt.peer.FontPeer
 {
-	private var componentFonts : java.NativeArray<sun.awt.FontDescriptor>;
+	@:protected private var componentFonts : java.NativeArray<sun.awt.FontDescriptor>;
 	
-	private var defaultChar : java.StdTypes.Char16;
+	@:protected private var defaultChar : java.StdTypes.Char16;
 	
-	private var fontConfig : sun.awt.FontConfiguration;
+	@:protected private var fontConfig : sun.awt.FontConfiguration;
 	
-	private var defaultFont : sun.awt.FontDescriptor;
+	@:protected private var defaultFont : sun.awt.FontDescriptor;
 	
-	private var familyName : String;
+	@:protected private var familyName : String;
 	
-	private static var FONTCACHESIZE : Int;
+	@:protected @:static private static var FONTCACHESIZE : Int;
 	
-	private static var FONTCACHEMASK : Int;
+	@:protected @:static private static var FONTCACHEMASK : Int;
 	
-	private static var osVersion : String;
+	@:protected @:static private static var osVersion : String;
 	
-	@:overload public function new(name : String, style : Int) : Void;
+	@:overload @:public public function new(name : String, style : Int) : Void;
 	
 	/**
 	* Returns the character that should be rendered when a glyph
 	* is missing.
 	*/
-	@:overload @:abstract private function getMissingGlyphCharacter() : java.StdTypes.Char16;
+	@:overload @:protected @:abstract private function getMissingGlyphCharacter() : java.StdTypes.Char16;
 	
 	/**
 	* make a array of CharsetString with given String.
 	*/
-	@:overload public function makeMultiCharsetString(str : String) : java.NativeArray<sun.awt.CharsetString>;
+	@:overload @:public public function makeMultiCharsetString(str : String) : java.NativeArray<sun.awt.CharsetString>;
 	
 	/**
 	* make a array of CharsetString with given String.
 	*/
-	@:overload public function makeMultiCharsetString(str : String, allowdefault : Bool) : java.NativeArray<sun.awt.CharsetString>;
+	@:overload @:public public function makeMultiCharsetString(str : String, allowdefault : Bool) : java.NativeArray<sun.awt.CharsetString>;
 	
 	/**
 	* make a array of CharsetString with given char array.
@@ -65,7 +65,7 @@ extern class PlatformFont implements java.awt.peer.FontPeer
 	* @param offset offset of first character of interest
 	* @param len number of characters to convert
 	*/
-	@:overload public function makeMultiCharsetString(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.NativeArray<sun.awt.CharsetString>;
+	@:overload @:public public function makeMultiCharsetString(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.NativeArray<sun.awt.CharsetString>;
 	
 	/**
 	* make a array of CharsetString with given char array.
@@ -80,20 +80,20 @@ extern class PlatformFont implements java.awt.peer.FontPeer
 	* then return null.
 	* This is used to choose alternative means of displaying the text.
 	*/
-	@:overload public function makeMultiCharsetString(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int, allowDefault : Bool) : java.NativeArray<sun.awt.CharsetString>;
+	@:overload @:public public function makeMultiCharsetString(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int, allowDefault : Bool) : java.NativeArray<sun.awt.CharsetString>;
 	
 	/**
 	* Is it possible that this font's metrics require the multi-font calls?
 	* This might be true, for example, if the font supports kerning.
 	**/
-	@:overload public function mightHaveMultiFontMetrics() : Bool;
+	@:overload @:public public function mightHaveMultiFontMetrics() : Bool;
 	
 	/**
 	* Specialized fast path string conversion for AWT.
 	*/
-	@:overload public function makeConvertedMultiFontString(str : String) : java.NativeArray<Dynamic>;
+	@:overload @:public public function makeConvertedMultiFontString(str : String) : java.NativeArray<Dynamic>;
 	
-	@:overload public function makeConvertedMultiFontChars(data : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : java.NativeArray<Dynamic>;
+	@:overload @:public public function makeConvertedMultiFontChars(data : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : java.NativeArray<Dynamic>;
 	
 	/*
 	* Create fontCache on demand instead of during construction to
@@ -102,7 +102,7 @@ extern class PlatformFont implements java.awt.peer.FontPeer
 	* This method is declared final so that its code can be inlined
 	* by the compiler.
 	*/
-	@:overload @:final private function getFontCache() : java.NativeArray<Dynamic>;
+	@:overload @:protected @:final private function getFontCache() : java.NativeArray<Dynamic>;
 	
 	
 }

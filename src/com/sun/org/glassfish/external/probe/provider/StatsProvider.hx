@@ -29,9 +29,9 @@ package com.sun.org.glassfish.external.probe.provider;
 */
 extern interface StatsProvider
 {
-	@:overload public function enable() : Void;
+	@:overload @:public public function enable() : Void;
 	
-	@:overload public function disable() : Void;
+	@:overload @:public public function disable() : Void;
 	
 	
 }

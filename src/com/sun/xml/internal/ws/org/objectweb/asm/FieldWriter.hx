@@ -64,11 +64,11 @@ package com.sun.xml.internal.ws.org.objectweb.asm;
 */
 @:internal extern class FieldWriter implements com.sun.xml.internal.ws.org.objectweb.asm.FieldVisitor
 {
-	@:overload public function visitAnnotation(desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitAnnotation(desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitAttribute(attr : com.sun.xml.internal.ws.org.objectweb.asm.Attribute) : Void;
+	@:overload @:public public function visitAttribute(attr : com.sun.xml.internal.ws.org.objectweb.asm.Attribute) : Void;
 	
-	@:overload public function visitEnd() : Void;
+	@:overload @:public public function visitEnd() : Void;
 	
 	
 }

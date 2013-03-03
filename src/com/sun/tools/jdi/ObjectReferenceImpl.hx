@@ -25,56 +25,56 @@ package com.sun.tools.jdi;
 */
 extern class ObjectReferenceImpl extends com.sun.tools.jdi.ValueImpl implements com.sun.jdi.ObjectReference implements com.sun.tools.jdi.VMListener
 {
-	@:overload private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
+	@:overload @:protected private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
-	@:overload private function getCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
+	@:overload @:protected private function getCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
-	@:overload private function invokableReferenceType(method : com.sun.jdi.Method) : com.sun.tools.jdi.ClassTypeImpl;
+	@:overload @:protected private function invokableReferenceType(method : com.sun.jdi.Method) : com.sun.tools.jdi.ClassTypeImpl;
 	
-	@:overload private function description() : String;
+	@:overload @:protected private function description() : String;
 	
 	/*
 	* VMListener implementation
 	*/
-	@:overload public function vmSuspended(action : com.sun.tools.jdi.VMAction) : Bool;
+	@:overload @:public public function vmSuspended(action : com.sun.tools.jdi.VMAction) : Bool;
 	
-	@:overload public function vmNotSuspended(action : com.sun.tools.jdi.VMAction) : Bool;
+	@:overload @:public public function vmNotSuspended(action : com.sun.tools.jdi.VMAction) : Bool;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload override public function type() : com.sun.jdi.Type;
+	@:overload @:public override public function type() : com.sun.jdi.Type;
 	
-	@:overload public function referenceType() : com.sun.jdi.ReferenceType;
+	@:overload @:public public function referenceType() : com.sun.jdi.ReferenceType;
 	
-	@:overload public function getValue(sig : com.sun.jdi.Field) : com.sun.jdi.Value;
+	@:overload @:public public function getValue(sig : com.sun.jdi.Field) : com.sun.jdi.Value;
 	
-	@:overload public function getValues(theFields : java.util.List<com.sun.jdi.Field>) : java.util.Map<com.sun.jdi.Field, com.sun.jdi.Value>;
+	@:overload @:public public function getValues(theFields : java.util.List<com.sun.jdi.Field>) : java.util.Map<com.sun.jdi.Field, com.sun.jdi.Value>;
 	
-	@:overload public function setValue(field : com.sun.jdi.Field, value : com.sun.jdi.Value) : Void;
+	@:overload @:public public function setValue(field : com.sun.jdi.Field, value : com.sun.jdi.Value) : Void;
 	
-	@:overload public function invokeMethod(threadIntf : com.sun.jdi.ThreadReference, methodIntf : com.sun.jdi.Method, origArguments : java.util.List<com.sun.jdi.Value>, options : Int) : com.sun.jdi.Value;
-	
-	/* leave synchronized to keep count accurate */
-	@:overload @:synchronized public function disableCollection() : Void;
+	@:overload @:public public function invokeMethod(threadIntf : com.sun.jdi.ThreadReference, methodIntf : com.sun.jdi.Method, origArguments : java.util.List<com.sun.jdi.Value>, options : Int) : com.sun.jdi.Value;
 	
 	/* leave synchronized to keep count accurate */
-	@:overload @:synchronized public function enableCollection() : Void;
+	@:overload @:public @:synchronized public function disableCollection() : Void;
 	
-	@:overload public function isCollected() : Bool;
+	/* leave synchronized to keep count accurate */
+	@:overload @:public @:synchronized public function enableCollection() : Void;
 	
-	@:overload public function uniqueID() : haxe.Int64;
+	@:overload @:public public function isCollected() : Bool;
 	
-	@:overload public function waitingThreads() : java.util.List<com.sun.jdi.ThreadReference>;
+	@:overload @:public public function uniqueID() : haxe.Int64;
 	
-	@:overload public function owningThread() : com.sun.jdi.ThreadReference;
+	@:overload @:public public function waitingThreads() : java.util.List<com.sun.jdi.ThreadReference>;
 	
-	@:overload public function entryCount() : Int;
+	@:overload @:public public function owningThread() : com.sun.jdi.ThreadReference;
 	
-	@:overload public function referringObjects(maxReferrers : haxe.Int64) : java.util.List<com.sun.jdi.ObjectReference>;
+	@:overload @:public public function entryCount() : Int;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public public function referringObjects(maxReferrers : haxe.Int64) : java.util.List<com.sun.jdi.ObjectReference>;
+	
+	@:overload @:public override public function toString() : String;
 	
 	
 }

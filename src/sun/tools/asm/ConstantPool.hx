@@ -28,17 +28,17 @@ extern class ConstantPool implements sun.tools.java.RuntimeConstants
 	/**
 	* Find an entry, may return 0
 	*/
-	@:overload public function index(obj : Dynamic) : Int;
+	@:overload @:public public function index(obj : Dynamic) : Int;
 	
 	/**
 	* Add an entry
 	*/
-	@:overload public function put(obj : Dynamic) : Void;
+	@:overload @:public public function put(obj : Dynamic) : Void;
 	
 	/**
 	* Write to output
 	*/
-	@:overload public function write(env : sun.tools.java.Environment, out : java.io.DataOutputStream) : Void;
+	@:overload @:public public function write(env : sun.tools.java.Environment, out : java.io.DataOutputStream) : Void;
 	
 	
 }

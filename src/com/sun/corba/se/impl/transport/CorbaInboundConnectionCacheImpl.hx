@@ -28,23 +28,23 @@ extern class CorbaInboundConnectionCacheImpl extends com.sun.corba.se.impl.trans
 	/**
 	* @author Harold Carr
 	*/
-	private var connectionCache : java.util.Collection<Dynamic>;
+	@:protected private var connectionCache : java.util.Collection<Dynamic>;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, acceptor : com.sun.corba.se.pept.transport.Acceptor) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, acceptor : com.sun.corba.se.pept.transport.Acceptor) : Void;
 	
-	@:overload public function get(acceptor : com.sun.corba.se.pept.transport.Acceptor) : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function get(acceptor : com.sun.corba.se.pept.transport.Acceptor) : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload public function put(acceptor : com.sun.corba.se.pept.transport.Acceptor, connection : com.sun.corba.se.pept.transport.Connection) : Void;
+	@:overload @:public public function put(acceptor : com.sun.corba.se.pept.transport.Acceptor, connection : com.sun.corba.se.pept.transport.Connection) : Void;
 	
-	@:overload public function remove(connection : com.sun.corba.se.pept.transport.Connection) : Void;
+	@:overload @:public public function remove(connection : com.sun.corba.se.pept.transport.Connection) : Void;
 	
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public override public function values() : java.util.Collection<Dynamic>;
 	
-	@:overload private function backingStore() : Dynamic;
+	@:overload @:protected override private function backingStore() : Dynamic;
 	
-	@:overload private function registerWithMonitoring() : Void;
+	@:overload @:protected override private function registerWithMonitoring() : Void;
 	
-	@:overload private function dprint(msg : String) : Void;
+	@:overload @:protected override private function dprint(msg : String) : Void;
 	
 	
 }

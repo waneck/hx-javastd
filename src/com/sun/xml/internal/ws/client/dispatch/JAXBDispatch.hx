@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.client.dispatch;
 */
 extern class JAXBDispatch extends com.sun.xml.internal.ws.client.dispatch.DispatchImpl<Dynamic>
 {
-	@:overload public function new(port : javax.xml.namespace.QName, jc : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, service : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(port : javax.xml.namespace.QName, jc : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, service : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, jc : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, jc : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload override public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public override public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

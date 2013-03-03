@@ -25,7 +25,7 @@ extern interface XMLGrammarLoader
 	* this XMLGrammarLoader.  This method may return null if no features
 	* are recognized.
 	*/
-	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Returns the state of a feature.
@@ -34,7 +34,7 @@ extern interface XMLGrammarLoader
 	*
 	* @throws XMLConfigurationException Thrown on configuration error.
 	*/
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Sets the state of a feature.
@@ -45,14 +45,14 @@ extern interface XMLGrammarLoader
 	* @throws XMLConfigurationException Thrown when a feature is not
 	*                  recognized or cannot be set.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this XMLGrammarLoader.  This method may return null if no properties
 	* are recognized.
 	*/
-	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Returns the state of a property.
@@ -61,7 +61,7 @@ extern interface XMLGrammarLoader
 	*
 	* @throws XMLConfigurationException Thrown on configuration error.
 	*/
-	@:overload public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Sets the state of a property.
@@ -72,7 +72,7 @@ extern interface XMLGrammarLoader
 	* @throws XMLConfigurationException Thrown when a property is not
 	*                  recognized or cannot be set.
 	*/
-	@:overload public function setProperty(propertyId : String, state : Dynamic) : Void;
+	@:overload @:public public function setProperty(propertyId : String, state : Dynamic) : Void;
 	
 	/**
 	* Set the locale to use for messages.
@@ -82,30 +82,30 @@ extern interface XMLGrammarLoader
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
 	/** Return the Locale the XMLGrammarLoader is using. */
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Sets the error handler.
 	*
 	* @param errorHandler The error handler.
 	*/
-	@:overload public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler) : Void;
 	
 	/** Returns the registered error handler.  */
-	@:overload public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
+	@:overload @:public public function getErrorHandler() : com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler;
 	
 	/**
 	* Sets the entity resolver.
 	*
 	* @param entityResolver The new entity resolver.
 	*/
-	@:overload public function setEntityResolver(entityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(entityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver) : Void;
 	
 	/** Returns the registered entity resolver.  */
-	@:overload public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
+	@:overload @:public public function getEntityResolver() : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
 	
 	/**
 	* Returns a Grammar object by parsing the contents of the
@@ -117,7 +117,7 @@ extern interface XMLGrammarLoader
 	*          XNIException    When a condition arises (such as a FatalError) that requires parsing
 	*                              of the entity be terminated.
 	*/
-	@:overload public function loadGrammar(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload @:public public function loadGrammar(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	
 }

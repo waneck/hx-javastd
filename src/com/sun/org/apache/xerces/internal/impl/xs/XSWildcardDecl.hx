@@ -31,65 +31,65 @@ extern class XSWildcardDecl implements com.sun.org.apache.xerces.internal.xs.XSW
 	*
 	* @version $Id: XSWildcardDecl.java,v 1.7 2010-11-01 04:39:55 joehw Exp $
 	*/
-	public static var ABSENT(default, null) : String;
+	@:public @:static @:final public static var ABSENT(default, null) : String;
 	
-	public var fType : java.StdTypes.Int16;
+	@:public public var fType : java.StdTypes.Int16;
 	
-	public var fProcessContents : java.StdTypes.Int16;
+	@:public public var fProcessContents : java.StdTypes.Int16;
 	
-	public var fNamespaceList : java.NativeArray<String>;
+	@:public public var fNamespaceList : java.NativeArray<String>;
 	
-	public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:public public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* Validation Rule: Wildcard allows Namespace Name
 	*/
-	@:overload public function allowNamespace(namespace : String) : Bool;
+	@:overload @:public public function allowNamespace(namespace : String) : Bool;
 	
 	/**
 	*  Schema Component Constraint: Wildcard Subset
 	*/
-	@:overload public function isSubsetOf(superWildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl) : Bool;
+	@:overload @:public public function isSubsetOf(superWildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl) : Bool;
 	
 	/**
 	* Check whether this wildcard has a weaker process contents than the super.
 	*/
-	@:overload public function weakerProcessContents(superWildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl) : Bool;
+	@:overload @:public public function weakerProcessContents(superWildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl) : Bool;
 	
 	/**
 	* Schema Component Constraint: Attribute Wildcard Union
 	*/
-	@:overload public function performUnionWith(wildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl, processContents : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
+	@:overload @:public public function performUnionWith(wildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl, processContents : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
 	
 	/**
 	* Schema Component Constraint: Attribute Wildcard Intersection
 	*/
-	@:overload public function performIntersectionWith(wildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl, processContents : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
+	@:overload @:public public function performIntersectionWith(wildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl, processContents : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Get the type of the object, i.e ELEMENT_DECLARATION.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The <code>name</code> of this <code>XSObject</code> depending on the
 	* <code>XSObject</code> type.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
 	* unspecified.  defines how a namespace URI is attached to schema
 	* components.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* Namespace constraint: A constraint type: any, not, list.
 	*/
-	@:overload public function getConstraintType() : java.StdTypes.Int16;
+	@:overload @:public public function getConstraintType() : java.StdTypes.Int16;
 	
 	/**
 	* Namespace constraint. For <code>constraintType</code>
@@ -97,33 +97,33 @@ extern class XSWildcardDecl implements com.sun.org.apache.xerces.internal.xs.XSW
 	* <code>constraintType</code> NOT_NSCONSTRAINT, the list contains
 	* disallowed namespaces.
 	*/
-	@:overload public function getNsConstraintList() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getNsConstraintList() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* {process contents} One of skip, lax or strict. Valid constants values
 	* are: PC_SKIP, PC_LAX, PC_STRICT.
 	*/
-	@:overload public function getProcessContents() : java.StdTypes.Int16;
+	@:overload @:public public function getProcessContents() : java.StdTypes.Int16;
 	
 	/**
 	* String valid of {process contents}. One of "skip", "lax" or "strict".
 	*/
-	@:overload public function getProcessContentsAsString() : String;
+	@:overload @:public public function getProcessContentsAsString() : String;
 	
 	/**
 	* Optional. Annotation.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* Optional. Annotations.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* @see org.apache.xerces.xs.XSObject#getNamespaceItem()
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	
 }

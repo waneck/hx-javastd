@@ -25,22 +25,22 @@ package com.sun.media.sound;
 */
 extern class SoftInstrument extends javax.sound.midi.Instrument
 {
-	@:overload public function new(ins : com.sun.media.sound.ModelInstrument) : Void;
+	@:overload @:public public function new(ins : com.sun.media.sound.ModelInstrument) : Void;
 	
-	@:overload public function new(ins : com.sun.media.sound.ModelInstrument, overrideperformers : java.NativeArray<com.sun.media.sound.ModelPerformer>) : Void;
+	@:overload @:public public function new(ins : com.sun.media.sound.ModelInstrument, overrideperformers : java.NativeArray<com.sun.media.sound.ModelPerformer>) : Void;
 	
-	@:overload public function getDirector(channel : javax.sound.midi.MidiChannel, player : com.sun.media.sound.ModelDirectedPlayer) : com.sun.media.sound.ModelDirector;
+	@:overload @:public public function getDirector(channel : javax.sound.midi.MidiChannel, player : com.sun.media.sound.ModelDirectedPlayer) : com.sun.media.sound.ModelDirector;
 	
-	@:overload public function getSourceInstrument() : com.sun.media.sound.ModelInstrument;
+	@:overload @:public public function getSourceInstrument() : com.sun.media.sound.ModelInstrument;
 	
-	@:overload override public function getData() : Dynamic;
+	@:overload @:public override public function getData() : Dynamic;
 	
 	/* am: currently getPerformers() is not used (replaced with getPerformer(int))
 	public SoftPerformer[] getPerformers() {
 	return performers;
 	}
 	*/
-	@:overload public function getPerformer(index : Int) : com.sun.media.sound.SoftPerformer;
+	@:overload @:public public function getPerformer(index : Int) : com.sun.media.sound.SoftPerformer;
 	
 	
 }

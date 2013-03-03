@@ -29,7 +29,7 @@ extern class BasicHTML
 	* Create an html renderer for the given component and
 	* string of html.
 	*/
-	@:overload public static function createHTMLView(c : javax.swing.JComponent, html : String) : javax.swing.text.View;
+	@:overload @:public @:static public static function createHTMLView(c : javax.swing.JComponent, html : String) : javax.swing.text.View;
 	
 	/**
 	* Returns the baseline for the html renderer.
@@ -44,14 +44,14 @@ extern class BasicHTML
 	* @see javax.swing.JComponent#getBaseline(int,int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getHTMLBaseline(view : javax.swing.text.View, w : Int, h : Int) : Int;
+	@:require(java6) @:overload @:public @:static public static function getHTMLBaseline(view : javax.swing.text.View, w : Int, h : Int) : Int;
 	
 	/**
 	* Check the given string to see if it should trigger the
 	* html rendering logic in a non-text component that supports
 	* html rendering.
 	*/
-	@:overload public static function isHTMLString(s : String) : Bool;
+	@:overload @:public @:static public static function isHTMLString(s : String) : Bool;
 	
 	/**
 	* Stash the HTML render for the given text into the client
@@ -63,13 +63,13 @@ extern class BasicHTML
 	* that are static (i.e. shared) and get their state
 	* entirely from the JComponent.
 	*/
-	@:overload public static function updateRenderer(c : javax.swing.JComponent, text : String) : Void;
+	@:overload @:public @:static public static function updateRenderer(c : javax.swing.JComponent, text : String) : Void;
 	
 	/**
 	* Key to use for the html renderer when stored as a
 	* client property of a JComponent.
 	*/
-	public static var propertyKey(default, null) : String;
+	@:public @:static @:final public static var propertyKey(default, null) : String;
 	
 	/**
 	* Key stored as a client property to indicate the base that relative
@@ -81,7 +81,7 @@ extern class BasicHTML
 	*                                xxx.class.getResource("resources/"));
 	* </pre>
 	*/
-	public static var documentBaseKey(default, null) : String;
+	@:public @:static @:final public static var documentBaseKey(default, null) : String;
 	
 	
 }
@@ -102,19 +102,19 @@ extern class BasicHTML
 	/**
 	* Overriden to return our own slimmed down style sheet.
 	*/
-	@:overload public function getStyleSheet() : javax.swing.text.html.StyleSheet;
+	@:overload @:public override public function getStyleSheet() : javax.swing.text.html.StyleSheet;
 	
 	/**
 	* Sets the async policy to flush everything in one chunk, and
 	* to not display unknown tags.
 	*/
-	@:overload public function createDefaultDocument(defaultFont : java.awt.Font, foreground : java.awt.Color) : javax.swing.text.Document;
+	@:overload @:public public function createDefaultDocument(defaultFont : java.awt.Font, foreground : java.awt.Color) : javax.swing.text.Document;
 	
 	/**
 	* Returns the ViewFactory that is used to make sure the Views don't
 	* load in the background.
 	*/
-	@:overload override public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	
 }
@@ -124,7 +124,7 @@ extern class BasicHTML
 */
 @:native('javax$swing$plaf$basic$BasicHTML$BasicHTMLViewFactory') @:internal extern class BasicHTML_BasicHTMLViewFactory extends javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_HTMLFactory
 {
-	@:overload public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
+	@:overload @:public override public function create(elem : javax.swing.text.Element) : javax.swing.text.View;
 	
 	
 }
@@ -147,7 +147,7 @@ extern class BasicHTML
 	* level there are no attributes.  If an attribute is resolved
 	* up the view hierarchy this is the end of the line.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public override public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Determines the preferred span for this view along an axis.
@@ -158,7 +158,7 @@ extern class BasicHTML
 	*         that is returned, although there is no guarantee.
 	*         The parent may choose to resize or break the view.
 	*/
-	@:overload public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an axis.
@@ -169,7 +169,7 @@ extern class BasicHTML
 	*         that is returned, although there is no guarantee.
 	*         The parent may choose to resize or break the view.
 	*/
-	@:overload public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an axis.
@@ -180,7 +180,7 @@ extern class BasicHTML
 	*         that is returned, although there is no guarantee.
 	*         The parent may choose to resize or break the view.
 	*/
-	@:overload public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Specifies that a preference has changed.
@@ -200,7 +200,7 @@ extern class BasicHTML
 	* @param width true if the width preference has changed
 	* @param height true if the height preference has changed
 	*/
-	@:overload public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload @:public override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Determines the desired alignment for this view along an axis.
@@ -209,7 +209,7 @@ extern class BasicHTML
 	* @return the desired alignment, where 0.0 indicates the origin
 	*     and 1.0 the full span away from the origin
 	*/
-	@:overload public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Renders the view.
@@ -217,14 +217,14 @@ extern class BasicHTML
 	* @param g the graphics context
 	* @param allocation the region to render into
 	*/
-	@:overload public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Sets the view parent.
 	*
 	* @param parent the parent view
 	*/
-	@:overload public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns the number of views in this view.  Since
@@ -234,7 +234,7 @@ extern class BasicHTML
 	* @return the number of views
 	* @see #getView
 	*/
-	@:overload public function getViewCount() : Int;
+	@:overload @:public override public function getViewCount() : Int;
 	
 	/**
 	* Gets the n-th view in this container.
@@ -242,7 +242,7 @@ extern class BasicHTML
 	* @param n the number of the view to get
 	* @return the view
 	*/
-	@:overload public function getView(n : Int) : javax.swing.text.View;
+	@:overload @:public override public function getView(n : Int) : javax.swing.text.View;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -252,7 +252,7 @@ extern class BasicHTML
 	* @param a the allocated region to render into
 	* @return the bounding box of the given position
 	*/
-	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -273,7 +273,7 @@ extern class BasicHTML
 	* @exception IllegalArgumentException for an invalid bias argument
 	* @see View#viewToModel
 	*/
-	@:overload public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -285,35 +285,35 @@ extern class BasicHTML
 	* @return the location within the model that best represents the
 	*    given point in the view
 	*/
-	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Returns the document model underlying the view.
 	*
 	* @return the model
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public override public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Returns the starting offset into the model for this view.
 	*
 	* @return the starting offset
 	*/
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public override public function getStartOffset() : Int;
 	
 	/**
 	* Returns the ending offset into the model for this view.
 	*
 	* @return the ending offset
 	*/
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public override public function getEndOffset() : Int;
 	
 	/**
 	* Gets the element that this view is mapped to.
 	*
 	* @return the view
 	*/
-	@:overload public function getElement() : javax.swing.text.Element;
+	@:overload @:public override public function getElement() : javax.swing.text.Element;
 	
 	/**
 	* Sets the view size.
@@ -321,7 +321,7 @@ extern class BasicHTML
 	* @param width the width
 	* @param height the height
 	*/
-	@:overload public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public override public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Fetches the container hosting the view.  This is useful for
@@ -331,7 +331,7 @@ extern class BasicHTML
 	*
 	* @return the container
 	*/
-	@:overload public function getContainer() : java.awt.Container;
+	@:overload @:public override public function getContainer() : java.awt.Container;
 	
 	/**
 	* Fetches the factory to be used for building the
@@ -343,7 +343,7 @@ extern class BasicHTML
 	*
 	* @return the factory
 	*/
-	@:overload public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public override public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	
 }

@@ -36,44 +36,44 @@ package com.sun.tools.classfile;
 extern class Instruction
 {
 	/** An instruction is defined by its position in a bytecode array. */
-	@:overload public function new(bytes : java.NativeArray<java.StdTypes.Int8>, pc : Int) : Void;
+	@:overload @:public public function new(bytes : java.NativeArray<java.StdTypes.Int8>, pc : Int) : Void;
 	
 	/** Get the position of the instruction within the bytecode array. */
-	@:overload public function getPC() : Int;
+	@:overload @:public public function getPC() : Int;
 	
 	/** Get a byte value, relative to the start of this instruction. */
-	@:overload public function getByte(offset : Int) : Int;
+	@:overload @:public public function getByte(offset : Int) : Int;
 	
 	/** Get an unsigned byte value, relative to the start of this instruction. */
-	@:overload public function getUnsignedByte(offset : Int) : Int;
+	@:overload @:public public function getUnsignedByte(offset : Int) : Int;
 	
 	/** Get a 2-byte value, relative to the start of this instruction. */
-	@:overload public function getShort(offset : Int) : Int;
+	@:overload @:public public function getShort(offset : Int) : Int;
 	
 	/** Get a unsigned 2-byte value, relative to the start of this instruction. */
-	@:overload public function getUnsignedShort(offset : Int) : Int;
+	@:overload @:public public function getUnsignedShort(offset : Int) : Int;
 	
 	/** Get a 4-byte value, relative to the start of this instruction. */
-	@:overload public function getInt(offset : Int) : Int;
+	@:overload @:public public function getInt(offset : Int) : Int;
 	
 	/** Get the Opcode for this instruction, or null if the instruction is
 	* unrecognized. */
-	@:overload public function getOpcode() : com.sun.tools.classfile.Opcode;
+	@:overload @:public public function getOpcode() : com.sun.tools.classfile.Opcode;
 	
 	/** Get the mnemonic for this instruction, or a default string if the
 	* instruction is unrecognized. */
-	@:overload public function getMnemonic() : String;
+	@:overload @:public public function getMnemonic() : String;
 	
 	/** Get the length, in bytes, of this instruction, including the opcode
 	* and all its operands. */
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/** Get the {@link Kind} of this instruction. */
-	@:overload public function getKind() : com.sun.tools.classfile.Instruction.Instruction_Kind;
+	@:overload @:public public function getKind() : com.sun.tools.classfile.Instruction.Instruction_Kind;
 	
 	/** Invoke a method on the visitor according to the kind of this
 	* instruction, passing in the decoded operands for the instruction. */
-	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Instruction.Instruction_KindVisitor<R, P>, p : P) : R;
+	@:overload @:public public function accept<R, P>(visitor : com.sun.tools.classfile.Instruction.Instruction_KindVisitor<R, P>, p : P) : R;
 	
 	
 }

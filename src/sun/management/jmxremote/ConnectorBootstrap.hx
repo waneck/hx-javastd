@@ -25,7 +25,7 @@ package sun.management.jmxremote;
 */
 extern class ConnectorBootstrap
 {
-	@:overload public static function unexportRegistry() : Void;
+	@:overload @:public @:static public static function unexportRegistry() : Void;
 	
 	/**
 	* Initializes and starts the JMX Connector Server.
@@ -36,7 +36,7 @@ extern class ConnectorBootstrap
 	*
 	* This method is used by some jtreg tests.
 	**/
-	@:overload @:synchronized public static function initialize() : javax.management.remote.JMXConnectorServer;
+	@:overload @:public @:static @:synchronized public static function initialize() : javax.management.remote.JMXConnectorServer;
 	
 	/**
 	* This method is used by some jtreg tests.
@@ -44,19 +44,19 @@ extern class ConnectorBootstrap
 	* @see #startRemoteConnectorServer
 	*             (String portStr, Properties props)
 	*/
-	@:overload @:synchronized public static function initialize(portStr : String, props : java.util.Properties) : javax.management.remote.JMXConnectorServer;
+	@:overload @:public @:static @:synchronized public static function initialize(portStr : String, props : java.util.Properties) : javax.management.remote.JMXConnectorServer;
 	
 	/**
 	* Initializes and starts a JMX Connector Server for remote
 	* monitoring and management.
 	**/
-	@:overload @:synchronized public static function startRemoteConnectorServer(portStr : String, props : java.util.Properties) : javax.management.remote.JMXConnectorServer;
+	@:overload @:public @:static @:synchronized public static function startRemoteConnectorServer(portStr : String, props : java.util.Properties) : javax.management.remote.JMXConnectorServer;
 	
 	/*
 	* Creates and starts a RMI Connector Server for "local" monitoring
 	* and management.
 	*/
-	@:overload public static function startLocalConnectorServer() : javax.management.remote.JMXConnectorServer;
+	@:overload @:public @:static public static function startLocalConnectorServer() : javax.management.remote.JMXConnectorServer;
 	
 	
 }
@@ -79,7 +79,7 @@ extern class ConnectorBootstrap
 */
 @:native('sun$management$jmxremote$ConnectorBootstrap$JMXConnectorServerData') @:internal extern class ConnectorBootstrap_JMXConnectorServerData
 {
-	@:overload public function new(jmxConnectorServer : javax.management.remote.JMXConnectorServer, jmxRemoteURL : javax.management.remote.JMXServiceURL) : Void;
+	@:overload @:public public function new(jmxConnectorServer : javax.management.remote.JMXConnectorServer, jmxRemoteURL : javax.management.remote.JMXServiceURL) : Void;
 	
 	
 }
@@ -103,9 +103,9 @@ extern class ConnectorBootstrap
 */
 @:native('sun$management$jmxremote$ConnectorBootstrap$PermanentExporter') @:internal extern class ConnectorBootstrap_PermanentExporter implements com.sun.jmx.remote.internal.RMIExporter
 {
-	@:overload public function exportObject(obj : java.rmi.Remote, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
+	@:overload @:public public function exportObject(obj : java.rmi.Remote, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
 	
-	@:overload public function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
+	@:overload @:public public function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
 	
 	
 }
@@ -116,9 +116,9 @@ extern class ConnectorBootstrap
 */
 @:native('sun$management$jmxremote$ConnectorBootstrap$AccessFileCheckerAuthenticator') @:internal extern class ConnectorBootstrap_AccessFileCheckerAuthenticator implements javax.management.remote.JMXAuthenticator
 {
-	@:overload public function new(env : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function new(env : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function authenticate(credentials : Dynamic) : javax.security.auth.Subject;
+	@:overload @:public public function authenticate(credentials : Dynamic) : javax.security.auth.Subject;
 	
 	
 }

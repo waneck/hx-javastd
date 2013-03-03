@@ -31,14 +31,14 @@ extern class NamespaceSupport
 	* <p>This is the Namespace URI that is automatically mapped
 	* to the "xml" prefix.</p>
 	*/
-	public static var XMLNS(default, null) : String;
+	@:public @:final @:static public static var XMLNS(default, null) : String;
 	
 	/**
 	* Create a new Namespace support object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(that : com.sun.xml.internal.ws.util.NamespaceSupport) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.util.NamespaceSupport) : Void;
 	
 	/**
 	* Reset this Namespace support object for reuse.
@@ -46,7 +46,7 @@ extern class NamespaceSupport
 	* <p>It is necessary to invoke this method before reusing the
 	* Namespace support object for a new session.</p>
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Start a new Namespace context.
@@ -62,7 +62,7 @@ extern class NamespaceSupport
 	*
 	* @see #popContext
 	*/
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
 	/**
 	* Revert to the previous Namespace context.
@@ -77,19 +77,19 @@ extern class NamespaceSupport
 	*
 	* @see #pushContext
 	*/
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
 	/*
 	* added for the revised streaming parser class (Parser2)
 	* Move the context artificially up one level (i.e. contracting it).
 	*/
-	@:overload public function slideContextUp() : Void;
+	@:overload @:public public function slideContextUp() : Void;
 	
 	/*
 	* added for the revised streaming parser class (Parser2)
 	* Move the context artificially down one level (i.e. expanding it).
 	*/
-	@:overload public function slideContextDown() : Void;
+	@:overload @:public public function slideContextDown() : Void;
 	
 	/**
 	* Declare a Namespace prefix.
@@ -119,7 +119,7 @@ extern class NamespaceSupport
 	* @see #getURI
 	* @see #getPrefix
 	*/
-	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload @:public public function declarePrefix(prefix : String, uri : String) : Bool;
 	
 	/**
 	* Process a raw XML 1.0 name.
@@ -159,7 +159,7 @@ extern class NamespaceSupport
 	*        is an undeclared prefix.
 	* @see #declarePrefix
 	* @see java.lang.String#intern */
-	@:overload public function processName(qName : String, parts : java.NativeArray<String>, isAttribute : Bool) : java.NativeArray<String>;
+	@:overload @:public public function processName(qName : String, parts : java.NativeArray<String>, isAttribute : Bool) : java.NativeArray<String>;
 	
 	/**
 	* Look up a prefix and get the currently-mapped Namespace URI.
@@ -173,7 +173,7 @@ extern class NamespaceSupport
 	* @see #getPrefix
 	* @see #getPrefixes
 	*/
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
 	/**
 	* Return an enumeration of all prefixes currently declared.
@@ -188,7 +188,7 @@ extern class NamespaceSupport
 	* @see #getDeclaredPrefixes
 	* @see #getURI
 	*/
-	@:overload public function getPrefixes() : java.lang.Iterable<String>;
+	@:overload @:public public function getPrefixes() : java.lang.Iterable<String>;
 	
 	/**
 	* Return one of the prefixes mapped to a Namespace URI.
@@ -209,7 +209,7 @@ extern class NamespaceSupport
 	* @see #getPrefixes(java.lang.String)
 	* @see #getURI
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* Return an enumeration of all prefixes currently declared for a URI.
@@ -232,7 +232,7 @@ extern class NamespaceSupport
 	* @see #getDeclaredPrefixes
 	* @see #getURI
 	*/
-	@:overload public function getPrefixes(uri : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(uri : String) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Return an enumeration of all prefixes declared in this context.
@@ -246,7 +246,7 @@ extern class NamespaceSupport
 	* @see #getPrefixes
 	* @see #getURI
 	*/
-	@:overload public function getDeclaredPrefixes() : java.lang.Iterable<String>;
+	@:overload @:public public function getDeclaredPrefixes() : java.lang.Iterable<String>;
 	
 	
 }

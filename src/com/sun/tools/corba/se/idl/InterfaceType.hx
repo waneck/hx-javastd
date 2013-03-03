@@ -36,9 +36,9 @@ package com.sun.tools.corba.se.idl;
 //// NOTES:
 extern interface InterfaceType
 {
-	@:overload public function getInterfaceType() : Int;
+	@:overload @:public public function getInterfaceType() : Int;
 	
-	@:overload public function setInterfaceType(type : Int) : Void;
+	@:overload @:public public function setInterfaceType(type : Int) : Void;
 	
 	
 }

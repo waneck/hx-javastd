@@ -26,32 +26,32 @@ package sun.java2d.pipe;
 extern class RenderQueue
 {
 	/** The underlying buffer for this queue. */
-	private var buf : sun.java2d.pipe.RenderBuffer;
+	@:protected private var buf : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* A Set containing hard references to Objects that must stay alive until
 	* the queue has been completely flushed.
 	*/
-	private var refSet : java.util.Set<Dynamic>;
+	@:protected private var refSet : java.util.Set<Dynamic>;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Locks the queue for read/write access.
 	*/
-	@:overload @:final public function lock() : Void;
+	@:overload @:public @:final public function lock() : Void;
 	
 	/**
 	* Attempts to lock the queue.  If successful, this method returns true,
 	* indicating that the caller is responsible for calling
 	* <code>unlock</code>; otherwise this method returns false.
 	*/
-	@:overload @:final public function tryLock() : Bool;
+	@:overload @:public @:final public function tryLock() : Bool;
 	
 	/**
 	* Unlocks the queue.
 	*/
-	@:overload @:final public function unlock() : Void;
+	@:overload @:public @:final public function unlock() : Void;
 	
 	/**
 	* Adds the given Object to the set of hard references, which will
@@ -64,12 +64,12 @@ extern class RenderQueue
 	* queue is flushed.)  The reference set will be cleared immediately
 	* after the queue is flushed each time.
 	*/
-	@:overload @:final public function addReference(ref : Dynamic) : Void;
+	@:overload @:public @:final public function addReference(ref : Dynamic) : Void;
 	
 	/**
 	* Returns the encapsulated RenderBuffer object.
 	*/
-	@:overload @:final public function getBuffer() : sun.java2d.pipe.RenderBuffer;
+	@:overload @:public @:final public function getBuffer() : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* Ensures that there will be enough room on the underlying buffer
@@ -79,7 +79,7 @@ extern class RenderQueue
 	*
 	* @param opsize size (in bytes) of the following operation
 	*/
-	@:overload @:final public function ensureCapacity(opsize : Int) : Void;
+	@:overload @:public @:final public function ensureCapacity(opsize : Int) : Void;
 	
 	/**
 	* Convenience method that is equivalent to calling ensureCapacity()
@@ -91,7 +91,7 @@ extern class RenderQueue
 	* @param first8ByteValueOffset offset (in bytes) from the current
 	* position to the first 8-byte value used in the following operation
 	*/
-	@:overload @:final public function ensureCapacityAndAlignment(opsize : Int, first8ByteValueOffset : Int) : Void;
+	@:overload @:public @:final public function ensureCapacityAndAlignment(opsize : Int, first8ByteValueOffset : Int) : Void;
 	
 	/**
 	* Inserts a 4-byte NOOP token when necessary to ensure that all 8-byte
@@ -101,14 +101,14 @@ extern class RenderQueue
 	* @param first8ByteValueOffset offset (in bytes) from the current
 	* position to the first 8-byte value used in the following operation
 	*/
-	@:overload @:final public function ensureAlignment(first8ByteValueOffset : Int) : Void;
+	@:overload @:public @:final public function ensureAlignment(first8ByteValueOffset : Int) : Void;
 	
 	/**
 	* Immediately processes each operation currently pending on the buffer.
 	* This method will block until the entire buffer has been flushed.  The
 	* queue lock must be acquired before calling this method.
 	*/
-	@:overload @:abstract public function flushNow() : Void;
+	@:overload @:public @:abstract public function flushNow() : Void;
 	
 	/**
 	* Immediately processes each operation currently pending on the buffer,
@@ -116,14 +116,14 @@ extern class RenderQueue
 	* entire buffer has been flushed and the provided task has been executed.
 	* The queue lock must be acquired before calling this method.
 	*/
-	@:overload @:abstract public function flushAndInvokeNow(task : java.lang.Runnable) : Void;
+	@:overload @:public @:abstract public function flushAndInvokeNow(task : java.lang.Runnable) : Void;
 	
 	/**
 	* Updates the current position of the underlying buffer, and then
 	* flushes the queue immediately.  This method is useful when native code
 	* has added data to the queue and needs to flush immediately.
 	*/
-	@:overload public function flushNow(position : Int) : Void;
+	@:overload @:public public function flushNow(position : Int) : Void;
 	
 	
 }

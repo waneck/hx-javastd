@@ -30,7 +30,7 @@ package sun.security.provider.certpath;
 	*
 	* @param cert the certificate which is used to update the state
 	*/
-	@:overload public function updateState(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function updateState(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Returns a boolean flag indicating if the state is initial
@@ -38,7 +38,7 @@ package sun.security.provider.certpath;
 	*
 	* @return boolean flag indicating if the state is initial (just starting)
 	*/
-	@:overload public function isInitial() : Bool;
+	@:overload @:public public function isInitial() : Bool;
 	
 	/**
 	* Returns a boolean flag indicating if a key lacking necessary key
@@ -46,7 +46,7 @@ package sun.security.provider.certpath;
 	*
 	* @return boolean flag indicating if key lacking parameters encountered.
 	*/
-	@:overload public function keyParamsNeeded() : Bool;
+	@:overload @:public public function keyParamsNeeded() : Bool;
 	
 	
 }

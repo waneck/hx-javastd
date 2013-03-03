@@ -36,135 +36,135 @@ extern class ContextStack
 	*
 	* @author      Bryan Atsatt
 	*/
-	public static var TOP(default, null) : Int;
+	@:public @:static @:final public static var TOP(default, null) : Int;
 	
-	public static var METHOD(default, null) : Int;
+	@:public @:static @:final public static var METHOD(default, null) : Int;
 	
-	public static var METHOD_RETURN(default, null) : Int;
+	@:public @:static @:final public static var METHOD_RETURN(default, null) : Int;
 	
-	public static var METHOD_ARGUMENT(default, null) : Int;
+	@:public @:static @:final public static var METHOD_ARGUMENT(default, null) : Int;
 	
-	public static var METHOD_EXCEPTION(default, null) : Int;
+	@:public @:static @:final public static var METHOD_EXCEPTION(default, null) : Int;
 	
-	public static var MEMBER(default, null) : Int;
+	@:public @:static @:final public static var MEMBER(default, null) : Int;
 	
-	public static var MEMBER_CONSTANT(default, null) : Int;
+	@:public @:static @:final public static var MEMBER_CONSTANT(default, null) : Int;
 	
-	public static var MEMBER_STATIC(default, null) : Int;
+	@:public @:static @:final public static var MEMBER_STATIC(default, null) : Int;
 	
-	public static var MEMBER_TRANSIENT(default, null) : Int;
+	@:public @:static @:final public static var MEMBER_TRANSIENT(default, null) : Int;
 	
-	public static var IMPLEMENTS(default, null) : Int;
+	@:public @:static @:final public static var IMPLEMENTS(default, null) : Int;
 	
-	public static var EXTENDS(default, null) : Int;
+	@:public @:static @:final public static var EXTENDS(default, null) : Int;
 	
 	/**
 	* Constructor.
 	*/
-	@:overload public function new(env : sun.rmi.rmic.iiop.BatchEnvironment) : Void;
+	@:overload @:public public function new(env : sun.rmi.rmic.iiop.BatchEnvironment) : Void;
 	
 	/**
 	* Return true if env.nerrors > 0.
 	*/
-	@:overload public function anyErrors() : Bool;
+	@:overload @:public public function anyErrors() : Bool;
 	
 	/**
 	* Enable/disable tracing.
 	*/
-	@:overload public function setTrace(_trace : Bool) : Void;
+	@:overload @:public public function setTrace(_trace : Bool) : Void;
 	
 	/**
 	* Check trace flag.
 	*/
-	@:overload public function isTraceOn() : Bool;
+	@:overload @:public public function isTraceOn() : Bool;
 	
 	/**
 	* Get the environment.
 	*/
-	@:overload public function getEnv() : sun.rmi.rmic.iiop.BatchEnvironment;
+	@:overload @:public public function getEnv() : sun.rmi.rmic.iiop.BatchEnvironment;
 	
 	/**
 	* Set the new context.
 	*/
-	@:overload public function setNewContextCode(code : Int) : Void;
+	@:overload @:public public function setNewContextCode(code : Int) : Void;
 	
 	/**
 	* Get the current context code.
 	*/
-	@:overload public function getCurrentContextCode() : Int;
+	@:overload @:public public function getCurrentContextCode() : Int;
 	
-	@:overload @:final public static function dumpCallStack() : Void;
+	@:overload @:public @:final @:static public static function dumpCallStack() : Void;
 	
 	/**
 	* Push a new element on the stack.
 	* @return the new element.
 	*/
-	@:overload public function push(element : sun.rmi.rmic.iiop.ContextElement) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
+	@:overload @:public public function push(element : sun.rmi.rmic.iiop.ContextElement) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Pop an element from the stack.
 	* @return the new current element or null if top.
 	*/
-	@:overload public function pop(wasValid : Bool) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
+	@:overload @:public public function pop(wasValid : Bool) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Get the current size.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Get a specific context.
 	*/
-	@:overload public function getContext(index : Int) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
+	@:overload @:public public function getContext(index : Int) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Get the current top context.
 	*/
-	@:overload public function getContext() : sun.rmi.rmic.iiop.ContextStack.TypeContext;
+	@:overload @:public public function getContext() : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Is parent context a value type?
 	*/
-	@:overload public function isParentAValue() : Bool;
+	@:overload @:public public function isParentAValue() : Bool;
 	
 	/**
 	* Get parent context. Null if none.
 	*/
-	@:overload public function getParentContext() : sun.rmi.rmic.iiop.ContextStack.TypeContext;
+	@:overload @:public public function getParentContext() : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Get a string for the context name...
 	*/
-	@:overload public function getContextCodeString() : String;
+	@:overload @:public public function getContextCodeString() : String;
 	
 	/**
 	* Get a string for the given context code...
 	*/
-	@:native('getContextCodeString') @:overload public static function _getContextCodeString(contextCode : Int) : String;
+	@:native('getContextCodeString') @:overload @:public @:static public static function _getContextCodeString(contextCode : Int) : String;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }
 @:internal extern class TypeContext
 {
-	@:overload public function set(code : Int, element : sun.rmi.rmic.iiop.ContextElement) : Void;
+	@:overload @:public public function set(code : Int, element : sun.rmi.rmic.iiop.ContextElement) : Void;
 	
-	@:overload public function getCode() : Int;
+	@:overload @:public public function getCode() : Int;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getCandidateType() : sun.rmi.rmic.iiop.Type;
+	@:overload @:public public function getCandidateType() : sun.rmi.rmic.iiop.Type;
 	
-	@:overload public function getTypeDescription() : String;
+	@:overload @:public public function getTypeDescription() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function isValue() : Bool;
+	@:overload @:public public function isValue() : Bool;
 	
-	@:overload public function isConstant() : Bool;
+	@:overload @:public public function isConstant() : Bool;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

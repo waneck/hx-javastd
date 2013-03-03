@@ -36,7 +36,7 @@ package com.sun.crypto.provider;
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a public key.
 	*/
-	@:overload override private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
 	
 	/**
 	* Returns a specification (key material) of the given key
@@ -54,7 +54,7 @@ package com.sun.crypto.provider;
 	* inappropriate for the given key, or the given key cannot be processed
 	* (e.g., the given key has an unrecognized algorithm or format).
 	*/
-	@:overload override private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpecCl : Class<Dynamic>) : java.security.spec.KeySpec;
+	@:overload @:protected override private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpecCl : Class<Dynamic>) : java.security.spec.KeySpec;
 	
 	/**
 	* Translates a <code>SecretKey</code> object, whose provider may be
@@ -68,25 +68,25 @@ package com.sun.crypto.provider;
 	* @exception InvalidKeyException if the given key cannot be processed by
 	* this key factory.
 	*/
-	@:overload override private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
+	@:overload @:protected override private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
 	
 	
 }
 @:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithMD5AndDES') extern class PBEKeyFactory_PBEWithMD5AndDES extends com.sun.crypto.provider.PBEKeyFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithSHA1AndDESede') extern class PBEKeyFactory_PBEWithSHA1AndDESede extends com.sun.crypto.provider.PBEKeyFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithSHA1AndRC2_40') extern class PBEKeyFactory_PBEWithSHA1AndRC2_40 extends com.sun.crypto.provider.PBEKeyFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
@@ -95,7 +95,7 @@ package com.sun.crypto.provider;
 */
 @:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithMD5AndTripleDES') extern class PBEKeyFactory_PBEWithMD5AndTripleDES extends com.sun.crypto.provider.PBEKeyFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

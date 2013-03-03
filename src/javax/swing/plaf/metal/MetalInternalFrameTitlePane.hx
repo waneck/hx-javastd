@@ -31,75 +31,75 @@ extern class MetalInternalFrameTitlePane extends javax.swing.plaf.basic.BasicInt
 	* @author Brian Beck
 	* @since 1.3
 	*/
-	@:require(java3) private var isPalette : Bool;
+	@:require(java3) @:protected private var isPalette : Bool;
 	
-	private var paletteCloseIcon : javax.swing.Icon;
+	@:protected private var paletteCloseIcon : javax.swing.Icon;
 	
-	private var paletteTitleHeight : Int;
+	@:protected private var paletteTitleHeight : Int;
 	
-	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload override private function createButtons() : Void;
-	
-	/**
-	* Override the parent's method to do nothing. Metal frames do not
-	* have system menus.
-	*/
-	@:overload override private function assembleSystemMenu() : Void;
+	@:overload @:protected override private function createButtons() : Void;
 	
 	/**
 	* Override the parent's method to do nothing. Metal frames do not
 	* have system menus.
 	*/
-	@:overload override private function addSystemMenuItems(systemMenu : javax.swing.JMenu) : Void;
+	@:overload @:protected override private function assembleSystemMenu() : Void;
 	
 	/**
 	* Override the parent's method to do nothing. Metal frames do not
 	* have system menus.
 	*/
-	@:overload override private function showSystemMenu() : Void;
+	@:overload @:protected override private function addSystemMenuItems(systemMenu : javax.swing.JMenu) : Void;
+	
+	/**
+	* Override the parent's method to do nothing. Metal frames do not
+	* have system menus.
+	*/
+	@:overload @:protected override private function showSystemMenu() : Void;
 	
 	/**
 	* Override the parent's method avoid creating a menu bar. Metal frames
 	* do not have system menus.
 	*/
-	@:overload override private function addSubComponents() : Void;
+	@:overload @:protected override private function addSubComponents() : Void;
 	
-	@:overload override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload @:protected override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload override private function createLayout() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayout() : java.awt.LayoutManager;
 	
-	@:overload public function paintPalette(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintPalette(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setPalette(b : Bool) : Void;
+	@:overload @:public public function setPalette(b : Bool) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalInternalFrameTitlePane$MetalPropertyChangeHandler') @:internal extern class MetalInternalFrameTitlePane_MetalPropertyChangeHandler extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_PropertyChangeHandler
 {
-	@:overload override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalInternalFrameTitlePane$MetalTitlePaneLayout') @:internal extern class MetalInternalFrameTitlePane_MetalTitlePaneLayout extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_TitlePaneLayout
 {
-	@:overload override public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public override public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload override public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public override public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload override public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload override public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public override public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload override public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }

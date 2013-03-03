@@ -31,7 +31,7 @@ extern class Container extends java.awt.Component
 	* somewhere higher up in the component tree that is native.
 	* (such as Frame for example).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the number of components in this panel.
@@ -43,13 +43,13 @@ extern class Container extends java.awt.Component
 	* @since     JDK1.1
 	* @see Component#getTreeLock()
 	*/
-	@:require(java1) @:overload public function getComponentCount() : Int;
+	@:require(java1) @:overload @:public public function getComponentCount() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by getComponentCount().
 	*/
-	@:overload public function countComponents() : Int;
+	@:overload @:public public function countComponents() : Int;
 	
 	/**
 	* Gets the nth component in this container.
@@ -62,7 +62,7 @@ extern class Container extends java.awt.Component
 	*                 if the n<sup>th</sup> value does not exist.
 	* @see Component#getTreeLock()
 	*/
-	@:overload public function getComponent(n : Int) : java.awt.Component;
+	@:overload @:public public function getComponent(n : Int) : java.awt.Component;
 	
 	/**
 	* Gets all the components in this container.
@@ -72,7 +72,7 @@ extern class Container extends java.awt.Component
 	* @return    an array of all the components in this container.
 	* @see Component#getTreeLock()
 	*/
-	@:overload public function getComponents() : java.NativeArray<java.awt.Component>;
+	@:overload @:public public function getComponents() : java.NativeArray<java.awt.Component>;
 	
 	/**
 	* Determines the insets of this container, which indicate the size
@@ -85,13 +85,13 @@ extern class Container extends java.awt.Component
 	* @see       LayoutManager
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getInsets() : java.awt.Insets;
+	@:require(java1) @:overload @:public public function getInsets() : java.awt.Insets;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getInsets()</code>.
 	*/
-	@:overload public function insets() : java.awt.Insets;
+	@:overload @:public public function insets() : java.awt.Insets;
 	
 	/**
 	* Appends the specified component to the end of this container.
@@ -110,7 +110,7 @@ extern class Container extends java.awt.Component
 	* @see javax.swing.JComponent#revalidate()
 	* @return    the component argument
 	*/
-	@:overload public function add(comp : java.awt.Component) : java.awt.Component;
+	@:overload @:public public function add(comp : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Adds the specified component to this container.
@@ -128,7 +128,7 @@ extern class Container extends java.awt.Component
 	* @see #add(Component, Object)
 	* @see #invalidate
 	*/
-	@:overload public function add(name : String, comp : java.awt.Component) : java.awt.Component;
+	@:overload @:public public function add(name : String, comp : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Adds the specified component to this container at the given
@@ -154,7 +154,7 @@ extern class Container extends java.awt.Component
 	* @see #validate
 	* @see javax.swing.JComponent#revalidate()
 	*/
-	@:overload public function add(comp : java.awt.Component, index : Int) : java.awt.Component;
+	@:overload @:public public function add(comp : java.awt.Component, index : Int) : java.awt.Component;
 	
 	/**
 	* Moves the specified component to the specified z-order index in
@@ -206,7 +206,7 @@ extern class Container extends java.awt.Component
 	* @see #invalidate
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setComponentZOrder(comp : java.awt.Component, index : Int) : Void;
+	@:require(java5) @:overload @:public public function setComponentZOrder(comp : java.awt.Component, index : Int) : Void;
 	
 	/**
 	* Returns the z-order index of the component inside the container.
@@ -221,7 +221,7 @@ extern class Container extends java.awt.Component
 	* @see #setComponentZOrder(java.awt.Component, int)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getComponentZOrder(comp : java.awt.Component) : Int;
+	@:require(java5) @:overload @:public public function getComponentZOrder(comp : java.awt.Component) : Int;
 	
 	/**
 	* Adds the specified component to the end of this container.
@@ -246,7 +246,7 @@ extern class Container extends java.awt.Component
 	* @see       LayoutManager
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function add(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:require(java1) @:overload @:public public function add(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Adds the specified component to this container with the specified
@@ -276,7 +276,7 @@ extern class Container extends java.awt.Component
 	* @see #remove
 	* @see LayoutManager
 	*/
-	@:overload public function add(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:public public function add(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Adds the specified component to this container at the specified
@@ -345,7 +345,7 @@ extern class Container extends java.awt.Component
 	* @see       LayoutManager2
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:require(java1) @:overload @:protected private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the component, specified by <code>index</code>,
@@ -369,7 +369,7 @@ extern class Container extends java.awt.Component
 	* @see #getComponentCount
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function remove(index : Int) : Void;
+	@:require(java1) @:overload @:public public function remove(index : Int) : Void;
 	
 	/**
 	* Removes the specified component from this container.
@@ -389,7 +389,7 @@ extern class Container extends java.awt.Component
 	* @see #validate
 	* @see #remove(int)
 	*/
-	@:overload public function remove(comp : java.awt.Component) : Void;
+	@:overload @:public public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes all the components from this container.
@@ -406,14 +406,14 @@ extern class Container extends java.awt.Component
 	* @see #remove
 	* @see #invalidate
 	*/
-	@:overload public function removeAll() : Void;
+	@:overload @:public public function removeAll() : Void;
 	
 	/**
 	* Gets the layout manager for this container.
 	* @see #doLayout
 	* @see #setLayout
 	*/
-	@:overload public function getLayout() : java.awt.LayoutManager;
+	@:overload @:public public function getLayout() : java.awt.LayoutManager;
 	
 	/**
 	* Sets the layout manager for this container.
@@ -426,7 +426,7 @@ extern class Container extends java.awt.Component
 	* @see #getLayout
 	* @see #invalidate
 	*/
-	@:overload public function setLayout(mgr : java.awt.LayoutManager) : Void;
+	@:overload @:public public function setLayout(mgr : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Causes this container to lay out its components.  Most programs
@@ -437,13 +437,13 @@ extern class Container extends java.awt.Component
 	* @see #validate
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function doLayout() : Void;
+	@:require(java1) @:overload @:public override public function doLayout() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>doLayout()</code>.
 	*/
-	@:overload override public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
 	/**
 	* Indicates if this container is a <i>validate root</i>.
@@ -474,7 +474,7 @@ extern class Container extends java.awt.Component
 	* @see javax.swing.JComponent#revalidate
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isValidateRoot() : Bool;
+	@:require(java7) @:overload @:public public function isValidateRoot() : Bool;
 	
 	/**
 	* Invalidates the container.
@@ -491,7 +491,7 @@ extern class Container extends java.awt.Component
 	* @see #layout
 	* @see LayoutManager2
 	*/
-	@:overload override public function invalidate() : Void;
+	@:overload @:public override public function invalidate() : Void;
 	
 	/**
 	* Validates this container and all of its subcomponents.
@@ -520,7 +520,7 @@ extern class Container extends java.awt.Component
 	* @see javax.swing.JComponent#revalidate()
 	* @see #validateTree
 	*/
-	@:overload override public function validate() : Void;
+	@:overload @:public override public function validate() : Void;
 	
 	/**
 	* Recursively descends the container tree and recomputes the
@@ -531,7 +531,7 @@ extern class Container extends java.awt.Component
 	* @see #doLayout
 	* @see #validate
 	*/
-	@:overload private function validateTree() : Void;
+	@:overload @:protected private function validateTree() : Void;
 	
 	/**
 	* Sets the font of this container.
@@ -544,7 +544,7 @@ extern class Container extends java.awt.Component
 	* @see #invalidate
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload override public function setFont(f : java.awt.Font) : Void;
+	@:require(java0) @:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Returns the preferred size of this container.  If the preferred size has
@@ -567,13 +567,13 @@ extern class Container extends java.awt.Component
 	* @see       LayoutManager#preferredLayoutSize(Container)
 	* @see       Component#getPreferredSize
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum size of this container.  If the minimum size has
@@ -597,13 +597,13 @@ extern class Container extends java.awt.Component
 	* @see       Component#getMinimumSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum size of this container.  If the maximum size has
@@ -627,7 +627,7 @@ extern class Container extends java.awt.Component
 	* @see       LayoutManager2#maximumLayoutSize(Container)
 	* @see       Component#getMaximumSize
 	*/
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -636,7 +636,7 @@ extern class Container extends java.awt.Component
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload override public function getAlignmentX() : Single;
+	@:overload @:public override public function getAlignmentX() : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -645,7 +645,7 @@ extern class Container extends java.awt.Component
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload override public function getAlignmentY() : Single;
+	@:overload @:public override public function getAlignmentY() : Single;
 	
 	/**
 	* Paints the container. This forwards the paint to any lightweight
@@ -658,7 +658,7 @@ extern class Container extends java.awt.Component
 	* @param g the specified Graphics window
 	* @see   Component#update(Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Updates the container.  This forwards the update to any lightweight
@@ -671,7 +671,7 @@ extern class Container extends java.awt.Component
 	* @param g the specified Graphics window
 	* @see   Component#update(Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Prints the container. This forwards the print to any lightweight
@@ -684,7 +684,7 @@ extern class Container extends java.awt.Component
 	* @param g the specified Graphics window
 	* @see   Component#update(Graphics)
 	*/
-	@:overload override public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function print(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Paints each of the components in this container.
@@ -692,7 +692,7 @@ extern class Container extends java.awt.Component
 	* @see       Component#paint
 	* @see       Component#paintAll
 	*/
-	@:overload public function paintComponents(g : java.awt.Graphics) : Void;
+	@:overload @:public public function paintComponents(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Prints each of the components in this container.
@@ -700,7 +700,7 @@ extern class Container extends java.awt.Component
 	* @see       Component#print
 	* @see       Component#printAll
 	*/
-	@:overload public function printComponents(g : java.awt.Graphics) : Void;
+	@:overload @:public public function printComponents(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Adds the specified container listener to receive container events
@@ -714,7 +714,7 @@ extern class Container extends java.awt.Component
 	* @see #removeContainerListener
 	* @see #getContainerListeners
 	*/
-	@:overload @:synchronized public function addContainerListener(l : java.awt.event.ContainerListener) : Void;
+	@:overload @:public @:synchronized public function addContainerListener(l : java.awt.event.ContainerListener) : Void;
 	
 	/**
 	* Removes the specified container listener so it no longer receives
@@ -728,7 +728,7 @@ extern class Container extends java.awt.Component
 	* @see #addContainerListener
 	* @see #getContainerListeners
 	*/
-	@:overload @:synchronized public function removeContainerListener(l : java.awt.event.ContainerListener) : Void;
+	@:overload @:public @:synchronized public function removeContainerListener(l : java.awt.event.ContainerListener) : Void;
 	
 	/**
 	* Returns an array of all the container listeners
@@ -742,7 +742,7 @@ extern class Container extends java.awt.Component
 	* @see #removeContainerListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getContainerListeners() : java.NativeArray<java.awt.event.ContainerListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getContainerListeners() : java.NativeArray<java.awt.event.ContainerListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -778,7 +778,7 @@ extern class Container extends java.awt.Component
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this container. If the event is a
@@ -791,7 +791,7 @@ extern class Container extends java.awt.Component
 	*
 	* @param e the event
 	*/
-	@:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes container events occurring on this container by
@@ -811,13 +811,13 @@ extern class Container extends java.awt.Component
 	* @param e the container event
 	* @see Component#enableEvents
 	*/
-	@:overload private function processContainerEvent(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:protected private function processContainerEvent(e : java.awt.event.ContainerEvent) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>dispatchEvent(AWTEvent e)</code>
 	*/
-	@:overload override public function deliverEvent(e : java.awt.Event) : Void;
+	@:overload @:public override public function deliverEvent(e : java.awt.Event) : Void;
 	
 	/**
 	* Locates the component that contains the x,y position.  The
@@ -837,13 +837,13 @@ extern class Container extends java.awt.Component
 	* @see Component#contains
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload override public function getComponentAt(x : Int, y : Int) : java.awt.Component;
+	@:require(java1) @:overload @:public override public function getComponentAt(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getComponentAt(int, int)</code>.
 	*/
-	@:overload override public function locate(x : Int, y : Int) : java.awt.Component;
+	@:overload @:public override public function locate(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* Gets the component that contains the specified point.
@@ -854,7 +854,7 @@ extern class Container extends java.awt.Component
 	* @see        Component#contains
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload override public function getComponentAt(p : java.awt.Point) : java.awt.Component;
+	@:require(java1) @:overload @:public override public function getComponentAt(p : java.awt.Point) : java.awt.Component;
 	
 	/**
 	* Returns the position of the mouse pointer in this <code>Container</code>'s
@@ -875,7 +875,7 @@ extern class Container extends java.awt.Component
 	* @return    mouse coordinates relative to this <code>Component</code>, or null
 	* @since     1.5
 	*/
-	@:require(java5) @:overload public function getMousePosition(allowChildren : Bool) : java.awt.Point;
+	@:require(java5) @:overload @:public public function getMousePosition(allowChildren : Bool) : java.awt.Point;
 	
 	/**
 	* Locates the visible child component that contains the specified
@@ -900,7 +900,7 @@ extern class Container extends java.awt.Component
 	* @see #getComponentAt
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function findComponentAt(x : Int, y : Int) : java.awt.Component;
+	@:require(java2) @:overload @:public public function findComponentAt(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* Locates the visible child component that contains the specified
@@ -925,7 +925,7 @@ extern class Container extends java.awt.Component
 	* @see #getComponentAt
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function findComponentAt(p : java.awt.Point) : java.awt.Component;
+	@:require(java2) @:overload @:public public function findComponentAt(p : java.awt.Point) : java.awt.Component;
 	
 	/**
 	* Makes this Container displayable by connecting it to
@@ -936,7 +936,7 @@ extern class Container extends java.awt.Component
 	* @see Component#isDisplayable
 	* @see #removeNotify
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Makes this Container undisplayable by removing its connection
@@ -947,7 +947,7 @@ extern class Container extends java.awt.Component
 	* @see Component#isDisplayable
 	* @see #addNotify
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Checks if the component is contained in the component hierarchy of
@@ -957,7 +957,7 @@ extern class Container extends java.awt.Component
 	*             <code>false</code> otherwise.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function isAncestorOf(c : java.awt.Component) : Bool;
+	@:require(java1) @:overload @:public public function isAncestorOf(c : java.awt.Component) : Bool;
 	
 	/**
 	* Returns a string representing the state of this <code>Container</code>.
@@ -968,7 +968,7 @@ extern class Container extends java.awt.Component
 	*
 	* @return    the parameter string of this container
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Prints a listing of this container to the specified output
@@ -985,7 +985,7 @@ extern class Container extends java.awt.Component
 	* @see      Component#list(java.io.PrintStream, int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload override public function list(out : java.io.PrintStream, indent : Int) : Void;
+	@:require(java0) @:overload @:public override public function list(out : java.io.PrintStream, indent : Int) : Void;
 	
 	/**
 	* Prints out a list, starting at the specified indentation,
@@ -1002,7 +1002,7 @@ extern class Container extends java.awt.Component
 	* @see      Component#list(java.io.PrintWriter, int)
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload override public function list(out : java.io.PrintWriter, indent : Int) : Void;
+	@:require(java1) @:overload @:public override public function list(out : java.io.PrintWriter, indent : Int) : Void;
 	
 	/**
 	* Sets the focus traversal keys for a given traversal operation for this
@@ -1082,7 +1082,7 @@ extern class Container extends java.awt.Component
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java4) @:overload override public function setFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
+	@:require(java4) @:overload @:public override public function setFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
 	
 	/**
 	* Returns the Set of focus traversal keys for a given traversal operation
@@ -1113,7 +1113,7 @@ extern class Container extends java.awt.Component
 	*         KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
+	@:require(java4) @:overload @:public override public function getFocusTraversalKeys(id : Int) : java.util.Set<java.awt.AWTKeyStroke>;
 	
 	/**
 	* Returns whether the Set of focus traversal keys for the given focus
@@ -1135,7 +1135,7 @@ extern class Container extends java.awt.Component
 	*        KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function areFocusTraversalKeysSet(id : Int) : Bool;
+	@:require(java4) @:overload @:public override public function areFocusTraversalKeysSet(id : Int) : Bool;
 	
 	/**
 	* Returns whether the specified Container is the focus cycle root of this
@@ -1153,7 +1153,7 @@ extern class Container extends java.awt.Component
 	* @see #isFocusCycleRoot()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isFocusCycleRoot(container : java.awt.Container) : Bool;
+	@:require(java4) @:overload @:public override public function isFocusCycleRoot(container : java.awt.Container) : Bool;
 	
 	/**
 	* Sets the focus traversal policy that will manage keyboard traversal of
@@ -1176,7 +1176,7 @@ extern class Container extends java.awt.Component
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java4) @:overload public function setFocusTraversalPolicy(policy : java.awt.FocusTraversalPolicy) : Void;
+	@:require(java4) @:overload @:public public function setFocusTraversalPolicy(policy : java.awt.FocusTraversalPolicy) : Void;
 	
 	/**
 	* Returns the focus traversal policy that will manage keyboard traversal
@@ -1192,7 +1192,7 @@ extern class Container extends java.awt.Component
 	* @see #isFocusCycleRoot
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFocusTraversalPolicy() : java.awt.FocusTraversalPolicy;
+	@:require(java4) @:overload @:public public function getFocusTraversalPolicy() : java.awt.FocusTraversalPolicy;
 	
 	/**
 	* Returns whether the focus traversal policy has been explicitly set for
@@ -1203,7 +1203,7 @@ extern class Container extends java.awt.Component
 	*         explicitly set for this Container; <code>false</code> otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFocusTraversalPolicySet() : Bool;
+	@:require(java4) @:overload @:public public function isFocusTraversalPolicySet() : Bool;
 	
 	/**
 	* Sets whether this Container is the root of a focus traversal cycle. Once
@@ -1230,7 +1230,7 @@ extern class Container extends java.awt.Component
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java4) @:overload public function setFocusCycleRoot(focusCycleRoot : Bool) : Void;
+	@:require(java4) @:overload @:public public function setFocusCycleRoot(focusCycleRoot : Bool) : Void;
 	
 	/**
 	* Returns whether this Container is the root of a focus traversal cycle.
@@ -1249,7 +1249,7 @@ extern class Container extends java.awt.Component
 	* @see ContainerOrderFocusTraversalPolicy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFocusCycleRoot() : Bool;
+	@:require(java4) @:overload @:public public function isFocusCycleRoot() : Bool;
 	
 	/**
 	* Sets whether this container will be used to provide focus
@@ -1265,7 +1265,7 @@ extern class Container extends java.awt.Component
 	* @beaninfo
 	*        bound: true
 	*/
-	@:require(java5) @:overload @:final public function setFocusTraversalPolicyProvider(provider : Bool) : Void;
+	@:require(java5) @:overload @:public @:final public function setFocusTraversalPolicyProvider(provider : Bool) : Void;
 	
 	/**
 	* Returns whether this container provides focus traversal
@@ -1285,7 +1285,7 @@ extern class Container extends java.awt.Component
 	* @beaninfo
 	*        bound: true
 	*/
-	@:require(java5) @:overload @:final public function isFocusTraversalPolicyProvider() : Bool;
+	@:require(java5) @:overload @:public @:final public function isFocusTraversalPolicyProvider() : Bool;
 	
 	/**
 	* Transfers the focus down one focus traversal cycle. If this Container is
@@ -1299,7 +1299,7 @@ extern class Container extends java.awt.Component
 	* @see       #setFocusCycleRoot
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function transferFocusDownCycle() : Void;
+	@:require(java4) @:overload @:public public function transferFocusDownCycle() : Void;
 	
 	/**
 	* Sets the <code>ComponentOrientation</code> property of this container
@@ -1316,7 +1316,7 @@ extern class Container extends java.awt.Component
 	* @see #invalidate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function applyComponentOrientation(o : java.awt.ComponentOrientation) : Void;
+	@:require(java4) @:overload @:public override public function applyComponentOrientation(o : java.awt.ComponentOrientation) : Void;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list. The listener is
@@ -1351,7 +1351,7 @@ extern class Container extends java.awt.Component
 	* @see Component#removePropertyChangeListener
 	* @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
 	*/
-	@:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list for a specific
@@ -1389,7 +1389,7 @@ extern class Container extends java.awt.Component
 	* @see #addPropertyChangeListener(java.beans.PropertyChangeListener)
 	* @see Component#removePropertyChangeListener
 	*/
-	@:overload override public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }
@@ -1401,19 +1401,19 @@ extern class Container extends java.awt.Component
 }
 @:native('java$awt$Container$MouseEventTargetFilter') @:internal extern class Container_MouseEventTargetFilter implements java.awt.Container.Container_EventTargetFilter
 {
-	@:overload public function accept(comp : java.awt.Component) : Bool;
+	@:overload @:public public function accept(comp : java.awt.Component) : Bool;
 	
 	
 }
 @:native('java$awt$Container$DropTargetEventTargetFilter') @:internal extern class Container_DropTargetEventTargetFilter implements java.awt.Container.Container_EventTargetFilter
 {
-	@:overload public function accept(comp : java.awt.Component) : Bool;
+	@:overload @:public public function accept(comp : java.awt.Component) : Bool;
 	
 	
 }
 @:native('java$awt$Container$WakingRunnable') @:internal extern class Container_WakingRunnable implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -1437,7 +1437,7 @@ extern class Container extends java.awt.Component
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth <code>Accessible</code> child of the object.
@@ -1445,7 +1445,7 @@ extern class Container extends java.awt.Component
 	* @param i zero-based index of child
 	* @return the nth <code>Accessible</code> child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -1457,16 +1457,16 @@ extern class Container extends java.awt.Component
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
-	private var accessibleContainerHandler : java.awt.event.ContainerListener;
+	@:protected private var accessibleContainerHandler : java.awt.event.ContainerListener;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list.
 	*
 	* @param listener  the PropertyChangeListener to be added
 	*/
-	@:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }
@@ -1477,9 +1477,9 @@ extern class Container extends java.awt.Component
 */
 @:require(java3) @:native('java$awt$Container$AccessibleAWTContainer$AccessibleContainerHandler') extern class Container_AccessibleAWTContainer_AccessibleContainerHandler implements java.awt.event.ContainerListener
 {
-	@:overload public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
 	
-	@:overload public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
 	
 	
 }
@@ -1490,7 +1490,7 @@ extern class Container extends java.awt.Component
 	* Listen for drag events posted in other hw components so we can
 	* track enter/exit regardless of where a drag originated
 	*/
-	@:overload public function eventDispatched(e : java.awt.AWTEvent) : Void;
+	@:overload @:public public function eventDispatched(e : java.awt.AWTEvent) : Void;
 	
 	
 }

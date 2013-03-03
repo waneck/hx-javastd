@@ -41,9 +41,9 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*      If non-null string is specified, it is written as a part
 	*      of the XML declaration.
 	*/
-	@:overload public function new(writer : java.io.Writer, encoding : String, _escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, encoding : String, _escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
 	
-	@:overload public function new(writer : java.io.Writer, encoding : String) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, encoding : String) : Void;
 	
 	/**
 	* Reset the writer.
@@ -64,7 +64,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*
 	* @see #flush()
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Flush the output.
@@ -80,7 +80,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*
 	* @see #reset()
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Set a new output destination for the document.
@@ -89,7 +89,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*        standard output.
 	* @see #flush()
 	*/
-	@:overload public function setOutput(writer : java.io.Writer, _encoding : String) : Void;
+	@:overload @:public public function setOutput(writer : java.io.Writer, _encoding : String) : Void;
 	
 	/**
 	* Set whether the writer should print out the XML declaration
@@ -97,7 +97,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	* <p>
 	* This option is set to true by default.
 	*/
-	@:overload public function setXmlDecl(_writeXmlDecl : Bool) : Void;
+	@:overload @:public public function setXmlDecl(_writeXmlDecl : Bool) : Void;
 	
 	/**
 	* Sets the header string.
@@ -109,9 +109,9 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	* @param _header
 	*      passing null will work as if the empty string is passed.
 	*/
-	@:overload public function setHeader(_header : String) : Void;
+	@:overload @:public public function setHeader(_header : String) : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Write the XML declaration at the beginning of the document.
@@ -123,9 +123,9 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#startDocument()
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload private function writeXmlDecl(decl : String) : Void;
+	@:overload @:protected private function writeXmlDecl(decl : String) : Void;
 	
 	/**
 	* Write a newline at the end of the document.
@@ -137,7 +137,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#endDocument()
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* Write a start tag.
@@ -158,7 +158,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#startElement(java.lang.String, java.lang.String, java.lang.String, org.xml.sax.Attributes)
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Write an end tag.
@@ -178,7 +178,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#endElement(java.lang.String, java.lang.String, java.lang.String)
 	*/
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Write character data.
@@ -193,7 +193,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#characters(char[], int, int)
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	/**
 	* Write ignorable whitespace.
@@ -208,7 +208,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#ignorableWhitespace(char[], int, int)
 	*/
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Write a processing instruction.
@@ -222,7 +222,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction(java.lang.String, java.lang.String)
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Start a new element without a qname or attributes.
@@ -240,7 +240,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see #startElement(String, String, String, Attributes)
 	*/
-	@:overload public function startElement(uri : String, localName : String) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String) : Void;
 	
 	/**
 	* Start a new element without a qname, attributes or a Namespace URI.
@@ -257,7 +257,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see #startElement(String, String, String, Attributes)
 	*/
-	@:overload public function startElement(localName : String) : Void;
+	@:overload @:public public function startElement(localName : String) : Void;
 	
 	/**
 	* End an element without a qname.
@@ -273,7 +273,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see #endElement(String, String, String)
 	*/
-	@:overload public function endElement(uri : String, localName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String) : Void;
 	
 	/**
 	* End an element without a Namespace URI or qname.
@@ -289,7 +289,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see #endElement(String, String, String)
 	*/
-	@:overload public function endElement(localName : String) : Void;
+	@:overload @:public public function endElement(localName : String) : Void;
 	
 	/**
 	* Write an element with character data content.
@@ -316,7 +316,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	* @see #characters(String)
 	* @see #endElement(String, String, String)
 	*/
-	@:overload public function dataElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes, content : String) : Void;
+	@:overload @:public public function dataElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes, content : String) : Void;
 	
 	/**
 	* Write an element with character data content but no attributes.
@@ -342,7 +342,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	* @see #characters(String)
 	* @see #endElement(String, String, String)
 	*/
-	@:overload public function dataElement(uri : String, localName : String, content : String) : Void;
+	@:overload @:public public function dataElement(uri : String, localName : String, content : String) : Void;
 	
 	/**
 	* Write an element with character data content but no attributes or Namespace URI.
@@ -368,7 +368,7 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	* @see #characters(String)
 	* @see #endElement(String, String, String)
 	*/
-	@:overload public function dataElement(localName : String, content : String) : Void;
+	@:overload @:public public function dataElement(localName : String, content : String) : Void;
 	
 	/**
 	* Write a string of character data, with XML escaping.
@@ -383,19 +383,19 @@ extern class XMLWriter extends org.xml.sax.helpers.XMLFilterImpl
 	*            the filter chain raises an exception.
 	* @see #characters(char[], int, int)
 	*/
-	@:overload public function characters(data : String) : Void;
+	@:overload @:public public function characters(data : String) : Void;
 	
 	/**
 	* Write a raw character.
 	*
 	* @param c The character to write.
 	*/
-	@:overload @:final private function write(c : java.StdTypes.Char16) : Void;
+	@:overload @:protected @:final private function write(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Write a raw string.
 	*/
-	@:overload @:final private function write(s : String) : Void;
+	@:overload @:protected @:final private function write(s : String) : Void;
 	
 	
 }

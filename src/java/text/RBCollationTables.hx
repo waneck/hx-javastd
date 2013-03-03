@@ -43,18 +43,18 @@ package java.text;
 	* can share a single RBCollationTables object, easing memory requirements and
 	* improving performance.
 	*/
-	@:overload public function new(rules : String, decmp : Int) : Void;
+	@:overload @:public public function new(rules : String, decmp : Int) : Void;
 	
 	/**
 	* Gets the table-based rules for the collation object.
 	* @return returns the collation rules that the table collation object
 	* was created from.
 	*/
-	@:overload public function getRules() : String;
+	@:overload @:public public function getRules() : String;
 	
-	@:overload public function isFrenchSec() : Bool;
+	@:overload @:public public function isFrenchSec() : Bool;
 	
-	@:overload public function isSEAsianSwapping() : Bool;
+	@:overload @:public public function isSEAsianSwapping() : Bool;
 	
 	
 }

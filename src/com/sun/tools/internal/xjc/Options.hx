@@ -26,74 +26,74 @@ package com.sun.tools.internal.xjc;
 extern class Options
 {
 	/** If "-debug" is specified. */
-	public var debugMode : Bool;
+	@:public public var debugMode : Bool;
 	
 	/** If the "-verbose" option is specified. */
-	public var verbose : Bool;
+	@:public public var verbose : Bool;
 	
 	/** If the "-quiet" option is specified. */
-	public var quiet : Bool;
+	@:public public var quiet : Bool;
 	
 	/** If the -readOnly option is specified. */
-	public var readOnly : Bool;
+	@:public public var readOnly : Bool;
 	
 	/** No file header comment (to be more friendly with diff.) */
-	public var noFileHeader : Bool;
+	@:public public var noFileHeader : Bool;
 	
 	/** When on, fixes getter/setter generation to match the Bean Introspection API */
-	public var enableIntrospection : Bool;
+	@:public public var enableIntrospection : Bool;
 	
 	/** When on, generates content property for types with multiple xs:any derived elements (which is supposed to be correct behaviour) */
-	public var contentForWildcard : Bool;
+	@:public public var contentForWildcard : Bool;
 	
 	/** Encoding to be used by generated java sources, null for platform default. */
-	public var encoding : String;
+	@:public public var encoding : String;
 	
 	/**
 	* Check the source schemas with extra scrutiny.
 	* The exact meaning depends on the schema language.
 	*/
-	public var strictCheck : Bool;
+	@:public public var strictCheck : Bool;
 	
 	/**
 	* If -explicit-annotation option is specified.
 	* <p>
 	* This generates code that works around issues specific to 1.4 runtime.
 	*/
-	public var runtime14 : Bool;
+	@:public public var runtime14 : Bool;
 	
 	/**
 	* If true, try to resolve name conflicts automatically by assigning mechanical numbers.
 	*/
-	public var automaticNameConflictResolution : Bool;
+	@:public public var automaticNameConflictResolution : Bool;
 	
 	/**
 	* strictly follow the compatibility rules and reject schemas that
 	* contain features from App. E.2, use vendor binding extensions
 	*/
-	public static var STRICT(default, null) : Int;
+	@:public @:static @:final public static var STRICT(default, null) : Int;
 	
 	/**
 	* loosely follow the compatibility rules and allow the use of vendor
 	* binding extensions
 	*/
-	public static var EXTENSION(default, null) : Int;
+	@:public @:static @:final public static var EXTENSION(default, null) : Int;
 	
 	/**
 	* this switch determines how carefully the compiler will follow
 	* the compatibility rules in the spec. Either <code>STRICT</code>
 	* or <code>EXTENSION</code>.
 	*/
-	public var compatibilityMode : Int;
+	@:public public var compatibilityMode : Int;
 	
-	@:overload public function isExtensionMode() : Bool;
+	@:overload @:public public function isExtensionMode() : Bool;
 	
 	/**
 	* Generates output for the specified version of the runtime.
 	*/
-	public var target : com.sun.tools.internal.xjc.api.SpecVersion;
+	@:public public var target : com.sun.tools.internal.xjc.api.SpecVersion;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Target directory when producing files.
@@ -102,53 +102,53 @@ extern class Options
 	* Plugins that need to generate extra files should do so by using
 	* {@link JPackage#addResourceFile(JResourceFile)}.
 	*/
-	public var targetDir : java.io.File;
+	@:public public var targetDir : java.io.File;
 	
 	/**
 	* Actually stores {@link CatalogResolver}, but the field
 	* type is made to {@link EntityResolver} so that XJC can be
 	* used even if resolver.jar is not available in the classpath.
 	*/
-	public var entityResolver : org.xml.sax.EntityResolver;
+	@:public public var entityResolver : org.xml.sax.EntityResolver;
 	
 	/**
 	* The -p option that should control the default Java package that
 	* will contain the generated code. Null if unspecified.
 	*/
-	public var defaultPackage : String;
+	@:public public var defaultPackage : String;
 	
 	/**
 	* Similar to the -p option, but this one works with a lower priority,
 	* and customizations overrides this. Used by JAX-RPC.
 	*/
-	public var defaultPackage2 : String;
+	@:public public var defaultPackage2 : String;
 	
 	/**
 	* {@link Plugin}s that are enabled in this compilation.
 	*/
-	public var activePlugins(default, null) : java.util.List<com.sun.tools.internal.xjc.Plugin>;
+	@:public @:final public var activePlugins(default, null) : java.util.List<com.sun.tools.internal.xjc.Plugin>;
 	
 	/**
 	* Set of URIs that plug-ins recognize as extension bindings.
 	*/
-	public var pluginURIs(default, null) : java.util.Set<String>;
+	@:public @:final public var pluginURIs(default, null) : java.util.Set<String>;
 	
 	/**
 	* This allocator has the final say on deciding the class name.
 	*/
-	public var classNameAllocator : com.sun.tools.internal.xjc.api.ClassNameAllocator;
+	@:public public var classNameAllocator : com.sun.tools.internal.xjc.api.ClassNameAllocator;
 	
 	/**
 	* This switch controls whether or not xjc will generate package level annotations
 	*/
-	public var packageLevelAnnotations : Bool;
+	@:public public var packageLevelAnnotations : Bool;
 	
 	/**
 	* Gets the active {@link FieldRendererFactory} that shall be used to build {@link Model}.
 	*
 	* @return always non-null.
 	*/
-	@:overload public function getFieldRendererFactory() : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory;
+	@:overload @:public public function getFieldRendererFactory() : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory;
 	
 	/**
 	* Sets the {@link FieldRendererFactory}.
@@ -167,14 +167,14 @@ extern class Options
 	*      If a conflit happens, this exception carries a user-friendly error
 	*      message, indicating a conflict.
 	*/
-	@:overload public function setFieldRendererFactory(frf : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory, owner : com.sun.tools.internal.xjc.Plugin) : Void;
+	@:overload @:public public function setFieldRendererFactory(frf : com.sun.tools.internal.xjc.generator.bean.field.FieldRendererFactory, owner : com.sun.tools.internal.xjc.Plugin) : Void;
 	
 	/**
 	* Gets the active {@link NameConverter} that shall be used to build {@link Model}.
 	*
 	* @return can be null, in which case it's up to the binding.
 	*/
-	@:overload public function getNameConverter() : com.sun.xml.internal.bind.api.impl.NameConverter;
+	@:overload @:public public function getNameConverter() : com.sun.xml.internal.bind.api.impl.NameConverter;
 	
 	/**
 	* Sets the {@link NameConverter}.
@@ -193,7 +193,7 @@ extern class Options
 	*      If a conflit happens, this exception carries a user-friendly error
 	*      message, indicating a conflict.
 	*/
-	@:overload public function setNameConverter(nc : com.sun.xml.internal.bind.api.impl.NameConverter, owner : com.sun.tools.internal.xjc.Plugin) : Void;
+	@:overload @:public public function setNameConverter(nc : com.sun.xml.internal.bind.api.impl.NameConverter, owner : com.sun.tools.internal.xjc.Plugin) : Void;
 	
 	/**
 	* Gets all the {@link Plugin}s discovered so far.
@@ -203,52 +203,52 @@ extern class Options
 	* by taking {@link #classpaths} into account. That means
 	* "-cp plugin.jar" has to come before you specify options to enable it.
 	*/
-	@:overload public function getAllPlugins() : java.util.List<com.sun.tools.internal.xjc.Plugin>;
+	@:overload @:public public function getAllPlugins() : java.util.List<com.sun.tools.internal.xjc.Plugin>;
 	
-	@:overload public function getSchemaLanguage() : com.sun.tools.internal.xjc.Language;
+	@:overload @:public public function getSchemaLanguage() : com.sun.tools.internal.xjc.Language;
 	
-	@:overload public function setSchemaLanguage(_schemaLanguage : com.sun.tools.internal.xjc.Language) : Void;
+	@:overload @:public public function setSchemaLanguage(_schemaLanguage : com.sun.tools.internal.xjc.Language) : Void;
 	
 	/** Input schema files. */
-	@:overload public function getGrammars() : java.NativeArray<org.xml.sax.InputSource>;
+	@:overload @:public public function getGrammars() : java.NativeArray<org.xml.sax.InputSource>;
 	
 	/**
 	* Adds a new input schema.
 	*/
-	@:overload public function addGrammar(is : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function addGrammar(is : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function addGrammar(source : java.io.File) : Void;
+	@:overload @:public public function addGrammar(source : java.io.File) : Void;
 	
 	/**
 	* Recursively scan directories and add all XSD files in it.
 	*/
-	@:overload public function addGrammarRecursive(dir : java.io.File) : Void;
+	@:overload @:public public function addGrammarRecursive(dir : java.io.File) : Void;
 	
 	/** Input external binding files. */
-	@:overload public function getBindFiles() : java.NativeArray<org.xml.sax.InputSource>;
+	@:overload @:public public function getBindFiles() : java.NativeArray<org.xml.sax.InputSource>;
 	
 	/**
 	* Adds a new binding file.
 	*/
-	@:overload public function addBindFile(is : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function addBindFile(is : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Adds a new binding file.
 	*/
-	@:overload public function addBindFile(bindFile : java.io.File) : Void;
+	@:overload @:public public function addBindFile(bindFile : java.io.File) : Void;
 	
 	/**
 	* Recursively scan directories and add all ".xjb" files in it.
 	*/
-	@:overload public function addBindFileRecursive(dir : java.io.File) : Void;
+	@:overload @:public public function addBindFileRecursive(dir : java.io.File) : Void;
 	
-	public var classpaths(default, null) : java.util.List<java.net.URL>;
+	@:public @:final public var classpaths(default, null) : java.util.List<java.net.URL>;
 	
 	/**
 	* Gets a classLoader that can load classes specified via the
 	* -classpath option.
 	*/
-	@:overload public function getUserClassLoader(parent : java.lang.ClassLoader) : java.net.URLClassLoader;
+	@:overload @:public public function getUserClassLoader(parent : java.lang.ClassLoader) : java.net.URLClassLoader;
 	
 	/**
 	* Parses an option <code>args[i]</code> and return
@@ -260,17 +260,17 @@ extern class Options
 	* @exception BadCommandLineException
 	*      If the callee wants to provide a custom message for an error.
 	*/
-	@:overload public function parseArgument(args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public public function parseArgument(args : java.NativeArray<String>, i : Int) : Int;
 	
 	/**
 	* Obtains an operand and reports an error if it's not there.
 	*/
-	@:overload public function requireArgument(optionName : String, args : java.NativeArray<String>, i : Int) : String;
+	@:overload @:public public function requireArgument(optionName : String, args : java.NativeArray<String>, i : Int) : String;
 	
 	/**
 	* Adds a new catalog file.
 	*/
-	@:overload public function addCatalog(catalogFile : java.io.File) : Void;
+	@:overload @:public public function addCatalog(catalogFile : java.io.File) : Void;
 	
 	/**
 	* Parses arguments and fill fields of this object.
@@ -278,35 +278,35 @@ extern class Options
 	* @exception BadCommandLineException
 	*      thrown when there's a problem in the command-line arguments
 	*/
-	@:overload public function parseArguments(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function parseArguments(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Finds the <tt>META-INF/sun-jaxb.episode</tt> file to add as a binding customization.
 	*/
-	@:overload public function scanEpisodeFile(jar : java.io.File) : Void;
+	@:overload @:public public function scanEpisodeFile(jar : java.io.File) : Void;
 	
 	/**
 	* Guesses the schema language.
 	*/
-	@:overload public function guessSchemaLanguage() : com.sun.tools.internal.xjc.Language;
+	@:overload @:public public function guessSchemaLanguage() : com.sun.tools.internal.xjc.Language;
 	
 	/**
 	* Creates a configured CodeWriter that produces files into the specified directory.
 	*/
-	@:overload public function createCodeWriter() : com.sun.codemodel.internal.CodeWriter;
+	@:overload @:public public function createCodeWriter() : com.sun.codemodel.internal.CodeWriter;
 	
 	/**
 	* Creates a configured CodeWriter that produces files into the specified directory.
 	*/
-	@:overload public function createCodeWriter(core : com.sun.codemodel.internal.CodeWriter) : com.sun.codemodel.internal.CodeWriter;
+	@:overload @:public public function createCodeWriter(core : com.sun.codemodel.internal.CodeWriter) : com.sun.codemodel.internal.CodeWriter;
 	
 	/**
 	* Gets the string suitable to be used as the prolog comment baked into artifacts.
 	* This is the string like "This file was generated by the JAXB RI on YYYY/mm/dd..."
 	*/
-	@:overload public function getPrologComment() : String;
+	@:overload @:public public function getPrologComment() : String;
 	
-	@:overload public static function getBuildID() : String;
+	@:overload @:public @:static public static function getBuildID() : String;
 	
 	
 }

@@ -25,20 +25,20 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class DerivedColor extends java.awt.Color
 {
-	@:overload public function getUiDefaultParentName() : String;
+	@:overload @:public public function getUiDefaultParentName() : String;
 	
-	@:overload public function getHueOffset() : Single;
+	@:overload @:public public function getHueOffset() : Single;
 	
-	@:overload public function getSaturationOffset() : Single;
+	@:overload @:public public function getSaturationOffset() : Single;
 	
-	@:overload public function getBrightnessOffset() : Single;
+	@:overload @:public public function getBrightnessOffset() : Single;
 	
-	@:overload public function getAlphaOffset() : Int;
+	@:overload @:public public function getAlphaOffset() : Int;
 	
 	/**
 	* Recalculate the derived color from the UIManager parent color and offsets
 	*/
-	@:overload public function rederiveColor() : Void;
+	@:overload @:public public function rederiveColor() : Void;
 	
 	/**
 	* Returns the RGB value representing the color in the default sRGB {@link java.awt.image.ColorModel}. (Bits 24-31
@@ -51,11 +51,11 @@ package javax.swing.plaf.nimbus;
 	* @see #getBlue
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getRGB() : Int;
+	@:require(java0) @:overload @:public override public function getRGB() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>Color</code>. This method
@@ -65,15 +65,15 @@ package javax.swing.plaf.nimbus;
 	*
 	* @return a String representation of this <code>Color</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
 @:native('javax$swing$plaf$nimbus$DerivedColor$UIResource') @:internal extern class DerivedColor_UIResource extends javax.swing.plaf.nimbus.DerivedColor implements javax.swing.plaf.UIResource
 {
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

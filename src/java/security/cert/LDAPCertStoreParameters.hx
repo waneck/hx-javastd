@@ -53,7 +53,7 @@ package java.security.cert;
 	* @exception NullPointerException if <code>serverName</code> is
 	* <code>null</code>
 	*/
-	@:overload public function new(serverName : String, port : Int) : Void;
+	@:overload @:public public function new(serverName : String, port : Int) : Void;
 	
 	/**
 	* Creates an instance of <code>LDAPCertStoreParameters</code> with the
@@ -63,27 +63,27 @@ package java.security.cert;
 	* @exception NullPointerException if <code>serverName</code> is
 	* <code>null</code>
 	*/
-	@:overload public function new(serverName : String) : Void;
+	@:overload @:public public function new(serverName : String) : Void;
 	
 	/**
 	* Creates an instance of <code>LDAPCertStoreParameters</code> with the
 	* default parameter values (server name "localhost", port 389).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the DNS name of the LDAP server.
 	*
 	* @return the name (not <code>null</code>)
 	*/
-	@:overload public function getServerName() : String;
+	@:overload @:public public function getServerName() : String;
 	
 	/**
 	* Returns the port number of the LDAP server.
 	*
 	* @return the port number
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Returns a copy of this object. Changes to the copy will not affect
@@ -96,14 +96,14 @@ package java.security.cert;
 	*
 	* @return the copy
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a formatted string describing the parameters.
 	*
 	* @return a formatted string describing the parameters
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

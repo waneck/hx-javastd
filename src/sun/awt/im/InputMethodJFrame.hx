@@ -28,11 +28,11 @@ extern class InputMethodJFrame extends javax.swing.JFrame implements sun.awt.im.
 	/**
 	* Constructs a Swing based input method window.
 	*/
-	@:overload public function new(title : String, context : sun.awt.im.InputContext) : Void;
+	@:overload @:public public function new(title : String, context : sun.awt.im.InputContext) : Void;
 	
-	@:overload public function setInputContext(inputContext : sun.awt.im.InputContext) : Void;
+	@:overload @:public public function setInputContext(inputContext : sun.awt.im.InputContext) : Void;
 	
-	@:overload override public function getInputContext() : java.awt.im.InputContext;
+	@:overload @:public override public function getInputContext() : java.awt.im.InputContext;
 	
 	
 }

@@ -88,7 +88,7 @@ package java.lang;
 	* @return the output stream connected to the normal input of the
 	*         subprocess
 	*/
-	@:overload @:abstract public function getOutputStream() : java.io.OutputStream;
+	@:overload @:abstract @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the input stream connected to the normal output of the
@@ -114,7 +114,7 @@ package java.lang;
 	* @return the input stream connected to the normal output of the
 	*         subprocess
 	*/
-	@:overload @:abstract public function getInputStream() : java.io.InputStream;
+	@:overload @:abstract @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns the input stream connected to the error output of the
@@ -135,7 +135,7 @@ package java.lang;
 	* @return the input stream connected to the error output of
 	*         the subprocess
 	*/
-	@:overload @:abstract public function getErrorStream() : java.io.InputStream;
+	@:overload @:abstract @:public public function getErrorStream() : java.io.InputStream;
 	
 	/**
 	* Causes the current thread to wait, if necessary, until the
@@ -153,7 +153,7 @@ package java.lang;
 	*         thread while it is waiting, then the wait is ended and
 	*         an {@link InterruptedException} is thrown.
 	*/
-	@:overload @:abstract public function waitFor() : Int;
+	@:overload @:abstract @:public public function waitFor() : Int;
 	
 	/**
 	* Returns the exit value for the subprocess.
@@ -164,13 +164,13 @@ package java.lang;
 	* @throws IllegalThreadStateException if the subprocess represented
 	*         by this {@code Process} object has not yet terminated
 	*/
-	@:overload @:abstract public function exitValue() : Int;
+	@:overload @:abstract @:public public function exitValue() : Int;
 	
 	/**
 	* Kills the subprocess. The subprocess represented by this
 	* {@code Process} object is forcibly terminated.
 	*/
-	@:overload @:abstract public function destroy() : Void;
+	@:overload @:abstract @:public public function destroy() : Void;
 	
 	
 }

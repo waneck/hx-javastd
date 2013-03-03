@@ -30,7 +30,7 @@ extern interface ItemPSVI
 	* itself if it has such a property). For more information refer to
 	* element validation context and attribute validation context .
 	*/
-	@:overload public function getValidationContext() : String;
+	@:overload @:public public function getValidationContext() : String;
 	
 	/**
 	*  <code>[validity]</code>: determines the validity of the schema item
@@ -38,7 +38,7 @@ extern interface ItemPSVI
 	* of the constants: <code>VALIDITY_NOTKNOWN</code>,
 	* <code>VALIDITY_INVALID</code> or <code>VALIDITY_VALID</code>.
 	*/
-	@:overload public function getValidity() : java.StdTypes.Int16;
+	@:overload @:public public function getValidity() : java.StdTypes.Int16;
 	
 	/**
 	*  <code>[validation attempted]</code>: determines the extent to which
@@ -46,20 +46,20 @@ extern interface ItemPSVI
 	* constants: <code>VALIDATION_NONE</code>,
 	* <code>VALIDATION_PARTIAL</code> or <code>VALIDATION_FULL</code>.
 	*/
-	@:overload public function getValidationAttempted() : java.StdTypes.Int16;
+	@:overload @:public public function getValidationAttempted() : java.StdTypes.Int16;
 	
 	/**
 	*  <code>[schema error code]</code>: a list of error codes generated from
 	* the validation attempt or an empty <code>StringList</code> if no
 	* errors occurred during the validation attempt.
 	*/
-	@:overload public function getErrorCodes() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getErrorCodes() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* <code>[schema normalized value]</code>: the normalized value of this
 	* item after validation.
 	*/
-	@:overload public function getSchemaNormalizedValue() : String;
+	@:overload @:public public function getSchemaNormalizedValue() : String;
 	
 	/**
 	* <code>[schema normalized value]</code>: Binding specific actual value
@@ -68,7 +68,7 @@ extern interface ItemPSVI
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualNormalizedValue() : Dynamic;
+	@:overload @:public public function getActualNormalizedValue() : Dynamic;
 	
 	/**
 	* The actual value built-in datatype, e.g.
@@ -85,7 +85,7 @@ extern interface ItemPSVI
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualNormalizedValueType() : java.StdTypes.Int16;
+	@:overload @:public public function getActualNormalizedValueType() : java.StdTypes.Int16;
 	
 	/**
 	* In the case the actual value represents a list, i.e. the
@@ -118,13 +118,13 @@ extern interface ItemPSVI
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	*  <code>[type definition]</code>: an item isomorphic to the type
 	* definition used to validate the schema item.
 	*/
-	@:overload public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
+	@:overload @:public public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* <code>[member type definition]</code>: if and only if that type
@@ -134,21 +134,21 @@ extern interface ItemPSVI
 	* member of the union's {member type definitions} which actually
 	* validated the schema item's normalized value.
 	*/
-	@:overload public function getMemberTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getMemberTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* <code>[schema default]</code>: the canonical lexical representation of
 	* the declaration's {value constraint} value. For more information
 	* refer to element schema default and attribute schema default.
 	*/
-	@:overload public function getSchemaDefault() : String;
+	@:overload @:public public function getSchemaDefault() : String;
 	
 	/**
 	* <code>[schema specified]</code>: if true, the value was specified in
 	* the schema. If false, the value comes from the infoset. For more
 	* information refer to element specified and attribute specified.
 	*/
-	@:overload public function getIsSchemaSpecified() : Bool;
+	@:overload @:public public function getIsSchemaSpecified() : Bool;
 	
 	
 }

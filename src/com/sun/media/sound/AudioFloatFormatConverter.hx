@@ -25,23 +25,23 @@ package com.sun.media.sound;
 */
 extern class AudioFloatFormatConverter extends javax.sound.sampled.spi.FormatConversionProvider
 {
-	@:overload public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public override public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : com.sun.media.sound.AudioFloatInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : com.sun.media.sound.AudioFloatInputStream) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public override public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
-	@:overload public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public override public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
-	@:overload public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:public override public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
-	@:overload public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:public override public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
-	@:overload public function isConversionSupported(targetFormat : javax.sound.sampled.AudioFormat, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public override public function isConversionSupported(targetFormat : javax.sound.sampled.AudioFormat, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
 	
-	@:overload public function isConversionSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public override public function isConversionSupported(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : Bool;
 	
 	
 }
@@ -54,71 +54,71 @@ extern class AudioFloatFormatConverter extends javax.sound.sampled.spi.FormatCon
 */
 @:native('com$sun$media$sound$AudioFloatFormatConverter$AudioFloatFormatConverterInputStream') @:internal extern class AudioFloatFormatConverter_AudioFloatFormatConverterInputStream extends java.io.InputStream
 {
-	@:overload public function new(targetFormat : javax.sound.sampled.AudioFormat, stream : com.sun.media.sound.AudioFloatInputStream) : Void;
+	@:overload @:public public function new(targetFormat : javax.sound.sampled.AudioFormat, stream : com.sun.media.sound.AudioFloatInputStream) : Void;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload @:synchronized public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatFormatConverter$AudioFloatInputStreamChannelMixer') @:internal extern class AudioFloatFormatConverter_AudioFloatInputStreamChannelMixer extends com.sun.media.sound.AudioFloatInputStream
 {
-	@:overload public function new(ais : com.sun.media.sound.AudioFloatInputStream, targetChannels : Int) : Void;
+	@:overload @:public public function new(ais : com.sun.media.sound.AudioFloatInputStream, targetChannels : Int) : Void;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public override public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload public function getFrameLength() : haxe.Int64;
+	@:overload @:public override public function getFrameLength() : haxe.Int64;
 	
-	@:overload public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(len : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('com$sun$media$sound$AudioFloatFormatConverter$AudioFloatInputStreamResampler') @:internal extern class AudioFloatFormatConverter_AudioFloatInputStreamResampler extends com.sun.media.sound.AudioFloatInputStream
 {
-	@:overload public function new(ais : com.sun.media.sound.AudioFloatInputStream, format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function new(ais : com.sun.media.sound.AudioFloatInputStream, format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public override public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload public function getFrameLength() : haxe.Int64;
+	@:overload @:public override public function getFrameLength() : haxe.Int64;
 	
-	@:overload public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(len : haxe.Int64) : haxe.Int64;
 	
 	
 }

@@ -38,7 +38,7 @@ package javax.smartcardio;
 	*
 	* @param message the detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new CardException with the specified cause and a detail message
@@ -46,7 +46,7 @@ package javax.smartcardio;
 	*
 	* @param cause the cause of this exception or null
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new CardException with the specified detail message and cause.
@@ -54,7 +54,7 @@ package javax.smartcardio;
 	* @param message the detail message
 	* @param cause the cause of this exception or null
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	
 }

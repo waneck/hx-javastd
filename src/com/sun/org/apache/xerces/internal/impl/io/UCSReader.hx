@@ -24,23 +24,23 @@ extern class UCSReader extends java.io.Reader
 	* since it's reasonable to surmise that the average UCS-4-encoded
 	* file should be 4 times as large as the average ASCII-encoded file).
 	*/
-	public static var DEFAULT_BUFFER_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_BUFFER_SIZE(default, null) : Int;
 	
-	public static var UCS2LE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var UCS2LE(default, null) : java.StdTypes.Int16;
 	
-	public static var UCS2BE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var UCS2BE(default, null) : java.StdTypes.Int16;
 	
-	public static var UCS4LE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var UCS4LE(default, null) : java.StdTypes.Int16;
 	
-	public static var UCS4BE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var UCS4BE(default, null) : java.StdTypes.Int16;
 	
 	/** Input stream. */
-	private var fInputStream : java.io.InputStream;
+	@:protected private var fInputStream : java.io.InputStream;
 	
 	/** Byte buffer. */
-	private var fBuffer : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var fBuffer : java.NativeArray<java.StdTypes.Int8>;
 	
-	private var fEncoding : java.StdTypes.Int16;
+	@:protected private var fEncoding : java.StdTypes.Int16;
 	
 	/**
 	* Constructs an ASCII reader from the specified input stream
@@ -50,7 +50,7 @@ extern class UCSReader extends java.io.Reader
 	* @param inputStream The input stream.
 	* @param encoding One of UCS2LE, UCS2BE, UCS4LE or UCS4BE.
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, encoding : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, encoding : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Constructs an ASCII reader from the specified input stream
@@ -61,7 +61,7 @@ extern class UCSReader extends java.io.Reader
 	* @param size        The initial buffer size.
 	* @param encoding One of UCS2LE, UCS2BE, UCS4LE or UCS4BE.
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, size : Int, encoding : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, size : Int, encoding : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Read a single character.  This method will block until a character is
@@ -76,7 +76,7 @@ extern class UCSReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Read characters into a portion of an array.  This method will block
@@ -92,7 +92,7 @@ extern class UCSReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function read(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function read(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Skip characters.  This method will block until some characters are
@@ -104,7 +104,7 @@ extern class UCSReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tell whether this stream is ready to be read.
@@ -115,12 +115,12 @@ extern class UCSReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Tell whether this stream supports the mark() operation.
 	*/
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Mark the present position in the stream.  Subsequent calls to reset()
@@ -135,7 +135,7 @@ extern class UCSReader extends java.io.Reader
 	* @exception  IOException  If the stream does not support mark(),
 	*                          or if some other I/O error occurs
 	*/
-	@:overload public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Reset the stream.  If the stream has been marked, then attempt to
@@ -150,7 +150,7 @@ extern class UCSReader extends java.io.Reader
 	*                          or if the stream does not support reset(),
 	*                          or if some other I/O error occurs
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Close the stream.  Once a stream has been closed, further read(),
@@ -159,7 +159,7 @@ extern class UCSReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

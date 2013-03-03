@@ -57,7 +57,7 @@ package java.util.logging;
 	* <tt>LogManager</tt> properties (or their default values).
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Publish a <tt>LogRecord</tt>.
@@ -68,14 +68,14 @@ package java.util.logging;
 	* @param  record  description of the log event. A null record is
 	*                 silently ignored and is not published
 	*/
-	@:overload override public function publish(record : java.util.logging.LogRecord) : Void;
+	@:overload @:public override public function publish(record : java.util.logging.LogRecord) : Void;
 	
 	/**
 	* Override <tt>StreamHandler.close</tt> to do a flush but not
 	* to close the output stream.  That is, we do <b>not</b>
 	* close <tt>System.err</tt>.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

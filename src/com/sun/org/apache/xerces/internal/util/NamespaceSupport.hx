@@ -70,10 +70,10 @@ extern class NamespaceSupport implements com.sun.org.apache.xerces.internal.xni.
 	* @see #fNamespaceSize
 	* @see #fContext
 	*/
-	private var fNamespace : java.NativeArray<String>;
+	@:protected private var fNamespace : java.NativeArray<String>;
 	
 	/** The top of the namespace information array. */
-	private var fNamespaceSize : Int;
+	@:protected private var fNamespaceSize : Int;
 	
 	/**
 	* Context indexes. This array contains indexes into the namespace
@@ -83,70 +83,70 @@ extern class NamespaceSupport implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @see #fNamespaceSize
 	*/
-	private var fContext : java.NativeArray<Int>;
+	@:protected private var fContext : java.NativeArray<Int>;
 	
 	/** The current context. */
-	private var fCurrentContext : Int;
+	@:protected private var fCurrentContext : Int;
 	
-	private var fPrefixes : java.NativeArray<String>;
+	@:protected private var fPrefixes : java.NativeArray<String>;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a namespace context object and initializes it with
 	* the prefixes declared in the specified context.
 	*/
-	@:overload public function new(context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public public function new(context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#reset()
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#pushContext()
 	*/
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#popContext()
 	*/
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#declarePrefix(String, String)
 	*/
-	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload @:public public function declarePrefix(prefix : String, uri : String) : Bool;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getURI(String)
 	*/
-	@:overload public function getURI(prefix : String) : String;
+	@:overload @:public public function getURI(prefix : String) : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getPrefix(String)
 	*/
-	@:overload public function getPrefix(uri : String) : String;
+	@:overload @:public public function getPrefix(uri : String) : String;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getDeclaredPrefixCount()
 	*/
-	@:overload public function getDeclaredPrefixCount() : Int;
+	@:overload @:public public function getDeclaredPrefixCount() : Int;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getDeclaredPrefixAt(int)
 	*/
-	@:overload public function getDeclaredPrefixAt(index : Int) : String;
+	@:overload @:public public function getDeclaredPrefixAt(index : Int) : String;
 	
-	@:overload public function getPrefixes() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* @see com.sun.org.apache.xerces.internal.xni.NamespaceContext#getAllPrefixes()
 	*/
-	@:overload public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAllPrefixes() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getPrefixes(uri : String) : java.util.Vector<Dynamic>;
+	@:overload @:public public function getPrefixes(uri : String) : java.util.Vector<Dynamic>;
 	
 	/**
 	* Checks whether a binding or unbinding for
@@ -156,7 +156,7 @@ extern class NamespaceSupport implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return true if the given prefix exists in the context
 	*/
-	@:overload public function containsPrefix(prefix : String) : Bool;
+	@:overload @:public public function containsPrefix(prefix : String) : Bool;
 	
 	/**
 	* Checks whether a binding or unbinding for
@@ -166,7 +166,7 @@ extern class NamespaceSupport implements com.sun.org.apache.xerces.internal.xni.
 	*
 	* @return true if the given prefix exists in the current context
 	*/
-	@:overload public function containsPrefixInCurrentContext(prefix : String) : Bool;
+	@:overload @:public public function containsPrefixInCurrentContext(prefix : String) : Bool;
 	
 	
 }
@@ -175,21 +175,21 @@ extern class NamespaceSupport implements com.sun.org.apache.xerces.internal.xni.
 	/**
 	* Constructor for Prefixes.
 	*/
-	@:overload public function new(prefixes : java.NativeArray<String>, size : Int) : Void;
+	@:overload @:public public function new(prefixes : java.NativeArray<String>, size : Int) : Void;
 	
 	/**
 	* @see java.util.Enumeration#hasMoreElements()
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	* @see java.util.Enumeration#nextElement()
 	*/
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
@@ -198,19 +198,19 @@ extern class NamespaceSupport implements com.sun.org.apache.xerces.internal.xni.
 	/**
 	* Constructor for Prefixes.
 	*/
-	@:overload public function new(prefixes : java.NativeArray<String>, size : Int) : Void;
+	@:overload @:public public function new(prefixes : java.NativeArray<String>, size : Int) : Void;
 	
 	/**
 	* @see java.util.Enumeration#hasMoreElements()
 	*/
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
 	/**
 	* @see java.util.Enumeration#nextElement()
 	*/
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

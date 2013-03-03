@@ -25,19 +25,19 @@ package sun.rmi.server;
 */
 extern class ActivatableRef implements java.rmi.server.RemoteRef
 {
-	private var id : java.rmi.activation.ActivationID;
+	@:protected private var id : java.rmi.activation.ActivationID;
 	
-	private var ref : java.rmi.server.RemoteRef;
+	@:protected private var ref : java.rmi.server.RemoteRef;
 	
 	/**
 	* Create a new (empty) ActivatableRef
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a ActivatableRef with the specified id
 	*/
-	@:overload public function new(id : java.rmi.activation.ActivationID, ref : java.rmi.server.RemoteRef) : Void;
+	@:overload @:public public function new(id : java.rmi.activation.ActivationID, ref : java.rmi.server.RemoteRef) : Void;
 	
 	/**
 	* Returns the stub for the remote object whose class is
@@ -45,7 +45,7 @@ extern class ActivatableRef implements java.rmi.server.RemoteRef
 	* in the resulting stub has its activation id set to the
 	* activation id supplied as the second argument.
 	*/
-	@:overload public static function getStub(desc : java.rmi.activation.ActivationDesc, id : java.rmi.activation.ActivationID) : java.rmi.Remote;
+	@:overload @:public @:static public static function getStub(desc : java.rmi.activation.ActivationDesc, id : java.rmi.activation.ActivationID) : java.rmi.Remote;
 	
 	/**
 	* Invoke method on remote object. This method delegates remote
@@ -62,56 +62,56 @@ extern class ActivatableRef implements java.rmi.server.RemoteRef
 	* initial method invocation does not execute at all at the server
 	* (including parameter deserialization).
 	*/
-	@:overload public function invoke(obj : java.rmi.Remote, method : java.lang.reflect.Method, params : java.NativeArray<Dynamic>, opnum : haxe.Int64) : Dynamic;
+	@:overload @:public public function invoke(obj : java.rmi.Remote, method : java.lang.reflect.Method, params : java.NativeArray<Dynamic>, opnum : haxe.Int64) : Dynamic;
 	
 	/**
 	* This call is used by the old 1.1 stub protocol and is
 	* unsupported since activation requires 1.2 stubs.
 	*/
-	@:overload @:synchronized public function newCall(obj : java.rmi.server.RemoteObject, ops : java.NativeArray<java.rmi.server.Operation>, opnum : Int, hash : haxe.Int64) : java.rmi.server.RemoteCall;
+	@:overload @:public @:synchronized public function newCall(obj : java.rmi.server.RemoteObject, ops : java.NativeArray<java.rmi.server.Operation>, opnum : Int, hash : haxe.Int64) : java.rmi.server.RemoteCall;
 	
 	/**
 	* This call is used by the old 1.1 stub protocol and is
 	* unsupported since activation requires 1.2 stubs.
 	*/
-	@:overload public function invoke(call : java.rmi.server.RemoteCall) : Void;
+	@:overload @:public public function invoke(call : java.rmi.server.RemoteCall) : Void;
 	
 	/**
 	* This call is used by the old 1.1 stub protocol and is
 	* unsupported since activation requires 1.2 stubs.
 	*/
-	@:overload public function done(call : java.rmi.server.RemoteCall) : Void;
+	@:overload @:public public function done(call : java.rmi.server.RemoteCall) : Void;
 	
 	/**
 	* Returns the class of the ref type to be serialized
 	*/
-	@:overload public function getRefClass(out : java.io.ObjectOutput) : String;
+	@:overload @:public public function getRefClass(out : java.io.ObjectOutput) : String;
 	
 	/**
 	* Write out external representation for remote ref.
 	*/
-	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* Read in external representation for remote ref.
 	* @exception ClassNotFoundException If the class for an object
 	* being restored cannot be found.
 	*/
-	@:overload public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	/**
 	* Method from object, forward from RemoteObject
 	*/
-	@:overload public function remoteToString() : String;
+	@:overload @:public public function remoteToString() : String;
 	
 	/**
 	* default implementation of hashCode for remote objects
 	*/
-	@:overload public function remoteHashCode() : Int;
+	@:overload @:public public function remoteHashCode() : Int;
 	
 	/** default implementation of equals for remote objects
 	*/
-	@:overload public function remoteEquals(ref : java.rmi.server.RemoteRef) : Bool;
+	@:overload @:public public function remoteEquals(ref : java.rmi.server.RemoteRef) : Bool;
 	
 	
 }

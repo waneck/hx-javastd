@@ -54,7 +54,7 @@ extern class Doclet
 	*
 	* @return true on success.
 	*/
-	@:overload public static function start(root : com.sun.javadoc.RootDoc) : Bool;
+	@:overload @:public @:static public static function start(root : com.sun.javadoc.RootDoc) : Bool;
 	
 	/**
 	* Check for doclet-added options.  Returns the number of
@@ -69,7 +69,7 @@ extern class Doclet
 	*         including the option name itself.  Zero return means
 	*         option not known.  Negative value means error occurred.
 	*/
-	@:overload public static function optionLength(option : String) : Int;
+	@:overload @:public @:static public static function optionLength(option : String) : Int;
 	
 	/**
 	* Check that options have the correct arguments.
@@ -84,7 +84,7 @@ extern class Doclet
 	*
 	* @return true if the options are valid.
 	*/
-	@:overload public static function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
+	@:overload @:public @:static public static function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
 	
 	/**
 	* Return the version of the Java Programming Language supported
@@ -96,7 +96,7 @@ extern class Doclet
 	* @return  the language version supported by this doclet.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function languageVersion() : com.sun.javadoc.LanguageVersion;
+	@:require(java5) @:overload @:public @:static public static function languageVersion() : com.sun.javadoc.LanguageVersion;
 	
 	
 }

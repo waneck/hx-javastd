@@ -25,13 +25,13 @@ package com.sun.corba.se.spi.protocol;
 */
 extern class ForwardException extends java.lang.RuntimeException
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, obj : org.omg.CORBA.Object) : Void;
 	
-	@:overload @:synchronized public function getObject() : org.omg.CORBA.Object;
+	@:overload @:public @:synchronized public function getObject() : org.omg.CORBA.Object;
 	
-	@:overload @:synchronized public function getIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public @:synchronized public function getIOR() : com.sun.corba.se.spi.ior.IOR;
 	
 	
 }

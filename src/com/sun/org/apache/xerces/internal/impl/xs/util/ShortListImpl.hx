@@ -23,7 +23,7 @@ extern class ShortListImpl extends java.util.AbstractList<Dynamic> implements co
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.ShortListImpl;
+	@:public @:static @:final public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.ShortListImpl;
 	
 	/**
 	* Construct an XSObjectList implementation
@@ -31,13 +31,13 @@ extern class ShortListImpl extends java.util.AbstractList<Dynamic> implements co
 	* @param array     the data array
 	* @param length    the number of elements
 	*/
-	@:overload public function new(array : java.NativeArray<java.StdTypes.Int16>, length : Int) : Void;
+	@:overload @:public public function new(array : java.NativeArray<java.StdTypes.Int16>, length : Int) : Void;
 	
 	/**
 	* The number of <code>Objects</code> in the list. The range of valid
 	* child node indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Checks if the <code>unsigned short</code> <code>item</code> is a
@@ -47,18 +47,18 @@ extern class ShortListImpl extends java.util.AbstractList<Dynamic> implements co
 	* @return  True if this list contains the <code>unsigned short</code>
 	*   <code>item</code>.
 	*/
-	@:overload public function contains(item : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function contains(item : java.StdTypes.Int16) : Bool;
 	
-	@:overload public function item(index : Int) : java.StdTypes.Int16;
+	@:overload @:public public function item(index : Int) : java.StdTypes.Int16;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/*
 	* List methods
 	*/
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }

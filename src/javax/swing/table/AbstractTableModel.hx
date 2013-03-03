@@ -26,7 +26,7 @@ package javax.swing.table;
 extern class AbstractTableModel implements javax.swing.table.TableModel implements java.io.Serializable
 {
 	/** List of listeners */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	*  Returns a default name for the column using spreadsheet conventions:
@@ -36,7 +36,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @param column  the column being queried
 	* @return a string containing the default name of <code>column</code>
 	*/
-	@:overload public function getColumnName(column : Int) : String;
+	@:overload @:public public function getColumnName(column : Int) : String;
 	
 	/**
 	* Returns a column given its name.
@@ -48,7 +48,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @param columnName string containing name of column to be located
 	* @return the column with <code>columnName</code>, or -1 if not found
 	*/
-	@:overload public function findColumn(columnName : String) : Int;
+	@:overload @:public public function findColumn(columnName : String) : Int;
 	
 	/**
 	*  Returns <code>Object.class</code> regardless of <code>columnIndex</code>.
@@ -56,7 +56,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*  @param columnIndex  the column being queried
 	*  @return the Object.class
 	*/
-	@:overload public function getColumnClass(columnIndex : Int) : Class<Dynamic>;
+	@:overload @:public public function getColumnClass(columnIndex : Int) : Class<Dynamic>;
 	
 	/**
 	*  Returns false.  This is the default implementation for all cells.
@@ -65,7 +65,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*  @param  columnIndex the column being queried
 	*  @return false
 	*/
-	@:overload public function isCellEditable(rowIndex : Int, columnIndex : Int) : Bool;
+	@:overload @:public public function isCellEditable(rowIndex : Int, columnIndex : Int) : Bool;
 	
 	/**
 	*  This empty implementation is provided so users don't have to implement
@@ -75,7 +75,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*  @param  rowIndex   row of cell
 	*  @param  columnIndex  column of cell
 	*/
-	@:overload public function setValueAt(aValue : Dynamic, rowIndex : Int, columnIndex : Int) : Void;
+	@:overload @:public public function setValueAt(aValue : Dynamic, rowIndex : Int, columnIndex : Int) : Void;
 	
 	/**
 	* Adds a listener to the list that's notified each time a change
@@ -83,7 +83,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*
 	* @param   l               the TableModelListener
 	*/
-	@:overload public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload @:public public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
 	/**
 	* Removes a listener from the list that's notified each time a
@@ -91,7 +91,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*
 	* @param   l               the TableModelListener
 	*/
-	@:overload public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload @:public public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
 	/**
 	* Returns an array of all the table model listeners
@@ -106,7 +106,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTableModelListeners() : java.NativeArray<javax.swing.event.TableModelListener>;
+	@:require(java4) @:overload @:public public function getTableModelListeners() : java.NativeArray<javax.swing.event.TableModelListener>;
 	
 	/**
 	* Notifies all listeners that all cell values in the table's
@@ -119,7 +119,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see EventListenerList
 	* @see javax.swing.JTable#tableChanged(TableModelEvent)
 	*/
-	@:overload public function fireTableDataChanged() : Void;
+	@:overload @:public public function fireTableDataChanged() : Void;
 	
 	/**
 	* Notifies all listeners that the table's structure has changed.
@@ -135,7 +135,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see TableModelEvent
 	* @see EventListenerList
 	*/
-	@:overload public function fireTableStructureChanged() : Void;
+	@:overload @:public public function fireTableStructureChanged() : Void;
 	
 	/**
 	* Notifies all listeners that rows in the range
@@ -148,7 +148,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see EventListenerList
 	*
 	*/
-	@:overload public function fireTableRowsInserted(firstRow : Int, lastRow : Int) : Void;
+	@:overload @:public public function fireTableRowsInserted(firstRow : Int, lastRow : Int) : Void;
 	
 	/**
 	* Notifies all listeners that rows in the range
@@ -160,7 +160,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see TableModelEvent
 	* @see EventListenerList
 	*/
-	@:overload public function fireTableRowsUpdated(firstRow : Int, lastRow : Int) : Void;
+	@:overload @:public public function fireTableRowsUpdated(firstRow : Int, lastRow : Int) : Void;
 	
 	/**
 	* Notifies all listeners that rows in the range
@@ -172,7 +172,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see TableModelEvent
 	* @see EventListenerList
 	*/
-	@:overload public function fireTableRowsDeleted(firstRow : Int, lastRow : Int) : Void;
+	@:overload @:public public function fireTableRowsDeleted(firstRow : Int, lastRow : Int) : Void;
 	
 	/**
 	* Notifies all listeners that the value of the cell at
@@ -183,7 +183,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see TableModelEvent
 	* @see EventListenerList
 	*/
-	@:overload public function fireTableCellUpdated(row : Int, column : Int) : Void;
+	@:overload @:public public function fireTableCellUpdated(row : Int, column : Int) : Void;
 	
 	/**
 	* Forwards the given notification event to all
@@ -196,7 +196,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @see TableModelEvent
 	* @see EventListenerList
 	*/
-	@:overload public function fireTableChanged(e : javax.swing.event.TableModelEvent) : Void;
+	@:overload @:public public function fireTableChanged(e : javax.swing.event.TableModelEvent) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -234,7 +234,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the number of columns in the model. A
@@ -244,7 +244,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @return the number of columns in the model
 	* @see #getRowCount
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public @:public public function getColumnCount() : Int;
 	
 	/**
 	* Returns the value for the cell at <code>columnIndex</code> and
@@ -254,7 +254,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @param   columnIndex     the column whose value is to be queried
 	* @return  the value Object at the specified cell
 	*/
-	@:overload public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
+	@:overload @:public @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
 	
 	/**
 	* Returns the number of rows in the model. A
@@ -265,7 +265,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @return the number of rows in the model
 	* @see #getColumnCount
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public @:public public function getRowCount() : Int;
 	
 	
 }

@@ -25,33 +25,33 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CDROutputStream_1_2 extends com.sun.corba.se.impl.encoding.CDROutputStream_1_1
 {
-	private var primitiveAcrossFragmentedChunk : Bool;
+	@:protected private var primitiveAcrossFragmentedChunk : Bool;
 	
-	private var specialChunk : Bool;
+	@:protected private var specialChunk : Bool;
 	
-	@:overload override private function handleSpecialChunkBegin(requiredSize : Int) : Void;
+	@:overload @:protected override private function handleSpecialChunkBegin(requiredSize : Int) : Void;
 	
-	@:overload override private function handleSpecialChunkEnd() : Void;
+	@:overload @:protected override private function handleSpecialChunkEnd() : Void;
 	
-	@:overload override public function write_octet(x : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function write_octet(x : java.StdTypes.Int8) : Void;
 	
-	@:overload override public function write_short(x : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function write_short(x : java.StdTypes.Int16) : Void;
 	
-	@:overload override public function write_long(x : Int) : Void;
+	@:overload @:public override public function write_long(x : Int) : Void;
 	
-	@:overload override public function write_longlong(x : haxe.Int64) : Void;
+	@:overload @:public override public function write_longlong(x : haxe.Int64) : Void;
 	
-	@:overload override private function alignAndReserve(align : Int, n : Int) : Void;
+	@:overload @:protected override private function alignAndReserve(align : Int, n : Int) : Void;
 	
-	@:overload override private function grow(align : Int, n : Int) : Void;
+	@:overload @:protected override private function grow(align : Int, n : Int) : Void;
 	
-	@:overload override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload override public function write_wchar(x : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function write_wchar(x : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function write_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public override public function write_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
-	@:overload override public function write_wstring(value : String) : Void;
+	@:overload @:public override public function write_wstring(value : String) : Void;
 	
 	
 }

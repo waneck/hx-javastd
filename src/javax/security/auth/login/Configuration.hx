@@ -29,7 +29,7 @@ extern class Configuration
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Get the installed login Configuration.
@@ -46,7 +46,7 @@ extern class Configuration
 	*
 	* @see #setConfiguration
 	*/
-	@:overload public static function getConfiguration() : javax.security.auth.login.Configuration;
+	@:overload @:public @:static public static function getConfiguration() : javax.security.auth.login.Configuration;
 	
 	/**
 	* Set the login <code>Configuration</code>.
@@ -60,7 +60,7 @@ extern class Configuration
 	*
 	* @see #getConfiguration
 	*/
-	@:overload public static function setConfiguration(configuration : javax.security.auth.login.Configuration) : Void;
+	@:overload @:public @:static public static function setConfiguration(configuration : javax.security.auth.login.Configuration) : Void;
 	
 	/**
 	* Returns a Configuration object of the specified type.
@@ -99,7 +99,7 @@ extern class Configuration
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters) : javax.security.auth.login.Configuration;
+	@:require(java6) @:overload @:public @:static public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters) : javax.security.auth.login.Configuration;
 	
 	/**
 	* Returns a Configuration object of the specified type.
@@ -144,7 +144,7 @@ extern class Configuration
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters, provider : String) : javax.security.auth.login.Configuration;
+	@:require(java6) @:overload @:public @:static public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters, provider : String) : javax.security.auth.login.Configuration;
 	
 	/**
 	* Returns a Configuration object of the specified type.
@@ -182,7 +182,7 @@ extern class Configuration
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters, provider : java.security.Provider) : javax.security.auth.login.Configuration;
+	@:require(java6) @:overload @:public @:static public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters, provider : java.security.Provider) : javax.security.auth.login.Configuration;
 	
 	/**
 	* Return the Provider of this Configuration.
@@ -195,7 +195,7 @@ extern class Configuration
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getProvider() : java.security.Provider;
+	@:require(java6) @:overload @:public public function getProvider() : java.security.Provider;
 	
 	/**
 	* Return the type of this Configuration.
@@ -208,7 +208,7 @@ extern class Configuration
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getType() : String;
+	@:require(java6) @:overload @:public public function getType() : String;
 	
 	/**
 	* Return Configuration parameters.
@@ -221,7 +221,7 @@ extern class Configuration
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getParameters() : javax.security.auth.login.Configuration.Configuration_Parameters;
+	@:require(java6) @:overload @:public public function getParameters() : javax.security.auth.login.Configuration.Configuration_Parameters;
 	
 	/**
 	* Retrieve the AppConfigurationEntries for the specified <i>name</i>
@@ -235,7 +235,7 @@ extern class Configuration
 	*          from this Configuration, or null if there are no entries
 	*          for the specified <i>name</i>
 	*/
-	@:overload @:abstract public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:public @:abstract public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	/**
 	* Refresh and reload the Configuration.
@@ -252,7 +252,7 @@ extern class Configuration
 	* @exception SecurityException if the caller does not have permission
 	*                          to refresh its Configuration.
 	*/
-	@:overload public function refresh() : Void;
+	@:overload @:public public function refresh() : Void;
 	
 	
 }
@@ -262,15 +262,15 @@ extern class Configuration
 */
 @:native('javax$security$auth$login$Configuration$ConfigDelegate') @:internal extern class Configuration_ConfigDelegate extends javax.security.auth.login.Configuration
 {
-	@:overload override public function getType() : String;
+	@:overload @:public override public function getType() : String;
 	
-	@:overload override public function getParameters() : javax.security.auth.login.Configuration.Configuration_Parameters;
+	@:overload @:public override public function getParameters() : javax.security.auth.login.Configuration.Configuration_Parameters;
 	
-	@:overload override public function getProvider() : java.security.Provider;
+	@:overload @:public override public function getProvider() : java.security.Provider;
 	
-	@:overload override public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload @:public override public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
-	@:overload override public function refresh() : Void;
+	@:overload @:public override public function refresh() : Void;
 	
 	
 }

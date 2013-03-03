@@ -69,7 +69,7 @@ extern class LoadInstruction extends com.sun.org.apache.bcel.internal.generic.Lo
 	* @param c_tag Instruction number for compact version, ALOAD_0, e.g.
 	* @param n local variable index (unsigned short)
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16, c_tag : java.StdTypes.Int16, n : Int) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16, c_tag : java.StdTypes.Int16, n : Int) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -79,11 +79,11 @@ extern class LoadInstruction extends com.sun.org.apache.bcel.internal.generic.Lo
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

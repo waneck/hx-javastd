@@ -32,37 +32,37 @@ package com.sun.java.util.jar.pack;
 @:internal extern class Coding implements java.lang.Comparable<com.sun.java.util.jar.pack.Coding> implements com.sun.java.util.jar.pack.CodingMethod implements com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric
 {
 	/** Largest int representable by (B,H,S) in up to nMax bytes. */
-	@:overload public static function codeMax(B : Int, H : Int, S : Int, nMax : Int) : Int;
+	@:overload @:public @:static public static function codeMax(B : Int, H : Int, S : Int, nMax : Int) : Int;
 	
 	/** Smallest int representable by (B,H,S) in up to nMax bytes.
 	Returns Integer.MIN_VALUE if 32-bit wraparound covers
 	the entire negative range.
 	*/
-	@:overload public static function codeMin(B : Int, H : Int, S : Int, nMax : Int) : Int;
+	@:overload @:public @:static public static function codeMin(B : Int, H : Int, S : Int, nMax : Int) : Int;
 	
-	@:overload public static function writeInt(out : java.NativeArray<java.StdTypes.Int8>, outpos : java.NativeArray<Int>, sx : Int, B : Int, H : Int, S : Int) : Void;
+	@:overload @:public @:static public static function writeInt(out : java.NativeArray<java.StdTypes.Int8>, outpos : java.NativeArray<Int>, sx : Int, B : Int, H : Int, S : Int) : Void;
 	
-	@:overload public static function readInt(_in : java.NativeArray<java.StdTypes.Int8>, inpos : java.NativeArray<Int>, B : Int, H : Int, S : Int) : Int;
+	@:overload @:public @:static public static function readInt(_in : java.NativeArray<java.StdTypes.Int8>, inpos : java.NativeArray<Int>, B : Int, H : Int, S : Int) : Int;
 	
-	@:overload public static function readIntFrom(_in : java.io.InputStream, B : Int, H : Int, S : Int) : Int;
+	@:overload @:public @:static public static function readIntFrom(_in : java.io.InputStream, B : Int, H : Int, S : Int) : Int;
 	
-	public static var B_MAX(default, null) : Int;
+	@:public @:static @:final public static var B_MAX(default, null) : Int;
 	
 	/* B: [1,5] */
-	public static var H_MAX(default, null) : Int;
+	@:public @:static @:final public static var H_MAX(default, null) : Int;
 	
 	/* H: [1,256] */
-	public static var S_MAX(default, null) : Int;
+	@:public @:static @:final public static var S_MAX(default, null) : Int;
 	
-	@:overload public function equals(x : Dynamic) : Bool;
+	@:overload @:public public function equals(x : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public static function of(B : Int, H : Int) : com.sun.java.util.jar.pack.Coding;
+	@:overload @:public @:static public static function of(B : Int, H : Int) : com.sun.java.util.jar.pack.Coding;
 	
-	@:overload public static function of(B : Int, H : Int, S : Int) : com.sun.java.util.jar.pack.Coding;
+	@:overload @:public @:static public static function of(B : Int, H : Int, S : Int) : com.sun.java.util.jar.pack.Coding;
 	
-	@:overload public function canRepresentValue(x : Int) : Bool;
+	@:overload @:public public function canRepresentValue(x : Int) : Bool;
 	
 	/** Can this coding represent a single value, possibly a delta?
 	*  This ignores the D property.  That is, for delta codings,
@@ -70,7 +70,7 @@ package com.sun.java.util.jar.pack;
 	*  For signed delta codings which produce unsigned end values,
 	*  use canRepresentUnsigned.
 	*/
-	@:overload public function canRepresentSigned(x : Int) : Bool;
+	@:overload @:public public function canRepresentSigned(x : Int) : Bool;
 	
 	/** Can this coding, apart from its S property,
 	*  represent a single value?  (Negative values
@@ -78,65 +78,65 @@ package com.sun.java.util.jar.pack;
 	*  so this returns true for negative values
 	*  if isFullRange is true.)
 	*/
-	@:overload public function canRepresentUnsigned(x : Int) : Bool;
+	@:overload @:public public function canRepresentUnsigned(x : Int) : Bool;
 	
-	@:overload public function readFrom(_in : java.NativeArray<java.StdTypes.Int8>, inpos : java.NativeArray<Int>) : Int;
+	@:overload @:public public function readFrom(_in : java.NativeArray<java.StdTypes.Int8>, inpos : java.NativeArray<Int>) : Int;
 	
-	@:overload public function writeTo(out : java.NativeArray<java.StdTypes.Int8>, outpos : java.NativeArray<Int>, x : Int) : Void;
+	@:overload @:public public function writeTo(out : java.NativeArray<java.StdTypes.Int8>, outpos : java.NativeArray<Int>, x : Int) : Void;
 	
-	@:overload public function readFrom(_in : java.io.InputStream) : Int;
+	@:overload @:public public function readFrom(_in : java.io.InputStream) : Int;
 	
-	@:overload public function writeTo(out : java.io.OutputStream, x : Int) : Void;
+	@:overload @:public public function writeTo(out : java.io.OutputStream, x : Int) : Void;
 	
-	@:overload public function readArrayFrom(_in : java.io.InputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function readArrayFrom(_in : java.io.InputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
-	@:overload public function writeArrayTo(out : java.io.OutputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
+	@:overload @:public public function writeArrayTo(out : java.io.OutputStream, a : java.NativeArray<Int>, start : Int, end : Int) : Void;
 	
-	@:overload public function B() : Int;
+	@:overload @:public public function B() : Int;
 	
-	@:overload public function H() : Int;
+	@:overload @:public public function H() : Int;
 	
-	@:overload public function L() : Int;
+	@:overload @:public public function L() : Int;
 	
-	@:overload public function S() : Int;
+	@:overload @:public public function S() : Int;
 	
-	@:overload public function del() : Int;
+	@:overload @:public public function del() : Int;
 	
-	@:overload public function min() : Int;
+	@:overload @:public public function min() : Int;
 	
-	@:overload public function max() : Int;
+	@:overload @:public public function max() : Int;
 	
-	@:overload public function umin() : Int;
+	@:overload @:public public function umin() : Int;
 	
-	@:overload public function umax() : Int;
+	@:overload @:public public function umax() : Int;
 	
-	@:overload public function byteMin(b : Int) : Int;
+	@:overload @:public public function byteMin(b : Int) : Int;
 	
-	@:overload public function byteMax(b : Int) : Int;
+	@:overload @:public public function byteMax(b : Int) : Int;
 	
-	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Coding) : Int;
+	@:overload @:public public function compareTo(that : com.sun.java.util.jar.pack.Coding) : Int;
 	
 	/** Heuristic measure of the difference between two codings. */
-	@:overload public function distanceFrom(that : com.sun.java.util.jar.pack.Coding) : Int;
+	@:overload @:public public function distanceFrom(that : com.sun.java.util.jar.pack.Coding) : Int;
 	
-	@:overload public function getBitLength(value : Int) : Float;
+	@:overload @:public public function getBitLength(value : Int) : Float;
 	
 	/** How many bytes are in the coding of this value?
 	*  Returns Integer.MAX_VALUE if the value has no coding.
 	*  The coding must not be a delta coding, since there is no
 	*  definite size for a single value apart from its context.
 	*/
-	@:overload public function getLength(value : Int) : Int;
+	@:overload @:public public function getLength(value : Int) : Int;
 	
-	@:overload public function getLength(values : java.NativeArray<Int>, start : Int, end : Int) : Int;
+	@:overload @:public public function getLength(values : java.NativeArray<Int>, start : Int, end : Int) : Int;
 	
-	@:overload public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function parseMetaCoding(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, dflt : com.sun.java.util.jar.pack.Coding, res : java.NativeArray<com.sun.java.util.jar.pack.CodingMethod>) : Int;
+	@:overload @:public @:static public static function parseMetaCoding(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, dflt : com.sun.java.util.jar.pack.Coding, res : java.NativeArray<com.sun.java.util.jar.pack.CodingMethod>) : Int;
 	
-	@:overload public function keyString() : String;
+	@:overload @:public public function keyString() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

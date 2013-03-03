@@ -25,13 +25,13 @@ package sun.print;
 */
 extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.awt.PrintGraphics
 {
-	@:overload public function new(graphics : java.awt.Graphics, thePrintJob : java.awt.PrintJob) : Void;
+	@:overload @:public public function new(graphics : java.awt.Graphics, thePrintJob : java.awt.PrintJob) : Void;
 	
 	/**
 	* Returns the PrintJob object from which this PrintGraphics
 	* object originated.
 	*/
-	@:overload public function getPrintJob() : java.awt.PrintJob;
+	@:overload @:public public function getPrintJob() : java.awt.PrintJob;
 	
 	/**
 	* Creates a new <code>Graphics</code> object that is
@@ -39,7 +39,7 @@ extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.
 	* @return     a new graphics context that is a copy of
 	*                       this graphics context.
 	*/
-	@:overload public function create() : java.awt.Graphics;
+	@:overload @:public override public function create() : java.awt.Graphics;
 	
 	/**
 	* Creates a new <code>Graphics</code> object based on this
@@ -57,9 +57,9 @@ extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.
 	* @see        java.awt.Graphics#translate
 	* @see        java.awt.Graphics#clipRect
 	*/
-	@:overload public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
+	@:overload @:public override public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
 	
-	@:overload public function getGraphics() : java.awt.Graphics;
+	@:overload @:public public function getGraphics() : java.awt.Graphics;
 	
 	/* Spec implies dispose() should flush the page, but the implementation
 	* has in fact always done this on the getGraphics() call, thereby
@@ -67,7 +67,7 @@ extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.
 	* We will preserve that behaviour and there is consqeuently no need
 	* to take any action in this dispose method.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
 	
 }

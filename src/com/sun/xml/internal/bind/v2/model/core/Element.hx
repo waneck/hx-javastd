@@ -31,7 +31,7 @@ extern interface Element<T, C> extends com.sun.xml.internal.bind.v2.model.core.T
 	* @return
 	*      Always non-null.
 	*/
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
 	/**
 	* If this element can substitute another element, return that element.
@@ -42,12 +42,12 @@ extern interface Element<T, C> extends com.sun.xml.internal.bind.v2.model.core.T
 	* @return
 	*      null if no such element exists.
 	*/
-	@:overload public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
+	@:overload @:public public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
 	/**
 	* If non-null, this element is only active inside the given scope.
 	*/
-	@:overload public function getScope() : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>;
+	@:overload @:public public function getScope() : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>;
 	
 	
 }

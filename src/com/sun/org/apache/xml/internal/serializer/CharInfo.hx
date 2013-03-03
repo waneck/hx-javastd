@@ -27,22 +27,22 @@ package com.sun.org.apache.xml.internal.serializer;
 	* The name of the HTML entities file.
 	* If specified, the file will be resource loaded with the default class loader.
 	*/
-	public static var HTML_ENTITIES_RESOURCE(default, null) : String;
+	@:public @:static @:final public static var HTML_ENTITIES_RESOURCE(default, null) : String;
 	
 	/**
 	* The name of the XML entities file.
 	* If specified, the file will be resource loaded with the default class loader.
 	*/
-	public static var XML_ENTITIES_RESOURCE(default, null) : String;
+	@:public @:static @:final public static var XML_ENTITIES_RESOURCE(default, null) : String;
 	
 	/** The horizontal tab character, which the parser should always normalize. */
-	public static var S_HORIZONAL_TAB(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var S_HORIZONAL_TAB(default, null) : java.StdTypes.Char16;
 	
 	/** The linefeed character, which the parser should always normalize. */
-	public static var S_LINEFEED(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var S_LINEFEED(default, null) : java.StdTypes.Char16;
 	
 	/** The carriage return character, which the parser should always normalize. */
-	public static var S_CARRIAGERETURN(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var S_CARRIAGERETURN(default, null) : java.StdTypes.Char16;
 	
 	
 }
@@ -62,28 +62,28 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @param key char value of this object.
 	*/
-	@:overload public function new(key : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(key : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Default constructor for a CharKey.
 	*
 	* @param key char value of this object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get the hash value of the character.
 	*
 	* @return hash value of the character.
 	*/
-	@:overload @:final public function setChar(c : java.StdTypes.Char16) : Void;
+	@:overload @:public @:final public function setChar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Get the hash value of the character.
 	*
 	* @return hash value of the character.
 	*/
-	@:overload @:final override public function hashCode() : Int;
+	@:overload @:public @:final override public function hashCode() : Int;
 	
 	/**
 	* Override of equals() for this object
@@ -92,7 +92,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @return True if this object equals this string value
 	*/
-	@:overload @:final override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

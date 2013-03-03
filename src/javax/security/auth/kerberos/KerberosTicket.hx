@@ -93,28 +93,28 @@ package javax.security.auth.kerberos;
 	* used by the client. This field may be null when the ticket is usable
 	* from any address.
 	*/
-	@:overload public function new(asn1Encoding : java.NativeArray<java.StdTypes.Int8>, client : javax.security.auth.kerberos.KerberosPrincipal, server : javax.security.auth.kerberos.KerberosPrincipal, sessionKey : java.NativeArray<java.StdTypes.Int8>, keyType : Int, flags : java.NativeArray<Bool>, authTime : java.util.Date, startTime : java.util.Date, endTime : java.util.Date, renewTill : java.util.Date, clientAddresses : java.NativeArray<java.net.InetAddress>) : Void;
+	@:overload @:public public function new(asn1Encoding : java.NativeArray<java.StdTypes.Int8>, client : javax.security.auth.kerberos.KerberosPrincipal, server : javax.security.auth.kerberos.KerberosPrincipal, sessionKey : java.NativeArray<java.StdTypes.Int8>, keyType : Int, flags : java.NativeArray<Bool>, authTime : java.util.Date, startTime : java.util.Date, endTime : java.util.Date, renewTill : java.util.Date, clientAddresses : java.NativeArray<java.net.InetAddress>) : Void;
 	
 	/**
 	* Returns the client principal associated with this ticket.
 	*
 	* @return the client principal.
 	*/
-	@:overload @:final public function getClient() : javax.security.auth.kerberos.KerberosPrincipal;
+	@:overload @:public @:final public function getClient() : javax.security.auth.kerberos.KerberosPrincipal;
 	
 	/**
 	* Returns the service principal associated with this ticket.
 	*
 	* @return the service principal.
 	*/
-	@:overload @:final public function getServer() : javax.security.auth.kerberos.KerberosPrincipal;
+	@:overload @:public @:final public function getServer() : javax.security.auth.kerberos.KerberosPrincipal;
 	
 	/**
 	* Returns the session key associated with this ticket.
 	*
 	* @return the session key.
 	*/
-	@:overload @:final public function getSessionKey() : javax.crypto.SecretKey;
+	@:overload @:public @:final public function getSessionKey() : javax.crypto.SecretKey;
 	
 	/**
 	* Returns the key type of the session key associated with this
@@ -125,14 +125,14 @@ package javax.security.auth.kerberos;
 	*
 	* @see #getSessionKey()
 	*/
-	@:overload @:final public function getSessionKeyType() : Int;
+	@:overload @:public @:final public function getSessionKeyType() : Int;
 	
 	/**
 	* Determines if this ticket is forwardable.
 	*
 	* @return true if this ticket is forwardable, false if not.
 	*/
-	@:overload @:final public function isForwardable() : Bool;
+	@:overload @:public @:final public function isForwardable() : Bool;
 	
 	/**
 	* Determines if this ticket had been forwarded or was issued based on
@@ -142,28 +142,28 @@ package javax.security.auth.kerberos;
 	* authentication involving a forwarded ticket-granting ticket,
 	* false otherwise.
 	*/
-	@:overload @:final public function isForwarded() : Bool;
+	@:overload @:public @:final public function isForwarded() : Bool;
 	
 	/**
 	* Determines if this ticket is proxiable.
 	*
 	* @return true if this ticket is proxiable, false if not.
 	*/
-	@:overload @:final public function isProxiable() : Bool;
+	@:overload @:public @:final public function isProxiable() : Bool;
 	
 	/**
 	* Determines is this ticket is a proxy-ticket.
 	*
 	* @return true if this ticket is a proxy-ticket, false if not.
 	*/
-	@:overload @:final public function isProxy() : Bool;
+	@:overload @:public @:final public function isProxy() : Bool;
 	
 	/**
 	* Determines is this ticket is post-dated.
 	*
 	* @return true if this ticket is post-dated, false if not.
 	*/
-	@:overload @:final public function isPostdated() : Bool;
+	@:overload @:public @:final public function isPostdated() : Bool;
 	
 	/**
 	* Determines is this ticket is renewable. If so, the {@link #refresh()
@@ -172,7 +172,7 @@ package javax.security.auth.kerberos;
 	*
 	* @return true if this ticket is renewable, false if not.
 	*/
-	@:overload @:final public function isRenewable() : Bool;
+	@:overload @:public @:final public function isRenewable() : Bool;
 	
 	/**
 	* Determines if this ticket was issued using the Kerberos AS-Exchange
@@ -181,7 +181,7 @@ package javax.security.auth.kerberos;
 	* @return true if this ticket was issued using the Kerberos AS-Exchange
 	* protocol, false if not.
 	*/
-	@:overload @:final public function isInitial() : Bool;
+	@:overload @:public @:final public function isInitial() : Bool;
 	
 	/**
 	* Returns the flags associated with this ticket. Each element in the
@@ -190,7 +190,7 @@ package javax.security.auth.kerberos;
 	*
 	* @return the flags associated with this ticket.
 	*/
-	@:overload @:final public function getFlags() : java.NativeArray<Bool>;
+	@:overload @:public @:final public function getFlags() : java.NativeArray<Bool>;
 	
 	/**
 	* Returns the time that the client was authenticated.
@@ -198,7 +198,7 @@ package javax.security.auth.kerberos;
 	* @return the time that the client was authenticated
 	*         or null if not set.
 	*/
-	@:overload @:final public function getAuthTime() : java.util.Date;
+	@:overload @:public @:final public function getAuthTime() : java.util.Date;
 	
 	/**
 	* Returns the start time for this ticket's validity period.
@@ -206,14 +206,14 @@ package javax.security.auth.kerberos;
 	* @return the start time for this ticket's validity period
 	*         or null if not set.
 	*/
-	@:overload @:final public function getStartTime() : java.util.Date;
+	@:overload @:public @:final public function getStartTime() : java.util.Date;
 	
 	/**
 	* Returns the expiration time for this ticket's validity period.
 	*
 	* @return the expiration time for this ticket's validity period.
 	*/
-	@:overload @:final public function getEndTime() : java.util.Date;
+	@:overload @:public @:final public function getEndTime() : java.util.Date;
 	
 	/**
 	* Returns the latest expiration time for this ticket, including all
@@ -221,7 +221,7 @@ package javax.security.auth.kerberos;
 	*
 	* @return the latest expiration time for this ticket.
 	*/
-	@:overload @:final public function getRenewTill() : java.util.Date;
+	@:overload @:public @:final public function getRenewTill() : java.util.Date;
 	
 	/**
 	* Returns a list of addresses from where the ticket can be used.
@@ -229,17 +229,17 @@ package javax.security.auth.kerberos;
 	* @return ths list of addresses or null, if the field was not
 	* provided.
 	*/
-	@:overload @:final public function getClientAddresses() : java.NativeArray<java.net.InetAddress>;
+	@:overload @:public @:final public function getClientAddresses() : java.NativeArray<java.net.InetAddress>;
 	
 	/**
 	* Returns an ASN.1 encoding of the entire ticket.
 	*
 	* @return an ASN.1 encoding of the entire ticket.
 	*/
-	@:overload @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Determines if this ticket is still current.  */
-	@:overload public function isCurrent() : Bool;
+	@:overload @:public public function isCurrent() : Bool;
 	
 	/**
 	* Extends the validity period of this ticket. The ticket will contain
@@ -260,20 +260,20 @@ package javax.security.auth.kerberos;
 	* @see #isRenewable()
 	* @see #getRenewTill()
 	*/
-	@:overload public function refresh() : Void;
+	@:overload @:public public function refresh() : Void;
 	
 	/**
 	* Destroys the ticket and destroys any sensitive information stored in
 	* it.
 	*/
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/**
 	* Determines if this ticket has been destroyed.
 	*/
-	@:overload public function isDestroyed() : Bool;
+	@:overload @:public public function isDestroyed() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a hashcode for this KerberosTicket.
@@ -281,7 +281,7 @@ package javax.security.auth.kerberos;
 	* @return a hashCode() for the <code>KerberosTicket</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function hashCode() : Int;
+	@:require(java6) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the specified Object with this KerberosTicket for equality.
@@ -295,7 +295,7 @@ package javax.security.auth.kerberos;
 	* objects has been destroyed.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function equals(other : Dynamic) : Bool;
+	@:require(java6) @:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	
 }

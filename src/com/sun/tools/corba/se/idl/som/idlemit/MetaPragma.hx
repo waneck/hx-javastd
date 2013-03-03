@@ -36,7 +36,7 @@ package com.sun.tools.corba.se.idl.som.idlemit;
 extern class MetaPragma extends com.sun.tools.corba.se.idl.PragmaHandler
 {
 	/* key to access the Cached meta info in com.sun.tools.corba.se.idl.SymtabEntry */
-	public static var metaKey : Int;
+	@:public @:static public static var metaKey : Int;
 	
 	/**
 	* Main entry point for the MetaPragma handler
@@ -44,14 +44,14 @@ extern class MetaPragma extends com.sun.tools.corba.se.idl.PragmaHandler
 	* @param currentToken next token in the input stream.
 	* @return true if this is a meta pragma.
 	*/
-	@:overload override public function process(pragma : String, currentToken : String) : Bool;
+	@:overload @:public override public function process(pragma : String, currentToken : String) : Bool;
 	
 	/**
 	* Fold the meta info from the forward entry into its corresponding
 	* interface entry.
 	* @param forwardEntry the forward entry to process
 	*/
-	@:overload public static function processForward(forwardEntry : com.sun.tools.corba.se.idl.ForwardEntry) : Void;
+	@:overload @:static @:public public static function processForward(forwardEntry : com.sun.tools.corba.se.idl.ForwardEntry) : Void;
 	
 	
 }

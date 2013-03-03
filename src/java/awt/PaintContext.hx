@@ -28,7 +28,7 @@ extern interface PaintContext
 	/**
 	* Releases the resources allocated for the operation.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Returns the <code>ColorModel</code> of the output.  Note that

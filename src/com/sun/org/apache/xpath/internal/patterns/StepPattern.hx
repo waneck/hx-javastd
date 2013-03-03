@@ -24,7 +24,7 @@ package com.sun.org.apache.xpath.internal.patterns;
 extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.NodeTest implements com.sun.org.apache.xpath.internal.axes.SubContextList implements com.sun.org.apache.xpath.internal.ExpressionOwner
 {
 	/** The axis for this test. */
-	private var m_axis : Int;
+	@:protected private var m_axis : Int;
 	
 	/**
 	* Construct a StepPattern that tests for namespaces and node names.
@@ -36,7 +36,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @param axis The Axis for this test, one of of Axes.ANCESTORORSELF, etc.
 	* @param axisForPredicate No longer used.
 	*/
-	@:overload public function new(whatToShow : Int, namespace : String, name : String, axis : Int, axisForPredicate : Int) : Void;
+	@:overload @:public public function new(whatToShow : Int, namespace : String, name : String, axis : Int, axisForPredicate : Int) : Void;
 	
 	/**
 	* Construct a StepPattern that doesn't test for node names.
@@ -46,7 +46,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @param axis The Axis for this test, one of of Axes.ANCESTORORSELF, etc.
 	* @param axisForPredicate No longer used.
 	*/
-	@:overload public function new(whatToShow : Int, axis : Int, axisForPredicate : Int) : Void;
+	@:overload @:public public function new(whatToShow : Int, axis : Int, axisForPredicate : Int) : Void;
 	
 	/**
 	* Calculate the local name or psuedo name of the node that this pattern will test,
@@ -54,7 +54,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @see com.sun.org.apache.xpath.internal.compiler.PsuedoNames
 	*/
-	@:overload public function calcTargetString() : Void;
+	@:overload @:public public function calcTargetString() : Void;
 	
 	/**
 	* Get the local name or psuedo name of the node that this pattern will test,
@@ -64,7 +64,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @return local name or psuedo name of the node.
 	* @see com.sun.org.apache.xpath.internal.compiler.PsuedoNames
 	*/
-	@:overload public function getTargetString() : String;
+	@:overload @:public public function getTargetString() : String;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -77,7 +77,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* to be offset to the current stack frame).
 	* @param globalsSize The number of variables in the global variable area.
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Set the reference to nodetest and predicate for
@@ -86,7 +86,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @param expr The relative pattern expression.
 	*/
-	@:overload public function setRelativePathPattern(expr : com.sun.org.apache.xpath.internal.patterns.StepPattern) : Void;
+	@:overload @:public public function setRelativePathPattern(expr : com.sun.org.apache.xpath.internal.patterns.StepPattern) : Void;
 	
 	/**
 	* Get the reference to nodetest and predicate for
@@ -95,13 +95,13 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return The relative pattern expression.
 	*/
-	@:overload public function getRelativePathPattern() : com.sun.org.apache.xpath.internal.patterns.StepPattern;
+	@:overload @:public public function getRelativePathPattern() : com.sun.org.apache.xpath.internal.patterns.StepPattern;
 	
 	/**
 	* Set the list of predicate expressions for this pattern step.
 	* @return List of expression objects.
 	*/
-	@:overload public function getPredicates() : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>;
+	@:overload @:public public function getPredicates() : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -112,7 +112,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* Get a predicate expression.
@@ -122,7 +122,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return A predicate expression.
 	*/
-	@:overload public function getPredicate(i : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getPredicate(i : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Get the number of predicates for this match pattern step.
@@ -130,7 +130,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return the number of predicates for this match pattern step.
 	*/
-	@:overload @:final public function getPredicateCount() : Int;
+	@:overload @:public @:final public function getPredicateCount() : Int;
 	
 	/**
 	* Set the predicates for this match pattern step.
@@ -139,12 +139,12 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @param predicates An array of expressions that define predicates
 	*                   for this step.
 	*/
-	@:overload public function setPredicates(predicates : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>) : Void;
+	@:overload @:public public function setPredicates(predicates : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>) : Void;
 	
 	/**
 	* Static calc of match score.
 	*/
-	@:overload override public function calcScore() : Void;
+	@:overload @:public override public function calcScore() : Void;
 	
 	/**
 	* Execute this pattern step, including predicates.
@@ -161,7 +161,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute this pattern step, including predicates.
@@ -177,7 +177,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -194,7 +194,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM, expType : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext, currentNode : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM, expType : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Get the proximity position index of the current node based on this
@@ -206,7 +206,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @return the proximity position index of the current node based on the
 	*         node test.
 	*/
-	@:overload public function getProximityPosition(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getProximityPosition(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Get the count of the nodes that match the test, which is the proximity
@@ -219,7 +219,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return the count of the nodes that match the test.
 	*/
-	@:overload public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Execute the match pattern step relative to another step.
@@ -237,7 +237,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload @:final private function executeRelativePathPattern(xctxt : com.sun.org.apache.xpath.internal.XPathContext, dtm : com.sun.org.apache.xml.internal.dtm.DTM, currentNode : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:protected @:final private function executeRelativePathPattern(xctxt : com.sun.org.apache.xpath.internal.XPathContext, dtm : com.sun.org.apache.xml.internal.dtm.DTM, currentNode : Int) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute the predicates on this step to determine if the current node
@@ -251,7 +251,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload @:final private function executePredicates(xctxt : com.sun.org.apache.xpath.internal.XPathContext, dtm : com.sun.org.apache.xml.internal.dtm.DTM, currentNode : Int) : Bool;
+	@:overload @:protected @:final private function executePredicates(xctxt : com.sun.org.apache.xpath.internal.XPathContext, dtm : com.sun.org.apache.xml.internal.dtm.DTM, currentNode : Int) : Bool;
 	
 	/**
 	* Get the string represenentation of this step for diagnostic purposes.
@@ -260,7 +260,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	* @return A string representation of this step, built by reverse-engineering
 	* the contained info.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Get the match score of the given node.
@@ -276,7 +276,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function getMatchScore(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int) : Float;
+	@:overload @:public public function getMatchScore(xctxt : com.sun.org.apache.xpath.internal.XPathContext, context : Int) : Float;
 	
 	/**
 	* Set the axis that this step should follow.
@@ -284,7 +284,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @param axis The Axis for this test, one of of Axes.ANCESTORORSELF, etc.
 	*/
-	@:overload public function setAxis(axis : Int) : Void;
+	@:overload @:public public function setAxis(axis : Int) : Void;
 	
 	/**
 	* Get the axis that this step follows.
@@ -292,33 +292,33 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return The Axis for this test, one of of Axes.ANCESTORORSELF, etc.
 	*/
-	@:overload public function getAxis() : Int;
+	@:overload @:public public function getAxis() : Int;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* Call the visitors on the subtree.  Factored out from callVisitors
 	* so it may be called by derived classes.
 	*/
-	@:overload private function callSubtreeVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:protected private function callSubtreeVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -327,12 +327,12 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

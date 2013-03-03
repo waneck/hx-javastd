@@ -42,7 +42,7 @@ package javax.swing.text.html;
 	* @param elem the element to create a view for
 	* @param axis either View.X_AXIS or View.Y_AXIS
 	*/
-	@:overload public function new(elem : javax.swing.text.Element, axis : Int) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, axis : Int) : Void;
 	
 	/**
 	* If this view is not visible, then it returns.
@@ -53,7 +53,7 @@ package javax.swing.text.html;
 	* @see #isVisible
 	* @see text.ParagraphView#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Determines if the JTextComponent that the view
@@ -65,19 +65,19 @@ package javax.swing.text.html;
 	* @param p the parent View.
 	* @see BlockView#setParent
 	*/
-	@:overload override public function setParent(p : javax.swing.text.View) : Void;
+	@:overload @:public override public function setParent(p : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns a true/false value that represents
 	* whether the view is visible or not.
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Do nothing if the view is not visible, otherwise
 	* invoke the superclass to perform layout.
 	*/
-	@:overload private function layout(width : Int, height : Int) : Void;
+	@:overload @:protected override private function layout(width : Int, height : Int) : Void;
 	
 	/**
 	* Determines the preferred span for this view.  Returns
@@ -92,7 +92,7 @@ package javax.swing.text.html;
 	*           the parent may choose to resize or break the view
 	* @see text.ParagraphView#getPreferredSpan
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -104,7 +104,7 @@ package javax.swing.text.html;
 	* @return  the minimum span the view can be rendered into
 	* @see text.ParagraphView#getMinimumSpan
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -116,7 +116,7 @@ package javax.swing.text.html;
 	* @return  the maximum span the view can be rendered into
 	* @see text.ParagraphView#getMaximumSpan
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMaximumSpan(axis : Int) : Single;
 	
 	
 }

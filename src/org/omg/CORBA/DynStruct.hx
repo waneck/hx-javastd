@@ -35,7 +35,7 @@ extern interface DynStruct extends org.omg.CORBA.Object extends org.omg.CORBA.Dy
 	*
 	* @return the string name of the current member
 	*/
-	@:overload public function current_member_name() : String;
+	@:overload @:public public function current_member_name() : String;
 	
 	/**
 	* Returns the <code>TCKind</code> object that describes the kind of
@@ -43,7 +43,7 @@ extern interface DynStruct extends org.omg.CORBA.Object extends org.omg.CORBA.Dy
 	*
 	* @return the <code>TCKind</code> object that describes the current member
 	*/
-	@:overload public function current_member_kind() : org.omg.CORBA.TCKind;
+	@:overload @:public public function current_member_kind() : org.omg.CORBA.TCKind;
 	
 	/**
 	* Returns an array containing all the members of the stored struct.
@@ -51,7 +51,7 @@ extern interface DynStruct extends org.omg.CORBA.Object extends org.omg.CORBA.Dy
 	* @return the array of name-value pairs
 	* @see #set_members
 	*/
-	@:overload public function get_members() : java.NativeArray<org.omg.CORBA.NameValuePair>;
+	@:overload @:public public function get_members() : java.NativeArray<org.omg.CORBA.NameValuePair>;
 	
 	/**
 	* Set the members of the struct.
@@ -61,7 +61,7 @@ extern interface DynStruct extends org.omg.CORBA.Object extends org.omg.CORBA.Dy
 	*         is invalid
 	* @see #get_members
 	*/
-	@:overload public function set_members(value : java.NativeArray<org.omg.CORBA.NameValuePair>) : Void;
+	@:overload @:public public function set_members(value : java.NativeArray<org.omg.CORBA.NameValuePair>) : Void;
 	
 	
 }

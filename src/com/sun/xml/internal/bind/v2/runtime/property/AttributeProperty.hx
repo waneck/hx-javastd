@@ -28,35 +28,35 @@ extern class AttributeProperty<BeanT> extends com.sun.xml.internal.bind.v2.runti
 	/**
 	* Attribute name.
 	*/
-	public var attName(default, null) : com.sun.xml.internal.bind.v2.runtime.Name;
+	@:public @:final public var attName(default, null) : com.sun.xml.internal.bind.v2.runtime.Name;
 	
 	/**
 	* Heart of the conversion logic.
 	*/
-	public var xacc(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<BeanT>;
+	@:public @:final public var xacc(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<BeanT>;
 	
-	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeAttributePropertyInfo) : Void;
+	@:overload @:public public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeAttributePropertyInfo) : Void;
 	
 	/**
 	* Marshals one attribute.
 	*
 	* @see JaxBeanInfo#serializeAttributes(Object, XMLSerializer)
 	*/
-	@:overload public function serializeAttributes(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function serializeAttributes(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function serializeURIs(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public override public function serializeURIs(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function hasSerializeURIAction() : Bool;
+	@:overload @:public override public function hasSerializeURIAction() : Bool;
 	
-	@:overload public function buildChildElementUnmarshallers(chainElem : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:public override public function buildChildElementUnmarshallers(chainElem : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload public function reset(o : BeanT) : Void;
+	@:overload @:public override public function reset(o : BeanT) : Void;
 	
-	@:overload public function getIdValue(bean : BeanT) : String;
+	@:overload @:public override public function getIdValue(bean : BeanT) : String;
 	
-	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.property.AttributeProperty<Dynamic>) : Int;
+	@:overload @:public public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.property.AttributeProperty<Dynamic>) : Int;
 	
 	
 }

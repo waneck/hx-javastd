@@ -104,7 +104,7 @@ extern interface Pipe
 	*      This exception will be propagated to users (if this is client),
 	*      or recorded (if this is server.)
 	*/
-	@:overload public function preDestroy() : Void;
+	@:overload @:public public function preDestroy() : Void;
 	
 	/**
 	* Creates an identical clone of this {@link Pipe}.

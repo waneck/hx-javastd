@@ -25,11 +25,11 @@ package com.sun.xml.internal.ws.encoding.fastinfoset;
 */
 extern class FastInfosetStreamReaderRecyclable extends com.sun.xml.internal.fastinfoset.stax.StAXDocumentParser implements com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory.XMLStreamReaderFactory_RecycleAware
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
-	@:overload public function onRecycled() : Void;
+	@:overload @:public public function onRecycled() : Void;
 	
 	
 }

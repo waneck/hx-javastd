@@ -26,7 +26,7 @@ extern interface XSParticle extends com.sun.org.apache.xerces.internal.xs.XSObje
 	/**
 	* [min occurs]: determines the minimum number of terms that can occur.
 	*/
-	@:overload public function getMinOccurs() : Int;
+	@:overload @:public public function getMinOccurs() : Int;
 	
 	/**
 	*  [max occurs]: determines the maximum number of terms that can occur.
@@ -35,22 +35,22 @@ extern interface XSParticle extends com.sun.org.apache.xerces.internal.xs.XSObje
 	* <code>maxOccursUnbounded</code> is <code>true</code>, the value of
 	* <code>maxOccurs</code> is unspecified.
 	*/
-	@:overload public function getMaxOccurs() : Int;
+	@:overload @:public public function getMaxOccurs() : Int;
 	
 	/**
 	* [max occurs]: whether the maxOccurs value is unbounded.
 	*/
-	@:overload public function getMaxOccursUnbounded() : Bool;
+	@:overload @:public public function getMaxOccursUnbounded() : Bool;
 	
 	/**
 	* [term]: one of a model group, a wildcard, or an element declaration.
 	*/
-	@:overload public function getTerm() : com.sun.org.apache.xerces.internal.xs.XSTerm;
+	@:overload @:public public function getTerm() : com.sun.org.apache.xerces.internal.xs.XSTerm;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

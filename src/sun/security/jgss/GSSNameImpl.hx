@@ -25,23 +25,23 @@ package sun.security.jgss;
 */
 extern class GSSNameImpl implements org.ietf.jgss.GSSName
 {
-	@:overload public function canonicalize(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public public function canonicalize(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* This method may return false negatives. But if it says two
 	* names are equals, then there is some mechanism that
 	* authenticates them as the same principal.
 	*/
-	@:overload public function equals(other : org.ietf.jgss.GSSName) : Bool;
+	@:overload @:public public function equals(other : org.ietf.jgss.GSSName) : Bool;
 	
 	/**
 	* Returns a hashcode value for this GSSName.
 	*
 	* @return a hashCode value
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(another : Dynamic) : Bool;
+	@:overload @:public public function equals(another : Dynamic) : Bool;
 	
 	/**
 	* Returns a flat name representation for this object. The name
@@ -67,17 +67,17 @@ extern class GSSNameImpl implements org.ietf.jgss.GSSName
 	* @exception GSSException with major codes NAME_NOT_MN, BAD_NAME,
 	*  BAD_NAME, FAILURE.
 	*/
-	@:overload public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getStringNameType() : org.ietf.jgss.Oid;
+	@:overload @:public public function getStringNameType() : org.ietf.jgss.Oid;
 	
-	@:overload public function isAnonymous() : Bool;
+	@:overload @:public public function isAnonymous() : Bool;
 	
-	@:overload public function isMN() : Bool;
+	@:overload @:public public function isMN() : Bool;
 	
-	@:overload @:synchronized public function getElement(mechOid : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public @:synchronized public function getElement(mechOid : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
 	
 	
 }

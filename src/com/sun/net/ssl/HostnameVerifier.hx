@@ -47,7 +47,7 @@ extern interface HostnameVerifier
 	* @param certHostname the common name entry from the certificate
 	* @return true if the certificate host name is acceptable
 	*/
-	@:overload public function verify(urlHostname : String, certHostname : String) : Bool;
+	@:overload @:public public function verify(urlHostname : String, certHostname : String) : Bool;
 	
 	
 }

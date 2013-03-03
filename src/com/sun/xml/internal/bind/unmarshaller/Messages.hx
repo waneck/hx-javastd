@@ -30,38 +30,38 @@ extern class Messages
 	*
 	* @since JAXB1.0
 	*/
-	@:require(java0) @:overload public static function format(property : String) : String;
+	@:require(java0) @:overload @:public @:static public static function format(property : String) : String;
 	
-	@:overload public static function format(property : String, arg1 : Dynamic) : String;
+	@:overload @:public @:static public static function format(property : String, arg1 : Dynamic) : String;
 	
-	@:overload public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public @:static public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : String;
+	@:overload @:public @:static public static function format(property : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : String;
 	
 	/** Loads a string resource and formats it with specified arguments. */
-	@:overload public static function format(property : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function format(property : String, args : java.NativeArray<Dynamic>) : String;
 	
-	public static var UNEXPECTED_ENTER_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_ENTER_ELEMENT(default, null) : String;
 	
-	public static var UNEXPECTED_LEAVE_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_LEAVE_ELEMENT(default, null) : String;
 	
-	public static var UNEXPECTED_ENTER_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_ENTER_ATTRIBUTE(default, null) : String;
 	
-	public static var UNEXPECTED_LEAVE_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_LEAVE_ATTRIBUTE(default, null) : String;
 	
-	public static var UNEXPECTED_TEXT(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_TEXT(default, null) : String;
 	
-	public static var UNEXPECTED_LEAVE_CHILD(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_LEAVE_CHILD(default, null) : String;
 	
-	public static var UNEXPECTED_ROOT_ELEMENT(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_ROOT_ELEMENT(default, null) : String;
 	
-	public static var UNEXPECTED_ROOT_ELEMENT2(default, null) : String;
+	@:public @:static @:final public static var UNEXPECTED_ROOT_ELEMENT2(default, null) : String;
 	
-	public static var UNDEFINED_PREFIX(default, null) : String;
+	@:public @:static @:final public static var UNDEFINED_PREFIX(default, null) : String;
 	
-	public static var NULL_READER(default, null) : String;
+	@:public @:static @:final public static var NULL_READER(default, null) : String;
 	
-	public static var ILLEGAL_READER_STATE(default, null) : String;
+	@:public @:static @:final public static var ILLEGAL_READER_STATE(default, null) : String;
 	
 	
 }

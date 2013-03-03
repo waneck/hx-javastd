@@ -26,19 +26,19 @@ package java.rmi.server;
 extern class RemoteObject implements java.rmi.Remote implements java.io.Serializable
 {
 	/** The object's remote reference. */
-	@:transient private var ref : java.rmi.server.RemoteRef;
+	@:transient @:protected private var ref : java.rmi.server.RemoteRef;
 	
 	/**
 	* Creates a remote object.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a remote object, initialized with the specified remote
 	* reference.
 	* @param newref remote reference
 	*/
-	@:overload private function new(newref : java.rmi.server.RemoteRef) : Void;
+	@:overload @:protected private function new(newref : java.rmi.server.RemoteRef) : Void;
 	
 	/**
 	* Returns the remote reference for the remote object.
@@ -55,7 +55,7 @@ extern class RemoteObject implements java.rmi.Remote implements java.io.Serializ
 	* @return remote reference for the remote object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getRef() : java.rmi.server.RemoteRef;
+	@:require(java2) @:overload @:public public function getRef() : java.rmi.server.RemoteRef;
 	
 	/**
 	* Returns the stub for the remote object <code>obj</code> passed
@@ -67,7 +67,7 @@ extern class RemoteObject implements java.rmi.Remote implements java.io.Serializ
 	* remote object could not be found.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
+	@:require(java2) @:overload @:public @:static public static function toStub(obj : java.rmi.Remote) : java.rmi.Remote;
 	
 	/**
 	* Returns a hashcode for a remote object.  Two remote object stubs
@@ -76,7 +76,7 @@ extern class RemoteObject implements java.rmi.Remote implements java.io.Serializ
 	*
 	* @see             java.util.Hashtable
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares two remote objects for equality.
@@ -91,12 +91,12 @@ extern class RemoteObject implements java.rmi.Remote implements java.io.Serializ
 	* @return  true if these Objects are equal; false otherwise.
 	* @see             java.util.Hashtable
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a String that represents the value of this remote object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

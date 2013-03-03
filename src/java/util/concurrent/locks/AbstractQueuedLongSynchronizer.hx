@@ -38,21 +38,21 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* Creates a new <tt>AbstractQueuedLongSynchronizer</tt> instance
 	* with initial synchronization state of zero.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the current value of synchronization state.
 	* This operation has memory semantics of a <tt>volatile</tt> read.
 	* @return current state value
 	*/
-	@:overload @:final private function getState() : haxe.Int64;
+	@:overload @:protected @:final private function getState() : haxe.Int64;
 	
 	/**
 	* Sets the value of synchronization state.
 	* This operation has memory semantics of a <tt>volatile</tt> write.
 	* @param newState the new state value
 	*/
-	@:overload @:final private function setState(newState : haxe.Int64) : Void;
+	@:overload @:protected @:final private function setState(newState : haxe.Int64) : Void;
 	
 	/**
 	* Atomically sets synchronization state to the given updated
@@ -65,7 +65,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return true if successful. False return indicates that the actual
 	*         value was not equal to the expected value.
 	*/
-	@:overload @:final private function compareAndSetState(expect : haxe.Int64, update : haxe.Int64) : Bool;
+	@:overload @:protected @:final private function compareAndSetState(expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
 	/**
 	* Attempts to acquire in exclusive mode. This method should query
@@ -93,7 +93,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         correctly.
 	* @throws UnsupportedOperationException if exclusive mode is not supported
 	*/
-	@:overload private function tryAcquire(arg : haxe.Int64) : Bool;
+	@:overload @:protected private function tryAcquire(arg : haxe.Int64) : Bool;
 	
 	/**
 	* Attempts to set the state to reflect a release in exclusive
@@ -117,7 +117,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         correctly.
 	* @throws UnsupportedOperationException if exclusive mode is not supported
 	*/
-	@:overload private function tryRelease(arg : haxe.Int64) : Bool;
+	@:overload @:protected private function tryRelease(arg : haxe.Int64) : Bool;
 	
 	/**
 	* Attempts to acquire in shared mode. This method should query if
@@ -151,7 +151,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         correctly.
 	* @throws UnsupportedOperationException if shared mode is not supported
 	*/
-	@:overload private function tryAcquireShared(arg : haxe.Int64) : haxe.Int64;
+	@:overload @:protected private function tryAcquireShared(arg : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Attempts to set the state to reflect a release in shared mode.
@@ -174,7 +174,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         correctly.
 	* @throws UnsupportedOperationException if shared mode is not supported
 	*/
-	@:overload private function tryReleaseShared(arg : haxe.Int64) : Bool;
+	@:overload @:protected private function tryReleaseShared(arg : haxe.Int64) : Bool;
 	
 	/**
 	* Returns {@code true} if synchronization is held exclusively with
@@ -191,7 +191,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         {@code false} otherwise
 	* @throws UnsupportedOperationException if conditions are not supported
 	*/
-	@:overload private function isHeldExclusively() : Bool;
+	@:overload @:protected private function isHeldExclusively() : Bool;
 	
 	/**
 	* Acquires in exclusive mode, ignoring interrupts.  Implemented
@@ -205,7 +205,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*        {@link #tryAcquire} but is otherwise uninterpreted and
 	*        can represent anything you like.
 	*/
-	@:overload @:final public function acquire(arg : haxe.Int64) : Void;
+	@:overload @:public @:final public function acquire(arg : haxe.Int64) : Void;
 	
 	/**
 	* Acquires in exclusive mode, aborting if interrupted.
@@ -221,7 +221,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*        can represent anything you like.
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload @:final public function acquireInterruptibly(arg : haxe.Int64) : Void;
+	@:overload @:public @:final public function acquireInterruptibly(arg : haxe.Int64) : Void;
 	
 	/**
 	* Attempts to acquire in exclusive mode, aborting if interrupted,
@@ -240,7 +240,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return {@code true} if acquired; {@code false} if timed out
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload @:final public function tryAcquireNanos(arg : haxe.Int64, nanosTimeout : haxe.Int64) : Bool;
+	@:overload @:public @:final public function tryAcquireNanos(arg : haxe.Int64, nanosTimeout : haxe.Int64) : Bool;
 	
 	/**
 	* Releases in exclusive mode.  Implemented by unblocking one or
@@ -252,7 +252,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*        can represent anything you like.
 	* @return the value returned from {@link #tryRelease}
 	*/
-	@:overload @:final public function release(arg : haxe.Int64) : Bool;
+	@:overload @:public @:final public function release(arg : haxe.Int64) : Bool;
 	
 	/**
 	* Acquires in shared mode, ignoring interrupts.  Implemented by
@@ -265,7 +265,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*        {@link #tryAcquireShared} but is otherwise uninterpreted
 	*        and can represent anything you like.
 	*/
-	@:overload @:final public function acquireShared(arg : haxe.Int64) : Void;
+	@:overload @:public @:final public function acquireShared(arg : haxe.Int64) : Void;
 	
 	/**
 	* Acquires in shared mode, aborting if interrupted.  Implemented
@@ -280,7 +280,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* you like.
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload @:final public function acquireSharedInterruptibly(arg : haxe.Int64) : Void;
+	@:overload @:public @:final public function acquireSharedInterruptibly(arg : haxe.Int64) : Void;
 	
 	/**
 	* Attempts to acquire in shared mode, aborting if interrupted, and
@@ -298,7 +298,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return {@code true} if acquired; {@code false} if timed out
 	* @throws InterruptedException if the current thread is interrupted
 	*/
-	@:overload @:final public function tryAcquireSharedNanos(arg : haxe.Int64, nanosTimeout : haxe.Int64) : Bool;
+	@:overload @:public @:final public function tryAcquireSharedNanos(arg : haxe.Int64, nanosTimeout : haxe.Int64) : Bool;
 	
 	/**
 	* Releases in shared mode.  Implemented by unblocking one or more
@@ -309,7 +309,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*        and can represent anything you like.
 	* @return the value returned from {@link #tryReleaseShared}
 	*/
-	@:overload @:final public function releaseShared(arg : haxe.Int64) : Bool;
+	@:overload @:public @:final public function releaseShared(arg : haxe.Int64) : Bool;
 	
 	/**
 	* Queries whether any threads are waiting to acquire. Note that
@@ -322,7 +322,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return {@code true} if there may be other threads waiting to acquire
 	*/
-	@:overload @:final public function hasQueuedThreads() : Bool;
+	@:overload @:public @:final public function hasQueuedThreads() : Bool;
 	
 	/**
 	* Queries whether any threads have ever contended to acquire this
@@ -333,7 +333,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return {@code true} if there has ever been contention
 	*/
-	@:overload @:final public function hasContended() : Bool;
+	@:overload @:public @:final public function hasContended() : Bool;
 	
 	/**
 	* Returns the first (longest-waiting) thread in the queue, or
@@ -346,7 +346,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return the first (longest-waiting) thread in the queue, or
 	*         {@code null} if no threads are currently queued
 	*/
-	@:overload @:final public function getFirstQueuedThread() : java.lang.Thread;
+	@:overload @:public @:final public function getFirstQueuedThread() : java.lang.Thread;
 	
 	/**
 	* Returns true if the given thread is currently queued.
@@ -358,7 +358,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return {@code true} if the given thread is on the queue
 	* @throws NullPointerException if the thread is null
 	*/
-	@:overload @:final public function isQueued(thread : java.lang.Thread) : Bool;
+	@:overload @:public @:final public function isQueued(thread : java.lang.Thread) : Bool;
 	
 	/**
 	* Queries whether any threads have been waiting to acquire longer
@@ -403,7 +403,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         is at the head of the queue or the queue is empty
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function hasQueuedPredecessors() : Bool;
+	@:require(java7) @:overload @:public @:final public function hasQueuedPredecessors() : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting to
@@ -415,7 +415,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return the estimated number of threads waiting to acquire
 	*/
-	@:overload @:final public function getQueueLength() : Int;
+	@:overload @:public @:final public function getQueueLength() : Int;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -428,7 +428,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return the collection of threads
 	*/
-	@:overload @:final public function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:public @:final public function getQueuedThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -438,7 +438,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return the collection of threads
 	*/
-	@:overload @:final public function getExclusiveQueuedThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:public @:final public function getExclusiveQueuedThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a collection containing threads that may be waiting to
@@ -448,7 +448,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return the collection of threads
 	*/
-	@:overload @:final public function getSharedQueuedThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:public @:final public function getSharedQueuedThreads() : java.util.Collection<java.lang.Thread>;
 	
 	/**
 	* Returns a string identifying this synchronizer, as well as its state.
@@ -459,7 +459,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*
 	* @return a string identifying this synchronizer, as well as its state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Queries whether the given ConditionObject
@@ -469,7 +469,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return <tt>true</tt> if owned
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function owns(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
+	@:overload @:public @:final public function owns(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
 	
 	/**
 	* Queries whether any threads are waiting on the given condition
@@ -487,7 +487,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         not associated with this synchronizer
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function hasWaiters(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
+	@:overload @:public @:final public function hasWaiters(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting on the
@@ -505,7 +505,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         not associated with this synchronizer
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function getWaitQueueLength(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Int;
+	@:overload @:public @:final public function getWaitQueueLength(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Int;
 	
 	/**
 	* Returns a collection containing those threads that may be
@@ -523,7 +523,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         not associated with this synchronizer
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function getWaitingThreads(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : java.util.Collection<java.lang.Thread>;
+	@:overload @:public @:final public function getWaitingThreads(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : java.util.Collection<java.lang.Thread>;
 	
 	
 }
@@ -632,7 +632,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	/**
 	* Creates a new <tt>ConditionObject</tt> instance.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Moves the longest-waiting thread, if one exists, from the
@@ -642,7 +642,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @throws IllegalMonitorStateException if {@link #isHeldExclusively}
 	*         returns {@code false}
 	*/
-	@:overload @:final public function signal() : Void;
+	@:overload @:public @:final public function signal() : Void;
 	
 	/**
 	* Moves all threads from the wait queue for this condition to
@@ -651,7 +651,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @throws IllegalMonitorStateException if {@link #isHeldExclusively}
 	*         returns {@code false}
 	*/
-	@:overload @:final public function signalAll() : Void;
+	@:overload @:public @:final public function signalAll() : Void;
 	
 	/**
 	* Implements uninterruptible condition wait.
@@ -665,7 +665,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*      {@link #acquire} with saved state as argument.
 	* </ol>
 	*/
-	@:overload @:final public function awaitUninterruptibly() : Void;
+	@:overload @:public @:final public function awaitUninterruptibly() : Void;
 	
 	/**
 	* Implements interruptible condition wait.
@@ -681,7 +681,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* <li> If interrupted while blocked in step 4, throw InterruptedException.
 	* </ol>
 	*/
-	@:overload @:final public function await() : Void;
+	@:overload @:public @:final public function await() : Void;
 	
 	/**
 	* Implements timed condition wait.
@@ -697,7 +697,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* <li> If interrupted while blocked in step 4, throw InterruptedException.
 	* </ol>
 	*/
-	@:overload @:final public function awaitNanos(nanosTimeout : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final public function awaitNanos(nanosTimeout : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Implements absolute timed condition wait.
@@ -714,7 +714,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* <li> If timed out while blocked in step 4, return false, else true.
 	* </ol>
 	*/
-	@:overload @:final public function awaitUntil(deadline : java.util.Date) : Bool;
+	@:overload @:public @:final public function awaitUntil(deadline : java.util.Date) : Bool;
 	
 	/**
 	* Implements timed condition wait.
@@ -731,7 +731,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* <li> If timed out while blocked in step 4, return false, else true.
 	* </ol>
 	*/
-	@:overload @:final public function await(time : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public @:final public function await(time : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Queries whether any threads are waiting on this condition.
@@ -741,7 +741,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @throws IllegalMonitorStateException if {@link #isHeldExclusively}
 	*         returns {@code false}
 	*/
-	@:overload @:final private function hasWaiters() : Bool;
+	@:overload @:protected @:final private function hasWaiters() : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting on
@@ -752,7 +752,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @throws IllegalMonitorStateException if {@link #isHeldExclusively}
 	*         returns {@code false}
 	*/
-	@:overload @:final private function getWaitQueueLength() : Int;
+	@:overload @:protected @:final private function getWaitQueueLength() : Int;
 	
 	/**
 	* Returns a collection containing those threads that may be
@@ -763,7 +763,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @throws IllegalMonitorStateException if {@link #isHeldExclusively}
 	*         returns {@code false}
 	*/
-	@:overload @:final private function getWaitingThreads() : java.util.Collection<java.lang.Thread>;
+	@:overload @:protected @:final private function getWaitingThreads() : java.util.Collection<java.lang.Thread>;
 	
 	
 }

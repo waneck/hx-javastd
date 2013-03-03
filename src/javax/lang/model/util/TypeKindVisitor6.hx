@@ -29,7 +29,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* Constructor for concrete subclasses to call; uses {@code null}
 	* for the default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses to call; uses the argument
@@ -37,7 +37,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* Visits a primitive type, dispatching to the visit method for
@@ -48,7 +48,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p {@inheritDoc}
 	* @return  the result of the kind-specific visit method
 	*/
-	@:overload override public function visitPrimitive(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public override public function visitPrimitive(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code BOOLEAN} primitive type by calling
@@ -58,7 +58,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsBoolean(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsBoolean(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code BYTE} primitive type by calling
@@ -68,7 +68,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsByte(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsByte(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code SHORT} primitive type by calling
@@ -78,7 +78,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsShort(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsShort(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits an {@code INT} primitive type by calling
@@ -88,7 +88,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsInt(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsInt(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code LONG} primitive type by calling
@@ -98,7 +98,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsLong(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsLong(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code CHAR} primitive type by calling
@@ -108,7 +108,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsChar(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsChar(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code FLOAT} primitive type by calling
@@ -118,7 +118,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsFloat(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsFloat(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@code DOUBLE} primitive type by calling
@@ -128,7 +128,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitPrimitiveAsDouble(t : javax.lang.model.type.PrimitiveType, p : P) : R;
+	@:overload @:public public function visitPrimitiveAsDouble(t : javax.lang.model.type.PrimitiveType, p : P) : R;
 	
 	/**
 	* Visits a {@link NoType} instance, dispatching to the visit method for
@@ -139,7 +139,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p {@inheritDoc}
 	* @return  the result of the kind-specific visit method
 	*/
-	@:overload override public function visitNoType(t : javax.lang.model.type.NoType, p : P) : R;
+	@:overload @:public override public function visitNoType(t : javax.lang.model.type.NoType, p : P) : R;
 	
 	/**
 	* Visits a {@link TypeKind#VOID VOID} pseudo-type by calling
@@ -149,7 +149,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitNoTypeAsVoid(t : javax.lang.model.type.NoType, p : P) : R;
+	@:overload @:public public function visitNoTypeAsVoid(t : javax.lang.model.type.NoType, p : P) : R;
 	
 	/**
 	* Visits a {@link TypeKind#PACKAGE PACKAGE} pseudo-type by calling
@@ -159,7 +159,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitNoTypeAsPackage(t : javax.lang.model.type.NoType, p : P) : R;
+	@:overload @:public public function visitNoTypeAsPackage(t : javax.lang.model.type.NoType, p : P) : R;
 	
 	/**
 	* Visits a {@link TypeKind#NONE NONE} pseudo-type by calling
@@ -169,7 +169,7 @@ extern class TypeKindVisitor6<R, P> extends javax.lang.model.util.SimpleTypeVisi
 	* @param p a visitor-specified parameter
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload public function visitNoTypeAsNone(t : javax.lang.model.type.NoType, p : P) : R;
+	@:overload @:public public function visitNoTypeAsNone(t : javax.lang.model.type.NoType, p : P) : R;
 	
 	
 }

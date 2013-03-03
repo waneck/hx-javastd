@@ -25,16 +25,16 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class AuthInfo
 {
-	@:overload public function new(url : java.net.URL, user : String, password : String) : Void;
+	@:overload @:public public function new(url : java.net.URL, user : String, password : String) : Void;
 	
-	@:overload public function getUser() : String;
+	@:overload @:public public function getUser() : String;
 	
-	@:overload public function getPassword() : String;
+	@:overload @:public public function getPassword() : String;
 	
 	/**
 	* Returns if the requesting host and port are associated with this {@link AuthInfo}
 	*/
-	@:overload public function matchingHost(requestingURL : java.net.URL) : Bool;
+	@:overload @:public public function matchingHost(requestingURL : java.net.URL) : Bool;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class DOMEnvelopedTransform extends org.jcp.xml.dsig.internal.dom.ApacheT
 	*
 	* @author Sean Mullan
 	*/
-	@:overload public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload @:public override public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
 	
 }

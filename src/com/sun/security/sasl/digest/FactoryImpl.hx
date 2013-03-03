@@ -28,7 +28,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	/**
 	* Empty constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a new instance of the DIGEST-MD5 SASL client mechanism.
@@ -37,7 +37,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	* SASL client.
 	* @returns a new SaslClient ; otherwise null if unsuccessful.
 	*/
-	@:overload public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
+	@:overload @:public public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
 	
 	/**
 	* Returns a new instance of the DIGEST-MD5 SASL server mechanism.
@@ -46,7 +46,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	* SASL server.
 	* @returns a new SaslServer ; otherwise null if unsuccessful.
 	*/
-	@:overload public function createSaslServer(mech : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
+	@:overload @:public public function createSaslServer(mech : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslServer;
 	
 	/**
 	* Returns the authentication mechanisms that this factory can produce.
@@ -54,7 +54,7 @@ extern class FactoryImpl implements javax.security.sasl.SaslClientFactory implem
 	* @returns String[] {"DigestMD5"} if policies in env match those of this
 	* factory.
 	*/
-	@:overload public function getMechanismNames(env : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
+	@:overload @:public public function getMechanismNames(env : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
 	
 	
 }

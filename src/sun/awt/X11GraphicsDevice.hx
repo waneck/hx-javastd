@@ -25,21 +25,21 @@ package sun.awt;
 */
 extern class X11GraphicsDevice extends java.awt.GraphicsDevice implements sun.awt.DisplayChangedListener
 {
-	@:overload public function new(screennum : Int) : Void;
+	@:overload @:public public function new(screennum : Int) : Void;
 	
 	/**
 	* Returns the X11 screen of the device.
 	*/
-	@:overload public function getScreen() : Int;
+	@:overload @:public public function getScreen() : Int;
 	
-	@:overload public function getProxyKeyFor(st : sun.java2d.loops.SurfaceType) : Dynamic;
+	@:overload @:public public function getProxyKeyFor(st : sun.java2d.loops.SurfaceType) : Dynamic;
 	
 	/**
 	* Returns the X11 Display of this device.
 	* This method is also in MDrawingSurfaceInfo but need it here
 	* to be able to allow a GraphicsConfigTemplate to get the Display.
 	*/
-	@:overload @:native public function getDisplay() : haxe.Int64;
+	@:overload @:public @:native public function getDisplay() : haxe.Int64;
 	
 	/**
 	* Returns the type of the graphics device.
@@ -47,86 +47,86 @@ extern class X11GraphicsDevice extends java.awt.GraphicsDevice implements sun.aw
 	* @see #TYPE_PRINTER
 	* @see #TYPE_IMAGE_BUFFER
 	*/
-	@:overload override public function getType() : Int;
+	@:overload @:public override public function getType() : Int;
 	
 	/**
 	* Returns the identification string associated with this graphics
 	* device.
 	*/
-	@:overload override public function getIDstring() : String;
+	@:overload @:public override public function getIDstring() : String;
 	
 	/**
 	* Returns all of the graphics
 	* configurations associated with this graphics device.
 	*/
-	@:overload override public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
+	@:overload @:public override public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
 	
 	/*
 	* Returns the number of X11 visuals representable as an
 	* X11GraphicsConfig object.
 	*/
-	@:overload @:native public function getNumConfigs(screen : Int) : Int;
+	@:overload @:public @:native public function getNumConfigs(screen : Int) : Int;
 	
 	/*
 	* Returns the visualid for the given index of graphics configurations.
 	*/
-	@:overload @:native public function getConfigVisualId(index : Int, screen : Int) : Int;
+	@:overload @:public @:native public function getConfigVisualId(index : Int, screen : Int) : Int;
 	
 	/*
 	* Returns the depth for the given index of graphics configurations.
 	*/
-	@:overload @:native public function getConfigDepth(index : Int, screen : Int) : Int;
+	@:overload @:public @:native public function getConfigDepth(index : Int, screen : Int) : Int;
 	
 	/*
 	* Returns the colormap for the given index of graphics configurations.
 	*/
-	@:overload @:native public function getConfigColormap(index : Int, screen : Int) : Int;
+	@:overload @:public @:native public function getConfigColormap(index : Int, screen : Int) : Int;
 	
-	@:overload @:native public static function isDBESupported() : Bool;
+	@:overload @:public @:static @:native public static function isDBESupported() : Bool;
 	
 	/**
 	* Returns the default graphics configuration
 	* associated with this graphics device.
 	*/
-	@:overload override public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public override public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
 	
-	@:overload override public function isFullScreenSupported() : Bool;
+	@:overload @:public override public function isFullScreenSupported() : Bool;
 	
-	@:overload override public function isDisplayChangeSupported() : Bool;
+	@:overload @:public override public function isDisplayChangeSupported() : Bool;
 	
-	@:overload @:synchronized override public function setFullScreenWindow(w : java.awt.Window) : Void;
+	@:overload @:public @:synchronized override public function setFullScreenWindow(w : java.awt.Window) : Void;
 	
-	@:overload @:synchronized override public function getDisplayMode() : java.awt.DisplayMode;
+	@:overload @:public @:synchronized override public function getDisplayMode() : java.awt.DisplayMode;
 	
-	@:overload @:synchronized override public function getDisplayModes() : java.NativeArray<java.awt.DisplayMode>;
+	@:overload @:public @:synchronized override public function getDisplayModes() : java.NativeArray<java.awt.DisplayMode>;
 	
-	@:overload @:synchronized override public function setDisplayMode(dm : java.awt.DisplayMode) : Void;
+	@:overload @:public @:synchronized override public function setDisplayMode(dm : java.awt.DisplayMode) : Void;
 	
 	/**
 	* From the DisplayChangedListener interface; called from
 	* X11GraphicsEnvironment when the display mode has been changed.
 	*/
-	@:overload @:synchronized public function displayChanged() : Void;
+	@:overload @:public @:synchronized public function displayChanged() : Void;
 	
 	/**
 	* From the DisplayChangedListener interface; devices do not need
 	* to react to this event.
 	*/
-	@:overload public function paletteChanged() : Void;
+	@:overload @:public public function paletteChanged() : Void;
 	
 	/**
 	* Add a DisplayChangeListener to be notified when the display settings
 	* are changed.  Typically, only top-level containers need to be added
 	* to X11GraphicsDevice.
 	*/
-	@:overload public function addDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
+	@:overload @:public public function addDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
 	
 	/**
 	* Remove a DisplayChangeListener from this X11GraphicsDevice.
 	*/
-	@:overload public function removeDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
+	@:overload @:public public function removeDisplayChangedListener(client : sun.awt.DisplayChangedListener) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

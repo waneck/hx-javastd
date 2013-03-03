@@ -44,7 +44,7 @@ extern interface NodeIterator
 	* The root node of the <code>NodeIterator</code>, as specified when it
 	* was created.
 	*/
-	@:overload public function getRoot() : org.w3c.dom.Node;
+	@:overload @:public public function getRoot() : org.w3c.dom.Node;
 	
 	/**
 	* This attribute determines which node types are presented via the
@@ -54,12 +54,12 @@ extern interface NodeIterator
 	* be considered. Note that this skip takes precedence over the filter,
 	* if any.
 	*/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	/**
 	* The <code>NodeFilter</code> used to screen nodes.
 	*/
-	@:overload public function getFilter() : org.w3c.dom.traversal.NodeFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.traversal.NodeFilter;
 	
 	/**
 	*  The value of this flag determines whether the children of entity
@@ -79,7 +79,7 @@ extern interface NodeIterator
 	* <code>whatToShow</code> flags to show the entity reference node and
 	* set <code>expandEntityReferences</code> to false.
 	*/
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/**
 	* Returns the next node in the set and advances the position of the
@@ -92,7 +92,7 @@ extern interface NodeIterator
 	*   INVALID_STATE_ERR: Raised if this method is called after the
 	*   <code>detach</code> method was invoked.
 	*/
-	@:overload public function nextNode() : org.w3c.dom.Node;
+	@:overload @:public public function nextNode() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the previous node in the set and moves the position of the
@@ -103,7 +103,7 @@ extern interface NodeIterator
 	*   INVALID_STATE_ERR: Raised if this method is called after the
 	*   <code>detach</code> method was invoked.
 	*/
-	@:overload public function previousNode() : org.w3c.dom.Node;
+	@:overload @:public public function previousNode() : org.w3c.dom.Node;
 	
 	/**
 	* Detaches the <code>NodeIterator</code> from the set which it iterated
@@ -113,7 +113,7 @@ extern interface NodeIterator
 	* or <code>previousNode</code> will raise the exception
 	* INVALID_STATE_ERR.
 	*/
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class Manifest implements java.lang.Cloneable
 	/**
 	* Constructs a new, empty Manifest.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new Manifest from the specified input stream.
@@ -36,20 +36,20 @@ extern class Manifest implements java.lang.Cloneable
 	* @param is the input stream containing manifest data
 	* @throws IOException if an I/O error has occured
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Constructs a new Manifest that is a copy of the specified Manifest.
 	*
 	* @param man the Manifest to copy
 	*/
-	@:overload public function new(man : java.util.jar.Manifest) : Void;
+	@:overload @:public public function new(man : java.util.jar.Manifest) : Void;
 	
 	/**
 	* Returns the main Attributes for the Manifest.
 	* @return the main Attributes for the Manifest
 	*/
-	@:overload public function getMainAttributes() : java.util.jar.Attributes;
+	@:overload @:public public function getMainAttributes() : java.util.jar.Attributes;
 	
 	/**
 	* Returns a Map of the entries contained in this Manifest. Each entry
@@ -60,7 +60,7 @@ extern class Manifest implements java.lang.Cloneable
 	*
 	* @return a Map of the entries contained in this Manifest
 	*/
-	@:overload public function getEntries() : java.util.Map<String, java.util.jar.Attributes>;
+	@:overload @:public public function getEntries() : java.util.Map<String, java.util.jar.Attributes>;
 	
 	/**
 	* Returns the Attributes for the specified entry name.
@@ -84,12 +84,12 @@ extern class Manifest implements java.lang.Cloneable
 	* @param name entry name
 	* @return the Attributes for the specified entry name
 	*/
-	@:overload public function getAttributes(name : String) : java.util.jar.Attributes;
+	@:overload @:public public function getAttributes(name : String) : java.util.jar.Attributes;
 	
 	/**
 	* Clears the main Attributes as well as the entries in this Manifest.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Writes the Manifest to the specified OutputStream.
@@ -100,7 +100,7 @@ extern class Manifest implements java.lang.Cloneable
 	* @exception IOException if an I/O error has occurred
 	* @see #getMainAttributes
 	*/
-	@:overload public function write(out : java.io.OutputStream) : Void;
+	@:overload @:public public function write(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Reads the Manifest from the specified InputStream. The entry
@@ -110,7 +110,7 @@ extern class Manifest implements java.lang.Cloneable
 	* @param is the input stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function read(is : java.io.InputStream) : Void;
+	@:overload @:public public function read(is : java.io.InputStream) : Void;
 	
 	/**
 	* Returns true if the specified Object is also a Manifest and has
@@ -120,12 +120,12 @@ extern class Manifest implements java.lang.Cloneable
 	* @return true if the specified Object is also a Manifest and has
 	* the same main Attributes and entries
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this Manifest.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a shallow copy of this Manifest.  The shallow copy is
@@ -135,7 +135,7 @@ extern class Manifest implements java.lang.Cloneable
 	* </pre>
 	* @return a shallow copy of this Manifest
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -144,25 +144,25 @@ extern class Manifest implements java.lang.Cloneable
 */
 @:native('java$util$jar$Manifest$FastInputStream') @:internal extern class Manifest_FastInputStream extends java.io.FilterInputStream
 {
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/*
 	* Reads 'len' bytes from the input stream, or until an end-of-line
 	* is reached. Returns the number of bytes read.
 	*/
-	@:overload public function readLine(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function readLine(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function peek() : java.StdTypes.Int8;
+	@:overload @:public public function peek() : java.StdTypes.Int8;
 	
-	@:overload public function readLine(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function readLine(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

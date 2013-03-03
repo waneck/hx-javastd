@@ -27,22 +27,22 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class CommentEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.Comment
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* @return String String representation of this event
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return the string data of the comment, returns empty string if it
 	* does not exist
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	
 }

@@ -23,25 +23,25 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class NthIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIteratorBase
 {
-	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, n : Int) : Void;
+	@:overload @:public public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, n : Int) : Void;
 	
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public override public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function getLast() : Int;
+	@:overload @:public override public function getLast() : Int;
 	
-	@:overload public function getPosition() : Int;
+	@:overload @:public override public function getPosition() : Int;
 	
-	@:overload public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
 	
 }

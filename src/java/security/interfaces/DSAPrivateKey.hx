@@ -30,7 +30,7 @@ extern interface DSAPrivateKey extends java.security.interfaces.DSAKey extends j
 	*
 	* @return the value of the private key, <code>x</code>.
 	*/
-	@:overload public function getX() : java.math.BigInteger;
+	@:overload @:public public function getX() : java.math.BigInteger;
 	
 	
 }

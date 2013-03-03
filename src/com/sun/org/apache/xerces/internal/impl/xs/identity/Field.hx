@@ -21,25 +21,25 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class Field
 {
 	/** Field XPath. */
-	private var fXPath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath;
+	@:protected private var fXPath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath;
 	
 	/** Identity constraint. */
-	private var fIdentityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:protected private var fIdentityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** Constructs a field. */
-	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
+	@:overload @:public public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
 	
 	/** Returns the field XPath. */
-	@:overload public function getXPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath;
+	@:overload @:public public function getXPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath;
 	
 	/** Returns the identity constraint. */
-	@:overload public function getIdentityConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
+	@:overload @:public public function getIdentityConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** Creates a field matcher. */
-	@:overload public function createMatcher(activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, store : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
+	@:overload @:public public function createMatcher(activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, store : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -51,7 +51,7 @@ extern class Field
 @:native('com$sun$org$apache$xerces$internal$impl$xs$identity$Field$XPath') extern class Field_XPath extends com.sun.org.apache.xerces.internal.impl.xpath.XPath
 {
 	/** Constructs a field XPath expression. */
-	@:overload override public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
+	@:overload @:public override public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
 	
 	
 }
@@ -63,21 +63,21 @@ extern class Field
 @:native('com$sun$org$apache$xerces$internal$impl$xs$identity$Field$Matcher') extern class Field_Matcher extends com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher
 {
 	/** Field activator. */
-	private var fFieldActivator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator;
+	@:protected private var fFieldActivator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator;
 	
 	/** Value store for data values. */
-	private var fStore : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore;
+	@:protected private var fStore : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore;
 	
 	/** Constructs a field matcher. */
-	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, store : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore) : Void;
+	@:overload @:public public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, store : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore) : Void;
 	
 	/**
 	* This method is called when the XPath handler matches the
 	* XPath expression.
 	*/
-	@:overload private function matched(actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList, isNil : Bool) : Void;
+	@:overload @:protected override private function matched(actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList, isNil : Bool) : Void;
 	
-	@:overload private function handleContent(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload @:protected override private function handleContent(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	
 }

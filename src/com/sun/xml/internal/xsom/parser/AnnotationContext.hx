@@ -32,35 +32,35 @@ package com.sun.xml.internal.xsom.parser;
 */
 extern class AnnotationContext
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public static var SCHEMA(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var SCHEMA(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var NOTATION(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var NOTATION(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ELEMENT_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var ELEMENT_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var IDENTITY_CONSTRAINT(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var IDENTITY_CONSTRAINT(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var XPATH(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var XPATH(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var MODELGROUP_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var MODELGROUP_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var SIMPLETYPE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var SIMPLETYPE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var COMPLEXTYPE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var COMPLEXTYPE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var PARTICLE(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var PARTICLE(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var MODELGROUP(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var MODELGROUP(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ATTRIBUTE_USE(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var ATTRIBUTE_USE(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var WILDCARD(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var WILDCARD(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ATTRIBUTE_GROUP(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var ATTRIBUTE_GROUP(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ATTRIBUTE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
+	@:public @:static @:final public static var ATTRIBUTE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
 	
 }

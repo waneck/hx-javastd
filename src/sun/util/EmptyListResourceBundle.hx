@@ -25,7 +25,7 @@ package sun.util;
 */
 extern class EmptyListResourceBundle extends java.util.ListResourceBundle
 {
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

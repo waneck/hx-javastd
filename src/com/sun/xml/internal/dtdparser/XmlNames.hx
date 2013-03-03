@@ -38,7 +38,7 @@ extern class XmlNames
 	*
 	* @param value the string being tested
 	*/
-	@:overload public static function isName(value : String) : Bool;
+	@:overload @:public @:static public static function isName(value : String) : Bool;
 	
 	/**
 	* Returns true if the value is a legal "unqualified" XML name, as
@@ -48,7 +48,7 @@ extern class XmlNames
 	*
 	* @param value the string being tested
 	*/
-	@:overload public static function isUnqualifiedName(value : String) : Bool;
+	@:overload @:public @:static public static function isUnqualifiedName(value : String) : Bool;
 	
 	/**
 	* Returns true if the value is a legal "qualified" XML name, as defined
@@ -61,7 +61,7 @@ extern class XmlNames
 	*
 	* @param value the string being tested
 	*/
-	@:overload public static function isQualifiedName(value : String) : Bool;
+	@:overload @:public @:static public static function isQualifiedName(value : String) : Bool;
 	
 	/**
 	* This method returns true if the identifier is a "name token"
@@ -72,7 +72,7 @@ extern class XmlNames
 	*
 	* @param token the string being tested
 	*/
-	@:overload public static function isNmtoken(token : String) : Bool;
+	@:overload @:public @:static public static function isNmtoken(token : String) : Bool;
 	
 	/**
 	* This method returns true if the identifier is a "name token" as
@@ -83,7 +83,7 @@ extern class XmlNames
 	* @param token the string being tested
 	* @see #isNmtoken
 	*/
-	@:overload public static function isNCNmtoken(token : String) : Bool;
+	@:overload @:public @:static public static function isNCNmtoken(token : String) : Bool;
 	
 	
 }

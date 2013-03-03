@@ -35,39 +35,39 @@ extern class TDTDReader extends com.sun.xml.internal.dtdparser.DTDHandlerBase
 	* @param    bindingInfo
 	*        binding information file, if any. Can be null.
 	*/
-	@:overload public static function parse(dtd : org.xml.sax.InputSource, bindingInfo : org.xml.sax.InputSource, errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver, opts : com.sun.tools.internal.xjc.Options) : com.sun.tools.internal.xjc.model.Model;
+	@:overload @:public @:static public static function parse(dtd : org.xml.sax.InputSource, bindingInfo : org.xml.sax.InputSource, errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver, opts : com.sun.tools.internal.xjc.Options) : com.sun.tools.internal.xjc.model.Model;
 	
-	@:overload private function new(errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver, opts : com.sun.tools.internal.xjc.Options, _bindInfo : org.xml.sax.InputSource) : Void;
+	@:overload @:protected private function new(errorReceiver : com.sun.tools.internal.xjc.ErrorReceiver, opts : com.sun.tools.internal.xjc.Options, _bindInfo : org.xml.sax.InputSource) : Void;
 	
-	@:overload public function startDTD(entity : com.sun.xml.internal.dtdparser.InputEntity) : Void;
+	@:overload @:public override public function startDTD(entity : com.sun.xml.internal.dtdparser.InputEntity) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public override public function endDTD() : Void;
 	
-	@:overload public function attributeDecl(elementName : String, attributeName : String, attributeType : String, enumeration : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : Void;
+	@:overload @:public override public function attributeDecl(elementName : String, attributeName : String, attributeType : String, enumeration : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : Void;
 	
-	@:overload private function createAttribute(elementName : String, attributeName : String, attributeType : String, enums : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : com.sun.tools.internal.xjc.model.CPropertyInfo;
+	@:overload @:protected private function createAttribute(elementName : String, attributeName : String, attributeType : String, enums : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : com.sun.tools.internal.xjc.model.CPropertyInfo;
 	
-	@:overload public function startContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function startContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function endContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function endContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function startModelGroup() : Void;
+	@:overload @:public override public function startModelGroup() : Void;
 	
-	@:overload public function endModelGroup(occurence : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function endModelGroup(occurence : java.StdTypes.Int16) : Void;
 	
-	@:overload public function connector(connectorType : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function connector(connectorType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function childElement(elementName : String, occurence : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function childElement(elementName : String, occurence : java.StdTypes.Int16) : Void;
 	
-	@:overload public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public override public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload @:final private function error(loc : org.xml.sax.Locator, prop : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected @:final private function error(loc : org.xml.sax.Locator, prop : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

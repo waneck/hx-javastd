@@ -29,7 +29,7 @@ extern interface ContextNodeList
 	*
 	* @return The current node, or null.
 	*/
-	@:overload public function getCurrentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getCurrentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Get the current position, which is one less than
@@ -41,12 +41,12 @@ extern interface ContextNodeList
 	* <a href="http://www.w3.org/TR/xslt#dt-current-node">current node</a>
 	* in the  <a href="http://www.w3.org/TR/xslt#dt-current-node-list">current node list</a>.
 	*/
-	@:overload public function getCurrentPos() : Int;
+	@:overload @:public public function getCurrentPos() : Int;
 	
 	/**
 	* Reset the iterator.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* If setShouldCacheNodes(true) is called, then nodes will
@@ -54,7 +54,7 @@ extern interface ContextNodeList
 	*
 	* @param b true if the nodes should be cached.
 	*/
-	@:overload public function setShouldCacheNodes(b : Bool) : Void;
+	@:overload @:public public function setShouldCacheNodes(b : Bool) : Void;
 	
 	/**
 	* If an index is requested, NodeSetDTM will call this method
@@ -65,20 +65,20 @@ extern interface ContextNodeList
 	* @param index The index to run to, or -1 if the iterator should be run
 	*              to the end.
 	*/
-	@:overload public function runTo(index : Int) : Void;
+	@:overload @:public public function runTo(index : Int) : Void;
 	
 	/**
 	* Set the current position in the node set.
 	* @param i Must be a valid index.
 	*/
-	@:overload public function setCurrentPos(i : Int) : Void;
+	@:overload @:public public function setCurrentPos(i : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return The number of nodes in this node list.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Tells if this NodeSetDTM is "fresh", in other words, if
@@ -87,7 +87,7 @@ extern interface ContextNodeList
 	*
 	* @return true if the iteration of this list has not yet begun.
 	*/
-	@:overload public function isFresh() : Bool;
+	@:overload @:public public function isFresh() : Bool;
 	
 	/**
 	* Get a cloned Iterator that is reset to the start of the iteration.
@@ -96,7 +96,7 @@ extern interface ContextNodeList
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function cloneWithReset() : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public public function cloneWithReset() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Get the index of the last node in this list.
@@ -104,7 +104,7 @@ extern interface ContextNodeList
 	*
 	* @return the index of the last node in this list.
 	*/
-	@:overload public function getLast() : Int;
+	@:overload @:public public function getLast() : Int;
 	
 	/**
 	* Set the index of the last node in this list.
@@ -112,7 +112,7 @@ extern interface ContextNodeList
 	*
 	* @param last the index of the last node in this list.
 	*/
-	@:overload public function setLast(last : Int) : Void;
+	@:overload @:public public function setLast(last : Int) : Void;
 	
 	
 }

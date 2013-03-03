@@ -35,9 +35,9 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(schemaLanguage : String, options : com.sun.tools.internal.xjc.Options, handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(schemaLanguage : String, options : com.sun.tools.internal.xjc.Options, handler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	
 }

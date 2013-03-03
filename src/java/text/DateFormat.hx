@@ -47,7 +47,7 @@ extern class DateFormat extends java.text.Format
 	* <code>DateFormat</code>.
 	* @serial
 	*/
-	private var calendar : java.util.Calendar;
+	@:protected private var calendar : java.util.Calendar;
 	
 	/**
 	* The number formatter that <code>DateFormat</code> uses to format numbers
@@ -55,31 +55,31 @@ extern class DateFormat extends java.text.Format
 	* appropriate for the locale associated with this <code>DateFormat</code>.
 	* @serial
 	*/
-	private var numberFormat : java.text.NumberFormat;
+	@:protected private var numberFormat : java.text.NumberFormat;
 	
 	/**
 	* Useful constant for ERA field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var ERA_FIELD(default, null) : Int;
+	@:public @:final @:static public static var ERA_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for YEAR field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var YEAR_FIELD(default, null) : Int;
+	@:public @:final @:static public static var YEAR_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for MONTH field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var MONTH_FIELD(default, null) : Int;
+	@:public @:final @:static public static var MONTH_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for DATE field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var DATE_FIELD(default, null) : Int;
+	@:public @:final @:static public static var DATE_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for one-based HOUR_OF_DAY field alignment.
@@ -87,7 +87,7 @@ extern class DateFormat extends java.text.Format
 	* HOUR_OF_DAY1_FIELD is used for the one-based 24-hour clock.
 	* For example, 23:59 + 01:00 results in 24:59.
 	*/
-	public static var HOUR_OF_DAY1_FIELD(default, null) : Int;
+	@:public @:final @:static public static var HOUR_OF_DAY1_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for zero-based HOUR_OF_DAY field alignment.
@@ -95,61 +95,61 @@ extern class DateFormat extends java.text.Format
 	* HOUR_OF_DAY0_FIELD is used for the zero-based 24-hour clock.
 	* For example, 23:59 + 01:00 results in 00:59.
 	*/
-	public static var HOUR_OF_DAY0_FIELD(default, null) : Int;
+	@:public @:final @:static public static var HOUR_OF_DAY0_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for MINUTE field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var MINUTE_FIELD(default, null) : Int;
+	@:public @:final @:static public static var MINUTE_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for SECOND field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var SECOND_FIELD(default, null) : Int;
+	@:public @:final @:static public static var SECOND_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for MILLISECOND field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var MILLISECOND_FIELD(default, null) : Int;
+	@:public @:final @:static public static var MILLISECOND_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for DAY_OF_WEEK field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var DAY_OF_WEEK_FIELD(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_WEEK_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for DAY_OF_YEAR field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var DAY_OF_YEAR_FIELD(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_YEAR_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for DAY_OF_WEEK_IN_MONTH field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var DAY_OF_WEEK_IN_MONTH_FIELD(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_WEEK_IN_MONTH_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for WEEK_OF_YEAR field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var WEEK_OF_YEAR_FIELD(default, null) : Int;
+	@:public @:final @:static public static var WEEK_OF_YEAR_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for WEEK_OF_MONTH field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var WEEK_OF_MONTH_FIELD(default, null) : Int;
+	@:public @:final @:static public static var WEEK_OF_MONTH_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for AM_PM field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var AM_PM_FIELD(default, null) : Int;
+	@:public @:final @:static public static var AM_PM_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for one-based HOUR field alignment.
@@ -157,7 +157,7 @@ extern class DateFormat extends java.text.Format
 	* HOUR1_FIELD is used for the one-based 12-hour clock.
 	* For example, 11:30 PM + 1 hour results in 12:30 AM.
 	*/
-	public static var HOUR1_FIELD(default, null) : Int;
+	@:public @:final @:static public static var HOUR1_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for zero-based HOUR field alignment.
@@ -165,13 +165,13 @@ extern class DateFormat extends java.text.Format
 	* HOUR0_FIELD is used for the zero-based 12-hour clock.
 	* For example, 11:30 PM + 1 hour results in 00:30 AM.
 	*/
-	public static var HOUR0_FIELD(default, null) : Int;
+	@:public @:final @:static public static var HOUR0_FIELD(default, null) : Int;
 	
 	/**
 	* Useful constant for TIMEZONE field alignment.
 	* Used in FieldPosition of date/time formatting.
 	*/
-	public static var TIMEZONE_FIELD(default, null) : Int;
+	@:public @:final @:static public static var TIMEZONE_FIELD(default, null) : Int;
 	
 	/**
 	* Overrides Format.
@@ -198,7 +198,7 @@ extern class DateFormat extends java.text.Format
 	* pattern character 'z'.
 	* @see java.text.Format
 	*/
-	@:overload @:final public function format(obj : Dynamic, toAppendTo : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:final override public function format(obj : Dynamic, toAppendTo : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats a Date into a date/time string.
@@ -222,14 +222,14 @@ extern class DateFormat extends java.text.Format
 	* pattern character 'z'.
 	* @return the string buffer passed in as toAppendTo, with formatted text appended.
 	*/
-	@:overload @:abstract public function format(date : java.util.Date, toAppendTo : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:abstract public function format(date : java.util.Date, toAppendTo : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats a Date into a date/time string.
 	* @param date the time value to be formatted into a time string.
 	* @return the formatted time string.
 	*/
-	@:overload @:final public function format(date : java.util.Date) : String;
+	@:overload @:public @:final public function format(date : java.util.Date) : String;
 	
 	/**
 	* Parses text from the beginning of the given string to produce a date.
@@ -243,7 +243,7 @@ extern class DateFormat extends java.text.Format
 	* @exception ParseException if the beginning of the specified string
 	*            cannot be parsed.
 	*/
-	@:overload public function parse(source : String) : java.util.Date;
+	@:overload @:public public function parse(source : String) : java.util.Date;
 	
 	/**
 	* Parse a date/time string according to the given parse position.  For
@@ -271,7 +271,7 @@ extern class DateFormat extends java.text.Format
 	*
 	* @return      A {@code Date}, or {@code null} if the input could not be parsed
 	*/
-	@:overload @:abstract public function parse(source : String, pos : java.text.ParsePosition) : java.util.Date;
+	@:overload @:public @:abstract public function parse(source : String, pos : java.text.ParsePosition) : java.util.Date;
 	
 	/**
 	* Parses text from a string to produce a <code>Date</code>.
@@ -297,39 +297,39 @@ extern class DateFormat extends java.text.Format
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload @:public override public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Constant for full style pattern.
 	*/
-	public static var FULL(default, null) : Int;
+	@:public @:static @:final public static var FULL(default, null) : Int;
 	
 	/**
 	* Constant for long style pattern.
 	*/
-	public static var LONG(default, null) : Int;
+	@:public @:static @:final public static var LONG(default, null) : Int;
 	
 	/**
 	* Constant for medium style pattern.
 	*/
-	public static var MEDIUM(default, null) : Int;
+	@:public @:static @:final public static var MEDIUM(default, null) : Int;
 	
 	/**
 	* Constant for short style pattern.
 	*/
-	public static var SHORT(default, null) : Int;
+	@:public @:static @:final public static var SHORT(default, null) : Int;
 	
 	/**
 	* Constant for default style pattern.  Its value is MEDIUM.
 	*/
-	public static var DEFAULT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT(default, null) : Int;
 	
 	/**
 	* Gets the time formatter with the default formatting style
 	* for the default locale.
 	* @return a time formatter.
 	*/
-	@:overload @:final public static function getTimeInstance() : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getTimeInstance() : java.text.DateFormat;
 	
 	/**
 	* Gets the time formatter with the given formatting style
@@ -338,7 +338,7 @@ extern class DateFormat extends java.text.Format
 	* SHORT for "h:mm a" in the US locale.
 	* @return a time formatter.
 	*/
-	@:overload @:final public static function getTimeInstance(style : Int) : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getTimeInstance(style : Int) : java.text.DateFormat;
 	
 	/**
 	* Gets the time formatter with the given formatting style
@@ -348,14 +348,14 @@ extern class DateFormat extends java.text.Format
 	* @param aLocale the given locale.
 	* @return a time formatter.
 	*/
-	@:overload @:final public static function getTimeInstance(style : Int, aLocale : java.util.Locale) : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getTimeInstance(style : Int, aLocale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Gets the date formatter with the default formatting style
 	* for the default locale.
 	* @return a date formatter.
 	*/
-	@:overload @:final public static function getDateInstance() : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getDateInstance() : java.text.DateFormat;
 	
 	/**
 	* Gets the date formatter with the given formatting style
@@ -364,7 +364,7 @@ extern class DateFormat extends java.text.Format
 	* SHORT for "M/d/yy" in the US locale.
 	* @return a date formatter.
 	*/
-	@:overload @:final public static function getDateInstance(style : Int) : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getDateInstance(style : Int) : java.text.DateFormat;
 	
 	/**
 	* Gets the date formatter with the given formatting style
@@ -374,14 +374,14 @@ extern class DateFormat extends java.text.Format
 	* @param aLocale the given locale.
 	* @return a date formatter.
 	*/
-	@:overload @:final public static function getDateInstance(style : Int, aLocale : java.util.Locale) : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getDateInstance(style : Int, aLocale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Gets the date/time formatter with the default formatting style
 	* for the default locale.
 	* @return a date/time formatter.
 	*/
-	@:overload @:final public static function getDateTimeInstance() : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getDateTimeInstance() : java.text.DateFormat;
 	
 	/**
 	* Gets the date/time formatter with the given date and time
@@ -392,7 +392,7 @@ extern class DateFormat extends java.text.Format
 	* SHORT for "h:mm a" in the US locale.
 	* @return a date/time formatter.
 	*/
-	@:overload @:final public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int) : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int) : java.text.DateFormat;
 	
 	/**
 	* Gets the date/time formatter with the given formatting styles
@@ -402,13 +402,13 @@ extern class DateFormat extends java.text.Format
 	* @param aLocale the given locale.
 	* @return a date/time formatter.
 	*/
-	@:overload @:final public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int, aLocale : java.util.Locale) : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int, aLocale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Get a default date/time formatter that uses the SHORT style for both the
 	* date and the time.
 	*/
-	@:overload @:final public static function getInstance() : java.text.DateFormat;
+	@:overload @:public @:final @:static public static function getInstance() : java.text.DateFormat;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -423,7 +423,7 @@ extern class DateFormat extends java.text.Format
 	* @return An array of locales for which localized
 	*         <code>DateFormat</code> instances are available.
 	*/
-	@:overload public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Set the calendar to be used by this date format.  Initially, the default
@@ -435,27 +435,27 @@ extern class DateFormat extends java.text.Format
 	*
 	* @param newCalendar the new {@code Calendar} to be used by the date format
 	*/
-	@:overload public function setCalendar(newCalendar : java.util.Calendar) : Void;
+	@:overload @:public public function setCalendar(newCalendar : java.util.Calendar) : Void;
 	
 	/**
 	* Gets the calendar associated with this date/time formatter.
 	*
 	* @return the calendar associated with this date/time formatter.
 	*/
-	@:overload public function getCalendar() : java.util.Calendar;
+	@:overload @:public public function getCalendar() : java.util.Calendar;
 	
 	/**
 	* Allows you to set the number formatter.
 	* @param newNumberFormat the given new NumberFormat.
 	*/
-	@:overload public function setNumberFormat(newNumberFormat : java.text.NumberFormat) : Void;
+	@:overload @:public public function setNumberFormat(newNumberFormat : java.text.NumberFormat) : Void;
 	
 	/**
 	* Gets the number formatter which this date/time formatter uses to
 	* format and parse a time.
 	* @return the number formatter which this date/time formatter uses.
 	*/
-	@:overload public function getNumberFormat() : java.text.NumberFormat;
+	@:overload @:public public function getNumberFormat() : java.text.NumberFormat;
 	
 	/**
 	* Sets the time zone for the calendar of this {@code DateFormat} object.
@@ -472,7 +472,7 @@ extern class DateFormat extends java.text.Format
 	*
 	* @param zone the given new time zone.
 	*/
-	@:overload public function setTimeZone(zone : java.util.TimeZone) : Void;
+	@:overload @:public public function setTimeZone(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Gets the time zone.
@@ -483,7 +483,7 @@ extern class DateFormat extends java.text.Format
 	*
 	* @return the time zone associated with the calendar of DateFormat.
 	*/
-	@:overload public function getTimeZone() : java.util.TimeZone;
+	@:overload @:public public function getTimeZone() : java.util.TimeZone;
 	
 	/**
 	* Specify whether or not date/time parsing is to be lenient.  With
@@ -502,7 +502,7 @@ extern class DateFormat extends java.text.Format
 	* @param lenient when {@code true}, parsing is lenient
 	* @see java.util.Calendar#setLenient(boolean)
 	*/
-	@:overload public function setLenient(lenient : Bool) : Void;
+	@:overload @:public public function setLenient(lenient : Bool) : Void;
 	
 	/**
 	* Tell whether date/time parsing is to be lenient.
@@ -515,27 +515,27 @@ extern class DateFormat extends java.text.Format
 	*         {@code false} otherwise.
 	* @see java.util.Calendar#isLenient()
 	*/
-	@:overload public function isLenient() : Bool;
+	@:overload @:public public function isLenient() : Bool;
 	
 	/**
 	* Overrides hashCode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Overrides equals
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Create a new date format.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }
@@ -565,7 +565,7 @@ extern class DateFormat extends java.text.Format
 	* @return Field instance representing calendarField.
 	* @see java.util.Calendar
 	*/
-	@:overload public static function ofCalendarField(calendarField : Int) : java.text.Format.Format_Field;
+	@:overload @:public @:static public static function ofCalendarField(calendarField : Int) : java.text.Format.Format_Field;
 	
 	/**
 	* Creates a <code>Field</code>.
@@ -577,7 +577,7 @@ extern class DateFormat extends java.text.Format
 	*        be used, but <code>-1</code> should be used for values
 	*        that don't correspond to legal <code>Calendar</code> values
 	*/
-	@:overload private function new(name : String, calendarField : Int) : Void;
+	@:overload @:protected private function new(name : String, calendarField : Int) : Void;
 	
 	/**
 	* Returns the <code>Calendar</code> field associated with this
@@ -589,7 +589,7 @@ extern class DateFormat extends java.text.Format
 	* @return Calendar constant for this field
 	* @see java.util.Calendar
 	*/
-	@:overload public function getCalendarField() : Int;
+	@:overload @:public public function getCalendarField() : Int;
 	
 	/**
 	* Resolves instances being deserialized to the predefined constants.
@@ -598,102 +598,102 @@ extern class DateFormat extends java.text.Format
 	*         resolved.
 	* @return resolved DateFormat.Field constant
 	*/
-	@:overload override private function readResolve() : Dynamic;
+	@:overload @:protected override private function readResolve() : Dynamic;
 	
 	/**
 	* Constant identifying the era field.
 	*/
-	public static var ERA(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var ERA(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the year field.
 	*/
-	public static var YEAR(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var YEAR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the month field.
 	*/
-	public static var MONTH(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of month field.
 	*/
-	public static var DAY_OF_MONTH(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var DAY_OF_MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour of day field, where the legal values
 	* are 1 to 24.
 	*/
-	public static var HOUR_OF_DAY1(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var HOUR_OF_DAY1(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour of day field, where the legal values
 	* are 0 to 23.
 	*/
-	public static var HOUR_OF_DAY0(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var HOUR_OF_DAY0(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the minute field.
 	*/
-	public static var MINUTE(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var MINUTE(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the second field.
 	*/
-	public static var SECOND(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var SECOND(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the millisecond field.
 	*/
-	public static var MILLISECOND(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var MILLISECOND(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of week field.
 	*/
-	public static var DAY_OF_WEEK(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var DAY_OF_WEEK(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of year field.
 	*/
-	public static var DAY_OF_YEAR(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var DAY_OF_YEAR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of week field.
 	*/
-	public static var DAY_OF_WEEK_IN_MONTH(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var DAY_OF_WEEK_IN_MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the week of year field.
 	*/
-	public static var WEEK_OF_YEAR(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var WEEK_OF_YEAR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the week of month field.
 	*/
-	public static var WEEK_OF_MONTH(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var WEEK_OF_MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the time of day indicator
 	* (e.g. "a.m." or "p.m.") field.
 	*/
-	public static var AM_PM(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var AM_PM(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour field, where the legal values are
 	* 1 to 12.
 	*/
-	public static var HOUR1(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var HOUR1(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour field, where the legal values are
 	* 0 to 11.
 	*/
-	public static var HOUR0(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var HOUR0(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the time zone field.
 	*/
-	public static var TIME_ZONE(default, null) : java.text.Format.Format_Field;
+	@:public @:final @:static public static var TIME_ZONE(default, null) : java.text.Format.Format_Field;
 	
 	
 }
@@ -703,7 +703,7 @@ extern class DateFormat extends java.text.Format
 */
 @:native('java$text$DateFormat$DateFormatGetter') @:internal extern class DateFormat_DateFormatGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DateFormatProvider, java.text.DateFormat>
 {
-	@:overload public function getObject(dateFormatProvider : java.text.spi.DateFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DateFormat;
+	@:overload @:public public function getObject(dateFormatProvider : java.text.spi.DateFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DateFormat;
 	
 	
 }

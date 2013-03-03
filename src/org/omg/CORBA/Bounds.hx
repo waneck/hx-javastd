@@ -36,14 +36,14 @@ extern class Bounds extends org.omg.CORBA.UserException
 	/**
 	* Constructs an <code>Bounds</code> with no specified detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>Bounds</code> with the specified detail message.
 	*
 	* @param   reason   the detail message.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

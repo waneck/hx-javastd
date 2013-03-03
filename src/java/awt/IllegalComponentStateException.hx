@@ -35,7 +35,7 @@ extern class IllegalComponentStateException extends java.lang.IllegalStateExcept
 	* Constructs an IllegalComponentStateException with no detail message.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an IllegalComponentStateException with the specified detail
@@ -43,7 +43,7 @@ extern class IllegalComponentStateException extends java.lang.IllegalStateExcept
 	* exception.
 	* @param s the String that contains a detailed message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

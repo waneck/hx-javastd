@@ -35,19 +35,19 @@ extern class WindowsMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 	* version of Swing.  A future release of Swing will provide support for
 	* long term persistence.
 	*/
-	private var menuBarHeight : Null<Int>;
+	@:protected private var menuBarHeight : Null<Int>;
 	
-	private var hotTrackingOn : Bool;
+	@:protected private var hotTrackingOn : Bool;
 	
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* Draws the background of the menu.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
+	@:require(java4) @:overload @:protected override private function paintBackground(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, bgColor : java.awt.Color) : Void;
 	
 	/**
 	* Method which renders the text of the current menu item.
@@ -58,11 +58,11 @@ extern class WindowsMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 	* @param text String to render
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
+	@:require(java4) @:overload @:protected override private function paintText(g : java.awt.Graphics, menuItem : javax.swing.JMenuItem, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
+	@:overload @:protected override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
 	
-	@:overload override private function getPreferredMenuItemSize(c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, defaultTextIconGap : Int) : java.awt.Dimension;
+	@:overload @:protected override private function getPreferredMenuItemSize(c : javax.swing.JComponent, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, defaultTextIconGap : Int) : java.awt.Dimension;
 	
 	
 }
@@ -73,9 +73,9 @@ extern class WindowsMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 */
 @:require(java4) @:native('com$sun$java$swing$plaf$windows$WindowsMenuUI$WindowsMouseInputHandler') extern class WindowsMenuUI_WindowsMouseInputHandler extends javax.swing.plaf.basic.BasicMenuUI.BasicMenuUI_MouseInputHandler
 {
-	@:overload public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
 	
 	
 }

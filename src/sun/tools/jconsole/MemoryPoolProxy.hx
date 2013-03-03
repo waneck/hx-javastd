@@ -25,13 +25,13 @@ package sun.tools.jconsole;
 */
 extern class MemoryPoolProxy
 {
-	@:overload public function new(client : sun.tools.jconsole.ProxyClient, poolName : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(client : sun.tools.jconsole.ProxyClient, poolName : javax.management.ObjectName) : Void;
 	
-	@:overload public function isCollectedMemoryPool() : Bool;
+	@:overload @:public public function isCollectedMemoryPool() : Bool;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
-	@:overload public function getStat() : sun.tools.jconsole.MemoryPoolStat;
+	@:overload @:public public function getStat() : sun.tools.jconsole.MemoryPoolStat;
 	
 	
 }

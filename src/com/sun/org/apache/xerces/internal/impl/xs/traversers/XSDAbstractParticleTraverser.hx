@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 */
 @:internal extern class XSDAbstractParticleTraverser extends com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDAbstractTraverser
 {
-	@:overload private function hasAllContent(particle : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl) : Bool;
+	@:overload @:protected private function hasAllContent(particle : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl) : Bool;
 	
 	
 }

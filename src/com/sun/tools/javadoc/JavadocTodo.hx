@@ -30,13 +30,13 @@ package com.sun.tools.javadoc;
 */
 extern class JavadocTodo extends com.sun.tools.javac.comp.Todo
 {
-	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public @:static public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload override public function append(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
+	@:overload @:public override public function append(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
 	
-	@:overload override public function offer(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Bool;
+	@:overload @:public override public function offer(e : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Bool;
 	
 	
 }

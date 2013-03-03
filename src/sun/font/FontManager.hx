@@ -39,9 +39,9 @@ extern interface FontManager
 	* @return {@code true} is the font is successfully registered,
 	* {@code false} otherwise.
 	*/
-	@:overload public function registerFont(font : java.awt.Font) : Bool;
+	@:overload @:public public function registerFont(font : java.awt.Font) : Bool;
 	
-	@:overload public function deRegisterBadFont(font2D : sun.font.Font2D) : Void;
+	@:overload @:public public function deRegisterBadFont(font2D : sun.font.Font2D) : Void;
 	
 	/**
 	* The client supplies a name and a style.
@@ -50,7 +50,7 @@ extern interface FontManager
 	* exist only in some other style. For non-native fonts the scaler
 	* may be able to emulate the required style.
 	*/
-	@:overload public function findFont2D(name : String, style : Int, fallback : Int) : sun.font.Font2D;
+	@:overload @:public public function findFont2D(name : String, style : Int, fallback : Int) : sun.font.Font2D;
 	
 	/**
 	* Creates a Font2D for the specified font file, that is expected
@@ -67,14 +67,14 @@ extern interface FontManager
 	*
 	* @return the created Font2D instance
 	*/
-	@:overload public function createFont2D(fontFile : java.io.File, fontFormat : Int, isCopy : Bool, tracker : sun.font.CreatedFontTracker) : sun.font.Font2D;
+	@:overload @:public public function createFont2D(fontFile : java.io.File, fontFormat : Int, isCopy : Bool, tracker : sun.font.CreatedFontTracker) : sun.font.Font2D;
 	
 	/**
 	* If usingPerAppContextComposites is true, we are in "applet"
 	* (eg browser) enviroment and at least one context has selected
 	* an alternate composite font behaviour.
 	*/
-	@:overload public function usingPerAppContextComposites() : Bool;
+	@:overload @:public public function usingPerAppContextComposites() : Bool;
 	
 	/**
 	* Creates a derived composite font from the specified font (handle).
@@ -85,7 +85,7 @@ extern interface FontManager
 	*
 	* @return the handle for the derived font
 	*/
-	@:overload public function getNewComposite(family : String, style : Int, handle : sun.font.Font2DHandle) : sun.font.Font2DHandle;
+	@:overload @:public public function getNewComposite(family : String, style : Int, handle : sun.font.Font2DHandle) : sun.font.Font2DHandle;
 	
 	/**
 	* Indicates a preference for locale-specific fonts in the mapping of
@@ -109,7 +109,7 @@ extern interface FontManager
 	* @see #preferProportionalFonts()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function preferLocaleFonts() : Void;
+	@:require(java5) @:overload @:public public function preferLocaleFonts() : Void;
 	
 	/**
 	* preferLocaleFonts() and preferProportionalFonts() are called to inform
@@ -119,7 +119,7 @@ extern interface FontManager
 	*
 	* @see #preferLocaleFonts()
 	*/
-	@:overload public function preferProportionalFonts() : Void;
+	@:overload @:public public function preferProportionalFonts() : Void;
 	
 	
 }

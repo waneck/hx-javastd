@@ -25,7 +25,7 @@ package sun.net.httpserver;
 */
 @:internal extern class Event
 {
-	@:overload private function new(t : sun.net.httpserver.ExchangeImpl) : Void;
+	@:overload @:protected private function new(t : sun.net.httpserver.ExchangeImpl) : Void;
 	
 	
 }

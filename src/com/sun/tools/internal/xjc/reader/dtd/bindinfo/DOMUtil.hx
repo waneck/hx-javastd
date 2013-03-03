@@ -25,15 +25,15 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 */
 extern class DOMUtil
 {
-	@:overload public static function getAttribute(e : org.w3c.dom.Element, nsUri : String, local : String) : String;
+	@:overload @:public @:static public static function getAttribute(e : org.w3c.dom.Element, nsUri : String, local : String) : String;
 	
-	@:overload public static function getElement(e : org.w3c.dom.Element, nsUri : String, localName : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getElement(e : org.w3c.dom.Element, nsUri : String, localName : String) : org.w3c.dom.Element;
 	
-	@:overload public static function getElement(e : org.w3c.dom.Element, localName : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getElement(e : org.w3c.dom.Element, localName : String) : org.w3c.dom.Element;
 	
-	@:overload public static function getChildElements(e : org.w3c.dom.Element) : java.util.List<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function getChildElements(e : org.w3c.dom.Element) : java.util.List<org.w3c.dom.Element>;
 	
-	@:overload public static function getChildElements(e : org.w3c.dom.Element, localName : String) : java.util.List<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function getChildElements(e : org.w3c.dom.Element, localName : String) : java.util.List<org.w3c.dom.Element>;
 	
 	
 }

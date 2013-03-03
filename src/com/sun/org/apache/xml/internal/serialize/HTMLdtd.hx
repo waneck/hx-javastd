@@ -26,22 +26,22 @@ extern class HTMLdtd
 	/**
 	* Public identifier for HTML 4.01 (Strict) document type.
 	*/
-	public static var HTMLPublicId(default, null) : String;
+	@:public @:static @:final public static var HTMLPublicId(default, null) : String;
 	
 	/**
 	* System identifier for HTML 4.01 (Strict) document type.
 	*/
-	public static var HTMLSystemId(default, null) : String;
+	@:public @:static @:final public static var HTMLSystemId(default, null) : String;
 	
 	/**
 	* Public identifier for XHTML 1.0 (Strict) document type.
 	*/
-	public static var XHTMLPublicId(default, null) : String;
+	@:public @:static @:final public static var XHTMLPublicId(default, null) : String;
 	
 	/**
 	* System identifier for XHTML 1.0 (Strict) document type.
 	*/
-	public static var XHTMLSystemId(default, null) : String;
+	@:public @:static @:final public static var XHTMLSystemId(default, null) : String;
 	
 	/**
 	* Returns true if element is declared to be empty. HTML elements are
@@ -50,7 +50,7 @@ extern class HTMLdtd
 	* @param tagName The element tag name (upper case)
 	* @return True if element is empty
 	*/
-	@:overload public static function isEmptyTag(tagName : String) : Bool;
+	@:overload @:public @:static public static function isEmptyTag(tagName : String) : Bool;
 	
 	/**
 	* Returns true if element is declared to have element content.
@@ -60,7 +60,7 @@ extern class HTMLdtd
 	* @param tagName The element tag name (upper case)
 	* @return True if element content
 	*/
-	@:overload public static function isElementContent(tagName : String) : Bool;
+	@:overload @:public @:static public static function isElementContent(tagName : String) : Bool;
 	
 	/**
 	* Returns true if element's textual contents preserves spaces.
@@ -70,7 +70,7 @@ extern class HTMLdtd
 	* @param tagName The element tag name (upper case)
 	* @return True if element's text content preserves spaces
 	*/
-	@:overload public static function isPreserveSpace(tagName : String) : Bool;
+	@:overload @:public @:static public static function isPreserveSpace(tagName : String) : Bool;
 	
 	/**
 	* Returns true if element's closing tag is optional and need not
@@ -80,7 +80,7 @@ extern class HTMLdtd
 	* @param tagName The element tag name (upper case)
 	* @return True if closing tag implied
 	*/
-	@:overload public static function isOptionalClosing(tagName : String) : Bool;
+	@:overload @:public @:static public static function isOptionalClosing(tagName : String) : Bool;
 	
 	/**
 	* Returns true if element's closing tag is generally not printed.
@@ -89,7 +89,7 @@ extern class HTMLdtd
 	* @param tagName The element tag name (upper case)
 	* @return True if only opening tag should be printed
 	*/
-	@:overload public static function isOnlyOpening(tagName : String) : Bool;
+	@:overload @:public @:static public static function isOnlyOpening(tagName : String) : Bool;
 	
 	/**
 	* Returns true if the opening of one element (<tt>tagName</tt>) implies
@@ -101,7 +101,7 @@ extern class HTMLdtd
 	* @param openTag The already opened element
 	* @return True if closing tag closes opening tag
 	*/
-	@:overload public static function isClosing(tagName : String, openTag : String) : Bool;
+	@:overload @:public @:static public static function isClosing(tagName : String, openTag : String) : Bool;
 	
 	/**
 	* Returns true if the specified attribute it a URI and should be
@@ -111,7 +111,7 @@ extern class HTMLdtd
 	* @param tagName The element's tag name
 	* @param attrName The attribute's name
 	*/
-	@:overload public static function isURI(tagName : String, attrName : String) : Bool;
+	@:overload @:public @:static public static function isURI(tagName : String, attrName : String) : Bool;
 	
 	/**
 	* Returns true if the specified attribute is a boolean and should be
@@ -121,7 +121,7 @@ extern class HTMLdtd
 	* @param tagName The element's tag name
 	* @param attrName The attribute's name
 	*/
-	@:overload public static function isBoolean(tagName : String, attrName : String) : Bool;
+	@:overload @:public @:static public static function isBoolean(tagName : String, attrName : String) : Bool;
 	
 	/**
 	* Returns the value of an HTML character reference by its name. If the
@@ -131,7 +131,7 @@ extern class HTMLdtd
 	* @param name Name of character reference
 	* @return Character code or EOF (-1)
 	*/
-	@:overload public static function charFromName(name : String) : Int;
+	@:overload @:public @:static public static function charFromName(name : String) : Int;
 	
 	/**
 	* Returns the name of an HTML character reference based on its character
@@ -141,7 +141,7 @@ extern class HTMLdtd
 	* @param value Character value of entity
 	* @return Entity's name or null
 	*/
-	@:overload public static function fromChar(value : Int) : String;
+	@:overload @:public @:static public static function fromChar(value : Int) : String;
 	
 	
 }

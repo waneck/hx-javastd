@@ -35,13 +35,13 @@ package com.sun.tools.hat.internal.util;
 */
 extern class Misc
 {
-	@:overload @:final public static function toHex(addr : Int) : String;
+	@:overload @:public @:final @:static public static function toHex(addr : Int) : String;
 	
-	@:overload @:final public static function toHex(addr : haxe.Int64) : String;
+	@:overload @:public @:final @:static public static function toHex(addr : haxe.Int64) : String;
 	
-	@:overload @:final public static function parseHex(value : String) : haxe.Int64;
+	@:overload @:public @:final @:static public static function parseHex(value : String) : haxe.Int64;
 	
-	@:overload public static function encodeHtml(str : String) : String;
+	@:overload @:public @:static public static function encodeHtml(str : String) : String;
 	
 	
 }

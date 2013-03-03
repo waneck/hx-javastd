@@ -52,14 +52,14 @@ package sun.text.normalizer;
 * @author Syn Wee Quek
 * @since release 2.1, February 1st 2002
 */
-	@:require(java1) @:overload public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:require(java1) @:overload @:public public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* <p>Protected constructor.</p>
 	* @param inputStream ICU uprop.dat file input stream
 	* @exception IOException throw if data file fails authentication
 	*/
-	@:overload private function new(inputStream : java.io.InputStream) : Void;
+	@:overload @:protected private function new(inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* <p>Reads uprops.icu, parse it into blocks of data to be stored in
@@ -67,7 +67,7 @@ package sun.text.normalizer;
 	* @param ucharppty UCharacterProperty instance
 	* @exception IOException thrown when data reading fails
 	*/
-	@:overload private function read(ucharppty : sun.text.normalizer.UCharacterProperty) : Void;
+	@:overload @:protected private function read(ucharppty : sun.text.normalizer.UCharacterProperty) : Void;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* serializable.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(obj : T) : Void;
+	@:require(java2) @:overload @:public public function new(obj : T) : Void;
 	
 	/**
 	* Returns a new copy of the contained marshalledobject.  The internal
@@ -53,14 +53,14 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* could not be found
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function get() : T;
+	@:require(java2) @:overload @:public public function get() : T;
 	
 	/**
 	* Return a hash code for this <code>MarshalledObject</code>.
 	*
 	* @return a hash code
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this <code>MarshalledObject</code> to another object.
@@ -77,7 +77,7 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* serialized object; <code>false</code> otherwise
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -98,9 +98,9 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* Overrides MarshalOutputStream.writeLocation implementation to write
 	* annotations to the location stream.
 	*/
-	@:overload private function writeLocation(loc : String) : Void;
+	@:overload @:protected override private function writeLocation(loc : String) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
 	
 }
@@ -116,7 +116,7 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* the stream we were given, or <code>null</code> if we were given a
 	* <code>null</code> location stream.
 	*/
-	@:overload private function readLocation() : Dynamic;
+	@:overload @:protected override private function readLocation() : Dynamic;
 	
 	
 }

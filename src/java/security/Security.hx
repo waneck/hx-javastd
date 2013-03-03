@@ -55,7 +55,7 @@ extern class Security
 	* <code>AlgorithmParameters</code> and <code>KeyFactory</code> engine
 	* classes (introduced in the J2SE version 1.2 platform) instead.
 	*/
-	@:overload public static function getAlgorithmProperty(algName : String, propName : String) : String;
+	@:overload @:public @:static public static function getAlgorithmProperty(algName : String, propName : String) : String;
 	
 	/**
 	* Adds a new provider, at a specified position. The position is
@@ -101,7 +101,7 @@ extern class Security
 	* @see #removeProvider
 	* @see java.security.SecurityPermission
 	*/
-	@:overload @:synchronized public static function insertProviderAt(provider : java.security.Provider, position : Int) : Int;
+	@:overload @:public @:static @:synchronized public static function insertProviderAt(provider : java.security.Provider, position : Int) : Int;
 	
 	/**
 	* Adds a provider to the next position available.
@@ -134,7 +134,7 @@ extern class Security
 	* @see #removeProvider
 	* @see java.security.SecurityPermission
 	*/
-	@:overload public static function addProvider(provider : java.security.Provider) : Int;
+	@:overload @:public @:static public static function addProvider(provider : java.security.Provider) : Int;
 	
 	/**
 	* Removes the provider with the specified name.
@@ -168,7 +168,7 @@ extern class Security
 	* @see #getProvider
 	* @see #addProvider
 	*/
-	@:overload @:synchronized public static function removeProvider(name : String) : Void;
+	@:overload @:public @:static @:synchronized public static function removeProvider(name : String) : Void;
 	
 	/**
 	* Returns an array containing all the installed providers. The order of
@@ -176,7 +176,7 @@ extern class Security
 	*
 	* @return an array of all the installed providers.
 	*/
-	@:overload public static function getProviders() : java.NativeArray<java.security.Provider>;
+	@:overload @:public @:static public static function getProviders() : java.NativeArray<java.security.Provider>;
 	
 	/**
 	* Returns the provider installed with the specified name, if
@@ -190,7 +190,7 @@ extern class Security
 	* @see #removeProvider
 	* @see #addProvider
 	*/
-	@:overload public static function getProvider(name : String) : java.security.Provider;
+	@:overload @:public @:static public static function getProvider(name : String) : java.security.Provider;
 	
 	/**
 	* Returns an array containing all installed providers that satisfy the
@@ -251,7 +251,7 @@ extern class Security
 	* @see #getProviders(java.util.Map)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getProviders(filter : String) : java.NativeArray<java.security.Provider>;
+	@:require(java3) @:overload @:public @:static public static function getProviders(filter : String) : java.NativeArray<java.security.Provider>;
 	
 	/**
 	* Returns an array containing all installed providers that satisfy the
@@ -302,7 +302,7 @@ extern class Security
 	* @see #getProviders(java.lang.String)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function getProviders(filter : java.util.Map<String, String>) : java.NativeArray<java.security.Provider>;
+	@:require(java3) @:overload @:public @:static public static function getProviders(filter : java.util.Map<String, String>) : java.NativeArray<java.security.Provider>;
 	
 	/**
 	* Gets a security property value.
@@ -327,7 +327,7 @@ extern class Security
 	* @see #setProperty
 	* @see java.security.SecurityPermission
 	*/
-	@:overload public static function getProperty(key : String) : String;
+	@:overload @:public @:static public static function getProperty(key : String) : String;
 	
 	/**
 	* Sets a security property value.
@@ -351,7 +351,7 @@ extern class Security
 	* @see #getProperty
 	* @see java.security.SecurityPermission
 	*/
-	@:overload public static function setProperty(key : String, datum : String) : Void;
+	@:overload @:public @:static public static function setProperty(key : String, datum : String) : Void;
 	
 	/**
 	* Returns a Set of Strings containing the names of all available
@@ -374,7 +374,7 @@ extern class Security
 	*
 	* @since 1.4
 	**/
-	@:require(java4) @:overload public static function getAlgorithms(serviceName : String) : java.util.Set<String>;
+	@:require(java4) @:overload @:public @:static public static function getAlgorithms(serviceName : String) : java.util.Set<String>;
 	
 	
 }

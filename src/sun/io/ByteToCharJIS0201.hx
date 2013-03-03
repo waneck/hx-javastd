@@ -30,9 +30,9 @@ package sun.io;
 */
 @:internal extern class ByteToCharJIS0201 extends sun.io.ByteToCharSingleByte
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

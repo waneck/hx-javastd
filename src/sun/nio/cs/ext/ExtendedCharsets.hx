@@ -25,11 +25,11 @@ package sun.nio.cs.ext;
 */
 extern class ExtendedCharsets extends sun.nio.cs.AbstractCharsetProvider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected override private function init() : Void;
 	
-	@:overload public static function aliasesFor(charsetName : String) : java.NativeArray<String>;
+	@:overload @:public @:static public static function aliasesFor(charsetName : String) : java.NativeArray<String>;
 	
 	
 }

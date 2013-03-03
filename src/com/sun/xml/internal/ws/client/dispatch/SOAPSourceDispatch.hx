@@ -36,9 +36,9 @@ package com.sun.xml.internal.ws.client.dispatch;
 	* @version 1.0
 	* @see RESTSourceDispatch
 	*/
-	@:overload public function new(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
-	@:overload public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:public public function new(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo, mode : javax.xml.ws.Service.Service_Mode, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
 	
 }

@@ -26,7 +26,7 @@ extern class MutableAttrListImpl extends org.xml.sax.helpers.AttributesImpl impl
 	/**
 	* Construct a new, empty AttributesImpl object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy an existing Attributes object.
@@ -36,7 +36,7 @@ extern class MutableAttrListImpl extends org.xml.sax.helpers.AttributesImpl impl
 	*
 	* @param atts The existing Attributes object.
 	*/
-	@:overload public function new(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function new(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Add an attribute to the end of the list.
@@ -55,14 +55,14 @@ extern class MutableAttrListImpl extends org.xml.sax.helpers.AttributesImpl impl
 	* @param type The attribute type as a string.
 	* @param value The attribute value.
 	*/
-	@:overload public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
 	/**
 	* Add the contents of the attribute list to this list.
 	*
 	* @param atts List of attributes to add to this list
 	*/
-	@:overload public function addAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function addAttributes(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Return true if list contains the given (raw) attribute name.
@@ -71,7 +71,7 @@ extern class MutableAttrListImpl extends org.xml.sax.helpers.AttributesImpl impl
 	*
 	* @return true if an attribute is found with this name
 	*/
-	@:overload public function contains(name : String) : Bool;
+	@:overload @:public public function contains(name : String) : Bool;
 	
 	
 }

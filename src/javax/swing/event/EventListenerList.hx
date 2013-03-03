@@ -26,7 +26,7 @@ package javax.swing.event;
 extern class EventListenerList implements java.io.Serializable
 {
 	/* The list of ListenerType - Listener pairs */
-	@:transient private var listenerList : java.NativeArray<Dynamic>;
+	@:protected @:transient private var listenerList : java.NativeArray<Dynamic>;
 	
 	/**
 	* Passes back the event listener list as an array
@@ -45,7 +45,7 @@ extern class EventListenerList implements java.io.Serializable
 	* on a copy of the array returned rather than the array
 	* itself.
 	*/
-	@:overload public function getListenerList() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getListenerList() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Return an array of all the listeners of the given type.
@@ -55,37 +55,37 @@ extern class EventListenerList implements java.io.Serializable
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(t : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(t : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the total number of listeners for this listener list.
 	*/
-	@:overload public function getListenerCount() : Int;
+	@:overload @:public public function getListenerCount() : Int;
 	
 	/**
 	* Returns the total number of listeners of the supplied type
 	* for this listener list.
 	*/
-	@:overload public function getListenerCount(t : Class<Dynamic>) : Int;
+	@:overload @:public public function getListenerCount(t : Class<Dynamic>) : Int;
 	
 	/**
 	* Adds the listener as a listener of the specified type.
 	* @param t the type of the listener to be added
 	* @param l the listener to be added
 	*/
-	@:overload @:synchronized public function add<T : java.util.EventListener>(t : Class<T>, l : T) : Void;
+	@:overload @:public @:synchronized public function add<T : java.util.EventListener>(t : Class<T>, l : T) : Void;
 	
 	/**
 	* Removes the listener as a listener of the specified type.
 	* @param t the type of the listener to be removed
 	* @param l the listener to be removed
 	*/
-	@:overload @:synchronized public function remove<T : java.util.EventListener>(t : Class<T>, l : T) : Void;
+	@:overload @:public @:synchronized public function remove<T : java.util.EventListener>(t : Class<T>, l : T) : Void;
 	
 	/**
 	* Returns a string representation of the EventListenerList.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class PrintColorUIResource extends javax.swing.plaf.ColorUIResource
 	* @param rgb the color rgb value
 	* @param printColor the alternate color for printing
 	*/
-	@:overload public function new(rgb : Int, printColor : java.awt.Color) : Void;
+	@:overload @:public public function new(rgb : Int, printColor : java.awt.Color) : Void;
 	
 	/**
 	* Return the color to use during printing. If no alternate
@@ -41,7 +41,7 @@ extern class PrintColorUIResource extends javax.swing.plaf.ColorUIResource
 	*
 	* @return the color to use during printing
 	*/
-	@:overload public function getPrintColor() : java.awt.Color;
+	@:overload @:public public function getPrintColor() : java.awt.Color;
 	
 	
 }

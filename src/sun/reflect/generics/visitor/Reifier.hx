@@ -37,46 +37,46 @@ extern class Reifier implements sun.reflect.generics.visitor.TypeTreeVisitor<jav
 	* @return A visitor that can be used to reify ASTs representing
 	* generic type information into reflective objects
 	*/
-	@:overload public static function make(f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.visitor.Reifier;
+	@:overload @:public @:static public static function make(f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.visitor.Reifier;
 	
 	/**
 	* Accessor for the result of the last visit by this visitor,
 	* @return The type computed by this visitor based on its last
 	* visit
 	*/
-	@:overload public function getResult() : java.lang.reflect.Type;
+	@:overload @:public public function getResult() : java.lang.reflect.Type;
 	
-	@:overload public function visitFormalTypeParameter(ftp : sun.reflect.generics.tree.FormalTypeParameter) : Void;
+	@:overload @:public public function visitFormalTypeParameter(ftp : sun.reflect.generics.tree.FormalTypeParameter) : Void;
 	
-	@:overload public function visitClassTypeSignature(ct : sun.reflect.generics.tree.ClassTypeSignature) : Void;
+	@:overload @:public public function visitClassTypeSignature(ct : sun.reflect.generics.tree.ClassTypeSignature) : Void;
 	
-	@:overload public function visitArrayTypeSignature(a : sun.reflect.generics.tree.ArrayTypeSignature) : Void;
+	@:overload @:public public function visitArrayTypeSignature(a : sun.reflect.generics.tree.ArrayTypeSignature) : Void;
 	
-	@:overload public function visitTypeVariableSignature(tv : sun.reflect.generics.tree.TypeVariableSignature) : Void;
+	@:overload @:public public function visitTypeVariableSignature(tv : sun.reflect.generics.tree.TypeVariableSignature) : Void;
 	
-	@:overload public function visitWildcard(w : sun.reflect.generics.tree.Wildcard) : Void;
+	@:overload @:public public function visitWildcard(w : sun.reflect.generics.tree.Wildcard) : Void;
 	
-	@:overload public function visitSimpleClassTypeSignature(sct : sun.reflect.generics.tree.SimpleClassTypeSignature) : Void;
+	@:overload @:public public function visitSimpleClassTypeSignature(sct : sun.reflect.generics.tree.SimpleClassTypeSignature) : Void;
 	
-	@:overload public function visitBottomSignature(b : sun.reflect.generics.tree.BottomSignature) : Void;
+	@:overload @:public public function visitBottomSignature(b : sun.reflect.generics.tree.BottomSignature) : Void;
 	
-	@:overload public function visitByteSignature(b : sun.reflect.generics.tree.ByteSignature) : Void;
+	@:overload @:public public function visitByteSignature(b : sun.reflect.generics.tree.ByteSignature) : Void;
 	
-	@:overload public function visitBooleanSignature(b : sun.reflect.generics.tree.BooleanSignature) : Void;
+	@:overload @:public public function visitBooleanSignature(b : sun.reflect.generics.tree.BooleanSignature) : Void;
 	
-	@:overload public function visitShortSignature(s : sun.reflect.generics.tree.ShortSignature) : Void;
+	@:overload @:public public function visitShortSignature(s : sun.reflect.generics.tree.ShortSignature) : Void;
 	
-	@:overload public function visitCharSignature(c : sun.reflect.generics.tree.CharSignature) : Void;
+	@:overload @:public public function visitCharSignature(c : sun.reflect.generics.tree.CharSignature) : Void;
 	
-	@:overload public function visitIntSignature(i : sun.reflect.generics.tree.IntSignature) : Void;
+	@:overload @:public public function visitIntSignature(i : sun.reflect.generics.tree.IntSignature) : Void;
 	
-	@:overload public function visitLongSignature(l : sun.reflect.generics.tree.LongSignature) : Void;
+	@:overload @:public public function visitLongSignature(l : sun.reflect.generics.tree.LongSignature) : Void;
 	
-	@:overload public function visitFloatSignature(f : sun.reflect.generics.tree.FloatSignature) : Void;
+	@:overload @:public public function visitFloatSignature(f : sun.reflect.generics.tree.FloatSignature) : Void;
 	
-	@:overload public function visitDoubleSignature(d : sun.reflect.generics.tree.DoubleSignature) : Void;
+	@:overload @:public public function visitDoubleSignature(d : sun.reflect.generics.tree.DoubleSignature) : Void;
 	
-	@:overload public function visitVoidDescriptor(v : sun.reflect.generics.tree.VoidDescriptor) : Void;
+	@:overload @:public public function visitVoidDescriptor(v : sun.reflect.generics.tree.VoidDescriptor) : Void;
 	
 	
 }

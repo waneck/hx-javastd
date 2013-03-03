@@ -50,21 +50,21 @@ package javax.xml.ws;
 	*
 	* @return the unique identifier for this feature.
 	*/
-	@:overload @:abstract public function getID() : String;
+	@:overload @:public @:abstract public function getID() : String;
 	
 	/**
 	* Specifies if the feature is enabled or disabled
 	*/
-	private var enabled : Bool;
+	@:protected private var enabled : Bool;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns <code>true</code> if this feature is enabled.
 	*
 	* @return <code>true</code> if and only if the feature is enabled .
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	
 }

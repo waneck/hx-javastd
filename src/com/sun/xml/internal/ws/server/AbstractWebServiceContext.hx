@@ -25,17 +25,23 @@ package com.sun.xml.internal.ws.server;
 */
 extern class AbstractWebServiceContext implements com.sun.xml.internal.ws.api.server.WSWebServiceContext
 {
-	@:overload public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload @:public public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
-	@:overload public function getMessageContext() : javax.xml.ws.handler.MessageContext;
+	@:overload @:public public function getMessageContext() : javax.xml.ws.handler.MessageContext;
 	
-	@:overload public function getUserPrincipal() : java.security.Principal;
+	@:overload @:public public function getUserPrincipal() : java.security.Principal;
 	
-	@:overload public function isUserInRole(role : String) : Bool;
+	@:overload @:public public function isUserInRole(role : String) : Bool;
 	
-	@:overload public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
+	@:overload @:public public function getEndpointReference(referenceParameters : java.NativeArray<org.w3c.dom.Element>) : javax.xml.ws.EndpointReference;
 	
-	@:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	@:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>, referenceParameters : java.NativeArray<org.w3c.dom.Element>) : T;
+	
+	/**
+	* Obtains the request packet that is being processed.
+	* @return Packet for the request
+	*/
+	@:overload @:public public function getRequestPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

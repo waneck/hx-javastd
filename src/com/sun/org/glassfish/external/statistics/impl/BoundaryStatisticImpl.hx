@@ -28,19 +28,19 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class BoundaryStatisticImpl extends com.sun.org.glassfish.external.statistics.impl.StatisticImpl implements com.sun.org.glassfish.external.statistics.BoundaryStatistic implements java.lang.reflect.InvocationHandler
 {
-	@:overload public function new(lower : haxe.Int64, upper : haxe.Int64, name : String, unit : String, desc : String, startTime : haxe.Int64, sampleTime : haxe.Int64) : Void;
+	@:overload @:public public function new(lower : haxe.Int64, upper : haxe.Int64, name : String, unit : String, desc : String, startTime : haxe.Int64, sampleTime : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.BoundaryStatistic;
+	@:overload @:public @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.BoundaryStatistic;
 	
-	@:overload @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload @:synchronized public function getLowerBound() : haxe.Int64;
+	@:overload @:public @:synchronized public function getLowerBound() : haxe.Int64;
 	
-	@:overload @:synchronized public function getUpperBound() : haxe.Int64;
+	@:overload @:public @:synchronized public function getUpperBound() : haxe.Int64;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

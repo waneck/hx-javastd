@@ -41,7 +41,7 @@ extern class AttrCompare implements java.util.Comparator<Dynamic> implements jav
 	*   obj0 is less than, equal to, or greater than obj1
 	*
 	*/
-	@:overload public function compare(obj0 : Dynamic, obj1 : Dynamic) : Int;
+	@:overload @:public public function compare(obj0 : Dynamic, obj1 : Dynamic) : Int;
 	
 	
 }

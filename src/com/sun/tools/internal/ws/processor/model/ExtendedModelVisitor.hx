@@ -31,47 +31,47 @@ extern class ExtendedModelVisitor
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:public public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload private function shouldVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Bool;
+	@:overload @:protected private function shouldVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Bool;
 	
-	@:overload private function preVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:protected private function preVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload private function postVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload @:protected private function postVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload private function preVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:protected private function preVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload private function postVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:protected private function postVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload private function preVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:protected private function preVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload private function postVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload @:protected private function postVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload private function preVisit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:protected private function preVisit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload private function postVisit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:protected private function postVisit(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload private function preVisit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
+	@:overload @:protected private function preVisit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
 	
-	@:overload private function postVisit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
+	@:overload @:protected private function postVisit(request : com.sun.tools.internal.ws.processor.model.Request) : Void;
 	
-	@:overload private function preVisit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
+	@:overload @:protected private function preVisit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
 	
-	@:overload private function postVisit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
+	@:overload @:protected private function postVisit(response : com.sun.tools.internal.ws.processor.model.Response) : Void;
 	
-	@:overload private function preVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:protected private function preVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload private function postVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload @:protected private function postVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload private function visitBodyBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected private function visitBodyBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visitHeaderBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected private function visitHeaderBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visitFaultBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:protected private function visitFaultBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload private function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload @:protected private function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
 	
 }

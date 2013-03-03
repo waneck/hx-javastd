@@ -32,27 +32,27 @@ extern class BigInt
 	* @param data a sequence of bytes, most significant bytes/digits
 	*          first.  CONSUMED.
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs a "Big" integer from a "BigInteger", which must be
 	* positive (or zero) in value.
 	*/
-	@:overload public function new(i : java.math.BigInteger) : Void;
+	@:overload @:public public function new(i : java.math.BigInteger) : Void;
 	
 	/**
 	* Constructs a "Big" integer from a normal Java integer.
 	*
 	* @param i the java primitive integer
 	*/
-	@:overload public function new(i : Int) : Void;
+	@:overload @:public public function new(i : Int) : Void;
 	
 	/**
 	* Converts the "big" integer to a java primitive integer.
 	*
 	* @excpet NumberFormatException if 32 bits is insufficient.
 	*/
-	@:overload public function toInt() : Int;
+	@:overload @:public public function toInt() : Int;
 	
 	/**
 	* Returns a hexadecimal printed representation.  The value is
@@ -60,19 +60,19 @@ extern class BigInt
 	* embedded newlines.  Words are separated for readability,
 	* with eight words (32 bytes) per line.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a BigInteger value which supports many arithmetic
 	* operations. Assumes negative values will never occur.
 	*/
-	@:overload public function toBigInteger() : java.math.BigInteger;
+	@:overload @:public public function toBigInteger() : java.math.BigInteger;
 	
 	/**
 	* Returns the data as a byte array.  The most significant bit
 	* of the array is bit zero (as in <code>java.math.BigInteger</code>).
 	*/
-	@:overload public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns true iff the parameter is a numerically equivalent
@@ -80,21 +80,21 @@ extern class BigInt
 	*
 	* @param other the object being compared with this one.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns true iff the parameter is numerically equivalent.
 	*
 	* @param other the BigInt being compared with this one.
 	*/
-	@:overload public function equals(other : sun.security.util.BigInt) : Bool;
+	@:overload @:public public function equals(other : sun.security.util.BigInt) : Bool;
 	
 	/**
 	* Returns a hashcode for this BigInt.
 	*
 	* @return a hashcode for this BigInt.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

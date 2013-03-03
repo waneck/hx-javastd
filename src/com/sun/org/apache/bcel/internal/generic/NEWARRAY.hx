@@ -58,37 +58,37 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class NEWARRAY extends com.sun.org.apache.bcel.internal.generic.Instruction implements com.sun.org.apache.bcel.internal.generic.AllocationInstruction implements com.sun.org.apache.bcel.internal.generic.ExceptionThrower implements com.sun.org.apache.bcel.internal.generic.StackProducer
 {
-	@:overload public function new(type : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Int8) : Void;
 	
-	@:overload public function new(type : com.sun.org.apache.bcel.internal.generic.BasicType) : Void;
+	@:overload @:public public function new(type : com.sun.org.apache.bcel.internal.generic.BasicType) : Void;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:public override public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return numeric code for basic element type
 	*/
-	@:overload @:final public function getTypecode() : java.StdTypes.Int8;
+	@:overload @:public @:final public function getTypecode() : java.StdTypes.Int8;
 	
 	/**
 	* @return type of constructed array
 	*/
-	@:overload @:final public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public @:final public function getType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload public function toString(verbose : Bool) : String;
+	@:overload @:public override public function toString(verbose : Bool) : String;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload @:protected override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -98,7 +98,7 @@ extern class NEWARRAY extends com.sun.org.apache.bcel.internal.generic.Instructi
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

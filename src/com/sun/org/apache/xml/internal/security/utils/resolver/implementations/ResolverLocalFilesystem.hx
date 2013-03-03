@@ -21,17 +21,17 @@ package com.sun.org.apache.xml.internal.security.utils.resolver.implementations;
 */
 extern class ResolverLocalFilesystem extends com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi
 {
-	@:overload override public function engineIsThreadSafe() : Bool;
+	@:overload @:public override public function engineIsThreadSafe() : Bool;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public override public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
+	@:overload @:public override public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
 	
 	
 }

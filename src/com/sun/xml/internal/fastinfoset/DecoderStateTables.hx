@@ -27,109 +27,109 @@ package com.sun.xml.internal.fastinfoset;
 */
 extern class DecoderStateTables
 {
-	public static var STATE_ILLEGAL(default, null) : Int;
+	@:public @:final @:static public static var STATE_ILLEGAL(default, null) : Int;
 	
-	public static var STATE_UNSUPPORTED(default, null) : Int;
+	@:public @:final @:static public static var STATE_UNSUPPORTED(default, null) : Int;
 	
-	public static var EII_NO_AIIS_INDEX_SMALL(default, null) : Int;
+	@:public @:final @:static public static var EII_NO_AIIS_INDEX_SMALL(default, null) : Int;
 	
-	public static var EII_AIIS_INDEX_SMALL(default, null) : Int;
+	@:public @:final @:static public static var EII_AIIS_INDEX_SMALL(default, null) : Int;
 	
-	public static var EII_INDEX_MEDIUM(default, null) : Int;
+	@:public @:final @:static public static var EII_INDEX_MEDIUM(default, null) : Int;
 	
-	public static var EII_INDEX_LARGE(default, null) : Int;
+	@:public @:final @:static public static var EII_INDEX_LARGE(default, null) : Int;
 	
-	public static var EII_NAMESPACES(default, null) : Int;
+	@:public @:final @:static public static var EII_NAMESPACES(default, null) : Int;
 	
-	public static var EII_LITERAL(default, null) : Int;
+	@:public @:final @:static public static var EII_LITERAL(default, null) : Int;
 	
-	public static var CII_UTF8_SMALL_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var CII_UTF8_SMALL_LENGTH(default, null) : Int;
 	
-	public static var CII_UTF8_MEDIUM_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var CII_UTF8_MEDIUM_LENGTH(default, null) : Int;
 	
-	public static var CII_UTF8_LARGE_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var CII_UTF8_LARGE_LENGTH(default, null) : Int;
 	
-	public static var CII_UTF16_SMALL_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var CII_UTF16_SMALL_LENGTH(default, null) : Int;
 	
-	public static var CII_UTF16_MEDIUM_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var CII_UTF16_MEDIUM_LENGTH(default, null) : Int;
 	
-	public static var CII_UTF16_LARGE_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var CII_UTF16_LARGE_LENGTH(default, null) : Int;
 	
-	public static var CII_RA(default, null) : Int;
+	@:public @:final @:static public static var CII_RA(default, null) : Int;
 	
-	public static var CII_EA(default, null) : Int;
+	@:public @:final @:static public static var CII_EA(default, null) : Int;
 	
-	public static var CII_INDEX_SMALL(default, null) : Int;
+	@:public @:final @:static public static var CII_INDEX_SMALL(default, null) : Int;
 	
-	public static var CII_INDEX_MEDIUM(default, null) : Int;
+	@:public @:final @:static public static var CII_INDEX_MEDIUM(default, null) : Int;
 	
-	public static var CII_INDEX_LARGE(default, null) : Int;
+	@:public @:final @:static public static var CII_INDEX_LARGE(default, null) : Int;
 	
-	public static var CII_INDEX_LARGE_LARGE(default, null) : Int;
+	@:public @:final @:static public static var CII_INDEX_LARGE_LARGE(default, null) : Int;
 	
-	public static var COMMENT_II(default, null) : Int;
+	@:public @:final @:static public static var COMMENT_II(default, null) : Int;
 	
-	public static var PROCESSING_INSTRUCTION_II(default, null) : Int;
+	@:public @:final @:static public static var PROCESSING_INSTRUCTION_II(default, null) : Int;
 	
-	public static var DOCUMENT_TYPE_DECLARATION_II(default, null) : Int;
+	@:public @:final @:static public static var DOCUMENT_TYPE_DECLARATION_II(default, null) : Int;
 	
-	public static var UNEXPANDED_ENTITY_REFERENCE_II(default, null) : Int;
+	@:public @:final @:static public static var UNEXPANDED_ENTITY_REFERENCE_II(default, null) : Int;
 	
-	public static var TERMINATOR_SINGLE(default, null) : Int;
+	@:public @:final @:static public static var TERMINATOR_SINGLE(default, null) : Int;
 	
-	public static var TERMINATOR_DOUBLE(default, null) : Int;
+	@:public @:final @:static public static var TERMINATOR_DOUBLE(default, null) : Int;
 	
-	public static var AII_INDEX_SMALL(default, null) : Int;
+	@:public @:final @:static public static var AII_INDEX_SMALL(default, null) : Int;
 	
-	public static var AII_INDEX_MEDIUM(default, null) : Int;
+	@:public @:final @:static public static var AII_INDEX_MEDIUM(default, null) : Int;
 	
-	public static var AII_INDEX_LARGE(default, null) : Int;
+	@:public @:final @:static public static var AII_INDEX_LARGE(default, null) : Int;
 	
-	public static var AII_LITERAL(default, null) : Int;
+	@:public @:final @:static public static var AII_LITERAL(default, null) : Int;
 	
-	public static var AII_TERMINATOR_SINGLE(default, null) : Int;
+	@:public @:final @:static public static var AII_TERMINATOR_SINGLE(default, null) : Int;
 	
-	public static var AII_TERMINATOR_DOUBLE(default, null) : Int;
+	@:public @:final @:static public static var AII_TERMINATOR_DOUBLE(default, null) : Int;
 	
-	public static var NISTRING_UTF8_SMALL_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_UTF8_SMALL_LENGTH(default, null) : Int;
 	
-	public static var NISTRING_UTF8_MEDIUM_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_UTF8_MEDIUM_LENGTH(default, null) : Int;
 	
-	public static var NISTRING_UTF8_LARGE_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_UTF8_LARGE_LENGTH(default, null) : Int;
 	
-	public static var NISTRING_UTF16_SMALL_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_UTF16_SMALL_LENGTH(default, null) : Int;
 	
-	public static var NISTRING_UTF16_MEDIUM_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_UTF16_MEDIUM_LENGTH(default, null) : Int;
 	
-	public static var NISTRING_UTF16_LARGE_LENGTH(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_UTF16_LARGE_LENGTH(default, null) : Int;
 	
-	public static var NISTRING_RA(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_RA(default, null) : Int;
 	
-	public static var NISTRING_EA(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_EA(default, null) : Int;
 	
-	public static var NISTRING_INDEX_SMALL(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_INDEX_SMALL(default, null) : Int;
 	
-	public static var NISTRING_INDEX_MEDIUM(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_INDEX_MEDIUM(default, null) : Int;
 	
-	public static var NISTRING_INDEX_LARGE(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_INDEX_LARGE(default, null) : Int;
 	
-	public static var NISTRING_EMPTY(default, null) : Int;
+	@:public @:final @:static public static var NISTRING_EMPTY(default, null) : Int;
 	
-	@:overload @:final public static function DII(index : Int) : Int;
+	@:overload @:public @:static @:final public static function DII(index : Int) : Int;
 	
-	@:overload @:final public static function EII(index : Int) : Int;
+	@:overload @:public @:static @:final public static function EII(index : Int) : Int;
 	
-	@:overload @:final public static function AII(index : Int) : Int;
+	@:overload @:public @:static @:final public static function AII(index : Int) : Int;
 	
-	@:overload @:final public static function NISTRING(index : Int) : Int;
+	@:overload @:public @:static @:final public static function NISTRING(index : Int) : Int;
 	
-	@:overload @:final public static function ISTRING(index : Int) : Int;
+	@:overload @:public @:static @:final public static function ISTRING(index : Int) : Int;
 	
-	@:overload @:final public static function ISTRING_PREFIX_NAMESPACE(index : Int) : Int;
+	@:overload @:public @:static @:final public static function ISTRING_PREFIX_NAMESPACE(index : Int) : Int;
 	
-	@:overload @:final public static function UTF8(index : Int) : Int;
+	@:overload @:public @:static @:final public static function UTF8(index : Int) : Int;
 	
-	@:overload @:final public static function UTF8_NCNAME(index : Int) : Int;
+	@:overload @:public @:static @:final public static function UTF8_NCNAME(index : Int) : Int;
 	
 	
 }

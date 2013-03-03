@@ -32,13 +32,13 @@ extern class BufferedImageFilter extends java.awt.image.ImageFilter implements j
 	*           use to filter a <code>BufferedImage</code>
 	* @throws NullPointerException if op is null
 	*/
-	@:overload public function new(op : java.awt.image.BufferedImageOp) : Void;
+	@:overload @:public public function new(op : java.awt.image.BufferedImageOp) : Void;
 	
 	/**
 	* Returns the <code>BufferedImageOp</code>.
 	* @return the operator of this <code>BufferedImageFilter</code>.
 	*/
-	@:overload public function getBufferedImageOp() : java.awt.image.BufferedImageOp;
+	@:overload @:public public function getBufferedImageOp() : java.awt.image.BufferedImageOp;
 	
 	/**
 	* Filters the information provided in the
@@ -58,7 +58,7 @@ extern class BufferedImageFilter extends java.awt.image.ImageFilter implements j
 	*        <code>BufferedImageFilter</code>
 	* @see ImageConsumer#setDimensions
 	*/
-	@:overload public function setDimensions(width : Int, height : Int) : Void;
+	@:overload @:public override public function setDimensions(width : Int, height : Int) : Void;
 	
 	/**
 	* Filters the information provided in the
@@ -80,7 +80,7 @@ extern class BufferedImageFilter extends java.awt.image.ImageFilter implements j
 	*        <code>ColorModel</code> of this <code>BufferedImageFilter</code>
 	* @see ImageConsumer#setColorModel
 	*/
-	@:overload public function setColorModel(model : java.awt.image.ColorModel) : Void;
+	@:overload @:public override public function setColorModel(model : java.awt.image.ColorModel) : Void;
 	
 	/**
 	* Filters the information provided in the <code>setPixels</code>
@@ -98,7 +98,7 @@ extern class BufferedImageFilter extends java.awt.image.ImageFilter implements j
 	* @see ImageConsumer#setPixels(int, int, int, int, ColorModel, byte[],
 	int, int)
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Filters the information provided in the <code>setPixels</code>
@@ -116,7 +116,7 @@ extern class BufferedImageFilter extends java.awt.image.ImageFilter implements j
 	* @see ImageConsumer#setPixels(int, int, int, int, ColorModel, int[],
 	int, int)
 	*/
-	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload @:public override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Filters the information provided in the <code>imageComplete</code>
@@ -134,7 +134,7 @@ extern class BufferedImageFilter extends java.awt.image.ImageFilter implements j
 	* instance.
 	* @see ImageConsumer#imageComplete
 	*/
-	@:overload public function imageComplete(status : Int) : Void;
+	@:overload @:public override public function imageComplete(status : Int) : Void;
 	
 	
 }

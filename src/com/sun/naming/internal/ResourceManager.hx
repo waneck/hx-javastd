@@ -47,7 +47,7 @@ extern class ResourceManager
 	* @throws NamingException if an error occurs while reading a
 	*          resource file
 	*/
-	@:overload public static function getInitialEnvironment(env : java.util.Hashtable<Dynamic, Dynamic>) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public @:static public static function getInitialEnvironment(env : java.util.Hashtable<Dynamic, Dynamic>) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Retrieves the property from the environment, or from the provider
@@ -69,7 +69,7 @@ extern class ResourceManager
 	* @throws NamingException if an error occurs while reading the provider
 	* resource file.
 	*/
-	@:overload public static function getProperty(propName : String, env : java.util.Hashtable<Dynamic, Dynamic>, ctx : javax.naming.Context, concat : Bool) : String;
+	@:overload @:public @:static public static function getProperty(propName : String, env : java.util.Hashtable<Dynamic, Dynamic>, ctx : javax.naming.Context, concat : Bool) : String;
 	
 	/**
 	* Retrieves an enumeration of factory classes/object specified by a
@@ -113,7 +113,7 @@ extern class ResourceManager
 	* @see javax.naming.spi.DirectoryManager#getStateToBind
 	* @see javax.naming.ldap.ControlFactory#getControlInstance
 	*/
-	@:overload public static function getFactories(propName : String, env : java.util.Hashtable<Dynamic, Dynamic>, ctx : javax.naming.Context) : com.sun.naming.internal.FactoryEnumeration;
+	@:overload @:public @:static public static function getFactories(propName : String, env : java.util.Hashtable<Dynamic, Dynamic>, ctx : javax.naming.Context) : com.sun.naming.internal.FactoryEnumeration;
 	
 	/**
 	* Retrieves a factory from a list of packages specified in a
@@ -151,7 +151,7 @@ extern class ResourceManager
 	* @see javax.naming.spi.NamingManager#getURLContext
 	* @see javax.naming.spi.NamingManager#getURLObject
 	*/
-	@:overload public static function getFactory(propName : String, env : java.util.Hashtable<Dynamic, Dynamic>, ctx : javax.naming.Context, classSuffix : String, defaultPkgPrefix : String) : Dynamic;
+	@:overload @:public @:static public static function getFactory(propName : String, env : java.util.Hashtable<Dynamic, Dynamic>, ctx : javax.naming.Context, classSuffix : String, defaultPkgPrefix : String) : Dynamic;
 	
 	
 }

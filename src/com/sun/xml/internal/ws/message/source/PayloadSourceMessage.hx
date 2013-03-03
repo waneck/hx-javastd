@@ -30,9 +30,9 @@ extern class PayloadSourceMessage extends com.sun.xml.internal.ws.message.stream
 	*
 	* @author Vivek Pandey
 	*/
-	@:overload public function new(headers : com.sun.xml.internal.ws.api.message.HeaderList, payload : javax.xml.transform.Source, attSet : com.sun.xml.internal.ws.api.message.AttachmentSet, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(headers : com.sun.xml.internal.ws.api.message.HeaderList, payload : javax.xml.transform.Source, attSet : com.sun.xml.internal.ws.api.message.AttachmentSet, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload public function new(s : javax.xml.transform.Source, soapVer : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
+	@:overload @:public public function new(s : javax.xml.transform.Source, soapVer : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
 	
 }

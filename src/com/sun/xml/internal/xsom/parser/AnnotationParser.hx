@@ -47,7 +47,7 @@ extern class AnnotationParser
 	*      The returned content handler can use this object
 	*      if it needs to resolve entities.
 	*/
-	@:overload @:abstract public function getContentHandler(context : com.sun.xml.internal.xsom.parser.AnnotationContext, parentElementName : String, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : org.xml.sax.ContentHandler;
+	@:overload @:public @:abstract public function getContentHandler(context : com.sun.xml.internal.xsom.parser.AnnotationContext, parentElementName : String, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : org.xml.sax.ContentHandler;
 	
 	/**
 	* Once the SAX events are fed to the ContentHandler,
@@ -63,7 +63,7 @@ extern class AnnotationParser
 	* @return
 	*      Any object, including null.
 	*/
-	@:overload @:abstract public function getResult(existing : Dynamic) : Dynamic;
+	@:overload @:public @:abstract public function getResult(existing : Dynamic) : Dynamic;
 	
 	
 }

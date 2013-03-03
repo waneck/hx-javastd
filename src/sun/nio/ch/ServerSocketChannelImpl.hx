@@ -25,49 +25,49 @@ package sun.nio.ch;
 */
 @:internal extern class ServerSocketChannelImpl extends java.nio.channels.ServerSocketChannel implements sun.nio.ch.SelChImpl
 {
-	@:overload override public function socket() : java.net.ServerSocket;
+	@:overload @:public override public function socket() : java.net.ServerSocket;
 	
-	@:overload override public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public override public function getLocalAddress() : java.net.SocketAddress;
 	
-	@:overload override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.ServerSocketChannel;
+	@:overload @:public override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.ServerSocketChannel;
 	
-	@:overload override public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public override public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
-	@:overload @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
-	@:overload public function isBound() : Bool;
+	@:overload @:public public function isBound() : Bool;
 	
-	@:overload public function localAddress() : java.net.SocketAddress;
+	@:overload @:public public function localAddress() : java.net.SocketAddress;
 	
-	@:overload override public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.ServerSocketChannel;
+	@:overload @:public override public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.ServerSocketChannel;
 	
-	@:overload override public function accept() : java.nio.channels.SocketChannel;
+	@:overload @:public override public function accept() : java.nio.channels.SocketChannel;
 	
-	@:overload private function implConfigureBlocking(block : Bool) : Void;
+	@:overload @:protected override private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload private function implCloseSelectableChannel() : Void;
+	@:overload @:protected override private function implCloseSelectableChannel() : Void;
 	
-	@:overload public function kill() : Void;
+	@:overload @:public public function kill() : Void;
 	
 	/**
 	* Translates native poll revent set into a ready operation set
 	*/
-	@:overload public function translateReadyOps(ops : Int, initialOps : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateReadyOps(ops : Int, initialOps : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndUpdateReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
-	@:overload public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
+	@:overload @:public public function translateAndSetReadyOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Bool;
 	
 	/**
 	* Translates an interest operation set into a native poll event set
 	*/
-	@:overload public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload @:public public function translateAndSetInterestOps(ops : Int, sk : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload public function getFD() : java.io.FileDescriptor;
+	@:overload @:public public function getFD() : java.io.FileDescriptor;
 	
-	@:overload public function getFDVal() : Int;
+	@:overload @:public public function getFDVal() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

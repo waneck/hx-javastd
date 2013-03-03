@@ -30,7 +30,7 @@ extern class AttributeValueExp implements javax.management.ValueExp
 	* @deprecated An instance created with this constructor cannot be
 	* used in a query.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new <CODE>AttributeValueExp</CODE> representing the
@@ -39,14 +39,14 @@ extern class AttributeValueExp implements javax.management.ValueExp
 	* @param attr the name of the attribute whose value is the value
 	* of this {@link ValueExp}.
 	*/
-	@:overload public function new(attr : String) : Void;
+	@:overload @:public public function new(attr : String) : Void;
 	
 	/**
 	* Returns a string representation of the name of the attribute.
 	*
 	* @return the attribute name.
 	*/
-	@:overload public function getAttributeName() : String;
+	@:overload @:public public function getAttributeName() : String;
 	
 	/**
 	* <p>Applies the <CODE>AttributeValueExp</CODE> on an MBean.
@@ -67,17 +67,17 @@ extern class AttributeValueExp implements javax.management.ValueExp
 	* @exception BadBinaryOpValueExpException
 	*
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload @:public public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	/**
 	* Returns the string representing its value.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/* There is no need for this method, because if a query is being
 	evaluted an AttributeValueExp can only appear inside a QueryExp,
 	and that QueryExp will itself have done setMBeanServer.  */
-	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload @:public public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Return the value of the given attribute in the named MBean.
@@ -92,7 +92,7 @@ extern class AttributeValueExp implements javax.management.ValueExp
 	* @return the value of the attribute, or null if it could not be
 	* obtained.
 	*/
-	@:overload private function getAttribute(name : javax.management.ObjectName) : Dynamic;
+	@:overload @:protected private function getAttribute(name : javax.management.ObjectName) : Dynamic;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class Util
 	*
 	* @param value
 	*/
-	@:overload public static function parseBool(value : String) : Bool;
+	@:overload @:public @:static public static function parseBool(value : String) : Bool;
 	
 	
 }

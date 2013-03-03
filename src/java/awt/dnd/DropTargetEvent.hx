@@ -34,7 +34,7 @@ extern class DropTargetEvent extends java.util.EventObject
 	* @see #getSource()
 	* @see #getDropTargetContext()
 	*/
-	@:overload public function new(dtc : java.awt.dnd.DropTargetContext) : Void;
+	@:overload @:public public function new(dtc : java.awt.dnd.DropTargetContext) : Void;
 	
 	/**
 	* This method returns the <code>DropTargetContext</code>
@@ -42,7 +42,7 @@ extern class DropTargetEvent extends java.util.EventObject
 	* <P>
 	* @return the <code>DropTargetContext</code>
 	*/
-	@:overload public function getDropTargetContext() : java.awt.dnd.DropTargetContext;
+	@:overload @:public public function getDropTargetContext() : java.awt.dnd.DropTargetContext;
 	
 	/**
 	* The <code>DropTargetContext</code> associated with this
@@ -50,7 +50,7 @@ extern class DropTargetEvent extends java.util.EventObject
 	*
 	* @serial
 	*/
-	private var context : java.awt.dnd.DropTargetContext;
+	@:protected private var context : java.awt.dnd.DropTargetContext;
 	
 	
 }

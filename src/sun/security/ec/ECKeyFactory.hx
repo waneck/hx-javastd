@@ -45,11 +45,11 @@ package sun.security.ec;
 */
 @:require(java6) extern class ECKeyFactory extends java.security.KeyFactorySpi
 {
-	public static var INSTANCE(default, null) : java.security.KeyFactory;
+	@:public @:final @:static public static var INSTANCE(default, null) : java.security.KeyFactory;
 	
-	public static var ecInternalProvider(default, null) : java.security.Provider;
+	@:public @:final @:static public static var ecInternalProvider(default, null) : java.security.Provider;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Static method to convert Key into a useable instance of
@@ -63,20 +63,20 @@ package sun.security.ec;
 	*
 	* To be used by future Java ECDSA and ECDH implementations.
 	*/
-	@:overload public static function toECKey(key : java.security.Key) : java.security.interfaces.ECKey;
+	@:overload @:public @:static public static function toECKey(key : java.security.Key) : java.security.interfaces.ECKey;
 	
 	/**
 	* Translate an EC key into a Sun EC key. If conversion is
 	* not possible, throw an InvalidKeyException.
 	* See also JCA doc.
 	*/
-	@:overload override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
+	@:overload @:protected override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
 	
-	@:overload override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload @:protected override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
-	@:overload override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload @:protected override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
-	@:overload override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
+	@:overload @:protected override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
 	
 	
 }

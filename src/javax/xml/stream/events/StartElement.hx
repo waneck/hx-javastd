@@ -31,7 +31,7 @@ extern interface StartElement extends javax.xml.stream.events.XMLEvent
 	* Get the name of this event
 	* @return the qualified name of this event
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns an Iterator of non-namespace declared attributes declared on
@@ -44,7 +44,7 @@ extern interface StartElement extends javax.xml.stream.events.XMLEvent
 	* @return a readonly Iterator over Attribute interfaces, or an
 	* empty iterator
 	*/
-	@:overload public function getAttributes() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an Iterator of namespaces declared on this element.
@@ -69,14 +69,14 @@ extern interface StartElement extends javax.xml.stream.events.XMLEvent
 	* empty iterator
 	*
 	*/
-	@:overload public function getNamespaces() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getNamespaces() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns the attribute referred to by this name
 	* @param name the qname of the desired name
 	* @return the attribute corresponding to the name value or null
 	*/
-	@:overload public function getAttributeByName(name : javax.xml.namespace.QName) : javax.xml.stream.events.Attribute;
+	@:overload @:public public function getAttributeByName(name : javax.xml.namespace.QName) : javax.xml.stream.events.Attribute;
 	
 	/**
 	* Gets a read-only namespace context. If no context is
@@ -86,7 +86,7 @@ extern interface StartElement extends javax.xml.stream.events.XMLEvent
 	*
 	* @return the current namespace context
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* Gets the value that the prefix is bound to in the
@@ -95,7 +95,7 @@ extern interface StartElement extends javax.xml.stream.events.XMLEvent
 	* @param prefix the prefix to lookup
 	* @return the uri bound to the prefix or null
 	*/
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
 	
 }

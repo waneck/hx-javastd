@@ -52,12 +52,12 @@ package java.awt.event;
 	/**
 	* Invoked when a component has been added to the container.
 	*/
-	@:overload public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
 	
 	/**
 	* Invoked when a component has been removed from the container.
 	*/
-	@:overload public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
 	
 	
 }

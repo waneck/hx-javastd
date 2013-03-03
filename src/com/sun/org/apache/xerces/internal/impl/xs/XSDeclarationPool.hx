@@ -20,23 +20,23 @@ package com.sun.org.apache.xerces.internal.impl.xs;
 */
 extern class XSDeclarationPool
 {
-	@:overload public function setDVFactory(dvFactory : com.sun.org.apache.xerces.internal.impl.dv.xs.SchemaDVFactoryImpl) : Void;
+	@:overload @:public public function setDVFactory(dvFactory : com.sun.org.apache.xerces.internal.impl.dv.xs.SchemaDVFactoryImpl) : Void;
 	
-	@:overload @:final public function getElementDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
+	@:overload @:public @:final public function getElementDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
 	
-	@:overload @:final public function getAttributeDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeDecl;
+	@:overload @:public @:final public function getAttributeDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeDecl;
 	
-	@:overload @:final public function getAttributeUse() : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl;
+	@:overload @:public @:final public function getAttributeUse() : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeUseImpl;
 	
-	@:overload @:final public function getComplexTypeDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl;
+	@:overload @:public @:final public function getComplexTypeDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl;
 	
-	@:overload @:final public function getSimpleTypeDecl() : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
+	@:overload @:public @:final public function getSimpleTypeDecl() : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
-	@:overload @:final public function getParticleDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl;
+	@:overload @:public @:final public function getParticleDecl() : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl;
 	
-	@:overload @:final public function getModelGroup() : com.sun.org.apache.xerces.internal.impl.xs.XSModelGroupImpl;
+	@:overload @:public @:final public function getModelGroup() : com.sun.org.apache.xerces.internal.impl.xs.XSModelGroupImpl;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

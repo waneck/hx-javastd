@@ -35,7 +35,7 @@ package javax.crypto;
 */
 @:require(java4) extern class NullCipher extends javax.crypto.Cipher
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -30,21 +30,21 @@ extern class OutputPropertiesFactory
 	* suitable for prepending to a localname to produce a "universal
 	* name".
 	*/
-	public static var S_BUILTIN_EXTENSIONS_UNIVERSAL(default, null) : String;
+	@:public @:static @:final public static var S_BUILTIN_EXTENSIONS_UNIVERSAL(default, null) : String;
 	
 	/**
 	* The non-standard property key to use to set the
 	* number of whitepaces to indent by, per indentation level,
 	* if indent="yes".
 	*/
-	public static var S_KEY_INDENT_AMOUNT(default, null) : String;
+	@:public @:static @:final public static var S_KEY_INDENT_AMOUNT(default, null) : String;
 	
 	/**
 	* The non-standard property key to use to set the
 	* number of whitepaces to indent by, per indentation level,
 	* if indent="yes".
 	*/
-	public static var S_KEY_LINE_SEPARATOR(default, null) : String;
+	@:public @:static @:final public static var S_KEY_LINE_SEPARATOR(default, null) : String;
 	
 	/** This non-standard property key is used to set the name of the fully qualified
 	* Java class that implements the ContentHandler interface.
@@ -52,36 +52,36 @@ extern class OutputPropertiesFactory
 	*  implements the ContentHandler interface, where the result tree events
 	*  will be sent to.
 	*/
-	public static var S_KEY_CONTENT_HANDLER(default, null) : String;
+	@:public @:static @:final public static var S_KEY_CONTENT_HANDLER(default, null) : String;
 	
 	/**
 	* This non-standard property key is used to specify the name of the property file
 	* that specifies character to entity reference mappings.
 	*/
-	public static var S_KEY_ENTITIES(default, null) : String;
+	@:public @:static @:final public static var S_KEY_ENTITIES(default, null) : String;
 	
 	/**
 	* This non-standard property key is used to set a value of "yes" if the href values for HTML serialization should
 	*  use %xx escaping. */
-	public static var S_USE_URL_ESCAPING(default, null) : String;
+	@:public @:static @:final public static var S_USE_URL_ESCAPING(default, null) : String;
 	
 	/**
 	* This non-standard property key is used to set a value of "yes" if the META tag should be omitted where it would
 	*  otherwise be supplied.
 	*/
-	public static var S_OMIT_META_TAG(default, null) : String;
+	@:public @:static @:final public static var S_OMIT_META_TAG(default, null) : String;
 	
 	/**
 	* The old built-in extension namespace, this is not a public API.
 	*/
-	public static var S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL(default, null) : String;
+	@:public @:static @:final public static var S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL(default, null) : String;
 	
 	/**
 	* This is not a public API, it is only public because it is used
 	* by outside of this package,
 	* it is the length of the old built-in extension namespace.
 	*/
-	public static var S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL_LEN(default, null) : Int;
+	@:public @:static @:final public static var S_BUILTIN_OLD_EXTENSIONS_UNIVERSAL_LEN(default, null) : Int;
 	
 	/**
 	* <p>Is Standalone</p>
@@ -95,7 +95,7 @@ extern class OutputPropertiesFactory
 	*   </li>
 	* </ul>
 	*/
-	public static var ORACLE_IS_STANDALONE(default, null) : String;
+	@:public @:static @:final public static var ORACLE_IS_STANDALONE(default, null) : String;
 	
 	/**
 	* Creates an empty OutputProperties with the property key/value defaults specified by
@@ -110,7 +110,7 @@ extern class OutputPropertiesFactory
 	*
 	* @return Properties object that holds the defaults for the given method.
 	*/
-	@:overload @:final public static function getDefaultMethodProperties(method : String) : java.util.Properties;
+	@:overload @:static @:public @:final public static function getDefaultMethodProperties(method : String) : java.util.Properties;
 	
 	
 }

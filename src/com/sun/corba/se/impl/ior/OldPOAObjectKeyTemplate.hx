@@ -27,18 +27,18 @@ extern class OldPOAObjectKeyTemplate extends com.sun.corba.se.impl.ior.OldObject
 {
 	/** This constructor reads the template ONLY from the stream
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
 	/** This constructor reads a complete ObjectKey (template and Id)
 	* from the stream.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream, osh : org.omg.CORBA.OctetSeqHolder) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream, osh : org.omg.CORBA.OctetSeqHolder) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : Int, poaid : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : Int, poaid : Int) : Void;
 	
-	@:overload public function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public override public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
 	
 }

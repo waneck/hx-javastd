@@ -28,21 +28,21 @@ package java.awt;
 	/*
 	* Must be called on EDT only, that's why no synchronization
 	*/
-	@:overload public function stopDispatching() : Void;
+	@:overload @:public public function stopDispatching() : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
-	@:overload @:synchronized public function getEventQueue() : java.awt.EventQueue;
+	@:overload @:public @:synchronized public function getEventQueue() : java.awt.EventQueue;
 	
-	@:overload @:synchronized public function setEventQueue(eq : java.awt.EventQueue) : Void;
+	@:overload @:public @:synchronized public function setEventQueue(eq : java.awt.EventQueue) : Void;
 	
 	
 }
 @:native('java$awt$EventDispatchThread$HierarchyEventFilter') @:internal extern class EventDispatchThread_HierarchyEventFilter implements java.awt.EventFilter
 {
-	@:overload public function new(modalComponent : java.awt.Component) : Void;
+	@:overload @:public public function new(modalComponent : java.awt.Component) : Void;
 	
-	@:overload public function acceptEvent(event : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
+	@:overload @:public public function acceptEvent(event : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }

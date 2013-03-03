@@ -45,14 +45,14 @@ extern class PrintJobAdapter implements javax.print.event.PrintJobListener
 	*
 	* @param pje the event being notified
 	*/
-	@:overload public function printDataTransferCompleted(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printDataTransferCompleted(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that the job completed successfully.
 	*
 	* @param pje the event being notified
 	*/
-	@:overload public function printJobCompleted(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobCompleted(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that the job failed to complete
@@ -60,7 +60,7 @@ extern class PrintJobAdapter implements javax.print.event.PrintJobListener
 	*
 	* @param pje the event being notified
 	*/
-	@:overload public function printJobFailed(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobFailed(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that the job was canceled
@@ -68,7 +68,7 @@ extern class PrintJobAdapter implements javax.print.event.PrintJobListener
 	*
 	* @param pje the event being notified
 	*/
-	@:overload public function printJobCanceled(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobCanceled(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that no more events will be delivered.
@@ -80,7 +80,7 @@ extern class PrintJobAdapter implements javax.print.event.PrintJobListener
 	*
 	* @param pje the event being notified
 	*/
-	@:overload public function printJobNoMoreEvents(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobNoMoreEvents(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	/**
 	* Called to notify the client that some possibly user rectifiable
@@ -88,7 +88,7 @@ extern class PrintJobAdapter implements javax.print.event.PrintJobListener
 	*
 	* @param pje the event being notified
 	*/
-	@:overload public function printJobRequiresAttention(pje : javax.print.event.PrintJobEvent) : Void;
+	@:overload @:public public function printJobRequiresAttention(pje : javax.print.event.PrintJobEvent) : Void;
 	
 	
 }

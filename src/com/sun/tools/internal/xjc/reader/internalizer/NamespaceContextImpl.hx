@@ -31,13 +31,13 @@ package com.sun.tools.internal.xjc.reader.internalizer;
 */
 @:internal extern class NamespaceContextImpl implements javax.xml.namespace.NamespaceContext
 {
-	@:overload public function new(e : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(e : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
 	
 }

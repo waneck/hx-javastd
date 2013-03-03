@@ -38,21 +38,21 @@ package com.sun.tools.javac.util;
 */
 extern class Position
 {
-	public static var NOPOS(default, null) : Int;
+	@:public @:static @:final public static var NOPOS(default, null) : Int;
 	
-	public static var FIRSTPOS(default, null) : Int;
+	@:public @:static @:final public static var FIRSTPOS(default, null) : Int;
 	
-	public static var FIRSTLINE(default, null) : Int;
+	@:public @:static @:final public static var FIRSTLINE(default, null) : Int;
 	
-	public static var FIRSTCOLUMN(default, null) : Int;
+	@:public @:static @:final public static var FIRSTCOLUMN(default, null) : Int;
 	
-	public static var LINESHIFT(default, null) : Int;
+	@:public @:static @:final public static var LINESHIFT(default, null) : Int;
 	
-	public static var MAXCOLUMN(default, null) : Int;
+	@:public @:static @:final public static var MAXCOLUMN(default, null) : Int;
 	
-	public static var MAXLINE(default, null) : Int;
+	@:public @:static @:final public static var MAXLINE(default, null) : Int;
 	
-	public static var MAXPOS(default, null) : Int;
+	@:public @:static @:final public static var MAXPOS(default, null) : Int;
 	
 	/** A two-way map between line/column numbers and positions,
 	*  derived from a scan done at creation time.  Tab expansion is
@@ -66,7 +66,7 @@ extern class Position
 	* @param   max         Number of characters to read
 	* @param   expandTabs  If true, expand tabs when calculating columns
 	*/
-	@:overload public static function makeLineMap(src : java.NativeArray<java.StdTypes.Char16>, max : Int, expandTabs : Bool) : com.sun.tools.javac.util.Position.Position_LineMap;
+	@:overload @:public @:static public static function makeLineMap(src : java.NativeArray<java.StdTypes.Char16>, max : Int, expandTabs : Bool) : com.sun.tools.javac.util.Position.Position_LineMap;
 	
 	/** Encode line and column numbers in an integer as:
 	*  line-number << LINESHIFT + column-number
@@ -79,7 +79,7 @@ extern class Position
 	*               represent in the encoded format
 	* @throws IllegalArgumentException if line or col is less than 1
 	*/
-	@:overload public static function encodePosition(line : Int, col : Int) : Int;
+	@:overload @:public @:static public static function encodePosition(line : Int, col : Int) : Int;
 	
 	
 }
@@ -128,29 +128,29 @@ extern class Position
 }
 @:native('com$sun$tools$javac$util$Position$LineMapImpl') @:internal extern class Position_LineMapImpl implements com.sun.source.tree.LineMap
 {
-	private var startPosition : java.NativeArray<Int>;
+	@:protected private var startPosition : java.NativeArray<Int>;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function build(src : java.NativeArray<java.StdTypes.Char16>, max : Int) : Void;
+	@:overload @:protected private function build(src : java.NativeArray<java.StdTypes.Char16>, max : Int) : Void;
 	
-	@:overload public function getStartPosition(line : Int) : Int;
+	@:overload @:public public function getStartPosition(line : Int) : Int;
 	
-	@:overload public function getStartPosition(line : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getStartPosition(line : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function getPosition(line : Int, column : Int) : Int;
+	@:overload @:public public function getPosition(line : Int, column : Int) : Int;
 	
-	@:overload public function getPosition(line : haxe.Int64, column : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getPosition(line : haxe.Int64, column : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function getLineNumber(pos : Int) : Int;
+	@:overload @:public public function getLineNumber(pos : Int) : Int;
 	
-	@:overload public function getLineNumber(pos : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getLineNumber(pos : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function getColumnNumber(pos : Int) : Int;
+	@:overload @:public public function getColumnNumber(pos : Int) : Int;
 	
-	@:overload public function getColumnNumber(pos : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function getColumnNumber(pos : haxe.Int64) : haxe.Int64;
 	
-	@:overload private function setTabPosition(offset : Int) : Void;
+	@:overload @:protected private function setTabPosition(offset : Int) : Void;
 	
 	
 }
@@ -160,13 +160,13 @@ extern class Position
 */
 @:native('com$sun$tools$javac$util$Position$LineTabMapImpl') extern class Position_LineTabMapImpl extends com.sun.tools.javac.util.Position.Position_LineMapImpl
 {
-	@:overload public function new(max : Int) : Void;
+	@:overload @:public public function new(max : Int) : Void;
 	
-	@:overload override private function setTabPosition(offset : Int) : Void;
+	@:overload @:protected override private function setTabPosition(offset : Int) : Void;
 	
-	@:overload override public function getColumnNumber(pos : Int) : Int;
+	@:overload @:public override public function getColumnNumber(pos : Int) : Int;
 	
-	@:overload override public function getPosition(line : Int, column : Int) : Int;
+	@:overload @:public override public function getPosition(line : Int, column : Int) : Int;
 	
 	
 }

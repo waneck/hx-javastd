@@ -45,7 +45,7 @@ package java.lang.annotation;
 	* @param annotationType the Class object for the annotation type
 	* @param elementName the name of the missing element
 	*/
-	@:overload public function new(annotationType : Class<java.lang.annotation.Annotation>, elementName : String) : Void;
+	@:overload @:public public function new(annotationType : Class<java.lang.annotation.Annotation>, elementName : String) : Void;
 	
 	/**
 	* Returns the Class object for the annotation type with the
@@ -54,14 +54,14 @@ package java.lang.annotation;
 	* @return the Class object for the annotation type with the
 	*     missing element
 	*/
-	@:overload public function annotationType() : Class<java.lang.annotation.Annotation>;
+	@:overload @:public public function annotationType() : Class<java.lang.annotation.Annotation>;
 	
 	/**
 	* Returns the name of the missing element.
 	*
 	* @return the name of the missing element
 	*/
-	@:overload public function elementName() : String;
+	@:overload @:public public function elementName() : String;
 	
 	
 }

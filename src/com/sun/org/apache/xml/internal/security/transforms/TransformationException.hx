@@ -25,14 +25,14 @@ extern class TransformationException extends com.sun.org.apache.xml.internal.sec
 	* Constructor TransformationException
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor TransformationException
 	*
 	* @param _msgID
 	*/
-	@:overload public function new(_msgID : String) : Void;
+	@:overload @:public public function new(_msgID : String) : Void;
 	
 	/**
 	* Constructor TransformationException
@@ -40,7 +40,7 @@ extern class TransformationException extends com.sun.org.apache.xml.internal.sec
 	* @param _msgID
 	* @param exArgs
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Constructor TransformationException
@@ -48,7 +48,7 @@ extern class TransformationException extends com.sun.org.apache.xml.internal.sec
 	* @param _msgID
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor TransformationException
@@ -57,7 +57,7 @@ extern class TransformationException extends com.sun.org.apache.xml.internal.sec
 	* @param exArgs
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
 	
 	
 }

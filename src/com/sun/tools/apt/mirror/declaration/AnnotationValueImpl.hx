@@ -28,41 +28,41 @@ extern class AnnotationValueImpl implements com.sun.mirror.declaration.Annotatio
 	/**
 	* Implementation of AnnotationValue
 	*/
-	private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
+	@:protected @:final private var env(default, null) : com.sun.tools.apt.mirror.AptEnv;
 	
-	private var attr(default, null) : com.sun.tools.javac.code.Attribute;
+	@:protected @:final private var attr(default, null) : com.sun.tools.javac.code.Attribute;
 	
-	private var annotation(default, null) : com.sun.tools.apt.mirror.declaration.AnnotationMirrorImpl;
-	
-	/**
-	* {@inheritDoc}
-	*/
-	@:overload public function toString() : String;
+	@:protected @:final private var annotation(default, null) : com.sun.tools.apt.mirror.declaration.AnnotationMirrorImpl;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getPosition() : com.sun.mirror.util.SourcePosition;
+	/**
+	* {@inheritDoc}
+	*/
+	@:overload @:public public function getValue() : Dynamic;
+	
+	@:overload @:public public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
 	
 }
 @:native('com$sun$tools$apt$mirror$declaration$AnnotationValueImpl$ValueVisitor') @:internal extern class AnnotationValueImpl_ValueVisitor implements com.sun.tools.javac.code.Attribute.Attribute_Visitor
 {
-	public var value : Dynamic;
+	@:public public var value : Dynamic;
 	
-	@:overload public function visitConstant(c : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
+	@:overload @:public public function visitConstant(c : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
 	
-	@:overload public function visitClass(c : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
+	@:overload @:public public function visitClass(c : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
 	
-	@:overload public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
+	@:overload @:public public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
 	
-	@:overload public function visitCompound(c : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
+	@:overload @:public public function visitCompound(c : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
 	
-	@:overload public function visitArray(a : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
+	@:overload @:public public function visitArray(a : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
 	
-	@:overload public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
+	@:overload @:public public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
 	
 	
 }

@@ -29,11 +29,11 @@ package sun.net.www.http;
 */
 extern class ChunkedOutputStream extends java.io.PrintStream
 {
-	@:overload public function new(o : java.io.PrintStream) : Void;
+	@:overload @:public public function new(o : java.io.PrintStream) : Void;
 	
-	@:overload public function new(o : java.io.PrintStream, size : Int) : Void;
+	@:overload @:public public function new(o : java.io.PrintStream, size : Int) : Void;
 	
-	@:overload override public function checkError() : Bool;
+	@:overload @:public override public function checkError() : Bool;
 	
 	/*
 	* Writes data from b[] to an internal buffer and stores the data as data
@@ -46,17 +46,17 @@ extern class ChunkedOutputStream extends java.io.PrintStream
 	* chunk of a following format: {space for data length}{CRLF}{data}
 	* The size of the data is of course smaller than preferredChunkSize.
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload @:synchronized override public function write(_b : Int) : Void;
+	@:overload @:public @:synchronized override public function write(_b : Int) : Void;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized public function reset() : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:public @:synchronized override public function flush() : Void;
 	
 	
 }

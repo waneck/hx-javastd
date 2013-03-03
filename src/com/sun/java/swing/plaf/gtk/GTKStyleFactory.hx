@@ -32,7 +32,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param c this parameter isn't used, may be null.
 	* @param id of the region to get the style.
 	*/
-	@:overload @:synchronized override public function getStyle(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public @:synchronized override public function getStyle(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region) : javax.swing.plaf.synth.SynthStyle;
 	
 	
 }
@@ -44,11 +44,11 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKStyleFactory$ComplexKey') @:internal extern class GTKStyleFactory_ComplexKey
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

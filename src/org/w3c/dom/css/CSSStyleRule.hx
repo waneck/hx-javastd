@@ -45,7 +45,7 @@ extern interface CSSStyleRule extends org.w3c.dom.css.CSSRule
 	* implementation may have stripped out insignificant whitespace while
 	* parsing the selector.
 	*/
-	@:overload public function getSelectorText() : String;
+	@:overload @:public public function getSelectorText() : String;
 	
 	/**
 	*  The textual representation of the selector for the rule set. The
@@ -56,12 +56,12 @@ extern interface CSSStyleRule extends org.w3c.dom.css.CSSRule
 	*   error and is unparsable.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this rule is readonly.
 	*/
-	@:overload public function setSelectorText(selectorText : String) : Void;
+	@:overload @:public public function setSelectorText(selectorText : String) : Void;
 	
 	/**
 	*  The declaration-block of this rule set.
 	*/
-	@:overload public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
+	@:overload @:public public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
 	
 	
 }

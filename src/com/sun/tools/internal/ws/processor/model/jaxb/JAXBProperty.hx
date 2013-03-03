@@ -28,23 +28,23 @@ extern class JAXBProperty
 	/**
 	* Default constructor for the persistence.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @see Property#name()
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getRawTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function getRawTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeAndAnnotation;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeAndAnnotation;
 	
 	/**
 	* @see Property#elementName()
 	*/
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

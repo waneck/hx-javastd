@@ -33,15 +33,15 @@ package sun.jvmstat.monitor;
 */
 @:require(java5) extern class AbstractMonitor implements sun.jvmstat.monitor.Monitor
 {
-	private var name : String;
+	@:protected private var name : String;
 	
-	private var units : sun.jvmstat.monitor.Units;
+	@:protected private var units : sun.jvmstat.monitor.Units;
 	
-	private var variability : sun.jvmstat.monitor.Variability;
+	@:protected private var variability : sun.jvmstat.monitor.Variability;
 	
-	private var vectorLength : Int;
+	@:protected private var vectorLength : Int;
 	
-	private var supported : Bool;
+	@:protected private var supported : Bool;
 	
 	/**
 	* Create a vector instrumentation monitoring object with the given
@@ -53,7 +53,7 @@ package sun.jvmstat.monitor;
 	* @param supported support level indicator
 	* @param vectorLength the length of the vector, or 0 if not a vector type.
 	*/
-	@:overload private function new(name : String, units : sun.jvmstat.monitor.Units, variability : sun.jvmstat.monitor.Variability, supported : Bool, vectorLength : Int) : Void;
+	@:overload @:protected private function new(name : String, units : sun.jvmstat.monitor.Units, variability : sun.jvmstat.monitor.Variability, supported : Bool, vectorLength : Int) : Void;
 	
 	/**
 	* Create a scalar instrumentation monitoring object with the given
@@ -64,47 +64,47 @@ package sun.jvmstat.monitor;
 	* @param variability the variability attribute
 	* @param supported support level indicator
 	*/
-	@:overload private function new(name : String, units : sun.jvmstat.monitor.Units, variability : sun.jvmstat.monitor.Variability, supported : Bool) : Void;
+	@:overload @:protected private function new(name : String, units : sun.jvmstat.monitor.Units, variability : sun.jvmstat.monitor.Variability, supported : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getBaseName() : String;
+	@:overload @:public public function getBaseName() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getUnits() : sun.jvmstat.monitor.Units;
+	@:overload @:public public function getUnits() : sun.jvmstat.monitor.Units;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getVariability() : sun.jvmstat.monitor.Variability;
+	@:overload @:public public function getVariability() : sun.jvmstat.monitor.Variability;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isVector() : Bool;
+	@:overload @:public public function isVector() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getVectorLength() : Int;
+	@:overload @:public public function getVectorLength() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function isSupported() : Bool;
+	@:overload @:public public function isSupported() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:abstract public function getValue() : Dynamic;
+	@:overload @:public @:abstract public function getValue() : Dynamic;
 	
 	
 }

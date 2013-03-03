@@ -32,7 +32,7 @@ extern class FileTypeDetector
 	*          If a security manager has been installed and it denies
 	*          {@link RuntimePermission}<tt>("fileTypeDetector")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Probes the given file to guess its content type.
@@ -67,7 +67,7 @@ extern class FileTypeDetector
 	*
 	* @see java.nio.file.Files#probeContentType
 	*/
-	@:overload @:abstract public function probeContentType(path : java.nio.file.Path) : String;
+	@:overload @:public @:abstract public function probeContentType(path : java.nio.file.Path) : String;
 	
 	
 }

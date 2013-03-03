@@ -30,18 +30,18 @@ package com.sun.xml.internal.org.jvnet.staxex;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload public function set(dt : com.sun.xml.internal.org.jvnet.staxex.Base64Data, mimeType : String) : Void;
+	@:overload @:public public function set(dt : com.sun.xml.internal.org.jvnet.staxex.Base64Data, mimeType : String) : Void;
 	
-	@:overload public function getBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Reads the given {@link InputStream} completely into the buffer.
 	*/
-	@:overload public function readFrom(is : java.io.InputStream) : Void;
+	@:overload @:public public function readFrom(is : java.io.InputStream) : Void;
 	
 	
 }

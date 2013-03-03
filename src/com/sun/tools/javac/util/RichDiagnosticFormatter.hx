@@ -46,26 +46,26 @@ package com.sun.tools.javac.util;
 extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.ForwardingDiagnosticFormatter<com.sun.tools.javac.util.JCDiagnostic, com.sun.tools.javac.util.AbstractDiagnosticFormatter>
 {
 	/* name simplifier used by this formatter */
-	private var nameSimplifier : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_ClassNameSimplifier;
+	@:protected private var nameSimplifier : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_ClassNameSimplifier;
 	
 	/** Get the DiagnosticFormatter instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.RichDiagnosticFormatter;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.RichDiagnosticFormatter;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function format(diag : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
+	@:overload @:public public function format(diag : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
 	/**
 	* Sets the type/symbol printer used by this formatter.
 	* @param printer the rich printer to be set
 	*/
-	@:overload private function setRichPrinter(printer : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichPrinter) : Void;
+	@:overload @:protected private function setRichPrinter(printer : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichPrinter) : Void;
 	
 	/**
 	* Gets the type/symbol printer used by this formatter.
 	* @return type/symbol rich printer
 	*/
-	@:overload private function getRichPrinter() : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichPrinter;
+	@:overload @:protected private function getRichPrinter() : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichPrinter;
 	
 	/**
 	* Preprocess a given diagnostic by looking both into its arguments and into
@@ -75,7 +75,7 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	*
 	* @param diag the diagnostic to be preprocessed
 	*/
-	@:overload private function preprocessDiagnostic(diag : com.sun.tools.javac.util.JCDiagnostic) : Void;
+	@:overload @:protected private function preprocessDiagnostic(diag : com.sun.tools.javac.util.JCDiagnostic) : Void;
 	
 	/**
 	* Preprocess a diagnostic argument. A type/symbol argument is
@@ -83,7 +83,7 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	*
 	* @param arg the argument to be translated
 	*/
-	@:overload private function preprocessArgument(arg : Dynamic) : Void;
+	@:overload @:protected private function preprocessArgument(arg : Dynamic) : Void;
 	
 	/**
 	* Build a list of multiline diagnostics containing detailed info about
@@ -91,25 +91,25 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	*
 	* @return where clause list
 	*/
-	@:overload private function getWhereClauses() : com.sun.tools.javac.util.List<com.sun.tools.javac.util.JCDiagnostic>;
+	@:overload @:protected private function getWhereClauses() : com.sun.tools.javac.util.List<com.sun.tools.javac.util.JCDiagnostic>;
 	
 	/**
 	* Preprocess a given type looking for (i) additional info (where clauses) to be
 	* added to the main diagnostic (ii) names to be compacted.
 	*/
-	@:overload private function preprocessType(t : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:protected private function preprocessType(t : com.sun.tools.javac.code.Type) : Void;
 	
-	private var typePreprocessor : com.sun.tools.javac.code.Types.Types_UnaryVisitor<java.lang.Void>;
+	@:protected private var typePreprocessor : com.sun.tools.javac.code.Types.Types_UnaryVisitor<java.lang.Void>;
 	
 	/**
 	* Preprocess a given symbol looking for (i) additional info (where clauses) to be
 	* asdded to the main diagnostic (ii) names to be compacted
 	*/
-	@:overload private function preprocessSymbol(s : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:protected private function preprocessSymbol(s : com.sun.tools.javac.code.Symbol) : Void;
 	
-	private var symbolPreprocessor : com.sun.tools.javac.code.Types.Types_DefaultSymbolVisitor<java.lang.Void, java.lang.Void>;
+	@:protected private var symbolPreprocessor : com.sun.tools.javac.code.Types.Types_DefaultSymbolVisitor<java.lang.Void, java.lang.Void>;
 	
-	@:overload override public function getConfiguration() : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration;
+	@:overload @:public override public function getConfiguration() : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration;
 	
 	
 }
@@ -140,9 +140,9 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	/**
 	* Add a name usage to the simplifier's internal cache
 	*/
-	@:overload private function addUsage(sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload @:protected private function addUsage(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload public function simplify(s : com.sun.tools.javac.code.Symbol) : String;
+	@:overload @:public public function simplify(s : com.sun.tools.javac.code.Symbol) : String;
 	
 	
 }
@@ -154,25 +154,25 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 */
 @:native('com$sun$tools$javac$util$RichDiagnosticFormatter$RichPrinter') extern class RichDiagnosticFormatter_RichPrinter extends com.sun.tools.javac.code.Printer
 {
-	@:overload override public function localize(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public override public function localize(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload override public function capturedVarId(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
+	@:overload @:public override public function capturedVarId(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
-	@:overload override public function visitType(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
+	@:overload @:public override public function visitType(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
 	
-	@:overload override public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
+	@:overload @:public override public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
-	@:overload override public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, locale : java.util.Locale) : String;
+	@:overload @:public override public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, locale : java.util.Locale) : String;
 	
-	@:overload override private function className(t : com.sun.tools.javac.code.Type.Type_ClassType, longform : Bool, locale : java.util.Locale) : String;
+	@:overload @:protected override private function className(t : com.sun.tools.javac.code.Type.Type_ClassType, longform : Bool, locale : java.util.Locale) : String;
 	
-	@:overload override public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, locale : java.util.Locale) : String;
+	@:overload @:public override public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, locale : java.util.Locale) : String;
 	
-	@:overload override private function printMethodArgs(args : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, varArgs : Bool, locale : java.util.Locale) : String;
+	@:overload @:protected override private function printMethodArgs(args : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, varArgs : Bool, locale : java.util.Locale) : String;
 	
-	@:overload override public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, locale : java.util.Locale) : String;
+	@:overload @:public override public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, locale : java.util.Locale) : String;
 	
-	@:overload override public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, locale : java.util.Locale) : String;
+	@:overload @:public override public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, locale : java.util.Locale) : String;
 	
 	
 }
@@ -182,33 +182,33 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 @:native('com$sun$tools$javac$util$RichDiagnosticFormatter$RichConfiguration') extern class RichDiagnosticFormatter_RichConfiguration extends com.sun.tools.javac.util.ForwardingDiagnosticFormatter.ForwardingDiagnosticFormatter_ForwardingConfiguration
 {
 	/** set of enabled rich formatter's features */
-	private var features : java.util.EnumSet<com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
+	@:protected private var features : java.util.EnumSet<com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
 	
-	@:overload public function new(options : com.sun.tools.javac.util.Options, formatter : com.sun.tools.javac.util.AbstractDiagnosticFormatter) : Void;
+	@:overload @:public public function new(options : com.sun.tools.javac.util.Options, formatter : com.sun.tools.javac.util.AbstractDiagnosticFormatter) : Void;
 	
 	/**
 	* Returns a list of all the features supported by the rich formatter.
 	* @return list of supported features
 	*/
-	@:overload public function getAvailableFeatures() : java.NativeArray<com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
+	@:overload @:public public function getAvailableFeatures() : java.NativeArray<com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
 	
 	/**
 	* Enable a specific feature on this rich formatter.
 	* @param feature feature to be enabled
 	*/
-	@:overload public function enable(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
+	@:overload @:public public function enable(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
 	
 	/**
 	* Disable a specific feature on this rich formatter.
 	* @param feature feature to be disabled
 	*/
-	@:overload public function disable(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
+	@:overload @:public public function disable(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
 	
 	/**
 	* Is a given feature enabled on this formatter?
 	* @param feature feature to be tested
 	*/
-	@:overload public function isEnabled(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Bool;
+	@:overload @:public public function isEnabled(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Bool;
 	
 	
 }

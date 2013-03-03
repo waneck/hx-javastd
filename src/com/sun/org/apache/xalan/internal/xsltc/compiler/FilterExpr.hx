@@ -23,13 +23,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class FilterExpr extends com.sun.org.apache.xalan.internal.xsltc.compiler.Expression
 {
-	@:overload public function new(primary : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, predicates : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function new(primary : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, predicates : java.util.Vector<Dynamic>) : Void;
 	
-	@:overload private function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
+	@:overload @:protected private function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Type check a FilterParentPath. If the filter is not a node-set add a
@@ -38,13 +38,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* All optimizations are turned off before type checking underlying
 	* predicates.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate a filter expression by pushing the appropriate iterator
 	* onto the stack.
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translate a sequence of predicates. Each predicate is translated
@@ -52,7 +52,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* which is initialized from another iterator (recursive call), a
 	* filter and a closure (call to translate on the predicate) and "this".
 	*/
-	@:overload public function translatePredicates(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, predicateIndex : Int) : Void;
+	@:overload @:public public function translatePredicates(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, predicateIndex : Int) : Void;
 	
 	
 }

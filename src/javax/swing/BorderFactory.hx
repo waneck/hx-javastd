@@ -42,7 +42,7 @@ extern class BorderFactory
 	* @param color  a <code>Color</code> to use for the line
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createLineBorder(color : java.awt.Color) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createLineBorder(color : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a line border with the specified color
@@ -55,7 +55,7 @@ extern class BorderFactory
 	* @param thickness  an integer specifying the width in pixels
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createLineBorder(color : java.awt.Color, thickness : Int) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createLineBorder(color : java.awt.Color, thickness : Int) : javax.swing.border.Border;
 	
 	/**
 	* Creates a line border with the specified color, thickness, and corner shape.
@@ -68,7 +68,7 @@ extern class BorderFactory
 	* @see LineBorder#LineBorder(Color, int, boolean)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createLineBorder(color : java.awt.Color, thickness : Int, rounded : Bool) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createLineBorder(color : java.awt.Color, thickness : Int, rounded : Bool) : javax.swing.border.Border;
 	
 	/**
 	* Creates a border with a raised beveled edge, using
@@ -79,7 +79,7 @@ extern class BorderFactory
 	*
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createRaisedBevelBorder() : javax.swing.border.Border;
+	@:overload @:public @:static public static function createRaisedBevelBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates a border with a lowered beveled edge, using
@@ -90,7 +90,7 @@ extern class BorderFactory
 	*
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createLoweredBevelBorder() : javax.swing.border.Border;
+	@:overload @:public @:static public static function createLoweredBevelBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border of the specified type, using
@@ -104,7 +104,7 @@ extern class BorderFactory
 	*                  <code>BevelBorder.RAISED</code>
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createBevelBorder(type : Int) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createBevelBorder(type : Int) : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border of the specified type, using
@@ -120,7 +120,7 @@ extern class BorderFactory
 	* @param shadow     a <code>Color</code> object for shadows
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createBevelBorder(type : Int, highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createBevelBorder(type : Int, highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border of the specified type, using
@@ -140,7 +140,7 @@ extern class BorderFactory
 	*                  inner edge of the shadow area
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createBevelBorder(type : Int, highlightOuter : java.awt.Color, highlightInner : java.awt.Color, shadowOuter : java.awt.Color, shadowInner : java.awt.Color) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createBevelBorder(type : Int, highlightOuter : java.awt.Color, highlightInner : java.awt.Color, shadowOuter : java.awt.Color, shadowInner : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border with a raised edge and softened corners,
@@ -152,7 +152,7 @@ extern class BorderFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createRaisedSoftBevelBorder() : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createRaisedSoftBevelBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border with a lowered edge and softened corners,
@@ -164,7 +164,7 @@ extern class BorderFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createLoweredSoftBevelBorder() : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createLoweredSoftBevelBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border of the specified type with softened corners,
@@ -179,7 +179,7 @@ extern class BorderFactory
 	* @see BevelBorder#BevelBorder(int)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createSoftBevelBorder(type : Int) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createSoftBevelBorder(type : Int) : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border of the specified type with softened corners,
@@ -198,7 +198,7 @@ extern class BorderFactory
 	* @see BevelBorder#BevelBorder(int, Color, Color)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createSoftBevelBorder(type : Int, highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createSoftBevelBorder(type : Int, highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a beveled border of the specified type with softened corners,
@@ -218,7 +218,7 @@ extern class BorderFactory
 	* @see BevelBorder#BevelBorder(int, Color, Color, Color, Color)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createSoftBevelBorder(type : Int, highlightOuter : java.awt.Color, highlightInner : java.awt.Color, shadowOuter : java.awt.Color, shadowInner : java.awt.Color) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createSoftBevelBorder(type : Int, highlightOuter : java.awt.Color, highlightInner : java.awt.Color, shadowOuter : java.awt.Color, shadowInner : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a border with an "etched" look using
@@ -227,7 +227,7 @@ extern class BorderFactory
 	*
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createEtchedBorder() : javax.swing.border.Border;
+	@:overload @:public @:static public static function createEtchedBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates a border with an "etched" look using
@@ -237,7 +237,7 @@ extern class BorderFactory
 	* @param shadow     a <code>Color</code> object for the border shadows
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createEtchedBorder(highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createEtchedBorder(highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a border with an "etched" look using
@@ -252,7 +252,7 @@ extern class BorderFactory
 	*                  <code>EtchedBorder.LOWERED</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function createEtchedBorder(type : Int) : javax.swing.border.Border;
+	@:require(java3) @:overload @:public @:static public static function createEtchedBorder(type : Int) : javax.swing.border.Border;
 	
 	/**
 	* Creates a border with an "etched" look using
@@ -265,7 +265,7 @@ extern class BorderFactory
 	* @return the <code>Border</code> object
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function createEtchedBorder(type : Int, highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
+	@:require(java3) @:overload @:public @:static public static function createEtchedBorder(type : Int, highlight : java.awt.Color, shadow : java.awt.Color) : javax.swing.border.Border;
 	
 	/**
 	* Creates a new titled border with the specified title,
@@ -277,7 +277,7 @@ extern class BorderFactory
 	* @param title      a <code>String</code> containing the text of the title
 	* @return the <code>TitledBorder</code> object
 	*/
-	@:overload public static function createTitledBorder(title : String) : javax.swing.border.TitledBorder;
+	@:overload @:public @:static public static function createTitledBorder(title : String) : javax.swing.border.TitledBorder;
 	
 	/**
 	* Creates a new titled border with an empty title,
@@ -291,7 +291,7 @@ extern class BorderFactory
 	*                   by the current look and feel.
 	* @return the <code>TitledBorder</code> object
 	*/
-	@:overload public static function createTitledBorder(border : javax.swing.border.Border) : javax.swing.border.TitledBorder;
+	@:overload @:public @:static public static function createTitledBorder(border : javax.swing.border.Border) : javax.swing.border.TitledBorder;
 	
 	/**
 	* Adds a title to an existing border,
@@ -303,7 +303,7 @@ extern class BorderFactory
 	* @param title      a <code>String</code> containing the text of the title
 	* @return the <code>TitledBorder</code> object
 	*/
-	@:overload public static function createTitledBorder(border : javax.swing.border.Border, title : String) : javax.swing.border.TitledBorder;
+	@:overload @:public @:static public static function createTitledBorder(border : javax.swing.border.Border, title : String) : javax.swing.border.TitledBorder;
 	
 	/**
 	* Adds a title to an existing border, with the specified
@@ -335,7 +335,7 @@ extern class BorderFactory
 	*</ul>
 	* @return the <code>TitledBorder</code> object
 	*/
-	@:overload public static function createTitledBorder(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int) : javax.swing.border.TitledBorder;
+	@:overload @:public @:static public static function createTitledBorder(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int) : javax.swing.border.TitledBorder;
 	
 	/**
 	* Adds a title to an existing border, with the specified
@@ -368,7 +368,7 @@ extern class BorderFactory
 	* @param titleFont           a Font object specifying the title font
 	* @return the TitledBorder object
 	*/
-	@:overload public static function createTitledBorder(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font) : javax.swing.border.TitledBorder;
+	@:overload @:public @:static public static function createTitledBorder(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font) : javax.swing.border.TitledBorder;
 	
 	/**
 	* Adds a title to an existing border, with the specified
@@ -401,7 +401,7 @@ extern class BorderFactory
 	* @param titleColor  a <code>Color</code> object specifying the title color
 	* @return the <code>TitledBorder</code> object
 	*/
-	@:overload public static function createTitledBorder(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font, titleColor : java.awt.Color) : javax.swing.border.TitledBorder;
+	@:overload @:public @:static public static function createTitledBorder(border : javax.swing.border.Border, title : String, titleJustification : Int, titlePosition : Int, titleFont : java.awt.Font, titleColor : java.awt.Color) : javax.swing.border.TitledBorder;
 	
 	/**
 	* Creates an empty border that takes up no space. (The width
@@ -409,7 +409,7 @@ extern class BorderFactory
 	*
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createEmptyBorder() : javax.swing.border.Border;
+	@:overload @:public @:static public static function createEmptyBorder() : javax.swing.border.Border;
 	
 	/**
 	* Creates an empty border that takes up space but which does
@@ -426,7 +426,7 @@ extern class BorderFactory
 	*                  in pixels
 	* @return the <code>Border</code> object
 	*/
-	@:overload public static function createEmptyBorder(top : Int, left : Int, bottom : Int, right : Int) : javax.swing.border.Border;
+	@:overload @:public @:static public static function createEmptyBorder(top : Int, left : Int, bottom : Int, right : Int) : javax.swing.border.Border;
 	
 	/**
 	* Creates a compound border with a <code>null</code> inside edge and a
@@ -434,7 +434,7 @@ extern class BorderFactory
 	*
 	* @return the <code>CompoundBorder</code> object
 	*/
-	@:overload public static function createCompoundBorder() : javax.swing.border.CompoundBorder;
+	@:overload @:public @:static public static function createCompoundBorder() : javax.swing.border.CompoundBorder;
 	
 	/**
 	* Creates a compound border specifying the border objects to use
@@ -446,7 +446,7 @@ extern class BorderFactory
 	*                          edge of the compound border
 	* @return the <code>CompoundBorder</code> object
 	*/
-	@:overload public static function createCompoundBorder(outsideBorder : javax.swing.border.Border, insideBorder : javax.swing.border.Border) : javax.swing.border.CompoundBorder;
+	@:overload @:public @:static public static function createCompoundBorder(outsideBorder : javax.swing.border.Border, insideBorder : javax.swing.border.Border) : javax.swing.border.CompoundBorder;
 	
 	/**
 	* Creates a matte-look border using a solid color. (The difference between
@@ -464,7 +464,7 @@ extern class BorderFactory
 	* @param color   a <code>Color</code> to use for the border
 	* @return the <code>MatteBorder</code> object
 	*/
-	@:overload public static function createMatteBorder(top : Int, left : Int, bottom : Int, right : Int, color : java.awt.Color) : javax.swing.border.MatteBorder;
+	@:overload @:public @:static public static function createMatteBorder(top : Int, left : Int, bottom : Int, right : Int, color : java.awt.Color) : javax.swing.border.MatteBorder;
 	
 	/**
 	* Creates a matte-look border that consists of multiple tiles of a
@@ -485,7 +485,7 @@ extern class BorderFactory
 	* @param tileIcon  the <code>Icon</code> object used for the border tiles
 	* @return the <code>MatteBorder</code> object
 	*/
-	@:overload public static function createMatteBorder(top : Int, left : Int, bottom : Int, right : Int, tileIcon : javax.swing.Icon) : javax.swing.border.MatteBorder;
+	@:overload @:public @:static public static function createMatteBorder(top : Int, left : Int, bottom : Int, right : Int, tileIcon : javax.swing.Icon) : javax.swing.border.MatteBorder;
 	
 	/**
 	* Creates a border of the specified {@code stroke}.
@@ -498,7 +498,7 @@ extern class BorderFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createStrokeBorder(stroke : java.awt.BasicStroke) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createStrokeBorder(stroke : java.awt.BasicStroke) : javax.swing.border.Border;
 	
 	/**
 	* Creates a border of the specified {@code stroke} and {@code paint}.
@@ -513,7 +513,7 @@ extern class BorderFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createStrokeBorder(stroke : java.awt.BasicStroke, paint : java.awt.Paint) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createStrokeBorder(stroke : java.awt.BasicStroke, paint : java.awt.Paint) : javax.swing.border.Border;
 	
 	/**
 	* Creates a dashed border of the specified {@code paint}.
@@ -529,7 +529,7 @@ extern class BorderFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createDashedBorder(paint : java.awt.Paint) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createDashedBorder(paint : java.awt.Paint) : javax.swing.border.Border;
 	
 	/**
 	* Creates a dashed border of the specified {@code paint},
@@ -548,7 +548,7 @@ extern class BorderFactory
 	*                                  if the specified {@code spacing} is less than {@code 0}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createDashedBorder(paint : java.awt.Paint, length : Single, spacing : Single) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createDashedBorder(paint : java.awt.Paint, length : Single, spacing : Single) : javax.swing.border.Border;
 	
 	/**
 	* Creates a dashed border of the specified {@code paint}, {@code thickness},
@@ -568,7 +568,7 @@ extern class BorderFactory
 	*                                  if the specified {@code spacing} is less than {@code 0}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function createDashedBorder(paint : java.awt.Paint, thickness : Single, length : Single, spacing : Single, rounded : Bool) : javax.swing.border.Border;
+	@:require(java7) @:overload @:public @:static public static function createDashedBorder(paint : java.awt.Paint, thickness : Single, length : Single, spacing : Single, rounded : Bool) : javax.swing.border.Border;
 	
 	
 }

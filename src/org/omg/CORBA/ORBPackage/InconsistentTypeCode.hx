@@ -34,14 +34,14 @@ extern class InconsistentTypeCode extends org.omg.CORBA.UserException
 	* Constructs an <code>InconsistentTypeCode</code> user exception
 	* with no reason message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>InconsistentTypeCode</code> user exception
 	* with the specified reason message.
 	* @param reason The String containing a reason message
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

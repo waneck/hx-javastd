@@ -40,7 +40,7 @@ extern interface GarbageCollectorMXBean extends java.lang.management.GarbageColl
 	* the most GC information; or <tt>null</tt> if no GC
 	* information available.
 	*/
-	@:overload public function getLastGcInfo() : com.sun.management.GcInfo;
+	@:overload @:public public function getLastGcInfo() : com.sun.management.GcInfo;
 	
 	
 }

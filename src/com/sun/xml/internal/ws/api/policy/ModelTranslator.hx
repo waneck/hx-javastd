@@ -31,7 +31,7 @@ extern class ModelTranslator extends com.sun.xml.internal.ws.policy.sourcemodel.
 	* @return A policy model translator instance.
 	* @throws PolicyException If instantiating a PolicyAssertionCreator failed.
 	*/
-	@:overload public static function getTranslator() : com.sun.xml.internal.ws.api.policy.ModelTranslator;
+	@:overload @:public @:static public static function getTranslator() : com.sun.xml.internal.ws.api.policy.ModelTranslator;
 	
 	
 }

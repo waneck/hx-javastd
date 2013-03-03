@@ -37,12 +37,12 @@ extern class GetOpt
 * getopt(3C) does not check for this.
 	* @author G Todd Miller
 */
-	@:overload public function new(args : java.NativeArray<String>, optString : String) : Void;
+	@:overload @:public public function new(args : java.NativeArray<String>, optString : String) : Void;
 	
 	/**
 	* debugging routine to print out all options collected
 	*/
-	@:overload public function printOptions() : Void;
+	@:overload @:public public function printOptions() : Void;
 	
 	/**
 	* gets the next option found in the commandline. Distinguishes
@@ -58,7 +58,7 @@ extern class GetOpt
 	* @return int - the next option found.
 	* @throws IllegalArgumentException, MissingOptArgException.
 	*/
-	@:overload public function getNextOption() : Int;
+	@:overload @:public public function getNextOption() : Int;
 	
 	/**
 	* gets the argument for the current parsed option. For example,
@@ -67,7 +67,7 @@ extern class GetOpt
 	* @return String - argument for current parsed option.
 	* @param none
 	*/
-	@:overload public function getOptionArg() : String;
+	@:overload @:public public function getOptionArg() : String;
 	
 	/**
 	* gets list of the commandline arguments. For example, in command
@@ -78,31 +78,31 @@ extern class GetOpt
 	*                    after options and option arguments.
 	* @params none
 	*/
-	@:overload public function getCmdArgs() : java.NativeArray<String>;
+	@:overload @:public public function getCmdArgs() : java.NativeArray<String>;
 	
 	
 }
 @:native('com$sun$org$apache$xalan$internal$xsltc$cmdline$getopt$GetOpt$Option') @:internal extern class GetOpt_Option
 {
-	@:overload public function new(argLetter : java.StdTypes.Char16) : Void;
+	@:overload @:public public function new(argLetter : java.StdTypes.Char16) : Void;
 	
-	@:overload public function setArg(arg : String) : Void;
+	@:overload @:public public function setArg(arg : String) : Void;
 	
-	@:overload public function hasArg() : Bool;
+	@:overload @:public public function hasArg() : Bool;
 	
-	@:overload public function getArgLetter() : java.StdTypes.Char16;
+	@:overload @:public public function getArgLetter() : java.StdTypes.Char16;
 	
-	@:overload public function getArgument() : String;
+	@:overload @:public public function getArgument() : String;
 	
 	
 }
 @:native('com$sun$org$apache$xalan$internal$xsltc$cmdline$getopt$GetOpt$OptionMatcher') @:internal extern class GetOpt_OptionMatcher
 {
-	@:overload public function new(optString : String) : Void;
+	@:overload @:public public function new(optString : String) : Void;
 	
-	@:overload public function match(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function match(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function hasArg(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function hasArg(c : java.StdTypes.Char16) : Bool;
 	
 	
 }

@@ -58,13 +58,13 @@ extern interface DOMStringList
 	*   position in the <code>DOMStringList</code>, or <code>null</code> if
 	*   that is not a valid index.
 	*/
-	@:overload public function item(index : Int) : String;
+	@:overload @:public public function item(index : Int) : String;
 	
 	/**
 	* The number of <code>DOMString</code>s in the list. The range of valid
 	* child node indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Test if a string is part of this <code>DOMStringList</code>.
@@ -72,7 +72,7 @@ extern interface DOMStringList
 	* @return  <code>true</code> if the string has been found,
 	*   <code>false</code> otherwise.
 	*/
-	@:overload public function contains(str : String) : Bool;
+	@:overload @:public public function contains(str : String) : Bool;
 	
 	
 }

@@ -31,12 +31,12 @@ package sun.applet;
 	/**
 	* Loader must be non-null;
 	*/
-	@:overload public function new(_in : java.io.InputStream, loader : sun.applet.AppletClassLoader) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, loader : sun.applet.AppletClassLoader) : Void;
 	
 	/**
 	* Use the given ClassLoader rather than using the system class
 	*/
-	@:overload override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	
 }

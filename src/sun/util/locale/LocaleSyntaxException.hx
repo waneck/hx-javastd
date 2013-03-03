@@ -31,11 +31,11 @@ package sun.util.locale;
 */
 extern class LocaleSyntaxException extends java.lang.Exception
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(msg : String, errorIndex : Int) : Void;
+	@:overload @:public public function new(msg : String, errorIndex : Int) : Void;
 	
-	@:overload public function getErrorIndex() : Int;
+	@:overload @:public public function getErrorIndex() : Int;
 	
 	
 }

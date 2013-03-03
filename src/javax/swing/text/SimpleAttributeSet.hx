@@ -28,33 +28,33 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	/**
 	* An empty attribute set.
 	*/
-	public static var EMPTY(default, null) : javax.swing.text.AttributeSet;
+	@:public @:static @:final public static var EMPTY(default, null) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Creates a new attribute set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new attribute set based on a supplied set of attributes.
 	*
 	* @param source the set of attributes
 	*/
-	@:overload public function new(source : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function new(source : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Checks whether the set of attributes is empty.
 	*
 	* @return true if the set is empty else false
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Gets a count of the number of attributes.
 	*
 	* @return the count
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	* Tells whether a given attribute is defined.
@@ -62,7 +62,7 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @param attrName the attribute name
 	* @return true if the attribute is defined
 	*/
-	@:overload public function isDefined(attrName : Dynamic) : Bool;
+	@:overload @:public public function isDefined(attrName : Dynamic) : Bool;
 	
 	/**
 	* Compares two attribute sets.
@@ -70,21 +70,21 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @param attr the second attribute set
 	* @return true if the sets are equal, false otherwise
 	*/
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Makes a copy of the attributes.
 	*
 	* @return the copy
 	*/
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the names of the attributes in the set.
 	*
 	* @return the names as an <code>Enumeration</code>
 	*/
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Gets the value of an attribute.
@@ -92,7 +92,7 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @param name the attribute name
 	* @return the value
 	*/
-	@:overload public function getAttribute(name : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(name : Dynamic) : Dynamic;
 	
 	/**
 	* Checks whether the attribute list contains a
@@ -102,7 +102,7 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @param value the value
 	* @return true if the name/value pair is in the list
 	*/
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* Checks whether the attribute list contains all the
@@ -111,7 +111,7 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @param attributes the attribute list
 	* @return true if the list contains all the name/value pairs
 	*/
-	@:overload public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Adds an attribute to the list.
@@ -119,35 +119,35 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @param name the attribute name
 	* @param value the attribute value
 	*/
-	@:overload public function addAttribute(name : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function addAttribute(name : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Adds a set of attributes to the list.
 	*
 	* @param attributes the set of attributes to add
 	*/
-	@:overload public function addAttributes(attributes : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function addAttributes(attributes : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Removes an attribute from the list.
 	*
 	* @param name the attribute name
 	*/
-	@:overload public function removeAttribute(name : Dynamic) : Void;
+	@:overload @:public public function removeAttribute(name : Dynamic) : Void;
 	
 	/**
 	* Removes a set of attributes from the list.
 	*
 	* @param names the set of names to remove
 	*/
-	@:overload public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
+	@:overload @:public public function removeAttributes(names : java.util.Enumeration<Dynamic>) : Void;
 	
 	/**
 	* Removes a set of attributes from the list.
 	*
 	* @param attributes the set of attributes to remove
 	*/
-	@:overload public function removeAttributes(attributes : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function removeAttributes(attributes : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Gets the resolving parent.  This is the set
@@ -158,27 +158,27 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	*
 	* @return the parent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Sets the resolving parent.
 	*
 	* @param parent the parent
 	*/
-	@:overload public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setResolveParent(parent : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Clones a set of attributes.
 	*
 	* @return the new set of attributes
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns a hashcode for this set of attributes.
 	* @return     a hashcode value for this set of attributes.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this object to the specified object.
@@ -188,14 +188,14 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 	* @return    <code>true</code> if the objects are equal;
 	*            <code>false</code> otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Converts the attribute set to a String.
 	*
 	* @return the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -204,27 +204,27 @@ extern class SimpleAttributeSet implements javax.swing.text.MutableAttributeSet 
 */
 @:native('javax$swing$text$SimpleAttributeSet$EmptyAttributeSet') @:internal extern class SimpleAttributeSet_EmptyAttributeSet implements javax.swing.text.AttributeSet implements java.io.Serializable
 {
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
-	@:overload public function isDefined(attrName : Dynamic) : Bool;
+	@:overload @:public public function isDefined(attrName : Dynamic) : Bool;
 	
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
-	@:overload public function getAttribute(key : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(key : Dynamic) : Dynamic;
 	
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
-	@:overload public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
 	
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

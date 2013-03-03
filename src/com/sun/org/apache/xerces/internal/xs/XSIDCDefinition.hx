@@ -27,29 +27,29 @@ extern interface XSIDCDefinition extends com.sun.org.apache.xerces.internal.xs.X
 	/**
 	* [identity-constraint category]: one of key, keyref or unique.
 	*/
-	@:overload public function getCategory() : java.StdTypes.Int16;
+	@:overload @:public public function getCategory() : java.StdTypes.Int16;
 	
 	/**
 	* [selector]: a restricted XPath 1.0 expression.
 	*/
-	@:overload public function getSelectorStr() : String;
+	@:overload @:public public function getSelectorStr() : String;
 	
 	/**
 	* [fields]: a non-empty list of restricted  XPath 1.0 expressions.
 	*/
-	@:overload public function getFieldStrs() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getFieldStrs() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* [referenced key]: required if [identity-constraint category] is keyref,
 	* <code>null</code> otherwise. An identity-constraint definition with [
 	* identity-constraint category] equal to key or unique.
 	*/
-	@:overload public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
+	@:overload @:public public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
 	
 	/**
 	* A sequence of [annotations] or an empty  <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

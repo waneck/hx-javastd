@@ -25,9 +25,9 @@ package sun.nio.ch;
 */
 @:internal extern class EPollArrayWrapper
 {
-	@:overload public function interrupt() : Void;
+	@:overload @:public public function interrupt() : Void;
 	
-	@:overload public function interruptedIndex() : Int;
+	@:overload @:public public function interruptedIndex() : Int;
 	
 	
 }

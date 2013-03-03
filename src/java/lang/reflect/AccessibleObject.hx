@@ -50,7 +50,7 @@ extern class AccessibleObject implements java.lang.reflect.AnnotatedElement
 	* @see SecurityManager#checkPermission
 	* @see java.lang.RuntimePermission
 	*/
-	@:native('setAccessible') @:overload public static function _setAccessible(array : java.NativeArray<java.lang.reflect.AccessibleObject>, flag : Bool) : Void;
+	@:native('setAccessible') @:overload @:public @:static public static function _setAccessible(array : java.NativeArray<java.lang.reflect.AccessibleObject>, flag : Bool) : Void;
 	
 	/**
 	* Set the {@code accessible} flag for this object to
@@ -77,41 +77,41 @@ extern class AccessibleObject implements java.lang.reflect.AnnotatedElement
 	* @see SecurityManager#checkPermission
 	* @see java.lang.RuntimePermission
 	*/
-	@:overload public function setAccessible(flag : Bool) : Void;
+	@:overload @:public public function setAccessible(flag : Bool) : Void;
 	
 	/**
 	* Get the value of the {@code accessible} flag for this object.
 	*
 	* @return the value of the object's {@code accessible} flag
 	*/
-	@:overload public function isAccessible() : Bool;
+	@:overload @:public public function isAccessible() : Bool;
 	
 	/**
 	* Constructor: only used by the Java Virtual Machine.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
+	@:require(java5) @:overload @:public public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isAnnotationPresent(annotationClass : Class<java.lang.annotation.Annotation>) : Bool;
+	@:require(java5) @:overload @:public public function isAnnotationPresent(annotationClass : Class<java.lang.annotation.Annotation>) : Bool;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public public function getAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload @:public public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	
 }

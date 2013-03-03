@@ -43,7 +43,7 @@ extern class PKCS9Attributes
 	*
 	* @see PKCS9Attribute
 	*/
-	@:overload public function new(permittedAttributes : java.NativeArray<sun.security.util.ObjectIdentifier>, _in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(permittedAttributes : java.NativeArray<sun.security.util.ObjectIdentifier>, _in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Construct a set of PKCS9 Attributes from the contents of its
@@ -58,7 +58,7 @@ extern class PKCS9Attributes
 	*
 	* @see PKCS9Attribute
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Construct a set of PKCS9 Attributes from the contents of its
@@ -76,7 +76,7 @@ extern class PKCS9Attributes
 	*
 	* @see PKCS9Attribute
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream, ignoreUnsupportedAttributes : Bool) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream, ignoreUnsupportedAttributes : Bool) : Void;
 	
 	/**
 	* Construct a set of PKCS9 Attributes from the given array of
@@ -91,7 +91,7 @@ extern class PKCS9Attributes
 	*
 	* @see PKCS9Attribute
 	*/
-	@:overload public function new(attribs : java.NativeArray<sun.security.pkcs.PKCS9Attribute>) : Void;
+	@:overload @:public public function new(attribs : java.NativeArray<sun.security.pkcs.PKCS9Attribute>) : Void;
 	
 	/**
 	* Put the DER encoding of this PKCS9 attribute set on an
@@ -102,43 +102,43 @@ extern class PKCS9Attributes
 	*
 	* @exception IOException  on output error.
 	*/
-	@:overload public function encode(tag : java.StdTypes.Int8, out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(tag : java.StdTypes.Int8, out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return the DER encoding of this attribute set, tagged with
 	* DerValue.tag_SetOf.
 	*/
-	@:overload public function getDerEncoding() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDerEncoding() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get an attribute from this set.
 	*/
-	@:overload public function getAttribute(oid : sun.security.util.ObjectIdentifier) : sun.security.pkcs.PKCS9Attribute;
+	@:overload @:public public function getAttribute(oid : sun.security.util.ObjectIdentifier) : sun.security.pkcs.PKCS9Attribute;
 	
 	/**
 	* Get an attribute from this set.
 	*/
-	@:overload public function getAttribute(name : String) : sun.security.pkcs.PKCS9Attribute;
+	@:overload @:public public function getAttribute(name : String) : sun.security.pkcs.PKCS9Attribute;
 	
 	/**
 	* Get an array of all attributes in this set, in order of OID.
 	*/
-	@:overload public function getAttributes() : java.NativeArray<sun.security.pkcs.PKCS9Attribute>;
+	@:overload @:public public function getAttributes() : java.NativeArray<sun.security.pkcs.PKCS9Attribute>;
 	
 	/**
 	* Get an attribute value by OID.
 	*/
-	@:overload public function getAttributeValue(oid : sun.security.util.ObjectIdentifier) : Dynamic;
+	@:overload @:public public function getAttributeValue(oid : sun.security.util.ObjectIdentifier) : Dynamic;
 	
 	/**
 	*  Get an attribute value by type name.
 	*/
-	@:overload public function getAttributeValue(name : String) : Dynamic;
+	@:overload @:public public function getAttributeValue(name : String) : Dynamic;
 	
 	/**
 	* Returns the PKCS9 block in a printable string form.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

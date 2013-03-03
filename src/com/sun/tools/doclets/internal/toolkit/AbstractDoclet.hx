@@ -41,19 +41,19 @@ extern class AbstractDoclet
 	* @param root   the {@link RootDoc} that points to the source to document.
 	* @return true if the doclet executed without error.  False otherwise.
 	*/
-	@:overload public function start(doclet : com.sun.tools.doclets.internal.toolkit.AbstractDoclet, root : com.sun.javadoc.RootDoc) : Bool;
+	@:overload @:public public function start(doclet : com.sun.tools.doclets.internal.toolkit.AbstractDoclet, root : com.sun.javadoc.RootDoc) : Bool;
 	
 	/**
 	* Indicate that this doclet supports the 1.5 language features.
 	* @return JAVA_1_5, indicating that the new features are supported.
 	*/
-	@:overload public static function languageVersion() : com.sun.javadoc.LanguageVersion;
+	@:overload @:public @:static public static function languageVersion() : com.sun.javadoc.LanguageVersion;
 	
 	/**
 	* Create the configuration instance and returns it.
 	* @return the configuration of the doclet.
 	*/
-	@:overload @:abstract public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
+	@:overload @:public @:abstract public function configuration() : com.sun.tools.doclets.internal.toolkit.Configuration;
 	
 	/**
 	* Generate additional documentation that is added to the API documentation.
@@ -61,21 +61,21 @@ extern class AbstractDoclet
 	* @param root      the RootDoc of source to document.
 	* @param classtree the data structure representing the class tree.
 	*/
-	@:overload private function generateOtherFiles(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected private function generateOtherFiles(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Generate the package documentation.
 	*
 	* @param classtree the data structure representing the class tree.
 	*/
-	@:overload @:abstract private function generatePackageFiles(classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected @:abstract private function generatePackageFiles(classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Generate the class documentation.
 	*
 	* @param classtree the data structure representing the class tree.
 	*/
-	@:overload @:abstract private function generateClassFiles(arr : java.NativeArray<com.sun.javadoc.ClassDoc>, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected @:abstract private function generateClassFiles(arr : java.NativeArray<com.sun.javadoc.ClassDoc>, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	/**
 	* Iterate through all classes and construct documentation for them.
@@ -83,7 +83,7 @@ extern class AbstractDoclet
 	* @param root      the RootDoc of source to document.
 	* @param classtree the data structure representing the class tree.
 	*/
-	@:overload private function generateClassFiles(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
+	@:overload @:protected private function generateClassFiles(root : com.sun.javadoc.RootDoc, classtree : com.sun.tools.doclets.internal.toolkit.util.ClassTree) : Void;
 	
 	
 }

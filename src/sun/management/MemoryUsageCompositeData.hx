@@ -25,25 +25,25 @@ package sun.management;
 */
 extern class MemoryUsageCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function getMemoryUsage() : java.lang.management.MemoryUsage;
+	@:overload @:public public function getMemoryUsage() : java.lang.management.MemoryUsage;
 	
-	@:overload public static function toCompositeData(u : java.lang.management.MemoryUsage) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(u : java.lang.management.MemoryUsage) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public static function getInit(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getInit(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
-	@:overload public static function getUsed(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getUsed(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
-	@:overload public static function getCommitted(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getCommitted(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
-	@:overload public static function getMax(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getMax(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
 	/** Validate if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

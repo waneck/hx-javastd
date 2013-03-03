@@ -43,7 +43,7 @@ extern interface ModelMBeanNotificationBroadcaster extends javax.management.Noti
 	*       The Notification object passed in parameter is null.
 	*
 	*/
-	@:overload public function sendNotification(ntfyObj : javax.management.Notification) : Void;
+	@:overload @:public public function sendNotification(ntfyObj : javax.management.Notification) : Void;
 	
 	/**
 	* Sends a Notification which contains the text string that is passed in
@@ -62,7 +62,7 @@ extern interface ModelMBeanNotificationBroadcaster extends javax.management.Noti
 	*       The Notification text string passed in parameter is null.
 	*
 	*/
-	@:overload public function sendNotification(ntfyText : String) : Void;
+	@:overload @:public public function sendNotification(ntfyText : String) : Void;
 	
 	/**
 	* Sends an attributeChangeNotification which is passed in to
@@ -76,7 +76,7 @@ extern interface ModelMBeanNotificationBroadcaster extends javax.management.Noti
 	* @exception RuntimeOperationsException Wraps an IllegalArgumentException: The AttributeChangeNotification object passed in parameter is null.
 	*
 	*/
-	@:overload public function sendAttributeChangeNotification(notification : javax.management.AttributeChangeNotification) : Void;
+	@:overload @:public public function sendAttributeChangeNotification(notification : javax.management.AttributeChangeNotification) : Void;
 	
 	/**
 	* Sends an attributeChangeNotification which contains the old value and new value for the
@@ -100,7 +100,7 @@ extern interface ModelMBeanNotificationBroadcaster extends javax.management.Noti
 	* @exception RuntimeOperationsException Wraps an IllegalArgumentException: An Attribute object passed in parameter is null
 	* or the names of the two Attribute objects in parameter are not the same.
 	*/
-	@:overload public function sendAttributeChangeNotification(oldValue : javax.management.Attribute, newValue : javax.management.Attribute) : Void;
+	@:overload @:public public function sendAttributeChangeNotification(oldValue : javax.management.Attribute, newValue : javax.management.Attribute) : Void;
 	
 	/**
 	* Registers an object which implements the NotificationListener interface as a listener.  This
@@ -119,7 +119,7 @@ extern interface ModelMBeanNotificationBroadcaster extends javax.management.Noti
 	*
 	* @see #removeAttributeChangeNotificationListener
 	*/
-	@:overload public function addAttributeChangeNotificationListener(listener : javax.management.NotificationListener, attributeName : String, handback : Dynamic) : Void;
+	@:overload @:public public function addAttributeChangeNotificationListener(listener : javax.management.NotificationListener, attributeName : String, handback : Dynamic) : Void;
 	
 	/**
 	* Removes a listener for attributeChangeNotifications from the RequiredModelMBean.
@@ -136,7 +136,7 @@ extern interface ModelMBeanNotificationBroadcaster extends javax.management.Noti
 	*
 	* @see #addAttributeChangeNotificationListener
 	*/
-	@:overload public function removeAttributeChangeNotificationListener(listener : javax.management.NotificationListener, attributeName : String) : Void;
+	@:overload @:public public function removeAttributeChangeNotificationListener(listener : javax.management.NotificationListener, attributeName : String) : Void;
 	
 	
 }

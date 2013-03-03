@@ -29,7 +29,7 @@ extern class CollatorProvider extends java.util.spi.LocaleServiceProvider
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns a new <code>Collator</code> instance for the specified locale.
@@ -43,7 +43,7 @@ extern class CollatorProvider extends java.util.spi.LocaleServiceProvider
 	*     getAvailableLocales()}.
 	* @see java.text.Collator#getInstance(java.util.Locale)
 	*/
-	@:overload @:abstract public function getInstance(locale : java.util.Locale) : java.text.Collator;
+	@:overload @:public @:abstract public function getInstance(locale : java.util.Locale) : java.text.Collator;
 	
 	
 }

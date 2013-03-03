@@ -65,14 +65,14 @@ package javax.net.ssl;
 	*          arguments are null, or if <<code>bytesConsumed</code> or
 	*          <code>bytesProduced</code> is negative.
 	*/
-	@:overload public function new(status : javax.net.ssl.SSLEngineResult.SSLEngineResult_Status, handshakeStatus : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus, bytesConsumed : Int, bytesProduced : Int) : Void;
+	@:overload @:public public function new(status : javax.net.ssl.SSLEngineResult.SSLEngineResult_Status, handshakeStatus : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus, bytesConsumed : Int, bytesProduced : Int) : Void;
 	
 	/**
 	* Gets the return value of this <code>SSLEngine</code> operation.
 	*
 	* @return  the return value
 	*/
-	@:overload @:final public function getStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_Status;
+	@:overload @:final @:public public function getStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_Status;
 	
 	/**
 	* Gets the handshake status of this <code>SSLEngine</code>
@@ -80,26 +80,26 @@ package javax.net.ssl;
 	*
 	* @return  the handshake status
 	*/
-	@:overload @:final public function getHandshakeStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus;
+	@:overload @:final @:public public function getHandshakeStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus;
 	
 	/**
 	* Returns the number of bytes consumed from the input buffer.
 	*
 	* @return  the number of bytes consumed.
 	*/
-	@:overload @:final public function bytesConsumed() : Int;
+	@:overload @:final @:public public function bytesConsumed() : Int;
 	
 	/**
 	* Returns the number of bytes written to the output buffer.
 	*
 	* @return  the number of bytes produced
 	*/
-	@:overload @:final public function bytesProduced() : Int;
+	@:overload @:final @:public public function bytesProduced() : Int;
 	
 	/**
 	* Returns a String representation of this object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

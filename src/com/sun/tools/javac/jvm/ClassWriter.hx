@@ -33,28 +33,28 @@ extern class ClassWriter extends com.sun.tools.javac.jvm.ClassFile
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	private static var classWriterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.jvm.ClassWriter>;
+	@:protected @:static @:final private static var classWriterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.jvm.ClassWriter>;
 	
 	/** Get the ClassWriter instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.jvm.ClassWriter;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.jvm.ClassWriter;
 	
 	/** Return flags as a string, separated by " ".
 	*/
-	@:overload public static function flagNames(flags : haxe.Int64) : String;
+	@:overload @:public @:static public static function flagNames(flags : haxe.Int64) : String;
 	
 	/** Given a type t, return the extended class name of its erasure in
 	*  external representation.
 	*/
-	@:overload public function xClassName(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.Name;
+	@:overload @:public public function xClassName(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.Name;
 	
 	/** Emit a class file for a given class.
 	*  @param c      The class from which a class file is generated.
 	*/
-	@:overload public function writeClass(c : ClassSymbol) : javax.tools.JavaFileObject;
+	@:overload @:public public function writeClass(c : ClassSymbol) : javax.tools.JavaFileObject;
 	
 	/** Write class `c' to outstream `out'.
 	*/
-	@:overload public function writeClassFile(out : java.io.OutputStream, c : ClassSymbol) : Void;
+	@:overload @:public public function writeClassFile(out : java.io.OutputStream, c : ClassSymbol) : Void;
 	
 	
 }
@@ -62,15 +62,15 @@ extern class ClassWriter extends com.sun.tools.javac.jvm.ClassFile
 */
 @:native('com$sun$tools$javac$jvm$ClassWriter$PoolOverflow') extern class ClassWriter_PoolOverflow extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$jvm$ClassWriter$StringOverflow') extern class ClassWriter_StringOverflow extends java.lang.Exception
 {
-	public var value(default, null) : String;
+	@:public @:final public var value(default, null) : String;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }
@@ -79,17 +79,17 @@ extern class ClassWriter extends com.sun.tools.javac.jvm.ClassFile
 */
 @:native('com$sun$tools$javac$jvm$ClassWriter$AttributeWriter') @:internal extern class ClassWriter_AttributeWriter implements com.sun.tools.javac.code.Attribute.Attribute_Visitor
 {
-	@:overload public function visitConstant(_value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
+	@:overload @:public public function visitConstant(_value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
 	
-	@:overload public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
+	@:overload @:public public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
 	
-	@:overload public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
+	@:overload @:public public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
 	
-	@:overload public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
+	@:overload @:public public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
 	
-	@:overload public function visitError(x : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
+	@:overload @:public public function visitError(x : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
 	
-	@:overload public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
+	@:overload @:public public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
 	
 	
 }

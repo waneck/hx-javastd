@@ -30,15 +30,15 @@ package sun.java2d.xr;
 */
 extern class GrowablePointArray extends sun.java2d.xr.GrowableIntArray
 {
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
-	@:overload @:final public function getX(index : Int) : Int;
+	@:overload @:public @:final public function getX(index : Int) : Int;
 	
-	@:overload @:final public function getY(index : Int) : Int;
+	@:overload @:public @:final public function getY(index : Int) : Int;
 	
-	@:overload @:final public function setX(index : Int, x : Int) : Void;
+	@:overload @:public @:final public function setX(index : Int, x : Int) : Void;
 	
-	@:overload @:final public function setY(index : Int, y : Int) : Void;
+	@:overload @:public @:final public function setY(index : Int, y : Int) : Void;
 	
 	
 }

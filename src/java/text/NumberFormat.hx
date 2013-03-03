@@ -42,20 +42,20 @@ extern class NumberFormat extends java.text.Format
 	* the position of the integer part of a formatted number should be returned.
 	* @see java.text.FieldPosition
 	*/
-	public static var INTEGER_FIELD(default, null) : Int;
+	@:public @:static @:final public static var INTEGER_FIELD(default, null) : Int;
 	
 	/**
 	* Field constant used to construct a FieldPosition object. Signifies that
 	* the position of the fraction part of a formatted number should be returned.
 	* @see java.text.FieldPosition
 	*/
-	public static var FRACTION_FIELD(default, null) : Int;
+	@:public @:static @:final public static var FRACTION_FIELD(default, null) : Int;
 	
 	/**
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Formats a number and appends the resulting text to the given string
@@ -87,7 +87,7 @@ extern class NumberFormat extends java.text.Format
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see              java.text.FieldPosition
 	*/
-	@:overload public function format(number : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public override public function format(number : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Parses text from a string to produce a <code>Number</code>.
@@ -113,7 +113,7 @@ extern class NumberFormat extends java.text.Format
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload @:final public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload @:public @:final override public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Specialization of format.
@@ -121,7 +121,7 @@ extern class NumberFormat extends java.text.Format
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see java.text.Format#format
 	*/
-	@:overload @:final public function format(number : Float) : String;
+	@:overload @:public @:final public function format(number : Float) : String;
 	
 	/**
 	* Specialization of format.
@@ -129,7 +129,7 @@ extern class NumberFormat extends java.text.Format
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see java.text.Format#format
 	*/
-	@:overload @:final public function format(number : haxe.Int64) : String;
+	@:overload @:public @:final public function format(number : haxe.Int64) : String;
 	
 	/**
 	* Specialization of format.
@@ -137,7 +137,7 @@ extern class NumberFormat extends java.text.Format
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see java.text.Format#format
 	*/
-	@:overload @:abstract public function format(number : Float, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:abstract public function format(number : Float, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Specialization of format.
@@ -145,7 +145,7 @@ extern class NumberFormat extends java.text.Format
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see java.text.Format#format
 	*/
-	@:overload @:abstract public function format(number : haxe.Int64, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:abstract public function format(number : haxe.Int64, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Returns a Long if possible (e.g., within the range [Long.MIN_VALUE,
@@ -158,7 +158,7 @@ extern class NumberFormat extends java.text.Format
 	* @see java.text.NumberFormat#isParseIntegerOnly
 	* @see java.text.Format#parseObject
 	*/
-	@:overload @:abstract public function parse(source : String, parsePosition : java.text.ParsePosition) : java.lang.Number;
+	@:overload @:public @:abstract public function parse(source : String, parsePosition : java.text.ParsePosition) : java.lang.Number;
 	
 	/**
 	* Parses text from the beginning of the given string to produce a number.
@@ -172,7 +172,7 @@ extern class NumberFormat extends java.text.Format
 	* @exception ParseException if the beginning of the specified string
 	*            cannot be parsed.
 	*/
-	@:overload public function parse(source : String) : java.lang.Number;
+	@:overload @:public public function parse(source : String) : java.lang.Number;
 	
 	/**
 	* Returns true if this format will parse numbers as integers only.
@@ -182,37 +182,37 @@ extern class NumberFormat extends java.text.Format
 	* by the parse operation is locale dependant and determined by sub-classes
 	* of NumberFormat.
 	*/
-	@:overload public function isParseIntegerOnly() : Bool;
+	@:overload @:public public function isParseIntegerOnly() : Bool;
 	
 	/**
 	* Sets whether or not numbers should be parsed as integers only.
 	* @see #isParseIntegerOnly
 	*/
-	@:overload public function setParseIntegerOnly(value : Bool) : Void;
+	@:overload @:public public function setParseIntegerOnly(value : Bool) : Void;
 	
 	/**
 	* Returns a general-purpose number format for the current default locale.
 	* This is the same as calling
 	* {@link #getNumberInstance() getNumberInstance()}.
 	*/
-	@:overload @:final public static function getInstance() : java.text.NumberFormat;
+	@:overload @:public @:final @:static public static function getInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a general-purpose number format for the specified locale.
 	* This is the same as calling
 	* {@link #getNumberInstance(java.util.Locale) getNumberInstance(inLocale)}.
 	*/
-	@:overload public static function getInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:static public static function getInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a general-purpose number format for the current default locale.
 	*/
-	@:overload @:final public static function getNumberInstance() : java.text.NumberFormat;
+	@:overload @:public @:final @:static public static function getNumberInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a general-purpose number format for the specified locale.
 	*/
-	@:overload public static function getNumberInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:static public static function getNumberInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns an integer number format for the current default locale. The
@@ -226,7 +226,7 @@ extern class NumberFormat extends java.text.Format
 	* @return a number format for integer values
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public static function getIntegerInstance() : java.text.NumberFormat;
+	@:require(java4) @:overload @:public @:final @:static public static function getIntegerInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns an integer number format for the specified locale. The
@@ -240,27 +240,27 @@ extern class NumberFormat extends java.text.Format
 	* @return a number format for integer values
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getIntegerInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
+	@:require(java4) @:overload @:public @:static public static function getIntegerInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a currency format for the current default locale.
 	*/
-	@:overload @:final public static function getCurrencyInstance() : java.text.NumberFormat;
+	@:overload @:public @:final @:static public static function getCurrencyInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a currency format for the specified locale.
 	*/
-	@:overload public static function getCurrencyInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:static public static function getCurrencyInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a percentage format for the current default locale.
 	*/
-	@:overload @:final public static function getPercentInstance() : java.text.NumberFormat;
+	@:overload @:public @:final @:static public static function getPercentInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a percentage format for the specified locale.
 	*/
-	@:overload public static function getPercentInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
+	@:overload @:public @:static public static function getPercentInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -275,22 +275,22 @@ extern class NumberFormat extends java.text.Format
 	* @return An array of locales for which localized
 	*         <code>NumberFormat</code> instances are available.
 	*/
-	@:overload public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Overrides hashCode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Overrides equals
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/**
 	* Returns true if grouping is used in this format. For example, in the
@@ -299,20 +299,20 @@ extern class NumberFormat extends java.text.Format
 	* is locale dependant and is determined by sub-classes of NumberFormat.
 	* @see #setGroupingUsed
 	*/
-	@:overload public function isGroupingUsed() : Bool;
+	@:overload @:public public function isGroupingUsed() : Bool;
 	
 	/**
 	* Set whether or not grouping will be used in this format.
 	* @see #isGroupingUsed
 	*/
-	@:overload public function setGroupingUsed(newValue : Bool) : Void;
+	@:overload @:public public function setGroupingUsed(newValue : Bool) : Void;
 	
 	/**
 	* Returns the maximum number of digits allowed in the integer portion of a
 	* number.
 	* @see #setMaximumIntegerDigits
 	*/
-	@:overload public function getMaximumIntegerDigits() : Int;
+	@:overload @:public public function getMaximumIntegerDigits() : Int;
 	
 	/**
 	* Sets the maximum number of digits allowed in the integer portion of a
@@ -325,14 +325,14 @@ extern class NumberFormat extends java.text.Format
 	* upper limit to this value appropriate to the numeric type being formatted.
 	* @see #getMaximumIntegerDigits
 	*/
-	@:overload public function setMaximumIntegerDigits(newValue : Int) : Void;
+	@:overload @:public public function setMaximumIntegerDigits(newValue : Int) : Void;
 	
 	/**
 	* Returns the minimum number of digits allowed in the integer portion of a
 	* number.
 	* @see #setMinimumIntegerDigits
 	*/
-	@:overload public function getMinimumIntegerDigits() : Int;
+	@:overload @:public public function getMinimumIntegerDigits() : Int;
 	
 	/**
 	* Sets the minimum number of digits allowed in the integer portion of a
@@ -345,14 +345,14 @@ extern class NumberFormat extends java.text.Format
 	* upper limit to this value appropriate to the numeric type being formatted.
 	* @see #getMinimumIntegerDigits
 	*/
-	@:overload public function setMinimumIntegerDigits(newValue : Int) : Void;
+	@:overload @:public public function setMinimumIntegerDigits(newValue : Int) : Void;
 	
 	/**
 	* Returns the maximum number of digits allowed in the fraction portion of a
 	* number.
 	* @see #setMaximumFractionDigits
 	*/
-	@:overload public function getMaximumFractionDigits() : Int;
+	@:overload @:public public function getMaximumFractionDigits() : Int;
 	
 	/**
 	* Sets the maximum number of digits allowed in the fraction portion of a
@@ -365,14 +365,14 @@ extern class NumberFormat extends java.text.Format
 	* upper limit to this value appropriate to the numeric type being formatted.
 	* @see #getMaximumFractionDigits
 	*/
-	@:overload public function setMaximumFractionDigits(newValue : Int) : Void;
+	@:overload @:public public function setMaximumFractionDigits(newValue : Int) : Void;
 	
 	/**
 	* Returns the minimum number of digits allowed in the fraction portion of a
 	* number.
 	* @see #setMinimumFractionDigits
 	*/
-	@:overload public function getMinimumFractionDigits() : Int;
+	@:overload @:public public function getMinimumFractionDigits() : Int;
 	
 	/**
 	* Sets the minimum number of digits allowed in the fraction portion of a
@@ -385,7 +385,7 @@ extern class NumberFormat extends java.text.Format
 	* upper limit to this value appropriate to the numeric type being formatted.
 	* @see #getMinimumFractionDigits
 	*/
-	@:overload public function setMinimumFractionDigits(newValue : Int) : Void;
+	@:overload @:public public function setMinimumFractionDigits(newValue : Int) : Void;
 	
 	/**
 	* Gets the currency used by this number format when formatting
@@ -402,7 +402,7 @@ extern class NumberFormat extends java.text.Format
 	* doesn't implement currency formatting
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getCurrency() : java.util.Currency;
+	@:require(java4) @:overload @:public public function getCurrency() : java.util.Currency;
 	
 	/**
 	* Sets the currency used by this number format when formatting
@@ -418,7 +418,7 @@ extern class NumberFormat extends java.text.Format
 	* @exception NullPointerException if <code>currency</code> is null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setCurrency(currency : java.util.Currency) : Void;
+	@:require(java4) @:overload @:public public function setCurrency(currency : java.util.Currency) : Void;
 	
 	/**
 	* Gets the {@link java.math.RoundingMode} used in this NumberFormat.
@@ -433,7 +433,7 @@ extern class NumberFormat extends java.text.Format
 	* @see #setRoundingMode(RoundingMode)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getRoundingMode() : java.math.RoundingMode;
+	@:require(java6) @:overload @:public public function getRoundingMode() : java.math.RoundingMode;
 	
 	/**
 	* Sets the {@link java.math.RoundingMode} used in this NumberFormat.
@@ -449,7 +449,7 @@ extern class NumberFormat extends java.text.Format
 	* @see #getRoundingMode()
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setRoundingMode(roundingMode : java.math.RoundingMode) : Void;
+	@:require(java6) @:overload @:public public function setRoundingMode(roundingMode : java.math.RoundingMode) : Void;
 	
 	
 }
@@ -469,7 +469,7 @@ extern class NumberFormat extends java.text.Format
 	*
 	* @param name Name of the attribute
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected override private function new(name : String) : Void;
 	
 	/**
 	* Resolves instances being deserialized to the predefined constants.
@@ -477,62 +477,62 @@ extern class NumberFormat extends java.text.Format
 	* @throws InvalidObjectException if the constant could not be resolved.
 	* @return resolved NumberFormat.Field constant
 	*/
-	@:overload override private function readResolve() : Dynamic;
+	@:overload @:protected override private function readResolve() : Dynamic;
 	
 	/**
 	* Constant identifying the integer field.
 	*/
-	public static var INTEGER(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var INTEGER(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the fraction field.
 	*/
-	public static var FRACTION(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var FRACTION(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the exponent field.
 	*/
-	public static var EXPONENT(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var EXPONENT(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the decimal separator field.
 	*/
-	public static var DECIMAL_SEPARATOR(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var DECIMAL_SEPARATOR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the sign field.
 	*/
-	public static var SIGN(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var SIGN(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the grouping separator field.
 	*/
-	public static var GROUPING_SEPARATOR(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var GROUPING_SEPARATOR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the exponent symbol field.
 	*/
-	public static var EXPONENT_SYMBOL(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var EXPONENT_SYMBOL(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the percent field.
 	*/
-	public static var PERCENT(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var PERCENT(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the permille field.
 	*/
-	public static var PERMILLE(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var PERMILLE(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the currency field.
 	*/
-	public static var CURRENCY(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var CURRENCY(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the exponent sign field.
 	*/
-	public static var EXPONENT_SIGN(default, null) : java.text.Format.Format_Field;
+	@:public @:static @:final public static var EXPONENT_SIGN(default, null) : java.text.Format.Format_Field;
 	
 	
 }
@@ -541,7 +541,7 @@ extern class NumberFormat extends java.text.Format
 */
 @:native('java$text$NumberFormat$NumberFormatGetter') @:internal extern class NumberFormat_NumberFormatGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.NumberFormatProvider, java.text.NumberFormat>
 {
-	@:overload public function getObject(numberFormatProvider : java.text.spi.NumberFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.NumberFormat;
+	@:overload @:public public function getObject(numberFormatProvider : java.text.spi.NumberFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.NumberFormat;
 	
 	
 }

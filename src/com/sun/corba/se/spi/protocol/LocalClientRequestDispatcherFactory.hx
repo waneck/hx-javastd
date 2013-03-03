@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.protocol;
 */
 extern interface LocalClientRequestDispatcherFactory
 {
-	@:overload public function create(id : Int, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
+	@:overload @:public public function create(id : Int, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
 	
 	
 }

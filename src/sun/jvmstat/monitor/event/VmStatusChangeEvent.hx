@@ -31,7 +31,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	* active Java Virtual Machine on the MonitoredHost. This Set will only
 	* contain Integer objects.
 	*/
-	private var active : java.util.Set<Dynamic>;
+	@:protected private var active : java.util.Set<Dynamic>;
 	
 	/**
 	* The set of Java Virtual Machines started on MonitoredHost since the
@@ -39,7 +39,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	* <em>lvmid</em> for each Java Virtual Machine started on the
 	* MonitoredHost. This Set will only contain Integer objects.
 	*/
-	private var started : java.util.Set<Dynamic>;
+	@:protected private var started : java.util.Set<Dynamic>;
 	
 	/**
 	* The set of Java Virtual Machines terminated on MonitoredHost since the
@@ -47,7 +47,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	* <em>lvmid</em> for each Java Virtual Machine started on the
 	* MonitoredHost. This Set will only contain Integer objects.
 	*/
-	private var terminated : java.util.Set<Dynamic>;
+	@:protected private var terminated : java.util.Set<Dynamic>;
 	
 	/**
 	* Construct a new VmStatusChangeEvent instance.
@@ -59,7 +59,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	* @param terminated the set of Java Virtual Machines terminated since
 	*                   the last event.
 	*/
-	@:overload public function new(host : sun.jvmstat.monitor.MonitoredHost, active : java.util.Set<Dynamic>, started : java.util.Set<Dynamic>, terminated : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function new(host : sun.jvmstat.monitor.MonitoredHost, active : java.util.Set<Dynamic>, started : java.util.Set<Dynamic>, terminated : java.util.Set<Dynamic>) : Void;
 	
 	/**
 	* Return the set of currently active Java Virtual Machines.
@@ -71,7 +71,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	*               there are no active Java Virtual Machines on the host,
 	*               an empty Set is returned.
 	*/
-	@:overload public function getActive() : java.util.Set<Dynamic>;
+	@:overload @:public public function getActive() : java.util.Set<Dynamic>;
 	
 	/**
 	* Return the set of Java Virtual Machines started since the last
@@ -84,7 +84,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	*               no Java Virtual Machines were recently started on the
 	*               host, an empty Set is returned.
 	*/
-	@:overload public function getStarted() : java.util.Set<Dynamic>;
+	@:overload @:public public function getStarted() : java.util.Set<Dynamic>;
 	
 	/**
 	* Return the set of Java Virtual Machines terminated since the last
@@ -97,7 +97,7 @@ extern class VmStatusChangeEvent extends sun.jvmstat.monitor.event.HostEvent
 	*               no Java Virtual Machines were recently terminated on the
 	*               host, an empty Set is returned.
 	*/
-	@:overload public function getTerminated() : java.util.Set<Dynamic>;
+	@:overload @:public public function getTerminated() : java.util.Set<Dynamic>;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface LocalElement extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Occurs extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function form(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
+	@:overload @:public public function form(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
 	
-	@:overload public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
 	
-	@:overload public function ref(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
+	@:overload @:public public function ref(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalElement;
 	
 	
 }

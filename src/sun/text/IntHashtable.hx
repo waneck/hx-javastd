@@ -35,31 +35,31 @@ package sun.text;
 */
 extern class IntHashtable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialSize : Int) : Void;
+	@:overload @:public public function new(initialSize : Int) : Void;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function put(key : Int, value : Int) : Void;
+	@:overload @:public public function put(key : Int, value : Int) : Void;
 	
-	@:overload public function get(key : Int) : Int;
+	@:overload @:public public function get(key : Int) : Int;
 	
-	@:overload public function remove(key : Int) : Void;
+	@:overload @:public public function remove(key : Int) : Void;
 	
-	@:overload public function getDefaultValue() : Int;
+	@:overload @:public public function getDefaultValue() : Int;
 	
-	@:overload public function setDefaultValue(newValue : Int) : Void;
+	@:overload @:public public function setDefaultValue(newValue : Int) : Void;
 	
-	@:overload public function equals(that : Dynamic) : Bool;
+	@:overload @:public public function equals(that : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function putInternal(key : Int, value : Int) : Void;
+	@:overload @:public public function putInternal(key : Int, value : Int) : Void;
 	
 	
 }

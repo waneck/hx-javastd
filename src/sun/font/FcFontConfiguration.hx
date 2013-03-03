@@ -25,43 +25,43 @@ package sun.font;
 */
 extern class FcFontConfiguration extends sun.awt.FontConfiguration
 {
-	@:overload public function new(fm : sun.font.SunFontManager) : Void;
+	@:overload @:public public function new(fm : sun.font.SunFontManager) : Void;
 	
 	/* This isn't called but is needed to satisfy super-class contract. */
-	@:overload public function new(fm : sun.font.SunFontManager, preferLocaleFonts : Bool, preferPropFonts : Bool) : Void;
+	@:overload @:public public function new(fm : sun.font.SunFontManager, preferLocaleFonts : Bool, preferPropFonts : Bool) : Void;
 	
-	@:overload @:synchronized override public function init() : Bool;
+	@:overload @:public @:synchronized override public function init() : Bool;
 	
-	@:overload override public function getFallbackFamilyName(fontName : String, defaultFallback : String) : String;
+	@:overload @:public override public function getFallbackFamilyName(fontName : String, defaultFallback : String) : String;
 	
-	@:overload override private function getFaceNameFromComponentFontName(componentFontName : String) : String;
+	@:overload @:protected override private function getFaceNameFromComponentFontName(componentFontName : String) : String;
 	
-	@:overload override private function getFileNameFromComponentFontName(componentFontName : String) : String;
+	@:overload @:protected override private function getFileNameFromComponentFontName(componentFontName : String) : String;
 	
-	@:overload override public function getFileNameFromPlatformName(platformName : String) : String;
+	@:overload @:public override public function getFileNameFromPlatformName(platformName : String) : String;
 	
-	@:overload override private function getDefaultFontCharset(fontName : String) : java.nio.charset.Charset;
+	@:overload @:protected override private function getDefaultFontCharset(fontName : String) : java.nio.charset.Charset;
 	
-	@:overload override private function getEncoding(awtFontName : String, characterSubsetName : String) : String;
+	@:overload @:protected override private function getEncoding(awtFontName : String, characterSubsetName : String) : String;
 	
-	@:overload override private function initReorderMap() : Void;
+	@:overload @:protected override private function initReorderMap() : Void;
 	
-	@:overload override public function getFontDescriptors(fontName : String, style : Int) : java.NativeArray<sun.awt.FontDescriptor>;
+	@:overload @:public override public function getFontDescriptors(fontName : String, style : Int) : java.NativeArray<sun.awt.FontDescriptor>;
 	
-	@:overload override public function getNumberCoreFonts() : Int;
+	@:overload @:public override public function getNumberCoreFonts() : Int;
 	
-	@:overload override public function getPlatformFontNames() : java.NativeArray<String>;
+	@:overload @:public override public function getPlatformFontNames() : java.NativeArray<String>;
 	
-	@:overload override public function getExtraFontPath() : String;
+	@:overload @:public override public function getExtraFontPath() : String;
 	
-	@:overload override public function needToSearchForFile(fileName : String) : Bool;
+	@:overload @:public override public function needToSearchForFile(fileName : String) : Bool;
 	
-	@:overload override public function get2DCompositeFontInfo() : java.NativeArray<sun.font.CompositeFontDescriptor>;
+	@:overload @:public override public function get2DCompositeFontInfo() : java.NativeArray<sun.font.CompositeFontDescriptor>;
 	
 	/**
 	* Sets the OS name and version from environment information.
 	*/
-	@:overload override private function setOsNameAndVersion() : Void;
+	@:overload @:protected override private function setOsNameAndVersion() : Void;
 	
 	
 }

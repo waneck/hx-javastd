@@ -34,7 +34,7 @@ extern interface CommandObject
 	* @param verb The Command Verb this object refers to.
 	* @param dh The DataHandler.
 	*/
-	@:overload public function setCommandContext(verb : String, dh : javax.activation.DataHandler) : Void;
+	@:overload @:public public function setCommandContext(verb : String, dh : javax.activation.DataHandler) : Void;
 	
 	
 }

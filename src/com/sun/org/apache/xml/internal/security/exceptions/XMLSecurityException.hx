@@ -22,92 +22,92 @@ package com.sun.org.apache.xml.internal.security.exceptions;
 extern class XMLSecurityException extends java.lang.Exception
 {
 	/** Field originalException */
-	private var originalException : java.lang.Exception;
+	@:protected private var originalException : java.lang.Exception;
 	
 	/** Field msgID */
-	private var msgID : String;
+	@:protected private var msgID : String;
 	
 	/**
 	* Constructor XMLSecurityException
 	*
 	*/
-	@:overload public function new() : Void;
-	
-	/**
-	* Constructor XMLSecurityException
-	*
-	* @param _msgID
-	*/
-	@:overload public function new(_msgID : String) : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor XMLSecurityException
 	*
 	* @param _msgID
-	* @param exArgs
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
-	
-	/**
-	* Constructor XMLSecurityException
-	*
-	* @param _originalException
-	*/
-	@:overload public function new(_originalException : java.lang.Exception) : Void;
-	
-	/**
-	* Constructor XMLSecurityException
-	*
-	* @param _msgID
-	* @param _originalException
-	*/
-	@:overload public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_msgID : String) : Void;
 	
 	/**
 	* Constructor XMLSecurityException
 	*
 	* @param _msgID
 	* @param exArgs
+	*/
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>) : Void;
+	
+	/**
+	* Constructor XMLSecurityException
+	*
 	* @param _originalException
 	*/
-	@:overload public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
+	@:overload @:public public function new(_originalException : java.lang.Exception) : Void;
+	
+	/**
+	* Constructor XMLSecurityException
+	*
+	* @param _msgID
+	* @param _originalException
+	*/
+	@:overload @:public public function new(_msgID : String, _originalException : java.lang.Exception) : Void;
+	
+	/**
+	* Constructor XMLSecurityException
+	*
+	* @param _msgID
+	* @param exArgs
+	* @param _originalException
+	*/
+	@:overload @:public public function new(_msgID : String, exArgs : java.NativeArray<Dynamic>, _originalException : java.lang.Exception) : Void;
 	
 	/**
 	* Method getMsgID
 	*
 	* @return the messageId
 	*/
-	@:overload public function getMsgID() : String;
+	@:overload @:public public function getMsgID() : String;
 	
 	/** @inheritDoc */
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Method printStackTrace
 	*
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	/**
 	* Method printStackTrace
 	*
 	* @param printwriter
 	*/
-	@:overload override public function printStackTrace(printwriter : java.io.PrintWriter) : Void;
+	@:overload @:public override public function printStackTrace(printwriter : java.io.PrintWriter) : Void;
 	
 	/**
 	* Method printStackTrace
 	*
 	* @param printstream
 	*/
-	@:overload override public function printStackTrace(printstream : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(printstream : java.io.PrintStream) : Void;
 	
 	/**
 	* Method getOriginalException
 	*
 	* @return the original exception
 	*/
-	@:overload public function getOriginalException() : java.lang.Exception;
+	@:overload @:public public function getOriginalException() : java.lang.Exception;
 	
 	
 }

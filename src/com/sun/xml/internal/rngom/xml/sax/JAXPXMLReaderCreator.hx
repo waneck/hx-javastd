@@ -46,18 +46,18 @@ package com.sun.xml.internal.rngom.xml.sax;
 */
 extern class JAXPXMLReaderCreator implements com.sun.xml.internal.rngom.xml.sax.XMLReaderCreator
 {
-	@:overload public function new(spf : javax.xml.parsers.SAXParserFactory) : Void;
+	@:overload @:public public function new(spf : javax.xml.parsers.SAXParserFactory) : Void;
 	
 	/**
 	* Creates a {@link JAXPXMLReaderCreator} by using
 	* {@link SAXParserFactory#newInstance()}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* @see com.sun.xml.internal.rngom.xml.sax.XMLReaderCreator#createXMLReader()
 	*/
-	@:overload public function createXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:public public function createXMLReader() : org.xml.sax.XMLReader;
 	
 	
 }

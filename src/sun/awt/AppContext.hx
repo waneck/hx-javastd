@@ -28,25 +28,25 @@ extern class AppContext
 	/*
 	* The key to put()/get() the Java EventQueue into/from the AppContext.
 	*/
-	public static var EVENT_QUEUE_KEY(default, null) : Dynamic;
+	@:public @:static @:final public static var EVENT_QUEUE_KEY(default, null) : Dynamic;
 	
 	/*
 	* The keys to store EventQueue push/pop lock and condition.
 	*/
-	public static var EVENT_QUEUE_LOCK_KEY(default, null) : Dynamic;
+	@:public @:final @:static public static var EVENT_QUEUE_LOCK_KEY(default, null) : Dynamic;
 	
-	public static var EVENT_QUEUE_COND_KEY(default, null) : Dynamic;
+	@:public @:final @:static public static var EVENT_QUEUE_COND_KEY(default, null) : Dynamic;
 	
 	/**
 	* Returns a set containing all <code>AppContext</code>s.
 	*/
-	@:overload public static function getAppContexts() : java.util.Set<sun.awt.AppContext>;
+	@:overload @:public @:static public static function getAppContexts() : java.util.Set<sun.awt.AppContext>;
 	
-	public static var DISPOSED_PROPERTY_NAME(default, null) : String;
+	@:public @:static @:final public static var DISPOSED_PROPERTY_NAME(default, null) : String;
 	
-	public static var GUI_DISPOSED(default, null) : String;
+	@:public @:static @:final public static var GUI_DISPOSED(default, null) : String;
 	
-	@:overload public function isDisposed() : Bool;
+	@:overload @:public public function isDisposed() : Bool;
 	
 	/**
 	* Returns the appropriate AppContext for the caller,
@@ -59,7 +59,7 @@ extern class AppContext
 	* @see     java.lang.ThreadGroup
 	* @since   1.2
 	*/
-	@:require(java2) @:overload @:final public static function getAppContext() : sun.awt.AppContext;
+	@:require(java2) @:overload @:public @:final @:static public static function getAppContext() : sun.awt.AppContext;
 	
 	/**
 	* Disposes of this AppContext, all of its top-level Frames, and
@@ -72,7 +72,7 @@ extern class AppContext
 	*                                    contained within this AppContext
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function dispose() : Void;
+	@:require(java2) @:overload @:public public function dispose() : Void;
 	
 	/**
 	* Returns the value to which the specified key is mapped in this context.
@@ -83,7 +83,7 @@ extern class AppContext
 	* @see     #put(Object, Object)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function get(key : Dynamic) : Dynamic;
+	@:require(java2) @:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Maps the specified <code>key</code> to the specified
@@ -102,7 +102,7 @@ extern class AppContext
 	* @see     #get(Object)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:require(java2) @:overload @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the key (and its corresponding value) from this
@@ -114,14 +114,14 @@ extern class AppContext
 	*          or <code>null</code> if the key did not have a mapping.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function remove(key : Dynamic) : Dynamic;
+	@:require(java2) @:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the root ThreadGroup for all Threads contained within
 	* this AppContext.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function getThreadGroup() : java.lang.ThreadGroup;
+	@:require(java2) @:overload @:public public function getThreadGroup() : java.lang.ThreadGroup;
 	
 	/**
 	* Returns the context ClassLoader that was used to create this
@@ -129,13 +129,13 @@ extern class AppContext
 	*
 	* @see java.lang.Thread#getContextClassLoader
 	*/
-	@:overload public function getContextClassLoader() : java.lang.ClassLoader;
+	@:overload @:public public function getContextClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Returns a string representation of this AppContext.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function toString() : String;
+	@:require(java2) @:overload @:public public function toString() : String;
 	
 	/**
 	* Returns an array of all the property change listeners
@@ -151,7 +151,7 @@ extern class AppContext
 	* @see      java.beans.PropertyChangeSupport#getPropertyChangeListeners
 	* @since    1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners() : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list for a specific
@@ -176,7 +176,7 @@ extern class AppContext
 	* @see #getPropertyChangeListeners(java.lang.String)
 	* @see #addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
 	*/
-	@:overload @:synchronized public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function addPropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list for a specific
@@ -192,7 +192,7 @@ extern class AppContext
 	* @see #getPropertyChangeListeners(java.lang.String)
 	* @see #removePropertyChangeListener(java.beans.PropertyChangeListener)
 	*/
-	@:overload @:synchronized public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public @:synchronized public function removePropertyChangeListener(propertyName : String, listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the listeners which have been associated
@@ -207,23 +207,23 @@ extern class AppContext
 	* @see #getPropertyChangeListeners
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getPropertyChangeListeners(propertyName : String) : java.NativeArray<java.beans.PropertyChangeListener>;
 	
 	
 }
 @:native('sun$awt$AppContext$PostShutdownEventRunnable') @:internal extern class AppContext_PostShutdownEventRunnable implements java.lang.Runnable
 {
-	@:overload public function new(ac : sun.awt.AppContext) : Void;
+	@:overload @:public public function new(ac : sun.awt.AppContext) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:native('sun$awt$AppContext$CreateThreadAction') @:internal extern class AppContext_CreateThreadAction implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function new(ac : sun.awt.AppContext, r : java.lang.Runnable) : Void;
+	@:overload @:public public function new(ac : sun.awt.AppContext, r : java.lang.Runnable) : Void;
 	
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }

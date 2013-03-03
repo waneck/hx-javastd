@@ -52,7 +52,7 @@ package java.io;
 	* @param  in
 	*         A Reader object to provide the underlying stream
 	*/
-	@:overload public function new(_in : java.io.Reader) : Void;
+	@:overload @:public public function new(_in : java.io.Reader) : Void;
 	
 	/**
 	* Create a new line-numbering reader, reading characters into a buffer of
@@ -64,7 +64,7 @@ package java.io;
 	* @param  sz
 	*         An int specifying the size of the buffer
 	*/
-	@:overload public function new(_in : java.io.Reader, sz : Int) : Void;
+	@:overload @:public public function new(_in : java.io.Reader, sz : Int) : Void;
 	
 	/**
 	* Set the current line number.
@@ -74,7 +74,7 @@ package java.io;
 	*
 	* @see #getLineNumber
 	*/
-	@:overload public function setLineNumber(lineNumber : Int) : Void;
+	@:overload @:public public function setLineNumber(lineNumber : Int) : Void;
 	
 	/**
 	* Get the current line number.
@@ -83,7 +83,7 @@ package java.io;
 	*
 	* @see #setLineNumber
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Read a single character.  <a href="#lt">Line terminators</a> are
@@ -96,7 +96,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Read characters into a portion of an array.  Whenever a <a
@@ -118,7 +118,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Read a line of text.  Whenever a <a href="#lt">line terminator</a> is
@@ -131,7 +131,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload override public function readLine() : String;
+	@:overload @:public override public function readLine() : String;
 	
 	/**
 	* Skip characters.
@@ -147,7 +147,7 @@ package java.io;
 	* @throws  IllegalArgumentException
 	*          If <tt>n</tt> is negative
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Mark the present position in the stream.  Subsequent calls to reset()
@@ -162,7 +162,7 @@ package java.io;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload override public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Reset the stream to the most recent mark.
@@ -171,7 +171,7 @@ package java.io;
 	*          If the stream has not been marked, or if the mark has been
 	*          invalidated
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

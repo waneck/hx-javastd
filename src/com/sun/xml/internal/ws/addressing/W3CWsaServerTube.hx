@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.addressing;
 */
 extern class W3CWsaServerTube extends com.sun.xml.internal.ws.addressing.WsaServerTube
 {
-	@:overload public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function new(that : com.sun.xml.internal.ws.addressing.W3CWsaServerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.addressing.W3CWsaServerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.addressing.W3CWsaServerTube;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.addressing.W3CWsaServerTube;
 	
-	@:overload override private function checkMandatoryHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, foundAction : Bool, foundTo : Bool, foundReplyTo : Bool, foundFaultTo : Bool, foundMessageId : Bool, foundRelatesTo : Bool) : Void;
+	@:overload @:protected override private function checkMandatoryHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, foundAction : Bool, foundTo : Bool, foundReplyTo : Bool, foundFaultTo : Bool, foundMessageId : Bool, foundRelatesTo : Bool) : Void;
 	
-	@:overload override private function isAnonymousRequired(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation) : Bool;
+	@:overload @:protected override private function isAnonymousRequired(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation) : Bool;
 	
-	@:overload override private function checkAnonymousSemantics(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, replyTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, faultTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
+	@:overload @:protected override private function checkAnonymousSemantics(wbo : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, replyTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, faultTo : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : Void;
 	
 	
 }

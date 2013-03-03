@@ -39,26 +39,26 @@ package sun.misc;
 	/**
 	* The index file name.
 	*/
-	public static var INDEX_NAME(default, null) : String;
+	@:public @:static @:final public static var INDEX_NAME(default, null) : String;
 	
 	/**
 	* Constructs a new, empty jar index.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new index from the specified input stream.
 	*
 	* @param is the input stream containing the index data
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Constructs a new index for the specified list of jar files.
 	*
 	* @param files the list of jar files to construct the index from.
 	*/
-	@:overload public function new(files : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(files : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the jar index, or <code>null</code> if none.
@@ -69,7 +69,7 @@ package sun.misc;
 	* @param jar the JAR file to get the index from.
 	* @exception IOException if an I/O error has occurred.
 	*/
-	@:overload public static function getJarIndex(jar : java.util.jar.JarFile) : sun.misc.JarIndex;
+	@:overload @:public @:static public static function getJarIndex(jar : java.util.jar.JarFile) : sun.misc.JarIndex;
 	
 	/**
 	* Returns the jar index, or <code>null</code> if none.
@@ -77,19 +77,19 @@ package sun.misc;
 	* @param jar the JAR file to get the index from.
 	* @exception IOException if an I/O error has occurred.
 	*/
-	@:overload public static function getJarIndex(jar : java.util.jar.JarFile, metaIndex : sun.misc.MetaIndex) : sun.misc.JarIndex;
+	@:overload @:public @:static public static function getJarIndex(jar : java.util.jar.JarFile, metaIndex : sun.misc.MetaIndex) : sun.misc.JarIndex;
 	
 	/**
 	* Returns the jar files that are defined in this index.
 	*/
-	@:overload public function getJarFiles() : java.NativeArray<String>;
+	@:overload @:public public function getJarFiles() : java.NativeArray<String>;
 	
 	/**
 	* Returns the list of jar files that are mapped to the file.
 	*
 	* @param fileName the key of the mapping
 	*/
-	@:overload public function get(fileName : String) : java.util.LinkedList<Dynamic>;
+	@:overload @:public public function get(fileName : String) : java.util.LinkedList<Dynamic>;
 	
 	/**
 	* Add the mapping from the specified file to the specified
@@ -104,7 +104,7 @@ package sun.misc;
 	* @param jarName the jar file that the file is mapped to
 	*
 	*/
-	@:overload public function add(fileName : String, jarName : String) : Void;
+	@:overload @:public public function add(fileName : String, jarName : String) : Void;
 	
 	/**
 	* Writes the index to the specified OutputStream
@@ -112,7 +112,7 @@ package sun.misc;
 	* @param out the output stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function write(out : java.io.OutputStream) : Void;
+	@:overload @:public public function write(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Reads the index from the specified InputStream.
@@ -120,7 +120,7 @@ package sun.misc;
 	* @param is the input stream
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload public function read(is : java.io.InputStream) : Void;
+	@:overload @:public public function read(is : java.io.InputStream) : Void;
 	
 	/**
 	* Merges the current index into another index, taking into account
@@ -132,7 +132,7 @@ package sun.misc;
 	*                index.
 	*
 	*/
-	@:overload public function merge(toIndex : sun.misc.JarIndex, path : String) : Void;
+	@:overload @:public public function merge(toIndex : sun.misc.JarIndex, path : String) : Void;
 	
 	
 }

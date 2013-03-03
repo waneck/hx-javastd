@@ -25,50 +25,50 @@ package sun.awt.image;
 */
 extern class SunWritableRaster extends java.awt.image.WritableRaster
 {
-	@:overload public static function setDataStealer(ds : sun.awt.image.SunWritableRaster.SunWritableRaster_DataStealer) : Void;
+	@:overload @:public @:static public static function setDataStealer(ds : sun.awt.image.SunWritableRaster.SunWritableRaster_DataStealer) : Void;
 	
-	@:overload public static function stealData(dbb : java.awt.image.DataBufferByte, bank : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function stealData(dbb : java.awt.image.DataBufferByte, bank : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function stealData(dbus : java.awt.image.DataBufferUShort, bank : Int) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public @:static public static function stealData(dbus : java.awt.image.DataBufferUShort, bank : Int) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public static function stealData(dbi : java.awt.image.DataBufferInt, bank : Int) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function stealData(dbi : java.awt.image.DataBufferInt, bank : Int) : java.NativeArray<Int>;
 	
-	@:overload public static function stealTrackable(db : java.awt.image.DataBuffer) : sun.java2d.StateTrackableDelegate;
+	@:overload @:public @:static public static function stealTrackable(db : java.awt.image.DataBuffer) : sun.java2d.StateTrackableDelegate;
 	
-	@:overload public static function setTrackable(db : java.awt.image.DataBuffer, trackable : sun.java2d.StateTrackableDelegate) : Void;
+	@:overload @:public @:static public static function setTrackable(db : java.awt.image.DataBuffer, trackable : sun.java2d.StateTrackableDelegate) : Void;
 	
-	@:overload public static function makeTrackable(db : java.awt.image.DataBuffer) : Void;
+	@:overload @:public @:static public static function makeTrackable(db : java.awt.image.DataBuffer) : Void;
 	
-	@:native('markDirty') @:overload public static function _markDirty(db : java.awt.image.DataBuffer) : Void;
+	@:native('markDirty') @:overload @:public @:static public static function _markDirty(db : java.awt.image.DataBuffer) : Void;
 	
-	@:native('markDirty') @:overload public static function _markDirty(wr : java.awt.image.WritableRaster) : Void;
+	@:native('markDirty') @:overload @:public @:static public static function _markDirty(wr : java.awt.image.WritableRaster) : Void;
 	
-	@:native('markDirty') @:overload public static function _markDirty(img : java.awt.Image) : Void;
+	@:native('markDirty') @:overload @:public @:static public static function _markDirty(img : java.awt.Image) : Void;
 	
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
 	
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
 	
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.WritableRaster) : Void;
+	@:overload @:public public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.WritableRaster) : Void;
 	
 	/**
 	* Mark the TrackableDelegate of the associated DataBuffer dirty.
 	*/
-	@:overload @:final public function markDirty() : Void;
+	@:overload @:public @:final public function markDirty() : Void;
 	
 	
 }
 @:native('sun$awt$image$SunWritableRaster$DataStealer') extern interface SunWritableRaster_DataStealer
 {
-	@:overload public function getData(dbb : java.awt.image.DataBufferByte, bank : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData(dbb : java.awt.image.DataBufferByte, bank : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getData(dbus : java.awt.image.DataBufferUShort, bank : Int) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getData(dbus : java.awt.image.DataBufferUShort, bank : Int) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getData(dbi : java.awt.image.DataBufferInt, bank : Int) : java.NativeArray<Int>;
+	@:overload @:public public function getData(dbi : java.awt.image.DataBufferInt, bank : Int) : java.NativeArray<Int>;
 	
-	@:overload public function getTrackable(db : java.awt.image.DataBuffer) : sun.java2d.StateTrackableDelegate;
+	@:overload @:public public function getTrackable(db : java.awt.image.DataBuffer) : sun.java2d.StateTrackableDelegate;
 	
-	@:overload public function setTrackable(db : java.awt.image.DataBuffer, trackable : sun.java2d.StateTrackableDelegate) : Void;
+	@:overload @:public public function setTrackable(db : java.awt.image.DataBuffer, trackable : sun.java2d.StateTrackableDelegate) : Void;
 	
 	
 }

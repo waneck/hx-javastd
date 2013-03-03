@@ -32,9 +32,9 @@ package com.sun.jdi;
 */
 @:require(java3) extern class NativeMethodException extends java.lang.RuntimeException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

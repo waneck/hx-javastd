@@ -58,13 +58,13 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class ClassStack implements java.io.Serializable
 {
-	@:overload public function push(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function push(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload public function pop() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function pop() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
-	@:overload public function top() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function top() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
-	@:overload public function empty() : Bool;
+	@:overload @:public public function empty() : Bool;
 	
 	
 }

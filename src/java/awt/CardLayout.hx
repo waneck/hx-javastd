@@ -28,7 +28,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	/**
 	* Creates a new card layout with gaps of size zero.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new card layout with the specified horizontal and
@@ -38,7 +38,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @param     hgap   the horizontal gap.
 	* @param     vgap   the vertical gap.
 	*/
-	@:overload public function new(hgap : Int, vgap : Int) : Void;
+	@:overload @:public public function new(hgap : Int, vgap : Int) : Void;
 	
 	/**
 	* Gets the horizontal gap between components.
@@ -47,7 +47,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see       java.awt.CardLayout#getVgap()
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getHgap() : Int;
+	@:require(java1) @:overload @:public public function getHgap() : Int;
 	
 	/**
 	* Sets the horizontal gap between components.
@@ -56,7 +56,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see       java.awt.CardLayout#setVgap(int)
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function setHgap(hgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setHgap(hgap : Int) : Void;
 	
 	/**
 	* Gets the vertical gap between components.
@@ -64,7 +64,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see       java.awt.CardLayout#setVgap(int)
 	* @see       java.awt.CardLayout#getHgap()
 	*/
-	@:overload public function getVgap() : Int;
+	@:overload @:public public function getVgap() : Int;
 	
 	/**
 	* Sets the vertical gap between components.
@@ -73,7 +73,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see       java.awt.CardLayout#setHgap(int)
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function setVgap(vgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setVgap(vgap : Int) : Void;
 	
 	/**
 	* Adds the specified component to this card layout's internal
@@ -88,13 +88,13 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see       java.awt.CardLayout#show(java.awt.Container, java.lang.String)
 	* @exception  IllegalArgumentException  if the constraint is not a string.
 	*/
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* @deprecated   replaced by
 	*      <code>addLayoutComponent(Component, Object)</code>.
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout.
@@ -103,7 +103,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see     java.awt.Container#remove(java.awt.Component)
 	* @see     java.awt.Container#removeAll()
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Determines the preferred size of the container argument using
@@ -114,7 +114,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see     java.awt.Container#getPreferredSize
 	* @see     java.awt.CardLayout#minimumLayoutSize
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Calculates the minimum size for the specified panel.
@@ -124,7 +124,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see       java.awt.Container#doLayout
 	* @see       java.awt.CardLayout#preferredLayoutSize
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum dimensions for this layout given the components
@@ -134,7 +134,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @see #minimumLayoutSize
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -143,7 +143,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -152,13 +152,13 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
 	
 	/**
 	* Invalidates the layout, indicating that if the layout manager
 	* has cached information it should be discarded.
 	*/
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	/**
 	* Lays out the specified container using this card layout.
@@ -170,14 +170,14 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @param     parent the parent container in which to do the layout
 	* @see       java.awt.Container#doLayout
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Flips to the first card of the container.
 	* @param     parent   the parent container in which to do the layout
 	* @see       java.awt.CardLayout#last
 	*/
-	@:overload public function first(parent : java.awt.Container) : Void;
+	@:overload @:public public function first(parent : java.awt.Container) : Void;
 	
 	/**
 	* Flips to the next card of the specified container. If the
@@ -186,7 +186,7 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @param     parent   the parent container in which to do the layout
 	* @see       java.awt.CardLayout#previous
 	*/
-	@:overload public function next(parent : java.awt.Container) : Void;
+	@:overload @:public public function next(parent : java.awt.Container) : Void;
 	
 	/**
 	* Flips to the previous card of the specified container. If the
@@ -195,14 +195,14 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @param     parent   the parent container in which to do the layout
 	* @see       java.awt.CardLayout#next
 	*/
-	@:overload public function previous(parent : java.awt.Container) : Void;
+	@:overload @:public public function previous(parent : java.awt.Container) : Void;
 	
 	/**
 	* Flips to the last card of the container.
 	* @param     parent   the parent container in which to do the layout
 	* @see       java.awt.CardLayout#first
 	*/
-	@:overload public function last(parent : java.awt.Container) : Void;
+	@:overload @:public public function last(parent : java.awt.Container) : Void;
 	
 	/**
 	* Flips to the component that was added to this layout with the
@@ -212,13 +212,13 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 	* @param     name     the component name
 	* @see       java.awt.CardLayout#addLayoutComponent(java.awt.Component, java.lang.Object)
 	*/
-	@:overload public function show(parent : java.awt.Container, name : String) : Void;
+	@:overload @:public public function show(parent : java.awt.Container, name : String) : Void;
 	
 	/**
 	* Returns a string representation of the state of this card layout.
 	* @return    a string representation of this card layout.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -227,11 +227,11 @@ extern class CardLayout implements java.awt.LayoutManager2 implements java.io.Se
 */
 @:native('java$awt$CardLayout$Card') @:internal extern class CardLayout_Card implements java.io.Serializable
 {
-	public var name : String;
+	@:public public var name : String;
 	
-	public var comp : java.awt.Component;
+	@:public public var comp : java.awt.Component;
 	
-	@:overload public function new(cardName : String, cardComponent : java.awt.Component) : Void;
+	@:overload @:public public function new(cardName : String, cardComponent : java.awt.Component) : Void;
 	
 	
 }

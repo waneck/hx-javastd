@@ -67,7 +67,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface ConstantPushInstruction extends com.sun.org.apache.bcel.internal.generic.PushInstruction extends com.sun.org.apache.bcel.internal.generic.TypedInstruction
 {
-	@:overload public function getValue() : java.lang.Number;
+	@:overload @:public public function getValue() : java.lang.Number;
 	
 	
 }

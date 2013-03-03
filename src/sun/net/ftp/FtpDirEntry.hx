@@ -30,14 +30,14 @@ extern class FtpDirEntry
 	*
 	* @param name The name of the file
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns the name of the remote file.
 	*
 	* @return a {@code String} containing the name of the remote file.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the user name of the owner of the file as returned by the FTP
@@ -46,7 +46,7 @@ extern class FtpDirEntry
 	* @return a {@code String} containing the user name or
 	*         {@code null} if that information is not available.
 	*/
-	@:overload public function getUser() : String;
+	@:overload @:public public function getUser() : String;
 	
 	/**
 	* Sets the user name of the owner of the file. Intended mostly to be
@@ -56,7 +56,7 @@ extern class FtpDirEntry
 	* if that information is not available.
 	* @return this FtpDirEntry
 	*/
-	@:overload public function setUser(user : String) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setUser(user : String) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns the group name of the file as returned by the FTP
@@ -65,7 +65,7 @@ extern class FtpDirEntry
 	* @return a {@code String} containing the group name or
 	*         {@code null} if that information is not available.
 	*/
-	@:overload public function getGroup() : String;
+	@:overload @:public public function getGroup() : String;
 	
 	/**
 	* Sets the name of the group to which the file belong. Intended mostly to be
@@ -75,7 +75,7 @@ extern class FtpDirEntry
 	* if that information is not available.
 	* @return this FtpDirEntry
 	*/
-	@:overload public function setGroup(group : String) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setGroup(group : String) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns the size of the remote file as it was returned by the FTP
@@ -83,7 +83,7 @@ extern class FtpDirEntry
 	*
 	* @return the size of the file or -1 if that information is not available.
 	*/
-	@:overload public function getSize() : haxe.Int64;
+	@:overload @:public public function getSize() : haxe.Int64;
 	
 	/**
 	* Sets the size of that file. Intended mostly to be used from inside an
@@ -92,7 +92,7 @@ extern class FtpDirEntry
 	* @param size The size, in bytes, of that file. or -1 if unknown.
 	* @return this FtpDirEntry
 	*/
-	@:overload public function setSize(size : haxe.Int64) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setSize(size : haxe.Int64) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns the type of the remote file as it was returned by the FTP
@@ -105,7 +105,7 @@ extern class FtpDirEntry
 	* @return a {@code FtpDirEntry.Type} describing the type of the file
 	*         or {@code null} if that information is not available.
 	*/
-	@:overload public function getType() : sun.net.ftp.FtpDirEntry.FtpDirEntry_Type;
+	@:overload @:public public function getType() : sun.net.ftp.FtpDirEntry.FtpDirEntry_Type;
 	
 	/**
 	* Sets the type of the file. Intended mostly to be used from inside an
@@ -115,7 +115,7 @@ extern class FtpDirEntry
 	* is not available.
 	* @return this FtpDirEntry
 	*/
-	@:overload public function setType(type : sun.net.ftp.FtpDirEntry.FtpDirEntry_Type) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setType(type : sun.net.ftp.FtpDirEntry.FtpDirEntry_Type) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns the last modification time of the remote file as it was returned
@@ -125,7 +125,7 @@ extern class FtpDirEntry
 	*         modified on the server, or {@code null} if that
 	*         information is not available.
 	*/
-	@:overload public function getLastModified() : java.util.Date;
+	@:overload @:public public function getLastModified() : java.util.Date;
 	
 	/**
 	* Sets the last modification time of the file. Intended mostly to be used
@@ -135,7 +135,7 @@ extern class FtpDirEntry
 	* {@code null} if that information is not available.
 	* @return this FtpDirEntry
 	*/
-	@:overload public function setLastModified(lastModified : java.util.Date) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setLastModified(lastModified : java.util.Date) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns whether read access is granted for a specific permission.
@@ -143,7 +143,7 @@ extern class FtpDirEntry
 	* @param p the Permission (user, group, others) to check.
 	* @return {@code true} if read access is granted.
 	*/
-	@:overload public function canRead(p : sun.net.ftp.FtpDirEntry.FtpDirEntry_Permission) : Bool;
+	@:overload @:public public function canRead(p : sun.net.ftp.FtpDirEntry.FtpDirEntry_Permission) : Bool;
 	
 	/**
 	* Returns whether write access is granted for a specific permission.
@@ -151,7 +151,7 @@ extern class FtpDirEntry
 	* @param p the Permission (user, group, others) to check.
 	* @return {@code true} if write access is granted.
 	*/
-	@:overload public function canWrite(p : sun.net.ftp.FtpDirEntry.FtpDirEntry_Permission) : Bool;
+	@:overload @:public public function canWrite(p : sun.net.ftp.FtpDirEntry.FtpDirEntry_Permission) : Bool;
 	
 	/**
 	* Returns whether execute access is granted for a specific permission.
@@ -159,7 +159,7 @@ extern class FtpDirEntry
 	* @param p the Permission (user, group, others) to check.
 	* @return {@code true} if execute access is granted.
 	*/
-	@:overload public function canExexcute(p : sun.net.ftp.FtpDirEntry.FtpDirEntry_Permission) : Bool;
+	@:overload @:public public function canExexcute(p : sun.net.ftp.FtpDirEntry.FtpDirEntry_Permission) : Bool;
 	
 	/**
 	* Sets the permissions for that file. Intended mostly to be used
@@ -172,7 +172,7 @@ extern class FtpDirEntry
 	* @param permissions a 3x3 {@code boolean} array
 	* @return this {@code FtpDirEntry}
 	*/
-	@:overload public function setPermissions(permissions : java.NativeArray<java.NativeArray<Bool>>) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setPermissions(permissions : java.NativeArray<java.NativeArray<Bool>>) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Adds a 'fact', as defined in RFC 3659, to the list of facts of this file.
@@ -183,7 +183,7 @@ extern class FtpDirEntry
 	* @param value the value associated with this fact.
 	* @return this {@code FtpDirEntry}
 	*/
-	@:overload public function addFact(fact : String, value : String) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function addFact(fact : String, value : String) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns the requested 'fact', as defined in RFC 3659, if available.
@@ -192,7 +192,7 @@ extern class FtpDirEntry
 	* @return The value of the fact or, {@code null} if that fact wasn't
 	* provided by the server.
 	*/
-	@:overload public function getFact(fact : String) : String;
+	@:overload @:public public function getFact(fact : String) : String;
 	
 	/**
 	* Returns the creation time of the file, when provided by the server.
@@ -200,7 +200,7 @@ extern class FtpDirEntry
 	* @return The Date representing the creation time, or {@code null}
 	* if the server didn't provide that information.
 	*/
-	@:overload public function getCreated() : java.util.Date;
+	@:overload @:public public function getCreated() : java.util.Date;
 	
 	/**
 	* Sets the creation time for that file. Intended mostly to be used from
@@ -210,7 +210,7 @@ extern class FtpDirEntry
 	* {@code null} if that information is not available.
 	* @return this FtpDirEntry
 	*/
-	@:overload public function setCreated(created : java.util.Date) : sun.net.ftp.FtpDirEntry;
+	@:overload @:public public function setCreated(created : java.util.Date) : sun.net.ftp.FtpDirEntry;
 	
 	/**
 	* Returns a string representation of the object.
@@ -222,7 +222,7 @@ extern class FtpDirEntry
 	*
 	* @return  a string representation of the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

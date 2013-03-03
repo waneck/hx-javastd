@@ -25,23 +25,23 @@ package com.sun.corba.se.spi.protocol;
 */
 extern class RequestDispatcherDefault
 {
-	@:overload public static function makeClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
+	@:overload @:public @:static public static function makeClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 	
-	@:overload public static function makeServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public @:static public static function makeServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
-	@:overload public static function makeBootstrapServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public @:static public static function makeBootstrapServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
-	@:overload public static function makeINSServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
+	@:overload @:public @:static public static function makeINSServerRequestDispatcher(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher;
 	
-	@:overload public static function makeMinimalServantCacheLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
+	@:overload @:public @:static public static function makeMinimalServantCacheLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
 	
-	@:overload public static function makeInfoOnlyServantCacheLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
+	@:overload @:public @:static public static function makeInfoOnlyServantCacheLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
 	
-	@:overload public static function makeFullServantCacheLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
+	@:overload @:public @:static public static function makeFullServantCacheLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
 	
-	@:overload public static function makeJIDLLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
+	@:overload @:public @:static public static function makeJIDLLocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
 	
-	@:overload public static function makePOALocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
+	@:overload @:public @:static public static function makePOALocalClientRequestDispatcherFactory(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcherFactory;
 	
 	
 }

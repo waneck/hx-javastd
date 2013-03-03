@@ -40,7 +40,7 @@ extern interface PrintServiceAttributeListener
 	* or subsequent event notifications may be blocked.
 	* @param psae the event being notified
 	*/
-	@:overload public function attributeUpdate(psae : javax.print.event.PrintServiceAttributeEvent) : Void;
+	@:overload @:public public function attributeUpdate(psae : javax.print.event.PrintServiceAttributeEvent) : Void;
 	
 	
 }

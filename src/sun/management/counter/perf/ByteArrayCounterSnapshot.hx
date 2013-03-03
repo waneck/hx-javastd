@@ -28,11 +28,11 @@ package sun.management.counter.perf;
 */
 @:internal extern class ByteArrayCounterSnapshot extends sun.management.counter.AbstractCounter implements sun.management.counter.ByteArrayCounter
 {
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
-	@:overload public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function byteArrayValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function byteAt(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function byteAt(index : Int) : java.StdTypes.Int8;
 	
 	
 }

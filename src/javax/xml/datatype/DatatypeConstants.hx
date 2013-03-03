@@ -28,182 +28,182 @@ extern class DatatypeConstants
 	/**
 	* Value for first month of year.
 	*/
-	public static var JANUARY(default, null) : Int;
+	@:public @:static @:final public static var JANUARY(default, null) : Int;
 	
 	/**
 	* Value for second month of year.
 	*/
-	public static var FEBRUARY(default, null) : Int;
+	@:public @:static @:final public static var FEBRUARY(default, null) : Int;
 	
 	/**
 	* Value for third month of year.
 	*/
-	public static var MARCH(default, null) : Int;
+	@:public @:static @:final public static var MARCH(default, null) : Int;
 	
 	/**
 	* Value for fourth month of year.
 	*/
-	public static var APRIL(default, null) : Int;
+	@:public @:static @:final public static var APRIL(default, null) : Int;
 	
 	/**
 	* Value for fifth month of year.
 	*/
-	public static var MAY(default, null) : Int;
+	@:public @:static @:final public static var MAY(default, null) : Int;
 	
 	/**
 	* Value for sixth month of year.
 	*/
-	public static var JUNE(default, null) : Int;
+	@:public @:static @:final public static var JUNE(default, null) : Int;
 	
 	/**
 	* Value for seventh month of year.
 	*/
-	public static var JULY(default, null) : Int;
+	@:public @:static @:final public static var JULY(default, null) : Int;
 	
 	/**
 	* Value for eighth month of year.
 	*/
-	public static var AUGUST(default, null) : Int;
+	@:public @:static @:final public static var AUGUST(default, null) : Int;
 	
 	/**
 	* Value for ninth month of year.
 	*/
-	public static var SEPTEMBER(default, null) : Int;
+	@:public @:static @:final public static var SEPTEMBER(default, null) : Int;
 	
 	/**
 	* Value for tenth month of year.
 	*/
-	public static var OCTOBER(default, null) : Int;
+	@:public @:static @:final public static var OCTOBER(default, null) : Int;
 	
 	/**
 	* Value for eleven month of year.
 	*/
-	public static var NOVEMBER(default, null) : Int;
+	@:public @:static @:final public static var NOVEMBER(default, null) : Int;
 	
 	/**
 	* Value for twelve month of year.
 	*/
-	public static var DECEMBER(default, null) : Int;
+	@:public @:static @:final public static var DECEMBER(default, null) : Int;
 	
 	/**
 	* <p>Comparison result.</p>
 	*/
-	public static var LESSER(default, null) : Int;
+	@:public @:static @:final public static var LESSER(default, null) : Int;
 	
 	/**
 	* <p>Comparison result.</p>
 	*/
-	public static var EQUAL(default, null) : Int;
+	@:public @:static @:final public static var EQUAL(default, null) : Int;
 	
 	/**
 	* <p>Comparison result.</p>
 	*/
-	public static var GREATER(default, null) : Int;
+	@:public @:static @:final public static var GREATER(default, null) : Int;
 	
 	/**
 	* <p>Comparison result.</p>
 	*/
-	public static var INDETERMINATE(default, null) : Int;
+	@:public @:static @:final public static var INDETERMINATE(default, null) : Int;
 	
 	/**
 	* Designation that an "int" field is not set.
 	*/
-	public static var FIELD_UNDEFINED(default, null) : Int;
+	@:public @:static @:final public static var FIELD_UNDEFINED(default, null) : Int;
 	
 	/**
 	* <p>A constant that represents the years field.</p>
 	*/
-	public static var YEARS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
+	@:public @:static @:final public static var YEARS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the months field.</p>
 	*/
-	public static var MONTHS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
+	@:public @:static @:final public static var MONTHS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the days field.</p>
 	*/
-	public static var DAYS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
+	@:public @:static @:final public static var DAYS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the hours field.</p>
 	*/
-	public static var HOURS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
+	@:public @:static @:final public static var HOURS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the minutes field.</p>
 	*/
-	public static var MINUTES(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
+	@:public @:static @:final public static var MINUTES(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the seconds field.</p>
 	*/
-	public static var SECONDS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
+	@:public @:static @:final public static var SECONDS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>dateTime</code>.</p>
 	*/
-	public static var DATETIME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var DATETIME(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>time</code>.</p>
 	*/
-	public static var TIME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var TIME(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>date</code>.</p>
 	*/
-	public static var DATE(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var DATE(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>gYearMonth</code>.</p>
 	*/
-	public static var GYEARMONTH(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var GYEARMONTH(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>gMonthDay</code>.</p>
 	*/
-	public static var GMONTHDAY(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var GMONTHDAY(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>gYear</code>.</p>
 	*/
-	public static var GYEAR(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var GYEAR(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>gMonth</code>.</p>
 	*/
-	public static var GMONTH(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var GMONTH(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>gDay</code>.</p>
 	*/
-	public static var GDAY(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var GDAY(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema datatype <code>duration</code>.</p>
 	*/
-	public static var DURATION(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var DURATION(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for XQuery 1.0 and XPath 2.0 datatype <code>dayTimeDuration</code>.</p>
 	*/
-	public static var DURATION_DAYTIME(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var DURATION_DAYTIME(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>Fully qualified name for XQuery 1.0 and XPath 2.0 datatype <code>yearMonthDuration</code>.</p>
 	*/
-	public static var DURATION_YEARMONTH(default, null) : javax.xml.namespace.QName;
+	@:public @:static @:final public static var DURATION_YEARMONTH(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* W3C XML Schema max timezone offset is -14:00. Zone offset is in minutes.
 	*/
-	public static var MAX_TIMEZONE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var MAX_TIMEZONE_OFFSET(default, null) : Int;
 	
 	/**
 	* W3C XML Schema min timezone offset is +14:00. Zone offset is in minutes.
 	*/
-	public static var MIN_TIMEZONE_OFFSET(default, null) : Int;
+	@:public @:static @:final public static var MIN_TIMEZONE_OFFSET(default, null) : Int;
 	
 	
 }
@@ -222,14 +222,14 @@ extern class DatatypeConstants
 	* @return
 	*      a non-null valid String constant.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* <p>Get id of this Field.</p>
 	*
 	* @return Id of field.
 	*/
-	@:overload public function getId() : Int;
+	@:overload @:public public function getId() : Int;
 	
 	
 }

@@ -23,7 +23,7 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 @:internal extern class HashtableEntry
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }
@@ -33,58 +33,58 @@ extern class Hashtable
 	* Constructs a new, empty hashtable with the specified initial
 	* capacity and the specified load factor.
 	*/
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with the specified initial capacity
 	* and default load factor.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a new, empty hashtable with a default capacity and load
 	* factor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the number of keys in this hashtable.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Tests if this hashtable maps no keys to values.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the keys in this hashtable.
 	*/
-	@:overload public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns an enumeration of the values in this hashtable.
 	* Use the Enumeration methods on the returned object to fetch the elements
 	* sequentially.
 	*/
-	@:overload public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function elements() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Tests if some key maps into the specified value in this hashtable.
 	* This operation is more expensive than the <code>containsKey</code>
 	* method.
 	*/
-	@:overload public function contains(value : Dynamic) : Bool;
+	@:overload @:public public function contains(value : Dynamic) : Bool;
 	
 	/**
 	* Tests if the specified object is a key in this hashtable.
 	*/
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped in this hashtable.
 	*/
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Rehashes the contents of the hashtable into a hashtable with a
@@ -92,7 +92,7 @@ extern class Hashtable
 	* number of keys in the hashtable exceeds this hashtable's capacity
 	* and load factor.
 	*/
-	@:overload private function rehash() : Void;
+	@:overload @:protected private function rehash() : Void;
 	
 	/**
 	* Maps the specified <code>key</code> to the specified
@@ -102,24 +102,24 @@ extern class Hashtable
 	* The value can be retrieved by calling the <code>get</code> method
 	* with a key that is equal to the original key.
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the key (and its corresponding value) from this
 	* hashtable. This method does nothing if the key is not in the hashtable.
 	*/
-	@:overload public function remove(key : Dynamic) : Dynamic;
+	@:overload @:public public function remove(key : Dynamic) : Dynamic;
 	
 	/**
 	* Clears this hashtable so that it contains no keys.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns a rather long string representation of this hashtable.
 	* Handy for debugging - leave it here!!!
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -129,9 +129,9 @@ extern class Hashtable
 */
 @:native('com$sun$org$apache$xalan$internal$xsltc$runtime$Hashtable$HashtableEnumerator') @:internal extern class Hashtable_HashtableEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class ConstantPoolParser
 	* @param classFile an array of bytes containing a class.
 	* @throws InvalidConstantPoolFormatException if the header of the class has errors.
 	*/
-	@:overload public function new(classFile : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(classFile : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** Create a constant pool parser by loading the bytecodes of the
 	*  class taken as argument.
@@ -45,44 +45,44 @@ extern class ConstantPoolParser
 	* @see #ConstantPoolParser(byte[])
 	* @see AnonymousClassLoader#readClassFile(Class)
 	*/
-	@:overload public function new(templateClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(templateClass : Class<Dynamic>) : Void;
 	
 	/** Creates an empty patch to patch the class file
 	*  used by the current parser.
 	* @return a new class patch.
 	*/
-	@:overload public function createPatch() : sun.invoke.anon.ConstantPoolPatch;
+	@:overload @:public public function createPatch() : sun.invoke.anon.ConstantPoolPatch;
 	
 	/** Report the tag of the indicated CP entry.
 	* @param index
 	* @return one of {@link ConstantPoolVisitor#CONSTANT_Utf8}, etc.
 	*/
-	@:overload public function getTag(index : Int) : java.StdTypes.Int8;
+	@:overload @:public public function getTag(index : Int) : java.StdTypes.Int8;
 	
 	/** Report the length of the constant pool. */
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/** Report the offset, within the class file, of the start of the constant pool. */
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public public function getStartOffset() : Int;
 	
 	/** Report the offset, within the class file, of the end of the constant pool. */
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public public function getEndOffset() : Int;
 	
 	/** Report the CP index of this class's own name. */
-	@:overload public function getThisClassIndex() : Int;
+	@:overload @:public public function getThisClassIndex() : Int;
 	
 	/** Report the total size of the class file. */
-	@:overload public function getTailLength() : Int;
+	@:overload @:public public function getTailLength() : Int;
 	
 	/** Write the head (header plus constant pool)
 	*  of the class file to the indicated stream.
 	*/
-	@:overload public function writeHead(out : java.io.OutputStream) : Void;
+	@:overload @:public public function writeHead(out : java.io.OutputStream) : Void;
 	
 	/** Write the tail (everything after the constant pool)
 	*  of the class file to the indicated stream.
 	*/
-	@:overload public function writeTail(out : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTail(out : java.io.OutputStream) : Void;
 	
 	/** Parse the constant pool of the class
 	*  calling a method visit* each time a constant pool entry is parsed.
@@ -93,7 +93,7 @@ extern class ConstantPoolParser
 	* @param visitor
 	* @throws InvalidConstantPoolFormatException
 	*/
-	@:overload public function parse(visitor : sun.invoke.anon.ConstantPoolVisitor) : Void;
+	@:overload @:public public function parse(visitor : sun.invoke.anon.ConstantPoolVisitor) : Void;
 	
 	
 }

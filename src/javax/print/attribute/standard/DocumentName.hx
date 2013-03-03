@@ -37,7 +37,7 @@ extern class DocumentName extends javax.print.attribute.TextSyntax implements ja
 	* @exception  NullPointerException
 	*   (unchecked exception) Thrown if <CODE>documentName</CODE> is null.
 	*/
-	@:overload public function new(documentName : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(documentName : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns whether this document name attribute is equivalent to the
@@ -61,7 +61,7 @@ extern class DocumentName extends javax.print.attribute.TextSyntax implements ja
 	* @return  True if <CODE>object</CODE> is equivalent to this document
 	*          name attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -72,7 +72,7 @@ extern class DocumentName extends javax.print.attribute.TextSyntax implements ja
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -82,7 +82,7 @@ extern class DocumentName extends javax.print.attribute.TextSyntax implements ja
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

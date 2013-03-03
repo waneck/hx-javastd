@@ -32,7 +32,7 @@ extern interface SSLSessionBindingListener extends java.util.EventListener
 	* @param event the event identifying the SSLSession into
 	*          which the listener is being bound.
 	*/
-	@:overload public function valueBound(event : javax.net.ssl.SSLSessionBindingEvent) : Void;
+	@:overload @:public public function valueBound(event : javax.net.ssl.SSLSessionBindingEvent) : Void;
 	
 	/**
 	* This is called to notify the listener that it is being unbound
@@ -41,7 +41,7 @@ extern interface SSLSessionBindingListener extends java.util.EventListener
 	* @param event the event identifying the SSLSession from
 	*          which the listener is being unbound.
 	*/
-	@:overload public function valueUnbound(event : javax.net.ssl.SSLSessionBindingEvent) : Void;
+	@:overload @:public public function valueUnbound(event : javax.net.ssl.SSLSessionBindingEvent) : Void;
 	
 	
 }

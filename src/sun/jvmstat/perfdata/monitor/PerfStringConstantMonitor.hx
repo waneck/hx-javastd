@@ -33,17 +33,17 @@ extern class PerfStringConstantMonitor extends sun.jvmstat.perfdata.monitor.Perf
 	* @param supported support level indicator
 	* @param bb the buffer containing the string instrument data
 	*/
-	@:overload public function new(name : String, supported : Bool, bb : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(name : String, supported : Bool, bb : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function stringValue() : String;
+	@:overload @:public override public function stringValue() : String;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class Krb5Util
 	*
 	* NOTE: This method is used by JSSE Kerberos Cipher Suites
 	*/
-	@:overload public static function getTicketFromSubjectAndTgs(caller : sun.security.jgss.GSSCaller, clientPrincipal : String, serverPrincipal : String, tgsPrincipal : String, acc : java.security.AccessControlContext) : javax.security.auth.kerberos.KerberosTicket;
+	@:overload @:public @:static public static function getTicketFromSubjectAndTgs(caller : sun.security.jgss.GSSCaller, clientPrincipal : String, serverPrincipal : String, tgsPrincipal : String, acc : java.security.AccessControlContext) : javax.security.auth.kerberos.KerberosTicket;
 	
 	/**
 	* Retrieves the caller's Subject, or Subject obtained by logging in
@@ -50,7 +50,7 @@ extern class Krb5Util
 	*
 	* NOTE: This method is used by JSSE Kerberos Cipher Suites
 	*/
-	@:overload public static function getSubject(caller : sun.security.jgss.GSSCaller, acc : java.security.AccessControlContext) : javax.security.auth.Subject;
+	@:overload @:public @:static public static function getSubject(caller : sun.security.jgss.GSSCaller, acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
 	/**
 	* Retrieves the ServiceCreds for the specified server principal from
@@ -59,11 +59,11 @@ extern class Krb5Util
 	*
 	* NOTE: This method is also used by JSSE Kerberos Cipher Suites
 	*/
-	@:overload public static function getServiceCreds(caller : sun.security.jgss.GSSCaller, serverPrincipal : String, acc : java.security.AccessControlContext) : sun.security.jgss.krb5.Krb5Util.Krb5Util_ServiceCreds;
+	@:overload @:public @:static public static function getServiceCreds(caller : sun.security.jgss.GSSCaller, serverPrincipal : String, acc : java.security.AccessControlContext) : sun.security.jgss.krb5.Krb5Util.Krb5Util_ServiceCreds;
 	
-	@:overload public static function credsToTicket(serviceCreds : sun.security.krb5.Credentials) : javax.security.auth.kerberos.KerberosTicket;
+	@:overload @:public @:static public static function credsToTicket(serviceCreds : sun.security.krb5.Credentials) : javax.security.auth.kerberos.KerberosTicket;
 	
-	@:overload public static function ticketToCreds(kerbTicket : javax.security.auth.kerberos.KerberosTicket) : sun.security.krb5.Credentials;
+	@:overload @:public @:static public static function ticketToCreds(kerbTicket : javax.security.auth.kerberos.KerberosTicket) : sun.security.krb5.Credentials;
 	
 	/**
 	* A helper method to get EncryptionKeys from a javax..KeyTab
@@ -71,13 +71,13 @@ extern class Krb5Util
 	* @param cname the PrincipalName
 	* @return the EKeys, never null, might be empty
 	*/
-	@:overload public static function keysFromJavaxKeyTab(ktab : javax.security.auth.kerberos.KeyTab, cname : sun.security.krb5.PrincipalName) : java.NativeArray<sun.security.krb5.EncryptionKey>;
+	@:overload @:public @:static public static function keysFromJavaxKeyTab(ktab : javax.security.auth.kerberos.KeyTab, cname : sun.security.krb5.PrincipalName) : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
 	
 }
 @:native('sun$security$jgss$krb5$Krb5Util$KeysFromKeyTab') extern class Krb5Util_KeysFromKeyTab extends javax.security.auth.kerberos.KerberosKey
 {
-	@:overload public function new(key : javax.security.auth.kerberos.KerberosKey) : Void;
+	@:overload @:public public function new(key : javax.security.auth.kerberos.KerberosKey) : Void;
 	
 	
 }
@@ -96,13 +96,13 @@ extern class Krb5Util
 */
 @:native('sun$security$jgss$krb5$Krb5Util$ServiceCreds') extern class Krb5Util_ServiceCreds
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getKKeys() : java.NativeArray<javax.security.auth.kerberos.KerberosKey>;
+	@:overload @:public public function getKKeys() : java.NativeArray<javax.security.auth.kerberos.KerberosKey>;
 	
-	@:overload public function getEKeys() : java.NativeArray<sun.security.krb5.EncryptionKey>;
+	@:overload @:public public function getEKeys() : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
-	@:overload public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	
 }

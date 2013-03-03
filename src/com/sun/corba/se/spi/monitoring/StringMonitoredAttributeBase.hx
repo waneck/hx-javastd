@@ -51,7 +51,7 @@ extern class StringMonitoredAttributeBase extends com.sun.corba.se.spi.monitorin
 	* @return a StringMonitoredAttributeBase
 	* </p>
 	*/
-	@:overload public function new(name : String, description : String) : Void;
+	@:overload @:public public function new(name : String, description : String) : Void;
 	
 	
 }

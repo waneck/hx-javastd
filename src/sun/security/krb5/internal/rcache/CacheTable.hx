@@ -29,14 +29,14 @@ package sun.security.krb5.internal.rcache;
 */
 extern class CacheTable extends java.util.Hashtable<String, sun.security.krb5.internal.rcache.ReplayCache>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Puts the client timestamp in replay cache.
 	* @params principal the client's principal name.
 	* @params time authenticator timestamp.
 	*/
-	@:overload @:synchronized public function put(principal : String, time : sun.security.krb5.internal.rcache.AuthTime, currTime : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function put(principal : String, time : sun.security.krb5.internal.rcache.AuthTime, currTime : haxe.Int64) : Void;
 	
 	/**
 	* This method tests if replay cache keeps a record of the authenticator's time stamp.
@@ -45,7 +45,7 @@ extern class CacheTable extends java.util.Hashtable<String, sun.security.krb5.in
 	* @params time authenticator timestamp.
 	* @return null if no record found, else return an <code>AuthTime</code> object.
 	*/
-	@:overload public function get(time : sun.security.krb5.internal.rcache.AuthTime, principal : String) : Dynamic;
+	@:overload @:public public function get(time : sun.security.krb5.internal.rcache.AuthTime, principal : String) : Dynamic;
 	
 	
 }

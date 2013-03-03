@@ -27,33 +27,33 @@ package sun.nio.cs.ext;
 */
 extern class SimpleEUCEncoder extends java.nio.charset.CharsetEncoder
 {
-	private var index1 : java.NativeArray<java.StdTypes.Int16>;
+	@:protected private var index1 : java.NativeArray<java.StdTypes.Int16>;
 	
-	private var index2 : String;
+	@:protected private var index2 : String;
 	
-	private var index2a : String;
+	@:protected private var index2a : String;
 	
-	private var index2b : String;
+	@:protected private var index2b : String;
 	
-	private var index2c : String;
+	@:protected private var index2c : String;
 	
-	private var mask1 : Int;
+	@:protected private var mask1 : Int;
 	
-	private var mask2 : Int;
+	@:protected private var mask2 : Int;
 	
-	private var shift : Int;
+	@:protected private var shift : Int;
 	
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
 	/**
 	* Returns true if the given character can be converted to the
 	* target character encoding.
 	*/
-	@:overload override public function canEncode(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload public function encode(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload @:public public function encode(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
 	
 }

@@ -28,12 +28,12 @@ extern class CatchData
 	/**
 	* Get the label
 	*/
-	@:overload public function getLabel() : sun.tools.asm.Label;
+	@:overload @:public public function getLabel() : sun.tools.asm.Label;
 	
 	/**
 	* Get the clazz
 	*/
-	@:overload public function getType() : Dynamic;
+	@:overload @:public public function getType() : Dynamic;
 	
 	
 }

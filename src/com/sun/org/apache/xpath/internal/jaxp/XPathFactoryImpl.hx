@@ -21,11 +21,11 @@ package com.sun.org.apache.xpath.internal.jaxp;
 //// $Id: XPathFactoryImpl.java,v 1.2 2005/08/16 22:41:13 jeffsuttor Exp $
 extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public static function newXPathFactoryNoServiceLoader() : javax.xml.xpath.XPathFactory;
+	@:overload @:public @:static public static function newXPathFactoryNoServiceLoader() : javax.xml.xpath.XPathFactory;
 	
-	@:overload public function new(useServicesMechanism : Bool) : Void;
+	@:overload @:public public function new(useServicesMechanism : Bool) : Void;
 	
 	/**
 	* <p>Is specified object model supported by this
@@ -40,7 +40,7 @@ extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 	* @throws NullPointerException If <code>objectModel</code> is <code>null</code>.
 	* @throws IllegalArgumentException If <code>objectModel.length() == 0</code>.
 	*/
-	@:overload override public function isObjectModelSupported(objectModel : String) : Bool;
+	@:overload @:public override public function isObjectModelSupported(objectModel : String) : Bool;
 	
 	/**
 	* <p>Returns a new <code>XPath</code> object using the underlying
@@ -48,7 +48,7 @@ extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 	*
 	* @return New <code>XPath</code>
 	*/
-	@:overload override public function newXPath() : javax.xml.xpath.XPath;
+	@:overload @:public override public function newXPath() : javax.xml.xpath.XPath;
 	
 	/**
 	* <p>Set a feature for this <code>XPathFactory</code> and
@@ -76,7 +76,7 @@ extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 	* @throws NullPointerException if <code>name</code> is
 	* <code>null</code>.
 	*/
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public override public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* <p>Get the state of the named feature.</p>
@@ -101,7 +101,7 @@ extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 	* @throws NullPointerException if <code>name</code> is
 	* <code>null</code>.
 	*/
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload @:public override public function getFeature(name : String) : Bool;
 	
 	/**
 	* <p>Establish a default function resolver.</p>
@@ -117,7 +117,7 @@ extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 	* @throws NullPointerException If <code>resolver</code> is
 	* <code>null</code>.
 	*/
-	@:overload override public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
+	@:overload @:public override public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
 	
 	/**
 	* <p>Establish a default variable resolver.</p>
@@ -132,7 +132,7 @@ extern class XPathFactoryImpl extends javax.xml.xpath.XPathFactory
 	*  @throws NullPointerException If <code>resolver</code> is
 	* <code>null</code>.
 	*/
-	@:overload override public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
+	@:overload @:public override public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
 	
 }

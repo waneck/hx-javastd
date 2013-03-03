@@ -33,7 +33,7 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	* @param packages list of package names specified on the commandline
 	* @param options list of options
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, classes : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl>, packages : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, classes : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl>, packages : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>) : Void;
 	
 	/**
 	* Constructor used when reading class files.
@@ -42,7 +42,7 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	* @param classes list of class names specified on the commandline
 	* @param options list of options
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, classes : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, classes : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>) : Void;
 	
 	/**
 	* Command line options.
@@ -61,23 +61,23 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	*
 	* @return an array of arrays of String.
 	*/
-	@:overload public function options() : java.NativeArray<java.NativeArray<String>>;
+	@:overload @:public public function options() : java.NativeArray<java.NativeArray<String>>;
 	
 	/**
 	* Packages specified on the command line.
 	*/
-	@:overload public function specifiedPackages() : java.NativeArray<com.sun.javadoc.PackageDoc>;
+	@:overload @:public public function specifiedPackages() : java.NativeArray<com.sun.javadoc.PackageDoc>;
 	
 	/**
 	* Classes and interfaces specified on the command line.
 	*/
-	@:overload public function specifiedClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function specifiedClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return all classes and interfaces (including those inside
 	* packages) to be documented.
 	*/
-	@:overload public function classes() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function classes() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return a ClassDoc for the specified class/interface name
@@ -88,7 +88,7 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	* @return a ClassDocImpl holding the specified class, null if
 	* this class is not referenced.
 	*/
-	@:overload public function classNamed(qualifiedName : String) : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function classNamed(qualifiedName : String) : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return a PackageDoc for the specified package name
@@ -98,85 +98,85 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	* @return a PackageDoc holding the specified package, null if
 	* this package is not referenced.
 	*/
-	@:overload public function packageNamed(name : String) : com.sun.javadoc.PackageDoc;
+	@:overload @:public public function packageNamed(name : String) : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* Return the name of this Doc item.
 	*
 	* @return the string <code>"*RootDocImpl*"</code>.
 	*/
-	@:overload public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Return the name of this Doc item.
 	*
 	* @return the string <code>"*RootDocImpl*"</code>.
 	*/
-	@:overload public function qualifiedName() : String;
+	@:overload @:public override public function qualifiedName() : String;
 	
 	/**
 	* Return true if this Doc is include in the active set.
 	* RootDocImpl isn't even a program entity so it is always false.
 	*/
-	@:overload public function isIncluded() : Bool;
+	@:overload @:public override public function isIncluded() : Bool;
 	
 	/**
 	* Print error message, increment error count.
 	*
 	* @param msg message to print
 	*/
-	@:overload public function printError(msg : String) : Void;
+	@:overload @:public public function printError(msg : String) : Void;
 	
 	/**
 	* Print error message, increment error count.
 	*
 	* @param msg message to print
 	*/
-	@:overload public function printError(pos : com.sun.javadoc.SourcePosition, msg : String) : Void;
+	@:overload @:public public function printError(pos : com.sun.javadoc.SourcePosition, msg : String) : Void;
 	
 	/**
 	* Print warning message, increment warning count.
 	*
 	* @param msg message to print
 	*/
-	@:overload public function printWarning(msg : String) : Void;
+	@:overload @:public public function printWarning(msg : String) : Void;
 	
 	/**
 	* Print warning message, increment warning count.
 	*
 	* @param msg message to print
 	*/
-	@:overload public function printWarning(pos : com.sun.javadoc.SourcePosition, msg : String) : Void;
+	@:overload @:public public function printWarning(pos : com.sun.javadoc.SourcePosition, msg : String) : Void;
 	
 	/**
 	* Print a message.
 	*
 	* @param msg message to print
 	*/
-	@:overload public function printNotice(msg : String) : Void;
+	@:overload @:public public function printNotice(msg : String) : Void;
 	
 	/**
 	* Print a message.
 	*
 	* @param msg message to print
 	*/
-	@:overload public function printNotice(pos : com.sun.javadoc.SourcePosition, msg : String) : Void;
+	@:overload @:public public function printNotice(pos : com.sun.javadoc.SourcePosition, msg : String) : Void;
 	
 	/**
 	* Do lazy initialization of "documentation" string.
 	*/
-	@:overload private function documentation() : String;
+	@:overload @:protected override private function documentation() : String;
 	
 	/**
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public override public function position() : com.sun.javadoc.SourcePosition;
 	
 	/**
 	* Return the locale provided by the user or the default locale value.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	
 }

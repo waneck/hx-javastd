@@ -55,44 +55,44 @@ package java.awt.event;
 	/**
 	* Invoked when a window has been opened.
 	*/
-	@:overload public function windowOpened(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowOpened(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is in the process of being closed.
 	* The close operation can be overridden at this point.
 	*/
-	@:overload public function windowClosing(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosing(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window has been closed.
 	*/
-	@:overload public function windowClosed(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosed(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is iconified.
 	*/
-	@:overload public function windowIconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowIconified(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is de-iconified.
 	*/
-	@:overload public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is activated.
 	*/
-	@:overload public function windowActivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowActivated(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is de-activated.
 	*/
-	@:overload public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window state is changed.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function windowStateChanged(e : java.awt.event.WindowEvent) : Void;
+	@:require(java4) @:overload @:public public function windowStateChanged(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when the Window is set to be the focused Window, which means
@@ -101,7 +101,7 @@ package java.awt.event;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function windowGainedFocus(e : java.awt.event.WindowEvent) : Void;
+	@:require(java4) @:overload @:public public function windowGainedFocus(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when the Window is no longer the focused Window, which means
@@ -110,7 +110,7 @@ package java.awt.event;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function windowLostFocus(e : java.awt.event.WindowEvent) : Void;
+	@:require(java4) @:overload @:public public function windowLostFocus(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }

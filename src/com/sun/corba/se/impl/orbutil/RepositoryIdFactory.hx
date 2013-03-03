@@ -28,12 +28,12 @@ extern class RepositoryIdFactory
 	/**
 	* Returns the latest version RepositoryIdStrings instance
 	*/
-	@:overload public static function getRepIdStringsFactory() : com.sun.corba.se.impl.orbutil.RepositoryIdStrings;
+	@:overload @:public @:static public static function getRepIdStringsFactory() : com.sun.corba.se.impl.orbutil.RepositoryIdStrings;
 	
 	/**
 	* Returns the latest version RepositoryIdUtility instance
 	*/
-	@:overload public static function getRepIdUtility() : com.sun.corba.se.impl.orbutil.RepositoryIdUtility;
+	@:overload @:public @:static public static function getRepIdUtility() : com.sun.corba.se.impl.orbutil.RepositoryIdUtility;
 	
 	
 }

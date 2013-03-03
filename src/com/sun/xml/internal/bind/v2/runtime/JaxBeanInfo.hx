@@ -28,42 +28,42 @@ extern class JaxBeanInfo<BeanT>
 	/**
 	* For {@link JaxBeanInfo} that has multiple type names.
 	*/
-	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, rti : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo, jaxbType : Class<BeanT>, typeNames : java.NativeArray<javax.xml.namespace.QName>, isElement : Bool, isImmutable : Bool, hasLifecycleEvents : Bool) : Void;
+	@:overload @:protected private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, rti : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo, jaxbType : Class<BeanT>, typeNames : java.NativeArray<javax.xml.namespace.QName>, isElement : Bool, isImmutable : Bool, hasLifecycleEvents : Bool) : Void;
 	
 	/**
 	* For {@link JaxBeanInfo} that has one type name.
 	*/
-	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, rti : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo, jaxbType : Class<BeanT>, typeName : javax.xml.namespace.QName, isElement : Bool, isImmutable : Bool, hasLifecycleEvents : Bool) : Void;
+	@:overload @:protected private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, rti : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo, jaxbType : Class<BeanT>, typeName : javax.xml.namespace.QName, isElement : Bool, isImmutable : Bool, hasLifecycleEvents : Bool) : Void;
 	
 	/**
 	* For {@link JaxBeanInfo} that has no type names.
 	*/
-	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, rti : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo, jaxbType : Class<BeanT>, isElement : Bool, isImmutable : Bool, hasLifecycleEvents : Bool) : Void;
+	@:overload @:protected private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, rti : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfo, jaxbType : Class<BeanT>, isElement : Bool, isImmutable : Bool, hasLifecycleEvents : Bool) : Void;
 	
 	/**
 	* Various boolean flags combined into one field to improve memory footprint.
 	*/
-	private var flag : java.StdTypes.Int16;
+	@:protected private var flag : java.StdTypes.Int16;
 	
 	/**
 	* True if {@link #jaxbType} has the  lifecycle method.
 	*/
-	@:overload @:final public function hasBeforeUnmarshalMethod() : Bool;
+	@:overload @:public @:final public function hasBeforeUnmarshalMethod() : Bool;
 	
 	/**
 	* True if {@link #jaxbType} has the  lifecycle method.
 	*/
-	@:overload @:final public function hasAfterUnmarshalMethod() : Bool;
+	@:overload @:public @:final public function hasAfterUnmarshalMethod() : Bool;
 	
 	/**
 	* True if {@link #jaxbType} has the  lifecycle method.
 	*/
-	@:overload @:final public function hasBeforeMarshalMethod() : Bool;
+	@:overload @:public @:final public function hasBeforeMarshalMethod() : Bool;
 	
 	/**
 	* True if {@link #jaxbType} has the  lifecycle method.
 	*/
-	@:overload @:final public function hasAfterMarshalMethod() : Bool;
+	@:overload @:public @:final public function hasAfterMarshalMethod() : Bool;
 	
 	/**
 	* Gets the JAXB bound class type that this {@link JaxBeanInfo}
@@ -74,7 +74,7 @@ extern class JaxBeanInfo<BeanT>
 	* sometimes the bean info for one of its base classes might be
 	* returned.
 	*/
-	public var jaxbType(default, null) : Class<BeanT>;
+	@:public @:final public var jaxbType(default, null) : Class<BeanT>;
 	
 	/**
 	* Returns true if the bean is mapped to/from an XML element.
@@ -84,7 +84,7 @@ extern class JaxBeanInfo<BeanT>
 	* and {@link #getElementLocalName(Object)} returns the element name of
 	* the bean.
 	*/
-	@:overload @:final public function isElement() : Bool;
+	@:overload @:public @:final public function isElement() : Bool;
 	
 	/**
 	* Returns true if the bean is immutable.
@@ -93,7 +93,7 @@ extern class JaxBeanInfo<BeanT>
 	* If this is true, Binder won't try to ueuse this object, and the unmarshaller
 	* won't create a new instance of it before it starts.
 	*/
-	@:overload @:final public function isImmutable() : Bool;
+	@:overload @:public @:final public function isImmutable() : Bool;
 	
 	/**
 	* True if this bean has an element-only content model.
@@ -101,7 +101,7 @@ extern class JaxBeanInfo<BeanT>
 	* If this flag is true, the unmarshaller can work
 	* faster by ignoring whitespaces more efficiently.
 	*/
-	@:overload @:final public function hasElementOnlyContentModel() : Bool;
+	@:overload @:public @:final public function hasElementOnlyContentModel() : Bool;
 	
 	/**
 	* True if this bean has an element-only content model.
@@ -109,9 +109,9 @@ extern class JaxBeanInfo<BeanT>
 	* Should be considered immutable, though I can't mark it final
 	* because it cannot be computed in this constructor.
 	*/
-	@:overload @:final private function hasElementOnlyContentModel(value : Bool) : Void;
+	@:overload @:protected @:final private function hasElementOnlyContentModel(value : Bool) : Void;
 	
-	@:overload public function isNilIncluded() : Bool;
+	@:overload @:public public function isNilIncluded() : Bool;
 	
 	/**
 	* This method is used to determine which of the sub-classes should be
@@ -120,7 +120,7 @@ extern class JaxBeanInfo<BeanT>
 	* @return true if the un|marshaller should look for lifecycle methods
 	*         on this beanInfo, false otherwise.
 	*/
-	@:overload public function lookForLifecycleMethods() : Bool;
+	@:overload @:public public function lookForLifecycleMethods() : Bool;
 	
 	/**
 	* Returns the namespace URI portion of the element name,
@@ -130,7 +130,7 @@ extern class JaxBeanInfo<BeanT>
 	* @throws UnsupportedOperationException
 	*      if {@link #isElement} is false.
 	*/
-	@:overload @:abstract public function getElementNamespaceURI(o : BeanT) : String;
+	@:overload @:public @:abstract public function getElementNamespaceURI(o : BeanT) : String;
 	
 	/**
 	* Returns the local name portion of the element name,
@@ -140,7 +140,7 @@ extern class JaxBeanInfo<BeanT>
 	* @throws UnsupportedOperationException
 	*      if {@link #isElement} is false.
 	*/
-	@:overload @:abstract public function getElementLocalName(o : BeanT) : String;
+	@:overload @:public @:abstract public function getElementLocalName(o : BeanT) : String;
 	
 	/**
 	* Returns XML Schema type names if the bean is mapped from
@@ -160,7 +160,7 @@ extern class JaxBeanInfo<BeanT>
 	*
 	* <p>
 	*/
-	@:overload public function getTypeNames() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public public function getTypeNames() : java.util.Collection<javax.xml.namespace.QName>;
 	
 	/**
 	* Returns the XML type name to be used to marshal the specified instance.
@@ -170,7 +170,7 @@ extern class JaxBeanInfo<BeanT>
 	* instance, but there's a few exceptions (most notably {@link XMLGregorianCalendar}),
 	* so as a general rule we need an instance to determine it.
 	*/
-	@:overload public function getTypeName(instance : BeanT) : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName(instance : BeanT) : javax.xml.namespace.QName;
 	
 	/**
 	* Creates a new instance of the bean.
@@ -181,7 +181,7 @@ extern class JaxBeanInfo<BeanT>
 	* @param context
 	*      Sometimes the created bean remembers the corresponding source location,
 	*/
-	@:overload @:abstract public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : BeanT;
+	@:overload @:public @:abstract public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : BeanT;
 	
 	/**
 	* Resets the object to the initial state, as if the object
@@ -204,23 +204,23 @@ extern class JaxBeanInfo<BeanT>
 	* @throws SAXException
 	*      as a result of reporting an error, the context may throw a {@link SAXException}.
 	*/
-	@:overload @:abstract public function reset(o : BeanT, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
+	@:overload @:public @:abstract public function reset(o : BeanT, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
 	
 	/**
 	* Gets the ID value of the given bean, if it has an ID value.
 	* Otherwise return null.
 	*/
-	@:overload @:abstract public function getId(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
+	@:overload @:public @:abstract public function getId(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
 	
 	/**
 	* Serializes child elements and texts into the specified target.
 	*/
-	@:overload @:abstract public function serializeBody(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:abstract public function serializeBody(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Serializes attributes into the specified target.
 	*/
-	@:overload @:abstract public function serializeAttributes(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:abstract public function serializeAttributes(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Serializes the bean as the root element.
@@ -242,13 +242,13 @@ extern class JaxBeanInfo<BeanT>
 	* <p>
 	* For schema-to-java, this is equivalent to {@link #serializeBody(Object, XMLSerializer)}.
 	*/
-	@:overload @:abstract public function serializeRoot(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:abstract public function serializeRoot(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Declares all the namespace URIs this object is using at
 	* its top-level scope into the specified target.
 	*/
-	@:overload @:abstract public function serializeURIs(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:abstract public function serializeURIs(o : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Gets the {@link Loader} that will unmarshall the given object.
@@ -269,49 +269,49 @@ extern class JaxBeanInfo<BeanT>
 	* @return
 	*      must return non-null valid object
 	*/
-	@:overload @:abstract public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:public @:abstract public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
 	/**
 	* If the bean's representation in XML is just a text,
 	* this method return a {@link Transducer} that lets you convert
 	* values between the text and the bean.
 	*/
-	@:overload @:abstract public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<BeanT>;
+	@:overload @:public @:abstract public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<BeanT>;
 	
 	/**
 	* Called after all the {@link JaxBeanInfo}s are created.
 	* @param grammar
 	*/
-	@:overload private function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
+	@:overload @:protected private function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
 	/**
 	* Called at the end of the {@link JAXBContext} initialization phase
 	* to clean up any unnecessary references.
 	*/
-	@:overload public function wrapUp() : Void;
+	@:overload @:public public function wrapUp() : Void;
 	
 	/**
 	* use reflection to determine which of the 4 object lifecycle methods exist on
 	* the JAXB bound type.
 	*/
-	@:overload @:final private function setLifecycleFlags() : Void;
+	@:overload @:protected @:final private function setLifecycleFlags() : Void;
 	
 	/**
 	* Return the LifecycleMethods cache for this ClassBeanInfo's corresponding
 	* jaxbType if it exists, else return null.
 	*
 	*/
-	@:overload @:final public function getLifecycleMethods() : com.sun.xml.internal.bind.v2.runtime.LifecycleMethods;
+	@:overload @:public @:final public function getLifecycleMethods() : com.sun.xml.internal.bind.v2.runtime.LifecycleMethods;
 	
 	/**
 	* Invokes the beforeUnmarshal method if applicable.
 	*/
-	@:overload @:final public function invokeBeforeUnmarshalMethod(unm : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl, child : Dynamic, parent : Dynamic) : Void;
+	@:overload @:public @:final public function invokeBeforeUnmarshalMethod(unm : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl, child : Dynamic, parent : Dynamic) : Void;
 	
 	/**
 	* Invokes the afterUnmarshal method if applicable.
 	*/
-	@:overload @:final public function invokeAfterUnmarshalMethod(unm : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl, child : Dynamic, parent : Dynamic) : Void;
+	@:overload @:public @:final public function invokeAfterUnmarshalMethod(unm : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl, child : Dynamic, parent : Dynamic) : Void;
 	
 	
 }

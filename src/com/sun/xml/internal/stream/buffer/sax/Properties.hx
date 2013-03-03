@@ -25,7 +25,7 @@ package com.sun.xml.internal.stream.buffer.sax;
 */
 extern class Properties
 {
-	public static var LEXICAL_HANDLER_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var LEXICAL_HANDLER_PROPERTY(default, null) : String;
 	
 	
 }

@@ -62,19 +62,19 @@ extern class Factories
 {
 	/** Return the implementation of the GenFactory interface.  If this
 	returns null, then the compiler cannot generate anything. */
-	@:overload public function genFactory() : com.sun.tools.corba.se.idl.GenFactory;
+	@:overload @:public public function genFactory() : com.sun.tools.corba.se.idl.GenFactory;
 	
 	/** Return the implementation of the SymtabFactory interface.  If this
 	returns null, the default symbol table entries will be used. */
-	@:overload public function symtabFactory() : com.sun.tools.corba.se.idl.SymtabFactory;
+	@:overload @:public public function symtabFactory() : com.sun.tools.corba.se.idl.SymtabFactory;
 	
 	/** Return the implementation of the ExprFactory interface.  If this
 	returns null, the default expressions will be used. */
-	@:overload public function exprFactory() : com.sun.tools.corba.se.idl.constExpr.ExprFactory;
+	@:overload @:public public function exprFactory() : com.sun.tools.corba.se.idl.constExpr.ExprFactory;
 	
 	/** Return a subclass of the Arguments class.  If this returns null,
 	the default will be used. */
-	@:overload public function arguments() : com.sun.tools.corba.se.idl.Arguments;
+	@:overload @:public public function arguments() : com.sun.tools.corba.se.idl.Arguments;
 	
 	/** Return the list of keywords in the generated language.
 	Note that these keywords may contain the following wildcards:
@@ -86,7 +86,7 @@ extern class Factories
 	<dt>`.'
 	<dd>matches any single character
 	</dl> */
-	@:overload public function languageKeywords() : java.NativeArray<String>;
+	@:overload @:public public function languageKeywords() : java.NativeArray<String>;
 	
 	
 }

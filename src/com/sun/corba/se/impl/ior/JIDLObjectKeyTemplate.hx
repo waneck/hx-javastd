@@ -27,16 +27,16 @@ extern class JIDLObjectKeyTemplate extends com.sun.corba.se.impl.ior.NewObjectKe
 {
 	/** This constructor reads the template ONLY from the stream.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
 	/** This constructor reads a complete ObjectKey (template and Id)
 	* from the stream.
 	*/
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream, osh : org.omg.CORBA.OctetSeqHolder) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, is : org.omg.CORBA_2_3.portable.InputStream, osh : org.omg.CORBA.OctetSeqHolder) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, serverid : Int) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, serverid : Int) : Void;
 	
-	@:overload private function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:protected override private function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

@@ -25,32 +25,32 @@ package com.sun.tools.apt.mirror.util;
 */
 extern class SourcePositionImpl implements com.sun.mirror.util.SourcePosition
 {
-	@:overload public function new(sourcefile : javax.tools.JavaFileObject, pos : Int, linemap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(sourcefile : javax.tools.JavaFileObject, pos : Int, linemap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
-	@:overload public function getJavacPosition() : Int;
+	@:overload @:public public function getJavacPosition() : Int;
 	
-	@:overload public function getSource() : javax.tools.JavaFileObject;
+	@:overload @:public public function getSource() : javax.tools.JavaFileObject;
 	
 	/**
 	* Returns a string representation of this position in the
 	* form "sourcefile:line", or "sourcefile" if no line number is available.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function file() : java.io.File;
+	@:overload @:public public function file() : java.io.File;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function line() : Int;
+	@:overload @:public public function line() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function column() : Int;
+	@:overload @:public public function column() : Int;
 	
 	
 }

@@ -28,7 +28,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	/**
 	* All DTD parsing events are signaled through this interface.
 	*/
-	@:overload public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of a Processing Instruction.
@@ -41,7 +41,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	*               valid XML characters.
 	* @throws SAXException
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notification of a Notation Declaration.
@@ -53,7 +53,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @param publicId The public identifier
 	* @param systemId The system identifier
 	*/
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of an unparsed entity declaration.
@@ -64,7 +64,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @param systemId     The system identifier
 	* @param notationName The associated notation
 	*/
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
 	/**
 	* Receive notification of a internal general entity declaration event.
@@ -76,7 +76,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #externalGeneralEntityDecl(String, String, String)
 	*/
-	@:overload public function internalGeneralEntityDecl(name : String, value : String) : Void;
+	@:overload @:public public function internalGeneralEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Receive notification of an external parsed general entity
@@ -93,7 +93,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #unparsedEntityDecl(String, String, String, String)
 	*/
-	@:overload public function externalGeneralEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function externalGeneralEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of a internal parameter entity declaration
@@ -106,7 +106,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #externalParameterEntityDecl(String, String, String)
 	*/
-	@:overload public function internalParameterEntityDecl(name : String, value : String) : Void;
+	@:overload @:public public function internalParameterEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Receive notification of an external parameter entity declaration
@@ -123,7 +123,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #unparsedEntityDecl(String, String, String, String)
 	*/
-	@:overload public function externalParameterEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function externalParameterEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Receive notification of the beginning of the DTD.
@@ -131,7 +131,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @param in Current input entity.
 	* @see #endDTD()
 	*/
-	@:overload public function startDTD(_in : com.sun.xml.internal.dtdparser.InputEntity) : Void;
+	@:overload @:public public function startDTD(_in : com.sun.xml.internal.dtdparser.InputEntity) : Void;
 	
 	/**
 	* Receive notification of the end of a DTD.  The parser will invoke
@@ -140,7 +140,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #startDTD(InputEntity)
 	*/
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
 	/**
 	* Receive notification that a comment has been read.
@@ -154,7 +154,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @param text the text within the comment delimiters.
 	* @throws SAXException
 	*/
-	@:overload public function comment(text : String) : Void;
+	@:overload @:public public function comment(text : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -179,7 +179,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #ignorableWhitespace(char[], int, int)
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -204,7 +204,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #characters(char[], int, int)
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification that a CDATA section is beginning.  Data in a
@@ -214,7 +214,7 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #endCDATA()
 	*/
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
 	/**
 	* Receive notification that the CDATA section finished.
@@ -222,21 +222,21 @@ extern interface DTDEventListener extends java.util.EventListener
 	* @throws SAXException
 	* @see #startCDATA()
 	*/
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(err : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(err : org.xml.sax.SAXParseException) : Void;
 	
-	public var CONTENT_MODEL_EMPTY(default, null) : java.StdTypes.Int16;
+	@:public @:final public var CONTENT_MODEL_EMPTY(default, null) : java.StdTypes.Int16;
 	
-	public var CONTENT_MODEL_ANY(default, null) : java.StdTypes.Int16;
+	@:public @:final public var CONTENT_MODEL_ANY(default, null) : java.StdTypes.Int16;
 	
-	public var CONTENT_MODEL_MIXED(default, null) : java.StdTypes.Int16;
+	@:public @:final public var CONTENT_MODEL_MIXED(default, null) : java.StdTypes.Int16;
 	
-	public var CONTENT_MODEL_CHILDREN(default, null) : java.StdTypes.Int16;
+	@:public @:final public var CONTENT_MODEL_CHILDREN(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* receives notification that parsing of content model is beginning.
@@ -261,20 +261,20 @@ extern interface DTDEventListener extends java.util.EventListener
 	*                         TOKEN := childElement
 	*                         | MODEL_GROUP
 	*/
-	@:overload public function startContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function startContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
 	
 	/**
 	* receives notification that parsing of content model is finished.
 	*/
-	@:overload public function endContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function endContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
 	
-	public var USE_NORMAL(default, null) : java.StdTypes.Int16;
+	@:public @:final public var USE_NORMAL(default, null) : java.StdTypes.Int16;
 	
-	public var USE_IMPLIED(default, null) : java.StdTypes.Int16;
+	@:public @:final public var USE_IMPLIED(default, null) : java.StdTypes.Int16;
 	
-	public var USE_FIXED(default, null) : java.StdTypes.Int16;
+	@:public @:final public var USE_FIXED(default, null) : java.StdTypes.Int16;
 	
-	public var USE_REQUIRED(default, null) : java.StdTypes.Int16;
+	@:public @:final public var USE_REQUIRED(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* For each entry in an ATTLIST declaration,
@@ -286,9 +286,9 @@ extern interface DTDEventListener extends java.util.EventListener
 	* this method will be only fired for the first one,
 	* but I need to check.
 	*/
-	@:overload public function attributeDecl(elementName : String, attributeName : String, attributeType : String, enumeration : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : Void;
+	@:overload @:public public function attributeDecl(elementName : String, attributeName : String, attributeType : String, enumeration : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : Void;
 	
-	@:overload public function childElement(elementName : String, occurence : java.StdTypes.Int16) : Void;
+	@:overload @:public public function childElement(elementName : String, occurence : java.StdTypes.Int16) : Void;
 	
 	/**
 	* receives notification of child element of mixed content model.
@@ -296,15 +296,15 @@ extern interface DTDEventListener extends java.util.EventListener
 	*
 	* @see #startContentModel(String, short)
 	*/
-	@:overload public function mixedElement(elementName : String) : Void;
+	@:overload @:public public function mixedElement(elementName : String) : Void;
 	
-	@:overload public function startModelGroup() : Void;
+	@:overload @:public public function startModelGroup() : Void;
 	
-	@:overload public function endModelGroup(occurence : java.StdTypes.Int16) : Void;
+	@:overload @:public public function endModelGroup(occurence : java.StdTypes.Int16) : Void;
 	
-	public var CHOICE(default, null) : java.StdTypes.Int16;
+	@:public @:final public var CHOICE(default, null) : java.StdTypes.Int16;
 	
-	public var SEQUENCE(default, null) : java.StdTypes.Int16;
+	@:public @:final public var SEQUENCE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Connectors in one model group is guaranteed to be the same.
@@ -314,15 +314,15 @@ extern interface DTDEventListener extends java.util.EventListener
 	*
 	* @return {@link #CHOICE} or {@link #SEQUENCE}.
 	*/
-	@:overload public function connector(connectorType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function connector(connectorType : java.StdTypes.Int16) : Void;
 	
-	public var OCCURENCE_ZERO_OR_MORE(default, null) : java.StdTypes.Int16;
+	@:public @:final public var OCCURENCE_ZERO_OR_MORE(default, null) : java.StdTypes.Int16;
 	
-	public var OCCURENCE_ONE_OR_MORE(default, null) : java.StdTypes.Int16;
+	@:public @:final public var OCCURENCE_ONE_OR_MORE(default, null) : java.StdTypes.Int16;
 	
-	public var OCCURENCE_ZERO_OR_ONE(default, null) : java.StdTypes.Int16;
+	@:public @:final public var OCCURENCE_ZERO_OR_ONE(default, null) : java.StdTypes.Int16;
 	
-	public var OCCURENCE_ONCE(default, null) : java.StdTypes.Int16;
+	@:public @:final public var OCCURENCE_ONCE(default, null) : java.StdTypes.Int16;
 	
 	
 }

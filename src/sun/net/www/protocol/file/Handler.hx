@@ -25,13 +25,13 @@ package sun.net.www.protocol.file;
 */
 extern class Handler extends java.net.URLStreamHandler
 {
-	@:overload private function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
+	@:overload @:protected override private function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
 	
-	@:overload @:synchronized public function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:public @:synchronized override public function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
-	@:overload @:synchronized public function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:overload @:public @:synchronized override public function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
-	@:overload private function createFileURLConnection(u : java.net.URL, file : java.io.File) : java.net.URLConnection;
+	@:overload @:protected private function createFileURLConnection(u : java.net.URL, file : java.io.File) : java.net.URLConnection;
 	
 	/**
 	* Compares the host components of two URLs.
@@ -40,7 +40,7 @@ extern class Handler extends java.net.URLStreamHandler
 	* @return  <tt>true</tt> if and only if they
 	* are equal, <tt>false</tt> otherwise.
 	*/
-	@:overload private function hostsEqual(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:overload @:protected override private function hostsEqual(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
 	
 }

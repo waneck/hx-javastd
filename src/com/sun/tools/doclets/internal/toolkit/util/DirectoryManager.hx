@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	/**
 	* The file separator string, "/", used in the formation of the URL path.
 	*/
-	public static var URL_FILE_SEPARATOR(default, null) : String;
+	@:public @:static @:final public static var URL_FILE_SEPARATOR(default, null) : String;
 	
 	/**
 	* Given a PackageDoc, return its URL path string.
@@ -47,7 +47,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param pd PackageDoc
 	* @see #getPath(String)
 	*/
-	@:overload public static function createPathString(pd : com.sun.javadoc.PackageDoc) : String;
+	@:overload @:public @:static public static function createPathString(pd : com.sun.javadoc.PackageDoc) : String;
 	
 	/**
 	* Given a ClassDoc, return its URL path string.
@@ -55,7 +55,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param cd ClassDoc
 	* @see #getPath(String)
 	*/
-	@:overload public static function createPathString(cd : com.sun.javadoc.ClassDoc) : String;
+	@:overload @:public @:static public static function createPathString(cd : com.sun.javadoc.ClassDoc) : String;
 	
 	/**
 	* Given a PackageDoc, return the corresponding directory name
@@ -72,7 +72,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param  pd    the PackageDoc
 	* @return       the platform-dependent directory path for the package
 	*/
-	@:overload public static function getDirectoryPath(pd : com.sun.javadoc.PackageDoc) : String;
+	@:overload @:public @:static public static function getDirectoryPath(pd : com.sun.javadoc.PackageDoc) : String;
 	
 	/**
 	* Given a package name, return the corresponding directory name
@@ -89,7 +89,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param  packageName    the name of the package
 	* @return       the platform-dependent directory path for the package
 	*/
-	@:overload public static function getDirectoryPath(packageName : String) : String;
+	@:overload @:public @:static public static function getDirectoryPath(packageName : String) : String;
 	
 	/**
 	* Given a package name (a string), return the path string,
@@ -104,7 +104,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param name   the package name as a String
 	* @return       the String URL path
 	*/
-	@:overload public static function getPath(name : String) : String;
+	@:overload @:public @:static public static function getPath(name : String) : String;
 	
 	/**
 	* Given two package names as strings, return the relative path
@@ -123,7 +123,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @see          #getRelativePath(String)
 	* @see          #getPath(String)
 	*/
-	@:overload public static function getRelativePath(from : String, to : String) : String;
+	@:overload @:public @:static public static function getRelativePath(from : String, to : String) : String;
 	
 	/**
 	* Given a package name as a string, return relative path string
@@ -138,7 +138,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @return        String relative path from "from".
 	* @see           #getRelativePath(String, String)
 	*/
-	@:overload public static function getRelativePath(from : com.sun.javadoc.PackageDoc) : String;
+	@:overload @:public @:static public static function getRelativePath(from : com.sun.javadoc.PackageDoc) : String;
 	
 	/**
 	* Given a package name as a string, return relative path string
@@ -153,7 +153,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @return        String relative path from "from".
 	* @see           #getRelativePath(String, String)
 	*/
-	@:overload public static function getRelativePath(from : String) : String;
+	@:overload @:public @:static public static function getRelativePath(from : String) : String;
 	
 	/**
 	* Given a relative or absolute path that might be empty,
@@ -164,7 +164,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param path   the path to convert.  An empty path represents
 	*               the current directory.
 	*/
-	@:overload public static function getPathNoTrailingSlash(path : String) : String;
+	@:overload @:public @:static public static function getPathNoTrailingSlash(path : String) : String;
 	
 	/**
 	* Given a path string create all the directories in the path. For example,
@@ -174,7 +174,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @param path Directory path string.
 	*/
-	@:overload public static function createDirectory(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String) : Void;
+	@:overload @:public @:static public static function createDirectory(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, path : String) : Void;
 	
 	/**
 	* Given a package name and a file name, return the full path to that file.
@@ -185,7 +185,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	* @param pd         PackageDoc.
 	* @param filename   File name to be appended to the path of the package.
 	*/
-	@:overload public static function getPathToPackage(pd : com.sun.javadoc.PackageDoc, filename : String) : String;
+	@:overload @:public @:static public static function getPathToPackage(pd : com.sun.javadoc.PackageDoc, filename : String) : String;
 	
 	/**
 	* Given a class name return the full path to the class file.
@@ -194,7 +194,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @param cd   ClassDoc.
 	*/
-	@:overload public static function getPathToClass(cd : com.sun.javadoc.ClassDoc) : String;
+	@:overload @:public @:static public static function getPathToClass(cd : com.sun.javadoc.ClassDoc) : String;
 	
 	
 }

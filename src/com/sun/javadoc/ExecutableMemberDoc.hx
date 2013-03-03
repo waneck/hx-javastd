@@ -73,7 +73,7 @@ package com.sun.javadoc;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function isVarArgs() : Bool;
+	@:require(java5) @:overload @:public public function isVarArgs() : Bool;
 	
 	/**
 	* Get argument information.

@@ -39,7 +39,7 @@ package java.text;
 */
 @:internal extern class BreakDictionary
 {
-	@:overload public function new(dictionaryName : String) : Void;
+	@:overload @:public public function new(dictionaryName : String) : Void;
 	
 	/**
 	* Uses the column map to map the character to a column number, then
@@ -48,7 +48,7 @@ package java.text;
 	* @param ch The character whose column we're interested in
 	* @return The new state to transition to
 	*/
-	@:overload @:final public function getNextStateFromCharacter(row : Int, ch : Int) : java.StdTypes.Int16;
+	@:overload @:public @:final public function getNextStateFromCharacter(row : Int, ch : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Returns the value in the cell with the specified (logical) row and
@@ -61,7 +61,7 @@ package java.text;
 	* dictionary character")
 	* @return The row number of the new state to transition to
 	*/
-	@:overload @:final public function getNextState(row : Int, col : Int) : java.StdTypes.Int16;
+	@:overload @:public @:final public function getNextState(row : Int, col : Int) : java.StdTypes.Int16;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class Process
 	*
 	* @param resbundle Resource bundle
 	*/
-	@:overload private static function printArgOptions(resbundle : java.util.ResourceBundle) : Void;
+	@:overload @:protected @:static private static function printArgOptions(resbundle : java.util.ResourceBundle) : Void;
 	
 	/**
 	* Command line interface to transform an XML document according to
@@ -45,7 +45,7 @@ extern class Process
 	*
 	* @param argv Input parameters from command line
 	*/
-	@:overload public static function _main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

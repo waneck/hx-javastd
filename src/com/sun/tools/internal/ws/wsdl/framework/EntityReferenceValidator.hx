@@ -31,7 +31,7 @@ extern interface EntityReferenceValidator
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function isValid(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function isValid(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Bool;
 	
 	
 }

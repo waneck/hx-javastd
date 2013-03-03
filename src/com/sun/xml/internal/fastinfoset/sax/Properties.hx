@@ -27,9 +27,9 @@ package com.sun.xml.internal.fastinfoset.sax;
 */
 extern class Properties
 {
-	public static var LEXICAL_HANDLER_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var LEXICAL_HANDLER_PROPERTY(default, null) : String;
 	
-	public static var DTD_DECLARATION_HANDLER_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var DTD_DECLARATION_HANDLER_PROPERTY(default, null) : String;
 	
 	
 }

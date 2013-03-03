@@ -32,7 +32,7 @@ extern class RealmCallback extends javax.security.auth.callback.TextInputCallbac
 	* @throws IllegalArgumentException If <tt>prompt</tt> is null or
 	* the empty string.
 	*/
-	@:overload public function new(prompt : String) : Void;
+	@:overload @:public public function new(prompt : String) : Void;
 	
 	/**
 	* Constructs a <tt>RealmCallback</tt> with a prompt and default
@@ -44,7 +44,7 @@ extern class RealmCallback extends javax.security.auth.callback.TextInputCallbac
 	* the empty string,
 	* or if <tt>defaultRealm</tt> is empty or null.
 	*/
-	@:overload public function new(prompt : String, defaultRealmInfo : String) : Void;
+	@:overload @:public public function new(prompt : String, defaultRealmInfo : String) : Void;
 	
 	
 }

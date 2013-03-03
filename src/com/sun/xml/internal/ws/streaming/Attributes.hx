@@ -29,7 +29,7 @@ extern interface Attributes
 	* Return the number of attributes in the list.
 	*
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return true if the attribute at the given index is a namespace
@@ -39,74 +39,74 @@ extern interface Attributes
 	* account their internal representations of attributes. </p>
 	*
 	*/
-	@:overload public function isNamespaceDeclaration(index : Int) : Bool;
+	@:overload @:public public function isNamespaceDeclaration(index : Int) : Bool;
 	
 	/**
 	* Look up an attribute's QName by index.
 	*
 	*/
-	@:overload public function getName(index : Int) : javax.xml.namespace.QName;
+	@:overload @:public public function getName(index : Int) : javax.xml.namespace.QName;
 	
 	/**
 	* Look up an attribute's URI by index.
 	*
 	*/
-	@:overload public function getURI(index : Int) : String;
+	@:overload @:public public function getURI(index : Int) : String;
 	
 	/**
 	* Look up an attribute's local name by index.
 	* If attribute is a namespace declaration, result
 	* is expected including "xmlns:".
 	*/
-	@:overload public function getLocalName(index : Int) : String;
+	@:overload @:public public function getLocalName(index : Int) : String;
 	
 	/**
 	* Look up an attribute's prefix by index.
 	*
 	*/
-	@:overload public function getPrefix(index : Int) : String;
+	@:overload @:public public function getPrefix(index : Int) : String;
 	
 	/**
 	* Look up an attribute's value by index.
 	*
 	*/
-	@:overload public function getValue(index : Int) : String;
+	@:overload @:public public function getValue(index : Int) : String;
 	
 	/**
 	* Look up the index of an attribute by QName.
 	*
 	*/
-	@:overload public function getIndex(name : javax.xml.namespace.QName) : Int;
+	@:overload @:public public function getIndex(name : javax.xml.namespace.QName) : Int;
 	
 	/**
 	* Look up the index of an attribute by URI and local name.
 	*
 	*/
-	@:overload public function getIndex(uri : String, localName : String) : Int;
+	@:overload @:public public function getIndex(uri : String, localName : String) : Int;
 	
 	/**
 	* Look up the index of an attribute by local name.
 	*
 	*/
-	@:overload public function getIndex(localName : String) : Int;
+	@:overload @:public public function getIndex(localName : String) : Int;
 	
 	/**
 	* Look up the value of an attribute by QName.
 	*
 	*/
-	@:overload public function getValue(name : javax.xml.namespace.QName) : String;
+	@:overload @:public public function getValue(name : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Look up the value of an attribute by URI and local name.
 	*
 	*/
-	@:overload public function getValue(uri : String, localName : String) : String;
+	@:overload @:public public function getValue(uri : String, localName : String) : String;
 	
 	/**
 	* Look up the value of an attribute by local name.
 	*
 	*/
-	@:overload public function getValue(localName : String) : String;
+	@:overload @:public public function getValue(localName : String) : String;
 	
 	
 }

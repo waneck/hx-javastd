@@ -33,14 +33,14 @@ extern class InvalidSeq extends org.omg.CORBA.UserException
 	/**
 	* Constructs an <code>InvalidSeq</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>InvalidSeq</code> object.
 	* @param reason  a <code>String</code> giving more information
 	* regarding the exception.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

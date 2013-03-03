@@ -25,9 +25,9 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class AbstractExtensionHandler extends com.sun.tools.internal.ws.api.wsdl.TWSDLExtensionHandler
 {
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
+	@:overload @:public public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
 	
-	@:overload public function getExtensionHandlers() : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>;
+	@:overload @:public public function getExtensionHandlers() : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>;
 	
 	/**
 	* Callback that gets called by the WSDL parser or any other extension handler on finding an extensibility element
@@ -38,7 +38,7 @@ extern class AbstractExtensionHandler extends com.sun.tools.internal.ws.api.wsdl
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:public override public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:mime</code>
@@ -49,7 +49,7 @@ extern class AbstractExtensionHandler extends com.sun.tools.internal.ws.api.wsdl
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload private function handleMIMEPartExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload @:protected private function handleMIMEPartExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	
 }

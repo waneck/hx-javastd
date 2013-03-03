@@ -25,31 +25,31 @@ package com.sun.jndi.dns;
 */
 extern class ResourceRecord
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/*
 	* Returns the name field of this RR, including the root label.
 	*/
-	@:overload public function getName() : com.sun.jndi.dns.DnsName;
+	@:overload @:public public function getName() : com.sun.jndi.dns.DnsName;
 	
 	/*
 	* Returns the number of octets in the encoded RR.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
-	@:overload public function getRrclass() : Int;
+	@:overload @:public public function getRrclass() : Int;
 	
-	@:overload public function getRdata() : Dynamic;
+	@:overload @:public public function getRdata() : Dynamic;
 	
-	@:overload public static function getTypeName(rrtype : Int) : String;
+	@:overload @:public @:static public static function getTypeName(rrtype : Int) : String;
 	
-	@:native('getType') @:overload public static function _getType(typeName : String) : Int;
+	@:native('getType') @:overload @:public @:static public static function _getType(typeName : String) : Int;
 	
-	@:overload public static function getRrclassName(rrclass : Int) : String;
+	@:overload @:public @:static public static function getRrclassName(rrclass : Int) : String;
 	
-	@:native('getRrclass') @:overload public static function _getRrclass(className : String) : Int;
+	@:native('getRrclass') @:overload @:public @:static public static function _getRrclass(className : String) : Int;
 	
 	/*
 	* Compares two SOA record serial numbers using 32-bit serial number
@@ -59,7 +59,7 @@ extern class ResourceRecord
 	* than the second.  If the serial numbers are not comparable the
 	* result is undefined.  Note that the relation is not transitive.
 	*/
-	@:overload public static function compareSerialNumbers(s1 : haxe.Int64, s2 : haxe.Int64) : Int;
+	@:overload @:public @:static public static function compareSerialNumbers(s1 : haxe.Int64, s2 : haxe.Int64) : Int;
 	
 	
 }

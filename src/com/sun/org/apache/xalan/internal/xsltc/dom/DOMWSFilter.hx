@@ -33,7 +33,7 @@ extern class DOMWSFilter implements com.sun.org.apache.xml.internal.dtm.DTMWSFil
 	* @see com.sun.org.apache.xml.internal.dtm.DTMWSFilter
 	* @see com.sun.org.apache.xalan.internal.xsltc.StripFilter
 	*/
-	@:overload public function new(translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : Void;
+	@:overload @:public public function new(translet : com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet) : Void;
 	
 	/**
 	* Test whether whitespace-only text nodes are visible in the logical
@@ -47,7 +47,7 @@ extern class DOMWSFilter implements com.sun.org.apache.xml.internal.dtm.DTMWSFil
 	* @return one of <code>NOTSTRIP</code>, <code>STRIP</code> or
 	* <code>INHERIT</code>.
 	*/
-	@:overload public function getShouldStripSpace(node : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM) : java.StdTypes.Int16;
+	@:overload @:public public function getShouldStripSpace(node : Int, dtm : com.sun.org.apache.xml.internal.dtm.DTM) : java.StdTypes.Int16;
 	
 	
 }

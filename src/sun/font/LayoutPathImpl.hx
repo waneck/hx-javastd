@@ -33,26 +33,26 @@ package sun.font;
 ////
 extern class LayoutPathImpl extends java.awt.font.LayoutPath
 {
-	@:overload public function pointToPath(x : Float, y : Float) : java.awt.geom.Point2D;
+	@:overload @:public public function pointToPath(x : Float, y : Float) : java.awt.geom.Point2D;
 	
-	@:overload public function pathToPoint(a : Float, o : Float, preceding : Bool) : java.awt.geom.Point2D;
+	@:overload @:public public function pathToPoint(a : Float, o : Float, preceding : Bool) : java.awt.geom.Point2D;
 	
-	@:overload public function pointToPath(x : Float, y : Float, pt : java.awt.geom.Point2D) : Void;
+	@:overload @:public public function pointToPath(x : Float, y : Float, pt : java.awt.geom.Point2D) : Void;
 	
-	@:overload public function pathToPoint(a : Float, o : Float, preceding : Bool, pt : java.awt.geom.Point2D) : Void;
+	@:overload @:public public function pathToPoint(a : Float, o : Float, preceding : Bool, pt : java.awt.geom.Point2D) : Void;
 	
-	@:overload @:abstract public function start() : Float;
+	@:overload @:public @:abstract public function start() : Float;
 	
-	@:overload @:abstract public function end() : Float;
+	@:overload @:public @:abstract public function end() : Float;
 	
-	@:overload @:abstract public function length() : Float;
+	@:overload @:public @:abstract public function length() : Float;
 	
-	@:overload @:abstract public function mapShape(s : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public @:abstract public function mapShape(s : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Return a path representing the path from the origin through the points in order.
 	*/
-	@:overload public static function getPath(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, coords : java.NativeArray<Float>) : sun.font.LayoutPathImpl;
+	@:overload @:public @:static public static function getPath(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, coords : java.NativeArray<Float>) : sun.font.LayoutPathImpl;
 	
 	
 }
@@ -83,7 +83,7 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	/**
 	* Construct a SegmentPathBuilder.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Reset the builder for a new path.  Datalen is a hint of how many
@@ -91,13 +91,13 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	* to accomodate at least this number of points.  If datalen is zero,
 	* the working buffer is freed (it will be allocated on first use).
 	*/
-	@:overload public function reset(datalen : Int) : Void;
+	@:overload @:public public function reset(datalen : Int) : Void;
 	
 	/**
 	* Automatically build from a list of points represented by pairs of
 	* doubles.  Initial advance is zero.
 	*/
-	@:overload public function build(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
+	@:overload @:public public function build(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	/**
 	* Move to a new point.  If there is no data, this will become the
@@ -110,7 +110,7 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	* Calling this is optional, lineTo will suffice and the initial point
 	* will be set to 0, 0.
 	*/
-	@:overload public function moveTo(x : Float, y : Float) : Void;
+	@:overload @:public public function moveTo(x : Float, y : Float) : Void;
 	
 	/**
 	* Connect to a new point.  If there is no data, the previous point
@@ -119,16 +119,16 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	* the path and the advance extended.  If this point is the same as the
 	* previous point, the path remains unchanged.
 	*/
-	@:overload public function lineTo(x : Float, y : Float) : Void;
+	@:overload @:public public function lineTo(x : Float, y : Float) : Void;
 	
-	@:overload public function complete() : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
+	@:overload @:public public function complete() : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	/**
 	* Complete building a SegmentPath.  Once this is called, the builder is restored
 	* to its initial state and information about the previous path is released.  The
 	* end type indicates whether to treat the path as closed, extended, or pinned.
 	*/
-	@:overload public function complete(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
+	@:overload @:public public function complete(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	
 }
@@ -161,21 +161,21 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 */
 @:native('sun$font$LayoutPathImpl$SegmentPath') extern class LayoutPathImpl_SegmentPath extends sun.font.LayoutPathImpl
 {
-	@:overload public static function get(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
+	@:overload @:public @:static public static function get(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
-	@:overload override public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
+	@:overload @:public override public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
 	
-	@:overload override public function pointToPath(pt : java.awt.geom.Point2D, result : java.awt.geom.Point2D) : Bool;
+	@:overload @:public override public function pointToPath(pt : java.awt.geom.Point2D, result : java.awt.geom.Point2D) : Bool;
 	
-	@:overload override public function mapShape(s : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function mapShape(s : java.awt.Shape) : java.awt.Shape;
 	
-	@:overload override public function start() : Float;
+	@:overload @:public override public function start() : Float;
 	
-	@:overload override public function end() : Float;
+	@:overload @:public override public function end() : Float;
 	
-	@:overload override public function length() : Float;
+	@:overload @:public override public function length() : Float;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -198,25 +198,25 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 }
 @:native('sun$font$LayoutPathImpl$SegmentPath$Mapper') @:internal extern class LayoutPathImpl_SegmentPath_Mapper
 {
-	@:overload public function mapShape(s : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public public function mapShape(s : java.awt.Shape) : java.awt.Shape;
 	
 	
 }
 @:native('sun$font$LayoutPathImpl$EmptyPath') extern class LayoutPathImpl_EmptyPath extends sun.font.LayoutPathImpl
 {
-	@:overload public function new(tx : java.awt.geom.AffineTransform) : Void;
+	@:overload @:public public function new(tx : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload override public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
+	@:overload @:public override public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
 	
-	@:overload override public function pointToPath(pt : java.awt.geom.Point2D, result : java.awt.geom.Point2D) : Bool;
+	@:overload @:public override public function pointToPath(pt : java.awt.geom.Point2D, result : java.awt.geom.Point2D) : Bool;
 	
-	@:overload override public function start() : Float;
+	@:overload @:public override public function start() : Float;
 	
-	@:overload override public function end() : Float;
+	@:overload @:public override public function end() : Float;
 	
-	@:overload override public function length() : Float;
+	@:overload @:public override public function length() : Float;
 	
-	@:overload override public function mapShape(s : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public override public function mapShape(s : java.awt.Shape) : java.awt.Shape;
 	
 	
 }

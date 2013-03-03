@@ -30,18 +30,18 @@ extern class Util
 	* that doesn't throw an exception even if a property cannot be
 	* read.
 	*/
-	@:overload public static function getSystemProperty(name : String) : String;
+	@:overload @:public @:static public static function getSystemProperty(name : String) : String;
 	
 	/**
 	* Compares if two {@link Locator}s point to the exact same position.
 	*/
-	@:overload public static function equals(lhs : org.xml.sax.Locator, rhs : org.xml.sax.Locator) : Bool;
+	@:overload @:public @:static public static function equals(lhs : org.xml.sax.Locator, rhs : org.xml.sax.Locator) : Bool;
 	
 	/**
 	* Calls the other getSystemProperty method with
 	* "[clazz]&#x2E;[name].
 	*/
-	@:overload public static function getSystemProperty(clazz : Class<Dynamic>, name : String) : String;
+	@:overload @:public @:static public static function getSystemProperty(clazz : Class<Dynamic>, name : String) : String;
 	
 	
 }

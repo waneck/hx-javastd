@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.tty;
 */
 @:internal extern class VMConnection
 {
-	@:overload @:synchronized public function vm() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:synchronized public function vm() : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function disposeVM() : Void;
+	@:overload @:public public function disposeVM() : Void;
 	
 	
 }

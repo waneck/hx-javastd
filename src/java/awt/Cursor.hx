@@ -28,83 +28,83 @@ extern class Cursor implements java.io.Serializable
 	/**
 	* The default cursor type (gets set if no cursor is defined).
 	*/
-	public static var DEFAULT_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_CURSOR(default, null) : Int;
 	
 	/**
 	* The crosshair cursor type.
 	*/
-	public static var CROSSHAIR_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var CROSSHAIR_CURSOR(default, null) : Int;
 	
 	/**
 	* The text cursor type.
 	*/
-	public static var TEXT_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var TEXT_CURSOR(default, null) : Int;
 	
 	/**
 	* The wait cursor type.
 	*/
-	public static var WAIT_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var WAIT_CURSOR(default, null) : Int;
 	
 	/**
 	* The south-west-resize cursor type.
 	*/
-	public static var SW_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var SW_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The south-east-resize cursor type.
 	*/
-	public static var SE_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var SE_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The north-west-resize cursor type.
 	*/
-	public static var NW_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var NW_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The north-east-resize cursor type.
 	*/
-	public static var NE_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var NE_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The north-resize cursor type.
 	*/
-	public static var N_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var N_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The south-resize cursor type.
 	*/
-	public static var S_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var S_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The west-resize cursor type.
 	*/
-	public static var W_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var W_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The east-resize cursor type.
 	*/
-	public static var E_RESIZE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var E_RESIZE_CURSOR(default, null) : Int;
 	
 	/**
 	* The hand cursor type.
 	*/
-	public static var HAND_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var HAND_CURSOR(default, null) : Int;
 	
 	/**
 	* The move cursor type.
 	*/
-	public static var MOVE_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var MOVE_CURSOR(default, null) : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.7, the {@link #getPredefinedCursor(int)}
 	* method should be used instead.
 	*/
-	private static var predefined : java.NativeArray<java.awt.Cursor>;
+	@:protected @:static private static var predefined : java.NativeArray<java.awt.Cursor>;
 	
 	/**
 	* The type associated with all custom cursors.
 	*/
-	public static var CUSTOM_CURSOR(default, null) : Int;
+	@:public @:static @:final public static var CUSTOM_CURSOR(default, null) : Int;
 	
 	/**
 	* The user-visible name of the cursor.
@@ -112,7 +112,7 @@ extern class Cursor implements java.io.Serializable
 	* @serial
 	* @see #getName()
 	*/
-	private var name : String;
+	@:protected private var name : String;
 	
 	/**
 	* Returns a cursor object with the specified predefined type.
@@ -122,7 +122,7 @@ extern class Cursor implements java.io.Serializable
 	* @throws IllegalArgumentException if the specified cursor type is
 	*         invalid
 	*/
-	@:overload public static function getPredefinedCursor(type : Int) : java.awt.Cursor;
+	@:overload @:static @:public public static function getPredefinedCursor(type : Int) : java.awt.Cursor;
 	
 	/**
 	* Returns a system-specific custom cursor object matching the
@@ -133,12 +133,12 @@ extern class Cursor implements java.io.Serializable
 	* @exception HeadlessException if
 	* <code>GraphicsEnvironment.isHeadless</code> returns true
 	*/
-	@:overload public static function getSystemCustomCursor(name : String) : java.awt.Cursor;
+	@:overload @:static @:public public static function getSystemCustomCursor(name : String) : java.awt.Cursor;
 	
 	/**
 	* Return the system default cursor.
 	*/
-	@:overload public static function getDefaultCursor() : java.awt.Cursor;
+	@:overload @:static @:public public static function getDefaultCursor() : java.awt.Cursor;
 	
 	/**
 	* Creates a new cursor object with the specified type.
@@ -146,7 +146,7 @@ extern class Cursor implements java.io.Serializable
 	* @throws IllegalArgumentException if the specified cursor type
 	* is invalid
 	*/
-	@:overload public function new(type : Int) : Void;
+	@:overload @:public public function new(type : Int) : Void;
 	
 	/**
 	* Creates a new custom cursor object with the specified name.<p>
@@ -156,34 +156,34 @@ extern class Cursor implements java.io.Serializable
 	* @param name the user-visible name of the cursor.
 	* @see java.awt.Toolkit#createCustomCursor
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	/**
 	* Returns the type for this cursor.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the name of this cursor.
 	* @return    a localized description of this cursor.
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function getName() : String;
+	@:require(java2) @:overload @:public public function getName() : String;
 	
 	/**
 	* Returns a string representation of this cursor.
 	* @return    a string representation of this cursor.
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function toString() : String;
+	@:require(java2) @:overload @:public public function toString() : String;
 	
 	
 }
 @:native('java$awt$Cursor$CursorDisposer') @:internal extern class Cursor_CursorDisposer implements sun.java2d.DisposerRecord
 {
-	@:overload public function new(pData : haxe.Int64) : Void;
+	@:overload @:public public function new(pData : haxe.Int64) : Void;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	/**
 	* Creates an empty list.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a list containing the elements of the specified
@@ -47,7 +47,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @param c the collection of initially held elements
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Creates a list holding a copy of the given array.
@@ -56,21 +56,21 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*        internal array)
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload public function new(toCopyIn : java.NativeArray<E>) : Void;
+	@:overload @:public public function new(toCopyIn : java.NativeArray<E>) : Void;
 	
 	/**
 	* Returns the number of elements in this list.
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains the specified element.
@@ -81,12 +81,12 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @param o element whose presence in this list is to be tested
 	* @return <tt>true</tt> if this list contains the specified element
 	*/
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element in
@@ -103,12 +103,12 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*         <tt>-1</tt> if the element is not found.
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	*/
-	@:overload public function indexOf(e : E, index : Int) : Int;
+	@:overload @:public public function indexOf(e : E, index : Int) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element in
@@ -126,7 +126,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @throws IndexOutOfBoundsException if the specified index is greater
 	*         than or equal to the current size of this list
 	*/
-	@:overload public function lastIndexOf(e : E, index : Int) : Int;
+	@:overload @:public public function lastIndexOf(e : E, index : Int) : Int;
 	
 	/**
 	* Returns a shallow copy of this list.  (The elements themselves
@@ -134,7 +134,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @return a clone of this list
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns an array containing all of the elements in this list
@@ -149,7 +149,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @return an array containing all the elements in this list
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -190,14 +190,14 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function get(index : Int) : E;
+	@:overload @:public public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -205,7 +205,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
 	/**
 	* Appends the specified element to the end of this list.
@@ -213,7 +213,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @param e element to be appended to this list
 	* @return <tt>true</tt> (as specified by {@link Collection#add})
 	*/
-	@:overload public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the specified position in this
@@ -222,7 +222,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list.
@@ -231,7 +231,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -246,7 +246,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @param o element to be removed from this list, if present
 	* @return <tt>true</tt> if this list contained the specified element
 	*/
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Append the element if not present.
@@ -254,7 +254,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @param e element to be added to this list, if absent
 	* @return <tt>true</tt> if the element was added
 	*/
-	@:overload public function addIfAbsent(e : E) : Bool;
+	@:overload @:public public function addIfAbsent(e : E) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
@@ -266,7 +266,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @throws NullPointerException if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes from this list all of its elements that are contained in
@@ -284,7 +284,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*         or if the specified collection is null
 	* @see #remove(Object)
 	*/
-	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -302,7 +302,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*         or if the specified collection is null
 	* @see #remove(Object)
 	*/
-	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection that
@@ -315,13 +315,13 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @throws NullPointerException if the specified collection is null
 	* @see #addIfAbsent(Object)
 	*/
-	@:overload public function addAllAbsent(c : java.util.Collection<E>) : Int;
+	@:overload @:public public function addAllAbsent(c : java.util.Collection<E>) : Int;
 	
 	/**
 	* Removes all of the elements from this list.
 	* The list will be empty after this call returns.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end
@@ -333,7 +333,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @throws NullPointerException if the specified collection is null
 	* @see #add(Object)
 	*/
-	@:overload public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -351,7 +351,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @throws NullPointerException if the specified collection is null
 	* @see #add(int,Object)
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns a string representation of this list.  The string
@@ -363,7 +363,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @return a string representation of this list
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified object with this list for equality.
@@ -380,7 +380,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @param o the object to be compared for equality with this list
 	* @return {@code true} if the specified object is equal to this list
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this list.
@@ -389,7 +389,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @return the hash code value for this list
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
@@ -401,7 +401,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* {@inheritDoc}
@@ -411,7 +411,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* traversing the iterator. The iterator does <em>NOT</em> support the
 	* <tt>remove</tt>, <tt>set</tt> or <tt>add</tt> methods.
 	*/
-	@:overload public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator() : java.util.ListIterator<E>;
 	
 	/**
 	* {@inheritDoc}
@@ -423,7 +423,7 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	/**
 	* Returns a view of the portion of this list between
@@ -440,44 +440,44 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 	* @return a view of the specified range within this list
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
 @:native('java$util$concurrent$CopyOnWriteArrayList$COWIterator') @:internal extern class CopyOnWriteArrayList_COWIterator<E> implements java.util.ListIterator<E>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function next() : E;
+	@:overload @:public public function next() : E;
 	
-	@:overload public function previous() : E;
+	@:overload @:public public function previous() : E;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
 	/**
 	* Not supported. Always throws UnsupportedOperationException.
 	* @throws UnsupportedOperationException always; <tt>remove</tt>
 	*         is not supported by this iterator.
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	/**
 	* Not supported. Always throws UnsupportedOperationException.
 	* @throws UnsupportedOperationException always; <tt>set</tt>
 	*         is not supported by this iterator.
 	*/
-	@:overload public function set(e : E) : Void;
+	@:overload @:public public function set(e : E) : Void;
 	
 	/**
 	* Not supported. Always throws UnsupportedOperationException.
 	* @throws UnsupportedOperationException always; <tt>add</tt>
 	*         is not supported by this iterator.
 	*/
-	@:overload public function add(e : E) : Void;
+	@:overload @:public public function add(e : E) : Void;
 	
 	
 }
@@ -498,47 +498,47 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 */
 @:native('java$util$concurrent$CopyOnWriteArrayList$COWSubList') @:internal extern class CopyOnWriteArrayList_COWSubList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess
 {
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public override public function set(index : Int, element : E) : E;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function add(index : Int, element : E) : Void;
+	@:overload @:public override public function add(index : Int, element : E) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function remove(index : Int) : E;
+	@:overload @:public override public function remove(index : Int) : E;
 	
-	@:overload public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }
 @:native('java$util$concurrent$CopyOnWriteArrayList$COWSubListIterator') @:internal extern class CopyOnWriteArrayList_COWSubListIterator<E> implements java.util.ListIterator<E>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : E;
+	@:overload @:public public function next() : E;
 	
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function previous() : E;
+	@:overload @:public public function previous() : E;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
-	@:overload public function set(e : E) : Void;
+	@:overload @:public public function set(e : E) : Void;
 	
-	@:overload public function add(e : E) : Void;
+	@:overload @:public public function add(e : E) : Void;
 	
 	
 }

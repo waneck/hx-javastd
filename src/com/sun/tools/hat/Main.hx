@@ -30,7 +30,7 @@ package com.sun.tools.hat;
 */
 extern class Main
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

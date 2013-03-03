@@ -71,35 +71,35 @@ extern class BranchHandle extends com.sun.org.apache.bcel.internal.generic.Instr
 {
 	/** Handle adds itself to the list of resuable handles.
 	*/
-	@:overload override private function addHandle() : Void;
+	@:overload @:protected override private function addHandle() : Void;
 	
 	/* Override InstructionHandle methods: delegate to branch instruction.
 	* Through this overriding all access to the private i_position field should
 	* be prevented.
 	*/
-	@:overload override public function getPosition() : Int;
+	@:overload @:public override public function getPosition() : Int;
 	
-	@:overload override private function updatePosition(offset : Int, max_offset : Int) : Int;
+	@:overload @:protected override private function updatePosition(offset : Int, max_offset : Int) : Int;
 	
 	/**
 	* Pass new target to instruction.
 	*/
-	@:overload public function setTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function setTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* Update target of instruction.
 	*/
-	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload @:public public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return target of instruction.
 	*/
-	@:overload public function getTarget() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getTarget() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Set new contents. Old instruction is disposed and may not be used anymore.
 	*/
-	@:overload override public function setInstruction(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
+	@:overload @:public override public function setInstruction(i : com.sun.org.apache.bcel.internal.generic.Instruction) : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.addressing.policy;
 */
 extern class AddressingPrefixMapper implements com.sun.xml.internal.ws.policy.spi.PrefixMapper
 {
-	@:overload public function getPrefixMap() : java.util.Map<String, String>;
+	@:overload @:public public function getPrefixMap() : java.util.Map<String, String>;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 @:internal extern class XmlEnumQuick extends com.sun.xml.internal.bind.v2.model.annotation.Quick implements javax.xml.bind.annotation.XmlEnum
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlEnum) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : javax.xml.bind.annotation.XmlEnum) : Void;
 	
-	@:overload private function getAnnotation() : java.lang.annotation.Annotation;
+	@:overload @:protected override private function getAnnotation() : java.lang.annotation.Annotation;
 	
-	@:overload private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
+	@:overload @:protected override private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
-	@:overload public function annotationType() : Class<javax.xml.bind.annotation.XmlEnum>;
+	@:overload @:public override public function annotationType() : Class<javax.xml.bind.annotation.XmlEnum>;
 	
-	@:overload public function value() : Class<Dynamic>;
+	@:overload @:public public function value() : Class<Dynamic>;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class SecretKeyFactory
 	* @param provider the provider
 	* @param algorithm the secret-key algorithm
 	*/
-	@:overload private function new(keyFacSpi : javax.crypto.SecretKeyFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(keyFacSpi : javax.crypto.SecretKeyFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns a <code>SecretKeyFactory</code> object that converts
@@ -65,7 +65,7 @@ extern class SecretKeyFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.SecretKeyFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.crypto.SecretKeyFactory;
 	
 	/**
 	* Returns a <code>SecretKeyFactory</code> object that converts
@@ -105,7 +105,7 @@ extern class SecretKeyFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.SecretKeyFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.SecretKeyFactory;
 	
 	/**
 	* Returns a <code>SecretKeyFactory</code> object that converts
@@ -139,14 +139,14 @@ extern class SecretKeyFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.SecretKeyFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.SecretKeyFactory;
 	
 	/**
 	* Returns the provider of this <code>SecretKeyFactory</code> object.
 	*
 	* @return the provider of this <code>SecretKeyFactory</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the algorithm name of this <code>SecretKeyFactory</code> object.
@@ -158,7 +158,7 @@ extern class SecretKeyFactory
 	* @return the algorithm name of this <code>SecretKeyFactory</code>
 	* object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Generates a <code>SecretKey</code> object from the provided key
@@ -171,7 +171,7 @@ extern class SecretKeyFactory
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this secret-key factory to produce a secret key.
 	*/
-	@:overload @:final public function generateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
+	@:overload @:public @:final public function generateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
 	
 	/**
 	* Returns a specification (key material) of the given key object
@@ -193,7 +193,7 @@ extern class SecretKeyFactory
 	* (e.g., the given key has an algorithm or format not supported by this
 	* secret-key factory).
 	*/
-	@:overload @:final public function getKeySpec(key : javax.crypto.SecretKey, keySpec : Class<Dynamic>) : java.security.spec.KeySpec;
+	@:overload @:public @:final public function getKeySpec(key : javax.crypto.SecretKey, keySpec : Class<Dynamic>) : java.security.spec.KeySpec;
 	
 	/**
 	* Translates a key object, whose provider may be unknown or potentially
@@ -206,7 +206,7 @@ extern class SecretKeyFactory
 	* @exception InvalidKeyException if the given key cannot be processed
 	* by this secret-key factory.
 	*/
-	@:overload @:final public function translateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
+	@:overload @:public @:final public function translateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
 	
 	
 }

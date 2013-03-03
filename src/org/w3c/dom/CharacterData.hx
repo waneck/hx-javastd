@@ -67,7 +67,7 @@ extern interface CharacterData extends org.w3c.dom.Node
 	*   fit in a <code>DOMString</code> variable on the implementation
 	*   platform.
 	*/
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
 	/**
 	* The character data of the node that implements this interface. The DOM
@@ -80,14 +80,14 @@ extern interface CharacterData extends org.w3c.dom.Node
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly.
 	*/
-	@:overload public function setData(data : String) : Void;
+	@:overload @:public public function setData(data : String) : Void;
 	
 	/**
 	* The number of 16-bit units that are available through <code>data</code>
 	* and the <code>substringData</code> method below. This may have the
 	* value zero, i.e., <code>CharacterData</code> nodes may be empty.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Extracts a range of data from the node.
@@ -104,7 +104,7 @@ extern interface CharacterData extends org.w3c.dom.Node
 	*   <br>DOMSTRING_SIZE_ERR: Raised if the specified range of text does
 	*   not fit into a <code>DOMString</code>.
 	*/
-	@:overload public function substringData(offset : Int, count : Int) : String;
+	@:overload @:public public function substringData(offset : Int, count : Int) : String;
 	
 	/**
 	* Append the string to the end of the character data of the node. Upon
@@ -114,7 +114,7 @@ extern interface CharacterData extends org.w3c.dom.Node
 	* @exception DOMException
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload public function appendData(arg : String) : Void;
+	@:overload @:public public function appendData(arg : String) : Void;
 	
 	/**
 	* Insert a string at the specified 16-bit unit offset.
@@ -126,7 +126,7 @@ extern interface CharacterData extends org.w3c.dom.Node
 	*   <code>data</code>.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload public function insertData(offset : Int, arg : String) : Void;
+	@:overload @:public public function insertData(offset : Int, arg : String) : Void;
 	
 	/**
 	* Remove a range of 16-bit units from the node. Upon success,
@@ -143,7 +143,7 @@ extern interface CharacterData extends org.w3c.dom.Node
 	*   negative.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload public function deleteData(offset : Int, count : Int) : Void;
+	@:overload @:public public function deleteData(offset : Int, count : Int) : Void;
 	
 	/**
 	* Replace the characters starting at the specified 16-bit unit offset
@@ -164,7 +164,7 @@ extern interface CharacterData extends org.w3c.dom.Node
 	*   negative.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload public function replaceData(offset : Int, count : Int, arg : String) : Void;
+	@:overload @:public public function replaceData(offset : Int, count : Int, arg : String) : Void;
 	
 	
 }

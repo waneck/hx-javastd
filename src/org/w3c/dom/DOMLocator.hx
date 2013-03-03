@@ -50,37 +50,37 @@ extern interface DOMLocator
 	* The line number this locator is pointing to, or <code>-1</code> if
 	* there is no column number available.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* The column number this locator is pointing to, or <code>-1</code> if
 	* there is no column number available.
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* The byte offset into the input source this locator is pointing to or
 	* <code>-1</code> if there is no byte offset available.
 	*/
-	@:overload public function getByteOffset() : Int;
+	@:overload @:public public function getByteOffset() : Int;
 	
 	/**
 	* The UTF-16, as defined in [Unicode] and Amendment 1 of [ISO/IEC 10646], offset into the input source this locator is pointing to or
 	* <code>-1</code> if there is no UTF-16 offset available.
 	*/
-	@:overload public function getUtf16Offset() : Int;
+	@:overload @:public public function getUtf16Offset() : Int;
 	
 	/**
 	* The node this locator is pointing to, or <code>null</code> if no node
 	* is available.
 	*/
-	@:overload public function getRelatedNode() : org.w3c.dom.Node;
+	@:overload @:public public function getRelatedNode() : org.w3c.dom.Node;
 	
 	/**
 	* The URI this locator is pointing to, or <code>null</code> if no URI is
 	* available.
 	*/
-	@:overload public function getUri() : String;
+	@:overload @:public public function getUri() : String;
 	
 	
 }

@@ -25,17 +25,17 @@ package com.sun.xml.internal.bind.v2.util;
 */
 extern class CollisionCheckStack<E> extends java.util.AbstractList<E>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Set to false to use {@link Object#equals(Object)} to detect cycles.
 	* This method can be only used when the stack is empty.
 	*/
-	@:overload public function setUseIdentity(useIdentity : Bool) : Void;
+	@:overload @:public public function setUseIdentity(useIdentity : Bool) : Void;
 	
-	@:overload public function getUseIdentity() : Bool;
+	@:overload @:public public function getUseIdentity() : Bool;
 	
-	@:overload public function getLatestPushResult() : Bool;
+	@:overload @:public public function getLatestPushResult() : Bool;
 	
 	/**
 	* Pushes a new object to the stack.
@@ -43,39 +43,39 @@ extern class CollisionCheckStack<E> extends java.util.AbstractList<E>
 	* @return
 	*      true if this object has already been pushed
 	*/
-	@:overload public function push(o : E) : Bool;
+	@:overload @:public public function push(o : E) : Bool;
 	
 	/**
 	* Pushes a new object to the stack without making it participate
 	* with the collision check.
 	*/
-	@:overload public function pushNocheck(o : E) : Void;
+	@:overload @:public public function pushNocheck(o : E) : Void;
 	
-	@:overload public function findDuplicate(o : E) : Bool;
+	@:overload @:public public function findDuplicate(o : E) : Bool;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Pops an object from the stack
 	*/
-	@:overload public function pop() : E;
+	@:overload @:public public function pop() : E;
 	
 	/**
 	* Returns the top of the stack.
 	*/
-	@:overload public function peek() : E;
+	@:overload @:public public function peek() : E;
 	
 	/**
 	* Clears all the contents in the stack.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* String that represents the cycle.
 	*/
-	@:overload public function getCycleString() : String;
+	@:overload @:public public function getCycleString() : String;
 	
 	
 }

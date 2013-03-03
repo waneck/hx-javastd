@@ -30,9 +30,9 @@ extern interface ExtensionVisitor
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function preVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function preVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
-	@:overload public function postVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function postVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
 	
 }

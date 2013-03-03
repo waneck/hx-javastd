@@ -29,7 +29,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* Creates an initially unselected toggle button
 	* without setting the text or image.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an initially unselected toggle button
@@ -37,7 +37,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	*
 	* @param icon  the image that the button should display
 	*/
-	@:overload public function new(icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a toggle button with the specified image
@@ -47,14 +47,14 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @param selected  if true, the button is initially selected;
 	*                  otherwise, the button is initially unselected
 	*/
-	@:overload public function new(icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Creates an unselected toggle button with the specified text.
 	*
 	* @param text  the string displayed on the toggle button
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Creates a toggle button with the specified text
@@ -64,7 +64,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @param selected  if true, the button is initially selected;
 	*                  otherwise, the button is initially unselected
 	*/
-	@:overload public function new(text : String, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, selected : Bool) : Void;
 	
 	/**
 	* Creates a toggle button where properties are taken from the
@@ -72,7 +72,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload @:public public function new(a : javax.swing.Action) : Void;
 	
 	/**
 	* Creates a toggle button that has the specified text and image,
@@ -81,7 +81,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @param text the string displayed on the button
 	* @param icon  the image that the button should display
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates a toggle button with the specified text, image, and
@@ -92,14 +92,14 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @param selected  if true, the button is initially selected;
 	*                  otherwise, the button is initially unselected
 	*/
-	@:overload public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
+	@:overload @:public public function new(text : String, icon : javax.swing.Icon, selected : Bool) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the l&f class
@@ -111,7 +111,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @beaninfo
 	*  description: A string that specifies the name of the L&F class
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this JToggleButton. This method
@@ -122,7 +122,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	*
 	* @return  a string representation of this JToggleButton.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JToggleButton.
@@ -136,7 +136,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	*       expert: true
 	*  description: The AccessibleContext associated with this ToggleButton.
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -157,24 +157,24 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	/**
 	* Creates a new ToggleButton Model
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Checks if the button is selected.
 	*/
-	@:overload override public function isSelected() : Bool;
+	@:overload @:public override public function isSelected() : Bool;
 	
 	/**
 	* Sets the selected state of the button.
 	* @param b true selects the toggle button,
 	*          false deselects the toggle button.
 	*/
-	@:overload override public function setSelected(b : Bool) : Void;
+	@:overload @:public override public function setSelected(b : Bool) : Void;
 	
 	/**
 	* Sets the pressed state of the toggle button.
 	*/
-	@:overload override public function setPressed(b : Bool) : Void;
+	@:overload @:public override public function setPressed(b : Bool) : Void;
 	
 	
 }
@@ -195,13 +195,13 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 */
 @:native('javax$swing$JToggleButton$AccessibleJToggleButton') extern class JToggleButton_AccessibleJToggleButton extends javax.swing.AbstractButton.AbstractButton_AccessibleAbstractButton implements java.awt.event.ItemListener
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fire accessible property change events when the state of the
 	* toggle button changes.
 	*/
-	@:overload public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Get the role of this object.
@@ -209,7 +209,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

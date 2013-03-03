@@ -119,50 +119,50 @@ extern class UTF16
 	* The lowest Unicode code point value.
 	* @stable ICU 2.1
 	*/
-	public static var CODEPOINT_MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var CODEPOINT_MIN_VALUE(default, null) : Int;
 	
 	/**
 	* The highest Unicode code point value (scalar value) according to the
 	* Unicode Standard.
 	* @stable ICU 2.1
 	*/
-	public static var CODEPOINT_MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var CODEPOINT_MAX_VALUE(default, null) : Int;
 	
 	/**
 	* The minimum value for Supplementary code points
 	* @stable ICU 2.1
 	*/
-	public static var SUPPLEMENTARY_MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var SUPPLEMENTARY_MIN_VALUE(default, null) : Int;
 	
 	/**
 	* Lead surrogate minimum value
 	* @stable ICU 2.1
 	*/
-	public static var LEAD_SURROGATE_MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var LEAD_SURROGATE_MIN_VALUE(default, null) : Int;
 	
 	/**
 	* Trail surrogate minimum value
 	* @stable ICU 2.1
 	*/
-	public static var TRAIL_SURROGATE_MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var TRAIL_SURROGATE_MIN_VALUE(default, null) : Int;
 	
 	/**
 	* Lead surrogate maximum value
 	* @stable ICU 2.1
 	*/
-	public static var LEAD_SURROGATE_MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var LEAD_SURROGATE_MAX_VALUE(default, null) : Int;
 	
 	/**
 	* Trail surrogate maximum value
 	* @stable ICU 2.1
 	*/
-	public static var TRAIL_SURROGATE_MAX_VALUE(default, null) : Int;
+	@:public @:static @:final public static var TRAIL_SURROGATE_MAX_VALUE(default, null) : Int;
 	
 	/**
 	* Surrogate minimum value
 	* @stable ICU 2.1
 	*/
-	public static var SURROGATE_MIN_VALUE(default, null) : Int;
+	@:public @:static @:final public static var SURROGATE_MIN_VALUE(default, null) : Int;
 	
 	/**
 	* Extract a single UTF-32 value from a string.
@@ -183,7 +183,7 @@ extern class UTF16
 	*            bounds.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function charAt(source : String, offset16 : Int) : Int;
+	@:overload @:public @:static public static function charAt(source : String, offset16 : Int) : Int;
 	
 	/**
 	* Extract a single UTF-32 value from a substring.
@@ -206,7 +206,7 @@ extern class UTF16
 	*            the range of start and limit.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function charAt(source : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, offset16 : Int) : Int;
+	@:overload @:public @:static public static function charAt(source : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, offset16 : Int) : Int;
 	
 	/**
 	* Determines how many chars this char32 requires.
@@ -217,7 +217,7 @@ extern class UTF16
 	* @return 2 if is in supplementary space, otherwise 1.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function getCharCount(char32 : Int) : Int;
+	@:overload @:public @:static public static function getCharCount(char32 : Int) : Int;
 	
 	/**
 	* Determines whether the code value is a surrogate.
@@ -225,7 +225,7 @@ extern class UTF16
 	* @return true iff the input character is a surrogate.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function isSurrogate(char16 : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isSurrogate(char16 : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Determines whether the character is a trail surrogate.
@@ -233,7 +233,7 @@ extern class UTF16
 	* @return true iff the input character is a trail surrogate.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function isTrailSurrogate(char16 : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isTrailSurrogate(char16 : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Determines whether the character is a lead surrogate.
@@ -241,7 +241,7 @@ extern class UTF16
 	* @return true iff the input character is a lead surrogate
 	* @stable ICU 2.1
 	*/
-	@:overload public static function isLeadSurrogate(char16 : java.StdTypes.Char16) : Bool;
+	@:overload @:public @:static public static function isLeadSurrogate(char16 : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Returns the lead surrogate.
@@ -253,7 +253,7 @@ extern class UTF16
 	*         and 0 otherwise (note: 0 is not a valid lead surrogate).
 	* @stable ICU 2.1
 	*/
-	@:overload public static function getLeadSurrogate(char32 : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function getLeadSurrogate(char32 : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Returns the trail surrogate.
@@ -265,7 +265,7 @@ extern class UTF16
 	*         the character itself
 	* @stable ICU 2.1
 	*/
-	@:overload public static function getTrailSurrogate(char32 : Int) : java.StdTypes.Char16;
+	@:overload @:public @:static public static function getTrailSurrogate(char32 : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Convenience method corresponding to String.valueOf(char). Returns a one
@@ -279,7 +279,7 @@ extern class UTF16
 	*            codepoint.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function valueOf(char32 : Int) : String;
+	@:overload @:public @:static public static function valueOf(char32 : Int) : String;
 	
 	/**
 	* Append a single UTF-32 value to the end of a StringBuffer.
@@ -293,7 +293,7 @@ extern class UTF16
 	*            within the range of the Unicode codepoints
 	* @stable ICU 2.1
 	*/
-	@:overload public static function append(target : java.lang.StringBuffer, char32 : Int) : java.lang.StringBuffer;
+	@:overload @:public @:static public static function append(target : java.lang.StringBuffer, char32 : Int) : java.lang.StringBuffer;
 	
 	/**
 	* Shifts offset16 by the argument number of codepoints within a subarray.
@@ -308,7 +308,7 @@ extern class UTF16
 	*            are out of range.
 	* @stable ICU 2.1
 	*/
-	@:overload public static function moveCodePointOffset(source : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, offset16 : Int, shift32 : Int) : Int;
+	@:overload @:public @:static public static function moveCodePointOffset(source : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int, offset16 : Int, shift32 : Int) : Int;
 	
 	
 }

@@ -42,19 +42,19 @@ extern class ModelInstrument extends javax.sound.midi.Instrument
 	*
 	* @author Karl Helgason
 	*/
-	@:overload private function new(soundbank : javax.sound.midi.Soundbank, patch : javax.sound.midi.Patch, name : String, dataClass : Class<Dynamic>) : Void;
+	@:overload @:protected private function new(soundbank : javax.sound.midi.Soundbank, patch : javax.sound.midi.Patch, name : String, dataClass : Class<Dynamic>) : Void;
 	
-	@:overload public function getDirector(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, channel : javax.sound.midi.MidiChannel, player : com.sun.media.sound.ModelDirectedPlayer) : com.sun.media.sound.ModelDirector;
+	@:overload @:public public function getDirector(performers : java.NativeArray<com.sun.media.sound.ModelPerformer>, channel : javax.sound.midi.MidiChannel, player : com.sun.media.sound.ModelDirectedPlayer) : com.sun.media.sound.ModelDirector;
 	
-	@:overload public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
+	@:overload @:public public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
 	
-	@:overload public function getChannelMixer(channel : javax.sound.midi.MidiChannel, format : javax.sound.sampled.AudioFormat) : com.sun.media.sound.ModelChannelMixer;
+	@:overload @:public public function getChannelMixer(channel : javax.sound.midi.MidiChannel, format : javax.sound.sampled.AudioFormat) : com.sun.media.sound.ModelChannelMixer;
 	
-	@:overload public function getPatchAlias() : javax.sound.midi.Patch;
+	@:overload @:public public function getPatchAlias() : javax.sound.midi.Patch;
 	
-	@:overload public function getKeys() : java.NativeArray<String>;
+	@:overload @:public public function getKeys() : java.NativeArray<String>;
 	
-	@:overload public function getChannels() : java.NativeArray<Bool>;
+	@:overload @:public public function getChannels() : java.NativeArray<Bool>;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class PrivateMLet extends javax.management.loading.MLet implements javax.
 	* to its containing MBeanServer's {@link ClassLoaderRepository}.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, delegateToCLR : Bool) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, delegateToCLR : Bool) : Void;
 	
 	/**
 	* Constructs a new PrivateMLet for the given URLs. The URLs will
@@ -53,7 +53,7 @@ extern class PrivateMLet extends javax.management.loading.MLet implements javax.
 	* to its containing MBeanServer's {@link ClassLoaderRepository}.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, delegateToCLR : Bool) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, delegateToCLR : Bool) : Void;
 	
 	/**
 	* Constructs a new PrivateMLet for the specified URLs, parent
@@ -70,7 +70,7 @@ extern class PrivateMLet extends javax.management.loading.MLet implements javax.
 	* to its containing MBeanServer's {@link ClassLoaderRepository}.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, factory : java.net.URLStreamHandlerFactory, delegateToCLR : Bool) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, factory : java.net.URLStreamHandlerFactory, delegateToCLR : Bool) : Void;
 	
 	
 }

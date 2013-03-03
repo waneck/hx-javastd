@@ -30,7 +30,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* only called if the old "ssl.SocketFactory.provider" property in the
 	* java.security file is set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an unconnected socket.
@@ -38,7 +38,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* @return the unconnected socket
 	* @see java.net.Socket#connect(java.net.SocketAddress, int)
 	*/
-	@:overload override public function createSocket() : java.net.Socket;
+	@:overload @:public override public function createSocket() : java.net.Socket;
 	
 	/**
 	* Constructs an SSL connection to a named host at a specified port.
@@ -49,7 +49,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* @param host name of the host with which to connect
 	* @param port number of the server's port
 	*/
-	@:overload override public function createSocket(host : String, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int) : java.net.Socket;
 	
 	/**
 	* Returns a socket layered over an existing socket to a
@@ -67,7 +67,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* @exception IOException if the connection can't be established
 	* @exception UnknownHostException if the host is not known
 	*/
-	@:overload override public function createSocket(s : java.net.Socket, host : String, port : Int, autoClose : Bool) : java.net.Socket;
+	@:overload @:public override public function createSocket(s : java.net.Socket, host : String, port : Int, autoClose : Bool) : java.net.Socket;
 	
 	/**
 	* Constructs an SSL connection to a server at a specified address
@@ -78,7 +78,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* @param address the server's host
 	* @param port its port
 	*/
-	@:overload override public function createSocket(address : java.net.InetAddress, port : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(address : java.net.InetAddress, port : Int) : java.net.Socket;
 	
 	/**
 	* Constructs an SSL connection to a named host at a specified port.
@@ -87,7 +87,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* has been configured. The socket will also bind() to the local
 	* address and port supplied.
 	*/
-	@:overload override public function createSocket(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(host : String, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
 	
 	/**
 	* Constructs an SSL connection to a server at a specified address
@@ -96,7 +96,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* context which has been configured. The socket will also bind() to
 	* the local address and port supplied.
 	*/
-	@:overload override public function createSocket(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
+	@:overload @:public override public function createSocket(address : java.net.InetAddress, port : Int, clientAddress : java.net.InetAddress, clientPort : Int) : java.net.Socket;
 	
 	/**
 	* Returns the subset of the supported cipher suites which are
@@ -105,7 +105,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* (preventing person-in-the-middle attacks) and where traffic
 	* is encrypted to provide confidentiality.
 	*/
-	@:overload override public function getDefaultCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getDefaultCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -115,7 +115,7 @@ extern class SSLSocketFactoryImpl extends javax.net.ssl.SSLSocketFactory
 	* which do not protect data confidentiality.  Servers may also need
 	* certain kinds of certificates to use certain cipher suites.
 	*/
-	@:overload override public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload @:public override public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	
 }

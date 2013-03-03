@@ -58,7 +58,7 @@ package java.awt;
 	/**
 	* Creates a new instance of <code>CheckboxGroup</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Gets the current choice from this check box group.
@@ -72,13 +72,13 @@ package java.awt;
 	* @see      java.awt.CheckboxGroup#setSelectedCheckbox
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload public function getSelectedCheckbox() : java.awt.Checkbox;
+	@:require(java1) @:overload @:public public function getSelectedCheckbox() : java.awt.Checkbox;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getSelectedCheckbox()</code>.
 	*/
-	@:overload public function getCurrent() : java.awt.Checkbox;
+	@:overload @:public public function getCurrent() : java.awt.Checkbox;
 	
 	/**
 	* Sets the currently selected check box in this group
@@ -96,20 +96,20 @@ package java.awt;
 	* @see      java.awt.CheckboxGroup#getSelectedCheckbox
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload public function setSelectedCheckbox(box : java.awt.Checkbox) : Void;
+	@:require(java1) @:overload @:public public function setSelectedCheckbox(box : java.awt.Checkbox) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setSelectedCheckbox(Checkbox)</code>.
 	*/
-	@:overload @:synchronized public function setCurrent(box : java.awt.Checkbox) : Void;
+	@:overload @:public @:synchronized public function setCurrent(box : java.awt.Checkbox) : Void;
 	
 	/**
 	* Returns a string representation of this check box group,
 	* including the value of its current selection.
 	* @return    a string representation of this check box group.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

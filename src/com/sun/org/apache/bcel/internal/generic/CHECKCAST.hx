@@ -61,13 +61,13 @@ extern class CHECKCAST extends com.sun.org.apache.bcel.internal.generic.CPInstru
 	/** Check whether object is of given type
 	* @param n index to class in constant pool
 	*/
-	@:overload public function new(index : Int) : Void;
+	@:overload @:public public function new(index : Int) : Void;
 	
 	/** @return exceptions this instruction may cause
 	*/
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
+	@:overload @:public public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -77,7 +77,7 @@ extern class CHECKCAST extends com.sun.org.apache.bcel.internal.generic.CPInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

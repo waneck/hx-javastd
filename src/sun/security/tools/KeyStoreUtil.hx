@@ -34,12 +34,12 @@ package sun.security.tools;
 	* Returns true if KeyStore has a password. This is true except for
 	* MSCAPI KeyStores
 	*/
-	@:overload public static function isWindowsKeyStore(storetype : String) : Bool;
+	@:overload @:public @:static public static function isWindowsKeyStore(storetype : String) : Bool;
 	
 	/**
 	* Returns standard-looking names for storetype
 	*/
-	@:overload public static function niceStoreTypeName(storetype : String) : String;
+	@:overload @:public @:static public static function niceStoreTypeName(storetype : String) : String;
 	
 	
 }

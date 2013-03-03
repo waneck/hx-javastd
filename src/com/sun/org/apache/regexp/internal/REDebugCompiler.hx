@@ -24,7 +24,7 @@ extern class REDebugCompiler extends com.sun.org.apache.regexp.internal.RECompil
 	* Dumps the current program to a PrintWriter
 	* @param p PrintWriter for program dump output
 	*/
-	@:overload public function dumpProgram(p : java.io.PrintWriter) : Void;
+	@:overload @:public public function dumpProgram(p : java.io.PrintWriter) : Void;
 	
 	
 }

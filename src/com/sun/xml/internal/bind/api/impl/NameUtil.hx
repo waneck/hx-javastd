@@ -35,36 +35,36 @@ package com.sun.xml.internal.bind.api.impl;
 	* For this reason, a whole lot of methods are made non-static,
 	* even though they look like they should be static.
 	*/
-	@:overload private function isPunct(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected private function isPunct(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload private static function isDigit(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isDigit(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload private static function isUpper(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isUpper(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload private static function isLower(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected @:static private static function isLower(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload private function isLetter(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected private function isLetter(c : java.StdTypes.Char16) : Bool;
 	
 	/**
 	* Capitalizes the first character of the specified string,
 	* and de-capitalize the rest of characters.
 	*/
-	@:overload public function capitalize(s : String) : String;
+	@:overload @:public public function capitalize(s : String) : String;
 	
-	private static var UPPER_LETTER(default, null) : Int;
+	@:static @:protected @:final private static var UPPER_LETTER(default, null) : Int;
 	
-	private static var LOWER_LETTER(default, null) : Int;
+	@:static @:protected @:final private static var LOWER_LETTER(default, null) : Int;
 	
-	private static var OTHER_LETTER(default, null) : Int;
+	@:static @:protected @:final private static var OTHER_LETTER(default, null) : Int;
 	
-	private static var DIGIT(default, null) : Int;
+	@:static @:protected @:final private static var DIGIT(default, null) : Int;
 	
-	private static var OTHER(default, null) : Int;
+	@:static @:protected @:final private static var OTHER(default, null) : Int;
 	
 	/**
 	* Classify a character into 5 categories that determine the word break.
 	*/
-	@:overload private function classify(c0 : java.StdTypes.Char16) : Int;
+	@:overload @:protected private function classify(c0 : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Tokenizes a string into words and capitalizes the first
@@ -75,20 +75,11 @@ package com.sun.xml.internal.bind.api.impl;
 	* of two words. For example, "abc100ghi" will be splitted into
 	* {"Abc", "100","Ghi"}.
 	*/
-	@:overload public function toWordList(s : String) : java.util.List<String>;
+	@:overload @:public public function toWordList(s : String) : java.util.List<String>;
 	
-	@:overload private function toMixedCaseName(ss : java.util.List<String>, startUpper : Bool) : String;
+	@:overload @:protected private function toMixedCaseName(ss : java.util.List<String>, startUpper : Bool) : String;
 	
-	@:overload private function toMixedCaseVariableName(ss : java.NativeArray<String>, startUpper : Bool, cdrUpper : Bool) : String;
-	
-	/**
-	* Formats a string into "THIS_KIND_OF_FORMAT_ABC_DEF".
-	*
-	* @return
-	*      Always return a string but there's no guarantee that
-	*      the generated code is a valid Java identifier.
-	*/
-	@:overload public function toConstantName(s : String) : String;
+	@:overload @:protected private function toMixedCaseVariableName(ss : java.NativeArray<String>, startUpper : Bool, cdrUpper : Bool) : String;
 	
 	/**
 	* Formats a string into "THIS_KIND_OF_FORMAT_ABC_DEF".
@@ -97,7 +88,16 @@ package com.sun.xml.internal.bind.api.impl;
 	*      Always return a string but there's no guarantee that
 	*      the generated code is a valid Java identifier.
 	*/
-	@:overload public function toConstantName(ss : java.util.List<String>) : String;
+	@:overload @:public public function toConstantName(s : String) : String;
+	
+	/**
+	* Formats a string into "THIS_KIND_OF_FORMAT_ABC_DEF".
+	*
+	* @return
+	*      Always return a string but there's no guarantee that
+	*      the generated code is a valid Java identifier.
+	*/
+	@:overload @:public public function toConstantName(ss : java.util.List<String>) : String;
 	
 	/**
 	* Escapes characters is the given string so that they can be
@@ -112,17 +112,17 @@ package com.sun.xml.internal.bind.api.impl;
 	*      String to be escaped. <code>s.substring(start)</code>
 	*      will be escaped and copied to the string buffer.
 	*/
-	@:overload public static function escape(sb : java.lang.StringBuilder, s : String, start : Int) : Void;
+	@:overload @:public @:static public static function escape(sb : java.lang.StringBuilder, s : String, start : Int) : Void;
 	
 	/**
 	* Checks if a given string is usable as a Java identifier.
 	*/
-	@:overload public static function isJavaIdentifier(s : String) : Bool;
+	@:overload @:public @:static public static function isJavaIdentifier(s : String) : Bool;
 	
 	/**
 	* Checks if the given string is a valid Java package name.
 	*/
-	@:overload public static function isJavaPackageName(s : String) : Bool;
+	@:overload @:public @:static public static function isJavaPackageName(s : String) : Bool;
 	
 	
 }

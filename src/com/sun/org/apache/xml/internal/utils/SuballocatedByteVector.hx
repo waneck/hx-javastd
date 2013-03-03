@@ -45,58 +45,58 @@ package com.sun.org.apache.xml.internal.utils;
 extern class SuballocatedByteVector
 {
 	/** Size of blocks to allocate          */
-	private var m_blocksize : Int;
+	@:protected private var m_blocksize : Int;
 	
 	/** Number of blocks to (over)allocate by */
-	private var m_numblocks : Int;
+	@:protected private var m_numblocks : Int;
 	
 	/** Array of arrays of bytes          */
-	private var m_map : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:protected private var m_map : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/** Number of bytes in array          */
-	private var m_firstFree : Int;
+	@:protected private var m_firstFree : Int;
 	
 	/** "Shortcut" handle to m_map[0] */
-	private var m_map0 : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var m_map0 : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Default constructor.  Note that the default
 	* block size is very small, for small lists.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a ByteVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int) : Void;
 	
 	/**
 	* Construct a ByteVector, using the given block size.
 	*
 	* @param blocksize Size of block to allocate
 	*/
-	@:overload public function new(blocksize : Int, increaseSize : Int) : Void;
+	@:overload @:public public function new(blocksize : Int, increaseSize : Int) : Void;
 	
 	/**
 	* Get the length of the list.
 	*
 	* @return length of the list
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Append a byte onto the vector.
 	*
 	* @param value Byte to add to the list
 	*/
-	@:overload public function addElement(value : java.StdTypes.Int8) : Void;
+	@:overload @:public public function addElement(value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Wipe it out.
 	*/
-	@:overload public function removeAllElements() : Void;
+	@:overload @:public public function removeAllElements() : Void;
 	
 	/**
 	* Sets the component at the specified index of this vector to be the
@@ -108,7 +108,7 @@ extern class SuballocatedByteVector
 	* @param value
 	* @param at     Index of where to set the object
 	*/
-	@:overload public function setElementAt(value : java.StdTypes.Int8, at : Int) : Void;
+	@:overload @:public public function setElementAt(value : java.StdTypes.Int8, at : Int) : Void;
 	
 	/**
 	* Get the nth element. This is often at the innermost loop of an
@@ -131,7 +131,7 @@ extern class SuballocatedByteVector
 	* Try/Catch is _supposed_ to be nearly free when not thrown to. Do we
 	* believe that? Should we have a separate safeElementAt?
 	*/
-	@:overload public function elementAt(i : Int) : java.StdTypes.Int8;
+	@:overload @:public public function elementAt(i : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -144,7 +144,7 @@ extern class SuballocatedByteVector
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : java.StdTypes.Int8, index : Int) : Int;
+	@:overload @:public public function indexOf(elem : java.StdTypes.Int8, index : Int) : Int;
 	
 	/**
 	* Searches for the first occurence of the given argument,
@@ -156,7 +156,7 @@ extern class SuballocatedByteVector
 	* argument in this vector at position index or later in the
 	* vector; returns -1 if the object is not found.
 	*/
-	@:overload public function indexOf(elem : java.StdTypes.Int8) : Int;
+	@:overload @:public public function indexOf(elem : java.StdTypes.Int8) : Int;
 	
 	
 }

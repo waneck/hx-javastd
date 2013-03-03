@@ -40,16 +40,16 @@ package java.util;
 	* @param  s
 	*         Unknown conversion
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Returns the unknown conversion.
 	*
 	* @return  The unknown conversion.
 	*/
-	@:overload public function getConversion() : String;
+	@:overload @:public public function getConversion() : String;
 	
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

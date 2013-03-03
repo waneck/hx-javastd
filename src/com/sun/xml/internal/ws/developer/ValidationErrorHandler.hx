@@ -34,7 +34,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	* @see SchemaValidation
 	* @author Jitendra Kotamraju
 	*/
-	private var packet : com.sun.xml.internal.ws.api.message.Packet;
+	@:protected private var packet : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Use it to communicate validation errors with the application.
@@ -45,7 +45,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*
 	* @param packet for request or response message
 	*/
-	@:overload public function setPacket(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function setPacket(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	/**
 	* Receive notification of a recoverable error.
@@ -72,7 +72,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -102,7 +102,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -125,7 +125,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:abstract public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

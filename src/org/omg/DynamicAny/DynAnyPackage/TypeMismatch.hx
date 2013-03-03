@@ -7,9 +7,9 @@ package org.omg.DynamicAny.DynAnyPackage;
 */
 extern class TypeMismatch extends org.omg.CORBA.UserException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new($reason : String) : Void;
+	@:overload @:public public function new($reason : String) : Void;
 	
 	
 }

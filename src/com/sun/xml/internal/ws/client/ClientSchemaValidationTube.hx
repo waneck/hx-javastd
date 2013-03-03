@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.client;
 */
 extern class ClientSchemaValidationTube extends com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube
 {
-	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function new(binding : com.sun.xml.internal.ws.api.WSBinding, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload override private function getValidator() : javax.xml.validation.Validator;
+	@:overload @:protected override private function getValidator() : javax.xml.validation.Validator;
 	
-	@:overload override private function isNoValidation() : Bool;
+	@:overload @:protected override private function isNoValidation() : Bool;
 	
-	@:overload private function new(that : com.sun.xml.internal.ws.client.ClientSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.client.ClientSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }

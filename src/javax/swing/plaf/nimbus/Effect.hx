@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class Effect
 {
-	@:overload private static function getArrayCache() : javax.swing.plaf.nimbus.Effect.Effect_ArrayCache;
+	@:overload @:protected @:static private static function getArrayCache() : javax.swing.plaf.nimbus.Effect.Effect_ArrayCache;
 	
 	
 }
@@ -44,13 +44,13 @@ package javax.swing.plaf.nimbus;
 
 @:native('javax$swing$plaf$nimbus$Effect$ArrayCache') extern class Effect_ArrayCache
 {
-	@:overload private function getTmpIntArray(size : Int) : java.NativeArray<Int>;
+	@:overload @:protected private function getTmpIntArray(size : Int) : java.NativeArray<Int>;
 	
-	@:overload private function getTmpByteArray1(size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function getTmpByteArray1(size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function getTmpByteArray2(size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function getTmpByteArray2(size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function getTmpByteArray3(size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function getTmpByteArray3(size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

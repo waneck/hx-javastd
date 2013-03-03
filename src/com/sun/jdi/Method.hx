@@ -305,7 +305,7 @@ extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Lo
 	* valid code index for this method (native and abstract methods
 	* will always return null).
 	*/
-	@:overload public function locationOfCodeIndex(codeIndex : haxe.Int64) : com.sun.jdi.Location;
+	@:overload @:public public function locationOfCodeIndex(codeIndex : haxe.Int64) : com.sun.jdi.Location;
 	
 	/**
 	* Returns a list containing each {@link LocalVariable} declared
@@ -327,7 +327,7 @@ extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Lo
 	* native or abstract methods (that is, their argument name
 	* information is not available), thus they will throw this exception.
 	*/
-	@:overload public function variables() : java.util.List<com.sun.jdi.LocalVariable>;
+	@:overload @:public public function variables() : java.util.List<com.sun.jdi.LocalVariable>;
 	
 	/**
 	* Returns a list containing each {@link LocalVariable} of a
@@ -346,7 +346,7 @@ extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Lo
 	* native or abstract methods (that is, their argument name
 	* information is not available), thus they will throw this exception.
 	*/
-	@:overload public function variablesByName(name : String) : java.util.List<com.sun.jdi.LocalVariable>;
+	@:overload @:public public function variablesByName(name : String) : java.util.List<com.sun.jdi.LocalVariable>;
 	
 	/**
 	* Returns a list containing each {@link LocalVariable} that is
@@ -364,7 +364,7 @@ extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Lo
 	* native or abstract methods (that is, their argument name
 	* information is not available), thus they will throw this exception.
 	*/
-	@:overload public function arguments() : java.util.List<com.sun.jdi.LocalVariable>;
+	@:overload @:public public function arguments() : java.util.List<com.sun.jdi.LocalVariable>;
 	
 	/**
 	* Returns an array containing the bytecodes for this method.
@@ -379,7 +379,7 @@ extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Lo
 	* the target virtual machine does not support
 	* the retrieval of bytecodes.
 	*/
-	@:overload public function bytecodes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function bytecodes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the {@link Location} of this method, if there
@@ -389,7 +389,7 @@ extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Lo
 	* this is an abstract method; native methods will return a
 	* Location object whose codeIndex is -1.
 	*/
-	@:overload public function location() : com.sun.jdi.Location;
+	@:overload @:public public function location() : com.sun.jdi.Location;
 	
 	
 }

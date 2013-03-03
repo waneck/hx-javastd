@@ -32,18 +32,18 @@ package sun.rmi.transport.proxy;
 @:internal extern class HttpOutputStream extends java.io.ByteArrayOutputStream
 {
 	/** the output stream to send response to */
-	private var out : java.io.OutputStream;
+	@:protected private var out : java.io.OutputStream;
 	
 	/**
 	* Begin buffering new HTTP response to be sent to a given stream.
 	* @param out the OutputStream to send response to
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* On close, send HTTP-packaged response.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	
 }

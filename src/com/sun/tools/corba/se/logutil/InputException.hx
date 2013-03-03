@@ -31,35 +31,35 @@ extern class InputException
 	*
 	* @param name the name of the new exception;
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Adds a new code to this exception.
 	*
 	* @param c the code to add.
 	*/
-	@:overload public function add(c : com.sun.tools.corba.se.logutil.InputCode) : Void;
+	@:overload @:public public function add(c : com.sun.tools.corba.se.logutil.InputCode) : Void;
 	
 	/**
 	* Returns the name of this exception.
 	*
 	* @return the exception's name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the codes associated with this exception.
 	*
 	* @return the exception's codes.
 	*/
-	@:overload public function getCodes() : java.util.Queue<com.sun.tools.corba.se.logutil.InputCode>;
+	@:overload @:public public function getCodes() : java.util.Queue<com.sun.tools.corba.se.logutil.InputCode>;
 	
 	/**
 	* Returns a textual representation of this exception.
 	*
 	* @return a textual representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

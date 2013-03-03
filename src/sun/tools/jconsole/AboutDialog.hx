@@ -25,9 +25,9 @@ package sun.tools.jconsole;
 */
 extern class AboutDialog extends sun.tools.jconsole.InternalDialog
 {
-	@:overload public function new(jConsole : sun.tools.jconsole.JConsole) : Void;
+	@:overload @:public public function new(jConsole : sun.tools.jconsole.JConsole) : Void;
 	
-	@:overload public function showDialog() : Void;
+	@:overload @:public public function showDialog() : Void;
 	
 	
 }

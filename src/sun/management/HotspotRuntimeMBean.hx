@@ -32,7 +32,7 @@ extern interface HotspotRuntimeMBean
 	* @return the number of safepoints taken place since the Java
 	* virtual machine started.
 	*/
-	@:overload public function getSafepointCount() : haxe.Int64;
+	@:overload @:public public function getSafepointCount() : haxe.Int64;
 	
 	/**
 	* Returns the accumulated time spent at safepoints in milliseconds.
@@ -41,14 +41,14 @@ extern interface HotspotRuntimeMBean
 	*
 	* @return the accumulated time spent at safepoints in milliseconds.
 	*/
-	@:overload public function getTotalSafepointTime() : haxe.Int64;
+	@:overload @:public public function getTotalSafepointTime() : haxe.Int64;
 	
 	/**
 	* Returns the accumulated time spent getting to safepoints in milliseconds.
 	*
 	* @return the accumulated time spent getting to safepoints in milliseconds.
 	*/
-	@:overload public function getSafepointSyncTime() : haxe.Int64;
+	@:overload @:public public function getSafepointSyncTime() : haxe.Int64;
 	
 	/**
 	* Returns a list of internal counters maintained in the Java
@@ -57,7 +57,7 @@ extern interface HotspotRuntimeMBean
 	* @return a <tt>List</tt> of internal counters maintained in the VM
 	* for the runtime system.
 	*/
-	@:overload public function getInternalRuntimeCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalRuntimeCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class AbstractPipeImpl implements com.sun.xml.internal.ws.api.pipe.Pipe
 	/**
 	* Do-nothing constructor.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Basis for the copy constructor.
@@ -37,9 +37,9 @@ extern class AbstractPipeImpl implements com.sun.xml.internal.ws.api.pipe.Pipe
 	* This registers the newly created {@link Pipe} with the {@link PipeCloner}
 	* through {@link PipeCloner#add(Pipe, Pipe)}.
 	*/
-	@:overload private function new(that : com.sun.xml.internal.ws.api.pipe.Pipe, cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : Void;
+	@:overload @:protected private function new(that : com.sun.xml.internal.ws.api.pipe.Pipe, cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : Void;
 	
-	@:overload public function preDestroy() : Void;
+	@:overload @:public public function preDestroy() : Void;
 	
 	/**
 	* Creates an identical clone of this {@link Pipe}.
@@ -83,7 +83,7 @@ extern class AbstractPipeImpl implements com.sun.xml.internal.ws.api.pipe.Pipe
 	*      always non-null {@link Pipe}.
 	* @param cloner
 	*/
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* Sends a {@link Packet} and returns a response {@link Packet} to it.
@@ -144,7 +144,7 @@ extern class AbstractPipeImpl implements com.sun.xml.internal.ws.api.pipe.Pipe
 	*      that there was no response. This is used for things like
 	*      one-way message and/or one-way transports.
 	*/
-	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function process(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

@@ -51,7 +51,7 @@ extern class ShortLookupTable extends java.awt.image.LookupTable
 	* @param data an array of short arrays representing a lookup
 	*        table for each band
 	*/
-	@:overload public function new(offset : Int, data : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>) : Void;
+	@:overload @:public public function new(offset : Int, data : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>) : Void;
 	
 	/**
 	* Constructs a ShortLookupTable object from an array
@@ -63,7 +63,7 @@ extern class ShortLookupTable extends java.awt.image.LookupTable
 	*        before indexing into the arrays
 	* @param data an array of shorts
 	*/
-	@:overload public function new(offset : Int, data : java.NativeArray<java.StdTypes.Int16>) : Void;
+	@:overload @:public public function new(offset : Int, data : java.NativeArray<java.StdTypes.Int16>) : Void;
 	
 	/**
 	* Returns the lookup table data by reference.  If this ShortLookupTable
@@ -71,7 +71,7 @@ extern class ShortLookupTable extends java.awt.image.LookupTable
 	* array is one.
 	* @return ShortLookupTable data array.
 	*/
-	@:overload @:final public function getTable() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
+	@:overload @:public @:final public function getTable() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/**
 	* Returns an array of samples of a pixel, translated with the lookup
@@ -92,7 +92,7 @@ extern class ShortLookupTable extends java.awt.image.LookupTable
 	*            zero or greater than or equal to the length of the
 	*            lookup table for any band.
 	*/
-	@:overload public function lookupPixel(src : java.NativeArray<Int>, dst : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public override public function lookupPixel(src : java.NativeArray<Int>, dst : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of samples of a pixel, translated with the lookup
@@ -113,7 +113,7 @@ extern class ShortLookupTable extends java.awt.image.LookupTable
 	*            zero or greater than or equal to the length of the
 	*            lookup table for any band.
 	*/
-	@:overload public function lookupPixel(src : java.NativeArray<java.StdTypes.Int16>, dst : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function lookupPixel(src : java.NativeArray<java.StdTypes.Int16>, dst : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
 	
 	
 }

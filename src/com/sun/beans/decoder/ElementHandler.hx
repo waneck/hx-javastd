@@ -39,14 +39,14 @@ package com.sun.beans.decoder;
 	*
 	* @return the owner document handler
 	*/
-	@:overload @:final public function getOwner() : com.sun.beans.decoder.DocumentHandler;
+	@:overload @:public @:final public function getOwner() : com.sun.beans.decoder.DocumentHandler;
 	
 	/**
 	* Returns the element handler that contains this one.
 	*
 	* @return the parent element handler
 	*/
-	@:overload @:final public function getParent() : com.sun.beans.decoder.ElementHandler;
+	@:overload @:public @:final public function getParent() : com.sun.beans.decoder.ElementHandler;
 	
 	/**
 	* Returns the value of the variable with specified identifier.
@@ -54,14 +54,14 @@ package com.sun.beans.decoder;
 	* @param id  the identifier
 	* @return the value of the variable
 	*/
-	@:overload @:final private function getVariable(id : String) : Dynamic;
+	@:overload @:protected @:final private function getVariable(id : String) : Dynamic;
 	
 	/**
 	* Returns the value of the parent element.
 	*
 	* @return the value of the parent element
 	*/
-	@:overload private function getContextBean() : Dynamic;
+	@:overload @:protected private function getContextBean() : Dynamic;
 	
 	/**
 	* Parses attributes of the element.
@@ -74,14 +74,14 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* This method is called before parsing of the element's body.
 	* All attributes are parsed at this point.
 	* By default, do nothing.
 	*/
-	@:overload public function startElement() : Void;
+	@:overload @:public public function startElement() : Void;
 	
 	/**
 	* This method is called after parsing of the element's body.
@@ -96,7 +96,7 @@ package com.sun.beans.decoder;
 	*
 	* @see #isArgument
 	*/
-	@:overload public function endElement() : Void;
+	@:overload @:public public function endElement() : Void;
 	
 	/**
 	* Adds the character that contained in this element.
@@ -104,7 +104,7 @@ package com.sun.beans.decoder;
 	*
 	* @param ch  the character
 	*/
-	@:overload public function addCharacter(ch : java.StdTypes.Char16) : Void;
+	@:overload @:public public function addCharacter(ch : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Adds the argument that is used to calculate the value of this element.
@@ -112,7 +112,7 @@ package com.sun.beans.decoder;
 	*
 	* @param argument  the value of the element that contained in this one
 	*/
-	@:overload private function addArgument(argument : Dynamic) : Void;
+	@:overload @:protected private function addArgument(argument : Dynamic) : Void;
 	
 	/**
 	* Tests whether the value of this element can be used
@@ -122,14 +122,14 @@ package com.sun.beans.decoder;
 	*         as an argument of the element that contained in this one,
 	*         {@code false} otherwise
 	*/
-	@:overload private function isArgument() : Bool;
+	@:overload @:protected private function isArgument() : Bool;
 	
 	/**
 	* Returns the value of this element.
 	*
 	* @return the value of this element
 	*/
-	@:overload @:abstract private function getValueObject() : com.sun.beans.decoder.ValueObject;
+	@:overload @:protected @:abstract private function getValueObject() : com.sun.beans.decoder.ValueObject;
 	
 	
 }

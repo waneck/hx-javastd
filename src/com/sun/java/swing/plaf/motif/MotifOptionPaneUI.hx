@@ -28,27 +28,27 @@ extern class MotifOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI
 	/**
 	* Creates a new MotifOptionPaneUI instance.
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates and returns a Container containin the buttons. The buttons
 	* are created by calling <code>getButtons</code>.
 	*/
-	@:overload private function createButtonArea() : java.awt.Container;
+	@:overload @:protected override private function createButtonArea() : java.awt.Container;
 	
 	/**
 	* Returns null, CDE/Motif does not impose a minimum size.
 	*/
-	@:overload public function getMinimumOptionPaneSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumOptionPaneSize() : java.awt.Dimension;
 	
-	@:overload private function createSeparator() : java.awt.Container;
+	@:overload @:protected override private function createSeparator() : java.awt.Container;
 	
 	/**
 	* Creates and adds a JLabel representing the icon returned from
 	* <code>getIcon</code> to <code>top</code>. This is messaged from
 	* <code>createMessageArea</code>
 	*/
-	@:overload private function addIcon(top : java.awt.Container) : Void;
+	@:overload @:protected override private function addIcon(top : java.awt.Container) : Void;
 	
 	
 }

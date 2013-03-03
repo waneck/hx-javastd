@@ -25,23 +25,23 @@ package com.sun.tools.classfile;
 */
 extern class Attributes implements java.lang.Iterable<com.sun.tools.classfile.Attribute>
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, attrs : java.NativeArray<com.sun.tools.classfile.Attribute>) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, attrs : java.NativeArray<com.sun.tools.classfile.Attribute>) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.tools.classfile.Attribute>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.tools.classfile.Attribute>;
 	
-	@:overload public function get(index : Int) : com.sun.tools.classfile.Attribute;
+	@:overload @:public public function get(index : Int) : com.sun.tools.classfile.Attribute;
 	
-	@:overload public function get(name : String) : com.sun.tools.classfile.Attribute;
+	@:overload @:public public function get(name : String) : com.sun.tools.classfile.Attribute;
 	
-	@:overload public function getIndex(constant_pool : com.sun.tools.classfile.ConstantPool, name : String) : Int;
+	@:overload @:public public function getIndex(constant_pool : com.sun.tools.classfile.ConstantPool, name : String) : Int;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function byteLength() : Int;
+	@:overload @:public public function byteLength() : Int;
 	
-	public var attrs(default, null) : java.NativeArray<com.sun.tools.classfile.Attribute>;
+	@:public @:final public var attrs(default, null) : java.NativeArray<com.sun.tools.classfile.Attribute>;
 	
-	public var map(default, null) : java.util.Map<String, com.sun.tools.classfile.Attribute>;
+	@:public @:final public var map(default, null) : java.util.Map<String, com.sun.tools.classfile.Attribute>;
 	
 	
 }

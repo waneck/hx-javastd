@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface TopLevelAttribute extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.AttributeType extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelAttribute;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelAttribute;
 	
 	
 }

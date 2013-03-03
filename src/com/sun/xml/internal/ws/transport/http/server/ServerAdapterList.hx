@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 extern class ServerAdapterList extends com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.server.ServerAdapter>
 {
-	@:overload private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.server.ServerAdapter;
+	@:overload @:protected override private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.server.ServerAdapter;
 	
 	
 }

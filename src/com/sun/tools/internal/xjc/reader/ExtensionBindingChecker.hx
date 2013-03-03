@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.reader;
 */
 extern class ExtensionBindingChecker extends com.sun.tools.internal.xjc.reader.AbstractExtensionBindingChecker
 {
-	@:overload public function new(schemaLanguage : String, options : com.sun.tools.internal.xjc.Options, handler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(schemaLanguage : String, options : com.sun.tools.internal.xjc.Options, handler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	
 }

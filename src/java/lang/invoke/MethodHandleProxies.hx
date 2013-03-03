@@ -100,14 +100,14 @@ extern class MethodHandleProxies
 	* @throws WrongMethodTypeException if the target cannot
 	*         be converted to the type required by the requested interface
 	*/
-	@:overload public static function asInterfaceInstance<T>(intfc : Class<T>, target : java.lang.invoke.MethodHandle) : T;
+	@:overload @:public @:static public static function asInterfaceInstance<T>(intfc : Class<T>, target : java.lang.invoke.MethodHandle) : T;
 	
 	/**
 	* Determines if the given object was produced by a call to {@link #asInterfaceInstance asInterfaceInstance}.
 	* @param x any reference
 	* @return true if the reference is not null and points to an object produced by {@code asInterfaceInstance}
 	*/
-	@:overload public static function isWrapperInstance(x : Dynamic) : Bool;
+	@:overload @:public @:static public static function isWrapperInstance(x : Dynamic) : Bool;
 	
 	/**
 	* Produces or recovers a target method handle which is behaviorally
@@ -118,7 +118,7 @@ extern class MethodHandleProxies
 	* @return a method handle implementing the unique method
 	* @throws IllegalArgumentException if the reference x is not to a wrapper instance
 	*/
-	@:overload public static function wrapperInstanceTarget(x : Dynamic) : java.lang.invoke.MethodHandle;
+	@:overload @:public @:static public static function wrapperInstanceTarget(x : Dynamic) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Recovers the unique single-method interface type for which this wrapper instance was created.
@@ -128,7 +128,7 @@ extern class MethodHandleProxies
 	* @return the single-method interface type for which the wrapper was created
 	* @throws IllegalArgumentException if the reference x is not to a wrapper instance
 	*/
-	@:overload public static function wrapperInstanceType(x : Dynamic) : Class<Dynamic>;
+	@:overload @:public @:static public static function wrapperInstanceType(x : Dynamic) : Class<Dynamic>;
 	
 	
 }

@@ -30,12 +30,12 @@ extern class Util
 	*
 	* @since 2.0
 	*/
-	@:require(java0) @:overload public static function getClassLogger() : java.util.logging.Logger;
+	@:require(java0) @:overload @:public @:static public static function getClassLogger() : java.util.logging.Logger;
 	
 	/**
 	* Reads the system property value and takes care of {@link SecurityException}.
 	*/
-	@:overload public static function getSystemProperty(name : String) : String;
+	@:overload @:public @:static public static function getSystemProperty(name : String) : String;
 	
 	
 }

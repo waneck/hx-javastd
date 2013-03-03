@@ -25,21 +25,21 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class CachedCodeBase extends _CodeBaseImplBase
 {
-	@:overload @:synchronized public static function cleanCache(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public @:static @:synchronized public static function cleanCache(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function new(connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
+	@:overload @:public public function new(connection : com.sun.corba.se.spi.transport.CorbaConnection) : Void;
 	
-	@:overload public function get_ir() : com.sun.org.omg.CORBA.Repository;
+	@:overload @:public public function get_ir() : com.sun.org.omg.CORBA.Repository;
 	
-	@:overload @:synchronized public function implementation(repId : String) : String;
+	@:overload @:public @:synchronized public function implementation(repId : String) : String;
 	
-	@:overload @:synchronized public function implementations(repIds : java.NativeArray<String>) : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function implementations(repIds : java.NativeArray<String>) : java.NativeArray<String>;
 	
-	@:overload @:synchronized public function meta(repId : String) : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription;
+	@:overload @:public @:synchronized public function meta(repId : String) : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription;
 	
-	@:overload @:synchronized public function metas(repIds : java.NativeArray<String>) : java.NativeArray<com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription>;
+	@:overload @:public @:synchronized public function metas(repIds : java.NativeArray<String>) : java.NativeArray<com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription>;
 	
-	@:overload @:synchronized public function bases(repId : String) : java.NativeArray<String>;
+	@:overload @:public @:synchronized public function bases(repId : String) : java.NativeArray<String>;
 	
 	
 }

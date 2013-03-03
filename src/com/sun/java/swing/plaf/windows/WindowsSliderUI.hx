@@ -25,48 +25,48 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 {
-	@:overload public function new(b : javax.swing.JSlider) : Void;
+	@:overload @:public public function new(b : javax.swing.JSlider) : Void;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Overrides to return a private track listener subclass which handles
 	* the HOT, PRESSED, and FOCUSED states.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createTrackListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
+	@:require(java6) @:overload @:protected override private function createTrackListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
-	@:overload override public function paintTrack(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintTrack(g : java.awt.Graphics) : Void;
 	
-	@:overload override private function paintMinorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
+	@:overload @:protected override private function paintMinorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
 	
-	@:overload override private function paintMajorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
+	@:overload @:protected override private function paintMajorTickForHorizSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, x : Int) : Void;
 	
-	@:overload override private function paintMinorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
+	@:overload @:protected override private function paintMinorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
 	
-	@:overload override private function paintMajorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
+	@:overload @:protected override private function paintMajorTickForVertSlider(g : java.awt.Graphics, tickBounds : java.awt.Rectangle, y : Int) : Void;
 	
-	@:overload override public function paintThumb(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paintThumb(g : java.awt.Graphics) : Void;
 	
-	@:overload override private function getThumbSize() : java.awt.Dimension;
+	@:overload @:protected override private function getThumbSize() : java.awt.Dimension;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsSliderUI$WindowsTrackListener') @:internal extern class WindowsSliderUI_WindowsTrackListener extends javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener
 {
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function updatePressed(newPressed : Bool) : Void;
+	@:overload @:public public function updatePressed(newPressed : Bool) : Void;
 	
-	@:overload public function updateRollover(newRollover : Bool) : Void;
+	@:overload @:public public function updateRollover(newRollover : Bool) : Void;
 	
 	
 }

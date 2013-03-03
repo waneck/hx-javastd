@@ -32,27 +32,27 @@ extern class ClassDeclarationImpl extends com.sun.tools.apt.mirror.declaration.T
 	* {@inheritDoc}
 	* Overridden here to handle @Inherited.
 	*/
-	@:overload override public function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>) : A;
+	@:overload @:public override public function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>) : A;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSuperclass() : com.sun.mirror.type.ClassType;
+	@:overload @:public public function getSuperclass() : com.sun.mirror.type.ClassType;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getConstructors() : java.util.Collection<com.sun.mirror.declaration.ConstructorDeclaration>;
+	@:overload @:public public function getConstructors() : java.util.Collection<com.sun.mirror.declaration.ConstructorDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMethods() : java.util.Collection<com.sun.mirror.declaration.MethodDeclaration>;
+	@:overload @:public override public function getMethods() : java.util.Collection<com.sun.mirror.declaration.MethodDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

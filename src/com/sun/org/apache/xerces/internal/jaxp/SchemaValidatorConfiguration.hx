@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.jaxp;
 */
 @:internal extern class SchemaValidatorConfiguration implements com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager
 {
-	@:overload public function new(parentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager, grammarContainer : com.sun.org.apache.xerces.internal.jaxp.validation.XSGrammarPoolContainer, validationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager) : Void;
+	@:overload @:public public function new(parentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager, grammarContainer : com.sun.org.apache.xerces.internal.jaxp.validation.XSGrammarPoolContainer, validationManager : com.sun.org.apache.xerces.internal.impl.validation.ValidationManager) : Void;
 	
 	/**
 	* Returns the state of a feature.
@@ -34,11 +34,11 @@ package com.sun.org.apache.xerces.internal.jaxp;
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
-	@:overload public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	@:overload public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	/**
 	* Returns the value of a property.
@@ -52,11 +52,11 @@ package com.sun.org.apache.xerces.internal.jaxp;
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String) : Dynamic;
 	
-	@:overload public function getFeature(featureId : String, defaultValue : Bool) : Bool;
+	@:overload @:public public function getFeature(featureId : String, defaultValue : Bool) : Bool;
 	
-	@:overload public function getProperty(propertyId : String, defaultValue : Dynamic) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String, defaultValue : Dynamic) : Dynamic;
 	
 	
 }

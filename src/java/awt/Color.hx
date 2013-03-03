@@ -28,145 +28,145 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	/**
 	* The color white.  In the default sRGB space.
 	*/
-	public static var white(default, null) : java.awt.Color;
+	@:public @:final @:static public static var white(default, null) : java.awt.Color;
 	
 	/**
 	* The color white.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var WHITE(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var WHITE(default, null) : java.awt.Color;
 	
 	/**
 	* The color light gray.  In the default sRGB space.
 	*/
-	public static var lightGray(default, null) : java.awt.Color;
+	@:public @:final @:static public static var lightGray(default, null) : java.awt.Color;
 	
 	/**
 	* The color light gray.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var LIGHT_GRAY(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var LIGHT_GRAY(default, null) : java.awt.Color;
 	
 	/**
 	* The color gray.  In the default sRGB space.
 	*/
-	public static var gray(default, null) : java.awt.Color;
+	@:public @:final @:static public static var gray(default, null) : java.awt.Color;
 	
 	/**
 	* The color gray.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var GRAY(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var GRAY(default, null) : java.awt.Color;
 	
 	/**
 	* The color dark gray.  In the default sRGB space.
 	*/
-	public static var darkGray(default, null) : java.awt.Color;
+	@:public @:final @:static public static var darkGray(default, null) : java.awt.Color;
 	
 	/**
 	* The color dark gray.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var DARK_GRAY(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var DARK_GRAY(default, null) : java.awt.Color;
 	
 	/**
 	* The color black.  In the default sRGB space.
 	*/
-	public static var black(default, null) : java.awt.Color;
+	@:public @:final @:static public static var black(default, null) : java.awt.Color;
 	
 	/**
 	* The color black.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BLACK(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var BLACK(default, null) : java.awt.Color;
 	
 	/**
 	* The color red.  In the default sRGB space.
 	*/
-	public static var red(default, null) : java.awt.Color;
+	@:public @:final @:static public static var red(default, null) : java.awt.Color;
 	
 	/**
 	* The color red.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var RED(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var RED(default, null) : java.awt.Color;
 	
 	/**
 	* The color pink.  In the default sRGB space.
 	*/
-	public static var pink(default, null) : java.awt.Color;
+	@:public @:final @:static public static var pink(default, null) : java.awt.Color;
 	
 	/**
 	* The color pink.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var PINK(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var PINK(default, null) : java.awt.Color;
 	
 	/**
 	* The color orange.  In the default sRGB space.
 	*/
-	public static var orange(default, null) : java.awt.Color;
+	@:public @:final @:static public static var orange(default, null) : java.awt.Color;
 	
 	/**
 	* The color orange.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var ORANGE(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var ORANGE(default, null) : java.awt.Color;
 	
 	/**
 	* The color yellow.  In the default sRGB space.
 	*/
-	public static var yellow(default, null) : java.awt.Color;
+	@:public @:final @:static public static var yellow(default, null) : java.awt.Color;
 	
 	/**
 	* The color yellow.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var YELLOW(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var YELLOW(default, null) : java.awt.Color;
 	
 	/**
 	* The color green.  In the default sRGB space.
 	*/
-	public static var green(default, null) : java.awt.Color;
+	@:public @:final @:static public static var green(default, null) : java.awt.Color;
 	
 	/**
 	* The color green.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var GREEN(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var GREEN(default, null) : java.awt.Color;
 	
 	/**
 	* The color magenta.  In the default sRGB space.
 	*/
-	public static var magenta(default, null) : java.awt.Color;
+	@:public @:final @:static public static var magenta(default, null) : java.awt.Color;
 	
 	/**
 	* The color magenta.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var MAGENTA(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var MAGENTA(default, null) : java.awt.Color;
 	
 	/**
 	* The color cyan.  In the default sRGB space.
 	*/
-	public static var cyan(default, null) : java.awt.Color;
+	@:public @:final @:static public static var cyan(default, null) : java.awt.Color;
 	
 	/**
 	* The color cyan.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var CYAN(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var CYAN(default, null) : java.awt.Color;
 	
 	/**
 	* The color blue.  In the default sRGB space.
 	*/
-	public static var blue(default, null) : java.awt.Color;
+	@:public @:final @:static public static var blue(default, null) : java.awt.Color;
 	
 	/**
 	* The color blue.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BLUE(default, null) : java.awt.Color;
+	@:require(java4) @:public @:final @:static public static var BLUE(default, null) : java.awt.Color;
 	
 	/**
 	* Creates an opaque sRGB color with the specified red, green,
@@ -187,7 +187,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getBlue
 	* @see #getRGB
 	*/
-	@:overload public function new(r : Int, g : Int, b : Int) : Void;
+	@:overload @:public public function new(r : Int, g : Int, b : Int) : Void;
 	
 	/**
 	* Creates an sRGB color with the specified red, green, blue, and alpha
@@ -206,7 +206,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getAlpha
 	* @see #getRGB
 	*/
-	@:overload public function new(r : Int, g : Int, b : Int, a : Int) : Void;
+	@:overload @:public public function new(r : Int, g : Int, b : Int, a : Int) : Void;
 	
 	/**
 	* Creates an opaque sRGB color with the specified combined RGB value
@@ -223,7 +223,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getBlue
 	* @see #getRGB
 	*/
-	@:overload public function new(rgb : Int) : Void;
+	@:overload @:public public function new(rgb : Int) : Void;
 	
 	/**
 	* Creates an sRGB color with the specified combined RGBA value consisting
@@ -242,7 +242,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getAlpha
 	* @see #getRGB
 	*/
-	@:overload public function new(rgba : Int, hasalpha : Bool) : Void;
+	@:overload @:public public function new(rgba : Int, hasalpha : Bool) : Void;
 	
 	/**
 	* Creates an opaque sRGB color with the specified red, green, and blue
@@ -262,7 +262,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getBlue
 	* @see #getRGB
 	*/
-	@:overload public function new(r : Single, g : Single, b : Single) : Void;
+	@:overload @:public public function new(r : Single, g : Single, b : Single) : Void;
 	
 	/**
 	* Creates an sRGB color with the specified red, green, blue, and
@@ -282,7 +282,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getAlpha
 	* @see #getRGB
 	*/
-	@:overload public function new(r : Single, g : Single, b : Single, a : Single) : Void;
+	@:overload @:public public function new(r : Single, g : Single, b : Single, a : Single) : Void;
 	
 	/**
 	* Creates a color in the specified <code>ColorSpace</code>
@@ -302,7 +302,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getComponents
 	* @see #getColorComponents
 	*/
-	@:overload public function new(cspace : java.awt.color.ColorSpace, components : java.NativeArray<Single>, alpha : Single) : Void;
+	@:overload @:public public function new(cspace : java.awt.color.ColorSpace, components : java.NativeArray<Single>, alpha : Single) : Void;
 	
 	/**
 	* Returns the red component in the range 0-255 in the default sRGB
@@ -310,7 +310,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @return the red component.
 	* @see #getRGB
 	*/
-	@:overload public function getRed() : Int;
+	@:overload @:public public function getRed() : Int;
 	
 	/**
 	* Returns the green component in the range 0-255 in the default sRGB
@@ -318,7 +318,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @return the green component.
 	* @see #getRGB
 	*/
-	@:overload public function getGreen() : Int;
+	@:overload @:public public function getGreen() : Int;
 	
 	/**
 	* Returns the blue component in the range 0-255 in the default sRGB
@@ -326,14 +326,14 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @return the blue component.
 	* @see #getRGB
 	*/
-	@:overload public function getBlue() : Int;
+	@:overload @:public public function getBlue() : Int;
 	
 	/**
 	* Returns the alpha component in the range 0-255.
 	* @return the alpha component.
 	* @see #getRGB
 	*/
-	@:overload public function getAlpha() : Int;
+	@:overload @:public public function getAlpha() : Int;
 	
 	/**
 	* Returns the RGB value representing the color in the default sRGB
@@ -348,7 +348,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see #getBlue
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload public function getRGB() : Int;
+	@:require(java0) @:overload @:public public function getRGB() : Int;
 	
 	/**
 	* Creates a new <code>Color</code> that is a brighter version of this
@@ -368,7 +368,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see        java.awt.Color#darker
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function brighter() : java.awt.Color;
+	@:require(java0) @:overload @:public public function brighter() : java.awt.Color;
 	
 	/**
 	* Creates a new <code>Color</code> that is a darker version of this
@@ -388,14 +388,14 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see        java.awt.Color#brighter
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function darker() : java.awt.Color;
+	@:require(java0) @:overload @:public public function darker() : java.awt.Color;
 	
 	/**
 	* Computes the hash code for this <code>Color</code>.
 	* @return     a hash code value for this object.
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function hashCode() : Int;
+	@:require(java0) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Determines whether another object is equal to this
@@ -410,7 +410,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*                             <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java0) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this <code>Color</code>. This
@@ -421,7 +421,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*
 	* @return  a string representation of this <code>Color</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Converts a <code>String</code> to an integer and returns the
@@ -436,7 +436,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*                      octal, or hexadecimal integer.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public static function decode(nm : String) : java.awt.Color;
+	@:require(java1) @:overload @:public @:static public static function decode(nm : String) : java.awt.Color;
 	
 	/**
 	* Finds a color in the system properties.
@@ -456,7 +456,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see      java.awt.Color#Color(int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public static function getColor(nm : String) : java.awt.Color;
+	@:require(java0) @:overload @:public @:static public static function getColor(nm : String) : java.awt.Color;
 	
 	/**
 	* Finds a color in the system properties.
@@ -478,7 +478,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see      java.awt.Color#Color(int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public static function getColor(nm : String, v : java.awt.Color) : java.awt.Color;
+	@:require(java0) @:overload @:public @:static public static function getColor(nm : String, v : java.awt.Color) : java.awt.Color;
 	
 	/**
 	* Finds a color in the system properties.
@@ -501,7 +501,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see      java.awt.Color#Color(int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public static function getColor(nm : String, v : Int) : java.awt.Color;
+	@:require(java0) @:overload @:public @:static public static function getColor(nm : String, v : Int) : java.awt.Color;
 	
 	/**
 	* Converts the components of a color, as specified by the HSB
@@ -530,7 +530,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see       java.awt.image.ColorModel#getRGBdefault()
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public static function HSBtoRGB(hue : Single, saturation : Single, brightness : Single) : Int;
+	@:require(java0) @:overload @:public @:static public static function HSBtoRGB(hue : Single, saturation : Single, brightness : Single) : Int;
 	
 	/**
 	* Converts the components of a color, as specified by the default RGB
@@ -554,7 +554,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see       java.awt.image.ColorModel#getRGBdefault()
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public static function RGBtoHSB(r : Int, g : Int, b : Int, hsbvals : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:require(java0) @:overload @:public @:static public static function RGBtoHSB(r : Int, g : Int, b : Int, hsbvals : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Creates a <code>Color</code> object based on the specified values
@@ -574,7 +574,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*                                 saturation, and brightness.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public static function getHSBColor(h : Single, s : Single, b : Single) : java.awt.Color;
+	@:require(java0) @:overload @:public @:static public static function getHSBColor(h : Single, s : Single, b : Single) : java.awt.Color;
 	
 	/**
 	* Returns a <code>float</code> array containing the color and alpha
@@ -588,7 +588,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*                  color and alpha components and returns
 	* @return the RGBA components in a <code>float</code> array.
 	*/
-	@:overload public function getRGBComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getRGBComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a <code>float</code> array containing only the color
@@ -601,7 +601,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*          components and returns
 	* @return the RGB components in a <code>float</code> array.
 	*/
-	@:overload public function getRGBColorComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getRGBColorComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a <code>float</code> array containing the color and alpha
@@ -619,7 +619,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @return the color and alpha components in a <code>float</code>
 	*          array.
 	*/
-	@:overload public function getComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a <code>float</code> array containing only the color
@@ -636,7 +636,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*          <code>ColorSpace</code> and returns
 	* @return the color components in a <code>float</code> array.
 	*/
-	@:overload public function getColorComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getColorComponents(compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a <code>float</code> array containing the color and alpha
@@ -654,7 +654,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @return the color and alpha components in a <code>float</code>
 	*          array.
 	*/
-	@:overload public function getComponents(cspace : java.awt.color.ColorSpace, compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getComponents(cspace : java.awt.color.ColorSpace, compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns a <code>float</code> array containing only the color
@@ -671,13 +671,13 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*          <code>ColorSpace</code>
 	* @return the color components in a <code>float</code> array.
 	*/
-	@:overload public function getColorComponents(cspace : java.awt.color.ColorSpace, compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload @:public public function getColorComponents(cspace : java.awt.color.ColorSpace, compArray : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the <code>ColorSpace</code> of this <code>Color</code>.
 	* @return this <code>Color</code> object's <code>ColorSpace</code>.
 	*/
-	@:overload public function getColorSpace() : java.awt.color.ColorSpace;
+	@:overload @:public public function getColorSpace() : java.awt.color.ColorSpace;
 	
 	/**
 	* Creates and returns a {@link PaintContext} used to
@@ -707,7 +707,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload @:synchronized public function createContext(cm : java.awt.image.ColorModel, r : java.awt.Rectangle, r2d : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload @:public @:synchronized public function createContext(cm : java.awt.image.ColorModel, r : java.awt.Rectangle, r2d : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	/**
 	* Returns the transparency mode for this <code>Color</code>.  This is
@@ -717,7 +717,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see Transparency
 	* @see #createContext
 	*/
-	@:overload public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	
 }

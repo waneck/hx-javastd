@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class DataExceptPattern extends com.sun.xml.internal.rngom.binary.DataPattern
 {
-	@:overload public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
 	
-	@:overload public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
+	@:overload @:public override public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
 	
 	
 }

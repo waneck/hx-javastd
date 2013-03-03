@@ -28,13 +28,13 @@ extern class AddressingPolicyValidator implements com.sun.xml.internal.ws.policy
 	/**
 	* Creates a new instance of AddressingPolicyValidator
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function validateClientSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
+	@:overload @:public public function validateClientSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
 	
-	@:overload public function validateServerSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
+	@:overload @:public public function validateServerSide(assertion : com.sun.xml.internal.ws.policy.PolicyAssertion) : com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.PolicyAssertionValidator_Fitness;
 	
-	@:overload public function declareSupportedDomains() : java.NativeArray<String>;
+	@:overload @:public public function declareSupportedDomains() : java.NativeArray<String>;
 	
 	
 }

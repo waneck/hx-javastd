@@ -35,9 +35,9 @@ package sun.tools.java;
 */
 extern class ClassType extends sun.tools.java.Type
 {
-	@:overload override public function getClassName() : sun.tools.java.Identifier;
+	@:overload @:public override public function getClassName() : sun.tools.java.Identifier;
 	
-	@:overload override public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
+	@:overload @:public override public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
 	
 	
 }

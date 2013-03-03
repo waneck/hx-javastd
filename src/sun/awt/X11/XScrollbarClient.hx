@@ -29,11 +29,11 @@ package sun.awt.X11;
 * Interface for notifying a client that a scrollbar has changed.
 * @see java.awt.event.AdjustmentEvent
 */
-	@:overload public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, value : Int, isAdjusting : Bool) : Void;
+	@:overload @:public public function notifyValue(obj : sun.awt.X11.XScrollbar, type : Int, value : Int, isAdjusting : Bool) : Void;
 	
-	@:overload public function getEventSource() : java.awt.Component;
+	@:overload @:public public function getEventSource() : java.awt.Component;
 	
-	@:overload public function repaintScrollbarRequest(scrollBar : sun.awt.X11.XScrollbar) : Void;
+	@:overload @:public public function repaintScrollbarRequest(scrollBar : sun.awt.X11.XScrollbar) : Void;
 	
 	
 }

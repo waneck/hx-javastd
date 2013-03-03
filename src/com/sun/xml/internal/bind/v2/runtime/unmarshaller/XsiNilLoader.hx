@@ -25,34 +25,34 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class XsiNilLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.ProxyLoader
 {
-	@:overload public function new(defaultLoader : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
+	@:overload @:public public function new(defaultLoader : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
 	
-	@:overload private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:protected override private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload @:public override public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
 	
 	/**
 	* Called when xsi:nil='true' was found.
 	*/
-	@:overload private function onNil(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State) : Void;
+	@:overload @:protected private function onNil(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$XsiNilLoader$Single') extern class XsiNilLoader_Single extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader
 {
-	@:overload public function new(l : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(l : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>) : Void;
 	
-	@:overload override private function onNil(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State) : Void;
+	@:overload @:protected override private function onNil(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$XsiNilLoader$Array') extern class XsiNilLoader_Array extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader
 {
-	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
+	@:overload @:public public function new(core : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
 	
-	@:overload override private function onNil(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State) : Void;
+	@:overload @:protected override private function onNil(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State) : Void;
 	
 	
 }

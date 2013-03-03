@@ -33,14 +33,14 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	* @param hints the specified <code>RenderingHints</code>,
 	*        or <code>null</code>
 	*/
-	@:overload public function new(lookup : java.awt.image.LookupTable, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(lookup : java.awt.image.LookupTable, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Returns the <code>LookupTable</code>.
 	* @return the <code>LookupTable</code> of this
 	*         <code>LookupOp</code>.
 	*/
-	@:overload @:final public function getTable() : java.awt.image.LookupTable;
+	@:overload @:public @:final public function getTable() : java.awt.image.LookupTable;
 	
 	/**
 	* Performs a lookup operation on a <code>BufferedImage</code>.
@@ -62,7 +62,7 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	*         described in the class comments, or if the source image
 	*         has an <code>IndexColorModel</code>.
 	*/
-	@:overload @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* Performs a lookup operation on a <code>Raster</code>.
@@ -84,7 +84,7 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	*         not meet the restrictions described in the class comments.
 	*
 	*/
-	@:overload @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the filtered destination image.  Since
@@ -93,7 +93,7 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	* @param src the <code>BufferedImage</code> to be filtered
 	* @return the bounds of the filtered definition image.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounding box of the filtered destination Raster.  Since
@@ -102,7 +102,7 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	* @param src the <code>Raster</code> to be filtered
 	* @return the bounds of the filtered definition <code>Raster</code>.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination image with the correct size and number of
@@ -113,7 +113,7 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	*                  can be <code>null</code>.
 	* @return a filtered destination <code>BufferedImage</code>.
 	*/
-	@:overload public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
 	
 	/**
 	* Creates a zeroed-destination <code>Raster</code> with the
@@ -121,7 +121,7 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	* @param src the <code>Raster</code> to be transformed
 	* @return the zeroed-destination <code>Raster</code>.
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the location of the destination point given a
@@ -136,14 +136,14 @@ extern class LookupOp implements java.awt.image.BufferedImageOp implements java.
 	* @return the <code>Point2D</code> in the destination that
 	*         corresponds to the specified point in the source.
 	*/
-	@:overload @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints for this op.
 	* @return the <code>RenderingHints</code> object associated
 	*         with this op.
 	*/
-	@:overload @:final public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:final public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

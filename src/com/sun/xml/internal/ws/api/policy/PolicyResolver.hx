@@ -71,7 +71,7 @@ extern interface PolicyResolver
 	* @param mutators
 	*      List of PolicyMapMutators that are run eventually when a PolicyMap is created
 	*/
-	@:overload public function new(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, container : com.sun.xml.internal.ws.api.server.Container, endpointClass : Class<Dynamic>, mutators : java.NativeArray<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : Void;
+	@:overload @:public public function new(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, container : com.sun.xml.internal.ws.api.server.Container, endpointClass : Class<Dynamic>, mutators : java.NativeArray<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : Void;
 	
 	/**
 	* The abstraction of PolicyMap is not finalized, and will change in few months. It is highly discouraged to use
@@ -88,21 +88,21 @@ extern interface PolicyResolver
 	* @param mutators
 	*      List of PolicyMapMutators that are run eventually when a PolicyMap is created
 	*/
-	@:overload public function new(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, container : com.sun.xml.internal.ws.api.server.Container, endpointClass : Class<Dynamic>, hasWsdl : Bool, mutators : java.NativeArray<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : Void;
+	@:overload @:public public function new(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, container : com.sun.xml.internal.ws.api.server.Container, endpointClass : Class<Dynamic>, hasWsdl : Bool, mutators : java.NativeArray<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : Void;
 	
-	@:overload public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
-	@:overload public function getEndpointClass() : Class<Dynamic>;
+	@:overload @:public public function getEndpointClass() : Class<Dynamic>;
 	
-	@:overload public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
 	/**
 	* Return true, if this service is bundled with WSDL, false otherwise
 	* @return
 	*/
-	@:overload public function hasWsdl() : Bool;
+	@:overload @:public public function hasWsdl() : Bool;
 	
-	@:overload public function getMutators() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapMutator>;
+	@:overload @:public public function getMutators() : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapMutator>;
 	
 	
 }
@@ -117,11 +117,11 @@ extern interface PolicyResolver
 	* @param policyMap PolicyMap created from PolicyAttachemnts in WSDL
 	* @param container
 	*/
-	@:overload public function new(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, container : com.sun.xml.internal.ws.api.server.Container) : Void;
+	@:overload @:public public function new(policyMap : com.sun.xml.internal.ws.policy.PolicyMap, container : com.sun.xml.internal.ws.api.server.Container) : Void;
 	
-	@:overload public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
-	@:overload public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
 	
 }

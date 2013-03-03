@@ -32,15 +32,15 @@ package com.sun.tools.example.debug.gui;
 */
 extern class GUI extends javax.swing.JPanel
 {
-	public static var srcTool : com.sun.tools.example.debug.gui.SourceTool;
+	@:public @:static public static var srcTool : com.sun.tools.example.debug.gui.SourceTool;
 	
-	public static var progname(default, null) : String;
+	@:public @:static @:final public static var progname(default, null) : String;
 	
-	public static var version(default, null) : String;
+	@:public @:static @:final public static var version(default, null) : String;
 	
-	public static var windowBanner(default, null) : String;
+	@:public @:static @:final public static var windowBanner(default, null) : String;
 	
-	@:overload public static function main(argv : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(argv : java.NativeArray<String>) : Void;
 	
 	
 }

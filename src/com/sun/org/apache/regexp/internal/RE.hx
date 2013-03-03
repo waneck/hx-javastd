@@ -23,22 +23,22 @@ extern class RE implements java.io.Serializable
 	/**
 	* Specifies normal, case-sensitive matching behaviour.
 	*/
-	public static var MATCH_NORMAL(default, null) : Int;
+	@:public @:static @:final public static var MATCH_NORMAL(default, null) : Int;
 	
 	/**
 	* Flag to indicate that matching should be case-independent (folded)
 	*/
-	public static var MATCH_CASEINDEPENDENT(default, null) : Int;
+	@:public @:static @:final public static var MATCH_CASEINDEPENDENT(default, null) : Int;
 	
 	/**
 	* Newlines should match as BOL/EOL (^ and $)
 	*/
-	public static var MATCH_MULTILINE(default, null) : Int;
+	@:public @:static @:final public static var MATCH_MULTILINE(default, null) : Int;
 	
 	/**
 	* Consider all input a single body of text - newlines are matched by .
 	*/
-	public static var MATCH_SINGLELINE(default, null) : Int;
+	@:public @:static @:final public static var MATCH_SINGLELINE(default, null) : Int;
 	
 	/**
 	* Constructs a regular expression matcher from a String by compiling it
@@ -50,7 +50,7 @@ extern class RE implements java.io.Serializable
 	* @see RECompiler
 	* @see recompile
 	*/
-	@:overload public function new(pattern : String) : Void;
+	@:overload @:public public function new(pattern : String) : Void;
 	
 	/**
 	* Constructs a regular expression matcher from a String by compiling it
@@ -63,7 +63,7 @@ extern class RE implements java.io.Serializable
 	* @see RECompiler
 	* @see recompile
 	*/
-	@:overload public function new(pattern : String, matchFlags : Int) : Void;
+	@:overload @:public public function new(pattern : String, matchFlags : Int) : Void;
 	
 	/**
 	* Construct a matcher for a pre-compiled regular expression from program
@@ -83,7 +83,7 @@ extern class RE implements java.io.Serializable
 	* @see REProgram
 	* @see recompile
 	*/
-	@:overload public function new(program : com.sun.org.apache.regexp.internal.REProgram, matchFlags : Int) : Void;
+	@:overload @:public public function new(program : com.sun.org.apache.regexp.internal.REProgram, matchFlags : Int) : Void;
 	
 	/**
 	* Construct a matcher for a pre-compiled regular expression from program
@@ -93,13 +93,13 @@ extern class RE implements java.io.Serializable
 	* @see RECompiler
 	* @see recompile
 	*/
-	@:overload public function new(program : com.sun.org.apache.regexp.internal.REProgram) : Void;
+	@:overload @:public public function new(program : com.sun.org.apache.regexp.internal.REProgram) : Void;
 	
 	/**
 	* Constructs a regular expression matcher with no initial program.
 	* This is likely to be an uncommon practice, but is still supported.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Converts a 'simplified' regular expression to a full regular expression
@@ -107,7 +107,7 @@ extern class RE implements java.io.Serializable
 	* @param pattern The pattern to convert
 	* @return The full regular expression
 	*/
-	@:overload public static function simplePatternToFullRegularExpression(pattern : String) : String;
+	@:overload @:public @:static public static function simplePatternToFullRegularExpression(pattern : String) : String;
 	
 	/**
 	* Sets match behaviour flags which alter the way RE does matching.
@@ -119,7 +119,7 @@ extern class RE implements java.io.Serializable
 	*   MATCH_MULTILINE           // Newline matches as BOL/EOL
 	* </pre>
 	*/
-	@:overload public function setMatchFlags(matchFlags : Int) : Void;
+	@:overload @:public public function setMatchFlags(matchFlags : Int) : Void;
 	
 	/**
 	* Returns the current match behaviour flags.
@@ -133,7 +133,7 @@ extern class RE implements java.io.Serializable
 	*
 	* @see #setMatchFlags
 	*/
-	@:overload public function getMatchFlags() : Int;
+	@:overload @:public public function getMatchFlags() : Int;
 	
 	/**
 	* Sets the current regular expression program used by this matcher object.
@@ -143,7 +143,7 @@ extern class RE implements java.io.Serializable
 	* @see REProgram
 	* @see recompile
 	*/
-	@:overload public function setProgram(program : com.sun.org.apache.regexp.internal.REProgram) : Void;
+	@:overload @:public public function setProgram(program : com.sun.org.apache.regexp.internal.REProgram) : Void;
 	
 	/**
 	* Returns the current regular expression program in use by this matcher object.
@@ -151,14 +151,14 @@ extern class RE implements java.io.Serializable
 	* @return Regular expression program
 	* @see #setProgram
 	*/
-	@:overload public function getProgram() : com.sun.org.apache.regexp.internal.REProgram;
+	@:overload @:public public function getProgram() : com.sun.org.apache.regexp.internal.REProgram;
 	
 	/**
 	* Returns the number of parenthesized subexpressions available after a successful match.
 	*
 	* @return Number of available parenthesized subexpressions
 	*/
-	@:overload public function getParenCount() : Int;
+	@:overload @:public public function getParenCount() : Int;
 	
 	/**
 	* Gets the contents of a parenthesized subexpression after a successful match.
@@ -166,7 +166,7 @@ extern class RE implements java.io.Serializable
 	* @param which Nesting level of subexpression
 	* @return String
 	*/
-	@:overload public function getParen(which : Int) : String;
+	@:overload @:public public function getParen(which : Int) : String;
 	
 	/**
 	* Returns the start index of a given paren level.
@@ -174,7 +174,7 @@ extern class RE implements java.io.Serializable
 	* @param which Nesting level of subexpression
 	* @return String index
 	*/
-	@:overload @:final public function getParenStart(which : Int) : Int;
+	@:overload @:public @:final public function getParenStart(which : Int) : Int;
 	
 	/**
 	* Returns the end index of a given paren level.
@@ -182,7 +182,7 @@ extern class RE implements java.io.Serializable
 	* @param which Nesting level of subexpression
 	* @return String index
 	*/
-	@:overload @:final public function getParenEnd(which : Int) : Int;
+	@:overload @:public @:final public function getParenEnd(which : Int) : Int;
 	
 	/**
 	* Returns the length of a given paren level.
@@ -190,7 +190,7 @@ extern class RE implements java.io.Serializable
 	* @param which Nesting level of subexpression
 	* @return Number of characters in the parenthesized subexpression
 	*/
-	@:overload @:final public function getParenLength(which : Int) : Int;
+	@:overload @:public @:final public function getParenLength(which : Int) : Int;
 	
 	/**
 	* Sets the start of a paren level
@@ -198,7 +198,7 @@ extern class RE implements java.io.Serializable
 	* @param which Which paren level
 	* @param i Index in input array
 	*/
-	@:overload @:final private function setParenStart(which : Int, i : Int) : Void;
+	@:overload @:protected @:final private function setParenStart(which : Int, i : Int) : Void;
 	
 	/**
 	* Sets the end of a paren level
@@ -206,7 +206,7 @@ extern class RE implements java.io.Serializable
 	* @param which Which paren level
 	* @param i Index in input array
 	*/
-	@:overload @:final private function setParenEnd(which : Int, i : Int) : Void;
+	@:overload @:protected @:final private function setParenEnd(which : Int, i : Int) : Void;
 	
 	/**
 	* Throws an Error representing an internal error condition probably resulting
@@ -215,7 +215,7 @@ extern class RE implements java.io.Serializable
 	*
 	* @param s Error description
 	*/
-	@:overload private function internalError(s : String) : Void;
+	@:overload @:protected private function internalError(s : String) : Void;
 	
 	/**
 	* Try to match a string against a subset of nodes in the program
@@ -226,7 +226,7 @@ extern class RE implements java.io.Serializable
 	* @param idxStart  Starting position in character array
 	* @return Final input array index if match succeeded.  -1 if not.
 	*/
-	@:overload private function matchNodes(firstNode : Int, lastNode : Int, idxStart : Int) : Int;
+	@:overload @:protected private function matchNodes(firstNode : Int, lastNode : Int, idxStart : Int) : Int;
 	
 	/**
 	* Match the current regular expression program against the current
@@ -236,7 +236,7 @@ extern class RE implements java.io.Serializable
 	* @param i The input string index to start matching at
 	* @return True if the input matched the expression
 	*/
-	@:overload private function matchAt(i : Int) : Bool;
+	@:overload @:protected private function matchAt(i : Int) : Bool;
 	
 	/**
 	* Matches the current regular expression program against a character array,
@@ -246,7 +246,7 @@ extern class RE implements java.io.Serializable
 	* @param i Index to start searching at
 	* @return True if string matched
 	*/
-	@:overload public function match(search : String, i : Int) : Bool;
+	@:overload @:public public function match(search : String, i : Int) : Bool;
 	
 	/**
 	* Matches the current regular expression program against a character array,
@@ -256,7 +256,7 @@ extern class RE implements java.io.Serializable
 	* @param i Index to start searching at
 	* @return True if string matched
 	*/
-	@:overload public function match(search : com.sun.org.apache.regexp.internal.CharacterIterator, i : Int) : Bool;
+	@:overload @:public public function match(search : com.sun.org.apache.regexp.internal.CharacterIterator, i : Int) : Bool;
 	
 	/**
 	* Matches the current regular expression program against a String.
@@ -264,7 +264,7 @@ extern class RE implements java.io.Serializable
 	* @param search String to match against
 	* @return True if string matched
 	*/
-	@:overload public function match(search : String) : Bool;
+	@:overload @:public public function match(search : String) : Bool;
 	
 	/**
 	* Splits a string into an array of strings on regular expression boundaries.
@@ -280,24 +280,24 @@ extern class RE implements java.io.Serializable
 	* @param s String to split on this regular exression
 	* @return Array of strings
 	*/
-	@:overload public function split(s : String) : java.NativeArray<String>;
+	@:overload @:public public function split(s : String) : java.NativeArray<String>;
 	
 	/**
 	* Flag bit that indicates that subst should replace all occurrences of this
 	* regular expression.
 	*/
-	public static var REPLACE_ALL(default, null) : Int;
+	@:public @:static @:final public static var REPLACE_ALL(default, null) : Int;
 	
 	/**
 	* Flag bit that indicates that subst should only replace the first occurrence
 	* of this regular expression.
 	*/
-	public static var REPLACE_FIRSTONLY(default, null) : Int;
+	@:public @:static @:final public static var REPLACE_FIRSTONLY(default, null) : Int;
 	
 	/**
 	* Flag bit that indicates that subst should replace backreferences
 	*/
-	public static var REPLACE_BACKREFERENCES(default, null) : Int;
+	@:public @:static @:final public static var REPLACE_BACKREFERENCES(default, null) : Int;
 	
 	/**
 	* Substitutes a string for this regular expression in another string.
@@ -313,7 +313,7 @@ extern class RE implements java.io.Serializable
 	* expression object doesn't match at any position, the original String is returned
 	* unchanged).
 	*/
-	@:overload public function subst(substituteIn : String, substitution : String) : String;
+	@:overload @:public public function subst(substituteIn : String, substitution : String) : String;
 	
 	/**
 	* Substitutes a string for this regular expression in another string.
@@ -343,7 +343,7 @@ extern class RE implements java.io.Serializable
 	* expression object doesn't match at any position, the original String is returned
 	* unchanged).
 	*/
-	@:overload public function subst(substituteIn : String, substitution : String, flags : Int) : String;
+	@:overload @:public public function subst(substituteIn : String, substitution : String, flags : Int) : String;
 	
 	/**
 	* Returns an array of Strings, whose toString representation matches a regular
@@ -354,7 +354,7 @@ extern class RE implements java.io.Serializable
 	* @param search Array of Objects to search
 	* @return Array of Strings whose toString() value matches this regular expression.
 	*/
-	@:overload public function grep(search : java.NativeArray<Dynamic>) : java.NativeArray<String>;
+	@:overload @:public public function grep(search : java.NativeArray<Dynamic>) : java.NativeArray<String>;
 	
 	
 }

@@ -70,33 +70,33 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class ClassLoaderRepository implements com.sun.org.apache.bcel.internal.util.Repository
 {
-	@:overload public function new(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Store a new JavaClass into this Repository.
 	*/
-	@:overload public function storeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function storeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Remove class from repository
 	*/
-	@:overload public function removeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function removeClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
 	/**
 	* Find an already defined JavaClass.
 	*/
-	@:overload public function findClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function findClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* Lookup a JavaClass object from the Class Name provided.
 	*/
-	@:overload public function loadClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function loadClass(className : String) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
-	@:overload public function loadClass(clazz : Class<Dynamic>) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
+	@:overload @:public public function loadClass(clazz : Class<Dynamic>) : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/** Clear all entries from cache.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

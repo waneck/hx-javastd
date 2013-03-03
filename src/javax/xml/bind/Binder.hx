@@ -62,7 +62,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If the node parameter is null
 	*/
-	@:overload @:abstract public function unmarshal(xmlNode : XmlNode) : Dynamic;
+	@:overload @:public @:abstract public function unmarshal(xmlNode : XmlNode) : Dynamic;
 	
 	/**
 	* Unmarshal XML root element by provided <tt>declaredType</tt>
@@ -101,7 +101,7 @@ extern class Binder<XmlNode>
 	*      If any of the input parameters are null
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload @:abstract public function unmarshal<T>(xmlNode : XmlNode, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:require(java0) @:overload @:public @:abstract public function unmarshal<T>(xmlNode : XmlNode, declaredType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
 	/**
 	* Marshal a JAXB object tree to a new XML document.
@@ -133,7 +133,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload @:abstract public function marshal(jaxbObject : Dynamic, xmlNode : XmlNode) : Void;
+	@:overload @:public @:abstract public function marshal(jaxbObject : Dynamic, xmlNode : XmlNode) : Void;
 	
 	/**
 	* Gets the XML element associated with the given JAXB object.
@@ -161,7 +161,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If the jaxbObject parameter is null
 	*/
-	@:overload @:abstract public function getXMLNode(jaxbObject : Dynamic) : XmlNode;
+	@:overload @:public @:abstract public function getXMLNode(jaxbObject : Dynamic) : XmlNode;
 	
 	/**
 	* Gets the JAXB object associated with the given XML element.
@@ -185,7 +185,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If the node parameter is null
 	*/
-	@:overload @:abstract public function getJAXBNode(xmlNode : XmlNode) : Dynamic;
+	@:overload @:public @:abstract public function getJAXBNode(xmlNode : XmlNode) : Dynamic;
 	
 	/**
 	* Takes an JAXB object and updates
@@ -202,7 +202,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If the jaxbObject parameter is null
 	*/
-	@:overload @:abstract public function updateXML(jaxbObject : Dynamic) : XmlNode;
+	@:overload @:public @:abstract public function updateXML(jaxbObject : Dynamic) : XmlNode;
 	
 	/**
 	* Changes in JAXB object tree are updated in its associated XML parse tree.
@@ -236,7 +236,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If any of the input parameters are null
 	*/
-	@:overload @:abstract public function updateXML(jaxbObject : Dynamic, xmlNode : XmlNode) : XmlNode;
+	@:overload @:public @:abstract public function updateXML(jaxbObject : Dynamic, xmlNode : XmlNode) : XmlNode;
 	
 	/**
 	* Takes an XML node and updates its associated JAXB object and its descendants.
@@ -265,7 +265,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If node parameter is null
 	*/
-	@:overload @:abstract public function updateJAXB(xmlNode : XmlNode) : Dynamic;
+	@:overload @:public @:abstract public function updateJAXB(xmlNode : XmlNode) : Dynamic;
 	
 	/**
 	* Specifies whether marshal, unmarshal and update methods
@@ -275,7 +275,7 @@ extern class Binder<XmlNode>
 	*
 	* @see Unmarshaller#setSchema(Schema)
 	*/
-	@:overload @:abstract public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:overload @:public @:abstract public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* Gets the last {@link Schema} object (including null) set by the
@@ -283,7 +283,7 @@ extern class Binder<XmlNode>
 	*
 	* @return the Schema object for validation or null if not present
 	*/
-	@:overload @:abstract public function getSchema() : javax.xml.validation.Schema;
+	@:overload @:public @:abstract public function getSchema() : javax.xml.validation.Schema;
 	
 	/**
 	* Allow an application to register a <tt>ValidationEventHandler</tt>.
@@ -300,7 +300,7 @@ extern class Binder<XmlNode>
 	* @throws JAXBException if an error was encountered while setting the
 	*         event handler
 	*/
-	@:overload @:abstract public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public @:abstract public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Return the current event handler or the default event handler if one
@@ -311,7 +311,7 @@ extern class Binder<XmlNode>
 	* @throws JAXBException if an error was encountered while getting the
 	*         current event handler
 	*/
-	@:overload @:abstract public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
+	@:overload @:public @:abstract public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
 	
 	/**
 	*
@@ -335,7 +335,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If the name parameter is null
 	*/
-	@:overload @:abstract public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:abstract @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get the particular property in the underlying implementation of
@@ -358,7 +358,7 @@ extern class Binder<XmlNode>
 	* @throws IllegalArgumentException
 	*      If the name parameter is null
 	*/
-	@:overload @:abstract public function getProperty(name : String) : Dynamic;
+	@:overload @:abstract @:public public function getProperty(name : String) : Dynamic;
 	
 	
 }

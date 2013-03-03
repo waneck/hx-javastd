@@ -41,7 +41,7 @@ extern class JMXServiceURL implements java.io.Serializable
 	* <code>"service:jmx:"</code> (case-insensitive).  It must not
 	* contain any characters that are not printable ASCII characters.
 	*/
-	@:overload public function new(serviceURL : String) : Void;
+	@:overload @:public public function new(serviceURL : String) : Void;
 	
 	/**
 	* <p>Constructs a <code>JMXServiceURL</code> with the given protocol,
@@ -65,7 +65,7 @@ extern class JMXServiceURL implements java.io.Serializable
 	* is not possible to find the local host name, or if
 	* <code>port</code> is negative.
 	*/
-	@:overload public function new(protocol : String, host : String, port : Int) : Void;
+	@:overload @:public public function new(protocol : String, host : String, port : Int) : Void;
 	
 	/**
 	* <p>Constructs a <code>JMXServiceURL</code> with the given parts.
@@ -89,14 +89,14 @@ extern class JMXServiceURL implements java.io.Serializable
 	* is not possible to find the local host name, or if
 	* <code>port</code> is negative.
 	*/
-	@:overload public function new(protocol : String, host : String, port : Int, urlPath : String) : Void;
+	@:overload @:public public function new(protocol : String, host : String, port : Int, urlPath : String) : Void;
 	
 	/**
 	* <p>The protocol part of the Service URL.
 	*
 	* @return the protocol part of the Service URL.  This is never null.
 	*/
-	@:overload public function getProtocol() : String;
+	@:overload @:public public function getProtocol() : String;
 	
 	/**
 	* <p>The host part of the Service URL.  If the Service URL was
@@ -114,7 +114,7 @@ extern class JMXServiceURL implements java.io.Serializable
 	*
 	* @return the host part of the Service URL.  This is never null.
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* <p>The port of the Service URL.  If no port was
@@ -122,7 +122,7 @@ extern class JMXServiceURL implements java.io.Serializable
 	*
 	* @return the port of the Service URL, or 0 if none.
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* <p>The URL Path part of the Service URL.  This is an empty
@@ -132,7 +132,7 @@ extern class JMXServiceURL implements java.io.Serializable
 	* @return the URL Path part of the Service URL.  This is never
 	* null.
 	*/
-	@:overload public function getURLPath() : String;
+	@:overload @:public public function getURLPath() : String;
 	
 	/**
 	* <p>The string representation of this Service URL.  If the value
@@ -151,7 +151,7 @@ extern class JMXServiceURL implements java.io.Serializable
 	*
 	* @return the string representation of this Service URL.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* <p>Indicates whether some other object is equal to this one.
@@ -167,9 +167,9 @@ extern class JMXServiceURL implements java.io.Serializable
 	* @return <code>true</code> if this object is the same as the
 	* <code>obj</code> argument; <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

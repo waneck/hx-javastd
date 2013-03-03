@@ -33,7 +33,7 @@ package com.sun.nio.sctp;
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the association that this notification is applicable to.
@@ -42,14 +42,14 @@ package com.sun.nio.sctp;
 	*          there is no association, that is {@linkplain
 	*          AssocChangeEvent#CANT_START CANT_START}
 	*/
-	@:overload @:abstract public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public @:abstract public function association() : com.sun.nio.sctp.Association;
 	
 	/**
 	* Returns the type of change event.
 	*
 	* @return  The event
 	*/
-	@:overload @:abstract public function event() : com.sun.nio.sctp.AssociationChangeNotification.AssociationChangeNotification_AssocChangeEvent;
+	@:overload @:public @:abstract public function event() : com.sun.nio.sctp.AssociationChangeNotification.AssociationChangeNotification_AssocChangeEvent;
 	
 	
 }

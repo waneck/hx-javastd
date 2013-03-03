@@ -28,32 +28,32 @@ extern class ComponentEvent extends java.awt.AWTEvent
 	/**
 	* The first number in the range of ids used for component events.
 	*/
-	public static var COMPONENT_FIRST(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for component events.
 	*/
-	public static var COMPONENT_LAST(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_LAST(default, null) : Int;
 	
 	/**
 	* This event indicates that the component's position changed.
 	*/
-	public static var COMPONENT_MOVED(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_MOVED(default, null) : Int;
 	
 	/**
 	* This event indicates that the component's size changed.
 	*/
-	public static var COMPONENT_RESIZED(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_RESIZED(default, null) : Int;
 	
 	/**
 	* This event indicates that the component was made visible.
 	*/
-	public static var COMPONENT_SHOWN(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_SHOWN(default, null) : Int;
 	
 	/**
 	* This event indicates that the component was rendered invisible.
 	*/
-	public static var COMPONENT_HIDDEN(default, null) : Int;
+	@:public @:static @:final public static var COMPONENT_HIDDEN(default, null) : Int;
 	
 	/**
 	* Constructs a <code>ComponentEvent</code> object.
@@ -69,7 +69,7 @@ extern class ComponentEvent extends java.awt.AWTEvent
 	* @see #getComponent()
 	* @see #getID()
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int) : Void;
 	
 	/**
 	* Returns the originator of the event.
@@ -78,7 +78,7 @@ extern class ComponentEvent extends java.awt.AWTEvent
 	* the event, or <code>null</code> if the object is not a
 	* <code>Component</code>.
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -86,7 +86,7 @@ extern class ComponentEvent extends java.awt.AWTEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

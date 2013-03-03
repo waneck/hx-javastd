@@ -36,13 +36,13 @@ extern class KrbDataOutputStream extends java.io.BufferedOutputStream
 	* @author Yanni Zhang
 	*
 	*/
-	@:overload public function new(os : java.io.OutputStream) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream) : Void;
 	
-	@:overload public function write32(num : Int) : Void;
+	@:overload @:public public function write32(num : Int) : Void;
 	
-	@:overload public function write16(num : Int) : Void;
+	@:overload @:public public function write16(num : Int) : Void;
 	
-	@:overload public function write8(num : Int) : Void;
+	@:overload @:public public function write8(num : Int) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.server.sei;
 */
 @:internal extern class EndpointMethodHandler
 {
-	@:overload public function new(owner : com.sun.xml.internal.ws.server.sei.SEIInvokerTube, method : com.sun.xml.internal.ws.model.JavaMethodImpl, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.ws.server.sei.SEIInvokerTube, method : com.sun.xml.internal.ws.model.JavaMethodImpl, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload public function invoke(req : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function invoke(req : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

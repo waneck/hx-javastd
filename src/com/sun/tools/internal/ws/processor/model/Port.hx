@@ -28,61 +28,61 @@ extern class Port extends com.sun.tools.internal.ws.processor.model.ModelObject
 	/**
 	* @author WS Development Team
 	*/
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function addOperation(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
+	@:overload @:public public function addOperation(operation : com.sun.tools.internal.ws.processor.model.Operation) : Void;
 	
-	@:overload public function getOperationByUniqueName(name : String) : com.sun.tools.internal.ws.processor.model.Operation;
-	
-	/* serialization */
-	@:overload public function getOperations() : java.util.List<com.sun.tools.internal.ws.processor.model.Operation>;
+	@:overload @:public public function getOperationByUniqueName(name : String) : com.sun.tools.internal.ws.processor.model.Operation;
 	
 	/* serialization */
-	@:overload public function setOperations(l : java.util.List<com.sun.tools.internal.ws.processor.model.Operation>) : Void;
+	@:overload @:public public function getOperations() : java.util.List<com.sun.tools.internal.ws.processor.model.Operation>;
 	
-	@:overload public function getJavaInterface() : com.sun.tools.internal.ws.processor.model.java.JavaInterface;
+	/* serialization */
+	@:overload @:public public function setOperations(l : java.util.List<com.sun.tools.internal.ws.processor.model.Operation>) : Void;
 	
-	@:overload public function setJavaInterface(i : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : Void;
+	@:overload @:public public function getJavaInterface() : com.sun.tools.internal.ws.processor.model.java.JavaInterface;
 	
-	@:overload public function getAddress() : String;
+	@:overload @:public public function setJavaInterface(i : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : Void;
 	
-	@:overload public function setAddress(s : String) : Void;
+	@:overload @:public public function getAddress() : String;
 	
-	@:overload public function getServiceImplName() : String;
+	@:overload @:public public function setAddress(s : String) : Void;
 	
-	@:overload public function setServiceImplName(name : String) : Void;
+	@:overload @:public public function getServiceImplName() : String;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public public function setServiceImplName(name : String) : Void;
 	
-	@:overload public function isProvider() : Bool;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	
+	@:overload @:public public function isProvider() : Bool;
 	
 	/**
 	* XYZ_Service.getABC() method name
 	*
 	* @return Returns the portGetterName.
 	*/
-	@:overload public function getPortGetter() : String;
+	@:overload @:public public function getPortGetter() : String;
 	
 	/**
 	* @param portGetterName The portGetterName to set.
 	*/
-	@:overload public function setPortGetter(portGetterName : String) : Void;
+	@:overload @:public public function setPortGetter(portGetterName : String) : Void;
 	
-	@:overload public function getStyle() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
+	@:overload @:public public function getStyle() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
 	
-	@:overload public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle) : Void;
+	@:overload @:public public function setStyle(s : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle) : Void;
 	
-	@:overload public function isWrapped() : Bool;
+	@:overload @:public public function isWrapped() : Bool;
 	
-	@:overload public function setWrapped(isWrapped : Bool) : Void;
+	@:overload @:public public function setWrapped(isWrapped : Bool) : Void;
 	
-	public var portTypes : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.ws.wsdl.document.PortType>;
+	@:public public var portTypes : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.ws.wsdl.document.PortType>;
 	
 	
 }

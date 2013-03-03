@@ -28,12 +28,12 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	/**
 	* Processing environment providing by the tool framework.
 	*/
-	private var processingEnv : javax.annotation.processing.ProcessingEnvironment;
+	@:protected private var processingEnv : javax.annotation.processing.ProcessingEnvironment;
 	
 	/**
 	* Constructor for subclasses to call.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* If the processor class is annotated with {@link
@@ -44,7 +44,7 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	* @return the options recognized by this processor, or an empty
 	* set if none
 	*/
-	@:overload public function getSupportedOptions() : java.util.Set<String>;
+	@:overload @:public public function getSupportedOptions() : java.util.Set<String>;
 	
 	/**
 	* If the processor class is annotated with {@link
@@ -55,7 +55,7 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	* @return the names of the annotation types supported by this
 	* processor, or an empty set if none
 	*/
-	@:overload public function getSupportedAnnotationTypes() : java.util.Set<String>;
+	@:overload @:public public function getSupportedAnnotationTypes() : java.util.Set<String>;
 	
 	/**
 	* If the processor class is annotated with {@link
@@ -65,7 +65,7 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	*
 	* @return the latest source version supported by this processor
 	*/
-	@:overload public function getSupportedSourceVersion() : javax.lang.model.SourceVersion;
+	@:overload @:public public function getSupportedSourceVersion() : javax.lang.model.SourceVersion;
 	
 	/**
 	* Initializes the processor with the processing environment by
@@ -78,12 +78,12 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	* provides to the processor
 	* @throws IllegalStateException if this method is called more than once.
 	*/
-	@:overload @:synchronized public function init(processingEnv : javax.annotation.processing.ProcessingEnvironment) : Void;
+	@:overload @:public @:synchronized public function init(processingEnv : javax.annotation.processing.ProcessingEnvironment) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:abstract public function process(annotations : java.util.Set<javax.lang.model.element.TypeElement>, roundEnv : javax.annotation.processing.RoundEnvironment) : Bool;
+	@:overload @:public @:abstract public function process(annotations : java.util.Set<javax.lang.model.element.TypeElement>, roundEnv : javax.annotation.processing.RoundEnvironment) : Bool;
 	
 	/**
 	* Returns an empty iterable of completions.
@@ -93,7 +93,7 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	* @param member {@inheritDoc}
 	* @param userText {@inheritDoc}
 	*/
-	@:overload public function getCompletions(element : javax.lang.model.element.Element, annotation : javax.lang.model.element.AnnotationMirror, member : javax.lang.model.element.ExecutableElement, userText : String) : java.lang.Iterable<javax.annotation.processing.Completion>;
+	@:overload @:public public function getCompletions(element : javax.lang.model.element.Element, annotation : javax.lang.model.element.AnnotationMirror, member : javax.lang.model.element.ExecutableElement, userText : String) : java.lang.Iterable<javax.annotation.processing.Completion>;
 	
 	/**
 	* Returns {@code true} if this object has been {@linkplain #init
@@ -102,7 +102,7 @@ extern class AbstractProcessor implements javax.annotation.processing.Processor
 	* @return {@code true} if this object has been initialized,
 	* {@code false} otherwise.
 	*/
-	@:overload @:synchronized private function isInitialized() : Bool;
+	@:overload @:protected @:synchronized private function isInitialized() : Bool;
 	
 	
 }

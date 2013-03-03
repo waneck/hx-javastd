@@ -27,7 +27,7 @@ extern class HttpServer
 {
 	/**
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* creates a HttpServer instance which is initially not bound to any local address/port.
@@ -35,7 +35,7 @@ extern class HttpServer
 	* The server must be bound using {@link #bind(InetSocketAddress,int)} before it can be used.
 	* @throws IOException
 	*/
-	@:overload public static function create() : com.sun.net.httpserver.HttpServer;
+	@:overload @:public @:static public static function create() : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* Create a <code>HttpServer</code> instance which will bind to the
@@ -54,7 +54,7 @@ extern class HttpServer
 	*          or if the server is already bound.
 	* @throws IOException
 	*/
-	@:overload public static function create(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
+	@:overload @:public @:static public static function create(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* Binds a currently unbound HttpServer to the given address and port number.
@@ -68,14 +68,14 @@ extern class HttpServer
 	*          is already bound.
 	* @throws NullPointerException if addr is <code>null</code>
 	*/
-	@:overload @:abstract public function bind(addr : java.net.InetSocketAddress, backlog : Int) : Void;
+	@:overload @:public @:abstract public function bind(addr : java.net.InetSocketAddress, backlog : Int) : Void;
 	
 	/**
 	* Starts this server in a new background thread. The background thread
 	* inherits the priority, thread group and context class loader
 	* of the caller.
 	*/
-	@:overload @:abstract public function start() : Void;
+	@:overload @:public @:abstract public function start() : Void;
 	
 	/**
 	* sets this server's {@link java.util.concurrent.Executor} object. An
@@ -89,7 +89,7 @@ extern class HttpServer
 	*          implementation
 	* @throws IllegalStateException if the server is already started
 	*/
-	@:overload @:abstract public function setExecutor(executor : java.util.concurrent.Executor) : Void;
+	@:overload @:public @:abstract public function setExecutor(executor : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* returns this server's Executor object if one was specified with
@@ -97,7 +97,7 @@ extern class HttpServer
 	* specified.
 	* @return the Executor established for this server or <code>null</code> if not set.
 	*/
-	@:overload @:abstract public function getExecutor() : java.util.concurrent.Executor;
+	@:overload @:public @:abstract public function getExecutor() : java.util.concurrent.Executor;
 	
 	/**
 	* stops this server by closing the listening socket and disallowing
@@ -111,7 +111,7 @@ extern class HttpServer
 	* @param delay the maximum time in seconds to wait until exchanges have finished.
 	* @throws IllegalArgumentException if delay is less than zero.
 	*/
-	@:overload @:abstract public function stop(delay : Int) : Void;
+	@:overload @:public @:abstract public function stop(delay : Int) : Void;
 	
 	/**
 	* Creates a HttpContext. A HttpContext represents a mapping from a
@@ -130,7 +130,7 @@ extern class HttpServer
 	*          already exists for this path
 	* @throws NullPointerException if either path, or handler are <code>null</code>
 	*/
-	@:overload @:abstract public function createContext(path : String, handler : com.sun.net.httpserver.HttpHandler) : com.sun.net.httpserver.HttpContext;
+	@:overload @:public @:abstract public function createContext(path : String, handler : com.sun.net.httpserver.HttpHandler) : com.sun.net.httpserver.HttpContext;
 	
 	/**
 	* Creates a HttpContext without initially specifying a handler. The handler must later be specified using
@@ -150,7 +150,7 @@ extern class HttpServer
 	*          already exists for this path
 	* @throws NullPointerException if path is <code>null</code>
 	*/
-	@:overload @:abstract public function createContext(path : String) : com.sun.net.httpserver.HttpContext;
+	@:overload @:public @:abstract public function createContext(path : String) : com.sun.net.httpserver.HttpContext;
 	
 	/**
 	* Removes the context identified by the given path from the server.
@@ -161,7 +161,7 @@ extern class HttpServer
 	*          path exists.
 	* @throws NullPointerException if path is <code>null</code>
 	*/
-	@:overload @:abstract public function removeContext(path : String) : Void;
+	@:overload @:public @:abstract public function removeContext(path : String) : Void;
 	
 	/**
 	* Removes the given context from the server.
@@ -170,13 +170,13 @@ extern class HttpServer
 	* @param context the context to remove
 	* @throws NullPointerException if context is <code>null</code>
 	*/
-	@:overload @:abstract public function removeContext(context : com.sun.net.httpserver.HttpContext) : Void;
+	@:overload @:public @:abstract public function removeContext(context : com.sun.net.httpserver.HttpContext) : Void;
 	
 	/**
 	* returns the address this server is listening on
 	* @return the address/port number the server is listening on
 	*/
-	@:overload @:abstract public function getAddress() : java.net.InetSocketAddress;
+	@:overload @:public @:abstract public function getAddress() : java.net.InetSocketAddress;
 	
 	
 }

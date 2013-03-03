@@ -28,7 +28,7 @@ extern class HashPrintJobAttributeSet extends javax.print.attribute.HashAttribut
 	/**
 	* Construct a new, empty hash print job attribute set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new hash print job attribute set,
@@ -39,7 +39,7 @@ extern class HashPrintJobAttributeSet extends javax.print.attribute.HashAttribut
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>attribute</CODE> is null.
 	*/
-	@:overload public function new(attribute : javax.print.attribute.PrintJobAttribute) : Void;
+	@:overload @:public public function new(attribute : javax.print.attribute.PrintJobAttribute) : Void;
 	
 	/**
 	* Construct a new hash print job attribute set,
@@ -56,7 +56,7 @@ extern class HashPrintJobAttributeSet extends javax.print.attribute.HashAttribut
 	* @exception  NullPointerException (unchecked exception)
 	* Thrown if any element of <CODE>attributes</CODE>  is null.
 	*/
-	@:overload public function new(attributes : java.NativeArray<javax.print.attribute.PrintJobAttribute>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<javax.print.attribute.PrintJobAttribute>) : Void;
 	
 	/**
 	* Construct a new attribute set, initially populated with the
@@ -71,7 +71,7 @@ extern class HashPrintJobAttributeSet extends javax.print.attribute.HashAttribut
 	* <CODE>attributes</CODE> is not an instance of
 	* <CODE>PrintJobAttribute</CODE>.
 	*/
-	@:overload public function new(attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function new(attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
 	
 }

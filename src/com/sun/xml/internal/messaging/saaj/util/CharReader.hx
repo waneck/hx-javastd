@@ -25,13 +25,13 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class CharReader extends java.io.CharArrayReader
 {
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Char16>, length : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Char16>, length : Int) : Void;
 	
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
-	@:overload public function getChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getChars() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	
 }

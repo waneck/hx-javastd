@@ -138,7 +138,7 @@ package java.util;
 	* @throws ClassCastException if the arguments' types prevent them from
 	*         being compared by this comparator.
 	*/
-	@:overload public function compare(o1 : T, o2 : T) : Int;
+	@:overload @:public public function compare(o1 : T, o2 : T) : Int;
 	
 	
 }

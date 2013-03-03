@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface SimpleTypeHost extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.TypeHost extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function simpleType() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleType;
+	@:overload @:public public function simpleType() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleType;
 	
 	
 }

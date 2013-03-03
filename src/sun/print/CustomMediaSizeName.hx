@@ -25,39 +25,39 @@ package sun.print;
 */
 @:internal extern class CustomMediaSizeName extends javax.print.attribute.standard.MediaSizeName
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function new(name : String, choice : String, width : Single, length : Single) : Void;
+	@:overload @:public public function new(name : String, choice : String, width : Single, length : Single) : Void;
 	
 	/**
 	* Returns the command string for this media.
 	*/
-	@:overload public function getChoiceName() : String;
+	@:overload @:public public function getChoiceName() : String;
 	
 	/**
 	* Returns matching standard MediaSizeName.
 	*/
-	@:overload public function getStandardMedia() : javax.print.attribute.standard.MediaSizeName;
+	@:overload @:public public function getStandardMedia() : javax.print.attribute.standard.MediaSizeName;
 	
 	/**
 	* Returns closest matching MediaSizeName among given array of Media
 	*/
-	@:overload public static function findMedia(media : java.NativeArray<javax.print.attribute.standard.Media>, x : Single, y : Single, units : Int) : javax.print.attribute.standard.MediaSizeName;
+	@:overload @:public @:static public static function findMedia(media : java.NativeArray<javax.print.attribute.standard.Media>, x : Single, y : Single, units : Int) : javax.print.attribute.standard.MediaSizeName;
 	
 	/**
 	* Returns the string table for super class MediaSizeName.
 	*/
-	@:overload public function getSuperEnumTable() : java.NativeArray<javax.print.attribute.standard.Media>;
+	@:overload @:public public function getSuperEnumTable() : java.NativeArray<javax.print.attribute.standard.Media>;
 	
 	/**
 	* Returns the string table for class CustomMediaSizeName.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class CustomMediaSizeName.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	
 }

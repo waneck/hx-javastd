@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.policy.sourcemodel.attach;
 */
 extern class ExternalAttachmentsUnmarshaller
 {
-	public static var BINDING_ID(default, null) : java.net.URI;
+	@:public @:static @:final public static var BINDING_ID(default, null) : java.net.URI;
 	
-	public static var BINDING_OPERATION_ID(default, null) : java.net.URI;
+	@:public @:static @:final public static var BINDING_OPERATION_ID(default, null) : java.net.URI;
 	
-	public static var BINDING_OPERATION_INPUT_ID(default, null) : java.net.URI;
+	@:public @:static @:final public static var BINDING_OPERATION_INPUT_ID(default, null) : java.net.URI;
 	
-	public static var BINDING_OPERATION_OUTPUT_ID(default, null) : java.net.URI;
+	@:public @:static @:final public static var BINDING_OPERATION_OUTPUT_ID(default, null) : java.net.URI;
 	
-	public static var BINDING_OPERATION_FAULT_ID(default, null) : java.net.URI;
+	@:public @:static @:final public static var BINDING_OPERATION_FAULT_ID(default, null) : java.net.URI;
 	
-	@:native('unmarshal') @:overload public static function _unmarshal(source : java.io.Reader) : java.util.Map<java.net.URI, com.sun.xml.internal.ws.policy.Policy>;
+	@:native('unmarshal') @:overload @:public @:static public static function _unmarshal(source : java.io.Reader) : java.util.Map<java.net.URI, com.sun.xml.internal.ws.policy.Policy>;
 	
 	
 }

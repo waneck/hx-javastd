@@ -30,7 +30,7 @@ extern class FontManagerFactory
 	*
 	* @return a valid FontManager instance for the current platform
 	*/
-	@:overload @:synchronized public static function getInstance() : sun.font.FontManager;
+	@:overload @:public @:static @:synchronized public static function getInstance() : sun.font.FontManager;
 	
 	
 }

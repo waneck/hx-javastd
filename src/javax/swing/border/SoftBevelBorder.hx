@@ -31,7 +31,7 @@ extern class SoftBevelBorder extends javax.swing.border.BevelBorder
 	* component passed into the paintBorder method.
 	* @param bevelType the type of bevel for the border
 	*/
-	@:overload public function new(bevelType : Int) : Void;
+	@:overload @:public public function new(bevelType : Int) : Void;
 	
 	/**
 	* Creates a bevel border with the specified type, highlight and
@@ -40,7 +40,7 @@ extern class SoftBevelBorder extends javax.swing.border.BevelBorder
 	* @param highlight the color to use for the bevel highlight
 	* @param shadow the color to use for the bevel shadow
 	*/
-	@:overload public function new(bevelType : Int, highlight : java.awt.Color, shadow : java.awt.Color) : Void;
+	@:overload @:public public function new(bevelType : Int, highlight : java.awt.Color, shadow : java.awt.Color) : Void;
 	
 	/**
 	* Creates a bevel border with the specified type, highlight
@@ -51,7 +51,7 @@ extern class SoftBevelBorder extends javax.swing.border.BevelBorder
 	* @param shadowOuterColor the color to use for the bevel outer shadow
 	* @param shadowInnerColor the color to use for the bevel inner shadow
 	*/
-	@:overload public function new(bevelType : Int, highlightOuterColor : java.awt.Color, highlightInnerColor : java.awt.Color, shadowOuterColor : java.awt.Color, shadowInnerColor : java.awt.Color) : Void;
+	@:overload @:public public function new(bevelType : Int, highlightOuterColor : java.awt.Color, highlightInnerColor : java.awt.Color, shadowOuterColor : java.awt.Color, shadowInnerColor : java.awt.Color) : Void;
 	
 	/**
 	* Paints the border for the specified component with the specified
@@ -63,19 +63,19 @@ extern class SoftBevelBorder extends javax.swing.border.BevelBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	
 }

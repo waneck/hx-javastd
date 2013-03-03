@@ -47,25 +47,25 @@ package sun.java2d.pipe;
 */
 extern class BufferedMaskFill extends sun.java2d.loops.MaskFill
 {
-	private var rq(default, null) : sun.java2d.pipe.RenderQueue;
+	@:protected @:final private var rq(default, null) : sun.java2d.pipe.RenderQueue;
 	
-	@:overload private function new(rq : sun.java2d.pipe.RenderQueue, srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType, dstType : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(rq : sun.java2d.pipe.RenderQueue, srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType, dstType : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
+	@:overload @:public override public function MaskFill(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, comp : java.awt.Composite, x : Int, y : Int, w : Int, h : Int, mask : java.NativeArray<java.StdTypes.Int8>, maskoff : Int, maskscan : Int) : Void;
 	
 	/**
 	* Called as a separate Runnable when the operation is too large to fit
 	* on the RenderQueue.  The OGL/D3D pipelines each have their own (small)
 	* native implementation of this method.
 	*/
-	@:overload @:abstract private function maskFill(x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected @:abstract private function maskFill(x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Validates the state in the provided SunGraphics2D object and sets up
 	* any special resources for this operation (e.g. enabling gradient
 	* shading).
 	*/
-	@:overload @:abstract private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite, ctxflags : Int) : Void;
+	@:overload @:protected @:abstract private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite, ctxflags : Int) : Void;
 	
 	
 }

@@ -35,19 +35,19 @@ extern class ValueUtility
 	* Holds utility methods for converting from ObjectStreamClass to
 	* FullValueDescription and generating typecodes from ObjectStreamClass.
 	**/
-	public static var PRIVATE_MEMBER(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var PRIVATE_MEMBER(default, null) : java.StdTypes.Int16;
 	
-	public static var PUBLIC_MEMBER(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var PUBLIC_MEMBER(default, null) : java.StdTypes.Int16;
 	
-	@:overload public static function getSignature(member : org.omg.CORBA.ValueMember) : String;
+	@:overload @:public @:static public static function getSignature(member : org.omg.CORBA.ValueMember) : String;
 	
-	@:overload public static function translate(orb : org.omg.CORBA.ORB, osc : com.sun.corba.se.impl.io.ObjectStreamClass, vh : javax.rmi.CORBA.ValueHandler) : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription;
+	@:overload @:public @:static public static function translate(orb : org.omg.CORBA.ORB, osc : com.sun.corba.se.impl.io.ObjectStreamClass, vh : javax.rmi.CORBA.ValueHandler) : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription;
 	
-	@:overload public static function isAssignableFrom(clzRepositoryId : String, type : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription, sender : com.sun.org.omg.SendingContext.CodeBase) : Bool;
+	@:overload @:public @:static public static function isAssignableFrom(clzRepositoryId : String, type : com.sun.org.omg.CORBA.ValueDefPackage.FullValueDescription, sender : com.sun.org.omg.SendingContext.CodeBase) : Bool;
 	
-	@:overload public static function createTypeCodeForClass(orb : org.omg.CORBA.ORB, c : Class<Dynamic>, vh : javax.rmi.CORBA.ValueHandler) : org.omg.CORBA.TypeCode;
+	@:overload @:public @:static public static function createTypeCodeForClass(orb : org.omg.CORBA.ORB, c : Class<Dynamic>, vh : javax.rmi.CORBA.ValueHandler) : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function getPrimitiveTypeCodeForClass(orb : org.omg.CORBA.ORB, c : Class<Dynamic>, vh : javax.rmi.CORBA.ValueHandler) : org.omg.CORBA.TypeCode;
+	@:overload @:public @:static public static function getPrimitiveTypeCodeForClass(orb : org.omg.CORBA.ORB, c : Class<Dynamic>, vh : javax.rmi.CORBA.ValueHandler) : org.omg.CORBA.TypeCode;
 	
 	
 }

@@ -31,79 +31,79 @@ extern class Attribute
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	public static var AnnotationDefault(default, null) : String;
+	@:public @:static @:final public static var AnnotationDefault(default, null) : String;
 	
-	public static var BootstrapMethods(default, null) : String;
+	@:public @:static @:final public static var BootstrapMethods(default, null) : String;
 	
-	public static var CharacterRangeTable(default, null) : String;
+	@:public @:static @:final public static var CharacterRangeTable(default, null) : String;
 	
-	public static var Code(default, null) : String;
+	@:public @:static @:final public static var Code(default, null) : String;
 	
-	public static var ConstantValue(default, null) : String;
+	@:public @:static @:final public static var ConstantValue(default, null) : String;
 	
-	public static var CompilationID(default, null) : String;
+	@:public @:static @:final public static var CompilationID(default, null) : String;
 	
-	public static var Deprecated(default, null) : String;
+	@:public @:static @:final public static var Deprecated(default, null) : String;
 	
-	public static var EnclosingMethod(default, null) : String;
+	@:public @:static @:final public static var EnclosingMethod(default, null) : String;
 	
-	public static var Exceptions(default, null) : String;
+	@:public @:static @:final public static var Exceptions(default, null) : String;
 	
-	public static var InnerClasses(default, null) : String;
+	@:public @:static @:final public static var InnerClasses(default, null) : String;
 	
-	public static var LineNumberTable(default, null) : String;
+	@:public @:static @:final public static var LineNumberTable(default, null) : String;
 	
-	public static var LocalVariableTable(default, null) : String;
+	@:public @:static @:final public static var LocalVariableTable(default, null) : String;
 	
-	public static var LocalVariableTypeTable(default, null) : String;
+	@:public @:static @:final public static var LocalVariableTypeTable(default, null) : String;
 	
-	public static var RuntimeVisibleAnnotations(default, null) : String;
+	@:public @:static @:final public static var RuntimeVisibleAnnotations(default, null) : String;
 	
-	public static var RuntimeInvisibleAnnotations(default, null) : String;
+	@:public @:static @:final public static var RuntimeInvisibleAnnotations(default, null) : String;
 	
-	public static var RuntimeVisibleParameterAnnotations(default, null) : String;
+	@:public @:static @:final public static var RuntimeVisibleParameterAnnotations(default, null) : String;
 	
-	public static var RuntimeInvisibleParameterAnnotations(default, null) : String;
+	@:public @:static @:final public static var RuntimeInvisibleParameterAnnotations(default, null) : String;
 	
-	public static var Signature(default, null) : String;
+	@:public @:static @:final public static var Signature(default, null) : String;
 	
-	public static var SourceDebugExtension(default, null) : String;
+	@:public @:static @:final public static var SourceDebugExtension(default, null) : String;
 	
-	public static var SourceFile(default, null) : String;
+	@:public @:static @:final public static var SourceFile(default, null) : String;
 	
-	public static var SourceID(default, null) : String;
+	@:public @:static @:final public static var SourceID(default, null) : String;
 	
-	public static var StackMap(default, null) : String;
+	@:public @:static @:final public static var StackMap(default, null) : String;
 	
-	public static var StackMapTable(default, null) : String;
+	@:public @:static @:final public static var StackMapTable(default, null) : String;
 	
-	public static var Synthetic(default, null) : String;
+	@:public @:static @:final public static var Synthetic(default, null) : String;
 	
-	@:overload public static function read(cr : com.sun.tools.classfile.ClassReader) : com.sun.tools.classfile.Attribute;
+	@:overload @:public @:static public static function read(cr : com.sun.tools.classfile.ClassReader) : com.sun.tools.classfile.Attribute;
 	
-	@:overload private function new(name_index : Int, length : Int) : Void;
+	@:overload @:protected private function new(name_index : Int, length : Int) : Void;
 	
-	@:overload public function getName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function byteLength() : Int;
+	@:overload @:public public function byteLength() : Int;
 	
-	public var attribute_name_index(default, null) : Int;
+	@:public @:final public var attribute_name_index(default, null) : Int;
 	
-	public var attribute_length(default, null) : Int;
+	@:public @:final public var attribute_length(default, null) : Int;
 	
 	
 }
 @:native('com$sun$tools$classfile$Attribute$Factory') extern class Attribute_Factory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setCompat(compat : Bool) : Void;
+	@:overload @:public public function setCompat(compat : Bool) : Void;
 	
-	@:overload public function createAttribute(cr : com.sun.tools.classfile.ClassReader, name_index : Int, data : java.NativeArray<java.StdTypes.Int8>) : com.sun.tools.classfile.Attribute;
+	@:overload @:public public function createAttribute(cr : com.sun.tools.classfile.ClassReader, name_index : Int, data : java.NativeArray<java.StdTypes.Int8>) : com.sun.tools.classfile.Attribute;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	
 }

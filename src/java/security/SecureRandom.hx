@@ -52,7 +52,7 @@ extern class SecureRandom extends java.util.Random
 	* This self-seeding will not occur if <code>setSeed</code> was
 	* previously called.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a secure random number generator (RNG) implementing the
@@ -77,7 +77,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @param seed the seed.
 	*/
-	@:overload public function new(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Creates a SecureRandom object.
@@ -85,7 +85,7 @@ extern class SecureRandom extends java.util.Random
 	* @param secureRandomSpi the SecureRandom implementation.
 	* @param provider the provider.
 	*/
-	@:overload private function new(secureRandomSpi : java.security.SecureRandomSpi, provider : java.security.Provider) : Void;
+	@:overload @:protected private function new(secureRandomSpi : java.security.SecureRandomSpi, provider : java.security.Provider) : Void;
 	
 	/**
 	* Returns a SecureRandom object that implements the specified
@@ -123,7 +123,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getInstance(algorithm : String) : java.security.SecureRandom;
+	@:require(java2) @:overload @:public @:static public static function getInstance(algorithm : String) : java.security.SecureRandom;
 	
 	/**
 	* Returns a SecureRandom object that implements the specified
@@ -168,7 +168,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getInstance(algorithm : String, provider : String) : java.security.SecureRandom;
+	@:require(java2) @:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.SecureRandom;
 	
 	/**
 	* Returns a SecureRandom object that implements the specified
@@ -206,14 +206,14 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.SecureRandom;
+	@:require(java4) @:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.SecureRandom;
 	
 	/**
 	* Returns the provider of this SecureRandom object.
 	*
 	* @return the provider of this SecureRandom object.
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the name of the algorithm implemented by this SecureRandom
@@ -223,7 +223,7 @@ extern class SecureRandom extends java.util.Random
 	*          if the algorithm name cannot be determined.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAlgorithm() : String;
+	@:require(java5) @:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Reseeds this random object. The given seed supplements, rather than
@@ -234,7 +234,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @see #getSeed
 	*/
-	@:overload @:synchronized public function setSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized @:public public function setSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Reseeds this random object, using the eight bytes contained
@@ -249,7 +249,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @see #getSeed
 	*/
-	@:overload public function setSeed(seed : haxe.Int64) : Void;
+	@:overload @:public override public function setSeed(seed : haxe.Int64) : Void;
 	
 	/**
 	* Generates a user-specified number of random bytes.
@@ -261,7 +261,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @param bytes the array to be filled in with random bytes.
 	*/
-	@:overload @:synchronized public function nextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized @:public override public function nextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Generates an integer containing the user-specified number of
@@ -277,7 +277,7 @@ extern class SecureRandom extends java.util.Random
 	* @return an <code>int</code> containing the user-specified number
 	* of pseudo-random bits (right justified, with leading zeros).
 	*/
-	@:overload @:final private function next(numBits : Int) : Int;
+	@:overload @:final @:protected override private function next(numBits : Int) : Int;
 	
 	/**
 	* Returns the given number of seed bytes, computed using the seed
@@ -296,7 +296,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @see #setSeed
 	*/
-	@:overload public static function getSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the given number of seed bytes, computed using the seed
@@ -307,7 +307,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @return the seed bytes.
 	*/
-	@:overload public function generateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function generateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

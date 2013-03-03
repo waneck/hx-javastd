@@ -42,7 +42,7 @@ package sun.jvmstat.monitor;
 	*
 	* return int - the current value of this instrumentation object
 	*/
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
 	
 }

@@ -41,77 +41,77 @@ package com.sun.tools.javadoc;
 */
 @:require(java2) extern class ClassDocImpl extends com.sun.tools.javadoc.ProgramElementDocImpl implements com.sun.javadoc.ClassDoc
 {
-	public var type(default, null) : com.sun.tools.javac.code.Type.Type_ClassType;
+	@:public @:final public var type(default, null) : com.sun.tools.javac.code.Type.Type_ClassType;
 	
-	private var tsym(default, null) : ClassSymbol;
-	
-	/**
-	* Constructor
-	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol) : Void;
+	@:protected @:final private var tsym(default, null) : ClassSymbol;
 	
 	/**
 	* Constructor
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol, documentation : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol) : Void;
+	
+	/**
+	* Constructor
+	*/
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol, documentation : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
 	/**
 	* Returns the flags in terms of javac's flags
 	*/
-	@:overload override private function getFlags() : haxe.Int64;
+	@:overload @:protected override private function getFlags() : haxe.Int64;
 	
 	/**
 	* Identify the containing class
 	*/
-	@:overload override private function getContainingClass() : ClassSymbol;
+	@:overload @:protected override private function getContainingClass() : ClassSymbol;
 	
 	/**
 	* Return true if this is a class, not an interface.
 	*/
-	@:overload override public function isClass() : Bool;
+	@:overload @:public override public function isClass() : Bool;
 	
 	/**
 	* Return true if this is a ordinary class,
 	* not an enumeration, exception, an error, or an interface.
 	*/
-	@:overload override public function isOrdinaryClass() : Bool;
+	@:overload @:public override public function isOrdinaryClass() : Bool;
 	
 	/**
 	* Return true if this is an enumeration.
 	* (For legacy doclets, return false.)
 	*/
-	@:overload override public function isEnum() : Bool;
+	@:overload @:public override public function isEnum() : Bool;
 	
 	/**
 	* Return true if this is an interface, but not an annotation type.
 	* Overridden by AnnotationTypeDocImpl.
 	*/
-	@:overload override public function isInterface() : Bool;
+	@:overload @:public override public function isInterface() : Bool;
 	
 	/**
 	* Return true if this is an exception class
 	*/
-	@:overload override public function isException() : Bool;
+	@:overload @:public override public function isException() : Bool;
 	
 	/**
 	* Return true if this is an error class
 	*/
-	@:overload override public function isError() : Bool;
+	@:overload @:public override public function isError() : Bool;
 	
 	/**
 	* Return true if this is a throwable class
 	*/
-	@:overload public function isThrowable() : Bool;
+	@:overload @:public public function isThrowable() : Bool;
 	
 	/**
 	* Return true if this class is abstract
 	*/
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
 	/**
 	* Returns true if this class was synthesized by the compiler.
 	*/
-	@:overload public function isSynthetic() : Bool;
+	@:overload @:public public function isSynthetic() : Bool;
 	
 	/**
 	* Return true if this class is included in the active set.
@@ -120,12 +120,12 @@ package com.sun.tools.javadoc;
 	* on the command line, or if it is a member class of an
 	* included class.
 	*/
-	@:overload override public function isIncluded() : Bool;
+	@:overload @:public override public function isIncluded() : Bool;
 	
 	/**
 	* Return the package that this class is contained in.
 	*/
-	@:overload override public function containingPackage() : com.sun.javadoc.PackageDoc;
+	@:overload @:public override public function containingPackage() : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* Return the class name without package qualifier - but with
@@ -138,7 +138,7 @@ package com.sun.tools.javadoc;
 	*  return Map.Entry
 	* </pre>
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Return the qualified class name as a String.
@@ -149,14 +149,14 @@ package com.sun.tools.javadoc;
 	*  if no qualifier, just return flat name
 	* </pre>
 	*/
-	@:overload override public function qualifiedName() : String;
+	@:overload @:public override public function qualifiedName() : String;
 	
 	/**
 	* Return unqualified name of type excluding any dimension information.
 	* <p>
 	* For example, a two dimensional array of String returns 'String'.
 	*/
-	@:overload public function typeName() : String;
+	@:overload @:public public function typeName() : String;
 	
 	/**
 	* Return qualified name of type excluding any dimension information.
@@ -164,37 +164,37 @@ package com.sun.tools.javadoc;
 	* For example, a two dimensional array of String
 	* returns 'java.lang.String'.
 	*/
-	@:overload public function qualifiedTypeName() : String;
+	@:overload @:public public function qualifiedTypeName() : String;
 	
 	/**
 	* Return the simple name of this type.
 	*/
-	@:overload public function simpleTypeName() : String;
+	@:overload @:public public function simpleTypeName() : String;
 	
 	/**
 	* Return the qualified name and any type parameters.
 	* Each parameter is a type variable with optional bounds.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Return the formal type parameters of this class or interface.
 	* Return an empty array if there are none.
 	*/
-	@:overload public function typeParameters() : java.NativeArray<com.sun.javadoc.TypeVariable>;
+	@:overload @:public public function typeParameters() : java.NativeArray<com.sun.javadoc.TypeVariable>;
 	
 	/**
 	* Return the type parameter tags of this class or interface.
 	*/
-	@:overload public function typeParamTags() : java.NativeArray<com.sun.javadoc.ParamTag>;
+	@:overload @:public public function typeParamTags() : java.NativeArray<com.sun.javadoc.ParamTag>;
 	
 	/**
 	* Return the modifier string for this class. If it's an interface
 	* exclude 'abstract' keyword from the modifier string
 	*/
-	@:overload override public function modifiers() : String;
+	@:overload @:public override public function modifiers() : String;
 	
-	@:overload override public function modifierSpecifier() : Int;
+	@:overload @:public override public function modifierSpecifier() : Int;
 	
 	/**
 	* Return the superclass of this class
@@ -202,14 +202,14 @@ package com.sun.tools.javadoc;
 	* @return the ClassDocImpl for the superclass of this class, null
 	* if there is no superclass.
 	*/
-	@:overload public function superclass() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function superclass() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the superclass of this class.  Return null if this is an
 	* interface.  A superclass is represented by either a
 	* <code>ClassDoc</code> or a <code>ParameterizedType</code>.
 	*/
-	@:overload public function superclassType() : com.sun.javadoc.Type;
+	@:overload @:public public function superclassType() : com.sun.javadoc.Type;
 	
 	/**
 	* Test whether this class is a subclass of the specified class.
@@ -217,7 +217,7 @@ package com.sun.tools.javadoc;
 	* @param cd the candidate superclass.
 	* @return true if cd is a superclass of this class.
 	*/
-	@:overload public function subclassOf(cd : com.sun.javadoc.ClassDoc) : Bool;
+	@:overload @:public public function subclassOf(cd : com.sun.javadoc.ClassDoc) : Bool;
 	
 	/**
 	* Return interfaces implemented by this class or interfaces
@@ -226,7 +226,7 @@ package com.sun.tools.javadoc;
 	* @return An array of ClassDocImpl representing the interfaces.
 	* Return an empty array if there are no interfaces.
 	*/
-	@:overload public function interfaces() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function interfaces() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return interfaces implemented by this class or interfaces extended
@@ -234,23 +234,23 @@ package com.sun.tools.javadoc;
 	* inherited interfaces.
 	* Return an empty array if there are no interfaces.
 	*/
-	@:overload public function interfaceTypes() : java.NativeArray<com.sun.javadoc.Type>;
+	@:overload @:public public function interfaceTypes() : java.NativeArray<com.sun.javadoc.Type>;
 	
 	/**
 	* Return fields in class.
 	* @param filter include only the included fields if filter==true
 	*/
-	@:overload public function fields(filter : Bool) : java.NativeArray<com.sun.javadoc.FieldDoc>;
+	@:overload @:public public function fields(filter : Bool) : java.NativeArray<com.sun.javadoc.FieldDoc>;
 	
 	/**
 	* Return included fields in class.
 	*/
-	@:overload public function fields() : java.NativeArray<com.sun.javadoc.FieldDoc>;
+	@:overload @:public public function fields() : java.NativeArray<com.sun.javadoc.FieldDoc>;
 	
 	/**
 	* Return the enum constants if this is an enum type.
 	*/
-	@:overload public function enumConstants() : java.NativeArray<com.sun.javadoc.FieldDoc>;
+	@:overload @:public public function enumConstants() : java.NativeArray<com.sun.javadoc.FieldDoc>;
 	
 	/**
 	* Return methods in class.
@@ -260,7 +260,7 @@ package com.sun.tools.javadoc;
 	* @return an array of MethodDocImpl for representing the visible
 	* methods in this class.  Does not include constructors.
 	*/
-	@:overload public function methods(filter : Bool) : java.NativeArray<com.sun.javadoc.MethodDoc>;
+	@:overload @:public public function methods(filter : Bool) : java.NativeArray<com.sun.javadoc.MethodDoc>;
 	
 	/**
 	* Return included methods in class.
@@ -268,7 +268,7 @@ package com.sun.tools.javadoc;
 	* @return an array of MethodDocImpl for representing the visible
 	* methods in this class.  Does not include constructors.
 	*/
-	@:overload public function methods() : java.NativeArray<com.sun.javadoc.MethodDoc>;
+	@:overload @:public public function methods() : java.NativeArray<com.sun.javadoc.MethodDoc>;
 	
 	/**
 	* Return constructors in class.
@@ -277,7 +277,7 @@ package com.sun.tools.javadoc;
 	* @return an array of ConstructorDocImpl for representing the visible
 	* constructors in this class.
 	*/
-	@:overload public function constructors(filter : Bool) : java.NativeArray<com.sun.javadoc.ConstructorDoc>;
+	@:overload @:public public function constructors(filter : Bool) : java.NativeArray<com.sun.javadoc.ConstructorDoc>;
 	
 	/**
 	* Return included constructors in class.
@@ -285,7 +285,7 @@ package com.sun.tools.javadoc;
 	* @return an array of ConstructorDocImpl for representing the visible
 	* constructors in this class.
 	*/
-	@:overload public function constructors() : java.NativeArray<com.sun.javadoc.ConstructorDoc>;
+	@:overload @:public public function constructors() : java.NativeArray<com.sun.javadoc.ConstructorDoc>;
 	
 	/**
 	* Return inner classes within this class.
@@ -295,7 +295,7 @@ package com.sun.tools.javadoc;
 	* classes defined in this class. Anonymous and local classes
 	* are not included.
 	*/
-	@:overload public function innerClasses(filter : Bool) : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function innerClasses(filter : Bool) : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return included inner classes within this class.
@@ -304,7 +304,7 @@ package com.sun.tools.javadoc;
 	* classes defined in this class. Anonymous and local classes
 	* are not included.
 	*/
-	@:overload public function innerClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function innerClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Find a class within the context of this class.
@@ -313,7 +313,7 @@ package com.sun.tools.javadoc;
 	* imports.
 	* Return the ClassDocImpl if found, null if not found.
 	*/
-	@:overload public function findClass(className : String) : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function findClass(className : String) : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Find a method in this class scope.
@@ -324,7 +324,7 @@ package com.sun.tools.javadoc;
 	* @param paramTypeArray the array of Strings for method parameter types.
 	* @return the first MethodDocImpl which matches, null if not found.
 	*/
-	@:overload public function findMethod(methodName : String, paramTypes : java.NativeArray<String>) : com.sun.tools.javadoc.MethodDocImpl;
+	@:overload @:public public function findMethod(methodName : String, paramTypes : java.NativeArray<String>) : com.sun.tools.javadoc.MethodDocImpl;
 	
 	/**
 	* Find constructor in this class.
@@ -333,7 +333,7 @@ package com.sun.tools.javadoc;
 	* @param paramTypeArray the array of Strings for constructor parameters.
 	* @return the first ConstructorDocImpl which matches, null if not found.
 	*/
-	@:overload public function findConstructor(constrName : String, paramTypes : java.NativeArray<String>) : com.sun.javadoc.ConstructorDoc;
+	@:overload @:public public function findConstructor(constrName : String, paramTypes : java.NativeArray<String>) : com.sun.javadoc.ConstructorDoc;
 	
 	/**
 	* Find a field in this class scope.
@@ -347,7 +347,7 @@ package com.sun.tools.javadoc;
 	* @param fieldName the unqualified name to search for.
 	* @return the first FieldDocImpl which matches, null if not found.
 	*/
-	@:overload public function findField(fieldName : String) : com.sun.javadoc.FieldDoc;
+	@:overload @:public public function findField(fieldName : String) : com.sun.javadoc.FieldDoc;
 	
 	/**
 	* Get the list of classes declared as imported.
@@ -360,7 +360,7 @@ package com.sun.tools.javadoc;
 	*          should not be exposed here.  In addition, not all imported
 	*          classes are imported through single-type-import declarations.
 	*/
-	@:overload public function importedClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function importedClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get the list of packages declared as imported.
@@ -375,43 +375,43 @@ package com.sun.tools.javadoc;
 	*          return type does not allow for all type-import-on-demand
 	*          declarations to be returned.
 	*/
-	@:overload public function importedPackages() : java.NativeArray<com.sun.javadoc.PackageDoc>;
+	@:overload @:public public function importedPackages() : java.NativeArray<com.sun.javadoc.PackageDoc>;
 	
 	/**
 	* Return the type's dimension information.
 	* Always return "", as this is not an array type.
 	*/
-	@:overload public function dimension() : String;
+	@:overload @:public public function dimension() : String;
 	
 	/**
 	* Return this type as a class, which it already is.
 	*/
-	@:overload public function asClassDoc() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function asClassDoc() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return null (unless overridden), as this is not an annotation type.
 	*/
-	@:overload public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
+	@:overload @:public public function asAnnotationTypeDoc() : com.sun.javadoc.AnnotationTypeDoc;
 	
 	/**
 	* Return null, as this is not a class instantiation.
 	*/
-	@:overload public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
+	@:overload @:public public function asParameterizedType() : com.sun.javadoc.ParameterizedType;
 	
 	/**
 	* Return null, as this is not a type variable.
 	*/
-	@:overload public function asTypeVariable() : com.sun.javadoc.TypeVariable;
+	@:overload @:public public function asTypeVariable() : com.sun.javadoc.TypeVariable;
 	
 	/**
 	* Return null, as this is not a wildcard type.
 	*/
-	@:overload public function asWildcardType() : com.sun.javadoc.WildcardType;
+	@:overload @:public public function asWildcardType() : com.sun.javadoc.WildcardType;
 	
 	/**
 	* Return false, as this is not a primitive type.
 	*/
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
 	/**
 	* Return true if this class implements <code>java.io.Serializable</code>.
@@ -420,13 +420,13 @@ package com.sun.tools.javadoc;
 	* <code>java.io.Serializable</code>,
 	* Externalizable objects are also Serializable.
 	*/
-	@:overload public function isSerializable() : Bool;
+	@:overload @:public public function isSerializable() : Bool;
 	
 	/**
 	* Return true if this class implements
 	* <code>java.io.Externalizable</code>.
 	*/
-	@:overload public function isExternalizable() : Bool;
+	@:overload @:public public function isExternalizable() : Bool;
 	
 	/**
 	* Return the serialization methods for this class.
@@ -434,7 +434,7 @@ package com.sun.tools.javadoc;
 	* @return an array of <code>MethodDocImpl</code> that represents
 	* the serialization methods for this class.
 	*/
-	@:overload public function serializationMethods() : java.NativeArray<com.sun.javadoc.MethodDoc>;
+	@:overload @:public public function serializationMethods() : java.NativeArray<com.sun.javadoc.MethodDoc>;
 	
 	/**
 	* Return the Serializable fields of class.<p>
@@ -453,7 +453,7 @@ package com.sun.tools.javadoc;
 	* @see #definesSerializableFields()
 	* @see SerialFieldTagImpl
 	*/
-	@:overload public function serializableFields() : java.NativeArray<com.sun.javadoc.FieldDoc>;
+	@:overload @:public public function serializableFields() : java.NativeArray<com.sun.javadoc.FieldDoc>;
 	
 	/**
 	* Return true if Serializable fields are explicitly defined with
@@ -462,13 +462,13 @@ package com.sun.tools.javadoc;
 	* @see #serializableFields()
 	* @see SerialFieldTagImpl
 	*/
-	@:overload public function definesSerializableFields() : Bool;
+	@:overload @:public public function definesSerializableFields() : Bool;
 	
 	/**
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload override public function position() : com.sun.javadoc.SourcePosition;
+	@:overload @:public override public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

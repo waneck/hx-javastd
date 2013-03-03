@@ -25,11 +25,11 @@ package com.sun.xml.internal.xsom.impl.scd;
 */
 extern class SCDImpl extends com.sun.xml.internal.xsom.SCD
 {
-	@:overload public function new(text : String, steps : java.NativeArray<com.sun.xml.internal.xsom.impl.scd.Step<Dynamic>>) : Void;
+	@:overload @:public public function new(text : String, steps : java.NativeArray<com.sun.xml.internal.xsom.impl.scd.Step<Dynamic>>) : Void;
 	
-	@:overload public function select(contextNode : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>) : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public override public function select(contextNode : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>) : java.util.Iterator<com.sun.xml.internal.xsom.XSComponent>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -27,25 +27,25 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class BuiltInEncodingAlgorithmFactory
 {
-	public static var hexadecimalEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.HexadecimalEncodingAlgorithm;
+	@:public @:final @:static public static var hexadecimalEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.HexadecimalEncodingAlgorithm;
 	
-	public static var base64EncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.BASE64EncodingAlgorithm;
+	@:public @:final @:static public static var base64EncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.BASE64EncodingAlgorithm;
 	
-	public static var booleanEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.BooleanEncodingAlgorithm;
+	@:public @:final @:static public static var booleanEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.BooleanEncodingAlgorithm;
 	
-	public static var shortEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.ShortEncodingAlgorithm;
+	@:public @:final @:static public static var shortEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.ShortEncodingAlgorithm;
 	
-	public static var intEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.IntEncodingAlgorithm;
+	@:public @:final @:static public static var intEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.IntEncodingAlgorithm;
 	
-	public static var longEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.LongEncodingAlgorithm;
+	@:public @:final @:static public static var longEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.LongEncodingAlgorithm;
 	
-	public static var floatEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.FloatEncodingAlgorithm;
+	@:public @:final @:static public static var floatEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.FloatEncodingAlgorithm;
 	
-	public static var doubleEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.DoubleEncodingAlgorithm;
+	@:public @:final @:static public static var doubleEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.DoubleEncodingAlgorithm;
 	
-	public static var uuidEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.UUIDEncodingAlgorithm;
+	@:public @:final @:static public static var uuidEncodingAlgorithm(default, null) : com.sun.xml.internal.fastinfoset.algorithm.UUIDEncodingAlgorithm;
 	
-	@:overload public static function getAlgorithm(index : Int) : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm;
+	@:overload @:public @:static public static function getAlgorithm(index : Int) : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm;
 	
 	
 }

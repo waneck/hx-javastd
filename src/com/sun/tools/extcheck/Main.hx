@@ -28,13 +28,13 @@ package com.sun.tools.extcheck;
 */
 extern class Main
 {
-	public static var INSUFFICIENT(default, null) : String;
+	@:public @:static @:final public static var INSUFFICIENT(default, null) : String;
 	
-	public static var MISSING(default, null) : String;
+	@:public @:static @:final public static var MISSING(default, null) : String;
 	
-	public static var DOES_NOT_EXIST(default, null) : String;
+	@:public @:static @:final public static var DOES_NOT_EXIST(default, null) : String;
 	
-	public static var EXTRA(default, null) : String;
+	@:public @:static @:final public static var EXTRA(default, null) : String;
 	
 	/**
 	* Terminates with one of the following codes
@@ -42,9 +42,9 @@ extern class Main
 	*  0 No newer jar file was found
 	*  -1 An internal error occurred
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload public static function realMain(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function realMain(args : java.NativeArray<String>) : Void;
 	
 	
 }

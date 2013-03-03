@@ -25,27 +25,27 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class POAPolicyMediatorBase_R extends com.sun.corba.se.impl.oa.poa.POAPolicyMediatorBase
 {
-	private var activeObjectMap : com.sun.corba.se.impl.oa.poa.ActiveObjectMap;
+	@:protected private var activeObjectMap : com.sun.corba.se.impl.oa.poa.ActiveObjectMap;
 	
-	@:overload public function returnServant() : Void;
+	@:overload @:public override public function returnServant() : Void;
 	
-	@:overload public function clearAOM() : Void;
+	@:overload @:public override public function clearAOM() : Void;
 	
-	@:overload private function internalKeyToServant(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : org.omg.PortableServer.Servant;
+	@:overload @:protected private function internalKeyToServant(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : org.omg.PortableServer.Servant;
 	
-	@:overload private function internalIdToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload @:protected private function internalIdToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
-	@:overload private function activateServant(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:protected private function activateServant(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload @:final public function activateObject(id : java.NativeArray<java.StdTypes.Int8>, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public @:final override public function activateObject(id : java.NativeArray<java.StdTypes.Int8>, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload public function deactivateObject(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload @:public override public function deactivateObject(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
-	@:overload private function deactivateHelper(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, s : org.omg.PortableServer.Servant) : Void;
+	@:overload @:protected private function deactivateHelper(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, s : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload public function deactivateObject(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : org.omg.PortableServer.Servant;
+	@:overload @:public public function deactivateObject(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : org.omg.PortableServer.Servant;
 	
-	@:overload public function servantToId(servant : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function servantToId(servant : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

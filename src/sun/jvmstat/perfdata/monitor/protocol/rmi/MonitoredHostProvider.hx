@@ -32,39 +32,39 @@ extern class MonitoredHostProvider extends sun.jvmstat.monitor.MonitoredHost
 	* @throws MonitorException Thrown on any error encountered while
 	*                          communicating with the remote host.
 	*/
-	@:overload public function new(hostId : sun.jvmstat.monitor.HostIdentifier) : Void;
+	@:overload @:public public function new(hostId : sun.jvmstat.monitor.HostIdentifier) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredVm;
+	@:overload @:public override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredVm;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : sun.jvmstat.monitor.MonitoredVm;
+	@:overload @:public override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : sun.jvmstat.monitor.MonitoredVm;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function detach(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
+	@:overload @:public override public function detach(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function addHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
+	@:overload @:public override public function addHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function removeHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
+	@:overload @:public override public function removeHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
 	
-	@:overload public function setInterval(newInterval : Int) : Void;
+	@:overload @:public override public function setInterval(newInterval : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function activeVms() : java.util.Set<Null<Int>>;
+	@:overload @:public override public function activeVms() : java.util.Set<Null<Int>>;
 	
 	
 }
@@ -73,7 +73,7 @@ extern class MonitoredHostProvider extends sun.jvmstat.monitor.MonitoredHost
 */
 @:native('sun$jvmstat$perfdata$monitor$protocol$rmi$MonitoredHostProvider$NotifierTask') @:internal extern class MonitoredHostProvider_NotifierTask extends sun.jvmstat.perfdata.monitor.CountedTimerTask
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

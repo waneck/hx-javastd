@@ -37,32 +37,32 @@ exception statement from your version.
 */
 @:internal extern class PulseAudioLine implements javax.sound.sampled.Line
 {
-	private var lineListeners : java.util.List<javax.sound.sampled.LineListener>;
+	@:protected private var lineListeners : java.util.List<javax.sound.sampled.LineListener>;
 	
-	private var controls : java.util.List<javax.sound.sampled.Control>;
+	@:protected private var controls : java.util.List<javax.sound.sampled.Control>;
 	
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload private function fireLineEvent(e : javax.sound.sampled.LineEvent) : Void;
+	@:overload @:protected private function fireLineEvent(e : javax.sound.sampled.LineEvent) : Void;
 	
-	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
-	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
-	@:overload public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Obtains the <code>Line.Info</code> object describing this
 	* line.
 	* @return description of the line
 	*/
-	@:overload override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public @:public @:public @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Opens the line, indicating that it should acquire any required
@@ -108,7 +108,7 @@ exception statement from your version.
 	* @see Clip#open(AudioFormat, byte[], int, int)
 	* @see Clip#open(AudioInputStream)
 	*/
-	@:overload public function open() : Void;
+	@:overload @:public @:public public function open() : Void;
 	
 	
 }

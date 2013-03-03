@@ -50,7 +50,7 @@ extern class OpenMBeanConstructorInfoSupport extends javax.management.MBeanConst
 	* @throws ArrayStoreException If {@code signature} is not an
 	* array of instances of a subclass of {@code MBeanParameterInfo}.
 	*/
-	@:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>) : Void;
+	@:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>) : Void;
 	
 	/**
 	* <p>Constructs an {@code OpenMBeanConstructorInfoSupport}
@@ -80,7 +80,7 @@ extern class OpenMBeanConstructorInfoSupport extends javax.management.MBeanConst
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, description : String, signature : java.NativeArray<javax.management.openmbean.OpenMBeanParameterInfo>, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>Compares the specified {@code obj} parameter with this
@@ -108,7 +108,7 @@ extern class OpenMBeanConstructorInfoSupport extends javax.management.MBeanConst
 	* @return {@code true} if the specified object is equal to this
 	* {@code OpenMBeanConstructorInfoSupport} instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* <p>Returns the hash code value for this {@code
@@ -141,7 +141,7 @@ extern class OpenMBeanConstructorInfoSupport extends javax.management.MBeanConst
 	* @return the hash code value for this {@code
 	* OpenMBeanConstructorInfoSupport} instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* <p>Returns a string representation of this {@code
@@ -161,7 +161,7 @@ extern class OpenMBeanConstructorInfoSupport extends javax.management.MBeanConst
 	* @return a string representation of this {@code
 	* OpenMBeanConstructorInfoSupport} instance
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.server;
 */
 extern class MonitorRootService extends com.sun.xml.internal.ws.server.MonitorBase
 {
-	@:overload public function policy() : String;
+	@:overload @:public public function policy() : String;
 	
-	@:overload public function container() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public public function container() : com.sun.xml.internal.ws.api.server.Container;
 	
-	@:overload public function portName() : javax.xml.namespace.QName;
+	@:overload @:public public function portName() : javax.xml.namespace.QName;
 	
-	@:overload public function serviceName() : javax.xml.namespace.QName;
+	@:overload @:public public function serviceName() : javax.xml.namespace.QName;
 	
 	/*  NOTE:  These are not ready when the AMX Validator runs so NPE.
 	@ManagedAttribute
@@ -52,29 +52,29 @@ extern class MonitorRootService extends com.sun.xml.internal.ws.server.MonitorBa
 	return endpoint.getAssemblerContext().getCodec().getMimeType();
 	}
 	*/
-	@:overload public function soapVersionHttpBindingId() : String;
+	@:overload @:public public function soapVersionHttpBindingId() : String;
 	
-	@:overload public function addressingVersion() : com.sun.xml.internal.ws.api.addressing.AddressingVersion;
+	@:overload @:public public function addressingVersion() : com.sun.xml.internal.ws.api.addressing.AddressingVersion;
 	
-	@:overload public function bindingID() : com.sun.xml.internal.ws.api.BindingID;
+	@:overload @:public public function bindingID() : com.sun.xml.internal.ws.api.BindingID;
 	
-	@:overload public function features() : com.sun.xml.internal.ws.api.WSFeatureList;
+	@:overload @:public public function features() : com.sun.xml.internal.ws.api.WSFeatureList;
 	
-	@:overload public function wsdlPortTypeName() : javax.xml.namespace.QName;
+	@:overload @:public public function wsdlPortTypeName() : javax.xml.namespace.QName;
 	
-	@:overload public function wsdlEndpointAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:overload @:public public function wsdlEndpointAddress() : com.sun.xml.internal.ws.api.EndpointAddress;
 	
-	@:overload public function serviceDefinitionImports() : java.util.Set<String>;
+	@:overload @:public public function serviceDefinitionImports() : java.util.Set<String>;
 	
-	@:overload public function serviceDefinitionURL() : java.net.URL;
+	@:overload @:public public function serviceDefinitionURL() : java.net.URL;
 	
-	@:overload public function seiModelWSDLLocation() : String;
+	@:overload @:public public function seiModelWSDLLocation() : String;
 	
-	@:overload public function jaxwsRuntimeVersion() : String;
+	@:overload @:public public function jaxwsRuntimeVersion() : String;
 	
-	@:overload public function dumpHTTPMessages() : Bool;
+	@:overload @:public public function dumpHTTPMessages() : Bool;
 	
-	@:overload public function dumpHTTPMessages(x : Bool) : Void;
+	@:overload @:public public function dumpHTTPMessages(x : Bool) : Void;
 	
 	
 }

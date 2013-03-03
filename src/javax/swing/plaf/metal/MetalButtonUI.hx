@@ -39,25 +39,25 @@ package javax.swing.plaf.metal;
 */
 extern class MetalButtonUI extends javax.swing.plaf.basic.BasicButtonUI
 {
-	private var focusColor : java.awt.Color;
+	@:protected private var focusColor : java.awt.Color;
 	
-	private var selectColor : java.awt.Color;
+	@:protected private var selectColor : java.awt.Color;
 	
-	private var disabledTextColor : java.awt.Color;
+	@:protected private var disabledTextColor : java.awt.Color;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override public function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function createButtonListener(b : javax.swing.AbstractButton) : javax.swing.plaf.basic.BasicButtonListener;
+	@:overload @:protected override private function createButtonListener(b : javax.swing.AbstractButton) : javax.swing.plaf.basic.BasicButtonListener;
 	
-	@:overload private function getSelectColor() : java.awt.Color;
+	@:overload @:protected private function getSelectColor() : java.awt.Color;
 	
-	@:overload private function getDisabledTextColor() : java.awt.Color;
+	@:overload @:protected private function getDisabledTextColor() : java.awt.Color;
 	
-	@:overload private function getFocusColor() : java.awt.Color;
+	@:overload @:protected private function getFocusColor() : java.awt.Color;
 	
 	/**
 	* If necessary paints the background of the component, then
@@ -71,13 +71,13 @@ extern class MetalButtonUI extends javax.swing.plaf.basic.BasicButtonUI
 	* @see javax.swing.plaf.ComponentUI#paint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
 	
-	@:overload override private function paintText(g : java.awt.Graphics, c : javax.swing.JComponent, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload @:protected override private function paintText(g : java.awt.Graphics, c : javax.swing.JComponent, textRect : java.awt.Rectangle, text : String) : Void;
 	
 	
 }

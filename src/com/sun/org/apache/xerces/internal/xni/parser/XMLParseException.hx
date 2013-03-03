@@ -21,55 +21,55 @@ package com.sun.org.apache.xerces.internal.xni.parser;
 extern class XMLParseException extends com.sun.org.apache.xerces.internal.xni.XNIException
 {
 	/** Public identifier. */
-	private var fPublicId : String;
+	@:protected private var fPublicId : String;
 	
 	/** literal System identifier. */
-	private var fLiteralSystemId : String;
+	@:protected private var fLiteralSystemId : String;
 	
 	/** expanded System identifier. */
-	private var fExpandedSystemId : String;
+	@:protected private var fExpandedSystemId : String;
 	
 	/** Base system identifier. */
-	private var fBaseSystemId : String;
+	@:protected private var fBaseSystemId : String;
 	
 	/** Line number. */
-	private var fLineNumber : Int;
+	@:protected private var fLineNumber : Int;
 	
 	/** Column number. */
-	private var fColumnNumber : Int;
+	@:protected private var fColumnNumber : Int;
 	
 	/** Character offset. */
-	private var fCharacterOffset : Int;
+	@:protected private var fCharacterOffset : Int;
 	
 	/** Constructs a parse exception. */
-	@:overload public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, message : String) : Void;
+	@:overload @:public public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, message : String) : Void;
 	
 	/** Constructs a parse exception. */
-	@:overload public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, message : String, exception : java.lang.Exception) : Void;
+	@:overload @:public public function new(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, message : String, exception : java.lang.Exception) : Void;
 	
 	/** Returns the public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/** Returns the expanded system identifier. */
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
 	/** Returns the literal system identifier. */
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
 	/** Returns the base system identifier. */
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
 	/** Returns the line number. */
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/** Returns the row number. */
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/** Returns the character offset. */
-	@:overload public function getCharacterOffset() : Int;
+	@:overload @:public public function getCharacterOffset() : Int;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -130,7 +130,7 @@ extern interface AttributeSet
 	*     {@link java.lang.Class Class} that implements interface {@link
 	*     Attribute Attribute}.
 	*/
-	@:overload public function get(category : Class<Dynamic>) : javax.print.attribute.Attribute;
+	@:overload @:public public function get(category : Class<Dynamic>) : javax.print.attribute.Attribute;
 	
 	/**
 	* Adds the specified attribute to this attribute set if it is not
@@ -149,7 +149,7 @@ extern interface AttributeSet
 	*     (unchecked exception) Thrown if this attribute set does not support
 	*     the <CODE>add()</CODE> operation.
 	*/
-	@:overload public function add(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function add(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Removes any attribute for this category from this attribute set if
@@ -167,7 +167,7 @@ extern interface AttributeSet
 	*     (unchecked exception) Thrown if this attribute set does not support
 	*     the <CODE>remove()</CODE> operation.
 	*/
-	@:overload public function remove(category : Class<Dynamic>) : Bool;
+	@:overload @:public public function remove(category : Class<Dynamic>) : Bool;
 	
 	/**
 	* Removes the specified attribute from this attribute set if
@@ -184,7 +184,7 @@ extern interface AttributeSet
 	*     (unchecked exception) Thrown if this attribute set does not support
 	*     the <CODE>remove()</CODE> operation.
 	*/
-	@:overload public function remove(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function remove(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this attribute set contains an
@@ -196,7 +196,7 @@ extern interface AttributeSet
 	* @return  <tt>true</tt> if this attribute set contains an attribute
 	*         value for the specified category.
 	*/
-	@:overload public function containsKey(category : Class<Dynamic>) : Bool;
+	@:overload @:public public function containsKey(category : Class<Dynamic>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this attribute set contains the given
@@ -208,7 +208,7 @@ extern interface AttributeSet
 	* @return  <tt>true</tt> if this attribute set contains the given
 	*      attribute  value.
 	*/
-	@:overload public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
+	@:overload @:public public function containsValue(attribute : javax.print.attribute.Attribute) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified set to this attribute.
@@ -240,7 +240,7 @@ extern interface AttributeSet
 	*
 	* @see #add(Attribute)
 	*/
-	@:overload public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
 	
 	/**
 	* Returns the number of attributes in this attribute set. If this
@@ -249,14 +249,14 @@ extern interface AttributeSet
 	*
 	* @return  The number of attributes in this attribute set.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns an array of the attributes contained in this set.
 	* @return the Attributes contained in this set as an array, zero length
 	* if the AttributeSet is empty.
 	*/
-	@:overload public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
+	@:overload @:public public function toArray() : java.NativeArray<javax.print.attribute.Attribute>;
 	
 	/**
 	* Removes all attributes from this attribute set.
@@ -265,14 +265,14 @@ extern interface AttributeSet
 	*   (unchecked exception) Thrown if this attribute set does not support
 	*     the <CODE>clear()</CODE> operation.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns true if this attribute set contains no attributes.
 	*
 	* @return true if this attribute set contains no attributes.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	
 }

@@ -29,11 +29,11 @@ extern interface Port extends com.sun.xml.internal.txw2.TypedXmlWriter extends c
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Port;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Port;
 	
-	@:overload public function arrayType(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Port;
+	@:overload @:public public function arrayType(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Port;
 	
-	@:overload public function binding(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Port;
+	@:overload @:public public function binding(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Port;
 	
 	
 }

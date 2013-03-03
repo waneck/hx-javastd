@@ -11,13 +11,13 @@ package org.omg.PortableServer;
 	 */
 extern class ServantActivatorPOA extends org.omg.PortableServer.Servant implements org.omg.PortableServer.ServantActivatorOperations implements org.omg.CORBA.portable.InvokeHandler
 {
-	@:overload public function _invoke($method : String, _in : org.omg.CORBA.portable.InputStream, $rh : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function _invoke($method : String, _in : org.omg.CORBA.portable.InputStream, $rh : org.omg.CORBA.portable.ResponseHandler) : org.omg.CORBA.portable.OutputStream;
 	
-	@:overload override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:public override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload public function _this() : org.omg.PortableServer.ServantActivator;
+	@:overload @:public public function _this() : org.omg.PortableServer.ServantActivator;
 	
-	@:overload public function _this(orb : org.omg.CORBA.ORB) : org.omg.PortableServer.ServantActivator;
+	@:overload @:public public function _this(orb : org.omg.CORBA.ORB) : org.omg.PortableServer.ServantActivator;
 	
 	/**
 		 * This operation is invoked whenever a servant for 
@@ -40,7 +40,7 @@ extern class ServantActivatorPOA extends org.omg.PortableServer.Servant implemen
 		 *        until all invocations in progress have
 		 *        completed.
 		 */
-	@:overload public function etherealize(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, serv : org.omg.PortableServer.Servant, cleanup_in_progress : Bool, remaining_activations : Bool) : Void;
+	@:overload @:public public function etherealize(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA, serv : org.omg.PortableServer.Servant, cleanup_in_progress : Bool, remaining_activations : Bool) : Void;
 	
 	/**
 		 * This operation is invoked by the POA whenever the 
@@ -59,7 +59,7 @@ extern class ServantActivatorPOA extends org.omg.PortableServer.Servant implemen
 		 *            requests to the object denoted in the 
 		 *            forward_reference member of the exception.
 		 */
-	@:overload public function incarnate(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA) : org.omg.PortableServer.Servant;
+	@:overload @:public public function incarnate(oid : java.NativeArray<java.StdTypes.Int8>, adapter : org.omg.PortableServer.POA) : org.omg.PortableServer.Servant;
 	
 	
 }

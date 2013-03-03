@@ -67,7 +67,7 @@ extern class CK_VERSION
 	*   CK_BYTE major;
 	* </PRE>
 	*/
-	public var major : java.StdTypes.Int8;
+	@:public public var major : java.StdTypes.Int8;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -75,17 +75,17 @@ extern class CK_VERSION
 	*   CK_BYTE minor;
 	* </PRE>
 	*/
-	public var minor : java.StdTypes.Int8;
+	@:public public var minor : java.StdTypes.Int8;
 	
 	/* 1/100ths portion of version number */
-	@:overload public function new(major : Int, minor : Int) : Void;
+	@:overload @:public public function new(major : Int, minor : Int) : Void;
 	
 	/**
 	* Returns the string representation of CK_VERSION.
 	*
 	* @return the string representation of CK_VERSION
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

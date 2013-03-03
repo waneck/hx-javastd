@@ -62,34 +62,34 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 extern class XMLElementDecl
 {
 	/** TYPE_ANY */
-	public static var TYPE_ANY(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_ANY(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_EMPTY */
-	public static var TYPE_EMPTY(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_EMPTY(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_MIXED */
-	public static var TYPE_MIXED(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_MIXED(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_CHILDREN */
-	public static var TYPE_CHILDREN(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_CHILDREN(default, null) : java.StdTypes.Int16;
 	
 	/** TYPE_SIMPLE */
-	public static var TYPE_SIMPLE(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var TYPE_SIMPLE(default, null) : java.StdTypes.Int16;
 	
 	/** name */
-	public var name(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
+	@:public @:final public var name(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/** scope */
-	public var scope : Int;
+	@:public public var scope : Int;
 	
 	/** type */
-	public var type : java.StdTypes.Int16;
+	@:public public var type : java.StdTypes.Int16;
 	
 	/** contentModelValidator */
-	public var contentModelValidator : com.sun.org.apache.xerces.internal.impl.dtd.models.ContentModelValidator;
+	@:public public var contentModelValidator : com.sun.org.apache.xerces.internal.impl.dtd.models.ContentModelValidator;
 	
 	/** simpleType */
-	public var simpleType(default, null) : com.sun.org.apache.xerces.internal.impl.dtd.XMLSimpleType;
+	@:public @:final public var simpleType(default, null) : com.sun.org.apache.xerces.internal.impl.dtd.XMLSimpleType;
 	
 	/**
 	* setValues
@@ -100,12 +100,12 @@ extern class XMLElementDecl
 	* @param contentModelValidator
 	* @param simpleType
 	*/
-	@:overload public function setValues(name : com.sun.org.apache.xerces.internal.xni.QName, scope : Int, type : java.StdTypes.Int16, contentModelValidator : com.sun.org.apache.xerces.internal.impl.dtd.models.ContentModelValidator, simpleType : com.sun.org.apache.xerces.internal.impl.dtd.XMLSimpleType) : Void;
+	@:overload @:public public function setValues(name : com.sun.org.apache.xerces.internal.xni.QName, scope : Int, type : java.StdTypes.Int16, contentModelValidator : com.sun.org.apache.xerces.internal.impl.dtd.models.ContentModelValidator, simpleType : com.sun.org.apache.xerces.internal.impl.dtd.XMLSimpleType) : Void;
 	
 	/**
 	* clear
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

@@ -30,30 +30,30 @@ extern class BeanContextServiceAvailableEvent extends java.beans.beancontext.Bea
 	* @param bcs The context in which the service has become available
 	* @param sc A <code>Class</code> reference to the newly available service
 	*/
-	@:overload public function new(bcs : java.beans.beancontext.BeanContextServices, sc : Class<Dynamic>) : Void;
+	@:overload @:public public function new(bcs : java.beans.beancontext.BeanContextServices, sc : Class<Dynamic>) : Void;
 	
 	/**
 	* Gets the source as a reference of type <code>BeanContextServices</code>.
 	* @return The context in which the service has become available
 	*/
-	@:overload public function getSourceAsBeanContextServices() : java.beans.beancontext.BeanContextServices;
+	@:overload @:public public function getSourceAsBeanContextServices() : java.beans.beancontext.BeanContextServices;
 	
 	/**
 	* Gets the service class that is the subject of this notification.
 	* @return A <code>Class</code> reference to the newly available service
 	*/
-	@:overload public function getServiceClass() : Class<Dynamic>;
+	@:overload @:public public function getServiceClass() : Class<Dynamic>;
 	
 	/**
 	* Gets the list of service dependent selectors.
 	* @return the current selectors available from the service
 	*/
-	@:overload public function getCurrentServiceSelectors() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getCurrentServiceSelectors() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* A <code>Class</code> reference to the newly available service
 	*/
-	private var serviceClass : Class<Dynamic>;
+	@:protected private var serviceClass : Class<Dynamic>;
 	
 	
 }

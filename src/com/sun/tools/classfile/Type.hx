@@ -34,15 +34,15 @@ extern class Type
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function isObject() : Bool;
+	@:overload @:public public function isObject() : Bool;
 	
-	@:overload @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload private static function append(sb : java.lang.StringBuilder, prefix : String, types : java.util.List<com.sun.tools.classfile.Type>, suffix : String) : Void;
+	@:overload @:protected @:static private static function append(sb : java.lang.StringBuilder, prefix : String, types : java.util.List<com.sun.tools.classfile.Type>, suffix : String) : Void;
 	
-	@:overload private static function appendIfNotEmpty(sb : java.lang.StringBuilder, prefix : String, types : java.util.List<com.sun.tools.classfile.Type>, suffix : String) : Void;
+	@:overload @:protected @:static private static function appendIfNotEmpty(sb : java.lang.StringBuilder, prefix : String, types : java.util.List<com.sun.tools.classfile.Type>, suffix : String) : Void;
 	
 	
 }
@@ -82,15 +82,15 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$SimpleType') extern class Type_SimpleType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function isPrimitiveType() : Bool;
+	@:overload @:public public function isPrimitiveType() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
 	
 }
@@ -104,13 +104,13 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$ArrayType') extern class Type_ArrayType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new(elemType : com.sun.tools.classfile.Type) : Void;
+	@:overload @:public public function new(elemType : com.sun.tools.classfile.Type) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var elemType(default, null) : com.sun.tools.classfile.Type;
+	@:public @:final public var elemType(default, null) : com.sun.tools.classfile.Type;
 	
 	
 }
@@ -125,21 +125,21 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$MethodType') extern class Type_MethodType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new(paramTypes : java.util.List<com.sun.tools.classfile.Type>, resultType : com.sun.tools.classfile.Type) : Void;
+	@:overload @:public public function new(paramTypes : java.util.List<com.sun.tools.classfile.Type>, resultType : com.sun.tools.classfile.Type) : Void;
 	
-	@:overload public function new(typeParamTypes : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>, paramTypes : java.util.List<com.sun.tools.classfile.Type>, returnType : com.sun.tools.classfile.Type, throwsTypes : java.util.List<com.sun.tools.classfile.Type>) : Void;
+	@:overload @:public public function new(typeParamTypes : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>, paramTypes : java.util.List<com.sun.tools.classfile.Type>, returnType : com.sun.tools.classfile.Type, throwsTypes : java.util.List<com.sun.tools.classfile.Type>) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var typeParamTypes(default, null) : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>;
+	@:public @:final public var typeParamTypes(default, null) : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>;
 	
-	public var paramTypes(default, null) : java.util.List<com.sun.tools.classfile.Type>;
+	@:public @:final public var paramTypes(default, null) : java.util.List<com.sun.tools.classfile.Type>;
 	
-	public var returnType(default, null) : com.sun.tools.classfile.Type;
+	@:public @:final public var returnType(default, null) : com.sun.tools.classfile.Type;
 	
-	public var throwsTypes(default, null) : java.util.List<com.sun.tools.classfile.Type>;
+	@:public @:final public var throwsTypes(default, null) : java.util.List<com.sun.tools.classfile.Type>;
 	
 	
 }
@@ -154,17 +154,17 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$ClassSigType') extern class Type_ClassSigType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new(typeParamTypes : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>, superclassType : com.sun.tools.classfile.Type, superinterfaceTypes : java.util.List<com.sun.tools.classfile.Type>) : Void;
+	@:overload @:public public function new(typeParamTypes : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>, superclassType : com.sun.tools.classfile.Type, superinterfaceTypes : java.util.List<com.sun.tools.classfile.Type>) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var typeParamTypes(default, null) : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>;
+	@:public @:final public var typeParamTypes(default, null) : java.util.List<com.sun.tools.classfile.Type.Type_TypeParamType>;
 	
-	public var superclassType(default, null) : com.sun.tools.classfile.Type;
+	@:public @:final public var superclassType(default, null) : com.sun.tools.classfile.Type;
 	
-	public var superinterfaceTypes(default, null) : java.util.List<com.sun.tools.classfile.Type>;
+	@:public @:final public var superinterfaceTypes(default, null) : java.util.List<com.sun.tools.classfile.Type>;
 	
 	
 }
@@ -186,21 +186,21 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$ClassType') extern class Type_ClassType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new(outerType : com.sun.tools.classfile.Type.Type_ClassType, name : String, typeArgs : java.util.List<com.sun.tools.classfile.Type>) : Void;
+	@:overload @:public public function new(outerType : com.sun.tools.classfile.Type.Type_ClassType, name : String, typeArgs : java.util.List<com.sun.tools.classfile.Type>) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function getBinaryName() : String;
+	@:overload @:public public function getBinaryName() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function isObject() : Bool;
+	@:overload @:public override public function isObject() : Bool;
 	
-	public var outerType(default, null) : com.sun.tools.classfile.Type.Type_ClassType;
+	@:public @:final public var outerType(default, null) : com.sun.tools.classfile.Type.Type_ClassType;
 	
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
-	public var typeArgs(default, null) : java.util.List<com.sun.tools.classfile.Type>;
+	@:public @:final public var typeArgs(default, null) : java.util.List<com.sun.tools.classfile.Type>;
 	
 	
 }
@@ -221,17 +221,17 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$TypeParamType') extern class Type_TypeParamType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new(name : String, classBound : com.sun.tools.classfile.Type, interfaceBounds : java.util.List<com.sun.tools.classfile.Type>) : Void;
+	@:overload @:public public function new(name : String, classBound : com.sun.tools.classfile.Type, interfaceBounds : java.util.List<com.sun.tools.classfile.Type>) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var name(default, null) : String;
+	@:public @:final public var name(default, null) : String;
 	
-	public var classBound(default, null) : com.sun.tools.classfile.Type;
+	@:public @:final public var classBound(default, null) : com.sun.tools.classfile.Type;
 	
-	public var interfaceBounds(default, null) : java.util.List<com.sun.tools.classfile.Type>;
+	@:public @:final public var interfaceBounds(default, null) : java.util.List<com.sun.tools.classfile.Type>;
 	
 	
 }
@@ -250,17 +250,17 @@ extern class Type
 */
 @:native('com$sun$tools$classfile$Type$WildcardType') extern class Type_WildcardType extends com.sun.tools.classfile.Type
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(kind : com.sun.tools.classfile.Type.Type_WildcardType_Kind, boundType : com.sun.tools.classfile.Type) : Void;
+	@:overload @:public public function new(kind : com.sun.tools.classfile.Type.Type_WildcardType_Kind, boundType : com.sun.tools.classfile.Type) : Void;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Type.Type_Visitor<R, D>, data : D) : R;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public var kind(default, null) : com.sun.tools.classfile.Type.Type_WildcardType_Kind;
+	@:public @:final public var kind(default, null) : com.sun.tools.classfile.Type.Type_WildcardType_Kind;
 	
-	public var boundType(default, null) : com.sun.tools.classfile.Type;
+	@:public @:final public var boundType(default, null) : com.sun.tools.classfile.Type;
 	
 	
 }

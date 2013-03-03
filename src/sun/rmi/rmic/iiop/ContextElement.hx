@@ -35,7 +35,7 @@ package sun.rmi.rmic.iiop;
 */
 extern interface ContextElement
 {
-	@:overload public function getElementName() : String;
+	@:overload @:public public function getElementName() : String;
 	
 	
 }

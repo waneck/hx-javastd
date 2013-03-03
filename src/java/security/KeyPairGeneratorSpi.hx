@@ -38,7 +38,7 @@ extern class KeyPairGeneratorSpi
 	* @exception InvalidParameterException if the <code>keysize</code> is not
 	* supported by this KeyPairGeneratorSpi object.
 	*/
-	@:overload @:abstract public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:abstract public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes the key pair generator using the specified parameter
@@ -62,7 +62,7 @@ extern class KeyPairGeneratorSpi
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:require(java2) @:overload @:public public function initialize(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a key pair. Unless an initialization method is called
@@ -72,7 +72,7 @@ extern class KeyPairGeneratorSpi
 	*
 	* @return the newly generated <tt>KeyPair</tt>
 	*/
-	@:overload @:abstract public function generateKeyPair() : java.security.KeyPair;
+	@:overload @:public @:abstract public function generateKeyPair() : java.security.KeyPair;
 	
 	
 }

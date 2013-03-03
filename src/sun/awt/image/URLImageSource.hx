@@ -25,15 +25,15 @@ package sun.awt.image;
 */
 extern class URLImageSource extends sun.awt.image.InputStreamImageSource
 {
-	@:overload public function new(u : java.net.URL) : Void;
+	@:overload @:public public function new(u : java.net.URL) : Void;
 	
-	@:overload public function new(href : String) : Void;
+	@:overload @:public public function new(href : String) : Void;
 	
-	@:overload public function new(u : java.net.URL, uc : java.net.URLConnection) : Void;
+	@:overload @:public public function new(u : java.net.URL, uc : java.net.URLConnection) : Void;
 	
-	@:overload public function new(uc : java.net.URLConnection) : Void;
+	@:overload @:public public function new(uc : java.net.URLConnection) : Void;
 	
-	@:overload override private function getDecoder() : sun.awt.image.ImageDecoder;
+	@:overload @:protected override private function getDecoder() : sun.awt.image.ImageDecoder;
 	
 	
 }

@@ -42,109 +42,109 @@ extern class Configuration
 	/**
 	* The factory for builders.
 	*/
-	private var builderFactory : com.sun.tools.doclets.internal.toolkit.builders.BuilderFactory;
+	@:protected private var builderFactory : com.sun.tools.doclets.internal.toolkit.builders.BuilderFactory;
 	
 	/**
 	* The taglet manager.
 	*/
-	public var tagletManager : com.sun.tools.doclets.internal.toolkit.taglets.TagletManager;
+	@:public public var tagletManager : com.sun.tools.doclets.internal.toolkit.taglets.TagletManager;
 	
 	/**
 	* The path to the builder XML input file.
 	*/
-	public var builderXMLPath : String;
+	@:public public var builderXMLPath : String;
 	
 	/**
 	* The path to Taglets
 	*/
-	public var tagletpath : String;
+	@:public public var tagletpath : String;
 	
 	/**
 	* This is true if option "-serialwarn" is used. Defualt value is false to
 	* supress excessive warnings about serial tag.
 	*/
-	public var serialwarn : Bool;
+	@:public public var serialwarn : Bool;
 	
 	/**
 	* The specified amount of space between tab stops.
 	*/
-	public var sourcetab : Int;
+	@:public public var sourcetab : Int;
 	
 	/**
 	* True if we should generate browsable sources.
 	*/
-	public var linksource : Bool;
+	@:public public var linksource : Bool;
 	
 	/**
 	* True if command line option "-nosince" is used. Default value is
 	* false.
 	*/
-	public var nosince : Bool;
+	@:public public var nosince : Bool;
 	
 	/**
 	* True if we should recursively copy the doc-file subdirectories
 	*/
-	public var copydocfilesubdirs : Bool;
+	@:public public var copydocfilesubdirs : Bool;
 	
 	/**
 	* The META charset tag used for cross-platform viewing.
 	*/
-	public var charset : String;
+	@:public public var charset : String;
 	
 	/**
 	* True if user wants to add member names as meta keywords.
 	* Set to false because meta keywords are ignored in general
 	* by most Internet search engines.
 	*/
-	public var keywords : Bool;
+	@:public public var keywords : Bool;
 	
 	/**
 	* The meta tag keywords instance.
 	*/
-	public var metakeywords(default, null) : com.sun.tools.doclets.internal.toolkit.util.MetaKeywords;
+	@:public @:final public var metakeywords(default, null) : com.sun.tools.doclets.internal.toolkit.util.MetaKeywords;
 	
 	/**
 	* The list of doc-file subdirectories to exclude
 	*/
-	private var excludedDocFileDirs : java.util.Set<String>;
+	@:protected private var excludedDocFileDirs : java.util.Set<String>;
 	
 	/**
 	* The list of qualifiers to exclude
 	*/
-	private var excludedQualifiers : java.util.Set<String>;
+	@:protected private var excludedQualifiers : java.util.Set<String>;
 	
 	/**
 	* The Root of the generated Program Structure from the Doclet API.
 	*/
-	public var root : com.sun.javadoc.RootDoc;
+	@:public public var root : com.sun.javadoc.RootDoc;
 	
 	/**
 	* Destination directory name, in which doclet will generate the entire
 	* documentation. Default is current directory.
 	*/
-	public var destDirName : String;
+	@:public public var destDirName : String;
 	
 	/**
 	* Destination directory name, in which doclet will copy the doc-files to.
 	*/
-	public var docFileDestDirName : String;
+	@:public public var docFileDestDirName : String;
 	
 	/**
 	* Encoding for this document. Default is default encoding for this
 	* platform.
 	*/
-	public var docencoding : String;
+	@:public public var docencoding : String;
 	
 	/**
 	* True if user wants to suppress descriptions and tags.
 	*/
-	public var nocomment : Bool;
+	@:public public var nocomment : Bool;
 	
 	/**
 	* Encoding for this document. Default is default encoding for this
 	* platform.
 	*/
-	public var encoding : String;
+	@:public public var encoding : String;
 	
 	/**
 	* Generate author specific information for all the classes if @author
@@ -152,7 +152,7 @@ extern class Configuration
 	* <code>showauthor</code> is set to true if -author option is used.
 	* Default is don't show author information.
 	*/
-	public var showauthor : Bool;
+	@:public public var showauthor : Bool;
 	
 	/**
 	* Generate version specific information for the all the classes
@@ -160,13 +160,13 @@ extern class Configuration
 	* used. <code>showversion</code> is set to true if -version option is
 	* used.Default is don't show version information.
 	*/
-	public var showversion : Bool;
+	@:public public var showversion : Bool;
 	
 	/**
 	* Sourcepath from where to read the source files. Default is classpath.
 	*
 	*/
-	public var sourcepath : String;
+	@:public public var sourcepath : String;
 	
 	/**
 	* Don't generate deprecated API information at all, if -nodeprecated
@@ -174,12 +174,12 @@ extern class Configuration
 	* -nodeprecated option is used. Default is generate deprected API
 	* information.
 	*/
-	public var nodeprecated : Bool;
+	@:public public var nodeprecated : Bool;
 	
 	/**
 	* The catalog of classes specified on the command-line
 	*/
-	public var classDocCatalog : com.sun.tools.doclets.internal.toolkit.util.ClassDocCatalog;
+	@:public public var classDocCatalog : com.sun.tools.doclets.internal.toolkit.util.ClassDocCatalog;
 	
 	/**
 	* Message Retriever for the doclet, to retrieve message from the resource
@@ -188,38 +188,38 @@ extern class Configuration
 	*
 	* TODO:  Make this private!!!
 	*/
-	public var message : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
+	@:public public var message : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
 	
 	/**
 	* True if user wants to suppress time stamp in output.
 	* Default is false.
 	*/
-	public var notimestamp : Bool;
+	@:public public var notimestamp : Bool;
 	
 	/**
 	* The package grouping instance.
 	*/
-	public var group(default, null) : com.sun.tools.doclets.internal.toolkit.util.Group;
+	@:public @:final public var group(default, null) : com.sun.tools.doclets.internal.toolkit.util.Group;
 	
 	/**
 	* The tracker of external package links.
 	*/
-	//public var _extern(default, null) : com.sun.tools.doclets.internal.toolkit.util.Extern;
+	//@:public @:final public var _extern(default, null) : com.sun.tools.doclets.internal.toolkit.util.Extern;
 	
 	/**
 	* Returns true if the user wants to generate JavaFX documentation.
 	*/
-	@:overload public static function getJavafxJavadoc() : Bool;
+	@:overload @:public @:static public static function getJavafxJavadoc() : Bool;
 	
 	/**
 	* Location of doclet properties file.
 	*/
-	public static var DOCLETS_RESOURCE(default, null) : String;
+	@:public @:static @:final public static var DOCLETS_RESOURCE(default, null) : String;
 	
 	/**
 	* Return the build date for the doclet.
 	*/
-	@:overload @:abstract public function getDocletSpecificBuildDate() : String;
+	@:overload @:public @:abstract public function getDocletSpecificBuildDate() : String;
 	
 	/**
 	* This method should be defined in all those doclets(configurations),
@@ -229,32 +229,32 @@ extern class Configuration
 	* @param options The array of option names and values.
 	* @throws DocletAbortException
 	*/
-	@:overload @:abstract public function setSpecificDocletOptions(options : java.NativeArray<java.NativeArray<String>>) : Void;
+	@:overload @:public @:abstract public function setSpecificDocletOptions(options : java.NativeArray<java.NativeArray<String>>) : Void;
 	
 	/**
 	* Return the doclet specific {@link MessageRetriever}
 	* @return the doclet specific MessageRetriever.
 	*/
-	@:overload @:abstract public function getDocletSpecificMsg() : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
+	@:overload @:public @:abstract public function getDocletSpecificMsg() : com.sun.tools.doclets.internal.toolkit.util.MessageRetriever;
 	
 	/**
 	* An array of the packages specified on the command-line merged
 	* with the array of packages that contain the classes specified on the
 	* command-line.  The array is sorted.
 	*/
-	public var packages : java.NativeArray<com.sun.javadoc.PackageDoc>;
+	@:public public var packages : java.NativeArray<com.sun.javadoc.PackageDoc>;
 	
 	/**
 	* Constructor. Constructs the message retriever with resource file.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Return the builder factory for this doclet.
 	*
 	* @return the builder factory for this doclet.
 	*/
-	@:overload public function getBuilderFactory() : com.sun.tools.doclets.internal.toolkit.builders.BuilderFactory;
+	@:overload @:public public function getBuilderFactory() : com.sun.tools.doclets.internal.toolkit.builders.BuilderFactory;
 	
 	/**
 	* This method should be defined in all those doclets
@@ -269,7 +269,7 @@ extern class Configuration
 	* option name). Zero return means option not known.
 	* Negative value means error occurred.
 	*/
-	@:overload public function optionLength(option : String) : Int;
+	@:overload @:public public function optionLength(option : String) : Int;
 	
 	/**
 	* Perform error checking on the given options.
@@ -277,21 +277,21 @@ extern class Configuration
 	* @param options  the given options to check.
 	* @param reporter the reporter used to report errors.
 	*/
-	@:overload @:abstract public function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
+	@:overload @:public @:abstract public function validOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
 	
 	/**
 	* Set the command line options supported by this configuration.
 	*
 	* @param options the two dimensional array of options.
 	*/
-	@:overload public function setOptions(options : java.NativeArray<java.NativeArray<String>>) : Void;
+	@:overload @:public public function setOptions(options : java.NativeArray<java.NativeArray<String>>) : Void;
 	
 	/**
 	* Set the command line options supported by this configuration.
 	*
 	* @throws DocletAbortException
 	*/
-	@:overload public function setOptions() : Void;
+	@:overload @:public public function setOptions() : Void;
 	
 	/**
 	* This checks for the validity of the options used by the user.
@@ -306,35 +306,35 @@ extern class Configuration
 	* @param reporter used to report errors.
 	* @return true if all the options are valid.
 	*/
-	@:overload public function generalValidOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
+	@:overload @:public public function generalValidOptions(options : java.NativeArray<java.NativeArray<String>>, reporter : com.sun.javadoc.DocErrorReporter) : Bool;
 	
 	/**
 	* Return true if the given doc-file subdirectory should be excluded and
 	* false otherwise.
 	* @param docfilesubdir the doc-files subdirectory to check.
 	*/
-	@:overload public function shouldExcludeDocFileDir(docfilesubdir : String) : Bool;
+	@:overload @:public public function shouldExcludeDocFileDir(docfilesubdir : String) : Bool;
 	
 	/**
 	* Return true if the given qualifier should be excluded and false otherwise.
 	* @param qualifier the qualifier to check.
 	*/
-	@:overload public function shouldExcludeQualifier(qualifier : String) : Bool;
+	@:overload @:public public function shouldExcludeQualifier(qualifier : String) : Bool;
 	
 	/**
 	* Return the qualified name of the <code>ClassDoc</code> if it's qualifier is not excluded.  Otherwise,
 	* return the unqualified <code>ClassDoc</code> name.
 	* @param cd the <code>ClassDoc</code> to check.
 	*/
-	@:overload public function getClassName(cd : com.sun.javadoc.ClassDoc) : String;
+	@:overload @:public public function getClassName(cd : com.sun.javadoc.ClassDoc) : String;
 	
-	@:overload public function getText(key : String) : String;
+	@:overload @:public public function getText(key : String) : String;
 	
-	@:overload public function getText(key : String, a1 : String) : String;
+	@:overload @:public public function getText(key : String, a1 : String) : String;
 	
-	@:overload public function getText(key : String, a1 : String, a2 : String) : String;
+	@:overload @:public public function getText(key : String, a1 : String, a2 : String) : String;
 	
-	@:overload public function getText(key : String, a1 : String, a2 : String, a3 : String) : String;
+	@:overload @:public public function getText(key : String, a1 : String, a2 : String, a3 : String) : String;
 	
 	/**
 	* Return true if the ClassDoc element is getting documented, depending upon
@@ -344,13 +344,13 @@ extern class Configuration
 	*
 	* @param cd the ClassDoc for which the page generation is checked
 	*/
-	@:overload public function isGeneratedDoc(cd : com.sun.javadoc.ClassDoc) : Bool;
+	@:overload @:public public function isGeneratedDoc(cd : com.sun.javadoc.ClassDoc) : Bool;
 	
 	/**
 	* Return the doclet specific instance of a writer factory.
 	* @return the {@link WriterFactory} for the doclet.
 	*/
-	@:overload @:abstract public function getWriterFactory() : com.sun.tools.doclets.internal.toolkit.WriterFactory;
+	@:overload @:public @:abstract public function getWriterFactory() : com.sun.tools.doclets.internal.toolkit.WriterFactory;
 	
 	/**
 	* Return the input stream to the builder XML.
@@ -358,12 +358,12 @@ extern class Configuration
 	* @return the input steam to the builder XML.
 	* @throws FileNotFoundException when the given XML file cannot be found.
 	*/
-	@:overload public function getBuilderXML() : java.io.InputStream;
+	@:overload @:public public function getBuilderXML() : java.io.InputStream;
 	
 	/**
 	* Return the Locale for this document.
 	*/
-	@:overload @:abstract public function getLocale() : java.util.Locale;
+	@:overload @:public @:abstract public function getLocale() : java.util.Locale;
 	
 	/**
 	* Return the comparator that will be used to sort member documentation.
@@ -371,7 +371,7 @@ extern class Configuration
 	*
 	* @return the {@link java.util.Comparator} used to sort members.
 	*/
-	@:overload @:abstract public function getMemberComparator() : java.util.Comparator<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public @:abstract public function getMemberComparator() : java.util.Comparator<com.sun.javadoc.ProgramElementDoc>;
 	
 	
 }

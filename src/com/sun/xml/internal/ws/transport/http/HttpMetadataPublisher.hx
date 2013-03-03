@@ -37,7 +37,7 @@ extern class HttpMetadataPublisher
 	* @return
 	*      true if the request is processed. If false is returned the default processing kicks in.
 	*/
-	@:overload @:abstract public function handleMetadataRequest(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, connection : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Bool;
+	@:overload @:public @:abstract public function handleMetadataRequest(adapter : com.sun.xml.internal.ws.transport.http.HttpAdapter, connection : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Bool;
 	
 	
 }

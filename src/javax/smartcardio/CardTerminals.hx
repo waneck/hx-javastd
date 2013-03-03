@@ -53,7 +53,7 @@ package javax.smartcardio;
 	* call {@linkplain TerminalFactory#terminals}
 	* to obtain a CardTerminals object.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns an unmodifiable list of all available terminals.
@@ -62,7 +62,7 @@ package javax.smartcardio;
 	*
 	* @throws CardException if the card operation failed
 	*/
-	@:overload public function list() : java.util.List<javax.smartcardio.CardTerminal>;
+	@:overload @:public public function list() : java.util.List<javax.smartcardio.CardTerminal>;
 	
 	/**
 	* Returns an unmodifiable list of all terminals matching the specified
@@ -91,7 +91,7 @@ package javax.smartcardio;
 	* @throws NullPointerException if attr is null
 	* @throws CardException if the card operation failed
 	*/
-	@:overload @:abstract public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
+	@:overload @:public @:abstract public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
 	
 	/**
 	* Returns the terminal with the specified name or null if no such
@@ -102,7 +102,7 @@ package javax.smartcardio;
 	*
 	* @throws NullPointerException if name is null
 	*/
-	@:overload public function getTerminal(name : String) : javax.smartcardio.CardTerminal;
+	@:overload @:public public function getTerminal(name : String) : javax.smartcardio.CardTerminal;
 	
 	/**
 	* Waits for card insertion or removal in any of the terminals of this
@@ -115,7 +115,7 @@ package javax.smartcardio;
 	*   object does not contain any terminals
 	* @throws CardException if the card operation failed
 	*/
-	@:overload public function waitForChange() : Void;
+	@:overload @:public public function waitForChange() : Void;
 	
 	/**
 	* Waits for card insertion or removal in any of the terminals of this
@@ -157,7 +157,7 @@ package javax.smartcardio;
 	* @throws IllegalArgumentException if timeout is negative
 	* @throws CardException if the card operation failed
 	*/
-	@:overload @:abstract public function waitForChange(timeout : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function waitForChange(timeout : haxe.Int64) : Bool;
 	
 	
 }

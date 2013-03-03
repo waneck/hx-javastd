@@ -29,12 +29,12 @@ extern class StreamResult implements javax.xml.transform.Result
 	* returns true when passed this value as an argument,
 	* the Transformer supports Result output of this type.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* Zero-argument default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a StreamResult from a byte stream.  Normally,
@@ -44,7 +44,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	*
 	* @param outputStream A valid OutputStream reference.
 	*/
-	@:overload public function new(outputStream : java.io.OutputStream) : Void;
+	@:overload @:public public function new(outputStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Construct a StreamResult from a character stream.  Normally,
@@ -56,21 +56,21 @@ extern class StreamResult implements javax.xml.transform.Result
 	*
 	* @param writer  A valid Writer reference.
 	*/
-	@:overload public function new(writer : java.io.Writer) : Void;
+	@:overload @:public public function new(writer : java.io.Writer) : Void;
 	
 	/**
 	* Construct a StreamResult from a URL.
 	*
 	* @param systemId Must be a String that conforms to the URI syntax.
 	*/
-	@:overload public function new(systemId : String) : Void;
+	@:overload @:public public function new(systemId : String) : Void;
 	
 	/**
 	* Construct a StreamResult from a File.
 	*
 	* @param f Must a non-null File reference.
 	*/
-	@:overload public function new(f : java.io.File) : Void;
+	@:overload @:public public function new(f : java.io.File) : Void;
 	
 	/**
 	* Set the ByteStream that is to be written to.  Normally,
@@ -80,7 +80,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	*
 	* @param outputStream A valid OutputStream reference.
 	*/
-	@:overload public function setOutputStream(outputStream : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(outputStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Get the byte stream that was set with setOutputStream.
@@ -88,7 +88,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	* @return The byte stream that was set with setOutputStream, or null
 	* if setOutputStream or the ByteStream constructor was not called.
 	*/
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Set the writer that is to receive the result.  Normally,
@@ -100,7 +100,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	*
 	* @param writer  A valid Writer reference.
 	*/
-	@:overload public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Get the character stream that was set with setWriter.
@@ -108,7 +108,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	* @return The character stream that was set with setWriter, or null
 	* if setWriter or the Writer constructor was not called.
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Set the systemID that may be used in association
@@ -117,7 +117,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	*
 	* @param systemId The system identifier as a URI string.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* <p>Set the system ID from a <code>File</code> reference.</p>
@@ -125,7 +125,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	*
 	* @param f Must a non-null File reference.
 	*/
-	@:overload public function setSystemId(f : java.io.File) : Void;
+	@:overload @:public public function setSystemId(f : java.io.File) : Void;
 	
 	/**
 	* Get the system identifier that was set with setSystemId.
@@ -133,7 +133,7 @@ extern class StreamResult implements javax.xml.transform.Result
 	* @return The system identifier that was set with setSystemId, or null
 	* if setSystemId was not called.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

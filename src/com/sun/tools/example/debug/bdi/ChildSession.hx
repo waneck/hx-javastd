@@ -32,13 +32,13 @@ package com.sun.tools.example.debug.bdi;
 */
 @:internal extern class ChildSession extends com.sun.tools.example.debug.bdi.Session
 {
-	@:overload public function new(runtime : com.sun.tools.example.debug.bdi.ExecutionManager, userVMArgs : String, cmdLine : String, input : com.sun.tools.example.debug.bdi.InputListener, output : com.sun.tools.example.debug.bdi.OutputListener, error : com.sun.tools.example.debug.bdi.OutputListener, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function new(runtime : com.sun.tools.example.debug.bdi.ExecutionManager, userVMArgs : String, cmdLine : String, input : com.sun.tools.example.debug.bdi.InputListener, output : com.sun.tools.example.debug.bdi.OutputListener, error : com.sun.tools.example.debug.bdi.OutputListener, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function new(runtime : com.sun.tools.example.debug.bdi.ExecutionManager, connector : com.sun.jdi.connect.LaunchingConnector, arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>, input : com.sun.tools.example.debug.bdi.InputListener, output : com.sun.tools.example.debug.bdi.OutputListener, error : com.sun.tools.example.debug.bdi.OutputListener, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
+	@:overload @:public public function new(runtime : com.sun.tools.example.debug.bdi.ExecutionManager, connector : com.sun.jdi.connect.LaunchingConnector, arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>, input : com.sun.tools.example.debug.bdi.InputListener, output : com.sun.tools.example.debug.bdi.OutputListener, error : com.sun.tools.example.debug.bdi.OutputListener, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload public function attach() : Bool;
+	@:overload @:public override public function attach() : Bool;
 	
-	@:overload public function detach() : Void;
+	@:overload @:public override public function detach() : Void;
 	
 	
 }
@@ -47,13 +47,13 @@ package com.sun.tools.example.debug.bdi;
 */
 @:native('com$sun$tools$example$debug$bdi$ChildSession$OutputReader') @:internal extern class ChildSession_OutputReader extends java.lang.Thread
 {
-	@:overload public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$bdi$ChildSession$InputWriter') @:internal extern class ChildSession_InputWriter extends java.lang.Thread
 {
-	@:overload public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

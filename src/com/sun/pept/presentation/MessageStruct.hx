@@ -39,7 +39,7 @@ extern interface MessageStruct
 	*
 	* </p>
 	*/
-	@:overload public function setData(data : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setData(data : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* <p>
@@ -49,7 +49,7 @@ extern interface MessageStruct
 	* @return a Object[] with ...
 	* </p>
 	*/
-	@:overload public function getData() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getData() : java.NativeArray<Dynamic>;
 	
 	/**
 	* <p>
@@ -63,7 +63,7 @@ extern interface MessageStruct
 	* @param value ...
 	* </p>
 	*/
-	@:overload public function setMetaData(name : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function setMetaData(name : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* <p>
@@ -75,7 +75,7 @@ extern interface MessageStruct
 	* @param name ...
 	* </p>
 	*/
-	@:overload public function getMetaData(name : Dynamic) : Dynamic;
+	@:overload @:public public function getMetaData(name : Dynamic) : Dynamic;
 	
 	/**
 	* <p>
@@ -87,7 +87,7 @@ extern interface MessageStruct
 	* @param messageExchangePattern ...
 	* </p>
 	*/
-	@:overload public function setMEP(messageExchangePattern : Int) : Void;
+	@:overload @:public public function setMEP(messageExchangePattern : Int) : Void;
 	
 	/**
 	* <p>
@@ -97,7 +97,7 @@ extern interface MessageStruct
 	* @return a int with ...
 	* </p>
 	*/
-	@:overload public function getMEP() : Int;
+	@:overload @:public public function getMEP() : Int;
 	
 	/**
 	* <p>
@@ -107,7 +107,7 @@ extern interface MessageStruct
 	* @return a int with ...
 	* </p>
 	*/
-	@:overload public function getResponseType() : Int;
+	@:overload @:public public function getResponseType() : Int;
 	
 	/**
 	* <p>
@@ -119,7 +119,7 @@ extern interface MessageStruct
 	* @param responseType ...
 	* </p>
 	*/
-	@:overload public function setResponseType(responseType : Int) : Void;
+	@:overload @:public public function setResponseType(responseType : Int) : Void;
 	
 	/**
 	* <p>
@@ -129,7 +129,7 @@ extern interface MessageStruct
 	* @return a Object with ...
 	* </p>
 	*/
-	@:overload public function getResponse() : Dynamic;
+	@:overload @:public public function getResponse() : Dynamic;
 	
 	/**
 	* <p>
@@ -141,7 +141,7 @@ extern interface MessageStruct
 	* @param response ...
 	* </p>
 	*/
-	@:overload public function setResponse(response : Dynamic) : Void;
+	@:overload @:public public function setResponse(response : Dynamic) : Void;
 	
 	/**
 	* <p>
@@ -153,7 +153,7 @@ extern interface MessageStruct
 	* @param method ...
 	* </p>
 	*/
-	@:overload public function setMethod(method : java.lang.reflect.Method) : Void;
+	@:overload @:public public function setMethod(method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* <p>
@@ -163,7 +163,7 @@ extern interface MessageStruct
 	* @return a Method with ...
 	* </p>
 	*/
-	@:overload public function getMethod() : java.lang.reflect.Method;
+	@:overload @:public public function getMethod() : java.lang.reflect.Method;
 	
 	
 }

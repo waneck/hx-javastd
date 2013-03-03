@@ -31,14 +31,14 @@ extern class JCommentPart extends java.util.ArrayList<Dynamic>
 	* If the value is {@link JType} it will be printed as a @link tag.
 	* Otherwise it will be converted to String via {@link Object#toString()}.
 	*/
-	@:overload public function append(o : Dynamic) : com.sun.codemodel.internal.JCommentPart;
+	@:overload @:public public function append(o : Dynamic) : com.sun.codemodel.internal.JCommentPart;
 	
-	@:overload override public function add(o : Dynamic) : Bool;
+	@:overload @:public override public function add(o : Dynamic) : Bool;
 	
 	/**
 	* Writes this part into the formatter by using the specified indentation.
 	*/
-	@:overload private function format(f : com.sun.codemodel.internal.JFormatter, indent : String) : Void;
+	@:overload @:protected private function format(f : com.sun.codemodel.internal.JFormatter, indent : String) : Void;
 	
 	
 }

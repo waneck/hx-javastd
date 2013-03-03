@@ -39,32 +39,32 @@ extern class Stub implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 	/**
 	* Public zero-argument constructor.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	*
 	**/
-	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload @:public public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, entry : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/**
 	* Initialize unique members of this generator.
 	**/
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function openStream() : Void;
+	@:overload @:protected private function openStream() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeHeading() : Void;
+	@:overload @:protected private function writeHeading() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeClassDeclaration() : Void;
+	@:overload @:protected private function writeClassDeclaration() : Void;
 	
 	/**
 	* Steps done within writeBody include:
@@ -73,54 +73,54 @@ extern class Stub implements com.sun.tools.corba.se.idl.toJavaPortable.AuxGen
 	* 3.)  makeMethods ();
 	* 4.)  makeCORBAObjectMethods ()
 	**/
-	@:overload private function writeBody() : Void;
+	@:overload @:protected private function writeBody() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeClosing() : Void;
+	@:overload @:protected private function writeClosing() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function closeStream() : Void;
+	@:overload @:protected private function closeStream() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeCtors() : Void;
+	@:overload @:protected private function writeCtors() : Void;
 	
 	/**
 	* Build a list of all of the methods, keeping out duplicates.
 	**/
-	@:overload private function buildMethodList() : Void;
+	@:overload @:protected private function buildMethodList() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeMethods() : Void;
+	@:overload @:protected private function writeMethods() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeCORBAObjectMethods() : Void;
+	@:overload @:protected private function writeCORBAObjectMethods() : Void;
 	
 	/**
 	*
 	**/
-	@:overload private function writeSerializationMethods() : Void;
+	@:overload @:protected private function writeSerializationMethods() : Void;
 	
-	private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var symbolTable : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	private var i : com.sun.tools.corba.se.idl.InterfaceEntry;
+	@:protected private var i : com.sun.tools.corba.se.idl.InterfaceEntry;
 	
-	private var stream : java.io.PrintWriter;
+	@:protected private var stream : java.io.PrintWriter;
 	
-	private var methodList : java.util.Vector<Dynamic>;
+	@:protected private var methodList : java.util.Vector<Dynamic>;
 	
-	private var classSuffix : String;
+	@:protected private var classSuffix : String;
 	
-	private var localStub : Bool;
+	@:protected private var localStub : Bool;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.jndi.ldap.pool;
 */
 extern class Pool
 {
-	@:overload public function new(initSize : Int, prefSize : Int, maxSize : Int) : Void;
+	@:overload @:public public function new(initSize : Int, prefSize : Int, maxSize : Int) : Void;
 	
 	/**
 	* Gets a pooled connection for id. The pooled connection might be
@@ -42,7 +42,7 @@ extern class Pool
 	* @throws NamingException the connection could not be created due to
 	*                          an error.
 	*/
-	@:overload public function getPooledConnection(id : Dynamic, timeout : haxe.Int64, factory : com.sun.jndi.ldap.pool.PooledConnectionFactory) : com.sun.jndi.ldap.pool.PooledConnection;
+	@:overload @:public public function getPooledConnection(id : Dynamic, timeout : haxe.Int64, factory : com.sun.jndi.ldap.pool.PooledConnectionFactory) : com.sun.jndi.ldap.pool.PooledConnection;
 	
 	/**
 	* Goes through the connections in this Pool and expires ones that
@@ -53,11 +53,11 @@ extern class Pool
 	* @param threshold connections idle before 'threshold' should be closed
 	*          and removed.
 	*/
-	@:overload public function expire(threshold : haxe.Int64) : Void;
+	@:overload @:public public function expire(threshold : haxe.Int64) : Void;
 	
-	@:overload public function showStats(out : java.io.PrintStream) : Void;
+	@:overload @:public public function showStats(out : java.io.PrintStream) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

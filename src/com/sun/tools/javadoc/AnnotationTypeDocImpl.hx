@@ -31,36 +31,36 @@ extern class AnnotationTypeDocImpl extends com.sun.tools.javadoc.ClassDocImpl im
 	* @author Scott Seligman
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol) : Void;
+	@:require(java5) @:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol) : Void;
 	
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol, doc : String, tree : JCClassDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : ClassSymbol, doc : String, tree : JCClassDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
 	/**
 	* Returns true, as this is an annotation type.
 	* (For legacy doclets, return false.)
 	*/
-	@:overload override public function isAnnotationType() : Bool;
+	@:overload @:public override public function isAnnotationType() : Bool;
 	
 	/**
 	* Returns false.  Though technically an interface, an annotation
 	* type is not considered an interface for this purpose.
 	* (For legacy doclets, returns true.)
 	*/
-	@:overload override public function isInterface() : Bool;
+	@:overload @:public override public function isInterface() : Bool;
 	
 	/**
 	* Returns an empty array, as all methods are annotation type elements.
 	* (For legacy doclets, returns the elements.)
 	* @see #elements()
 	*/
-	@:overload override public function methods(filter : Bool) : java.NativeArray<com.sun.javadoc.MethodDoc>;
+	@:overload @:public override public function methods(filter : Bool) : java.NativeArray<com.sun.javadoc.MethodDoc>;
 	
 	/**
 	* Returns the elements of this annotation type.
 	* Returns an empty array if there are none.
 	* Elements are always public, so no need to filter them.
 	*/
-	@:overload public function elements() : java.NativeArray<com.sun.javadoc.AnnotationTypeElementDoc>;
+	@:overload @:public public function elements() : java.NativeArray<com.sun.javadoc.AnnotationTypeElementDoc>;
 	
 	
 }

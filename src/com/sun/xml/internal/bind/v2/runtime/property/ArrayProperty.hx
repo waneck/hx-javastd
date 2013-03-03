@@ -31,15 +31,15 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	private var acc(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ListT>;
+	@:protected @:final private var acc(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ListT>;
 	
-	private var lister(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, ListT, ItemT, Dynamic>;
+	@:protected @:final private var lister(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, ListT, ItemT, Dynamic>;
 	
-	@:overload private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : Void;
+	@:overload @:protected private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : Void;
 	
-	@:overload public function reset(o : BeanT) : Void;
+	@:overload @:public override public function reset(o : BeanT) : Void;
 	
-	@:overload @:final public function getIdValue(bean : BeanT) : String;
+	@:overload @:public @:final override public function getIdValue(bean : BeanT) : String;
 	
 	
 }

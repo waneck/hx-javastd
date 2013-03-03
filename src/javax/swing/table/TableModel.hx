@@ -52,7 +52,7 @@ extern interface TableModel
 	* @return the number of rows in the model
 	* @see #getColumnCount
 	*/
-	@:overload @:public public function getRowCount() : Int;
+	@:overload @:public @:public public function getRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the model. A
@@ -62,7 +62,7 @@ extern interface TableModel
 	* @return the number of columns in the model
 	* @see #getRowCount
 	*/
-	@:overload @:public public function getColumnCount() : Int;
+	@:overload @:public @:public public function getColumnCount() : Int;
 	
 	/**
 	* Returns the name of the column at <code>columnIndex</code>.  This is used
@@ -72,7 +72,7 @@ extern interface TableModel
 	* @param   columnIndex     the index of the column
 	* @return  the name of the column
 	*/
-	@:overload public function getColumnName(columnIndex : Int) : String;
+	@:overload @:public public function getColumnName(columnIndex : Int) : String;
 	
 	/**
 	* Returns the most specific superclass for all the cell values
@@ -82,7 +82,7 @@ extern interface TableModel
 	* @param columnIndex  the index of the column
 	* @return the common ancestor class of the object values in the model.
 	*/
-	@:overload public function getColumnClass(columnIndex : Int) : Class<Dynamic>;
+	@:overload @:public public function getColumnClass(columnIndex : Int) : Class<Dynamic>;
 	
 	/**
 	* Returns true if the cell at <code>rowIndex</code> and
@@ -95,7 +95,7 @@ extern interface TableModel
 	* @return  true if the cell is editable
 	* @see #setValueAt
 	*/
-	@:overload public function isCellEditable(rowIndex : Int, columnIndex : Int) : Bool;
+	@:overload @:public public function isCellEditable(rowIndex : Int, columnIndex : Int) : Bool;
 	
 	/**
 	* Returns the value for the cell at <code>columnIndex</code> and
@@ -105,7 +105,7 @@ extern interface TableModel
 	* @param   columnIndex     the column whose value is to be queried
 	* @return  the value Object at the specified cell
 	*/
-	@:overload @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
+	@:overload @:public @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
 	
 	/**
 	* Sets the value in the cell at <code>columnIndex</code> and
@@ -117,7 +117,7 @@ extern interface TableModel
 	* @see #getValueAt
 	* @see #isCellEditable
 	*/
-	@:overload public function setValueAt(aValue : Dynamic, rowIndex : Int, columnIndex : Int) : Void;
+	@:overload @:public public function setValueAt(aValue : Dynamic, rowIndex : Int, columnIndex : Int) : Void;
 	
 	/**
 	* Adds a listener to the list that is notified each time a change
@@ -125,7 +125,7 @@ extern interface TableModel
 	*
 	* @param   l               the TableModelListener
 	*/
-	@:overload public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload @:public public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
 	/**
 	* Removes a listener from the list that is notified each time a
@@ -133,7 +133,7 @@ extern interface TableModel
 	*
 	* @param   l               the TableModelListener
 	*/
-	@:overload public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload @:public public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
 	
 }

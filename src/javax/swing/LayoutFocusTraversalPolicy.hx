@@ -28,7 +28,7 @@ extern class LayoutFocusTraversalPolicy extends javax.swing.SortingFocusTraversa
 	/**
 	* Constructs a LayoutFocusTraversalPolicy.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the Component that should receive the focus after aComponent.
@@ -52,7 +52,7 @@ extern class LayoutFocusTraversalPolicy extends javax.swing.SortingFocusTraversa
 	*         root of aComponent or a focus traversal policy provider, or if either aContainer or
 	*         aComponent is null
 	*/
-	@:overload override public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function getComponentAfter(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the Component that should receive the focus before aComponent.
@@ -76,7 +76,7 @@ extern class LayoutFocusTraversalPolicy extends javax.swing.SortingFocusTraversa
 	*         root of aComponent or a focus traversal policy provider, or if either aContainer or
 	*         aComponent is null
 	*/
-	@:overload override public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload @:public override public function getComponentBefore(aContainer : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
 	/**
 	* Returns the first Component in the traversal cycle. This method is used
@@ -89,7 +89,7 @@ extern class LayoutFocusTraversalPolicy extends javax.swing.SortingFocusTraversa
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getFirstComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Returns the last Component in the traversal cycle. This method is used
@@ -102,7 +102,7 @@ extern class LayoutFocusTraversalPolicy extends javax.swing.SortingFocusTraversa
 	*         or null if no suitable Component can be found
 	* @throws IllegalArgumentException if aContainer is null
 	*/
-	@:overload override public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
+	@:overload @:public override public function getLastComponent(aContainer : java.awt.Container) : java.awt.Component;
 	
 	/**
 	* Determines whether the specified <code>Component</code>
@@ -138,13 +138,13 @@ extern class LayoutFocusTraversalPolicy extends javax.swing.SortingFocusTraversa
 	*         for a focus owner;
 	*         otherwise <code>false</code>
 	*/
-	@:overload override private function accept(aComponent : java.awt.Component) : Bool;
+	@:overload @:protected override private function accept(aComponent : java.awt.Component) : Bool;
 	
 	
 }
 @:internal extern class SwingDefaultFocusTraversalPolicy extends java.awt.DefaultFocusTraversalPolicy
 {
-	@:overload override public function accept(aComponent : java.awt.Component) : Bool;
+	@:overload @:public override public function accept(aComponent : java.awt.Component) : Bool;
 	
 	
 }

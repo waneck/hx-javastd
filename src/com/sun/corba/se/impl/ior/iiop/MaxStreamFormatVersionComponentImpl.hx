@@ -27,23 +27,23 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class MaxStreamFormatVersionComponentImpl extends com.sun.corba.se.spi.ior.TaggedComponentBase implements com.sun.corba.se.spi.ior.iiop.MaxStreamFormatVersionComponent
 {
-	public static var singleton(default, null) : com.sun.corba.se.impl.ior.iiop.MaxStreamFormatVersionComponentImpl;
+	@:public @:static @:final public static var singleton(default, null) : com.sun.corba.se.impl.ior.iiop.MaxStreamFormatVersionComponentImpl;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(streamFormatVersion : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(streamFormatVersion : java.StdTypes.Int8) : Void;
 	
-	@:overload public function getMaxStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload @:public public function getMaxStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function getId() : Int;
+	@:overload @:public override public function getId() : Int;
 	
 	
 }

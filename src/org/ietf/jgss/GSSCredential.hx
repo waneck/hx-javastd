@@ -101,7 +101,7 @@ package org.ietf.jgss;
 	* major error codes:
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	*  Retrieves the name of the entity that the credential asserts.
@@ -112,7 +112,7 @@ package org.ietf.jgss;
 	* major error codes:
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getName() : org.ietf.jgss.GSSName;
+	@:overload @:public public function getName() : org.ietf.jgss.GSSName;
 	
 	/**
 	* Retrieves a Mechanism Name of the entity that the credential
@@ -130,7 +130,7 @@ package org.ietf.jgss;
 	*         {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getName(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
+	@:overload @:public public function getName(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* Returns the remaining lifetime in seconds for a credential.  The
@@ -150,7 +150,7 @@ package org.ietf.jgss;
 	* major error codes:
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getRemainingLifetime() : Int;
+	@:overload @:public public function getRemainingLifetime() : Int;
 	
 	/**
 	* Returns the lifetime in seconds for the credential to remain capable
@@ -172,7 +172,7 @@ package org.ietf.jgss;
 	*         {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getRemainingInitLifetime(mech : org.ietf.jgss.Oid) : Int;
+	@:overload @:public public function getRemainingInitLifetime(mech : org.ietf.jgss.Oid) : Int;
 	
 	/**
 	* Returns the lifetime in seconds for the credential to remain capable
@@ -194,7 +194,7 @@ package org.ietf.jgss;
 	*         {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getRemainingAcceptLifetime(mech : org.ietf.jgss.Oid) : Int;
+	@:overload @:public public function getRemainingAcceptLifetime(mech : org.ietf.jgss.Oid) : Int;
 	
 	/**
 	* Returns the credential usage mode. In other words, it
@@ -211,7 +211,7 @@ package org.ietf.jgss;
 	* major error codes:
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getUsage() : Int;
+	@:overload @:public public function getUsage() : Int;
 	
 	/**
 	* Returns the credential usage mode for a specific mechanism. In other
@@ -230,7 +230,7 @@ package org.ietf.jgss;
 	*         {@link GSSException#BAD_MECH GSSException.BAD_MECH},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getUsage(mech : org.ietf.jgss.Oid) : Int;
+	@:overload @:public public function getUsage(mech : org.ietf.jgss.Oid) : Int;
 	
 	/**
 	* Returns a list of mechanisms supported by this credential. It does
@@ -246,7 +246,7 @@ package org.ietf.jgss;
 	* major error codes:
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public public function getMechs() : java.NativeArray<org.ietf.jgss.Oid>;
 	
 	/**
 	* Adds a mechanism specific credential-element to an existing
@@ -307,7 +307,7 @@ package org.ietf.jgss;
 	*                                  GSSException.CREDENTIALS_EXPIRED},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function add(name : org.ietf.jgss.GSSName, initLifetime : Int, acceptLifetime : Int, mech : org.ietf.jgss.Oid, usage : Int) : Void;
+	@:overload @:public public function add(name : org.ietf.jgss.GSSName, initLifetime : Int, acceptLifetime : Int, mech : org.ietf.jgss.Oid, usage : Int) : Void;
 	
 	
 }

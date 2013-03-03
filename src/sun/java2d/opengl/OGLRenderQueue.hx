@@ -30,7 +30,7 @@ extern class OGLRenderQueue extends sun.java2d.pipe.RenderQueue
 	* initialized, this method will first construct the single instance
 	* before returning it.
 	*/
-	@:overload @:synchronized public static function getInstance() : sun.java2d.opengl.OGLRenderQueue;
+	@:overload @:public @:static @:synchronized public static function getInstance() : sun.java2d.opengl.OGLRenderQueue;
 	
 	/**
 	* Flushes the single OGLRenderQueue instance synchronously.  If an
@@ -41,34 +41,34 @@ extern class OGLRenderQueue extends sun.java2d.pipe.RenderQueue
 	* not be concerned that calling this method will trigger initialization
 	* of the OGL pipeline and related classes.
 	*/
-	@:overload public static function sync() : Void;
+	@:overload @:public @:static public static function sync() : Void;
 	
 	/**
 	* Disposes the native memory associated with the given native
 	* graphics config info pointer on the single queue flushing thread.
 	*/
-	@:overload public static function disposeGraphicsConfig(pConfigInfo : haxe.Int64) : Void;
+	@:overload @:public @:static public static function disposeGraphicsConfig(pConfigInfo : haxe.Int64) : Void;
 	
 	/**
 	* Returns true if the current thread is the OGL QueueFlusher thread.
 	*/
-	@:overload public static function isQueueFlusherThread() : Bool;
+	@:overload @:public @:static public static function isQueueFlusherThread() : Bool;
 	
-	@:overload override public function flushNow() : Void;
+	@:overload @:public override public function flushNow() : Void;
 	
-	@:overload override public function flushAndInvokeNow(r : java.lang.Runnable) : Void;
+	@:overload @:public override public function flushAndInvokeNow(r : java.lang.Runnable) : Void;
 	
 	
 }
 @:native('sun$java2d$opengl$OGLRenderQueue$QueueFlusher') @:internal extern class OGLRenderQueue_QueueFlusher extends java.lang.Thread
 {
-	@:overload public function new(threadGroup : java.lang.ThreadGroup) : Void;
+	@:overload @:public public function new(threadGroup : java.lang.ThreadGroup) : Void;
 	
-	@:overload @:synchronized public function flushNow() : Void;
+	@:overload @:public @:synchronized public function flushNow() : Void;
 	
-	@:overload @:synchronized public function flushAndInvokeNow(task : java.lang.Runnable) : Void;
+	@:overload @:public @:synchronized public function flushAndInvokeNow(task : java.lang.Runnable) : Void;
 	
-	@:overload @:synchronized override public function run() : Void;
+	@:overload @:public @:synchronized override public function run() : Void;
 	
 	
 }

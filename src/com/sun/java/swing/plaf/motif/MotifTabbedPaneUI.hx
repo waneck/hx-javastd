@@ -38,35 +38,35 @@ extern class MotifTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI
 	* @author Amy Fowler
 	* @author Philip Milne
 	*/
-	private var unselectedTabBackground : java.awt.Color;
+	@:protected private var unselectedTabBackground : java.awt.Color;
 	
-	private var unselectedTabForeground : java.awt.Color;
+	@:protected private var unselectedTabForeground : java.awt.Color;
 	
-	private var unselectedTabShadow : java.awt.Color;
+	@:protected private var unselectedTabShadow : java.awt.Color;
 	
-	private var unselectedTabHighlight : java.awt.Color;
+	@:protected private var unselectedTabHighlight : java.awt.Color;
 	
-	@:overload public static function createUI(tabbedPane : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(tabbedPane : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload private function paintContentBorderTopEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderTopEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload private function paintContentBorderBottomEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderBottomEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload private function paintContentBorderRightEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected override private function paintContentBorderRightEdge(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	
-	@:overload private function paintTabBorder(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintTabBorder(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	
-	@:overload private function paintFocusIndicator(g : java.awt.Graphics, tabPlacement : Int, rects : java.NativeArray<java.awt.Rectangle>, tabIndex : Int, iconRect : java.awt.Rectangle, textRect : java.awt.Rectangle, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintFocusIndicator(g : java.awt.Graphics, tabPlacement : Int, rects : java.NativeArray<java.awt.Rectangle>, tabIndex : Int, iconRect : java.awt.Rectangle, textRect : java.awt.Rectangle, isSelected : Bool) : Void;
 	
-	@:overload private function getTabRunIndent(tabPlacement : Int, run : Int) : Int;
+	@:overload @:protected override private function getTabRunIndent(tabPlacement : Int, run : Int) : Int;
 	
-	@:overload private function getTabRunOverlay(tabPlacement : Int) : Int;
+	@:overload @:protected override private function getTabRunOverlay(tabPlacement : Int) : Int;
 	
 	
 }

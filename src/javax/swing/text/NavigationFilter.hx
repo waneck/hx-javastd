@@ -36,7 +36,7 @@ extern class NavigationFilter
 	* @param dot the position >= 0
 	* @param bias Bias to place the dot at
 	*/
-	@:overload public function setDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public public function setDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Invoked prior to the Caret moving the dot. The default implementation
@@ -49,7 +49,7 @@ extern class NavigationFilter
 	* @param dot the position >= 0
 	* @param bias Bias for new location
 	*/
-	@:overload public function moveDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public public function moveDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Returns the next visual position to place the caret at from an
@@ -76,7 +76,7 @@ extern class NavigationFilter
 	* @exception IllegalArgumentException if <code>direction</code>
 	*          doesn't have one of the legal values above
 	*/
-	@:overload public function getNextVisualPositionFrom(text : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public public function getNextVisualPositionFrom(text : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	
 }
@@ -94,7 +94,7 @@ extern class NavigationFilter
 	*
 	* @return Caret that is changing
 	*/
-	@:overload @:abstract public function getCaret() : javax.swing.text.Caret;
+	@:overload @:public @:abstract public function getCaret() : javax.swing.text.Caret;
 	
 	/**
 	* Sets the caret location, bypassing the NavigationFilter.
@@ -102,7 +102,7 @@ extern class NavigationFilter
 	* @param dot the position >= 0
 	* @param bias Bias to place the dot at
 	*/
-	@:overload @:abstract public function setDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public @:abstract public function setDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Moves the caret location, bypassing the NavigationFilter.
@@ -110,7 +110,7 @@ extern class NavigationFilter
 	* @param dot the position >= 0
 	* @param bias Bias for new location
 	*/
-	@:overload @:abstract public function moveDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload @:public @:abstract public function moveDot(dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class JarFilter implements java.io.FilenameFilter
 	*
 	* @author  Michael Colburn
 	*/
-	@:overload public function accept(dir : java.io.File, name : String) : Bool;
+	@:overload @:public public function accept(dir : java.io.File, name : String) : Bool;
 	
 	
 }

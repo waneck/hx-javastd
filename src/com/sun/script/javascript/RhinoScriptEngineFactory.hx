@@ -31,23 +31,23 @@ package com.sun.script.javascript;
 */
 @:require(java6) extern class RhinoScriptEngineFactory extends com.sun.script.util.ScriptEngineFactoryBase
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getExtensions() : java.util.List<String>;
+	@:overload @:public override public function getExtensions() : java.util.List<String>;
 	
-	@:overload override public function getMimeTypes() : java.util.List<String>;
+	@:overload @:public override public function getMimeTypes() : java.util.List<String>;
 	
-	@:overload override public function getNames() : java.util.List<String>;
+	@:overload @:public override public function getNames() : java.util.List<String>;
 	
-	@:overload override public function getParameter(key : String) : Dynamic;
+	@:overload @:public override public function getParameter(key : String) : Dynamic;
 	
-	@:overload override public function getScriptEngine() : javax.script.ScriptEngine;
+	@:overload @:public override public function getScriptEngine() : javax.script.ScriptEngine;
 	
-	@:overload override public function getMethodCallSyntax(obj : String, method : String, args : java.NativeArray<String>) : String;
+	@:overload @:public override public function getMethodCallSyntax(obj : String, method : String, args : java.NativeArray<String>) : String;
 	
-	@:overload override public function getOutputStatement(toDisplay : String) : String;
+	@:overload @:public override public function getOutputStatement(toDisplay : String) : String;
 	
-	@:overload override public function getProgram(statements : java.NativeArray<String>) : String;
+	@:overload @:public override public function getProgram(statements : java.NativeArray<String>) : String;
 	
 	
 }

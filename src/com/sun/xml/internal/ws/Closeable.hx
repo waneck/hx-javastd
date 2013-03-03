@@ -45,7 +45,7 @@ extern interface Closeable extends java.io.Closeable
 	*      If clean up fails unexpectedly, this exception
 	*      will be thrown (instead of {@link IOException}.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

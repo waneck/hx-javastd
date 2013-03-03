@@ -31,7 +31,7 @@ extern class InterfaceDeclarationImpl extends com.sun.tools.apt.mirror.declarati
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

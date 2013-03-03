@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.utils;
 extern class ConfigurationError extends java.lang.Error
 {
 	/** Returns the exception associated to this error. */
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	
 }

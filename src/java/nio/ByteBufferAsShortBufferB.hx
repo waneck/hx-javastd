@@ -26,33 +26,33 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class ByteBufferAsShortBufferB extends java.nio.ShortBuffer
 {
-	private var bb(default, null) : java.nio.ByteBuffer;
+	@:protected @:final private var bb(default, null) : java.nio.ByteBuffer;
 	
-	private var offset(default, null) : Int;
+	@:protected @:final private var offset(default, null) : Int;
 	
-	@:overload override public function slice() : java.nio.ShortBuffer;
+	@:overload @:public override public function slice() : java.nio.ShortBuffer;
 	
-	@:overload override public function duplicate() : java.nio.ShortBuffer;
+	@:overload @:public override public function duplicate() : java.nio.ShortBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
 	
-	@:overload private function ix(i : Int) : Int;
+	@:overload @:protected private function ix(i : Int) : Int;
 	
-	@:overload override public function get() : java.StdTypes.Int16;
+	@:overload @:public override public function get() : java.StdTypes.Int16;
 	
-	@:overload override public function get(i : Int) : java.StdTypes.Int16;
+	@:overload @:public override public function get(i : Int) : java.StdTypes.Int16;
 	
-	@:overload override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload @:public override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function compact() : java.nio.ShortBuffer;
+	@:overload @:public override public function compact() : java.nio.ShortBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

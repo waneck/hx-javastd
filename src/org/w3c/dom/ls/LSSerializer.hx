@@ -140,7 +140,7 @@ extern interface LSSerializer
 	* </dl></dd>
 	* </dl>
 	*/
-	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**
 	*  The end-of-line sequence of characters to be used in the XML being
@@ -162,7 +162,7 @@ extern interface LSSerializer
 	* value to the default value.
 	* <br>
 	*/
-	@:overload public function getNewLine() : String;
+	@:overload @:public public function getNewLine() : String;
 	
 	/**
 	*  The end-of-line sequence of characters to be used in the XML being
@@ -184,7 +184,7 @@ extern interface LSSerializer
 	* value to the default value.
 	* <br>
 	*/
-	@:overload public function setNewLine(newLine : String) : Void;
+	@:overload @:public public function setNewLine(newLine : String) : Void;
 	
 	/**
 	*  When the application provides a filter, the serializer will call out
@@ -196,7 +196,7 @@ extern interface LSSerializer
 	* example, CDATA sections won't be passed to the filter if "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-cdata-sections'>
 	* cdata-sections</a>" is set to <code>false</code>.
 	*/
-	@:overload public function getFilter() : org.w3c.dom.ls.LSSerializerFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.ls.LSSerializerFilter;
 	
 	/**
 	*  When the application provides a filter, the serializer will call out
@@ -208,7 +208,7 @@ extern interface LSSerializer
 	* example, CDATA sections won't be passed to the filter if "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-cdata-sections'>
 	* cdata-sections</a>" is set to <code>false</code>.
 	*/
-	@:overload public function setFilter(filter : org.w3c.dom.ls.LSSerializerFilter) : Void;
+	@:overload @:public public function setFilter(filter : org.w3c.dom.ls.LSSerializerFilter) : Void;
 	
 	/**
 	*  Serialize the specified node as described above in the general
@@ -251,7 +251,7 @@ extern interface LSSerializer
 	*   <code>DOMErrorHandler</code> using the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
 	*   error-handler</a>" if they wish to get details on the error.
 	*/
-	@:overload public function write(nodeArg : org.w3c.dom.Node, destination : org.w3c.dom.ls.LSOutput) : Bool;
+	@:overload @:public public function write(nodeArg : org.w3c.dom.Node, destination : org.w3c.dom.ls.LSOutput) : Bool;
 	
 	/**
 	*  A convenience method that acts as if <code>LSSerializer.write</code>
@@ -271,7 +271,7 @@ extern interface LSSerializer
 	*   <code>DOMErrorHandler</code> using the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
 	*   error-handler</a>" if they wish to get details on the error.
 	*/
-	@:overload public function writeToURI(nodeArg : org.w3c.dom.Node, uri : String) : Bool;
+	@:overload @:public public function writeToURI(nodeArg : org.w3c.dom.Node, uri : String) : Bool;
 	
 	/**
 	*  Serialize the specified node as described above in the general
@@ -291,7 +291,7 @@ extern interface LSSerializer
 	*   <code>DOMErrorHandler</code> using the parameter "<a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#parameter-error-handler'>
 	*   error-handler</a>" if they wish to get details on the error.
 	*/
-	@:overload public function writeToString(nodeArg : org.w3c.dom.Node) : String;
+	@:overload @:public public function writeToString(nodeArg : org.w3c.dom.Node) : String;
 	
 	
 }

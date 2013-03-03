@@ -28,7 +28,7 @@ extern class StandardMidiFileWriter extends javax.sound.midi.spi.MidiFileWriter
 	/**
 	* new
 	*/
-	@:overload override public function getMidiFileTypes() : java.NativeArray<Int>;
+	@:overload @:public override public function getMidiFileTypes() : java.NativeArray<Int>;
 	
 	/**
 	* Obtains the file types that this provider can write from the
@@ -38,13 +38,13 @@ extern class StandardMidiFileWriter extends javax.sound.midi.spi.MidiFileWriter
 	* @return array of file types.  If no file types are supported,
 	* returns an array of length 0.
 	*/
-	@:overload override public function getMidiFileTypes(sequence : javax.sound.midi.Sequence) : java.NativeArray<Int>;
+	@:overload @:public override public function getMidiFileTypes(sequence : javax.sound.midi.Sequence) : java.NativeArray<Int>;
 	
-	@:overload override public function isFileTypeSupported(type : Int) : Bool;
+	@:overload @:public override public function isFileTypeSupported(type : Int) : Bool;
 	
-	@:overload override public function write(_in : javax.sound.midi.Sequence, type : Int, out : java.io.OutputStream) : Int;
+	@:overload @:public override public function write(_in : javax.sound.midi.Sequence, type : Int, out : java.io.OutputStream) : Int;
 	
-	@:overload override public function write(_in : javax.sound.midi.Sequence, type : Int, out : java.io.File) : Int;
+	@:overload @:public override public function write(_in : javax.sound.midi.Sequence, type : Int, out : java.io.File) : Int;
 	
 	
 }

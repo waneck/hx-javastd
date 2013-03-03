@@ -43,7 +43,7 @@ package javax.swing.plaf.nimbus;
 	*                  specified will not be painted, for example PAINT_ALL | PAINT_CENTER paints everything but the
 	*                  center.
 	*/
-	@:overload public static function paint(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, paintType : javax.swing.plaf.nimbus.ImageScalingHelper.ImageScalingHelper_PaintType, mask : Int) : Void;
+	@:overload @:public @:static public static function paint(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, paintType : javax.swing.plaf.nimbus.ImageScalingHelper.ImageScalingHelper_PaintType, mask : Int) : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class KeyManagerFactory
 	*          Java security properties, or an implementation-specific
 	*          default if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultAlgorithm() : String;
+	@:overload @:public @:final @:static public static function getDefaultAlgorithm() : String;
 	
 	/**
 	* Creates a KeyManagerFactory object.
@@ -50,7 +50,7 @@ extern class KeyManagerFactory
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(factorySpi : javax.net.ssl.KeyManagerFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(factorySpi : javax.net.ssl.KeyManagerFactorySpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the algorithm name of this <code>KeyManagerFactory</code> object.
@@ -61,7 +61,7 @@ extern class KeyManagerFactory
 	*
 	* @return the algorithm name of this <code>KeyManagerFactory</code> object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a <code>KeyManagerFactory</code> object that acts as a
@@ -91,7 +91,7 @@ extern class KeyManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.net.ssl.KeyManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns a <code>KeyManagerFactory</code> object that acts as a
@@ -127,7 +127,7 @@ extern class KeyManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.net.ssl.KeyManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns a <code>KeyManagerFactory</code> object that acts as a
@@ -157,14 +157,14 @@ extern class KeyManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.net.ssl.KeyManagerFactory;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns the provider of this <code>KeyManagerFactory</code> object.
 	*
 	* @return the provider of this <code>KeyManagerFactory</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this factory with a source of key material.
@@ -185,7 +185,7 @@ extern class KeyManagerFactory
 	* @throws UnrecoverableKeyException if the key cannot be recovered
 	*          (e.g. the given password is wrong).
 	*/
-	@:overload @:final public function init(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:final public function init(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Initializes this factory with a source of provider-specific
@@ -203,7 +203,7 @@ extern class KeyManagerFactory
 	*          specification
 	* @throws InvalidAlgorithmParameterException if an error is encountered
 	*/
-	@:overload @:final public function init(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
+	@:overload @:public @:final public function init(spec : javax.net.ssl.ManagerFactoryParameters) : Void;
 	
 	/**
 	* Returns one key manager for each type of key material.
@@ -211,7 +211,7 @@ extern class KeyManagerFactory
 	* @return the key managers
 	* @throws IllegalStateException if the KeyManagerFactory is not initialized
 	*/
-	@:overload @:final public function getKeyManagers() : java.NativeArray<javax.net.ssl.KeyManager>;
+	@:overload @:public @:final public function getKeyManagers() : java.NativeArray<javax.net.ssl.KeyManager>;
 	
 	
 }

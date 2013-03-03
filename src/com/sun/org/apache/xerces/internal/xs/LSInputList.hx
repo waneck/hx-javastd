@@ -24,7 +24,7 @@ extern interface LSInputList extends java.util.List<Dynamic>
 	*  The number of <code>LSInput</code>s in the list. The range of valid
 	* child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Returns the <code>index</code>th item in the collection or
@@ -35,7 +35,7 @@ extern interface LSInputList extends java.util.List<Dynamic>
 	*   position in the <code>LSInputList</code>, or <code>null</code> if
 	*   the index specified is not valid.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.ls.LSInput;
 	
 	
 }

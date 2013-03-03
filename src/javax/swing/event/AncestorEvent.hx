@@ -44,16 +44,16 @@ extern class AncestorEvent extends java.awt.AWTEvent
 	* An ancestor-component was added to the hierarchy of
 	* visible objects (made visible), and is currently being displayed.
 	*/
-	public static var ANCESTOR_ADDED(default, null) : Int;
+	@:public @:static @:final public static var ANCESTOR_ADDED(default, null) : Int;
 	
 	/**
 	* An ancestor-component was removed from the hierarchy
 	* of visible objects (hidden) and is no longer being displayed.
 	*/
-	public static var ANCESTOR_REMOVED(default, null) : Int;
+	@:public @:static @:final public static var ANCESTOR_REMOVED(default, null) : Int;
 	
 	/** An ancestor-component changed its position on the screen. */
-	public static var ANCESTOR_MOVED(default, null) : Int;
+	@:public @:static @:final public static var ANCESTOR_MOVED(default, null) : Int;
 	
 	/**
 	* Constructs an AncestorEvent object to identify a change
@@ -67,24 +67,24 @@ extern class AncestorEvent extends java.awt.AWTEvent
 	*                        whose display-status changed
 	* @param ancestorParent  a Container object specifying the ancestor's parent
 	*/
-	@:overload public function new(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
+	@:overload @:public public function new(source : javax.swing.JComponent, id : Int, ancestor : java.awt.Container, ancestorParent : java.awt.Container) : Void;
 	
 	/**
 	* Returns the ancestor that the event actually occurred on.
 	*/
-	@:overload public function getAncestor() : java.awt.Container;
+	@:overload @:public public function getAncestor() : java.awt.Container;
 	
 	/**
 	* Returns the parent of the ancestor the event actually occurred on.
 	* This is most interesting in an ANCESTOR_REMOVED event, as
 	* the ancestor may no longer be in the component hierarchy.
 	*/
-	@:overload public function getAncestorParent() : java.awt.Container;
+	@:overload @:public public function getAncestorParent() : java.awt.Container;
 	
 	/**
 	* Returns the component that the listener was added to.
 	*/
-	@:overload public function getComponent() : javax.swing.JComponent;
+	@:overload @:public public function getComponent() : javax.swing.JComponent;
 	
 	
 }

@@ -32,13 +32,13 @@ package com.sun.org.omg.CORBA;
 //// This file has been _CHANGED_
 extern class Initializer implements org.omg.CORBA.portable.IDLEntity
 {
-	public var members : java.NativeArray<org.omg.CORBA.StructMember>;
+	@:public public var members : java.NativeArray<org.omg.CORBA.StructMember>;
 	
-	public var name : String;
+	@:public public var name : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_members : java.NativeArray<org.omg.CORBA.StructMember>, _name : String) : Void;
+	@:overload @:public public function new(_members : java.NativeArray<org.omg.CORBA.StructMember>, _name : String) : Void;
 	
 	
 }

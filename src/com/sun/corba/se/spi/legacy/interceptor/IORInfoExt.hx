@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.legacy.interceptor;
 */
 extern interface IORInfoExt
 {
-	@:overload public function getServerPort(type : String) : Int;
+	@:overload @:public public function getServerPort(type : String) : Int;
 	
-	@:overload public function getObjectAdapter() : com.sun.corba.se.spi.oa.ObjectAdapter;
+	@:overload @:public public function getObjectAdapter() : com.sun.corba.se.spi.oa.ObjectAdapter;
 	
 	
 }

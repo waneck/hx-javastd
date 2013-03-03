@@ -34,15 +34,15 @@ extern class WSDLPatcher extends com.sun.xml.internal.ws.util.xml.XMLStreamReade
 	*      Consulted to get the import/include document locations.
 	*      Must not be null.
 	*/
-	@:overload public function new(portAddressResolver : com.sun.xml.internal.ws.api.server.PortAddressResolver, docResolver : com.sun.xml.internal.ws.wsdl.writer.DocumentLocationResolver) : Void;
+	@:overload @:public public function new(portAddressResolver : com.sun.xml.internal.ws.api.server.PortAddressResolver, docResolver : com.sun.xml.internal.ws.wsdl.writer.DocumentLocationResolver) : Void;
 	
-	@:overload override private function handleAttribute(i : Int) : Void;
+	@:overload @:protected override private function handleAttribute(i : Int) : Void;
 	
-	@:overload override private function handleStartElement() : Void;
+	@:overload @:protected override private function handleStartElement() : Void;
 	
-	@:overload override private function handleEndElement() : Void;
+	@:overload @:protected override private function handleEndElement() : Void;
 	
-	@:overload override private function handleCharacters() : Void;
+	@:overload @:protected override private function handleCharacters() : Void;
 	
 	
 }

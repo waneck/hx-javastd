@@ -31,7 +31,7 @@ extern interface CTypeInfo extends com.sun.xml.internal.bind.v2.model.core.TypeI
 	*
 	* @see NType#toType(Outline, Aspect)
 	*/
-	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public @:public public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	
 }

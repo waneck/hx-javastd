@@ -47,7 +47,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @throws IOException thrown when data reading fails
 	* @draft 2.1
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, datamanipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, datamanipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Gets the value associated with the codepoint.
@@ -57,7 +57,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @return offset to data
 	* @draft 2.1
 	*/
-	@:overload @:final public function getCodePointValue(ch : Int) : Int;
+	@:overload @:public @:final public function getCodePointValue(ch : Int) : Int;
 	
 	/**
 	* Gets the value to the data which this lead surrogate character points
@@ -69,7 +69,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @return data value
 	* @draft 2.1
 	*/
-	@:overload @:final public function getLeadValue(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public @:final public function getLeadValue(ch : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Get a value from a folding offset (from the value of a lead surrogate)
@@ -80,7 +80,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @return trie data value associated with the trail character
 	* @draft 2.1
 	*/
-	@:overload @:final public function getTrailValue(leadvalue : Int, trail : java.StdTypes.Char16) : Int;
+	@:overload @:public @:final public function getTrailValue(leadvalue : Int, trail : java.StdTypes.Char16) : Int;
 	
 	/**
 	* <p>Parses the input stream and stores its trie content into a index and
@@ -88,7 +88,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @param inputStream data input stream containing trie data
 	* @exception IOException thrown when data reading fails
 	*/
-	@:overload @:final private function unserialize(inputStream : java.io.InputStream) : Void;
+	@:overload @:protected @:final override private function unserialize(inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Gets the offset to the data which the surrogate pair points to.
@@ -97,7 +97,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @return offset to data
 	* @draft 2.1
 	*/
-	@:overload @:final private function getSurrogateOffset(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
+	@:overload @:protected @:final override private function getSurrogateOffset(lead : java.StdTypes.Char16, trail : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Gets the value at the argument index.
@@ -107,14 +107,14 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @see com.ibm.icu.impl.TrieIterator
 	* @draft 2.1
 	*/
-	@:overload @:final private function getValue(index : Int) : Int;
+	@:overload @:protected @:final override private function getValue(index : Int) : Int;
 	
 	/**
 	* Gets the default initial value
 	* @return 32 bit value
 	* @draft 2.1
 	*/
-	@:overload @:final private function getInitialValue() : Int;
+	@:overload @:protected @:final override private function getInitialValue() : Int;
 	
 	
 }

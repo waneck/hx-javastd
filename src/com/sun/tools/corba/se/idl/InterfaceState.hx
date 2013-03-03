@@ -41,13 +41,13 @@ package com.sun.tools.corba.se.idl;
 **/
 extern class InterfaceState
 {
-	public static var Private(default, null) : Int;
+	@:public @:static @:final public static var Private(default, null) : Int;
 	
-	@:overload public function new(m : Int, e : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
+	@:overload @:public public function new(m : Int, e : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
 	
-	public var modifier : Int;
+	@:public public var modifier : Int;
 	
-	public var entry : com.sun.tools.corba.se.idl.TypedefEntry;
+	@:public public var entry : com.sun.tools.corba.se.idl.TypedefEntry;
 	
 	
 }

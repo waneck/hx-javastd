@@ -33,7 +33,7 @@ extern class ScriptEngineManager
 	*
 	* @see java.lang.Thread#getContextClassLoader
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* This constructor loads the implementations of
@@ -45,7 +45,7 @@ extern class ScriptEngineManager
 	*
 	* @param loader ClassLoader used to discover script engine factories.
 	*/
-	@:overload public function new(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* <code>setBindings</code> stores the specified <code>Bindings</code>
@@ -56,7 +56,7 @@ extern class ScriptEngineManager
 	* @param bindings The specified <code>Bindings</code>
 	* @throws IllegalArgumentException if bindings is null.
 	*/
-	@:overload public function setBindings(bindings : javax.script.Bindings) : Void;
+	@:overload @:public public function setBindings(bindings : javax.script.Bindings) : Void;
 	
 	/**
 	* <code>getBindings</code> returns the value of the <code>globalScope</code> field.
@@ -65,7 +65,7 @@ extern class ScriptEngineManager
 	*
 	* @return The globalScope field.
 	*/
-	@:overload public function getBindings() : javax.script.Bindings;
+	@:overload @:public public function getBindings() : javax.script.Bindings;
 	
 	/**
 	* Sets the specified key/value pair in the Global Scope.
@@ -74,14 +74,14 @@ extern class ScriptEngineManager
 	* @throws NullPointerException if key is null.
 	* @throws IllegalArgumentException if key is empty string.
 	*/
-	@:overload public function put(key : String, value : Dynamic) : Void;
+	@:overload @:public public function put(key : String, value : Dynamic) : Void;
 	
 	/**
 	* Gets the value for the specified key in the Global Scope
 	* @param key The key whose value is to be returned.
 	* @return The value for the specified key.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Looks up and creates a <code>ScriptEngine</code> for a given  name.
@@ -99,7 +99,7 @@ extern class ScriptEngineManager
 	* created <code>ScriptEngine</code>.
 	* @throws NullPointerException if shortName is null.
 	*/
-	@:overload public function getEngineByName(shortName : String) : javax.script.ScriptEngine;
+	@:overload @:public public function getEngineByName(shortName : String) : javax.script.ScriptEngine;
 	
 	/**
 	* Look up and create a <code>ScriptEngine</code> for a given extension.  The algorithm
@@ -111,7 +111,7 @@ extern class ScriptEngineManager
 	* if not found.
 	* @throws NullPointerException if extension is null.
 	*/
-	@:overload public function getEngineByExtension(extension : String) : javax.script.ScriptEngine;
+	@:overload @:public public function getEngineByExtension(extension : String) : javax.script.ScriptEngine;
 	
 	/**
 	* Look up and create a <code>ScriptEngine</code> for a given mime type.  The algorithm
@@ -123,14 +123,14 @@ extern class ScriptEngineManager
 	* if not found.
 	* @throws NullPointerException if mimeType is null.
 	*/
-	@:overload public function getEngineByMimeType(mimeType : String) : javax.script.ScriptEngine;
+	@:overload @:public public function getEngineByMimeType(mimeType : String) : javax.script.ScriptEngine;
 	
 	/**
 	* Returns a list whose elements are instances of all the <code>ScriptEngineFactory</code> classes
 	* found by the discovery mechanism.
 	* @return List of all discovered <code>ScriptEngineFactory</code>s.
 	*/
-	@:overload public function getEngineFactories() : java.util.List<javax.script.ScriptEngineFactory>;
+	@:overload @:public public function getEngineFactories() : java.util.List<javax.script.ScriptEngineFactory>;
 	
 	/**
 	* Registers a <code>ScriptEngineFactory</code> to handle a language
@@ -139,7 +139,7 @@ extern class ScriptEngineManager
 	* @param factory The class to associate with the given name.
 	* @throws NullPointerException if any of the parameters is null.
 	*/
-	@:overload public function registerEngineName(name : String, factory : javax.script.ScriptEngineFactory) : Void;
+	@:overload @:public public function registerEngineName(name : String, factory : javax.script.ScriptEngineFactory) : Void;
 	
 	/**
 	* Registers a <code>ScriptEngineFactory</code> to handle a mime type.
@@ -151,7 +151,7 @@ extern class ScriptEngineManager
 	* @param factory The class to associate with the given mime type.
 	* @throws NullPointerException if any of the parameters is null.
 	*/
-	@:overload public function registerEngineMimeType(type : String, factory : javax.script.ScriptEngineFactory) : Void;
+	@:overload @:public public function registerEngineMimeType(type : String, factory : javax.script.ScriptEngineFactory) : Void;
 	
 	/**
 	* Registers a <code>ScriptEngineFactory</code> to handle an extension.
@@ -162,7 +162,7 @@ extern class ScriptEngineManager
 	* @param factory The class to associate with the given extension.
 	* @throws NullPointerException if any of the parameters is null.
 	*/
-	@:overload public function registerEngineExtension(extension : String, factory : javax.script.ScriptEngineFactory) : Void;
+	@:overload @:public public function registerEngineExtension(extension : String, factory : javax.script.ScriptEngineFactory) : Void;
 	
 	
 }

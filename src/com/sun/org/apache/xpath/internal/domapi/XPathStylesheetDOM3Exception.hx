@@ -51,7 +51,7 @@ extern class XPathStylesheetDOM3Exception extends javax.xml.transform.Transforme
 	*
 	* @xsl.usage internal
 	*/
-	@:overload public function new(msg : String, arg1 : javax.xml.transform.SourceLocator) : Void;
+	@:overload @:public public function new(msg : String, arg1 : javax.xml.transform.SourceLocator) : Void;
 	
 	
 }

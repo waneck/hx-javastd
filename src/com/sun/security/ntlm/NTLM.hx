@@ -25,7 +25,7 @@ package com.sun.security.ntlm;
 */
 @:internal extern class NTLM
 {
-	@:overload private function new(version : String) : Void;
+	@:overload @:protected private function new(version : String) : Void;
 	
 	/**
 	* Prints out a formatted string, called in various places inside then NTLM
@@ -37,7 +37,7 @@ package com.sun.security.ntlm;
 	* @param args the arguments referenced by <code>format</code>
 	* @see java.io.PrintStream#printf(java.lang.String, java.lang.Object[])
 	*/
-	@:overload public function debug(format : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function debug(format : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Prints out the content of a byte array, called in various places inside
@@ -47,7 +47,7 @@ package com.sun.security.ntlm;
 	* match their own debugging/logging mechanisms.
 	* @param bytes the byte array to print out
 	*/
-	@:overload public function debug(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function debug(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

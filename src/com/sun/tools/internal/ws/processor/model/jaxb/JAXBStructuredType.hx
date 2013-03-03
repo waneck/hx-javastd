@@ -32,44 +32,44 @@ package com.sun.tools.internal.ws.processor.model.jaxb;
 */
 extern class JAXBStructuredType extends com.sun.tools.internal.ws.processor.model.jaxb.JAXBType
 {
-	@:overload public function new(jaxbType : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
+	@:overload @:public public function new(jaxbType : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, javaType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, javaType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
 	
-	@:overload public function add(m : com.sun.tools.internal.ws.processor.model.jaxb.JAXBElementMember) : Void;
+	@:overload @:public public function add(m : com.sun.tools.internal.ws.processor.model.jaxb.JAXBElementMember) : Void;
 	
-	@:overload public function getElementMembers() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getElementMembers() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getElementMembersCount() : Int;
-	
-	/* serialization */
-	@:overload public function getElementMembersList() : java.util.List<Dynamic>;
+	@:overload @:public public function getElementMembersCount() : Int;
 	
 	/* serialization */
-	@:overload public function setElementMembersList(l : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function getElementMembersList() : java.util.List<Dynamic>;
 	
-	@:overload public function addSubtype(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType) : Void;
+	/* serialization */
+	@:overload @:public public function setElementMembersList(l : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function getSubtypes() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function addSubtype(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType) : Void;
+	
+	@:overload @:public public function getSubtypes() : java.util.Iterator<Dynamic>;
 	
 	/* (non-Javadoc)
 	* @see JAXBType#isUnwrapped()
 	*/
-	@:overload public function isUnwrapped() : Bool;
+	@:overload @:public override public function isUnwrapped() : Bool;
 	
 	/* serialization */
-	@:overload public function getSubtypesSet() : java.util.Set<Dynamic>;
+	@:overload @:public public function getSubtypesSet() : java.util.Set<Dynamic>;
 	
 	/* serialization */
-	@:overload public function setSubtypesSet(s : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function setSubtypesSet(s : java.util.Set<Dynamic>) : Void;
 	
-	@:overload public function setParentType(parent : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType) : Void;
+	@:overload @:public public function setParentType(parent : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType) : Void;
 	
-	@:overload public function getParentType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType;
+	@:overload @:public public function getParentType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType;
 	
 	
 }

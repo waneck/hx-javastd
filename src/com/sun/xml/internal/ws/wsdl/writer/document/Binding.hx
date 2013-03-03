@@ -29,15 +29,15 @@ extern interface Binding extends com.sun.xml.internal.txw2.TypedXmlWriter extend
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
+	@:overload @:public public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
 	
-	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
 	
-	@:overload public function operation() : com.sun.xml.internal.ws.wsdl.writer.document.BindingOperationType;
+	@:overload @:public public function operation() : com.sun.xml.internal.ws.wsdl.writer.document.BindingOperationType;
 	
-	@:overload public function soapBinding() : com.sun.xml.internal.ws.wsdl.writer.document.soap.SOAPBinding;
+	@:overload @:public public function soapBinding() : com.sun.xml.internal.ws.wsdl.writer.document.soap.SOAPBinding;
 	
-	@:overload public function soap12Binding() : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPBinding;
+	@:overload @:public public function soap12Binding() : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPBinding;
 	
 	
 }

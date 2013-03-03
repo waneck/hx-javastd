@@ -25,7 +25,7 @@ package java.net;
 */
 @:internal extern class SdpSocketImpl extends java.net.PlainSocketImpl
 {
-	@:overload override private function create(stream : Bool) : Void;
+	@:overload @:protected override private function create(stream : Bool) : Void;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.java.swing.plaf.windows;
 */
 @:internal extern class WindowsPopupWindow extends javax.swing.JWindow
 {
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
-	@:overload public function hide() : Void;
+	@:overload @:public override public function hide() : Void;
 	
-	@:overload public function show() : Void;
+	@:overload @:public override public function show() : Void;
 	
 	
 }

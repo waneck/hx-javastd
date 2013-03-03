@@ -56,24 +56,24 @@ extern class Token implements java.io.Serializable
 	* system is determined by JavaCCParser, and a table of these numbers is
 	* stored in the file ...Constants.java.
 	*/
-	public var kind : Int;
+	@:public public var kind : Int;
 	
 	/** The line number of the first character of this Token. */
-	public var beginLine : Int;
+	@:public public var beginLine : Int;
 	
 	/** The column number of the first character of this Token. */
-	public var beginColumn : Int;
+	@:public public var beginColumn : Int;
 	
 	/** The line number of the last character of this Token. */
-	public var endLine : Int;
+	@:public public var endLine : Int;
 	
 	/** The column number of the last character of this Token. */
-	public var endColumn : Int;
+	@:public public var endColumn : Int;
 	
 	/**
 	* The string image of the token.
 	*/
-	public var image : String;
+	@:public public var image : String;
 	
 	/**
 	* A reference to the next regular (non-special) token from the input
@@ -83,7 +83,7 @@ extern class Token implements java.io.Serializable
 	* token.  Otherwise, see below for a description of the contents of
 	* this field.
 	*/
-	public var next : com.sun.xml.internal.rngom.parse.compact.Token;
+	@:public public var next : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	/**
 	* This field is used to access special tokens that occur prior to this
@@ -97,7 +97,7 @@ extern class Token implements java.io.Serializable
 	* immediately follow it (without an intervening regular token).  If there
 	* is no such token, this field is null.
 	*/
-	public var specialToken : com.sun.xml.internal.rngom.parse.compact.Token;
+	@:public public var specialToken : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	/**
 	* An optional attribute value of the Token.
@@ -107,27 +107,27 @@ extern class Token implements java.io.Serializable
 	* Any subclass of Token that actually wants to return a non-null value can
 	* override this method as appropriate.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* No-argument constructor
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new token for the specified Image.
 	*/
-	@:overload public function new(kind : Int) : Void;
+	@:overload @:public public function new(kind : Int) : Void;
 	
 	/**
 	* Constructs a new token for the specified Image and Kind.
 	*/
-	@:overload public function new(kind : Int, image : String) : Void;
+	@:overload @:public public function new(kind : Int, image : String) : Void;
 	
 	/**
 	* Returns the image.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a new Token object, by default. However, if you want, you
@@ -141,9 +141,9 @@ extern class Token implements java.io.Serializable
 	* to the following switch statement. Then you can cast matchedToken
 	* variable to the appropriate type and use sit in your lexical actions.
 	*/
-	@:overload public static function newToken(ofKind : Int, image : String) : com.sun.xml.internal.rngom.parse.compact.Token;
+	@:overload @:public @:static public static function newToken(ofKind : Int, image : String) : com.sun.xml.internal.rngom.parse.compact.Token;
 	
-	@:overload public static function newToken(ofKind : Int) : com.sun.xml.internal.rngom.parse.compact.Token;
+	@:overload @:public @:static public static function newToken(ofKind : Int) : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	
 }

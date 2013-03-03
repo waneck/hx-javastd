@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.ior;
 */
 extern class ObjectAdapterIdArray extends com.sun.corba.se.impl.ior.ObjectAdapterIdBase
 {
-	@:overload public function new(objectAdapterId : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(objectAdapterId : java.NativeArray<String>) : Void;
 	
 	/** Special constructor used for OA IDs of length 2.
 	*/
-	@:overload public function new(name1 : String, name2 : String) : Void;
+	@:overload @:public public function new(name1 : String, name2 : String) : Void;
 	
-	@:overload public function getNumLevels() : Int;
+	@:overload @:public override public function getNumLevels() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getAdapterName() : java.NativeArray<String>;
+	@:overload @:public override public function getAdapterName() : java.NativeArray<String>;
 	
 	
 }

@@ -36,7 +36,7 @@ package com.sun.script.javascript;
 	/**
 	* Return the name of the class.
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the value of the named property or NOT_FOUND.
@@ -48,7 +48,7 @@ package com.sun.script.javascript;
 	* @param start the object in which the lookup began
 	* @return the value of the property (may be null), or NOT_FOUND
 	*/
-	@:overload @:synchronized public function get(name : String, start : Scriptable) : Dynamic;
+	@:overload @:public @:synchronized public function get(name : String, start : Scriptable) : Dynamic;
 	
 	/**
 	* Returns the value of the indexed property or NOT_FOUND.
@@ -57,7 +57,7 @@ package com.sun.script.javascript;
 	* @param start the object in which the lookup began
 	* @return the value of the property (may be null), or NOT_FOUND
 	*/
-	@:overload @:synchronized public function get(index : Int, start : Scriptable) : Dynamic;
+	@:overload @:public @:synchronized public function get(index : Int, start : Scriptable) : Dynamic;
 	
 	/**
 	* Returns true if the named property is defined.
@@ -66,7 +66,7 @@ package com.sun.script.javascript;
 	* @param start the object in which the lookup began
 	* @return true if and only if the property was found in the object
 	*/
-	@:overload @:synchronized public function has(name : String, start : Scriptable) : Bool;
+	@:overload @:public @:synchronized public function has(name : String, start : Scriptable) : Bool;
 	
 	/**
 	* Returns true if the property index is defined.
@@ -75,7 +75,7 @@ package com.sun.script.javascript;
 	* @param start the object in which the lookup began
 	* @return true if and only if the property was found in the object
 	*/
-	@:overload @:synchronized public function has(index : Int, start : Scriptable) : Bool;
+	@:overload @:public @:synchronized public function has(index : Int, start : Scriptable) : Bool;
 	
 	/**
 	* Sets the value of the named property, creating it if need be.
@@ -84,7 +84,7 @@ package com.sun.script.javascript;
 	* @param start the object whose property is being set
 	* @param value value to set the property to
 	*/
-	@:overload public function put(name : String, start : Scriptable, value : Dynamic) : Void;
+	@:overload @:public public function put(name : String, start : Scriptable, value : Dynamic) : Void;
 	
 	/**
 	* Sets the value of the indexed property, creating it if need be.
@@ -93,7 +93,7 @@ package com.sun.script.javascript;
 	* @param start the object whose property is being set
 	* @param value value to set the property to
 	*/
-	@:overload public function put(index : Int, start : Scriptable, value : Dynamic) : Void;
+	@:overload @:public public function put(index : Int, start : Scriptable, value : Dynamic) : Void;
 	
 	/**
 	* Removes a named property from the object.
@@ -102,7 +102,7 @@ package com.sun.script.javascript;
 	*
 	* @param name the name of the property
 	*/
-	@:overload @:synchronized public function delete(name : String) : Void;
+	@:overload @:public @:synchronized public function delete(name : String) : Void;
 	
 	/**
 	* Removes the indexed property from the object.
@@ -111,31 +111,31 @@ package com.sun.script.javascript;
 	*
 	* @param index the numeric index for the property
 	*/
-	@:overload public function delete(index : Int) : Void;
+	@:overload @:public public function delete(index : Int) : Void;
 	
 	/**
 	* Get the prototype of the object.
 	* @return the prototype
 	*/
-	@:overload public function getPrototype() : Scriptable;
+	@:overload @:public public function getPrototype() : Scriptable;
 	
 	/**
 	* Set the prototype of the object.
 	* @param prototype the prototype to set
 	*/
-	@:overload public function setPrototype(prototype : Scriptable) : Void;
+	@:overload @:public public function setPrototype(prototype : Scriptable) : Void;
 	
 	/**
 	* Get the parent scope of the object.
 	* @return the parent scope
 	*/
-	@:overload public function getParentScope() : Scriptable;
+	@:overload @:public public function getParentScope() : Scriptable;
 	
 	/**
 	* Set the parent scope of the object.
 	* @param parent the parent scope to set
 	*/
-	@:overload public function setParentScope(parent : Scriptable) : Void;
+	@:overload @:public public function setParentScope(parent : Scriptable) : Void;
 	
 	/**
 	* Get an array of property ids.
@@ -146,7 +146,7 @@ package com.sun.script.javascript;
 	* @return an array of Objects. Each entry in the array is either
 	*         a java.lang.String or a java.lang.Number
 	*/
-	@:overload @:synchronized public function getIds() : java.NativeArray<Dynamic>;
+	@:overload @:public @:synchronized public function getIds() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Get the default value of the object with a given hint.
@@ -161,7 +161,7 @@ package com.sun.script.javascript;
 	* @param hint the type hint
 	* @return the default value
 	*/
-	@:overload public function getDefaultValue(typeHint : Class<Dynamic>) : Dynamic;
+	@:overload @:public public function getDefaultValue(typeHint : Class<Dynamic>) : Dynamic;
 	
 	/**
 	* Implements the instanceof operator.
@@ -171,7 +171,7 @@ package com.sun.script.javascript;
 	* @return true if "this" appears in value's prototype chain
 	*
 	*/
-	@:overload public function hasInstance(instance : Scriptable) : Bool;
+	@:overload @:public public function hasInstance(instance : Scriptable) : Bool;
 	
 	
 }

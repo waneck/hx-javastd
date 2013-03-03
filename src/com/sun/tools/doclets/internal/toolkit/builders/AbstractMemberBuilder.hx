@@ -42,7 +42,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param configuration the configuration used in this run
 	*        of the doclet.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* This method is not supported by sub-builders.
@@ -50,7 +50,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @throws DocletAbortException this method will always throw a
 	* DocletAbortException because it is not supported.
 	*/
-	@:overload override public function build() : Void;
+	@:overload @:public override public function build() : Void;
 	
 	/**
 	* Build the sub component if there is anything to document.
@@ -58,14 +58,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document.
 	* @param contentTree content tree to which the documentation will be added
 	*/
-	@:overload override public function build(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public override public function build(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Return true if this subbuilder has anything to document.
 	*
 	* @return true if this subbuilder has anything to document.
 	*/
-	@:overload @:abstract public function hasMembersToDocument() : Bool;
+	@:overload @:public @:abstract public function hasMembersToDocument() : Bool;
 	
 	
 }

@@ -35,19 +35,19 @@ package sun.security.jgss.krb5;
 */
 @:native('sun$security$jgss$krb5$CipherHelper$WrapTokenInputStream') @:internal extern class CipherHelper_WrapTokenInputStream extends java.io.InputStream
 {
-	@:overload public function new(is : java.io.InputStream, length : Int) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, length : Int) : Void;
 	
-	@:overload @:final override public function read() : Int;
+	@:overload @:public @:final override public function read() : Int;
 	
-	@:overload @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:final override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload @:final override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:final override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload @:final override public function available() : Int;
+	@:overload @:public @:final override public function available() : Int;
 	
-	@:overload @:final override public function close() : Void;
+	@:overload @:public @:final override public function close() : Void;
 	
 	
 }

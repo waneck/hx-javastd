@@ -25,12 +25,12 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class ImageCache
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(maxPixelCount : Int, maxSingleImagePixelSize : Int) : Void;
+	@:overload @:public public function new(maxPixelCount : Int, maxSingleImagePixelSize : Int) : Void;
 	
 	/** Clear the cache */
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Check if the image size is to big to be stored in the cache
@@ -39,7 +39,7 @@ package javax.swing.plaf.nimbus;
 	* @param h The image height
 	* @return True if the image size is less than max
 	*/
-	@:overload public function isImageCachable(w : Int, h : Int) : Bool;
+	@:overload @:public public function isImageCachable(w : Int, h : Int) : Bool;
 	
 	/**
 	* Get the cached image for given keys
@@ -50,7 +50,7 @@ package javax.swing.plaf.nimbus;
 	* @param args   Other arguments to use as part of the cache key
 	* @return Returns the cached Image, or null there is no cached image for key
 	*/
-	@:overload public function getImage(config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload @:public public function getImage(config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	/**
 	* Sets the cached image for the specified constraints.
@@ -62,16 +62,16 @@ package javax.swing.plaf.nimbus;
 	* @param args   Other arguments to use as part of the cache key
 	* @return true if the image could be cached or false if the image is too big
 	*/
-	@:overload public function setImage(image : java.awt.Image, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public public function setImage(image : java.awt.Image, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
 	
 	
 }
 /** Extended SoftReference that stores the pixel count even after the image is lost */
 @:native('javax$swing$plaf$nimbus$ImageCache$PixelCountSoftReference') @:internal extern class ImageCache_PixelCountSoftReference extends java.lang.ref.SoftReference<java.awt.Image>
 {
-	@:overload public function new(referent : java.awt.Image, q : java.lang.ref.ReferenceQueue<java.awt.Image>, pixelCount : Int, hash : Int, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(referent : java.awt.Image, q : java.lang.ref.ReferenceQueue<java.awt.Image>, pixelCount : Int, hash : Int, config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function equals(config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public public function equals(config : java.awt.GraphicsConfiguration, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Bool;
 	
 	
 }

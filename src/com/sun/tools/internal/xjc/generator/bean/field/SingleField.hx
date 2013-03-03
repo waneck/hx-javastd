@@ -45,7 +45,7 @@ extern class SingleField extends com.sun.tools.internal.xjc.generator.bean.field
 	* @author
 	*     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo) : Void;
 	
 	/**
 	*
@@ -53,21 +53,21 @@ extern class SingleField extends com.sun.tools.internal.xjc.generator.bean.field
 	*      forces the setter/getter to expose the primitive type.
 	*      it's a pointless customization, but it's nevertheless in the spec.
 	*/
-	@:overload private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo, forcePrimitiveAccess : Bool) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo, forcePrimitiveAccess : Bool) : Void;
 	
-	@:overload @:final public function getFieldType() : com.sun.codemodel.internal.JType;
+	@:overload @:public @:final override public function getFieldType() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload @:public override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$generator$bean$field$SingleField$Accessor') extern class SingleField_Accessor extends com.sun.tools.internal.xjc.generator.bean.field.AbstractFieldWithVar.AbstractFieldWithVar_Accessor
 {
-	@:overload override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:protected override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload @:public override public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
 	
 }

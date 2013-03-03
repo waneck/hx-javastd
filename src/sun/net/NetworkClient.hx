@@ -26,65 +26,65 @@ package sun.net;
 extern class NetworkClient
 {
 	/* Default value of read timeout, if not specified (infinity) */
-	public static var DEFAULT_READ_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_READ_TIMEOUT(default, null) : Int;
 	
 	/* Default value of connect timeout, if not specified (infinity) */
-	public static var DEFAULT_CONNECT_TIMEOUT(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_CONNECT_TIMEOUT(default, null) : Int;
 	
-	private var proxy : java.net.Proxy;
+	@:protected private var proxy : java.net.Proxy;
 	
 	/** Socket for communicating with server. */
-	private var serverSocket : java.net.Socket;
+	@:protected private var serverSocket : java.net.Socket;
 	
 	/** Stream for printing to the server. */
-	public var serverOutput : java.io.PrintStream;
+	@:public public var serverOutput : java.io.PrintStream;
 	
 	/** Buffered stream for reading replies from server. */
-	public var serverInput : java.io.InputStream;
+	@:public public var serverInput : java.io.InputStream;
 	
-	private static var defaultSoTimeout : Int;
+	@:protected @:static private static var defaultSoTimeout : Int;
 	
-	private static var defaultConnectTimeout : Int;
+	@:protected @:static private static var defaultConnectTimeout : Int;
 	
-	private var readTimeout : Int;
+	@:protected private var readTimeout : Int;
 	
-	private var connectTimeout : Int;
+	@:protected private var connectTimeout : Int;
 	
 	/* Name of encoding to use for output */
-	private static var encoding : String;
+	@:protected @:static private static var encoding : String;
 	
 	/** Open a connection to the server. */
-	@:overload public function openServer(server : String, port : Int) : Void;
+	@:overload @:public public function openServer(server : String, port : Int) : Void;
 	
 	/**
 	* Return a socket connected to the server, with any
 	* appropriate options pre-established
 	*/
-	@:overload private function doConnect(server : String, port : Int) : java.net.Socket;
+	@:overload @:protected private function doConnect(server : String, port : Int) : java.net.Socket;
 	
 	/**
 	* The following method, createSocket, is provided to allow the
 	* https client to override it so that it may use its socket factory
 	* to create the socket.
 	*/
-	@:overload private function createSocket() : java.net.Socket;
+	@:overload @:protected private function createSocket() : java.net.Socket;
 	
-	@:overload private function getLocalAddress() : java.net.InetAddress;
+	@:overload @:protected private function getLocalAddress() : java.net.InetAddress;
 	
 	/** Close an open connection to the server. */
-	@:overload public function closeServer() : Void;
+	@:overload @:public public function closeServer() : Void;
 	
 	/** Return server connection status */
-	@:overload public function serverIsOpen() : Bool;
+	@:overload @:public public function serverIsOpen() : Bool;
 	
 	/** Create connection with host <i>host</i> on port <i>port</i> */
-	@:overload public function new(host : String, port : Int) : Void;
+	@:overload @:public public function new(host : String, port : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function setConnectTimeout(timeout : Int) : Void;
+	@:overload @:public public function setConnectTimeout(timeout : Int) : Void;
 	
-	@:overload public function getConnectTimeout() : Int;
+	@:overload @:public public function getConnectTimeout() : Int;
 	
 	/**
 	* Sets the read timeout.
@@ -99,9 +99,9 @@ extern class NetworkClient
 	* potentially blocking internal operation, e.g. cleaning up unread
 	* response data, buffering error stream response data, etc
 	*/
-	@:overload public function setReadTimeout(timeout : Int) : Void;
+	@:overload @:public public function setReadTimeout(timeout : Int) : Void;
 	
-	@:overload public function getReadTimeout() : Int;
+	@:overload @:public public function getReadTimeout() : Int;
 	
 	
 }

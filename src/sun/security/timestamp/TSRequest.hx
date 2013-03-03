@@ -31,21 +31,21 @@ extern class TSRequest
 	* @param hashValue     The hash value. This is the data to be timestamped.
 	* @param hashAlgorithm The name of the hash algorithm.
 	*/
-	@:overload public function new(hashValue : java.NativeArray<java.StdTypes.Int8>, hashAlgorithm : String) : Void;
+	@:overload @:public public function new(hashValue : java.NativeArray<java.StdTypes.Int8>, hashAlgorithm : String) : Void;
 	
 	/**
 	* Sets the Time-Stamp Protocol version.
 	*
 	* @param version The TSP version.
 	*/
-	@:overload public function setVersion(version : Int) : Void;
+	@:overload @:public public function setVersion(version : Int) : Void;
 	
 	/**
 	* Sets an object identifier for the Time-Stamp Protocol policy.
 	*
 	* @param version The policy object identifier.
 	*/
-	@:overload public function setPolicyId(policyId : String) : Void;
+	@:overload @:public public function setPolicyId(policyId : String) : Void;
 	
 	/**
 	* Sets a nonce.
@@ -53,7 +53,7 @@ extern class TSRequest
 	*
 	* @param nonce The nonce value.
 	*/
-	@:overload public function setNonce(nonce : java.math.BigInteger) : Void;
+	@:overload @:public public function setNonce(nonce : java.math.BigInteger) : Void;
 	
 	/**
 	* Request that the TSA include its signing certificate in the response.
@@ -61,16 +61,16 @@ extern class TSRequest
 	* @param returnCertificate True if the TSA should return its signing
 	*                          certificate. By default it is not returned.
 	*/
-	@:overload public function requestCertificate(returnCertificate : Bool) : Void;
+	@:overload @:public public function requestCertificate(returnCertificate : Bool) : Void;
 	
 	/**
 	* Sets the Time-Stamp Protocol extensions.
 	*
 	* @param extensions The protocol extensions.
 	*/
-	@:overload public function setExtensions(extensions : java.NativeArray<java.security.cert.X509Extension>) : Void;
+	@:overload @:public public function setExtensions(extensions : java.NativeArray<java.security.cert.X509Extension>) : Void;
 	
-	@:overload public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -23,60 +23,60 @@ extern class ElementState
 	/**
 	* The element's raw tag name (local or prefix:local).
 	*/
-	public var rawName : String;
+	@:public public var rawName : String;
 	
 	/**
 	* The element's local tag name.
 	*/
-	public var localName : String;
+	@:public public var localName : String;
 	
 	/**
 	* The element's namespace URI.
 	*/
-	public var namespaceURI : String;
+	@:public public var namespaceURI : String;
 	
 	/**
 	* True if element is space preserving.
 	*/
-	public var preserveSpace : Bool;
+	@:public public var preserveSpace : Bool;
 	
 	/**
 	* True if element is empty. Turns false immediately
 	* after serializing the first contents of the element.
 	*/
-	public var empty : Bool;
+	@:public public var empty : Bool;
 	
 	/**
 	* True if the last serialized node was an element node.
 	*/
-	public var afterElement : Bool;
+	@:public public var afterElement : Bool;
 	
 	/**
 	* True if the last serialized node was a comment node.
 	*/
-	public var afterComment : Bool;
+	@:public public var afterComment : Bool;
 	
 	/**
 	* True if textual content of current element should be
 	* serialized as CDATA section.
 	*/
-	public var doCData : Bool;
+	@:public public var doCData : Bool;
 	
 	/**
 	* True if textual content of current element should be
 	* serialized as raw characters (unescaped).
 	*/
-	public var unescaped : Bool;
+	@:public public var unescaped : Bool;
 	
 	/**
 	* True while inside CData and printing text as CData.
 	*/
-	public var inCData : Bool;
+	@:public public var inCData : Bool;
 	
 	/**
 	* Association between namespace URIs (keys) and prefixes (values).
 	*/
-	public var prefixes : java.util.Hashtable<Dynamic, Dynamic>;
+	@:public public var prefixes : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	
 }

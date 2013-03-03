@@ -29,33 +29,33 @@ extern class ModelObject
 	*
 	* @author WS Development Team
 	*/
-	@:overload @:abstract public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public @:abstract public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
-	private var errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
+	@:protected private var errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver;
 	
-	@:overload private function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:protected private function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function setErrorReceiver(errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function setErrorReceiver(errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function getEntity() : com.sun.tools.internal.ws.wsdl.framework.Entity;
+	@:overload @:public public function getEntity() : com.sun.tools.internal.ws.wsdl.framework.Entity;
 	
-	@:overload public function getProperty(key : String) : Dynamic;
+	@:overload @:public public function getProperty(key : String) : Dynamic;
 	
-	@:overload public function setProperty(key : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(key : String, value : Dynamic) : Void;
 	
-	@:overload public function removeProperty(key : String) : Void;
+	@:overload @:public public function removeProperty(key : String) : Void;
 	
-	@:overload public function getProperties() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getProperties() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
-	@:overload public function getPropertiesMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getPropertiesMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload public function setPropertiesMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setPropertiesMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function getJavaDoc() : String;
+	@:overload @:public public function getJavaDoc() : String;
 	
-	@:overload public function setJavaDoc(javaDoc : String) : Void;
+	@:overload @:public public function setJavaDoc(javaDoc : String) : Void;
 	
 	
 }

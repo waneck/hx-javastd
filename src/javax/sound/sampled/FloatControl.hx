@@ -72,7 +72,7 @@ package javax.sound.sampled;
 	*     than {@code maximum} or {@code initialValue} does not fall
 	*     within the allowable range
 	*/
-	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String, minLabel : String, midLabel : String, maxLabel : String) : Void;
+	@:overload @:protected private function new(type : javax.sound.sampled.Control.Control_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String, minLabel : String, midLabel : String, maxLabel : String) : Void;
 	
 	/**
 	* Constructs a new float control object with the given parameters.
@@ -94,7 +94,7 @@ package javax.sound.sampled;
 	*     than {@code maximum} or {@code initialValue} does not fall
 	*     within the allowable range
 	*/
-	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String) : Void;
+	@:overload @:protected private function new(type : javax.sound.sampled.Control.Control_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String) : Void;
 	
 	/**
 	* Sets the current value for the control.  The default implementation
@@ -107,50 +107,50 @@ package javax.sound.sampled;
 	* @throws IllegalArgumentException if the value indicated does not fall
 	* within the allowable range
 	*/
-	@:overload public function setValue(newValue : Single) : Void;
+	@:overload @:public public function setValue(newValue : Single) : Void;
 	
 	/**
 	* Obtains this control's current value.
 	* @return the current value
 	*/
-	@:overload public function getValue() : Single;
+	@:overload @:public public function getValue() : Single;
 	
 	/**
 	* Obtains the maximum value permitted.
 	* @return the maximum allowable value
 	*/
-	@:overload public function getMaximum() : Single;
+	@:overload @:public public function getMaximum() : Single;
 	
 	/**
 	* Obtains the minimum value permitted.
 	* @return the minimum allowable value
 	*/
-	@:overload public function getMinimum() : Single;
+	@:overload @:public public function getMinimum() : Single;
 	
 	/**
 	* Obtains the label for the units in which the control's values are expressed,
 	* such as "dB" or "frames per second."
 	* @return the units label, or a zero-length string if no label
 	*/
-	@:overload public function getUnits() : String;
+	@:overload @:public public function getUnits() : String;
 	
 	/**
 	* Obtains the label for the minimum value, such as "Left" or "Off."
 	* @return the minimum value label, or a zero-length string if no label      * has been set
 	*/
-	@:overload public function getMinLabel() : String;
+	@:overload @:public public function getMinLabel() : String;
 	
 	/**
 	* Obtains the label for the mid-point value, such as "Center" or "Default."
 	* @return the mid-point value label, or a zero-length string if no label    * has been set
 	*/
-	@:overload public function getMidLabel() : String;
+	@:overload @:public public function getMidLabel() : String;
 	
 	/**
 	* Obtains the label for the maximum value, such as "Right" or "Full."
 	* @return the maximum value label, or a zero-length string if no label      * has been set
 	*/
-	@:overload public function getMaxLabel() : String;
+	@:overload @:public public function getMaxLabel() : String;
 	
 	/**
 	* Obtains the resolution or granularity of the control, in the units
@@ -159,7 +159,7 @@ package javax.sound.sampled;
 	* for this control, over the set of supported floating-point values.
 	* @return the control's precision
 	*/
-	@:overload public function getPrecision() : Single;
+	@:overload @:public public function getPrecision() : Single;
 	
 	/**
 	* Obtains the smallest time interval, in microseconds, over which the control's value can
@@ -171,7 +171,7 @@ package javax.sound.sampled;
 	* @return update period in microseconds, or -1 if shifting over time is unsupported
 	* @see #shift
 	*/
-	@:overload public function getUpdatePeriod() : Int;
+	@:overload @:public public function getUpdatePeriod() : Int;
 	
 	/**
 	* Changes the control value from the initial value to the final
@@ -190,13 +190,13 @@ package javax.sound.sampled;
 	*
 	* @see #getUpdatePeriod
 	*/
-	@:overload public function shift(from : Single, to : Single, microseconds : Int) : Void;
+	@:overload @:public public function shift(from : Single, to : Single, microseconds : Int) : Void;
 	
 	/**
 	* Provides a string representation of the control
 	* @return a string description
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }
@@ -246,7 +246,7 @@ package javax.sound.sampled;
 	* @see #REVERB_RETURN
 	* @see #VOLUME
 	*/
-	public static var MASTER_GAIN(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var MASTER_GAIN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the auxiliary send gain on a line.
@@ -254,7 +254,7 @@ package javax.sound.sampled;
 	* @see #MASTER_GAIN
 	* @see #AUX_RETURN
 	*/
-	public static var AUX_SEND(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var AUX_SEND(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the auxiliary return gain on a line.
@@ -262,7 +262,7 @@ package javax.sound.sampled;
 	* @see #MASTER_GAIN
 	* @see #AUX_SEND
 	*/
-	public static var AUX_RETURN(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var AUX_RETURN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the pre-reverb gain on a line.
@@ -273,7 +273,7 @@ package javax.sound.sampled;
 	* @see #REVERB_RETURN
 	* @see EnumControl.Type#REVERB
 	*/
-	public static var REVERB_SEND(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var REVERB_SEND(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the post-reverb gain on a line.
@@ -283,12 +283,12 @@ package javax.sound.sampled;
 	* @see #MASTER_GAIN
 	* @see #REVERB_SEND
 	*/
-	public static var REVERB_RETURN(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var REVERB_RETURN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/*
 	* $$kk: 08.30.99: ISSUE: what units?  linear or dB?
 	*/
-	public static var VOLUME(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var VOLUME(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the relative pan (left-right positioning)
@@ -299,7 +299,7 @@ package javax.sound.sampled;
 	*
 	* @see #BALANCE
 	*/
-	public static var PAN(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var PAN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the relative balance of a stereo signal
@@ -308,7 +308,7 @@ package javax.sound.sampled;
 	*
 	* @see #PAN
 	*/
-	public static var BALANCE(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var BALANCE(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control that changes the sample rate of audio playback.  The net effect
@@ -326,13 +326,13 @@ package javax.sound.sampled;
 	* rate has the effect of doubling the frequencies in the sound's spectrum,
 	* which raises the pitch by an octave.
 	*/
-	public static var SAMPLE_RATE(default, null) : javax.sound.sampled.Control.Control_Type;
+	@:public @:static @:final public static var SAMPLE_RATE(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Constructs a new float control type.
 	* @param name  the name of the new float control type
 	*/
-	@:overload override private function new(name : String) : Void;
+	@:overload @:protected override private function new(name : String) : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package java.awt;
 */
 extern class EventQueue
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Posts a 1.1-style event to the <code>EventQueue</code>.
@@ -37,7 +37,7 @@ extern class EventQueue
 	*          or a subclass of it
 	* @throws NullPointerException if <code>theEvent</code> is <code>null</code>
 	*/
-	@:overload public function postEvent(theEvent : java.awt.AWTEvent) : Void;
+	@:overload @:public public function postEvent(theEvent : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Removes an event from the <code>EventQueue</code> and
@@ -47,14 +47,14 @@ extern class EventQueue
 	* @exception InterruptedException
 	*            if any thread has interrupted this thread
 	*/
-	@:overload public function getNextEvent() : java.awt.AWTEvent;
+	@:overload @:public public function getNextEvent() : java.awt.AWTEvent;
 	
 	/**
 	* Returns the first event on the <code>EventQueue</code>
 	* without removing it.
 	* @return the first event
 	*/
-	@:overload public function peekEvent() : java.awt.AWTEvent;
+	@:overload @:public public function peekEvent() : java.awt.AWTEvent;
 	
 	/**
 	* Returns the first event with the specified id, if any.
@@ -62,7 +62,7 @@ extern class EventQueue
 	* @return the first event of the specified id or <code>null</code>
 	*    if there is no such event
 	*/
-	@:overload public function peekEvent(id : Int) : java.awt.AWTEvent;
+	@:overload @:public public function peekEvent(id : Int) : java.awt.AWTEvent;
 	
 	/**
 	* Dispatches an event. The manner in which the event is
@@ -102,7 +102,7 @@ extern class EventQueue
 	* @throws NullPointerException if <code>event</code> is <code>null</code>
 	* @since           1.2
 	*/
-	@:require(java2) @:overload private function dispatchEvent(event : java.awt.AWTEvent) : Void;
+	@:require(java2) @:overload @:protected private function dispatchEvent(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Returns the timestamp of the most recent event that had a timestamp, and
@@ -132,7 +132,7 @@ extern class EventQueue
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getMostRecentEventTime() : haxe.Int64;
+	@:require(java4) @:overload @:public @:static public static function getMostRecentEventTime() : haxe.Int64;
 	
 	/**
 	* Returns the the event currently being dispatched by the
@@ -146,7 +146,7 @@ extern class EventQueue
 	*         invoked on a thread other than an event dispatching thread
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getCurrentEvent() : java.awt.AWTEvent;
+	@:require(java4) @:overload @:public @:static public static function getCurrentEvent() : java.awt.AWTEvent;
 	
 	/**
 	* Replaces the existing <code>EventQueue</code> with the specified one.
@@ -159,7 +159,7 @@ extern class EventQueue
 	* @throws NullPointerException if <code>newEventQueue</code> is <code>null</code>
 	* @since           1.2
 	*/
-	@:require(java2) @:overload public function push(newEventQueue : java.awt.EventQueue) : Void;
+	@:require(java2) @:overload @:public public function push(newEventQueue : java.awt.EventQueue) : Void;
 	
 	/**
 	* Stops dispatching events using this <code>EventQueue</code>.
@@ -174,7 +174,7 @@ extern class EventQueue
 	* @see      java.awt.EventQueue#push
 	* @since           1.2
 	*/
-	@:require(java2) @:overload private function pop() : Void;
+	@:require(java2) @:overload @:protected private function pop() : Void;
 	
 	/**
 	* Creates a new {@code secondary loop} associated with this
@@ -191,7 +191,7 @@ extern class EventQueue
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function createSecondaryLoop() : java.awt.SecondaryLoop;
+	@:require(java7) @:overload @:public public function createSecondaryLoop() : java.awt.SecondaryLoop;
 	
 	/**
 	* Returns true if the calling thread is
@@ -213,7 +213,7 @@ extern class EventQueue
 	* @see             Toolkit#getSystemEventQueue
 	* @since           1.2
 	*/
-	@:require(java2) @:overload public static function isDispatchThread() : Bool;
+	@:require(java2) @:overload @:public @:static public static function isDispatchThread() : Bool;
 	
 	/**
 	* Causes <code>runnable</code> to have its <code>run</code>
@@ -231,7 +231,7 @@ extern class EventQueue
 	* @see             #isDispatchThread
 	* @since           1.2
 	*/
-	@:require(java2) @:overload public static function invokeLater(runnable : java.lang.Runnable) : Void;
+	@:require(java2) @:overload @:public @:static public static function invokeLater(runnable : java.lang.Runnable) : Void;
 	
 	/**
 	* Causes <code>runnable</code> to have its <code>run</code>
@@ -256,7 +256,7 @@ extern class EventQueue
 	* @see             #isDispatchThread
 	* @since           1.2
 	*/
-	@:require(java2) @:overload public static function invokeAndWait(runnable : java.lang.Runnable) : Void;
+	@:require(java2) @:overload @:public @:static public static function invokeAndWait(runnable : java.lang.Runnable) : Void;
 	
 	
 }

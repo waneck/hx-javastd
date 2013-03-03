@@ -43,7 +43,7 @@ extern class CertificateRevokedException extends java.security.cert.CertificateE
 	*    <code>reason</code>, <code>authority</code>, or
 	*    <code>extensions</code> is <code>null</code>
 	*/
-	@:overload public function new(revocationDate : java.util.Date, reason : java.security.cert.CRLReason, authority : javax.security.auth.x500.X500Principal, extensions : java.util.Map<String, java.security.cert.Extension>) : Void;
+	@:overload @:public public function new(revocationDate : java.util.Date, reason : java.security.cert.CRLReason, authority : javax.security.auth.x500.X500Principal, extensions : java.util.Map<String, java.security.cert.Extension>) : Void;
 	
 	/**
 	* Returns the date on which the certificate was revoked. A new copy is
@@ -52,14 +52,14 @@ extern class CertificateRevokedException extends java.security.cert.CertificateE
 	*
 	* @return the revocation date
 	*/
-	@:overload public function getRevocationDate() : java.util.Date;
+	@:overload @:public public function getRevocationDate() : java.util.Date;
 	
 	/**
 	* Returns the reason the certificate was revoked.
 	*
 	* @return the revocation reason
 	*/
-	@:overload public function getRevocationReason() : java.security.cert.CRLReason;
+	@:overload @:public public function getRevocationReason() : java.security.cert.CRLReason;
 	
 	/**
 	* Returns the name of the authority that signed the certificate's
@@ -68,7 +68,7 @@ extern class CertificateRevokedException extends java.security.cert.CertificateE
 	* @return the <code>X500Principal</code> that represents the name of the
 	*     authority that signed the certificate's revocation status information
 	*/
-	@:overload public function getAuthorityName() : javax.security.auth.x500.X500Principal;
+	@:overload @:public public function getAuthorityName() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Returns the invalidity date, as specifed in the Invalidity Date
@@ -83,7 +83,7 @@ extern class CertificateRevokedException extends java.security.cert.CertificateE
 	*
 	* @return the invalidity date, or <code>null</code> if not specified
 	*/
-	@:overload public function getInvalidityDate() : java.util.Date;
+	@:overload @:public public function getInvalidityDate() : java.util.Date;
 	
 	/**
 	* Returns a map of X.509 extensions containing additional information
@@ -94,9 +94,9 @@ extern class CertificateRevokedException extends java.security.cert.CertificateE
 	* @return an unmodifiable map of X.509 extensions, or an empty map
 	*    if there are no extensions
 	*/
-	@:overload public function getExtensions() : java.util.Map<String, java.security.cert.Extension>;
+	@:overload @:public public function getExtensions() : java.util.Map<String, java.security.cert.Extension>;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* Constructs a new TextArea.  A default model is set, the initial string
 	* is null, and rows/columns are set to 0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new TextArea with the specified text displayed.
@@ -37,7 +37,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @param text the text to be displayed, or null
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs a new empty TextArea with the specified number of
@@ -49,7 +49,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @exception IllegalArgumentException if the rows or columns
 	*  arguments are negative.
 	*/
-	@:overload public function new(rows : Int, columns : Int) : Void;
+	@:overload @:public public function new(rows : Int, columns : Int) : Void;
 	
 	/**
 	* Constructs a new TextArea with the specified text and number
@@ -61,7 +61,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @exception IllegalArgumentException if the rows or columns
 	*  arguments are negative.
 	*/
-	@:overload public function new(text : String, rows : Int, columns : Int) : Void;
+	@:overload @:public public function new(text : String, rows : Int, columns : Int) : Void;
 	
 	/**
 	* Constructs a new JTextArea with the given document model, and defaults
@@ -69,7 +69,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @param doc  the model to use
 	*/
-	@:overload public function new(doc : javax.swing.text.Document) : Void;
+	@:overload @:public public function new(doc : javax.swing.text.Document) : Void;
 	
 	/**
 	* Constructs a new JTextArea with the specified number of rows
@@ -83,7 +83,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @exception IllegalArgumentException if the rows or columns
 	*  arguments are negative.
 	*/
-	@:overload public function new(doc : javax.swing.text.Document, text : String, rows : Int, columns : Int) : Void;
+	@:overload @:public public function new(doc : javax.swing.text.Document, text : String, rows : Int, columns : Int) : Void;
 	
 	/**
 	* Returns the class ID for the UI.
@@ -92,7 +92,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Creates the default implementation of the model
@@ -101,7 +101,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return the default document model
 	*/
-	@:overload private function createDefaultModel() : javax.swing.text.Document;
+	@:overload @:protected private function createDefaultModel() : javax.swing.text.Document;
 	
 	/**
 	* Sets the number of characters to expand tabs to.
@@ -116,7 +116,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*       bound: true
 	* description: the number of characters to expand tabs to
 	*/
-	@:overload public function setTabSize(size : Int) : Void;
+	@:overload @:public public function setTabSize(size : Int) : Void;
 	
 	/**
 	* Gets the number of characters used to expand tabs.  If the document is
@@ -124,7 +124,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return the number of characters
 	*/
-	@:overload public function getTabSize() : Int;
+	@:overload @:public public function getTabSize() : Int;
 	
 	/**
 	* Sets the line-wrapping policy of the text area.  If set
@@ -141,7 +141,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*       bound: true
 	* description: should lines be wrapped
 	*/
-	@:overload public function setLineWrap(wrap : Bool) : Void;
+	@:overload @:public public function setLineWrap(wrap : Bool) : Void;
 	
 	/**
 	* Gets the line-wrapping policy of the text area.  If set
@@ -151,7 +151,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return if lines will be wrapped
 	*/
-	@:overload public function getLineWrap() : Bool;
+	@:overload @:public public function getLineWrap() : Bool;
 	
 	/**
 	* Sets the style of wrapping used if the text area is wrapping
@@ -169,7 +169,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*       bound: true
 	* description: should wrapping occur at word boundaries
 	*/
-	@:overload public function setWrapStyleWord(word : Bool) : Void;
+	@:overload @:public public function setWrapStyleWord(word : Bool) : Void;
 	
 	/**
 	* Gets the style of wrapping used if the text area is wrapping
@@ -182,7 +182,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*  instead of character boundaries
 	* @see #setWrapStyleWord
 	*/
-	@:overload public function getWrapStyleWord() : Bool;
+	@:overload @:public public function getWrapStyleWord() : Bool;
 	
 	/**
 	* Translates an offset into the components text to a
@@ -193,14 +193,14 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @exception BadLocationException thrown if the offset is
 	*   less than zero or greater than the document length.
 	*/
-	@:overload public function getLineOfOffset(offset : Int) : Int;
+	@:overload @:public public function getLineOfOffset(offset : Int) : Int;
 	
 	/**
 	* Determines the number of lines contained in the area.
 	*
 	* @return the number of lines > 0
 	*/
-	@:overload public function getLineCount() : Int;
+	@:overload @:public public function getLineCount() : Int;
 	
 	/**
 	* Determines the offset of the start of the given line.
@@ -212,7 +212,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* lines contained in the document (as reported by
 	* getLineCount).
 	*/
-	@:overload public function getLineStartOffset(line : Int) : Int;
+	@:overload @:public public function getLineStartOffset(line : Int) : Int;
 	
 	/**
 	* Determines the offset of the end of the given line.
@@ -224,7 +224,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* lines contained in the document (as reported by
 	* getLineCount).
 	*/
-	@:overload public function getLineEndOffset(line : Int) : Int;
+	@:overload @:public public function getLineEndOffset(line : Int) : Int;
 	
 	/**
 	* Inserts the specified text at the specified position.  Does nothing
@@ -237,7 +237,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @see TextComponent#setText
 	* @see #replaceRange
 	*/
-	@:overload public function insert(str : String, pos : Int) : Void;
+	@:overload @:public public function insert(str : String, pos : Int) : Void;
 	
 	/**
 	* Appends the given text to the end of the document.  Does nothing if
@@ -246,7 +246,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @param str the text to insert
 	* @see #insert
 	*/
-	@:overload public function append(str : String) : Void;
+	@:overload @:public public function append(str : String) : Void;
 	
 	/**
 	* Replaces text from the indicated start to end position with the
@@ -261,14 +261,14 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @see #insert
 	* @see #replaceRange
 	*/
-	@:overload public function replaceRange(str : String, start : Int, end : Int) : Void;
+	@:overload @:public public function replaceRange(str : String, start : Int, end : Int) : Void;
 	
 	/**
 	* Returns the number of rows in the TextArea.
 	*
 	* @return the number of rows >= 0
 	*/
-	@:overload public function getRows() : Int;
+	@:overload @:public public function getRows() : Int;
 	
 	/**
 	* Sets the number of rows for this TextArea.  Calls invalidate() after
@@ -280,7 +280,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @beaninfo
 	* description: the number of rows preferred for display
 	*/
-	@:overload public function setRows(rows : Int) : Void;
+	@:overload @:public public function setRows(rows : Int) : Void;
 	
 	/**
 	* Defines the meaning of the height of a row.  This defaults to
@@ -288,14 +288,14 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return the height >= 1
 	*/
-	@:overload private function getRowHeight() : Int;
+	@:overload @:protected private function getRowHeight() : Int;
 	
 	/**
 	* Returns the number of columns in the TextArea.
 	*
 	* @return number of columns >= 0
 	*/
-	@:overload public function getColumns() : Int;
+	@:overload @:public public function getColumns() : Int;
 	
 	/**
 	* Sets the number of columns for this TextArea.  Does an invalidate()
@@ -307,7 +307,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @beaninfo
 	* description: the number of columns preferred for display
 	*/
-	@:overload public function setColumns(columns : Int) : Void;
+	@:overload @:public public function setColumns(columns : Int) : Void;
 	
 	/**
 	* Gets column width.
@@ -319,7 +319,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return the column width >= 1
 	*/
-	@:overload private function getColumnWidth() : Int;
+	@:overload @:protected private function getColumnWidth() : Int;
 	
 	/**
 	* Returns the preferred size of the TextArea.  This is the
@@ -328,7 +328,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return the size
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the current font.  This removes cached row height and column
@@ -336,7 +336,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @param f the font to use as the current font
 	*/
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Returns a string representation of this JTextArea. This method
@@ -347,7 +347,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	*
 	* @return  a string representation of this JTextArea.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Returns true if a viewport should always force the width of this
@@ -358,7 +358,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @return true if a viewport should force the Scrollables width
 	* to match its own.
 	*/
-	@:overload override public function getScrollableTracksViewportWidth() : Bool;
+	@:overload @:public override public function getScrollableTracksViewportWidth() : Bool;
 	
 	/**
 	* Returns the preferred size of the viewport if this component
@@ -369,7 +369,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @return The preferredSize of a JViewport whose view is this Scrollable.
 	* @see JViewport#getPreferredSize
 	*/
-	@:overload override public function getPreferredScrollableViewportSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredScrollableViewportSize() : java.awt.Dimension;
 	
 	/**
 	* Components that display logical rows or columns should compute
@@ -392,7 +392,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @see #getRowHeight
 	* @see #getColumnWidth
 	*/
-	@:overload override public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
+	@:overload @:public override public function getScrollableUnitIncrement(visibleRect : java.awt.Rectangle, orientation : Int, direction : Int) : Int;
 	
 	/**
 	* Gets the AccessibleContext associated with this JTextArea.
@@ -403,7 +403,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @return an AccessibleJTextArea that serves as the
 	*         AccessibleContext of this JTextArea
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -431,7 +431,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

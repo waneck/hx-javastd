@@ -32,7 +32,7 @@ extern interface PlatformManagedObject
 	* @return an {@link ObjectName ObjectName} instance representing
 	* the object name of this platform managed object.
 	*/
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

@@ -30,45 +30,45 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	*
 	* @author Karl Helgason
 	*/
-	public static var CHORUS_SEND(default, null) : javax.sound.sampled.FloatControl.FloatControl_Type;
+	@:public @:static @:final public static var CHORUS_SEND(default, null) : javax.sound.sampled.FloatControl.FloatControl_Type;
 	
-	private var leftgain : Single;
+	@:protected private var leftgain : Single;
 	
-	private var rightgain : Single;
+	@:protected private var rightgain : Single;
 	
-	private var eff1gain : Single;
+	@:protected private var eff1gain : Single;
 	
-	private var eff2gain : Single;
+	@:protected private var eff2gain : Single;
 	
-	private var listeners : java.util.List<javax.sound.sampled.LineListener>;
+	@:protected private var listeners : java.util.List<javax.sound.sampled.LineListener>;
 	
-	private var control_mutex : Dynamic;
+	@:protected private var control_mutex : Dynamic;
 	
-	private var mixer : com.sun.media.sound.SoftMixingMixer;
+	@:protected private var mixer : com.sun.media.sound.SoftMixingMixer;
 	
-	private var info : javax.sound.sampled.DataLine.DataLine_Info;
+	@:protected private var info : javax.sound.sampled.DataLine.DataLine_Info;
 	
-	@:overload @:abstract private function processControlLogic() : Void;
+	@:overload @:protected @:abstract private function processControlLogic() : Void;
 	
-	@:overload @:abstract private function processAudioLogic(buffers : java.NativeArray<com.sun.media.sound.SoftAudioBuffer>) : Void;
+	@:overload @:protected @:abstract private function processAudioLogic(buffers : java.NativeArray<com.sun.media.sound.SoftAudioBuffer>) : Void;
 	
-	@:overload private function new(mixer : com.sun.media.sound.SoftMixingMixer, info : javax.sound.sampled.DataLine.DataLine_Info) : Void;
+	@:overload @:protected private function new(mixer : com.sun.media.sound.SoftMixingMixer, info : javax.sound.sampled.DataLine.DataLine_Info) : Void;
 	
-	@:overload private function calcVolume() : Void;
+	@:overload @:protected private function calcVolume() : Void;
 	
-	@:overload private function sendEvent(event : javax.sound.sampled.LineEvent) : Void;
+	@:overload @:protected private function sendEvent(event : javax.sound.sampled.LineEvent) : Void;
 	
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
-	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
-	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Opens the line, indicating that it should acquire any required
@@ -114,7 +114,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see Clip#open(AudioFormat, byte[], int, int)
 	* @see Clip#open(AudioInputStream)
 	*/
-	@:overload public function open() : Void;
+	@:overload @:public @:public @:public public function open() : Void;
 	
 	/**
 	* Obtains the maximum number of bytes of data that will fit in the data line's
@@ -126,7 +126,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	*
 	* @return the size of the buffer in bytes
 	*/
-	@:overload public function getBufferSize() : Int;
+	@:overload @:public @:public public function getBufferSize() : Int;
 	
 	/**
 	* Obtains the current position in the audio data, in microseconds.
@@ -139,7 +139,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	*
 	* @return the number of microseconds of data processed since the line was opened
 	*/
-	@:overload public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public @:public @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -149,7 +149,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @return the number of frames already processed since the line was opened
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLongFramePosition() : haxe.Int64;
+	@:require(java5) @:overload @:public @:public @:public @:public public function getLongFramePosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current volume level for the line.  This level is a measure
@@ -161,7 +161,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @return the current amplitude of the signal in this line, or
 	* <code>{@link AudioSystem#NOT_SPECIFIED}</code>
 	*/
-	@:overload public function getLevel() : Single;
+	@:overload @:public @:public public function getLevel() : Single;
 	
 	/**
 	* Closes the line, indicating that any system resources
@@ -175,7 +175,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #isOpen
 	* @see LineEvent
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public @:public public function close() : Void;
 	
 	/**
 	* Indicates whether the line is engaging in active I/O (such as playback
@@ -191,7 +191,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see LineEvent
 	* @see LineListener
 	*/
-	@:overload public function isActive() : Bool;
+	@:overload @:public @:public public function isActive() : Bool;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -203,7 +203,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @return the number of frames already processed since the line was opened
 	* @see #getLongFramePosition()
 	*/
-	@:overload public function getFramePosition() : Int;
+	@:overload @:public @:public @:public @:public public function getFramePosition() : Int;
 	
 	/**
 	* Flushes queued data from the line.  The flushed data is discarded.
@@ -219,7 +219,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #stop()
 	* @see #drain()
 	*/
-	@:overload public function flush() : Void;
+	@:overload @:public @:public @:public public function flush() : Void;
 	
 	/**
 	* Stops the line.  A stopped line should cease I/O activity.
@@ -237,7 +237,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #flush()
 	* @see LineEvent
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public @:public public function stop() : Void;
 	
 	/**
 	* Obtains the number of bytes of data currently available to the
@@ -258,7 +258,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	*
 	* @return the amount of data available, in bytes
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public @:public @:public public function available() : Int;
 	
 	/**
 	* Drains queued data from the line by continuing data I/O until the
@@ -273,7 +273,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	*
 	* @see #flush()
 	*/
-	@:overload public function drain() : Void;
+	@:overload @:public @:public @:public public function drain() : Void;
 	
 	/**
 	* Allows a line to engage in data I/O.  If invoked on a line
@@ -287,7 +287,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #isRunning()
 	* @see LineEvent
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public @:public public function start() : Void;
 	
 	/**
 	* Indicates whether the line is running.  The default is <code>false</code>.
@@ -299,7 +299,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #start()
 	* @see #stop()
 	*/
-	@:overload public function isRunning() : Bool;
+	@:overload @:public @:public public function isRunning() : Bool;
 	
 	/**
 	* Indicates whether the line is open, meaning that it has reserved
@@ -310,7 +310,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload @:public public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Obtains the current format (encoding, sample rate, number of channels,
@@ -329,75 +329,75 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @return current audio data format
 	* @see AudioFormat
 	*/
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$AudioFloatInputStreamResampler') extern class SoftMixingDataLine_AudioFloatInputStreamResampler extends com.sun.media.sound.AudioFloatInputStream
 {
-	@:overload public function new(ais : com.sun.media.sound.AudioFloatInputStream, format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function new(ais : com.sun.media.sound.AudioFloatInputStream, format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public override public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload override public function getFrameLength() : haxe.Int64;
+	@:overload @:public override public function getFrameLength() : haxe.Int64;
 	
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload @:public override public function mark(readlimit : Int) : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<Single>, off : Int, len : Int) : Int;
 	
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload override public function skip(len : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(len : haxe.Int64) : haxe.Int64;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$Gain') @:internal extern class SoftMixingDataLine_Gain extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload @:public override public function setValue(newValue : Single) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$Mute') @:internal extern class SoftMixingDataLine_Mute extends javax.sound.sampled.BooleanControl
 {
-	@:overload public function setValue(newValue : Bool) : Void;
+	@:overload @:public override public function setValue(newValue : Bool) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$ApplyReverb') @:internal extern class SoftMixingDataLine_ApplyReverb extends javax.sound.sampled.BooleanControl
 {
-	@:overload public function setValue(newValue : Bool) : Void;
+	@:overload @:public override public function setValue(newValue : Bool) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$Balance') @:internal extern class SoftMixingDataLine_Balance extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload @:public override public function setValue(newValue : Single) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$Pan') @:internal extern class SoftMixingDataLine_Pan extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload @:public override public function setValue(newValue : Single) : Void;
 	
-	@:overload override public function getValue() : Single;
+	@:overload @:public override public function getValue() : Single;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$ReverbSend') @:internal extern class SoftMixingDataLine_ReverbSend extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload @:public override public function setValue(newValue : Single) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$ChorusSend') @:internal extern class SoftMixingDataLine_ChorusSend extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload @:public override public function setValue(newValue : Single) : Void;
 	
 	
 }

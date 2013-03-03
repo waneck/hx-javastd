@@ -31,7 +31,7 @@ extern class PerformanceLogger
 	* perform the same GetPropertyAction check as above to determine whether
 	* to enable performance logging.
 	*/
-	@:overload public static function loggingEnabled() : Bool;
+	@:overload @:public @:static public static function loggingEnabled() : Bool;
 	
 	/**
 	* Sets the start time.  Ideally, this is the earliest time available
@@ -39,13 +39,13 @@ extern class PerformanceLogger
 	* later used to analyze the difference between the initial startup
 	* time and other events in the system (such as an applet's init time).
 	*/
-	@:overload public static function setStartTime(message : String) : Void;
+	@:overload @:public @:static public static function setStartTime(message : String) : Void;
 	
 	/**
 	* Sets the base time, output can then
 	* be displayed as offsets from the base time;.
 	*/
-	@:overload public static function setBaseTime(time : haxe.Int64) : Void;
+	@:overload @:public @:static public static function setBaseTime(time : haxe.Int64) : Void;
 	
 	/**
 	* Sets the start time.
@@ -54,20 +54,20 @@ extern class PerformanceLogger
 	* get the time itself.  This is done in case the time was
 	* recorded much earlier than this method was called.
 	*/
-	@:overload public static function setStartTime(message : String, time : haxe.Int64) : Void;
+	@:overload @:public @:static public static function setStartTime(message : String, time : haxe.Int64) : Void;
 	
 	/**
 	* Gets the start time, which should be the time when
 	* the java process started, prior to the VM actually being
 	* loaded.
 	*/
-	@:overload public static function getStartTime() : haxe.Int64;
+	@:overload @:public @:static public static function getStartTime() : haxe.Int64;
 	
 	/**
 	* Sets the value of a given time and returns the index of the
 	* slot that that time was stored in.
 	*/
-	@:overload public static function setTime(message : String) : Int;
+	@:overload @:public @:static public static function setTime(message : String) : Int;
 	
 	/**
 	* Sets the value of a given time and returns the index of the
@@ -77,28 +77,28 @@ extern class PerformanceLogger
 	* get the time itself.  This is done in case the time was
 	* recorded much earlier than this method was called.
 	*/
-	@:overload public static function setTime(message : String, time : haxe.Int64) : Int;
+	@:overload @:public @:static public static function setTime(message : String, time : haxe.Int64) : Int;
 	
 	/**
 	* Returns time at given index.
 	*/
-	@:overload public static function getTimeAtIndex(index : Int) : haxe.Int64;
+	@:overload @:public @:static public static function getTimeAtIndex(index : Int) : haxe.Int64;
 	
 	/**
 	* Returns message at given index.
 	*/
-	@:overload public static function getMessageAtIndex(index : Int) : String;
+	@:overload @:public @:static public static function getMessageAtIndex(index : Int) : String;
 	
 	/**
 	* Outputs all data to parameter-specified Writer object
 	*/
-	@:overload public static function outputLog(writer : java.io.Writer) : Void;
+	@:overload @:public @:static public static function outputLog(writer : java.io.Writer) : Void;
 	
 	/**
 	* Outputs all data to whatever location the user specified
 	* via sun.perflog command-line parameter.
 	*/
-	@:overload public static function outputLog() : Void;
+	@:overload @:public @:static public static function outputLog() : Void;
 	
 	
 }

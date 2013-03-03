@@ -31,7 +31,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @throws RemoteException if failed to export object
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload private function new() : Void;
+	@:require(java1) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates and exports a new UnicastRemoteObject object using the
@@ -41,7 +41,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @throws RemoteException if failed to export object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new(port : Int) : Void;
+	@:require(java2) @:overload @:protected private function new(port : Int) : Void;
 	
 	/**
 	* Creates and exports a new UnicastRemoteObject object using the
@@ -54,7 +54,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @throws RemoteException if failed to export object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
+	@:require(java2) @:overload @:protected private function new(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : Void;
 	
 	/**
 	* Returns a clone of the remote object that is distinct from
@@ -65,7 +65,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @return the new remote object
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function clone() : Dynamic;
+	@:require(java1) @:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Exports the remote object to make it available to receive incoming
@@ -75,7 +75,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @exception RemoteException if export fails
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function exportObject(obj : java.rmi.Remote) : java.rmi.server.RemoteStub;
+	@:require(java1) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote) : java.rmi.server.RemoteStub;
 	
 	/**
 	* Exports the remote object to make it available to receive incoming
@@ -86,7 +86,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @exception RemoteException if export fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function exportObject(obj : java.rmi.Remote, port : Int) : java.rmi.Remote;
+	@:require(java2) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote, port : Int) : java.rmi.Remote;
 	
 	/**
 	* Exports the remote object to make it available to receive incoming
@@ -100,7 +100,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* @exception RemoteException if export fails
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function exportObject(obj : java.rmi.Remote, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
+	@:require(java2) @:overload @:public @:static public static function exportObject(obj : java.rmi.Remote, port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : java.rmi.Remote;
 	
 	/**
 	* Removes the remote object, obj, from the RMI runtime. If
@@ -120,7 +120,7 @@ extern class UnicastRemoteObject extends java.rmi.server.RemoteServer
 	* currently exported
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
+	@:require(java2) @:overload @:public @:static public static function unexportObject(obj : java.rmi.Remote, force : Bool) : Bool;
 	
 	
 }

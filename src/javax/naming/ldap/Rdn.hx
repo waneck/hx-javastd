@@ -39,7 +39,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @throws InvalidNameException If contents of <tt>attrSet</tt> cannot
 	*          be used to construct a valid RDN.
 	*/
-	@:overload public function new(attrSet : javax.naming.directory.Attributes) : Void;
+	@:overload @:public public function new(attrSet : javax.naming.directory.Attributes) : Void;
 	
 	/**
 	* Constructs an Rdn from the given string.
@@ -52,7 +52,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @throws InvalidNameException If a syntax error occurs during
 	*                  parsing of the rdnString.
 	*/
-	@:overload public function new(rdnString : String) : Void;
+	@:overload @:public public function new(rdnString : String) : Void;
 	
 	/**
 	* Constructs an Rdn from the given <tt>rdn</tt>.
@@ -60,7 +60,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* created Rdn.
 	* @param rdn The non-null Rdn to be copied.
 	*/
-	@:overload public function new(rdn : javax.naming.ldap.Rdn) : Void;
+	@:overload @:public public function new(rdn : javax.naming.ldap.Rdn) : Void;
 	
 	/**
 	* Constructs an Rdn from the given attribute type and
@@ -76,7 +76,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	*                  construct a valid RDN.
 	* @see #toString()
 	*/
-	@:overload public function new(type : String, value : Dynamic) : Void;
+	@:overload @:public public function new(type : String, value : Dynamic) : Void;
 	
 	/**
 	* Retrieves one of this Rdn's value.
@@ -89,7 +89,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	*
 	* @return The non-null attribute value.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Retrieves one of this Rdn's type.
@@ -105,7 +105,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	*
 	* @return The non-null attribute type.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
 	/**
 	* Returns this Rdn as a string represented in a format defined by
@@ -114,7 +114,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	*
 	* @return The string representation of the Rdn.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares this Rdn with the specified Object for order.
@@ -135,7 +135,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @exception ClassCastException if obj is null or not a Rdn.
 	* <p>
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Compares the specified Object with this Rdn for equality.
@@ -158,7 +158,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @return true if the specified object is equal to this Rdn.
 	* @see #hashCode()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code of this RDN. Two RDNs that are
@@ -168,7 +168,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @return An int representing the hash code of this Rdn.
 	* @see #equals
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Retrieves the {@link javax.naming.directory.Attributes Attributes}
@@ -177,13 +177,13 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @return  The non-null attributes containing the type/value
 	*          mappings of this Rdn.
 	*/
-	@:overload public function toAttributes() : javax.naming.directory.Attributes;
+	@:overload @:public public function toAttributes() : javax.naming.directory.Attributes;
 	
 	/**
 	* Retrieves the number of attribute type/value pairs in this Rdn.
 	* @return The non-negative number of type/value pairs in this Rdn.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Given the value of an attribute, returns a string escaped according
@@ -200,7 +200,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @return Escaped string value.
 	* @throws ClassCastException if val is is not a String or byte array.
 	*/
-	@:overload public static function escapeValue(val : Dynamic) : String;
+	@:overload @:public @:static public static function escapeValue(val : Dynamic) : String;
 	
 	/**
 	* Given an attribute value string formated according to the rules
@@ -222,19 +222,19 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* @throws          IllegalArgumentException When an Illegal value
 	*                  is provided.
 	*/
-	@:overload public static function unescapeValue(val : String) : Dynamic;
+	@:overload @:public @:static public static function unescapeValue(val : String) : Dynamic;
 	
 	
 }
 @:native('javax$naming$ldap$Rdn$RdnEntry') @:internal extern class Rdn_RdnEntry implements java.lang.Comparable<Dynamic>
 {
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

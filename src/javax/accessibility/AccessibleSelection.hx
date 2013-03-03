@@ -51,7 +51,7 @@ extern interface AccessibleSelection
 	*
 	* @return the number of items currently selected.
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns an Accessible representing the specified selected child
@@ -65,7 +65,7 @@ extern interface AccessibleSelection
 	* @return the i-th selected child
 	* @see #getAccessibleSelectionCount
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Determines if the current child of this object is selected.
@@ -74,7 +74,7 @@ extern interface AccessibleSelection
 	* @param i the zero-based index of the child in this Accessible object.
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Adds the specified Accessible child of the object to the object's
@@ -86,7 +86,7 @@ extern interface AccessibleSelection
 	* @param i the zero-based index of the child
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the specified child of the object from the object's
@@ -96,19 +96,19 @@ extern interface AccessibleSelection
 	* @param i the zero-based index of the child
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that no children in the
 	* object are selected.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Causes every child of the object to be selected
 	* if the object supports multiple selections.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Opens or creates a file for reading and/or writing, returning an
@@ -148,7 +148,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	*          SecurityManager#checkWrite(String)} method is invoked to check
 	*          write access if the file is opened for writing
 	*/
-	@:overload public static function open(file : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, executor : java.util.concurrent.ExecutorService, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.AsynchronousFileChannel;
+	@:overload @:public @:static public static function open(file : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, executor : java.util.concurrent.ExecutorService, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.AsynchronousFileChannel;
 	
 	/**
 	* Opens or creates a file for reading and/or writing, returning an
@@ -192,7 +192,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	*          SecurityManager#checkWrite(String)} method is invoked to check
 	*          write access if the file is opened for writing
 	*/
-	@:overload public static function open(file : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.channels.AsynchronousFileChannel;
+	@:overload @:public @:static public static function open(file : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.channels.AsynchronousFileChannel;
 	
 	/**
 	* Returns the current size of this channel's file.
@@ -204,7 +204,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function size() : haxe.Int64;
+	@:overload @:public @:abstract public function size() : haxe.Int64;
 	
 	/**
 	* Truncates this channel's file to the given size.
@@ -231,7 +231,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function truncate(size : haxe.Int64) : java.nio.channels.AsynchronousFileChannel;
+	@:overload @:public @:abstract public function truncate(size : haxe.Int64) : java.nio.channels.AsynchronousFileChannel;
 	
 	/**
 	* Forces any updates to this channel's file to be written to the storage
@@ -276,7 +276,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function force(metaData : Bool) : Void;
+	@:overload @:public @:abstract public function force(metaData : Bool) : Void;
 	
 	/**
 	* Acquires a lock on the given region of this channel's file.
@@ -345,7 +345,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonWritableChannelException
 	*          If {@code shared} is false but this channel was not opened for writing
 	*/
-	@:overload @:abstract public function lock<A>(position : haxe.Int64, size : haxe.Int64, shared : Bool, attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
+	@:overload @:public @:abstract public function lock<A>(position : haxe.Int64, size : haxe.Int64, shared : Bool, attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
 	
 	/**
 	* Acquires an exclusive lock on this channel's file.
@@ -373,7 +373,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonWritableChannelException
 	*          If this channel was not opened for writing
 	*/
-	@:overload @:final public function lock<A>(attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
+	@:overload @:public @:final public function lock<A>(attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
 	
 	/**
 	* Acquires a lock on the given region of this channel's file.
@@ -410,7 +410,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonWritableChannelException
 	*          If {@code shared} is false but this channel was not opened for writing
 	*/
-	@:overload @:abstract public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.util.concurrent.Future<java.nio.channels.FileLock>;
+	@:overload @:public @:abstract public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.util.concurrent.Future<java.nio.channels.FileLock>;
 	
 	/**
 	* Acquires an exclusive lock on this channel's file.
@@ -434,7 +434,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonWritableChannelException
 	*          If this channel was not opened for writing
 	*/
-	@:overload @:final public function lock() : java.util.concurrent.Future<java.nio.channels.FileLock>;
+	@:overload @:public @:final public function lock() : java.util.concurrent.Future<java.nio.channels.FileLock>;
 	
 	/**
 	* Attempts to acquire a lock on the given region of this channel's file.
@@ -482,7 +482,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @see     #lock(long,long,boolean,Object,CompletionHandler)
 	* @see     #tryLock()
 	*/
-	@:overload @:abstract public function tryLock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
+	@:overload @:public @:abstract public function tryLock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
 	
 	/**
 	* Attempts to acquire an exclusive lock on this channel's file.
@@ -514,7 +514,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @see     #lock(long,long,boolean,Object,CompletionHandler)
 	* @see     #tryLock(long,long,boolean)
 	*/
-	@:overload @:final public function tryLock() : java.nio.channels.FileLock;
+	@:overload @:public @:final public function tryLock() : java.nio.channels.FileLock;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffer,
@@ -547,7 +547,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonReadableChannelException
 	*          If this channel was not opened for reading
 	*/
-	@:overload @:abstract public function read<A>(dst : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:abstract public function read<A>(dst : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffer,
@@ -579,7 +579,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonReadableChannelException
 	*          If this channel was not opened for reading
 	*/
-	@:overload @:abstract public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:abstract public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffer, starting
@@ -608,7 +608,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonWritableChannelException
 	*          If this channel was not opened for writing
 	*/
-	@:overload @:abstract public function write<A>(src : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:public @:abstract public function write<A>(src : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffer, starting
@@ -641,14 +641,14 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  NonWritableChannelException
 	*          If this channel was not opened for writing
 	*/
-	@:overload @:abstract public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:public @:abstract public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -664,7 +664,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

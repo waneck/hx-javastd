@@ -29,7 +29,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* A <code>String</code> constant containing the standard format
 	* name, <code>"javax_imageio_1.0"</code>.
 	*/
-	public static var standardMetadataFormatName(default, null) : String;
+	@:public @:static @:final public static var standardMetadataFormatName(default, null) : String;
 	
 	/**
 	* Constructs a blank <code>IIOMetadataFormatImpl</code> instance,
@@ -47,7 +47,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>childPolicy</code> is
 	* not one of the predefined constants.
 	*/
-	@:overload public function new(rootName : String, childPolicy : Int) : Void;
+	@:overload @:public public function new(rootName : String, childPolicy : Int) : Void;
 	
 	/**
 	* Constructs a blank <code>IIOMetadataFormatImpl</code> instance,
@@ -65,7 +65,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>minChildren</code>
 	* is negative or larger than <code>maxChildren</code>.
 	*/
-	@:overload public function new(rootName : String, minChildren : Int, maxChildren : Int) : Void;
+	@:overload @:public public function new(rootName : String, minChildren : Int, maxChildren : Int) : Void;
 	
 	/**
 	* Sets a new base name for locating <code>ResourceBundle</code>s
@@ -84,7 +84,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	*
 	* @see #getResourceBaseName
 	*/
-	@:overload private function setResourceBaseName(resourceBaseName : String) : Void;
+	@:overload @:protected private function setResourceBaseName(resourceBaseName : String) : Void;
 	
 	/**
 	* Returns the currently set base name for locating
@@ -94,7 +94,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	*
 	* @see #setResourceBaseName
 	*/
-	@:overload private function getResourceBaseName() : String;
+	@:overload @:protected private function getResourceBaseName() : String;
 	
 	/**
 	* Adds a new element type to this metadata document format with a
@@ -113,7 +113,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>childPolicy</code>
 	* is not one of the predefined constants.
 	*/
-	@:overload private function addElement(elementName : String, parentName : String, childPolicy : Int) : Void;
+	@:overload @:protected private function addElement(elementName : String, parentName : String, childPolicy : Int) : Void;
 	
 	/**
 	* Adds a new element type to this metadata document format with a
@@ -131,7 +131,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>minChildren</code>
 	* is negative or larger than <code>maxChildren</code>.
 	*/
-	@:overload private function addElement(elementName : String, parentName : String, minChildren : Int, maxChildren : Int) : Void;
+	@:overload @:protected private function addElement(elementName : String, parentName : String, minChildren : Int, maxChildren : Int) : Void;
 	
 	/**
 	* Adds an existing element to the list of legal children for a
@@ -149,7 +149,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* is <code>null</code>, or is not a legal element name for this
 	* format.
 	*/
-	@:overload private function addChildElement(elementName : String, parentName : String) : Void;
+	@:overload @:protected private function addChildElement(elementName : String, parentName : String) : Void;
 	
 	/**
 	* Removes an element from the format.  If no element with the
@@ -158,7 +158,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	*
 	* @param elementName the name of the element to be removed.
 	*/
-	@:overload private function removeElement(elementName : String) : Void;
+	@:overload @:protected private function removeElement(elementName : String) : Void;
 	
 	/**
 	* Adds a new attribute to a previously defined element that may
@@ -180,7 +180,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>dataType</code> is
 	* not one of the predefined constants.
 	*/
-	@:overload private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, defaultValue : String) : Void;
+	@:overload @:protected private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, defaultValue : String) : Void;
 	
 	/**
 	* Adds a new attribute to a previously defined element that will
@@ -213,7 +213,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* <code>enumeratedValues</code> contains an element that is not a
 	* <code>String</code> or is <code>null</code>.
 	*/
-	@:overload private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, defaultValue : String, enumeratedValues : java.util.List<String>) : Void;
+	@:overload @:protected private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, defaultValue : String, enumeratedValues : java.util.List<String>) : Void;
 	
 	/**
 	* Adds a new attribute to a previously defined element that will
@@ -245,7 +245,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>dataType</code> is
 	* not one of the predefined constants.
 	*/
-	@:overload private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, defaultValue : String, minValue : String, maxValue : String, minInclusive : Bool, maxInclusive : Bool) : Void;
+	@:overload @:protected private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, defaultValue : String, minValue : String, maxValue : String, minInclusive : Bool, maxInclusive : Bool) : Void;
 	
 	/**
 	* Adds a new attribute to a previously defined element that will
@@ -270,7 +270,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* <code>listMinLength</code> is negative or larger than
 	* <code>listMaxLength</code>.
 	*/
-	@:overload private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, listMinLength : Int, listMaxLength : Int) : Void;
+	@:overload @:protected private function addAttribute(elementName : String, attrName : String, dataType : Int, required : Bool, listMinLength : Int, listMaxLength : Int) : Void;
 	
 	/**
 	* Adds a new attribute to a previously defined element that will
@@ -292,7 +292,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>attrName</code> is
 	* <code>null</code>.
 	*/
-	@:overload private function addBooleanAttribute(elementName : String, attrName : String, hasDefaultValue : Bool, defaultValue : Bool) : Void;
+	@:overload @:protected private function addBooleanAttribute(elementName : String, attrName : String, hasDefaultValue : Bool, defaultValue : Bool) : Void;
 	
 	/**
 	* Removes an attribute from a previously defined element.  If no
@@ -305,7 +305,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>elementName</code>
 	* is <code>null</code>, or is not a legal element name for this format.
 	*/
-	@:overload private function removeAttribute(elementName : String, attrName : String) : Void;
+	@:overload @:protected private function removeAttribute(elementName : String, attrName : String) : Void;
 	
 	/**
 	* Allows an <code>Object</code> reference of a given class type
@@ -326,7 +326,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>elementName</code>
 	* is <code>null</code>, or is not a legal element name for this format.
 	*/
-	@:overload private function addObjectValue<T>(elementName : String, classType : Class<T>, required : Bool, defaultValue : T) : Void;
+	@:overload @:protected private function addObjectValue<T>(elementName : String, classType : Class<T>, required : Bool, defaultValue : T) : Void;
 	
 	/**
 	* Allows an <code>Object</code> reference of a given class type
@@ -359,7 +359,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* an instance of the class type denoted by <code>classType</code>
 	* or is <code>null</code>.
 	*/
-	@:overload private function addObjectValue<T>(elementName : String, classType : Class<T>, required : Bool, defaultValue : T, enumeratedValues : java.util.List<T>) : Void;
+	@:overload @:protected private function addObjectValue<T>(elementName : String, classType : Class<T>, required : Bool, defaultValue : T, enumeratedValues : java.util.List<T>) : Void;
 	
 	/**
 	* Allows an <code>Object</code> reference of a given class type
@@ -391,7 +391,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* is <code>null</code>, or is not a legal element name for this
 	* format.
 	*/
-	@:overload private function addObjectValue<T : Dynamic, java.lang.Comparable<T>>(elementName : String, classType : Class<T>, defaultValue : T, minValue : java.lang.Comparable<T>, maxValue : java.lang.Comparable<T>, minInclusive : Bool, maxInclusive : Bool) : Void;
+	@:overload @:protected private function addObjectValue<T : Dynamic, java.lang.Comparable<T>>(elementName : String, classType : Class<T>, defaultValue : T, minValue : java.lang.Comparable<T>, maxValue : java.lang.Comparable<T>, minInclusive : Bool, maxInclusive : Bool) : Void;
 	
 	/**
 	* Allows an <code>Object</code> reference of a given class type
@@ -413,7 +413,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>elementName</code> is
 	* not a legal element name for this format.
 	*/
-	@:overload private function addObjectValue(elementName : String, classType : Class<Dynamic>, arrayMinLength : Int, arrayMaxLength : Int) : Void;
+	@:overload @:protected private function addObjectValue(elementName : String, classType : Class<Dynamic>, arrayMinLength : Int, arrayMaxLength : Int) : Void;
 	
 	/**
 	* Disallows an <code>Object</code> reference from being stored in
@@ -424,15 +424,15 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	* @exception IllegalArgumentException if <code>elementName</code> is
 	* not a legal element name for this format.
 	*/
-	@:overload private function removeObjectValue(elementName : String) : Void;
+	@:overload @:protected private function removeObjectValue(elementName : String) : Void;
 	
-	@:overload public function getRootName() : String;
+	@:overload @:public public function getRootName() : String;
 	
-	@:overload @:abstract public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
+	@:overload @:public @:abstract public function canNodeAppear(elementName : String, imageType : javax.imageio.ImageTypeSpecifier) : Bool;
 	
-	@:overload public function getElementMinChildren(elementName : String) : Int;
+	@:overload @:public public function getElementMinChildren(elementName : String) : Int;
 	
-	@:overload public function getElementMaxChildren(elementName : String) : Int;
+	@:overload @:public public function getElementMaxChildren(elementName : String) : Int;
 	
 	/**
 	* Returns a <code>String</code> containing a description of the
@@ -464,31 +464,31 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	*
 	* @see #setResourceBaseName
 	*/
-	@:overload public function getElementDescription(elementName : String, locale : java.util.Locale) : String;
+	@:overload @:public public function getElementDescription(elementName : String, locale : java.util.Locale) : String;
 	
-	@:overload public function getChildPolicy(elementName : String) : Int;
+	@:overload @:public public function getChildPolicy(elementName : String) : Int;
 	
-	@:overload public function getChildNames(elementName : String) : java.NativeArray<String>;
+	@:overload @:public public function getChildNames(elementName : String) : java.NativeArray<String>;
 	
-	@:overload public function getAttributeNames(elementName : String) : java.NativeArray<String>;
+	@:overload @:public public function getAttributeNames(elementName : String) : java.NativeArray<String>;
 	
-	@:overload public function getAttributeValueType(elementName : String, attrName : String) : Int;
+	@:overload @:public public function getAttributeValueType(elementName : String, attrName : String) : Int;
 	
-	@:overload public function getAttributeDataType(elementName : String, attrName : String) : Int;
+	@:overload @:public public function getAttributeDataType(elementName : String, attrName : String) : Int;
 	
-	@:overload public function isAttributeRequired(elementName : String, attrName : String) : Bool;
+	@:overload @:public public function isAttributeRequired(elementName : String, attrName : String) : Bool;
 	
-	@:overload public function getAttributeDefaultValue(elementName : String, attrName : String) : String;
+	@:overload @:public public function getAttributeDefaultValue(elementName : String, attrName : String) : String;
 	
-	@:overload public function getAttributeEnumerations(elementName : String, attrName : String) : java.NativeArray<String>;
+	@:overload @:public public function getAttributeEnumerations(elementName : String, attrName : String) : java.NativeArray<String>;
 	
-	@:overload public function getAttributeMinValue(elementName : String, attrName : String) : String;
+	@:overload @:public public function getAttributeMinValue(elementName : String, attrName : String) : String;
 	
-	@:overload public function getAttributeMaxValue(elementName : String, attrName : String) : String;
+	@:overload @:public public function getAttributeMaxValue(elementName : String, attrName : String) : String;
 	
-	@:overload public function getAttributeListMinLength(elementName : String, attrName : String) : Int;
+	@:overload @:public public function getAttributeListMinLength(elementName : String, attrName : String) : Int;
 	
-	@:overload public function getAttributeListMaxLength(elementName : String, attrName : String) : Int;
+	@:overload @:public public function getAttributeListMaxLength(elementName : String, attrName : String) : Int;
 	
 	/**
 	* Returns a <code>String</code> containing a description of the
@@ -526,23 +526,23 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	*
 	* @see #setResourceBaseName
 	*/
-	@:overload public function getAttributeDescription(elementName : String, attrName : String, locale : java.util.Locale) : String;
+	@:overload @:public public function getAttributeDescription(elementName : String, attrName : String, locale : java.util.Locale) : String;
 	
-	@:overload public function getObjectValueType(elementName : String) : Int;
+	@:overload @:public public function getObjectValueType(elementName : String) : Int;
 	
-	@:overload public function getObjectClass(elementName : String) : Class<Dynamic>;
+	@:overload @:public public function getObjectClass(elementName : String) : Class<Dynamic>;
 	
-	@:overload public function getObjectDefaultValue(elementName : String) : Dynamic;
+	@:overload @:public public function getObjectDefaultValue(elementName : String) : Dynamic;
 	
-	@:overload public function getObjectEnumerations(elementName : String) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getObjectEnumerations(elementName : String) : java.NativeArray<Dynamic>;
 	
-	@:overload public function getObjectMinValue(elementName : String) : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getObjectMinValue(elementName : String) : java.lang.Comparable<Dynamic>;
 	
-	@:overload public function getObjectMaxValue(elementName : String) : java.lang.Comparable<Dynamic>;
+	@:overload @:public public function getObjectMaxValue(elementName : String) : java.lang.Comparable<Dynamic>;
 	
-	@:overload public function getObjectArrayMinLength(elementName : String) : Int;
+	@:overload @:public public function getObjectArrayMinLength(elementName : String) : Int;
 	
-	@:overload public function getObjectArrayMaxLength(elementName : String) : Int;
+	@:overload @:public public function getObjectArrayMaxLength(elementName : String) : Int;
 	
 	/**
 	* Returns an <code>IIOMetadataFormat</code> object describing the
@@ -552,7 +552,7 @@ extern class IIOMetadataFormatImpl implements javax.imageio.metadata.IIOMetadata
 	*
 	* @return a predefined <code>IIOMetadataFormat</code> instance.
 	*/
-	@:overload public static function getStandardFormatInstance() : javax.imageio.metadata.IIOMetadataFormat;
+	@:overload @:public @:static public static function getStandardFormatInstance() : javax.imageio.metadata.IIOMetadataFormat;
 	
 	
 }

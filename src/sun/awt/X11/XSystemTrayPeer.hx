@@ -25,13 +25,13 @@ package sun.awt.X11;
 */
 extern class XSystemTrayPeer implements java.awt.peer.SystemTrayPeer implements sun.awt.X11.XMSelectionListener
 {
-	@:overload public function ownerChanged(screen : Int, sel : sun.awt.X11.XMSelection, newOwner : haxe.Int64, data : haxe.Int64, timestamp : haxe.Int64) : Void;
+	@:overload @:public public function ownerChanged(screen : Int, sel : sun.awt.X11.XMSelection, newOwner : haxe.Int64, data : haxe.Int64, timestamp : haxe.Int64) : Void;
 	
-	@:overload public function ownerDeath(screen : Int, sel : sun.awt.X11.XMSelection, deadOwner : haxe.Int64) : Void;
+	@:overload @:public public function ownerDeath(screen : Int, sel : sun.awt.X11.XMSelection, deadOwner : haxe.Int64) : Void;
 	
-	@:overload public function selectionChanged(screen : Int, sel : sun.awt.X11.XMSelection, owner : haxe.Int64, event : sun.awt.X11.XPropertyEvent) : Void;
+	@:overload @:public public function selectionChanged(screen : Int, sel : sun.awt.X11.XMSelection, owner : haxe.Int64, event : sun.awt.X11.XPropertyEvent) : Void;
 	
-	@:overload public function getTrayIconSize() : java.awt.Dimension;
+	@:overload @:public public function getTrayIconSize() : java.awt.Dimension;
 	
 	
 }

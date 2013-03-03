@@ -25,13 +25,13 @@ package sun.swing.plaf.windows;
 */
 extern class ClassicSortArrowIcon implements javax.swing.Icon implements javax.swing.plaf.UIResource implements java.io.Serializable
 {
-	@:overload public function new(ascending : Bool) : Void;
+	@:overload @:public public function new(ascending : Bool) : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

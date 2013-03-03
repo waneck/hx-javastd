@@ -37,11 +37,11 @@ package sun.security.provider.certpath;
 	* Initializes the internal state of the checker from parameters
 	* specified in the constructor
 	*/
-	@:overload override public function init(forward : Bool) : Void;
+	@:overload @:public override public function init(forward : Bool) : Void;
 	
-	@:overload override public function isForwardCheckingSupported() : Bool;
+	@:overload @:public override public function isForwardCheckingSupported() : Bool;
 	
-	@:overload override public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload @:public override public function getSupportedExtensions() : java.util.Set<String>;
 	
 	/**
 	* Sends an OCSPRequest for the certificate to the OCSP Server and
@@ -52,7 +52,7 @@ package sun.security.provider.certpath;
 	* @exception CertPathValidatorException Exception is thrown if the
 	*            certificate has been revoked.
 	*/
-	@:overload override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
+	@:overload @:public override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
 	
 	
 }

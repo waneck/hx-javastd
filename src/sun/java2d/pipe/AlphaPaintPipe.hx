@@ -25,21 +25,21 @@ package sun.java2d.pipe;
 */
 extern class AlphaPaintPipe implements sun.java2d.pipe.CompositePipe
 {
-	@:overload public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, abox : java.NativeArray<Int>) : Dynamic;
+	@:overload @:public public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, abox : java.NativeArray<Int>) : Dynamic;
 	
-	@:overload public function needTile(context : Dynamic, x : Int, y : Int, w : Int, h : Int) : Bool;
+	@:overload @:public public function needTile(context : Dynamic, x : Int, y : Int, w : Int, h : Int) : Bool;
 	
-	@:overload public function renderPathTile(ctx : Dynamic, atile : java.NativeArray<java.StdTypes.Int8>, offset : Int, tilesize : Int, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function renderPathTile(ctx : Dynamic, atile : java.NativeArray<java.StdTypes.Int8>, offset : Int, tilesize : Int, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function skipTile(context : Dynamic, x : Int, y : Int) : Void;
+	@:overload @:public public function skipTile(context : Dynamic, x : Int, y : Int) : Void;
 	
-	@:overload public function endSequence(ctx : Dynamic) : Void;
+	@:overload @:public public function endSequence(ctx : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$pipe$AlphaPaintPipe$TileContext') @:internal extern class AlphaPaintPipe_TileContext
 {
-	@:overload public function new(sg : sun.java2d.SunGraphics2D, pc : java.awt.PaintContext) : Void;
+	@:overload @:public public function new(sg : sun.java2d.SunGraphics2D, pc : java.awt.PaintContext) : Void;
 	
 	
 }

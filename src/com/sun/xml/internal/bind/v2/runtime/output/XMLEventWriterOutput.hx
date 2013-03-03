@@ -25,23 +25,23 @@ package com.sun.xml.internal.bind.v2.runtime.output;
 */
 extern class XMLEventWriterOutput extends com.sun.xml.internal.bind.v2.runtime.output.XmlOutputAbstractImpl
 {
-	@:overload public function new(out : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload @:public public function new(out : javax.xml.stream.XMLEventWriter) : Void;
 	
-	@:overload override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload @:public override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
-	@:overload override public function endDocument(fragment : Bool) : Void;
+	@:overload @:public override public function endDocument(fragment : Bool) : Void;
 	
-	@:overload override public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload @:public override public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload override public function endStartTag() : Void;
+	@:overload @:public override public function endStartTag() : Void;
 	
-	@:overload override public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function endTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
 	
 	
 }

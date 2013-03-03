@@ -30,16 +30,16 @@ extern class DefaultColorSelectionModel implements javax.swing.colorchooser.Colo
 	* since the event's only (read-only) state is the source property.
 	* The source of events generated here is always "this".
 	*/
-	@:transient private var changeEvent : javax.swing.event.ChangeEvent;
+	@:protected @:transient private var changeEvent : javax.swing.event.ChangeEvent;
 	
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Creates a <code>DefaultColorSelectionModel</code> with the
 	* current color set to <code>Color.white</code>.  This is
 	* the default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>DefaultColorSelectionModel</code> with the
@@ -50,7 +50,7 @@ extern class DefaultColorSelectionModel implements javax.swing.colorchooser.Colo
 	*
 	* @param color the new <code>Color</code>
 	*/
-	@:overload public function new(color : java.awt.Color) : Void;
+	@:overload @:public public function new(color : java.awt.Color) : Void;
 	
 	/**
 	* Returns the selected <code>Color</code> which should be
@@ -58,7 +58,7 @@ extern class DefaultColorSelectionModel implements javax.swing.colorchooser.Colo
 	*
 	* @return the selected <code>Color</code>
 	*/
-	@:overload public function getSelectedColor() : java.awt.Color;
+	@:overload @:public public function getSelectedColor() : java.awt.Color;
 	
 	/**
 	* Sets the selected color to <code>color</code>.
@@ -71,20 +71,20 @@ extern class DefaultColorSelectionModel implements javax.swing.colorchooser.Colo
 	*
 	* @param color the new <code>Color</code>
 	*/
-	@:overload public function setSelectedColor(color : java.awt.Color) : Void;
+	@:overload @:public public function setSelectedColor(color : java.awt.Color) : Void;
 	
 	/**
 	* Adds a <code>ChangeListener</code> to the model.
 	*
 	* @param l the <code>ChangeListener</code> to be added
 	*/
-	@:overload public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code> from the model.
 	* @param l the <code>ChangeListener</code> to be removed
 	*/
-	@:overload public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(l : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -95,7 +95,7 @@ extern class DefaultColorSelectionModel implements javax.swing.colorchooser.Colo
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Runs each <code>ChangeListener</code>'s
@@ -104,7 +104,7 @@ extern class DefaultColorSelectionModel implements javax.swing.colorchooser.Colo
 	* <!-- @see #setRangeProperties    //bad link-->
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	
 }

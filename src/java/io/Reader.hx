@@ -53,13 +53,13 @@ package java.io;
 	* the object in this field rather than <tt>this</tt> or a synchronized
 	* method.
 	*/
-	private var lock : Dynamic;
+	@:protected private var lock : Dynamic;
 	
 	/**
 	* Creates a new character-stream reader whose critical sections will
 	* synchronize on the reader itself.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a new character-stream reader whose critical sections will
@@ -67,7 +67,7 @@ package java.io;
 	*
 	* @param lock  The Object to synchronize on.
 	*/
-	@:overload private function new(lock : Dynamic) : Void;
+	@:overload @:protected private function new(lock : Dynamic) : Void;
 	
 	/**
 	* Attempts to read characters into the specified character buffer.
@@ -83,7 +83,7 @@ package java.io;
 	* @throws ReadOnlyBufferException if target is a read only buffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function read(target : java.nio.CharBuffer) : Int;
+	@:require(java5) @:overload @:public public function read(target : java.nio.CharBuffer) : Int;
 	
 	/**
 	* Reads a single character.  This method will block until a character is
@@ -98,7 +98,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function read() : Int;
+	@:overload @:public public function read() : Int;
 	
 	/**
 	* Reads characters into an array.  This method will block until some input
@@ -112,7 +112,7 @@ package java.io;
 	*
 	* @exception   IOException  If an I/O error occurs
 	*/
-	@:overload public function read(cbuf : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:overload @:public public function read(cbuf : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	/**
 	* Reads characters into a portion of an array.  This method will block
@@ -128,7 +128,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload @:abstract public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:abstract @:public public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips characters.  This method will block until some characters are
@@ -141,7 +141,7 @@ package java.io;
 	* @exception  IllegalArgumentException  If <code>n</code> is negative.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tells whether this stream is ready to be read.
@@ -152,7 +152,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload public function ready() : Bool;
+	@:overload @:public public function ready() : Bool;
 	
 	/**
 	* Tells whether this stream supports the mark() operation. The default
@@ -161,7 +161,7 @@ package java.io;
 	*
 	* @return true if and only if this stream supports the mark operation.
 	*/
-	@:overload public function markSupported() : Bool;
+	@:overload @:public public function markSupported() : Bool;
 	
 	/**
 	* Marks the present position in the stream.  Subsequent calls to reset()
@@ -176,7 +176,7 @@ package java.io;
 	* @exception  IOException  If the stream does not support mark(),
 	*                          or if some other I/O error occurs
 	*/
-	@:overload public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the stream.  If the stream has been marked, then attempt to
@@ -191,7 +191,7 @@ package java.io;
 	*                          or if the stream does not support reset(),
 	*                          or if some other I/O error occurs
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Closes the stream and releases any system resources associated with
@@ -201,7 +201,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:abstract @:public public function close() : Void;
 	
 	
 }

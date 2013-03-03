@@ -35,7 +35,7 @@ extern interface Certificate
 	* @return the guarantor which guaranteed the principal-key
 	* binding.
 	*/
-	@:overload @:abstract public function getGuarantor() : java.security.Principal;
+	@:overload @:public @:abstract public function getGuarantor() : java.security.Principal;
 	
 	/**
 	* Returns the principal of the principal-key pair being guaranteed by
@@ -43,7 +43,7 @@ extern interface Certificate
 	*
 	* @return the principal to which this certificate is bound.
 	*/
-	@:overload @:abstract public function getPrincipal() : java.security.Principal;
+	@:overload @:public @:abstract public function getPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the key of the principal-key pair being guaranteed by
@@ -52,7 +52,7 @@ extern interface Certificate
 	* @return the public key that this certificate certifies belongs
 	* to a particular principal.
 	*/
-	@:overload @:abstract public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public @:abstract public function getPublicKey() : java.security.PublicKey;
 	
 	/**
 	* Encodes the certificate to an output stream in a format that can
@@ -70,7 +70,7 @@ extern interface Certificate
 	* @see #decode
 	* @see #getFormat
 	*/
-	@:overload @:abstract public function encode(stream : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function encode(stream : java.io.OutputStream) : Void;
 	
 	/**
 	* Decodes a certificate from an input stream. The format should be
@@ -89,7 +89,7 @@ extern interface Certificate
 	* @see #encode
 	* @see #getFormat
 	*/
-	@:overload @:abstract public function decode(stream : java.io.InputStream) : Void;
+	@:overload @:public @:abstract public function decode(stream : java.io.InputStream) : Void;
 	
 	/**
 	* Returns the name of the coding format. This is used as a hint to find
@@ -99,7 +99,7 @@ extern interface Certificate
 	*
 	* @return the name of the coding format.
 	*/
-	@:overload @:abstract public function getFormat() : String;
+	@:overload @:public @:abstract public function getFormat() : String;
 	
 	/**
 	* Returns a string that represents the contents of the certificate.
@@ -109,7 +109,7 @@ extern interface Certificate
 	*
 	* @return a string representing the contents of the certificate
 	*/
-	@:overload public function toString(detailed : Bool) : String;
+	@:overload @:public public function toString(detailed : Bool) : String;
 	
 	
 }

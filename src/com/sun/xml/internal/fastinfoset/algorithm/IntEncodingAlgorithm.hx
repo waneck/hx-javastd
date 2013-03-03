@@ -27,33 +27,33 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class IntEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.IntegerEncodingAlgorithm
 {
-	@:overload @:final public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload @:public override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:final public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function decodeFromBytesToIntArray(idata : java.NativeArray<Int>, istart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function decodeFromBytesToIntArray(idata : java.NativeArray<Int>, istart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function decodeFromInputStreamToIntArray(s : java.io.InputStream) : java.NativeArray<Int>;
+	@:overload @:public @:final public function decodeFromInputStreamToIntArray(s : java.io.InputStream) : java.NativeArray<Int>;
 	
-	@:overload @:final public function encodeToOutputStreamFromIntArray(idata : java.NativeArray<Int>, s : java.io.OutputStream) : Void;
+	@:overload @:public @:final public function encodeToOutputStreamFromIntArray(idata : java.NativeArray<Int>, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function encodeToBytesFromIntArray(idata : java.NativeArray<Int>, istart : Int, ilength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final public function encodeToBytesFromIntArray(idata : java.NativeArray<Int>, istart : Int, ilength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function convertToCharactersFromIntArray(idata : java.NativeArray<Int>, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final public function convertToCharactersFromIntArray(idata : java.NativeArray<Int>, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<Int>;
+	@:overload @:public @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<Int>;
 	
 	
 }

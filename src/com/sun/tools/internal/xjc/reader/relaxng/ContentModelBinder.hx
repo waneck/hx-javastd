@@ -25,19 +25,19 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 */
 @:internal extern class ContentModelBinder extends com.sun.xml.internal.rngom.digested.DPatternWalker
 {
-	@:overload public function new(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler, clazz : com.sun.tools.internal.xjc.model.CClassInfo) : Void;
+	@:overload @:public public function new(compiler : com.sun.tools.internal.xjc.reader.relaxng.RELAXNGCompiler, clazz : com.sun.tools.internal.xjc.model.CClassInfo) : Void;
 	
-	@:overload override public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
+	@:overload @:public override public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
 	
-	@:overload override public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
+	@:overload @:public override public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
 	
-	@:overload override public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
+	@:overload @:public override public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
 	
-	@:overload override public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
+	@:overload @:public override public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
 	
-	@:overload override public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
+	@:overload @:public override public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
 	
-	@:overload override public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
+	@:overload @:public override public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
 	
 	
 }

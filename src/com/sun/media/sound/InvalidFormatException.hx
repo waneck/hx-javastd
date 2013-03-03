@@ -31,9 +31,9 @@ package com.sun.media.sound;
 */
 extern class InvalidFormatException extends com.sun.media.sound.InvalidDataException
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

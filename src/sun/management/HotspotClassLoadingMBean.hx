@@ -32,7 +32,7 @@ extern interface HotspotClassLoadingMBean
 	* @return the amount of memory in bytes occupied by loaded classes
 	* in the Java virtual machine.
 	*/
-	@:overload public function getLoadedClassSize() : haxe.Int64;
+	@:overload @:public public function getLoadedClassSize() : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that the Java virtual machine
@@ -41,7 +41,7 @@ extern interface HotspotClassLoadingMBean
 	* @return the number of bytes that the VM collected due to
 	* class unloading.
 	*/
-	@:overload public function getUnloadedClassSize() : haxe.Int64;
+	@:overload @:public public function getUnloadedClassSize() : haxe.Int64;
 	
 	/**
 	* Returns the accumulated elapsed time spent by class loading
@@ -50,7 +50,7 @@ extern interface HotspotClassLoadingMBean
 	* @return the accumulated elapsed time spent by class loading
 	* in milliseconds.
 	*/
-	@:overload public function getClassLoadingTime() : haxe.Int64;
+	@:overload @:public public function getClassLoadingTime() : haxe.Int64;
 	
 	/**
 	* Returns the amount of memory in bytes occupied by the method
@@ -59,14 +59,14 @@ extern interface HotspotClassLoadingMBean
 	* @return the amount of memory in bytes occupied by the method
 	* data.
 	*/
-	@:overload public function getMethodDataSize() : haxe.Int64;
+	@:overload @:public public function getMethodDataSize() : haxe.Int64;
 	
 	/**
 	* Returns the number of classes for which initializers were run.
 	*
 	* @return the number of classes for which initializers were run.
 	*/
-	@:overload public function getInitializedClassCount() : haxe.Int64;
+	@:overload @:public public function getInitializedClassCount() : haxe.Int64;
 	
 	/**
 	* Returns the accumulated elapsed time spent in class initializers
@@ -75,7 +75,7 @@ extern interface HotspotClassLoadingMBean
 	* @return the accumulated elapsed time spent in class initializers
 	* in milliseconds.
 	*/
-	@:overload public function getClassInitializationTime() : haxe.Int64;
+	@:overload @:public public function getClassInitializationTime() : haxe.Int64;
 	
 	/**
 	* Returns the accumulated elapsed time spent in class verifier
@@ -84,7 +84,7 @@ extern interface HotspotClassLoadingMBean
 	* @return the accumulated elapsed time spent in class verifier
 	* in milliseconds.
 	*/
-	@:overload public function getClassVerificationTime() : haxe.Int64;
+	@:overload @:public public function getClassVerificationTime() : haxe.Int64;
 	
 	/**
 	* Returns a list of internal counters maintained in the Java
@@ -93,7 +93,7 @@ extern interface HotspotClassLoadingMBean
 	* @return a list of internal counters maintained in the VM
 	* for the class loading system.
 	*/
-	@:overload public function getInternalClassLoadingCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalClassLoadingCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

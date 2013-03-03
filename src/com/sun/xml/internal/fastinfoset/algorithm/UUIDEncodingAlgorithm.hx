@@ -27,11 +27,11 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class UUIDEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.LongEncodingAlgorithm
 {
-	@:overload @:final public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
 	
 }

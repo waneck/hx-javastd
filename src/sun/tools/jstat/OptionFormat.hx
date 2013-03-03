@@ -32,29 +32,29 @@ extern class OptionFormat
 	* @author Brian Doherty
 	* @since 1.5
 	*/
-	@:require(java5) private var name : String;
+	@:require(java5) @:protected private var name : String;
 	
-	private var children : java.util.List<sun.tools.jstat.OptionFormat>;
+	@:protected private var children : java.util.List<sun.tools.jstat.OptionFormat>;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function addSubFormat(f : sun.tools.jstat.OptionFormat) : Void;
+	@:overload @:public public function addSubFormat(f : sun.tools.jstat.OptionFormat) : Void;
 	
-	@:overload public function getSubFormat(index : Int) : sun.tools.jstat.OptionFormat;
+	@:overload @:public public function getSubFormat(index : Int) : sun.tools.jstat.OptionFormat;
 	
-	@:overload public function insertSubFormat(index : Int, f : sun.tools.jstat.OptionFormat) : Void;
+	@:overload @:public public function insertSubFormat(index : Int, f : sun.tools.jstat.OptionFormat) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function apply(c : sun.tools.jstat.Closure) : Void;
+	@:overload @:public public function apply(c : sun.tools.jstat.Closure) : Void;
 	
-	@:overload public function printFormat() : Void;
+	@:overload @:public public function printFormat() : Void;
 	
-	@:overload public function printFormat(indentLevel : Int) : Void;
+	@:overload @:public public function printFormat(indentLevel : Int) : Void;
 	
 	
 }

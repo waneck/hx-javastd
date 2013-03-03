@@ -32,7 +32,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* @param   name the name of the serializable field
 	* @param   type the <code>Class</code> object of the serializable field
 	*/
-	@:overload public function new(name : String, type : Class<Dynamic>) : Void;
+	@:overload @:public public function new(name : String, type : Class<Dynamic>) : Void;
 	
 	/**
 	* Creates an ObjectStreamField representing a serializable field with the
@@ -51,7 +51,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	*          manner as writeUnshared/readUnshared
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function new(name : String, type : Class<Dynamic>, unshared : Bool) : Void;
+	@:require(java4) @:overload @:public public function new(name : String, type : Class<Dynamic>, unshared : Bool) : Void;
 	
 	/**
 	* Get the name of this field.
@@ -59,7 +59,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* @return  a <code>String</code> representing the name of the serializable
 	*          field
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Get the type of the field.  If the type is non-primitive and this
@@ -71,7 +71,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* @return  a <code>Class</code> object representing the type of the
 	*          serializable field
 	*/
-	@:overload public function getType() : Class<Dynamic>;
+	@:overload @:public public function getType() : Class<Dynamic>;
 	
 	/**
 	* Returns character encoding of field type.  The encoding is as follows:
@@ -90,14 +90,14 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	*
 	* @return  the typecode of the serializable field
 	*/
-	@:overload public function getTypeCode() : java.StdTypes.Char16;
+	@:overload @:public public function getTypeCode() : java.StdTypes.Char16;
 	
 	/**
 	* Return the JVM type signature.
 	*
 	* @return  null if this field has a primitive type.
 	*/
-	@:overload public function getTypeString() : String;
+	@:overload @:public public function getTypeString() : String;
 	
 	/**
 	* Offset of field within instance data.
@@ -105,7 +105,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* @return  the offset of this field
 	* @see #setOffset
 	*/
-	@:overload public function getOffset() : Int;
+	@:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Offset within instance data.
@@ -113,14 +113,14 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* @param   offset the offset of the field
 	* @see #getOffset
 	*/
-	@:overload private function setOffset(offset : Int) : Void;
+	@:overload @:protected private function setOffset(offset : Int) : Void;
 	
 	/**
 	* Return true if this field has a primitive type.
 	*
 	* @return  true if and only if this field corresponds to a primitive type
 	*/
-	@:overload public function isPrimitive() : Bool;
+	@:overload @:public public function isPrimitive() : Bool;
 	
 	/**
 	* Returns boolean value indicating whether or not the serializable field
@@ -128,7 +128,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isUnshared() : Bool;
+	@:require(java4) @:overload @:public public function isUnshared() : Bool;
 	
 	/**
 	* Compare this field with another <code>ObjectStreamField</code>.  Return
@@ -136,12 +136,12 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* primitives are "smaller" than object types.  If equal, the field names
 	* are compared.
 	*/
-	@:overload public function compareTo(obj : Dynamic) : Int;
+	@:overload @:public public function compareTo(obj : Dynamic) : Int;
 	
 	/**
 	* Return a string that describes this field.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -28,39 +28,39 @@ extern class ProgressEvent extends java.util.EventObject
 	/**
 	* Construct a ProgressEvent object.
 	*/
-	@:overload public function new(source : sun.net.ProgressSource, url : java.net.URL, method : String, contentType : String, state : sun.net.ProgressSource.ProgressSource_State, progress : haxe.Int64, expected : haxe.Int64) : Void;
+	@:overload @:public public function new(source : sun.net.ProgressSource, url : java.net.URL, method : String, contentType : String, state : sun.net.ProgressSource.ProgressSource_State, progress : haxe.Int64, expected : haxe.Int64) : Void;
 	
 	/**
 	* Return URL related to the progress.
 	*/
-	@:overload public function getURL() : java.net.URL;
+	@:overload @:public public function getURL() : java.net.URL;
 	
 	/**
 	* Return method associated with URL.
 	*/
-	@:overload public function getMethod() : String;
+	@:overload @:public public function getMethod() : String;
 	
 	/**
 	* Return content type of the URL.
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Return current progress value.
 	*/
-	@:overload public function getProgress() : haxe.Int64;
+	@:overload @:public public function getProgress() : haxe.Int64;
 	
 	/**
 	* Return expected maximum progress value; -1 if expected is unknown.
 	*/
-	@:overload public function getExpected() : haxe.Int64;
+	@:overload @:public public function getExpected() : haxe.Int64;
 	
 	/**
 	* Return state.
 	*/
-	@:overload public function getState() : sun.net.ProgressSource.ProgressSource_State;
+	@:overload @:public public function getState() : sun.net.ProgressSource.ProgressSource_State;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

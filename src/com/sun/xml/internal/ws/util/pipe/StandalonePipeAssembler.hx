@@ -33,14 +33,14 @@ extern class StandalonePipeAssembler implements com.sun.xml.internal.ws.api.pipe
 	* @author Kohsuke Kawaguchi
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function createClient(context : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createClient(context : com.sun.xml.internal.ws.api.pipe.ClientPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	/**
 	* On Server-side, HandlerChains cannot be changed after it is deployed.
 	* During assembling the Pipelines, we can decide if we really need a
 	* SOAPHandlerPipe and LogicalHandlerPipe for a particular Endpoint.
 	*/
-	@:overload public function createServer(context : com.sun.xml.internal.ws.api.pipe.ServerPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
+	@:overload @:public public function createServer(context : com.sun.xml.internal.ws.api.pipe.ServerPipeAssemblerContext) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	
 }

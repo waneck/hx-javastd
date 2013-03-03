@@ -42,7 +42,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	*
 	* @author Hans Muller
 	*/
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Adds a listener to the list that's notified each time a change
@@ -50,7 +50,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	*
 	* @param l the <code>ListDataListener</code> to be added
 	*/
-	@:overload public function addListDataListener(l : javax.swing.event.ListDataListener) : Void;
+	@:overload @:public public function addListDataListener(l : javax.swing.event.ListDataListener) : Void;
 	
 	/**
 	* Removes a listener from the list that's notified each time a
@@ -58,7 +58,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	*
 	* @param l the <code>ListDataListener</code> to be removed
 	*/
-	@:overload public function removeListDataListener(l : javax.swing.event.ListDataListener) : Void;
+	@:overload @:public public function removeListDataListener(l : javax.swing.event.ListDataListener) : Void;
 	
 	/**
 	* Returns an array of all the list data listeners
@@ -73,7 +73,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getListDataListeners() : java.NativeArray<javax.swing.event.ListDataListener>;
+	@:require(java4) @:overload @:public public function getListDataListeners() : java.NativeArray<javax.swing.event.ListDataListener>;
 	
 	/**
 	* <code>AbstractListModel</code> subclasses must call this method
@@ -89,7 +89,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	* @see EventListenerList
 	* @see DefaultListModel
 	*/
-	@:overload private function fireContentsChanged(source : Dynamic, index0 : Int, index1 : Int) : Void;
+	@:overload @:protected private function fireContentsChanged(source : Dynamic, index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* <code>AbstractListModel</code> subclasses must call this method
@@ -105,7 +105,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	* @see EventListenerList
 	* @see DefaultListModel
 	*/
-	@:overload private function fireIntervalAdded(source : Dynamic, index0 : Int, index1 : Int) : Void;
+	@:overload @:protected private function fireIntervalAdded(source : Dynamic, index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* <code>AbstractListModel</code> subclasses must call this method
@@ -122,7 +122,7 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	* @see EventListenerList
 	* @see DefaultListModel
 	*/
-	@:overload private function fireIntervalRemoved(source : Dynamic, index0 : Int, index1 : Int) : Void;
+	@:overload @:protected private function fireIntervalRemoved(source : Dynamic, index0 : Int, index1 : Int) : Void;
 	
 	/**
 	* Returns an array of all the objects currently registered as
@@ -159,20 +159,20 @@ extern class AbstractListModel<E> implements javax.swing.ListModel<E> implements
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the value at the specified index.
 	* @param index the requested index
 	* @return the value at <code>index</code>
 	*/
-	@:overload public function getElementAt(index : Int) : E;
+	@:overload @:public public function getElementAt(index : Int) : E;
 	
 	/**
 	* Returns the length of the list.
 	* @return the length of the list
 	*/
-	@:overload public function getSize() : Int;
+	@:overload @:public public function getSize() : Int;
 	
 	
 }

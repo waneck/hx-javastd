@@ -47,59 +47,59 @@ extern interface HTMLTableRowElement extends org.w3c.dom.html.HTMLElement
 	* <code>THEAD</code> , <code>TFOOT</code> , or <code>TBODY</code> )
 	* within the table.
 	*/
-	@:overload public function getRowIndex() : Int;
+	@:overload @:public public function getRowIndex() : Int;
 	
 	/**
 	*  The index of this row, relative to the current section (
 	* <code>THEAD</code> , <code>TFOOT</code> , or <code>TBODY</code> ),
 	* starting from 0.
 	*/
-	@:overload public function getSectionRowIndex() : Int;
+	@:overload @:public public function getSectionRowIndex() : Int;
 	
 	/**
 	*  The collection of cells in this row.
 	*/
-	@:overload public function getCells() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getCells() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  Horizontal alignment of data within cells of this row. See the  align
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Background color for rows. See the  bgcolor attribute definition in
 	* HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getBgColor() : String;
+	@:overload @:public public function getBgColor() : String;
 	
-	@:overload public function setBgColor(bgColor : String) : Void;
+	@:overload @:public public function setBgColor(bgColor : String) : Void;
 	
 	/**
 	*  Alignment character for cells in a column. See the  char attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getCh() : String;
+	@:overload @:public public function getCh() : String;
 	
-	@:overload public function setCh(ch : String) : Void;
+	@:overload @:public public function setCh(ch : String) : Void;
 	
 	/**
 	*  Offset of alignment character. See the  charoff attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getChOff() : String;
+	@:overload @:public public function getChOff() : String;
 	
-	@:overload public function setChOff(chOff : String) : Void;
+	@:overload @:public public function setChOff(chOff : String) : Void;
 	
 	/**
 	*  Vertical alignment of data within cells of this row. See the  valign
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getVAlign() : String;
+	@:overload @:public public function getVAlign() : String;
 	
-	@:overload public function setVAlign(vAlign : String) : Void;
+	@:overload @:public public function setVAlign(vAlign : String) : Void;
 	
 	/**
 	*  Insert an empty <code>TD</code> cell into this row. If
@@ -111,7 +111,7 @@ extern interface HTMLTableRowElement extends org.w3c.dom.html.HTMLElement
 	*    INDEX_SIZE_ERR: Raised if the specified <code>index</code> is
 	*   greater than the number of cells or if the index is negative.
 	*/
-	@:overload public function insertCell(index : Int) : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function insertCell(index : Int) : org.w3c.dom.html.HTMLElement;
 	
 	/**
 	*  Delete a cell from the current row.
@@ -121,7 +121,7 @@ extern interface HTMLTableRowElement extends org.w3c.dom.html.HTMLElement
 	*   greater than or equal to the number of cells or if the index is
 	*   negative.
 	*/
-	@:overload public function deleteCell(index : Int) : Void;
+	@:overload @:public public function deleteCell(index : Int) : Void;
 	
 	
 }

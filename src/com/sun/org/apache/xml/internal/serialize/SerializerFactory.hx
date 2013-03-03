@@ -27,19 +27,19 @@ extern class SerializerFactory
 	* @author <a href="mailto:Scott_Boag/CAM/Lotus@lotus.com">Scott Boag</a>
 	* @author <a href="mailto:arkin@intalio.com">Assaf Arkin</a>
 	*/
-	public static var FactoriesProperty(default, null) : String;
+	@:public @:static @:final public static var FactoriesProperty(default, null) : String;
 	
 	/**
 	* Register a serializer factory, keyed by the given
 	* method string.
 	*/
-	@:overload public static function registerSerializerFactory(factory : com.sun.org.apache.xml.internal.serialize.SerializerFactory) : Void;
+	@:overload @:public @:static public static function registerSerializerFactory(factory : com.sun.org.apache.xml.internal.serialize.SerializerFactory) : Void;
 	
 	/**
 	* Register a serializer factory, keyed by the given
 	* method string.
 	*/
-	@:overload public static function getSerializerFactory(method : String) : com.sun.org.apache.xml.internal.serialize.SerializerFactory;
+	@:overload @:public @:static public static function getSerializerFactory(method : String) : com.sun.org.apache.xml.internal.serialize.SerializerFactory;
 	
 	/**
 	* Returns the method supported by this factory and used to register
@@ -48,7 +48,7 @@ extern class SerializerFactory
 	* protected, it is only required by this class but must be implemented
 	* in derived classes.
 	*/
-	@:overload @:abstract private function getSupportedMethod() : String;
+	@:overload @:protected @:abstract private function getSupportedMethod() : String;
 	
 	/**
 	* Create a new serializer based on the {@link OutputFormat}.
@@ -56,14 +56,14 @@ extern class SerializerFactory
 	* Serializer#setOutputByteStream} or {@link Serializer#setOutputCharStream}
 	* methods must be called before serializing a document.
 	*/
-	@:overload @:abstract public function makeSerializer(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
+	@:overload @:public @:abstract public function makeSerializer(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
 	
 	/**
 	* Create a new serializer, based on the {@link OutputFormat} and
 	* using the writer as the output character stream.  If this
 	* method is used, the encoding property will be ignored.
 	*/
-	@:overload @:abstract public function makeSerializer(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
+	@:overload @:public @:abstract public function makeSerializer(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
 	
 	/**
 	* Create a new serializer, based on the {@link OutputFormat} and
@@ -73,7 +73,7 @@ extern class SerializerFactory
 	* @throws UnsupportedEncodingException The specified encoding is
 	*   not supported
 	*/
-	@:overload @:abstract public function makeSerializer(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
+	@:overload @:public @:abstract public function makeSerializer(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : com.sun.org.apache.xml.internal.serialize.Serializer;
 	
 	
 }

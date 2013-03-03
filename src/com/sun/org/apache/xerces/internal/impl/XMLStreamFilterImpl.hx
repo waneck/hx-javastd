@@ -26,81 +26,81 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLStreamFilterImpl implements javax.xml.stream.XMLStreamReader
 {
 	/** Creates a new instance of XMLStreamFilterImpl */
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, filter : javax.xml.stream.StreamFilter) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, filter : javax.xml.stream.StreamFilter) : Void;
 	
 	/**
 	*
 	* @param sf
 	*/
-	@:overload private function setStreamFilter(sf : javax.xml.stream.StreamFilter) : Void;
+	@:overload @:protected private function setStreamFilter(sf : javax.xml.stream.StreamFilter) : Void;
 	
 	/**
 	*
 	* @return
 	* @throws XMLStreamException
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	*
 	* @throws XMLStreamException
 	* @return
 	*/
-	@:overload public function nextTag() : Int;
+	@:overload @:public public function nextTag() : Int;
 	
 	/**
 	*
 	* @throws XMLStreamException
 	* @return
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	*
 	* @throws XMLStreamException
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getAttributeCount() : Int;
-	
-	/**
-	*
-	* @param index
-	* @return
-	*/
-	@:overload public function getAttributeName(index : Int) : javax.xml.namespace.QName;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	*
 	* @param index
 	* @return
 	*/
-	@:overload public function getAttributeNamespace(index : Int) : String;
+	@:overload @:public public function getAttributeName(index : Int) : javax.xml.namespace.QName;
 	
 	/**
 	*
 	* @param index
 	* @return
 	*/
-	@:overload public function getAttributePrefix(index : Int) : String;
+	@:overload @:public public function getAttributeNamespace(index : Int) : String;
 	
 	/**
 	*
 	* @param index
 	* @return
 	*/
-	@:overload public function getAttributeType(index : Int) : String;
+	@:overload @:public public function getAttributePrefix(index : Int) : String;
 	
 	/**
 	*
 	* @param index
 	* @return
 	*/
-	@:overload public function getAttributeValue(index : Int) : String;
+	@:overload @:public public function getAttributeType(index : Int) : String;
+	
+	/**
+	*
+	* @param index
+	* @return
+	*/
+	@:overload @:public public function getAttributeValue(index : Int) : String;
 	
 	/**
 	*
@@ -108,107 +108,107 @@ extern class XMLStreamFilterImpl implements javax.xml.stream.XMLStreamReader
 	* @param localName
 	* @return
 	*/
-	@:overload public function getAttributeValue(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeValue(namespaceURI : String, localName : String) : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/**
 	*
 	* @throws XMLStreamException
 	* @return
 	*/
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getNamespaceCount() : Int;
-	
-	/**
-	*
-	* @param index
-	* @return
-	*/
-	@:overload public function getNamespacePrefix(index : Int) : String;
-	
-	/**
-	*
-	* @return
-	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceCount() : Int;
 	
 	/**
 	*
 	* @param index
 	* @return
 	*/
-	@:overload public function getNamespaceURI(index : Int) : String;
+	@:overload @:public public function getNamespacePrefix(index : Int) : String;
+	
+	/**
+	*
+	* @return
+	*/
+	@:overload @:public public function getNamespaceURI() : String;
+	
+	/**
+	*
+	* @param index
+	* @return
+	*/
+	@:overload @:public public function getNamespaceURI(index : Int) : String;
 	
 	/**
 	*
 	* @param prefix
 	* @return
 	*/
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getPIData() : String;
+	@:overload @:public public function getPIData() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getPITarget() : String;
+	@:overload @:public public function getPITarget() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	*
@@ -216,19 +216,19 @@ extern class XMLStreamFilterImpl implements javax.xml.stream.XMLStreamReader
 	* @throws IllegalArgumentException
 	* @return
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	*
@@ -239,74 +239,74 @@ extern class XMLStreamFilterImpl implements javax.xml.stream.XMLStreamReader
 	* @throws XMLStreamException
 	* @return
 	*/
-	@:overload public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
+	@:overload @:public public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getTextLength() : Int;
+	@:overload @:public public function getTextLength() : Int;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getTextStart() : Int;
+	@:overload @:public public function getTextStart() : Int;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function hasName() : Bool;
+	@:overload @:public public function hasName() : Bool;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function hasText() : Bool;
+	@:overload @:public public function hasText() : Bool;
 	
 	/**
 	*
 	* @return
 	* @param index
 	*/
-	@:overload public function isAttributeSpecified(index : Int) : Bool;
+	@:overload @:public public function isAttributeSpecified(index : Int) : Bool;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
 	/**
 	*
@@ -315,20 +315,20 @@ extern class XMLStreamFilterImpl implements javax.xml.stream.XMLStreamReader
 	* @param localName
 	* @throws XMLStreamException
 	*/
-	@:overload public function require(type : Int, namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function require(type : Int, namespaceURI : String, localName : String) : Void;
 	
 	/**
 	*
 	* @return
 	*/
-	@:overload public function standaloneSet() : Bool;
+	@:overload @:public public function standaloneSet() : Bool;
 	
 	/**
 	*
 	* @param index
 	* @return
 	*/
-	@:overload public function getAttributeLocalName(index : Int) : String;
+	@:overload @:public public function getAttributeLocalName(index : Int) : String;
 	
 	
 }

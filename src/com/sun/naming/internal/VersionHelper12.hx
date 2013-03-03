@@ -35,13 +35,13 @@ package com.sun.naming.internal;
 */
 @:internal extern class VersionHelper12 extends com.sun.naming.internal.VersionHelper
 {
-	@:overload override public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public override public function loadClass(className : String) : Class<Dynamic>;
 	
 	/**
 	* @param className A non-null fully qualified class name.
 	* @param codebase A non-null, space-separated list of URL strings.
 	*/
-	@:overload override public function loadClass(className : String, codebase : String) : Class<Dynamic>;
+	@:overload @:public override public function loadClass(className : String, codebase : String) : Class<Dynamic>;
 	
 	
 }
@@ -54,15 +54,15 @@ package com.sun.naming.internal;
 */
 @:native('com$sun$naming$internal$VersionHelper12$InputStreamEnumeration') @:internal extern class VersionHelper12_InputStreamEnumeration implements javax.naming.NamingEnumeration<Dynamic>
 {
-	@:overload public function hasMore() : Bool;
+	@:overload @:public public function hasMore() : Bool;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

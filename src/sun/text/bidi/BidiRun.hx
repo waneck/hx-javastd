@@ -58,7 +58,7 @@ extern class BidiRun
 	/**
 	* Get level of run
 	*/
-	@:overload public function getEmbeddingLevel() : java.StdTypes.Int8;
+	@:overload @:public public function getEmbeddingLevel() : java.StdTypes.Int8;
 	
 	
 }

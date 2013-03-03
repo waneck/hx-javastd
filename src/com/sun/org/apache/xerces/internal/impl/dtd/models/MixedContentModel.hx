@@ -70,7 +70,7 @@ extern class MixedContentModel implements com.sun.org.apache.xerces.internal.imp
 	* @param length The child count.
 	* @param ordered True if content must be ordered.
 	*/
-	@:overload public function new(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, type : java.NativeArray<Int>, offset : Int, length : Int, ordered : Bool) : Void;
+	@:overload @:public public function new(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, type : java.NativeArray<Int>, offset : Int, length : Int, ordered : Bool) : Void;
 	
 	/**
 	* Check that the specified content is valid according to this
@@ -95,7 +95,7 @@ extern class MixedContentModel implements com.sun.org.apache.xerces.internal.imp
 	*         content is required to reach a valid ending state.
 	*
 	*/
-	@:overload public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
+	@:overload @:public public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
 	
 	
 }

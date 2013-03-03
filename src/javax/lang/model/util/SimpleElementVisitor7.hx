@@ -69,7 +69,7 @@ package javax.lang.model.util;
 	* Constructor for concrete subclasses; uses {@code null} for the
 	* default value.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructor for concrete subclasses; uses the argument for the
@@ -77,7 +77,7 @@ package javax.lang.model.util;
 	*
 	* @param defaultValue the value to assign to {@link #DEFAULT_VALUE}
 	*/
-	@:overload private function new(defaultValue : R) : Void;
+	@:overload @:protected private function new(defaultValue : R) : Void;
 	
 	/**
 	* This implementation calls {@code defaultAction}.
@@ -86,7 +86,7 @@ package javax.lang.model.util;
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload @:public override public function visitVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	
 }

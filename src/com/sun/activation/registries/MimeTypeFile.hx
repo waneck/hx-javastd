@@ -30,24 +30,24 @@ extern class MimeTypeFile
 	*
 	* @param new_fname The file name of the mime types file.
 	*/
-	@:overload public function new(new_fname : String) : Void;
+	@:overload @:public public function new(new_fname : String) : Void;
 	
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Creates an empty DB.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* get the MimeTypeEntry based on the file extension
 	*/
-	@:overload public function getMimeTypeEntry(file_ext : String) : com.sun.activation.registries.MimeTypeEntry;
+	@:overload @:public public function getMimeTypeEntry(file_ext : String) : com.sun.activation.registries.MimeTypeEntry;
 	
 	/**
 	* Get the MIME type string corresponding to the file extension.
 	*/
-	@:overload public function getMIMETypeString(file_ext : String) : String;
+	@:overload @:public public function getMIMETypeString(file_ext : String) : String;
 	
 	/**
 	* Appends string of entries to the types registry, must be valid
@@ -64,7 +64,7 @@ extern class MimeTypeFile
 	* text/plain             txt text
 	* type=application/postscript exts=ps,eps
 	*/
-	@:overload public function appendToRegistry(mime_types : String) : Void;
+	@:overload @:public public function appendToRegistry(mime_types : String) : Void;
 	
 	
 }
@@ -76,7 +76,7 @@ extern class MimeTypeFile
 	*
 	* @param   str            a string to be parsed.
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Tests if there are more tokens available from this tokenizer's string.
@@ -84,7 +84,7 @@ extern class MimeTypeFile
 	* @return  <code>true</code> if there are more tokens available from this
 	*          tokenizer's string; <code>false</code> otherwise.
 	*/
-	@:overload public function hasMoreTokens() : Bool;
+	@:overload @:public public function hasMoreTokens() : Bool;
 	
 	/**
 	* Returns the next token from this tokenizer.
@@ -93,9 +93,9 @@ extern class MimeTypeFile
 	* @exception  NoSuchElementException  if there are no more tokens in this
 	*               tokenizer's string.
 	*/
-	@:overload public function nextToken() : String;
+	@:overload @:public public function nextToken() : String;
 	
-	@:overload public function pushToken(token : String) : Void;
+	@:overload @:public public function pushToken(token : String) : Void;
 	
 	
 }

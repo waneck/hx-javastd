@@ -30,16 +30,16 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	private var m_predCount : Int;
+	@:protected private var m_predCount : Int;
 	
 	/**
 	* Get the number of predicates that this walker has.
 	*
 	* @return the number of predicates that this walker has.
 	*/
-	@:overload public function getPredicateCount() : Int;
+	@:overload @:public public function getPredicateCount() : Int;
 	
 	/**
 	* Set the number of predicates that this walker has.  This does more
@@ -51,7 +51,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	* @param count The number of predicates, which must be equal or less
 	*               than the existing count.
 	*/
-	@:overload public function setPredicateCount(count : Int) : Void;
+	@:overload @:public public function setPredicateCount(count : Int) : Void;
 	
 	/**
 	* Init predicate info.
@@ -62,7 +62,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload private function initPredicateInfo(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : Void;
+	@:overload @:protected private function initPredicateInfo(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler, opPos : Int) : Void;
 	
 	/**
 	* Get a predicate expression at the given index.
@@ -72,14 +72,14 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @return A predicate expression.
 	*/
-	@:overload public function getPredicate(index : Int) : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getPredicate(index : Int) : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* Get the current sub-context position.
 	*
 	* @return The node position of this walker in the sub-context node list.
 	*/
-	@:overload public function getProximityPosition() : Int;
+	@:overload @:public public function getProximityPosition() : Int;
 	
 	/**
 	* Get the current sub-context position.
@@ -88,7 +88,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @return The node position of this walker in the sub-context node list.
 	*/
-	@:overload public function getProximityPosition(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public public function getProximityPosition(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Get the index of the last node that can be itterated to.
@@ -98,7 +98,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @return the index of the last node that can be itterated to.
 	*/
-	@:overload @:abstract public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload @:public @:abstract public function getLastPos(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Get the current sub-context position.
@@ -108,12 +108,12 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @return The node position of this walker in the sub-context node list.
 	*/
-	@:overload private function getProximityPosition(predicateIndex : Int) : Int;
+	@:overload @:protected private function getProximityPosition(predicateIndex : Int) : Int;
 	
 	/**
 	* Reset the proximity positions counts.
 	*/
-	@:overload public function resetProximityPositions() : Void;
+	@:overload @:public public function resetProximityPositions() : Void;
 	
 	/**
 	* Init the proximity position to zero for a forward axes.
@@ -122,7 +122,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function initProximityPosition(i : Int) : Void;
+	@:overload @:public public function initProximityPosition(i : Int) : Void;
 	
 	/**
 	* Count forward one proximity position.
@@ -130,21 +130,21 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	* @param i The index into the m_proximityPositions array, where the increment
 	*          will occur.
 	*/
-	@:overload private function countProximityPosition(i : Int) : Void;
+	@:overload @:protected private function countProximityPosition(i : Int) : Void;
 	
 	/**
 	* Tells if this is a reverse axes.
 	*
 	* @return false, unless a derived class overrides.
 	*/
-	@:overload public function isReverseAxes() : Bool;
+	@:overload @:public public function isReverseAxes() : Bool;
 	
 	/**
 	* Get which predicate is executing.
 	*
 	* @return The current predicate index, or -1 if no predicate is executing.
 	*/
-	@:overload public function getPredicateIndex() : Int;
+	@:overload @:public public function getPredicateIndex() : Int;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -156,7 +156,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Diagnostics.
@@ -165,7 +165,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @return Informative string about the argument.
 	*/
-	@:overload private function nodeToString(n : Int) : String;
+	@:overload @:protected private function nodeToString(n : Int) : String;
 	
 	/**
 	*  Test whether a specified node is visible in the logical view of a
@@ -176,14 +176,14 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	* @return  a constant to determine whether the node is accepted,
 	*   rejected, or skipped, as defined  above .
 	*/
-	@:overload public function acceptNode(n : Int) : java.StdTypes.Int16;
+	@:overload @:public public function acceptNode(n : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Get the owning location path iterator.
 	*
 	* @return the owning location path iterator, which should not be null.
 	*/
-	@:overload public function getLocPathIterator() : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
+	@:overload @:public public function getLocPathIterator() : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
 	
 	/**
 	* Set the location path iterator owner for this walker.  Besides
@@ -191,7 +191,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @param li non-null reference to the owning location path iterator.
 	*/
-	@:overload public function setLocPathIterator(li : com.sun.org.apache.xpath.internal.axes.LocPathIterator) : Void;
+	@:overload @:public public function setLocPathIterator(li : com.sun.org.apache.xpath.internal.axes.LocPathIterator) : Void;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -199,7 +199,7 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* This will traverse the heararchy, calling the visitor for
@@ -208,25 +208,25 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	*
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/** This is true if nextNode returns null. */
-	@:transient private var m_foundLast : Bool;
+	@:transient @:protected private var m_foundLast : Bool;
 	
 	/** The owning location path iterator.
 	*  @serial */
-	private var m_lpi : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
+	@:protected private var m_lpi : com.sun.org.apache.xpath.internal.axes.LocPathIterator;
 	
 	/**
 	* An array of counts that correspond to the number
 	* of predicates the step contains.
 	*/
-	@:transient private var m_proximityPositions : java.NativeArray<Int>;
+	@:transient @:protected private var m_proximityPositions : java.NativeArray<Int>;
 	
 	
 }
@@ -235,12 +235,12 @@ extern class PredicatedNodeTest extends com.sun.org.apache.xpath.internal.patter
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

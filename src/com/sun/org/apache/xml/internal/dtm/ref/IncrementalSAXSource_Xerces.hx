@@ -29,7 +29,7 @@ extern class IncrementalSAXSource_Xerces implements com.sun.org.apache.xml.inter
 	* Beta 3). If you don't like that restriction, tell the Xerces folks that
 	* there should be a simpler way to request incremental SAX parsing.
 	* */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Create a IncrementalSAXSource_Xerces wrapped around
 	* an existing SAXParser. Currently this works only for recent
@@ -42,17 +42,17 @@ extern class IncrementalSAXSource_Xerces implements com.sun.org.apache.xml.inter
 	* incremental parse operations. In that case, caller should
 	* fall back upon the IncrementalSAXSource_Filter approach.
 	* */
-	@:overload public function new(parser : com.sun.org.apache.xerces.internal.parsers.SAXParser) : Void;
+	@:overload @:public public function new(parser : com.sun.org.apache.xerces.internal.parsers.SAXParser) : Void;
 	
-	@:overload public static function createIncrementalSAXSource() : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource;
+	@:overload @:static @:public public static function createIncrementalSAXSource() : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource;
 	
-	@:overload public static function createIncrementalSAXSource(parser : com.sun.org.apache.xerces.internal.parsers.SAXParser) : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource;
+	@:overload @:static @:public public static function createIncrementalSAXSource(parser : com.sun.org.apache.xerces.internal.parsers.SAXParser) : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource;
 	
-	@:overload public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(handler : org.xml.sax.ContentHandler) : Void;
 	
-	@:overload public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload @:public public function setLexicalHandler(handler : org.xml.sax.ext.LexicalHandler) : Void;
 	
-	@:overload public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
+	@:overload @:public public function setDTDHandler(handler : org.xml.sax.DTDHandler) : Void;
 	
 	/** startParse() is a simple API which tells the IncrementalSAXSource
 	* to begin reading a document.
@@ -60,7 +60,7 @@ extern class IncrementalSAXSource_Xerces implements com.sun.org.apache.xml.inter
 	* @throws SAXException is parse thread is already in progress
 	* or parsing can not be started.
 	* */
-	@:overload public function startParse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function startParse(source : org.xml.sax.InputSource) : Void;
 	
 	/** deliverMoreNodes() is a simple API which tells the coroutine
 	* parser that we need more nodes.  This is intended to be called
@@ -74,12 +74,12 @@ extern class IncrementalSAXSource_Xerces implements com.sun.org.apache.xml.inter
 	* for further parsing. Boolean.FALSE if parsing ran to completion.
 	* Exception if the parser objected for some reason.
 	* */
-	@:overload public function deliverMoreNodes(parsemore : Bool) : Dynamic;
+	@:overload @:public public function deliverMoreNodes(parsemore : Bool) : Dynamic;
 	
 	/** Simple unit test. Attempt coroutine parsing of document indicated
 	* by first argument (as a URI), report progress.
 	*/
-	@:overload public static function _main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function _main(args : java.NativeArray<String>) : Void;
 	
 	
 }

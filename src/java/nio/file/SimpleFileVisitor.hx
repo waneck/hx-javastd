@@ -28,7 +28,7 @@ extern class SimpleFileVisitor<T> implements java.nio.file.FileVisitor<T>
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Invoked for a directory before entries in the directory are visited.
@@ -36,7 +36,7 @@ extern class SimpleFileVisitor<T> implements java.nio.file.FileVisitor<T>
 	* <p> Unless overridden, this method returns {@link FileVisitResult#CONTINUE
 	* CONTINUE}.
 	*/
-	@:overload public function preVisitDirectory(dir : T, attrs : java.nio.file.attribute.BasicFileAttributes) : java.nio.file.FileVisitResult;
+	@:overload @:public public function preVisitDirectory(dir : T, attrs : java.nio.file.attribute.BasicFileAttributes) : java.nio.file.FileVisitResult;
 	
 	/**
 	* Invoked for a file in a directory.
@@ -44,7 +44,7 @@ extern class SimpleFileVisitor<T> implements java.nio.file.FileVisitor<T>
 	* <p> Unless overridden, this method returns {@link FileVisitResult#CONTINUE
 	* CONTINUE}.
 	*/
-	@:overload public function visitFile(file : T, attrs : java.nio.file.attribute.BasicFileAttributes) : java.nio.file.FileVisitResult;
+	@:overload @:public public function visitFile(file : T, attrs : java.nio.file.attribute.BasicFileAttributes) : java.nio.file.FileVisitResult;
 	
 	/**
 	* Invoked for a file that could not be visited.
@@ -52,7 +52,7 @@ extern class SimpleFileVisitor<T> implements java.nio.file.FileVisitor<T>
 	* <p> Unless overridden, this method re-throws the I/O exception that prevented
 	* the file from being visited.
 	*/
-	@:overload public function visitFileFailed(file : T, exc : java.io.IOException) : java.nio.file.FileVisitResult;
+	@:overload @:public public function visitFileFailed(file : T, exc : java.io.IOException) : java.nio.file.FileVisitResult;
 	
 	/**
 	* Invoked for a directory after entries in the directory, and all of their
@@ -63,7 +63,7 @@ extern class SimpleFileVisitor<T> implements java.nio.file.FileVisitor<T>
 	* otherwise this method re-throws the I/O exception that caused the iteration
 	* of the directory to terminate prematurely.
 	*/
-	@:overload public function postVisitDirectory(dir : T, exc : java.io.IOException) : java.nio.file.FileVisitResult;
+	@:overload @:public public function postVisitDirectory(dir : T, exc : java.io.IOException) : java.nio.file.FileVisitResult;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class DynamicAccessPermission extends java.security.BasicPermission
 	* Creates a new DynamicAccessPermission with the specified name.
 	* @param name the name of the DynamicAccessPermission.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new DynamicAccessPermission object with the specified name.
@@ -46,7 +46,7 @@ extern class DynamicAccessPermission extends java.security.BasicPermission
 	* @param name the name of the DynamicAccessPermission.
 	* @param actions should be null.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

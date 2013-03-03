@@ -28,23 +28,23 @@ extern class JMXConnectionNotification extends javax.management.Notification
 	/**
 	* <p>Notification type string for a connection-opened notification.
 	*/
-	public static var OPENED(default, null) : String;
+	@:public @:static @:final public static var OPENED(default, null) : String;
 	
 	/**
 	* <p>Notification type string for a connection-closed notification.
 	*/
-	public static var CLOSED(default, null) : String;
+	@:public @:static @:final public static var CLOSED(default, null) : String;
 	
 	/**
 	* <p>Notification type string for a connection-failed notification.
 	*/
-	public static var FAILED(default, null) : String;
+	@:public @:static @:final public static var FAILED(default, null) : String;
 	
 	/**
 	* <p>Notification type string for a connection that has possibly
 	* lost notifications.</p>
 	*/
-	public static var NOTIFS_LOST(default, null) : String;
+	@:public @:static @:final public static var NOTIFS_LOST(default, null) : String;
 	
 	/**
 	* Constructs a new connection notification.  The {@link
@@ -93,14 +93,14 @@ extern class JMXConnectionNotification extends javax.management.Notification
 	* @exception IllegalArgumentException if
 	* <code>sequenceNumber</code> is negative.
 	*/
-	@:overload public function new(type : String, source : Dynamic, connectionId : String, sequenceNumber : haxe.Int64, message : String, userData : Dynamic) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, connectionId : String, sequenceNumber : haxe.Int64, message : String, userData : Dynamic) : Void;
 	
 	/**
 	* <p>The connection ID to which this notification pertains.
 	*
 	* @return the connection ID.
 	*/
-	@:overload public function getConnectionId() : String;
+	@:overload @:public public function getConnectionId() : String;
 	
 	
 }

@@ -25,21 +25,21 @@ package sun.tools.jcmd;
 */
 @:internal extern class Arguments
 {
-	@:overload public function isListProcesses() : Bool;
+	@:overload @:public public function isListProcesses() : Bool;
 	
-	@:overload public function isListCounters() : Bool;
+	@:overload @:public public function isListCounters() : Bool;
 	
-	@:overload public function isShowUsage() : Bool;
+	@:overload @:public public function isShowUsage() : Bool;
 	
-	@:overload public function getPid() : Int;
+	@:overload @:public public function getPid() : Int;
 	
-	@:overload public function getCommand() : String;
+	@:overload @:public public function getCommand() : String;
 	
-	@:overload public function getProcessSubstring() : String;
+	@:overload @:public public function getProcessSubstring() : String;
 	
-	@:overload public function new(args : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(args : java.NativeArray<String>) : Void;
 	
-	@:overload public static function usage() : Void;
+	@:overload @:public @:static public static function usage() : Void;
 	
 	
 }

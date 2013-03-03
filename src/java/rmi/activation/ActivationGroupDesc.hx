@@ -44,7 +44,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* another process (or <code>null</code>).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(overrides : java.util.Properties, cmd : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment) : Void;
+	@:require(java2) @:overload @:public public function new(overrides : java.util.Properties, cmd : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment) : Void;
 	
 	/**
 	* Specifies an alternate group implementation and execution
@@ -64,7 +64,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* another process (or <code>null</code>).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, overrides : java.util.Properties, cmd : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment) : Void;
+	@:require(java2) @:overload @:public public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, overrides : java.util.Properties, cmd : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment) : Void;
 	
 	/**
 	* Returns the group's class name (possibly <code>null</code>).  A
@@ -73,35 +73,35 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* @return the group's class name
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getClassName() : String;
+	@:require(java2) @:overload @:public public function getClassName() : String;
 	
 	/**
 	* Returns the group's code location.
 	* @return the group's code location
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getLocation() : String;
+	@:require(java2) @:overload @:public public function getLocation() : String;
 	
 	/**
 	* Returns the group's initialization data.
 	* @return the group's initialization data
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getData() : java.rmi.MarshalledObject<Dynamic>;
+	@:require(java2) @:overload @:public public function getData() : java.rmi.MarshalledObject<Dynamic>;
 	
 	/**
 	* Returns the group's property-override list.
 	* @return the property-override list, or <code>null</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getPropertyOverrides() : java.util.Properties;
+	@:require(java2) @:overload @:public public function getPropertyOverrides() : java.util.Properties;
 	
 	/**
 	* Returns the group's command-environment control object.
 	* @return the command-environment object, or <code>null</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCommandEnvironment() : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment;
+	@:require(java2) @:overload @:public public function getCommandEnvironment() : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment;
 	
 	/**
 	* Compares two activation group descriptors for content equality.
@@ -111,14 +111,14 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* @see             java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Produce identical numbers for similar <code>ActivationGroupDesc</code>s.
 	* @return an integer
 	* @see java.util.Hashtable
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
@@ -146,7 +146,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* list.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(cmdpath : String, argv : java.NativeArray<String>) : Void;
+	@:require(java2) @:overload @:public public function new(cmdpath : String, argv : java.NativeArray<String>) : Void;
 	
 	/**
 	* Fetch the configured path-qualified java command name.
@@ -155,7 +155,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* accept the default
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCommandPath() : String;
+	@:require(java2) @:overload @:public public function getCommandPath() : String;
 	
 	/**
 	* Fetch the configured java command options.
@@ -167,7 +167,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* Never returns <code>null</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCommandOptions() : java.NativeArray<String>;
+	@:require(java2) @:overload @:public public function getCommandOptions() : java.NativeArray<String>;
 	
 	/**
 	* Compares two command environments for content equality.
@@ -177,7 +177,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* @see         java.util.Hashtable
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java2) @:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return identical values for similar
@@ -185,7 +185,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* @return an integer
 	* @see java.util.Hashtable
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

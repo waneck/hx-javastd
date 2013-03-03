@@ -40,14 +40,14 @@ extern class BufferedPaints
 	* shaders.  So for now we will cap this value at 12, but we can
 	* re-evaluate this in the future as hardware becomes more capable.
 	*/
-	public static var MULTI_MAX_FRACTIONS(default, null) : Int;
+	@:public @:static @:final public static var MULTI_MAX_FRACTIONS(default, null) : Int;
 	
 	/**
 	* Helper function to convert a color component in sRGB space to
 	* linear RGB space.  Copied directly from the
 	* MultipleGradientPaintContext class.
 	*/
-	@:overload public static function convertSRGBtoLinearRGB(color : Int) : Int;
+	@:overload @:public @:static public static function convertSRGBtoLinearRGB(color : Int) : Int;
 	
 	
 }

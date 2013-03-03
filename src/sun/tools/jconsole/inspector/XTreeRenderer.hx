@@ -25,7 +25,7 @@ package sun.tools.jconsole.inspector;
 */
 extern class XTreeRenderer extends javax.swing.tree.DefaultTreeCellRenderer
 {
-	@:overload override public function getTreeCellRendererComponent(tree : javax.swing.JTree, value : Dynamic, selected : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : java.awt.Component;
+	@:overload @:public override public function getTreeCellRendererComponent(tree : javax.swing.JTree, value : Dynamic, selected : Bool, expanded : Bool, leaf : Bool, row : Int, hasFocus : Bool) : java.awt.Component;
 	
 	
 }

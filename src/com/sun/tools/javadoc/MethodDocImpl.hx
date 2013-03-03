@@ -28,12 +28,12 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	/**
 	* constructor.
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol) : Void;
 	
 	/**
 	* constructor.
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol, docComment : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : MethodSymbol, docComment : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
 	/**
 	* Return true if it is a method, which it is.
@@ -42,12 +42,12 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	*
 	* @return true
 	*/
-	@:overload override public function isMethod() : Bool;
+	@:overload @:public override public function isMethod() : Bool;
 	
 	/**
 	* Return true if this method is abstract
 	*/
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
 	/**
 	* Get return type.
@@ -55,7 +55,7 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	* @return the return type of this method, null if it
 	* is a constructor.
 	*/
-	@:overload public function returnType() : com.sun.javadoc.Type;
+	@:overload @:public public function returnType() : com.sun.javadoc.Type;
 	
 	/**
 	* Return the class that originally defined the method that
@@ -66,13 +66,13 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	* originally defined this method, null if this method does
 	* not override a definition in a superclass.
 	*/
-	@:overload public function overriddenClass() : com.sun.javadoc.ClassDoc;
+	@:overload @:public public function overriddenClass() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the type containing the method that this method overrides.
 	* It may be a <code>ClassDoc</code> or a <code>ParameterizedType</code>.
 	*/
-	@:overload public function overriddenType() : com.sun.javadoc.Type;
+	@:overload @:public public function overriddenType() : com.sun.javadoc.Type;
 	
 	/**
 	* Return the method that this method overrides.
@@ -81,7 +81,7 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	* in a superclass this method overrides, null if
 	* this method does not override.
 	*/
-	@:overload public function overriddenMethod() : com.sun.javadoc.MethodDoc;
+	@:overload @:public public function overriddenMethod() : com.sun.javadoc.MethodDoc;
 	
 	/**
 	* Tests whether this method overrides another.
@@ -94,11 +94,11 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	* @param meth  the other method to examine
 	* @return <tt>true</tt> if this method overrides the other
 	*/
-	@:overload public function overrides(meth : com.sun.javadoc.MethodDoc) : Bool;
+	@:overload @:public public function overrides(meth : com.sun.javadoc.MethodDoc) : Bool;
 	
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function qualifiedName() : String;
+	@:overload @:public override public function qualifiedName() : String;
 	
 	/**
 	* Returns a string representation of this method.  Includes the
@@ -106,7 +106,7 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	* parameters.  Type parameters follow the class name, as they do
 	* in the syntax for invoking methods with explicit type parameters.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

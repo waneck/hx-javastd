@@ -25,9 +25,9 @@ package sun.net.www;
 */
 @:internal extern class MimeLauncher extends java.lang.Thread
 {
-	@:overload private function getTempFileName(url : java.net.URL, template : String) : String;
+	@:overload @:protected private function getTempFileName(url : java.net.URL, template : String) : String;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

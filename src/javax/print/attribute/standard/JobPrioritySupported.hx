@@ -35,7 +35,7 @@ extern class JobPrioritySupported extends javax.print.attribute.IntegerSyntax im
 	*     (Unchecked exception) Thrown if <CODE>value</CODE> is less than 1
 	*     or greater than 100.
 	*/
-	@:overload public function new(value : Int) : Void;
+	@:overload @:public public function new(value : Int) : Void;
 	
 	/**
 	* Returns whether this job priority supported attribute is equivalent to
@@ -56,7 +56,7 @@ extern class JobPrioritySupported extends javax.print.attribute.IntegerSyntax im
 	* @return  True if <CODE>object</CODE> is equivalent to this job
 	*          priority supported attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -68,7 +68,7 @@ extern class JobPrioritySupported extends javax.print.attribute.IntegerSyntax im
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -79,7 +79,7 @@ extern class JobPrioritySupported extends javax.print.attribute.IntegerSyntax im
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

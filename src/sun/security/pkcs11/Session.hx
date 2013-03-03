@@ -33,13 +33,13 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class Session implements java.lang.Comparable<sun.security.pkcs11.Session>
 {
-	@:overload public function compareTo(other : sun.security.pkcs11.Session) : Int;
+	@:overload @:public public function compareTo(other : sun.security.pkcs11.Session) : Int;
 	
 	
 }
 @:internal extern class SessionRef extends java.lang.ref.PhantomReference<sun.security.pkcs11.Session> implements java.lang.Comparable<sun.security.pkcs11.Session.SessionRef>
 {
-	@:overload public function compareTo(other : sun.security.pkcs11.Session.SessionRef) : Int;
+	@:overload @:public public function compareTo(other : sun.security.pkcs11.Session.SessionRef) : Int;
 	
 	
 }

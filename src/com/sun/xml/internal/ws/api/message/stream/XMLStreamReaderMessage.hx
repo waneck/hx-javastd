@@ -28,7 +28,7 @@ extern class XMLStreamReaderMessage extends com.sun.xml.internal.ws.api.message.
 	/**
 	* The message represented as an {@link XMLStreamReader}.
 	*/
-	public var msg(default, null) : javax.xml.stream.XMLStreamReader;
+	@:public @:final public var msg(default, null) : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Create a new message.
@@ -40,7 +40,7 @@ extern class XMLStreamReaderMessage extends com.sun.xml.internal.ws.api.message.
 	*      always a non-null unconsumed {@link XMLStreamReader} that
 	*      represents a request.
 	*/
-	@:overload public function new(properties : com.sun.xml.internal.ws.api.message.Packet, msg : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(properties : com.sun.xml.internal.ws.api.message.Packet, msg : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* Create a new message.
@@ -55,7 +55,7 @@ extern class XMLStreamReaderMessage extends com.sun.xml.internal.ws.api.message.
 	*      always a non-null unconsumed {@link XMLStreamReader} that
 	*      represents a request.
 	*/
-	@:overload public function new(properties : com.sun.xml.internal.ws.api.message.Packet, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet, msg : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(properties : com.sun.xml.internal.ws.api.message.Packet, attachments : com.sun.xml.internal.ws.api.message.AttachmentSet, msg : javax.xml.stream.XMLStreamReader) : Void;
 	
 	
 }

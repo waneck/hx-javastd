@@ -32,7 +32,7 @@ extern class IllegalConnectorArgumentsException extends java.lang.Exception
 	* @param s the detailed message.
 	* @param name the name of the invalid or inconsistent argument.
 	*/
-	@:overload public function new(s : String, name : String) : Void;
+	@:overload @:public public function new(s : String, name : String) : Void;
 	
 	/**
 	* Construct an <code>IllegalConnectorArgumentsException</code>
@@ -42,14 +42,14 @@ extern class IllegalConnectorArgumentsException extends java.lang.Exception
 	* @param names a <code>List</code> containing the names of the
 	* invalid or inconsistent argument.
 	*/
-	@:overload public function new(s : String, names : java.util.List<String>) : Void;
+	@:overload @:public public function new(s : String, names : java.util.List<String>) : Void;
 	
 	/**
 	* Return a <code>List</code> containing the names of the
 	* invalid or inconsistent arguments.
 	* @return a <code>List</code> of argument names.
 	*/
-	@:overload public function argumentNames() : java.util.List<String>;
+	@:overload @:public public function argumentNames() : java.util.List<String>;
 	
 	
 }

@@ -25,39 +25,39 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class POAFactory implements com.sun.corba.se.spi.oa.ObjectAdapterFactory
 {
-	@:overload public function getWrapper() : com.sun.corba.se.impl.logging.POASystemException;
+	@:overload @:public public function getWrapper() : com.sun.corba.se.impl.logging.POASystemException;
 	
 	/** All object adapter factories must have a no-arg constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:synchronized public function lookupPOA(servant : org.omg.PortableServer.Servant) : org.omg.PortableServer.POA;
+	@:overload @:public @:synchronized public function lookupPOA(servant : org.omg.PortableServer.Servant) : org.omg.PortableServer.POA;
 	
-	@:overload @:synchronized public function registerPOAForServant(poa : org.omg.PortableServer.POA, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public @:synchronized public function registerPOAForServant(poa : org.omg.PortableServer.POA, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload @:synchronized public function unregisterPOAForServant(poa : org.omg.PortableServer.POA, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:public @:synchronized public function unregisterPOAForServant(poa : org.omg.PortableServer.POA, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload public function init(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function init(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function find(oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : com.sun.corba.se.spi.oa.ObjectAdapter;
+	@:overload @:public public function find(oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : com.sun.corba.se.spi.oa.ObjectAdapter;
 	
-	@:overload public function shutdown(waitForCompletion : Bool) : Void;
+	@:overload @:public public function shutdown(waitForCompletion : Bool) : Void;
 	
-	@:overload @:synchronized public function removePoaManager(manager : org.omg.PortableServer.POAManager) : Void;
+	@:overload @:public @:synchronized public function removePoaManager(manager : org.omg.PortableServer.POAManager) : Void;
 	
-	@:overload @:synchronized public function addPoaManager(manager : org.omg.PortableServer.POAManager) : Void;
+	@:overload @:public @:synchronized public function addPoaManager(manager : org.omg.PortableServer.POAManager) : Void;
 	
-	@:overload @:synchronized public function newPOAManagerId() : Int;
+	@:overload @:synchronized @:public public function newPOAManagerId() : Int;
 	
-	@:overload public function registerRootPOA() : Void;
+	@:overload @:public public function registerRootPOA() : Void;
 	
-	@:overload @:synchronized public function getRootPOA() : org.omg.PortableServer.POA;
+	@:overload @:public @:synchronized public function getRootPOA() : org.omg.PortableServer.POA;
 	
-	@:overload public function getDelegateImpl() : org.omg.PortableServer.portable.Delegate;
+	@:overload @:public public function getDelegateImpl() : org.omg.PortableServer.portable.Delegate;
 	
-	@:overload @:synchronized public function newPOAId() : Int;
+	@:overload @:synchronized @:public public function newPOAId() : Int;
 	
-	@:overload public function getORB() : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:public public function getORB() : com.sun.corba.se.spi.orb.ORB;
 	
 	
 }

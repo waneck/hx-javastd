@@ -53,7 +53,7 @@ extern class GetPropertyAction implements java.security.PrivilegedAction<Dynamic
 	*
 	* @param theProp the name of the system property.
 	*/
-	@:overload public function new(theProp : String) : Void;
+	@:overload @:public public function new(theProp : String) : Void;
 	
 	/**
 	* Constructor that takes the name of the system property and the default
@@ -62,7 +62,7 @@ extern class GetPropertyAction implements java.security.PrivilegedAction<Dynamic
 	* @param theProp the name of the system property.
 	* @param defaulVal the default value.
 	*/
-	@:overload public function new(theProp : String, defaultVal : String) : Void;
+	@:overload @:public public function new(theProp : String, defaultVal : String) : Void;
 	
 	/**
 	* Determines the string value of the system property whose
@@ -71,7 +71,7 @@ extern class GetPropertyAction implements java.security.PrivilegedAction<Dynamic
 	* @return the string value of the system property,
 	*         or the default value if there is no property with that key.
 	*/
-	@:overload public function run() : Dynamic;
+	@:overload @:public public function run() : Dynamic;
 	
 	
 }

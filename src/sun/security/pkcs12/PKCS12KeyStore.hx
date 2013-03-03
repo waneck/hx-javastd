@@ -80,7 +80,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	*
 	*
 	*/
-	public static var VERSION_3(default, null) : Int;
+	@:public @:static @:final public static var VERSION_3(default, null) : Int;
 	
 	/**
 	* Returns the key associated with the given alias, using the given
@@ -97,7 +97,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @exception UnrecoverableKeyException if the key cannot be recovered
 	* (e.g., the given password is wrong).
 	*/
-	@:overload override public function engineGetKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
+	@:overload @:public override public function engineGetKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -110,7 +110,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* alias identifies either a <i>trusted certificate entry</i> or a
 	* <i>key entry</i> without a certificate chain).
 	*/
-	@:overload override public function engineGetCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public override public function engineGetCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the certificate associated with the given alias.
@@ -127,7 +127,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @return the certificate, or null if the given alias does not exist or
 	* does not contain a certificate.
 	*/
-	@:overload override public function engineGetCertificate(alias : String) : java.security.cert.Certificate;
+	@:overload @:public override public function engineGetCertificate(alias : String) : java.security.cert.Certificate;
 	
 	/**
 	* Returns the creation date of the entry identified by the given alias.
@@ -137,7 +137,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @return the creation date of this entry, or null if the given alias does
 	* not exist
 	*/
-	@:overload override public function engineGetCreationDate(alias : String) : java.util.Date;
+	@:overload @:public override public function engineGetCreationDate(alias : String) : java.util.Date;
 	
 	/**
 	* Assigns the given key to the given alias, protecting it with the given
@@ -161,7 +161,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @exception KeyStoreException if the given key cannot be protected, or
 	* this operation fails for some other reason
 	*/
-	@:overload @:synchronized override public function engineSetKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public @:synchronized override public function engineSetKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given key (that has already been protected) to the given
@@ -186,7 +186,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	*
 	* @exception KeyStoreException if this operation fails.
 	*/
-	@:overload @:synchronized override public function engineSetKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:public @:synchronized override public function engineSetKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given certificate to the given alias.
@@ -202,7 +202,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* identify a <i>key entry</i>, or on an attempt to create a
 	* <i>trusted cert entry</i> which is currently not supported.
 	*/
-	@:overload @:synchronized override public function engineSetCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
+	@:overload @:public @:synchronized override public function engineSetCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Deletes the entry identified by the given alias from this keystore.
@@ -211,14 +211,14 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	*
 	* @exception KeyStoreException if the entry cannot be removed.
 	*/
-	@:overload @:synchronized override public function engineDeleteEntry(alias : String) : Void;
+	@:overload @:public @:synchronized override public function engineDeleteEntry(alias : String) : Void;
 	
 	/**
 	* Lists all the alias names of this keystore.
 	*
 	* @return enumeration of the alias names
 	*/
-	@:overload override public function engineAliases() : java.util.Enumeration<String>;
+	@:overload @:public override public function engineAliases() : java.util.Enumeration<String>;
 	
 	/**
 	* Checks if the given alias exists in this keystore.
@@ -227,14 +227,14 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	*
 	* @return true if the alias exists, false otherwise
 	*/
-	@:overload override public function engineContainsAlias(alias : String) : Bool;
+	@:overload @:public override public function engineContainsAlias(alias : String) : Bool;
 	
 	/**
 	* Retrieves the number of entries in this keystore.
 	*
 	* @return the number of entries in this keystore
 	*/
-	@:overload override public function engineSize() : Int;
+	@:overload @:public override public function engineSize() : Int;
 	
 	/**
 	* Returns true if the entry identified by the given alias is a
@@ -243,7 +243,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @return true if the entry identified by the given alias is a
 	* <i>key entry</i>, false otherwise.
 	*/
-	@:overload override public function engineIsKeyEntry(alias : String) : Bool;
+	@:overload @:public override public function engineIsKeyEntry(alias : String) : Bool;
 	
 	/**
 	* Returns true if the entry identified by the given alias is a
@@ -252,7 +252,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @return true if the entry identified by the given alias is a
 	* <i>trusted certificate entry</i>, false otherwise.
 	*/
-	@:overload override public function engineIsCertificateEntry(alias : String) : Bool;
+	@:overload @:public override public function engineIsCertificateEntry(alias : String) : Bool;
 	
 	/**
 	* Returns the (alias) name of the first keystore entry whose certificate
@@ -270,7 +270,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @return the (alias) name of the first entry with matching certificate,
 	* or null if no such entry exists in this keystore.
 	*/
-	@:overload override public function engineGetCertificateAlias(cert : java.security.cert.Certificate) : String;
+	@:overload @:public override public function engineGetCertificateAlias(cert : java.security.cert.Certificate) : String;
 	
 	/**
 	* Stores this keystore to the given output stream, and protects its
@@ -285,7 +285,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @exception CertificateException if any of the certificates included in
 	* the keystore data could not be stored
 	*/
-	@:overload @:synchronized override public function engineStore(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:synchronized override public function engineStore(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Loads the keystore from the given input stream.
@@ -304,7 +304,7 @@ extern class PKCS12KeyStore extends java.security.KeyStoreSpi
 	* @exception CertificateException if any of the certificates in the
 	* keystore could not be loaded
 	*/
-	@:overload @:synchronized override public function engineLoad(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:synchronized override public function engineLoad(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	
 }

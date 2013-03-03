@@ -33,7 +33,7 @@ extern class Function extends com.sun.org.apache.xpath.internal.Expression
 	* @throws WrongNumberArgsException If the argNum parameter is beyond what
 	* is specified for this function.
 	*/
-	@:overload public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
+	@:overload @:public public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
 	
 	/**
 	* Check that the number of arguments passed to this function is correct.
@@ -45,7 +45,7 @@ extern class Function extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload public function checkNumberArgs(argNum : Int) : Void;
+	@:overload @:public public function checkNumberArgs(argNum : Int) : Void;
 	
 	/**
 	* Constructs and throws a WrongNumberArgException with the appropriate
@@ -54,7 +54,7 @@ extern class Function extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload private function reportWrongNumberArgs() : Void;
+	@:overload @:protected private function reportWrongNumberArgs() : Void;
 	
 	/**
 	* Execute an XPath function object.  The function must return
@@ -64,28 +64,28 @@ extern class Function extends com.sun.org.apache.xpath.internal.Expression
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Call the visitors for the function arguments.
 	*/
-	@:overload public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* This function is currently only being used by Position()
 	* and Last(). See respective functions for more detail.
 	*/
-	@:overload public function postCompileStep(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler) : Void;
+	@:overload @:public public function postCompileStep(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler) : Void;
 	
 	
 }

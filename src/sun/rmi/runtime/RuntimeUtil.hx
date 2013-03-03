@@ -31,7 +31,7 @@ extern class RuntimeUtil
 	* Note that the returned pool has limited concurrency, so
 	* submitted tasks should be short-lived and should not block.
 	**/
-	@:overload public function getScheduler() : java.util.concurrent.ScheduledThreadPoolExecutor;
+	@:overload @:public public function getScheduler() : java.util.concurrent.ScheduledThreadPoolExecutor;
 	
 	
 }
@@ -43,9 +43,9 @@ extern class RuntimeUtil
 	/**
 	* Creates an action that returns the RuntimeUtil instance.
 	**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function run() : sun.rmi.runtime.RuntimeUtil;
+	@:overload @:public public function run() : sun.rmi.runtime.RuntimeUtil;
 	
 	
 }

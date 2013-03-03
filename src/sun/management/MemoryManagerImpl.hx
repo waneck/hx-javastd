@@ -25,15 +25,15 @@ package sun.management;
 */
 @:internal extern class MemoryManagerImpl extends sun.management.NotificationEmitterSupport implements java.lang.management.MemoryManagerMXBean
 {
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function isValid() : Bool;
+	@:overload @:public public function isValid() : Bool;
 	
-	@:overload public function getMemoryPoolNames() : java.NativeArray<String>;
+	@:overload @:public public function getMemoryPoolNames() : java.NativeArray<String>;
 	
-	@:overload override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
 	
 }

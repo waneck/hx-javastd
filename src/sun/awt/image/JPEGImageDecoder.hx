@@ -37,18 +37,18 @@ package sun.awt.image;
 */
 extern class JPEGImageDecoder extends sun.awt.image.ImageDecoder
 {
-	@:overload public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
+	@:overload @:public public function new(src : sun.awt.image.InputStreamImageSource, is : java.io.InputStream) : Void;
 	
-	@:overload public function sendHeaderInfo(width : Int, height : Int, gray : Bool, hasalpha : Bool, multipass : Bool) : Bool;
+	@:overload @:public public function sendHeaderInfo(width : Int, height : Int, gray : Bool, hasalpha : Bool, multipass : Bool) : Bool;
 	
-	@:overload public function sendPixels(pixels : java.NativeArray<Int>, y : Int) : Bool;
+	@:overload @:public public function sendPixels(pixels : java.NativeArray<Int>, y : Int) : Bool;
 	
-	@:overload public function sendPixels(pixels : java.NativeArray<java.StdTypes.Int8>, y : Int) : Bool;
+	@:overload @:public public function sendPixels(pixels : java.NativeArray<java.StdTypes.Int8>, y : Int) : Bool;
 	
 	/**
 	* produce an image from the stream.
 	*/
-	@:overload public function produceImage() : Void;
+	@:overload @:public override public function produceImage() : Void;
 	
 	
 }

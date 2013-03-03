@@ -55,7 +55,7 @@ package java.rmi;
 	* Constructs a new <code>RMISecurityManager</code>.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new() : Void;
+	@:require(java1) @:overload @:public public function new() : Void;
 	
 	
 }

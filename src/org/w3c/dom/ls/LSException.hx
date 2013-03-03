@@ -54,21 +54,21 @@ and Save Specification</a>.
 */
 extern class LSException extends java.lang.RuntimeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
-	public var code : java.StdTypes.Int16;
+	@:public public var code : java.StdTypes.Int16;
 	
 	/**
 	*  If an attempt was made to load a document, or an XML Fragment, using
 	* <code>LSParser</code> and the processing has been stopped.
 	*/
-	public static var PARSE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var PARSE_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	*  If an attempt was made to serialize a <code>Node</code> using
 	* <code>LSSerializer</code> and the processing has been stopped.
 	*/
-	public static var SERIALIZE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var SERIALIZE_ERR(default, null) : java.StdTypes.Int16;
 	
 	
 }

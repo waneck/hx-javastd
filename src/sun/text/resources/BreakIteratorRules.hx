@@ -47,7 +47,7 @@ extern class BreakIteratorRules extends java.util.ListResourceBundle
 	* build phase in order to create [Character|Word|Line|Sentence]BreakIteratorData
 	* files which are used on runtime instead.
 	*/
-	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:protected @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

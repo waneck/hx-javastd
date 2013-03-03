@@ -101,7 +101,7 @@ package javax.security.sasl;
 	* (e.g. "CRAM-MD5", "GSSAPI").
 	* @return A non-null string representing the IANA-registered mechanism name.
 	*/
-	@:overload @:abstract public function getMechanismName() : String;
+	@:overload @:public @:abstract public function getMechanismName() : String;
 	
 	/**
 	* Determines whether this mechanism has an optional initial response.
@@ -110,7 +110,7 @@ package javax.security.sasl;
 	*
 	* @return true if this mechanism has an initial response.
 	*/
-	@:overload @:abstract public function hasInitialResponse() : Bool;
+	@:overload @:public @:abstract public function hasInitialResponse() : Bool;
 	
 	/**
 	* Evaluates the challenge data and generates a response.
@@ -129,7 +129,7 @@ package javax.security.sasl;
 	* @exception SaslException If an error occurred while processing
 	* the challenge or generating a response.
 	*/
-	@:overload @:abstract public function evaluateChallenge(challenge : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function evaluateChallenge(challenge : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Determines whether the authentication exchange has completed.
@@ -140,7 +140,7 @@ package javax.security.sasl;
 	*
 	* @return true if the authentication exchange has completed; false otherwise.
 	*/
-	@:overload @:abstract public function isComplete() : Bool;
+	@:overload @:public @:abstract public function isComplete() : Bool;
 	
 	/**
 	* Unwraps a byte array received from the server.
@@ -166,7 +166,7 @@ package javax.security.sasl;
 	* not completed, or  if the negotiated quality of protection
 	* has neither integrity nor privacy.
 	*/
-	@:overload @:abstract public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function unwrap(incoming : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Wraps a byte array to be sent to the server.
@@ -192,7 +192,7 @@ package javax.security.sasl;
 	* not completed, or if the negotiated quality of protection
 	* has neither integrity nor privacy.
 	*/
-	@:overload @:abstract public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function wrap(outgoing : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the negotiated property.
@@ -206,7 +206,7 @@ package javax.security.sasl;
 	* @exception IllegalStateException if this authentication exchange
 	* has not completed
 	*/
-	@:overload @:abstract public function getNegotiatedProperty(propName : String) : Dynamic;
+	@:overload @:public @:abstract public function getNegotiatedProperty(propName : String) : Dynamic;
 	
 	/**
 	* Disposes of any system resources or security-sensitive information
@@ -215,7 +215,7 @@ package javax.security.sasl;
 	* @throws SaslException If a problem was encountered while disposing
 	* the resources.
 	*/
-	@:overload @:abstract public function dispose() : Void;
+	@:overload @:public @:abstract public function dispose() : Void;
 	
 	
 }

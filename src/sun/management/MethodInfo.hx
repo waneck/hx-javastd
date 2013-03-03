@@ -32,7 +32,7 @@ extern class MethodInfo implements java.io.Serializable
 	*
 	* @return the name of the compiled method.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the type of the compiled method such as normal-compile,
@@ -40,7 +40,7 @@ extern class MethodInfo implements java.io.Serializable
 	*
 	* @return the type of the compiled method.
 	*/
-	@:overload public function getType() : haxe.Int64;
+	@:overload @:public public function getType() : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes occupied by this compiled method.
@@ -48,9 +48,9 @@ extern class MethodInfo implements java.io.Serializable
 	*
 	* @return the number of bytes occupied by this compiled method.
 	*/
-	@:overload public function getCompileSize() : Int;
+	@:overload @:public public function getCompileSize() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

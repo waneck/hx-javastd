@@ -92,7 +92,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new text field initialized with the specified text.
@@ -103,7 +103,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
 	/**
 	* Constructs a new empty text field with the specified number
@@ -116,7 +116,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(columns : Int) : Void;
+	@:overload @:public public function new(columns : Int) : Void;
 	
 	/**
 	* Constructs a new text field initialized with the specified text
@@ -133,13 +133,13 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(text : String, columns : Int) : Void;
+	@:overload @:public public function new(text : String, columns : Int) : Void;
 	
 	/**
 	* Creates the TextField's peer.  The peer allows us to modify the
 	* appearance of the TextField without changing its functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Gets the character that is to be used for echoing.
@@ -159,7 +159,7 @@ package java.awt;
 	* @see         java.awt.TextField#echoCharIsSet
 	* @see         java.awt.TextField#setEchoChar
 	*/
-	@:overload public function getEchoChar() : java.StdTypes.Char16;
+	@:overload @:public public function getEchoChar() : java.StdTypes.Char16;
 	
 	/**
 	* Sets the echo character for this text field.
@@ -182,13 +182,13 @@ package java.awt;
 	* @see         java.awt.TextField#getEchoChar
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setEchoChar(c : java.StdTypes.Char16) : Void;
+	@:require(java1) @:overload @:public public function setEchoChar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setEchoChar(char)</code>.
 	*/
-	@:overload @:synchronized public function setEchoCharacter(c : java.StdTypes.Char16) : Void;
+	@:overload @:public @:synchronized public function setEchoCharacter(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Sets the text that is presented by this
@@ -196,7 +196,7 @@ package java.awt;
 	* @param       t   the new text.
 	* @see         java.awt.TextComponent#getText
 	*/
-	@:overload override public function setText(t : String) : Void;
+	@:overload @:public override public function setText(t : String) : Void;
 	
 	/**
 	* Indicates whether or not this text field has a
@@ -211,7 +211,7 @@ package java.awt;
 	* @see        java.awt.TextField#setEchoChar
 	* @see        java.awt.TextField#getEchoChar
 	*/
-	@:overload public function echoCharIsSet() : Bool;
+	@:overload @:public public function echoCharIsSet() : Bool;
 	
 	/**
 	* Gets the number of columns in this text field. A column is an
@@ -220,7 +220,7 @@ package java.awt;
 	* @see        java.awt.TextField#setColumns
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getColumns() : Int;
+	@:require(java1) @:overload @:public public function getColumns() : Int;
 	
 	/**
 	* Sets the number of columns in this text field. A column is an
@@ -232,7 +232,7 @@ package java.awt;
 	*                 is less than <code>0</code>.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function setColumns(columns : Int) : Void;
+	@:require(java1) @:overload @:public public function setColumns(columns : Int) : Void;
 	
 	/**
 	* Gets the preferred size of this text field
@@ -243,13 +243,13 @@ package java.awt;
 	*                 displaying this text field.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getPreferredSize(columns : Int) : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getPreferredSize(columns : Int) : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize(int)</code>.
 	*/
-	@:overload public function preferredSize(columns : Int) : java.awt.Dimension;
+	@:overload @:public public function preferredSize(columns : Int) : java.awt.Dimension;
 	
 	/**
 	* Gets the preferred size of this text field.
@@ -257,13 +257,13 @@ package java.awt;
 	*                         displaying this text field.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload @:public override public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Gets the minumum dimensions for a text field with
@@ -272,13 +272,13 @@ package java.awt;
 	*                          this text field.
 	* @since    JDK1.1
 	*/
-	@:require(java1) @:overload public function getMinimumSize(columns : Int) : java.awt.Dimension;
+	@:require(java1) @:overload @:public public function getMinimumSize(columns : Int) : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize(int)</code>.
 	*/
-	@:overload public function minimumSize(columns : Int) : java.awt.Dimension;
+	@:overload @:public public function minimumSize(columns : Int) : java.awt.Dimension;
 	
 	/**
 	* Gets the minumum dimensions for this text field.
@@ -286,13 +286,13 @@ package java.awt;
 	*                  displaying this text field.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:require(java1) @:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload @:public override public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Adds the specified action listener to receive
@@ -307,7 +307,7 @@ package java.awt;
 	* @see        java.awt.event.ActionListener
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes the specified action listener so that it no longer
@@ -322,7 +322,7 @@ package java.awt;
 	* @see             java.awt.event.ActionListener
 	* @since           JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -337,7 +337,7 @@ package java.awt;
 	* @see     java.awt.event#ActionListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -372,7 +372,7 @@ package java.awt;
 	* @see #getActionListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this text field. If the event
@@ -389,7 +389,7 @@ package java.awt;
 	* @see        java.awt.TextField#processActionEvent
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes action events occurring on this text field by
@@ -414,7 +414,7 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
+	@:require(java1) @:overload @:protected private function processActionEvent(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>TextField</code>.
@@ -425,7 +425,7 @@ package java.awt;
 	*
 	* @return      the parameter string of this text field
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this TextField.
@@ -437,7 +437,7 @@ package java.awt;
 	*         AccessibleContext of this TextField
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -456,7 +456,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

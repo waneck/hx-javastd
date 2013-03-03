@@ -29,7 +29,7 @@ extern class TCPTransport extends sun.rmi.transport.Transport
 	* Closes all cached connections in every channel subordinated to this
 	* transport.  Currently, this only closes outgoing connections.
 	*/
-	@:overload public function shedConnectionCaches() : Void;
+	@:overload @:public public function shedConnectionCaches() : Void;
 	
 	/**
 	* Returns a <I>Channel</I> that generates connections to the
@@ -40,32 +40,32 @@ extern class TCPTransport extends sun.rmi.transport.Transport
 	* @return the channel or null if the transport cannot
 	* generate connections to this endpoint
 	*/
-	@:overload public function getChannel(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.tcp.TCPChannel;
+	@:overload @:public override public function getChannel(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.tcp.TCPChannel;
 	
 	/**
 	* Removes the <I>Channel</I> that generates connections to the
 	* endpoint <I>ep</I>.
 	*/
-	@:overload public function free(ep : sun.rmi.transport.Endpoint) : Void;
+	@:overload @:public override public function free(ep : sun.rmi.transport.Endpoint) : Void;
 	
 	/**
 	* Export the object so that it can accept incoming calls.
 	*/
-	@:overload public function exportObject(target : sun.rmi.transport.Target) : Void;
+	@:overload @:public override public function exportObject(target : sun.rmi.transport.Target) : Void;
 	
-	@:overload @:synchronized private function targetUnexported() : Void;
+	@:overload @:protected @:synchronized override private function targetUnexported() : Void;
 	
 	/**
 	* Verify that the current access control context has permission to
 	* accept the connection being dispatched by the current thread.
 	*/
-	@:overload private function checkAcceptPermission(acc : java.security.AccessControlContext) : Void;
+	@:overload @:protected override private function checkAcceptPermission(acc : java.security.AccessControlContext) : Void;
 	
 	/**
 	* Returns the client host for the current thread's connection.  Throws
 	* ServerNotActiveException if no connection is active for this thread.
 	*/
-	@:overload public static function getClientHost() : String;
+	@:overload @:public @:static public static function getClientHost() : String;
 	
 	
 }
@@ -74,7 +74,7 @@ extern class TCPTransport extends sun.rmi.transport.Transport
 **/
 @:native('sun$rmi$transport$tcp$TCPTransport$AcceptLoop') @:internal extern class TCPTransport_AcceptLoop implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -83,7 +83,7 @@ extern class TCPTransport extends sun.rmi.transport.Transport
 */
 @:native('sun$rmi$transport$tcp$TCPTransport$ConnectionHandler') @:internal extern class TCPTransport_ConnectionHandler implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

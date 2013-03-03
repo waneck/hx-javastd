@@ -28,32 +28,32 @@ extern class SynchronizedStatement extends sun.tools.tree.Statement
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, expr : sun.tools.tree.Expression, body : sun.tools.tree.Statement) : Void;
+	@:overload @:public public function new(where : haxe.Int64, expr : sun.tools.tree.Expression, body : sun.tools.tree.Statement) : Void;
 	
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
 	
 	/**
 	* Create a copy of the statement for method inlining
 	*/
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
 	
 	/**
 	* Compute cost of inlining this statement
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
 	
 }

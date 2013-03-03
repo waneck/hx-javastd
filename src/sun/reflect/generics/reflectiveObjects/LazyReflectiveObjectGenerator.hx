@@ -25,9 +25,9 @@ package sun.reflect.generics.reflectiveObjects;
 */
 extern class LazyReflectiveObjectGenerator
 {
-	@:overload private function new(f : sun.reflect.generics.factory.GenericsFactory) : Void;
+	@:overload @:protected private function new(f : sun.reflect.generics.factory.GenericsFactory) : Void;
 	
-	@:overload private function getReifier() : sun.reflect.generics.visitor.Reifier;
+	@:overload @:protected private function getReifier() : sun.reflect.generics.visitor.Reifier;
 	
 	
 }

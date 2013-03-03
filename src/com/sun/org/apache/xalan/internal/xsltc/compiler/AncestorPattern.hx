@@ -23,25 +23,25 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class AncestorPattern extends com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern
 {
-	@:overload public function new(right : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern) : Void;
+	@:overload @:public public function new(right : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern) : Void;
 	
-	@:overload public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, right : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern) : Void;
+	@:overload @:public public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, right : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern) : Void;
 	
-	@:overload public function getLoopHandle() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload @:public public function getLoopHandle() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function isWildcard() : Bool;
+	@:overload @:public override public function isWildcard() : Bool;
 	
-	@:overload public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
+	@:overload @:public override public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
-	@:overload public function reduceKernelPattern() : Void;
+	@:overload @:public override public function reduceKernelPattern() : Void;
 	
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

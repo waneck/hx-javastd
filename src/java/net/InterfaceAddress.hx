@@ -39,7 +39,7 @@ package java.net;
 	*
 	* @return the <code>InetAddress</code> for this address.
 	*/
-	@:overload public function getAddress() : java.net.InetAddress;
+	@:overload @:public public function getAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns an <code>InetAddress</code> for the brodcast address
@@ -51,7 +51,7 @@ package java.net;
 	* @return the <code>InetAddress</code> representing the broadcast
 	*         address or <code>null</code> if there is no broadcast address.
 	*/
-	@:overload public function getBroadcast() : java.net.InetAddress;
+	@:overload @:public public function getBroadcast() : java.net.InetAddress;
 	
 	/**
 	* Returns the network prefix length for this address. This is also known
@@ -63,7 +63,7 @@ package java.net;
 	* @return a <code>short</code> representing the prefix length for the
 	*         subnet of that address.
 	*/
-	@:overload public function getNetworkPrefixLength() : java.StdTypes.Int16;
+	@:overload @:public public function getNetworkPrefixLength() : java.StdTypes.Int16;
 	
 	/**
 	* Compares this object against the specified object.
@@ -80,14 +80,14 @@ package java.net;
 	*          <code>false</code> otherwise.
 	* @see     java.net.InterfaceAddress#hashCode()
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this Interface address.
 	*
 	* @return  a hash code value for this Interface address.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Converts this Interface address to a <code>String</code>. The
@@ -95,7 +95,7 @@ package java.net;
 	*
 	* @return  a string representation of this Interface address.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -43,13 +43,13 @@ extern interface LSProgressEvent extends org.w3c.dom.events.Event
 	/**
 	* The input source that is being parsed.
 	*/
-	@:overload public function getInput() : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function getInput() : org.w3c.dom.ls.LSInput;
 	
 	/**
 	* The current position in the input source, including all external
 	* entities and other resources that have been read.
 	*/
-	@:overload public function getPosition() : Int;
+	@:overload @:public public function getPosition() : Int;
 	
 	/**
 	* The total size of the document including all external resources, this
@@ -57,7 +57,7 @@ extern interface LSProgressEvent extends org.w3c.dom.events.Event
 	* more external resources are seen. A value of <code>0</code> is
 	* returned if the total size cannot be determined or estimated.
 	*/
-	@:overload public function getTotalSize() : Int;
+	@:overload @:public public function getTotalSize() : Int;
 	
 	
 }

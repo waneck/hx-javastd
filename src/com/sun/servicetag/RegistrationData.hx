@@ -193,7 +193,7 @@ extern class RegistrationData
 	* </blockquote>
 	* and the value of other keys may be empty.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the uniform resource name of this registration data
@@ -202,7 +202,7 @@ extern class RegistrationData
 	*
 	* @return the URN of this registration data.
 	*/
-	@:overload public function getRegistrationURN() : String;
+	@:overload @:public public function getRegistrationURN() : String;
 	
 	/**
 	* Returns a map containing the environment information for this
@@ -213,7 +213,7 @@ extern class RegistrationData
 	*
 	* @return an environment map for this registration data.
 	*/
-	@:overload public function getEnvironmentMap() : java.util.Map<String, String>;
+	@:overload @:public public function getEnvironmentMap() : java.util.Map<String, String>;
 	
 	/**
 	* Sets an element of the specified {@code name} in the environment map
@@ -222,7 +222,7 @@ extern class RegistrationData
 	* @throws IllegalArgumentException if {@code name} is not a valid key
 	* in the environment map, or {@code value} is not valid.
 	*/
-	@:overload public function setEnvironment(name : String, value : String) : Void;
+	@:overload @:public public function setEnvironment(name : String, value : String) : Void;
 	
 	/**
 	* Returns all service tags in this registration data.
@@ -230,7 +230,7 @@ extern class RegistrationData
 	* @return  a {@link Set Set} of the service tags
 	* in this registration data.
 	*/
-	@:overload public function getServiceTags() : java.util.Set<com.sun.servicetag.ServiceTag>;
+	@:overload @:public public function getServiceTags() : java.util.Set<com.sun.servicetag.ServiceTag>;
 	
 	/**
 	* Adds a service tag to this registration data.
@@ -247,7 +247,7 @@ extern class RegistrationData
 	*   a service tag of the same {@link ServiceTag#getInstanceURN
 	*   <tt>instance_urn</tt>} already exists in the registry.
 	*/
-	@:overload @:synchronized public function addServiceTag(st : com.sun.servicetag.ServiceTag) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:synchronized public function addServiceTag(st : com.sun.servicetag.ServiceTag) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Returns a service tag of the given <tt>instance_urn</tt> in this registration
@@ -257,7 +257,7 @@ extern class RegistrationData
 	* @return the {@code ServiceTag} object of the given  <tt>instance_urn</tt>
 	*         if exists; otherwise return {@code null}.
 	*/
-	@:overload @:synchronized public function getServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:synchronized public function getServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Removes a service tag of the given <tt>instance_urn</tt> from this
@@ -270,7 +270,7 @@ extern class RegistrationData
 	* or {@code null} if the service tag does not exist in this
 	* registration data.
 	*/
-	@:overload @:synchronized public function removeServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:synchronized public function removeServiceTag(instanceURN : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Updates the <tt>product_defined_instance_id</tt> in the service tag
@@ -284,7 +284,7 @@ extern class RegistrationData
 	* or {@code null} if the service tag does not exist in this
 	* registration data.
 	*/
-	@:overload @:synchronized public function updateServiceTag(instanceURN : String, productDefinedInstanceID : String) : com.sun.servicetag.ServiceTag;
+	@:overload @:public @:synchronized public function updateServiceTag(instanceURN : String, productDefinedInstanceID : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Reads the registration data from the XML document on the
@@ -302,7 +302,7 @@ extern class RegistrationData
 	*
 	* @throws IOException if an error occurred when reading from the input stream.
 	*/
-	@:overload public static function loadFromXML(_in : java.io.InputStream) : com.sun.servicetag.RegistrationData;
+	@:overload @:public @:static public static function loadFromXML(_in : java.io.InputStream) : com.sun.servicetag.RegistrationData;
 	
 	/**
 	* Writes the registration data to the specified output stream
@@ -314,7 +314,7 @@ extern class RegistrationData
 	*
 	* @throws IOException if an error occurred when writing to the output stream.
 	*/
-	@:overload public function storeToXML(os : java.io.OutputStream) : Void;
+	@:overload @:public public function storeToXML(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns a newly allocated byte array containing the registration
@@ -323,7 +323,7 @@ extern class RegistrationData
 	* @return a newly allocated byte array containing the registration
 	* data in XML format.
 	*/
-	@:overload public function toXML() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toXML() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a string representation of this registration data in XML
@@ -332,7 +332,7 @@ extern class RegistrationData
 	* @return a string representation of this registration data in XML
 	*         format.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

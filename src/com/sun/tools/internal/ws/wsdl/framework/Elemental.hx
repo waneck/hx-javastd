@@ -30,9 +30,9 @@ extern interface Elemental
 	*
 	* @author WS Development Team
 	*/
-	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public @:public @:public public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public @:public public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

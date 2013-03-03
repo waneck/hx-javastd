@@ -47,7 +47,7 @@ extern interface BufferedImageOp
 	* image is not compatible with the types of images allowed by the class
 	* implementing this filter.
 	*/
-	@:overload public function filter(src : java.awt.image.BufferedImage, dest : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public public function filter(src : java.awt.image.BufferedImage, dest : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns the bounding box of the filtered destination image.
@@ -60,7 +60,7 @@ extern interface BufferedImageOp
 	* @return The <CODE>Rectangle2D</CODE> representing the destination
 	* image's bounding box.
 	*/
-	@:overload public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Creates a zeroed destination image with the correct size and number of
@@ -75,7 +75,7 @@ extern interface BufferedImageOp
 	*
 	* @return The zeroed destination image.
 	*/
-	@:overload public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns the location of the corresponding destination point given a
@@ -88,7 +88,7 @@ extern interface BufferedImageOp
 	* @return The <CODE>Point2D</CODE> in the destination image that
 	* corresponds to the specified point in the source image.
 	*/
-	@:overload public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints for this operation.
@@ -97,7 +97,7 @@ extern interface BufferedImageOp
 	* <CODE>BufferedImageOp</CODE>.  Returns
 	* null if no hints have been set.
 	*/
-	@:overload public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }

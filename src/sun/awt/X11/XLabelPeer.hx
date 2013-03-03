@@ -28,18 +28,18 @@ package sun.awt.X11;
 	/**
 	* Minimum size.
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* Paint the label
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function setAlignment(align : Int) : Void;
+	@:overload @:public public function setAlignment(align : Int) : Void;
 	
 	
 }

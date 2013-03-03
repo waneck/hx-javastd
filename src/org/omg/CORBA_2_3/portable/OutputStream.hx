@@ -44,14 +44,14 @@ package org.omg.CORBA_2_3.portable;
 	* Marshals a value type to the output stream.
 	* @param value is the acutal value to write
 	*/
-	@:overload public function write_value(value : java.io.Serializable) : Void;
+	@:overload @:public public function write_value(value : java.io.Serializable) : Void;
 	
 	/**
 	* Marshals a value type to the output stream.
 	* @param value is the acutal value to write
 	* @param clz is the declared type of the value to be marshaled
 	*/
-	@:overload public function write_value(value : java.io.Serializable, clz : Class<Dynamic>) : Void;
+	@:overload @:public public function write_value(value : java.io.Serializable, clz : Class<Dynamic>) : Void;
 	
 	/**
 	* Marshals a value type to the output stream.
@@ -59,7 +59,7 @@ package org.omg.CORBA_2_3.portable;
 	* @param repository_id identifies the type of the value type to
 	* be marshaled
 	*/
-	@:overload public function write_value(value : java.io.Serializable, repository_id : String) : Void;
+	@:overload @:public public function write_value(value : java.io.Serializable, repository_id : String) : Void;
 	
 	/**
 	* Marshals a value type to the output stream.
@@ -67,13 +67,13 @@ package org.omg.CORBA_2_3.portable;
 	* @param factory is the instance of the helper to be used for marshaling
 	* the boxed value
 	*/
-	@:overload public function write_value(value : java.io.Serializable, factory : org.omg.CORBA.portable.BoxedValueHelper) : Void;
+	@:overload @:public public function write_value(value : java.io.Serializable, factory : org.omg.CORBA.portable.BoxedValueHelper) : Void;
 	
 	/**
 	* Marshals a value object or a stub object.
 	* @param obj the actual value object to marshal or the stub to be marshalled
 	*/
-	@:overload public function write_abstract_interface(obj : Dynamic) : Void;
+	@:overload @:public public function write_abstract_interface(obj : Dynamic) : Void;
 	
 	
 }

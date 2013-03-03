@@ -23,31 +23,31 @@ package com.sun.org.apache.xml.internal.dtm.ref;
 */
 extern class EmptyIterator implements com.sun.org.apache.xml.internal.dtm.DTMAxisIterator
 {
-	@:overload public static function getInstance() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:static public static function getInstance() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload @:final public function next() : Int;
+	@:overload @:public @:final public function next() : Int;
 	
-	@:overload @:final public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:final public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload @:final public function getLast() : Int;
+	@:overload @:public @:final public function getLast() : Int;
 	
-	@:overload @:final public function getPosition() : Int;
+	@:overload @:public @:final public function getPosition() : Int;
 	
-	@:overload @:final public function setMark() : Void;
+	@:overload @:public @:final public function setMark() : Void;
 	
-	@:overload @:final public function gotoMark() : Void;
+	@:overload @:public @:final public function gotoMark() : Void;
 	
-	@:overload @:final public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:final public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload @:final public function getStartNode() : Int;
+	@:overload @:public @:final public function getStartNode() : Int;
 	
-	@:overload @:final public function isReverse() : Bool;
+	@:overload @:public @:final public function isReverse() : Bool;
 	
-	@:overload @:final public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public @:final public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload @:final public function setRestartable(isRestartable : Bool) : Void;
+	@:overload @:public @:final public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload @:final public function getNodeByPosition(position : Int) : Int;
+	@:overload @:public @:final public function getNodeByPosition(position : Int) : Int;
 	
 	
 }

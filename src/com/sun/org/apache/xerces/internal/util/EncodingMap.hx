@@ -21,13 +21,13 @@ package com.sun.org.apache.xerces.internal.util;
 extern class EncodingMap
 {
 	/** fIANA2JavaMap */
-	private static var fIANA2JavaMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected @:final @:static private static var fIANA2JavaMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** fJava2IANAMap */
-	private static var fJava2IANAMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected @:final @:static private static var fJava2IANAMap(default, null) : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds an IANA to Java encoding name mapping.
@@ -39,14 +39,14 @@ extern class EncodingMap
 	* effect is JVM wide and may cause unforeseen behaviour
 	* for other applications running in the system.
 	*/
-	@:overload public static function putIANA2JavaMapping(ianaEncoding : String, javaEncoding : String) : Void;
+	@:overload @:public @:static public static function putIANA2JavaMapping(ianaEncoding : String, javaEncoding : String) : Void;
 	
 	/**
 	* Returns the Java encoding name for the specified IANA encoding name.
 	*
 	* @param ianaEncoding The IANA encoding name.
 	*/
-	@:overload public static function getIANA2JavaMapping(ianaEncoding : String) : String;
+	@:overload @:public @:static public static function getIANA2JavaMapping(ianaEncoding : String) : String;
 	
 	/**
 	* Removes an IANA to Java encoding name mapping.
@@ -57,7 +57,7 @@ extern class EncodingMap
 	* effect is JVM wide and may cause unforeseen behaviour
 	* for other applications running in the system.
 	*/
-	@:overload public static function removeIANA2JavaMapping(ianaEncoding : String) : String;
+	@:overload @:public @:static public static function removeIANA2JavaMapping(ianaEncoding : String) : String;
 	
 	/**
 	* Adds a Java to IANA encoding name mapping.
@@ -69,14 +69,14 @@ extern class EncodingMap
 	* effect is JVM wide and may cause unforeseen behaviour
 	* for other applications running in the system.
 	*/
-	@:overload public static function putJava2IANAMapping(javaEncoding : String, ianaEncoding : String) : Void;
+	@:overload @:public @:static public static function putJava2IANAMapping(javaEncoding : String, ianaEncoding : String) : Void;
 	
 	/**
 	* Returns the IANA encoding name for the specified Java encoding name.
 	*
 	* @param javaEncoding The Java encoding name.
 	*/
-	@:overload public static function getJava2IANAMapping(javaEncoding : String) : String;
+	@:overload @:public @:static public static function getJava2IANAMapping(javaEncoding : String) : String;
 	
 	/**
 	* Removes a Java to IANA encoding name mapping.
@@ -87,7 +87,7 @@ extern class EncodingMap
 	* effect is JVM wide and may cause unforeseen behaviour
 	* for other applications running in the system.
 	*/
-	@:overload public static function removeJava2IANAMapping(javaEncoding : String) : String;
+	@:overload @:public @:static public static function removeJava2IANAMapping(javaEncoding : String) : String;
 	
 	
 }

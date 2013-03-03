@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class POACurrent extends org.omg.CORBA.portable.ObjectImpl implements org.omg.PortableServer.Current
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function _ids() : java.NativeArray<String>;
+	@:overload @:public override public function _ids() : java.NativeArray<String>;
 	
-	@:overload public function get_POA() : org.omg.PortableServer.POA;
+	@:overload @:public public function get_POA() : org.omg.PortableServer.POA;
 	
-	@:overload public function get_object_id() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function get_object_id() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getOA() : com.sun.corba.se.spi.oa.ObjectAdapter;
+	@:overload @:public public function getOA() : com.sun.corba.se.spi.oa.ObjectAdapter;
 	
-	@:overload public function getObjectId() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getObjectId() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getOperation() : String;
+	@:overload @:public public function getOperation() : String;
 	
 	
 }

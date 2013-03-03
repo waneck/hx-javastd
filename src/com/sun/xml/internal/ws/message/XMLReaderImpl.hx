@@ -25,18 +25,18 @@ package com.sun.xml.internal.ws.message;
 */
 @:internal extern class XMLReaderImpl extends org.xml.sax.helpers.XMLFilterImpl
 {
-	@:overload override public function parse(systemId : String) : Void;
+	@:overload @:public override public function parse(systemId : String) : Void;
 	
-	@:overload override public function parse(input : org.xml.sax.InputSource) : Void;
+	@:overload @:public override public function parse(input : org.xml.sax.InputSource) : Void;
 	
-	@:overload override public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public override public function getContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload override public function setContentHandler(contentHandler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function setContentHandler(contentHandler : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Special {@link InputSource} instance that we use to pass to {@link SAXSource}.
 	*/
-	private static var THE_SOURCE(default, null) : org.xml.sax.InputSource;
+	@:protected @:static @:final private static var THE_SOURCE(default, null) : org.xml.sax.InputSource;
 	
 	
 }

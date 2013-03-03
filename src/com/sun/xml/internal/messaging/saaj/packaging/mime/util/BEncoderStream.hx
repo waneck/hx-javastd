@@ -32,12 +32,12 @@ extern class BEncoderStream extends com.sun.xml.internal.messaging.saaj.packagin
 	* Create a 'B' encoder that encodes the specified input stream.
 	* @param out        the output stream
 	*/
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the length of the encoded version of this byte array.
 	*/
-	@:overload public static function encodedLength(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public @:static public static function encodedLength(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	
 }

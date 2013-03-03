@@ -28,22 +28,22 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	/**
 	* The first number in the range of ids used for focus events.
 	*/
-	public static var FOCUS_FIRST(default, null) : Int;
+	@:public @:static @:final public static var FOCUS_FIRST(default, null) : Int;
 	
 	/**
 	* The last number in the range of ids used for focus events.
 	*/
-	public static var FOCUS_LAST(default, null) : Int;
+	@:public @:static @:final public static var FOCUS_LAST(default, null) : Int;
 	
 	/**
 	* This event indicates that the Component is now the focus owner.
 	*/
-	public static var FOCUS_GAINED(default, null) : Int;
+	@:public @:static @:final public static var FOCUS_GAINED(default, null) : Int;
 	
 	/**
 	* This event indicates that the Component is no longer the focus owner.
 	*/
-	public static var FOCUS_LOST(default, null) : Int;
+	@:public @:static @:final public static var FOCUS_LOST(default, null) : Int;
 	
 	/**
 	* Constructs a <code>FocusEvent</code> object with the
@@ -76,7 +76,7 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	* @see #getOppositeComponent()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(source : java.awt.Component, id : Int, temporary : Bool, opposite : java.awt.Component) : Void;
+	@:require(java4) @:overload @:public public function new(source : java.awt.Component, id : Int, temporary : Bool, opposite : java.awt.Component) : Void;
 	
 	/**
 	* Constructs a <code>FocusEvent</code> object and identifies
@@ -96,7 +96,7 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	* @see #getID()
 	* @see #isTemporary()
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int, temporary : Bool) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, temporary : Bool) : Void;
 	
 	/**
 	* Constructs a <code>FocusEvent</code> object and identifies it
@@ -113,7 +113,7 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	* @see #getSource()
 	* @see #getID()
 	*/
-	@:overload public function new(source : java.awt.Component, id : Int) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int) : Void;
 	
 	/**
 	* Identifies the focus change event as temporary or permanent.
@@ -121,7 +121,7 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	* @return <code>true</code> if the focus change is temporary;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function isTemporary() : Bool;
+	@:overload @:public public function isTemporary() : Bool;
 	
 	/**
 	* Returns the other Component involved in this focus change. For a
@@ -134,7 +134,7 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	* @return the other Component involved in the focus change, or null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getOppositeComponent() : java.awt.Component;
+	@:require(java4) @:overload @:public public function getOppositeComponent() : java.awt.Component;
 	
 	/**
 	* Returns a parameter string identifying this event.
@@ -142,7 +142,7 @@ extern class FocusEvent extends java.awt.event.ComponentEvent
 	*
 	* @return a string identifying the event and its attributes
 	*/
-	@:overload override public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

@@ -38,15 +38,15 @@ package com.sun.jndi.ldap.pool;
 	* This is useful when searching for a ConnectionDesc using only its
 	* PooledConnection.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Hashcode is that of PooledConnection to facilitate
 	* searching for a ConnectionDesc using only its PooledConnection.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

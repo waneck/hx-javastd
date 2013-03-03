@@ -25,22 +25,22 @@ package sun.nio.fs;
 */
 @:internal extern class Cancellable implements java.lang.Runnable
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the memory address of a 4-byte int that should be polled to
 	* detect cancellation.
 	*/
-	@:overload private function addressToPollForCancel() : haxe.Int64;
+	@:overload @:protected private function addressToPollForCancel() : haxe.Int64;
 	
 	/**
 	* The value to write to the polled memory location to indicate that the
 	* task has been cancelled. If this method is not overridden then it
 	* defaults to MAX_VALUE.
 	*/
-	@:overload private function cancelValue() : Int;
+	@:overload @:protected private function cancelValue() : Int;
 	
-	@:overload @:final public function run() : Void;
+	@:overload @:public @:final public function run() : Void;
 	
 	
 }

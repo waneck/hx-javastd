@@ -30,14 +30,14 @@ extern class ClassFileTransformer
 	*
 	* @param t Class file transformer instance
 	*/
-	@:overload public static function add(t : sun.misc.ClassFileTransformer) : Void;
+	@:overload @:public @:static public static function add(t : sun.misc.ClassFileTransformer) : Void;
 	
 	/**
 	* Get the array of ClassFileTransformer object.
 	*
 	* @return ClassFileTransformer object array
 	*/
-	@:overload public static function getTransformers() : java.NativeArray<sun.misc.ClassFileTransformer>;
+	@:overload @:public @:static public static function getTransformers() : java.NativeArray<sun.misc.ClassFileTransformer>;
 	
 	/**
 	* Transform a byte array from one to the other.
@@ -47,7 +47,7 @@ extern class ClassFileTransformer
 	* @param len Length of byte array
 	* @return Transformed byte array
 	*/
-	@:overload @:abstract public function transform(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function transform(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

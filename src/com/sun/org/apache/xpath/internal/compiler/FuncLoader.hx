@@ -30,7 +30,7 @@ extern class FuncLoader
 	*
 	* @return The class name of the {com.sun.org.apache.xpath.internal.functions.Function} class.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Construct a function loader
@@ -42,7 +42,7 @@ extern class FuncLoader
 	*    values found in {@link com.sun.org.apache.xpath.internal.compiler.FunctionTable}, but may
 	*    be a value installed by an external module.
 	*/
-	@:overload public function new(funcName : String, funcID : Int) : Void;
+	@:overload @:public public function new(funcName : String, funcID : Int) : Void;
 	
 	
 }

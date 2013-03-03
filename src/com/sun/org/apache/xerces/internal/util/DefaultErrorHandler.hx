@@ -21,28 +21,28 @@ package com.sun.org.apache.xerces.internal.util;
 extern class DefaultErrorHandler implements com.sun.org.apache.xerces.internal.xni.parser.XMLErrorHandler
 {
 	/** Print writer. */
-	private var fOut : java.io.PrintWriter;
+	@:protected private var fOut : java.io.PrintWriter;
 	
 	/**
 	* Constructs an error handler that prints error messages to
 	* <code>System.err</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an error handler that prints error messages to the
 	* specified <code>PrintWriter</code.
 	*/
-	@:overload public function new(out : java.io.PrintWriter) : Void;
+	@:overload @:public public function new(out : java.io.PrintWriter) : Void;
 	
 	/** Warning. */
-	@:overload public function warning(domain : String, key : String, ex : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function warning(domain : String, key : String, ex : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/** Error. */
-	@:overload public function error(domain : String, key : String, ex : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function error(domain : String, key : String, ex : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	/** Fatal error. */
-	@:overload public function fatalError(domain : String, key : String, ex : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
+	@:overload @:public public function fatalError(domain : String, key : String, ex : com.sun.org.apache.xerces.internal.xni.parser.XMLParseException) : Void;
 	
 	
 }

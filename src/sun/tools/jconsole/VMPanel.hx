@@ -25,41 +25,41 @@ package sun.tools.jconsole;
 */
 extern class VMPanel extends javax.swing.JTabbedPane implements java.beans.PropertyChangeListener
 {
-	@:overload public static function getTabInfos() : java.NativeArray<sun.tools.jconsole.VMPanel.VMPanel_TabInfo>;
+	@:overload @:public @:static public static function getTabInfos() : java.NativeArray<sun.tools.jconsole.VMPanel.VMPanel_TabInfo>;
 	
-	@:overload override public function setUI(ui : javax.swing.plaf.TabbedPaneUI) : Void;
+	@:overload @:public override public function setUI(ui : javax.swing.plaf.TabbedPaneUI) : Void;
 	
-	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
-	@:overload @:synchronized override public function removeTabAt(index : Int) : Void;
+	@:overload @:public @:synchronized override public function removeTabAt(index : Int) : Void;
 	
-	@:overload public function getUpdateInterval() : Int;
+	@:overload @:public public function getUpdateInterval() : Int;
 	
-	@:overload public function getProxyClient() : sun.tools.jconsole.ProxyClient;
+	@:overload @:public public function getProxyClient() : sun.tools.jconsole.ProxyClient;
 	
-	@:overload public function cleanUp() : Void;
+	@:overload @:public public function cleanUp() : Void;
 	
-	@:overload public function connect() : Void;
+	@:overload @:public public function connect() : Void;
 	
-	@:overload public function disconnect() : Void;
+	@:overload @:public public function disconnect() : Void;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload public function getHostName() : String;
+	@:overload @:public public function getHostName() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function getUserName() : String;
+	@:overload @:public public function getUserName() : String;
 	
-	@:overload public function getUrl() : String;
+	@:overload @:public public function getUrl() : String;
 	
-	@:overload public function getPassword() : String;
+	@:overload @:public public function getPassword() : String;
 	
-	@:overload public function getConnectionName() : String;
+	@:overload @:public public function getConnectionName() : String;
 	
-	@:overload public function getDisplayName() : String;
+	@:overload @:public public function getDisplayName() : String;
 	
 	
 }

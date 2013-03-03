@@ -37,7 +37,7 @@ package javax.management;
 	*
 	* @param e the wrapped exception.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Creates an <CODE>MBeanRegistrationException</CODE> that wraps
@@ -47,7 +47,7 @@ package javax.management;
 	* @param e the wrapped exception.
 	* @param message the detail message.
 	*/
-	@:overload public function new(e : java.lang.Exception, message : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, message : String) : Void;
 	
 	
 }

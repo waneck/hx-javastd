@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.ior;
 */
 extern class ObjectAdapterIdNumber extends com.sun.corba.se.impl.ior.ObjectAdapterIdArray
 {
-	@:overload public function new(poaid : Int) : Void;
+	@:overload @:public public function new(poaid : Int) : Void;
 	
-	@:overload public function getOldPOAId() : Int;
+	@:overload @:public public function getOldPOAId() : Int;
 	
 	
 }

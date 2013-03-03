@@ -26,7 +26,7 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 extern class BISerializable
 {
 	/** serial version UID, or null to avoid generating the serialVersionUID field. */
-	public var uid : Null<haxe.Int64>;
+	@:public public var uid : Null<haxe.Int64>;
 	
 	
 }

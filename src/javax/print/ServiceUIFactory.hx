@@ -60,43 +60,43 @@ extern class ServiceUIFactory
 	* The value of the String is the fully qualified classname :
 	* "javax.swing.JComponent".
 	*/
-	public static var JCOMPONENT_UI(default, null) : String;
+	@:public @:static @:final public static var JCOMPONENT_UI(default, null) : String;
 	
 	/**
 	* Denotes a UI implemented as an AWT panel.
 	* The value of the String is the fully qualified classname :
 	* "java.awt.Panel"
 	*/
-	public static var PANEL_UI(default, null) : String;
+	@:public @:static @:final public static var PANEL_UI(default, null) : String;
 	
 	/**
 	* Denotes a UI implemented as an AWT dialog.
 	* The value of the String is the fully qualified classname :
 	* "java.awt.Dialog"
 	*/
-	public static var DIALOG_UI(default, null) : String;
+	@:public @:static @:final public static var DIALOG_UI(default, null) : String;
 	
 	/**
 	* Denotes a UI implemented as a Swing dialog.
 	* The value of the String is the fully qualified classname :
 	* "javax.swing.JDialog"
 	*/
-	public static var JDIALOG_UI(default, null) : String;
+	@:public @:static @:final public static var JDIALOG_UI(default, null) : String;
 	
 	/**
 	* Denotes a UI which performs an informative "About" role.
 	*/
-	public static var ABOUT_UIROLE(default, null) : Int;
+	@:public @:static @:final public static var ABOUT_UIROLE(default, null) : Int;
 	
 	/**
 	* Denotes a UI which performs an administrative role.
 	*/
-	public static var ADMIN_UIROLE(default, null) : Int;
+	@:public @:static @:final public static var ADMIN_UIROLE(default, null) : Int;
 	
 	/**
 	* Denotes a UI which performs the normal end user role.
 	*/
-	public static var MAIN_UIROLE(default, null) : Int;
+	@:public @:static @:final public static var MAIN_UIROLE(default, null) : Int;
 	
 	/**
 	* Not a valid role but role id's greater than this may be used
@@ -104,7 +104,7 @@ extern class ServiceUIFactory
 	* function performed by this role is required to make proper use
 	* of it.
 	*/
-	public static var RESERVED_UIROLE(default, null) : Int;
+	@:public @:static @:final public static var RESERVED_UIROLE(default, null) : Int;
 	
 	/**
 	* Get a UI object which may be cast to the requested UI type
@@ -119,7 +119,7 @@ extern class ServiceUIFactory
 	* one of the standard ones, nor a private one
 	* supported by the factory.
 	*/
-	@:overload @:abstract public function getUI(role : Int, ui : String) : Dynamic;
+	@:overload @:public @:abstract public function getUI(role : Int, ui : String) : Dynamic;
 	
 	/**
 	* Given a UI role obtained from this factory obtain the UI
@@ -133,7 +133,7 @@ extern class ServiceUIFactory
 	* @throws IllegalArgumentException is the role is a non-standard
 	* role not supported by this factory.
 	*/
-	@:overload @:abstract public function getUIClassNamesForRole(role : Int) : java.NativeArray<String>;
+	@:overload @:public @:abstract public function getUIClassNamesForRole(role : Int) : java.NativeArray<String>;
 	
 	
 }

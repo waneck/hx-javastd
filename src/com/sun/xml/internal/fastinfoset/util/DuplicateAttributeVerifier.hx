@@ -27,21 +27,21 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class DuplicateAttributeVerifier
 {
-	public static var MAP_SIZE(default, null) : Int;
+	@:public @:static @:final public static var MAP_SIZE(default, null) : Int;
 	
-	public var _currentIteration : Int;
+	@:public public var _currentIteration : Int;
 	
-	public var _poolHead(default, null) : com.sun.xml.internal.fastinfoset.util.DuplicateAttributeVerifier.DuplicateAttributeVerifier_Entry;
+	@:public @:final public var _poolHead(default, null) : com.sun.xml.internal.fastinfoset.util.DuplicateAttributeVerifier.DuplicateAttributeVerifier_Entry;
 	
-	public var _poolCurrent : com.sun.xml.internal.fastinfoset.util.DuplicateAttributeVerifier.DuplicateAttributeVerifier_Entry;
+	@:public public var _poolCurrent : com.sun.xml.internal.fastinfoset.util.DuplicateAttributeVerifier.DuplicateAttributeVerifier_Entry;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final public function clear() : Void;
 	
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final public function reset() : Void;
 	
-	@:overload @:final public function checkForDuplicateAttribute(hash : Int, value : Int) : Void;
+	@:overload @:public @:final public function checkForDuplicateAttribute(hash : Int, value : Int) : Void;
 	
 	
 }

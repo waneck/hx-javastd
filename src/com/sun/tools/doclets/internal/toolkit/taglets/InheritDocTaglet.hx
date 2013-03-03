@@ -41,47 +41,47 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* The inline tag that would appear in the documentation if
 	* the writer wanted documentation to be inherited.
 	*/
-	public static var INHERIT_DOC_INLINE_TAG(default, null) : String;
+	@:public @:static @:final public static var INHERIT_DOC_INLINE_TAG(default, null) : String;
 	
 	/**
 	* Construct a new InheritDocTaglet.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload public function inField() : Bool;
+	@:overload @:public override public function inField() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload public function inConstructor() : Bool;
+	@:overload @:public override public function inConstructor() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload public function inOverview() : Bool;
+	@:overload @:public override public function inOverview() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload public function inPackage() : Bool;
+	@:overload @:public override public function inPackage() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload public function inType() : Bool;
+	@:overload @:public override public function inType() : Bool;
 	
 	/**
 	* Given the <code>Tag</code> representation of this custom
@@ -91,7 +91,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param tagletWriter the taglet writer for output.
 	* @return the TagletOutput representation of this <code>Tag</code>.
 	*/
-	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload @:public override public function getTagletOutput(tag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

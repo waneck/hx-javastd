@@ -67,7 +67,7 @@ package com.sun.org.apache.bcel.internal.classfile;
 */
 extern class StackMapEntry implements java.lang.Cloneable
 {
-	@:overload public function new(byte_code_offset : Int, number_of_locals : Int, types_of_locals : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>, number_of_stack_items : Int, types_of_stack_items : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(byte_code_offset : Int, number_of_locals : Int, types_of_locals : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>, number_of_stack_items : Int, types_of_stack_items : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Dump stack map entry
@@ -75,37 +75,37 @@ extern class StackMapEntry implements java.lang.Cloneable
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
-	@:overload public function setByteCodeOffset(b : Int) : Void;
+	@:overload @:public public function setByteCodeOffset(b : Int) : Void;
 	
-	@:overload public function getByteCodeOffset() : Int;
+	@:overload @:public public function getByteCodeOffset() : Int;
 	
-	@:overload public function setNumberOfLocals(n : Int) : Void;
+	@:overload @:public public function setNumberOfLocals(n : Int) : Void;
 	
-	@:overload public function getNumberOfLocals() : Int;
+	@:overload @:public public function getNumberOfLocals() : Int;
 	
-	@:overload public function setTypesOfLocals(t : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>) : Void;
+	@:overload @:public public function setTypesOfLocals(t : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>) : Void;
 	
-	@:overload public function getTypesOfLocals() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>;
+	@:overload @:public public function getTypesOfLocals() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>;
 	
-	@:overload public function setNumberOfStackItems(n : Int) : Void;
+	@:overload @:public public function setNumberOfStackItems(n : Int) : Void;
 	
-	@:overload public function getNumberOfStackItems() : Int;
+	@:overload @:public public function getNumberOfStackItems() : Int;
 	
-	@:overload public function setTypesOfStackItems(t : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>) : Void;
+	@:overload @:public public function setTypesOfStackItems(t : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>) : Void;
 	
-	@:overload public function getTypesOfStackItems() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>;
+	@:overload @:public public function getTypesOfStackItems() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.StackMapType>;
 	
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.StackMapEntry;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.StackMapEntry;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -114,17 +114,17 @@ extern class StackMapEntry implements java.lang.Cloneable
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* @return Constant pool used by this object.
 	*/
-	@:overload @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* @param constant_pool Constant pool to be used for this object.
 	*/
-	@:overload @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	
 }

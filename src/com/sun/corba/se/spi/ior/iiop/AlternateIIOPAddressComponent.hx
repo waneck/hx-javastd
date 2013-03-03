@@ -28,7 +28,7 @@ extern interface AlternateIIOPAddressComponent extends com.sun.corba.se.spi.ior.
 	/**
 	* @author Ken Cavanaugh
 	*/
-	@:overload public function getAddress() : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
+	@:overload @:public public function getAddress() : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
 	
 	
 }

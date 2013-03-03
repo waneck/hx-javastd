@@ -36,7 +36,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	* @return true iff the encoded forms of the two CRL entries
 	* match, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode value for this CRL entry from its
@@ -44,7 +44,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	*
 	* @return the hashcode value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the ASN.1 DER-encoded form of this CRL Entry,
@@ -53,7 +53,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	* @return the encoded form of this certificate
 	* @exception CRLException if an encoding error occurs.
 	*/
-	@:overload @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the serial number from this X509CRLEntry,
@@ -61,7 +61,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	*
 	* @return the serial number.
 	*/
-	@:overload @:abstract public function getSerialNumber() : java.math.BigInteger;
+	@:overload @:public @:abstract public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Get the issuer of the X509Certificate described by this entry. If
@@ -77,7 +77,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getCertificateIssuer() : javax.security.auth.x500.X500Principal;
+	@:require(java5) @:overload @:public public function getCertificateIssuer() : javax.security.auth.x500.X500Principal;
 	
 	/**
 	* Gets the revocation date from this X509CRLEntry,
@@ -85,21 +85,21 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	*
 	* @return the revocation date.
 	*/
-	@:overload @:abstract public function getRevocationDate() : java.util.Date;
+	@:overload @:public @:abstract public function getRevocationDate() : java.util.Date;
 	
 	/**
 	* Returns true if this CRL entry has extensions.
 	*
 	* @return true if this entry has extensions, false otherwise.
 	*/
-	@:overload @:abstract public function hasExtensions() : Bool;
+	@:overload @:public @:abstract public function hasExtensions() : Bool;
 	
 	/**
 	* Returns a string representation of this CRL entry.
 	*
 	* @return a string representation of this CRL entry.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	/**
 	* Returns the reason the certificate has been revoked, as specified
@@ -110,7 +110,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	*    a Reason Code extension
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getRevocationReason() : java.security.cert.CRLReason;
+	@:require(java7) @:overload @:public public function getRevocationReason() : java.security.cert.CRLReason;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -154,7 +154,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload @:public @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public @:public public function getNonCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets a Set of the OID strings for the extension(s) marked
@@ -189,7 +189,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	* If there are no extensions present at all, then this method returns
 	* null.
 	*/
-	@:overload @:public @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
+	@:overload @:public @:public @:public @:public public function getCriticalExtensionOIDs() : java.util.Set<String>;
 	
 	/**
 	* Gets the DER-encoded OCTET string for the extension value
@@ -230,7 +230,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	* @return the DER-encoded octet string of the extension value or
 	* null if it is not present.
 	*/
-	@:overload @:public @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:public @:public @:public public function getExtensionValue(oid : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Check if there is a critical extension that is not supported.
@@ -238,7 +238,7 @@ extern class X509CRLEntry implements java.security.cert.X509Extension
 	* @return <tt>true</tt> if a critical extension is found that is
 	* not supported, otherwise <tt>false</tt>.
 	*/
-	@:overload @:public @:public public function hasUnsupportedCriticalExtension() : Bool;
+	@:overload @:public @:public @:public @:public public function hasUnsupportedCriticalExtension() : Bool;
 	
 	
 }

@@ -31,13 +31,13 @@ extern class SAXException2 extends org.xml.sax.SAXException
 	* @author Kohsuke Kawaguchi
 	* @since 2.0 FCS
 	*/
-	@:require(java0) @:overload public function new(message : String) : Void;
+	@:require(java0) @:overload @:public public function new(message : String) : Void;
 	
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
-	@:overload public function new(message : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Exception) : Void;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class LogHandler
 	/**
 	* Creates a LogHandler for a ReliableLog.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates and returns the initial state of data structure that needs
@@ -37,7 +37,7 @@ extern class LogHandler
 	* @return the initial state
 	* @exception Exception can raise any exception
 	*/
-	@:overload @:abstract public function initialSnapshot() : Dynamic;
+	@:overload @:public @:abstract public function initialSnapshot() : Dynamic;
 	
 	/**
 	* Writes the snapshot object to a stream.  This callback is
@@ -46,7 +46,7 @@ extern class LogHandler
 	* @param value the snapshot
 	* @exception Exception can raise any exception
 	*/
-	@:overload public function snapshot(out : java.io.OutputStream, value : Dynamic) : Void;
+	@:overload @:public public function snapshot(out : java.io.OutputStream, value : Dynamic) : Void;
 	
 	/**
 	* Read the snapshot object from a stream and returns the snapshot.
@@ -56,7 +56,7 @@ extern class LogHandler
 	* @return the state (snapshot)
 	* @exception Exception can raise any exception
 	*/
-	@:overload public function recover(_in : java.io.InputStream) : Dynamic;
+	@:overload @:public public function recover(_in : java.io.InputStream) : Dynamic;
 	
 	/**
 	* Writes the representation (a serializable object) of an update
@@ -66,7 +66,7 @@ extern class LogHandler
 	* @param value the snapshot
 	* @exception Exception can raise any exception
 	*/
-	@:overload public function writeUpdate(out : sun.rmi.log.LogOutputStream, value : Dynamic) : Void;
+	@:overload @:public public function writeUpdate(out : sun.rmi.log.LogOutputStream, value : Dynamic) : Void;
 	
 	/**
 	* Reads a stably logged update (a serializable object) from a
@@ -80,7 +80,7 @@ extern class LogHandler
 	* @return the new state
 	* @exception Exception can raise any exception
 	*/
-	@:overload public function readUpdate(_in : sun.rmi.log.LogInputStream, state : Dynamic) : Dynamic;
+	@:overload @:public public function readUpdate(_in : sun.rmi.log.LogInputStream, state : Dynamic) : Dynamic;
 	
 	/**
 	* Reads a stably logged update (a serializable object) from a stream.
@@ -94,7 +94,7 @@ extern class LogHandler
 	* @return the new state
 	* @exception Exception can raise any exception
 	*/
-	@:overload @:abstract public function applyUpdate(update : Dynamic, state : Dynamic) : Dynamic;
+	@:overload @:public @:abstract public function applyUpdate(update : Dynamic, state : Dynamic) : Dynamic;
 	
 	
 }

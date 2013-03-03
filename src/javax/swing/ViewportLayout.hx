@@ -30,14 +30,14 @@ extern class ViewportLayout implements java.awt.LayoutManager implements java.io
 	* @param name the name of the component
 	* @param c the the component to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout. Not used by
 	* this class.
 	* @param c the component to remove
 	*/
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
 	/**
 	* Returns the preferred dimensions for this layout given the components
@@ -47,7 +47,7 @@ extern class ViewportLayout implements java.awt.LayoutManager implements java.io
 	*          preferred dimensions
 	* @see #minimumLayoutSize
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum dimensions needed to layout the components
@@ -58,7 +58,7 @@ extern class ViewportLayout implements java.awt.LayoutManager implements java.io
 	*          dimensions
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Called by the AWT when the specified container needs to be laid out.
@@ -68,7 +68,7 @@ extern class ViewportLayout implements java.awt.LayoutManager implements java.io
 	* @exception AWTError  if the target isn't the container specified to the
 	*                      <code>BoxLayout</code> constructor
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	
 }

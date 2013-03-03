@@ -31,7 +31,7 @@ package com.sun.tools.javap;
 */
 extern class InternalError extends java.lang.Error
 {
-	public var args(default, null) : java.NativeArray<Dynamic>;
+	@:public @:final public var args(default, null) : java.NativeArray<Dynamic>;
 	
 	
 }

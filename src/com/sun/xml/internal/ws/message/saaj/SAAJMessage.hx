@@ -25,47 +25,47 @@ package com.sun.xml.internal.ws.message.saaj;
 */
 extern class SAAJMessage extends com.sun.xml.internal.ws.api.message.Message
 {
-	@:overload public function new(sm : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function new(sm : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload public function hasHeaders() : Bool;
+	@:overload @:public override public function hasHeaders() : Bool;
 	
-	@:overload public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload @:public override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
 	/**
 	* Gets the attachments of this message
 	* (attachments live outside a message.)
 	*/
-	@:overload public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:overload @:public override public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
 	/**
 	* Optimization hint for the derived class to check
 	* if we may have some attachments.
 	*/
-	@:overload private function hasAttachments() : Bool;
+	@:overload @:protected override private function hasAttachments() : Bool;
 	
-	@:overload public function getPayloadLocalPart() : String;
+	@:overload @:public override public function getPayloadLocalPart() : String;
 	
-	@:overload public function getPayloadNamespaceURI() : String;
+	@:overload @:public override public function getPayloadNamespaceURI() : String;
 	
-	@:overload public function hasPayload() : Bool;
+	@:overload @:public override public function hasPayload() : Bool;
 	
-	@:overload public function readEnvelopeAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readEnvelopeAsSource() : javax.xml.transform.Source;
 	
-	@:overload public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
 	
-	@:overload public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload @:public override public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload @:public override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
-	@:overload public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public override public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writeTo(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public override public function writeTo(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Creates a copy of a {@link com.sun.xml.internal.ws.api.message.Message}.
@@ -88,54 +88,54 @@ extern class SAAJMessage extends com.sun.xml.internal.ws.api.message.Message
 	* of the data in memory, hence it's best to be done by
 	* the {@link com.sun.xml.internal.ws.api.message.Message} implementation itself.
 	*/
-	@:overload public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public override public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$message$saaj$SAAJMessage$SAAJAttachment') @:internal extern class SAAJMessage_SAAJAttachment implements com.sun.xml.internal.ws.api.message.Attachment
 {
-	@:overload public function new(part : javax.xml.soap.AttachmentPart) : Void;
+	@:overload @:public public function new(part : javax.xml.soap.AttachmentPart) : Void;
 	
 	/**
 	* Content ID of the attachment. Uniquely identifies an attachment.
 	*/
-	@:overload public function getContentId() : String;
+	@:overload @:public public function getContentId() : String;
 	
 	/**
 	* Gets the MIME content-type of this attachment.
 	*/
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
 	/**
 	* Gets the attachment as an exact-length byte array.
 	*/
-	@:overload public function asByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the attachment as a {@link javax.activation.DataHandler}.
 	*/
-	@:overload public function asDataHandler() : javax.activation.DataHandler;
+	@:overload @:public public function asDataHandler() : javax.activation.DataHandler;
 	
 	/**
 	* Gets the attachment as a {@link javax.xml.transform.Source}.
 	* Note that there's no guarantee that the attachment is actually an XML.
 	*/
-	@:overload public function asSource() : javax.xml.transform.Source;
+	@:overload @:public public function asSource() : javax.xml.transform.Source;
 	
 	/**
 	* Obtains this attachment as an {@link java.io.InputStream}.
 	*/
-	@:overload public function asInputStream() : java.io.InputStream;
+	@:overload @:public public function asInputStream() : java.io.InputStream;
 	
 	/**
 	* Writes the contents of the attachment into the given stream.
 	*/
-	@:overload public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Writes this attachment to the given {@link javax.xml.soap.SOAPMessage}.
 	*/
-	@:overload public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	
 }
@@ -147,7 +147,7 @@ extern class SAAJMessage extends com.sun.xml.internal.ws.api.message.Message
 */
 @:native('com$sun$xml$internal$ws$message$saaj$SAAJMessage$SAAJAttachmentSet') @:internal extern class SAAJMessage_SAAJAttachmentSet implements com.sun.xml.internal.ws.api.message.AttachmentSet
 {
-	@:overload public function new(sm : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function new(sm : javax.xml.soap.SOAPMessage) : Void;
 	
 	/**
 	* Gets the attachment by the content ID.
@@ -155,18 +155,18 @@ extern class SAAJMessage extends com.sun.xml.internal.ws.api.message.Message
 	* @return null
 	*         if no such attachment exist.
 	*/
-	@:overload public function get(contentId : String) : com.sun.xml.internal.ws.api.message.Attachment;
+	@:overload @:public public function get(contentId : String) : com.sun.xml.internal.ws.api.message.Attachment;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns an iterator over a set of elements of type T.
 	*
 	* @return an Iterator.
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.message.Attachment>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.api.message.Attachment>;
 	
-	@:overload public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
+	@:overload @:public public function add(att : com.sun.xml.internal.ws.api.message.Attachment) : Void;
 	
 	
 }

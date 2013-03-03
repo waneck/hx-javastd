@@ -29,31 +29,31 @@ extern class Sequence
 	* The tempo-based timing type, for which the resolution is expressed in pulses (ticks) per quarter note.
 	* @see #Sequence(float, int)
 	*/
-	public static var PPQ(default, null) : Single;
+	@:public @:static @:final public static var PPQ(default, null) : Single;
 	
 	/**
 	* The SMPTE-based timing type with 24 frames per second (resolution is expressed in ticks per frame).
 	* @see #Sequence(float, int)
 	*/
-	public static var SMPTE_24(default, null) : Single;
+	@:public @:static @:final public static var SMPTE_24(default, null) : Single;
 	
 	/**
 	* The SMPTE-based timing type with 25 frames per second (resolution is expressed in ticks per frame).
 	* @see #Sequence(float, int)
 	*/
-	public static var SMPTE_25(default, null) : Single;
+	@:public @:static @:final public static var SMPTE_25(default, null) : Single;
 	
 	/**
 	* The SMPTE-based timing type with 29.97 frames per second (resolution is expressed in ticks per frame).
 	* @see #Sequence(float, int)
 	*/
-	public static var SMPTE_30DROP(default, null) : Single;
+	@:public @:static @:final public static var SMPTE_30DROP(default, null) : Single;
 	
 	/**
 	* The SMPTE-based timing type with 30 frames per second (resolution is expressed in ticks per frame).
 	* @see #Sequence(float, int)
 	*/
-	public static var SMPTE_30(default, null) : Single;
+	@:public @:static @:final public static var SMPTE_30(default, null) : Single;
 	
 	/**
 	* The timing division type of the sequence.
@@ -64,19 +64,19 @@ extern class Sequence
 	* @see #SMPTE_30
 	* @see #getDivisionType
 	*/
-	private var divisionType : Single;
+	@:protected private var divisionType : Single;
 	
 	/**
 	* The timing resolution of the sequence.
 	* @see #getResolution
 	*/
-	private var resolution : Int;
+	@:protected private var resolution : Int;
 	
 	/**
 	* The MIDI tracks in this sequence.
 	* @see #getTracks
 	*/
-	private var tracks : java.util.Vector<javax.sound.midi.Track>;
+	@:protected private var tracks : java.util.Vector<javax.sound.midi.Track>;
 	
 	/**
 	* Constructs a new MIDI sequence with the specified timing division
@@ -103,7 +103,7 @@ extern class Sequence
 	* @see #getResolution
 	* @see #getTracks
 	*/
-	@:overload public function new(divisionType : Single, resolution : Int) : Void;
+	@:overload @:public public function new(divisionType : Single, resolution : Int) : Void;
 	
 	/**
 	* Constructs a new MIDI sequence with the specified timing division
@@ -133,7 +133,7 @@ extern class Sequence
 	* @see #getDivisionType
 	* @see #getResolution
 	*/
-	@:overload public function new(divisionType : Single, resolution : Int, numTracks : Int) : Void;
+	@:overload @:public public function new(divisionType : Single, resolution : Int, numTracks : Int) : Void;
 	
 	/**
 	* Obtains the timing division type for this sequence.
@@ -147,7 +147,7 @@ extern class Sequence
 	* @see #Sequence(float, int)
 	* @see MidiFileFormat#getDivisionType()
 	*/
-	@:overload public function getDivisionType() : Single;
+	@:overload @:public public function getDivisionType() : Single;
 	
 	/**
 	* Obtains the timing resolution for this sequence.
@@ -159,7 +159,7 @@ extern class Sequence
 	* @see #Sequence(float, int)
 	* @see MidiFileFormat#getResolution()
 	*/
-	@:overload public function getResolution() : Int;
+	@:overload @:public public function getResolution() : Int;
 	
 	/**
 	* Creates a new, initially empty track as part of this sequence.
@@ -169,7 +169,7 @@ extern class Sequence
 	* removed from the sequence using <code>{@link #deleteTrack}</code>.
 	* @return the newly created track
 	*/
-	@:overload public function createTrack() : javax.sound.midi.Track;
+	@:overload @:public public function createTrack() : javax.sound.midi.Track;
 	
 	/**
 	* Removes the specified track from the sequence.
@@ -180,7 +180,7 @@ extern class Sequence
 	* @see #createTrack
 	* @see #getTracks
 	*/
-	@:overload public function deleteTrack(track : javax.sound.midi.Track) : Bool;
+	@:overload @:public public function deleteTrack(track : javax.sound.midi.Track) : Bool;
 	
 	/**
 	* Obtains an array containing all the tracks in this sequence.
@@ -190,13 +190,13 @@ extern class Sequence
 	* @see #createTrack
 	* @see #deleteTrack
 	*/
-	@:overload public function getTracks() : java.NativeArray<javax.sound.midi.Track>;
+	@:overload @:public public function getTracks() : java.NativeArray<javax.sound.midi.Track>;
 	
 	/**
 	* Obtains the duration of this sequence, expressed in microseconds.
 	* @return this sequence's duration in microseconds.
 	*/
-	@:overload public function getMicrosecondLength() : haxe.Int64;
+	@:overload @:public public function getMicrosecondLength() : haxe.Int64;
 	
 	/**
 	* Obtains the duration of this sequence, expressed in MIDI ticks.
@@ -205,7 +205,7 @@ extern class Sequence
 	*
 	* @see #getMicrosecondLength
 	*/
-	@:overload public function getTickLength() : haxe.Int64;
+	@:overload @:public public function getTickLength() : haxe.Int64;
 	
 	/**
 	* Obtains a list of patches referenced in this sequence.
@@ -217,7 +217,7 @@ extern class Sequence
 	*
 	* @see Synthesizer#loadInstruments(Soundbank, Patch[])
 	*/
-	@:overload public function getPatchList() : java.NativeArray<javax.sound.midi.Patch>;
+	@:overload @:public public function getPatchList() : java.NativeArray<javax.sound.midi.Patch>;
 	
 	
 }

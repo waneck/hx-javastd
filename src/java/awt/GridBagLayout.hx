@@ -33,17 +33,17 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* Current implementation doesn't impose any limits
 	* on the size of a grid.
 	*/
-	private static var MAXGRIDSIZE(default, null) : Int;
+	@:protected @:static @:final private static var MAXGRIDSIZE(default, null) : Int;
 	
 	/**
 	* The smallest grid that can be laid out by the grid bag layout.
 	*/
-	private static var MINSIZE(default, null) : Int;
+	@:protected @:static @:final private static var MINSIZE(default, null) : Int;
 	
 	/**
 	* The preferred grid size that can be laid out by the grid bag layout.
 	*/
-	private static var PREFERREDSIZE(default, null) : Int;
+	@:protected @:static @:final private static var PREFERREDSIZE(default, null) : Int;
 	
 	/**
 	* This hashtable maintains the association between
@@ -54,7 +54,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @serial
 	* @see java.awt.GridBagConstraints
 	*/
-	private var comptable : java.util.Hashtable<java.awt.Component, java.awt.GridBagConstraints>;
+	@:protected private var comptable : java.util.Hashtable<java.awt.Component, java.awt.GridBagConstraints>;
 	
 	/**
 	* This field holds a gridbag constraints instance
@@ -68,7 +68,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see #setConstraints(Component, GridBagConstraints)
 	* @see #lookupConstraints(Component)
 	*/
-	private var defaultConstraints : java.awt.GridBagConstraints;
+	@:protected private var defaultConstraints : java.awt.GridBagConstraints;
 	
 	/**
 	* This field holds the layout information
@@ -83,7 +83,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @serial
 	* @see #getLayoutInfo(Container, int)
 	*/
-	private var layoutInfo : java.awt.GridBagLayoutInfo;
+	@:protected private var layoutInfo : java.awt.GridBagLayoutInfo;
 	
 	/**
 	* This field holds the overrides to the column minimum
@@ -97,7 +97,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @serial
 	* @see #getLayoutDimensions()
 	*/
-	public var columnWidths : java.NativeArray<Int>;
+	@:public public var columnWidths : java.NativeArray<Int>;
 	
 	/**
 	* This field holds the overrides to the row minimum
@@ -111,7 +111,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @serial
 	* @see #getLayoutDimensions()
 	*/
-	public var rowHeights : java.NativeArray<Int>;
+	@:public public var rowHeights : java.NativeArray<Int>;
 	
 	/**
 	* This field holds the overrides to the column weights.
@@ -126,7 +126,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	*
 	* @serial
 	*/
-	public var columnWeights : java.NativeArray<Float>;
+	@:public public var columnWeights : java.NativeArray<Float>;
 	
 	/**
 	* This field holds the overrides to the row weights.
@@ -141,19 +141,19 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	*
 	* @serial
 	*/
-	public var rowWeights : java.NativeArray<Float>;
+	@:public public var rowWeights : java.NativeArray<Float>;
 	
 	/**
 	* Creates a grid bag layout manager.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets the constraints for the specified component in this layout.
 	* @param       comp the component to be modified
 	* @param       constraints the constraints to be applied
 	*/
-	@:overload public function setConstraints(comp : java.awt.Component, constraints : java.awt.GridBagConstraints) : Void;
+	@:overload @:public public function setConstraints(comp : java.awt.Component, constraints : java.awt.GridBagConstraints) : Void;
 	
 	/**
 	* Gets the constraints for the specified component.  A copy of
@@ -163,7 +163,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	*                  grid bag layout; a copy of the actual constraint
 	*                  object is returned
 	*/
-	@:overload public function getConstraints(comp : java.awt.Component) : java.awt.GridBagConstraints;
+	@:overload @:public public function getConstraints(comp : java.awt.Component) : java.awt.GridBagConstraints;
 	
 	/**
 	* Retrieves the constraints for the specified component.
@@ -178,7 +178,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @param       comp the component to be queried
 	* @return      the contraints for the specified component
 	*/
-	@:overload private function lookupConstraints(comp : java.awt.Component) : java.awt.GridBagConstraints;
+	@:overload @:protected private function lookupConstraints(comp : java.awt.Component) : java.awt.GridBagConstraints;
 	
 	/**
 	* Determines the origin of the layout area, in the graphics coordinate
@@ -192,7 +192,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see        java.awt.ComponentOrientation
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getLayoutOrigin() : java.awt.Point;
+	@:require(java1) @:overload @:public public function getLayoutOrigin() : java.awt.Point;
 	
 	/**
 	* Determines column widths and row heights for the layout grid.
@@ -203,7 +203,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	*                       the heights of the layout rows
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getLayoutDimensions() : java.NativeArray<java.NativeArray<Int>>;
+	@:require(java1) @:overload @:public public function getLayoutDimensions() : java.NativeArray<java.NativeArray<Int>>;
 	
 	/**
 	* Determines the weights of the layout grid's columns and rows.
@@ -217,7 +217,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	*                    and the vertical weights of the layout rows
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getLayoutWeights() : java.NativeArray<java.NativeArray<Float>>;
+	@:require(java1) @:overload @:public public function getLayoutWeights() : java.NativeArray<java.NativeArray<Float>>;
 	
 	/**
 	* Determines which cell in the layout grid contains the point
@@ -246,12 +246,12 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see        java.awt.ComponentOrientation
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function location(x : Int, y : Int) : java.awt.Point;
+	@:require(java1) @:overload @:public public function location(x : Int, y : Int) : java.awt.Point;
 	
 	/**
 	* Has no effect, since this layout manager does not use a per-component string.
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Adds the specified component to the layout, using the specified
@@ -264,7 +264,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @exception IllegalArgumentException if <code>constraints</code>
 	*            is not a <code>GridBagConstraint</code>
 	*/
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* Removes the specified component from this layout.
@@ -274,7 +274,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see      java.awt.Container#remove(java.awt.Component)
 	* @see      java.awt.Container#removeAll()
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Determines the preferred size of the <code>parent</code>
@@ -287,7 +287,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @return the preferred size of the <code>parent</code>
 	*  container
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Determines the minimum size of the <code>parent</code> container
@@ -298,7 +298,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see       java.awt.Container#doLayout
 	* @return the minimum size of the <code>parent</code> container
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum dimensions for this layout given the components
@@ -309,7 +309,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see #preferredLayoutSize(Container)
 	* @return the maximum dimensions for this layout
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -320,7 +320,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* <p>
 	* @return the value <code>0.5f</code> to indicate centered
 	*/
-	@:overload public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -331,13 +331,13 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* <p>
 	* @return the value <code>0.5f</code> to indicate centered
 	*/
-	@:overload public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
 	
 	/**
 	* Invalidates the layout, indicating that if the layout manager
 	* has cached information it should be discarded.
 	*/
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	/**
 	* Lays out the specified container using this grid bag layout.
@@ -350,13 +350,13 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @see java.awt.Container
 	* @see java.awt.Container#doLayout
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Returns a string representation of this grid bag layout's values.
 	* @return     a string representation of this grid bag layout.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Fills in an instance of <code>GridBagLayoutInfo</code> for the
@@ -381,7 +381,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @return the <code>GridBagLayoutInfo</code> for the set of children
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function getLayoutInfo(parent : java.awt.Container, sizeflag : Int) : java.awt.GridBagLayoutInfo;
+	@:require(java4) @:overload @:protected private function getLayoutInfo(parent : java.awt.Container, sizeflag : Int) : java.awt.GridBagLayoutInfo;
 	
 	/**
 	* This method is obsolete and supplied for backwards
@@ -391,7 +391,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* refer to <code>getLayoutInfo</code> for details on parameters
 	* and return value.
 	*/
-	@:overload private function GetLayoutInfo(parent : java.awt.Container, sizeflag : Int) : java.awt.GridBagLayoutInfo;
+	@:overload @:protected private function GetLayoutInfo(parent : java.awt.Container, sizeflag : Int) : java.awt.GridBagLayoutInfo;
 	
 	/**
 	* Adjusts the x, y, width, and height fields to the correct
@@ -403,7 +403,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @param r the <code>Rectangle</code> to be adjusted
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function adjustForGravity(constraints : java.awt.GridBagConstraints, r : java.awt.Rectangle) : Void;
+	@:require(java4) @:overload @:protected private function adjustForGravity(constraints : java.awt.GridBagConstraints, r : java.awt.Rectangle) : Void;
 	
 	/**
 	* This method is obsolete and supplied for backwards
@@ -414,7 +414,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* refer to <code>adjustForGravity</code> for details
 	* on parameters.
 	*/
-	@:overload private function AdjustForGravity(constraints : java.awt.GridBagConstraints, r : java.awt.Rectangle) : Void;
+	@:overload @:protected private function AdjustForGravity(constraints : java.awt.GridBagConstraints, r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Figures out the minimum size of the
@@ -428,7 +428,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	*   minimum size
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function getMinSize(parent : java.awt.Container, info : java.awt.GridBagLayoutInfo) : java.awt.Dimension;
+	@:require(java4) @:overload @:protected private function getMinSize(parent : java.awt.Container, info : java.awt.GridBagLayoutInfo) : java.awt.Dimension;
 	
 	/**
 	* This method is obsolete and supplied for backwards
@@ -438,7 +438,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* refer to <code>getMinSize</code> for details on parameters
 	* and return value.
 	*/
-	@:overload private function GetMinSize(parent : java.awt.Container, info : java.awt.GridBagLayoutInfo) : java.awt.Dimension;
+	@:overload @:protected private function GetMinSize(parent : java.awt.Container, info : java.awt.GridBagLayoutInfo) : java.awt.Dimension;
 	
 	/**
 	* Lays out the grid.
@@ -448,7 +448,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* @param parent the layout container
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function arrangeGrid(parent : java.awt.Container) : Void;
+	@:require(java4) @:overload @:protected private function arrangeGrid(parent : java.awt.Container) : Void;
 	
 	/**
 	* This method is obsolete and supplied for backwards
@@ -458,7 +458,7 @@ extern class GridBagLayout implements java.awt.LayoutManager2 implements java.io
 	* refer to <code>arrangeGrid</code> for details on the
 	* parameter.
 	*/
-	@:overload private function ArrangeGrid(parent : java.awt.Container) : Void;
+	@:overload @:protected private function ArrangeGrid(parent : java.awt.Container) : Void;
 	
 	
 }

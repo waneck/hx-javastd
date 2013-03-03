@@ -30,37 +30,37 @@ package com.sun.media.sound;
 */
 @:internal extern class FastShortMessage extends javax.sound.midi.ShortMessage
 {
-	@:overload public function new(packedMsg : Int) : Void;
+	@:overload @:public public function new(packedMsg : Int) : Void;
 	
 	/** Creates a FastShortMessage from this ShortMessage */
-	@:overload public function new(msg : javax.sound.midi.ShortMessage) : Void;
+	@:overload @:public public function new(msg : javax.sound.midi.ShortMessage) : Void;
 	
-	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public override public function getLength() : Int;
 	
-	@:overload public function setMessage(status : Int) : Void;
+	@:overload @:public override public function setMessage(status : Int) : Void;
 	
-	@:overload public function setMessage(status : Int, data1 : Int, data2 : Int) : Void;
+	@:overload @:public override public function setMessage(status : Int, data1 : Int, data2 : Int) : Void;
 	
-	@:overload public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
+	@:overload @:public override public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
 	
-	@:overload public function getChannel() : Int;
+	@:overload @:public override public function getChannel() : Int;
 	
-	@:overload public function getCommand() : Int;
+	@:overload @:public override public function getCommand() : Int;
 	
-	@:overload public function getData1() : Int;
+	@:overload @:public override public function getData1() : Int;
 	
-	@:overload public function getData2() : Int;
+	@:overload @:public override public function getData2() : Int;
 	
-	@:overload public function getStatus() : Int;
+	@:overload @:public override public function getStatus() : Int;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
 	* as this object.
 	* @return a clone of this instance.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

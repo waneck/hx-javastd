@@ -25,11 +25,11 @@ package com.sun.corba.se.spi.copyobject;
 */
 extern class ReflectiveCopyException extends java.lang.Exception
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new(msg : String, t : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, t : java.lang.Throwable) : Void;
 	
 	
 }

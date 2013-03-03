@@ -45,37 +45,37 @@ extern class MotifInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 	*
 	* @deprecated As of Java 2 platform v1.3.
 	*/
-	private var closeMenuKey : javax.swing.KeyStroke;
+	@:protected private var closeMenuKey : javax.swing.KeyStroke;
 	
-	@:overload public static function createUI(w : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(w : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new(w : javax.swing.JInternalFrame) : Void;
+	@:overload @:public public function new(w : javax.swing.JInternalFrame) : Void;
 	
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload public function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload @:public override public function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload private function uninstallKeyboardActions() : Void;
+	@:overload @:protected override private function uninstallKeyboardActions() : Void;
 	
-	@:overload private function setupMenuOpenKey() : Void;
+	@:overload @:protected override private function setupMenuOpenKey() : Void;
 	
-	@:overload private function setupMenuCloseKey() : Void;
+	@:overload @:protected override private function setupMenuCloseKey() : Void;
 	
 	/** This method is called when the frame becomes selected.
 	*/
-	@:overload private function activateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected override private function activateFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/** This method is called when the frame is no longer selected.
 	*/
-	@:overload private function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected override private function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	
 }

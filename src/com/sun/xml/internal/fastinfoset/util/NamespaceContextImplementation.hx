@@ -27,33 +27,33 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class NamespaceContextImplementation implements javax.xml.namespace.NamespaceContext
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
-	@:overload public function getPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getNonDefaultPrefix(namespaceURI : String) : String;
+	@:overload @:public public function getNonDefaultPrefix(namespaceURI : String) : String;
 	
-	@:overload public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getPrefixes(namespaceURI : String) : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getPrefix(index : Int) : String;
+	@:overload @:public public function getPrefix(index : Int) : String;
 	
-	@:overload public function getNamespaceURI(index : Int) : String;
+	@:overload @:public public function getNamespaceURI(index : Int) : String;
 	
-	@:overload public function getCurrentContextStartIndex() : Int;
+	@:overload @:public public function getCurrentContextStartIndex() : Int;
 	
-	@:overload public function getCurrentContextEndIndex() : Int;
+	@:overload @:public public function getCurrentContextEndIndex() : Int;
 	
-	@:overload public function isCurrentContextEmpty() : Bool;
+	@:overload @:public public function isCurrentContextEmpty() : Bool;
 	
-	@:overload public function declarePrefix(prefix : String, namespaceURI : String) : Void;
+	@:overload @:public public function declarePrefix(prefix : String, namespaceURI : String) : Void;
 	
-	@:overload public function pushContext() : Void;
+	@:overload @:public public function pushContext() : Void;
 	
-	@:overload public function popContext() : Void;
+	@:overload @:public public function popContext() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

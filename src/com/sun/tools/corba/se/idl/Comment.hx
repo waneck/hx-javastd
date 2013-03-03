@@ -37,16 +37,16 @@ package com.sun.tools.corba.se.idl;
 extern class Comment
 {
 	/** Sets comment text */
-	@:overload public function text(string : String) : Void;
+	@:overload @:public public function text(string : String) : Void;
 	
 	/** Returns comment text */
-	@:overload public function text() : String;
+	@:overload @:public public function text() : String;
 	
 	/** Writes comment text to standard output (debug). */
-	@:overload public function write() : Void;
+	@:overload @:public public function write() : Void;
 	
 	/** Writes comment text to the specified print stream in the appropriate format. */
-	@:overload public function generate(indent : String, printStream : java.io.PrintWriter) : Void;
+	@:overload @:public public function generate(indent : String, printStream : java.io.PrintWriter) : Void;
 	
 	
 }

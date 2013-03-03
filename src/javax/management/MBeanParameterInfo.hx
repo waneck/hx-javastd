@@ -39,7 +39,7 @@ package javax.management;
 	* @param type The type or class name of the data
 	* @param description A human readable description of the data. Optional.
 	*/
-	@:overload public function new(name : String, type : String, description : String) : Void;
+	@:overload @:public public function new(name : String, type : String, description : String) : Void;
 	
 	/**
 	* Constructs an <CODE>MBeanParameterInfo</CODE> object.
@@ -52,7 +52,7 @@ package javax.management;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(name : String, type : String, description : String, descriptor : javax.management.Descriptor) : Void;
+	@:require(java6) @:overload @:public public function new(name : String, type : String, description : String, descriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* <p>Returns a shallow clone of this instance.
@@ -64,16 +64,16 @@ package javax.management;
 	* <p>Since this class is immutable, cloning is chiefly of
 	* interest to subclasses.</p>
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Returns the type or class name of the data.
 	*
 	* @return the type string.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compare this MBeanParameterInfo to another.
@@ -86,9 +86,9 @@ package javax.management;
 	* #getDescription()} values are equal (not necessarily identical)
 	* to those of this MBeanParameterInfo.
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }

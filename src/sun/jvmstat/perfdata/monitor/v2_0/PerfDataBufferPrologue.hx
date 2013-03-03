@@ -51,31 +51,31 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	*
 	* @param byteBuffer the buffer containing the binary header data
 	*/
-	@:overload public function new(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(byteBuffer : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function supportsAccessible() : Bool;
+	@:overload @:public override public function supportsAccessible() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function isAccessible() : Bool;
+	@:overload @:public override public function isAccessible() : Bool;
 	
 	/**
 	* Get the utilization of the instrumentation memory buffer.
 	*
 	* @return int - the utilization of the buffer
 	*/
-	@:overload public function getUsed() : Int;
+	@:overload @:public public function getUsed() : Int;
 	
 	/**
 	* Get the size of the instrumentation memory buffer.
 	*
 	* @return int - the size of the buffer
 	*/
-	@:overload public function getBufferSize() : Int;
+	@:overload @:public public function getBufferSize() : Int;
 	
 	/**
 	* Get the buffer overflow amount. This value is non-zero if the
@@ -85,7 +85,7 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	*
 	* @return int - the size of the buffer
 	*/
-	@:overload public function getOverflow() : Int;
+	@:overload @:public public function getOverflow() : Int;
 	
 	/**
 	* Get the time of last modification for the instrumentation
@@ -95,22 +95,22 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	* the addition or deletion of instrumentation objects. Updates to
 	* counter values are not structural modifications.
 	*/
-	@:overload public function getModificationTimeStamp() : haxe.Int64;
+	@:overload @:public public function getModificationTimeStamp() : haxe.Int64;
 	
 	/**
 	* Get the offset of the first PerfDataEntry.
 	*/
-	@:overload public function getEntryOffset() : Int;
+	@:overload @:public public function getEntryOffset() : Int;
 	
 	/**
 	* Get the offset of the first PerfDataEntry.
 	*/
-	@:overload public function getNumEntries() : Int;
+	@:overload @:public public function getNumEntries() : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
 	
 }

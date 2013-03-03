@@ -25,14 +25,14 @@ package com.sun.xml.internal.messaging.saaj.soap;
 */
 extern class StringDataContentHandler implements javax.activation.DataContentHandler
 {
-	@:overload private function getDF() : javax.activation.ActivationDataFlavor;
+	@:overload @:protected private function getDF() : javax.activation.ActivationDataFlavor;
 	
 	/**
 	* Return the DataFlavors for this <code>DataContentHandler</code>.
 	*
 	* @return The DataFlavors
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Return the Transfer Data of type DataFlavor from InputStream.
@@ -41,14 +41,14 @@ extern class StringDataContentHandler implements javax.activation.DataContentHan
 	* @param ds The DataSource corresponding to the data
 	* @return String object
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Write the object to the output stream, using the specified MIME type.
 	*/
-	@:overload public function writeTo(obj : Dynamic, type : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, type : String, os : java.io.OutputStream) : Void;
 	
 	
 }

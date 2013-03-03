@@ -42,7 +42,7 @@ package java.lang.annotation;
 	*
 	* @param   message   the detail message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new <tt>AnnotationFormatError</tt> with the specified
@@ -54,7 +54,7 @@ package java.lang.annotation;
 	* @param  cause the cause (A <tt>null</tt> value is permitted, and
 	*     indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new <tt>AnnotationFormatError</tt> with the specified
@@ -65,7 +65,7 @@ package java.lang.annotation;
 	* @param  cause the cause (A <tt>null</tt> value is permitted, and
 	*     indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	
 }

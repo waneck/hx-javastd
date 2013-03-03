@@ -34,31 +34,31 @@ extern class PackageOutlineImpl implements com.sun.tools.internal.xjc.outline.Pa
 	*
 	* @see #calcDefaultValues().
 	*/
-	@:overload public function getMostUsedNamespaceURI() : String;
+	@:overload @:public public function getMostUsedNamespaceURI() : String;
 	
 	/**
 	* The attribute form default for this package.
 	* <p>
 	* The value is computed by examining what would yield the smallest generated code.
 	*/
-	@:overload public function getAttributeFormDefault() : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function getAttributeFormDefault() : javax.xml.bind.annotation.XmlNsForm;
 	
 	/**
 	* The element form default for this package.
 	* <p>
 	* The value is computed by examining what would yield the smallest generated code.
 	*/
-	@:overload public function getElementFormDefault() : javax.xml.bind.annotation.XmlNsForm;
+	@:overload @:public public function getElementFormDefault() : javax.xml.bind.annotation.XmlNsForm;
 	
-	@:overload public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function _package() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload public function objectFactoryGenerator() : com.sun.tools.internal.xjc.generator.bean.ObjectFactoryGenerator;
+	@:overload @:public public function objectFactoryGenerator() : com.sun.tools.internal.xjc.generator.bean.ObjectFactoryGenerator;
 	
-	@:overload public function getClasses() : java.util.Set<com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl>;
+	@:overload @:public public function getClasses() : java.util.Set<com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl>;
 	
-	@:overload public function objectFactory() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function objectFactory() : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload private function new(outline : com.sun.tools.internal.xjc.generator.bean.BeanGenerator, model : com.sun.tools.internal.xjc.model.Model, _pkg : com.sun.codemodel.internal.JPackage) : Void;
+	@:overload @:protected private function new(outline : com.sun.tools.internal.xjc.generator.bean.BeanGenerator, model : com.sun.tools.internal.xjc.model.Model, _pkg : com.sun.codemodel.internal.JPackage) : Void;
 	
 	/**
 	* Compute the most common namespace URI in this package
@@ -67,7 +67,7 @@ extern class PackageOutlineImpl implements com.sun.tools.internal.xjc.outline.Pa
 	*
 	* This method is called after {@link #classes} field is filled up.
 	*/
-	@:overload public function calcDefaultValues() : Void;
+	@:overload @:public public function calcDefaultValues() : Void;
 	
 	
 }

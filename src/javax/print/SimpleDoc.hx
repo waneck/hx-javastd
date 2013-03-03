@@ -39,7 +39,7 @@ extern class SimpleDoc implements javax.print.Doc
 	*         not of the type specified as the representation in the
 	*         <code>DocFlavor</code>.
 	*/
-	@:overload public function new(printData : Dynamic, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.DocAttributeSet) : Void;
+	@:overload @:public public function new(printData : Dynamic, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.DocAttributeSet) : Void;
 	
 	/**
 	* Determines the doc flavor in which this doc object will supply its
@@ -47,7 +47,7 @@ extern class SimpleDoc implements javax.print.Doc
 	*
 	* @return  Doc flavor.
 	*/
-	@:overload public function getDocFlavor() : javax.print.DocFlavor;
+	@:overload @:public public function getDocFlavor() : javax.print.DocFlavor;
 	
 	/**
 	* Obtains the set of printing attributes for this doc object. If the
@@ -65,7 +65,7 @@ extern class SimpleDoc implements javax.print.Doc
 	*          to obtain all attribute values from the job's attribute
 	*          set.
 	*/
-	@:overload public function getAttributes() : javax.print.attribute.DocAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.DocAttributeSet;
 	
 	/*
 	* Obtains the print data representation object that contains this doc
@@ -82,7 +82,7 @@ extern class SimpleDoc implements javax.print.Doc
 	* @exception  IOException if the representation class is a stream and
 	*     there was an I/O error while constructing the stream.
 	*/
-	@:overload public function getPrintData() : Dynamic;
+	@:overload @:public public function getPrintData() : Dynamic;
 	
 	/**
 	* Obtains a reader for extracting character print data from this doc.
@@ -110,7 +110,7 @@ extern class SimpleDoc implements javax.print.Doc
 	* @exception  IOException if there was an I/O error while creating
 	*             the reader.
 	*/
-	@:overload public function getReaderForText() : java.io.Reader;
+	@:overload @:public public function getReaderForText() : java.io.Reader;
 	
 	/**
 	* Obtains an input stream for extracting byte print data from
@@ -139,7 +139,7 @@ extern class SimpleDoc implements javax.print.Doc
 	* @exception  IOException
 	*     if there was an I/O error while creating the input stream.
 	*/
-	@:overload public function getStreamForBytes() : java.io.InputStream;
+	@:overload @:public public function getStreamForBytes() : java.io.InputStream;
 	
 	
 }

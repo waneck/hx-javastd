@@ -28,17 +28,17 @@ extern class FastInfosetReflection
 	/**
 	* FI StAXDocumentParser constructor using reflection.
 	*/
-	public static var fiStAXDocumentParser_new(default, null) : java.lang.reflect.Constructor<Dynamic>;
+	@:public @:static @:final public static var fiStAXDocumentParser_new(default, null) : java.lang.reflect.Constructor<Dynamic>;
 	
 	/**
 	* FI <code>StAXDocumentParser.setInputStream()</code> method via reflection.
 	*/
-	public static var fiStAXDocumentParser_setInputStream(default, null) : java.lang.reflect.Method;
+	@:public @:static @:final public static var fiStAXDocumentParser_setInputStream(default, null) : java.lang.reflect.Method;
 	
 	/**
 	* FI <code>StAXDocumentParser.setStringInterning()</code> method via reflection.
 	*/
-	public static var fiStAXDocumentParser_setStringInterning(default, null) : java.lang.reflect.Method;
+	@:public @:static @:final public static var fiStAXDocumentParser_setStringInterning(default, null) : java.lang.reflect.Method;
 	
 	
 }

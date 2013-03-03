@@ -28,13 +28,13 @@ package com.sun.beans.editors;
 */
 extern class BooleanEditor extends java.beans.PropertyEditorSupport
 {
-	@:overload override public function getJavaInitializationString() : String;
+	@:overload @:public override public function getJavaInitializationString() : String;
 	
-	@:overload override public function getAsText() : String;
+	@:overload @:public override public function getAsText() : String;
 	
-	@:overload override public function setAsText(text : String) : Void;
+	@:overload @:public override public function setAsText(text : String) : Void;
 	
-	@:overload override public function getTags() : java.NativeArray<String>;
+	@:overload @:public override public function getTags() : java.NativeArray<String>;
 	
 	
 }

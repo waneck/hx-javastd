@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class SplitLocalResolverImpl implements com.sun.corba.se.spi.resolver.LocalResolver
 {
-	@:overload public function new(resolver : com.sun.corba.se.spi.resolver.Resolver, localResolver : com.sun.corba.se.spi.resolver.LocalResolver) : Void;
+	@:overload @:public public function new(resolver : com.sun.corba.se.spi.resolver.Resolver, localResolver : com.sun.corba.se.spi.resolver.LocalResolver) : Void;
 	
-	@:overload public function register(name : String, closure : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
+	@:overload @:public public function register(name : String, closure : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
 	
-	@:overload public function resolve(name : String) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve(name : String) : org.omg.CORBA.Object;
 	
-	@:overload public function list() : java.util.Set<Dynamic>;
+	@:overload @:public public function list() : java.util.Set<Dynamic>;
 	
 	
 }

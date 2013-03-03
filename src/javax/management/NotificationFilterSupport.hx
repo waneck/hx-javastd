@@ -34,7 +34,7 @@ extern class NotificationFilterSupport implements javax.management.NotificationF
 	* @param notification The notification to be sent.
 	* @return <CODE>true</CODE> if the notification should be sent to the listener, <CODE>false</CODE> otherwise.
 	*/
-	@:overload @:synchronized public function isNotificationEnabled(notification : javax.management.Notification) : Bool;
+	@:overload @:public @:synchronized public function isNotificationEnabled(notification : javax.management.Notification) : Bool;
 	
 	/**
 	* Enables all the notifications the type of which starts with the specified prefix
@@ -61,7 +61,7 @@ extern class NotificationFilterSupport implements javax.management.NotificationF
 	* @param prefix The prefix.
 	* @exception java.lang.IllegalArgumentException The prefix parameter is null.
 	*/
-	@:overload @:synchronized public function enableType(prefix : String) : Void;
+	@:overload @:public @:synchronized public function enableType(prefix : String) : Void;
 	
 	/**
 	* Removes the given prefix from the prefix list.
@@ -70,19 +70,19 @@ extern class NotificationFilterSupport implements javax.management.NotificationF
 	*
 	* @param prefix The prefix.
 	*/
-	@:overload @:synchronized public function disableType(prefix : String) : Void;
+	@:overload @:public @:synchronized public function disableType(prefix : String) : Void;
 	
 	/**
 	* Disables all notification types.
 	*/
-	@:overload @:synchronized public function disableAllTypes() : Void;
+	@:overload @:public @:synchronized public function disableAllTypes() : Void;
 	
 	/**
 	* Gets all the enabled notification types for this filter.
 	*
 	* @return The list containing all the enabled notification types.
 	*/
-	@:overload @:synchronized public function getEnabledTypes() : java.util.Vector<String>;
+	@:overload @:public @:synchronized public function getEnabledTypes() : java.util.Vector<String>;
 	
 	
 }

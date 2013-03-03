@@ -29,70 +29,70 @@ extern class Context implements sun.tools.java.Constants
 	* Create the initial context for a method
 	* The incoming context is inherited from
 	*/
-	@:overload public function new(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : Void;
+	@:overload @:public public function new(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Create a new context, for initializing a class.
 	*/
-	@:overload public function new(ctx : sun.tools.tree.Context, c : sun.tools.java.ClassDefinition) : Void;
+	@:overload @:public public function new(ctx : sun.tools.tree.Context, c : sun.tools.java.ClassDefinition) : Void;
 	
-	@:overload public function new(ctx : sun.tools.tree.Context) : Void;
+	@:overload @:public public function new(ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Declare local
 	*/
-	@:overload public function declare(env : sun.tools.java.Environment, local : sun.tools.tree.LocalMember) : Int;
+	@:overload @:public public function declare(env : sun.tools.java.Environment, local : sun.tools.tree.LocalMember) : Int;
 	
 	/**
 	* Get a local variable by name
 	*/
-	@:overload public function getLocalField(name : sun.tools.java.Identifier) : sun.tools.tree.LocalMember;
+	@:overload @:public public function getLocalField(name : sun.tools.java.Identifier) : sun.tools.tree.LocalMember;
 	
 	/**
 	* Get the scope number for a reference to a member of this class
 	* (Larger scope numbers are more deeply nested.)
 	* @see LocalMember#scopeNumber
 	*/
-	@:overload public function getScopeNumber(c : sun.tools.java.ClassDefinition) : Int;
+	@:overload @:public public function getScopeNumber(c : sun.tools.java.ClassDefinition) : Int;
 	
 	/**
 	* Assign a number to a class field.
 	* (This is used to track definite assignment of some blank finals.)
 	*/
-	@:overload public function declareFieldNumber(field : sun.tools.java.MemberDefinition) : Int;
+	@:overload @:public public function declareFieldNumber(field : sun.tools.java.MemberDefinition) : Int;
 	
 	/**
 	* Retrieve a number previously assigned by declareMember().
 	* Return -1 if there was no such assignment in this context.
 	*/
-	@:overload public function getFieldNumber(field : sun.tools.java.MemberDefinition) : Int;
+	@:overload @:public public function getFieldNumber(field : sun.tools.java.MemberDefinition) : Int;
 	
 	/**
 	* Return the local field or member field corresponding to a number.
 	* Return null if there is no such field.
 	*/
-	@:overload public function getElement(number : Int) : sun.tools.java.MemberDefinition;
+	@:overload @:public public function getElement(number : Int) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Get a local class by name
 	*/
-	@:overload public function getLocalClass(name : sun.tools.java.Identifier) : sun.tools.tree.LocalMember;
+	@:overload @:public public function getLocalClass(name : sun.tools.java.Identifier) : sun.tools.tree.LocalMember;
 	
 	/**
 	* Get either a local variable, or a field in a current class
 	*/
-	@:overload @:final public function getField(env : sun.tools.java.Environment, name : sun.tools.java.Identifier) : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getField(env : sun.tools.java.Environment, name : sun.tools.java.Identifier) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Like getField, except that it skips over inherited fields.
 	* Used for error checking.
 	*/
-	@:overload @:final public function getApparentField(env : sun.tools.java.Environment, name : sun.tools.java.Identifier) : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getApparentField(env : sun.tools.java.Environment, name : sun.tools.java.Identifier) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Check if the given field is active in this context.
 	*/
-	@:overload public function isInScope(field : sun.tools.tree.LocalMember) : Bool;
+	@:overload @:public public function isInScope(field : sun.tools.tree.LocalMember) : Bool;
 	
 	/**
 	* Notice a reference (usually an uplevel one).
@@ -108,7 +108,7 @@ extern class Context implements sun.tools.java.Constants
 	* This can and should be called both before and after classes are frozen.
 	* It should be a no-op, and will raise a compiler error if not.
 	*/
-	@:overload public function noteReference(env : sun.tools.java.Environment, target : sun.tools.tree.LocalMember) : sun.tools.tree.UplevelReference;
+	@:overload @:public public function noteReference(env : sun.tools.java.Environment, target : sun.tools.tree.LocalMember) : sun.tools.tree.UplevelReference;
 	
 	/**
 	* Implement a reference (usually an uplevel one).
@@ -119,7 +119,7 @@ extern class Context implements sun.tools.java.Constants
 	* it can be code-generated right away.
 	* If the reference is not uplevel, the result is an IDENT or THIS.
 	*/
-	@:overload public function makeReference(env : sun.tools.java.Environment, target : sun.tools.tree.LocalMember) : sun.tools.tree.Expression;
+	@:overload @:public public function makeReference(env : sun.tools.java.Environment, target : sun.tools.tree.LocalMember) : sun.tools.tree.Expression;
 	
 	/**
 	* Return a local expression which can serve as the base reference
@@ -129,19 +129,19 @@ extern class Context implements sun.tools.java.Constants
 	* Return null if there is no need for such an argument,
 	* or if there was an error.
 	*/
-	@:overload public function findOuterLink(env : sun.tools.java.Environment, where : haxe.Int64, f : sun.tools.java.MemberDefinition) : sun.tools.tree.Expression;
+	@:overload @:public public function findOuterLink(env : sun.tools.java.Environment, where : haxe.Int64, f : sun.tools.java.MemberDefinition) : sun.tools.tree.Expression;
 	
-	@:overload public function findOuterLink(env : sun.tools.java.Environment, where : haxe.Int64, reqc : sun.tools.java.ClassDefinition, f : sun.tools.java.MemberDefinition, needExactMatch : Bool) : sun.tools.tree.Expression;
+	@:overload @:public public function findOuterLink(env : sun.tools.java.Environment, where : haxe.Int64, reqc : sun.tools.java.ClassDefinition, f : sun.tools.java.MemberDefinition, needExactMatch : Bool) : sun.tools.tree.Expression;
 	
 	/**
 	* Is there a "this" of type reqc in scope?
 	*/
-	@:overload public static function outerLinkExists(env : sun.tools.java.Environment, reqc : sun.tools.java.ClassDefinition, thisc : sun.tools.java.ClassDefinition) : Bool;
+	@:overload @:public @:static public static function outerLinkExists(env : sun.tools.java.Environment, reqc : sun.tools.java.ClassDefinition, thisc : sun.tools.java.ClassDefinition) : Bool;
 	
 	/**
 	* From which enclosing class do members of this type come?
 	*/
-	@:overload public function findScope(env : sun.tools.java.Environment, reqc : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
+	@:overload @:public public function findScope(env : sun.tools.java.Environment, reqc : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Return the name of a lexically apparent type,
@@ -149,7 +149,7 @@ extern class Context implements sun.tools.java.Constants
 	* the current pacakge and imports.
 	* This is used for error checking.
 	*/
-	@:overload public function getApparentClassName(env : sun.tools.java.Environment, name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public public function getApparentClassName(env : sun.tools.java.Environment, name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Raise an error if a blank final was definitely unassigned
@@ -157,34 +157,34 @@ extern class Context implements sun.tools.java.Constants
 	* back-branch.  If this is the case, the loop may be assigning
 	* it multiple times.
 	*/
-	@:overload public function checkBackBranch(env : sun.tools.java.Environment, loop : sun.tools.tree.Statement, vsEntry : sun.tools.tree.Vset, vsBack : sun.tools.tree.Vset) : Void;
+	@:overload @:public public function checkBackBranch(env : sun.tools.java.Environment, loop : sun.tools.tree.Statement, vsEntry : sun.tools.tree.Vset, vsBack : sun.tools.tree.Vset) : Void;
 	
 	/**
 	* Check if a field can reach another field (only considers
 	* forward references, not the access modifiers).
 	*/
-	@:overload public function canReach(env : sun.tools.java.Environment, f : sun.tools.java.MemberDefinition) : Bool;
+	@:overload @:public public function canReach(env : sun.tools.java.Environment, f : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Get the context that corresponds to a label, return null if
 	* not found.
 	*/
-	@:overload public function getLabelContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
+	@:overload @:public public function getLabelContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
 	
 	/**
 	* Get the destination context of a break
 	*/
-	@:overload public function getBreakContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
+	@:overload @:public public function getBreakContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
 	
 	/**
 	* Get the destination context of a continue
 	*/
-	@:overload public function getContinueContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
+	@:overload @:public public function getContinueContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
 	
 	/**
 	* Get the destination context of a return (the method body)
 	*/
-	@:overload public function getReturnContext() : sun.tools.tree.CheckContext;
+	@:overload @:public public function getReturnContext() : sun.tools.tree.CheckContext;
 	
 	/**
 	* Get the context of the innermost surrounding try-block.
@@ -195,25 +195,25 @@ extern class Context implements sun.tools.java.Constants
 	* all abnormal transfers of control: break, continue, return,
 	* and throw.
 	*/
-	@:overload public function getTryExitContext() : sun.tools.tree.CheckContext;
+	@:overload @:public public function getTryExitContext() : sun.tools.tree.CheckContext;
 	
 	/**
 	* Remove variables from the vset set  that are no longer part of
 	* this context.
 	*/
-	@:overload @:final public function removeAdditionalVars(vset : sun.tools.tree.Vset) : sun.tools.tree.Vset;
+	@:overload @:public @:final public function removeAdditionalVars(vset : sun.tools.tree.Vset) : sun.tools.tree.Vset;
 	
-	@:overload @:final public function getVarNumber() : Int;
+	@:overload @:public @:final public function getVarNumber() : Int;
 	
 	/**
 	* Return the number of the innermost current instance reference.
 	*/
-	@:overload public function getThisNumber() : Int;
+	@:overload @:public public function getThisNumber() : Int;
 	
 	/**
 	* Return the field containing the present context.
 	*/
-	@:overload @:final public function getField() : sun.tools.java.MemberDefinition;
+	@:overload @:public @:final public function getField() : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Extend an environment with the given context.
@@ -221,13 +221,13 @@ extern class Context implements sun.tools.java.Constants
 	* the given one, except that resolveName() takes
 	* into account local class names in this context.
 	*/
-	@:overload public static function newEnvironment(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.java.Environment;
+	@:overload @:public @:static public static function newEnvironment(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.java.Environment;
 	
 	
 }
 @:internal extern class ContextEnvironment extends sun.tools.java.Environment
 {
-	@:overload public function resolveName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload @:public override public function resolveName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	
 }

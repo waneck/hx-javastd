@@ -42,7 +42,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*
 	* @param elem the element
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Fetches the font metrics associated with the component hosting
@@ -50,7 +50,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*
 	* @return the metrics
 	*/
-	@:overload private function getFontMetrics() : java.awt.FontMetrics;
+	@:overload @:protected private function getFontMetrics() : java.awt.FontMetrics;
 	
 	/**
 	* Adjusts the allocation given to the view
@@ -66,7 +66,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*  to be adjusted.
 	* @return the allocation that the superclass should use.
 	*/
-	@:overload private function adjustAllocation(a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:protected private function adjustAllocation(a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Renders using the given rendering surface and area on that surface.
@@ -78,7 +78,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -90,7 +90,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*           that is returned, although there is no guarantee.
 	*           The parent may choose to resize or break the view.
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the resizability of the view along the
@@ -99,7 +99,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	* @param axis View.X_AXIS or View.Y_AXIS
 	* @return the weight -> 1 for View.X_AXIS, else 0
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -112,7 +112,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*   represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -125,7 +125,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	*  given point in the view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -136,7 +136,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -147,7 +147,7 @@ extern class FieldView extends javax.swing.text.PlainView
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

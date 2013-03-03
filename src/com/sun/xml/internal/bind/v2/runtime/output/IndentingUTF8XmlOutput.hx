@@ -31,21 +31,21 @@ extern class IndentingUTF8XmlOutput extends com.sun.xml.internal.bind.v2.runtime
 	*      set to null for no indentation and optimal performance.
 	*      otherwise the string is used for indentation.
 	*/
-	@:overload public function new(out : java.io.OutputStream, indentStr : String, localNames : java.NativeArray<com.sun.xml.internal.bind.v2.runtime.output.Encoded>, escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream, indentStr : String, localNames : java.NativeArray<com.sun.xml.internal.bind.v2.runtime.output.Encoded>, escapeHandler : com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler) : Void;
 	
-	@:overload override public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public override public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload override public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload @:public override public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload override public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function endTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function text(value : String, needSP : Bool) : Void;
+	@:overload @:public override public function text(value : String, needSP : Bool) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needSP : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needSP : Bool) : Void;
 	
-	@:overload override public function endDocument(fragment : Bool) : Void;
+	@:overload @:public override public function endDocument(fragment : Bool) : Void;
 	
 	
 }

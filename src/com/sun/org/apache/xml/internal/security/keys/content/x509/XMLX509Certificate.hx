@@ -22,7 +22,7 @@ package com.sun.org.apache.xml.internal.security.keys.content.x509;
 extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security.utils.SignatureElementProxy implements com.sun.org.apache.xml.internal.security.keys.content.x509.XMLX509DataContent
 {
 	/** Field JCA_CERT_ID */
-	public static var JCA_CERT_ID(default, null) : String;
+	@:public @:static @:final public static var JCA_CERT_ID(default, null) : String;
 	
 	/**
 	* Constructor X509Certificate
@@ -31,7 +31,7 @@ extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor X509Certificate
@@ -39,7 +39,7 @@ extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security
 	* @param doc
 	* @param certificateBytes
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, certificateBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, certificateBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructor XMLX509Certificate
@@ -48,7 +48,7 @@ extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security
 	* @param x509certificate
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Method getCertificateBytes
@@ -56,7 +56,7 @@ extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security
 	* @return the certificate bytes
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getCertificateBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getCertificateBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method getX509Certificate
@@ -64,7 +64,7 @@ extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security
 	* @return the x509 certificate
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getX509Certificate() : java.security.cert.X509Certificate;
+	@:overload @:public public function getX509Certificate() : java.security.cert.X509Certificate;
 	
 	/**
 	* Method getPublicKey
@@ -72,13 +72,13 @@ extern class XMLX509Certificate extends com.sun.org.apache.xml.internal.security
 	* @return teh publickey
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
 	/** @inheritDoc */
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

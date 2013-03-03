@@ -29,11 +29,11 @@ extern class AppletResourceLoader
 	* Part of this class still remains only to support legacy, 100%-impure
 	* applications such as HotJava 1.0.1.
 	*/
-	@:overload public static function getImage(url : java.net.URL) : java.awt.Image;
+	@:overload @:public @:static public static function getImage(url : java.net.URL) : java.awt.Image;
 	
-	@:overload public static function getImageRef(url : java.net.URL) : sun.misc.Ref;
+	@:overload @:public @:static public static function getImageRef(url : java.net.URL) : sun.misc.Ref;
 	
-	@:overload public static function flushImages() : Void;
+	@:overload @:public @:static public static function flushImages() : Void;
 	
 	
 }

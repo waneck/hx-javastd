@@ -31,7 +31,7 @@ extern class OptimizedAccessorFactory
 	* @return null
 	*      if for some reason it fails to create an optimized version.
 	*/
-	@:overload @:final public static function get<B, V>(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>;
+	@:overload @:public @:static @:final public static function get<B, V>(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>;
 	
 	/**
 	* Gets the optimizd {@link Accessor} that accesses the given field.
@@ -39,7 +39,7 @@ extern class OptimizedAccessorFactory
 	* @return null
 	*      if for some reason it fails to create an optimized version.
 	*/
-	@:overload @:final public static function get<B, V>(field : java.lang.reflect.Field) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>;
+	@:overload @:public @:static @:final public static function get<B, V>(field : java.lang.reflect.Field) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>;
 	
 	
 }

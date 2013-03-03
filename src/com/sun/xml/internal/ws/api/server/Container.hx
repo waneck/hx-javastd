@@ -64,7 +64,7 @@ extern class Container
 	/**
 	* For derived classes.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Gets the specified SPI.
@@ -80,13 +80,13 @@ extern class Container
 	* @return
 	*      null if such an SPI is not implemented by this container.
 	*/
-	@:overload @:abstract public function getSPI<T>(spiType : Class<T>) : T;
+	@:overload @:public @:abstract public function getSPI<T>(spiType : Class<T>) : T;
 	
 	/**
 	* Constant that represents a "no {@link Container}",
 	* which always returns null from {@link #getSPI(Class)}.
 	*/
-	public static var NONE(default, null) : com.sun.xml.internal.ws.api.server.Container;
+	@:public @:static @:final public static var NONE(default, null) : com.sun.xml.internal.ws.api.server.Container;
 	
 	
 }

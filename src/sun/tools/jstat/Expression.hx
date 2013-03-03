@@ -33,7 +33,7 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class Expression
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

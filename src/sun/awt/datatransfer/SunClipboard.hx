@@ -34,51 +34,51 @@ extern class SunClipboard extends java.awt.datatransfer.Clipboard implements jav
 	*
 	* @since 1.3
 	*/
-	@:require(java3) public static var flavorMap(default, null) : java.awt.datatransfer.FlavorTable;
+	@:require(java3) @:public @:static @:final public static var flavorMap(default, null) : java.awt.datatransfer.FlavorTable;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload @:synchronized override public function setContents(contents : java.awt.datatransfer.Transferable, owner : java.awt.datatransfer.ClipboardOwner) : Void;
+	@:overload @:public @:synchronized override public function setContents(contents : java.awt.datatransfer.Transferable, owner : java.awt.datatransfer.ClipboardOwner) : Void;
 	
-	@:overload @:synchronized override public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
+	@:overload @:public @:synchronized override public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
 	
 	/**
 	* @see java.awt.Clipboard#getAvailableDataFlavors
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAvailableDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:require(java5) @:overload @:public override public function getAvailableDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* @see java.awt.Clipboard#isDataFlavorAvailable
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function isDataFlavorAvailable(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:require(java5) @:overload @:public override public function isDataFlavorAvailable(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* @see java.awt.Clipboard#getData
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:require(java5) @:overload @:public override public function getData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	/**
 	* The clipboard must be opened.
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function createLocaleTransferable(formats : java.NativeArray<haxe.Int64>) : java.awt.datatransfer.Transferable;
+	@:require(java5) @:overload @:protected private function createLocaleTransferable(formats : java.NativeArray<haxe.Int64>) : java.awt.datatransfer.Transferable;
 	
 	/**
 	* @throws IllegalStateException if the clipboard has not been opened
 	*/
-	@:overload public function openClipboard(newOwner : sun.awt.datatransfer.SunClipboard) : Void;
+	@:overload @:public public function openClipboard(newOwner : sun.awt.datatransfer.SunClipboard) : Void;
 	
-	@:overload public function closeClipboard() : Void;
+	@:overload @:public public function closeClipboard() : Void;
 	
-	@:overload @:abstract public function getID() : haxe.Int64;
+	@:overload @:public @:abstract public function getID() : haxe.Int64;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload private function lostOwnershipImpl() : Void;
+	@:overload @:protected private function lostOwnershipImpl() : Void;
 	
 	/**
 	* Clears the clipboard state (contents, owner and contents context) and
@@ -90,37 +90,37 @@ extern class SunClipboard extends java.awt.datatransfer.Clipboard implements jav
 	*        <code>null</code> if the ownership is lost because another
 	*        application acquired ownership.
 	*/
-	@:overload private function lostOwnershipLater(disposedContext : sun.awt.AppContext) : Void;
+	@:overload @:protected private function lostOwnershipLater(disposedContext : sun.awt.AppContext) : Void;
 	
-	@:overload @:abstract private function clearNativeContext() : Void;
+	@:overload @:protected @:abstract private function clearNativeContext() : Void;
 	
-	@:overload @:abstract private function setContentsNative(contents : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:protected @:abstract private function setContentsNative(contents : java.awt.datatransfer.Transferable) : Void;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function getClipboardFormatsOpenClose() : java.NativeArray<haxe.Int64>;
+	@:require(java5) @:overload @:protected private function getClipboardFormatsOpenClose() : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Returns zero-length array (not null) if the number of available formats is zero.
 	*
 	* @throws IllegalStateException if formats could not be retrieved
 	*/
-	@:overload @:abstract private function getClipboardFormats() : java.NativeArray<haxe.Int64>;
+	@:overload @:protected @:abstract private function getClipboardFormats() : java.NativeArray<haxe.Int64>;
 	
-	@:overload @:abstract private function getClipboardData(format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function getClipboardData(format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:synchronized override public function addFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
+	@:overload @:public @:synchronized override public function addFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
 	
-	@:overload @:synchronized override public function removeFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
+	@:overload @:public @:synchronized override public function removeFlavorListener(listener : java.awt.datatransfer.FlavorListener) : Void;
 	
-	@:overload @:synchronized override public function getFlavorListeners() : java.NativeArray<java.awt.datatransfer.FlavorListener>;
+	@:overload @:public @:synchronized override public function getFlavorListeners() : java.NativeArray<java.awt.datatransfer.FlavorListener>;
 	
-	@:overload public function areFlavorListenersRegistered() : Bool;
+	@:overload @:public public function areFlavorListenersRegistered() : Bool;
 	
-	@:overload @:abstract private function registerClipboardViewerChecked() : Void;
+	@:overload @:protected @:abstract private function registerClipboardViewerChecked() : Void;
 	
-	@:overload @:abstract private function unregisterClipboardViewerChecked() : Void;
+	@:overload @:protected @:abstract private function unregisterClipboardViewerChecked() : Void;
 	
 	/**
 	* Checks change of the <code>DataFlavor</code>s and, if necessary,
@@ -132,7 +132,7 @@ extern class SunClipboard extends java.awt.datatransfer.Clipboard implements jav
 	* @param formats data formats that have just been retrieved from
 	*        this clipboard
 	*/
-	@:overload public function checkChange(formats : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function checkChange(formats : java.NativeArray<haxe.Int64>) : Void;
 	
 	
 }

@@ -25,29 +25,29 @@ package java.awt;
 */
 @:internal extern class TexturePaintContext implements java.awt.PaintContext
 {
-	public static var xrgbmodel : java.awt.image.ColorModel;
+	@:public @:static public static var xrgbmodel : java.awt.image.ColorModel;
 	
-	public static var argbmodel : java.awt.image.ColorModel;
+	@:public @:static public static var argbmodel : java.awt.image.ColorModel;
 	
-	@:overload public static function getContext(bufImg : java.awt.image.BufferedImage, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints, devBounds : java.awt.Rectangle) : java.awt.PaintContext;
+	@:overload @:public @:static public static function getContext(bufImg : java.awt.image.BufferedImage, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints, devBounds : java.awt.Rectangle) : java.awt.PaintContext;
 	
-	@:overload public static function isFilterableICM(cm : java.awt.image.ColorModel) : Bool;
+	@:overload @:public @:static public static function isFilterableICM(cm : java.awt.image.ColorModel) : Bool;
 	
-	@:overload public static function isFilterableDCM(cm : java.awt.image.ColorModel) : Bool;
+	@:overload @:public @:static public static function isFilterableDCM(cm : java.awt.image.ColorModel) : Bool;
 	
-	@:overload public static function isMaskOK(mask : Int, canbezero : Bool) : Bool;
+	@:overload @:public @:static public static function isMaskOK(mask : Int, canbezero : Bool) : Bool;
 	
-	@:overload public static function getInternedColorModel(cm : java.awt.image.ColorModel) : java.awt.image.ColorModel;
+	@:overload @:public @:static public static function getInternedColorModel(cm : java.awt.image.ColorModel) : java.awt.image.ColorModel;
 	
 	/**
 	* Release the resources allocated for the operation.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Return the ColorModel of the output.
 	*/
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Return a Raster containing the colors generated for the graphics
@@ -55,11 +55,11 @@ package java.awt;
 	* @param x,y,w,h The area in device space for which colors are
 	* generated.
 	*/
-	@:overload public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
+	@:overload @:public public function getRaster(x : Int, y : Int, w : Int, h : Int) : java.awt.image.Raster;
 	
-	@:overload @:abstract public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public @:abstract public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
-	@:overload @:abstract public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
+	@:overload @:public @:abstract public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
 	
 	/*
 	* Blends the four ARGB values in the rgbs array using the factors
@@ -78,49 +78,49 @@ package java.awt;
 	* pixels to blend, when the error values reach 1.0 we move to the
 	* next pixel and reset them to 0.0.
 	*/
-	@:overload public static function blend(rgbs : java.NativeArray<Int>, xmul : Int, ymul : Int) : Int;
+	@:overload @:public @:static public static function blend(rgbs : java.NativeArray<Int>, xmul : Int, ymul : Int) : Int;
 	
 	
 }
 @:native('java$awt$TexturePaintContext$Int') @:internal extern class TexturePaintContext_Int extends java.awt.TexturePaintContext
 {
-	@:overload public function new(srcRas : sun.awt.image.IntegerInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int, filter : Bool) : Void;
+	@:overload @:public public function new(srcRas : sun.awt.image.IntegerInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int, filter : Bool) : Void;
 	
-	@:overload override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
-	@:overload override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
+	@:overload @:public override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
 	
 	
 }
 @:native('java$awt$TexturePaintContext$Byte') @:internal extern class TexturePaintContext_Byte extends java.awt.TexturePaintContext
 {
-	@:overload public function new(srcRas : sun.awt.image.ByteInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int) : Void;
+	@:overload @:public public function new(srcRas : sun.awt.image.ByteInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int) : Void;
 	
-	@:overload override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
+	@:overload @:public override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
 	
 	
 }
 @:native('java$awt$TexturePaintContext$ByteFilter') @:internal extern class TexturePaintContext_ByteFilter extends java.awt.TexturePaintContext
 {
-	@:overload public function new(srcRas : sun.awt.image.ByteInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int) : Void;
+	@:overload @:public public function new(srcRas : sun.awt.image.ByteInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int) : Void;
 	
-	@:overload override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
-	@:overload override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
+	@:overload @:public override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
 	
 	
 }
 @:native('java$awt$TexturePaintContext$Any') @:internal extern class TexturePaintContext_Any extends java.awt.TexturePaintContext
 {
-	@:overload public function new(srcRas : java.awt.image.WritableRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int, filter : Bool) : Void;
+	@:overload @:public public function new(srcRas : java.awt.image.WritableRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int, filter : Bool) : Void;
 	
-	@:overload override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload @:public override public function makeRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
-	@:overload override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
+	@:overload @:public override public function setRaster(x : Int, y : Int, xerr : Int, yerr : Int, w : Int, h : Int, bWidth : Int, bHeight : Int, colincx : Int, colincxerr : Int, colincy : Int, colincyerr : Int, rowincx : Int, rowincxerr : Int, rowincy : Int, rowincyerr : Int) : Void;
 	
 	
 }

@@ -29,15 +29,15 @@ package sun.security.krb5.internal;
 */
 extern interface SeqNumber
 {
-	@:overload public function randInit() : Void;
+	@:overload @:public public function randInit() : Void;
 	
-	@:overload public function init(start : Int) : Void;
+	@:overload @:public public function init(start : Int) : Void;
 	
-	@:overload public function current() : Int;
+	@:overload @:public public function current() : Int;
 	
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
-	@:overload public function step() : Int;
+	@:overload @:public public function step() : Int;
 	
 	
 }

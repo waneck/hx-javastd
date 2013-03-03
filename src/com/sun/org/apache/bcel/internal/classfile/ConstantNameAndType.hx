@@ -70,13 +70,13 @@ extern class ConstantNameAndType extends com.sun.org.apache.bcel.internal.classf
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantNameAndType) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantNameAndType) : Void;
 	
 	/**
 	* @param name_index Name of field/method
 	* @param signature_index and its signature
 	*/
-	@:overload public function new(name_index : Int, signature_index : Int) : Void;
+	@:overload @:public public function new(name_index : Int, signature_index : Int) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -85,7 +85,7 @@ extern class ConstantNameAndType extends com.sun.org.apache.bcel.internal.classf
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump name and signature index to file stream in binary format.
@@ -93,40 +93,40 @@ extern class ConstantNameAndType extends com.sun.org.apache.bcel.internal.classf
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Name index in constant pool of field/method name.
 	*/
-	@:overload @:final public function getNameIndex() : Int;
+	@:overload @:public @:final public function getNameIndex() : Int;
 	
 	/** @return name
 	*/
-	@:overload @:final public function getName(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public @:final public function getName(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* @return Index in constant pool of field/method signature.
 	*/
-	@:overload @:final public function getSignatureIndex() : Int;
+	@:overload @:public @:final public function getSignatureIndex() : Int;
 	
 	/** @return signature
 	*/
-	@:overload @:final public function getSignature(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public @:final public function getSignature(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* @param name_index.
 	*/
-	@:overload @:final public function setNameIndex(name_index : Int) : Void;
+	@:overload @:public @:final public function setNameIndex(name_index : Int) : Void;
 	
 	/**
 	* @param signature_index.
 	*/
-	@:overload @:final public function setSignatureIndex(signature_index : Int) : Void;
+	@:overload @:public @:final public function setSignatureIndex(signature_index : Int) : Void;
 	
 	/**
 	* @return String representation
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	
 }

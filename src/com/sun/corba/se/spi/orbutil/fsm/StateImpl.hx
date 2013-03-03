@@ -25,23 +25,23 @@ package com.sun.corba.se.spi.orbutil.fsm;
 */
 extern class StateImpl extends com.sun.corba.se.impl.orbutil.fsm.NameBase implements com.sun.corba.se.spi.orbutil.fsm.State
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function preAction(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM) : Void;
+	@:overload @:public public function preAction(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM) : Void;
 	
-	@:overload public function postAction(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM) : Void;
+	@:overload @:public public function postAction(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM) : Void;
 	
-	@:overload public function getDefaultNextState() : com.sun.corba.se.spi.orbutil.fsm.State;
+	@:overload @:public public function getDefaultNextState() : com.sun.corba.se.spi.orbutil.fsm.State;
 	
-	@:overload public function setDefaultNextState(defaultNextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
+	@:overload @:public public function setDefaultNextState(defaultNextState : com.sun.corba.se.spi.orbutil.fsm.State) : Void;
 	
-	@:overload public function getDefaultAction() : com.sun.corba.se.spi.orbutil.fsm.Action;
+	@:overload @:public public function getDefaultAction() : com.sun.corba.se.spi.orbutil.fsm.Action;
 	
-	@:overload public function setDefaultAction(defaultAction : com.sun.corba.se.spi.orbutil.fsm.Action) : Void;
+	@:overload @:public public function setDefaultAction(defaultAction : com.sun.corba.se.spi.orbutil.fsm.Action) : Void;
 	
-	@:overload public function addGuardedAction(_in : com.sun.corba.se.spi.orbutil.fsm.Input, ga : com.sun.corba.se.impl.orbutil.fsm.GuardedAction) : Void;
+	@:overload @:public public function addGuardedAction(_in : com.sun.corba.se.spi.orbutil.fsm.Input, ga : com.sun.corba.se.impl.orbutil.fsm.GuardedAction) : Void;
 	
-	@:overload public function getGuardedActions(_in : com.sun.corba.se.spi.orbutil.fsm.Input) : java.util.Set<Dynamic>;
+	@:overload @:public public function getGuardedActions(_in : com.sun.corba.se.spi.orbutil.fsm.Input) : java.util.Set<Dynamic>;
 	
 	
 }

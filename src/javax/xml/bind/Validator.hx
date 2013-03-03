@@ -176,7 +176,7 @@ package javax.xml.bind;
 	*         event handler
 	* @deprecated since JAXB2.0
 	*/
-	@:overload public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Return the current event handler or the default event handler if one
@@ -188,7 +188,7 @@ package javax.xml.bind;
 	*         current event handler
 	* @deprecated since JAXB2.0
 	*/
-	@:overload public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
+	@:overload @:public public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
 	
 	/**
 	* Validate the Java content tree starting at <tt>subrootObj</tt>.
@@ -211,7 +211,7 @@ package javax.xml.bind;
 	*         otherwise
 	* @deprecated since JAXB2.0
 	*/
-	@:overload public function validate(subrootObj : Dynamic) : Bool;
+	@:overload @:public public function validate(subrootObj : Dynamic) : Bool;
 	
 	/**
 	* Validate the Java content tree rooted at <tt>rootObj</tt>.
@@ -234,7 +234,7 @@ package javax.xml.bind;
 	*         otherwise
 	* @deprecated since JAXB2.0
 	*/
-	@:overload public function validateRoot(rootObj : Dynamic) : Bool;
+	@:overload @:public public function validateRoot(rootObj : Dynamic) : Bool;
 	
 	/**
 	* Set the particular property in the underlying implementation of
@@ -255,7 +255,7 @@ package javax.xml.bind;
 	*      If the name parameter is null
 	* @deprecated since JAXB2.0
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Get the particular property in the underlying implementation of
@@ -275,7 +275,7 @@ package javax.xml.bind;
 	*      If the name parameter is null
 	* @deprecated since JAXB2.0
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	
 }

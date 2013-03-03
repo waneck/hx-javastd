@@ -25,11 +25,11 @@ package sun.java2d;
 */
 extern class Disposer implements java.lang.Runnable
 {
-	public static var WEAK(default, null) : Int;
+	@:public @:static @:final public static var WEAK(default, null) : Int;
 	
-	public static var PHANTOM(default, null) : Int;
+	@:public @:static @:final public static var PHANTOM(default, null) : Int;
 	
-	public static var refType : Int;
+	@:public @:static public static var refType : Int;
 	
 	/**
 	* Registers the object and the native data for later disposal.
@@ -38,7 +38,7 @@ extern class Disposer implements java.lang.Runnable
 	* @param pData pointer to the data to be passed to the
 	*              native disposal method
 	*/
-	@:overload public static function addRecord(target : Dynamic, disposeMethod : haxe.Int64, pData : haxe.Int64) : Void;
+	@:overload @:public @:static public static function addRecord(target : Dynamic, disposeMethod : haxe.Int64, pData : haxe.Int64) : Void;
 	
 	/**
 	* Registers the object and the native data for later disposal.
@@ -46,14 +46,14 @@ extern class Disposer implements java.lang.Runnable
 	* @param rec the associated DisposerRecord object
 	* @see DisposerRecord
 	*/
-	@:overload public static function addRecord(target : Dynamic, rec : sun.java2d.DisposerRecord) : Void;
+	@:overload @:public @:static public static function addRecord(target : Dynamic, rec : sun.java2d.DisposerRecord) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	/*
 	* Set to indicate the queue is presently being polled.
 	*/
-	@:volatile public static var pollingQueue : Bool;
+	@:public @:static @:volatile public static var pollingQueue : Bool;
 	
 	/*
 	* The pollRemove() method is called back from a dispose method
@@ -61,7 +61,7 @@ extern class Disposer implements java.lang.Runnable
 	* dispose any pending refs that are safe to be disposed
 	* on that thread.
 	*/
-	@:overload public static function pollRemove() : Void;
+	@:overload @:public @:static public static function pollRemove() : Void;
 	
 	/*
 	* This was added for use by the 2D font implementation to avoid creation
@@ -71,13 +71,13 @@ extern class Disposer implements java.lang.Runnable
 	* so will clutter the records hashmap and no one will be cleaning up
 	* the reference queue.
 	*/
-	@:overload public static function addReference(ref : java.lang.ref.Reference<Dynamic>, rec : sun.java2d.DisposerRecord) : Void;
+	@:overload @:public @:static public static function addReference(ref : java.lang.ref.Reference<Dynamic>, rec : sun.java2d.DisposerRecord) : Void;
 	
-	@:overload public static function addObjectRecord(obj : Dynamic, rec : sun.java2d.DisposerRecord) : Void;
+	@:overload @:public @:static public static function addObjectRecord(obj : Dynamic, rec : sun.java2d.DisposerRecord) : Void;
 	
 	/* This is intended for use in conjunction with addReference(..)
 	*/
-	@:overload public static function getQueue() : java.lang.ref.ReferenceQueue<Dynamic>;
+	@:overload @:public @:static public static function getQueue() : java.lang.ref.ReferenceQueue<Dynamic>;
 	
 	
 }

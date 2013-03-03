@@ -31,29 +31,29 @@ package com.sun.corba.se.impl.corba;
 */
 extern class ServerRequestImpl extends org.omg.CORBA.ServerRequest
 {
-	@:overload public function new(req : com.sun.corba.se.spi.protocol.CorbaMessageMediator, orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function new(req : com.sun.corba.se.spi.protocol.CorbaMessageMediator, orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function operation() : String;
+	@:overload @:public override public function operation() : String;
 	
-	@:overload public function arguments(args : org.omg.CORBA.NVList) : Void;
+	@:overload @:public override public function arguments(args : org.omg.CORBA.NVList) : Void;
 	
-	@:overload public function set_result(res : org.omg.CORBA.Any) : Void;
+	@:overload @:public override public function set_result(res : org.omg.CORBA.Any) : Void;
 	
-	@:overload public function set_exception(exc : org.omg.CORBA.Any) : Void;
+	@:overload @:public override public function set_exception(exc : org.omg.CORBA.Any) : Void;
 	
 	/** This is called from the ORB after the DynamicImplementation.invoke
 	*  returns. Here we set the result if result() has not already been called.
 	*  @return the exception if there is one (then ORB will not call
 	*  marshalReplyParams()) otherwise return null.
 	*/
-	@:overload public function checkResultCalled() : org.omg.CORBA.Any;
+	@:overload @:public public function checkResultCalled() : org.omg.CORBA.Any;
 	
 	/** This is called from the ORB after the DynamicImplementation.invoke
 	*  returns. Here we marshal the return value and inout/out params.
 	*/
-	@:overload public function marshalReplyParams(os : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function marshalReplyParams(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function ctx() : org.omg.CORBA.Context;
+	@:overload @:public override public function ctx() : org.omg.CORBA.Context;
 	
 	
 }

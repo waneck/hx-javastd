@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class StubFactoryDynamicBase extends com.sun.corba.se.impl.presentation.rmi.StubFactoryBase
 {
-	private var loader(default, null) : java.lang.ClassLoader;
+	@:protected @:final private var loader(default, null) : java.lang.ClassLoader;
 	
-	@:overload public function new(classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, loader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, loader : java.lang.ClassLoader) : Void;
 	
-	@:overload @:abstract public function makeStub() : org.omg.CORBA.Object;
+	@:overload @:public @:abstract override public function makeStub() : org.omg.CORBA.Object;
 	
 	
 }

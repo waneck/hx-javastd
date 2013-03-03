@@ -78,7 +78,7 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @param derValue the encoded DER URIName.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Create the URIName object with the specified name.
@@ -86,7 +86,7 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @param name the URIName.
 	* @throws IOException if name is not a proper URIName
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Create the URIName object with the specified name constraint. URI
@@ -96,12 +96,12 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @param value the URI name constraint
 	* @throws IOException if name is not a proper URI name constraint
 	*/
-	@:overload public static function nameConstraint(value : sun.security.util.DerValue) : sun.security.x509.URIName;
+	@:overload @:public @:static public static function nameConstraint(value : sun.security.util.DerValue) : sun.security.x509.URIName;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Encode the URI name into the DerOutputStream.
@@ -109,43 +109,43 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @param out the DER stream to encode the URIName to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Convert the name into user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares this name with another, for equality.
 	*
 	* @return true iff the names are equivalent according to RFC2459.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the URIName as a java.net.URI object
 	*/
-	@:overload public function getURI() : java.net.URI;
+	@:overload @:public public function getURI() : java.net.URI;
 	
 	/**
 	* Returns this URI name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return the scheme name portion of a URIName
 	*
 	* @returns scheme portion of full name
 	*/
-	@:overload public function getScheme() : String;
+	@:overload @:public public function getScheme() : String;
 	
 	/**
 	* Return the host name or IP address portion of the URIName
 	*
 	* @returns host name or IP address portion of full name
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* Return the host object type; if host name is a
@@ -154,14 +154,14 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	*
 	* @returns host name as DNSName or IPAddressName
 	*/
-	@:overload public function getHostObject() : Dynamic;
+	@:overload @:public public function getHostObject() : Dynamic;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return type of constraint inputName places on this name:<ul>
@@ -192,7 +192,7 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is not exact match, but
 	*  narrowing and widening are not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -202,7 +202,7 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

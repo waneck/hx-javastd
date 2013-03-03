@@ -30,7 +30,7 @@ package sun.security.krb5.internal.ktab;
 */
 extern class KeyTabInputStream extends sun.security.krb5.internal.util.KrbDataInputStream implements sun.security.krb5.internal.ktab.KeyTabConstants
 {
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	
 }

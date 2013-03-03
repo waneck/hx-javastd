@@ -31,7 +31,7 @@ extern interface ContactInfo
 	*
 	* @return {@link com.sun.corba.se.pept.broker.Broker Broker}
 	*/
-	@:overload public function getBroker() : com.sun.corba.se.pept.broker.Broker;
+	@:overload @:public public function getBroker() : com.sun.corba.se.pept.broker.Broker;
 	
 	/**
 	* The parent
@@ -41,7 +41,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.broker.ContactInfoList ContactInfoList}
 	*/
-	@:overload public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
 	/**
 	* Used to get a
@@ -53,7 +53,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.ClientRequestDispatcher
 	* ClientRequestDispatcher} */
-	@:overload public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
+	@:overload @:public public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 	
 	/**
 	* Used to determine if a
@@ -68,7 +68,7 @@ extern interface ContactInfo
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	* will be used for an invocation.
 	*/
-	@:overload public function isConnectionBased() : Bool;
+	@:overload @:public @:public public function isConnectionBased() : Bool;
 	
 	/**
 	* Used to determine if the
@@ -84,7 +84,7 @@ extern interface ContactInfo
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}s
 	* created by this <code>ContactInfo</code> should be cached.
 	*/
-	@:overload public function shouldCacheConnection() : Bool;
+	@:overload @:public @:public public function shouldCacheConnection() : Bool;
 	
 	/**
 	* PEPt uses separate caches for each type of <code>ContactInfo</code>
@@ -92,7 +92,7 @@ extern interface ContactInfo
 	*
 	* @return {@link java.lang.String}
 	*/
-	@:overload public function getConnectionCacheType() : String;
+	@:overload @:public @:public public function getConnectionCacheType() : String;
 	
 	/**
 	* Set the
@@ -106,7 +106,7 @@ extern interface ContactInfo
 	*
 	* @param connectionCache.
 	*/
-	@:overload public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.OutboundConnectionCache) : Void;
+	@:overload @:public public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.OutboundConnectionCache) : Void;
 	
 	/**
 	* Get the
@@ -121,7 +121,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.transport.ConnectionCache ConnectionCache}
 	*/
-	@:overload public function getConnectionCache() : com.sun.corba.se.pept.transport.OutboundConnectionCache;
+	@:overload @:public public function getConnectionCache() : com.sun.corba.se.pept.transport.OutboundConnectionCache;
 	
 	/**
 	* Used to get a
@@ -132,7 +132,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	*/
-	@:overload public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	/**
 	* Used to get a
@@ -144,7 +144,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
 	*/
-	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	/**
 	* Used to get a
@@ -156,7 +156,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.MessageMeidator MessageMediator}
 	*/
-	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	/**
 	* Used to finish creating a
@@ -168,7 +168,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
 	*/
-	@:overload public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public public function finishCreatingMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, connection : com.sun.corba.se.pept.transport.Connection, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	/**
 	* Used to get a
@@ -179,7 +179,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.InputObject InputObject}
 	*/
-	@:overload public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function createInputObject(broker : com.sun.corba.se.pept.broker.Broker, messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
 	/**
 	* Used to get a
@@ -190,7 +190,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.encoding.OutputObject OutputObject}
 	*/
-	@:overload public function createOutputObject(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload @:public public function createOutputObject(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
 	
 	
 }

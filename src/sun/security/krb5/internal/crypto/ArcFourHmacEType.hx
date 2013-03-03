@@ -30,31 +30,31 @@ extern class ArcFourHmacEType extends sun.security.krb5.internal.crypto.EType
 	*
 	* @author Seema Malkani
 	*/
-	@:overload override public function eType() : Int;
+	@:overload @:public override public function eType() : Int;
 	
-	@:overload override public function minimumPadSize() : Int;
+	@:overload @:public override public function minimumPadSize() : Int;
 	
-	@:overload override public function confounderSize() : Int;
+	@:overload @:public override public function confounderSize() : Int;
 	
-	@:overload override public function checksumType() : Int;
+	@:overload @:public override public function checksumType() : Int;
 	
-	@:overload override public function checksumSize() : Int;
+	@:overload @:public override public function checksumSize() : Int;
 	
-	@:overload override public function blockSize() : Int;
+	@:overload @:public override public function blockSize() : Int;
 	
-	@:overload override public function keyType() : Int;
+	@:overload @:public override public function keyType() : Int;
 	
-	@:overload override public function keySize() : Int;
+	@:overload @:public override public function keySize() : Int;
 	
-	@:overload override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function decryptedData(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function decryptedData(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

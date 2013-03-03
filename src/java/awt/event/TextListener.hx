@@ -30,7 +30,7 @@ extern interface TextListener extends java.util.EventListener
 	* The code written for this method performs the operations
 	* that need to occur when text changes.
 	*/
-	@:overload public function textValueChanged(e : java.awt.event.TextEvent) : Void;
+	@:overload @:public public function textValueChanged(e : java.awt.event.TextEvent) : Void;
 	
 	
 }

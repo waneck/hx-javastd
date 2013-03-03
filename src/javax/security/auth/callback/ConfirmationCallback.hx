@@ -40,7 +40,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* value if this <code>ConfirmationCallback</code> was instantiated
 	* with <code>options</code> instead of an <code>optionType</code>.
 	*/
-	public static var UNSPECIFIED_OPTION(default, null) : Int;
+	@:public @:static @:final public static var UNSPECIFIED_OPTION(default, null) : Int;
 	
 	/**
 	* YES/NO confirmation option.
@@ -50,7 +50,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* constructor if it requires a confirmation which can be answered
 	* with either <code>YES</code> or <code>NO</code>.
 	*/
-	public static var YES_NO_OPTION(default, null) : Int;
+	@:public @:static @:final public static var YES_NO_OPTION(default, null) : Int;
 	
 	/**
 	* YES/NO/CANCEL confirmation confirmation option.
@@ -60,7 +60,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* constructor if it requires a confirmation which can be answered
 	* with either <code>YES</code>, <code>NO</code> or <code>CANCEL</code>.
 	*/
-	public static var YES_NO_CANCEL_OPTION(default, null) : Int;
+	@:public @:static @:final public static var YES_NO_CANCEL_OPTION(default, null) : Int;
 	
 	/**
 	* OK/CANCEL confirmation confirmation option.
@@ -70,7 +70,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* constructor if it requires a confirmation which can be answered
 	* with either <code>OK</code> or <code>CANCEL</code>.
 	*/
-	public static var OK_CANCEL_OPTION(default, null) : Int;
+	@:public @:static @:final public static var OK_CANCEL_OPTION(default, null) : Int;
 	
 	/**
 	* YES option.
@@ -79,7 +79,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* <code>ConfirmationCallback</code>, this option may be specified as a
 	* <code>defaultOption</code> or returned as the selected index.
 	*/
-	public static var YES(default, null) : Int;
+	@:public @:static @:final public static var YES(default, null) : Int;
 	
 	/**
 	* NO option.
@@ -88,7 +88,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* <code>ConfirmationCallback</code>, this option may be specified as a
 	* <code>defaultOption</code> or returned as the selected index.
 	*/
-	public static var NO(default, null) : Int;
+	@:public @:static @:final public static var NO(default, null) : Int;
 	
 	/**
 	* CANCEL option.
@@ -97,7 +97,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* <code>ConfirmationCallback</code>, this option may be specified as a
 	* <code>defaultOption</code> or returned as the selected index.
 	*/
-	public static var CANCEL(default, null) : Int;
+	@:public @:static @:final public static var CANCEL(default, null) : Int;
 	
 	/**
 	* OK option.
@@ -106,16 +106,16 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* <code>ConfirmationCallback</code>, this option may be specified as a
 	* <code>defaultOption</code> or returned as the selected index.
 	*/
-	public static var OK(default, null) : Int;
+	@:public @:static @:final public static var OK(default, null) : Int;
 	
 	/** INFORMATION message type.  */
-	public static var INFORMATION(default, null) : Int;
+	@:public @:static @:final public static var INFORMATION(default, null) : Int;
 	
 	/** WARNING message type. */
-	public static var WARNING(default, null) : Int;
+	@:public @:static @:final public static var WARNING(default, null) : Int;
 	
 	/** ERROR message type. */
-	public static var ERROR(default, null) : Int;
+	@:public @:static @:final public static var ERROR(default, null) : Int;
 	
 	/**
 	* Construct a <code>ConfirmationCallback</code> with a
@@ -149,7 +149,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*                  does not correspond to one of the options in
 	*                  <code>optionType</code>.
 	*/
-	@:overload public function new(messageType : Int, optionType : Int, defaultOption : Int) : Void;
+	@:overload @:public public function new(messageType : Int, optionType : Int, defaultOption : Int) : Void;
 	
 	/**
 	* Construct a <code>ConfirmationCallback</code> with a
@@ -182,7 +182,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*                  does not lie within the array boundaries of
 	*                  <code>options</code>.
 	*/
-	@:overload public function new(messageType : Int, options : java.NativeArray<String>, defaultOption : Int) : Void;
+	@:overload @:public public function new(messageType : Int, options : java.NativeArray<String>, defaultOption : Int) : Void;
 	
 	/**
 	* Construct a <code>ConfirmationCallback</code> with a prompt,
@@ -220,7 +220,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*                  does not correspond to one of the options in
 	*                  <code>optionType</code>.
 	*/
-	@:overload public function new(prompt : String, messageType : Int, optionType : Int, defaultOption : Int) : Void;
+	@:overload @:public public function new(prompt : String, messageType : Int, optionType : Int, defaultOption : Int) : Void;
 	
 	/**
 	* Construct a <code>ConfirmationCallback</code> with a prompt,
@@ -257,7 +257,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*                  does not lie within the array boundaries of
 	*                  <code>options</code>.
 	*/
-	@:overload public function new(prompt : String, messageType : Int, options : java.NativeArray<String>, defaultOption : Int) : Void;
+	@:overload @:public public function new(prompt : String, messageType : Int, options : java.NativeArray<String>, defaultOption : Int) : Void;
 	
 	/**
 	* Get the prompt.
@@ -267,7 +267,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* @return the prompt, or null if this <code>ConfirmationCallback</code>
 	*          was instantiated without a <code>prompt</code>.
 	*/
-	@:overload public function getPrompt() : String;
+	@:overload @:public public function getPrompt() : String;
 	
 	/**
 	* Get the message type.
@@ -277,7 +277,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	* @return the message type (<code>INFORMATION</code>,
 	*          <code>WARNING</code> or <code>ERROR</code>).
 	*/
-	@:overload public function getMessageType() : Int;
+	@:overload @:public public function getMessageType() : Int;
 	
 	/**
 	* Get the option type.
@@ -297,7 +297,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*          <code>ConfirmationCallback</code> was instantiated with
 	*          <code>options</code> instead of an <code>optionType</code>.
 	*/
-	@:overload public function getOptionType() : Int;
+	@:overload @:public public function getOptionType() : Int;
 	
 	/**
 	* Get the confirmation options.
@@ -308,7 +308,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*          <code>ConfirmationCallback</code> was instantiated with
 	*          an <code>optionType</code> instead of <code>options</code>.
 	*/
-	@:overload public function getOptions() : java.NativeArray<String>;
+	@:overload @:public public function getOptions() : java.NativeArray<String>;
 	
 	/**
 	* Get the default option.
@@ -325,7 +325,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*          <code>options</code> array specified to the constructor
 	*          of this <code>ConfirmationCallback</code>.
 	*/
-	@:overload public function getDefaultOption() : Int;
+	@:overload @:public public function getDefaultOption() : Int;
 	
 	/**
 	* Set the selected confirmation option.
@@ -342,7 +342,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*
 	* @see #getSelectedIndex
 	*/
-	@:overload public function setSelectedIndex(selection : Int) : Void;
+	@:overload @:public public function setSelectedIndex(selection : Int) : Void;
 	
 	/**
 	* Get the selected confirmation option.
@@ -361,7 +361,7 @@ extern class ConfirmationCallback implements javax.security.auth.callback.Callba
 	*
 	* @see #setSelectedIndex
 	*/
-	@:overload public function getSelectedIndex() : Int;
+	@:overload @:public public function getSelectedIndex() : Int;
 	
 	
 }

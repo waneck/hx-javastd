@@ -25,11 +25,11 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 {
 	/** The left operand expression.
 	*  @serial */
-	private var m_left : com.sun.org.apache.xpath.internal.Expression;
+	@:protected private var m_left : com.sun.org.apache.xpath.internal.Expression;
 	
 	/** The right operand expression.
 	*  @serial */
-	private var m_right : com.sun.org.apache.xpath.internal.Expression;
+	@:protected private var m_right : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -41,7 +41,7 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -49,7 +49,7 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* Set the left and right operand expressions for this operation.
@@ -58,7 +58,7 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	* @param l The left expression operand.
 	* @param r The right expression operand.
 	*/
-	@:overload public function setLeftRight(l : com.sun.org.apache.xpath.internal.Expression, r : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setLeftRight(l : com.sun.org.apache.xpath.internal.Expression, r : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* Execute a binary operation by calling execute on each of the operands,
@@ -71,7 +71,7 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Apply the operation to two operands, and return the result.
@@ -84,35 +84,35 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/** @return the left operand of binary operation, as an Expression.
 	*/
-	@:overload public function getLeftOperand() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getLeftOperand() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/** @return the right operand of binary operation, as an Expression.
 	*/
-	@:overload public function getRightOperand() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getRightOperand() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -121,12 +121,12 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

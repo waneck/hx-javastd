@@ -83,7 +83,7 @@ package java.util;
 	*
 	* @serial
 	*/
-	private var elementCount : Int;
+	@:protected private var elementCount : Int;
 	
 	/**
 	* The amount by which the capacity of the vector is automatically
@@ -93,7 +93,7 @@ package java.util;
 	*
 	* @serial
 	*/
-	private var capacityIncrement : Int;
+	@:protected private var capacityIncrement : Int;
 	
 	/**
 	* Constructs an empty vector with the specified initial capacity and
@@ -105,7 +105,7 @@ package java.util;
 	* @throws IllegalArgumentException if the specified initial capacity
 	*         is negative
 	*/
-	@:overload public function new(initialCapacity : Int, capacityIncrement : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int, capacityIncrement : Int) : Void;
 	
 	/**
 	* Constructs an empty vector with the specified initial capacity and
@@ -115,14 +115,14 @@ package java.util;
 	* @throws IllegalArgumentException if the specified initial capacity
 	*         is negative
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs an empty vector so that its internal data array
 	* has size {@code 10} and its standard capacity increment is
 	* zero.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a vector containing the elements of the specified
@@ -134,7 +134,7 @@ package java.util;
 	* @throws NullPointerException if the specified collection is null
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function new(c : java.util.Collection<E>) : Void;
+	@:require(java2) @:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Copies the components of this vector into the specified array.
@@ -149,7 +149,7 @@ package java.util;
 	*         a runtime type that can be stored in the specified array
 	* @see #toArray(Object[])
 	*/
-	@:overload @:synchronized public function copyInto(anArray : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:synchronized public function copyInto(anArray : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Trims the capacity of this vector to be the vector's current
@@ -159,7 +159,7 @@ package java.util;
 	* with a smaller one. An application can use this operation to
 	* minimize the storage of a vector.
 	*/
-	@:overload @:synchronized public function trimToSize() : Void;
+	@:overload @:public @:synchronized public function trimToSize() : Void;
 	
 	/**
 	* Increases the capacity of this vector, if necessary, to ensure
@@ -178,7 +178,7 @@ package java.util;
 	*
 	* @param minCapacity the desired minimum capacity
 	*/
-	@:overload @:synchronized public function ensureCapacity(minCapacity : Int) : Void;
+	@:overload @:public @:synchronized public function ensureCapacity(minCapacity : Int) : Void;
 	
 	/**
 	* Sets the size of this vector. If the new size is greater than the
@@ -189,7 +189,7 @@ package java.util;
 	* @param  newSize   the new size of this vector
 	* @throws ArrayIndexOutOfBoundsException if the new size is negative
 	*/
-	@:overload @:synchronized public function setSize(newSize : Int) : Void;
+	@:overload @:public @:synchronized public function setSize(newSize : Int) : Void;
 	
 	/**
 	* Returns the current capacity of this vector.
@@ -198,14 +198,14 @@ package java.util;
 	*          data array, kept in the field {@code elementData}
 	*          of this vector)
 	*/
-	@:overload @:synchronized public function capacity() : Int;
+	@:overload @:public @:synchronized public function capacity() : Int;
 	
 	/**
 	* Returns the number of components in this vector.
 	*
 	* @return  the number of components in this vector
 	*/
-	@:overload @:synchronized override public function size() : Int;
+	@:overload @:public @:synchronized override public function size() : Int;
 	
 	/**
 	* Tests if this vector has no components.
@@ -214,7 +214,7 @@ package java.util;
 	*          no components, that is, its size is zero;
 	*          {@code false} otherwise.
 	*/
-	@:overload @:synchronized override public function isEmpty() : Bool;
+	@:overload @:public @:synchronized override public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the components of this vector. The
@@ -225,7 +225,7 @@ package java.util;
 	* @return  an enumeration of the components of this vector
 	* @see     Iterator
 	*/
-	@:overload public function elements() : java.util.Enumeration<E>;
+	@:overload @:public public function elements() : java.util.Enumeration<E>;
 	
 	/**
 	* Returns {@code true} if this vector contains the specified element.
@@ -236,7 +236,7 @@ package java.util;
 	* @param o element whose presence in this vector is to be tested
 	* @return {@code true} if this vector contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -249,7 +249,7 @@ package java.util;
 	* @return the index of the first occurrence of the specified element in
 	*         this vector, or -1 if this vector does not contain the element
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element in
@@ -267,7 +267,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the specified index is negative
 	* @see     Object#equals(Object)
 	*/
-	@:overload @:synchronized public function indexOf(o : Dynamic, index : Int) : Int;
+	@:overload @:public @:synchronized public function indexOf(o : Dynamic, index : Int) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -280,7 +280,7 @@ package java.util;
 	* @return the index of the last occurrence of the specified element in
 	*         this vector, or -1 if this vector does not contain the element
 	*/
-	@:overload @:synchronized public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public @:synchronized override public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element in
@@ -298,7 +298,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the specified index is greater
 	*         than or equal to the current size of this vector
 	*/
-	@:overload @:synchronized public function lastIndexOf(o : Dynamic, index : Int) : Int;
+	@:overload @:public @:synchronized public function lastIndexOf(o : Dynamic, index : Int) : Int;
 	
 	/**
 	* Returns the component at the specified index.
@@ -311,7 +311,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index >= size()})
 	*/
-	@:overload @:synchronized public function elementAt(index : Int) : E;
+	@:overload @:public @:synchronized public function elementAt(index : Int) : E;
 	
 	/**
 	* Returns the first component (the item at index {@code 0}) of
@@ -320,7 +320,7 @@ package java.util;
 	* @return     the first component of this vector
 	* @throws NoSuchElementException if this vector has no components
 	*/
-	@:overload @:synchronized public function firstElement() : E;
+	@:overload @:public @:synchronized public function firstElement() : E;
 	
 	/**
 	* Returns the last component of the vector.
@@ -329,7 +329,7 @@ package java.util;
 	*          <code>size()&nbsp;-&nbsp;1</code>.
 	* @throws NoSuchElementException if this vector is empty
 	*/
-	@:overload @:synchronized public function lastElement() : E;
+	@:overload @:public @:synchronized public function lastElement() : E;
 	
 	/**
 	* Sets the component at the specified {@code index} of this
@@ -351,7 +351,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index >= size()})
 	*/
-	@:overload @:synchronized public function setElementAt(obj : E, index : Int) : Void;
+	@:overload @:public @:synchronized public function setElementAt(obj : E, index : Int) : Void;
 	
 	/**
 	* Deletes the component at the specified index. Each component in
@@ -372,7 +372,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index >= size()})
 	*/
-	@:overload @:synchronized public function removeElementAt(index : Int) : Void;
+	@:overload @:public @:synchronized public function removeElementAt(index : Int) : Void;
 	
 	/**
 	* Inserts the specified object as a component in this vector at the
@@ -397,7 +397,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload @:synchronized public function insertElementAt(obj : E, index : Int) : Void;
+	@:overload @:public @:synchronized public function insertElementAt(obj : E, index : Int) : Void;
 	
 	/**
 	* Adds the specified component to the end of this vector,
@@ -410,7 +410,7 @@ package java.util;
 	*
 	* @param   obj   the component to be added
 	*/
-	@:overload @:synchronized public function addElement(obj : E) : Void;
+	@:overload @:public @:synchronized public function addElement(obj : E) : Void;
 	
 	/**
 	* Removes the first (lowest-indexed) occurrence of the argument
@@ -427,7 +427,7 @@ package java.util;
 	* @return  {@code true} if the argument was a component of this
 	*          vector; {@code false} otherwise.
 	*/
-	@:overload @:synchronized public function removeElement(obj : Dynamic) : Bool;
+	@:overload @:public @:synchronized public function removeElement(obj : Dynamic) : Bool;
 	
 	/**
 	* Removes all components from this vector and sets its size to zero.
@@ -435,7 +435,7 @@ package java.util;
 	* <p>This method is identical in functionality to the {@link #clear}
 	* method (which is part of the {@link List} interface).
 	*/
-	@:overload @:synchronized public function removeAllElements() : Void;
+	@:overload @:public @:synchronized public function removeAllElements() : Void;
 	
 	/**
 	* Returns a clone of this vector. The copy will contain a
@@ -444,7 +444,7 @@ package java.util;
 	*
 	* @return  a clone of this vector
 	*/
-	@:overload @:synchronized public function clone() : Dynamic;
+	@:overload @:public @:synchronized public function clone() : Dynamic;
 	
 	/**
 	* Returns an array containing all of the elements in this Vector
@@ -452,7 +452,7 @@ package java.util;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function toArray() : java.NativeArray<Dynamic>;
+	@:require(java2) @:overload @:public @:synchronized override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this Vector in the
@@ -477,7 +477,7 @@ package java.util;
 	* @throws NullPointerException if the given array is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:require(java2) @:overload @:public @:synchronized override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns the element at the specified position in this Vector.
@@ -488,7 +488,7 @@ package java.util;
 	*            ({@code index < 0 || index >= size()})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function get(index : Int) : E;
+	@:require(java2) @:overload @:public @:synchronized override public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this Vector with the
@@ -501,7 +501,7 @@ package java.util;
 	*         ({@code index < 0 || index >= size()})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function set(index : Int, element : E) : E;
+	@:require(java2) @:overload @:public @:synchronized override public function set(index : Int, element : E) : E;
 	
 	/**
 	* Appends the specified element to the end of this Vector.
@@ -510,7 +510,7 @@ package java.util;
 	* @return {@code true} (as specified by {@link Collection#add})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function add(e : E) : Bool;
+	@:require(java2) @:overload @:public @:synchronized override public function add(e : E) : Bool;
 	
 	/**
 	* Removes the first occurrence of the specified element in this Vector
@@ -523,7 +523,7 @@ package java.util;
 	* @return true if the Vector contained the specified element
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function remove(o : Dynamic) : Bool;
+	@:require(java2) @:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Inserts the specified element at the specified position in this Vector.
@@ -536,7 +536,7 @@ package java.util;
 	*         ({@code index < 0 || index > size()})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function add(index : Int, element : E) : Void;
+	@:require(java2) @:overload @:public override public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this Vector.
@@ -549,7 +549,7 @@ package java.util;
 	* @return element that was removed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function remove(index : Int) : E;
+	@:require(java2) @:overload @:public @:synchronized override public function remove(index : Int) : E;
 	
 	/**
 	* Removes all of the elements from this Vector.  The Vector will
@@ -557,7 +557,7 @@ package java.util;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function clear() : Void;
+	@:require(java2) @:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns true if this Vector contains all of the elements in the
@@ -569,7 +569,7 @@ package java.util;
 	*         specified collection
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload @:synchronized override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:synchronized override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified Collection to the end of
@@ -584,7 +584,7 @@ package java.util;
 	* @throws NullPointerException if the specified collection is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:require(java2) @:overload @:public @:synchronized override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes from this Vector all of its elements that are contained in the
@@ -603,7 +603,7 @@ package java.util;
 	*         or if the specified collection is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:require(java2) @:overload @:public @:synchronized override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this Vector that are contained in the
@@ -624,7 +624,7 @@ package java.util;
 	*         or if the specified collection is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:require(java2) @:overload @:public @:synchronized override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified Collection into this
@@ -643,7 +643,7 @@ package java.util;
 	* @throws NullPointerException if the specified collection is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:require(java2) @:overload @:public @:synchronized override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Compares the specified Object with this Vector for equality.  Returns
@@ -657,18 +657,18 @@ package java.util;
 	* @param o the Object to be compared for equality with this Vector
 	* @return true if the specified Object is equal to this Vector
 	*/
-	@:overload @:synchronized public function equals(o : Dynamic) : Bool;
+	@:overload @:public @:synchronized override public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this Vector.
 	*/
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized override public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this Vector, containing
 	* the String representation of each element.
 	*/
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
 	/**
 	* Returns a view of the portion of this List between fromIndex,
@@ -704,7 +704,7 @@ package java.util;
 	* @throws IllegalArgumentException if the endpoint indices are out of order
 	*         {@code (fromIndex > toIndex)}
 	*/
-	@:overload @:synchronized public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public @:synchronized override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	/**
 	* Removes from this list all of the elements whose index is between
@@ -713,7 +713,7 @@ package java.util;
 	* This call shortens the list by {@code (toIndex - fromIndex)} elements.
 	* (If {@code toIndex==fromIndex}, this operation has no effect.)
 	*/
-	@:overload @:synchronized private function removeRange(fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:protected @:synchronized override private function removeRange(fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -727,7 +727,7 @@ package java.util;
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public @:synchronized override public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -737,7 +737,7 @@ package java.util;
 	*
 	* @see #listIterator(int)
 	*/
-	@:overload @:synchronized public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public @:synchronized override public function listIterator() : java.util.ListIterator<E>;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
@@ -746,7 +746,7 @@ package java.util;
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload @:synchronized override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public @:synchronized override public function iterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -755,11 +755,11 @@ package java.util;
 */
 @:native('java$util$Vector$Itr') @:internal extern class Vector_Itr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }
@@ -768,17 +768,17 @@ package java.util;
 */
 @:native('java$util$Vector$ListItr') @:internal extern class Vector_ListItr extends java.util.AbstractList.AbstractList_Itr implements java.util.ListIterator<Dynamic>
 {
-	@:overload public function hasPrevious() : Bool;
+	@:overload @:public public function hasPrevious() : Bool;
 	
-	@:overload public function nextIndex() : Int;
+	@:overload @:public public function nextIndex() : Int;
 	
-	@:overload public function previousIndex() : Int;
+	@:overload @:public public function previousIndex() : Int;
 	
-	@:overload public function previous() : Dynamic;
+	@:overload @:public public function previous() : Dynamic;
 	
-	@:overload public function set(e : Dynamic) : Void;
+	@:overload @:public public function set(e : Dynamic) : Void;
 	
-	@:overload public function add(e : Dynamic) : Void;
+	@:overload @:public public function add(e : Dynamic) : Void;
 	
 	
 }

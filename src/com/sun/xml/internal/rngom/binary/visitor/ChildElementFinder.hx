@@ -49,13 +49,13 @@ extern class ChildElementFinder extends com.sun.xml.internal.rngom.binary.visito
 	/**
 	* Returns a set of {@link Element}.
 	*/
-	@:overload public function getChildren() : java.util.Set<Dynamic>;
+	@:overload @:public public function getChildren() : java.util.Set<Dynamic>;
 	
-	@:overload public function visitElement(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public override public function visitElement(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitAttribute(ns : com.sun.xml.internal.rngom.nc.NameClass, value : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public override public function visitAttribute(ns : com.sun.xml.internal.rngom.nc.NameClass, value : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function visitList(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public override public function visitList(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
 	
 }
@@ -64,15 +64,15 @@ extern class ChildElementFinder extends com.sun.xml.internal.rngom.binary.visito
 */
 @:native('com$sun$xml$internal$rngom$binary$visitor$ChildElementFinder$Element') extern class ChildElementFinder_Element
 {
-	public var nc(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
+	@:public @:final public var nc(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
 	
-	public var content(default, null) : com.sun.xml.internal.rngom.binary.Pattern;
+	@:public @:final public var content(default, null) : com.sun.xml.internal.rngom.binary.Pattern;
 	
-	@:overload public function new(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload @:public public function new(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

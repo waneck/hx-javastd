@@ -27,15 +27,15 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class EmptyIterator implements java.util.Iterator<Dynamic>
 {
-	public static var instance(default, null) : com.sun.xml.internal.fastinfoset.stax.events.EmptyIterator;
+	@:public @:static @:final public static var instance(default, null) : com.sun.xml.internal.fastinfoset.stax.events.EmptyIterator;
 	
-	@:overload public static function getInstance() : com.sun.xml.internal.fastinfoset.stax.events.EmptyIterator;
+	@:overload @:public @:static public static function getInstance() : com.sun.xml.internal.fastinfoset.stax.events.EmptyIterator;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

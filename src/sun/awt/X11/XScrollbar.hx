@@ -25,31 +25,31 @@ package sun.awt.X11;
 */
 @:internal extern class XScrollbar
 {
-	public static var ALIGNMENT_VERTICAL(default, null) : Int;
+	@:public @:static @:final public static var ALIGNMENT_VERTICAL(default, null) : Int;
 	
-	@:overload public function new(alignment : Int, sb : sun.awt.X11.XScrollbarClient) : Void;
+	@:overload @:public public function new(alignment : Int, sb : sun.awt.X11.XScrollbarClient) : Void;
 	
-	@:overload public function needsRepaint() : Bool;
+	@:overload @:public public function needsRepaint() : Bool;
 	
-	@:overload @:abstract private function rebuildArrows() : Void;
+	@:overload @:abstract @:protected private function rebuildArrows() : Void;
 	
-	@:overload public function setSize(width : Int, height : Int) : Void;
+	@:overload @:public public function setSize(width : Int, height : Int) : Void;
 	
 	/**
 	* Creates oriented directed arrow
 	*/
-	@:overload private function createArrowShape(vertical : Bool, up : Bool) : java.awt.Polygon;
+	@:overload @:protected private function createArrowShape(vertical : Bool, up : Bool) : java.awt.Polygon;
 	
 	/**
 	* Gets the area of the scroll track
 	*/
-	@:overload @:abstract private function getThumbArea() : java.awt.Rectangle;
+	@:overload @:protected @:abstract private function getThumbArea() : java.awt.Rectangle;
 	
 	/**
 	* The set method for mode property.
 	* See 6243382 for more information
 	*/
-	@:overload public function setMode(mode : Int) : Void;
+	@:overload @:public public function setMode(mode : Int) : Void;
 	
 	/**
 	*
@@ -62,7 +62,7 @@ package sun.awt.X11;
 	* MouseEvent.MOUSE_EXITED
 	* MouseEvent.MOUSE_DRAGGED
 	*/
-	@:overload public function handleMouseEvent(id : Int, modifiers : Int, x : Int, y : Int) : Void;
+	@:overload @:public public function handleMouseEvent(id : Int, modifiers : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Method to calculate the scroll thumb's size and position.  This is
@@ -71,25 +71,25 @@ package sun.awt.X11;
 	* If we ever cache the thumb rect, we'll need to use a clone in
 	* isInThumb().
 	*/
-	@:overload private function calculateThumbRect() : java.awt.Rectangle;
+	@:overload @:protected private function calculateThumbRect() : java.awt.Rectangle;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:internal extern class XScrollRepeater implements java.lang.Runnable
 {
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Sets the scrollbar.
 	* @param sb the scrollbar that this thread will scroll
 	*/
-	@:overload @:synchronized public function setScrollbar(sb : sun.awt.X11.XScrollbar) : Void;
+	@:overload @:public @:synchronized public function setScrollbar(sb : sun.awt.X11.XScrollbar) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

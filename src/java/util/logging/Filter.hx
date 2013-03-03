@@ -41,7 +41,7 @@ package java.util.logging;
 	* @param record  a LogRecord
 	* @return true if the log record should be published.
 	*/
-	@:overload public function isLoggable(record : java.util.logging.LogRecord) : Bool;
+	@:overload @:public public function isLoggable(record : java.util.logging.LogRecord) : Bool;
 	
 	
 }

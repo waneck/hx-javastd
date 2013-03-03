@@ -35,38 +35,38 @@ package sun.security.jgss.krb5;
 	* The token id defined for the token emitted by the initSecContext call
 	* carrying the AP_REQ .
 	*/
-	public static var AP_REQ_ID(default, null) : Int;
+	@:public @:static @:final public static var AP_REQ_ID(default, null) : Int;
 	
 	/**
 	* The token id defined for the token emitted by the acceptSecContext call
 	* carrying the AP_REP .
 	*/
-	public static var AP_REP_ID(default, null) : Int;
+	@:public @:static @:final public static var AP_REP_ID(default, null) : Int;
 	
 	/**
 	* The token id defined for any token carrying a KRB-ERR message.
 	*/
-	public static var ERR_ID(default, null) : Int;
+	@:public @:static @:final public static var ERR_ID(default, null) : Int;
 	
 	/**
 	* The token id defined for the token emitted by the getMIC call.
 	*/
-	public static var MIC_ID(default, null) : Int;
+	@:public @:static @:final public static var MIC_ID(default, null) : Int;
 	
 	/**
 	* The token id defined for the token emitted by the wrap call.
 	*/
-	public static var WRAP_ID(default, null) : Int;
+	@:public @:static @:final public static var WRAP_ID(default, null) : Int;
 	
-	public static var MIC_ID_v2(default, null) : Int;
+	@:public @:static @:final public static var MIC_ID_v2(default, null) : Int;
 	
-	public static var WRAP_ID_v2(default, null) : Int;
+	@:public @:static @:final public static var WRAP_ID_v2(default, null) : Int;
 	
 	/**
 	* The object identifier corresponding to the Kerberos v5 GSS-API
 	* mechanism.
 	*/
-	public static var OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var OID : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Returns a strign representing the token type.
@@ -74,7 +74,7 @@ package sun.security.jgss.krb5;
 	* @param tokenId the token id for which a string name is desired
 	* @return the String name of this token type
 	*/
-	@:overload public static function getTokenName(tokenId : Int) : String;
+	@:overload @:public @:static public static function getTokenName(tokenId : Int) : String;
 	
 	
 }

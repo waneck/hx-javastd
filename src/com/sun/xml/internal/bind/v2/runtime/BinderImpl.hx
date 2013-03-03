@@ -25,33 +25,33 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class BinderImpl<XmlNode> extends javax.xml.bind.Binder<XmlNode>
 {
-	@:overload public function marshal(jaxbObject : Dynamic, xmlNode : XmlNode) : Void;
+	@:overload @:public override public function marshal(jaxbObject : Dynamic, xmlNode : XmlNode) : Void;
 	
-	@:overload public function updateJAXB(xmlNode : XmlNode) : Dynamic;
+	@:overload @:public override public function updateJAXB(xmlNode : XmlNode) : Dynamic;
 	
-	@:overload public function unmarshal(xmlNode : XmlNode) : Dynamic;
+	@:overload @:public override public function unmarshal(xmlNode : XmlNode) : Dynamic;
 	
-	@:overload public function unmarshal<T>(xmlNode : XmlNode, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:overload @:public override public function unmarshal<T>(xmlNode : XmlNode, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
-	@:overload public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:overload @:public override public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
-	@:overload public function getSchema() : javax.xml.validation.Schema;
+	@:overload @:public override public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload public function getXMLNode(jaxbObject : Dynamic) : XmlNode;
+	@:overload @:public override public function getXMLNode(jaxbObject : Dynamic) : XmlNode;
 	
-	@:overload public function getJAXBNode(xmlNode : XmlNode) : Dynamic;
+	@:overload @:public override public function getJAXBNode(xmlNode : XmlNode) : Dynamic;
 	
-	@:overload public function updateXML(jaxbObject : Dynamic) : XmlNode;
+	@:overload @:public override public function updateXML(jaxbObject : Dynamic) : XmlNode;
 	
-	@:overload public function updateXML(jaxbObject : Dynamic, xmlNode : XmlNode) : XmlNode;
+	@:overload @:public override public function updateXML(jaxbObject : Dynamic, xmlNode : XmlNode) : XmlNode;
 	
-	@:overload public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public override public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
-	@:overload public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
+	@:overload @:public override public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
 	
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public override public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setProperty(name : String, value : Dynamic) : Void;
 	
 	
 }

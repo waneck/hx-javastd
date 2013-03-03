@@ -28,9 +28,9 @@ extern class DOMUtil
 	/**
 	* Creates a new DOM document.
 	*/
-	@:overload public static function createDom() : org.w3c.dom.Document;
+	@:overload @:public @:static public static function createDom() : org.w3c.dom.Document;
 	
-	@:overload public static function createDOMNode(inputStream : java.io.InputStream) : org.w3c.dom.Node;
+	@:overload @:public @:static public static function createDOMNode(inputStream : java.io.InputStream) : org.w3c.dom.Node;
 	
 	/**
 	* Traverses a DOM node and writes out on a streaming writer.
@@ -38,21 +38,21 @@ extern class DOMUtil
 	* @param node
 	* @param writer
 	*/
-	@:overload public static function serializeNode(node : org.w3c.dom.Element, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:static public static function serializeNode(node : org.w3c.dom.Element, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload public static function writeTagWithAttributes(node : org.w3c.dom.Element, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public @:static public static function writeTagWithAttributes(node : org.w3c.dom.Element, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Gets the first child of the given name, or null.
 	*/
-	@:overload public static function getFirstChild(e : org.w3c.dom.Element, nsUri : String, local : String) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getFirstChild(e : org.w3c.dom.Element, nsUri : String, local : String) : org.w3c.dom.Element;
 	
 	/**
 	* Gets the first element child.
 	*/
-	@:overload public static function getFirstElementChild(parent : org.w3c.dom.Node) : org.w3c.dom.Element;
+	@:overload @:public @:static public static function getFirstElementChild(parent : org.w3c.dom.Node) : org.w3c.dom.Element;
 	
-	@:overload public static function getChildElements(parent : org.w3c.dom.Node) : java.util.List<org.w3c.dom.Element>;
+	@:overload @:public @:static public static function getChildElements(parent : org.w3c.dom.Node) : java.util.List<org.w3c.dom.Element>;
 	
 	
 }

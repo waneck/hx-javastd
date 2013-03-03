@@ -29,7 +29,7 @@ extern class GlobalCursorManager
 	* Should be called for any activity at the Java level which may affect
 	* the global cursor, except for Java MOUSE_MOVED events.
 	*/
-	@:overload public function updateCursorImmediately() : Void;
+	@:overload @:public public function updateCursorImmediately() : Void;
 	
 	/**
 	* Should be called in response to Java MOUSE_MOVED events. The update
@@ -37,31 +37,31 @@ extern class GlobalCursorManager
 	*
 	* @param   e the InputEvent which triggered the cursor update.
 	*/
-	@:overload public function updateCursorImmediately(e : java.awt.event.InputEvent) : Void;
+	@:overload @:public public function updateCursorImmediately(e : java.awt.event.InputEvent) : Void;
 	
 	/**
 	* Should be called in response to a native mouse enter or native mouse
 	* button released message. Should not be called during a mouse drag.
 	*/
-	@:overload public function updateCursorLater(heavy : java.awt.Component) : Void;
+	@:overload @:public public function updateCursorLater(heavy : java.awt.Component) : Void;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Set the global cursor to the specified cursor. The component over
 	* which the Cursor current resides is provided as a convenience. Not
 	* all platforms may require the Component.
 	*/
-	@:overload @:abstract private function setCursor(comp : java.awt.Component, cursor : java.awt.Cursor, useCache : Bool) : Void;
+	@:overload @:protected @:abstract private function setCursor(comp : java.awt.Component, cursor : java.awt.Cursor, useCache : Bool) : Void;
 	
 	/**
 	* Returns the global cursor position, in screen coordinates.
 	*/
-	@:overload @:abstract private function getCursorPos(p : java.awt.Point) : Void;
+	@:overload @:protected @:abstract private function getCursorPos(p : java.awt.Point) : Void;
 	
-	@:overload @:abstract private function findComponentAt(con : java.awt.Container, x : Int, y : Int) : java.awt.Component;
+	@:overload @:protected @:abstract private function findComponentAt(con : java.awt.Container, x : Int, y : Int) : java.awt.Component;
 	
-	@:overload @:abstract private function getLocationOnScreen(com : java.awt.Component) : java.awt.Point;
+	@:overload @:protected @:abstract private function getLocationOnScreen(com : java.awt.Component) : java.awt.Point;
 	
 	/**
 	* Returns the most specific, visible, heavyweight Component
@@ -73,9 +73,9 @@ extern class GlobalCursorManager
 	* Components has not changed. If false, the implementation should not
 	* make these assumptions.
 	*/
-	@:overload @:abstract private function findHeavyweightUnderCursor(useCache : Bool) : java.awt.Component;
+	@:overload @:protected @:abstract private function findHeavyweightUnderCursor(useCache : Bool) : java.awt.Component;
 	
-	@:overload private function updateCursorOutOfJava() : Void;
+	@:overload @:protected private function updateCursorOutOfJava() : Void;
 	
 	
 }
@@ -87,9 +87,9 @@ extern class GlobalCursorManager
 */
 @:native('sun$awt$GlobalCursorManager$NativeUpdater') @:internal extern class GlobalCursorManager_NativeUpdater implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload public function postIfNotPending(heavy : java.awt.Component, _in : java.awt.event.InvocationEvent) : Void;
+	@:overload @:public public function postIfNotPending(heavy : java.awt.Component, _in : java.awt.event.InvocationEvent) : Void;
 	
 	
 }

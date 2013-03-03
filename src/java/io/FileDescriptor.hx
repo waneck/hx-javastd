@@ -30,7 +30,7 @@ extern class FileDescriptor
 	* object.
 	*/
 	/**/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* A handle to the standard input stream. Usually, this file
@@ -39,7 +39,7 @@ extern class FileDescriptor
 	*
 	* @see     java.lang.System#in
 	*/
-	@:native('in') public static var _in(default, null) : java.io.FileDescriptor;
+	@:native('in') @:public @:static @:final public static var _in(default, null) : java.io.FileDescriptor;
 	
 	/**
 	* A handle to the standard output stream. Usually, this file
@@ -47,7 +47,7 @@ extern class FileDescriptor
 	* known as <code>System.out</code>.
 	* @see     java.lang.System#out
 	*/
-	public static var out(default, null) : java.io.FileDescriptor;
+	@:public @:static @:final public static var out(default, null) : java.io.FileDescriptor;
 	
 	/**
 	* A handle to the standard error stream. Usually, this file
@@ -56,7 +56,7 @@ extern class FileDescriptor
 	*
 	* @see     java.lang.System#err
 	*/
-	public static var err(default, null) : java.io.FileDescriptor;
+	@:public @:static @:final public static var err(default, null) : java.io.FileDescriptor;
 	
 	/**
 	* Tests if this file descriptor object is valid.
@@ -65,7 +65,7 @@ extern class FileDescriptor
 	*          valid, open file, socket, or other active I/O connection;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function valid() : Bool;
+	@:overload @:public public function valid() : Bool;
 	
 	/**
 	* Force all system buffers to synchronize with the underlying
@@ -95,7 +95,7 @@ extern class FileDescriptor
 	*        buffers have been synchronized with physical media.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:native public function sync() : Void;
+	@:require(java1) @:overload @:public @:native public function sync() : Void;
 	
 	
 }

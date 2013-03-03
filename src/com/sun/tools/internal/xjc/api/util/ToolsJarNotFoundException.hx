@@ -28,9 +28,9 @@ extern class ToolsJarNotFoundException extends java.lang.Exception
 	/**
 	* Location where we expected to find tools.jar
 	*/
-	public var toolsJar(default, null) : java.io.File;
+	@:public @:final public var toolsJar(default, null) : java.io.File;
 	
-	@:overload public function new(toolsJar : java.io.File) : Void;
+	@:overload @:public public function new(toolsJar : java.io.File) : Void;
 	
 	
 }

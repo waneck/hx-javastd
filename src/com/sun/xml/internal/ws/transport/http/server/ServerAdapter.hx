@@ -25,23 +25,23 @@ package com.sun.xml.internal.ws.transport.http.server;
 */
 extern class ServerAdapter extends com.sun.xml.internal.ws.transport.http.HttpAdapter implements com.sun.xml.internal.ws.api.server.BoundEndpoint
 {
-	@:overload private function new(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.server.ServerAdapterList) : Void;
+	@:overload @:protected private function new(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.server.ServerAdapterList) : Void;
 	
 	/**
 	* Gets the name of the endpoint as given in the <tt>sun-jaxws.xml</tt>
 	* deployment descriptor.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getAddress() : java.net.URI;
+	@:overload @:public public function getAddress() : java.net.URI;
 	
-	@:overload public function getAddress(baseAddress : String) : java.net.URI;
+	@:overload @:public public function getAddress(baseAddress : String) : java.net.URI;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getUrlPattern() : String;
+	@:overload @:public public function getUrlPattern() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

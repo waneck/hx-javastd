@@ -28,9 +28,9 @@ extern class SchemaGenerator
 	/**
 	* Runs the schema generator.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
-	@:overload public static function run(args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function run(args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Runs the schema generator.
@@ -44,13 +44,13 @@ extern class SchemaGenerator
 	*      exit code. 0 if success.
 	*
 	*/
-	@:overload public static function run(args : java.NativeArray<String>, classLoader : java.lang.ClassLoader) : Int;
+	@:overload @:public @:static public static function run(args : java.NativeArray<String>, classLoader : java.lang.ClassLoader) : Int;
 	
 	
 }
 @:native('com$sun$tools$internal$jxc$SchemaGenerator$Runner') extern class SchemaGenerator_Runner
 {
-	@:overload public static function main(args : java.NativeArray<String>, episode : java.io.File) : Int;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>, episode : java.io.File) : Int;
 	
 	
 }

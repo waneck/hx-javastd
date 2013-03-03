@@ -26,7 +26,7 @@ package javax.xml.bind.helpers;
 extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 {
 	/** whether or not the unmarshaller will validate */
-	private var validating : Bool;
+	@:protected private var validating : Bool;
 	
 	/**
 	* Obtains a configured XMLReader.
@@ -37,9 +37,9 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* {@link Unmarshaller} is not re-entrant, so we will
 	* only use one instance of XMLReader.
 	*/
-	@:overload private function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload @:protected private function getXMLReader() : org.xml.sax.XMLReader;
 	
-	@:overload public function unmarshal(source : javax.xml.transform.Source) : Dynamic;
+	@:overload @:public public function unmarshal(source : javax.xml.transform.Source) : Dynamic;
 	
 	/**
 	* Unmarshals an object by using the specified XMLReader and the InputSource.
@@ -47,17 +47,17 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* The callee should call the setErrorHandler method of the XMLReader
 	* so that errors are passed to the client-specified ValidationEventHandler.
 	*/
-	@:overload @:abstract private function unmarshal(reader : org.xml.sax.XMLReader, source : org.xml.sax.InputSource) : Dynamic;
+	@:overload @:protected @:abstract private function unmarshal(reader : org.xml.sax.XMLReader, source : org.xml.sax.InputSource) : Dynamic;
 	
-	@:overload @:final public function unmarshal(source : org.xml.sax.InputSource) : Dynamic;
+	@:overload @:public @:final public function unmarshal(source : org.xml.sax.InputSource) : Dynamic;
 	
-	@:overload @:final public function unmarshal(url : java.net.URL) : Dynamic;
+	@:overload @:public @:final public function unmarshal(url : java.net.URL) : Dynamic;
 	
-	@:overload @:final public function unmarshal(f : java.io.File) : Dynamic;
+	@:overload @:public @:final public function unmarshal(f : java.io.File) : Dynamic;
 	
-	@:overload @:final public function unmarshal(is : java.io.InputStream) : Dynamic;
+	@:overload @:public @:final public function unmarshal(is : java.io.InputStream) : Dynamic;
 	
-	@:overload @:final public function unmarshal(reader : java.io.Reader) : Dynamic;
+	@:overload @:public @:final public function unmarshal(reader : java.io.Reader) : Dynamic;
 	
 	/**
 	* Indicates whether or not the Unmarshaller is configured to validate
@@ -71,7 +71,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* @throws JAXBException if an error occurs while retrieving the validating
 	*        flag
 	*/
-	@:overload public function isValidating() : Bool;
+	@:overload @:public public function isValidating() : Bool;
 	
 	/**
 	* Allow an application to register a validation event handler.
@@ -87,7 +87,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* @throws JAXBException if an error was encountered while setting the
 	*        event handler
 	*/
-	@:overload public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public public function setEventHandler(handler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Specifies whether or not the Unmarshaller should validate during
@@ -102,7 +102,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* @throws JAXBException if an error occurred while enabling or disabling
 	* validation at unmarshal time
 	*/
-	@:overload public function setValidating(validating : Bool) : Void;
+	@:overload @:public public function setValidating(validating : Bool) : Void;
 	
 	/**
 	* Return the current event handler or the default event handler if one
@@ -113,7 +113,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* @throws JAXBException if an error was encountered while getting the
 	*        current event handler
 	*/
-	@:overload public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
+	@:overload @:public public function getEventHandler() : javax.xml.bind.ValidationEventHandler;
 	
 	/**
 	* Creates an UnmarshalException from a SAXException.
@@ -134,7 +134,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	*
 	* @return the resulting UnmarshalException
 	*/
-	@:overload private function createUnmarshalException(e : org.xml.sax.SAXException) : javax.xml.bind.UnmarshalException;
+	@:overload @:protected private function createUnmarshalException(e : org.xml.sax.SAXException) : javax.xml.bind.UnmarshalException;
 	
 	/**
 	* Default implementation of the setProperty method always
@@ -142,7 +142,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* properties. If a provider needs to handle additional
 	* properties, it should override this method in a derived class.
 	*/
-	@:overload public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Default implementation of the getProperty method always
@@ -150,37 +150,37 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* properties. If a provider needs to handle additional
 	* properties, it should override this method in a derived class.
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
-	@:overload public function unmarshal(reader : javax.xml.stream.XMLEventReader) : Dynamic;
+	@:overload @:public public function unmarshal(reader : javax.xml.stream.XMLEventReader) : Dynamic;
 	
-	@:overload public function unmarshal(reader : javax.xml.stream.XMLStreamReader) : Dynamic;
+	@:overload @:public public function unmarshal(reader : javax.xml.stream.XMLStreamReader) : Dynamic;
 	
-	@:overload public function unmarshal<T>(node : org.w3c.dom.Node, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:overload @:public public function unmarshal<T>(node : org.w3c.dom.Node, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
-	@:overload public function unmarshal<T>(source : javax.xml.transform.Source, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:overload @:public public function unmarshal<T>(source : javax.xml.transform.Source, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
-	@:overload public function unmarshal<T>(reader : javax.xml.stream.XMLStreamReader, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:overload @:public public function unmarshal<T>(reader : javax.xml.stream.XMLStreamReader, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
-	@:overload public function unmarshal<T>(reader : javax.xml.stream.XMLEventReader, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
+	@:overload @:public public function unmarshal<T>(reader : javax.xml.stream.XMLEventReader, expectedType : Class<T>) : javax.xml.bind.JAXBElement<T>;
 	
-	@:overload public function setSchema(schema : javax.xml.validation.Schema) : Void;
+	@:overload @:public public function setSchema(schema : javax.xml.validation.Schema) : Void;
 	
-	@:overload public function getSchema() : javax.xml.validation.Schema;
+	@:overload @:public public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload public function setAdapter(adapter : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setAdapter(adapter : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : Void;
 	
-	@:overload public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
+	@:overload @:public public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
 	
-	@:overload public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
+	@:overload @:public public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
 	
-	@:overload public function setAttachmentUnmarshaller(au : javax.xml.bind.attachment.AttachmentUnmarshaller) : Void;
+	@:overload @:public public function setAttachmentUnmarshaller(au : javax.xml.bind.attachment.AttachmentUnmarshaller) : Void;
 	
-	@:overload public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
+	@:overload @:public public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
 	
-	@:overload public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
+	@:overload @:public public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
 	
-	@:overload public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
+	@:overload @:public public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
 	
 	/**
 	* Unmarshal global XML data from the specified DOM tree and return the resulting
@@ -205,7 +205,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	*      If the Node parameter is null
 	* @see #unmarshal(org.w3c.dom.Node, Class)
 	*/
-	@:overload @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
+	@:overload @:public @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
 	
 	/**
 	* Get an unmarshaller handler object that can be used as a component in
@@ -221,7 +221,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* @return the unmarshaller handler object
 	* @see UnmarshallerHandler
 	*/
-	@:overload @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
+	@:overload @:public @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
 	
 	
 }

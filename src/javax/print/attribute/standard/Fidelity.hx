@@ -28,13 +28,13 @@ extern class Fidelity extends javax.print.attribute.EnumSyntax implements javax.
 	/**
 	* The job must be printed exactly as specified. or else rejected.
 	*/
-	public static var FIDELITY_TRUE(default, null) : javax.print.attribute.standard.Fidelity;
+	@:public @:static @:final public static var FIDELITY_TRUE(default, null) : javax.print.attribute.standard.Fidelity;
 	
 	/**
 	* The printer should make reasonable attempts to print the job,
 	* even if it cannot print it exactly as specified.
 	*/
-	public static var FIDELITY_FALSE(default, null) : javax.print.attribute.standard.Fidelity;
+	@:public @:static @:final public static var FIDELITY_FALSE(default, null) : javax.print.attribute.standard.Fidelity;
 	
 	/**
 	* Construct a new fidelity enumeration value with the
@@ -42,17 +42,17 @@ extern class Fidelity extends javax.print.attribute.EnumSyntax implements javax.
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class Fidelity.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Fidelity.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -63,7 +63,7 @@ extern class Fidelity extends javax.print.attribute.EnumSyntax implements javax.
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -74,7 +74,7 @@ extern class Fidelity extends javax.print.attribute.EnumSyntax implements javax.
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

@@ -48,7 +48,7 @@ extern class MessageFactory
 	*            <code>MessageFactory</code>.
 	* @see SAAJMetaFactory
 	*/
-	@:overload public static function newInstance() : javax.xml.soap.MessageFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.soap.MessageFactory;
 	
 	/**
 	* Creates a new <code>MessageFactory</code> object that is an instance
@@ -74,7 +74,7 @@ extern class MessageFactory
 	* @see SAAJMetaFactory
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public static function newInstance(protocol : String) : javax.xml.soap.MessageFactory;
+	@:require(java3) @:overload @:public @:static public static function newInstance(protocol : String) : javax.xml.soap.MessageFactory;
 	
 	/**
 	* Creates a new <code>SOAPMessage</code> object with the default
@@ -95,7 +95,7 @@ extern class MessageFactory
 	* @exception UnsupportedOperationException if the protocol of this
 	*      <code>MessageFactory</code> instance is <code>DYNAMIC_SOAP_PROTOCOL</code>
 	*/
-	@:overload @:abstract public function createMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public @:abstract public function createMessage() : javax.xml.soap.SOAPMessage;
 	
 	/**
 	* Internalizes the contents of the given <code>InputStream</code> object into a
@@ -123,7 +123,7 @@ extern class MessageFactory
 	*      <code>SOAP_1_2_PROTOCOL</code> must not throw
 	*      <code>IllegalArgumentException</code> for this reason.
 	*/
-	@:overload @:abstract public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
+	@:overload @:public @:abstract public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
 	
 	
 }

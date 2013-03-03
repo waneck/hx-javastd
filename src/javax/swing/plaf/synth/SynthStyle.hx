@@ -28,7 +28,7 @@ extern class SynthStyle
 	/**
 	* Constructs a SynthStyle.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the <code>SynthGraphicUtils</code> for the specified context.
@@ -36,7 +36,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying requester
 	* @return SynthGraphicsUtils
 	*/
-	@:overload public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
+	@:overload @:public public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
 	
 	/**
 	* Returns the color for the specified state. This gives precedence to
@@ -50,7 +50,7 @@ extern class SynthStyle
 	* @param type Type of color being requested.
 	* @return Color
 	*/
-	@:overload public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:public public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
 	/**
 	* Returns the color for the specified state. This should NOT call any
@@ -60,7 +60,7 @@ extern class SynthStyle
 	* @param type Type of color being requested.
 	* @return Color to render with
 	*/
-	@:overload @:abstract private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:protected @:abstract private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
 	/**
 	* Returns the Font for the specified state. This redirects to the
@@ -71,7 +71,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying requester
 	* @return Font to render with
 	*/
-	@:overload public function getFont(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload @:public public function getFont(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
 	/**
 	* Returns the font for the specified state. This should NOT call any
@@ -80,7 +80,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying requester
 	* @return Font to render with
 	*/
-	@:overload @:abstract private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload @:protected @:abstract private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
 	/**
 	* Returns the Insets that are used to calculate sizing information.
@@ -89,7 +89,7 @@ extern class SynthStyle
 	* @param insets Insets to place return value in.
 	* @return Sizing Insets.
 	*/
-	@:overload public function getInsets(context : javax.swing.plaf.synth.SynthContext, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public public function getInsets(context : javax.swing.plaf.synth.SynthContext, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the <code>SynthPainter</code> that will be used for painting.
@@ -98,7 +98,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying requester
 	* @return SynthPainter to use
 	*/
-	@:overload public function getPainter(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
+	@:overload @:public public function getPainter(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
 	
 	/**
 	* Returns true if the region is opaque.
@@ -106,7 +106,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying requester
 	* @return true if region is opaque.
 	*/
-	@:overload public function isOpaque(context : javax.swing.plaf.synth.SynthContext) : Bool;
+	@:overload @:public public function isOpaque(context : javax.swing.plaf.synth.SynthContext) : Bool;
 	
 	/**
 	* Getter for a region specific style property.
@@ -115,7 +115,7 @@ extern class SynthStyle
 	* @param key Property being requested.
 	* @return Value of the named property
 	*/
-	@:overload public function get(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
+	@:overload @:public public function get(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
 	
 	/**
 	* Installs the necessary state from this Style on the
@@ -124,7 +124,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying component to install properties
 	*        to.
 	*/
-	@:overload public function installDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
+	@:overload @:public public function installDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
 	
 	/**
 	* Uninstalls any state that this style installed on
@@ -136,7 +136,7 @@ extern class SynthStyle
 	* @param context SynthContext identifying component to install properties
 	*        to.
 	*/
-	@:overload public function uninstallDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
+	@:overload @:public public function uninstallDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
 	
 	/**
 	* Convenience method to get a specific style property whose value is
@@ -150,7 +150,7 @@ extern class SynthStyle
 	*        specified, or is not a Number
 	* @return Value of the named property
 	*/
-	@:overload public function getInt(context : javax.swing.plaf.synth.SynthContext, key : Dynamic, defaultValue : Int) : Int;
+	@:overload @:public public function getInt(context : javax.swing.plaf.synth.SynthContext, key : Dynamic, defaultValue : Int) : Int;
 	
 	/**
 	* Convenience method to get a specific style property whose value is
@@ -162,7 +162,7 @@ extern class SynthStyle
 	*        specified, or is not a Boolean
 	* @return Value of the named property
 	*/
-	@:overload public function getBoolean(context : javax.swing.plaf.synth.SynthContext, key : Dynamic, defaultValue : Bool) : Bool;
+	@:overload @:public public function getBoolean(context : javax.swing.plaf.synth.SynthContext, key : Dynamic, defaultValue : Bool) : Bool;
 	
 	/**
 	* Convenience method to get a specific style property whose value is
@@ -172,7 +172,7 @@ extern class SynthStyle
 	* @param key Property being requested.
 	* @return Value of the named property, or null if not specified
 	*/
-	@:overload public function getIcon(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : javax.swing.Icon;
+	@:overload @:public public function getIcon(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : javax.swing.Icon;
 	
 	/**
 	* Convenience method to get a specific style property whose value is
@@ -184,7 +184,7 @@ extern class SynthStyle
 	*        specified, or is not a String
 	* @return Value of the named property
 	*/
-	@:overload public function getString(context : javax.swing.plaf.synth.SynthContext, key : Dynamic, defaultValue : String) : String;
+	@:overload @:public public function getString(context : javax.swing.plaf.synth.SynthContext, key : Dynamic, defaultValue : String) : String;
 	
 	
 }

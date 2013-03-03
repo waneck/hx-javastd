@@ -26,26 +26,26 @@ package sun.rmi.server;
 extern class MarshalInputStream extends java.io.ObjectInputStream
 {
 	/** table to hold sun classes to which access is explicitly permitted */
-	private static var permittedSunClasses : java.util.Map<String, Class<Dynamic>>;
+	@:protected @:static private static var permittedSunClasses : java.util.Map<String, Class<Dynamic>>;
 	
 	/**
 	* Create a new MarshalInputStream object.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Returns a callback previously registered via the setDoneCallback
 	* method with given key, or null if no callback has yet been registered
 	* with that key.
 	*/
-	@:overload public function getDoneCallback(key : Dynamic) : java.lang.Runnable;
+	@:overload @:public public function getDoneCallback(key : Dynamic) : java.lang.Runnable;
 	
 	/**
 	* Registers a callback to make when this stream's done() method is
 	* invoked, along with a key for retrieving the same callback instance
 	* subsequently from the getDoneCallback method.
 	*/
-	@:overload public function setDoneCallback(key : Dynamic, _callback : java.lang.Runnable) : Void;
+	@:overload @:public public function setDoneCallback(key : Dynamic, _callback : java.lang.Runnable) : Void;
 	
 	/**
 	* Indicates that the user of this MarshalInputStream is done reading
@@ -56,32 +56,32 @@ extern class MarshalInputStream extends java.io.ObjectInputStream
 	* This method is implicitly invoked by close() before it delegates to
 	* the superclass's close method.
 	*/
-	@:overload public function done() : Void;
+	@:overload @:public public function done() : Void;
 	
 	/**
 	* Closes this stream, implicitly invoking done() first.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* resolveClass is extended to acquire (if present) the location
 	* from which to load the specified class.
 	* It will find, load, and return the class.
 	*/
-	@:overload override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	/**
 	* resolveProxyClass is extended to acquire (if present) the location
 	* to determine the class loader to define the proxy class in.
 	*/
-	@:overload override private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
+	@:overload @:protected override private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
 	
 	/**
 	* Return the location for the class in the stream.  This method can
 	* be overridden by subclasses that store this annotation somewhere
 	* else than as the next object in the stream, as is done by this class.
 	*/
-	@:overload private function readLocation() : Dynamic;
+	@:overload @:protected private function readLocation() : Dynamic;
 	
 	
 }

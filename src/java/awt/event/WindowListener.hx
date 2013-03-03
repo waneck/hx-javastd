@@ -28,19 +28,19 @@ extern interface WindowListener extends java.util.EventListener
 	/**
 	* Invoked the first time a window is made visible.
 	*/
-	@:overload public function windowOpened(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowOpened(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when the user attempts to close the window
 	* from the window's system menu.
 	*/
-	@:overload public function windowClosing(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosing(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window has been closed as the result
 	* of calling dispose on the window.
 	*/
-	@:overload public function windowClosed(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowClosed(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is changed from a normal to a
@@ -49,13 +49,13 @@ extern interface WindowListener extends java.util.EventListener
 	* iconImage property.
 	* @see java.awt.Frame#setIconImage
 	*/
-	@:overload public function windowIconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowIconified(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a window is changed from a minimized
 	* to a normal state.
 	*/
-	@:overload public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeiconified(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when the Window is set to be the active Window. Only a Frame or
@@ -65,7 +65,7 @@ extern interface WindowListener extends java.util.EventListener
 	* focused Window, or the first Frame or Dialog that is an owner of the
 	* focused Window.
 	*/
-	@:overload public function windowActivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowActivated(e : java.awt.event.WindowEvent) : Void;
 	
 	/**
 	* Invoked when a Window is no longer the active Window. Only a Frame or a
@@ -75,7 +75,7 @@ extern interface WindowListener extends java.util.EventListener
 	* Window, or the first Frame or Dialog that is an owner of the focused
 	* Window.
 	*/
-	@:overload public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
+	@:overload @:public public function windowDeactivated(e : java.awt.event.WindowEvent) : Void;
 	
 	
 }

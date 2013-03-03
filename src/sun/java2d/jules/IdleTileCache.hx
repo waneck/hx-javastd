@@ -31,31 +31,31 @@ extern class IdleTileCache
 	*
 	* @param: maxCache - Specify the maximum amount of tiles needed
 	*/
-	@:overload public function getIdleTileWorker(maxCache : Int) : sun.java2d.jules.JulesTile;
+	@:overload @:public public function getIdleTileWorker(maxCache : Int) : sun.java2d.jules.JulesTile;
 	
 	/**
 	* Release tile and allow it to be re-used by another thread. Allowed
 	*  Allowed caller: MaskBlit/Consumer-Thread
 	*/
-	@:overload public function releaseTile(tile : sun.java2d.jules.JulesTile) : Void;
+	@:overload @:public public function releaseTile(tile : sun.java2d.jules.JulesTile) : Void;
 	
 	/**
 	* Releases thread-local tiles cached for use by the rasterizing thread.
 	* Allowed caller: Rasterizer/Producer-Thread
 	*/
-	@:overload public function disposeRasterizerResources() : Void;
+	@:overload @:public public function disposeRasterizerResources() : Void;
 	
 	/**
 	* Releases thread-local tiles cached for performance reasons. Allowed
 	* Allowed caller: MaskBlit/Consumer-Thread
 	*/
-	@:overload public function disposeConsumerResources() : Void;
+	@:overload @:public public function disposeConsumerResources() : Void;
 	
 	/**
 	* Release a list of tiles and allow it to be re-used by another thread.
 	* Thread safe.
 	*/
-	@:overload public function releaseTiles(tileList : java.util.List<sun.java2d.jules.JulesTile>) : Void;
+	@:overload @:public public function releaseTiles(tileList : java.util.List<sun.java2d.jules.JulesTile>) : Void;
 	
 	
 }

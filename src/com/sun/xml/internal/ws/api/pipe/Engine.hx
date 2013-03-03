@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.api.pipe;
 */
 extern class Engine
 {
-	public var id(default, null) : String;
+	@:public @:final public var id(default, null) : String;
 	
-	@:overload public function new(id : String, threadPool : java.util.concurrent.Executor) : Void;
+	@:overload @:public public function new(id : String, threadPool : java.util.concurrent.Executor) : Void;
 	
-	@:overload public function new(id : String) : Void;
+	@:overload @:public public function new(id : String) : Void;
 	
-	@:overload public function setExecutor(threadPool : java.util.concurrent.Executor) : Void;
+	@:overload @:public public function setExecutor(threadPool : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* Creates a new fiber in a suspended state.
@@ -42,13 +42,13 @@ extern class Engine
 	*
 	* @return new Fiber
 	*/
-	@:overload public function createFiber() : com.sun.xml.internal.ws.api.pipe.Fiber;
+	@:overload @:public public function createFiber() : com.sun.xml.internal.ws.api.pipe.Fiber;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$api$pipe$Engine$DaemonThreadFactory') @:internal extern class Engine_DaemonThreadFactory implements java.util.concurrent.ThreadFactory
 {
-	@:overload public function newThread(r : java.lang.Runnable) : java.lang.Thread;
+	@:overload @:public public function newThread(r : java.lang.Runnable) : java.lang.Thread;
 	
 	
 }

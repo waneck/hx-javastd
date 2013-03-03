@@ -27,36 +27,36 @@ package com.sun.org.apache.xerces.internal.xni;
 extern interface XMLResourceIdentifier
 {
 	/** Sets the public identifier. */
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/** Returns the public identifier. */
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/** Sets the expanded system identifier. */
-	@:overload public function setExpandedSystemId(systemId : String) : Void;
+	@:overload @:public public function setExpandedSystemId(systemId : String) : Void;
 	
 	/** Returns the expanded system identifier. */
-	@:overload public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
 	/** Sets the literal system identifier. */
-	@:overload public function setLiteralSystemId(systemId : String) : Void;
+	@:overload @:public public function setLiteralSystemId(systemId : String) : Void;
 	
 	/** Returns the literal system identifier. */
-	@:overload public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
 	/** Setsthe base URI against which the literal SystemId is to be
 	resolved.*/
-	@:overload public function setBaseSystemId(systemId : String) : Void;
+	@:overload @:public public function setBaseSystemId(systemId : String) : Void;
 	
 	/** <p> Returns the base URI against which the literal SystemId is to be
 	resolved. </p> */
-	@:overload public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
 	/** Sets the namespace of the resource. */
-	@:overload public function setNamespace(namespace : String) : Void;
+	@:overload @:public public function setNamespace(namespace : String) : Void;
 	
 	/** Returns the namespace of the resource. */
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	
 }

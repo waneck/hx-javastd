@@ -31,11 +31,11 @@ package javax.swing.plaf.basic;
 */
 extern class BasicRadioButtonMenuItemUI extends javax.swing.plaf.basic.BasicMenuItemUI
 {
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload @:protected override private function getPropertyPrefix() : String;
 	
-	@:overload public function processMouseEvent(item : javax.swing.JMenuItem, e : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processMouseEvent(item : javax.swing.JMenuItem, e : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	
 }

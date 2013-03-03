@@ -68,7 +68,7 @@ package javax.naming;
 	* @see #getName
 	* @see #setName
 	*/
-	@:overload public function new(name : String, className : String) : Void;
+	@:overload @:public public function new(name : String, className : String) : Void;
 	
 	/**
 	* Constructs an instance of a NameClassPair given its
@@ -88,7 +88,7 @@ package javax.naming;
 	* @see #isRelative
 	* @see #setRelative
 	*/
-	@:overload public function new(name : String, className : String, isRelative : Bool) : Void;
+	@:overload @:public public function new(name : String, className : String, isRelative : Bool) : Void;
 	
 	/**
 	* Retrieves the class name of the object bound to the name of this binding.
@@ -102,7 +102,7 @@ package javax.naming;
 	* @see Binding#getClassName
 	* @see #setClassName
 	*/
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	/**
 	* Retrieves the name of this binding.
@@ -115,7 +115,7 @@ package javax.naming;
 	* @see #isRelative
 	* @see #setName
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Sets the name of this binding.
@@ -124,7 +124,7 @@ package javax.naming;
 	* @see #getName
 	* @see #setRelative
 	*/
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	* Sets the class name of this binding.
@@ -136,7 +136,7 @@ package javax.naming;
 	* @see #getClassName
 	* @see Binding#getClassName
 	*/
-	@:overload public function setClassName(name : String) : Void;
+	@:overload @:public public function setClassName(name : String) : Void;
 	
 	/**
 	* Determines whether the name of this binding is
@@ -149,7 +149,7 @@ package javax.naming;
 	* @see #setRelative
 	* @see #getName
 	*/
-	@:overload public function isRelative() : Bool;
+	@:overload @:public public function isRelative() : Bool;
 	
 	/**
 	* Sets whether the name of this binding is relative to the target
@@ -161,7 +161,7 @@ package javax.naming;
 	* @see #isRelative
 	* @see #setName
 	*/
-	@:overload public function setRelative(r : Bool) : Void;
+	@:overload @:public public function setRelative(r : Bool) : Void;
 	
 	/**
 	* Retrieves the full name of this binding.
@@ -185,7 +185,7 @@ package javax.naming;
 	* @see #setNameInNamespace
 	* @see #getName
 	*/
-	@:require(java5) @:overload public function getNameInNamespace() : String;
+	@:require(java5) @:overload @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Sets the full name of this binding.
@@ -201,7 +201,7 @@ package javax.naming;
 	* @see #getNameInNamespace
 	* @see #setName
 	*/
-	@:require(java5) @:overload public function setNameInNamespace(fullName : String) : Void;
+	@:require(java5) @:overload @:public public function setNameInNamespace(fullName : String) : Void;
 	
 	/**
 	* Generates the string representation of this name/class pair.
@@ -212,7 +212,7 @@ package javax.naming;
 	*
 	* @return The string representation of this name/class pair.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

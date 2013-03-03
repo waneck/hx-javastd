@@ -28,7 +28,7 @@ package sun.net.www.protocol.jar;
 */
 extern interface URLJarFileCallBack
 {
-	@:overload public function retrieve(url : java.net.URL) : java.util.jar.JarFile;
+	@:overload @:public public function retrieve(url : java.net.URL) : java.util.jar.JarFile;
 	
 	
 }

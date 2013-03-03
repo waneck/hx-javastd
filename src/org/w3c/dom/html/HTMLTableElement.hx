@@ -43,143 +43,143 @@ extern interface HTMLTableElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  Returns the table's <code>CAPTION</code> , or void if none exists.
 	*/
-	@:overload public function getCaption() : org.w3c.dom.html.HTMLTableCaptionElement;
+	@:overload @:public public function getCaption() : org.w3c.dom.html.HTMLTableCaptionElement;
 	
-	@:overload public function setCaption(caption : org.w3c.dom.html.HTMLTableCaptionElement) : Void;
+	@:overload @:public public function setCaption(caption : org.w3c.dom.html.HTMLTableCaptionElement) : Void;
 	
 	/**
 	*  Returns the table's <code>THEAD</code> , or <code>null</code> if none
 	* exists.
 	*/
-	@:overload public function getTHead() : org.w3c.dom.html.HTMLTableSectionElement;
+	@:overload @:public public function getTHead() : org.w3c.dom.html.HTMLTableSectionElement;
 	
-	@:overload public function setTHead(tHead : org.w3c.dom.html.HTMLTableSectionElement) : Void;
+	@:overload @:public public function setTHead(tHead : org.w3c.dom.html.HTMLTableSectionElement) : Void;
 	
 	/**
 	*  Returns the table's <code>TFOOT</code> , or <code>null</code> if none
 	* exists.
 	*/
-	@:overload public function getTFoot() : org.w3c.dom.html.HTMLTableSectionElement;
+	@:overload @:public public function getTFoot() : org.w3c.dom.html.HTMLTableSectionElement;
 	
-	@:overload public function setTFoot(tFoot : org.w3c.dom.html.HTMLTableSectionElement) : Void;
+	@:overload @:public public function setTFoot(tFoot : org.w3c.dom.html.HTMLTableSectionElement) : Void;
 	
 	/**
 	*  Returns a collection of all the rows in the table, including all in
 	* <code>THEAD</code> , <code>TFOOT</code> , all <code>TBODY</code>
 	* elements.
 	*/
-	@:overload public function getRows() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getRows() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  Returns a collection of the defined table bodies.
 	*/
-	@:overload public function getTBodies() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getTBodies() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  Specifies the table's position with respect to the rest of the
 	* document. See the  align attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Cell background color. See the  bgcolor attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getBgColor() : String;
+	@:overload @:public public function getBgColor() : String;
 	
-	@:overload public function setBgColor(bgColor : String) : Void;
+	@:overload @:public public function setBgColor(bgColor : String) : Void;
 	
 	/**
 	*  The width of the border around the table. See the  border attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getBorder() : String;
+	@:overload @:public public function getBorder() : String;
 	
-	@:overload public function setBorder(border : String) : Void;
+	@:overload @:public public function setBorder(border : String) : Void;
 	
 	/**
 	*  Specifies the horizontal and vertical space between cell content and
 	* cell borders. See the  cellpadding attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCellPadding() : String;
+	@:overload @:public public function getCellPadding() : String;
 	
-	@:overload public function setCellPadding(cellPadding : String) : Void;
+	@:overload @:public public function setCellPadding(cellPadding : String) : Void;
 	
 	/**
 	*  Specifies the horizontal and vertical separation between cells. See
 	* the  cellspacing attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCellSpacing() : String;
+	@:overload @:public public function getCellSpacing() : String;
 	
-	@:overload public function setCellSpacing(cellSpacing : String) : Void;
+	@:overload @:public public function setCellSpacing(cellSpacing : String) : Void;
 	
 	/**
 	*  Specifies which external table borders to render. See the  frame
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getFrame() : String;
+	@:overload @:public public function getFrame() : String;
 	
-	@:overload public function setFrame(frame : String) : Void;
+	@:overload @:public public function setFrame(frame : String) : Void;
 	
 	/**
 	*  Specifies which internal table borders to render. See the  rules
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getRules() : String;
+	@:overload @:public public function getRules() : String;
 	
-	@:overload public function setRules(rules : String) : Void;
+	@:overload @:public public function setRules(rules : String) : Void;
 	
 	/**
 	*  Description about the purpose or structure of a table. See the
 	* summary attribute definition in HTML 4.0.
 	*/
-	@:overload public function getSummary() : String;
+	@:overload @:public public function getSummary() : String;
 	
-	@:overload public function setSummary(summary : String) : Void;
+	@:overload @:public public function setSummary(summary : String) : Void;
 	
 	/**
 	*  Specifies the desired table width. See the  width attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getWidth() : String;
+	@:overload @:public public function getWidth() : String;
 	
-	@:overload public function setWidth(width : String) : Void;
+	@:overload @:public public function setWidth(width : String) : Void;
 	
 	/**
 	*  Create a table header row or return an existing one.
 	* @return  A new table header element (<code>THEAD</code> ).
 	*/
-	@:overload public function createTHead() : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function createTHead() : org.w3c.dom.html.HTMLElement;
 	
 	/**
 	*  Delete the header from the table, if one exists.
 	*/
-	@:overload public function deleteTHead() : Void;
+	@:overload @:public public function deleteTHead() : Void;
 	
 	/**
 	*  Create a table footer row or return an existing one.
 	* @return  A footer element (<code>TFOOT</code> ).
 	*/
-	@:overload public function createTFoot() : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function createTFoot() : org.w3c.dom.html.HTMLElement;
 	
 	/**
 	*  Delete the footer from the table, if one exists.
 	*/
-	@:overload public function deleteTFoot() : Void;
+	@:overload @:public public function deleteTFoot() : Void;
 	
 	/**
 	*  Create a new table caption object or return an existing one.
 	* @return  A <code>CAPTION</code> element.
 	*/
-	@:overload public function createCaption() : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function createCaption() : org.w3c.dom.html.HTMLElement;
 	
 	/**
 	*  Delete the table caption, if one exists.
 	*/
-	@:overload public function deleteCaption() : Void;
+	@:overload @:public public function deleteCaption() : Void;
 	
 	/**
 	*  Insert a new empty row in the table. The new row is inserted
@@ -197,7 +197,7 @@ extern interface HTMLTableElement extends org.w3c.dom.html.HTMLElement
 	*    INDEX_SIZE_ERR: Raised if the specified index is greater than the
 	*   number of rows or if the index is negative.
 	*/
-	@:overload public function insertRow(index : Int) : org.w3c.dom.html.HTMLElement;
+	@:overload @:public public function insertRow(index : Int) : org.w3c.dom.html.HTMLElement;
 	
 	/**
 	*  Delete a table row.
@@ -208,7 +208,7 @@ extern interface HTMLTableElement extends org.w3c.dom.html.HTMLElement
 	*    INDEX_SIZE_ERR: Raised if the specified index is greater than or
 	*   equal to the number of rows or if the index is negative.
 	*/
-	@:overload public function deleteRow(index : Int) : Void;
+	@:overload @:public public function deleteRow(index : Int) : Void;
 	
 	
 }

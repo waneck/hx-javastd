@@ -26,7 +26,7 @@ extern class NodeSortRecordFactory
 	/**
 	*
 	*/
-	private var _collator : java.text.Collator;
+	@:protected private var _collator : java.text.Collator;
 	
 	/**
 	* Creates a NodeSortRecord producing object. The DOM specifies which tree
@@ -38,7 +38,7 @@ extern class NodeSortRecordFactory
 	* @deprecated This constructor is no longer used in generated code.  It
 	*             exists only for backwards compatibility.
 	*/
-	@:overload public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, className : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet, order : java.NativeArray<String>, type : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, className : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet, order : java.NativeArray<String>, type : java.NativeArray<String>) : Void;
 	
 	/**
 	* Creates a NodeSortRecord producing object. The DOM specifies which tree
@@ -47,15 +47,15 @@ extern class NodeSortRecordFactory
 	* class), and the translet parameter is needed for methods called by
 	* this object.
 	*/
-	@:overload public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, className : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet, order : java.NativeArray<String>, type : java.NativeArray<String>, lang : java.NativeArray<String>, caseOrder : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM, className : String, translet : com.sun.org.apache.xalan.internal.xsltc.Translet, order : java.NativeArray<String>, type : java.NativeArray<String>, lang : java.NativeArray<String>, caseOrder : java.NativeArray<String>) : Void;
 	
 	/**
 	* Create an instance of a sub-class of NodeSortRecord. The name of this
 	* sub-class is passed to us in the constructor.
 	*/
-	@:overload public function makeNodeSortRecord(node : Int, last : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.NodeSortRecord;
+	@:overload @:public public function makeNodeSortRecord(node : Int, last : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.NodeSortRecord;
 	
-	@:overload public function getClassName() : String;
+	@:overload @:public public function getClassName() : String;
 	
 	
 }

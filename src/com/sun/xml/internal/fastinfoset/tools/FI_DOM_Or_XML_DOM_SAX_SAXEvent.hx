@@ -27,11 +27,11 @@ package com.sun.xml.internal.fastinfoset.tools;
 */
 extern class FI_DOM_Or_XML_DOM_SAX_SAXEvent extends com.sun.xml.internal.fastinfoset.tools.TransformInputOutput
 {
-	@:overload override public function parse(document : java.io.InputStream, events : java.io.OutputStream, workingDirectory : String) : Void;
+	@:overload @:public override public function parse(document : java.io.InputStream, events : java.io.OutputStream, workingDirectory : String) : Void;
 	
-	@:overload override public function parse(document : java.io.InputStream, events : java.io.OutputStream) : Void;
+	@:overload @:public override public function parse(document : java.io.InputStream, events : java.io.OutputStream) : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

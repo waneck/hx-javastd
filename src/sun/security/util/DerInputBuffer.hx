@@ -29,14 +29,14 @@ package sun.security.util;
 	* Compares this DerInputBuffer for equality with the specified
 	* object.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns a hashcode for this DerInputBuffer.
 	*
 	* @return a hashcode for this DerInputBuffer.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the integer which takes up the specified number
@@ -47,27 +47,27 @@ package sun.security.util;
 	* @param len the number of bytes to use.
 	* @return the integer.
 	*/
-	@:overload public function getInteger(len : Int) : Int;
+	@:overload @:public public function getInteger(len : Int) : Int;
 	
 	/**
 	* Returns the bit string which takes up the specified
 	* number of bytes in this buffer.
 	*/
-	@:overload public function getBitString(len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getBitString(len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the UTC Time value that takes up the specified number
 	* of bytes in this buffer.
 	* @param len the number of bytes to use
 	*/
-	@:overload public function getUTCTime(len : Int) : java.util.Date;
+	@:overload @:public public function getUTCTime(len : Int) : java.util.Date;
 	
 	/**
 	* Returns the Generalized Time value that takes up the specified
 	* number of bytes in this buffer.
 	* @param len the number of bytes to use
 	*/
-	@:overload public function getGeneralizedTime(len : Int) : java.util.Date;
+	@:overload @:public public function getGeneralizedTime(len : Int) : java.util.Date;
 	
 	
 }

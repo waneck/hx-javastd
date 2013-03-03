@@ -45,7 +45,7 @@ package org.omg.CORBA_2_3.portable;
 	* @return the codebase as a space delimited list of url strings or
 	* null if none.
 	*/
-	@:overload public function get_codebase(self : org.omg.CORBA.Object) : String;
+	@:overload @:public public function get_codebase(self : org.omg.CORBA.Object) : String;
 	
 	
 }

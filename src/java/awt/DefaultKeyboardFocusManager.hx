@@ -39,7 +39,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @return <code>true</code> if this method dispatched the event;
 	*         <code>false</code> otherwise
 	*/
-	@:overload override public function dispatchEvent(e : java.awt.AWTEvent) : Bool;
+	@:overload @:public override public function dispatchEvent(e : java.awt.AWTEvent) : Bool;
 	
 	/**
 	* Called by <code>dispatchEvent</code> if no other
@@ -60,7 +60,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @return <code>true</code>
 	* @see Component#dispatchEvent
 	*/
-	@:overload override public function dispatchKeyEvent(e : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public override public function dispatchKeyEvent(e : java.awt.event.KeyEvent) : Bool;
 	
 	/**
 	* This method will be called by <code>dispatchKeyEvent</code>. It will
@@ -73,7 +73,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @see #dispatchKeyEvent
 	* @see MenuShortcut
 	*/
-	@:overload override public function postProcessKeyEvent(e : java.awt.event.KeyEvent) : Bool;
+	@:overload @:public override public function postProcessKeyEvent(e : java.awt.event.KeyEvent) : Bool;
 	
 	/**
 	* This method initiates a focus traversal operation if and only if the
@@ -88,7 +88,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	*        traversal key for the Component
 	* @param e the event that may represent a focus traversal key
 	*/
-	@:overload override public function processKeyEvent(focusedComponent : java.awt.Component, e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public override public function processKeyEvent(focusedComponent : java.awt.Component, e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Delays dispatching of KeyEvents until the specified Component becomes
@@ -105,7 +105,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @see #dequeueKeyEvents
 	* @see #discardKeyEvents
 	*/
-	@:overload @:synchronized override private function enqueueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
+	@:overload @:protected @:synchronized override private function enqueueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
 	
 	/**
 	* Releases for normal dispatching to the current focus owner all
@@ -122,7 +122,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @see #enqueueKeyEvents
 	* @see #discardKeyEvents
 	*/
-	@:overload @:synchronized override private function dequeueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
+	@:overload @:protected @:synchronized override private function dequeueKeyEvents(after : haxe.Int64, untilFocused : java.awt.Component) : Void;
 	
 	/**
 	* Discards all KeyEvents which were enqueued because of one or more calls
@@ -134,7 +134,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @see #enqueueKeyEvents
 	* @see #dequeueKeyEvents
 	*/
-	@:overload @:synchronized override private function discardKeyEvents(comp : java.awt.Component) : Void;
+	@:overload @:protected @:synchronized override private function discardKeyEvents(comp : java.awt.Component) : Void;
 	
 	/**
 	* Focuses the Component before aComponent, typically based on a
@@ -145,7 +145,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @see FocusTraversalPolicy
 	* @see Component#transferFocusBackward
 	*/
-	@:overload override public function focusPreviousComponent(aComponent : java.awt.Component) : Void;
+	@:overload @:public override public function focusPreviousComponent(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* Focuses the Component after aComponent, typically based on a
@@ -156,7 +156,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	* @see FocusTraversalPolicy
 	* @see Component#transferFocus
 	*/
-	@:overload override public function focusNextComponent(aComponent : java.awt.Component) : Void;
+	@:overload @:public override public function focusNextComponent(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* Moves the focus up one focus traversal cycle. Typically, the focus owner
@@ -170,7 +170,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	*        traversal operation
 	* @see Component#transferFocusUpCycle
 	*/
-	@:overload override public function upFocusCycle(aComponent : java.awt.Component) : Void;
+	@:overload @:public override public function upFocusCycle(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* Moves the focus down one focus traversal cycle. If aContainer is a focus
@@ -183,7 +183,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	*        traversal operation
 	* @see Container#transferFocusDownCycle
 	*/
-	@:overload override public function downFocusCycle(aContainer : java.awt.Container) : Void;
+	@:overload @:public override public function downFocusCycle(aContainer : java.awt.Container) : Void;
 	
 	
 }
@@ -192,7 +192,7 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 	/**
 	* Returns string representation of the marker
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -203,9 +203,9 @@ extern class DefaultKeyboardFocusManager extends java.awt.KeyboardFocusManager
 */
 @:native('java$awt$DefaultKeyboardFocusManager$DefaultKeyboardFocusManagerSentEvent') @:internal extern class DefaultKeyboardFocusManager_DefaultKeyboardFocusManagerSentEvent extends java.awt.SentEvent
 {
-	@:overload public function new(nested : java.awt.AWTEvent, toNotify : sun.awt.AppContext) : Void;
+	@:overload @:public public function new(nested : java.awt.AWTEvent, toNotify : sun.awt.AppContext) : Void;
 	
-	@:overload @:final override public function dispatch() : Void;
+	@:overload @:public @:final override public function dispatch() : Void;
 	
 	
 }

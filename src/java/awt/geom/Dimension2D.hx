@@ -47,7 +47,7 @@ package java.awt.geom;
 	* @see java.awt.Dimension
 	* @since 1.2
 	*/
-	@:require(java2) @:overload private function new() : Void;
+	@:require(java2) @:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the width of this <code>Dimension</code> in double
@@ -55,7 +55,7 @@ package java.awt.geom;
 	* @return the width of this <code>Dimension</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getWidth() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getWidth() : Float;
 	
 	/**
 	* Returns the height of this <code>Dimension</code> in double
@@ -63,7 +63,7 @@ package java.awt.geom;
 	* @return the height of this <code>Dimension</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function getHeight() : Float;
+	@:require(java2) @:overload @:public @:abstract public function getHeight() : Float;
 	
 	/**
 	* Sets the size of this <code>Dimension</code> object to the
@@ -77,7 +77,7 @@ package java.awt.geom;
 	* object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function setSize(width : Float, height : Float) : Void;
+	@:require(java2) @:overload @:public @:abstract public function setSize(width : Float, height : Float) : Void;
 	
 	/**
 	* Sets the size of this <code>Dimension2D</code> object to
@@ -88,7 +88,7 @@ package java.awt.geom;
 	* object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setSize(d : java.awt.geom.Dimension2D) : Void;
+	@:require(java2) @:overload @:public public function setSize(d : java.awt.geom.Dimension2D) : Void;
 	
 	/**
 	* Creates a new object of the same class as this object.
@@ -98,7 +98,7 @@ package java.awt.geom;
 	* @see        java.lang.Cloneable
 	* @since      1.2
 	*/
-	@:require(java2) @:overload public function clone() : Dynamic;
+	@:require(java2) @:overload @:public public function clone() : Dynamic;
 	
 	
 }

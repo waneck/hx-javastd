@@ -34,7 +34,7 @@ extern class PerfStringMonitor extends sun.jvmstat.perfdata.monitor.PerfByteArra
 	* @param supported support level indicator
 	* @param bb the buffer containing the string instrument data.
 	*/
-	@:overload public function new(name : String, v : sun.jvmstat.monitor.Variability, supported : Bool, bb : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function new(name : String, v : sun.jvmstat.monitor.Variability, supported : Bool, bb : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Constructor to create a StringMonitor object for the string instrument
@@ -46,7 +46,7 @@ extern class PerfStringMonitor extends sun.jvmstat.perfdata.monitor.PerfByteArra
 	* @param bb the buffer containing the string instrument data.
 	* @param maxLength the maximum length of the string data.
 	*/
-	@:overload public function new(name : String, v : sun.jvmstat.monitor.Variability, supported : Bool, bb : java.nio.ByteBuffer, maxLength : Int) : Void;
+	@:overload @:public public function new(name : String, v : sun.jvmstat.monitor.Variability, supported : Bool, bb : java.nio.ByteBuffer, maxLength : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -56,14 +56,14 @@ extern class PerfStringMonitor extends sun.jvmstat.perfdata.monitor.PerfByteArra
 	* @return Object - a copy of the current value of the StringInstrument.
 	*                  The return value is guaranteed to be of type String.
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Return the current value of the StringInstrument as a String.
 	*
 	* @return String - a copy of the current value of the StringInstrument.
 	*/
-	@:overload public function stringValue() : String;
+	@:overload @:public public function stringValue() : String;
 	
 	
 }

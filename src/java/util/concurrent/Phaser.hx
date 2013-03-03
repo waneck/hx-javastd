@@ -39,7 +39,7 @@ extern class Phaser
 	* parent, and initial phase number 0. Any thread using this
 	* phaser will need to first register for it.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new phaser with the given number of registered
@@ -50,14 +50,14 @@ extern class Phaser
 	* @throws IllegalArgumentException if parties less than zero
 	* or greater than the maximum number of parties supported
 	*/
-	@:overload public function new(parties : Int) : Void;
+	@:overload @:public public function new(parties : Int) : Void;
 	
 	/**
 	* Equivalent to {@link #Phaser(Phaser, int) Phaser(parent, 0)}.
 	*
 	* @param parent the parent phaser
 	*/
-	@:overload public function new(parent : java.util.concurrent.Phaser) : Void;
+	@:overload @:public public function new(parent : java.util.concurrent.Phaser) : Void;
 	
 	/**
 	* Creates a new phaser with the given parent and number of
@@ -71,7 +71,7 @@ extern class Phaser
 	* @throws IllegalArgumentException if parties less than zero
 	* or greater than the maximum number of parties supported
 	*/
-	@:overload public function new(parent : java.util.concurrent.Phaser, parties : Int) : Void;
+	@:overload @:public public function new(parent : java.util.concurrent.Phaser, parties : Int) : Void;
 	
 	/**
 	* Adds a new unarrived party to this phaser.  If an ongoing
@@ -88,7 +88,7 @@ extern class Phaser
 	* @throws IllegalStateException if attempting to register more
 	* than the maximum supported number of parties
 	*/
-	@:overload public function register() : Int;
+	@:overload @:public public function register() : Int;
 	
 	/**
 	* Adds the given number of new unarrived parties to this phaser.
@@ -109,7 +109,7 @@ extern class Phaser
 	* than the maximum supported number of parties
 	* @throws IllegalArgumentException if {@code parties < 0}
 	*/
-	@:overload public function bulkRegister(parties : Int) : Int;
+	@:overload @:public public function bulkRegister(parties : Int) : Int;
 	
 	/**
 	* Arrives at this phaser, without waiting for others to arrive.
@@ -123,7 +123,7 @@ extern class Phaser
 	* @throws IllegalStateException if not terminated and the number
 	* of unarrived parties would become negative
 	*/
-	@:overload public function arrive() : Int;
+	@:overload @:public public function arrive() : Int;
 	
 	/**
 	* Arrives at this phaser and deregisters from it without waiting
@@ -141,7 +141,7 @@ extern class Phaser
 	* @throws IllegalStateException if not terminated and the number
 	* of registered or unarrived parties would become negative
 	*/
-	@:overload public function arriveAndDeregister() : Int;
+	@:overload @:public public function arriveAndDeregister() : Int;
 	
 	/**
 	* Arrives at this phaser and awaits others. Equivalent in effect
@@ -161,7 +161,7 @@ extern class Phaser
 	* @throws IllegalStateException if not terminated and the number
 	* of unarrived parties would become negative
 	*/
-	@:overload public function arriveAndAwaitAdvance() : Int;
+	@:overload @:public public function arriveAndAwaitAdvance() : Int;
 	
 	/**
 	* Awaits the phase of this phaser to advance from the given phase
@@ -175,7 +175,7 @@ extern class Phaser
 	* negative, or the (negative) {@linkplain #getPhase() current phase}
 	* if terminated
 	*/
-	@:overload public function awaitAdvance(phase : Int) : Int;
+	@:overload @:public public function awaitAdvance(phase : Int) : Int;
 	
 	/**
 	* Awaits the phase of this phaser to advance from the given phase
@@ -192,7 +192,7 @@ extern class Phaser
 	* if terminated
 	* @throws InterruptedException if thread interrupted while waiting
 	*/
-	@:overload public function awaitAdvanceInterruptibly(phase : Int) : Int;
+	@:overload @:public public function awaitAdvanceInterruptibly(phase : Int) : Int;
 	
 	/**
 	* Awaits the phase of this phaser to advance from the given phase
@@ -214,7 +214,7 @@ extern class Phaser
 	* @throws InterruptedException if thread interrupted while waiting
 	* @throws TimeoutException if timed out while waiting
 	*/
-	@:overload public function awaitAdvanceInterruptibly(phase : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Int;
+	@:overload @:public public function awaitAdvanceInterruptibly(phase : Int, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Int;
 	
 	/**
 	* Forces this phaser to enter termination state.  Counts of
@@ -225,7 +225,7 @@ extern class Phaser
 	* coordinating recovery after one or more tasks encounter
 	* unexpected exceptions.
 	*/
-	@:overload public function forceTermination() : Void;
+	@:overload @:public public function forceTermination() : Void;
 	
 	/**
 	* Returns the current phase number. The maximum phase number is
@@ -236,14 +236,14 @@ extern class Phaser
 	*
 	* @return the phase number, or a negative value if terminated
 	*/
-	@:overload @:final public function getPhase() : Int;
+	@:overload @:public @:final public function getPhase() : Int;
 	
 	/**
 	* Returns the number of parties registered at this phaser.
 	*
 	* @return the number of parties
 	*/
-	@:overload public function getRegisteredParties() : Int;
+	@:overload @:public public function getRegisteredParties() : Int;
 	
 	/**
 	* Returns the number of registered parties that have arrived at
@@ -252,7 +252,7 @@ extern class Phaser
 	*
 	* @return the number of arrived parties
 	*/
-	@:overload public function getArrivedParties() : Int;
+	@:overload @:public public function getArrivedParties() : Int;
 	
 	/**
 	* Returns the number of registered parties that have not yet
@@ -261,14 +261,14 @@ extern class Phaser
 	*
 	* @return the number of unarrived parties
 	*/
-	@:overload public function getUnarrivedParties() : Int;
+	@:overload @:public public function getUnarrivedParties() : Int;
 	
 	/**
 	* Returns the parent of this phaser, or {@code null} if none.
 	*
 	* @return the parent of this phaser, or {@code null} if none
 	*/
-	@:overload public function getParent() : java.util.concurrent.Phaser;
+	@:overload @:public public function getParent() : java.util.concurrent.Phaser;
 	
 	/**
 	* Returns the root ancestor of this phaser, which is the same as
@@ -276,14 +276,14 @@ extern class Phaser
 	*
 	* @return the root ancestor of this phaser
 	*/
-	@:overload public function getRoot() : java.util.concurrent.Phaser;
+	@:overload @:public public function getRoot() : java.util.concurrent.Phaser;
 	
 	/**
 	* Returns {@code true} if this phaser has been terminated.
 	*
 	* @return {@code true} if this phaser has been terminated
 	*/
-	@:overload public function isTerminated() : Bool;
+	@:overload @:public public function isTerminated() : Bool;
 	
 	/**
 	* Overridable method to perform an action upon impending phase
@@ -325,7 +325,7 @@ extern class Phaser
 	* @param registeredParties the current number of registered parties
 	* @return {@code true} if this phaser should terminate
 	*/
-	@:overload private function onAdvance(phase : Int, registeredParties : Int) : Bool;
+	@:overload @:protected private function onAdvance(phase : Int, registeredParties : Int) : Bool;
 	
 	/**
 	* Returns a string identifying this phaser, as well as its
@@ -336,7 +336,7 @@ extern class Phaser
 	*
 	* @return a string identifying this phaser, as well as its state
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -345,9 +345,9 @@ extern class Phaser
 */
 @:native('java$util$concurrent$Phaser$QNode') @:internal extern class Phaser_QNode implements java.util.concurrent.ForkJoinPool.ForkJoinPool_ManagedBlocker
 {
-	@:overload public function isReleasable() : Bool;
+	@:overload @:public public function isReleasable() : Bool;
 	
-	@:overload public function block() : Bool;
+	@:overload @:public public function block() : Bool;
 	
 	
 }

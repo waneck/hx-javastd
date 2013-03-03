@@ -62,10 +62,10 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XML11DTDScannerImpl extends com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl
 {
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructor for he use of non-XMLComponentManagers. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : Void;
 	
 	/**
 	* Scans public ID literal.
@@ -86,19 +86,19 @@ extern class XML11DTDScannerImpl extends com.sun.org.apache.xerces.internal.impl
 	* <strong>Note:</strong> This method uses fStringBuffer, anything in it at
 	* the time of calling is lost.
 	*/
-	@:overload override private function scanPubidLiteral(literal : com.sun.org.apache.xerces.internal.xni.XMLString) : Bool;
+	@:overload @:protected override private function scanPubidLiteral(literal : com.sun.org.apache.xerces.internal.xni.XMLString) : Bool;
 	
 	/**
 	* Normalize whitespace in an XMLString converting all whitespace
 	* characters to space characters.
 	*/
-	@:overload override private function normalizeWhitespace(value : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:protected override private function normalizeWhitespace(value : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* Normalize whitespace in an XMLString converting all whitespace
 	* characters to space characters.
 	*/
-	@:overload private function normalizeWhitespace(value : com.sun.org.apache.xerces.internal.xni.XMLString, fromIndex : Int) : Void;
+	@:overload @:protected private function normalizeWhitespace(value : com.sun.org.apache.xerces.internal.xni.XMLString, fromIndex : Int) : Void;
 	
 	/**
 	* Checks whether this string would be unchanged by normalization.
@@ -107,23 +107,23 @@ extern class XML11DTDScannerImpl extends com.sun.org.apache.xerces.internal.impl
 	* otherwise the index of the first whitespace character which
 	* would be transformed.
 	*/
-	@:overload private function isUnchangedByNormalization(value : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload @:protected private function isUnchangedByNormalization(value : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
-	@:overload override private function isInvalid(value : Int) : Bool;
+	@:overload @:protected override private function isInvalid(value : Int) : Bool;
 	
-	@:overload override private function isInvalidLiteral(value : Int) : Bool;
+	@:overload @:protected override private function isInvalidLiteral(value : Int) : Bool;
 	
-	@:overload override private function isValidNameChar(value : Int) : Bool;
+	@:overload @:protected override private function isValidNameChar(value : Int) : Bool;
 	
-	@:overload override private function isValidNameStartChar(value : Int) : Bool;
+	@:overload @:protected override private function isValidNameStartChar(value : Int) : Bool;
 	
-	@:overload override private function isValidNCName(value : Int) : Bool;
+	@:overload @:protected override private function isValidNCName(value : Int) : Bool;
 	
-	@:overload private function isValidNameStartHighSurrogate(value : Int) : Bool;
+	@:overload @:protected private function isValidNameStartHighSurrogate(value : Int) : Bool;
 	
-	@:overload override private function versionSupported(version : String) : Bool;
+	@:overload @:protected override private function versionSupported(version : String) : Bool;
 	
-	@:overload private function getVersionNotSupportedKey() : String;
+	@:overload @:protected private function getVersionNotSupportedKey() : String;
 	
 	
 }

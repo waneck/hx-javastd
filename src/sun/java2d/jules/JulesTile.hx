@@ -25,21 +25,21 @@ package sun.java2d.jules;
 */
 extern class JulesTile
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getImgBuffer() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getImgBuffer() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getPixmanImgPtr() : haxe.Int64;
+	@:overload @:public public function getPixmanImgPtr() : haxe.Int64;
 	
-	@:overload public function setPixmanImgPtr(pixmanImgPtr : haxe.Int64) : Void;
+	@:overload @:public public function setPixmanImgPtr(pixmanImgPtr : haxe.Int64) : Void;
 	
-	@:overload public function hasBuffer() : Bool;
+	@:overload @:public public function hasBuffer() : Bool;
 	
-	@:overload public function getTilePos() : Int;
+	@:overload @:public public function getTilePos() : Int;
 	
-	@:overload public function setTilePos(tilePos : Int) : Void;
+	@:overload @:public public function setTilePos(tilePos : Int) : Void;
 	
-	@:overload public function setImgBuffer(imgBuffer : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function setImgBuffer(imgBuffer : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

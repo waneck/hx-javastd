@@ -49,11 +49,11 @@ exception statement from your version.
 	*        events.
 	* @return value if it is a known event. Otherwise throw an exception.
 	*/
-	@:overload public static function checkNativeEnumReturn(value : haxe.Int64) : haxe.Int64;
+	@:overload @:public @:static public static function checkNativeEnumReturn(value : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function new(type : haxe.Int64) : Void;
+	@:overload @:public public function new(type : haxe.Int64) : Void;
 	
-	@:overload public function getType() : haxe.Int64;
+	@:overload @:public public function getType() : haxe.Int64;
 	
 	
 }

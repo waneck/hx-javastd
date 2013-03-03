@@ -38,12 +38,12 @@ extern class AbstractType extends sun.rmi.rmic.iiop.RemoteType
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forAbstract(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack, quiet : Bool) : sun.rmi.rmic.iiop.AbstractType;
+	@:overload @:public @:static public static function forAbstract(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack, quiet : Bool) : sun.rmi.rmic.iiop.AbstractType;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload public function getTypeDescription() : String;
+	@:overload @:public override public function getTypeDescription() : String;
 	
 	
 }

@@ -36,13 +36,13 @@ package java.net;
 	* detail message.
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Construct a new <code>PortUnreachableException</code> with no
 	* detailed message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

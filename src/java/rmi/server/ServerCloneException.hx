@@ -53,7 +53,7 @@ package java.rmi.server;
 	*
 	* @serial
 	*/
-	public var detail : java.lang.Exception;
+	@:public public var detail : java.lang.Exception;
 	
 	/**
 	* Constructs a <code>ServerCloneException</code> with the specified
@@ -61,7 +61,7 @@ package java.rmi.server;
 	*
 	* @param s the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>ServerCloneException</code> with the specified
@@ -70,7 +70,7 @@ package java.rmi.server;
 	* @param s the detail message.
 	* @param cause the cause
 	*/
-	@:overload public function new(s : String, cause : java.lang.Exception) : Void;
+	@:overload @:public public function new(s : String, cause : java.lang.Exception) : Void;
 	
 	/**
 	* Returns the detail message, including the message from the cause, if
@@ -78,7 +78,7 @@ package java.rmi.server;
 	*
 	* @return the detail message
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Returns the cause of this exception.  This method returns the value
@@ -87,7 +87,7 @@ package java.rmi.server;
 	* @return  the cause, which may be <tt>null</tt>.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

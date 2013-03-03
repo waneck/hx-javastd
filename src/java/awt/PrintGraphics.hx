@@ -34,7 +34,7 @@ extern interface PrintGraphics
 	* Returns the PrintJob object from which this PrintGraphics
 	* object originated.
 	*/
-	@:overload public function getPrintJob() : java.awt.PrintJob;
+	@:overload @:public public function getPrintJob() : java.awt.PrintJob;
 	
 	
 }

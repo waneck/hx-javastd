@@ -23,30 +23,30 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	/**
 	* Indicate that this description was just initialized.
 	*/
-	public static var CONTEXT_INITIALIZE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_INITIALIZE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the current schema document is <include>d by another
 	* schema document.
 	*/
-	public static var CONTEXT_INCLUDE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_INCLUDE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the current schema document is <redefine>d by another
 	* schema document.
 	*/
-	public static var CONTEXT_REDEFINE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_REDEFINE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the current schema document is <import>ed by another
 	* schema document.
 	*/
-	public static var CONTEXT_IMPORT(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_IMPORT(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the current schema document is being preparsed.
 	*/
-	public static var CONTEXT_PREPARSE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_PREPARSE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the parse of the current schema document is triggered
@@ -54,7 +54,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	* instance document. This value is only used if we don't defer the loading
 	* of schema documents.
 	*/
-	public static var CONTEXT_INSTANCE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_INSTANCE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the parse of the current schema document is triggered by
@@ -63,7 +63,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	* loading of schema documents until a component from that namespace is
 	* referenced from the instance.
 	*/
-	public static var CONTEXT_ELEMENT(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_ELEMENT(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the parse of the current schema document is triggered by
@@ -72,7 +72,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	* loading of schema documents until a component from that namespace is
 	* referenced from the instance.
 	*/
-	public static var CONTEXT_ATTRIBUTE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_ATTRIBUTE(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Indicate that the parse of the current schema document is triggered by
@@ -81,24 +81,24 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	* This value is only used if we do defer the loading of schema documents
 	* until a component from that namespace is referenced from the instance.
 	*/
-	public static var CONTEXT_XSITYPE(default, null) : java.StdTypes.Int16;
+	@:public @:final @:static public static var CONTEXT_XSITYPE(default, null) : java.StdTypes.Int16;
 	
-	private var fContextType : java.StdTypes.Int16;
+	@:protected private var fContextType : java.StdTypes.Int16;
 	
-	private var fLocationHints : java.NativeArray<String>;
+	@:protected private var fLocationHints : java.NativeArray<String>;
 	
-	private var fTriggeringComponent : com.sun.org.apache.xerces.internal.xni.QName;
+	@:protected private var fTriggeringComponent : com.sun.org.apache.xerces.internal.xni.QName;
 	
-	private var fEnclosedElementName : com.sun.org.apache.xerces.internal.xni.QName;
+	@:protected private var fEnclosedElementName : com.sun.org.apache.xerces.internal.xni.QName;
 	
-	private var fAttributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
+	@:protected private var fAttributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
 	
 	/**
 	* the type of the grammar (e.g., DTD or XSD);
 	*
 	* @see com.sun.org.apache.xerces.internal.xni.grammars.Grammar
 	*/
-	@:overload public function getGrammarType() : String;
+	@:overload @:public public function getGrammarType() : String;
 	
 	/**
 	* Get the context. The returned value is one of the pre-defined
@@ -106,7 +106,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	*
 	* @return  the value indicating the context
 	*/
-	@:overload public function getContextType() : java.StdTypes.Int16;
+	@:overload @:public public function getContextType() : java.StdTypes.Int16;
 	
 	/**
 	* If the context is "include" or "redefine", then return the target
@@ -115,7 +115,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	*
 	* @return  the expected/enclosing target namespace
 	*/
-	@:overload public function getTargetNamespace() : String;
+	@:overload @:public public function getTargetNamespace() : String;
 	
 	/**
 	* For import and references from the instance document, it's possible to
@@ -125,7 +125,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	* @return  an array of all location hints associated to the expected
 	*          target namespace
 	*/
-	@:overload public function getLocationHints() : java.NativeArray<String>;
+	@:overload @:public public function getLocationHints() : java.NativeArray<String>;
 	
 	/**
 	* If a call is triggered by an element/attribute/xsi:type in the instance,
@@ -134,7 +134,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	*
 	* @return  the name of the triggering component
 	*/
-	@:overload public function getTriggeringComponent() : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function getTriggeringComponent() : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* If a call is triggered by an attribute or xsi:type, then this mehtod
@@ -142,7 +142,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	*
 	* @return  the name of the enclosing element
 	*/
-	@:overload public function getEnclosingElementName() : com.sun.org.apache.xerces.internal.xni.QName;
+	@:overload @:public public function getEnclosingElementName() : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/**
 	* If a call is triggered by an element/attribute/xsi:type in the instance,
@@ -150,9 +150,9 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	*
 	* @return  all attributes of the tiggering/enclosing element
 	*/
-	@:overload public function getAttributes() : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
+	@:overload @:public public function getAttributes() : com.sun.org.apache.xerces.internal.xni.XMLAttributes;
 	
-	@:overload public function fromInstance() : Bool;
+	@:overload @:public public function fromInstance() : Bool;
 	
 	/**
 	* Compares this grammar with the given grammar. Currently, we compare
@@ -161,33 +161,33 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	* @param descObj The description of the grammar to be compared with
 	* @return        True if they are equal, else false
 	*/
-	@:overload public function equals(descObj : Dynamic) : Bool;
+	@:overload @:public public function equals(descObj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code of this grammar
 	*
 	* @return The hash code
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function setContextType(contextType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setContextType(contextType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function setTargetNamespace(targetNamespace : String) : Void;
+	@:overload @:public public function setTargetNamespace(targetNamespace : String) : Void;
 	
-	@:overload public function setLocationHints(locationHints : java.NativeArray<String>) : Void;
+	@:overload @:public public function setLocationHints(locationHints : java.NativeArray<String>) : Void;
 	
-	@:overload public function setTriggeringComponent(triggeringComponent : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function setTriggeringComponent(triggeringComponent : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
-	@:overload public function setEnclosingElementName(enclosedElementName : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function setEnclosingElementName(enclosedElementName : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
-	@:overload public function setAttributes(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload @:public public function setAttributes(attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
 	/**
 	*  resets all the fields
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription;
+	@:overload @:public public function makeClone() : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription;
 	
 	
 }

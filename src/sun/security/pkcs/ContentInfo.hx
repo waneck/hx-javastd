@@ -30,39 +30,39 @@ package sun.security.pkcs;
 */
 extern class ContentInfo
 {
-	public static var PKCS7_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var PKCS7_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var SIGNED_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var SIGNED_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var ENVELOPED_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var ENVELOPED_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var SIGNED_AND_ENVELOPED_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var SIGNED_AND_ENVELOPED_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var DIGESTED_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var DIGESTED_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var ENCRYPTED_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var ENCRYPTED_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var OLD_SIGNED_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var OLD_SIGNED_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var OLD_DATA_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var OLD_DATA_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var NETSCAPE_CERT_SEQUENCE_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var NETSCAPE_CERT_SEQUENCE_OID : sun.security.util.ObjectIdentifier;
 	
-	public static var TIMESTAMP_TOKEN_INFO_OID : sun.security.util.ObjectIdentifier;
+	@:public @:static public static var TIMESTAMP_TOKEN_INFO_OID : sun.security.util.ObjectIdentifier;
 	
-	@:overload public function new(contentType : sun.security.util.ObjectIdentifier, content : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(contentType : sun.security.util.ObjectIdentifier, content : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Make a contentInfo of type data.
 	*/
-	@:overload public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Parses a PKCS#7 content info.
 	*/
-	@:overload public function new(derin : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(derin : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Parses a PKCS#7 content info.
@@ -74,23 +74,23 @@ extern class ContentInfo
 	* @param oldStyle flag indicating whether or not the given content info
 	* is encoded according to JDK1.1.x.
 	*/
-	@:overload public function new(derin : sun.security.util.DerInputStream, oldStyle : Bool) : Void;
+	@:overload @:public public function new(derin : sun.security.util.DerInputStream, oldStyle : Bool) : Void;
 	
-	@:overload public function getContent() : sun.security.util.DerValue;
+	@:overload @:public public function getContent() : sun.security.util.DerValue;
 	
-	@:overload public function getContentType() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getContentType() : sun.security.util.ObjectIdentifier;
 	
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Returns a byte array representation of the data held in
 	* the content field.
 	*/
-	@:overload public function getContentBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getContentBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

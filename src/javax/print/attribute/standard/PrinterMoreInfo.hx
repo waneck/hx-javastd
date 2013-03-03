@@ -33,7 +33,7 @@ extern class PrinterMoreInfo extends javax.print.attribute.URISyntax implements 
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>uri</CODE> is null.
 	*/
-	@:overload public function new(uri : java.net.URI) : Void;
+	@:overload @:public public function new(uri : java.net.URI) : Void;
 	
 	/**
 	* Returns whether this printer more info attribute is equivalent to the
@@ -54,7 +54,7 @@ extern class PrinterMoreInfo extends javax.print.attribute.URISyntax implements 
 	* @return  True if <CODE>object</CODE> is equivalent to this printer
 	*          more info attribute, false otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -65,7 +65,7 @@ extern class PrinterMoreInfo extends javax.print.attribute.URISyntax implements 
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -76,7 +76,7 @@ extern class PrinterMoreInfo extends javax.print.attribute.URISyntax implements 
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

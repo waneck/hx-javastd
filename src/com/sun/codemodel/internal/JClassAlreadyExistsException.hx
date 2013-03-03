@@ -31,7 +31,7 @@ package com.sun.codemodel.internal;
 */
 extern class JClassAlreadyExistsException extends java.lang.Exception
 {
-	@:overload public function new(_existing : com.sun.codemodel.internal.JDefinedClass) : Void;
+	@:overload @:public public function new(_existing : com.sun.codemodel.internal.JDefinedClass) : Void;
 	
 	/**
 	* Gets a reference to the existing {@link JDefinedClass}.
@@ -39,7 +39,7 @@ extern class JClassAlreadyExistsException extends java.lang.Exception
 	* @return
 	*      This method always return non-null valid object.
 	*/
-	@:overload public function getExistingClass() : com.sun.codemodel.internal.JDefinedClass;
+	@:overload @:public public function getExistingClass() : com.sun.codemodel.internal.JDefinedClass;
 	
 	
 }

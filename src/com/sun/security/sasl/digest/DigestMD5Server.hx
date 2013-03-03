@@ -67,9 +67,9 @@ package com.sun.security.sasl.digest;
 */
 @:internal extern class DigestMD5Server extends com.sun.security.sasl.digest.DigestMD5Base implements javax.security.sasl.SaslServer
 {
-	@:overload public function evaluateResponse(response : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateResponse(response : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getAuthorizationID() : String;
+	@:overload @:public public function getAuthorizationID() : String;
 	
 	
 }

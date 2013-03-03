@@ -32,27 +32,27 @@ package sun.management;
 */
 @:internal extern class HotspotCompilation implements sun.management.HotspotCompilationMBean
 {
-	@:overload public function getCompilerThreadCount() : Int;
+	@:overload @:public public function getCompilerThreadCount() : Int;
 	
-	@:overload public function getTotalCompileCount() : haxe.Int64;
+	@:overload @:public public function getTotalCompileCount() : haxe.Int64;
 	
-	@:overload public function getBailoutCompileCount() : haxe.Int64;
+	@:overload @:public public function getBailoutCompileCount() : haxe.Int64;
 	
-	@:overload public function getInvalidatedCompileCount() : haxe.Int64;
+	@:overload @:public public function getInvalidatedCompileCount() : haxe.Int64;
 	
-	@:overload public function getCompiledMethodCodeSize() : haxe.Int64;
+	@:overload @:public public function getCompiledMethodCodeSize() : haxe.Int64;
 	
-	@:overload public function getCompiledMethodSize() : haxe.Int64;
+	@:overload @:public public function getCompiledMethodSize() : haxe.Int64;
 	
-	@:overload public function getCompilerThreadStats() : java.util.List<sun.management.CompilerThreadStat>;
+	@:overload @:public public function getCompilerThreadStats() : java.util.List<sun.management.CompilerThreadStat>;
 	
-	@:overload public function getLastCompile() : sun.management.MethodInfo;
+	@:overload @:public public function getLastCompile() : sun.management.MethodInfo;
 	
-	@:overload public function getFailedCompile() : sun.management.MethodInfo;
+	@:overload @:public public function getFailedCompile() : sun.management.MethodInfo;
 	
-	@:overload public function getInvalidatedCompile() : sun.management.MethodInfo;
+	@:overload @:public public function getInvalidatedCompile() : sun.management.MethodInfo;
 	
-	@:overload public function getInternalCompilerCounters() : java.util.List<sun.management.counter.Counter>;
+	@:overload @:public public function getInternalCompilerCounters() : java.util.List<sun.management.counter.Counter>;
 	
 	
 }

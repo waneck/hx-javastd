@@ -35,24 +35,24 @@ extern class PackageTreeWriter extends com.sun.tools.doclets.formats.html.Abstra
 	/**
 	* Package for which tree is to be generated.
 	*/
-	private var packagedoc : com.sun.javadoc.PackageDoc;
+	@:protected private var packagedoc : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* The previous package name in the alpha-order list.
 	*/
-	private var prev : com.sun.javadoc.PackageDoc;
+	@:protected private var prev : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* The next package name in the alpha-order list.
 	*/
-	private var next : com.sun.javadoc.PackageDoc;
+	@:protected private var next : com.sun.javadoc.PackageDoc;
 	
 	/**
 	* Constructor.
 	* @throws IOException
 	* @throws DocletAbortException
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, packagedoc : com.sun.javadoc.PackageDoc, prev : com.sun.javadoc.PackageDoc, next : com.sun.javadoc.PackageDoc) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, path : String, filename : String, packagedoc : com.sun.javadoc.PackageDoc, prev : com.sun.javadoc.PackageDoc, next : com.sun.javadoc.PackageDoc) : Void;
 	
 	/**
 	* Construct a PackageTreeWriter object and then use it to generate the
@@ -65,47 +65,47 @@ extern class PackageTreeWriter extends com.sun.tools.doclets.formats.html.Abstra
 	* deprecated classe or interfaces.
 	* @throws DocletAbortException
 	*/
-	@:overload public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, pkg : com.sun.javadoc.PackageDoc, prev : com.sun.javadoc.PackageDoc, next : com.sun.javadoc.PackageDoc, noDeprecated : Bool) : Void;
+	@:overload @:public @:static public static function generate(configuration : com.sun.tools.doclets.formats.html.ConfigurationImpl, pkg : com.sun.javadoc.PackageDoc, prev : com.sun.javadoc.PackageDoc, next : com.sun.javadoc.PackageDoc, noDeprecated : Bool) : Void;
 	
 	/**
 	* Generate a separate tree file for each package.
 	*/
-	@:overload private function generatePackageTreeFile() : Void;
+	@:overload @:protected private function generatePackageTreeFile() : Void;
 	
 	/**
 	* Get the package tree header.
 	*
 	* @return a content tree for the header
 	*/
-	@:overload private function getPackageTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected private function getPackageTreeHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add a link to the tree for all the packages.
 	*
 	* @param div the content tree to which the link will be added
 	*/
-	@:overload private function addLinkToMainTree(div : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function addLinkToMainTree(div : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get link for the previous package tree file.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link for the next package tree file.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload private function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to the package summary page for the package of this tree.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:protected override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

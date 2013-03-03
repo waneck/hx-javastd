@@ -26,49 +26,49 @@ extern class DefaultElement extends com.sun.org.apache.xerces.internal.impl.xs.o
 	* @author Rahul Srivastava, Sun Microsystems Inc.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String, nodeType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(prefix : String, localpart : String, rawname : String, uri : String, nodeType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getTagName() : String;
+	@:overload @:public public function getTagName() : String;
 	
-	@:overload public function getAttribute(name : String) : String;
+	@:overload @:public public function getAttribute(name : String) : String;
 	
-	@:overload public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
-	@:overload public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagName(name : String) : org.w3c.dom.NodeList;
 	
-	@:overload public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
-	@:overload public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
-	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
-	@:overload public function hasAttribute(name : String) : Bool;
+	@:overload @:public public function hasAttribute(name : String) : Bool;
 	
-	@:overload public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload @:public public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
-	@:overload public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
+	@:overload @:public public function getSchemaTypeInfo() : org.w3c.dom.TypeInfo;
 	
-	@:overload public function setAttribute(name : String, value : String) : Void;
+	@:overload @:public public function setAttribute(name : String, value : String) : Void;
 	
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
-	@:overload public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function removeAttributeNode(oldAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
-	@:overload public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNode(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
-	@:overload public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
+	@:overload @:public public function setAttributeNS(namespaceURI : String, qualifiedName : String, value : String) : Void;
 	
-	@:overload public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function removeAttributeNS(namespaceURI : String, localName : String) : Void;
 	
-	@:overload public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
+	@:overload @:public public function setAttributeNodeNS(newAttr : org.w3c.dom.Attr) : org.w3c.dom.Attr;
 	
-	@:overload public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNode(at : org.w3c.dom.Attr, makeId : Bool) : Void;
 	
-	@:overload public function setIdAttribute(name : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttribute(name : String, makeId : Bool) : Void;
 	
-	@:overload public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
+	@:overload @:public public function setIdAttributeNS(namespaceURI : String, localName : String, makeId : Bool) : Void;
 	
 	
 }

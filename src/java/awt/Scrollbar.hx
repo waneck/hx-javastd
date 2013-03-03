@@ -158,12 +158,12 @@ package java.awt;
 	/**
 	* A constant that indicates a horizontal scroll bar.
 	*/
-	public static var HORIZONTAL(default, null) : Int;
+	@:public @:static @:final public static var HORIZONTAL(default, null) : Int;
 	
 	/**
 	* A constant that indicates a vertical scroll bar.
 	*/
-	public static var VERTICAL(default, null) : Int;
+	@:public @:static @:final public static var VERTICAL(default, null) : Int;
 	
 	/**
 	* Constructs a new vertical scroll bar.
@@ -227,7 +227,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new scroll bar with the specified orientation.
@@ -244,7 +244,7 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(orientation : Int) : Void;
+	@:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Constructs a new scroll bar with the specified orientation,
@@ -271,14 +271,14 @@ package java.awt;
 	* @see #setValues
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(orientation : Int, value : Int, visible : Int, minimum : Int, maximum : Int) : Void;
+	@:overload @:public public function new(orientation : Int, value : Int, visible : Int, minimum : Int, maximum : Int) : Void;
 	
 	/**
 	* Creates the <code>Scrollbar</code>'s peer.  The peer allows you to modify
 	* the appearance of the <code>Scrollbar</code> without changing any of its
 	* functionality.
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Returns the orientation of this scroll bar.
@@ -288,7 +288,7 @@ package java.awt;
 	*               <code>Scrollbar.VERTICAL</code>
 	* @see       java.awt.Scrollbar#setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Sets the orientation for this scroll bar.
@@ -302,7 +302,7 @@ package java.awt;
 	*                   legal value
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function setOrientation(orientation : Int) : Void;
+	@:require(java1) @:overload @:public public function setOrientation(orientation : Int) : Void;
 	
 	/**
 	* Gets the current value of this scroll bar.
@@ -311,7 +311,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#getMinimum
 	* @see         java.awt.Scrollbar#getMaximum
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
 	/**
 	* Sets the value of this scroll bar to the specified value.
@@ -337,7 +337,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#getMinimum
 	* @see         java.awt.Scrollbar#getMaximum
 	*/
-	@:overload public function setValue(newValue : Int) : Void;
+	@:overload @:public public function setValue(newValue : Int) : Void;
 	
 	/**
 	* Gets the minimum value of this scroll bar.
@@ -346,7 +346,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#getValue
 	* @see         java.awt.Scrollbar#getMaximum
 	*/
-	@:overload public function getMinimum() : Int;
+	@:overload @:public public function getMinimum() : Int;
 	
 	/**
 	* Sets the minimum value of this scroll bar.
@@ -372,7 +372,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#setMaximum
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setMinimum(newMinimum : Int) : Void;
+	@:require(java1) @:overload @:public public function setMinimum(newMinimum : Int) : Void;
 	
 	/**
 	* Gets the maximum value of this scroll bar.
@@ -381,7 +381,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#getValue
 	* @see         java.awt.Scrollbar#getMinimum
 	*/
-	@:overload public function getMaximum() : Int;
+	@:overload @:public public function getMaximum() : Int;
 	
 	/**
 	* Sets the maximum value of this scroll bar.
@@ -408,7 +408,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#setMinimum
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setMaximum(newMaximum : Int) : Void;
+	@:require(java1) @:overload @:public public function setMaximum(newMaximum : Int) : Void;
 	
 	/**
 	* Gets the visible amount of this scroll bar.
@@ -432,13 +432,13 @@ package java.awt;
 	* @see         java.awt.Scrollbar#setVisibleAmount
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getVisibleAmount() : Int;
+	@:require(java1) @:overload @:public public function getVisibleAmount() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getVisibleAmount()</code>.
 	*/
-	@:overload public function getVisible() : Int;
+	@:overload @:public public function getVisible() : Int;
 	
 	/**
 	* Sets the visible amount of this scroll bar.
@@ -475,7 +475,7 @@ package java.awt;
 	* @see         java.awt.Scrollbar#setValues
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function setVisibleAmount(newAmount : Int) : Void;
+	@:require(java1) @:overload @:public public function setVisibleAmount(newAmount : Int) : Void;
 	
 	/**
 	* Sets the unit increment for this scroll bar.
@@ -493,13 +493,13 @@ package java.awt;
 	* @see          java.awt.Scrollbar#getUnitIncrement
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function setUnitIncrement(v : Int) : Void;
+	@:require(java1) @:overload @:public public function setUnitIncrement(v : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setUnitIncrement(int)</code>.
 	*/
-	@:overload @:synchronized public function setLineIncrement(v : Int) : Void;
+	@:overload @:public @:synchronized public function setLineIncrement(v : Int) : Void;
 	
 	/**
 	* Gets the unit increment for this scrollbar.
@@ -514,13 +514,13 @@ package java.awt;
 	* @see         java.awt.Scrollbar#setUnitIncrement
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getUnitIncrement() : Int;
+	@:require(java1) @:overload @:public public function getUnitIncrement() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getUnitIncrement()</code>.
 	*/
-	@:overload public function getLineIncrement() : Int;
+	@:overload @:public public function getLineIncrement() : Int;
 	
 	/**
 	* Sets the block increment for this scroll bar.
@@ -538,13 +538,13 @@ package java.awt;
 	* @see          java.awt.Scrollbar#getBlockIncrement
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function setBlockIncrement(v : Int) : Void;
+	@:require(java1) @:overload @:public public function setBlockIncrement(v : Int) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>setBlockIncrement()</code>.
 	*/
-	@:overload @:synchronized public function setPageIncrement(v : Int) : Void;
+	@:overload @:public @:synchronized public function setPageIncrement(v : Int) : Void;
 	
 	/**
 	* Gets the block increment of this scroll bar.
@@ -559,13 +559,13 @@ package java.awt;
 	* @see         java.awt.Scrollbar#setBlockIncrement
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload public function getBlockIncrement() : Int;
+	@:require(java1) @:overload @:public public function getBlockIncrement() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getBlockIncrement()</code>.
 	*/
-	@:overload public function getPageIncrement() : Int;
+	@:overload @:public public function getPageIncrement() : Int;
 	
 	/**
 	* Sets the values of four properties for this scroll bar:
@@ -600,7 +600,7 @@ package java.awt;
 	* @see        #setVisibleAmount
 	* @see        #setValue
 	*/
-	@:overload public function setValues(value : Int, visible : Int, minimum : Int, maximum : Int) : Void;
+	@:overload @:public public function setValues(value : Int, visible : Int, minimum : Int, maximum : Int) : Void;
 	
 	/**
 	* Returns true if the value is in the process of changing as a
@@ -610,7 +610,7 @@ package java.awt;
 	* @see #setValueIsAdjusting
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getValueIsAdjusting() : Bool;
+	@:require(java4) @:overload @:public public function getValueIsAdjusting() : Bool;
 	
 	/**
 	* Sets the <code>valueIsAdjusting</code> property.
@@ -619,7 +619,7 @@ package java.awt;
 	* @see #getValueIsAdjusting
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setValueIsAdjusting(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setValueIsAdjusting(b : Bool) : Void;
 	
 	/**
 	* Adds the specified adjustment listener to receive instances of
@@ -636,7 +636,7 @@ package java.awt;
 	* @see          java.awt.event.AdjustmentListener
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
 	
 	/**
 	* Removes the specified adjustment listener so that it no longer
@@ -653,7 +653,7 @@ package java.awt;
 	* @see             java.awt.event.AdjustmentListener
 	* @since           JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeAdjustmentListener(l : java.awt.event.AdjustmentListener) : Void;
 	
 	/**
 	* Returns an array of all the adjustment listeners
@@ -668,7 +668,7 @@ package java.awt;
 	* @see             java.awt.event.AdjustmentListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getAdjustmentListeners() : java.NativeArray<java.awt.event.AdjustmentListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getAdjustmentListeners() : java.NativeArray<java.awt.event.AdjustmentListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -700,7 +700,7 @@ package java.awt;
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this scroll bar. If the event is an
@@ -717,7 +717,7 @@ package java.awt;
 	* @see          java.awt.Scrollbar#processAdjustmentEvent
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes adjustment events occurring on this
@@ -743,7 +743,7 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processAdjustmentEvent(e : java.awt.event.AdjustmentEvent) : Void;
+	@:require(java1) @:overload @:protected private function processAdjustmentEvent(e : java.awt.event.AdjustmentEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Scrollbar</code>.
@@ -754,7 +754,7 @@ package java.awt;
 	*
 	* @return      the parameter string of this scroll bar
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -767,7 +767,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>ScrollBar</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -787,7 +787,7 @@ package java.awt;
 	*     containing the current state of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -795,7 +795,7 @@ package java.awt;
 	* @return an instance of <code>AccessibleRole</code>
 	*     describing the role of the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the <code>AccessibleValue</code> associated with this
@@ -806,35 +806,35 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the accessible value of this object.
 	*
 	* @return The current value of this object.
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
 	*
 	* @return True if the value was set.
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum accessible value of this object.
 	*
 	* @return The minimum value of this object.
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum accessible value of this object.
 	*
 	* @return The maximum value of this object.
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	
 }

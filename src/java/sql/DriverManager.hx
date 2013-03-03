@@ -35,7 +35,7 @@ extern class DriverManager
 	* @see #setLogWriter
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getLogWriter() : java.io.PrintWriter;
+	@:require(java2) @:overload @:public @:static public static function getLogWriter() : java.io.PrintWriter;
 	
 	/**
 	* Sets the logging/tracing <code>PrintWriter</code> object
@@ -67,7 +67,7 @@ extern class DriverManager
 	* @see #getLogWriter
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function setLogWriter(out : java.io.PrintWriter) : Void;
+	@:require(java2) @:overload @:public @:static public static function setLogWriter(out : java.io.PrintWriter) : Void;
 	
 	/**
 	* Attempts to establish a connection to the given database URL.
@@ -82,7 +82,7 @@ extern class DriverManager
 	* @return a Connection to the URL
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public static function getConnection(url : String, info : java.util.Properties) : java.sql.Connection;
+	@:overload @:public @:static public static function getConnection(url : String, info : java.util.Properties) : java.sql.Connection;
 	
 	/**
 	* Attempts to establish a connection to the given database URL.
@@ -97,7 +97,7 @@ extern class DriverManager
 	* @return a connection to the URL
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public static function getConnection(url : String, user : String, password : String) : java.sql.Connection;
+	@:overload @:public @:static public static function getConnection(url : String, user : String, password : String) : java.sql.Connection;
 	
 	/**
 	* Attempts to establish a connection to the given database URL.
@@ -109,7 +109,7 @@ extern class DriverManager
 	* @return a connection to the URL
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public static function getConnection(url : String) : java.sql.Connection;
+	@:overload @:public @:static public static function getConnection(url : String) : java.sql.Connection;
 	
 	/**
 	* Attempts to locate a driver that understands the given URL.
@@ -122,7 +122,7 @@ extern class DriverManager
 	* that can connect to the given URL
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload public static function getDriver(url : String) : java.sql.Driver;
+	@:overload @:public @:static public static function getDriver(url : String) : java.sql.Driver;
 	
 	/**
 	* Registers the given driver with the <code>DriverManager</code>.
@@ -134,7 +134,7 @@ extern class DriverManager
 	*               <code>DriverManager</code>
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload @:synchronized public static function registerDriver(driver : java.sql.Driver) : Void;
+	@:overload @:public @:static @:synchronized public static function registerDriver(driver : java.sql.Driver) : Void;
 	
 	/**
 	* Drops a driver from the <code>DriverManager</code>'s list.
@@ -143,7 +143,7 @@ extern class DriverManager
 	* @param driver the JDBC Driver to drop
 	* @exception SQLException if a database access error occurs
 	*/
-	@:overload @:synchronized public static function deregisterDriver(driver : java.sql.Driver) : Void;
+	@:overload @:public @:static @:synchronized public static function deregisterDriver(driver : java.sql.Driver) : Void;
 	
 	/**
 	* Retrieves an Enumeration with all of the currently loaded JDBC drivers
@@ -154,7 +154,7 @@ extern class DriverManager
 	*
 	* @return the list of JDBC Drivers loaded by the caller's class loader
 	*/
-	@:overload public static function getDrivers() : java.util.Enumeration<java.sql.Driver>;
+	@:overload @:public @:static public static function getDrivers() : java.util.Enumeration<java.sql.Driver>;
 	
 	/**
 	* Sets the maximum time in seconds that a driver will wait
@@ -163,7 +163,7 @@ extern class DriverManager
 	* @param seconds the login time limit in seconds; zero means there is no limit
 	* @see #getLoginTimeout
 	*/
-	@:overload public static function setLoginTimeout(seconds : Int) : Void;
+	@:overload @:public @:static public static function setLoginTimeout(seconds : Int) : Void;
 	
 	/**
 	* Gets the maximum time in seconds that a driver can wait
@@ -172,7 +172,7 @@ extern class DriverManager
 	* @return the driver login time limit in seconds
 	* @see #setLoginTimeout
 	*/
-	@:overload public static function getLoginTimeout() : Int;
+	@:overload @:public @:static public static function getLoginTimeout() : Int;
 	
 	/**
 	* Sets the logging/tracing PrintStream that is used
@@ -193,7 +193,7 @@ extern class DriverManager
 	* @see SecurityManager#checkPermission
 	* @see #getLogStream
 	*/
-	@:overload public static function setLogStream(out : java.io.PrintStream) : Void;
+	@:overload @:public @:static public static function setLogStream(out : java.io.PrintStream) : Void;
 	
 	/**
 	* Retrieves the logging/tracing PrintStream that is used by the <code>DriverManager</code>
@@ -203,24 +203,24 @@ extern class DriverManager
 	* @deprecated
 	* @see #setLogStream
 	*/
-	@:overload public static function getLogStream() : java.io.PrintStream;
+	@:overload @:public @:static public static function getLogStream() : java.io.PrintStream;
 	
 	/**
 	* Prints a message to the current JDBC log stream.
 	*
 	* @param message a log or tracing message
 	*/
-	@:overload public static function println(message : String) : Void;
+	@:overload @:public @:static public static function println(message : String) : Void;
 	
 	
 }
 @:internal extern class DriverInfo
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

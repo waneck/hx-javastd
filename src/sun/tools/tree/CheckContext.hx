@@ -30,11 +30,11 @@ package sun.tools.tree;
 */
 extern class CheckContext extends sun.tools.tree.Context
 {
-	public var vsBreak : sun.tools.tree.Vset;
+	@:public public var vsBreak : sun.tools.tree.Vset;
 	
-	public var vsContinue : sun.tools.tree.Vset;
+	@:public public var vsContinue : sun.tools.tree.Vset;
 	
-	public var vsTryExit : sun.tools.tree.Vset;
+	@:public public var vsTryExit : sun.tools.tree.Vset;
 	
 	
 }

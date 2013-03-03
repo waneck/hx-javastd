@@ -28,11 +28,11 @@ package com.sun.codemodel.internal;
 */
 extern class JFieldRef extends com.sun.codemodel.internal.JExpressionImpl implements com.sun.codemodel.internal.JAssignmentTarget
 {
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload public function assign(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function assign(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function assignPlus(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public public function assignPlus(rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	
 }

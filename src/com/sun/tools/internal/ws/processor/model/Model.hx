@@ -31,53 +31,53 @@ package com.sun.tools.internal.ws.processor.model;
 */
 extern class Model extends com.sun.tools.internal.ws.processor.model.ModelObject
 {
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getTargetNamespaceURI() : String;
+	@:overload @:public public function getTargetNamespaceURI() : String;
 	
-	@:overload public function setTargetNamespaceURI(s : String) : Void;
+	@:overload @:public public function setTargetNamespaceURI(s : String) : Void;
 	
-	@:overload public function addService(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload @:public public function addService(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
-	@:overload public function getServiceByName(name : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.Service;
-	
-	/* serialization */
-	@:overload public function getServices() : java.util.List<com.sun.tools.internal.ws.processor.model.Service>;
+	@:overload @:public public function getServiceByName(name : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.Service;
 	
 	/* serialization */
-	@:overload public function setServices(l : java.util.List<com.sun.tools.internal.ws.processor.model.Service>) : Void;
-	
-	@:overload public function addExtraType(type : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
-	
-	@:overload public function getExtraTypes() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function getServices() : java.util.List<com.sun.tools.internal.ws.processor.model.Service>;
 	
 	/* serialization */
-	@:overload public function getExtraTypesSet() : java.util.Set<com.sun.tools.internal.ws.processor.model.AbstractType>;
+	@:overload @:public public function setServices(l : java.util.List<com.sun.tools.internal.ws.processor.model.Service>) : Void;
+	
+	@:overload @:public public function addExtraType(type : com.sun.tools.internal.ws.processor.model.AbstractType) : Void;
+	
+	@:overload @:public public function getExtraTypes() : java.util.Iterator<Dynamic>;
 	
 	/* serialization */
-	@:overload public function setExtraTypesSet(s : java.util.Set<com.sun.tools.internal.ws.processor.model.AbstractType>) : Void;
+	@:overload @:public public function getExtraTypesSet() : java.util.Set<com.sun.tools.internal.ws.processor.model.AbstractType>;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	/* serialization */
+	@:overload @:public public function setExtraTypesSet(s : java.util.Set<com.sun.tools.internal.ws.processor.model.AbstractType>) : Void;
+	
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	/**
 	* @return the source version
 	*/
-	@:overload public function getSource() : String;
+	@:overload @:public public function getSource() : String;
 	
 	/**
 	* @param string
 	*/
-	@:overload public function setSource(string : String) : Void;
+	@:overload @:public public function setSource(string : String) : Void;
 	
-	@:overload public function setJAXBModel(jaxBModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
+	@:overload @:public public function setJAXBModel(jaxBModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
 	
-	@:overload public function getJAXBModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
+	@:overload @:public public function getJAXBModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
 	
 	
 }

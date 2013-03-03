@@ -34,9 +34,9 @@ extern class PrintingStatus
 	*               using this <code>PrintingStatus</code> dialog
 	* @return a <code>PrintingStatus</code> object
 	*/
-	@:overload public static function createPrintingStatus(parent : java.awt.Component, job : java.awt.print.PrinterJob) : sun.swing.PrintingStatus;
+	@:overload @:public @:static public static function createPrintingStatus(parent : java.awt.Component, job : java.awt.print.PrinterJob) : sun.swing.PrintingStatus;
 	
-	@:overload private function new(parent : java.awt.Component, job : java.awt.print.PrinterJob) : Void;
+	@:overload @:protected private function new(parent : java.awt.Component, job : java.awt.print.PrinterJob) : Void;
 	
 	/**
 	* Shows PrintingStatus dialog.
@@ -47,21 +47,21 @@ extern class PrintingStatus
 	*                <code>false</code> otherwise.
 	* @see #dispose
 	*/
-	@:overload public function showModal(isModal : Bool) : Void;
+	@:overload @:public public function showModal(isModal : Bool) : Void;
 	
 	/**
 	* Disposes modal PrintingStatus dialog
 	*
 	* @see #showModal(boolean)
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Returns whether the printng was aborted using this PrintingStatus
 	*
 	* @return whether the printng was aborted using this PrintingStatus
 	*/
-	@:overload public function isAborted() : Bool;
+	@:overload @:public public function isAborted() : Bool;
 	
 	/**
 	* Returns printable which is used to track the current page being
@@ -72,15 +72,15 @@ extern class PrintingStatus
 	*         printed in this PrintingStatus
 	* @throws NullPointerException if <code>printable</code> is <code>null</code>
 	*/
-	@:overload public function createNotificationPrintable(printable : java.awt.print.Printable) : java.awt.print.Printable;
+	@:overload @:public public function createNotificationPrintable(printable : java.awt.print.Printable) : java.awt.print.Printable;
 	
 	
 }
 @:native('sun$swing$PrintingStatus$NotificationPrintable') @:internal extern class PrintingStatus_NotificationPrintable implements java.awt.print.Printable
 {
-	@:overload public function new(delegatee : java.awt.print.Printable) : Void;
+	@:overload @:public public function new(delegatee : java.awt.print.Printable) : Void;
 	
-	@:overload public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
+	@:overload @:public public function print(graphics : java.awt.Graphics, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : Int;
 	
 	
 }

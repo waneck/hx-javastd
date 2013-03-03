@@ -25,14 +25,14 @@ package com.sun.xml.internal.xsom.util;
 */
 extern class TypeClosure extends com.sun.xml.internal.xsom.util.TypeSet
 {
-	@:overload public function new(typeSet : com.sun.xml.internal.xsom.util.TypeSet) : Void;
+	@:overload @:public public function new(typeSet : com.sun.xml.internal.xsom.util.TypeSet) : Void;
 	
 	/* (non-Javadoc)
 	* @see com.sun.xml.internal.xsom.util.TypeSet#contains(com.sun.xml.internal.xsom.XSDeclaration)
 	*
 	* transitive closure variation on the contains method.
 	*/
-	@:overload public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
+	@:overload @:public override public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
 	
 	
 }

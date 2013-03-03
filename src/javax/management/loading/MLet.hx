@@ -29,7 +29,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	/**
 	* Constructs a new MLet using the default delegation parent ClassLoader.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new MLet for the specified URLs using the default
@@ -40,7 +40,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @param  urls  The URLs from which to load classes and resources.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>) : Void;
 	
 	/**
 	* Constructs a new MLet for the given URLs. The URLs will be
@@ -53,7 +53,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @param  parent The parent class loader for delegation.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Constructs a new MLet for the specified URLs, parent class
@@ -67,7 +67,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @param  factory  The URLStreamHandlerFactory to use when creating URLs.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, factory : java.net.URLStreamHandlerFactory) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, factory : java.net.URLStreamHandlerFactory) : Void;
 	
 	/**
 	* Constructs a new MLet for the specified URLs using the default
@@ -81,7 +81,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* to its containing MBeanServer's {@link ClassLoaderRepository}.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, delegateToCLR : Bool) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, delegateToCLR : Bool) : Void;
 	
 	/**
 	* Constructs a new MLet for the given URLs. The URLs will be
@@ -97,7 +97,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* to its containing MBeanServer's {@link ClassLoaderRepository}.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, delegateToCLR : Bool) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, delegateToCLR : Bool) : Void;
 	
 	/**
 	* Constructs a new MLet for the specified URLs, parent class
@@ -114,26 +114,26 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* to its containing MBeanServer's {@link ClassLoaderRepository}.
 	*
 	*/
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, factory : java.net.URLStreamHandlerFactory, delegateToCLR : Bool) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader, factory : java.net.URLStreamHandlerFactory, delegateToCLR : Bool) : Void;
 	
 	/**
 	* Appends the specified URL to the list of URLs to search for classes and
 	* resources.
 	*/
-	@:overload override public function addURL(url : java.net.URL) : Void;
+	@:overload @:public override public function addURL(url : java.net.URL) : Void;
 	
 	/**
 	* Appends the specified URL to the list of URLs to search for classes and
 	* resources.
 	* @exception ServiceNotFoundException The specified URL is malformed.
 	*/
-	@:overload public function addURL(url : String) : Void;
+	@:overload @:public public function addURL(url : String) : Void;
 	
 	/** Returns the search path of URLs for loading classes and resources.
 	* This includes the original list of URLs specified to the constructor,
 	* along with any URLs subsequently appended by the addURL() method.
 	*/
-	@:overload override public function getURLs() : java.NativeArray<java.net.URL>;
+	@:overload @:public override public function getURLs() : java.NativeArray<java.net.URL>;
 	
 	/**
 	* Loads a text file containing MLET tags that define the MBeans to
@@ -153,7 +153,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* null.
 	* @exception IllegalStateException MLet MBean is not registered with an MBeanServer.
 	*/
-	@:overload public function getMBeansFromURL(url : java.net.URL) : java.util.Set<Dynamic>;
+	@:overload @:public public function getMBeansFromURL(url : java.net.URL) : java.util.Set<Dynamic>;
 	
 	/**
 	* Loads a text file containing MLET tags that define the MBeans to
@@ -178,7 +178,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* with an MBeanServer.
 	*
 	*/
-	@:overload public function getMBeansFromURL(url : String) : java.util.Set<Dynamic>;
+	@:overload @:public public function getMBeansFromURL(url : String) : java.util.Set<Dynamic>;
 	
 	/**
 	* Gets the current directory used by the library loader for
@@ -191,7 +191,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @throws UnsupportedOperationException if this implementation
 	* does not support storing native libraries in this way.
 	*/
-	@:overload @:synchronized public function getLibraryDirectory() : String;
+	@:overload @:public @:synchronized public function getLibraryDirectory() : String;
 	
 	/**
 	* Sets the directory used by the library loader for storing
@@ -204,7 +204,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @throws UnsupportedOperationException if this implementation
 	* does not support storing native libraries in this way.
 	*/
-	@:overload @:synchronized public function setLibraryDirectory(libdir : String) : Void;
+	@:overload @:public @:synchronized public function setLibraryDirectory(libdir : String) : Void;
 	
 	/**
 	* Allows the m-let to perform any operations it needs before
@@ -220,7 +220,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @exception java.lang.Exception This exception should be caught by the MBean server and re-thrown
 	*as an MBeanRegistrationException.
 	*/
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Allows the m-let to perform any operations needed after having been
@@ -231,7 +231,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* false means that either the registration phase has failed.
 	*
 	*/
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* Allows the m-let to perform any operations it needs before being unregistered
@@ -241,13 +241,13 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* by the MBean server and re-thrown as an
 	* MBeanRegistrationException.
 	*/
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
 	/**
 	* Allows the m-let to perform any operations needed after having been
 	* unregistered in the MBean server.
 	*/
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	/**
 	* <p>Save this MLet's contents to the given {@link ObjectOutput}.
@@ -267,7 +267,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @exception UnsupportedOperationException If this
 	* implementation does not support this operation.
 	*/
-	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
+	@:overload @:public public function writeExternal(out : java.io.ObjectOutput) : Void;
 	
 	/**
 	* <p>Restore this MLet's contents from the given {@link ObjectInput}.
@@ -289,7 +289,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @exception UnsupportedOperationException if this
 	* implementation does not support this operation.
 	*/
-	@:overload public function readExternal(_in : java.io.ObjectInput) : Void;
+	@:overload @:public public function readExternal(_in : java.io.ObjectInput) : Void;
 	
 	/**
 	* <p>Load a class, using the given {@link ClassLoaderRepository} if
@@ -308,7 +308,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	*            ClassLoaderRepository.
 	*
 	*/
-	@:overload @:synchronized public function loadClass(name : String, clr : javax.management.loading.ClassLoaderRepository) : Class<Dynamic>;
+	@:overload @:public @:synchronized public function loadClass(name : String, clr : javax.management.loading.ClassLoaderRepository) : Class<Dynamic>;
 	
 	/**
 	* This is the main method for class loaders that is being redefined.
@@ -320,7 +320,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* @exception ClassNotFoundException The specified class could not be
 	*            found.
 	*/
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Returns the absolute path name of a native library. The VM
@@ -361,7 +361,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	*
 	* @return The absolute path of the native library.
 	*/
-	@:overload private function findLibrary(libname : String) : String;
+	@:overload @:protected override private function findLibrary(libname : String) : String;
 	
 	/**
 	* <p>This method is to be overridden when extending this service to
@@ -389,7 +389,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	* {@link #getMBeansFromURL getMBeansFromURL}.
 	*
 	*/
-	@:overload private function check(version : String, codebase : java.net.URL, jarfile : String, mlet : javax.management.loading.MLetContent) : java.net.URL;
+	@:overload @:protected private function check(version : String, codebase : java.net.URL, jarfile : String, mlet : javax.management.loading.MLetContent) : java.net.URL;
 	
 	
 }

@@ -36,33 +36,33 @@ extern class Font2D
 	* family of its siblings which were assigned FONT_CONFIG rank. Giving
 	* them the same rank is the easy solution for now at least.
 	*/
-	public static var FONT_CONFIG_RANK(default, null) : Int;
+	@:public @:static @:final public static var FONT_CONFIG_RANK(default, null) : Int;
 	
-	public static var JRE_RANK(default, null) : Int;
+	@:public @:static @:final public static var JRE_RANK(default, null) : Int;
 	
-	public static var TTF_RANK(default, null) : Int;
+	@:public @:static @:final public static var TTF_RANK(default, null) : Int;
 	
-	public static var TYPE1_RANK(default, null) : Int;
+	@:public @:static @:final public static var TYPE1_RANK(default, null) : Int;
 	
-	public static var NATIVE_RANK(default, null) : Int;
+	@:public @:static @:final public static var NATIVE_RANK(default, null) : Int;
 	
-	public static var UNKNOWN_RANK(default, null) : Int;
+	@:public @:static @:final public static var UNKNOWN_RANK(default, null) : Int;
 	
-	public static var DEFAULT_RANK(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_RANK(default, null) : Int;
 	
-	public var handle : sun.font.Font2DHandle;
+	@:public public var handle : sun.font.Font2DHandle;
 	
-	private var familyName : String;
+	@:protected private var familyName : String;
 	
 	/* Family font name (english) */
-	private var fullName : String;
+	@:protected private var fullName : String;
 	
 	/* Full font name (english)   */
-	private var style : Int;
+	@:protected private var style : Int;
 	
-	private var family : sun.font.FontFamily;
+	@:protected private var family : sun.font.FontFamily;
 	
-	private var fontRank : Int;
+	@:protected private var fontRank : Int;
 	
 	/*
 	* A mapper can be independent of the strike.
@@ -71,7 +71,7 @@ extern class Font2D
 	* and so the mapper would be useless if its native portion was
 	* freed when the scaler was GC'd.
 	*/
-	private var mapper : sun.font.CharToGlyphMapper;
+	@:protected private var mapper : sun.font.CharToGlyphMapper;
 	
 	/*
 	* The strike cache is maintained per "Font2D" as that is the
@@ -80,7 +80,7 @@ extern class Font2D
 	* the map will have fewer entries, and there's no need to try to
 	* make the Font2D part of the key.
 	*/
-	private var strikeCache : java.util.concurrent.ConcurrentHashMap<sun.font.FontStrikeDesc, java.lang.ref.Reference<Dynamic>>;
+	@:protected private var strikeCache : java.util.concurrent.ConcurrentHashMap<sun.font.FontStrikeDesc, java.lang.ref.Reference<Dynamic>>;
 	
 	/* Store the last Strike in a Reference object.
 	* Similarly to the strike that was stored on a C++ font object,
@@ -93,22 +93,22 @@ extern class Font2D
 	* This pre-supposes that a FontStrike is a shareable object, which
 	* it should.
 	*/
-	private var lastFontStrike : java.lang.ref.Reference<Dynamic>;
+	@:protected private var lastFontStrike : java.lang.ref.Reference<Dynamic>;
 	
 	/* Returns the "real" style of this Font2D. Eg the font face
 	* Lucida Sans Bold" has a real style of Font.BOLD, even though
 	* it may be able to used to simulate bold italic
 	*/
-	@:overload public function getStyle() : Int;
+	@:overload @:public public function getStyle() : Int;
 	
-	@:overload private function setStyle() : Void;
+	@:overload @:protected private function setStyle() : Void;
 	
 	/* This isn't very efficient but its infrequently used.
 	* StandardGlyphVector uses it when the client assigns the glyph codes.
 	* These may not be valid. This validates them substituting the missing
 	* glyph elsewhere.
 	*/
-	@:overload private function getValidatedGlyphCode(glyphCode : Int) : Int;
+	@:overload @:protected private function getValidatedGlyphCode(glyphCode : Int) : Int;
 	
 	/* this may be useful for APIs like canDisplay where the answer
 	* is dependent on the font and its scaler, but not the strike.
@@ -117,7 +117,7 @@ extern class Font2D
 	* there's a good chance that the next call will be to get exactly that
 	* strike.
 	*/
-	@:overload public function getStrike(font : java.awt.Font) : sun.font.FontStrike;
+	@:overload @:public public function getStrike(font : java.awt.Font) : sun.font.FontStrike;
 	
 	/* SunGraphics2D has font, tx, aa and fm. From this info
 	* can get a Strike object from the cache, creating it if necessary.
@@ -140,11 +140,11 @@ extern class Font2D
 	* If there is any problem then a small synchronized block would be
 	* required with its attendant consequences for MP scaleability.
 	*/
-	@:overload public function getStrike(font : java.awt.Font, devTx : java.awt.geom.AffineTransform, aa : Int, fm : Int) : sun.font.FontStrike;
+	@:overload @:public public function getStrike(font : java.awt.Font, devTx : java.awt.geom.AffineTransform, aa : Int, fm : Int) : sun.font.FontStrike;
 	
-	@:overload public function getStrike(font : java.awt.Font, devTx : java.awt.geom.AffineTransform, glyphTx : java.awt.geom.AffineTransform, aa : Int, fm : Int) : sun.font.FontStrike;
+	@:overload @:public public function getStrike(font : java.awt.Font, devTx : java.awt.geom.AffineTransform, glyphTx : java.awt.geom.AffineTransform, aa : Int, fm : Int) : sun.font.FontStrike;
 	
-	@:overload public function getStrike(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.font.FontStrike;
+	@:overload @:public public function getStrike(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.font.FontStrike;
 	
 	/**
 	* The length of the metrics array must be >= 8.  This method will
@@ -158,7 +158,7 @@ extern class Font2D
 	*    metrics[6]: underline offset
 	*    metrics[7]: underline thickness
 	*/
-	@:overload public function getFontMetrics(font : java.awt.Font, at : java.awt.geom.AffineTransform, aaHint : Dynamic, fmHint : Dynamic, metrics : java.NativeArray<Single>) : Void;
+	@:overload @:public public function getFontMetrics(font : java.awt.Font, at : java.awt.geom.AffineTransform, aaHint : Dynamic, fmHint : Dynamic, metrics : java.NativeArray<Single>) : Void;
 	
 	/**
 	* The length of the metrics array must be >= offset+4, and offset must be
@@ -172,7 +172,7 @@ extern class Font2D
 	* Note that this implementation simply returns default values;
 	* subclasses can override this method to provide more accurate values.
 	*/
-	@:overload public function getStyleMetrics(pointSize : Single, metrics : java.NativeArray<Single>, offset : Int) : Void;
+	@:overload @:public public function getStyleMetrics(pointSize : Single, metrics : java.NativeArray<Single>, offset : Int) : Void;
 	
 	/**
 	* The length of the metrics array must be >= 4.  This method will
@@ -182,41 +182,41 @@ extern class Font2D
 	*    metrics[2]: leading
 	*    metrics[3]: max advance
 	*/
-	@:overload public function getFontMetrics(font : java.awt.Font, frc : java.awt.font.FontRenderContext, metrics : java.NativeArray<Single>) : Void;
+	@:overload @:public public function getFontMetrics(font : java.awt.Font, frc : java.awt.font.FontRenderContext, metrics : java.NativeArray<Single>) : Void;
 	
 	/* for layout code */
-	@:overload private function getUnitsPerEm() : haxe.Int64;
+	@:overload @:protected private function getUnitsPerEm() : haxe.Int64;
 	
-	@:overload public function canDoStyle(style : Int) : Bool;
+	@:overload @:public public function canDoStyle(style : Int) : Bool;
 	
 	/*
 	* All the important subclasses override this which is principally for
 	* the TrueType 'gasp' table.
 	*/
-	@:overload public function useAAForPtSize(ptsize : Int) : Bool;
+	@:overload @:public public function useAAForPtSize(ptsize : Int) : Bool;
 	
-	@:overload public function hasSupplementaryChars() : Bool;
+	@:overload @:public public function hasSupplementaryChars() : Bool;
 	
 	/* The following methods implement public methods on java.awt.Font */
-	@:overload public function getPostscriptName() : String;
+	@:overload @:public public function getPostscriptName() : String;
 	
-	@:overload public function getFontName(l : java.util.Locale) : String;
+	@:overload @:public public function getFontName(l : java.util.Locale) : String;
 	
-	@:overload public function getFamilyName(l : java.util.Locale) : String;
+	@:overload @:public public function getFamilyName(l : java.util.Locale) : String;
 	
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public public function getNumGlyphs() : Int;
 	
-	@:overload public function charToGlyph(wchar : Int) : Int;
+	@:overload @:public public function charToGlyph(wchar : Int) : Int;
 	
-	@:overload public function getMissingGlyphCode() : Int;
+	@:overload @:public public function getMissingGlyphCode() : Int;
 	
-	@:overload public function canDisplay(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function canDisplay(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function canDisplay(cp : Int) : Bool;
+	@:overload @:public public function canDisplay(cp : Int) : Bool;
 	
-	@:overload public function getBaselineFor(c : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload @:public public function getBaselineFor(c : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
-	@:overload public function getItalicAngle(font : java.awt.Font, at : java.awt.geom.AffineTransform, aaHint : Dynamic, fmHint : Dynamic) : Single;
+	@:overload @:public public function getItalicAngle(font : java.awt.Font, at : java.awt.geom.AffineTransform, aaHint : Dynamic, fmHint : Dynamic) : Single;
 	
 	
 }

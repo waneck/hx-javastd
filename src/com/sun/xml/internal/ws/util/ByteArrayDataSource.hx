@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.util;
 */
 extern class ByteArrayDataSource implements javax.activation.DataSource
 {
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, contentType : String) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, contentType : String) : Void;
 	
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int, contentType : String) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int, contentType : String) : Void;
 	
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int, contentType : String) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int, contentType : String) : Void;
 	
-	@:overload public function getContentType() : String;
+	@:overload @:public public function getContentType() : String;
 	
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	
 }

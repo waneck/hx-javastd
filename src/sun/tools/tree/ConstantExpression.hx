@@ -33,12 +33,12 @@ package sun.tools.tree;
 	/**
 	* Constructor
 	*/
-	@:overload public function new(op : Int, where : haxe.Int64, type : sun.tools.java.Type) : Void;
+	@:overload @:public public function new(op : Int, where : haxe.Int64, type : sun.tools.java.Type) : Void;
 	
 	/**
 	* Return true if constant
 	*/
-	@:overload override public function isConstant() : Bool;
+	@:overload @:public override public function isConstant() : Bool;
 	
 	
 }

@@ -29,32 +29,32 @@ extern class BuildStep
 	* result code associated with a certificate that may continue a path from
 	* the current certificate.
 	*/
-	public static var POSSIBLE(default, null) : Int;
+	@:public @:static @:final public static var POSSIBLE(default, null) : Int;
 	
 	/**
 	* result code associated with a certificate that was tried, but that
 	* represents an unsuccessful path, so the certificate has been backed out
 	* to allow backtracking to the next possible path.
 	*/
-	public static var BACK(default, null) : Int;
+	@:public @:static @:final public static var BACK(default, null) : Int;
 	
 	/**
 	* result code associated with a certificate that successfully continues the
 	* current path, but does not yet reach the target.
 	*/
-	public static var FOLLOW(default, null) : Int;
+	@:public @:static @:final public static var FOLLOW(default, null) : Int;
 	
 	/**
 	* result code associated with a certificate that represents the end of the
 	* last possible path, where no path successfully reached the target.
 	*/
-	public static var FAIL(default, null) : Int;
+	@:public @:static @:final public static var FAIL(default, null) : Int;
 	
 	/**
 	* result code associated with a certificate that represents the end of a
 	* path that successfully reaches the target.
 	*/
-	public static var SUCCEED(default, null) : Int;
+	@:public @:static @:final public static var SUCCEED(default, null) : Int;
 	
 	/**
 	* construct a BuildStep
@@ -63,21 +63,21 @@ extern class BuildStep
 	* @param res result, where result is one of POSSIBLE, BACK,
 	*            FOLLOW, FAIL, SUCCEED
 	*/
-	@:overload public function new(vtx : sun.security.provider.certpath.Vertex, res : Int) : Void;
+	@:overload @:public public function new(vtx : sun.security.provider.certpath.Vertex, res : Int) : Void;
 	
 	/**
 	* return vertex description for this build step
 	*
 	* @returns Vertex
 	*/
-	@:overload public function getVertex() : sun.security.provider.certpath.Vertex;
+	@:overload @:public public function getVertex() : sun.security.provider.certpath.Vertex;
 	
 	/**
 	* return the certificate associated with this build step
 	*
 	* @returns X509Certificate
 	*/
-	@:overload public function getCertificate() : java.security.cert.X509Certificate;
+	@:overload @:public public function getCertificate() : java.security.cert.X509Certificate;
 	
 	/**
 	* return string form of issuer name from certificate associated with this
@@ -85,7 +85,7 @@ extern class BuildStep
 	*
 	* @returns String form of issuer name or null, if no certificate.
 	*/
-	@:overload public function getIssuerName() : String;
+	@:overload @:public public function getIssuerName() : String;
 	
 	/**
 	* return string form of issuer name from certificate associated with this
@@ -97,7 +97,7 @@ extern class BuildStep
 	* @returns String form of issuer name or defaultName, if no certificate or
 	* exception received while trying to extract issuer name from certificate.
 	*/
-	@:overload public function getIssuerName(defaultName : String) : String;
+	@:overload @:public public function getIssuerName(defaultName : String) : String;
 	
 	/**
 	* return string form of subject name from certificate associated with this
@@ -105,7 +105,7 @@ extern class BuildStep
 	*
 	* @returns String form of subject name or null, if no certificate.
 	*/
-	@:overload public function getSubjectName() : String;
+	@:overload @:public public function getSubjectName() : String;
 	
 	/**
 	* return string form of subject name from certificate associated with this
@@ -119,14 +119,14 @@ extern class BuildStep
 	* if an exception was received while attempting to extract the subject name
 	* from the certificate.
 	*/
-	@:overload public function getSubjectName(defaultName : String) : String;
+	@:overload @:public public function getSubjectName(defaultName : String) : String;
 	
 	/**
 	* return the exception associated with this build step.
 	*
 	* @returns Throwable
 	*/
-	@:overload public function getThrowable() : java.lang.Throwable;
+	@:overload @:public public function getThrowable() : java.lang.Throwable;
 	
 	/**
 	* return the result code associated with this build step.  The result codes
@@ -134,7 +134,7 @@ extern class BuildStep
 	*
 	* @returns int result code
 	*/
-	@:overload public function getResult() : Int;
+	@:overload @:public public function getResult() : Int;
 	
 	/**
 	* return a string representing the meaning of the result code associated
@@ -143,7 +143,7 @@ extern class BuildStep
 	* @param   res    result code
 	* @returns String string representing meaning of the result code
 	*/
-	@:overload public function resultToString(res : Int) : String;
+	@:overload @:public public function resultToString(res : Int) : String;
 	
 	/**
 	* return a string representation of this build step, showing minimal
@@ -151,7 +151,7 @@ extern class BuildStep
 	*
 	* @returns String
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* return a string representation of this build step, showing all detail of
@@ -160,7 +160,7 @@ extern class BuildStep
 	*
 	* @returns String
 	*/
-	@:overload public function verboseToString() : String;
+	@:overload @:public public function verboseToString() : String;
 	
 	/**
 	* return a string representation of this build step, including all possible
@@ -168,7 +168,7 @@ extern class BuildStep
 	*
 	* @returns String
 	*/
-	@:overload public function fullToString() : String;
+	@:overload @:public public function fullToString() : String;
 	
 	
 }

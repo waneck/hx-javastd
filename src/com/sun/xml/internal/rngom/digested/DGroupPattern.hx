@@ -49,9 +49,9 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DGroupPattern extends com.sun.xml.internal.rngom.digested.DContainerPattern
 {
-	@:overload override public function isNullable() : Bool;
+	@:overload @:public override public function isNullable() : Bool;
 	
-	@:overload override public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
+	@:overload @:public override public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
 	
 	
 }

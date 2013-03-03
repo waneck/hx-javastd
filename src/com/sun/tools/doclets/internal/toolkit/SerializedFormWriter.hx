@@ -41,21 +41,21 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param header the header to write.
 	* @return the header content tree
 	*/
-	@:overload public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getHeader(header : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the serialized form summaries header.
 	*
 	* @return the serialized form summary header tree
 	*/
-	@:overload public function getSerializedSummariesHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializedSummariesHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the package serialized form header.
 	*
 	* @return the package serialized form header tree
 	*/
-	@:overload public function getPackageSerializedHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getPackageSerializedHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the given package header.
@@ -63,14 +63,14 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param packageName the package header to write
 	* @return a content tree for the package header
 	*/
-	@:overload public function getPackageHeader(packageName : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getPackageHeader(packageName : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the serialized class header.
 	*
 	* @return a content tree for the serialized class header
 	*/
-	@:overload public function getClassSerializedHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassSerializedHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the heading for the serializable class.
@@ -78,14 +78,14 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param classDoc the class being processed
 	* @return a content tree for the class heading
 	*/
-	@:overload public function getClassHeader(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassHeader(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the serial UID info header.
 	*
 	* @return a content tree for the serial uid info header
 	*/
-	@:overload public function getSerialUIDInfoHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerialUIDInfoHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the serial UID info.
@@ -94,33 +94,33 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param serialUID the serial UID to print.
 	* @param serialUidTree the serial UID tree to which the content will be added.
 	*/
-	@:overload public function addSerialUIDInfo(header : String, serialUID : String, serialUidTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addSerialUIDInfo(header : String, serialUID : String, serialUidTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the class serialize content header.
 	*
 	* @return a content tree for the class serialize content header
 	*/
-	@:overload public function getClassContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getClassContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Return an instance of a SerialFieldWriter.
 	*
 	* @return an instance of a SerialFieldWriter.
 	*/
-	@:overload public function getSerialFieldWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialFieldWriter;
+	@:overload @:public public function getSerialFieldWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialFieldWriter;
 	
 	/**
 	* Return an instance of a SerialMethodWriter.
 	*
 	* @return an instance of a SerialMethodWriter.
 	*/
-	@:overload public function getSerialMethodWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialMethodWriter;
+	@:overload @:public public function getSerialMethodWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialMethodWriter;
 	
 	/**
 	* Close the writer.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	/**
 	* Get the serialized content.
@@ -128,21 +128,21 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param serializedTreeContent content for serialized data
 	* @return a content tree for serialized information
 	*/
-	@:overload public function getSerializedContent(serializedTreeContent : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializedContent(serializedTreeContent : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the footer.
 	*
 	* @param serializedTree the serialized tree to be added
 	*/
-	@:overload public function addFooter(serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addFooter(serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the serialized form document.
 	*
 	* @param serializedTree the content tree that will be printed
 	*/
-	@:overload @:abstract public function printDocument(serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function printDocument(serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }
@@ -156,7 +156,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	*
 	* @return serialized fields header content tree
 	*/
-	@:overload public function getSerializableFieldsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableFieldsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the field content header.
@@ -164,7 +164,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param isLastContent true if this is the last content to be documented
 	* @return fields header content tree
 	*/
-	@:overload public function getFieldsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getFieldsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the fields content.
@@ -173,7 +173,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param contentTree content tree to which the heading will be added
 	* @return serializable fields content tree
 	*/
-	@:overload public function getSerializableFields(heading : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableFields(heading : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the deprecated information for this member.
@@ -181,7 +181,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field to document.
 	* @param contentTree content tree to which the deprecated information will be added
 	*/
-	@:overload public function addMemberDeprecatedInfo(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDeprecatedInfo(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the description text for this member.
@@ -189,7 +189,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field to document.
 	* @param contentTree content tree to which the member description will be added
 	*/
-	@:overload public function addMemberDescription(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDescription(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the description text for this member represented by the tag.
@@ -197,7 +197,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param serialFieldTag the field to document (represented by tag).
 	* @param contentTree content tree to which the member description will be added
 	*/
-	@:overload public function addMemberDescription(serialFieldTag : com.sun.javadoc.SerialFieldTag, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDescription(serialFieldTag : com.sun.javadoc.SerialFieldTag, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the tag information for this member.
@@ -205,7 +205,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field to document.
 	* @param contentTree content tree to which the member tags will be added
 	*/
-	@:overload public function addMemberTags(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberTags(field : com.sun.javadoc.FieldDoc, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the member header.
@@ -217,7 +217,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param fieldName the name of the field.
 	* @param contentTree content tree to which the member header will be added
 	*/
-	@:overload public function addMemberHeader(fieldType : com.sun.javadoc.ClassDoc, fieldTypeStr : String, fieldDimensions : String, fieldName : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberHeader(fieldType : com.sun.javadoc.ClassDoc, fieldTypeStr : String, fieldDimensions : String, fieldName : String, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Check to see if overview details should be printed. If
@@ -228,7 +228,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field to check overview details for.
 	* @return true if overview details need to be printed
 	*/
-	@:overload public function shouldPrintOverview(field : com.sun.javadoc.FieldDoc) : Bool;
+	@:overload @:public public function shouldPrintOverview(field : com.sun.javadoc.FieldDoc) : Bool;
 	
 	
 }
@@ -242,7 +242,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	*
 	* @return serializable methods content tree
 	*/
-	@:overload public function getSerializableMethodsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableMethodsHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the method content header.
@@ -250,7 +250,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param isLastContent true if this is the last content to be documented
 	* @return methods content tree
 	*/
-	@:overload public function getMethodsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getMethodsContentHeader(isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Write the given heading.
@@ -259,7 +259,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param serializableMethodTree content tree which will be added
 	* @return serializable methods content tree
 	*/
-	@:overload public function getSerializableMethods(heading : String, serializableMethodTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSerializableMethods(heading : String, serializableMethodTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Write a warning that no serializable methods exist.
@@ -267,7 +267,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param msg the warning to print
 	* @return no customization message tree
 	*/
-	@:overload public function getNoCustomizationMsg(msg : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getNoCustomizationMsg(msg : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the header.
@@ -275,7 +275,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param member the member to write the header for
 	* @param methodsContentTree content tree to which the header will be added
 	*/
-	@:overload public function addMemberHeader(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberHeader(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the deprecated information for this member.
@@ -284,7 +284,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param methodsContentTree content tree to which the deprecated
 	* information will be added
 	*/
-	@:overload public function addDeprecatedMemberInfo(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDeprecatedMemberInfo(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the description for this member.
@@ -293,7 +293,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param methodsContentTree content tree to which the member
 	* information will be added
 	*/
-	@:overload public function addMemberDescription(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberDescription(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the tag information for this member.
@@ -302,7 +302,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param methodsContentTree content tree to which the tags
 	* information will be added
 	*/
-	@:overload public function addMemberTags(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addMemberTags(member : com.sun.javadoc.MethodDoc, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

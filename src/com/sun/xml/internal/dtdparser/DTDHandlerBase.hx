@@ -28,57 +28,57 @@ extern class DTDHandlerBase implements com.sun.xml.internal.dtdparser.DTDEventLi
 	/**
 	* do-nothing implementation of DTDEventHandler.
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(err : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(err : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload @:public public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function externalGeneralEntityDecl(n : String, p : String, s : String) : Void;
+	@:overload @:public public function externalGeneralEntityDecl(n : String, p : String, s : String) : Void;
 	
-	@:overload public function internalGeneralEntityDecl(n : String, v : String) : Void;
+	@:overload @:public public function internalGeneralEntityDecl(n : String, v : String) : Void;
 	
-	@:overload public function externalParameterEntityDecl(n : String, p : String, s : String) : Void;
+	@:overload @:public public function externalParameterEntityDecl(n : String, p : String, s : String) : Void;
 	
-	@:overload public function internalParameterEntityDecl(n : String, v : String) : Void;
+	@:overload @:public public function internalParameterEntityDecl(n : String, v : String) : Void;
 	
-	@:overload public function startDTD(_in : com.sun.xml.internal.dtdparser.InputEntity) : Void;
+	@:overload @:public public function startDTD(_in : com.sun.xml.internal.dtdparser.InputEntity) : Void;
 	
-	@:overload public function comment(n : String) : Void;
+	@:overload @:public public function comment(n : String) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function startContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function startContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function endContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function endContentModel(elementName : String, contentModelType : java.StdTypes.Int16) : Void;
 	
-	@:overload public function attributeDecl(elementName : String, attributeName : String, attributeType : String, enumeration : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : Void;
+	@:overload @:public public function attributeDecl(elementName : String, attributeName : String, attributeType : String, enumeration : java.NativeArray<String>, attributeUse : java.StdTypes.Int16, defaultValue : String) : Void;
 	
-	@:overload public function childElement(elementName : String, occurence : java.StdTypes.Int16) : Void;
+	@:overload @:public public function childElement(elementName : String, occurence : java.StdTypes.Int16) : Void;
 	
-	@:overload public function mixedElement(elementName : String) : Void;
+	@:overload @:public public function mixedElement(elementName : String) : Void;
 	
-	@:overload public function startModelGroup() : Void;
+	@:overload @:public public function startModelGroup() : Void;
 	
-	@:overload public function endModelGroup(occurence : java.StdTypes.Int16) : Void;
+	@:overload @:public public function endModelGroup(occurence : java.StdTypes.Int16) : Void;
 	
-	@:overload public function connector(connectorType : java.StdTypes.Int16) : Void;
+	@:overload @:public public function connector(connectorType : java.StdTypes.Int16) : Void;
 	
 	
 }

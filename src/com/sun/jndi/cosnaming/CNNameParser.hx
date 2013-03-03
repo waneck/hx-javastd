@@ -28,14 +28,14 @@ extern class CNNameParser implements javax.naming.NameParser
 	/**
 	* Constructs a new name parser for parsing names in INS syntax.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a CompoundName given a string in INS syntax.
 	* @param name The non-null string representation of the name.
 	* @return a non-null CompoundName
 	*/
-	@:overload public function parse(name : String) : javax.naming.Name;
+	@:overload @:public public function parse(name : String) : javax.naming.Name;
 	
 	
 }
@@ -45,13 +45,13 @@ extern class CNNameParser implements javax.naming.NameParser
 */
 @:native('com$sun$jndi$cosnaming$CNNameParser$CNCompoundName') @:internal extern class CNNameParser_CNCompoundName extends javax.naming.CompoundName
 {
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
-	@:overload public function getPrefix(posn : Int) : javax.naming.Name;
+	@:overload @:public override public function getPrefix(posn : Int) : javax.naming.Name;
 	
-	@:overload public function getSuffix(posn : Int) : javax.naming.Name;
+	@:overload @:public override public function getSuffix(posn : Int) : javax.naming.Name;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

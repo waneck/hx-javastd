@@ -32,11 +32,11 @@ package sun.tools.jstat;
 */
 @:require(java5) extern class OptionOutputFormatter implements sun.tools.jstat.OutputFormatter
 {
-	@:overload public function new(vm : sun.jvmstat.monitor.MonitoredVm, format : sun.tools.jstat.OptionFormat) : Void;
+	@:overload @:public public function new(vm : sun.jvmstat.monitor.MonitoredVm, format : sun.tools.jstat.OptionFormat) : Void;
 	
-	@:overload public function getHeader() : String;
+	@:overload @:public public function getHeader() : String;
 	
-	@:overload public function getRow() : String;
+	@:overload @:public public function getRow() : String;
 	
 	
 }

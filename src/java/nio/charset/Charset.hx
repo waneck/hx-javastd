@@ -41,7 +41,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @throws  IllegalArgumentException
 	*          If the given <tt>charsetName</tt> is null
 	*/
-	@:overload public static function isSupported(charsetName : String) : Bool;
+	@:overload @:public @:static public static function isSupported(charsetName : String) : Bool;
 	
 	/**
 	* Returns a charset object for the named charset. </p>
@@ -62,7 +62,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*          If no support for the named charset is available
 	*          in this instance of the Java virtual machine
 	*/
-	@:overload public static function forName(charsetName : String) : java.nio.charset.Charset;
+	@:overload @:public @:static public static function forName(charsetName : String) : java.nio.charset.Charset;
 	
 	/**
 	* Constructs a sorted map from canonical charset names to charset objects.
@@ -90,7 +90,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @return An immutable, case-insensitive map from canonical charset names
 	*         to charset objects
 	*/
-	@:overload public static function availableCharsets() : java.util.SortedMap<String, java.nio.charset.Charset>;
+	@:overload @:public @:static public static function availableCharsets() : java.util.SortedMap<String, java.nio.charset.Charset>;
 	
 	/**
 	* Returns the default charset of this Java virtual machine.
@@ -103,7 +103,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function defaultCharset() : java.nio.charset.Charset;
+	@:require(java5) @:overload @:public @:static public static function defaultCharset() : java.nio.charset.Charset;
 	
 	/**
 	* Initializes a new charset with the given canonical name and alias
@@ -118,21 +118,21 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @throws IllegalCharsetNameException
 	*         If the canonical name or any of the aliases are illegal
 	*/
-	@:overload private function new(canonicalName : String, aliases : java.NativeArray<String>) : Void;
+	@:overload @:protected private function new(canonicalName : String, aliases : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns this charset's canonical name. </p>
 	*
 	* @return  The canonical name of this charset
 	*/
-	@:overload @:final public function name() : String;
+	@:overload @:public @:final public function name() : String;
 	
 	/**
 	* Returns a set containing this charset's aliases. </p>
 	*
 	* @return  An immutable set of this charset's aliases
 	*/
-	@:overload @:final public function aliases() : java.util.Set<String>;
+	@:overload @:public @:final public function aliases() : java.util.Set<String>;
 	
 	/**
 	* Returns this charset's human-readable name for the default locale.
@@ -143,7 +143,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  The display name of this charset in the default locale
 	*/
-	@:overload public function displayName() : String;
+	@:overload @:public public function displayName() : String;
 	
 	/**
 	* Tells whether or not this charset is registered in the <a
@@ -153,7 +153,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @return  <tt>true</tt> if, and only if, this charset is known by its
 	*          implementor to be registered with the IANA
 	*/
-	@:overload @:final public function isRegistered() : Bool;
+	@:overload @:public @:final public function isRegistered() : Bool;
 	
 	/**
 	* Returns this charset's human-readable name for the given locale.
@@ -167,7 +167,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  The display name of this charset in the given locale
 	*/
-	@:overload public function displayName(locale : java.util.Locale) : String;
+	@:overload @:public public function displayName(locale : java.util.Locale) : String;
 	
 	/**
 	* Tells whether or not this charset contains the given charset.
@@ -193,14 +193,14 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  <tt>true</tt> if the given charset is contained in this charset
 	*/
-	@:overload @:abstract public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public @:abstract public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	/**
 	* Constructs a new decoder for this charset. </p>
 	*
 	* @return  A new decoder for this charset
 	*/
-	@:overload @:abstract public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public @:abstract public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Constructs a new encoder for this charset. </p>
@@ -210,7 +210,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @throws  UnsupportedOperationException
 	*          If this charset does not support encoding
 	*/
-	@:overload @:abstract public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public @:abstract public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Tells whether or not this charset supports encoding.
@@ -225,7 +225,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  <tt>true</tt> if, and only if, this charset supports encoding
 	*/
-	@:overload public function canEncode() : Bool;
+	@:overload @:public public function canEncode() : Bool;
 	
 	/**
 	* Convenience method that decodes bytes in this charset into Unicode
@@ -252,7 +252,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  A char buffer containing the decoded characters
 	*/
-	@:overload @:final public function decode(bb : java.nio.ByteBuffer) : java.nio.CharBuffer;
+	@:overload @:public @:final public function decode(bb : java.nio.ByteBuffer) : java.nio.CharBuffer;
 	
 	/**
 	* Convenience method that encodes Unicode characters into bytes in this
@@ -279,7 +279,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  A byte buffer containing the encoded characters
 	*/
-	@:overload @:final public function encode(cb : java.nio.CharBuffer) : java.nio.ByteBuffer;
+	@:overload @:public @:final public function encode(cb : java.nio.CharBuffer) : java.nio.ByteBuffer;
 	
 	/**
 	* Convenience method that encodes a string into bytes in this charset.
@@ -294,7 +294,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	*
 	* @return  A byte buffer containing the encoded characters
 	*/
-	@:overload @:final public function encode(str : String) : java.nio.ByteBuffer;
+	@:overload @:public @:final public function encode(str : String) : java.nio.ByteBuffer;
 	
 	/**
 	* Compares this charset to another.
@@ -308,14 +308,14 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @return A negative integer, zero, or a positive integer as this charset
 	*         is less than, equal to, or greater than the specified charset
 	*/
-	@:overload @:final public function compareTo(that : java.nio.charset.Charset) : Int;
+	@:overload @:public @:final public function compareTo(that : java.nio.charset.Charset) : Int;
 	
 	/**
 	* Computes a hashcode for this charset. </p>
 	*
 	* @return  An integer hashcode
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Tells whether or not this object is equal to another.
@@ -326,14 +326,14 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @return  <tt>true</tt> if, and only if, this charset is equal to the
 	*          given object
 	*/
-	@:overload @:final public function equals(ob : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Returns a string describing this charset. </p>
 	*
 	* @return  A string describing this charset
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -374,7 +374,7 @@ extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

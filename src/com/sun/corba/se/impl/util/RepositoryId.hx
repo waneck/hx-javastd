@@ -31,134 +31,134 @@ package com.sun.corba.se.impl.util;
 */
 extern class RepositoryId
 {
-	public static var kInitialValueTag(default, null) : Int;
+	@:public @:static @:final public static var kInitialValueTag(default, null) : Int;
 	
-	public static var kNoTypeInfo(default, null) : Int;
+	@:public @:static @:final public static var kNoTypeInfo(default, null) : Int;
 	
-	public static var kSingleRepTypeInfo(default, null) : Int;
+	@:public @:static @:final public static var kSingleRepTypeInfo(default, null) : Int;
 	
-	public static var kPartialListTypeInfo(default, null) : Int;
+	@:public @:static @:final public static var kPartialListTypeInfo(default, null) : Int;
 	
-	public static var kChunkedMask(default, null) : Int;
+	@:public @:static @:final public static var kChunkedMask(default, null) : Int;
 	
-	public static var kPreComputed_StandardRMIUnchunked(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_StandardRMIUnchunked(default, null) : Int;
 	
-	public static var kPreComputed_CodeBaseRMIUnchunked(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_CodeBaseRMIUnchunked(default, null) : Int;
 	
-	public static var kPreComputed_StandardRMIChunked(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_StandardRMIChunked(default, null) : Int;
 	
-	public static var kPreComputed_CodeBaseRMIChunked(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_CodeBaseRMIChunked(default, null) : Int;
 	
-	public static var kPreComputed_StandardRMIUnchunked_NoRep(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_StandardRMIUnchunked_NoRep(default, null) : Int;
 	
-	public static var kPreComputed_CodeBaseRMIUnchunked_NoRep(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_CodeBaseRMIUnchunked_NoRep(default, null) : Int;
 	
-	public static var kPreComputed_StandardRMIChunked_NoRep(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_StandardRMIChunked_NoRep(default, null) : Int;
 	
-	public static var kPreComputed_CodeBaseRMIChunked_NoRep(default, null) : Int;
+	@:public @:static @:final public static var kPreComputed_CodeBaseRMIChunked_NoRep(default, null) : Int;
 	
-	public static var kWStringValueVersion(default, null) : String;
+	@:public @:static @:final public static var kWStringValueVersion(default, null) : String;
 	
-	public static var kWStringValueHash(default, null) : String;
+	@:public @:static @:final public static var kWStringValueHash(default, null) : String;
 	
-	public static var kWStringStubValue(default, null) : String;
+	@:public @:static @:final public static var kWStringStubValue(default, null) : String;
 	
-	public static var kWStringTypeStr(default, null) : String;
+	@:public @:static @:final public static var kWStringTypeStr(default, null) : String;
 	
-	public static var kWStringValueRepID(default, null) : String;
+	@:public @:static @:final public static var kWStringValueRepID(default, null) : String;
 	
-	public static var kAnyRepID(default, null) : String;
+	@:public @:static @:final public static var kAnyRepID(default, null) : String;
 	
-	public static var kClassDescValueHash(default, null) : String;
+	@:public @:static @:final public static var kClassDescValueHash(default, null) : String;
 	
-	public static var kClassDescStubValue(default, null) : String;
+	@:public @:static @:final public static var kClassDescStubValue(default, null) : String;
 	
-	public static var kClassDescTypeStr(default, null) : String;
+	@:public @:static @:final public static var kClassDescTypeStr(default, null) : String;
 	
-	public static var kClassDescValueRepID(default, null) : String;
+	@:public @:static @:final public static var kClassDescValueRepID(default, null) : String;
 	
-	public static var kObjectValueHash(default, null) : String;
+	@:public @:static @:final public static var kObjectValueHash(default, null) : String;
 	
-	public static var kObjectStubValue(default, null) : String;
+	@:public @:static @:final public static var kObjectStubValue(default, null) : String;
 	
-	public static var kSequenceValueHash(default, null) : String;
+	@:public @:static @:final public static var kSequenceValueHash(default, null) : String;
 	
-	public static var kPrimitiveSequenceValueHash(default, null) : String;
+	@:public @:static @:final public static var kPrimitiveSequenceValueHash(default, null) : String;
 	
-	public static var kSerializableValueHash(default, null) : String;
+	@:public @:static @:final public static var kSerializableValueHash(default, null) : String;
 	
-	public static var kSerializableStubValue(default, null) : String;
+	@:public @:static @:final public static var kSerializableStubValue(default, null) : String;
 	
-	public static var kExternalizableValueHash(default, null) : String;
+	@:public @:static @:final public static var kExternalizableValueHash(default, null) : String;
 	
-	public static var kExternalizableStubValue(default, null) : String;
+	@:public @:static @:final public static var kExternalizableStubValue(default, null) : String;
 	
-	public static var kRemoteValueHash(default, null) : String;
+	@:public @:static @:final public static var kRemoteValueHash(default, null) : String;
 	
-	public static var kRemoteStubValue(default, null) : String;
+	@:public @:static @:final public static var kRemoteStubValue(default, null) : String;
 	
-	public static var kRemoteTypeStr(default, null) : String;
+	@:public @:static @:final public static var kRemoteTypeStr(default, null) : String;
 	
-	public static var kRemoteValueRepID(default, null) : String;
+	@:public @:static @:final public static var kRemoteValueRepID(default, null) : String;
 	
-	public static var cache(default, null) : RepositoryIdCache;
+	@:public @:static @:final public static var cache(default, null) : RepositoryIdCache;
 	
-	public static var kjava_rmi_Remote(default, null) : String;
+	@:public @:static @:final public static var kjava_rmi_Remote(default, null) : String;
 	
-	public static var korg_omg_CORBA_Object(default, null) : String;
+	@:public @:static @:final public static var korg_omg_CORBA_Object(default, null) : String;
 	
-	public static var kNoParamTypes(default, null) : java.NativeArray<Class<Dynamic>>;
+	@:public @:static @:final public static var kNoParamTypes(default, null) : java.NativeArray<Class<Dynamic>>;
 	
-	public static var kNoArgs(default, null) : java.NativeArray<Dynamic>;
+	@:public @:static @:final public static var kNoArgs(default, null) : java.NativeArray<Dynamic>;
 	
-	@:overload @:final public function getUnqualifiedName() : String;
+	@:overload @:public @:final public function getUnqualifiedName() : String;
 	
-	@:overload @:final public function getDefinedInId() : String;
+	@:overload @:public @:final public function getDefinedInId() : String;
 	
-	@:overload @:final public function getTypeString() : String;
+	@:overload @:public @:final public function getTypeString() : String;
 	
-	@:overload @:final public function getVersionString() : String;
+	@:overload @:public @:final public function getVersionString() : String;
 	
-	@:overload @:final public function getSerialVersionUID() : String;
+	@:overload @:public @:final public function getSerialVersionUID() : String;
 	
-	@:overload @:final public function getActualSerialVersionUID() : String;
+	@:overload @:public @:final public function getActualSerialVersionUID() : String;
 	
-	@:overload @:final public function getSerialVersionUIDAsLong() : haxe.Int64;
+	@:overload @:public @:final public function getSerialVersionUIDAsLong() : haxe.Int64;
 	
-	@:overload @:final public function getActualSerialVersionUIDAsLong() : haxe.Int64;
+	@:overload @:public @:final public function getActualSerialVersionUIDAsLong() : haxe.Int64;
 	
-	@:overload @:final public function isRMIValueType() : Bool;
+	@:overload @:public @:final public function isRMIValueType() : Bool;
 	
-	@:overload @:final public function isIDLType() : Bool;
+	@:overload @:public @:final public function isIDLType() : Bool;
 	
-	@:overload @:final public function getRepositoryId() : String;
+	@:overload @:public @:final public function getRepositoryId() : String;
 	
-	@:overload public static function getByteArray(repStr : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getByteArray(repStr : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function setByteArray(repStr : String, repStrBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static public static function setByteArray(repStr : String, repStrBytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final public function isSequence() : Bool;
+	@:overload @:public @:final public function isSequence() : Bool;
 	
-	@:overload @:final public function isSupportedFormat() : Bool;
+	@:overload @:public @:final public function isSupportedFormat() : Bool;
 	
-	@:overload @:final public function getClassName() : String;
+	@:overload @:public @:final public function getClassName() : String;
 	
-	@:overload @:final public function getAnyClassFromType() : Class<Dynamic>;
+	@:overload @:public @:final public function getAnyClassFromType() : Class<Dynamic>;
 	
-	@:overload @:final public function getClassFromType() : Class<Dynamic>;
+	@:overload @:public @:final public function getClassFromType() : Class<Dynamic>;
 	
-	@:overload @:final public function getClassFromType(expectedType : Class<Dynamic>, codebase : String) : Class<Dynamic>;
+	@:overload @:public @:final public function getClassFromType(expectedType : Class<Dynamic>, codebase : String) : Class<Dynamic>;
 	
-	@:overload @:final public function getClassFromType(url : String) : Class<Dynamic>;
+	@:overload @:public @:final public function getClassFromType(url : String) : Class<Dynamic>;
 	
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* Checks to see if the FullValueDescription should be retrieved.
 	* @exception Throws IOException if suids do not match or if the repositoryID
 	* is not an RMIValueType
 	*/
-	@:overload public static function useFullValueDescription(clazz : Class<Dynamic>, repositoryID : String) : Bool;
+	@:overload @:public @:static public static function useFullValueDescription(clazz : Class<Dynamic>, repositoryID : String) : Bool;
 	
 	/**
 	* Creates a repository ID for a sequence.  This is for expert users only as
@@ -167,7 +167,7 @@ extern class RepositoryId
 	* length.  This would be an error.
 	* @param ser The Java object to create a repository ID for
 	**/
-	@:overload public static function createSequenceRepID(ser : Dynamic) : String;
+	@:overload @:public @:static public static function createSequenceRepID(ser : Dynamic) : String;
 	
 	/**
 	* Creates a repository ID for a sequence.  This is for expert users only as
@@ -175,11 +175,11 @@ extern class RepositoryId
 	* that is not an array, it will produce a malformed rep id.
 	* @param clazz The Java class to create a repository ID for
 	**/
-	@:overload public static function createSequenceRepID(clazz : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function createSequenceRepID(clazz : Class<Dynamic>) : String;
 	
-	@:overload public static function createForSpecialCase(clazz : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function createForSpecialCase(clazz : Class<Dynamic>) : String;
 	
-	@:overload public static function createForSpecialCase(ser : java.io.Serializable) : String;
+	@:overload @:public @:static public static function createForSpecialCase(ser : java.io.Serializable) : String;
 	
 	/**
 	* Creates a repository ID for a normal Java Type.
@@ -187,7 +187,7 @@ extern class RepositoryId
 	* @exception com.sun.corba.se.impl.io.TypeMismatchException if ser implements the
 	* org.omg.CORBA.portable.IDLEntity interface which indicates it is an IDL Value type.
 	**/
-	@:overload public static function createForJavaType(ser : java.io.Serializable) : String;
+	@:overload @:public @:static public static function createForJavaType(ser : java.io.Serializable) : String;
 	
 	/**
 	* Creates a repository ID for a normal Java Type.
@@ -195,7 +195,7 @@ extern class RepositoryId
 	* @exception com.sun.corba.se.impl.io.TypeMismatchException if ser implements the
 	* org.omg.CORBA.portable.IDLEntity interface which indicates it is an IDL Value type.
 	**/
-	@:overload public static function createForJavaType(clz : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function createForJavaType(clz : Class<Dynamic>) : String;
 	
 	/**
 	* Creates a repository ID for an IDL Java Type.
@@ -205,7 +205,7 @@ extern class RepositoryId
 	* @exception com.sun.corba.se.impl.io.TypeMismatchException if ser does not implement the
 	* org.omg.CORBA.portable.IDLEntity interface which indicates it is an IDL Value type.
 	**/
-	@:overload public static function createForIDLType(ser : Class<Dynamic>, major : Int, minor : Int) : String;
+	@:overload @:public @:static public static function createForIDLType(ser : Class<Dynamic>, major : Int, minor : Int) : String;
 	
 	/**
 	* Createa a repository ID for the type if it is either a java type
@@ -213,30 +213,30 @@ extern class RepositoryId
 	* @param type The type to create rep. id for
 	* @return The rep. id.
 	**/
-	@:overload public static function createForAnyType(type : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function createForAnyType(type : Class<Dynamic>) : String;
 	
-	@:overload public static function isAbstractBase(clazz : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isAbstractBase(clazz : Class<Dynamic>) : Bool;
 	
-	@:overload public static function isAnyRequired(clazz : Class<Dynamic>) : Bool;
+	@:overload @:public @:static public static function isAnyRequired(clazz : Class<Dynamic>) : Bool;
 	
-	@:overload public static function fromHex(hexNumber : String) : haxe.Int64;
+	@:overload @:public @:static public static function fromHex(hexNumber : String) : haxe.Int64;
 	
 	/**
 	* Convert strings with illegal IDL identifier characters.
 	* <p>
 	* Section 5.5.7 of OBV spec.
 	*/
-	@:overload public static function convertToISOLatin1(name : String) : String;
+	@:overload @:public @:static public static function convertToISOLatin1(name : String) : String;
 	
-	@:overload public static function computeValueTag(codeBasePresent : Bool, typeInfo : Int, chunkedEncoding : Bool) : Int;
+	@:overload @:public @:static public static function computeValueTag(codeBasePresent : Bool, typeInfo : Int, chunkedEncoding : Bool) : Int;
 	
-	@:overload public static function isCodeBasePresent(value_tag : Int) : Bool;
+	@:overload @:public @:static public static function isCodeBasePresent(value_tag : Int) : Bool;
 	
-	@:overload public static function getTypeInfo(value_tag : Int) : Int;
+	@:overload @:public @:static public static function getTypeInfo(value_tag : Int) : Int;
 	
-	@:overload public static function isChunkedEncoding(value_tag : Int) : Bool;
+	@:overload @:public @:static public static function isChunkedEncoding(value_tag : Int) : Bool;
 	
-	@:overload public static function getServerURL() : String;
+	@:overload @:public @:static public static function getServerURL() : String;
 	
 	
 }

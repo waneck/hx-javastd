@@ -31,21 +31,21 @@ package sun.security.pkcs11;
 */
 @:require(java5) extern class SunPKCS11 extends java.security.AuthProvider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(configName : String) : Void;
+	@:overload @:public public function new(configName : String) : Void;
 	
-	@:overload public function new(configStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(configStream : java.io.InputStream) : Void;
 	
 	/**
 	* @deprecated use new SunPKCS11(String) or new SunPKCS11(InputStream)
 	*         instead
 	*/
-	@:overload public function new(configName : String, configStream : java.io.InputStream) : Void;
+	@:overload @:public public function new(configName : String, configStream : java.io.InputStream) : Void;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Log in to this provider.
@@ -67,7 +67,7 @@ package sun.security.pkcs11;
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload public function login(subject : javax.security.auth.Subject, handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public override public function login(subject : javax.security.auth.Subject, handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Log out from this provider
@@ -78,7 +78,7 @@ package sun.security.pkcs11;
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload public function logout() : Void;
+	@:overload @:public override public function logout() : Void;
 	
 	/**
 	* Set a <code>CallbackHandler</code>
@@ -103,31 +103,31 @@ package sun.security.pkcs11;
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload public function setCallbackHandler(handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload @:public override public function setCallbackHandler(handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	
 }
 @:native('sun$security$pkcs11$SunPKCS11$Descriptor') @:internal extern class SunPKCS11_Descriptor
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('sun$security$pkcs11$SunPKCS11$TokenPoller') @:internal extern class SunPKCS11_TokenPoller implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:native('sun$security$pkcs11$SunPKCS11$P11Service') @:internal extern class SunPKCS11_P11Service extends java.security.Provider.Provider_Service
 {
-	@:overload public function newInstance(param : Dynamic) : Dynamic;
+	@:overload @:public override public function newInstance(param : Dynamic) : Dynamic;
 	
-	@:overload public function newInstance0(param : Dynamic) : Dynamic;
+	@:overload @:public public function newInstance0(param : Dynamic) : Dynamic;
 	
-	@:overload public function supportsParameter(param : Dynamic) : Bool;
+	@:overload @:public override public function supportsParameter(param : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

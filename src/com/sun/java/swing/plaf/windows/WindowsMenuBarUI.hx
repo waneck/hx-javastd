@@ -35,15 +35,15 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsMenuBarUI extends javax.swing.plaf.basic.BasicMenuBarUI
 {
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }
@@ -53,7 +53,7 @@ extern class WindowsMenuBarUI extends javax.swing.plaf.basic.BasicMenuBarUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsMenuBarUI$TakeFocus') @:internal extern class WindowsMenuBarUI_TakeFocus extends javax.swing.AbstractAction
 {
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class Util
 	*
 	* @param s source string to be escaped
 	*/
-	@:overload public static function escapeURI(s : String) : String;
+	@:overload @:public @:static public static function escapeURI(s : String) : String;
 	
 	/**
 	* Calculate the parent URI path of the given URI path.
@@ -47,7 +47,7 @@ extern class Util
 	* @param uriPath the uriPath (as returned by java.net.URI#getPath()
 	* @return the parent URI path of the given URI path
 	*/
-	@:overload public static function getParentUriPath(uriPath : String) : String;
+	@:overload @:public @:static public static function getParentUriPath(uriPath : String) : String;
 	
 	/**
 	* Calculate the normalized form of the given uriPath.
@@ -61,7 +61,7 @@ extern class Util
 	* @param uriPath path of a URI (as returned by java.net.URI#getPath()
 	* @return the normalized uri path
 	*/
-	@:overload public static function normalizeUriPath(uriPath : String) : String;
+	@:overload @:public @:static public static function normalizeUriPath(uriPath : String) : String;
 	
 	/**
 	* determine if two Strings are equal ignoring case allowing null values
@@ -71,7 +71,7 @@ extern class Util
 	* @return true iff the given strings are equal ignoring case, false if they aren't
 	* equal or either of them are null.
 	*/
-	@:overload public static function equalsIgnoreCase(s : String, t : String) : Bool;
+	@:overload @:public @:static public static function equalsIgnoreCase(s : String, t : String) : Bool;
 	
 	/**
 	* determine if two Strings are iqual allowing null values
@@ -81,7 +81,7 @@ extern class Util
 	* @return true iff the strings are equal, false if they aren't equal or either of
 	* them are null.
 	*/
-	@:overload public static function equal(s : String, t : String) : Bool;
+	@:overload @:public @:static public static function equal(s : String, t : String) : Bool;
 	
 	
 }

@@ -25,12 +25,12 @@ package sun.management;
 */
 extern class FileSystem
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Opens the file system
 	*/
-	@:overload public static function open() : sun.management.FileSystem;
+	@:overload @:public @:static public static function open() : sun.management.FileSystem;
 	
 	/**
 	* Tells whether or not the specified file is located on a
@@ -38,7 +38,7 @@ extern class FileSystem
 	*
 	* @throws  IOException     if an I/O error occurs.
 	*/
-	@:overload @:abstract public function supportsFileSecurity(f : java.io.File) : Bool;
+	@:overload @:public @:abstract public function supportsFileSecurity(f : java.io.File) : Bool;
 	
 	/**
 	* Tell whether or not the specified file is accessible
@@ -50,7 +50,7 @@ extern class FileSystem
 	*          If file is located on a file system that doesn't support
 	*          file security.
 	*/
-	@:overload @:abstract public function isAccessUserOnly(f : java.io.File) : Bool;
+	@:overload @:public @:abstract public function isAccessUserOnly(f : java.io.File) : Bool;
 	
 	
 }

@@ -28,36 +28,36 @@ extern class StringExpression extends sun.tools.tree.ConstantExpression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64, value : String) : Void;
+	@:overload @:public public function new(where : haxe.Int64, value : String) : Void;
 	
-	@:overload public function equals(s : String) : Bool;
+	@:overload @:public override public function equals(s : String) : Bool;
 	
-	@:overload public function isNonNull() : Bool;
+	@:overload @:public override public function isNonNull() : Bool;
 	
 	/**
 	* Code
 	*/
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Get the value
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
 	/**
 	* Hashcode
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Equality
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

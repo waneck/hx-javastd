@@ -25,11 +25,11 @@ package com.sun.xml.internal.messaging.saaj.soap;
 */
 extern class SAAJMetaFactoryImpl extends javax.xml.soap.SAAJMetaFactory
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload override private function newMessageFactory(protocol : String) : javax.xml.soap.MessageFactory;
+	@:overload @:protected override private function newMessageFactory(protocol : String) : javax.xml.soap.MessageFactory;
 	
-	@:overload override private function newSOAPFactory(protocol : String) : javax.xml.soap.SOAPFactory;
+	@:overload @:protected override private function newSOAPFactory(protocol : String) : javax.xml.soap.SOAPFactory;
 	
 	
 }

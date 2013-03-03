@@ -33,7 +33,7 @@ extern class ProfileDataException extends java.lang.RuntimeException
 	*  Constructs a ProfileDataException with the specified detail message.
 	*  @param s the specified detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

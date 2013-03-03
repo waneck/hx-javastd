@@ -38,7 +38,7 @@ extern class PatternSyntaxException extends java.lang.IllegalArgumentException
 	*         The approximate index in the pattern of the error,
 	*         or <tt>-1</tt> if the index is not known
 	*/
-	@:overload public function new(desc : String, regex : String, index : Int) : Void;
+	@:overload @:public public function new(desc : String, regex : String, index : Int) : Void;
 	
 	/**
 	* Retrieves the error index.
@@ -46,21 +46,21 @@ extern class PatternSyntaxException extends java.lang.IllegalArgumentException
 	* @return  The approximate index in the pattern of the error,
 	*         or <tt>-1</tt> if the index is not known
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Retrieves the description of the error.
 	*
 	* @return  The description of the error
 	*/
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	/**
 	* Retrieves the erroneous regular-expression pattern.
 	*
 	* @return  The erroneous pattern
 	*/
-	@:overload public function getPattern() : String;
+	@:overload @:public public function getPattern() : String;
 	
 	/**
 	* Returns a multi-line string containing the description of the syntax
@@ -69,7 +69,7 @@ extern class PatternSyntaxException extends java.lang.IllegalArgumentException
 	*
 	* @return  The full detail message
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

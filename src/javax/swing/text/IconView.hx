@@ -41,7 +41,7 @@ extern class IconView extends javax.swing.text.View
 	*
 	* @param elem the element to create a view for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Paints the icon.
@@ -56,7 +56,7 @@ extern class IconView extends javax.swing.text.View
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -69,7 +69,7 @@ extern class IconView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public override public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -84,7 +84,7 @@ extern class IconView extends javax.swing.text.View
 	*   away from the origin.  An alignment of 0.5 would be the
 	*   center of the view.
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -97,7 +97,7 @@ extern class IconView extends javax.swing.text.View
 	*   represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -110,7 +110,7 @@ extern class IconView extends javax.swing.text.View
 	*  given point of view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	
 }

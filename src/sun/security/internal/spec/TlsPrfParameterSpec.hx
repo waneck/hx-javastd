@@ -42,7 +42,7 @@ extern class TlsPrfParameterSpec implements java.security.spec.AlgorithmParamete
 	* @throws NullPointerException if label or seed is null
 	* @throws IllegalArgumentException if outputLength is negative
 	*/
-	@:overload public function new(secret : javax.crypto.SecretKey, label : String, seed : java.NativeArray<java.StdTypes.Int8>, outputLength : Int, prfHashAlg : String, prfHashLength : Int, prfBlockSize : Int) : Void;
+	@:overload @:public public function new(secret : javax.crypto.SecretKey, label : String, seed : java.NativeArray<java.StdTypes.Int8>, outputLength : Int, prfHashAlg : String, prfHashLength : Int, prfBlockSize : Int) : Void;
 	
 	/**
 	* Returns the secret to use in the PRF calculation, or null if there is no
@@ -51,35 +51,35 @@ extern class TlsPrfParameterSpec implements java.security.spec.AlgorithmParamete
 	* @return the secret to use in the PRF calculation, or null if there is no
 	* secret.
 	*/
-	@:overload public function getSecret() : javax.crypto.SecretKey;
+	@:overload @:public public function getSecret() : javax.crypto.SecretKey;
 	
 	/**
 	* Returns the label to use in the PRF calcuation.
 	*
 	* @return the label to use in the PRF calcuation.
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
 	/**
 	* Returns a copy of the seed to use in the PRF calcuation.
 	*
 	* @return a copy of the seed to use in the PRF calcuation.
 	*/
-	@:overload public function getSeed() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSeed() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the length in bytes of the output key to be produced.
 	*
 	* @return the length in bytes of the output key to be produced.
 	*/
-	@:overload public function getOutputLength() : Int;
+	@:overload @:public public function getOutputLength() : Int;
 	
 	/**
 	* Obtains the PRF hash algorithm to use in the PRF calculation.
 	*
 	* @return the hash algorithm, or null if no algorithm was specified.
 	*/
-	@:overload public function getPRFHashAlg() : String;
+	@:overload @:public public function getPRFHashAlg() : String;
 	
 	/**
 	* Obtains the length of PRF hash algorithm.
@@ -89,14 +89,14 @@ extern class TlsPrfParameterSpec implements java.security.spec.AlgorithmParamete
 	*
 	* @return the hash algorithm length.
 	*/
-	@:overload public function getPRFHashLength() : Int;
+	@:overload @:public public function getPRFHashLength() : Int;
 	
 	/**
 	* Obtains the length of PRF hash algorithm.
 	*
 	* @return the hash algorithm length.
 	*/
-	@:overload public function getPRFBlockSize() : Int;
+	@:overload @:public public function getPRFBlockSize() : Int;
 	
 	
 }

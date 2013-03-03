@@ -25,23 +25,23 @@ package sun.security.jgss.spnego;
 */
 extern class SpNegoCredElement implements sun.security.jgss.spi.GSSCredentialSpi
 {
-	@:overload public function getInternalCred() : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public public function getInternalCred() : sun.security.jgss.spi.GSSCredentialSpi;
 	
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
-	@:overload public function getName() : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getName() : sun.security.jgss.spi.GSSNameSpi;
 	
-	@:overload public function getInitLifetime() : Int;
+	@:overload @:public public function getInitLifetime() : Int;
 	
-	@:overload public function getAcceptLifetime() : Int;
+	@:overload @:public public function getAcceptLifetime() : Int;
 	
-	@:overload public function isInitiatorCredential() : Bool;
+	@:overload @:public public function isInitiatorCredential() : Bool;
 	
-	@:overload public function isAcceptorCredential() : Bool;
+	@:overload @:public public function isAcceptorCredential() : Bool;
 	
-	@:overload public function getMechanism() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMechanism() : org.ietf.jgss.Oid;
 	
 	
 }

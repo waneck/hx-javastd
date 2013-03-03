@@ -28,29 +28,29 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<T>;
+	@:overload @:public public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<T>;
 	
-	@:overload public function createEnumConstant(name : String, literal : String, constant : java.lang.reflect.Field, last : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : com.sun.xml.internal.bind.v2.model.impl.RuntimeEnumConstantImpl;
+	@:overload @:public public function createEnumConstant(name : String, literal : String, constant : java.lang.reflect.Field, last : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : com.sun.xml.internal.bind.v2.model.impl.RuntimeEnumConstantImpl;
 	
-	@:overload public function getTypeNames() : java.NativeArray<javax.xml.namespace.QName>;
+	@:overload @:public public function getTypeNames() : java.NativeArray<javax.xml.namespace.QName>;
 	
-	@:overload public function isDefault() : Bool;
+	@:overload @:public public function isDefault() : Bool;
 	
-	@:overload public function getClazz() : Class<Dynamic>;
+	@:overload @:public override public function getClazz() : Class<Dynamic>;
 	
-	@:overload public function useNamespace() : Bool;
+	@:overload @:public public function useNamespace() : Bool;
 	
-	@:overload public function declareNamespace(t : T, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public public function declareNamespace(t : T, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload public function print(t : T) : java.lang.CharSequence;
+	@:overload @:public public function print(t : T) : java.lang.CharSequence;
 	
-	@:overload public function parse(lexical : java.lang.CharSequence) : T;
+	@:overload @:public public function parse(lexical : java.lang.CharSequence) : T;
 	
-	@:overload public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, t : T, fieldName : String) : Void;
+	@:overload @:public public function writeText(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, t : T, fieldName : String) : Void;
 	
-	@:overload public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : T, fieldName : String) : Void;
+	@:overload @:public public function writeLeafElement(w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, tagName : com.sun.xml.internal.bind.v2.runtime.Name, o : T, fieldName : String) : Void;
 	
-	@:overload public function getTypeName(instance : T) : javax.xml.namespace.QName;
+	@:overload @:public public function getTypeName(instance : T) : javax.xml.namespace.QName;
 	
 	
 }

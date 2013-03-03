@@ -44,7 +44,7 @@ extern class AgentInitializationException extends java.lang.Exception
 	* Constructs an <code>AgentInitializationException</code> with
 	* no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>AgentInitializationException</code> with
@@ -52,7 +52,7 @@ extern class AgentInitializationException extends java.lang.Exception
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs an <code>AgentInitializationException</code> with
@@ -62,7 +62,7 @@ extern class AgentInitializationException extends java.lang.Exception
 	* @param   s               the detail message.
 	* @param   returnValue     the return value
 	*/
-	@:overload public function new(s : String, returnValue : Int) : Void;
+	@:overload @:public public function new(s : String, returnValue : Int) : Void;
 	
 	/**
 	* If the exception was created with the return value from the agent
@@ -71,7 +71,7 @@ extern class AgentInitializationException extends java.lang.Exception
 	*
 	* @return  the return value
 	*/
-	@:overload public function returnValue() : Int;
+	@:overload @:public public function returnValue() : Int;
 	
 	
 }

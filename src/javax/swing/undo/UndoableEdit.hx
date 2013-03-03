@@ -68,28 +68,28 @@ extern interface UndoableEdit
 	*
 	* @throws CannotUndoException if this edit can not be undone
 	*/
-	@:overload public function undo() : Void;
+	@:overload @:public public function undo() : Void;
 	
 	/**
 	* Returns true if this edit may be undone.
 	*
 	* @return true if this edit may be undone
 	*/
-	@:overload public function canUndo() : Bool;
+	@:overload @:public public function canUndo() : Bool;
 	
 	/**
 	* Re-applies the edit.
 	*
 	* @throws CannotRedoException if this edit can not be redone
 	*/
-	@:overload public function redo() : Void;
+	@:overload @:public public function redo() : Void;
 	
 	/**
 	* Returns true if this edit may be redone.
 	*
 	* @return true if this edit may be redone
 	*/
-	@:overload public function canRedo() : Bool;
+	@:overload @:public public function canRedo() : Bool;
 	
 	/**
 	* Informs the edit that it should no longer be used. Once an
@@ -106,7 +106,7 @@ extern interface UndoableEdit
 	*
 	* @see CompoundEdit#die
 	*/
-	@:overload public function die() : Void;
+	@:overload @:public public function die() : Void;
 	
 	/**
 	* Adds an <code>UndoableEdit</code> to this <code>UndoableEdit</code>.
@@ -136,7 +136,7 @@ extern interface UndoableEdit
 	* @return true if <code>anEdit</code> may be incorporated into this
 	*              edit
 	*/
-	@:overload public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:public public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Returns true if this <code>UndoableEdit</code> should replace
@@ -158,7 +158,7 @@ extern interface UndoableEdit
 	* @param anEdit the edit that replaces the current edit
 	* @return true if this edit should replace <code>anEdit</code>
 	*/
-	@:overload public function replaceEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:public public function replaceEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Returns true if this edit is considered significant.  A significant
@@ -168,7 +168,7 @@ extern interface UndoableEdit
 	*
 	* @return true if this edit is significant
 	*/
-	@:overload public function isSignificant() : Bool;
+	@:overload @:public public function isSignificant() : Bool;
 	
 	/**
 	* Returns a localized, human-readable description of this edit, suitable
@@ -176,7 +176,7 @@ extern interface UndoableEdit
 	*
 	* @return description of this edit
 	*/
-	@:overload public function getPresentationName() : String;
+	@:overload @:public public function getPresentationName() : String;
 	
 	/**
 	* Returns a localized, human-readable description of the undoable form of
@@ -185,7 +185,7 @@ extern interface UndoableEdit
 	*
 	* @return a description of the undoable form of this edit
 	*/
-	@:overload public function getUndoPresentationName() : String;
+	@:overload @:public public function getUndoPresentationName() : String;
 	
 	/**
 	* Returns a localized, human-readable description of the redoable form of
@@ -194,7 +194,7 @@ extern interface UndoableEdit
 	*
 	* @return a description of the redoable form of this edit
 	*/
-	@:overload public function getRedoPresentationName() : String;
+	@:overload @:public public function getRedoPresentationName() : String;
 	
 	
 }

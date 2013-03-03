@@ -37,7 +37,7 @@ package sun.awt;
 */
 extern class TracedEventQueue extends java.awt.EventQueue
 {
-	@:overload override public function postEvent(theEvent : java.awt.AWTEvent) : Void;
+	@:overload @:public override public function postEvent(theEvent : java.awt.AWTEvent) : Void;
 	
 	
 }

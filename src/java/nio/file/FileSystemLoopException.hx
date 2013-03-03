@@ -38,7 +38,7 @@ package java.nio.file;
 	*          a string identifying the file causing the cycle or {@code null} if
 	*          not known
 	*/
-	@:overload public function new(file : String) : Void;
+	@:overload @:public public function new(file : String) : Void;
 	
 	
 }

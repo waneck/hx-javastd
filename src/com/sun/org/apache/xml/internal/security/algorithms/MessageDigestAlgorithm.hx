@@ -22,22 +22,22 @@ package com.sun.org.apache.xml.internal.security.algorithms;
 extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.security.algorithms.Algorithm
 {
 	/** Message Digest - NOT RECOMMENDED MD5*/
-	public static var ALGO_ID_DIGEST_NOT_RECOMMENDED_MD5(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_DIGEST_NOT_RECOMMENDED_MD5(default, null) : String;
 	
 	/** Digest - Required SHA1*/
-	public static var ALGO_ID_DIGEST_SHA1(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_DIGEST_SHA1(default, null) : String;
 	
 	/** Message Digest - RECOMMENDED SHA256*/
-	public static var ALGO_ID_DIGEST_SHA256(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_DIGEST_SHA256(default, null) : String;
 	
 	/** Message Digest - OPTIONAL SHA384*/
-	public static var ALGO_ID_DIGEST_SHA384(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_DIGEST_SHA384(default, null) : String;
 	
 	/** Message Digest - OPTIONAL SHA512*/
-	public static var ALGO_ID_DIGEST_SHA512(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_DIGEST_SHA512(default, null) : String;
 	
 	/** Message Digest - OPTIONAL RIPEMD-160*/
-	public static var ALGO_ID_DIGEST_RIPEMD160(default, null) : String;
+	@:public @:static @:final public static var ALGO_ID_DIGEST_RIPEMD160(default, null) : String;
 	
 	/**
 	* Factory method for constructing a message digest algorithm by name.
@@ -47,14 +47,14 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	* @return The MessageDigestAlgorithm element to attach in document and to digest
 	* @throws XMLSignatureException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm;
+	@:overload @:public @:static public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm;
 	
 	/**
 	* Returns the actual {@link java.security.MessageDigest} algorithm object
 	*
 	* @return the actual {@link java.security.MessageDigest} algorithm object
 	*/
-	@:overload public function getAlgorithm() : java.security.MessageDigest;
+	@:overload @:public public function getAlgorithm() : java.security.MessageDigest;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#isEqual}
@@ -64,7 +64,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	* @param digestb
 	* @return the result of the {@link java.security.MessageDigest#isEqual} method
 	*/
-	@:overload public static function isEqual(digesta : java.NativeArray<java.StdTypes.Int8>, digestb : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static public static function isEqual(digesta : java.NativeArray<java.StdTypes.Int8>, digestb : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#digest()}
@@ -72,7 +72,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	*
 	* @return the result of the {@link java.security.MessageDigest#digest()} method
 	*/
-	@:overload public function digest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function digest() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#digest(byte[])}
@@ -81,7 +81,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	* @param input
 	* @return the result of the {@link java.security.MessageDigest#digest(byte[])} method
 	*/
-	@:overload public function digest(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function digest(input : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#digest(byte[], int, int)}
@@ -93,7 +93,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	* @return the result of the {@link java.security.MessageDigest#digest(byte[], int, int)} method
 	* @throws java.security.DigestException
 	*/
-	@:overload public function digest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:public public function digest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#getAlgorithm}
@@ -101,7 +101,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	*
 	* @return the result of the {@link java.security.MessageDigest#getAlgorithm} method
 	*/
-	@:overload public function getJCEAlgorithmString() : String;
+	@:overload @:public public function getJCEAlgorithmString() : String;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#getProvider}
@@ -109,7 +109,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	*
 	* @return the result of the {@link java.security.MessageDigest#getProvider} method
 	*/
-	@:overload public function getJCEProvider() : java.security.Provider;
+	@:overload @:public public function getJCEProvider() : java.security.Provider;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#getDigestLength}
@@ -117,14 +117,14 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	*
 	* @return the result of the {@link java.security.MessageDigest#getDigestLength} method
 	*/
-	@:overload public function getDigestLength() : Int;
+	@:overload @:public public function getDigestLength() : Int;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#reset}
 	* which is executed on the internal {@link java.security.MessageDigest} object.
 	*
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#update(byte[])}
@@ -132,7 +132,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	*
 	* @param input
 	*/
-	@:overload public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function update(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#update(byte)}
@@ -140,7 +140,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	*
 	* @param input
 	*/
-	@:overload public function update(input : java.StdTypes.Int8) : Void;
+	@:overload @:public public function update(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.MessageDigest#update(byte[], int, int)}
@@ -150,13 +150,13 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	* @param offset
 	* @param len
 	*/
-	@:overload public function update(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function update(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseNamespace() : String;
+	@:overload @:public override public function getBaseNamespace() : String;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

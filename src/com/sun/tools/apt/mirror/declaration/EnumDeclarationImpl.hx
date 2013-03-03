@@ -31,12 +31,12 @@ extern class EnumDeclarationImpl extends com.sun.tools.apt.mirror.declaration.Cl
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getEnumConstants() : java.util.Collection<com.sun.mirror.declaration.EnumConstantDeclaration>;
+	@:overload @:public public function getEnumConstants() : java.util.Collection<com.sun.mirror.declaration.EnumConstantDeclaration>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

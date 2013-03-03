@@ -28,34 +28,34 @@ package sun.rmi.transport;
 	/**
 	* Create a new WeakRef to the given object.
 	*/
-	@:overload public function new(obj : Dynamic) : Void;
+	@:overload @:public public function new(obj : Dynamic) : Void;
 	
 	/**
 	* Create a new WeakRef to the given object, registered with a queue.
 	*/
-	@:overload public function new(obj : Dynamic, q : java.lang.ref.ReferenceQueue<Dynamic>) : Void;
+	@:overload @:public public function new(obj : Dynamic, q : java.lang.ref.ReferenceQueue<Dynamic>) : Void;
 	
 	/**
 	* Pin the contained reference (make this a strong reference).
 	*/
-	@:overload @:synchronized public function pin() : Void;
+	@:overload @:public @:synchronized public function pin() : Void;
 	
 	/**
 	* Unpin the contained reference (make this a weak reference).
 	*/
-	@:overload @:synchronized public function unpin() : Void;
+	@:overload @:public @:synchronized public function unpin() : Void;
 	
 	/**
 	* Always return the "identity" hash code of the original referent.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return true if "obj" is this identical WeakRef object, or, if the
 	* contained reference has not been cleared, if "obj" is another WeakRef
 	* object with the identical non-null referent.  Otherwise, return false.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

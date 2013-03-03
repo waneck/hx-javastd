@@ -91,7 +91,7 @@ extern class TargetLostException extends java.lang.Exception
 	/**
 	* @return list of instructions still being targeted.
 	*/
-	@:overload public function getTargets() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
+	@:overload @:public public function getTargets() : java.NativeArray<com.sun.org.apache.bcel.internal.generic.InstructionHandle>;
 	
 	
 }

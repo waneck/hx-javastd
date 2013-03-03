@@ -83,41 +83,41 @@ extern class QName implements java.lang.Cloneable
 	* The qname prefix. For example, the prefix for the qname "a:foo"
 	* is "a".
 	*/
-	public var prefix : String;
+	@:public public var prefix : String;
 	
 	/**
 	* The qname localpart. For example, the localpart for the qname "a:foo"
 	* is "foo".
 	*/
-	public var localpart : String;
+	@:public public var localpart : String;
 	
 	/**
 	* The qname rawname. For example, the rawname for the qname "a:foo"
 	* is "a:foo".
 	*/
-	public var rawname : String;
+	@:public public var rawname : String;
 	
 	/**
 	* The URI to which the qname prefix is bound. This binding must be
 	* performed by a XML Namespaces aware processor.
 	*/
-	public var uri : String;
+	@:public public var uri : String;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** Constructs a QName with the specified values. */
-	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String) : Void;
+	@:overload @:public public function new(prefix : String, localpart : String, rawname : String, uri : String) : Void;
 	
 	/** Constructs a copy of the specified QName. */
-	@:overload public function new(qname : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function new(qname : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Convenience method to set the values of the qname components.
 	*
 	* @param QName The qualified name to be copied.
 	*/
-	@:overload public function setValues(qname : com.sun.org.apache.xerces.internal.xni.QName) : Void;
+	@:overload @:public public function setValues(qname : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Convenience method to set the values of the qname components.
@@ -127,22 +127,22 @@ extern class QName implements java.lang.Cloneable
 	* @param rawname   The qname rawname. (e.g. "a:foo")
 	* @param uri       The URI binding. (e.g. "http://foo.com/mybinding")
 	*/
-	@:overload public function setValues(prefix : String, localpart : String, rawname : String, uri : String) : Void;
+	@:overload @:public public function setValues(prefix : String, localpart : String, rawname : String, uri : String) : Void;
 	
 	/** Clears the values of the qname components. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/** Returns a clone of this object. */
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/** Returns the hashcode for this object. */
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/** Returns true if the two objects are equal. */
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

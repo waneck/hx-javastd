@@ -52,13 +52,13 @@ package javax.naming;
 	*                          additional detail about this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of ConfigurationException with
 	* all name resolution fields and explanation initialized to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

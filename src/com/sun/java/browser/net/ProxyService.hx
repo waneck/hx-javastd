@@ -25,7 +25,7 @@ package com.sun.java.browser.net;
 */
 extern class ProxyService
 {
-	@:overload public static function setProvider(p : com.sun.java.browser.net.ProxyServiceProvider) : Void;
+	@:overload @:public @:static public static function setProvider(p : com.sun.java.browser.net.ProxyServiceProvider) : Void;
 	
 	/**
 	*  <p>The function returns proxy information of the specified URL.</p>
@@ -33,7 +33,7 @@ extern class ProxyService
 	*  @return returns proxy information. If there is not proxy, returns null
 	*  @since 1.4
 	*/
-	@:require(java4) @:overload public static function getProxyInfo(url : java.net.URL) : java.NativeArray<com.sun.java.browser.net.ProxyInfo>;
+	@:require(java4) @:overload @:public @:static public static function getProxyInfo(url : java.net.URL) : java.NativeArray<com.sun.java.browser.net.ProxyInfo>;
 	
 	
 }

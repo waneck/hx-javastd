@@ -30,21 +30,21 @@ extern interface KeyListener extends java.util.EventListener
 	* See the class description for {@link KeyEvent} for a definition of
 	* a key typed event.
 	*/
-	@:overload public function keyTyped(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyTyped(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Invoked when a key has been pressed.
 	* See the class description for {@link KeyEvent} for a definition of
 	* a key pressed event.
 	*/
-	@:overload public function keyPressed(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Invoked when a key has been released.
 	* See the class description for {@link KeyEvent} for a definition of
 	* a key released event.
 	*/
-	@:overload public function keyReleased(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyReleased(e : java.awt.event.KeyEvent) : Void;
 	
 	
 }

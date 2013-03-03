@@ -61,20 +61,20 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class TypeInfoImpl implements org.w3c.dom.TypeInfo
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(typeNamespace : String, typeName : String) : Void;
+	@:overload @:public public function new(typeNamespace : String, typeName : String) : Void;
 	
-	@:overload public function new(t : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition) : Void;
+	@:overload @:public public function new(t : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition) : Void;
 	
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
-	@:overload public function getTypeNamespace() : String;
+	@:overload @:public public function getTypeNamespace() : String;
 	
 	/**
 	* Always returns false.
 	*/
-	@:overload public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload @:public public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	/**
 	* Obtains a {@link TypeInfo} object from the DTD type name.
@@ -82,7 +82,7 @@ extern class TypeInfoImpl implements org.w3c.dom.TypeInfo
 	* Since DTD has a very limited type names, we can actually
 	* cache the {@link TypeInfo} objects.
 	*/
-	@:overload public static function getDTDTypeInfo(name : String) : org.w3c.dom.TypeInfo;
+	@:overload @:public @:static public static function getDTDTypeInfo(name : String) : org.w3c.dom.TypeInfo;
 	
 	
 }

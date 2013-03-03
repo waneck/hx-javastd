@@ -28,13 +28,13 @@ extern interface CorbaAcceptor extends com.sun.corba.se.pept.transport.Acceptor
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function getObjectAdapterId() : String;
+	@:overload @:public public function getObjectAdapterId() : String;
 	
-	@:overload public function getObjectAdapterManagerId() : String;
+	@:overload @:public public function getObjectAdapterManagerId() : String;
 	
-	@:overload public function addToIORTemplate(iorTemplate : com.sun.corba.se.spi.ior.IORTemplate, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String) : Void;
+	@:overload @:public public function addToIORTemplate(iorTemplate : com.sun.corba.se.spi.ior.IORTemplate, policies : com.sun.corba.se.impl.oa.poa.Policies, codebase : String) : Void;
 	
-	@:overload public function getMonitoringName() : String;
+	@:overload @:public public function getMonitoringName() : String;
 	
 	
 }

@@ -30,99 +30,99 @@ extern class SoftVoice extends javax.sound.midi.VoiceStatus
 	*
 	* @author Karl Helgason
 	*/
-	public var exclusiveClass : Int;
+	@:public public var exclusiveClass : Int;
 	
-	public var releaseTriggered : Bool;
+	@:public public var releaseTriggered : Bool;
 	
-	private var channelmixer : com.sun.media.sound.ModelChannelMixer;
+	@:protected private var channelmixer : com.sun.media.sound.ModelChannelMixer;
 	
-	private var tunedKey : Float;
+	@:protected private var tunedKey : Float;
 	
-	private var tuning : com.sun.media.sound.SoftTuning;
+	@:protected private var tuning : com.sun.media.sound.SoftTuning;
 	
-	private var stealer_channel : com.sun.media.sound.SoftChannel;
+	@:protected private var stealer_channel : com.sun.media.sound.SoftChannel;
 	
-	private var stealer_extendedConnectionBlocks : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>;
+	@:protected private var stealer_extendedConnectionBlocks : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>;
 	
-	private var stealer_performer : com.sun.media.sound.SoftPerformer;
+	@:protected private var stealer_performer : com.sun.media.sound.SoftPerformer;
 	
-	private var stealer_channelmixer : com.sun.media.sound.ModelChannelMixer;
+	@:protected private var stealer_channelmixer : com.sun.media.sound.ModelChannelMixer;
 	
-	private var stealer_voiceID : Int;
+	@:protected private var stealer_voiceID : Int;
 	
-	private var stealer_noteNumber : Int;
+	@:protected private var stealer_noteNumber : Int;
 	
-	private var stealer_velocity : Int;
+	@:protected private var stealer_velocity : Int;
 	
-	private var stealer_releaseTriggered : Bool;
+	@:protected private var stealer_releaseTriggered : Bool;
 	
-	private var voiceID : Int;
+	@:protected private var voiceID : Int;
 	
-	private var sustain : Bool;
+	@:protected private var sustain : Bool;
 	
-	private var sostenuto : Bool;
+	@:protected private var sostenuto : Bool;
 	
-	private var portamento : Bool;
+	@:protected private var portamento : Bool;
 	
-	private var objects : java.util.Map<String, com.sun.media.sound.SoftControl>;
+	@:protected private var objects : java.util.Map<String, com.sun.media.sound.SoftControl>;
 	
-	private var synthesizer : com.sun.media.sound.SoftSynthesizer;
+	@:protected private var synthesizer : com.sun.media.sound.SoftSynthesizer;
 	
-	private var instrument : com.sun.media.sound.SoftInstrument;
+	@:protected private var instrument : com.sun.media.sound.SoftInstrument;
 	
-	private var performer : com.sun.media.sound.SoftPerformer;
+	@:protected private var performer : com.sun.media.sound.SoftPerformer;
 	
-	private var softchannel : com.sun.media.sound.SoftChannel;
+	@:protected private var softchannel : com.sun.media.sound.SoftChannel;
 	
-	private var on : Bool;
+	@:protected private var on : Bool;
 	
-	private var extendedConnectionBlocks : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>;
+	@:protected private var extendedConnectionBlocks : java.NativeArray<com.sun.media.sound.ModelConnectionBlock>;
 	
-	private var co_noteon_keynumber : java.NativeArray<Float>;
+	@:protected private var co_noteon_keynumber : java.NativeArray<Float>;
 	
-	private var co_noteon_velocity : java.NativeArray<Float>;
+	@:protected private var co_noteon_velocity : java.NativeArray<Float>;
 	
-	private var co_noteon_on : java.NativeArray<Float>;
+	@:protected private var co_noteon_on : java.NativeArray<Float>;
 	
-	private var resampler : com.sun.media.sound.SoftResamplerStreamer;
+	@:protected private var resampler : com.sun.media.sound.SoftResamplerStreamer;
 	
-	@:overload public function new(synth : com.sun.media.sound.SoftSynthesizer) : Void;
+	@:overload @:public public function new(synth : com.sun.media.sound.SoftSynthesizer) : Void;
 	
-	@:overload private function updateTuning(newtuning : com.sun.media.sound.SoftTuning) : Void;
+	@:overload @:protected private function updateTuning(newtuning : com.sun.media.sound.SoftTuning) : Void;
 	
-	@:overload private function setNote(noteNumber : Int) : Void;
+	@:overload @:protected private function setNote(noteNumber : Int) : Void;
 	
-	@:overload private function noteOn(noteNumber : Int, velocity : Int, delay : Int) : Void;
+	@:overload @:protected private function noteOn(noteNumber : Int, velocity : Int, delay : Int) : Void;
 	
-	@:overload private function setPolyPressure(pressure : Int) : Void;
+	@:overload @:protected private function setPolyPressure(pressure : Int) : Void;
 	
-	@:overload private function setChannelPressure(pressure : Int) : Void;
+	@:overload @:protected private function setChannelPressure(pressure : Int) : Void;
 	
-	@:overload private function controlChange(controller : Int, value : Int) : Void;
+	@:overload @:protected private function controlChange(controller : Int, value : Int) : Void;
 	
-	@:overload private function nrpnChange(controller : Int, value : Int) : Void;
+	@:overload @:protected private function nrpnChange(controller : Int, value : Int) : Void;
 	
-	@:overload private function rpnChange(controller : Int, value : Int) : Void;
+	@:overload @:protected private function rpnChange(controller : Int, value : Int) : Void;
 	
-	@:overload private function setPitchBend(bend : Int) : Void;
+	@:overload @:protected private function setPitchBend(bend : Int) : Void;
 	
-	@:overload private function setMute(mute : Bool) : Void;
+	@:overload @:protected private function setMute(mute : Bool) : Void;
 	
-	@:overload private function setSoloMute(mute : Bool) : Void;
+	@:overload @:protected private function setSoloMute(mute : Bool) : Void;
 	
-	@:overload private function shutdown() : Void;
+	@:overload @:protected private function shutdown() : Void;
 	
-	@:overload private function soundOff() : Void;
+	@:overload @:protected private function soundOff() : Void;
 	
-	@:overload private function noteOff(velocity : Int) : Void;
+	@:overload @:protected private function noteOff(velocity : Int) : Void;
 	
-	@:overload private function redamp() : Void;
+	@:overload @:protected private function redamp() : Void;
 	
-	@:overload private function processControlLogic() : Void;
+	@:overload @:protected private function processControlLogic() : Void;
 	
-	@:overload private function mixAudioStream(_in : com.sun.media.sound.SoftAudioBuffer, out : com.sun.media.sound.SoftAudioBuffer, dout : com.sun.media.sound.SoftAudioBuffer, amp_from : Single, amp_to : Single) : Void;
+	@:overload @:protected private function mixAudioStream(_in : com.sun.media.sound.SoftAudioBuffer, out : com.sun.media.sound.SoftAudioBuffer, dout : com.sun.media.sound.SoftAudioBuffer, amp_from : Single, amp_to : Single) : Void;
 	
-	@:overload private function processAudioLogic(buffer : java.NativeArray<com.sun.media.sound.SoftAudioBuffer>) : Void;
+	@:overload @:protected private function processAudioLogic(buffer : java.NativeArray<com.sun.media.sound.SoftAudioBuffer>) : Void;
 	
 	
 }

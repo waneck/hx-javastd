@@ -37,7 +37,7 @@ package com.sun.jmx.mbeanserver;
 	*@param objectName The object name of the object.
 	*@param object A reference to the object.
 	*/
-	@:overload public function new(objectName : javax.management.ObjectName, object : javax.management.DynamicMBean) : Void;
+	@:overload @:public public function new(objectName : javax.management.ObjectName, object : javax.management.DynamicMBean) : Void;
 	
 	/**
 	* Allows a named object to be created.
@@ -47,7 +47,7 @@ package com.sun.jmx.mbeanserver;
 	*
 	*@exception MalformedObjectNameException The string passed does not have the format of a valid ObjectName
 	*/
-	@:overload public function new(objectName : String, object : javax.management.DynamicMBean) : Void;
+	@:overload @:public public function new(objectName : String, object : javax.management.DynamicMBean) : Void;
 	
 	/**
 	* Compares the current object name with another object name.
@@ -57,23 +57,23 @@ package com.sun.jmx.mbeanserver;
 	*
 	* @return  True if the two named objects are equal, otherwise false.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this named object.
 	*
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Get the object name.
 	*/
-	@:overload public function getName() : javax.management.ObjectName;
+	@:overload @:public public function getName() : javax.management.ObjectName;
 	
 	/**
 	* Get the object
 	*/
-	@:overload public function getObject() : javax.management.DynamicMBean;
+	@:overload @:public public function getObject() : javax.management.DynamicMBean;
 	
 	
 }

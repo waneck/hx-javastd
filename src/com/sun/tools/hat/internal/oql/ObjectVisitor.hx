@@ -35,7 +35,7 @@ package com.sun.tools.hat.internal.oql;
 */
 extern interface ObjectVisitor
 {
-	@:overload public function visit(o : Dynamic) : Bool;
+	@:overload @:public public function visit(o : Dynamic) : Bool;
 	
 	
 }

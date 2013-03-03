@@ -33,7 +33,7 @@ extern interface MultiDoc
 	* @exception  IOException
 	*     Thrown if a error ocurred reading the document.
 	*/
-	@:overload public function getDoc() : javax.print.Doc;
+	@:overload @:public public function getDoc() : javax.print.Doc;
 	
 	/**
 	* Go to the multidoc object that contains the next doc object in the
@@ -45,7 +45,7 @@ extern interface MultiDoc
 	* @exception  IOException
 	*     Thrown if an error occurred locating the next document
 	*/
-	@:overload public function next() : javax.print.MultiDoc;
+	@:overload @:public public function next() : javax.print.MultiDoc;
 	
 	
 }

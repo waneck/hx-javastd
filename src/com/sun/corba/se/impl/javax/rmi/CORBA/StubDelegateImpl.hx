@@ -31,16 +31,16 @@ package com.sun.corba.se.impl.javax.rmi.CORBA;
 */
 extern class StubDelegateImpl implements javax.rmi.CORBA.StubDelegate
 {
-	@:overload public function getIOR() : com.sun.corba.se.impl.ior.StubIORImpl;
+	@:overload @:public public function getIOR() : com.sun.corba.se.impl.ior.StubIORImpl;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns a hash code value for the object which is the same for all stubs
 	* that represent the same remote object.
 	* @return the hash code value.
 	*/
-	@:overload public function hashCode(self : javax.rmi.CORBA.Stub) : Int;
+	@:overload @:public public function hashCode(self : javax.rmi.CORBA.Stub) : Int;
 	
 	/**
 	* Compares two stubs for equality. Returns <code>true</code> when used to compare stubs
@@ -49,16 +49,16 @@ extern class StubDelegateImpl implements javax.rmi.CORBA.StubDelegate
 	* @return <code>true</code> if this object is the same as the <code>obj</code>
 	*          argument; <code>false</code> otherwise.
 	*/
-	@:overload public function equals(self : javax.rmi.CORBA.Stub, obj : Dynamic) : Bool;
+	@:overload @:public public function equals(self : javax.rmi.CORBA.Stub, obj : Dynamic) : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this stub. Returns the same string
 	* for all stubs that represent the same remote object.
 	* @return a string representation of this stub.
 	*/
-	@:overload public function toString(self : javax.rmi.CORBA.Stub) : String;
+	@:overload @:public public function toString(self : javax.rmi.CORBA.Stub) : String;
 	
 	/**
 	* Connects this stub to an ORB. Required after the stub is deserialized
@@ -71,12 +71,12 @@ extern class StubDelegateImpl implements javax.rmi.CORBA.StubDelegate
 	* @exception RemoteException if the stub is already connected to a different
 	* ORB, or if the stub does not represent an exported remote or local object.
 	*/
-	@:overload public function connect(self : javax.rmi.CORBA.Stub, orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function connect(self : javax.rmi.CORBA.Stub, orb : org.omg.CORBA.ORB) : Void;
 	
 	/**
 	* Serialization method to restore the IOR state.
 	*/
-	@:overload public function readObject(self : javax.rmi.CORBA.Stub, stream : java.io.ObjectInputStream) : Void;
+	@:overload @:public public function readObject(self : javax.rmi.CORBA.Stub, stream : java.io.ObjectInputStream) : Void;
 	
 	/**
 	* Serialization method to save the IOR state.
@@ -86,7 +86,7 @@ extern class StubDelegateImpl implements javax.rmi.CORBA.StubDelegate
 	* profile tag (int), followed by the length of the profile data (int), followed
 	* by the profile data (byte array).
 	*/
-	@:overload public function writeObject(self : javax.rmi.CORBA.Stub, stream : java.io.ObjectOutputStream) : Void;
+	@:overload @:public public function writeObject(self : javax.rmi.CORBA.Stub, stream : java.io.ObjectOutputStream) : Void;
 	
 	
 }

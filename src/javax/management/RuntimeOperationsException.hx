@@ -36,7 +36,7 @@ package javax.management;
 	*
 	* @param e the wrapped exception.
 	*/
-	@:overload public function new(e : java.lang.RuntimeException) : Void;
+	@:overload @:public public function new(e : java.lang.RuntimeException) : Void;
 	
 	/**
 	* Creates a <CODE>RuntimeOperationsException</CODE> that wraps the actual <CODE>java.lang.RuntimeException</CODE>
@@ -45,21 +45,21 @@ package javax.management;
 	* @param e the wrapped exception.
 	* @param message the detail message.
 	*/
-	@:overload public function new(e : java.lang.RuntimeException, message : String) : Void;
+	@:overload @:public public function new(e : java.lang.RuntimeException, message : String) : Void;
 	
 	/**
 	* Returns the actual {@link RuntimeException} thrown.
 	*
 	* @return the wrapped {@link RuntimeException}.
 	*/
-	@:overload public function getTargetException() : java.lang.RuntimeException;
+	@:overload @:public public function getTargetException() : java.lang.RuntimeException;
 	
 	/**
 	* Returns the actual {@link RuntimeException} thrown.
 	*
 	* @return the wrapped {@link RuntimeException}.
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

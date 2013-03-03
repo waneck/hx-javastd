@@ -40,7 +40,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	/**
 	* Nullary constructor, intended for subclassers.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new DefaultSynthStyle that is a copy of the passed in
@@ -48,7 +48,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param style Style to duplicate
 	*/
-	@:overload public function new(style : sun.swing.plaf.synth.DefaultSynthStyle) : Void;
+	@:overload @:public public function new(style : sun.swing.plaf.synth.DefaultSynthStyle) : Void;
 	
 	/**
 	* Creates a new DefaultSynthStyle.
@@ -59,13 +59,13 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param states StateInfos describing properties per state
 	* @param data Style specific data.
 	*/
-	@:overload public function new(insets : java.awt.Insets, opaque : Bool, states : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>, data : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(insets : java.awt.Insets, opaque : Bool, states : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>, data : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload override public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:public override public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
-	@:overload public function getColor(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:public public function getColor(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
-	@:overload override private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:protected override private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
 	/**
 	* Returns the color for the specified state.
@@ -76,7 +76,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param type Type of color being requested.
 	* @return Color to render with
 	*/
-	@:overload private function getColorForState(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:protected private function getColorForState(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
 	/**
 	* Sets the font that is used if there is no matching StateInfo, or
@@ -84,11 +84,11 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param font Font to use for rendering
 	*/
-	@:overload public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public public function setFont(font : java.awt.Font) : Void;
 	
-	@:overload override public function getFont(state : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload @:public override public function getFont(state : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
-	@:overload public function getFont(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int) : java.awt.Font;
+	@:overload @:public public function getFont(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int) : java.awt.Font;
 	
 	/**
 	* Returns the font for the specified state. This should NOT callback
@@ -99,16 +99,16 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param state State of the region.
 	* @return Font to render with
 	*/
-	@:overload private function getFontForState(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int) : java.awt.Font;
+	@:overload @:protected private function getFontForState(c : javax.swing.JComponent, id : javax.swing.plaf.synth.Region, state : Int) : java.awt.Font;
 	
-	@:overload override private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload @:protected override private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
 	/**
 	* Sets the SynthGraphicsUtils that will be used for rendering.
 	*
 	* @param graphics SynthGraphics
 	*/
-	@:overload public function setGraphicsUtils(graphics : javax.swing.plaf.synth.SynthGraphicsUtils) : Void;
+	@:overload @:public public function setGraphicsUtils(graphics : javax.swing.plaf.synth.SynthGraphicsUtils) : Void;
 	
 	/**
 	* Returns a SynthGraphicsUtils.
@@ -116,14 +116,14 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param context SynthContext indentifying requestor
 	* @return SynthGraphicsUtils
 	*/
-	@:overload override public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
+	@:overload @:public override public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
 	
 	/**
 	* Sets the insets.
 	*
 	* @param Insets.
 	*/
-	@:overload public function setInsets(insets : java.awt.Insets) : Void;
+	@:overload @:public public function setInsets(insets : java.awt.Insets) : Void;
 	
 	/**
 	* Returns the Insets. If <code>to</code> is non-null the resulting
@@ -134,14 +134,14 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param to Where to place Insets
 	* @return Insets.
 	*/
-	@:overload override public function getInsets(state : javax.swing.plaf.synth.SynthContext, to : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getInsets(state : javax.swing.plaf.synth.SynthContext, to : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Sets the Painter to use for the border.
 	*
 	* @param painter Painter for the Border.
 	*/
-	@:overload public function setPainter(painter : javax.swing.plaf.synth.SynthPainter) : Void;
+	@:overload @:public public function setPainter(painter : javax.swing.plaf.synth.SynthPainter) : Void;
 	
 	/**
 	* Returns the Painter for the passed in Component. This may return null.
@@ -149,14 +149,14 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param ss SynthContext indentifying requestor
 	* @return Painter for the border
 	*/
-	@:overload override public function getPainter(ss : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
+	@:overload @:public override public function getPainter(ss : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
 	
 	/**
 	* Sets whether or not the JComponent should be opaque.
 	*
 	* @param opaque Whether or not the JComponent should be opaque.
 	*/
-	@:overload public function setOpaque(opaque : Bool) : Void;
+	@:overload @:public public function setOpaque(opaque : Bool) : Void;
 	
 	/**
 	* Returns the value to initialize the opacity property of the Component
@@ -166,7 +166,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param ss SynthContext indentifying requestor
 	* @return opaque Whether or not the JComponent is opaque.
 	*/
-	@:overload override public function isOpaque(ss : javax.swing.plaf.synth.SynthContext) : Bool;
+	@:overload @:public override public function isOpaque(ss : javax.swing.plaf.synth.SynthContext) : Bool;
 	
 	/**
 	* Sets style specific values. This does NOT copy the data, it
@@ -174,14 +174,14 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param data Style specific values
 	*/
-	@:overload public function setData(data : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setData(data : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns the style specific data.
 	*
 	* @return Style specific data.
 	*/
-	@:overload public function getData() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getData() : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Getter for a region specific style property.
@@ -190,7 +190,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param key Property being requested.
 	* @return Value of the named property
 	*/
-	@:overload override public function get(state : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(state : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
 	
 	/**
 	* Returns the default value for a particular property.  This is only
@@ -200,14 +200,14 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param key Property being requested.
 	* @return Value of the named property
 	*/
-	@:overload public function getDefaultValue(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
+	@:overload @:public public function getDefaultValue(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
 	
 	/**
 	* Creates a clone of this style.
 	*
 	* @return Clone of this style
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Merges the contents of this Style with that of the passed in Style,
@@ -220,7 +220,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param style Style to add our styles to
 	* @return Merged style.
 	*/
-	@:overload public function addTo(style : sun.swing.plaf.synth.DefaultSynthStyle) : sun.swing.plaf.synth.DefaultSynthStyle;
+	@:overload @:public public function addTo(style : sun.swing.plaf.synth.DefaultSynthStyle) : sun.swing.plaf.synth.DefaultSynthStyle;
 	
 	/**
 	* Sets the array of StateInfo's which are used to specify properties
@@ -228,7 +228,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param states StateInfos
 	*/
-	@:overload public function setStateInfo(states : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>) : Void;
+	@:overload @:public public function setStateInfo(states : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>) : Void;
 	
 	/**
 	* Returns the array of StateInfo's that that are used to specify
@@ -236,7 +236,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @return Array of StateInfos.
 	*/
-	@:overload public function getStateInfo() : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>;
+	@:overload @:public public function getStateInfo() : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>;
 	
 	/**
 	* Returns the best matching StateInfo for a particular state.
@@ -244,9 +244,9 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param state Component state.
 	* @return Best matching StateInfo, or null
 	*/
-	@:overload public function getStateInfo(state : Int) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
+	@:overload @:public public function getStateInfo(state : Int) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -259,7 +259,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	/**
 	* Creates a new StateInfo.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new StateInfo with the specified properties
@@ -271,7 +271,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param font Font for this state
 	* @param colors Colors for this state
 	*/
-	@:overload public function new(state : Int, font : java.awt.Font, colors : java.NativeArray<java.awt.Color>) : Void;
+	@:overload @:public public function new(state : Int, font : java.awt.Font, colors : java.NativeArray<java.awt.Color>) : Void;
 	
 	/**
 	* Creates a new StateInfo that is a copy of the passed in
@@ -279,25 +279,25 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param info StateInfo to copy.
 	*/
-	@:overload public function new(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : Void;
+	@:overload @:public public function new(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : Void;
 	
-	@:overload public function getData() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public public function getData() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload public function setData(data : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function setData(data : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Sets the font for this state.
 	*
 	* @param font Font to use for rendering
 	*/
-	@:overload public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public public function setFont(font : java.awt.Font) : Void;
 	
 	/**
 	* Returns the font for this state.
 	*
 	* @return Returns the font to use for rendering this state
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the array of colors to use for rendering this state. This
@@ -305,7 +305,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param colors Array of colors
 	*/
-	@:overload public function setColors(colors : java.NativeArray<java.awt.Color>) : Void;
+	@:overload @:public public function setColors(colors : java.NativeArray<java.awt.Color>) : Void;
 	
 	/**
 	* Returns the array of colors to use for rendering this state. This
@@ -313,14 +313,14 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @return Array of colors
 	*/
-	@:overload public function getColors() : java.NativeArray<java.awt.Color>;
+	@:overload @:public public function getColors() : java.NativeArray<java.awt.Color>;
 	
 	/**
 	* Returns the Color to used for the specified ColorType.
 	*
 	* @return Color.
 	*/
-	@:overload public function getColor(type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:public public function getColor(type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
 	/**
 	* Merges the contents of this StateInfo with that of the passed in
@@ -334,7 +334,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param info StateInfo to add our styles to
 	* @return Merged StateInfo.
 	*/
-	@:overload public function addTo(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
+	@:overload @:public public function addTo(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
 	
 	/**
 	* Sets the state this StateInfo corresponds to.
@@ -342,7 +342,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @see SynthConstants
 	* @param state info.
 	*/
-	@:overload public function setComponentState(state : Int) : Void;
+	@:overload @:public public function setComponentState(state : Int) : Void;
 	
 	/**
 	* Returns the state this StateInfo corresponds to.
@@ -350,16 +350,16 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @see SynthConstants
 	* @return state info.
 	*/
-	@:overload public function getComponentState() : Int;
+	@:overload @:public public function getComponentState() : Int;
 	
 	/**
 	* Creates and returns a copy of this StateInfo.
 	*
 	* @return Copy of this StateInfo.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class IDResolver
 	* @param eventHandler
 	*      Any errors found during the unmarshalling should be reported to this object.
 	*/
-	@:overload public function startDocument(eventHandler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload @:public public function startDocument(eventHandler : javax.xml.bind.ValidationEventHandler) : Void;
 	
 	/**
 	* Called after the unmarshalling completes.
@@ -44,7 +44,7 @@ extern class IDResolver
 	* This is a good opporunity to reset any internal state of this object,
 	* so that it doesn't keep references to other objects unnecessarily.
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Binds the given object to the specified ID.
@@ -66,7 +66,7 @@ extern class IDResolver
 	*      The object being unmarshalled which is going to own the ID.
 	*      Always non-null.
 	*/
-	@:overload @:abstract public function bind(id : String, obj : Dynamic) : Void;
+	@:overload @:public @:abstract public function bind(id : String, obj : Dynamic) : Void;
 	
 	/**
 	* Obtains the object to be pointed by the IDREF value.
@@ -107,7 +107,7 @@ extern class IDResolver
 	*      null if the implementation is sure that the parameter combination
 	*      will never yield a valid object. Otherwise non-null.
 	*/
-	@:overload @:abstract public function resolve(id : String, targetType : Class<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
+	@:overload @:public @:abstract public function resolve(id : String, targetType : Class<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
 	
 	
 }

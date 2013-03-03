@@ -37,13 +37,13 @@ extern class Messages
 	* @param soapVersion
 	*      The SOAP version of the message. Must not be null.
 	*/
-	@:overload public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(context : com.sun.xml.internal.bind.api.JAXBRIContext, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* @deprecated
 	*      Use {@link #create(JAXBRIContext, Object, SOAPVersion)}
 	*/
-	@:overload public static function create(marshaller : javax.xml.bind.Marshaller, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(marshaller : javax.xml.bind.Marshaller, jaxbObject : Dynamic, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} backed by a SAAJ {@link SOAPMessage} object.
@@ -58,7 +58,7 @@ extern class Messages
 	*      {@link Message} will own the {@link SOAPMessage}, so it shall
 	*      never be touched directly.
 	*/
-	@:overload public static function create(saaj : javax.xml.soap.SOAPMessage) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(saaj : javax.xml.soap.SOAPMessage) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} using {@link Source} as payload.
@@ -72,7 +72,7 @@ extern class Messages
 	* @param ver
 	*      The SOAP version of the message. Must not be null.
 	*/
-	@:overload public static function createUsingPayload(payload : javax.xml.transform.Source, ver : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createUsingPayload(payload : javax.xml.transform.Source, ver : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} using {@link XMLStreamReader} as payload.
@@ -86,7 +86,7 @@ extern class Messages
 	* @param ver
 	*      The SOAP version of the message. Must not be null.
 	*/
-	@:overload public static function createUsingPayload(payload : javax.xml.stream.XMLStreamReader, ver : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createUsingPayload(payload : javax.xml.stream.XMLStreamReader, ver : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} from an {@link Element} that represents
@@ -99,7 +99,7 @@ extern class Messages
 	* @param ver
 	*      The SOAP version of the message. Must not be null.
 	*/
-	@:overload public static function createUsingPayload(payload : org.w3c.dom.Element, ver : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createUsingPayload(payload : org.w3c.dom.Element, ver : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} from an {@link Element} that represents
@@ -108,7 +108,7 @@ extern class Messages
 	* @param soapEnvelope
 	*      The SOAP envelope element.
 	*/
-	@:overload public static function create(soapEnvelope : org.w3c.dom.Element) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(soapEnvelope : org.w3c.dom.Element) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} using Source as entire envelope.
@@ -120,12 +120,12 @@ extern class Messages
 	*      never be touched directly.
 	*
 	*/
-	@:overload public static function create(envelope : javax.xml.transform.Source, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(envelope : javax.xml.transform.Source, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} that doesn't have any payload.
 	*/
-	@:overload public static function createEmpty(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createEmpty(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} from {@link XMLStreamReader} that points to
@@ -134,7 +134,7 @@ extern class Messages
 	* @param reader
 	*      can point to the start document or the start element (of &lt;s:Envelope>)
 	*/
-	@:overload public static function create(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} from {@link XMLStreamBuffer} that retains the
@@ -143,7 +143,7 @@ extern class Messages
 	* @param xsb
 	*      This buffer must contain the infoset of the whole envelope.
 	*/
-	@:overload public static function create(xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a {@link Message} that represents an exception as a fault. The
@@ -156,7 +156,7 @@ extern class Messages
 	*      Always non-null. A message that wraps this {@link Throwable}.
 	*
 	*/
-	@:overload public static function create(t : java.lang.Throwable, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(t : java.lang.Throwable, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a fault {@link Message}.
@@ -172,13 +172,13 @@ extern class Messages
 	* @return
 	*      Always non-null. A message that wraps this {@link SOAPFault}.
 	*/
-	@:overload public static function create(fault : javax.xml.soap.SOAPFault) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(fault : javax.xml.soap.SOAPFault) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* @deprecated
 	*      Use {@link #createAddressingFaultMessage(WSBinding, Packet, QName)}
 	*/
-	@:overload public static function createAddressingFaultMessage(binding : com.sun.xml.internal.ws.api.WSBinding, missingHeader : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createAddressingFaultMessage(binding : com.sun.xml.internal.ws.api.WSBinding, missingHeader : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a fault {@link Message} that captures the code/subcode/subsubcode
@@ -192,7 +192,7 @@ extern class Messages
 	* @return
 	*      A message representing SOAPFault that contains the WS-Addressing code/subcode/subsubcode.
 	*/
-	@:overload public static function createAddressingFaultMessage(binding : com.sun.xml.internal.ws.api.WSBinding, p : com.sun.xml.internal.ws.api.message.Packet, missingHeader : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function createAddressingFaultMessage(binding : com.sun.xml.internal.ws.api.WSBinding, p : com.sun.xml.internal.ws.api.message.Packet, missingHeader : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Creates a fault {@link Message} that captures the code/subcode/subsubcode
@@ -205,7 +205,7 @@ extern class Messages
 	* @return
 	*      A message representing SOAPFault that contains the WS-Addressing code/subcode/subsubcode.
 	*/
-	@:overload public static function create(unsupportedAction : String, av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(unsupportedAction : String, av : com.sun.xml.internal.ws.api.addressing.AddressingVersion, sv : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* To be called to convert a  {@link ProtocolException} and faultcode for a given {@link SOAPVersion} in to a {@link Message}.
@@ -216,7 +216,7 @@ extern class Messages
 	* faultcode present in the underlying {@link SOAPFault}.
 	* @return {@link Message} representing SOAP fault
 	*/
-	@:overload public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, pex : javax.xml.ws.ProtocolException, faultcode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public @:static public static function create(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, pex : javax.xml.ws.ProtocolException, faultcode : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

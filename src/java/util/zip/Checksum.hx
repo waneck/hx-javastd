@@ -35,7 +35,7 @@ extern interface Checksum
 	*
 	* @param b the byte to update the checksum with
 	*/
-	@:overload public function update(b : Int) : Void;
+	@:overload @:public public function update(b : Int) : Void;
 	
 	/**
 	* Updates the current checksum with the specified array of bytes.
@@ -43,18 +43,18 @@ extern interface Checksum
 	* @param off the start offset of the data
 	* @param len the number of bytes to use for the update
 	*/
-	@:overload public function update(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function update(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the current checksum value.
 	* @return the current checksum value
 	*/
-	@:overload public function getValue() : haxe.Int64;
+	@:overload @:public public function getValue() : haxe.Int64;
 	
 	/**
 	* Resets the checksum to its initial value.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

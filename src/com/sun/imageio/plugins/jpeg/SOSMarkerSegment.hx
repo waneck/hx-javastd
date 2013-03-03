@@ -26,7 +26,7 @@ package com.sun.imageio.plugins.jpeg;
 ////import javax.imageio.IIOException;
 @:internal extern class SOSMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected override private function clone() : Dynamic;
 	
 	
 }
@@ -35,7 +35,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$SOSMarkerSegment$ScanComponentSpec') @:internal extern class SOSMarkerSegment_ScanComponentSpec implements java.lang.Cloneable
 {
-	@:overload private function clone() : Dynamic;
+	@:overload @:protected private function clone() : Dynamic;
 	
 	
 }

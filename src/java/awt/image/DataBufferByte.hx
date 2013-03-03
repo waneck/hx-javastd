@@ -60,7 +60,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	*
 	* @param size The size of the <CODE>DataBuffer</CODE>.
 	*/
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Constructs a byte based <CODE>DataBuffer</CODE> with the specified number of
@@ -69,7 +69,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @param size The size of the banks in the <CODE>DataBuffer</CODE>.
 	* @param numBanks The number of banks in the a<CODE>DataBuffer</CODE>.
 	*/
-	@:overload public function new(size : Int, numBanks : Int) : Void;
+	@:overload @:public public function new(size : Int, numBanks : Int) : Void;
 	
 	/**
 	* Constructs a byte-based <CODE>DataBuffer</CODE> with a single bank using the
@@ -86,7 +86,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @param dataArray The byte array for the <CODE>DataBuffer</CODE>.
 	* @param size The size of the <CODE>DataBuffer</CODE> bank.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<java.StdTypes.Int8>, size : Int) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<java.StdTypes.Int8>, size : Int) : Void;
 	
 	/**
 	* Constructs a byte-based <CODE>DataBuffer</CODE> with a single bank using the
@@ -105,7 +105,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @param offset The offset into the <CODE>dataArray</CODE>. <CODE>dataArray</CODE>
 	* must have at least <CODE>offset</CODE> + <CODE>size</CODE> elements.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<java.StdTypes.Int8>, size : Int, offset : Int) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<java.StdTypes.Int8>, size : Int, offset : Int) : Void;
 	
 	/**
 	* Constructs a byte-based <CODE>DataBuffer</CODE> with the specified arrays.
@@ -121,7 +121,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @param dataArray The byte arrays for the <CODE>DataBuffer</CODE>.
 	* @param size The size of the banks in the <CODE>DataBuffer</CODE>.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, size : Int) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, size : Int) : Void;
 	
 	/**
 	* Constructs a byte-based <CODE>DataBuffer</CODE> with the specified arrays, size,
@@ -142,7 +142,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @param size The size of the banks in the <CODE>DataBuffer</CODE>.
 	* @param offsets The offsets into each array.
 	*/
-	@:overload public function new(dataArray : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, size : Int, offsets : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(dataArray : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>, size : Int, offsets : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the default (first) byte data array.
@@ -154,7 +154,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	*
 	* @return The first byte data array.
 	*/
-	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the data array for the specified bank.
@@ -167,7 +167,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @param bank The bank whose data array you want to get.
 	* @return The data array for the specified bank.
 	*/
-	@:overload public function getData(bank : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getData(bank : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the data arrays for all banks.
@@ -179,7 +179,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	*
 	* @return All of the data arrays.
 	*/
-	@:overload public function getBankData() : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function getBankData() : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
 	/**
 	* Returns the requested data array element from the first (default) bank.
@@ -189,7 +189,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload public function getElem(i : Int) : Int;
+	@:overload @:public override public function getElem(i : Int) : Int;
 	
 	/**
 	* Returns the requested data array element from the specified bank.
@@ -200,7 +200,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload public function getElem(bank : Int, i : Int) : Int;
+	@:overload @:public override public function getElem(bank : Int, i : Int) : Int;
 	
 	/**
 	* Sets the requested data array element in the first (default) bank
@@ -211,7 +211,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload public function setElem(i : Int, val : Int) : Void;
+	@:overload @:public override public function setElem(i : Int, val : Int) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank
@@ -222,7 +222,7 @@ extern class DataBufferByte extends java.awt.image.DataBuffer
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload public function setElem(bank : Int, i : Int, val : Int) : Void;
+	@:overload @:public override public function setElem(bank : Int, i : Int, val : Int) : Void;
 	
 	
 }

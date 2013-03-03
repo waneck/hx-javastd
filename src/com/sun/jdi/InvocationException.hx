@@ -32,9 +32,9 @@ package com.sun.jdi;
 */
 @:require(java3) extern class InvocationException extends java.lang.Exception
 {
-	@:overload public function new(exception : com.sun.jdi.ObjectReference) : Void;
+	@:overload @:public public function new(exception : com.sun.jdi.ObjectReference) : Void;
 	
-	@:overload public function exception() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function exception() : com.sun.jdi.ObjectReference;
 	
 	
 }

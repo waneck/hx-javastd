@@ -31,41 +31,41 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	/**
 	* [variety]: one of {atomic, list, union} or absent.
 	*/
-	@:overload public function getVariety() : java.StdTypes.Int16;
+	@:overload @:public public function getVariety() : java.StdTypes.Int16;
 	
 	/**
 	* If variety is <code>atomic</code> the primitive type definition (a
 	* built-in primitive datatype definition or the simple ur-type
 	* definition) is available, otherwise <code>null</code>.
 	*/
-	@:overload public function getPrimitiveType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getPrimitiveType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* Returns the closest built-in type category this type represents or
 	* derived from. For example, if this simple type is a built-in derived
 	* type integer the <code>INTEGER_DV</code> is returned.
 	*/
-	@:overload public function getBuiltInKind() : java.StdTypes.Int16;
+	@:overload @:public public function getBuiltInKind() : java.StdTypes.Int16;
 	
 	/**
 	* If variety is <code>list</code> the item type definition (an atomic or
 	* union simple type definition) is available, otherwise
 	* <code>null</code>.
 	*/
-	@:overload public function getItemType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getItemType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* If variety is <code>union</code> the list of member type definitions (a
 	* non-empty sequence of simple type definitions) is available,
 	* otherwise an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getMemberTypes() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getMemberTypes() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* [facets]: all facets defined on this type. The value is a bit
 	* combination of FACET_XXX constants of all defined facets.
 	*/
-	@:overload public function getDefinedFacets() : java.StdTypes.Int16;
+	@:overload @:public public function getDefinedFacets() : java.StdTypes.Int16;
 	
 	/**
 	* Convenience method. [Facets]: check whether a facet is defined on this
@@ -73,12 +73,12 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	* @param facetName  The name of the facet.
 	* @return  True if the facet is defined, false otherwise.
 	*/
-	@:overload public function isDefinedFacet(facetName : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isDefinedFacet(facetName : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* [facets]: all defined facets for this type which are fixed.
 	*/
-	@:overload public function getFixedFacets() : java.StdTypes.Int16;
+	@:overload @:public public function getFixedFacets() : java.StdTypes.Int16;
 	
 	/**
 	* Convenience method. [Facets]: check whether a facet is defined and
@@ -86,7 +86,7 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	* @param facetName  The name of the facet.
 	* @return  True if the facet is fixed, false otherwise.
 	*/
-	@:overload public function isFixedFacet(facetName : java.StdTypes.Int16) : Bool;
+	@:overload @:public public function isFixedFacet(facetName : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* Convenience method. Returns a value of a single constraining facet for
@@ -100,39 +100,39 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	* @return A value of the facet specified in <code>facetName</code> for
 	*   this simple type definition or <code>null</code>.
 	*/
-	@:overload public function getLexicalFacetValue(facetName : java.StdTypes.Int16) : String;
+	@:overload @:public public function getLexicalFacetValue(facetName : java.StdTypes.Int16) : String;
 	
 	/**
 	* A list of enumeration values if it exists, otherwise an empty
 	* <code>StringList</code>.
 	*/
-	@:overload public function getLexicalEnumeration() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getLexicalEnumeration() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	* A list of pattern values if it exists, otherwise an empty
 	* <code>StringList</code>.
 	*/
-	@:overload public function getLexicalPattern() : com.sun.org.apache.xerces.internal.xs.StringList;
+	@:overload @:public public function getLexicalPattern() : com.sun.org.apache.xerces.internal.xs.StringList;
 	
 	/**
 	*  Fundamental Facet: ordered.
 	*/
-	@:overload public function getOrdered() : java.StdTypes.Int16;
+	@:overload @:public public function getOrdered() : java.StdTypes.Int16;
 	
 	/**
 	* Fundamental Facet: cardinality.
 	*/
-	@:overload public function getFinite() : Bool;
+	@:overload @:public public function getFinite() : Bool;
 	
 	/**
 	* Fundamental Facet: bounded.
 	*/
-	@:overload public function getBounded() : Bool;
+	@:overload @:public public function getBounded() : Bool;
 	
 	/**
 	* Fundamental Facet: numeric.
 	*/
-	@:overload public function getNumeric() : Bool;
+	@:overload @:public public function getNumeric() : Bool;
 	
 	/**
 	*  A list of constraining facets if it exists, otherwise an empty
@@ -140,18 +140,18 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	* retrieve values for <code>enumeration</code> and <code>pattern</code>
 	* facets.
 	*/
-	@:overload public function getFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	*  A list of enumeration and pattern constraining facets if it exists,
 	* otherwise an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getMultiValueFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getMultiValueFacets() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

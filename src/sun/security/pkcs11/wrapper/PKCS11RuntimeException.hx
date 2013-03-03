@@ -61,7 +61,7 @@ extern class PKCS11RuntimeException extends java.lang.RuntimeException
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor taking a string that describes the reason of the exception
@@ -71,7 +71,7 @@ extern class PKCS11RuntimeException extends java.lang.RuntimeException
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructor taking an other exception to wrap.
@@ -80,7 +80,7 @@ extern class PKCS11RuntimeException extends java.lang.RuntimeException
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public function new(encapsulatedException : java.lang.Exception) : Void;
+	@:overload @:public public function new(encapsulatedException : java.lang.Exception) : Void;
 	
 	/**
 	* Constructor taking a message for this exception and an other exception to
@@ -92,7 +92,7 @@ extern class PKCS11RuntimeException extends java.lang.RuntimeException
 	* @preconditions
 	* @postconditions
 	*/
-	@:overload public function new(message : String, encapsulatedException : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, encapsulatedException : java.lang.Exception) : Void;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLPortTypeImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLPortType
 {
-	@:overload public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl, name : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function new(xsr : javax.xml.stream.XMLStreamReader, owner : com.sun.xml.internal.ws.model.wsdl.WSDLModelImpl, name : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function get(operationName : String) : com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl;
+	@:overload @:public public function get(operationName : String) : com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl;
 	
-	@:overload public function getOperations() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl>;
+	@:overload @:public public function getOperations() : java.lang.Iterable<com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl>;
 	
 	/**
 	* Populates the Map that holds operation name as key and {@link WSDLOperation} as the value.
@@ -39,7 +39,7 @@ extern class WSDLPortTypeImpl extends com.sun.xml.internal.ws.model.wsdl.Abstrac
 	* @param ptOp  Must be non-null
 	* @throws NullPointerException if either opName or ptOp is null
 	*/
-	@:overload public function put(opName : String, ptOp : com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl) : Void;
+	@:overload @:public public function put(opName : String, ptOp : com.sun.xml.internal.ws.model.wsdl.WSDLOperationImpl) : Void;
 	
 	
 }

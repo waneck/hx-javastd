@@ -57,7 +57,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @throws <code>IllegalArgumentException</code>
 	* if ds is <code>null</code>.
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, sa : Int, dgl : java.awt.dnd.DragGestureListener) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, sa : Int, dgl : java.awt.dnd.DragGestureListener) : Void;
 	
 	/**
 	* Construct a new <code>DragGestureRecognizer</code>
@@ -85,7 +85,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @throws <code>IllegalArgumentException</code>
 	* if ds is <code>null</code>.
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, sa : Int) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component, sa : Int) : Void;
 	
 	/**
 	* Construct a new <code>DragGestureRecognizer</code>
@@ -110,7 +110,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @throws <code>IllegalArgumentException</code>
 	* if ds is <code>null</code>.
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource, c : java.awt.Component) : Void;
 	
 	/**
 	* Construct a new <code>DragGestureRecognizer</code>
@@ -124,21 +124,21 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @throws <code>IllegalArgumentException</code>
 	* if ds is <code>null</code>.
 	*/
-	@:overload private function new(ds : java.awt.dnd.DragSource) : Void;
+	@:overload @:protected private function new(ds : java.awt.dnd.DragSource) : Void;
 	
 	/**
 	* register this DragGestureRecognizer's Listeners with the Component
 	*
 	* subclasses must override this method
 	*/
-	@:overload @:abstract private function registerListeners() : Void;
+	@:overload @:protected @:abstract private function registerListeners() : Void;
 	
 	/**
 	* unregister this DragGestureRecognizer's Listeners with the Component
 	*
 	* subclasses must override this method
 	*/
-	@:overload @:abstract private function unregisterListeners() : Void;
+	@:overload @:protected @:abstract private function unregisterListeners() : Void;
 	
 	/**
 	* This method returns the <code>DragSource</code>
@@ -148,7 +148,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* <P>
 	* @return the DragSource
 	*/
-	@:overload public function getDragSource() : java.awt.dnd.DragSource;
+	@:overload @:public public function getDragSource() : java.awt.dnd.DragSource;
 	
 	/**
 	* This method returns the <code>Component</code>
@@ -159,7 +159,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @return The Component this DragGestureRecognizer
 	* is associated with
 	*/
-	@:overload @:synchronized public function getComponent() : java.awt.Component;
+	@:overload @:public @:synchronized public function getComponent() : java.awt.Component;
 	
 	/**
 	* set the Component that the DragGestureRecognizer is associated with
@@ -169,7 +169,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* <P>
 	* @param c The <code>Component</code> or <code>null</code>
 	*/
-	@:overload @:synchronized public function setComponent(c : java.awt.Component) : Void;
+	@:overload @:public @:synchronized public function setComponent(c : java.awt.Component) : Void;
 	
 	/**
 	* This method returns an int representing the
@@ -178,7 +178,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* <P>
 	* @return the currently permitted source action(s)
 	*/
-	@:overload @:synchronized public function getSourceActions() : Int;
+	@:overload @:public @:synchronized public function getSourceActions() : Int;
 	
 	/**
 	* This method sets the permitted source drag action(s)
@@ -186,7 +186,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* <P>
 	* @param actions the permitted source drag action(s)
 	*/
-	@:overload @:synchronized public function setSourceActions(actions : Int) : Void;
+	@:overload @:public @:synchronized public function setSourceActions(actions : Int) : Void;
 	
 	/**
 	* This method returns the first event in the
@@ -195,13 +195,13 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* <P>
 	* @return the initial event that triggered the drag gesture
 	*/
-	@:overload public function getTriggerEvent() : java.awt.event.InputEvent;
+	@:overload @:public public function getTriggerEvent() : java.awt.event.InputEvent;
 	
 	/**
 	* Reset the Recognizer, if its currently recognizing a gesture, ignore
 	* it.
 	*/
-	@:overload public function resetRecognizer() : Void;
+	@:overload @:public public function resetRecognizer() : Void;
 	
 	/**
 	* Register a new <code>DragGestureListener</code>.
@@ -212,7 +212,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @throws java.util.TooManyListenersException if a
 	* <code>DragGestureListener</code> has already been added.
 	*/
-	@:overload @:synchronized public function addDragGestureListener(dgl : java.awt.dnd.DragGestureListener) : Void;
+	@:overload @:public @:synchronized public function addDragGestureListener(dgl : java.awt.dnd.DragGestureListener) : Void;
 	
 	/**
 	* unregister the current DragGestureListener
@@ -223,7 +223,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @throws <code>IllegalArgumentException</code> if
 	* dgl is not (equal to) the currently registered <code>DragGestureListener</code>.
 	*/
-	@:overload @:synchronized public function removeDragGestureListener(dgl : java.awt.dnd.DragGestureListener) : Void;
+	@:overload @:public @:synchronized public function removeDragGestureListener(dgl : java.awt.dnd.DragGestureListener) : Void;
 	
 	/**
 	* Notify the DragGestureListener that a Drag and Drop initiating
@@ -232,7 +232,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* @param dragAction The action initially selected by the users gesture
 	* @param p          The point (in Component coords) where the gesture originated
 	*/
-	@:overload @:synchronized private function fireDragGestureRecognized(dragAction : Int, p : java.awt.Point) : Void;
+	@:overload @:protected @:synchronized private function fireDragGestureRecognized(dragAction : Int, p : java.awt.Point) : Void;
 	
 	/**
 	* Listeners registered on the Component by this Recognizer shall record
@@ -251,7 +251,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	* internal array of events. Note that <code>null</code>
 	* is not a valid value, and will be ignored.
 	*/
-	@:overload @:synchronized private function appendEvent(awtie : java.awt.event.InputEvent) : Void;
+	@:overload @:protected @:synchronized private function appendEvent(awtie : java.awt.event.InputEvent) : Void;
 	
 	/**
 	* The <code>DragSource</code>
@@ -260,7 +260,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	*
 	* @serial
 	*/
-	private var dragSource : java.awt.dnd.DragSource;
+	@:protected private var dragSource : java.awt.dnd.DragSource;
 	
 	/**
 	* The <code>Component</code>
@@ -268,13 +268,13 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	*
 	* @serial
 	*/
-	private var component : java.awt.Component;
+	@:protected private var component : java.awt.Component;
 	
 	/**
 	* The <code>DragGestureListener</code>
 	* associated with this <code>DragGestureRecognizer</code>.
 	*/
-	@:transient private var dragGestureListener : java.awt.dnd.DragGestureListener;
+	@:protected @:transient private var dragGestureListener : java.awt.dnd.DragGestureListener;
 	
 	/**
 	* An <code>int</code> representing
@@ -283,7 +283,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	*
 	* @serial
 	*/
-	private var sourceActions : Int;
+	@:protected private var sourceActions : Int;
 	
 	/**
 	* The list of events (in order) that
@@ -292,7 +292,7 @@ extern class DragGestureRecognizer implements java.io.Serializable
 	*
 	* @serial
 	*/
-	private var events : java.util.ArrayList<java.awt.event.InputEvent>;
+	@:protected private var events : java.util.ArrayList<java.awt.event.InputEvent>;
 	
 	
 }

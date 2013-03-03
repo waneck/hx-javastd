@@ -33,14 +33,14 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @see     java.lang.System#getProperty(java.lang.String)
 	*/
-	public static var separatorChar(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var separatorChar(default, null) : java.StdTypes.Char16;
 	
 	/**
 	* The system-dependent default name-separator character, represented as a
 	* string for convenience.  This string contains a single character, namely
 	* <code>{@link #separatorChar}</code>.
 	*/
-	public static var separator(default, null) : String;
+	@:public @:static @:final public static var separator(default, null) : String;
 	
 	/**
 	* The system-dependent path-separator character.  This field is
@@ -52,14 +52,14 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @see     java.lang.System#getProperty(java.lang.String)
 	*/
-	public static var pathSeparatorChar(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var pathSeparatorChar(default, null) : java.StdTypes.Char16;
 	
 	/**
 	* The system-dependent path-separator character, represented as a string
 	* for convenience.  This string contains a single character, namely
 	* <code>{@link #pathSeparatorChar}</code>.
 	*/
-	public static var pathSeparator(default, null) : String;
+	@:public @:static @:final public static var pathSeparator(default, null) : String;
 	
 	/**
 	* Creates a new <code>File</code> instance by converting the given
@@ -70,7 +70,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @throws  NullPointerException
 	*          If the <code>pathname</code> argument is <code>null</code>
 	*/
-	@:overload public function new(pathname : String) : Void;
+	@:overload @:public public function new(pathname : String) : Void;
 	
 	/**
 	* Creates a new <code>File</code> instance from a parent pathname string
@@ -97,7 +97,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @throws  NullPointerException
 	*          If <code>child</code> is <code>null</code>
 	*/
-	@:overload public function new(parent : String, child : String) : Void;
+	@:overload @:public public function new(parent : String, child : String) : Void;
 	
 	/**
 	* Creates a new <code>File</code> instance from a parent abstract
@@ -124,7 +124,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @throws  NullPointerException
 	*          If <code>child</code> is <code>null</code>
 	*/
-	@:overload public function new(parent : java.io.File, child : String) : Void;
+	@:overload @:public public function new(parent : java.io.File, child : String) : Void;
 	
 	/**
 	* Creates a new <tt>File</tt> instance by converting the given
@@ -162,7 +162,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @see java.net.URI
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(uri : java.net.URI) : Void;
+	@:require(java4) @:overload @:public public function new(uri : java.net.URI) : Void;
 	
 	/**
 	* Returns the name of the file or directory denoted by this abstract
@@ -174,7 +174,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          pathname, or the empty string if this pathname's name sequence
 	*          is empty
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the pathname string of this abstract pathname's parent, or
@@ -189,7 +189,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          abstract pathname, or <code>null</code> if this pathname
 	*          does not name a parent
 	*/
-	@:overload public function getParent() : String;
+	@:overload @:public public function getParent() : String;
 	
 	/**
 	* Returns the abstract pathname of this abstract pathname's parent,
@@ -207,7 +207,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getParentFile() : java.io.File;
+	@:require(java2) @:overload @:public public function getParentFile() : java.io.File;
 	
 	/**
 	* Converts this abstract pathname into a pathname string.  The resulting
@@ -216,7 +216,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @return  The string form of this abstract pathname
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Tests whether this abstract pathname is absolute.  The definition of
@@ -228,7 +228,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @return  <code>true</code> if this abstract pathname is absolute,
 	*          <code>false</code> otherwise
 	*/
-	@:overload public function isAbsolute() : Bool;
+	@:overload @:public public function isAbsolute() : Bool;
 	
 	/**
 	* Returns the absolute pathname string of this abstract pathname.
@@ -253,7 +253,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @see     java.io.File#isAbsolute()
 	*/
-	@:overload public function getAbsolutePath() : String;
+	@:overload @:public public function getAbsolutePath() : String;
 	
 	/**
 	* Returns the absolute form of this abstract pathname.  Equivalent to
@@ -267,7 +267,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getAbsoluteFile() : java.io.File;
+	@:require(java2) @:overload @:public public function getAbsoluteFile() : java.io.File;
 	
 	/**
 	* Returns the canonical pathname string of this abstract pathname.
@@ -307,7 +307,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since   JDK1.1
 	* @see     Path#toRealPath
 	*/
-	@:require(java1) @:overload public function getCanonicalPath() : String;
+	@:require(java1) @:overload @:public public function getCanonicalPath() : String;
 	
 	/**
 	* Returns the canonical form of this abstract pathname.  Equivalent to
@@ -330,7 +330,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since 1.2
 	* @see     Path#toRealPath
 	*/
-	@:require(java2) @:overload public function getCanonicalFile() : java.io.File;
+	@:require(java2) @:overload @:public public function getCanonicalFile() : java.io.File;
 	
 	/**
 	* Converts this abstract pathname into a <code>file:</code> URL.  The
@@ -355,7 +355,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* {@link #toURI() toURI} method, and then converting the URI into a URL
 	* via the {@link java.net.URI#toURL() URI.toURL} method.
 	*/
-	@:require(java2) @:overload public function toURL() : java.net.URL;
+	@:require(java2) @:overload @:public public function toURL() : java.net.URL;
 	
 	/**
 	* Constructs a <tt>file:</tt> URI that represents this abstract pathname.
@@ -397,7 +397,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @see java.net.URI#toURL()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function toURI() : java.net.URI;
+	@:require(java4) @:overload @:public public function toURI() : java.net.URI;
 	
 	/**
 	* Tests whether the application can read the file denoted by this
@@ -412,7 +412,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkRead(java.lang.String)}</code>
 	*          method denies read access to the file
 	*/
-	@:overload public function canRead() : Bool;
+	@:overload @:public public function canRead() : Bool;
 	
 	/**
 	* Tests whether the application can modify the file denoted by this
@@ -428,7 +428,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkWrite(java.lang.String)}</code>
 	*          method denies write access to the file
 	*/
-	@:overload public function canWrite() : Bool;
+	@:overload @:public public function canWrite() : Bool;
 	
 	/**
 	* Tests whether the file or directory denoted by this abstract pathname
@@ -442,7 +442,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkRead(java.lang.String)}</code>
 	*          method denies read access to the file or directory
 	*/
-	@:overload public function exists() : Bool;
+	@:overload @:public public function exists() : Bool;
 	
 	/**
 	* Tests whether the file denoted by this abstract pathname is a
@@ -463,7 +463,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkRead(java.lang.String)}</code>
 	*          method denies read access to the file
 	*/
-	@:overload public function isDirectory() : Bool;
+	@:overload @:public public function isDirectory() : Bool;
 	
 	/**
 	* Tests whether the file denoted by this abstract pathname is a normal
@@ -486,7 +486,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkRead(java.lang.String)}</code>
 	*          method denies read access to the file
 	*/
-	@:overload public function isFile() : Bool;
+	@:overload @:public public function isFile() : Bool;
 	
 	/**
 	* Tests whether the file named by this abstract pathname is a hidden
@@ -506,7 +506,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function isHidden() : Bool;
+	@:require(java2) @:overload @:public public function isHidden() : Bool;
 	
 	/**
 	* Returns the time that the file denoted by this abstract pathname was
@@ -529,7 +529,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkRead(java.lang.String)}</code>
 	*          method denies read access to the file
 	*/
-	@:overload public function lastModified() : haxe.Int64;
+	@:overload @:public public function lastModified() : haxe.Int64;
 	
 	/**
 	* Returns the length of the file denoted by this abstract pathname.
@@ -551,7 +551,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkRead(java.lang.String)}</code>
 	*          method denies read access to the file
 	*/
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
 	/**
 	* Atomically creates a new, empty file named by this abstract pathname if
@@ -579,7 +579,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createNewFile() : Bool;
+	@:require(java2) @:overload @:public public function createNewFile() : Bool;
 	
 	/**
 	* Deletes the file or directory denoted by this abstract pathname.  If
@@ -599,7 +599,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkDelete}</code> method denies
 	*          delete access to the file
 	*/
-	@:overload public function delete() : Bool;
+	@:overload @:public public function delete() : Bool;
 	
 	/**
 	* Requests that the file or directory denoted by this abstract
@@ -628,7 +628,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deleteOnExit() : Void;
+	@:require(java2) @:overload @:public public function deleteOnExit() : Void;
 	
 	/**
 	* Returns an array of strings naming the files and directories in the
@@ -662,7 +662,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          SecurityManager#checkRead(String)} method denies read access to
 	*          the directory
 	*/
-	@:overload public function list() : java.NativeArray<String>;
+	@:overload @:public public function list() : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of strings naming the files and directories in the
@@ -693,7 +693,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @see java.nio.file.Files#newDirectoryStream(Path,String)
 	*/
-	@:overload public function list(filter : java.io.FilenameFilter) : java.NativeArray<String>;
+	@:overload @:public public function list(filter : java.io.FilenameFilter) : java.NativeArray<String>;
 	
 	/**
 	* Returns an array of abstract pathnames denoting the files in the
@@ -733,7 +733,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload public function listFiles() : java.NativeArray<java.io.File>;
+	@:require(java2) @:overload @:public public function listFiles() : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns an array of abstract pathnames denoting the files and
@@ -765,7 +765,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since  1.2
 	* @see java.nio.file.Files#newDirectoryStream(Path,String)
 	*/
-	@:require(java2) @:overload public function listFiles(filter : java.io.FilenameFilter) : java.NativeArray<java.io.File>;
+	@:require(java2) @:overload @:public public function listFiles(filter : java.io.FilenameFilter) : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns an array of abstract pathnames denoting the files and
@@ -795,7 +795,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since  1.2
 	* @see java.nio.file.Files#newDirectoryStream(Path,java.nio.file.DirectoryStream.Filter)
 	*/
-	@:require(java2) @:overload public function listFiles(filter : java.io.FileFilter) : java.NativeArray<java.io.File>;
+	@:require(java2) @:overload @:public public function listFiles(filter : java.io.FileFilter) : java.NativeArray<java.io.File>;
 	
 	/**
 	* Creates the directory named by this abstract pathname.
@@ -808,7 +808,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          java.lang.SecurityManager#checkWrite(java.lang.String)}</code>
 	*          method does not permit the named directory to be created
 	*/
-	@:overload public function mkdir() : Bool;
+	@:overload @:public public function mkdir() : Bool;
 	
 	/**
 	* Creates the directory named by this abstract pathname, including any
@@ -830,7 +830,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*          method does not permit the named directory and all necessary
 	*          parent directories to be created
 	*/
-	@:overload public function mkdirs() : Bool;
+	@:overload @:public public function mkdirs() : Bool;
 	
 	/**
 	* Renames the file denoted by this abstract pathname.
@@ -859,7 +859,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @throws  NullPointerException
 	*          If parameter <code>dest</code> is <code>null</code>
 	*/
-	@:overload public function renameTo(dest : java.io.File) : Bool;
+	@:overload @:public public function renameTo(dest : java.io.File) : Bool;
 	
 	/**
 	* Sets the last-modified time of the file or directory named by this
@@ -887,7 +887,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLastModified(time : haxe.Int64) : Bool;
+	@:require(java2) @:overload @:public public function setLastModified(time : haxe.Int64) : Bool;
 	
 	/**
 	* Marks the file or directory named by this abstract pathname so that
@@ -906,7 +906,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setReadOnly() : Bool;
+	@:require(java2) @:overload @:public public function setReadOnly() : Bool;
 	
 	/**
 	* Sets the owner's or everybody's write permission for this abstract
@@ -938,7 +938,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setWritable(writable : Bool, ownerOnly : Bool) : Bool;
+	@:require(java6) @:overload @:public public function setWritable(writable : Bool, ownerOnly : Bool) : Bool;
 	
 	/**
 	* A convenience method to set the owner's write permission for this abstract
@@ -965,7 +965,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setWritable(writable : Bool) : Bool;
+	@:require(java6) @:overload @:public public function setWritable(writable : Bool) : Bool;
 	
 	/**
 	* Sets the owner's or everybody's read permission for this abstract
@@ -1000,7 +1000,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setReadable(readable : Bool, ownerOnly : Bool) : Bool;
+	@:require(java6) @:overload @:public public function setReadable(readable : Bool, ownerOnly : Bool) : Bool;
 	
 	/**
 	* A convenience method to set the owner's read permission for this abstract
@@ -1030,7 +1030,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setReadable(readable : Bool) : Bool;
+	@:require(java6) @:overload @:public public function setReadable(readable : Bool) : Bool;
 	
 	/**
 	* Sets the owner's or everybody's execute permission for this abstract
@@ -1065,7 +1065,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setExecutable(executable : Bool, ownerOnly : Bool) : Bool;
+	@:require(java6) @:overload @:public public function setExecutable(executable : Bool, ownerOnly : Bool) : Bool;
 	
 	/**
 	* A convenience method to set the owner's execute permission for this abstract
@@ -1095,7 +1095,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function setExecutable(executable : Bool) : Bool;
+	@:require(java6) @:overload @:public public function setExecutable(executable : Bool) : Bool;
 	
 	/**
 	* Tests whether the application can execute the file denoted by this
@@ -1111,7 +1111,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function canExecute() : Bool;
+	@:require(java6) @:overload @:public public function canExecute() : Bool;
 	
 	/**
 	* List the available filesystem roots.
@@ -1155,7 +1155,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since  1.2
 	* @see java.nio.file.FileStore
 	*/
-	@:require(java2) @:overload public static function listRoots() : java.NativeArray<java.io.File>;
+	@:require(java2) @:overload @:public @:static public static function listRoots() : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns the size of the partition <a href="#partName">named</a> by this
@@ -1172,7 +1172,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since  1.6
 	*/
-	@:require(java6) @:overload public function getTotalSpace() : haxe.Int64;
+	@:require(java6) @:overload @:public public function getTotalSpace() : haxe.Int64;
 	
 	/**
 	* Returns the number of unallocated bytes in the partition <a
@@ -1200,7 +1200,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since  1.6
 	*/
-	@:require(java6) @:overload public function getFreeSpace() : haxe.Int64;
+	@:require(java6) @:overload @:public public function getFreeSpace() : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes available to this virtual machine on the
@@ -1231,7 +1231,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since  1.6
 	*/
-	@:require(java6) @:overload public function getUsableSpace() : haxe.Int64;
+	@:require(java6) @:overload @:public public function getUsableSpace() : haxe.Int64;
 	
 	/**
 	* <p> Creates a new empty file in the specified directory, using the
@@ -1302,7 +1302,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function createTempFile(prefix : String, suffix : String, directory : java.io.File) : java.io.File;
+	@:require(java2) @:overload @:public @:static public static function createTempFile(prefix : String, suffix : String, directory : java.io.File) : java.io.File;
 	
 	/**
 	* Creates an empty file in the default temporary-file directory, using
@@ -1341,7 +1341,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since 1.2
 	* @see java.nio.file.Files#createTempDirectory(String,FileAttribute[])
 	*/
-	@:require(java2) @:overload public static function createTempFile(prefix : String, suffix : String) : java.io.File;
+	@:require(java2) @:overload @:public @:static public static function createTempFile(prefix : String, suffix : String) : java.io.File;
 	
 	/**
 	* Compares two abstract pathnames lexicographically.  The ordering
@@ -1360,7 +1360,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(pathname : java.io.File) : Int;
+	@:require(java2) @:overload @:public public function compareTo(pathname : java.io.File) : Int;
 	
 	/**
 	* Tests this abstract pathname for equality with the given object.
@@ -1376,7 +1376,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @return  <code>true</code> if and only if the objects are the same;
 	*          <code>false</code> otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Computes a hash code for this abstract pathname.  Because equality of
@@ -1392,7 +1392,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @return  A hash code for this abstract pathname
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the pathname string of this abstract pathname.  This is just the
@@ -1400,7 +1400,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @return  The string form of this abstract pathname
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns a {@link Path java.nio.file.Path} object constructed from the
@@ -1428,7 +1428,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since   1.7
 	* @see Path#toFile
 	*/
-	@:require(java7) @:overload public function toPath() : java.nio.file.Path;
+	@:require(java7) @:overload @:public public function toPath() : java.nio.file.Path;
 	
 	
 }

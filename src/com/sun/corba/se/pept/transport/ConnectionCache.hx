@@ -28,23 +28,23 @@ package com.sun.corba.se.pept.transport;
 */
 extern interface ConnectionCache
 {
-	@:overload public function getCacheType() : String;
+	@:overload @:public public function getCacheType() : String;
 	
-	@:overload public function stampTime(connection : com.sun.corba.se.pept.transport.Connection) : Void;
+	@:overload @:public public function stampTime(connection : com.sun.corba.se.pept.transport.Connection) : Void;
 	
-	@:overload public function numberOfConnections() : haxe.Int64;
+	@:overload @:public public function numberOfConnections() : haxe.Int64;
 	
-	@:overload public function numberOfIdleConnections() : haxe.Int64;
+	@:overload @:public public function numberOfIdleConnections() : haxe.Int64;
 	
-	@:overload public function numberOfBusyConnections() : haxe.Int64;
+	@:overload @:public public function numberOfBusyConnections() : haxe.Int64;
 	
-	@:overload public function reclaim() : Bool;
+	@:overload @:public public function reclaim() : Bool;
 	
 	/** Close all connections in the connection cache.
 	* This is used as a final cleanup, and will result
 	* in abrupt termination of any pending communications.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

@@ -46,19 +46,19 @@ package com.sun.xml.internal.rngom.digested;
 */
 @:internal extern class ElementAnnotationBuilderImpl implements com.sun.xml.internal.rngom.ast.builder.ElementAnnotationBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function new(e : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(e : org.w3c.dom.Element) : Void;
 	
-	@:overload public function addText(value : String, loc : com.sun.xml.internal.rngom.ast.om.Location, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addText(value : String, loc : com.sun.xml.internal.rngom.ast.om.Location, comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function makeElementAnnotation() : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation;
+	@:overload @:public public function makeElementAnnotation() : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation;
 	
-	@:overload public function addAttribute(ns : String, localName : String, prefix : String, value : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
+	@:overload @:public public function addAttribute(ns : String, localName : String, prefix : String, value : String, loc : com.sun.xml.internal.rngom.ast.om.Location) : Void;
 	
-	@:overload public function addElement(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
+	@:overload @:public public function addElement(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	
-	@:overload public function addComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
-	@:overload public function addLeadingComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
+	@:overload @:public public function addLeadingComment(comments : com.sun.xml.internal.rngom.ast.builder.CommentList<Dynamic>) : Void;
 	
 	
 }

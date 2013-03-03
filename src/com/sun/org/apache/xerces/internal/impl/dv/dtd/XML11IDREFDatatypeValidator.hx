@@ -39,7 +39,7 @@ extern class XML11IDREFDatatypeValidator extends com.sun.org.apache.xerces.inter
 	* @author Neil Graham, IBM
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Checks that "content" string is valid IDREF value.
@@ -51,7 +51,7 @@ extern class XML11IDREFDatatypeValidator extends com.sun.org.apache.xerces.inter
 	*         invalid according to the rules for the validators
 	* @see InvalidDatatypeValueException
 	*/
-	@:overload override public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public override public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	
 }

@@ -27,15 +27,15 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class ReadIterator implements java.util.Iterator<Dynamic>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(iterator : java.util.Iterator<Dynamic>) : Void;
+	@:overload @:public public function new(iterator : java.util.Iterator<Dynamic>) : Void;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

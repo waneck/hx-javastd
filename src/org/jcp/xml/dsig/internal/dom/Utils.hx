@@ -27,17 +27,17 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class Utils
 {
-	@:overload public static function readBytesFromStream(is : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function readBytesFromStream(is : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the ID from a same-document URI (ex: "#id")
 	*/
-	@:overload public static function parseIdFromSameDocumentURI(uri : String) : String;
+	@:overload @:public @:static public static function parseIdFromSameDocumentURI(uri : String) : String;
 	
 	/**
 	* Returns true if uri is a same-document URI, false otherwise.
 	*/
-	@:overload public static function sameDocumentURI(uri : String) : Bool;
+	@:overload @:public @:static public static function sameDocumentURI(uri : String) : Bool;
 	
 	
 }

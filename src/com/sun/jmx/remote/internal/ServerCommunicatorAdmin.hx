@@ -25,7 +25,7 @@ package com.sun.jmx.remote.internal;
 */
 extern class ServerCommunicatorAdmin
 {
-	@:overload public function new(timeout : haxe.Int64) : Void;
+	@:overload @:public public function new(timeout : haxe.Int64) : Void;
 	
 	/**
 	* Tells that a new request message is received.
@@ -36,7 +36,7 @@ extern class ServerCommunicatorAdmin
 	* <ul><code>true</code> if the connection is already being terminated,
 	* <br><code>false</code> otherwise.</ul>
 	*/
-	@:overload public function reqIncoming() : Bool;
+	@:overload @:public public function reqIncoming() : Bool;
 	
 	/**
 	* Tells that a response is sent out for a received request.
@@ -44,24 +44,24 @@ extern class ServerCommunicatorAdmin
 	* <ul><code>true</code> if the connection is already being terminated,
 	* <br><code>false</code> otherwise.</ul>
 	*/
-	@:overload public function rspOutgoing() : Bool;
+	@:overload @:public public function rspOutgoing() : Bool;
 	
 	/**
 	* Called by this class to tell an implementation to do stop.
 	*/
-	@:overload @:abstract private function doStop() : Void;
+	@:overload @:protected @:abstract private function doStop() : Void;
 	
 	/**
 	* Terminates this object.
 	* Called only by outside, so do not need to call doStop
 	*/
-	@:overload public function terminate() : Void;
+	@:overload @:public public function terminate() : Void;
 	
 	
 }
 @:native('com$sun$jmx$remote$internal$ServerCommunicatorAdmin$Timeout') @:internal extern class ServerCommunicatorAdmin_Timeout implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ package com.sun.xml.internal.ws.policy;
 	/**
 	* An {@code Object.toString()} method override.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

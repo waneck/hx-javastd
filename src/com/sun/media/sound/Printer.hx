@@ -56,19 +56,19 @@ package com.sun.media.sound;
 
 	release = on;
 	}*/
-	@:overload public static function err(str : String) : Void;
+	@:overload @:public @:static public static function err(str : String) : Void;
 	
-	@:overload public static function debug(str : String) : Void;
+	@:overload @:public @:static public static function debug(str : String) : Void;
 	
-	@:native('trace') @:overload public static function _trace(str : String) : Void;
+	@:native('trace') @:overload @:public @:static public static function _trace(str : String) : Void;
 	
-	@:overload public static function verbose(str : String) : Void;
+	@:overload @:public @:static public static function verbose(str : String) : Void;
 	
-	@:overload public static function release(str : String) : Void;
+	@:overload @:public @:static public static function release(str : String) : Void;
 	
-	@:overload public static function println(s : String) : Void;
+	@:overload @:public @:static public static function println(s : String) : Void;
 	
-	@:overload public static function println() : Void;
+	@:overload @:public @:static public static function println() : Void;
 	
 	
 }

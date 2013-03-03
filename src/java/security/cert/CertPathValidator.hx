@@ -33,7 +33,7 @@ extern class CertPathValidator
 	* @param provider the provider
 	* @param algorithm the algorithm name
 	*/
-	@:overload private function new(validatorSpi : java.security.cert.CertPathValidatorSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(validatorSpi : java.security.cert.CertPathValidatorSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns a <code>CertPathValidator</code> object that implements the
@@ -63,7 +63,7 @@ extern class CertPathValidator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : java.security.cert.CertPathValidator;
+	@:overload @:public @:static public static function getInstance(algorithm : String) : java.security.cert.CertPathValidator;
 	
 	/**
 	* Returns a <code>CertPathValidator</code> object that implements the
@@ -100,7 +100,7 @@ extern class CertPathValidator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.cert.CertPathValidator;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : String) : java.security.cert.CertPathValidator;
 	
 	/**
 	* Returns a <code>CertPathValidator</code> object that implements the
@@ -131,7 +131,7 @@ extern class CertPathValidator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.cert.CertPathValidator;
+	@:overload @:public @:static public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.cert.CertPathValidator;
 	
 	/**
 	* Returns the <code>Provider</code> of this
@@ -139,14 +139,14 @@ extern class CertPathValidator
 	*
 	* @return the <code>Provider</code> of this <code>CertPathValidator</code>
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the algorithm name of this <code>CertPathValidator</code>.
 	*
 	* @return the algorithm name of this <code>CertPathValidator</code>
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Validates the specified certification path using the specified
@@ -167,7 +167,7 @@ extern class CertPathValidator
 	* parameters or the type of the specified <code>CertPath</code> are
 	* inappropriate for this <code>CertPathValidator</code>
 	*/
-	@:overload @:final public function validate(certPath : java.security.cert.CertPath, params : java.security.cert.CertPathParameters) : java.security.cert.CertPathValidatorResult;
+	@:overload @:public @:final public function validate(certPath : java.security.cert.CertPath, params : java.security.cert.CertPathParameters) : java.security.cert.CertPathValidatorResult;
 	
 	/**
 	* Returns the default <code>CertPathValidator</code> type as specified in
@@ -190,7 +190,7 @@ extern class CertPathValidator
 	* in the Java security properties file, or the string &quot;PKIX&quot;
 	* if no such property exists.
 	*/
-	@:overload @:final public static function getDefaultType() : String;
+	@:overload @:public @:final @:static public static function getDefaultType() : String;
 	
 	
 }

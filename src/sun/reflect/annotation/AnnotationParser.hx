@@ -37,7 +37,7 @@ extern class AnnotationParser
 	* @throws AnnotationFormatError if an annotation is found to be
 	*         malformed.
 	*/
-	@:overload public static function parseAnnotations(rawAnnotations : java.NativeArray<java.StdTypes.Int8>, constPool : sun.reflect.ConstantPool, container : Class<Dynamic>) : java.util.Map<Class<java.lang.annotation.Annotation>, java.lang.annotation.Annotation>;
+	@:overload @:public @:static public static function parseAnnotations(rawAnnotations : java.NativeArray<java.StdTypes.Int8>, constPool : sun.reflect.ConstantPool, container : Class<Dynamic>) : java.util.Map<Class<java.lang.annotation.Annotation>, java.lang.annotation.Annotation>;
 	
 	/**
 	* Parses the parameter annotations described by the specified byte array.
@@ -62,13 +62,13 @@ extern class AnnotationParser
 	* @throws AnnotationFormatError if an annotation is found to be
 	*         malformed.
 	*/
-	@:overload public static function parseParameterAnnotations(rawAnnotations : java.NativeArray<java.StdTypes.Int8>, constPool : sun.reflect.ConstantPool, container : Class<Dynamic>) : java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
+	@:overload @:public @:static public static function parseParameterAnnotations(rawAnnotations : java.NativeArray<java.StdTypes.Int8>, constPool : sun.reflect.ConstantPool, container : Class<Dynamic>) : java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
 	
 	/**
 	* Returns an annotation of the given type backed by the given
 	* member -> value map.
 	*/
-	@:overload public static function annotationForMap(type : Class<java.lang.annotation.Annotation>, memberValues : java.util.Map<String, Dynamic>) : java.lang.annotation.Annotation;
+	@:overload @:public @:static public static function annotationForMap(type : Class<java.lang.annotation.Annotation>, memberValues : java.util.Map<String, Dynamic>) : java.lang.annotation.Annotation;
 	
 	/**
 	* Parses the annotation member value at the current position in the
@@ -97,9 +97,9 @@ extern class AnnotationParser
 	* The member must be of the indicated type. If it is not, this
 	* method returns an AnnotationTypeMismatchExceptionProxy.
 	*/
-	@:overload public static function parseMemberValue(memberType : Class<Dynamic>, buf : java.nio.ByteBuffer, constPool : sun.reflect.ConstantPool, container : Class<Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function parseMemberValue(memberType : Class<Dynamic>, buf : java.nio.ByteBuffer, constPool : sun.reflect.ConstantPool, container : Class<Dynamic>) : Dynamic;
 	
-	@:overload public static function toArray(annotations : java.util.Map<Class<java.lang.annotation.Annotation>, java.lang.annotation.Annotation>) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public @:static public static function toArray(annotations : java.util.Map<Class<java.lang.annotation.Annotation>, java.lang.annotation.Annotation>) : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	
 }

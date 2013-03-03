@@ -34,7 +34,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	*
 	* @return data for the part's content
 	*/
-	@:overload public function read() : java.io.InputStream;
+	@:overload @:public public function read() : java.io.InputStream;
 	
 	/**
 	* Can get the attachment part's content only once. The content
@@ -48,19 +48,19 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	*
 	* @return data for the part's content
 	*/
-	@:overload public function readOnce() : java.io.InputStream;
+	@:overload @:public public function readOnce() : java.io.InputStream;
 	
 	
 }
 @:native('com$sun$xml$internal$org$jvnet$mimepull$DataHead$ReadMultiStream') @:internal extern class DataHead_ReadMultiStream extends java.io.InputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

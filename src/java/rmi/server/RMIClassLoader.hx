@@ -45,7 +45,7 @@ extern class RMIClassLoader
 	* @deprecated replaced by <code>loadClass(String,String)</code> method
 	* @see #loadClass(String,String)
 	*/
-	@:overload public static function loadClass(name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Loads a class from a codebase URL.
@@ -75,7 +75,7 @@ extern class RMIClassLoader
 	* @throws  ClassNotFoundException if a definition for the class
 	* could not be found at the specified URL
 	*/
-	@:overload public static function loadClass(codebase : java.net.URL, name : String) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(codebase : java.net.URL, name : String) : Class<Dynamic>;
 	
 	/**
 	* Loads a class from a codebase URL path.
@@ -103,7 +103,7 @@ extern class RMIClassLoader
 	*
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public static function loadClass(codebase : String, name : String) : Class<Dynamic>;
+	@:require(java2) @:overload @:public @:static public static function loadClass(codebase : String, name : String) : Class<Dynamic>;
 	
 	/**
 	* Loads a class from a codebase URL path, optionally using the
@@ -143,7 +143,7 @@ extern class RMIClassLoader
 	*
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public static function loadClass(codebase : String, name : String, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:require(java4) @:overload @:public @:static public static function loadClass(codebase : String, name : String, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Loads a dynamic proxy class (see {@link java.lang.reflect.Proxy})
@@ -185,7 +185,7 @@ extern class RMIClassLoader
 	*
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public static function loadProxyClass(codebase : String, interfaces : java.NativeArray<String>, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:require(java4) @:overload @:public @:static public static function loadProxyClass(codebase : String, interfaces : java.NativeArray<String>, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Returns a class loader that loads classes from the given codebase
@@ -225,13 +225,13 @@ extern class RMIClassLoader
 	*
 	* @since   1.3
 	*/
-	@:require(java3) @:overload public static function getClassLoader(codebase : String) : java.lang.ClassLoader;
+	@:require(java3) @:overload @:public @:static public static function getClassLoader(codebase : String) : java.lang.ClassLoader;
 	
 	/*
 	* REMIND: Should we say that the returned class annotation will or
 	* should be a (space-separated) list of URLs?
 	*/
-	@:overload public static function getClassAnnotation(cl : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getClassAnnotation(cl : Class<Dynamic>) : String;
 	
 	/**
 	* Returns the canonical instance of the default provider
@@ -452,7 +452,7 @@ extern class RMIClassLoader
 	*
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public static function getDefaultProviderInstance() : java.rmi.server.RMIClassLoaderSpi;
+	@:require(java4) @:overload @:public @:static public static function getDefaultProviderInstance() : java.rmi.server.RMIClassLoaderSpi;
 	
 	/**
 	* Returns the security context of the given class loader.
@@ -465,7 +465,7 @@ extern class RMIClassLoader
 	* longer uses this method to obtain a class loader's security context.
 	* @see java.lang.SecurityManager#getSecurityContext()
 	*/
-	@:overload public static function getSecurityContext(loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public @:static public static function getSecurityContext(loader : java.lang.ClassLoader) : Dynamic;
 	
 	
 }

@@ -39,7 +39,7 @@ package sun.text.bidi;
 */
 extern class BidiLine
 {
-	@:overload public static function setLine(bidi : java.text.Bidi, paraBidi : sun.text.bidi.BidiBase, newBidi : java.text.Bidi, newBidiBase : sun.text.bidi.BidiBase, start : Int, limit : Int) : java.text.Bidi;
+	@:overload @:public @:static public static function setLine(bidi : java.text.Bidi, paraBidi : sun.text.bidi.BidiBase, newBidi : java.text.Bidi, newBidiBase : sun.text.bidi.BidiBase, start : Int, limit : Int) : java.text.Bidi;
 	
 	
 }

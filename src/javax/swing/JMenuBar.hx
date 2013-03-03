@@ -64,13 +64,13 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	/**
 	* Creates a new menu bar.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the menubar's current UI.
 	* @see #setUI
 	*/
-	@:overload public function getUI() : javax.swing.plaf.MenuBarUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.MenuBarUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -83,14 +83,14 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.MenuBarUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.MenuBarUI) : Void;
 	
 	/**
 	* Resets the UI property with a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -99,7 +99,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the model object that handles single selections.
@@ -107,7 +107,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return the <code>SingleSelectionModel</code> property
 	* @see SingleSelectionModel
 	*/
-	@:overload public function getSelectionModel() : javax.swing.SingleSelectionModel;
+	@:overload @:public public function getSelectionModel() : javax.swing.SingleSelectionModel;
 	
 	/**
 	* Sets the model object to handle single selections.
@@ -118,7 +118,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*       bound: true
 	* description: The selection model, recording which child is selected.
 	*/
-	@:overload public function setSelectionModel(model : javax.swing.SingleSelectionModel) : Void;
+	@:overload @:public public function setSelectionModel(model : javax.swing.SingleSelectionModel) : Void;
 	
 	/**
 	* Appends the specified menu to the end of the menu bar.
@@ -126,7 +126,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @param c the <code>JMenu</code> component to add
 	* @return the menu component
 	*/
-	@:overload public function add(c : javax.swing.JMenu) : javax.swing.JMenu;
+	@:overload @:public public function add(c : javax.swing.JMenu) : javax.swing.JMenu;
 	
 	/**
 	* Returns the menu at the specified position in the menu bar.
@@ -137,14 +137,14 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*          if there is no <code>JMenu</code> at that position (ie. if
 	*          it is a <code>JMenuItem</code>)
 	*/
-	@:overload public function getMenu(index : Int) : javax.swing.JMenu;
+	@:overload @:public public function getMenu(index : Int) : javax.swing.JMenu;
 	
 	/**
 	* Returns the number of items in the menu bar.
 	*
 	* @return the number of items in the menu bar
 	*/
-	@:overload public function getMenuCount() : Int;
+	@:overload @:public public function getMenuCount() : Int;
 	
 	/**
 	* Sets the help menu that appears when the user selects the
@@ -153,7 +153,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @param menu the JMenu that delivers help to the user
 	*/
-	@:overload public function setHelpMenu(menu : javax.swing.JMenu) : Void;
+	@:overload @:public public function setHelpMenu(menu : javax.swing.JMenu) : Void;
 	
 	/**
 	* Gets the help menu for the menu bar.  This method is not yet
@@ -161,7 +161,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return the <code>JMenu</code> that delivers help to the user
 	*/
-	@:overload public function getHelpMenu() : javax.swing.JMenu;
+	@:overload @:public public function getHelpMenu() : javax.swing.JMenu;
 	
 	/**
 	* Returns the component at the specified index.
@@ -171,7 +171,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*          or <code>null</code> for an invalid index
 	* @deprecated replaced by <code>getComponent(int i)</code>
 	*/
-	@:overload public function getComponentAtIndex(i : Int) : java.awt.Component;
+	@:overload @:public public function getComponentAtIndex(i : Int) : java.awt.Component;
 	
 	/**
 	* Returns the index of the specified component.
@@ -180,7 +180,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an integer giving the component's position, where 0 is first;
 	*          or -1 if it can't be found
 	*/
-	@:overload public function getComponentIndex(c : java.awt.Component) : Int;
+	@:overload @:public public function getComponentIndex(c : java.awt.Component) : Int;
 	
 	/**
 	* Sets the currently selected component, producing a
@@ -188,21 +188,21 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @param sel the <code>Component</code> to select
 	*/
-	@:overload public function setSelected(sel : java.awt.Component) : Void;
+	@:overload @:public public function setSelected(sel : java.awt.Component) : Void;
 	
 	/**
 	* Returns true if the menu bar currently has a component selected.
 	*
 	* @return true if a selection has been made, else false
 	*/
-	@:overload public function isSelected() : Bool;
+	@:overload @:public public function isSelected() : Bool;
 	
 	/**
 	* Returns true if the menu bars border should be painted.
 	*
 	* @return  true if the border should be painted, else false
 	*/
-	@:overload public function isBorderPainted() : Bool;
+	@:overload @:public public function isBorderPainted() : Bool;
 	
 	/**
 	* Sets whether the border should be painted.
@@ -215,7 +215,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*    attribute: visualUpdate true
 	*  description: Whether the border should be painted.
 	*/
-	@:overload public function setBorderPainted(b : Bool) : Void;
+	@:overload @:public public function setBorderPainted(b : Bool) : Void;
 	
 	/**
 	* Paints the menubar's border if <code>BorderPainted</code>
@@ -225,7 +225,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @see JComponent#paint
 	* @see JComponent#setBorder
 	*/
-	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the margin between the menubar's border and
@@ -239,7 +239,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*    attribute: visualUpdate true
 	*  description: The space between the menubar's border and its contents
 	*/
-	@:overload public function setMargin(m : java.awt.Insets) : Void;
+	@:overload @:public public function setMargin(m : java.awt.Insets) : Void;
 	
 	/**
 	* Returns the margin between the menubar's border and
@@ -249,28 +249,28 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an <code>Insets</code> object containing the margin values
 	* @see Insets
 	*/
-	@:overload public function getMargin() : java.awt.Insets;
+	@:overload @:public public function getMargin() : java.awt.Insets;
 	
 	/**
 	* Implemented to be a <code>MenuElement</code> -- does nothing.
 	*
 	* @see #getSubElements
 	*/
-	@:overload public function processMouseEvent(event : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processMouseEvent(event : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Implemented to be a <code>MenuElement</code> -- does nothing.
 	*
 	* @see #getSubElements
 	*/
-	@:overload public function processKeyEvent(e : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processKeyEvent(e : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Implemented to be a <code>MenuElement</code> -- does nothing.
 	*
 	* @see #getSubElements
 	*/
-	@:overload public function menuSelectionChanged(isIncluded : Bool) : Void;
+	@:overload @:public public function menuSelectionChanged(isIncluded : Bool) : Void;
 	
 	/**
 	* Implemented to be a <code>MenuElement</code> -- returns the
@@ -280,7 +280,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* other menu elements.
 	* @return an array of menu items in the menu bar.
 	*/
-	@:overload public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* Implemented to be a <code>MenuElement</code>. Returns this object.
@@ -288,7 +288,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return the current <code>Component</code> (this)
 	* @see #getSubElements
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Returns a string representation of this <code>JMenuBar</code>.
@@ -300,7 +300,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return  a string representation of this <code>JMenuBar</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this JMenuBar.
@@ -311,25 +311,25 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an AccessibleJMenuBar that serves as the
 	*         AccessibleContext of this JMenuBar
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Subclassed to check all the child menus.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
+	@:require(java3) @:overload @:protected override private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
 	
 	/**
 	* Overrides <code>JComponent.addNotify</code> to register this
 	* menu bar with the current keyboard manager.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Overrides <code>JComponent.removeNotify</code> to unregister this
 	* menu bar with the current keyboard manager.
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	
 }
@@ -356,7 +356,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an instance of AccessibleState containing the current state
 	*         of the object
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -364,7 +364,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -374,20 +374,20 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload @:public override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns 1 if a menu is currently selected in this menu bar.
 	*
 	* @return 1 if a menu is currently selected, else 0
 	*/
-	@:overload public function getAccessibleSelectionCount() : Int;
+	@:overload @:public public function getAccessibleSelectionCount() : Int;
 	
 	/**
 	* Returns the currently selected menu if one is selected,
 	* otherwise null.
 	*/
-	@:overload public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSelection(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns true if the current child of this object is selected.
@@ -396,7 +396,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* object.
 	* @see AccessibleContext#getAccessibleChild
 	*/
-	@:overload public function isAccessibleChildSelected(i : Int) : Bool;
+	@:overload @:public public function isAccessibleChildSelected(i : Int) : Bool;
 	
 	/**
 	* Selects the nth menu in the menu bar, forcing it to
@@ -407,7 +407,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @param i the zero-based index of selectable items
 	* @see #getAccessibleStateSet
 	*/
-	@:overload public function addAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function addAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Removes the nth selected item in the object from the object's
@@ -416,20 +416,20 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @param i the zero-based index of selectable items
 	*/
-	@:overload public function removeAccessibleSelection(i : Int) : Void;
+	@:overload @:public public function removeAccessibleSelection(i : Int) : Void;
 	
 	/**
 	* Clears the selection in the object, so that nothing in the
 	* object is selected.  This will close any open menu.
 	*/
-	@:overload public function clearAccessibleSelection() : Void;
+	@:overload @:public public function clearAccessibleSelection() : Void;
 	
 	/**
 	* Normally causes every selected item in the object to be selected
 	* if the object supports multiple selections.  This method
 	* makes no sense in a menu bar, and so does nothing.
 	*/
-	@:overload public function selectAllAccessibleSelection() : Void;
+	@:overload @:public public function selectAllAccessibleSelection() : Void;
 	
 	
 }

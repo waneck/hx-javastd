@@ -33,7 +33,7 @@ extern class SealedObject implements java.io.Serializable
 	*
 	* @serial
 	*/
-	private var encodedParams : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var encodedParams : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs a SealedObject from any Serializable object.
@@ -54,7 +54,7 @@ extern class SealedObject implements java.io.Serializable
 	* (i.e., the length of the serialized object contents) is not a multiple
 	* of the cipher's block size
 	*/
-	@:overload public function new(object : java.io.Serializable, c : javax.crypto.Cipher) : Void;
+	@:overload @:public public function new(object : java.io.Serializable, c : javax.crypto.Cipher) : Void;
 	
 	/**
 	* Constructs a SealedObject object from the passed-in SealedObject.
@@ -62,14 +62,14 @@ extern class SealedObject implements java.io.Serializable
 	* @param so a SealedObject object
 	* @exception NullPointerException if the given sealed object is null.
 	*/
-	@:overload private function new(so : javax.crypto.SealedObject) : Void;
+	@:overload @:protected private function new(so : javax.crypto.SealedObject) : Void;
 	
 	/**
 	* Returns the algorithm that was used to seal this object.
 	*
 	* @return the algorithm that was used to seal this object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Retrieves the original (encapsulated) object.
@@ -100,7 +100,7 @@ extern class SealedObject implements java.io.Serializable
 	* the object (e.g., it has the wrong algorithm).
 	* @exception NullPointerException if <code>key</code> is null.
 	*/
-	@:overload @:final public function getObject(key : java.security.Key) : Dynamic;
+	@:overload @:public @:final public function getObject(key : java.security.Key) : Dynamic;
 	
 	/**
 	* Retrieves the original (encapsulated) object.
@@ -124,7 +124,7 @@ extern class SealedObject implements java.io.Serializable
 	* initialized for decryption, and padding has been specified, but
 	* the input data does not have proper expected padding bytes
 	*/
-	@:overload @:final public function getObject(c : javax.crypto.Cipher) : Dynamic;
+	@:overload @:public @:final public function getObject(c : javax.crypto.Cipher) : Dynamic;
 	
 	/**
 	* Retrieves the original (encapsulated) object.
@@ -158,13 +158,13 @@ extern class SealedObject implements java.io.Serializable
 	* the object (e.g., it has the wrong algorithm).
 	* @exception NullPointerException if <code>key</code> is null.
 	*/
-	@:overload @:final public function getObject(key : java.security.Key, provider : String) : Dynamic;
+	@:overload @:public @:final public function getObject(key : java.security.Key, provider : String) : Dynamic;
 	
 	
 }
 @:internal extern class extObjectInputStream extends java.io.ObjectInputStream
 {
-	@:overload override private function resolveClass(v : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(v : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	
 }

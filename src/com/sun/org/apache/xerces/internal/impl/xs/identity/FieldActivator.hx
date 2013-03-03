@@ -38,7 +38,7 @@ extern interface FieldActivator
 	* @param identityConstraint The identity constraint.
 	* @param initialDepth  the depth at which the selector began matching
 	*/
-	@:overload public function startValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
+	@:overload @:public public function startValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
 	
 	/**
 	* Request to activate the specified field. This method returns the
@@ -49,7 +49,7 @@ extern interface FieldActivator
 	* @param field The field to activate.
 	* @param initialDepth the 0-indexed depth in the instance document at which the Selector began to match.
 	*/
-	@:overload public function activateField(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
+	@:overload @:public public function activateField(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.identity.XPathMatcher;
 	
 	/**
 	* Sets whether the given field is permitted to match a value.
@@ -59,7 +59,7 @@ extern interface FieldActivator
 	* @param field The field that may be permitted to be matched.
 	* @param state Boolean indiciating whether the field may be matched.
 	*/
-	@:overload public function setMayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, state : Null<Bool>) : Void;
+	@:overload @:public public function setMayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field, state : Null<Bool>) : Void;
 	
 	/**
 	* Returns whether the given field is permitted to match a value.
@@ -67,7 +67,7 @@ extern interface FieldActivator
 	* @param field The field that may be permitted to be matched.
 	* @return Boolean indicating whether the field may be matched.
 	*/
-	@:overload public function mayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field) : Null<Bool>;
+	@:overload @:public public function mayMatch(field : com.sun.org.apache.xerces.internal.impl.xs.identity.Field) : Null<Bool>;
 	
 	/**
 	* Ends the value scope for the specified identity constraint.
@@ -75,7 +75,7 @@ extern interface FieldActivator
 	* @param identityConstraint The identity constraint.
 	* @param initialDepth  the 0-indexed depth where the Selector began to match.
 	*/
-	@:overload public function endValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
+	@:overload @:public public function endValueScopeFor(identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
 	
 	
 }

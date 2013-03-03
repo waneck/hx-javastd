@@ -37,7 +37,7 @@ extern interface OctetBufferListener
 	* So it will be possible to preserve a read data by
 	* cloning, or perform other actions.
 	*/
-	@:overload public function onBeforeOctetBufferOverwrite() : Void;
+	@:overload @:public public function onBeforeOctetBufferOverwrite() : Void;
 	
 	
 }

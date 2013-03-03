@@ -25,13 +25,13 @@ package com.sun.activation.registries;
 */
 extern class MimeTypeEntry
 {
-	@:overload public function new(mime_type : String, file_ext : String) : Void;
+	@:overload @:public public function new(mime_type : String, file_ext : String) : Void;
 	
-	@:overload public function getMIMEType() : String;
+	@:overload @:public public function getMIMEType() : String;
 	
-	@:overload public function getFileExtension() : String;
+	@:overload @:public public function getFileExtension() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

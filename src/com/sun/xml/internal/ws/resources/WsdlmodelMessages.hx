@@ -25,30 +25,30 @@ package com.sun.xml.internal.ws.resources;
 */
 extern class WsdlmodelMessages
 {
-	@:overload public static function localizableWSDL_PORTADDRESS_EPRADDRESS_NOT_MATCH(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableWSDL_PORTADDRESS_EPRADDRESS_NOT_MATCH(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* For Port: {0}, service location {1} does not match address {2} in the EndpointReference
 	*
 	*/
-	@:overload public static function WSDL_PORTADDRESS_EPRADDRESS_NOT_MATCH(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload @:public @:static public static function WSDL_PORTADDRESS_EPRADDRESS_NOT_MATCH(arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
-	@:overload public static function localizableWSDL_IMPORT_SHOULD_BE_WSDL(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableWSDL_IMPORT_SHOULD_BE_WSDL(arg0 : Dynamic) : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Import of {0} is violation of BP 1.1 R2001. Proceeding with a warning.
 	* R2001 A DESCRIPTION MUST only use the WSDL "import" statement to import another WSDL description.
 	*
 	*/
-	@:overload public static function WSDL_IMPORT_SHOULD_BE_WSDL(arg0 : Dynamic) : String;
+	@:overload @:public @:static public static function WSDL_IMPORT_SHOULD_BE_WSDL(arg0 : Dynamic) : String;
 	
-	@:overload public static function localizableMEX_METADATA_SYSTEMID_NULL() : com.sun.xml.internal.ws.util.localization.Localizable;
+	@:overload @:public @:static public static function localizableMEX_METADATA_SYSTEMID_NULL() : com.sun.xml.internal.ws.util.localization.Localizable;
 	
 	/**
 	* Mex WSDL metadata can not be parsed, the systemId is of the MEX source is null.
 	*
 	*/
-	@:overload public static function MEX_METADATA_SYSTEMID_NULL() : String;
+	@:overload @:public @:static public static function MEX_METADATA_SYSTEMID_NULL() : String;
 	
 	
 }

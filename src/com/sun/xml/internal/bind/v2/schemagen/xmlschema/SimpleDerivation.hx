@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface SimpleDerivation extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleRestriction;
+	@:overload @:public public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleRestriction;
 	
-	@:overload public function union() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Union;
+	@:overload @:public public function union() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Union;
 	
-	@:overload public function list() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+	@:overload @:public public function list() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 	
 	
 }

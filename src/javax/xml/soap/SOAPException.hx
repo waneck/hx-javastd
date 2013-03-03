@@ -44,7 +44,7 @@ extern class SOAPException extends java.lang.Exception
 	* Constructs a <code>SOAPException</code> object with no
 	* reason or embedded <code>Throwable</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SOAPException</code> object with the given
@@ -52,7 +52,7 @@ extern class SOAPException extends java.lang.Exception
 	*
 	* @param reason a description of what caused the exception
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	/**
 	* Constructs a <code>SOAPException</code> object with the given
@@ -64,13 +64,13 @@ extern class SOAPException extends java.lang.Exception
 	* @param cause a <code>Throwable</code> object that is to
 	*        be embedded in this <code>SOAPException</code> object
 	*/
-	@:overload public function new(reason : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(reason : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a <code>SOAPException</code> object initialized
 	* with the given <code>Throwable</code> object.
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the detail message for this <code>SOAPException</code>
@@ -86,7 +86,7 @@ extern class SOAPException extends java.lang.Exception
 	*         message of the embedded <code>Throwable</code> object,
 	*         if there is one
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Returns the <code>Throwable</code> object embedded in this
@@ -96,7 +96,7 @@ extern class SOAPException extends java.lang.Exception
 	* @return the embedded <code>Throwable</code> object or <code>null</code>
 	*         if there is none
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Initializes the <code>cause</code> field of this <code>SOAPException</code>
@@ -124,7 +124,7 @@ extern class SOAPException extends java.lang.Exception
 	* @throws IllegalStateException if the cause for this <code>SOAPException</code> object
 	*         has already been initialized
 	*/
-	@:overload @:synchronized override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:public @:synchronized override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	
 }

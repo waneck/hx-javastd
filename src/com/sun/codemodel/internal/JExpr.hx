@@ -28,45 +28,37 @@ package com.sun.codemodel.internal;
 */
 extern class JExpr
 {
-	@:overload public static function assign(lhs : com.sun.codemodel.internal.JAssignmentTarget, rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function assign(lhs : com.sun.codemodel.internal.JAssignmentTarget, rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function assignPlus(lhs : com.sun.codemodel.internal.JAssignmentTarget, rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function assignPlus(lhs : com.sun.codemodel.internal.JAssignmentTarget, rhs : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function _new(c : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:static public static function _new(c : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JInvocation;
 	
-	@:overload public static function _new(t : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:static public static function _new(t : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JInvocation;
 	
-	@:overload public static function invoke(method : String) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:static public static function invoke(method : String) : com.sun.codemodel.internal.JInvocation;
 	
-	@:overload public static function invoke(method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:static public static function invoke(method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
 	
-	@:overload public static function invoke(lhs : com.sun.codemodel.internal.JExpression, method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:static public static function invoke(lhs : com.sun.codemodel.internal.JExpression, method : com.sun.codemodel.internal.JMethod) : com.sun.codemodel.internal.JInvocation;
 	
-	@:overload public static function invoke(lhs : com.sun.codemodel.internal.JExpression, method : String) : com.sun.codemodel.internal.JInvocation;
+	@:overload @:public @:static public static function invoke(lhs : com.sun.codemodel.internal.JExpression, method : String) : com.sun.codemodel.internal.JInvocation;
 	
-	@:overload public static function ref(field : String) : com.sun.codemodel.internal.JFieldRef;
+	@:overload @:public @:static public static function ref(field : String) : com.sun.codemodel.internal.JFieldRef;
 	
-	@:overload public static function ref(lhs : com.sun.codemodel.internal.JExpression, field : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JFieldRef;
+	@:overload @:public @:static public static function ref(lhs : com.sun.codemodel.internal.JExpression, field : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JFieldRef;
 	
-	@:overload public static function ref(lhs : com.sun.codemodel.internal.JExpression, field : String) : com.sun.codemodel.internal.JFieldRef;
+	@:overload @:public @:static public static function ref(lhs : com.sun.codemodel.internal.JExpression, field : String) : com.sun.codemodel.internal.JFieldRef;
 	
-	@:overload public static function refthis(field : String) : com.sun.codemodel.internal.JFieldRef;
+	@:overload @:public @:static public static function refthis(field : String) : com.sun.codemodel.internal.JFieldRef;
 	
-	@:overload public static function dotclass(cl : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function dotclass(cl : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function component(lhs : com.sun.codemodel.internal.JExpression, index : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArrayCompRef;
+	@:overload @:public @:static public static function component(lhs : com.sun.codemodel.internal.JExpression, index : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArrayCompRef;
 	
-	@:native('cast') @:overload public static function _cast(type : com.sun.codemodel.internal.JType, expr : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JCast;
+	@:native('cast') @:overload @:public @:static public static function _cast(type : com.sun.codemodel.internal.JType, expr : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JCast;
 	
-	@:overload public static function newArray(type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JArray;
-	
-	/**
-	* Generates {@code new T[size]}.
-	*
-	* @param type
-	*      The type of the array component. 'T' or {@code new T[size]}.
-	*/
-	@:overload public static function newArray(type : com.sun.codemodel.internal.JType, size : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArray;
+	@:overload @:public @:static public static function newArray(type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JArray;
 	
 	/**
 	* Generates {@code new T[size]}.
@@ -74,51 +66,59 @@ extern class JExpr
 	* @param type
 	*      The type of the array component. 'T' or {@code new T[size]}.
 	*/
-	@:overload public static function newArray(type : com.sun.codemodel.internal.JType, size : Int) : com.sun.codemodel.internal.JArray;
+	@:overload @:public @:static public static function newArray(type : com.sun.codemodel.internal.JType, size : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArray;
+	
+	/**
+	* Generates {@code new T[size]}.
+	*
+	* @param type
+	*      The type of the array component. 'T' or {@code new T[size]}.
+	*/
+	@:overload @:public @:static public static function newArray(type : com.sun.codemodel.internal.JType, size : Int) : com.sun.codemodel.internal.JArray;
 	
 	/**
 	* Returns a reference to "this", an implicit reference
 	* to the current object.
 	*/
-	@:overload public static function _this() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function _this() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns a reference to "super", an implicit reference
 	* to the super class.
 	*/
-	@:overload public static function _super() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function _super() : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function _null() : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function _null() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Boolean constant that represents <code>true</code>
 	*/
-	public static var TRUE(default, null) : com.sun.codemodel.internal.JExpression;
+	@:public @:static @:final public static var TRUE(default, null) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Boolean constant that represents <code>false</code>
 	*/
-	public static var FALSE(default, null) : com.sun.codemodel.internal.JExpression;
+	@:public @:static @:final public static var FALSE(default, null) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lit(b : Bool) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(b : Bool) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lit(n : Int) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(n : Int) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lit(n : haxe.Int64) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(n : haxe.Int64) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lit(f : Single) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(f : Single) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lit(d : Float) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(d : Float) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Escapes the given string, then surrounds it by the specified
 	* quotation mark.
 	*/
-	@:overload public static function quotify(quote : java.StdTypes.Char16, s : String) : String;
+	@:overload @:public @:static public static function quotify(quote : java.StdTypes.Char16, s : String) : String;
 	
-	@:overload public static function lit(c : java.StdTypes.Char16) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(c : java.StdTypes.Char16) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public static function lit(s : String) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function lit(s : String) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Creates an expression directly from a source code fragment.
@@ -132,7 +132,7 @@ extern class JExpr
 	* Be warned that there is a danger in using this method,
 	* as it obfuscates the object model.
 	*/
-	@:overload public static function direct(source : String) : com.sun.codemodel.internal.JExpression;
+	@:overload @:public @:static public static function direct(source : String) : com.sun.codemodel.internal.JExpression;
 	
 	
 }

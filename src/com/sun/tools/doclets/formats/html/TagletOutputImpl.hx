@@ -31,29 +31,29 @@ package com.sun.tools.doclets.formats.html;
 */
 @:require(java5) extern class TagletOutputImpl implements com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput
 {
-	@:overload public function new(o : String) : Void;
+	@:overload @:public public function new(o : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setOutput(o : Dynamic) : Void;
+	@:overload @:public public function setOutput(o : Dynamic) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function appendOutput(o : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
+	@:overload @:public public function appendOutput(o : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function hasInheritDocTag() : Bool;
+	@:overload @:public public function hasInheritDocTag() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Check whether the taglet output is empty.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	
 }

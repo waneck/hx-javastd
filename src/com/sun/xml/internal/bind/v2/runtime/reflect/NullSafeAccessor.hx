@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 */
 extern class NullSafeAccessor<B, V, P> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>
 {
-	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<B, V, Dynamic, P>) : Void;
+	@:overload @:public public function new(core : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, V>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<B, V, Dynamic, P>) : Void;
 	
-	@:overload override public function get(bean : B) : V;
+	@:overload @:public override public function get(bean : B) : V;
 	
-	@:overload override public function set(bean : B, value : V) : Void;
+	@:overload @:public override public function set(bean : B, value : V) : Void;
 	
 	
 }

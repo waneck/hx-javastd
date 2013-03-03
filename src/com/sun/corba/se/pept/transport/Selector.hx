@@ -28,17 +28,17 @@ package com.sun.corba.se.pept.transport;
 */
 extern interface Selector
 {
-	@:overload public function setTimeout(timeout : haxe.Int64) : Void;
+	@:overload @:public public function setTimeout(timeout : haxe.Int64) : Void;
 	
-	@:overload public function getTimeout() : haxe.Int64;
+	@:overload @:public public function getTimeout() : haxe.Int64;
 	
-	@:overload public function registerInterestOps(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
+	@:overload @:public public function registerInterestOps(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
 	
-	@:overload public function registerForEvent(eventHander : com.sun.corba.se.pept.transport.EventHandler) : Void;
+	@:overload @:public public function registerForEvent(eventHander : com.sun.corba.se.pept.transport.EventHandler) : Void;
 	
-	@:overload public function unregisterForEvent(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
+	@:overload @:public public function unregisterForEvent(eventHandler : com.sun.corba.se.pept.transport.EventHandler) : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

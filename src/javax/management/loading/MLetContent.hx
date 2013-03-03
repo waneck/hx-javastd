@@ -41,7 +41,7 @@ extern class MLetContent
 	* @param values A list of the VALUE attributes that appeared in nested
 	* &lt;PARAM&gt; tags.
 	*/
-	@:overload public function new(url : java.net.URL, attributes : java.util.Map<String, String>, types : java.util.List<String>, values : java.util.List<String>) : Void;
+	@:overload @:public public function new(url : java.net.URL, attributes : java.util.Map<String, String>, types : java.util.List<String>, values : java.util.List<String>) : Void;
 	
 	/**
 	* Gets the attributes of the <CODE>MLET</CODE> tag.  The keys in
@@ -51,26 +51,26 @@ extern class MLetContent
 	* @return A map of the attributes of the <CODE>MLET</CODE> tag
 	* and their values.
 	*/
-	@:overload public function getAttributes() : java.util.Map<String, String>;
+	@:overload @:public public function getAttributes() : java.util.Map<String, String>;
 	
 	/**
 	* Gets the MLet text file's base URL.
 	* @return The MLet text file's base URL.
 	*/
-	@:overload public function getDocumentBase() : java.net.URL;
+	@:overload @:public public function getDocumentBase() : java.net.URL;
 	
 	/**
 	* Gets the code base URL.
 	* @return The code base URL.
 	*/
-	@:overload public function getCodeBase() : java.net.URL;
+	@:overload @:public public function getCodeBase() : java.net.URL;
 	
 	/**
 	* Gets the list of <CODE>.jar</CODE> files specified by the <CODE>ARCHIVE</CODE>
 	* attribute of the <CODE>MLET</CODE> tag.
 	* @return A comma-separated list of <CODE>.jar</CODE> file names.
 	*/
-	@:overload public function getJarFiles() : String;
+	@:overload @:public public function getJarFiles() : String;
 	
 	/**
 	* Gets the value of the <CODE>CODE</CODE>
@@ -78,7 +78,7 @@ extern class MLetContent
 	* @return The value of the <CODE>CODE</CODE>
 	* attribute of the <CODE>MLET</CODE> tag.
 	*/
-	@:overload public function getCode() : String;
+	@:overload @:public public function getCode() : String;
 	
 	/**
 	* Gets the value of the <CODE>OBJECT</CODE>
@@ -86,7 +86,7 @@ extern class MLetContent
 	* @return The value of the <CODE>OBJECT</CODE>
 	* attribute of the <CODE>MLET</CODE> tag.
 	*/
-	@:overload public function getSerializedObject() : String;
+	@:overload @:public public function getSerializedObject() : String;
 	
 	/**
 	* Gets the value of the <CODE>NAME</CODE>
@@ -94,7 +94,7 @@ extern class MLetContent
 	* @return The value of the <CODE>NAME</CODE>
 	* attribute of the <CODE>MLET</CODE> tag.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Gets the value of the <CODE>VERSION</CODE>
@@ -102,7 +102,7 @@ extern class MLetContent
 	* @return The value of the <CODE>VERSION</CODE>
 	* attribute of the <CODE>MLET</CODE> tag.
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Gets the list of values of the <code>TYPE</code> attribute in
@@ -110,7 +110,7 @@ extern class MLetContent
 	* tag.
 	* @return the list of types.
 	*/
-	@:overload public function getParameterTypes() : java.util.List<String>;
+	@:overload @:public public function getParameterTypes() : java.util.List<String>;
 	
 	/**
 	* Gets the list of values of the <code>VALUE</code> attribute in
@@ -118,7 +118,7 @@ extern class MLetContent
 	* tag.
 	* @return the list of values.
 	*/
-	@:overload public function getParameterValues() : java.util.List<String>;
+	@:overload @:public public function getParameterValues() : java.util.List<String>;
 	
 	
 }

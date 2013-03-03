@@ -43,7 +43,7 @@ extern interface Delegate
 	* @return a MessageStruct with ...
 	* </p>
 	*/
-	@:overload public function getMessageStruct() : com.sun.pept.presentation.MessageStruct;
+	@:overload @:public public function getMessageStruct() : com.sun.pept.presentation.MessageStruct;
 	
 	/**
 	* <p>
@@ -55,7 +55,7 @@ extern interface Delegate
 	* @param message ...
 	* </p>
 	*/
-	@:overload public function send(message : com.sun.pept.presentation.MessageStruct) : Void;
+	@:overload @:public public function send(message : com.sun.pept.presentation.MessageStruct) : Void;
 	
 	
 }

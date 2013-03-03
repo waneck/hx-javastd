@@ -21,47 +21,47 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class XIncludeAwareParserConfiguration extends com.sun.org.apache.xerces.internal.parsers.XML11Configuration
 {
 	/** Feature identifier: allow notation and unparsed entity events to be sent out of order. */
-	private static var ALLOW_UE_AND_NOTATION_EVENTS(default, null) : String;
+	@:protected @:static @:final private static var ALLOW_UE_AND_NOTATION_EVENTS(default, null) : String;
 	
 	/** Feature identifier: fixup base URIs. */
-	private static var XINCLUDE_FIXUP_BASE_URIS(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_FIXUP_BASE_URIS(default, null) : String;
 	
 	/** Feature identifier: fixup language. */
-	private static var XINCLUDE_FIXUP_LANGUAGE(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_FIXUP_LANGUAGE(default, null) : String;
 	
 	/** Feature identifier: XInclude processing */
-	private static var XINCLUDE_FEATURE(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_FEATURE(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var XINCLUDE_HANDLER(default, null) : String;
+	@:protected @:static @:final private static var XINCLUDE_HANDLER(default, null) : String;
 	
 	/** Property identifier: error reporter. */
-	private static var NAMESPACE_CONTEXT(default, null) : String;
+	@:protected @:static @:final private static var NAMESPACE_CONTEXT(default, null) : String;
 	
 	/** XInclude handler. */
-	private var fXIncludeHandler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler;
+	@:protected private var fXIncludeHandler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler;
 	
 	/** Non-XInclude NamespaceContext. */
-	private var fNonXIncludeNSContext : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
+	@:protected private var fNonXIncludeNSContext : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
 	
 	/** XInclude NamespaceContext. */
-	private var fXIncludeNSContext : com.sun.org.apache.xerces.internal.xinclude.XIncludeNamespaceSupport;
+	@:protected private var fXIncludeNSContext : com.sun.org.apache.xerces.internal.xinclude.XIncludeNamespaceSupport;
 	
 	/** Current NamespaceContext. */
-	private var fCurrentNSContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
+	@:protected private var fCurrentNSContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** Flag indicating whether XInclude processsing is enabled. */
-	private var fXIncludeEnabled : Bool;
+	@:protected private var fXIncludeEnabled : Bool;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table.
 	*
 	* @param symbolTable The symbol table to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table and
@@ -71,7 +71,7 @@ extern class XIncludeAwareParserConfiguration extends com.sun.org.apache.xerces.
 	* @param symbolTable The symbol table to use.
 	* @param grammarPool The grammar pool to use.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
 	/**
 	* Constructs a parser configuration using the specified symbol table,
@@ -82,16 +82,16 @@ extern class XIncludeAwareParserConfiguration extends com.sun.org.apache.xerces.
 	* @param grammarPool    The grammar pool to use.
 	* @param parentSettings The parent settings.
 	*/
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** Configures the pipeline. */
-	@:overload override private function configurePipeline() : Void;
+	@:overload @:protected override private function configurePipeline() : Void;
 	
-	@:overload override private function configureXML11Pipeline() : Void;
+	@:overload @:protected override private function configureXML11Pipeline() : Void;
 	
-	@:overload override public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public override public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	@:overload override public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public override public function setFeature(featureId : String, state : Bool) : Void;
 	
 	
 }

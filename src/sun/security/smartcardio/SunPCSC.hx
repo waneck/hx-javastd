@@ -31,19 +31,19 @@ package sun.security.smartcardio;
 */
 @:require(java6) extern class SunPCSC extends java.security.Provider
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$smartcardio$SunPCSC$Factory') extern class SunPCSC_Factory extends javax.smartcardio.TerminalFactorySpi
 {
-	@:overload public function new(obj : Dynamic) : Void;
+	@:overload @:public public function new(obj : Dynamic) : Void;
 	
 	/**
 	* Returns the available readers.
 	* This must be a new object for each call.
 	*/
-	@:overload override private function engineTerminals() : javax.smartcardio.CardTerminals;
+	@:overload @:protected override private function engineTerminals() : javax.smartcardio.CardTerminals;
 	
 	
 }

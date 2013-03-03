@@ -69,7 +69,7 @@ extern class DFAContentModel implements com.sun.org.apache.xerces.internal.impl.
 	* @param mixed
 	*
 	*/
-	@:overload public function new(syntaxTree : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, leafCount : Int, mixed : Bool) : Void;
+	@:overload @:public public function new(syntaxTree : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, leafCount : Int, mixed : Bool) : Void;
 	
 	/**
 	* Check that the specified content is valid according to this
@@ -94,7 +94,7 @@ extern class DFAContentModel implements com.sun.org.apache.xerces.internal.impl.
 	*         content is required to reach a valid ending state.
 	*
 	*/
-	@:overload public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
+	@:overload @:public public function validate(children : java.NativeArray<com.sun.org.apache.xerces.internal.xni.QName>, offset : Int, length : Int) : Int;
 	
 	
 }

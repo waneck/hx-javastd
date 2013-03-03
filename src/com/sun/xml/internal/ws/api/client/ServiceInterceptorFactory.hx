@@ -45,12 +45,12 @@ extern class ServiceInterceptorFactory
 	* @see ServiceInterceptor
 	* @see 2.1 EA3
 	*/
-	@:overload @:abstract public function create(service : com.sun.xml.internal.ws.api.WSService) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
+	@:overload @:public @:abstract public function create(service : com.sun.xml.internal.ws.api.WSService) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
 	
 	/**
 	* Loads all {@link ServiceInterceptor}s and return aggregated one.
 	*/
-	@:overload public static function load(service : com.sun.xml.internal.ws.api.WSService, cl : java.lang.ClassLoader) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
+	@:overload @:public @:static public static function load(service : com.sun.xml.internal.ws.api.WSService, cl : java.lang.ClassLoader) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
 	
 	/**
 	* Registers {@link ServiceInterceptorFactory} for this thread.
@@ -59,12 +59,12 @@ extern class ServiceInterceptorFactory
 	* Once registered, {@link ServiceInterceptorFactory}s are consulted for every
 	* {@link Service} created in this thread, until it gets unregistered.
 	*/
-	@:overload public static function registerForThread(factory : com.sun.xml.internal.ws.api.client.ServiceInterceptorFactory) : Bool;
+	@:overload @:public @:static public static function registerForThread(factory : com.sun.xml.internal.ws.api.client.ServiceInterceptorFactory) : Bool;
 	
 	/**
 	* Removes previously registered {@link ServiceInterceptorFactory} for this thread.
 	*/
-	@:overload public static function unregisterForThread(factory : com.sun.xml.internal.ws.api.client.ServiceInterceptorFactory) : Bool;
+	@:overload @:public @:static public static function unregisterForThread(factory : com.sun.xml.internal.ws.api.client.ServiceInterceptorFactory) : Bool;
 	
 	
 }

@@ -30,11 +30,11 @@ extern class ValidationException extends com.sun.xml.internal.ws.util.exception.
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function new(throwable : java.lang.Throwable) : Void;
+	@:overload @:public public function new(throwable : java.lang.Throwable) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload @:public override public function getDefaultResourceBundleName() : String;
 	
 	
 }

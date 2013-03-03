@@ -25,11 +25,11 @@ package sun.awt;
 */
 extern class Mutex
 {
-	@:overload @:synchronized public function lock() : Void;
+	@:overload @:public @:synchronized public function lock() : Void;
 	
-	@:overload @:synchronized public function unlock() : Void;
+	@:overload @:public @:synchronized public function unlock() : Void;
 	
-	@:overload private function isOwned() : Bool;
+	@:overload @:protected private function isOwned() : Bool;
 	
 	
 }

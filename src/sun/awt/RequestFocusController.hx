@@ -25,7 +25,7 @@ package sun.awt;
 */
 extern interface RequestFocusController
 {
-	@:overload public function acceptRequestFocus(from : java.awt.Component, to : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
+	@:overload @:public public function acceptRequestFocus(from : java.awt.Component, to : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
 	
 	
 }

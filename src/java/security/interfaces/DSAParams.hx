@@ -30,21 +30,21 @@ extern interface DSAParams
 	*
 	* @return the prime, <code>p</code>.
 	*/
-	@:overload public function getP() : java.math.BigInteger;
+	@:overload @:public public function getP() : java.math.BigInteger;
 	
 	/**
 	* Returns the subprime, <code>q</code>.
 	*
 	* @return the subprime, <code>q</code>.
 	*/
-	@:overload public function getQ() : java.math.BigInteger;
+	@:overload @:public public function getQ() : java.math.BigInteger;
 	
 	/**
 	* Returns the base, <code>g</code>.
 	*
 	* @return the base, <code>g</code>.
 	*/
-	@:overload public function getG() : java.math.BigInteger;
+	@:overload @:public public function getG() : java.math.BigInteger;
 	
 	
 }

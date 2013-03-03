@@ -73,7 +73,7 @@ extern class ExceptionTable extends com.sun.org.apache.bcel.internal.classfile.A
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ExceptionTable) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.ExceptionTable) : Void;
 	
 	/**
 	* @param name_index Index in constant pool
@@ -81,7 +81,7 @@ extern class ExceptionTable extends com.sun.org.apache.bcel.internal.classfile.A
 	* @param exception_index_table Table of indices in constant pool
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, exception_index_table : java.NativeArray<Int>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, exception_index_table : java.NativeArray<Int>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -90,7 +90,7 @@ extern class ExceptionTable extends com.sun.org.apache.bcel.internal.classfile.A
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump exceptions attribute to file stream in binary format.
@@ -98,38 +98,38 @@ extern class ExceptionTable extends com.sun.org.apache.bcel.internal.classfile.A
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Array of indices into constant pool of thrown exceptions.
 	*/
-	@:overload @:final public function getExceptionIndexTable() : java.NativeArray<Int>;
+	@:overload @:public @:final public function getExceptionIndexTable() : java.NativeArray<Int>;
 	
 	/**
 	* @return Length of exception table.
 	*/
-	@:overload @:final public function getNumberOfExceptions() : Int;
+	@:overload @:public @:final public function getNumberOfExceptions() : Int;
 	
 	/**
 	* @return class names of thrown exceptions
 	*/
-	@:overload @:final public function getExceptionNames() : java.NativeArray<String>;
+	@:overload @:public @:final public function getExceptionNames() : java.NativeArray<String>;
 	
 	/**
 	* @param exception_index_table.
 	* Also redefines number_of_exceptions according to table length.
 	*/
-	@:overload @:final public function setExceptionIndexTable(exception_index_table : java.NativeArray<Int>) : Void;
+	@:overload @:public @:final public function setExceptionIndexTable(exception_index_table : java.NativeArray<Int>) : Void;
 	
 	/**
 	* @return String representation, i.e., a list of thrown exceptions.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

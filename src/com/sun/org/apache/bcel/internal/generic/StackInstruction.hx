@@ -66,11 +66,11 @@ extern class StackInstruction extends com.sun.org.apache.bcel.internal.generic.I
 	/**
 	* @param opcode instruction opcode
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16) : Void;
 	
 	/** @return Type.UNKNOWN
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

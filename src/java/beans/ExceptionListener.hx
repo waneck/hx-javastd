@@ -39,7 +39,7 @@ package java.beans;
 	* @param e The exception that was caught.
 	*
 	*/
-	@:overload public function exceptionThrown(e : java.lang.Exception) : Void;
+	@:overload @:public public function exceptionThrown(e : java.lang.Exception) : Void;
 	
 	
 }

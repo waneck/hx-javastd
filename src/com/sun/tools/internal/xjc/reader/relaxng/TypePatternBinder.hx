@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 */
 @:internal extern class TypePatternBinder extends com.sun.xml.internal.rngom.digested.DPatternWalker
 {
-	@:overload override public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
+	@:overload @:public override public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
 	
 	/*
 	Set the flag to false if we hit a pattern that cannot include
@@ -33,19 +33,19 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 
 	All the following code are the same
 	*/
-	@:overload override public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
+	@:overload @:public override public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
 	
-	@:overload override public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
+	@:overload @:public override public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
 	
-	@:overload override public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : java.lang.Void;
+	@:overload @:public override public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : java.lang.Void;
 	
-	@:overload override public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
+	@:overload @:public override public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
 	
-	@:overload override public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
+	@:overload @:public override public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
 	
-	@:overload override public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
+	@:overload @:public override public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
 	
-	@:overload override public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
+	@:overload @:public override public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
 	
 	
 }

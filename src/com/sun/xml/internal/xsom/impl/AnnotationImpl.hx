@@ -25,27 +25,27 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class AnnotationImpl implements com.sun.xml.internal.xsom.XSAnnotation
 {
-	@:overload public function getAnnotation() : Dynamic;
+	@:overload @:public public function getAnnotation() : Dynamic;
 	
-	@:overload public function setAnnotation(o : Dynamic) : Dynamic;
+	@:overload @:public public function setAnnotation(o : Dynamic) : Dynamic;
 	
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
-	@:overload public function new(o : Dynamic, _loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(o : Dynamic, _loc : org.xml.sax.Locator) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$xsom$impl$AnnotationImpl$LocatorImplUnmodifiable') @:internal extern class AnnotationImpl_LocatorImplUnmodifiable extends org.xml.sax.helpers.LocatorImpl
 {
-	@:overload override public function setColumnNumber(columnNumber : Int) : Void;
+	@:overload @:public override public function setColumnNumber(columnNumber : Int) : Void;
 	
-	@:overload override public function setPublicId(publicId : String) : Void;
+	@:overload @:public override public function setPublicId(publicId : String) : Void;
 	
-	@:overload override public function setSystemId(systemId : String) : Void;
+	@:overload @:public override public function setSystemId(systemId : String) : Void;
 	
-	@:overload override public function setLineNumber(lineNumber : Int) : Void;
+	@:overload @:public override public function setLineNumber(lineNumber : Int) : Void;
 	
 	
 }

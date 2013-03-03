@@ -37,16 +37,16 @@ package java.util;
 	* @param  w
 	*         The width
 	*/
-	@:overload public function new(w : Int) : Void;
+	@:overload @:public public function new(w : Int) : Void;
 	
 	/**
 	* Returns the width
 	*
 	* @return  The width
 	*/
-	@:overload public function getWidth() : Int;
+	@:overload @:public public function getWidth() : Int;
 	
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

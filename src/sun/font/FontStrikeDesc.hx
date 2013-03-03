@@ -33,9 +33,9 @@ package sun.font;
 */
 extern class FontStrikeDesc
 {
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/* This maps a public text AA hint value into one of the subset of values
 	* used to index strikes. For the purpose of the strike cache there are
@@ -43,7 +43,7 @@ extern class FontStrikeDesc
 	* Font and ptSize are needed to resolve the 'gasp' table. The ptSize
 	* must therefore include device and font transforms.
 	*/
-	@:overload public static function getAAHintIntVal(aa : Dynamic, font2D : sun.font.Font2D, ptSize : Int) : Int;
+	@:overload @:public @:static public static function getAAHintIntVal(aa : Dynamic, font2D : sun.font.Font2D, ptSize : Int) : Int;
 	
 	/* This maps a public text AA hint value into one of the subset of values
 	* used to index strikes. For the purpose of the strike cache there are
@@ -52,13 +52,13 @@ extern class FontStrikeDesc
 	* This is similar to the method above, but used by callers which have not
 	* already calculated the glyph device point size.
 	*/
-	@:overload public static function getAAHintIntVal(font2D : sun.font.Font2D, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Int;
+	@:overload @:public @:static public static function getAAHintIntVal(font2D : sun.font.Font2D, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Int;
 	
-	@:overload public static function getFMHintIntVal(fm : Dynamic) : Int;
+	@:overload @:public @:static public static function getFMHintIntVal(fm : Dynamic) : Int;
 	
-	@:overload public function new(devAt : java.awt.geom.AffineTransform, at : java.awt.geom.AffineTransform, fStyle : Int, aa : Int, fm : Int) : Void;
+	@:overload @:public public function new(devAt : java.awt.geom.AffineTransform, at : java.awt.geom.AffineTransform, fStyle : Int, aa : Int, fm : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -43,7 +43,7 @@ extern interface CSSPageRule extends org.w3c.dom.css.CSSRule
 	/**
 	*  The parsable textual representation of the page selector for the rule.
 	*/
-	@:overload public function getSelectorText() : String;
+	@:overload @:public public function getSelectorText() : String;
 	
 	/**
 	*  The parsable textual representation of the page selector for the rule.
@@ -52,12 +52,12 @@ extern interface CSSPageRule extends org.w3c.dom.css.CSSRule
 	*   error and is unparsable.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this rule is readonly.
 	*/
-	@:overload public function setSelectorText(selectorText : String) : Void;
+	@:overload @:public public function setSelectorText(selectorText : String) : Void;
 	
 	/**
 	*  The declaration-block of this rule.
 	*/
-	@:overload public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
+	@:overload @:public public function getStyle() : org.w3c.dom.css.CSSStyleDeclaration;
 	
 	
 }

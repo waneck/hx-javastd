@@ -35,7 +35,7 @@ extern interface BindingProvider
 	*
 	* @return The context that is used in processing request messages.
 	**/
-	@:overload public function getRequestContext() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getRequestContext() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Get the context that resulted from processing a response message.
@@ -48,14 +48,14 @@ extern interface BindingProvider
 	* @return The context that resulted from processing the latest
 	* response messages.
 	**/
-	@:overload public function getResponseContext() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getResponseContext() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Get the Binding for this binding provider.
 	*
 	* @return The Binding for this binding provider.
 	**/
-	@:overload public function getBinding() : javax.xml.ws.Binding;
+	@:overload @:public public function getBinding() : javax.xml.ws.Binding;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -75,7 +75,7 @@ extern interface BindingProvider
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:public public function getEndpointReference() : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public @:public public function getEndpointReference() : javax.xml.ws.EndpointReference;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -96,7 +96,7 @@ extern interface BindingProvider
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
+	@:require(java1) @:overload @:public @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
 	
 	
 }

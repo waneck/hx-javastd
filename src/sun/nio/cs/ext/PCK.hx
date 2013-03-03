@@ -27,27 +27,27 @@ package sun.nio.cs.ext;
 */
 extern class PCK extends java.nio.charset.Charset implements sun.nio.cs.HistoricallyNamedCharset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$PCK$Decoder') @:internal extern class PCK_Decoder extends sun.nio.cs.ext.SJIS.SJIS_Decoder
 {
-	@:overload override private function decodeDouble(c1 : Int, c2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decodeDouble(c1 : Int, c2 : Int) : java.StdTypes.Char16;
 	
 	
 }
 @:native('sun$nio$cs$ext$PCK$Encoder') @:internal extern class PCK_Encoder extends sun.nio.cs.ext.SJIS.SJIS_Encoder
 {
-	@:overload override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

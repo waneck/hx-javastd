@@ -41,7 +41,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	*
 	* @return the name of the output file.
 	*/
-	@:overload @:abstract public function getOutputFileName() : String;
+	@:overload @:public @:abstract public function getOutputFileName() : String;
 	
 	/**
 	* Get the header for the summary.
@@ -49,21 +49,21 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param heading Package name.
 	* @return the header to be added to the content tree
 	*/
-	@:overload @:abstract public function getPackageHeader(heading : String) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getPackageHeader(heading : String) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the header for the package content.
 	*
 	* @return a content tree for the package content header
 	*/
-	@:overload @:abstract public function getContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getContentHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the header for the package summary.
 	*
 	* @return a content tree with the package summary header
 	*/
-	@:overload @:abstract public function getSummaryHeader() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public @:abstract public function getSummaryHeader() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Adds the table of classes to the documentation tree.
@@ -74,7 +74,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param tableHeader array of table headers
 	* @param summaryContentTree the content tree to which the summaries will be added
 	*/
-	@:overload @:abstract public function addClassesSummary(classes : java.NativeArray<com.sun.javadoc.ClassDoc>, label : String, tableSummary : String, tableHeader : java.NativeArray<String>, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addClassesSummary(classes : java.NativeArray<com.sun.javadoc.ClassDoc>, label : String, tableSummary : String, tableHeader : java.NativeArray<String>, summaryContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the package description from the "packages.html" file to the documentation
@@ -83,7 +83,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param packageContentTree the content tree to which the package description
 	*                           will be added
 	*/
-	@:overload @:abstract public function addPackageDescription(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addPackageDescription(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the tag information from the "packages.html" file to the documentation
@@ -92,26 +92,26 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param packageContentTree the content tree to which the package tags will
 	*                           be added
 	*/
-	@:overload @:abstract public function addPackageTags(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addPackageTags(packageContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the footer to the documentation tree.
 	*
 	* @param contentTree the tree to which the footer will be added
 	*/
-	@:overload @:abstract public function addPackageFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function addPackageFooter(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Print the package summary document.
 	*
 	* @param contentTree the content tree that will be printed
 	*/
-	@:overload @:abstract public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public @:abstract public function printDocument(contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Close the writer.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

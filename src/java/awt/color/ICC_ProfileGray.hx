@@ -40,7 +40,7 @@ extern class ICC_ProfileGray extends java.awt.color.ICC_Profile
 	* @return an array containing the components of the
 	* mediaWhitePointTag in the ICC profile.
 	*/
-	@:overload public function getMediaWhitePoint() : java.NativeArray<Single>;
+	@:overload @:public public function getMediaWhitePoint() : java.NativeArray<Single>;
 	
 	/**
 	* Returns a gamma value representing the tone reproduction
@@ -58,7 +58,7 @@ extern class ICC_ProfileGray extends java.awt.color.ICC_Profile
 	* @exception ProfileDataException if the profile does not specify
 	*            the TRC as a single gamma value.
 	*/
-	@:overload public function getGamma() : Single;
+	@:overload @:public public function getGamma() : Single;
 	
 	/**
 	* Returns the TRC as an array of shorts.  If the profile has
@@ -78,7 +78,7 @@ extern class ICC_ProfileGray extends java.awt.color.ICC_Profile
 	* @exception ProfileDataException if the profile does not specify
 	*            the TRC as a table.
 	*/
-	@:overload public function getTRC() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getTRC() : java.NativeArray<java.StdTypes.Int16>;
 	
 	
 }

@@ -32,7 +32,7 @@ extern interface GSSNameSpi
 	*
 	* @author Mayank Upadhyay
 	*/
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
 	/**
 	* Equals method for the GSSNameSpi objects.
@@ -44,7 +44,7 @@ extern interface GSSNameSpi
 	* @exception GSSException with major codes of BAD_NAMETYPE,
 	*    BAD_NAME, FAILURE
 	*/
-	@:overload public function equals(name : sun.security.jgss.spi.GSSNameSpi) : Bool;
+	@:overload @:public public function equals(name : sun.security.jgss.spi.GSSNameSpi) : Bool;
 	
 	/**
 	* Returns a flat name representation for this object. The name
@@ -54,26 +54,26 @@ extern interface GSSNameSpi
 	* @exception GSSException with major codes NAME_NOT_MN, BAD_NAME,
 	*    BAD_NAME, FAILURE.
 	*/
-	@:overload public function export() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function export() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Get the mechanism type that this NameElement corresponds to.
 	*
 	* @return the Oid of the mechanism type
 	*/
-	@:overload public function getMechanism() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMechanism() : org.ietf.jgss.Oid;
 	
 	/**
 	* Returns the oid describing the format of the printable name.
 	*
 	* @return the Oid for the format of the printed name
 	*/
-	@:overload public function getStringNameType() : org.ietf.jgss.Oid;
+	@:overload @:public public function getStringNameType() : org.ietf.jgss.Oid;
 	
 	/**
 	* Indicates if this name object represents an Anonymous name.
 	*/
-	@:overload public function isAnonymousName() : Bool;
+	@:overload @:public public function isAnonymousName() : Bool;
 	
 	
 }

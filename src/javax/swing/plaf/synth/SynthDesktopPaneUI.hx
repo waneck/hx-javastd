@@ -39,42 +39,42 @@ package javax.swing.plaf.synth;
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDesktopManager() : Void;
+	@:overload @:protected override private function installDesktopManager() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDesktopManager() : Void;
+	@:overload @:protected override private function uninstallDesktopManager() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -88,7 +88,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -99,7 +99,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.
@@ -108,47 +108,47 @@ package javax.swing.plaf.synth;
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthDesktopPaneUI$TaskBar') @:internal extern class SynthDesktopPaneUI_TaskBar extends javax.swing.JPanel implements java.awt.event.ComponentListener implements java.awt.event.ContainerListener
 {
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
-	@:overload public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
 	
-	@:overload public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
 	
 	
 }
 @:native('javax$swing$plaf$synth$SynthDesktopPaneUI$SynthDesktopManager') @:internal extern class SynthDesktopPaneUI_SynthDesktopManager extends javax.swing.DefaultDesktopManager implements javax.swing.plaf.UIResource
 {
-	@:overload override public function maximizeFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public override public function maximizeFrame(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function iconifyFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public override public function iconifyFrame(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function deiconifyFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:public override public function deiconifyFrame(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override private function removeIconFor(f : javax.swing.JInternalFrame) : Void;
+	@:overload @:protected override private function removeIconFor(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function setBoundsForFrame(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
+	@:overload @:public override public function setBoundsForFrame(f : javax.swing.JComponent, newX : Int, newY : Int, newWidth : Int, newHeight : Int) : Void;
 	
 	
 }

@@ -26,25 +26,25 @@ package com.sun.jdi;
 extern interface ThreadReference extends com.sun.jdi.ObjectReference
 {
 	/** Thread status is unknown */
-	public var THREAD_STATUS_UNKNOWN(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_UNKNOWN(default, null) : Int;
 	
 	/** Thread has completed execution */
-	public var THREAD_STATUS_ZOMBIE(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_ZOMBIE(default, null) : Int;
 	
 	/** Thread is runnable */
-	public var THREAD_STATUS_RUNNING(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_RUNNING(default, null) : Int;
 	
 	/** Thread is sleeping - Thread.sleep() or JVM_Sleep() was called */
-	public var THREAD_STATUS_SLEEPING(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_SLEEPING(default, null) : Int;
 	
 	/** Thread is waiting on a java monitor */
-	public var THREAD_STATUS_MONITOR(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_MONITOR(default, null) : Int;
 	
 	/** Thread is waiting - Object.wait() or JVM_MonitorWait() was called */
-	public var THREAD_STATUS_WAIT(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_WAIT(default, null) : Int;
 	
 	/** Thread has not yet been started */
-	public var THREAD_STATUS_NOT_STARTED(default, null) : Int;
+	@:public @:final public var THREAD_STATUS_NOT_STARTED(default, null) : Int;
 	
 	/**
 	* Returns the name of this thread.

@@ -21,13 +21,13 @@ package com.sun.org.apache.xerces.internal.impl.io;
 extern class ASCIIReader extends java.io.Reader
 {
 	/** Default byte buffer size (2048). */
-	public static var DEFAULT_BUFFER_SIZE(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_BUFFER_SIZE(default, null) : Int;
 	
 	/** Input stream. */
-	private var fInputStream : java.io.InputStream;
+	@:protected private var fInputStream : java.io.InputStream;
 	
 	/** Byte buffer. */
-	private var fBuffer : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var fBuffer : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs an ASCII reader from the specified input stream
@@ -37,7 +37,7 @@ extern class ASCIIReader extends java.io.Reader
 	* @param messageFormatter  the MessageFormatter to use to message reporting.
 	* @param locale    the Locale for which messages are to be reported
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, messageFormatter : com.sun.org.apache.xerces.internal.util.MessageFormatter, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, messageFormatter : com.sun.org.apache.xerces.internal.util.MessageFormatter, locale : java.util.Locale) : Void;
 	
 	/**
 	* Constructs an ASCII reader from the specified input stream
@@ -48,7 +48,7 @@ extern class ASCIIReader extends java.io.Reader
 	* @param messageFormatter  the MessageFormatter to use to message reporting.
 	* @param locale    the Locale for which messages are to be reported
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, size : Int, messageFormatter : com.sun.org.apache.xerces.internal.util.MessageFormatter, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(inputStream : java.io.InputStream, size : Int, messageFormatter : com.sun.org.apache.xerces.internal.util.MessageFormatter, locale : java.util.Locale) : Void;
 	
 	/**
 	* Read a single character.  This method will block until a character is
@@ -63,7 +63,7 @@ extern class ASCIIReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Read characters into a portion of an array.  This method will block
@@ -79,7 +79,7 @@ extern class ASCIIReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function read(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	/**
 	* Skip characters.  This method will block until some characters are
@@ -91,7 +91,7 @@ extern class ASCIIReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tell whether this stream is ready to be read.
@@ -102,12 +102,12 @@ extern class ASCIIReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
 	/**
 	* Tell whether this stream supports the mark() operation.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Mark the present position in the stream.  Subsequent calls to reset()
@@ -122,7 +122,7 @@ extern class ASCIIReader extends java.io.Reader
 	* @exception  IOException  If the stream does not support mark(),
 	*                          or if some other I/O error occurs
 	*/
-	@:overload override public function mark(readAheadLimit : Int) : Void;
+	@:overload @:public override public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Reset the stream.  If the stream has been marked, then attempt to
@@ -137,7 +137,7 @@ extern class ASCIIReader extends java.io.Reader
 	*                          or if the stream does not support reset(),
 	*                          or if some other I/O error occurs
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Close the stream.  Once a stream has been closed, further read(),
@@ -146,7 +146,7 @@ extern class ASCIIReader extends java.io.Reader
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

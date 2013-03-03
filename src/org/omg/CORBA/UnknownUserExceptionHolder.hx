@@ -34,17 +34,17 @@ package org.omg.CORBA;
 */
 extern class UnknownUserExceptionHolder implements org.omg.CORBA.portable.Streamable
 {
-	public var value : org.omg.CORBA.UnknownUserException;
+	@:public public var value : org.omg.CORBA.UnknownUserException;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(initialValue : org.omg.CORBA.UnknownUserException) : Void;
+	@:overload @:public public function new(initialValue : org.omg.CORBA.UnknownUserException) : Void;
 	
-	@:overload public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(i : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(o : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

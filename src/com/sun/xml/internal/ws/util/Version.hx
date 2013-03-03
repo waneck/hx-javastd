@@ -28,21 +28,21 @@ extern class Version
 	/**
 	* Represents the build id, which is a string like "b13" or "hudson-250".
 	*/
-	public var BUILD_ID(default, null) : String;
+	@:public @:final public var BUILD_ID(default, null) : String;
 	
 	/**
 	* Represents the complete version string, such as "JAX-WS RI 2.0-b19"
 	*/
-	public var BUILD_VERSION(default, null) : String;
+	@:public @:final public var BUILD_VERSION(default, null) : String;
 	
 	/**
 	* Represents the major JAX-WS version, such as "2.0".
 	*/
-	public var MAJOR_VERSION(default, null) : String;
+	@:public @:final public var MAJOR_VERSION(default, null) : String;
 	
-	@:overload public static function create(is : java.io.InputStream) : com.sun.xml.internal.ws.util.Version;
+	@:overload @:public @:static public static function create(is : java.io.InputStream) : com.sun.xml.internal.ws.util.Version;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

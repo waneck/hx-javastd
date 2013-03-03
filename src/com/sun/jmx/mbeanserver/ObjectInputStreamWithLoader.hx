@@ -31,9 +31,9 @@ package com.sun.jmx.mbeanserver;
 	* sort has occurred.
 	* @exception StreamCorruptedException The object stream is corrupt.
 	*/
-	@:overload public function new(_in : java.io.InputStream, theLoader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, theLoader : java.lang.ClassLoader) : Void;
 	
-	@:overload override private function resolveClass(aClass : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(aClass : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	
 }

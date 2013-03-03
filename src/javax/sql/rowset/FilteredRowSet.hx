@@ -139,7 +139,7 @@ extern interface FilteredRowSet extends javax.sql.rowset.WebRowSet
 	* @throws SQLException if an error occurs when setting the
 	*     <code>Predicate</code> object
 	*/
-	@:overload public function setFilter(p : javax.sql.rowset.Predicate) : Void;
+	@:overload @:public public function setFilter(p : javax.sql.rowset.Predicate) : Void;
 	
 	/**
 	* Retrieves the active filter for this <code>FilteredRowSet</code> object.
@@ -147,7 +147,7 @@ extern interface FilteredRowSet extends javax.sql.rowset.WebRowSet
 	* @return p the <code>Predicate</code> for this <code>FilteredRowSet</code>
 	* object; <code>null</code> if no filter has been set.
 	*/
-	@:overload public function getFilter() : javax.sql.rowset.Predicate;
+	@:overload @:public public function getFilter() : javax.sql.rowset.Predicate;
 	
 	
 }

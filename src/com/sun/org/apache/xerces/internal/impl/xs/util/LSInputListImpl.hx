@@ -24,7 +24,7 @@ extern class LSInputListImpl extends java.util.AbstractList<Dynamic> implements 
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.LSInputListImpl;
+	@:public @:static @:final public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.LSInputListImpl;
 	
 	/**
 	* Construct an LSInputList implementation
@@ -32,13 +32,13 @@ extern class LSInputListImpl extends java.util.AbstractList<Dynamic> implements 
 	* @param array     the data array
 	* @param length    the number of elements
 	*/
-	@:overload public function new(array : java.NativeArray<org.w3c.dom.ls.LSInput>, length : Int) : Void;
+	@:overload @:public public function new(array : java.NativeArray<org.w3c.dom.ls.LSInput>, length : Int) : Void;
 	
 	/**
 	* The number of <code>LSInput</code>s in the list. The range of valid
 	* child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection or
@@ -49,18 +49,18 @@ extern class LSInputListImpl extends java.util.AbstractList<Dynamic> implements 
 	*   position in the <code>LSInputList</code>, or <code>null</code> if
 	*   the index specified is not valid.
 	*/
-	@:overload public function item(index : Int) : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function item(index : Int) : org.w3c.dom.ls.LSInput;
 	
 	/*
 	* List methods
 	*/
-	@:overload public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }

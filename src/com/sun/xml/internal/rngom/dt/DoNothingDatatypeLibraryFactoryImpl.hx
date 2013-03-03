@@ -52,7 +52,7 @@ extern class DoNothingDatatypeLibraryFactoryImpl implements org.relaxng.datatype
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function createDatatypeLibrary(s : String) : org.relaxng.datatype.DatatypeLibrary;
+	@:overload @:public public function createDatatypeLibrary(s : String) : org.relaxng.datatype.DatatypeLibrary;
 	
 	
 }

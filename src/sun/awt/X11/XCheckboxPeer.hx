@@ -25,56 +25,56 @@ package sun.awt.X11;
 */
 @:internal extern class XCheckboxPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.CheckboxPeer
 {
-	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload public function isFocusable() : Bool;
+	@:overload @:public override public function isFocusable() : Bool;
 	
-	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload @:public override public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function keyTyped(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyTyped(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload public function keyPressed(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload public function keyReleased(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:public public function keyReleased(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/*
 	* Layout the checkbox/radio button and text label
 	*/
-	@:overload public function layout() : Void;
+	@:overload @:public override public function layout() : Void;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload public function paintCheckbox(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintCheckbox(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
-	@:overload public function paintRadioButton(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintRadioButton(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload private function paintText(g : java.awt.Graphics, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload @:protected private function paintText(g : java.awt.Graphics, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:protected private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public function setState(state : Bool) : Void;
+	@:overload @:public public function setState(state : Bool) : Void;
 	
-	@:overload public function setCheckboxGroup(g : java.awt.CheckboxGroup) : Void;
+	@:overload @:public public function setCheckboxGroup(g : java.awt.CheckboxGroup) : Void;
 	
 	
 }

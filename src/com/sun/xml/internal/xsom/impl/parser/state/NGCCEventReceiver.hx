@@ -30,15 +30,15 @@ extern interface NGCCEventReceiver
 	*
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function enterElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function enterElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function leaveElement(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function leaveElement(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function text(value : String) : Void;
+	@:overload @:public public function text(value : String) : Void;
 	
-	@:overload public function enterAttribute(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function enterAttribute(uri : String, localName : String, qname : String) : Void;
 	
-	@:overload public function leaveAttribute(uri : String, localName : String, qname : String) : Void;
+	@:overload @:public public function leaveAttribute(uri : String, localName : String, qname : String) : Void;
 	
 	
 }

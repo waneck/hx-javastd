@@ -46,13 +46,13 @@ package com.sun.xml.internal.rngom.xml.util;
 */
 extern class Naming
 {
-	@:overload public static function isName(s : String) : Bool;
+	@:overload @:public @:static public static function isName(s : String) : Bool;
 	
-	@:overload public static function isNmtoken(s : String) : Bool;
+	@:overload @:public @:static public static function isNmtoken(s : String) : Bool;
 	
-	@:overload public static function isNcname(s : String) : Bool;
+	@:overload @:public @:static public static function isNcname(s : String) : Bool;
 	
-	@:overload public static function isQname(s : String) : Bool;
+	@:overload @:public @:static public static function isQname(s : String) : Bool;
 	
 	
 }

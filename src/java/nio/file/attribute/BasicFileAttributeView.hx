@@ -46,7 +46,7 @@ extern interface BasicFileAttributeView extends java.nio.file.attribute.FileAttr
 	*          installed, its {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the file
 	*/
-	@:overload public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
+	@:overload @:public public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
 	
 	/**
 	* Updates any or all of the file's last modified time, last access time,
@@ -96,7 +96,7 @@ extern interface BasicFileAttributeView extends java.nio.file.attribute.FileAttr
 	*
 	* @see java.nio.file.Files#setLastModifiedTime
 	*/
-	@:overload public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
+	@:overload @:public public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
 	
 	
 }

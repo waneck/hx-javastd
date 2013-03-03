@@ -30,71 +30,71 @@ package com.sun.media.sound;
 */
 extern class SF2Modulator
 {
-	public static var SOURCE_NONE(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_NONE(default, null) : Int;
 	
-	public static var SOURCE_NOTE_ON_VELOCITY(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_NOTE_ON_VELOCITY(default, null) : Int;
 	
-	public static var SOURCE_NOTE_ON_KEYNUMBER(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_NOTE_ON_KEYNUMBER(default, null) : Int;
 	
-	public static var SOURCE_POLY_PRESSURE(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_POLY_PRESSURE(default, null) : Int;
 	
-	public static var SOURCE_CHANNEL_PRESSURE(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_CHANNEL_PRESSURE(default, null) : Int;
 	
-	public static var SOURCE_PITCH_WHEEL(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_PITCH_WHEEL(default, null) : Int;
 	
-	public static var SOURCE_PITCH_SENSITIVITY(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_PITCH_SENSITIVITY(default, null) : Int;
 	
-	public static var SOURCE_MIDI_CONTROL(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_MIDI_CONTROL(default, null) : Int;
 	
-	public static var SOURCE_DIRECTION_MIN_MAX(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_DIRECTION_MIN_MAX(default, null) : Int;
 	
-	public static var SOURCE_DIRECTION_MAX_MIN(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_DIRECTION_MAX_MIN(default, null) : Int;
 	
-	public static var SOURCE_POLARITY_UNIPOLAR(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_POLARITY_UNIPOLAR(default, null) : Int;
 	
-	public static var SOURCE_POLARITY_BIPOLAR(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_POLARITY_BIPOLAR(default, null) : Int;
 	
-	public static var SOURCE_TYPE_LINEAR(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_TYPE_LINEAR(default, null) : Int;
 	
-	public static var SOURCE_TYPE_CONCAVE(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_TYPE_CONCAVE(default, null) : Int;
 	
-	public static var SOURCE_TYPE_CONVEX(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_TYPE_CONVEX(default, null) : Int;
 	
-	public static var SOURCE_TYPE_SWITCH(default, null) : Int;
+	@:public @:final @:static public static var SOURCE_TYPE_SWITCH(default, null) : Int;
 	
-	public static var TRANSFORM_LINEAR(default, null) : Int;
+	@:public @:final @:static public static var TRANSFORM_LINEAR(default, null) : Int;
 	
-	public static var TRANSFORM_ABSOLUTE(default, null) : Int;
+	@:public @:final @:static public static var TRANSFORM_ABSOLUTE(default, null) : Int;
 	
-	private var sourceOperator : Int;
+	@:protected private var sourceOperator : Int;
 	
-	private var destinationOperator : Int;
+	@:protected private var destinationOperator : Int;
 	
-	private var amount : java.StdTypes.Int16;
+	@:protected private var amount : java.StdTypes.Int16;
 	
-	private var amountSourceOperator : Int;
+	@:protected private var amountSourceOperator : Int;
 	
-	private var transportOperator : Int;
+	@:protected private var transportOperator : Int;
 	
-	@:overload public function getAmount() : java.StdTypes.Int16;
+	@:overload @:public public function getAmount() : java.StdTypes.Int16;
 	
-	@:overload public function setAmount(amount : java.StdTypes.Int16) : Void;
+	@:overload @:public public function setAmount(amount : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getAmountSourceOperator() : Int;
+	@:overload @:public public function getAmountSourceOperator() : Int;
 	
-	@:overload public function setAmountSourceOperator(amountSourceOperator : Int) : Void;
+	@:overload @:public public function setAmountSourceOperator(amountSourceOperator : Int) : Void;
 	
-	@:overload public function getTransportOperator() : Int;
+	@:overload @:public public function getTransportOperator() : Int;
 	
-	@:overload public function setTransportOperator(transportOperator : Int) : Void;
+	@:overload @:public public function setTransportOperator(transportOperator : Int) : Void;
 	
-	@:overload public function getDestinationOperator() : Int;
+	@:overload @:public public function getDestinationOperator() : Int;
 	
-	@:overload public function setDestinationOperator(destinationOperator : Int) : Void;
+	@:overload @:public public function setDestinationOperator(destinationOperator : Int) : Void;
 	
-	@:overload public function getSourceOperator() : Int;
+	@:overload @:public public function getSourceOperator() : Int;
 	
-	@:overload public function setSourceOperator(sourceOperator : Int) : Void;
+	@:overload @:public public function setSourceOperator(sourceOperator : Int) : Void;
 	
 	
 }

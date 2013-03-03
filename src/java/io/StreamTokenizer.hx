@@ -52,27 +52,27 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#TT_NUMBER
 	* @see     java.io.StreamTokenizer#TT_WORD
 	*/
-	public var ttype : Int;
+	@:public public var ttype : Int;
 	
 	/**
 	* A constant indicating that the end of the stream has been read.
 	*/
-	public static var TT_EOF(default, null) : Int;
+	@:public @:static @:final public static var TT_EOF(default, null) : Int;
 	
 	/**
 	* A constant indicating that the end of the line has been read.
 	*/
-	public static var TT_EOL(default, null) : Int;
+	@:public @:static @:final public static var TT_EOL(default, null) : Int;
 	
 	/**
 	* A constant indicating that a number token has been read.
 	*/
-	public static var TT_NUMBER(default, null) : Int;
+	@:public @:static @:final public static var TT_NUMBER(default, null) : Int;
 	
 	/**
 	* A constant indicating that a word token has been read.
 	*/
-	public static var TT_WORD(default, null) : Int;
+	@:public @:static @:final public static var TT_WORD(default, null) : Int;
 	
 	/**
 	* If the current token is a word token, this field contains a
@@ -91,7 +91,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#TT_WORD
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	public var sval : String;
+	@:public public var sval : String;
 	
 	/**
 	* If the current token is a number, this field contains the value
@@ -103,7 +103,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#TT_NUMBER
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	public var nval : Float;
+	@:public public var nval : Float;
 	
 	/**
 	* Creates a stream tokenizer that parses the specified input
@@ -136,7 +136,7 @@ extern class StreamTokenizer
 	* @see        java.io.InputStreamReader
 	* @see        java.io.StreamTokenizer#StreamTokenizer(java.io.Reader)
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Create a tokenizer that parses the given character stream.
@@ -144,7 +144,7 @@ extern class StreamTokenizer
 	* @param r  a Reader object providing the input stream.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function new(r : java.io.Reader) : Void;
+	@:require(java1) @:overload @:public public function new(r : java.io.Reader) : Void;
 	
 	/**
 	* Resets this tokenizer's syntax table so that all characters are
@@ -153,7 +153,7 @@ extern class StreamTokenizer
 	*
 	* @see     java.io.StreamTokenizer#ordinaryChar(int)
 	*/
-	@:overload public function resetSyntax() : Void;
+	@:overload @:public public function resetSyntax() : Void;
 	
 	/**
 	* Specifies that all characters <i>c</i> in the range
@@ -164,7 +164,7 @@ extern class StreamTokenizer
 	* @param   low   the low end of the range.
 	* @param   hi    the high end of the range.
 	*/
-	@:overload public function wordChars(low : Int, hi : Int) : Void;
+	@:overload @:public public function wordChars(low : Int, hi : Int) : Void;
 	
 	/**
 	* Specifies that all characters <i>c</i> in the range
@@ -178,7 +178,7 @@ extern class StreamTokenizer
 	* @param   low   the low end of the range.
 	* @param   hi    the high end of the range.
 	*/
-	@:overload public function whitespaceChars(low : Int, hi : Int) : Void;
+	@:overload @:public public function whitespaceChars(low : Int, hi : Int) : Void;
 	
 	/**
 	* Specifies that all characters <i>c</i> in the range
@@ -191,7 +191,7 @@ extern class StreamTokenizer
 	* @param   hi    the high end of the range.
 	* @see     java.io.StreamTokenizer#ordinaryChar(int)
 	*/
-	@:overload public function ordinaryChars(low : Int, hi : Int) : Void;
+	@:overload @:public public function ordinaryChars(low : Int, hi : Int) : Void;
 	
 	/**
 	* Specifies that the character argument is "ordinary"
@@ -210,7 +210,7 @@ extern class StreamTokenizer
 	* @param   ch   the character.
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	@:overload public function ordinaryChar(ch : Int) : Void;
+	@:overload @:public public function ordinaryChar(ch : Int) : Void;
 	
 	/**
 	* Specified that the character argument starts a single-line
@@ -221,7 +221,7 @@ extern class StreamTokenizer
 	*
 	* @param   ch   the character.
 	*/
-	@:overload public function commentChar(ch : Int) : Void;
+	@:overload @:public public function commentChar(ch : Int) : Void;
 	
 	/**
 	* Specifies that matching pairs of this character delimit string
@@ -247,7 +247,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#sval
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	@:overload public function quoteChar(ch : Int) : Void;
+	@:overload @:public public function quoteChar(ch : Int) : Void;
 	
 	/**
 	* Specifies that numbers should be parsed by this tokenizer. The
@@ -269,7 +269,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#TT_NUMBER
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	@:overload public function parseNumbers() : Void;
+	@:overload @:public public function parseNumbers() : Void;
 	
 	/**
 	* Determines whether or not ends of line are treated as tokens.
@@ -294,7 +294,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#ttype
 	* @see     java.io.StreamTokenizer#TT_EOL
 	*/
-	@:overload public function eolIsSignificant(flag : Bool) : Void;
+	@:overload @:public public function eolIsSignificant(flag : Bool) : Void;
 	
 	/**
 	* Determines whether or not the tokenizer recognizes C-style comments.
@@ -308,7 +308,7 @@ extern class StreamTokenizer
 	* @param   flag   <code>true</code> indicates to recognize and ignore
 	*                 C-style comments.
 	*/
-	@:overload public function slashStarComments(flag : Bool) : Void;
+	@:overload @:public public function slashStarComments(flag : Bool) : Void;
 	
 	/**
 	* Determines whether or not the tokenizer recognizes C++-style comments.
@@ -323,7 +323,7 @@ extern class StreamTokenizer
 	* @param   flag   <code>true</code> indicates to recognize and ignore
 	*                 C++-style comments.
 	*/
-	@:overload public function slashSlashComments(flag : Bool) : Void;
+	@:overload @:public public function slashSlashComments(flag : Bool) : Void;
 	
 	/**
 	* Determines whether or not word token are automatically lowercased.
@@ -342,7 +342,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#ttype
 	* @see     java.io.StreamTokenizer#TT_WORD
 	*/
-	@:overload public function lowerCaseMode(fl : Bool) : Void;
+	@:overload @:public public function lowerCaseMode(fl : Bool) : Void;
 	
 	/**
 	* Parses the next token from the input stream of this tokenizer.
@@ -362,7 +362,7 @@ extern class StreamTokenizer
 	* @see        java.io.StreamTokenizer#sval
 	* @see        java.io.StreamTokenizer#ttype
 	*/
-	@:overload public function nextToken() : Int;
+	@:overload @:public public function nextToken() : Int;
 	
 	/**
 	* Causes the next call to the <code>nextToken</code> method of this
@@ -375,14 +375,14 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#sval
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	@:overload public function pushBack() : Void;
+	@:overload @:public public function pushBack() : Void;
 	
 	/**
 	* Return the current line number.
 	*
 	* @return  the current line number of this stream tokenizer.
 	*/
-	@:overload public function lineno() : Int;
+	@:overload @:public public function lineno() : Int;
 	
 	/**
 	* Returns the string representation of the current stream token and
@@ -398,7 +398,7 @@ extern class StreamTokenizer
 	* @see     java.io.StreamTokenizer#sval
 	* @see     java.io.StreamTokenizer#ttype
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

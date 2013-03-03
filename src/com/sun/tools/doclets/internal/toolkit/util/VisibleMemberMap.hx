@@ -25,28 +25,28 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class VisibleMemberMap
 {
-	public static var INNERCLASSES(default, null) : Int;
+	@:public @:static @:final public static var INNERCLASSES(default, null) : Int;
 	
-	public static var ENUM_CONSTANTS(default, null) : Int;
+	@:public @:static @:final public static var ENUM_CONSTANTS(default, null) : Int;
 	
-	public static var FIELDS(default, null) : Int;
+	@:public @:static @:final public static var FIELDS(default, null) : Int;
 	
-	public static var CONSTRUCTORS(default, null) : Int;
+	@:public @:static @:final public static var CONSTRUCTORS(default, null) : Int;
 	
-	public static var METHODS(default, null) : Int;
+	@:public @:static @:final public static var METHODS(default, null) : Int;
 	
-	public static var ANNOTATION_TYPE_MEMBER_OPTIONAL(default, null) : Int;
+	@:public @:static @:final public static var ANNOTATION_TYPE_MEMBER_OPTIONAL(default, null) : Int;
 	
-	public static var ANNOTATION_TYPE_MEMBER_REQUIRED(default, null) : Int;
+	@:public @:static @:final public static var ANNOTATION_TYPE_MEMBER_REQUIRED(default, null) : Int;
 	
-	public static var PROPERTIES(default, null) : Int;
+	@:public @:static @:final public static var PROPERTIES(default, null) : Int;
 	
 	/**
 	* The total number of member types is {@value}.
 	*/
-	public static var NUM_MEMBER_TYPES(default, null) : Int;
+	@:public @:static @:final public static var NUM_MEMBER_TYPES(default, null) : Int;
 	
-	public static var STARTLEVEL(default, null) : String;
+	@:public @:static @:final public static var STARTLEVEL(default, null) : String;
 	
 	/**
 	* Construct a VisibleMemberMap of the given type for the given
@@ -57,35 +57,35 @@ extern class VisibleMemberMap
 	* @param kind the kind of member that is being mapped.
 	* @param nodepr if true, exclude the deprecated members from the map.
 	*/
-	@:overload public function new(classdoc : com.sun.javadoc.ClassDoc, kind : Int, nodepr : Bool) : Void;
+	@:overload @:public public function new(classdoc : com.sun.javadoc.ClassDoc, kind : Int, nodepr : Bool) : Void;
 	
 	/**
 	* Return the list of visible classes in this map.
 	*
 	* @return the list of visible classes in this map.
 	*/
-	@:overload public function getVisibleClassesList() : java.util.List<com.sun.javadoc.ClassDoc>;
+	@:overload @:public public function getVisibleClassesList() : java.util.List<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Returns the property field documentation belonging to the given member.
 	* @param ped the member for which the property documentation is needed.
 	* @return the property field documentation, null if there is none.
 	*/
-	@:overload public function getPropertyMemberDoc(ped : com.sun.javadoc.ProgramElementDoc) : com.sun.javadoc.ProgramElementDoc;
+	@:overload @:public public function getPropertyMemberDoc(ped : com.sun.javadoc.ProgramElementDoc) : com.sun.javadoc.ProgramElementDoc;
 	
 	/**
 	* Returns the getter documentation belonging to the given property method.
 	* @param propertyMethod the method for which the getter is needed.
 	* @return the getter documentation, null if there is none.
 	*/
-	@:overload public function getGetterForProperty(propertyMethod : com.sun.javadoc.ProgramElementDoc) : com.sun.javadoc.ProgramElementDoc;
+	@:overload @:public public function getGetterForProperty(propertyMethod : com.sun.javadoc.ProgramElementDoc) : com.sun.javadoc.ProgramElementDoc;
 	
 	/**
 	* Returns the setter documentation belonging to the given property method.
 	* @param propertyMethod the method for which the setter is needed.
 	* @return the setter documentation, null if there is none.
 	*/
-	@:overload public function getSetterForProperty(propertyMethod : com.sun.javadoc.ProgramElementDoc) : com.sun.javadoc.ProgramElementDoc;
+	@:overload @:public public function getSetterForProperty(propertyMethod : com.sun.javadoc.ProgramElementDoc) : com.sun.javadoc.ProgramElementDoc;
 	
 	/**
 	* Return the visible members of the class being mapped.  Also append at the
@@ -94,7 +94,7 @@ extern class VisibleMemberMap
 	*
 	* @param configuation the current configuration of the doclet.
 	*/
-	@:overload public function getLeafClassMembers(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public public function getLeafClassMembers(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Retrn the list of members for the given class.
@@ -103,14 +103,14 @@ extern class VisibleMemberMap
 	*
 	* @return the list of members for the given class.
 	*/
-	@:overload public function getMembersFor(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public public function getMembersFor(cd : com.sun.javadoc.ClassDoc) : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	/**
 	* Return true if this map has no visible members.
 	*
 	* @return true if this map has no visible members.
 	*/
-	@:overload public function noVisibleMembers() : Bool;
+	@:overload @:public public function noVisibleMembers() : Bool;
 	
 	
 }
@@ -121,11 +121,11 @@ extern class VisibleMemberMap
 */
 @:native('com$sun$tools$doclets$internal$toolkit$util$VisibleMemberMap$ClassMember') @:internal extern class VisibleMemberMap_ClassMember
 {
-	@:overload public function new(programElementDoc : com.sun.javadoc.ProgramElementDoc) : Void;
+	@:overload @:public public function new(programElementDoc : com.sun.javadoc.ProgramElementDoc) : Void;
 	
-	@:overload public function addMember(programElementDoc : com.sun.javadoc.ProgramElementDoc) : Void;
+	@:overload @:public public function addMember(programElementDoc : com.sun.javadoc.ProgramElementDoc) : Void;
 	
-	@:overload public function isEqual(member : com.sun.javadoc.MethodDoc) : Bool;
+	@:overload @:public public function isEqual(member : com.sun.javadoc.MethodDoc) : Bool;
 	
 	
 }
@@ -140,17 +140,17 @@ extern class VisibleMemberMap
 	*
 	* @return List Inherited members.
 	*/
-	@:overload public function getMembers() : java.util.List<com.sun.javadoc.ProgramElementDoc>;
+	@:overload @:public public function getMembers() : java.util.List<com.sun.javadoc.ProgramElementDoc>;
 	
 	
 }
 @:native('com$sun$tools$doclets$internal$toolkit$util$VisibleMemberMap$GetterSetter') @:internal extern class VisibleMemberMap_GetterSetter
 {
-	@:overload public function new(getter : com.sun.javadoc.ProgramElementDoc, setter : com.sun.javadoc.ProgramElementDoc) : Void;
+	@:overload @:public public function new(getter : com.sun.javadoc.ProgramElementDoc, setter : com.sun.javadoc.ProgramElementDoc) : Void;
 	
-	@:overload public function getGetter() : com.sun.javadoc.ProgramElementDoc;
+	@:overload @:public public function getGetter() : com.sun.javadoc.ProgramElementDoc;
 	
-	@:overload public function getSetter() : com.sun.javadoc.ProgramElementDoc;
+	@:overload @:public public function getSetter() : com.sun.javadoc.ProgramElementDoc;
 	
 	
 }

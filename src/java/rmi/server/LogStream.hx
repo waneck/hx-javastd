@@ -42,7 +42,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public static function log(name : String) : java.rmi.server.LogStream;
+	@:require(java1) @:overload @:public @:static public static function log(name : String) : java.rmi.server.LogStream;
 	
 	/**
 	* Return the current default stream for new logs.
@@ -51,7 +51,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload @:synchronized public static function getDefaultStream() : java.io.PrintStream;
+	@:require(java1) @:overload @:public @:static @:synchronized public static function getDefaultStream() : java.io.PrintStream;
 	
 	/**
 	* Set the default stream for new logs.
@@ -60,7 +60,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload @:synchronized public static function setDefaultStream(newDefault : java.io.PrintStream) : Void;
+	@:require(java1) @:overload @:public @:static @:synchronized public static function setDefaultStream(newDefault : java.io.PrintStream) : Void;
 	
 	/**
 	* Return the current stream to which output from this log is sent.
@@ -69,7 +69,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload @:synchronized public function getOutputStream() : java.io.OutputStream;
+	@:require(java1) @:overload @:public @:synchronized public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Set the stream to which output from this log is sent.
@@ -78,7 +78,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload @:synchronized public function setOutputStream(out : java.io.OutputStream) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setOutputStream(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Write a byte of data to the stream.  If it is not a newline, then
@@ -88,14 +88,14 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload override public function write(b : Int) : Void;
+	@:require(java1) @:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Write a subarray of bytes.  Pass each through write byte method.
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:require(java1) @:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Return log name as string representation.
@@ -103,16 +103,16 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public function toString() : String;
+	@:require(java1) @:overload @:public public function toString() : String;
 	
 	/** log level constant (no logging). */
-	public static var SILENT(default, null) : Int;
+	@:public @:static @:final public static var SILENT(default, null) : Int;
 	
 	/** log level constant (brief logging). */
-	public static var BRIEF(default, null) : Int;
+	@:public @:static @:final public static var BRIEF(default, null) : Int;
 	
 	/** log level constant (verbose logging). */
-	public static var VERBOSE(default, null) : Int;
+	@:public @:static @:final public static var VERBOSE(default, null) : Int;
 	
 	/**
 	* Convert a string name of a logging level to its internal
@@ -122,7 +122,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public static function parseLevel(s : String) : Int;
+	@:require(java1) @:overload @:public @:static public static function parseLevel(s : String) : Int;
 	
 	
 }

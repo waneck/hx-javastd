@@ -37,7 +37,7 @@ extern class Installer
 	* </tt></blockquote>
 	* <p>
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

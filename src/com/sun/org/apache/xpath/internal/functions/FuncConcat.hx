@@ -31,7 +31,7 @@ extern class FuncConcat extends com.sun.org.apache.xpath.internal.functions.Func
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Check that the number of arguments passed to this function is correct.
@@ -41,7 +41,7 @@ extern class FuncConcat extends com.sun.org.apache.xpath.internal.functions.Func
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override public function checkNumberArgs(argNum : Int) : Void;
+	@:overload @:public override public function checkNumberArgs(argNum : Int) : Void;
 	
 	/**
 	* Constructs and throws a WrongNumberArgException with the appropriate
@@ -49,7 +49,7 @@ extern class FuncConcat extends com.sun.org.apache.xpath.internal.functions.Func
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override private function reportWrongNumberArgs() : Void;
+	@:overload @:protected override private function reportWrongNumberArgs() : Void;
 	
 	
 }

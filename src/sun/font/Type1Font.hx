@@ -30,7 +30,7 @@ extern class Type1Font extends sun.font.FileFont
 	* @param platname - Platform identifier of the font. Typically file name.
 	* @param nativeNames - Native names - typically XLFDs on Unix.
 	*/
-	@:overload public function new(platname : String, nativeNames : Dynamic) : Void;
+	@:overload @:public public function new(platname : String, nativeNames : Dynamic) : Void;
 	
 	/**
 	* - does basic verification of the file
@@ -39,25 +39,25 @@ extern class Type1Font extends sun.font.FileFont
 	* @throws FontFormatException - if the font can't be opened
 	* or fails verification,  or there's no usable cmap
 	*/
-	@:overload public function new(platname : String, nativeNames : Dynamic, createdCopy : Bool) : Void;
+	@:overload @:public public function new(platname : String, nativeNames : Dynamic, createdCopy : Bool) : Void;
 	
-	@:overload override private function close() : Void;
+	@:overload @:protected override private function close() : Void;
 	
-	@:overload @:synchronized public function readBlock(offset : Int, length : Int) : java.nio.ByteBuffer;
+	@:overload @:public @:synchronized public function readBlock(offset : Int, length : Int) : java.nio.ByteBuffer;
 	
-	@:overload public function getFileSize() : Int;
+	@:overload @:public public function getFileSize() : Int;
 	
-	@:overload public function getPostscriptName() : String;
+	@:overload @:public override public function getPostscriptName() : String;
 	
-	@:overload @:synchronized override private function getScaler() : sun.font.FontScaler;
+	@:overload @:protected @:synchronized override private function getScaler() : sun.font.FontScaler;
 	
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload public function getMissingGlyphCode() : Int;
+	@:overload @:public override public function getMissingGlyphCode() : Int;
 	
-	@:overload public function getGlyphCode(charCode : java.StdTypes.Char16) : Int;
+	@:overload @:public public function getGlyphCode(charCode : java.StdTypes.Char16) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -94,7 +94,7 @@ extern class Type1Font extends sun.font.FileFont
 */
 @:native('sun$font$Type1Font$T1DisposerRecord') @:internal extern class Type1Font_T1DisposerRecord implements sun.java2d.DisposerRecord
 {
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }

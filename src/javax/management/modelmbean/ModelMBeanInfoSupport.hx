@@ -42,7 +42,7 @@ extern class ModelMBeanInfoSupport extends javax.management.MBeanInfo implements
 	* @param mbi the ModelMBeanInfo instance from which the ModelMBeanInfo
 	* being created is initialized.
 	*/
-	@:overload public function new(mbi : javax.management.modelmbean.ModelMBeanInfo) : Void;
+	@:overload @:public public function new(mbi : javax.management.modelmbean.ModelMBeanInfo) : Void;
 	
 	/**
 	* Creates a ModelMBeanInfoSupport with the provided information,
@@ -62,7 +62,7 @@ extern class ModelMBeanInfoSupport extends javax.management.MBeanInfo implements
 	* @param notifications array of ModelMBeanNotificationInfo
 	* objects which have descriptors
 	*/
-	@:overload public function new(className : String, description : String, attributes : java.NativeArray<javax.management.modelmbean.ModelMBeanAttributeInfo>, constructors : java.NativeArray<javax.management.modelmbean.ModelMBeanConstructorInfo>, operations : java.NativeArray<javax.management.modelmbean.ModelMBeanOperationInfo>, notifications : java.NativeArray<javax.management.modelmbean.ModelMBeanNotificationInfo>) : Void;
+	@:overload @:public public function new(className : String, description : String, attributes : java.NativeArray<javax.management.modelmbean.ModelMBeanAttributeInfo>, constructors : java.NativeArray<javax.management.modelmbean.ModelMBeanConstructorInfo>, operations : java.NativeArray<javax.management.modelmbean.ModelMBeanOperationInfo>, notifications : java.NativeArray<javax.management.modelmbean.ModelMBeanNotificationInfo>) : Void;
 	
 	/**
 	* Creates a ModelMBeanInfoSupport with the provided information
@@ -94,7 +94,7 @@ extern class ModelMBeanInfoSupport extends javax.management.MBeanInfo implements
 	* getMBeanDescriptor} for the definition of a valid MBean
 	* descriptor.)
 	*/
-	@:overload public function new(className : String, description : String, attributes : java.NativeArray<javax.management.modelmbean.ModelMBeanAttributeInfo>, constructors : java.NativeArray<javax.management.modelmbean.ModelMBeanConstructorInfo>, operations : java.NativeArray<javax.management.modelmbean.ModelMBeanOperationInfo>, notifications : java.NativeArray<javax.management.modelmbean.ModelMBeanNotificationInfo>, mbeandescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function new(className : String, description : String, attributes : java.NativeArray<javax.management.modelmbean.ModelMBeanAttributeInfo>, constructors : java.NativeArray<javax.management.modelmbean.ModelMBeanConstructorInfo>, operations : java.NativeArray<javax.management.modelmbean.ModelMBeanOperationInfo>, notifications : java.NativeArray<javax.management.modelmbean.ModelMBeanNotificationInfo>, mbeandescriptor : javax.management.Descriptor) : Void;
 	
 	/**
 	* Returns a shallow clone of this instance.  Neither the Descriptor nor
@@ -105,11 +105,11 @@ extern class ModelMBeanInfoSupport extends javax.management.MBeanInfo implements
 	*
 	* @return a shallow clone of this instance.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
-	@:overload public function getDescriptors(inDescriptorType : String) : java.NativeArray<javax.management.Descriptor>;
+	@:overload @:public public function getDescriptors(inDescriptorType : String) : java.NativeArray<javax.management.Descriptor>;
 	
-	@:overload public function setDescriptors(inDescriptors : java.NativeArray<javax.management.Descriptor>) : Void;
+	@:overload @:public public function setDescriptors(inDescriptors : java.NativeArray<javax.management.Descriptor>) : Void;
 	
 	/**
 	* Returns a Descriptor requested by name.
@@ -125,15 +125,15 @@ extern class ModelMBeanInfoSupport extends javax.management.MBeanInfo implements
 	*
 	* @see #setDescriptor
 	*/
-	@:overload public function getDescriptor(inDescriptorName : String) : javax.management.Descriptor;
+	@:overload @:public public function getDescriptor(inDescriptorName : String) : javax.management.Descriptor;
 	
-	@:overload public function getDescriptor(inDescriptorName : String, inDescriptorType : String) : javax.management.Descriptor;
+	@:overload @:public public function getDescriptor(inDescriptorName : String, inDescriptorType : String) : javax.management.Descriptor;
 	
-	@:overload public function setDescriptor(inDescriptor : javax.management.Descriptor, inDescriptorType : String) : Void;
+	@:overload @:public public function setDescriptor(inDescriptor : javax.management.Descriptor, inDescriptorType : String) : Void;
 	
-	@:overload public function getAttribute(inName : String) : javax.management.modelmbean.ModelMBeanAttributeInfo;
+	@:overload @:public public function getAttribute(inName : String) : javax.management.modelmbean.ModelMBeanAttributeInfo;
 	
-	@:overload public function getOperation(inName : String) : javax.management.modelmbean.ModelMBeanOperationInfo;
+	@:overload @:public public function getOperation(inName : String) : javax.management.modelmbean.ModelMBeanOperationInfo;
 	
 	/**
 	* Returns the ModelMBeanConstructorInfo requested by name.
@@ -148,18 +148,18 @@ extern class ModelMBeanInfoSupport extends javax.management.MBeanInfo implements
 	* @exception RuntimeOperationsException Wraps an IllegalArgumentException
 	*            for a null constructor name.
 	*/
-	@:overload public function getConstructor(inName : String) : javax.management.modelmbean.ModelMBeanConstructorInfo;
+	@:overload @:public public function getConstructor(inName : String) : javax.management.modelmbean.ModelMBeanConstructorInfo;
 	
-	@:overload public function getNotification(inName : String) : javax.management.modelmbean.ModelMBeanNotificationInfo;
+	@:overload @:public public function getNotification(inName : String) : javax.management.modelmbean.ModelMBeanNotificationInfo;
 	
 	/**
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getDescriptor() : javax.management.Descriptor;
+	@:require(java6) @:overload @:public override public function getDescriptor() : javax.management.Descriptor;
 	
-	@:overload public function getMBeanDescriptor() : javax.management.Descriptor;
+	@:overload @:public public function getMBeanDescriptor() : javax.management.Descriptor;
 	
-	@:overload public function setMBeanDescriptor(inMBeanDescriptor : javax.management.Descriptor) : Void;
+	@:overload @:public public function setMBeanDescriptor(inMBeanDescriptor : javax.management.Descriptor) : Void;
 	
 	
 }

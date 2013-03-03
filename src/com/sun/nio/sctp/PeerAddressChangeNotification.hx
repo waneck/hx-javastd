@@ -28,28 +28,28 @@ extern class PeerAddressChangeNotification implements com.sun.nio.sctp.Notificat
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the peer address.
 	*
 	* @return  The peer address
 	*/
-	@:overload @:abstract public function address() : java.net.SocketAddress;
+	@:overload @:public @:abstract public function address() : java.net.SocketAddress;
 	
 	/**
 	* Returns the association that this notification is applicable to.
 	*
 	* @return  The association whose peer address changed
 	*/
-	@:overload @:abstract public function association() : com.sun.nio.sctp.Association;
+	@:overload @:public @:abstract public function association() : com.sun.nio.sctp.Association;
 	
 	/**
 	* Returns the type of change event.
 	*
 	* @return  The event
 	*/
-	@:overload @:abstract public function event() : com.sun.nio.sctp.PeerAddressChangeNotification.PeerAddressChangeNotification_AddressChangeEvent;
+	@:overload @:public @:abstract public function event() : com.sun.nio.sctp.PeerAddressChangeNotification.PeerAddressChangeNotification_AddressChangeEvent;
 	
 	
 }

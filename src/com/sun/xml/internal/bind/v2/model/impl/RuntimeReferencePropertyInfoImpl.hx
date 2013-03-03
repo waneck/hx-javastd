@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class RuntimeReferencePropertyInfoImpl extends com.sun.xml.internal.bind.v2.model.impl.ReferencePropertyInfoImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method> implements com.sun.xml.internal.bind.v2.model.runtime.RuntimeReferencePropertyInfo
 {
-	@:overload public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : Void;
+	@:overload @:public public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : Void;
 	
-	@:overload public function getElements() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
+	@:overload @:public override public function getElements() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
 	
-	@:overload public function ref() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
+	@:overload @:public override public function ref() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
 	
-	@:overload public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload @:public public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
-	@:overload public function elementOnlyContent() : Bool;
+	@:overload @:public public function elementOnlyContent() : Bool;
 	
 	
 }

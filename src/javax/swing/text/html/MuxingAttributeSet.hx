@@ -34,7 +34,7 @@ package javax.swing.text.html;
 	* Creates a <code>MuxingAttributeSet</code> with the passed in
 	* attributes.
 	*/
-	@:overload public function new(attrs : java.NativeArray<javax.swing.text.AttributeSet>) : Void;
+	@:overload @:public public function new(attrs : java.NativeArray<javax.swing.text.AttributeSet>) : Void;
 	
 	/**
 	* Creates an empty <code>MuxingAttributeSet</code>. This is intended for
@@ -42,33 +42,33 @@ package javax.swing.text.html;
 	* set the constituent <code>AttributeSet</code>s before invoking any
 	* of the <code>AttributeSet</code> methods.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Directly sets the <code>AttributeSet</code>s that comprise this
 	* <code>MuxingAttributeSet</code>.
 	*/
-	@:overload @:synchronized private function setAttributes(attrs : java.NativeArray<javax.swing.text.AttributeSet>) : Void;
+	@:overload @:protected @:synchronized private function setAttributes(attrs : java.NativeArray<javax.swing.text.AttributeSet>) : Void;
 	
 	/**
 	* Returns the <code>AttributeSet</code>s multiplexing too. When the
 	* <code>AttributeSet</code>s need to be referenced, this should be called.
 	*/
-	@:overload @:synchronized private function getAttributes() : java.NativeArray<javax.swing.text.AttributeSet>;
+	@:overload @:protected @:synchronized private function getAttributes() : java.NativeArray<javax.swing.text.AttributeSet>;
 	
 	/**
 	* Inserts <code>as</code> at <code>index</code>. This assumes
 	* the value of <code>index</code> is between 0 and attrs.length,
 	* inclusive.
 	*/
-	@:overload @:synchronized private function insertAttributeSetAt(as : javax.swing.text.AttributeSet, index : Int) : Void;
+	@:overload @:protected @:synchronized private function insertAttributeSetAt(as : javax.swing.text.AttributeSet, index : Int) : Void;
 	
 	/**
 	* Removes the AttributeSet at <code>index</code>. This assumes
 	* the value of <code>index</code> is greater than or equal to 0,
 	* and less than attrs.length.
 	*/
-	@:overload @:synchronized private function removeAttributeSetAt(index : Int) : Void;
+	@:overload @:protected @:synchronized private function removeAttributeSetAt(index : Int) : Void;
 	
 	/**
 	* Gets the number of attributes that are defined.
@@ -76,7 +76,7 @@ package javax.swing.text.html;
 	* @return the number of attributes
 	* @see AttributeSet#getAttributeCount
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/**
 	* Checks whether a given attribute is defined.
@@ -88,7 +88,7 @@ package javax.swing.text.html;
 	* @return true if the attribute is defined
 	* @see AttributeSet#isDefined
 	*/
-	@:overload public function isDefined(key : Dynamic) : Bool;
+	@:overload @:public public function isDefined(key : Dynamic) : Bool;
 	
 	/**
 	* Checks whether two attribute sets are equal.
@@ -97,7 +97,7 @@ package javax.swing.text.html;
 	* @return true if the same
 	* @see AttributeSet#isEqual
 	*/
-	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Copies a set of attributes.
@@ -105,7 +105,7 @@ package javax.swing.text.html;
 	* @return the copy
 	* @see AttributeSet#copyAttributes
 	*/
-	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Gets the value of an attribute.  If the requested
@@ -116,7 +116,7 @@ package javax.swing.text.html;
 	* @return the attribute value
 	* @see AttributeSet#getAttribute
 	*/
-	@:overload public function getAttribute(key : Dynamic) : Dynamic;
+	@:overload @:public public function getAttribute(key : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the names of all attributes.
@@ -124,7 +124,7 @@ package javax.swing.text.html;
 	* @return the attribute names
 	* @see AttributeSet#getAttributeNames
 	*/
-	@:overload public function getAttributeNames() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAttributeNames() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Checks whether a given attribute name/value is defined.
@@ -134,7 +134,7 @@ package javax.swing.text.html;
 	* @return true if the name/value is defined
 	* @see AttributeSet#containsAttribute
 	*/
-	@:overload public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
+	@:overload @:public public function containsAttribute(name : Dynamic, value : Dynamic) : Bool;
 	
 	/**
 	* Checks whether the attribute set contains all of
@@ -144,13 +144,13 @@ package javax.swing.text.html;
 	* @return true if the element contains all the attributes
 	* @see AttributeSet#containsAttributes
 	*/
-	@:overload public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
+	@:overload @:public public function containsAttributes(attrs : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Returns null, subclasses may wish to do something more
 	* intelligent with this.
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }
@@ -160,9 +160,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$MuxingAttributeSet$MuxingAttributeNameEnumeration') @:internal extern class MuxingAttributeSet_MuxingAttributeNameEnumeration implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

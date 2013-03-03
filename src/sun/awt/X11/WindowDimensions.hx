@@ -29,59 +29,59 @@ package sun.awt.X11;
 	* If isClient is true, the bounds represent the client window area.
 	* Otherwise, they represent the entire window area, with the insets included
 	*/
-	@:overload public function new(x : Int, y : Int, width : Int, height : Int, isClient : Bool) : Void;
+	@:overload @:public public function new(x : Int, y : Int, width : Int, height : Int, isClient : Bool) : Void;
 	
 	/**
 	* If isClient is true, the bounds represent the client window area.
 	* Otherwise, they represent the entire window area, with the insets included
 	*/
-	@:overload public function new(rec : java.awt.Rectangle, ins : java.awt.Insets, isClient : Bool) : Void;
+	@:overload @:public public function new(rec : java.awt.Rectangle, ins : java.awt.Insets, isClient : Bool) : Void;
 	
 	/**
 	* If isClient is true, the bounds represent the client window area.
 	* Otherwise, they represent the entire window area, with the insets included
 	*/
-	@:overload public function new(loc : java.awt.Point, size : java.awt.Dimension, _in : java.awt.Insets, isClient : Bool) : Void;
+	@:overload @:public public function new(loc : java.awt.Point, size : java.awt.Dimension, _in : java.awt.Insets, isClient : Bool) : Void;
 	
 	/**
 	* If isClient is true, the bounds represent the client window area.
 	* Otherwise, they represent the entire window area, with the insets included
 	*/
-	@:overload public function new(bounds : java.awt.Rectangle, isClient : Bool) : Void;
+	@:overload @:public public function new(bounds : java.awt.Rectangle, isClient : Bool) : Void;
 	
-	@:overload public function new(dims : sun.awt.X11.WindowDimensions) : Void;
+	@:overload @:public public function new(dims : sun.awt.X11.WindowDimensions) : Void;
 	
-	@:overload public function getClientRect() : java.awt.Rectangle;
+	@:overload @:public public function getClientRect() : java.awt.Rectangle;
 	
-	@:overload public function setClientSize(size : java.awt.Dimension) : Void;
+	@:overload @:public public function setClientSize(size : java.awt.Dimension) : Void;
 	
-	@:overload public function setClientSize(width : Int, height : Int) : Void;
+	@:overload @:public public function setClientSize(width : Int, height : Int) : Void;
 	
-	@:overload public function getClientSize() : java.awt.Dimension;
+	@:overload @:public public function getClientSize() : java.awt.Dimension;
 	
-	@:overload public function setSize(width : Int, height : Int) : Void;
+	@:overload @:public public function setSize(width : Int, height : Int) : Void;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function getInsets() : java.awt.Insets;
+	@:overload @:public public function getInsets() : java.awt.Insets;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
-	@:overload public function setLocation(x : Int, y : Int) : Void;
+	@:overload @:public public function setLocation(x : Int, y : Int) : Void;
 	
-	@:overload public function getScreenBounds() : java.awt.Rectangle;
+	@:overload @:public public function getScreenBounds() : java.awt.Rectangle;
 	
-	@:overload public function setInsets(_in : java.awt.Insets) : Void;
+	@:overload @:public public function setInsets(_in : java.awt.Insets) : Void;
 	
-	@:overload public function isClientSizeSet() : Bool;
+	@:overload @:public public function isClientSizeSet() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

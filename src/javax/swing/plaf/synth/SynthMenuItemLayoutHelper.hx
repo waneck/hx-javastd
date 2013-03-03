@@ -49,45 +49,45 @@ package javax.swing.plaf.synth;
 */
 @:internal extern class SynthMenuItemLayoutHelper extends sun.swing.MenuItemLayoutHelper
 {
-	public static var MAX_ACC_OR_ARROW_WIDTH(default, null) : sun.swing.StringUIClientPropertyKey;
+	@:public @:static @:final public static var MAX_ACC_OR_ARROW_WIDTH(default, null) : sun.swing.StringUIClientPropertyKey;
 	
-	public static var LTR_ALIGNMENT_1(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
+	@:public @:static @:final public static var LTR_ALIGNMENT_1(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var LTR_ALIGNMENT_2(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
+	@:public @:static @:final public static var LTR_ALIGNMENT_2(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var RTL_ALIGNMENT_1(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
+	@:public @:static @:final public static var RTL_ALIGNMENT_1(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var RTL_ALIGNMENT_2(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
+	@:public @:static @:final public static var RTL_ALIGNMENT_2(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload public function new(context : javax.swing.plaf.synth.SynthContext, accContext : javax.swing.plaf.synth.SynthContext, mi : javax.swing.JMenuItem, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, viewRect : java.awt.Rectangle, gap : Int, accDelimiter : String, isLeftToRight : Bool, useCheckAndArrow : Bool, propertyPrefix : String) : Void;
+	@:overload @:public public function new(context : javax.swing.plaf.synth.SynthContext, accContext : javax.swing.plaf.synth.SynthContext, mi : javax.swing.JMenuItem, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, viewRect : java.awt.Rectangle, gap : Int, accDelimiter : String, isLeftToRight : Bool, useCheckAndArrow : Bool, propertyPrefix : String) : Void;
 	
-	@:overload override private function calcWidthsAndHeights() : Void;
+	@:overload @:protected override private function calcWidthsAndHeights() : Void;
 	
-	@:overload override private function calcMaxWidths() : Void;
+	@:overload @:protected override private function calcMaxWidths() : Void;
 	
-	@:overload public function getContext() : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext() : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload public function getAccContext() : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getAccContext() : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload public function getStyle() : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public public function getStyle() : javax.swing.plaf.synth.SynthStyle;
 	
-	@:overload public function getAccStyle() : javax.swing.plaf.synth.SynthStyle;
+	@:overload @:public public function getAccStyle() : javax.swing.plaf.synth.SynthStyle;
 	
-	@:overload public function getGraphicsUtils() : javax.swing.plaf.synth.SynthGraphicsUtils;
+	@:overload @:public public function getGraphicsUtils() : javax.swing.plaf.synth.SynthGraphicsUtils;
 	
-	@:overload public function getAccGraphicsUtils() : javax.swing.plaf.synth.SynthGraphicsUtils;
+	@:overload @:public public function getAccGraphicsUtils() : javax.swing.plaf.synth.SynthGraphicsUtils;
 	
-	@:overload public function alignAcceleratorText() : Bool;
+	@:overload @:public public function alignAcceleratorText() : Bool;
 	
-	@:overload public function getMaxAccOrArrowWidth() : Int;
+	@:overload @:public public function getMaxAccOrArrowWidth() : Int;
 	
-	@:overload override private function prepareForLayout(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
+	@:overload @:protected override private function prepareForLayout(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
-	@:overload override public function getLTRColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
+	@:overload @:public override public function getLTRColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload override public function getRTLColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
+	@:overload @:public override public function getRTLColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload override private function layoutIconAndTextInLabelRect(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
+	@:overload @:protected override private function layoutIconAndTextInLabelRect(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
 	
 }

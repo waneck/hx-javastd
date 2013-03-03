@@ -50,7 +50,7 @@ package javax.net.ssl;
 	* @param session SSLSession used on the connection to host
 	* @return true if the host name is acceptable
 	*/
-	@:overload public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
+	@:overload @:public public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
 	
 	
 }

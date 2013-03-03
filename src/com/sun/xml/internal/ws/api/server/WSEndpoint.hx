@@ -32,21 +32,21 @@ extern class WSEndpoint<T>
 	*
 	* @return codec to encode/decode
 	*/
-	@:overload @:abstract public function createCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
+	@:overload @:public @:abstract public function createCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	/**
 	* Gets the application endpoint's serviceName. It could be got from DD or annotations
 	*
 	* @return same as wsdl:service QName if WSDL exists or generated
 	*/
-	@:overload @:abstract public function getServiceName() : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getServiceName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the application endpoint's portName. It could be got from DD or annotations
 	*
 	* @return same as wsdl:port QName if WSDL exists or generated
 	*/
-	@:overload @:abstract public function getPortName() : javax.xml.namespace.QName;
+	@:overload @:public @:abstract public function getPortName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the application endpoint {@link Class} that eventually serves the request.
@@ -54,7 +54,7 @@ extern class WSEndpoint<T>
 	* <p>
 	* This is the same value given to the {@link #create} method.
 	*/
-	@:overload @:abstract public function getImplementationClass() : Class<T>;
+	@:overload @:public @:abstract public function getImplementationClass() : Class<T>;
 	
 	/**
 	* Represents the binding for which this {@link WSEndpoint}
@@ -63,7 +63,7 @@ extern class WSEndpoint<T>
 	* @return
 	*      always same object.
 	*/
-	@:overload @:abstract public function getBinding() : com.sun.xml.internal.ws.api.WSBinding;
+	@:overload @:public @:abstract public function getBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	
 	/**
 	* Gets the {@link Container} object.
@@ -76,7 +76,7 @@ extern class WSEndpoint<T>
 	*      always same object. If no "real" {@link Container} instance
 	*      is given, {@link Container#NONE} will be returned.
 	*/
-	@:overload @:abstract public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload @:public @:abstract public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
 	/**
 	* Gets the port that this endpoint is serving.
@@ -89,7 +89,7 @@ extern class WSEndpoint<T>
 	* @return
 	*      Possibly null, but always the same value.
 	*/
-	@:overload @:abstract public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
+	@:overload @:public @:abstract public function getPort() : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort;
 	
 	/**
 	* Set this {@link Executor} to run asynchronous requests using this executor.
@@ -99,7 +99,7 @@ extern class WSEndpoint<T>
 	*
 	* @param exec Executor to run async requests
 	*/
-	@:overload @:abstract public function setExecutor(exec : java.util.concurrent.Executor) : Void;
+	@:overload @:public @:abstract public function setExecutor(exec : java.util.concurrent.Executor) : Void;
 	
 	/**
 	* This method takes a {@link Packet} that represents
@@ -134,7 +134,7 @@ extern class WSEndpoint<T>
 	* @param request web service request
 	* @param callback callback to get response packet
 	*/
-	@:overload @:final public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback) : Void;
+	@:overload @:public @:final public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback) : Void;
 	
 	/**
 	* Schedule invocation of web service asynchronously.
@@ -145,9 +145,9 @@ extern class WSEndpoint<T>
 	* @param callback callback to get response packet(exception if there is one)
 	* @param interceptor caller's interceptor to impose a context of execution
 	*/
-	@:overload @:abstract public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload @:public @:abstract public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
-	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload @:public public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
 	/**
 	* Creates a new {@link PipeHead} to process
@@ -161,7 +161,7 @@ extern class WSEndpoint<T>
 	* @return
 	*      A newly created {@link PipeHead} that's ready to serve.
 	*/
-	@:overload @:abstract public function createPipeHead() : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
+	@:overload @:public @:abstract public function createPipeHead() : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
 	
 	/**
 	* Indicates that the {@link WSEndpoint} is about to be turned off,
@@ -178,7 +178,7 @@ extern class WSEndpoint<T>
 	* all in-progress {@link PipeHead#process} methods (by other threads)
 	* and future {@link PipeHead#process} method invocations.
 	*/
-	@:overload @:abstract public function dispose() : Void;
+	@:overload @:public @:abstract public function dispose() : Void;
 	
 	/**
 	* Gets the description of the service.
@@ -193,7 +193,7 @@ extern class WSEndpoint<T>
 	*      Possibly null, always the same value under ordinary circumstances but
 	*      may change if the endpoint is managed.
 	*/
-	@:overload @:abstract public function getServiceDefinition() : com.sun.xml.internal.ws.api.server.ServiceDefinition;
+	@:overload @:public @:abstract public function getServiceDefinition() : com.sun.xml.internal.ws.api.server.ServiceDefinition;
 	
 	/**
 	* Gets the list of {@link EndpointComponent} that are associated
@@ -211,7 +211,7 @@ extern class WSEndpoint<T>
 	* @return
 	*      always return the same set.
 	*/
-	@:overload @:abstract public function getComponentRegistry() : java.util.Set<com.sun.xml.internal.ws.api.server.EndpointComponent>;
+	@:overload @:public @:abstract public function getComponentRegistry() : java.util.Set<com.sun.xml.internal.ws.api.server.EndpointComponent>;
 	
 	/**
 	* Gets the {@link com.sun.xml.internal.ws.api.model.SEIModel} that represents the relationship
@@ -225,7 +225,7 @@ extern class WSEndpoint<T>
 	*      maybe null. See above for more discussion.
 	*      Always the same value.
 	*/
-	@:overload @:abstract public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
+	@:overload @:public @:abstract public function getSEIModel() : com.sun.xml.internal.ws.api.model.SEIModel;
 	
 	/**
 	* Gives the PolicMap that captures the Policy for the endpoint
@@ -235,12 +235,12 @@ extern class WSEndpoint<T>
 	* @deprecated
 	* Do not use this method as the PolicyMap API is not final yet and might change in next few months.
 	*/
-	@:overload @:abstract public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public @:abstract public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	/**
 	* Get the ManagedObjectManager for this endpoint.
 	*/
-	@:overload @:abstract public function getManagedObjectManager() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
+	@:overload @:public @:abstract public function getManagedObjectManager() : com.sun.org.glassfish.gmbal.ManagedObjectManager;
 	
 	/**
 	* Close the ManagedObjectManager for this endpoint.
@@ -250,12 +250,12 @@ extern class WSEndpoint<T>
 	* The call to dispose also calls closeManagedObjectManager, but is a noop
 	* if that method has already been called.
 	*/
-	@:overload @:abstract public function closeManagedObjectManager() : Void;
+	@:overload @:public @:abstract public function closeManagedObjectManager() : Void;
 	
 	/**
 	* This is only needed to expose info for monitoring.
 	*/
-	@:overload @:abstract public function getAssemblerContext() : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext;
+	@:overload @:public @:abstract public function getAssemblerContext() : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext;
 	
 	/**
 	* Creates an endpoint from deployment or programmatic configuration
@@ -321,12 +321,12 @@ extern class WSEndpoint<T>
 	* @throws WebServiceException
 	*      if the endpoint set up fails.
 	*/
-	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
+	@:overload @:public @:static public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* Deprecated version that assumes <tt>isTransportSynchronous==false</tt>
 	*/
-	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
+	@:overload @:public @:static public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* The same as
@@ -337,17 +337,17 @@ extern class WSEndpoint<T>
 	*      if not null, an {@link EntityResolver} is created from it and used.
 	*      otherwise no resolution will be performed.
 	*/
-	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, catalogUrl : java.net.URL) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
+	@:overload @:public @:static public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, catalogUrl : java.net.URL) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* Gives the wsdl:service default name computed from the endpoint implementaiton class
 	*/
-	@:overload public static function getDefaultServiceName(endpointClass : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getDefaultServiceName(endpointClass : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	/**
 	* Gives the wsdl:service/wsdl:port default name computed from the endpoint implementaiton class
 	*/
-	@:overload public static function getDefaultPortName(serviceName : javax.xml.namespace.QName, endpointClass : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getDefaultPortName(serviceName : javax.xml.namespace.QName, endpointClass : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	
 }

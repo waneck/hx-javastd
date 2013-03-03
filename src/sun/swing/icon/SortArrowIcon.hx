@@ -32,7 +32,7 @@ extern class SortArrowIcon implements javax.swing.Icon implements javax.swing.pl
 	*        descending
 	* @param color the color to render the icon
 	*/
-	@:overload public function new(ascending : Bool, color : java.awt.Color) : Void;
+	@:overload @:public public function new(ascending : Bool, color : java.awt.Color) : Void;
 	
 	/**
 	* Creates a <code>SortArrowIcon</code>.
@@ -41,13 +41,13 @@ extern class SortArrowIcon implements javax.swing.Icon implements javax.swing.pl
 	*        descending
 	* @param colorKey the key used to find color in UIManager
 	*/
-	@:overload public function new(ascending : Bool, colorKey : String) : Void;
+	@:overload @:public public function new(ascending : Bool, colorKey : String) : Void;
 	
-	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload public function getIconWidth() : Int;
+	@:overload @:public public function getIconWidth() : Int;
 	
-	@:overload public function getIconHeight() : Int;
+	@:overload @:public public function getIconHeight() : Int;
 	
 	
 }

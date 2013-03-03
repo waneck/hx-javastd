@@ -51,7 +51,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* setter methods are provided.
 	* </p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy constructor.
@@ -63,7 +63,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	*
 	* @param locator The locator to copy.
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Return the saved public identifier.
@@ -73,7 +73,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* @see org.xml.sax.Locator#getPublicId
 	* @see #setPublicId
 	*/
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	/**
 	* Return the saved system identifier.
@@ -83,7 +83,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* @see org.xml.sax.Locator#getSystemId
 	* @see #setSystemId
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	/**
 	* Return the saved line number (1-based).
@@ -92,7 +92,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* @see org.xml.sax.Locator#getLineNumber
 	* @see #setLineNumber
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Return the saved column number (1-based).
@@ -101,7 +101,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* @see org.xml.sax.Locator#getColumnNumber
 	* @see #setColumnNumber
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* Set the public identifier for this locator.
@@ -110,7 +110,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	*        if none is available.
 	* @see #getPublicId
 	*/
-	@:overload public function setPublicId(publicId : String) : Void;
+	@:overload @:public public function setPublicId(publicId : String) : Void;
 	
 	/**
 	* Set the system identifier for this locator.
@@ -119,7 +119,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	*        if none is available.
 	* @see #getSystemId
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Set the line number for this locator (1-based).
@@ -127,7 +127,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* @param lineNumber The line number, or -1 if none is available.
 	* @see #getLineNumber
 	*/
-	@:overload public function setLineNumber(lineNumber : Int) : Void;
+	@:overload @:public public function setLineNumber(lineNumber : Int) : Void;
 	
 	/**
 	* Set the column number for this locator (1-based).
@@ -135,7 +135,7 @@ extern class SerializableLocatorImpl implements org.xml.sax.Locator implements j
 	* @param columnNumber The column number, or -1 if none is available.
 	* @see #getColumnNumber
 	*/
-	@:overload public function setColumnNumber(columnNumber : Int) : Void;
+	@:overload @:public public function setColumnNumber(columnNumber : Int) : Void;
 	
 	
 }

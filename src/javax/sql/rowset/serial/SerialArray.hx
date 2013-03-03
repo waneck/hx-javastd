@@ -78,7 +78,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SQLException if a database access error occurs or if the
 	*        <i>array</i> or the <i>map</i> values are <code>null</code>
 	*/
-	@:overload public function new(array : java.sql.Array, map : java.util.Map<String, Class<Dynamic>>) : Void;
+	@:overload @:public public function new(array : java.sql.Array, map : java.util.Map<String, Class<Dynamic>>) : Void;
 	
 	/**
 	* This method frees the <code>Array</code> object and releases the resources that
@@ -97,7 +97,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function free() : Void;
+	@:require(java6) @:overload @:public public function free() : Void;
 	
 	/**
 	* Constructs a new <code>SerialArray</code> object from the given
@@ -132,7 +132,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SQLException if a database access error occurs or the
 	*     <i>array</i> parameter is <code>null</code>.
 	*/
-	@:overload public function new(array : java.sql.Array) : Void;
+	@:overload @:public public function new(array : java.sql.Array) : Void;
 	
 	/**
 	* Returns a new array that is a copy of this <code>SerialArray</code>
@@ -143,7 +143,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SerialException if an error occurs retrieving a copy of
 	*         this <code>SerialArray</code> object
 	*/
-	@:overload public function getArray() : Dynamic;
+	@:overload @:public public function getArray() : Dynamic;
 	
 	/**
 	* Returns a new array that is a copy of this <code>SerialArray</code>
@@ -167,7 +167,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	*         <code>Object</code> in the Java programming language
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getArray(map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public public function getArray(map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Returns a new array that is a copy of a slice
@@ -184,7 +184,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	*         object as an <code>Object</code> in the Java programming language
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getArray(index : haxe.Int64, count : Int) : Dynamic;
+	@:overload @:public public function getArray(index : haxe.Int64, count : Int) : Dynamic;
 	
 	/**
 	* Returns a new array that is a copy of a slice
@@ -214,7 +214,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	*         object as an <code>Object</code> in the Java programming language
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getArray(index : haxe.Int64, count : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public public function getArray(index : haxe.Int64, count : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Retrieves the SQL type of the elements in this <code>SerialArray</code>
@@ -225,7 +225,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	*         the SQL type of the elements in this <code>SerialArray</code> object
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getBaseType() : Int;
+	@:overload @:public public function getBaseType() : Int;
 	
 	/**
 	* Retrieves the DBMS-specific type name for the elements in this
@@ -235,7 +235,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	*         <code>SerialArray</code> object
 	* @throws SerialException if an error occurs
 	*/
-	@:overload public function getBaseTypeName() : String;
+	@:overload @:public public function getBaseTypeName() : String;
 	
 	/**
 	* Retrieves a <code>ResultSet</code> object holding the elements of
@@ -256,7 +256,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SerialException, which in turn throws an
 	*         <code>UnsupportedOperationException</code>, if this method is called
 	*/
-	@:overload public function getResultSet(index : haxe.Int64, count : Int) : java.sql.ResultSet;
+	@:overload @:public public function getResultSet(index : haxe.Int64, count : Int) : java.sql.ResultSet;
 	
 	/**
 	*
@@ -281,7 +281,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SerialException, which in turn throws an
 	*         <code>UnsupportedOperationException</code>, if this method is called
 	*/
-	@:overload public function getResultSet(map : java.util.Map<String, Class<Dynamic>>) : java.sql.ResultSet;
+	@:overload @:public public function getResultSet(map : java.util.Map<String, Class<Dynamic>>) : java.sql.ResultSet;
 	
 	/**
 	* Retrieves a <code>ResultSet</code> object that contains all of
@@ -296,7 +296,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SerialException if called, which in turn throws an
 	*         <code>UnsupportedOperationException</code>, if this method is called
 	*/
-	@:overload public function getResultSet() : java.sql.ResultSet;
+	@:overload @:public public function getResultSet() : java.sql.ResultSet;
 	
 	/**
 	* Retrieves a result set holding the elements of the subarray that starts at
@@ -327,7 +327,7 @@ extern class SerialArray implements java.sql.Array implements java.io.Serializab
 	* @throws SerialException if called, which in turn throws an
 	*         <code>UnsupportedOperationException</code>
 	*/
-	@:overload public function getResultSet(index : haxe.Int64, count : Int, map : java.util.Map<String, Class<Dynamic>>) : java.sql.ResultSet;
+	@:overload @:public public function getResultSet(index : haxe.Int64, count : Int, map : java.util.Map<String, Class<Dynamic>>) : java.sql.ResultSet;
 	
 	
 }

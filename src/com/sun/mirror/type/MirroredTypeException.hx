@@ -30,7 +30,7 @@ extern class MirroredTypeException extends java.lang.RuntimeException
 	*
 	* @param type  the type being accessed
 	*/
-	@:overload public function new(type : com.sun.mirror.type.TypeMirror) : Void;
+	@:overload @:public public function new(type : com.sun.mirror.type.TypeMirror) : Void;
 	
 	/**
 	* Returns the type mirror corresponding to the type being accessed.
@@ -39,7 +39,7 @@ extern class MirroredTypeException extends java.lang.RuntimeException
 	*
 	* @return the type mirror, or <tt>null</tt> if unavailable
 	*/
-	@:overload public function getTypeMirror() : com.sun.mirror.type.TypeMirror;
+	@:overload @:public public function getTypeMirror() : com.sun.mirror.type.TypeMirror;
 	
 	/**
 	* Returns the fully qualified name of the type being accessed.
@@ -49,7 +49,7 @@ extern class MirroredTypeException extends java.lang.RuntimeException
 	*
 	* @return the fully qualified name of the type being accessed
 	*/
-	@:overload public function getQualifiedName() : String;
+	@:overload @:public public function getQualifiedName() : String;
 	
 	
 }

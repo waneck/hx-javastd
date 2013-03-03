@@ -28,7 +28,7 @@ package javax.swing.text;
 	/**
 	* Creates a new GapVector object.  Initial size defaults to 10.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new GapVector object, with the initial
@@ -36,34 +36,34 @@ package javax.swing.text;
 	*
 	* @param initialLength the initial size
 	*/
-	@:overload public function new(initialLength : Int) : Void;
+	@:overload @:public public function new(initialLength : Int) : Void;
 	
 	/**
 	* Allocate an array to store items of the type
 	* appropriate (which is determined by the subclass).
 	*/
-	@:overload @:abstract private function allocateArray(len : Int) : Dynamic;
+	@:overload @:protected @:abstract private function allocateArray(len : Int) : Dynamic;
 	
 	/**
 	* Get the length of the allocated array
 	*/
-	@:overload @:abstract private function getArrayLength() : Int;
+	@:overload @:protected @:abstract private function getArrayLength() : Int;
 	
 	/**
 	* Access to the array.  The actual type
 	* of the array is known only by the subclass.
 	*/
-	@:overload @:final private function getArray() : Dynamic;
+	@:overload @:protected @:final private function getArray() : Dynamic;
 	
 	/**
 	* Access to the start of the gap.
 	*/
-	@:overload @:final private function getGapStart() : Int;
+	@:overload @:protected @:final private function getGapStart() : Int;
 	
 	/**
 	* Access to the end of the gap.
 	*/
-	@:overload @:final private function getGapEnd() : Int;
+	@:overload @:protected @:final private function getGapEnd() : Int;
 	
 	/**
 	* Replace the given logical position in the storage with
@@ -77,13 +77,13 @@ package javax.swing.text;
 	* @param rmSize the number of items to remove
 	* @param addItems the new items to place in storage.
 	*/
-	@:overload private function replace(position : Int, rmSize : Int, addItems : Dynamic, addSize : Int) : Void;
+	@:overload @:protected private function replace(position : Int, rmSize : Int, addItems : Dynamic, addSize : Int) : Void;
 	
 	/**
 	* Make the gap bigger, moving any necessary data and updating
 	* the appropriate marks
 	*/
-	@:overload private function shiftEnd(newSize : Int) : Void;
+	@:overload @:protected private function shiftEnd(newSize : Int) : Void;
 	
 	/**
 	* Move the start of the gap to a new location,
@@ -91,7 +91,7 @@ package javax.swing.text;
 	* moves the data in the array and updates the
 	* marks accordingly.
 	*/
-	@:overload private function shiftGap(newGapStart : Int) : Void;
+	@:overload @:protected private function shiftGap(newGapStart : Int) : Void;
 	
 	/**
 	* Adjust the gap end downward.  This doesn't move
@@ -101,7 +101,7 @@ package javax.swing.text;
 	* to the end of the gap (their location has been
 	* removed).
 	*/
-	@:overload private function shiftGapStartDown(newGapStart : Int) : Void;
+	@:overload @:protected private function shiftGapStartDown(newGapStart : Int) : Void;
 	
 	/**
 	* Adjust the gap end upward.  This doesn't move
@@ -111,7 +111,7 @@ package javax.swing.text;
 	* to the end of the gap (their location has been
 	* removed).
 	*/
-	@:overload private function shiftGapEndUp(newGapEnd : Int) : Void;
+	@:overload @:protected private function shiftGapEndUp(newGapEnd : Int) : Void;
 	
 	
 }

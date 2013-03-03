@@ -31,7 +31,7 @@ package sun.io;
 */
 extern class ByteToCharUnicodeLittle extends sun.io.ByteToCharUnicode
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

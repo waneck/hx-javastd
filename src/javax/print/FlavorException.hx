@@ -29,7 +29,7 @@ extern interface FlavorException
 	* Returns the unsupported flavors.
 	* @return the unsupported doc flavors.
 	*/
-	@:overload public function getUnsupportedFlavors() : java.NativeArray<javax.print.DocFlavor>;
+	@:overload @:public public function getUnsupportedFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	
 	
 }

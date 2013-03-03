@@ -29,14 +29,14 @@ extern class AuthorityInfoAccessExtension extends java.security.cert.Extension i
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Attribute name.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var DESCRIPTIONS(default, null) : String;
+	@:public @:static @:final public static var DESCRIPTIONS(default, null) : String;
 	
 	/**
 	* Create an AuthorityInfoAccessExtension from a List of
@@ -45,7 +45,7 @@ extern class AuthorityInfoAccessExtension extends java.security.cert.Extension i
 	* @param accessDescriptions the List of AccessDescription
 	* @throws IOException on error
 	*/
-	@:overload public function new(accessDescriptions : java.util.List<sun.security.x509.AccessDescription>) : Void;
+	@:overload @:public public function new(accessDescriptions : java.util.List<sun.security.x509.AccessDescription>) : Void;
 	
 	/**
 	* Create the extension from the passed DER encoded value of the same.
@@ -54,17 +54,17 @@ extern class AuthorityInfoAccessExtension extends java.security.cert.Extension i
 	* @param value Array of DER encoded bytes of the actual value.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(critical : Null<Bool>, value : Dynamic) : Void;
+	@:overload @:public public function new(critical : Null<Bool>, value : Dynamic) : Void;
 	
 	/**
 	* Return the list of AccessDescription objects.
 	*/
-	@:overload public function getAccessDescriptions() : java.util.List<sun.security.x509.AccessDescription>;
+	@:overload @:public public function getAccessDescriptions() : java.util.List<sun.security.x509.AccessDescription>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.
@@ -72,33 +72,33 @@ extern class AuthorityInfoAccessExtension extends java.security.cert.Extension i
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the extension as user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

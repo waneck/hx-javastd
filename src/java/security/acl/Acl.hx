@@ -38,7 +38,7 @@ extern interface Acl extends java.security.acl.Owner
 	*
 	* @see #getName
 	*/
-	@:overload public function setName(caller : java.security.Principal, name : String) : Void;
+	@:overload @:public public function setName(caller : java.security.Principal, name : String) : Void;
 	
 	/**
 	* Returns the name of this ACL.
@@ -47,7 +47,7 @@ extern interface Acl extends java.security.acl.Owner
 	*
 	* @see #setName
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Adds an ACL entry to this ACL. An entry associates a principal
@@ -70,7 +70,7 @@ extern interface Acl extends java.security.acl.Owner
 	* @exception NotOwnerException if the caller principal
 	*  is not an owner of this ACL.
 	*/
-	@:overload public function addEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
+	@:overload @:public public function addEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
 	
 	/**
 	* Removes an ACL entry from this ACL.
@@ -85,7 +85,7 @@ extern interface Acl extends java.security.acl.Owner
 	* @exception NotOwnerException if the caller principal is not
 	* an owner of this Acl.
 	*/
-	@:overload public function removeEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
+	@:overload @:public public function removeEntry(caller : java.security.Principal, entry : java.security.acl.AclEntry) : Bool;
 	
 	/**
 	* Returns an enumeration for the set of allowed permissions for the
@@ -132,7 +132,7 @@ extern interface Acl extends java.security.acl.Owner
 	* @return the permission set specifying the permissions the principal
 	* is allowed.
 	*/
-	@:overload public function getPermissions(user : java.security.Principal) : java.util.Enumeration<java.security.acl.Permission>;
+	@:overload @:public public function getPermissions(user : java.security.Principal) : java.util.Enumeration<java.security.acl.Permission>;
 	
 	/**
 	* Returns an enumeration of the entries in this ACL. Each element in
@@ -140,7 +140,7 @@ extern interface Acl extends java.security.acl.Owner
 	*
 	* @return an enumeration of the entries in this ACL.
 	*/
-	@:overload public function entries() : java.util.Enumeration<java.security.acl.AclEntry>;
+	@:overload @:public public function entries() : java.util.Enumeration<java.security.acl.AclEntry>;
 	
 	/**
 	* Checks whether or not the specified principal has the specified
@@ -161,7 +161,7 @@ extern interface Acl extends java.security.acl.Owner
 	*
 	* @see #getPermissions
 	*/
-	@:overload public function checkPermission(principal : java.security.Principal, permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function checkPermission(principal : java.security.Principal, permission : java.security.acl.Permission) : Bool;
 	
 	
 }

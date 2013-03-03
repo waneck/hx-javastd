@@ -50,71 +50,71 @@ extern interface HTMLFormElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  Returns a collection of all control elements in the form.
 	*/
-	@:overload public function getElements() : org.w3c.dom.html.HTMLCollection;
+	@:overload @:public public function getElements() : org.w3c.dom.html.HTMLCollection;
 	
 	/**
 	*  The number of form controls in the form.
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	*  Names the form.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  List of character sets supported by the server. See the
 	* accept-charset attribute definition in HTML 4.0.
 	*/
-	@:overload public function getAcceptCharset() : String;
+	@:overload @:public public function getAcceptCharset() : String;
 	
-	@:overload public function setAcceptCharset(acceptCharset : String) : Void;
+	@:overload @:public public function setAcceptCharset(acceptCharset : String) : Void;
 	
 	/**
 	*  Server-side form handler. See the  action attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getAction() : String;
+	@:overload @:public public function getAction() : String;
 	
-	@:overload public function setAction(action : String) : Void;
+	@:overload @:public public function setAction(action : String) : Void;
 	
 	/**
 	*  The content type of the submitted form,  generally
 	* "application/x-www-form-urlencoded".  See the  enctype attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getEnctype() : String;
+	@:overload @:public public function getEnctype() : String;
 	
-	@:overload public function setEnctype(enctype : String) : Void;
+	@:overload @:public public function setEnctype(enctype : String) : Void;
 	
 	/**
 	*  HTTP method used to submit form. See the  method attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getMethod() : String;
+	@:overload @:public public function getMethod() : String;
 	
-	@:overload public function setMethod(method : String) : Void;
+	@:overload @:public public function setMethod(method : String) : Void;
 	
 	/**
 	*  Frame to render the resource in. See the  target attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
-	@:overload public function setTarget(target : String) : Void;
+	@:overload @:public public function setTarget(target : String) : Void;
 	
 	/**
 	*  Submits the form. It performs the same action as a  submit button.
 	*/
-	@:overload public function submit() : Void;
+	@:overload @:public public function submit() : Void;
 	
 	/**
 	*  Restores a form element's default values. It performs  the same action
 	* as a reset button.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	
 }

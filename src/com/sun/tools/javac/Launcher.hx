@@ -42,7 +42,7 @@ package com.sun.tools.javac;
 	* @author Peter von der Ah&eacute;
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:require(java6) @:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

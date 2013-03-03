@@ -32,7 +32,7 @@ extern class ReadOnlyFileSystemException extends java.lang.UnsupportedOperationE
 	/**
 	* Constructs an instance of this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

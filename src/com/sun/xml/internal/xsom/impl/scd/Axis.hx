@@ -46,13 +46,13 @@ extern interface Axis<T>
 }
 @:native('com$sun$xml$internal$xsom$impl$scd$Axis$ModelGroupAxis') @:internal extern class Axis_ModelGroupAxis extends com.sun.xml.internal.xsom.impl.scd.AbstractAxisImpl<com.sun.xml.internal.xsom.XSModelGroup>
 {
-	@:overload override public function isModelGroup() : Bool;
+	@:overload @:public override public function isModelGroup() : Bool;
 	
-	@:overload override public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : java.util.Iterator<com.sun.xml.internal.xsom.XSModelGroup>;
+	@:overload @:public override public function particle(particle : com.sun.xml.internal.xsom.XSParticle) : java.util.Iterator<com.sun.xml.internal.xsom.XSModelGroup>;
 	
-	@:overload override public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : java.util.Iterator<com.sun.xml.internal.xsom.XSModelGroup>;
+	@:overload @:public override public function modelGroupDecl(decl : com.sun.xml.internal.xsom.XSModelGroupDecl) : java.util.Iterator<com.sun.xml.internal.xsom.XSModelGroup>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

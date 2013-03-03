@@ -69,7 +69,7 @@ package javax.naming;
 	* @see #getLinkResolvedName
 	* @see #setLinkResolvedName
 	*/
-	private var linkResolvedName : javax.naming.Name;
+	@:protected private var linkResolvedName : javax.naming.Name;
 	
 	/**
 	* Contains the object to which resolution of the part of the link was successful.
@@ -80,7 +80,7 @@ package javax.naming;
 	* @see #getLinkResolvedObj
 	* @see #setLinkResolvedObj
 	*/
-	private var linkResolvedObj : Dynamic;
+	@:protected private var linkResolvedObj : Dynamic;
 	
 	/**
 	* Contains the remaining link name that has not been resolved yet.
@@ -92,7 +92,7 @@ package javax.naming;
 	* @see #getLinkRemainingName
 	* @see #setLinkRemainingName
 	*/
-	private var linkRemainingName : javax.naming.Name;
+	@:protected private var linkRemainingName : javax.naming.Name;
 	
 	/**
 	* Contains the exception of why resolution of the link failed.
@@ -103,7 +103,7 @@ package javax.naming;
 	* @see #getLinkExplanation
 	* @see #setLinkExplanation
 	*/
-	private var linkExplanation : String;
+	@:protected private var linkExplanation : String;
 	
 	/**
 	* Constructs a new instance of LinkException with an explanation
@@ -112,13 +112,13 @@ package javax.naming;
 	*                         detail about this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new instance of LinkException.
 	* All the non-link-related and link-related fields are initialized to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Retrieves the leading portion of the link name that was resolved
@@ -130,7 +130,7 @@ package javax.naming;
 	* @see #getLinkResolvedObj
 	* @see #setLinkResolvedName
 	*/
-	@:overload public function getLinkResolvedName() : javax.naming.Name;
+	@:overload @:public public function getLinkResolvedName() : javax.naming.Name;
 	
 	/**
 	* Retrieves the remaining unresolved portion of the link name.
@@ -139,7 +139,7 @@ package javax.naming;
 	*          the link remaining name field has not been set.
 	* @see #setLinkRemainingName
 	*/
-	@:overload public function getLinkRemainingName() : javax.naming.Name;
+	@:overload @:public public function getLinkRemainingName() : javax.naming.Name;
 	
 	/**
 	* Retrieves the object to which resolution was successful.
@@ -150,7 +150,7 @@ package javax.naming;
 	* @see #getLinkResolvedName
 	* @see #setLinkResolvedObj
 	*/
-	@:overload public function getLinkResolvedObj() : Dynamic;
+	@:overload @:public public function getLinkResolvedObj() : Dynamic;
 	
 	/**
 	* Retrieves the explanation associated with the problem encounter
@@ -162,7 +162,7 @@ package javax.naming;
 	*         link detail message for this exception.
 	* @see #setLinkExplanation
 	*/
-	@:overload public function getLinkExplanation() : String;
+	@:overload @:public public function getLinkExplanation() : String;
 	
 	/**
 	* Sets the explanation associated with the problem encounter
@@ -172,7 +172,7 @@ package javax.naming;
 	* with resolving a link. If null, it means no detail will be recorded.
 	* @see #getLinkExplanation
 	*/
-	@:overload public function setLinkExplanation(msg : String) : Void;
+	@:overload @:public public function setLinkExplanation(msg : String) : Void;
 	
 	/**
 	* Sets the resolved link name field of this exception.
@@ -192,7 +192,7 @@ package javax.naming;
 	*          If null, it sets the link resolved name field to null.
 	* @see #getLinkResolvedName
 	*/
-	@:overload public function setLinkResolvedName(name : javax.naming.Name) : Void;
+	@:overload @:public public function setLinkResolvedName(name : javax.naming.Name) : Void;
 	
 	/**
 	* Sets the remaining link name field of this exception.
@@ -211,7 +211,7 @@ package javax.naming;
 	*  If null, it sets the remaining name field to null.
 	* @see #getLinkRemainingName
 	*/
-	@:overload public function setLinkRemainingName(name : javax.naming.Name) : Void;
+	@:overload @:public public function setLinkRemainingName(name : javax.naming.Name) : Void;
 	
 	/**
 	* Sets the link resolved object field of this exception.
@@ -220,7 +220,7 @@ package javax.naming;
 	*            If null, the link resolved object field is set to null.
 	* @see #getLinkResolvedObj
 	*/
-	@:overload public function setLinkResolvedObj(obj : Dynamic) : Void;
+	@:overload @:public public function setLinkResolvedObj(obj : Dynamic) : Void;
 	
 	/**
 	* Generates the string representation of this exception.
@@ -230,7 +230,7 @@ package javax.naming;
 	* programmatically.
 	* @return The non-null string representation of this link exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Generates the string representation of this exception.
@@ -246,7 +246,7 @@ package javax.naming;
 	*                  object.
 	* @return The non-null string representation of this link exception.
 	*/
-	@:overload override public function toString(detail : Bool) : String;
+	@:overload @:public override public function toString(detail : Bool) : String;
 	
 	
 }

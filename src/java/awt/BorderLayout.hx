@@ -28,27 +28,27 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	/**
 	* The north layout constraint (top of container).
 	*/
-	public static var NORTH(default, null) : String;
+	@:public @:static @:final public static var NORTH(default, null) : String;
 	
 	/**
 	* The south layout constraint (bottom of container).
 	*/
-	public static var SOUTH(default, null) : String;
+	@:public @:static @:final public static var SOUTH(default, null) : String;
 	
 	/**
 	* The east layout constraint (right side of container).
 	*/
-	public static var EAST(default, null) : String;
+	@:public @:static @:final public static var EAST(default, null) : String;
 	
 	/**
 	* The west layout constraint (left side of container).
 	*/
-	public static var WEST(default, null) : String;
+	@:public @:static @:final public static var WEST(default, null) : String;
 	
 	/**
 	* The center layout constraint (middle of container).
 	*/
-	public static var CENTER(default, null) : String;
+	@:public @:static @:final public static var CENTER(default, null) : String;
 	
 	/**
 	* Synonym for PAGE_START.  Exists for compatibility with previous
@@ -57,7 +57,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see #PAGE_START
 	* @since 1.2
 	*/
-	@:require(java2) public static var BEFORE_FIRST_LINE(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var BEFORE_FIRST_LINE(default, null) : String;
 	
 	/**
 	* Synonym for PAGE_END.  Exists for compatibility with previous
@@ -66,7 +66,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see #PAGE_END
 	* @since 1.2
 	*/
-	@:require(java2) public static var AFTER_LAST_LINE(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var AFTER_LAST_LINE(default, null) : String;
 	
 	/**
 	* Synonym for LINE_START.  Exists for compatibility with previous
@@ -75,7 +75,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see #LINE_START
 	* @since 1.2
 	*/
-	@:require(java2) public static var BEFORE_LINE_BEGINS(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var BEFORE_LINE_BEGINS(default, null) : String;
 	
 	/**
 	* Synonym for LINE_END.  Exists for compatibility with previous
@@ -84,7 +84,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see #LINE_END
 	* @since 1.2
 	*/
-	@:require(java2) public static var AFTER_LINE_ENDS(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var AFTER_LINE_ENDS(default, null) : String;
 	
 	/**
 	* The component comes before the first line of the layout's content.
@@ -94,7 +94,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see java.awt.Component#getComponentOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var PAGE_START(default, null) : String;
+	@:require(java4) @:public @:static @:final public static var PAGE_START(default, null) : String;
 	
 	/**
 	* The component comes after the last line of the layout's content.
@@ -104,7 +104,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see java.awt.Component#getComponentOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var PAGE_END(default, null) : String;
+	@:require(java4) @:public @:static @:final public static var PAGE_END(default, null) : String;
 	
 	/**
 	* The component goes at the beginning of the line direction for the
@@ -114,7 +114,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see java.awt.Component#getComponentOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var LINE_START(default, null) : String;
+	@:require(java4) @:public @:static @:final public static var LINE_START(default, null) : String;
 	
 	/**
 	* The component goes at the end of the line direction for the
@@ -124,13 +124,13 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see java.awt.Component#getComponentOrientation
 	* @since 1.4
 	*/
-	@:require(java4) public static var LINE_END(default, null) : String;
+	@:require(java4) @:public @:static @:final public static var LINE_END(default, null) : String;
 	
 	/**
 	* Constructs a new border layout with
 	* no gaps between components.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a border layout with the specified gaps
@@ -140,33 +140,33 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @param   hgap   the horizontal gap.
 	* @param   vgap   the vertical gap.
 	*/
-	@:overload public function new(hgap : Int, vgap : Int) : Void;
+	@:overload @:public public function new(hgap : Int, vgap : Int) : Void;
 	
 	/**
 	* Returns the horizontal gap between components.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function getHgap() : Int;
+	@:require(java1) @:overload @:public public function getHgap() : Int;
 	
 	/**
 	* Sets the horizontal gap between components.
 	* @param hgap the horizontal gap between components
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function setHgap(hgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setHgap(hgap : Int) : Void;
 	
 	/**
 	* Returns the vertical gap between components.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function getVgap() : Int;
+	@:require(java1) @:overload @:public public function getVgap() : Int;
 	
 	/**
 	* Sets the vertical gap between components.
 	* @param vgap the vertical gap between components
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function setVgap(vgap : Int) : Void;
+	@:require(java1) @:overload @:public public function setVgap(vgap : Int) : Void;
 	
 	/**
 	* Adds the specified component to the layout, using the specified
@@ -187,12 +187,12 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	*              constants.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:require(java1) @:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
 	/**
 	* @deprecated  replaced by <code>addLayoutComponent(Component, Object)</code>.
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from this border layout. This
@@ -203,7 +203,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see     java.awt.Container#remove(java.awt.Component)
 	* @see     java.awt.Container#removeAll()
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Gets the component that was added using the given constraint
@@ -220,7 +220,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see     #addLayoutComponent(java.awt.Component, java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLayoutComponent(constraints : Dynamic) : java.awt.Component;
+	@:require(java5) @:overload @:public public function getLayoutComponent(constraints : Dynamic) : java.awt.Component;
 	
 	/**
 	* Returns the component that corresponds to the given constraint location
@@ -246,7 +246,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see     #addLayoutComponent(java.awt.Component, java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLayoutComponent(target : java.awt.Container, constraints : Dynamic) : java.awt.Component;
+	@:require(java5) @:overload @:public public function getLayoutComponent(target : java.awt.Container, constraints : Dynamic) : java.awt.Component;
 	
 	/**
 	* Gets the constraints for the specified component
@@ -258,7 +258,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see #addLayoutComponent(java.awt.Component, java.lang.Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getConstraints(comp : java.awt.Component) : Dynamic;
+	@:require(java5) @:overload @:public public function getConstraints(comp : java.awt.Component) : Dynamic;
 	
 	/**
 	* Determines the minimum size of the <code>target</code> container
@@ -274,7 +274,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see     java.awt.BorderLayout#preferredLayoutSize
 	* @see     java.awt.Container#getMinimumSize()
 	*/
-	@:overload public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Determines the preferred size of the <code>target</code>
@@ -291,7 +291,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see     java.awt.BorderLayout#minimumLayoutSize
 	* @see     java.awt.Container#getPreferredSize()
 	*/
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum dimensions for this layout given the components
@@ -301,7 +301,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see #minimumLayoutSize
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the alignment along the x axis.  This specifies how
@@ -310,7 +310,7 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(parent : java.awt.Container) : Single;
 	
 	/**
 	* Returns the alignment along the y axis.  This specifies how
@@ -319,13 +319,13 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* where 0 represents alignment along the origin, 1 is aligned
 	* the furthest away from the origin, 0.5 is centered, etc.
 	*/
-	@:overload public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(parent : java.awt.Container) : Single;
 	
 	/**
 	* Invalidates the layout, indicating that if the layout manager
 	* has cached information it should be discarded.
 	*/
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
 	/**
 	* Lays out the container argument using this border layout.
@@ -346,13 +346,13 @@ extern class BorderLayout implements java.awt.LayoutManager2 implements java.io.
 	* @see     java.awt.Container
 	* @see     java.awt.Container#doLayout()
 	*/
-	@:overload public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(target : java.awt.Container) : Void;
 	
 	/**
 	* Returns a string representation of the state of this border layout.
 	* @return    a string representation of this border layout.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

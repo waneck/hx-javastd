@@ -30,32 +30,32 @@ extern class LoaderHandler
 	* but first try to resolve the named class through the given
 	* "default loader".
 	*/
-	@:overload public static function loadClass(codebase : String, name : String, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadClass(codebase : String, name : String, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Returns the class annotation (representing the location for
 	* a class) that RMI will use to annotate the call stream when
 	* marshalling objects of the given class.
 	*/
-	@:overload public static function getClassAnnotation(cl : Class<Dynamic>) : String;
+	@:overload @:public @:static public static function getClassAnnotation(cl : Class<Dynamic>) : String;
 	
 	/**
 	* Returns a classloader that loads classes from the given codebase URL
 	* path.  The parent classloader of the returned classloader is the
 	* context class loader.
 	*/
-	@:overload public static function getClassLoader(codebase : String) : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getClassLoader(codebase : String) : java.lang.ClassLoader;
 	
 	/**
 	* Return the security context of the given class loader.
 	*/
-	@:overload public static function getSecurityContext(loader : java.lang.ClassLoader) : Dynamic;
+	@:overload @:public @:static public static function getSecurityContext(loader : java.lang.ClassLoader) : Dynamic;
 	
 	/**
 	* Register a class loader as one whose classes should always be
 	* annotated with the value of the "java.rmi.server.codebase" property.
 	*/
-	@:overload public static function registerCodebaseLoader(loader : java.lang.ClassLoader) : Void;
+	@:overload @:public @:static public static function registerCodebaseLoader(loader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Define and return a dynamic proxy class in a class loader with
@@ -63,7 +63,7 @@ extern class LoaderHandler
 	* implement interface classes named by the given array of
 	* interface names.
 	*/
-	@:overload public static function loadProxyClass(codebase : String, interfaces : java.NativeArray<String>, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
+	@:overload @:public @:static public static function loadProxyClass(codebase : String, interfaces : java.NativeArray<String>, defaultLoader : java.lang.ClassLoader) : Class<Dynamic>;
 	
 	/**
 	* Adds to the specified permission collection the permissions
@@ -75,7 +75,7 @@ extern class LoaderHandler
 	* loader.  A given permission is only added to the collection if
 	* it is not already implied by the collection.
 	*/
-	@:overload public static function addPermissionsForURLs(urls : java.NativeArray<java.net.URL>, perms : java.security.PermissionCollection, forLoader : Bool) : Void;
+	@:overload @:public @:static public static function addPermissionsForURLs(urls : java.NativeArray<java.net.URL>, perms : java.security.PermissionCollection, forLoader : Bool) : Void;
 	
 	
 }
@@ -85,11 +85,11 @@ extern class LoaderHandler
 */
 @:native('sun$rmi$server$LoaderHandler$LoaderKey') @:internal extern class LoaderHandler_LoaderKey
 {
-	@:overload public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : Void;
+	@:overload @:public public function new(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }
@@ -102,16 +102,16 @@ extern class LoaderHandler
 */
 @:native('sun$rmi$server$LoaderHandler$LoaderEntry') @:internal extern class LoaderHandler_LoaderEntry extends java.lang.ref.WeakReference<sun.rmi.server.LoaderHandler.LoaderHandler_Loader>
 {
-	public var key : sun.rmi.server.LoaderHandler.LoaderHandler_LoaderKey;
+	@:public public var key : sun.rmi.server.LoaderHandler.LoaderHandler_LoaderKey;
 	
 	/**
 	* set to true if the entry has been removed from the table
 	* because it has been replaced, so it should not be attempted
 	* to be removed again
 	*/
-	public var removed : Bool;
+	@:public public var removed : Bool;
 	
-	@:overload public function new(key : sun.rmi.server.LoaderHandler.LoaderHandler_LoaderKey, loader : sun.rmi.server.LoaderHandler.LoaderHandler_Loader) : Void;
+	@:overload @:public public function new(key : sun.rmi.server.LoaderHandler.LoaderHandler_LoaderKey, loader : sun.rmi.server.LoaderHandler.LoaderHandler_Loader) : Void;
 	
 	
 }
@@ -125,19 +125,19 @@ extern class LoaderHandler
 	* Return the string to be annotated with all classes loaded from
 	* this class loader.
 	*/
-	@:overload public function getClassAnnotation() : String;
+	@:overload @:public public function getClassAnnotation() : String;
 	
 	/**
 	* Return the permissions to be granted to code loaded from the
 	* given code source.
 	*/
-	@:overload override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	/**
 	* Return a string representation of this loader (useful for
 	* debugging).
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

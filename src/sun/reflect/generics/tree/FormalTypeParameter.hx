@@ -32,13 +32,13 @@ extern class FormalTypeParameter implements sun.reflect.generics.tree.TypeTree
 	* @param bs - the bounds of the type variable to be created by this method.
 	* @return a formal type parameter with the requested name and bounds
 	*/
-	@:overload public static function make(n : String, bs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.FormalTypeParameter;
+	@:overload @:public @:static public static function make(n : String, bs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.FormalTypeParameter;
 	
-	@:overload public function getBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
+	@:overload @:public public function getBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	
 	
 }

@@ -25,34 +25,34 @@ package sun.security.jca;
 */
 extern class ProviderList
 {
-	@:overload public static function add(providerList : sun.security.jca.ProviderList, p : java.security.Provider) : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function add(providerList : sun.security.jca.ProviderList, p : java.security.Provider) : sun.security.jca.ProviderList;
 	
-	@:overload public static function insertAt(providerList : sun.security.jca.ProviderList, p : java.security.Provider, position : Int) : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function insertAt(providerList : sun.security.jca.ProviderList, p : java.security.Provider, position : Int) : sun.security.jca.ProviderList;
 	
-	@:overload public static function remove(providerList : sun.security.jca.ProviderList, name : String) : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function remove(providerList : sun.security.jca.ProviderList, name : String) : sun.security.jca.ProviderList;
 	
-	@:overload public static function newList(providers : java.NativeArray<java.security.Provider>) : sun.security.jca.ProviderList;
+	@:overload @:public @:static public static function newList(providers : java.NativeArray<java.security.Provider>) : sun.security.jca.ProviderList;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Return an unmodifiable List of all Providers in this List. The
 	* individual Providers are loaded on demand. Elements that could not
 	* be initialized are replaced with EMPTY_PROVIDER.
 	*/
-	@:overload public function providers() : java.util.List<java.security.Provider>;
+	@:overload @:public public function providers() : java.util.List<java.security.Provider>;
 	
-	@:overload public function getProvider(name : String) : java.security.Provider;
+	@:overload @:public public function getProvider(name : String) : java.security.Provider;
 	
 	/**
 	* Return the index at which the provider with the specified name is
 	* installed or -1 if it is not present in this ProviderList.
 	*/
-	@:overload public function getIndex(name : String) : Int;
+	@:overload @:public public function getIndex(name : String) : Int;
 	
-	@:overload public function toArray() : java.NativeArray<java.security.Provider>;
+	@:overload @:public public function toArray() : java.NativeArray<java.security.Provider>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return a Service describing an implementation of the specified
@@ -60,7 +60,7 @@ extern class ProviderList
 	* supports that algorithm. Return null if no Provider supports this
 	* algorithm.
 	*/
-	@:overload public function getService(type : String, name : String) : java.security.Provider.Provider_Service;
+	@:overload @:public public function getService(type : String, name : String) : java.security.Provider.Provider_Service;
 	
 	/**
 	* Return a List containing all the Services describing implementations
@@ -71,16 +71,16 @@ extern class ProviderList
 	*
 	* The List returned is NOT thread safe.
 	*/
-	@:overload public function getServices(type : String, algorithm : String) : java.util.List<java.security.Provider.Provider_Service>;
+	@:overload @:public public function getServices(type : String, algorithm : String) : java.util.List<java.security.Provider.Provider_Service>;
 	
 	/**
 	* This method exists for compatibility with JCE only. It will be removed
 	* once JCE has been changed to use the replacement method.
 	* @deprecated use getServices(List<ServiceId>) instead
 	*/
-	@:overload public function getServices(type : String, algorithms : java.util.List<String>) : java.util.List<java.security.Provider.Provider_Service>;
+	@:overload @:public public function getServices(type : String, algorithms : java.util.List<String>) : java.util.List<java.security.Provider.Provider_Service>;
 	
-	@:overload public function getServices(ids : java.util.List<sun.security.jca.ServiceId>) : java.util.List<java.security.Provider.Provider_Service>;
+	@:overload @:public public function getServices(ids : java.util.List<sun.security.jca.ServiceId>) : java.util.List<java.security.Provider.Provider_Service>;
 	
 	
 }
@@ -91,13 +91,13 @@ extern class ProviderList
 */
 @:native('sun$security$jca$ProviderList$ServiceList') @:internal extern class ProviderList_ServiceList extends java.util.AbstractList<java.security.Provider.Provider_Service>
 {
-	@:overload public function get(index : Int) : java.security.Provider.Provider_Service;
+	@:overload @:public override public function get(index : Int) : java.security.Provider.Provider_Service;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<java.security.Provider.Provider_Service>;
+	@:overload @:public override public function iterator() : java.util.Iterator<java.security.Provider.Provider_Service>;
 	
 	
 }

@@ -32,13 +32,13 @@ extern class Main
 	* main entry point to the command line tool
 	* @param args command line argument array
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
 @:native('com$sun$tools$script$shell$Main$Command') @:internal extern interface Main_Command
 {
-	@:overload public function run(arguments : java.NativeArray<String>) : Void;
+	@:overload @:public public function run(arguments : java.NativeArray<String>) : Void;
 	
 	
 }

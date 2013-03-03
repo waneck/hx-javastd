@@ -60,7 +60,7 @@ extern class Lock
 	/**
 	* Create a lock, which is initially not locked.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Acquire the lock.  If someone else has the lock, wait until it
@@ -70,13 +70,13 @@ extern class Lock
 	* @exception  java.lang.InterruptedException if any thread has
 	*               interrupted this thread.
 	*/
-	@:overload @:final @:synchronized public function lock() : Void;
+	@:overload @:public @:final @:synchronized public function lock() : Void;
 	
 	/**
 	* Release the lock.  If someone else is waiting for the lock, the
 	* will be notitified so they can try to acquire the lock again.
 	*/
-	@:overload @:final @:synchronized public function unlock() : Void;
+	@:overload @:public @:final @:synchronized public function unlock() : Void;
 	
 	
 }

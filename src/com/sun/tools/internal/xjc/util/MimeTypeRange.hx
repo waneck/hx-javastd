@@ -28,11 +28,11 @@ extern class MimeTypeRange
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	public var majorType(default, null) : String;
+	@:public @:final public var majorType(default, null) : String;
 	
-	public var subType(default, null) : String;
+	@:public @:final public var subType(default, null) : String;
 	
-	public var parameters(default, null) : java.util.Map<String, String>;
+	@:public @:final public var parameters(default, null) : java.util.Map<String, String>;
 	
 	/**
 	* Each media-range MAY be followed by one or more accept-params,
@@ -43,24 +43,24 @@ extern class MimeTypeRange
 	* media-range, using the qvalue scale from 0 to 1 (section 3.9). The
 	* default value is q=1.
 	*/
-	public var q(default, null) : Single;
+	@:public @:final public var q(default, null) : Single;
 	
-	@:overload public static function parseRanges(s : String) : java.util.List<com.sun.tools.internal.xjc.util.MimeTypeRange>;
+	@:overload @:public @:static public static function parseRanges(s : String) : java.util.List<com.sun.tools.internal.xjc.util.MimeTypeRange>;
 	
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
-	@:overload public function toMimeType() : javax.activation.MimeType;
+	@:overload @:public public function toMimeType() : javax.activation.MimeType;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	public static var ALL(default, null) : com.sun.tools.internal.xjc.util.MimeTypeRange;
+	@:public @:static @:final public static var ALL(default, null) : com.sun.tools.internal.xjc.util.MimeTypeRange;
 	
 	/**
 	* Creates a range by merging all the given types.
 	*/
-	@:overload public static function merge(types : java.util.Collection<com.sun.tools.internal.xjc.util.MimeTypeRange>) : com.sun.tools.internal.xjc.util.MimeTypeRange;
+	@:overload @:public @:static public static function merge(types : java.util.Collection<com.sun.tools.internal.xjc.util.MimeTypeRange>) : com.sun.tools.internal.xjc.util.MimeTypeRange;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

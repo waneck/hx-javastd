@@ -28,30 +28,30 @@ extern class LayoutQueue
 	/**
 	* Construct a layout queue.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fetch the default layout queue.
 	*/
-	@:overload public static function getDefaultQueue() : javax.swing.text.LayoutQueue;
+	@:overload @:public @:static public static function getDefaultQueue() : javax.swing.text.LayoutQueue;
 	
 	/**
 	* Set the default layout queue.
 	*
 	* @param q the new queue.
 	*/
-	@:overload public static function setDefaultQueue(q : javax.swing.text.LayoutQueue) : Void;
+	@:overload @:public @:static public static function setDefaultQueue(q : javax.swing.text.LayoutQueue) : Void;
 	
 	/**
 	* Add a task that is not needed immediately because
 	* the results are not believed to be visible.
 	*/
-	@:overload @:synchronized public function addTask(task : java.lang.Runnable) : Void;
+	@:overload @:public @:synchronized public function addTask(task : java.lang.Runnable) : Void;
 	
 	/**
 	* Used by the worker thread to get a new task to execute
 	*/
-	@:overload @:synchronized private function waitForWork() : java.lang.Runnable;
+	@:overload @:protected @:synchronized private function waitForWork() : java.lang.Runnable;
 	
 	
 }
@@ -60,7 +60,7 @@ extern class LayoutQueue
 */
 @:native('javax$swing$text$LayoutQueue$LayoutThread') @:internal extern class LayoutQueue_LayoutThread extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

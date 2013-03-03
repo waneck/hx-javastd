@@ -25,19 +25,19 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI
 {
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function setRolloverTab(index : Int) : Void;
+	@:overload @:protected override private function setRolloverTab(index : Int) : Void;
 	
-	@:overload override private function paintContentBorder(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int) : Void;
+	@:overload @:protected override private function paintContentBorder(g : java.awt.Graphics, tabPlacement : Int, selectedIndex : Int) : Void;
 	
-	@:overload override private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	
-	@:overload override private function paintTabBorder(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
+	@:overload @:protected override private function paintTabBorder(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	
 	
 }

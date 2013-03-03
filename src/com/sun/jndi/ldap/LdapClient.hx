@@ -33,14 +33,14 @@ extern class LdapClient implements com.sun.jndi.ldap.pool.PooledConnection
 	* @param auth The authentication mechanism
 	*
 	*/
-	@:overload @:synchronized public function ldapBind(dn : String, toServer : java.NativeArray<java.StdTypes.Int8>, bindCtls : java.NativeArray<javax.naming.ldap.Control>, auth : String, pauseAfterReceipt : Bool) : com.sun.jndi.ldap.LdapResult;
+	@:overload @:synchronized @:public public function ldapBind(dn : String, toServer : java.NativeArray<java.StdTypes.Int8>, bindCtls : java.NativeArray<javax.naming.ldap.Control>, auth : String, pauseAfterReceipt : Bool) : com.sun.jndi.ldap.LdapResult;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	/*
 	* Used by connection pooling to close physical connection.
 	*/
-	@:overload @:synchronized public function closeConnection() : Void;
+	@:overload @:synchronized @:public public function closeConnection() : Void;
 	
 	
 }

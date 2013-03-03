@@ -49,20 +49,20 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DDefine
 {
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function getPattern() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function getPattern() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function getAnnotation() : com.sun.xml.internal.rngom.digested.DAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.xml.internal.rngom.digested.DAnnotation;
 	
-	@:overload public function setPattern(pattern : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:public public function setPattern(pattern : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
 	/**
 	* Gets the name of the pattern block.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function isNullable() : Bool;
+	@:overload @:public public function isNullable() : Bool;
 	
 	
 }

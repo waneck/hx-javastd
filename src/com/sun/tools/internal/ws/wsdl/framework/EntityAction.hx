@@ -30,7 +30,7 @@ package com.sun.tools.internal.ws.wsdl.framework;
 */
 extern interface EntityAction
 {
-	@:overload public function perform(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function perform(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
 	
 }

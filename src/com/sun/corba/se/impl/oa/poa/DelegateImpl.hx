@@ -25,23 +25,23 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class DelegateImpl implements org.omg.PortableServer.portable.Delegate
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, factory : com.sun.corba.se.impl.oa.poa.POAFactory) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, factory : com.sun.corba.se.impl.oa.poa.POAFactory) : Void;
 	
-	@:overload public function orb(self : org.omg.PortableServer.Servant) : org.omg.CORBA.ORB;
+	@:overload @:public public function orb(self : org.omg.PortableServer.Servant) : org.omg.CORBA.ORB;
 	
-	@:overload public function this_object(self : org.omg.PortableServer.Servant) : org.omg.CORBA.Object;
+	@:overload @:public public function this_object(self : org.omg.PortableServer.Servant) : org.omg.CORBA.Object;
 	
-	@:overload public function poa(self : org.omg.PortableServer.Servant) : org.omg.PortableServer.POA;
+	@:overload @:public public function poa(self : org.omg.PortableServer.Servant) : org.omg.PortableServer.POA;
 	
-	@:overload public function object_id(self : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function object_id(self : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function default_POA(self : org.omg.PortableServer.Servant) : org.omg.PortableServer.POA;
+	@:overload @:public public function default_POA(self : org.omg.PortableServer.Servant) : org.omg.PortableServer.POA;
 	
-	@:overload public function is_a(self : org.omg.PortableServer.Servant, repId : String) : Bool;
+	@:overload @:public public function is_a(self : org.omg.PortableServer.Servant, repId : String) : Bool;
 	
-	@:overload public function non_existent(self : org.omg.PortableServer.Servant) : Bool;
+	@:overload @:public public function non_existent(self : org.omg.PortableServer.Servant) : Bool;
 	
-	@:overload public function get_interface_def(Self : org.omg.PortableServer.Servant) : org.omg.CORBA.Object;
+	@:overload @:public public function get_interface_def(Self : org.omg.PortableServer.Servant) : org.omg.CORBA.Object;
 	
 	
 }

@@ -35,11 +35,11 @@ package sun.tools.java;
 */
 extern class ArrayType extends sun.tools.java.Type
 {
-	@:overload public function getElementType() : sun.tools.java.Type;
+	@:overload @:public override public function getElementType() : sun.tools.java.Type;
 	
-	@:overload public function getArrayDimension() : Int;
+	@:overload @:public override public function getArrayDimension() : Int;
 	
-	@:overload public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
+	@:overload @:public override public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
 	
 	
 }

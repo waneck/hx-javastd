@@ -25,13 +25,13 @@ package com.sun.tools.jdi;
 */
 extern class VoidValueImpl extends com.sun.tools.jdi.ValueImpl implements com.sun.jdi.VoidValue
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload override public function type() : com.sun.jdi.Type;
+	@:overload @:public override public function type() : com.sun.jdi.Type;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

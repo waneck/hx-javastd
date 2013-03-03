@@ -32,9 +32,9 @@ package sun.jvmstat.perfdata.monitor;
 */
 @:require(java5) extern class CountedTimerTask extends java.util.TimerTask
 {
-	@:overload public function executionCount() : haxe.Int64;
+	@:overload @:public public function executionCount() : haxe.Int64;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

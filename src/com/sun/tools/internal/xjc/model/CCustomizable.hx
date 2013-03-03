@@ -34,14 +34,14 @@ extern interface CCustomizable
 	*
 	* @see Plugin#getCustomizationURIs()
 	*/
-	@:overload public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/**
 	* Gets the source location in the schema from which this model component is created.
 	*
 	* @return never null.
 	*/
-	@:overload public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* If this model object is built from XML Schema,
@@ -51,7 +51,7 @@ extern interface CCustomizable
 	*      null if the model is built from sources other than XML Schema
 	*      (such as DTD.)
 	*/
-	@:overload public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function getSchemaComponent() : com.sun.xml.internal.xsom.XSComponent;
 	
 	
 }

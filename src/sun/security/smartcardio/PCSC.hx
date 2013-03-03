@@ -25,7 +25,7 @@ package sun.security.smartcardio;
 */
 @:internal extern class PCSC extends sun.security.smartcardio.PlatformPCSC
 {
-	@:overload public static function toString(b : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public @:static public static function toString(b : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	
 }

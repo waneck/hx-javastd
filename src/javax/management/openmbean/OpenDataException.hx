@@ -30,14 +30,14 @@ extern class OpenDataException extends javax.management.JMException
 	/**
 	* An OpenDataException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* An OpenDataException with a detail message.
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

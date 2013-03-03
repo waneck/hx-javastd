@@ -176,7 +176,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this queue
 	*/
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public public function offer(e : E) : Bool;
 	
 	/**
 	* Retrieves and removes the head of this queue.  This method differs
@@ -194,7 +194,7 @@ package java.util;
 	*
 	* @return the head of this queue, or <tt>null</tt> if this queue is empty
 	*/
-	@:overload public function poll() : E;
+	@:overload @:public public function poll() : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of this queue.  This method
@@ -212,7 +212,7 @@ package java.util;
 	*
 	* @return the head of this queue, or <tt>null</tt> if this queue is empty
 	*/
-	@:overload public function peek() : E;
+	@:overload @:public public function peek() : E;
 	
 	
 }

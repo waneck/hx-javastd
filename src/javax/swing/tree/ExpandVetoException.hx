@@ -26,14 +26,14 @@ package javax.swing.tree;
 extern class ExpandVetoException extends java.lang.Exception
 {
 	/** The event that the exception was created for. */
-	private var event : javax.swing.event.TreeExpansionEvent;
+	@:protected private var event : javax.swing.event.TreeExpansionEvent;
 	
 	/**
 	* Constructs an ExpandVetoException object with no message.
 	*
 	* @param event  a TreeExpansionEvent object
 	*/
-	@:overload public function new(event : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function new(event : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	/**
 	* Constructs an ExpandVetoException object with the specified message.
@@ -41,7 +41,7 @@ extern class ExpandVetoException extends java.lang.Exception
 	* @param event    a TreeExpansionEvent object
 	* @param message  a String containing the message
 	*/
-	@:overload public function new(event : javax.swing.event.TreeExpansionEvent, message : String) : Void;
+	@:overload @:public public function new(event : javax.swing.event.TreeExpansionEvent, message : String) : Void;
 	
 	
 }

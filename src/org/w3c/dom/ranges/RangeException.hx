@@ -46,21 +46,21 @@ package org.w3c.dom.ranges;
 */
 extern class RangeException extends java.lang.RuntimeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
-	public var code : java.StdTypes.Int16;
+	@:public public var code : java.StdTypes.Int16;
 	
 	/**
 	* If the boundary-points of a Range do not meet specific requirements.
 	*/
-	public static var BAD_BOUNDARYPOINTS_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var BAD_BOUNDARYPOINTS_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If the container of an boundary-point of a Range is being set to either
 	* a node of an invalid type or a node with an ancestor of an invalid
 	* type.
 	*/
-	public static var INVALID_NODE_TYPE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INVALID_NODE_TYPE_ERR(default, null) : java.StdTypes.Int16;
 	
 	
 }

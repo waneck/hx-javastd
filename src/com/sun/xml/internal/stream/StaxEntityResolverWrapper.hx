@@ -26,13 +26,13 @@ package com.sun.xml.internal.stream;
 extern class StaxEntityResolverWrapper
 {
 	/** Creates a new instance of StaxEntityResolverWrapper */
-	@:overload public function new(resolver : javax.xml.stream.XMLResolver) : Void;
+	@:overload @:public public function new(resolver : javax.xml.stream.XMLResolver) : Void;
 	
-	@:overload public function setStaxEntityResolver(resolver : javax.xml.stream.XMLResolver) : Void;
+	@:overload @:public public function setStaxEntityResolver(resolver : javax.xml.stream.XMLResolver) : Void;
 	
-	@:overload public function getStaxEntityResolver() : javax.xml.stream.XMLResolver;
+	@:overload @:public public function getStaxEntityResolver() : javax.xml.stream.XMLResolver;
 	
-	@:overload public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.xml.internal.stream.StaxXMLInputSource;
+	@:overload @:public public function resolveEntity(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : com.sun.xml.internal.stream.StaxXMLInputSource;
 	
 	
 }

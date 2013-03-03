@@ -29,19 +29,19 @@ package sun.security.ssl;
 }
 @:internal extern class CloneableDigest extends java.security.MessageDigest implements java.lang.Cloneable
 {
-	@:overload private function engineGetDigestLength() : Int;
+	@:overload @:protected override private function engineGetDigestLength() : Int;
 	
-	@:overload private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload @:protected override private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
-	@:overload private function engineReset() : Void;
+	@:overload @:protected override private function engineReset() : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	
 }

@@ -25,39 +25,39 @@ package sun.print;
 */
 extern class UnixPrintServiceLookup extends javax.print.PrintServiceLookup implements sun.print.BackgroundServiceLookup implements java.lang.Runnable
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/* Want the PrintService which is default print service to have
 	* equality of reference with the equivalent in list of print services
 	* This isn't required by the API and there's a risk doing this will
 	* lead people to assume its guaranteed.
 	*/
-	@:overload @:synchronized override public function getPrintServices() : java.NativeArray<javax.print.PrintService>;
+	@:overload @:public @:synchronized override public function getPrintServices() : java.NativeArray<javax.print.PrintService>;
 	
-	@:overload @:synchronized public function refreshServices() : Void;
+	@:overload @:public @:synchronized public function refreshServices() : Void;
 	
 	/*
 	* If service attributes are specified then there must be additional
 	* filtering.
 	*/
-	@:overload override public function getPrintServices(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.PrintService>;
+	@:overload @:public override public function getPrintServices(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.PrintService>;
 	
 	/*
 	* return empty array as don't support multi docs
 	*/
-	@:overload override public function getMultiDocPrintServices(flavors : java.NativeArray<javax.print.DocFlavor>, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.MultiDocPrintService>;
+	@:overload @:public override public function getMultiDocPrintServices(flavors : java.NativeArray<javax.print.DocFlavor>, attributes : javax.print.attribute.AttributeSet) : java.NativeArray<javax.print.MultiDocPrintService>;
 	
-	@:overload @:synchronized override public function getDefaultPrintService() : javax.print.PrintService;
+	@:overload @:public @:synchronized override public function getDefaultPrintService() : javax.print.PrintService;
 	
-	@:overload @:synchronized public function getServicesInbackground(listener : sun.print.BackgroundLookupListener) : Void;
+	@:overload @:public @:synchronized public function getServicesInbackground(listener : sun.print.BackgroundLookupListener) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:native('sun$print$UnixPrintServiceLookup$PrinterChangeListener') @:internal extern class UnixPrintServiceLookup_PrinterChangeListener extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

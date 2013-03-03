@@ -48,20 +48,20 @@ package java.security.spec;
 	* @exception IllegalArgumentException if <code>w</code>
 	* is point at infinity, i.e. ECPoint.POINT_INFINITY
 	*/
-	@:overload public function new(w : java.security.spec.ECPoint, params : java.security.spec.ECParameterSpec) : Void;
+	@:overload @:public public function new(w : java.security.spec.ECPoint, params : java.security.spec.ECParameterSpec) : Void;
 	
 	/**
 	* Returns the public point W.
 	* @return the public point W.
 	*/
-	@:overload public function getW() : java.security.spec.ECPoint;
+	@:overload @:public public function getW() : java.security.spec.ECPoint;
 	
 	/**
 	* Returns the associated elliptic curve domain
 	* parameters.
 	* @return the EC domain parameters.
 	*/
-	@:overload public function getParams() : java.security.spec.ECParameterSpec;
+	@:overload @:public public function getParams() : java.security.spec.ECParameterSpec;
 	
 	
 }

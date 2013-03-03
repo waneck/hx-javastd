@@ -34,34 +34,34 @@ extern class DrawPolygons extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	public static var methodSignature(default, null) : String;
+	@:public @:final @:static public static var methodSignature(default, null) : String;
 	
-	public static var primTypeID(default, null) : Int;
+	@:public @:final @:static public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawPolygons;
+	@:overload @:public @:static public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawPolygons;
 	
-	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	*   All DrawPolygon implementors must have this invoker method
 	*/
-	@:overload @:native public function new(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transX : Int, transY : Int, close : Bool) : Void;
+	@:overload @:public @:native public function new(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transX : Int, transY : Int, close : Bool) : Void;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }
 @:native('sun$java2d$loops$DrawPolygons$TraceDrawPolygons') @:internal extern class DrawPolygons_TraceDrawPolygons extends sun.java2d.loops.DrawPolygons
 {
-	@:overload public function new(target : sun.java2d.loops.DrawPolygons) : Void;
+	@:overload @:public public function new(target : sun.java2d.loops.DrawPolygons) : Void;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function DrawPolygons(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transX : Int, transY : Int, close : Bool) : Void;
+	@:overload @:public override public function DrawPolygons(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transX : Int, transY : Int, close : Bool) : Void;
 	
 	
 }

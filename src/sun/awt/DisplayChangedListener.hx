@@ -28,12 +28,12 @@ extern interface DisplayChangedListener extends java.util.EventListener
 	/**
 	* Invoked when the display mode has changed.
 	*/
-	@:overload public function displayChanged() : Void;
+	@:overload @:public public function displayChanged() : Void;
 	
 	/**
 	* Invoked when the palette has changed.
 	*/
-	@:overload public function paletteChanged() : Void;
+	@:overload @:public public function paletteChanged() : Void;
 	
 	
 }

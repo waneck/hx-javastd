@@ -28,7 +28,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(owner : com.sun.xml.internal.bind.v2.model.impl.RuntimeEnumLeafInfoImpl<Dynamic, Dynamic>, name : String, lexical : String, next : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : Void;
+	@:overload @:public public function new(owner : com.sun.xml.internal.bind.v2.model.impl.RuntimeEnumLeafInfoImpl<Dynamic, Dynamic>, name : String, lexical : String, next : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : Void;
 	
 	
 }

@@ -23,9 +23,9 @@ extern class XMLMessageFormatter_ko implements com.sun.org.apache.xerces.interna
 	/**
 	* The domain of messages concerning the XML 1.0 specification.
 	*/
-	public static var XML_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var XML_DOMAIN(default, null) : String;
 	
-	public static var XMLNS_DOMAIN(default, null) : String;
+	@:public @:static @:final public static var XMLNS_DOMAIN(default, null) : String;
 	
 	/**
 	* Formats a message with the specified arguments using the given
@@ -42,7 +42,7 @@ extern class XMLMessageFormatter_ko implements com.sun.org.apache.xerces.interna
 	* @throws MissingResourceException Thrown if the message with the
 	*                                  specified key cannot be found.
 	*/
-	@:overload public function formatMessage(locale : java.util.Locale, key : String, arguments : java.NativeArray<Dynamic>) : String;
+	@:overload @:public public function formatMessage(locale : java.util.Locale, key : String, arguments : java.NativeArray<Dynamic>) : String;
 	
 	
 }

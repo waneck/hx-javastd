@@ -53,11 +53,11 @@ package sun.security.jgss.spnego;
 */
 @:require(java6) extern class NegTokenInit extends sun.security.jgss.spnego.SpNegoToken
 {
-	@:overload public function new(_in : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(_in : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getMechTypeList() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public public function getMechTypeList() : java.NativeArray<org.ietf.jgss.Oid>;
 	
-	@:overload public function getMechToken() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getMechToken() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

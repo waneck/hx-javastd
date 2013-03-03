@@ -29,7 +29,7 @@ extern interface TaggedProfileTemplate extends java.util.List<Dynamic> extends c
 	* identifier id.  It is not possible to modify the list through this
 	* iterator.
 	*/
-	@:overload public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
 	
 	/** Create a TaggedProfile from this template.
 	*/

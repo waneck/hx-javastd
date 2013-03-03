@@ -30,14 +30,14 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	* <code>getVendorName</code>, initially <code>null</code>.
 	* Constructors should set this to a non-<code>null</code> value.
 	*/
-	private var vendorName : String;
+	@:protected private var vendorName : String;
 	
 	/**
 	* A <code>String</code> to be returned from
 	* <code>getVersion</code>, initially null.  Constructors should
 	* set this to a non-<code>null</code> value.
 	*/
-	private var version : String;
+	@:protected private var version : String;
 	
 	/**
 	* Constructs an <code>IIOServiceProvider</code> with a given
@@ -51,7 +51,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	* @exception IllegalArgumentException if <code>version</code>
 	* is <code>null</code>.
 	*/
-	@:overload public function new(vendorName : String, version : String) : Void;
+	@:overload @:public public function new(vendorName : String, version : String) : Void;
 	
 	/**
 	* Constructs a blank <code>IIOServiceProvider</code>.  It is up
@@ -60,7 +60,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	* <code>getVendorName</code> and <code>getVersion</code> methods
 	* will return non-<code>null</code> values.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* A callback that will be called exactly once after the Spi class
@@ -77,7 +77,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	*
 	* @see ServiceRegistry#registerServiceProvider(Object provider)
 	*/
-	@:overload public function onRegistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
+	@:overload @:public public function onRegistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
 	
 	/**
 	* A callback that will be whenever the Spi class has been
@@ -89,7 +89,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	*
 	* @see ServiceRegistry#deregisterServiceProvider(Object provider)
 	*/
-	@:overload public function onDeregistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
+	@:overload @:public public function onDeregistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
 	
 	/**
 	* Returns the name of the vendor responsible for creating this
@@ -103,7 +103,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	* @return a non-<code>null</code> <code>String</code> containing
 	* the name of the vendor.
 	*/
-	@:overload public function getVendorName() : String;
+	@:overload @:public public function getVendorName() : String;
 	
 	/**
 	* Returns a string describing the version
@@ -118,7 +118,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	* @return a non-<code>null</code> <code>String</code> containing
 	* the version of this service provider.
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Returns a brief, human-readable description of this service
@@ -132,7 +132,7 @@ extern class IIOServiceProvider implements javax.imageio.spi.RegisterableService
 	* @return a <code>String</code> containing a description of this
 	* service provider.
 	*/
-	@:overload @:abstract public function getDescription(locale : java.util.Locale) : String;
+	@:overload @:public @:abstract public function getDescription(locale : java.util.Locale) : String;
 	
 	
 }

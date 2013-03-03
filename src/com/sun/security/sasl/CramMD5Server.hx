@@ -39,9 +39,9 @@ package com.sun.security.sasl;
 	*        the client for the first call; null when 2nd call is successful.
 	* @throws SaslException If authentication fails.
 	*/
-	@:overload public function evaluateResponse(responseData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function evaluateResponse(responseData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getAuthorizationID() : String;
+	@:overload @:public public function getAuthorizationID() : String;
 	
 	
 }

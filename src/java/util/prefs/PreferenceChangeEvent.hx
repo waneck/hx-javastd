@@ -33,21 +33,21 @@ extern class PreferenceChangeEvent extends java.util.EventObject
 	* @param newValue  The new value of the preference, or <tt>null</tt>
 	*                  if the preference is being removed.
 	*/
-	@:overload public function new(node : java.util.prefs.Preferences, key : String, newValue : String) : Void;
+	@:overload @:public public function new(node : java.util.prefs.Preferences, key : String, newValue : String) : Void;
 	
 	/**
 	* Returns the preference node that emitted the event.
 	*
 	* @return  The preference node that emitted the event.
 	*/
-	@:overload public function getNode() : java.util.prefs.Preferences;
+	@:overload @:public public function getNode() : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the key of the preference that was changed.
 	*
 	* @return  The key of the preference that was changed.
 	*/
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	/**
 	* Returns the new value for the preference.
@@ -55,7 +55,7 @@ extern class PreferenceChangeEvent extends java.util.EventObject
 	* @return  The new value for the preference, or <tt>null</tt> if the
 	*          preference was removed.
 	*/
-	@:overload public function getNewValue() : String;
+	@:overload @:public public function getNewValue() : String;
 	
 	
 }

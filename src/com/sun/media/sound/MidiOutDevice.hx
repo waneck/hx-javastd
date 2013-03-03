@@ -32,25 +32,25 @@ package com.sun.media.sound;
 */
 @:internal extern class MidiOutDevice extends com.sun.media.sound.AbstractMidiDevice
 {
-	@:overload @:synchronized private function implOpen() : Void;
+	@:overload @:protected @:synchronized override private function implOpen() : Void;
 	
-	@:overload @:synchronized private function implClose() : Void;
+	@:overload @:protected @:synchronized override private function implClose() : Void;
 	
-	@:overload public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public override public function getMicrosecondPosition() : haxe.Int64;
 	
 	/** Returns if this device supports Receivers.
 	This implementation always returns true.
 	@return true, if the device supports Receivers, false otherwise.
 	*/
-	@:overload private function hasReceivers() : Bool;
+	@:overload @:protected override private function hasReceivers() : Bool;
 	
-	@:overload private function createReceiver() : javax.sound.midi.Receiver;
+	@:overload @:protected override private function createReceiver() : javax.sound.midi.Receiver;
 	
 	
 }
 @:native('com$sun$media$sound$MidiOutDevice$MidiOutReceiver') @:internal extern class MidiOutDevice_MidiOutReceiver extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_AbstractReceiver
 {
-	@:overload private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload @:protected override private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	
 }

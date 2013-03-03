@@ -44,16 +44,16 @@ package com.sun.org.apache.xerces.internal.xni;
 extern class XMLString
 {
 	/** The character array. */
-	public var ch : java.NativeArray<java.StdTypes.Char16>;
+	@:public public var ch : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** The offset into the character array. */
-	public var offset : Int;
+	@:public public var offset : Int;
 	
 	/** The length of characters from the offset. */
-	public var length : Int;
+	@:public public var length : Int;
 	
 	/** Default constructor. */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an XMLString structure preset with the specified
@@ -63,7 +63,7 @@ extern class XMLString
 	* @param offset The offset into the character array.
 	* @param length The length of characters from the offset.
 	*/
-	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Constructs an XMLString structure with copies of the values in
@@ -74,7 +74,7 @@ extern class XMLString
 	*
 	* @param string The XMLString to copy.
 	*/
-	@:overload public function new(string : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:public public function new(string : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* Initializes the contents of the XMLString structure with the
@@ -84,7 +84,7 @@ extern class XMLString
 	* @param offset The offset into the character array.
 	* @param length The length of characters from the offset.
 	*/
-	@:overload public function setValues(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:public public function setValues(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Initializes the contents of the XMLString structure with copies
@@ -95,10 +95,10 @@ extern class XMLString
 	*
 	* @param s
 	*/
-	@:overload public function setValues(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
+	@:overload @:public public function setValues(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/** Resets all of the values to their defaults. */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns true if the contents of this XMLString structure and
@@ -108,7 +108,7 @@ extern class XMLString
 	* @param offset The offset into the character array.
 	* @param length The length of characters from the offset.
 	*/
-	@:overload public function equals(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Bool;
+	@:overload @:public public function equals(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Bool;
 	
 	/**
 	* Returns true if the contents of this XMLString structure and
@@ -116,10 +116,10 @@ extern class XMLString
 	*
 	* @param s The string to compare.
 	*/
-	@:overload public function equals(s : String) : Bool;
+	@:overload @:public public function equals(s : String) : Bool;
 	
 	/** Returns a string representation of this object. */
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

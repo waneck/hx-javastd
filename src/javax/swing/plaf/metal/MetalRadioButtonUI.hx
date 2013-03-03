@@ -25,27 +25,27 @@ package javax.swing.plaf.metal;
 */
 extern class MetalRadioButtonUI extends javax.swing.plaf.basic.BasicRadioButtonUI
 {
-	private var focusColor : java.awt.Color;
+	@:protected private var focusColor : java.awt.Color;
 	
-	private var selectColor : java.awt.Color;
+	@:protected private var selectColor : java.awt.Color;
 	
-	private var disabledTextColor : java.awt.Color;
+	@:protected private var disabledTextColor : java.awt.Color;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function getSelectColor() : java.awt.Color;
+	@:overload @:protected private function getSelectColor() : java.awt.Color;
 	
-	@:overload private function getDisabledTextColor() : java.awt.Color;
+	@:overload @:protected private function getDisabledTextColor() : java.awt.Color;
 	
-	@:overload private function getFocusColor() : java.awt.Color;
+	@:overload @:protected private function getFocusColor() : java.awt.Color;
 	
-	@:overload @:synchronized public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public @:synchronized override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, t : java.awt.Rectangle, d : java.awt.Dimension) : Void;
+	@:overload @:protected override private function paintFocus(g : java.awt.Graphics, t : java.awt.Rectangle, d : java.awt.Dimension) : Void;
 	
 	
 }

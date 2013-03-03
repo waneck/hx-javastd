@@ -31,7 +31,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return A new Policy node.
 	*/
-	@:overload public function createChildPolicyNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function createChildPolicyNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -39,7 +39,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return A new All node.
 	*/
-	@:overload public function createChildAllNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function createChildAllNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -47,7 +47,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return A new ExactlyOne node.
 	*/
-	@:overload public function createChildExactlyOneNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function createChildExactlyOneNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -55,7 +55,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return A new policy assertion node.
 	*/
-	@:overload public function createChildAssertionNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function createChildAssertionNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -64,7 +64,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param nodeData The policy assertion data.
 	* @return A new policy assertion node.
 	*/
-	@:overload public function createChildAssertionNode(nodeData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function createChildAssertionNode(nodeData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -72,28 +72,28 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return A new assertion parameter node.
 	*/
-	@:overload public function createChildAssertionParameterNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function createChildAssertionParameterNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Returns the parent policy source model that contains this model node.
 	*
 	* @return the parent policy source model
 	*/
-	@:overload public function getParentModel() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload @:public public function getParentModel() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Returns the type of this policy source model node.
 	*
 	* @return actual type of this policy source model node
 	*/
-	@:overload public function getType() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode.ModelNode_Type;
+	@:overload @:public public function getType() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode.ModelNode_Type;
 	
 	/**
 	* Returns the parent referenced by this policy source model node.
 	*
 	* @return current parent of this policy source model node or {@code null} if the node does not have a parent currently.
 	*/
-	@:overload public function getParentNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:public public function getParentNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Returns the data for this policy source model node (if any). The model node data are expected to be not {@code null} only in
@@ -102,7 +102,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @return the data of this policy source model node or {@code null} if the node does not have any data associated to it
 	* attached.
 	*/
-	@:overload public function getNodeData() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public public function getNodeData() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* The method may be used to set or replace assertion data set for this node. If there are assertion data set already,
@@ -117,7 +117,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @throws UnsupportedOperationException in case this method is called on nodes of type other than {@code ASSERTION}
 	* or {@code ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public function setOrReplaceNodeData(newData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+	@:overload @:public public function setOrReplaceNodeData(newData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Returns the number of child policy source model nodes. If this model node contains
@@ -125,21 +125,21 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return the number of children of this node.
 	*/
-	@:overload public function childrenSize() : Int;
+	@:overload @:public public function childrenSize() : Int;
 	
 	/**
 	* Returns true if the node has at least one child node.
 	*
 	* @return true if the node has at least one child node, false otherwise.
 	*/
-	@:overload public function hasChildren() : Bool;
+	@:overload @:public public function hasChildren() : Bool;
 	
 	/**
 	* Iterates through all child nodes.
 	*
 	* @return An iterator for the child nodes
 	*/
-	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.sourcemodel.ModelNode>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.sourcemodel.ModelNode>;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override. Method ignores the parent source model. It means that two
@@ -149,12 +149,12 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* test is sufficient ({@code nodeA.getParentModel() == nodeB.getParentModel()}), since all model nodes are created
 	* for specific model instances.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* An {@code Object.hashCode()} method override.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of the object. In general, the <code>toString</code> method
@@ -162,7 +162,7 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	*
 	* @return  a string representation of the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* A helper method that appends indented string representation of this instance to the input string buffer.
@@ -171,9 +171,9 @@ extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param buffer buffer to be used for appending string representation of this instance
 	* @return modified buffer containing new string representation of the instance
 	*/
-	@:overload public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
+	@:overload @:public public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
-	@:overload private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload @:protected private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	
 }

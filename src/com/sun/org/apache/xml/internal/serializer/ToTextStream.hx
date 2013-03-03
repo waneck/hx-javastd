@@ -26,7 +26,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -40,7 +40,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload private function startDocumentInternal() : Void;
+	@:overload @:protected override private function startDocumentInternal() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -56,7 +56,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -90,7 +90,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -117,7 +117,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function endElement(namespaceURI : String, localName : String, name : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, name : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -144,7 +144,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* If available, when the disable-output-escaping attribute is used,
@@ -157,7 +157,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @throws org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload override public function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of cdata.
@@ -184,7 +184,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload override public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -212,7 +212,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -233,7 +233,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public override public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Called when a Comment is to be constructed.
@@ -244,7 +244,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @throws org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload public function comment(data : String) : Void;
+	@:overload @:public override public function comment(data : String) : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -258,7 +258,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @param length The number of characters to use from the array.
 	* @throws org.xml.sax.SAXException The application may raise an exception.
 	*/
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notivication of a entityReference.
@@ -267,50 +267,50 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function entityReference(name : String) : Void;
+	@:overload @:public override public function entityReference(name : String) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#addAttribute(String, String, String, String, String)
 	*/
-	@:overload public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
+	@:overload @:public override public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#endCDATA()
 	*/
-	@:overload override public function endCDATA() : Void;
+	@:overload @:public override public function endCDATA() : Void;
 	
 	/**
 	* @see ExtendedContentHandler#endElement(String)
 	*/
-	@:overload override public function endElement(elemName : String) : Void;
+	@:overload @:public override public function endElement(elemName : String) : Void;
 	
 	/**
 	* From XSLTC
 	*/
-	@:overload override public function startElement(elementNamespaceURI : String, elementLocalName : String, elementName : String) : Void;
+	@:overload @:public override public function startElement(elementNamespaceURI : String, elementLocalName : String, elementName : String) : Void;
 	
 	/**
 	* From XSLTC
 	*/
-	@:overload override public function characters(characters : String) : Void;
+	@:overload @:public override public function characters(characters : String) : Void;
 	
 	/**
 	* From XSLTC
 	*/
-	@:overload public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Add a unique attribute
 	*/
-	@:overload override public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
+	@:overload @:public override public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload @:public override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
-	@:overload override public function flushPending() : Void;
+	@:overload @:public override public function flushPending() : Void;
 	
 	
 }

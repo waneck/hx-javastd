@@ -33,7 +33,7 @@ extern class Number extends com.sun.org.apache.xpath.internal.operations.UnaryOp
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function operate(right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function operate(right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Evaluate this operation directly to a double.
@@ -44,7 +44,7 @@ extern class Number extends com.sun.org.apache.xpath.internal.operations.UnaryOp
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function num(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
+	@:overload @:public override public function num(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
 	
 	
 }

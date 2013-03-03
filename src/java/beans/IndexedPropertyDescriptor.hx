@@ -40,7 +40,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(propertyName : String, beanClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(propertyName : String, beanClass : Class<Dynamic>) : Void;
 	
 	/**
 	* This constructor takes the name of a simple property, and method
@@ -64,7 +64,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(propertyName : String, beanClass : Class<Dynamic>, readMethodName : String, writeMethodName : String, indexedReadMethodName : String, indexedWriteMethodName : String) : Void;
+	@:overload @:public public function new(propertyName : String, beanClass : Class<Dynamic>, readMethodName : String, writeMethodName : String, indexedReadMethodName : String, indexedWriteMethodName : String) : Void;
 	
 	/**
 	* This constructor takes the name of a simple property, and Method
@@ -82,7 +82,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* @exception IntrospectionException if an exception occurs during
 	*              introspection.
 	*/
-	@:overload public function new(propertyName : String, readMethod : java.lang.reflect.Method, writeMethod : java.lang.reflect.Method, indexedReadMethod : java.lang.reflect.Method, indexedWriteMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public public function new(propertyName : String, readMethod : java.lang.reflect.Method, writeMethod : java.lang.reflect.Method, indexedReadMethod : java.lang.reflect.Method, indexedWriteMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Gets the method that should be used to read an indexed
@@ -92,14 +92,14 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* property value.
 	* May return null if the property isn't indexed or is write-only.
 	*/
-	@:overload @:synchronized public function getIndexedReadMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getIndexedReadMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Sets the method that should be used to read an indexed property value.
 	*
 	* @param readMethod The new indexed read method.
 	*/
-	@:overload @:synchronized public function setIndexedReadMethod(readMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public @:synchronized public function setIndexedReadMethod(readMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Gets the method that should be used to write an indexed property value.
@@ -108,14 +108,14 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* property value.
 	* May return null if the property isn't indexed or is read-only.
 	*/
-	@:overload @:synchronized public function getIndexedWriteMethod() : java.lang.reflect.Method;
+	@:overload @:public @:synchronized public function getIndexedWriteMethod() : java.lang.reflect.Method;
 	
 	/**
 	* Sets the method that should be used to write an indexed property value.
 	*
 	* @param writeMethod The new indexed write method.
 	*/
-	@:overload @:synchronized public function setIndexedWriteMethod(writeMethod : java.lang.reflect.Method) : Void;
+	@:overload @:public @:synchronized public function setIndexedWriteMethod(writeMethod : java.lang.reflect.Method) : Void;
 	
 	/**
 	* Returns the Java type info for the indexed property.
@@ -127,7 +127,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* @return the {@code Class} object that represents the Java type info,
 	*         or {@code null} if the type cannot be determined
 	*/
-	@:overload @:synchronized public function getIndexedPropertyType() : Class<Dynamic>;
+	@:overload @:public @:synchronized public function getIndexedPropertyType() : Class<Dynamic>;
 	
 	/**
 	* Compares this <code>PropertyDescriptor</code> against the specified object.
@@ -137,7 +137,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function equals(obj : Dynamic) : Bool;
+	@:require(java4) @:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for the object.
@@ -146,7 +146,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* @return a hash code value for this object.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function hashCode() : Int;
+	@:require(java5) @:overload @:public override public function hashCode() : Int;
 	
 	
 }

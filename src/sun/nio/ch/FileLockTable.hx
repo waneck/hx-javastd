@@ -25,13 +25,13 @@ package sun.nio.ch;
 */
 @:internal extern class FileLockTable
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates and returns a file lock table for a channel that is connected to
 	* the a system-wide map of all file locks for the Java virtual machine.
 	*/
-	@:overload public static function newSharedFileLockTable(channel : java.nio.channels.Channel, fd : java.io.FileDescriptor) : sun.nio.ch.FileLockTable;
+	@:overload @:public @:static public static function newSharedFileLockTable(channel : java.nio.channels.Channel, fd : java.io.FileDescriptor) : sun.nio.ch.FileLockTable;
 	
 	/**
 	* Adds a file lock to the table.
@@ -39,36 +39,36 @@ package sun.nio.ch;
 	* @throws OverlappingFileLockException if the file lock overlaps
 	*         with an existing file lock in the table
 	*/
-	@:overload @:abstract public function add(fl : java.nio.channels.FileLock) : Void;
+	@:overload @:public @:abstract public function add(fl : java.nio.channels.FileLock) : Void;
 	
 	/**
 	* Remove an existing file lock from the table.
 	*/
-	@:overload @:abstract public function remove(fl : java.nio.channels.FileLock) : Void;
+	@:overload @:public @:abstract public function remove(fl : java.nio.channels.FileLock) : Void;
 	
 	/**
 	* Removes all file locks from the table.
 	*
 	* @return  The list of file locks removed
 	*/
-	@:overload @:abstract public function removeAll() : java.util.List<java.nio.channels.FileLock>;
+	@:overload @:public @:abstract public function removeAll() : java.util.List<java.nio.channels.FileLock>;
 	
 	/**
 	* Replaces an existing file lock in the table.
 	*/
-	@:overload @:abstract public function replace(fl1 : java.nio.channels.FileLock, fl2 : java.nio.channels.FileLock) : Void;
+	@:overload @:public @:abstract public function replace(fl1 : java.nio.channels.FileLock, fl2 : java.nio.channels.FileLock) : Void;
 	
 	
 }
 @:internal extern class SharedFileLockTable extends sun.nio.ch.FileLockTable
 {
-	@:overload override public function add(fl : java.nio.channels.FileLock) : Void;
+	@:overload @:public override public function add(fl : java.nio.channels.FileLock) : Void;
 	
-	@:overload override public function remove(fl : java.nio.channels.FileLock) : Void;
+	@:overload @:public override public function remove(fl : java.nio.channels.FileLock) : Void;
 	
-	@:overload override public function removeAll() : java.util.List<java.nio.channels.FileLock>;
+	@:overload @:public override public function removeAll() : java.util.List<java.nio.channels.FileLock>;
 	
-	@:overload override public function replace(fromLock : java.nio.channels.FileLock, toLock : java.nio.channels.FileLock) : Void;
+	@:overload @:public override public function replace(fromLock : java.nio.channels.FileLock, toLock : java.nio.channels.FileLock) : Void;
 	
 	
 }

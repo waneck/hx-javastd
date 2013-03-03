@@ -25,17 +25,17 @@ package com.sun.tools.classfile;
 */
 extern class Exceptions_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, exception_index_table : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, exception_index_table : java.NativeArray<Int>) : Void;
 	
-	@:overload public function new(name_index : Int, exception_index_table : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(name_index : Int, exception_index_table : java.NativeArray<Int>) : Void;
 	
-	@:overload public function getException(index : Int, constant_pool : com.sun.tools.classfile.ConstantPool) : String;
+	@:overload @:public public function getException(index : Int, constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var number_of_exceptions(default, null) : Int;
+	@:public @:final public var number_of_exceptions(default, null) : Int;
 	
-	public var exception_index_table(default, null) : java.NativeArray<Int>;
+	@:public @:final public var exception_index_table(default, null) : java.NativeArray<Int>;
 	
 	
 }

@@ -46,7 +46,7 @@ package com.sun.xml.internal.messaging.saaj.packaging.mime.internet;
 	* part number, a newly created object's <code>hashCode()</code>,
 	* and the current time (in milliseconds).
 	*/
-	@:overload public static function getUniqueBoundaryValue() : String;
+	@:overload @:public @:static public static function getUniqueBoundaryValue() : String;
 	
 	
 }

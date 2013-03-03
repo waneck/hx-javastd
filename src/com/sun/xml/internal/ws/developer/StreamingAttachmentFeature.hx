@@ -28,13 +28,13 @@ extern class StreamingAttachmentFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* Constant value identifying the {@link @StreamingAttachment} feature.
 	*/
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(dir : String, parseEagerly : Bool, memoryThreshold : haxe.Int64) : Void;
+	@:overload @:public public function new(dir : String, parseEagerly : Bool, memoryThreshold : haxe.Int64) : Void;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
 	/**
 	* Returns the configuration object. Once this is called, you cannot
@@ -42,23 +42,23 @@ extern class StreamingAttachmentFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @return
 	*/
-	@:overload public function getConfig() : com.sun.xml.internal.org.jvnet.mimepull.MIMEConfig;
+	@:overload @:public public function getConfig() : com.sun.xml.internal.org.jvnet.mimepull.MIMEConfig;
 	
 	/**
 	* Directory in which large attachments are stored
 	*/
-	@:overload public function setDir(dir : String) : Void;
+	@:overload @:public public function setDir(dir : String) : Void;
 	
 	/**
 	* StreamingAttachment message is parsed eagerly
 	*/
-	@:overload public function setParseEagerly(parseEagerly : Bool) : Void;
+	@:overload @:public public function setParseEagerly(parseEagerly : Bool) : Void;
 	
 	/**
 	* After this threshold(no of bytes), large attachments are
 	* written to file system
 	*/
-	@:overload public function setMemoryThreshold(memoryThreshold : haxe.Int64) : Void;
+	@:overload @:public public function setMemoryThreshold(memoryThreshold : haxe.Int64) : Void;
 	
 	
 }

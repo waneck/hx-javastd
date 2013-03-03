@@ -32,19 +32,19 @@ extern class DeferredLintHandler
 	* This code and its internal interfaces are subject to change or
 	* deletion without notice.</b>
 	*/
-	private static var deferredLintHandlerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.DeferredLintHandler>;
+	@:protected @:static @:final private static var deferredLintHandlerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.DeferredLintHandler>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.DeferredLintHandler;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.DeferredLintHandler;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function report(logger : com.sun.tools.javac.code.DeferredLintHandler.DeferredLintHandler_LintLogger) : Void;
+	@:overload @:public public function report(logger : com.sun.tools.javac.code.DeferredLintHandler.DeferredLintHandler_LintLogger) : Void;
 	
-	@:overload public function flush(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : Void;
+	@:overload @:public public function flush(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : Void;
 	
-	@:overload public function setPos(currentPos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : com.sun.tools.javac.code.DeferredLintHandler;
+	@:overload @:public public function setPos(currentPos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : com.sun.tools.javac.code.DeferredLintHandler;
 	
-	public static var immediateHandler(default, null) : com.sun.tools.javac.code.DeferredLintHandler;
+	@:public @:static @:final public static var immediateHandler(default, null) : com.sun.tools.javac.code.DeferredLintHandler;
 	
 	
 }

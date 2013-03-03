@@ -33,7 +33,7 @@ extern class EncryptedPrivateKeyInfo
 	* @exception NullPointerException if the <code>encoded</code> is null.
 	* @exception IOException if error occurs when parsing the ASN.1 encoding.
 	*/
-	@:overload public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(encoded : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs an <code>EncryptedPrivateKeyInfo</code> from the
@@ -60,7 +60,7 @@ extern class EncryptedPrivateKeyInfo
 	* @exception NoSuchAlgorithmException if the specified algName is
 	* not supported.
 	*/
-	@:overload public function new(algName : String, encryptedData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(algName : String, encryptedData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Constructs an <code>EncryptedPrivateKeyInfo</code> from the
@@ -81,7 +81,7 @@ extern class EncryptedPrivateKeyInfo
 	* @exception NoSuchAlgorithmException if the specified algName of
 	* the specified <code>algParams</code> parameter is not supported.
 	*/
-	@:overload public function new(algParams : java.security.AlgorithmParameters, encryptedData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(algParams : java.security.AlgorithmParameters, encryptedData : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the encryption algorithm.
@@ -95,20 +95,20 @@ extern class EncryptedPrivateKeyInfo
 	*
 	* @return the encryption algorithm name.
 	*/
-	@:overload public function getAlgName() : String;
+	@:overload @:public public function getAlgName() : String;
 	
 	/**
 	* Returns the algorithm parameters used by the encryption algorithm.
 	* @return the algorithm parameters.
 	*/
-	@:overload public function getAlgParameters() : java.security.AlgorithmParameters;
+	@:overload @:public public function getAlgParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns the encrypted data.
 	* @return the encrypted data. Returns a new array
 	* each time this method is called.
 	*/
-	@:overload public function getEncryptedData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncryptedData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Extract the enclosed PKCS8EncodedKeySpec object from the
@@ -128,7 +128,7 @@ extern class EncryptedPrivateKeyInfo
 	* inappropriate for the encrypted data or the encrypted
 	* data is corrupted and cannot be decrypted.
 	*/
-	@:overload public function getKeySpec(cipher : javax.crypto.Cipher) : java.security.spec.PKCS8EncodedKeySpec;
+	@:overload @:public public function getKeySpec(cipher : javax.crypto.Cipher) : java.security.spec.PKCS8EncodedKeySpec;
 	
 	/**
 	* Extract the enclosed PKCS8EncodedKeySpec object from the
@@ -145,7 +145,7 @@ extern class EncryptedPrivateKeyInfo
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getKeySpec(decryptKey : java.security.Key) : java.security.spec.PKCS8EncodedKeySpec;
+	@:require(java5) @:overload @:public public function getKeySpec(decryptKey : java.security.Key) : java.security.spec.PKCS8EncodedKeySpec;
 	
 	/**
 	* Extract the enclosed PKCS8EncodedKeySpec object from the
@@ -166,7 +166,7 @@ extern class EncryptedPrivateKeyInfo
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getKeySpec(decryptKey : java.security.Key, providerName : String) : java.security.spec.PKCS8EncodedKeySpec;
+	@:require(java5) @:overload @:public public function getKeySpec(decryptKey : java.security.Key, providerName : String) : java.security.spec.PKCS8EncodedKeySpec;
 	
 	/**
 	* Extract the enclosed PKCS8EncodedKeySpec object from the
@@ -185,7 +185,7 @@ extern class EncryptedPrivateKeyInfo
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getKeySpec(decryptKey : java.security.Key, provider : java.security.Provider) : java.security.spec.PKCS8EncodedKeySpec;
+	@:require(java5) @:overload @:public public function getKeySpec(decryptKey : java.security.Key, provider : java.security.Provider) : java.security.spec.PKCS8EncodedKeySpec;
 	
 	/**
 	* Returns the ASN.1 encoding of this object.
@@ -194,7 +194,7 @@ extern class EncryptedPrivateKeyInfo
 	* @exception IOException if error occurs when constructing its
 	* ASN.1 encoding.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -30,14 +30,14 @@ extern class XlibWrapper
 	char *display_name;
 
 */
-	public static var eventToString(default, null) : java.NativeArray<String>;
+	@:public @:final @:static public static var eventToString(default, null) : java.NativeArray<String>;
 	
 	/*
 	int (*XSynchronize(Display *display, Bool onoff))();
 	display   Specifies the connection to the X server.
 	onoff     Specifies a Boolean value that indicates whether to enable or disable synchronization.
 	*/
-	@:overload @:native public static function XSynchronize(display : haxe.Int64, onoff : Bool) : Int;
+	@:overload @:public @:static @:native public static function XSynchronize(display : haxe.Int64, onoff : Bool) : Int;
 	
 	
 }

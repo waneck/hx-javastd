@@ -30,9 +30,9 @@ extern class RealTimeSequencerProvider extends javax.sound.midi.spi.MidiDevicePr
 	*
 	* @author Florian Bomers
 	*/
-	@:overload override public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
+	@:overload @:public override public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
 	
-	@:overload override public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
+	@:overload @:public override public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
 	
 	
 }

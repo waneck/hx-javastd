@@ -25,75 +25,75 @@ package sun.security.ec;
 */
 @:internal extern class ECDSASignature extends java.security.SignatureSpi
 {
-	@:overload override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload @:protected override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
-	@:overload override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
-	@:overload override private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(privateKey : java.security.PrivateKey, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Resets the message digest if needed.
 	*/
-	@:overload private function resetDigest() : Void;
+	@:overload @:protected private function resetDigest() : Void;
 	
 	/**
 	* Returns the message digest value.
 	*/
-	@:overload private function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected private function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload override private function engineSetParameter(param : String, value : Dynamic) : Void;
+	@:overload @:protected override private function engineSetParameter(param : String, value : Dynamic) : Void;
 	
-	@:overload override private function engineGetParameter(param : String) : Dynamic;
+	@:overload @:protected override private function engineGetParameter(param : String) : Dynamic;
 	
 	
 }
 @:native('sun$security$ec$ECDSASignature$Raw') extern class ECDSASignature_Raw extends sun.security.ec.ECDSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:protected override private function engineUpdate(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function resetDigest() : Void;
+	@:overload @:protected override private function resetDigest() : Void;
 	
-	@:overload override private function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function getDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
 @:native('sun$security$ec$ECDSASignature$SHA1') extern class ECDSASignature_SHA1 extends sun.security.ec.ECDSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$ec$ECDSASignature$SHA256') extern class ECDSASignature_SHA256 extends sun.security.ec.ECDSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$ec$ECDSASignature$SHA384') extern class ECDSASignature_SHA384 extends sun.security.ec.ECDSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }
 @:native('sun$security$ec$ECDSASignature$SHA512') extern class ECDSASignature_SHA512 extends sun.security.ec.ECDSASignature
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

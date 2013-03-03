@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class SymbolSpace
 {
-	@:overload public function new(_codeModel : com.sun.codemodel.internal.JCodeModel) : Void;
+	@:overload @:public public function new(_codeModel : com.sun.codemodel.internal.JCodeModel) : Void;
 	
 	/**
 	* Gets the Java type of this symbol space.
@@ -35,11 +35,11 @@ extern class SymbolSpace
 	* pointed by IDs belonging to this symbol space are assignable
 	* to X.
 	*/
-	@:overload public function getType() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function getType() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function setType(_type : com.sun.codemodel.internal.JType) : Void;
+	@:overload @:public public function setType(_type : com.sun.codemodel.internal.JType) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

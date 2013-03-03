@@ -29,14 +29,14 @@ package sun.security.acl;
 */
 extern class WorldGroupImpl extends sun.security.acl.GroupImpl
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* returns true for all passed principals
 	* @param member The principal whose membership must be checked in this Group.
 	* @return true always since this is the "world" group.
 	*/
-	@:overload public function isMember(member : java.security.Principal) : Bool;
+	@:overload @:public override public function isMember(member : java.security.Principal) : Bool;
 	
 	
 }

@@ -71,7 +71,7 @@ extern class CK_C_INITIALIZE_ARGS
 	*   CK_CREATEMUTEX CreateMutex;
 	* </PRE>
 	*/
-	public var CreateMutex : sun.security.pkcs11.wrapper.CK_CREATEMUTEX;
+	@:public public var CreateMutex : sun.security.pkcs11.wrapper.CK_CREATEMUTEX;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -79,7 +79,7 @@ extern class CK_C_INITIALIZE_ARGS
 	*   CK_DESTROYMUTEX DestroyMutex;
 	* </PRE>
 	*/
-	public var DestroyMutex : sun.security.pkcs11.wrapper.CK_DESTROYMUTEX;
+	@:public public var DestroyMutex : sun.security.pkcs11.wrapper.CK_DESTROYMUTEX;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -87,7 +87,7 @@ extern class CK_C_INITIALIZE_ARGS
 	*   CK_LOCKMUTEX LockMutex;
 	* </PRE>
 	*/
-	public var LockMutex : sun.security.pkcs11.wrapper.CK_LOCKMUTEX;
+	@:public public var LockMutex : sun.security.pkcs11.wrapper.CK_LOCKMUTEX;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -95,7 +95,7 @@ extern class CK_C_INITIALIZE_ARGS
 	*   CK_UNLOCKMUTEX UnlockMutex;
 	* </PRE>
 	*/
-	public var UnlockMutex : sun.security.pkcs11.wrapper.CK_UNLOCKMUTEX;
+	@:public public var UnlockMutex : sun.security.pkcs11.wrapper.CK_UNLOCKMUTEX;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -103,7 +103,7 @@ extern class CK_C_INITIALIZE_ARGS
 	*   CK_FLAGS flags;
 	* </PRE>
 	*/
-	public var flags : haxe.Int64;
+	@:public public var flags : haxe.Int64;
 	
 	/**
 	* <B>PKCS#11:</B>
@@ -111,7 +111,7 @@ extern class CK_C_INITIALIZE_ARGS
 	*   CK_VOID_PTR pReserved;
 	* </PRE>
 	*/
-	public var pReserved : Dynamic;
+	@:public public var pReserved : Dynamic;
 	
 	
 }

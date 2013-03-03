@@ -43,7 +43,7 @@ extern class WebModule extends com.sun.xml.internal.ws.api.server.Module
 	* Notice that this method involves in determining the machine name
 	* without relying on HTTP "Host" header.
 	*/
-	@:overload @:abstract public function getContextPath() : String;
+	@:overload @:public @:abstract public function getContextPath() : String;
 	
 	
 }

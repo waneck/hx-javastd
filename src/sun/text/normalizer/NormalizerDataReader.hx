@@ -42,9 +42,9 @@ package sun.text.normalizer;
 	* @exception IOException throw if data file fails authentication
 	* @draft 2.1
 	*/
-	@:overload private function new(inputStream : java.io.InputStream) : Void;
+	@:overload @:protected private function new(inputStream : java.io.InputStream) : Void;
 	
-	@:overload private function readIndexes(length : Int) : java.NativeArray<Int>;
+	@:overload @:protected private function readIndexes(length : Int) : java.NativeArray<Int>;
 	
 	/**
 	* <p>Reads unorm.icu, parse it into blocks of data to be stored in
@@ -57,13 +57,13 @@ package sun.text.normalizer;
 	* @exception thrown when data reading fails
 	* @draft 2.1
 	*/
-	@:overload private function read(normBytes : java.NativeArray<java.StdTypes.Int8>, fcdBytes : java.NativeArray<java.StdTypes.Int8>, auxBytes : java.NativeArray<java.StdTypes.Int8>, extraData : java.NativeArray<java.StdTypes.Char16>, combiningTable : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:protected private function read(normBytes : java.NativeArray<java.StdTypes.Int8>, fcdBytes : java.NativeArray<java.StdTypes.Int8>, auxBytes : java.NativeArray<java.StdTypes.Int8>, extraData : java.NativeArray<java.StdTypes.Char16>, combiningTable : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function getDataFormatVersion() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDataFormatVersion() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public public function isDataVersionAcceptable(version : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
-	@:overload public function getUnicodeVersion() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getUnicodeVersion() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

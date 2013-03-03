@@ -25,41 +25,41 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
-	
-	/**
-	* {@inheritDoc}
-	* @since 1.6
-	*/
-	@:require(java6) @:overload override private function installListeners() : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function uninstallListeners() : Void;
+	@:require(java6) @:overload @:protected override private function installListeners() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function configureEditor() : Void;
+	@:require(java6) @:overload @:protected override private function uninstallListeners() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function unconfigureEditor() : Void;
+	@:require(java6) @:overload @:protected override private function configureEditor() : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java6) @:overload @:protected override private function unconfigureEditor() : Void;
+	
+	/**
+	* {@inheritDoc}
+	* @since 1.6
+	*/
+	@:require(java6) @:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* If necessary paints the currently selected item.
@@ -70,15 +70,15 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	* @throws NullPointerException if any of the arguments are null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:require(java5) @:overload @:public override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function paintCurrentValueBackground(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:require(java6) @:overload @:public override public function paintCurrentValueBackground(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Creates a layout manager for managing the components which make up the
@@ -86,11 +86,11 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	*
 	* @return an instance of a layout manager
 	*/
-	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload @:protected override private function createLayoutManager() : java.awt.LayoutManager;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload @:protected override private function installKeyboardActions() : Void;
 	
-	@:overload override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
+	@:overload @:protected override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
 	
 	/**
 	* Creates the default editor that will be used in editable combo boxes.
@@ -100,13 +100,13 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	* @return a <code>ComboBoxEditor</code> used for the combo box
 	* @see javax.swing.JComboBox#setEditor
 	*/
-	@:overload override private function createEditor() : javax.swing.ComboBoxEditor;
+	@:overload @:protected override private function createEditor() : javax.swing.ComboBoxEditor;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createRenderer() : javax.swing.ListCellRenderer<Dynamic>;
+	@:require(java6) @:overload @:protected override private function createRenderer() : javax.swing.ListCellRenderer<Dynamic>;
 	
 	/**
 	* Creates an button which will be used as the control to show or hide
@@ -114,17 +114,17 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	*
 	* @return a button which represents the popup control
 	*/
-	@:overload override private function createArrowButton() : javax.swing.JButton;
+	@:overload @:protected override private function createArrowButton() : javax.swing.JButton;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsComboBoxUI$XPComboBoxButton') @:internal extern class WindowsComboBoxUI_XPComboBoxButton extends com.sun.java.swing.plaf.windows.XPStyle.XPStyle_GlyphButton
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function getState() : State;
+	@:overload @:protected override private function getState() : State;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
@@ -138,15 +138,15 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsComboBoxUI$WindowsComboPopup') extern class WindowsComboBoxUI_WindowsComboPopup extends javax.swing.plaf.basic.BasicComboPopup
 {
-	@:overload public function new(cBox : javax.swing.JComboBox<Dynamic>) : Void;
+	@:overload @:public public function new(cBox : javax.swing.JComboBox<Dynamic>) : Void;
 	
-	@:overload override private function createKeyListener() : java.awt.event.KeyListener;
+	@:overload @:protected override private function createKeyListener() : java.awt.event.KeyListener;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsComboBoxUI$WindowsComboPopup$InvocationKeyHandler') extern class WindowsComboBoxUI_WindowsComboPopup_InvocationKeyHandler extends javax.swing.plaf.basic.BasicComboPopup.BasicComboPopup_InvocationKeyHandler
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	
 }
@@ -159,9 +159,9 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createEditorComponent() : javax.swing.JTextField;
+	@:require(java6) @:overload @:protected override private function createEditorComponent() : javax.swing.JTextField;
 	
-	@:overload override public function setItem(item : Dynamic) : Void;
+	@:overload @:public override public function setItem(item : Dynamic) : Void;
 	
 	
 }
@@ -174,7 +174,7 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload @:public override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }

@@ -66,13 +66,13 @@ extern class ArrayInstruction extends com.sun.org.apache.bcel.internal.generic.I
 	/**
 	* @param opcode of instruction
 	*/
-	@:overload private function new(opcode : java.StdTypes.Int16) : Void;
+	@:overload @:protected private function new(opcode : java.StdTypes.Int16) : Void;
 	
-	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/** @return type associated with the instruction
 	*/
-	@:overload public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

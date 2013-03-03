@@ -38,7 +38,7 @@ package java.util;
 	* Constructs an <code>InputMismatchException</code> with <tt>null</tt>
 	* as its error message string.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>InputMismatchException</code>, saving a reference
@@ -47,7 +47,7 @@ package java.util;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

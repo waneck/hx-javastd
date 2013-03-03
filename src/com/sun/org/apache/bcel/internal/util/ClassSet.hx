@@ -58,15 +58,15 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class ClassSet implements java.io.Serializable
 {
-	@:overload public function add(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
+	@:overload @:public public function add(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
 	
-	@:overload public function remove(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload @:public public function remove(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload public function empty() : Bool;
+	@:overload @:public public function empty() : Bool;
 	
-	@:overload public function toArray() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
+	@:overload @:public public function toArray() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
-	@:overload public function getClassNames() : java.NativeArray<String>;
+	@:overload @:public public function getClassNames() : java.NativeArray<String>;
 	
 	
 }

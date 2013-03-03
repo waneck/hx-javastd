@@ -192,7 +192,7 @@ extern interface Datatype
 	*              it returns {@link #ID_TYPE_ID}, {@link #ID_TYPE_IDREF} or
 	*              {@link #ID_TYPE_IDREFS}.
 	*/
-	@:overload public function getIdType() : Int;
+	@:overload @:public public function getIdType() : Int;
 	
 	/**
 	* Checks if this datatype may need a context object for
@@ -224,7 +224,7 @@ extern interface Datatype
 	*              <b>false</b> if this datatype is context-<b>in</b>dependent
 	*              (it never needs a context object).
 	*/
-	@:overload public function isContextDependent() : Bool;
+	@:overload @:public public function isContextDependent() : Bool;
 	
 	
 }

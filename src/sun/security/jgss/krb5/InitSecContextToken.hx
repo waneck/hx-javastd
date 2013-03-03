@@ -25,9 +25,9 @@ package sun.security.jgss.krb5;
 */
 @:internal extern class InitSecContextToken extends sun.security.jgss.krb5.InitialToken
 {
-	@:overload @:final public function getKrbApReq() : sun.security.krb5.KrbApReq;
+	@:overload @:public @:final public function getKrbApReq() : sun.security.krb5.KrbApReq;
 	
-	@:overload @:final public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final override public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -33,9 +33,9 @@ package sun.awt.X11;
 	* values, otherwise we create color objects whose values match
 	* the default CDE/Motif colors.
 	*/
-	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	
 }

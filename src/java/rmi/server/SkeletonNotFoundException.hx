@@ -32,7 +32,7 @@ extern class SkeletonNotFoundException extends java.rmi.RemoteException
 	* @param s the detail message.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(s : String) : Void;
+	@:require(java1) @:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>SkeletonNotFoundException</code> with the specified
@@ -42,7 +42,7 @@ extern class SkeletonNotFoundException extends java.rmi.RemoteException
 	* @param ex the nested exception
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function new(s : String, ex : java.lang.Exception) : Void;
+	@:require(java1) @:overload @:public public function new(s : String, ex : java.lang.Exception) : Void;
 	
 	
 }

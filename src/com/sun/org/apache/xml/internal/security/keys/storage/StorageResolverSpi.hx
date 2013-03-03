@@ -26,7 +26,7 @@ extern class StorageResolverSpi
 	*
 	* @return the iterator for the storage
 	*/
-	@:overload @:abstract public function getIterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getIterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class XMLX509SubjectName extends com.sun.org.apache.xml.internal.security
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Constructor X509SubjectName
@@ -36,7 +36,7 @@ extern class XMLX509SubjectName extends com.sun.org.apache.xml.internal.security
 	* @param doc
 	* @param X509SubjectNameString
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, X509SubjectNameString : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, X509SubjectNameString : String) : Void;
 	
 	/**
 	* Constructor XMLX509SubjectName
@@ -44,7 +44,7 @@ extern class XMLX509SubjectName extends com.sun.org.apache.xml.internal.security
 	* @param doc
 	* @param x509certificate
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, x509certificate : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Method getSubjectName
@@ -52,13 +52,13 @@ extern class XMLX509SubjectName extends com.sun.org.apache.xml.internal.security
 	*
 	* @return the subject name
 	*/
-	@:overload public function getSubjectName() : String;
+	@:overload @:public public function getSubjectName() : String;
 	
 	/** @inheritDoc */
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

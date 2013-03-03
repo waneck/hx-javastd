@@ -30,14 +30,14 @@ extern class HostEvent extends java.util.EventObject
 	*
 	* @param host the MonitoredHost source of the event.
 	*/
-	@:overload public function new(host : sun.jvmstat.monitor.MonitoredHost) : Void;
+	@:overload @:public public function new(host : sun.jvmstat.monitor.MonitoredHost) : Void;
 	
 	/**
 	* Return the MonitoredHost source of this event.
 	*
 	* @return MonitoredHost - the source of this event.
 	*/
-	@:overload public function getMonitoredHost() : sun.jvmstat.monitor.MonitoredHost;
+	@:overload @:public public function getMonitoredHost() : sun.jvmstat.monitor.MonitoredHost;
 	
 	
 }

@@ -29,27 +29,27 @@ extern interface MouseListener extends java.util.EventListener
 	* Invoked when the mouse button has been clicked (pressed
 	* and released) on a component.
 	*/
-	@:overload @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been pressed on a component.
 	*/
-	@:overload @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been released on a component.
 	*/
-	@:overload @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse enters a component.
 	*/
-	@:overload @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits a component.
 	*/
-	@:overload @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public @:public public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

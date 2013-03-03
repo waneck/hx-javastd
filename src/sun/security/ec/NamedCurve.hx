@@ -25,13 +25,13 @@ package sun.security.ec;
 */
 extern class NamedCurve extends java.security.spec.ECParameterSpec
 {
-	@:overload public static function getECParameterSpec(name : String) : java.security.spec.ECParameterSpec;
+	@:overload @:public @:static public static function getECParameterSpec(name : String) : java.security.spec.ECParameterSpec;
 	
-	@:overload public static function getECParameterSpec(length : Int) : java.security.spec.ECParameterSpec;
+	@:overload @:public @:static public static function getECParameterSpec(length : Int) : java.security.spec.ECParameterSpec;
 	
-	@:overload public static function knownECParameterSpecs() : java.util.Collection<java.security.spec.ECParameterSpec>;
+	@:overload @:public @:static public static function knownECParameterSpecs() : java.util.Collection<java.security.spec.ECParameterSpec>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

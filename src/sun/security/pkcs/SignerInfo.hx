@@ -25,14 +25,14 @@ package sun.security.pkcs;
 */
 extern class SignerInfo implements sun.security.util.DerEncoder
 {
-	@:overload public function new(issuerName : sun.security.x509.X500Name, serial : java.math.BigInteger, digestAlgorithmId : sun.security.x509.AlgorithmId, digestEncryptionAlgorithmId : sun.security.x509.AlgorithmId, encryptedDigest : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(issuerName : sun.security.x509.X500Name, serial : java.math.BigInteger, digestAlgorithmId : sun.security.x509.AlgorithmId, digestEncryptionAlgorithmId : sun.security.x509.AlgorithmId, encryptedDigest : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(issuerName : sun.security.x509.X500Name, serial : java.math.BigInteger, digestAlgorithmId : sun.security.x509.AlgorithmId, authenticatedAttributes : sun.security.pkcs.PKCS9Attributes, digestEncryptionAlgorithmId : sun.security.x509.AlgorithmId, encryptedDigest : java.NativeArray<java.StdTypes.Int8>, unauthenticatedAttributes : sun.security.pkcs.PKCS9Attributes) : Void;
+	@:overload @:public public function new(issuerName : sun.security.x509.X500Name, serial : java.math.BigInteger, digestAlgorithmId : sun.security.x509.AlgorithmId, authenticatedAttributes : sun.security.pkcs.PKCS9Attributes, digestEncryptionAlgorithmId : sun.security.x509.AlgorithmId, encryptedDigest : java.NativeArray<java.StdTypes.Int8>, unauthenticatedAttributes : sun.security.pkcs.PKCS9Attributes) : Void;
 	
 	/**
 	* Parses a PKCS#7 signer info.
 	*/
-	@:overload public function new(derin : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(derin : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Parses a PKCS#7 signer info.
@@ -44,9 +44,9 @@ extern class SignerInfo implements sun.security.util.DerEncoder
 	* @param oldStyle flag indicating whether or not the given signer info
 	* is encoded according to JDK1.1.x.
 	*/
-	@:overload public function new(derin : sun.security.util.DerInputStream, oldStyle : Bool) : Void;
+	@:overload @:public public function new(derin : sun.security.util.DerInputStream, oldStyle : Bool) : Void;
 	
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* DER encode this object onto an output stream.
@@ -57,35 +57,35 @@ extern class SignerInfo implements sun.security.util.DerEncoder
 	*
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function derEncode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function derEncode(out : java.io.OutputStream) : Void;
 	
 	/*
 	* Returns the (user) certificate pertaining to this SignerInfo.
 	*/
-	@:overload public function getCertificate(block : sun.security.pkcs.PKCS7) : java.security.cert.X509Certificate;
+	@:overload @:public public function getCertificate(block : sun.security.pkcs.PKCS7) : java.security.cert.X509Certificate;
 	
 	/*
 	* Returns the certificate chain pertaining to this SignerInfo.
 	*/
-	@:overload public function getCertificateChain(block : sun.security.pkcs.PKCS7) : java.util.ArrayList<java.security.cert.X509Certificate>;
+	@:overload @:public public function getCertificateChain(block : sun.security.pkcs.PKCS7) : java.util.ArrayList<java.security.cert.X509Certificate>;
 	
-	@:overload public function getVersion() : java.math.BigInteger;
+	@:overload @:public public function getVersion() : java.math.BigInteger;
 	
-	@:overload public function getIssuerName() : sun.security.x509.X500Name;
+	@:overload @:public public function getIssuerName() : sun.security.x509.X500Name;
 	
-	@:overload public function getCertificateSerialNumber() : java.math.BigInteger;
+	@:overload @:public public function getCertificateSerialNumber() : java.math.BigInteger;
 	
-	@:overload public function getDigestAlgorithmId() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getDigestAlgorithmId() : sun.security.x509.AlgorithmId;
 	
-	@:overload public function getAuthenticatedAttributes() : sun.security.pkcs.PKCS9Attributes;
+	@:overload @:public public function getAuthenticatedAttributes() : sun.security.pkcs.PKCS9Attributes;
 	
-	@:overload public function getDigestEncryptionAlgorithmId() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getDigestEncryptionAlgorithmId() : sun.security.x509.AlgorithmId;
 	
-	@:overload public function getEncryptedDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncryptedDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getUnauthenticatedAttributes() : sun.security.pkcs.PKCS9Attributes;
+	@:overload @:public public function getUnauthenticatedAttributes() : sun.security.pkcs.PKCS9Attributes;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

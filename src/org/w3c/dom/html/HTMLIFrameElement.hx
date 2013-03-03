@@ -45,86 +45,86 @@ extern interface HTMLIFrameElement extends org.w3c.dom.html.HTMLElement
 	* surrounding text. See the  align attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Request frame borders. See the  frameborder attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getFrameBorder() : String;
+	@:overload @:public public function getFrameBorder() : String;
 	
-	@:overload public function setFrameBorder(frameBorder : String) : Void;
+	@:overload @:public public function setFrameBorder(frameBorder : String) : Void;
 	
 	/**
 	*  Frame height. See the  height attribute definition in HTML 4.0.
 	*/
-	@:overload public function getHeight() : String;
+	@:overload @:public public function getHeight() : String;
 	
-	@:overload public function setHeight(height : String) : Void;
+	@:overload @:public public function setHeight(height : String) : Void;
 	
 	/**
 	*  URI designating a long description of this image or frame. See the
 	* longdesc attribute definition in HTML 4.0.
 	*/
-	@:overload public function getLongDesc() : String;
+	@:overload @:public public function getLongDesc() : String;
 	
-	@:overload public function setLongDesc(longDesc : String) : Void;
+	@:overload @:public public function setLongDesc(longDesc : String) : Void;
 	
 	/**
 	*  Frame margin height, in pixels. See the  marginheight attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getMarginHeight() : String;
+	@:overload @:public public function getMarginHeight() : String;
 	
-	@:overload public function setMarginHeight(marginHeight : String) : Void;
+	@:overload @:public public function setMarginHeight(marginHeight : String) : Void;
 	
 	/**
 	*  Frame margin width, in pixels. See the  marginwidth attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getMarginWidth() : String;
+	@:overload @:public public function getMarginWidth() : String;
 	
-	@:overload public function setMarginWidth(marginWidth : String) : Void;
+	@:overload @:public public function setMarginWidth(marginWidth : String) : Void;
 	
 	/**
 	*  The frame name (object of the <code>target</code> attribute). See the
 	* name attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  Specify whether or not the frame should have scrollbars. See the
 	* scrolling attribute definition in HTML 4.0.
 	*/
-	@:overload public function getScrolling() : String;
+	@:overload @:public public function getScrolling() : String;
 	
-	@:overload public function setScrolling(scrolling : String) : Void;
+	@:overload @:public public function setScrolling(scrolling : String) : Void;
 	
 	/**
 	*  A URI designating the initial frame contents. See the  src attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getSrc() : String;
+	@:overload @:public public function getSrc() : String;
 	
-	@:overload public function setSrc(src : String) : Void;
+	@:overload @:public public function setSrc(src : String) : Void;
 	
 	/**
 	*  Frame width. See the  width attribute definition in HTML 4.0.
 	*/
-	@:overload public function getWidth() : String;
+	@:overload @:public public function getWidth() : String;
 	
-	@:overload public function setWidth(width : String) : Void;
+	@:overload @:public public function setWidth(width : String) : Void;
 	
 	/**
 	*  The document this frame contains, if there is any and it is available,
 	* or <code>null</code> otherwise.
 	* @since DOM Level 2
 	*/
-	@:overload public function getContentDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getContentDocument() : org.w3c.dom.Document;
 	
 	
 }

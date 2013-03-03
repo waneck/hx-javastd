@@ -29,16 +29,16 @@ package sun.security.krb5.internal.ccache;
 */
 extern class CCacheInputStream extends sun.security.krb5.internal.util.KrbDataInputStream implements sun.security.krb5.internal.ccache.FileCCacheConstants
 {
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/* Read tag field introduced in KRB5_FCC_FVNO_4 */
-	@:overload public function readTag() : sun.security.krb5.internal.ccache.Tag;
+	@:overload @:public public function readTag() : sun.security.krb5.internal.ccache.Tag;
 	
 	/*
 	* In file-based credential cache, the realm name is stored as part of
 	* principal name at the first place.
 	*/
-	@:overload public function readPrincipal(version : Int) : sun.security.krb5.PrincipalName;
+	@:overload @:public public function readPrincipal(version : Int) : sun.security.krb5.PrincipalName;
 	
 	
 }

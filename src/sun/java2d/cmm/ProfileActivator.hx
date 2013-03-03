@@ -28,7 +28,7 @@ extern interface ProfileActivator
 	/**
 	* Activate a previously deferred ICC_Profile object.
 	*/
-	@:overload public function activate() : Void;
+	@:overload @:public public function activate() : Void;
 	
 	
 }

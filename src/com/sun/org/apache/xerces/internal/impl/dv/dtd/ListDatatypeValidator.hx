@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.impl.dv.dtd;
 */
 extern class ListDatatypeValidator implements com.sun.org.apache.xerces.internal.impl.dv.DatatypeValidator
 {
-	@:overload public function new(itemDV : com.sun.org.apache.xerces.internal.impl.dv.DatatypeValidator) : Void;
+	@:overload @:public public function new(itemDV : com.sun.org.apache.xerces.internal.impl.dv.DatatypeValidator) : Void;
 	
 	/**
 	* Checks that "content" string is valid.
@@ -32,7 +32,7 @@ extern class ListDatatypeValidator implements com.sun.org.apache.xerces.internal
 	*         invalid according to the rules for the validators
 	* @see InvalidDatatypeValueException
 	*/
-	@:overload public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
+	@:overload @:public public function validate(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Void;
 	
 	
 }

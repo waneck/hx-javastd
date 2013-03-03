@@ -25,9 +25,9 @@ package javax.xml.bind;
 */
 @:internal extern class GetPropertyAction implements java.security.PrivilegedAction<String>
 {
-	@:overload public function new(propertyName : String) : Void;
+	@:overload @:public public function new(propertyName : String) : Void;
 	
-	@:overload public function run() : String;
+	@:overload @:public public function run() : String;
 	
 	
 }

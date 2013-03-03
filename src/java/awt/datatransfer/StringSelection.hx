@@ -43,7 +43,7 @@ extern class StringSelection implements java.awt.datatransfer.Transferable imple
 	* Creates a <code>Transferable</code> capable of transferring
 	* the specified <code>String</code>.
 	*/
-	@:overload public function new(data : String) : Void;
+	@:overload @:public public function new(data : String) : Void;
 	
 	/**
 	* Returns an array of flavors in which this <code>Transferable</code>
@@ -55,7 +55,7 @@ extern class StringSelection implements java.awt.datatransfer.Transferable imple
 	* @return an array of length two, whose elements are <code>DataFlavor.
 	*         stringFlavor</code> and <code>DataFlavor.plainTextFlavor</code>
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether the requested flavor is supported by this
@@ -68,7 +68,7 @@ extern class StringSelection implements java.awt.datatransfer.Transferable imple
 	*   is not one of the above flavors
 	* @throws NullPointerException if flavor is <code>null</code>
 	*/
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns the <code>Transferable</code>'s data in the requested
@@ -94,9 +94,9 @@ extern class StringSelection implements java.awt.datatransfer.Transferable imple
 	* @throws NullPointerException if flavor is <code>null</code>
 	* @see java.io.Reader
 	*/
-	@:overload public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
-	@:overload public function lostOwnership(clipboard : java.awt.datatransfer.Clipboard, contents : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:public public function lostOwnership(clipboard : java.awt.datatransfer.Clipboard, contents : java.awt.datatransfer.Transferable) : Void;
 	
 	
 }

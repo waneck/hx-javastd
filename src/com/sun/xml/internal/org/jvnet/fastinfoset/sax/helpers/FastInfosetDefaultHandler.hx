@@ -42,39 +42,39 @@ extern class FastInfosetDefaultHandler extends org.xml.sax.helpers.DefaultHandle
 	* part of an interface; parser writers can instantiate this class to provide
 	* default handlers when the application has not supplied its own.
 	*/
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function octets(URI : String, algorithm : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public public function octets(URI : String, algorithm : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload public function object(URI : String, algorithm : Int, o : Dynamic) : Void;
+	@:overload @:public public function object(URI : String, algorithm : Int, o : Dynamic) : Void;
 	
-	@:overload public function booleans(b : java.NativeArray<Bool>, start : Int, length : Int) : Void;
+	@:overload @:public public function booleans(b : java.NativeArray<Bool>, start : Int, length : Int) : Void;
 	
-	@:overload public function bytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public public function bytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload public function shorts(s : java.NativeArray<java.StdTypes.Int16>, start : Int, length : Int) : Void;
+	@:overload @:public public function shorts(s : java.NativeArray<java.StdTypes.Int16>, start : Int, length : Int) : Void;
 	
-	@:overload public function ints(i : java.NativeArray<Int>, start : Int, length : Int) : Void;
+	@:overload @:public public function ints(i : java.NativeArray<Int>, start : Int, length : Int) : Void;
 	
-	@:overload public function longs(l : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
+	@:overload @:public public function longs(l : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
 	
-	@:overload public function floats(f : java.NativeArray<Single>, start : Int, length : Int) : Void;
+	@:overload @:public public function floats(f : java.NativeArray<Single>, start : Int, length : Int) : Void;
 	
-	@:overload public function doubles(d : java.NativeArray<Float>, start : Int, length : Int) : Void;
+	@:overload @:public public function doubles(d : java.NativeArray<Float>, start : Int, length : Int) : Void;
 	
-	@:overload public function uuids(msblsb : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
+	@:overload @:public public function uuids(msblsb : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
 	
 	
 }

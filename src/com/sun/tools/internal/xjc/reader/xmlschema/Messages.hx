@@ -26,23 +26,23 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 extern class Messages
 {
 	/** Loads a string resource and formats it with specified arguments. */
-	@:overload public static function format(property : String, args : java.NativeArray<Dynamic>) : String;
+	@:overload @:public @:static public static function format(property : String, args : java.NativeArray<Dynamic>) : String;
 	
-	public static var WARN_UNUSED_EXPECTED_CONTENT_TYPES(default, null) : String;
+	@:public @:static @:final public static var WARN_UNUSED_EXPECTED_CONTENT_TYPES(default, null) : String;
 	
-	public static var ERR_UNACKNOWLEDGED_CUSTOMIZATION(default, null) : String;
+	@:public @:static @:final public static var ERR_UNACKNOWLEDGED_CUSTOMIZATION(default, null) : String;
 	
-	public static var ERR_UNACKNOWLEDGED_CUSTOMIZATION_LOCATION(default, null) : String;
+	@:public @:static @:final public static var ERR_UNACKNOWLEDGED_CUSTOMIZATION_LOCATION(default, null) : String;
 	
-	public static var ERR_MULTIPLE_GLOBAL_BINDINGS(default, null) : String;
+	@:public @:static @:final public static var ERR_MULTIPLE_GLOBAL_BINDINGS(default, null) : String;
 	
-	public static var ERR_MULTIPLE_GLOBAL_BINDINGS_OTHER(default, null) : String;
+	@:public @:static @:final public static var ERR_MULTIPLE_GLOBAL_BINDINGS_OTHER(default, null) : String;
 	
-	public static var ERR_REFERENCE_TO_NONEXPORTED_CLASS(default, null) : String;
+	@:public @:static @:final public static var ERR_REFERENCE_TO_NONEXPORTED_CLASS(default, null) : String;
 	
-	public static var ERR_REFERENCE_TO_NONEXPORTED_CLASS_MAP_FALSE(default, null) : String;
+	@:public @:static @:final public static var ERR_REFERENCE_TO_NONEXPORTED_CLASS_MAP_FALSE(default, null) : String;
 	
-	public static var ERR_REFERENCE_TO_NONEXPORTED_CLASS_REFERER(default, null) : String;
+	@:public @:static @:final public static var ERR_REFERENCE_TO_NONEXPORTED_CLASS_REFERER(default, null) : String;
 	
 	
 }

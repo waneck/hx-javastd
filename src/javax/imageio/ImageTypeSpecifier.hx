@@ -28,12 +28,12 @@ extern class ImageTypeSpecifier
 	/**
 	* The <code>ColorModel</code> to be used as a prototype.
 	*/
-	private var colorModel : java.awt.image.ColorModel;
+	@:protected private var colorModel : java.awt.image.ColorModel;
 	
 	/**
 	* A <code>SampleModel</code> to be used as a prototype.
 	*/
-	private var sampleModel : java.awt.image.SampleModel;
+	@:protected private var sampleModel : java.awt.image.SampleModel;
 	
 	/**
 	* Constructs an <code>ImageTypeSpecifier</code> directly
@@ -49,7 +49,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>sampleModel</code>
 	* is not compatible with <code>colorModel</code>.
 	*/
-	@:overload public function new(colorModel : java.awt.image.ColorModel, sampleModel : java.awt.image.SampleModel) : Void;
+	@:overload @:public public function new(colorModel : java.awt.image.ColorModel, sampleModel : java.awt.image.SampleModel) : Void;
 	
 	/**
 	* Constructs an <code>ImageTypeSpecifier</code> from a
@@ -64,7 +64,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if the argument is
 	* <code>null</code>.
 	*/
-	@:overload public function new(image : java.awt.image.RenderedImage) : Void;
+	@:overload @:public public function new(image : java.awt.image.RenderedImage) : Void;
 	
 	/**
 	* Returns a specifier for a packed image format that will use a
@@ -100,7 +100,7 @@ extern class ImageTypeSpecifier
 	* <code>DataBuffer.TYPE_USHORT</code>, or
 	* <code>DataBuffer.TYPE_INT</code>.
 	*/
-	@:overload public static function createPacked(colorSpace : java.awt.color.ColorSpace, redMask : Int, greenMask : Int, blueMask : Int, alphaMask : Int, transferType : Int, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createPacked(colorSpace : java.awt.color.ColorSpace, redMask : Int, greenMask : Int, blueMask : Int, alphaMask : Int, transferType : Int, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns a specifier for an interleaved image format that will
@@ -131,7 +131,7 @@ extern class ImageTypeSpecifier
 	* color space components, plus 1 if <code>hasAlpha</code> is
 	* <code>true</code>.
 	*/
-	@:overload public static function createInterleaved(colorSpace : java.awt.color.ColorSpace, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createInterleaved(colorSpace : java.awt.color.ColorSpace, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns a specifier for a banded image format that will use a
@@ -168,7 +168,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>dataType</code> is
 	* not one of the legal <code>DataBuffer.TYPE_*</code> constants.
 	*/
-	@:overload public static function createBanded(colorSpace : java.awt.color.ColorSpace, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createBanded(colorSpace : java.awt.color.ColorSpace, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns a specifier for a grayscale image format that will pack
@@ -193,7 +193,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>bits</code> is
 	* larger than the bit size of the given <code>dataType</code>.
 	*/
-	@:overload public static function createGrayscale(bits : Int, dataType : Int, isSigned : Bool) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createGrayscale(bits : Int, dataType : Int, isSigned : Bool) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns a specifier for a grayscale plus alpha image format
@@ -220,7 +220,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>bits</code> is
 	* larger than the bit size of the given <code>dataType</code>.
 	*/
-	@:overload public static function createGrayscale(bits : Int, dataType : Int, isSigned : Bool, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createGrayscale(bits : Int, dataType : Int, isSigned : Bool, isAlphaPremultiplied : Bool) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns a specifier for an indexed-color image format that will pack
@@ -262,7 +262,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>bits</code> is
 	* larger than the bit size of the given <code>dataType</code>.
 	*/
-	@:overload public static function createIndexed(redLUT : java.NativeArray<java.StdTypes.Int8>, greenLUT : java.NativeArray<java.StdTypes.Int8>, blueLUT : java.NativeArray<java.StdTypes.Int8>, alphaLUT : java.NativeArray<java.StdTypes.Int8>, bits : Int, dataType : Int) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createIndexed(redLUT : java.NativeArray<java.StdTypes.Int8>, greenLUT : java.NativeArray<java.StdTypes.Int8>, blueLUT : java.NativeArray<java.StdTypes.Int8>, alphaLUT : java.NativeArray<java.StdTypes.Int8>, bits : Int, dataType : Int) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns an <code>ImageTypeSpecifier</code> that encodes
@@ -294,7 +294,7 @@ extern class ImageTypeSpecifier
 	* @see java.awt.image.BufferedImage#TYPE_BYTE_BINARY
 	* @see java.awt.image.BufferedImage#TYPE_BYTE_INDEXED
 	*/
-	@:overload public static function createFromBufferedImageType(bufferedImageType : Int) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createFromBufferedImageType(bufferedImageType : Int) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns an <code>ImageTypeSpecifier</code> that encodes the
@@ -309,7 +309,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>image</code> is
 	* <code>null</code>.
 	*/
-	@:overload public static function createFromRenderedImage(image : java.awt.image.RenderedImage) : javax.imageio.ImageTypeSpecifier;
+	@:overload @:public @:static public static function createFromRenderedImage(image : java.awt.image.RenderedImage) : javax.imageio.ImageTypeSpecifier;
 	
 	/**
 	* Returns an int containing one of the enumerated constant values
@@ -334,7 +334,7 @@ extern class ImageTypeSpecifier
 	* @see java.awt.image.BufferedImage#TYPE_BYTE_BINARY
 	* @see java.awt.image.BufferedImage#TYPE_BYTE_INDEXED
 	*/
-	@:overload public function getBufferedImageType() : Int;
+	@:overload @:public public function getBufferedImageType() : Int;
 	
 	/**
 	* Return the number of color components
@@ -343,7 +343,7 @@ extern class ImageTypeSpecifier
 	*
 	* @return the number of components in the image.
 	*/
-	@:overload public function getNumComponents() : Int;
+	@:overload @:public public function getNumComponents() : Int;
 	
 	/**
 	* Return the number of bands
@@ -352,7 +352,7 @@ extern class ImageTypeSpecifier
 	*
 	* @return the number of bands in the image.
 	*/
-	@:overload public function getNumBands() : Int;
+	@:overload @:public public function getNumBands() : Int;
 	
 	/**
 	* Return the number of bits used to represent samples of the given band.
@@ -365,7 +365,7 @@ extern class ImageTypeSpecifier
 	* @exception IllegalArgumentException if <code>band</code> is
 	* negative or greater than the largest band index.
 	*/
-	@:overload public function getBitsPerBand(band : Int) : Int;
+	@:overload @:public public function getBitsPerBand(band : Int) : Int;
 	
 	/**
 	* Returns a <code>SampleModel</code> based on the settings
@@ -374,7 +374,7 @@ extern class ImageTypeSpecifier
 	*
 	* @return a <code>SampleModel</code> with arbitrary dimensions.
 	*/
-	@:overload public function getSampleModel() : java.awt.image.SampleModel;
+	@:overload @:public public function getSampleModel() : java.awt.image.SampleModel;
 	
 	/**
 	* Returns a <code>SampleModel</code> based on the settings
@@ -393,14 +393,14 @@ extern class ImageTypeSpecifier
 	* <code>width</code> and <code>height</code> is greater than
 	* <code>Integer.MAX_VALUE</code>
 	*/
-	@:overload public function getSampleModel(width : Int, height : Int) : java.awt.image.SampleModel;
+	@:overload @:public public function getSampleModel(width : Int, height : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Returns the <code>ColorModel</code> specified by this object.
 	*
 	* @return a <code>ColorModel</code>.
 	*/
-	@:overload public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:public public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Creates a <code>BufferedImage</code> with a given width and
@@ -421,7 +421,7 @@ extern class ImageTypeSpecifier
 	* elements needed to store the image is greater than
 	* <code>Integer.MAX_VALUE</code>.
 	*/
-	@:overload public function createBufferedImage(width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload @:public public function createBufferedImage(width : Int, height : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns <code>true</code> if the given <code>Object</code> is
@@ -434,52 +434,52 @@ extern class ImageTypeSpecifier
 	* @return <code>true</code> if the given object is an equivalent
 	* <code>ImageTypeSpecifier</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this ImageTypeSpecifier.
 	*
 	* @return a hash code for this ImageTypeSpecifier
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:native('javax$imageio$ImageTypeSpecifier$Packed') @:internal extern class ImageTypeSpecifier_Packed extends javax.imageio.ImageTypeSpecifier
 {
-	@:overload public function new(colorSpace : java.awt.color.ColorSpace, redMask : Int, greenMask : Int, blueMask : Int, alphaMask : Int, transferType : Int, isAlphaPremultiplied : Bool) : Void;
+	@:overload @:public public function new(colorSpace : java.awt.color.ColorSpace, redMask : Int, greenMask : Int, blueMask : Int, alphaMask : Int, transferType : Int, isAlphaPremultiplied : Bool) : Void;
 	
 	
 }
 @:native('javax$imageio$ImageTypeSpecifier$Interleaved') @:internal extern class ImageTypeSpecifier_Interleaved extends javax.imageio.ImageTypeSpecifier
 {
-	@:overload public function new(colorSpace : java.awt.color.ColorSpace, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : Void;
+	@:overload @:public public function new(colorSpace : java.awt.color.ColorSpace, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : Void;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }
 @:native('javax$imageio$ImageTypeSpecifier$Banded') @:internal extern class ImageTypeSpecifier_Banded extends javax.imageio.ImageTypeSpecifier
 {
-	@:overload public function new(colorSpace : java.awt.color.ColorSpace, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : Void;
+	@:overload @:public public function new(colorSpace : java.awt.color.ColorSpace, bankIndices : java.NativeArray<Int>, bandOffsets : java.NativeArray<Int>, dataType : Int, hasAlpha : Bool, isAlphaPremultiplied : Bool) : Void;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload @:public override public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	
 }
 @:native('javax$imageio$ImageTypeSpecifier$Grayscale') @:internal extern class ImageTypeSpecifier_Grayscale extends javax.imageio.ImageTypeSpecifier
 {
-	@:overload public function new(bits : Int, dataType : Int, isSigned : Bool, hasAlpha : Bool, isAlphaPremultiplied : Bool) : Void;
+	@:overload @:public public function new(bits : Int, dataType : Int, isSigned : Bool, hasAlpha : Bool, isAlphaPremultiplied : Bool) : Void;
 	
 	
 }
 @:native('javax$imageio$ImageTypeSpecifier$Indexed') @:internal extern class ImageTypeSpecifier_Indexed extends javax.imageio.ImageTypeSpecifier
 {
-	@:overload public function new(redLUT : java.NativeArray<java.StdTypes.Int8>, greenLUT : java.NativeArray<java.StdTypes.Int8>, blueLUT : java.NativeArray<java.StdTypes.Int8>, alphaLUT : java.NativeArray<java.StdTypes.Int8>, bits : Int, dataType : Int) : Void;
+	@:overload @:public public function new(redLUT : java.NativeArray<java.StdTypes.Int8>, greenLUT : java.NativeArray<java.StdTypes.Int8>, blueLUT : java.NativeArray<java.StdTypes.Int8>, alphaLUT : java.NativeArray<java.StdTypes.Int8>, bits : Int, dataType : Int) : Void;
 	
 	
 }

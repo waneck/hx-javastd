@@ -37,7 +37,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 
 	* @xsl.usage general
 	*/
-	public static var EXSL_URI(default, null) : String;
+	@:public @:static @:final public static var EXSL_URI(default, null) : String;
 	
 	/**
 	* The dyn:max function calculates the maximum value for the nodes passed as
@@ -72,7 +72,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The maximum evaluation value
 	*/
-	@:overload public static function max(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : Float;
+	@:overload @:public @:static public static function max(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : Float;
 	
 	/**
 	* The dyn:min function calculates the minimum value for the nodes passed as the
@@ -107,7 +107,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The minimum evaluation value
 	*/
-	@:overload public static function min(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : Float;
+	@:overload @:public @:static public static function min(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : Float;
 	
 	/**
 	* The dyn:sum function calculates the sum for the nodes passed as the first argument,
@@ -142,7 +142,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The sum of the evaluation value on each node
 	*/
-	@:overload public static function sum(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : Float;
+	@:overload @:public @:static public static function sum(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : Float;
 	
 	/**
 	* The dyn:map function evaluates the expression passed as the second argument for
@@ -200,7 +200,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The node set after evaluation
 	*/
-	@:overload public static function map(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function map(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* The dyn:evaluate function evaluates a string as an XPath expression and returns
@@ -218,7 +218,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The evaluation result
 	*/
-	@:overload public static function evaluate(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, xpathExpr : String) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public @:static public static function evaluate(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, xpathExpr : String) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* The dyn:closure function creates a node set resulting from transitive closure of
@@ -263,7 +263,7 @@ extern class ExsltDynamic extends com.sun.org.apache.xalan.internal.lib.ExsltBas
 	*
 	* @return The node set after evaluation
 	*/
-	@:overload public static function closure(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : org.w3c.dom.NodeList;
+	@:overload @:public @:static public static function closure(myContext : com.sun.org.apache.xalan.internal.extensions.ExpressionContext, nl : org.w3c.dom.NodeList, expr : String) : org.w3c.dom.NodeList;
 	
 	
 }

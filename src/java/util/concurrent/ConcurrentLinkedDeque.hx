@@ -37,7 +37,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	/**
 	* Constructs an empty deque.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a deque initially containing the elements of
@@ -48,7 +48,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* Inserts the specified element at the front of this deque.
@@ -57,7 +57,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function addFirst(e : E) : Void;
+	@:overload @:public public function addFirst(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the end of this deque.
@@ -68,7 +68,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function addLast(e : E) : Void;
+	@:overload @:public public function addLast(e : E) : Void;
 	
 	/**
 	* Inserts the specified element at the front of this deque.
@@ -77,7 +77,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} (as specified by {@link Deque#offerFirst})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offerFirst(e : E) : Bool;
+	@:overload @:public public function offerFirst(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the end of this deque.
@@ -88,35 +88,35 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} (as specified by {@link Deque#offerLast})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offerLast(e : E) : Bool;
+	@:overload @:public public function offerLast(e : E) : Bool;
 	
-	@:overload public function peekFirst() : E;
+	@:overload @:public public function peekFirst() : E;
 	
-	@:overload public function peekLast() : E;
-	
-	/**
-	* @throws NoSuchElementException {@inheritDoc}
-	*/
-	@:overload public function getFirst() : E;
+	@:overload @:public public function peekLast() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function getLast() : E;
-	
-	@:overload public function pollFirst() : E;
-	
-	@:overload public function pollLast() : E;
+	@:overload @:public public function getFirst() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function removeFirst() : E;
+	@:overload @:public public function getLast() : E;
+	
+	@:overload @:public public function pollFirst() : E;
+	
+	@:overload @:public public function pollLast() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function removeLast() : E;
+	@:overload @:public public function removeFirst() : E;
+	
+	/**
+	* @throws NoSuchElementException {@inheritDoc}
+	*/
+	@:overload @:public public function removeLast() : E;
 	
 	/**
 	* Inserts the specified element at the tail of this deque.
@@ -125,7 +125,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} (as specified by {@link Queue#offer})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function offer(e : E) : Bool;
+	@:overload @:public public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this deque.
@@ -135,19 +135,19 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} (as specified by {@link Collection#add})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
-	@:overload public function poll() : E;
+	@:overload @:public public function poll() : E;
 	
-	@:overload public function remove() : E;
+	@:overload @:public public function remove() : E;
 	
-	@:overload public function peek() : E;
+	@:overload @:public public function peek() : E;
 	
-	@:overload public function element() : E;
+	@:overload @:public public function element() : E;
 	
-	@:overload public function push(e : E) : Void;
+	@:overload @:public public function push(e : E) : Void;
 	
-	@:overload public function pop() : E;
+	@:overload @:public public function pop() : E;
 	
 	/**
 	* Removes the first element {@code e} such that
@@ -158,7 +158,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} if the deque contained the specified element
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function removeFirstOccurrence(o : Dynamic) : Bool;
+	@:overload @:public public function removeFirstOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Removes the last element {@code e} such that
@@ -169,7 +169,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} if the deque contained the specified element
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload public function removeLastOccurrence(o : Dynamic) : Bool;
+	@:overload @:public public function removeLastOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this deque contains at least one
@@ -178,14 +178,14 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @param o element whose presence in this deque is to be tested
 	* @return {@code true} if this deque contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this collection contains no elements.
 	*
 	* @return {@code true} if this collection contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns the number of elements in this deque.  If this deque
@@ -203,7 +203,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*
 	* @return the number of elements in this deque
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Removes the first element {@code e} such that
@@ -214,7 +214,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	* @return {@code true} if the deque contained the specified element
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -228,12 +228,12 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*         of its elements are null
 	* @throws IllegalArgumentException if the collection is this deque
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes all of the elements from this deque.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns an array containing all of the elements in this deque, in
@@ -248,7 +248,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*
 	* @return an array containing all of the elements in this deque
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this deque,
@@ -288,7 +288,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*         this deque
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Returns an iterator over the elements in this deque in proper sequence.
@@ -303,7 +303,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*
 	* @return an iterator over the elements in this deque in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an iterator over the elements in this deque in reverse
@@ -319,7 +319,7 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	*
 	* @return an iterator over the elements in this deque in reverse order
 	*/
-	@:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -329,11 +329,11 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 }
 @:native('java$util$concurrent$ConcurrentLinkedDeque$AbstractItr') @:internal extern class ConcurrentLinkedDeque_AbstractItr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

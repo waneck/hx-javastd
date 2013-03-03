@@ -48,7 +48,7 @@ extern class OtherName implements sun.security.x509.GeneralNameInterface
 	* @param value the DER-encoded value of the OtherName
 	* @throws IOException on error
 	*/
-	@:overload public function new(oid : sun.security.util.ObjectIdentifier, value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(oid : sun.security.util.ObjectIdentifier, value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Create the OtherName object from the passed encoded Der value.
@@ -56,22 +56,22 @@ extern class OtherName implements sun.security.x509.GeneralNameInterface
 	* @param derValue the encoded DER OtherName.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Get ObjectIdentifier
 	*/
-	@:overload public function getOID() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getOID() : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* Get name value
 	*/
-	@:overload public function getNameValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getNameValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return the type of the GeneralName.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Encode the Other name into the DerOutputStream.
@@ -79,26 +79,26 @@ extern class OtherName implements sun.security.x509.GeneralNameInterface
 	* @param out the DER stream to encode the Other-Name to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Compares this name with another, for equality.
 	*
 	* @return true iff the names are identical.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this OtherName.
 	*
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Convert the name into user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Return type of constraint inputName places on this name:<ul>
@@ -119,7 +119,7 @@ extern class OtherName implements sun.security.x509.GeneralNameInterface
 	* @throws UnsupportedOperationException if name is same type, but
 	*         comparison operations are not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
+	@:overload @:public public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining
@@ -128,7 +128,7 @@ extern class OtherName implements sun.security.x509.GeneralNameInterface
 	* @returns distance of name from root
 	* @throws UnsupportedOperationException if not supported for this name type
 	*/
-	@:overload public function subtreeDepth() : Int;
+	@:overload @:public public function subtreeDepth() : Int;
 	
 	
 }

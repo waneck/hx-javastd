@@ -43,7 +43,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param memberDetailsTree the content tree representing member details
 	* @return content tree for the field details header
 	*/
-	@:overload public function getFieldDetailsTreeHeader(classDoc : com.sun.javadoc.ClassDoc, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getFieldDetailsTreeHeader(classDoc : com.sun.javadoc.ClassDoc, memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the field documentation tree header.
@@ -52,7 +52,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param fieldDetailsTree the content tree representing field details
 	* @return content tree for the field documentation header
 	*/
-	@:overload public function getFieldDocTreeHeader(field : com.sun.javadoc.MethodDoc, fieldDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getFieldDocTreeHeader(field : com.sun.javadoc.MethodDoc, fieldDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the signature for the given field.
@@ -60,7 +60,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field being documented
 	* @return content tree for the field signature
 	*/
-	@:overload public function getSignature(field : com.sun.javadoc.MethodDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getSignature(field : com.sun.javadoc.MethodDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the deprecated output for the given field.
@@ -68,7 +68,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field being documented
 	* @param fieldDocTree content tree to which the deprecated information will be added
 	*/
-	@:overload public function addDeprecated(field : com.sun.javadoc.MethodDoc, fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDeprecated(field : com.sun.javadoc.MethodDoc, fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the comments for the given field.
@@ -76,7 +76,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field being documented
 	* @param fieldDocTree the content tree to which the comments will be added
 	*/
-	@:overload public function addComments(field : com.sun.javadoc.MethodDoc, fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addComments(field : com.sun.javadoc.MethodDoc, fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the tags for the given field.
@@ -84,7 +84,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param field the field being documented
 	* @param fieldDocTree the content tree to which the tags will be added
 	*/
-	@:overload public function addTags(field : com.sun.javadoc.MethodDoc, fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addTags(field : com.sun.javadoc.MethodDoc, fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get the field details tree.
@@ -92,7 +92,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param memberDetailsTree the content tree representing member details
 	* @return content tree for the field details
 	*/
-	@:overload public function getFieldDetails(memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getFieldDetails(memberDetailsTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the field documentation.
@@ -101,12 +101,12 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param isLastContent true if the content to be added is the last content
 	* @return content tree for the field documentation
 	*/
-	@:overload public function getFieldDoc(fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content, isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload @:public public function getFieldDoc(fieldDocTree : com.sun.tools.doclets.internal.toolkit.Content, isLastContent : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Close the writer.
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

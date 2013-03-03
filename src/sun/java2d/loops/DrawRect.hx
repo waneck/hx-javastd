@@ -34,34 +34,34 @@ extern class DrawRect extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	public static var methodSignature(default, null) : String;
+	@:public @:final @:static public static var methodSignature(default, null) : String;
 	
-	public static var primTypeID(default, null) : Int;
+	@:public @:final @:static public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawRect;
+	@:overload @:public @:static public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawRect;
 	
-	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	*   All DrawRect implementors must have this invoker method
 	*/
-	@:overload @:native public function new(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, x1 : Int, y1 : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:native public function new(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, x1 : Int, y1 : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }
 @:native('sun$java2d$loops$DrawRect$TraceDrawRect') @:internal extern class DrawRect_TraceDrawRect extends sun.java2d.loops.DrawRect
 {
-	@:overload public function new(target : sun.java2d.loops.DrawRect) : Void;
+	@:overload @:public public function new(target : sun.java2d.loops.DrawRect) : Void;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function DrawRect(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, x1 : Int, y1 : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function DrawRect(sg2d : sun.java2d.SunGraphics2D, dest : sun.java2d.SurfaceData, x1 : Int, y1 : Int, w : Int, h : Int) : Void;
 	
 	
 }

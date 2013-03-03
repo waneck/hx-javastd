@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 */
 @:internal extern class DomHandlerEx implements javax.xml.bind.annotation.DomHandler<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation, com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl>
 {
-	@:overload public function createUnmarshaller(errorHandler : javax.xml.bind.ValidationEventHandler) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl;
+	@:overload @:public public function createUnmarshaller(errorHandler : javax.xml.bind.ValidationEventHandler) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl;
 	
-	@:overload public function getElement(r : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation;
+	@:overload @:public public function getElement(r : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation;
 	
-	@:overload public function marshal(domAndLocation : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation, errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.Source;
+	@:overload @:public public function marshal(domAndLocation : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation, errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.Source;
 	
 	
 }
@@ -40,11 +40,11 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 */
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$DomHandlerEx$DomAndLocation') extern class DomHandlerEx_DomAndLocation
 {
-	public var element(default, null) : org.w3c.dom.Element;
+	@:public @:final public var element(default, null) : org.w3c.dom.Element;
 	
-	public var loc(default, null) : org.xml.sax.Locator;
+	@:public @:final public var loc(default, null) : org.xml.sax.Locator;
 	
-	@:overload public function new(element : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, loc : org.xml.sax.Locator) : Void;
 	
 	
 }

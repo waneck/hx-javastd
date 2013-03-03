@@ -25,9 +25,9 @@ package com.sun.xml.internal.messaging.saaj.soap;
 */
 extern class ImageDataContentHandler extends java.awt.Component implements javax.activation.DataContentHandler
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns an array of DataFlavor objects indicating the flavors the
@@ -37,7 +37,7 @@ extern class ImageDataContentHandler extends java.awt.Component implements javax
 	*
 	* @return The DataFlavors.
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns an object which represents the data to be transferred.
@@ -48,7 +48,7 @@ extern class ImageDataContentHandler extends java.awt.Component implements javax
 	* @param ds The DataSource representing the data to be converted.
 	* @return The constructed Object.
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor, ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Return an object representing the data in its most preferred form.
@@ -58,7 +58,7 @@ extern class ImageDataContentHandler extends java.awt.Component implements javax
 	* @param ds The DataSource representing the data to be converted.
 	* @return The constructed Object.
 	*/
-	@:overload public function getContent(ds : javax.activation.DataSource) : Dynamic;
+	@:overload @:public public function getContent(ds : javax.activation.DataSource) : Dynamic;
 	
 	/**
 	* Convert the object to a byte stream of the specified MIME type
@@ -69,7 +69,7 @@ extern class ImageDataContentHandler extends java.awt.Component implements javax
 	* @param os    The output stream into which to write the converted
 	*          byte stream.
 	*/
-	@:overload public function writeTo(obj : Dynamic, type : String, os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(obj : Dynamic, type : String, os : java.io.OutputStream) : Void;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface XPathResult
 	* A code representing the type of this result, as defined by the type
 	* constants.
 	*/
-	@:overload public function getResultType() : java.StdTypes.Int16;
+	@:overload @:public public function getResultType() : java.StdTypes.Int16;
 	
 	/**
 	* The value of this number result. If the native double type of the DOM
@@ -56,7 +56,7 @@ extern interface XPathResult
 	*   TYPE_ERR: raised if <code>resultType</code> is not
 	*   <code>NUMBER_TYPE</code>.
 	*/
-	@:overload public function getNumberValue() : Float;
+	@:overload @:public public function getNumberValue() : Float;
 	
 	/**
 	* The value of this string result.
@@ -64,7 +64,7 @@ extern interface XPathResult
 	*   TYPE_ERR: raised if <code>resultType</code> is not
 	*   <code>STRING_TYPE</code>.
 	*/
-	@:overload public function getStringValue() : String;
+	@:overload @:public public function getStringValue() : String;
 	
 	/**
 	* The value of this boolean result.
@@ -72,7 +72,7 @@ extern interface XPathResult
 	*   TYPE_ERR: raised if <code>resultType</code> is not
 	*   <code>BOOLEAN_TYPE</code>.
 	*/
-	@:overload public function getBooleanValue() : Bool;
+	@:overload @:public public function getBooleanValue() : Bool;
 	
 	/**
 	* The value of this single node result, which may be <code>null</code>.
@@ -81,7 +81,7 @@ extern interface XPathResult
 	*   <code>ANY_UNORDERED_NODE_TYPE</code> or
 	*   <code>FIRST_ORDERED_NODE_TYPE</code>.
 	*/
-	@:overload public function getSingleNodeValue() : org.w3c.dom.Node;
+	@:overload @:public public function getSingleNodeValue() : org.w3c.dom.Node;
 	
 	/**
 	* Signifies that the iterator has become invalid. True if
@@ -89,7 +89,7 @@ extern interface XPathResult
 	* or <code>ORDERED_NODE_ITERATOR_TYPE</code> and the document has been
 	* modified since this result was returned.
 	*/
-	@:overload public function getInvalidIteratorState() : Bool;
+	@:overload @:public public function getInvalidIteratorState() : Bool;
 	
 	/**
 	* The number of nodes in the result snapshot. Valid values for
@@ -100,7 +100,7 @@ extern interface XPathResult
 	*   <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> or
 	*   <code>ORDERED_NODE_SNAPSHOT_TYPE</code>.
 	*/
-	@:overload public function getSnapshotLength() : Int;
+	@:overload @:public public function getSnapshotLength() : Int;
 	
 	/**
 	* Iterates and returns the next node from the node set or
@@ -114,7 +114,7 @@ extern interface XPathResult
 	*   INVALID_STATE_ERR: The document has been mutated since the result was
 	*   returned.
 	*/
-	@:overload public function iterateNext() : org.w3c.dom.Node;
+	@:overload @:public public function iterateNext() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the <code>index</code>th item in the snapshot collection. If
@@ -131,7 +131,7 @@ extern interface XPathResult
 	*   <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> or
 	*   <code>ORDERED_NODE_SNAPSHOT_TYPE</code>.
 	*/
-	@:overload public function snapshotItem(index : Int) : org.w3c.dom.Node;
+	@:overload @:public public function snapshotItem(index : Int) : org.w3c.dom.Node;
 	
 	
 }

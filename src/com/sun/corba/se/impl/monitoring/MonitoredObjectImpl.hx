@@ -25,35 +25,35 @@ package com.sun.corba.se.impl.monitoring;
 */
 extern class MonitoredObjectImpl implements com.sun.corba.se.spi.monitoring.MonitoredObject
 {
-	@:overload public function getChild(name : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public public function getChild(name : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
-	@:overload public function getChildren() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getChildren() : java.util.Collection<Dynamic>;
 	
-	@:overload public function addChild(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
+	@:overload @:public public function addChild(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
 	
-	@:overload public function removeChild(name : String) : Void;
+	@:overload @:public public function removeChild(name : String) : Void;
 	
-	@:overload @:synchronized public function getParent() : com.sun.corba.se.spi.monitoring.MonitoredObject;
+	@:overload @:public @:synchronized public function getParent() : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
-	@:overload @:synchronized public function setParent(p : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
+	@:overload @:public @:synchronized public function setParent(p : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
 	
-	@:overload public function getAttribute(name : String) : com.sun.corba.se.spi.monitoring.MonitoredAttribute;
+	@:overload @:public public function getAttribute(name : String) : com.sun.corba.se.spi.monitoring.MonitoredAttribute;
 	
-	@:overload public function getAttributes() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Collection<Dynamic>;
 	
-	@:overload public function addAttribute(value : com.sun.corba.se.spi.monitoring.MonitoredAttribute) : Void;
+	@:overload @:public public function addAttribute(value : com.sun.corba.se.spi.monitoring.MonitoredAttribute) : Void;
 	
-	@:overload public function removeAttribute(name : String) : Void;
+	@:overload @:public public function removeAttribute(name : String) : Void;
 	
 	/**
 	* calls clearState() on all the registered children MonitoredObjects and
 	* MonitoredAttributes.
 	*/
-	@:overload public function clearState() : Void;
+	@:overload @:public public function clearState() : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getDescription() : String;
+	@:overload @:public public function getDescription() : String;
 	
 	
 }

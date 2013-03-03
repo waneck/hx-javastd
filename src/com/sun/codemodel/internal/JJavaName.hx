@@ -28,17 +28,17 @@ extern class JJavaName
 	/**
 	* Checks if a given string is usable as a Java identifier.
 	*/
-	@:overload public static function isJavaIdentifier(s : String) : Bool;
+	@:overload @:public @:static public static function isJavaIdentifier(s : String) : Bool;
 	
 	/**
 	* Checks if the given string is a valid fully qualified name.
 	*/
-	@:overload public static function isFullyQualifiedClassName(s : String) : Bool;
+	@:overload @:public @:static public static function isFullyQualifiedClassName(s : String) : Bool;
 	
 	/**
 	* Checks if the given string is a valid Java package name.
 	*/
-	@:overload public static function isJavaPackageName(s : String) : Bool;
+	@:overload @:public @:static public static function isJavaPackageName(s : String) : Bool;
 	
 	/**
 	* <b>Experimental API:</b> converts an English word into a plural form.
@@ -60,13 +60,13 @@ extern class JJavaName
 	* @return
 	*      always non-null.
 	*/
-	@:overload public static function getPluralForm(word : String) : String;
+	@:overload @:public @:static public static function getPluralForm(word : String) : String;
 	
 	
 }
 @:native('com$sun$codemodel$internal$JJavaName$Entry') @:internal extern class JJavaName_Entry
 {
-	@:overload public function new(pattern : String, replacement : String) : Void;
+	@:overload @:public public function new(pattern : String, replacement : String) : Void;
 	
 	
 }

@@ -29,152 +29,152 @@ extern class XUtilConstants
 	* Bitmask returned by XParseGeometry().  Each bit tells if the corresponding
 	* value (x, y, width, height) was found in the parsed string.
 	*/
-	public static var NoValue(default, null) : Int;
+	@:public @:static @:final public static var NoValue(default, null) : Int;
 	
-	public static var XValue(default, null) : Int;
+	@:public @:static @:final public static var XValue(default, null) : Int;
 	
-	public static var YValue(default, null) : Int;
+	@:public @:static @:final public static var YValue(default, null) : Int;
 	
-	public static var WidthValue(default, null) : Int;
+	@:public @:static @:final public static var WidthValue(default, null) : Int;
 	
-	public static var HeightValue(default, null) : Int;
+	@:public @:static @:final public static var HeightValue(default, null) : Int;
 	
-	public static var AllValues(default, null) : Int;
+	@:public @:static @:final public static var AllValues(default, null) : Int;
 	
-	public static var XNegative(default, null) : Int;
+	@:public @:static @:final public static var XNegative(default, null) : Int;
 	
-	public static var YNegative(default, null) : Int;
+	@:public @:static @:final public static var YNegative(default, null) : Int;
 	
 	/* flags argument in size hints */
-	public static var USPosition(default, null) : haxe.Int64;
+	@:public @:static @:final public static var USPosition(default, null) : haxe.Int64;
 	
 	/* user specified x, y */
-	public static var USSize(default, null) : haxe.Int64;
+	@:public @:static @:final public static var USSize(default, null) : haxe.Int64;
 	
 	/* user specified width, height */
-	public static var PPosition(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PPosition(default, null) : haxe.Int64;
 	
 	/* program specified position */
-	public static var PSize(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PSize(default, null) : haxe.Int64;
 	
 	/* program specified size */
-	public static var PMinSize(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PMinSize(default, null) : haxe.Int64;
 	
 	/* program specified minimum size */
-	public static var PMaxSize(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PMaxSize(default, null) : haxe.Int64;
 	
 	/* program specified maximum size */
-	public static var PResizeInc(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PResizeInc(default, null) : haxe.Int64;
 	
 	/* program specified resize increments */
-	public static var PAspect(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PAspect(default, null) : haxe.Int64;
 	
 	/* program specified min and max aspect ratios */
-	public static var PBaseSize(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PBaseSize(default, null) : haxe.Int64;
 	
 	/* program specified base for incrementing */
-	public static var PWinGravity(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PWinGravity(default, null) : haxe.Int64;
 	
 	/* obsolete */
-	public static var PAllHints(default, null) : haxe.Int64;
+	@:public @:static @:final public static var PAllHints(default, null) : haxe.Int64;
 	
 	/* definition for flags of XWMHints */
-	public static var InputHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var InputHint(default, null) : haxe.Int64;
 	
-	public static var StateHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var StateHint(default, null) : haxe.Int64;
 	
-	public static var IconPixmapHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var IconPixmapHint(default, null) : haxe.Int64;
 	
-	public static var IconWindowHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var IconWindowHint(default, null) : haxe.Int64;
 	
-	public static var IconPositionHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var IconPositionHint(default, null) : haxe.Int64;
 	
-	public static var IconMaskHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var IconMaskHint(default, null) : haxe.Int64;
 	
-	public static var WindowGroupHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var WindowGroupHint(default, null) : haxe.Int64;
 	
-	public static var AllHints(default, null) : haxe.Int64;
+	@:public @:static @:final public static var AllHints(default, null) : haxe.Int64;
 	
-	public static var XUrgencyHint(default, null) : haxe.Int64;
+	@:public @:static @:final public static var XUrgencyHint(default, null) : haxe.Int64;
 	
 	/* definitions for initial window state */
-	public static var WithdrawnState(default, null) : Int;
+	@:public @:static @:final public static var WithdrawnState(default, null) : Int;
 	
 	/* for windows that are not mapped */
-	public static var NormalState(default, null) : Int;
+	@:public @:static @:final public static var NormalState(default, null) : Int;
 	
 	/* most applications want to start this way */
-	public static var IconicState(default, null) : Int;
+	@:public @:static @:final public static var IconicState(default, null) : Int;
 	
 	/*
 	* Obsolete states no longer defined by ICCCM
 	*/
-	public static var DontCareState(default, null) : Int;
+	@:public @:static @:final public static var DontCareState(default, null) : Int;
 	
 	/* don't know or care */
-	public static var ZoomState(default, null) : Int;
+	@:public @:static @:final public static var ZoomState(default, null) : Int;
 	
 	/* application believes it is seldom used; some wm's may put it on inactive menu */
-	public static var InactiveState(default, null) : Int;
+	@:public @:static @:final public static var InactiveState(default, null) : Int;
 	
-	public static var XNoMemory(default, null) : Int;
+	@:public @:static @:final public static var XNoMemory(default, null) : Int;
 	
-	public static var XLocaleNotSupported(default, null) : Int;
+	@:public @:static @:final public static var XLocaleNotSupported(default, null) : Int;
 	
-	public static var XConverterNotFound(default, null) : Int;
+	@:public @:static @:final public static var XConverterNotFound(default, null) : Int;
 	
 	/* Return values from XRectInRegion() */
-	public static var RectangleOut(default, null) : Int;
+	@:public @:static @:final public static var RectangleOut(default, null) : Int;
 	
-	public static var RectangleIn(default, null) : Int;
+	@:public @:static @:final public static var RectangleIn(default, null) : Int;
 	
-	public static var RectanglePart(default, null) : Int;
+	@:public @:static @:final public static var RectanglePart(default, null) : Int;
 	
 	/*
 	* Information used by the visual utility routines to find desired visual
 	* type from the many visuals a display may support.
 	*/
-	public static var VisualNoMask(default, null) : Int;
+	@:public @:static @:final public static var VisualNoMask(default, null) : Int;
 	
-	public static var VisualIDMask(default, null) : Int;
+	@:public @:static @:final public static var VisualIDMask(default, null) : Int;
 	
-	public static var VisualScreenMask(default, null) : Int;
+	@:public @:static @:final public static var VisualScreenMask(default, null) : Int;
 	
-	public static var VisualDepthMask(default, null) : Int;
+	@:public @:static @:final public static var VisualDepthMask(default, null) : Int;
 	
-	public static var VisualClassMask(default, null) : Int;
+	@:public @:static @:final public static var VisualClassMask(default, null) : Int;
 	
-	public static var VisualRedMaskMask(default, null) : Int;
+	@:public @:static @:final public static var VisualRedMaskMask(default, null) : Int;
 	
-	public static var VisualGreenMaskMask(default, null) : Int;
+	@:public @:static @:final public static var VisualGreenMaskMask(default, null) : Int;
 	
-	public static var VisualBlueMaskMask(default, null) : Int;
+	@:public @:static @:final public static var VisualBlueMaskMask(default, null) : Int;
 	
-	public static var VisualColormapSizeMask(default, null) : Int;
+	@:public @:static @:final public static var VisualColormapSizeMask(default, null) : Int;
 	
-	public static var VisualBitsPerRGBMask(default, null) : Int;
+	@:public @:static @:final public static var VisualBitsPerRGBMask(default, null) : Int;
 	
-	public static var VisualAllMask(default, null) : Int;
+	@:public @:static @:final public static var VisualAllMask(default, null) : Int;
 	
 	/*
 	* return codes for XReadBitmapFile and XWriteBitmapFile
 	*/
-	public static var BitmapSuccess(default, null) : Int;
+	@:public @:static @:final public static var BitmapSuccess(default, null) : Int;
 	
-	public static var BitmapOpenFailed(default, null) : Int;
+	@:public @:static @:final public static var BitmapOpenFailed(default, null) : Int;
 	
-	public static var BitmapFileInvalid(default, null) : Int;
+	@:public @:static @:final public static var BitmapFileInvalid(default, null) : Int;
 	
-	public static var BitmapNoMemory(default, null) : Int;
+	@:public @:static @:final public static var BitmapNoMemory(default, null) : Int;
 	
 	/* Associative lookup table return codes */
-	public static var XCSUCCESS(default, null) : Int;
+	@:public @:static @:final public static var XCSUCCESS(default, null) : Int;
 	
 	/* No error. */
-	public static var XCNOMEM(default, null) : Int;
+	@:public @:static @:final public static var XCNOMEM(default, null) : Int;
 	
 	/* Out of memory */
-	public static var XCNOENT(default, null) : Int;
+	@:public @:static @:final public static var XCNOENT(default, null) : Int;
 	
 	
 }

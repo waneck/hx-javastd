@@ -25,13 +25,13 @@ package sun.invoke.anon;
 */
 extern class AnonymousClassLoader
 {
-	@:overload public static function make(unsafe : sun.misc.Unsafe, hostClass : Class<Dynamic>) : sun.invoke.anon.AnonymousClassLoader;
+	@:overload @:public @:static public static function make(unsafe : sun.misc.Unsafe, hostClass : Class<Dynamic>) : sun.invoke.anon.AnonymousClassLoader;
 	
-	@:overload public function loadClass(classFile : java.NativeArray<java.StdTypes.Int8>) : Class<Dynamic>;
+	@:overload @:public public function loadClass(classFile : java.NativeArray<java.StdTypes.Int8>) : Class<Dynamic>;
 	
-	@:overload public function loadClass(classPatch : sun.invoke.anon.ConstantPoolPatch) : Class<Dynamic>;
+	@:overload @:public public function loadClass(classPatch : sun.invoke.anon.ConstantPoolPatch) : Class<Dynamic>;
 	
-	@:overload public static function readClassFile(templateClass : Class<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function readClassFile(templateClass : Class<Dynamic>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -67,53 +67,53 @@ package com.sun.xml.internal.ws.org.objectweb.asm;
 */
 @:internal extern class MethodWriter implements com.sun.xml.internal.ws.org.objectweb.asm.MethodVisitor
 {
-	@:overload public function visitAnnotationDefault() : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitAnnotationDefault() : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitAnnotation(desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitAnnotation(desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitParameterAnnotation(parameter : Int, desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
+	@:overload @:public public function visitParameterAnnotation(parameter : Int, desc : String, visible : Bool) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
-	@:overload public function visitAttribute(attr : com.sun.xml.internal.ws.org.objectweb.asm.Attribute) : Void;
+	@:overload @:public public function visitAttribute(attr : com.sun.xml.internal.ws.org.objectweb.asm.Attribute) : Void;
 	
-	@:overload public function visitCode() : Void;
+	@:overload @:public public function visitCode() : Void;
 	
-	@:overload public function visitFrame(type : Int, nLocal : Int, local : java.NativeArray<Dynamic>, nStack : Int, stack : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function visitFrame(type : Int, nLocal : Int, local : java.NativeArray<Dynamic>, nStack : Int, stack : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function visitInsn(opcode : Int) : Void;
+	@:overload @:public public function visitInsn(opcode : Int) : Void;
 	
-	@:overload public function visitIntInsn(opcode : Int, operand : Int) : Void;
+	@:overload @:public public function visitIntInsn(opcode : Int, operand : Int) : Void;
 	
-	@:overload public function visitVarInsn(opcode : Int, _var : Int) : Void;
+	@:overload @:public public function visitVarInsn(opcode : Int, _var : Int) : Void;
 	
-	@:overload public function visitTypeInsn(opcode : Int, type : String) : Void;
+	@:overload @:public public function visitTypeInsn(opcode : Int, type : String) : Void;
 	
-	@:overload public function visitFieldInsn(opcode : Int, owner : String, name : String, desc : String) : Void;
+	@:overload @:public public function visitFieldInsn(opcode : Int, owner : String, name : String, desc : String) : Void;
 	
-	@:overload public function visitMethodInsn(opcode : Int, owner : String, name : String, desc : String) : Void;
+	@:overload @:public public function visitMethodInsn(opcode : Int, owner : String, name : String, desc : String) : Void;
 	
-	@:overload public function visitJumpInsn(opcode : Int, label : com.sun.xml.internal.ws.org.objectweb.asm.Label) : Void;
+	@:overload @:public public function visitJumpInsn(opcode : Int, label : com.sun.xml.internal.ws.org.objectweb.asm.Label) : Void;
 	
-	@:overload public function visitLabel(label : com.sun.xml.internal.ws.org.objectweb.asm.Label) : Void;
+	@:overload @:public public function visitLabel(label : com.sun.xml.internal.ws.org.objectweb.asm.Label) : Void;
 	
-	@:overload public function visitLdcInsn(cst : Dynamic) : Void;
+	@:overload @:public public function visitLdcInsn(cst : Dynamic) : Void;
 	
-	@:overload public function visitIincInsn(_var : Int, increment : Int) : Void;
+	@:overload @:public public function visitIincInsn(_var : Int, increment : Int) : Void;
 	
-	@:overload public function visitTableSwitchInsn(min : Int, max : Int, dflt : com.sun.xml.internal.ws.org.objectweb.asm.Label, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : Void;
+	@:overload @:public public function visitTableSwitchInsn(min : Int, max : Int, dflt : com.sun.xml.internal.ws.org.objectweb.asm.Label, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : Void;
 	
-	@:overload public function visitLookupSwitchInsn(dflt : com.sun.xml.internal.ws.org.objectweb.asm.Label, keys : java.NativeArray<Int>, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : Void;
+	@:overload @:public public function visitLookupSwitchInsn(dflt : com.sun.xml.internal.ws.org.objectweb.asm.Label, keys : java.NativeArray<Int>, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : Void;
 	
-	@:overload public function visitMultiANewArrayInsn(desc : String, dims : Int) : Void;
+	@:overload @:public public function visitMultiANewArrayInsn(desc : String, dims : Int) : Void;
 	
-	@:overload public function visitTryCatchBlock(start : com.sun.xml.internal.ws.org.objectweb.asm.Label, end : com.sun.xml.internal.ws.org.objectweb.asm.Label, handler : com.sun.xml.internal.ws.org.objectweb.asm.Label, type : String) : Void;
+	@:overload @:public public function visitTryCatchBlock(start : com.sun.xml.internal.ws.org.objectweb.asm.Label, end : com.sun.xml.internal.ws.org.objectweb.asm.Label, handler : com.sun.xml.internal.ws.org.objectweb.asm.Label, type : String) : Void;
 	
-	@:overload public function visitLocalVariable(name : String, desc : String, signature : String, start : com.sun.xml.internal.ws.org.objectweb.asm.Label, end : com.sun.xml.internal.ws.org.objectweb.asm.Label, index : Int) : Void;
+	@:overload @:public public function visitLocalVariable(name : String, desc : String, signature : String, start : com.sun.xml.internal.ws.org.objectweb.asm.Label, end : com.sun.xml.internal.ws.org.objectweb.asm.Label, index : Int) : Void;
 	
-	@:overload public function visitLineNumber(line : Int, start : com.sun.xml.internal.ws.org.objectweb.asm.Label) : Void;
+	@:overload @:public public function visitLineNumber(line : Int, start : com.sun.xml.internal.ws.org.objectweb.asm.Label) : Void;
 	
-	@:overload public function visitMaxs(maxStack : Int, maxLocals : Int) : Void;
+	@:overload @:public public function visitMaxs(maxStack : Int, maxLocals : Int) : Void;
 	
-	@:overload public function visitEnd() : Void;
+	@:overload @:public public function visitEnd() : Void;
 	
 	
 }

@@ -65,7 +65,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @see SSLParameters#getAlgorithmConstraints
 	* @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
 	*/
-	@:overload @:abstract public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
+	@:overload @:public @:abstract public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -112,7 +112,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @see SSLParameters#getAlgorithmConstraints
 	* @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
 	*/
-	@:overload @:abstract public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
+	@:overload @:public @:abstract public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, socket : java.net.Socket) : Void;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -152,7 +152,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @see SSLParameters#getAlgorithmConstraints
 	* @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
 	*/
-	@:overload @:abstract public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
+	@:overload @:public @:abstract public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -197,7 +197,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @see SSLParameters#getAlgorithmConstraints
 	* @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
 	*/
-	@:overload @:abstract public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
+	@:overload @:public @:abstract public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String, engine : javax.net.ssl.SSLEngine) : Void;
 	
 	/**
 	* Return an array of certificate authority certificates
@@ -206,7 +206,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @return a non-null (possibly empty) array of acceptable
 	*          CA issuer certificates.
 	*/
-	@:overload public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public @:public @:public public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -231,7 +231,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @throws CertificateException if the certificate chain is not trusted
 	*         by this TrustManager.
 	*/
-	@:overload public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public @:public @:public public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -251,7 +251,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @throws CertificateException if the certificate chain is not trusted
 	*         by this TrustManager.
 	*/
-	@:overload public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public @:public @:public public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
 	
 }

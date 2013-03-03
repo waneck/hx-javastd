@@ -102,7 +102,7 @@ package javax.swing;
 	* @see JComponent#getInputVerifier
 	*
 	*/
-	@:overload @:abstract public function verify(input : javax.swing.JComponent) : Bool;
+	@:overload @:public @:abstract public function verify(input : javax.swing.JComponent) : Bool;
 	
 	/**
 	* Calls <code>verify(input)</code> to ensure that the input is valid.
@@ -119,7 +119,7 @@ package javax.swing;
 	* @see JComponent#getInputVerifier
 	*
 	*/
-	@:overload public function shouldYieldFocus(input : javax.swing.JComponent) : Bool;
+	@:overload @:public public function shouldYieldFocus(input : javax.swing.JComponent) : Bool;
 	
 	
 }

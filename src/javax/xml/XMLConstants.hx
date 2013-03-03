@@ -47,7 +47,7 @@ package javax.xml;
 	* @see <a href="http://www.w3.org/TR/REC-xml-names/#defaulting">
 	* Namespaces in XML, 5.2 Namespace Defaulting</a>
 	*/
-	public static var NULL_NS_URI(default, null) : String;
+	@:public @:static @:final public static var NULL_NS_URI(default, null) : String;
 	
 	/**
 	* <p>Prefix to use to represent the default XML Namespace.</p>
@@ -58,7 +58,7 @@ package javax.xml;
 	* href="http://www.w3.org/TR/REC-xml-names/#ns-qualnames">
 	* Namespaces in XML, 3. Qualified Names</a>
 	*/
-	public static var DEFAULT_NS_PREFIX(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_NS_PREFIX(default, null) : String;
 	
 	/**
 	* <p>The official XML Namespace name URI.</p>
@@ -70,7 +70,7 @@ package javax.xml;
 	* href="http://www.w3.org/TR/REC-xml-names/#ns-qualnames">
 	* Namespaces in XML, 3. Qualified Names</a>
 	*/
-	public static var XML_NS_URI(default, null) : String;
+	@:public @:static @:final public static var XML_NS_URI(default, null) : String;
 	
 	/**
 	* <p>The official XML Namespace prefix.</p>
@@ -81,7 +81,7 @@ package javax.xml;
 	* href="http://www.w3.org/TR/REC-xml-names/#ns-qualnames">
 	* Namespaces in XML, 3. Qualified Names<</a>
 	*/
-	public static var XML_NS_PREFIX(default, null) : String;
+	@:public @:static @:final public static var XML_NS_PREFIX(default, null) : String;
 	
 	/**
 	* <p>The official XML attribute used for specifying XML Namespace
@@ -98,7 +98,7 @@ package javax.xml;
 	* href="http://www.w3.org/XML/xml-names-19990114-errata">
 	* Namespaces in XML Errata</a>
 	*/
-	public static var XMLNS_ATTRIBUTE_NS_URI(default, null) : String;
+	@:public @:static @:final public static var XMLNS_ATTRIBUTE_NS_URI(default, null) : String;
 	
 	/**
 	* <p>The official XML attribute used for specifying XML Namespace
@@ -112,7 +112,7 @@ package javax.xml;
 	* href="http://www.w3.org/TR/REC-xml-names/#ns-qualnames">
 	* Namespaces in XML, 3. Qualified Names</a>
 	*/
-	public static var XMLNS_ATTRIBUTE(default, null) : String;
+	@:public @:static @:final public static var XMLNS_ATTRIBUTE(default, null) : String;
 	
 	/**
 	* <p>W3C XML Schema Namespace URI.</p>
@@ -124,7 +124,7 @@ package javax.xml;
 	*  XML Schema Part 1:
 	*  Structures, 2.6 Schema-Related Markup in Documents Being Validated</a>
 	*/
-	public static var W3C_XML_SCHEMA_NS_URI(default, null) : String;
+	@:public @:static @:final public static var W3C_XML_SCHEMA_NS_URI(default, null) : String;
 	
 	/**
 	* <p>W3C XML Schema Instance Namespace URI.</p>
@@ -136,7 +136,7 @@ package javax.xml;
 	*  XML Schema Part 1:
 	*  Structures, 2.6 Schema-Related Markup in Documents Being Validated</a>
 	*/
-	public static var W3C_XML_SCHEMA_INSTANCE_NS_URI(default, null) : String;
+	@:public @:static @:final public static var W3C_XML_SCHEMA_INSTANCE_NS_URI(default, null) : String;
 	
 	/**
 	* <p>W3C XPath Datatype Namespace URI.</p>
@@ -145,14 +145,14 @@ package javax.xml;
 	*
 	* @see <a href="http://www.w3.org/TR/xpath-datamodel">XQuery 1.0 and XPath 2.0 Data Model</a>
 	*/
-	public static var W3C_XPATH_DATATYPE_NS_URI(default, null) : String;
+	@:public @:static @:final public static var W3C_XPATH_DATATYPE_NS_URI(default, null) : String;
 	
 	/**
 	* <p>XML Document Type Declaration Namespace URI as an arbitrary value.</p>
 	*
 	* <p>Since not formally defined by any existing standard, arbitrarily define to be "<code>http://www.w3.org/TR/REC-xml</code>".
 	*/
-	public static var XML_DTD_NS_URI(default, null) : String;
+	@:public @:static @:final public static var XML_DTD_NS_URI(default, null) : String;
 	
 	/**
 	* <p>RELAX NG Namespace URI.</p>
@@ -161,7 +161,7 @@ package javax.xml;
 	*
 	* @see <a href="http://relaxng.org/spec-20011203.html">RELAX NG Specification</a>
 	*/
-	public static var RELAXNG_NS_URI(default, null) : String;
+	@:public @:static @:final public static var RELAXNG_NS_URI(default, null) : String;
 	
 	/**
 	* <p>Feature for secure processing.</p>
@@ -177,7 +177,7 @@ package javax.xml;
 	*   </li>
 	* </ul>
 	*/
-	public static var FEATURE_SECURE_PROCESSING(default, null) : String;
+	@:public @:static @:final public static var FEATURE_SECURE_PROCESSING(default, null) : String;
 	
 	
 }

@@ -51,52 +51,52 @@ extern interface HTMLBodyElement extends org.w3c.dom.html.HTMLElement
 	* mouse-button up). See the  alink attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getALink() : String;
+	@:overload @:public public function getALink() : String;
 	
-	@:overload public function setALink(aLink : String) : Void;
+	@:overload @:public public function setALink(aLink : String) : Void;
 	
 	/**
 	*  URI of the background texture tile image. See the  background
 	* attribute definition in HTML 4.0. This attribute is deprecated in HTML
 	* 4.0.
 	*/
-	@:overload public function getBackground() : String;
+	@:overload @:public public function getBackground() : String;
 	
-	@:overload public function setBackground(background : String) : Void;
+	@:overload @:public public function setBackground(background : String) : Void;
 	
 	/**
 	*  Document background color. See the  bgcolor attribute definition in
 	* HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getBgColor() : String;
+	@:overload @:public public function getBgColor() : String;
 	
-	@:overload public function setBgColor(bgColor : String) : Void;
+	@:overload @:public public function setBgColor(bgColor : String) : Void;
 	
 	/**
 	*  Color of links that are not active and unvisited. See the  link
 	* attribute definition in HTML 4.0. This attribute is deprecated in HTML
 	* 4.0.
 	*/
-	@:overload public function getLink() : String;
+	@:overload @:public public function getLink() : String;
 	
-	@:overload public function setLink(link : String) : Void;
+	@:overload @:public public function setLink(link : String) : Void;
 	
 	/**
 	*  Document text color. See the  text attribute definition in HTML 4.0.
 	* This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function setText(text : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	*  Color of links that have been visited by the user. See the  vlink
 	* attribute definition in HTML 4.0. This attribute is deprecated in HTML
 	* 4.0.
 	*/
-	@:overload public function getVLink() : String;
+	@:overload @:public public function getVLink() : String;
 	
-	@:overload public function setVLink(vLink : String) : Void;
+	@:overload @:public public function setVLink(vLink : String) : Void;
 	
 	
 }

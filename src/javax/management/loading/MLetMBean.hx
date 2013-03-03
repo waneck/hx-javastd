@@ -51,7 +51,7 @@ package javax.management.loading;
 	* the m-let text file is not found, a mandatory attribute of the
 	* MLET tag is not specified, the value of url is malformed.
 	*/
-	@:overload public function getMBeansFromURL(url : String) : java.util.Set<Dynamic>;
+	@:overload @:public public function getMBeansFromURL(url : String) : java.util.Set<Dynamic>;
 	
 	/**
 	* Loads a text file containing MLET tags that define the MBeans
@@ -73,7 +73,7 @@ package javax.management.loading;
 	* the m-let text file is not found, a mandatory attribute of the
 	* MLET tag is not specified, the value of url is null.
 	*/
-	@:overload public function getMBeansFromURL(url : java.net.URL) : java.util.Set<Dynamic>;
+	@:overload @:public public function getMBeansFromURL(url : java.net.URL) : java.util.Set<Dynamic>;
 	
 	/**
 	* Appends the specified URL to the list of URLs to search for classes and
@@ -81,7 +81,7 @@ package javax.management.loading;
 	*
 	* @param url the URL to add.
 	*/
-	@:overload public function addURL(url : java.net.URL) : Void;
+	@:overload @:public public function addURL(url : java.net.URL) : Void;
 	
 	/**
 	* Appends the specified URL to the list of URLs to search for classes and
@@ -91,7 +91,7 @@ package javax.management.loading;
 	*
 	* @exception ServiceNotFoundException The specified URL is malformed.
 	*/
-	@:overload public function addURL(url : String) : Void;
+	@:overload @:public public function addURL(url : String) : Void;
 	
 	/**
 	* Returns the search path of URLs for loading classes and resources.
@@ -100,7 +100,7 @@ package javax.management.loading;
 	*
 	* @return the list of URLs.
 	*/
-	@:overload public function getURLs() : java.NativeArray<java.net.URL>;
+	@:overload @:public public function getURLs() : java.NativeArray<java.net.URL>;
 	
 	/** Finds the resource with the given name.
 	* A resource is some data (images, audio, text, etc) that can be accessed by class code in a way that is
@@ -112,7 +112,7 @@ package javax.management.loading;
 	* @return  An URL for reading the resource, or null if the resource could not be found or the caller doesn't have adequate privileges to get the
 	* resource.
 	*/
-	@:overload public function getResource(name : String) : java.net.URL;
+	@:overload @:public public function getResource(name : String) : java.net.URL;
 	
 	/** Returns an input stream for reading the specified resource. The search order is described in the documentation for
 	*  getResource(String).
@@ -122,7 +122,7 @@ package javax.management.loading;
 	* @return An input stream for reading the resource, or null if the resource could not be found
 	*
 	*/
-	@:overload public function getResourceAsStream(name : String) : java.io.InputStream;
+	@:overload @:public public function getResourceAsStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Finds all the resources with the given name. A resource is some
@@ -140,7 +140,7 @@ package javax.management.loading;
 	* @exception IOException if an I/O exception occurs when
 	* searching for resources.
 	*/
-	@:overload public function getResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:overload @:public public function getResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
 	/**
 	* Gets the current directory used by the library loader for
@@ -153,7 +153,7 @@ package javax.management.loading;
 	* @throws UnsupportedOperationException if this implementation
 	* does not support storing native libraries in this way.
 	*/
-	@:overload public function getLibraryDirectory() : String;
+	@:overload @:public public function getLibraryDirectory() : String;
 	
 	/**
 	* Sets the directory used by the library loader for storing
@@ -166,7 +166,7 @@ package javax.management.loading;
 	* @throws UnsupportedOperationException if this implementation
 	* does not support storing native libraries in this way.
 	*/
-	@:overload public function setLibraryDirectory(libdir : String) : Void;
+	@:overload @:public public function setLibraryDirectory(libdir : String) : Void;
 	
 	
 }

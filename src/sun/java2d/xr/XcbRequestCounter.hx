@@ -30,13 +30,13 @@ package sun.java2d.xr;
 */
 extern class XcbRequestCounter
 {
-	@:overload public function new(value : haxe.Int64) : Void;
+	@:overload @:public public function new(value : haxe.Int64) : Void;
 	
-	@:overload public function setValue(value : haxe.Int64) : Void;
+	@:overload @:public public function setValue(value : haxe.Int64) : Void;
 	
-	@:overload public function getValue() : haxe.Int64;
+	@:overload @:public public function getValue() : haxe.Int64;
 	
-	@:overload public function add(v : haxe.Int64) : Void;
+	@:overload @:public public function add(v : haxe.Int64) : Void;
 	
 	
 }

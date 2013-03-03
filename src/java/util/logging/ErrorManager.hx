@@ -38,32 +38,32 @@ extern class ErrorManager
 	* GENERIC_FAILURE is used for failure that don't fit
 	* into one of the other categories.
 	*/
-	public static var GENERIC_FAILURE(default, null) : Int;
+	@:public @:final @:static public static var GENERIC_FAILURE(default, null) : Int;
 	
 	/**
 	* WRITE_FAILURE is used when a write to an output stream fails.
 	*/
-	public static var WRITE_FAILURE(default, null) : Int;
+	@:public @:final @:static public static var WRITE_FAILURE(default, null) : Int;
 	
 	/**
 	* FLUSH_FAILURE is used when a flush to an output stream fails.
 	*/
-	public static var FLUSH_FAILURE(default, null) : Int;
+	@:public @:final @:static public static var FLUSH_FAILURE(default, null) : Int;
 	
 	/**
 	* CLOSE_FAILURE is used when a close of an output stream fails.
 	*/
-	public static var CLOSE_FAILURE(default, null) : Int;
+	@:public @:final @:static public static var CLOSE_FAILURE(default, null) : Int;
 	
 	/**
 	* OPEN_FAILURE is used when an open of an output stream fails.
 	*/
-	public static var OPEN_FAILURE(default, null) : Int;
+	@:public @:final @:static public static var OPEN_FAILURE(default, null) : Int;
 	
 	/**
 	* FORMAT_FAILURE is used when formatting fails for any reason.
 	*/
-	public static var FORMAT_FAILURE(default, null) : Int;
+	@:public @:final @:static public static var FORMAT_FAILURE(default, null) : Int;
 	
 	/**
 	* The error method is called when a Handler failure occurs.
@@ -76,7 +76,7 @@ extern class ErrorManager
 	* @param ex     an exception (may be null)
 	* @param code   an error code defined in ErrorManager
 	*/
-	@:overload @:synchronized public function error(msg : String, ex : java.lang.Exception, code : Int) : Void;
+	@:overload @:public @:synchronized public function error(msg : String, ex : java.lang.Exception, code : Int) : Void;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class IIOPAddressClosureImpl extends com.sun.corba.se.impl.ior.iiop.IIOPAddressBase
 {
-	@:overload public function new(host : com.sun.corba.se.spi.orbutil.closure.Closure, port : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
+	@:overload @:public public function new(host : com.sun.corba.se.spi.orbutil.closure.Closure, port : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
 	
-	@:overload override public function getHost() : String;
+	@:overload @:public override public function getHost() : String;
 	
-	@:overload override public function getPort() : Int;
+	@:overload @:public override public function getPort() : Int;
 	
 	
 }

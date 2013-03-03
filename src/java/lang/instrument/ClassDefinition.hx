@@ -44,21 +44,21 @@ package java.lang.instrument;
 	*
 	* @throws java.lang.NullPointerException if the supplied class or array is <code>null</code>.
 	*/
-	@:overload public function new(theClass : Class<Dynamic>, theClassFile : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(theClass : Class<Dynamic>, theClassFile : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Returns the class.
 	*
 	* @return    the <code>Class</code> object referred to.
 	*/
-	@:overload public function getDefinitionClass() : Class<Dynamic>;
+	@:overload @:public public function getDefinitionClass() : Class<Dynamic>;
 	
 	/**
 	* Returns the array of bytes that contains the new class file.
 	*
 	* @return    the class file bytes.
 	*/
-	@:overload public function getDefinitionClassFile() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getDefinitionClassFile() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -28,25 +28,25 @@ extern interface FontManagerForSGE extends sun.font.FontManager
 	/**
 	* Return an array of created Fonts, or null, if no fonts were created yet.
 	*/
-	@:overload public function getCreatedFonts() : java.NativeArray<java.awt.Font>;
+	@:overload @:public public function getCreatedFonts() : java.NativeArray<java.awt.Font>;
 	
 	/**
 	* Similar to getCreatedFonts, but returns a TreeMap of fonts by family name.
 	*/
-	@:overload public function getCreatedFontFamilyNames() : java.util.TreeMap<String, String>;
+	@:overload @:public public function getCreatedFontFamilyNames() : java.util.TreeMap<String, String>;
 	
 	/**
 	* Returns all fonts installed in this environment.
 	*/
-	@:overload public function getAllInstalledFonts() : java.NativeArray<java.awt.Font>;
+	@:overload @:public public function getAllInstalledFonts() : java.NativeArray<java.awt.Font>;
 	
-	@:overload public function getInstalledFontFamilyNames(requestedLocale : java.util.Locale) : java.NativeArray<String>;
+	@:overload @:public public function getInstalledFontFamilyNames(requestedLocale : java.util.Locale) : java.NativeArray<String>;
 	
 	/* Modifies the behaviour of a subsequent call to preferLocaleFonts()
 	* to use Mincho instead of Gothic for dialoginput in JA locales
 	* on windows. Not needed on other platforms.
 	*/
-	@:overload public function useAlternateFontforJALocales() : Void;
+	@:overload @:public public function useAlternateFontforJALocales() : Void;
 	
 	
 }

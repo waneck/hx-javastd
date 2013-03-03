@@ -28,7 +28,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	/**
 	* Creates a new tool bar; orientation defaults to <code>HORIZONTAL</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new tool bar with the specified <code>orientation</code>.
@@ -37,7 +37,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @param orientation  the orientation desired
 	*/
-	@:overload public function new(orientation : Int) : Void;
+	@:overload @:public public function new(orientation : Int) : Void;
 	
 	/**
 	* Creates a new tool bar with the specified <code>name</code>.  The
@@ -47,7 +47,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @param name the name of the tool bar
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(name : String) : Void;
+	@:require(java3) @:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new tool bar with a specified <code>name</code> and
@@ -63,13 +63,13 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*          <code>HORIZONTAL</code> nor <code>VERTICAL</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(name : String, orientation : Int) : Void;
+	@:require(java3) @:overload @:public public function new(name : String, orientation : Int) : Void;
 	
 	/**
 	* Returns the tool bar's current UI.
 	* @see #setUI
 	*/
-	@:overload public function getUI() : javax.swing.plaf.ToolBarUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.ToolBarUI;
 	
 	/**
 	* Sets the L&F object that renders this component.
@@ -82,7 +82,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*    attribute: visualUpdate true
 	*  description: The UI object that implements the Component's LookAndFeel.
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.ToolBarUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.ToolBarUI) : Void;
 	
 	/**
 	* Notification from the <code>UIFactory</code> that the L&F has changed.
@@ -91,7 +91,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -100,7 +100,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Returns the index of the specified component.
@@ -110,7 +110,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return an integer indicating the component's position,
 	*          where 0 is first
 	*/
-	@:overload public function getComponentIndex(c : java.awt.Component) : Int;
+	@:overload @:public public function getComponentIndex(c : java.awt.Component) : Int;
 	
 	/**
 	* Returns the component at the specified index.
@@ -120,7 +120,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*          or <code>null</code> for an invalid index
 	*
 	*/
-	@:overload public function getComponentAtIndex(i : Int) : java.awt.Component;
+	@:overload @:public public function getComponentAtIndex(i : Int) : java.awt.Component;
 	
 	/**
 	* Sets the margin between the tool bar's border and
@@ -140,7 +140,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*       bound: true
 	*      expert: true
 	*/
-	@:overload public function setMargin(m : java.awt.Insets) : Void;
+	@:overload @:public public function setMargin(m : java.awt.Insets) : Void;
 	
 	/**
 	* Returns the margin between the tool bar's border and
@@ -149,7 +149,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return an <code>Insets</code> object containing the margin values
 	* @see Insets
 	*/
-	@:overload public function getMargin() : java.awt.Insets;
+	@:overload @:public public function getMargin() : java.awt.Insets;
 	
 	/**
 	* Gets the <code>borderPainted</code> property.
@@ -157,7 +157,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return the value of the <code>borderPainted</code> property
 	* @see #setBorderPainted
 	*/
-	@:overload public function isBorderPainted() : Bool;
+	@:overload @:public public function isBorderPainted() : Bool;
 	
 	/**
 	* Sets the <code>borderPainted</code> property, which is
@@ -173,7 +173,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*       bound: true
 	*      expert: true
 	*/
-	@:overload public function setBorderPainted(b : Bool) : Void;
+	@:overload @:public public function setBorderPainted(b : Bool) : Void;
 	
 	/**
 	* Paints the tool bar's border if the <code>borderPainted</code> property
@@ -184,7 +184,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see JComponent#paint
 	* @see JComponent#setBorder
 	*/
-	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the <code>floatable</code> property.
@@ -193,7 +193,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @see #setFloatable
 	*/
-	@:overload public function isFloatable() : Bool;
+	@:overload @:public public function isFloatable() : Bool;
 	
 	/**
 	* Sets the <code>floatable</code> property,
@@ -213,7 +213,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*       bound: true
 	*   preferred: true
 	*/
-	@:overload public function setFloatable(b : Bool) : Void;
+	@:overload @:public public function setFloatable(b : Bool) : Void;
 	
 	/**
 	* Returns the current orientation of the tool bar.  The value is either
@@ -223,7 +223,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*          <code>HORIZONTAL</code> or <code>VERTICAL</code>
 	* @see #setOrientation
 	*/
-	@:overload public function getOrientation() : Int;
+	@:overload @:public public function getOrientation() : Int;
 	
 	/**
 	* Sets the orientation of the tool bar.  The orientation must have
@@ -243,7 +243,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*        enum: HORIZONTAL SwingConstants.HORIZONTAL
 	*              VERTICAL   SwingConstants.VERTICAL
 	*/
-	@:overload public function setOrientation(o : Int) : Void;
+	@:overload @:public public function setOrientation(o : Int) : Void;
 	
 	/**
 	* Sets the rollover state of this toolbar. If the rollover state is true
@@ -262,7 +262,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*    attribute: visualUpdate true
 	*  description: Will draw rollover button borders in the toolbar.
 	*/
-	@:require(java4) @:overload public function setRollover(rollover : Bool) : Void;
+	@:require(java4) @:overload @:public public function setRollover(rollover : Bool) : Void;
 	
 	/**
 	* Returns the rollover state.
@@ -271,13 +271,13 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see #setRollover(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isRollover() : Bool;
+	@:require(java4) @:overload @:public public function isRollover() : Bool;
 	
 	/**
 	* Appends a separator of default size to the end of the tool bar.
 	* The default size is determined by the current look and feel.
 	*/
-	@:overload public function addSeparator() : Void;
+	@:overload @:public public function addSeparator() : Void;
 	
 	/**
 	* Appends a separator of a specified size to the end
@@ -285,7 +285,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @param size the <code>Dimension</code> of the separator
 	*/
-	@:overload public function addSeparator(size : java.awt.Dimension) : Void;
+	@:overload @:public public function addSeparator(size : java.awt.Dimension) : Void;
 	
 	/**
 	* Adds a new <code>JButton</code> which dispatches the action.
@@ -293,7 +293,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @param a the <code>Action</code> object to add as a new menu item
 	* @return the new button which dispatches the action
 	*/
-	@:overload public function add(a : javax.swing.Action) : javax.swing.JButton;
+	@:overload @:public public function add(a : javax.swing.Action) : javax.swing.JButton;
 	
 	/**
 	* Factory method which creates the <code>JButton</code> for
@@ -305,7 +305,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see Action
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function createActionComponent(a : javax.swing.Action) : javax.swing.JButton;
+	@:require(java3) @:overload @:protected private function createActionComponent(a : javax.swing.Action) : javax.swing.JButton;
 	
 	/**
 	* Returns a properly configured <code>PropertyChangeListener</code>
@@ -315,7 +315,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @return <code>null</code>
 	*/
-	@:overload private function createActionChangeListener(b : javax.swing.JButton) : java.beans.PropertyChangeListener;
+	@:overload @:protected private function createActionChangeListener(b : javax.swing.JButton) : java.beans.PropertyChangeListener;
 	
 	/**
 	* If a <code>JButton</code> is being added, it is initially
@@ -326,7 +326,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @param index the index of the component
 	*
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload @:protected override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JToolBar</code>.
@@ -338,9 +338,9 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @return  a string representation of this <code>JToolBar</code>.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
-	@:overload override public function setLayout(mgr : java.awt.LayoutManager) : Void;
+	@:overload @:public override public function setLayout(mgr : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this JToolBar.
@@ -351,7 +351,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return an AccessibleJToolBar that serves as the
 	*         AccessibleContext of this JToolBar
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -365,14 +365,14 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* Creates a new toolbar separator with the default size
 	* as defined by the current look and feel.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new toolbar separator with the specified size.
 	*
 	* @param size the <code>Dimension</code> of the separator
 	*/
-	@:overload public function new(size : java.awt.Dimension) : Void;
+	@:overload @:public public function new(size : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -381,14 +381,14 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the size of the separator.
 	*
 	* @param size the new <code>Dimension</code> of the separator
 	*/
-	@:overload public function setSeparatorSize(size : java.awt.Dimension) : Void;
+	@:overload @:public public function setSeparatorSize(size : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the size of the separator
@@ -396,7 +396,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return the <code>Dimension</code> object containing the separator's
 	*         size (This is a reference, NOT a copy!)
 	*/
-	@:overload public function getSeparatorSize() : java.awt.Dimension;
+	@:overload @:public public function getSeparatorSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum size for the separator.
@@ -404,7 +404,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return the <code>Dimension</code> object containing the separator's
 	*         minimum size
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum size for the separator.
@@ -412,7 +412,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return the <code>Dimension</code> object containing the separator's
 	*         maximum size
 	*/
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns the preferred size for the separator.
@@ -420,33 +420,33 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @return the <code>Dimension</code> object containing the separator's
 	*         preferred size
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
 @:native('javax$swing$JToolBar$DefaultToolBarLayout') @:internal extern class JToolBar_DefaultToolBarLayout implements java.awt.LayoutManager2 implements java.io.Serializable implements java.beans.PropertyChangeListener implements javax.swing.plaf.UIResource
 {
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
-	@:overload public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
+	@:overload @:public public function addLayoutComponent(comp : java.awt.Component, constraints : Dynamic) : Void;
 	
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function maximumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(target : java.awt.Container) : Void;
 	
-	@:overload public function getLayoutAlignmentX(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentX(target : java.awt.Container) : Single;
 	
-	@:overload public function getLayoutAlignmentY(target : java.awt.Container) : Single;
+	@:overload @:public public function getLayoutAlignmentY(target : java.awt.Container) : Single;
 	
-	@:overload public function invalidateLayout(target : java.awt.Container) : Void;
+	@:overload @:public public function invalidateLayout(target : java.awt.Container) : Void;
 	
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -464,14 +464,14 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
 	*
 	* @return an instance of AccessibleRole describing the role of the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -44,7 +44,7 @@ package javax.xml.transform;
 	/**
 	* Default constructor is protected on purpose.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Obtain a new instance of a <code>TransformerFactory</code>.
@@ -91,7 +91,7 @@ package javax.xml.transform;
 	* @throws TransformerFactoryConfigurationError Thrown if the implementation
 	*    is not available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance() : javax.xml.transform.TransformerFactory;
+	@:overload @:public @:static public static function newInstance() : javax.xml.transform.TransformerFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>TransformerFactory</code> from factory class name.
@@ -128,7 +128,7 @@ package javax.xml.transform;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.transform.TransformerFactory;
+	@:require(java6) @:overload @:public @:static public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.transform.TransformerFactory;
 	
 	/**
 	* <p>Process the <code>Source</code> into a <code>Transformer</code>
@@ -158,7 +158,7 @@ package javax.xml.transform;
 	* @see <a href="http://www.w3.org/TR/xslt">
 	*   XSL Transformations (XSLT) Version 1.0</a>
 	*/
-	@:overload @:abstract public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
+	@:overload @:public @:abstract public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
 	
 	/**
 	* <p>Create a new <code>Transformer</code> that performs a copy
@@ -171,7 +171,7 @@ package javax.xml.transform;
 	* @throws TransformerConfigurationException When it is not
 	*   possible to create a <code>Transformer</code> instance.
 	*/
-	@:overload @:abstract public function newTransformer() : javax.xml.transform.Transformer;
+	@:overload @:public @:abstract public function newTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Process the Source into a Templates object, which is a
@@ -189,7 +189,7 @@ package javax.xml.transform;
 	* @throws TransformerConfigurationException When parsing to
 	*   construct the Templates object fails.
 	*/
-	@:overload @:abstract public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
+	@:overload @:public @:abstract public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
 	
 	/**
 	* <p>Get the stylesheet specification(s) associated with the
@@ -216,7 +216,7 @@ package javax.xml.transform;
 	* @see <a href="http://www.w3.org/TR/xml-stylesheet/">
 	*   Associating Style Sheets with XML documents Version 1.0</a>
 	*/
-	@:overload @:abstract public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
+	@:overload @:public @:abstract public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
 	
 	/**
 	* Set an object that is used by default during the transformation
@@ -225,7 +225,7 @@ package javax.xml.transform;
 	* @param resolver An object that implements the URIResolver interface,
 	* or null.
 	*/
-	@:overload @:abstract public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload @:public @:abstract public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* Get the object that is used by default during the transformation
@@ -233,7 +233,7 @@ package javax.xml.transform;
 	*
 	* @return The URIResolver that was set with setURIResolver.
 	*/
-	@:overload @:abstract public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload @:public @:abstract public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* <p>Set a feature for this <code>TransformerFactory</code> and <code>Transformer</code>s
@@ -271,7 +271,7 @@ package javax.xml.transform;
 	*   or the <code>Transformer</code>s or <code>Template</code>s it creates cannot support this feature.
 	* @throws NullPointerException If the <code>name</code> parameter is null.
 	*/
-	@:overload @:abstract public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public @:abstract public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* Look up the value of a feature.
@@ -290,7 +290,7 @@ package javax.xml.transform;
 	*
 	* @throws NullPointerException If the <code>name</code> parameter is null.
 	*/
-	@:overload @:abstract public function getFeature(name : String) : Bool;
+	@:overload @:public @:abstract public function getFeature(name : String) : Bool;
 	
 	/**
 	* Allows the user to set specific attributes on the underlying
@@ -305,7 +305,7 @@ package javax.xml.transform;
 	* @throws IllegalArgumentException When implementation does not
 	*   recognize the attribute.
 	*/
-	@:overload @:abstract public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public @:abstract public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Allows the user to retrieve specific attributes on the underlying
@@ -320,7 +320,7 @@ package javax.xml.transform;
 	* @throws IllegalArgumentException When implementation does not
 	*   recognize the attribute.
 	*/
-	@:overload @:abstract public function getAttribute(name : String) : Dynamic;
+	@:overload @:public @:abstract public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* Set the error event listener for the TransformerFactory, which
@@ -334,14 +334,14 @@ package javax.xml.transform;
 	* @throws IllegalArgumentException When <code>listener</code> is
 	*   <code>null</code>
 	*/
-	@:overload @:abstract public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload @:public @:abstract public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* Get the error event handler for the TransformerFactory.
 	*
 	* @return The current error handler, which should never be null.
 	*/
-	@:overload @:abstract public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload @:public @:abstract public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	
 }

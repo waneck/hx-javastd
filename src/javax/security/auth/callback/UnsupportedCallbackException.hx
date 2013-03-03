@@ -38,7 +38,7 @@ extern class UnsupportedCallbackException extends java.lang.Exception
 	*
 	* @param callback the unrecognized <code>Callback</code>.
 	*/
-	@:overload public function new(_callback : javax.security.auth.callback.Callback) : Void;
+	@:overload @:public public function new(_callback : javax.security.auth.callback.Callback) : Void;
 	
 	/**
 	* Constructs a UnsupportedCallbackException with the specified detail
@@ -51,7 +51,7 @@ extern class UnsupportedCallbackException extends java.lang.Exception
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(_callback : javax.security.auth.callback.Callback, msg : String) : Void;
+	@:overload @:public public function new(_callback : javax.security.auth.callback.Callback, msg : String) : Void;
 	
 	/**
 	* Get the unrecognized <code>Callback</code>.
@@ -60,7 +60,7 @@ extern class UnsupportedCallbackException extends java.lang.Exception
 	*
 	* @return the unrecognized <code>Callback</code>.
 	*/
-	@:overload public function getCallback() : javax.security.auth.callback.Callback;
+	@:overload @:public public function getCallback() : javax.security.auth.callback.Callback;
 	
 	
 }

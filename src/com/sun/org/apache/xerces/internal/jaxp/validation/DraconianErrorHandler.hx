@@ -21,16 +21,16 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 @:internal extern class DraconianErrorHandler implements org.xml.sax.ErrorHandler
 {
 	/** Returns the one and only instance of this error handler. */
-	@:overload public static function getInstance() : com.sun.org.apache.xerces.internal.jaxp.validation.DraconianErrorHandler;
+	@:overload @:public @:static public static function getInstance() : com.sun.org.apache.xerces.internal.jaxp.validation.DraconianErrorHandler;
 	
 	/** Warning: Ignore. */
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	/** Error: Throws back SAXParseException. */
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
 	/** Fatal Error: Throws back SAXParseException. */
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

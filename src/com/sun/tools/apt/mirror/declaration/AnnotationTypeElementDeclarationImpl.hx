@@ -28,17 +28,17 @@ extern class AnnotationTypeElementDeclarationImpl extends com.sun.tools.apt.mirr
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getDeclaringType() : com.sun.mirror.declaration.AnnotationTypeDeclaration;
+	@:overload @:public override public function getDeclaringType() : com.sun.mirror.declaration.AnnotationTypeDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getDefaultValue() : com.sun.mirror.declaration.AnnotationValue;
+	@:overload @:public public function getDefaultValue() : com.sun.mirror.declaration.AnnotationValue;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.DeclarationVisitor) : Void;
 	
 	
 }

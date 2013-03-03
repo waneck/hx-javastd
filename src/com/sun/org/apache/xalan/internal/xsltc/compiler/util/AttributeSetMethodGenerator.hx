@@ -26,15 +26,15 @@ extern class AttributeSetMethodGenerator extends com.sun.org.apache.xalan.intern
 	/**
 	* @author Santiago Pericas-Geertsen
 	*/
-	private static var CURRENT_INDEX(default, null) : Int;
+	@:protected @:static @:final private static var CURRENT_INDEX(default, null) : Int;
 	
-	@:overload public function new(methodName : String, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Void;
+	@:overload @:public public function new(methodName : String, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Void;
 	
-	@:overload public function getLocalIndex(name : String) : Int;
+	@:overload @:public override public function getLocalIndex(name : String) : Int;
 	
-	@:overload public function loadParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	
 }

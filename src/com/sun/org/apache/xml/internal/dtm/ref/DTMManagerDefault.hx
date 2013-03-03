@@ -34,18 +34,18 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	* This array grows as necessary; see addDTM(). Growth is uncommon... but
 	* access needs to be blindingly fast since it's used in node addressing.
 	*/
-	private var m_dtms : java.NativeArray<com.sun.org.apache.xml.internal.dtm.DTM>;
+	@:protected private var m_dtms : java.NativeArray<com.sun.org.apache.xml.internal.dtm.DTM>;
 	
 	/**
 	* The cache for XMLReader objects to be used if the user did not
 	* supply an XMLReader for a SAXSource or supplied a StreamSource.
 	*/
-	private var m_readerManager : com.sun.org.apache.xml.internal.utils.XMLReaderManager;
+	@:protected private var m_readerManager : com.sun.org.apache.xml.internal.utils.XMLReaderManager;
 	
 	/**
 	* The default implementation of ContentHandler, DTDHandler and ErrorHandler.
 	*/
-	private var m_defaultHandler : org.xml.sax.helpers.DefaultHandler;
+	@:protected private var m_defaultHandler : org.xml.sax.helpers.DefaultHandler;
 	
 	/**
 	* Add a DTM to the DTM table. This convenience call adds it as the
@@ -55,7 +55,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	* @param dtm Should be a valid reference to a DTM.
 	* @param id Integer DTM ID to be bound to this DTM
 	*/
-	@:overload @:synchronized public function addDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM, id : Int) : Void;
+	@:overload @:synchronized @:public public function addDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM, id : Int) : Void;
 	
 	/**
 	* Add a DTM to the DTM table.
@@ -67,18 +67,18 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	* public DTM Handle. For the first DTM ID accessing each DTM, this is 0;
 	* for overflow addressing it will be a multiple of 1<<IDENT_DTM_NODE_BITS.
 	*/
-	@:overload @:synchronized public function addDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM, id : Int, offset : Int) : Void;
+	@:overload @:synchronized @:public public function addDTM(dtm : com.sun.org.apache.xml.internal.dtm.DTM, id : Int, offset : Int) : Void;
 	
 	/**
 	* Get the first free DTM ID available. %OPT% Linear search is inefficient!
 	*/
-	@:overload @:synchronized public function getFirstFreeDTMID() : Int;
+	@:overload @:synchronized @:public public function getFirstFreeDTMID() : Int;
 	
 	/**
 	* Constructor DTMManagerDefault
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the
@@ -106,7 +106,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* @return a non-null DTM reference.
 	*/
-	@:overload @:synchronized public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:synchronized @:public override public function getDTM(source : javax.xml.transform.Source, unique : Bool, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, incremental : Bool, doIndexing : Bool) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Given a W3C DOM node, try and return a DTM handle.
@@ -117,7 +117,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* @return a valid DTM handle.
 	*/
-	@:overload @:synchronized public function getDTMHandleFromNode(node : org.w3c.dom.Node) : Int;
+	@:overload @:synchronized @:public override public function getDTMHandleFromNode(node : org.w3c.dom.Node) : Int;
 	
 	/**
 	* This method returns the SAX2 parser to use with the InputSource
@@ -133,7 +133,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* @return non-null XMLReader reference ready to parse.
 	*/
-	@:overload @:synchronized public function getXMLReader(inputSource : javax.xml.transform.Source) : org.xml.sax.XMLReader;
+	@:overload @:synchronized @:public public function getXMLReader(inputSource : javax.xml.transform.Source) : org.xml.sax.XMLReader;
 	
 	/**
 	* Indicates that the XMLReader object is no longer in use for the transform.
@@ -145,7 +145,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* @param reader The XMLReader to be released.
 	*/
-	@:overload @:synchronized public function releaseXMLReader(reader : org.xml.sax.XMLReader) : Void;
+	@:overload @:synchronized @:public public function releaseXMLReader(reader : org.xml.sax.XMLReader) : Void;
 	
 	/**
 	* Return the DTM object containing a representation of this node.
@@ -154,7 +154,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* @return a reference to the DTM object containing this node.
 	*/
-	@:overload @:synchronized public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:synchronized @:public override public function getDTM(nodeHandle : Int) : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* Given a DTM, find the ID number in the DTM tables which addresses
@@ -166,7 +166,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	* @return The DTM ID (as the high bits of a NodeHandle, not as our
 	* internal index), or -1 if the DTM doesn't belong to this manager.
 	*/
-	@:overload @:synchronized public function getDTMIdentity(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Int;
+	@:overload @:synchronized @:public override public function getDTMIdentity(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : Int;
 	
 	/**
 	* Release the DTMManager's reference(s) to a DTM, making it unmanaged.
@@ -183,7 +183,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	* @return true if the DTM was released, false if shouldHardDelete was set
 	* and we decided not to.
 	*/
-	@:overload @:synchronized public function release(dtm : com.sun.org.apache.xml.internal.dtm.DTM, shouldHardDelete : Bool) : Bool;
+	@:overload @:synchronized @:public override public function release(dtm : com.sun.org.apache.xml.internal.dtm.DTM, shouldHardDelete : Bool) : Bool;
 	
 	/**
 	* Method createDocumentFragment
@@ -191,7 +191,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* NEEDSDOC (createDocumentFragment) @return
 	*/
-	@:overload @:synchronized public function createDocumentFragment() : com.sun.org.apache.xml.internal.dtm.DTM;
+	@:overload @:synchronized @:public override public function createDocumentFragment() : com.sun.org.apache.xml.internal.dtm.DTM;
 	
 	/**
 	* NEEDSDOC Method createDTMIterator
@@ -203,7 +203,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* NEEDSDOC (createDTMIterator) @return
 	*/
-	@:overload @:synchronized public function createDTMIterator(whatToShow : Int, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter, entityReferenceExpansion : Bool) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:synchronized @:public override public function createDTMIterator(whatToShow : Int, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter, entityReferenceExpansion : Bool) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* NEEDSDOC Method createDTMIterator
@@ -214,7 +214,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* NEEDSDOC (createDTMIterator) @return
 	*/
-	@:overload @:synchronized public function createDTMIterator(xpathString : String, presolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:synchronized @:public override public function createDTMIterator(xpathString : String, presolver : com.sun.org.apache.xml.internal.utils.PrefixResolver) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* NEEDSDOC Method createDTMIterator
@@ -224,7 +224,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* NEEDSDOC (createDTMIterator) @return
 	*/
-	@:overload @:synchronized public function createDTMIterator(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:synchronized @:public override public function createDTMIterator(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* NEEDSDOC Method createDTMIterator
@@ -235,7 +235,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* NEEDSDOC (createDTMIterator) @return
 	*/
-	@:overload @:synchronized public function createDTMIterator(xpathCompiler : Dynamic, pos : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:synchronized @:public override public function createDTMIterator(xpathCompiler : Dynamic, pos : Int) : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* return the expanded name table.
@@ -244,7 +244,7 @@ extern class DTMManagerDefault extends com.sun.org.apache.xml.internal.dtm.DTMMa
 	*
 	* NEEDSDOC ($objectName$) @return
 	*/
-	@:overload public function getExpandedNameTable(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : com.sun.org.apache.xml.internal.dtm.ref.ExpandedNameTable;
+	@:overload @:public public function getExpandedNameTable(dtm : com.sun.org.apache.xml.internal.dtm.DTM) : com.sun.org.apache.xml.internal.dtm.ref.ExpandedNameTable;
 	
 	
 }

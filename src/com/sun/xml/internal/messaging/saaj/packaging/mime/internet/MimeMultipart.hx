@@ -31,7 +31,7 @@ extern class MimeMultipart
 	/**
 	* The DataSource supplying our InputStream.
 	*/
-	private var ds : javax.activation.DataSource;
+	@:protected private var ds : javax.activation.DataSource;
 	
 	/**
 	* Have we parsed the data from our InputStream yet?
@@ -39,27 +39,27 @@ extern class MimeMultipart
 	* given a DataSource with an InputStream that we need to
 	* parse.
 	*/
-	private var parsed : Bool;
+	@:protected private var parsed : Bool;
 	
 	/**
 	* Vector of MimeBodyPart objects.
 	*/
-	private var parts : com.sun.xml.internal.messaging.saaj.util.FinalArrayList;
+	@:protected private var parts : com.sun.xml.internal.messaging.saaj.util.FinalArrayList;
 	
 	/**
 	* This field specifies the content-type of this multipart
 	* object. It defaults to "multipart/mixed".
 	*/
-	private var contentType : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
+	@:protected private var contentType : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
 	
 	/**
 	* The <code>MimeBodyPart</code> containing this <code>MimeMultipart</code>,
 	* if known.
 	* @since   JavaMail 1.1
 	*/
-	@:require(java1) private var parent : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:require(java1) @:protected private var parent : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
-	private static var ignoreMissingEndBoundary : Bool;
+	@:protected @:static private static var ignoreMissingEndBoundary : Bool;
 	
 	/**
 	* Default constructor. An empty MimeMultipart object
@@ -70,7 +70,7 @@ extern class MimeMultipart
 	*
 	* MimeBodyParts may be added later.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a MimeMultipart object of the given subtype.
@@ -80,7 +80,7 @@ extern class MimeMultipart
 	*
 	* MimeBodyParts may be added later.
 	*/
-	@:overload public function new(subtype : String) : Void;
+	@:overload @:public public function new(subtype : String) : Void;
 	
 	/**
 	* Constructs a MimeMultipart object and its bodyparts from the
@@ -102,7 +102,7 @@ extern class MimeMultipart
 	*      All the callers of this method seem to have this object handy, so
 	*      for performance reason this method accepts it. Can be null.
 	*/
-	@:overload public function new(ds : javax.activation.DataSource, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Void;
+	@:overload @:public public function new(ds : javax.activation.DataSource, ct : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Void;
 	
 	/**
 	* Set the subtype. This method should be invoked only on a new
@@ -111,14 +111,14 @@ extern class MimeMultipart
 	*
 	* @param   subtype         Subtype
 	*/
-	@:overload public function setSubType(subtype : String) : Void;
+	@:overload @:public public function setSubType(subtype : String) : Void;
 	
 	/**
 	* Return the number of enclosed MimeBodyPart objects.
 	*
 	* @return          number of parts
 	*/
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	/**
 	* Get the specified MimeBodyPart.  BodyParts are numbered starting at 0.
@@ -127,7 +127,7 @@ extern class MimeMultipart
 	* @return          the MimeBodyPart
 	* @exception       MessagingException if no such MimeBodyPart exists
 	*/
-	@:overload public function getBodyPart(index : Int) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:overload @:public public function getBodyPart(index : Int) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
 	/**
 	* Get the MimeBodyPart referred to by the given ContentID (CID).
@@ -136,7 +136,7 @@ extern class MimeMultipart
 	* @param  CID      the ContentID of the desired part
 	* @return          the MimeBodyPart
 	*/
-	@:overload public function getBodyPart(CID : String) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:overload @:public public function getBodyPart(CID : String) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
 	/**
 	* Update headers. The default implementation here just
@@ -155,13 +155,13 @@ extern class MimeMultipart
 	* might itself want to track whether its internal state actually
 	* did change, and do the header updating only if necessary.
 	*/
-	@:overload private function updateHeaders() : Void;
+	@:overload @:protected private function updateHeaders() : Void;
 	
 	/**
 	* Iterates through all the parts and outputs each Mime part
 	* separated by a boundary.
 	*/
-	@:overload public function writeTo(os : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(os : java.io.OutputStream) : Void;
 	
 	/**
 	* Parse the InputStream from our DataSource, constructing the
@@ -172,7 +172,7 @@ extern class MimeMultipart
 	*
 	* @since   JavaMail 1.2
 	*/
-	@:require(java2) @:overload private function parse() : Void;
+	@:require(java2) @:overload @:protected private function parse() : Void;
 	
 	/**
 	* Create and return an InternetHeaders object that loads the
@@ -185,7 +185,7 @@ extern class MimeMultipart
 	* @exception       MessagingException
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload private function createInternetHeaders(is : java.io.InputStream) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders;
+	@:require(java2) @:overload @:protected private function createInternetHeaders(is : java.io.InputStream) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders;
 	
 	/**
 	* Create and return a MimeBodyPart object to represent a
@@ -198,7 +198,7 @@ extern class MimeMultipart
 	* @param   content         the content of the body part
 	* @since                   JavaMail 1.2
 	*/
-	@:require(java2) @:overload private function createMimeBodyPart(headers : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders, content : java.NativeArray<java.StdTypes.Int8>, len : Int) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:require(java2) @:overload @:protected private function createMimeBodyPart(headers : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders, content : java.NativeArray<java.StdTypes.Int8>, len : Int) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
 	/**
 	* Create and return a MimeBodyPart object to represent a
@@ -211,7 +211,7 @@ extern class MimeMultipart
 	* @exception               MessagingException
 	* @since                   JavaMail 1.2
 	*/
-	@:require(java2) @:overload private function createMimeBodyPart(is : java.io.InputStream) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
+	@:require(java2) @:overload @:protected private function createMimeBodyPart(is : java.io.InputStream) : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
 	
 	/**
 	* Setup this MimeMultipart object from the given MultipartDataSource. <p>
@@ -228,7 +228,7 @@ extern class MimeMultipart
 	*
 	* @param   mp      MimeMultipart datasource
 	*/
-	@:overload private function setMultipartDataSource(mp : com.sun.xml.internal.messaging.saaj.packaging.mime.MultipartDataSource) : Void;
+	@:overload @:protected private function setMultipartDataSource(mp : com.sun.xml.internal.messaging.saaj.packaging.mime.MultipartDataSource) : Void;
 	
 	/**
 	* Return the content-type of this MimeMultipart. <p>
@@ -239,7 +239,7 @@ extern class MimeMultipart
 	* @return  content-type
 	* @see     #contentType
 	*/
-	@:overload public function getContentType() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
+	@:overload @:public public function getContentType() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
 	
 	/**
 	* Remove the specified part from the multipart message.
@@ -249,7 +249,7 @@ extern class MimeMultipart
 	* @return          true if part removed, false otherwise
 	* @exception       MessagingException if no such MimeBodyPart exists
 	*/
-	@:overload public function removeBodyPart(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Bool;
+	@:overload @:public public function removeBodyPart(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Bool;
 	
 	/**
 	* Remove the part at specified location (starting from 0).
@@ -259,7 +259,7 @@ extern class MimeMultipart
 	* @exception       IndexOutOfBoundsException if the given index
 	*                  is out of range.
 	*/
-	@:overload public function removeBodyPart(index : Int) : Void;
+	@:overload @:public public function removeBodyPart(index : Int) : Void;
 	
 	/**
 	* Adds a MimeBodyPart to the multipart.  The MimeBodyPart is appended to
@@ -267,7 +267,7 @@ extern class MimeMultipart
 	*
 	* @param  part  The MimeBodyPart to be appended
 	*/
-	@:overload @:synchronized public function addBodyPart(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
+	@:overload @:public @:synchronized public function addBodyPart(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
 	
 	/**
 	* Adds a MimeBodyPart at position <code>index</code>.
@@ -279,7 +279,7 @@ extern class MimeMultipart
 	* @param  part  The MimeBodyPart to be inserted
 	* @param  index Location where to insert the part
 	*/
-	@:overload @:synchronized public function addBodyPart(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart, index : Int) : Void;
+	@:overload @:public @:synchronized public function addBodyPart(part : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart, index : Int) : Void;
 	
 	
 }

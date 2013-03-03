@@ -34,7 +34,7 @@ extern class KeyStores
 	* Return a Set with all trusted X509Certificates contained in
 	* this KeyStore.
 	*/
-	@:overload public static function getTrustedCerts(ks : java.security.KeyStore) : java.util.Set<java.security.cert.X509Certificate>;
+	@:overload @:public @:static public static function getTrustedCerts(ks : java.security.KeyStore) : java.util.Set<java.security.cert.X509Certificate>;
 	
 	
 }

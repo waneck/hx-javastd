@@ -33,23 +33,23 @@ package java.awt.dnd;
 	/**
 	* An <code>int</code> representing no action.
 	*/
-	public static var ACTION_NONE(default, null) : Int;
+	@:public @:static @:final public static var ACTION_NONE(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;copy&quot; action.
 	*/
-	public static var ACTION_COPY(default, null) : Int;
+	@:public @:static @:final public static var ACTION_COPY(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;move&quot; action.
 	*/
-	public static var ACTION_MOVE(default, null) : Int;
+	@:public @:static @:final public static var ACTION_MOVE(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;copy&quot; or
 	* &quot;move&quot; action.
 	*/
-	public static var ACTION_COPY_OR_MOVE(default, null) : Int;
+	@:public @:static @:final public static var ACTION_COPY_OR_MOVE(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;link&quot; action.
@@ -66,13 +66,13 @@ package java.awt.dnd;
 	* misinterpretation of the operations semantics could lead to confusing
 	* results for the user.
 	*/
-	public static var ACTION_LINK(default, null) : Int;
+	@:public @:static @:final public static var ACTION_LINK(default, null) : Int;
 	
 	/**
 	* An <code>int</code> representing a &quot;reference&quot;
 	* action (synonym for ACTION_LINK).
 	*/
-	public static var ACTION_REFERENCE(default, null) : Int;
+	@:public @:static @:final public static var ACTION_REFERENCE(default, null) : Int;
 	
 	
 }

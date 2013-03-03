@@ -32,7 +32,7 @@ extern class XObjectFactory
 	*
 	* @return the right XObject based on the type of the object passed.
 	*/
-	@:overload public static function create(val : Dynamic) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:static @:public public static function create(val : Dynamic) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Create the right XObject based on the type of the object passed.
@@ -44,7 +44,7 @@ extern class XObjectFactory
 	*
 	* @return the right XObject based on the type of the object passed.
 	*/
-	@:overload public static function create(val : Dynamic, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:static @:public public static function create(val : Dynamic, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

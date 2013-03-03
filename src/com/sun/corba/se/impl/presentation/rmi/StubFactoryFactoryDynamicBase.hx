@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class StubFactoryFactoryDynamicBase extends com.sun.corba.se.impl.presentation.rmi.StubFactoryFactoryBase
 {
-	private var wrapper(default, null) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
+	@:protected @:final private var wrapper(default, null) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
+	@:overload @:public override public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
-	@:overload @:abstract public function makeDynamicStubFactory(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
+	@:overload @:public @:abstract public function makeDynamicStubFactory(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
-	@:overload public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
+	@:overload @:public override public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
 	
-	@:overload public function createsDynamicStubs() : Bool;
+	@:overload @:public override public function createsDynamicStubs() : Bool;
 	
 	
 }

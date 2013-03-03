@@ -33,7 +33,7 @@ package com.sun.jndi.ldap.pool;
 	*
 	* public because implemented as part of PoolCallback.
 	*/
-	@:overload @:synchronized public function releasePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
+	@:overload @:public @:synchronized public function releasePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
 	
 	/**
 	* Removes PooledConnection from list of connections.
@@ -45,7 +45,7 @@ package com.sun.jndi.ldap.pool;
 	*
 	* public because implemented as part of PoolCallback.
 	*/
-	@:overload @:synchronized public function removePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
+	@:overload @:public @:synchronized public function removePooledConnection(conn : com.sun.jndi.ldap.pool.PooledConnection) : Bool;
 	
 	
 }

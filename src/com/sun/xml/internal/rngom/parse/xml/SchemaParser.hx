@@ -46,7 +46,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 */
 @:internal extern class SchemaParser
 {
-	@:overload public function getParsedPattern() : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function getParsedPattern() : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }
@@ -56,17 +56,17 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AbstractContext') @:internal extern class SchemaParser_AbstractContext extends com.sun.xml.internal.rngom.parse.xml.DtdContext implements com.sun.xml.internal.rngom.parse.Context
 {
-	@:overload public function resolveNamespacePrefix(prefix : String) : String;
+	@:overload @:public override public function resolveNamespacePrefix(prefix : String) : String;
 	
-	@:overload public function prefixes() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function prefixes() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function copy() : com.sun.xml.internal.rngom.parse.Context;
+	@:overload @:public public function copy() : com.sun.xml.internal.rngom.parse.Context;
 	
 	/**
 	* Returns the base URI of the context.  The null string may be returned
 	* if no base URI is known.
 	*/
-	@:overload override public function getBaseUri() : String;
+	@:overload @:public @:public override public function getBaseUri() : String;
 	
 	/**
 	* Checks if an unparsed entity is declared with the
@@ -79,7 +79,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	*  false
 	*              otherwise.
 	*/
-	@:overload public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload @:public override public function isUnparsedEntity(entityName : String) : Bool;
 	
 	/**
 	* Checks if a notation is declared with the
@@ -91,19 +91,19 @@ package com.sun.xml.internal.rngom.parse.xml;
 	*  false
 	*              otherwise.
 	*/
-	@:overload public function isNotation(notationName : String) : Bool;
+	@:overload @:public override public function isNotation(notationName : String) : Bool;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$SavedContext') @:internal extern class SchemaParser_SavedContext extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_AbstractContext
 {
-	@:overload override public function getBaseUri() : String;
+	@:overload @:public override public function getBaseUri() : String;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ContextImpl') @:internal extern class SchemaParser_ContextImpl extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_AbstractContext
 {
-	@:overload override public function getBaseUri() : String;
+	@:overload @:public override public function getBaseUri() : String;
 	
 	
 }
@@ -115,23 +115,23 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$Handler') @:internal extern class SchemaParser_Handler implements org.xml.sax.ContentHandler implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_CommentHandler
 {
-	@:overload public function comment(value : String) : Void;
+	@:overload @:public public function comment(value : String) : Void;
 	
-	@:overload public function processingInstruction(target : String, date : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, date : String) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(loc : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -197,7 +197,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public @:public @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -242,7 +242,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:public @:public @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -265,43 +265,43 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public @:public @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$State') @:internal extern class SchemaParser_State extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_Handler
 {
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload @:public override public function startDocument() : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload @:public override public function endDocument() : Void;
 	
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ForeignElementHandler') @:internal extern class SchemaParser_ForeignElementHandler extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_Handler
 {
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function comment(value : String) : Void;
+	@:overload @:public override public function comment(value : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$Skipper') @:internal extern class SchemaParser_Skipper extends org.xml.sax.helpers.DefaultHandler implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_CommentHandler
 {
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload public function comment(value : String) : Void;
+	@:overload @:public public function comment(value : String) : Void;
 	
 	
 }
@@ -353,7 +353,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ElementState') @:internal extern class SchemaParser_ElementState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassRef
 {
-	@:overload public function setNameClass(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass) : Void;
+	@:overload @:public public function setNameClass(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass) : Void;
 	
 	
 }
@@ -375,7 +375,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ValueState') @:internal extern class SchemaParser_ValueState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	
 }
@@ -385,13 +385,13 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ParamState') @:internal extern class SchemaParser_ParamState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
 {
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AttributeState') @:internal extern class SchemaParser_AttributeState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassRef
 {
-	@:overload public function setNameClass(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass) : Void;
+	@:overload @:public public function setNameClass(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass) : Void;
 	
 	
 }
@@ -457,7 +457,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameState') @:internal extern class SchemaParser_NameState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassBaseState
 {
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	
 }
@@ -475,11 +475,11 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$LexicalHandlerImpl') @:internal extern class SchemaParser_LexicalHandlerImpl extends com.sun.xml.internal.rngom.xml.sax.AbstractLexicalHandler
 {
-	@:overload public function startDTD(s : String, s1 : String, s2 : String) : Void;
+	@:overload @:public override public function startDTD(s : String, s1 : String, s2 : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public override public function endDTD() : Void;
 	
-	@:overload public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

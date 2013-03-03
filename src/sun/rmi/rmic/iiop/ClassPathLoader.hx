@@ -25,9 +25,9 @@ package sun.rmi.rmic.iiop;
 */
 extern class ClassPathLoader extends java.lang.ClassLoader
 {
-	@:overload public function new(classPath : sun.tools.java.ClassPath) : Void;
+	@:overload @:public public function new(classPath : sun.tools.java.ClassPath) : Void;
 	
-	@:overload private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
 	
 }

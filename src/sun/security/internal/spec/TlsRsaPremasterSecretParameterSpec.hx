@@ -39,21 +39,21 @@ extern class TlsRsaPremasterSecretParameterSpec implements java.security.spec.Al
 	* @throws IllegalArgumentException if minorVersion or majorVersion are
 	*   negative or larger than 255
 	*/
-	@:overload public function new(majorVersion : Int, minorVersion : Int) : Void;
+	@:overload @:public public function new(majorVersion : Int, minorVersion : Int) : Void;
 	
 	/**
 	* Returns the major version.
 	*
 	* @return the major version.
 	*/
-	@:overload public function getMajorVersion() : Int;
+	@:overload @:public public function getMajorVersion() : Int;
 	
 	/**
 	* Returns the minor version.
 	*
 	* @return the minor version.
 	*/
-	@:overload public function getMinorVersion() : Int;
+	@:overload @:public public function getMinorVersion() : Int;
 	
 	
 }

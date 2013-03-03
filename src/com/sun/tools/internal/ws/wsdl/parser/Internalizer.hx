@@ -25,13 +25,13 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class Internalizer
 {
-	@:overload public function new(forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
+	@:overload @:public public function new(forest : com.sun.tools.internal.ws.wsdl.parser.DOMForest, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, errorReceiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : Void;
 	
-	@:overload public function transform() : Void;
+	@:overload @:public public function transform() : Void;
 	
-	@:overload public function refineSchemaTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
+	@:overload @:public public function refineSchemaTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
 	
-	@:overload public function refineWSDLTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
+	@:overload @:public public function refineWSDLTarget(target : org.w3c.dom.Element) : org.w3c.dom.Element;
 	
 	
 }

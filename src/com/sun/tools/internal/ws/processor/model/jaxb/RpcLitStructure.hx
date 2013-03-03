@@ -28,31 +28,31 @@ extern class RpcLitStructure extends com.sun.tools.internal.ws.processor.model.A
 	/**
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel, members : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel, members : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>) : Void;
 	
-	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeVisitor) : Void;
+	@:overload @:public public function accept(visitor : com.sun.tools.internal.ws.processor.model.jaxb.JAXBTypeVisitor) : Void;
 	
-	@:overload public function getRpcLitMembers() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>;
+	@:overload @:public public function getRpcLitMembers() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>;
 	
-	@:overload public function setRpcLitMembers(members : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>) : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>;
+	@:overload @:public public function setRpcLitMembers(members : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>) : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember>;
 	
-	@:overload public function addRpcLitMember(member : com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember) : Void;
+	@:overload @:public public function addRpcLitMember(member : com.sun.tools.internal.ws.processor.model.jaxb.RpcLitMember) : Void;
 	
 	/**
 	* @return Returns the jaxbModel.
 	*/
-	@:overload public function getJaxbModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
+	@:overload @:public public function getJaxbModel() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel;
 	
 	/**
 	* @param jaxbModel The jaxbModel to set.
 	*/
-	@:overload public function setJaxbModel(jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
+	@:overload @:public public function setJaxbModel(jaxbModel : com.sun.tools.internal.ws.processor.model.jaxb.JAXBModel) : Void;
 	
-	@:overload override public function isLiteralType() : Bool;
+	@:overload @:public override public function isLiteralType() : Bool;
 	
 	
 }

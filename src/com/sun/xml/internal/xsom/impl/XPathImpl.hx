@@ -25,17 +25,17 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class XPathImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl implements com.sun.xml.internal.xsom.XSXPath
 {
-	@:overload public function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, xpath : com.sun.xml.internal.xsom.XmlString) : Void;
+	@:overload @:public public function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, xpath : com.sun.xml.internal.xsom.XmlString) : Void;
 	
-	@:overload public function setParent(parent : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
+	@:overload @:public public function setParent(parent : com.sun.xml.internal.xsom.XSIdentityConstraint) : Void;
 	
-	@:overload public function getParent() : com.sun.xml.internal.xsom.XSIdentityConstraint;
+	@:overload @:public public function getParent() : com.sun.xml.internal.xsom.XSIdentityConstraint;
 	
-	@:overload public function getXPath() : com.sun.xml.internal.xsom.XmlString;
+	@:overload @:public public function getXPath() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
 	
 }

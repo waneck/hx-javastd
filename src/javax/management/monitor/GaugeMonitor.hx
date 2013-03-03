@@ -80,17 +80,17 @@ package javax.management.monitor;
 	/**
 	* Default constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Starts the gauge monitor.
 	*/
-	@:overload @:synchronized override public function start() : Void;
+	@:overload @:public @:synchronized override public function start() : Void;
 	
 	/**
 	* Stops the gauge monitor.
 	*/
-	@:overload @:synchronized override public function stop() : Void;
+	@:overload @:public @:synchronized override public function stop() : Void;
 	
 	/**
 	* Gets the derived gauge of the specified object, if this object is
@@ -101,7 +101,7 @@ package javax.management.monitor;
 	* @return The derived gauge of the specified object.
 	*
 	*/
-	@:overload @:synchronized public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:public @:synchronized public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp of the specified object, if
@@ -114,7 +114,7 @@ package javax.management.monitor;
 	* @return The derived gauge timestamp of the specified object.
 	*
 	*/
-	@:overload @:synchronized public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:public @:synchronized public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Returns the derived gauge of the first object in the set of
@@ -125,7 +125,7 @@ package javax.management.monitor;
 	* @deprecated As of JMX 1.2, replaced by
 	* {@link #getDerivedGauge(ObjectName)}
 	*/
-	@:overload @:synchronized public function getDerivedGauge() : java.lang.Number;
+	@:overload @:public @:synchronized public function getDerivedGauge() : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp of the first object in the set
@@ -136,7 +136,7 @@ package javax.management.monitor;
 	* @deprecated As of JMX 1.2, replaced by
 	* {@link #getDerivedGaugeTimeStamp(ObjectName)}
 	*/
-	@:overload @:synchronized public function getDerivedGaugeTimeStamp() : haxe.Int64;
+	@:overload @:public @:synchronized public function getDerivedGaugeTimeStamp() : haxe.Int64;
 	
 	/**
 	* Gets the high threshold value common to all observed MBeans.
@@ -145,7 +145,7 @@ package javax.management.monitor;
 	*
 	* @see #setThresholds
 	*/
-	@:overload @:synchronized public function getHighThreshold() : java.lang.Number;
+	@:overload @:public @:synchronized public function getHighThreshold() : java.lang.Number;
 	
 	/**
 	* Gets the low threshold value common to all observed MBeans.
@@ -154,7 +154,7 @@ package javax.management.monitor;
 	*
 	* @see #setThresholds
 	*/
-	@:overload @:synchronized public function getLowThreshold() : java.lang.Number;
+	@:overload @:public @:synchronized public function getLowThreshold() : java.lang.Number;
 	
 	/**
 	* Sets the high and the low threshold values common to all
@@ -171,7 +171,7 @@ package javax.management.monitor;
 	* @see #getHighThreshold
 	* @see #getLowThreshold
 	*/
-	@:overload @:synchronized public function setThresholds(highValue : java.lang.Number, lowValue : java.lang.Number) : Void;
+	@:overload @:public @:synchronized public function setThresholds(highValue : java.lang.Number, lowValue : java.lang.Number) : Void;
 	
 	/**
 	* Gets the high notification's on/off switch value common to all
@@ -182,7 +182,7 @@ package javax.management.monitor;
 	*
 	* @see #setNotifyHigh
 	*/
-	@:overload @:synchronized public function getNotifyHigh() : Bool;
+	@:overload @:public @:synchronized public function getNotifyHigh() : Bool;
 	
 	/**
 	* Sets the high notification's on/off switch value common to all
@@ -192,7 +192,7 @@ package javax.management.monitor;
 	*
 	* @see #getNotifyHigh
 	*/
-	@:overload @:synchronized public function setNotifyHigh(value : Bool) : Void;
+	@:overload @:public @:synchronized public function setNotifyHigh(value : Bool) : Void;
 	
 	/**
 	* Gets the low notification's on/off switch value common to all
@@ -203,7 +203,7 @@ package javax.management.monitor;
 	*
 	* @see #setNotifyLow
 	*/
-	@:overload @:synchronized public function getNotifyLow() : Bool;
+	@:overload @:public @:synchronized public function getNotifyLow() : Bool;
 	
 	/**
 	* Sets the low notification's on/off switch value common to all
@@ -213,7 +213,7 @@ package javax.management.monitor;
 	*
 	* @see #getNotifyLow
 	*/
-	@:overload @:synchronized public function setNotifyLow(value : Bool) : Void;
+	@:overload @:public @:synchronized public function setNotifyLow(value : Bool) : Void;
 	
 	/**
 	* Gets the difference mode flag value common to all observed MBeans.
@@ -223,7 +223,7 @@ package javax.management.monitor;
 	*
 	* @see #setDifferenceMode
 	*/
-	@:overload @:synchronized public function getDifferenceMode() : Bool;
+	@:overload @:public @:synchronized public function getDifferenceMode() : Bool;
 	
 	/**
 	* Sets the difference mode flag value common to all observed MBeans.
@@ -232,14 +232,14 @@ package javax.management.monitor;
 	*
 	* @see #getDifferenceMode
 	*/
-	@:overload @:synchronized public function setDifferenceMode(value : Bool) : Void;
+	@:overload @:public @:synchronized public function setDifferenceMode(value : Bool) : Void;
 	
 	/**
 	* Returns a <CODE>NotificationInfo</CODE> object containing the
 	* name of the Java class of the notification and the notification
 	* types sent by the gauge monitor.
 	*/
-	@:overload override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload @:public override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	
 }
@@ -250,23 +250,23 @@ package javax.management.monitor;
 */
 @:native('javax$management$monitor$GaugeMonitor$GaugeMonitorObservedObject') @:internal extern class GaugeMonitor_GaugeMonitorObservedObject extends javax.management.monitor.Monitor.Monitor_ObservedObject
 {
-	@:overload public function new(observedObject : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(observedObject : javax.management.ObjectName) : Void;
 	
-	@:overload @:final @:synchronized public function getDerivedGaugeValid() : Bool;
+	@:overload @:public @:final @:synchronized public function getDerivedGaugeValid() : Bool;
 	
-	@:overload @:final @:synchronized public function setDerivedGaugeValid(derivedGaugeValid : Bool) : Void;
+	@:overload @:public @:final @:synchronized public function setDerivedGaugeValid(derivedGaugeValid : Bool) : Void;
 	
-	@:overload @:final @:synchronized public function getType() : javax.management.monitor.Monitor.Monitor_NumericalType;
+	@:overload @:public @:final @:synchronized public function getType() : javax.management.monitor.Monitor.Monitor_NumericalType;
 	
-	@:overload @:final @:synchronized public function setType(type : javax.management.monitor.Monitor.Monitor_NumericalType) : Void;
+	@:overload @:public @:final @:synchronized public function setType(type : javax.management.monitor.Monitor.Monitor_NumericalType) : Void;
 	
-	@:overload @:final @:synchronized public function getPreviousScanGauge() : java.lang.Number;
+	@:overload @:public @:final @:synchronized public function getPreviousScanGauge() : java.lang.Number;
 	
-	@:overload @:final @:synchronized public function setPreviousScanGauge(previousScanGauge : java.lang.Number) : Void;
+	@:overload @:public @:final @:synchronized public function setPreviousScanGauge(previousScanGauge : java.lang.Number) : Void;
 	
-	@:overload @:final @:synchronized public function getStatus() : Int;
+	@:overload @:public @:final @:synchronized public function getStatus() : Int;
 	
-	@:overload @:final @:synchronized public function setStatus(status : Int) : Void;
+	@:overload @:public @:final @:synchronized public function setStatus(status : Int) : Void;
 	
 	
 }

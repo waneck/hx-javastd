@@ -30,35 +30,35 @@ package sun.java2d.xr;
 */
 extern class XRColor
 {
-	public static var FULL_ALPHA(default, null) : sun.java2d.xr.XRColor;
+	@:public @:static @:final public static var FULL_ALPHA(default, null) : sun.java2d.xr.XRColor;
 	
-	public static var NO_ALPHA(default, null) : sun.java2d.xr.XRColor;
+	@:public @:static @:final public static var NO_ALPHA(default, null) : sun.java2d.xr.XRColor;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(alpha : Int, red : Int, green : Int, blue : Int) : Void;
+	@:overload @:public public function new(alpha : Int, red : Int, green : Int, blue : Int) : Void;
 	
-	@:overload public function new(color : java.awt.Color) : Void;
+	@:overload @:public public function new(color : java.awt.Color) : Void;
 	
-	@:overload public function setColorValues(color : java.awt.Color) : Void;
+	@:overload @:public public function setColorValues(color : java.awt.Color) : Void;
 	
-	@:overload public static function ARGBPrePixelToXRColors(pixels : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public @:static public static function ARGBPrePixelToXRColors(pixels : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload public function setColorValues(pixel : Int, pre : Bool) : Void;
+	@:overload @:public public function setColorValues(pixel : Int, pre : Bool) : Void;
 	
-	@:overload public static function byteToXRColorValue(byteValue : Int) : Int;
+	@:overload @:public @:static public static function byteToXRColorValue(byteValue : Int) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function setAlpha(alpha : Int) : Void;
+	@:overload @:public public function setAlpha(alpha : Int) : Void;
 	
-	@:overload public function getAlpha() : Int;
+	@:overload @:public public function getAlpha() : Int;
 	
-	@:overload public function getRed() : Int;
+	@:overload @:public public function getRed() : Int;
 	
-	@:overload public function getGreen() : Int;
+	@:overload @:public public function getGreen() : Int;
 	
-	@:overload public function getBlue() : Int;
+	@:overload @:public public function getBlue() : Int;
 	
 	
 }

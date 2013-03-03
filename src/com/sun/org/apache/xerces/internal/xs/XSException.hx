@@ -32,20 +32,20 @@ package com.sun.org.apache.xerces.internal.xs;
 */
 extern class XSException extends java.lang.RuntimeException
 {
-	@:overload public function new(code : java.StdTypes.Int16, message : String) : Void;
+	@:overload @:public public function new(code : java.StdTypes.Int16, message : String) : Void;
 	
-	public var code : java.StdTypes.Int16;
+	@:public public var code : java.StdTypes.Int16;
 	
 	/**
 	* If the implementation does not support the requested type of object or
 	* operation.
 	*/
-	public static var NOT_SUPPORTED_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var NOT_SUPPORTED_ERR(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* If index or size is negative, or greater than the allowed value
 	*/
-	public static var INDEX_SIZE_ERR(default, null) : java.StdTypes.Int16;
+	@:public @:static @:final public static var INDEX_SIZE_ERR(default, null) : java.StdTypes.Int16;
 	
 	
 }

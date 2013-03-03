@@ -88,7 +88,7 @@ package javax.xml.bind;
 	* @return
 	*     A string that is the same as the input string.
 	*/
-	@:overload public function parseString(lexicalXSDString : String) : String;
+	@:overload @:public public function parseString(lexicalXSDString : String) : String;
 	
 	/**
 	* <p>
@@ -100,7 +100,7 @@ package javax.xml.bind;
 	*     A BigInteger value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDInteger</code> is not a valid string representation of a {@link java.math.BigInteger} value.
 	*/
-	@:overload public function parseInteger(lexicalXSDInteger : String) : java.math.BigInteger;
+	@:overload @:public public function parseInteger(lexicalXSDInteger : String) : java.math.BigInteger;
 	
 	/**
 	* <p>
@@ -112,7 +112,7 @@ package javax.xml.bind;
 	*     An int value represented byte the string argument.
 	* @throws NumberFormatException <code>lexicalXSDInt</code> is not a valid string representation of an <code>int</code> value.
 	*/
-	@:overload public function parseInt(lexicalXSDInt : String) : Int;
+	@:overload @:public public function parseInt(lexicalXSDInt : String) : Int;
 	
 	/**
 	* <p>
@@ -124,7 +124,7 @@ package javax.xml.bind;
 	*     A long value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDLong</code> is not a valid string representation of a <code>long</code> value.
 	*/
-	@:overload public function parseLong(lexicalXSDLong : String) : haxe.Int64;
+	@:overload @:public public function parseLong(lexicalXSDLong : String) : haxe.Int64;
 	
 	/**
 	* <p>
@@ -136,7 +136,7 @@ package javax.xml.bind;
 	*     A short value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDShort</code> is not a valid string representation of a <code>short</code> value.
 	*/
-	@:overload public function parseShort(lexicalXSDShort : String) : java.StdTypes.Int16;
+	@:overload @:public public function parseShort(lexicalXSDShort : String) : java.StdTypes.Int16;
 	
 	/**
 	* <p>
@@ -148,7 +148,7 @@ package javax.xml.bind;
 	*     A BigDecimal value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDDecimal</code> is not a valid string representation of {@link java.math.BigDecimal}.
 	*/
-	@:overload public function parseDecimal(lexicalXSDDecimal : String) : java.math.BigDecimal;
+	@:overload @:public public function parseDecimal(lexicalXSDDecimal : String) : java.math.BigDecimal;
 	
 	/**
 	* <p>
@@ -160,7 +160,7 @@ package javax.xml.bind;
 	*     A float value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDFloat</code> is not a valid string representation of a <code>float</code> value.
 	*/
-	@:overload public function parseFloat(lexicalXSDFloat : String) : Single;
+	@:overload @:public public function parseFloat(lexicalXSDFloat : String) : Single;
 	
 	/**
 	* <p>
@@ -172,7 +172,7 @@ package javax.xml.bind;
 	*     A double value represented by the string argument.
 	* @throws NumberFormatException <code>lexicalXSDDouble</code> is not a valid string representation of a <code>double</code> value.
 	*/
-	@:overload public function parseDouble(lexicalXSDDouble : String) : Float;
+	@:overload @:public public function parseDouble(lexicalXSDDouble : String) : Float;
 	
 	/**
 	* <p>
@@ -184,7 +184,7 @@ package javax.xml.bind;
 	*     A boolean value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:boolean.
 	*/
-	@:overload public function parseBoolean(lexicalXSDBoolean : String) : Bool;
+	@:overload @:public public function parseBoolean(lexicalXSDBoolean : String) : Bool;
 	
 	/**
 	* <p>
@@ -197,7 +197,7 @@ package javax.xml.bind;
 	* @throws NumberFormatException <code>lexicalXSDByte</code> does not contain a parseable byte.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:byte.
 	*/
-	@:overload public function parseByte(lexicalXSDByte : String) : java.StdTypes.Int8;
+	@:overload @:public public function parseByte(lexicalXSDByte : String) : java.StdTypes.Int8;
 	
 	/**
 	* <p>
@@ -216,7 +216,7 @@ package javax.xml.bind;
 	* @throws IllegalArgumentException  if string parameter does not conform to XML Schema Part 2 specification or
 	*      if namespace prefix of <tt>lexicalXSDQname</tt> is not bound to a URI in NamespaceContext <tt>nsc</tt>.
 	*/
-	@:overload public function parseQName(lexicalXSDQName : String, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
+	@:overload @:public public function parseQName(lexicalXSDQName : String, nsc : javax.xml.namespace.NamespaceContext) : javax.xml.namespace.QName;
 	
 	/**
 	* <p>
@@ -228,7 +228,7 @@ package javax.xml.bind;
 	*     A Calendar object represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:dateTime.
 	*/
-	@:overload public function parseDateTime(lexicalXSDDateTime : String) : java.util.Calendar;
+	@:overload @:public public function parseDateTime(lexicalXSDDateTime : String) : java.util.Calendar;
 	
 	/**
 	* <p>
@@ -240,7 +240,7 @@ package javax.xml.bind;
 	*     An array of bytes represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:base64Binary
 	*/
-	@:overload public function parseBase64Binary(lexicalXSDBase64Binary : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function parseBase64Binary(lexicalXSDBase64Binary : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <p>
@@ -252,7 +252,7 @@ package javax.xml.bind;
 	*     An array of bytes represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:hexBinary.
 	*/
-	@:overload public function parseHexBinary(lexicalXSDHexBinary : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function parseHexBinary(lexicalXSDHexBinary : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* <p>
@@ -264,7 +264,7 @@ package javax.xml.bind;
 	*     A long value represented by the string argument.
 	* @throws NumberFormatException if string parameter can not be parsed into a <tt>long</tt> value.
 	*/
-	@:overload public function parseUnsignedInt(lexicalXSDUnsignedInt : String) : haxe.Int64;
+	@:overload @:public public function parseUnsignedInt(lexicalXSDUnsignedInt : String) : haxe.Int64;
 	
 	/**
 	* <p>
@@ -276,7 +276,7 @@ package javax.xml.bind;
 	*     An int value represented by the string argument.
 	* @throws NumberFormatException if string parameter can not be parsed into an <tt>int</tt> value.
 	*/
-	@:overload public function parseUnsignedShort(lexicalXSDUnsignedShort : String) : Int;
+	@:overload @:public public function parseUnsignedShort(lexicalXSDUnsignedShort : String) : Int;
 	
 	/**
 	* <p>
@@ -288,7 +288,7 @@ package javax.xml.bind;
 	*     A Calendar value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Time.
 	*/
-	@:overload public function parseTime(lexicalXSDTime : String) : java.util.Calendar;
+	@:overload @:public public function parseTime(lexicalXSDTime : String) : java.util.Calendar;
 	
 	/**
 	* <p>
@@ -300,7 +300,7 @@ package javax.xml.bind;
 	*     A Calendar value represented by the string argument.
 	* @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Date.
 	*/
-	@:overload public function parseDate(lexicalXSDDate : String) : java.util.Calendar;
+	@:overload @:public public function parseDate(lexicalXSDDate : String) : java.util.Calendar;
 	
 	/**
 	* <p>
@@ -313,7 +313,7 @@ package javax.xml.bind;
 	*     A string containing the lexical representation of the
 	*     simple type.
 	*/
-	@:overload public function parseAnySimpleType(lexicalXSDAnySimpleType : String) : String;
+	@:overload @:public public function parseAnySimpleType(lexicalXSDAnySimpleType : String) : String;
 	
 	/**
 	* <p>
@@ -323,7 +323,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:string
 	*/
-	@:overload public function printString(val : String) : String;
+	@:overload @:public public function printString(val : String) : String;
 	
 	/**
 	* <p>
@@ -334,7 +334,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:integer
 	* @throws IllegalArgumentException <tt>val</tt> is null.
 	*/
-	@:overload public function printInteger(val : java.math.BigInteger) : String;
+	@:overload @:public public function printInteger(val : java.math.BigInteger) : String;
 	
 	/**
 	* <p>
@@ -344,7 +344,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:int
 	*/
-	@:overload public function printInt(val : Int) : String;
+	@:overload @:public public function printInt(val : Int) : String;
 	
 	/**
 	* <p>
@@ -354,7 +354,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:long
 	*/
-	@:overload public function printLong(val : haxe.Int64) : String;
+	@:overload @:public public function printLong(val : haxe.Int64) : String;
 	
 	/**
 	* <p>
@@ -364,7 +364,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:short
 	*/
-	@:overload public function printShort(val : java.StdTypes.Int16) : String;
+	@:overload @:public public function printShort(val : java.StdTypes.Int16) : String;
 	
 	/**
 	* <p>
@@ -375,7 +375,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:decimal
 	* @throws IllegalArgumentException <tt>val</tt> is null.
 	*/
-	@:overload public function printDecimal(val : java.math.BigDecimal) : String;
+	@:overload @:public public function printDecimal(val : java.math.BigDecimal) : String;
 	
 	/**
 	* <p>
@@ -385,7 +385,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:float
 	*/
-	@:overload public function printFloat(val : Single) : String;
+	@:overload @:public public function printFloat(val : Single) : String;
 	
 	/**
 	* <p>
@@ -395,7 +395,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:double
 	*/
-	@:overload public function printDouble(val : Float) : String;
+	@:overload @:public public function printDouble(val : Float) : String;
 	
 	/**
 	* <p>
@@ -405,7 +405,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:boolean
 	*/
-	@:overload public function printBoolean(val : Bool) : String;
+	@:overload @:public public function printBoolean(val : Bool) : String;
 	
 	/**
 	* <p>
@@ -415,7 +415,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:byte
 	*/
-	@:overload public function printByte(val : java.StdTypes.Int8) : String;
+	@:overload @:public public function printByte(val : java.StdTypes.Int8) : String;
 	
 	/**
 	* <p>
@@ -429,7 +429,7 @@ package javax.xml.bind;
 	* @throws IllegalArgumentException if <tt>val</tt> is null or
 	* if <tt>nsc</tt> is non-null or <tt>nsc.getPrefix(nsprefixFromVal)</tt> is null.
 	*/
-	@:overload public function printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
+	@:overload @:public public function printQName(val : javax.xml.namespace.QName, nsc : javax.xml.namespace.NamespaceContext) : String;
 	
 	/**
 	* <p>
@@ -440,7 +440,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:dateTime
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public function printDateTime(val : java.util.Calendar) : String;
+	@:overload @:public public function printDateTime(val : java.util.Calendar) : String;
 	
 	/**
 	* <p>
@@ -451,7 +451,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:base64Binary
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public function printBase64Binary(val : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function printBase64Binary(val : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* <p>
@@ -462,7 +462,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:hexBinary
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public function printHexBinary(val : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:overload @:public public function printHexBinary(val : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* <p>
@@ -472,7 +472,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:unsignedInt
 	*/
-	@:overload public function printUnsignedInt(val : haxe.Int64) : String;
+	@:overload @:public public function printUnsignedInt(val : haxe.Int64) : String;
 	
 	/**
 	* <p>
@@ -482,7 +482,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:unsignedShort
 	*/
-	@:overload public function printUnsignedShort(val : Int) : String;
+	@:overload @:public public function printUnsignedShort(val : Int) : String;
 	
 	/**
 	* <p>
@@ -493,7 +493,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:time
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public function printTime(val : java.util.Calendar) : String;
+	@:overload @:public public function printTime(val : java.util.Calendar) : String;
 	
 	/**
 	* <p>
@@ -504,7 +504,7 @@ package javax.xml.bind;
 	*     A string containing a lexical representation of xsd:date
 	* @throws IllegalArgumentException if <tt>val</tt> is null.
 	*/
-	@:overload public function printDate(val : java.util.Calendar) : String;
+	@:overload @:public public function printDate(val : java.util.Calendar) : String;
 	
 	/**
 	* <p>
@@ -514,7 +514,7 @@ package javax.xml.bind;
 	* @return
 	*     A string containing a lexical representation of xsd:AnySimpleType
 	*/
-	@:overload public function printAnySimpleType(val : String) : String;
+	@:overload @:public public function printAnySimpleType(val : String) : String;
 	
 	
 }

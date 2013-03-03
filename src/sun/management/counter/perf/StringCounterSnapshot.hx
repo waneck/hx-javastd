@@ -28,9 +28,9 @@ package sun.management.counter.perf;
 */
 @:internal extern class StringCounterSnapshot extends sun.management.counter.AbstractCounter implements sun.management.counter.StringCounter
 {
-	@:overload override public function getValue() : Dynamic;
+	@:overload @:public override public function getValue() : Dynamic;
 	
-	@:overload public function stringValue() : String;
+	@:overload @:public public function stringValue() : String;
 	
 	
 }

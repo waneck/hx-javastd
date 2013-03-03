@@ -33,68 +33,68 @@ extern class PrincipalName implements java.lang.Cloneable
 	/**
 	* Name type not known
 	*/
-	public static var KRB_NT_UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_UNKNOWN(default, null) : Int;
 	
 	/**
 	* Just the name of the principal as in DCE, or for users
 	*/
-	public static var KRB_NT_PRINCIPAL(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_PRINCIPAL(default, null) : Int;
 	
 	/**
 	* Service and other unique instance (krbtgt)
 	*/
-	public static var KRB_NT_SRV_INST(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_SRV_INST(default, null) : Int;
 	
 	/**
 	* Service with host name as instance (telnet, rcommands)
 	*/
-	public static var KRB_NT_SRV_HST(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_SRV_HST(default, null) : Int;
 	
 	/**
 	* Service with host as remaining components
 	*/
-	public static var KRB_NT_SRV_XHST(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_SRV_XHST(default, null) : Int;
 	
 	/**
 	* Unique ID
 	*/
-	public static var KRB_NT_UID(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_UID(default, null) : Int;
 	
 	/**
 	* TGS Name
 	*/
-	public static var TGS_DEFAULT_SRV_NAME(default, null) : String;
+	@:public @:static @:final public static var TGS_DEFAULT_SRV_NAME(default, null) : String;
 	
-	public static var TGS_DEFAULT_NT(default, null) : Int;
+	@:public @:static @:final public static var TGS_DEFAULT_NT(default, null) : Int;
 	
-	public static var NAME_COMPONENT_SEPARATOR(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var NAME_COMPONENT_SEPARATOR(default, null) : java.StdTypes.Char16;
 	
-	public static var NAME_REALM_SEPARATOR(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var NAME_REALM_SEPARATOR(default, null) : java.StdTypes.Char16;
 	
-	public static var REALM_COMPONENT_SEPARATOR(default, null) : java.StdTypes.Char16;
+	@:public @:static @:final public static var REALM_COMPONENT_SEPARATOR(default, null) : java.StdTypes.Char16;
 	
-	public static var NAME_COMPONENT_SEPARATOR_STR(default, null) : String;
+	@:public @:static @:final public static var NAME_COMPONENT_SEPARATOR_STR(default, null) : String;
 	
-	public static var NAME_REALM_SEPARATOR_STR(default, null) : String;
+	@:public @:static @:final public static var NAME_REALM_SEPARATOR_STR(default, null) : String;
 	
-	public static var REALM_COMPONENT_SEPARATOR_STR(default, null) : String;
+	@:public @:static @:final public static var REALM_COMPONENT_SEPARATOR_STR(default, null) : String;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function new(nameParts : java.NativeArray<String>, type : Int) : Void;
+	@:overload @:public public function new(nameParts : java.NativeArray<String>, type : Int) : Void;
 	
-	@:overload public function new(nameParts : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(nameParts : java.NativeArray<String>) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/*
 	* Added to workaround a bug where the equals method that takes a
 	* PrincipalName is not being called but Object.equals(Object) is
 	* being called.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function equals(other : sun.security.krb5.PrincipalName) : Bool;
+	@:overload @:public public function equals(other : sun.security.krb5.PrincipalName) : Bool;
 	
 	/**
 	* Returns the ASN.1 encoding of the
@@ -122,7 +122,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* reading encoded data.
 	*
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Parse (unmarshal) a <code>PrincipalName</code> from a DER
@@ -138,43 +138,43 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @return an instance of <code>PrincipalName</code>.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.PrincipalName;
+	@:overload @:public @:static public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.PrincipalName;
 	
-	@:overload private static function parseName(name : String) : java.NativeArray<String>;
+	@:overload @:protected @:static private static function parseName(name : String) : java.NativeArray<String>;
 	
-	@:overload public function new(name : String, type : Int) : Void;
+	@:overload @:public public function new(name : String, type : Int) : Void;
 	
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
-	@:overload public function new(name : String, realm : String) : Void;
+	@:overload @:public public function new(name : String, realm : String) : Void;
 	
-	@:overload public function getRealmAsString() : String;
+	@:overload @:public public function getRealmAsString() : String;
 	
-	@:overload public function getPrincipalNameAsString() : String;
+	@:overload @:public public function getPrincipalNameAsString() : String;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getNameType() : Int;
+	@:overload @:public public function getNameType() : Int;
 	
-	@:overload public function getNameStrings() : java.NativeArray<String>;
+	@:overload @:public public function getNameStrings() : java.NativeArray<String>;
 	
-	@:overload public function toByteArray() : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:overload @:public public function toByteArray() : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	@:overload public function getRealmString() : String;
+	@:overload @:public public function getRealmString() : String;
 	
-	@:overload public function getRealm() : sun.security.krb5.Realm;
+	@:overload @:public public function getRealm() : sun.security.krb5.Realm;
 	
-	@:overload public function setRealm(new_nameRealm : sun.security.krb5.Realm) : Void;
+	@:overload @:public public function setRealm(new_nameRealm : sun.security.krb5.Realm) : Void;
 	
-	@:overload public function setRealm(realmsString : String) : Void;
+	@:overload @:public public function setRealm(realmsString : String) : Void;
 	
-	@:overload public function getSalt() : String;
+	@:overload @:public public function getSalt() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getNameString() : String;
+	@:overload @:public public function getNameString() : String;
 	
 	/**
 	* Encodes a <code>PrincipalName</code> object.
@@ -183,7 +183,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Checks if two <code>PrincipalName</code> objects have identical values in their corresponding data fields.
@@ -191,7 +191,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @param pname the other <code>PrincipalName</code> object.
 	* @return true if two have identical values, otherwise, return false.
 	*/
-	@:overload public function match(pname : sun.security.krb5.PrincipalName) : Bool;
+	@:overload @:public public function match(pname : sun.security.krb5.PrincipalName) : Bool;
 	
 	/**
 	* Writes data field values of <code>PrincipalName</code> in FCC format to an output stream.
@@ -200,7 +200,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @exception IOException if an I/O exception occurs.
 	* @see sun.security.krb5.internal.ccache.CCacheOutputStream
 	*/
-	@:overload public function writePrincipal(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
+	@:overload @:public public function writePrincipal(cos : sun.security.krb5.internal.ccache.CCacheOutputStream) : Void;
 	
 	/**
 	* Creates a KRB_NT_SRV_INST name from the supplied
@@ -210,7 +210,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @param realm the realm
 	* @throws KrbException
 	*/
-	@:overload private function new(primary : String, instance : String, realm : String, type : Int) : Void;
+	@:overload @:protected private function new(primary : String, instance : String, realm : String, type : Int) : Void;
 	
 	/**
 	* Returns the instance component of a name.
@@ -220,7 +220,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* components in the name.
 	* @returns instance component of a multi-component name.
 	*/
-	@:overload public function getInstanceComponent() : String;
+	@:overload @:public public function getInstanceComponent() : String;
 	
 	
 }

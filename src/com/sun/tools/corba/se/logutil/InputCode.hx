@@ -34,42 +34,42 @@ extern class InputCode
 	* @param logLevel the level of severity of this error.
 	* @param message the error message for this code.
 	*/
-	@:overload public function new(name : String, code : Int, logLevel : String, message : String) : Void;
+	@:overload @:public public function new(name : String, code : Int, logLevel : String, message : String) : Void;
 	
 	/**
 	* Returns the name of this code.
 	*
 	* @return the name of the code.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the code.
 	*
 	* @return the code.
 	*/
-	@:overload public function getCode() : Int;
+	@:overload @:public public function getCode() : Int;
 	
 	/**
 	* Returns the severity of this code.
 	*
 	* @return the log level severity of the code.
 	*/
-	@:overload public function getLogLevel() : String;
+	@:overload @:public public function getLogLevel() : String;
 	
 	/**
 	* Returns the error message for this code.
 	*
 	* @return the error message for this code.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* Returns a textual representation of this code.
 	*
 	* @return a textual representation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

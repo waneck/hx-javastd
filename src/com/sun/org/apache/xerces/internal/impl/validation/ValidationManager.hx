@@ -31,32 +31,32 @@ extern class ValidationManager
 	*
 	* @author Elena Litani, IBM
 	*/
-	private var fVSs(default, null) : java.util.Vector<Dynamic>;
+	@:protected @:final private var fVSs(default, null) : java.util.Vector<Dynamic>;
 	
-	private var fGrammarFound : Bool;
+	@:protected private var fGrammarFound : Bool;
 	
-	private var fCachedDTD : Bool;
+	@:protected private var fCachedDTD : Bool;
 	
 	/**
 	* Each validator should call this method to add its ValidationState into
 	* the validation manager.
 	*/
-	@:overload @:final public function addValidationState(vs : com.sun.org.apache.xerces.internal.impl.validation.ValidationState) : Void;
+	@:overload @:public @:final public function addValidationState(vs : com.sun.org.apache.xerces.internal.impl.validation.ValidationState) : Void;
 	
 	/**
 	* Set the information required to validate entity values.
 	*/
-	@:overload @:final public function setEntityState(state : com.sun.org.apache.xerces.internal.impl.validation.EntityState) : Void;
+	@:overload @:public @:final public function setEntityState(state : com.sun.org.apache.xerces.internal.impl.validation.EntityState) : Void;
 	
-	@:overload @:final public function setGrammarFound(grammar : Bool) : Void;
+	@:overload @:public @:final public function setGrammarFound(grammar : Bool) : Void;
 	
-	@:overload @:final public function isGrammarFound() : Bool;
+	@:overload @:public @:final public function isGrammarFound() : Bool;
 	
-	@:overload @:final public function setCachedDTD(cachedDTD : Bool) : Void;
+	@:overload @:public @:final public function setCachedDTD(cachedDTD : Bool) : Void;
 	
-	@:overload @:final public function isCachedDTD() : Bool;
+	@:overload @:public @:final public function isCachedDTD() : Bool;
 	
-	@:overload @:final public function reset() : Void;
+	@:overload @:public @:final public function reset() : Void;
 	
 	
 }

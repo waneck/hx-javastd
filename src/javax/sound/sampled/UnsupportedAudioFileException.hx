@@ -44,7 +44,7 @@ package javax.sound.sampled;
 	* Constructs a <code>UnsupportedAudioFileException</code> that has
 	* <code>null</code> as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>UnsupportedAudioFileException</code> that has
@@ -52,7 +52,7 @@ package javax.sound.sampled;
 	*
 	* @param message a string containing the error detail message
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	
 }

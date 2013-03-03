@@ -70,7 +70,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface InstructionComparator
 {
-	@:overload public function equals(i1 : com.sun.org.apache.bcel.internal.generic.Instruction, i2 : com.sun.org.apache.bcel.internal.generic.Instruction) : Bool;
+	@:overload @:public public function equals(i1 : com.sun.org.apache.bcel.internal.generic.Instruction, i2 : com.sun.org.apache.bcel.internal.generic.Instruction) : Bool;
 	
 	
 }

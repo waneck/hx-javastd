@@ -33,20 +33,20 @@ extern class ECFieldFp implements java.security.spec.ECField
 	* @exception IllegalArgumentException if <code>p</code>
 	* is not positive.
 	*/
-	@:overload public function new(p : java.math.BigInteger) : Void;
+	@:overload @:public public function new(p : java.math.BigInteger) : Void;
 	
 	/**
 	* Returns the field size in bits which is size of prime p
 	* for this prime finite field.
 	* @return the field size in bits.
 	*/
-	@:overload public function getFieldSize() : Int;
+	@:overload @:public public function getFieldSize() : Int;
 	
 	/**
 	* Returns the prime <code>p</code> of this prime finite field.
 	* @return the prime.
 	*/
-	@:overload public function getP() : java.math.BigInteger;
+	@:overload @:public public function getP() : java.math.BigInteger;
 	
 	/**
 	* Compares this prime finite field for equality with the
@@ -55,13 +55,13 @@ extern class ECFieldFp implements java.security.spec.ECField
 	* @return true if <code>obj</code> is an instance
 	* of ECFieldFp and the prime value match, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this prime finite field.
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

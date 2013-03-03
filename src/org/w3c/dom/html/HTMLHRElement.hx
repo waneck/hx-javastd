@@ -48,34 +48,34 @@ extern interface HTMLHRElement extends org.w3c.dom.html.HTMLElement
 	*  Align the rule on the page. See the  align attribute definition in
 	* HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getAlign() : String;
+	@:overload @:public public function getAlign() : String;
 	
-	@:overload public function setAlign(align : String) : Void;
+	@:overload @:public public function setAlign(align : String) : Void;
 	
 	/**
 	*  Indicates to the user agent that there should be no shading in the
 	* rendering of this element. See the  noshade attribute definition in
 	* HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getNoShade() : Bool;
+	@:overload @:public public function getNoShade() : Bool;
 	
-	@:overload public function setNoShade(noShade : Bool) : Void;
+	@:overload @:public public function setNoShade(noShade : Bool) : Void;
 	
 	/**
 	*  The height of the rule. See the  size attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getSize() : String;
+	@:overload @:public public function getSize() : String;
 	
-	@:overload public function setSize(size : String) : Void;
+	@:overload @:public public function setSize(size : String) : Void;
 	
 	/**
 	*  The width of the rule. See the  width attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getWidth() : String;
+	@:overload @:public public function getWidth() : String;
 	
-	@:overload public function setWidth(width : String) : Void;
+	@:overload @:public public function setWidth(width : String) : Void;
 	
 	
 }

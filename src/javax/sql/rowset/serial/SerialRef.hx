@@ -44,7 +44,7 @@ extern class SerialRef implements java.sql.Ref implements java.io.Serializable i
 	* @throws SerialException if an error occurs serializing the <code>Ref</code>
 	*     object
 	*/
-	@:overload public function new(ref : java.sql.Ref) : Void;
+	@:overload @:public public function new(ref : java.sql.Ref) : Void;
 	
 	/**
 	* Returns a string describing the base type name of the <code>Ref</code>.
@@ -52,7 +52,7 @@ extern class SerialRef implements java.sql.Ref implements java.io.Serializable i
 	* @return a string of the base type name of the Ref
 	* @throws SerialException in no Ref object has been set
 	*/
-	@:overload public function getBaseTypeName() : String;
+	@:overload @:public public function getBaseTypeName() : String;
 	
 	/**
 	* Returns an <code>Object</code> representing the SQL structured type
@@ -69,7 +69,7 @@ extern class SerialRef implements java.sql.Ref implements java.io.Serializable i
 	* @throws SerialException if an error is encountered in the reference
 	*        resolution
 	*/
-	@:overload public function getObject(map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public public function getObject(map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Returns an <code>Object</code> representing the SQL structured type
@@ -79,7 +79,7 @@ extern class SerialRef implements java.sql.Ref implements java.io.Serializable i
 	* @throws SerialException if an error is encountered in the reference
 	*         resolution
 	*/
-	@:overload public function getObject() : Dynamic;
+	@:overload @:public public function getObject() : Dynamic;
 	
 	/**
 	* Sets the SQL structured type that this <code>SerialRef</code> object
@@ -90,7 +90,7 @@ extern class SerialRef implements java.sql.Ref implements java.io.Serializable i
 	* @throws SerialException if an error is encountered generating the
 	* the structured type referenced by this <code>SerialRef</code> object
 	*/
-	@:overload public function setObject(obj : Dynamic) : Void;
+	@:overload @:public public function setObject(obj : Dynamic) : Void;
 	
 	
 }

@@ -33,28 +33,28 @@ extern class Scope<BeanT, PropT, ItemT, PackT>
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
+	@:public @:final public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
 	/**
 	* Returns true if this scope object is filled by a packing in progress.
 	*/
-	@:overload public function hasStarted() : Bool;
+	@:overload @:public public function hasStarted() : Bool;
 	
 	/**
 	* Initializes all the fields to null.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Finishes up the current packing in progress (if any) and
 	* resets this object.
 	*/
-	@:overload public function finish() : Void;
+	@:overload @:public public function finish() : Void;
 	
 	/**
 	* Adds a new item to this packing scope.
 	*/
-	@:overload public function add(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, ItemT, PackT>, value : ItemT) : Void;
+	@:overload @:public public function add(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, ItemT, PackT>, value : ItemT) : Void;
 	
 	/**
 	* Starts the packing scope, without adding any item.
@@ -62,7 +62,7 @@ extern class Scope<BeanT, PropT, ItemT, PackT>
 	* This allows us to return an empty pack, thereby allowing the user
 	* to distinguish empty array vs null array.
 	*/
-	@:overload public function start(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, ItemT, PackT>) : Void;
+	@:overload @:public public function start(acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>, lister : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, ItemT, PackT>) : Void;
 	
 	
 }

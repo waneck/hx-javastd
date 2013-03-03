@@ -34,26 +34,26 @@ extern class VerticalBagLayout implements java.awt.LayoutManager
 	/**
 	* Constructs a new VerticalBagLayout.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a VerticalBagLayout with the specified gaps.
 	* @param vgap the vertical gap
 	*/
-	@:overload public function new(vgap : Int) : Void;
+	@:overload @:public public function new(vgap : Int) : Void;
 	
 	/**
 	* Adds the specified named component to the layout.
 	* @param name the String name
 	* @param comp the component to be added
 	*/
-	@:overload public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, comp : java.awt.Component) : Void;
 	
 	/**
 	* Removes the specified component from the layout.
 	* @param comp the component to be removed
 	*/
-	@:overload public function removeLayoutComponent(comp : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(comp : java.awt.Component) : Void;
 	
 	/**
 	* Returns the minimum dimensions needed to lay out the components
@@ -62,7 +62,7 @@ extern class VerticalBagLayout implements java.awt.LayoutManager
 	* @see Container
 	* @see #preferredLayoutSize
 	*/
-	@:overload public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the preferred dimensions for this layout given the components
@@ -71,7 +71,7 @@ extern class VerticalBagLayout implements java.awt.LayoutManager
 	* @see Container
 	* @see #minimumLayoutSize
 	*/
-	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Lays out the specified container. This method will actually reshape the
@@ -80,12 +80,12 @@ extern class VerticalBagLayout implements java.awt.LayoutManager
 	* @param target the component being laid out
 	* @see Container
 	*/
-	@:overload public function layoutContainer(target : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(target : java.awt.Container) : Void;
 	
 	/**
 	* Returns the String representation of this VerticalBagLayout's values.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

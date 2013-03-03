@@ -30,21 +30,21 @@ extern class Sensor
 	*
 	* @param name The name of this sensor.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Returns the name of this sensor.
 	*
 	* @return the name of this sensor.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the total number of times that this sensor has been triggered.
 	*
 	* @return the total number of times that this sensor has been triggered.
 	*/
-	@:overload public function getCount() : haxe.Int64;
+	@:overload @:public public function getCount() : haxe.Int64;
 	
 	/**
 	* Tests if this sensor is currently on.
@@ -53,39 +53,39 @@ extern class Sensor
 	*         <tt>false</tt> otherwise.
 	*
 	*/
-	@:overload public function isOn() : Bool;
+	@:overload @:public public function isOn() : Bool;
 	
 	/**
 	* Triggers this sensor. This method first sets this sensor on
 	* and increments its sensor count.
 	*/
-	@:overload public function trigger() : Void;
+	@:overload @:public public function trigger() : Void;
 	
 	/**
 	* Triggers this sensor. This method sets this sensor on
 	* and increments the count with the input <tt>increment</tt>.
 	*/
-	@:overload public function trigger(increment : Int) : Void;
+	@:overload @:public public function trigger(increment : Int) : Void;
 	
 	/**
 	* Triggers this sensor piggybacking a memory usage object.
 	* This method sets this sensor on
 	* and increments the count with the input <tt>increment</tt>.
 	*/
-	@:overload public function trigger(increment : Int, usage : java.lang.management.MemoryUsage) : Void;
+	@:overload @:public public function trigger(increment : Int, usage : java.lang.management.MemoryUsage) : Void;
 	
 	/**
 	* Clears this sensor.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Clears this sensor
 	* and increments the count with the input <tt>increment</tt>.
 	*/
-	@:overload public function clear(increment : Int) : Void;
+	@:overload @:public public function clear(increment : Int) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

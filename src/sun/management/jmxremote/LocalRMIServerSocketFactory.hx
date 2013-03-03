@@ -30,18 +30,18 @@ extern class LocalRMIServerSocketFactory implements java.rmi.server.RMIServerSoc
 	* clients running on the host where the RMI remote objects have been
 	* exported.
 	*/
-	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload @:public public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
 	/**
 	* Two LocalRMIServerSocketFactory objects
 	* are equal if they are of the same type.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this LocalRMIServerSocketFactory.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

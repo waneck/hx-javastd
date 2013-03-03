@@ -34,23 +34,23 @@ package com.sun.tools.javac.comp;
 */
 extern class Annotate
 {
-	private static var annotateKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Annotate>;
+	@:protected @:static @:final private static var annotateKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Annotate>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Annotate;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Annotate;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function later(a : com.sun.tools.javac.comp.Annotate.Annotate_Annotator) : Void;
+	@:overload @:public public function later(a : com.sun.tools.javac.comp.Annotate.Annotate_Annotator) : Void;
 	
-	@:overload public function earlier(a : com.sun.tools.javac.comp.Annotate.Annotate_Annotator) : Void;
+	@:overload @:public public function earlier(a : com.sun.tools.javac.comp.Annotate.Annotate_Annotator) : Void;
 	
 	/** Called when the Enter phase starts. */
-	@:overload public function enterStart() : Void;
+	@:overload @:public public function enterStart() : Void;
 	
 	/** Called after the Enter phase completes. */
-	@:overload public function enterDone() : Void;
+	@:overload @:public public function enterDone() : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	
 }

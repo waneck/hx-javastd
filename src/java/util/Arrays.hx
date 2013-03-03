@@ -61,7 +61,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Int>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -83,7 +83,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<Int>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Int>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array into ascending numerical order.
@@ -96,7 +96,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<haxe.Int64>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -118,7 +118,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<haxe.Int64>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<haxe.Int64>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array into ascending numerical order.
@@ -131,7 +131,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int16>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int16>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -153,7 +153,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int16>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int16>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array into ascending numerical order.
@@ -166,7 +166,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -188,7 +188,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Char16>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Char16>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array into ascending numerical order.
@@ -201,7 +201,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -223,7 +223,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<java.StdTypes.Int8>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<java.StdTypes.Int8>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array into ascending numerical order.
@@ -244,7 +244,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Single>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Single>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -274,7 +274,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<Single>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Single>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array into ascending numerical order.
@@ -295,7 +295,7 @@ package java.util;
 	*
 	* @param a the array to be sorted
 	*/
-	@:overload public static function sort(a : java.NativeArray<Float>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Float>) : Void;
 	
 	/**
 	* Sorts the specified range of the array into ascending order. The range
@@ -325,7 +325,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException
 	*     if {@code fromIndex < 0} or {@code toIndex > a.length}
 	*/
-	@:overload public static function sort(a : java.NativeArray<Float>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Float>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array of objects into ascending order, according
@@ -369,7 +369,7 @@ package java.util;
 	*         ordering of the array elements is found to violate the
 	*         {@link Comparable} contract
 	*/
-	@:overload public static function sort(a : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Sorts the specified range of the specified array of objects into
@@ -423,7 +423,7 @@ package java.util;
 	*         not <i>mutually comparable</i> (for example, strings and
 	*         integers).
 	*/
-	@:overload public static function sort(a : java.NativeArray<Dynamic>, fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:public @:static public static function sort(a : java.NativeArray<Dynamic>, fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Sorts the specified array of objects according to the order induced by
@@ -467,7 +467,7 @@ package java.util;
 	* @throws IllegalArgumentException (optional) if the comparator is
 	*         found to violate the {@link Comparator} contract
 	*/
-	@:overload public static function sort<T>(a : java.NativeArray<T>, c : java.util.Comparator<T>) : Void;
+	@:overload @:public @:static public static function sort<T>(a : java.NativeArray<T>, c : java.util.Comparator<T>) : Void;
 	
 	/**
 	* Sorts the specified range of the specified array of objects according
@@ -520,7 +520,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if {@code fromIndex < 0} or
 	*         {@code toIndex > a.length}
 	*/
-	@:overload public static function sort<T>(a : java.NativeArray<T>, fromIndex : Int, toIndex : Int, c : java.util.Comparator<T>) : Void;
+	@:overload @:public @:static public static function sort<T>(a : java.NativeArray<T>, fromIndex : Int, toIndex : Int, c : java.util.Comparator<T>) : Void;
 	
 	/**
 	* Searches the specified array of longs for the specified value using the
@@ -541,7 +541,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<haxe.Int64>, key : haxe.Int64) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<haxe.Int64>, key : haxe.Int64) : Int;
 	
 	/**
 	* Searches a range of
@@ -575,7 +575,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<haxe.Int64>, fromIndex : Int, toIndex : Int, key : haxe.Int64) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<haxe.Int64>, fromIndex : Int, toIndex : Int, key : haxe.Int64) : Int;
 	
 	/**
 	* Searches the specified array of ints for the specified value using the
@@ -596,7 +596,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<Int>, key : Int) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<Int>, key : Int) : Int;
 	
 	/**
 	* Searches a range of
@@ -630,7 +630,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<Int>, fromIndex : Int, toIndex : Int, key : Int) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<Int>, fromIndex : Int, toIndex : Int, key : Int) : Int;
 	
 	/**
 	* Searches the specified array of shorts for the specified value using
@@ -651,7 +651,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<java.StdTypes.Int16>, key : java.StdTypes.Int16) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<java.StdTypes.Int16>, key : java.StdTypes.Int16) : Int;
 	
 	/**
 	* Searches a range of
@@ -685,7 +685,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<java.StdTypes.Int16>, fromIndex : Int, toIndex : Int, key : java.StdTypes.Int16) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<java.StdTypes.Int16>, fromIndex : Int, toIndex : Int, key : java.StdTypes.Int16) : Int;
 	
 	/**
 	* Searches the specified array of chars for the specified value using the
@@ -706,7 +706,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<java.StdTypes.Char16>, key : java.StdTypes.Char16) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<java.StdTypes.Char16>, key : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Searches a range of
@@ -740,7 +740,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<java.StdTypes.Char16>, fromIndex : Int, toIndex : Int, key : java.StdTypes.Char16) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<java.StdTypes.Char16>, fromIndex : Int, toIndex : Int, key : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Searches the specified array of bytes for the specified value using the
@@ -761,7 +761,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<java.StdTypes.Int8>, key : java.StdTypes.Int8) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<java.StdTypes.Int8>, key : java.StdTypes.Int8) : Int;
 	
 	/**
 	* Searches a range of
@@ -795,7 +795,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<java.StdTypes.Int8>, fromIndex : Int, toIndex : Int, key : java.StdTypes.Int8) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<java.StdTypes.Int8>, fromIndex : Int, toIndex : Int, key : java.StdTypes.Int8) : Int;
 	
 	/**
 	* Searches the specified array of doubles for the specified value using
@@ -817,7 +817,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<Float>, key : Float) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<Float>, key : Float) : Int;
 	
 	/**
 	* Searches a range of
@@ -852,7 +852,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<Float>, fromIndex : Int, toIndex : Int, key : Float) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<Float>, fromIndex : Int, toIndex : Int, key : Float) : Int;
 	
 	/**
 	* Searches the specified array of floats for the specified value using
@@ -874,7 +874,7 @@ package java.util;
 	*         that this guarantees that the return value will be &gt;= 0 if
 	*         and only if the key is found.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<Single>, key : Single) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<Single>, key : Single) : Int;
 	
 	/**
 	* Searches a range of
@@ -909,7 +909,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<Single>, fromIndex : Int, toIndex : Int, key : Single) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<Single>, fromIndex : Int, toIndex : Int, key : Single) : Int;
 	
 	/**
 	* Searches the specified array for the specified object using the binary
@@ -939,7 +939,7 @@ package java.util;
 	* @throws ClassCastException if the search key is not comparable to the
 	*         elements of the array.
 	*/
-	@:overload public static function binarySearch(a : java.NativeArray<Dynamic>, key : Dynamic) : Int;
+	@:overload @:public @:static public static function binarySearch(a : java.NativeArray<Dynamic>, key : Dynamic) : Int;
 	
 	/**
 	* Searches a range of
@@ -981,7 +981,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch(a : java.NativeArray<Dynamic>, fromIndex : Int, toIndex : Int, key : Dynamic) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch(a : java.NativeArray<Dynamic>, fromIndex : Int, toIndex : Int, key : Dynamic) : Int;
 	
 	/**
 	* Searches the specified array for the specified object using the binary
@@ -1012,7 +1012,7 @@ package java.util;
 	*         or the search key is not comparable to the
 	*         elements of the array using this comparator.
 	*/
-	@:overload public static function binarySearch<T>(a : java.NativeArray<T>, key : T, c : java.util.Comparator<T>) : Int;
+	@:overload @:public @:static public static function binarySearch<T>(a : java.NativeArray<T>, key : T, c : java.util.Comparator<T>) : Int;
 	
 	/**
 	* Searches a range of
@@ -1055,7 +1055,7 @@ package java.util;
 	*         if {@code fromIndex < 0 or toIndex > a.length}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function binarySearch<T>(a : java.NativeArray<T>, fromIndex : Int, toIndex : Int, key : T, c : java.util.Comparator<T>) : Int;
+	@:require(java6) @:overload @:public @:static public static function binarySearch<T>(a : java.NativeArray<T>, fromIndex : Int, toIndex : Int, key : T, c : java.util.Comparator<T>) : Int;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of longs are
@@ -1069,7 +1069,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<haxe.Int64>, a2 : java.NativeArray<haxe.Int64>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<haxe.Int64>, a2 : java.NativeArray<haxe.Int64>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of ints are
@@ -1083,7 +1083,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<Int>, a2 : java.NativeArray<Int>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<Int>, a2 : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of shorts are
@@ -1097,7 +1097,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<java.StdTypes.Int16>, a2 : java.NativeArray<java.StdTypes.Int16>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<java.StdTypes.Int16>, a2 : java.NativeArray<java.StdTypes.Int16>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of chars are
@@ -1111,7 +1111,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<java.StdTypes.Char16>, a2 : java.NativeArray<java.StdTypes.Char16>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<java.StdTypes.Char16>, a2 : java.NativeArray<java.StdTypes.Char16>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of bytes are
@@ -1125,7 +1125,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<java.StdTypes.Int8>, a2 : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<java.StdTypes.Int8>, a2 : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of booleans are
@@ -1139,7 +1139,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<Bool>, a2 : java.NativeArray<Bool>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<Bool>, a2 : java.NativeArray<Bool>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of doubles are
@@ -1159,7 +1159,7 @@ package java.util;
 	* @return <tt>true</tt> if the two arrays are equal
 	* @see Double#equals(Object)
 	*/
-	@:overload public static function equals(a : java.NativeArray<Float>, a2 : java.NativeArray<Float>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<Float>, a2 : java.NativeArray<Float>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of floats are
@@ -1179,7 +1179,7 @@ package java.util;
 	* @return <tt>true</tt> if the two arrays are equal
 	* @see Float#equals(Object)
 	*/
-	@:overload public static function equals(a : java.NativeArray<Single>, a2 : java.NativeArray<Single>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<Single>, a2 : java.NativeArray<Single>) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays of Objects are
@@ -1195,7 +1195,7 @@ package java.util;
 	* @param a2 the other array to be tested for equality
 	* @return <tt>true</tt> if the two arrays are equal
 	*/
-	@:overload public static function equals(a : java.NativeArray<Dynamic>, a2 : java.NativeArray<Dynamic>) : Bool;
+	@:overload @:public @:static public static function equals(a : java.NativeArray<Dynamic>, a2 : java.NativeArray<Dynamic>) : Bool;
 	
 	/**
 	* Assigns the specified long value to each element of the specified array
@@ -1204,7 +1204,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<haxe.Int64>, val : haxe.Int64) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<haxe.Int64>, val : haxe.Int64) : Void;
 	
 	/**
 	* Assigns the specified long value to each element of the specified
@@ -1223,7 +1223,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<haxe.Int64>, fromIndex : Int, toIndex : Int, val : haxe.Int64) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<haxe.Int64>, fromIndex : Int, toIndex : Int, val : haxe.Int64) : Void;
 	
 	/**
 	* Assigns the specified int value to each element of the specified array
@@ -1232,7 +1232,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<Int>, val : Int) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Int>, val : Int) : Void;
 	
 	/**
 	* Assigns the specified int value to each element of the specified
@@ -1251,7 +1251,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<Int>, fromIndex : Int, toIndex : Int, val : Int) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Int>, fromIndex : Int, toIndex : Int, val : Int) : Void;
 	
 	/**
 	* Assigns the specified short value to each element of the specified array
@@ -1260,7 +1260,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<java.StdTypes.Int16>, val : java.StdTypes.Int16) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<java.StdTypes.Int16>, val : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Assigns the specified short value to each element of the specified
@@ -1279,7 +1279,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<java.StdTypes.Int16>, fromIndex : Int, toIndex : Int, val : java.StdTypes.Int16) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<java.StdTypes.Int16>, fromIndex : Int, toIndex : Int, val : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Assigns the specified char value to each element of the specified array
@@ -1288,7 +1288,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<java.StdTypes.Char16>, val : java.StdTypes.Char16) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<java.StdTypes.Char16>, val : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Assigns the specified char value to each element of the specified
@@ -1307,7 +1307,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<java.StdTypes.Char16>, fromIndex : Int, toIndex : Int, val : java.StdTypes.Char16) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<java.StdTypes.Char16>, fromIndex : Int, toIndex : Int, val : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Assigns the specified byte value to each element of the specified array
@@ -1316,7 +1316,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<java.StdTypes.Int8>, val : java.StdTypes.Int8) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<java.StdTypes.Int8>, val : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Assigns the specified byte value to each element of the specified
@@ -1335,7 +1335,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<java.StdTypes.Int8>, fromIndex : Int, toIndex : Int, val : java.StdTypes.Int8) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<java.StdTypes.Int8>, fromIndex : Int, toIndex : Int, val : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Assigns the specified boolean value to each element of the specified
@@ -1344,7 +1344,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<Bool>, val : Bool) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Bool>, val : Bool) : Void;
 	
 	/**
 	* Assigns the specified boolean value to each element of the specified
@@ -1363,7 +1363,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<Bool>, fromIndex : Int, toIndex : Int, val : Bool) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Bool>, fromIndex : Int, toIndex : Int, val : Bool) : Void;
 	
 	/**
 	* Assigns the specified double value to each element of the specified
@@ -1372,7 +1372,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<Float>, val : Float) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Float>, val : Float) : Void;
 	
 	/**
 	* Assigns the specified double value to each element of the specified
@@ -1391,7 +1391,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<Float>, fromIndex : Int, toIndex : Int, val : Float) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Float>, fromIndex : Int, toIndex : Int, val : Float) : Void;
 	
 	/**
 	* Assigns the specified float value to each element of the specified array
@@ -1400,7 +1400,7 @@ package java.util;
 	* @param a the array to be filled
 	* @param val the value to be stored in all elements of the array
 	*/
-	@:overload public static function fill(a : java.NativeArray<Single>, val : Single) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Single>, val : Single) : Void;
 	
 	/**
 	* Assigns the specified float value to each element of the specified
@@ -1419,7 +1419,7 @@ package java.util;
 	* @throws ArrayIndexOutOfBoundsException if <tt>fromIndex &lt; 0</tt> or
 	*         <tt>toIndex &gt; a.length</tt>
 	*/
-	@:overload public static function fill(a : java.NativeArray<Single>, fromIndex : Int, toIndex : Int, val : Single) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Single>, fromIndex : Int, toIndex : Int, val : Single) : Void;
 	
 	/**
 	* Assigns the specified Object reference to each element of the specified
@@ -1430,7 +1430,7 @@ package java.util;
 	* @throws ArrayStoreException if the specified value is not of a
 	*         runtime type that can be stored in the specified array
 	*/
-	@:overload public static function fill(a : java.NativeArray<Dynamic>, val : Dynamic) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Dynamic>, val : Dynamic) : Void;
 	
 	/**
 	* Assigns the specified Object reference to each element of the specified
@@ -1451,7 +1451,7 @@ package java.util;
 	* @throws ArrayStoreException if the specified value is not of a
 	*         runtime type that can be stored in the specified array
 	*/
-	@:overload public static function fill(a : java.NativeArray<Dynamic>, fromIndex : Int, toIndex : Int, val : Dynamic) : Void;
+	@:overload @:public @:static public static function fill(a : java.NativeArray<Dynamic>, fromIndex : Int, toIndex : Int, val : Dynamic) : Void;
 	
 	/**
 	* Copies the specified array, truncating or padding with nulls (if necessary)
@@ -1471,7 +1471,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf<T>(original : java.NativeArray<T>, newLength : Int) : java.NativeArray<T>;
+	@:require(java6) @:overload @:public @:static public static function copyOf<T>(original : java.NativeArray<T>, newLength : Int) : java.NativeArray<T>;
 	
 	/**
 	* Copies the specified array, truncating or padding with nulls (if necessary)
@@ -1495,7 +1495,7 @@ package java.util;
 	*     an array of class <tt>newType</tt>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf<T, U>(original : java.NativeArray<U>, newLength : Int, newType : Class<java.NativeArray<T>>) : java.NativeArray<T>;
+	@:require(java6) @:overload @:public @:static public static function copyOf<T, U>(original : java.NativeArray<U>, newLength : Int, newType : Class<java.NativeArray<T>>) : java.NativeArray<T>;
 	
 	/**
 	* Copies the specified array, truncating or padding with zeros (if necessary)
@@ -1514,7 +1514,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<java.StdTypes.Int8>, newLength : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<java.StdTypes.Int8>, newLength : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Copies the specified array, truncating or padding with zeros (if necessary)
@@ -1533,7 +1533,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<java.StdTypes.Int16>, newLength : Int) : java.NativeArray<java.StdTypes.Int16>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<java.StdTypes.Int16>, newLength : Int) : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Copies the specified array, truncating or padding with zeros (if necessary)
@@ -1552,7 +1552,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<Int>, newLength : Int) : java.NativeArray<Int>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<Int>, newLength : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Copies the specified array, truncating or padding with zeros (if necessary)
@@ -1571,7 +1571,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<haxe.Int64>, newLength : Int) : java.NativeArray<haxe.Int64>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<haxe.Int64>, newLength : Int) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Copies the specified array, truncating or padding with null characters (if necessary)
@@ -1590,7 +1590,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<java.StdTypes.Char16>, newLength : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<java.StdTypes.Char16>, newLength : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Copies the specified array, truncating or padding with zeros (if necessary)
@@ -1609,7 +1609,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<Single>, newLength : Int) : java.NativeArray<Single>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<Single>, newLength : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Copies the specified array, truncating or padding with zeros (if necessary)
@@ -1628,7 +1628,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<Float>, newLength : Int) : java.NativeArray<Float>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<Float>, newLength : Int) : java.NativeArray<Float>;
 	
 	/**
 	* Copies the specified array, truncating or padding with <tt>false</tt> (if necessary)
@@ -1647,7 +1647,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOf(original : java.NativeArray<Bool>, newLength : Int) : java.NativeArray<Bool>;
+	@:require(java6) @:overload @:public @:static public static function copyOf(original : java.NativeArray<Bool>, newLength : Int) : java.NativeArray<Bool>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1677,7 +1677,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange<T>(original : java.NativeArray<T>, from : Int, to : Int) : java.NativeArray<T>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange<T>(original : java.NativeArray<T>, from : Int, to : Int) : java.NativeArray<T>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1710,7 +1710,7 @@ package java.util;
 	*     an array of class <tt>newType</tt>.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange<T, U>(original : java.NativeArray<U>, from : Int, to : Int, newType : Class<java.NativeArray<T>>) : java.NativeArray<T>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange<T, U>(original : java.NativeArray<U>, from : Int, to : Int, newType : Class<java.NativeArray<T>>) : java.NativeArray<T>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1738,7 +1738,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<java.StdTypes.Int8>, from : Int, to : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<java.StdTypes.Int8>, from : Int, to : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1766,7 +1766,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<java.StdTypes.Int16>, from : Int, to : Int) : java.NativeArray<java.StdTypes.Int16>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<java.StdTypes.Int16>, from : Int, to : Int) : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1794,7 +1794,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<Int>, from : Int, to : Int) : java.NativeArray<Int>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<Int>, from : Int, to : Int) : java.NativeArray<Int>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1822,7 +1822,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<haxe.Int64>, from : Int, to : Int) : java.NativeArray<haxe.Int64>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<haxe.Int64>, from : Int, to : Int) : java.NativeArray<haxe.Int64>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1850,7 +1850,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<java.StdTypes.Char16>, from : Int, to : Int) : java.NativeArray<java.StdTypes.Char16>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<java.StdTypes.Char16>, from : Int, to : Int) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1878,7 +1878,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<Single>, from : Int, to : Int) : java.NativeArray<Single>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<Single>, from : Int, to : Int) : java.NativeArray<Single>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1906,7 +1906,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<Float>, from : Int, to : Int) : java.NativeArray<Float>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<Float>, from : Int, to : Int) : java.NativeArray<Float>;
 	
 	/**
 	* Copies the specified range of the specified array into a new array.
@@ -1934,7 +1934,7 @@ package java.util;
 	* @throws NullPointerException if <tt>original</tt> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function copyOfRange(original : java.NativeArray<Bool>, from : Int, to : Int) : java.NativeArray<Bool>;
+	@:require(java6) @:overload @:public @:static public static function copyOfRange(original : java.NativeArray<Bool>, from : Int, to : Int) : java.NativeArray<Bool>;
 	
 	/**
 	* Returns a fixed-size list backed by the specified array.  (Changes to
@@ -1952,7 +1952,7 @@ package java.util;
 	* @param a the array by which the list will be backed
 	* @return a list view of the specified array
 	*/
-	@:overload public static function asList<T>(a : java.NativeArray<T>) : java.util.List<T>;
+	@:overload @:public @:static public static function asList<T>(a : java.NativeArray<T>) : java.util.List<T>;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -1970,7 +1970,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<haxe.Int64>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<haxe.Int64>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -1988,7 +1988,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<Int>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<Int>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -2006,7 +2006,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<java.StdTypes.Int16>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<java.StdTypes.Int16>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -2024,7 +2024,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<java.StdTypes.Char16>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<java.StdTypes.Char16>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -2042,7 +2042,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -2060,7 +2060,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<Bool>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<Bool>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -2078,7 +2078,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<Single>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<Single>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.
@@ -2096,7 +2096,7 @@ package java.util;
 	* @return a content-based hash code for <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<Float>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<Float>) : Int;
 	
 	/**
 	* Returns a hash code based on the contents of the specified array.  If
@@ -2119,7 +2119,7 @@ package java.util;
 	* @see #deepHashCode(Object[])
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function hashCode(a : java.NativeArray<Dynamic>) : Int;
+	@:require(java5) @:overload @:public @:static public static function hashCode(a : java.NativeArray<Dynamic>) : Int;
 	
 	/**
 	* Returns a hash code based on the "deep contents" of the specified
@@ -2150,7 +2150,7 @@ package java.util;
 	* @see #hashCode(Object[])
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function deepHashCode(a : java.NativeArray<Dynamic>) : Int;
+	@:require(java5) @:overload @:public @:static public static function deepHashCode(a : java.NativeArray<Dynamic>) : Int;
 	
 	/**
 	* Returns <tt>true</tt> if the two specified arrays are <i>deeply
@@ -2187,7 +2187,7 @@ package java.util;
 	* @see Objects#deepEquals(Object, Object)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function deepEquals(a1 : java.NativeArray<Dynamic>, a2 : java.NativeArray<Dynamic>) : Bool;
+	@:require(java5) @:overload @:public @:static public static function deepEquals(a1 : java.NativeArray<Dynamic>, a2 : java.NativeArray<Dynamic>) : Bool;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2202,7 +2202,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<haxe.Int64>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<haxe.Int64>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2217,7 +2217,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<Int>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<Int>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2232,7 +2232,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<java.StdTypes.Int16>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<java.StdTypes.Int16>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2247,7 +2247,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<java.StdTypes.Char16>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<java.StdTypes.Char16>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2262,7 +2262,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<java.StdTypes.Int8>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<java.StdTypes.Int8>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2277,7 +2277,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<Bool>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<Bool>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2292,7 +2292,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<Single>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<Single>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2307,7 +2307,7 @@ package java.util;
 	* @return a string representation of <tt>a</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<Float>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<Float>) : String;
 	
 	/**
 	* Returns a string representation of the contents of the specified array.
@@ -2325,7 +2325,7 @@ package java.util;
 	* @see #deepToString(Object[])
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function toString(a : java.NativeArray<Dynamic>) : String;
+	@:require(java5) @:overload @:public @:static public static function toString(a : java.NativeArray<Dynamic>) : String;
 	
 	/**
 	* Returns a string representation of the "deep contents" of the specified
@@ -2360,7 +2360,7 @@ package java.util;
 	* @see #toString(Object[])
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function deepToString(a : java.NativeArray<Dynamic>) : String;
+	@:require(java5) @:overload @:public @:static public static function deepToString(a : java.NativeArray<Dynamic>) : String;
 	
 	
 }
@@ -2379,19 +2379,19 @@ package java.util;
 */
 @:native('java$util$Arrays$ArrayList') @:internal extern class Arrays_ArrayList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess implements java.io.Serializable
 {
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function get(index : Int) : E;
+	@:overload @:public override public function get(index : Int) : E;
 	
-	@:overload public function set(index : Int, element : E) : E;
+	@:overload @:public override public function set(index : Int, element : E) : E;
 	
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
-	@:overload public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	
 }

@@ -25,23 +25,23 @@ package sun.awt.X11;
 */
 extern class XGlobalCursorManager extends sun.awt.GlobalCursorManager
 {
-	@:overload override private function setCursor(comp : java.awt.Component, cursor : java.awt.Cursor, useCache : Bool) : Void;
+	@:overload @:protected override private function setCursor(comp : java.awt.Component, cursor : java.awt.Cursor, useCache : Bool) : Void;
 	
-	@:overload override private function updateCursorOutOfJava() : Void;
+	@:overload @:protected override private function updateCursorOutOfJava() : Void;
 	
-	@:overload override private function getCursorPos(p : java.awt.Point) : Void;
+	@:overload @:protected override private function getCursorPos(p : java.awt.Point) : Void;
 	
-	@:overload private function findHeavyweightUnderCursor() : java.awt.Component;
+	@:overload @:protected private function findHeavyweightUnderCursor() : java.awt.Component;
 	
 	/*
 	* two native methods to call corresponding methods in Container and
 	* Component
 	*/
-	@:overload override private function findComponentAt(con : java.awt.Container, x : Int, y : Int) : java.awt.Component;
+	@:overload @:protected override private function findComponentAt(con : java.awt.Container, x : Int, y : Int) : java.awt.Component;
 	
-	@:overload override private function getLocationOnScreen(c : java.awt.Component) : java.awt.Point;
+	@:overload @:protected override private function getLocationOnScreen(c : java.awt.Component) : java.awt.Point;
 	
-	@:overload override private function findHeavyweightUnderCursor(useCache : Bool) : java.awt.Component;
+	@:overload @:protected override private function findHeavyweightUnderCursor(useCache : Bool) : java.awt.Component;
 	
 	
 }

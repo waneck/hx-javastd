@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class SimpleClassTypeSignature implements sun.reflect.generics.tree.FieldTypeSignature
 {
-	@:overload public static function make(n : String, dollar : Bool, tas : java.NativeArray<sun.reflect.generics.tree.TypeArgument>) : sun.reflect.generics.tree.SimpleClassTypeSignature;
+	@:overload @:public @:static public static function make(n : String, dollar : Bool, tas : java.NativeArray<sun.reflect.generics.tree.TypeArgument>) : sun.reflect.generics.tree.SimpleClassTypeSignature;
 	
 	/*
 	* Should a '$' be used instead of '.' to separate this component
@@ -33,13 +33,13 @@ extern class SimpleClassTypeSignature implements sun.reflect.generics.tree.Field
 	* pass to Class.forName; in other words, is this a transition to
 	* a nested class.
 	*/
-	@:overload public function getDollar() : Bool;
+	@:overload @:public public function getDollar() : Bool;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getTypeArguments() : java.NativeArray<sun.reflect.generics.tree.TypeArgument>;
+	@:overload @:public public function getTypeArguments() : java.NativeArray<sun.reflect.generics.tree.TypeArgument>;
 	
-	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
+	@:overload @:public public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	
 	
 }

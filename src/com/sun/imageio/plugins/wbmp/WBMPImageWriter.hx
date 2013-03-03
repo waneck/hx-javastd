@@ -28,23 +28,23 @@ extern class WBMPImageWriter extends javax.imageio.ImageWriter
 	/** Constructs <code>WBMPImageWriter</code> based on the provided
 	*  <code>ImageWriterSpi</code>.
 	*/
-	@:overload public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
+	@:overload @:public public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
 	
-	@:overload public function setOutput(output : Dynamic) : Void;
+	@:overload @:public override public function setOutput(output : Dynamic) : Void;
 	
-	@:overload public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function convertImageMetadata(metadata : javax.imageio.metadata.IIOMetadata, type : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload @:public override public function convertImageMetadata(metadata : javax.imageio.metadata.IIOMetadata, type : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload public function canWriteRasters() : Bool;
+	@:overload @:public override public function canWriteRasters() : Bool;
 	
-	@:overload public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload @:public override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

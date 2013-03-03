@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.dynamicany;
 */
 @:internal extern class DynAnyComplexImpl extends com.sun.corba.se.impl.dynamicany.DynAnyConstructedImpl
 {
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, any : org.omg.CORBA.Any, copyValue : Bool) : Void;
 	
-	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:protected private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
 	/*
 	public org.omg.DynamicAny.DynAny copy() {
@@ -44,19 +44,19 @@ package com.sun.corba.se.impl.dynamicany;
 	return returnValue;
 	}
 */
-	@:overload public function current_member_name() : String;
+	@:overload @:public public function current_member_name() : String;
 	
-	@:overload public function current_member_kind() : org.omg.CORBA.TCKind;
+	@:overload @:public public function current_member_kind() : org.omg.CORBA.TCKind;
 	
-	@:overload public function set_members(value : java.NativeArray<org.omg.DynamicAny.NameValuePair>) : Void;
+	@:overload @:public public function set_members(value : java.NativeArray<org.omg.DynamicAny.NameValuePair>) : Void;
 	
-	@:overload public function set_members_as_dyn_any(value : java.NativeArray<org.omg.DynamicAny.NameDynAnyPair>) : Void;
+	@:overload @:public public function set_members_as_dyn_any(value : java.NativeArray<org.omg.DynamicAny.NameDynAnyPair>) : Void;
 	
-	@:overload override private function initializeComponentsFromAny() : Bool;
+	@:overload @:protected override private function initializeComponentsFromAny() : Bool;
 	
-	@:overload override private function initializeComponentsFromTypeCode() : Bool;
+	@:overload @:protected override private function initializeComponentsFromTypeCode() : Bool;
 	
-	@:overload override private function clearData() : Void;
+	@:overload @:protected override private function clearData() : Void;
 	
 	
 }

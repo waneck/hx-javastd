@@ -28,15 +28,15 @@ package com.sun.xml.internal.fastinfoset.stax.util;
 extern class StAXFilteredParser extends com.sun.xml.internal.fastinfoset.stax.util.StAXParserWrapper
 {
 	/** Creates a new instance of StAXFilteredParser */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(reader : javax.xml.stream.XMLStreamReader, filter : javax.xml.stream.StreamFilter) : Void;
+	@:overload @:public public function new(reader : javax.xml.stream.XMLStreamReader, filter : javax.xml.stream.StreamFilter) : Void;
 	
-	@:overload public function setFilter(filter : javax.xml.stream.StreamFilter) : Void;
+	@:overload @:public public function setFilter(filter : javax.xml.stream.StreamFilter) : Void;
 	
-	@:overload public function next() : Int;
+	@:overload @:public override public function next() : Int;
 	
-	@:overload public function hasNext() : Bool;
+	@:overload @:public override public function hasNext() : Bool;
 	
 	
 }

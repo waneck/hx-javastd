@@ -48,7 +48,7 @@ extern interface HTMLDOMImplementation extends org.w3c.dom.DOMImplementation
 	*   <code>TITLE</code> element, through a child <code>Text</code> node.
 	* @return  A new <code>HTMLDocument</code> object.
 	*/
-	@:overload public function createHTMLDocument(title : String) : org.w3c.dom.html.HTMLDocument;
+	@:overload @:public public function createHTMLDocument(title : String) : org.w3c.dom.html.HTMLDocument;
 	
 	
 }

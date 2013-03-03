@@ -25,7 +25,7 @@ package sun.net.ftp;
 */
 extern class FtpLoginException extends java.io.IOException
 {
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

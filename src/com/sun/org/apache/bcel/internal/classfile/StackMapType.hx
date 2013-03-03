@@ -71,18 +71,18 @@ extern class StackMapType implements java.lang.Cloneable
 	* @param type type tag as defined in the Constants interface
 	* @param index index to constant pool, or byte code offset
 	*/
-	@:overload public function new(type : java.StdTypes.Int8, index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(type : java.StdTypes.Int8, index : Int, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
-	@:overload public function setType(t : java.StdTypes.Int8) : Void;
+	@:overload @:public public function setType(t : java.StdTypes.Int8) : Void;
 	
-	@:overload public function getType() : java.StdTypes.Int8;
+	@:overload @:public public function getType() : java.StdTypes.Int8;
 	
-	@:overload public function setIndex(t : Int) : Void;
+	@:overload @:public public function setIndex(t : Int) : Void;
 	
 	/** @return index to constant pool if type == ITEM_Object, or offset
 	* in byte code, if type == ITEM_NewObject, and -1 otherwise
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Dump type entries to file.
@@ -90,31 +90,31 @@ extern class StackMapType implements java.lang.Cloneable
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/** @return true, if type is either ITEM_Object or ITEM_NewObject
 	*/
-	@:overload @:final public function hasIndex() : Bool;
+	@:overload @:public @:final public function hasIndex() : Bool;
 	
 	/**
 	* @return String representation
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.StackMapType;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.StackMapType;
 	
 	/**
 	* @return Constant pool used by this object.
 	*/
-	@:overload @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
+	@:overload @:public @:final public function getConstantPool() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	/**
 	* @param constant_pool Constant pool to be used for this object.
 	*/
-	@:overload @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public @:final public function setConstantPool(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	
 }

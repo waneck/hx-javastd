@@ -31,91 +31,91 @@ package com.sun.media.sound;
 	*
 	* @author Kara Kytle
 	*/
-	private static var PCM(default, null) : Int;
+	@:protected @:static @:final private static var PCM(default, null) : Int;
 	
-	private static var ULAW(default, null) : Int;
+	@:protected @:static @:final private static var ULAW(default, null) : Int;
 	
-	private static var ALAW(default, null) : Int;
+	@:protected @:static @:final private static var ALAW(default, null) : Int;
 	
 	/**
 	* source lines provided by this mixer
 	*/
-	private var sourceLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:protected private var sourceLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* target lines provided by this mixer
 	*/
-	private var targetLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:protected private var targetLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Source lines (ports) currently open
 	*/
-	private var sourceLines : java.util.Vector<Dynamic>;
+	@:protected private var sourceLines : java.util.Vector<Dynamic>;
 	
 	/**
 	* Target lines currently open.
 	*/
-	private var targetLines : java.util.Vector<Dynamic>;
+	@:protected private var targetLines : java.util.Vector<Dynamic>;
 	
 	/**
 	* Constructs a new AbstractMixer.
 	* @param mixer the mixer with which this line is associated
 	* @param controls set of supported controls
 	*/
-	@:overload private function new(mixerInfo : javax.sound.sampled.Mixer.Mixer_Info, controls : java.NativeArray<javax.sound.sampled.Control>, sourceLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>, targetLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>) : Void;
+	@:overload @:protected private function new(mixerInfo : javax.sound.sampled.Mixer.Mixer_Info, controls : java.NativeArray<javax.sound.sampled.Control>, sourceLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>, targetLineInfo : java.NativeArray<javax.sound.sampled.Line.Line_Info>) : Void;
 	
-	@:overload public function getMixerInfo() : javax.sound.sampled.Mixer.Mixer_Info;
+	@:overload @:public public function getMixerInfo() : javax.sound.sampled.Mixer.Mixer_Info;
 	
-	@:overload public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
-	@:overload public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
-	@:overload @:abstract public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload @:public @:abstract public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
-	@:overload @:abstract public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
+	@:overload @:public @:abstract public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
-	@:overload @:abstract private function implOpen() : Void;
+	@:overload @:protected @:abstract private function implOpen() : Void;
 	
-	@:overload @:abstract private function implStart() : Void;
+	@:overload @:protected @:abstract private function implStart() : Void;
 	
-	@:overload @:abstract private function implStop() : Void;
+	@:overload @:protected @:abstract private function implStop() : Void;
 	
-	@:overload @:abstract private function implClose() : Void;
+	@:overload @:protected @:abstract private function implClose() : Void;
 	
-	@:overload public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
-	@:overload public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
-	
-	/**
-	* Default implementation always throws an exception.
-	*/
-	@:overload public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
+	@:overload @:public public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
 	/**
 	* Default implementation always throws an exception.
 	*/
-	@:overload public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
+	@:overload @:public public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
+	
+	/**
+	* Default implementation always throws an exception.
+	*/
+	@:overload @:public public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
 	
 	/**
 	* Default implementation always returns false.
 	*/
-	@:overload public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
+	@:overload @:public public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
 	
 	/**
 	* This implementation tries to open the mixer with its current format and buffer size settings.
 	*/
-	@:overload @:synchronized public function open() : Void;
+	@:overload @:public @:synchronized override public function open() : Void;
 	
 	/**
 	* This implementation tries to open the mixer with its current format and buffer size settings.
 	*/
-	@:overload @:synchronized private function open(manual : Bool) : Void;
+	@:overload @:protected @:synchronized private function open(manual : Bool) : Void;
 	
 	/**
 	* The default implementation of this method just determines whether
@@ -124,36 +124,36 @@ package com.sun.media.sound;
 	* The mixer may be opened at a format different than the line's
 	* format if it is a DataLine.
 	*/
-	@:overload @:synchronized private function open(line : javax.sound.sampled.Line) : Void;
+	@:overload @:protected @:synchronized private function open(line : javax.sound.sampled.Line) : Void;
 	
 	/**
 	* Removes this line from the list of open source lines and
 	* open target lines, if it exists in either.
 	* If the list is now empty, closes the mixer.
 	*/
-	@:overload @:synchronized private function close(line : javax.sound.sampled.Line) : Void;
+	@:overload @:protected @:synchronized private function close(line : javax.sound.sampled.Line) : Void;
 	
 	/**
 	* Close all lines and then close this mixer.
 	*/
-	@:overload @:synchronized public function close() : Void;
+	@:overload @:public @:synchronized override public function close() : Void;
 	
 	/**
 	* Starts the mixer.
 	*/
-	@:overload @:synchronized private function start(line : javax.sound.sampled.Line) : Void;
+	@:overload @:protected @:synchronized private function start(line : javax.sound.sampled.Line) : Void;
 	
 	/**
 	* Stops the mixer if this was the last running line.
 	*/
-	@:overload @:synchronized private function stop(line : javax.sound.sampled.Line) : Void;
+	@:overload @:protected @:synchronized private function stop(line : javax.sound.sampled.Line) : Void;
 	
 	/**
 	* Obtains the <code>Line.Info</code> object describing this
 	* line.
 	* @return description of the line
 	*/
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public @:public @:public @:public @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -166,7 +166,7 @@ package com.sun.media.sound;
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public @:public @:public @:public @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Adds a listener to this line.  Whenever the line's status changes, the
@@ -177,7 +177,7 @@ package com.sun.media.sound;
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public @:public @:public @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Indicates whether the line supports a control of the specified type.
@@ -186,7 +186,7 @@ package com.sun.media.sound;
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public @:public @:public @:public @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -195,7 +195,7 @@ package com.sun.media.sound;
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public @:public @:public @:public @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Indicates whether the line is open, meaning that it has reserved
@@ -206,14 +206,14 @@ package com.sun.media.sound;
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload public function isOpen() : Bool;
+	@:overload @:public @:public @:public @:public @:public override public function isOpen() : Bool;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public @:public @:public @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

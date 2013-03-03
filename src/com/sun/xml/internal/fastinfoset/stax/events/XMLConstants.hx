@@ -27,9 +27,9 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class XMLConstants
 {
-	public static var ENCODING(default, null) : String;
+	@:public @:static @:final public static var ENCODING(default, null) : String;
 	
-	public static var XMLVERSION(default, null) : String;
+	@:public @:static @:final public static var XMLVERSION(default, null) : String;
 	
 	
 }

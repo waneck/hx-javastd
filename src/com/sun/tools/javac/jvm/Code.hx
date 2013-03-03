@@ -34,243 +34,243 @@ extern class Code
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	public var debugCode(default, null) : Bool;
+	@:public @:final public var debugCode(default, null) : Bool;
 	
-	public var needStackMap(default, null) : Bool;
+	@:public @:final public var needStackMap(default, null) : Bool;
 	
 	/** The maximum stack size.
 	*/
-	public var max_stack : Int;
+	@:public public var max_stack : Int;
 	
 	/** The maximum number of local variable slots.
 	*/
-	public var max_locals : Int;
+	@:public public var max_locals : Int;
 	
 	/** The code buffer.
 	*/
-	public var code : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var code : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** the current code pointer.
 	*/
-	public var cp : Int;
+	@:public public var cp : Int;
 	
 	/** Check the code against VM spec limits; if
 	*  problems report them and return true.
 	*/
-	@:overload public function checkLimits(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, log : com.sun.tools.javac.util.Log) : Bool;
+	@:overload @:public public function checkLimits(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, log : com.sun.tools.javac.util.Log) : Bool;
 	
 	/** The CharacterRangeTable
 	*/
-	public var crt : com.sun.tools.javac.jvm.CRTable;
+	@:public public var crt : com.sun.tools.javac.jvm.CRTable;
 	
 	/** Are we generating code with jumps >= 32K?
 	*/
-	public var fatcode : Bool;
+	@:public public var fatcode : Bool;
 	
 	/** The next available register.
 	*/
-	public var nextreg : Int;
+	@:public public var nextreg : Int;
 	
 	/** Construct a code object, given the settings of the fatcode,
 	*  debugging info switches and the CharacterRangeTable.
 	*/
-	@:overload public function new(meth : MethodSymbol, fatcode : Bool, lineMap : com.sun.tools.javac.util.Position.Position_LineMap, varDebugInfo : Bool, stackMap : com.sun.tools.javac.jvm.Code.Code_StackMapFormat, debugCode : Bool, crt : com.sun.tools.javac.jvm.CRTable, syms : com.sun.tools.javac.code.Symtab, types : com.sun.tools.javac.code.Types, pool : com.sun.tools.javac.jvm.Pool) : Void;
+	@:overload @:public public function new(meth : MethodSymbol, fatcode : Bool, lineMap : com.sun.tools.javac.util.Position.Position_LineMap, varDebugInfo : Bool, stackMap : com.sun.tools.javac.jvm.Code.Code_StackMapFormat, debugCode : Bool, crt : com.sun.tools.javac.jvm.CRTable, syms : com.sun.tools.javac.code.Symtab, types : com.sun.tools.javac.code.Types, pool : com.sun.tools.javac.jvm.Pool) : Void;
 	
 	/** Given a type, return its type code (used implicitly in the
 	*  JVM architecture).
 	*/
-	@:overload public static function typecode(type : com.sun.tools.javac.code.Type) : Int;
+	@:overload @:public @:static public static function typecode(type : com.sun.tools.javac.code.Type) : Int;
 	
 	/** Collapse type code for subtypes of int to INTcode.
 	*/
-	@:overload public static function truncate(tc : Int) : Int;
+	@:overload @:public @:static public static function truncate(tc : Int) : Int;
 	
 	/** The width in bytes of objects of the type.
 	*/
-	@:overload public static function width(typecode : Int) : Int;
+	@:overload @:public @:static public static function width(typecode : Int) : Int;
 	
-	@:overload public static function width(type : com.sun.tools.javac.code.Type) : Int;
+	@:overload @:public @:static public static function width(type : com.sun.tools.javac.code.Type) : Int;
 	
 	/** The total width taken up by a vector of objects.
 	*/
-	@:overload public static function width(types : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Int;
+	@:overload @:public @:static public static function width(types : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Int;
 	
 	/** Given a type, return its code for allocating arrays of that type.
 	*/
-	@:overload public static function arraycode(type : com.sun.tools.javac.code.Type) : Int;
+	@:overload @:public @:static public static function arraycode(type : com.sun.tools.javac.code.Type) : Int;
 	
 	/** The current output code pointer.
 	*/
-	@:overload public function curPc() : Int;
+	@:overload @:public public function curPc() : Int;
 	
 	/** Emit four bytes of code.
 	*/
-	@:overload public function emit4(od : Int) : Void;
+	@:overload @:public public function emit4(od : Int) : Void;
 	
 	/** Emit a multinewarray instruction.
 	*/
-	@:overload public function emitMultianewarray(ndims : Int, type : Int, arrayType : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitMultianewarray(ndims : Int, type : Int, arrayType : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit newarray.
 	*/
-	@:overload public function emitNewarray(elemcode : Int, arrayType : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitNewarray(elemcode : Int, arrayType : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit anewarray.
 	*/
-	@:overload public function emitAnewarray(od : Int, arrayType : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitAnewarray(od : Int, arrayType : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit an invokeinterface instruction.
 	*/
-	@:overload public function emitInvokeinterface(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitInvokeinterface(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit an invokespecial instruction.
 	*/
-	@:overload public function emitInvokespecial(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitInvokespecial(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit an invokestatic instruction.
 	*/
-	@:overload public function emitInvokestatic(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitInvokestatic(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit an invokevirtual instruction.
 	*/
-	@:overload public function emitInvokevirtual(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitInvokevirtual(meth : Int, mtype : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit an invokedynamic instruction.
 	*/
-	@:overload public function emitInvokedynamic(desc : Int, mtype : com.sun.tools.javac.code.Type) : Void;
+	@:overload @:public public function emitInvokedynamic(desc : Int, mtype : com.sun.tools.javac.code.Type) : Void;
 	
 	/** Emit an opcode with no operand field.
 	*/
-	@:overload public function emitop0(op : Int) : Void;
+	@:overload @:public public function emitop0(op : Int) : Void;
 	
 	/** Emit an opcode with a one-byte operand field.
 	*/
-	@:overload public function emitop1(op : Int, od : Int) : Void;
+	@:overload @:public public function emitop1(op : Int, od : Int) : Void;
 	
 	/** Emit an opcode with a one-byte operand field;
 	*  widen if field does not fit in a byte.
 	*/
-	@:overload public function emitop1w(op : Int, od : Int) : Void;
+	@:overload @:public public function emitop1w(op : Int, od : Int) : Void;
 	
 	/** Emit an opcode with two one-byte operand fields;
 	*  widen if either field does not fit in a byte.
 	*/
-	@:overload public function emitop1w(op : Int, od1 : Int, od2 : Int) : Void;
+	@:overload @:public public function emitop1w(op : Int, od1 : Int, od2 : Int) : Void;
 	
 	/** Emit an opcode with a two-byte operand field.
 	*/
-	@:overload public function emitop2(op : Int, od : Int) : Void;
+	@:overload @:public public function emitop2(op : Int, od : Int) : Void;
 	
 	/** Emit an opcode with a four-byte operand field.
 	*/
-	@:overload public function emitop4(op : Int, od : Int) : Void;
+	@:overload @:public public function emitop4(op : Int, od : Int) : Void;
 	
 	/** Align code pointer to next `incr' boundary.
 	*/
-	@:overload public function align(incr : Int) : Void;
+	@:overload @:public public function align(incr : Int) : Void;
 	
 	/** Place four  bytes into code at address pc. Pre: pc + 4 <= cp.
 	*/
-	@:overload public function put4(pc : Int, od : Int) : Void;
+	@:overload @:public public function put4(pc : Int, od : Int) : Void;
 	
 	/** Return four code bytes at position pc as an int.
 	*/
-	@:overload public function get4(pc : Int) : Int;
+	@:overload @:public public function get4(pc : Int) : Int;
 	
 	/** Is code generation currently enabled?
 	*/
-	@:overload public function isAlive() : Bool;
+	@:overload @:public public function isAlive() : Bool;
 	
 	/** Switch code generation on/off.
 	*/
-	@:overload public function markDead() : Void;
+	@:overload @:public public function markDead() : Void;
 	
 	/** Declare an entry point; return current code pointer
 	*/
-	@:overload public function entryPoint() : Int;
+	@:overload @:public public function entryPoint() : Int;
 	
 	/** Declare an entry point with initial state;
 	*  return current code pointer
 	*/
-	@:overload public function entryPoint(state : com.sun.tools.javac.jvm.Code.Code_State) : Int;
+	@:overload @:public public function entryPoint(state : com.sun.tools.javac.jvm.Code.Code_State) : Int;
 	
 	/** Declare an entry point with initial state plus a pushed value;
 	*  return current code pointer
 	*/
-	@:overload public function entryPoint(state : com.sun.tools.javac.jvm.Code.Code_State, pushed : com.sun.tools.javac.code.Type) : Int;
+	@:overload @:public public function entryPoint(state : com.sun.tools.javac.jvm.Code.Code_State, pushed : com.sun.tools.javac.code.Type) : Int;
 	
 	/** Emit a stack map entry.  */
-	@:overload public function emitStackMap() : Void;
+	@:overload @:public public function emitStackMap() : Void;
 	
 	/** Negate a branch opcode.
 	*/
-	@:overload public static function negate(opcode : Int) : Int;
+	@:overload @:public @:static public static function negate(opcode : Int) : Int;
 	
 	/** Emit a jump instruction.
 	*  Return code pointer of instruction to be patched.
 	*/
-	@:overload public function emitJump(opcode : Int) : Int;
+	@:overload @:public public function emitJump(opcode : Int) : Int;
 	
 	/** Emit a branch with given opcode; return its chain.
 	*  branch differs from jump in that jsr is treated as no-op.
 	*/
-	@:overload public function branch(opcode : Int) : com.sun.tools.javac.jvm.Code.Code_Chain;
+	@:overload @:public public function branch(opcode : Int) : com.sun.tools.javac.jvm.Code.Code_Chain;
 	
 	/** Resolve chain to point to given target.
 	*/
-	@:overload public function resolve(chain : com.sun.tools.javac.jvm.Code.Code_Chain, target : Int) : Void;
+	@:overload @:public public function resolve(chain : com.sun.tools.javac.jvm.Code.Code_Chain, target : Int) : Void;
 	
 	/** Resolve chain to point to current code pointer.
 	*/
-	@:overload public function resolve(chain : com.sun.tools.javac.jvm.Code.Code_Chain) : Void;
+	@:overload @:public public function resolve(chain : com.sun.tools.javac.jvm.Code.Code_Chain) : Void;
 	
 	/** Resolve any pending jumps.
 	*/
-	@:overload public function resolvePending() : Void;
+	@:overload @:public public function resolvePending() : Void;
 	
 	/** Merge the jumps in of two chains into one.
 	*/
-	@:overload public static function mergeChains(chain1 : com.sun.tools.javac.jvm.Code.Code_Chain, chain2 : com.sun.tools.javac.jvm.Code.Code_Chain) : com.sun.tools.javac.jvm.Code.Code_Chain;
+	@:overload @:public @:static public static function mergeChains(chain1 : com.sun.tools.javac.jvm.Code.Code_Chain, chain2 : com.sun.tools.javac.jvm.Code.Code_Chain) : com.sun.tools.javac.jvm.Code.Code_Chain;
 	
 	/** Add a catch clause to code.
 	*/
-	@:overload public function addCatch(startPc : java.StdTypes.Char16, endPc : java.StdTypes.Char16, handlerPc : java.StdTypes.Char16, catchType : java.StdTypes.Char16) : Void;
+	@:overload @:public public function addCatch(startPc : java.StdTypes.Char16, endPc : java.StdTypes.Char16, handlerPc : java.StdTypes.Char16, catchType : java.StdTypes.Char16) : Void;
 	
 	/** Add a line number entry.
 	*/
-	@:overload public function addLineNumber(startPc : java.StdTypes.Char16, lineNumber : java.StdTypes.Char16) : Void;
+	@:overload @:public public function addLineNumber(startPc : java.StdTypes.Char16, lineNumber : java.StdTypes.Char16) : Void;
 	
 	/** Mark beginning of statement.
 	*/
-	@:overload public function statBegin(pos : Int) : Void;
+	@:overload @:public public function statBegin(pos : Int) : Void;
 	
 	/** Force stat begin eagerly
 	*/
-	@:overload public function markStatBegin() : Void;
+	@:overload @:public public function markStatBegin() : Void;
 	
 	/** Set the current variable defined state. */
-	@:overload public function setDefined(newDefined : com.sun.tools.javac.util.Bits) : Void;
+	@:overload @:public public function setDefined(newDefined : com.sun.tools.javac.util.Bits) : Void;
 	
 	/** Mark a register as being (possibly) defined. */
-	@:overload public function setDefined(adr : Int) : Void;
+	@:overload @:public public function setDefined(adr : Int) : Void;
 	
 	/** Mark a register as being undefined. */
-	@:overload public function setUndefined(adr : Int) : Void;
+	@:overload @:public public function setUndefined(adr : Int) : Void;
 	
-	@:overload public function newLocal(v : VarSymbol) : Int;
+	@:overload @:public public function newLocal(v : VarSymbol) : Int;
 	
 	/** Start a set of fresh registers.
 	*/
-	@:overload public function newRegSegment() : Void;
+	@:overload @:public public function newRegSegment() : Void;
 	
 	/** End scopes of all variables with registers >= first.
 	*/
-	@:overload public function endScopes(first : Int) : Void;
+	@:overload @:public public function endScopes(first : Int) : Void;
 	
 	/**************************************************************************
 	* static tables
 	*************************************************************************/
-	@:overload public static function mnem(opcode : Int) : String;
+	@:overload @:public @:static public static function mnem(opcode : Int) : String;
 	
 	
 }
@@ -294,16 +294,16 @@ extern class Code
 {
 	/** The position of the jump instruction.
 	*/
-	public var pc(default, null) : Int;
+	@:public @:final public var pc(default, null) : Int;
 	
 	/** The next jump in the list.
 	*/
-	public var next(default, null) : com.sun.tools.javac.jvm.Code.Code_Chain;
+	@:public @:final public var next(default, null) : com.sun.tools.javac.jvm.Code.Code_Chain;
 	
 	/** Construct a chain from its jump position, stacksize, previous
 	*  chain, and machine state.
 	*/
-	@:overload public function new(pc : Int, next : com.sun.tools.javac.jvm.Code.Code_Chain, state : com.sun.tools.javac.jvm.Code.Code_State) : Void;
+	@:overload @:public public function new(pc : Int, next : com.sun.tools.javac.jvm.Code.Code_Chain, state : com.sun.tools.javac.jvm.Code.Code_State) : Void;
 	
 	
 }
@@ -317,9 +317,9 @@ extern class Code
 /** A live range of a local variable. */
 @:native('com$sun$tools$javac$jvm$Code$LocalVar') @:internal extern class Code_LocalVar
 {
-	@:overload public function dup() : com.sun.tools.javac.jvm.Code.Code_LocalVar;
+	@:overload @:public public function dup() : com.sun.tools.javac.jvm.Code.Code_LocalVar;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -30,12 +30,12 @@ package com.sun.tools.internal.xjc.reader.xmlschema.ct;
 	* represents the names used in its child elements [0] and
 	* attributes [1].
 	*/
-	private var characteristicNameClasses(default, null) : java.util.Map<com.sun.xml.internal.xsom.XSComplexType, java.NativeArray<com.sun.xml.internal.rngom.nc.NameClass>>;
+	@:protected @:final private var characteristicNameClasses(default, null) : java.util.Map<com.sun.xml.internal.xsom.XSComplexType, java.NativeArray<com.sun.xml.internal.rngom.nc.NameClass>>;
 	
 	/**
 	* Computes a name class that represents everything in a given content model.
 	*/
-	private var contentModelNameClassBuilder(default, null) : com.sun.xml.internal.xsom.visitor.XSTermFunction<com.sun.xml.internal.rngom.nc.NameClass>;
+	@:protected @:final private var contentModelNameClassBuilder(default, null) : com.sun.xml.internal.xsom.visitor.XSTermFunction<com.sun.xml.internal.rngom.nc.NameClass>;
 	
 	/**
 	* Checks if the particles/attributes defined in the type parameter
@@ -43,7 +43,7 @@ package com.sun.tools.internal.xjc.reader.xmlschema.ct;
 	*
 	* @return true if there's a collision.
 	*/
-	@:overload private function checkCollision(anc : com.sun.xml.internal.rngom.nc.NameClass, enc : com.sun.xml.internal.rngom.nc.NameClass, type : com.sun.xml.internal.xsom.XSComplexType) : Bool;
+	@:overload @:protected private function checkCollision(anc : com.sun.xml.internal.rngom.nc.NameClass, enc : com.sun.xml.internal.rngom.nc.NameClass, type : com.sun.xml.internal.xsom.XSComplexType) : Bool;
 	
 	/**
 	* Looks for the derivation chain t_1 > t_2 > ... > t
@@ -53,7 +53,7 @@ package com.sun.tools.internal.xjc.reader.xmlschema.ct;
 	* @return null
 	*      If there's no such t_i or if t_i is any type.
 	*/
-	@:overload private function getLastRestrictedType(t : com.sun.xml.internal.xsom.XSComplexType) : com.sun.xml.internal.xsom.XSComplexType;
+	@:overload @:protected private function getLastRestrictedType(t : com.sun.xml.internal.xsom.XSComplexType) : com.sun.xml.internal.xsom.XSComplexType;
 	
 	/**
 	* Checks if this new extension is safe.
@@ -85,7 +85,7 @@ package com.sun.tools.internal.xjc.reader.xmlschema.ct;
 	* @return false
 	*      If this complex type needs to be rejected.
 	*/
-	@:overload private function checkIfExtensionSafe(baseType : com.sun.xml.internal.xsom.XSComplexType, thisType : com.sun.xml.internal.xsom.XSComplexType) : Bool;
+	@:overload @:protected private function checkIfExtensionSafe(baseType : com.sun.xml.internal.xsom.XSComplexType, thisType : com.sun.xml.internal.xsom.XSComplexType) : Bool;
 	
 	
 }

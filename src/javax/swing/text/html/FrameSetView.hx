@@ -42,7 +42,7 @@ package javax.swing.text.html;
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element, axis : Int) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element, axis : Int) : Void;
 	
 	/**
 	* Perform layout for the major axis of the box (i.e. the
@@ -61,9 +61,9 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
-	@:overload private function getChildRequests(targetSpan : Int, axis : Int) : java.NativeArray<javax.swing.SizeRequirements>;
+	@:overload @:protected private function getChildRequests(targetSpan : Int, axis : Int) : java.NativeArray<javax.swing.SizeRequirements>;
 	
 	
 }

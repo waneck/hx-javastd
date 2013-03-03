@@ -28,27 +28,27 @@ extern class Util
 	/*
 	* Help for verbosity.
 	*/
-	public var verbose : Bool;
+	@:public public var verbose : Bool;
 	
-	public var dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>;
+	@:public public var dl : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>;
 	
-	@:overload public function log(s : String) : Void;
+	@:overload @:public public function log(s : String) : Void;
 	
 	/*
 	* Usage message.
 	*/
-	@:overload public function usage() : Void;
+	@:overload @:public public function usage() : Void;
 	
-	@:overload public function version() : Void;
+	@:overload @:public public function version() : Void;
 	
 	/*
 	* Failure modes.
 	*/
-	@:overload public function bug(key : String) : Void;
+	@:overload @:public public function bug(key : String) : Void;
 	
-	@:overload public function bug(key : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function bug(key : String, e : java.lang.Exception) : Void;
 	
-	@:overload public function error(key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function error(key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -56,9 +56,9 @@ extern class Util
 */
 @:native('com$sun$tools$javah$Util$Exit') extern class Util_Exit extends java.lang.Error
 {
-	public var exitValue(default, null) : Int;
+	@:public @:final public var exitValue(default, null) : Int;
 	
-	public var cause(default, null) : java.lang.Throwable;
+	@:public @:final public var cause(default, null) : java.lang.Throwable;
 	
 	
 }

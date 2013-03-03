@@ -38,7 +38,7 @@ extern class NTSid implements java.security.Principal implements java.io.Seriali
 	* @exception IllegalArgumentException if the <code>String</code>
 	*                  has zero length.
 	*/
-	@:overload public function new(stringSid : String) : Void;
+	@:overload @:public public function new(stringSid : String) : Void;
 	
 	/**
 	* Return a string version of this <code>NTSid</code>.
@@ -47,7 +47,7 @@ extern class NTSid implements java.security.Principal implements java.io.Seriali
 	*
 	* @return a string version of this <code>NTSid</code>
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return a string representation of this <code>NTSid</code>.
@@ -56,7 +56,7 @@ extern class NTSid implements java.security.Principal implements java.io.Seriali
 	*
 	* @return a string representation of this <code>NTSid</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this <code>NTSid</code>
@@ -72,7 +72,7 @@ extern class NTSid implements java.security.Principal implements java.io.Seriali
 	* @return true if the specified Object is equal to this
 	*          <code>NTSid</code>.
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Return a hash code for this <code>NTSid</code>.
@@ -81,7 +81,7 @@ extern class NTSid implements java.security.Principal implements java.io.Seriali
 	*
 	* @return a hash code for this <code>NTSid</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 */
 @:internal extern class AdaptedAccessor<BeanT, InMemValueT, OnWireValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, OnWireValueT>
 {
-	@:overload override public function isAdapted() : Bool;
+	@:overload @:public override public function isAdapted() : Bool;
 	
-	@:overload override public function get(bean : BeanT) : OnWireValueT;
+	@:overload @:public override public function get(bean : BeanT) : OnWireValueT;
 	
-	@:overload override public function set(bean : BeanT, o : OnWireValueT) : Void;
+	@:overload @:public override public function set(bean : BeanT, o : OnWireValueT) : Void;
 	
-	@:overload override public function getUnadapted(bean : BeanT) : Dynamic;
+	@:overload @:public override public function getUnadapted(bean : BeanT) : Dynamic;
 	
-	@:overload override public function setUnadapted(bean : BeanT, value : Dynamic) : Void;
+	@:overload @:public override public function setUnadapted(bean : BeanT, value : Dynamic) : Void;
 	
 	
 }

@@ -58,70 +58,70 @@ package javax.lang.model.util;
 	* @return a list of fields in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function fieldsIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.VariableElement>;
+	@:overload @:public @:static public static function fieldsIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.VariableElement>;
 	
 	/**
 	* Returns a set of fields in {@code elements}.
 	* @return a set of fields in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function fieldsIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.VariableElement>;
+	@:overload @:public @:static public static function fieldsIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.VariableElement>;
 	
 	/**
 	* Returns a list of constructors in {@code elements}.
 	* @return a list of constructors in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function constructorsIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.ExecutableElement>;
+	@:overload @:public @:static public static function constructorsIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.ExecutableElement>;
 	
 	/**
 	* Returns a set of constructors in {@code elements}.
 	* @return a set of constructors in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function constructorsIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.ExecutableElement>;
+	@:overload @:public @:static public static function constructorsIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.ExecutableElement>;
 	
 	/**
 	* Returns a list of methods in {@code elements}.
 	* @return a list of methods in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function methodsIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.ExecutableElement>;
+	@:overload @:public @:static public static function methodsIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.ExecutableElement>;
 	
 	/**
 	* Returns a set of methods in {@code elements}.
 	* @return a set of methods in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function methodsIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.ExecutableElement>;
+	@:overload @:public @:static public static function methodsIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.ExecutableElement>;
 	
 	/**
 	* Returns a list of types in {@code elements}.
 	* @return a list of types in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function typesIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.TypeElement>;
+	@:overload @:public @:static public static function typesIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.TypeElement>;
 	
 	/**
 	* Returns a set of types in {@code elements}.
 	* @return a set of types in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function typesIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.TypeElement>;
+	@:overload @:public @:static public static function typesIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.TypeElement>;
 	
 	/**
 	* Returns a list of packages in {@code elements}.
 	* @return a list of packages in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function packagesIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.PackageElement>;
+	@:overload @:public @:static public static function packagesIn(elements : java.lang.Iterable<javax.lang.model.element.Element>) : java.util.List<javax.lang.model.element.PackageElement>;
 	
 	/**
 	* Returns a set of packages in {@code elements}.
 	* @return a set of packages in {@code elements}
 	* @param elements the elements to filter
 	*/
-	@:overload public static function packagesIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.PackageElement>;
+	@:overload @:public @:static public static function packagesIn(elements : java.util.Set<javax.lang.model.element.Element>) : java.util.Set<javax.lang.model.element.PackageElement>;
 	
 	
 }

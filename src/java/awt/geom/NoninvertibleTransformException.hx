@@ -38,7 +38,7 @@ extern class NoninvertibleTransformException extends java.lang.Exception
 	* @param   s     the detail message
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function new(s : String) : Void;
+	@:require(java2) @:overload @:public public function new(s : String) : Void;
 	
 	
 }

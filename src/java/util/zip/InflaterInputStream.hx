@@ -28,17 +28,17 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	/**
 	* Decompressor for this stream.
 	*/
-	private var inf : java.util.zip.Inflater;
+	@:protected private var inf : java.util.zip.Inflater;
 	
 	/**
 	* Input buffer for decompression.
 	*/
-	private var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var buf : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Length of input buffer.
 	*/
-	private var len : Int;
+	@:protected private var len : Int;
 	
 	/**
 	* Creates a new input stream with the specified decompressor and
@@ -48,7 +48,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @param size the input buffer size
 	* @exception IllegalArgumentException if size is <= 0
 	*/
-	@:overload public function new(_in : java.io.InputStream, inf : java.util.zip.Inflater, size : Int) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, inf : java.util.zip.Inflater, size : Int) : Void;
 	
 	/**
 	* Creates a new input stream with the specified decompressor and a
@@ -56,13 +56,13 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @param in the input stream
 	* @param inf the decompressor ("inflater")
 	*/
-	@:overload public function new(_in : java.io.InputStream, inf : java.util.zip.Inflater) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream, inf : java.util.zip.Inflater) : Void;
 	
 	/**
 	* Creates a new input stream with a default decompressor and buffer size.
 	* @param in the input stream
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Reads a byte of uncompressed data. This method will block until
@@ -70,7 +70,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @return the byte read, or -1 if end of compressed input is reached
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
 	/**
 	* Reads uncompressed data into an array of bytes. If <code>len</code> is not
@@ -88,7 +88,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @exception ZipException if a ZIP format error has occurred
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns 0 after EOF has been reached, otherwise always return 1.
@@ -100,7 +100,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @exception  IOException  if an I/O error occurs.
 	*
 	*/
-	@:overload override public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/**
 	* Skips specified number of bytes of uncompressed data.
@@ -109,20 +109,20 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @exception IOException if an I/O error has occurred
 	* @exception IllegalArgumentException if n < 0
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Closes this input stream and releases any system resources associated
 	* with the stream.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Fills input buffer with more data to decompress.
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload private function fill() : Void;
+	@:overload @:protected private function fill() : Void;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code> and
@@ -135,7 +135,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
 	/**
 	* Marks the current position in this input stream.
@@ -147,7 +147,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	*                      the mark position becomes invalid.
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -161,7 +161,7 @@ extern class InflaterInputStream extends java.io.FilterInputStream
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.IOException
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
 	
 }

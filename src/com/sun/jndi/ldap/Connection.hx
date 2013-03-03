@@ -25,19 +25,19 @@ package com.sun.jndi.ldap;
 */
 extern class Connection implements java.lang.Runnable
 {
-	public var host(default, null) : String;
+	@:final @:public public var host(default, null) : String;
 	
-	public var port(default, null) : Int;
+	@:final @:public public var port(default, null) : Int;
 	
-	public var inStream : java.io.InputStream;
+	@:public public var inStream : java.io.InputStream;
 	
-	public var outStream : java.io.OutputStream;
+	@:public public var outStream : java.io.OutputStream;
 	
-	public var sock : java.net.Socket;
+	@:public public var sock : java.net.Socket;
 	
-	@:overload @:synchronized public function replaceStreams(newIn : java.io.InputStream, newOut : java.io.OutputStream) : Void;
+	@:overload @:synchronized @:public public function replaceStreams(newIn : java.io.InputStream, newOut : java.io.OutputStream) : Void;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

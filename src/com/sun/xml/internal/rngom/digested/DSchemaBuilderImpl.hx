@@ -46,63 +46,63 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DSchemaBuilderImpl implements com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<com.sun.xml.internal.rngom.nc.NameClass, com.sun.xml.internal.rngom.digested.DPattern, com.sun.xml.internal.rngom.digested.ElementWrapper, com.sun.xml.internal.rngom.ast.util.LocatorImpl, com.sun.xml.internal.rngom.digested.Annotation, com.sun.xml.internal.rngom.digested.CommentListImpl>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getNameClassBuilder() : com.sun.xml.internal.rngom.ast.builder.NameClassBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function getNameClassBuilder() : com.sun.xml.internal.rngom.ast.builder.NameClassBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeChoice(patterns : java.util.List<com.sun.xml.internal.rngom.digested.DPattern>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeChoice(patterns : java.util.List<com.sun.xml.internal.rngom.digested.DPattern>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeInterleave(patterns : java.util.List<com.sun.xml.internal.rngom.digested.DPattern>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeInterleave(patterns : java.util.List<com.sun.xml.internal.rngom.digested.DPattern>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeGroup(patterns : java.util.List<com.sun.xml.internal.rngom.digested.DPattern>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeGroup(patterns : java.util.List<com.sun.xml.internal.rngom.digested.DPattern>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeOneOrMore(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeOneOrMore(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeZeroOrMore(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeZeroOrMore(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeOptional(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeOptional(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeList(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeList(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeMixed(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeMixed(p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeEmpty(loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeEmpty(loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeNotAllowed(loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeNotAllowed(loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeText(loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeText(loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeAttribute(nc : com.sun.xml.internal.rngom.nc.NameClass, p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeAttribute(nc : com.sun.xml.internal.rngom.nc.NameClass, p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeElement(nc : com.sun.xml.internal.rngom.nc.NameClass, p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeElement(nc : com.sun.xml.internal.rngom.nc.NameClass, p : com.sun.xml.internal.rngom.digested.DPattern, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeDataPatternBuilder(datatypeLibrary : String, type : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl) : com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeDataPatternBuilder(datatypeLibrary : String, type : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl) : com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeValue(datatypeLibrary : String, type : String, value : String, c : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeValue(datatypeLibrary : String, type : String, value : String, c : com.sun.xml.internal.rngom.parse.Context, ns : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeGrammar(parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.builder.Grammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeGrammar(parent : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.builder.Grammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function annotate(p : com.sun.xml.internal.rngom.digested.DPattern, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function annotate(p : com.sun.xml.internal.rngom.digested.DPattern, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function annotateAfter(p : com.sun.xml.internal.rngom.digested.DPattern, e : com.sun.xml.internal.rngom.digested.ElementWrapper) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function annotateAfter(p : com.sun.xml.internal.rngom.digested.DPattern, e : com.sun.xml.internal.rngom.digested.ElementWrapper) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function commentAfter(p : com.sun.xml.internal.rngom.digested.DPattern, comments : com.sun.xml.internal.rngom.digested.CommentListImpl) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function commentAfter(p : com.sun.xml.internal.rngom.digested.DPattern, comments : com.sun.xml.internal.rngom.digested.CommentListImpl) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeExternalRef(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, scope : com.sun.xml.internal.rngom.ast.builder.Scope<com.sun.xml.internal.rngom.digested.DPattern, com.sun.xml.internal.rngom.digested.ElementWrapper, com.sun.xml.internal.rngom.ast.util.LocatorImpl, com.sun.xml.internal.rngom.digested.Annotation, com.sun.xml.internal.rngom.digested.CommentListImpl>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeExternalRef(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, scope : com.sun.xml.internal.rngom.ast.builder.Scope<com.sun.xml.internal.rngom.digested.DPattern, com.sun.xml.internal.rngom.digested.ElementWrapper, com.sun.xml.internal.rngom.ast.util.LocatorImpl, com.sun.xml.internal.rngom.digested.Annotation, com.sun.xml.internal.rngom.digested.CommentListImpl>, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, anno : com.sun.xml.internal.rngom.digested.Annotation) : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function makeLocation(systemId : String, lineNumber : Int, columnNumber : Int) : com.sun.xml.internal.rngom.ast.util.LocatorImpl;
+	@:overload @:public public function makeLocation(systemId : String, lineNumber : Int, columnNumber : Int) : com.sun.xml.internal.rngom.ast.util.LocatorImpl;
 	
-	@:overload public function makeAnnotations(comments : com.sun.xml.internal.rngom.digested.CommentListImpl, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.digested.Annotation;
+	@:overload @:public public function makeAnnotations(comments : com.sun.xml.internal.rngom.digested.CommentListImpl, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.digested.Annotation;
 	
-	@:overload public function makeElementAnnotationBuilder(ns : String, localName : String, prefix : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, comments : com.sun.xml.internal.rngom.digested.CommentListImpl, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.ast.builder.ElementAnnotationBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload @:public public function makeElementAnnotationBuilder(ns : String, localName : String, prefix : String, loc : com.sun.xml.internal.rngom.ast.util.LocatorImpl, comments : com.sun.xml.internal.rngom.digested.CommentListImpl, context : com.sun.xml.internal.rngom.parse.Context) : com.sun.xml.internal.rngom.ast.builder.ElementAnnotationBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	
-	@:overload public function makeCommentList() : com.sun.xml.internal.rngom.digested.CommentListImpl;
+	@:overload @:public public function makeCommentList() : com.sun.xml.internal.rngom.digested.CommentListImpl;
 	
-	@:overload public function makeErrorPattern() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function makeErrorPattern() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function usesComments() : Bool;
+	@:overload @:public public function usesComments() : Bool;
 	
-	@:overload public function expandPattern(p : com.sun.xml.internal.rngom.digested.DPattern) : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function expandPattern(p : com.sun.xml.internal.rngom.digested.DPattern) : com.sun.xml.internal.rngom.digested.DPattern;
 	
 	
 }

@@ -27,15 +27,15 @@ package com.sun.xml.internal.org.jvnet.fastinfoset;
 */
 extern interface EncodingAlgorithm
 {
-	@:overload public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:public public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:public public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public @:public public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:public public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:public public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
 	
 }

@@ -7,13 +7,13 @@ package org.omg.PortableServer.POAPackage;
 */
 extern class InvalidPolicy extends org.omg.CORBA.UserException
 {
-	public var index : java.StdTypes.Int16;
+	@:public public var index : java.StdTypes.Int16;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_index : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new(_index : java.StdTypes.Int16) : Void;
 	
-	@:overload public function new($reason : String, _index : java.StdTypes.Int16) : Void;
+	@:overload @:public public function new($reason : String, _index : java.StdTypes.Int16) : Void;
 	
 	
 }

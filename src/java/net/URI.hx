@@ -94,7 +94,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*          If the given string violates RFC&nbsp;2396, as augmented
 	*          by the above deviations
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Constructs a hierarchical URI from the given components.
@@ -169,7 +169,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*         RFC&nbsp;2396, or if the authority component of the string is
 	*         present but cannot be parsed as a server-based authority
 	*/
-	@:overload public function new(scheme : String, userInfo : String, host : String, port : Int, path : String, query : String, fragment : String) : Void;
+	@:overload @:public public function new(scheme : String, userInfo : String, host : String, port : Int, path : String, query : String, fragment : String) : Void;
 	
 	/**
 	* Constructs a hierarchical URI from the given components.
@@ -232,7 +232,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*         RFC&nbsp;2396, or if the authority component of the string is
 	*         present but cannot be parsed as a server-based authority
 	*/
-	@:overload public function new(scheme : String, authority : String, path : String, query : String, fragment : String) : Void;
+	@:overload @:public public function new(scheme : String, authority : String, path : String, query : String, fragment : String) : Void;
 	
 	/**
 	* Constructs a hierarchical URI from the given components.
@@ -256,7 +256,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*          If the URI string constructed from the given components
 	*          violates RFC&nbsp;2396
 	*/
-	@:overload public function new(scheme : String, host : String, path : String, fragment : String) : Void;
+	@:overload @:public public function new(scheme : String, host : String, path : String, fragment : String) : Void;
 	
 	/**
 	* Constructs a URI from the given components.
@@ -295,7 +295,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*          If the URI string constructed from the given components
 	*          violates RFC&nbsp;2396
 	*/
-	@:overload public function new(scheme : String, ssp : String, fragment : String) : Void;
+	@:overload @:public public function new(scheme : String, ssp : String, fragment : String) : Void;
 	
 	/**
 	* Creates a URI by parsing the given string.
@@ -322,7 +322,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @throws  IllegalArgumentException
 	*          If the given string violates RFC&nbsp;2396
 	*/
-	@:overload public static function create(str : String) : java.net.URI;
+	@:overload @:public @:static public static function create(str : String) : java.net.URI;
 	
 	/**
 	* Attempts to parse this URI's authority component, if defined, into
@@ -371,7 +371,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*          but cannot be parsed as a server-based authority
 	*          according to RFC&nbsp;2396
 	*/
-	@:overload public function parseServerAuthority() : java.net.URI;
+	@:overload @:public public function parseServerAuthority() : java.net.URI;
 	
 	/**
 	* Normalizes this URI's path.
@@ -410,7 +410,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  A URI equivalent to this URI,
 	*          but whose path is in normal form
 	*/
-	@:overload public function normalize() : java.net.URI;
+	@:overload @:public public function normalize() : java.net.URI;
 	
 	/**
 	* Resolves the given URI against this URI.
@@ -466,7 +466,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @throws  NullPointerException
 	*          If <tt>uri</tt> is <tt>null</tt>
 	*/
-	@:overload public function resolve(uri : java.net.URI) : java.net.URI;
+	@:overload @:public public function resolve(uri : java.net.URI) : java.net.URI;
 	
 	/**
 	* Constructs a new URI by parsing the given string and then resolving it
@@ -485,7 +485,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @throws  IllegalArgumentException
 	*          If the given string violates RFC&nbsp;2396
 	*/
-	@:overload public function resolve(str : String) : java.net.URI;
+	@:overload @:public public function resolve(str : String) : java.net.URI;
 	
 	/**
 	* Relativizes the given URI against this URI.
@@ -513,7 +513,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @throws  NullPointerException
 	*          If <tt>uri</tt> is <tt>null</tt>
 	*/
-	@:overload public function relativize(uri : java.net.URI) : java.net.URI;
+	@:overload @:public public function relativize(uri : java.net.URI) : java.net.URI;
 	
 	/**
 	* Constructs a URL from this URI.
@@ -531,7 +531,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*          If a protocol handler for the URL could not be found,
 	*          or if some other error occurred while constructing the URL
 	*/
-	@:overload public function toURL() : java.net.URL;
+	@:overload @:public public function toURL() : java.net.URL;
 	
 	/**
 	* Returns the scheme component of this URI.
@@ -546,7 +546,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The scheme component of this URI,
 	*          or <tt>null</tt> if the scheme is undefined
 	*/
-	@:overload public function getScheme() : String;
+	@:overload @:public public function getScheme() : String;
 	
 	/**
 	* Tells whether or not this URI is absolute.
@@ -555,7 +555,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*
 	* @return  <tt>true</tt> if, and only if, this URI is absolute
 	*/
-	@:overload public function isAbsolute() : Bool;
+	@:overload @:public public function isAbsolute() : Bool;
 	
 	/**
 	* Tells whether or not this URI is opaque.
@@ -567,7 +567,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*
 	* @return  <tt>true</tt> if, and only if, this URI is opaque
 	*/
-	@:overload public function isOpaque() : Bool;
+	@:overload @:public public function isOpaque() : Bool;
 	
 	/**
 	* Returns the raw scheme-specific part of this URI.  The scheme-specific
@@ -579,7 +579,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The raw scheme-specific part of this URI
 	*          (never <tt>null</tt>)
 	*/
-	@:overload public function getRawSchemeSpecificPart() : String;
+	@:overload @:public public function getRawSchemeSpecificPart() : String;
 	
 	/**
 	* Returns the decoded scheme-specific part of this URI.
@@ -592,7 +592,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The decoded scheme-specific part of this URI
 	*          (never <tt>null</tt>)
 	*/
-	@:overload public function getSchemeSpecificPart() : String;
+	@:overload @:public public function getSchemeSpecificPart() : String;
 	
 	/**
 	* Returns the raw authority component of this URI.
@@ -607,7 +607,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The raw authority component of this URI,
 	*          or <tt>null</tt> if the authority is undefined
 	*/
-	@:overload public function getRawAuthority() : String;
+	@:overload @:public public function getRawAuthority() : String;
 	
 	/**
 	* Returns the decoded authority component of this URI.
@@ -619,7 +619,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The decoded authority component of this URI,
 	*          or <tt>null</tt> if the authority is undefined
 	*/
-	@:overload public function getAuthority() : String;
+	@:overload @:public public function getAuthority() : String;
 	
 	/**
 	* Returns the raw user-information component of this URI.
@@ -631,7 +631,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The raw user-information component of this URI,
 	*          or <tt>null</tt> if the user information is undefined
 	*/
-	@:overload public function getRawUserInfo() : String;
+	@:overload @:public public function getRawUserInfo() : String;
 	
 	/**
 	* Returns the decoded user-information component of this URI.
@@ -643,7 +643,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The decoded user-information component of this URI,
 	*          or <tt>null</tt> if the user information is undefined
 	*/
-	@:overload public function getUserInfo() : String;
+	@:overload @:public public function getUserInfo() : String;
 	
 	/**
 	* Returns the host component of this URI.
@@ -681,7 +681,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The host component of this URI,
 	*          or <tt>null</tt> if the host is undefined
 	*/
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	/**
 	* Returns the port number of this URI.
@@ -692,7 +692,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The port component of this URI,
 	*          or <tt>-1</tt> if the port is undefined
 	*/
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/**
 	* Returns the raw path component of this URI.
@@ -705,7 +705,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The path component of this URI,
 	*          or <tt>null</tt> if the path is undefined
 	*/
-	@:overload public function getRawPath() : String;
+	@:overload @:public public function getRawPath() : String;
 	
 	/**
 	* Returns the decoded path component of this URI.
@@ -717,7 +717,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The decoded path component of this URI,
 	*          or <tt>null</tt> if the path is undefined
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Returns the raw query component of this URI.
@@ -728,7 +728,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The raw query component of this URI,
 	*          or <tt>null</tt> if the query is undefined
 	*/
-	@:overload public function getRawQuery() : String;
+	@:overload @:public public function getRawQuery() : String;
 	
 	/**
 	* Returns the decoded query component of this URI.
@@ -740,7 +740,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The decoded query component of this URI,
 	*          or <tt>null</tt> if the query is undefined
 	*/
-	@:overload public function getQuery() : String;
+	@:overload @:public public function getQuery() : String;
 	
 	/**
 	* Returns the raw fragment component of this URI.
@@ -751,7 +751,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The raw fragment component of this URI,
 	*          or <tt>null</tt> if the fragment is undefined
 	*/
-	@:overload public function getRawFragment() : String;
+	@:overload @:public public function getRawFragment() : String;
 	
 	/**
 	* Returns the decoded fragment component of this URI.
@@ -763,7 +763,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  The decoded fragment component of this URI,
 	*          or <tt>null</tt> if the fragment is undefined
 	*/
-	@:overload public function getFragment() : String;
+	@:overload @:public public function getFragment() : String;
 	
 	/**
 	* Tests this URI for equality with another object.
@@ -802,7 +802,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @return  <tt>true</tt> if, and only if, the given object is a URI that
 	*          is identical to this URI
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash-code value for this URI.  The hash code is based upon all
@@ -811,7 +811,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*
 	* @return  A hash-code value for this URI
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this URI to another object, which must be a URI.
@@ -881,7 +881,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	* @throws  ClassCastException
 	*          If the given object is not a URI
 	*/
-	@:overload public function compareTo(that : java.net.URI) : Int;
+	@:overload @:public public function compareTo(that : java.net.URI) : Int;
 	
 	/**
 	* Returns the content of this URI as a string.
@@ -897,7 +897,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*
 	* @return  The string form of this URI
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the content of this URI as a US-ASCII string.
@@ -912,7 +912,7 @@ extern class URI implements java.lang.Comparable<java.net.URI> implements java.i
 	*          so that it only contains characters in the US-ASCII
 	*          charset
 	*/
-	@:overload public function toASCIIString() : String;
+	@:overload @:public public function toASCIIString() : String;
 	
 	
 }

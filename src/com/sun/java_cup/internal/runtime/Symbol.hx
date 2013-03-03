@@ -45,48 +45,50 @@ extern class Symbol
 	/*******************************
 	Constructor for l,r values
 	*******************************/
-	@:overload public function new(id : Int, l : Int, r : Int, o : Dynamic) : Void;
+	@:overload @:public public function new(id : Int, l : Int, r : Int, o : Dynamic) : Void;
 	
 	/*******************************
 	Constructor for no l,r values
 ********************************/
-	@:overload public function new(id : Int, o : Dynamic) : Void;
+	@:overload @:public public function new(id : Int, o : Dynamic) : Void;
 	
 	/*****************************
 	Constructor for no value
 	***************************/
-	@:overload public function new(sym_num : Int, l : Int, r : Int) : Void;
+	@:overload @:public public function new(sym_num : Int, l : Int, r : Int) : Void;
 	
 	/***********************************
 	Constructor for no value or l,r
 ***********************************/
-	@:overload public function new(sym_num : Int) : Void;
+	@:overload @:public public function new(sym_num : Int) : Void;
 	
 	/***********************************
 	Constructor to give a start state
 ***********************************/
-	@:overload public function new(sym_num : Int, state : Int) : Void;
+	@:overload @:public public function new(sym_num : Int, state : Int) : Void;
 	
 	/** The symbol number of the terminal or non terminal being represented */
-	public var sym : Int;
+	@:public public var sym : Int;
 	
 	/** The parse state to be recorded on the parse stack with this symbol.
 	*  This field is for the convenience of the parser and shouldn't be
 	*  modified except by the parser.
 	*/
-	public var parse_state : Int;
+	@:public public var parse_state : Int;
 	
 	/*******************************
 	The data passed to parser
 	*******************************/
-	public var left : Int;
+	@:public public var left : Int;
 	
-	public var value : Dynamic;
+	@:public public var right : Int;
+	
+	@:public public var value : Dynamic;
 	
 	/*****************************
 	Printing this token out. (Override for pretty-print).
 	****************************/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

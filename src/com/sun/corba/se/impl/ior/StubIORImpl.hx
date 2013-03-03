@@ -31,26 +31,26 @@ package com.sun.corba.se.impl.ior;
 */
 extern class StubIORImpl
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getRepositoryId() : String;
+	@:overload @:public public function getRepositoryId() : String;
 	
-	@:overload public function new(obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function new(obj : org.omg.CORBA.Object) : Void;
 	
-	@:overload public function getDelegate(orb : org.omg.CORBA.ORB) : org.omg.CORBA.portable.Delegate;
+	@:overload @:public public function getDelegate(orb : org.omg.CORBA.ORB) : org.omg.CORBA.portable.Delegate;
 	
-	@:overload public function doRead(stream : java.io.ObjectInputStream) : Void;
+	@:overload @:public public function doRead(stream : java.io.ObjectInputStream) : Void;
 	
-	@:overload public function doWrite(stream : java.io.ObjectOutputStream) : Void;
+	@:overload @:public public function doWrite(stream : java.io.ObjectOutputStream) : Void;
 	
 	/**
 	* Returns a hash code value for the object which is the same for all stubs
 	* that represent the same remote object.
 	* @return the hash code value.
 	*/
-	@:overload @:synchronized public function hashCode() : Int;
+	@:overload @:public @:synchronized public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a string representation of this stub. Returns the same string
@@ -58,7 +58,7 @@ extern class StubIORImpl
 	* "SimpleIORImpl[<typeName>,[<profileID>]data, ...]"
 	* @return a string representation of this stub.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

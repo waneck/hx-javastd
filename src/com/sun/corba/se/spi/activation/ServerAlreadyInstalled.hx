@@ -7,13 +7,13 @@ package com.sun.corba.se.spi.activation;
 */
 extern class ServerAlreadyInstalled extends org.omg.CORBA.UserException
 {
-	public var serverId : Int;
+	@:public public var serverId : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_serverId : Int) : Void;
+	@:overload @:public public function new(_serverId : Int) : Void;
 	
-	@:overload public function new($reason : String, _serverId : Int) : Void;
+	@:overload @:public public function new($reason : String, _serverId : Int) : Void;
 	
 	
 }

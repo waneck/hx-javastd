@@ -78,7 +78,7 @@ package javax.sound.sampled;
 	*
 	* @see #flush()
 	*/
-	@:overload @:public public function drain() : Void;
+	@:overload @:public @:public @:public public function drain() : Void;
 	
 	/**
 	* Flushes queued data from the line.  The flushed data is discarded.
@@ -94,7 +94,7 @@ package javax.sound.sampled;
 	* @see #stop()
 	* @see #drain()
 	*/
-	@:overload @:public public function flush() : Void;
+	@:overload @:public @:public @:public public function flush() : Void;
 	
 	/**
 	* Allows a line to engage in data I/O.  If invoked on a line
@@ -108,7 +108,7 @@ package javax.sound.sampled;
 	* @see #isRunning()
 	* @see LineEvent
 	*/
-	@:overload @:public public function start() : Void;
+	@:overload @:public @:public public function start() : Void;
 	
 	/**
 	* Stops the line.  A stopped line should cease I/O activity.
@@ -126,7 +126,7 @@ package javax.sound.sampled;
 	* @see #flush()
 	* @see LineEvent
 	*/
-	@:overload @:public public function stop() : Void;
+	@:overload @:public @:public public function stop() : Void;
 	
 	/**
 	* Indicates whether the line is running.  The default is <code>false</code>.
@@ -138,7 +138,7 @@ package javax.sound.sampled;
 	* @see #start()
 	* @see #stop()
 	*/
-	@:overload @:public public function isRunning() : Bool;
+	@:overload @:public @:public public function isRunning() : Bool;
 	
 	/**
 	* Indicates whether the line is engaging in active I/O (such as playback
@@ -154,7 +154,7 @@ package javax.sound.sampled;
 	* @see LineEvent
 	* @see LineListener
 	*/
-	@:overload @:public public function isActive() : Bool;
+	@:overload @:public @:public public function isActive() : Bool;
 	
 	/**
 	* Obtains the current format (encoding, sample rate, number of channels,
@@ -173,7 +173,7 @@ package javax.sound.sampled;
 	* @return current audio data format
 	* @see AudioFormat
 	*/
-	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
 	/**
 	* Obtains the maximum number of bytes of data that will fit in the data line's
@@ -185,7 +185,7 @@ package javax.sound.sampled;
 	*
 	* @return the size of the buffer in bytes
 	*/
-	@:overload @:public public function getBufferSize() : Int;
+	@:overload @:public @:public public function getBufferSize() : Int;
 	
 	/**
 	* Obtains the number of bytes of data currently available to the
@@ -206,7 +206,7 @@ package javax.sound.sampled;
 	*
 	* @return the amount of data available, in bytes
 	*/
-	@:overload @:public public function available() : Int;
+	@:overload @:public @:public @:public public function available() : Int;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -218,7 +218,7 @@ package javax.sound.sampled;
 	* @return the number of frames already processed since the line was opened
 	* @see #getLongFramePosition()
 	*/
-	@:overload @:public public function getFramePosition() : Int;
+	@:overload @:public @:public @:public @:public public function getFramePosition() : Int;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -228,7 +228,7 @@ package javax.sound.sampled;
 	* @return the number of frames already processed since the line was opened
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:public public function getLongFramePosition() : haxe.Int64;
+	@:require(java5) @:overload @:public @:public @:public @:public public function getLongFramePosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the audio data, in microseconds.
@@ -241,7 +241,7 @@ package javax.sound.sampled;
 	*
 	* @return the number of microseconds of data processed since the line was opened
 	*/
-	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public @:public @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current volume level for the line.  This level is a measure
@@ -253,7 +253,7 @@ package javax.sound.sampled;
 	* @return the current amplitude of the signal in this line, or
 	* <code>{@link AudioSystem#NOT_SPECIFIED}</code>
 	*/
-	@:overload @:public public function getLevel() : Single;
+	@:overload @:public @:public public function getLevel() : Single;
 	
 	
 }
@@ -290,7 +290,7 @@ package javax.sound.sampled;
 	* @param minBufferSize minimum buffer size supported by the data line, in bytes
 	* @param maxBufferSize maximum buffer size supported by the data line, in bytes
 	*/
-	@:overload public function new(lineClass : Class<Dynamic>, formats : java.NativeArray<javax.sound.sampled.AudioFormat>, minBufferSize : Int, maxBufferSize : Int) : Void;
+	@:overload @:public public function new(lineClass : Class<Dynamic>, formats : java.NativeArray<javax.sound.sampled.AudioFormat>, minBufferSize : Int, maxBufferSize : Int) : Void;
 	
 	/**
 	* Constructs a data line's info object from the specified information,
@@ -302,7 +302,7 @@ package javax.sound.sampled;
 	* @param format desired format
 	* @param bufferSize desired buffer size in bytes
 	*/
-	@:overload public function new(lineClass : Class<Dynamic>, format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
+	@:overload @:public public function new(lineClass : Class<Dynamic>, format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
 	
 	/**
 	* Constructs a data line's info object from the specified information,
@@ -313,7 +313,7 @@ package javax.sound.sampled;
 	* @param lineClass the class of the data line described by the info object
 	* @param format desired format
 	*/
-	@:overload public function new(lineClass : Class<Dynamic>, format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload @:public public function new(lineClass : Class<Dynamic>, format : javax.sound.sampled.AudioFormat) : Void;
 	
 	/**
 	* Obtains a set of audio formats supported by the data line.
@@ -335,7 +335,7 @@ package javax.sound.sampled;
 	* @return a set of supported audio formats.
 	* @see #isFormatSupported(AudioFormat)
 	*/
-	@:overload public function getFormats() : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:public public function getFormats() : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
 	/**
 	* Indicates whether this data line supports a particular audio format.
@@ -347,19 +347,19 @@ package javax.sound.sampled;
 	* @see #getFormats
 	* @see AudioFormat#matches
 	*/
-	@:overload public function isFormatSupported(format : javax.sound.sampled.AudioFormat) : Bool;
+	@:overload @:public public function isFormatSupported(format : javax.sound.sampled.AudioFormat) : Bool;
 	
 	/**
 	* Obtains the minimum buffer size supported by the data line.
 	* @return minimum buffer size in bytes, or <code>AudioSystem.NOT_SPECIFIED</code>
 	*/
-	@:overload public function getMinBufferSize() : Int;
+	@:overload @:public public function getMinBufferSize() : Int;
 	
 	/**
 	* Obtains the maximum buffer size supported by the data line.
 	* @return maximum buffer size in bytes, or <code>AudioSystem.NOT_SPECIFIED</code>
 	*/
-	@:overload public function getMaxBufferSize() : Int;
+	@:overload @:public public function getMaxBufferSize() : Int;
 	
 	/**
 	* Determines whether the specified info object matches this one.
@@ -371,13 +371,13 @@ package javax.sound.sampled;
 	* @return <code>true</code> if this object matches the one specified,
 	* otherwise <code>false</code>.
 	*/
-	@:overload override public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public override public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Obtains a textual description of the data line info.
 	* @return a string description
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -46,14 +46,14 @@ extern class Signer extends java.security.Identity
 	* Creates a signer. This constructor should only be used for
 	* serialization.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a signer with the specified identity name.
 	*
 	* @param name the identity name.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a signer with the specified identity name and scope.
@@ -65,7 +65,7 @@ extern class Signer extends java.security.Identity
 	* @exception KeyManagementException if there is already an identity
 	* with the same name in the scope.
 	*/
-	@:overload public function new(name : String, scope : java.security.IdentityScope) : Void;
+	@:overload @:public public function new(name : String, scope : java.security.IdentityScope) : Void;
 	
 	/**
 	* Returns this signer's private key.
@@ -83,7 +83,7 @@ extern class Signer extends java.security.Identity
 	*
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload public function getPrivateKey() : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey() : java.security.PrivateKey;
 	
 	/**
 	* Sets the key pair (public key and private key) for this signer.
@@ -104,14 +104,14 @@ extern class Signer extends java.security.Identity
 	*
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload @:final public function setKeyPair(pair : java.security.KeyPair) : Void;
+	@:overload @:public @:final public function setKeyPair(pair : java.security.KeyPair) : Void;
 	
 	/**
 	* Returns a string of information about the signer.
 	*
 	* @return a string of information about the signer.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

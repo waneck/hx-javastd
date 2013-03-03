@@ -31,21 +31,21 @@ package sun.java2d.xr;
 */
 extern class MaskTile
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function addRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function addLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public public function addLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public function calculateDirtyAreas() : Void;
+	@:overload @:public public function calculateDirtyAreas() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function translate(x : Int, y : Int) : Void;
+	@:overload @:public public function translate(x : Int, y : Int) : Void;
 	
-	@:overload public function getRects() : sun.java2d.xr.GrowableRectArray;
+	@:overload @:public public function getRects() : sun.java2d.xr.GrowableRectArray;
 	
-	@:overload public function getDirtyArea() : sun.java2d.xr.DirtyRegion;
+	@:overload @:public public function getDirtyArea() : sun.java2d.xr.DirtyRegion;
 	
 	
 }

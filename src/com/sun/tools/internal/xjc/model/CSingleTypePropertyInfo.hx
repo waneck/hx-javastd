@@ -30,7 +30,7 @@ package com.sun.tools.internal.xjc.model;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var type(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
+	@:protected @:final private var type(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
 	/**
 	*
@@ -39,21 +39,21 @@ package com.sun.tools.internal.xjc.model;
 	*      for other schema languages. This is used to determine if we should
 	*      generate {@link @XmlSchemaType} annotation to improve the roundtrip.
 	*/
-	@:overload private function new(name : String, type : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator) : Void;
+	@:overload @:protected private function new(name : String, type : com.sun.tools.internal.xjc.model.TypeUse, typeName : javax.xml.namespace.QName, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public override public function getSchemaType() : javax.xml.namespace.QName;
 	
-	@:overload @:final override public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload @:public @:final override public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
-	@:overload @:final override public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload @:public @:final override public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload @:final override public function ref() : java.util.List<com.sun.tools.internal.xjc.model.CTypeInfo>;
+	@:overload @:public @:final override public function ref() : java.util.List<com.sun.tools.internal.xjc.model.CTypeInfo>;
 	
-	@:overload @:final public function getTarget() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public @:final public function getTarget() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload @:final override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload @:public @:final override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload @:final public function getSource() : com.sun.tools.internal.xjc.model.CSingleTypePropertyInfo;
+	@:overload @:public @:final public function getSource() : com.sun.tools.internal.xjc.model.CSingleTypePropertyInfo;
 	
 	
 }

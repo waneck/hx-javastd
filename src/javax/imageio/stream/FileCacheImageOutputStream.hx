@@ -47,17 +47,17 @@ extern class FileCacheImageOutputStream extends javax.imageio.stream.ImageOutput
 	* non-<code>null</code> but is not a directory.
 	* @exception IOException if a cache file cannot be created.
 	*/
-	@:overload public function new(stream : java.io.OutputStream, cacheDir : java.io.File) : Void;
+	@:overload @:public public function new(stream : java.io.OutputStream, cacheDir : java.io.File) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
-	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function length() : haxe.Int64;
+	@:overload @:public override public function length() : haxe.Int64;
 	
 	/**
 	* Sets the current stream position and resets the bit offset to
@@ -70,7 +70,7 @@ extern class FileCacheImageOutputStream extends javax.imageio.stream.ImageOutput
 	* than the flushed position.
 	* @exception IOException if any other I/O error occurs.
 	*/
-	@:overload override public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public override public function seek(pos : haxe.Int64) : Void;
 	
 	/**
 	* Returns <code>true</code> since this
@@ -82,7 +82,7 @@ extern class FileCacheImageOutputStream extends javax.imageio.stream.ImageOutput
 	* @see #isCachedMemory
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCached() : Bool;
+	@:overload @:public override public function isCached() : Bool;
 	
 	/**
 	* Returns <code>true</code> since this
@@ -93,7 +93,7 @@ extern class FileCacheImageOutputStream extends javax.imageio.stream.ImageOutput
 	* @see #isCached
 	* @see #isCachedMemory
 	*/
-	@:overload override public function isCachedFile() : Bool;
+	@:overload @:public override public function isCachedFile() : Bool;
 	
 	/**
 	* Returns <code>false</code> since this
@@ -105,7 +105,7 @@ extern class FileCacheImageOutputStream extends javax.imageio.stream.ImageOutput
 	* @see #isCached
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCachedMemory() : Bool;
+	@:overload @:public override public function isCachedMemory() : Bool;
 	
 	/**
 	* Closes this <code>FileCacheImageOutputStream</code>.  All
@@ -115,9 +115,9 @@ extern class FileCacheImageOutputStream extends javax.imageio.stream.ImageOutput
 	*
 	* @exception IOException if an error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload override public function flushBefore(pos : haxe.Int64) : Void;
+	@:overload @:public override public function flushBefore(pos : haxe.Int64) : Void;
 	
 	
 }

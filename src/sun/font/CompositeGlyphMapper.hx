@@ -41,41 +41,41 @@ package sun.font;
 */
 extern class CompositeGlyphMapper extends sun.font.CharToGlyphMapper
 {
-	public static var SLOTMASK(default, null) : Int;
+	@:public @:static @:final public static var SLOTMASK(default, null) : Int;
 	
-	public static var GLYPHMASK(default, null) : Int;
+	@:public @:static @:final public static var GLYPHMASK(default, null) : Int;
 	
-	public static var NBLOCKS(default, null) : Int;
+	@:public @:static @:final public static var NBLOCKS(default, null) : Int;
 	
-	public static var BLOCKSZ(default, null) : Int;
+	@:public @:static @:final public static var BLOCKSZ(default, null) : Int;
 	
-	public static var MAXUNICODE(default, null) : Int;
+	@:public @:static @:final public static var MAXUNICODE(default, null) : Int;
 	
-	@:overload public function new(compFont : sun.font.CompositeFont) : Void;
+	@:overload @:public public function new(compFont : sun.font.CompositeFont) : Void;
 	
-	@:overload @:final public function compositeGlyphCode(slot : Int, glyphCode : Int) : Int;
+	@:overload @:public @:final public function compositeGlyphCode(slot : Int, glyphCode : Int) : Int;
 	
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload @:public override public function getNumGlyphs() : Int;
 	
-	@:overload override public function charToGlyph(unicode : Int) : Int;
+	@:overload @:public override public function charToGlyph(unicode : Int) : Int;
 	
-	@:overload public function charToGlyph(unicode : Int, prefSlot : Int) : Int;
+	@:overload @:public public function charToGlyph(unicode : Int, prefSlot : Int) : Int;
 	
-	@:overload override public function charToGlyph(unicode : java.StdTypes.Char16) : Int;
+	@:overload @:public override public function charToGlyph(unicode : java.StdTypes.Char16) : Int;
 	
 	/* This variant checks if shaping is needed and immediately
 	* returns true if it does. A caller of this method should be expecting
 	* to check the return type because it needs to know how to handle
 	* the character data for display.
 	*/
-	@:overload override public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
+	@:overload @:public override public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
 	
 	/* The conversion is not very efficient - looping as it does, converting
 	* one char at a time. However the cache should fill very rapidly.
 	*/
-	@:overload override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
 	
 	
 }

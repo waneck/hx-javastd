@@ -30,7 +30,7 @@ extern class MirroredTypesException extends java.lang.RuntimeException
 	*
 	* @param types  an ordered collection of the types being accessed
 	*/
-	@:overload public function new(types : java.util.Collection<com.sun.mirror.type.TypeMirror>) : Void;
+	@:overload @:public public function new(types : java.util.Collection<com.sun.mirror.type.TypeMirror>) : Void;
 	
 	/**
 	* Returns the type mirrors corresponding to the types being accessed.
@@ -39,7 +39,7 @@ extern class MirroredTypesException extends java.lang.RuntimeException
 	*
 	* @return the type mirrors in order, or <tt>null</tt> if unavailable
 	*/
-	@:overload public function getTypeMirrors() : java.util.Collection<com.sun.mirror.type.TypeMirror>;
+	@:overload @:public public function getTypeMirrors() : java.util.Collection<com.sun.mirror.type.TypeMirror>;
 	
 	/**
 	* Returns the fully qualified names of the types being accessed.
@@ -50,7 +50,7 @@ extern class MirroredTypesException extends java.lang.RuntimeException
 	* @return the fully qualified names, in order, of the types being
 	*          accessed
 	*/
-	@:overload public function getQualifiedNames() : java.util.Collection<String>;
+	@:overload @:public public function getQualifiedNames() : java.util.Collection<String>;
 	
 	
 }

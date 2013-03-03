@@ -30,27 +30,27 @@ extern class BeanContextEvent extends java.util.EventObject
 	*
 	* @param bc        The BeanContext source
 	*/
-	@:overload private function new(bc : java.beans.beancontext.BeanContext) : Void;
+	@:overload @:protected private function new(bc : java.beans.beancontext.BeanContext) : Void;
 	
 	/**
 	* Gets the <code>BeanContext</code> associated with this event.
 	* @return the <code>BeanContext</code> associated with this event.
 	*/
-	@:overload public function getBeanContext() : java.beans.beancontext.BeanContext;
+	@:overload @:public public function getBeanContext() : java.beans.beancontext.BeanContext;
 	
 	/**
 	* Sets the <code>BeanContext</code> from which this event was propagated.
 	* @param bc the <code>BeanContext</code> from which this event
 	* was propagated
 	*/
-	@:overload @:synchronized public function setPropagatedFrom(bc : java.beans.beancontext.BeanContext) : Void;
+	@:overload @:public @:synchronized public function setPropagatedFrom(bc : java.beans.beancontext.BeanContext) : Void;
 	
 	/**
 	* Gets the <code>BeanContext</code> from which this event was propagated.
 	* @return the <code>BeanContext</code> from which this
 	* event was propagated
 	*/
-	@:overload @:synchronized public function getPropagatedFrom() : java.beans.beancontext.BeanContext;
+	@:overload @:public @:synchronized public function getPropagatedFrom() : java.beans.beancontext.BeanContext;
 	
 	/**
 	* Reports whether or not this event is
@@ -58,12 +58,12 @@ extern class BeanContextEvent extends java.util.EventObject
 	* @return <code>true</code> if propagated, <code>false</code>
 	* if not
 	*/
-	@:overload @:synchronized public function isPropagated() : Bool;
+	@:overload @:public @:synchronized public function isPropagated() : Bool;
 	
 	/**
 	* The <code>BeanContext</code> from which this event was propagated
 	*/
-	private var propagatedFrom : java.beans.beancontext.BeanContext;
+	@:protected private var propagatedFrom : java.beans.beancontext.BeanContext;
 	
 	
 }

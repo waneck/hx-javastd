@@ -41,7 +41,7 @@ package javax.crypto;
 	*
 	* @see isReadOnly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Checks if this object's PermissionCollection for permissons
@@ -54,7 +54,7 @@ package javax.crypto;
 	* in the PermissionCollection it belongs to, false if not.
 	*
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the Permission objects in all the
@@ -62,15 +62,15 @@ package javax.crypto;
 	*
 	* @return an enumeration of all the Permissions.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }
 @:internal extern class PermissionsEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload @:synchronized public function hasMoreElements() : Bool;
+	@:overload @:public @:synchronized public function hasMoreElements() : Bool;
 	
-	@:overload @:synchronized public function nextElement() : Dynamic;
+	@:overload @:public @:synchronized public function nextElement() : Dynamic;
 	
 	
 }

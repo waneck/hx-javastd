@@ -33,7 +33,7 @@ extern class FtpURLConnection extends java.net.URLConnection
 	*
 	* @param   url     The <code>URL</code> to retrieve or store.
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Connects to the FTP server and logs in.
@@ -42,7 +42,7 @@ extern class FtpURLConnection extends java.net.URLConnection
 	* @throws  FtpProtocolException if an error occurs
 	* @throws  UnknownHostException if trying to connect to an unknown host
 	*/
-	@:overload @:synchronized override public function connect() : Void;
+	@:overload @:public @:synchronized override public function connect() : Void;
 	
 	/**
 	* Get the InputStream to retreive the remote file. It will issue the
@@ -53,7 +53,7 @@ extern class FtpURLConnection extends java.net.URLConnection
 	* @throws  IOException if already opened for output
 	* @throws  FtpProtocolException if errors occur during the transfert.
 	*/
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Get the OutputStream to store the remote file. It will issue the
@@ -65,14 +65,14 @@ extern class FtpURLConnection extends java.net.URLConnection
 	*          points to a directory
 	* @throws  FtpProtocolException if errors occur during the transfert.
 	*/
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Gets the <code>Permission</code> associated with the host & port.
 	*
 	* @return  The <code>Permission</code> object.
 	*/
-	@:overload override public function getPermission() : java.security.Permission;
+	@:overload @:public override public function getPermission() : java.security.Permission;
 	
 	/**
 	* Sets the general request property. If a property with the key already
@@ -84,7 +84,7 @@ extern class FtpURLConnection extends java.net.URLConnection
 	* @throws IllegalStateException if already connected
 	* @see #getRequestProperty(java.lang.String)
 	*/
-	@:overload override public function setRequestProperty(key : String, value : String) : Void;
+	@:overload @:public override public function setRequestProperty(key : String, value : String) : Void;
 	
 	/**
 	* Returns the value of the named general request property for this
@@ -96,15 +96,15 @@ extern class FtpURLConnection extends java.net.URLConnection
 	* @throws IllegalStateException if already connected
 	* @see #setRequestProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload override public function getRequestProperty(key : String) : String;
+	@:overload @:public override public function getRequestProperty(key : String) : String;
 	
-	@:overload override public function setConnectTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setConnectTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getConnectTimeout() : Int;
+	@:overload @:public override public function getConnectTimeout() : Int;
 	
-	@:overload override public function setReadTimeout(timeout : Int) : Void;
+	@:overload @:public override public function setReadTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getReadTimeout() : Int;
+	@:overload @:public override public function getReadTimeout() : Int;
 	
 	
 }
@@ -117,7 +117,7 @@ extern class FtpURLConnection extends java.net.URLConnection
 */
 @:native('sun$net$www$protocol$ftp$FtpURLConnection$FtpInputStream') extern class FtpURLConnection_FtpInputStream extends java.io.FilterInputStream
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -130,7 +130,7 @@ extern class FtpURLConnection extends java.net.URLConnection
 */
 @:native('sun$net$www$protocol$ftp$FtpURLConnection$FtpOutputStream') extern class FtpURLConnection_FtpOutputStream extends java.io.FilterOutputStream
 {
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

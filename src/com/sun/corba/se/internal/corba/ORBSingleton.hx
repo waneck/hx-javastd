@@ -29,7 +29,7 @@ package com.sun.corba.se.internal.corba;
 */
 extern class ORBSingleton extends com.sun.corba.se.impl.orb.ORBSingleton
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

@@ -25,13 +25,13 @@ package sun.net.www.http;
 */
 extern class HttpCapture
 {
-	@:overload @:synchronized public function sent(c : Int) : Void;
+	@:overload @:public @:synchronized public function sent(c : Int) : Void;
 	
-	@:overload @:synchronized public function received(c : Int) : Void;
+	@:overload @:public @:synchronized public function received(c : Int) : Void;
 	
-	@:overload @:synchronized public function flush() : Void;
+	@:overload @:public @:synchronized public function flush() : Void;
 	
-	@:overload public static function getCapture(url : java.net.URL) : sun.net.www.http.HttpCapture;
+	@:overload @:public @:static public static function getCapture(url : java.net.URL) : sun.net.www.http.HttpCapture;
 	
 	
 }

@@ -15,19 +15,19 @@ package org.omg.PortableServer;
 	 */
 extern class ServantRetentionPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
-	public static var _RETAIN(default, null) : Int;
+	@:public @:static @:final public static var _RETAIN(default, null) : Int;
 	
-	public static var RETAIN(default, null) : org.omg.PortableServer.ServantRetentionPolicyValue;
+	@:public @:static @:final public static var RETAIN(default, null) : org.omg.PortableServer.ServantRetentionPolicyValue;
 	
-	public static var _NON_RETAIN(default, null) : Int;
+	@:public @:static @:final public static var _NON_RETAIN(default, null) : Int;
 	
-	public static var NON_RETAIN(default, null) : org.omg.PortableServer.ServantRetentionPolicyValue;
+	@:public @:static @:final public static var NON_RETAIN(default, null) : org.omg.PortableServer.ServantRetentionPolicyValue;
 	
-	@:overload public function value() : Int;
+	@:overload @:public public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : org.omg.PortableServer.ServantRetentionPolicyValue;
+	@:overload @:public @:static public static function from_int(value : Int) : org.omg.PortableServer.ServantRetentionPolicyValue;
 	
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	
 }

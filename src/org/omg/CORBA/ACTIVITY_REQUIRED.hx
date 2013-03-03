@@ -39,7 +39,7 @@ package org.omg.CORBA;
 	* Constructs an <code>ACTIVITY_REQUIRED</code> exception with
 	* minor code set to 0 and CompletionStatus set to COMPLETED_NO.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>ACTIVITY_REQUIRED</code> exception with the
@@ -47,7 +47,7 @@ package org.omg.CORBA;
 	*
 	* @param detailMessage string containing a detailed message.
 	*/
-	@:overload public function new(detailMessage : String) : Void;
+	@:overload @:public public function new(detailMessage : String) : Void;
 	
 	/**
 	* Constructs an <code>ACTIVITY_REQUIRED</code> exception with the
@@ -56,7 +56,7 @@ package org.omg.CORBA;
 	* @param minorCode minor code.
 	* @param completionStatus completion status.
 	*/
-	@:overload public function new(minorCode : Int, completionStatus : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(minorCode : Int, completionStatus : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Constructs an <code>ACTIVITY_REQUIRED</code> exception with the
@@ -66,7 +66,7 @@ package org.omg.CORBA;
 	* @param minorCode minor code.
 	* @param completionStatus completion status.
 	*/
-	@:overload public function new(detailMessage : String, minorCode : Int, completionStatus : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:public public function new(detailMessage : String, minorCode : Int, completionStatus : org.omg.CORBA.CompletionStatus) : Void;
 	
 	
 }

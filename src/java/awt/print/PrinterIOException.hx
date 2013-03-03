@@ -31,7 +31,7 @@ extern class PrinterIOException extends java.awt.print.PrinterException
 	* {@link IOException}.
 	* @param exception the specified <code>IOException</code>
 	*/
-	@:overload public function new(exception : java.io.IOException) : Void;
+	@:overload @:public public function new(exception : java.io.IOException) : Void;
 	
 	/**
 	* Returns the <code>IOException</code> that terminated
@@ -45,7 +45,7 @@ extern class PrinterIOException extends java.awt.print.PrinterException
 	* the print job.
 	* @see IOException
 	*/
-	@:overload public function getIOException() : java.io.IOException;
+	@:overload @:public public function getIOException() : java.io.IOException;
 	
 	/**
 	* Returns the the cause of this exception (the <code>IOException</code>
@@ -54,7 +54,7 @@ extern class PrinterIOException extends java.awt.print.PrinterException
 	* @return  the cause of this exception.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload override public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

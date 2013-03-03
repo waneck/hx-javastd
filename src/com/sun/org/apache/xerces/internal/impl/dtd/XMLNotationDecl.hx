@@ -64,16 +64,16 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 extern class XMLNotationDecl
 {
 	/** name */
-	public var name : String;
+	@:public public var name : String;
 	
 	/** publicId */
-	public var publicId : String;
+	@:public public var publicId : String;
 	
 	/** systemId */
-	public var systemId : String;
+	@:public public var systemId : String;
 	
 	/** base systemId */
-	public var baseSystemId : String;
+	@:public public var baseSystemId : String;
 	
 	/**
 	* setValues
@@ -82,12 +82,12 @@ extern class XMLNotationDecl
 	* @param publicId
 	* @param systemId
 	*/
-	@:overload public function setValues(name : String, publicId : String, systemId : String, baseSystemId : String) : Void;
+	@:overload @:public public function setValues(name : String, publicId : String, systemId : String, baseSystemId : String) : Void;
 	
 	/**
 	* clear
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	
 }

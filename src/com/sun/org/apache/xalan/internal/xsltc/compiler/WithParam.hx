@@ -26,57 +26,57 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* The escaped qname of the with-param.
 	*/
-	private var _escapedName : String;
+	@:protected private var _escapedName : String;
 	
 	/**
 	* Displays the contents of this element
 	*/
-	@:overload public function display(indent : Int) : Void;
+	@:overload @:public override public function display(indent : Int) : Void;
 	
 	/**
 	* Returns the escaped qname of the parameter
 	*/
-	@:overload public function getEscapedName() : String;
+	@:overload @:public public function getEscapedName() : String;
 	
 	/**
 	* Return the name of this WithParam.
 	*/
-	@:overload public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload @:public public function getName() : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
 	/**
 	* Set the name of the variable or paremeter. Escape all special chars.
 	*/
-	@:overload public function setName(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
+	@:overload @:public public function setName(name : com.sun.org.apache.xalan.internal.xsltc.compiler.QName) : Void;
 	
 	/**
 	* Set the do parameter optimization flag
 	*/
-	@:overload public function setDoParameterOptimization(flag : Bool) : Void;
+	@:overload @:public public function setDoParameterOptimization(flag : Bool) : Void;
 	
 	/**
 	* The contents of a <xsl:with-param> elements are either in the element's
 	* 'select' attribute (this has precedence) or in the element body.
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Type-check either the select attribute or the element body, depending
 	* on which is in use.
 	*/
-	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Compile the value of the parameter, which is either in an expression in
 	* a 'select' attribute, or in the with-param element's body
 	*/
-	@:overload public function translateValue(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateValue(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* This code generates a sequence of bytecodes that call the
 	* addParameter() method in AbstractTranslet. The method call will add
 	* (or update) the parameter frame with the new parameter value.
 	*/
-	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

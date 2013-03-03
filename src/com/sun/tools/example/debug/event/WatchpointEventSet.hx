@@ -38,7 +38,7 @@ extern class WatchpointEventSet extends com.sun.tools.example.debug.event.Locata
 	* @return a {@link Field} which mirrors the field
 	* in the target VM.
 	*/
-	@:overload public function getField() : com.sun.jdi.Field;
+	@:overload @:public public function getField() : com.sun.jdi.Field;
 	
 	/**
 	* Returns the object whose field is about to be accessed/modified.
@@ -47,12 +47,12 @@ extern class WatchpointEventSet extends com.sun.tools.example.debug.event.Locata
 	* @return a {@link ObjectReference} which mirrors the event's
 	* object in the target VM.
 	*/
-	@:overload public function getObject() : com.sun.jdi.ObjectReference;
+	@:overload @:public public function getObject() : com.sun.jdi.ObjectReference;
 	
 	/**
 	* Current value of the field.
 	*/
-	@:overload public function getValueCurrent() : com.sun.jdi.Value;
+	@:overload @:public public function getValueCurrent() : com.sun.jdi.Value;
 	
 	
 }

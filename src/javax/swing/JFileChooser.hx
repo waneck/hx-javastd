@@ -29,129 +29,129 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* Type value indicating that the <code>JFileChooser</code> supports an
 	* "Open" file operation.
 	*/
-	public static var OPEN_DIALOG(default, null) : Int;
+	@:public @:static @:final public static var OPEN_DIALOG(default, null) : Int;
 	
 	/**
 	* Type value indicating that the <code>JFileChooser</code> supports a
 	* "Save" file operation.
 	*/
-	public static var SAVE_DIALOG(default, null) : Int;
+	@:public @:static @:final public static var SAVE_DIALOG(default, null) : Int;
 	
 	/**
 	* Type value indicating that the <code>JFileChooser</code> supports a
 	* developer-specified file operation.
 	*/
-	public static var CUSTOM_DIALOG(default, null) : Int;
+	@:public @:static @:final public static var CUSTOM_DIALOG(default, null) : Int;
 	
 	/**
 	* Return value if cancel is chosen.
 	*/
-	public static var CANCEL_OPTION(default, null) : Int;
+	@:public @:static @:final public static var CANCEL_OPTION(default, null) : Int;
 	
 	/**
 	* Return value if approve (yes, ok) is chosen.
 	*/
-	public static var APPROVE_OPTION(default, null) : Int;
+	@:public @:static @:final public static var APPROVE_OPTION(default, null) : Int;
 	
 	/**
 	* Return value if an error occured.
 	*/
-	public static var ERROR_OPTION(default, null) : Int;
+	@:public @:static @:final public static var ERROR_OPTION(default, null) : Int;
 	
 	/** Instruction to display only files. */
-	public static var FILES_ONLY(default, null) : Int;
+	@:public @:static @:final public static var FILES_ONLY(default, null) : Int;
 	
 	/** Instruction to display only directories. */
-	public static var DIRECTORIES_ONLY(default, null) : Int;
+	@:public @:static @:final public static var DIRECTORIES_ONLY(default, null) : Int;
 	
 	/** Instruction to display both files and directories. */
-	public static var FILES_AND_DIRECTORIES(default, null) : Int;
+	@:public @:static @:final public static var FILES_AND_DIRECTORIES(default, null) : Int;
 	
 	/** Instruction to cancel the current selection. */
-	public static var CANCEL_SELECTION(default, null) : String;
+	@:public @:static @:final public static var CANCEL_SELECTION(default, null) : String;
 	
 	/**
 	* Instruction to approve the current selection
 	* (same as pressing yes or ok).
 	*/
-	public static var APPROVE_SELECTION(default, null) : String;
+	@:public @:static @:final public static var APPROVE_SELECTION(default, null) : String;
 	
 	/** Identifies change in the text on the approve (yes, ok) button. */
-	public static var APPROVE_BUTTON_TEXT_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var APPROVE_BUTTON_TEXT_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies change in the tooltip text for the approve (yes, ok)
 	* button.
 	*/
-	public static var APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies change in the mnemonic for the approve (yes, ok) button. */
-	public static var APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Instruction to display the control buttons. */
-	public static var CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies user's directory change. */
-	public static var DIRECTORY_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var DIRECTORY_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies change in user's single-file selection. */
-	public static var SELECTED_FILE_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var SELECTED_FILE_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies change in user's multiple-file selection. */
-	public static var SELECTED_FILES_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var SELECTED_FILES_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Enables multiple-file selections. */
-	public static var MULTI_SELECTION_ENABLED_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MULTI_SELECTION_ENABLED_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Says that a different object is being used to find available drives
 	* on the system.
 	*/
-	public static var FILE_SYSTEM_VIEW_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FILE_SYSTEM_VIEW_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Says that a different object is being used to retrieve file
 	* information.
 	*/
-	public static var FILE_VIEW_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FILE_VIEW_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the display-hidden-files property. */
-	public static var FILE_HIDING_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FILE_HIDING_CHANGED_PROPERTY(default, null) : String;
 	
 	/** User changed the kind of files to display. */
-	public static var FILE_FILTER_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FILE_FILTER_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change in the kind of selection (single,
 	* multiple, etc.).
 	*/
-	public static var FILE_SELECTION_MODE_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var FILE_SELECTION_MODE_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Says that a different accessory component is in use
 	* (for example, to preview files).
 	*/
-	public static var ACCESSORY_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCESSORY_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies whether a the AcceptAllFileFilter is used or not.
 	*/
-	public static var ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY(default, null) : String;
 	
 	/** Identifies a change in the dialog title. */
-	public static var DIALOG_TITLE_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var DIALOG_TITLE_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change in the type of files displayed (files only,
 	* directories only, or both files and directories).
 	*/
-	public static var DIALOG_TYPE_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var DIALOG_TYPE_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Identifies a change in the list of predefined file filters
 	* the user can choose from.
 	*/
-	public static var CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY(default, null) : String;
 	
 	/**
 	* Constructs a <code>JFileChooser</code> pointing to the user's
@@ -159,7 +159,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* It is typically the "My Documents" folder on Windows, and the
 	* user's home directory on Unix.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>JFileChooser</code> using the given path.
@@ -172,7 +172,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @param currentDirectoryPath  a <code>String</code> giving the path
 	*                          to a file or directory
 	*/
-	@:overload public function new(currentDirectoryPath : String) : Void;
+	@:overload @:public public function new(currentDirectoryPath : String) : Void;
 	
 	/**
 	* Constructs a <code>JFileChooser</code> using the given <code>File</code>
@@ -185,30 +185,30 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @param currentDirectory  a <code>File</code> object specifying
 	*                          the path to a file or directory
 	*/
-	@:overload public function new(currentDirectory : java.io.File) : Void;
+	@:overload @:public public function new(currentDirectory : java.io.File) : Void;
 	
 	/**
 	* Constructs a <code>JFileChooser</code> using the given
 	* <code>FileSystemView</code>.
 	*/
-	@:overload public function new(fsv : javax.swing.filechooser.FileSystemView) : Void;
+	@:overload @:public public function new(fsv : javax.swing.filechooser.FileSystemView) : Void;
 	
 	/**
 	* Constructs a <code>JFileChooser</code> using the given current directory
 	* and <code>FileSystemView</code>.
 	*/
-	@:overload public function new(currentDirectory : java.io.File, fsv : javax.swing.filechooser.FileSystemView) : Void;
+	@:overload @:public public function new(currentDirectory : java.io.File, fsv : javax.swing.filechooser.FileSystemView) : Void;
 	
 	/**
 	* Constructs a <code>JFileChooser</code> using the given current directory
 	* path and <code>FileSystemView</code>.
 	*/
-	@:overload public function new(currentDirectoryPath : String, fsv : javax.swing.filechooser.FileSystemView) : Void;
+	@:overload @:public public function new(currentDirectoryPath : String, fsv : javax.swing.filechooser.FileSystemView) : Void;
 	
 	/**
 	* Performs common constructor initialization and setup.
 	*/
-	@:overload private function setup(view : javax.swing.filechooser.FileSystemView) : Void;
+	@:overload @:protected private function setup(view : javax.swing.filechooser.FileSystemView) : Void;
 	
 	/**
 	* Sets the <code>dragEnabled</code> property,
@@ -254,7 +254,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*  description: determines whether automatic drag handling is enabled
 	*        bound: false
 	*/
-	@:require(java4) @:overload public function setDragEnabled(b : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDragEnabled(b : Bool) : Void;
 	
 	/**
 	* Gets the value of the <code>dragEnabled</code> property.
@@ -263,7 +263,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setDragEnabled
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDragEnabled() : Bool;
+	@:require(java4) @:overload @:public public function getDragEnabled() : Bool;
 	
 	/**
 	* Returns the selected file. This can be set either by the
@@ -274,7 +274,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setSelectedFile
 	* @return the selected file
 	*/
-	@:overload public function getSelectedFile() : java.io.File;
+	@:overload @:public public function getSelectedFile() : java.io.File;
 	
 	/**
 	* Sets the selected file. If the file's parent directory is
@@ -289,13 +289,13 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @param file the selected file
 	*/
-	@:overload public function setSelectedFile(file : java.io.File) : Void;
+	@:overload @:public public function setSelectedFile(file : java.io.File) : Void;
 	
 	/**
 	* Returns a list of selected files if the file chooser is
 	* set to allow multiple selection.
 	*/
-	@:overload public function getSelectedFiles() : java.NativeArray<java.io.File>;
+	@:overload @:public public function getSelectedFiles() : java.NativeArray<java.io.File>;
 	
 	/**
 	* Sets the list of selected files if the file chooser is
@@ -305,7 +305,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*       bound: true
 	* description: The list of selected files if the chooser is in multiple selection mode.
 	*/
-	@:overload public function setSelectedFiles(selectedFiles : java.NativeArray<java.io.File>) : Void;
+	@:overload @:public public function setSelectedFiles(selectedFiles : java.NativeArray<java.io.File>) : Void;
 	
 	/**
 	* Returns the current directory.
@@ -313,7 +313,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return the current directory
 	* @see #setCurrentDirectory
 	*/
-	@:overload public function getCurrentDirectory() : java.io.File;
+	@:overload @:public public function getCurrentDirectory() : java.io.File;
 	
 	/**
 	* Sets the current directory. Passing in <code>null</code> sets the
@@ -336,7 +336,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @param dir the current directory to point to
 	* @see #getCurrentDirectory
 	*/
-	@:overload public function setCurrentDirectory(dir : java.io.File) : Void;
+	@:overload @:public public function setCurrentDirectory(dir : java.io.File) : Void;
 	
 	/**
 	* Changes the directory to be set to the parent of the
@@ -344,12 +344,12 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getCurrentDirectory
 	*/
-	@:overload public function changeToParentDirectory() : Void;
+	@:overload @:public public function changeToParentDirectory() : Void;
 	
 	/**
 	* Tells the UI to rescan its files list from the current directory.
 	*/
-	@:overload public function rescanCurrentDirectory() : Void;
+	@:overload @:public public function rescanCurrentDirectory() : Void;
 	
 	/**
 	* Makes sure that the specified file is viewable, and
@@ -357,7 +357,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @param f  a File object
 	*/
-	@:overload public function ensureFileIsVisible(f : java.io.File) : Void;
+	@:overload @:public public function ensureFileIsVisible(f : java.io.File) : Void;
 	
 	/**
 	* Pops up an "Open File" file chooser dialog. Note that the
@@ -379,7 +379,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see #showDialog
 	*/
-	@:overload public function showOpenDialog(parent : java.awt.Component) : Int;
+	@:overload @:public public function showOpenDialog(parent : java.awt.Component) : Int;
 	
 	/**
 	* Pops up a "Save File" file chooser dialog. Note that the
@@ -401,7 +401,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @see #showDialog
 	*/
-	@:overload public function showSaveDialog(parent : java.awt.Component) : Int;
+	@:overload @:public public function showSaveDialog(parent : java.awt.Component) : Int;
 	
 	/**
 	* Pops a custom file chooser dialog with a custom approve button.
@@ -457,7 +457,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function showDialog(parent : java.awt.Component, approveButtonText : String) : Int;
+	@:overload @:public public function showDialog(parent : java.awt.Component, approveButtonText : String) : Int;
 	
 	/**
 	* Creates and returns a new <code>JDialog</code> wrapping
@@ -484,7 +484,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.4
 	*/
-	@:require(java4) @:overload private function createDialog(parent : java.awt.Component) : javax.swing.JDialog;
+	@:require(java4) @:overload @:protected private function createDialog(parent : java.awt.Component) : javax.swing.JDialog;
 	
 	/**
 	* Returns the value of the <code>controlButtonsAreShown</code>
@@ -496,7 +496,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setControlButtonsAreShown
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getControlButtonsAreShown() : Bool;
+	@:require(java3) @:overload @:public public function getControlButtonsAreShown() : Bool;
 	
 	/**
 	* Sets the property
@@ -522,7 +522,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setControlButtonsAreShown(b : Bool) : Void;
+	@:require(java3) @:overload @:public public function setControlButtonsAreShown(b : Bool) : Void;
 	
 	/**
 	* Returns the type of this dialog.  The default is
@@ -537,7 +537,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #setDialogType
 	*/
-	@:overload public function getDialogType() : Int;
+	@:overload @:public public function getDialogType() : Int;
 	
 	/**
 	* Sets the type of this dialog. Use <code>OPEN_DIALOG</code> when you
@@ -574,7 +574,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #getDialogType
 	* @see #setApproveButtonText
 	*/
-	@:overload public function setDialogType(dialogType : Int) : Void;
+	@:overload @:public public function setDialogType(dialogType : Int) : Void;
 	
 	/**
 	* Sets the string that goes in the <code>JFileChooser</code> window's
@@ -590,14 +590,14 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #getDialogTitle
 	*
 	*/
-	@:overload public function setDialogTitle(dialogTitle : String) : Void;
+	@:overload @:public public function setDialogTitle(dialogTitle : String) : Void;
 	
 	/**
 	* Gets the string that goes in the <code>JFileChooser</code>'s titlebar.
 	*
 	* @see #setDialogTitle
 	*/
-	@:overload public function getDialogTitle() : String;
+	@:overload @:public public function getDialogTitle() : String;
 	
 	/**
 	* Sets the tooltip text used in the <code>ApproveButton</code>.
@@ -613,7 +613,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setDialogType
 	* @see #showDialog
 	*/
-	@:overload public function setApproveButtonToolTipText(toolTipText : String) : Void;
+	@:overload @:public public function setApproveButtonToolTipText(toolTipText : String) : Void;
 	
 	/**
 	* Returns the tooltip text used in the <code>ApproveButton</code>.
@@ -625,7 +625,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setDialogType
 	* @see #showDialog
 	*/
-	@:overload public function getApproveButtonToolTipText() : String;
+	@:overload @:public public function getApproveButtonToolTipText() : String;
 	
 	/**
 	* Returns the approve button's mnemonic.
@@ -633,7 +633,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #setApproveButtonMnemonic
 	*/
-	@:overload public function getApproveButtonMnemonic() : Int;
+	@:overload @:public public function getApproveButtonMnemonic() : Int;
 	
 	/**
 	* Sets the approve button's mnemonic using a numeric keycode.
@@ -647,7 +647,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getApproveButtonMnemonic
 	*/
-	@:overload public function setApproveButtonMnemonic(mnemonic : Int) : Void;
+	@:overload @:public public function setApproveButtonMnemonic(mnemonic : Int) : Void;
 	
 	/**
 	* Sets the approve button's mnemonic using a character.
@@ -655,7 +655,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getApproveButtonMnemonic
 	*/
-	@:overload public function setApproveButtonMnemonic(mnemonic : java.StdTypes.Char16) : Void;
+	@:overload @:public public function setApproveButtonMnemonic(mnemonic : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Sets the text used in the <code>ApproveButton</code> in the
@@ -672,7 +672,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setDialogType
 	* @see #showDialog
 	*/
-	@:overload public function setApproveButtonText(approveButtonText : String) : Void;
+	@:overload @:public public function setApproveButtonText(approveButtonText : String) : Void;
 	
 	/**
 	* Returns the text used in the <code>ApproveButton</code> in the
@@ -687,7 +687,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setDialogType
 	* @see #showDialog
 	*/
-	@:overload public function getApproveButtonText() : String;
+	@:overload @:public public function getApproveButtonText() : String;
 	
 	/**
 	* Gets the list of user choosable file filters.
@@ -699,7 +699,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #removeChoosableFileFilter
 	* @see #resetChoosableFileFilters
 	*/
-	@:overload public function getChoosableFileFilters() : java.NativeArray<javax.swing.filechooser.FileFilter>;
+	@:overload @:public public function getChoosableFileFilters() : java.NativeArray<javax.swing.filechooser.FileFilter>;
 	
 	/**
 	* Adds a filter to the list of user choosable file filters.
@@ -719,7 +719,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #resetChoosableFileFilters
 	* @see #setFileSelectionMode
 	*/
-	@:overload public function addChoosableFileFilter(filter : javax.swing.filechooser.FileFilter) : Void;
+	@:overload @:public public function addChoosableFileFilter(filter : javax.swing.filechooser.FileFilter) : Void;
 	
 	/**
 	* Removes a filter from the list of user choosable file filters. Returns
@@ -729,7 +729,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #getChoosableFileFilters
 	* @see #resetChoosableFileFilters
 	*/
-	@:overload public function removeChoosableFileFilter(f : javax.swing.filechooser.FileFilter) : Bool;
+	@:overload @:public public function removeChoosableFileFilter(f : javax.swing.filechooser.FileFilter) : Bool;
 	
 	/**
 	* Resets the choosable file filter list to its starting state. Normally,
@@ -740,13 +740,13 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #getChoosableFileFilters
 	* @see #removeChoosableFileFilter
 	*/
-	@:overload public function resetChoosableFileFilters() : Void;
+	@:overload @:public public function resetChoosableFileFilters() : Void;
 	
 	/**
 	* Returns the <code>AcceptAll</code> file filter.
 	* For example, on Microsoft Windows this would be All Files (*.*).
 	*/
-	@:overload public function getAcceptAllFileFilter() : javax.swing.filechooser.FileFilter;
+	@:overload @:public public function getAcceptAllFileFilter() : javax.swing.filechooser.FileFilter;
 	
 	/**
 	* Returns whether the <code>AcceptAll FileFilter</code> is used.
@@ -754,7 +754,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setAcceptAllFileFilterUsed
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function isAcceptAllFileFilterUsed() : Bool;
+	@:require(java3) @:overload @:public public function isAcceptAllFileFilterUsed() : Bool;
 	
 	/**
 	* Determines whether the <code>AcceptAll FileFilter</code> is used
@@ -774,7 +774,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setFileFilter
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function setAcceptAllFileFilterUsed(b : Bool) : Void;
+	@:require(java3) @:overload @:public public function setAcceptAllFileFilterUsed(b : Bool) : Void;
 	
 	/**
 	* Returns the accessory component.
@@ -782,7 +782,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return this JFileChooser's accessory component, or null
 	* @see #setAccessory
 	*/
-	@:overload public function getAccessory() : javax.swing.JComponent;
+	@:overload @:public public function getAccessory() : javax.swing.JComponent;
 	
 	/**
 	* Sets the accessory component. An accessory is often used to show a
@@ -799,7 +799,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*       bound: true
 	* description: Sets the accessory component on the JFileChooser.
 	*/
-	@:overload public function setAccessory(newAccessory : javax.swing.JComponent) : Void;
+	@:overload @:public public function setAccessory(newAccessory : javax.swing.JComponent) : Void;
 	
 	/**
 	* Sets the <code>JFileChooser</code> to allow the user to just
@@ -827,7 +827,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getFileSelectionMode
 	*/
-	@:overload public function setFileSelectionMode(mode : Int) : Void;
+	@:overload @:public public function setFileSelectionMode(mode : Int) : Void;
 	
 	/**
 	* Returns the current file-selection mode.  The default is
@@ -841,7 +841,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* </ul>
 	* @see #setFileSelectionMode
 	*/
-	@:overload public function getFileSelectionMode() : Int;
+	@:overload @:public public function getFileSelectionMode() : Int;
 	
 	/**
 	* Convenience call that determines if files are selectable based on the
@@ -850,7 +850,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setFileSelectionMode
 	* @see #getFileSelectionMode
 	*/
-	@:overload public function isFileSelectionEnabled() : Bool;
+	@:overload @:public public function isFileSelectionEnabled() : Bool;
 	
 	/**
 	* Convenience call that determines if directories are selectable based
@@ -859,7 +859,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setFileSelectionMode
 	* @see #getFileSelectionMode
 	*/
-	@:overload public function isDirectorySelectionEnabled() : Bool;
+	@:overload @:public public function isDirectorySelectionEnabled() : Bool;
 	
 	/**
 	* Sets the file chooser to allow multiple file selections.
@@ -871,14 +871,14 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #isMultiSelectionEnabled
 	*/
-	@:overload public function setMultiSelectionEnabled(b : Bool) : Void;
+	@:overload @:public public function setMultiSelectionEnabled(b : Bool) : Void;
 	
 	/**
 	* Returns true if multiple files can be selected.
 	* @return true if multiple files can be selected
 	* @see #setMultiSelectionEnabled
 	*/
-	@:overload public function isMultiSelectionEnabled() : Bool;
+	@:overload @:public public function isMultiSelectionEnabled() : Bool;
 	
 	/**
 	* Returns true if hidden files are not shown in the file chooser;
@@ -887,7 +887,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return the status of the file hiding property
 	* @see #setFileHidingEnabled
 	*/
-	@:overload public function isFileHidingEnabled() : Bool;
+	@:overload @:public public function isFileHidingEnabled() : Bool;
 	
 	/**
 	* Sets file hiding on or off. If true, hidden files are not shown
@@ -903,7 +903,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*          turned on
 	* @see #isFileHidingEnabled
 	*/
-	@:overload public function setFileHidingEnabled(b : Bool) : Void;
+	@:overload @:public public function setFileHidingEnabled(b : Bool) : Void;
 	
 	/**
 	* Sets the current file filter. The file filter is used by the
@@ -917,7 +917,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @param filter the new current file filter to use
 	* @see #getFileFilter
 	*/
-	@:overload public function setFileFilter(filter : javax.swing.filechooser.FileFilter) : Void;
+	@:overload @:public public function setFileFilter(filter : javax.swing.filechooser.FileFilter) : Void;
 	
 	/**
 	* Returns the currently selected file filter.
@@ -926,7 +926,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #setFileFilter
 	* @see #addChoosableFileFilter
 	*/
-	@:overload public function getFileFilter() : javax.swing.filechooser.FileFilter;
+	@:overload @:public public function getFileFilter() : javax.swing.filechooser.FileFilter;
 	
 	/**
 	* Sets the file view to used to retrieve UI information, such as
@@ -939,14 +939,14 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #getFileView
 	*/
-	@:overload public function setFileView(fileView : javax.swing.filechooser.FileView) : Void;
+	@:overload @:public public function setFileView(fileView : javax.swing.filechooser.FileView) : Void;
 	
 	/**
 	* Returns the current file view.
 	*
 	* @see #setFileView
 	*/
-	@:overload public function getFileView() : javax.swing.filechooser.FileView;
+	@:overload @:public public function getFileView() : javax.swing.filechooser.FileView;
 	
 	/**
 	* Returns the filename.
@@ -955,7 +955,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*          <code>f</code>
 	* @see FileView#getName
 	*/
-	@:overload public function getName(f : java.io.File) : String;
+	@:overload @:public public function getName(f : java.io.File) : String;
 	
 	/**
 	* Returns the file description.
@@ -964,7 +964,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*          <code>f</code>
 	* @see FileView#getDescription
 	*/
-	@:overload public function getDescription(f : java.io.File) : String;
+	@:overload @:public public function getDescription(f : java.io.File) : String;
 	
 	/**
 	* Returns the file type.
@@ -973,7 +973,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*          <code>f</code>
 	* @see FileView#getTypeDescription
 	*/
-	@:overload public function getTypeDescription(f : java.io.File) : String;
+	@:overload @:public public function getTypeDescription(f : java.io.File) : String;
 	
 	/**
 	* Returns the icon for this file or type of file, depending
@@ -982,7 +982,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return the <code>Icon</code> for this file, or type of file
 	* @see FileView#getIcon
 	*/
-	@:overload public function getIcon(f : java.io.File) : javax.swing.Icon;
+	@:overload @:public public function getIcon(f : java.io.File) : javax.swing.Icon;
 	
 	/**
 	* Returns true if the file (directory) can be visited.
@@ -991,7 +991,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return true if the file/directory can be traversed, otherwise false
 	* @see FileView#isTraversable
 	*/
-	@:overload public function isTraversable(f : java.io.File) : Bool;
+	@:overload @:public public function isTraversable(f : java.io.File) : Bool;
 	
 	/**
 	* Returns true if the file should be displayed.
@@ -999,7 +999,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return true if the file should be displayed, otherwise false
 	* @see FileFilter#accept
 	*/
-	@:overload public function accept(f : java.io.File) : Bool;
+	@:overload @:public public function accept(f : java.io.File) : Bool;
 	
 	/**
 	* Sets the file system view that the <code>JFileChooser</code> uses for
@@ -1014,14 +1014,14 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see FileSystemView
 	*/
-	@:overload public function setFileSystemView(fsv : javax.swing.filechooser.FileSystemView) : Void;
+	@:overload @:public public function setFileSystemView(fsv : javax.swing.filechooser.FileSystemView) : Void;
 	
 	/**
 	* Returns the file system view.
 	* @return the <code>FileSystemView</code> object
 	* @see #setFileSystemView
 	*/
-	@:overload public function getFileSystemView() : javax.swing.filechooser.FileSystemView;
+	@:overload @:public public function getFileSystemView() : javax.swing.filechooser.FileSystemView;
 	
 	/**
 	* Called by the UI when the user hits the Approve button
@@ -1033,7 +1033,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #APPROVE_SELECTION
 	*/
-	@:overload public function approveSelection() : Void;
+	@:overload @:public public function approveSelection() : Void;
 	
 	/**
 	* Called by the UI when the user chooses the Cancel button.
@@ -1044,7 +1044,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #CANCEL_SELECTION
 	*/
-	@:overload public function cancelSelection() : Void;
+	@:overload @:public public function cancelSelection() : Void;
 	
 	/**
 	* Adds an <code>ActionListener</code> to the file chooser.
@@ -1054,7 +1054,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @see #approveSelection
 	* @see #cancelSelection
 	*/
-	@:overload public function addActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function addActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Removes an <code>ActionListener</code> from the file chooser.
@@ -1063,7 +1063,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see #addActionListener
 	*/
-	@:overload public function removeActionListener(l : java.awt.event.ActionListener) : Void;
+	@:overload @:public public function removeActionListener(l : java.awt.event.ActionListener) : Void;
 	
 	/**
 	* Returns an array of all the action listeners
@@ -1078,7 +1078,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
+	@:require(java4) @:overload @:public public function getActionListeners() : java.NativeArray<java.awt.event.ActionListener>;
 	
 	/**
 	* Notifies all listeners that have registered interest for
@@ -1087,14 +1087,14 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @see EventListenerList
 	*/
-	@:overload private function fireActionPerformed(command : String) : Void;
+	@:overload @:protected private function fireActionPerformed(command : String) : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -1107,14 +1107,14 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*        expert: true
 	*   description: A string that specifies the name of the L&F class.
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Gets the UI object which implements the L&F for this component.
 	*
 	* @return the FileChooserUI object that implements the FileChooserUI L&F
 	*/
-	@:overload public function getUI() : javax.swing.plaf.FileChooserUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.FileChooserUI;
 	
 	/**
 	* Returns a string representation of this <code>JFileChooser</code>.
@@ -1126,9 +1126,9 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	*
 	* @return  a string representation of this <code>JFileChooser</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the AccessibleContext associated with this JFileChooser.
@@ -1139,15 +1139,15 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* @return an AccessibleJFileChooser that serves as the
 	*         AccessibleContext of this JFileChooser
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('javax$swing$JFileChooser$WeakPCL') @:internal extern class JFileChooser_WeakPCL implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(jfc : javax.swing.JFileChooser) : Void;
+	@:overload @:public public function new(jfc : javax.swing.JFileChooser) : Void;
 	
-	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -1166,7 +1166,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

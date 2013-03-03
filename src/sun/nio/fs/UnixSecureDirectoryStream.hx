@@ -28,38 +28,38 @@ package sun.nio.fs;
 */
 @:internal extern class UnixSecureDirectoryStream implements java.nio.file.SecureDirectoryStream<java.nio.file.Path>
 {
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<java.nio.file.Path>;
+	@:overload @:public public function iterator() : java.util.Iterator<java.nio.file.Path>;
 	
 	/**
 	* Opens sub-directory in this directory
 	*/
-	@:overload public function newDirectoryStream(obj : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.SecureDirectoryStream<java.nio.file.Path>;
+	@:overload @:public public function newDirectoryStream(obj : java.nio.file.Path, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.SecureDirectoryStream<java.nio.file.Path>;
 	
 	/**
 	* Opens file in this directory
 	*/
-	@:overload public function newByteChannel(obj : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.SeekableByteChannel;
+	@:overload @:public public function newByteChannel(obj : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.SeekableByteChannel;
 	
-	@:overload public function deleteFile(file : java.nio.file.Path) : Void;
+	@:overload @:public public function deleteFile(file : java.nio.file.Path) : Void;
 	
-	@:overload public function deleteDirectory(dir : java.nio.file.Path) : Void;
+	@:overload @:public public function deleteDirectory(dir : java.nio.file.Path) : Void;
 	
 	/**
 	* Rename/move file in this directory to another (open) directory
 	*/
-	@:overload public function move(fromObj : java.nio.file.Path, dir : java.nio.file.SecureDirectoryStream<java.nio.file.Path>, toObj : java.nio.file.Path) : Void;
+	@:overload @:public public function move(fromObj : java.nio.file.Path, dir : java.nio.file.SecureDirectoryStream<java.nio.file.Path>, toObj : java.nio.file.Path) : Void;
 	
 	/**
 	* Returns file attribute view bound to this directory
 	*/
-	@:overload public function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(type : Class<V>) : V;
+	@:overload @:public public function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(type : Class<V>) : V;
 	
 	/**
 	* Returns file attribute view bound to dfd/filename.
 	*/
-	@:overload public function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(obj : java.nio.file.Path, type : Class<V>, options : java.NativeArray<java.nio.file.LinkOption>) : V;
+	@:overload @:public public function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(obj : java.nio.file.Path, type : Class<V>, options : java.NativeArray<java.nio.file.LinkOption>) : V;
 	
 	
 }
@@ -68,11 +68,11 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$UnixSecureDirectoryStream$BasicFileAttributeViewImpl') @:internal extern class UnixSecureDirectoryStream_BasicFileAttributeViewImpl implements java.nio.file.attribute.BasicFileAttributeView
 {
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
-	@:overload public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
+	@:overload @:public public function readAttributes() : java.nio.file.attribute.BasicFileAttributes;
 	
-	@:overload public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
+	@:overload @:public public function setTimes(lastModifiedTime : java.nio.file.attribute.FileTime, lastAccessTime : java.nio.file.attribute.FileTime, createTime : java.nio.file.attribute.FileTime) : Void;
 	
 	
 }
@@ -81,17 +81,17 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$UnixSecureDirectoryStream$PosixFileAttributeViewImpl') @:internal extern class UnixSecureDirectoryStream_PosixFileAttributeViewImpl extends sun.nio.fs.UnixSecureDirectoryStream.UnixSecureDirectoryStream_BasicFileAttributeViewImpl implements java.nio.file.attribute.PosixFileAttributeView
 {
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
-	@:overload override public function readAttributes() : java.nio.file.attribute.PosixFileAttributes;
+	@:overload @:public override public function readAttributes() : java.nio.file.attribute.PosixFileAttributes;
 	
-	@:overload public function setPermissions(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : Void;
+	@:overload @:public public function setPermissions(perms : java.util.Set<java.nio.file.attribute.PosixFilePermission>) : Void;
 	
-	@:overload public function getOwner() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public public function getOwner() : java.nio.file.attribute.UserPrincipal;
 	
-	@:overload public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
+	@:overload @:public public function setOwner(owner : java.nio.file.attribute.UserPrincipal) : Void;
 	
-	@:overload public function setGroup(group : java.nio.file.attribute.GroupPrincipal) : Void;
+	@:overload @:public public function setGroup(group : java.nio.file.attribute.GroupPrincipal) : Void;
 	
 	
 }

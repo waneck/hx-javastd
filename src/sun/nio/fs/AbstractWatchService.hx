@@ -25,15 +25,15 @@ package sun.nio.fs;
 */
 @:internal extern class AbstractWatchService implements java.nio.file.WatchService
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload @:final public function poll() : java.nio.file.WatchKey;
+	@:overload @:public @:final public function poll() : java.nio.file.WatchKey;
 	
-	@:overload @:final public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.nio.file.WatchKey;
+	@:overload @:public @:final public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.nio.file.WatchKey;
 	
-	@:overload @:final public function take() : java.nio.file.WatchKey;
+	@:overload @:public @:final public function take() : java.nio.file.WatchKey;
 	
-	@:overload @:final public function close() : Void;
+	@:overload @:public @:final public function close() : Void;
 	
 	
 }

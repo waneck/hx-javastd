@@ -41,7 +41,7 @@ extern class NotificationResult implements java.io.Serializable
 	* <code>earliestSequenceNumber</code> or
 	* <code>nextSequenceNumber</code> is negative.
 	*/
-	@:overload public function new(earliestSequenceNumber : haxe.Int64, nextSequenceNumber : haxe.Int64, targetedNotifications : java.NativeArray<javax.management.remote.TargetedNotification>) : Void;
+	@:overload @:public public function new(earliestSequenceNumber : haxe.Int64, nextSequenceNumber : haxe.Int64, targetedNotifications : java.NativeArray<javax.management.remote.TargetedNotification>) : Void;
 	
 	/**
 	* Returns the sequence number of the earliest notification still
@@ -50,7 +50,7 @@ extern class NotificationResult implements java.io.Serializable
 	* @return the sequence number of the earliest notification still
 	* in the buffer.
 	*/
-	@:overload public function getEarliestSequenceNumber() : haxe.Int64;
+	@:overload @:public public function getEarliestSequenceNumber() : haxe.Int64;
 	
 	/**
 	* Returns the sequence number of the next notification available
@@ -59,7 +59,7 @@ extern class NotificationResult implements java.io.Serializable
 	* @return the sequence number of the next notification available
 	* for querying.
 	*/
-	@:overload public function getNextSequenceNumber() : haxe.Int64;
+	@:overload @:public public function getNextSequenceNumber() : haxe.Int64;
 	
 	/**
 	* Returns the notifications resulting from the query, and the
@@ -68,7 +68,7 @@ extern class NotificationResult implements java.io.Serializable
 	* @return the notifications resulting from the query, and the
 	* listeners they correspond to.  This array can be empty.
 	*/
-	@:overload public function getTargetedNotifications() : java.NativeArray<javax.management.remote.TargetedNotification>;
+	@:overload @:public public function getTargetedNotifications() : java.NativeArray<javax.management.remote.TargetedNotification>;
 	
 	/**
 	* Returns a string representation of the object.  The result
@@ -77,7 +77,7 @@ extern class NotificationResult implements java.io.Serializable
 	*
 	* @return a string representation of the object.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

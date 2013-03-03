@@ -49,21 +49,21 @@ extern class Terminal extends com.sun.tools.corba.se.idl.constExpr.Expression
 	* as unsigned long.  A CORBA long is a Java int.  There is no unsigned int
 	* in Java, so the next larger type, long, is used.
 	**/
-	@:overload private function new(representation : String, charValue : Null<java.StdTypes.Char16>, isWide : Bool) : Void;
+	@:overload @:protected private function new(representation : String, charValue : Null<java.StdTypes.Char16>, isWide : Bool) : Void;
 	
-	@:overload private function new(representation : String, booleanValue : Null<Bool>) : Void;
+	@:overload @:protected private function new(representation : String, booleanValue : Null<Bool>) : Void;
 	
-	@:overload private function new(representation : String, bigIntegerValue : java.math.BigInteger) : Void;
+	@:overload @:protected private function new(representation : String, bigIntegerValue : java.math.BigInteger) : Void;
 	
-	@:overload private function new(representation : String, longValue : Null<haxe.Int64>) : Void;
+	@:overload @:protected private function new(representation : String, longValue : Null<haxe.Int64>) : Void;
 	
-	@:overload private function new(representation : String, doubleValue : Null<Float>) : Void;
+	@:overload @:protected private function new(representation : String, doubleValue : Null<Float>) : Void;
 	
-	@:overload private function new(stringValue : String, isWide : Bool) : Void;
+	@:overload @:protected private function new(stringValue : String, isWide : Bool) : Void;
 	
-	@:overload private function new(constReference : com.sun.tools.corba.se.idl.ConstEntry) : Void;
+	@:overload @:protected private function new(constReference : com.sun.tools.corba.se.idl.ConstEntry) : Void;
 	
-	@:overload public function evaluate() : Dynamic;
+	@:overload @:public override public function evaluate() : Dynamic;
 	
 	
 }

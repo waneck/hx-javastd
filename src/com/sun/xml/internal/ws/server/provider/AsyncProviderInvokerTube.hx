@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.server.provider;
 */
 @:internal extern class AsyncProviderInvokerTube<T> extends com.sun.xml.internal.ws.server.provider.ProviderInvokerTube<T>
 {
-	@:overload public function new(invoker : com.sun.xml.internal.ws.api.server.Invoker, argsBuilder : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<T>) : Void;
+	@:overload @:public public function new(invoker : com.sun.xml.internal.ws.api.server.Invoker, argsBuilder : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<T>) : Void;
 	
 	/*
 	* This binds the parameter for Provider endpoints and invokes the
@@ -33,21 +33,21 @@ package com.sun.xml.internal.ws.server.provider;
 	* invoke() is used to create a new {@link Message} that traverses
 	* through the Pipeline to transport.
 	*/
-	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$server$provider$AsyncProviderInvokerTube$AsyncProviderCallbackImpl') @:internal extern class AsyncProviderInvokerTube_AsyncProviderCallbackImpl implements com.sun.xml.internal.ws.api.server.AsyncProviderCallback<Dynamic>
 {
-	@:overload public function new(request : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(request : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function send(param : Dynamic) : Void;
+	@:overload @:public public function send(param : Dynamic) : Void;
 	
-	@:overload public function sendError(t : java.lang.Throwable) : Void;
+	@:overload @:public public function sendError(t : java.lang.Throwable) : Void;
 	
 	
 }
@@ -56,7 +56,7 @@ package com.sun.xml.internal.ws.server.provider;
 */
 @:native('com$sun$xml$internal$ws$server$provider$AsyncProviderInvokerTube$AsyncWebServiceContext') @:internal extern class AsyncProviderInvokerTube_AsyncWebServiceContext extends com.sun.xml.internal.ws.server.AbstractWebServiceContext
 {
-	@:overload override public function getRequestPacket() : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public override public function getRequestPacket() : com.sun.xml.internal.ws.api.message.Packet;
 	
 	
 }

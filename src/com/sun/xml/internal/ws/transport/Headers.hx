@@ -59,7 +59,7 @@ extern class Headers extends java.util.TreeMap<String, java.util.List<String>>
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds the given value to the list of headers for the given key. If the
@@ -68,7 +68,7 @@ extern class Headers extends java.util.TreeMap<String, java.util.List<String>>
 	* @param key the header name
 	* @param value the header value to add to the header
 	*/
-	@:overload public function add(key : String, value : String) : Void;
+	@:overload @:public public function add(key : String, value : String) : Void;
 	
 	/**
 	* Returns the first value from the List of String values for the given key
@@ -77,7 +77,7 @@ extern class Headers extends java.util.TreeMap<String, java.util.List<String>>
 	* @param key the key to search for
 	* @return the first string value associated with the key
 	*/
-	@:overload public function getFirst(key : String) : String;
+	@:overload @:public public function getFirst(key : String) : String;
 	
 	/**
 	* Sets the given value as the sole header value for the given key. If the
@@ -86,13 +86,13 @@ extern class Headers extends java.util.TreeMap<String, java.util.List<String>>
 	* @param key the header name
 	* @param value the header value to set.
 	*/
-	@:overload public function set(key : String, value : String) : Void;
+	@:overload @:public public function set(key : String, value : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$ws$transport$Headers$InsensitiveComparator') @:internal extern class Headers_InsensitiveComparator implements java.util.Comparator<String>
 {
-	@:overload public function compare(o1 : String, o2 : String) : Int;
+	@:overload @:public public function compare(o1 : String, o2 : String) : Int;
 	
 	
 }

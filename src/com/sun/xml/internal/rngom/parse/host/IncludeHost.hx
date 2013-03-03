@@ -46,7 +46,7 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 extern class IncludeHost extends com.sun.xml.internal.rngom.parse.host.GrammarSectionHost implements com.sun.xml.internal.rngom.ast.builder.Include<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function endInclude(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function endInclude(current : com.sun.xml.internal.rngom.parse.Parseable, uri : String, ns : String, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
 	
 }

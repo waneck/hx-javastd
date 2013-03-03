@@ -28,25 +28,25 @@ extern class AppletAudioClip implements java.applet.AudioClip
 	/**
 	* Constructs an AppletAudioClip from an URL.
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Constructs an AppletAudioClip from a URLConnection.
 	*/
-	@:overload public function new(uc : java.net.URLConnection) : Void;
+	@:overload @:public public function new(uc : java.net.URLConnection) : Void;
 	
 	/**
 	* For constructing directly from Jar entries, or any other
 	* raw Audio data. Note that the data provided must include the format
 	* header.
 	*/
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized public function play() : Void;
+	@:overload @:public @:synchronized public function play() : Void;
 	
-	@:overload @:synchronized public function loop() : Void;
+	@:overload @:public @:synchronized public function loop() : Void;
 	
-	@:overload @:synchronized public function stop() : Void;
+	@:overload @:public @:synchronized public function stop() : Void;
 	
 	
 }

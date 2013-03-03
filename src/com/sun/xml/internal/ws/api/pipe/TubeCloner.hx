@@ -35,7 +35,7 @@ extern class TubeCloner
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	private var master2copy(default, null) : java.util.Map<Dynamic, Dynamic>;
+	@:protected @:final private var master2copy(default, null) : java.util.Map<Dynamic, Dynamic>;
 	
 	/**
 	* Invoked by a client of a tube to clone the whole pipeline.
@@ -49,7 +49,7 @@ extern class TubeCloner
 	* @return
 	*      The cloned pipeline. Always non-null.
 	*/
-	@:overload public static function clone(p : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
+	@:overload @:public @:static public static function clone(p : com.sun.xml.internal.ws.api.pipe.Tube) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	/**
 	* Invoked by a {@link Tube#copy(TubeCloner)} implementation
@@ -73,7 +73,7 @@ extern class TubeCloner
 	* @return
 	*      The cloned tube. Always non-null.
 	*/
-	@:overload public function copy<T : com.sun.xml.internal.ws.api.pipe.Tube>(t : T) : T;
+	@:overload @:public public function copy<T : com.sun.xml.internal.ws.api.pipe.Tube>(t : T) : T;
 	
 	/**
 	* This method must be called from within the copy constructor
@@ -85,7 +85,7 @@ extern class TubeCloner
 	* before you start copying the pipes you refer to,
 	* or else there's a chance of inifinite loop.
 	*/
-	@:overload public function add(original : com.sun.xml.internal.ws.api.pipe.Tube, copy : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
+	@:overload @:public public function add(original : com.sun.xml.internal.ws.api.pipe.Tube, copy : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
 	
 }

@@ -27,57 +27,59 @@ package sun.nio.cs.ext;
 */
 @:internal extern class ISO2022 extends java.nio.charset.Charset
 {
-	@:overload public function new(csname : String, aliases : java.NativeArray<String>) : Void;
+	@:overload @:public public function new(csname : String, aliases : java.NativeArray<String>) : Void;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISO2022$Decoder') extern class ISO2022_Decoder extends java.nio.charset.CharsetDecoder
 {
-	private var SODesig : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:protected private var SODesig : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	private var SS2Desig : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:protected private var SS2Desig : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	private var SS3Desig : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
+	@:protected private var SS3Desig : java.NativeArray<java.NativeArray<java.StdTypes.Int8>>;
 	
-	private var SODecoder : java.NativeArray<java.nio.charset.CharsetDecoder>;
+	@:protected private var SODecoder : java.NativeArray<java.nio.charset.CharsetDecoder>;
 	
-	private var SS2Decoder : java.NativeArray<java.nio.charset.CharsetDecoder>;
+	@:protected private var SS2Decoder : java.NativeArray<java.nio.charset.CharsetDecoder>;
 	
-	private var SS3Decoder : java.NativeArray<java.nio.charset.CharsetDecoder>;
+	@:protected private var SS3Decoder : java.NativeArray<java.nio.charset.CharsetDecoder>;
 	
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
 	
 }
 @:native('sun$nio$cs$ext$ISO2022$Encoder') extern class ISO2022_Encoder extends java.nio.charset.CharsetEncoder
 {
-	public static var SS2(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var SS2(default, null) : java.StdTypes.Int8;
 	
-	public static var PLANE2(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var PLANE2(default, null) : java.StdTypes.Int8;
 	
-	public static var PLANE3(default, null) : java.StdTypes.Int8;
+	@:public @:static @:final public static var PLANE3(default, null) : java.StdTypes.Int8;
 	
-	private var maximumDesignatorLength(default, null) : java.StdTypes.Int8;
+	@:protected @:final private var maximumDesignatorLength(default, null) : java.StdTypes.Int8;
 	
-	private var SODesig : String;
+	@:protected private var SODesig : String;
 	
-	private var ISOEncoder : java.nio.charset.CharsetEncoder;
+	@:protected private var SS2Desig : String;
 	
-	@:overload private function new(cs : java.nio.charset.Charset) : Void;
+	@:protected private var ISOEncoder : java.nio.charset.CharsetEncoder;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:protected private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implReset() : Void;
+	
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	
 }

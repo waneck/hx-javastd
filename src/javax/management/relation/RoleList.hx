@@ -28,7 +28,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	/**
 	* Constructs an empty RoleList.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an empty RoleList with the initial capacity
@@ -36,7 +36,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	*
 	* @param initialCapacity  initial capacity
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs a {@code RoleList} containing the elements of the
@@ -54,7 +54,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	*
 	* @see ArrayList#ArrayList(java.util.Collection)
 	*/
-	@:overload public function new(list : java.util.List<javax.management.relation.Role>) : Void;
+	@:overload @:public public function new(list : java.util.List<javax.management.relation.Role>) : Void;
 	
 	/**
 	* Return a view of this list as a {@code List<Role>}.
@@ -77,7 +77,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function asList() : java.util.List<javax.management.relation.Role>;
+	@:require(java6) @:overload @:public public function asList() : java.util.List<javax.management.relation.Role>;
 	
 	/**
 	* Adds the Role specified as the last element of the list.
@@ -86,7 +86,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	*
 	* @exception IllegalArgumentException  if the role is null.
 	*/
-	@:overload public function add(role : javax.management.relation.Role) : Void;
+	@:overload @:public public function add(role : javax.management.relation.Role) : Void;
 	
 	/**
 	* Inserts the role specified as an element at the position specified.
@@ -101,7 +101,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	* @exception IndexOutOfBoundsException  if accessing with an index
 	* outside of the list.
 	*/
-	@:overload public function add(index : Int, role : javax.management.relation.Role) : Void;
+	@:overload @:public public function add(index : Int, role : javax.management.relation.Role) : Void;
 	
 	/**
 	* Sets the element at the position specified to be the role
@@ -115,7 +115,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	* @exception IndexOutOfBoundsException  if accessing with an index
 	* outside of the list.
 	*/
-	@:overload public function set(index : Int, role : javax.management.relation.Role) : Void;
+	@:overload @:public public function set(index : Int, role : javax.management.relation.Role) : Void;
 	
 	/**
 	* Appends all the elements in the RoleList specified to the end
@@ -131,7 +131,7 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	*
 	* @see ArrayList#addAll(Collection)
 	*/
-	@:overload public function addAll(roleList : javax.management.relation.RoleList) : Bool;
+	@:overload @:public public function addAll(roleList : javax.management.relation.RoleList) : Bool;
 	
 	/**
 	* Inserts all of the elements in the RoleList specified into this
@@ -150,22 +150,22 @@ extern class RoleList extends java.util.ArrayList<Dynamic>
 	*
 	* @see ArrayList#addAll(int, Collection)
 	*/
-	@:overload public function addAll(index : Int, roleList : javax.management.relation.RoleList) : Bool;
+	@:overload @:public public function addAll(index : Int, roleList : javax.management.relation.RoleList) : Bool;
 	
 	/*
 	* Override all of the methods from ArrayList<Object> that might add
 	* a non-Role to the List, and disallow that if asList has ever
 	* been called on this instance.
 	*/
-	@:overload public function add(o : Dynamic) : Bool;
+	@:overload @:public override public function add(o : Dynamic) : Bool;
 	
-	@:overload public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public override public function add(index : Int, element : Dynamic) : Void;
 	
-	@:overload public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
 	
 }

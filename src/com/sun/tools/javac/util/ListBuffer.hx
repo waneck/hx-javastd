@@ -33,109 +33,109 @@ extern class ListBuffer<A> extends java.util.AbstractQueue<A>
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public static function lb<T>() : com.sun.tools.javac.util.ListBuffer<T>;
+	@:overload @:public @:static public static function lb<T>() : com.sun.tools.javac.util.ListBuffer<T>;
 	
-	@:overload public static function of<T>(x : T) : com.sun.tools.javac.util.ListBuffer<T>;
+	@:overload @:public @:static public static function of<T>(x : T) : com.sun.tools.javac.util.ListBuffer<T>;
 	
 	/** The list of elements of this buffer.
 	*/
-	public var elems : com.sun.tools.javac.util.List<A>;
+	@:public public var elems : com.sun.tools.javac.util.List<A>;
 	
 	/** A pointer pointing to the last, sentinel element of `elems'.
 	*/
-	public var last : com.sun.tools.javac.util.List<A>;
+	@:public public var last : com.sun.tools.javac.util.List<A>;
 	
 	/** The number of element in this buffer.
 	*/
-	public var count : Int;
+	@:public public var count : Int;
 	
 	/** Has a list been created from this buffer yet?
 	*/
-	public var shared : Bool;
+	@:public public var shared : Bool;
 	
 	/** Create a new initially empty list buffer.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:public @:final override public function clear() : Void;
 	
 	/** Return the number of elements in this buffer.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/** Is buffer empty?
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/** Is buffer not empty?
 	*/
-	@:overload public function nonEmpty() : Bool;
+	@:overload @:public public function nonEmpty() : Bool;
 	
 	/** Prepend an element to buffer.
 	*/
-	@:overload public function prepend(x : A) : com.sun.tools.javac.util.ListBuffer<A>;
+	@:overload @:public public function prepend(x : A) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append an element to buffer.
 	*/
-	@:overload public function append(x : A) : com.sun.tools.javac.util.ListBuffer<A>;
+	@:overload @:public public function append(x : A) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append all elements in a list to buffer.
 	*/
-	@:overload public function appendList(xs : com.sun.tools.javac.util.List<A>) : com.sun.tools.javac.util.ListBuffer<A>;
+	@:overload @:public public function appendList(xs : com.sun.tools.javac.util.List<A>) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append all elements in a list to buffer.
 	*/
-	@:overload public function appendList(xs : com.sun.tools.javac.util.ListBuffer<A>) : com.sun.tools.javac.util.ListBuffer<A>;
+	@:overload @:public public function appendList(xs : com.sun.tools.javac.util.ListBuffer<A>) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append all elements in an array to buffer.
 	*/
-	@:overload public function appendArray(xs : java.NativeArray<A>) : com.sun.tools.javac.util.ListBuffer<A>;
+	@:overload @:public public function appendArray(xs : java.NativeArray<A>) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Convert buffer to a list of all its elements.
 	*/
-	@:overload public function toList() : com.sun.tools.javac.util.List<A>;
+	@:overload @:public public function toList() : com.sun.tools.javac.util.List<A>;
 	
 	/** Does the list contain the specified element?
 	*/
-	@:overload override public function contains(x : Dynamic) : Bool;
+	@:overload @:public override public function contains(x : Dynamic) : Bool;
 	
 	/** Convert buffer to an array
 	*/
-	@:overload override public function toArray<T>(vec : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(vec : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/** The first element in this buffer.
 	*/
-	@:overload public function first() : A;
+	@:overload @:public public function first() : A;
 	
 	/** Return first element in this buffer and remove
 	*/
-	@:overload public function next() : A;
+	@:overload @:public public function next() : A;
 	
 	/** An enumeration of all elements in this buffer.
 	*/
-	@:overload override public function iterator() : java.util.Iterator<A>;
+	@:overload @:public override public function iterator() : java.util.Iterator<A>;
 	
-	@:overload override public function add(a : A) : Bool;
+	@:overload @:public override public function add(a : A) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function addAll(c : java.util.Collection<A>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<A>) : Bool;
 	
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function offer(a : A) : Bool;
+	@:overload @:public override public function offer(a : A) : Bool;
 	
-	@:overload override public function poll() : A;
+	@:overload @:public override public function poll() : A;
 	
-	@:overload override public function peek() : A;
+	@:overload @:public override public function peek() : A;
 	
 	
 }

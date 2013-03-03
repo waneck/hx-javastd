@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.naming.pcosnaming;
 */
 extern class InternalBindingKey implements java.io.Serializable
 {
-	public var id : String;
+	@:public public var id : String;
 	
-	public var kind : String;
+	@:public public var kind : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(n : org.omg.CosNaming.NameComponent) : Void;
+	@:overload @:public public function new(n : org.omg.CosNaming.NameComponent) : Void;
 	
-	@:overload private function setup(n : org.omg.CosNaming.NameComponent) : Void;
+	@:overload @:protected private function setup(n : org.omg.CosNaming.NameComponent) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

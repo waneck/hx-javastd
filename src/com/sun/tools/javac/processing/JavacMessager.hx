@@ -33,9 +33,9 @@ package com.sun.tools.javac.processing;
 */
 extern class JavacMessager implements javax.annotation.processing.Messager
 {
-	@:overload public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence) : Void;
+	@:overload @:public public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence) : Void;
 	
-	@:overload public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, e : javax.lang.model.element.Element) : Void;
+	@:overload @:public public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, e : javax.lang.model.element.Element) : Void;
 	
 	/**
 	* Prints a message of the specified kind at the location of the
@@ -46,7 +46,7 @@ extern class JavacMessager implements javax.annotation.processing.Messager
 	* @param e    the annotated element
 	* @param a    the annotation to use as a position hint
 	*/
-	@:overload public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : Void;
+	@:overload @:public public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror) : Void;
 	
 	/**
 	* Prints a message of the specified kind at the location of the
@@ -59,37 +59,37 @@ extern class JavacMessager implements javax.annotation.processing.Messager
 	* @param a    the annotation containing the annotaiton value
 	* @param v    the annotation value to use as a position hint
 	*/
-	@:overload public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : Void;
+	@:overload @:public public function printMessage(kind : javax.tools.Diagnostic.Diagnostic_Kind, msg : java.lang.CharSequence, e : javax.lang.model.element.Element, a : javax.lang.model.element.AnnotationMirror, v : javax.lang.model.element.AnnotationValue) : Void;
 	
 	/**
 	* Prints an error message.
 	* Equivalent to {@code printError(null, msg)}.
 	* @param msg  the message, or an empty string if none
 	*/
-	@:overload public function printError(msg : String) : Void;
+	@:overload @:public public function printError(msg : String) : Void;
 	
 	/**
 	* Prints a warning message.
 	* Equivalent to {@code printWarning(null, msg)}.
 	* @param msg  the message, or an empty string if none
 	*/
-	@:overload public function printWarning(msg : String) : Void;
+	@:overload @:public public function printWarning(msg : String) : Void;
 	
 	/**
 	* Prints a notice.
 	* @param msg  the message, or an empty string if none
 	*/
-	@:overload public function printNotice(msg : String) : Void;
+	@:overload @:public public function printNotice(msg : String) : Void;
 	
-	@:overload public function errorRaised() : Bool;
+	@:overload @:public public function errorRaised() : Bool;
 	
-	@:overload public function errorCount() : Int;
+	@:overload @:public public function errorCount() : Int;
 	
-	@:overload public function warningCount() : Int;
+	@:overload @:public public function warningCount() : Int;
 	
-	@:overload public function newRound(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:public public function newRound(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -23,31 +23,31 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class UnionIterator extends com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator
 {
-	@:overload public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
+	@:overload @:public public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
 	
-	@:overload public function addIterator(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : com.sun.org.apache.xalan.internal.xsltc.dom.UnionIterator;
+	@:overload @:public public function addIterator(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : com.sun.org.apache.xalan.internal.xsltc.dom.UnionIterator;
 	
 	
 }
 @:native('com$sun$org$apache$xalan$internal$xsltc$dom$UnionIterator$LookAheadIterator') @:internal extern class UnionIterator_LookAheadIterator extends com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode
 {
-	public var iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:public public var iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function new(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
+	@:overload @:public public function new(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
 	
-	@:overload public function step() : Int;
+	@:overload @:public override public function step() : Int;
 	
-	@:overload public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
+	@:overload @:public override public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
-	@:overload public function setMark() : Void;
+	@:overload @:public override public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload @:public override public function gotoMark() : Void;
 	
-	@:overload public function isLessThan(heapNode : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Bool;
+	@:overload @:public override public function isLessThan(heapNode : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Bool;
 	
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
+	@:overload @:public override public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
-	@:overload public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
+	@:overload @:public override public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	
 }

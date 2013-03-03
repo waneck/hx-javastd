@@ -30,13 +30,13 @@ package sun.security.krb5.internal.crypto;
 */
 @:internal extern class DesCbcEType extends sun.security.krb5.internal.crypto.EType
 {
-	@:overload @:abstract private function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function calculateChecksum(data : java.NativeArray<java.StdTypes.Int8>, size : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function blockSize() : Int;
+	@:overload @:public override public function blockSize() : Int;
 	
-	@:overload override public function keyType() : Int;
+	@:overload @:public override public function keyType() : Int;
 	
-	@:overload override public function keySize() : Int;
+	@:overload @:public override public function keySize() : Int;
 	
 	/**
 	* Encrypts the data using DES in CBC mode.
@@ -46,7 +46,7 @@ package sun.security.krb5.internal.crypto;
 	*
 	* @written by Yanni Zhang, Dec 6 99.
 	*/
-	@:overload override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encrypts the data using DES in CBC mode.
@@ -57,7 +57,7 @@ package sun.security.krb5.internal.crypto;
 	*
 	* @modified by Yanni Zhang, Feb 24 00.
 	*/
-	@:overload override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function encrypt(data : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Decrypts the data using DES in CBC mode.
@@ -66,7 +66,7 @@ package sun.security.krb5.internal.crypto;
 	*
 	* @written by Yanni Zhang, Dec 6 99.
 	*/
-	@:overload override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Decrypts the data using DES in CBC mode.
@@ -76,9 +76,9 @@ package sun.security.krb5.internal.crypto;
 	*
 	* @modified by Yanni Zhang, Dec 6 99.
 	*/
-	@:overload override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function decrypt(cipher : java.NativeArray<java.StdTypes.Int8>, key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, usage : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload private function isChecksumValid(data : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected private function isChecksumValid(data : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }

@@ -30,21 +30,21 @@ package com.sun.tools.hat.internal.server;
 */
 extern class FinalizerSummaryQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
 @:native('com$sun$tools$hat$internal$server$FinalizerSummaryQuery$HistogramElement') @:internal extern class FinalizerSummaryQuery_HistogramElement
 {
-	@:overload public function new(clazz : com.sun.tools.hat.internal.model.JavaClass) : Void;
+	@:overload @:public public function new(clazz : com.sun.tools.hat.internal.model.JavaClass) : Void;
 	
-	@:overload public function updateCount() : Void;
+	@:overload @:public public function updateCount() : Void;
 	
-	@:overload public function compare(other : com.sun.tools.hat.internal.server.FinalizerSummaryQuery.FinalizerSummaryQuery_HistogramElement) : Int;
+	@:overload @:public public function compare(other : com.sun.tools.hat.internal.server.FinalizerSummaryQuery.FinalizerSummaryQuery_HistogramElement) : Int;
 	
-	@:overload public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
+	@:overload @:public public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
 	
-	@:overload public function getCount() : haxe.Int64;
+	@:overload @:public public function getCount() : haxe.Int64;
 	
 	
 }

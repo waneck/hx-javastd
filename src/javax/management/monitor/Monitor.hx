@@ -40,19 +40,19 @@ package javax.management.monitor;
 	* automatically incremented when their size becomes greater than
 	* their capacity.
 	*/
-	private static var capacityIncrement(default, null) : Int;
+	@:protected @:final @:static private static var capacityIncrement(default, null) : Int;
 	
 	/**
 	* The number of valid components in the vector of observed objects.
 	*
 	*/
-	private var elementCount : Int;
+	@:protected private var elementCount : Int;
 	
 	/**
 	* Monitor errors that have already been notified.
 	* @deprecated equivalent to {@link #alreadyNotifieds}[0].
 	*/
-	private var alreadyNotified : Int;
+	@:protected private var alreadyNotified : Int;
 	
 	/**
 	* <p>Selected monitor errors that have already been notified.</p>
@@ -64,7 +64,7 @@ package javax.management.monitor;
 	* being monitored.</p>
 	*
 	*/
-	private var alreadyNotifieds : java.NativeArray<Int>;
+	@:protected private var alreadyNotifieds : java.NativeArray<Int>;
 	
 	/**
 	* Reference to the MBean server.  This reference is null when the
@@ -73,13 +73,13 @@ package javax.management.monitor;
 	* in the MBean server.
 	* @see #preRegister(MBeanServer server, ObjectName name)
 	*/
-	private var server : javax.management.MBeanServer;
+	@:protected private var server : javax.management.MBeanServer;
 	
 	/**
 	* This flag is used to reset the {@link #alreadyNotifieds
 	* alreadyNotifieds} monitor attribute.
 	*/
-	private static var RESET_FLAGS_ALREADY_NOTIFIED(default, null) : Int;
+	@:protected @:static @:final private static var RESET_FLAGS_ALREADY_NOTIFIED(default, null) : Int;
 	
 	/**
 	* Flag denoting that a notification has occurred after changing
@@ -87,7 +87,7 @@ package javax.management.monitor;
 	* observed object is registered in the MBean server at the time
 	* of the first notification.
 	*/
-	private static var OBSERVED_OBJECT_ERROR_NOTIFIED(default, null) : Int;
+	@:protected @:static @:final private static var OBSERVED_OBJECT_ERROR_NOTIFIED(default, null) : Int;
 	
 	/**
 	* Flag denoting that a notification has occurred after changing
@@ -95,7 +95,7 @@ package javax.management.monitor;
 	* new observed attribute belongs to the observed object at the
 	* time of the first notification.
 	*/
-	private static var OBSERVED_ATTRIBUTE_ERROR_NOTIFIED(default, null) : Int;
+	@:protected @:static @:final private static var OBSERVED_ATTRIBUTE_ERROR_NOTIFIED(default, null) : Int;
 	
 	/**
 	* Flag denoting that a notification has occurred after changing
@@ -104,7 +104,7 @@ package javax.management.monitor;
 	* (depending on the monitor in use) at the time of the first
 	* notification.
 	*/
-	private static var OBSERVED_ATTRIBUTE_TYPE_ERROR_NOTIFIED(default, null) : Int;
+	@:protected @:static @:final private static var OBSERVED_ATTRIBUTE_TYPE_ERROR_NOTIFIED(default, null) : Int;
 	
 	/**
 	* Flag denoting that a notification has occurred after changing
@@ -113,14 +113,14 @@ package javax.management.monitor;
 	* when trying to get the value of the observed attribute at the
 	* time of the first notification.
 	*/
-	private static var RUNTIME_ERROR_NOTIFIED(default, null) : Int;
+	@:protected @:static @:final private static var RUNTIME_ERROR_NOTIFIED(default, null) : Int;
 	
 	/**
 	* This field is retained for compatibility but should not be referenced.
 	*
 	* @deprecated No replacement.
 	*/
-	private var dbgTag : String;
+	@:protected private var dbgTag : String;
 	
 	/**
 	* Allows the monitor MBean to perform any operations it needs
@@ -136,7 +136,7 @@ package javax.management.monitor;
 	*
 	* @exception Exception
 	*/
-	@:overload public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
+	@:overload @:public public function preRegister(server : javax.management.MBeanServer, name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Allows the monitor MBean to perform any operations needed after
@@ -145,7 +145,7 @@ package javax.management.monitor;
 	* <P>
 	* Not used in this context.
 	*/
-	@:overload public function postRegister(registrationDone : Null<Bool>) : Void;
+	@:overload @:public public function postRegister(registrationDone : Null<Bool>) : Void;
 	
 	/**
 	* Allows the monitor MBean to perform any operations it needs
@@ -155,7 +155,7 @@ package javax.management.monitor;
 	*
 	* @exception Exception
 	*/
-	@:overload public function preDeregister() : Void;
+	@:overload @:public public function preDeregister() : Void;
 	
 	/**
 	* Allows the monitor MBean to perform any operations needed after
@@ -163,17 +163,17 @@ package javax.management.monitor;
 	* <P>
 	* Not used in this context.
 	*/
-	@:overload public function postDeregister() : Void;
+	@:overload @:public public function postDeregister() : Void;
 	
 	/**
 	* Starts the monitor.
 	*/
-	@:overload @:abstract public function start() : Void;
+	@:overload @:public @:abstract public function start() : Void;
 	
 	/**
 	* Stops the monitor.
 	*/
-	@:overload @:abstract public function stop() : Void;
+	@:overload @:public @:abstract public function stop() : Void;
 	
 	/**
 	* Returns the object name of the first object in the set of observed
@@ -185,7 +185,7 @@ package javax.management.monitor;
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #getObservedObjects}
 	*/
-	@:overload @:synchronized public function getObservedObject() : javax.management.ObjectName;
+	@:overload @:public @:synchronized public function getObservedObject() : javax.management.ObjectName;
 	
 	/**
 	* Removes all objects from the set of observed objects, and then adds the
@@ -199,7 +199,7 @@ package javax.management.monitor;
 	*
 	* @deprecated As of JMX 1.2, replaced by {@link #addObservedObject}
 	*/
-	@:overload @:synchronized public function setObservedObject(object : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function setObservedObject(object : javax.management.ObjectName) : Void;
 	
 	/**
 	* Adds the specified object in the set of observed MBeans, if this object
@@ -209,7 +209,7 @@ package javax.management.monitor;
 	* @exception IllegalArgumentException The specified object is null.
 	*
 	*/
-	@:overload @:synchronized public function addObservedObject(object : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function addObservedObject(object : javax.management.ObjectName) : Void;
 	
 	/**
 	* Removes the specified object from the set of observed MBeans.
@@ -217,7 +217,7 @@ package javax.management.monitor;
 	* @param object The object to remove.
 	*
 	*/
-	@:overload @:synchronized public function removeObservedObject(object : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function removeObservedObject(object : javax.management.ObjectName) : Void;
 	
 	/**
 	* Tests whether the specified object is in the set of observed MBeans.
@@ -227,7 +227,7 @@ package javax.management.monitor;
 	* <CODE>false</CODE> otherwise.
 	*
 	*/
-	@:overload @:synchronized public function containsObservedObject(object : javax.management.ObjectName) : Bool;
+	@:overload @:public @:synchronized public function containsObservedObject(object : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns an array containing the objects being observed.
@@ -235,7 +235,7 @@ package javax.management.monitor;
 	* @return The objects being observed.
 	*
 	*/
-	@:overload @:synchronized public function getObservedObjects() : java.NativeArray<javax.management.ObjectName>;
+	@:overload @:public @:synchronized public function getObservedObjects() : java.NativeArray<javax.management.ObjectName>;
 	
 	/**
 	* Gets the attribute being observed.
@@ -245,7 +245,7 @@ package javax.management.monitor;
 	*
 	* @see #setObservedAttribute
 	*/
-	@:overload @:synchronized public function getObservedAttribute() : String;
+	@:overload @:public @:synchronized public function getObservedAttribute() : String;
 	
 	/**
 	* Sets the attribute to observe.
@@ -257,7 +257,7 @@ package javax.management.monitor;
 	*
 	* @see #getObservedAttribute
 	*/
-	@:overload public function setObservedAttribute(attribute : String) : Void;
+	@:overload @:public public function setObservedAttribute(attribute : String) : Void;
 	
 	/**
 	* Gets the granularity period (in milliseconds).
@@ -267,7 +267,7 @@ package javax.management.monitor;
 	*
 	* @see #setGranularityPeriod
 	*/
-	@:overload @:synchronized public function getGranularityPeriod() : haxe.Int64;
+	@:overload @:public @:synchronized public function getGranularityPeriod() : haxe.Int64;
 	
 	/**
 	* Sets the granularity period (in milliseconds).
@@ -279,12 +279,12 @@ package javax.management.monitor;
 	*
 	* @see #getGranularityPeriod
 	*/
-	@:overload @:synchronized public function setGranularityPeriod(period : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setGranularityPeriod(period : haxe.Int64) : Void;
 	
 	/* This method must be synchronized so that the monitoring thread will
 	correctly see modifications to the isActive variable. See the MonitorTask
 	action executed by the Scheduled Executor Service. */
-	@:overload @:synchronized public function isActive() : Bool;
+	@:overload @:public @:synchronized public function isActive() : Bool;
 	
 	
 }
@@ -295,21 +295,21 @@ package javax.management.monitor;
 */
 @:native('javax$management$monitor$Monitor$ObservedObject') @:internal extern class Monitor_ObservedObject
 {
-	@:overload public function new(observedObject : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(observedObject : javax.management.ObjectName) : Void;
 	
-	@:overload @:final public function getObservedObject() : javax.management.ObjectName;
+	@:overload @:public @:final public function getObservedObject() : javax.management.ObjectName;
 	
-	@:overload @:final @:synchronized public function getAlreadyNotified() : Int;
+	@:overload @:public @:final @:synchronized public function getAlreadyNotified() : Int;
 	
-	@:overload @:final @:synchronized public function setAlreadyNotified(alreadyNotified : Int) : Void;
+	@:overload @:public @:final @:synchronized public function setAlreadyNotified(alreadyNotified : Int) : Void;
 	
-	@:overload @:final @:synchronized public function getDerivedGauge() : Dynamic;
+	@:overload @:public @:final @:synchronized public function getDerivedGauge() : Dynamic;
 	
-	@:overload @:final @:synchronized public function setDerivedGauge(derivedGauge : Dynamic) : Void;
+	@:overload @:public @:final @:synchronized public function setDerivedGauge(derivedGauge : Dynamic) : Void;
 	
-	@:overload @:final @:synchronized public function getDerivedGaugeTimeStamp() : haxe.Int64;
+	@:overload @:public @:final @:synchronized public function getDerivedGaugeTimeStamp() : haxe.Int64;
 	
-	@:overload @:final @:synchronized public function setDerivedGaugeTimeStamp(derivedGaugeTimeStamp : haxe.Int64) : Void;
+	@:overload @:public @:final @:synchronized public function setDerivedGaugeTimeStamp(derivedGaugeTimeStamp : haxe.Int64) : Void;
 	
 	
 }
@@ -341,21 +341,21 @@ package javax.management.monitor;
 	*  CONSTRUCTORS
 	* ------------------------------------------
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* ------------------------------------------
 	*  GETTERS/SETTERS
 	* ------------------------------------------
 	*/
-	@:overload public function setMonitorTask(task : javax.management.monitor.Monitor.Monitor_MonitorTask) : Void;
+	@:overload @:public public function setMonitorTask(task : javax.management.monitor.Monitor.Monitor_MonitorTask) : Void;
 	
 	/*
 	* ------------------------------------------
 	*  PUBLIC METHODS
 	* ------------------------------------------
 	*/
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -372,16 +372,16 @@ package javax.management.monitor;
 	*  CONSTRUCTORS
 	* ------------------------------------------
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* ------------------------------------------
 	*  PUBLIC METHODS
 	* ------------------------------------------
 	*/
-	@:overload public function submit() : java.util.concurrent.Future<Dynamic>;
+	@:overload @:public public function submit() : java.util.concurrent.Future<Dynamic>;
 	
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }
@@ -400,13 +400,13 @@ package javax.management.monitor;
 */
 @:native('javax$management$monitor$Monitor$DaemonThreadFactory') @:internal extern class Monitor_DaemonThreadFactory implements java.util.concurrent.ThreadFactory
 {
-	@:overload public function new(poolName : String) : Void;
+	@:overload @:public public function new(poolName : String) : Void;
 	
-	@:overload public function new(poolName : String, threadGroup : java.lang.ThreadGroup) : Void;
+	@:overload @:public public function new(poolName : String, threadGroup : java.lang.ThreadGroup) : Void;
 	
-	@:overload public function getThreadGroup() : java.lang.ThreadGroup;
+	@:overload @:public public function getThreadGroup() : java.lang.ThreadGroup;
 	
-	@:overload public function newThread(r : java.lang.Runnable) : java.lang.Thread;
+	@:overload @:public public function newThread(r : java.lang.Runnable) : java.lang.Thread;
 	
 	
 }

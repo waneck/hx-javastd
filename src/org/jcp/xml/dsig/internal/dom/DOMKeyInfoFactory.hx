@@ -32,35 +32,35 @@ extern class DOMKeyInfoFactory extends javax.xml.crypto.dsig.keyinfo.KeyInfoFact
 	*
 	* @author Sean Mullan
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function newKeyInfo(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public override public function newKeyInfo(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
-	@:overload public function newKeyInfo(content : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public override public function newKeyInfo(content : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
-	@:overload public function newKeyName(name : String) : javax.xml.crypto.dsig.keyinfo.KeyName;
+	@:overload @:public override public function newKeyName(name : String) : javax.xml.crypto.dsig.keyinfo.KeyName;
 	
-	@:overload public function newKeyValue(key : java.security.PublicKey) : javax.xml.crypto.dsig.keyinfo.KeyValue;
+	@:overload @:public override public function newKeyValue(key : java.security.PublicKey) : javax.xml.crypto.dsig.keyinfo.KeyValue;
 	
-	@:overload public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload @:public override public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
-	@:overload public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload @:public override public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
-	@:overload public function newPGPData(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload @:public override public function newPGPData(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
-	@:overload public function newRetrievalMethod(uri : String) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+	@:overload @:public override public function newRetrievalMethod(uri : String) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 	
-	@:overload public function newRetrievalMethod(uri : String, type : String, transforms : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+	@:overload @:public override public function newRetrievalMethod(uri : String, type : String, transforms : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 	
-	@:overload public function newX509Data(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.X509Data;
+	@:overload @:public override public function newX509Data(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.X509Data;
 	
-	@:overload public function newX509IssuerSerial(issuerName : String, serialNumber : java.math.BigInteger) : javax.xml.crypto.dsig.keyinfo.X509IssuerSerial;
+	@:overload @:public override public function newX509IssuerSerial(issuerName : String, serialNumber : java.math.BigInteger) : javax.xml.crypto.dsig.keyinfo.X509IssuerSerial;
 	
-	@:overload public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public override public function isFeatureSupported(feature : String) : Bool;
 	
-	@:overload public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
+	@:overload @:public override public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
 	
-	@:overload public function unmarshalKeyInfo(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload @:public override public function unmarshalKeyInfo(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
 	
 }

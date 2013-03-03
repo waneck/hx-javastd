@@ -76,7 +76,7 @@ extern class ServerRequest
 	* @return     the name of the operation to be invoked
 	* @deprecated use operation()
 	*/
-	@:overload public function op_name() : String;
+	@:overload @:public public function op_name() : String;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception.
@@ -93,7 +93,7 @@ extern class ServerRequest
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code>
 	*      package comments for unimplemented features</a>
 	*/
-	@:overload public function operation() : String;
+	@:overload @:public public function operation() : String;
 	
 	/**
 	* Specifies method parameter types and retrieves "in" and "inout"
@@ -125,7 +125,7 @@ extern class ServerRequest
 	*                          form of an <code>NVList</code> object
 	* @deprecated use the method <code>arguments</code>
 	*/
-	@:overload public function params(params : org.omg.CORBA.NVList) : Void;
+	@:overload @:public public function params(params : org.omg.CORBA.NVList) : Void;
 	
 	/**
 	* Specifies method parameter types and retrieves "in" and "inout"
@@ -154,7 +154,7 @@ extern class ServerRequest
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code>
 	*      package comments for unimplemented features</a>
 	*/
-	@:overload public function arguments(args : org.omg.CORBA.NVList) : Void;
+	@:overload @:public public function arguments(args : org.omg.CORBA.NVList) : Void;
 	
 	/**
 	* Specifies any return value for the call.
@@ -182,7 +182,7 @@ extern class ServerRequest
 	* @param any an <code>Any</code> object containing the return value to be set
 	* @deprecated use the method <code>set_result</code>
 	*/
-	@:overload public function result(any : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function result(any : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception.
@@ -208,7 +208,7 @@ extern class ServerRequest
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code>
 	*      package comments for unimplemented features</a>
 	*/
-	@:overload public function set_result(any : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function set_result(any : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* The DIR may call set_exception at any time to return an exception to the
@@ -224,7 +224,7 @@ extern class ServerRequest
 	* @param any       the <code>Any</code> object containing the exception
 	* @deprecated use set_exception()
 	*/
-	@:overload public function except(any : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function except(any : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Throws an <code>org.omg.CORBA.NO_IMPLEMENT</code> exception.
@@ -251,7 +251,7 @@ extern class ServerRequest
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code>
 	*      package comments for unimplemented features</a>
 	*/
-	@:overload public function set_exception(any : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function set_exception(any : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Returns the context information specified in IDL for the operation
@@ -273,7 +273,7 @@ extern class ServerRequest
 	*                          after calling <code>set_result</code> or
 	*                          <code>set_exception</code>
 	*/
-	@:overload @:abstract public function ctx() : org.omg.CORBA.Context;
+	@:overload @:public @:abstract public function ctx() : org.omg.CORBA.Context;
 	
 	
 }

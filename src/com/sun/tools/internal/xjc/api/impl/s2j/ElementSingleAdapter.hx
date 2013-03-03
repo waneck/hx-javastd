@@ -30,21 +30,21 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(core : com.sun.tools.internal.xjc.outline.FieldOutline, ei : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
+	@:overload @:public public function new(core : com.sun.tools.internal.xjc.outline.FieldOutline, ei : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
 	
-	@:overload public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function getRawType() : com.sun.codemodel.internal.JType;
 	
-	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload @:public override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$api$impl$s2j$ElementSingleAdapter$FieldAccessorImpl') @:internal extern class ElementSingleAdapter_FieldAccessorImpl extends com.sun.tools.internal.xjc.api.impl.s2j.ElementAdapter.ElementAdapter_FieldAccessorImpl
 {
-	@:overload public function new(target : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public override public function new(target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public override public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
-	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public override public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	
 }

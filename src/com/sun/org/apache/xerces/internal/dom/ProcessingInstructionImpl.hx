@@ -20,21 +20,21 @@ package com.sun.org.apache.xerces.internal.dom;
 */
 extern class ProcessingInstructionImpl extends com.sun.org.apache.xerces.internal.dom.CharacterDataImpl implements org.w3c.dom.ProcessingInstruction
 {
-	private var target : String;
+	@:protected private var target : String;
 	
 	/** Factory constructor. */
-	@:overload public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, target : String, data : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, target : String, data : String) : Void;
 	
 	/**
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public override public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the target
 	*/
-	@:overload override public function getNodeName() : String;
+	@:overload @:public override public function getNodeName() : String;
 	
 	/**
 	* A PI's "target" states what processor channel the PI's data
@@ -47,7 +47,7 @@ extern class ProcessingInstructionImpl extends com.sun.org.apache.xerces.interna
 	* <p>
 	* Note that getNodeName is aliased to getTarget.
 	*/
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
 	/**
 	* A PI's data content tells the processor what we actually want it
@@ -61,7 +61,7 @@ extern class ProcessingInstructionImpl extends com.sun.org.apache.xerces.interna
 	* <p>
 	* Note that getNodeValue is aliased to getData
 	*/
-	@:overload override public function getData() : String;
+	@:overload @:public override public function getData() : String;
 	
 	/**
 	* Change the data content of this PI.
@@ -69,7 +69,7 @@ extern class ProcessingInstructionImpl extends com.sun.org.apache.xerces.interna
 	* @see #getData().
 	* @throws DOMException(NO_MODIFICATION_ALLOWED_ERR) if node is read-only.
 	*/
-	@:overload override public function setData(data : String) : Void;
+	@:overload @:public override public function setData(data : String) : Void;
 	
 	/**
 	* Returns the absolute base URI of this node or null if the implementation
@@ -79,7 +79,7 @@ extern class ProcessingInstructionImpl extends com.sun.org.apache.xerces.interna
 	* @return The absolute base URI of this node or null.
 	* @since DOM Level 3
 	*/
-	@:overload override public function getBaseURI() : String;
+	@:overload @:public override public function getBaseURI() : String;
 	
 	
 }

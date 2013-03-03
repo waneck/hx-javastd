@@ -27,27 +27,27 @@ package sun.nio.cs;
 */
 extern class StreamEncoder extends java.io.Writer
 {
-	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, charsetName : String) : sun.nio.cs.StreamEncoder;
+	@:overload @:public @:static public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, charsetName : String) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, cs : java.nio.charset.Charset) : sun.nio.cs.StreamEncoder;
+	@:overload @:public @:static public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, cs : java.nio.charset.Charset) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, enc : java.nio.charset.CharsetEncoder) : sun.nio.cs.StreamEncoder;
+	@:overload @:public @:static public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, enc : java.nio.charset.CharsetEncoder) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public static function forEncoder(ch : java.nio.channels.WritableByteChannel, enc : java.nio.charset.CharsetEncoder, minBufferCap : Int) : sun.nio.cs.StreamEncoder;
+	@:overload @:public @:static public static function forEncoder(ch : java.nio.channels.WritableByteChannel, enc : java.nio.charset.CharsetEncoder, minBufferCap : Int) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload public function flushBuffer() : Void;
+	@:overload @:public public function flushBuffer() : Void;
 	
-	@:overload override public function write(c : Int) : Void;
+	@:overload @:public override public function write(c : Int) : Void;
 	
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(str : String, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(str : String, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload @:public override public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

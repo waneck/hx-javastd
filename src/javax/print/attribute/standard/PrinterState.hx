@@ -28,23 +28,23 @@ extern class PrinterState extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* The printer state is unknown.
 	*/
-	public static var UNKNOWN(default, null) : javax.print.attribute.standard.PrinterState;
+	@:public @:static @:final public static var UNKNOWN(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Indicates that new jobs can start processing without waiting.
 	*/
-	public static var IDLE(default, null) : javax.print.attribute.standard.PrinterState;
+	@:public @:static @:final public static var IDLE(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Indicates that jobs are processing;
 	* new jobs will wait before processing.
 	*/
-	public static var PROCESSING(default, null) : javax.print.attribute.standard.PrinterState;
+	@:public @:static @:final public static var PROCESSING(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Indicates that no jobs can be processed and intervention is required.
 	*/
-	public static var STOPPED(default, null) : javax.print.attribute.standard.PrinterState;
+	@:public @:static @:final public static var STOPPED(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Construct a new printer state enumeration value with the given integer
@@ -52,17 +52,17 @@ extern class PrinterState extends javax.print.attribute.EnumSyntax implements ja
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class PrinterState.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PrinterState.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -73,7 +73,7 @@ extern class PrinterState extends javax.print.attribute.EnumSyntax implements ja
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -83,7 +83,7 @@ extern class PrinterState extends javax.print.attribute.EnumSyntax implements ja
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

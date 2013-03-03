@@ -36,76 +36,76 @@ extern class Kinds
 {
 	/** The empty set of kinds.
 	*/
-	public static var NIL(default, null) : Int;
+	@:public @:final @:static public static var NIL(default, null) : Int;
 	
 	/** The kind of package symbols.
 	*/
-	public static var PCK(default, null) : Int;
+	@:public @:final @:static public static var PCK(default, null) : Int;
 	
 	/** The kind of type symbols (classes, interfaces and type variables).
 	*/
-	public static var TYP(default, null) : Int;
+	@:public @:final @:static public static var TYP(default, null) : Int;
 	
 	/** The kind of variable symbols.
 	*/
-	public static var VAR(default, null) : Int;
+	@:public @:final @:static public static var VAR(default, null) : Int;
 	
 	/** The kind of values (variables or non-variable expressions), includes VAR.
 	*/
-	public static var VAL(default, null) : Int;
+	@:public @:final @:static public static var VAL(default, null) : Int;
 	
 	/** The kind of methods.
 	*/
-	public static var MTH(default, null) : Int;
+	@:public @:final @:static public static var MTH(default, null) : Int;
 	
 	/** The error kind, which includes all other kinds.
 	*/
-	public static var ERR(default, null) : Int;
+	@:public @:final @:static public static var ERR(default, null) : Int;
 	
 	/** The set of all kinds.
 	*/
-	public static var AllKinds(default, null) : Int;
+	@:public @:final @:static public static var AllKinds(default, null) : Int;
 	
 	/** Kinds for erroneous symbols that complement the above
 	*/
-	public static var ERRONEOUS(default, null) : Int;
+	@:public @:static @:final public static var ERRONEOUS(default, null) : Int;
 	
-	public static var AMBIGUOUS(default, null) : Int;
+	@:public @:static @:final public static var AMBIGUOUS(default, null) : Int;
 	
-	public static var HIDDEN(default, null) : Int;
+	@:public @:static @:final public static var HIDDEN(default, null) : Int;
 	
-	public static var STATICERR(default, null) : Int;
+	@:public @:static @:final public static var STATICERR(default, null) : Int;
 	
-	public static var ABSENT_VAR(default, null) : Int;
+	@:public @:static @:final public static var ABSENT_VAR(default, null) : Int;
 	
-	public static var WRONG_MTHS(default, null) : Int;
+	@:public @:static @:final public static var WRONG_MTHS(default, null) : Int;
 	
-	public static var WRONG_MTH(default, null) : Int;
+	@:public @:static @:final public static var WRONG_MTH(default, null) : Int;
 	
-	public static var ABSENT_MTH(default, null) : Int;
+	@:public @:static @:final public static var ABSENT_MTH(default, null) : Int;
 	
-	public static var ABSENT_TYP(default, null) : Int;
+	@:public @:static @:final public static var ABSENT_TYP(default, null) : Int;
 	
 	/** A KindName representing a given symbol kind
 	*/
-	@:overload public static function kindName(kind : Int) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
+	@:overload @:public @:static public static function kindName(kind : Int) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	/** A KindName representing a given symbol
 	*/
-	@:overload public static function kindName(sym : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
+	@:overload @:public @:static public static function kindName(sym : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	/** A set of KindName(s) representing a set of symbol's kinds.
 	*/
-	@:overload public static function kindNames(kind : Int) : java.util.EnumSet<com.sun.tools.javac.code.Kinds.Kinds_KindName>;
+	@:overload @:public @:static public static function kindNames(kind : Int) : java.util.EnumSet<com.sun.tools.javac.code.Kinds.Kinds_KindName>;
 	
 	/** A KindName representing the kind of a given class/interface type.
 	*/
-	@:overload public static function typeKindName(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
+	@:overload @:public @:static public static function typeKindName(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	/** A KindName representing the kind of a a missing symbol, given an
 	*  error kind.
 	* */
-	@:overload public static function absentKind(kind : Int) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
+	@:overload @:public @:static public static function absentKind(kind : Int) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	
 }

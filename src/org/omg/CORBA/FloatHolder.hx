@@ -29,13 +29,13 @@ extern class FloatHolder implements org.omg.CORBA.portable.Streamable
 	* The <code>float</code> value held by this <code>FloatHolder</code>
 	* object.
 	*/
-	public var value : Single;
+	@:public public var value : Single;
 	
 	/**
 	* Constructs a new <code>FloatHolder</code> object with its
 	* <code>value</code> field initialized to 0.0.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>FloatHolder</code> object for the given
@@ -44,7 +44,7 @@ extern class FloatHolder implements org.omg.CORBA.portable.Streamable
 	*                the <code>value</code> field of the new
 	*                <code>FloatHolder</code> object
 	*/
-	@:overload public function new(initial : Single) : Void;
+	@:overload @:public public function new(initial : Single) : Void;
 	
 	/**
 	* Read a float from an input stream and initialize the value
@@ -52,21 +52,21 @@ extern class FloatHolder implements org.omg.CORBA.portable.Streamable
 	*
 	* @param input the <code>InputStream</code> to read from.
 	*/
-	@:overload public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(input : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Write the float value into an output stream.
 	*
 	* @param output the <code>OutputStream</code> to write into.
 	*/
-	@:overload public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(output : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	/**
 	* Return the <code>TypeCode</code> of this Streamable.
 	*
 	* @return the <code>TypeCode</code> object.
 	*/
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

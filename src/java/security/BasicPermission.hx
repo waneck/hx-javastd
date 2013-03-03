@@ -36,7 +36,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>name</code> is empty.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new BasicPermission object with the specified name.
@@ -49,7 +49,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	* @throws IllegalArgumentException if <code>name</code> is empty.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	/**
 	* Checks if the specified permission is "implied" by
@@ -68,7 +68,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @return true if the passed permission is equal to or
 	* implied by this permission, false otherwise.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two BasicPermission objects for equality.
@@ -79,7 +79,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @return true if <i>obj</i>'s class is the same as this object's class
 	*  and has the same name as this BasicPermission object, false otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
@@ -89,7 +89,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions,
@@ -98,7 +98,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	*
 	* @return the empty string "".
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing BasicPermission
@@ -112,7 +112,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @return a new PermissionCollection object suitable for
 	* storing BasicPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -122,7 +122,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* Create an empty BasicPermissionCollection object.
 	*
 	*/
-	@:overload public function new(clazz : Class<Dynamic>) : Void;
+	@:overload @:public public function new(clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Adds a permission to the BasicPermissions. The key for the hash is
@@ -139,7 +139,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @exception SecurityException - if this BasicPermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -150,7 +150,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	* @return true if "permission" is a proper subset of a permission in
 	* the set, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the BasicPermission objects in the
@@ -158,7 +158,7 @@ extern class BasicPermission extends java.security.Permission implements java.io
 	*
 	* @return an enumeration of all the BasicPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:public override public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

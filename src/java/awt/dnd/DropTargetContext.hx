@@ -31,7 +31,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @return the <code>DropTarget</code> associated with this <code>DropTargetContext</code>
 	*/
-	@:overload public function getDropTarget() : java.awt.dnd.DropTarget;
+	@:overload @:public public function getDropTarget() : java.awt.dnd.DropTarget;
 	
 	/**
 	* This method returns the <code>Component</code> associated with
@@ -39,19 +39,19 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @return the Component associated with this Context
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	/**
 	* Called when associated with the <code>DropTargetContextPeer</code>.
 	* <P>
 	* @param dtcp the <code>DropTargetContextPeer</code>
 	*/
-	@:overload public function addNotify(dtcp : java.awt.dnd.peer.DropTargetContextPeer) : Void;
+	@:overload @:public public function addNotify(dtcp : java.awt.dnd.peer.DropTargetContextPeer) : Void;
 	
 	/**
 	* Called when disassociated with the <code>DropTargetContextPeer</code>.
 	*/
-	@:overload public function removeNotify() : Void;
+	@:overload @:public public function removeNotify() : Void;
 	
 	/**
 	* This method sets the current actions acceptable to
@@ -59,7 +59,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @param actions an <code>int</code> representing the supported action(s)
 	*/
-	@:overload private function setTargetActions(actions : Int) : Void;
+	@:overload @:protected private function setTargetActions(actions : Int) : Void;
 	
 	/**
 	* This method returns an <code>int</code> representing the
@@ -67,7 +67,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @return the current actions acceptable to this <code>DropTarget</code>
 	*/
-	@:overload private function getTargetActions() : Int;
+	@:overload @:protected private function getTargetActions() : Int;
 	
 	/**
 	* This method signals that the drop is completed and
@@ -77,19 +77,19 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @throws InvalidDnDOperationException if a drop is not outstanding/extant
 	*/
-	@:overload public function dropComplete(success : Bool) : Void;
+	@:overload @:public public function dropComplete(success : Bool) : Void;
 	
 	/**
 	* accept the Drag.
 	* <P>
 	* @param dragOperation the supported action(s)
 	*/
-	@:overload private function acceptDrag(dragOperation : Int) : Void;
+	@:overload @:protected private function acceptDrag(dragOperation : Int) : Void;
 	
 	/**
 	* reject the Drag.
 	*/
-	@:overload private function rejectDrag() : Void;
+	@:overload @:protected private function rejectDrag() : Void;
 	
 	/**
 	* called to signal that the drop is acceptable
@@ -98,13 +98,13 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @param dropOperation the supported action(s)
 	*/
-	@:overload private function acceptDrop(dropOperation : Int) : Void;
+	@:overload @:protected private function acceptDrop(dropOperation : Int) : Void;
 	
 	/**
 	* called to signal that the drop is unacceptable.
 	* must be called during DropTargetListener.drop method invocation.
 	*/
-	@:overload private function rejectDrop() : Void;
+	@:overload @:protected private function rejectDrop() : Void;
 	
 	/**
 	* get the available DataFlavors of the
@@ -114,7 +114,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* supported <code>DataFlavor</code>s of the
 	* <code>Transferable</code> operand.
 	*/
-	@:overload private function getCurrentDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:protected private function getCurrentDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* This method returns a the currently available DataFlavors
@@ -124,7 +124,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* @return the currently available
 	* DataFlavors as a <code>java.util.List</code>
 	*/
-	@:overload private function getCurrentDataFlavorsAsList() : java.util.List<java.awt.datatransfer.DataFlavor>;
+	@:overload @:protected private function getCurrentDataFlavorsAsList() : java.util.List<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* This method returns a <code>boolean</code>
@@ -135,7 +135,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @return if the <code>DataFlavor</code> specified is supported
 	*/
-	@:overload private function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:protected private function isDataFlavorSupported(df : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* get the Transferable (proxy) operand of this operation
@@ -144,7 +144,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* <P>
 	* @return the <code>Transferable</code>
 	*/
-	@:overload private function getTransferable() : java.awt.datatransfer.Transferable;
+	@:overload @:protected private function getTransferable() : java.awt.datatransfer.Transferable;
 	
 	/**
 	* Creates a TransferableProxy to proxy for the specified
@@ -155,7 +155,7 @@ extern class DropTargetContext implements java.io.Serializable
 	*        the result of a local drag-n-drop operation.
 	* @return the new <tt>TransferableProxy</tt> instance.
 	*/
-	@:overload private function createTransferableProxy(t : java.awt.datatransfer.Transferable, local : Bool) : java.awt.datatransfer.Transferable;
+	@:overload @:protected private function createTransferableProxy(t : java.awt.datatransfer.Transferable, local : Bool) : java.awt.datatransfer.Transferable;
 	
 	
 }
@@ -178,7 +178,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* @return an array of data flavors in which the data can be
 	*         provided by the encapsulated transferable
 	*/
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* Returns whether or not the specified data flavor is supported by
@@ -187,7 +187,7 @@ extern class DropTargetContext implements java.io.Serializable
 	* @return <code>true</code> if the data flavor is supported,
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns an object which represents the data provided by
@@ -204,19 +204,19 @@ extern class DropTargetContext implements java.io.Serializable
 	* @throws UnsupportedFlavorException if the requested data flavor is
 	*              not supported.
 	*/
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	/**
 	* The encapsulated <code>Transferable</code> object.
 	*/
-	private var transferable : java.awt.datatransfer.Transferable;
+	@:protected private var transferable : java.awt.datatransfer.Transferable;
 	
 	/**
 	* A <code>boolean</code> indicating if the encapsulated
 	* <code>Transferable</code> object represents the result
 	* of local drag-n-drop operation (within the same JVM).
 	*/
-	private var isLocal : Bool;
+	@:protected private var isLocal : Bool;
 	
 	
 }

@@ -29,55 +29,55 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var VERSION(default, null) : String;
+	@:public @:static @:final public static var VERSION(default, null) : String;
 	
-	public static var SERIAL_NUMBER(default, null) : String;
+	@:public @:static @:final public static var SERIAL_NUMBER(default, null) : String;
 	
-	public static var ALGORITHM_ID(default, null) : String;
+	@:public @:static @:final public static var ALGORITHM_ID(default, null) : String;
 	
-	public static var ISSUER(default, null) : String;
+	@:public @:static @:final public static var ISSUER(default, null) : String;
 	
-	public static var VALIDITY(default, null) : String;
+	@:public @:static @:final public static var VALIDITY(default, null) : String;
 	
-	public static var SUBJECT(default, null) : String;
+	@:public @:static @:final public static var SUBJECT(default, null) : String;
 	
-	public static var KEY(default, null) : String;
+	@:public @:static @:final public static var KEY(default, null) : String;
 	
-	public static var ISSUER_ID(default, null) : String;
+	@:public @:static @:final public static var ISSUER_ID(default, null) : String;
 	
-	public static var SUBJECT_ID(default, null) : String;
+	@:public @:static @:final public static var SUBJECT_ID(default, null) : String;
 	
-	public static var EXTENSIONS(default, null) : String;
+	@:public @:static @:final public static var EXTENSIONS(default, null) : String;
 	
-	private var version : sun.security.x509.CertificateVersion;
+	@:protected private var version : sun.security.x509.CertificateVersion;
 	
-	private var serialNum : sun.security.x509.CertificateSerialNumber;
+	@:protected private var serialNum : sun.security.x509.CertificateSerialNumber;
 	
-	private var algId : sun.security.x509.CertificateAlgorithmId;
+	@:protected private var algId : sun.security.x509.CertificateAlgorithmId;
 	
-	private var issuer : sun.security.x509.CertificateIssuerName;
+	@:protected private var issuer : sun.security.x509.CertificateIssuerName;
 	
-	private var interval : sun.security.x509.CertificateValidity;
+	@:protected private var interval : sun.security.x509.CertificateValidity;
 	
-	private var subject : sun.security.x509.CertificateSubjectName;
+	@:protected private var subject : sun.security.x509.CertificateSubjectName;
 	
-	private var pubKey : sun.security.x509.CertificateX509Key;
+	@:protected private var pubKey : sun.security.x509.CertificateX509Key;
 	
-	private var issuerUniqueId : sun.security.x509.CertificateIssuerUniqueIdentity;
+	@:protected private var issuerUniqueId : sun.security.x509.CertificateIssuerUniqueIdentity;
 	
-	private var subjectUniqueId : sun.security.x509.CertificateSubjectUniqueIdentity;
+	@:protected private var subjectUniqueId : sun.security.x509.CertificateSubjectUniqueIdentity;
 	
-	private var extensions : sun.security.x509.CertificateExtensions;
+	@:protected private var extensions : sun.security.x509.CertificateExtensions;
 	
 	/**
 	* Construct an uninitialized X509CertInfo on which <a href="#decode">
 	* decode</a> must later be called (or which may be deserialized).
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Unmarshals a certificate from its encoded form, parsing the
@@ -91,7 +91,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @param cert the encoded bytes, with no trailing data.
 	* @exception CertificateParsingException on parsing errors.
 	*/
-	@:overload public function new(cert : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(cert : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Unmarshal a certificate from its encoded form, parsing a DER value.
@@ -101,7 +101,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @param derVal the der value containing the encoded cert.
 	* @exception CertificateParsingException on parsing errors.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Appends the certificate to an output stream.
@@ -110,25 +110,25 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @exception CertificateException on encoding errors.
 	* @exception IOException on other errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the encoded certificate info.
 	*
 	* @exception CertificateEncodingException on encoding information errors.
 	*/
-	@:overload public function getEncodedInfo() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncodedInfo() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Compares two X509CertInfo objects.  This is false if the
@@ -138,7 +138,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @param other the object being compared with this one
 	* @return true iff the certificates are equivalent
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Compares two certificates, returning false if any data
@@ -147,18 +147,18 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @param other the object being compared with this one
 	* @return true iff the certificates are equivalent
 	*/
-	@:overload public function equals(other : sun.security.x509.X509CertInfo) : Bool;
+	@:overload @:public public function equals(other : sun.security.x509.X509CertInfo) : Bool;
 	
 	/**
 	* Calculates a hash code value for the object.  Objects
 	* which are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns a printable representation of the certificate.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Set the certificate attribute.
@@ -168,7 +168,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @exception CertificateException on invalid attributes.
 	* @exception IOException on other errors.
 	*/
-	@:overload public function set(name : String, val : Dynamic) : Void;
+	@:overload @:public public function set(name : String, val : Dynamic) : Void;
 	
 	/**
 	* Delete the certificate attribute.
@@ -177,7 +177,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @exception CertificateException on invalid attributes.
 	* @exception IOException on other errors.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Get the certificate attribute.
@@ -187,7 +187,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @exception CertificateException on invalid attributes.
 	* @exception IOException on other errors.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	
 }

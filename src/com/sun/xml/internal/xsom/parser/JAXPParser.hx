@@ -25,11 +25,11 @@ package com.sun.xml.internal.xsom.parser;
 */
 extern class JAXPParser implements com.sun.xml.internal.xsom.parser.XMLParser
 {
-	@:overload public function new(factory : javax.xml.parsers.SAXParserFactory) : Void;
+	@:overload @:public public function new(factory : javax.xml.parsers.SAXParserFactory) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource, handler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler, entityResolver : org.xml.sax.EntityResolver) : Void;
 	
 	
 }
@@ -63,9 +63,9 @@ extern class JAXPParser implements com.sun.xml.internal.xsom.parser.XMLParser
 	* to let the application handle entity resolution. Here we just catch
 	* an IOException and add more information.
 	*/
-	@:overload override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	
 }

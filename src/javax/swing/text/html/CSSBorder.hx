@@ -26,9 +26,9 @@ package javax.swing.text.html;
 @:internal extern class CSSBorder extends javax.swing.border.AbstractBorder
 {
 	/* The javax.swing.border.Border methods.  */
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }
@@ -43,7 +43,7 @@ package javax.swing.text.html;
 	* Clip is set by the caller to the exact border shape so it's safe to
 	* simply draw into the shape's bounding rectangle.
 	*/
-	@:overload public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }
@@ -52,7 +52,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$NullPainter') @:internal extern class CSSBorder_NullPainter implements javax.swing.text.html.CSSBorder.CSSBorder_BorderPainter
 {
-	@:overload public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }
@@ -61,7 +61,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$SolidPainter') @:internal extern class CSSBorder_SolidPainter implements javax.swing.text.html.CSSBorder.CSSBorder_BorderPainter
 {
-	@:overload public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }
@@ -71,6 +71,16 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$StrokePainter') @:internal extern class CSSBorder_StrokePainter implements javax.swing.text.html.CSSBorder.CSSBorder_BorderPainter
 {
+	/**
+	* The painter should paint the border as if it were at the top and the
+	* coordinates of the NW corner of the interior area is (0, 0).  The
+	* caller is responsible for the appropriate affine transformations.
+	*
+	* Clip is set by the caller to the exact border shape so it's safe to
+	* simply draw into the shape's bounding rectangle.
+	*/
+	@:overload @:public public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	
 	
 }
 /**
@@ -78,7 +88,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$DoublePainter') @:internal extern class CSSBorder_DoublePainter extends javax.swing.text.html.CSSBorder.CSSBorder_StrokePainter
 {
-	@:overload override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }
@@ -87,7 +97,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$DottedDashedPainter') @:internal extern class CSSBorder_DottedDashedPainter extends javax.swing.text.html.CSSBorder.CSSBorder_StrokePainter
 {
-	@:overload override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }
@@ -103,7 +113,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$GrooveRidgePainter') @:internal extern class CSSBorder_GrooveRidgePainter extends javax.swing.text.html.CSSBorder.CSSBorder_ShadowLightPainter
 {
-	@:overload override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }
@@ -112,7 +122,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$CSSBorder$InsetOutsetPainter') @:internal extern class CSSBorder_InsetOutsetPainter extends javax.swing.text.html.CSSBorder.CSSBorder_ShadowLightPainter
 {
-	@:overload override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
+	@:overload @:public override public function paint(shape : java.awt.Polygon, g : java.awt.Graphics, color : java.awt.Color, side : Int) : Void;
 	
 	
 }

@@ -34,48 +34,48 @@ extern class ServerMain
 	* 4.  Needs to be merged with Harold's changes to support SSL.
 	* 5.  Logs need to be internationalized.
 	*/
-	public static var OK(default, null) : Int;
+	@:public @:final @:static public static var OK(default, null) : Int;
 	
-	public static var MAIN_CLASS_NOT_FOUND(default, null) : Int;
+	@:public @:final @:static public static var MAIN_CLASS_NOT_FOUND(default, null) : Int;
 	
-	public static var NO_MAIN_METHOD(default, null) : Int;
+	@:public @:final @:static public static var NO_MAIN_METHOD(default, null) : Int;
 	
-	public static var APPLICATION_ERROR(default, null) : Int;
+	@:public @:final @:static public static var APPLICATION_ERROR(default, null) : Int;
 	
-	public static var UNKNOWN_ERROR(default, null) : Int;
+	@:public @:final @:static public static var UNKNOWN_ERROR(default, null) : Int;
 	
-	public static var NO_SERVER_ID(default, null) : Int;
+	@:public @:final @:static public static var NO_SERVER_ID(default, null) : Int;
 	
-	public static var REGISTRATION_FAILED(default, null) : Int;
+	@:public @:final @:static public static var REGISTRATION_FAILED(default, null) : Int;
 	
-	@:overload public static function printResult(result : Int) : String;
+	@:overload @:public @:static public static function printResult(result : Int) : String;
 	
 	/** Write information to standard out only.
 	*/
-	@:overload public static function logInformation(msg : String) : Void;
+	@:overload @:public @:static public static function logInformation(msg : String) : Void;
 	
 	/** Write error message to standard out and standard err.
 	*/
-	@:overload public static function logError(msg : String) : Void;
+	@:overload @:public @:static public static function logError(msg : String) : Void;
 	
 	/** Write final message to log(s) and then terminate by calling
 	* System.exit( code ).  If code == OK, write a normal termination
 	* message to standard out, otherwise write an abnormal termination
 	* message to standard out and standard error.
 	*/
-	@:overload public static function logTerminal(msg : String, code : Int) : Void;
+	@:overload @:public @:static public static function logTerminal(msg : String, code : Int) : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
 @:internal extern class ServerCallback extends com.sun.corba.se.spi.activation._ServerImplBase
 {
-	@:overload public function shutdown() : Void;
+	@:overload @:public public function shutdown() : Void;
 	
-	@:overload public function install() : Void;
+	@:overload @:public public function install() : Void;
 	
-	@:overload public function uninstall() : Void;
+	@:overload @:public public function uninstall() : Void;
 	
 	
 }

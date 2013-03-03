@@ -38,7 +38,7 @@ extern interface Connection
 	*
 	* @return <code>true</code> if it should be registered.
 	*/
-	@:overload public function shouldRegisterReadEvent() : Bool;
+	@:overload @:public public function shouldRegisterReadEvent() : Bool;
 	
 	/**
 	* Used to determine if the <code>Connection</code> should register
@@ -53,20 +53,20 @@ extern interface Connection
 	*
 	* @return <code>true</code> if it should be registered.
 	*/
-	@:overload public function shouldRegisterServerReadEvent() : Bool;
+	@:overload @:public public function shouldRegisterServerReadEvent() : Bool;
 	
 	/**
 	* Called to read incoming messages.
 	*
 	* @return <code>true</code> if the thread calling read can be released.
 	*/
-	@:overload public function read() : Bool;
+	@:overload @:public public function read() : Bool;
 	
 	/**
 	* Close the <code>Connection</code>.
 	*
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Get the
@@ -76,7 +76,7 @@ extern interface Connection
 	* @return
 	* {@link com.sun.corba.se.pept.transport.Acceptor Acceptor}
 	*/
-	@:overload public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
 	/**
 	* Get the
@@ -86,7 +86,7 @@ extern interface Connection
 	* @return
 	* {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
 	*/
-	@:overload public function getContactInfo() : com.sun.corba.se.pept.transport.ContactInfo;
+	@:overload @:public public function getContactInfo() : com.sun.corba.se.pept.transport.ContactInfo;
 	
 	/**
 	* Get the
@@ -96,7 +96,7 @@ extern interface Connection
 	* @return
 	* {@link com.sun.corba.se.pept.transport.EventHandler EventHandler}
 	*/
-	@:overload public function getEventHandler() : com.sun.corba.se.pept.transport.EventHandler;
+	@:overload @:public public function getEventHandler() : com.sun.corba.se.pept.transport.EventHandler;
 	
 	/**
 	* Indicates whether a
@@ -110,7 +110,7 @@ extern interface Connection
 	* {@link com.sun.corba.se.pept.transport.Acceptor Acceptor}
 	* created the <code>Connection</code>.
 	*/
-	@:overload public function isServer() : Bool;
+	@:overload @:public public function isServer() : Bool;
 	
 	/**
 	* Indicates if the <code>Connection</code> is in the process of
@@ -118,7 +118,7 @@ extern interface Connection
 	*
 	* @return <code>true</code> if the <code>Connection</code> is busy.
 	*/
-	@:overload public function isBusy() : Bool;
+	@:overload @:public public function isBusy() : Bool;
 	
 	/**
 	* Timestamps are used for connection management, in particular, for
@@ -126,7 +126,7 @@ extern interface Connection
 	*
 	* @return the "time" the <code>Connection</code> was last used.
 	*/
-	@:overload public function getTimeStamp() : haxe.Int64;
+	@:overload @:public public function getTimeStamp() : haxe.Int64;
 	
 	/**
 	* Timestamps are used for connection management, in particular, for
@@ -134,14 +134,14 @@ extern interface Connection
 	*
 	* @param time - the "time" the <code>Connection</code> was last used.
 	*/
-	@:overload public function setTimeStamp(time : haxe.Int64) : Void;
+	@:overload @:public public function setTimeStamp(time : haxe.Int64) : Void;
 	
 	/**
 	* The "state" of the <code>Connection</code>.
 	*
 	* param state
 	*/
-	@:overload public function setState(state : String) : Void;
+	@:overload @:public public function setState(state : String) : Void;
 	
 	/**
 	* Grab a write lock on the <code>Connection</code>.
@@ -152,12 +152,12 @@ extern interface Connection
 	* {@link #writeUnlock}
 	* when it is done.
 	*/
-	@:overload public function writeLock() : Void;
+	@:overload @:public public function writeLock() : Void;
 	
 	/**
 	* Release a write lock on the <code>Connection</code>.
 	*/
-	@:overload public function writeUnlock() : Void;
+	@:overload @:public public function writeUnlock() : Void;
 	
 	/*
 	* Send the data encoded in
@@ -166,7 +166,7 @@ extern interface Connection
 	*
 	* @param outputObject
 	*/
-	@:overload public function sendWithoutLock(outputObject : com.sun.corba.se.pept.encoding.OutputObject) : Void;
+	@:overload @:public public function sendWithoutLock(outputObject : com.sun.corba.se.pept.encoding.OutputObject) : Void;
 	
 	/**
 	* Register an invocation's
@@ -177,7 +177,7 @@ extern interface Connection
 	*
 	* @param messageMediator
 	*/
-	@:overload public function registerWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function registerWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
 	/**
 	* If a message expect's a response then this method is called.
@@ -189,7 +189,7 @@ extern interface Connection
 	*
 	* @param messageMediator
 	*/
-	@:overload public function waitForResponse(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload @:public public function waitForResponse(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.InputObject;
 	
 	/**
 	* Unregister an invocation's
@@ -198,11 +198,11 @@ extern interface Connection
 	*
 	* @param messageMediator
 	*/
-	@:overload public function unregisterWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public public function unregisterWaiter(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.ConnectionCache) : Void;
+	@:overload @:public public function setConnectionCache(connectionCache : com.sun.corba.se.pept.transport.ConnectionCache) : Void;
 	
-	@:overload public function getConnectionCache() : com.sun.corba.se.pept.transport.ConnectionCache;
+	@:overload @:public public function getConnectionCache() : com.sun.corba.se.pept.transport.ConnectionCache;
 	
 	
 }

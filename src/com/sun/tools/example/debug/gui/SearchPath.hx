@@ -32,17 +32,17 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SearchPath
 {
-	@:overload public function new(searchPath : String) : Void;
+	@:overload @:public public function new(searchPath : String) : Void;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function asString() : String;
+	@:overload @:public public function asString() : String;
 	
-	@:overload public function asArray() : java.NativeArray<String>;
+	@:overload @:public public function asArray() : java.NativeArray<String>;
 	
-	@:overload public function resolve(relativeFileName : String) : java.io.File;
+	@:overload @:public public function resolve(relativeFileName : String) : java.io.File;
 	
-	@:overload public function children(relativeDirName : String, filter : java.io.FilenameFilter) : java.NativeArray<String>;
+	@:overload @:public public function children(relativeDirName : String, filter : java.io.FilenameFilter) : java.NativeArray<String>;
 	
 	
 }

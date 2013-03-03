@@ -30,7 +30,7 @@ extern interface RequestInfoExt
 	*         The return value will be null when a local transport
 	*         is used.
 	*/
-	@:overload public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
+	@:overload @:public public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
 	
 	
 }

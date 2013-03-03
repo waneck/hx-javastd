@@ -39,13 +39,13 @@ extern class ValueBoxEntry extends com.sun.tools.corba.se.idl.ValueEntry
 	/**
 	* This is the symbol table entry for valuesBoxes.
 	**/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.ValueBoxEntry) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.ValueBoxEntry) : Void;
 	
-	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
+	@:overload @:protected private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload @:public override public function clone() : Dynamic;
 	
 	/** Invoke the interface generator.
 	@param symbolTable the symbol table is a hash table whose key is a fully
@@ -53,12 +53,12 @@ extern class ValueBoxEntry extends com.sun.tools.corba.se.idl.ValueEntry
 	SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload @:public override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the value generator.
 	@returns an object which implements the ValueGen interface.
 	@see ValueGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload @:public override public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

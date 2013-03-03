@@ -25,23 +25,23 @@ package sun.tools.jconsole;
 */
 extern class PlotterPanel extends sun.tools.jconsole.BorderedComponent
 {
-	@:overload public function new(labelStr : String, unit : sun.tools.jconsole.Plotter.Plotter_Unit, collapsible : Bool) : Void;
+	@:overload @:public public function new(labelStr : String, unit : sun.tools.jconsole.Plotter.Plotter_Unit, collapsible : Bool) : Void;
 	
-	@:overload public function new(labelStr : String) : Void;
+	@:overload @:public public function new(labelStr : String) : Void;
 	
-	@:overload public function getPlotter() : sun.tools.jconsole.Plotter;
+	@:overload @:public public function getPlotter() : sun.tools.jconsole.Plotter;
 	
-	@:overload public function setPlotter(plotter : sun.tools.jconsole.Plotter) : Void;
+	@:overload @:public public function setPlotter(plotter : sun.tools.jconsole.Plotter) : Void;
 	
-	@:overload public function getComponentPopupMenu() : javax.swing.JPopupMenu;
+	@:overload @:public override public function getComponentPopupMenu() : javax.swing.JPopupMenu;
 	
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
 @:native('sun$tools$jconsole$PlotterPanel$AccessiblePlotterPanel') extern class PlotterPanel_AccessiblePlotterPanel extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	
 }

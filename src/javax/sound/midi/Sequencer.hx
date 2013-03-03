@@ -35,7 +35,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @throws InvalidMidiDataException if the sequence contains invalid
 	* MIDI data, or is not supported.
 	*/
-	@:overload public function setSequence(sequence : javax.sound.midi.Sequence) : Void;
+	@:overload @:public public function setSequence(sequence : javax.sound.midi.Sequence) : Void;
 	
 	/**
 	* Sets the current sequence on which the sequencer operates.
@@ -49,7 +49,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @throws InvalidMidiDataException if invalid data is encountered
 	* in the stream, or the stream is not supported.
 	*/
-	@:overload public function setSequence(stream : java.io.InputStream) : Void;
+	@:overload @:public public function setSequence(stream : java.io.InputStream) : Void;
 	
 	/**
 	* Obtains the sequence on which the Sequencer is currently operating.
@@ -59,7 +59,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	*
 	* @return the current sequence, or <code>null</code> if no sequence is currently set.
 	*/
-	@:overload public function getSequence() : javax.sound.midi.Sequence;
+	@:overload @:public public function getSequence() : javax.sound.midi.Sequence;
 	
 	/**
 	* Starts playback of the MIDI data in the currently
@@ -85,7 +85,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setLoopCount
 	* @see #stop
 	*/
-	@:overload public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* Stops recording, if active, and playback of the currently loaded sequence,
@@ -97,7 +97,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #start
 	* @see #isRunning
 	*/
-	@:overload public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Indicates whether the Sequencer is currently running.  The default is <code>false</code>.
@@ -106,7 +106,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* sequence completes or <code>{@link #stop}</code> is called.
 	* @return <code>true</code> if the Sequencer is running, otherwise <code>false</code>
 	*/
-	@:overload public function isRunning() : Bool;
+	@:overload @:public public function isRunning() : Bool;
 	
 	/**
 	* Starts recording and playback of MIDI data.  Data is recorded to all enabled tracks,
@@ -126,7 +126,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #recordEnable
 	* @see #recordDisable
 	*/
-	@:overload public function startRecording() : Void;
+	@:overload @:public public function startRecording() : Void;
 	
 	/**
 	* Stops recording, if active.  Playback of the current sequence continues.
@@ -137,7 +137,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #startRecording
 	* @see #isRecording
 	*/
-	@:overload public function stopRecording() : Void;
+	@:overload @:public public function stopRecording() : Void;
 	
 	/**
 	* Indicates whether the Sequencer is currently recording.  The default is <code>false</code>.
@@ -146,7 +146,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* is called.
 	* @return <code>true</code> if the Sequencer is recording, otherwise <code>false</code>
 	*/
-	@:overload public function isRecording() : Bool;
+	@:overload @:public public function isRecording() : Bool;
 	
 	/**
 	* Prepares the specified track for recording events received on a particular channel.
@@ -157,7 +157,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @throws IllegalArgumentException thrown if the track is not part of the current
 	* sequence.
 	*/
-	@:overload public function recordEnable(track : javax.sound.midi.Track, channel : Int) : Void;
+	@:overload @:public public function recordEnable(track : javax.sound.midi.Track, channel : Int) : Void;
 	
 	/**
 	* Disables recording to the specified track.  Events will no longer be recorded
@@ -165,7 +165,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @param track the track to disable for recording, or <code>null</code> to disable
 	* recording for all tracks.
 	*/
-	@:overload public function recordDisable(track : javax.sound.midi.Track) : Void;
+	@:overload @:public public function recordDisable(track : javax.sound.midi.Track) : Void;
 	
 	/**
 	* Obtains the current tempo, expressed in beats per minute.  The
@@ -178,7 +178,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setTempoInBPM(float)
 	* @see #getTempoInMPQ
 	*/
-	@:overload public function getTempoInBPM() : Single;
+	@:overload @:public public function getTempoInBPM() : Single;
 	
 	/**
 	* Sets the tempo in beats per minute.   The actual tempo of playback
@@ -189,7 +189,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setTempoInMPQ(float)
 	* @see #getTempoInBPM
 	*/
-	@:overload public function setTempoInBPM(bpm : Single) : Void;
+	@:overload @:public public function setTempoInBPM(bpm : Single) : Void;
 	
 	/**
 	* Obtains the current tempo, expressed in microseconds per quarter
@@ -201,7 +201,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setTempoInMPQ(float)
 	* @see #getTempoInBPM
 	*/
-	@:overload public function getTempoInMPQ() : Single;
+	@:overload @:public public function getTempoInMPQ() : Single;
 	
 	/**
 	* Sets the tempo in microseconds per quarter note.  The actual tempo
@@ -213,7 +213,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setTempoInBPM(float)
 	* @see #getTempoInMPQ
 	*/
-	@:overload public function setTempoInMPQ(mpq : Single) : Void;
+	@:overload @:public public function setTempoInMPQ(mpq : Single) : Void;
 	
 	/**
 	* Scales the sequencer's actual playback tempo by the factor provided.
@@ -230,7 +230,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @param factor the requested tempo scalar
 	* @see #getTempoFactor
 	*/
-	@:overload public function setTempoFactor(factor : Single) : Void;
+	@:overload @:public public function setTempoFactor(factor : Single) : Void;
 	
 	/**
 	* Returns the current tempo factor for the sequencer.  The default is
@@ -239,14 +239,14 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @return tempo factor.
 	* @see #setTempoFactor(float)
 	*/
-	@:overload public function getTempoFactor() : Single;
+	@:overload @:public public function getTempoFactor() : Single;
 	
 	/**
 	* Obtains the length of the current sequence, expressed in MIDI ticks,
 	* or 0 if no sequence is set.
 	* @return length of the sequence in ticks
 	*/
-	@:overload public function getTickLength() : haxe.Int64;
+	@:overload @:public public function getTickLength() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the sequence, expressed in MIDI
@@ -257,21 +257,21 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @return current tick
 	* @see #setTickPosition
 	*/
-	@:overload public function getTickPosition() : haxe.Int64;
+	@:overload @:public public function getTickPosition() : haxe.Int64;
 	
 	/**
 	* Sets the current sequencer position in MIDI ticks
 	* @param tick the desired tick position
 	* @see #getTickPosition
 	*/
-	@:overload public function setTickPosition(tick : haxe.Int64) : Void;
+	@:overload @:public public function setTickPosition(tick : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the length of the current sequence, expressed in microseconds,
 	* or 0 if no sequence is set.
 	* @return length of the sequence in microseconds.
 	*/
-	@:overload public function getMicrosecondLength() : haxe.Int64;
+	@:overload @:public public function getMicrosecondLength() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the sequence, expressed in
@@ -279,14 +279,14 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @return the current position in microseconds
 	* @see #setMicrosecondPosition
 	*/
-	@:overload public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Sets the current position in the sequence, expressed in microseconds
 	* @param microseconds desired position in microseconds
 	* @see #getMicrosecondPosition
 	*/
-	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
+	@:overload @:public public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
 	/**
 	* Sets the source of timing information used by this sequencer.
@@ -303,7 +303,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see SyncMode#MIDI_TIME_CODE
 	* @see #getMasterSyncMode
 	*/
-	@:overload public function setMasterSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
+	@:overload @:public public function setMasterSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
 	
 	/**
 	* Obtains the current master synchronization mode for this sequencer.
@@ -313,7 +313,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setMasterSyncMode(Sequencer.SyncMode)
 	* @see #getMasterSyncModes
 	*/
-	@:overload public function getMasterSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:overload @:public public function getMasterSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* Obtains the set of master synchronization modes supported by this
@@ -327,7 +327,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #getMasterSyncMode
 	* @see #setMasterSyncMode(Sequencer.SyncMode)
 	*/
-	@:overload public function getMasterSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
+	@:overload @:public public function getMasterSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
 	
 	/**
 	* Sets the slave synchronization mode for the sequencer.
@@ -343,7 +343,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see SyncMode#NO_SYNC
 	* @see #getSlaveSyncModes
 	*/
-	@:overload public function setSlaveSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
+	@:overload @:public public function setSlaveSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
 	
 	/**
 	* Obtains the current slave synchronization mode for this sequencer.
@@ -353,7 +353,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setSlaveSyncMode(Sequencer.SyncMode)
 	* @see #getSlaveSyncModes
 	*/
-	@:overload public function getSlaveSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:overload @:public public function getSlaveSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* Obtains the set of slave synchronization modes supported by the sequencer.
@@ -364,7 +364,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see SyncMode#MIDI_TIME_CODE
 	* @see SyncMode#NO_SYNC
 	*/
-	@:overload public function getSlaveSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
+	@:overload @:public public function getSlaveSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
 	
 	/**
 	* Sets the mute state for a track.  This method may fail for a number
@@ -379,7 +379,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* track should be muted, <code>false</code> implies the track should be unmuted.
 	* @see #getSequence
 	*/
-	@:overload public function setTrackMute(track : Int, mute : Bool) : Void;
+	@:overload @:public public function setTrackMute(track : Int, mute : Bool) : Void;
 	
 	/**
 	* Obtains the current mute state for a track.  The default mute
@@ -392,7 +392,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* from 0 to the number of tracks in the sequence minus 1.
 	* @return <code>true</code> if muted, <code>false</code> if not.
 	*/
-	@:overload public function getTrackMute(track : Int) : Bool;
+	@:overload @:public public function getTrackMute(track : Int) : Bool;
 	
 	/**
 	* Sets the solo state for a track.  If <code>solo</code> is <code>true</code>
@@ -412,7 +412,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* track should be solo'd, <code>false</code> implies the track should not be solo'd.
 	* @see #getSequence
 	*/
-	@:overload public function setTrackSolo(track : Int, solo : Bool) : Void;
+	@:overload @:public public function setTrackSolo(track : Int, solo : Bool) : Void;
 	
 	/**
 	* Obtains the current solo state for a track.  The default mute
@@ -425,7 +425,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* from 0 to the number of tracks in the sequence minus 1.
 	* @return <code>true</code> if solo'd, <code>false</code> if not.
 	*/
-	@:overload public function getTrackSolo(track : Int) : Bool;
+	@:overload @:public public function getTrackSolo(track : Int) : Bool;
 	
 	/**
 	* Registers a meta-event listener to receive
@@ -442,7 +442,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see MetaEventListener
 	* @see MetaMessage
 	*/
-	@:overload public function addMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Bool;
+	@:overload @:public public function addMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Bool;
 	
 	/**
 	* Removes the specified meta-event listener from this sequencer's
@@ -451,7 +451,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @param listener the meta-event listener to remove
 	* @see #addMetaEventListener
 	*/
-	@:overload public function removeMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Void;
+	@:overload @:public public function removeMetaEventListener(listener : javax.sound.midi.MetaEventListener) : Void;
 	
 	/**
 	* Registers a controller event listener to receive notification
@@ -482,7 +482,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #removeControllerEventListener
 	* @see ControllerEventListener
 	*/
-	@:overload public function addControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function addControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Removes a controller event listener's interest in one or more
@@ -505,7 +505,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	*
 	* @see #addControllerEventListener
 	*/
-	@:overload public function removeControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload @:public public function removeControllerEventListener(listener : javax.sound.midi.ControllerEventListener, controllers : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Sets the first MIDI tick that will be
@@ -536,7 +536,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #start
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setLoopStartPoint(tick : haxe.Int64) : Void;
+	@:require(java5) @:overload @:public public function setLoopStartPoint(tick : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the start position of the loop,
@@ -547,7 +547,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setLoopStartPoint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLoopStartPoint() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getLoopStartPoint() : haxe.Int64;
 	
 	/**
 	* Sets the last MIDI tick that will be played in
@@ -579,7 +579,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #start
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setLoopEndPoint(tick : haxe.Int64) : Void;
+	@:require(java5) @:overload @:public public function setLoopEndPoint(tick : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the end position of the loop,
@@ -591,7 +591,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setLoopEndPoint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLoopEndPoint() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getLoopEndPoint() : haxe.Int64;
 	
 	/**
 	* Sets the number of repetitions of the loop for
@@ -632,7 +632,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #start
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setLoopCount(count : Int) : Void;
+	@:require(java5) @:overload @:public public function setLoopCount(count : Int) : Void;
 	
 	/**
 	* Obtains the number of repetitions for
@@ -645,7 +645,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #start
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLoopCount() : Int;
+	@:require(java5) @:overload @:public public function getLoopCount() : Int;
 	
 	
 }
@@ -680,7 +680,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* Constructs a synchronization mode.
 	* @param name name of the synchronization mode
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	/**
 	* Determines whether two objects are equal.
@@ -689,26 +689,26 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @return <code>true</code> if this object is the same as the
 	* <code>obj</code> argument, <code>false</code> otherwise
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashcode method.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Provides this synchronization mode's name as the string
 	* representation of the mode.
 	* @return the name of this synchronization mode
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* A master synchronization mode that makes the sequencer get
 	* its timing information from its internal clock.  This is not
 	* a legal slave sync mode.
 	*/
-	public static var INTERNAL_CLOCK(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:public @:static @:final public static var INTERNAL_CLOCK(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* A master or slave synchronization mode that specifies the
@@ -721,7 +721,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* messages to its receiver.  MIDI clock messages are sent at a rate
 	* of 24 per quarter note.
 	*/
-	public static var MIDI_SYNC(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:public @:static @:final public static var MIDI_SYNC(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* A master or slave synchronization mode that specifies the
@@ -735,14 +735,14 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* messages to its receiver.  (See the MIDI 1.0 Detailed
 	* Specification for a description of MIDI Time Code.)
 	*/
-	public static var MIDI_TIME_CODE(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:public @:static @:final public static var MIDI_TIME_CODE(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* A slave synchronization mode indicating that no timing information
 	* should be sent to the receiver.  This is not a legal master sync
 	* mode.
 	*/
-	public static var NO_SYNC(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
+	@:public @:static @:final public static var NO_SYNC(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	
 }

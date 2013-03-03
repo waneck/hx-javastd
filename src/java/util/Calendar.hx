@@ -45,13 +45,13 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see GregorianCalendar#AD
 	* @see GregorianCalendar#BC
 	*/
-	public static var ERA(default, null) : Int;
+	@:public @:final @:static public static var ERA(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
 	* year. This is a calendar-specific value; see subclass documentation.
 	*/
-	public static var YEAR(default, null) : Int;
+	@:public @:final @:static public static var YEAR(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -74,7 +74,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #DECEMBER
 	* @see #UNDECIMBER
 	*/
-	public static var MONTH(default, null) : Int;
+	@:public @:final @:static public static var MONTH(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -87,7 +87,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getFirstDayOfWeek
 	* @see #getMinimalDaysInFirstWeek
 	*/
-	public static var WEEK_OF_YEAR(default, null) : Int;
+	@:public @:final @:static public static var WEEK_OF_YEAR(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -100,7 +100,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getFirstDayOfWeek
 	* @see #getMinimalDaysInFirstWeek
 	*/
-	public static var WEEK_OF_MONTH(default, null) : Int;
+	@:public @:final @:static public static var WEEK_OF_MONTH(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -109,7 +109,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @see #DAY_OF_MONTH
 	*/
-	public static var DATE(default, null) : Int;
+	@:public @:final @:static public static var DATE(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -118,13 +118,13 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @see #DATE
 	*/
-	public static var DAY_OF_MONTH(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_MONTH(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the day
 	* number within the current year.  The first day of the year has value 1.
 	*/
-	public static var DAY_OF_YEAR(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_YEAR(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the day
@@ -140,7 +140,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #FRIDAY
 	* @see #SATURDAY
 	*/
-	public static var DAY_OF_WEEK(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_WEEK(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -165,7 +165,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #DAY_OF_WEEK
 	* @see #WEEK_OF_MONTH
 	*/
-	public static var DAY_OF_WEEK_IN_MONTH(default, null) : Int;
+	@:public @:final @:static public static var DAY_OF_WEEK_IN_MONTH(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating
@@ -176,7 +176,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #PM
 	* @see #HOUR
 	*/
-	public static var AM_PM(default, null) : Int;
+	@:public @:final @:static public static var AM_PM(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -187,7 +187,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #AM_PM
 	* @see #HOUR_OF_DAY
 	*/
-	public static var HOUR(default, null) : Int;
+	@:public @:final @:static public static var HOUR(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -196,28 +196,28 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @see #HOUR
 	*/
-	public static var HOUR_OF_DAY(default, null) : Int;
+	@:public @:final @:static public static var HOUR_OF_DAY(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
 	* minute within the hour.
 	* E.g., at 10:04:15.250 PM the <code>MINUTE</code> is 4.
 	*/
-	public static var MINUTE(default, null) : Int;
+	@:public @:final @:static public static var MINUTE(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
 	* second within the minute.
 	* E.g., at 10:04:15.250 PM the <code>SECOND</code> is 15.
 	*/
-	public static var SECOND(default, null) : Int;
+	@:public @:final @:static public static var SECOND(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
 	* millisecond within the second.
 	* E.g., at 10:04:15.250 PM the <code>MILLISECOND</code> is 250.
 	*/
-	public static var MILLISECOND(default, null) : Int;
+	@:public @:final @:static public static var MILLISECOND(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code>
@@ -228,7 +228,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* <code>TimeZone</code> implementation subclass supports
 	* historical GMT offset changes.
 	*/
-	public static var ZONE_OFFSET(default, null) : Int;
+	@:public @:final @:static public static var ZONE_OFFSET(default, null) : Int;
 	
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -239,146 +239,146 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* <code>TimeZone</code> implementation subclass supports
 	* historical Daylight Saving Time schedule changes.
 	*/
-	public static var DST_OFFSET(default, null) : Int;
+	@:public @:final @:static public static var DST_OFFSET(default, null) : Int;
 	
 	/**
 	* The number of distinct fields recognized by <code>get</code> and <code>set</code>.
 	* Field numbers range from <code>0..FIELD_COUNT-1</code>.
 	*/
-	public static var FIELD_COUNT(default, null) : Int;
+	@:public @:final @:static public static var FIELD_COUNT(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Sunday.
 	*/
-	public static var SUNDAY(default, null) : Int;
+	@:public @:final @:static public static var SUNDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Monday.
 	*/
-	public static var MONDAY(default, null) : Int;
+	@:public @:final @:static public static var MONDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Tuesday.
 	*/
-	public static var TUESDAY(default, null) : Int;
+	@:public @:final @:static public static var TUESDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Wednesday.
 	*/
-	public static var WEDNESDAY(default, null) : Int;
+	@:public @:final @:static public static var WEDNESDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Thursday.
 	*/
-	public static var THURSDAY(default, null) : Int;
+	@:public @:final @:static public static var THURSDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Friday.
 	*/
-	public static var FRIDAY(default, null) : Int;
+	@:public @:final @:static public static var FRIDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #DAY_OF_WEEK} field indicating
 	* Saturday.
 	*/
-	public static var SATURDAY(default, null) : Int;
+	@:public @:final @:static public static var SATURDAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* first month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var JANUARY(default, null) : Int;
+	@:public @:final @:static public static var JANUARY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* second month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var FEBRUARY(default, null) : Int;
+	@:public @:final @:static public static var FEBRUARY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* third month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var MARCH(default, null) : Int;
+	@:public @:final @:static public static var MARCH(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* fourth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var APRIL(default, null) : Int;
+	@:public @:final @:static public static var APRIL(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* fifth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var MAY(default, null) : Int;
+	@:public @:final @:static public static var MAY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* sixth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var JUNE(default, null) : Int;
+	@:public @:final @:static public static var JUNE(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* seventh month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var JULY(default, null) : Int;
+	@:public @:final @:static public static var JULY(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* eighth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var AUGUST(default, null) : Int;
+	@:public @:final @:static public static var AUGUST(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* ninth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var SEPTEMBER(default, null) : Int;
+	@:public @:final @:static public static var SEPTEMBER(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* tenth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var OCTOBER(default, null) : Int;
+	@:public @:final @:static public static var OCTOBER(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* eleventh month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var NOVEMBER(default, null) : Int;
+	@:public @:final @:static public static var NOVEMBER(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* twelfth month of the year in the Gregorian and Julian calendars.
 	*/
-	public static var DECEMBER(default, null) : Int;
+	@:public @:final @:static public static var DECEMBER(default, null) : Int;
 	
 	/**
 	* Value of the {@link #MONTH} field indicating the
 	* thirteenth month of the year. Although <code>GregorianCalendar</code>
 	* does not use this value, lunar calendars do.
 	*/
-	public static var UNDECIMBER(default, null) : Int;
+	@:public @:final @:static public static var UNDECIMBER(default, null) : Int;
 	
 	/**
 	* Value of the {@link #AM_PM} field indicating the
 	* period of the day from midnight to just before noon.
 	*/
-	public static var AM(default, null) : Int;
+	@:public @:final @:static public static var AM(default, null) : Int;
 	
 	/**
 	* Value of the {@link #AM_PM} field indicating the
 	* period of the day from noon to just before midnight.
 	*/
-	public static var PM(default, null) : Int;
+	@:public @:final @:static public static var PM(default, null) : Int;
 	
 	/**
 	* A style specifier for {@link #getDisplayNames(int, int, Locale)
@@ -389,7 +389,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #LONG
 	* @since 1.6
 	*/
-	@:require(java6) public static var ALL_STYLES(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var ALL_STYLES(default, null) : Int;
 	
 	/**
 	* A style specifier for {@link #getDisplayName(int, int, Locale)
@@ -399,7 +399,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #LONG
 	* @since 1.6
 	*/
-	@:require(java6) public static var SHORT(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var SHORT(default, null) : Int;
 	
 	/**
 	* A style specifier for {@link #getDisplayName(int, int, Locale)
@@ -409,7 +409,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #SHORT
 	* @since 1.6
 	*/
-	@:require(java6) public static var LONG(default, null) : Int;
+	@:require(java6) @:public @:static @:final public static var LONG(default, null) : Int;
 	
 	/**
 	* The calendar field values for the currently set time for this calendar.
@@ -417,7 +417,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* <code>ERA</code> through <code>DST_OFFSET</code>.
 	* @serial
 	*/
-	private var fields : java.NativeArray<Int>;
+	@:protected private var fields : java.NativeArray<Int>;
 	
 	/**
 	* The currently set time for this calendar, expressed in milliseconds after
@@ -425,7 +425,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #isTimeSet
 	* @serial
 	*/
-	private var time : haxe.Int64;
+	@:protected private var time : haxe.Int64;
 	
 	/**
 	* True if then the value of <code>time</code> is valid.
@@ -433,7 +433,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #time
 	* @serial
 	*/
-	private var isTimeSet : Bool;
+	@:protected private var isTimeSet : Bool;
 	
 	/**
 	* True if <code>fields[]</code> are in sync with the currently set time.
@@ -442,14 +442,14 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* <code>time</code>.
 	* @serial
 	*/
-	private var areFieldsSet : Bool;
+	@:protected private var areFieldsSet : Bool;
 	
 	/**
 	* Constructs a Calendar with the default time zone
 	* and locale.
 	* @see     TimeZone#getDefault
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Constructs a calendar with the specified time zone and locale.
@@ -457,7 +457,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param zone the time zone to use
 	* @param aLocale the locale for the week data
 	*/
-	@:overload private function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
+	@:overload @:protected private function new(zone : java.util.TimeZone, aLocale : java.util.Locale) : Void;
 	
 	/**
 	* Gets a calendar using the default time zone and locale. The
@@ -466,7 +466,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance() : java.util.Calendar;
+	@:overload @:public @:static public static function getInstance() : java.util.Calendar;
 	
 	/**
 	* Gets a calendar using the specified time zone and default locale.
@@ -476,7 +476,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param zone the time zone to use
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance(zone : java.util.TimeZone) : java.util.Calendar;
+	@:overload @:public @:static public static function getInstance(zone : java.util.TimeZone) : java.util.Calendar;
 	
 	/**
 	* Gets a calendar using the default time zone and specified locale.
@@ -486,7 +486,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param aLocale the locale for the week data
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance(aLocale : java.util.Locale) : java.util.Calendar;
+	@:overload @:public @:static public static function getInstance(aLocale : java.util.Locale) : java.util.Calendar;
 	
 	/**
 	* Gets a calendar with the specified time zone and locale.
@@ -497,7 +497,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param aLocale the locale for the week data
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance(zone : java.util.TimeZone, aLocale : java.util.Locale) : java.util.Calendar;
+	@:overload @:public @:static public static function getInstance(zone : java.util.TimeZone, aLocale : java.util.Locale) : java.util.Calendar;
 	
 	/**
 	* Returns an array of all locales for which the <code>getInstance</code>
@@ -508,7 +508,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @return An array of locales for which localized
 	*         <code>Calendar</code> instances are available.
 	*/
-	@:overload @:synchronized public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
+	@:overload @:public @:static @:synchronized public static function getAvailableLocales() : java.NativeArray<java.util.Locale>;
 	
 	/**
 	* Converts the current calendar field values in {@link #fields fields[]}
@@ -518,7 +518,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #complete()
 	* @see #computeFields()
 	*/
-	@:overload @:abstract private function computeTime() : Void;
+	@:overload @:protected @:abstract private function computeTime() : Void;
 	
 	/**
 	* Converts the current millisecond time value {@link #time}
@@ -530,7 +530,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @see #computeTime()
 	*/
-	@:overload @:abstract private function computeFields() : Void;
+	@:overload @:protected @:abstract private function computeFields() : Void;
 	
 	/**
 	* Returns a <code>Date</code> object representing this
@@ -541,7 +541,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #setTime(Date)
 	* @see #getTimeInMillis()
 	*/
-	@:overload @:final public function getTime() : java.util.Date;
+	@:overload @:public @:final public function getTime() : java.util.Date;
 	
 	/**
 	* Sets this Calendar's time with the given <code>Date</code>.
@@ -554,7 +554,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getTime()
 	* @see #setTimeInMillis(long)
 	*/
-	@:overload @:final public function setTime(date : java.util.Date) : Void;
+	@:overload @:public @:final public function setTime(date : java.util.Date) : Void;
 	
 	/**
 	* Returns this Calendar's time value in milliseconds.
@@ -563,7 +563,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getTime()
 	* @see #setTimeInMillis(long)
 	*/
-	@:overload public function getTimeInMillis() : haxe.Int64;
+	@:overload @:public public function getTimeInMillis() : haxe.Int64;
 	
 	/**
 	* Sets this Calendar's current time from the given long value.
@@ -572,7 +572,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #setTime(Date)
 	* @see #getTimeInMillis()
 	*/
-	@:overload public function setTimeInMillis(millis : haxe.Int64) : Void;
+	@:overload @:public public function setTimeInMillis(millis : haxe.Int64) : Void;
 	
 	/**
 	* Returns the value of the given calendar field. In lenient mode,
@@ -590,7 +590,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #set(int,int)
 	* @see #complete()
 	*/
-	@:overload public function get(field : Int) : Int;
+	@:overload @:public public function get(field : Int) : Int;
 	
 	/**
 	* Returns the value of the given calendar field. This method does
@@ -600,7 +600,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @return the value for the given calendar field.
 	* @see #get(int)
 	*/
-	@:overload @:final private function internalGet(field : Int) : Int;
+	@:overload @:protected @:final private function internalGet(field : Int) : Int;
 	
 	/**
 	* Sets the given calendar field to the given value. The value is not
@@ -616,7 +616,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #set(int,int,int,int,int,int)
 	* @see #get(int)
 	*/
-	@:overload public function set(field : Int, value : Int) : Void;
+	@:overload @:public public function set(field : Int, value : Int) : Void;
 	
 	/**
 	* Sets the values for the calendar fields <code>YEAR</code>,
@@ -632,7 +632,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #set(int,int,int,int,int)
 	* @see #set(int,int,int,int,int,int)
 	*/
-	@:overload @:final public function set(year : Int, month : Int, date : Int) : Void;
+	@:overload @:public @:final public function set(year : Int, month : Int, date : Int) : Void;
 	
 	/**
 	* Sets the values for the calendar fields <code>YEAR</code>,
@@ -651,7 +651,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #set(int,int,int)
 	* @see #set(int,int,int,int,int,int)
 	*/
-	@:overload @:final public function set(year : Int, month : Int, date : Int, hourOfDay : Int, minute : Int) : Void;
+	@:overload @:public @:final public function set(year : Int, month : Int, date : Int, hourOfDay : Int, minute : Int) : Void;
 	
 	/**
 	* Sets the values for the fields <code>YEAR</code>, <code>MONTH</code>,
@@ -671,7 +671,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #set(int,int,int)
 	* @see #set(int,int,int,int,int)
 	*/
-	@:overload @:final public function set(year : Int, month : Int, date : Int, hourOfDay : Int, minute : Int, second : Int) : Void;
+	@:overload @:public @:final public function set(year : Int, month : Int, date : Int, hourOfDay : Int, minute : Int, second : Int) : Void;
 	
 	/**
 	* Sets all the calendar field values and the time value
@@ -687,7 +687,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @see #clear(int)
 	*/
-	@:overload @:final public function clear() : Void;
+	@:overload @:public @:final public function clear() : Void;
 	
 	/**
 	* Sets the given calendar field value and the time value
@@ -710,7 +710,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param field the calendar field to be cleared.
 	* @see #clear()
 	*/
-	@:overload @:final public function clear(field : Int) : Void;
+	@:overload @:public @:final public function clear(field : Int) : Void;
 	
 	/**
 	* Determines if the given calendar field has a value set,
@@ -720,7 +720,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @return <code>true</code> if the given calendar field has a value set;
 	* <code>false</code> otherwise.
 	*/
-	@:overload @:final public function isSet(field : Int) : Bool;
+	@:overload @:public @:final public function isSet(field : Int) : Bool;
 	
 	/**
 	* Returns the string representation of the calendar
@@ -763,7 +763,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*        if <code>locale</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getDisplayName(field : Int, style : Int, locale : java.util.Locale) : String;
+	@:require(java6) @:overload @:public public function getDisplayName(field : Int, style : Int, locale : java.util.Locale) : String;
 	
 	/**
 	* Returns a <code>Map</code> containing all names of the calendar
@@ -808,7 +808,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*        if <code>locale</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getDisplayNames(field : Int, style : Int, locale : java.util.Locale) : java.util.Map<String, Null<Int>>;
+	@:require(java6) @:overload @:public public function getDisplayNames(field : Int, style : Int, locale : java.util.Locale) : java.util.Map<String, Null<Int>>;
 	
 	/**
 	* Fills in any unset fields in the calendar fields. First, the {@link
@@ -817,7 +817,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* calendar field values. Then, the {@link #computeFields()} method is
 	* called to calculate all calendar field values.
 	*/
-	@:overload private function complete() : Void;
+	@:overload @:protected private function complete() : Void;
 	
 	/**
 	* Compares this <code>Calendar</code> to the specified
@@ -841,7 +841,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @return <code>true</code> if this object is equal to <code>obj</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code for this calendar.
@@ -849,7 +849,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @return a hash code value for this object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hashCode() : Int;
+	@:require(java2) @:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns whether this <code>Calendar</code> represents a time
@@ -867,7 +867,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* <code>when</code>; <code>false</code> otherwise.
 	* @see     #compareTo(Calendar)
 	*/
-	@:overload public function before(when : Dynamic) : Bool;
+	@:overload @:public public function before(when : Dynamic) : Bool;
 	
 	/**
 	* Returns whether this <code>Calendar</code> represents a time
@@ -885,7 +885,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* otherwise.
 	* @see     #compareTo(Calendar)
 	*/
-	@:overload public function after(when : Dynamic) : Bool;
+	@:overload @:public public function after(when : Dynamic) : Bool;
 	
 	/**
 	* Compares the time values (millisecond offsets from the <a
@@ -906,7 +906,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* any invalid calendar values.
 	* @since   1.5
 	*/
-	@:require(java5) @:overload public function compareTo(anotherCalendar : java.util.Calendar) : Int;
+	@:require(java5) @:overload @:public public function compareTo(anotherCalendar : java.util.Calendar) : Int;
 	
 	/**
 	* Adds or subtracts the specified amount of time to the given calendar field,
@@ -919,7 +919,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #roll(int,int)
 	* @see #set(int,int)
 	*/
-	@:overload @:abstract public function add(field : Int, amount : Int) : Void;
+	@:overload @:abstract @:public public function add(field : Int, amount : Int) : Void;
 	
 	/**
 	* Adds or subtracts (up/down) a single unit of time on the given time
@@ -941,7 +941,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see Calendar#add(int,int)
 	* @see Calendar#set(int,int)
 	*/
-	@:overload @:abstract public function roll(field : Int, up : Bool) : Void;
+	@:overload @:abstract @:public public function roll(field : Int, up : Bool) : Void;
 	
 	/**
 	* Adds the specified (signed) amount to the specified calendar field
@@ -962,21 +962,21 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #add(int,int)
 	* @see #set(int,int)
 	*/
-	@:require(java2) @:overload public function roll(field : Int, amount : Int) : Void;
+	@:require(java2) @:overload @:public public function roll(field : Int, amount : Int) : Void;
 	
 	/**
 	* Sets the time zone with the given time zone value.
 	*
 	* @param value the given time zone.
 	*/
-	@:overload public function setTimeZone(value : java.util.TimeZone) : Void;
+	@:overload @:public public function setTimeZone(value : java.util.TimeZone) : Void;
 	
 	/**
 	* Gets the time zone.
 	*
 	* @return the time zone object associated with this calendar.
 	*/
-	@:overload public function getTimeZone() : java.util.TimeZone;
+	@:overload @:public public function getTimeZone() : java.util.TimeZone;
 	
 	/**
 	* Specifies whether or not date/time interpretation is to be lenient.  With
@@ -990,7 +990,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #isLenient()
 	* @see java.text.DateFormat#setLenient
 	*/
-	@:overload public function setLenient(lenient : Bool) : Void;
+	@:overload @:public public function setLenient(lenient : Bool) : Void;
 	
 	/**
 	* Tells whether date/time interpretation is to be lenient.
@@ -999,7 +999,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* <code>false</code> otherwise.
 	* @see #setLenient(boolean)
 	*/
-	@:overload public function isLenient() : Bool;
+	@:overload @:public public function isLenient() : Bool;
 	
 	/**
 	* Sets what the first day of the week is; e.g., <code>SUNDAY</code> in the U.S.,
@@ -1009,7 +1009,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getFirstDayOfWeek()
 	* @see #getMinimalDaysInFirstWeek()
 	*/
-	@:overload public function setFirstDayOfWeek(value : Int) : Void;
+	@:overload @:public public function setFirstDayOfWeek(value : Int) : Void;
 	
 	/**
 	* Gets what the first day of the week is; e.g., <code>SUNDAY</code> in the U.S.,
@@ -1019,7 +1019,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #setFirstDayOfWeek(int)
 	* @see #getMinimalDaysInFirstWeek()
 	*/
-	@:overload public function getFirstDayOfWeek() : Int;
+	@:overload @:public public function getFirstDayOfWeek() : Int;
 	
 	/**
 	* Sets what the minimal days required in the first week of the year are;
@@ -1031,7 +1031,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* of the year.
 	* @see #getMinimalDaysInFirstWeek()
 	*/
-	@:overload public function setMinimalDaysInFirstWeek(value : Int) : Void;
+	@:overload @:public public function setMinimalDaysInFirstWeek(value : Int) : Void;
 	
 	/**
 	* Gets what the minimal days required in the first week of the year are;
@@ -1043,7 +1043,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @return the minimal days required in the first week of the year.
 	* @see #setMinimalDaysInFirstWeek(int)
 	*/
-	@:overload public function getMinimalDaysInFirstWeek() : Int;
+	@:overload @:public public function getMinimalDaysInFirstWeek() : Int;
 	
 	/**
 	* Returns whether this {@code Calendar} supports week dates.
@@ -1057,7 +1057,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getWeeksInWeekYear()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isWeekDateSupported() : Bool;
+	@:require(java7) @:overload @:public public function isWeekDateSupported() : Bool;
 	
 	/**
 	* Returns the week year represented by this {@code Calendar}. The
@@ -1077,7 +1077,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getMinimalDaysInFirstWeek()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getWeekYear() : Int;
+	@:require(java7) @:overload @:public public function getWeekYear() : Int;
 	
 	/**
 	* Sets the date of this {@code Calendar} with the the given date
@@ -1111,7 +1111,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getMinimalDaysInFirstWeek()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setWeekDate(weekYear : Int, weekOfYear : Int, dayOfWeek : Int) : Void;
+	@:require(java7) @:overload @:public public function setWeekDate(weekYear : Int, weekOfYear : Int, dayOfWeek : Int) : Void;
 	
 	/**
 	* Returns the number of weeks in the week year represented by this
@@ -1130,7 +1130,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMaximum(int)
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getWeeksInWeekYear() : Int;
+	@:require(java7) @:overload @:public public function getWeeksInWeekYear() : Int;
 	
 	/**
 	* Returns the minimum value for the given calendar field of this
@@ -1147,7 +1147,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload @:abstract public function getMinimum(field : Int) : Int;
+	@:overload @:abstract @:public public function getMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the maximum value for the given calendar field of this
@@ -1164,7 +1164,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload @:abstract public function getMaximum(field : Int) : Int;
+	@:overload @:abstract @:public public function getMaximum(field : Int) : Int;
 	
 	/**
 	* Returns the highest minimum value for the given calendar field
@@ -1182,7 +1182,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload @:abstract public function getGreatestMinimum(field : Int) : Int;
+	@:overload @:abstract @:public public function getGreatestMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the lowest maximum value for the given calendar field
@@ -1204,7 +1204,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMinimum(int)
 	* @see #getActualMaximum(int)
 	*/
-	@:overload @:abstract public function getLeastMaximum(field : Int) : Int;
+	@:overload @:abstract @:public public function getLeastMaximum(field : Int) : Int;
 	
 	/**
 	* Returns the minimum value that the specified calendar field
@@ -1226,7 +1226,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMaximum(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getActualMinimum(field : Int) : Int;
+	@:require(java2) @:overload @:public public function getActualMinimum(field : Int) : Int;
 	
 	/**
 	* Returns the maximum value that the specified calendar field
@@ -1250,14 +1250,14 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @see #getActualMinimum(int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getActualMaximum(field : Int) : Int;
+	@:require(java2) @:overload @:public public function getActualMaximum(field : Int) : Int;
 	
 	/**
 	* Creates and returns a copy of this object.
 	*
 	* @return a copy of this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Return a string representation of this calendar. This method
@@ -1267,7 +1267,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @return  a string representation of this calendar.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -1308,7 +1308,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

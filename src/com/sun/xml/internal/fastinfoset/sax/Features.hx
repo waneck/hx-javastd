@@ -27,11 +27,11 @@ package com.sun.xml.internal.fastinfoset.sax;
 */
 extern class Features
 {
-	public static var NAMESPACES_FEATURE(default, null) : String;
+	@:public @:static @:final public static var NAMESPACES_FEATURE(default, null) : String;
 	
-	public static var NAMESPACE_PREFIXES_FEATURE(default, null) : String;
+	@:public @:static @:final public static var NAMESPACE_PREFIXES_FEATURE(default, null) : String;
 	
-	public static var STRING_INTERNING_FEATURE(default, null) : String;
+	@:public @:static @:final public static var STRING_INTERNING_FEATURE(default, null) : String;
 	
 	
 }

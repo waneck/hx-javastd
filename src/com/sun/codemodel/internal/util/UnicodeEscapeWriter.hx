@@ -35,23 +35,23 @@ extern class UnicodeEscapeWriter extends java.io.FilterWriter
 	* @author
 	*      Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
 	*/
-	@:overload public function new(next : java.io.Writer) : Void;
+	@:overload @:public public function new(next : java.io.Writer) : Void;
 	
-	@:overload @:final override public function write(ch : Int) : Void;
+	@:overload @:public @:final override public function write(ch : Int) : Void;
 	
 	/**
 	* Can be overrided. Return true if the character
 	* needs to be escaped.
 	*/
-	@:overload private function requireEscaping(ch : Int) : Bool;
+	@:overload @:protected private function requireEscaping(ch : Int) : Bool;
 	
-	@:overload @:final override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public @:final override public function write(buf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload @:final override public function write(buf : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:public @:final override public function write(buf : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload @:final override public function write(buf : String, off : Int, len : Int) : Void;
+	@:overload @:public @:final override public function write(buf : String, off : Int, len : Int) : Void;
 	
-	@:overload @:final override public function write(buf : String) : Void;
+	@:overload @:public @:final override public function write(buf : String) : Void;
 	
 	
 }

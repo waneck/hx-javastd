@@ -41,13 +41,13 @@ extern class CollationElementIterator
 	* Null order which indicates the end of string is reached by the
 	* cursor.
 	*/
-	public static var NULLORDER(default, null) : Int;
+	@:public @:final @:static public static var NULLORDER(default, null) : Int;
 	
 	/**
 	* Resets the cursor to the beginning of the string.  The next call
 	* to next() will return the first collation element in the string.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
 	/**
 	* Get the next collation element in the string.  <p>This iterator iterates
@@ -63,7 +63,7 @@ extern class CollationElementIterator
 	* then call previous(), or call previous() and then call next()), you'll get
 	* back the same element twice.</p>
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Get the previous collation element in the string.  <p>This iterator iterates
@@ -80,28 +80,28 @@ extern class CollationElementIterator
 	* and then call next()), you'll get back the same element twice.</p>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function previous() : Int;
+	@:require(java2) @:overload @:public public function previous() : Int;
 	
 	/**
 	* Return the primary component of a collation element.
 	* @param order the collation element
 	* @return the element's primary component
 	*/
-	@:overload @:final public static function primaryOrder(order : Int) : Int;
+	@:overload @:public @:final @:static public static function primaryOrder(order : Int) : Int;
 	
 	/**
 	* Return the secondary component of a collation element.
 	* @param order the collation element
 	* @return the element's secondary component
 	*/
-	@:overload @:final public static function secondaryOrder(order : Int) : java.StdTypes.Int16;
+	@:overload @:public @:final @:static public static function secondaryOrder(order : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Return the tertiary component of a collation element.
 	* @param order the collation element
 	* @return the element's tertiary component
 	*/
-	@:overload @:final public static function tertiaryOrder(order : Int) : java.StdTypes.Int16;
+	@:overload @:public @:final @:static public static function tertiaryOrder(order : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Sets the iterator to point to the collation element corresponding to
@@ -118,7 +118,7 @@ extern class CollationElementIterator
 	* @param newOffset The new character offset into the original text.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setOffset(newOffset : Int) : Void;
+	@:require(java2) @:overload @:public public function setOffset(newOffset : Int) : Void;
 	
 	/**
 	* Returns the character offset in the original text corresponding to the next
@@ -134,7 +134,7 @@ extern class CollationElementIterator
 	* element that will be returned by the next call to next().
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getOffset() : Int;
+	@:require(java2) @:overload @:public public function getOffset() : Int;
 	
 	/**
 	* Return the maximum length of any expansion sequences that end
@@ -144,7 +144,7 @@ extern class CollationElementIterator
 	*         with the specified order.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getMaxExpansion(order : Int) : Int;
+	@:require(java2) @:overload @:public public function getMaxExpansion(order : Int) : Int;
 	
 	/**
 	* Set a new string over which to iterate.
@@ -152,7 +152,7 @@ extern class CollationElementIterator
 	* @param source  the new source text
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setText(source : String) : Void;
+	@:require(java2) @:overload @:public public function setText(source : String) : Void;
 	
 	/**
 	* Set a new string over which to iterate.
@@ -160,7 +160,7 @@ extern class CollationElementIterator
 	* @param source  the new source text.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setText(source : java.text.CharacterIterator) : Void;
+	@:require(java2) @:overload @:public public function setText(source : java.text.CharacterIterator) : Void;
 	
 	
 }

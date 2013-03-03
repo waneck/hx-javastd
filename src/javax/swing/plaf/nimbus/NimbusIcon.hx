@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class NimbusIcon extends sun.swing.plaf.synth.SynthIcon
 {
-	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Implements the standard Icon interface's paintIcon method as the standard
@@ -33,11 +33,11 @@ package javax.swing.plaf.nimbus;
 	* paint any thing, so we override here so that we can paint the enabled
 	* state if no synth context is available
 	*/
-	@:overload override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload @:public override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconWidth(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
-	@:overload override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
+	@:overload @:public override public function getIconHeight(context : javax.swing.plaf.synth.SynthContext) : Int;
 	
 	
 }

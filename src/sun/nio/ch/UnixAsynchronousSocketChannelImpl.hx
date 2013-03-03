@@ -25,14 +25,14 @@ package sun.nio.ch;
 */
 @:internal extern class UnixAsynchronousSocketChannelImpl extends sun.nio.ch.AsynchronousSocketChannelImpl implements sun.nio.ch.Port.Port_PollableChannel
 {
-	@:overload override public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	@:overload @:public override public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
 	
 	/**
 	* Invoked by event handler thread when file descriptor is polled
 	*/
-	@:overload public function onEvent(events : Int, mayInvokeDirect : Bool) : Void;
+	@:overload @:public public function onEvent(events : Int, mayInvokeDirect : Bool) : Void;
 	
-	@:overload override public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
+	@:overload @:public override public function onCancel(task : sun.nio.ch.PendingFuture<Dynamic, Dynamic>) : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.tty;
 */
 @:internal extern class AccessWatchpointSpec extends com.sun.tools.example.debug.tty.WatchpointSpec
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

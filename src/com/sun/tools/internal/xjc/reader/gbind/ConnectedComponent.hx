@@ -32,7 +32,7 @@ extern class ConnectedComponent implements java.lang.Iterable<com.sun.tools.inte
 	* <p>
 	* That means this property will become a collection property.
 	*/
-	@:overload @:final public function isCollection() : Bool;
+	@:overload @:public @:final public function isCollection() : Bool;
 	
 	/**
 	* Returns true iff this {@link ConnectedComponent}
@@ -42,14 +42,14 @@ extern class ConnectedComponent implements java.lang.Iterable<com.sun.tools.inte
 	* That means any valid element sequence must have at least
 	* one value for this property.
 	*/
-	@:overload @:final public function isRequired() : Bool;
+	@:overload @:public @:final public function isRequired() : Bool;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.Element>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.Element>;
 	
 	/**
 	* Just produces debug representation
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

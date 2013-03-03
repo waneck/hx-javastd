@@ -45,40 +45,40 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The configuration used in this run of the doclet.
 	*/
-	private var configuration : com.sun.tools.doclets.internal.toolkit.Configuration;
+	@:protected private var configuration : com.sun.tools.doclets.internal.toolkit.Configuration;
 	
 	/**
 	* Keep track of which packages we have seen for
 	* efficiency purposes.  We don't want to copy the
 	* doc files multiple times for a single package.
 	*/
-	private static var containingPackagesSeen : java.util.Set<String>;
+	@:protected @:static private static var containingPackagesSeen : java.util.Set<String>;
 	
 	/**
 	* True if we want to print debug output.
 	*/
-	private static var DEBUG(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG(default, null) : Bool;
 	
 	/**
 	* Construct a Builder.
 	* @param configuration the configuration used in this run
 	*        of the doclet.
 	*/
-	@:overload public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
+	@:overload @:public public function new(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : Void;
 	
 	/**
 	* Return the name of this builder.
 	*
 	* @return the name of the builder.
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Build the documentation.
 	*
 	* @throws IOException there was a problem writing the output.
 	*/
-	@:overload @:abstract public function build() : Void;
+	@:overload @:public @:abstract public function build() : Void;
 	
 	/**
 	* Build the documentation, as specified by the given XML element.
@@ -86,7 +86,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which component to document.
 	* @param contentTree content tree to which the documentation will be added
 	*/
-	@:overload private function build(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function build(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the documentation, as specified by the children of the given XML element.
@@ -94,7 +94,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document.
 	* @param contentTree content tree to which the documentation will be added
 	*/
-	@:overload private function buildChildren(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:protected private function buildChildren(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, contentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Given the name and parameters, invoke the method in the builder.  This
@@ -105,7 +105,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param paramClasses the types for each parameter.
 	* @param params       the parameters of the method.
 	*/
-	@:overload private function invokeMethod(methodName : String, paramClasses : java.NativeArray<Class<Dynamic>>, params : java.NativeArray<Dynamic>) : Void;
+	@:overload @:protected private function invokeMethod(methodName : String, paramClasses : java.NativeArray<Class<Dynamic>>, params : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

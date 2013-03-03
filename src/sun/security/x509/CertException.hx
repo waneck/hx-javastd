@@ -37,81 +37,81 @@ package sun.security.x509;
 extern class CertException extends java.lang.SecurityException
 {
 	/** Indicates that the signature in the certificate is not valid. */
-	public static var verf_INVALID_SIG(default, null) : Int;
+	@:public @:static @:final public static var verf_INVALID_SIG(default, null) : Int;
 	
 	/** Indicates that the certificate was revoked, and so is invalid. */
-	public static var verf_INVALID_REVOKED(default, null) : Int;
+	@:public @:static @:final public static var verf_INVALID_REVOKED(default, null) : Int;
 	
 	/** Indicates that the certificate is not yet valid. */
-	public static var verf_INVALID_NOTBEFORE(default, null) : Int;
+	@:public @:static @:final public static var verf_INVALID_NOTBEFORE(default, null) : Int;
 	
 	/** Indicates that the certificate has expired and so is not valid. */
-	public static var verf_INVALID_EXPIRED(default, null) : Int;
+	@:public @:static @:final public static var verf_INVALID_EXPIRED(default, null) : Int;
 	
 	/** Indicates that a certificate authority in the certification
 	* chain is not trusted. */
-	public static var verf_CA_UNTRUSTED(default, null) : Int;
+	@:public @:static @:final public static var verf_CA_UNTRUSTED(default, null) : Int;
 	
 	/** Indicates that the certification chain is too long. */
-	public static var verf_CHAIN_LENGTH(default, null) : Int;
+	@:public @:static @:final public static var verf_CHAIN_LENGTH(default, null) : Int;
 	
 	/** Indicates an error parsing the ASN.1/DER encoding of the certificate. */
-	public static var verf_PARSE_ERROR(default, null) : Int;
+	@:public @:static @:final public static var verf_PARSE_ERROR(default, null) : Int;
 	
 	/** Indicates an error constructing a certificate or certificate chain. */
-	public static var err_CONSTRUCTION(default, null) : Int;
+	@:public @:static @:final public static var err_CONSTRUCTION(default, null) : Int;
 	
 	/** Indicates a problem with the public key */
-	public static var err_INVALID_PUBLIC_KEY(default, null) : Int;
+	@:public @:static @:final public static var err_INVALID_PUBLIC_KEY(default, null) : Int;
 	
 	/** Indicates a problem with the certificate version */
-	public static var err_INVALID_VERSION(default, null) : Int;
+	@:public @:static @:final public static var err_INVALID_VERSION(default, null) : Int;
 	
 	/** Indicates a problem with the certificate format */
-	public static var err_INVALID_FORMAT(default, null) : Int;
+	@:public @:static @:final public static var err_INVALID_FORMAT(default, null) : Int;
 	
 	/** Indicates a problem with the certificate encoding */
-	public static var err_ENCODING(default, null) : Int;
+	@:public @:static @:final public static var err_ENCODING(default, null) : Int;
 	
 	/**
 	* Constructs a certificate exception using an error code
 	* (<code>verf_*</code>) and a string describing the context
 	* of the error.
 	*/
-	@:overload public function new(code : Int, moredata : String) : Void;
+	@:overload @:public public function new(code : Int, moredata : String) : Void;
 	
 	/**
 	* Constructs a certificate exception using just an error code,
 	* without a string describing the context.
 	*/
-	@:overload public function new(code : Int) : Void;
+	@:overload @:public public function new(code : Int) : Void;
 	
 	/**
 	* Returns the error code with which the exception was created.
 	*/
-	@:overload public function getVerfCode() : Int;
+	@:overload @:public public function getVerfCode() : Int;
 	
 	/**
 	* Returns a string describing the context in which the exception
 	* was reported.
 	*/
-	@:overload public function getMoreData() : String;
+	@:overload @:public public function getMoreData() : String;
 	
 	/**
 	* Return a string corresponding to the error code used to create
 	* this exception.
 	*/
-	@:overload public function getVerfDescription() : String;
+	@:overload @:public public function getVerfDescription() : String;
 	
 	/**
 	* Returns a string describing the certificate exception.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Returns a string describing the certificate exception.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

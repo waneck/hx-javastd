@@ -26,59 +26,59 @@ package com.sun.tools.internal.ws.processor.modeler.annotation;
 extern class AnnotationProcessorContext
 {
 	/** Creates a new instance of AnnotationProcessorContext */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addSEIContext(seiName : String, seiContext : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext) : Void;
+	@:overload @:public public function addSEIContext(seiName : String, seiContext : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext) : Void;
 	
-	@:overload public function getSEIContext(seiName : String) : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext;
+	@:overload @:public public function getSEIContext(seiName : String) : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext;
 	
-	@:overload public function getSEIContext(d : com.sun.mirror.declaration.TypeDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext;
+	@:overload @:public public function getSEIContext(d : com.sun.mirror.declaration.TypeDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext;
 	
-	@:overload public function getSEIContexts() : java.util.Collection<com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext>;
+	@:overload @:public public function getSEIContexts() : java.util.Collection<com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext>;
 	
-	@:overload public function getRound() : Int;
+	@:overload @:public public function getRound() : Int;
 	
-	@:overload public function incrementRound() : Void;
+	@:overload @:public public function incrementRound() : Void;
 	
-	@:overload public static function isEncoded(model : com.sun.tools.internal.ws.processor.model.Model) : Bool;
+	@:overload @:public @:static public static function isEncoded(model : com.sun.tools.internal.ws.processor.model.Model) : Bool;
 	
-	@:overload public function setModelCompleted(modelCompleted : Bool) : Void;
+	@:overload @:public public function setModelCompleted(modelCompleted : Bool) : Void;
 	
-	@:overload public function isModelCompleted() : Bool;
+	@:overload @:public public function isModelCompleted() : Bool;
 	
 	
 }
 @:native('com$sun$tools$internal$ws$processor$modeler$annotation$AnnotationProcessorContext$SEIContext') extern class AnnotationProcessorContext_SEIContext
 {
-	@:overload public function new(seiName : String) : Void;
+	@:overload @:public public function new(seiName : String) : Void;
 	
-	@:overload public function setImplementsSEI(implementsSEI : Bool) : Void;
+	@:overload @:public public function setImplementsSEI(implementsSEI : Bool) : Void;
 	
-	@:overload public function getImplementsSEI() : Bool;
+	@:overload @:public public function getImplementsSEI() : Bool;
 	
-	@:overload public function setNamespaceURI(namespaceURI : String) : Void;
+	@:overload @:public public function setNamespaceURI(namespaceURI : String) : Void;
 	
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
-	@:overload public function getSEIImplName() : String;
+	@:overload @:public public function getSEIImplName() : String;
 	
-	@:overload public function setSEIImplName(implName : String) : Void;
+	@:overload @:public public function setSEIImplName(implName : String) : Void;
 	
-	@:overload public function setReqWrapperOperation(method : com.sun.mirror.declaration.MethodDeclaration, wrapperInfo : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo) : Void;
+	@:overload @:public public function setReqWrapperOperation(method : com.sun.mirror.declaration.MethodDeclaration, wrapperInfo : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo) : Void;
 	
-	@:overload public function getReqOperationWrapper(method : com.sun.mirror.declaration.MethodDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo;
+	@:overload @:public public function getReqOperationWrapper(method : com.sun.mirror.declaration.MethodDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo;
 	
-	@:overload public function setResWrapperOperation(method : com.sun.mirror.declaration.MethodDeclaration, wrapperInfo : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo) : Void;
+	@:overload @:public public function setResWrapperOperation(method : com.sun.mirror.declaration.MethodDeclaration, wrapperInfo : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo) : Void;
 	
-	@:overload public function getResOperationWrapper(method : com.sun.mirror.declaration.MethodDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo;
+	@:overload @:public public function getResOperationWrapper(method : com.sun.mirror.declaration.MethodDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.WrapperInfo;
 	
-	@:overload public function methodToString(method : com.sun.mirror.declaration.MethodDeclaration) : String;
+	@:overload @:public public function methodToString(method : com.sun.mirror.declaration.MethodDeclaration) : String;
 	
-	@:overload public function clearExceptionMap() : Void;
+	@:overload @:public public function clearExceptionMap() : Void;
 	
-	@:overload public function addExceptionBeanEntry(exception : String, faultInfo : com.sun.tools.internal.ws.processor.modeler.annotation.FaultInfo, builder : com.sun.tools.internal.ws.processor.modeler.annotation.ModelBuilder) : Void;
+	@:overload @:public public function addExceptionBeanEntry(exception : String, faultInfo : com.sun.tools.internal.ws.processor.modeler.annotation.FaultInfo, builder : com.sun.tools.internal.ws.processor.modeler.annotation.ModelBuilder) : Void;
 	
-	@:overload public function getExceptionBeanName(exception : String) : com.sun.tools.internal.ws.processor.modeler.annotation.FaultInfo;
+	@:overload @:public public function getExceptionBeanName(exception : String) : com.sun.tools.internal.ws.processor.modeler.annotation.FaultInfo;
 	
 	
 }

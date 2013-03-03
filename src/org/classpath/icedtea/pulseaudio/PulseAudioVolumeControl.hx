@@ -37,13 +37,13 @@ exception statement from your version.
 */
 @:internal extern class PulseAudioVolumeControl extends javax.sound.sampled.FloatControl
 {
-	@:overload private function new(line : org.classpath.icedtea.pulseaudio.PulseAudioPlaybackLine, eventLoop : org.classpath.icedtea.pulseaudio.EventLoop) : Void;
+	@:overload @:protected private function new(line : org.classpath.icedtea.pulseaudio.PulseAudioPlaybackLine, eventLoop : org.classpath.icedtea.pulseaudio.EventLoop) : Void;
 	
-	@:overload @:synchronized override public function setValue(newValue : Single) : Void;
+	@:overload @:public @:synchronized override public function setValue(newValue : Single) : Void;
 	
-	@:overload @:synchronized private function setStreamVolume(newValue : Single) : Void;
+	@:overload @:protected @:synchronized private function setStreamVolume(newValue : Single) : Void;
 	
-	@:overload @:synchronized override public function getValue() : Single;
+	@:overload @:public @:synchronized override public function getValue() : Single;
 	
 	
 }

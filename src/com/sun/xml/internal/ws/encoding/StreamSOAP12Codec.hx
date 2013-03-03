@@ -30,21 +30,21 @@ package com.sun.xml.internal.ws.encoding;
 	*
 	* @author Paul.Sandoz@Sun.Com
 	*/
-	public static var SOAP12_MIME_TYPE(default, null) : String;
+	@:public @:static @:final public static var SOAP12_MIME_TYPE(default, null) : String;
 	
-	public static var SOAP12_CONTENT_TYPE(default, null) : String;
+	@:public @:static @:final public static var SOAP12_CONTENT_TYPE(default, null) : String;
 	
-	@:overload override public function getMimeType() : String;
+	@:overload @:public override public function getMimeType() : String;
 	
-	@:overload @:final private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
+	@:overload @:protected @:final private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	
-	public static var defaultContentType(default, null) : com.sun.xml.internal.ws.encoding.ContentTypeImpl;
+	@:public @:static @:final public static var defaultContentType(default, null) : com.sun.xml.internal.ws.encoding.ContentTypeImpl;
 	
-	@:overload private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload @:protected private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload private function getExpectedContentTypes() : java.util.List<String>;
+	@:overload @:protected private function getExpectedContentTypes() : java.util.List<String>;
 	
 	
 }

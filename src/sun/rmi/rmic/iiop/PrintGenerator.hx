@@ -34,7 +34,7 @@ extern class PrintGenerator implements sun.rmi.rmic.Generator implements sun.rmi
 	/**
 	* Default constructor for Main to use.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Examine and consume command line arguments.
@@ -42,7 +42,7 @@ extern class PrintGenerator implements sun.rmi.rmic.Generator implements sun.rmi
 	* @param error Report any errors using the main.error() methods.
 	* @return true if no errors, false otherwise.
 	*/
-	@:overload public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
+	@:overload @:public public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
 	
 	/**
 	* Generate output. Any source files created which need compilation should
@@ -55,7 +55,7 @@ extern class PrintGenerator implements sun.rmi.rmic.Generator implements sun.rmi
 	* @param destDir   The directory for the root of the package hierarchy
 	*                          for generated files. May be null.
 	*/
-	@:overload public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
+	@:overload @:public public function generate(env : sun.rmi.rmic.BatchEnvironment, cdef : sun.tools.java.ClassDefinition, destDir : java.io.File) : Void;
 	
 	
 }

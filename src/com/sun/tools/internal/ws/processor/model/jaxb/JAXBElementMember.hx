@@ -30,35 +30,35 @@ extern class JAXBElementMember
 	*
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
-	@:overload public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType, javaStructureMember : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : Void;
+	@:overload @:public public function new(name : javax.xml.namespace.QName, type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType, javaStructureMember : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : Void;
 	
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
-	@:overload public function setName(n : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setName(n : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType;
+	@:overload @:public public function getType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType;
 	
-	@:overload public function setType(t : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
+	@:overload @:public public function setType(t : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
-	@:overload public function isRepeated() : Bool;
+	@:overload @:public public function isRepeated() : Bool;
 	
-	@:overload public function setRepeated(b : Bool) : Void;
+	@:overload @:public public function setRepeated(b : Bool) : Void;
 	
-	@:overload public function getJavaStructureMember() : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember;
+	@:overload @:public public function getJavaStructureMember() : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember;
 	
-	@:overload public function setJavaStructureMember(javaStructureMember : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : Void;
+	@:overload @:public public function setJavaStructureMember(javaStructureMember : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : Void;
 	
-	@:overload public function isInherited() : Bool;
+	@:overload @:public public function isInherited() : Bool;
 	
-	@:overload public function setInherited(b : Bool) : Void;
+	@:overload @:public public function setInherited(b : Bool) : Void;
 	
-	@:overload public function getProperty() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty;
+	@:overload @:public public function getProperty() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty;
 	
-	@:overload public function setProperty(prop : com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty) : Void;
+	@:overload @:public public function setProperty(prop : com.sun.tools.internal.ws.processor.model.jaxb.JAXBProperty) : Void;
 	
 	
 }

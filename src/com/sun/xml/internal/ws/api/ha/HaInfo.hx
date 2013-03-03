@@ -25,13 +25,13 @@ package com.sun.xml.internal.ws.api.ha;
 */
 extern class HaInfo
 {
-	@:overload public function new(key : String, replicaInstance : String, failOver : Bool) : Void;
+	@:overload @:public public function new(key : String, replicaInstance : String, failOver : Bool) : Void;
 	
-	@:overload public function getReplicaInstance() : String;
+	@:overload @:public public function getReplicaInstance() : String;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function isFailOver() : Bool;
+	@:overload @:public public function isFailOver() : Bool;
 	
 	
 }

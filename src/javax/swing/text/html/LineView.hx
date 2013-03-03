@@ -38,13 +38,13 @@ package javax.swing.text.html;
 	*
 	* @param elem the element to wrap in a view
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Preformatted lines are not suppressed if they
 	* have only whitespace, so they are always visible.
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -56,7 +56,7 @@ package javax.swing.text.html;
 	* @return  the minimum span the view can be rendered into
 	* @see View#getPreferredSpan
 	*/
-	@:overload public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public override public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Gets the resize weight for the specified axis.
@@ -64,7 +64,7 @@ package javax.swing.text.html;
 	* @param axis may be either X_AXIS or Y_AXIS
 	* @return the weight
 	*/
-	@:overload public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Gets the alignment for an axis.
@@ -72,7 +72,7 @@ package javax.swing.text.html;
 	* @param axis may be either X_AXIS or Y_AXIS
 	* @return the alignment
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload @:public override public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Lays out the children.  If the layout span has changed,
@@ -89,7 +89,7 @@ package javax.swing.text.html;
 	*   by paragraph, but used by the superclass).  This
 	*   is the height inside of the inset area.
 	*/
-	@:overload override private function layout(width : Int, height : Int) : Void;
+	@:overload @:protected override private function layout(width : Int, height : Int) : Void;
 	
 	/**
 	* Returns the next tab stop position given a reference position.
@@ -116,17 +116,17 @@ package javax.swing.text.html;
 	* @see TabStop
 	* @see LabelView
 	*/
-	@:overload override public function nextTabStop(x : Single, tabOffset : Int) : Single;
+	@:overload @:public override public function nextTabStop(x : Single, tabOffset : Int) : Single;
 	
 	/**
 	* Returns the location for the tab.
 	*/
-	@:overload private function getPreTab(x : Single, tabOffset : Int) : Single;
+	@:overload @:protected private function getPreTab(x : Single, tabOffset : Int) : Single;
 	
 	/**
 	* @return number of characters per tab, 8.
 	*/
-	@:overload private function getCharactersPerTab() : Int;
+	@:overload @:protected private function getCharactersPerTab() : Int;
 	
 	
 }

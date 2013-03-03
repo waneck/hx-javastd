@@ -25,9 +25,9 @@ package sun.net;
 */
 extern class ConnectionResetException extends java.net.SocketException
 {
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	
 }

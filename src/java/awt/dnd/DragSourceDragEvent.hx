@@ -60,7 +60,7 @@ extern class DragSourceDragEvent extends java.awt.dnd.DragSourceEvent
 	* @see java.awt.event.InputEvent
 	* @see DragSourceEvent#getLocation
 	*/
-	@:overload public function new(dsc : java.awt.dnd.DragSourceContext, dropAction : Int, action : Int, modifiers : Int) : Void;
+	@:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext, dropAction : Int, action : Int, modifiers : Int) : Void;
 	
 	/**
 	* Constructs a <code>DragSourceDragEvent</code> given the specified
@@ -94,14 +94,14 @@ extern class DragSourceDragEvent extends java.awt.dnd.DragSourceEvent
 	* @see java.awt.event.InputEvent
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(dsc : java.awt.dnd.DragSourceContext, dropAction : Int, action : Int, modifiers : Int, x : Int, y : Int) : Void;
+	@:require(java4) @:overload @:public public function new(dsc : java.awt.dnd.DragSourceContext, dropAction : Int, action : Int, modifiers : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* This method returns the target drop action.
 	*
 	* @return the target drop action.
 	*/
-	@:overload public function getTargetActions() : Int;
+	@:overload @:public public function getTargetActions() : Int;
 	
 	/**
 	* This method returns an <code>int</code> representing
@@ -114,7 +114,7 @@ extern class DragSourceDragEvent extends java.awt.dnd.DragSourceEvent
 	*
 	* @return the current state of the input device modifiers
 	*/
-	@:overload public function getGestureModifiers() : Int;
+	@:overload @:public public function getGestureModifiers() : Int;
 	
 	/**
 	* This method returns an <code>int</code> representing
@@ -128,14 +128,14 @@ extern class DragSourceDragEvent extends java.awt.dnd.DragSourceEvent
 	* @return the current state of the input device extended modifiers
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getGestureModifiersEx() : Int;
+	@:require(java4) @:overload @:public public function getGestureModifiersEx() : Int;
 	
 	/**
 	* This method returns the user drop action.
 	*
 	* @return the user drop action.
 	*/
-	@:overload public function getUserAction() : Int;
+	@:overload @:public public function getUserAction() : Int;
 	
 	/**
 	* This method returns the logical intersection of
@@ -145,7 +145,7 @@ extern class DragSourceDragEvent extends java.awt.dnd.DragSourceEvent
 	* @return the logical intersection of the target drop action and
 	*         the set of drop actions supported by the drag source.
 	*/
-	@:overload public function getDropAction() : Int;
+	@:overload @:public public function getDropAction() : Int;
 	
 	
 }

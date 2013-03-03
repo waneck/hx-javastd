@@ -28,58 +28,58 @@ extern class ThisExpression extends sun.tools.tree.Expression
 	/**
 	* Constructor
 	*/
-	@:overload public function new(where : haxe.Int64) : Void;
+	@:overload @:public public function new(where : haxe.Int64) : Void;
 	
-	@:overload private function new(op : Int, where : haxe.Int64) : Void;
+	@:overload @:protected private function new(op : Int, where : haxe.Int64) : Void;
 	
-	@:overload public function new(where : haxe.Int64, field : sun.tools.tree.LocalMember) : Void;
+	@:overload @:public public function new(where : haxe.Int64, field : sun.tools.tree.LocalMember) : Void;
 	
-	@:overload public function new(where : haxe.Int64, ctx : sun.tools.tree.Context) : Void;
+	@:overload @:public public function new(where : haxe.Int64, ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Constructor for "x.this()"
 	*/
-	@:overload public function new(where : haxe.Int64, outerArg : sun.tools.tree.Expression) : Void;
+	@:overload @:public public function new(where : haxe.Int64, outerArg : sun.tools.tree.Expression) : Void;
 	
-	@:overload public function getImplementation() : sun.tools.tree.Expression;
+	@:overload @:public override public function getImplementation() : sun.tools.tree.Expression;
 	
 	/**
 	* From the 'this' in an expression of the form outer.this(...),
 	* or the 'super' in an expression of the form outer.super(...),
 	* return the "outer" expression, or null if there is none.
 	*/
-	@:overload public function getOuterArg() : sun.tools.tree.Expression;
+	@:overload @:public public function getOuterArg() : sun.tools.tree.Expression;
 	
 	/**
 	* Check expression
 	*/
-	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
-	@:overload public function isNonNull() : Bool;
+	@:overload @:public override public function isNonNull() : Bool;
 	
-	@:overload public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload @:public override public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload @:public override public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	/**
 	* Inline
 	*/
-	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Create a copy of the expression for method inlining
 	*/
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Code
 	*/
-	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

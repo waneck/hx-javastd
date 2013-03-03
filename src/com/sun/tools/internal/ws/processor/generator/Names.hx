@@ -31,32 +31,32 @@ extern class Names implements com.sun.tools.internal.ws.processor.generator.Gene
 	*
 	* @author WS Development Team
 	*/
-	@:overload public static function getPortName(port : com.sun.tools.internal.ws.processor.model.Port) : String;
+	@:overload @:public @:static public static function getPortName(port : com.sun.tools.internal.ws.processor.model.Port) : String;
 	
-	@:overload public static function stripQualifier(name : String) : String;
+	@:overload @:public @:static public static function stripQualifier(name : String) : String;
 	
-	@:overload public static function getPackageName(className : String) : String;
+	@:overload @:public @:static public static function getPackageName(className : String) : String;
 	
-	@:overload public static function customJavaTypeClassName(intf : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : String;
+	@:overload @:public @:static public static function customJavaTypeClassName(intf : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : String;
 	
-	@:overload public static function customExceptionClassName(fault : com.sun.tools.internal.ws.processor.model.Fault) : String;
+	@:overload @:public @:static public static function customExceptionClassName(fault : com.sun.tools.internal.ws.processor.model.Fault) : String;
 	
-	@:overload public static function getExceptionClassMemberName() : String;
+	@:overload @:public @:static public static function getExceptionClassMemberName() : String;
 	
-	@:overload public static function isJavaReservedWord(name : String) : Bool;
+	@:overload @:public @:static public static function isJavaReservedWord(name : String) : Bool;
 	
 	/**
 	* See if its a java keyword name, if so then mangle the name
 	*/
-	@:overload public static function getJavaReserverVarialbeName(name : String) : String;
+	@:overload @:public @:static public static function getJavaReserverVarialbeName(name : String) : String;
 	
 	/* here we check on wether return values datatype is
 	boolean. If its boolean, instead of a get method
 	its set a is<MethodName> to comply with JavaBeans
 	Pattern spec */
-	@:overload public static function getJavaMemberReadMethod(member : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : String;
+	@:overload @:public @:static public static function getJavaMemberReadMethod(member : com.sun.tools.internal.ws.processor.model.java.JavaStructureMember) : String;
 	
-	@:overload public static function getResponseName(messageName : String) : String;
+	@:overload @:public @:static public static function getResponseName(messageName : String) : String;
 	
 	
 }

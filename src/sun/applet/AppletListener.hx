@@ -31,7 +31,7 @@ extern interface AppletListener extends java.util.EventListener
 	*
 	* @author  Sunita Mani
 	*/
-	@:overload public function appletStateChanged(e : sun.applet.AppletEvent) : Void;
+	@:overload @:public public function appletStateChanged(e : sun.applet.AppletEvent) : Void;
 	
 	
 }

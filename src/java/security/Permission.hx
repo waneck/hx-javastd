@@ -67,7 +67,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @param name name of the Permission object being created.
 	*
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Implements the guard interface for a permission. The
@@ -87,7 +87,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @see SecurityManager#checkPermission
 	*
 	*/
-	@:overload public function checkGuard(object : Dynamic) : Void;
+	@:overload @:public public function checkGuard(object : Dynamic) : Void;
 	
 	/**
 	* Checks if the specified permission's actions are "implied by"
@@ -105,7 +105,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload @:abstract public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public @:abstract public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two Permission objects for equality.
@@ -117,7 +117,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	*
 	* @return true if both Permission objects are equivalent.
 	*/
-	@:overload @:abstract public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:abstract public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this Permission object.
@@ -139,7 +139,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload @:abstract public function hashCode() : Int;
+	@:overload @:public @:abstract public function hashCode() : Int;
 	
 	/**
 	* Returns the name of this Permission.
@@ -149,7 +149,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @return the name of this Permission.
 	*
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Returns the actions as a String. This is abstract
@@ -170,7 +170,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @return the actions of this Permission.
 	*
 	*/
-	@:overload @:abstract public function getActions() : String;
+	@:overload @:public @:abstract public function getActions() : String;
 	
 	/**
 	* Returns an empty PermissionCollection for a given Permission object, or null if
@@ -186,7 +186,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @return a new PermissionCollection object for this type of Permission, or
 	* null if one is not defined.
 	*/
-	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	/**
 	* Returns a string describing this Permission.  The convention is to
@@ -196,7 +196,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	*
 	* @return information about this Permission.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

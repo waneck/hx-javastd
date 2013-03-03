@@ -31,7 +31,7 @@ package com.sun.media.sound;
 */
 extern interface SoftControl
 {
-	@:overload public function get(instance : Int, name : String) : java.NativeArray<Float>;
+	@:overload @:public public function get(instance : Int, name : String) : java.NativeArray<Float>;
 	
 	
 }

@@ -57,7 +57,7 @@ package com.sun.security.auth;
 	* @return true if this <code>SubjectCodeSource</code> implies the
 	*          the specified <code>CodeSource</code>.
 	*/
-	@:overload public function implies(codesource : java.security.CodeSource) : Bool;
+	@:overload @:public override public function implies(codesource : java.security.CodeSource) : Bool;
 	
 	/**
 	* Tests for equality between the specified object and this
@@ -75,7 +75,7 @@ package com.sun.security.auth;
 	*
 	* @return true if the objects are considered equal, false otherwise.
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return a hashcode for this <code>SubjectCodeSource</code>.
@@ -84,7 +84,7 @@ package com.sun.security.auth;
 	*
 	* @return a hashcode for this <code>SubjectCodeSource</code>.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Return a String representation of this <code>SubjectCodeSource</code>.
@@ -93,7 +93,7 @@ package com.sun.security.auth;
 	*
 	* @return a String representation of this <code>SubjectCodeSource</code>.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

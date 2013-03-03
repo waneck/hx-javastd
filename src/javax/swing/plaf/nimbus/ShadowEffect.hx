@@ -30,22 +30,22 @@ package javax.swing.plaf.nimbus;
 	*
 	* @author Created by Jasper Potts (Jun 18, 2007)
 	*/
-	private var color : java.awt.Color;
+	@:protected private var color : java.awt.Color;
 	
 	/** Opacity a float 0-1 for percentage */
-	private var opacity : Single;
+	@:protected private var opacity : Single;
 	
 	/** Angle in degrees between 0-360 */
-	private var angle : Int;
+	@:protected private var angle : Int;
 	
 	/** Distance in pixels */
-	private var distance : Int;
+	@:protected private var distance : Int;
 	
 	/** The shadow spread between 0-100 % */
-	private var spread : Int;
+	@:protected private var spread : Int;
 	
 	/** Size in pixels */
-	private var size : Int;
+	@:protected private var size : Int;
 	
 	
 }

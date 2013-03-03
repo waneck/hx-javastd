@@ -31,7 +31,7 @@ package com.sun.codemodel.internal;
 */
 @:internal extern class JAnnotationStringValue extends com.sun.codemodel.internal.JAnnotationValue
 {
-	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

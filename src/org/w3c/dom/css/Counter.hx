@@ -50,17 +50,17 @@ extern interface Counter
 	/**
 	*  This attribute is used for the identifier of the counter.
 	*/
-	@:overload public function getIdentifier() : String;
+	@:overload @:public public function getIdentifier() : String;
 	
 	/**
 	*  This attribute is used for the style of the list.
 	*/
-	@:overload public function getListStyle() : String;
+	@:overload @:public public function getListStyle() : String;
 	
 	/**
 	*  This attribute is used for the separator of the nested counters.
 	*/
-	@:overload public function getSeparator() : String;
+	@:overload @:public public function getSeparator() : String;
 	
 	
 }

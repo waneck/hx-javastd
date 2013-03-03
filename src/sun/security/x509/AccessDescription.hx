@@ -28,29 +28,29 @@ package sun.security.x509;
 */
 extern class AccessDescription
 {
-	public static var Ad_OCSP_Id(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var Ad_OCSP_Id(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var Ad_CAISSUERS_Id(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var Ad_CAISSUERS_Id(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var Ad_TIMESTAMPING_Id(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var Ad_TIMESTAMPING_Id(default, null) : sun.security.util.ObjectIdentifier;
 	
-	public static var Ad_CAREPOSITORY_Id(default, null) : sun.security.util.ObjectIdentifier;
+	@:public @:static @:final public static var Ad_CAREPOSITORY_Id(default, null) : sun.security.util.ObjectIdentifier;
 	
-	@:overload public function new(accessMethod : sun.security.util.ObjectIdentifier, accessLocation : sun.security.x509.GeneralName) : Void;
+	@:overload @:public public function new(accessMethod : sun.security.util.ObjectIdentifier, accessLocation : sun.security.x509.GeneralName) : Void;
 	
-	@:overload public function new(derValue : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derValue : sun.security.util.DerValue) : Void;
 	
-	@:overload public function getAccessMethod() : sun.security.util.ObjectIdentifier;
+	@:overload @:public public function getAccessMethod() : sun.security.util.ObjectIdentifier;
 	
-	@:overload public function getAccessLocation() : sun.security.x509.GeneralName;
+	@:overload @:public public function getAccessLocation() : sun.security.x509.GeneralName;
 	
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

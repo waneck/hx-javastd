@@ -27,73 +27,73 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Returns true if this closure is compiled in an inner class (i.e.
 	* if this is a real closure).
 	*/
-	@:overload public function inInnerClass() : Bool;
+	@:overload @:public public function inInnerClass() : Bool;
 	
 	/**
 	* Returns a reference to its parent closure or null if outermost.
 	*/
-	@:overload public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
+	@:overload @:public public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
 	
 	/**
 	* Returns the name of the auxiliary class or null if this predicate
 	* is compiled inside the Translet.
 	*/
-	@:overload public function getInnerClassName() : String;
+	@:overload @:public public function getInnerClassName() : String;
 	
 	/**
 	* Add new variable to the closure.
 	*/
-	@:overload public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
+	@:overload @:public public function addVariable(variableRef : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableRefBase) : Void;
 	
 	/**
 	* Parse the attributes of the xsl:sort element
 	*/
-	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload @:public override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Run type checks on the attributes; expression must return a string
 	* which we will use as a sort key
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload @:public override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* These two methods are needed in the static methods that compile the
 	* overloaded NodeSortRecord.compareType() and NodeSortRecord.sortOrder()
 	*/
-	@:overload public function translateSortType(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateSortType(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function translateSortOrder(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateSortOrder(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function translateCaseOrder(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateCaseOrder(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public function translateLang(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateLang(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* This method compiles code for the select expression for this
 	* xsl:sort element. The method is called from the static code-generating
 	* methods in this class.
 	*/
-	@:overload public function translateSelect(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public public function translateSelect(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* This method should not produce any code
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Compiles code that instantiates a SortingIterator object.
 	* This object's constructor needs referencdes to the current iterator
 	* and a node sort record producing objects as its parameters.
 	*/
-	@:overload public static function translateSortIterator(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, nodeSet : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, sortObjects : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public @:static public static function translateSortIterator(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, nodeSet : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, sortObjects : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Compiles code that instantiates a NodeSortRecordFactory object which
 	* will produce NodeSortRecord objects of a specific type.
 	*/
-	@:overload public static function compileSortRecordFactory(sortObjects : java.util.Vector<Dynamic>, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload @:public @:static public static function compileSortRecordFactory(sortObjects : java.util.Vector<Dynamic>, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload public static function compileSortRecordFactory(sortObjects : java.util.Vector<Dynamic>, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, sortRecordClass : String) : String;
+	@:overload @:public @:static public static function compileSortRecordFactory(sortObjects : java.util.Vector<Dynamic>, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, sortRecordClass : String) : String;
 	
 	
 }

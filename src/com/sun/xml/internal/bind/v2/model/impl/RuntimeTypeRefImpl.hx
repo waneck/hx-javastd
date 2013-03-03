@@ -28,13 +28,13 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(elementPropertyInfo : com.sun.xml.internal.bind.v2.model.impl.RuntimeElementPropertyInfoImpl, elementName : javax.xml.namespace.QName, type : java.lang.reflect.Type, isNillable : Bool, defaultValue : String) : Void;
+	@:overload @:public public function new(elementPropertyInfo : com.sun.xml.internal.bind.v2.model.impl.RuntimeElementPropertyInfoImpl, elementName : javax.xml.namespace.QName, type : java.lang.reflect.Type, isNillable : Bool, defaultValue : String) : Void;
 	
-	@:overload override public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload @:public override public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
+	@:overload @:public public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
 	
-	@:overload override public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
+	@:overload @:public override public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
 	
 	
 }

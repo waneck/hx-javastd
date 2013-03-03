@@ -44,7 +44,7 @@ extern interface Joinable
 	* @see #unsetMatchColumn(int)
 	*
 	*/
-	@:overload public function setMatchColumn(columnIdx : Int) : Void;
+	@:overload @:public public function setMatchColumn(columnIdx : Int) : Void;
 	
 	/**
 	* Sets the designated columns as the match column for this <code>RowSet</code>
@@ -57,7 +57,7 @@ extern interface Joinable
 	* @see #setMatchColumn(int[])
 	* @see #unsetMatchColumn(int[])
 	*/
-	@:overload public function setMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function setMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the designated column as the match column for this <code>RowSet</code>
@@ -78,7 +78,7 @@ extern interface Joinable
 	* @see #unsetMatchColumn
 	* @see #setMatchColumn(int[])
 	*/
-	@:overload public function setMatchColumn(columnName : String) : Void;
+	@:overload @:public public function setMatchColumn(columnName : String) : Void;
 	
 	/**
 	* Sets the designated columns as the match column for this <code>RowSet</code>
@@ -92,7 +92,7 @@ extern interface Joinable
 	* @see #unsetMatchColumn
 	* @see #setMatchColumn(int[])
 	*/
-	@:overload public function setMatchColumn(columnNames : java.NativeArray<String>) : Void;
+	@:overload @:public public function setMatchColumn(columnNames : java.NativeArray<String>) : Void;
 	
 	/**
 	* Retrieves the indexes of the match columns that were set for this
@@ -105,7 +105,7 @@ extern interface Joinable
 	* @see #setMatchColumn
 	* @see #unsetMatchColumn
 	*/
-	@:overload public function getMatchColumnIndexes() : java.NativeArray<Int>;
+	@:overload @:public public function getMatchColumnIndexes() : java.NativeArray<Int>;
 	
 	/**
 	* Retrieves the names of the match columns that were set for this
@@ -119,7 +119,7 @@ extern interface Joinable
 	* @see #unsetMatchColumn
 	*
 	*/
-	@:overload public function getMatchColumnNames() : java.NativeArray<String>;
+	@:overload @:public public function getMatchColumnNames() : java.NativeArray<String>;
 	
 	/**
 	* Unsets the designated column as the match column for this <code>RowSet</code>
@@ -137,7 +137,7 @@ extern interface Joinable
 	*          column
 	* @see #setMatchColumn
 	*/
-	@:overload public function unsetMatchColumn(columnIdx : Int) : Void;
+	@:overload @:public public function unsetMatchColumn(columnIdx : Int) : Void;
 	
 	/**
 	* Unsets the designated columns as the match column for this <code>RowSet</code>
@@ -150,7 +150,7 @@ extern interface Joinable
 	*          column
 	* @see #setMatchColumn
 	*/
-	@:overload public function unsetMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
+	@:overload @:public public function unsetMatchColumn(columnIdxes : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Unsets the designated column as the match column for this <code>RowSet</code>
@@ -168,7 +168,7 @@ extern interface Joinable
 	*          column
 	* @see #setMatchColumn
 	*/
-	@:overload public function unsetMatchColumn(columnName : String) : Void;
+	@:overload @:public public function unsetMatchColumn(columnName : String) : Void;
 	
 	/**
 	* Unsets the designated columns as the match columns for this <code>RowSet</code>
@@ -180,7 +180,7 @@ extern interface Joinable
 	*     designated column was not previously set as a match column
 	* @see #setMatchColumn
 	*/
-	@:overload public function unsetMatchColumn(columnName : java.NativeArray<String>) : Void;
+	@:overload @:public public function unsetMatchColumn(columnName : java.NativeArray<String>) : Void;
 	
 	
 }

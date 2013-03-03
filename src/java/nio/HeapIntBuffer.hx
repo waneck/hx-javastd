@@ -36,37 +36,37 @@ package java.nio;
 */
 @:internal extern class HeapIntBuffer extends java.nio.IntBuffer
 {
-	@:overload private function new(buf : java.NativeArray<Int>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
+	@:overload @:protected private function new(buf : java.NativeArray<Int>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload override public function slice() : java.nio.IntBuffer;
+	@:overload @:public override public function slice() : java.nio.IntBuffer;
 	
-	@:overload override public function duplicate() : java.nio.IntBuffer;
+	@:overload @:public override public function duplicate() : java.nio.IntBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.IntBuffer;
+	@:overload @:public override public function asReadOnlyBuffer() : java.nio.IntBuffer;
 	
-	@:overload private function ix(i : Int) : Int;
+	@:overload @:protected private function ix(i : Int) : Int;
 	
-	@:overload override public function get() : Int;
+	@:overload @:public override public function get() : Int;
 	
-	@:overload override public function get(i : Int) : Int;
+	@:overload @:public override public function get(i : Int) : Int;
 	
-	@:overload override public function get(dst : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function get(dst : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload @:public override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload @:public override public function isReadOnly() : Bool;
 	
-	@:overload override public function put(x : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function put(x : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(i : Int, x : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function put(i : Int, x : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
+	@:overload @:public override public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
+	@:overload @:public override public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
 	
-	@:overload override public function compact() : java.nio.IntBuffer;
+	@:overload @:public override public function compact() : java.nio.IntBuffer;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload @:public override public function order() : java.nio.ByteOrder;
 	
 	
 }

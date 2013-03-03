@@ -32,7 +32,7 @@ extern class PathList
 	* @param pathSource the path to be appended to pathTo
 	* @return the resulting path
 	*/
-	@:overload public static function appendPath(pathTo : String, pathFrom : String) : String;
+	@:overload @:public @:static public static function appendPath(pathTo : String, pathFrom : String) : String;
 	
 	/**
 	* Utility method for converting a search path string to an array
@@ -41,7 +41,7 @@ extern class PathList
 	* @param path the search path string
 	* @return the resulting array of directory and JAR file URLs
 	*/
-	@:overload public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
+	@:overload @:public @:static public static function pathToURLs(path : String) : java.NativeArray<java.net.URL>;
 	
 	
 }

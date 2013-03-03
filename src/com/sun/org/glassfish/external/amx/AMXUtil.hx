@@ -28,21 +28,21 @@ extern class AMXUtil
 	/**
 	Make a new ObjectName (unchecked exception).
 	*/
-	@:overload public static function newObjectName(s : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function newObjectName(s : String) : javax.management.ObjectName;
 	
 	/**
 	Make a new ObjectName (unchecked exception).
 	@param domain
 	@param props
 	*/
-	@:overload public static function newObjectName(domain : String, props : String) : javax.management.ObjectName;
+	@:overload @:public @:static public static function newObjectName(domain : String, props : String) : javax.management.ObjectName;
 	
 	/**
 	Get the ObjectName of the MBeanServerDelegateObjectName.
 	*/
-	@:overload public static function getMBeanServerDelegateObjectName() : javax.management.ObjectName;
+	@:overload @:public @:static public static function getMBeanServerDelegateObjectName() : javax.management.ObjectName;
 	
-	@:overload public static function prop(key : String, value : String) : String;
+	@:overload @:public @:static public static function prop(key : String, value : String) : String;
 	
 	
 }

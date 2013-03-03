@@ -26,32 +26,32 @@ extern interface XSAttributeDeclaration extends com.sun.org.apache.xerces.intern
 	/**
 	* [type definition]: A simple type definition.
 	*/
-	@:overload public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
+	@:overload @:public public function getTypeDefinition() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* [scope]. One of <code>SCOPE_GLOBAL</code>, <code>SCOPE_LOCAL</code>, or
 	* <code>SCOPE_ABSENT</code>. If the scope is local, then the
 	* <code>enclosingCTDefinition</code> is present.
 	*/
-	@:overload public function getScope() : java.StdTypes.Int16;
+	@:overload @:public public function getScope() : java.StdTypes.Int16;
 	
 	/**
 	* The complex type definition for locally scoped declarations (see
 	* <code>scope</code>), otherwise <code>null</code> if no such
 	* definition exists.
 	*/
-	@:overload public function getEnclosingCTDefinition() : com.sun.org.apache.xerces.internal.xs.XSComplexTypeDefinition;
+	@:overload @:public public function getEnclosingCTDefinition() : com.sun.org.apache.xerces.internal.xs.XSComplexTypeDefinition;
 	
 	/**
 	* Value constraint: one of <code>VC_NONE, VC_DEFAULT, VC_FIXED</code>.
 	*/
-	@:overload public function getConstraintType() : java.StdTypes.Int16;
+	@:overload @:public public function getConstraintType() : java.StdTypes.Int16;
 	
 	/**
 	* Value constraint: The constraint value with respect to the [type
 	* definition], otherwise <code>null</code>.
 	*/
-	@:overload public function getConstraintValue() : String;
+	@:overload @:public public function getConstraintValue() : String;
 	
 	/**
 	* Value Constraint: Binding specific actual constraint value or
@@ -61,7 +61,7 @@ extern interface XSAttributeDeclaration extends com.sun.org.apache.xerces.intern
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualVC() : Dynamic;
+	@:overload @:public public function getActualVC() : Dynamic;
 	
 	/**
 	* The actual constraint value built-in datatype, e.g.
@@ -77,7 +77,7 @@ extern interface XSAttributeDeclaration extends com.sun.org.apache.xerces.intern
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getActualVCType() : java.StdTypes.Int16;
+	@:overload @:public public function getActualVCType() : java.StdTypes.Int16;
 	
 	/**
 	* In the case the actual constraint value represents a list, i.e. the
@@ -92,18 +92,18 @@ extern interface XSAttributeDeclaration extends com.sun.org.apache.xerces.intern
 	*   NOT_SUPPORTED_ERR: Raised if the implementation does not support this
 	*   method.
 	*/
-	@:overload public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
+	@:overload @:public public function getItemValueTypes() : com.sun.org.apache.xerces.internal.xs.ShortList;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>.
 	* If not null then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty  <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

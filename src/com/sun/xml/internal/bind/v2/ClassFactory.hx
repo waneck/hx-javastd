@@ -25,23 +25,23 @@ package com.sun.xml.internal.bind.v2;
 */
 extern class ClassFactory
 {
-	@:overload public static function cleanCache() : Void;
+	@:overload @:public @:static public static function cleanCache() : Void;
 	
 	/**
 	* Creates a new instance of the class but throw exceptions without catching it.
 	*/
-	@:overload public static function create0<T>(clazz : Class<T>) : T;
+	@:overload @:public @:static public static function create0<T>(clazz : Class<T>) : T;
 	
 	/**
 	* The same as {@link #create0} but with an error handling to make
 	* the instanciation error fatal.
 	*/
-	@:overload public static function create<T>(clazz : Class<T>) : T;
+	@:overload @:public @:static public static function create<T>(clazz : Class<T>) : T;
 	
 	/**
 	*  Call a method in the factory class to get the object.
 	*/
-	@:overload public static function create(method : java.lang.reflect.Method) : Dynamic;
+	@:overload @:public @:static public static function create(method : java.lang.reflect.Method) : Dynamic;
 	
 	/**
 	* Infers the instanciable implementation class that can be assigned to the given field type.
@@ -49,7 +49,7 @@ extern class ClassFactory
 	* @return null
 	*      if inference fails.
 	*/
-	@:overload public static function inferImplClass<T>(fieldType : Class<T>, knownImplClasses : java.NativeArray<Class<Dynamic>>) : Class<T>;
+	@:overload @:public @:static public static function inferImplClass<T>(fieldType : Class<T>, knownImplClasses : java.NativeArray<Class<Dynamic>>) : Class<T>;
 	
 	
 }

@@ -29,7 +29,7 @@ package sun.rmi.transport.proxy;
 	* CGIClientException is thrown when an error is detected
 	* in a client's request.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }
@@ -38,7 +38,7 @@ package sun.rmi.transport.proxy;
 	/**
 	* CGIServerException is thrown when an error occurs here on the server.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }
@@ -48,12 +48,12 @@ package sun.rmi.transport.proxy;
 	* Return the string form of the command
 	* to be recognized in the query string.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Execute the command with the given string as parameter.
 	*/
-	@:overload public function execute(param : String) : Void;
+	@:overload @:public public function execute(param : String) : Void;
 	
 	
 }
@@ -64,7 +64,7 @@ extern class CGIHandler
 	* the first '=' is interpreted as the command name, and the string
 	* after the first '=' is the parameters to the command.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -74,9 +74,9 @@ extern class CGIHandler
 	* "forward" command: Forward request body to local port on the server,
 	* and send reponse back to client.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function execute(param : String) : Void;
+	@:overload @:public public function execute(param : String) : Void;
 	
 	
 }
@@ -86,9 +86,9 @@ extern class CGIHandler
 	* "gethostname" command: Return the host name of the server as the
 	* response body
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function execute(param : String) : Void;
+	@:overload @:public public function execute(param : String) : Void;
 	
 	
 }
@@ -98,9 +98,9 @@ extern class CGIHandler
 	* "ping" command: Return an OK status to indicate that connection
 	* was successful.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function execute(param : String) : Void;
+	@:overload @:public public function execute(param : String) : Void;
 	
 	
 }
@@ -110,9 +110,9 @@ extern class CGIHandler
 	* "tryhostname" command: Return a human readable message describing
 	* what host name is available to local Java VMs.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function execute(param : String) : Void;
+	@:overload @:public public function execute(param : String) : Void;
 	
 	
 }

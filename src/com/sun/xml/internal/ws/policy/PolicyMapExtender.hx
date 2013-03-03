@@ -30,19 +30,19 @@ package com.sun.xml.internal.ws.policy;
 */
 extern class PolicyMapExtender extends com.sun.xml.internal.ws.policy.PolicyMapMutator
 {
-	@:overload public static function createPolicyMapExtender() : com.sun.xml.internal.ws.policy.PolicyMapExtender;
+	@:overload @:public @:static public static function createPolicyMapExtender() : com.sun.xml.internal.ws.policy.PolicyMapExtender;
 	
-	@:overload public function putServiceSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
+	@:overload @:public public function putServiceSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	
-	@:overload public function putEndpointSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
+	@:overload @:public public function putEndpointSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	
-	@:overload public function putOperationSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
+	@:overload @:public public function putOperationSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	
-	@:overload public function putInputMessageSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
+	@:overload @:public public function putInputMessageSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	
-	@:overload public function putOutputMessageSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
+	@:overload @:public public function putOutputMessageSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	
-	@:overload public function putFaultMessageSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
+	@:overload @:public public function putFaultMessageSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	
 	
 }

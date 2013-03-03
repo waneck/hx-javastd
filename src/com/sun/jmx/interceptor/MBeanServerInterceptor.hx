@@ -29,49 +29,49 @@ extern interface MBeanServerInterceptor extends javax.management.MBeanServer
 	* This method should never be called.
 	* Usually hrows UnsupportedOperationException.
 	*/
-	@:overload public function instantiate(className : String) : Dynamic;
+	@:overload @:public public function instantiate(className : String) : Dynamic;
 	
 	/**
 	* This method should never be called.
 	* Usually throws UnsupportedOperationException.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
 	
 	/**
 	* This method should never be called.
 	* Usually throws UnsupportedOperationException.
 	*/
-	@:overload public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* This method should never be called.
 	* Usually throws UnsupportedOperationException.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* This method should never be called.
 	* Usually throws UnsupportedOperationException.
 	*/
-	@:overload public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* This method should never be called.
 	* Usually throws UnsupportedOperationException.
 	*/
-	@:overload public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* This method should never be called.
 	* Usually hrows UnsupportedOperationException.
 	*/
-	@:overload public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* This method should never be called.
 	* Usually throws UnsupportedOperationException.
 	*/
-	@:overload public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
+	@:overload @:public public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
 	
 	
 }

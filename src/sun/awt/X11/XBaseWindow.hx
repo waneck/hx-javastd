@@ -25,15 +25,15 @@ package sun.awt.X11;
 */
 extern class XBaseWindow
 {
-	public static var PARENT_WINDOW(default, null) : String;
+	@:public @:static @:final public static var PARENT_WINDOW(default, null) : String;
 	
-	@:overload @:final private function init(parentWindow : haxe.Int64, bounds : java.awt.Rectangle) : Void;
+	@:overload @:protected @:final private function init(parentWindow : haxe.Int64, bounds : java.awt.Rectangle) : Void;
 	
-	@:overload @:final private function preInit() : Void;
+	@:overload @:protected @:final private function preInit() : Void;
 	
-	@:overload @:final private function postInit() : Void;
+	@:overload @:protected @:final private function postInit() : Void;
 	
-	private var state_lock : sun.awt.X11.XBaseWindow.XBaseWindow_StateLock;
+	@:protected private var state_lock : sun.awt.X11.XBaseWindow.XBaseWindow_StateLock;
 	
 	/**
 	* Creates window using parameters <code>params</code>
@@ -41,132 +41,132 @@ extern class XBaseWindow
 	* Note: Descendants can call this method to create the window
 	* at the time different to instance construction.
 	*/
-	@:overload @:final private function init(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:protected @:final private function init(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload public function checkInitialised() : Bool;
+	@:overload @:public public function checkInitialised() : Bool;
 	
-	@:overload public function new(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:public public function new(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	/**
 	* Verifies that all required parameters are set. If not, sets them to default values.
 	* Verifies values of critical parameters, adjust their values when needed.
 	* @throws IllegalArgumentException if params is null
 	*/
-	@:overload private function checkParams(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload @:protected private function checkParams(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload public function getDelayedParams() : sun.awt.X11.XCreateWindowParams;
+	@:overload @:public public function getDelayedParams() : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload private function getWMName() : String;
+	@:overload @:protected private function getWMName() : String;
 	
-	@:overload private function initClientLeader() : Void;
+	@:overload @:protected private function initClientLeader() : Void;
 	
 	/**
 	* Helper function to set W
 	*/
-	@:overload @:final public function setWMHints(hints : sun.awt.X11.XWMHints) : Void;
+	@:overload @:public @:final public function setWMHints(hints : sun.awt.X11.XWMHints) : Void;
 	
-	@:overload public function getWMHints() : sun.awt.X11.XWMHints;
+	@:overload @:public public function getWMHints() : sun.awt.X11.XWMHints;
 	
 	/*
 	* Call this method under AWTLock.
 	* The lock should be acquired untill all operations with XSizeHints are completed.
 	*/
-	@:overload public function getHints() : sun.awt.X11.XSizeHints;
+	@:overload @:public public function getHints() : sun.awt.X11.XSizeHints;
 	
-	@:overload public function setSizeHints(flags : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function setSizeHints(flags : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload public function isMinSizeSet() : Bool;
+	@:overload @:public public function isMinSizeSet() : Bool;
 	
-	@:overload public function getWindow() : haxe.Int64;
+	@:overload @:public public function getWindow() : haxe.Int64;
 	
-	@:overload public function getContentWindow() : haxe.Int64;
+	@:overload @:public public function getContentWindow() : haxe.Int64;
 	
-	@:overload public function getContentXWindow() : sun.awt.X11.XBaseWindow;
+	@:overload @:public public function getContentXWindow() : sun.awt.X11.XBaseWindow;
 	
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
-	@:overload public function toFront() : Void;
+	@:overload @:public public function toFront() : Void;
 	
-	@:overload public function xRequestFocus(time : haxe.Int64) : Void;
+	@:overload @:public public function xRequestFocus(time : haxe.Int64) : Void;
 	
-	@:overload public function xRequestFocus() : Void;
+	@:overload @:public public function xRequestFocus() : Void;
 	
-	@:overload public static function xGetInputFocus() : haxe.Int64;
+	@:overload @:public @:static public static function xGetInputFocus() : haxe.Int64;
 	
-	@:overload public function xSetVisible(visible : Bool) : Void;
+	@:overload @:public public function xSetVisible(visible : Bool) : Void;
 	
-	@:overload public function xSetBounds(bounds : java.awt.Rectangle) : Void;
+	@:overload @:public public function xSetBounds(bounds : java.awt.Rectangle) : Void;
 	
-	@:overload public function xSetBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public public function xSetBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* We should always grab both keyboard and pointer to control event flow
 	* on popups. This also simplifies synthetic grab implementation.
 	* The active grab overrides activated automatic grab.
 	*/
-	@:overload public function grabInput() : Bool;
+	@:overload @:public public function grabInput() : Bool;
 	
-	@:overload public function getChildren() : java.util.Set<Null<haxe.Int64>>;
+	@:overload @:public public function getChildren() : java.util.Set<Null<haxe.Int64>>;
 	
-	@:overload public function handleMapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleMapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleUnmapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleUnmapNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleReparentNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleReparentNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleDestroyNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleDestroyNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleCreateNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleCreateNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleClientMessage(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleClientMessage(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleVisibilityEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleVisibilityEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleKeyRelease(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleKeyRelease(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
 	
 	/**
 	* Activate automatic grab on first ButtonPress,
 	* deactivate on full mouse release
 	*/
-	@:overload public function handleButtonPressRelease(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleButtonPressRelease(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleMotionNotify(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleMotionNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleXCrossingEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleXCrossingEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload public function dispatchEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload @:public public function dispatchEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload @:protected private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
-	@:overload public function getAbsoluteX() : Int;
+	@:overload @:public public function getAbsoluteX() : Int;
 	
-	@:overload public function getAbsoluteY() : Int;
+	@:overload @:public public function getAbsoluteY() : Int;
 	
-	@:overload public function getParentWindow() : sun.awt.X11.XBaseWindow;
+	@:overload @:public public function getParentWindow() : sun.awt.X11.XBaseWindow;
 	
-	@:overload public function getToplevelXWindow() : sun.awt.X11.XWindowPeer;
+	@:overload @:public public function getToplevelXWindow() : sun.awt.X11.XWindowPeer;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns whether the given point is inside of the window.  Coordinates are local.
 	*/
-	@:overload public function contains(x : Int, y : Int) : Bool;
+	@:overload @:public public function contains(x : Int, y : Int) : Bool;
 	
 	/**
 	* Returns whether the given point is inside of the window.  Coordinates are global.
 	*/
-	@:overload public function containsGlobal(x : Int, y : Int) : Bool;
+	@:overload @:public public function containsGlobal(x : Int, y : Int) : Bool;
 	
 	
 }

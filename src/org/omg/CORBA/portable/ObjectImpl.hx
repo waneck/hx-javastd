@@ -34,7 +34,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @throws BAD_OPERATION if the delegate has not been set
 	* @see #_set_delegate
 	*/
-	@:overload public function _get_delegate() : org.omg.CORBA.portable.Delegate;
+	@:overload @:public public function _get_delegate() : org.omg.CORBA.portable.Delegate;
 	
 	/**
 	* Sets the Delegate for this <code>ObjectImpl</code> instance to the given
@@ -46,7 +46,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*        will be delegated; may be implemented by a third-party ORB
 	* @see #_get_delegate
 	*/
-	@:overload public function _set_delegate(delegate : org.omg.CORBA.portable.Delegate) : Void;
+	@:overload @:public public function _set_delegate(delegate : org.omg.CORBA.portable.Delegate) : Void;
 	
 	/**
 	* Retrieves a string array containing the repository identifiers
@@ -57,7 +57,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return the array of all repository identifiers supported by this
 	*         <code>ObjectImpl</code> instance
 	*/
-	@:overload @:abstract public function _ids() : java.NativeArray<String>;
+	@:overload @:public @:abstract public function _ids() : java.NativeArray<String>;
 	
 	/**
 	* Returns a duplicate of this <code>ObjectImpl</code> object.
@@ -65,12 +65,12 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return an <code>orb.omg.CORBA.Object</code> object that is
 	*         a duplicate of this object
 	*/
-	@:overload public function _duplicate() : org.omg.CORBA.Object;
+	@:overload @:public public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Releases the resources associated with this <code>ObjectImpl</code> object.
 	*/
-	@:overload public function _release() : Void;
+	@:overload @:public public function _release() : Void;
 	
 	/**
 	* Checks whether the object identified by the given repository
@@ -82,7 +82,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         repository id is an instance of <code>ObjectImpl</code>;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function _is_a(repository_id : String) : Bool;
+	@:overload @:public public function _is_a(repository_id : String) : Bool;
 	
 	/**
 	* Checks whether the the given <code>ObjectImpl</code> object is
@@ -94,7 +94,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         to this <code>ObjectImpl</code> object;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function _is_equivalent(that : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function _is_equivalent(that : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Checks whether the server object for this <code>ObjectImpl</code>
@@ -103,7 +103,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return <code>true</code> if the ORB knows authoritatively that the
 	*         server object does not exist; <code>false</code> otherwise
 	*/
-	@:overload public function _non_existent() : Bool;
+	@:overload @:public public function _non_existent() : Bool;
 	
 	/**
 	* Retrieves the hash code that serves as an ORB-internal identifier for
@@ -114,7 +114,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return an <code>int</code> representing the hash code for this
 	*         <code>ObjectImpl</code> object
 	*/
-	@:overload public function _hash(maximum : Int) : Int;
+	@:overload @:public public function _hash(maximum : Int) : Int;
 	
 	/**
 	* Creates a <code>Request</code> object containing the given method
@@ -125,7 +125,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return a new <code>Request</code> object initialized with the
 	*         given method
 	*/
-	@:overload public function _request(operation : String) : org.omg.CORBA.Request;
+	@:overload @:public public function _request(operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a <code>Request</code> object that contains the given context,
@@ -142,7 +142,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         given context, method, argument list, and container for the
 	*         return value
 	*/
-	@:overload public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a <code>Request</code> object that contains the given context,
@@ -172,7 +172,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         container for the result, exceptions, and list of property
 	*         names to be used in resolving the context strings
 	*/
-	@:overload public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exceptions : org.omg.CORBA.ExceptionList, contexts : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exceptions : org.omg.CORBA.ExceptionList, contexts : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Retrieves the interface definition for this <code>ObjectImpl</code>
@@ -181,7 +181,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return the <code>org.omg.CORBA.Object</code> instance that is the
 	*         interface definition for this <code>ObjectImpl</code> object
 	*/
-	@:overload public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns a reference to the ORB associated with this object and
@@ -192,7 +192,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*          <code>Delegate</code> object contained in this
 	*          <code>ObjectImpl</code> object
 	*/
-	@:overload public function _orb() : org.omg.CORBA.ORB;
+	@:overload @:public public function _orb() : org.omg.CORBA.ORB;
 	
 	/**
 	* Retrieves the <code>Policy</code> object for this
@@ -204,7 +204,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         and that applies to this <code>ObjectImpl</code> object
 	* @see org.omg.CORBA.PolicyOperations#policy_type
 	*/
-	@:overload public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Retrieves a list of the domain managers for this
@@ -213,7 +213,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return an array containing the <code>DomainManager</code>
 	*         objects for this instance of <code>ObjectImpl</code>
 	*/
-	@:overload public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Sets this <code>ObjectImpl</code> object's override type for
@@ -230,7 +230,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return an <code>Object</code> with the given policies replacing or
 	*         added to its previous policies
 	*/
-	@:overload public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Checks whether this <code>ObjectImpl</code> object is implemented
@@ -239,7 +239,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @return <code>true</code> if this object is implemented by a local
 	*         servant; <code>false</code> otherwise
 	*/
-	@:overload public function _is_local() : Bool;
+	@:overload @:public public function _is_local() : Bool;
 	
 	/**
 	* Returns a Java reference to the local servant that should be used for sending
@@ -273,7 +273,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         be local due to a ForwardRequest from a POA ServantManager
 	* @throws org.omg.CORBA.BAD_PARAM if the servant is not the expected type
 	*/
-	@:overload public function _servant_preinvoke(operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload @:public public function _servant_preinvoke(operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
 	/**
 	* Is called by the local stub after it has invoked an operation
@@ -289,7 +289,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	* @param servant the instance of the <code>ServantObject</code>
 	*        returned by the <code>_servant_preinvoke</code> method
 	*/
-	@:overload public function _servant_postinvoke(servant : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload @:public public function _servant_postinvoke(servant : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	/**
 	* Returns an <code>OutputStream</code> object to use for marshalling
@@ -302,7 +302,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         request is not one way, that is, a response is expected
 	* @return an <code>OutputStream</code> object for dispatching the request
 	*/
-	@:overload public function _request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
+	@:overload @:public public function _request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
 	/**
 	* Invokes an operation and returns an <code>InputStream</code>
@@ -325,7 +325,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*         to a remarshalling error
 	* @see #_request
 	*/
-	@:overload public function _invoke(output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
+	@:overload @:public public function _invoke(output : org.omg.CORBA.portable.OutputStream) : org.omg.CORBA.portable.InputStream;
 	
 	/**
 	* Releases the given
@@ -340,7 +340,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*        nothing
 	* @see #_invoke
 	*/
-	@:overload public function _releaseReply(input : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _releaseReply(input : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Returns a <code>String</code> object that represents this
@@ -348,14 +348,14 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*
 	* @return the <code>String</code> representation of this object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns the hash code for this <code>ObjectImpl</code> object.
 	*
 	* @return the hash code for this object
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares this <code>ObjectImpl</code> object with the given one
@@ -365,7 +365,7 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*@return <code>true</code> if the two objects are equal;
 	*        <code>false</code> otherwise
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

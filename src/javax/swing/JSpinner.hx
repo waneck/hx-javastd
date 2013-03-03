@@ -113,20 +113,20 @@ package javax.swing;
 	*
 	* @throws NullPointerException if the model is {@code null}
 	*/
-	@:overload public function new(model : javax.swing.SpinnerModel) : Void;
+	@:overload @:public public function new(model : javax.swing.SpinnerModel) : Void;
 	
 	/**
 	* Constructs a spinner with an <code>Integer SpinnerNumberModel</code>
 	* with initial value 0 and no minimum or maximum limits.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Returns the look and feel (L&F) object that renders this component.
 	*
 	* @return the <code>SpinnerUI</code> object that renders this component
 	*/
-	@:overload public function getUI() : javax.swing.plaf.SpinnerUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.SpinnerUI;
 	
 	/**
 	* Sets the look and feel (L&F) object that renders this component.
@@ -134,7 +134,7 @@ package javax.swing;
 	* @param ui  the <code>SpinnerUI</code> L&F object
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.SpinnerUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.SpinnerUI) : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the look and feel
@@ -144,14 +144,14 @@ package javax.swing;
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Resets the UI property with the value from the current look and feel.
 	*
 	* @see UIManager#getUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* This method is called by the constructors to create the
@@ -178,7 +178,7 @@ package javax.swing;
 	* @see #getModel
 	* @see #setEditor
 	*/
-	@:overload private function createEditor(model : javax.swing.SpinnerModel) : javax.swing.JComponent;
+	@:overload @:protected private function createEditor(model : javax.swing.SpinnerModel) : javax.swing.JComponent;
 	
 	/**
 	* Changes the model that represents the value of this spinner.
@@ -202,7 +202,7 @@ package javax.swing;
 	*    attribute: visualUpdate true
 	*  description: Model that represents the value of this spinner.
 	*/
-	@:overload public function setModel(model : javax.swing.SpinnerModel) : Void;
+	@:overload @:public public function setModel(model : javax.swing.SpinnerModel) : Void;
 	
 	/**
 	* Returns the <code>SpinnerModel</code> that defines
@@ -211,7 +211,7 @@ package javax.swing;
 	* @return the value of the model property
 	* @see #setModel
 	*/
-	@:overload public function getModel() : javax.swing.SpinnerModel;
+	@:overload @:public public function getModel() : javax.swing.SpinnerModel;
 	
 	/**
 	* Returns the current value of the model, typically
@@ -230,7 +230,7 @@ package javax.swing;
 	* @see #setValue
 	* @see SpinnerModel#getValue
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Changes current value of the model, typically
@@ -249,7 +249,7 @@ package javax.swing;
 	* @see #getValue
 	* @see SpinnerModel#setValue
 	*/
-	@:overload public function setValue(value : Dynamic) : Void;
+	@:overload @:public public function setValue(value : Dynamic) : Void;
 	
 	/**
 	* Returns the object in the sequence that comes after the object returned
@@ -268,7 +268,7 @@ package javax.swing;
 	* @see #getPreviousValue
 	* @see SpinnerModel#getNextValue
 	*/
-	@:overload public function getNextValue() : Dynamic;
+	@:overload @:public public function getNextValue() : Dynamic;
 	
 	/**
 	* Adds a listener to the list that is notified each time a change
@@ -284,7 +284,7 @@ package javax.swing;
 	* @see #removeChangeListener
 	* @see #getModel
 	*/
-	@:overload public function addChangeListener(listener : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function addChangeListener(listener : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Removes a <code>ChangeListener</code> from this spinner.
@@ -293,7 +293,7 @@ package javax.swing;
 	* @see #fireStateChanged
 	* @see #addChangeListener
 	*/
-	@:overload public function removeChangeListener(listener : javax.swing.event.ChangeListener) : Void;
+	@:overload @:public public function removeChangeListener(listener : javax.swing.event.ChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the <code>ChangeListener</code>s added
@@ -303,7 +303,7 @@ package javax.swing;
 	*         array if no listeners have been added
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
+	@:require(java4) @:overload @:public public function getChangeListeners() : java.NativeArray<javax.swing.event.ChangeListener>;
 	
 	/**
 	* Sends a <code>ChangeEvent</code>, whose source is this
@@ -316,7 +316,7 @@ package javax.swing;
 	* @see #removeChangeListener
 	* @see EventListenerList
 	*/
-	@:overload private function fireStateChanged() : Void;
+	@:overload @:protected private function fireStateChanged() : Void;
 	
 	/**
 	* Returns the object in the sequence that comes
@@ -337,7 +337,7 @@ package javax.swing;
 	* @see #getNextValue
 	* @see SpinnerModel#getPreviousValue
 	*/
-	@:overload public function getPreviousValue() : Dynamic;
+	@:overload @:public public function getPreviousValue() : Dynamic;
 	
 	/**
 	* Changes the <code>JComponent</code> that displays the current value
@@ -358,7 +358,7 @@ package javax.swing;
 	*    attribute: visualUpdate true
 	*  description: JComponent that displays the current value of the model
 	*/
-	@:overload public function setEditor(editor : javax.swing.JComponent) : Void;
+	@:overload @:public public function setEditor(editor : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns the component that displays and potentially
@@ -369,7 +369,7 @@ package javax.swing;
 	* @see #setEditor
 	* @see #createEditor
 	*/
-	@:overload public function getEditor() : javax.swing.JComponent;
+	@:overload @:public public function getEditor() : javax.swing.JComponent;
 	
 	/**
 	* Commits the currently edited value to the <code>SpinnerModel</code>.
@@ -380,7 +380,7 @@ package javax.swing;
 	* @throws ParseException if the currently edited value couldn't
 	*         be commited.
 	*/
-	@:overload public function commitEdit() : Void;
+	@:overload @:public public function commitEdit() : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> for the <code>JSpinner</code>
@@ -388,7 +388,7 @@ package javax.swing;
 	* @return the <code>AccessibleContext</code> for the <code>JSpinner</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java5) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -398,7 +398,7 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$ModelListener') @:internal extern class JSpinner_ModelListener implements javax.swing.event.ChangeListener implements java.io.Serializable
 {
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }
@@ -446,7 +446,7 @@ package javax.swing;
 	* @see #getTextField
 	* @see JSpinner#addChangeListener
 	*/
-	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
+	@:overload @:public public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Disconnect <code>this</code> editor from the specified
@@ -456,7 +456,7 @@ package javax.swing;
 	* @param spinner the <code>JSpinner</code> to disconnect this
 	*    editor from; the same spinner as was passed to the constructor.
 	*/
-	@:overload public function dismiss(spinner : javax.swing.JSpinner) : Void;
+	@:overload @:public public function dismiss(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Returns the <code>JSpinner</code> ancestor of this editor or
@@ -472,7 +472,7 @@ package javax.swing;
 	*
 	* @see JSpinner#createEditor
 	*/
-	@:overload public function getSpinner() : javax.swing.JSpinner;
+	@:overload @:public public function getSpinner() : javax.swing.JSpinner;
 	
 	/**
 	* Returns the <code>JFormattedTextField</code> child of this
@@ -484,7 +484,7 @@ package javax.swing;
 	* @see #getSpinner
 	* @see #getModel
 	*/
-	@:overload public function getTextField() : javax.swing.JFormattedTextField;
+	@:overload @:public public function getTextField() : javax.swing.JFormattedTextField;
 	
 	/**
 	* This method is called when the spinner's model's state changes.
@@ -496,7 +496,7 @@ package javax.swing;
 	* @see #getTextField
 	* @see JSpinner#getValue
 	*/
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Called by the <code>JFormattedTextField</code>
@@ -513,7 +513,7 @@ package javax.swing;
 	*    the <code>JFormattedTextField</code> created by this class.
 	* @see #getTextField
 	*/
-	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	/**
 	* This <code>LayoutManager</code> method does nothing.  We're
@@ -523,7 +523,7 @@ package javax.swing;
 	* @param name ignored
 	* @param child ignored
 	*/
-	@:overload public function addLayoutComponent(name : String, child : java.awt.Component) : Void;
+	@:overload @:public public function addLayoutComponent(name : String, child : java.awt.Component) : Void;
 	
 	/**
 	* This <code>LayoutManager</code> method does nothing.  There
@@ -531,7 +531,7 @@ package javax.swing;
 	*
 	* @param child ignored
 	*/
-	@:overload public function removeLayoutComponent(child : java.awt.Component) : Void;
+	@:overload @:public public function removeLayoutComponent(child : java.awt.Component) : Void;
 	
 	/**
 	* Returns the preferred size of first (and only) child plus the
@@ -541,7 +541,7 @@ package javax.swing;
 	* @return the preferred dimensions to lay out the subcomponents
 	*          of the specified container.
 	*/
-	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum size of first (and only) child plus the
@@ -551,13 +551,13 @@ package javax.swing;
 	* @return  the minimum dimensions needed to lay out the subcomponents
 	*          of the specified container.
 	*/
-	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload @:public public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	/**
 	* Resize the one (and only) child to completely fill the area
 	* within the parents insets.
 	*/
-	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Pushes the currently edited value to the <code>SpinnerModel</code>.
@@ -567,7 +567,7 @@ package javax.swing;
 	*
 	* @throws ParseException if the edited value is not legal
 	*/
-	@:overload public function commitEdit() : Void;
+	@:overload @:public public function commitEdit() : Void;
 	
 	/**
 	* Returns the baseline.
@@ -577,7 +577,7 @@ package javax.swing;
 	* @see javax.swing.JComponent#getBaselineResizeBehavior()
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaseline(width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -587,7 +587,7 @@ package javax.swing;
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }
@@ -597,13 +597,13 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$DateEditorFormatter') @:internal extern class JSpinner_DateEditorFormatter extends javax.swing.text.DateFormatter
 {
-	@:overload public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public override public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload public function getMinimum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public override public function getMinimum() : java.lang.Comparable<Dynamic>;
 	
-	@:overload public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public override public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload public function getMaximum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public override public function getMaximum() : java.lang.Comparable<Dynamic>;
 	
 	
 }
@@ -634,7 +634,7 @@ package javax.swing;
 	* @see #getFormat
 	* @see SpinnerDateModel
 	*/
-	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
+	@:overload @:public public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -656,7 +656,7 @@ package javax.swing;
 	* @see SpinnerDateModel
 	* @see java.text.SimpleDateFormat
 	*/
-	@:overload public function new(spinner : javax.swing.JSpinner, dateFormatPattern : String) : Void;
+	@:overload @:public public function new(spinner : javax.swing.JSpinner, dateFormatPattern : String) : Void;
 	
 	/**
 	* Returns the <code>java.text.SimpleDateFormat</code> object the
@@ -667,7 +667,7 @@ package javax.swing;
 	* @see #getTextField
 	* @see java.text.SimpleDateFormat
 	*/
-	@:overload public function getFormat() : java.text.SimpleDateFormat;
+	@:overload @:public public function getFormat() : java.text.SimpleDateFormat;
 	
 	/**
 	* Return our spinner ancestor's <code>SpinnerDateModel</code>.
@@ -676,7 +676,7 @@ package javax.swing;
 	* @see #getSpinner
 	* @see #getTextField
 	*/
-	@:overload public function getModel() : javax.swing.SpinnerDateModel;
+	@:overload @:public public function getModel() : javax.swing.SpinnerDateModel;
 	
 	
 }
@@ -687,13 +687,13 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$NumberEditorFormatter') @:internal extern class JSpinner_NumberEditorFormatter extends javax.swing.text.NumberFormatter
 {
-	@:overload public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public override public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload public function getMinimum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public override public function getMinimum() : java.lang.Comparable<Dynamic>;
 	
-	@:overload public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
+	@:overload @:public override public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload public function getMaximum() : java.lang.Comparable<Dynamic>;
+	@:overload @:public override public function getMaximum() : java.lang.Comparable<Dynamic>;
 	
 	
 }
@@ -724,7 +724,7 @@ package javax.swing;
 	* @see #getFormat
 	* @see SpinnerNumberModel
 	*/
-	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
+	@:overload @:public public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -747,7 +747,7 @@ package javax.swing;
 	* @see SpinnerNumberModel
 	* @see java.text.DecimalFormat
 	*/
-	@:overload public function new(spinner : javax.swing.JSpinner, decimalFormatPattern : String) : Void;
+	@:overload @:public public function new(spinner : javax.swing.JSpinner, decimalFormatPattern : String) : Void;
 	
 	/**
 	* Returns the <code>java.text.DecimalFormat</code> object the
@@ -758,7 +758,7 @@ package javax.swing;
 	* @see #getTextField
 	* @see java.text.DecimalFormat
 	*/
-	@:overload public function getFormat() : java.text.DecimalFormat;
+	@:overload @:public public function getFormat() : java.text.DecimalFormat;
 	
 	/**
 	* Return our spinner ancestor's <code>SpinnerNumberModel</code>.
@@ -767,7 +767,7 @@ package javax.swing;
 	* @see #getSpinner
 	* @see #getTextField
 	*/
-	@:overload public function getModel() : javax.swing.SpinnerNumberModel;
+	@:overload @:public public function getModel() : javax.swing.SpinnerNumberModel;
 	
 	
 }
@@ -793,7 +793,7 @@ package javax.swing;
 	* @see #getModel
 	* @see SpinnerListModel
 	*/
-	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
+	@:overload @:public public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Return our spinner ancestor's <code>SpinnerNumberModel</code>.
@@ -802,7 +802,7 @@ package javax.swing;
 	* @see #getSpinner
 	* @see #getTextField
 	*/
-	@:overload public function getModel() : javax.swing.SpinnerListModel;
+	@:overload @:public public function getModel() : javax.swing.SpinnerListModel;
 	
 	
 }
@@ -814,19 +814,19 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$ListEditor$ListFormatter') @:internal extern class JSpinner_ListEditor_ListFormatter extends javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter
 {
-	@:overload public function valueToString(value : Dynamic) : String;
+	@:overload @:public override public function valueToString(value : Dynamic) : String;
 	
-	@:overload public function stringToValue(string : String) : Dynamic;
+	@:overload @:public override public function stringToValue(string : String) : Dynamic;
 	
-	@:overload private function getDocumentFilter() : javax.swing.text.DocumentFilter;
+	@:overload @:protected override private function getDocumentFilter() : javax.swing.text.DocumentFilter;
 	
 	
 }
 @:native('javax$swing$JSpinner$ListEditor$ListFormatter$Filter') @:internal extern class JSpinner_ListEditor_ListFormatter_Filter extends javax.swing.text.DocumentFilter
 {
-	@:overload public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, string : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, string : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public override public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	
 }
@@ -835,19 +835,19 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$DisabledAction') @:internal extern class JSpinner_DisabledAction implements javax.swing.Action
 {
-	@:overload public function getValue(key : String) : Dynamic;
+	@:overload @:public public function getValue(key : String) : Dynamic;
 	
-	@:overload public function putValue(key : String, value : Dynamic) : Void;
+	@:overload @:public public function putValue(key : String, value : Dynamic) : Void;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -861,7 +861,7 @@ package javax.swing;
 	/**
 	* AccessibleJSpinner constructor
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Invoked when the target of the listener has changed its state.
@@ -869,7 +869,7 @@ package javax.swing;
 	* @param e  a <code>ChangeEvent</code> object. Must not be null.
 	* @throws NullPointerException if the parameter is null.
 	*/
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload @:public public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -889,14 +889,14 @@ package javax.swing;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -908,7 +908,7 @@ package javax.swing;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the AccessibleAction associated with this object that supports
@@ -917,7 +917,7 @@ package javax.swing;
 	* @return AccessibleAction if supported by object; else return null
 	* @see AccessibleAction
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -926,7 +926,7 @@ package javax.swing;
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.
@@ -935,7 +935,7 @@ package javax.swing;
 	* @see AccessibleValue
 	*
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the value of this object as a Number.  If the value has not been
@@ -944,7 +944,7 @@ package javax.swing;
 	* @return value of the object
 	* @see #setCurrentAccessibleValue
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
@@ -953,7 +953,7 @@ package javax.swing;
 	* @return true if the value was set; else False
 	* @see #getCurrentAccessibleValue
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
@@ -962,7 +962,7 @@ package javax.swing;
 	* have a minimum value
 	* @see #getMaximumAccessibleValue
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
@@ -971,7 +971,7 @@ package javax.swing;
 	* have a maximum value
 	* @see #getMinimumAccessibleValue
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Returns the number of accessible actions available in this object
@@ -984,7 +984,7 @@ package javax.swing;
 	*
 	* @return the zero-based number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Returns a description of the specified action of the object.
@@ -993,7 +993,7 @@ package javax.swing;
 	* @return a String description of the action
 	* @see #getAccessibleActionCount
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Performs the specified Action on the object
@@ -1004,7 +1004,7 @@ package javax.swing;
 	* @return true if the action was performed; otherwise false.
 	* @see #getAccessibleActionCount
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -1015,7 +1015,7 @@ package javax.swing;
 	* @return the zero-based index of the character under Point p; if
 	* Point is invalid return -1.
 	*/
-	@:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determines the bounding box of the character at the given
@@ -1027,14 +1027,14 @@ package javax.swing;
 	* @return the screen coordinates of the character's bounding box,
 	* if index is invalid return an empty rectangle.
 	*/
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the number of characters (valid indicies)
 	*
 	* @return the number of characters
 	*/
-	@:overload public function getCharCount() : Int;
+	@:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Returns the zero-based offset of the caret.
@@ -1043,7 +1043,7 @@ package javax.swing;
 	* value as the offset (the caret is between two characters).
 	* @return the zero-based offset of the caret.
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
 	/**
 	* Returns the String at a given index.
@@ -1052,7 +1052,7 @@ package javax.swing;
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String after a given index.
@@ -1061,7 +1061,7 @@ package javax.swing;
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the String before a given index.
@@ -1070,7 +1070,7 @@ package javax.swing;
 	* @param index an index within the text
 	* @return the letter, word, or sentence
 	*/
-	@:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the AttributeSet for a given character at a given index
@@ -1078,7 +1078,7 @@ package javax.swing;
 	* @param i the zero-based index into the text
 	* @return the AttributeSet of the character
 	*/
-	@:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -1087,7 +1087,7 @@ package javax.swing;
 	*
 	* @return the index into the text of the start of the selection
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -1096,21 +1096,21 @@ package javax.swing;
 	*
 	* @return the index into teh text of the end of the selection
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
 	*
 	* @return the String portion of the text that is selected
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	/**
 	* Sets the text contents to the specified string.
 	*
 	* @param s the string to set the text contents
 	*/
-	@:overload public function setTextContents(s : String) : Void;
+	@:overload @:public public function setTextContents(s : String) : Void;
 	
 	/**
 	* Inserts the specified string at the given index/
@@ -1119,7 +1119,7 @@ package javax.swing;
 	* be inserted
 	* @param s the string to insert in the text
 	*/
-	@:overload public function insertTextAtIndex(index : Int, s : String) : Void;
+	@:overload @:public public function insertTextAtIndex(index : Int, s : String) : Void;
 	
 	/**
 	* Returns the text string between two indices.
@@ -1128,7 +1128,7 @@ package javax.swing;
 	* @param endIndex the ending index in the text
 	* @return the text string between the indices
 	*/
-	@:overload public function getTextRange(startIndex : Int, endIndex : Int) : String;
+	@:overload @:public public function getTextRange(startIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Deletes the text between two indices
@@ -1136,7 +1136,7 @@ package javax.swing;
 	* @param startIndex the starting index in the text
 	* @param endIndex the ending index in the text
 	*/
-	@:overload public function delete(startIndex : Int, endIndex : Int) : Void;
+	@:overload @:public public function delete(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Cuts the text between two indices into the system clipboard.
@@ -1144,7 +1144,7 @@ package javax.swing;
 	* @param startIndex the starting index in the text
 	* @param endIndex the ending index in the text
 	*/
-	@:overload public function cut(startIndex : Int, endIndex : Int) : Void;
+	@:overload @:public public function cut(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Pastes the text from the system clipboard into the text
@@ -1152,7 +1152,7 @@ package javax.swing;
 	*
 	* @param startIndex the starting index in the text
 	*/
-	@:overload public function paste(startIndex : Int) : Void;
+	@:overload @:public public function paste(startIndex : Int) : Void;
 	
 	/**
 	* Replaces the text between two indices with the specified
@@ -1162,7 +1162,7 @@ package javax.swing;
 	* @param endIndex the ending index in the text
 	* @param s the string to replace the text between two indices
 	*/
-	@:overload public function replaceText(startIndex : Int, endIndex : Int, s : String) : Void;
+	@:overload @:public public function replaceText(startIndex : Int, endIndex : Int, s : String) : Void;
 	
 	/**
 	* Selects the text between two indices.
@@ -1170,7 +1170,7 @@ package javax.swing;
 	* @param startIndex the starting index in the text
 	* @param endIndex the ending index in the text
 	*/
-	@:overload public function selectText(startIndex : Int, endIndex : Int) : Void;
+	@:overload @:public public function selectText(startIndex : Int, endIndex : Int) : Void;
 	
 	/**
 	* Sets attributes for the text between two indices.
@@ -1180,7 +1180,7 @@ package javax.swing;
 	* @param as the attribute set
 	* @see AttributeSet
 	*/
-	@:overload public function setAttributes(startIndex : Int, endIndex : Int, as : javax.swing.text.AttributeSet) : Void;
+	@:overload @:public public function setAttributes(startIndex : Int, endIndex : Int, as : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

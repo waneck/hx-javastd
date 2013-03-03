@@ -25,17 +25,17 @@ package com.sun.corba.se.impl.oa.toa;
 */
 extern class TOAFactory implements com.sun.corba.se.spi.oa.ObjectAdapterFactory
 {
-	@:overload public function find(oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : com.sun.corba.se.spi.oa.ObjectAdapter;
+	@:overload @:public public function find(oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : com.sun.corba.se.spi.oa.ObjectAdapter;
 	
-	@:overload public function init(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:public public function init(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload public function shutdown(waitForCompletion : Bool) : Void;
+	@:overload @:public public function shutdown(waitForCompletion : Bool) : Void;
 	
-	@:overload @:synchronized public function getTOA(codebase : String) : com.sun.corba.se.impl.oa.toa.TOA;
+	@:overload @:public @:synchronized public function getTOA(codebase : String) : com.sun.corba.se.impl.oa.toa.TOA;
 	
-	@:overload @:synchronized public function getTOA() : com.sun.corba.se.impl.oa.toa.TOA;
+	@:overload @:public @:synchronized public function getTOA() : com.sun.corba.se.impl.oa.toa.TOA;
 	
-	@:overload public function getORB() : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:public public function getORB() : com.sun.corba.se.spi.orb.ORB;
 	
 	
 }

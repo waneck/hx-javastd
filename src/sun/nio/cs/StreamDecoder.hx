@@ -27,23 +27,23 @@ package sun.nio.cs;
 */
 extern class StreamDecoder extends java.io.Reader
 {
-	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, charsetName : String) : sun.nio.cs.StreamDecoder;
+	@:overload @:public @:static public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, charsetName : String) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, cs : java.nio.charset.Charset) : sun.nio.cs.StreamDecoder;
+	@:overload @:public @:static public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, cs : java.nio.charset.Charset) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, dec : java.nio.charset.CharsetDecoder) : sun.nio.cs.StreamDecoder;
+	@:overload @:public @:static public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, dec : java.nio.charset.CharsetDecoder) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public static function forDecoder(ch : java.nio.channels.ReadableByteChannel, dec : java.nio.charset.CharsetDecoder, minBufferCap : Int) : sun.nio.cs.StreamDecoder;
+	@:overload @:public @:static public static function forDecoder(ch : java.nio.channels.ReadableByteChannel, dec : java.nio.charset.CharsetDecoder, minBufferCap : Int) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
-	@:overload override public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload @:public override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
-	@:overload override public function ready() : Bool;
+	@:overload @:public override public function ready() : Bool;
 	
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

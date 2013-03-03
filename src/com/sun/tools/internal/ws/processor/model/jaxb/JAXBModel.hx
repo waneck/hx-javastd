@@ -33,49 +33,49 @@ package com.sun.tools.internal.ws.processor.model.jaxb;
 */
 extern class JAXBModel
 {
-	@:overload public function getRawJAXBModel() : com.sun.tools.internal.xjc.api.JAXBModel;
+	@:overload @:public public function getRawJAXBModel() : com.sun.tools.internal.xjc.api.JAXBModel;
 	
 	/**
 	* @return Schema to Java model
 	*/
-	@:overload public function getS2JJAXBModel() : com.sun.tools.internal.xjc.api.S2JJAXBModel;
+	@:overload @:public public function getS2JJAXBModel() : com.sun.tools.internal.xjc.api.S2JJAXBModel;
 	
 	/**
 	* @return Java to Schema JAXBModel
 	*/
-	@:overload public function getJ2SJAXBModel() : com.sun.tools.internal.xjc.api.J2SJAXBModel;
+	@:overload @:public public function getJ2SJAXBModel() : com.sun.tools.internal.xjc.api.J2SJAXBModel;
 	
 	/**
 	* Default constructor for the persistence.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor that fills in the values from the given raw model
 	*/
-	@:overload public function new(rawModel : com.sun.tools.internal.xjc.api.JAXBModel) : Void;
+	@:overload @:public public function new(rawModel : com.sun.tools.internal.xjc.api.JAXBModel) : Void;
 	
 	/**
 	*/
-	@:overload public function getMappings() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping>;
+	@:overload @:public public function getMappings() : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping>;
 	
-	@:overload public function setMappings(mappings : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping>) : Void;
-	
-	/**
-	*/
-	@:overload public function get(elementName : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping;
+	@:overload @:public public function setMappings(mappings : java.util.List<com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping>) : Void;
 	
 	/**
 	*/
-	@:overload public function get(className : String) : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping;
+	@:overload @:public public function get(elementName : javax.xml.namespace.QName) : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping;
+	
+	/**
+	*/
+	@:overload @:public public function get(className : String) : com.sun.tools.internal.ws.processor.model.jaxb.JAXBMapping;
 	
 	/**
 	*
 	* @return set of full qualified class names that jaxb will generate
 	*/
-	@:overload public function getGeneratedClassNames() : java.util.Set<String>;
+	@:overload @:public public function getGeneratedClassNames() : java.util.Set<String>;
 	
-	@:overload public function setGeneratedClassNames(generatedClassNames : java.util.Set<String>) : Void;
+	@:overload @:public public function setGeneratedClassNames(generatedClassNames : java.util.Set<String>) : Void;
 	
 	
 }

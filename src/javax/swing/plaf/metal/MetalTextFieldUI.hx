@@ -39,7 +39,7 @@ package javax.swing.plaf.metal;
 */
 extern class MetalTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* This method gets called when a bound property is changed
@@ -49,7 +49,7 @@ extern class MetalTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 	*
 	* @param evt the property change event
 	*/
-	@:overload override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

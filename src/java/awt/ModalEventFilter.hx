@@ -25,33 +25,33 @@ package java.awt;
 */
 @:internal extern class ModalEventFilter implements java.awt.EventFilter
 {
-	private var modalDialog : java.awt.Dialog;
+	@:protected private var modalDialog : java.awt.Dialog;
 	
-	private var disabled : Bool;
+	@:protected private var disabled : Bool;
 	
-	@:overload private function new(modalDialog : java.awt.Dialog) : Void;
+	@:overload @:protected private function new(modalDialog : java.awt.Dialog) : Void;
 	
-	@:overload public function acceptEvent(event : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
+	@:overload @:public public function acceptEvent(event : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
 	
-	@:overload @:abstract private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
+	@:overload @:protected @:abstract private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
 @:native('java$awt$ModalEventFilter$ToolkitModalEventFilter') @:internal extern class ModalEventFilter_ToolkitModalEventFilter extends java.awt.ModalEventFilter
 {
-	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
+	@:overload @:protected override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
 @:native('java$awt$ModalEventFilter$ApplicationModalEventFilter') @:internal extern class ModalEventFilter_ApplicationModalEventFilter extends java.awt.ModalEventFilter
 {
-	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
+	@:overload @:protected override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
 @:native('java$awt$ModalEventFilter$DocumentModalEventFilter') @:internal extern class ModalEventFilter_DocumentModalEventFilter extends java.awt.ModalEventFilter
 {
-	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
+	@:overload @:protected override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class TlsKeyMaterialSpec implements java.security.spec.KeySpec implements
 	* @param serverMacKey the server MAC key
 	* @throws NullPointerException if clientMacKey or serverMacKey is null
 	*/
-	@:overload public function new(clientMacKey : javax.crypto.SecretKey, serverMacKey : javax.crypto.SecretKey) : Void;
+	@:overload @:public public function new(clientMacKey : javax.crypto.SecretKey, serverMacKey : javax.crypto.SecretKey) : Void;
 	
 	/**
 	* Constructs a new TlsKeymaterialSpec from the client and server MAC
@@ -51,7 +51,7 @@ extern class TlsKeyMaterialSpec implements java.security.spec.KeySpec implements
 	* @param serverCipherKey the server cipher key (or null)
 	* @throws NullPointerException if clientMacKey or serverMacKey is null
 	*/
-	@:overload public function new(clientMacKey : javax.crypto.SecretKey, serverMacKey : javax.crypto.SecretKey, clientCipherKey : javax.crypto.SecretKey, serverCipherKey : javax.crypto.SecretKey) : Void;
+	@:overload @:public public function new(clientMacKey : javax.crypto.SecretKey, serverMacKey : javax.crypto.SecretKey, clientCipherKey : javax.crypto.SecretKey, serverCipherKey : javax.crypto.SecretKey) : Void;
 	
 	/**
 	* Constructs a new TlsKeymaterialSpec from the client and server MAC
@@ -67,70 +67,70 @@ extern class TlsKeyMaterialSpec implements java.security.spec.KeySpec implements
 	*
 	* @throws NullPointerException if clientMacKey or serverMacKey is null
 	*/
-	@:overload public function new(clientMacKey : javax.crypto.SecretKey, serverMacKey : javax.crypto.SecretKey, clientCipherKey : javax.crypto.SecretKey, clientIv : javax.crypto.spec.IvParameterSpec, serverCipherKey : javax.crypto.SecretKey, serverIv : javax.crypto.spec.IvParameterSpec) : Void;
+	@:overload @:public public function new(clientMacKey : javax.crypto.SecretKey, serverMacKey : javax.crypto.SecretKey, clientCipherKey : javax.crypto.SecretKey, clientIv : javax.crypto.spec.IvParameterSpec, serverCipherKey : javax.crypto.SecretKey, serverIv : javax.crypto.spec.IvParameterSpec) : Void;
 	
 	/**
 	* Returns <code>TlsKeyMaterial</code>.
 	*
 	* @return <code>TlsKeyMaterial</code>.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns <code>null</code> because keys of this type have no encoding.
 	*
 	* @return <code>null</code> because keys of this type have no encoding.
 	*/
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	/**
 	* Returns <code>null</code> because keys of this type have no encoding.
 	*
 	* @return <code>null</code> because keys of this type have no encoding.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the client MAC key.
 	*
 	* @return the client MAC key.
 	*/
-	@:overload public function getClientMacKey() : javax.crypto.SecretKey;
+	@:overload @:public public function getClientMacKey() : javax.crypto.SecretKey;
 	
 	/**
 	* Return the server MAC key.
 	*
 	* @return the server MAC key.
 	*/
-	@:overload public function getServerMacKey() : javax.crypto.SecretKey;
+	@:overload @:public public function getServerMacKey() : javax.crypto.SecretKey;
 	
 	/**
 	* Return the client cipher key (or null).
 	*
 	* @return the client cipher key (or null).
 	*/
-	@:overload public function getClientCipherKey() : javax.crypto.SecretKey;
+	@:overload @:public public function getClientCipherKey() : javax.crypto.SecretKey;
 	
 	/**
 	* Return the client initialization vector (or null).
 	*
 	* @return the client initialization vector (or null).
 	*/
-	@:overload public function getClientIv() : javax.crypto.spec.IvParameterSpec;
+	@:overload @:public public function getClientIv() : javax.crypto.spec.IvParameterSpec;
 	
 	/**
 	* Return the server cipher key (or null).
 	*
 	* @return the server cipher key (or null).
 	*/
-	@:overload public function getServerCipherKey() : javax.crypto.SecretKey;
+	@:overload @:public public function getServerCipherKey() : javax.crypto.SecretKey;
 	
 	/**
 	* Return the server initialization vector (or null).
 	*
 	* @return the server initialization vector (or null).
 	*/
-	@:overload public function getServerIv() : javax.crypto.spec.IvParameterSpec;
+	@:overload @:public public function getServerIv() : javax.crypto.spec.IvParameterSpec;
 	
 	
 }

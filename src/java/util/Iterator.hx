@@ -64,7 +64,7 @@ package java.util;
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload public function next() : E;
+	@:overload @:public @:public @:public @:public @:public @:public @:public public function next() : E;
 	
 	/**
 	* Removes from the underlying collection the last element returned
@@ -82,7 +82,7 @@ package java.util;
 	*         been called after the last call to the {@code next}
 	*         method
 	*/
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 extern class BuiltinLeafInfoImpl<TypeT, ClassDeclT> extends com.sun.xml.internal.bind.v2.model.impl.LeafInfoImpl<TypeT, ClassDeclT> implements com.sun.xml.internal.bind.v2.model.core.BuiltinLeafInfo<TypeT, ClassDeclT>
 {
-	@:overload private function new(type : TypeT, typeNames : java.NativeArray<javax.xml.namespace.QName>) : Void;
+	@:overload @:protected private function new(type : TypeT, typeNames : java.NativeArray<javax.xml.namespace.QName>) : Void;
 	
 	/**
 	* Returns all the type names recognized by this bean info.
@@ -33,29 +33,29 @@ extern class BuiltinLeafInfoImpl<TypeT, ClassDeclT> extends com.sun.xml.internal
 	* @return
 	*      do not modify the returned array.
 	*/
-	@:overload @:final public function getTypeNames() : java.NativeArray<javax.xml.namespace.QName>;
+	@:overload @:public @:final public function getTypeNames() : java.NativeArray<javax.xml.namespace.QName>;
 	
 	/**
 	* @deprecated always return false at this level.
 	*/
-	@:overload @:final override public function isElement() : Bool;
+	@:overload @:public @:final override public function isElement() : Bool;
 	
 	/**
 	* @deprecated always return null at this level.
 	*/
-	@:overload @:final override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public @:final override public function getElementName() : javax.xml.namespace.QName;
 	
 	/**
 	* @deprecated always return null at this level.
 	*/
-	@:overload @:final override public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<TypeT, ClassDeclT>;
+	@:overload @:public @:final override public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<TypeT, ClassDeclT>;
 	
 	/**
 	* Creates all the {@link BuiltinLeafInfoImpl}s as specified in the spec.
 	*
 	* {@link LeafInfo}s are all defined by the spec.
 	*/
-	@:overload public static function createLeaves<TypeT, ClassDeclT>(nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : java.util.Map<TypeT, com.sun.xml.internal.bind.v2.model.impl.BuiltinLeafInfoImpl<TypeT, ClassDeclT>>;
+	@:overload @:public @:static public static function createLeaves<TypeT, ClassDeclT>(nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : java.util.Map<TypeT, com.sun.xml.internal.bind.v2.model.impl.BuiltinLeafInfoImpl<TypeT, ClassDeclT>>;
 	
 	
 }

@@ -25,17 +25,17 @@ package com.sun.imageio.stream;
 */
 extern class StreamCloser
 {
-	@:overload public static function addToQueue(ca : com.sun.imageio.stream.StreamCloser.StreamCloser_CloseAction) : Void;
+	@:overload @:public @:static public static function addToQueue(ca : com.sun.imageio.stream.StreamCloser.StreamCloser_CloseAction) : Void;
 	
-	@:overload public static function removeFromQueue(ca : com.sun.imageio.stream.StreamCloser.StreamCloser_CloseAction) : Void;
+	@:overload @:public @:static public static function removeFromQueue(ca : com.sun.imageio.stream.StreamCloser.StreamCloser_CloseAction) : Void;
 	
-	@:overload public static function createCloseAction(iis : javax.imageio.stream.ImageInputStream) : com.sun.imageio.stream.StreamCloser.StreamCloser_CloseAction;
+	@:overload @:public @:static public static function createCloseAction(iis : javax.imageio.stream.ImageInputStream) : com.sun.imageio.stream.StreamCloser.StreamCloser_CloseAction;
 	
 	
 }
 @:native('com$sun$imageio$stream$StreamCloser$CloseAction') extern class StreamCloser_CloseAction
 {
-	@:overload public function performAction() : Void;
+	@:overload @:public public function performAction() : Void;
 	
 	
 }

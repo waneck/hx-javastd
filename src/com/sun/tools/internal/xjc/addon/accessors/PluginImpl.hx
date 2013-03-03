@@ -31,13 +31,13 @@ extern class PluginImpl extends com.sun.tools.internal.xjc.Plugin
 	* @author
 	*     Martin Grebac (martin.grebac@sun.com)
 	*/
-	@:overload override public function getOptionName() : String;
+	@:overload @:public override public function getOptionName() : String;
 	
-	@:overload override public function getUsage() : String;
+	@:overload @:public override public function getUsage() : String;
 	
-	@:overload override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
+	@:overload @:public override public function parseArgument(opt : com.sun.tools.internal.xjc.Options, args : java.NativeArray<String>, i : Int) : Int;
 	
-	@:overload override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
+	@:overload @:public override public function run(model : com.sun.tools.internal.xjc.outline.Outline, opt : com.sun.tools.internal.xjc.Options, errorHandler : org.xml.sax.ErrorHandler) : Bool;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*
 	* @param url the URL
 	*/
-	@:overload private function new(url : java.net.URL) : Void;
+	@:overload @:protected private function new(url : java.net.URL) : Void;
 	
 	/**
 	* Returns the cipher suite in use on this connection.
@@ -40,7 +40,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* @throws IllegalStateException if this method is called before
 	*          the connection has been established.
 	*/
-	@:overload @:abstract public function getCipherSuite() : String;
+	@:overload @:public @:abstract public function getCipherSuite() : String;
 	
 	/**
 	* Returns the certificate(s) that were sent to the server during
@@ -63,7 +63,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*          the connection has been established.
 	* @see #getLocalPrincipal()
 	*/
-	@:overload @:abstract public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function getLocalCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's certificate chain which was established
@@ -81,7 +81,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*          the connection has been established.
 	* @see #getPeerPrincipal()
 	*/
-	@:overload @:abstract public function getServerCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function getServerCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the server's principal which was established as part of
@@ -106,7 +106,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPeerPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public public function getPeerPrincipal() : java.security.Principal;
 	
 	/**
 	* Returns the principal that was sent to the server during handshaking.
@@ -129,12 +129,12 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getLocalPrincipal() : java.security.Principal;
+	@:require(java5) @:overload @:public public function getLocalPrincipal() : java.security.Principal;
 	
 	/**
 	* The <code>hostnameVerifier</code> for this object.
 	*/
-	private var hostnameVerifier : javax.net.ssl.HostnameVerifier;
+	@:protected private var hostnameVerifier : javax.net.ssl.HostnameVerifier;
 	
 	/**
 	* Sets the default <code>HostnameVerifier</code> inherited by a
@@ -152,7 +152,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*         <code>SSLPermission("setHostnameVerifier")</code>
 	* @see #getDefaultHostnameVerifier()
 	*/
-	@:overload public static function setDefaultHostnameVerifier(v : javax.net.ssl.HostnameVerifier) : Void;
+	@:overload @:public @:static public static function setDefaultHostnameVerifier(v : javax.net.ssl.HostnameVerifier) : Void;
 	
 	/**
 	* Gets the default <code>HostnameVerifier</code> that is inherited
@@ -161,7 +161,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* @return the default host name verifier
 	* @see #setDefaultHostnameVerifier(HostnameVerifier)
 	*/
-	@:overload public static function getDefaultHostnameVerifier() : javax.net.ssl.HostnameVerifier;
+	@:overload @:public @:static public static function getDefaultHostnameVerifier() : javax.net.ssl.HostnameVerifier;
 	
 	/**
 	* Sets the <code>HostnameVerifier</code> for this instance.
@@ -177,7 +177,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* @see #getHostnameVerifier()
 	* @see #setDefaultHostnameVerifier(HostnameVerifier)
 	*/
-	@:overload public function setHostnameVerifier(v : javax.net.ssl.HostnameVerifier) : Void;
+	@:overload @:public public function setHostnameVerifier(v : javax.net.ssl.HostnameVerifier) : Void;
 	
 	/**
 	* Gets the <code>HostnameVerifier</code> in place on this instance.
@@ -186,7 +186,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* @see #setHostnameVerifier(HostnameVerifier)
 	* @see #setDefaultHostnameVerifier(HostnameVerifier)
 	*/
-	@:overload public function getHostnameVerifier() : javax.net.ssl.HostnameVerifier;
+	@:overload @:public public function getHostnameVerifier() : javax.net.ssl.HostnameVerifier;
 	
 	/**
 	* Sets the default <code>SSLSocketFactory</code> inherited by new
@@ -203,7 +203,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*         a socket factory to be specified.
 	* @see #getDefaultSSLSocketFactory()
 	*/
-	@:overload public static function setDefaultSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
+	@:overload @:public @:static public static function setDefaultSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
 	
 	/**
 	* Gets the default static <code>SSLSocketFactory</code> that is
@@ -215,7 +215,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* @return the default <code>SSLSocketFactory</code>
 	* @see #setDefaultSSLSocketFactory(SSLSocketFactory)
 	*/
-	@:overload public static function getDefaultSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:public @:static public static function getDefaultSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	/**
 	* Sets the <code>SSLSocketFactory</code> to be used when this instance
@@ -232,7 +232,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	*          parameter is null.
 	* @see #getSSLSocketFactory()
 	*/
-	@:overload public function setSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
+	@:overload @:public public function setSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
 	
 	/**
 	* Gets the SSL socket factory to be used when creating sockets
@@ -241,7 +241,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* @return the <code>SSLSocketFactory</code>
 	* @see #setSSLSocketFactory(SSLSocketFactory)
 	*/
-	@:overload public function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:public public function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	
 }
@@ -252,7 +252,7 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 */
 @:native('javax$net$ssl$HttpsURLConnection$DefaultHostnameVerifier') @:internal extern class HttpsURLConnection_DefaultHostnameVerifier implements javax.net.ssl.HostnameVerifier
 {
-	@:overload public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
+	@:overload @:public public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
 	
 	
 }

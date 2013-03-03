@@ -20,19 +20,19 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 */
 @:internal extern class RegexParser
 {
-	private static var S_NORMAL(default, null) : Int;
+	@:static @:protected @:final private static var S_NORMAL(default, null) : Int;
 	
-	private static var S_INBRACKETS(default, null) : Int;
+	@:static @:protected @:final private static var S_INBRACKETS(default, null) : Int;
 	
-	private static var S_INXBRACKETS(default, null) : Int;
+	@:static @:protected @:final private static var S_INXBRACKETS(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
-	@:overload public function setLocale(locale : java.util.Locale) : Void;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Void;
 	
-	@:overload @:final private function isSet(flag : Int) : Bool;
+	@:overload @:protected @:final private function isSet(flag : Int) : Bool;
 	
 	/*
 	public RegularExpression createRegex(String regex, int options) throws ParseException {
@@ -40,9 +40,9 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	return new RegularExpression(regex, tok, this.parennumber, this.hasBackReferences, options);
 	}
 	*/
-	@:overload @:final private function setContext(con : Int) : Void;
+	@:overload @:protected @:final private function setContext(con : Int) : Void;
 	
-	@:overload private function processBacksolidus_pP(c : Int) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload @:protected private function processBacksolidus_pP(c : Int) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
 	/**
 	* char-class ::= '[' ( '^'? range ','?)+ ']'
@@ -51,16 +51,16 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	* range-char ::= '\[' | '\]' | '\\' | '\' [,-efnrtv] | bmp-code | character-2
 	* bmp-code ::= '\' 'u' [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F] [0-9a-fA-F]
 	*/
-	@:overload private function parseCharacterClass(useNrange : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload @:protected private function parseCharacterClass(useNrange : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
 	/**
 	* '(?[' ... ']' (('-' | '+' | '&') '[' ... ']')? ')'
 	*/
-	@:overload private function parseSetOperations() : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload @:protected private function parseSetOperations() : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
-	@:overload @:final private static function addCaseInsensitiveChar(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken, c : Int) : Void;
+	@:overload @:static @:protected @:final private static function addCaseInsensitiveChar(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken, c : Int) : Void;
 	
-	@:overload @:final private static function addCaseInsensitiveCharRange(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken, start : Int, end : Int) : Void;
+	@:overload @:static @:protected @:final private static function addCaseInsensitiveCharRange(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken, start : Int, end : Int) : Void;
 	
 	
 }

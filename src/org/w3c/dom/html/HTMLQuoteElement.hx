@@ -49,9 +49,9 @@ extern interface HTMLQuoteElement extends org.w3c.dom.html.HTMLElement
 	*  A URI designating a source document or message. See the  cite
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCite() : String;
+	@:overload @:public public function getCite() : String;
 	
-	@:overload public function setCite(cite : String) : Void;
+	@:overload @:public public function setCite(cite : String) : Void;
 	
 	
 }

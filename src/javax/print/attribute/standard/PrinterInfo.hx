@@ -37,7 +37,7 @@ extern class PrinterInfo extends javax.print.attribute.TextSyntax implements jav
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>info</CODE> is null.
 	*/
-	@:overload public function new(info : String, locale : java.util.Locale) : Void;
+	@:overload @:public public function new(info : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns whether this printer info attribute is equivalent to the passed
@@ -61,7 +61,7 @@ extern class PrinterInfo extends javax.print.attribute.TextSyntax implements jav
 	* @return  True if <CODE>object</CODE> is equivalent to this printer
 	*          info attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload @:public override public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -72,7 +72,7 @@ extern class PrinterInfo extends javax.print.attribute.TextSyntax implements jav
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -82,7 +82,7 @@ extern class PrinterInfo extends javax.print.attribute.TextSyntax implements jav
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

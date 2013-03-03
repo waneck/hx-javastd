@@ -27,43 +27,43 @@ package com.sun.corba.se.impl.activation;
 */
 extern class ORBD
 {
-	@:overload private function initializeBootNaming(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:protected private function initializeBootNaming(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload private function createORB(args : java.NativeArray<String>) : com.sun.corba.se.spi.orb.ORB;
+	@:overload @:protected private function createORB(args : java.NativeArray<String>) : com.sun.corba.se.spi.orb.ORB;
 	
 	/**
 	* Ensure that the Db directory exists. If not, create the Db
 	* and the log directory and return true. Otherwise return false.
 	*/
-	@:overload private function createSystemDirs(defaultDbDir : String) : Bool;
+	@:overload @:protected private function createSystemDirs(defaultDbDir : String) : Bool;
 	
-	private var dbDir : java.io.File;
+	@:protected private var dbDir : java.io.File;
 	
-	@:overload private function getDbDir() : java.io.File;
+	@:overload @:protected private function getDbDir() : java.io.File;
 	
-	@:overload private function getDbDirName() : String;
+	@:overload @:protected private function getDbDirName() : String;
 	
-	@:overload private function startActivationObjects(orb : com.sun.corba.se.spi.orb.ORB) : Void;
+	@:overload @:protected private function startActivationObjects(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	private var locator : com.sun.corba.se.spi.activation.Locator;
+	@:protected private var locator : com.sun.corba.se.spi.activation.Locator;
 	
-	@:overload private function getLocator() : com.sun.corba.se.spi.activation.Locator;
+	@:overload @:protected private function getLocator() : com.sun.corba.se.spi.activation.Locator;
 	
-	private var activator : com.sun.corba.se.spi.activation.Activator;
+	@:protected private var activator : com.sun.corba.se.spi.activation.Activator;
 	
-	@:overload private function getActivator() : com.sun.corba.se.spi.activation.Activator;
+	@:overload @:protected private function getActivator() : com.sun.corba.se.spi.activation.Activator;
 	
-	private var repository : com.sun.corba.se.impl.activation.RepositoryImpl;
+	@:protected private var repository : com.sun.corba.se.impl.activation.RepositoryImpl;
 	
-	@:overload private function getRepository() : com.sun.corba.se.impl.activation.RepositoryImpl;
+	@:overload @:protected private function getRepository() : com.sun.corba.se.impl.activation.RepositoryImpl;
 	
 	/**
 	* Go through the list of ORB Servers and initialize and start
 	* them up.
 	*/
-	@:overload private function installOrbServers(repository : com.sun.corba.se.impl.activation.RepositoryImpl, activator : com.sun.corba.se.spi.activation.Activator) : Void;
+	@:overload @:protected private function installOrbServers(repository : com.sun.corba.se.impl.activation.RepositoryImpl, activator : com.sun.corba.se.spi.activation.Activator) : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

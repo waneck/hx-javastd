@@ -39,20 +39,20 @@ extern class Constants
 	* Integer) into standard representation.  Other values (including
 	* null) are returned unchanged.
 	*/
-	@:overload public static function decode(value : Dynamic, type : com.sun.tools.javac.code.Type) : Dynamic;
+	@:overload @:public @:static public static function decode(value : Dynamic, type : com.sun.tools.javac.code.Type) : Dynamic;
 	
 	/**
 	* Returns a string representation of a constant value (given in
 	* internal representation), quoted and formatted as in Java source.
 	*/
-	@:overload public static function format(value : Dynamic, type : com.sun.tools.javac.code.Type) : String;
+	@:overload @:public @:static public static function format(value : Dynamic, type : com.sun.tools.javac.code.Type) : String;
 	
 	/**
 	* Returns a string representation of a constant value (given in
 	* standard wrapped representation), quoted and formatted as in
 	* Java source.
 	*/
-	@:overload public static function format(value : Dynamic) : String;
+	@:overload @:public @:static public static function format(value : Dynamic) : String;
 	
 	
 }

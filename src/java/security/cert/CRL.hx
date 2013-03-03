@@ -51,21 +51,21 @@ package java.security.cert;
 	* Java Cryptography Architecture API Specification &amp; Reference </a>
 	* for information about standard CRL types.
 	*/
-	@:overload private function new(type : String) : Void;
+	@:overload @:protected private function new(type : String) : Void;
 	
 	/**
 	* Returns the type of this CRL.
 	*
 	* @return the type of this CRL.
 	*/
-	@:overload @:final public function getType() : String;
+	@:overload @:public @:final public function getType() : String;
 	
 	/**
 	* Returns a string representation of this CRL.
 	*
 	* @return a string representation of this CRL.
 	*/
-	@:overload @:abstract public function toString() : String;
+	@:overload @:public @:abstract public function toString() : String;
 	
 	/**
 	* Checks whether the given certificate is on this CRL.
@@ -74,7 +74,7 @@ package java.security.cert;
 	* @return true if the given certificate is on this CRL,
 	* false otherwise.
 	*/
-	@:overload @:abstract public function isRevoked(cert : java.security.cert.Certificate) : Bool;
+	@:overload @:public @:abstract public function isRevoked(cert : java.security.cert.Certificate) : Bool;
 	
 	
 }

@@ -26,14 +26,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	*@inheritDoc
 	*/
-	@:overload @:abstract public function engineGetURI() : String;
+	@:overload @:public @:abstract override public function engineGetURI() : String;
 	
 	/**
 	* Method IntegrityHmacSHA1das
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#setParameter(java.security.spec.AlgorithmParameterSpec)}
@@ -42,9 +42,9 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param params
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#verify(byte[])}
@@ -54,7 +54,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @return true if the signature is correct
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:protected override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initVerify(java.security.PublicKey)}
@@ -63,7 +63,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param secretKey
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineInitVerify(secretKey : java.security.Key) : Void;
+	@:overload @:protected override private function engineInitVerify(secretKey : java.security.Key) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#sign()}
@@ -72,7 +72,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @return the result of the {@link java.security.Signature#sign()} method
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineInitSign
@@ -80,7 +80,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param secretKey
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineInitSign(secretKey : java.security.Key) : Void;
+	@:overload @:protected override private function engineInitSign(secretKey : java.security.Key) : Void;
 	
 	/**
 	* Method engineInitSign
@@ -89,7 +89,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param algorithmParameterSpec
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineInitSign(secretKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected override private function engineInitSign(secretKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Method engineInitSign
@@ -98,7 +98,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param secureRandom
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineInitSign(secretKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload @:protected override private function engineInitSign(secretKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[])}
@@ -107,7 +107,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte)}
@@ -116,7 +116,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected override private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[], int, int)}
@@ -127,42 +127,42 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param len
 	* @throws XMLSignatureException
 	*/
-	@:overload private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected override private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Method engineGetJCEAlgorithmString
 	* @inheritDoc
 	*
 	*/
-	@:overload private function engineGetJCEAlgorithmString() : String;
+	@:overload @:protected override private function engineGetJCEAlgorithmString() : String;
 	
 	/**
 	* Method engineGetJCEAlgorithmString
 	*
 	* @inheritDoc
 	*/
-	@:overload private function engineGetJCEProviderName() : String;
+	@:overload @:protected override private function engineGetJCEProviderName() : String;
 	
 	/**
 	* Method engineSetHMACOutputLength
 	*
 	* @param HMACOutputLength
 	*/
-	@:overload private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
+	@:overload @:protected override private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
 	
 	/**
 	* Method engineGetContextFromElement
 	*
 	* @param element
 	*/
-	@:overload private function engineGetContextFromElement(element : org.w3c.dom.Element) : Void;
+	@:overload @:protected override private function engineGetContextFromElement(element : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Method engineAddContextToElement
 	*
 	* @param element
 	*/
-	@:overload public function engineAddContextToElement(element : org.w3c.dom.Element) : Void;
+	@:overload @:public public function engineAddContextToElement(element : org.w3c.dom.Element) : Void;
 	
 	
 }
@@ -179,14 +179,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method engineGetURI
 	* @inheritDoc
 	*
 	*/
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }
@@ -203,14 +203,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method engineGetURI
 	*
 	* @inheritDoc
 	*/
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }
@@ -227,14 +227,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method engineGetURI
 	* @inheritDoc
 	*
 	*/
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }
@@ -251,14 +251,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method engineGetURI
 	* @inheritDoc
 	*
 	*/
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }
@@ -275,14 +275,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method engineGetURI
 	*
 	* @inheritDoc
 	*/
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }
@@ -299,14 +299,14 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Method engineGetURI
 	*
 	* @inheritDoc
 	*/
-	@:overload override public function engineGetURI() : String;
+	@:overload @:public override public function engineGetURI() : String;
 	
 	
 }

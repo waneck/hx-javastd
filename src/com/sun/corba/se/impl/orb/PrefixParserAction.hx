@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.orb;
 */
 extern class PrefixParserAction extends com.sun.corba.se.impl.orb.ParserActionBase
 {
-	@:overload public function new(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, componentType : Class<Dynamic>) : Void;
+	@:overload @:public public function new(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, componentType : Class<Dynamic>) : Void;
 	
 	/** For each String s that matches the prefix given by getPropertyName(),
 	* apply getOperation() to { suffix( s ), value }
@@ -33,7 +33,7 @@ extern class PrefixParserAction extends com.sun.corba.se.impl.orb.ParserActionBa
 	* which forms the result of apply.  Returns null if there are no
 	* matches.
 	*/
-	@:overload public function apply(props : java.util.Properties) : Dynamic;
+	@:overload @:public override public function apply(props : java.util.Properties) : Dynamic;
 	
 	
 }

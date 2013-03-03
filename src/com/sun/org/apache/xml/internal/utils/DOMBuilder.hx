@@ -24,22 +24,22 @@ package com.sun.org.apache.xml.internal.utils;
 extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml.sax.ext.LexicalHandler
 {
 	/** Root document          */
-	public var m_doc : org.w3c.dom.Document;
+	@:public public var m_doc : org.w3c.dom.Document;
 	
 	/** Current node           */
-	private var m_currentNode : org.w3c.dom.Node;
+	@:protected private var m_currentNode : org.w3c.dom.Node;
 	
 	/** The root node          */
-	private var m_root : org.w3c.dom.Node;
+	@:protected private var m_root : org.w3c.dom.Node;
 	
 	/** The next sibling node  */
-	private var m_nextSibling : org.w3c.dom.Node;
+	@:protected private var m_nextSibling : org.w3c.dom.Node;
 	
 	/** First node of document fragment or null if not a DocumentFragment     */
-	public var m_docFrag : org.w3c.dom.DocumentFragment;
+	@:public public var m_docFrag : org.w3c.dom.DocumentFragment;
 	
 	/** Vector of element nodes          */
-	private var m_elemStack : java.util.Stack<Dynamic>;
+	@:protected private var m_elemStack : java.util.Stack<Dynamic>;
 	
 	/**
 	* DOMBuilder instance constructor... it will add the DOM nodes
@@ -48,7 +48,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param doc Root document
 	* @param node Current node
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* DOMBuilder instance constructor... it will add the DOM nodes
@@ -57,7 +57,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param doc Root document
 	* @param docFrag Document fragment
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, docFrag : org.w3c.dom.DocumentFragment) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, docFrag : org.w3c.dom.DocumentFragment) : Void;
 	
 	/**
 	* DOMBuilder instance constructor... it will add the DOM nodes
@@ -65,26 +65,26 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	*
 	* @param doc Root document
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Get the root document or DocumentFragment of the DOM being created.
 	*
 	* @return The root document or document fragment if not null
 	*/
-	@:overload public function getRootDocument() : org.w3c.dom.Node;
+	@:overload @:public public function getRootDocument() : org.w3c.dom.Node;
 	
 	/**
 	* Get the root node of the DOM tree.
 	*/
-	@:overload public function getRootNode() : org.w3c.dom.Node;
+	@:overload @:public public function getRootNode() : org.w3c.dom.Node;
 	
 	/**
 	* Get the node currently being processed.
 	*
 	* @return the current node being processed
 	*/
-	@:overload public function getCurrentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getCurrentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Set the next sibling node, which is where the result nodes
@@ -92,28 +92,28 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	*
 	* @param nextSibling the next sibling node.
 	*/
-	@:overload public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
+	@:overload @:public public function setNextSibling(nextSibling : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Return the next sibling node.
 	*
 	* @return the next sibling node.
 	*/
-	@:overload public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Return null since there is no Writer for this class.
 	*
 	* @return null
 	*/
-	@:overload public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Append a node to the current container.
 	*
 	* @param newNode New node to append
 	*/
-	@:overload private function append(newNode : org.w3c.dom.Node) : Void;
+	@:overload @:protected private function append(newNode : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Receive an object for locating the origin of SAX document events.
@@ -140,7 +140,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	*                any SAX document event.
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -149,7 +149,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* other methods in this interface or in DTDHandler (except for
 	* setDocumentLocator).</p>
 	*/
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -160,7 +160,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* (because of an unrecoverable error) or reached the end of
 	* input.</p>
 	*/
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -185,7 +185,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see #endElement
 	* @see org.xml.sax.Attributes
 	*/
-	@:overload public function startElement(ns : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(ns : String, localName : String, name : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 
@@ -206,7 +206,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param localName The local part of the qualified name of the element
 	* @param name The element name
 	*/
-	@:overload public function endElement(ns : String, localName : String, name : String) : Void;
+	@:overload @:public public function endElement(ns : String, localName : String, name : String) : Void;
 	
 	/**
 	* Set an ID string to node association in the ID table.
@@ -214,7 +214,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param id The ID string.
 	* @param elem The associated ID.
 	*/
-	@:overload public function setIDAttribute(id : String, elem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function setIDAttribute(id : String, elem : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -239,7 +239,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* If available, when the disable-output-escaping attribute is used,
@@ -251,7 +251,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param start Index to start of characters in the array
 	* @param length Number of characters in the array
 	*/
-	@:overload public function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function charactersRaw(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Report the beginning of an entity.
@@ -267,7 +267,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see org.xml.sax.ext.DeclHandler#internalEntityDecl
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl
 	*/
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
 	/**
 	* Report the end of an entity.
@@ -275,14 +275,14 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param name The name of the entity that is ending.
 	* @see #startEntity
 	*/
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
 	/**
 	* Receive notivication of a entityReference.
 	*
 	* @param name name of the entity reference
 	*/
-	@:overload public function entityReference(name : String) : Void;
+	@:overload @:public public function entityReference(name : String) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -306,7 +306,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param length The number of characters to read from the array.
 	* @see #characters
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -323,7 +323,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param data The processing instruction data, or null if
 	*        none was supplied.
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -336,24 +336,24 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param start The starting position in the array.
 	* @param length The number of characters to use from the array.
 	*/
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/** Flag indicating that we are processing a CData section          */
-	private var m_inCData : Bool;
+	@:protected private var m_inCData : Bool;
 	
 	/**
 	* Report the start of a CDATA section.
 	*
 	* @see #endCDATA
 	*/
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
 	/**
 	* Report the end of a CDATA section.
 	*
 	* @see #startCDATA
 	*/
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
 	/**
 	* Receive notification of cdata.
@@ -378,7 +378,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Report the start of DTD declarations, if any.
@@ -394,14 +394,14 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see #endDTD
 	* @see #startEntity
 	*/
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report the end of DTD declarations.
 	*
 	* @see #startDTD
 	*/
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping.
@@ -431,7 +431,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see #endPrefixMapping
 	* @see #startElement
 	*/
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* End the scope of a prefix-URI mapping.
@@ -445,7 +445,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @see #startPrefixMapping
 	* @see #endElement
 	*/
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -462,7 +462,7 @@ extern class DOMBuilder implements org.xml.sax.ContentHandler implements org.xml
 	* @param name The name of the skipped entity.  If it is a
 	*        parameter entity, the name will begin with '%'.
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	
 }

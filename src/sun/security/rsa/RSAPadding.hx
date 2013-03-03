@@ -48,57 +48,57 @@ extern class RSAPadding
 	* @since   1.5
 	* @author  Andreas Sterbenz
 	*/
-	@:require(java5) public static var PAD_BLOCKTYPE_1(default, null) : Int;
+	@:require(java5) @:public @:final @:static public static var PAD_BLOCKTYPE_1(default, null) : Int;
 	
-	public static var PAD_BLOCKTYPE_2(default, null) : Int;
+	@:public @:final @:static public static var PAD_BLOCKTYPE_2(default, null) : Int;
 	
-	public static var PAD_NONE(default, null) : Int;
+	@:public @:final @:static public static var PAD_NONE(default, null) : Int;
 	
-	public static var PAD_OAEP_MGF1(default, null) : Int;
-	
-	/**
-	* Get a RSAPadding instance of the specified type.
-	* Keys used with this padding must be paddedSize bytes long.
-	*/
-	@:overload public static function getInstance(type : Int, paddedSize : Int) : sun.security.rsa.RSAPadding;
+	@:public @:final @:static public static var PAD_OAEP_MGF1(default, null) : Int;
 	
 	/**
 	* Get a RSAPadding instance of the specified type.
 	* Keys used with this padding must be paddedSize bytes long.
 	*/
-	@:overload public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom) : sun.security.rsa.RSAPadding;
+	@:overload @:public @:static public static function getInstance(type : Int, paddedSize : Int) : sun.security.rsa.RSAPadding;
+	
+	/**
+	* Get a RSAPadding instance of the specified type.
+	* Keys used with this padding must be paddedSize bytes long.
+	*/
+	@:overload @:public @:static public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom) : sun.security.rsa.RSAPadding;
 	
 	/**
 	* Get a RSAPadding instance of the specified type, which must be
 	* OAEP. Keys used with this padding must be paddedSize bytes long.
 	*/
-	@:overload public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom, spec : javax.crypto.spec.OAEPParameterSpec) : sun.security.rsa.RSAPadding;
+	@:overload @:public @:static public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom, spec : javax.crypto.spec.OAEPParameterSpec) : sun.security.rsa.RSAPadding;
 	
 	/**
 	* Return the maximum size of the plaintext data that can be processed using
 	* this object.
 	*/
-	@:overload public function getMaxDataSize() : Int;
+	@:overload @:public public function getMaxDataSize() : Int;
 	
 	/**
 	* Pad the data and return the padded block.
 	*/
-	@:overload public function pad(data : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function pad(data : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Pad the data and return the padded block.
 	*/
-	@:overload public function pad(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function pad(data : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unpad the padded block and return the data.
 	*/
-	@:overload public function unpad(padded : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unpad(padded : java.NativeArray<java.StdTypes.Int8>, ofs : Int, len : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unpad the padded block and return the data.
 	*/
-	@:overload public function unpad(padded : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function unpad(padded : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

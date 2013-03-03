@@ -35,7 +35,7 @@ extern interface TemplatesHandler extends org.xml.sax.ContentHandler
 	* been created.
 	*
 	*/
-	@:overload public function getTemplates() : javax.xml.transform.Templates;
+	@:overload @:public public function getTemplates() : javax.xml.transform.Templates;
 	
 	/**
 	* Set the base ID (URI or system ID) for the Templates object
@@ -45,14 +45,14 @@ extern interface TemplatesHandler extends org.xml.sax.ContentHandler
 	*
 	* @param systemID Base URI for this stylesheet.
 	*/
-	@:overload public function setSystemId(systemID : String) : Void;
+	@:overload @:public public function setSystemId(systemID : String) : Void;
 	
 	/**
 	* Get the base ID (URI or system ID) from where relative
 	* URLs will be resolved.
 	* @return The systemID that was set with {@link #setSystemId}.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

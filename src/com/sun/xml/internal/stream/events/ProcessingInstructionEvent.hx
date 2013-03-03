@@ -25,25 +25,25 @@ package com.sun.xml.internal.stream.events;
 */
 extern class ProcessingInstructionEvent extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.ProcessingInstruction
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(targetName : String, data : String) : Void;
+	@:overload @:public public function new(targetName : String, data : String) : Void;
 	
-	@:overload public function new(targetName : String, data : String, loc : javax.xml.stream.Location) : Void;
+	@:overload @:public public function new(targetName : String, data : String, loc : javax.xml.stream.Location) : Void;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
-	@:overload public function setTarget(targetName : String) : Void;
+	@:overload @:public public function setTarget(targetName : String) : Void;
 	
-	@:overload public function setData(data : String) : Void;
+	@:overload @:public public function setData(data : String) : Void;
 	
-	@:overload public function getData() : String;
+	@:overload @:public public function getData() : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

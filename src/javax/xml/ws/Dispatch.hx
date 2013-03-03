@@ -40,7 +40,7 @@ extern interface Dispatch<T> extends javax.xml.ws.BindingProvider
 	* @throws WebServiceException If there is any error in the configuration of
 	*     the <code>Dispatch</code> instance
 	**/
-	@:overload public function invoke(msg : T) : T;
+	@:overload @:public public function invoke(msg : T) : T;
 	
 	/** Invoke a service operation asynchronously.  The
 	*  method returns without waiting for the response to the operation
@@ -58,7 +58,7 @@ extern interface Dispatch<T> extends javax.xml.ws.BindingProvider
 	* @throws WebServiceException If there is any error in the configuration of
 	*     the <code>Dispatch</code> instance
 	**/
-	@:overload public function invokeAsync(msg : T) : javax.xml.ws.Response<T>;
+	@:overload @:public public function invokeAsync(msg : T) : javax.xml.ws.Response<T>;
 	
 	/** Invoke a service operation asynchronously. The
 	*  method returns without waiting for the response to the operation
@@ -81,7 +81,7 @@ extern interface Dispatch<T> extends javax.xml.ws.BindingProvider
 	* @throws WebServiceException If there is any error in the configuration of
 	*     the <code>Dispatch</code> instance
 	**/
-	@:overload public function invokeAsync(msg : T, handler : javax.xml.ws.AsyncHandler<T>) : java.util.concurrent.Future<Dynamic>;
+	@:overload @:public public function invokeAsync(msg : T, handler : javax.xml.ws.AsyncHandler<T>) : java.util.concurrent.Future<Dynamic>;
 	
 	/** Invokes a service operation using the one-way
 	*  interaction mode. The operation invocation is logically non-blocking,
@@ -100,7 +100,7 @@ extern interface Dispatch<T> extends javax.xml.ws.BindingProvider
 	*     the <code>Dispatch</code> instance or if an error occurs during the
 	*     invocation.
 	**/
-	@:overload public function invokeOneWay(msg : T) : Void;
+	@:overload @:public public function invokeOneWay(msg : T) : Void;
 	
 	
 }

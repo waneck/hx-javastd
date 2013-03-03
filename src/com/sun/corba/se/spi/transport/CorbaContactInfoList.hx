@@ -28,15 +28,15 @@ extern interface CorbaContactInfoList extends com.sun.corba.se.pept.transport.Co
 	/**
 	* @author Harold Carr
 	*/
-	@:overload public function setTargetIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function setTargetIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function setEffectiveTargetIOR(locatedIor : com.sun.corba.se.spi.ior.IOR) : Void;
+	@:overload @:public public function setEffectiveTargetIOR(locatedIor : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:public public function getEffectiveTargetIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload public function getLocalClientRequestDispatcher() : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
+	@:overload @:public public function getLocalClientRequestDispatcher() : com.sun.corba.se.spi.protocol.LocalClientRequestDispatcher;
 	
 	
 }

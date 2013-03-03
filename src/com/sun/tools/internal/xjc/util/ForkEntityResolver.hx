@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.util;
 */
 extern class ForkEntityResolver implements org.xml.sax.EntityResolver
 {
-	@:overload public function new(lhs : org.xml.sax.EntityResolver, rhs : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function new(lhs : org.xml.sax.EntityResolver, rhs : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
 	
 }

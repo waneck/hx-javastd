@@ -49,9 +49,9 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DUnaryPattern extends com.sun.xml.internal.rngom.digested.DPattern
 {
-	@:overload public function getChild() : com.sun.xml.internal.rngom.digested.DPattern;
+	@:overload @:public public function getChild() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload public function setChild(child : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:public public function setChild(child : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
 	
 }

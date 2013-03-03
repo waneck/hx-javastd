@@ -25,23 +25,23 @@ package javax.swing.plaf.metal;
 */
 extern class MetalToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButtonUI
 {
-	private var focusColor : java.awt.Color;
+	@:protected private var focusColor : java.awt.Color;
 	
-	private var selectColor : java.awt.Color;
+	@:protected private var selectColor : java.awt.Color;
 	
-	private var disabledTextColor : java.awt.Color;
+	@:protected private var disabledTextColor : java.awt.Color;
 	
-	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:public override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function getSelectColor() : java.awt.Color;
+	@:overload @:protected private function getSelectColor() : java.awt.Color;
 	
-	@:overload private function getDisabledTextColor() : java.awt.Color;
+	@:overload @:protected private function getDisabledTextColor() : java.awt.Color;
 	
-	@:overload private function getFocusColor() : java.awt.Color;
+	@:overload @:protected private function getFocusColor() : java.awt.Color;
 	
 	/**
 	* If necessary paints the background of the component, then invokes
@@ -55,13 +55,13 @@ extern class MetalToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButto
 	* @see javax.swing.plaf.ComponentUI#paint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload @:protected override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
-	@:overload private function paintText(g : java.awt.Graphics, c : javax.swing.JComponent, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload @:protected override private function paintText(g : java.awt.Graphics, c : javax.swing.JComponent, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Paints the appropriate icon of the button <code>b</code> in the
@@ -73,7 +73,7 @@ extern class MetalToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButto
 	* @throws NullPointerException if any of the arguments are null.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override private function paintIcon(g : java.awt.Graphics, b : javax.swing.AbstractButton, iconRect : java.awt.Rectangle) : Void;
+	@:require(java5) @:overload @:protected override private function paintIcon(g : java.awt.Graphics, b : javax.swing.AbstractButton, iconRect : java.awt.Rectangle) : Void;
 	
 	
 }

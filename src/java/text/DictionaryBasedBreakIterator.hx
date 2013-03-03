@@ -46,30 +46,30 @@ package java.text;
 	* passed through to RuleBasedBreakIterator's constructor.
 	* @param dictionaryFilename The filename of the dictionary file to use
 	*/
-	@:overload public function new(dataFile : String, dictionaryFile : String) : Void;
+	@:overload @:public public function new(dataFile : String, dictionaryFile : String) : Void;
 	
-	@:overload override public function setText(newText : java.text.CharacterIterator) : Void;
+	@:overload @:public override public function setText(newText : java.text.CharacterIterator) : Void;
 	
 	/**
 	* Sets the current iteration position to the beginning of the text.
 	* (i.e., the CharacterIterator's starting offset).
 	* @return The offset of the beginning of the text.
 	*/
-	@:overload override public function first() : Int;
+	@:overload @:public override public function first() : Int;
 	
 	/**
 	* Sets the current iteration position to the end of the text.
 	* (i.e., the CharacterIterator's ending offset).
 	* @return The text's past-the-end offset.
 	*/
-	@:overload override public function last() : Int;
+	@:overload @:public override public function last() : Int;
 	
 	/**
 	* Advances the iterator one step backwards.
 	* @return The position of the last boundary position before the
 	* current iteration position
 	*/
-	@:overload override public function previous() : Int;
+	@:overload @:public override public function previous() : Int;
 	
 	/**
 	* Sets the current iteration position to the last boundary position
@@ -77,7 +77,7 @@ package java.text;
 	* @param offset The position to begin searching from
 	* @return The position of the last boundary before "offset"
 	*/
-	@:overload override public function preceding(offset : Int) : Int;
+	@:overload @:public override public function preceding(offset : Int) : Int;
 	
 	/**
 	* Sets the current iteration position to the first boundary position after
@@ -85,17 +85,17 @@ package java.text;
 	* @param offset The position to begin searching forward from
 	* @return The position of the first boundary after "offset"
 	*/
-	@:overload override public function following(offset : Int) : Int;
+	@:overload @:public override public function following(offset : Int) : Int;
 	
 	/**
 	* This is the implementation function for next().
 	*/
-	@:overload private function handleNext() : Int;
+	@:overload @:protected override private function handleNext() : Int;
 	
 	/**
 	* Looks up a character category for a character.
 	*/
-	@:overload private function lookupCategory(c : Int) : Int;
+	@:overload @:protected override private function lookupCategory(c : Int) : Int;
 	
 	
 }

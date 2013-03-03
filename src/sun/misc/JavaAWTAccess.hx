@@ -25,25 +25,25 @@ package sun.misc;
 */
 extern interface JavaAWTAccess
 {
-	@:overload public function getContext() : Dynamic;
+	@:overload @:public public function getContext() : Dynamic;
 	
-	@:overload public function getExecutionContext() : Dynamic;
+	@:overload @:public public function getExecutionContext() : Dynamic;
 	
-	@:overload public function get(context : Dynamic, key : Dynamic) : Dynamic;
+	@:overload @:public public function get(context : Dynamic, key : Dynamic) : Dynamic;
 	
-	@:overload public function put(context : Dynamic, key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function put(context : Dynamic, key : Dynamic, value : Dynamic) : Void;
 	
-	@:overload public function remove(context : Dynamic, key : Dynamic) : Void;
+	@:overload @:public public function remove(context : Dynamic, key : Dynamic) : Void;
 	
-	@:overload public function get(key : Dynamic) : Dynamic;
+	@:overload @:public public function get(key : Dynamic) : Dynamic;
 	
-	@:overload public function put(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Void;
 	
-	@:overload public function remove(key : Dynamic) : Void;
+	@:overload @:public public function remove(key : Dynamic) : Void;
 	
-	@:overload public function isDisposed() : Bool;
+	@:overload @:public public function isDisposed() : Bool;
 	
-	@:overload public function isMainAppContext() : Bool;
+	@:overload @:public public function isMainAppContext() : Bool;
 	
 	
 }

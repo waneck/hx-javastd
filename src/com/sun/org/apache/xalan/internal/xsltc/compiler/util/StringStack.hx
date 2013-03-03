@@ -23,11 +23,11 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 */
 extern class StringStack extends java.util.Stack<Dynamic>
 {
-	@:overload public function peekString() : String;
+	@:overload @:public public function peekString() : String;
 	
-	@:overload public function popString() : String;
+	@:overload @:public public function popString() : String;
 	
-	@:overload public function pushString(val : String) : String;
+	@:overload @:public public function pushString(val : String) : String;
 	
 	
 }

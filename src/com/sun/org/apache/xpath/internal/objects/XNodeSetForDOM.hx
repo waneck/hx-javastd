@@ -23,18 +23,18 @@ package com.sun.org.apache.xpath.internal.objects;
 */
 extern class XNodeSetForDOM extends com.sun.org.apache.xpath.internal.objects.XNodeSet
 {
-	@:overload public function new(node : org.w3c.dom.Node, dtmMgr : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload @:public public function new(node : org.w3c.dom.Node, dtmMgr : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	/**
 	* Construct a XNodeSet object.
 	*
 	* @param val Value of the XNodeSet object
 	*/
-	@:overload public function new(val : com.sun.org.apache.xpath.internal.objects.XNodeSet) : Void;
+	@:overload @:public public function new(val : com.sun.org.apache.xpath.internal.objects.XNodeSet) : Void;
 	
-	@:overload public function new(nodeList : org.w3c.dom.NodeList, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function new(nodeList : org.w3c.dom.NodeList, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
-	@:overload public function new(nodeIter : org.w3c.dom.traversal.NodeIterator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Void;
+	@:overload @:public public function new(nodeIter : org.w3c.dom.traversal.NodeIterator, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Void;
 	
 	/**
 	* Return the original DOM object that the user passed in.  For use primarily
@@ -42,7 +42,7 @@ extern class XNodeSetForDOM extends com.sun.org.apache.xpath.internal.objects.XN
 	*
 	* @return The object that this class wraps
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload @:public override public function object() : Dynamic;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -51,7 +51,7 @@ extern class XNodeSetForDOM extends com.sun.org.apache.xpath.internal.objects.XN
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function nodeset() : org.w3c.dom.traversal.NodeIterator;
+	@:overload @:public override public function nodeset() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -60,7 +60,7 @@ extern class XNodeSetForDOM extends com.sun.org.apache.xpath.internal.objects.XN
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function nodelist() : org.w3c.dom.NodeList;
+	@:overload @:public override public function nodelist() : org.w3c.dom.NodeList;
 	
 	
 }

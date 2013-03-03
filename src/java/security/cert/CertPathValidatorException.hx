@@ -29,7 +29,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	* Creates a <code>CertPathValidatorException</code> with
 	* no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>CertPathValidatorException</code> with the given
@@ -38,7 +38,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	*
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Creates a <code>CertPathValidatorException</code> that wraps the
@@ -53,7 +53,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	* {@link #getCause getCause()} method). (A <code>null</code> value is
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>CertPathValidatorException</code> with the specified
@@ -64,7 +64,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	* {@link #getCause getCause()} method). (A <code>null</code> value is
 	* permitted, and indicates that the cause is nonexistent or unknown.)
 	*/
-	@:overload public function new(msg : String, cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Creates a <code>CertPathValidatorException</code> with the specified
@@ -83,7 +83,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	* @throws IllegalArgumentException if <code>certPath</code> is
 	* <code>null</code> and <code>index</code> is not -1
 	*/
-	@:overload public function new(msg : String, cause : java.lang.Throwable, certPath : java.security.cert.CertPath, index : Int) : Void;
+	@:overload @:public public function new(msg : String, cause : java.lang.Throwable, certPath : java.security.cert.CertPath, index : Int) : Void;
 	
 	/**
 	* Creates a <code>CertPathValidatorException</code> with the specified
@@ -106,7 +106,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(msg : String, cause : java.lang.Throwable, certPath : java.security.cert.CertPath, index : Int, reason : java.security.cert.CertPathValidatorException.CertPathValidatorException_Reason) : Void;
+	@:require(java7) @:overload @:public public function new(msg : String, cause : java.lang.Throwable, certPath : java.security.cert.CertPath, index : Int, reason : java.security.cert.CertPathValidatorException.CertPathValidatorException_Reason) : Void;
 	
 	/**
 	* Returns the certification path that was being validated when
@@ -115,7 +115,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	* @return the <code>CertPath</code> that was being validated when
 	* the exception was thrown (or <code>null</code> if not specified)
 	*/
-	@:overload public function getCertPath() : java.security.cert.CertPath;
+	@:overload @:public public function getCertPath() : java.security.cert.CertPath;
 	
 	/**
 	* Returns the index of the certificate in the certification path
@@ -125,7 +125,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	*
 	* @return the index that has been set, or -1 if none has been set
 	*/
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
 	/**
 	* Returns the reason that the validation failed. The reason is
@@ -138,7 +138,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getReason() : java.security.cert.CertPathValidatorException.CertPathValidatorException_Reason;
+	@:require(java7) @:overload @:public public function getReason() : java.security.cert.CertPathValidatorException.CertPathValidatorException_Reason;
 	
 	
 }

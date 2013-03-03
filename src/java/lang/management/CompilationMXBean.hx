@@ -61,7 +61,7 @@ package java.lang.management;
 	*
 	* @return the name of the JIT compiler.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Tests if the Java virtual machine supports the monitoring of
@@ -70,7 +70,7 @@ package java.lang.management;
 	* @return <tt>true</tt> if the monitoring of compilation time is
 	* supported ; <tt>false</tt> otherwise.
 	*/
-	@:overload public function isCompilationTimeMonitoringSupported() : Bool;
+	@:overload @:public public function isCompilationTimeMonitoringSupported() : Bool;
 	
 	/**
 	* Returns the approximate accumlated elapsed time (in milliseconds)
@@ -96,7 +96,7 @@ package java.lang.management;
 	* this operation.
 	*
 	*/
-	@:overload public function getTotalCompilationTime() : haxe.Int64;
+	@:overload @:public public function getTotalCompilationTime() : haxe.Int64;
 	
 	
 }

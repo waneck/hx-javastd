@@ -46,19 +46,19 @@ package com.sun.xml.internal.rngom.xml.sax;
 */
 extern class AbstractLexicalHandler implements org.xml.sax.ext.LexicalHandler
 {
-	@:overload public function startDTD(s : String, s1 : String, s2 : String) : Void;
+	@:overload @:public public function startDTD(s : String, s1 : String, s2 : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function startEntity(s : String) : Void;
+	@:overload @:public public function startEntity(s : String) : Void;
 	
-	@:overload public function endEntity(s : String) : Void;
+	@:overload @:public public function endEntity(s : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

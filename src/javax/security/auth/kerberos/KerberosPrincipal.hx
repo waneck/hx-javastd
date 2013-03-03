@@ -34,32 +34,32 @@ package javax.security.auth.kerberos;
 	/**
 	* unknown name type.
 	*/
-	public static var KRB_NT_UNKNOWN(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_UNKNOWN(default, null) : Int;
 	
 	/**
 	* user principal name type.
 	*/
-	public static var KRB_NT_PRINCIPAL(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_PRINCIPAL(default, null) : Int;
 	
 	/**
 	* service and other unique instance (krbtgt) name type.
 	*/
-	public static var KRB_NT_SRV_INST(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_SRV_INST(default, null) : Int;
 	
 	/**
 	* service with host name as instance (telnet, rcommands) name type.
 	*/
-	public static var KRB_NT_SRV_HST(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_SRV_HST(default, null) : Int;
 	
 	/**
 	* service with host as remaining components name type.
 	*/
-	public static var KRB_NT_SRV_XHST(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_SRV_XHST(default, null) : Int;
 	
 	/**
 	* unique ID name type.
 	*/
-	public static var KRB_NT_UID(default, null) : Int;
+	@:public @:static @:final public static var KRB_NT_UID(default, null) : Int;
 	
 	/**
 	* Constructs a KerberosPrincipal from the provided string input. The
@@ -85,7 +85,7 @@ package javax.security.auth.kerberos;
 	* in either a Kerberos configuration file or via the
 	* java.security.krb5.realm system property.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Constructs a KerberosPrincipal from the provided string and
@@ -114,14 +114,14 @@ package javax.security.auth.kerberos;
 	* realm is not specified in either a Kerberos configuration
 	* file or via the java.security.krb5.realm system property.
 	*/
-	@:overload public function new(name : String, nameType : Int) : Void;
+	@:overload @:public public function new(name : String, nameType : Int) : Void;
 	
 	/**
 	* Returns the realm component of this Kerberos principal.
 	*
 	* @return the realm component of this Kerberos principal.
 	*/
-	@:overload public function getRealm() : String;
+	@:overload @:public public function getRealm() : String;
 	
 	/**
 	* Returns a hashcode for this principal. The hash code is defined to
@@ -132,7 +132,7 @@ package javax.security.auth.kerberos;
 	*
 	* @return a hashCode() for the <code>KerberosPrincipal</code>
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Compares the specified Object with this Principal for equality.
@@ -147,7 +147,7 @@ package javax.security.auth.kerberos;
 	* @return true if the Object passed in represents the same principal
 	* as this one, false otherwise.
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* The returned string corresponds to the single-string
@@ -156,7 +156,7 @@ package javax.security.auth.kerberos;
 	*
 	* @return the principal name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the name type of the KerberosPrincipal. Valid name types
@@ -166,9 +166,9 @@ package javax.security.auth.kerberos;
 	* @return the name type.
 	*
 	*/
-	@:overload public function getNameType() : Int;
+	@:overload @:public public function getNameType() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

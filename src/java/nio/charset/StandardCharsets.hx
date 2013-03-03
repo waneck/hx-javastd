@@ -37,33 +37,33 @@ package java.nio.charset;
 	* Seven-bit ASCII, a.k.a. ISO646-US, a.k.a. the Basic Latin block of the
 	* Unicode character set
 	*/
-	public static var US_ASCII(default, null) : java.nio.charset.Charset;
+	@:public @:static @:final public static var US_ASCII(default, null) : java.nio.charset.Charset;
 	
 	/**
 	* ISO Latin Alphabet No. 1, a.k.a. ISO-LATIN-1
 	*/
-	public static var ISO_8859_1(default, null) : java.nio.charset.Charset;
+	@:public @:static @:final public static var ISO_8859_1(default, null) : java.nio.charset.Charset;
 	
 	/**
 	* Eight-bit UCS Transformation Format
 	*/
-	public static var UTF_8(default, null) : java.nio.charset.Charset;
+	@:public @:static @:final public static var UTF_8(default, null) : java.nio.charset.Charset;
 	
 	/**
 	* Sixteen-bit UCS Transformation Format, big-endian byte order
 	*/
-	public static var UTF_16BE(default, null) : java.nio.charset.Charset;
+	@:public @:static @:final public static var UTF_16BE(default, null) : java.nio.charset.Charset;
 	
 	/**
 	* Sixteen-bit UCS Transformation Format, little-endian byte order
 	*/
-	public static var UTF_16LE(default, null) : java.nio.charset.Charset;
+	@:public @:static @:final public static var UTF_16LE(default, null) : java.nio.charset.Charset;
 	
 	/**
 	* Sixteen-bit UCS Transformation Format, byte order identified by an
 	* optional byte-order mark
 	*/
-	public static var UTF_16(default, null) : java.nio.charset.Charset;
+	@:public @:static @:final public static var UTF_16(default, null) : java.nio.charset.Charset;
 	
 	
 }

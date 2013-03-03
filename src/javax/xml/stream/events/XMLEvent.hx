@@ -40,7 +40,7 @@ extern interface XMLEvent extends javax.xml.stream.XMLStreamConstants
 	* @see #END_DOCUMENT
 	* @see #DTD
 	*/
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
 	/**
 	* Return the location of this event.  The Location
@@ -54,73 +54,73 @@ extern interface XMLEvent extends javax.xml.stream.XMLStreamConstants
 	* A utility function to check if this event is a StartElement.
 	* @see StartElement
 	*/
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
 	/**
 	* A utility function to check if this event is an Attribute.
 	* @see Attribute
 	*/
-	@:overload public function isAttribute() : Bool;
+	@:overload @:public public function isAttribute() : Bool;
 	
 	/**
 	* A utility function to check if this event is a Namespace.
 	* @see Namespace
 	*/
-	@:overload public function isNamespace() : Bool;
+	@:overload @:public public function isNamespace() : Bool;
 	
 	/**
 	* A utility function to check if this event is a EndElement.
 	* @see EndElement
 	*/
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
 	/**
 	* A utility function to check if this event is an EntityReference.
 	* @see EntityReference
 	*/
-	@:overload public function isEntityReference() : Bool;
+	@:overload @:public public function isEntityReference() : Bool;
 	
 	/**
 	* A utility function to check if this event is a ProcessingInstruction.
 	* @see ProcessingInstruction
 	*/
-	@:overload public function isProcessingInstruction() : Bool;
+	@:overload @:public public function isProcessingInstruction() : Bool;
 	
 	/**
 	* A utility function to check if this event is Characters.
 	* @see Characters
 	*/
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
 	/**
 	* A utility function to check if this event is a StartDocument.
 	* @see StartDocument
 	*/
-	@:overload public function isStartDocument() : Bool;
+	@:overload @:public public function isStartDocument() : Bool;
 	
 	/**
 	* A utility function to check if this event is an EndDocument.
 	* @see EndDocument
 	*/
-	@:overload public function isEndDocument() : Bool;
+	@:overload @:public public function isEndDocument() : Bool;
 	
 	/**
 	* Returns this event as a start element event, may result in
 	* a class cast exception if this event is not a start element.
 	*/
-	@:overload public function asStartElement() : javax.xml.stream.events.StartElement;
+	@:overload @:public public function asStartElement() : javax.xml.stream.events.StartElement;
 	
 	/**
 	* Returns this event as an end  element event, may result in
 	* a class cast exception if this event is not a end element.
 	*/
-	@:overload public function asEndElement() : javax.xml.stream.events.EndElement;
+	@:overload @:public public function asEndElement() : javax.xml.stream.events.EndElement;
 	
 	/**
 	* Returns this event as Characters, may result in
 	* a class cast exception if this event is not Characters.
 	*/
-	@:overload public function asCharacters() : javax.xml.stream.events.Characters;
+	@:overload @:public public function asCharacters() : javax.xml.stream.events.Characters;
 	
 	/**
 	* This method is provided for implementations to provide
@@ -128,7 +128,7 @@ extern interface XMLEvent extends javax.xml.stream.XMLStreamConstants
 	* It is optional and will return null if no information
 	* is available.
 	*/
-	@:overload public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload @:public public function getSchemaType() : javax.xml.namespace.QName;
 	
 	/**
 	* This method will write the XMLEvent as per the XML 1.0 specification as Unicode characters.
@@ -146,7 +146,7 @@ extern interface XMLEvent extends javax.xml.stream.XMLStreamConstants
 	* @param writer The writer that will output the data
 	* @throws XMLStreamException if there is a fatal error writing the event
 	*/
-	@:overload public function writeAsEncodedUnicode(writer : java.io.Writer) : Void;
+	@:overload @:public public function writeAsEncodedUnicode(writer : java.io.Writer) : Void;
 	
 	
 }

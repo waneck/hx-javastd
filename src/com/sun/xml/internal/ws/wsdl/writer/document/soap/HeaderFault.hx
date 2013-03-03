@@ -29,7 +29,7 @@ extern interface HeaderFault extends com.sun.xml.internal.txw2.TypedXmlWriter ex
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function message(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.soap.HeaderFault;
+	@:overload @:public public function message(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.soap.HeaderFault;
 	
 	
 }

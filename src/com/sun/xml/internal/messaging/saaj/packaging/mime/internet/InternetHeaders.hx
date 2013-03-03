@@ -31,7 +31,7 @@ extern class InternetHeaders
 	/**
 	* Create an empty InternetHeaders object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Read and parse the given RFC822 message stream till the
@@ -44,7 +44,7 @@ extern class InternetHeaders
 	*
 	* @param   is RFC822 input stream
 	*/
-	@:overload public function new(is : java.io.InputStream) : Void;
+	@:overload @:public public function new(is : java.io.InputStream) : Void;
 	
 	/**
 	* Read and parse the given RFC822 message stream till the
@@ -57,7 +57,7 @@ extern class InternetHeaders
 	*
 	* @param   is RFC822 input stream
 	*/
-	@:overload public function load(is : java.io.InputStream) : Void;
+	@:overload @:public public function load(is : java.io.InputStream) : Void;
 	
 	/**
 	* Return all the values for the specified header. The
@@ -67,7 +67,7 @@ extern class InternetHeaders
 	* @param   name header name
 	* @return          array of header values, or null if none
 	*/
-	@:overload public function getHeader(name : String) : java.NativeArray<String>;
+	@:overload @:public public function getHeader(name : String) : java.NativeArray<String>;
 	
 	/**
 	* Get all the headers for this header name, returned as a single
@@ -81,7 +81,7 @@ extern class InternetHeaders
 	*         this name, or null if none
 	* @param   name header name
 	*/
-	@:overload public function getHeader(name : String, delimiter : String) : String;
+	@:overload @:public public function getHeader(name : String, delimiter : String) : String;
 	
 	/**
 	* Change the first header line that matches name
@@ -93,7 +93,7 @@ extern class InternetHeaders
 	* @param   name    header name
 	* @param   value   header value
 	*/
-	@:overload public function setHeader(name : String, value : String) : Void;
+	@:overload @:public public function setHeader(name : String, value : String) : Void;
 	
 	/**
 	* Add a header with the specified name and value to the header list. <p>
@@ -103,14 +103,14 @@ extern class InternetHeaders
 	* @param   name    header name
 	* @param   value   header value
 	*/
-	@:overload public function addHeader(name : String, value : String) : Void;
+	@:overload @:public public function addHeader(name : String, value : String) : Void;
 	
 	/**
 	* Remove all header entries that match the given name
 	*
 	* @param   name header name
 	*/
-	@:overload public function removeHeader(name : String) : Void;
+	@:overload @:public public function removeHeader(name : String) : Void;
 	
 	/**
 	* Return all the headers as an Enumeration of
@@ -118,7 +118,7 @@ extern class InternetHeaders
 	*
 	* @return  Header objects
 	*/
-	@:overload public function getAllHeaders() : com.sun.xml.internal.messaging.saaj.util.FinalArrayList;
+	@:overload @:public public function getAllHeaders() : com.sun.xml.internal.messaging.saaj.util.FinalArrayList;
 	
 	/**
 	* Add an RFC822 header line to the header store.
@@ -129,12 +129,12 @@ extern class InternetHeaders
 	*
 	* @param   line    raw RFC822 header line
 	*/
-	@:overload public function addHeaderLine(line : String) : Void;
+	@:overload @:public public function addHeaderLine(line : String) : Void;
 	
 	/**
 	* Return all the header lines as a collection
 	*/
-	@:overload public function getAllHeaderLines() : java.util.List<Dynamic>;
+	@:overload @:public public function getAllHeaderLines() : java.util.List<Dynamic>;
 	
 	
 }
@@ -143,12 +143,12 @@ extern class InternetHeaders
 	/*
 	* Return the "name" part of the header line.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/*
 	* Return the "value" part of the header line.
 	*/
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

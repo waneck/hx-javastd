@@ -37,17 +37,17 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	/**
 	* Used to get a gamma value or TRC for the red component.
 	*/
-	public static var REDCOMPONENT(default, null) : Int;
+	@:public @:static @:final public static var REDCOMPONENT(default, null) : Int;
 	
 	/**
 	* Used to get a gamma value or TRC for the green component.
 	*/
-	public static var GREENCOMPONENT(default, null) : Int;
+	@:public @:static @:final public static var GREENCOMPONENT(default, null) : Int;
 	
 	/**
 	* Used to get a gamma value or TRC for the blue component.
 	*/
-	public static var BLUECOMPONENT(default, null) : Int;
+	@:public @:static @:final public static var BLUECOMPONENT(default, null) : Int;
 	
 	/**
 	* Returns an array that contains the components of the profile's
@@ -56,7 +56,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* @return A 3-element <CODE>float</CODE> array containing the x, y,
 	* and z components of the profile's <CODE>mediaWhitePointTag</CODE>.
 	*/
-	@:overload public function getMediaWhitePoint() : java.NativeArray<Single>;
+	@:overload @:public public function getMediaWhitePoint() : java.NativeArray<Single>;
 	
 	/**
 	* Returns a 3x3 <CODE>float</CODE> matrix constructed from the
@@ -71,7 +71,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* components of the profile's <CODE>redColorantTag</CODE>,
 	* <CODE>greenColorantTag</CODE>, and <CODE>blueColorantTag</CODE>.
 	*/
-	@:overload public function getMatrix() : java.NativeArray<java.NativeArray<Single>>;
+	@:overload @:public public function getMatrix() : java.NativeArray<java.NativeArray<Single>>;
 	
 	/**
 	* Returns a gamma value representing the tone reproduction curve
@@ -97,7 +97,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* @exception ProfileDataException if the profile does not specify
 	*            the corresponding TRC as a single gamma value.
 	*/
-	@:overload public function getGamma(component : Int) : Single;
+	@:overload @:public public function getGamma(component : Int) : Single;
 	
 	/**
 	* Returns the TRC for a particular component as an array.
@@ -129,7 +129,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* @exception ProfileDataException if the profile does not specify
 	*            the corresponding TRC as a table.
 	*/
-	@:overload public function getTRC(component : Int) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getTRC(component : Int) : java.NativeArray<java.StdTypes.Int16>;
 	
 	
 }

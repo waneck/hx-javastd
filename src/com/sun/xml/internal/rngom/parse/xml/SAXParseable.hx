@@ -46,15 +46,15 @@ package com.sun.xml.internal.rngom.parse.xml;
 */
 extern class SAXParseable implements com.sun.xml.internal.rngom.parse.Parseable
 {
-	@:overload public function new(_in : org.xml.sax.InputSource, eh : org.xml.sax.ErrorHandler, xrc : com.sun.xml.internal.rngom.xml.sax.XMLReaderCreator) : Void;
+	@:overload @:public public function new(_in : org.xml.sax.InputSource, eh : org.xml.sax.ErrorHandler, xrc : com.sun.xml.internal.rngom.xml.sax.XMLReaderCreator) : Void;
 	
-	@:overload public function new(_in : org.xml.sax.InputSource, eh : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(_in : org.xml.sax.InputSource, eh : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload public function parse(schemaBuilder : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parse(schemaBuilder : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function parseInclude(uri : String, schemaBuilder : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, g : com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parseInclude(uri : String, schemaBuilder : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, g : com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
-	@:overload public function parseExternal(uri : String, schemaBuilder : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, s : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
+	@:overload @:public public function parseExternal(uri : String, schemaBuilder : com.sun.xml.internal.rngom.ast.builder.SchemaBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, s : com.sun.xml.internal.rngom.ast.builder.Scope<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>, inheritedNs : String) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	
 	
 }

@@ -48,7 +48,7 @@ extern interface ImageProducer
 	* @param ic the specified <code>ImageConsumer</code>
 	* @see #startProduction
 	*/
-	@:overload public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function addConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Determines if a specified <code>ImageConsumer</code>
@@ -60,7 +60,7 @@ extern interface ImageProducer
 	*         this <code>ImageProducer</code>;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
+	@:overload @:public public function isConsumer(ic : java.awt.image.ImageConsumer) : Bool;
 	
 	/**
 	* Removes the specified <code>ImageConsumer</code> object
@@ -71,7 +71,7 @@ extern interface ImageProducer
 	* to this consumer as soon as is feasible.
 	* @param ic the specified <code>ImageConsumer</code>
 	*/
-	@:overload public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function removeConsumer(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Registers the specified <code>ImageConsumer</code> object
@@ -84,7 +84,7 @@ extern interface ImageProducer
 	* @param ic the specified <code>ImageConsumer</code>
 	* @see #addConsumer
 	*/
-	@:overload public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function startProduction(ic : java.awt.image.ImageConsumer) : Void;
 	
 	/**
 	* Requests, on behalf of the <code>ImageConsumer</code>,
@@ -107,7 +107,7 @@ extern interface ImageProducer
 	* @param ic the specified <code>ImageConsumer</code>
 	* @see ImageConsumer#setHints
 	*/
-	@:overload public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
+	@:overload @:public public function requestTopDownLeftRightResend(ic : java.awt.image.ImageConsumer) : Void;
 	
 	
 }

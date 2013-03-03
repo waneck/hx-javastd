@@ -25,16 +25,16 @@ package sun.net.www.protocol.jar;
 */
 extern class Handler extends java.net.URLStreamHandler
 {
-	@:overload private function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:protected override private function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
 	/**
 	* Compare two jar URLs
 	*/
-	@:overload private function sameFile(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:overload @:protected override private function sameFile(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
-	@:overload private function hashCode(u : java.net.URL) : Int;
+	@:overload @:protected override private function hashCode(u : java.net.URL) : Int;
 	
-	@:overload private function parseURL(url : java.net.URL, spec : String, start : Int, limit : Int) : Void;
+	@:overload @:protected override private function parseURL(url : java.net.URL, spec : String, start : Int, limit : Int) : Void;
 	
 	
 }

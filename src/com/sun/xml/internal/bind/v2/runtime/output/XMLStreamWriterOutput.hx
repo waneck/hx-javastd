@@ -29,27 +29,27 @@ extern class XMLStreamWriterOutput extends com.sun.xml.internal.bind.v2.runtime.
 	* Creates a new {@link XmlOutput} from a {@link XMLStreamWriter}.
 	* This method recognizes an FI StAX writer.
 	*/
-	@:overload public static function create(out : javax.xml.stream.XMLStreamWriter, context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
+	@:overload @:public @:static public static function create(out : javax.xml.stream.XMLStreamWriter, context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
 	
-	private var buf(default, null) : java.NativeArray<java.StdTypes.Char16>;
+	@:protected @:final private var buf(default, null) : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload private function new(out : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:protected private function new(out : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload @:public override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
-	@:overload override public function endDocument(fragment : Bool) : Void;
+	@:overload @:public override public function endDocument(fragment : Bool) : Void;
 	
-	@:overload override public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload @:public override public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload override public function endStartTag() : Void;
+	@:overload @:public override public function endStartTag() : Void;
 	
-	@:overload override public function endTag(prefix : Int, localName : String) : Void;
+	@:overload @:public override public function endTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
 	
 	
 }

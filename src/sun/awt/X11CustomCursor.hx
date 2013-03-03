@@ -31,11 +31,11 @@ extern class X11CustomCursor extends sun.awt.CustomCursor
 	* @see Component#setCursor
 	* @author      Thomas Ball
 	*/
-	@:overload public function new(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : Void;
+	@:overload @:public public function new(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : Void;
 	
-	@:overload override private function createNativeCursor(im : java.awt.Image, pixels : java.NativeArray<Int>, width : Int, height : Int, xHotSpot : Int, yHotSpot : Int) : Void;
+	@:overload @:protected override private function createNativeCursor(im : java.awt.Image, pixels : java.NativeArray<Int>, width : Int, height : Int, xHotSpot : Int, yHotSpot : Int) : Void;
 	
-	@:overload @:abstract private function createCursor(xorMask : java.NativeArray<java.StdTypes.Int8>, andMask : java.NativeArray<java.StdTypes.Int8>, width : Int, height : Int, fcolor : Int, bcolor : Int, xHotSpot : Int, yHotSpot : Int) : Void;
+	@:overload @:protected @:abstract private function createCursor(xorMask : java.NativeArray<java.StdTypes.Int8>, andMask : java.NativeArray<java.StdTypes.Int8>, width : Int, height : Int, fcolor : Int, bcolor : Int, xHotSpot : Int, yHotSpot : Int) : Void;
 	
 	
 }

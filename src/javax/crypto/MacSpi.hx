@@ -30,7 +30,7 @@ extern class MacSpi
 	*
 	* @return the MAC length in bytes.
 	*/
-	@:overload @:abstract private function engineGetMacLength() : Int;
+	@:overload @:protected @:abstract private function engineGetMacLength() : Int;
 	
 	/**
 	* Initializes the MAC with the given (secret) key and algorithm
@@ -44,14 +44,14 @@ extern class MacSpi
 	* @exception InvalidAlgorithmParameterException if the given algorithm
 	* parameters are inappropriate for this MAC.
 	*/
-	@:overload @:abstract private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected @:abstract private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Processes the given byte.
 	*
 	* @param input the input byte to be processed.
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Processes the first <code>len</code> bytes in <code>input</code>,
@@ -61,7 +61,7 @@ extern class MacSpi
 	* @param offset the offset in <code>input</code> where the input starts.
 	* @param len the number of bytes to process.
 	*/
-	@:overload @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:protected @:abstract private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Processes <code>input.remaining()</code> bytes in the ByteBuffer
@@ -75,7 +75,7 @@ extern class MacSpi
 	* @param input the ByteBuffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:require(java5) @:overload @:protected private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
 	/**
 	* Completes the MAC computation and resets the MAC for further use,
@@ -83,13 +83,13 @@ extern class MacSpi
 	*
 	* @return the MAC result.
 	*/
-	@:overload @:abstract private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineDoFinal() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Resets the MAC for further use, maintaining the secret key that the
 	* MAC was initialized with.
 	*/
-	@:overload @:abstract private function engineReset() : Void;
+	@:overload @:protected @:abstract private function engineReset() : Void;
 	
 	/**
 	* Returns a clone if the implementation is cloneable.
@@ -99,7 +99,7 @@ extern class MacSpi
 	* @exception CloneNotSupportedException if this is called
 	* on an implementation that does not support <code>Cloneable</code>.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }

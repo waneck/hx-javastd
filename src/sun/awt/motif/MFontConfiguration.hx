@@ -25,35 +25,35 @@ package sun.awt.motif;
 */
 extern class MFontConfiguration extends sun.awt.FontConfiguration
 {
-	@:overload public function new(fm : sun.font.SunFontManager) : Void;
+	@:overload @:public public function new(fm : sun.font.SunFontManager) : Void;
 	
-	@:overload public function new(fm : sun.font.SunFontManager, preferLocaleFonts : Bool, preferPropFonts : Bool) : Void;
+	@:overload @:public public function new(fm : sun.font.SunFontManager, preferLocaleFonts : Bool, preferPropFonts : Bool) : Void;
 	
 	/* Needs to be kept in sync with updates in the languages used in
 	* the fontconfig files.
 	*/
-	@:overload override private function initReorderMap() : Void;
+	@:overload @:protected override private function initReorderMap() : Void;
 	
 	/**
 	* Sets the OS name and version from environment information.
 	*/
-	@:overload override private function setOsNameAndVersion() : Void;
+	@:overload @:protected override private function setOsNameAndVersion() : Void;
 	
-	@:overload override private function mapFileName(fileName : String) : String;
+	@:overload @:protected override private function mapFileName(fileName : String) : String;
 	
-	@:overload override public function getFallbackFamilyName(fontName : String, defaultFallback : String) : String;
+	@:overload @:public override public function getFallbackFamilyName(fontName : String, defaultFallback : String) : String;
 	
-	@:overload override private function getEncoding(awtFontName : String, characterSubsetName : String) : String;
+	@:overload @:protected override private function getEncoding(awtFontName : String, characterSubsetName : String) : String;
 	
-	@:overload override private function getDefaultFontCharset(fontName : String) : java.nio.charset.Charset;
+	@:overload @:protected override private function getDefaultFontCharset(fontName : String) : java.nio.charset.Charset;
 	
-	@:overload public function getMotifFontSet(fontName : String, style : Int) : String;
+	@:overload @:public public function getMotifFontSet(fontName : String, style : Int) : String;
 	
-	@:overload override private function getFaceNameFromComponentFontName(componentFontName : String) : String;
+	@:overload @:protected override private function getFaceNameFromComponentFontName(componentFontName : String) : String;
 	
-	@:overload override private function getFileNameFromComponentFontName(componentFontName : String) : String;
+	@:overload @:protected override private function getFileNameFromComponentFontName(componentFontName : String) : String;
 	
-	@:overload override public function getAWTFontPathSet() : java.util.HashSet<String>;
+	@:overload @:public override public function getAWTFontPathSet() : java.util.HashSet<String>;
 	
 	
 }

@@ -47,13 +47,13 @@ extern class ServiceInformationHolder implements org.omg.CORBA.portable.Streamab
 	* The <code>ServiceInformation</code> value held by this
 	* <code>ServiceInformationHolder</code> object in its <code>value</code> field.
 	*/
-	public var value : org.omg.CORBA.ServiceInformation;
+	@:public public var value : org.omg.CORBA.ServiceInformation;
 	
 	/**
 	* Constructs a new <code>ServiceInformationHolder</code> object with its
 	* <code>value</code> field initialized to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new <code>ServiceInformationHolder</code> object with its
@@ -64,7 +64,7 @@ extern class ServiceInformationHolder implements org.omg.CORBA.portable.Streamab
 	*                the <code>value</code> field of the newly-created
 	*                <code>ServiceInformationHolder</code> object
 	*/
-	@:overload public function new(arg : org.omg.CORBA.ServiceInformation) : Void;
+	@:overload @:public public function new(arg : org.omg.CORBA.ServiceInformation) : Void;
 	
 	/**
 	* Marshals the value in this <code>ServiceInformationHolder</code> object's
@@ -73,7 +73,7 @@ extern class ServiceInformationHolder implements org.omg.CORBA.portable.Streamab
 	* @param out the <code>OutputStream</code> object that will contain
 	*               the CDR formatted data
 	*/
-	@:overload public function _write(out : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function _write(out : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	/**
 	* Reads unmarshalled data from the input stream <code>in</code> and assigns it to
@@ -82,7 +82,7 @@ extern class ServiceInformationHolder implements org.omg.CORBA.portable.Streamab
 	* @param in the <code>InputStream</code> object containing CDR
 	*              formatted data from the wire
 	*/
-	@:overload public function _read(_in : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function _read(_in : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/**
 	* Retrieves the <code>TypeCode</code> object that corresponds
@@ -92,7 +92,7 @@ extern class ServiceInformationHolder implements org.omg.CORBA.portable.Streamab
 	* @return    the type code for the value held in this <code>ServiceInformationHolder</code>
 	*            object
 	*/
-	@:overload public function _type() : org.omg.CORBA.TypeCode;
+	@:overload @:public public function _type() : org.omg.CORBA.TypeCode;
 	
 	
 }

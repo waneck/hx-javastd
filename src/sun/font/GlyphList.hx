@@ -25,20 +25,20 @@ package sun.font;
 */
 extern class GlyphList
 {
-	@:overload public static function getInstance() : sun.font.GlyphList;
+	@:overload @:public @:static public static function getInstance() : sun.font.GlyphList;
 	
 	/* GlyphList is in an invalid state until setFrom* method is called.
 	* After obtaining a new GlyphList it is the caller's responsibility
 	* that one of these methods is executed before handing off the
 	* GlyphList
 	*/
-	@:overload public function setFromString(info : sun.java2d.loops.FontInfo, str : String, x : Single, y : Single) : Bool;
+	@:overload @:public public function setFromString(info : sun.java2d.loops.FontInfo, str : String, x : Single, y : Single) : Bool;
 	
-	@:overload public function setFromChars(info : sun.java2d.loops.FontInfo, chars : java.NativeArray<java.StdTypes.Char16>, off : Int, alen : Int, x : Single, y : Single) : Bool;
+	@:overload @:public public function setFromChars(info : sun.java2d.loops.FontInfo, chars : java.NativeArray<java.StdTypes.Char16>, off : Int, alen : Int, x : Single, y : Single) : Bool;
 	
-	@:overload public function setFromGlyphVector(info : sun.java2d.loops.FontInfo, gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public public function setFromGlyphVector(info : sun.java2d.loops.FontInfo, gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
-	@:overload public function getBounds() : java.NativeArray<Int>;
+	@:overload @:public public function getBounds() : java.NativeArray<Int>;
 	
 	/* This method now assumes "state", so must be called 0->len
 	* The metrics it returns are accumulated on the fly
@@ -46,33 +46,33 @@ extern class GlyphList
 	* Note that a laid out GlyphVector which has assigned glyph positions
 	* doesn't have this stricture..
 	*/
-	@:overload public function setGlyphIndex(i : Int) : Void;
+	@:overload @:public public function setGlyphIndex(i : Int) : Void;
 	
-	@:overload public function getMetrics() : java.NativeArray<Int>;
+	@:overload @:public public function getMetrics() : java.NativeArray<Int>;
 	
-	@:overload public function getGrayBits() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getGrayBits() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getImages() : java.NativeArray<haxe.Int64>;
+	@:overload @:public public function getImages() : java.NativeArray<haxe.Int64>;
 	
-	@:overload public function usePositions() : Bool;
+	@:overload @:public public function usePositions() : Bool;
 	
-	@:overload public function getPositions() : java.NativeArray<Single>;
+	@:overload @:public public function getPositions() : java.NativeArray<Single>;
 	
-	@:overload public function getX() : Single;
+	@:overload @:public public function getX() : Single;
 	
-	@:overload public function getY() : Single;
+	@:overload @:public public function getY() : Single;
 	
-	@:overload public function getStrike() : Dynamic;
+	@:overload @:public public function getStrike() : Dynamic;
 	
-	@:overload public function isSubPixPos() : Bool;
+	@:overload @:public public function isSubPixPos() : Bool;
 	
-	@:overload public function isRGBOrder() : Bool;
+	@:overload @:public public function isRGBOrder() : Bool;
 	
 	/* There's a reference equality test overhead here, but it allows us
 	* to avoid synchronizing for GL's that will just be GC'd. This
 	* helps MP throughput.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/* The value here is for use by the rendering engine as it reflects
 	* the number of glyphs in the array to be blitted. Surrogates pairs
@@ -85,7 +85,7 @@ extern class GlyphList
 	* technology and layout process used, which in general clients will
 	* know nothing about.
 	*/
-	@:overload public function getNumGlyphs() : Int;
+	@:overload @:public public function getNumGlyphs() : Int;
 	
 	
 }

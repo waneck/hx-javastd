@@ -36,9 +36,9 @@ package com.sun.xml.internal.ws.developer;
 */
 @:require(java1) extern class ServerSideException extends java.lang.Exception
 {
-	@:overload public function new(className : String, message : String) : Void;
+	@:overload @:public public function new(className : String, message : String) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

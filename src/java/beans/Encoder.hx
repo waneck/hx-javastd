@@ -39,7 +39,7 @@ extern class Encoder
 	*
 	* @see XMLDecoder#readObject
 	*/
-	@:overload private function writeObject(o : Dynamic) : Void;
+	@:overload @:protected private function writeObject(o : Dynamic) : Void;
 	
 	/**
 	* Sets the exception handler for this stream to <code>exceptionListener</code>.
@@ -51,7 +51,7 @@ extern class Encoder
 	*
 	* @see #getExceptionListener
 	*/
-	@:overload public function setExceptionListener(exceptionListener : java.beans.ExceptionListener) : Void;
+	@:overload @:public public function setExceptionListener(exceptionListener : java.beans.ExceptionListener) : Void;
 	
 	/**
 	* Gets the exception handler for this stream.
@@ -61,7 +61,7 @@ extern class Encoder
 	*
 	* @see #setExceptionListener
 	*/
-	@:overload public function getExceptionListener() : java.beans.ExceptionListener;
+	@:overload @:public public function getExceptionListener() : java.beans.ExceptionListener;
 	
 	/**
 	* Returns the persistence delegate for the given type.
@@ -146,7 +146,7 @@ extern class Encoder
 	* @see java.beans.Introspector#getBeanInfo
 	* @see java.beans.BeanInfo#getBeanDescriptor
 	*/
-	@:overload public function getPersistenceDelegate(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
+	@:overload @:public public function getPersistenceDelegate(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
 	
 	/**
 	* Associates the specified persistence delegate with the given type.
@@ -158,7 +158,7 @@ extern class Encoder
 	* @see java.beans.Introspector#getBeanInfo
 	* @see java.beans.BeanInfo#getBeanDescriptor
 	*/
-	@:overload public function setPersistenceDelegate(type : Class<Dynamic>, delegate : java.beans.PersistenceDelegate) : Void;
+	@:overload @:public public function setPersistenceDelegate(type : Class<Dynamic>, delegate : java.beans.PersistenceDelegate) : Void;
 	
 	/**
 	* Removes the entry for this instance, returning the old entry.
@@ -168,7 +168,7 @@ extern class Encoder
 	*
 	* @see #get
 	*/
-	@:overload public function remove(oldInstance : Dynamic) : Dynamic;
+	@:overload @:public public function remove(oldInstance : Dynamic) : Dynamic;
 	
 	/**
 	* Returns a tentative value for <code>oldInstance</code> in
@@ -182,7 +182,7 @@ extern class Encoder
 	* @param  oldInstance The instance to be looked up.
 	* @return The object, null if the object has not been seen before.
 	*/
-	@:overload public function get(oldInstance : Dynamic) : Dynamic;
+	@:overload @:public public function get(oldInstance : Dynamic) : Dynamic;
 	
 	/**
 	* Writes statement <code>oldStm</code> to the stream.
@@ -203,7 +203,7 @@ extern class Encoder
 	*
 	* @param oldStm The expression to be written to the stream.
 	*/
-	@:overload public function writeStatement(oldStm : java.beans.Statement) : Void;
+	@:overload @:public public function writeStatement(oldStm : java.beans.Statement) : Void;
 	
 	/**
 	* The implementation first checks to see if an
@@ -216,7 +216,7 @@ extern class Encoder
 	*
 	* @param oldExp The expression to be written to the stream.
 	*/
-	@:overload public function writeExpression(oldExp : java.beans.Expression) : Void;
+	@:overload @:public public function writeExpression(oldExp : java.beans.Expression) : Void;
 	
 	
 }

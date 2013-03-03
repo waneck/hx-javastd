@@ -30,13 +30,13 @@ extern class JARSoundbankReader extends javax.sound.midi.spi.SoundbankReader
 	*
 	* @author Karl Helgason
 	*/
-	@:overload public function isZIP(url : java.net.URL) : Bool;
+	@:overload @:public public function isZIP(url : java.net.URL) : Bool;
 	
-	@:overload override public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(url : java.net.URL) : javax.sound.midi.Soundbank;
 	
-	@:overload override public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(stream : java.io.InputStream) : javax.sound.midi.Soundbank;
 	
-	@:overload override public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
+	@:overload @:public override public function getSoundbank(file : java.io.File) : javax.sound.midi.Soundbank;
 	
 	
 }

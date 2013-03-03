@@ -33,7 +33,7 @@ extern class CElementInfo extends com.sun.tools.internal.xjc.model.AbstractCElem
 	* <p>
 	* For local elements, this points to the parent {@link CClassInfo}.
 	*/
-	public var parent(default, null) : com.sun.tools.internal.xjc.model.CClassInfoParent;
+	@:public @:final public var parent(default, null) : com.sun.tools.internal.xjc.model.CClassInfoParent;
 	
 	/**
 	* Creates an element in the given parent.
@@ -42,7 +42,7 @@ extern class CElementInfo extends com.sun.tools.internal.xjc.model.AbstractCElem
 	* When using this construction, {@link #initContentType(TypeUse, XSElementDecl, XmlString)}
 	* must not be invoked.
 	*/
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, tagName : javax.xml.namespace.QName, parent : com.sun.tools.internal.xjc.model.CClassInfoParent, contentType : com.sun.tools.internal.xjc.model.TypeUse, defaultValue : com.sun.xml.internal.xsom.XmlString, source : com.sun.xml.internal.xsom.XSElementDecl, customizations : com.sun.tools.internal.xjc.model.CCustomizations, location : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, tagName : javax.xml.namespace.QName, parent : com.sun.tools.internal.xjc.model.CClassInfoParent, contentType : com.sun.tools.internal.xjc.model.TypeUse, defaultValue : com.sun.xml.internal.xsom.XmlString, source : com.sun.xml.internal.xsom.XSElementDecl, customizations : com.sun.tools.internal.xjc.model.CCustomizations, location : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Creates an element with a class in the given parent.
@@ -56,59 +56,59 @@ extern class CElementInfo extends com.sun.tools.internal.xjc.model.AbstractCElem
 	* inside an element and element itself. To build a content type, you need to have
 	* {@link CElementInfo} for a parent, so we can't take it as a constructor parameter.
 	*/
-	@:overload public function new(model : com.sun.tools.internal.xjc.model.Model, tagName : javax.xml.namespace.QName, parent : com.sun.tools.internal.xjc.model.CClassInfoParent, className : String, customizations : com.sun.tools.internal.xjc.model.CCustomizations, location : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(model : com.sun.tools.internal.xjc.model.Model, tagName : javax.xml.namespace.QName, parent : com.sun.tools.internal.xjc.model.CClassInfoParent, className : String, customizations : com.sun.tools.internal.xjc.model.CCustomizations, location : org.xml.sax.Locator) : Void;
 	
-	@:overload public function initContentType(contentType : com.sun.tools.internal.xjc.model.TypeUse, source : com.sun.xml.internal.xsom.XSElementDecl, defaultValue : com.sun.xml.internal.xsom.XmlString) : Void;
+	@:overload @:public public function initContentType(contentType : com.sun.tools.internal.xjc.model.TypeUse, source : com.sun.xml.internal.xsom.XSElementDecl, defaultValue : com.sun.xml.internal.xsom.XmlString) : Void;
 	
-	@:overload @:final public function getDefaultValue() : String;
+	@:overload @:public @:final public function getDefaultValue() : String;
 	
-	@:overload @:final public function _package() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public @:final public function _package() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload public function getContentType() : com.sun.tools.internal.xjc.model.CNonElement;
+	@:overload @:public public function getContentType() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload public function getContentInMemoryType() : com.sun.tools.internal.xjc.model.nav.NType;
+	@:overload @:public public function getContentInMemoryType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
-	@:overload public function getProperty() : com.sun.tools.internal.xjc.model.CElementPropertyInfo;
+	@:overload @:public public function getProperty() : com.sun.tools.internal.xjc.model.CElementPropertyInfo;
 	
-	@:overload public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload @:public override public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	/**
 	* @deprecated why are you calling a method that returns this?
 	*/
-	@:overload override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
+	@:overload @:public override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Returns the "squeezed name" of this element.
 	*
 	* @see CClassInfo#getSqueezedName()
 	*/
-	@:overload public function getSqueezedName() : String;
+	@:overload @:public public function getSqueezedName() : String;
 	
-	@:overload public function getSubstitutionHead() : com.sun.tools.internal.xjc.model.CElementInfo;
+	@:overload @:public override public function getSubstitutionHead() : com.sun.tools.internal.xjc.model.CElementInfo;
 	
-	@:overload public function getSubstitutionMembers() : java.util.Collection<com.sun.tools.internal.xjc.model.CElementInfo>;
+	@:overload @:public public function getSubstitutionMembers() : java.util.Collection<com.sun.tools.internal.xjc.model.CElementInfo>;
 	
-	@:overload public function setSubstitutionHead(substitutionHead : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
+	@:overload @:public public function setSubstitutionHead(substitutionHead : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
 	
-	@:overload public function isBoxedType() : Bool;
+	@:overload @:public public function isBoxedType() : Bool;
 	
-	@:overload public function fullName() : String;
+	@:overload @:public public function fullName() : String;
 	
-	@:overload public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
+	@:overload @:public public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
 	
-	@:overload public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
+	@:overload @:public public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
 	
-	@:overload public function shortName() : String;
+	@:overload @:public public function shortName() : String;
 	
 	/**
 	* True if this element has its own class
 	* (as opposed to be represented as an instance of {@link JAXBElement}.
 	*/
-	@:overload public function hasClass() : Bool;
+	@:overload @:public public function hasClass() : Bool;
 	
 	
 }

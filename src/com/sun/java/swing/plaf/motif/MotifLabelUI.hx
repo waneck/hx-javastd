@@ -25,7 +25,7 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifLabelUI extends javax.swing.plaf.basic.BasicLabelUI
 {
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }

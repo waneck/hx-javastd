@@ -65,7 +65,7 @@ package javax.naming;
 	* @see #getResolvedName
 	* @see #setResolvedName
 	*/
-	private var resolvedName : javax.naming.Name;
+	@:protected private var resolvedName : javax.naming.Name;
 	
 	/**
 	* Contains the object to which resolution of the part of the name was
@@ -77,7 +77,7 @@ package javax.naming;
 	* @see #getResolvedObj
 	* @see #setResolvedObj
 	*/
-	private var resolvedObj : Dynamic;
+	@:protected private var resolvedObj : Dynamic;
 	
 	/**
 	* Contains the remaining name that has not been resolved yet.
@@ -91,7 +91,7 @@ package javax.naming;
 	* @see #appendRemainingName
 	* @see #appendRemainingComponent
 	*/
-	private var remainingName : javax.naming.Name;
+	@:protected private var remainingName : javax.naming.Name;
 	
 	/**
 	* Contains the original exception that caused this NamingException to
@@ -111,7 +111,7 @@ package javax.naming;
 	* @see #initCause(Throwable)
 	* @see #getCause
 	*/
-	private var rootException : java.lang.Throwable;
+	@:protected private var rootException : java.lang.Throwable;
 	
 	/**
 	* Constructs a new NamingException with an explanation.
@@ -121,13 +121,13 @@ package javax.naming;
 	*                          additional detail about this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function new(explanation : String) : Void;
+	@:overload @:public public function new(explanation : String) : Void;
 	
 	/**
 	* Constructs a new NamingException.
 	* All fields are set to null.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Retrieves the leading portion of the name that was resolved
@@ -139,7 +139,7 @@ package javax.naming;
 	* @see #getResolvedObj
 	* @see #setResolvedName
 	*/
-	@:overload public function getResolvedName() : javax.naming.Name;
+	@:overload @:public public function getResolvedName() : javax.naming.Name;
 	
 	/**
 	* Retrieves the remaining unresolved portion of the name.
@@ -150,7 +150,7 @@ package javax.naming;
 	* @see #appendRemainingName
 	* @see #appendRemainingComponent
 	*/
-	@:overload public function getRemainingName() : javax.naming.Name;
+	@:overload @:public public function getRemainingName() : javax.naming.Name;
 	
 	/**
 	* Retrieves the object to which resolution was successful.
@@ -161,7 +161,7 @@ package javax.naming;
 	* @see #getResolvedName
 	* @see #setResolvedObj
 	*/
-	@:overload public function getResolvedObj() : Dynamic;
+	@:overload @:public public function getResolvedObj() : Dynamic;
 	
 	/**
 	* Retrieves the explanation associated with this exception.
@@ -172,7 +172,7 @@ package javax.naming;
 	*
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload public function getExplanation() : String;
+	@:overload @:public public function getExplanation() : String;
 	
 	/**
 	* Sets the resolved name field of this exception.
@@ -191,7 +191,7 @@ package javax.naming;
 	*          If null, it sets the resolved name field to null.
 	* @see #getResolvedName
 	*/
-	@:overload public function setResolvedName(name : javax.naming.Name) : Void;
+	@:overload @:public public function setResolvedName(name : javax.naming.Name) : Void;
 	
 	/**
 	* Sets the remaining name field of this exception.
@@ -211,7 +211,7 @@ package javax.naming;
 	* @see #appendRemainingName
 	* @see #appendRemainingComponent
 	*/
-	@:overload public function setRemainingName(name : javax.naming.Name) : Void;
+	@:overload @:public public function setRemainingName(name : javax.naming.Name) : Void;
 	
 	/**
 	* Sets the resolved object field of this exception.
@@ -219,7 +219,7 @@ package javax.naming;
 	*            If null, the resolved object field is set to null.
 	* @see #getResolvedObj
 	*/
-	@:overload public function setResolvedObj(obj : Dynamic) : Void;
+	@:overload @:public public function setResolvedObj(obj : Dynamic) : Void;
 	
 	/**
 	* Add name as the last component in remaining name.
@@ -229,7 +229,7 @@ package javax.naming;
 	* @see #getRemainingName
 	* @see #appendRemainingName
 	*/
-	@:overload public function appendRemainingComponent(name : String) : Void;
+	@:overload @:public public function appendRemainingComponent(name : String) : Void;
 	
 	/**
 	* Add components from 'name' as the last components in
@@ -247,7 +247,7 @@ package javax.naming;
 	* @see #getRemainingName
 	* @see #appendRemainingComponent
 	*/
-	@:overload public function appendRemainingName(name : javax.naming.Name) : Void;
+	@:overload @:public public function appendRemainingName(name : javax.naming.Name) : Void;
 	
 	/**
 	* Retrieves the root cause of this NamingException, if any.
@@ -267,7 +267,7 @@ package javax.naming;
 	* @see #rootException
 	* @see #getCause
 	*/
-	@:overload public function getRootCause() : java.lang.Throwable;
+	@:overload @:public public function getRootCause() : java.lang.Throwable;
 	
 	/**
 	* Records the root cause of this NamingException.
@@ -284,7 +284,7 @@ package javax.naming;
 	* @see #rootException
 	* @see #initCause
 	*/
-	@:overload public function setRootCause(e : java.lang.Throwable) : Void;
+	@:overload @:public public function setRootCause(e : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the cause of this exception.  The cause is the
@@ -297,7 +297,7 @@ package javax.naming;
 	* @see #initCause(Throwable)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Initializes the cause of this exception to the specified value.
@@ -317,7 +317,7 @@ package javax.naming;
 	* @see #getCause
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Generates the string representation of this exception.
@@ -331,7 +331,7 @@ package javax.naming;
 	* @return The non-null string containing the string representation
 	* of this exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Generates the string representation in more detail.
@@ -345,7 +345,7 @@ package javax.naming;
 	*                 in addition to the other information.
 	* @return The non-null string containing the string representation.
 	*/
-	@:overload public function toString(detail : Bool) : String;
+	@:overload @:public public function toString(detail : Bool) : String;
 	
 	
 }

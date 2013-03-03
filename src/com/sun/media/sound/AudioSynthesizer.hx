@@ -35,7 +35,7 @@ extern interface AudioSynthesizer extends javax.sound.midi.Synthesizer
 	* @return current audio data format
 	* @see AudioFormat
 	*/
-	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
 	/**
 	* Gets information about the possible properties for the synthesizer.
@@ -45,7 +45,7 @@ extern interface AudioSynthesizer extends javax.sound.midi.Synthesizer
 	* describing possible properties. This array may be an empty array if
 	* no properties are required.
 	*/
-	@:overload public function getPropertyInfo(info : java.util.Map<String, Dynamic>) : java.NativeArray<com.sun.media.sound.AudioSynthesizerPropertyInfo>;
+	@:overload @:public public function getPropertyInfo(info : java.util.Map<String, Dynamic>) : java.NativeArray<com.sun.media.sound.AudioSynthesizerPropertyInfo>;
 	
 	/**
 	* Opens the synthesizer and starts rendering audio into
@@ -74,7 +74,7 @@ extern interface AudioSynthesizer extends javax.sound.midi.Synthesizer
 	* @see #close
 	* @see #isOpen
 	*/
-	@:overload public function open(line : javax.sound.sampled.SourceDataLine, info : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function open(line : javax.sound.sampled.SourceDataLine, info : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Opens the synthesizer and renders audio into returned
@@ -103,7 +103,7 @@ extern interface AudioSynthesizer extends javax.sound.midi.Synthesizer
 	* @see #close
 	* @see #isOpen
 	*/
-	@:overload public function openStream(targetFormat : javax.sound.sampled.AudioFormat, info : java.util.Map<String, Dynamic>) : javax.sound.sampled.AudioInputStream;
+	@:overload @:public public function openStream(targetFormat : javax.sound.sampled.AudioFormat, info : java.util.Map<String, Dynamic>) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

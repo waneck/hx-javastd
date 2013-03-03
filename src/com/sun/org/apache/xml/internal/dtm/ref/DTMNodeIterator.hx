@@ -26,25 +26,25 @@ extern class DTMNodeIterator implements org.w3c.dom.traversal.NodeIterator
 	/** Public constructor: Wrap a DTMNodeIterator around an existing
 	* and preconfigured DTMIterator
 	* */
-	@:overload public function new(dtmIterator : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
+	@:overload @:public public function new(dtmIterator : com.sun.org.apache.xml.internal.dtm.DTMIterator) : Void;
 	
 	/** Access the wrapped DTMIterator. I'm not sure whether anyone will
 	* need this or not, but let's write it and think about it.
 	* */
-	@:overload public function getDTMIterator() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload @:public public function getDTMIterator() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/** Detaches the NodeIterator from the set which it iterated over,
 	* releasing any computational resources and placing the iterator in
 	* the INVALID state.
 	* */
-	@:overload public function detach() : Void;
+	@:overload @:public public function detach() : Void;
 	
 	/** The value of this flag determines whether the children
 	* of entity reference nodes are visible to the iterator.
 	*
 	* @return false, always (the DTM model flattens entity references)
 	* */
-	@:overload public function getExpandEntityReferences() : Bool;
+	@:overload @:public public function getExpandEntityReferences() : Bool;
 	
 	/** Return a handle to the filter used to screen nodes.
 	*
@@ -58,17 +58,17 @@ extern class DTMNodeIterator implements org.w3c.dom.traversal.NodeIterator
 	* @throws DOMException -- NOT_SUPPORTED_ERROR because I can't think
 	* of anything more useful to do in this case
 	* */
-	@:overload public function getFilter() : org.w3c.dom.traversal.NodeFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.traversal.NodeFilter;
 	
 	/** @return The root node of the NodeIterator, as specified
 	* when it was created.
 	* */
-	@:overload public function getRoot() : org.w3c.dom.Node;
+	@:overload @:public public function getRoot() : org.w3c.dom.Node;
 	
 	/** Return a mask describing which node types are presented via the
 	* iterator.
 	**/
-	@:overload public function getWhatToShow() : Int;
+	@:overload @:public public function getWhatToShow() : Int;
 	
 	/** @return the next node in the set and advance the position of the
 	* iterator in the set.
@@ -76,7 +76,7 @@ extern class DTMNodeIterator implements org.w3c.dom.traversal.NodeIterator
 	* @throws DOMException - INVALID_STATE_ERR Raised if this method is
 	* called after the detach method was invoked.
 	*  */
-	@:overload public function nextNode() : org.w3c.dom.Node;
+	@:overload @:public public function nextNode() : org.w3c.dom.Node;
 	
 	/** @return the next previous in the set and advance the position of the
 	* iterator in the set.
@@ -84,7 +84,7 @@ extern class DTMNodeIterator implements org.w3c.dom.traversal.NodeIterator
 	* @throws DOMException - INVALID_STATE_ERR Raised if this method is
 	* called after the detach method was invoked.
 	*  */
-	@:overload public function previousNode() : org.w3c.dom.Node;
+	@:overload @:public public function previousNode() : org.w3c.dom.Node;
 	
 	
 }

@@ -63,22 +63,22 @@ extern class XML11Serializer extends com.sun.org.apache.xml.internal.serialize.X
 	* @author Elena Litani IBM
 	* @see Serializer
 	*/
-	private static var DEBUG(default, null) : Bool;
+	@:protected @:static @:final private static var DEBUG(default, null) : Bool;
 	
 	/** stores namespaces in scope */
-	private var fNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
+	@:protected private var fNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
 	
 	/** stores all namespace bindings on the current element */
-	private var fLocalNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
+	@:protected private var fLocalNSBinder : com.sun.org.apache.xerces.internal.util.NamespaceSupport;
 	
 	/** symbol table for serialization */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
-	private var fDOML1 : Bool;
+	@:protected private var fDOML1 : Bool;
 	
-	private var fNamespaceCounter : Int;
+	@:protected private var fNamespaceCounter : Int;
 	
-	private static var PREFIX(default, null) : String;
+	@:protected @:final @:static private static var PREFIX(default, null) : String;
 	
 	/**
 	* Controls whether namespace fixup should be performed during
@@ -87,21 +87,21 @@ extern class XML11Serializer extends com.sun.org.apache.xml.internal.serialize.X
 	* fields need to be initialized: fNSBinder, fLocalNSBinder, fSymbolTable,
 	* XMLSymbols.EMPTY_STRING, fXmlSymbol, fXmlnsSymbol, fNamespaceCounter.
 	*/
-	private var fNamespaces : Bool;
+	@:protected private var fNamespaces : Bool;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new serializer. The serializer cannot be used without
 	* calling {@link #setOutputCharStream} or {@link #setOutputByteStream}
 	* first.
 	*/
-	@:overload public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified writer
@@ -111,7 +111,7 @@ extern class XML11Serializer extends com.sun.org.apache.xml.internal.serialize.X
 	* @param writer The writer to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(writer : java.io.Writer, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	/**
 	* Constructs a new serializer that writes to the specified output
@@ -121,23 +121,23 @@ extern class XML11Serializer extends com.sun.org.apache.xml.internal.serialize.X
 	* @param output The output stream to use
 	* @param format The output format to use, null for the default
 	*/
-	@:overload public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload @:public public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override private function printEscaped(source : String) : Void;
+	@:overload @:protected override private function printEscaped(source : String) : Void;
 	
-	@:overload @:final override private function printCDATAText(text : String) : Void;
+	@:overload @:protected @:final override private function printCDATAText(text : String) : Void;
 	
-	@:overload @:final override private function printXMLChar(ch : Int) : Void;
+	@:overload @:protected @:final override private function printXMLChar(ch : Int) : Void;
 	
-	@:overload @:final override private function surrogates(high : Int, low : Int) : Void;
+	@:overload @:protected @:final override private function surrogates(high : Int, low : Int) : Void;
 	
-	@:overload override private function printText(text : String, preserveSpace : Bool, unescaped : Bool) : Void;
+	@:overload @:protected override private function printText(text : String, preserveSpace : Bool, unescaped : Bool) : Void;
 	
-	@:overload override private function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, preserveSpace : Bool, unescaped : Bool) : Void;
+	@:overload @:protected override private function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, preserveSpace : Bool, unescaped : Bool) : Void;
 	
-	@:overload override public function reset() : Bool;
+	@:overload @:public override public function reset() : Bool;
 	
 	
 }

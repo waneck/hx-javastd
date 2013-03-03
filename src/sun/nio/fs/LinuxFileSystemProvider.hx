@@ -28,13 +28,13 @@ extern class LinuxFileSystemProvider extends sun.nio.fs.UnixFileSystemProvider
 	/**
 	* Linux implementation of FileSystemProvider
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(obj : java.nio.file.Path, type : Class<V>, options : java.NativeArray<java.nio.file.LinkOption>) : V;
+	@:overload @:public override public function getFileAttributeView<V : java.nio.file.attribute.FileAttributeView>(obj : java.nio.file.Path, type : Class<V>, options : java.NativeArray<java.nio.file.LinkOption>) : V;
 	
-	@:overload override public function getFileAttributeView(obj : java.nio.file.Path, name : String, options : java.NativeArray<java.nio.file.LinkOption>) : sun.nio.fs.DynamicFileAttributeView;
+	@:overload @:public override public function getFileAttributeView(obj : java.nio.file.Path, name : String, options : java.NativeArray<java.nio.file.LinkOption>) : sun.nio.fs.DynamicFileAttributeView;
 	
-	@:overload override public function readAttributes<A : java.nio.file.attribute.BasicFileAttributes>(file : java.nio.file.Path, type : Class<A>, options : java.NativeArray<java.nio.file.LinkOption>) : A;
+	@:overload @:public override public function readAttributes<A : java.nio.file.attribute.BasicFileAttributes>(file : java.nio.file.Path, type : Class<A>, options : java.NativeArray<java.nio.file.LinkOption>) : A;
 	
 	
 }

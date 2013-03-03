@@ -48,25 +48,25 @@ extern interface HTMLOListElement extends org.w3c.dom.html.HTMLElement
 	*  Reduce spacing between list items. See the  compact attribute
 	* definition in HTML 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getCompact() : Bool;
+	@:overload @:public public function getCompact() : Bool;
 	
-	@:overload public function setCompact(compact : Bool) : Void;
+	@:overload @:public public function setCompact(compact : Bool) : Void;
 	
 	/**
 	*  Starting sequence number. See the  start attribute definition in HTML
 	* 4.0. This attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getStart() : Int;
+	@:overload @:public public function getStart() : Int;
 	
-	@:overload public function setStart(start : Int) : Void;
+	@:overload @:public public function setStart(start : Int) : Void;
 	
 	/**
 	*  Numbering style. See the  type attribute definition in HTML 4.0. This
 	* attribute is deprecated in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	
 }

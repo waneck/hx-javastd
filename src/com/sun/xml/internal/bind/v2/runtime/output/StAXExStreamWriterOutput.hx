@@ -25,9 +25,9 @@ package com.sun.xml.internal.bind.v2.runtime.output;
 */
 extern class StAXExStreamWriterOutput extends com.sun.xml.internal.bind.v2.runtime.output.XMLStreamWriterOutput
 {
-	@:overload public function new(out : com.sun.xml.internal.org.jvnet.staxex.XMLStreamWriterEx) : Void;
+	@:overload @:public public function new(out : com.sun.xml.internal.org.jvnet.staxex.XMLStreamWriterEx) : Void;
 	
-	@:overload override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public override public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
 	
 	
 }

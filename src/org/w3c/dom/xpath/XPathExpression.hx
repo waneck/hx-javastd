@@ -76,7 +76,7 @@ extern interface XPathExpression
 	*   context node or the request type is not permitted by this
 	*   <code>XPathExpression</code>.
 	*/
-	@:overload public function evaluate(contextNode : org.w3c.dom.Node, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
+	@:overload @:public public function evaluate(contextNode : org.w3c.dom.Node, type : java.StdTypes.Int16, result : Dynamic) : Dynamic;
 	
 	
 }

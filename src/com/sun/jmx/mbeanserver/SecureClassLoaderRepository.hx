@@ -31,13 +31,13 @@ package com.sun.jmx.mbeanserver;
 	* @param clr Unsecure {@link ClassLoaderRepository} implementation
 	*            to wrap.
 	**/
-	@:overload public function new(clr : javax.management.loading.ClassLoaderRepository) : Void;
+	@:overload @:public public function new(clr : javax.management.loading.ClassLoaderRepository) : Void;
 	
-	@:overload @:final public function loadClass(className : String) : Class<Dynamic>;
+	@:overload @:public @:final public function loadClass(className : String) : Class<Dynamic>;
 	
-	@:overload @:final public function loadClassWithout(loader : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public @:final public function loadClassWithout(loader : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
-	@:overload @:final public function loadClassBefore(loader : java.lang.ClassLoader, className : String) : Class<Dynamic>;
+	@:overload @:public @:final public function loadClassBefore(loader : java.lang.ClassLoader, className : String) : Class<Dynamic>;
 	
 	
 }

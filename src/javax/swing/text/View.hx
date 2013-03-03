@@ -191,14 +191,14 @@ extern class View implements javax.swing.SwingConstants
 	*
 	* @param elem the <code>Element</code> to represent
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns the parent of the view.
 	*
 	* @return the parent, or <code>null</code> if none exists
 	*/
-	@:overload public function getParent() : javax.swing.text.View;
+	@:overload @:public public function getParent() : javax.swing.text.View;
 	
 	/**
 	*  Returns a boolean that indicates whether
@@ -207,7 +207,7 @@ extern class View implements javax.swing.SwingConstants
 	*
 	*  @return always returns true
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -221,7 +221,7 @@ extern class View implements javax.swing.SwingConstants
 	*           The parent may choose to resize or break the view
 	* @see View#getPreferredSpan
 	*/
-	@:overload @:abstract public function getPreferredSpan(axis : Int) : Single;
+	@:overload @:public @:abstract public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -232,7 +232,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return  the minimum span the view can be rendered into
 	* @see View#getPreferredSpan
 	*/
-	@:overload public function getMinimumSpan(axis : Int) : Single;
+	@:overload @:public public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -243,7 +243,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return  the maximum span the view can be rendered into
 	* @see View#getPreferredSpan
 	*/
-	@:overload public function getMaximumSpan(axis : Int) : Single;
+	@:overload @:public public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Child views can call this on the parent to indicate that
@@ -257,7 +257,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param height true if the height preference has changed
 	* @see javax.swing.JComponent#revalidate
 	*/
-	@:overload public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload @:public public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -271,7 +271,7 @@ extern class View implements javax.swing.SwingConstants
 	*          <code>View.Y_AXIS</code>
 	* @return the value 0.5
 	*/
-	@:overload public function getAlignment(axis : Int) : Single;
+	@:overload @:public public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -281,7 +281,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param g the rendering surface to use
 	* @param allocation the allocated region to render into
 	*/
-	@:overload @:abstract public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
+	@:overload @:public @:abstract public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	
 	/**
 	* Establishes the parent view for this view.  This is
@@ -299,7 +299,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param parent the new parent, or <code>null</code> if the view is
 	*          being removed from a parent
 	*/
-	@:overload public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload @:public public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns the number of views in this view.  Since
@@ -309,7 +309,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return the number of views >= 0
 	* @see View#getViewCount
 	*/
-	@:overload public function getViewCount() : Int;
+	@:overload @:public public function getViewCount() : Int;
 	
 	/**
 	* Gets the <i>n</i>th child view.  Since there are no
@@ -318,7 +318,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param n the number of the view to get, >= 0 && < getViewCount()
 	* @return the view
 	*/
-	@:overload public function getView(n : Int) : javax.swing.text.View;
+	@:overload @:public public function getView(n : Int) : javax.swing.text.View;
 	
 	/**
 	* Removes all of the children.  This is a convenience
@@ -326,14 +326,14 @@ extern class View implements javax.swing.SwingConstants
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function removeAll() : Void;
+	@:require(java3) @:overload @:public public function removeAll() : Void;
 	
 	/**
 	* Removes one of the children at the given position.
 	* This is a convenience call to <code>replace</code>.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function remove(i : Int) : Void;
+	@:require(java3) @:overload @:public public function remove(i : Int) : Void;
 	
 	/**
 	* Inserts a single child view.  This is a convenience
@@ -344,7 +344,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #replace
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function insert(offs : Int, v : javax.swing.text.View) : Void;
+	@:require(java3) @:overload @:public public function insert(offs : Int, v : javax.swing.text.View) : Void;
 	
 	/**
 	* Appends a single child view.  This is a convenience
@@ -354,7 +354,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #replace
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function append(v : javax.swing.text.View) : Void;
+	@:require(java3) @:overload @:public public function append(v : javax.swing.text.View) : Void;
 	
 	/**
 	* Replaces child views.  If there are no views to remove
@@ -374,7 +374,7 @@ extern class View implements javax.swing.SwingConstants
 	*   (useful to remove).
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:require(java3) @:overload @:public public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -387,7 +387,7 @@ extern class View implements javax.swing.SwingConstants
 	*   -1 if no view represents that position
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java3) @:overload @:public public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
 	
 	/**
 	* Fetches the allocation for the given child view.
@@ -401,7 +401,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param a  the allocation to this view
 	* @return the allocation to the child
 	*/
-	@:overload public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -427,7 +427,7 @@ extern class View implements javax.swing.SwingConstants
 	* @exception IllegalArgumentException if <code>direction</code>
 	*          doesn't have one of the legal values above
 	*/
-	@:overload public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a mapping, for a given character,
@@ -452,7 +452,7 @@ extern class View implements javax.swing.SwingConstants
 	*          legal <code>Position.Bias</code> values listed above
 	* @see View#viewToModel
 	*/
-	@:overload @:abstract public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload @:public @:abstract public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping, for a given region,
@@ -483,7 +483,7 @@ extern class View implements javax.swing.SwingConstants
 	*          legal <code>Position.Bias</code> values listed above
 	* @see View#viewToModel
 	*/
-	@:overload public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public public function modelToView(p0 : Int, b0 : javax.swing.text.Position.Position_Bias, p1 : Int, b1 : javax.swing.text.Position.Position_Bias, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -501,7 +501,7 @@ extern class View implements javax.swing.SwingConstants
 	* filled in to indicate that the point given is closer to the next
 	* character in the model or the previous character in the model.
 	*/
-	@:overload @:abstract public function viewToModel(x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload @:public @:abstract public function viewToModel(x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Gives notification that something was inserted into
@@ -528,7 +528,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -555,7 +555,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -582,7 +582,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Fetches the model associated with the view.
@@ -590,7 +590,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return the view model, <code>null</code> if none
 	* @see View#getDocument
 	*/
-	@:overload public function getDocument() : javax.swing.text.Document;
+	@:overload @:public public function getDocument() : javax.swing.text.Document;
 	
 	/**
 	* Fetches the portion of the model for which this view is
@@ -599,7 +599,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return the starting offset into the model >= 0
 	* @see View#getStartOffset
 	*/
-	@:overload public function getStartOffset() : Int;
+	@:overload @:public public function getStartOffset() : Int;
 	
 	/**
 	* Fetches the portion of the model for which this view is
@@ -608,7 +608,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return the ending offset into the model >= 0
 	* @see View#getEndOffset
 	*/
-	@:overload public function getEndOffset() : Int;
+	@:overload @:public public function getEndOffset() : Int;
 	
 	/**
 	* Fetches the structural portion of the subject that this
@@ -618,7 +618,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return the subject
 	* @see View#getElement
 	*/
-	@:overload public function getElement() : javax.swing.text.Element;
+	@:overload @:public public function getElement() : javax.swing.text.Element;
 	
 	/**
 	* Fetch a <code>Graphics</code> for rendering.
@@ -629,7 +629,7 @@ extern class View implements javax.swing.SwingConstants
 	* @return a <code>Graphics</code> object for rendering
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getGraphics() : java.awt.Graphics;
+	@:require(java3) @:overload @:public public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Fetches the attributes to use when rendering.  By default
@@ -644,7 +644,7 @@ extern class View implements javax.swing.SwingConstants
 	* access them through the <code>AttributeSet</code> returned
 	* by this method.
 	*/
-	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:public public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Tries to break this view on the given axis.  This is
@@ -678,7 +678,7 @@ extern class View implements javax.swing.SwingConstants
 	*  returned.
 	* @see ParagraphView
 	*/
-	@:overload public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
+	@:overload @:public public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
 	
 	/**
 	* Creates a view that represents a portion of the element.
@@ -697,7 +697,7 @@ extern class View implements javax.swing.SwingConstants
 	*   support breaking into fragments
 	* @see LabelView
 	*/
-	@:overload public function createFragment(p0 : Int, p1 : Int) : javax.swing.text.View;
+	@:overload @:public public function createFragment(p0 : Int, p1 : Int) : javax.swing.text.View;
 	
 	/**
 	* Determines how attractive a break opportunity in
@@ -738,7 +738,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #ExcellentBreakWeight
 	* @see #ForcedBreakWeight
 	*/
-	@:overload public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
+	@:overload @:public public function getBreakWeight(axis : Int, pos : Single, len : Single) : Int;
 	
 	/**
 	* Determines the resizability of the view along the
@@ -748,7 +748,7 @@ extern class View implements javax.swing.SwingConstants
 	*          <code>View.Y_AXIS</code>
 	* @return the weight
 	*/
-	@:overload public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -758,7 +758,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload public function setSize(width : Single, height : Single) : Void;
+	@:overload @:public public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Fetches the container hosting the view.  This is useful for
@@ -768,7 +768,7 @@ extern class View implements javax.swing.SwingConstants
 	*
 	* @return the container, <code>null</code> if none
 	*/
-	@:overload public function getContainer() : java.awt.Container;
+	@:overload @:public public function getContainer() : java.awt.Container;
 	
 	/**
 	* Fetches the <code>ViewFactory</code> implementation that is feeding
@@ -779,7 +779,7 @@ extern class View implements javax.swing.SwingConstants
 	*
 	* @return the factory, <code>null</code> if none
 	*/
-	@:overload public function getViewFactory() : javax.swing.text.ViewFactory;
+	@:overload @:public public function getViewFactory() : javax.swing.text.ViewFactory;
 	
 	/**
 	* Returns the tooltip text at the specified location. The default
@@ -789,7 +789,7 @@ extern class View implements javax.swing.SwingConstants
 	* @since 1.4
 	* @see JTextComponent#getToolTipText
 	*/
-	@:require(java4) @:overload public function getToolTipText(x : Single, y : Single, allocation : java.awt.Shape) : String;
+	@:require(java4) @:overload @:public public function getToolTipText(x : Single, y : Single, allocation : java.awt.Shape) : String;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -803,7 +803,7 @@ extern class View implements javax.swing.SwingConstants
 	*   -1 if no view represents that position
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getViewIndex(x : Single, y : Single, allocation : java.awt.Shape) : Int;
+	@:require(java4) @:overload @:public public function getViewIndex(x : Single, y : Single, allocation : java.awt.Shape) : Int;
 	
 	/**
 	* Updates the child views in response to receiving notification
@@ -834,7 +834,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #changedUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:require(java3) @:overload @:protected private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
 	/**
 	* Forwards the given <code>DocumentEvent</code> to the child views
@@ -854,7 +854,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #changedUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload @:protected private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Forwards the <code>DocumentEvent</code> to the give child view.  This
@@ -871,7 +871,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload @:protected private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Updates the layout in response to receiving notification of
@@ -888,7 +888,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #changedUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function updateLayout(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape) : Void;
+	@:require(java3) @:overload @:protected private function updateLayout(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape) : Void;
 	
 	/**
 	* The weight to indicate a view is a bad break
@@ -902,7 +902,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #ExcellentBreakWeight
 	* @see #ForcedBreakWeight
 	*/
-	public static var BadBreakWeight(default, null) : Int;
+	@:public @:static @:final public static var BadBreakWeight(default, null) : Int;
 	
 	/**
 	* The weight to indicate a view supports breaking,
@@ -913,7 +913,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #ExcellentBreakWeight
 	* @see #ForcedBreakWeight
 	*/
-	public static var GoodBreakWeight(default, null) : Int;
+	@:public @:static @:final public static var GoodBreakWeight(default, null) : Int;
 	
 	/**
 	* The weight to indicate a view supports breaking,
@@ -925,7 +925,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #GoodBreakWeight
 	* @see #ForcedBreakWeight
 	*/
-	public static var ExcellentBreakWeight(default, null) : Int;
+	@:public @:static @:final public static var ExcellentBreakWeight(default, null) : Int;
 	
 	/**
 	* The weight to indicate a view supports breaking,
@@ -938,17 +938,17 @@ extern class View implements javax.swing.SwingConstants
 	* @see #GoodBreakWeight
 	* @see #ExcellentBreakWeight
 	*/
-	public static var ForcedBreakWeight(default, null) : Int;
+	@:public @:static @:final public static var ForcedBreakWeight(default, null) : Int;
 	
 	/**
 	* Axis for format/break operations.
 	*/
-	public static var X_AXIS(default, null) : Int;
+	@:public @:static @:final public static var X_AXIS(default, null) : Int;
 	
 	/**
 	* Axis for format/break operations.
 	*/
-	public static var Y_AXIS(default, null) : Int;
+	@:public @:static @:final public static var Y_AXIS(default, null) : Int;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -964,7 +964,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see View#modelToView
 	* @deprecated
 	*/
-	@:overload public function modelToView(pos : Int, a : java.awt.Shape) : java.awt.Shape;
+	@:overload @:public public function modelToView(pos : Int, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -978,7 +978,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see View#viewToModel
 	* @deprecated
 	*/
-	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape) : Int;
+	@:overload @:public public function viewToModel(x : Single, y : Single, a : java.awt.Shape) : Int;
 	
 	
 }

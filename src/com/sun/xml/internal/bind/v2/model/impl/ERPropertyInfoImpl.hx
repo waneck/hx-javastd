@@ -30,16 +30,16 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<TypeT, ClassDeclT, FieldT, MethodT>, propertySeed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<TypeT, ClassDeclT, FieldT, MethodT>) : Void;
+	@:overload @:public public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<TypeT, ClassDeclT, FieldT, MethodT>, propertySeed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<TypeT, ClassDeclT, FieldT, MethodT>) : Void;
 	
 	/**
 	* Gets the wrapper element name.
 	*/
-	@:overload @:final public function getXmlName() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getXmlName() : javax.xml.namespace.QName;
 	
-	@:overload @:final public function isCollectionNillable() : Bool;
+	@:overload @:public @:final public function isCollectionNillable() : Bool;
 	
-	@:overload @:final public function isCollectionRequired() : Bool;
+	@:overload @:public @:final public function isCollectionRequired() : Bool;
 	
 	
 }

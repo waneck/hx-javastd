@@ -33,7 +33,7 @@ extern interface Group extends java.security.Principal
 	* @return true if the member was successfully added,
 	* false if the principal was already a member.
 	*/
-	@:overload public function addMember(user : java.security.Principal) : Bool;
+	@:overload @:public public function addMember(user : java.security.Principal) : Bool;
 	
 	/**
 	* Removes the specified member from the group.
@@ -43,7 +43,7 @@ extern interface Group extends java.security.Principal
 	* @return true if the principal was removed, or
 	* false if the principal was not a member.
 	*/
-	@:overload public function removeMember(user : java.security.Principal) : Bool;
+	@:overload @:public public function removeMember(user : java.security.Principal) : Bool;
 	
 	/**
 	* Returns true if the passed principal is a member of the group.
@@ -55,7 +55,7 @@ extern interface Group extends java.security.Principal
 	* @return true if the principal is a member of this group,
 	* false otherwise.
 	*/
-	@:overload public function isMember(member : java.security.Principal) : Bool;
+	@:overload @:public public function isMember(member : java.security.Principal) : Bool;
 	
 	/**
 	* Returns an enumeration of the members in the group.
@@ -64,7 +64,7 @@ extern interface Group extends java.security.Principal
 	*
 	* @return an enumeration of the group members.
 	*/
-	@:overload public function members() : java.util.Enumeration<java.security.Principal>;
+	@:overload @:public public function members() : java.util.Enumeration<java.security.Principal>;
 	
 	
 }

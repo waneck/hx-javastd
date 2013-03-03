@@ -25,9 +25,9 @@ package com.sun.corba.se.spi.ior;
 */
 extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.IdentifiableContainerBase implements com.sun.corba.se.spi.ior.TaggedProfileTemplate
 {
-	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload public function getIOPComponents(orb : com.sun.corba.se.spi.orb.ORB, id : Int) : java.NativeArray<org.omg.IOP.TaggedComponent>;
+	@:overload @:public public function getIOPComponents(orb : com.sun.corba.se.spi.orb.ORB, id : Int) : java.NativeArray<org.omg.IOP.TaggedComponent>;
 	
 	/**
 	* Appends the specified element to the end of this list (optional
@@ -51,7 +51,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this list
 	*/
-	@:overload override public function add(e : Dynamic) : Bool;
+	@:overload @:public override public function add(e : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of elements in this list.  If this list contains
@@ -60,7 +60,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public @:public override public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
@@ -80,7 +80,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         or if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes from this list all of its elements that are contained in the
@@ -100,7 +100,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -120,19 +120,19 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload override public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
 	/** Return the (type) identity of this entity.
 	* @return int
 	*/
-	@:overload @:public public function getId() : Int;
+	@:overload @:public @:public @:public @:public public function getId() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload @:public @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -142,7 +142,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload @:public override public function get(index : Int) : Dynamic;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -165,7 +165,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this list (optional operation).
@@ -174,20 +174,20 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/** Return an iterator that iterates over tagged components with
 	* identifier id.  It is not possible to modify the list through this
 	* iterator.
 	*/
-	@:overload public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public override public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
 	
 	/** Return true if temp is equivalent to this template.  Equivalence
 	* means that in some sense an invocation on a profile created by this
 	* template has the same results as an invocation on a profile
 	* created from temp.  Equivalence may be weaker than equality.
 	*/
-	@:overload public function isEquivalent(temp : com.sun.corba.se.spi.ior.TaggedProfileTemplate) : Bool;
+	@:overload @:public public function isEquivalent(temp : com.sun.corba.se.spi.ior.TaggedProfileTemplate) : Bool;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -206,11 +206,11 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public override public function lastIndexOf(o : Dynamic) : Int;
 	
 	/** Write the profile create( oktemp, id ) to the OutputStream os.
 	*/
-	@:overload public function write(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function write(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains the specified element.
@@ -227,7 +227,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         list does not permit null elements
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -246,7 +246,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -286,9 +286,9 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function makeImmutable() : Void;
+	@:overload @:public override public function makeImmutable() : Void;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -310,7 +310,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -339,7 +339,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -356,7 +356,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -379,7 +379,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         specified collection prevents it from being added to this list
 	* @see #add(Object)
 	*/
-	@:overload override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public @:public override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -397,7 +397,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         sequence
 	* @see Arrays#asList(Object[])
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -406,7 +406,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @return a list iterator over the elements in this list (in proper
 	*         sequence)
 	*/
-	@:overload public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator() : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Returns a view of the portion of this list between the specified
@@ -442,13 +442,13 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
 	
-	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public @:public public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Create a TaggedProfile from this template.
 	*/
-	@:overload public function create(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.TaggedProfile;
+	@:overload @:public public function create(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.TaggedProfile;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -469,7 +469,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload override public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public override public function add(index : Int, element : Dynamic) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -484,14 +484,14 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload override public function remove(index : Int) : Dynamic;
+	@:overload @:public override public function remove(index : Int) : Dynamic;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

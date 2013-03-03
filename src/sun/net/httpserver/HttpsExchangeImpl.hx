@@ -25,41 +25,41 @@ package sun.net.httpserver;
 */
 @:internal extern class HttpsExchangeImpl extends com.sun.net.httpserver.HttpsExchange
 {
-	@:overload public function getRequestHeaders() : com.sun.net.httpserver.Headers;
+	@:overload @:public override public function getRequestHeaders() : com.sun.net.httpserver.Headers;
 	
-	@:overload public function getResponseHeaders() : com.sun.net.httpserver.Headers;
+	@:overload @:public override public function getResponseHeaders() : com.sun.net.httpserver.Headers;
 	
-	@:overload public function getRequestURI() : java.net.URI;
+	@:overload @:public override public function getRequestURI() : java.net.URI;
 	
-	@:overload public function getRequestMethod() : String;
+	@:overload @:public override public function getRequestMethod() : String;
 	
-	@:overload public function getHttpContext() : sun.net.httpserver.HttpContextImpl;
+	@:overload @:public override public function getHttpContext() : sun.net.httpserver.HttpContextImpl;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function getRequestBody() : java.io.InputStream;
+	@:overload @:public override public function getRequestBody() : java.io.InputStream;
 	
-	@:overload public function getResponseCode() : Int;
+	@:overload @:public override public function getResponseCode() : Int;
 	
-	@:overload public function getResponseBody() : java.io.OutputStream;
+	@:overload @:public override public function getResponseBody() : java.io.OutputStream;
 	
-	@:overload public function sendResponseHeaders(rCode : Int, contentLen : haxe.Int64) : Void;
+	@:overload @:public override public function sendResponseHeaders(rCode : Int, contentLen : haxe.Int64) : Void;
 	
-	@:overload public function getRemoteAddress() : java.net.InetSocketAddress;
+	@:overload @:public override public function getRemoteAddress() : java.net.InetSocketAddress;
 	
-	@:overload public function getLocalAddress() : java.net.InetSocketAddress;
+	@:overload @:public override public function getLocalAddress() : java.net.InetSocketAddress;
 	
-	@:overload public function getProtocol() : String;
+	@:overload @:public override public function getProtocol() : String;
 	
-	@:overload public function getSSLSession() : javax.net.ssl.SSLSession;
+	@:overload @:public override public function getSSLSession() : javax.net.ssl.SSLSession;
 	
-	@:overload public function getAttribute(name : String) : Dynamic;
+	@:overload @:public override public function getAttribute(name : String) : Dynamic;
 	
-	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload @:public override public function setAttribute(name : String, value : Dynamic) : Void;
 	
-	@:overload public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
+	@:overload @:public override public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
 	
-	@:overload public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
+	@:overload @:public override public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
 	
 	
 }

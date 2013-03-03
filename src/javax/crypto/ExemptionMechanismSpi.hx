@@ -39,7 +39,7 @@ extern class ExemptionMechanismSpi
 	*
 	* @return the required output buffer size (in bytes)
 	*/
-	@:overload @:abstract private function engineGetOutputSize(inputLen : Int) : Int;
+	@:overload @:protected @:abstract private function engineGetOutputSize(inputLen : Int) : Int;
 	
 	/**
 	* Initializes this exemption mechanism with a key.
@@ -58,7 +58,7 @@ extern class ExemptionMechanismSpi
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of initializing.
 	*/
-	@:overload @:abstract private function engineInit(key : java.security.Key) : Void;
+	@:overload @:protected @:abstract private function engineInit(key : java.security.Key) : Void;
 	
 	/**
 	* Initializes this exemption mechanism with a key and a set of algorithm
@@ -81,7 +81,7 @@ extern class ExemptionMechanismSpi
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of initializing.
 	*/
-	@:overload @:abstract private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:protected @:abstract private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes this exemption mechanism with a key and a set of algorithm
@@ -104,7 +104,7 @@ extern class ExemptionMechanismSpi
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of initializing.
 	*/
-	@:overload @:abstract private function engineInit(key : java.security.Key, params : java.security.AlgorithmParameters) : Void;
+	@:overload @:protected @:abstract private function engineInit(key : java.security.Key, params : java.security.AlgorithmParameters) : Void;
 	
 	/**
 	* Generates the exemption mechanism key blob.
@@ -114,7 +114,7 @@ extern class ExemptionMechanismSpi
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of generating.
 	*/
-	@:overload @:abstract private function engineGenExemptionBlob() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:protected @:abstract private function engineGenExemptionBlob() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Generates the exemption mechanism key blob, and stores the result in
@@ -138,7 +138,7 @@ extern class ExemptionMechanismSpi
 	* @exception ExemptionMechanismException if problem(s) encountered in the
 	* process of generating.
 	*/
-	@:overload @:abstract private function engineGenExemptionBlob(output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload @:protected @:abstract private function engineGenExemptionBlob(output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	
 }

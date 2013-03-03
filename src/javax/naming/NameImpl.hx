@@ -25,9 +25,9 @@ package javax.naming;
 */
 @:internal extern class NameImpl
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares obj to this NameImpl to determine ordering.
@@ -37,43 +37,43 @@ package javax.naming;
 	* Note: using syntax of this NameImpl and ignoring
 	* that of comparison target.
 	*/
-	@:overload public function compareTo(obj : javax.naming.NameImpl) : Int;
+	@:overload @:public public function compareTo(obj : javax.naming.NameImpl) : Int;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function getAll() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getAll() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function get(posn : Int) : String;
+	@:overload @:public public function get(posn : Int) : String;
 	
-	@:overload public function getPrefix(posn : Int) : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getPrefix(posn : Int) : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function getSuffix(posn : Int) : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function getSuffix(posn : Int) : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function startsWith(posn : Int, prefix : java.util.Enumeration<Dynamic>) : Bool;
+	@:overload @:public public function startsWith(posn : Int, prefix : java.util.Enumeration<Dynamic>) : Bool;
 	
-	@:overload public function endsWith(posn : Int, suffix : java.util.Enumeration<Dynamic>) : Bool;
+	@:overload @:public public function endsWith(posn : Int, suffix : java.util.Enumeration<Dynamic>) : Bool;
 	
-	@:overload public function addAll(comps : java.util.Enumeration<Dynamic>) : Bool;
+	@:overload @:public public function addAll(comps : java.util.Enumeration<Dynamic>) : Bool;
 	
-	@:overload public function addAll(posn : Int, comps : java.util.Enumeration<Dynamic>) : Bool;
+	@:overload @:public public function addAll(posn : Int, comps : java.util.Enumeration<Dynamic>) : Bool;
 	
-	@:overload public function add(comp : String) : Void;
+	@:overload @:public public function add(comp : String) : Void;
 	
-	@:overload public function add(posn : Int, comp : String) : Void;
+	@:overload @:public public function add(posn : Int, comp : String) : Void;
 	
-	@:overload public function remove(posn : Int) : Dynamic;
+	@:overload @:public public function remove(posn : Int) : Dynamic;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }
 @:internal extern class NameImplEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }

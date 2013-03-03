@@ -36,7 +36,7 @@ package sun.reflect.annotation;
 */
 @:require(java5) extern class ExceptionProxy implements java.io.Serializable
 {
-	@:overload @:abstract private function generateException() : java.lang.RuntimeException;
+	@:overload @:protected @:abstract private function generateException() : java.lang.RuntimeException;
 	
 	
 }

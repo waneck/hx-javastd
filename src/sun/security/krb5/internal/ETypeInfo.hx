@@ -25,9 +25,9 @@ package sun.security.krb5.internal;
 */
 extern class ETypeInfo
 {
-	@:overload public function new(etype : Int, salt : String) : Void;
+	@:overload @:public public function new(etype : Int, salt : String) : Void;
 	
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/**
 	* Constructs a ETypeInfo object.
@@ -36,7 +36,7 @@ extern class ETypeInfo
 	*            ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes this object to an OutputStream.
@@ -45,11 +45,11 @@ extern class ETypeInfo
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	* @exception Asn1Exception on encoding errors.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getEType() : Int;
+	@:overload @:public public function getEType() : Int;
 	
-	@:overload public function getSalt() : String;
+	@:overload @:public public function getSalt() : String;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class Bool extends com.sun.org.apache.xpath.internal.operations.UnaryOper
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function operate(right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function operate(right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Evaluate this operation directly to a boolean.
@@ -44,7 +44,7 @@ extern class Bool extends com.sun.org.apache.xpath.internal.operations.UnaryOper
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
+	@:overload @:public override public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
 	
 	
 }

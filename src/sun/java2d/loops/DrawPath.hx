@@ -31,34 +31,34 @@ extern class DrawPath extends sun.java2d.loops.GraphicsPrimitive
 	*   2. must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	public static var methodSignature(default, null) : String;
+	@:public @:final @:static public static var methodSignature(default, null) : String;
 	
-	public static var primTypeID(default, null) : Int;
+	@:public @:final @:static public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawPath;
+	@:overload @:public @:static public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawPath;
 	
-	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:protected private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
+	@:overload @:public public function new(pNativePrim : haxe.Int64, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
 	/**
 	*   All DrawPath implementors must have this invoker method
 	*/
-	@:overload @:native public function new(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transX : Int, transY : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
+	@:overload @:public @:native public function new(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transX : Int, transY : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
 	
-	@:overload override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	
 }
 @:native('sun$java2d$loops$DrawPath$TraceDrawPath') @:internal extern class DrawPath_TraceDrawPath extends sun.java2d.loops.DrawPath
 {
-	@:overload public function new(target : sun.java2d.loops.DrawPath) : Void;
+	@:overload @:public public function new(target : sun.java2d.loops.DrawPath) : Void;
 	
-	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
+	@:overload @:public override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload override public function DrawPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transX : Int, transY : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
+	@:overload @:public override public function DrawPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transX : Int, transY : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
 	
 	
 }

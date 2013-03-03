@@ -26,7 +26,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	*
 	* @param doc the {@link Document} in which <code>XMLsignature</code> is placed
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructor Manifest
@@ -35,7 +35,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* This <code>addDocument</code> method is used to add a new resource to the
@@ -50,7 +50,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param ReferenceType
 	* @throws XMLSignatureException
 	*/
-	@:overload public function addDocument(BaseURI : String, referenceURI : String, transforms : com.sun.org.apache.xml.internal.security.transforms.Transforms, digestURI : String, ReferenceId : String, ReferenceType : String) : Void;
+	@:overload @:public public function addDocument(BaseURI : String, referenceURI : String, transforms : com.sun.org.apache.xml.internal.security.transforms.Transforms, digestURI : String, ReferenceId : String, ReferenceType : String) : Void;
 	
 	/**
 	* The calculation of the DigestValues in the References must be after the
@@ -60,14 +60,14 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @throws ReferenceNotInitializedException
 	* @throws XMLSignatureException
 	*/
-	@:overload public function generateDigestValues() : Void;
+	@:overload @:public public function generateDigestValues() : Void;
 	
 	/**
 	* Return the nonnegative number of added references.
 	*
 	* @return the number of references
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return the <it>i</it><sup>th</sup> reference.  Valid <code>i</code>
@@ -77,21 +77,21 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @return the <it>i</it><sup>th</sup> reference
 	* @throws XMLSecurityException
 	*/
-	@:overload public function item(i : Int) : com.sun.org.apache.xml.internal.security.signature.Reference;
+	@:overload @:public public function item(i : Int) : com.sun.org.apache.xml.internal.security.signature.Reference;
 	
 	/**
 	* Sets the <code>Id</code> attribute
 	*
 	* @param Id the <code>Id</code> attribute in <code>ds:Manifest</code>
 	*/
-	@:overload public function setId(Id : String) : Void;
+	@:overload @:public public function setId(Id : String) : Void;
 	
 	/**
 	* Returns the <code>Id</code> attribute
 	*
 	* @return the <code>Id</code> attribute in <code>ds:Manifest</code>
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Used to do a <A HREF="http://www.w3.org/TR/xmldsig-core/#def-ValidationReference">reference
@@ -110,7 +110,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @see com.sun.org.apache.xml.internal.security.signature.MissingResourceFailureException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function verifyReferences() : Bool;
+	@:overload @:public public function verifyReferences() : Bool;
 	
 	/**
 	* Used to do a <A HREF="http://www.w3.org/TR/xmldsig-core/#def-ValidationReference">reference
@@ -130,7 +130,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @see com.sun.org.apache.xml.internal.security.signature.MissingResourceFailureException
 	* @throws XMLSecurityException
 	*/
-	@:overload public function verifyReferences(followManifests : Bool) : Bool;
+	@:overload @:public public function verifyReferences(followManifests : Bool) : Bool;
 	
 	/**
 	* After verifying a {@link Manifest} or a {@link SignedInfo} using the
@@ -141,21 +141,21 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @return the results of reference validation at the specified index
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getVerificationResult(index : Int) : Bool;
+	@:overload @:public public function getVerificationResult(index : Int) : Bool;
 	
 	/**
 	* Adds Resource Resolver for retrieving resources at specified <code>URI</code> attribute in <code>reference</code> element
 	*
 	* @param resolver {@link ResourceResolver} can provide the implemenatin subclass of {@link ResourceResolverSpi} for retrieving resource.
 	*/
-	@:overload public function addResourceResolver(resolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver) : Void;
+	@:overload @:public public function addResourceResolver(resolver : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver) : Void;
 	
 	/**
 	* Adds Resource Resolver for retrieving resources at specified <code>URI</code> attribute in <code>reference</code> element
 	*
 	* @param resolverSpi the implemenatin subclass of {@link ResourceResolverSpi} for retrieving resource.
 	*/
-	@:overload public function addResourceResolver(resolverSpi : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi) : Void;
+	@:overload @:public public function addResourceResolver(resolverSpi : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolverSpi) : Void;
 	
 	/**
 	* Used to pass parameters like proxy servers etc to the ResourceResolver
@@ -164,7 +164,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param key the key
 	* @param value the value
 	*/
-	@:overload public function setResolverProperty(key : String, value : String) : Void;
+	@:overload @:public public function setResolverProperty(key : String, value : String) : Void;
 	
 	/**
 	* Returns the value at specified key
@@ -172,7 +172,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @param key the key
 	* @return the value
 	*/
-	@:overload public function getResolverProperty(key : String) : String;
+	@:overload @:public public function getResolverProperty(key : String) : String;
 	
 	/**
 	* Method getSignedContentItem
@@ -182,7 +182,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	*
 	* @throws XMLSignatureException
 	*/
-	@:overload public function getSignedContentItem(i : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getSignedContentItem(i : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method getReferencedContentPriorTransformsItem
@@ -191,7 +191,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @return The contents before transformation of the reference i.
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getReferencedContentBeforeTransformsItem(i : Int) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getReferencedContentBeforeTransformsItem(i : Int) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method getReferencedContentAfterTransformsItem
@@ -200,21 +200,21 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	* @return The contents after transformation of the reference i.
 	* @throws XMLSecurityException
 	*/
-	@:overload public function getReferencedContentAfterTransformsItem(i : Int) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload @:public public function getReferencedContentAfterTransformsItem(i : Int) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* Method getSignedContentLength
 	*
 	* @return The nu,ber of references contained in this reference.
 	*/
-	@:overload public function getSignedContentLength() : Int;
+	@:overload @:public public function getSignedContentLength() : Int;
 	
 	/**
 	* Method getBaseLocalName
 	*
 	* @inheritDoc
 	*/
-	@:overload public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

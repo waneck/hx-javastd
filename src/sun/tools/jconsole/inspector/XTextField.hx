@@ -28,45 +28,45 @@ package sun.tools.jconsole.inspector;
 */
 extern class XTextField extends javax.swing.JPanel implements javax.swing.event.DocumentListener implements java.awt.event.ActionListener
 {
-	private var textField : javax.swing.JTextField;
+	@:protected private var textField : javax.swing.JTextField;
 	
-	private static var COMPATIBLE_VALUE(default, null) : Int;
+	@:protected @:final @:static private static var COMPATIBLE_VALUE(default, null) : Int;
 	
-	private static var CURRENT_VALUE(default, null) : Int;
+	@:protected @:final @:static private static var CURRENT_VALUE(default, null) : Int;
 	
-	private static var NULL_VALUE(default, null) : Int;
+	@:protected @:final @:static private static var NULL_VALUE(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(value : Dynamic) : Void;
+	@:overload @:public public function new(value : Dynamic) : Void;
 	
-	@:overload public function new(value : Dynamic, colWidth : Int) : Void;
+	@:overload @:public public function new(value : Dynamic, colWidth : Int) : Void;
 	
-	@:overload public function new(value : Dynamic, expectedClass : Class<Dynamic>, colWidth : Int, isCallable : Bool, button : javax.swing.JButton, operation : sun.tools.jconsole.inspector.XOperations) : Void;
+	@:overload @:public public function new(value : Dynamic, expectedClass : Class<Dynamic>, colWidth : Int, isCallable : Bool, button : javax.swing.JButton, operation : sun.tools.jconsole.inspector.XOperations) : Void;
 	
-	@:overload public static function setNullSelectionAllowed(allowNullSelection : Bool) : Void;
+	@:overload @:public @:static public static function setNullSelectionAllowed(allowNullSelection : Bool) : Void;
 	
-	@:overload public static function getNullSelectionAllowed() : Bool;
+	@:overload @:public @:static public static function getNullSelectionAllowed() : Bool;
 	
-	@:overload private function init(value : Dynamic, expectedClass : Class<Dynamic>) : Void;
+	@:overload @:protected private function init(value : Dynamic, expectedClass : Class<Dynamic>) : Void;
 	
-	@:overload public function setHorizontalAlignment(h : Int) : Void;
+	@:overload @:public public function setHorizontalAlignment(h : Int) : Void;
 	
-	@:overload private function buildJMenuItem(xobject : sun.tools.jconsole.inspector.XObject, valueType : Int) : javax.swing.JMenuItem;
+	@:overload @:protected private function buildJMenuItem(xobject : sun.tools.jconsole.inspector.XObject, valueType : Int) : javax.swing.JMenuItem;
 	
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	/**
 	* This method returns either the user inputted String, or an XObject
 	* if one was dropped on the input field.
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	
 }

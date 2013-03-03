@@ -31,19 +31,19 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* {@link javax.xml.transform.TransformerFactory#newInstance} may
 	* be safely cast to a SAXTransformerFactory.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/** If {@link javax.xml.transform.TransformerFactory#getFeature}
 	* returns true when passed this value as an argument,
 	* the {@link #newXMLFilter(Source src)}
 	* and {@link #newXMLFilter(Templates templates)} methods are supported.
 	*/
-	public static var FEATURE_XMLFILTER(default, null) : String;
+	@:public @:static @:final public static var FEATURE_XMLFILTER(default, null) : String;
 	
 	/**
 	* The default constructor is protected on purpose.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Get a TransformerHandler object that can process SAX
@@ -57,7 +57,7 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* @throws TransformerConfigurationException If for some reason the
 	* TransformerHandler can not be created.
 	*/
-	@:overload @:abstract public function newTransformerHandler(src : javax.xml.transform.Source) : javax.xml.transform.sax.TransformerHandler;
+	@:overload @:public @:abstract public function newTransformerHandler(src : javax.xml.transform.Source) : javax.xml.transform.sax.TransformerHandler;
 	
 	/**
 	* Get a TransformerHandler object that can process SAX
@@ -70,7 +70,7 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* @throws TransformerConfigurationException If for some reason the
 	* TransformerHandler can not be created.
 	*/
-	@:overload @:abstract public function newTransformerHandler(templates : javax.xml.transform.Templates) : javax.xml.transform.sax.TransformerHandler;
+	@:overload @:public @:abstract public function newTransformerHandler(templates : javax.xml.transform.Templates) : javax.xml.transform.sax.TransformerHandler;
 	
 	/**
 	* Get a TransformerHandler object that can process SAX
@@ -84,7 +84,7 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* @throws TransformerConfigurationException If for some reason the
 	* TransformerHandler cannot be created.
 	*/
-	@:overload @:abstract public function newTransformerHandler() : javax.xml.transform.sax.TransformerHandler;
+	@:overload @:public @:abstract public function newTransformerHandler() : javax.xml.transform.sax.TransformerHandler;
 	
 	/**
 	* Get a TemplatesHandler object that can process SAX
@@ -96,7 +96,7 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* @throws TransformerConfigurationException If for some reason the
 	* TemplatesHandler cannot be created.
 	*/
-	@:overload @:abstract public function newTemplatesHandler() : javax.xml.transform.sax.TemplatesHandler;
+	@:overload @:public @:abstract public function newTemplatesHandler() : javax.xml.transform.sax.TemplatesHandler;
 	
 	/**
 	* Create an XMLFilter that uses the given Source as the
@@ -109,7 +109,7 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* @throws TransformerConfigurationException If for some reason the
 	* TemplatesHandler cannot be created.
 	*/
-	@:overload @:abstract public function newXMLFilter(src : javax.xml.transform.Source) : org.xml.sax.XMLFilter;
+	@:overload @:public @:abstract public function newXMLFilter(src : javax.xml.transform.Source) : org.xml.sax.XMLFilter;
 	
 	/**
 	* Create an XMLFilter, based on the Templates argument..
@@ -121,7 +121,7 @@ extern class SAXTransformerFactory extends javax.xml.transform.TransformerFactor
 	* @throws TransformerConfigurationException If for some reason the
 	* TemplatesHandler cannot be created.
 	*/
-	@:overload @:abstract public function newXMLFilter(templates : javax.xml.transform.Templates) : org.xml.sax.XMLFilter;
+	@:overload @:public @:abstract public function newXMLFilter(templates : javax.xml.transform.Templates) : org.xml.sax.XMLFilter;
 	
 	
 }

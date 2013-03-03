@@ -30,7 +30,7 @@ extern interface ContactInfoListIterator extends java.util.Iterator<Dynamic>
 	*
 	* @return The underlying list for this iterator.
 	*/
-	@:overload public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
+	@:overload @:public public function getContactInfoList() : com.sun.corba.se.pept.transport.ContactInfoList;
 	
 	/**
 	* Used to report information to the iterator to be used
@@ -40,7 +40,7 @@ extern interface ContactInfoListIterator extends java.util.Iterator<Dynamic>
 	* {@link com.sun.corba.se.pept.transport.ContactInfo ContactInfo}
 	* obtained from this iterator which resulted in a successful invocation.
 	*/
-	@:overload public function reportSuccess(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : Void;
+	@:overload @:public public function reportSuccess(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : Void;
 	
 	/**
 	* Used to report information to the iterator to be used
@@ -54,7 +54,7 @@ extern interface ContactInfoListIterator extends java.util.Iterator<Dynamic>
 	*
 	* @return Returns true if the request should be retried.
 	*/
-	@:overload public function reportException(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, exception : java.lang.RuntimeException) : Bool;
+	@:overload @:public public function reportException(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, exception : java.lang.RuntimeException) : Bool;
 	
 	/**
 	* The exception to report to the presentation block.
@@ -64,7 +64,7 @@ extern interface ContactInfoListIterator extends java.util.Iterator<Dynamic>
 	* the iterator via {@link #reportException}).
 
 	*/
-	@:overload public function getFailureException() : java.lang.RuntimeException;
+	@:overload @:public public function getFailureException() : java.lang.RuntimeException;
 	
 	
 }

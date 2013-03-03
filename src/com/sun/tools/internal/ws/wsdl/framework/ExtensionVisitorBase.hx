@@ -30,11 +30,11 @@ extern class ExtensionVisitorBase implements com.sun.tools.internal.ws.wsdl.fram
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function preVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function preVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
-	@:overload public function postVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
+	@:overload @:public public function postVisit(extension : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
 	
 }

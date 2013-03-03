@@ -25,9 +25,9 @@ package com.sun.imageio.stream;
 */
 extern class StreamFinalizer
 {
-	@:overload public function new(stream : javax.imageio.stream.ImageInputStream) : Void;
+	@:overload @:public public function new(stream : javax.imageio.stream.ImageInputStream) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

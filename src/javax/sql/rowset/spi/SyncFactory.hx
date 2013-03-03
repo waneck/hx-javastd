@@ -187,19 +187,19 @@ extern class SyncFactory
 	* The standard property-id for a synchronization provider implementation
 	* name.
 	*/
-	public static var ROWSET_SYNC_PROVIDER(default, null) : String;
+	@:public @:static @:final public static var ROWSET_SYNC_PROVIDER(default, null) : String;
 	
 	/**
 	* The standard property-id for a synchronization provider implementation
 	* vendor name.
 	*/
-	public static var ROWSET_SYNC_VENDOR(default, null) : String;
+	@:public @:static @:final public static var ROWSET_SYNC_VENDOR(default, null) : String;
 	
 	/**
 	* The standard property-id for a synchronization provider implementation
 	* version tag.
 	*/
-	public static var ROWSET_SYNC_PROVIDER_VERSION(default, null) : String;
+	@:public @:static @:final public static var ROWSET_SYNC_PROVIDER_VERSION(default, null) : String;
 	
 	/**
 	* Adds the the given synchronization provider to the factory register. Guidelines
@@ -228,14 +228,14 @@ extern class SyncFactory
 	*         or null provider name
 	* @see #setJNDIContext
 	*/
-	@:overload @:synchronized public static function registerProvider(providerID : String) : Void;
+	@:overload @:public @:static @:synchronized public static function registerProvider(providerID : String) : Void;
 	
 	/**
 	* Returns the <code>SyncFactory</code> singleton.
 	*
 	* @return the <code>SyncFactory</code> instance
 	*/
-	@:overload public static function getSyncFactory() : javax.sql.rowset.spi.SyncFactory;
+	@:overload @:public @:static public static function getSyncFactory() : javax.sql.rowset.spi.SyncFactory;
 	
 	/**
 	* Removes the designated currently registered synchronization provider from the
@@ -245,7 +245,7 @@ extern class SyncFactory
 	* @throws SyncFactoryException If an attempt is made to
 	* unregister a SyncProvider implementation that was not registered.
 	*/
-	@:overload @:synchronized public static function unregisterProvider(providerID : String) : Void;
+	@:overload @:public @:static @:synchronized public static function unregisterProvider(providerID : String) : Void;
 	
 	/**
 	* Returns the <code>SyncProvider</code> instance identified by <i>providerID</i>.
@@ -256,7 +256,7 @@ extern class SyncFactory
 	* the providerID is {@code null}, or
 	* some error was encountered when trying to invoke this provider.
 	*/
-	@:overload public static function getInstance(providerID : String) : javax.sql.rowset.spi.SyncProvider;
+	@:overload @:public @:static public static function getInstance(providerID : String) : javax.sql.rowset.spi.SyncProvider;
 	
 	/**
 	* Returns an Enumeration of currently registered synchronization
@@ -270,7 +270,7 @@ extern class SyncFactory
 	* @return Enumeration  A enumeration of available synchronization
 	* providers that are registered with this Factory
 	*/
-	@:overload public static function getRegisteredProviders() : java.util.Enumeration<javax.sql.rowset.spi.SyncProvider>;
+	@:overload @:public @:static public static function getRegisteredProviders() : java.util.Enumeration<javax.sql.rowset.spi.SyncProvider>;
 	
 	/**
 	* Sets the logging object to be used by the <code>SyncProvider</code>
@@ -293,7 +293,7 @@ extern class SyncFactory
 	* @throws NullPointerException if the logger is null
 	* @see SecurityManager#checkPermission
 	*/
-	@:overload public static function setLogger(logger : java.util.logging.Logger) : Void;
+	@:overload @:public @:static public static function setLogger(logger : java.util.logging.Logger) : Void;
 	
 	/**
 	* Sets the logging object that is used by <code>SyncProvider</code>
@@ -321,7 +321,7 @@ extern class SyncFactory
 	* @see SecurityManager#checkPermission
 	* @see LoggingPermission
 	*/
-	@:overload public static function setLogger(logger : java.util.logging.Logger, level : java.util.logging.Level) : Void;
+	@:overload @:public @:static public static function setLogger(logger : java.util.logging.Logger, level : java.util.logging.Level) : Void;
 	
 	/**
 	* Returns the logging object for applications to retrieve
@@ -329,7 +329,7 @@ extern class SyncFactory
 	*
 	* @throws SyncFactoryException if no logging object has been set.
 	*/
-	@:overload public static function getLogger() : java.util.logging.Logger;
+	@:overload @:public @:static public static function getLogger() : java.util.logging.Logger;
 	
 	/**
 	* Sets the initial JNDI context from which SyncProvider implementations
@@ -349,7 +349,7 @@ extern class SyncFactory
 	*  {@code checkPermission} method denies calling {@code setJNDIContext}
 	* @see SecurityManager#checkPermission
 	*/
-	@:overload @:synchronized public static function setJNDIContext(ctx : javax.naming.Context) : Void;
+	@:overload @:public @:static @:synchronized public static function setJNDIContext(ctx : javax.naming.Context) : Void;
 	
 	
 }
@@ -362,27 +362,27 @@ extern class SyncFactory
 }
 @:internal extern class ProviderImpl extends javax.sql.rowset.spi.SyncProvider
 {
-	@:overload public function setClassname(classname : String) : Void;
+	@:overload @:public public function setClassname(classname : String) : Void;
 	
-	@:overload public function getClassname() : String;
+	@:overload @:public public function getClassname() : String;
 	
-	@:overload public function setVendor(vendor : String) : Void;
+	@:overload @:public public function setVendor(vendor : String) : Void;
 	
-	@:overload override public function getVendor() : String;
+	@:overload @:public override public function getVendor() : String;
 	
-	@:overload public function setVersion(providerVer : String) : Void;
+	@:overload @:public public function setVersion(providerVer : String) : Void;
 	
-	@:overload override public function getVersion() : String;
+	@:overload @:public override public function getVersion() : String;
 	
-	@:overload public function setIndex(i : Int) : Void;
+	@:overload @:public public function setIndex(i : Int) : Void;
 	
-	@:overload public function getIndex() : Int;
+	@:overload @:public public function getIndex() : Int;
 	
-	@:overload override public function getDataSourceLock() : Int;
+	@:overload @:public override public function getDataSourceLock() : Int;
 	
-	@:overload override public function getProviderGrade() : Int;
+	@:overload @:public override public function getProviderGrade() : Int;
 	
-	@:overload override public function getProviderID() : String;
+	@:overload @:public override public function getProviderID() : String;
 	
 	/*
 	public javax.sql.RowSetInternal getRowSetInternal() {
@@ -394,13 +394,13 @@ extern class SyncFactory
 	}
 	}
 	*/
-	@:overload override public function getRowSetReader() : javax.sql.RowSetReader;
+	@:overload @:public override public function getRowSetReader() : javax.sql.RowSetReader;
 	
-	@:overload override public function getRowSetWriter() : javax.sql.RowSetWriter;
+	@:overload @:public override public function getRowSetWriter() : javax.sql.RowSetWriter;
 	
-	@:overload override public function setDataSourceLock(param : Int) : Void;
+	@:overload @:public override public function setDataSourceLock(param : Int) : Void;
 	
-	@:overload override public function supportsUpdatableView() : Int;
+	@:overload @:public override public function supportsUpdatableView() : Int;
 	
 	
 }

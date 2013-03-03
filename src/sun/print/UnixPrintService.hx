@@ -25,52 +25,52 @@ package sun.print;
 */
 extern class UnixPrintService implements javax.print.PrintService implements sun.print.AttributeUpdater implements sun.print.SunPrinterJobService
 {
-	@:overload public function invalidateService() : Void;
+	@:overload @:public public function invalidateService() : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function createPrintJob() : javax.print.DocPrintJob;
+	@:overload @:public public function createPrintJob() : javax.print.DocPrintJob;
 	
-	@:overload public function getUpdatedAttributes() : javax.print.attribute.PrintServiceAttributeSet;
+	@:overload @:public public function getUpdatedAttributes() : javax.print.attribute.PrintServiceAttributeSet;
 	
-	@:overload public function wakeNotifier() : Void;
+	@:overload @:public public function wakeNotifier() : Void;
 	
-	@:overload public function addPrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
+	@:overload @:public public function addPrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
 	
-	@:overload public function removePrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
+	@:overload @:public public function removePrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
 	
-	@:overload public function getAttribute<T : javax.print.attribute.PrintServiceAttribute>(category : Class<T>) : T;
+	@:overload @:public public function getAttribute<T : javax.print.attribute.PrintServiceAttribute>(category : Class<T>) : T;
 	
-	@:overload public function getAttributes() : javax.print.attribute.PrintServiceAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintServiceAttributeSet;
 	
-	@:overload public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
+	@:overload @:public public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	
-	@:overload public function isDocFlavorSupported(flavor : javax.print.DocFlavor) : Bool;
+	@:overload @:public public function isDocFlavorSupported(flavor : javax.print.DocFlavor) : Bool;
 	
-	@:overload public function getSupportedAttributeCategories() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getSupportedAttributeCategories() : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public function isAttributeCategorySupported(category : Class<javax.print.attribute.Attribute>) : Bool;
+	@:overload @:public public function isAttributeCategorySupported(category : Class<javax.print.attribute.Attribute>) : Bool;
 	
 	/* return defaults for all attributes for which there is a default
 	* value
 	*/
-	@:overload public function getDefaultAttributeValue(category : Class<javax.print.attribute.Attribute>) : Dynamic;
+	@:overload @:public public function getDefaultAttributeValue(category : Class<javax.print.attribute.Attribute>) : Dynamic;
 	
-	@:overload public function getSupportedAttributeValues(category : Class<javax.print.attribute.Attribute>, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Dynamic;
+	@:overload @:public public function getSupportedAttributeValues(category : Class<javax.print.attribute.Attribute>, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Dynamic;
 	
-	@:overload public function isAttributeValueSupported(attr : javax.print.attribute.Attribute, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public public function isAttributeValueSupported(attr : javax.print.attribute.Attribute, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Bool;
 	
-	@:overload public function getUnsupportedAttributes(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
+	@:overload @:public public function getUnsupportedAttributes(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
 	
-	@:overload public function getServiceUIFactory() : javax.print.ServiceUIFactory;
+	@:overload @:public public function getServiceUIFactory() : javax.print.ServiceUIFactory;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function usesClass(c : Class<Dynamic>) : Bool;
+	@:overload @:public public function usesClass(c : Class<Dynamic>) : Bool;
 	
 	
 }

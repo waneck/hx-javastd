@@ -28,102 +28,102 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	/**
 	* Indicates that the user has not yet selected a value.
 	*/
-	public static var UNINITIALIZED_VALUE(default, null) : Dynamic;
+	@:public @:static @:final public static var UNINITIALIZED_VALUE(default, null) : Dynamic;
 	
 	/**
 	* Type meaning Look and Feel should not supply any options -- only
 	* use the options from the <code>JOptionPane</code>.
 	*/
-	public static var DEFAULT_OPTION(default, null) : Int;
+	@:public @:static @:final public static var DEFAULT_OPTION(default, null) : Int;
 	
 	/** Type used for <code>showConfirmDialog</code>. */
-	public static var YES_NO_OPTION(default, null) : Int;
+	@:public @:static @:final public static var YES_NO_OPTION(default, null) : Int;
 	
 	/** Type used for <code>showConfirmDialog</code>. */
-	public static var YES_NO_CANCEL_OPTION(default, null) : Int;
+	@:public @:static @:final public static var YES_NO_CANCEL_OPTION(default, null) : Int;
 	
 	/** Type used for <code>showConfirmDialog</code>. */
-	public static var OK_CANCEL_OPTION(default, null) : Int;
+	@:public @:static @:final public static var OK_CANCEL_OPTION(default, null) : Int;
 	
 	/** Return value from class method if YES is chosen. */
-	public static var YES_OPTION(default, null) : Int;
+	@:public @:static @:final public static var YES_OPTION(default, null) : Int;
 	
 	/** Return value from class method if NO is chosen. */
-	public static var NO_OPTION(default, null) : Int;
+	@:public @:static @:final public static var NO_OPTION(default, null) : Int;
 	
 	/** Return value from class method if CANCEL is chosen. */
-	public static var CANCEL_OPTION(default, null) : Int;
+	@:public @:static @:final public static var CANCEL_OPTION(default, null) : Int;
 	
 	/** Return value form class method if OK is chosen. */
-	public static var OK_OPTION(default, null) : Int;
+	@:public @:static @:final public static var OK_OPTION(default, null) : Int;
 	
 	/** Return value from class method if user closes window without selecting
 	* anything, more than likely this should be treated as either a
 	* <code>CANCEL_OPTION</code> or <code>NO_OPTION</code>. */
-	public static var CLOSED_OPTION(default, null) : Int;
+	@:public @:static @:final public static var CLOSED_OPTION(default, null) : Int;
 	
 	/** Used for error messages. */
-	public static var ERROR_MESSAGE(default, null) : Int;
+	@:public @:static @:final public static var ERROR_MESSAGE(default, null) : Int;
 	
 	/** Used for information messages. */
-	public static var INFORMATION_MESSAGE(default, null) : Int;
+	@:public @:static @:final public static var INFORMATION_MESSAGE(default, null) : Int;
 	
 	/** Used for warning messages. */
-	public static var WARNING_MESSAGE(default, null) : Int;
+	@:public @:static @:final public static var WARNING_MESSAGE(default, null) : Int;
 	
 	/** Used for questions. */
-	public static var QUESTION_MESSAGE(default, null) : Int;
+	@:public @:static @:final public static var QUESTION_MESSAGE(default, null) : Int;
 	
 	/** No icon is used. */
-	public static var PLAIN_MESSAGE(default, null) : Int;
+	@:public @:static @:final public static var PLAIN_MESSAGE(default, null) : Int;
 	
 	/** Bound property name for <code>icon</code>. */
-	public static var ICON_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var ICON_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>message</code>. */
-	public static var MESSAGE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MESSAGE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>value</code>. */
-	public static var VALUE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var VALUE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>option</code>. */
-	public static var OPTIONS_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var OPTIONS_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>initialValue</code>. */
-	public static var INITIAL_VALUE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var INITIAL_VALUE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>type</code>. */
-	public static var MESSAGE_TYPE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var MESSAGE_TYPE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>optionType</code>. */
-	public static var OPTION_TYPE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var OPTION_TYPE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>selectionValues</code>. */
-	public static var SELECTION_VALUES_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var SELECTION_VALUES_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>initialSelectionValue</code>. */
-	public static var INITIAL_SELECTION_VALUE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var INITIAL_SELECTION_VALUE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>inputValue</code>. */
-	public static var INPUT_VALUE_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var INPUT_VALUE_PROPERTY(default, null) : String;
 	
 	/** Bound property name for <code>wantsInput</code>. */
-	public static var WANTS_INPUT_PROPERTY(default, null) : String;
+	@:public @:static @:final public static var WANTS_INPUT_PROPERTY(default, null) : String;
 	
 	/** Icon used in pane. */
-	@:transient private var icon : javax.swing.Icon;
+	@:transient @:protected private var icon : javax.swing.Icon;
 	
 	/** Message to display. */
-	@:transient private var message : Dynamic;
+	@:transient @:protected private var message : Dynamic;
 	
 	/** Options to display to the user. */
-	@:transient private var options : java.NativeArray<Dynamic>;
+	@:transient @:protected private var options : java.NativeArray<Dynamic>;
 	
 	/** Value that should be initially selected in <code>options</code>. */
-	@:transient private var initialValue : Dynamic;
+	@:transient @:protected private var initialValue : Dynamic;
 	
 	/** Message type. */
-	private var messageType : Int;
+	@:protected private var messageType : Int;
 	
 	/**
 	* Option type, one of <code>DEFAULT_OPTION</code>,
@@ -131,24 +131,24 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* <code>YES_NO_CANCEL_OPTION</code> or
 	* <code>OK_CANCEL_OPTION</code>.
 	*/
-	private var optionType : Int;
+	@:protected private var optionType : Int;
 	
 	/** Currently selected value, will be a valid option, or
 	* <code>UNINITIALIZED_VALUE</code> or <code>null</code>. */
-	@:transient private var value : Dynamic;
+	@:transient @:protected private var value : Dynamic;
 	
 	/** Array of values the user can choose from. Look and feel will
 	* provide the UI component to choose this from. */
-	@:transient private var selectionValues : java.NativeArray<Dynamic>;
+	@:protected @:transient private var selectionValues : java.NativeArray<Dynamic>;
 	
 	/** Value the user has input. */
-	@:transient private var inputValue : Dynamic;
+	@:protected @:transient private var inputValue : Dynamic;
 	
 	/** Initial value to select in <code>selectionValues</code>. */
-	@:transient private var initialSelectionValue : Dynamic;
+	@:protected @:transient private var initialSelectionValue : Dynamic;
 	
 	/** If true, a UI widget will be provided to the user to get input. */
-	private var wantsInput : Bool;
+	@:protected private var wantsInput : Bool;
 	
 	/**
 	* Shows a question-message dialog requesting input from the user. The
@@ -161,7 +161,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showInputDialog(message : Dynamic) : String;
+	@:overload @:public @:static public static function showInputDialog(message : Dynamic) : String;
 	
 	/**
 	* Shows a question-message dialog requesting input from the user, with
@@ -174,7 +174,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                 field
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function showInputDialog(message : Dynamic, initialSelectionValue : Dynamic) : String;
+	@:require(java4) @:overload @:public @:static public static function showInputDialog(message : Dynamic, initialSelectionValue : Dynamic) : String;
 	
 	/**
 	* Shows a question-message dialog requesting input from the user
@@ -190,7 +190,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*    <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic) : String;
+	@:overload @:public @:static public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic) : String;
 	
 	/**
 	* Shows a question-message dialog requesting input from the user and
@@ -206,7 +206,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                 field
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic, initialSelectionValue : Dynamic) : String;
+	@:require(java4) @:overload @:public @:static public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic, initialSelectionValue : Dynamic) : String;
 	
 	/**
 	* Shows a dialog requesting input from the user parented to
@@ -229,7 +229,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : String;
+	@:overload @:public @:static public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : String;
 	
 	/**
 	* Prompts the user for input in a blocking dialog where the
@@ -267,7 +267,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon, selectionValues : java.NativeArray<Dynamic>, initialSelectionValue : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function showInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon, selectionValues : java.NativeArray<Dynamic>, initialSelectionValue : Dynamic) : Dynamic;
 	
 	/**
 	* Brings up an information-message dialog titled "Message".
@@ -282,7 +282,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showMessageDialog(parentComponent : java.awt.Component, message : Dynamic) : Void;
+	@:overload @:public @:static public static function showMessageDialog(parentComponent : java.awt.Component, message : Dynamic) : Void;
 	
 	/**
 	* Brings up a dialog that displays a message using a default
@@ -305,7 +305,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : Void;
+	@:overload @:public @:static public static function showMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : Void;
 	
 	/**
 	* Brings up a dialog displaying a message, specifying all parameters.
@@ -330,7 +330,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon) : Void;
+	@:overload @:public @:static public static function showMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Brings up a dialog with the options <i>Yes</i>,
@@ -349,7 +349,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic) : Int;
+	@:overload @:public @:static public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic) : Int;
 	
 	/**
 	* Brings up a dialog where the number of choices is determined
@@ -372,7 +372,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int) : Int;
+	@:overload @:public @:static public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int) : Int;
 	
 	/**
 	* Brings up a dialog where the number of choices is determined
@@ -406,7 +406,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int) : Int;
+	@:overload @:public @:static public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int) : Int;
 	
 	/**
 	* Brings up a dialog with a specified icon, where the number of
@@ -439,7 +439,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon) : Int;
+	@:overload @:public @:static public static function showConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon) : Int;
 	
 	/**
 	* Brings up a dialog with a specified icon, where the initial
@@ -495,7 +495,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function showOptionDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>, initialValue : Dynamic) : Int;
+	@:overload @:public @:static public static function showOptionDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>, initialValue : Dynamic) : Int;
 	
 	/**
 	* Creates and returns a new <code>JDialog</code> wrapping
@@ -523,7 +523,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function createDialog(parentComponent : java.awt.Component, title : String) : javax.swing.JDialog;
+	@:overload @:public public function createDialog(parentComponent : java.awt.Component, title : String) : javax.swing.JDialog;
 	
 	/**
 	* Creates and returns a new parentless <code>JDialog</code>
@@ -547,7 +547,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function createDialog(title : String) : javax.swing.JDialog;
+	@:require(java6) @:overload @:public public function createDialog(title : String) : javax.swing.JDialog;
 	
 	/**
 	* Brings up an internal confirmation dialog panel. The dialog
@@ -559,7 +559,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*          <code>Frame</code>, a default <code>Frame</code> is used
 	* @param message   the object to display
 	*/
-	@:overload public static function showInternalMessageDialog(parentComponent : java.awt.Component, message : Dynamic) : Void;
+	@:overload @:public @:static public static function showInternalMessageDialog(parentComponent : java.awt.Component, message : Dynamic) : Void;
 	
 	/**
 	* Brings up an internal dialog panel that displays a message
@@ -579,7 +579,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                  <code>QUESTION_MESSAGE</code>,
 	*                  or <code>PLAIN_MESSAGE</code>
 	*/
-	@:overload public static function showInternalMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : Void;
+	@:overload @:public @:static public static function showInternalMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : Void;
 	
 	/**
 	* Brings up an internal dialog panel displaying a message,
@@ -600,7 +600,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @param icon      an icon to display in the dialog that helps the user
 	*                  identify the kind of message that is being displayed
 	*/
-	@:overload public static function showInternalMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon) : Void;
+	@:overload @:public @:static public static function showInternalMessageDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Brings up an internal dialog panel with the options <i>Yes</i>, <i>No</i>
@@ -613,7 +613,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @param message   the <code>Object</code> to display
 	* @return an integer indicating the option selected by the user
 	*/
-	@:overload public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic) : Int;
+	@:overload @:public @:static public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic) : Int;
 	
 	/**
 	* Brings up a internal dialog panel where the number of choices
@@ -635,7 +635,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*          or <code>YES_NO_CANCEL_OPTION</code>
 	* @return an integer indicating the option selected by the user
 	*/
-	@:overload public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int) : Int;
+	@:overload @:public @:static public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int) : Int;
 	
 	/**
 	* Brings up an internal dialog panel where the number of choices
@@ -666,7 +666,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*          or <code>PLAIN_MESSAGE</code>
 	* @return an integer indicating the option selected by the user
 	*/
-	@:overload public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int) : Int;
+	@:overload @:public @:static public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int) : Int;
 	
 	/**
 	* Brings up an internal dialog panel with a specified icon, where
@@ -699,7 +699,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @param icon      the icon to display in the dialog
 	* @return an integer indicating the option selected by the user
 	*/
-	@:overload public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon) : Int;
+	@:overload @:public @:static public static function showInternalConfirmDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon) : Int;
 	
 	/**
 	* Brings up an internal dialog panel with a specified icon, where
@@ -748,7 +748,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return an integer indicating the option chosen by the user,
 	*          or <code>CLOSED_OPTION</code> if the user closed the Dialog
 	*/
-	@:overload public static function showInternalOptionDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>, initialValue : Dynamic) : Int;
+	@:overload @:public @:static public static function showInternalOptionDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, optionType : Int, messageType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>, initialValue : Dynamic) : Int;
 	
 	/**
 	* Shows an internal question-message dialog requesting input from
@@ -760,7 +760,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*          for the dialog
 	* @param message  the <code>Object</code> to display
 	*/
-	@:overload public static function showInternalInputDialog(parentComponent : java.awt.Component, message : Dynamic) : String;
+	@:overload @:public @:static public static function showInternalInputDialog(parentComponent : java.awt.Component, message : Dynamic) : String;
 	
 	/**
 	* Shows an internal dialog requesting input from the user parented
@@ -775,7 +775,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                    ERROR_MESSAGE, INFORMATION_MESSAGE, WARNING_MESSAGE,
 	*                    QUESTION_MESSAGE, or PLAIN_MESSAGE
 	*/
-	@:overload public static function showInternalInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : String;
+	@:overload @:public @:static public static function showInternalInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int) : String;
 	
 	/**
 	* Prompts the user for input in a blocking internal dialog where
@@ -806,7 +806,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return user's input, or <code>null</code> meaning the user
 	*          canceled the input
 	*/
-	@:overload public static function showInternalInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon, selectionValues : java.NativeArray<Dynamic>, initialSelectionValue : Dynamic) : Dynamic;
+	@:overload @:public @:static public static function showInternalInputDialog(parentComponent : java.awt.Component, message : Dynamic, title : String, messageType : Int, icon : javax.swing.Icon, selectionValues : java.NativeArray<Dynamic>, initialSelectionValue : Dynamic) : Dynamic;
 	
 	/**
 	* Creates and returns an instance of <code>JInternalFrame</code>.
@@ -828,7 +828,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @exception RuntimeException if <code>parentComponent</code> does
 	*          not have a valid parent
 	*/
-	@:overload public function createInternalFrame(parentComponent : java.awt.Component, title : String) : javax.swing.JInternalFrame;
+	@:overload @:public public function createInternalFrame(parentComponent : java.awt.Component, title : String) : javax.swing.JInternalFrame;
 	
 	/**
 	* Returns the specified component's <code>Frame</code>.
@@ -845,7 +845,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see #getRootFrame
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function getFrameForComponent(parentComponent : java.awt.Component) : java.awt.Frame;
+	@:overload @:public @:static public static function getFrameForComponent(parentComponent : java.awt.Component) : java.awt.Frame;
 	
 	/**
 	* Returns the specified component's desktop pane.
@@ -857,7 +857,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*          or does not have an ancestor that is a
 	*          <code>JInternalFrame</code>
 	*/
-	@:overload public static function getDesktopPaneForComponent(parentComponent : java.awt.Component) : javax.swing.JDesktopPane;
+	@:overload @:public @:static public static function getDesktopPaneForComponent(parentComponent : java.awt.Component) : javax.swing.JDesktopPane;
 	
 	/**
 	* Sets the frame to use for class methods in which a frame is
@@ -868,7 +868,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @param newRootFrame the default <code>Frame</code> to use
 	*/
-	@:overload public static function setRootFrame(newRootFrame : java.awt.Frame) : Void;
+	@:overload @:public @:static public static function setRootFrame(newRootFrame : java.awt.Frame) : Void;
 	
 	/**
 	* Returns the <code>Frame</code> to use for the class methods in
@@ -881,12 +881,12 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see #setRootFrame
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function getRootFrame() : java.awt.Frame;
+	@:overload @:public @:static public static function getRootFrame() : java.awt.Frame;
 	
 	/**
 	* Creates a <code>JOptionPane</code> with a test message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a instance of <code>JOptionPane</code> to display a
@@ -896,7 +896,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @param message the <code>Object</code> to display
 	*/
-	@:overload public function new(message : Dynamic) : Void;
+	@:overload @:public public function new(message : Dynamic) : Void;
 	
 	/**
 	* Creates an instance of <code>JOptionPane</code> to display a message
@@ -910,7 +910,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                  <code>QUESTION_MESSAGE</code>,
 	*                  or <code>PLAIN_MESSAGE</code>
 	*/
-	@:overload public function new(message : Dynamic, messageType : Int) : Void;
+	@:overload @:public public function new(message : Dynamic, messageType : Int) : Void;
 	
 	/**
 	* Creates an instance of <code>JOptionPane</code> to display a message
@@ -928,7 +928,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                  <code>YES_NO_CANCEL_OPTION</code>,
 	*                  <code>OK_CANCEL_OPTION</code>
 	*/
-	@:overload public function new(message : Dynamic, messageType : Int, optionType : Int) : Void;
+	@:overload @:public public function new(message : Dynamic, messageType : Int, optionType : Int) : Void;
 	
 	/**
 	* Creates an instance of <code>JOptionPane</code> to display a message
@@ -947,7 +947,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                  <code>OK_CANCEL_OPTION</code>
 	* @param icon the <code>Icon</code> image to display
 	*/
-	@:overload public function new(message : Dynamic, messageType : Int, optionType : Int, icon : javax.swing.Icon) : Void;
+	@:overload @:public public function new(message : Dynamic, messageType : Int, optionType : Int, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Creates an instance of <code>JOptionPane</code> to display a message
@@ -976,7 +976,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @param icon the <code>Icon</code> image to display
 	* @param options  the choices the user can select
 	*/
-	@:overload public function new(message : Dynamic, messageType : Int, optionType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(message : Dynamic, messageType : Int, optionType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Creates an instance of <code>JOptionPane</code> to display a message
@@ -1001,7 +1001,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*                  <code>null</code>, then nothing will be initially selected;
 	*                  only meaningful if <code>options</code> is used
 	*/
-	@:overload public function new(message : Dynamic, messageType : Int, optionType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>, initialValue : Dynamic) : Void;
+	@:overload @:public public function new(message : Dynamic, messageType : Int, optionType : Int, icon : javax.swing.Icon, options : java.NativeArray<Dynamic>, initialValue : Dynamic) : Void;
 	
 	/**
 	* Sets the UI object which implements the L&F for this component.
@@ -1013,14 +1013,14 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*      hidden: true
 	* description: The UI object that implements the optionpane's LookAndFeel
 	*/
-	@:overload public function setUI(ui : javax.swing.plaf.OptionPaneUI) : Void;
+	@:overload @:public public function setUI(ui : javax.swing.plaf.OptionPaneUI) : Void;
 	
 	/**
 	* Returns the UI object which implements the L&F for this component.
 	*
 	* @return the <code>OptionPaneUI</code> object
 	*/
-	@:overload public function getUI() : javax.swing.plaf.OptionPaneUI;
+	@:overload @:public public function getUI() : javax.swing.plaf.OptionPaneUI;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the L&F has changed.
@@ -1029,7 +1029,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the UI class that implements the
@@ -1039,7 +1039,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public override public function getUIClassID() : String;
 	
 	/**
 	* Sets the option pane's message-object.
@@ -1051,7 +1051,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*   bound: true
 	* description: The optionpane's message object.
 	*/
-	@:overload public function setMessage(newMessage : Dynamic) : Void;
+	@:overload @:public public function setMessage(newMessage : Dynamic) : Void;
 	
 	/**
 	* Returns the message-object this pane displays.
@@ -1059,7 +1059,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @return the <code>Object</code> that is displayed
 	*/
-	@:overload public function getMessage() : Dynamic;
+	@:overload @:public public function getMessage() : Dynamic;
 	
 	/**
 	* Sets the icon to display. If non-<code>null</code>, the look and feel
@@ -1072,7 +1072,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's type icon.
 	*/
-	@:overload public function setIcon(newIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setIcon(newIcon : javax.swing.Icon) : Void;
 	
 	/**
 	* Returns the icon this pane displays.
@@ -1080,7 +1080,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see #setIcon
 	*/
-	@:overload public function getIcon() : javax.swing.Icon;
+	@:overload @:public public function getIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the value the user has chosen.
@@ -1092,7 +1092,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's value object.
 	*/
-	@:overload public function setValue(newValue : Dynamic) : Void;
+	@:overload @:public public function setValue(newValue : Dynamic) : Void;
 	
 	/**
 	* Returns the value the user has selected. <code>UNINITIALIZED_VALUE</code>
@@ -1108,7 +1108,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see #setValue
 	*/
-	@:overload public function getValue() : Dynamic;
+	@:overload @:public public function getValue() : Dynamic;
 	
 	/**
 	* Sets the options this pane displays. If an element in
@@ -1125,7 +1125,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's options objects.
 	*/
-	@:overload public function setOptions(newOptions : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setOptions(newOptions : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the choices the user can make.
@@ -1133,7 +1133,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see #setOptions
 	*/
-	@:overload public function getOptions() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getOptions() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Sets the initial value that is to be enabled -- the
@@ -1149,7 +1149,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's initial value object.
 	*/
-	@:overload public function setInitialValue(newInitialValue : Dynamic) : Void;
+	@:overload @:public public function setInitialValue(newInitialValue : Dynamic) : Void;
 	
 	/**
 	* Returns the initial value.
@@ -1158,7 +1158,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see #setInitialValue
 	*/
-	@:overload public function getInitialValue() : Dynamic;
+	@:overload @:public public function getInitialValue() : Dynamic;
 	
 	/**
 	* Sets the option pane's message type.
@@ -1178,7 +1178,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's message type.
 	*/
-	@:overload public function setMessageType(newType : Int) : Void;
+	@:overload @:public public function setMessageType(newType : Int) : Void;
 	
 	/**
 	* Returns the message type.
@@ -1187,7 +1187,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see #setMessageType
 	*/
-	@:overload public function getMessageType() : Int;
+	@:overload @:public public function getMessageType() : Int;
 	
 	/**
 	* Sets the options to display.
@@ -1208,7 +1208,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's option type.
 	*/
-	@:overload public function setOptionType(newType : Int) : Void;
+	@:overload @:public public function setOptionType(newType : Int) : Void;
 	
 	/**
 	* Returns the type of options that are displayed.
@@ -1217,7 +1217,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see #setOptionType
 	*/
-	@:overload public function getOptionType() : Int;
+	@:overload @:public public function getOptionType() : Int;
 	
 	/**
 	* Sets the input selection values for a pane that provides the user
@@ -1241,7 +1241,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's selection values.
 	*/
-	@:overload public function setSelectionValues(newValues : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function setSelectionValues(newValues : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Returns the input selection values.
@@ -1249,7 +1249,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return the array of <code>Objects</code> the user can select
 	* @see #setSelectionValues
 	*/
-	@:overload public function getSelectionValues() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectionValues() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Sets the input value that is initially displayed as selected to the user.
@@ -1261,7 +1261,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's initial selection value object.
 	*/
-	@:overload public function setInitialSelectionValue(newValue : Dynamic) : Void;
+	@:overload @:public public function setInitialSelectionValue(newValue : Dynamic) : Void;
 	
 	/**
 	* Returns the input value that is displayed as initially selected to the user.
@@ -1270,7 +1270,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see #setInitialSelectionValue
 	* @see #setSelectionValues
 	*/
-	@:overload public function getInitialSelectionValue() : Dynamic;
+	@:overload @:public public function getInitialSelectionValue() : Dynamic;
 	
 	/**
 	* Sets the input value that was selected or input by the user.
@@ -1291,7 +1291,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: The option pane's input value object.
 	*/
-	@:overload public function setInputValue(newValue : Dynamic) : Void;
+	@:overload @:public public function setInputValue(newValue : Dynamic) : Void;
 	
 	/**
 	* Returns the value the user has input, if <code>wantsInput</code>
@@ -1305,7 +1305,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see #setWantsInput
 	* @see #setInputValue
 	*/
-	@:overload public function getInputValue() : Dynamic;
+	@:overload @:public public function getInputValue() : Dynamic;
 	
 	/**
 	* Returns the maximum number of characters to place on a line in a
@@ -1315,7 +1315,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @return an integer giving the maximum number of characters on a line
 	*/
-	@:overload public function getMaxCharactersPerLineCount() : Int;
+	@:overload @:public public function getMaxCharactersPerLineCount() : Int;
 	
 	/**
 	* Sets the <code>wantsInput</code> property.
@@ -1336,7 +1336,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       bound: true
 	* description: Flag which allows the user to input a value.
 	*/
-	@:overload public function setWantsInput(newValue : Bool) : Void;
+	@:overload @:public public function setWantsInput(newValue : Bool) : Void;
 	
 	/**
 	* Returns the value of the <code>wantsInput</code> property.
@@ -1344,7 +1344,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return true if an input component will be provided
 	* @see #setWantsInput
 	*/
-	@:overload public function getWantsInput() : Bool;
+	@:overload @:public public function getWantsInput() : Bool;
 	
 	/**
 	* Requests that the initial value be selected, which will set
@@ -1352,7 +1352,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* should be invoked after the window containing the option pane
 	* is made visible.
 	*/
-	@:overload public function selectInitialValue() : Void;
+	@:overload @:public public function selectInitialValue() : Void;
 	
 	/**
 	* Returns a string representation of this <code>JOptionPane</code>.
@@ -1364,7 +1364,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @return  a string representation of this <code>JOptionPane</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Returns the <code>AccessibleContext</code> associated with this JOptionPane.
@@ -1378,7 +1378,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       expert: true
 	*  description: The AccessibleContext associated with this option pane
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1387,9 +1387,9 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 */
 @:native('javax$swing$JOptionPane$ModalPrivilegedAction') @:internal extern class JOptionPane_ModalPrivilegedAction implements java.security.PrivilegedAction<java.lang.reflect.Method>
 {
-	@:overload public function new(clazz : Class<Dynamic>, methodName : String) : Void;
+	@:overload @:public public function new(clazz : Class<Dynamic>, methodName : String) : Void;
 	
-	@:overload public function run() : java.lang.reflect.Method;
+	@:overload @:public public function run() : java.lang.reflect.Method;
 	
 	
 }
@@ -1416,7 +1416,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

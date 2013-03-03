@@ -25,15 +25,15 @@ package com.sun.tools.classfile;
 */
 extern class SourceDebugExtension_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, debug_extension : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(constant_pool : com.sun.tools.classfile.ConstantPool, debug_extension : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(name_index : Int, debug_extension : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(name_index : Int, debug_extension : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var debug_extension(default, null) : java.NativeArray<java.StdTypes.Int8>;
+	@:public @:final public var debug_extension(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

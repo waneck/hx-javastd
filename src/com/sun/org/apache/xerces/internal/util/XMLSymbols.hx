@@ -25,64 +25,64 @@ package com.sun.org.apache.xerces.internal.util;
 */
 extern class XMLSymbols
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* The empty string.
 	*/
-	public static var EMPTY_STRING(default, null) : String;
+	@:public @:final @:static public static var EMPTY_STRING(default, null) : String;
 	
 	/**
 	* The internalized "xml" prefix.
 	*/
-	public static var PREFIX_XML(default, null) : String;
+	@:public @:final @:static public static var PREFIX_XML(default, null) : String;
 	
 	/**
 	* The internalized "xmlns" prefix.
 	*/
-	public static var PREFIX_XMLNS(default, null) : String;
+	@:public @:final @:static public static var PREFIX_XMLNS(default, null) : String;
 	
 	/** Symbol: "ANY". */
-	public static var fANYSymbol(default, null) : String;
+	@:public @:static @:final public static var fANYSymbol(default, null) : String;
 	
 	/** Symbol: "CDATA". */
-	public static var fCDATASymbol(default, null) : String;
+	@:public @:static @:final public static var fCDATASymbol(default, null) : String;
 	
 	/** Symbol: "ID". */
-	public static var fIDSymbol(default, null) : String;
+	@:public @:static @:final public static var fIDSymbol(default, null) : String;
 	
 	/** Symbol: "IDREF". */
-	public static var fIDREFSymbol(default, null) : String;
+	@:public @:static @:final public static var fIDREFSymbol(default, null) : String;
 	
 	/** Symbol: "IDREFS". */
-	public static var fIDREFSSymbol(default, null) : String;
+	@:public @:static @:final public static var fIDREFSSymbol(default, null) : String;
 	
 	/** Symbol: "ENTITY". */
-	public static var fENTITYSymbol(default, null) : String;
+	@:public @:static @:final public static var fENTITYSymbol(default, null) : String;
 	
 	/** Symbol: "ENTITIES". */
-	public static var fENTITIESSymbol(default, null) : String;
+	@:public @:static @:final public static var fENTITIESSymbol(default, null) : String;
 	
 	/** Symbol: "NMTOKEN". */
-	public static var fNMTOKENSymbol(default, null) : String;
+	@:public @:static @:final public static var fNMTOKENSymbol(default, null) : String;
 	
 	/** Symbol: "NMTOKENS". */
-	public static var fNMTOKENSSymbol(default, null) : String;
+	@:public @:static @:final public static var fNMTOKENSSymbol(default, null) : String;
 	
 	/** Symbol: "NOTATION". */
-	public static var fNOTATIONSymbol(default, null) : String;
+	@:public @:static @:final public static var fNOTATIONSymbol(default, null) : String;
 	
 	/** Symbol: "ENUMERATION". */
-	public static var fENUMERATIONSymbol(default, null) : String;
+	@:public @:static @:final public static var fENUMERATIONSymbol(default, null) : String;
 	
 	/** Symbol: "#IMPLIED. */
-	public static var fIMPLIEDSymbol(default, null) : String;
+	@:public @:static @:final public static var fIMPLIEDSymbol(default, null) : String;
 	
 	/** Symbol: "#REQUIRED". */
-	public static var fREQUIREDSymbol(default, null) : String;
+	@:public @:static @:final public static var fREQUIREDSymbol(default, null) : String;
 	
 	/** Symbol: "#FIXED". */
-	public static var fFIXEDSymbol(default, null) : String;
+	@:public @:static @:final public static var fFIXEDSymbol(default, null) : String;
 	
 	
 }

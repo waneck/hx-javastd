@@ -27,67 +27,67 @@ package sun.awt;
 ////its subclasses do not provide their own en/decode solution.
 extern class AWTCharset extends java.nio.charset.Charset
 {
-	private var awtCs : java.nio.charset.Charset;
+	@:protected private var awtCs : java.nio.charset.Charset;
 	
-	private var javaCs : java.nio.charset.Charset;
+	@:protected private var javaCs : java.nio.charset.Charset;
 	
-	@:overload public function new(awtCsName : String, javaCs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(awtCsName : String, javaCs : java.nio.charset.Charset) : Void;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
 	
 }
 @:native('sun$awt$AWTCharset$Encoder') extern class AWTCharset_Encoder extends java.nio.charset.CharsetEncoder
 {
-	private var enc : java.nio.charset.CharsetEncoder;
+	@:protected private var enc : java.nio.charset.CharsetEncoder;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(enc : java.nio.charset.CharsetEncoder) : Void;
+	@:overload @:protected private function new(enc : java.nio.charset.CharsetEncoder) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function canEncode(cs : java.lang.CharSequence) : Bool;
+	@:overload @:public override public function canEncode(cs : java.lang.CharSequence) : Bool;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function encodeLoop(src : java.nio.CharBuffer, dst : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:protected override private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }
 @:native('sun$awt$AWTCharset$Decoder') extern class AWTCharset_Decoder extends java.nio.charset.CharsetDecoder
 {
-	private var dec : java.nio.charset.CharsetDecoder;
+	@:protected private var dec : java.nio.charset.CharsetDecoder;
 	
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload private function new(dec : java.nio.charset.CharsetDecoder) : Void;
+	@:overload @:protected private function new(dec : java.nio.charset.CharsetDecoder) : Void;
 	
-	@:overload override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
+	@:overload @:protected override private function implFlush(out : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implReset() : Void;
+	@:overload @:protected override private function implReset() : Void;
 	
-	@:overload override private function implReplaceWith(newReplacement : String) : Void;
+	@:overload @:protected override private function implReplaceWith(newReplacement : String) : Void;
 	
-	@:overload override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload @:protected override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
 	
 }

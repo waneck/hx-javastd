@@ -37,17 +37,17 @@ package java.util.prefs;
 }
 @:native('java$util$prefs$XmlSupport$Resolver') @:internal extern class XmlSupport_Resolver implements org.xml.sax.EntityResolver
 {
-	@:overload public function resolveEntity(pid : String, sid : String) : org.xml.sax.InputSource;
+	@:overload @:public public function resolveEntity(pid : String, sid : String) : org.xml.sax.InputSource;
 	
 	
 }
 @:native('java$util$prefs$XmlSupport$EH') @:internal extern class XmlSupport_EH implements org.xml.sax.ErrorHandler
 {
-	@:overload public function error(x : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(x : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(x : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(x : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(x : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(x : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

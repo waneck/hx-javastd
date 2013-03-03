@@ -41,24 +41,24 @@ extern class DOMSignatureProperty extends org.jcp.xml.dsig.internal.dom.DOMStruc
 	* @throws NullPointerException if <code>content</code> or
 	*    <code>target</code> is <code>null</code>
 	*/
-	@:overload public function new(content : java.util.List<Dynamic>, target : String, id : String) : Void;
+	@:overload @:public public function new(content : java.util.List<Dynamic>, target : String, id : String) : Void;
 	
 	/**
 	* Creates a <code>DOMSignatureProperty</code> from an element.
 	*
 	* @param propElem a SignatureProperty element
 	*/
-	@:overload public function new(propElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(propElem : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getContent() : java.util.List<Dynamic>;
+	@:overload @:public public function getContent() : java.util.List<Dynamic>;
 	
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
-	@:overload public function getTarget() : String;
+	@:overload @:public public function getTarget() : String;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

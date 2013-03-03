@@ -29,63 +29,63 @@ extern class Fault extends com.sun.tools.internal.ws.processor.model.ModelObject
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(name : String, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload @:public public function new(name : String, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(s : String) : Void;
+	@:overload @:public public function setName(s : String) : Void;
 	
-	@:overload public function getBlock() : com.sun.tools.internal.ws.processor.model.Block;
+	@:overload @:public public function getBlock() : com.sun.tools.internal.ws.processor.model.Block;
 	
-	@:overload public function setBlock(b : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload @:public public function setBlock(b : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload public function getJavaException() : com.sun.tools.internal.ws.processor.model.java.JavaException;
+	@:overload @:public public function getJavaException() : com.sun.tools.internal.ws.processor.model.java.JavaException;
 	
-	@:overload public function setJavaException(e : com.sun.tools.internal.ws.processor.model.java.JavaException) : Void;
+	@:overload @:public public function setJavaException(e : com.sun.tools.internal.ws.processor.model.java.JavaException) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
-	@:overload public function getParentFault() : com.sun.tools.internal.ws.processor.model.Fault;
+	@:overload @:public public function getParentFault() : com.sun.tools.internal.ws.processor.model.Fault;
 	
-	@:overload public function getSubfaults() : java.util.Iterator<Dynamic>;
-	
-	/* serialization */
-	@:overload public function getSubfaultsSet() : java.util.Set<Dynamic>;
+	@:overload @:public public function getSubfaults() : java.util.Iterator<Dynamic>;
 	
 	/* serialization */
-	@:overload public function setSubfaultsSet(s : java.util.Set<Dynamic>) : Void;
+	@:overload @:public public function getSubfaultsSet() : java.util.Set<Dynamic>;
 	
-	@:overload public function getAllFaults() : java.util.Iterator<Dynamic>;
+	/* serialization */
+	@:overload @:public public function setSubfaultsSet(s : java.util.Set<Dynamic>) : Void;
 	
-	@:overload public function getAllFaultsSet() : java.util.Set<Dynamic>;
+	@:overload @:public public function getAllFaults() : java.util.Iterator<Dynamic>;
 	
-	@:overload public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getAllFaultsSet() : java.util.Set<Dynamic>;
 	
-	@:overload public function setElementName(elementName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getJavaMemberName() : String;
+	@:overload @:public public function setElementName(elementName : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function setJavaMemberName(javaMemberName : String) : Void;
+	@:overload @:public public function getJavaMemberName() : String;
+	
+	@:overload @:public public function setJavaMemberName(javaMemberName : String) : Void;
 	
 	/**
 	* @return Returns the wsdlFault.
 	*/
-	@:overload public function isWsdlException() : Bool;
+	@:overload @:public public function isWsdlException() : Bool;
 	
 	/**
 	* @param wsdlFault The wsdlFault to set.
 	*/
-	@:overload public function setWsdlException(wsdlFault : Bool) : Void;
+	@:overload @:public public function setWsdlException(wsdlFault : Bool) : Void;
 	
-	@:overload public function setExceptionClass(ex : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:public public function setExceptionClass(ex : com.sun.codemodel.internal.JClass) : Void;
 	
-	@:overload public function getExceptionClass() : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function getExceptionClass() : com.sun.codemodel.internal.JClass;
 	
-	@:overload public function getWsdlFaultName() : String;
+	@:overload @:public public function getWsdlFaultName() : String;
 	
-	@:overload public function setWsdlFaultName(wsdlFaultName : String) : Void;
+	@:overload @:public public function setWsdlFaultName(wsdlFaultName : String) : Void;
 	
 	
 }

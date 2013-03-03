@@ -23,17 +23,17 @@ extern class SecuritySupport
 	/**
 	* Return an instance of this class.
 	*/
-	@:overload public static function getInstance() : com.sun.org.apache.xerces.internal.utils.SecuritySupport;
+	@:overload @:public @:static public static function getInstance() : com.sun.org.apache.xerces.internal.utils.SecuritySupport;
 	
-	@:overload public static function getSystemProperty(propName : String) : String;
+	@:overload @:public @:static public static function getSystemProperty(propName : String) : String;
 	
 	/**
 	* Return resource using the same classloader for the ObjectFactory by default
 	* or bootclassloader when Security Manager is in place
 	*/
-	@:overload public static function getResourceAsStream(name : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getResourceAsStream(name : String) : java.io.InputStream;
 	
-	@:overload public static function getResourceAsStream(cl : java.lang.ClassLoader, name : String) : java.io.InputStream;
+	@:overload @:public @:static public static function getResourceAsStream(cl : java.lang.ClassLoader, name : String) : java.io.InputStream;
 	
 	
 }

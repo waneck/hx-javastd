@@ -44,7 +44,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function new(parent : java.lang.ClassLoader) : Void;
+	@:require(java2) @:overload @:protected private function new(parent : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Creates a new class loader using the <tt>ClassLoader</tt> returned by
@@ -61,7 +61,7 @@ extern class ClassLoader
 	*          <tt>checkCreateClassLoader</tt> method doesn't allow creation
 	*          of a new class loader.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Loads the class with the specified <a href="#name">binary name</a>.
@@ -79,7 +79,7 @@ extern class ClassLoader
 	* @throws  ClassNotFoundException
 	*          If the class was not found
 	*/
-	@:overload public function loadClass(name : String) : Class<Dynamic>;
+	@:overload @:public public function loadClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Loads the class with the specified <a href="#name">binary name</a>.  The
@@ -122,7 +122,7 @@ extern class ClassLoader
 	* @throws  ClassNotFoundException
 	*          If the class could not be found
 	*/
-	@:overload private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:protected private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	/**
 	* Returns the lock object for class loading operations.
@@ -144,7 +144,7 @@ extern class ClassLoader
 	*
 	* @since  1.7
 	*/
-	@:require(java7) @:overload private function getClassLoadingLock(className : String) : Dynamic;
+	@:require(java7) @:overload @:protected private function getClassLoadingLock(className : String) : Dynamic;
 	
 	/**
 	* Finds the class with the specified <a href="#name">binary name</a>.
@@ -164,7 +164,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function findClass(name : String) : Class<Dynamic>;
+	@:require(java2) @:overload @:protected private function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Converts an array of bytes into an instance of class <tt>Class</tt>.
@@ -207,7 +207,7 @@ extern class ClassLoader
 	* @deprecated  Replaced by {@link #defineClass(String, byte[], int, int)
 	* defineClass(String, byte[], int, int)}
 	*/
-	@:overload @:final private function defineClass(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Class<Dynamic>;
+	@:overload @:protected @:final private function defineClass(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Class<Dynamic>;
 	
 	/**
 	* Converts an array of bytes into an instance of class <tt>Class</tt>.
@@ -267,7 +267,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload @:final private function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Class<Dynamic>;
+	@:require(java1) @:overload @:protected @:final private function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Class<Dynamic>;
 	
 	/**
 	* Converts an array of bytes into an instance of class <tt>Class</tt>,
@@ -334,7 +334,7 @@ extern class ClassLoader
 	*          certificates than this class, or if <tt>name</tt> begins with
 	*          "<tt>java.</tt>".
 	*/
-	@:overload @:final private function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, protectionDomain : java.security.ProtectionDomain) : Class<Dynamic>;
+	@:overload @:protected @:final private function defineClass(name : String, b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int, protectionDomain : java.security.ProtectionDomain) : Class<Dynamic>;
 	
 	/**
 	* Converts a {@link java.nio.ByteBuffer <tt>ByteBuffer</tt>}
@@ -398,7 +398,7 @@ extern class ClassLoader
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload @:final private function defineClass(name : String, b : java.nio.ByteBuffer, protectionDomain : java.security.ProtectionDomain) : Class<Dynamic>;
+	@:require(java5) @:overload @:protected @:final private function defineClass(name : String, b : java.nio.ByteBuffer, protectionDomain : java.security.ProtectionDomain) : Class<Dynamic>;
 	
 	/**
 	* Links the specified class.  This (misleadingly named) method may be
@@ -416,7 +416,7 @@ extern class ClassLoader
 	*
 	* @see  #defineClass(String, byte[], int, int)
 	*/
-	@:overload @:final private function resolveClass(c : Class<Dynamic>) : Void;
+	@:overload @:protected @:final private function resolveClass(c : Class<Dynamic>) : Void;
 	
 	/**
 	* Finds a class with the specified <a href="#name">binary name</a>,
@@ -440,7 +440,7 @@ extern class ClassLoader
 	* @see  #ClassLoader(ClassLoader)
 	* @see  #getParent()
 	*/
-	@:overload @:final private function findSystemClass(name : String) : Class<Dynamic>;
+	@:overload @:protected @:final private function findSystemClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Returns the class with the given <a href="#name">binary name</a> if this
@@ -456,7 +456,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload @:final private function findLoadedClass(name : String) : Class<Dynamic>;
+	@:require(java1) @:overload @:protected @:final private function findLoadedClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Sets the signers of a class.  This should be invoked after defining a
@@ -470,7 +470,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload @:final private function setSigners(c : Class<Dynamic>, signers : java.NativeArray<Dynamic>) : Void;
+	@:require(java1) @:overload @:protected @:final private function setSigners(c : Class<Dynamic>, signers : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Finds the resource with the given name.  A resource is some data
@@ -494,7 +494,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload public function getResource(name : String) : java.net.URL;
+	@:require(java1) @:overload @:public public function getResource(name : String) : java.net.URL;
 	
 	/**
 	* Finds all the resources with the given name. A resource is some data
@@ -522,7 +522,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload public function getResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:require(java2) @:overload @:public public function getResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
 	/**
 	* Finds the resource with the given name. Class loader implementations
@@ -536,7 +536,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function findResource(name : String) : java.net.URL;
+	@:require(java2) @:overload @:protected private function findResource(name : String) : java.net.URL;
 	
 	/**
 	* Returns an enumeration of {@link java.net.URL <tt>URL</tt>} objects
@@ -555,7 +555,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function findResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:require(java2) @:overload @:protected private function findResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
 	/**
 	* Registers the caller as parallel capable.</p>
@@ -572,7 +572,7 @@ extern class ClassLoader
 	*
 	* @since   1.7
 	*/
-	@:require(java7) @:overload private static function registerAsParallelCapable() : Bool;
+	@:require(java7) @:overload @:protected @:static private static function registerAsParallelCapable() : Bool;
 	
 	/**
 	* Find a resource of the specified name from the search path used to load
@@ -587,7 +587,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload public static function getSystemResource(name : String) : java.net.URL;
+	@:require(java1) @:overload @:public @:static public static function getSystemResource(name : String) : java.net.URL;
 	
 	/**
 	* Finds all resources of the specified name from the search path used to
@@ -609,7 +609,7 @@ extern class ClassLoader
 
 	* @since  1.2
 	*/
-	@:require(java2) @:overload public static function getSystemResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:require(java2) @:overload @:public @:static public static function getSystemResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
 	/**
 	* Returns an input stream for reading the specified resource.
@@ -625,7 +625,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload public function getResourceAsStream(name : String) : java.io.InputStream;
+	@:require(java1) @:overload @:public public function getResourceAsStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Open for reading, a resource of the specified name from the search path
@@ -640,7 +640,7 @@ extern class ClassLoader
 	*
 	* @since  1.1
 	*/
-	@:require(java1) @:overload public static function getSystemResourceAsStream(name : String) : java.io.InputStream;
+	@:require(java1) @:overload @:public @:static public static function getSystemResourceAsStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Returns the parent class loader for delegation. Some implementations may
@@ -667,7 +667,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload @:final public function getParent() : java.lang.ClassLoader;
+	@:require(java2) @:overload @:public @:final public function getParent() : java.lang.ClassLoader;
 	
 	/**
 	* Returns the system class loader for delegation.  This is the default
@@ -724,7 +724,7 @@ extern class ClassLoader
 	*
 	* @revised  1.4
 	*/
-	@:overload public static function getSystemClassLoader() : java.lang.ClassLoader;
+	@:overload @:public @:static public static function getSystemClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Defines a package by name in this <tt>ClassLoader</tt>.  This allows
@@ -767,7 +767,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function definePackage(name : String, specTitle : String, specVersion : String, specVendor : String, implTitle : String, implVersion : String, implVendor : String, sealBase : java.net.URL) : java.lang.Package;
+	@:require(java2) @:overload @:protected private function definePackage(name : String, specTitle : String, specVersion : String, specVendor : String, implTitle : String, implVersion : String, implVendor : String, sealBase : java.net.URL) : java.lang.Package;
 	
 	/**
 	* Returns a <tt>Package</tt> that has been defined by this class loader
@@ -781,7 +781,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function getPackage(name : String) : java.lang.Package;
+	@:require(java2) @:overload @:protected private function getPackage(name : String) : java.lang.Package;
 	
 	/**
 	* Returns all of the <tt>Packages</tt> defined by this class loader and
@@ -792,7 +792,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function getPackages() : java.NativeArray<java.lang.Package>;
+	@:require(java2) @:overload @:protected private function getPackages() : java.NativeArray<java.lang.Package>;
 	
 	/**
 	* Returns the absolute path name of a native library.  The VM invokes this
@@ -811,7 +811,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function findLibrary(libname : String) : String;
+	@:require(java2) @:overload @:protected private function findLibrary(libname : String) : String;
 	
 	/**
 	* Sets the default assertion status for this class loader.  This setting
@@ -828,7 +828,7 @@ extern class ClassLoader
 	*
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function setDefaultAssertionStatus(enabled : Bool) : Void;
+	@:require(java4) @:overload @:public public function setDefaultAssertionStatus(enabled : Bool) : Void;
 	
 	/**
 	* Sets the package default assertion status for the named package.  The
@@ -867,7 +867,7 @@ extern class ClassLoader
 	*
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function setPackageAssertionStatus(packageName : String, enabled : Bool) : Void;
+	@:require(java4) @:overload @:public public function setPackageAssertionStatus(packageName : String, enabled : Bool) : Void;
 	
 	/**
 	* Sets the desired assertion status for the named top-level class in this
@@ -891,7 +891,7 @@ extern class ClassLoader
 	*
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function setClassAssertionStatus(className : String, enabled : Bool) : Void;
+	@:require(java4) @:overload @:public public function setClassAssertionStatus(className : String, enabled : Bool) : Void;
 	
 	/**
 	* Sets the default assertion status for this class loader to
@@ -903,7 +903,7 @@ extern class ClassLoader
 	*
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function clearAssertionStatus() : Void;
+	@:require(java4) @:overload @:public public function clearAssertionStatus() : Void;
 	
 	
 }
@@ -931,15 +931,15 @@ extern class ClassLoader
 */
 @:require(java2) @:native('java$lang$ClassLoader$NativeLibrary') @:internal extern class ClassLoader_NativeLibrary
 {
-	@:overload public function new(fromClass : Class<Dynamic>, name : String) : Void;
+	@:overload @:public public function new(fromClass : Class<Dynamic>, name : String) : Void;
 	
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }
 @:internal extern class SystemClassLoaderAction implements java.security.PrivilegedExceptionAction<java.lang.ClassLoader>
 {
-	@:overload public function run() : java.lang.ClassLoader;
+	@:overload @:public public function run() : java.lang.ClassLoader;
 	
 	
 }

@@ -25,11 +25,11 @@ package sun.rmi.server;
 */
 extern class WeakClassHashMap<V>
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload public function get(remoteClass : Class<Dynamic>) : V;
+	@:overload @:public public function get(remoteClass : Class<Dynamic>) : V;
 	
-	@:overload @:abstract private function computeValue(remoteClass : Class<Dynamic>) : V;
+	@:overload @:protected @:abstract private function computeValue(remoteClass : Class<Dynamic>) : V;
 	
 	
 }

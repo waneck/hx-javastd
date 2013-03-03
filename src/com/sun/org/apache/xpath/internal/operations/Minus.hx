@@ -35,7 +35,7 @@ extern class Minus extends com.sun.org.apache.xpath.internal.operations.Operatio
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Evaluate this operation directly to a double.
@@ -46,7 +46,7 @@ extern class Minus extends com.sun.org.apache.xpath.internal.operations.Operatio
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function num(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
+	@:overload @:public override public function num(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Float;
 	
 	
 }

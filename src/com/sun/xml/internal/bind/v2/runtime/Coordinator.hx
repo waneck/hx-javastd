@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.runtime;
 */
 extern class Coordinator implements org.xml.sax.ErrorHandler implements javax.xml.bind.ValidationEventHandler
 {
-	@:overload @:final public function putAdapter(c : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, a : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>;
+	@:overload @:public @:final public function putAdapter(c : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, a : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>) : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>;
 	
 	/**
 	* Gets the instance of the adapter.
@@ -33,53 +33,53 @@ extern class Coordinator implements org.xml.sax.ErrorHandler implements javax.xm
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:final public function getAdapter<T : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(key : Class<T>) : T;
+	@:overload @:public @:final public function getAdapter<T : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(key : Class<T>) : T;
 	
-	@:overload public function containsAdapter<T : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<T>) : Bool;
+	@:overload @:public public function containsAdapter<T : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<T>) : Bool;
 	
 	/**
 	* When we set {@link #table} to null, record who did it.
 	* This is for trouble-shooting a possible concurrency issue reported at:
 	* http://forums.java.net/jive/thread.jspa?threadID=15132
 	*/
-	public var guyWhoSetTheTableToNull : java.lang.Exception;
+	@:public public var guyWhoSetTheTableToNull : java.lang.Exception;
 	
 	/**
 	* Associates this {@link Coordinator} with the current thread.
 	* Should be called at the very beginning of the episode.
 	*/
-	@:overload @:final private function setThreadAffinity() : Void;
+	@:overload @:protected @:final private function setThreadAffinity() : Void;
 	
 	/**
 	* Dis-associate this {@link Coordinator} with the current thread.
 	* Sohuld be called at the end of the episode to avoid memory leak.
 	*/
-	@:overload @:final private function resetThreadAffinity() : Void;
+	@:overload @:protected @:final private function resetThreadAffinity() : Void;
 	
 	/**
 	* Called whenever an execution flow enters the realm of this {@link Coordinator}.
 	*/
-	@:overload @:final private function pushCoordinator() : Void;
+	@:overload @:protected @:final private function pushCoordinator() : Void;
 	
 	/**
 	* Called whenever an execution flow exits the realm of this {@link Coordinator}.
 	*/
-	@:overload @:final private function popCoordinator() : Void;
+	@:overload @:protected @:final private function popCoordinator() : Void;
 	
-	@:overload public static function _getInstance() : com.sun.xml.internal.bind.v2.runtime.Coordinator;
+	@:overload @:public @:static public static function _getInstance() : com.sun.xml.internal.bind.v2.runtime.Coordinator;
 	
 	/**
 	* Gets the current location. Used for reporting the error source location.
 	*/
-	@:overload @:abstract private function getLocation() : javax.xml.bind.ValidationEventLocator;
+	@:overload @:protected @:abstract private function getLocation() : javax.xml.bind.ValidationEventLocator;
 	
-	@:overload @:final public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:final public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload @:final public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:final public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload @:final public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:final public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	public static var debugTableNPE : Bool;
+	@:public @:static public static var debugTableNPE : Bool;
 	
 	/**
 	* Receive notification of a validation warning or error.
@@ -102,7 +102,7 @@ extern class Coordinator implements org.xml.sax.ErrorHandler implements javax.xm
 	*         <tt>ValidationException</tt>, or <tt>MarshalException</tt>.
 	* @throws IllegalArgumentException if the event object is null.
 	*/
-	@:overload @:public public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
+	@:overload @:public @:public public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
 	
 }

@@ -37,7 +37,7 @@ extern interface XPathFunctionResolver
 	*
 	* @throws NullPointerException If <code>functionName</code> or <code>arity</code> is <code>null</code>.
 	*/
-	@:overload public function resolveFunction(functionName : javax.xml.namespace.QName, arity : Int) : javax.xml.xpath.XPathFunction;
+	@:overload @:public public function resolveFunction(functionName : javax.xml.namespace.QName, arity : Int) : javax.xml.xpath.XPathFunction;
 	
 	
 }

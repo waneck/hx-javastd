@@ -25,47 +25,47 @@ package com.sun.corba.se.spi.ior.iiop;
 */
 extern class IIOPFactories
 {
-	@:overload public static function makeRequestPartitioningComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeRequestPartitioningComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeRequestPartitioningComponent(threadPoolToUse : Int) : com.sun.corba.se.spi.ior.iiop.RequestPartitioningComponent;
+	@:overload @:public @:static public static function makeRequestPartitioningComponent(threadPoolToUse : Int) : com.sun.corba.se.spi.ior.iiop.RequestPartitioningComponent;
 	
-	@:overload public static function makeAlternateIIOPAddressComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeAlternateIIOPAddressComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeAlternateIIOPAddressComponent(addr : com.sun.corba.se.spi.ior.iiop.IIOPAddress) : com.sun.corba.se.spi.ior.iiop.AlternateIIOPAddressComponent;
+	@:overload @:public @:static public static function makeAlternateIIOPAddressComponent(addr : com.sun.corba.se.spi.ior.iiop.IIOPAddress) : com.sun.corba.se.spi.ior.iiop.AlternateIIOPAddressComponent;
 	
-	@:overload public static function makeCodeSetsComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeCodeSetsComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeCodeSetsComponent(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.ior.iiop.CodeSetsComponent;
+	@:overload @:public @:static public static function makeCodeSetsComponent(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.spi.ior.iiop.CodeSetsComponent;
 	
-	@:overload public static function makeJavaCodebaseComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeJavaCodebaseComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeJavaCodebaseComponent(codebase : String) : com.sun.corba.se.spi.ior.iiop.JavaCodebaseComponent;
+	@:overload @:public @:static public static function makeJavaCodebaseComponent(codebase : String) : com.sun.corba.se.spi.ior.iiop.JavaCodebaseComponent;
 	
-	@:overload public static function makeORBTypeComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeORBTypeComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeORBTypeComponent(type : Int) : com.sun.corba.se.spi.ior.iiop.ORBTypeComponent;
+	@:overload @:public @:static public static function makeORBTypeComponent(type : Int) : com.sun.corba.se.spi.ior.iiop.ORBTypeComponent;
 	
-	@:overload public static function makeMaxStreamFormatVersionComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeMaxStreamFormatVersionComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeMaxStreamFormatVersionComponent() : com.sun.corba.se.spi.ior.iiop.MaxStreamFormatVersionComponent;
+	@:overload @:public @:static public static function makeMaxStreamFormatVersionComponent() : com.sun.corba.se.spi.ior.iiop.MaxStreamFormatVersionComponent;
 	
-	@:overload public static function makeJavaSerializationComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeJavaSerializationComponentFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeJavaSerializationComponent() : com.sun.corba.se.impl.ior.iiop.JavaSerializationComponent;
+	@:overload @:public @:static public static function makeJavaSerializationComponent() : com.sun.corba.se.impl.ior.iiop.JavaSerializationComponent;
 	
-	@:overload public static function makeIIOPProfileFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeIIOPProfileFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeIIOPProfile(orb : com.sun.corba.se.spi.orb.ORB, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, oid : com.sun.corba.se.spi.ior.ObjectId, ptemp : com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate) : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
+	@:overload @:public @:static public static function makeIIOPProfile(orb : com.sun.corba.se.spi.orb.ORB, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, oid : com.sun.corba.se.spi.ior.ObjectId, ptemp : com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate) : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
 	
-	@:overload public static function makeIIOPProfile(orb : com.sun.corba.se.spi.orb.ORB, profile : org.omg.IOP.TaggedProfile) : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
+	@:overload @:public @:static public static function makeIIOPProfile(orb : com.sun.corba.se.spi.orb.ORB, profile : org.omg.IOP.TaggedProfile) : com.sun.corba.se.spi.ior.iiop.IIOPProfile;
 	
-	@:overload public static function makeIIOPProfileTemplateFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
+	@:overload @:public @:static public static function makeIIOPProfileTemplateFactory() : com.sun.corba.se.spi.ior.IdentifiableFactory;
 	
-	@:overload public static function makeIIOPProfileTemplate(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, primary : com.sun.corba.se.spi.ior.iiop.IIOPAddress) : com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate;
+	@:overload @:public @:static public static function makeIIOPProfileTemplate(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, primary : com.sun.corba.se.spi.ior.iiop.IIOPAddress) : com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate;
 	
-	@:overload public static function makeIIOPAddress(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
+	@:overload @:public @:static public static function makeIIOPAddress(orb : com.sun.corba.se.spi.orb.ORB, host : String, port : Int) : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
 	
-	@:overload public static function makeIIOPAddress(is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
+	@:overload @:public @:static public static function makeIIOPAddress(is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.iiop.IIOPAddress;
 	
 	
 }

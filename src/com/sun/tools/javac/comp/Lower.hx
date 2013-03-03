@@ -33,104 +33,104 @@ package com.sun.tools.javac.comp;
 */
 extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 {
-	private static var lowerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Lower>;
+	@:protected @:static @:final private static var lowerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Lower>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Lower;
+	@:overload @:public @:static public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Lower;
 	
-	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Visitor method: Translate a single node.
 	*  Attach the source position from the old tree to its replacement tree.
 	*/
-	@:overload override public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T) : T;
+	@:overload @:public override public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T) : T;
 	
 	/** Visitor method: Translate a single node, boxing or unboxing if needed.
 	*/
-	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T, type : com.sun.tools.javac.code.Type) : T;
+	@:overload @:public public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T, type : com.sun.tools.javac.code.Type) : T;
 	
 	/** Visitor method: Translate tree.
 	*/
-	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T, enclOp : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : T;
+	@:overload @:public public function translate<T : com.sun.tools.javac.tree.JCTree>(tree : T, enclOp : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : T;
 	
 	/** Visitor method: Translate list of trees.
 	*/
-	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, enclOp : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.util.List<T>;
+	@:overload @:public public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, enclOp : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.util.List<T>;
 	
 	/** Visitor method: Translate list of trees.
 	*/
-	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.List<T>;
+	@:overload @:public public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.List<T>;
 	
-	@:overload override public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
+	@:overload @:public override public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload override public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
+	@:overload @:public override public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
-	@:overload override public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
+	@:overload @:public override public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
 	
-	@:overload override public function visitTypeCast(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeCast) : Void;
+	@:overload @:public override public function visitTypeCast(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeCast) : Void;
 	
-	@:overload override public function visitNewClass(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
+	@:overload @:public override public function visitNewClass(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
 	
 	/** Visitor method for conditional expressions.
 	*/
-	@:overload override public function visitConditional(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCConditional) : Void;
+	@:overload @:public override public function visitConditional(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCConditional) : Void;
 	
 	/** Visitor method for if statements.
 	*/
-	@:overload override public function visitIf(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIf) : Void;
+	@:overload @:public override public function visitIf(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIf) : Void;
 	
 	/** Visitor method for assert statements. Translate them away.
 	*/
-	@:overload override public function visitAssert(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAssert) : Void;
+	@:overload @:public override public function visitAssert(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAssert) : Void;
 	
-	@:overload override public function visitApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
+	@:overload @:public override public function visitApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
 	
 	/** Visitor method for parenthesized expressions.
 	*  If the subexpression has changed, omit the parens.
 	*/
-	@:overload override public function visitParens(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCParens) : Void;
+	@:overload @:public override public function visitParens(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCParens) : Void;
 	
-	@:overload override public function visitIndexed(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayAccess) : Void;
+	@:overload @:public override public function visitIndexed(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayAccess) : Void;
 	
-	@:overload override public function visitAssign(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAssign) : Void;
+	@:overload @:public override public function visitAssign(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAssign) : Void;
 	
-	@:overload override public function visitAssignop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAssignOp) : Void;
+	@:overload @:public override public function visitAssignop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAssignOp) : Void;
 	
-	@:overload override public function visitUnary(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCUnary) : Void;
+	@:overload @:public override public function visitUnary(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCUnary) : Void;
 	
-	@:overload override public function visitBinary(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCBinary) : Void;
+	@:overload @:public override public function visitBinary(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCBinary) : Void;
 	
-	@:overload override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
+	@:overload @:public override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	
 	/** Translate away the foreach loop.  */
-	@:overload override public function visitForeachLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCEnhancedForLoop) : Void;
+	@:overload @:public override public function visitForeachLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCEnhancedForLoop) : Void;
 	
-	@:overload override public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
+	@:overload @:public override public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
 	
-	@:overload override public function visitBlock(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
+	@:overload @:public override public function visitBlock(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
 	
-	@:overload override public function visitDoLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCDoWhileLoop) : Void;
+	@:overload @:public override public function visitDoLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCDoWhileLoop) : Void;
 	
-	@:overload override public function visitWhileLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWhileLoop) : Void;
+	@:overload @:public override public function visitWhileLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWhileLoop) : Void;
 	
-	@:overload override public function visitForLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCForLoop) : Void;
+	@:overload @:public override public function visitForLoop(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCForLoop) : Void;
 	
-	@:overload override public function visitReturn(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCReturn) : Void;
+	@:overload @:public override public function visitReturn(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCReturn) : Void;
 	
-	@:overload override public function visitSwitch(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : Void;
+	@:overload @:public override public function visitSwitch(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : Void;
 	
-	@:overload public function visitEnumSwitch(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public public function visitEnumSwitch(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function visitStringSwitch(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : com.sun.tools.javac.tree.JCTree;
+	@:overload @:public public function visitStringSwitch(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload override public function visitNewArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewArray) : Void;
+	@:overload @:public override public function visitNewArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewArray) : Void;
 	
-	@:overload override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload @:public override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
-	@:overload override public function visitLetExpr(tree : com.sun.tools.javac.tree.JCTree.JCTree_LetExpr) : Void;
+	@:overload @:public override public function visitLetExpr(tree : com.sun.tools.javac.tree.JCTree.JCTree_LetExpr) : Void;
 	
-	@:overload override public function visitAnnotation(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation) : Void;
+	@:overload @:public override public function visitAnnotation(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation) : Void;
 	
-	@:overload override public function visitTry(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTry) : Void;
+	@:overload @:public override public function visitTry(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTry) : Void;
 	
 	/** Translate a toplevel class and return a list consisting of
 	*  the translated class and translated versions of all inner classes.
@@ -138,7 +138,7 @@ extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 	*               We need this for resolving some additional symbols.
 	*  @param cdef  The tree representing the class definition.
 	*/
-	@:overload public function translateTopLevelClass(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, cdef : com.sun.tools.javac.tree.JCTree, make : com.sun.tools.javac.tree.TreeMaker) : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
+	@:overload @:public public function translateTopLevelClass(env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, cdef : com.sun.tools.javac.tree.JCTree, make : com.sun.tools.javac.tree.TreeMaker) : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	
 }
@@ -150,7 +150,7 @@ extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 {
 	/** All encountered class defs are entered into classdefs table.
 	*/
-	@:overload override public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
+	@:overload @:public override public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
 	
 }
@@ -163,23 +163,23 @@ extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 	/** If tree refers to a variable in owner of local class, add it to
 	*  free variables list.
 	*/
-	@:overload override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
+	@:overload @:public override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	
 	/** If tree refers to a class instance creation expression
 	*  add all free variables of the freshly created class.
 	*/
-	@:overload override public function visitNewClass(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
+	@:overload @:public override public function visitNewClass(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
 	
 	/** If tree refers to a qualified this or super expression
 	*  for anything but the current class, add the outer this
 	*  stack as a free variable.
 	*/
-	@:overload override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload @:public override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
 	/** If tree refers to a superclass constructor call,
 	*  add all free variables of the superclass.
 	*/
-	@:overload override public function visitApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
+	@:overload @:public override public function visitApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
 	
 	
 }

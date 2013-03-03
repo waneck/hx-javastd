@@ -41,7 +41,7 @@ package java.awt;
 	/**
 	* Constructs a new Canvas.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new Canvas given a GraphicsConfiguration object.
@@ -50,7 +50,7 @@ package java.awt;
 	*
 	* @see GraphicsConfiguration
 	*/
-	@:overload public function new(config : java.awt.GraphicsConfiguration) : Void;
+	@:overload @:public public function new(config : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Creates the peer of the canvas.  This peer allows you to change the
@@ -58,7 +58,7 @@ package java.awt;
 	* @see     java.awt.Toolkit#createCanvas(java.awt.Canvas)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Paints this canvas.
@@ -74,7 +74,7 @@ package java.awt;
 	* @see        #update(Graphics)
 	* @see        Component#paint(Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Updates this canvas.
@@ -91,7 +91,7 @@ package java.awt;
 	* @see   #paint(Graphics)
 	* @see   Component#update(Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Creates a new strategy for multi-buffering on this component.
@@ -112,7 +112,7 @@ package java.awt;
 	* @see #getBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createBufferStrategy(numBuffers : Int) : Void;
+	@:require(java4) @:overload @:public public function createBufferStrategy(numBuffers : Int) : Void;
 	
 	/**
 	* Creates a new strategy for multi-buffering on this component with the
@@ -134,7 +134,7 @@ package java.awt;
 	* @see #getBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function createBufferStrategy(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:require(java4) @:overload @:public public function createBufferStrategy(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* Returns the <code>BufferStrategy</code> used by this component.  This
@@ -145,7 +145,7 @@ package java.awt;
 	* @see #createBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getBufferStrategy() : java.awt.image.BufferStrategy;
+	@:require(java4) @:overload @:public public function getBufferStrategy() : java.awt.image.BufferStrategy;
 	
 	/**
 	* Gets the AccessibleContext associated with this Canvas.
@@ -157,7 +157,7 @@ package java.awt;
 	*         AccessibleContext of this Canvas
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -176,7 +176,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -38,11 +38,11 @@ package java.text;
 */
 @:internal extern class CalendarBuilder
 {
-	public static var WEEK_YEAR(default, null) : Int;
+	@:public @:static @:final public static var WEEK_YEAR(default, null) : Int;
 	
-	public static var ISO_DAY_OF_WEEK(default, null) : Int;
+	@:public @:static @:final public static var ISO_DAY_OF_WEEK(default, null) : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

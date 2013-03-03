@@ -32,7 +32,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.mlet.library.dir</B>
 	*/
-	public static var JMX_INITIAL_BUILDER(default, null) : String;
+	@:public @:static @:final public static var JMX_INITIAL_BUILDER(default, null) : String;
 	
 	/**
 	* References the property that specifies the directory where
@@ -41,7 +41,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.mlet.library.dir</B>
 	*/
-	public static var MLET_LIB_DIR(default, null) : String;
+	@:public @:static @:final public static var MLET_LIB_DIR(default, null) : String;
 	
 	/**
 	* References the property that specifies the full name of the JMX
@@ -49,7 +49,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.specification.name</B>
 	*/
-	public static var JMX_SPEC_NAME(default, null) : String;
+	@:public @:static @:final public static var JMX_SPEC_NAME(default, null) : String;
 	
 	/**
 	* References the property that specifies the version of the JMX
@@ -57,7 +57,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.specification.version</B>
 	*/
-	public static var JMX_SPEC_VERSION(default, null) : String;
+	@:public @:static @:final public static var JMX_SPEC_VERSION(default, null) : String;
 	
 	/**
 	* References the property that specifies the vendor of the JMX
@@ -65,7 +65,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.specification.vendor</B>
 	*/
-	public static var JMX_SPEC_VENDOR(default, null) : String;
+	@:public @:static @:final public static var JMX_SPEC_VENDOR(default, null) : String;
 	
 	/**
 	* References the property that specifies the full name of this product
@@ -73,7 +73,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.implementation.name</B>
 	*/
-	public static var JMX_IMPL_NAME(default, null) : String;
+	@:public @:static @:final public static var JMX_IMPL_NAME(default, null) : String;
 	
 	/**
 	* References the property that specifies the name of the vendor of this
@@ -81,7 +81,7 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.implementation.vendor</B>
 	*/
-	public static var JMX_IMPL_VENDOR(default, null) : String;
+	@:public @:static @:final public static var JMX_IMPL_VENDOR(default, null) : String;
 	
 	/**
 	* References the property that specifies the version of this product
@@ -89,107 +89,107 @@ extern class JmxProperties
 	* <p>
 	* Property Name: <B>jmx.implementation.version</B>
 	*/
-	public static var JMX_IMPL_VERSION(default, null) : String;
+	@:public @:static @:final public static var JMX_IMPL_VERSION(default, null) : String;
 	
 	/**
 	* Logger name for MBean Server information.
 	*/
-	public static var MBEANSERVER_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var MBEANSERVER_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for MBean Server information.
 	*/
-	public static var MBEANSERVER_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var MBEANSERVER_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for MLet service information.
 	*/
-	public static var MLET_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var MLET_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for MLet service information.
 	*/
-	public static var MLET_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var MLET_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for Monitor information.
 	*/
-	public static var MONITOR_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var MONITOR_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for Monitor information.
 	*/
-	public static var MONITOR_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var MONITOR_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for Timer information.
 	*/
-	public static var TIMER_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var TIMER_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for Timer information.
 	*/
-	public static var TIMER_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var TIMER_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for Event Management information.
 	*/
-	public static var NOTIFICATION_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var NOTIFICATION_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for Event Management information.
 	*/
-	public static var NOTIFICATION_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var NOTIFICATION_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for Relation Service.
 	*/
-	public static var RELATION_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var RELATION_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for Relation Service.
 	*/
-	public static var RELATION_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var RELATION_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for Model MBean.
 	*/
-	public static var MODELMBEAN_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var MODELMBEAN_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for Model MBean.
 	*/
-	public static var MODELMBEAN_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var MODELMBEAN_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for all other JMX classes.
 	*/
-	public static var MISC_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var MISC_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for all other JMX classes.
 	*/
-	public static var MISC_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var MISC_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for SNMP.
 	*/
-	public static var SNMP_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var SNMP_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for SNMP.
 	*/
-	public static var SNMP_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var SNMP_LOGGER(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Logger name for SNMP Adaptor.
 	*/
-	public static var SNMP_ADAPTOR_LOGGER_NAME(default, null) : String;
+	@:public @:static @:final public static var SNMP_ADAPTOR_LOGGER_NAME(default, null) : String;
 	
 	/**
 	* Logger for SNMP Adaptor.
 	*/
-	public static var SNMP_ADAPTOR_LOGGER(default, null) : java.util.logging.Logger;
+	@:public @:static @:final public static var SNMP_ADAPTOR_LOGGER(default, null) : java.util.logging.Logger;
 	
 	
 }

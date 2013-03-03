@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface ComplexTypeHost extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.TypeHost extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function complexType() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
+	@:overload @:public public function complexType() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexType;
 	
 	
 }

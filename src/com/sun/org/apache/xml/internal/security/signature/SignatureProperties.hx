@@ -26,7 +26,7 @@ extern class SignatureProperties extends com.sun.org.apache.xml.internal.securit
 	*
 	* @param doc
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document) : Void;
 	
 	/**
 	* Constructs {@link SignatureProperties} from {@link Element}
@@ -34,14 +34,14 @@ extern class SignatureProperties extends com.sun.org.apache.xml.internal.securit
 	* @param BaseURI the URI of the resource where the XML instance was stored
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Return the nonnegative number of added SignatureProperty elements.
 	*
 	* @return the number of SignatureProperty elements
 	*/
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Return the <it>i</it><sup>th</sup> SignatureProperty.  Valid <code>i</code>
@@ -51,31 +51,31 @@ extern class SignatureProperties extends com.sun.org.apache.xml.internal.securit
 	* @return the <it>i</it><sup>th</sup> SignatureProperty
 	* @throws XMLSignatureException
 	*/
-	@:overload public function item(i : Int) : com.sun.org.apache.xml.internal.security.signature.SignatureProperty;
+	@:overload @:public public function item(i : Int) : com.sun.org.apache.xml.internal.security.signature.SignatureProperty;
 	
 	/**
 	* Sets the <code>Id</code> attribute
 	*
 	* @param Id the <code>Id</code> attribute
 	*/
-	@:overload public function setId(Id : String) : Void;
+	@:overload @:public public function setId(Id : String) : Void;
 	
 	/**
 	* Returns the <code>Id</code> attribute
 	*
 	* @return the <code>Id</code> attribute
 	*/
-	@:overload public function getId() : String;
+	@:overload @:public public function getId() : String;
 	
 	/**
 	* Method addSignatureProperty
 	*
 	* @param sp
 	*/
-	@:overload public function addSignatureProperty(sp : com.sun.org.apache.xml.internal.security.signature.SignatureProperty) : Void;
+	@:overload @:public public function addSignatureProperty(sp : com.sun.org.apache.xml.internal.security.signature.SignatureProperty) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload @:public override public function getBaseLocalName() : String;
 	
 	
 }

@@ -29,11 +29,11 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_2;
 */
 extern class SOAPMessageFactory1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl
 {
-	@:overload override public function createMessage() : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function createMessage() : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function createMessage(isFastInfoset : Bool, acceptFastInfoset : Bool) : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function createMessage(isFastInfoset : Bool, acceptFastInfoset : Bool) : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
 	
 	
 }

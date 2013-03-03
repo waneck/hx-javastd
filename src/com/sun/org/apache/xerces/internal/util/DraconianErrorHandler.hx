@@ -64,13 +64,13 @@ extern class DraconianErrorHandler implements org.xml.sax.ErrorHandler
 	/**
 	* Use this singleton instance.
 	*/
-	public static var theInstance(default, null) : org.xml.sax.ErrorHandler;
+	@:public @:static @:final public static var theInstance(default, null) : org.xml.sax.ErrorHandler;
 	
-	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

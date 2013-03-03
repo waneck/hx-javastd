@@ -25,17 +25,17 @@ package sun.awt.dnd;
 */
 extern class SunDropTargetEvent extends java.awt.event.MouseEvent
 {
-	public static var MOUSE_DROPPED(default, null) : Int;
+	@:public @:static @:final public static var MOUSE_DROPPED(default, null) : Int;
 	
-	@:overload public function new(source : java.awt.Component, id : Int, x : Int, y : Int, d : sun.awt.dnd.SunDropTargetContextPeer.SunDropTargetContextPeer_EventDispatcher) : Void;
+	@:overload @:public public function new(source : java.awt.Component, id : Int, x : Int, y : Int, d : sun.awt.dnd.SunDropTargetContextPeer.SunDropTargetContextPeer_EventDispatcher) : Void;
 	
-	@:overload public function dispatch() : Void;
+	@:overload @:public public function dispatch() : Void;
 	
-	@:overload public function consume() : Void;
+	@:overload @:public override public function consume() : Void;
 	
-	@:overload public function getDispatcher() : sun.awt.dnd.SunDropTargetContextPeer.SunDropTargetContextPeer_EventDispatcher;
+	@:overload @:public public function getDispatcher() : sun.awt.dnd.SunDropTargetContextPeer.SunDropTargetContextPeer_EventDispatcher;
 	
-	@:overload public function paramString() : String;
+	@:overload @:public override public function paramString() : String;
 	
 	
 }

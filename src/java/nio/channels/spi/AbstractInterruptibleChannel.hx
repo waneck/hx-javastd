@@ -30,7 +30,7 @@ extern class AbstractInterruptibleChannel implements java.nio.channels.Channel i
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Closes this channel.
@@ -43,7 +43,7 @@ extern class AbstractInterruptibleChannel implements java.nio.channels.Channel i
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:final public function close() : Void;
+	@:overload @:public @:final public function close() : Void;
 	
 	/**
 	* Closes this channel.
@@ -61,9 +61,9 @@ extern class AbstractInterruptibleChannel implements java.nio.channels.Channel i
 	* @throws  IOException
 	*          If an I/O error occurs while closing the channel
 	*/
-	@:overload @:abstract private function implCloseChannel() : Void;
+	@:overload @:protected @:abstract private function implCloseChannel() : Void;
 	
-	@:overload @:final public function isOpen() : Bool;
+	@:overload @:public @:final public function isOpen() : Bool;
 	
 	/**
 	* Marks the beginning of an I/O operation that might block indefinitely.
@@ -73,7 +73,7 @@ extern class AbstractInterruptibleChannel implements java.nio.channels.Channel i
 	* shown <a href="#be">above</a>, in order to implement asynchronous
 	* closing and interruption for this channel.  </p>
 	*/
-	@:overload @:final private function begin() : Void;
+	@:overload @:protected @:final private function begin() : Void;
 	
 	/**
 	* Marks the end of an I/O operation that might block indefinitely.
@@ -94,7 +94,7 @@ extern class AbstractInterruptibleChannel implements java.nio.channels.Channel i
 	* @throws  ClosedByInterruptException
 	*          If the thread blocked in the I/O operation was interrupted
 	*/
-	@:overload @:final private function end(completed : Bool) : Void;
+	@:overload @:protected @:final private function end(completed : Bool) : Void;
 	
 	
 }

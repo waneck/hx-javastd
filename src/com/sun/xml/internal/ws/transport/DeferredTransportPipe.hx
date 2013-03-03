@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.transport;
 */
 extern class DeferredTransportPipe extends com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl
 {
-	@:overload public function new(classLoader : java.lang.ClassLoader, context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : Void;
+	@:overload @:public public function new(classLoader : java.lang.ClassLoader, context : com.sun.xml.internal.ws.api.pipe.ClientTubeAssemblerContext) : Void;
 	
-	@:overload public function new(that : com.sun.xml.internal.ws.transport.DeferredTransportPipe, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload @:public public function new(that : com.sun.xml.internal.ws.transport.DeferredTransportPipe, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload @:public override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function preDestroy() : Void;
+	@:overload @:public override public function preDestroy() : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.transport.DeferredTransportPipe;
+	@:overload @:public override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.transport.DeferredTransportPipe;
 	
 	
 }

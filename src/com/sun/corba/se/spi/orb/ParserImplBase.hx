@@ -25,19 +25,19 @@ package com.sun.corba.se.spi.orb;
 */
 extern class ParserImplBase
 {
-	@:overload @:abstract private function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
+	@:overload @:protected @:abstract private function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
 	
 	/** Override this method if there is some needed initialization
 	* that takes place after argument parsing.  It is always called
 	* at the end of setFields.
 	*/
-	@:overload private function complete() : Void;
+	@:overload @:protected private function complete() : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function init(coll : com.sun.corba.se.spi.orb.DataCollector) : Void;
+	@:overload @:public public function init(coll : com.sun.corba.se.spi.orb.DataCollector) : Void;
 	
-	@:overload private function setFields(map : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload @:protected private function setFields(map : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	
 }

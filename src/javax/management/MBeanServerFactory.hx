@@ -41,7 +41,7 @@ extern class MBeanServerFactory
 	* the caller's permissions do not include or imply <code>{@link
 	* MBeanServerPermission}("releaseMBeanServer")</code>.
 	*/
-	@:overload public static function releaseMBeanServer(mbeanServer : javax.management.MBeanServer) : Void;
+	@:overload @:public @:static public static function releaseMBeanServer(mbeanServer : javax.management.MBeanServer) : Void;
 	
 	/**
 	* <p>Return a new object implementing the MBeanServer interface
@@ -77,7 +77,7 @@ extern class MBeanServerFactory
 	* instantiated but is not assignment compatible with {@link
 	* MBeanServerBuilder}.
 	*/
-	@:overload public static function createMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public @:static public static function createMBeanServer() : javax.management.MBeanServer;
 	
 	/**
 	* <p>Return a new object implementing the {@link MBeanServer}
@@ -112,7 +112,7 @@ extern class MBeanServerFactory
 	* instantiated but is not assignment compatible with {@link
 	* MBeanServerBuilder}.
 	*/
-	@:overload public static function createMBeanServer(domain : String) : javax.management.MBeanServer;
+	@:overload @:public @:static public static function createMBeanServer(domain : String) : javax.management.MBeanServer;
 	
 	/**
 	* <p>Return a new object implementing the MBeanServer interface
@@ -150,7 +150,7 @@ extern class MBeanServerFactory
 	* instantiated but is not assignment compatible with {@link
 	* MBeanServerBuilder}.
 	*/
-	@:overload public static function newMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public @:static public static function newMBeanServer() : javax.management.MBeanServer;
 	
 	/**
 	* <p>Return a new object implementing the MBeanServer interface
@@ -187,7 +187,7 @@ extern class MBeanServerFactory
 	* instantiated but is not assignment compatible with {@link
 	* MBeanServerBuilder}.
 	*/
-	@:overload public static function newMBeanServer(domain : String) : javax.management.MBeanServer;
+	@:overload @:public @:static public static function newMBeanServer(domain : String) : javax.management.MBeanServer;
 	
 	/**
 	* <p>Return a list of registered MBeanServer objects.  A
@@ -208,7 +208,7 @@ extern class MBeanServerFactory
 	* caller's permissions do not include or imply <code>{@link
 	* MBeanServerPermission}("findMBeanServer")</code>.
 	*/
-	@:overload @:synchronized public static function findMBeanServer(agentId : String) : java.util.ArrayList<javax.management.MBeanServer>;
+	@:overload @:public @:synchronized @:static public static function findMBeanServer(agentId : String) : java.util.ArrayList<javax.management.MBeanServer>;
 	
 	/**
 	* Return the ClassLoaderRepository used by the given MBeanServer.
@@ -227,7 +227,7 @@ extern class MBeanServerFactory
 	* @exception NullPointerException if <code>server</code> is null.
 	*
 	**/
-	@:overload public static function getClassLoaderRepository(server : javax.management.MBeanServer) : javax.management.loading.ClassLoaderRepository;
+	@:overload @:public @:static public static function getClassLoaderRepository(server : javax.management.MBeanServer) : javax.management.loading.ClassLoaderRepository;
 	
 	
 }

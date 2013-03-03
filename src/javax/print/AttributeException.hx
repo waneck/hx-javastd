@@ -34,7 +34,7 @@ extern interface AttributeException
 	*
 	* @return unsupported attribute classes
 	*/
-	@:overload public function getUnsupportedAttributes() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getUnsupportedAttributes() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Returns the array of printing attributes for which the Print Service
@@ -43,7 +43,7 @@ extern interface AttributeException
 	*
 	* @return unsupported attribute values
 	*/
-	@:overload public function getUnsupportedValues() : java.NativeArray<javax.print.attribute.Attribute>;
+	@:overload @:public public function getUnsupportedValues() : java.NativeArray<javax.print.attribute.Attribute>;
 	
 	
 }

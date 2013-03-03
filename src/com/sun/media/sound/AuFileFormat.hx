@@ -25,7 +25,7 @@ package com.sun.media.sound;
 */
 @:internal extern class AuFileFormat extends javax.sound.sampled.AudioFileFormat
 {
-	@:overload public function getAuType() : Int;
+	@:overload @:public public function getAuType() : Int;
 	
 	
 }

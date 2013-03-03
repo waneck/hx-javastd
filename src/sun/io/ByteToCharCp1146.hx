@@ -30,11 +30,11 @@ package sun.io;
 */
 extern class ByteToCharCp1146 extends sun.io.ByteToCharCp285
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload @:public override public function getCharacterEncoding() : String;
 	
-	@:overload private function getUnicode(byteIndex : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function getUnicode(byteIndex : Int) : java.StdTypes.Char16;
 	
 	
 }

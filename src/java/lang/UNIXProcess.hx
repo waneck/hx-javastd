@@ -25,17 +25,17 @@ package java.lang;
 */
 @:internal extern class UNIXProcess extends java.lang.Process
 {
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public override public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload @:public override public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getErrorStream() : java.io.InputStream;
+	@:overload @:public override public function getErrorStream() : java.io.InputStream;
 	
-	@:overload @:synchronized override public function waitFor() : Int;
+	@:overload @:public @:synchronized override public function waitFor() : Int;
 	
-	@:overload @:synchronized override public function exitValue() : Int;
+	@:overload @:public @:synchronized override public function exitValue() : Int;
 	
-	@:overload override public function destroy() : Void;
+	@:overload @:public override public function destroy() : Void;
 	
 	
 }
@@ -44,7 +44,7 @@ package java.lang;
 */
 @:native('java$lang$UNIXProcess$ProcessReaperThreadFactory') @:internal extern class UNIXProcess_ProcessReaperThreadFactory implements java.util.concurrent.ThreadFactory
 {
-	@:overload public function newThread(grimReaper : java.lang.Runnable) : java.lang.Thread;
+	@:overload @:public public function newThread(grimReaper : java.lang.Runnable) : java.lang.Thread;
 	
 	
 }

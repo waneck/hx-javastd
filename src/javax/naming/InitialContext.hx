@@ -33,7 +33,7 @@ extern class InitialContext implements javax.naming.Context
 	* @see #removeFromEnvironment
 	* @see #getEnvironment
 	*/
-	private var myProps : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var myProps : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Field holding the result of calling NamingManager.getInitialContext().
@@ -42,14 +42,14 @@ extern class InitialContext implements javax.naming.Context
 	* the value of defaultInitCtx.
 	* @see #getDefaultInitCtx
 	*/
-	private var defaultInitCtx : javax.naming.Context;
+	@:protected private var defaultInitCtx : javax.naming.Context;
 	
 	/**
 	* Field indicating whether the initial context has been obtained
 	* by calling NamingManager.getInitialContext().
 	* If true, its result is in <code>defaultInitCtx</code>.
 	*/
-	private var gotDefault : Bool;
+	@:protected private var gotDefault : Bool;
 	
 	/**
 	* Constructs an initial context with the option of not
@@ -68,7 +68,7 @@ extern class InitialContext implements javax.naming.Context
 	* @see #init(Hashtable)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function new(lazy : Bool) : Void;
+	@:require(java3) @:overload @:protected private function new(lazy : Bool) : Void;
 	
 	/**
 	* Constructs an initial context.
@@ -79,7 +79,7 @@ extern class InitialContext implements javax.naming.Context
 	*
 	* @see #InitialContext(Hashtable)
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an initial context using the supplied environment.
@@ -96,7 +96,7 @@ extern class InitialContext implements javax.naming.Context
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function new(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Initializes the initial context using the supplied environment.
@@ -114,7 +114,7 @@ extern class InitialContext implements javax.naming.Context
 	* @see #InitialContext(boolean)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function init(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:require(java3) @:overload @:protected private function init(environment : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* A static method to retrieve the named object.
@@ -138,7 +138,7 @@ extern class InitialContext implements javax.naming.Context
 	* @see #lookup(Name)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function doLookup<T>(name : javax.naming.Name) : T;
+	@:require(java6) @:overload @:public @:static public static function doLookup<T>(name : javax.naming.Name) : T;
 	
 	/**
 	* A static method to retrieve the named object.
@@ -149,7 +149,7 @@ extern class InitialContext implements javax.naming.Context
 	* @throws  NamingException if a naming exception is encountered
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function doLookup<T>(name : String) : T;
+	@:require(java6) @:overload @:public @:static public static function doLookup<T>(name : String) : T;
 	
 	/**
 	* Retrieves the initial context by calling
@@ -160,7 +160,7 @@ extern class InitialContext implements javax.naming.Context
 	* @exception NoInitialContextException If cannot find an initial context.
 	* @exception NamingException If a naming exception was encountered.
 	*/
-	@:overload private function getDefaultInitCtx() : javax.naming.Context;
+	@:overload @:protected private function getDefaultInitCtx() : javax.naming.Context;
 	
 	/**
 	* Retrieves a context for resolving the string name <code>name</code>.
@@ -178,7 +178,7 @@ extern class InitialContext implements javax.naming.Context
 	* @exception NamingException In a naming exception is encountered.
 	* @see javax.naming.spi.NamingManager#getURLContext
 	*/
-	@:overload private function getURLOrDefaultInitCtx(name : String) : javax.naming.Context;
+	@:overload @:protected private function getURLOrDefaultInitCtx(name : String) : javax.naming.Context;
 	
 	/**
 	* Retrieves a context for resolving <code>name</code>.
@@ -222,51 +222,51 @@ extern class InitialContext implements javax.naming.Context
 	*
 	* @see javax.naming.spi.NamingManager#getURLContext
 	*/
-	@:overload private function getURLOrDefaultInitCtx(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:protected private function getURLOrDefaultInitCtx(name : javax.naming.Name) : javax.naming.Context;
 	
-	@:overload public function lookup(name : String) : Dynamic;
+	@:overload @:public public function lookup(name : String) : Dynamic;
 	
-	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookup(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function bind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : String, obj : Dynamic) : Void;
 	
-	@:overload public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : String, obj : Dynamic) : Void;
 	
-	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload @:public public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
-	@:overload public function unbind(name : String) : Void;
+	@:overload @:public public function unbind(name : String) : Void;
 	
-	@:overload public function unbind(name : javax.naming.Name) : Void;
+	@:overload @:public public function unbind(name : javax.naming.Name) : Void;
 	
-	@:overload public function rename(oldName : String, newName : String) : Void;
+	@:overload @:public public function rename(oldName : String, newName : String) : Void;
 	
-	@:overload public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload @:public public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
-	@:overload public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
-	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload @:public public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
-	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
-	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload @:public public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
-	@:overload public function destroySubcontext(name : String) : Void;
+	@:overload @:public public function destroySubcontext(name : String) : Void;
 	
-	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload @:public public function destroySubcontext(name : javax.naming.Name) : Void;
 	
-	@:overload public function createSubcontext(name : String) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : String) : javax.naming.Context;
 	
-	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
+	@:overload @:public public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
-	@:overload public function lookupLink(name : String) : Dynamic;
+	@:overload @:public public function lookupLink(name : String) : Dynamic;
 	
-	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload @:public public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
-	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : String) : javax.naming.NameParser;
 	
-	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload @:public public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -275,7 +275,7 @@ extern class InitialContext implements javax.naming.Context
 	* to any context other than itself, the value of the
 	* <tt>prefix</tt> parameter must be an empty name (<tt>""</tt>).
 	*/
-	@:overload public function composeName(name : String, prefix : String) : String;
+	@:overload @:public public function composeName(name : String, prefix : String) : String;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -284,17 +284,17 @@ extern class InitialContext implements javax.naming.Context
 	* to any context other than itself, the value of the
 	* <tt>prefix</tt> parameter must be an empty name.
 	*/
-	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload @:public public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
-	@:overload public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
-	@:overload public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
-	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
-	@:overload public function getNameInNamespace() : String;
+	@:overload @:public public function getNameInNamespace() : String;
 	
 	
 }

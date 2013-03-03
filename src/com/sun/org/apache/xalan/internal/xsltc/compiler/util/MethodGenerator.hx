@@ -27,9 +27,9 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* @author Jacek Ambroziak
 	* @author Santiago Pericas-Geertsen
 	*/
-	private static var INVALID_INDEX(default, null) : Int;
+	@:protected @:static @:final private static var INVALID_INDEX(default, null) : Int;
 	
-	@:overload public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/**
 	* Allocates a local variable. If the slot allocator has already been
@@ -37,69 +37,69 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* is known to the allocator. Failing to do this may cause the allocator
 	* to return a slot that is already in use.
 	*/
-	@:overload override public function addLocalVariable(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:public override public function addLocalVariable(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle, end : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
-	@:overload public function addLocalVariable2(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:public public function addLocalVariable2(name : String, type : com.sun.org.apache.bcel.internal.generic.Type, start : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
-	@:overload override public function removeLocalVariable(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
+	@:overload @:public override public function removeLocalVariable(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
 	
-	@:overload public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function loadHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function loadIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function setStartNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function setStartNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function reset() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function reset() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function nextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function nextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function startElement() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function startElement() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function endElement() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function endElement() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function startDocument() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function startDocument() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function endDocument() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function endDocument() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function attribute() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function attribute() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function uniqueAttribute() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function uniqueAttribute() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final public function namespace() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:final public function namespace() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/** by default context node is the same as current node. MK437 */
-	@:overload public function loadContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function loadContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function storeContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function storeContextNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function getLocalIndex(name : String) : Int;
+	@:overload @:public public function getLocalIndex(name : String) : Int;
 	
-	@:overload public function getLocalVariable(name : String) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:public public function getLocalVariable(name : String) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
-	@:overload override public function setMaxLocals() : Void;
+	@:overload @:public override public function setMaxLocals() : Void;
 	
 	/**
 	* Add a pre-compiled pattern to this mode.
 	*/
-	@:overload public function addInstructionList(pattern : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, ilist : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
+	@:overload @:public public function addInstructionList(pattern : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, ilist : com.sun.org.apache.bcel.internal.generic.InstructionList) : Void;
 	
 	/**
 	* Get the instruction list for a pre-compiled pattern. Used by
 	* test sequences to avoid compiling patterns more than once.
 	*/
-	@:overload public function getInstructionList(pattern : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern) : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function getInstructionList(pattern : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern) : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	/**
 	* Breaks up the IL for this {@link MethodGenerator} into separate
@@ -112,7 +112,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* @return an array of the outlined <code>Method</code>s and the original
 	*         method itself
 	*/
-	@:overload public function outlineChunks(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, originalMethodSize : Int) : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>;
+	@:overload @:public public function outlineChunks(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, originalMethodSize : Int) : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.Method>;
 	
 	/**
 	* Mark the end of the method's
@@ -122,15 +122,15 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* the method if the <code>InstructionList</code> is empty.
 	* See {@link OutlineableChunkStart} for more information.
 	*/
-	@:overload public function markChunkStart() : Void;
+	@:overload @:public public function markChunkStart() : Void;
 	
 	/**
 	* Mark the end of an outlineable chunk of code.  See
 	* {@link OutlineableChunkStart} for more information.
 	*/
-	@:overload public function markChunkEnd() : Void;
+	@:overload @:public public function markChunkEnd() : Void;
 	
-	@:overload private function getThisMethod() : com.sun.org.apache.bcel.internal.classfile.Method;
+	@:overload @:protected private function getThisMethod() : com.sun.org.apache.bcel.internal.classfile.Method;
 	
 	
 }
@@ -164,12 +164,12 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* registered for the same slot; and if none occurs, the entry will be
 	* <code>null</code>.
 	*/
-	private var _variables : java.util.ArrayList<Dynamic>;
+	@:protected private var _variables : java.util.ArrayList<Dynamic>;
 	
 	/**
 	* Maps a name to a {@link LocalVariableGen}
 	*/
-	private var _nameToLVGMap : java.util.HashMap<Dynamic, Dynamic>;
+	@:protected private var _nameToLVGMap : java.util.HashMap<Dynamic, Dynamic>;
 	
 	/**
 	* Registers a {@link org.apache.bcel.generic.LocalVariableGen}
@@ -183,7 +183,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* </ul></p>
 	* @param lvg The variable to be registered
 	*/
-	@:overload private function registerLocalVariable(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
+	@:overload @:protected private function registerLocalVariable(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
 	
 	/**
 	* <p>Find which {@link LocalVariableGen}, if any, is registered for a
@@ -201,7 +201,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* stored in the relevant slot at the relevant offset; <code>null</code>
 	* if there is none.
 	*/
-	@:overload private function lookupRegisteredLocalVariable(slot : Int, offset : Int) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:protected private function lookupRegisteredLocalVariable(slot : Int, offset : Int) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
 	/**
 	* <p>Set up a mapping of the name of the specified
@@ -220,7 +220,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* {@link #removeByNameTracking(LocalVariableGen)}</P
 	* @param lvg a <code>LocalVariableGen</code>
 	*/
-	@:overload private function registerByName(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
+	@:overload @:protected private function registerByName(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
 	
 	/**
 	* Remove the mapping from the name of the specified
@@ -229,7 +229,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* {@link #lookUpByName(String)}
 	* @param lvg a <code>LocalVariableGen</code>
 	*/
-	@:overload private function removeByNameTracking(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
+	@:overload @:protected private function removeByNameTracking(lvg : com.sun.org.apache.bcel.internal.generic.LocalVariableGen) : Void;
 	
 	/**
 	* <p>Given the name of a variable, finds a {@link LocalVariableGen}
@@ -239,7 +239,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* @param name
 	* @return
 	*/
-	@:overload private function lookUpByName(name : String) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
+	@:overload @:protected private function lookUpByName(name : String) : com.sun.org.apache.bcel.internal.generic.LocalVariableGen;
 	
 	/**
 	* <p>Gets all {@link LocalVariableGen} objects for this method.</p>
@@ -255,7 +255,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* @return an array of <code>LocalVariableGen</code> containing all the
 	* local variables
 	*/
-	@:overload private function getLocals(includeRemoved : Bool) : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>;
+	@:overload @:protected private function getLocals(includeRemoved : Bool) : java.NativeArray<com.sun.org.apache.bcel.internal.generic.LocalVariableGen>;
 	
 	
 }
@@ -278,7 +278,7 @@ extern class MethodGenerator extends com.sun.org.apache.bcel.internal.generic.Me
 	* <li>Zero, otherwise.</li>
 	* </ul>
 	*/
-	@:overload public function compareTo(comparand : Dynamic) : Int;
+	@:overload @:public public function compareTo(comparand : Dynamic) : Int;
 	
 	
 }

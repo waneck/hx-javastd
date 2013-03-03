@@ -25,12 +25,12 @@ package com.sun.codemodel.internal;
 */
 extern class JResourceFile
 {
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	/**
 	* Gets the name of this property file
 	*/
-	@:overload public function name() : String;
+	@:overload @:public public function name() : String;
 	
 	/**
 	* Returns true if this file should be generated into the directory
@@ -40,12 +40,12 @@ extern class JResourceFile
 	* Returns false if this file should be generated into the directory
 	* where other source files go.
 	*/
-	@:overload private function isResource() : Bool;
+	@:overload @:protected private function isResource() : Bool;
 	
 	/**
 	* called by JPackage to produce the file image.
 	*/
-	@:overload @:abstract private function build(os : java.io.OutputStream) : Void;
+	@:overload @:protected @:abstract private function build(os : java.io.OutputStream) : Void;
 	
 	
 }

@@ -28,17 +28,17 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	/**
 	* The printer has detected an error other than ones listed below.
 	*/
-	public static var OTHER(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var OTHER(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* A tray has run out of media.
 	*/
-	public static var MEDIA_NEEDED(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MEDIA_NEEDED(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device has a media jam.
 	*/
-	public static var MEDIA_JAM(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MEDIA_JAM(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* Someone has paused the printer, but the device(s) are taking an
@@ -50,7 +50,7 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* printer can be paused and the implementation takes significant time to
 	* pause a device in certain circumstances.
 	*/
-	public static var MOVING_TO_PAUSED(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MOVING_TO_PAUSED(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* Someone has paused the printer and the printer's {@link PrinterState
@@ -62,7 +62,7 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* paused and leave no evidence in the printed output of such a pause.
 	* This value must be supported if the printer can be paused.
 	*/
-	public static var PAUSED(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var PAUSED(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* Someone has removed a printer from service, and the device may be
@@ -78,7 +78,7 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* printed before the shutdown may be printed a second time after the
 	* shutdown.
 	*/
-	public static var SHUTDOWN(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var SHUTDOWN(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The printer has scheduled a job on the output device and is in the
@@ -87,13 +87,13 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* depending on the usage of the output device by other servers on the
 	* network).
 	*/
-	public static var CONNECTING_TO_DEVICE(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var CONNECTING_TO_DEVICE(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The server was able to connect to the output device (or is always
 	* connected), but was unable to get a response from the output device.
 	*/
-	public static var TIMED_OUT(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var TIMED_OUT(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The printer is in the process of stopping the device and will be
@@ -105,7 +105,7 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* PrinterStateReasons PrinterStateReasons} will have this reason while
 	* the output device completes printing.
 	*/
-	public static var STOPPING(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var STOPPING(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* When a printer controls more than one output device, this reason
@@ -115,17 +115,17 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* If the reason's severity is a warning, half or more but fewer than
 	* all of the output devices are stopped.
 	*/
-	public static var STOPPED_PARTLY(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var STOPPED_PARTLY(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device is low on toner.
 	*/
-	public static var TONER_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var TONER_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device is out of toner.
 	*/
-	public static var TONER_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var TONER_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The limit of persistent storage allocated for spooling has been
@@ -136,110 +136,110 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* accepts one or a small number
 	* jobs at a time or a spooling printer that has filled the spool space.
 	*/
-	public static var SPOOL_AREA_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var SPOOL_AREA_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more covers on the device are open.
 	*/
-	public static var COVER_OPEN(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var COVER_OPEN(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more interlock devices on the printer are unlocked.
 	*/
-	public static var INTERLOCK_OPEN(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var INTERLOCK_OPEN(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more doors on the device are open.
 	*/
-	public static var DOOR_OPEN(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var DOOR_OPEN(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more input trays are not in the device.
 	*/
-	public static var INPUT_TRAY_MISSING(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var INPUT_TRAY_MISSING(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* At least one input tray is low on media.
 	*/
-	public static var MEDIA_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MEDIA_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* At least one input tray is empty.
 	*/
-	public static var MEDIA_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MEDIA_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more output trays are not in the device.
 	*/
-	public static var OUTPUT_TRAY_MISSING(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var OUTPUT_TRAY_MISSING(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more output areas are almost full
 	* (e.g. tray, stacker, collator).
 	*/
-	public static var OUTPUT_AREA_ALMOST_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var OUTPUT_AREA_ALMOST_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* One or more output areas are full (e.g. tray, stacker, collator).
 	*/
-	public static var OUTPUT_AREA_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var OUTPUT_AREA_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device is low on at least one marker supply (e.g. toner, ink,
 	* ribbon).
 	*/
-	public static var MARKER_SUPPLY_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MARKER_SUPPLY_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device is out of at least one marker supply (e.g. toner, ink,
 	* ribbon).
 	*/
-	public static var MARKER_SUPPLY_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MARKER_SUPPLY_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device marker supply waste receptacle is almost full.
 	*/
-	public static var MARKER_WASTE_ALMOST_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MARKER_WASTE_ALMOST_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device marker supply waste receptacle is full.
 	*/
-	public static var MARKER_WASTE_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var MARKER_WASTE_FULL(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The fuser temperature is above normal.
 	*/
-	public static var FUSER_OVER_TEMP(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var FUSER_OVER_TEMP(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The fuser temperature is below normal.
 	*/
-	public static var FUSER_UNDER_TEMP(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var FUSER_UNDER_TEMP(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The optical photo conductor is near end of life.
 	*/
-	public static var OPC_NEAR_EOL(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var OPC_NEAR_EOL(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The optical photo conductor is no longer functioning.
 	*/
-	public static var OPC_LIFE_OVER(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var OPC_LIFE_OVER(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device is low on developer.
 	*/
-	public static var DEVELOPER_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var DEVELOPER_LOW(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* The device is out of developer.
 	*/
-	public static var DEVELOPER_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var DEVELOPER_EMPTY(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* An interpreter resource is unavailable (e.g., font, form).
 	*/
-	public static var INTERPRETER_RESOURCE_UNAVAILABLE(default, null) : javax.print.attribute.standard.PrinterStateReason;
+	@:public @:static @:final public static var INTERPRETER_RESOURCE_UNAVAILABLE(default, null) : javax.print.attribute.standard.PrinterStateReason;
 	
 	/**
 	* Construct a new printer state reason enumeration value with
@@ -247,17 +247,17 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	*
 	* @param  value  Integer value.
 	*/
-	@:overload private function new(value : Int) : Void;
+	@:overload @:protected private function new(value : Int) : Void;
 	
 	/**
 	* Returns the string table for class PrinterStateReason.
 	*/
-	@:overload private function getStringTable() : java.NativeArray<String>;
+	@:overload @:protected override private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PrinterStateReason.
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload @:protected override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"
@@ -269,7 +269,7 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
+	@:overload @:public @:final public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an
@@ -280,7 +280,7 @@ extern class PrinterStateReason extends javax.print.attribute.EnumSyntax impleme
 	*
 	* @return  Attribute category name.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	
 }

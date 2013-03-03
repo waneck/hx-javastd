@@ -25,87 +25,87 @@ package sun.tools.jconsole.inspector;
 */
 extern class XTree extends javax.swing.JTree
 {
-	@:overload public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload public function new(root : javax.swing.tree.TreeNode, mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(root : javax.swing.tree.TreeNode, mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
 	/**
 	* This method removes all the displayed nodes from the tree,
 	* but does not affect actual MBeanServer contents.
 	*/
-	@:overload @:synchronized override public function removeAll() : Void;
+	@:overload @:public @:synchronized override public function removeAll() : Void;
 	
-	@:overload @:synchronized public function removeMBeanFromView(mbean : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function removeMBeanFromView(mbean : javax.management.ObjectName) : Void;
 	
 	/**
 	* Returns true if any of the children nodes is an MBean metadata node.
 	*/
-	@:overload public function hasMetadataNodes(node : javax.swing.tree.DefaultMutableTreeNode) : Bool;
+	@:overload @:public public function hasMetadataNodes(node : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
 	/**
 	* Returns true if the given node is an MBean metadata node.
 	*/
-	@:overload public function isMetadataNode(node : javax.swing.tree.DefaultMutableTreeNode) : Bool;
+	@:overload @:public public function isMetadataNode(node : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
-	@:overload @:synchronized public function addMBeansToView(mbeans : java.util.Set<javax.management.ObjectName>) : Void;
+	@:overload @:public @:synchronized public function addMBeansToView(mbeans : java.util.Set<javax.management.ObjectName>) : Void;
 	
-	@:overload @:synchronized public function addMBeanToView(mbean : javax.management.ObjectName) : Void;
+	@:overload @:public @:synchronized public function addMBeanToView(mbean : javax.management.ObjectName) : Void;
 	
-	@:overload public function addMetadataNodes(node : javax.swing.tree.DefaultMutableTreeNode) : Void;
+	@:overload @:public public function addMetadataNodes(node : javax.swing.tree.DefaultMutableTreeNode) : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XTree$MBeanInfoNodesSwingWorker') @:internal extern class XTree_MBeanInfoNodesSwingWorker extends javax.swing.SwingWorker<java.NativeArray<Dynamic>, java.lang.Void>
 {
-	@:overload public function new(model : javax.swing.tree.DefaultTreeModel, node : javax.swing.tree.DefaultMutableTreeNode, mbean : sun.tools.jconsole.inspector.XMBean) : Void;
+	@:overload @:public public function new(model : javax.swing.tree.DefaultTreeModel, node : javax.swing.tree.DefaultMutableTreeNode, mbean : sun.tools.jconsole.inspector.XMBean) : Void;
 	
-	@:overload override public function doInBackground() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function doInBackground() : java.NativeArray<Dynamic>;
 	
-	@:overload override private function done() : Void;
+	@:overload @:protected override private function done() : Void;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XTree$ComparableDefaultMutableTreeNode') @:internal extern class XTree_ComparableDefaultMutableTreeNode extends javax.swing.tree.DefaultMutableTreeNode implements java.lang.Comparable<javax.swing.tree.DefaultMutableTreeNode>
 {
-	@:overload public function compareTo(node : javax.swing.tree.DefaultMutableTreeNode) : Int;
+	@:overload @:public public function compareTo(node : javax.swing.tree.DefaultMutableTreeNode) : Int;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XTree$Dn') @:internal extern class XTree_Dn implements java.lang.Comparable<sun.tools.jconsole.inspector.XTree.XTree_Dn>
 {
-	@:overload public function new(mbean : javax.management.ObjectName) : Void;
+	@:overload @:public public function new(mbean : javax.management.ObjectName) : Void;
 	
-	@:overload public function getObjectName() : javax.management.ObjectName;
+	@:overload @:public public function getObjectName() : javax.management.ObjectName;
 	
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
-	@:overload public function getKeyPropertyList() : String;
+	@:overload @:public public function getKeyPropertyList() : String;
 	
-	@:overload public function getToken(index : Int) : sun.tools.jconsole.inspector.XTree.XTree_Token;
+	@:overload @:public public function getToken(index : Int) : sun.tools.jconsole.inspector.XTree.XTree_Token;
 	
-	@:overload public function getTokenCount() : Int;
+	@:overload @:public public function getTokenCount() : Int;
 	
-	@:overload public function getHashDn() : String;
+	@:overload @:public public function getHashDn() : String;
 	
-	@:overload public function getHashKey(token : sun.tools.jconsole.inspector.XTree.XTree_Token) : String;
+	@:overload @:public public function getHashKey(token : sun.tools.jconsole.inspector.XTree.XTree_Token) : String;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function compareTo(dn : sun.tools.jconsole.inspector.XTree.XTree_Dn) : Int;
+	@:overload @:public public function compareTo(dn : sun.tools.jconsole.inspector.XTree.XTree_Dn) : Int;
 	
 	
 }
 @:native('sun$tools$jconsole$inspector$XTree$Token') @:internal extern class XTree_Token
 {
-	@:overload public function new(tokenType : String, tokenValue : String) : Void;
+	@:overload @:public public function new(tokenType : String, tokenValue : String) : Void;
 	
-	@:overload public function getTokenType() : String;
+	@:overload @:public public function getTokenType() : String;
 	
-	@:overload public function getTokenValue() : String;
+	@:overload @:public public function getTokenValue() : String;
 	
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
 	
 }

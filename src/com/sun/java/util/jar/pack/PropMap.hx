@@ -25,41 +25,41 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class PropMap implements java.util.SortedMap<String, String>
 {
-	@:overload public function put(key : String, value : String) : String;
+	@:overload @:public public function put(key : String, value : String) : String;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload public function get(key : Dynamic) : String;
+	@:overload @:public public function get(key : Dynamic) : String;
 	
-	@:overload public function remove(key : Dynamic) : String;
+	@:overload @:public public function remove(key : Dynamic) : String;
 	
-	@:overload public function putAll(m : java.util.Map<String, String>) : Void;
+	@:overload @:public public function putAll(m : java.util.Map<String, String>) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
-	@:overload public function values() : java.util.Collection<String>;
+	@:overload @:public public function values() : java.util.Collection<String>;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, String>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, String>>;
 	
-	@:overload public function comparator() : java.util.Comparator<String>;
+	@:overload @:public public function comparator() : java.util.Comparator<String>;
 	
-	@:overload public function subMap(fromKey : String, toKey : String) : java.util.SortedMap<String, String>;
+	@:overload @:public public function subMap(fromKey : String, toKey : String) : java.util.SortedMap<String, String>;
 	
-	@:overload public function headMap(toKey : String) : java.util.SortedMap<String, String>;
+	@:overload @:public public function headMap(toKey : String) : java.util.SortedMap<String, String>;
 	
-	@:overload public function tailMap(fromKey : String) : java.util.SortedMap<String, String>;
+	@:overload @:public public function tailMap(fromKey : String) : java.util.SortedMap<String, String>;
 	
-	@:overload public function firstKey() : String;
+	@:overload @:public public function firstKey() : String;
 	
-	@:overload public function lastKey() : String;
+	@:overload @:public public function lastKey() : String;
 	
 	
 }

@@ -34,103 +34,103 @@ package sun.tools.jstat;
 	/**
 	* Scale representing a no scaling
 	*/
-	public static var RAW(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var RAW(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a percent scaling
 	*/
-	public static var PERCENT(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var PERCENT(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a kilo scaling
 	*/
-	public static var KILO(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var KILO(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a mega scaling
 	*/
-	public static var MEGA(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var MEGA(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a giga scaling
 	*/
-	public static var GIGA(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var GIGA(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a tera scaling
 	*/
-	public static var TERA(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var TERA(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a tera scaling
 	*/
-	public static var PETA(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var PETA(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a pico scaling
 	*/
-	public static var PICO(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var PICO(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a nano scaling
 	*/
-	public static var NANO(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var NANO(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a micro scaling
 	*/
-	public static var MICRO(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var MICRO(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a milli scaling
 	*/
-	public static var MILLI(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var MILLI(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a picosecond scaling
 	*/
-	public static var PSEC(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var PSEC(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a nanosecond scaling
 	*/
-	public static var NSEC(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var NSEC(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a microsecond scaling
 	*/
-	public static var USEC(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var USEC(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a millisecond scaling
 	*/
-	public static var MSEC(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var MSEC(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a second scaling
 	*/
-	public static var SEC(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var SEC(default, null) : sun.tools.jstat.Scale;
 	
-	public static var SEC2(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var SEC2(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a minutes scaling
 	*/
-	public static var MINUTES(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var MINUTES(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Scale representing a hours scaling
 	*/
-	public static var HOUR(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var HOUR(default, null) : sun.tools.jstat.Scale;
 	
-	public static var HOUR2(default, null) : sun.tools.jstat.Scale;
+	@:public @:static @:final public static var HOUR2(default, null) : sun.tools.jstat.Scale;
 	
 	/**
 	* Returns the scaling factor of this Scale object
 	*
 	* @return  the scaling factor of this Scale object
 	*/
-	@:overload public function getFactor() : Float;
+	@:overload @:public public function getFactor() : Float;
 	
 	/**
 	* Returns the string representation of this Scale object.
@@ -138,7 +138,7 @@ package sun.tools.jstat;
 	*
 	* @return  the string representation of this Scale object
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Maps a string to its corresponding Scale object.
@@ -146,7 +146,7 @@ package sun.tools.jstat;
 	* @param   s  a string to match against Scale objects.
 	* @return     The Scale object matching the given string.
 	*/
-	@:overload public static function toScale(s : String) : sun.tools.jstat.Scale;
+	@:overload @:public @:static public static function toScale(s : String) : sun.tools.jstat.Scale;
 	
 	/**
 	* Returns an enumeration of the keys for this enumerated type
@@ -154,9 +154,9 @@ package sun.tools.jstat;
 	* @param   s  an string to match against Scale objects.
 	* @return     The Scale object matching the given string.
 	*/
-	@:overload private static function keySet() : java.util.Set<Dynamic>;
+	@:overload @:protected @:static private static function keySet() : java.util.Set<Dynamic>;
 	
-	@:overload private function scale(value : Float) : Float;
+	@:overload @:protected private function scale(value : Float) : Float;
 	
 	
 }

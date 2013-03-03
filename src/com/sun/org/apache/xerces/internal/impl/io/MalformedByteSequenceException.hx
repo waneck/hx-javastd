@@ -33,21 +33,21 @@ extern class MalformedByteSequenceException extends java.io.CharConversionExcept
 	* @param arguments The replacement arguments for the error message,
 	*                  if needed.
 	*/
-	@:overload public function new(formatter : com.sun.org.apache.xerces.internal.util.MessageFormatter, locale : java.util.Locale, domain : String, key : String, arguments : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(formatter : com.sun.org.apache.xerces.internal.util.MessageFormatter, locale : java.util.Locale, domain : String, key : String, arguments : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* <p>Returns the error domain of the error message.</p>
 	*
 	* @return the error domain
 	*/
-	@:overload public function getDomain() : String;
+	@:overload @:public public function getDomain() : String;
 	
 	/**
 	* <p>Returns the key of the error message.</p>
 	*
 	* @return the error key of the error message
 	*/
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
 	/**
 	* <p>Returns the replacement arguments for the error
@@ -56,14 +56,14 @@ extern class MalformedByteSequenceException extends java.io.CharConversionExcept
 	* @return the replacement arguments for the error message
 	* or <code>null</code> if none exist
 	*/
-	@:overload public function getArguments() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getArguments() : java.NativeArray<Dynamic>;
 	
 	/**
 	* <p>Returns the localized message for this exception.</p>
 	*
 	* @return the localized message for this exception.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	
 }

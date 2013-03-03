@@ -33,24 +33,24 @@ extern class CAdapter extends com.sun.xml.internal.bind.v2.model.core.Adapter<co
 	*      or otherwise just refer to the class specified via the
 	*      adapter parameter.
 	*/
-	@:overload public function new(adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, copy : Bool) : Void;
+	@:overload @:public public function new(adapter : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>, copy : Bool) : Void;
 	
-	@:overload public function new(adapter : com.sun.codemodel.internal.JClass) : Void;
+	@:overload @:public public function new(adapter : com.sun.codemodel.internal.JClass) : Void;
 	
-	@:overload public function getAdapterClass(o : com.sun.tools.internal.xjc.outline.Outline) : com.sun.codemodel.internal.JClass;
+	@:overload @:public public function getAdapterClass(o : com.sun.tools.internal.xjc.outline.Outline) : com.sun.codemodel.internal.JClass;
 	
 	/**
 	* Returns true if the adapter is for whitespace normalization.
 	* Such an adapter can be ignored when producing a list.
 	*/
-	@:overload public function isWhitespaceAdapter() : Bool;
+	@:overload @:public public function isWhitespaceAdapter() : Bool;
 	
 	/**
 	* Returns the adapter class if the adapter type is statically known to XJC.
 	* <p>
 	* This method is mostly for enabling certain optimized code generation.
 	*/
-	@:overload public function getAdapterIfKnown() : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>;
+	@:overload @:public public function getAdapterIfKnown() : Class<javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>;
 	
 	
 }

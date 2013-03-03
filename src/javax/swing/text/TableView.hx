@@ -30,7 +30,7 @@ extern class TableView extends javax.swing.text.BoxView
 	*
 	* @param elem the element that this view is responsible for
 	*/
-	@:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Creates a new table row.
@@ -38,7 +38,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param elem an element
 	* @return the row
 	*/
-	@:overload private function createTableRow(elem : javax.swing.text.Element) : javax.swing.text.TableView.TableView_TableRow;
+	@:overload @:protected private function createTableRow(elem : javax.swing.text.Element) : javax.swing.text.TableView.TableView_TableRow;
 	
 	/**
 	* @deprecated Table cells can now be any arbitrary
@@ -48,16 +48,16 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param elem an element
 	* @return the cell
 	*/
-	@:overload private function createTableCell(elem : javax.swing.text.Element) : javax.swing.text.TableView.TableView_TableCell;
+	@:overload @:protected private function createTableCell(elem : javax.swing.text.Element) : javax.swing.text.TableView.TableView_TableCell;
 	
-	@:overload private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload @:protected override private function forwardUpdate(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Change the child views.  This is implemented to
 	* provide the superclass behavior and invalidate the
 	* grid so that rows and columns will be recalculated.
 	*/
-	@:overload public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload @:public override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Lays out the columns to fit within the given target span.
@@ -73,7 +73,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param offsets the return value of the offset from the
 	*  origin for each column
 	*/
-	@:overload private function layoutColumns(targetSpan : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, reqs : java.NativeArray<javax.swing.SizeRequirements>) : Void;
+	@:overload @:protected private function layoutColumns(targetSpan : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>, reqs : java.NativeArray<javax.swing.SizeRequirements>) : Void;
 	
 	/**
 	* Perform layout for the minor axis of the box (i.e. the
@@ -97,7 +97,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param spans the span of each child view.  This is a return
 	*  value and is filled in by the implementation of this method.
 	*/
-	@:overload private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Calculate the requirements for the minor axis.  This is called by
@@ -107,7 +107,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* This is implemented to calculate the requirements as the sum of the
 	* requirements of the columns.
 	*/
-	@:overload private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
+	@:overload @:protected override private function calculateMinorAxisRequirements(axis : Int, r : javax.swing.SizeRequirements) : javax.swing.SizeRequirements;
 	
 	/**
 	* Fetches the child view that represents the given position in
@@ -122,7 +122,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @return  the view representing the given position, or
 	*   <code>null</code> if there isn't one
 	*/
-	@:overload private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
 	
 	
 }
@@ -137,14 +137,14 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param elem the element that this view is responsible for
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:require(java4) @:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Change the child views.  This is implemented to
 	* provide the superclass behavior and invalidate the
 	* grid so that rows and columns will be recalculated.
 	*/
-	@:overload public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload @:public override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Perform layout for the major axis of the box (i.e. the
@@ -165,7 +165,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param spans the span of each child view.  This is a return
 	*  value and is filled in by the implementation of this method.
 	*/
-	@:overload private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Perform layout for the minor axis of the box (i.e. the
@@ -187,7 +187,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param spans the span of each child view.  This is a return
 	*  value and is filled in by the implementation of this method.
 	*/
-	@:overload private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload @:protected override private function layoutMinorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Determines the resizability of the view along the
@@ -197,7 +197,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @return the resize weight
 	* @exception IllegalArgumentException for an invalid axis
 	*/
-	@:overload public function getResizeWeight(axis : Int) : Int;
+	@:overload @:public override public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Fetches the child view that represents the given position in
@@ -212,7 +212,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @return  the view representing the given position, or
 	*   <code>null</code> if there isn't one
 	*/
-	@:overload private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
+	@:overload @:protected override private function getViewAtPosition(pos : Int, a : java.awt.Rectangle) : javax.swing.text.View;
 	
 	
 }
@@ -227,7 +227,7 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param elem the element that this view is responsible for
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(elem : javax.swing.text.Element) : Void;
+	@:require(java4) @:overload @:public public function new(elem : javax.swing.text.Element) : Void;
 	
 	/**
 	* Gets the number of columns this cell spans (e.g. the
@@ -235,7 +235,7 @@ extern class TableView extends javax.swing.text.BoxView
 	*
 	* @return the number of columns
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Gets the number of rows this cell spans (that is, the
@@ -243,7 +243,7 @@ extern class TableView extends javax.swing.text.BoxView
 	*
 	* @return the number of rows
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Sets the grid location.
@@ -251,17 +251,17 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param row the row >= 0
 	* @param col the column >= 0
 	*/
-	@:overload public function setGridLocation(row : Int, col : Int) : Void;
+	@:overload @:public public function setGridLocation(row : Int, col : Int) : Void;
 	
 	/**
 	* Gets the row of the grid location
 	*/
-	@:overload public function getGridRow() : Int;
+	@:overload @:public public function getGridRow() : Int;
 	
 	/**
 	* Gets the column of the grid location
 	*/
-	@:overload public function getGridColumn() : Int;
+	@:overload @:public public function getGridColumn() : Int;
 	
 	
 }
@@ -280,17 +280,17 @@ extern class TableView extends javax.swing.text.BoxView
 	* @param row the row >= 0
 	* @param col the column >= 0
 	*/
-	@:overload public function setGridLocation(row : Int, col : Int) : Void;
+	@:overload @:public public function setGridLocation(row : Int, col : Int) : Void;
 	
 	/**
 	* Gets the row of the grid location
 	*/
-	@:overload public function getGridRow() : Int;
+	@:overload @:public public function getGridRow() : Int;
 	
 	/**
 	* Gets the column of the grid location
 	*/
-	@:overload public function getGridColumn() : Int;
+	@:overload @:public public function getGridColumn() : Int;
 	
 	/**
 	* Gets the number of columns this cell spans (e.g. the
@@ -298,7 +298,7 @@ extern class TableView extends javax.swing.text.BoxView
 	*
 	* @return the number of columns
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Gets the number of rows this cell spans (that is, the
@@ -306,7 +306,7 @@ extern class TableView extends javax.swing.text.BoxView
 	*
 	* @return the number of rows
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	
 }

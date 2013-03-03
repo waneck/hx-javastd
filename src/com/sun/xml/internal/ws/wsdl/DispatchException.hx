@@ -33,9 +33,9 @@ extern class DispatchException extends java.lang.Exception
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var fault(default, null) : com.sun.xml.internal.ws.api.message.Message;
+	@:public @:final public var fault(default, null) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload public function new(fault : com.sun.xml.internal.ws.api.message.Message) : Void;
+	@:overload @:public public function new(fault : com.sun.xml.internal.ws.api.message.Message) : Void;
 	
 	
 }

@@ -29,49 +29,49 @@ extern class NamingUtils
 	* Debug flag which must be true for debug streams to be created and
 	* dprint output to be generated.
 	*/
-	public static var debug : Bool;
+	@:public @:static public static var debug : Bool;
 	
 	/**
 	* Prints the message to the debug stream if debugging is enabled.
 	* @param msg the debug message to print.
 	*/
-	@:overload public static function dprint(msg : String) : Void;
+	@:overload @:public @:static public static function dprint(msg : String) : Void;
 	
 	/**
 	* Prints the message to the error stream (System.err is default).
 	* @param msg the error message to print.
 	*/
-	@:overload public static function errprint(msg : String) : Void;
+	@:overload @:public @:static public static function errprint(msg : String) : Void;
 	
 	/**
 	* Prints the stacktrace of the supplied exception to the error stream.
 	* @param e any Java exception.
 	*/
-	@:overload public static function printException(e : java.lang.Exception) : Void;
+	@:overload @:public @:static public static function printException(e : java.lang.Exception) : Void;
 	
 	/**
 	* Create a debug print stream to the supplied log file.
 	* @param logFile the file to which debug output will go.
 	* @exception IOException thrown if the file cannot be opened for output.
 	*/
-	@:overload public static function makeDebugStream(logFile : java.io.File) : Void;
+	@:overload @:public @:static public static function makeDebugStream(logFile : java.io.File) : Void;
 	
 	/**
 	* Create a error print stream to the supplied file.
 	* @param logFile the file to which error messages will go.
 	* @exception IOException thrown if the file cannot be opened for output.
 	*/
-	@:overload public static function makeErrStream(errFile : java.io.File) : Void;
+	@:overload @:public @:static public static function makeErrStream(errFile : java.io.File) : Void;
 	
 	/**
 	* The debug printstream.
 	*/
-	public static var debugStream : java.io.PrintStream;
+	@:public @:static public static var debugStream : java.io.PrintStream;
 	
 	/**
 	* The error printstream.
 	*/
-	public static var errStream : java.io.PrintStream;
+	@:public @:static public static var errStream : java.io.PrintStream;
 	
 	
 }

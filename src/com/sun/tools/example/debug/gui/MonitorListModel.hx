@@ -32,25 +32,25 @@ package com.sun.tools.example.debug.gui;
 */
 extern class MonitorListModel extends javax.swing.AbstractListModel<Dynamic>
 {
-	@:overload public function getElementAt(index : Int) : Dynamic;
+	@:overload @:public override public function getElementAt(index : Int) : Dynamic;
 	
-	@:overload public function getSize() : Int;
+	@:overload @:public override public function getSize() : Int;
 	
-	@:overload public function add(expr : String) : Void;
+	@:overload @:public public function add(expr : String) : Void;
 	
-	@:overload public function remove(expr : String) : Void;
+	@:overload @:public public function remove(expr : String) : Void;
 	
-	@:overload public function remove(index : Int) : Void;
+	@:overload @:public public function remove(index : Int) : Void;
 	
-	@:overload public function monitors() : java.util.List<String>;
+	@:overload @:public public function monitors() : java.util.List<String>;
 	
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$MonitorListModel$MonitorListListener') @:internal extern class MonitorListModel_MonitorListListener implements com.sun.tools.example.debug.gui.ContextListener
 {
-	@:overload public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
+	@:overload @:public public function currentFrameChanged(e : com.sun.tools.example.debug.gui.CurrentFrameChangedEvent) : Void;
 	
 	
 }

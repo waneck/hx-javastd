@@ -52,22 +52,22 @@ package java.awt.event;
 	/**
 	* Invoked when the component's size changes.
 	*/
-	@:overload public function componentResized(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentResized(e : java.awt.event.ComponentEvent) : Void;
 	
 	/**
 	* Invoked when the component's position changes.
 	*/
-	@:overload public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentMoved(e : java.awt.event.ComponentEvent) : Void;
 	
 	/**
 	* Invoked when the component has been made visible.
 	*/
-	@:overload public function componentShown(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentShown(e : java.awt.event.ComponentEvent) : Void;
 	
 	/**
 	* Invoked when the component has been made invisible.
 	*/
-	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload @:public public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
 	
 }

@@ -29,13 +29,13 @@ extern class OptionPaneUI extends javax.swing.plaf.ComponentUI
 	* Requests the component representing the default value to have
 	* focus.
 	*/
-	@:overload @:abstract public function selectInitialValue(op : javax.swing.JOptionPane) : Void;
+	@:overload @:public @:abstract public function selectInitialValue(op : javax.swing.JOptionPane) : Void;
 	
 	/**
 	* Returns true if the user has supplied instances of Component for
 	* either the options or message.
 	*/
-	@:overload @:abstract public function containsCustomComponents(op : javax.swing.JOptionPane) : Bool;
+	@:overload @:public @:abstract public function containsCustomComponents(op : javax.swing.JOptionPane) : Bool;
 	
 	
 }

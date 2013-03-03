@@ -35,17 +35,17 @@ extern class DelegateHttpsURLConnection extends sun.net.www.protocol.https.Abstr
 	* com.sun.net.ssl.HttpURLConnection is used in the com.sun version.
 	*
 	*/
-	public var httpsURLConnection : com.sun.net.ssl.HttpsURLConnection;
+	@:public public var httpsURLConnection : com.sun.net.ssl.HttpsURLConnection;
 	
-	@:overload override private function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:protected override private function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
-	@:overload override private function getHostnameVerifier() : javax.net.ssl.HostnameVerifier;
+	@:overload @:protected override private function getHostnameVerifier() : javax.net.ssl.HostnameVerifier;
 	
 	/*
 	* Called by layered delegator's finalize() method to handle closing
 	* the underlying object.
 	*/
-	@:overload private function dispose() : Void;
+	@:overload @:protected private function dispose() : Void;
 	
 	
 }
@@ -57,7 +57,7 @@ extern class DelegateHttpsURLConnection extends sun.net.www.protocol.https.Abstr
 	* This means we need to extract the hostname from the X.509 certificate
 	* or from the Kerberos principal name, in this wrapper.
 	*/
-	@:overload public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
+	@:overload @:public public function verify(hostname : String, session : javax.net.ssl.SSLSession) : Bool;
 	
 	
 }

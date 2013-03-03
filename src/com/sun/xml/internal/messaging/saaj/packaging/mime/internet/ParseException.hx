@@ -31,13 +31,13 @@ extern class ParseException extends com.sun.xml.internal.messaging.saaj.packagin
 	/**
 	* Constructs a ParseException with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a ParseException with the specified detail message.
 	* @param s         the detail message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

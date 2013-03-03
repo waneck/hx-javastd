@@ -92,7 +92,7 @@ package org.xml.sax;
 	*                any SAX document event.
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:abstract public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public @:abstract public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -104,7 +104,7 @@ package org.xml.sax;
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:abstract public function startDocument() : Void;
+	@:overload @:public @:abstract public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -118,7 +118,7 @@ package org.xml.sax;
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:abstract public function endDocument() : Void;
+	@:overload @:public @:abstract public function endDocument() : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -142,7 +142,7 @@ package org.xml.sax;
 	* @see #endElement
 	* @see org.xml.sax.AttributeList
 	*/
-	@:overload @:abstract public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public @:abstract @:public public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -159,7 +159,7 @@ package org.xml.sax;
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:abstract public function endElement(name : String) : Void;
+	@:overload @:public @:abstract @:public public function endElement(name : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -186,7 +186,7 @@ package org.xml.sax;
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:abstract public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -212,7 +212,7 @@ package org.xml.sax;
 	*            wrapping another exception.
 	* @see #characters
 	*/
-	@:overload @:abstract public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -231,7 +231,7 @@ package org.xml.sax;
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:abstract public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public @:abstract public function processingInstruction(target : String, data : String) : Void;
 	
 	
 }

@@ -28,33 +28,33 @@ extern class ConstructorDocImpl extends com.sun.tools.javadoc.ExecutableMemberDo
 	/**
 	* constructor.
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol) : Void;
 	
 	/**
 	* constructor.
 	*/
-	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, docComment : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
+	@:overload @:public public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, docComment : String, tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, lineMap : com.sun.tools.javac.util.Position.Position_LineMap) : Void;
 	
 	/**
 	* Return true if it is a constructor, which it is.
 	*
 	* @return true
 	*/
-	@:overload override public function isConstructor() : Bool;
+	@:overload @:public override public function isConstructor() : Bool;
 	
 	/**
 	* Get the name.
 	*
 	* @return the name of the member qualified by class (but not package)
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	/**
 	* Get the name.
 	*
 	* @return the qualified name of the member.
 	*/
-	@:overload override public function qualifiedName() : String;
+	@:overload @:public override public function qualifiedName() : String;
 	
 	/**
 	* Returns a string representation of this constructor.  Includes the
@@ -64,7 +64,7 @@ extern class ConstructorDocImpl extends com.sun.tools.javadoc.ExecutableMemberDo
 	* (This is unlike the syntax for invoking methods with explicit type
 	* parameters.)
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

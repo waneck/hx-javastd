@@ -53,7 +53,7 @@ package javax.management.relation;
 	* is still handled by the Relation Service and {@link
 	* Boolean#FALSE} otherwise.
 	*/
-	@:overload public function isInRelationService() : Null<Bool>;
+	@:overload @:public public function isInRelationService() : Null<Bool>;
 	
 	/**
 	* <p>Specifies whether this relation is handled by the Relation
@@ -68,7 +68,7 @@ package javax.management.relation;
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function setRelationServiceManagementFlag(flag : Null<Bool>) : Void;
+	@:overload @:public public function setRelationServiceManagementFlag(flag : Null<Bool>) : Void;
 	
 	
 }

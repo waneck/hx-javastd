@@ -25,27 +25,27 @@ package sun.tools.jar;
 */
 extern class Main
 {
-	@:overload public function new(out : java.io.PrintStream, err : java.io.PrintStream, program : String) : Void;
+	@:overload @:public public function new(out : java.io.PrintStream, err : java.io.PrintStream, program : String) : Void;
 	
 	/**
 	* Starts main program with the specified arguments.
 	*/
-	@:overload @:synchronized public function run(args : java.NativeArray<String>) : Bool;
+	@:overload @:public @:synchronized public function run(args : java.NativeArray<String>) : Bool;
 	
 	/**
 	* Print an output message; like verbose output and the like
 	*/
-	@:overload private function output(s : String) : Void;
+	@:overload @:protected private function output(s : String) : Void;
 	
 	/**
 	* Print an error mesage; like something is broken
 	*/
-	@:overload private function error(s : String) : Void;
+	@:overload @:protected private function error(s : String) : Void;
 	
 	/**
 	* Main routine to start program.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
@@ -56,15 +56,15 @@ extern class Main
 */
 @:native('sun$tools$jar$Main$CRC32OutputStream') @:internal extern class Main_CRC32OutputStream extends java.io.OutputStream
 {
-	@:overload override public function write(r : Int) : Void;
+	@:overload @:public override public function write(r : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Updates a ZipEntry which describes the data read by this
 	* output stream, in STORED mode.
 	*/
-	@:overload public function updateEntry(e : java.util.zip.ZipEntry) : Void;
+	@:overload @:public public function updateEntry(e : java.util.zip.ZipEntry) : Void;
 	
 	
 }

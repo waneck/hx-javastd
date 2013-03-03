@@ -36,28 +36,28 @@ extern class CertificateSerialNumber implements sun.security.x509.CertAttrSet<St
 	* Identifier for this attribute, to be used with the
 	* get, set, delete methods of Certificate, x509 type.
 	*/
-	public static var IDENT(default, null) : String;
+	@:public @:static @:final public static var IDENT(default, null) : String;
 	
 	/**
 	* Sub attributes name for this CertAttrSet.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var NUMBER(default, null) : String;
-	
-	/**
-	* Default constructor for the certificate attribute.
-	*
-	* @param serial the serial number for the certificate.
-	*/
-	@:overload public function new(num : java.math.BigInteger) : Void;
+	@:public @:static @:final public static var NUMBER(default, null) : String;
 	
 	/**
 	* Default constructor for the certificate attribute.
 	*
 	* @param serial the serial number for the certificate.
 	*/
-	@:overload public function new(num : Int) : Void;
+	@:overload @:public public function new(num : java.math.BigInteger) : Void;
+	
+	/**
+	* Default constructor for the certificate attribute.
+	*
+	* @param serial the serial number for the certificate.
+	*/
+	@:overload @:public public function new(num : Int) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DER stream.
@@ -65,7 +65,7 @@ extern class CertificateSerialNumber implements sun.security.x509.CertAttrSet<St
 	* @param in the DerInputStream to read the serial number from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : sun.security.util.DerInputStream) : Void;
+	@:overload @:public public function new(_in : sun.security.util.DerInputStream) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed stream.
@@ -73,7 +73,7 @@ extern class CertificateSerialNumber implements sun.security.x509.CertAttrSet<St
 	* @param in the InputStream to read the serial number from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
 	/**
 	* Create the object, decoding the values from the passed DerValue.
@@ -81,12 +81,12 @@ extern class CertificateSerialNumber implements sun.security.x509.CertAttrSet<St
 	* @param val the DER encoded value.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Return the serial number as user readable string.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Encode the serial number in DER form to the stream.
@@ -94,33 +94,33 @@ extern class CertificateSerialNumber implements sun.security.x509.CertAttrSet<St
 	* @param out the DerOutputStream to marshal the contents to.
 	* @exception IOException on errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload @:public public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	
 }

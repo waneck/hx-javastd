@@ -35,7 +35,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	* Create a new <code>TransformerFactoryConfigurationError</code> with no
 	* detail mesage.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new <code>TransformerFactoryConfigurationError</code> with
@@ -43,7 +43,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	*
 	* @param msg The error message for the exception.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Create a new <code>TransformerFactoryConfigurationError</code> with a
@@ -52,7 +52,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	* @param e The exception to be encapsulated in a
 	* TransformerFactoryConfigurationError.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Create a new <code>TransformerFactoryConfigurationError</code> with the
@@ -62,7 +62,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	* TransformerFactoryConfigurationError
 	* @param msg The detail message.
 	*/
-	@:overload public function new(e : java.lang.Exception, msg : String) : Void;
+	@:overload @:public public function new(e : java.lang.Exception, msg : String) : Void;
 	
 	/**
 	* Return the message (if any) for this error . If there is no
@@ -71,7 +71,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	*
 	* @return The error message.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Return the actual exception (if any) that caused this exception to
@@ -79,12 +79,12 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	*
 	* @return The encapsulated exception, or null if there is none.
 	*/
-	@:overload public function getException() : java.lang.Exception;
+	@:overload @:public public function getException() : java.lang.Exception;
 	
 	/**
 	* use the exception chaining mechanism of JDK1.4
 	*/
-	@:overload public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

@@ -25,13 +25,13 @@ package com.sun.xml.internal.messaging.saaj.util;
 */
 extern class CharWriter extends java.io.CharArrayWriter
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
-	@:overload public function getChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getChars() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function getCount() : Int;
+	@:overload @:public public function getCount() : Int;
 	
 	
 }

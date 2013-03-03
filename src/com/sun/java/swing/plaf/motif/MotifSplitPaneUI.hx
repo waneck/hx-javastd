@@ -37,17 +37,17 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifSplitPaneUI extends javax.swing.plaf.basic.BasicSplitPaneUI
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new MotifSplitPaneUI instance
 	*/
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the default divider.
 	*/
-	@:overload public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
+	@:overload @:public override public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
 	
 	
 }

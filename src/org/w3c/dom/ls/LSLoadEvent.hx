@@ -43,12 +43,12 @@ extern interface LSLoadEvent extends org.w3c.dom.events.Event
 	/**
 	* The document that finished loading.
 	*/
-	@:overload public function getNewDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getNewDocument() : org.w3c.dom.Document;
 	
 	/**
 	* The input source that was parsed.
 	*/
-	@:overload public function getInput() : org.w3c.dom.ls.LSInput;
+	@:overload @:public public function getInput() : org.w3c.dom.ls.LSInput;
 	
 	
 }

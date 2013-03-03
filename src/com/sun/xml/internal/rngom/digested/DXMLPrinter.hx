@@ -51,26 +51,26 @@ extern class DXMLPrinter
 	*
 	* @author <A href="mailto:demakov@ispras.ru">Alexey Demakov</A>
 	*/
-	private var out : javax.xml.stream.XMLStreamWriter;
+	@:protected private var out : javax.xml.stream.XMLStreamWriter;
 	
-	private var indentStep : String;
+	@:protected private var indentStep : String;
 	
-	private var newLine : String;
+	@:protected private var newLine : String;
 	
-	private var indent : Int;
+	@:protected private var indent : Int;
 	
-	private var afterEnd : Bool;
+	@:protected private var afterEnd : Bool;
 	
-	private var visitor : com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_DXMLPrinterVisitor;
+	@:protected private var visitor : com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_DXMLPrinterVisitor;
 	
-	private var ncVisitor : com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_NameClassXMLPrinterVisitor;
+	@:protected private var ncVisitor : com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_NameClassXMLPrinterVisitor;
 	
-	private var domPrinter : com.sun.xml.internal.rngom.digested.DOMPrinter;
+	@:protected private var domPrinter : com.sun.xml.internal.rngom.digested.DOMPrinter;
 	
 	/**
 	* @param out Output stream.
 	*/
-	@:overload public function new(out : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function new(out : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Prints grammar enclosed by start/end document.
@@ -78,121 +78,121 @@ extern class DXMLPrinter
 	* @param grammar
 	* @throws XMLStreamException
 	*/
-	@:overload public function printDocument(grammar : com.sun.xml.internal.rngom.digested.DGrammarPattern) : Void;
+	@:overload @:public public function printDocument(grammar : com.sun.xml.internal.rngom.digested.DGrammarPattern) : Void;
 	
 	/**
 	* Prints XML fragment for the given pattern.
 	*
 	* @throws XMLStreamException
 	*/
-	@:overload public function print(pattern : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:public public function print(pattern : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
 	/**
 	* Prints XML fragment for the given name class.
 	*
 	* @throws XMLStreamException
 	*/
-	@:overload public function print(nc : com.sun.xml.internal.rngom.nc.NameClass) : Void;
+	@:overload @:public public function print(nc : com.sun.xml.internal.rngom.nc.NameClass) : Void;
 	
-	@:overload public function print(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function print(node : org.w3c.dom.Node) : Void;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$XMLWriterException') extern class DXMLPrinter_XMLWriterException extends java.lang.RuntimeException
 {
-	@:overload private function new(cause : java.lang.Throwable) : Void;
+	@:overload @:protected private function new(cause : java.lang.Throwable) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$XMLWriter') extern class DXMLPrinter_XMLWriter
 {
-	@:overload private function newLine() : Void;
+	@:overload @:protected private function newLine() : Void;
 	
-	@:overload private function indent() : Void;
+	@:overload @:protected private function indent() : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload @:final public function start(element : String) : Void;
+	@:overload @:public @:final public function start(element : String) : Void;
 	
-	@:overload public function end() : Void;
+	@:overload @:public public function end() : Void;
 	
-	@:overload public function attr(prefix : String, ns : String, name : String, value : String) : Void;
+	@:overload @:public public function attr(prefix : String, ns : String, name : String, value : String) : Void;
 	
-	@:overload public function attr(name : String, value : String) : Void;
+	@:overload @:public public function attr(name : String, value : String) : Void;
 	
-	@:overload public function ns(prefix : String, uri : String) : Void;
+	@:overload @:public public function ns(prefix : String, uri : String) : Void;
 	
-	@:overload public function body(text : String) : Void;
+	@:overload @:public public function body(text : String) : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$DXMLPrinterVisitor') extern class DXMLPrinter_DXMLPrinterVisitor extends com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_XMLWriter implements com.sun.xml.internal.rngom.digested.DPatternVisitor<java.lang.Void>
 {
-	@:overload private function on(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:protected private function on(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
-	@:overload private function unwrapGroup(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:protected private function unwrapGroup(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
-	@:overload private function unwrapChoice(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
+	@:overload @:protected private function unwrapChoice(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
-	@:overload private function on(nc : com.sun.xml.internal.rngom.nc.NameClass) : Void;
+	@:overload @:protected private function on(nc : com.sun.xml.internal.rngom.nc.NameClass) : Void;
 	
-	@:overload private function on(ann : com.sun.xml.internal.rngom.digested.DAnnotation) : Void;
+	@:overload @:protected private function on(ann : com.sun.xml.internal.rngom.digested.DAnnotation) : Void;
 	
-	@:overload public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
+	@:overload @:public public function onAttribute(p : com.sun.xml.internal.rngom.digested.DAttributePattern) : java.lang.Void;
 	
-	@:overload public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
+	@:overload @:public public function onChoice(p : com.sun.xml.internal.rngom.digested.DChoicePattern) : java.lang.Void;
 	
-	@:overload public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : java.lang.Void;
+	@:overload @:public public function onData(p : com.sun.xml.internal.rngom.digested.DDataPattern) : java.lang.Void;
 	
-	@:overload public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : java.lang.Void;
+	@:overload @:public public function onElement(p : com.sun.xml.internal.rngom.digested.DElementPattern) : java.lang.Void;
 	
-	@:overload public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : java.lang.Void;
+	@:overload @:public public function onEmpty(p : com.sun.xml.internal.rngom.digested.DEmptyPattern) : java.lang.Void;
 	
-	@:overload public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : java.lang.Void;
+	@:overload @:public public function onGrammar(p : com.sun.xml.internal.rngom.digested.DGrammarPattern) : java.lang.Void;
 	
-	@:overload public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : java.lang.Void;
+	@:overload @:public public function onGroup(p : com.sun.xml.internal.rngom.digested.DGroupPattern) : java.lang.Void;
 	
-	@:overload public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : java.lang.Void;
+	@:overload @:public public function onInterleave(p : com.sun.xml.internal.rngom.digested.DInterleavePattern) : java.lang.Void;
 	
-	@:overload public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : java.lang.Void;
+	@:overload @:public public function onList(p : com.sun.xml.internal.rngom.digested.DListPattern) : java.lang.Void;
 	
-	@:overload public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
+	@:overload @:public public function onMixed(p : com.sun.xml.internal.rngom.digested.DMixedPattern) : java.lang.Void;
 	
-	@:overload public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : java.lang.Void;
+	@:overload @:public public function onNotAllowed(p : com.sun.xml.internal.rngom.digested.DNotAllowedPattern) : java.lang.Void;
 	
-	@:overload public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
+	@:overload @:public public function onOneOrMore(p : com.sun.xml.internal.rngom.digested.DOneOrMorePattern) : java.lang.Void;
 	
-	@:overload public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
+	@:overload @:public public function onOptional(p : com.sun.xml.internal.rngom.digested.DOptionalPattern) : java.lang.Void;
 	
-	@:overload public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
+	@:overload @:public public function onRef(p : com.sun.xml.internal.rngom.digested.DRefPattern) : java.lang.Void;
 	
-	@:overload public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : java.lang.Void;
+	@:overload @:public public function onText(p : com.sun.xml.internal.rngom.digested.DTextPattern) : java.lang.Void;
 	
-	@:overload public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : java.lang.Void;
+	@:overload @:public public function onValue(p : com.sun.xml.internal.rngom.digested.DValuePattern) : java.lang.Void;
 	
-	@:overload public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
+	@:overload @:public public function onZeroOrMore(p : com.sun.xml.internal.rngom.digested.DZeroOrMorePattern) : java.lang.Void;
 	
 	
 }
 @:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$NameClassXMLPrinterVisitor') extern class DXMLPrinter_NameClassXMLPrinterVisitor extends com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_XMLWriter implements com.sun.xml.internal.rngom.nc.NameClassVisitor<java.lang.Void>
 {
-	@:overload public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitNsName(ns : String) : java.lang.Void;
+	@:overload @:public public function visitNsName(ns : String) : java.lang.Void;
 	
-	@:overload public function visitNsNameExcept(ns : String, nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitNsNameExcept(ns : String, nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitAnyName() : java.lang.Void;
+	@:overload @:public public function visitAnyName() : java.lang.Void;
 	
-	@:overload public function visitAnyNameExcept(nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
+	@:overload @:public public function visitAnyNameExcept(nc : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	
-	@:overload public function visitName(name : javax.xml.namespace.QName) : java.lang.Void;
+	@:overload @:public public function visitName(name : javax.xml.namespace.QName) : java.lang.Void;
 	
-	@:overload public function visitNull() : java.lang.Void;
+	@:overload @:public public function visitNull() : java.lang.Void;
 	
 	
 }

@@ -33,33 +33,33 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	* order.  By default, the value is
 	* <code>ByteOrder.BIG_ENDIAN</code>.
 	*/
-	private var byteOrder : java.nio.ByteOrder;
+	@:protected private var byteOrder : java.nio.ByteOrder;
 	
 	/**
 	* The current read position within the stream.  Subclasses are
 	* responsible for keeping this value current from any method they
 	* override that alters the read position.
 	*/
-	private var streamPos : haxe.Int64;
+	@:protected private var streamPos : haxe.Int64;
 	
 	/**
 	* The current bit offset within the stream.  Subclasses are
 	* responsible for keeping this value current from any method they
 	* override that alters the bit offset.
 	*/
-	private var bitOffset : Int;
+	@:protected private var bitOffset : Int;
 	
 	/**
 	* The position prior to which data may be discarded.  Seeking
 	* to a smaller position is not allowed.  <code>flushedPos</code>
 	* will always be >= 0.
 	*/
-	private var flushedPos : haxe.Int64;
+	@:protected private var flushedPos : haxe.Int64;
 	
 	/**
 	* Constructs an <code>ImageInputStreamImpl</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Throws an <code>IOException</code> if the stream has been closed.
@@ -68,11 +68,11 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	*
 	* @exception IOException if the stream is closed.
 	*/
-	@:overload @:final private function checkClosed() : Void;
+	@:overload @:protected @:final private function checkClosed() : Void;
 	
-	@:overload public function setByteOrder(byteOrder : java.nio.ByteOrder) : Void;
+	@:overload @:public public function setByteOrder(byteOrder : java.nio.ByteOrder) : Void;
 	
-	@:overload public function getByteOrder() : java.nio.ByteOrder;
+	@:overload @:public public function getByteOrder() : java.nio.ByteOrder;
 	
 	/**
 	* Reads a single byte from the stream and returns it as an
@@ -91,7 +91,7 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	*
 	* @exception IOException if the stream has been closed.
 	*/
-	@:overload @:abstract public function read() : Int;
+	@:overload @:public @:abstract public function read() : Int;
 	
 	/**
 	* A convenience method that calls <code>read(b, 0, b.length)</code>.
@@ -106,7 +106,7 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	* <code>null</code>.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes from the stream, and stores
@@ -135,61 +135,61 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	* <code>null</code>.
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload @:abstract public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public @:abstract public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function readBytes(buf : javax.imageio.stream.IIOByteBuffer, len : Int) : Void;
+	@:overload @:public public function readBytes(buf : javax.imageio.stream.IIOByteBuffer, len : Int) : Void;
 	
-	@:overload public function readBoolean() : Bool;
+	@:overload @:public public function readBoolean() : Bool;
 	
-	@:overload public function readByte() : java.StdTypes.Int8;
+	@:overload @:public public function readByte() : java.StdTypes.Int8;
 	
-	@:overload public function readUnsignedByte() : Int;
+	@:overload @:public public function readUnsignedByte() : Int;
 	
-	@:overload public function readShort() : java.StdTypes.Int16;
+	@:overload @:public public function readShort() : java.StdTypes.Int16;
 	
-	@:overload public function readUnsignedShort() : Int;
+	@:overload @:public public function readUnsignedShort() : Int;
 	
-	@:overload public function readChar() : java.StdTypes.Char16;
+	@:overload @:public public function readChar() : java.StdTypes.Char16;
 	
-	@:overload public function readInt() : Int;
+	@:overload @:public public function readInt() : Int;
 	
-	@:overload public function readUnsignedInt() : haxe.Int64;
+	@:overload @:public public function readUnsignedInt() : haxe.Int64;
 	
-	@:overload public function readLong() : haxe.Int64;
+	@:overload @:public public function readLong() : haxe.Int64;
 	
-	@:overload public function readFloat() : Single;
+	@:overload @:public public function readFloat() : Single;
 	
-	@:overload public function readDouble() : Float;
+	@:overload @:public public function readDouble() : Float;
 	
-	@:overload public function readLine() : String;
+	@:overload @:public public function readLine() : String;
 	
-	@:overload public function readUTF() : String;
+	@:overload @:public public function readUTF() : String;
 	
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function readFully(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(s : java.NativeArray<java.StdTypes.Int16>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(c : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(i : java.NativeArray<Int>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(l : java.NativeArray<haxe.Int64>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(f : java.NativeArray<Single>, off : Int, len : Int) : Void;
 	
-	@:overload public function readFully(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
+	@:overload @:public public function readFully(d : java.NativeArray<Float>, off : Int, len : Int) : Void;
 	
-	@:overload public function getStreamPosition() : haxe.Int64;
+	@:overload @:public public function getStreamPosition() : haxe.Int64;
 	
-	@:overload public function getBitOffset() : Int;
+	@:overload @:public public function getBitOffset() : Int;
 	
-	@:overload public function setBitOffset(bitOffset : Int) : Void;
+	@:overload @:public public function setBitOffset(bitOffset : Int) : Void;
 	
-	@:overload public function readBit() : Int;
+	@:overload @:public public function readBit() : Int;
 	
-	@:overload public function readBits(numBits : Int) : haxe.Int64;
+	@:overload @:public public function readBits(numBits : Int) : haxe.Int64;
 	
 	/**
 	* Returns <code>-1L</code> to indicate that the stream has unknown
@@ -198,7 +198,7 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	*
 	* @return -1L to indicate unknown length.
 	*/
-	@:overload public function length() : haxe.Int64;
+	@:overload @:public public function length() : haxe.Int64;
 	
 	/**
 	* Advances the current stream position by calling
@@ -215,7 +215,7 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	* throws an <code>IOException</code> when computing either
 	* the starting or ending position.
 	*/
-	@:overload public function skipBytes(n : Int) : Int;
+	@:overload @:public public function skipBytes(n : Int) : Int;
 	
 	/**
 	* Advances the current stream position by calling
@@ -232,15 +232,15 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	* throws an <code>IOException</code> when computing either
 	* the starting or ending position.
 	*/
-	@:overload public function skipBytes(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public public function skipBytes(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function seek(pos : haxe.Int64) : Void;
+	@:overload @:public public function seek(pos : haxe.Int64) : Void;
 	
 	/**
 	* Pushes the current stream position onto a stack of marked
 	* positions.
 	*/
-	@:overload public function mark() : Void;
+	@:overload @:public public function mark() : Void;
 	
 	/**
 	* Resets the current stream byte and bit positions from the stack
@@ -251,33 +251,33 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function flushBefore(pos : haxe.Int64) : Void;
+	@:overload @:public public function flushBefore(pos : haxe.Int64) : Void;
 	
-	@:overload public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
-	@:overload public function getFlushedPosition() : haxe.Int64;
+	@:overload @:public public function getFlushedPosition() : haxe.Int64;
 	
 	/**
 	* Default implementation returns false.  Subclasses should
 	* override this if they cache data.
 	*/
-	@:overload public function isCached() : Bool;
+	@:overload @:public public function isCached() : Bool;
 	
 	/**
 	* Default implementation returns false.  Subclasses should
 	* override this if they cache data in main memory.
 	*/
-	@:overload public function isCachedMemory() : Bool;
+	@:overload @:public public function isCachedMemory() : Bool;
 	
 	/**
 	* Default implementation returns false.  Subclasses should
 	* override this if they cache data in a temporary file.
 	*/
-	@:overload public function isCachedFile() : Bool;
+	@:overload @:public public function isCachedFile() : Bool;
 	
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Finalizes this object prior to garbage collection.  The
@@ -288,7 +288,7 @@ extern class ImageInputStreamImpl implements javax.imageio.stream.ImageInputStre
 	* @exception Throwable if an error occurs during superclass
 	* finalization.
 	*/
-	@:overload private function finalize() : Void;
+	@:overload @:protected private function finalize() : Void;
 	
 	
 }

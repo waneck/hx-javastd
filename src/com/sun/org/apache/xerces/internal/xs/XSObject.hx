@@ -28,7 +28,7 @@ extern interface XSObject
 	*  The <code>type</code> of this object, i.e.
 	* <code>ELEMENT_DECLARATION</code>.
 	*/
-	@:overload public function getType() : java.StdTypes.Int16;
+	@:overload @:public public function getType() : java.StdTypes.Int16;
 	
 	/**
 	* The name of type <code>NCName</code>, as defined in XML Namespaces, of
@@ -39,20 +39,20 @@ extern interface XSObject
 	* is distinct from the name of every named type and the name of every
 	* other anonymous type.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	*  The [target namespace] of this object, or <code>null</code> if it is
 	* unspecified.
 	*/
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
 	/**
 	* A namespace schema information item corresponding to the target
 	* namespace of the component, if it is globally declared; or
 	* <code>null</code> otherwise.
 	*/
-	@:overload public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
+	@:overload @:public public function getNamespaceItem() : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
 	
 }

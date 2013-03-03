@@ -37,7 +37,7 @@ extern interface Populatable
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function populate(model : com.sun.tools.internal.xjc.model.Model, context : com.sun.tools.internal.xjc.outline.Outline) : Void;
+	@:overload @:public public function populate(model : com.sun.tools.internal.xjc.model.Model, context : com.sun.tools.internal.xjc.outline.Outline) : Void;
 	
 	
 }

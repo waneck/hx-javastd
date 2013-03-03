@@ -33,7 +33,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return The value of the property
 	* @throws IllegalArgumentException if name is null
 	*/
-	@:overload public function getProperty(name : String) : Dynamic;
+	@:overload @:public public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* Get next parsing event - a processor may return all contiguous
@@ -67,7 +67,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws NoSuchElementException if this is called when hasNext() returns false
 	* @throws XMLStreamException  if there is an error processing the underlying XML source
 	*/
-	@:overload public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Test if the current event is of the given type and if the namespace and name match the current
@@ -78,7 +78,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @param localName the localName of the event, may be null
 	* @throws XMLStreamException if the required values are not matched.
 	*/
-	@:overload public function require(type : Int, namespaceURI : String, localName : String) : Void;
+	@:overload @:public public function require(type : Int, namespaceURI : String, localName : String) : Void;
 	
 	/**
 	* Reads the content of a text-only element, an exception is thrown if this is
@@ -123,7 +123,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws XMLStreamException if the current event is not a START_ELEMENT
 	* or if a non text element is encountered
 	*/
-	@:overload public function getElementText() : String;
+	@:overload @:public public function getElementText() : String;
 	
 	/**
 	* Skips any white space (isWhiteSpace() returns true), COMMENT,
@@ -161,7 +161,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* START_ELEMENT or END_ELEMENT
 	* @throws NoSuchElementException if this is called when hasNext() returns false
 	*/
-	@:overload public function nextTag() : Int;
+	@:overload @:public public function nextTag() : Int;
 	
 	/**
 	* Returns true if there are more parsing events and false
@@ -171,14 +171,14 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return true if there are more events, false otherwise
 	* @throws XMLStreamException if there is a fatal error detecting the next state
 	*/
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
 	/**
 	* Frees any resources associated with this Reader.  This method does not close the
 	* underlying input source.
 	* @throws XMLStreamException if there are errors freeing associated resources
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Return the uri for the given prefix.
@@ -194,32 +194,32 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the uri bound to the given prefix or null if it is not bound
 	* @throws IllegalArgumentException if the prefix is null
 	*/
-	@:overload public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Returns true if the cursor points to a start tag (otherwise false)
 	* @return true if the cursor points to a start tag, false otherwise
 	*/
-	@:overload public function isStartElement() : Bool;
+	@:overload @:public public function isStartElement() : Bool;
 	
 	/**
 	* Returns true if the cursor points to an end tag (otherwise false)
 	* @return true if the cursor points to an end tag, false otherwise
 	*/
-	@:overload public function isEndElement() : Bool;
+	@:overload @:public public function isEndElement() : Bool;
 	
 	/**
 	* Returns true if the cursor points to a character data event
 	* @return true if the cursor points to character data, false otherwise
 	*/
-	@:overload public function isCharacters() : Bool;
+	@:overload @:public public function isCharacters() : Bool;
 	
 	/**
 	* Returns true if the cursor points to a character data event
 	* that consists of all whitespace
 	* @return true if the cursor points to all whitespace, false otherwise
 	*/
-	@:overload public function isWhiteSpace() : Bool;
+	@:overload @:public public function isWhiteSpace() : Bool;
 	
 	/**
 	* Returns the normalized attribute value of the
@@ -231,7 +231,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return returns the value of the attribute , returns null if not found
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeValue(namespaceURI : String, localName : String) : String;
+	@:overload @:public public function getAttributeValue(namespaceURI : String, localName : String) : String;
 	
 	/**
 	* Returns the count of attributes on this START_ELEMENT,
@@ -241,7 +241,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return returns the number of attributes
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeCount() : Int;
+	@:overload @:public public function getAttributeCount() : Int;
 	
 	/** Returns the qname of the attribute at the provided index
 	*
@@ -249,7 +249,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the QName of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeName(index : Int) : javax.xml.namespace.QName;
+	@:overload @:public public function getAttributeName(index : Int) : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the namespace of the attribute at the provided
@@ -258,7 +258,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the namespace URI (can be null)
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeNamespace(index : Int) : String;
+	@:overload @:public public function getAttributeNamespace(index : Int) : String;
 	
 	/**
 	* Returns the localName of the attribute at the provided
@@ -267,7 +267,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the localName of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeLocalName(index : Int) : String;
+	@:overload @:public public function getAttributeLocalName(index : Int) : String;
 	
 	/**
 	* Returns the prefix of this attribute at the
@@ -276,7 +276,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the prefix of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributePrefix(index : Int) : String;
+	@:overload @:public public function getAttributePrefix(index : Int) : String;
 	
 	/**
 	* Returns the XML type of the attribute at the provided
@@ -285,7 +285,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the XML type of the attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeType(index : Int) : String;
+	@:overload @:public public function getAttributeType(index : Int) : String;
 	
 	/**
 	* Returns the value of the attribute at the
@@ -294,7 +294,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return the attribute value
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function getAttributeValue(index : Int) : String;
+	@:overload @:public public function getAttributeValue(index : Int) : String;
 	
 	/**
 	* Returns a boolean which indicates if this
@@ -303,7 +303,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return true if this is a default attribute
 	* @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
 	*/
-	@:overload public function isAttributeSpecified(index : Int) : Bool;
+	@:overload @:public public function isAttributeSpecified(index : Int) : Bool;
 	
 	/**
 	* Returns the count of namespaces declared on this START_ELEMENT or END_ELEMENT,
@@ -314,7 +314,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return returns the number of namespace declarations on this specific element
 	* @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
 	*/
-	@:overload public function getNamespaceCount() : Int;
+	@:overload @:public public function getNamespaceCount() : Int;
 	
 	/**
 	* Returns the prefix for the namespace declared at the
@@ -325,7 +325,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return returns the namespace prefix
 	* @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
 	*/
-	@:overload public function getNamespacePrefix(index : Int) : String;
+	@:overload @:public public function getNamespacePrefix(index : Int) : String;
 	
 	/**
 	* Returns the uri for the namespace declared at the
@@ -335,7 +335,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @return returns the namespace uri
 	* @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
 	*/
-	@:overload public function getNamespaceURI(index : Int) : String;
+	@:overload @:public public function getNamespaceURI(index : Int) : String;
 	
 	/**
 	* Returns a read only namespace context for the current
@@ -343,13 +343,13 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* a call to next() changes the state of the reader.
 	* @return return a namespace context
 	*/
-	@:overload public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
+	@:overload @:public public function getNamespaceContext() : javax.xml.namespace.NamespaceContext;
 	
 	/**
 	* Returns an integer code that indicates the type
 	* of the event the cursor is pointing to.
 	*/
-	@:overload public function getEventType() : Int;
+	@:overload @:public public function getEventType() : Int;
 	
 	/**
 	* Returns the current value of the parse event as a string,
@@ -364,7 +364,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws java.lang.IllegalStateException if this state is not
 	* a valid text state.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
 	/**
 	* Returns an array which contains the characters from this event.
@@ -376,7 +376,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws java.lang.IllegalStateException if this state is not
 	* a valid text state.
 	*/
-	@:overload public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Gets the the text associated with a CHARACTERS, SPACE or CDATA event.
@@ -415,7 +415,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws UnsupportedOperationException if this method is not supported
 	* @throws NullPointerException is if target is null
 	*/
-	@:overload public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
+	@:overload @:public public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
 	
 	/**
 	* Returns the offset into the text character array where the first
@@ -423,7 +423,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws java.lang.IllegalStateException if this state is not
 	* a valid text state.
 	*/
-	@:overload public function getTextStart() : Int;
+	@:overload @:public public function getTextStart() : Int;
 	
 	/**
 	* Returns the length of the sequence of characters for this
@@ -431,20 +431,20 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws java.lang.IllegalStateException if this state is not
 	* a valid text state.
 	*/
-	@:overload public function getTextLength() : Int;
+	@:overload @:public public function getTextLength() : Int;
 	
 	/**
 	* Return input encoding if known or null if unknown.
 	* @return the encoding of this instance or null
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Return true if the current event has text, false otherwise
 	* The following events have text:
 	* CHARACTERS,DTD ,ENTITY_REFERENCE, COMMENT, SPACE
 	*/
-	@:overload public function hasText() : Bool;
+	@:overload @:public public function hasText() : Bool;
 	
 	/**
 	* Return the current location of the processor.
@@ -454,7 +454,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* The location information is only valid until next() is
 	* called.
 	*/
-	@:overload public function getLocation() : javax.xml.stream.Location;
+	@:overload @:public public function getLocation() : javax.xml.stream.Location;
 	
 	/**
 	* Returns a QName for the current START_ELEMENT or END_ELEMENT event
@@ -462,7 +462,7 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws IllegalStateException if this is not a START_ELEMENT or
 	* END_ELEMENT
 	*/
-	@:overload public function getName() : javax.xml.namespace.QName;
+	@:overload @:public public function getName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the (local) name of the current event.
@@ -474,13 +474,13 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* @throws IllegalStateException if this not a START_ELEMENT,
 	* END_ELEMENT or ENTITY_REFERENCE
 	*/
-	@:overload public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* returns true if the current event has a name (is a START_ELEMENT or END_ELEMENT)
 	* returns false otherwise
 	*/
-	@:overload public function hasName() : Bool;
+	@:overload @:public public function hasName() : Bool;
 	
 	/**
 	* If the current event is a START_ELEMENT or END_ELEMENT  this method
@@ -488,51 +488,51 @@ extern interface XMLStreamReader extends javax.xml.stream.XMLStreamConstants
 	* Returns null if the event does not have a prefix.
 	* @return the URI bound to this elements prefix, the default namespace, or null
 	*/
-	@:overload public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Returns the prefix of the current event or null if the event does not have a prefix
 	* @return the prefix or null
 	*/
-	@:overload public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* Get the xml version declared on the xml declaration
 	* Returns null if none was declared
 	* @return the XML version or null
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* Get the standalone declaration from the xml declaration
 	* @return true if this is standalone, or false otherwise
 	*/
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
 	/**
 	* Checks if standalone was set in the document
 	* @return true if standalone was set in the document, or false otherwise
 	*/
-	@:overload public function standaloneSet() : Bool;
+	@:overload @:public public function standaloneSet() : Bool;
 	
 	/**
 	* Returns the character encoding declared on the xml declaration
 	* Returns null if none was declared
 	* @return the encoding declared in the document or null
 	*/
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/**
 	* Get the target of a processing instruction
 	* @return the target or null
 	*/
-	@:overload public function getPITarget() : String;
+	@:overload @:public public function getPITarget() : String;
 	
 	/**
 	* Get the data section of a processing instruction
 	* @return the data or null
 	*/
-	@:overload public function getPIData() : String;
+	@:overload @:public public function getPIData() : String;
 	
 	
 }

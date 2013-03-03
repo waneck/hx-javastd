@@ -28,7 +28,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	/**
 	* Constructs an empty <CODE>AttributeList</CODE>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an empty <CODE>AttributeList</CODE> with
@@ -38,7 +38,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* <code>AttributeList</code>, as specified by {@link
 	* ArrayList#ArrayList(int)}.
 	*/
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
 	/**
 	* Constructs an <CODE>AttributeList</CODE> containing the
@@ -53,7 +53,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	*
 	* @see ArrayList#ArrayList(java.util.Collection)
 	*/
-	@:overload public function new(list : javax.management.AttributeList) : Void;
+	@:overload @:public public function new(list : javax.management.AttributeList) : Void;
 	
 	/**
 	* Constructs an {@code AttributeList} containing the elements of the
@@ -71,7 +71,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(list : java.util.List<javax.management.Attribute>) : Void;
+	@:require(java6) @:overload @:public public function new(list : java.util.List<javax.management.Attribute>) : Void;
 	
 	/**
 	* Return a view of this list as a {@code List<Attribute>}.
@@ -94,14 +94,14 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function asList() : java.util.List<javax.management.Attribute>;
+	@:require(java6) @:overload @:public public function asList() : java.util.List<javax.management.Attribute>;
 	
 	/**
 	* Adds the {@code Attribute} specified as the last element of the list.
 	*
 	* @param object  The attribute to be added.
 	*/
-	@:overload public function add(object : javax.management.Attribute) : Void;
+	@:overload @:public public function add(object : javax.management.Attribute) : Void;
 	
 	/**
 	* Inserts the attribute specified as an element at the position specified.
@@ -114,7 +114,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* @param index The position in the list where the new {@code Attribute}
 	* object is to be inserted.
 	*/
-	@:overload public function add(index : Int, object : javax.management.Attribute) : Void;
+	@:overload @:public public function add(index : Int, object : javax.management.Attribute) : Void;
 	
 	/**
 	* Sets the element at the position specified to be the attribute specified.
@@ -125,7 +125,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* @param object  The value to which the attribute element should be set.
 	* @param index  The position specified.
 	*/
-	@:overload public function set(index : Int, object : javax.management.Attribute) : Void;
+	@:overload @:public public function set(index : Int, object : javax.management.Attribute) : Void;
 	
 	/**
 	* Appends all the elements in the <CODE>AttributeList</CODE> specified to
@@ -138,7 +138,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	*
 	* @see ArrayList#addAll(java.util.Collection)
 	*/
-	@:overload public function addAll(list : javax.management.AttributeList) : Bool;
+	@:overload @:public public function addAll(list : javax.management.AttributeList) : Bool;
 	
 	/**
 	* Inserts all of the elements in the <CODE>AttributeList</CODE> specified
@@ -156,7 +156,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	*
 	* @see ArrayList#addAll(int, java.util.Collection)
 	*/
-	@:overload public function addAll(index : Int, list : javax.management.AttributeList) : Bool;
+	@:overload @:public public function addAll(index : Int, list : javax.management.AttributeList) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -164,7 +164,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* <a href="#type-safe">type-safe</a> and {@code element} is not an
 	* {@code Attribute}.
 	*/
-	@:overload public function add(element : Dynamic) : Bool;
+	@:overload @:public override public function add(element : Dynamic) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -172,7 +172,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* <a href="#type-safe">type-safe</a> and {@code element} is not an
 	* {@code Attribute}.
 	*/
-	@:overload public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public override public function add(index : Int, element : Dynamic) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -180,7 +180,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* <a href="#type-safe">type-safe</a> and {@code c} contains an
 	* element that is not an {@code Attribute}.
 	*/
-	@:overload public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -188,7 +188,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* <a href="#type-safe">type-safe</a> and {@code c} contains an
 	* element that is not an {@code Attribute}.
 	*/
-	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -196,7 +196,7 @@ extern class AttributeList extends java.util.ArrayList<Dynamic>
 	* <a href="#type-safe">type-safe</a> and {@code element} is not an
 	* {@code Attribute}.
 	*/
-	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
 	
 }

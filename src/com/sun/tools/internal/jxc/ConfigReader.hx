@@ -36,7 +36,7 @@ extern class ConfigReader
 	* @throws IOException
 	*     If any IO errors occur.
 	*/
-	@:overload public function new(env : com.sun.mirror.apt.AnnotationProcessorEnvironment, classes : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>, xmlFile : java.io.File, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function new(env : com.sun.mirror.apt.AnnotationProcessorEnvironment, classes : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>, xmlFile : java.io.File, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* This creates creates a regular expression
@@ -46,12 +46,12 @@ extern class ConfigReader
 	* after applying those patterns
 	*
 	*/
-	@:overload public function getClassesToBeIncluded() : java.util.Collection<com.sun.tools.internal.xjc.api.Reference>;
+	@:overload @:public public function getClassesToBeIncluded() : java.util.Collection<com.sun.tools.internal.xjc.api.Reference>;
 	
 	/**
 	* This returns the SchemaOutputResolver to generate the schemas
 	*/
-	@:overload public function getSchemaOutputResolver() : javax.xml.bind.SchemaOutputResolver;
+	@:overload @:public public function getSchemaOutputResolver() : javax.xml.bind.SchemaOutputResolver;
 	
 	
 }
@@ -68,11 +68,11 @@ extern class ConfigReader
 	* will be written, and return it as a {@link Result} object.
 	*
 	*/
-	@:overload override public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
+	@:overload @:public override public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
 	
-	@:overload public function new(baseDir : java.io.File) : Void;
+	@:overload @:public public function new(baseDir : java.io.File) : Void;
 	
-	@:overload public function addSchemaInfo(namespaceUri : String, location : java.io.File) : Void;
+	@:overload @:public public function addSchemaInfo(namespaceUri : String, location : java.io.File) : Void;
 	
 	
 }

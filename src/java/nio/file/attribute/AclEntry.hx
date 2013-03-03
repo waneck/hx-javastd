@@ -65,7 +65,7 @@ package java.nio.file.attribute;
 	*
 	* @return  a new builder
 	*/
-	@:overload public static function newBuilder() : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public @:static public static function newBuilder() : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Constructs a new builder with the components of an existing ACL entry.
@@ -75,31 +75,31 @@ package java.nio.file.attribute;
 	*
 	* @return  a new builder
 	*/
-	@:overload public static function newBuilder(entry : java.nio.file.attribute.AclEntry) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public @:static public static function newBuilder(entry : java.nio.file.attribute.AclEntry) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Returns the ACL entry type.
 	*/
-	@:overload public function type() : java.nio.file.attribute.AclEntryType;
+	@:overload @:public public function type() : java.nio.file.attribute.AclEntryType;
 	
 	/**
 	* Returns the principal component.
 	*/
-	@:overload public function principal() : java.nio.file.attribute.UserPrincipal;
+	@:overload @:public public function principal() : java.nio.file.attribute.UserPrincipal;
 	
 	/**
 	* Returns a copy of the permissions component.
 	*
 	* <p> The returned set is a modifiable copy of the permissions.
 	*/
-	@:overload public function permissions() : java.util.Set<java.nio.file.attribute.AclEntryPermission>;
+	@:overload @:public public function permissions() : java.util.Set<java.nio.file.attribute.AclEntryPermission>;
 	
 	/**
 	* Returns a copy of the flags component.
 	*
 	* <p> The returned set is a modifiable copy of the flags.
 	*/
-	@:overload public function flags() : java.util.Set<java.nio.file.attribute.AclEntryFlag>;
+	@:overload @:public public function flags() : java.util.Set<java.nio.file.attribute.AclEntryFlag>;
 	
 	/**
 	* Compares the specified object with this ACL entry for equality.
@@ -119,7 +119,7 @@ package java.nio.file.attribute;
 	* @return  {@code true} if, and only if, the given object is an AclEntry that
 	*          is identical to this AclEntry
 	*/
-	@:overload public function equals(ob : Dynamic) : Bool;
+	@:overload @:public public function equals(ob : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash-code value for this ACL entry.
@@ -127,14 +127,14 @@ package java.nio.file.attribute;
 	* <p> This method satisfies the general contract of the {@link
 	* Object#hashCode} method.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Returns the string representation of this ACL entry.
 	*
 	* @return  the string representation of this entry
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
@@ -162,21 +162,21 @@ package java.nio.file.attribute;
 	* @throws  IllegalStateException
 	*          if the type or who component have not been set
 	*/
-	@:overload public function build() : java.nio.file.attribute.AclEntry;
+	@:overload @:public public function build() : java.nio.file.attribute.AclEntry;
 	
 	/**
 	* Sets the type component of this builder.
 	*
 	* @return  this builder
 	*/
-	@:overload public function setType(type : java.nio.file.attribute.AclEntryType) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public public function setType(type : java.nio.file.attribute.AclEntryType) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Sets the principal component of this builder.
 	*
 	* @return  this builder
 	*/
-	@:overload public function setPrincipal(who : java.nio.file.attribute.UserPrincipal) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public public function setPrincipal(who : java.nio.file.attribute.UserPrincipal) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Sets the permissions component of this builder. On return, the
@@ -188,7 +188,7 @@ package java.nio.file.attribute;
 	*          if the set contains elements that are not of type {@code
 	*          AclEntryPermission}
 	*/
-	@:overload public function setPermissions(perms : java.util.Set<java.nio.file.attribute.AclEntryPermission>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public public function setPermissions(perms : java.util.Set<java.nio.file.attribute.AclEntryPermission>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Sets the permissions component of this builder. On return, the
@@ -197,7 +197,7 @@ package java.nio.file.attribute;
 	*
 	* @return  this builder
 	*/
-	@:overload public function setPermissions(perms : java.NativeArray<java.nio.file.attribute.AclEntryPermission>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public public function setPermissions(perms : java.NativeArray<java.nio.file.attribute.AclEntryPermission>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Sets the flags component of this builder. On return, the flags
@@ -209,7 +209,7 @@ package java.nio.file.attribute;
 	*          if the set contains elements that are not of type {@code
 	*          AclEntryFlag}
 	*/
-	@:overload public function setFlags(flags : java.util.Set<java.nio.file.attribute.AclEntryFlag>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public public function setFlags(flags : java.util.Set<java.nio.file.attribute.AclEntryFlag>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	/**
 	* Sets the flags component of this builder. On return, the flags
@@ -218,7 +218,7 @@ package java.nio.file.attribute;
 	*
 	* @return  this builder
 	*/
-	@:overload public function setFlags(flags : java.NativeArray<java.nio.file.attribute.AclEntryFlag>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
+	@:overload @:public public function setFlags(flags : java.NativeArray<java.nio.file.attribute.AclEntryFlag>) : java.nio.file.attribute.AclEntry.AclEntry_Builder;
 	
 	
 }

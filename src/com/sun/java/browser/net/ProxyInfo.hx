@@ -29,11 +29,11 @@ package com.sun.java.browser.net;
 */
 extern interface ProxyInfo
 {
-	@:overload public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
-	@:overload public function isSocks() : Bool;
+	@:overload @:public public function isSocks() : Bool;
 	
 	
 }

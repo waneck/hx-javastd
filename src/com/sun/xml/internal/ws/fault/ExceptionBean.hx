@@ -29,28 +29,28 @@ package com.sun.xml.internal.ws.fault;
 	* Converts the given {@link Throwable} into an XML representation
 	* and put that as a DOM tree under the given node.
 	*/
-	@:overload public static function marshal(t : java.lang.Throwable, parent : org.w3c.dom.Node) : Void;
+	@:overload @:public @:static public static function marshal(t : java.lang.Throwable, parent : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Does the reverse operation of {@link #marshal(Throwable, Node)}. Constructs an
 	* {@link Exception} object from the XML.
 	*/
-	@:overload public static function unmarshal(xml : org.w3c.dom.Node) : com.sun.xml.internal.ws.developer.ServerSideException;
+	@:overload @:public @:static public static function unmarshal(xml : org.w3c.dom.Node) : com.sun.xml.internal.ws.developer.ServerSideException;
 	
-	public var className : String;
+	@:public public var className : String;
 	
-	public var message : String;
+	@:public public var message : String;
 	
-	public var stackTrace : java.util.List<com.sun.xml.internal.ws.fault.ExceptionBean.ExceptionBean_StackFrame>;
+	@:public public var stackTrace : java.util.List<com.sun.xml.internal.ws.fault.ExceptionBean.ExceptionBean_StackFrame>;
 	
-	public var cause : com.sun.xml.internal.ws.fault.ExceptionBean;
+	@:public public var cause : com.sun.xml.internal.ws.fault.ExceptionBean;
 	
-	public var note : String;
+	@:public public var note : String;
 	
 	/**
 	* Checks if the given element is the XML representation of {@link ExceptionBean}.
 	*/
-	@:overload public static function isStackTraceXml(n : org.w3c.dom.Element) : Bool;
+	@:overload @:public @:static public static function isStackTraceXml(n : org.w3c.dom.Element) : Bool;
 	
 	
 }
@@ -59,15 +59,15 @@ package com.sun.xml.internal.ws.fault;
 */
 @:native('com$sun$xml$internal$ws$fault$ExceptionBean$StackFrame') @:internal extern class ExceptionBean_StackFrame
 {
-	public var declaringClass : String;
+	@:public public var declaringClass : String;
 	
-	public var methodName : String;
+	@:public public var methodName : String;
 	
-	public var fileName : String;
+	@:public public var fileName : String;
 	
-	public var lineNumber : String;
+	@:public public var lineNumber : String;
 	
-	@:overload public function new(ste : java.lang.StackTraceElement) : Void;
+	@:overload @:public public function new(ste : java.lang.StackTraceElement) : Void;
 	
 	
 }

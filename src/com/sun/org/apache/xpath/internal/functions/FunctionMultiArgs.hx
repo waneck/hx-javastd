@@ -28,7 +28,7 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	*
 	* @return An array that contains the arguments at index 3 or greater.
 	*/
-	@:overload public function getArgs() : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>;
+	@:overload @:public public function getArgs() : java.NativeArray<com.sun.org.apache.xpath.internal.Expression>;
 	
 	/**
 	* Set an argument expression for a function.  This method is called by the
@@ -40,7 +40,7 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	* @throws WrongNumberArgsException If a derived class determines that the
 	* number of arguments is incorrect.
 	*/
-	@:overload override public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
+	@:overload @:public override public function setArg(arg : com.sun.org.apache.xpath.internal.Expression, argNum : Int) : Void;
 	
 	/**
 	* This function is used to fixup variables from QNames to stack frame
@@ -52,7 +52,7 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload @:public override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Check that the number of arguments passed to this function is correct.
@@ -62,7 +62,7 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override public function checkNumberArgs(argNum : Int) : Void;
+	@:overload @:public override public function checkNumberArgs(argNum : Int) : Void;
 	
 	/**
 	* Constructs and throws a WrongNumberArgException with the appropriate
@@ -71,7 +71,7 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	*
 	* @throws WrongNumberArgsException
 	*/
-	@:overload override private function reportWrongNumberArgs() : Void;
+	@:overload @:protected override private function reportWrongNumberArgs() : Void;
 	
 	/**
 	* Tell if this expression or it's subexpressions can traverse outside
@@ -79,17 +79,17 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	*
 	* @return true if traversal outside the context node's subtree can occur.
 	*/
-	@:overload override public function canTraverseOutsideSubtree() : Bool;
+	@:overload @:public override public function canTraverseOutsideSubtree() : Bool;
 	
 	/**
 	* @see com.sun.org.apache.xpath.internal.XPathVisitable#callVisitors(ExpressionOwner, XPathVisitor)
 	*/
-	@:overload override public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public override public function callArgVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload @:public override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }
@@ -98,12 +98,12 @@ extern class FunctionMultiArgs extends com.sun.org.apache.xpath.internal.functio
 	/**
 	* @see ExpressionOwner#getExpression()
 	*/
-	@:overload public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
+	@:overload @:public public function getExpression() : com.sun.org.apache.xpath.internal.Expression;
 	
 	/**
 	* @see ExpressionOwner#setExpression(Expression)
 	*/
-	@:overload public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
+	@:overload @:public public function setExpression(exp : com.sun.org.apache.xpath.internal.Expression) : Void;
 	
 	
 }

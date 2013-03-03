@@ -25,42 +25,42 @@ package sun.util.calendar;
 */
 extern class AbstractCalendar extends sun.util.calendar.CalendarSystem
 {
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	@:overload override public function getEra(eraName : String) : sun.util.calendar.Era;
+	@:overload @:public override public function getEra(eraName : String) : sun.util.calendar.Era;
 	
-	@:overload override public function getEras() : java.NativeArray<sun.util.calendar.Era>;
+	@:overload @:public override public function getEras() : java.NativeArray<sun.util.calendar.Era>;
 	
-	@:overload override public function setEra(date : sun.util.calendar.CalendarDate, eraName : String) : Void;
+	@:overload @:public override public function setEra(date : sun.util.calendar.CalendarDate, eraName : String) : Void;
 	
-	@:overload private function setEras(eras : java.NativeArray<sun.util.calendar.Era>) : Void;
+	@:overload @:protected private function setEras(eras : java.NativeArray<sun.util.calendar.Era>) : Void;
 	
-	@:overload override public function getCalendarDate() : sun.util.calendar.CalendarDate;
+	@:overload @:public override public function getCalendarDate() : sun.util.calendar.CalendarDate;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.CalendarDate;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.CalendarDate;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.CalendarDate;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.CalendarDate;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
+	@:overload @:public override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
 	
-	@:overload override public function getTime(date : sun.util.calendar.CalendarDate) : haxe.Int64;
+	@:overload @:public override public function getTime(date : sun.util.calendar.CalendarDate) : haxe.Int64;
 	
-	@:overload private function getTimeOfDay(date : sun.util.calendar.CalendarDate) : haxe.Int64;
+	@:overload @:protected private function getTimeOfDay(date : sun.util.calendar.CalendarDate) : haxe.Int64;
 	
-	@:overload public function getTimeOfDayValue(date : sun.util.calendar.CalendarDate) : haxe.Int64;
+	@:overload @:public public function getTimeOfDayValue(date : sun.util.calendar.CalendarDate) : haxe.Int64;
 	
-	@:overload override public function setTimeOfDay(cdate : sun.util.calendar.CalendarDate, fraction : Int) : sun.util.calendar.CalendarDate;
+	@:overload @:public override public function setTimeOfDay(cdate : sun.util.calendar.CalendarDate, fraction : Int) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Returns 7 in this default implementation.
 	*
 	* @return 7
 	*/
-	@:overload override public function getWeekLength() : Int;
+	@:overload @:public override public function getWeekLength() : Int;
 	
-	@:overload @:abstract private function isLeapYear(date : sun.util.calendar.CalendarDate) : Bool;
+	@:overload @:protected @:abstract private function isLeapYear(date : sun.util.calendar.CalendarDate) : Bool;
 	
-	@:overload override public function getNthDayOfWeek(nth : Int, dayOfWeek : Int, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
+	@:overload @:public override public function getNthDayOfWeek(nth : Int, dayOfWeek : Int, date : sun.util.calendar.CalendarDate) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Returns a date of the given day of week on or before the given fixed
@@ -70,7 +70,7 @@ extern class AbstractCalendar extends sun.util.calendar.CalendarSystem
 	* @param dayOfWeek the day of week
 	* @return the calculated date
 	*/
-	@:overload public static function getDayOfWeekDateOnOrBefore(fixedDate : haxe.Int64, dayOfWeek : Int) : haxe.Int64;
+	@:overload @:public @:static public static function getDayOfWeekDateOnOrBefore(fixedDate : haxe.Int64, dayOfWeek : Int) : haxe.Int64;
 	
 	/**
 	* Returns the fixed date calculated with the specified calendar
@@ -82,7 +82,7 @@ extern class AbstractCalendar extends sun.util.calendar.CalendarSystem
 	* @return the calculated fixed date
 	* @see AbstractCalendar.html#fixed_date
 	*/
-	@:overload @:abstract private function getFixedDate(date : sun.util.calendar.CalendarDate) : haxe.Int64;
+	@:overload @:protected @:abstract private function getFixedDate(date : sun.util.calendar.CalendarDate) : haxe.Int64;
 	
 	/**
 	* Calculates calendar fields from the specified fixed date. This
@@ -94,9 +94,9 @@ extern class AbstractCalendar extends sun.util.calendar.CalendarSystem
 	* @param fixedDate a fixed date to calculate calendar fields
 	* @see AbstractCalendar.html#fixed_date
 	*/
-	@:overload @:abstract private function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
+	@:overload @:protected @:abstract private function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
 	
-	@:overload public function validateTime(date : sun.util.calendar.CalendarDate) : Bool;
+	@:overload @:public public function validateTime(date : sun.util.calendar.CalendarDate) : Bool;
 	
 	
 }

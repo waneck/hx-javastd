@@ -49,32 +49,32 @@ extern interface HTMLMetaElement extends org.w3c.dom.html.HTMLElement
 	*  Associated information. See the  content attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getContent() : String;
+	@:overload @:public public function getContent() : String;
 	
-	@:overload public function setContent(content : String) : Void;
+	@:overload @:public public function setContent(content : String) : Void;
 	
 	/**
 	*  HTTP response header name. See the  http-equiv attribute definition in
 	* HTML 4.0.
 	*/
-	@:overload public function getHttpEquiv() : String;
+	@:overload @:public public function getHttpEquiv() : String;
 	
-	@:overload public function setHttpEquiv(httpEquiv : String) : Void;
+	@:overload @:public public function setHttpEquiv(httpEquiv : String) : Void;
 	
 	/**
 	*  Meta information name. See the  name attribute definition in HTML 4.0.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
 	/**
 	*  Select form of content. See the  scheme attribute definition in HTML
 	* 4.0.
 	*/
-	@:overload public function getScheme() : String;
+	@:overload @:public public function getScheme() : String;
 	
-	@:overload public function setScheme(scheme : String) : Void;
+	@:overload @:public public function setScheme(scheme : String) : Void;
 	
 	
 }

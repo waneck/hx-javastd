@@ -34,7 +34,7 @@ extern class ParserConfigurationException extends java.lang.Exception
 	* Create a new <code>ParserConfigurationException</code> with no
 	* detail mesage.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Create a new <code>ParserConfigurationException</code> with
@@ -42,7 +42,7 @@ extern class ParserConfigurationException extends java.lang.Exception
 	*
 	* @param msg The error message for the exception.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

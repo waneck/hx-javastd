@@ -29,9 +29,9 @@ package sun.reflect.misc;
 }
 extern class MethodUtil extends java.security.SecureClassLoader
 {
-	@:overload public static function getMethod(cls : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
+	@:overload @:public @:static public static function getMethod(cls : Class<Dynamic>, name : String, args : java.NativeArray<Class<Dynamic>>) : java.lang.reflect.Method;
 	
-	@:overload public static function getMethods(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Method>;
+	@:overload @:public @:static public static function getMethods(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Method>;
 	
 	/*
 	* Discover the public methods on public classes
@@ -39,18 +39,18 @@ extern class MethodUtil extends java.security.SecureClassLoader
 	* Class.getMethods() and walking towards Object until
 	* we're done.
 	*/
-	@:overload public static function getPublicMethods(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Method>;
+	@:overload @:public @:static public static function getPublicMethods(cls : Class<Dynamic>) : java.NativeArray<java.lang.reflect.Method>;
 	
 	/*
 	* Bounce through the trampoline.
 	*/
-	@:overload public static function invoke(m : java.lang.reflect.Method, obj : Dynamic, params : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public @:static public static function invoke(m : java.lang.reflect.Method, obj : Dynamic, params : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload @:synchronized private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:protected @:synchronized override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
-	@:overload private function findClass(name : String) : Class<Dynamic>;
+	@:overload @:protected override private function findClass(name : String) : Class<Dynamic>;
 	
-	@:overload override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload @:protected override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	
 }
@@ -60,13 +60,13 @@ extern class MethodUtil extends java.security.SecureClassLoader
 */
 @:native('sun$reflect$misc$MethodUtil$Signature') @:internal extern class MethodUtil_Signature
 {
-	@:overload public function equals(o2 : Dynamic) : Bool;
+	@:overload @:public public function equals(o2 : Dynamic) : Bool;
 	
 	/**
 	* Hash code computed using algorithm suggested in
 	* Effective Java, Item 8.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

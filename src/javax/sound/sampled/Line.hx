@@ -75,7 +75,7 @@ package javax.sound.sampled;
 	* line.
 	* @return description of the line
 	*/
-	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public @:public public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Opens the line, indicating that it should acquire any required
@@ -121,7 +121,7 @@ package javax.sound.sampled;
 	* @see Clip#open(AudioFormat, byte[], int, int)
 	* @see Clip#open(AudioInputStream)
 	*/
-	@:overload public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
 	/**
 	* Closes the line, indicating that any system resources
@@ -135,7 +135,7 @@ package javax.sound.sampled;
 	* @see #isOpen
 	* @see LineEvent
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Indicates whether the line is open, meaning that it has reserved
@@ -146,7 +146,7 @@ package javax.sound.sampled;
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload public function isOpen() : Bool;
+	@:overload @:public @:public public function isOpen() : Bool;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -155,7 +155,7 @@ package javax.sound.sampled;
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public @:public public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Indicates whether the line supports a control of the specified type.
@@ -164,7 +164,7 @@ package javax.sound.sampled;
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public @:public public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -177,7 +177,7 @@ package javax.sound.sampled;
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public @:public public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Adds a listener to this line.  Whenever the line's status changes, the
@@ -188,14 +188,14 @@ package javax.sound.sampled;
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public @:public public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }
@@ -237,13 +237,13 @@ package javax.sound.sampled;
 	* describe a desired line.
 	* @param lineClass the class of the line that the new Line.Info object describes
 	*/
-	@:overload public function new(lineClass : Class<Dynamic>) : Void;
+	@:overload @:public public function new(lineClass : Class<Dynamic>) : Void;
 	
 	/**
 	* Obtains the class of the line that this Line.Info object describes.
 	* @return the described line's class
 	*/
-	@:overload public function getLineClass() : Class<Dynamic>;
+	@:overload @:public public function getLineClass() : Class<Dynamic>;
 	
 	/**
 	* Indicates whether the specified info object matches this one.
@@ -262,13 +262,13 @@ package javax.sound.sampled;
 	* @return <code>true</code> if the specified object matches this one,
 	* <code>false</code> otherwise
 	*/
-	@:overload public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Obtains a textual description of the line info.
 	* @return a string description
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

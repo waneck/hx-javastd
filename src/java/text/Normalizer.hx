@@ -50,7 +50,7 @@ extern class Normalizer
 	* @throws NullPointerException If <code>src</code> or <code>form</code>
 	* is null.
 	*/
-	@:overload public static function normalize(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form) : String;
+	@:overload @:public @:static public static function normalize(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form) : String;
 	
 	/**
 	* Determines if the given sequence of char values is normalized.
@@ -65,7 +65,7 @@ extern class Normalizer
 	* @throws NullPointerException If <code>src</code> or <code>form</code>
 	* is null.
 	*/
-	@:overload public static function isNormalized(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form) : Bool;
+	@:overload @:public @:static public static function isNormalized(src : java.lang.CharSequence, form : java.text.Normalizer.Normalizer_Form) : Bool;
 	
 	
 }

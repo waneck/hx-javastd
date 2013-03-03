@@ -33,7 +33,7 @@ package sun.tools.jstatd;
 */
 @:require(java5) extern class Jstatd
 {
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

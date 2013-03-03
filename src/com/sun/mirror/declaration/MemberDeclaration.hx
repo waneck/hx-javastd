@@ -48,7 +48,7 @@ package com.sun.mirror.declaration;
 	* @return the type declaration within which this member or constructor
 	* is declared, or null if there is none
 	*/
-	@:overload public function getDeclaringType() : com.sun.mirror.declaration.TypeDeclaration;
+	@:overload @:public public function getDeclaringType() : com.sun.mirror.declaration.TypeDeclaration;
 	
 	
 }

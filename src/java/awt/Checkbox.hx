@@ -73,7 +73,7 @@ package java.awt;
 	* returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a check box with the specified label.  The state
@@ -87,7 +87,7 @@ package java.awt;
 	*      returns <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(label : String) : Void;
+	@:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* Creates a check box with the specified label
@@ -102,7 +102,7 @@ package java.awt;
 	*     returns <code>true</code>
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(label : String, state : Bool) : Void;
+	@:overload @:public public function new(label : String, state : Bool) : Void;
 	
 	/**
 	* Constructs a Checkbox with the specified label, set to the
@@ -119,7 +119,7 @@ package java.awt;
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function new(label : String, state : Bool, group : java.awt.CheckboxGroup) : Void;
+	@:require(java1) @:overload @:public public function new(label : String, state : Bool, group : java.awt.CheckboxGroup) : Void;
 	
 	/**
 	* Creates a check box with the specified label, in the specified
@@ -136,7 +136,7 @@ package java.awt;
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function new(label : String, group : java.awt.CheckboxGroup, state : Bool) : Void;
+	@:require(java1) @:overload @:public public function new(label : String, group : java.awt.CheckboxGroup, state : Bool) : Void;
 	
 	/**
 	* Creates the peer of the Checkbox. The peer allows you to change the
@@ -145,7 +145,7 @@ package java.awt;
 	* @see     java.awt.Toolkit#createCheckbox(java.awt.Checkbox)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Gets the label of this check box.
@@ -154,7 +154,7 @@ package java.awt;
 	*                  if this check box has no label.
 	* @see      #setLabel(String)
 	*/
-	@:overload public function getLabel() : String;
+	@:overload @:public public function getLabel() : String;
 	
 	/**
 	* Sets this check box's label to be the string argument.
@@ -163,7 +163,7 @@ package java.awt;
 	*                        <code>null</code> for no label.
 	* @see      #getLabel
 	*/
-	@:overload public function setLabel(label : String) : Void;
+	@:overload @:public public function setLabel(label : String) : Void;
 	
 	/**
 	* Determines whether this check box is in the "on" or "off" state.
@@ -173,7 +173,7 @@ package java.awt;
 	* @return    the state of this check box, as a boolean value
 	* @see       #setState
 	*/
-	@:overload public function getState() : Bool;
+	@:overload @:public public function getState() : Bool;
 	
 	/**
 	* Sets the state of this check box to the specified state.
@@ -189,14 +189,14 @@ package java.awt;
 	* @param     state   the boolean state of the check box
 	* @see       #getState
 	*/
-	@:overload public function setState(state : Bool) : Void;
+	@:overload @:public public function setState(state : Bool) : Void;
 	
 	/**
 	* Returns an array (length 1) containing the checkbox
 	* label or null if the checkbox is not selected.
 	* @see ItemSelectable
 	*/
-	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload @:public public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Determines this check box's group.
@@ -204,7 +204,7 @@ package java.awt;
 	*               if the check box is not part of a check box group.
 	* @see        #setCheckboxGroup(CheckboxGroup)
 	*/
-	@:overload public function getCheckboxGroup() : java.awt.CheckboxGroup;
+	@:overload @:public public function getCheckboxGroup() : java.awt.CheckboxGroup;
 	
 	/**
 	* Sets this check box's group to the specified check box group.
@@ -222,7 +222,7 @@ package java.awt;
 	*                to remove this check box from any check box group
 	* @see       #getCheckboxGroup
 	*/
-	@:overload public function setCheckboxGroup(g : java.awt.CheckboxGroup) : Void;
+	@:overload @:public public function setCheckboxGroup(g : java.awt.CheckboxGroup) : Void;
 	
 	/**
 	* Adds the specified item listener to receive item events from
@@ -240,7 +240,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function addItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Removes the specified item listener so that the item listener
@@ -256,7 +256,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function removeItemListener(l : java.awt.event.ItemListener) : Void;
 	
 	/**
 	* Returns an array of all the item listeners
@@ -272,7 +272,7 @@ package java.awt;
 	* @see           java.awt.event.ItemListener
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getItemListeners() : java.NativeArray<java.awt.event.ItemListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -307,7 +307,7 @@ package java.awt;
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this check box.
@@ -323,7 +323,7 @@ package java.awt;
 	* @see           #processItemEvent
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload @:protected override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this check box by
@@ -349,7 +349,7 @@ package java.awt;
 	* @see         java.awt.Component#enableEvents
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
+	@:require(java1) @:overload @:protected private function processItemEvent(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Returns a string representing the state of this <code>Checkbox</code>.
@@ -360,7 +360,7 @@ package java.awt;
 	*
 	* @return    the parameter string of this check box
 	*/
-	@:overload private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this Checkbox.
@@ -372,7 +372,7 @@ package java.awt;
 	*         AccessibleContext of this Checkbox
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -384,13 +384,13 @@ package java.awt;
 */
 @:require(java3) @:native('java$awt$Checkbox$AccessibleAWTCheckbox') extern class Checkbox_AccessibleAWTCheckbox extends java.awt.Component.Component_AccessibleAWTComponent implements java.awt.event.ItemListener implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Fire accessible property change events when the state of the
 	* toggle button changes.
 	*/
-	@:overload public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
+	@:overload @:public public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -400,7 +400,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload @:public override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -410,7 +410,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload @:public override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.
@@ -419,14 +419,14 @@ package java.awt;
 	*
 	* @return the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload @:public public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload @:public public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -434,7 +434,7 @@ package java.awt;
 	* @param i zero-based index of actions
 	* @return true if the the action was performed; else false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload @:public public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the value of this object as a Number.  If the value has not been
@@ -443,7 +443,7 @@ package java.awt;
 	* @return value of the object
 	* @see #setCurrentAccessibleValue
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
@@ -451,7 +451,7 @@ package java.awt;
 	* @return True if the value was set; else False
 	* @see #getCurrentAccessibleValue
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload @:public public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
@@ -460,7 +460,7 @@ package java.awt;
 	* have a minimum value
 	* @see #getMaximumAccessibleValue
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
@@ -469,7 +469,7 @@ package java.awt;
 	* have a maximum value
 	* @see #getMinimumAccessibleValue
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload @:public public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the role of this object.
@@ -478,7 +478,7 @@ package java.awt;
 	* the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state set of this object.
@@ -487,7 +487,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

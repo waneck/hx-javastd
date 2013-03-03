@@ -39,28 +39,28 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* The root element of the serialized form XML is {@value}.
 	*/
-	public static var NAME(default, null) : String;
+	@:public @:static @:final public static var NAME(default, null) : String;
 	
 	/**
 	* The current member being documented.
 	*/
-	private var currentMember : com.sun.javadoc.MemberDoc;
+	@:protected private var currentMember : com.sun.javadoc.MemberDoc;
 	
 	/**
 	* Construct a new SerializedFormBuilder.
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.SerializedFormBuilder;
+	@:overload @:public @:static public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.SerializedFormBuilder;
 	
 	/**
 	* Build the serialized form.
 	*/
-	@:overload override public function build() : Void;
+	@:overload @:public override public function build() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
 	/**
 	* Build the serialized form.
@@ -68,7 +68,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param serializedTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildSerializedForm(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSerializedForm(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the serialized form summaries.
@@ -76,7 +76,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param serializedTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildSerializedFormSummaries(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSerializedFormSummaries(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, serializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the package serialized form for the current package being processed.
@@ -84,7 +84,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param serializedSummariesTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildPackageSerializedForm(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, serializedSummariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPackageSerializedForm(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, serializedSummariesTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the package header.
@@ -92,7 +92,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param packageSerializedTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildPackageHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageSerializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildPackageHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageSerializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the class serialized form.
@@ -100,7 +100,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param packageSerializedTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassSerializedForm(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageSerializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassSerializedForm(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, packageSerializedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the serial UID information for the given class.
@@ -108,7 +108,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classTree content tree to which the serial UID information will be added
 	*/
-	@:overload public function buildSerialUIDInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSerialUIDInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summaries for the methods and fields.
@@ -116,7 +116,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildClassContent(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildClassContent(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summaries for the methods that belong to the given
@@ -125,7 +125,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildSerializableMethods(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSerializableMethods(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the method sub header.
@@ -133,7 +133,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param methodsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildMethodSubHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMethodSubHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the deprecated method description.
@@ -141,7 +141,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param methodsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildDeprecatedMethodInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildDeprecatedMethodInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the information for the method.
@@ -149,7 +149,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param methodsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildMethodInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMethodInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build method description.
@@ -157,7 +157,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param methodsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildMethodDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMethodDescription(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the method tags.
@@ -165,7 +165,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param methodsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildMethodTags(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildMethodTags(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, methodsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the field header.
@@ -173,7 +173,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the serialization overview for the given class.
@@ -181,7 +181,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class to print the overview for.
 	* @param classContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldSerializationOverview(classDoc : com.sun.javadoc.ClassDoc, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldSerializationOverview(classDoc : com.sun.javadoc.ClassDoc, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the summaries for the fields that belong to the given class.
@@ -189,7 +189,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param classContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildSerializableFields(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSerializableFields(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, classContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the field sub header.
@@ -197,7 +197,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param fieldsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldSubHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, fieldsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldSubHeader(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, fieldsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the field deprecation information.
@@ -205,14 +205,14 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param fieldsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, fieldsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldDeprecationInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, fieldsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the serial field tags information.
 	*
 	* @param serializableFieldsTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildSerialFieldTagsInfo(serializableFieldsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildSerialFieldTagsInfo(serializableFieldsTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Build the field information.
@@ -220,7 +220,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param node the XML element that specifies which components to document
 	* @param fieldsContentTree content tree to which the documentation will be added
 	*/
-	@:overload public function buildFieldInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, fieldsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function buildFieldInfo(node : com.sun.tools.doclets.internal.toolkit.builders.XMLNode, fieldsContentTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Return true if the given Doc should be included
@@ -228,7 +228,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	*
 	* @param doc the Doc object to check for serializability.
 	*/
-	@:overload public static function serialInclude(doc : com.sun.javadoc.Doc) : Bool;
+	@:overload @:public @:static public static function serialInclude(doc : com.sun.javadoc.Doc) : Bool;
 	
 	
 }

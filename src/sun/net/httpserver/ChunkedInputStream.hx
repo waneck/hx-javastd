@@ -25,7 +25,7 @@ package sun.net.httpserver;
 */
 @:internal extern class ChunkedInputStream extends sun.net.httpserver.LeftOverInputStream
 {
-	@:overload private function readImpl(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:protected override private function readImpl(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* returns the number of bytes available to read in the current chunk
@@ -33,19 +33,19 @@ package sun.net.httpserver;
 	* limitation for the moment. It only affects potential efficiency
 	* rather than correctness.
 	*/
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
 	/* called after the stream is closed to see if bytes
 	* have been read from the underlying channel
 	* and buffered internally
 	*/
-	@:overload public function isDataBuffered() : Bool;
+	@:overload @:public override public function isDataBuffered() : Bool;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload public function mark(l : Int) : Void;
+	@:overload @:public override public function mark(l : Int) : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	
 }

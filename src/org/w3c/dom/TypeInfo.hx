@@ -123,14 +123,14 @@ extern interface TypeInfo
 	*  The name of a type declared for the associated element or attribute,
 	* or <code>null</code> if unknown.
 	*/
-	@:overload public function getTypeName() : String;
+	@:overload @:public public function getTypeName() : String;
 	
 	/**
 	*  The namespace of the type declared for the associated element or
 	* attribute or <code>null</code> if the element does not have
 	* declaration or if no namespace information is available.
 	*/
-	@:overload public function getTypeNamespace() : String;
+	@:overload @:public public function getTypeNamespace() : String;
 	
 	/**
 	*  This method returns if there is a derivation between the reference
@@ -154,7 +154,7 @@ extern interface TypeInfo
 	*   type definition}, {item type definition}, or {member type
 	*   definitions} from the reference type definition.
 	*/
-	@:overload public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload @:public public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class FileSystemAlreadyExistsException extends java.lang.RuntimeException
 	/**
 	* Constructs an instance of this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an instance of this class.
@@ -40,7 +40,7 @@ extern class FileSystemAlreadyExistsException extends java.lang.RuntimeException
 	* @param   msg
 	*          the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

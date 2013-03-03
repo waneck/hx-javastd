@@ -52,12 +52,12 @@ extern interface NotificationBuffer
 	* elements but will not contain more than this number of
 	* different notifications.
 	*/
-	@:overload public function fetchNotifications(filter : com.sun.jmx.remote.internal.NotificationBufferFilter, startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
+	@:overload @:public public function fetchNotifications(filter : com.sun.jmx.remote.internal.NotificationBufferFilter, startSequenceNumber : haxe.Int64, timeout : haxe.Int64, maxNotifications : Int) : javax.management.remote.NotificationResult;
 	
 	/**
 	* <p>Discard this buffer.</p>
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	
 }

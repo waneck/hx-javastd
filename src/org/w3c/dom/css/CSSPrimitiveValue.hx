@@ -43,7 +43,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	/**
 	* The type of the value as defined by the constants specified above.
 	*/
-	@:overload public function getPrimitiveType() : java.StdTypes.Int16;
+	@:overload @:public public function getPrimitiveType() : java.StdTypes.Int16;
 	
 	/**
 	*  A method to set the float value with a specified unit. If the property
@@ -65,7 +65,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*   the float value or the unit type.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this property is readonly.
 	*/
-	@:overload public function setFloatValue(unitType : java.StdTypes.Int16, floatValue : Single) : Void;
+	@:overload @:public public function setFloatValue(unitType : java.StdTypes.Int16, floatValue : Single) : Void;
 	
 	/**
 	*  This method is used to get a float value in a specified unit. If this
@@ -86,7 +86,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*   value or if the float value can't be converted into the specified
 	*   unit.
 	*/
-	@:overload public function getFloatValue(unitType : java.StdTypes.Int16) : Single;
+	@:overload @:public public function getFloatValue(unitType : java.StdTypes.Int16) : Single;
 	
 	/**
 	*  A method to set the string value with the specified unit. If the
@@ -104,7 +104,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*   unit.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this property is readonly.
 	*/
-	@:overload public function setStringValue(stringType : java.StdTypes.Int16, stringValue : String) : Void;
+	@:overload @:public public function setStringValue(stringType : java.StdTypes.Int16, stringValue : String) : Void;
 	
 	/**
 	*  This method is used to get the string value. If the CSS value doesn't
@@ -119,7 +119,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*    INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a string
 	*   value.
 	*/
-	@:overload public function getStringValue() : String;
+	@:overload @:public public function getStringValue() : String;
 	
 	/**
 	*  This method is used to get the Counter value. If this CSS value
@@ -131,7 +131,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*    INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a
 	*   Counter value (e.g. this is not <code>CSS_COUNTER</code>).
 	*/
-	@:overload public function getCounterValue() : org.w3c.dom.css.Counter;
+	@:overload @:public public function getCounterValue() : org.w3c.dom.css.Counter;
 	
 	/**
 	*  This method is used to get the Rect value. If this CSS value doesn't
@@ -143,7 +143,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*    INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a Rect
 	*   value. (e.g. this is not <code>CSS_RECT</code>).
 	*/
-	@:overload public function getRectValue() : org.w3c.dom.css.Rect;
+	@:overload @:public public function getRectValue() : org.w3c.dom.css.Rect;
 	
 	/**
 	*  This method is used to get the RGB color. If this CSS value doesn't
@@ -155,7 +155,7 @@ extern interface CSSPrimitiveValue extends org.w3c.dom.css.CSSValue
 	*    INVALID_ACCESS_ERR: Raised if the attached property can't return a
 	*   RGB color value (e.g. this is not <code>CSS_RGBCOLOR</code>).
 	*/
-	@:overload public function getRGBColorValue() : org.w3c.dom.css.RGBColor;
+	@:overload @:public public function getRGBColorValue() : org.w3c.dom.css.RGBColor;
 	
 	
 }

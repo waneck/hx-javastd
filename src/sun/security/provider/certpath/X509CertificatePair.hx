@@ -28,7 +28,7 @@ extern class X509CertificatePair
 	/**
 	* Creates an empty instance of X509CertificatePair.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an instance of X509CertificatePair. At least one of
@@ -40,42 +40,42 @@ extern class X509CertificatePair
 	*          which represents a certificate issued by this CA to other CAs.
 	* @throws CertificateException If an exception occurs.
 	*/
-	@:overload public function new(forward : java.security.cert.X509Certificate, reverse : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function new(forward : java.security.cert.X509Certificate, reverse : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Clear the cache for debugging.
 	*/
-	@:overload @:synchronized public static function clearCache() : Void;
+	@:overload @:public @:static @:synchronized public static function clearCache() : Void;
 	
 	/**
 	* Create a X509CertificatePair from its encoding. Uses cache lookup
 	* if possible.
 	*/
-	@:overload @:synchronized public static function generateCertificatePair(encoded : java.NativeArray<java.StdTypes.Int8>) : sun.security.provider.certpath.X509CertificatePair;
+	@:overload @:public @:static @:synchronized public static function generateCertificatePair(encoded : java.NativeArray<java.StdTypes.Int8>) : sun.security.provider.certpath.X509CertificatePair;
 	
 	/**
 	* Sets the forward component of the certificate pair.
 	*/
-	@:overload public function setForward(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function setForward(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Sets the reverse component of the certificate pair.
 	*/
-	@:overload public function setReverse(cert : java.security.cert.X509Certificate) : Void;
+	@:overload @:public public function setReverse(cert : java.security.cert.X509Certificate) : Void;
 	
 	/**
 	* Returns the forward component of the certificate pair.
 	*
 	* @return The forward certificate, or null if not set.
 	*/
-	@:overload public function getForward() : java.security.cert.X509Certificate;
+	@:overload @:public public function getForward() : java.security.cert.X509Certificate;
 	
 	/**
 	* Returns the reverse component of the certificate pair.
 	*
 	* @return The reverse certificate, or null if not set.
 	*/
-	@:overload public function getReverse() : java.security.cert.X509Certificate;
+	@:overload @:public public function getReverse() : java.security.cert.X509Certificate;
 	
 	/**
 	* Return the DER encoded form of the certificate pair.
@@ -83,14 +83,14 @@ extern class X509CertificatePair
 	* @return The encoded form of the certificate pair.
 	* @throws CerticateEncodingException If an encoding exception occurs.
 	*/
-	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Return a printable representation of the certificate pair.
 	*
 	* @return A String describing the contents of the pair.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

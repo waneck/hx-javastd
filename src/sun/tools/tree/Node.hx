@@ -28,32 +28,32 @@ extern class Node implements sun.tools.java.Constants implements java.lang.Clone
 	/**
 	* Get the operator
 	*/
-	@:overload public function getOp() : Int;
+	@:overload @:public public function getOp() : Int;
 	
 	/**
 	* Get where
 	*/
-	@:overload public function getWhere() : haxe.Int64;
+	@:overload @:public public function getWhere() : haxe.Int64;
 	
 	/**
 	* Implicit conversions
 	*/
-	@:overload public function convert(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, t : sun.tools.java.Type, e : sun.tools.tree.Expression) : sun.tools.tree.Expression;
+	@:overload @:public public function convert(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, t : sun.tools.java.Type, e : sun.tools.tree.Expression) : sun.tools.tree.Expression;
 	
 	/**
 	* Print
 	*/
-	@:overload public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public public function print(out : java.io.PrintStream) : Void;
 	
 	/**
 	* Clone this object.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	/*
 	* Useful for simple debugging
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

@@ -148,14 +148,14 @@ package javax.sound.sampled;
 	* @param lateReflectionIntensity the new type's late reflection intensity in dB
 	* @param decayTime the new type's decay time in microseconds
 	*/
-	@:overload private function new(name : String, earlyReflectionDelay : Int, earlyReflectionIntensity : Single, lateReflectionDelay : Int, lateReflectionIntensity : Single, decayTime : Int) : Void;
+	@:overload @:protected private function new(name : String, earlyReflectionDelay : Int, earlyReflectionIntensity : Single, lateReflectionDelay : Int, lateReflectionIntensity : Single, decayTime : Int) : Void;
 	
 	/**
 	* Obtains the name of this reverb type.
 	* @return the name of this reverb type
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getName() : String;
+	@:require(java5) @:overload @:public public function getName() : String;
 	
 	/**
 	* Returns the early reflection delay time in microseconds.
@@ -163,7 +163,7 @@ package javax.sound.sampled;
 	* heard and when the first early reflections are heard.
 	* @return  early reflection delay time for this reverb type, in microseconds
 	*/
-	@:overload @:final public function getEarlyReflectionDelay() : Int;
+	@:overload @:public @:final public function getEarlyReflectionDelay() : Int;
 	
 	/**
 	* Returns the early reflection intensity in decibels.
@@ -171,7 +171,7 @@ package javax.sound.sampled;
 	* relative to the direct signal.
 	* @return  early reflection intensity for this reverb type, in dB
 	*/
-	@:overload @:final public function getEarlyReflectionIntensity() : Single;
+	@:overload @:public @:final public function getEarlyReflectionIntensity() : Single;
 	
 	/**
 	* Returns the late reflection delay time in microseconds.
@@ -179,7 +179,7 @@ package javax.sound.sampled;
 	* are heard and when the first late reflections are heard.
 	* @return  late reflection delay time for this reverb type, in microseconds
 	*/
-	@:overload @:final public function getLateReflectionDelay() : Int;
+	@:overload @:public @:final public function getLateReflectionDelay() : Int;
 	
 	/**
 	* Returns the late reflection intensity in decibels.
@@ -187,7 +187,7 @@ package javax.sound.sampled;
 	* relative to the direct signal.
 	* @return  late reflection intensity for this reverb type, in dB
 	*/
-	@:overload @:final public function getLateReflectionIntensity() : Single;
+	@:overload @:public @:final public function getLateReflectionIntensity() : Single;
 	
 	/**
 	* Obtains the decay time, which is the amount of time over which the
@@ -195,7 +195,7 @@ package javax.sound.sampled;
 	* value is implementation-dependent.
 	* @return  the decay time of the late reflections, in microseconds
 	*/
-	@:overload @:final public function getDecayTime() : Int;
+	@:overload @:public @:final public function getDecayTime() : Int;
 	
 	/**
 	* Indicates whether the specified object is equal to this reverb type,
@@ -204,12 +204,12 @@ package javax.sound.sampled;
 	* @return <code>true</code> if this reverb type is the same as
 	* <code>obj</code>; <code>false</code> otherwise
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashcode method.
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Provides a <code>String</code> representation of the reverb type,
@@ -218,7 +218,7 @@ package javax.sound.sampled;
 	* Java Sound.
 	* @return reverberation type name and description
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }

@@ -50,11 +50,11 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	*
 	* @since 1.7
 	*/
-	@:require(java7) private var active : Bool;
+	@:require(java7) @:protected private var active : Bool;
 	
-	private var providerType : Class<com.sun.tracing.Provider>;
+	@:protected private var providerType : Class<com.sun.tracing.Provider>;
 	
-	private var probes : java.util.HashMap<java.lang.reflect.Method, sun.tracing.ProbeSkeleton>;
+	@:protected private var probes : java.util.HashMap<java.lang.reflect.Method, sun.tracing.ProbeSkeleton>;
 	
 	/**
 	* Creates a framework-specific probe subtype.
@@ -65,14 +65,14 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* @param method A method in the user's interface
 	* @return a subclass of ProbeSkeleton for the particular framework.
 	*/
-	@:overload @:abstract private function createProbe(method : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
+	@:overload @:protected @:abstract private function createProbe(method : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
 	
 	/**
 	* Initializes the provider.
 	*
 	* @param type the user's interface
 	*/
-	@:overload private function new(type : Class<com.sun.tracing.Provider>) : Void;
+	@:overload @:protected private function new(type : Class<com.sun.tracing.Provider>) : Void;
 	
 	/**
 	* Post-constructor initialization routine.
@@ -80,7 +80,7 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* Subclass instances must be initialized before they can create probes.
 	* It is up to the factory implementations to call this after construction.
 	*/
-	@:overload public function init() : Void;
+	@:overload @:public public function init() : Void;
 	
 	/**
 	* Magic routine which creates an implementation of the user's interface.
@@ -92,7 +92,7 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	*
 	* @return an implementation of the user's interface
 	*/
-	@:overload public function newProxyInstance<T : com.sun.tracing.Provider>() : T;
+	@:overload @:public public function newProxyInstance<T : com.sun.tracing.Provider>() : T;
 	
 	/**
 	* Triggers a framework probe when a user interface method is called.
@@ -109,7 +109,7 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* @param args the arguments passed in the call.
 	* @return always null, if the method is a user-defined probe
 	*/
-	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	/**
 	* Direct accessor for {@code Probe} objects.
@@ -117,14 +117,14 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* @param m the method corresponding to a probe
 	* @return the method associated probe object, or null
 	*/
-	@:overload public function getProbe(m : java.lang.reflect.Method) : com.sun.tracing.Probe;
+	@:overload @:public public function getProbe(m : java.lang.reflect.Method) : com.sun.tracing.Probe;
 	
 	/**
 	* Default provider disposal method.
 	*
 	* This is overridden in subclasses as needed.
 	*/
-	@:overload public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Gets the user-specified provider name for the user's interface.
@@ -133,7 +133,7 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* is used.  Otherwise we use the simple name of the user interface's class.
 	* @return the provider name
 	*/
-	@:overload private function getProviderName() : String;
+	@:overload @:protected private function getProviderName() : String;
 	
 	/**
 	* Utility method for getting a string value from an annotation.
@@ -145,7 +145,7 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* @param defaultValue the value to return if the annotation doesn't
 	* exist, doesn't have a "value", or the value is empty.
 	*/
-	@:overload private static function getAnnotationString(element : java.lang.reflect.AnnotatedElement, annotation : Class<java.lang.annotation.Annotation>, defaultValue : String) : String;
+	@:overload @:protected @:static private static function getAnnotationString(element : java.lang.reflect.AnnotatedElement, annotation : Class<java.lang.annotation.Annotation>, defaultValue : String) : String;
 	
 	/**
 	* Utility method for calling an arbitrary method in an annotation.
@@ -158,7 +158,7 @@ extern class ProviderSkeleton implements java.lang.reflect.InvocationHandler imp
 	* exist, or we couldn't invoke the method for some reason.
 	* @return the result of calling the annotation method, or the default.
 	*/
-	@:overload private static function getAnnotationValue(element : java.lang.reflect.AnnotatedElement, annotation : Class<java.lang.annotation.Annotation>, methodName : String, defaultValue : Dynamic) : Dynamic;
+	@:overload @:protected @:static private static function getAnnotationValue(element : java.lang.reflect.AnnotatedElement, annotation : Class<java.lang.annotation.Annotation>, methodName : String, defaultValue : Dynamic) : Dynamic;
 	
 	
 }

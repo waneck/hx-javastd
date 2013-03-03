@@ -29,11 +29,11 @@ extern class X11TextRenderer extends sun.java2d.pipe.GlyphListPipe
 	* Override super class method to call the AA pipe if
 	* AA is specified in the GlyphVector's FontRenderContext
 	*/
-	@:overload override public function drawGlyphVector(sg2d : sun.java2d.SunGraphics2D, g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
+	@:overload @:public override public function drawGlyphVector(sg2d : sun.java2d.SunGraphics2D, g : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload @:protected override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
-	@:overload public function traceWrap() : sun.font.X11TextRenderer;
+	@:overload @:public public function traceWrap() : sun.font.X11TextRenderer;
 	
 	
 }

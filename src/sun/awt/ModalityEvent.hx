@@ -28,13 +28,13 @@ package sun.awt;
 */
 extern class ModalityEvent extends java.awt.AWTEvent implements java.awt.ActiveEvent
 {
-	public static var MODALITY_PUSHED(default, null) : Int;
+	@:public @:static @:final public static var MODALITY_PUSHED(default, null) : Int;
 	
-	public static var MODALITY_POPPED(default, null) : Int;
+	@:public @:static @:final public static var MODALITY_POPPED(default, null) : Int;
 	
-	@:overload public function new(source : Dynamic, listener : sun.awt.ModalityListener, id : Int) : Void;
+	@:overload @:public public function new(source : Dynamic, listener : sun.awt.ModalityListener, id : Int) : Void;
 	
-	@:overload public function dispatch() : Void;
+	@:overload @:public public function dispatch() : Void;
 	
 	
 }

@@ -25,12 +25,12 @@ package sun.misc;
 */
 extern class Queue
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Enqueue an object.
 	*/
-	@:overload @:synchronized public function enqueue(obj : Dynamic) : Void;
+	@:overload @:public @:synchronized public function enqueue(obj : Dynamic) : Void;
 	
 	/**
 	* Dequeue the oldest object on the queue.  Will wait indefinitely.
@@ -39,7 +39,7 @@ extern class Queue
 	* @exception java.lang.InterruptedException if any thread has
 	*              interrupted this thread.
 	*/
-	@:overload public function dequeue() : Dynamic;
+	@:overload @:public public function dequeue() : Dynamic;
 	
 	/**
 	* Dequeue the oldest object on the queue.
@@ -50,51 +50,51 @@ extern class Queue
 	* @exception java.lang.InterruptedException if any thread has
 	*              interrupted this thread.
 	*/
-	@:overload @:synchronized public function dequeue(timeOut : haxe.Int64) : Dynamic;
+	@:overload @:public @:synchronized public function dequeue(timeOut : haxe.Int64) : Dynamic;
 	
 	/**
 	* Is the queue empty?
 	* @return true if the queue is empty.
 	*/
-	@:overload @:synchronized public function isEmpty() : Bool;
+	@:overload @:public @:synchronized public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the elements in Last-In, First-Out
 	* order. Use the Enumeration methods on the returned object to
 	* fetch the elements sequentially.
 	*/
-	@:overload @:final @:synchronized public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:final @:synchronized public function elements() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns an enumeration of the elements in First-In, First-Out
 	* order. Use the Enumeration methods on the returned object to
 	* fetch the elements sequentially.
 	*/
-	@:overload @:final @:synchronized public function reverseElements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public @:final @:synchronized public function reverseElements() : java.util.Enumeration<Dynamic>;
 	
-	@:overload @:synchronized public function dump(msg : String) : Void;
+	@:overload @:public @:synchronized public function dump(msg : String) : Void;
 	
 	
 }
 @:internal extern class FIFOQueueEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }
 @:internal extern class LIFOQueueEnumerator implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }
 @:internal extern class QueueElement
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

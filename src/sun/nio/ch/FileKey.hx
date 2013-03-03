@@ -25,11 +25,11 @@ package sun.nio.ch;
 */
 extern class FileKey
 {
-	@:overload public static function create(fd : java.io.FileDescriptor) : sun.nio.ch.FileKey;
+	@:overload @:public @:static public static function create(fd : java.io.FileDescriptor) : sun.nio.ch.FileKey;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

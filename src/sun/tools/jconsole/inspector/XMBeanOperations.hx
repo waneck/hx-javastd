@@ -25,9 +25,9 @@ package sun.tools.jconsole.inspector;
 */
 extern class XMBeanOperations extends sun.tools.jconsole.inspector.XOperations
 {
-	@:overload public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
+	@:overload @:public public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload private function updateOperations(operations : java.NativeArray<javax.management.MBeanOperationInfo>) : java.NativeArray<javax.management.MBeanOperationInfo>;
+	@:overload @:protected override private function updateOperations(operations : java.NativeArray<javax.management.MBeanOperationInfo>) : java.NativeArray<javax.management.MBeanOperationInfo>;
 	
 	
 }

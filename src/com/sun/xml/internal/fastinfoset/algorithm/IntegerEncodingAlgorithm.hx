@@ -27,17 +27,17 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class IntegerEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm
 {
-	public static var SHORT_SIZE(default, null) : Int;
+	@:public @:final @:static public static var SHORT_SIZE(default, null) : Int;
 	
-	public static var INT_SIZE(default, null) : Int;
+	@:public @:final @:static public static var INT_SIZE(default, null) : Int;
 	
-	public static var LONG_SIZE(default, null) : Int;
+	@:public @:final @:static public static var LONG_SIZE(default, null) : Int;
 	
-	public static var SHORT_MAX_CHARACTER_SIZE(default, null) : Int;
+	@:public @:final @:static public static var SHORT_MAX_CHARACTER_SIZE(default, null) : Int;
 	
-	public static var INT_MAX_CHARACTER_SIZE(default, null) : Int;
+	@:public @:final @:static public static var INT_MAX_CHARACTER_SIZE(default, null) : Int;
 	
-	public static var LONG_MAX_CHARACTER_SIZE(default, null) : Int;
+	@:public @:final @:static public static var LONG_MAX_CHARACTER_SIZE(default, null) : Int;
 	
 	
 }

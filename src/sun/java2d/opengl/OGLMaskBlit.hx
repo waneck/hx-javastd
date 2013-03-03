@@ -25,7 +25,7 @@ package sun.java2d.opengl;
 */
 @:internal extern class OGLMaskBlit extends sun.java2d.pipe.BufferedMaskBlit
 {
-	@:overload private function validateContext(dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region) : Void;
+	@:overload @:protected override private function validateContext(dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region) : Void;
 	
 	
 }

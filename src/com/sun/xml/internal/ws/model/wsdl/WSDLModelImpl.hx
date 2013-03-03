@@ -25,51 +25,51 @@ package com.sun.xml.internal.ws.model.wsdl;
 */
 extern class WSDLModelImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl implements com.sun.xml.internal.ws.api.model.wsdl.WSDLModel
 {
-	@:overload public function new(systemId : String) : Void;
+	@:overload @:public public function new(systemId : String) : Void;
 	
 	/**
 	* To create {@link WSDLModelImpl} from WSDL that doesn't have a system ID.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function addMessage(msg : com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl) : Void;
+	@:overload @:public public function addMessage(msg : com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl) : Void;
 	
-	@:overload public function getMessage(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl;
+	@:overload @:public public function getMessage(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl;
 	
-	@:overload public function addPortType(pt : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl) : Void;
+	@:overload @:public public function addPortType(pt : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl) : Void;
 	
-	@:overload public function getPortType(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl;
+	@:overload @:public public function getPortType(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl;
 	
-	@:overload public function addBinding(boundPortType : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl) : Void;
+	@:overload @:public public function addBinding(boundPortType : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl) : Void;
 	
-	@:overload public function getBinding(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl;
+	@:overload @:public public function getBinding(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl;
 	
-	@:overload public function addService(svc : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl) : Void;
+	@:overload @:public public function addService(svc : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl) : Void;
 	
-	@:overload public function getService(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl;
+	@:overload @:public public function getService(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl;
 	
-	@:overload public function getMessages() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl>;
+	@:overload @:public public function getMessages() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.wsdl.WSDLMessageImpl>;
 	
-	@:overload public function getPortTypes() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl>;
+	@:overload @:public public function getPortTypes() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.wsdl.WSDLPortTypeImpl>;
 	
-	@:overload public function getBindings() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType>;
+	@:overload @:public public function getBindings() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType>;
 	
-	@:overload public function getServices() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl>;
+	@:overload @:public public function getServices() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl>;
 	
 	/**
 	* Returns the first service QName from insertion order
 	*/
-	@:overload public function getFirstServiceName() : javax.xml.namespace.QName;
+	@:overload @:public public function getFirstServiceName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns first port QName from first service as per the insertion order
 	*/
-	@:overload public function getFirstPortName() : javax.xml.namespace.QName;
+	@:overload @:public public function getFirstPortName() : javax.xml.namespace.QName;
 	
 	/**
 	* gets the first port in the wsdl which matches the serviceName and portType
 	*/
-	@:overload public function getMatchingPort(serviceName : javax.xml.namespace.QName, portType : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl;
+	@:overload @:public public function getMatchingPort(serviceName : javax.xml.namespace.QName, portType : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl;
 	
 	/**
 	*
@@ -78,25 +78,25 @@ extern class WSDLModelImpl extends com.sun.xml.internal.ws.model.wsdl.AbstractEx
 	* @return
 	*          WSDLBoundOperation on success otherwise null. throws NPE if any of the parameters null
 	*/
-	@:overload public function getBinding(serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl;
+	@:overload @:public public function getBinding(serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.model.wsdl.WSDLBoundPortTypeImpl;
 	
 	/**
 	* Gives the PolicyMap associated with the WSDLModel
 	*
 	* @return PolicyMap
 	*/
-	@:overload public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload @:public public function getPolicyMap() : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	/**
 	* Set PolicyMap for the WSDLModel.
 	* @param policyMap
 	*/
-	@:overload public function setPolicyMap(policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
+	@:overload @:public public function setPolicyMap(policyMap : com.sun.xml.internal.ws.policy.PolicyMap) : Void;
 	
 	/**
 	* Invoked at the end of the model construction to fix up references, etc.
 	*/
-	@:overload public function freeze() : Void;
+	@:overload @:public public function freeze() : Void;
 	
 	
 }

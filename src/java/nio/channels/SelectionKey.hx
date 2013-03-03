@@ -28,7 +28,7 @@ extern class SelectionKey
 	/**
 	* Constructs an instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the channel for which this key was created.  This method will
@@ -36,7 +36,7 @@ extern class SelectionKey
 	*
 	* @return  This key's channel
 	*/
-	@:overload @:abstract public function channel() : java.nio.channels.SelectableChannel;
+	@:overload @:public @:abstract public function channel() : java.nio.channels.SelectableChannel;
 	
 	/**
 	* Returns the selector for which this key was created.  This method will
@@ -44,7 +44,7 @@ extern class SelectionKey
 	*
 	* @return  This key's selector
 	*/
-	@:overload @:abstract public function selector() : java.nio.channels.Selector;
+	@:overload @:public @:abstract public function selector() : java.nio.channels.Selector;
 	
 	/**
 	* Tells whether or not this key is valid.
@@ -54,7 +54,7 @@ extern class SelectionKey
 	*
 	* @return  <tt>true</tt> if, and only if, this key is valid
 	*/
-	@:overload @:abstract public function isValid() : Bool;
+	@:overload @:public @:abstract public function isValid() : Bool;
 	
 	/**
 	* Requests that the registration of this key's channel with its selector
@@ -70,7 +70,7 @@ extern class SelectionKey
 	* concurrently with a cancellation or selection operation involving the
 	* same selector.  </p>
 	*/
-	@:overload @:abstract public function cancel() : Void;
+	@:overload @:public @:abstract public function cancel() : Void;
 	
 	/**
 	* Retrieves this key's interest set.
@@ -86,7 +86,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:abstract public function interestOps() : Int;
+	@:overload @:public @:abstract public function interestOps() : Int;
 	
 	/**
 	* Sets this key's interest set to the given value.
@@ -106,7 +106,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:abstract public function interestOps(ops : Int) : java.nio.channels.SelectionKey;
+	@:overload @:public @:abstract public function interestOps(ops : Int) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Retrieves this key's ready-operation set.
@@ -119,7 +119,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:abstract public function readyOps() : Int;
+	@:overload @:public @:abstract public function readyOps() : Int;
 	
 	/**
 	* Operation-set bit for read operations.
@@ -132,7 +132,7 @@ extern class SelectionKey
 	* an error pending, then it will add <tt>OP_READ</tt> to the key's
 	* ready-operation set and add the key to its selected-key&nbsp;set.  </p>
 	*/
-	public static var OP_READ(default, null) : Int;
+	@:public @:static @:final public static var OP_READ(default, null) : Int;
 	
 	/**
 	* Operation-set bit for write operations.  </p>
@@ -145,7 +145,7 @@ extern class SelectionKey
 	* will add <tt>OP_WRITE</tt> to the key's ready set and add the key to its
 	* selected-key&nbsp;set.  </p>
 	*/
-	public static var OP_WRITE(default, null) : Int;
+	@:public @:static @:final public static var OP_WRITE(default, null) : Int;
 	
 	/**
 	* Operation-set bit for socket-connect operations.  </p>
@@ -158,7 +158,7 @@ extern class SelectionKey
 	* <tt>OP_CONNECT</tt> to the key's ready set and add the key to its
 	* selected-key&nbsp;set.  </p>
 	*/
-	public static var OP_CONNECT(default, null) : Int;
+	@:public @:static @:final public static var OP_CONNECT(default, null) : Int;
 	
 	/**
 	* Operation-set bit for socket-accept operations.  </p>
@@ -171,7 +171,7 @@ extern class SelectionKey
 	* <tt>OP_ACCEPT</tt> to the key's ready set and add the key to its
 	* selected-key&nbsp;set.  </p>
 	*/
-	public static var OP_ACCEPT(default, null) : Int;
+	@:public @:static @:final public static var OP_ACCEPT(default, null) : Int;
 	
 	/**
 	* Tests whether this key's channel is ready for reading.
@@ -192,7 +192,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:final public function isReadable() : Bool;
+	@:overload @:public @:final public function isReadable() : Bool;
 	
 	/**
 	* Tests whether this key's channel is ready for writing.
@@ -213,7 +213,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:final public function isWritable() : Bool;
+	@:overload @:public @:final public function isWritable() : Bool;
 	
 	/**
 	* Tests whether this key's channel has either finished, or failed to
@@ -235,7 +235,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:final public function isConnectable() : Bool;
+	@:overload @:public @:final public function isConnectable() : Bool;
 	
 	/**
 	* Tests whether this key's channel is ready to accept a new socket
@@ -257,7 +257,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:final public function isAcceptable() : Bool;
+	@:overload @:public @:final public function isAcceptable() : Bool;
 	
 	/**
 	* Attaches the given object to this key.
@@ -273,7 +273,7 @@ extern class SelectionKey
 	* @return  The previously-attached object, if any,
 	*          otherwise <tt>null</tt>
 	*/
-	@:overload @:final public function attach(ob : Dynamic) : Dynamic;
+	@:overload @:public @:final public function attach(ob : Dynamic) : Dynamic;
 	
 	/**
 	* Retrieves the current attachment.  </p>
@@ -281,7 +281,7 @@ extern class SelectionKey
 	* @return  The object currently attached to this key,
 	*          or <tt>null</tt> if there is no attachment
 	*/
-	@:overload @:final public function attachment() : Dynamic;
+	@:overload @:public @:final public function attachment() : Dynamic;
 	
 	
 }

@@ -46,7 +46,7 @@ package javax.management.openmbean;
 	*
 	* @return true if the attribute is readable.
 	*/
-	@:overload public function isReadable() : Bool;
+	@:overload @:public public function isReadable() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the attribute described by this <tt>OpenMBeanAttributeInfo</tt> instance is writable,
@@ -54,7 +54,7 @@ package javax.management.openmbean;
 	*
 	* @return true if the attribute is writable.
 	*/
-	@:overload public function isWritable() : Bool;
+	@:overload @:public public function isWritable() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if the attribute described by this <tt>OpenMBeanAttributeInfo</tt> instance
@@ -63,7 +63,7 @@ package javax.management.openmbean;
 	*
 	* @return true if the attribute is accessed through <tt>is<i>XXX</i></tt>.
 	*/
-	@:overload public function isIs() : Bool;
+	@:overload @:public public function isIs() : Bool;
 	
 	
 }

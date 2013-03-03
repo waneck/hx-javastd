@@ -28,14 +28,14 @@ extern class InputMap implements java.io.Serializable
 	/**
 	* Creates an <code>InputMap</code> with no parent and no mappings.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Sets this <code>InputMap</code>'s parent.
 	*
 	* @param map  the <code>InputMap</code> that is the parent of this one
 	*/
-	@:overload public function setParent(map : javax.swing.InputMap) : Void;
+	@:overload @:public public function setParent(map : javax.swing.InputMap) : Void;
 	
 	/**
 	* Gets this <code>InputMap</code>'s parent.
@@ -43,48 +43,48 @@ extern class InputMap implements java.io.Serializable
 	* @return map  the <code>InputMap</code> that is the parent of this one,
 	*              or null if this <code>InputMap</code> has no parent
 	*/
-	@:overload public function getParent() : javax.swing.InputMap;
+	@:overload @:public public function getParent() : javax.swing.InputMap;
 	
 	/**
 	* Adds a binding for <code>keyStroke</code> to <code>actionMapKey</code>.
 	* If <code>actionMapKey</code> is null, this removes the current binding
 	* for <code>keyStroke</code>.
 	*/
-	@:overload public function put(keyStroke : javax.swing.KeyStroke, actionMapKey : Dynamic) : Void;
+	@:overload @:public public function put(keyStroke : javax.swing.KeyStroke, actionMapKey : Dynamic) : Void;
 	
 	/**
 	* Returns the binding for <code>keyStroke</code>, messaging the
 	* parent <code>InputMap</code> if the binding is not locally defined.
 	*/
-	@:overload public function get(keyStroke : javax.swing.KeyStroke) : Dynamic;
+	@:overload @:public public function get(keyStroke : javax.swing.KeyStroke) : Dynamic;
 	
 	/**
 	* Removes the binding for <code>key</code> from this
 	* <code>InputMap</code>.
 	*/
-	@:overload public function remove(key : javax.swing.KeyStroke) : Void;
+	@:overload @:public public function remove(key : javax.swing.KeyStroke) : Void;
 	
 	/**
 	* Removes all the mappings from this <code>InputMap</code>.
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the <code>KeyStroke</code>s that are bound in this <code>InputMap</code>.
 	*/
-	@:overload public function keys() : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function keys() : java.NativeArray<javax.swing.KeyStroke>;
 	
 	/**
 	* Returns the number of <code>KeyStroke</code> bindings.
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns an array of the <code>KeyStroke</code>s defined in this
 	* <code>InputMap</code> and its parent. This differs from <code>keys()</code> in that
 	* this method includes the keys defined in the parent.
 	*/
-	@:overload public function allKeys() : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function allKeys() : java.NativeArray<javax.swing.KeyStroke>;
 	
 	
 }

@@ -25,21 +25,21 @@ package com.sun.xml.internal.bind.v2.model.impl;
 */
 @:internal extern class MapPropertyInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<T, C, F, M> implements com.sun.xml.internal.bind.v2.model.core.MapPropertyInfo<T, C>
 {
-	@:overload public function new(ci : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
+	@:overload @:public public function new(ci : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
 	
-	@:overload public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
+	@:overload @:public override public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
 	
-	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload public function getXmlName() : javax.xml.namespace.QName;
+	@:overload @:public public function getXmlName() : javax.xml.namespace.QName;
 	
-	@:overload public function isCollectionNillable() : Bool;
+	@:overload @:public public function isCollectionNillable() : Bool;
 	
-	@:overload public function getKeyType() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
+	@:overload @:public public function getKeyType() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
 	
-	@:overload public function getValueType() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
+	@:overload @:public public function getValueType() : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
 	
-	@:overload public function getTarget(type : T) : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
+	@:overload @:public public function getTarget(type : T) : com.sun.xml.internal.bind.v2.model.core.NonElement<T, C>;
 	
 	
 }

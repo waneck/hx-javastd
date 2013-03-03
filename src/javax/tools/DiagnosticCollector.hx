@@ -25,14 +25,14 @@ package javax.tools;
 */
 extern class DiagnosticCollector<S> implements javax.tools.DiagnosticListener<S>
 {
-	@:overload public function report(diagnostic : javax.tools.Diagnostic<S>) : Void;
+	@:overload @:public public function report(diagnostic : javax.tools.Diagnostic<S>) : Void;
 	
 	/**
 	* Gets a list view of diagnostics collected by this object.
 	*
 	* @return a list view of diagnostics
 	*/
-	@:overload public function getDiagnostics() : java.util.List<javax.tools.Diagnostic<S>>;
+	@:overload @:public public function getDiagnostics() : java.util.List<javax.tools.Diagnostic<S>>;
 	
 	
 }

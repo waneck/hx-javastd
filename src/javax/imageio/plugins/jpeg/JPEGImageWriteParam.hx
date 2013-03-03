@@ -36,7 +36,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	* superclass to localize compression type names and quality
 	* descriptions, or <code>null</code>.
 	*/
-	@:overload public function new(locale : java.util.Locale) : Void;
+	@:overload @:public public function new(locale : java.util.Locale) : Void;
 	
 	/**
 	* Removes any previous compression quality setting.
@@ -47,7 +47,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	* @exception IllegalStateException if the compression mode is not
 	* <code>MODE_EXPLICIT</code>.
 	*/
-	@:overload public function unsetCompression() : Void;
+	@:overload @:public override public function unsetCompression() : Void;
 	
 	/**
 	* Returns <code>false</code> since the JPEG plug-in only supports
@@ -58,18 +58,18 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	* @exception IllegalStateException if the compression mode is not
 	* <code>MODE_EXPLICIT</code>.
 	*/
-	@:overload public function isCompressionLossless() : Bool;
+	@:overload @:public override public function isCompressionLossless() : Bool;
 	
-	@:overload public function getCompressionQualityDescriptions() : java.NativeArray<String>;
+	@:overload @:public override public function getCompressionQualityDescriptions() : java.NativeArray<String>;
 	
-	@:overload public function getCompressionQualityValues() : java.NativeArray<Single>;
+	@:overload @:public override public function getCompressionQualityValues() : java.NativeArray<Single>;
 	
 	/**
 	* Returns <code>true</code> if tables are currently set.
 	*
 	* @return <code>true</code> if tables are present.
 	*/
-	@:overload public function areTablesSet() : Bool;
+	@:overload @:public public function areTablesSet() : Bool;
 	
 	/**
 	* Sets the quantization and Huffman tables to use in encoding
@@ -91,7 +91,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #unsetEncodeTables
 	*/
-	@:overload public function setEncodeTables(qTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>, DCHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>, ACHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>) : Void;
+	@:overload @:public public function setEncodeTables(qTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>, DCHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>, ACHuffmanTables : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>) : Void;
 	
 	/**
 	* Removes any quantization and Huffman tables that are currently
@@ -99,7 +99,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #setEncodeTables
 	*/
-	@:overload public function unsetEncodeTables() : Void;
+	@:overload @:public public function unsetEncodeTables() : Void;
 	
 	/**
 	* Returns a copy of the array of quantization tables set on the
@@ -111,7 +111,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #setEncodeTables
 	*/
-	@:overload public function getQTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>;
+	@:overload @:public public function getQTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGQTable>;
 	
 	/**
 	* Returns a copy of the array of DC Huffman tables set on the
@@ -123,7 +123,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #setEncodeTables
 	*/
-	@:overload public function getDCHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
+	@:overload @:public public function getDCHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
 	
 	/**
 	* Returns a copy of the array of AC Huffman tables set on the
@@ -135,7 +135,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #setEncodeTables
 	*/
-	@:overload public function getACHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
+	@:overload @:public public function getACHuffmanTables() : java.NativeArray<javax.imageio.plugins.jpeg.JPEGHuffmanTable>;
 	
 	/**
 	* Tells the writer to generate optimized Huffman tables
@@ -151,7 +151,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #getOptimizeHuffmanTables
 	*/
-	@:overload public function setOptimizeHuffmanTables(optimize : Bool) : Void;
+	@:overload @:public public function setOptimizeHuffmanTables(optimize : Bool) : Void;
 	
 	/**
 	* Returns the value passed into the most recent call
@@ -164,7 +164,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	*
 	* @see #setOptimizeHuffmanTables
 	*/
-	@:overload public function getOptimizeHuffmanTables() : Bool;
+	@:overload @:public public function getOptimizeHuffmanTables() : Bool;
 	
 	
 }

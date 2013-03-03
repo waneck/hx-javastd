@@ -25,7 +25,7 @@ package sun.security.validator;
 */
 extern class SimpleValidator extends sun.security.validator.Validator
 {
-	@:overload public function getTrustedCertificates() : java.util.Collection<java.security.cert.X509Certificate>;
+	@:overload @:public override public function getTrustedCertificates() : java.util.Collection<java.security.cert.X509Certificate>;
 	
 	
 }

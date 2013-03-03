@@ -29,7 +29,7 @@ extern class WSToolsObjectFactory
 	* Obtain an instance of a factory. Don't worry about synchronization(at the
 	* most, one more factory is created).
 	*/
-	@:overload public static function newInstance() : com.sun.tools.internal.ws.spi.WSToolsObjectFactory;
+	@:overload @:public @:static public static function newInstance() : com.sun.tools.internal.ws.spi.WSToolsObjectFactory;
 	
 	/**
 	* Invokes wsimport on the wsdl URL argument, and generates the necessary
@@ -42,7 +42,7 @@ extern class WSToolsObjectFactory
 	*
 	* @return true if there is no error, otherwise false
 	*/
-	@:overload @:abstract public function wsimport(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
+	@:overload @:public @:abstract public function wsimport(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
 	
 	/**
 	* Invokes wsimport on the wsdl URL argument, and generates the necessary
@@ -52,7 +52,7 @@ extern class WSToolsObjectFactory
 	*
 	* @see {@link #wsimport(OutputStream, Container, String[])}
 	*/
-	@:overload public function wsimport(logStream : java.io.OutputStream, args : java.NativeArray<String>) : Bool;
+	@:overload @:public public function wsimport(logStream : java.io.OutputStream, args : java.NativeArray<String>) : Bool;
 	
 	/**
 	* Invokes wsgen on the endpoint implementation, and generates the necessary
@@ -65,7 +65,7 @@ extern class WSToolsObjectFactory
 	*
 	* @return true if there is no error, otherwise false
 	*/
-	@:overload @:abstract public function wsgen(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
+	@:overload @:public @:abstract public function wsgen(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
 	
 	/**
 	* Invokes wsgen on the endpoint implementation, and generates the necessary
@@ -74,7 +74,7 @@ extern class WSToolsObjectFactory
 	* @return true if there is no error, otherwise false
 	* @see {@link #wsgen(OutputStream, Container, String[])}
 	*/
-	@:overload public function wsgen(logStream : java.io.OutputStream, args : java.NativeArray<String>) : Bool;
+	@:overload @:public public function wsgen(logStream : java.io.OutputStream, args : java.NativeArray<String>) : Bool;
 	
 	
 }

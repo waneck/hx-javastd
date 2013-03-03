@@ -59,47 +59,47 @@ package com.sun.tools.corba.se.idl;
 **/
 extern interface GenFactory
 {
-	@:overload public function createAttributeGen() : com.sun.tools.corba.se.idl.AttributeGen;
+	@:overload @:public public function createAttributeGen() : com.sun.tools.corba.se.idl.AttributeGen;
 	
-	@:overload public function createConstGen() : com.sun.tools.corba.se.idl.ConstGen;
+	@:overload @:public public function createConstGen() : com.sun.tools.corba.se.idl.ConstGen;
 	
-	@:overload public function createEnumGen() : com.sun.tools.corba.se.idl.EnumGen;
+	@:overload @:public public function createEnumGen() : com.sun.tools.corba.se.idl.EnumGen;
 	
-	@:overload public function createExceptionGen() : com.sun.tools.corba.se.idl.ExceptionGen;
+	@:overload @:public public function createExceptionGen() : com.sun.tools.corba.se.idl.ExceptionGen;
 	
-	@:overload public function createForwardGen() : com.sun.tools.corba.se.idl.ForwardGen;
+	@:overload @:public public function createForwardGen() : com.sun.tools.corba.se.idl.ForwardGen;
 	
-	@:overload public function createForwardValueGen() : com.sun.tools.corba.se.idl.ForwardValueGen;
+	@:overload @:public public function createForwardValueGen() : com.sun.tools.corba.se.idl.ForwardValueGen;
 	
-	@:overload public function createIncludeGen() : com.sun.tools.corba.se.idl.IncludeGen;
+	@:overload @:public public function createIncludeGen() : com.sun.tools.corba.se.idl.IncludeGen;
 	
-	@:overload public function createInterfaceGen() : com.sun.tools.corba.se.idl.InterfaceGen;
+	@:overload @:public public function createInterfaceGen() : com.sun.tools.corba.se.idl.InterfaceGen;
 	
-	@:overload public function createValueGen() : com.sun.tools.corba.se.idl.ValueGen;
+	@:overload @:public public function createValueGen() : com.sun.tools.corba.se.idl.ValueGen;
 	
-	@:overload public function createValueBoxGen() : com.sun.tools.corba.se.idl.ValueBoxGen;
+	@:overload @:public public function createValueBoxGen() : com.sun.tools.corba.se.idl.ValueBoxGen;
 	
-	@:overload public function createMethodGen() : com.sun.tools.corba.se.idl.MethodGen;
+	@:overload @:public public function createMethodGen() : com.sun.tools.corba.se.idl.MethodGen;
 	
-	@:overload public function createModuleGen() : com.sun.tools.corba.se.idl.ModuleGen;
+	@:overload @:public public function createModuleGen() : com.sun.tools.corba.se.idl.ModuleGen;
 	
-	@:overload public function createNativeGen() : com.sun.tools.corba.se.idl.NativeGen;
+	@:overload @:public public function createNativeGen() : com.sun.tools.corba.se.idl.NativeGen;
 	
-	@:overload public function createParameterGen() : com.sun.tools.corba.se.idl.ParameterGen;
+	@:overload @:public public function createParameterGen() : com.sun.tools.corba.se.idl.ParameterGen;
 	
-	@:overload public function createPragmaGen() : com.sun.tools.corba.se.idl.PragmaGen;
+	@:overload @:public public function createPragmaGen() : com.sun.tools.corba.se.idl.PragmaGen;
 	
-	@:overload public function createPrimitiveGen() : com.sun.tools.corba.se.idl.PrimitiveGen;
+	@:overload @:public public function createPrimitiveGen() : com.sun.tools.corba.se.idl.PrimitiveGen;
 	
-	@:overload public function createSequenceGen() : com.sun.tools.corba.se.idl.SequenceGen;
+	@:overload @:public public function createSequenceGen() : com.sun.tools.corba.se.idl.SequenceGen;
 	
-	@:overload public function createStringGen() : com.sun.tools.corba.se.idl.StringGen;
+	@:overload @:public public function createStringGen() : com.sun.tools.corba.se.idl.StringGen;
 	
-	@:overload public function createStructGen() : com.sun.tools.corba.se.idl.StructGen;
+	@:overload @:public public function createStructGen() : com.sun.tools.corba.se.idl.StructGen;
 	
-	@:overload public function createTypedefGen() : com.sun.tools.corba.se.idl.TypedefGen;
+	@:overload @:public public function createTypedefGen() : com.sun.tools.corba.se.idl.TypedefGen;
 	
-	@:overload public function createUnionGen() : com.sun.tools.corba.se.idl.UnionGen;
+	@:overload @:public public function createUnionGen() : com.sun.tools.corba.se.idl.UnionGen;
 	
 	
 }

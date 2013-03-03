@@ -25,65 +25,65 @@ package com.sun.media.sound;
 */
 extern class ModelByteBuffer
 {
-	@:overload public function new(buffer : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(buffer : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload @:public public function new(buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload public function new(file : java.io.File) : Void;
+	@:overload @:public public function new(file : java.io.File) : Void;
 	
-	@:overload public function new(file : java.io.File, offset : haxe.Int64, len : haxe.Int64) : Void;
+	@:overload @:public public function new(file : java.io.File, offset : haxe.Int64, len : haxe.Int64) : Void;
 	
-	@:overload public function writeTo(out : java.io.OutputStream) : Void;
+	@:overload @:public public function writeTo(out : java.io.OutputStream) : Void;
 	
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
-	@:overload public function subbuffer(beginIndex : haxe.Int64) : com.sun.media.sound.ModelByteBuffer;
+	@:overload @:public public function subbuffer(beginIndex : haxe.Int64) : com.sun.media.sound.ModelByteBuffer;
 	
-	@:overload public function subbuffer(beginIndex : haxe.Int64, endIndex : haxe.Int64) : com.sun.media.sound.ModelByteBuffer;
+	@:overload @:public public function subbuffer(beginIndex : haxe.Int64, endIndex : haxe.Int64) : com.sun.media.sound.ModelByteBuffer;
 	
-	@:overload public function subbuffer(beginIndex : haxe.Int64, endIndex : haxe.Int64, independent : Bool) : com.sun.media.sound.ModelByteBuffer;
+	@:overload @:public public function subbuffer(beginIndex : haxe.Int64, endIndex : haxe.Int64, independent : Bool) : com.sun.media.sound.ModelByteBuffer;
 	
-	@:overload public function array() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function array() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function arrayOffset() : haxe.Int64;
+	@:overload @:public public function arrayOffset() : haxe.Int64;
 	
-	@:overload public function capacity() : haxe.Int64;
+	@:overload @:public public function capacity() : haxe.Int64;
 	
-	@:overload public function getRoot() : com.sun.media.sound.ModelByteBuffer;
+	@:overload @:public public function getRoot() : com.sun.media.sound.ModelByteBuffer;
 	
-	@:overload public function getFile() : java.io.File;
+	@:overload @:public public function getFile() : java.io.File;
 	
-	@:overload public function getFilePointer() : haxe.Int64;
+	@:overload @:public public function getFilePointer() : haxe.Int64;
 	
-	@:overload public static function loadAll(col : java.util.Collection<com.sun.media.sound.ModelByteBuffer>) : Void;
+	@:overload @:public @:static public static function loadAll(col : java.util.Collection<com.sun.media.sound.ModelByteBuffer>) : Void;
 	
-	@:overload public function load() : Void;
+	@:overload @:public public function load() : Void;
 	
-	@:overload public function unload() : Void;
+	@:overload @:public public function unload() : Void;
 	
 	
 }
 @:native('com$sun$media$sound$ModelByteBuffer$RandomFileInputStream') @:internal extern class ModelByteBuffer_RandomFileInputStream extends java.io.InputStream
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function available() : Int;
+	@:overload @:public override public function available() : Int;
 	
-	@:overload @:synchronized public function mark(readlimit : Int) : Void;
+	@:overload @:public @:synchronized override public function mark(readlimit : Int) : Void;
 	
-	@:overload public function markSupported() : Bool;
+	@:overload @:public override public function markSupported() : Bool;
 	
-	@:overload @:synchronized public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload @:public override public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:public override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload public function read() : Int;
+	@:overload @:public override public function read() : Int;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

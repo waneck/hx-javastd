@@ -35,7 +35,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @throws RuntimeMBeanException {@inheritDoc}
 	* @throws RuntimeErrorException {@inheritDoc}
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* {@inheritDoc}
@@ -46,7 +46,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @throws RuntimeMBeanException {@inheritDoc}
 	* @throws RuntimeErrorException {@inheritDoc}
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* {@inheritDoc}
@@ -57,7 +57,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @throws RuntimeMBeanException {@inheritDoc}
 	* @throws RuntimeErrorException {@inheritDoc}
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* {@inheritDoc}
@@ -68,7 +68,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @throws RuntimeMBeanException {@inheritDoc}
 	* @throws RuntimeErrorException {@inheritDoc}
 	*/
-	@:overload public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
+	@:overload @:public public function createMBean(className : String, name : javax.management.ObjectName, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : javax.management.ObjectInstance;
 	
 	/**
 	* <p>Registers a pre-existing object as an MBean with the MBean
@@ -121,7 +121,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* passed in parameter is null or no object name is specified.
 	* @see javax.management.MBeanRegistration
 	*/
-	@:overload public function registerMBean(object : Dynamic, name : javax.management.ObjectName) : javax.management.ObjectInstance;
+	@:overload @:public public function registerMBean(object : Dynamic, name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* {@inheritDoc}
@@ -133,26 +133,26 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @throws RuntimeMBeanException {@inheritDoc}
 	* @throws RuntimeErrorException {@inheritDoc}
 	*/
-	@:overload public function unregisterMBean(name : javax.management.ObjectName) : Void;
+	@:overload @:public public function unregisterMBean(name : javax.management.ObjectName) : Void;
 	
-	@:overload public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
-	
-	/**
-	* {@inheritDoc}
-	* @throws RuntimeOperationsException {@inheritDoc}
-	*/
-	@:overload public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
+	@:overload @:public public function getObjectInstance(name : javax.management.ObjectName) : javax.management.ObjectInstance;
 	
 	/**
 	* {@inheritDoc}
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
+	@:overload @:public public function queryMBeans(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectInstance>;
+	
+	/**
+	* {@inheritDoc}
+	* @throws RuntimeOperationsException {@inheritDoc}
+	*/
+	@:overload @:public public function queryNames(name : javax.management.ObjectName, query : javax.management.QueryExp) : java.util.Set<javax.management.ObjectName>;
 	
 	/**
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function isRegistered(name : javax.management.ObjectName) : Bool;
+	@:overload @:public public function isRegistered(name : javax.management.ObjectName) : Bool;
 	
 	/**
 	* Returns the number of MBeans registered in the MBean server.
@@ -161,33 +161,33 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* If the caller's permissions are restricted, this number may
 	* be greater than the number of MBeans the caller can access.
 	*/
-	@:overload public function getMBeanCount() : Null<Int>;
+	@:overload @:public public function getMBeanCount() : Null<Int>;
 	
 	/**
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
+	@:overload @:public public function getAttribute(name : javax.management.ObjectName, attribute : String) : Dynamic;
 	
 	/**
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
+	@:overload @:public public function getAttributes(name : javax.management.ObjectName, attributes : java.NativeArray<String>) : javax.management.AttributeList;
 	
 	/**
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
+	@:overload @:public public function setAttribute(name : javax.management.ObjectName, attribute : javax.management.Attribute) : Void;
 	
 	/**
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
+	@:overload @:public public function setAttributes(name : javax.management.ObjectName, attributes : javax.management.AttributeList) : javax.management.AttributeList;
 	
-	@:overload public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function invoke(name : javax.management.ObjectName, operationName : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
-	@:overload public function getDefaultDomain() : String;
+	@:overload @:public public function getDefaultDomain() : String;
 	
-	@:overload public function getDomains() : java.NativeArray<String>;
+	@:overload @:public public function getDomains() : java.NativeArray<String>;
 	
 	/**
 	* {@inheritDoc}
@@ -195,25 +195,25 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* is a reference to an MBean object, the MBean server will replace it
 	* by that MBean's ObjectName.  Otherwise the source is unchanged.
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @throws RuntimeOperationsException {@inheritDoc}
 	*/
-	@:overload public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function addNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.ObjectName, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener) : Void;
 	
-	@:overload public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
+	@:overload @:public public function removeNotificationListener(name : javax.management.ObjectName, listener : javax.management.NotificationListener, filter : javax.management.NotificationFilter, handback : Dynamic) : Void;
 	
-	@:overload public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
+	@:overload @:public public function getMBeanInfo(name : javax.management.ObjectName) : javax.management.MBeanInfo;
 	
-	@:overload public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
+	@:overload @:public public function isInstanceOf(name : javax.management.ObjectName, className : String) : Bool;
 	
 	/**
 	* <p>Instantiates an object using the list of all class loaders
@@ -242,7 +242,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* <CODE>java.lang.IllegalArgumentException</CODE>: The className
 	* passed in parameter is null.
 	*/
-	@:overload public function instantiate(className : String) : Dynamic;
+	@:overload @:public public function instantiate(className : String) : Dynamic;
 	
 	/**
 	* <p>Instantiates an object using the class Loader specified by its
@@ -274,7 +274,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* <CODE>java.lang.IllegalArgumentException</CODE>: The className
 	* passed in parameter is null.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName) : Dynamic;
 	
 	/**
 	* <p>Instantiates an object using the list of all class loaders
@@ -303,7 +303,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* <CODE>java.lang.IllegalArgumentException</CODE>: The className
 	* passed in parameter is null.
 	*/
-	@:overload public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* <p>Instantiates an object. The class loader to be used is
@@ -332,7 +332,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* <CODE>java.lang.IllegalArgumentException</CODE>: The className
 	* passed in parameter is null.
 	*/
-	@:overload public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
+	@:overload @:public public function instantiate(className : String, loaderName : javax.management.ObjectName, params : java.NativeArray<Dynamic>, signature : java.NativeArray<String>) : Dynamic;
 	
 	/**
 	* <p>De-serializes a byte array in the context of the class loader
@@ -352,7 +352,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @deprecated Use {@link #getClassLoaderFor getClassLoaderFor} to
 	* obtain the appropriate class loader for deserialization.
 	*/
-	@:overload public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(name : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* <p>De-serializes a byte array in the context of a given MBean
@@ -376,7 +376,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @deprecated Use {@link #getClassLoaderRepository} to obtain the
 	* class loader repository and use it to deserialize.
 	*/
-	@:overload public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* <p>De-serializes a byte array in the context of a given MBean
@@ -404,7 +404,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @deprecated Use {@link #getClassLoader getClassLoader} to obtain
 	* the class loader for deserialization.
 	*/
-	@:overload public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
+	@:overload @:public public function deserialize(className : String, loaderName : javax.management.ObjectName, data : java.NativeArray<java.StdTypes.Int8>) : java.io.ObjectInputStream;
 	
 	/**
 	* <p>Return the {@link java.lang.ClassLoader} that was used for
@@ -430,7 +430,7 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	* @exception InstanceNotFoundException if the named MBean is not found.
 	*
 	*/
-	@:overload public function getClassLoaderFor(mbeanName : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoaderFor(mbeanName : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	/**
 	* <p>Return the named {@link java.lang.ClassLoader}.</p>
@@ -458,14 +458,14 @@ extern interface MBeanServer extends javax.management.MBeanServerConnection
 	*    not found.
 	*
 	*/
-	@:overload public function getClassLoader(loaderName : javax.management.ObjectName) : java.lang.ClassLoader;
+	@:overload @:public public function getClassLoader(loaderName : javax.management.ObjectName) : java.lang.ClassLoader;
 	
 	/**
 	* <p>Return the ClassLoaderRepository for this MBeanServer.
 	* @return The ClassLoaderRepository for this MBeanServer.
 	*
 	*/
-	@:overload public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
+	@:overload @:public public function getClassLoaderRepository() : javax.management.loading.ClassLoaderRepository;
 	
 	
 }

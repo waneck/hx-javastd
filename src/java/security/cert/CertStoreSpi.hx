@@ -32,7 +32,7 @@ extern class CertStoreSpi
 	* @throws InvalidAlgorithmParameterException if the initialization
 	* parameters are inappropriate for this <code>CertStoreSpi</code>
 	*/
-	@:overload public function new(params : java.security.cert.CertStoreParameters) : Void;
+	@:overload @:public public function new(params : java.security.cert.CertStoreParameters) : Void;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>Certificate</code>s that
@@ -59,7 +59,7 @@ extern class CertStoreSpi
 	*         match the specified selector (never <code>null</code>)
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:abstract public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload @:public @:abstract public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>CRL</code>s that
@@ -86,7 +86,7 @@ extern class CertStoreSpi
 	*         match the specified selector (never <code>null</code>)
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:abstract public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
+	@:overload @:public @:abstract public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
 	
 	
 }

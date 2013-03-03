@@ -42,7 +42,7 @@ extern class DOMX509Data extends org.jcp.xml.dsig.internal.dom.DOMStructure impl
 	* @throws ClassCastException if <code>content</code> contains any entries
 	*    that are not of one of the valid types mentioned above
 	*/
-	@:overload public function new(content : java.util.List<Dynamic>) : Void;
+	@:overload @:public public function new(content : java.util.List<Dynamic>) : Void;
 	
 	/**
 	* Creates a <code>DOMX509Data</code> from an element.
@@ -50,13 +50,13 @@ extern class DOMX509Data extends org.jcp.xml.dsig.internal.dom.DOMStructure impl
 	* @param xdElem an X509Data element
 	* @throws MarshalException if there is an error while unmarshalling
 	*/
-	@:overload public function new(xdElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(xdElem : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getContent() : java.util.List<Dynamic>;
+	@:overload @:public public function getContent() : java.util.List<Dynamic>;
 	
-	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
 	
 }

@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.model.annotation;
 */
 extern class ClassLocatable<C> implements com.sun.xml.internal.bind.v2.model.annotation.Locatable
 {
-	@:overload public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, clazz : C, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<Dynamic, C, Dynamic, Dynamic>) : Void;
+	@:overload @:public public function new(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, clazz : C, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<Dynamic, C, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
-	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	
 }

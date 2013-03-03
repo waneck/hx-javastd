@@ -36,19 +36,19 @@ extern class Lease implements java.io.Serializable
 	* @param id VMID associated with this lease
 	* @param duration lease duration
 	*/
-	@:overload public function new(id : java.rmi.dgc.VMID, duration : haxe.Int64) : Void;
+	@:overload @:public public function new(id : java.rmi.dgc.VMID, duration : haxe.Int64) : Void;
 	
 	/**
 	* Returns the client VMID associated with the lease.
 	* @return client VMID
 	*/
-	@:overload public function getVMID() : java.rmi.dgc.VMID;
+	@:overload @:public public function getVMID() : java.rmi.dgc.VMID;
 	
 	/**
 	* Returns the lease duration.
 	* @return lease duration
 	*/
-	@:overload public function getValue() : haxe.Int64;
+	@:overload @:public public function getValue() : haxe.Int64;
 	
 	
 }

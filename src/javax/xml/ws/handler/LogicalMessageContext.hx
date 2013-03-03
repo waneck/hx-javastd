@@ -30,7 +30,7 @@ extern interface LogicalMessageContext extends javax.xml.ws.handler.MessageConte
 	*  @return The contained message; returns <code>null</code> if no
 	*          message is present in this message context
 	**/
-	@:overload public function getMessage() : javax.xml.ws.LogicalMessage;
+	@:overload @:public public function getMessage() : javax.xml.ws.LogicalMessage;
 	
 	
 }

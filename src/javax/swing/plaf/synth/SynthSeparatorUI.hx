@@ -31,41 +31,41 @@ extern class SynthSeparatorUI extends javax.swing.plaf.SeparatorUI implements ja
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Installs default setting. This method is called when a
 	* {@code LookAndFeel} is installed.
 	*/
-	@:overload public function installDefaults(c : javax.swing.JSeparator) : Void;
+	@:overload @:public public function installDefaults(c : javax.swing.JSeparator) : Void;
 	
 	/**
 	* Uninstalls default setting. This method is called when a
 	* {@code LookAndFeel} is uninstalled.
 	*/
-	@:overload public function uninstallDefaults(c : javax.swing.JSeparator) : Void;
+	@:overload @:public public function uninstallDefaults(c : javax.swing.JSeparator) : Void;
 	
 	/**
 	* Installs listeners. This method is called when a
 	* {@code LookAndFeel} is installed.
 	*/
-	@:overload public function installListeners(c : javax.swing.JSeparator) : Void;
+	@:overload @:public public function installListeners(c : javax.swing.JSeparator) : Void;
 	
 	/**
 	* Uninstalls listeners. This method is called when a
 	* {@code LookAndFeel} is uninstalled.
 	*/
-	@:overload public function uninstallListeners(c : javax.swing.JSeparator) : Void;
+	@:overload @:public public function uninstallListeners(c : javax.swing.JSeparator) : Void;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -79,7 +79,7 @@ extern class SynthSeparatorUI extends javax.swing.plaf.SeparatorUI implements ja
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -90,7 +90,7 @@ extern class SynthSeparatorUI extends javax.swing.plaf.SeparatorUI implements ja
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -99,34 +99,34 @@ extern class SynthSeparatorUI extends javax.swing.plaf.SeparatorUI implements ja
 	* @param g the {@code Graphics} object used for painting
 	* @see #update(Graphics,JComponent)
 	*/
-	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
+	@:overload @:public public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

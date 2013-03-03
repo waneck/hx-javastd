@@ -38,7 +38,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* Creates a {@code LinkedBlockingDeque} with a capacity of
 	* {@link Integer#MAX_VALUE}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a {@code LinkedBlockingDeque} with the given (fixed) capacity.
@@ -46,7 +46,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @param capacity the capacity of this deque
 	* @throws IllegalArgumentException if {@code capacity} is less than 1
 	*/
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
 	/**
 	* Creates a {@code LinkedBlockingDeque} with a capacity of
@@ -58,93 +58,93 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException if the specified collection or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : java.util.Collection<E>) : Void;
+	@:overload @:public public function new(c : java.util.Collection<E>) : Void;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws NullPointerException  {@inheritDoc}
 	*/
-	@:overload public function addFirst(e : E) : Void;
+	@:overload @:public public function addFirst(e : E) : Void;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws NullPointerException  {@inheritDoc}
 	*/
-	@:overload public function addLast(e : E) : Void;
+	@:overload @:public public function addLast(e : E) : Void;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function offerFirst(e : E) : Bool;
+	@:overload @:public public function offerFirst(e : E) : Bool;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function offerLast(e : E) : Bool;
-	
-	/**
-	* @throws NullPointerException {@inheritDoc}
-	* @throws InterruptedException {@inheritDoc}
-	*/
-	@:overload public function putFirst(e : E) : Void;
+	@:overload @:public public function offerLast(e : E) : Bool;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function putLast(e : E) : Void;
+	@:overload @:public public function putFirst(e : E) : Void;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function offerFirst(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function putLast(e : E) : Void;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function offerLast(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offerFirst(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	
+	/**
+	* @throws NullPointerException {@inheritDoc}
+	* @throws InterruptedException {@inheritDoc}
+	*/
+	@:overload @:public public function offerLast(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function removeFirst() : E;
+	@:overload @:public public function removeFirst() : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function removeLast() : E;
+	@:overload @:public public function removeLast() : E;
 	
-	@:overload public function pollFirst() : E;
+	@:overload @:public public function pollFirst() : E;
 	
-	@:overload public function pollLast() : E;
+	@:overload @:public public function pollLast() : E;
 	
-	@:overload public function takeFirst() : E;
+	@:overload @:public public function takeFirst() : E;
 	
-	@:overload public function takeLast() : E;
+	@:overload @:public public function takeLast() : E;
 	
-	@:overload public function pollFirst(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function pollFirst(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
-	@:overload public function pollLast(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
-	
-	/**
-	* @throws NoSuchElementException {@inheritDoc}
-	*/
-	@:overload public function getFirst() : E;
+	@:overload @:public public function pollLast(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function getLast() : E;
+	@:overload @:public public function getFirst() : E;
 	
-	@:overload public function peekFirst() : E;
+	/**
+	* @throws NoSuchElementException {@inheritDoc}
+	*/
+	@:overload @:public public function getLast() : E;
 	
-	@:overload public function peekLast() : E;
+	@:overload @:public public function peekFirst() : E;
 	
-	@:overload public function removeFirstOccurrence(o : Dynamic) : Bool;
+	@:overload @:public public function peekLast() : E;
 	
-	@:overload public function removeLastOccurrence(o : Dynamic) : Bool;
+	@:overload @:public public function removeFirstOccurrence(o : Dynamic) : Bool;
+	
+	@:overload @:public public function removeLastOccurrence(o : Dynamic) : Bool;
 	
 	/**
 	* Inserts the specified element at the end of this deque unless it would
@@ -157,24 +157,24 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	*         time due to capacity restrictions
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload @:public override public function offer(e : E) : Bool;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function put(e : E) : Void;
+	@:overload @:public public function put(e : E) : Void;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	* @throws InterruptedException {@inheritDoc}
 	*/
-	@:overload public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload @:public public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Retrieves and removes the head of the queue represented by this deque.
@@ -186,13 +186,13 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @return the head of the queue represented by this deque
 	* @throws NoSuchElementException if this deque is empty
 	*/
-	@:overload override public function remove() : E;
+	@:overload @:public override public function remove() : E;
 	
-	@:overload override public function poll() : E;
+	@:overload @:public override public function poll() : E;
 	
-	@:overload public function take() : E;
+	@:overload @:public public function take() : E;
 	
-	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
+	@:overload @:public public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
 	/**
 	* Retrieves, but does not remove, the head of the queue represented by
@@ -204,9 +204,9 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @return the head of the queue represented by this deque
 	* @throws NoSuchElementException if this deque is empty
 	*/
-	@:overload override public function element() : E;
+	@:overload @:public override public function element() : E;
 	
-	@:overload override public function peek() : E;
+	@:overload @:public override public function peek() : E;
 	
 	/**
 	* Returns the number of additional elements that this deque can ideally
@@ -219,7 +219,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* because it may be the case that another thread is about to
 	* insert or remove an element.
 	*/
-	@:overload public function remainingCapacity() : Int;
+	@:overload @:public public function remainingCapacity() : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -227,7 +227,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>) : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -235,18 +235,18 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @throws NullPointerException          {@inheritDoc}
 	* @throws IllegalArgumentException      {@inheritDoc}
 	*/
-	@:overload public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
+	@:overload @:public public function drainTo(c : java.util.Collection<E>, maxElements : Int) : Int;
 	
 	/**
 	* @throws IllegalStateException {@inheritDoc}
 	* @throws NullPointerException  {@inheritDoc}
 	*/
-	@:overload public function push(e : E) : Void;
+	@:overload @:public public function push(e : E) : Void;
 	
 	/**
 	* @throws NoSuchElementException {@inheritDoc}
 	*/
-	@:overload public function pop() : E;
+	@:overload @:public public function pop() : E;
 	
 	/**
 	* Removes the first occurrence of the specified element from this deque.
@@ -262,14 +262,14 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @param o element to be removed from this deque, if present
 	* @return {@code true} if this deque changed as a result of the call
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of elements in this deque.
 	*
 	* @return the number of elements in this deque
 	*/
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Returns {@code true} if this deque contains the specified element.
@@ -279,7 +279,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	* @param o object to be checked for containment in this deque
 	* @return {@code true} if this deque contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload @:public override public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this deque, in
@@ -294,7 +294,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return an array containing all of the elements in this deque
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this deque, in
@@ -332,15 +332,15 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	*         this deque
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Atomically removes all of the elements from this deque.
 	* The deque will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns an iterator over the elements in this deque in proper sequence.
@@ -355,7 +355,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return an iterator over the elements in this deque in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload @:public override public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an iterator over the elements in this deque in reverse
@@ -371,7 +371,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	*
 	* @return an iterator over the elements in this deque in reverse order
 	*/
-	@:overload public function descendingIterator() : java.util.Iterator<E>;
+	@:overload @:public public function descendingIterator() : java.util.Iterator<E>;
 	
 	
 }
@@ -385,11 +385,11 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 */
 @:native('java$util$concurrent$LinkedBlockingDeque$AbstractItr') @:internal extern class LinkedBlockingDeque_AbstractItr implements java.util.Iterator<Dynamic>
 {
-	@:overload public function hasNext() : Bool;
+	@:overload @:public public function hasNext() : Bool;
 	
-	@:overload public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
-	@:overload public function remove() : Void;
+	@:overload @:public public function remove() : Void;
 	
 	
 }

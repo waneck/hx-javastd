@@ -48,21 +48,21 @@ extern class APReq
 	* <a href="http://www.ietf.org/rfc/rfc4120.txt">
 	* http://www.ietf.org/rfc/rfc4120.txt</a>.
 	*/
-	public var pvno : Int;
+	@:public public var pvno : Int;
 	
-	public var msgType : Int;
+	@:public public var msgType : Int;
 	
-	public var apOptions : sun.security.krb5.internal.APOptions;
+	@:public public var apOptions : sun.security.krb5.internal.APOptions;
 	
-	public var ticket : sun.security.krb5.internal.Ticket;
+	@:public public var ticket : sun.security.krb5.internal.Ticket;
 	
-	public var authenticator : sun.security.krb5.EncryptedData;
+	@:public public var authenticator : sun.security.krb5.EncryptedData;
 	
-	@:overload public function new(new_apOptions : sun.security.krb5.internal.APOptions, new_ticket : sun.security.krb5.internal.Ticket, new_authenticator : sun.security.krb5.EncryptedData) : Void;
+	@:overload @:public public function new(new_apOptions : sun.security.krb5.internal.APOptions, new_ticket : sun.security.krb5.internal.Ticket, new_authenticator : sun.security.krb5.EncryptedData) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(encoding : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(encoding : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Encodes an APReq object.
@@ -70,7 +70,7 @@ extern class APReq
 	* @exception Asn1Exception if an error occurs while decoding an ASN1 encoded data.
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*/
-	@:overload public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function asn1Encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

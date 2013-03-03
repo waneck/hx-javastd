@@ -29,13 +29,13 @@ extern interface MechanismFactory
 	* Returns the Oid of the mechanism that this factory supports.
 	* @return the Oid
 	*/
-	@:overload public function getMechanismOid() : org.ietf.jgss.Oid;
+	@:overload @:public public function getMechanismOid() : org.ietf.jgss.Oid;
 	
 	/**
 	* Returns the provider that this factory came from.
 	* @return the provider
 	*/
-	@:overload public function getProvider() : java.security.Provider;
+	@:overload @:public public function getProvider() : java.security.Provider;
 	
 	/**
 	* Returns the GSS-API nametypes that this mechanism can
@@ -45,7 +45,7 @@ extern interface MechanismFactory
 	* nametypes supported
 	* @see org.ietf.jgss.GSSName
 	*/
-	@:overload public function getNameTypes() : java.NativeArray<org.ietf.jgss.Oid>;
+	@:overload @:public public function getNameTypes() : java.NativeArray<org.ietf.jgss.Oid>;
 	
 	/**
 	* Creates a credential element for this mechanism to be included as
@@ -91,7 +91,7 @@ extern interface MechanismFactory
 	* @throws GSSException if one of the error situations described in RFC
 	* 2743 with the GSS_Acquire_Cred or GSS_Add_Cred calls occurs.
 	*/
-	@:overload public function getCredentialElement(name : sun.security.jgss.spi.GSSNameSpi, initLifetime : Int, acceptLifetime : Int, usage : Int) : sun.security.jgss.spi.GSSCredentialSpi;
+	@:overload @:public public function getCredentialElement(name : sun.security.jgss.spi.GSSNameSpi, initLifetime : Int, acceptLifetime : Int, usage : Int) : sun.security.jgss.spi.GSSCredentialSpi;
 	
 	/**
 	* Creates a name element for this mechanism to be included as part of
@@ -109,7 +109,7 @@ extern interface MechanismFactory
 	* @throws GSSException if any of the errors described in RFC 2743 for
 	* the GSS_Import_Name or GSS_Canonicalize_Name calls occur.
 	*/
-	@:overload public function getNameElement(nameStr : String, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getNameElement(nameStr : String, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
 	
 	/**
 	* This is a variation of the factory method that accepts a String for
@@ -127,7 +127,7 @@ extern interface MechanismFactory
 	* @throws GSSException if any of the errors described in RFC 2743 for
 	* the GSS_Import_Name or GSS_Canonicalize_Name calls occur.
 	*/
-	@:overload public function getNameElement(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
+	@:overload @:public public function getNameElement(name : java.NativeArray<java.StdTypes.Int8>, nameType : org.ietf.jgss.Oid) : sun.security.jgss.spi.GSSNameSpi;
 	
 	/**
 	* Creates a security context for this mechanism so that it can be used
@@ -147,7 +147,7 @@ extern interface MechanismFactory
 	* @throws GSSException if any of the errors described in RFC 2743 in
 	* the GSS_Init_Sec_Context call occur.
 	*/
-	@:overload public function getMechanismContext(peer : sun.security.jgss.spi.GSSNameSpi, myInitiatorCred : sun.security.jgss.spi.GSSCredentialSpi, lifetime : Int) : sun.security.jgss.spi.GSSContextSpi;
+	@:overload @:public public function getMechanismContext(peer : sun.security.jgss.spi.GSSNameSpi, myInitiatorCred : sun.security.jgss.spi.GSSCredentialSpi, lifetime : Int) : sun.security.jgss.spi.GSSContextSpi;
 	
 	/**
 	* Creates a security context for this mechanism so thatit can be used
@@ -163,7 +163,7 @@ extern interface MechanismFactory
 	* @throws GSSException if any of the errors described in RFC 2743 in
 	* the GSS_Accept_Sec_Context call occur.
 	*/
-	@:overload public function getMechanismContext(myAcceptorCred : sun.security.jgss.spi.GSSCredentialSpi) : sun.security.jgss.spi.GSSContextSpi;
+	@:overload @:public public function getMechanismContext(myAcceptorCred : sun.security.jgss.spi.GSSCredentialSpi) : sun.security.jgss.spi.GSSContextSpi;
 	
 	/**
 	* Creates a security context from a previously exported (serialized)
@@ -178,7 +178,7 @@ extern interface MechanismFactory
 	* @throws GSSException is any of the errors described in RFC 2743 in
 	* the GSS_Import_Sec_Context call occur.
 	*/
-	@:overload public function getMechanismContext(exportedContext : java.NativeArray<java.StdTypes.Int8>) : sun.security.jgss.spi.GSSContextSpi;
+	@:overload @:public public function getMechanismContext(exportedContext : java.NativeArray<java.StdTypes.Int8>) : sun.security.jgss.spi.GSSContextSpi;
 	
 	
 }

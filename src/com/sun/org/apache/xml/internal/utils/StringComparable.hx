@@ -27,19 +27,19 @@ extern class StringComparable implements java.lang.Comparable<Dynamic>
 * International friendly string comparison with case-order
 	* @author Igor Hersht, igorh@ca.ibm.com
 */
-	public static var UNKNOWN_CASE(default, null) : Int;
+	@:public @:final @:static public static var UNKNOWN_CASE(default, null) : Int;
 	
-	public static var UPPER_CASE(default, null) : Int;
+	@:public @:final @:static public static var UPPER_CASE(default, null) : Int;
 	
-	public static var LOWER_CASE(default, null) : Int;
+	@:public @:final @:static public static var LOWER_CASE(default, null) : Int;
 	
-	@:overload public function new(text : String, locale : java.util.Locale, collator : java.text.Collator, caseOrder : String) : Void;
+	@:overload @:public public function new(text : String, locale : java.util.Locale, collator : java.text.Collator, caseOrder : String) : Void;
 	
-	@:overload @:final public static function getComparator(text : String, locale : java.util.Locale, collator : java.text.Collator, caseOrder : String) : java.lang.Comparable<Dynamic>;
+	@:overload @:public @:final @:static public static function getComparator(text : String, locale : java.util.Locale, collator : java.text.Collator, caseOrder : String) : java.lang.Comparable<Dynamic>;
 	
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
-	@:overload public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

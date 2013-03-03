@@ -64,46 +64,46 @@ package javax.swing.plaf.synth;
 	/**
 	* ColorType for the foreground of a region.
 	*/
-	public static var FOREGROUND(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var FOREGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the background of a region.
 	*/
-	public static var BACKGROUND(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var BACKGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the foreground of a region.
 	*/
-	public static var TEXT_FOREGROUND(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var TEXT_FOREGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the background of a region.
 	*/
-	public static var TEXT_BACKGROUND(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var TEXT_BACKGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the focus.
 	*/
-	public static var FOCUS(default, null) : javax.swing.plaf.synth.ColorType;
+	@:public @:static @:final public static var FOCUS(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* Maximum number of <code>ColorType</code>s.
 	*/
-	public static var MAX_COUNT(default, null) : Int;
+	@:public @:static @:final public static var MAX_COUNT(default, null) : Int;
 	
 	/**
 	* Creates a new ColorType with the specified description.
 	*
 	* @param description String description of the ColorType.
 	*/
-	@:overload private function new(description : String) : Void;
+	@:overload @:protected private function new(description : String) : Void;
 	
 	/**
 	* Returns a unique id, as an integer, for this ColorType.
 	*
 	* @return a unique id, as an integer, for this ColorType.
 	*/
-	@:overload @:final public function getID() : Int;
+	@:overload @:public @:final public function getID() : Int;
 	
 	/**
 	* Returns the textual description of this <code>ColorType</code>.
@@ -112,7 +112,7 @@ package javax.swing.plaf.synth;
 	*
 	* @return the description of the string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

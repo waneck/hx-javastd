@@ -26,17 +26,17 @@ package javax.swing;
 extern class JComponent extends java.awt.Container implements java.io.Serializable implements javax.swing.TransferHandler.TransferHandler_HasGetTransferHandler
 {
 	/** The look and feel delegate for this component. */
-	@:transient private var ui : javax.swing.plaf.ComponentUI;
+	@:protected @:transient private var ui : javax.swing.plaf.ComponentUI;
 	
 	/** A list of event listeners for this component. */
-	private var listenerList : javax.swing.event.EventListenerList;
+	@:protected private var listenerList : javax.swing.event.EventListenerList;
 	
 	/**
 	* Constant used for <code>registerKeyboardAction</code> that
 	* means that the command should be invoked when
 	* the component has the focus.
 	*/
-	public static var WHEN_FOCUSED(default, null) : Int;
+	@:public @:static @:final public static var WHEN_FOCUSED(default, null) : Int;
 	
 	/**
 	* Constant used for <code>registerKeyboardAction</code> that
@@ -44,7 +44,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* component is an ancestor of the focused component or is
 	* itself the focused component.
 	*/
-	public static var WHEN_ANCESTOR_OF_FOCUSED_COMPONENT(default, null) : Int;
+	@:public @:static @:final public static var WHEN_ANCESTOR_OF_FOCUSED_COMPONENT(default, null) : Int;
 	
 	/**
 	* Constant used for <code>registerKeyboardAction</code> that
@@ -52,18 +52,18 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* the receiving component is in the window that has the focus
 	* or is itself the focused component.
 	*/
-	public static var WHEN_IN_FOCUSED_WINDOW(default, null) : Int;
+	@:public @:static @:final public static var WHEN_IN_FOCUSED_WINDOW(default, null) : Int;
 	
 	/**
 	* Constant used by some of the APIs to mean that no condition is defined.
 	*/
-	public static var UNDEFINED_CONDITION(default, null) : Int;
+	@:public @:static @:final public static var UNDEFINED_CONDITION(default, null) : Int;
 	
 	/**
 	* The comment to display when the cursor is over the component,
 	* also known as a "value tip", "flyover help", or "flyover label".
 	*/
-	public static var TOOL_TIP_TEXT_KEY(default, null) : String;
+	@:public @:static @:final public static var TOOL_TIP_TEXT_KEY(default, null) : String;
 	
 	/**
 	* Sets whether or not <code>getComponentPopupMenu</code> should delegate
@@ -83,7 +83,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*  description: Whether or not the JPopupMenu is inherited
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setInheritsPopupMenu(value : Bool) : Void;
+	@:require(java5) @:overload @:public public function setInheritsPopupMenu(value : Bool) : Void;
 	
 	/**
 	* Returns true if the JPopupMenu should be inherited from the parent.
@@ -91,7 +91,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setComponentPopupMenu
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getInheritsPopupMenu() : Bool;
+	@:require(java5) @:overload @:public public function getInheritsPopupMenu() : Bool;
 	
 	/**
 	* Sets the <code>JPopupMenu</code> for this <code>JComponent</code>.
@@ -117,7 +117,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*  description: Popup to show
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setComponentPopupMenu(popup : javax.swing.JPopupMenu) : Void;
+	@:require(java5) @:overload @:public public function setComponentPopupMenu(popup : javax.swing.JPopupMenu) : Void;
 	
 	/**
 	* Returns <code>JPopupMenu</code> that assigned for this component.
@@ -131,7 +131,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setComponentPopupMenu
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getComponentPopupMenu() : javax.swing.JPopupMenu;
+	@:require(java5) @:overload @:public public function getComponentPopupMenu() : javax.swing.JPopupMenu;
 	
 	/**
 	* Default <code>JComponent</code> constructor.  This constructor does
@@ -143,7 +143,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @see #getDefaultLocale
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Resets the UI property to a value from the current look and feel.
@@ -159,7 +159,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see UIManager#getLookAndFeel
 	* @see UIManager#getUI
 	*/
-	@:overload public function updateUI() : Void;
+	@:overload @:public public function updateUI() : Void;
 	
 	/**
 	* Sets the look and feel delegate for this component.
@@ -189,7 +189,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*    attribute: visualUpdate true
 	*  description: The component's look and feel delegate.
 	*/
-	@:overload private function setUI(newUI : javax.swing.plaf.ComponentUI) : Void;
+	@:overload @:protected private function setUI(newUI : javax.swing.plaf.ComponentUI) : Void;
 	
 	/**
 	* Returns the <code>UIDefaults</code> key used to
@@ -208,7 +208,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*      expert: true
 	* description: UIClassID
 	*/
-	@:overload public function getUIClassID() : String;
+	@:overload @:public public function getUIClassID() : String;
 	
 	/**
 	* Returns the graphics object used to paint this component.
@@ -220,7 +220,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param g the original <code>Graphics</code> object
 	* @return a <code>Graphics</code> object configured for this component
 	*/
-	@:overload private function getComponentGraphics(g : java.awt.Graphics) : java.awt.Graphics;
+	@:overload @:protected private function getComponentGraphics(g : java.awt.Graphics) : java.awt.Graphics;
 	
 	/**
 	* Calls the UI delegate's paint method, if the UI delegate
@@ -251,7 +251,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #paint
 	* @see ComponentUI
 	*/
-	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Paints this component's children.
@@ -264,7 +264,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #paint
 	* @see java.awt.Container#paint
 	*/
-	@:overload private function paintChildren(g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paintChildren(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Paints the component's border.
@@ -281,7 +281,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #paint
 	* @see #setBorder
 	*/
-	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload @:protected private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Calls <code>paint</code>.  Doesn't clear the background but see
@@ -293,7 +293,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #paintComponent
 	* @see javax.swing.plaf.ComponentUI
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Invoked by Swing to draw components.
@@ -320,7 +320,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getComponentGraphics
 	* @see #repaint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Invoke this method to print the component. This method invokes
@@ -332,7 +332,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #printBorder
 	* @see #printChildren
 	*/
-	@:overload override public function printAll(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function printAll(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Invoke this method to print the component to the specified
@@ -377,7 +377,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #printChildren
 	* @see #isPaintingForPrint
 	*/
-	@:overload override public function print(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function print(g : java.awt.Graphics) : Void;
 	
 	/**
 	* This is invoked during a printing operation. This is implemented to
@@ -388,7 +388,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #print
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function printComponent(g : java.awt.Graphics) : Void;
+	@:require(java3) @:overload @:protected private function printComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Prints this component's children. This is implemented to invoke
@@ -399,7 +399,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #print
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function printChildren(g : java.awt.Graphics) : Void;
+	@:require(java3) @:overload @:protected private function printChildren(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Prints the component's border. This is implemented to invoke
@@ -410,7 +410,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #print
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function printBorder(g : java.awt.Graphics) : Void;
+	@:require(java3) @:overload @:protected private function printBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	*  Returns true if the component is currently painting a tile.
@@ -422,7 +422,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*  @return  true if the component is currently painting a tile,
 	*          false otherwise
 	*/
-	@:overload public function isPaintingTile() : Bool;
+	@:overload @:public public function isPaintingTile() : Bool;
 	
 	/**
 	* Returns <code>true</code> if the current painting operation on this
@@ -450,7 +450,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #print
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function isPaintingForPrint() : Bool;
+	@:require(java6) @:overload @:public @:final public function isPaintingForPrint() : Bool;
 	
 	/**
 	* In release 1.4, the focus subsystem was rearchitected.
@@ -470,7 +470,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*   <code>Component.setFocusTraversalKeys(int, Set)</code> and
 	*   <code>Container.setFocusCycleRoot(boolean)</code>.
 	*/
-	@:overload public function isManagingFocus() : Bool;
+	@:overload @:public public function isManagingFocus() : Bool;
 	
 	/**
 	* In release 1.4, the focus subsystem was rearchitected.
@@ -493,7 +493,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.FocusTraversalPolicy
 	* @deprecated As of 1.4, replaced by <code>FocusTraversalPolicy</code>
 	*/
-	@:overload public function setNextFocusableComponent(aComponent : java.awt.Component) : Void;
+	@:overload @:public public function setNextFocusableComponent(aComponent : java.awt.Component) : Void;
 	
 	/**
 	* In release 1.4, the focus subsystem was rearchitected.
@@ -513,7 +513,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setNextFocusableComponent
 	* @deprecated As of 1.4, replaced by <code>FocusTraversalPolicy</code>.
 	*/
-	@:overload public function getNextFocusableComponent() : java.awt.Component;
+	@:overload @:public public function getNextFocusableComponent() : java.awt.Component;
 	
 	/**
 	* Provides a hint as to whether or not this <code>JComponent</code>
@@ -538,7 +538,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see <a href="../../java/awt/doc-files/FocusSpec.html">Focus Specification</a>
 	* @see java.awt.Component#setFocusable
 	*/
-	@:overload public function setRequestFocusEnabled(requestFocusEnabled : Bool) : Void;
+	@:overload @:public public function setRequestFocusEnabled(requestFocusEnabled : Bool) : Void;
 	
 	/**
 	* Returns <code>true</code> if this <code>JComponent</code> should
@@ -557,7 +557,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*      Specification</a>
 	* @see java.awt.Component#isFocusable
 	*/
-	@:overload public function isRequestFocusEnabled() : Bool;
+	@:overload @:public public function isRequestFocusEnabled() : Bool;
 	
 	/**
 	* Requests that this <code>Component</code> gets the input focus.
@@ -577,7 +577,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#requestFocusInWindow(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function requestFocus() : Void;
+	@:require(java4) @:overload @:public override public function requestFocus() : Void;
 	
 	/**
 	* Requests that this <code>Component</code> gets the input focus.
@@ -601,7 +601,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#requestFocusInWindow(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function requestFocus(temporary : Bool) : Bool;
+	@:require(java4) @:overload @:public override public function requestFocus(temporary : Bool) : Bool;
 	
 	/**
 	* Requests that this <code>Component</code> gets the input focus.
@@ -620,7 +620,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#requestFocusInWindow(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function requestFocusInWindow() : Bool;
+	@:require(java4) @:overload @:public override public function requestFocusInWindow() : Bool;
 	
 	/**
 	* Requests that this <code>Component</code> gets the input focus.
@@ -640,7 +640,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#requestFocusInWindow(boolean)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function requestFocusInWindow(temporary : Bool) : Bool;
+	@:require(java4) @:overload @:protected override private function requestFocusInWindow(temporary : Bool) : Bool;
 	
 	/**
 	* Requests that this Component get the input focus, and that this
@@ -654,7 +654,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @see #requestFocusInWindow()
 	*/
-	@:overload public function grabFocus() : Void;
+	@:overload @:public public function grabFocus() : Void;
 	
 	/**
 	* Sets the value to indicate whether input verifier for the
@@ -677,7 +677,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* description: Whether the Component verifies input before accepting
 	*              focus.
 	*/
-	@:require(java3) @:overload public function setVerifyInputWhenFocusTarget(verifyInputWhenFocusTarget : Bool) : Void;
+	@:require(java3) @:overload @:public public function setVerifyInputWhenFocusTarget(verifyInputWhenFocusTarget : Bool) : Void;
 	
 	/**
 	* Returns the value that indicates whether the input verifier for the
@@ -693,7 +693,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getVerifyInputWhenFocusTarget() : Bool;
+	@:require(java3) @:overload @:public public function getVerifyInputWhenFocusTarget() : Bool;
 	
 	/**
 	* Gets the <code>FontMetrics</code> for the specified <code>Font</code>.
@@ -704,7 +704,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @throws NullPointerException if <code>font</code> is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:require(java5) @:overload @:public override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Sets the preferred size of this component.
@@ -715,7 +715,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*       bound: true
 	* description: The preferred size of the component.
 	*/
-	@:overload override public function setPreferredSize(preferredSize : java.awt.Dimension) : Void;
+	@:overload @:public override public function setPreferredSize(preferredSize : java.awt.Dimension) : Void;
 	
 	/**
 	* If the <code>preferredSize</code> has been set to a
@@ -728,7 +728,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setPreferredSize
 	* @see ComponentUI
 	*/
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the maximum size of this component to a constant
@@ -744,7 +744,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*       bound: true
 	* description: The maximum size of the component.
 	*/
-	@:overload override public function setMaximumSize(maximumSize : java.awt.Dimension) : Void;
+	@:overload @:public override public function setMaximumSize(maximumSize : java.awt.Dimension) : Void;
 	
 	/**
 	* If the maximum size has been set to a non-<code>null</code> value
@@ -756,7 +756,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setMaximumSize
 	* @see ComponentUI
 	*/
-	@:overload override public function getMaximumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the minimum size of this component to a constant
@@ -771,7 +771,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*       bound: true
 	* description: The minimum size of the component.
 	*/
-	@:overload override public function setMinimumSize(minimumSize : java.awt.Dimension) : Void;
+	@:overload @:public override public function setMinimumSize(minimumSize : java.awt.Dimension) : Void;
 	
 	/**
 	* If the minimum size has been set to a non-<code>null</code> value
@@ -783,7 +783,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setMinimumSize
 	* @see ComponentUI
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* Gives the UI delegate an opportunity to define the precise
@@ -793,7 +793,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#contains(int, int)
 	* @see ComponentUI
 	*/
-	@:overload override public function contains(x : Int, y : Int) : Bool;
+	@:overload @:public override public function contains(x : Int, y : Int) : Bool;
 	
 	/**
 	* Sets the border of this component.  The <code>Border</code> object is
@@ -826,7 +826,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*    attribute: visualUpdate true
 	*  description: The component's border.
 	*/
-	@:overload public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload @:public public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* Returns the border of this component or <code>null</code> if no
@@ -835,7 +835,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the border object for this component
 	* @see #setBorder
 	*/
-	@:overload public function getBorder() : javax.swing.border.Border;
+	@:overload @:public public function getBorder() : javax.swing.border.Border;
 	
 	/**
 	* If a border has been set on this component, returns the
@@ -844,7 +844,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the value of the insets property
 	* @see #setBorder
 	*/
-	@:overload override public function getInsets() : java.awt.Insets;
+	@:overload @:public override public function getInsets() : java.awt.Insets;
 	
 	/**
 	* Returns an <code>Insets</code> object containing this component's inset
@@ -860,7 +860,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @beaninfo
 	*   expert: true
 	*/
-	@:overload public function getInsets(insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public public function getInsets(insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Overrides <code>Container.getAlignmentY</code> to return
@@ -870,7 +870,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setAlignmentY
 	* @see java.awt.Component#getAlignmentY
 	*/
-	@:overload override public function getAlignmentY() : Single;
+	@:overload @:public override public function getAlignmentY() : Single;
 	
 	/**
 	* Sets the the horizontal alignment.
@@ -880,7 +880,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @beaninfo
 	*   description: The preferred vertical alignment of the component.
 	*/
-	@:overload public function setAlignmentY(alignmentY : Single) : Void;
+	@:overload @:public public function setAlignmentY(alignmentY : Single) : Void;
 	
 	/**
 	* Overrides <code>Container.getAlignmentX</code> to return
@@ -890,7 +890,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setAlignmentX
 	* @see java.awt.Component#getAlignmentX
 	*/
-	@:overload override public function getAlignmentX() : Single;
+	@:overload @:public override public function getAlignmentX() : Single;
 	
 	/**
 	* Sets the the vertical alignment.
@@ -900,7 +900,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @beaninfo
 	*   description: The preferred horizontal alignment of the component.
 	*/
-	@:overload public function setAlignmentX(alignmentX : Single) : Void;
+	@:overload @:public public function setAlignmentX(alignmentX : Single) : Void;
 	
 	/**
 	* Sets the input verifier for this component.
@@ -912,7 +912,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*       bound: true
 	* description: The component's input verifier.
 	*/
-	@:require(java3) @:overload public function setInputVerifier(inputVerifier : javax.swing.InputVerifier) : Void;
+	@:require(java3) @:overload @:public public function setInputVerifier(inputVerifier : javax.swing.InputVerifier) : Void;
 	
 	/**
 	* Returns the input verifier for this component.
@@ -921,7 +921,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @since 1.3
 	* @see InputVerifier
 	*/
-	@:require(java3) @:overload public function getInputVerifier() : javax.swing.InputVerifier;
+	@:require(java3) @:overload @:public public function getInputVerifier() : javax.swing.InputVerifier;
 	
 	/**
 	* Returns this component's graphics context, which lets you draw
@@ -929,7 +929,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* then invoke operations on that object to draw on the component.
 	* @return this components graphics context
 	*/
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload @:public override public function getGraphics() : java.awt.Graphics;
 	
 	/** Enables or disables diagnostic information about every graphics
 	* operation performed within the component or one of its children.
@@ -956,7 +956,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*              BUFFERED_OPTION DebugGraphics.BUFFERED_OPTION
 	* description: Diagnostic options for graphics operations.
 	*/
-	@:overload public function setDebugGraphicsOptions(debugOptions : Int) : Void;
+	@:overload @:public public function setDebugGraphicsOptions(debugOptions : Int) : Void;
 	
 	/** Returns the state of graphics debugging.
 	*
@@ -973,7 +973,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* </ul>
 	* @see #setDebugGraphicsOptions
 	*/
-	@:overload public function getDebugGraphicsOptions() : Int;
+	@:overload @:public public function getDebugGraphicsOptions() : Int;
 	
 	/**
 	* This method is now obsolete, please use a combination of
@@ -1039,14 +1039,14 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param aCondition the condition that needs to be met, see above
 	* @see KeyStroke
 	*/
-	@:overload public function registerKeyboardAction(anAction : java.awt.event.ActionListener, aCommand : String, aKeyStroke : javax.swing.KeyStroke, aCondition : Int) : Void;
+	@:overload @:public public function registerKeyboardAction(anAction : java.awt.event.ActionListener, aCommand : String, aKeyStroke : javax.swing.KeyStroke, aCondition : Int) : Void;
 	
 	/**
 	* This method is now obsolete, please use a combination of
 	* <code>getActionMap()</code> and <code>getInputMap()</code> for
 	* similiar behavior.
 	*/
-	@:overload public function registerKeyboardAction(anAction : java.awt.event.ActionListener, aKeyStroke : javax.swing.KeyStroke, aCondition : Int) : Void;
+	@:overload @:public public function registerKeyboardAction(anAction : java.awt.event.ActionListener, aKeyStroke : javax.swing.KeyStroke, aCondition : Int) : Void;
 	
 	/**
 	* This method is now obsolete. To unregister an existing binding
@@ -1062,7 +1062,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* This will remove the binding from the <code>ActionMap</code>
 	* (if it exists) as well as the <code>InputMap</code>s.
 	*/
-	@:overload public function unregisterKeyboardAction(aKeyStroke : javax.swing.KeyStroke) : Void;
+	@:overload @:public public function unregisterKeyboardAction(aKeyStroke : javax.swing.KeyStroke) : Void;
 	
 	/**
 	* Returns the <code>KeyStrokes</code> that will initiate
@@ -1071,7 +1071,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return an array of <code>KeyStroke</code> objects
 	* @see #registerKeyboardAction
 	*/
-	@:overload public function getRegisteredKeyStrokes() : java.NativeArray<javax.swing.KeyStroke>;
+	@:overload @:public public function getRegisteredKeyStrokes() : java.NativeArray<javax.swing.KeyStroke>;
 	
 	/**
 	* Returns the condition that determines whether a registered action
@@ -1085,7 +1085,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the action-keystroke condition
 	*/
-	@:overload public function getConditionForKeyStroke(aKeyStroke : javax.swing.KeyStroke) : Int;
+	@:overload @:public public function getConditionForKeyStroke(aKeyStroke : javax.swing.KeyStroke) : Int;
 	
 	/**
 	* Returns the object that will perform the action registered for a
@@ -1094,7 +1094,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the <code>ActionListener</code>
 	*          object invoked when the keystroke occurs
 	*/
-	@:overload public function getActionForKeyStroke(aKeyStroke : javax.swing.KeyStroke) : java.awt.event.ActionListener;
+	@:overload @:public public function getActionForKeyStroke(aKeyStroke : javax.swing.KeyStroke) : java.awt.event.ActionListener;
 	
 	/**
 	* Unregisters all the bindings in the first tier <code>InputMaps</code>
@@ -1103,7 +1103,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* <code>InputMap/ActionMaps</code>
 	* (the UI is usually defined in the second tier) to persist.
 	*/
-	@:overload public function resetKeyboardActions() : Void;
+	@:overload @:public public function resetKeyboardActions() : Void;
 	
 	/**
 	* Sets the <code>InputMap</code> to use under the condition
@@ -1132,7 +1132,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*          specified above
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function setInputMap(condition : Int, map : javax.swing.InputMap) : Void;
+	@:require(java3) @:overload @:public @:final public function setInputMap(condition : Int, map : javax.swing.InputMap) : Void;
 	
 	/**
 	* Returns the <code>InputMap</code> that is used during
@@ -1144,7 +1144,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*          <code>condition</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function getInputMap(condition : Int) : javax.swing.InputMap;
+	@:require(java3) @:overload @:public @:final public function getInputMap(condition : Int) : javax.swing.InputMap;
 	
 	/**
 	* Returns the <code>InputMap</code> that is used when the
@@ -1154,7 +1154,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the <code>InputMap</code> used when the component has focus
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function getInputMap() : javax.swing.InputMap;
+	@:require(java3) @:overload @:public @:final public function getInputMap() : javax.swing.InputMap;
 	
 	/**
 	* Sets the <code>ActionMap</code> to <code>am</code>. This does not set
@@ -1164,7 +1164,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param am  the new <code>ActionMap</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function setActionMap(am : javax.swing.ActionMap) : Void;
+	@:require(java3) @:overload @:public @:final public function setActionMap(am : javax.swing.ActionMap) : Void;
 	
 	/**
 	* Returns the <code>ActionMap</code> used to determine what
@@ -1175,7 +1175,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the <code>ActionMap</code> containing the key/action bindings
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public function getActionMap() : javax.swing.ActionMap;
+	@:require(java3) @:overload @:public @:final public function getActionMap() : javax.swing.ActionMap;
 	
 	/**
 	* Returns the baseline.  The baseline is measured from the top of
@@ -1198,7 +1198,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.FontMetrics
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -1221,7 +1221,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload @:public override public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* In release 1.4, the focus subsystem was rearchitected.
@@ -1241,7 +1241,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @deprecated As of 1.4, replaced by
 	* <code>FocusTraversalPolicy.getDefaultComponent(Container).requestFocus()</code>
 	*/
-	@:overload public function requestDefaultFocus() : Bool;
+	@:overload @:public public function requestDefaultFocus() : Bool;
 	
 	/**
 	* Makes the component visible or invisible.
@@ -1253,7 +1253,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @beaninfo
 	*    attribute: visualUpdate true
 	*/
-	@:overload override public function setVisible(aFlag : Bool) : Void;
+	@:overload @:public override public function setVisible(aFlag : Bool) : Void;
 	
 	/**
 	* Sets whether or not this component is enabled.
@@ -1277,7 +1277,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*    attribute: visualUpdate true
 	*  description: The enabled state of the component.
 	*/
-	@:overload override public function setEnabled(enabled : Bool) : Void;
+	@:overload @:public override public function setEnabled(enabled : Bool) : Void;
 	
 	/**
 	* Sets the foreground color of this component.  It is up to the
@@ -1293,7 +1293,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*    attribute: visualUpdate true
 	*  description: The foreground color of the component.
 	*/
-	@:overload override public function setForeground(fg : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(fg : java.awt.Color) : Void;
 	
 	/**
 	* Sets the background color of this component.  The background
@@ -1316,7 +1316,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*    attribute: visualUpdate true
 	*  description: The background color of the component.
 	*/
-	@:overload override public function setBackground(bg : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(bg : java.awt.Color) : Void;
 	
 	/**
 	* Sets the font for this component.
@@ -1330,7 +1330,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*    attribute: visualUpdate true
 	*  description: The font for the component.
 	*/
-	@:overload override public function setFont(font : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(font : java.awt.Font) : Void;
 	
 	/**
 	* Returns the default locale used to initialize each JComponent's
@@ -1347,7 +1347,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setLocale
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getDefaultLocale() : java.util.Locale;
+	@:require(java4) @:overload @:static @:public public static function getDefaultLocale() : java.util.Locale;
 	
 	/**
 	* Sets the default locale used to initialize each JComponent's locale
@@ -1364,7 +1364,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setLocale
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function setDefaultLocale(l : java.util.Locale) : Void;
+	@:require(java4) @:overload @:static @:public public static function setDefaultLocale(l : java.util.Locale) : Void;
 	
 	/**
 	* Processes any key events that the component itself
@@ -1380,10 +1380,10 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* key events themselves.  If the event is processed,
 	* it should be consumed.
 	*/
-	@:overload private function processComponentKeyEvent(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:protected private function processComponentKeyEvent(e : java.awt.event.KeyEvent) : Void;
 	
 	/** Overrides <code>processKeyEvent</code> to process events. **/
-	@:overload override private function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
+	@:overload @:protected override private function processKeyEvent(e : java.awt.event.KeyEvent) : Void;
 	
 	/**
 	* Invoked to process the key bindings for <code>ks</code> as the result
@@ -1407,7 +1407,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
+	@:require(java3) @:overload @:protected private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
 	
 	/**
 	* Registers the text to display in a tool tip.
@@ -1424,7 +1424,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*   preferred: true
 	* description: The text to display in a tool tip.
 	*/
-	@:overload public function setToolTipText(text : String) : Void;
+	@:overload @:public public function setToolTipText(text : String) : Void;
 	
 	/**
 	* Returns the tooltip string that has been set with
@@ -1433,7 +1433,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the text of the tool tip
 	* @see #TOOL_TIP_TEXT_KEY
 	*/
-	@:overload public function getToolTipText() : String;
+	@:overload @:public public function getToolTipText() : String;
 	
 	/**
 	* Returns the string to be used as the tooltip for <i>event</i>.
@@ -1442,7 +1442,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* more extensive API to support differing tooltips at different locations,
 	* this method should be overridden.
 	*/
-	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload @:public public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns the tooltip location in this component's coordinate system.
@@ -1453,7 +1453,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*          <code>ToolTipManager</code> to show the tooltip
 	* @return always returns <code>null</code>
 	*/
-	@:overload public function getToolTipLocation(event : java.awt.event.MouseEvent) : java.awt.Point;
+	@:overload @:public public function getToolTipLocation(event : java.awt.event.MouseEvent) : java.awt.Point;
 	
 	/**
 	* Returns the preferred location to display the popup menu in this
@@ -1467,7 +1467,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return location to display the {@code JPopupMenu}, or {@code null}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getPopupLocation(event : java.awt.event.MouseEvent) : java.awt.Point;
+	@:require(java5) @:overload @:public public function getPopupLocation(event : java.awt.event.MouseEvent) : java.awt.Point;
 	
 	/**
 	* Returns the instance of <code>JToolTip</code> that should be used
@@ -1478,7 +1478,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the <code>JToolTip</code> used to display this toolTip
 	*/
-	@:overload public function createToolTip() : javax.swing.JToolTip;
+	@:overload @:public public function createToolTip() : javax.swing.JToolTip;
 	
 	/**
 	* Forwards the <code>scrollRectToVisible()</code> message to the
@@ -1489,7 +1489,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param aRect the visible <code>Rectangle</code>
 	* @see JViewport
 	*/
-	@:overload public function scrollRectToVisible(aRect : java.awt.Rectangle) : Void;
+	@:overload @:public public function scrollRectToVisible(aRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Sets the <code>autoscrolls</code> property.
@@ -1535,7 +1535,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*      expert: true
 	* description: Determines if this component automatically scrolls its contents when dragged.
 	*/
-	@:overload public function setAutoscrolls(autoscrolls : Bool) : Void;
+	@:overload @:public public function setAutoscrolls(autoscrolls : Bool) : Void;
 	
 	/**
 	* Gets the <code>autoscrolls</code> property.
@@ -1544,7 +1544,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see JViewport
 	* @see #setAutoscrolls
 	*/
-	@:overload public function getAutoscrolls() : Bool;
+	@:overload @:public public function getAutoscrolls() : Bool;
 	
 	/**
 	* Sets the {@code TransferHandler}, which provides support for transfer
@@ -1585,7 +1585,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*       hidden: true
 	*  description: Mechanism for transfer of data to and from the component
 	*/
-	@:require(java4) @:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:require(java4) @:overload @:public public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
 	/**
 	* Gets the <code>transferHandler</code> property.
@@ -1596,7 +1596,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #setTransferHandler
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTransferHandler() : javax.swing.TransferHandler;
+	@:require(java4) @:overload @:public public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	/**
 	* Processes mouse events occurring on this component by
@@ -1609,7 +1609,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see         java.awt.Component#processMouseEvent
 	* @since       1.5
 	*/
-	@:require(java5) @:overload override private function processMouseEvent(e : java.awt.event.MouseEvent) : Void;
+	@:require(java5) @:overload @:protected override private function processMouseEvent(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Processes mouse motion events, such as MouseEvent.MOUSE_DRAGGED.
@@ -1617,25 +1617,25 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param e the <code>MouseEvent</code>
 	* @see MouseEvent
 	*/
-	@:overload override private function processMouseMotionEvent(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:protected override private function processMouseMotionEvent(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>java.awt.Component.setEnabled(boolean)</code>.
 	*/
-	@:overload override public function enable() : Void;
+	@:overload @:public override public function enable() : Void;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>java.awt.Component.setEnabled(boolean)</code>.
 	*/
-	@:overload override public function disable() : Void;
+	@:overload @:public override public function disable() : Void;
 	
 	/**
 	* The <code>AccessibleContext</code> associated with this
 	* <code>JComponent</code>.
 	*/
-	private var accessibleContext : javax.accessibility.AccessibleContext;
+	@:protected private var accessibleContext : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Returns the <code>AccessibleContext</code> associated with this
@@ -1647,7 +1647,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the <code>AccessibleContext</code> of this
 	*          <code>JComponent</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Returns the value of the property with the specified key.  Only
@@ -1658,7 +1658,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the value of this property or <code>null</code>
 	* @see #putClientProperty
 	*/
-	@:overload @:final public function getClientProperty(key : Dynamic) : Dynamic;
+	@:overload @:public @:final public function getClientProperty(key : Dynamic) : Dynamic;
 	
 	/**
 	* Adds an arbitrary key/value "client property" to this component.
@@ -1688,7 +1688,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getClientProperty
 	* @see #addPropertyChangeListener
 	*/
-	@:overload @:final public function putClientProperty(key : Dynamic, value : Dynamic) : Void;
+	@:overload @:public @:final public function putClientProperty(key : Dynamic, value : Dynamic) : Void;
 	
 	/**
 	* Sets the focus traversal keys for a given traversal operation for this
@@ -1716,7 +1716,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @beaninfo
 	*       bound: true
 	*/
-	@:require(java5) @:overload override public function setFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
+	@:require(java5) @:overload @:public override public function setFocusTraversalKeys(id : Int, keystrokes : java.util.Set<java.awt.AWTKeyStroke>) : Void;
 	
 	/**
 	* Returns true if this component is lightweight, that is, if it doesn't
@@ -1724,7 +1724,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return true if this component is lightweight
 	*/
-	@:overload public static function isLightweightComponent(c : java.awt.Component) : Bool;
+	@:overload @:public @:static public static function isLightweightComponent(c : java.awt.Component) : Bool;
 	
 	/**
 	* @deprecated As of JDK 5,
@@ -1738,7 +1738,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param h  the new height
 	* @see java.awt.Component#setBounds
 	*/
-	@:overload override public function reshape(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function reshape(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Stores the bounds of this component into "return value"
@@ -1753,7 +1753,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*          return a newly created <code>Rectangle</code> with this
 	*          component's bounds
 	*/
-	@:overload override public function getBounds(rv : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload @:public override public function getBounds(rv : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Stores the width/height of this component into "return value"
@@ -1766,7 +1766,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param rv the return value, modified to the component's size
 	* @return <code>rv</code>
 	*/
-	@:overload override public function getSize(rv : java.awt.Dimension) : java.awt.Dimension;
+	@:overload @:public override public function getSize(rv : java.awt.Dimension) : java.awt.Dimension;
 	
 	/**
 	* Stores the x,y origin of this component into "return value"
@@ -1779,7 +1779,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param rv the return value, modified to the component's location
 	* @return <code>rv</code>
 	*/
-	@:overload override public function getLocation(rv : java.awt.Point) : java.awt.Point;
+	@:overload @:public override public function getLocation(rv : java.awt.Point) : java.awt.Point;
 	
 	/**
 	* Returns the current x coordinate of the component's origin.
@@ -1790,7 +1790,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the current x coordinate of the component's origin
 	*/
-	@:overload override public function getX() : Int;
+	@:overload @:public override public function getX() : Int;
 	
 	/**
 	* Returns the current y coordinate of the component's origin.
@@ -1801,7 +1801,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the current y coordinate of the component's origin
 	*/
-	@:overload override public function getY() : Int;
+	@:overload @:public override public function getY() : Int;
 	
 	/**
 	* Returns the current width of this component.
@@ -1812,7 +1812,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the current width of this component
 	*/
-	@:overload override public function getWidth() : Int;
+	@:overload @:public override public function getWidth() : Int;
 	
 	/**
 	* Returns the current height of this component.
@@ -1823,7 +1823,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the current height of this component
 	*/
-	@:overload override public function getHeight() : Int;
+	@:overload @:public override public function getHeight() : Int;
 	
 	/**
 	* Returns true if this component is completely opaque.
@@ -1840,7 +1840,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return true if this component is completely opaque
 	* @see #setOpaque
 	*/
-	@:overload override public function isOpaque() : Bool;
+	@:overload @:public override public function isOpaque() : Bool;
 	
 	/**
 	* If true the component paints every pixel within its bounds.
@@ -1859,7 +1859,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*       expert: true
 	*  description: The component's opacity
 	*/
-	@:overload public function setOpaque(isOpaque : Bool) : Void;
+	@:overload @:public public function setOpaque(isOpaque : Bool) : Void;
 	
 	/**
 	* Returns the <code>Component</code>'s "visible rect rectangle" -  the
@@ -1873,7 +1873,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*          value for this method
 	* @see #getVisibleRect
 	*/
-	@:overload public function computeVisibleRect(visibleRect : java.awt.Rectangle) : Void;
+	@:overload @:public public function computeVisibleRect(visibleRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the <code>Component</code>'s "visible rectangle" -  the
@@ -1883,7 +1883,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the visible rectangle
 	*/
-	@:overload public function getVisibleRect() : java.awt.Rectangle;
+	@:overload @:public public function getVisibleRect() : java.awt.Rectangle;
 	
 	/**
 	* Support for reporting bound property changes for boolean properties.
@@ -1895,7 +1895,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param oldValue the property's previous value
 	* @param newValue the property's new value
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
 	
 	/**
 	* Support for reporting bound property changes for integer properties.
@@ -1907,9 +1907,9 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param oldValue the property's previous value
 	* @param newValue the property's new value
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Int, newValue : Int) : Void;
 	
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Char16, newValue : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : java.StdTypes.Char16, newValue : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Supports reporting constrained property changes.
@@ -1923,7 +1923,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @exception PropertyVetoException when the attempt to set the
 	*          property is vetoed by the component
 	*/
-	@:overload private function fireVetoableChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:protected private function fireVetoableChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
 	
 	/**
 	* Adds a <code>VetoableChangeListener</code> to the listener list.
@@ -1931,7 +1931,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @param listener  the <code>VetoableChangeListener</code> to be added
 	*/
-	@:overload @:synchronized public function addVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public @:synchronized public function addVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Removes a <code>VetoableChangeListener</code> from the listener list.
@@ -1940,7 +1940,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @param listener  the <code>VetoableChangeListener</code> to be removed
 	*/
-	@:overload @:synchronized public function removeVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
+	@:overload @:public @:synchronized public function removeVetoableChangeListener(listener : java.beans.VetoableChangeListener) : Void;
 	
 	/**
 	* Returns an array of all the vetoable change listeners
@@ -1955,7 +1955,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getVetoableChangeListeners() : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:require(java4) @:overload @:public @:synchronized public function getVetoableChangeListeners() : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Returns the top-level ancestor of this component (either the
@@ -1966,7 +1966,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the top-level <code>Container</code> that this component is in,
 	*          or <code>null</code> if not in any container
 	*/
-	@:overload public function getTopLevelAncestor() : java.awt.Container;
+	@:overload @:public public function getTopLevelAncestor() : java.awt.Container;
 	
 	/**
 	* Registers <code>listener</code> so that it will receive
@@ -1978,7 +1978,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param listener  the <code>AncestorListener</code> to register
 	* @see AncestorEvent
 	*/
-	@:overload public function addAncestorListener(listener : javax.swing.event.AncestorListener) : Void;
+	@:overload @:public public function addAncestorListener(listener : javax.swing.event.AncestorListener) : Void;
 	
 	/**
 	* Unregisters <code>listener</code> so that it will no longer receive
@@ -1987,7 +1987,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param listener  the <code>AncestorListener</code> to be removed
 	* @see #addAncestorListener
 	*/
-	@:overload public function removeAncestorListener(listener : javax.swing.event.AncestorListener) : Void;
+	@:overload @:public public function removeAncestorListener(listener : javax.swing.event.AncestorListener) : Void;
 	
 	/**
 	* Returns an array of all the ancestor listeners
@@ -2002,7 +2002,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAncestorListeners() : java.NativeArray<javax.swing.event.AncestorListener>;
+	@:require(java4) @:overload @:public public function getAncestorListeners() : java.NativeArray<javax.swing.event.AncestorListener>;
 	
 	/**
 	* Returns an array of all the objects currently registered
@@ -2039,7 +2039,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getVetoableChangeListeners
 	* @see #getAncestorListeners
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload @:public override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Notifies this component that it now has a parent component.
@@ -2050,7 +2050,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @see #registerKeyboardAction
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Notifies this component that it no longer has a parent component.
@@ -2061,7 +2061,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @see #registerKeyboardAction
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Adds the specified region to the dirty region list if the component
@@ -2077,7 +2077,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#isShowing
 	* @see RepaintManager#addDirtyRegion
 	*/
-	@:overload override public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Adds the specified region to the dirty region list if the component
@@ -2089,7 +2089,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Component#isShowing
 	* @see RepaintManager#addDirtyRegion
 	*/
-	@:overload public function repaint(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function repaint(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Supports deferred automatic layout.
@@ -2117,7 +2117,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #isValidateRoot
 	* @see RepaintManager#addInvalidComponent
 	*/
-	@:overload override public function revalidate() : Void;
+	@:overload @:public override public function revalidate() : Void;
 	
 	/**
 	* If this method returns true, <code>revalidate</code> calls by
@@ -2132,7 +2132,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see java.awt.Container#validate
 	* @see java.awt.Container#isValidateRoot
 	*/
-	@:overload override public function isValidateRoot() : Bool;
+	@:overload @:public override public function isValidateRoot() : Bool;
 	
 	/**
 	* Returns true if this component tiles its children -- that is, if
@@ -2144,7 +2144,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return always returns true
 	*/
-	@:overload public function isOptimizedDrawingEnabled() : Bool;
+	@:overload @:public public function isOptimizedDrawingEnabled() : Bool;
 	
 	/**
 	* Returns {@code true} if a paint triggered on a child component should cause
@@ -2162,7 +2162,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @see #paintImmediately(int, int, int, int)
 	*/
-	@:overload private function isPaintingOrigin() : Bool;
+	@:overload @:protected private function isPaintingOrigin() : Bool;
 	
 	/**
 	* Paints the specified region in this component and all of its
@@ -2184,14 +2184,14 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #repaint
 	* @see #isPaintingOrigin()
 	*/
-	@:overload public function paintImmediately(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public public function paintImmediately(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Paints the specified region now.
 	*
 	* @param r a <code>Rectangle</code> containing the region to be painted
 	*/
-	@:overload public function paintImmediately(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function paintImmediately(r : java.awt.Rectangle) : Void;
 	
 	/**
 	*  Sets whether this component should use a buffer to paint.
@@ -2203,14 +2203,14 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	*  @param aFlag if true, set this component to be double buffered
 	*/
-	@:overload public function setDoubleBuffered(aFlag : Bool) : Void;
+	@:overload @:public public function setDoubleBuffered(aFlag : Bool) : Void;
 	
 	/**
 	* Returns whether this component should use a buffer to paint.
 	*
 	* @return true if this component is double buffered, otherwise false
 	*/
-	@:overload override public function isDoubleBuffered() : Bool;
+	@:overload @:public override public function isDoubleBuffered() : Bool;
 	
 	/**
 	* Returns the <code>JRootPane</code> ancestor for this component.
@@ -2218,7 +2218,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the <code>JRootPane</code> that contains this component,
 	*          or <code>null</code> if no <code>JRootPane</code> is found
 	*/
-	@:overload public function getRootPane() : javax.swing.JRootPane;
+	@:overload @:public public function getRootPane() : javax.swing.JRootPane;
 	
 	/**
 	* Returns a string representation of this <code>JComponent</code>.
@@ -2230,7 +2230,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return  a string representation of this <code>JComponent</code>
 	*/
-	@:overload override private function paramString() : String;
+	@:overload @:protected override private function paramString() : String;
 	
 	
 }
@@ -2241,19 +2241,19 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 */
 @:native('javax$swing$JComponent$ActionStandin') @:internal extern class JComponent_ActionStandin implements javax.swing.Action
 {
-	@:overload public function getValue(key : String) : Dynamic;
+	@:overload @:public public function getValue(key : String) : Dynamic;
 	
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
-	@:overload public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
-	@:overload public function putValue(key : String, value : Dynamic) : Void;
+	@:overload @:public public function putValue(key : String, value : Dynamic) : Void;
 	
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }
@@ -2286,18 +2286,18 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* Though the class is abstract, this should be called by
 	* all sub-classes.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
-	private var accessibleContainerHandler : java.awt.event.ContainerListener;
+	@:protected private var accessibleContainerHandler : java.awt.event.ContainerListener;
 	
-	private var accessibleFocusHandler : java.awt.event.FocusListener;
+	@:protected private var accessibleFocusHandler : java.awt.event.FocusListener;
 	
 	/**
 	* Adds a PropertyChangeListener to the listener list.
 	*
 	* @param listener  the PropertyChangeListener to be added
 	*/
-	@:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Removes a PropertyChangeListener from the listener list.
@@ -2306,7 +2306,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @param listener  the PropertyChangeListener to be removed
 	*/
-	@:overload override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload @:public override public function removePropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* Recursively search through the border hierarchy (if it exists)
@@ -2317,7 +2317,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* It's rather arbitrary, but hopefully decent UI programmers will
 	* not create multiple titled borders for the same component.
 	*/
-	@:overload private function getBorderTitle(b : javax.swing.border.Border) : String;
+	@:overload @:protected private function getBorderTitle(b : javax.swing.border.Border) : String;
 	
 	/**
 	* Gets the accessible name of this object.  This should almost never
@@ -2333,7 +2333,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*         object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessible description of this object.  This should be
@@ -2350,7 +2350,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* this object does not have a description
 	* @see AccessibleContext#setAccessibleDescription
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.
@@ -2359,7 +2359,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state of this object.
@@ -2368,7 +2368,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -2377,7 +2377,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth Accessible child of the object.
@@ -2385,7 +2385,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the tool tip text
@@ -2394,7 +2394,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getToolTipText() : String;
+	@:require(java4) @:overload @:public public function getToolTipText() : String;
 	
 	/**
 	* Returns the titled border text
@@ -2403,7 +2403,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTitledBorderText() : String;
+	@:require(java4) @:overload @:public public function getTitledBorderText() : String;
 	
 	/**
 	* Returns key bindings associated with this object
@@ -2413,7 +2413,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleKeyBinding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
+	@:require(java4) @:overload @:public public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
 	
 	/**
 	* Sets the foreground color of this object.
@@ -2421,7 +2421,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload @:public @:public override public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public @:public @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -2431,7 +2431,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload @:public @:public override public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public @:public @:public override public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Sets the background color of this object.
@@ -2439,7 +2439,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload @:public @:public override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public @:public @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Sets the enabled state of the object.
@@ -2447,7 +2447,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload @:public @:public override public function setEnabled(b : Bool) : Void;
+	@:overload @:public @:public @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Gets the background color of this object.
@@ -2456,7 +2456,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload @:public @:public override public function getBackground() : java.awt.Color;
+	@:overload @:public @:public @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -2467,7 +2467,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload @:public @:public override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public @:public @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the Cursor of this object.
@@ -2475,7 +2475,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param cursor  the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload @:public @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public @:public @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -2485,7 +2485,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload @:public @:public override public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public @:public @:public override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -2494,7 +2494,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload @:public @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public @:public @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -2505,7 +2505,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload @:public @:public override public function isShowing() : Bool;
+	@:overload @:public @:public @:public override public function isShowing() : Bool;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -2514,14 +2514,14 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload @:public @:public override public function getForeground() : java.awt.Color;
+	@:overload @:public @:public @:public override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload @:public @:public override public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public @:public @:public override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -2530,7 +2530,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload @:public @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public @:public @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -2538,7 +2538,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload @:public @:public override public function requestFocus() : Void;
+	@:overload @:public @:public @:public override public function requestFocus() : Void;
 	
 	/**
 	* Gets the FontMetrics of this object.
@@ -2547,7 +2547,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload @:public @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public @:public @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -2558,7 +2558,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload @:public @:public override public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public @:public @:public override public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -2571,7 +2571,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public @:public override public function isFocusTraversable() : Bool;
+	@:overload @:public @:public @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Sets the Font of this object.
@@ -2579,7 +2579,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload @:public @:public override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public @:public @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the Font of this object.
@@ -2587,7 +2587,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload @:public @:public override public function getFont() : java.awt.Font;
+	@:overload @:public @:public @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Determines if the object is enabled.  Objects that are enabled
@@ -2600,7 +2600,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public @:public override public function isEnabled() : Bool;
+	@:overload @:public @:public @:public override public function isEnabled() : Bool;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -2613,7 +2613,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload @:public @:public override public function getLocation() : java.awt.Point;
+	@:overload @:public @:public @:public override public function getLocation() : java.awt.Point;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -2623,7 +2623,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload @:public @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public @:public @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the Cursor of this object.
@@ -2631,7 +2631,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload @:public @:public override public function getCursor() : java.awt.Cursor;
+	@:overload @:public @:public @:public override public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -2648,7 +2648,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public @:public override public function isVisible() : Bool;
+	@:overload @:public @:public @:public override public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
@@ -2656,7 +2656,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload @:public @:public override public function setVisible(b : Bool) : Void;
+	@:overload @:public @:public @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -2664,7 +2664,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload @:public @:public override public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public @:public @:public override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -2676,7 +2676,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload @:public @:public override public function getSize() : java.awt.Dimension;
+	@:overload @:public @:public @:public override public function getSize() : java.awt.Dimension;
 	
 	
 }
@@ -2686,9 +2686,9 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 */
 @:native('javax$swing$JComponent$AccessibleJComponent$AccessibleContainerHandler') extern class JComponent_AccessibleJComponent_AccessibleContainerHandler implements java.awt.event.ContainerListener
 {
-	@:overload public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentAdded(e : java.awt.event.ContainerEvent) : Void;
 	
-	@:overload public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
+	@:overload @:public public function componentRemoved(e : java.awt.event.ContainerEvent) : Void;
 	
 	
 }
@@ -2699,9 +2699,9 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 */
 @:require(java3) @:native('javax$swing$JComponent$AccessibleJComponent$AccessibleFocusHandler') extern class JComponent_AccessibleJComponent_AccessibleFocusHandler implements java.awt.event.FocusListener
 {
-	@:overload public function focusGained(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusGained(event : java.awt.event.FocusEvent) : Void;
 	
-	@:overload public function focusLost(event : java.awt.event.FocusEvent) : Void;
+	@:overload @:public public function focusLost(event : java.awt.event.FocusEvent) : Void;
 	
 	
 }
@@ -2729,7 +2729,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* the UI property of all of the copmonents with
 	* <code>SwingUtilities.updateComponentTreeUI</code>.
 	*/
-	@:overload public function validateObject() : Void;
+	@:overload @:public public function validateObject() : Void;
 	
 	
 }

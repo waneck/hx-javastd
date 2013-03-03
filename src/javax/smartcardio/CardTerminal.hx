@@ -49,14 +49,14 @@ package javax.smartcardio;
 	* or {@linkplain CardTerminals#getTerminal getTerminal()}
 	* to obtain a CardTerminal object.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the unique name of this terminal.
 	*
 	* @return the unique name of this terminal.
 	*/
-	@:overload @:abstract public function getName() : String;
+	@:overload @:public @:abstract public function getName() : String;
 	
 	/**
 	* Establishes a connection to the card.
@@ -78,7 +78,7 @@ package javax.smartcardio;
 	*   caller does not have the required
 	*   {@linkplain CardPermission permission}
 	*/
-	@:overload @:abstract public function connect(protocol : String) : javax.smartcardio.Card;
+	@:overload @:public @:abstract public function connect(protocol : String) : javax.smartcardio.Card;
 	
 	/**
 	* Returns whether a card is present in this terminal.
@@ -87,7 +87,7 @@ package javax.smartcardio;
 	*
 	* @throws CardException if the status could not be determined
 	*/
-	@:overload @:abstract public function isCardPresent() : Bool;
+	@:overload @:public @:abstract public function isCardPresent() : Bool;
 	
 	/**
 	* Waits until a card is present in this terminal or the timeout
@@ -105,7 +105,7 @@ package javax.smartcardio;
 	* @throws IllegalArgumentException if timeout is negative
 	* @throws CardException if the operation failed
 	*/
-	@:overload @:abstract public function waitForCardPresent(timeout : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function waitForCardPresent(timeout : haxe.Int64) : Bool;
 	
 	/**
 	* Waits until a card is absent in this terminal or the timeout
@@ -123,7 +123,7 @@ package javax.smartcardio;
 	* @throws IllegalArgumentException if timeout is negative
 	* @throws CardException if the operation failed
 	*/
-	@:overload @:abstract public function waitForCardAbsent(timeout : haxe.Int64) : Bool;
+	@:overload @:public @:abstract public function waitForCardAbsent(timeout : haxe.Int64) : Bool;
 	
 	
 }

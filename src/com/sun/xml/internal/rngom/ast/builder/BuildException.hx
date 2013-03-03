@@ -53,9 +53,9 @@ package com.sun.xml.internal.rngom.ast.builder;
 */
 extern class BuildException extends java.lang.RuntimeException
 {
-	@:overload public function new(cause : java.lang.Throwable) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

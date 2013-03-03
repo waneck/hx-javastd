@@ -25,15 +25,15 @@ package com.sun.corba.se.spi.logging;
 */
 extern class LogWrapperBase
 {
-	private var logger : java.util.logging.Logger;
+	@:protected private var logger : java.util.logging.Logger;
 	
-	private var loggerName : String;
+	@:protected private var loggerName : String;
 	
-	@:overload private function new(logger : java.util.logging.Logger) : Void;
+	@:overload @:protected private function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload private function doLog(level : java.util.logging.Level, key : String, params : java.NativeArray<Dynamic>, wrapperClass : Class<Dynamic>, thr : java.lang.Throwable) : Void;
+	@:overload @:protected private function doLog(level : java.util.logging.Level, key : String, params : java.NativeArray<Dynamic>, wrapperClass : Class<Dynamic>, thr : java.lang.Throwable) : Void;
 	
-	@:overload private function doLog(level : java.util.logging.Level, key : String, wrapperClass : Class<Dynamic>, thr : java.lang.Throwable) : Void;
+	@:overload @:protected private function doLog(level : java.util.logging.Level, key : String, wrapperClass : Class<Dynamic>, thr : java.lang.Throwable) : Void;
 	
 	
 }

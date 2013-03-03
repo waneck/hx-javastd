@@ -25,9 +25,9 @@ package sun.security.rsa;
 */
 extern class RSAKeyFactory extends java.security.KeyFactorySpi
 {
-	public static var MIN_MODLEN(default, null) : Int;
+	@:public @:final @:static public static var MIN_MODLEN(default, null) : Int;
 	
-	public static var MAX_MODLEN(default, null) : Int;
+	@:public @:final @:static public static var MAX_MODLEN(default, null) : Int;
 	
 	/*
 	* If the modulus length is above this value, restrict the size of
@@ -36,11 +36,11 @@ extern class RSAKeyFactory extends java.security.KeyFactorySpi
 	* this approach allows flexibility in case impls would like to use
 	* larger module and exponent values.
 	*/
-	public static var MAX_MODLEN_RESTRICT_EXP(default, null) : Int;
+	@:public @:final @:static public static var MAX_MODLEN_RESTRICT_EXP(default, null) : Int;
 	
-	public static var MAX_RESTRICTED_EXPLEN(default, null) : Int;
+	@:public @:final @:static public static var MAX_RESTRICTED_EXPLEN(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Static method to convert Key into an instance of RSAPublicKeyImpl
@@ -49,7 +49,7 @@ extern class RSAKeyFactory extends java.security.KeyFactorySpi
 	*
 	* Used by RSASignature and RSACipher.
 	*/
-	@:overload public static function toRSAKey(key : java.security.Key) : java.security.interfaces.RSAKey;
+	@:overload @:public @:static public static function toRSAKey(key : java.security.Key) : java.security.interfaces.RSAKey;
 	
 	/**
 	* Check the length of an RSA key modulus/exponent to make sure it
@@ -65,20 +65,20 @@ extern class RSAKeyFactory extends java.security.KeyFactorySpi
 	*
 	* @throws InvalidKeyException if any of the values are unacceptable.
 	*/
-	@:overload public static function checkKeyLengths(modulusLen : Int, exponent : java.math.BigInteger, minModulusLen : Int, maxModulusLen : Int) : Void;
+	@:overload @:public @:static public static function checkKeyLengths(modulusLen : Int, exponent : java.math.BigInteger, minModulusLen : Int, maxModulusLen : Int) : Void;
 	
 	/**
 	* Translate an RSA key into a SunRsaSign RSA key. If conversion is
 	* not possible, throw an InvalidKeyException.
 	* See also JCA doc.
 	*/
-	@:overload override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
+	@:overload @:protected override private function engineTranslateKey(key : java.security.Key) : java.security.Key;
 	
-	@:overload override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload @:protected override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
-	@:overload override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload @:protected override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
-	@:overload override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
+	@:overload @:protected override private function engineGetKeySpec<T : java.security.spec.KeySpec>(key : java.security.Key, keySpec : Class<T>) : T;
 	
 	
 }

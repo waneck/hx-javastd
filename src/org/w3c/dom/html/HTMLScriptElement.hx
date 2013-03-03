@@ -47,55 +47,55 @@ extern interface HTMLScriptElement extends org.w3c.dom.html.HTMLElement
 	/**
 	*  The script content of the element.
 	*/
-	@:overload public function getText() : String;
+	@:overload @:public public function getText() : String;
 	
-	@:overload public function setText(text : String) : Void;
-	
-	/**
-	*  Reserved for future use.
-	*/
-	@:overload public function getHtmlFor() : String;
-	
-	@:overload public function setHtmlFor(htmlFor : String) : Void;
+	@:overload @:public public function setText(text : String) : Void;
 	
 	/**
 	*  Reserved for future use.
 	*/
-	@:overload public function getEvent() : String;
+	@:overload @:public public function getHtmlFor() : String;
 	
-	@:overload public function setEvent(event : String) : Void;
+	@:overload @:public public function setHtmlFor(htmlFor : String) : Void;
+	
+	/**
+	*  Reserved for future use.
+	*/
+	@:overload @:public public function getEvent() : String;
+	
+	@:overload @:public public function setEvent(event : String) : Void;
 	
 	/**
 	*  The character encoding of the linked resource. See the  charset
 	* attribute definition in HTML 4.0.
 	*/
-	@:overload public function getCharset() : String;
+	@:overload @:public public function getCharset() : String;
 	
-	@:overload public function setCharset(charset : String) : Void;
+	@:overload @:public public function setCharset(charset : String) : Void;
 	
 	/**
 	*  Indicates that the user agent can defer processing of the script.  See
 	* the  defer attribute definition in HTML 4.0.
 	*/
-	@:overload public function getDefer() : Bool;
+	@:overload @:public public function getDefer() : Bool;
 	
-	@:overload public function setDefer(defer : Bool) : Void;
+	@:overload @:public public function setDefer(defer : Bool) : Void;
 	
 	/**
 	*  URI designating an external script. See the  src attribute definition
 	* in HTML 4.0.
 	*/
-	@:overload public function getSrc() : String;
+	@:overload @:public public function getSrc() : String;
 	
-	@:overload public function setSrc(src : String) : Void;
+	@:overload @:public public function setSrc(src : String) : Void;
 	
 	/**
 	*  The content type of the script language. See the  type attribute
 	* definition in HTML 4.0.
 	*/
-	@:overload public function getType() : String;
+	@:overload @:public public function getType() : String;
 	
-	@:overload public function setType(type : String) : Void;
+	@:overload @:public public function setType(type : String) : Void;
 	
 	
 }

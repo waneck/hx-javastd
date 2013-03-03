@@ -25,17 +25,17 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class RoundStateImpl implements com.sun.mirror.apt.RoundState
 {
-	@:overload public function new(errorRaised : Bool, sourceFilesCreated : Bool, classFilesCreated : Bool, options : java.util.Map<String, String>) : Void;
+	@:overload @:public public function new(errorRaised : Bool, sourceFilesCreated : Bool, classFilesCreated : Bool, options : java.util.Map<String, String>) : Void;
 	
-	@:overload public function finalRound() : Bool;
+	@:overload @:public public function finalRound() : Bool;
 	
-	@:overload public function errorRaised() : Bool;
+	@:overload @:public public function errorRaised() : Bool;
 	
-	@:overload public function sourceFilesCreated() : Bool;
+	@:overload @:public public function sourceFilesCreated() : Bool;
 	
-	@:overload public function classFilesCreated() : Bool;
+	@:overload @:public public function classFilesCreated() : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

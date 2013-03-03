@@ -36,7 +36,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @exception SOAPException if a SOAP error occurs
 	* @see SOAPHeader#addHeaderElement(javax.xml.namespace.QName)
 	*/
-	@:overload public function addHeaderElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPHeaderElement;
+	@:overload @:public public function addHeaderElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Creates a new <code>SOAPHeaderElement</code> object initialized with the
@@ -50,7 +50,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @see SOAPHeader#addHeaderElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addHeaderElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
+	@:require(java3) @:overload @:public public function addHeaderElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
@@ -72,7 +72,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function examineMustUnderstandHeaderElements(actor : String) : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public public function examineMustUnderstandHeaderElements(actor : String) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
@@ -98,7 +98,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @see #extractHeaderElements
 	* @see SOAPConstants#URI_SOAP_ACTOR_NEXT
 	*/
-	@:overload public function examineHeaderElements(actor : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function examineHeaderElements(actor : String) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
@@ -122,7 +122,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @see #examineHeaderElements
 	* @see SOAPConstants#URI_SOAP_ACTOR_NEXT
 	*/
-	@:overload public function extractHeaderElements(actor : String) : java.util.Iterator<Dynamic>;
+	@:overload @:public public function extractHeaderElements(actor : String) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Creates a new NotUnderstood <code>SOAPHeaderElement</code> object initialized
@@ -137,7 +137,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @exception UnsupportedOperationException if this is a SOAP 1.1 Header.
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public public function addNotUnderstoodHeaderElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
+	@:require(java3) @:overload @:public @:public public function addNotUnderstoodHeaderElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Creates a new Upgrade <code>SOAPHeaderElement</code> object initialized
@@ -152,7 +152,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @exception SOAPException if a SOAP error occurs.
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addUpgradeHeaderElement(supportedSOAPURIs : java.util.Iterator<Dynamic>) : javax.xml.soap.SOAPHeaderElement;
+	@:require(java3) @:overload @:public public function addUpgradeHeaderElement(supportedSOAPURIs : java.util.Iterator<Dynamic>) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Creates a new Upgrade <code>SOAPHeaderElement</code> object initialized
@@ -166,7 +166,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @exception SOAPException if a SOAP error occurs.
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addUpgradeHeaderElement(supportedSoapUris : java.NativeArray<String>) : javax.xml.soap.SOAPHeaderElement;
+	@:require(java3) @:overload @:public public function addUpgradeHeaderElement(supportedSoapUris : java.NativeArray<String>) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Creates a new Upgrade <code>SOAPHeaderElement</code> object initialized
@@ -180,7 +180,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @exception SOAPException if a SOAP error occurs.
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public function addUpgradeHeaderElement(supportedSoapUri : String) : javax.xml.soap.SOAPHeaderElement;
+	@:require(java3) @:overload @:public public function addUpgradeHeaderElement(supportedSoapUri : String) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
@@ -193,7 +193,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function examineAllHeaderElements() : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public public function examineAllHeaderElements() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
@@ -208,7 +208,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function extractAllHeaderElements() : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public public function extractAllHeaderElements() : java.util.Iterator<Dynamic>;
 	
 	
 }

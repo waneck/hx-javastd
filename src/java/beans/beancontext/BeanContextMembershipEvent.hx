@@ -32,7 +32,7 @@ extern class BeanContextMembershipEvent extends java.beans.beancontext.BeanConte
 	* @param changes   The Children affected
 	* @throws NullPointerException if <CODE>changes</CODE> is <CODE>null</CODE>
 	*/
-	@:overload public function new(bc : java.beans.beancontext.BeanContext, changes : java.util.Collection<Dynamic>) : Void;
+	@:overload @:public public function new(bc : java.beans.beancontext.BeanContext, changes : java.util.Collection<Dynamic>) : Void;
 	
 	/**
 	* Contruct a BeanContextMembershipEvent
@@ -42,38 +42,38 @@ extern class BeanContextMembershipEvent extends java.beans.beancontext.BeanConte
 	* @exception       NullPointerException if changes associated with this
 	*                  event are null.
 	*/
-	@:overload public function new(bc : java.beans.beancontext.BeanContext, changes : java.NativeArray<Dynamic>) : Void;
+	@:overload @:public public function new(bc : java.beans.beancontext.BeanContext, changes : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Gets the number of children affected by the notification.
 	* @return the number of children affected by the notification
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Is the child specified affected by the event?
 	* @return <code>true</code> if affected, <code>false</code>
 	* if not
 	*/
-	@:overload public function contains(child : Dynamic) : Bool;
+	@:overload @:public public function contains(child : Dynamic) : Bool;
 	
 	/**
 	* Gets the array of children affected by this event.
 	* @return the array of children affected
 	*/
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Gets the array of children affected by this event.
 	* @return the array of children effected
 	*/
-	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The list of children affected by this
 	* event notification.
 	*/
-	private var children : java.util.Collection<Dynamic>;
+	@:protected private var children : java.util.Collection<Dynamic>;
 	
 	
 }

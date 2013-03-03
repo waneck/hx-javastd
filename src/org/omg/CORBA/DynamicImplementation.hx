@@ -28,9 +28,9 @@ extern class DynamicImplementation extends org.omg.CORBA.portable.ObjectImpl
 	/**
 	* @deprecated Deprecated by Portable Object Adapter
 	*/
-	@:overload public function invoke(request : org.omg.CORBA.ServerRequest) : Void;
+	@:overload @:public public function invoke(request : org.omg.CORBA.ServerRequest) : Void;
 	
-	@:overload override public function _ids() : java.NativeArray<String>;
+	@:overload @:public override public function _ids() : java.NativeArray<String>;
 	
 	
 }

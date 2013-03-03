@@ -42,7 +42,7 @@ package java.lang;
 	* Constructs an <code>IllegalMonitorStateException</code> with no
 	* detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>IllegalMonitorStateException</code> with the
@@ -50,7 +50,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

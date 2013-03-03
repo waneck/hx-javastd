@@ -23,12 +23,12 @@ extern class EncodingInfo
 	/**
 	* Creates new <code>EncodingInfo</code> instance.
 	*/
-	@:overload public function new(ianaName : String, javaName : String, lastPrintable : Int) : Void;
+	@:overload @:public public function new(ianaName : String, javaName : String, lastPrintable : Int) : Void;
 	
 	/**
 	* Returns a MIME charset name of this encoding.
 	*/
-	@:overload public function getIANAName() : String;
+	@:overload @:public public function getIANAName() : String;
 	
 	/**
 	* Returns a writer for this encoding based on
@@ -38,16 +38,16 @@ extern class EncodingInfo
 	* @exception UnsupportedEncodingException There is no convertor
 	*  to support this encoding
 	*/
-	@:overload public function getWriter(output : java.io.OutputStream) : java.io.Writer;
+	@:overload @:public public function getWriter(output : java.io.OutputStream) : java.io.Writer;
 	
 	/**
 	* Checks whether the specified character is printable or not in this encoding.
 	*
 	* @param ch a code point (0-0x10ffff)
 	*/
-	@:overload public function isPrintable(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function isPrintable(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload public static function testJavaEncodingName(name : String) : Void;
+	@:overload @:public @:static public static function testJavaEncodingName(name : String) : Void;
 	
 	
 }

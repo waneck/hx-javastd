@@ -32,23 +32,23 @@ package javax.swing.plaf.basic;
 */
 @:internal extern class LazyActionMap extends javax.swing.plaf.ActionMapUIResource
 {
-	@:overload public function put(action : javax.swing.Action) : Void;
+	@:overload @:public public function put(action : javax.swing.Action) : Void;
 	
-	@:overload public function put(key : Dynamic, action : javax.swing.Action) : Void;
+	@:overload @:public override public function put(key : Dynamic, action : javax.swing.Action) : Void;
 	
-	@:overload public function get(key : Dynamic) : javax.swing.Action;
+	@:overload @:public override public function get(key : Dynamic) : javax.swing.Action;
 	
-	@:overload public function remove(key : Dynamic) : Void;
+	@:overload @:public override public function remove(key : Dynamic) : Void;
 	
-	@:overload public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload public function keys() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function keys() : java.NativeArray<Dynamic>;
 	
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
-	@:overload public function allKeys() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function allKeys() : java.NativeArray<Dynamic>;
 	
-	@:overload public function setParent(map : javax.swing.ActionMap) : Void;
+	@:overload @:public override public function setParent(map : javax.swing.ActionMap) : Void;
 	
 	
 }

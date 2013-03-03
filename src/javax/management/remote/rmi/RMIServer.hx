@@ -51,7 +51,7 @@ extern interface RMIServer extends java.rmi.Remote
 	* @exception RemoteException if there is a communication
 	* exception during the remote method call.
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
 	/**
 	* <p>Makes a new connection through this RMI connector.  Each
@@ -71,7 +71,7 @@ extern interface RMIServer extends java.rmi.Remote
 	* @exception SecurityException if the given credentials do not
 	* allow the server to authenticate the caller successfully.
 	*/
-	@:overload public function newClient(credentials : Dynamic) : javax.management.remote.rmi.RMIConnection;
+	@:overload @:public public function newClient(credentials : Dynamic) : javax.management.remote.rmi.RMIConnection;
 	
 	
 }

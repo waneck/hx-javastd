@@ -29,7 +29,7 @@ extern class AugmentationsImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return the previous value of the specified key in the Augmentations strucutre,
 	*         or <code>null</code> if it did not have one.
 	*/
-	@:overload public function putItem(key : String, item : Dynamic) : Dynamic;
+	@:overload @:public public function putItem(key : String, item : Dynamic) : Dynamic;
 	
 	/**
 	* Get information identified by a key from the Augmentations structure
@@ -39,93 +39,93 @@ extern class AugmentationsImpl implements com.sun.org.apache.xerces.internal.xni
 	* @return the value to which the key is mapped in the Augmentations structure;
 	*         <code>null</code> if the key is not mapped to any value.
 	*/
-	@:overload public function getItem(key : String) : Dynamic;
+	@:overload @:public public function getItem(key : String) : Dynamic;
 	
 	/**
 	* Remove additional info from the Augmentations structure
 	*
 	* @param key    Identifier, can't be <code>null</code>
 	*/
-	@:overload public function removeItem(key : String) : Dynamic;
+	@:overload @:public public function removeItem(key : String) : Dynamic;
 	
 	/**
 	* Returns an enumeration of the keys in the Augmentations structure
 	*
 	*/
-	@:overload public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Remove all objects from the Augmentations structure.
 	*/
-	@:overload public function removeAllItems() : Void;
+	@:overload @:public public function removeAllItems() : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$AugmentationsItemsContainer') @:internal extern class AugmentationsImpl_AugmentationsItemsContainer
 {
-	@:overload @:abstract public function putItem(key : Dynamic, item : Dynamic) : Dynamic;
+	@:overload @:abstract @:public public function putItem(key : Dynamic, item : Dynamic) : Dynamic;
 	
-	@:overload @:abstract public function getItem(key : Dynamic) : Dynamic;
+	@:overload @:abstract @:public public function getItem(key : Dynamic) : Dynamic;
 	
-	@:overload @:abstract public function removeItem(key : Dynamic) : Dynamic;
+	@:overload @:abstract @:public public function removeItem(key : Dynamic) : Dynamic;
 	
-	@:overload @:abstract public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:abstract @:public public function keys() : java.util.Enumeration<Dynamic>;
 	
-	@:overload @:abstract public function clear() : Void;
+	@:overload @:abstract @:public public function clear() : Void;
 	
-	@:overload @:abstract public function isFull() : Bool;
+	@:overload @:abstract @:public public function isFull() : Bool;
 	
-	@:overload @:abstract public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
+	@:overload @:abstract @:public public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$SmallContainer') @:internal extern class AugmentationsImpl_SmallContainer extends com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer
 {
-	@:overload override public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function keys() : java.util.Enumeration<Dynamic>;
 	
-	@:overload override public function getItem(key : Dynamic) : Dynamic;
+	@:overload @:public override public function getItem(key : Dynamic) : Dynamic;
 	
-	@:overload override public function putItem(key : Dynamic, item : Dynamic) : Dynamic;
+	@:overload @:public override public function putItem(key : Dynamic, item : Dynamic) : Dynamic;
 	
-	@:overload override public function removeItem(key : Dynamic) : Dynamic;
+	@:overload @:public override public function removeItem(key : Dynamic) : Dynamic;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function isFull() : Bool;
+	@:overload @:public override public function isFull() : Bool;
 	
-	@:overload override public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
+	@:overload @:public override public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$SmallContainer$SmallContainerKeyEnumeration') @:internal extern class AugmentationsImpl_SmallContainer_SmallContainerKeyEnumeration implements java.util.Enumeration<Dynamic>
 {
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : Dynamic;
+	@:overload @:public public function nextElement() : Dynamic;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$LargeContainer') @:internal extern class AugmentationsImpl_LargeContainer extends com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer
 {
-	@:overload override public function getItem(key : Dynamic) : Dynamic;
+	@:overload @:public override public function getItem(key : Dynamic) : Dynamic;
 	
-	@:overload override public function putItem(key : Dynamic, item : Dynamic) : Dynamic;
+	@:overload @:public override public function putItem(key : Dynamic, item : Dynamic) : Dynamic;
 	
-	@:overload override public function removeItem(key : Dynamic) : Dynamic;
+	@:overload @:public override public function removeItem(key : Dynamic) : Dynamic;
 	
-	@:overload override public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function keys() : java.util.Enumeration<Dynamic>;
 	
-	@:overload override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
-	@:overload override public function isFull() : Bool;
+	@:overload @:public override public function isFull() : Bool;
 	
-	@:overload override public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
+	@:overload @:public override public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

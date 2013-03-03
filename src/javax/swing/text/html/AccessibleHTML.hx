@@ -25,12 +25,12 @@ package javax.swing.text.html;
 */
 @:internal extern class AccessibleHTML implements javax.accessibility.Accessible
 {
-	@:overload public function new(pane : javax.swing.JEditorPane) : Void;
+	@:overload @:public public function new(pane : javax.swing.JEditorPane) : Void;
 	
 	/**
 	* Returns the root AccessibleContext for the document
 	*/
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -39,7 +39,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$RootHTMLAccessibleContext') @:internal extern class AccessibleHTML_RootHTMLAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext
 {
-	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
+	@:overload @:public public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -56,7 +56,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -68,7 +68,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -88,7 +88,7 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }
@@ -97,11 +97,11 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$HTMLAccessibleContext') extern class AccessibleHTML_HTMLAccessibleContext extends javax.accessibility.AccessibleContext implements javax.accessibility.Accessible implements javax.accessibility.AccessibleComponent
 {
-	private var elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
+	@:protected private var elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
-	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
+	@:overload @:public public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Gets the state set of this object.
@@ -110,7 +110,7 @@ package javax.swing.text.html;
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload @:public override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -122,14 +122,14 @@ package javax.swing.text.html;
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -141,7 +141,7 @@ package javax.swing.text.html;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have a
@@ -155,9 +155,9 @@ package javax.swing.text.html;
 	* added to a containment hierarchy such that the locale can be
 	* determined from the containing parent.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload @:public override public function getLocale() : java.util.Locale;
 	
-	@:overload public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload @:public override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the background color of this object.
@@ -166,7 +166,7 @@ package javax.swing.text.html;
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload @:public public function getBackground() : java.awt.Color;
 	
 	/**
 	* Sets the background color of this object.
@@ -174,7 +174,7 @@ package javax.swing.text.html;
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -183,7 +183,7 @@ package javax.swing.text.html;
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload @:public public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the foreground color of this object.
@@ -191,7 +191,7 @@ package javax.swing.text.html;
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Gets the Cursor of this object.
@@ -199,7 +199,7 @@ package javax.swing.text.html;
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload @:public public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Sets the Cursor of this object.
@@ -207,7 +207,7 @@ package javax.swing.text.html;
 	* @param cursor the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Gets the Font of this object.
@@ -215,7 +215,7 @@ package javax.swing.text.html;
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Sets the Font of this object.
@@ -223,7 +223,7 @@ package javax.swing.text.html;
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the FontMetrics of this object.
@@ -232,7 +232,7 @@ package javax.swing.text.html;
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determines if the object is enabled.  Objects that are enabled
@@ -245,7 +245,7 @@ package javax.swing.text.html;
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload @:public public function isEnabled() : Bool;
 	
 	/**
 	* Sets the enabled state of the object.
@@ -253,7 +253,7 @@ package javax.swing.text.html;
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload @:public public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -270,7 +270,7 @@ package javax.swing.text.html;
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload @:public public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
@@ -278,7 +278,7 @@ package javax.swing.text.html;
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload @:public public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -289,7 +289,7 @@ package javax.swing.text.html;
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload @:public public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -300,7 +300,7 @@ package javax.swing.text.html;
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -310,7 +310,7 @@ package javax.swing.text.html;
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -323,14 +323,14 @@ package javax.swing.text.html;
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload @:public public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -341,7 +341,7 @@ package javax.swing.text.html;
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -351,7 +351,7 @@ package javax.swing.text.html;
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -363,7 +363,7 @@ package javax.swing.text.html;
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload @:public public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -371,7 +371,7 @@ package javax.swing.text.html;
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -381,7 +381,7 @@ package javax.swing.text.html;
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -394,7 +394,7 @@ package javax.swing.text.html;
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -402,7 +402,7 @@ package javax.swing.text.html;
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload @:public public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -411,7 +411,7 @@ package javax.swing.text.html;
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -420,7 +420,7 @@ package javax.swing.text.html;
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }
@@ -429,7 +429,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$TextElementInfo') @:internal extern class AccessibleHTML_TextElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
 {
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -438,9 +438,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$TextElementInfo$TextAccessibleContext') extern class AccessibleHTML_TextElementInfo_TextAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleText
 {
-	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
+	@:overload @:public public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload @:public override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -457,7 +457,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -469,7 +469,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -489,7 +489,7 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -500,7 +500,7 @@ package javax.swing.text.html;
 	* @return the zero-based index of the character under Point p; if
 	* Point is invalid returns -1.
 	*/
-	@:overload public function getIndexAtPoint(p : java.awt.Point) : Int;
+	@:overload @:public public function getIndexAtPoint(p : java.awt.Point) : Int;
 	
 	/**
 	* Determine the bounding box of the character at the given
@@ -512,14 +512,14 @@ package javax.swing.text.html;
 	* @return the screen coordinates of the character's the bounding box,
 	* if index is invalid returns an empty rectangle.
 	*/
-	@:overload public function getCharacterBounds(i : Int) : java.awt.Rectangle;
+	@:overload @:public public function getCharacterBounds(i : Int) : java.awt.Rectangle;
 	
 	/**
 	* Return the number of characters (valid indicies)
 	*
 	* @return the number of characters
 	*/
-	@:overload public function getCharCount() : Int;
+	@:overload @:public public function getCharCount() : Int;
 	
 	/**
 	* Return the zero-based offset of the caret.
@@ -528,13 +528,13 @@ package javax.swing.text.html;
 	* value as the offset (the caret is between two characters).
 	* @return the zero-based offset of the caret.
 	*/
-	@:overload public function getCaretPosition() : Int;
+	@:overload @:public public function getCaretPosition() : Int;
 	
-	@:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAtIndex(part : Int, index : Int) : String;
 	
-	@:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getAfterIndex(part : Int, index : Int) : String;
 	
-	@:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:overload @:public public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Return the AttributeSet for a given character at a given index
@@ -542,7 +542,7 @@ package javax.swing.text.html;
 	* @param i the zero-based index into the text
 	* @return the AttributeSet of the character
 	*/
-	@:overload public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
+	@:overload @:public public function getCharacterAttribute(i : Int) : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the start offset within the selected text.
@@ -551,7 +551,7 @@ package javax.swing.text.html;
 	*
 	* @return the index into the text of the start of the selection
 	*/
-	@:overload public function getSelectionStart() : Int;
+	@:overload @:public public function getSelectionStart() : Int;
 	
 	/**
 	* Returns the end offset within the selected text.
@@ -560,14 +560,14 @@ package javax.swing.text.html;
 	*
 	* @return the index into teh text of the end of the selection
 	*/
-	@:overload public function getSelectionEnd() : Int;
+	@:overload @:public public function getSelectionEnd() : Int;
 	
 	/**
 	* Returns the portion of the text that is selected.
 	*
 	* @return the String portion of the text that is selected
 	*/
-	@:overload public function getSelectedText() : String;
+	@:overload @:public public function getSelectedText() : String;
 	
 	
 }
@@ -580,7 +580,7 @@ package javax.swing.text.html;
 	/**
 	* Offset into the model that the position represents.
 	*/
-	public var modelOffset : Int;
+	@:public public var modelOffset : Int;
 	
 	
 }
@@ -589,9 +589,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$IconElementInfo') @:internal extern class AccessibleHTML_IconElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
 {
-	@:overload override private function invalidate(first : Bool) : Void;
+	@:overload @:protected override private function invalidate(first : Bool) : Void;
 	
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -600,7 +600,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$IconElementInfo$IconAccessibleContext') extern class AccessibleHTML_IconElementInfo_IconAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleIcon
 {
-	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
+	@:overload @:public public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -617,7 +617,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -629,7 +629,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -649,9 +649,9 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
-	@:overload public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:overload @:public override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Gets the description of the icon.  This is meant to be a brief
@@ -661,7 +661,7 @@ package javax.swing.text.html;
 	*
 	* @return the description of the icon
 	*/
-	@:overload public function getAccessibleIconDescription() : String;
+	@:overload @:public public function getAccessibleIconDescription() : String;
 	
 	/**
 	* Sets the description of the icon.  This is meant to be a brief
@@ -671,21 +671,21 @@ package javax.swing.text.html;
 	*
 	* @param description the description of the icon
 	*/
-	@:overload public function setAccessibleIconDescription(description : String) : Void;
+	@:overload @:public public function setAccessibleIconDescription(description : String) : Void;
 	
 	/**
 	* Gets the width of the icon
 	*
 	* @return the width of the icon.
 	*/
-	@:overload public function getAccessibleIconWidth() : Int;
+	@:overload @:public public function getAccessibleIconWidth() : Int;
 	
 	/**
 	* Gets the height of the icon
 	*
 	* @return the height of the icon.
 	*/
-	@:overload public function getAccessibleIconHeight() : Int;
+	@:overload @:public public function getAccessibleIconHeight() : Int;
 	
 	
 }
@@ -700,51 +700,51 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$TableElementInfo') @:internal extern class AccessibleHTML_TableElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
 {
-	private var caption : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
+	@:protected private var caption : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
-	@:overload public function getCaptionInfo() : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
+	@:overload @:public public function getCaptionInfo() : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
 	/**
 	* Overriden to update the grid when validating.
 	*/
-	@:overload override private function validate() : Void;
+	@:overload @:protected override private function validate() : Void;
 	
 	/**
 	* Overriden to only alloc instances of TableRowElementInfos.
 	*/
-	@:overload private function loadChildren(e : javax.swing.text.Element) : Void;
+	@:overload @:protected private function loadChildren(e : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns the TableCellElementInfo at the specified index.
 	*/
-	@:overload public function getRow(index : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableRowElementInfo;
+	@:overload @:public public function getRow(index : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableRowElementInfo;
 	
 	/**
 	* Returns the TableCellElementInfo by row and column.
 	*/
-	@:overload public function getCell(r : Int, c : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo;
+	@:overload @:public public function getCell(r : Int, c : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo;
 	
 	/**
 	* Returns the rowspan of the specified entry.
 	*/
-	@:overload public function getRowExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getRowExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the colspan of the specified entry.
 	*/
-	@:overload public function getColumnExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getColumnExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the number of rows in the table.
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the table.
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
-	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload @:public public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -753,7 +753,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableAccessibleContext') extern class AccessibleHTML_TableElementInfo_TableAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleTable
 {
-	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
+	@:overload @:public public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -770,7 +770,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload @:public override public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -782,7 +782,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload @:public override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -802,7 +802,7 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -814,14 +814,14 @@ package javax.swing.text.html;
 	* @see #getAccessibleChildrenCount
 	* @gsee #getAccessibleChild
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload @:public override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload @:public override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -833,51 +833,51 @@ package javax.swing.text.html;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
-	@:overload public function getAccessibleTable() : javax.accessibility.AccessibleTable;
+	@:overload @:public override public function getAccessibleTable() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Returns the caption for the table.
 	*
 	* @return the caption for the table
 	*/
-	@:overload public function getAccessibleCaption() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleCaption() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the caption for the table.
 	*
 	* @param a the caption for the table
 	*/
-	@:overload public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the summary description of the table.
 	*
 	* @return the summary description of the table
 	*/
-	@:overload public function getAccessibleSummary() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSummary() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the summary description of the table
 	*
 	* @param a the summary description of the table
 	*/
-	@:overload public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the number of rows in the table.
 	*
 	* @return the number of rows in the table
 	*/
-	@:overload public function getAccessibleRowCount() : Int;
+	@:overload @:public public function getAccessibleRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the table.
 	*
 	* @return the number of columns in the table
 	*/
-	@:overload public function getAccessibleColumnCount() : Int;
+	@:overload @:public public function getAccessibleColumnCount() : Int;
 	
 	/**
 	* Returns the Accessible at a specified row and column
@@ -887,7 +887,7 @@ package javax.swing.text.html;
 	* @param c zero-based column of the table
 	* @return the Accessible at the specified row and column
 	*/
-	@:overload public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of rows occupied by the Accessible at
@@ -896,7 +896,7 @@ package javax.swing.text.html;
 	* @return the number of rows occupied by the Accessible at a
 	* given specified (row, column)
 	*/
-	@:overload public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the number of columns occupied by the Accessible at
@@ -905,7 +905,7 @@ package javax.swing.text.html;
 	* @return the number of columns occupied by the Accessible at a
 	* given specified row and column
 	*/
-	@:overload public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the row headers as an AccessibleTable.
@@ -913,7 +913,7 @@ package javax.swing.text.html;
 	* @return an AccessibleTable representing the row
 	* headers
 	*/
-	@:overload public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the row headers.
@@ -921,7 +921,7 @@ package javax.swing.text.html;
 	* @param table an AccessibleTable representing the
 	* row headers
 	*/
-	@:overload public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the column headers as an AccessibleTable.
@@ -929,7 +929,7 @@ package javax.swing.text.html;
 	* @return an AccessibleTable representing the column
 	* headers
 	*/
-	@:overload public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the column headers.
@@ -937,7 +937,7 @@ package javax.swing.text.html;
 	* @param table an AccessibleTable representing the
 	* column headers
 	*/
-	@:overload public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the description of the specified row in the table.
@@ -945,7 +945,7 @@ package javax.swing.text.html;
 	* @param r zero-based row of the table
 	* @return the description of the row
 	*/
-	@:overload public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified row of the table.
@@ -953,7 +953,7 @@ package javax.swing.text.html;
 	* @param r zero-based row of the table
 	* @param a the description of the row
 	*/
-	@:overload public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the description text of the specified column in the table.
@@ -961,7 +961,7 @@ package javax.swing.text.html;
 	* @param c zero-based column of the table
 	* @return the text description of the column
 	*/
-	@:overload public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified column in the table.
@@ -969,7 +969,7 @@ package javax.swing.text.html;
 	* @param c zero-based column of the table
 	* @param a the text description of the column
 	*/
-	@:overload public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns a boolean value indicating whether the accessible at
@@ -981,7 +981,7 @@ package javax.swing.text.html;
 	* row and column is selected. Otherwise, the boolean value
 	* false
 	*/
-	@:overload public function isAccessibleSelected(r : Int, c : Int) : Bool;
+	@:overload @:public public function isAccessibleSelected(r : Int, c : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified row
@@ -991,7 +991,7 @@ package javax.swing.text.html;
 	* @return the boolean value true if the specified row is selected.
 	* Otherwise, false.
 	*/
-	@:overload public function isAccessibleRowSelected(r : Int) : Bool;
+	@:overload @:public public function isAccessibleRowSelected(r : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified column
@@ -1001,7 +1001,7 @@ package javax.swing.text.html;
 	* @return the boolean value true if the specified column is selected.
 	* Otherwise, false.
 	*/
-	@:overload public function isAccessibleColumnSelected(c : Int) : Bool;
+	@:overload @:public public function isAccessibleColumnSelected(c : Int) : Bool;
 	
 	/**
 	* Returns the selected rows in a table.
@@ -1009,7 +1009,7 @@ package javax.swing.text.html;
 	* @return an array of selected rows where each element is a
 	* zero-based row of the table
 	*/
-	@:overload public function getSelectedAccessibleRows() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedAccessibleRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the selected columns in a table.
@@ -1017,7 +1017,7 @@ package javax.swing.text.html;
 	* @return an array of selected columns where each element is a
 	* zero-based column of the table
 	*/
-	@:overload public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the row number of an index in the table.
@@ -1026,7 +1026,7 @@ package javax.swing.text.html;
 	* @return the zero-based row of the table if one exists;
 	* otherwise -1.
 	*/
-	@:overload public function getAccessibleRow(index : Int) : Int;
+	@:overload @:public public function getAccessibleRow(index : Int) : Int;
 	
 	/**
 	* Returns the column number of an index in the table.
@@ -1035,7 +1035,7 @@ package javax.swing.text.html;
 	* @return the zero-based column of the table if one exists;
 	* otherwise -1.
 	*/
-	@:overload public function getAccessibleColumn(index : Int) : Int;
+	@:overload @:public public function getAccessibleColumn(index : Int) : Int;
 	
 	/**
 	* Returns the index at a row and column in the table.
@@ -1045,7 +1045,7 @@ package javax.swing.text.html;
 	* @return the zero-based index in the table if one exists;
 	* otherwise -1.
 	*/
-	@:overload public function getAccessibleIndex(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleIndex(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the row header at a row in a table.
@@ -1054,7 +1054,7 @@ package javax.swing.text.html;
 	* @return a String representing the row header
 	* if one exists; otherwise null.
 	*/
-	@:overload public function getAccessibleRowHeader(r : Int) : String;
+	@:overload @:public public function getAccessibleRowHeader(r : Int) : String;
 	
 	/**
 	* Returns the column header at a column in a table.
@@ -1063,57 +1063,57 @@ package javax.swing.text.html;
 	* @return a String representing the column header
 	* if one exists; otherwise null.
 	*/
-	@:overload public function getAccessibleColumnHeader(c : Int) : String;
+	@:overload @:public public function getAccessibleColumnHeader(c : Int) : String;
 	
-	@:overload public function addRowHeader(cellInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
+	@:overload @:public public function addRowHeader(cellInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableAccessibleContext$AccessibleHeadersTable') extern class AccessibleHTML_TableElementInfo_TableAccessibleContext_AccessibleHeadersTable implements javax.accessibility.AccessibleTable
 {
-	@:overload public function addHeader(cellInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
+	@:overload @:public public function addHeader(cellInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
 	
 	/**
 	* Returns the caption for the table.
 	*
 	* @return the caption for the table
 	*/
-	@:overload public function getAccessibleCaption() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleCaption() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the caption for the table.
 	*
 	* @param a the caption for the table
 	*/
-	@:overload public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleCaption(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the summary description of the table.
 	*
 	* @return the summary description of the table
 	*/
-	@:overload public function getAccessibleSummary() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleSummary() : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the summary description of the table
 	*
 	* @param a the summary description of the table
 	*/
-	@:overload public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleSummary(a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the number of rows in the table.
 	*
 	* @return the number of rows in the table
 	*/
-	@:overload public function getAccessibleRowCount() : Int;
+	@:overload @:public public function getAccessibleRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the table.
 	*
 	* @return the number of columns in the table
 	*/
-	@:overload public function getAccessibleColumnCount() : Int;
+	@:overload @:public public function getAccessibleColumnCount() : Int;
 	
 	/**
 	* Returns the Accessible at a specified row and column
@@ -1123,7 +1123,7 @@ package javax.swing.text.html;
 	* @param c zero-based column of the table
 	* @return the Accessible at the specified row and column
 	*/
-	@:overload public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleAt(r : Int, c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of rows occupied by the Accessible at
@@ -1132,7 +1132,7 @@ package javax.swing.text.html;
 	* @return the number of rows occupied by the Accessible at a
 	* given specified (row, column)
 	*/
-	@:overload public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleRowExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the number of columns occupied by the Accessible at
@@ -1141,7 +1141,7 @@ package javax.swing.text.html;
 	* @return the number of columns occupied by the Accessible at a
 	* given specified row and column
 	*/
-	@:overload public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
+	@:overload @:public public function getAccessibleColumnExtentAt(r : Int, c : Int) : Int;
 	
 	/**
 	* Returns the row headers as an AccessibleTable.
@@ -1149,7 +1149,7 @@ package javax.swing.text.html;
 	* @return an AccessibleTable representing the row
 	* headers
 	*/
-	@:overload public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the row headers.
@@ -1157,7 +1157,7 @@ package javax.swing.text.html;
 	* @param table an AccessibleTable representing the
 	* row headers
 	*/
-	@:overload public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the column headers as an AccessibleTable.
@@ -1165,7 +1165,7 @@ package javax.swing.text.html;
 	* @return an AccessibleTable representing the column
 	* headers
 	*/
-	@:overload public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
+	@:overload @:public public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the column headers.
@@ -1173,7 +1173,7 @@ package javax.swing.text.html;
 	* @param table an AccessibleTable representing the
 	* column headers
 	*/
-	@:overload public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
+	@:overload @:public public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the description of the specified row in the table.
@@ -1181,7 +1181,7 @@ package javax.swing.text.html;
 	* @param r zero-based row of the table
 	* @return the description of the row
 	*/
-	@:overload public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleRowDescription(r : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified row of the table.
@@ -1189,7 +1189,7 @@ package javax.swing.text.html;
 	* @param r zero-based row of the table
 	* @param a the description of the row
 	*/
-	@:overload public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleRowDescription(r : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns the description text of the specified column in the table.
@@ -1197,7 +1197,7 @@ package javax.swing.text.html;
 	* @param c zero-based column of the table
 	* @return the text description of the column
 	*/
-	@:overload public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessibleColumnDescription(c : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Sets the description text of the specified column in the table.
@@ -1205,7 +1205,7 @@ package javax.swing.text.html;
 	* @param c zero-based column of the table
 	* @param a the text description of the column
 	*/
-	@:overload public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
+	@:overload @:public public function setAccessibleColumnDescription(c : Int, a : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Returns a boolean value indicating whether the accessible at
@@ -1217,7 +1217,7 @@ package javax.swing.text.html;
 	* row and column is selected. Otherwise, the boolean value
 	* false
 	*/
-	@:overload public function isAccessibleSelected(r : Int, c : Int) : Bool;
+	@:overload @:public public function isAccessibleSelected(r : Int, c : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified row
@@ -1227,7 +1227,7 @@ package javax.swing.text.html;
 	* @return the boolean value true if the specified row is selected.
 	* Otherwise, false.
 	*/
-	@:overload public function isAccessibleRowSelected(r : Int) : Bool;
+	@:overload @:public public function isAccessibleRowSelected(r : Int) : Bool;
 	
 	/**
 	* Returns a boolean value indicating whether the specified column
@@ -1237,7 +1237,7 @@ package javax.swing.text.html;
 	* @return the boolean value true if the specified column is selected.
 	* Otherwise, false.
 	*/
-	@:overload public function isAccessibleColumnSelected(c : Int) : Bool;
+	@:overload @:public public function isAccessibleColumnSelected(c : Int) : Bool;
 	
 	/**
 	* Returns the selected rows in a table.
@@ -1245,7 +1245,7 @@ package javax.swing.text.html;
 	* @return an array of selected rows where each element is a
 	* zero-based row of the table
 	*/
-	@:overload public function getSelectedAccessibleRows() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedAccessibleRows() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the selected columns in a table.
@@ -1253,7 +1253,7 @@ package javax.swing.text.html;
 	* @return an array of selected columns where each element is a
 	* zero-based column of the table
 	*/
-	@:overload public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
+	@:overload @:public public function getSelectedAccessibleColumns() : java.NativeArray<Int>;
 	
 	
 }
@@ -1262,24 +1262,24 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableRowElementInfo') @:internal extern class AccessibleHTML_TableElementInfo_TableRowElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo
 {
-	@:overload private function loadChildren(e : javax.swing.text.Element) : Void;
+	@:overload @:protected private function loadChildren(e : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns the max of the rowspans of the cells in this row.
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Returns the sum of the column spans of the individual
 	* cells in this row.
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Overriden to invalidate the table as well as
 	* TableRowElementInfo.
 	*/
-	@:overload override private function invalidate(first : Bool) : Void;
+	@:overload @:protected override private function invalidate(first : Bool) : Void;
 	
 	
 }
@@ -1292,28 +1292,28 @@ package javax.swing.text.html;
 	/*
 	* Returns whether this table cell is a header
 	*/
-	@:overload public function isHeaderCell() : Bool;
+	@:overload @:public public function isHeaderCell() : Bool;
 	
 	/*
 	* Returns the Accessible representing this table cell
 	*/
-	@:overload public function getAccessible() : javax.accessibility.Accessible;
+	@:overload @:public public function getAccessible() : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the rowspan attribute.
 	*/
-	@:overload public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Returns the colspan attribute.
 	*/
-	@:overload public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Overriden to invalidate the TableRowElementInfo as well as
 	* the TableCellElementInfo.
 	*/
-	@:overload override private function invalidate(first : Bool) : Void;
+	@:overload @:protected override private function invalidate(first : Bool) : Void;
 	
 	
 }
@@ -1335,86 +1335,86 @@ package javax.swing.text.html;
 	* will be invoked within a <code>readLock</code>. If this is overriden
 	* it MUST invoke supers implementation first!
 	*/
-	@:overload private function validate() : Void;
+	@:overload @:protected private function validate() : Void;
 	
 	/**
 	* Recreates the direct children of <code>info</code>.
 	*/
-	@:overload private function loadChildren(parent : javax.swing.text.Element) : Void;
+	@:overload @:protected private function loadChildren(parent : javax.swing.text.Element) : Void;
 	
 	/**
 	* Returns the index of the child in the parent, or -1 for the
 	* root or if the parent isn't valid.
 	*/
-	@:overload public function getIndexInParent() : Int;
+	@:overload @:public public function getIndexInParent() : Int;
 	
 	/**
 	* Returns the Element this <code>ElementInfo</code> represents.
 	*/
-	@:overload public function getElement() : javax.swing.text.Element;
+	@:overload @:public public function getElement() : javax.swing.text.Element;
 	
 	/**
 	* Returns the parent of this Element, or null for the root.
 	*/
-	@:overload public function getParent() : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
+	@:overload @:public public function getParent() : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
 	/**
 	* Returns the index of the specified child, or -1 if
 	* <code>child</code> isn't a valid child.
 	*/
-	@:overload public function indexOf(child : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Int;
+	@:overload @:public public function indexOf(child : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Int;
 	
 	/**
 	* Returns the child ElementInfo at <code>index</code>, or null
 	* if <code>index</code> isn't a valid index.
 	*/
-	@:overload public function getChild(index : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
+	@:overload @:public public function getChild(index : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
 	/**
 	* Returns the number of children the ElementInfo contains.
 	*/
-	@:overload public function getChildCount() : Int;
+	@:overload @:public public function getChildCount() : Int;
 	
 	/**
 	* Adds a new child to this ElementInfo.
 	*/
-	@:overload private function addChild(child : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
+	@:overload @:protected private function addChild(child : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Returns the View corresponding to this ElementInfo, or null
 	* if the ElementInfo can't be validated.
 	*/
-	@:overload private function getView() : javax.swing.text.View;
+	@:overload @:protected private function getView() : javax.swing.text.View;
 	
 	/**
 	* Returns the Bounds for this ElementInfo, or null
 	* if the ElementInfo can't be validated.
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload @:public public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Returns true if this ElementInfo is valid.
 	*/
-	@:overload private function isValid() : Bool;
+	@:overload @:protected private function isValid() : Bool;
 	
 	/**
 	* Returns the AttributeSet associated with the Element, this will
 	* return null if the ElementInfo can't be validated.
 	*/
-	@:overload private function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:protected private function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Returns the AttributeSet associated with the View that is
 	* representing this Element, this will
 	* return null if the ElementInfo can't be validated.
 	*/
-	@:overload private function getViewAttributes() : javax.swing.text.AttributeSet;
+	@:overload @:protected private function getViewAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Convenience method for getting an integer attribute from the passed
 	* in AttributeSet.
 	*/
-	@:overload private function getIntAttr(attrs : javax.swing.text.AttributeSet, key : Dynamic, deflt : Int) : Int;
+	@:overload @:protected private function getIntAttr(attrs : javax.swing.text.AttributeSet, key : Dynamic, deflt : Int) : Int;
 	
 	/**
 	* Validates the ElementInfo if necessary.  Some ElementInfos may
@@ -1423,13 +1423,13 @@ package javax.swing.text.html;
 	* <code>validate</code> if the ElementInfo is invalid and can become
 	* valid again. This will return true if the receiver is valid.
 	*/
-	@:overload private function validateIfNecessary() : Bool;
+	@:overload @:protected private function validateIfNecessary() : Bool;
 	
 	/**
 	* Invalidates the ElementInfo. Subclasses should override this
 	* if they need to reset state once invalid.
 	*/
-	@:overload private function invalidate(first : Bool) : Void;
+	@:overload @:protected private function invalidate(first : Bool) : Void;
 	
 	
 }
@@ -1440,11 +1440,11 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$DocumentHandler') @:internal extern class AccessibleHTML_DocumentHandler implements javax.swing.event.DocumentListener
 {
-	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function removeUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
+	@:overload @:public public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
 	
 }
@@ -1453,7 +1453,7 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$PropertyChangeHandler') @:internal extern class AccessibleHTML_PropertyChangeHandler implements java.beans.PropertyChangeListener
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

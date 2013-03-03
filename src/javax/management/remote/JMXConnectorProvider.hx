@@ -53,7 +53,7 @@ extern interface JMXConnectorProvider
 	* for some reason or any other {@code IOException} if the
 	* connection cannot be made because of a communication problem.
 	*/
-	@:overload public function newJMXConnector(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload @:public public function newJMXConnector(serviceURL : javax.management.remote.JMXServiceURL, environment : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	
 }

@@ -23,82 +23,82 @@ package com.sun.org.apache.xml.internal.resolver;
 extern class Catalog
 {
 	/** The BASE Catalog Entry type. */
-	public static var BASE(default, null) : Int;
+	@:public @:static @:final public static var BASE(default, null) : Int;
 	
 	/** The CATALOG Catalog Entry type. */
-	public static var CATALOG(default, null) : Int;
+	@:public @:static @:final public static var CATALOG(default, null) : Int;
 	
 	/** The DOCUMENT Catalog Entry type. */
-	public static var DOCUMENT(default, null) : Int;
+	@:public @:static @:final public static var DOCUMENT(default, null) : Int;
 	
 	/** The OVERRIDE Catalog Entry type. */
-	public static var OVERRIDE(default, null) : Int;
+	@:public @:static @:final public static var OVERRIDE(default, null) : Int;
 	
 	/** The SGMLDECL Catalog Entry type. */
-	public static var SGMLDECL(default, null) : Int;
+	@:public @:static @:final public static var SGMLDECL(default, null) : Int;
 	
 	/** The DELEGATE_PUBLIC Catalog Entry type. */
-	public static var DELEGATE_PUBLIC(default, null) : Int;
+	@:public @:static @:final public static var DELEGATE_PUBLIC(default, null) : Int;
 	
 	/** The DELEGATE_SYSTEM Catalog Entry type. */
-	public static var DELEGATE_SYSTEM(default, null) : Int;
+	@:public @:static @:final public static var DELEGATE_SYSTEM(default, null) : Int;
 	
 	/** The DELEGATE_URI Catalog Entry type. */
-	public static var DELEGATE_URI(default, null) : Int;
+	@:public @:static @:final public static var DELEGATE_URI(default, null) : Int;
 	
 	/** The DOCTYPE Catalog Entry type. */
-	public static var DOCTYPE(default, null) : Int;
+	@:public @:static @:final public static var DOCTYPE(default, null) : Int;
 	
 	/** The DTDDECL Catalog Entry type. */
-	public static var DTDDECL(default, null) : Int;
+	@:public @:static @:final public static var DTDDECL(default, null) : Int;
 	
 	/** The ENTITY Catalog Entry type. */
-	public static var ENTITY(default, null) : Int;
+	@:public @:static @:final public static var ENTITY(default, null) : Int;
 	
 	/** The LINKTYPE Catalog Entry type. */
-	public static var LINKTYPE(default, null) : Int;
+	@:public @:static @:final public static var LINKTYPE(default, null) : Int;
 	
 	/** The NOTATION Catalog Entry type. */
-	public static var NOTATION(default, null) : Int;
+	@:public @:static @:final public static var NOTATION(default, null) : Int;
 	
 	/** The PUBLIC Catalog Entry type. */
-	public static var PUBLIC(default, null) : Int;
+	@:public @:static @:final public static var PUBLIC(default, null) : Int;
 	
 	/** The SYSTEM Catalog Entry type. */
-	public static var SYSTEM(default, null) : Int;
+	@:public @:static @:final public static var SYSTEM(default, null) : Int;
 	
 	/** The URI Catalog Entry type. */
-	public static var URI(default, null) : Int;
+	@:public @:static @:final public static var URI(default, null) : Int;
 	
 	/** The REWRITE_SYSTEM Catalog Entry type. */
-	public static var REWRITE_SYSTEM(default, null) : Int;
+	@:public @:static @:final public static var REWRITE_SYSTEM(default, null) : Int;
 	
 	/** The REWRITE_URI Catalog Entry type. */
-	public static var REWRITE_URI(default, null) : Int;
+	@:public @:static @:final public static var REWRITE_URI(default, null) : Int;
 	
 	/** The SYSTEM_SUFFIX Catalog Entry type. */
-	public static var SYSTEM_SUFFIX(default, null) : Int;
+	@:public @:static @:final public static var SYSTEM_SUFFIX(default, null) : Int;
 	
 	/** The URI_SUFFIX Catalog Entry type. */
-	public static var URI_SUFFIX(default, null) : Int;
+	@:public @:static @:final public static var URI_SUFFIX(default, null) : Int;
 	
 	/**
 	* The base URI for relative system identifiers in the catalog.
 	* This may be changed by BASE entries in the catalog.
 	*/
-	private var base : java.net.URL;
+	@:protected private var base : java.net.URL;
 	
 	/** The base URI of the Catalog file currently being parsed. */
-	private var catalogCwd : java.net.URL;
+	@:protected private var catalogCwd : java.net.URL;
 	
 	/** The catalog entries currently known to the system. */
-	private var catalogEntries : java.util.Vector<Dynamic>;
+	@:protected private var catalogEntries : java.util.Vector<Dynamic>;
 	
 	/** The default initial override setting. */
-	private var default_override : Bool;
+	@:protected private var default_override : Bool;
 	
 	/** The catalog manager in use for this instance. */
-	private var catalogManager : com.sun.org.apache.xml.internal.resolver.CatalogManager;
+	@:protected private var catalogManager : com.sun.org.apache.xml.internal.resolver.CatalogManager;
 	
 	/**
 	* A vector of catalog files to be loaded.
@@ -111,7 +111,7 @@ extern class Catalog
 	* @see #loadSystemCatalogs
 	* @see #localCatalogFiles
 	*/
-	private var catalogFiles : java.util.Vector<Dynamic>;
+	@:protected private var catalogFiles : java.util.Vector<Dynamic>;
 	
 	/**
 	* A vector of catalog files constructed during processing of
@@ -130,7 +130,7 @@ extern class Catalog
 	*
 	* @see #catalogFiles
 	*/
-	private var localCatalogFiles : java.util.Vector<Dynamic>;
+	@:protected private var localCatalogFiles : java.util.Vector<Dynamic>;
 	
 	/**
 	* A vector of Catalogs.
@@ -149,7 +149,7 @@ extern class Catalog
 	* Catalog object is placed in the vector, effectively caching it
 	* for the next query.</p>
 	*/
-	private var catalogs : java.util.Vector<Dynamic>;
+	@:protected private var catalogs : java.util.Vector<Dynamic>;
 	
 	/**
 	* A vector of DELEGATE* Catalog entries constructed during
@@ -166,7 +166,7 @@ extern class Catalog
 	* <code>catalogEntries</code> vector. This assures that matching
 	* PUBLIC keywords are encountered before DELEGATE* entries.</p>
 	*/
-	private var localDelegate : java.util.Vector<Dynamic>;
+	@:protected private var localDelegate : java.util.Vector<Dynamic>;
 	
 	/**
 	* A hash of CatalogReaders.
@@ -175,7 +175,7 @@ extern class Catalog
 	* vector. This allows the Catalog to quickly locate the reader
 	* for a particular MIME type.</p>
 	*/
-	private var readerMap : java.util.Hashtable<Dynamic, Dynamic>;
+	@:protected private var readerMap : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* A vector of CatalogReaders.
@@ -185,7 +185,7 @@ extern class Catalog
 	* the MIME type is unknown, each reader is attempted in turn until
 	* one succeeds.</p>
 	*/
-	private var readerArr : java.util.Vector<Dynamic>;
+	@:protected private var readerArr : java.util.Vector<Dynamic>;
 	
 	/**
 	* Constructs an empty Catalog.
@@ -194,7 +194,7 @@ extern class Catalog
 	* using the default (static) CatalogManager
 	* and initializes the catalog data structures.</p>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an empty Catalog with a specific CatalogManager.
@@ -203,24 +203,24 @@ extern class Catalog
 	* using the specified Catalog Manager
 	* and initializes the catalog data structures.</p>
 	*/
-	@:overload public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function new(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	/**
 	* Return the CatalogManager used by this catalog.
 	*
 	*/
-	@:overload public function getCatalogManager() : com.sun.org.apache.xml.internal.resolver.CatalogManager;
+	@:overload @:public public function getCatalogManager() : com.sun.org.apache.xml.internal.resolver.CatalogManager;
 	
 	/**
 	* Establish the CatalogManager used by this catalog.
 	*
 	*/
-	@:overload public function setCatalogManager(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
+	@:overload @:public public function setCatalogManager(manager : com.sun.org.apache.xml.internal.resolver.CatalogManager) : Void;
 	
 	/**
 	* Setup readers.
 	*/
-	@:overload public function setupReaders() : Void;
+	@:overload @:public public function setupReaders() : Void;
 	
 	/**
 	* Add a new CatalogReader to the Catalog.
@@ -242,7 +242,7 @@ extern class Catalog
 	* @param mimeType The MIME type associated with this reader.
 	* @param reader The CatalogReader to use.
 	*/
-	@:overload public function addReader(mimeType : String, reader : com.sun.org.apache.xml.internal.resolver.readers.CatalogReader) : Void;
+	@:overload @:public public function addReader(mimeType : String, reader : com.sun.org.apache.xml.internal.resolver.readers.CatalogReader) : Void;
 	
 	/**
 	* Copies the reader list from the current Catalog to a new Catalog.
@@ -253,7 +253,7 @@ extern class Catalog
 	*
 	* @param newCatalog The new Catalog.
 	*/
-	@:overload private function copyReaders(newCatalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
+	@:overload @:protected private function copyReaders(newCatalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
 	
 	/**
 	* Create a new Catalog object.
@@ -267,12 +267,12 @@ extern class Catalog
 	* a new Catalog. Do not simply use "new Subclass()" since that will
 	* confuse future subclasses.</p>
 	*/
-	@:overload private function newCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
+	@:overload @:protected private function newCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* Returns the current base URI.
 	*/
-	@:overload public function getCurrentBase() : String;
+	@:overload @:public public function getCurrentBase() : String;
 	
 	/**
 	* Returns the default override setting associated with this
@@ -281,7 +281,7 @@ extern class Catalog
 	* <p>All catalog files loaded by this catalog will have the
 	* initial override setting specified by this default.</p>
 	*/
-	@:overload public function getDefaultOverride() : String;
+	@:overload @:public public function getDefaultOverride() : String;
 	
 	/**
 	* Load the system catalog files.
@@ -294,7 +294,7 @@ extern class Catalog
 	* identified with a filename that is not a valid URL.
 	* @throws IOException One of the system catalogs cannot be read.
 	*/
-	@:overload public function loadSystemCatalogs() : Void;
+	@:overload @:public public function loadSystemCatalogs() : Void;
 	
 	/**
 	* Parse a catalog file, augmenting internal data structures.
@@ -305,7 +305,7 @@ extern class Catalog
 	* a valid URL.
 	* @throws IOException Error reading catalog file.
 	*/
-	@:overload @:synchronized public function parseCatalog(fileName : String) : Void;
+	@:overload @:public @:synchronized public function parseCatalog(fileName : String) : Void;
 	
 	/**
 	* Parse a catalog file, augmenting internal data structures.
@@ -320,7 +320,7 @@ extern class Catalog
 	* mimeType.
 	* @throws IOException Error reading catalog file.
 	*/
-	@:overload @:synchronized public function parseCatalog(mimeType : String, is : java.io.InputStream) : Void;
+	@:overload @:public @:synchronized public function parseCatalog(mimeType : String, is : java.io.InputStream) : Void;
 	
 	/**
 	* Parse a catalog document, augmenting internal data structures.
@@ -337,7 +337,7 @@ extern class Catalog
 	*
 	* @throws IOException Error reading catalog file.
 	*/
-	@:overload @:synchronized public function parseCatalog(aUrl : java.net.URL) : Void;
+	@:overload @:public @:synchronized public function parseCatalog(aUrl : java.net.URL) : Void;
 	
 	/**
 	* Parse all of the pending catalogs.
@@ -345,7 +345,7 @@ extern class Catalog
 	* <p>Catalogs may refer to other catalogs, this method parses
 	* all of the currently pending catalog files.</p>
 	*/
-	@:overload @:synchronized private function parsePendingCatalogs() : Void;
+	@:overload @:protected @:synchronized private function parsePendingCatalogs() : Void;
 	
 	/**
 	* Parse a single catalog file, augmenting internal data structures.
@@ -356,7 +356,7 @@ extern class Catalog
 	* a valid URL.
 	* @throws IOException Error reading catalog file.
 	*/
-	@:overload @:synchronized private function parseCatalogFile(fileName : String) : Void;
+	@:overload @:protected @:synchronized private function parseCatalogFile(fileName : String) : Void;
 	
 	/**
 	* Cleanup and process a Catalog entry.
@@ -368,7 +368,7 @@ extern class Catalog
 	*
 	* @param entry The CatalogEntry to process.
 	*/
-	@:overload public function addEntry(entry : com.sun.org.apache.xml.internal.resolver.CatalogEntry) : Void;
+	@:overload @:public public function addEntry(entry : com.sun.org.apache.xml.internal.resolver.CatalogEntry) : Void;
 	
 	/**
 	* Handle unknown CatalogEntry types.
@@ -376,7 +376,7 @@ extern class Catalog
 	* <p>This method exists to allow subclasses to deal with unknown
 	* entry types.</p>
 	*/
-	@:overload public function unknownEntry(strings : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function unknownEntry(strings : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Parse all subordinate catalogs.
@@ -407,7 +407,7 @@ extern class Catalog
 	* @throws IOException Error reading some subordinate or delegated
 	* catalog file.
 	*/
-	@:overload public function parseAllCatalogs() : Void;
+	@:overload @:public public function parseAllCatalogs() : Void;
 	
 	/**
 	* Return the applicable DOCTYPE system identifier.
@@ -425,7 +425,7 @@ extern class Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveDoctype(entityName : String, publicId : String, systemId : String) : String;
+	@:overload @:public public function resolveDoctype(entityName : String, publicId : String, systemId : String) : String;
 	
 	/**
 	* Return the applicable DOCUMENT entry.
@@ -436,7 +436,7 @@ extern class Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveDocument() : String;
+	@:overload @:public public function resolveDocument() : String;
 	
 	/**
 	* Return the applicable ENTITY system identifier.
@@ -454,7 +454,7 @@ extern class Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveEntity(entityName : String, publicId : String, systemId : String) : String;
+	@:overload @:public public function resolveEntity(entityName : String, publicId : String, systemId : String) : String;
 	
 	/**
 	* Return the applicable NOTATION system identifier.
@@ -472,7 +472,7 @@ extern class Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveNotation(notationName : String, publicId : String, systemId : String) : String;
+	@:overload @:public public function resolveNotation(notationName : String, publicId : String, systemId : String) : String;
 	
 	/**
 	* Return the applicable PUBLIC or SYSTEM identifier.
@@ -497,7 +497,7 @@ extern class Catalog
 	* match is not found in the catalog, instead null is returned
 	* to indicate that no match was found.
 	*/
-	@:overload public function resolvePublic(publicId : String, systemId : String) : String;
+	@:overload @:public public function resolvePublic(publicId : String, systemId : String) : String;
 	
 	/**
 	* Return the applicable PUBLIC or SYSTEM identifier.
@@ -547,7 +547,7 @@ extern class Catalog
 	* match is not found in the catalog, instead null is returned
 	* to indicate that no match was found.
 	*/
-	@:overload @:synchronized private function resolveLocalPublic(entityType : Int, entityName : String, publicId : String, systemId : String) : String;
+	@:overload @:protected @:synchronized private function resolveLocalPublic(entityType : Int, entityName : String, publicId : String, systemId : String) : String;
 	
 	/**
 	* Return the applicable SYSTEM system identifier.
@@ -567,7 +567,7 @@ extern class Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveSystem(systemId : String) : String;
+	@:overload @:public public function resolveSystem(systemId : String) : String;
 	
 	/**
 	* Return the applicable SYSTEM system identifier in this
@@ -580,7 +580,7 @@ extern class Catalog
 	*
 	* @return The mapped system identifier or null
 	*/
-	@:overload private function resolveLocalSystem(systemId : String) : String;
+	@:overload @:protected private function resolveLocalSystem(systemId : String) : String;
 	
 	/**
 	* Return the applicable URI.
@@ -598,7 +598,7 @@ extern class Catalog
 	* subordinate catalog cannot be turned into a valid URL.
 	* @throws IOException Error reading subordinate catalog file.
 	*/
-	@:overload public function resolveURI(uri : String) : String;
+	@:overload @:public public function resolveURI(uri : String) : String;
 	
 	/**
 	* Return the applicable URI in this catalog.
@@ -610,7 +610,7 @@ extern class Catalog
 	*
 	* @return The mapped URI or null
 	*/
-	@:overload private function resolveLocalURI(uri : String) : String;
+	@:overload @:protected private function resolveLocalURI(uri : String) : String;
 	
 	/**
 	* Search the subordinate catalogs, in order, looking for a match.
@@ -640,7 +640,7 @@ extern class Catalog
 	* match is not found in the catalog, instead null is returned
 	* to indicate that no match was found.
 	*/
-	@:overload @:synchronized private function resolveSubordinateCatalogs(entityType : Int, entityName : String, publicId : String, systemId : String) : String;
+	@:overload @:protected @:synchronized private function resolveSubordinateCatalogs(entityType : Int, entityName : String, publicId : String, systemId : String) : String;
 	
 	/**
 	* Replace backslashes with forward slashes. (URLs always use
@@ -650,7 +650,7 @@ extern class Catalog
 	* @return The same system identifier with backslashes turned into
 	* forward slashes.
 	*/
-	@:overload private function fixSlashes(sysid : String) : String;
+	@:overload @:protected private function fixSlashes(sysid : String) : String;
 	
 	/**
 	* Construct an absolute URI from a relative one, using the current
@@ -660,7 +660,7 @@ extern class Catalog
 	* @return The system identifier made absolute with respect to the
 	* current {@link #base}.
 	*/
-	@:overload private function makeAbsolute(sysid : String) : String;
+	@:overload @:protected private function makeAbsolute(sysid : String) : String;
 	
 	/**
 	* Perform character normalization on a URI reference.
@@ -668,7 +668,7 @@ extern class Catalog
 	* @param uriref The URI reference
 	* @return The normalized URI reference.
 	*/
-	@:overload private function normalizeURI(uriref : String) : String;
+	@:overload @:protected private function normalizeURI(uriref : String) : String;
 	
 	/**
 	* Perform %-encoding on a single byte.
@@ -677,7 +677,7 @@ extern class Catalog
 	but encoding needs to look at the bytes unsigned.)
 	* @return The %-encoded string for the byte in question.
 	*/
-	@:overload private function encodedByte(b : Int) : String;
+	@:overload @:protected private function encodedByte(b : Int) : String;
 	
 	/**
 	* Add to the current list of delegated catalogs.
@@ -688,7 +688,7 @@ extern class Catalog
 	*
 	* @param entry The DELEGATE catalog entry
 	*/
-	@:overload private function addDelegate(entry : com.sun.org.apache.xml.internal.resolver.CatalogEntry) : Void;
+	@:overload @:protected private function addDelegate(entry : com.sun.org.apache.xml.internal.resolver.CatalogEntry) : Void;
 	
 	
 }

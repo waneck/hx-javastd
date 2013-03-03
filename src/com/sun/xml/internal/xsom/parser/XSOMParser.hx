@@ -28,7 +28,7 @@ extern class XSOMParser
 	/**
 	* Creates a new XSOMParser by using a SAX parser from JAXP.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new XSOMParser that uses the given SAXParserFactory
@@ -38,7 +38,7 @@ extern class XSOMParser
 	* it properly. Don't forget to call <code>setNamespaceAware(true)</code>
 	* or you'll see some strange errors.
 	*/
-	@:overload public function new(factory : javax.xml.parsers.SAXParserFactory) : Void;
+	@:overload @:public public function new(factory : javax.xml.parsers.SAXParserFactory) : Void;
 	
 	/**
 	* Creates a new XSOMParser that reads XML Schema from non-standard
@@ -50,7 +50,7 @@ extern class XSOMParser
 	* @param   parser
 	*      This parser will be called to parse XML Schema documents.
 	*/
-	@:overload public function new(parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
+	@:overload @:public public function new(parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
 	
 	/**
 	* Parses a new XML Schema document.
@@ -61,7 +61,7 @@ extern class XSOMParser
 	* references to other schemas, XSOM will fail to resolve them.
 	* To specify an system ID with a stream, use {@link InputSource}
 	*/
-	@:overload public function parse(is : java.io.InputStream) : Void;
+	@:overload @:public public function parse(is : java.io.InputStream) : Void;
 	
 	/**
 	* Parses a new XML Schema document.
@@ -72,22 +72,22 @@ extern class XSOMParser
 	* references to other schemas, XSOM will fail to resolve them.
 	* To specify an system ID with a reader, use {@link InputSource}
 	*/
-	@:overload public function parse(reader : java.io.Reader) : Void;
+	@:overload @:public public function parse(reader : java.io.Reader) : Void;
 	
 	/**
 	* Parses a new XML Schema document.
 	*/
-	@:overload public function parse(schema : java.io.File) : Void;
+	@:overload @:public public function parse(schema : java.io.File) : Void;
 	
 	/**
 	* Parses a new XML Schema document.
 	*/
-	@:overload public function parse(url : java.net.URL) : Void;
+	@:overload @:public public function parse(url : java.net.URL) : Void;
 	
 	/**
 	* Parses a new XML Schema document.
 	*/
-	@:overload public function parse(systemId : String) : Void;
+	@:overload @:public public function parse(systemId : String) : Void;
 	
 	/**
 	* Parses a new XML Schema document.
@@ -96,7 +96,7 @@ extern class XSOMParser
 	* Note that if the {@link InputSource} does not have a system ID,
 	* XSOM will fail to resolve them.
 	*/
-	@:overload public function parse(source : org.xml.sax.InputSource) : Void;
+	@:overload @:public public function parse(source : org.xml.sax.InputSource) : Void;
 	
 	/**
 	* Gets the parser implemented as a ContentHandler.
@@ -116,7 +116,7 @@ extern class XSOMParser
 	* not available as a stand-alone XML document.
 	* For example, one can feed XML Schema inside a WSDL document.
 	*/
-	@:overload public function getParserHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getParserHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Gets the parsed result. Don't call this method until
@@ -130,7 +130,7 @@ extern class XSOMParser
 	*      This exception will never be thrown unless it is thrown
 	*      by an error handler.
 	*/
-	@:overload public function getResult() : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload @:public public function getResult() : com.sun.xml.internal.xsom.XSSchemaSet;
 	
 	/**
 	* Gets the set of {@link SchemaDocument} that represents
@@ -139,23 +139,23 @@ extern class XSOMParser
 	* @return
 	*      can be empty but never null.
 	*/
-	@:overload public function getDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
+	@:overload @:public public function getDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Set an entity resolver that is used to resolve things
 	* like &lt;xsd:import> and &lt;xsd:include>.
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Set an error handler that receives all the errors encountered
 	* during the parsing.
 	*/
-	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Sets the annotation parser.
@@ -167,7 +167,7 @@ extern class XSOMParser
 	* For each annotation, new instance of this class will be
 	* created and used to parse &lt;xs:annotation>.
 	*/
-	@:overload public function setAnnotationParser(annParser : Class<Dynamic>) : Void;
+	@:overload @:public public function setAnnotationParser(annParser : Class<Dynamic>) : Void;
 	
 	/**
 	* Sets the annotation parser factory.
@@ -175,9 +175,9 @@ extern class XSOMParser
 	* <p>
 	* The specified factory will be used to create AnnotationParsers.
 	*/
-	@:overload public function setAnnotationParser(factory : com.sun.xml.internal.xsom.parser.AnnotationParserFactory) : Void;
+	@:overload @:public public function setAnnotationParser(factory : com.sun.xml.internal.xsom.parser.AnnotationParserFactory) : Void;
 	
-	@:overload public function getAnnotationParserFactory() : com.sun.xml.internal.xsom.parser.AnnotationParserFactory;
+	@:overload @:public public function getAnnotationParserFactory() : com.sun.xml.internal.xsom.parser.AnnotationParserFactory;
 	
 	
 }

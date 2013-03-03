@@ -117,7 +117,7 @@ package java.lang;
 	* <p>The {@link #fillInStackTrace()} method is called to initialize
 	* the stack trace data in the newly created throwable.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a new throwable with the specified detail message.  The
@@ -130,7 +130,7 @@ package java.lang;
 	* @param   message   the detail message. The detail message is saved for
 	*          later retrieval by the {@link #getMessage()} method.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified detail message and
@@ -149,7 +149,7 @@ package java.lang;
 	*         unknown.)
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
+	@:require(java4) @:overload @:public public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified cause and a detail
@@ -168,7 +168,7 @@ package java.lang;
 	*         unknown.)
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function new(cause : java.lang.Throwable) : Void;
+	@:require(java4) @:overload @:public public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified detail message,
@@ -211,7 +211,7 @@ package java.lang;
 	* @see ArithmeticException
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function new(message : String, cause : java.lang.Throwable, enableSuppression : Bool, writableStackTrace : Bool) : Void;
+	@:require(java7) @:overload @:protected private function new(message : String, cause : java.lang.Throwable, enableSuppression : Bool, writableStackTrace : Bool) : Void;
 	
 	/**
 	* Returns the detail message string of this throwable.
@@ -219,7 +219,7 @@ package java.lang;
 	* @return  the detail message string of this {@code Throwable} instance
 	*          (which may be {@code null}).
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public public function getMessage() : String;
 	
 	/**
 	* Creates a localized description of this throwable.
@@ -231,7 +231,7 @@ package java.lang;
 	* @return  The localized description of this throwable.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function getLocalizedMessage() : String;
+	@:require(java1) @:overload @:public public function getLocalizedMessage() : String;
 	
 	/**
 	* Returns the cause of this throwable or {@code null} if the
@@ -253,7 +253,7 @@ package java.lang;
 	*          cause is nonexistent or unknown.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public @:synchronized public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Initializes the <i>cause</i> of this throwable to the specified value.
@@ -291,7 +291,7 @@ package java.lang;
 	*         been called on this throwable.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:require(java4) @:overload @:public @:synchronized public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Returns a short description of this throwable.
@@ -307,7 +307,7 @@ package java.lang;
 	*
 	* @return a string representation of this throwable.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Prints this throwable and its backtrace to the
@@ -458,14 +458,14 @@ package java.lang;
 	*          ... 2 more
 	* </pre>
 	*/
-	@:overload public function printStackTrace() : Void;
+	@:overload @:public public function printStackTrace() : Void;
 	
 	/**
 	* Prints this throwable and its backtrace to the specified print stream.
 	*
 	* @param s {@code PrintStream} to use for output
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this throwable and its backtrace to the specified
@@ -474,7 +474,7 @@ package java.lang;
 	* @param s {@code PrintWriter} to use for output
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:require(java1) @:overload @:public public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	/**
 	* Fills in the execution stack trace. This method records within this
@@ -488,7 +488,7 @@ package java.lang;
 	* @return  a reference to this {@code Throwable} instance.
 	* @see     java.lang.Throwable#printStackTrace()
 	*/
-	@:overload @:synchronized public function fillInStackTrace() : java.lang.Throwable;
+	@:overload @:public @:synchronized public function fillInStackTrace() : java.lang.Throwable;
 	
 	/**
 	* Provides programmatic access to the stack trace information printed by
@@ -514,7 +514,7 @@ package java.lang;
 	*         pertaining to this throwable.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function getStackTrace() : java.NativeArray<java.lang.StackTraceElement>;
+	@:require(java4) @:overload @:public public function getStackTrace() : java.NativeArray<java.lang.StackTraceElement>;
 	
 	/**
 	* Sets the stack trace elements that will be returned by
@@ -544,7 +544,7 @@ package java.lang;
 	*
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function setStackTrace(stackTrace : java.NativeArray<java.lang.StackTraceElement>) : Void;
+	@:require(java4) @:overload @:public public function setStackTrace(stackTrace : java.NativeArray<java.lang.StackTraceElement>) : Void;
 	
 	/**
 	* Appends the specified exception to the exceptions that were
@@ -596,7 +596,7 @@ package java.lang;
 	* @throws NullPointerException if {@code exception} is {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final @:synchronized public function addSuppressed(exception : java.lang.Throwable) : Void;
+	@:require(java7) @:overload @:public @:final @:synchronized public function addSuppressed(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns an array containing all of the exceptions that were
@@ -613,7 +613,7 @@ package java.lang;
 	*         suppressed to deliver this exception.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final @:synchronized public function getSuppressed() : java.NativeArray<java.lang.Throwable>;
+	@:require(java7) @:overload @:public @:final @:synchronized public function getSuppressed() : java.NativeArray<java.lang.Throwable>;
 	
 	
 }
@@ -630,13 +630,13 @@ package java.lang;
 	* ignored.  The sentinal is equal to the result of calling:<br>
 	* {@code new StackTraceElement("", "", null, Integer.MIN_VALUE)}
 	*/
-	public static var STACK_TRACE_ELEMENT_SENTINEL(default, null) : java.lang.StackTraceElement;
+	@:public @:static @:final public static var STACK_TRACE_ELEMENT_SENTINEL(default, null) : java.lang.StackTraceElement;
 	
 	/**
 	* Sentinel value used in the serial form to indicate an immutable
 	* stack trace.
 	*/
-	public static var STACK_TRACE_SENTINEL(default, null) : java.NativeArray<java.lang.StackTraceElement>;
+	@:public @:static @:final public static var STACK_TRACE_SENTINEL(default, null) : java.NativeArray<java.lang.StackTraceElement>;
 	
 	
 }

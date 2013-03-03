@@ -26,7 +26,7 @@ extern class Algorithm extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @param doc
 	* @param algorithmURI is the URI of the algorithm as String
 	*/
-	@:overload public function new(doc : org.w3c.dom.Document, algorithmURI : String) : Void;
+	@:overload @:public public function new(doc : org.w3c.dom.Document, algorithmURI : String) : Void;
 	
 	/**
 	* Constructor Algorithm
@@ -35,21 +35,21 @@ extern class Algorithm extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @param BaseURI
 	* @throws XMLSecurityException
 	*/
-	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
+	@:overload @:public public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/**
 	* Method getAlgorithmURI
 	*
 	* @return The URI of the alogrithm
 	*/
-	@:overload public function getAlgorithmURI() : String;
+	@:overload @:public public function getAlgorithmURI() : String;
 	
 	/**
 	* Sets the algorithm's URI as used in the signature.
 	*
 	* @param algorithmURI is the URI of the algorithm as String
 	*/
-	@:overload private function setAlgorithmURI(algorithmURI : String) : Void;
+	@:overload @:protected private function setAlgorithmURI(algorithmURI : String) : Void;
 	
 	
 }

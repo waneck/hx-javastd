@@ -77,7 +77,7 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Unknown) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.Unknown) : Void;
 	
 	/**
 	* Create a non-standard attribute.
@@ -87,7 +87,7 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	* @param bytes Attribute contents
 	* @param constant_pool Array of constants
 	*/
-	@:overload public function new(name_index : Int, length : Int, bytes : java.NativeArray<java.StdTypes.Int8>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
+	@:overload @:public public function new(name_index : Int, length : Int, bytes : java.NativeArray<java.StdTypes.Int8>, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -96,7 +96,7 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump unknown bytes to file stream.
@@ -104,32 +104,32 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final override public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return data bytes.
 	*/
-	@:overload @:final public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:final public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* @return name of attribute.
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* @param bytes.
 	*/
-	@:overload @:final public function setBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public @:final public function setBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final override public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload @:public override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

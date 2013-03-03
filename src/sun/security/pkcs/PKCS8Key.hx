@@ -32,28 +32,28 @@ package sun.security.pkcs;
 extern class PKCS8Key implements java.security.PrivateKey
 {
 	/* The algorithm information (name, parameters, etc). */
-	private var algid : sun.security.x509.AlgorithmId;
+	@:protected private var algid : sun.security.x509.AlgorithmId;
 	
 	/* The key bytes, without the algorithm information */
-	private var key : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var key : java.NativeArray<java.StdTypes.Int8>;
 	
 	/* The encoded for the key. */
-	private var encodedKey : java.NativeArray<java.StdTypes.Int8>;
+	@:protected private var encodedKey : java.NativeArray<java.StdTypes.Int8>;
 	
 	/* The version for this key */
-	public static var version(default, null) : java.math.BigInteger;
+	@:public @:static @:final public static var version(default, null) : java.math.BigInteger;
 	
 	/**
 	* Default constructor.  The key constructed must have its key
 	* and algorithm initialized before it may be used, for example
 	* by using <code>decode</code>.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/*
 	* Binary backwards compatibility. New uses should call parseKey().
 	*/
-	@:overload public static function parse(_in : sun.security.util.DerValue) : sun.security.pkcs.PKCS8Key;
+	@:overload @:public @:static public static function parse(_in : sun.security.util.DerValue) : sun.security.pkcs.PKCS8Key;
 	
 	/**
 	* Construct PKCS#8 subject public key from a DER value.  If
@@ -69,7 +69,7 @@ extern class PKCS8Key implements java.security.PrivateKey
 	* @param in the DER-encoded SubjectPublicKeyInfo value
 	* @exception IOException on data format errors
 	*/
-	@:overload public static function parseKey(_in : sun.security.util.DerValue) : java.security.PrivateKey;
+	@:overload @:public @:static public static function parseKey(_in : sun.security.util.DerValue) : java.security.PrivateKey;
 	
 	/**
 	* Parse the key bits.  This may be redefined by subclasses to take
@@ -85,44 +85,44 @@ extern class PKCS8Key implements java.security.PrivateKey
 	* @exception IOException if a parsing error occurs.
 	* @exception InvalidKeyException if the key encoding is invalid.
 	*/
-	@:overload private function parseKeyBits() : Void;
+	@:overload @:protected private function parseKeyBits() : Void;
 	
 	/**
 	* Returns the algorithm to be used with this key.
 	*/
-	@:overload public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns the algorithm ID to be used with this key.
 	*/
-	@:overload public function getAlgorithmId() : sun.security.x509.AlgorithmId;
+	@:overload @:public public function getAlgorithmId() : sun.security.x509.AlgorithmId;
 	
 	/**
 	* PKCS#8 sequence on the DER output stream.
 	*/
-	@:overload @:final public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public @:final public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Returns the DER-encoded form of the key as a byte array.
 	*/
-	@:overload @:synchronized public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the format for this key: "PKCS#8"
 	*/
-	@:overload public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	/**
 	* Returns the DER-encoded form of the key as a byte array.
 	*
 	* @exception InvalidKeyException if an encoding error occurs.
 	*/
-	@:overload public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/*
 	* Returns a printable representation of the key
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Initialize an PKCS8Key object from an input stream.  The data
@@ -140,11 +140,11 @@ extern class PKCS8Key implements java.security.PrivateKey
 	*
 	* @exception InvalidKeyException if a parsing error occurs.
 	*/
-	@:overload public function decode(_in : java.io.InputStream) : Void;
+	@:overload @:public public function decode(_in : java.io.InputStream) : Void;
 	
-	@:overload public function decode(encodedKey : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function decode(encodedKey : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload private function writeReplace() : Dynamic;
+	@:overload @:protected private function writeReplace() : Dynamic;
 	
 	/**
 	* Compares two private keys. This returns false if the object with which
@@ -156,13 +156,13 @@ extern class PKCS8Key implements java.security.PrivateKey
 	* @return <code>true</code> if this key has the same encoding as the
 	* object argument; <code>false</code> otherwise.
 	*/
-	@:overload public function equals(object : Dynamic) : Bool;
+	@:overload @:public public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Calculates a hash code value for this object. Objects
 	* which are equal will also have the same hashcode.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

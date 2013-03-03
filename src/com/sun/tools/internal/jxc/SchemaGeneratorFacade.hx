@@ -29,7 +29,7 @@ extern class SchemaGeneratorFacade
 	* CLI entry point to schemagen that checks for JDK 5.0
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

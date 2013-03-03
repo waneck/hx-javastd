@@ -25,23 +25,23 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 */
 extern class CDATAImpl extends com.sun.org.apache.xerces.internal.dom.CDATASectionImpl implements javax.xml.soap.Text
 {
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, text : String) : Void;
+	@:overload @:public public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, text : String) : Void;
 	
-	@:overload public function getValue() : String;
+	@:overload @:public public function getValue() : String;
 	
-	@:overload public function setValue(text : String) : Void;
+	@:overload @:public public function setValue(text : String) : Void;
 	
-	@:overload public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
+	@:overload @:public public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
 	
-	@:overload public function getParentElement() : javax.xml.soap.SOAPElement;
+	@:overload @:public public function getParentElement() : javax.xml.soap.SOAPElement;
 	
-	@:overload public function detachNode() : Void;
+	@:overload @:public public function detachNode() : Void;
 	
-	@:overload public function recycleNode() : Void;
+	@:overload @:public public function recycleNode() : Void;
 	
-	@:overload public function isComment() : Bool;
+	@:overload @:public public function isComment() : Bool;
 	
 	
 }

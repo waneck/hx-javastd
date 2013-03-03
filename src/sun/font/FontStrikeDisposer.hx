@@ -25,15 +25,15 @@ package sun.font;
 */
 @:internal extern class FontStrikeDisposer implements sun.java2d.DisposerRecord implements sun.java2d.Disposer.Disposer_PollDisposable
 {
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<Int>) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<Int>) : Void;
 	
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<haxe.Int64>) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64, images : java.NativeArray<haxe.Int64>) : Void;
 	
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc, pContext : haxe.Int64) : Void;
 	
-	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc) : Void;
+	@:overload @:public public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc) : Void;
 	
-	@:overload @:synchronized public function dispose() : Void;
+	@:overload @:public @:synchronized public function dispose() : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class XPathProcessorException extends com.sun.org.apache.xpath.internal.X
 	* an error message.
 	* @param message The error message.
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Create an XPathProcessorException object that holds
@@ -42,7 +42,7 @@ extern class XPathProcessorException extends com.sun.org.apache.xpath.internal.X
 	* @param message The error message.
 	* @param e The exception that caused this exception.
 	*/
-	@:overload public function new(message : String, e : java.lang.Exception) : Void;
+	@:overload @:public public function new(message : String, e : java.lang.Exception) : Void;
 	
 	
 }

@@ -72,7 +72,7 @@ package java.lang;
 	* Constructs a string builder with no characters in it and an
 	* initial capacity of 16 characters.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a string builder with no characters in it and an
@@ -82,7 +82,7 @@ package java.lang;
 	* @throws     NegativeArraySizeException  if the <code>capacity</code>
 	*               argument is less than <code>0</code>.
 	*/
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
 	/**
 	* Constructs a string builder initialized to the contents of the
@@ -92,7 +92,7 @@ package java.lang;
 	* @param   str   the initial contents of the buffer.
 	* @throws    NullPointerException if <code>str</code> is <code>null</code>
 	*/
-	@:overload public function new(str : String) : Void;
+	@:overload @:public public function new(str : String) : Void;
 	
 	/**
 	* Constructs a string builder that contains the same characters
@@ -103,11 +103,11 @@ package java.lang;
 	* @param      seq   the sequence to copy.
 	* @throws    NullPointerException if <code>seq</code> is <code>null</code>
 	*/
-	@:overload public function new(seq : java.lang.CharSequence) : Void;
+	@:overload @:public public function new(seq : java.lang.CharSequence) : Void;
 	
-	@:overload public function append(obj : Dynamic) : java.lang.StringBuilder;
+	@:overload @:public override public function append(obj : Dynamic) : java.lang.StringBuilder;
 	
-	@:overload public function append(str : String) : java.lang.StringBuilder;
+	@:overload @:public override public function append(str : String) : java.lang.StringBuilder;
 	
 	/**
 	* Appends the specified <tt>StringBuffer</tt> to this sequence.
@@ -128,139 +128,139 @@ package java.lang;
 	* @param   sb   the <tt>StringBuffer</tt> to append.
 	* @return  a reference to this object.
 	*/
-	@:overload public function append(sb : java.lang.StringBuffer) : java.lang.StringBuilder;
+	@:overload @:public override public function append(sb : java.lang.StringBuffer) : java.lang.StringBuilder;
 	
 	/**
 	*/
-	@:overload public function append(s : java.lang.CharSequence) : java.lang.StringBuilder;
+	@:overload @:public override public function append(s : java.lang.CharSequence) : java.lang.StringBuilder;
 	
 	/**
 	* @throws     IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function append(s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function append(s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuilder;
 	
-	@:overload public function append(str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuilder;
+	@:overload @:public override public function append(str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuilder;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function append(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function append(str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuilder;
 	
-	@:overload public function append(b : Bool) : java.lang.StringBuilder;
+	@:overload @:public override public function append(b : Bool) : java.lang.StringBuilder;
 	
-	@:overload public function append(c : java.StdTypes.Char16) : java.lang.StringBuilder;
+	@:overload @:public override public function append(c : java.StdTypes.Char16) : java.lang.StringBuilder;
 	
-	@:overload public function append(i : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function append(i : Int) : java.lang.StringBuilder;
 	
-	@:overload public function append(lng : haxe.Int64) : java.lang.StringBuilder;
+	@:overload @:public override public function append(lng : haxe.Int64) : java.lang.StringBuilder;
 	
-	@:overload public function append(f : Single) : java.lang.StringBuilder;
+	@:overload @:public override public function append(f : Single) : java.lang.StringBuilder;
 	
-	@:overload public function append(d : Float) : java.lang.StringBuilder;
+	@:overload @:public override public function append(d : Float) : java.lang.StringBuilder;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function appendCodePoint(codePoint : Int) : java.lang.StringBuilder;
+	@:require(java5) @:overload @:public override public function appendCodePoint(codePoint : Int) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function delete(start : Int, end : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function delete(start : Int, end : Int) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function deleteCharAt(index : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function deleteCharAt(index : Int) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function replace(start : Int, end : Int, str : String) : java.lang.StringBuilder;
+	@:overload @:public override public function replace(start : Int, end : Int, str : String) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(index : Int, str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(index : Int, str : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, obj : Dynamic) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, obj : Dynamic) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, str : String) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, str : String) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, str : java.NativeArray<java.StdTypes.Char16>) : java.lang.StringBuilder;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(dstOffset : Int, s : java.lang.CharSequence) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(dstOffset : Int, s : java.lang.CharSequence) : java.lang.StringBuilder;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(dstOffset : Int, s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(dstOffset : Int, s : java.lang.CharSequence, start : Int, end : Int) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, b : Bool) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, b : Bool) : java.lang.StringBuilder;
 	
 	/**
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, c : java.StdTypes.Char16) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, c : java.StdTypes.Char16) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, i : Int) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, i : Int) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, l : haxe.Int64) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, l : haxe.Int64) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, f : Single) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, f : Single) : java.lang.StringBuilder;
 	
 	/**
 	* @throws StringIndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload public function insert(offset : Int, d : Float) : java.lang.StringBuilder;
+	@:overload @:public override public function insert(offset : Int, d : Float) : java.lang.StringBuilder;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function indexOf(str : String) : Int;
+	@:overload @:public override public function indexOf(str : String) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function indexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public override public function indexOf(str : String, fromIndex : Int) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function lastIndexOf(str : String) : Int;
+	@:overload @:public override public function lastIndexOf(str : String) : Int;
 	
 	/**
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload public function lastIndexOf(str : String, fromIndex : Int) : Int;
+	@:overload @:public override public function lastIndexOf(str : String, fromIndex : Int) : Int;
 	
-	@:overload public function reverse() : java.lang.StringBuilder;
+	@:overload @:public override public function reverse() : java.lang.StringBuilder;
 	
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

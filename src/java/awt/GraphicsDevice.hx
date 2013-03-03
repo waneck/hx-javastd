@@ -32,23 +32,23 @@ extern class GraphicsDevice
 	* @see GraphicsEnvironment#getDefaultScreenDevice
 	* @see GraphicsConfiguration#getDevice
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Device is a raster screen.
 	*/
-	public static var TYPE_RASTER_SCREEN(default, null) : Int;
+	@:public @:final @:static public static var TYPE_RASTER_SCREEN(default, null) : Int;
 	
 	/**
 	* Device is a printer.
 	*/
-	public static var TYPE_PRINTER(default, null) : Int;
+	@:public @:final @:static public static var TYPE_PRINTER(default, null) : Int;
 	
 	/**
 	* Device is an image buffer.  This buffer can reside in device
 	* or system memory but it is not physically viewable by the user.
 	*/
-	public static var TYPE_IMAGE_BUFFER(default, null) : Int;
+	@:public @:final @:static public static var TYPE_IMAGE_BUFFER(default, null) : Int;
 	
 	/**
 	* Returns the type of this <code>GraphicsDevice</code>.
@@ -58,7 +58,7 @@ extern class GraphicsDevice
 	* @see #TYPE_PRINTER
 	* @see #TYPE_IMAGE_BUFFER
 	*/
-	@:overload @:abstract public function getType() : Int;
+	@:overload @:public @:abstract public function getType() : Int;
 	
 	/**
 	* Returns the identification string associated with this
@@ -81,7 +81,7 @@ extern class GraphicsDevice
 	* @return a <code>String</code> that is the identification
 	* of this <code>GraphicsDevice</code>.
 	*/
-	@:overload @:abstract public function getIDstring() : String;
+	@:overload @:public @:abstract public function getIDstring() : String;
 	
 	/**
 	* Returns all of the <code>GraphicsConfiguration</code>
@@ -90,7 +90,7 @@ extern class GraphicsDevice
 	* objects that are associated with this
 	* <code>GraphicsDevice</code>.
 	*/
-	@:overload @:abstract public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
+	@:overload @:public @:abstract public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
 	
 	/**
 	* Returns the default <code>GraphicsConfiguration</code>
@@ -98,7 +98,7 @@ extern class GraphicsDevice
 	* @return the default <code>GraphicsConfiguration</code>
 	* of this <code>GraphicsDevice</code>.
 	*/
-	@:overload @:abstract public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload @:public @:abstract public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Returns the "best" configuration possible that passes the
@@ -110,7 +110,7 @@ extern class GraphicsDevice
 	* <code>GraphicsConfigTemplate</code>.
 	* @see GraphicsConfigTemplate
 	*/
-	@:overload public function getBestConfiguration(gct : java.awt.GraphicsConfigTemplate) : java.awt.GraphicsConfiguration;
+	@:overload @:public public function getBestConfiguration(gct : java.awt.GraphicsConfigTemplate) : java.awt.GraphicsConfiguration;
 	
 	/**
 	* Returns <code>true</code> if this <code>GraphicsDevice</code>
@@ -125,7 +125,7 @@ extern class GraphicsDevice
 	* @see java.awt.AWTPermission
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isFullScreenSupported() : Bool;
+	@:require(java4) @:overload @:public public function isFullScreenSupported() : Bool;
 	
 	/**
 	* Enter full-screen mode, or return to windowed mode.  The entered
@@ -185,7 +185,7 @@ extern class GraphicsDevice
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setFullScreenWindow(w : java.awt.Window) : Void;
+	@:require(java4) @:overload @:public public function setFullScreenWindow(w : java.awt.Window) : Void;
 	
 	/**
 	* Returns the <code>Window</code> object representing the
@@ -196,7 +196,7 @@ extern class GraphicsDevice
 	* @see #setFullScreenWindow(Window)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getFullScreenWindow() : java.awt.Window;
+	@:require(java4) @:overload @:public public function getFullScreenWindow() : java.awt.Window;
 	
 	/**
 	* Returns <code>true</code> if this <code>GraphicsDevice</code>
@@ -212,7 +212,7 @@ extern class GraphicsDevice
 	* @see #setFullScreenWindow
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function isDisplayChangeSupported() : Bool;
+	@:require(java4) @:overload @:public public function isDisplayChangeSupported() : Bool;
 	
 	/**
 	* Sets the display mode of this graphics device. This is only allowed
@@ -265,7 +265,7 @@ extern class GraphicsDevice
 	* @see #isDisplayChangeSupported
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function setDisplayMode(dm : java.awt.DisplayMode) : Void;
+	@:require(java4) @:overload @:public public function setDisplayMode(dm : java.awt.DisplayMode) : Void;
 	
 	/**
 	* Returns the current display mode of this
@@ -279,7 +279,7 @@ extern class GraphicsDevice
 	* @see #setDisplayMode(DisplayMode)
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDisplayMode() : java.awt.DisplayMode;
+	@:require(java4) @:overload @:public public function getDisplayMode() : java.awt.DisplayMode;
 	
 	/**
 	* Returns all display modes available for this
@@ -292,7 +292,7 @@ extern class GraphicsDevice
 	* @return all of the display modes available for this graphics device.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getDisplayModes() : java.NativeArray<java.awt.DisplayMode>;
+	@:require(java4) @:overload @:public public function getDisplayModes() : java.NativeArray<java.awt.DisplayMode>;
 	
 	/**
 	* This method returns the number of bytes available in
@@ -322,7 +322,7 @@ extern class GraphicsDevice
 	* @see ImageCapabilities#isAccelerated
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAvailableAcceleratedMemory() : Int;
+	@:require(java4) @:overload @:public public function getAvailableAcceleratedMemory() : Int;
 	
 	/**
 	* Returns whether the given level of translucency is supported by
@@ -333,7 +333,7 @@ extern class GraphicsDevice
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isWindowTranslucencySupported(translucencyKind : java.awt.GraphicsDevice.GraphicsDevice_WindowTranslucency) : Bool;
+	@:require(java7) @:overload @:public public function isWindowTranslucencySupported(translucencyKind : java.awt.GraphicsDevice.GraphicsDevice_WindowTranslucency) : Bool;
 	
 	
 }

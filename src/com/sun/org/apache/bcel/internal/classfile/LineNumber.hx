@@ -69,13 +69,13 @@ extern class LineNumber implements java.lang.Cloneable implements com.sun.org.ap
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LineNumber) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.LineNumber) : Void;
 	
 	/**
 	* @param start_pc Program Counter (PC) corresponds to
 	* @param line_number line number in source file
 	*/
-	@:overload public function new(start_pc : Int, line_number : Int) : Void;
+	@:overload @:public public function new(start_pc : Int, line_number : Int) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -84,7 +84,7 @@ extern class LineNumber implements java.lang.Cloneable implements com.sun.org.ap
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump line number/pc pair to file stream in binary format.
@@ -92,37 +92,37 @@ extern class LineNumber implements java.lang.Cloneable implements com.sun.org.ap
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Corresponding source line
 	*/
-	@:overload @:final public function getLineNumber() : Int;
+	@:overload @:public @:final public function getLineNumber() : Int;
 	
 	/**
 	* @return PC in code
 	*/
-	@:overload @:final public function getStartPC() : Int;
+	@:overload @:public @:final public function getStartPC() : Int;
 	
 	/**
 	* @param line_number.
 	*/
-	@:overload @:final public function setLineNumber(line_number : Int) : Void;
+	@:overload @:public @:final public function setLineNumber(line_number : Int) : Void;
 	
 	/**
 	* @param start_pc.
 	*/
-	@:overload @:final public function setStartPC(start_pc : Int) : Void;
+	@:overload @:public @:final public function setStartPC(start_pc : Int) : Void;
 	
 	/**
 	* @return String representation
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.LineNumber;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.LineNumber;
 	
 	
 }

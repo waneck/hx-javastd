@@ -29,7 +29,7 @@ extern interface Operation extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function location(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.http.Operation;
+	@:overload @:public public function location(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.http.Operation;
 	
 	
 }

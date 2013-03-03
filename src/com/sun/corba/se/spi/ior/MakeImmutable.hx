@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.ior;
 */
 extern interface MakeImmutable
 {
-	@:overload public function makeImmutable() : Void;
+	@:overload @:public public function makeImmutable() : Void;
 	
 	
 }

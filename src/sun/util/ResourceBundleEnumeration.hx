@@ -31,11 +31,11 @@ extern class ResourceBundleEnumeration implements java.util.Enumeration<String>
 	* @param enumeration an enumeration providing more elements of the enumeration.
 	*        enumeration may be null.
 	*/
-	@:overload public function new(set : java.util.Set<String>, enumeration : java.util.Enumeration<String>) : Void;
+	@:overload @:public public function new(set : java.util.Set<String>, enumeration : java.util.Enumeration<String>) : Void;
 	
-	@:overload public function hasMoreElements() : Bool;
+	@:overload @:public public function hasMoreElements() : Bool;
 	
-	@:overload public function nextElement() : String;
+	@:overload @:public public function nextElement() : String;
 	
 	
 }

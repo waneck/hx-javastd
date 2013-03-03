@@ -33,33 +33,33 @@ extern class ShortEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.alg
 	* @author Alan Hudson
 	* @author Paul Sandoz
 	*/
-	@:overload @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:public @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload @:public override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:public @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload @:public override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:public @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function decodeFromBytesToShortArray(sdata : java.NativeArray<java.StdTypes.Int16>, istart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function decodeFromBytesToShortArray(sdata : java.NativeArray<java.StdTypes.Int16>, istart : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function decodeFromInputStreamToShortArray(s : java.io.InputStream) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public @:final public function decodeFromInputStreamToShortArray(s : java.io.InputStream) : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload @:final public function encodeToOutputStreamFromShortArray(idata : java.NativeArray<java.StdTypes.Int16>, s : java.io.OutputStream) : Void;
+	@:overload @:public @:final public function encodeToOutputStreamFromShortArray(idata : java.NativeArray<java.StdTypes.Int16>, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function encodeToBytesFromShortArray(sdata : java.NativeArray<java.StdTypes.Int16>, istart : Int, ilength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public @:final public function encodeToBytesFromShortArray(sdata : java.NativeArray<java.StdTypes.Int16>, istart : Int, ilength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload @:final public function convertToCharactersFromShortArray(sdata : java.NativeArray<java.StdTypes.Int16>, s : java.lang.StringBuffer) : Void;
+	@:overload @:public @:final public function convertToCharactersFromShortArray(sdata : java.NativeArray<java.StdTypes.Int16>, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public @:final public function generateArrayFromList(array : java.util.List<Dynamic>) : java.NativeArray<java.StdTypes.Int16>;
 	
 	
 }

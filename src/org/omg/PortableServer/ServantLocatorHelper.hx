@@ -25,21 +25,21 @@ package org.omg.PortableServer;
 	 */
 extern class ServantLocatorHelper
 {
-	@:overload public static function insert(a : org.omg.CORBA.Any, that : org.omg.PortableServer.ServantLocator) : Void;
+	@:overload @:public @:static public static function insert(a : org.omg.CORBA.Any, that : org.omg.PortableServer.ServantLocator) : Void;
 	
-	@:overload public static function extract(a : org.omg.CORBA.Any) : org.omg.PortableServer.ServantLocator;
+	@:overload @:public @:static public static function extract(a : org.omg.CORBA.Any) : org.omg.PortableServer.ServantLocator;
 	
-	@:overload @:synchronized public static function type() : org.omg.CORBA.TypeCode;
+	@:overload @:synchronized @:public @:static public static function type() : org.omg.CORBA.TypeCode;
 	
-	@:overload public static function id() : String;
+	@:overload @:public @:static public static function id() : String;
 	
-	@:overload public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.PortableServer.ServantLocator;
+	@:overload @:public @:static public static function read(istream : org.omg.CORBA.portable.InputStream) : org.omg.PortableServer.ServantLocator;
 	
-	@:overload public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.PortableServer.ServantLocator) : Void;
+	@:overload @:public @:static public static function write(ostream : org.omg.CORBA.portable.OutputStream, value : org.omg.PortableServer.ServantLocator) : Void;
 	
-	@:overload public static function narrow(obj : org.omg.CORBA.Object) : org.omg.PortableServer.ServantLocator;
+	@:overload @:public @:static public static function narrow(obj : org.omg.CORBA.Object) : org.omg.PortableServer.ServantLocator;
 	
-	@:overload public static function unchecked_narrow(obj : org.omg.CORBA.Object) : org.omg.PortableServer.ServantLocator;
+	@:overload @:public @:static public static function unchecked_narrow(obj : org.omg.CORBA.Object) : org.omg.PortableServer.ServantLocator;
 	
 	
 }

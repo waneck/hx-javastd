@@ -45,11 +45,11 @@ package javax.swing.text.rtf;
 @:internal extern class AbstractFilter extends java.io.OutputStream
 {
 	/** A table mapping bytes to characters */
-	private var translationTable : java.NativeArray<java.StdTypes.Char16>;
+	@:protected private var translationTable : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** A table indicating which byte values should be interpreted as
 	*  characters and which should be treated as formatting codes */
-	private var specialsTable : java.NativeArray<Bool>;
+	@:protected private var specialsTable : java.NativeArray<Bool>;
 	
 	/**
 	* A convenience method that reads text from a FileInputStream
@@ -64,17 +64,17 @@ package javax.swing.text.rtf;
 	*
 	* @param in      An InputStream providing text.
 	*/
-	@:overload public function readFromStream(_in : java.io.InputStream) : Void;
+	@:overload @:public public function readFromStream(_in : java.io.InputStream) : Void;
 	
-	@:overload public function readFromReader(_in : java.io.Reader) : Void;
+	@:overload @:public public function readFromReader(_in : java.io.Reader) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Implements the abstract method of OutputStream, of which this class
 	* is a subclass.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload @:public override public function write(b : Int) : Void;
 	
 	/**
 	* Implements the buffer-at-a-time write method for greater
@@ -84,7 +84,7 @@ package javax.swing.text.rtf;
 	* call <code>write(byte[], int, int)</code> or is it the other way
 	* around?
 	*/
-	@:overload override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:public override public function write(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Hopefully, all subclasses will override this method to accept strings
@@ -94,7 +94,7 @@ package javax.swing.text.rtf;
 	* @param s The string of non-special characters written to the
 	*          OutputStream.
 	*/
-	@:overload public function write(s : String) : Void;
+	@:overload @:public public function write(s : String) : Void;
 	
 	/**
 	* Subclasses must provide an implementation of this method which
@@ -102,7 +102,7 @@ package javax.swing.text.rtf;
 	*
 	* @param ch The character written to the OutputStream.
 	*/
-	@:overload @:abstract private function write(ch : java.StdTypes.Char16) : Void;
+	@:overload @:protected @:abstract private function write(ch : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Subclasses must provide an implementation of this method which
@@ -111,7 +111,7 @@ package javax.swing.text.rtf;
 	*
 	* @param b The byte written to the OutputStream.
 	*/
-	@:overload @:abstract private function writeSpecial(b : Int) : Void;
+	@:overload @:protected @:abstract private function writeSpecial(b : Int) : Void;
 	
 	
 }

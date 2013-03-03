@@ -27,20 +27,20 @@ package org.jcp.xml.dsig.internal.dom;
 */
 extern class DOMKeyValue extends org.jcp.xml.dsig.internal.dom.DOMStructure implements javax.xml.crypto.dsig.keyinfo.KeyValue
 {
-	@:overload public function new(key : java.security.PublicKey) : Void;
+	@:overload @:public public function new(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Creates a <code>DOMKeyValue</code> from an element.
 	*
 	* @param kvElem a KeyValue element
 	*/
-	@:overload public function new(kvElem : org.w3c.dom.Element) : Void;
+	@:overload @:public public function new(kvElem : org.w3c.dom.Element) : Void;
 	
-	@:overload public function getPublicKey() : java.security.PublicKey;
+	@:overload @:public public function getPublicKey() : java.security.PublicKey;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload @:public override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	
 }

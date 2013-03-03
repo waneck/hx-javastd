@@ -35,12 +35,12 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param request
 	*      The request {@link Message}. Can be null.
 	*/
-	@:overload public function new(request : com.sun.xml.internal.ws.api.message.Message) : Void;
+	@:overload @:public public function new(request : com.sun.xml.internal.ws.api.message.Message) : Void;
 	
 	/**
 	* Creates an empty {@link Packet} that doesn't have any {@link Message}.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a copy of this {@link Packet}.
@@ -49,7 +49,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*        well, or not. If the value is {@code false}, the {@link Message} in the copy of the {@link Packet} is {@code null}.
 	* @return copy of the original packet
 	*/
-	@:overload public function copy(copyMessage : Bool) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function copy(copyMessage : Bool) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Gets the last {@link Message} set through {@link #setMessage(Message)}.
@@ -57,7 +57,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @return
 	*      may null. See the class javadoc for when it's null.
 	*/
-	@:overload public function getMessage() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload @:public public function getMessage() : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Sets a {@link Message} to this packet.
@@ -65,7 +65,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param message
 	*      Can be null.
 	*/
-	@:overload public function setMessage(message : com.sun.xml.internal.ws.api.message.Message) : Void;
+	@:overload @:public public function setMessage(message : com.sun.xml.internal.ws.api.message.Message) : Void;
 	
 	/**
 	* Returns the QName of the wsdl operation associated with this packet.
@@ -76,7 +76,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @return null if there is no WSDL model or
 	*              runtime cannot uniquely identify the wsdl operation from the information in the packet.
 	*/
-	@:overload @:final public function getWSDLOperation() : javax.xml.namespace.QName;
+	@:overload @:public @:final public function getWSDLOperation() : javax.xml.namespace.QName;
 	
 	/**
 	* Set the wsdl operation to avoid lookup from other data.
@@ -85,7 +85,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*
 	* @param wsdlOp QName
 	*/
-	@:overload public function setWSDLOperation(wsdlOp : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setWSDLOperation(wsdlOp : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* True if this message came from a transport (IOW inbound),
@@ -95,7 +95,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* <p>
 	* This is a requirement from the security team.
 	*/
-	public var wasTransportSecure : Bool;
+	@:public public var wasTransportSecure : Bool;
 	
 	/**
 	* Inbound transport headers are captured in a transport neutral way.
@@ -104,7 +104,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* {@link SOAPMessage#getMimeHeaders()} would return these headers.
 	*
 	*/
-	public static var INBOUND_TRANSPORT_HEADERS(default, null) : String;
+	@:public @:static @:final public static var INBOUND_TRANSPORT_HEADERS(default, null) : String;
 	
 	/**
 	* Outbound transport headers are captured in a transport neutral way.
@@ -114,19 +114,19 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* its correct operation, such as
 	* <tt>Content-Type</tt> and <tt>Content-Length</tt>.
 	*/
-	public static var OUTBOUND_TRANSPORT_HEADERS(default, null) : String;
+	@:public @:static @:final public static var OUTBOUND_TRANSPORT_HEADERS(default, null) : String;
 	
 	/**
 	*
 	*/
-	public static var HA_INFO(default, null) : String;
+	@:public @:static @:final public static var HA_INFO(default, null) : String;
 	
 	/**
 	* This property holds the snapshot of HandlerConfiguration
 	* at the time of invocation.
 	* This property is used by MUPipe and HandlerPipe implementations.
 	*/
-	public var handlerConfig : com.sun.xml.internal.ws.client.HandlerConfiguration;
+	@:public public var handlerConfig : com.sun.xml.internal.ws.client.HandlerConfiguration;
 	
 	/**
 	* If a message originates from a proxy stub that implements
@@ -134,7 +134,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*
 	* TODO: who's using this property?
 	*/
-	public var proxy : javax.xml.ws.BindingProvider;
+	@:public public var proxy : javax.xml.ws.BindingProvider;
 	
 	/**
 	* The endpoint address to which this message is sent to.
@@ -147,7 +147,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* Must not be null for a request message on the client. Otherwise
 	* it's null.
 	*/
-	public var endpointAddress : com.sun.xml.internal.ws.api.EndpointAddress;
+	@:public public var endpointAddress : com.sun.xml.internal.ws.api.EndpointAddress;
 	
 	/**
 	* @deprecated
@@ -155,9 +155,9 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*      {@link #endpointAddress}. This is for JAX-WS client applications
 	*      that access this property via {@link BindingProvider#ENDPOINT_ADDRESS_PROPERTY}.
 	*/
-	@:overload public function getEndPointAddressString() : String;
+	@:overload @:public public function getEndPointAddressString() : String;
 	
-	@:overload public function setEndPointAddressString(s : String) : Void;
+	@:overload @:public public function setEndPointAddressString(s : String) : Void;
 	
 	/**
 	* The value of {@link ContentNegotiation#PROPERTY}
@@ -165,11 +165,11 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*
 	* This property is used only on the client side.
 	*/
-	public var contentNegotiation : com.sun.xml.internal.ws.client.ContentNegotiation;
+	@:public public var contentNegotiation : com.sun.xml.internal.ws.client.ContentNegotiation;
 	
-	@:overload public function getContentNegotiationString() : String;
+	@:overload @:public public function getContentNegotiationString() : String;
 	
-	@:overload public function setContentNegotiationString(s : String) : Void;
+	@:overload @:public public function setContentNegotiationString(s : String) : Void;
 	
 	/**
 	* Gives a list of Reference Parameters in the Message
@@ -178,7 +178,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* This is not cached as one may reset the Message.
 	*<p>
 	*/
-	@:overload public function getReferenceParameters() : java.util.List<org.w3c.dom.Element>;
+	@:overload @:public public function getReferenceParameters() : java.util.List<org.w3c.dom.Element>;
 	
 	/**
 	* The list of MIME types that are acceptable to a receiver
@@ -194,7 +194,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* Hence this property will be set by the service-side transport pipe.
 	*
 	*/
-	public var acceptableMimeTypes : String;
+	@:public public var acceptableMimeTypes : String;
 	
 	/**
 	* When non-null, this object is consulted to
@@ -207,7 +207,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* This property is set from the parameter
 	* of {@link WSEndpoint.PipeHead#process}.
 	*/
-	public var webServiceContextDelegate : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
+	@:public public var webServiceContextDelegate : com.sun.xml.internal.ws.api.server.WebServiceContextDelegate;
 	
 	/**
 	* Used only on the server side so that the transport
@@ -222,7 +222,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* This property is set from the parameter
 	* of {@link WSEndpoint.PipeHead#process}.
 	*/
-	public var transportBackChannel : com.sun.xml.internal.ws.api.server.TransportBackChannel;
+	@:public public var transportBackChannel : com.sun.xml.internal.ws.api.server.TransportBackChannel;
 	
 	/**
 	* Keeps the transport back channel open (by seeting {@link #transportBackChannel} to null.)
@@ -230,7 +230,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @return
 	*      The previous value of {@link #transportBackChannel}.
 	*/
-	@:overload public function keepTransportBackChannelOpen() : com.sun.xml.internal.ws.api.server.TransportBackChannel;
+	@:overload @:public public function keepTransportBackChannelOpen() : com.sun.xml.internal.ws.api.server.TransportBackChannel;
 	
 	/**
 	* The governing {@link WSEndpoint} in which this message is floating.
@@ -238,7 +238,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* <p>
 	* This property is set if and only if this is on the server side.
 	*/
-	public var endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
+	@:public public var endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>;
 	
 	/**
 	* The value of the SOAPAction header associated with the message.
@@ -264,7 +264,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* header is present (See {@BP R2744} and {@BP R2745}.) For SOAP 1.2,
 	* this is moved to the parameter of the "application/soap+xml".
 	*/
-	public var soapAction : String;
+	@:public public var soapAction : String;
 	
 	/**
 	* A hint indicating that whether a transport should expect
@@ -324,7 +324,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* In all other situations, this property is null.
 	*
 	*/
-	public var expectReply : Null<Bool>;
+	@:public public var expectReply : Null<Bool>;
 	
 	/**
 	* This property will be removed in a near future.
@@ -335,7 +335,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* to {@link Message#isOneWay(WSDLPort)}. Please update
 	* your code soon, or risk breaking your build!!
 	*/
-	public var isOneWay : Null<Bool>;
+	@:public public var isOneWay : Null<Bool>;
 	
 	/**
 	* Bag to capture properties that are available for the whole
@@ -350,7 +350,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*
 	* @see #getHandlerScopePropertyNames(boolean)
 	*/
-	public var invocationProperties(default, null) : java.util.Map<String, Dynamic>;
+	@:public @:final public var invocationProperties(default, null) : java.util.Map<String, Dynamic>;
 	
 	/**
 	* Gets a {@link Set} that stores handler-scope properties.
@@ -369,7 +369,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @return
 	*      always non-null, possibly empty set that stores property names.
 	*/
-	@:overload @:final public function getHandlerScopePropertyNames(readOnly : Bool) : java.util.Set<String>;
+	@:overload @:public @:final public function getHandlerScopePropertyNames(readOnly : Bool) : java.util.Set<String>;
 	
 	/**
 	* This method no longer works.
@@ -378,7 +378,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*      Use {@link #getHandlerScopePropertyNames(boolean)}.
 	*      To be removed once Tango components are updated.
 	*/
-	@:overload @:final public function getApplicationScopePropertyNames(readOnly : Bool) : java.util.Set<String>;
+	@:overload @:public @:final public function getApplicationScopePropertyNames(readOnly : Bool) : java.util.Set<String>;
 	
 	/**
 	* Creates a response {@link Packet} from a request packet ({@code this}).
@@ -395,7 +395,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param msg
 	*      The {@link Message} that represents a reply. Can be null.
 	*/
-	@:overload public function createResponse(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function createResponse(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Creates a response {@link Packet} from a request packet ({@code this}).
@@ -407,7 +407,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param msg
 	*      The {@link Message} that represents a reply. Can be null.
 	*/
-	@:overload public function createClientResponse(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function createClientResponse(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Creates a server-side response {@link Packet} from a request
@@ -425,7 +425,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param binding The response Binding. Cannot be null.
 	* @return response packet
 	*/
-	@:overload public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Creates a server-side response {@link Packet} from a request
@@ -443,7 +443,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param action The response Action Message Addressing Property value.
 	* @return response packet
 	*/
-	@:overload public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload @:public public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Overwrites the {@link Message} of the response packet ({@code this}) by the given {@link Message}.
@@ -455,9 +455,9 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*
 	* @see #createServerResponse(Message, AddressingVersion, SOAPVersion, String)
 	*/
-	@:overload public function setResponseMessage(request : com.sun.xml.internal.ws.api.message.Packet, responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : Void;
+	@:overload @:public public function setResponseMessage(request : com.sun.xml.internal.ws.api.message.Packet, responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : Void;
 	
-	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload @:protected override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

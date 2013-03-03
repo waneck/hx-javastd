@@ -43,7 +43,7 @@ package java.io;
 	* Constructs an <code>InterruptedIOException</code> with
 	* <code>null</code> as its error detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>InterruptedIOException</code> with the
@@ -54,7 +54,7 @@ package java.io;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Reports how many bytes had been transferred as part of the I/O
@@ -62,7 +62,7 @@ package java.io;
 	*
 	* @serial
 	*/
-	public var bytesTransferred : Int;
+	@:public public var bytesTransferred : Int;
 	
 	
 }

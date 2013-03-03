@@ -56,7 +56,7 @@ extern class ImageUtil
 	* @throws IllegalArgumentException  If <code>sampleModel</code> is
 	*         <code>null</code>.
 	*/
-	@:overload @:final public static function createColorModel(sampleModel : java.awt.image.SampleModel) : java.awt.image.ColorModel;
+	@:overload @:public @:static @:final public static function createColorModel(sampleModel : java.awt.image.SampleModel) : java.awt.image.ColorModel;
 	
 	/**
 	* For the case of binary data (<code>isBinary()</code> returns
@@ -73,7 +73,7 @@ extern class ImageUtil
 	* <code>false</code> with the <code>SampleModel</code> of the
 	* supplied <code>Raster</code> as argument.
 	*/
-	@:overload public static function getPackedBinaryData(raster : java.awt.image.Raster, rect : java.awt.Rectangle) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getPackedBinaryData(raster : java.awt.image.Raster, rect : java.awt.Rectangle) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the binary data unpacked into an array of bytes.
@@ -83,7 +83,7 @@ extern class ImageUtil
 	* <code>false</code> with the <code>SampleModel</code> of the
 	* supplied <code>Raster</code> as argument.
 	*/
-	@:overload public static function getUnpackedBinaryData(raster : java.awt.image.Raster, rect : java.awt.Rectangle) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getUnpackedBinaryData(raster : java.awt.image.Raster, rect : java.awt.Rectangle) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Sets the supplied <code>Raster</code>'s data from an array
@@ -94,7 +94,7 @@ extern class ImageUtil
 	* <code>false</code> with the <code>SampleModel</code> of the
 	* supplied <code>Raster</code> as argument.
 	*/
-	@:overload public static function setPackedBinaryData(binaryDataArray : java.NativeArray<java.StdTypes.Int8>, raster : java.awt.image.WritableRaster, rect : java.awt.Rectangle) : Void;
+	@:overload @:public @:static public static function setPackedBinaryData(binaryDataArray : java.NativeArray<java.StdTypes.Int8>, raster : java.awt.image.WritableRaster, rect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Copies data into the packed array of the <code>Raster</code>
@@ -108,17 +108,17 @@ extern class ImageUtil
 	* <code>false</code> with the <code>SampleModel</code> of the
 	* supplied <code>Raster</code> as argument.
 	*/
-	@:overload public static function setUnpackedBinaryData(bdata : java.NativeArray<java.StdTypes.Int8>, raster : java.awt.image.WritableRaster, rect : java.awt.Rectangle) : Void;
+	@:overload @:public @:static public static function setUnpackedBinaryData(bdata : java.NativeArray<java.StdTypes.Int8>, raster : java.awt.image.WritableRaster, rect : java.awt.Rectangle) : Void;
 	
-	@:overload public static function isBinary(sm : java.awt.image.SampleModel) : Bool;
+	@:overload @:public @:static public static function isBinary(sm : java.awt.image.SampleModel) : Bool;
 	
-	@:overload public static function createColorModel(colorSpace : java.awt.color.ColorSpace, sampleModel : java.awt.image.SampleModel) : java.awt.image.ColorModel;
+	@:overload @:public @:static public static function createColorModel(colorSpace : java.awt.color.ColorSpace, sampleModel : java.awt.image.SampleModel) : java.awt.image.ColorModel;
 	
-	@:overload public static function getElementSize(sm : java.awt.image.SampleModel) : Int;
+	@:overload @:public @:static public static function getElementSize(sm : java.awt.image.SampleModel) : Int;
 	
-	@:overload public static function getTileSize(sm : java.awt.image.SampleModel) : haxe.Int64;
+	@:overload @:public @:static public static function getTileSize(sm : java.awt.image.SampleModel) : haxe.Int64;
 	
-	@:overload public static function getBandSize(sm : java.awt.image.SampleModel) : haxe.Int64;
+	@:overload @:public @:static public static function getBandSize(sm : java.awt.image.SampleModel) : haxe.Int64;
 	
 	/**
 	* Tests whether the color indices represent a gray-scale image.
@@ -129,10 +129,10 @@ extern class ImageUtil
 	* @return If all the indices have 256 entries, and are identical mappings,
 	*         return <code>true</code>; otherwise, return <code>false</code>.
 	*/
-	@:overload public static function isIndicesForGrayscale(r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload @:public @:static public static function isIndicesForGrayscale(r : java.NativeArray<java.StdTypes.Int8>, g : java.NativeArray<java.StdTypes.Int8>, b : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/** Converts the provided object to <code>String</code> */
-	@:overload public static function convertObjectToString(obj : Dynamic) : String;
+	@:overload @:public @:static public static function convertObjectToString(obj : Dynamic) : String;
 	
 	/** Checks that the provided <code>ImageWriter</code> can encode
 	* the provided <code>ImageTypeSpecifier</code> or not.  If not, an
@@ -141,7 +141,7 @@ extern class ImageUtil
 	* @param type The image to be tested.
 	* @throws IIOException If the writer cannot encoded the provided image.
 	*/
-	@:overload @:final public static function canEncodeImage(writer : javax.imageio.ImageWriter, type : javax.imageio.ImageTypeSpecifier) : Void;
+	@:overload @:public @:static @:final public static function canEncodeImage(writer : javax.imageio.ImageWriter, type : javax.imageio.ImageTypeSpecifier) : Void;
 	
 	/** Checks that the provided <code>ImageWriter</code> can encode
 	* the provided <code>ColorModel</code> and <code>SampleModel</code>.
@@ -151,12 +151,12 @@ extern class ImageUtil
 	* @param sampleModel The provided <code>SampleModel</code>.
 	* @throws IIOException If the writer cannot encoded the provided image.
 	*/
-	@:overload @:final public static function canEncodeImage(writer : javax.imageio.ImageWriter, colorModel : java.awt.image.ColorModel, sampleModel : java.awt.image.SampleModel) : Void;
+	@:overload @:public @:static @:final public static function canEncodeImage(writer : javax.imageio.ImageWriter, colorModel : java.awt.image.ColorModel, sampleModel : java.awt.image.SampleModel) : Void;
 	
 	/**
 	* Returns whether the image has contiguous data across rows.
 	*/
-	@:overload @:final public static function imageIsContiguous(image : java.awt.image.RenderedImage) : Bool;
+	@:overload @:public @:static @:final public static function imageIsContiguous(image : java.awt.image.RenderedImage) : Bool;
 	
 	
 }

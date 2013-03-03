@@ -29,9 +29,9 @@ extern interface Import extends com.sun.xml.internal.txw2.TypedXmlWriter extends
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function location(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Import;
+	@:overload @:public public function location(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Import;
 	
-	@:overload public function namespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Import;
+	@:overload @:public public function namespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Import;
 	
 	
 }

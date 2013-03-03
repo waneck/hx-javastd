@@ -41,7 +41,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* Sole constructor.  (For invocation by subclass constructors, typically
 	* implicit.)
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Formats an object to produce a string. This is equivalent to
@@ -55,7 +55,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @exception IllegalArgumentException if the Format cannot format the given
 	*            object
 	*/
-	@:overload @:final public function format(obj : Dynamic) : String;
+	@:overload @:public @:final public function format(obj : Dynamic) : String;
 	
 	/**
 	* Formats an object and appends the resulting text to a given string
@@ -75,7 +75,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @exception IllegalArgumentException if the Format cannot format the given
 	*            object
 	*/
-	@:overload @:abstract public function format(obj : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:public @:abstract public function format(obj : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats an Object producing an <code>AttributedCharacterIterator</code>.
@@ -100,7 +100,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @return AttributedCharacterIterator describing the formatted value.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
+	@:require(java4) @:overload @:public public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Parses text from a string to produce an object.
@@ -123,7 +123,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload @:abstract public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload @:public @:abstract public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Parses text from the beginning of the given string to produce an object.
@@ -134,14 +134,14 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @exception ParseException if the beginning of the specified string
 	*            cannot be parsed.
 	*/
-	@:overload public function parseObject(source : String) : Dynamic;
+	@:overload @:public public function parseObject(source : String) : Dynamic;
 	
 	/**
 	* Creates and returns a copy of this object.
 	*
 	* @return a clone of this instance.
 	*/
-	@:overload public function clone() : Dynamic;
+	@:overload @:public public function clone() : Dynamic;
 	
 	
 }
@@ -160,7 +160,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	*
 	* @param name Name of the attribute
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
 	
 }
@@ -191,7 +191,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @param buffer Contains current formatted value, receiver should
 	*        NOT modify it.
 	*/
-	@:overload public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload @:public public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Notified when a particular region of the String is formatted.
@@ -204,7 +204,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @param buffer Contains current formatted value, receiver should
 	*        NOT modify it.
 	*/
-	@:overload public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload @:public public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
 	
 }

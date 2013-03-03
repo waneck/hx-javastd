@@ -25,7 +25,7 @@ package com.sun.tools.internal.ws;
 */
 extern class ToolVersion
 {
-	public static var VERSION(default, null) : com.sun.xml.internal.ws.util.Version;
+	@:public @:static @:final public static var VERSION(default, null) : com.sun.xml.internal.ws.util.Version;
 	
 	
 }

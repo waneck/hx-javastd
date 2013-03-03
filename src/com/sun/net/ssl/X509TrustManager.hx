@@ -36,7 +36,7 @@ extern interface X509TrustManager extends com.sun.net.ssl.TrustManager
 	*
 	* @param chain the peer certificate chain
 	*/
-	@:overload public function isClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
+	@:overload @:public public function isClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
 	
 	/**
 	* Given the partial or complete certificate chain
@@ -46,7 +46,7 @@ extern interface X509TrustManager extends com.sun.net.ssl.TrustManager
 	*
 	* @param chain the peer certificate chain
 	*/
-	@:overload public function isServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
+	@:overload @:public public function isServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>) : Bool;
 	
 	/**
 	* Return an array of certificate authority certificates
@@ -54,7 +54,7 @@ extern interface X509TrustManager extends com.sun.net.ssl.TrustManager
 	*
 	* @return the acceptable CA issuer certificates
 	*/
-	@:overload public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	
 }

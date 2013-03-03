@@ -32,7 +32,7 @@ extern interface CompositeData
 	*
 	* @return the type of this CompositeData.
 	*/
-	@:overload public function getCompositeType() : javax.management.openmbean.CompositeType;
+	@:overload @:public public function getCompositeType() : javax.management.openmbean.CompositeType;
 	
 	/**
 	* Returns the value of the item whose name is <tt>key</tt>.
@@ -45,7 +45,7 @@ extern interface CompositeData
 	*
 	* @throws InvalidKeyException  if <tt>key</tt> is not an existing item name for this <tt>CompositeData</tt> instance.
 	*/
-	@:overload public function get(key : String) : Dynamic;
+	@:overload @:public public function get(key : String) : Dynamic;
 	
 	/**
 	* Returns an array of the values of the items whose names are specified by <tt>keys</tt>, in the same order as <tt>keys</tt>.
@@ -58,7 +58,7 @@ extern interface CompositeData
 	*
 	* @throws InvalidKeyException  if an element in <tt>keys</tt> is not an existing item name for this <tt>CompositeData</tt> instance.
 	*/
-	@:overload public function getAll(keys : java.NativeArray<String>) : java.NativeArray<Dynamic>;
+	@:overload @:public public function getAll(keys : java.NativeArray<String>) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance contains
@@ -69,7 +69,7 @@ extern interface CompositeData
 	*
 	* @return true if this <tt>CompositeData</tt> contains the key.
 	*/
-	@:overload public function containsKey(key : String) : Bool;
+	@:overload @:public public function containsKey(key : String) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance contains an item
@@ -79,7 +79,7 @@ extern interface CompositeData
 	*
 	* @return true if this <tt>CompositeData</tt> contains the value.
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns an unmodifiable Collection view of the item values contained in this <tt>CompositeData</tt> instance.
@@ -88,7 +88,7 @@ extern interface CompositeData
 	*
 	* @return the values.
 	*/
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	
 }

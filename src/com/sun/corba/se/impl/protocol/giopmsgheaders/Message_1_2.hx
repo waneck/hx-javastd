@@ -25,16 +25,16 @@ package com.sun.corba.se.impl.protocol.giopmsgheaders;
 */
 extern class Message_1_2 extends com.sun.corba.se.impl.protocol.giopmsgheaders.Message_1_1
 {
-	private var request_id : Int;
+	@:protected private var request_id : Int;
 	
 	/**
 	* The byteBuffer is presumed to have contents of the message already
 	* read in.  It must have 12 bytes of space at the beginning for the GIOP header,
 	* but the header doesn't have to be copied in.
 	*/
-	@:overload public function unmarshalRequestID(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:public public function unmarshalRequestID(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	
 }

@@ -42,7 +42,7 @@ extern interface DomainManagerOperations
 	*
 	*@param policy_type Type of policy to request
 	*/
-	@:overload public function get_domain_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function get_domain_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	
 }

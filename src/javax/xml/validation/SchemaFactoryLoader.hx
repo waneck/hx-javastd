@@ -46,7 +46,7 @@ package javax.xml.validation;
 	/**
 	* A do-nothing constructor.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Creates a new {@link SchemaFactory} object for the specified
@@ -61,7 +61,7 @@ package javax.xml.validation;
 	*
 	* @return <code>null</code> if the callee fails to create one.
 	*/
-	@:overload @:abstract public function newFactory(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
+	@:overload @:public @:abstract public function newFactory(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
 	
 	
 }

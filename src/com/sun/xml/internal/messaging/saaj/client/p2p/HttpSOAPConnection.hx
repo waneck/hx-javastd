@@ -33,17 +33,17 @@ package com.sun.xml.internal.messaging.saaj.client.p2p;
 */
 @:internal extern class HttpSOAPConnection extends javax.xml.soap.SOAPConnection
 {
-	public static var vmVendor(default, null) : String;
+	@:public @:static @:final public static var vmVendor(default, null) : String;
 	
-	private static var log(default, null) : java.util.logging.Logger;
+	@:protected @:static @:final private static var log(default, null) : java.util.logging.Logger;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
-	@:overload public function call(message : javax.xml.soap.SOAPMessage, endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function call(message : javax.xml.soap.SOAPMessage, endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
 	
-	@:overload public function get(endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
+	@:overload @:public override public function get(endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
 	
 	
 }

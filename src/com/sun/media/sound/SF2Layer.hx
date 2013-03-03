@@ -30,29 +30,29 @@ extern class SF2Layer extends javax.sound.midi.SoundbankResource
 	*
 	* @author Karl Helgason
 	*/
-	private var name : String;
+	@:protected private var name : String;
 	
-	private var globalregion : com.sun.media.sound.SF2GlobalRegion;
+	@:protected private var globalregion : com.sun.media.sound.SF2GlobalRegion;
 	
-	private var regions : java.util.List<com.sun.media.sound.SF2LayerRegion>;
+	@:protected private var regions : java.util.List<com.sun.media.sound.SF2LayerRegion>;
 	
-	@:overload public function new(soundBank : com.sun.media.sound.SF2Soundbank) : Void;
+	@:overload @:public public function new(soundBank : com.sun.media.sound.SF2Soundbank) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function getData() : Dynamic;
+	@:overload @:public override public function getData() : Dynamic;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload public function setName(name : String) : Void;
+	@:overload @:public public function setName(name : String) : Void;
 	
-	@:overload public function getRegions() : java.util.List<com.sun.media.sound.SF2LayerRegion>;
+	@:overload @:public public function getRegions() : java.util.List<com.sun.media.sound.SF2LayerRegion>;
 	
-	@:overload public function getGlobalRegion() : com.sun.media.sound.SF2GlobalRegion;
+	@:overload @:public public function getGlobalRegion() : com.sun.media.sound.SF2GlobalRegion;
 	
-	@:overload public function setGlobalZone(zone : com.sun.media.sound.SF2GlobalRegion) : Void;
+	@:overload @:public public function setGlobalZone(zone : com.sun.media.sound.SF2GlobalRegion) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

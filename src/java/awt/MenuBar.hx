@@ -65,27 +65,27 @@ package java.awt;
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates the menu bar's peer.  The peer allows us to change the
 	* appearance of the menu bar without changing any of the menu bar's
 	* functionality.
 	*/
-	@:overload public function addNotify() : Void;
+	@:overload @:public public function addNotify() : Void;
 	
 	/**
 	* Removes the menu bar's peer.  The peer allows us to change the
 	* appearance of the menu bar without changing any of the menu bar's
 	* functionality.
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload @:public override public function removeNotify() : Void;
 	
 	/**
 	* Gets the help menu on the menu bar.
 	* @return    the help menu on this menu bar.
 	*/
-	@:overload public function getHelpMenu() : java.awt.Menu;
+	@:overload @:public public function getHelpMenu() : java.awt.Menu;
 	
 	/**
 	* Sets the specified menu to be this menu bar's help menu.
@@ -93,7 +93,7 @@ package java.awt;
 	* removed from the menu bar, and replaced with the specified menu.
 	* @param m    the menu to be set as the help menu
 	*/
-	@:overload public function setHelpMenu(m : java.awt.Menu) : Void;
+	@:overload @:public public function setHelpMenu(m : java.awt.Menu) : Void;
 	
 	/**
 	* Adds the specified menu to the menu bar.
@@ -105,7 +105,7 @@ package java.awt;
 	* @see          java.awt.MenuBar#remove(int)
 	* @see          java.awt.MenuBar#remove(java.awt.MenuComponent)
 	*/
-	@:overload public function add(m : java.awt.Menu) : java.awt.Menu;
+	@:overload @:public public function add(m : java.awt.Menu) : java.awt.Menu;
 	
 	/**
 	* Removes the menu located at the specified
@@ -113,34 +113,34 @@ package java.awt;
 	* @param        index   the position of the menu to be removed.
 	* @see          java.awt.MenuBar#add(java.awt.Menu)
 	*/
-	@:overload public function remove(index : Int) : Void;
+	@:overload @:public public function remove(index : Int) : Void;
 	
 	/**
 	* Removes the specified menu component from this menu bar.
 	* @param        m the menu component to be removed.
 	* @see          java.awt.MenuBar#add(java.awt.Menu)
 	*/
-	@:overload public function remove(m : java.awt.MenuComponent) : Void;
+	@:overload @:public public function remove(m : java.awt.MenuComponent) : Void;
 	
 	/**
 	* Gets the number of menus on the menu bar.
 	* @return     the number of menus on the menu bar.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getMenuCount() : Int;
+	@:require(java1) @:overload @:public public function getMenuCount() : Int;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMenuCount()</code>.
 	*/
-	@:overload public function countMenus() : Int;
+	@:overload @:public public function countMenus() : Int;
 	
 	/**
 	* Gets the specified menu.
 	* @param      i the index position of the menu to be returned.
 	* @return     the menu at the specified index of this menu bar.
 	*/
-	@:overload public function getMenu(i : Int) : java.awt.Menu;
+	@:overload @:public public function getMenu(i : Int) : java.awt.Menu;
 	
 	/**
 	* Gets an enumeration of all menu shortcuts this menu bar
@@ -150,7 +150,7 @@ package java.awt;
 	* @see         java.awt.MenuShortcut
 	* @since       JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function shortcuts() : java.util.Enumeration<java.awt.MenuShortcut>;
+	@:require(java1) @:overload @:public @:synchronized public function shortcuts() : java.util.Enumeration<java.awt.MenuShortcut>;
 	
 	/**
 	* Gets the instance of <code>MenuItem</code> associated
@@ -163,14 +163,14 @@ package java.awt;
 	* @see          java.awt.MenuShortcut
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload public function getShortcutMenuItem(s : java.awt.MenuShortcut) : java.awt.MenuItem;
+	@:require(java1) @:overload @:public public function getShortcutMenuItem(s : java.awt.MenuShortcut) : java.awt.MenuItem;
 	
 	/**
 	* Deletes the specified menu shortcut.
 	* @param     s the menu shortcut to delete.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function deleteShortcut(s : java.awt.MenuShortcut) : Void;
+	@:require(java1) @:overload @:public public function deleteShortcut(s : java.awt.MenuShortcut) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this MenuBar.
@@ -182,7 +182,7 @@ package java.awt;
 	*         AccessibleContext of this MenuBar
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -206,7 +206,7 @@ package java.awt;
 	* object
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:require(java4) @:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

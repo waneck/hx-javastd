@@ -35,39 +35,39 @@ extern class TransferableProxy implements java.awt.datatransfer.Transferable
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(t : java.awt.datatransfer.Transferable, local : Bool) : Void;
+	@:require(java4) @:overload @:public public function new(t : java.awt.datatransfer.Transferable, local : Bool) : Void;
 	
-	@:overload public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload @:public public function getTransferDataFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
-	@:overload public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
+	@:overload @:public public function isDataFlavorSupported(flavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
-	@:overload public function getTransferData(df : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload @:public public function getTransferData(df : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
-	private var transferable(default, null) : java.awt.datatransfer.Transferable;
+	@:protected @:final private var transferable(default, null) : java.awt.datatransfer.Transferable;
 	
-	private var isLocal(default, null) : Bool;
+	@:protected @:final private var isLocal(default, null) : Bool;
 	
 	
 }
 @:internal extern class ClassLoaderObjectOutputStream extends java.io.ObjectOutputStream
 {
-	@:overload public function new(os : java.io.OutputStream) : Void;
+	@:overload @:public public function new(os : java.io.OutputStream) : Void;
 	
-	@:overload private function annotateClass(cl : Class<Dynamic>) : Void;
+	@:overload @:protected override private function annotateClass(cl : Class<Dynamic>) : Void;
 	
-	@:overload private function annotateProxyClass(cl : Class<Dynamic>) : Void;
+	@:overload @:protected override private function annotateProxyClass(cl : Class<Dynamic>) : Void;
 	
-	@:overload public function getClassLoaderMap() : java.util.Map<java.util.Set<String>, java.lang.ClassLoader>;
+	@:overload @:public public function getClassLoaderMap() : java.util.Map<java.util.Set<String>, java.lang.ClassLoader>;
 	
 	
 }
 @:internal extern class ClassLoaderObjectInputStream extends java.io.ObjectInputStream
 {
-	@:overload public function new(is : java.io.InputStream, map : java.util.Map<java.util.Set<String>, java.lang.ClassLoader>) : Void;
+	@:overload @:public public function new(is : java.io.InputStream, map : java.util.Map<java.util.Set<String>, java.lang.ClassLoader>) : Void;
 	
-	@:overload override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload @:protected override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
-	@:overload override private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
+	@:overload @:protected override private function resolveProxyClass(interfaces : java.NativeArray<String>) : Class<Dynamic>;
 	
 	
 }

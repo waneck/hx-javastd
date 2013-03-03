@@ -31,20 +31,20 @@ extern class CharToByteDoubleByte extends sun.io.CharToByteConverter
 	/*
 	* 1st level index, provided by subclass
 	*/
-	private var index1 : java.NativeArray<java.StdTypes.Int16>;
+	@:protected private var index1 : java.NativeArray<java.StdTypes.Int16>;
 	
 	/*
 	* 2nd level index, provided by subclass
 	*/
-	private var index2 : java.NativeArray<String>;
+	@:protected private var index2 : java.NativeArray<String>;
 	
-	private var highHalfZoneCode : java.StdTypes.Char16;
+	@:protected private var highHalfZoneCode : java.StdTypes.Char16;
 	
-	@:overload public function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload @:public public function getIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload public function getIndex2() : java.NativeArray<String>;
+	@:overload @:public public function getIndex2() : java.NativeArray<String>;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
+	@:overload @:public override public function flush(output : java.NativeArray<java.StdTypes.Int8>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Converts characters to sequences of bytes.
@@ -60,35 +60,35 @@ extern class CharToByteDoubleByte extends sun.io.CharToByteConverter
 	* @throw UnsupportedCharacterException for any character
 	* that cannot be converted to the external character set.
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
+	@:overload @:public override public function convert(input : java.NativeArray<java.StdTypes.Char16>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Int8>, outOff : Int, outEnd : Int) : Int;
 	
 	/**
 	* the maximum number of bytes needed to hold a converted char
 	* @returns the maximum number of bytes needed for a converted char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload @:public override public function getMaxBytesPerChar() : Int;
 	
 	/**
 	*  Resets the converter.
 	* Call this method to reset the converter to its initial state
 	*/
-	@:overload override public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
 	/**
 	* Return whether a character is mappable or not
 	* @return true if a character is mappable
 	*/
-	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	
 	/*
 	* Can be changed by subclass
 	*/
-	@:overload private function convSingleByte(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:protected private function convSingleByte(inputChar : java.StdTypes.Char16, outputByte : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/*
 	* Can be changed by subclass
 	*/
-	@:overload private function getNative(ch : java.StdTypes.Char16) : Int;
+	@:overload @:protected private function getNative(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

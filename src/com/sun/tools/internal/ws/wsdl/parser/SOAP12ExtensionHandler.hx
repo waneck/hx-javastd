@@ -25,49 +25,49 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class SOAP12ExtensionHandler extends com.sun.tools.internal.ws.wsdl.parser.SOAPExtensionHandler
 {
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
+	@:overload @:public public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
 	
 	/*
 	* @see SOAPExtensionHandler#getNamespaceURI()
 	*/
-	@:overload override public function getNamespaceURI() : String;
+	@:overload @:public override public function getNamespaceURI() : String;
 	
 	/*
 	* @see SOAPExtensionHandler#getAddressQName()
 	*/
-	@:overload override private function getAddressQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getAddressQName() : javax.xml.namespace.QName;
 	
 	/*
 	* @see SOAPExtensionHandler#getBindingQName()
 	*/
-	@:overload override private function getBindingQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getBindingQName() : javax.xml.namespace.QName;
 	
-	@:overload override private function getSOAPBinding(location : org.xml.sax.Locator) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPBinding;
+	@:overload @:protected override private function getSOAPBinding(location : org.xml.sax.Locator) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPBinding;
 	
 	/*
 	* @see SOAPExtensionHandler#getBodyQName()
 	*/
-	@:overload override private function getBodyQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getBodyQName() : javax.xml.namespace.QName;
 	
 	/*
 	* @see SOAPExtensionHandler#getFaultQName()
 	*/
-	@:overload override private function getFaultQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getFaultQName() : javax.xml.namespace.QName;
 	
 	/*
 	* @see SOAPExtensionHandler#getHeaderfaultQName()
 	*/
-	@:overload override private function getHeaderfaultQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getHeaderfaultQName() : javax.xml.namespace.QName;
 	
 	/*
 	* @see SOAPExtensionHandler#getHeaderQName()
 	*/
-	@:overload override private function getHeaderQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getHeaderQName() : javax.xml.namespace.QName;
 	
 	/*
 	* @see SOAPExtensionHandler#getOperationQName()
 	*/
-	@:overload override private function getOperationQName() : javax.xml.namespace.QName;
+	@:overload @:protected override private function getOperationQName() : javax.xml.namespace.QName;
 	
 	
 }

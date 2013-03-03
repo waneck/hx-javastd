@@ -25,11 +25,11 @@ package sun.security.jca;
 */
 extern class GetInstance
 {
-	@:overload public static function getService(type : String, algorithm : String) : java.security.Provider.Provider_Service;
+	@:overload @:public @:static public static function getService(type : String, algorithm : String) : java.security.Provider.Provider_Service;
 	
-	@:overload public static function getService(type : String, algorithm : String, provider : String) : java.security.Provider.Provider_Service;
+	@:overload @:public @:static public static function getService(type : String, algorithm : String, provider : String) : java.security.Provider.Provider_Service;
 	
-	@:overload public static function getService(type : String, algorithm : String, provider : java.security.Provider) : java.security.Provider.Provider_Service;
+	@:overload @:public @:static public static function getService(type : String, algorithm : String, provider : java.security.Provider) : java.security.Provider.Provider_Service;
 	
 	/**
 	* Return a List of all the available Services that implement
@@ -37,20 +37,20 @@ extern class GetInstance
 	* and Provider loading and lookup is only trigered when
 	* necessary.
 	*/
-	@:overload public static function getServices(type : String, algorithm : String) : java.util.List<java.security.Provider.Provider_Service>;
+	@:overload @:public @:static public static function getServices(type : String, algorithm : String) : java.util.List<java.security.Provider.Provider_Service>;
 	
 	/**
 	* This method exists for compatibility with JCE only. It will be removed
 	* once JCE has been changed to use the replacement method.
 	* @deprecated use getServices(List<ServiceId>) instead
 	*/
-	@:overload public static function getServices(type : String, algorithms : java.util.List<String>) : java.util.List<java.security.Provider.Provider_Service>;
+	@:overload @:public @:static public static function getServices(type : String, algorithms : java.util.List<String>) : java.util.List<java.security.Provider.Provider_Service>;
 	
 	/**
 	* Return a List of all the available Services that implement any of
 	* the specified algorithms. See getServices(String, String) for detals.
 	*/
-	@:overload public static function getServices(ids : java.util.List<sun.security.jca.ServiceId>) : java.util.List<java.security.Provider.Provider_Service>;
+	@:overload @:public @:static public static function getServices(ids : java.util.List<sun.security.jca.ServiceId>) : java.util.List<java.security.Provider.Provider_Service>;
 	
 	/*
 	* For all the getInstance() methods below:
@@ -65,17 +65,17 @@ extern class GetInstance
 	*
 	* There are overloaded methods for all the permutations.
 	*/
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : String) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : String) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : String) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : String) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : java.security.Provider) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : java.security.Provider) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : java.security.Provider) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : java.security.Provider) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
 	/*
 	* The two getInstance() methods below take a service. They are
@@ -83,15 +83,15 @@ extern class GetInstance
 	* because they implement delayed provider selection like the
 	* Signature class.
 	*/
-	@:overload public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>, param : Dynamic) : sun.security.jca.GetInstance.GetInstance_Instance;
+	@:overload @:public @:static public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>, param : Dynamic) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
 	/**
 	* Check is subClass is a subclass of superClass. If not,
 	* throw a NoSuchAlgorithmException.
 	*/
-	@:overload public static function checkSuperClass(s : java.security.Provider.Provider_Service, subClass : Class<Dynamic>, superClass : Class<Dynamic>) : Void;
+	@:overload @:public @:static public static function checkSuperClass(s : java.security.Provider.Provider_Service, subClass : Class<Dynamic>, superClass : Class<Dynamic>) : Void;
 	
 	
 }
@@ -100,11 +100,11 @@ extern class GetInstance
 */
 @:native('sun$security$jca$GetInstance$Instance') extern class GetInstance_Instance
 {
-	public var provider(default, null) : java.security.Provider;
+	@:public @:final public var provider(default, null) : java.security.Provider;
 	
-	public var impl(default, null) : Dynamic;
+	@:public @:final public var impl(default, null) : Dynamic;
 	
-	@:overload public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	
 }

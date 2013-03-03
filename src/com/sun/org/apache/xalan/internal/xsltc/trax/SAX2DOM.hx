@@ -23,67 +23,67 @@ package com.sun.org.apache.xalan.internal.xsltc.trax;
 */
 extern class SAX2DOM implements org.xml.sax.ContentHandler implements org.xml.sax.ext.LexicalHandler implements com.sun.org.apache.xalan.internal.xsltc.runtime.Constants
 {
-	@:overload public function new(useServicesMachnism : Bool) : Void;
+	@:overload @:public public function new(useServicesMachnism : Bool) : Void;
 	
-	@:overload public function new(root : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, useServicesMachnism : Bool) : Void;
+	@:overload @:public public function new(root : org.w3c.dom.Node, nextSibling : org.w3c.dom.Node, useServicesMachnism : Bool) : Void;
 	
-	@:overload public function new(root : org.w3c.dom.Node, useServicesMachnism : Bool) : Void;
+	@:overload @:public public function new(root : org.w3c.dom.Node, useServicesMachnism : Bool) : Void;
 	
-	@:overload public function getDOM() : org.w3c.dom.Node;
+	@:overload @:public public function getDOM() : org.w3c.dom.Node;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function endElement(namespace : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(namespace : String, localName : String, qName : String) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* adds processing instruction node to DOM.
 	*/
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* This class is only used internally so this method should never
 	* be called.
 	*/
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Lexical Handler method to create comment node in DOM tree.
 	*/
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	
 }

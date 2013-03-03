@@ -29,12 +29,12 @@ extern class JSerializedObject extends com.sun.codemodel.internal.JResourceFile
 	* @exception   IOException
 	*      If the serialization fails, this exception is thrown
 	*/
-	@:overload public function new(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function new(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* called by JPackage to serialize the object
 	*/
-	@:overload private function build(os : java.io.OutputStream) : Void;
+	@:overload @:protected override private function build(os : java.io.OutputStream) : Void;
 	
 	
 }

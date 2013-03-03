@@ -25,35 +25,35 @@ package com.sun.tools.javap;
 */
 extern class AnnotationWriter extends com.sun.tools.javap.BasicWriter
 {
-	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
+	@:overload @:protected private function new(context : com.sun.tools.javap.Context) : Void;
 	
-	@:overload public function write(annot : com.sun.tools.classfile.Annotation) : Void;
+	@:overload @:public public function write(annot : com.sun.tools.classfile.Annotation) : Void;
 	
-	@:overload public function write(annot : com.sun.tools.classfile.Annotation, resolveIndices : Bool) : Void;
+	@:overload @:public public function write(annot : com.sun.tools.classfile.Annotation, resolveIndices : Bool) : Void;
 	
-	@:overload public function write(pair : com.sun.tools.classfile.Annotation.Annotation_element_value_pair) : Void;
+	@:overload @:public public function write(pair : com.sun.tools.classfile.Annotation.Annotation_element_value_pair) : Void;
 	
-	@:overload public function write(pair : com.sun.tools.classfile.Annotation.Annotation_element_value_pair, resolveIndices : Bool) : Void;
+	@:overload @:public public function write(pair : com.sun.tools.classfile.Annotation.Annotation_element_value_pair, resolveIndices : Bool) : Void;
 	
-	@:overload public function write(value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
+	@:overload @:public public function write(value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
 	
-	@:overload public function write(value : com.sun.tools.classfile.Annotation.Annotation_element_value, resolveIndices : Bool) : Void;
+	@:overload @:public public function write(value : com.sun.tools.classfile.Annotation.Annotation_element_value, resolveIndices : Bool) : Void;
 	
 	
 }
 @:native('com$sun$tools$javap$AnnotationWriter$element_value_Writer') @:internal extern class AnnotationWriter_element_value_Writer implements com.sun.tools.classfile.Annotation.Annotation_element_value_Visitor<java.lang.Void, Null<Bool>>
 {
-	@:overload public function write(value : com.sun.tools.classfile.Annotation.Annotation_element_value, resolveIndices : Bool) : Void;
+	@:overload @:public public function write(value : com.sun.tools.classfile.Annotation.Annotation_element_value, resolveIndices : Bool) : Void;
 	
-	@:overload public function visitPrimitive(ev : com.sun.tools.classfile.Annotation.Annotation_Primitive_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
+	@:overload @:public public function visitPrimitive(ev : com.sun.tools.classfile.Annotation.Annotation_Primitive_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
 	
-	@:overload public function visitEnum(ev : com.sun.tools.classfile.Annotation.Annotation_Enum_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
+	@:overload @:public public function visitEnum(ev : com.sun.tools.classfile.Annotation.Annotation_Enum_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
 	
-	@:overload public function visitClass(ev : com.sun.tools.classfile.Annotation.Annotation_Class_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
+	@:overload @:public public function visitClass(ev : com.sun.tools.classfile.Annotation.Annotation_Class_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
 	
-	@:overload public function visitAnnotation(ev : com.sun.tools.classfile.Annotation.Annotation_Annotation_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
+	@:overload @:public public function visitAnnotation(ev : com.sun.tools.classfile.Annotation.Annotation_Annotation_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
 	
-	@:overload public function visitArray(ev : com.sun.tools.classfile.Annotation.Annotation_Array_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
+	@:overload @:public public function visitArray(ev : com.sun.tools.classfile.Annotation.Annotation_Array_element_value, resolveIndices : Null<Bool>) : java.lang.Void;
 	
 	
 }

@@ -31,14 +31,14 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* the <code>getUIs</code> method.  The first element is guaranteed to be the real UI
 	* obtained from the default look and feel.
 	*/
-	private var uis : java.util.Vector<Dynamic>;
+	@:protected private var uis : java.util.Vector<Dynamic>;
 	
 	/**
 	* Returns the list of UIs associated with this multiplexing UI.  This
 	* allows processing of the UIs by an application aware of multiplexing
 	* UIs on components.
 	*/
-	@:overload public function getUIs() : java.NativeArray<javax.swing.plaf.ComponentUI>;
+	@:overload @:public public function getUIs() : java.NativeArray<javax.swing.plaf.ComponentUI>;
 	
 	/**
 	* Invokes the <code>locationToIndex</code> method on each UI handled by this object.
@@ -46,7 +46,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function locationToIndex(a : javax.swing.JList<Dynamic>, b : java.awt.Point) : Int;
+	@:overload @:public override public function locationToIndex(a : javax.swing.JList<Dynamic>, b : java.awt.Point) : Int;
 	
 	/**
 	* Invokes the <code>indexToLocation</code> method on each UI handled by this object.
@@ -54,7 +54,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function indexToLocation(a : javax.swing.JList<Dynamic>, b : Int) : java.awt.Point;
+	@:overload @:public override public function indexToLocation(a : javax.swing.JList<Dynamic>, b : Int) : java.awt.Point;
 	
 	/**
 	* Invokes the <code>getCellBounds</code> method on each UI handled by this object.
@@ -62,7 +62,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function getCellBounds(a : javax.swing.JList<Dynamic>, b : Int, c : Int) : java.awt.Rectangle;
+	@:overload @:public override public function getCellBounds(a : javax.swing.JList<Dynamic>, b : Int, c : Int) : java.awt.Rectangle;
 	
 	/**
 	* Invokes the <code>contains</code> method on each UI handled by this object.
@@ -70,34 +70,34 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function contains(a : javax.swing.JComponent, b : Int, c : Int) : Bool;
+	@:overload @:public override public function contains(a : javax.swing.JComponent, b : Int, c : Int) : Bool;
 	
 	/**
 	* Invokes the <code>update</code> method on each UI handled by this object.
 	*/
-	@:overload public function update(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
+	@:overload @:public override public function update(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns a multiplexing UI instance if any of the auxiliary
 	* <code>LookAndFeel</code>s supports this UI.  Otherwise, just returns the
 	* UI object obtained from the default <code>LookAndFeel</code>.
 	*/
-	@:overload public static function createUI(a : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(a : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Invokes the <code>installUI</code> method on each UI handled by this object.
 	*/
-	@:overload public function installUI(a : javax.swing.JComponent) : Void;
+	@:overload @:public override public function installUI(a : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes the <code>uninstallUI</code> method on each UI handled by this object.
 	*/
-	@:overload public function uninstallUI(a : javax.swing.JComponent) : Void;
+	@:overload @:public override public function uninstallUI(a : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes the <code>paint</code> method on each UI handled by this object.
 	*/
-	@:overload public function paint(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
+	@:overload @:public override public function paint(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes the <code>getPreferredSize</code> method on each UI handled by this object.
@@ -105,7 +105,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function getPreferredSize(a : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(a : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Invokes the <code>getMinimumSize</code> method on each UI handled by this object.
@@ -113,7 +113,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function getMinimumSize(a : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(a : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Invokes the <code>getMaximumSize</code> method on each UI handled by this object.
@@ -121,7 +121,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function getMaximumSize(a : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(a : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Invokes the <code>getAccessibleChildrenCount</code> method on each UI handled by this object.
@@ -129,7 +129,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function getAccessibleChildrenCount(a : javax.swing.JComponent) : Int;
+	@:overload @:public override public function getAccessibleChildrenCount(a : javax.swing.JComponent) : Int;
 	
 	/**
 	* Invokes the <code>getAccessibleChild</code> method on each UI handled by this object.
@@ -137,7 +137,7 @@ extern class MultiListUI extends javax.swing.plaf.ListUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload public function getAccessibleChild(a : javax.swing.JComponent, b : Int) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleChild(a : javax.swing.JComponent, b : Int) : javax.accessibility.Accessible;
 	
 	
 }

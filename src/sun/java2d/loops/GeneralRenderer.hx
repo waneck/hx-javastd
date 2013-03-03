@@ -33,177 +33,177 @@ extern class GeneralRenderer
 	* Basically, a collection of components which permit basic
 	* rendering to occur on rasters of any format
 	*/
-	@:overload public static function register() : Void;
+	@:overload @:public @:static public static function register() : Void;
 	
-	@:overload public static function doDrawRect(pw : sun.java2d.loops.GeneralRenderer.PixelWriter, sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public @:static public static function doDrawRect(pw : sun.java2d.loops.GeneralRenderer.PixelWriter, sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload public static function adjustLine(boundPts : java.NativeArray<Int>, cxmin : Int, cymin : Int, cx2 : Int, cy2 : Int) : Bool;
+	@:overload @:public @:static public static function adjustLine(boundPts : java.NativeArray<Int>, cxmin : Int, cymin : Int, cx2 : Int, cy2 : Int) : Bool;
 	
 	
 }
 @:internal extern class SetFillRectANY extends sun.java2d.loops.FillRect
 {
-	@:overload override public function FillRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function FillRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class PixelWriterDrawHandler extends sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler
 {
-	@:overload public function new(sData : sun.java2d.SurfaceData, pw : sun.java2d.loops.GeneralRenderer.PixelWriter, clip : sun.java2d.pipe.Region, strokeHint : Int) : Void;
+	@:overload @:public public function new(sData : sun.java2d.SurfaceData, pw : sun.java2d.loops.GeneralRenderer.PixelWriter, clip : sun.java2d.pipe.Region, strokeHint : Int) : Void;
 	
-	@:overload override public function drawLine(x0 : Int, y0 : Int, x1 : Int, y1 : Int) : Void;
+	@:overload @:public override public function drawLine(x0 : Int, y0 : Int, x1 : Int, y1 : Int) : Void;
 	
-	@:overload override public function drawPixel(x0 : Int, y0 : Int) : Void;
+	@:overload @:public override public function drawPixel(x0 : Int, y0 : Int) : Void;
 	
-	@:overload override public function drawScanline(x0 : Int, x1 : Int, y0 : Int) : Void;
+	@:overload @:public override public function drawScanline(x0 : Int, x1 : Int, y0 : Int) : Void;
 	
 	
 }
 @:internal extern class SetFillPathANY extends sun.java2d.loops.FillPath
 {
-	@:overload public function FillPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
+	@:overload @:public override public function FillPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
 	
 	
 }
 @:internal extern class SetFillSpansANY extends sun.java2d.loops.FillSpans
 {
-	@:overload override public function FillSpans(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, si : sun.java2d.pipe.SpanIterator) : Void;
+	@:overload @:public override public function FillSpans(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, si : sun.java2d.pipe.SpanIterator) : Void;
 	
 	
 }
 @:internal extern class SetDrawLineANY extends sun.java2d.loops.DrawLine
 {
-	@:overload override public function DrawLine(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public override public function DrawLine(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	
 }
 @:internal extern class SetDrawPolygonsANY extends sun.java2d.loops.DrawPolygons
 {
-	@:overload public function DrawPolygons(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transx : Int, transy : Int, close : Bool) : Void;
+	@:overload @:public override public function DrawPolygons(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transx : Int, transy : Int, close : Bool) : Void;
 	
 	
 }
 @:internal extern class SetDrawPathANY extends sun.java2d.loops.DrawPath
 {
-	@:overload override public function DrawPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
+	@:overload @:public override public function DrawPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
 	
 	
 }
 @:internal extern class SetDrawRectANY extends sun.java2d.loops.DrawRect
 {
-	@:overload public function DrawRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function DrawRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class XorFillRectANY extends sun.java2d.loops.FillRect
 {
-	@:overload override public function FillRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function FillRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class XorFillPathANY extends sun.java2d.loops.FillPath
 {
-	@:overload public function FillPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
+	@:overload @:public override public function FillPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
 	
 	
 }
 @:internal extern class XorFillSpansANY extends sun.java2d.loops.FillSpans
 {
-	@:overload override public function FillSpans(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, si : sun.java2d.pipe.SpanIterator) : Void;
+	@:overload @:public override public function FillSpans(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, si : sun.java2d.pipe.SpanIterator) : Void;
 	
 	
 }
 @:internal extern class XorDrawLineANY extends sun.java2d.loops.DrawLine
 {
-	@:overload override public function DrawLine(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload @:public override public function DrawLine(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	
 }
 @:internal extern class XorDrawPolygonsANY extends sun.java2d.loops.DrawPolygons
 {
-	@:overload public function DrawPolygons(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transx : Int, transy : Int, close : Bool) : Void;
+	@:overload @:public override public function DrawPolygons(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : java.NativeArray<Int>, numPolys : Int, transx : Int, transy : Int, close : Bool) : Void;
 	
 	
 }
 @:internal extern class XorDrawPathANY extends sun.java2d.loops.DrawPath
 {
-	@:overload override public function DrawPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
+	@:overload @:public override public function DrawPath(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, transx : Int, transy : Int, p2df : java.awt.geom.Path2D.Path2D_Float) : Void;
 	
 	
 }
 @:internal extern class XorDrawRectANY extends sun.java2d.loops.DrawRect
 {
-	@:overload public function DrawRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload @:public override public function DrawRect(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class XorDrawGlyphListANY extends sun.java2d.loops.DrawGlyphList
 {
-	@:overload override public function DrawGlyphList(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, gl : sun.font.GlyphList) : Void;
+	@:overload @:public override public function DrawGlyphList(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, gl : sun.font.GlyphList) : Void;
 	
 	
 }
 @:internal extern class XorDrawGlyphListAAANY extends sun.java2d.loops.DrawGlyphListAA
 {
-	@:overload override public function DrawGlyphListAA(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, gl : sun.font.GlyphList) : Void;
+	@:overload @:public override public function DrawGlyphListAA(sg2d : sun.java2d.SunGraphics2D, sData : sun.java2d.SurfaceData, gl : sun.font.GlyphList) : Void;
 	
 	
 }
 @:internal extern class PixelWriter
 {
-	private var dstRast : java.awt.image.WritableRaster;
+	@:protected private var dstRast : java.awt.image.WritableRaster;
 	
-	@:overload public function setRaster(dstRast : java.awt.image.WritableRaster) : Void;
+	@:overload @:public public function setRaster(dstRast : java.awt.image.WritableRaster) : Void;
 	
-	@:overload @:abstract public function writePixel(x : Int, y : Int) : Void;
+	@:overload @:public @:abstract public function writePixel(x : Int, y : Int) : Void;
 	
 	
 }
 @:internal extern class SolidPixelWriter extends sun.java2d.loops.GeneralRenderer.PixelWriter
 {
-	private var srcData : Dynamic;
+	@:protected private var srcData : Dynamic;
 	
-	@:overload override public function writePixel(x : Int, y : Int) : Void;
+	@:overload @:public override public function writePixel(x : Int, y : Int) : Void;
 	
 	
 }
 @:internal extern class XorPixelWriter extends sun.java2d.loops.GeneralRenderer.PixelWriter
 {
-	private var dstCM : java.awt.image.ColorModel;
+	@:protected private var dstCM : java.awt.image.ColorModel;
 	
-	@:overload override public function writePixel(x : Int, y : Int) : Void;
+	@:overload @:public override public function writePixel(x : Int, y : Int) : Void;
 	
-	@:overload @:abstract private function xorPixel(pixData : Dynamic) : Void;
+	@:overload @:protected @:abstract private function xorPixel(pixData : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$XorPixelWriter$ByteData') extern class XorPixelWriter_ByteData extends sun.java2d.loops.GeneralRenderer.XorPixelWriter
 {
-	@:overload override private function xorPixel(pixData : Dynamic) : Void;
+	@:overload @:protected override private function xorPixel(pixData : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$XorPixelWriter$ShortData') extern class XorPixelWriter_ShortData extends sun.java2d.loops.GeneralRenderer.XorPixelWriter
 {
-	@:overload override private function xorPixel(pixData : Dynamic) : Void;
+	@:overload @:protected override private function xorPixel(pixData : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$XorPixelWriter$IntData') extern class XorPixelWriter_IntData extends sun.java2d.loops.GeneralRenderer.XorPixelWriter
 {
-	@:overload override private function xorPixel(pixData : Dynamic) : Void;
+	@:overload @:protected override private function xorPixel(pixData : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$XorPixelWriter$FloatData') extern class XorPixelWriter_FloatData extends sun.java2d.loops.GeneralRenderer.XorPixelWriter
 {
-	@:overload override private function xorPixel(pixData : Dynamic) : Void;
+	@:overload @:protected override private function xorPixel(pixData : Dynamic) : Void;
 	
 	
 }
 @:native('sun$java2d$loops$XorPixelWriter$DoubleData') extern class XorPixelWriter_DoubleData extends sun.java2d.loops.GeneralRenderer.XorPixelWriter
 {
-	@:overload override private function xorPixel(pixData : Dynamic) : Void;
+	@:overload @:protected override private function xorPixel(pixData : Dynamic) : Void;
 	
 	
 }

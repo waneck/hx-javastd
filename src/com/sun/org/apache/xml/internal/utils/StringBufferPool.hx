@@ -35,14 +35,14 @@ extern class StringBufferPool
 	*
 	* @return A string buffer ready for use.
 	*/
-	@:overload @:synchronized public static function get() : com.sun.org.apache.xml.internal.utils.FastStringBuffer;
+	@:overload @:public @:synchronized @:static public static function get() : com.sun.org.apache.xml.internal.utils.FastStringBuffer;
 	
 	/**
 	* Return a string buffer back to the pool.
 	*
 	* @param sb Must be a non-null reference to a string buffer.
 	*/
-	@:overload @:synchronized public static function free(sb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload @:public @:synchronized @:static public static function free(sb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	
 }

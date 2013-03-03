@@ -25,9 +25,9 @@ package com.sun.org.apache.xalan.internal.utils;
 */
 extern class FactoryImpl
 {
-	@:overload public static function getDOMFactory(useServicesMechanism : Bool) : javax.xml.parsers.DocumentBuilderFactory;
+	@:overload @:static @:public public static function getDOMFactory(useServicesMechanism : Bool) : javax.xml.parsers.DocumentBuilderFactory;
 	
-	@:overload public static function getSAXFactory(useServicesMechanism : Bool) : javax.xml.parsers.SAXParserFactory;
+	@:overload @:static @:public public static function getSAXFactory(useServicesMechanism : Bool) : javax.xml.parsers.SAXParserFactory;
 	
 	
 }

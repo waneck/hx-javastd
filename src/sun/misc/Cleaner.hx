@@ -35,12 +35,12 @@ extern class Cleaner extends java.lang.ref.PhantomReference<Dynamic>
 	*
 	* @return  The new cleaner
 	*/
-	@:overload public static function create(ob : Dynamic, thunk : java.lang.Runnable) : sun.misc.Cleaner;
+	@:overload @:public @:static public static function create(ob : Dynamic, thunk : java.lang.Runnable) : sun.misc.Cleaner;
 	
 	/**
 	* Runs this cleaner, if it has not been run before.
 	*/
-	@:overload public function clean() : Void;
+	@:overload @:public public function clean() : Void;
 	
 	
 }

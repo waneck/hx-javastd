@@ -25,17 +25,17 @@ package com.sun.jmx.remote.internal;
 */
 extern class ArrayQueue<T> extends java.util.AbstractList<T>
 {
-	@:overload public function new(capacity : Int) : Void;
+	@:overload @:public public function new(capacity : Int) : Void;
 	
-	@:overload public function resize(newcapacity : Int) : Void;
+	@:overload @:public public function resize(newcapacity : Int) : Void;
 	
-	@:overload override public function add(o : T) : Bool;
+	@:overload @:public override public function add(o : T) : Bool;
 	
-	@:overload public function remove(i : Int) : T;
+	@:overload @:public override public function remove(i : Int) : T;
 	
-	@:overload public function get(i : Int) : T;
+	@:overload @:public override public function get(i : Int) : T;
 	
-	@:overload override public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	
 }

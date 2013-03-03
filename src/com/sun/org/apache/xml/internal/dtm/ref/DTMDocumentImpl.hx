@@ -47,16 +47,16 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* <p>Origin: the implemention is a composite logic based on the DTM of XalanJ1 and
 	*     DocImpl, DocumentImpl, ElementImpl, TextImpl, etc. of XalanJ2</p>
 	*/
-	private static var DOCHANDLE_SHIFT(default, null) : java.StdTypes.Int8;
+	@:protected @:static @:final private static var DOCHANDLE_SHIFT(default, null) : java.StdTypes.Int8;
 	
-	private static var NODEHANDLE_MASK(default, null) : Int;
+	@:protected @:static @:final private static var NODEHANDLE_MASK(default, null) : Int;
 	
-	private static var DOCHANDLE_MASK(default, null) : Int;
+	@:protected @:static @:final private static var DOCHANDLE_MASK(default, null) : Int;
 	
-	private var m_currentNode : Int;
+	@:protected private var m_currentNode : Int;
 	
 	/** The document base URI. */
-	private var m_documentBaseURI : String;
+	@:protected private var m_documentBaseURI : String;
 	
 	/**
 	* Construct a DTM.
@@ -68,7 +68,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* DTMManager's responsibility to assign a unique number to each
 	* document.
 	*/
-	@:overload public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, documentNumber : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : Void;
+	@:overload @:public public function new(mgr : com.sun.org.apache.xml.internal.dtm.DTMManager, documentNumber : Int, whiteSpaceFilter : com.sun.org.apache.xml.internal.dtm.DTMWSFilter, xstringfactory : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : Void;
 	
 	/** Bind a IncrementalSAXSource to this DTM. If we discover we need nodes
 	* that have not yet been built, we will ask this object to send us more
@@ -81,7 +81,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param source The IncrementalSAXSource that we want to recieve events from
 	* on demand.
 	*/
-	@:overload public function setIncrementalSAXSource(source : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource) : Void;
+	@:overload @:public public function setIncrementalSAXSource(source : com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource) : Void;
 	
 	/**
 	* Set an implementation dependent feature.
@@ -91,7 +91,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param featureId A feature URL.
 	* @param state true if this feature should be on, false otherwise.
 	*/
-	@:overload public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload @:public public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Set a reference pointer to the element name symbol table.
@@ -100,14 +100,14 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @param poolRef DTMStringPool reference to an instance of table.
 	*/
-	@:overload public function setLocalNameTable(poolRef : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool) : Void;
+	@:overload @:public public function setLocalNameTable(poolRef : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool) : Void;
 	
 	/**
 	* Get a reference pointer to the element name symbol table.
 	*
 	* @return DTMStringPool reference to an instance of table.
 	*/
-	@:overload public function getLocalNameTable() : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
+	@:overload @:public public function getLocalNameTable() : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
 	
 	/**
 	* Set a reference pointer to the namespace URI symbol table.
@@ -116,14 +116,14 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @param poolRef DTMStringPool reference to an instance of table.
 	*/
-	@:overload public function setNsNameTable(poolRef : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool) : Void;
+	@:overload @:public public function setNsNameTable(poolRef : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool) : Void;
 	
 	/**
 	* Get a reference pointer to the namespace URI symbol table.
 	*
 	* @return DTMStringPool reference to an instance of table.
 	*/
-	@:overload public function getNsNameTable() : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
+	@:overload @:public public function getNsNameTable() : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
 	
 	/**
 	* Set a reference pointer to the prefix name symbol table.
@@ -132,14 +132,14 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @param poolRef DTMStringPool reference to an instance of table.
 	*/
-	@:overload public function setPrefixNameTable(poolRef : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool) : Void;
+	@:overload @:public public function setPrefixNameTable(poolRef : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool) : Void;
 	
 	/**
 	* Get a reference pointer to the prefix name symbol table.
 	*
 	* @return DTMStringPool reference to an instance of table.
 	*/
-	@:overload public function getPrefixNameTable() : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
+	@:overload @:public public function getPrefixNameTable() : com.sun.org.apache.xml.internal.dtm.ref.DTMStringPool;
 	
 	/** getContentHandler returns "our SAX builder" -- the thing that
 	* someone else should send SAX events to in order to extend this
@@ -150,7 +150,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* the IncrementalSAXSource if we're bound to one and should receive
 	* the SAX stream via it for incremental build purposes...
 	* */
-	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return this DTM's lexical handler.
@@ -162,78 +162,78 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* the IncrementalSAXSource if we're bound to one and should receive
 	* the SAX stream via it for incremental build purposes...
 	*/
-	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Return this DTM's EntityResolver.
 	*
 	* @return null if this model doesn't respond to SAX entity ref events.
 	*/
-	@:overload public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Return this DTM's DTDHandler.
 	*
 	* @return null if this model doesn't respond to SAX dtd events.
 	*/
-	@:overload public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Return this DTM's ErrorHandler.
 	*
 	* @return null if this model doesn't respond to SAX error events.
 	*/
-	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Return this DTM's DeclHandler.
 	*
 	* @return null if this model doesn't respond to SAX Decl events.
 	*/
-	@:overload public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/** @return true iff we're building this model incrementally (eg
 	* we're partnered with a IncrementalSAXSource) and thus require that the
 	* transformation and the parse run simultaneously. Guidance to the
 	* DTMManager.
 	* */
-	@:overload public function needsTwoThreads() : Bool;
+	@:overload @:public public function needsTwoThreads() : Bool;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
-	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
-	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
-	@:overload public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
-	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function endCDATA() : Void;
+	@:overload @:public public function endCDATA() : Void;
 	
-	@:overload public function endDTD() : Void;
+	@:overload @:public public function endDTD() : Void;
 	
-	@:overload public function endEntity(name : String) : Void;
+	@:overload @:public public function endEntity(name : String) : Void;
 	
-	@:overload public function startCDATA() : Void;
+	@:overload @:public public function startCDATA() : Void;
 	
-	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload public function startEntity(name : String) : Void;
+	@:overload @:public public function startEntity(name : String) : Void;
 	
 	/** Given a node handle, test if it has child nodes.
 	* <p> %REVIEW% This is obviously useful at the DOM layer, where it
@@ -246,7 +246,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle int Handle of the node.
 	* @return int true if the given node has child nodes.
 	*/
-	@:overload public function hasChildNodes(nodeHandle : Int) : Bool;
+	@:overload @:public public function hasChildNodes(nodeHandle : Int) : Bool;
 	
 	/**
 	* Given a node handle, get the handle of the node's first child.
@@ -256,7 +256,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle int Handle of the node.
 	* @return int DTM node-number of first child, or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getFirstChild(nodeHandle : Int) : Int;
+	@:overload @:public public function getFirstChild(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, advance to its last child.
@@ -267,7 +267,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node-number of last child,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getLastChild(nodeHandle : Int) : Int;
+	@:overload @:public public function getLastChild(nodeHandle : Int) : Int;
 	
 	/**
 	* Retrieves an attribute node by by qualified name and namespace URI.
@@ -281,7 +281,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*   <code>nodeName</code>) or <code>DTM.NULL</code> if there is no such
 	*   attribute.
 	*/
-	@:overload public function getAttributeNode(nodeHandle : Int, namespaceURI : String, name : String) : Int;
+	@:overload @:public public function getAttributeNode(nodeHandle : Int, namespaceURI : String, name : String) : Int;
 	
 	/**
 	* Given a node handle, get the index of the node's first attribute.
@@ -289,7 +289,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle int Handle of the Element node.
 	* @return Handle of first attribute, or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getFirstAttribute(nodeHandle : Int) : Int;
+	@:overload @:public public function getFirstAttribute(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, get the index of the node's first child.
@@ -304,7 +304,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*                   returned.
 	* @return handle of first namespace, or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getFirstNamespaceNode(nodeHandle : Int, inScope : Bool) : Int;
+	@:overload @:public public function getFirstNamespaceNode(nodeHandle : Int, inScope : Bool) : Int;
 	
 	/**
 	* Given a node handle, advance to its next sibling.
@@ -323,7 +323,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node-number of next sibling,
 	* or DTM.NULL to indicate none exists.
 	* */
-	@:overload public function getNextSibling(nodeHandle : Int) : Int;
+	@:overload @:public public function getNextSibling(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, find its preceeding sibling.
@@ -334,7 +334,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node-number of the previous sib,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getPreviousSibling(nodeHandle : Int) : Int;
+	@:overload @:public public function getPreviousSibling(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, advance to the next attribute. If an
@@ -345,7 +345,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int DTM node-number of the resolved attr,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextAttribute(nodeHandle : Int) : Int;
+	@:overload @:public public function getNextAttribute(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a namespace handle, advance to the next namespace.
@@ -357,7 +357,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param namespaceHandle handle to node which must be of type NAMESPACE_NODE.
 	* @return handle of next namespace, or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextNamespaceNode(baseHandle : Int, namespaceHandle : Int, inScope : Bool) : Int;
+	@:overload @:public public function getNextNamespaceNode(baseHandle : Int, namespaceHandle : Int, inScope : Bool) : Int;
 	
 	/**
 	* Given a node handle, advance to its next descendant.
@@ -369,7 +369,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return handle of next descendant,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextDescendant(subtreeRootHandle : Int, nodeHandle : Int) : Int;
+	@:overload @:public public function getNextDescendant(subtreeRootHandle : Int, nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, advance to the next node on the following axis.
@@ -379,7 +379,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return handle of next sibling,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextFollowing(axisContextHandle : Int, nodeHandle : Int) : Int;
+	@:overload @:public public function getNextFollowing(axisContextHandle : Int, nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, advance to the next node on the preceding axis.
@@ -389,7 +389,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node-number of preceding sibling,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getNextPreceding(axisContextHandle : Int, nodeHandle : Int) : Int;
+	@:overload @:public public function getNextPreceding(axisContextHandle : Int, nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, find its parent node.
@@ -398,20 +398,20 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node-number of parent,
 	* or DTM.NULL to indicate none exists.
 	*/
-	@:overload public function getParent(nodeHandle : Int) : Int;
+	@:overload @:public public function getParent(nodeHandle : Int) : Int;
 	
 	/**
 	* Returns the root element of the document.
 	* @return nodeHandle to the Document Root.
 	*/
-	@:overload public function getDocumentRoot() : Int;
+	@:overload @:public public function getDocumentRoot() : Int;
 	
 	/**
 	* Given a node handle, find the owning document node.
 	*
 	* @return int Node handle of document, which should always be valid.
 	*/
-	@:overload public function getDocument() : Int;
+	@:overload @:public public function getDocument() : Int;
 	
 	/**
 	* Given a node handle, find the owning document node.  This has the exact
@@ -426,7 +426,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node handle of owning document, or NULL if the nodeHandle is
 	*             a document.
 	*/
-	@:overload public function getOwnerDocument(nodeHandle : Int) : Int;
+	@:overload @:public public function getOwnerDocument(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node handle, find the owning document node.  This has the DTM
@@ -440,7 +440,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return int Node handle of owning document, or NULL if the nodeHandle is
 	*             a document.
 	*/
-	@:overload public function getDocumentRoot(nodeHandle : Int) : Int;
+	@:overload @:public public function getDocumentRoot(nodeHandle : Int) : Int;
 	
 	/**
 	* Get the string-value of a node as a String object
@@ -451,7 +451,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return A string object that represents the string-value of the given node.
 	*/
-	@:overload public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload @:public public function getStringValue(nodeHandle : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Get number of character array chunks in
@@ -476,7 +476,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return number of character array chunks in
 	*         the string-value of a node.
 	* */
-	@:overload public function getStringValueChunkCount(nodeHandle : Int) : Int;
+	@:overload @:public public function getStringValueChunkCount(nodeHandle : Int) : Int;
 	
 	/**
 	* Get a character array chunk in the string-value of a node.
@@ -502,7 +502,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*                    the chunk will be returned.
 	*
 	* @return The character array reference where the chunk occurs.  */
-	@:overload public function getStringValueChunk(nodeHandle : Int, chunkIndex : Int, startAndLen : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getStringValueChunk(nodeHandle : Int, chunkIndex : Int, startAndLen : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Given a node handle, return an ID that represents the node's expanded name.
@@ -511,7 +511,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(nodeHandle : Int) : Int;
+	@:overload @:public public function getExpandedTypeID(nodeHandle : Int) : Int;
 	
 	/**
 	* Given an expanded name, return an ID.  If the expanded-name does not
@@ -521,7 +521,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return the expanded-name id of the node.
 	*/
-	@:overload public function getExpandedTypeID(namespace : String, localName : String, type : Int) : Int;
+	@:overload @:public public function getExpandedTypeID(namespace : String, localName : String, type : Int) : Int;
 	
 	/**
 	* Given an expanded-name ID, return the local name part.
@@ -529,7 +529,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param ExpandedNameID an ID that represents an expanded-name.
 	* @return String Local name of this node.
 	*/
-	@:overload public function getLocalNameFromExpandedNameID(ExpandedNameID : Int) : String;
+	@:overload @:public public function getLocalNameFromExpandedNameID(ExpandedNameID : Int) : String;
 	
 	/**
 	* Given an expanded-name ID, return the namespace URI part.
@@ -538,7 +538,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload public function getNamespaceFromExpandedNameID(ExpandedNameID : Int) : String;
+	@:overload @:public public function getNamespaceFromExpandedNameID(ExpandedNameID : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style node name. This will
@@ -548,7 +548,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return String Name of this node, which may be an empty string.
 	* %REVIEW% Document when empty string is possible...
 	*/
-	@:overload public function getNodeName(nodeHandle : Int) : String;
+	@:overload @:public public function getNodeName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return the XPath node name.  This should be
@@ -558,7 +558,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle the id of the node.
 	* @return String Name of this node.
 	*/
-	@:overload public function getNodeNameX(nodeHandle : Int) : String;
+	@:overload @:public public function getNodeNameX(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style localname.
@@ -571,7 +571,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle the id of the node.
 	* @return String Local name of this node.
 	*/
-	@:overload public function getLocalName(nodeHandle : Int) : String;
+	@:overload @:public public function getLocalName(nodeHandle : Int) : String;
 	
 	/**
 	* Given a namespace handle, return the prefix that the namespace decl is
@@ -587,7 +587,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return String prefix of this node's name, or "" if no explicit
 	* namespace prefix was given.
 	*/
-	@:overload public function getPrefix(nodeHandle : Int) : String;
+	@:overload @:public public function getPrefix(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style namespace URI
@@ -598,7 +598,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return String URI value of this node's namespace, or null if no
 	* namespace was resolved.
 	*/
-	@:overload public function getNamespaceURI(nodeHandle : Int) : String;
+	@:overload @:public public function getNamespaceURI(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its node value. This is mostly
@@ -609,7 +609,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return String Value of this node, or null if not
 	* meaningful for this node type.
 	*/
-	@:overload public function getNodeValue(nodeHandle : Int) : String;
+	@:overload @:public public function getNodeValue(nodeHandle : Int) : String;
 	
 	/**
 	* Given a node handle, return its DOM-style node type.
@@ -619,7 +619,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle The node id.
 	* @return int Node type, as per the DOM's Node._NODE constants.
 	*/
-	@:overload public function getNodeType(nodeHandle : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType(nodeHandle : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Get the depth level of this node in the tree (equals 1 for
@@ -629,7 +629,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return the number of ancestors, plus one
 	* @xsl.usage internal
 	*/
-	@:overload public function getLevel(nodeHandle : Int) : java.StdTypes.Int16;
+	@:overload @:public public function getLevel(nodeHandle : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Tests whether DTM DOM implementation implements a specific feature and
@@ -643,7 +643,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return Returns <code>true</code> if the specified feature is
 	*   supported on this node, <code>false</code> otherwise.
 	*/
-	@:overload public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* Return the base URI of the document entity. If it is not known
@@ -652,14 +652,14 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return the document base URI String object or null if unknown.
 	*/
-	@:overload public function getDocumentBaseURI() : String;
+	@:overload @:public public function getDocumentBaseURI() : String;
 	
 	/**
 	* Set the base URI of the document entity.
 	*
 	* @param baseURI the document base URI String object or null if unknown.
 	*/
-	@:overload public function setDocumentBaseURI(baseURI : String) : Void;
+	@:overload @:public public function setDocumentBaseURI(baseURI : String) : Void;
 	
 	/**
 	* Return the system identifier of the document entity. If
@@ -668,7 +668,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle The node id, which can be any valid node handle.
 	* @return the system identifier String object or null if unknown.
 	*/
-	@:overload public function getDocumentSystemIdentifier(nodeHandle : Int) : String;
+	@:overload @:public public function getDocumentSystemIdentifier(nodeHandle : Int) : String;
 	
 	/**
 	* Return the name of the character encoding scheme
@@ -677,7 +677,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle The node id, which can be any valid node handle.
 	* @return the document encoding String object.
 	*/
-	@:overload public function getDocumentEncoding(nodeHandle : Int) : String;
+	@:overload @:public public function getDocumentEncoding(nodeHandle : Int) : String;
 	
 	/**
 	* Return an indication of the standalone status of the document,
@@ -689,7 +689,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param nodeHandle The node id, which can be any valid node handle.
 	* @return the document standalone String object, either "yes", "no", or null.
 	*/
-	@:overload public function getDocumentStandalone(nodeHandle : Int) : String;
+	@:overload @:public public function getDocumentStandalone(nodeHandle : Int) : String;
 	
 	/**
 	* Return a string representing the XML version of the document. This
@@ -701,7 +701,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return the document version String object
 	*/
-	@:overload public function getDocumentVersion(documentHandle : Int) : String;
+	@:overload @:public public function getDocumentVersion(documentHandle : Int) : String;
 	
 	/**
 	* Return an indication of
@@ -713,7 +713,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return <code>true</code> if all declarations were processed {};
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function getDocumentAllDeclarationsProcessed() : Bool;
+	@:overload @:public public function getDocumentAllDeclarationsProcessed() : Bool;
 	
 	/**
 	*   A document type declaration information item has the following properties:
@@ -723,7 +723,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return the system identifier String object, or null if there is none.
 	*/
-	@:overload public function getDocumentTypeDeclarationSystemIdentifier() : String;
+	@:overload @:public public function getDocumentTypeDeclarationSystemIdentifier() : String;
 	
 	/**
 	* Return the public identifier of the external subset,
@@ -733,7 +733,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return the public identifier String object, or null if there is none.
 	*/
-	@:overload public function getDocumentTypeDeclarationPublicIdentifier() : String;
+	@:overload @:public public function getDocumentTypeDeclarationPublicIdentifier() : String;
 	
 	/**
 	* Returns the <code>Element</code> whose <code>ID</code> is given by
@@ -752,7 +752,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param elementId The unique <code>id</code> value for an element.
 	* @return The handle of the matching element.
 	*/
-	@:overload public function getElementById(elementId : String) : Int;
+	@:overload @:public public function getElementById(elementId : String) : Int;
 	
 	/**
 	* The getUnparsedEntityURI function returns the URI of the unparsed
@@ -788,7 +788,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return String containing the URI of the Unparsed Entity, or an
 	* empty string if no such entity exists.
 	*/
-	@:overload public function getUnparsedEntityURI(name : String) : String;
+	@:overload @:public public function getUnparsedEntityURI(name : String) : String;
 	
 	/**
 	* Return true if the xsl:strip-space or xsl:preserve-space was processed
@@ -797,7 +797,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* <p>%REVEIW% Presumes a 1:1 mapping from DTM to Document, since
 	* we aren't saying which Document to query...?</p>
 	*/
-	@:overload public function supportsPreStripping() : Bool;
+	@:overload @:public public function supportsPreStripping() : Bool;
 	
 	/**
 	* Figure out whether nodeHandle2 should be considered as being later
@@ -817,7 +817,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* You can think of this as
 	* <code>(node1.documentOrderPosition &lt;= node2.documentOrderPosition)</code>.
 	*/
-	@:overload public function isNodeAfter(nodeHandle1 : Int, nodeHandle2 : Int) : Bool;
+	@:overload @:public public function isNodeAfter(nodeHandle1 : Int, nodeHandle2 : Int) : Bool;
 	
 	/**
 	*     2. [element content whitespace] A boolean indicating whether the
@@ -835,7 +835,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return <code>true</code> if the character data is whitespace;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isCharacterElementContentWhitespace(nodeHandle : Int) : Bool;
+	@:overload @:public public function isCharacterElementContentWhitespace(nodeHandle : Int) : Bool;
 	
 	/**
 	*    10. [all declarations processed] This property is not strictly speaking
@@ -849,7 +849,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return <code>true</code> if all declarations were processed;
 	*         <code>false</code> otherwise.
 	*/
-	@:overload public function isDocumentAllDeclarationsProcessed(documentHandle : Int) : Bool;
+	@:overload @:public public function isDocumentAllDeclarationsProcessed(documentHandle : Int) : Bool;
 	
 	/**
 	*     5. [specified] A flag indicating whether this attribute was actually
@@ -860,7 +860,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @return <code>true</code> if the attribute was specified;
 	*         <code>false</code> if it was defaulted.
 	*/
-	@:overload public function isAttributeSpecified(attributeHandle : Int) : Bool;
+	@:overload @:public public function isAttributeSpecified(attributeHandle : Int) : Bool;
 	
 	/**
 	* Directly call the
@@ -875,7 +875,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
+	@:overload @:public public function dispatchCharactersEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler, normalize : Bool) : Void;
 	
 	/**
 	* Directly create SAX parser events from a subtree.
@@ -885,7 +885,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function dispatchToEvents(nodeHandle : Int, ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Return an DOM node for the given node.
@@ -894,7 +894,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return A node representation of the DTM node.
 	*/
-	@:overload public function getNode(nodeHandle : Int) : org.w3c.dom.Node;
+	@:overload @:public public function getNode(nodeHandle : Int) : org.w3c.dom.Node;
 	
 	/**
 	* Append a child to the end of the child list of the current node. Please note that the node
@@ -908,7 +908,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param cloneDepth if the clone argument is true, specifies that the
 	*                   clone should include all it's children.
 	*/
-	@:overload public function appendChild(newChild : Int, clone : Bool, cloneDepth : Bool) : Void;
+	@:overload @:public public function appendChild(newChild : Int, clone : Bool, cloneDepth : Bool) : Void;
 	
 	/**
 	* Append a text node child that will be constructed from a string,
@@ -919,7 +919,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @param str Non-null reference to a string.
 	*/
-	@:overload public function appendTextChild(str : String) : Void;
+	@:overload @:public public function appendTextChild(str : String) : Void;
 	
 	/**
 	* This returns a stateless "traverser", that can navigate over an
@@ -929,7 +929,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return A DTMAxisIterator, or null if the given axis isn't supported.
 	*/
-	@:overload public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:overload @:public public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	/**
 	* This is a shortcut to the iterators that implement the
@@ -941,7 +941,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return A DTMAxisIterator, or null if the given axis isn't supported.
 	*/
-	@:overload public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get an iterator that can navigate over an XPath Axis, predicated by
@@ -953,7 +953,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	*
 	* @return A DTMAxisIterator, or null if the given axis isn't supported.
 	*/
-	@:overload public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* For the moment all the run time properties are ignored by this
@@ -962,7 +962,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param property a <code>String</code> value
 	* @param value an <code>Object</code> value
 	*/
-	@:overload public function setProperty(property : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(property : String, value : Dynamic) : Void;
 	
 	/**
 	* Source information is not handled yet, so return
@@ -971,21 +971,21 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* @param node an <code>int</code> value
 	* @return null
 	*/
-	@:overload public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
+	@:overload @:public public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
 	
 	/**
 	* A dummy routine to satisify the abstract interface. If the DTM
 	* implememtation that extends the default base requires notification
 	* of registration, they can override this method.
 	*/
-	@:overload public function documentRegistration() : Void;
+	@:overload @:public public function documentRegistration() : Void;
 	
 	/**
 	* A dummy routine to satisify the abstract interface. If the DTM
 	* implememtation that extends the default base requires notification
 	* when the document is being released, they can override this method
 	*/
-	@:overload public function documentRelease() : Void;
+	@:overload @:public public function documentRelease() : Void;
 	
 	/**
 	* Migrate a DTM built with an old DTMManager to a new DTMManager.
@@ -994,7 +994,7 @@ extern class DTMDocumentImpl implements com.sun.org.apache.xml.internal.dtm.DTM 
 	* This is used to support DTM sharing between multiple transformations.
 	* @param manager the DTMManager
 	*/
-	@:overload public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload @:public public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	
 }

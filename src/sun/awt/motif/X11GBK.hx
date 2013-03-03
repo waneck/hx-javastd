@@ -25,21 +25,21 @@ package sun.awt.motif;
 */
 extern class X11GBK extends java.nio.charset.Charset
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload @:public override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload @:public override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	
 }
 @:native('sun$awt$motif$X11GBK$Encoder') @:internal extern class X11GBK_Encoder extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
-	@:overload override public function canEncode(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public override public function canEncode(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public override public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

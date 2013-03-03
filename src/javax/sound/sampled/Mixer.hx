@@ -59,7 +59,7 @@ package javax.sound.sampled;
 	* @return a mixer info object that describes this mixer
 	* @see Mixer.Info
 	*/
-	@:overload public function getMixerInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getMixerInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains information about the set of source lines supported
@@ -69,7 +69,7 @@ package javax.sound.sampled;
 	* for this mixer.  If no source lines are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Obtains information about the set of target lines supported
@@ -79,7 +79,7 @@ package javax.sound.sampled;
 	* for this mixer.  If no target lines are supported,
 	* an array of length 0 is returned.
 	*/
-	@:overload public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Obtains information about source lines of a particular type supported
@@ -91,7 +91,7 @@ package javax.sound.sampled;
 	* the type requested.  If no matching source lines are supported, an array of length 0
 	* is returned.
 	*/
-	@:overload public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getSourceLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Obtains information about target lines of a particular type supported
@@ -103,7 +103,7 @@ package javax.sound.sampled;
 	* the type requested.  If no matching target lines are supported, an array of length 0
 	* is returned.
 	*/
-	@:overload public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
+	@:overload @:public public function getTargetLineInfo(info : javax.sound.sampled.Line.Line_Info) : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	
 	/**
 	* Indicates whether the mixer supports a line (or lines) that match
@@ -113,7 +113,7 @@ package javax.sound.sampled;
 	* @return <code>true</code> if at least one matching line is
 	* supported, <code>false</code> otherwise
 	*/
-	@:overload public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload @:public public function isLineSupported(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Obtains a line that is available for use and that matches the description
@@ -133,7 +133,7 @@ package javax.sound.sampled;
 	* @throws SecurityException if a matching line
 	* is not available due to security restrictions
 	*/
-	@:overload public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload @:public public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
 	/**
 	* Obtains the approximate maximum number of lines of the requested type that can be open
@@ -155,7 +155,7 @@ package javax.sound.sampled;
 	* the number of supported instances is queried
 	* @return the maximum number of matching lines supported, or <code>AudioSystem.NOT_SPECIFIED</code>
 	*/
-	@:overload public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
+	@:overload @:public public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
 	/**
 	* Obtains the set of all source lines currently open to this mixer.
@@ -166,7 +166,7 @@ package javax.sound.sampled;
 	* @throws SecurityException if the matching lines
 	* are not available due to security restrictions
 	*/
-	@:overload public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getSourceLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
 	/**
 	* Obtains the set of all target lines currently open from this mixer.
@@ -177,7 +177,7 @@ package javax.sound.sampled;
 	* @throws SecurityException if the matching lines
 	* are not available due to security restrictions
 	*/
-	@:overload public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
+	@:overload @:public public function getTargetLines() : java.NativeArray<javax.sound.sampled.Line>;
 	
 	/**
 	* Synchronizes two or more lines.  Any subsequent command that starts or stops
@@ -196,7 +196,7 @@ package javax.sound.sampled;
 	* formats for which this mixer does not support synchronization, or if
 	* all lines specified do not belong to this mixer.
 	*/
-	@:overload public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
+	@:overload @:public public function synchronize(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Void;
 	
 	/**
 	* Releases synchronization for the specified lines.  The array must
@@ -211,7 +211,7 @@ package javax.sound.sampled;
 	* This may occur if the argument specified does not exactly match a set
 	* of lines for which synchronization has already been established.
 	*/
-	@:overload public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
+	@:overload @:public public function unsynchronize(lines : java.NativeArray<javax.sound.sampled.Line>) : Void;
 	
 	/**
 	* Reports whether this mixer supports synchronization of the specified set of lines.
@@ -225,7 +225,7 @@ package javax.sound.sampled;
 	* @return <code>true</code> if the lines can be synchronized, <code>false</code>
 	* otherwise
 	*/
-	@:overload public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
+	@:overload @:public public function isSynchronizationSupported(lines : java.NativeArray<javax.sound.sampled.Line>, maintainSync : Bool) : Bool;
 	
 	
 }
@@ -250,7 +250,7 @@ package javax.sound.sampled;
 	* @param description descriptive text about the mixer
 	* @param version version information for the mixer
 	*/
-	@:overload private function new(name : String, vendor : String, description : String, version : String) : Void;
+	@:overload @:protected private function new(name : String, vendor : String, description : String, version : String) : Void;
 	
 	/**
 	* Indicates whether two info objects are equal, returning <code>true</code> if
@@ -260,44 +260,44 @@ package javax.sound.sampled;
 	* @return <code>true</code> if this info object is the same as the
 	* <code>obj</code> argument; <code>false</code> otherwise
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:public @:final public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finalizes the hashcode method.
 	*
 	* @return the hashcode for this object
 	*/
-	@:overload @:final public function hashCode() : Int;
+	@:overload @:public @:final public function hashCode() : Int;
 	
 	/**
 	* Obtains the name of the mixer.
 	* @return a string that names the mixer
 	*/
-	@:overload @:final public function getName() : String;
+	@:overload @:public @:final public function getName() : String;
 	
 	/**
 	* Obtains the vendor of the mixer.
 	* @return a string that names the mixer's vendor
 	*/
-	@:overload @:final public function getVendor() : String;
+	@:overload @:public @:final public function getVendor() : String;
 	
 	/**
 	* Obtains the description of the mixer.
 	* @return a textual description of the mixer
 	*/
-	@:overload @:final public function getDescription() : String;
+	@:overload @:public @:final public function getDescription() : String;
 	
 	/**
 	* Obtains the version of the mixer.
 	* @return textual version information for the mixer
 	*/
-	@:overload @:final public function getVersion() : String;
+	@:overload @:public @:final public function getVersion() : String;
 	
 	/**
 	* Provides a string representation of the mixer info.
 	* @return a string describing the info object
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	
 }

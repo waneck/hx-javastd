@@ -28,24 +28,24 @@ extern interface XSModelGroup extends com.sun.org.apache.xerces.internal.xs.XSTe
 	* are:
 	* <code>COMPOSITOR_SEQUENCE, COMPOSITOR_CHOICE, COMPOSITOR_ALL</code>.
 	*/
-	@:overload public function getCompositor() : java.StdTypes.Int16;
+	@:overload @:public public function getCompositor() : java.StdTypes.Int16;
 	
 	/**
 	*  A list of [particles] if it exists, otherwise an empty
 	* <code>XSObjectList</code>.
 	*/
-	@:overload public function getParticles() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getParticles() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	/**
 	* An annotation if it exists, otherwise <code>null</code>. If not null
 	* then the first [annotation] from the sequence of annotations.
 	*/
-	@:overload public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
+	@:overload @:public public function getAnnotation() : com.sun.org.apache.xerces.internal.xs.XSAnnotation;
 	
 	/**
 	* A sequence of [annotations] or an empty <code>XSObjectList</code>.
 	*/
-	@:overload public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
+	@:overload @:public public function getAnnotations() : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
 	
 }

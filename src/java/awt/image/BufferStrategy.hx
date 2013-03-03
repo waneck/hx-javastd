@@ -31,7 +31,7 @@ extern class BufferStrategy
 	*
 	* @return the buffering capabilities of this strategy
 	*/
-	@:overload @:abstract public function getCapabilities() : java.awt.BufferCapabilities;
+	@:overload @:public @:abstract public function getCapabilities() : java.awt.BufferCapabilities;
 	
 	/**
 	* Creates a graphics context for the drawing buffer.  This method may not
@@ -41,7 +41,7 @@ extern class BufferStrategy
 	*
 	* @return a graphics context for the drawing buffer
 	*/
-	@:overload @:abstract public function getDrawGraphics() : java.awt.Graphics;
+	@:overload @:public @:abstract public function getDrawGraphics() : java.awt.Graphics;
 	
 	/**
 	* Returns whether the drawing buffer was lost since the last call to
@@ -53,7 +53,7 @@ extern class BufferStrategy
 	* to <code>getDrawGraphics</code>.
 	* @see java.awt.image.VolatileImage
 	*/
-	@:overload @:abstract public function contentsLost() : Bool;
+	@:overload @:public @:abstract public function contentsLost() : Bool;
 	
 	/**
 	* Returns whether the drawing buffer was recently restored from a lost
@@ -68,13 +68,13 @@ extern class BufferStrategy
 	*         call to <code>getDrawGraphics</code>.
 	* @see java.awt.image.VolatileImage
 	*/
-	@:overload @:abstract public function contentsRestored() : Bool;
+	@:overload @:public @:abstract public function contentsRestored() : Bool;
 	
 	/**
 	* Makes the next available buffer visible by either copying the memory
 	* (blitting) or changing the display pointer (flipping).
 	*/
-	@:overload @:abstract public function show() : Void;
+	@:overload @:public @:abstract public function show() : Void;
 	
 	/**
 	* Releases system resources currently consumed by this
@@ -90,7 +90,7 @@ extern class BufferStrategy
 	* @see java.awt.Canvas#getBufferStrategy
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function dispose() : Void;
+	@:require(java6) @:overload @:public public function dispose() : Void;
 	
 	
 }

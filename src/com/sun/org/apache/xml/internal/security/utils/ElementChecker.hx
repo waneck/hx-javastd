@@ -6,9 +6,9 @@ extern interface ElementChecker
 	*
 	* @throws XMLSecurityException
 	*/
-	@:overload public function guaranteeThatElementInCorrectSpace(expected : com.sun.org.apache.xml.internal.security.utils.ElementProxy, actual : org.w3c.dom.Element) : Void;
+	@:overload @:public @:public public function guaranteeThatElementInCorrectSpace(expected : com.sun.org.apache.xml.internal.security.utils.ElementProxy, actual : org.w3c.dom.Element) : Void;
 	
-	@:overload public function isNamespaceElement(el : org.w3c.dom.Node, type : String, ns : String) : Bool;
+	@:overload @:public public function isNamespaceElement(el : org.w3c.dom.Node, type : String, ns : String) : Bool;
 	
 	
 }

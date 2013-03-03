@@ -26,25 +26,17 @@ package javax.swing.plaf.nimbus;
 extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 {
 	/* Keys and scales for large/small/mini components, based on Apples sizes */
-	public static var LARGE_KEY(default, null) : String;
+	@:public @:static @:final public static var LARGE_KEY(default, null) : String;
 	
-	public static var SMALL_KEY(default, null) : String;
+	@:public @:static @:final public static var SMALL_KEY(default, null) : String;
 	
-	public static var MINI_KEY(default, null) : String;
+	@:public @:static @:final public static var MINI_KEY(default, null) : String;
 	
-	public static var LARGE_SCALE(default, null) : Float;
+	@:public @:static @:final public static var LARGE_SCALE(default, null) : Float;
 	
-	public static var SMALL_SCALE(default, null) : Float;
+	@:public @:static @:final public static var SMALL_SCALE(default, null) : Float;
 	
-	public static var MINI_SCALE(default, null) : Float;
-	
-	/**
-	* @inheritDoc
-	*
-	* Overridden to cause this style to populate itself with data from
-	* UIDefaults, if necessary.
-	*/
-	@:overload override public function installDefaults(ctx : javax.swing.plaf.synth.SynthContext) : Void;
+	@:public @:static @:final public static var MINI_SCALE(default, null) : Float;
 	
 	/**
 	* @inheritDoc
@@ -52,7 +44,15 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* Overridden to cause this style to populate itself with data from
 	* UIDefaults, if necessary.
 	*/
-	@:overload override public function getInsets(ctx : javax.swing.plaf.synth.SynthContext, _in : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function installDefaults(ctx : javax.swing.plaf.synth.SynthContext) : Void;
+	
+	/**
+	* @inheritDoc
+	*
+	* Overridden to cause this style to populate itself with data from
+	* UIDefaults, if necessary.
+	*/
+	@:overload @:public override public function getInsets(ctx : javax.swing.plaf.synth.SynthContext, _in : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* @inheritDoc
@@ -73,7 +73,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	*      UIDefaults named "textForeground".</li>
 	* </ul>
 	*/
-	@:overload override private function getColorForState(ctx : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload @:protected override private function getColorForState(ctx : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
 	/**
 	* @inheritDoc
@@ -83,7 +83,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* UIDefaults, then the "defaultFont" font in UIDefaults will be returned
 	* instead.
 	*/
-	@:overload override private function getFontForState(ctx : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload @:protected override private function getFontForState(ctx : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
 	/**
 	* @inheritDoc
@@ -91,7 +91,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* Returns the SynthPainter for this style, which ends up delegating to
 	* the Painters installed in this style.
 	*/
-	@:overload override public function getPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
+	@:overload @:public override public function getPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
 	
 	/**
 	* @inheritDoc
@@ -100,7 +100,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* UIDefaults, if necessary. If opacity is not specified in UI defaults,
 	* then it defaults to being non-opaque.
 	*/
-	@:overload override public function isOpaque(ctx : javax.swing.plaf.synth.SynthContext) : Bool;
+	@:overload @:public override public function isOpaque(ctx : javax.swing.plaf.synth.SynthContext) : Bool;
 	
 	/**
 	* @inheritDoc
@@ -135,7 +135,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* @param ctx
 	* @param key must not be null
 	*/
-	@:overload override public function get(ctx : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
+	@:overload @:public override public function get(ctx : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the appropriate background Painter, if there is one, for the state
@@ -146,7 +146,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* @return The background painter associated for the given state, or null if
 	* none could be found.
 	*/
-	@:overload public function getBackgroundPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.Painter<Dynamic>;
+	@:overload @:public public function getBackgroundPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.Painter<Dynamic>;
 	
 	/**
 	* Gets the appropriate foreground Painter, if there is one, for the state
@@ -157,7 +157,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* @return The foreground painter associated for the given state, or null if
 	* none could be found.
 	*/
-	@:overload public function getForegroundPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.Painter<Dynamic>;
+	@:overload @:public public function getForegroundPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.Painter<Dynamic>;
 	
 	/**
 	* Gets the appropriate border Painter, if there is one, for the state
@@ -168,7 +168,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 	* @return The border painter associated for the given state, or null if
 	* none could be found.
 	*/
-	@:overload public function getBorderPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.Painter<Dynamic>;
+	@:overload @:public public function getBorderPainter(ctx : javax.swing.plaf.synth.SynthContext) : javax.swing.Painter<Dynamic>;
 	
 	
 }
@@ -181,9 +181,9 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 */
 @:native('javax$swing$plaf$nimbus$NimbusStyle$RuntimeState') @:internal extern class NimbusStyle_RuntimeState implements java.lang.Cloneable
 {
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function clone() : javax.swing.plaf.nimbus.NimbusStyle.NimbusStyle_RuntimeState;
+	@:overload @:public public function clone() : javax.swing.plaf.nimbus.NimbusStyle.NimbusStyle_RuntimeState;
 	
 	
 }
@@ -202,9 +202,9 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 */
 @:native('javax$swing$plaf$nimbus$NimbusStyle$CacheKey') @:internal extern class NimbusStyle_CacheKey
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

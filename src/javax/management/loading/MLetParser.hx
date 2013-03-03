@@ -28,32 +28,32 @@ package javax.management.loading;
 	/**
 	* Create an MLet parser object
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Scan spaces.
 	*/
-	@:overload public function skipSpace(_in : java.io.Reader) : Void;
+	@:overload @:public public function skipSpace(_in : java.io.Reader) : Void;
 	
 	/**
 	* Scan identifier
 	*/
-	@:overload public function scanIdentifier(_in : java.io.Reader) : String;
+	@:overload @:public public function scanIdentifier(_in : java.io.Reader) : String;
 	
 	/**
 	* Scan tag
 	*/
-	@:overload public function scanTag(_in : java.io.Reader) : java.util.Map<String, String>;
+	@:overload @:public public function scanTag(_in : java.io.Reader) : java.util.Map<String, String>;
 	
 	/**
 	* Scan an html file for <mlet> tags
 	*/
-	@:overload public function parse(url : java.net.URL) : java.util.List<javax.management.loading.MLetContent>;
+	@:overload @:public public function parse(url : java.net.URL) : java.util.List<javax.management.loading.MLetContent>;
 	
 	/**
 	* Parse the document pointed by the URL urlname
 	*/
-	@:overload public function parseURL(urlname : String) : java.util.List<javax.management.loading.MLetContent>;
+	@:overload @:public public function parseURL(urlname : String) : java.util.List<javax.management.loading.MLetContent>;
 	
 	
 }

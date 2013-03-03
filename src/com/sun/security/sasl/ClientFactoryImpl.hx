@@ -25,11 +25,11 @@ package com.sun.security.sasl;
 */
 extern class ClientFactoryImpl implements javax.security.sasl.SaslClientFactory
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
+	@:overload @:public public function createSaslClient(mechs : java.NativeArray<String>, authorizationId : String, protocol : String, serverName : String, props : java.util.Map<String, Dynamic>, cbh : javax.security.auth.callback.CallbackHandler) : javax.security.sasl.SaslClient;
 	
-	@:overload public function getMechanismNames(props : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
+	@:overload @:public public function getMechanismNames(props : java.util.Map<String, Dynamic>) : java.NativeArray<String>;
 	
 	
 }

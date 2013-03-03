@@ -39,14 +39,14 @@ package java.security;
 	*
 	* @exception NullPointerException if the specified URI is null.
 	*/
-	@:overload public function new(uri : java.net.URI) : Void;
+	@:overload @:public public function new(uri : java.net.URI) : Void;
 	
 	/**
 	* Returns the URI.
 	*
 	* @return uri the URI.
 	*/
-	@:overload public function getURI() : java.net.URI;
+	@:overload @:public public function getURI() : java.net.URI;
 	
 	
 }

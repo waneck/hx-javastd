@@ -25,7 +25,7 @@ extern interface XMLGrammarDescription extends com.sun.org.apache.xerces.interna
 	*
 	* @return  the type of this grammar
 	*/
-	@:overload public function getGrammarType() : String;
+	@:overload @:public public function getGrammarType() : String;
 	
 	
 }

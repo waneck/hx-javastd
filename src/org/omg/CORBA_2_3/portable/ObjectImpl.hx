@@ -35,7 +35,7 @@ extern class ObjectImpl extends org.omg.CORBA.portable.ObjectImpl
 	* @return the codebase as a space delimited list of url strings or
 	* null if none.
 	*/
-	@:overload public function _get_codebase() : String;
+	@:overload @:public public function _get_codebase() : String;
 	
 	
 }

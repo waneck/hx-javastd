@@ -34,30 +34,30 @@ extern class RegionSpanIterator implements sun.java2d.pipe.SpanIterator
 	/**
 	* Constructs an instance based on the given Region
 	*/
-	@:overload public function new(r : sun.java2d.pipe.Region) : Void;
+	@:overload @:public public function new(r : sun.java2d.pipe.Region) : Void;
 	
 	/**
 	* Gets the bbox of the available region spans.
 	*/
-	@:overload public function getPathBox(pathbox : java.NativeArray<Int>) : Void;
+	@:overload @:public public function getPathBox(pathbox : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Intersect the box used for clipping the output spans with the
 	* given box.
 	*/
-	@:overload public function intersectClipBox(clox : Int, cloy : Int, chix : Int, chiy : Int) : Void;
+	@:overload @:public public function intersectClipBox(clox : Int, cloy : Int, chix : Int, chiy : Int) : Void;
 	
 	/**
 	* Fetches the next span that needs to be operated on.
 	* If the return value is false then there are no more spans.
 	*/
-	@:overload public function nextSpan(spanbox : java.NativeArray<Int>) : Bool;
+	@:overload @:public public function nextSpan(spanbox : java.NativeArray<Int>) : Bool;
 	
 	/**
 	* This method tells the iterator that it may skip all spans
 	* whose Y range is completely above the indicated Y coordinate.
 	*/
-	@:overload public function skipDownTo(y : Int) : Void;
+	@:overload @:public public function skipDownTo(y : Int) : Void;
 	
 	/**
 	* This method returns a native pointer to a function block that
@@ -70,7 +70,7 @@ extern class RegionSpanIterator implements sun.java2d.pipe.SpanIterator
 	*     src/share/native/sun/java2d/pipe/SpanIterator.h
 	* </pre>
 	*/
-	@:overload public function getNativeIterator() : haxe.Int64;
+	@:overload @:public public function getNativeIterator() : haxe.Int64;
 	
 	
 }

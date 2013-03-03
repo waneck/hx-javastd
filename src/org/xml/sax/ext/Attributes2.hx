@@ -41,7 +41,7 @@ extern interface Attributes2 extends org.xml.sax.Attributes
 	* @exception java.lang.ArrayIndexOutOfBoundsException When the
 	*            supplied index does not identify an attribute.
 	*/
-	@:overload public function isDeclared(index : Int) : Bool;
+	@:overload @:public public function isDeclared(index : Int) : Bool;
 	
 	/**
 	* Returns false unless the attribute was declared in the DTD.
@@ -55,7 +55,7 @@ extern interface Attributes2 extends org.xml.sax.Attributes
 	* @exception java.lang.IllegalArgumentException When the
 	*            supplied name does not identify an attribute.
 	*/
-	@:overload public function isDeclared(qName : String) : Bool;
+	@:overload @:public public function isDeclared(qName : String) : Bool;
 	
 	/**
 	* Returns false unless the attribute was declared in the DTD.
@@ -76,7 +76,7 @@ extern interface Attributes2 extends org.xml.sax.Attributes
 	* @exception java.lang.IllegalArgumentException When the
 	*            supplied names do not identify an attribute.
 	*/
-	@:overload public function isDeclared(uri : String, localName : String) : Bool;
+	@:overload @:public public function isDeclared(uri : String, localName : String) : Bool;
 	
 	/**
 	* Returns true unless the attribute value was provided
@@ -88,7 +88,7 @@ extern interface Attributes2 extends org.xml.sax.Attributes
 	* @exception java.lang.ArrayIndexOutOfBoundsException When the
 	*            supplied index does not identify an attribute.
 	*/
-	@:overload public function isSpecified(index : Int) : Bool;
+	@:overload @:public public function isSpecified(index : Int) : Bool;
 	
 	/**
 	* Returns true unless the attribute value was provided
@@ -107,7 +107,7 @@ extern interface Attributes2 extends org.xml.sax.Attributes
 	* @exception java.lang.IllegalArgumentException When the
 	*            supplied names do not identify an attribute.
 	*/
-	@:overload public function isSpecified(uri : String, localName : String) : Bool;
+	@:overload @:public public function isSpecified(uri : String, localName : String) : Bool;
 	
 	/**
 	* Returns true unless the attribute value was provided
@@ -119,7 +119,7 @@ extern interface Attributes2 extends org.xml.sax.Attributes
 	* @exception java.lang.IllegalArgumentException When the
 	*            supplied name does not identify an attribute.
 	*/
-	@:overload public function isSpecified(qName : String) : Bool;
+	@:overload @:public public function isSpecified(qName : String) : Bool;
 	
 	
 }

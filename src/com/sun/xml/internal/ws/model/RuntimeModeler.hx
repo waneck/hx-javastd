@@ -28,32 +28,32 @@ extern class RuntimeModeler
 	/**
 	*
 	*/
-	public static var PD_JAXWS_PACKAGE_PD(default, null) : String;
+	@:public @:static @:final public static var PD_JAXWS_PACKAGE_PD(default, null) : String;
 	
 	/**
 	*
 	*/
-	public static var JAXWS_PACKAGE_PD(default, null) : String;
+	@:public @:static @:final public static var JAXWS_PACKAGE_PD(default, null) : String;
 	
-	public static var RESPONSE(default, null) : String;
+	@:public @:static @:final public static var RESPONSE(default, null) : String;
 	
-	public static var RETURN(default, null) : String;
+	@:public @:static @:final public static var RETURN(default, null) : String;
 	
-	public static var BEAN(default, null) : String;
+	@:public @:static @:final public static var BEAN(default, null) : String;
 	
-	public static var SERVICE(default, null) : String;
+	@:public @:static @:final public static var SERVICE(default, null) : String;
 	
-	public static var PORT(default, null) : String;
+	@:public @:static @:final public static var PORT(default, null) : String;
 	
-	public static var HOLDER_CLASS(default, null) : Class<Dynamic>;
+	@:public @:static @:final public static var HOLDER_CLASS(default, null) : Class<Dynamic>;
 	
-	public static var REMOTE_EXCEPTION_CLASS(default, null) : Class<java.rmi.RemoteException>;
+	@:public @:static @:final public static var REMOTE_EXCEPTION_CLASS(default, null) : Class<java.rmi.RemoteException>;
 	
-	public static var RUNTIME_EXCEPTION_CLASS(default, null) : Class<java.lang.RuntimeException>;
+	@:public @:static @:final public static var RUNTIME_EXCEPTION_CLASS(default, null) : Class<java.lang.RuntimeException>;
 	
-	public static var EXCEPTION_CLASS(default, null) : Class<java.lang.Exception>;
+	@:public @:static @:final public static var EXCEPTION_CLASS(default, null) : Class<java.lang.Exception>;
 	
-	@:overload public function new(portClass : Class<Dynamic>, serviceName : javax.xml.namespace.QName, bindingId : com.sun.xml.internal.ws.api.BindingID, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
+	@:overload @:public public function new(portClass : Class<Dynamic>, serviceName : javax.xml.namespace.QName, bindingId : com.sun.xml.internal.ws.api.BindingID, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
 	
 	/**
 	*
@@ -63,33 +63,33 @@ extern class RuntimeModeler
 	* @param wsdlPort {@link com.sun.xml.internal.ws.api.model.wsdl.WSDLPort}
 	* @param features web service features
 	*/
-	@:overload public function new(portClass : Class<Dynamic>, serviceName : javax.xml.namespace.QName, wsdlPort : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
+	@:overload @:public public function new(portClass : Class<Dynamic>, serviceName : javax.xml.namespace.QName, wsdlPort : com.sun.xml.internal.ws.model.wsdl.WSDLPortImpl, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
 	
 	/**
 	* sets the classloader to be used when loading classes by the <code>RuntimeModeler</code>.
 	* @param classLoader ClassLoader used to load classes
 	*/
-	@:overload public function setClassLoader(classLoader : java.lang.ClassLoader) : Void;
+	@:overload @:public public function setClassLoader(classLoader : java.lang.ClassLoader) : Void;
 	
 	/**
 	* sets the PortName to be used by the <code>RuntimeModeler</code>.
 	* @param portName The PortName to be used instead of the PortName
 	* retrieved via annotations
 	*/
-	@:overload public function setPortName(portName : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setPortName(portName : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* builds the runtime model from the <code>portClass</code> using the binding ID <code>bindingId</code>.
 	* @return the runtime model for the <code>portClass</code>.
 	*/
-	@:overload public function buildRuntimeModel() : com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
+	@:overload @:public public function buildRuntimeModel() : com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
 	
 	/**
 	* creates a runtime model <code>SOAPBinding</code> from a <code>javax.jws.soap.SOAPBinding</code> object
 	* @param soapBinding the <code>javax.jws.soap.SOAPBinding</code> to model
 	* @return returns the runtime model SOAPBinding corresponding to <code>soapBinding</code>
 	*/
-	@:overload private function createBinding(soapBinding : javax.jws.soap.SOAPBinding) : com.sun.xml.internal.ws.model.soap.SOAPBindingImpl;
+	@:overload @:protected private function createBinding(soapBinding : javax.jws.soap.SOAPBinding) : com.sun.xml.internal.ws.model.soap.SOAPBindingImpl;
 	
 	/**
 	* gets the namespace <code>String</code> for a given <code>packageName</code>
@@ -97,13 +97,13 @@ extern class RuntimeModeler
 	*      can be empty.
 	* @return the namespace for the specified <code>packageName</code>
 	*/
-	@:overload public static function getNamespace(packageName : String) : String;
+	@:overload @:public @:static public static function getNamespace(packageName : String) : String;
 	
 	/**
 	* creates the runtime model for a method on the <code>portClass</code>
 	* @param method the method to model
 	*/
-	@:overload private function processMethod(method : java.lang.reflect.Method) : Void;
+	@:overload @:protected private function processMethod(method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* models a document/literal wrapped method
@@ -112,7 +112,7 @@ extern class RuntimeModeler
 	* @param operationName the runtime model <code>JavaMethod</code> instance being created
 	* @param method the <code>method</code> to model
 	*/
-	@:overload private function processDocWrappedMethod(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, methodName : String, operationName : String, method : java.lang.reflect.Method) : Void;
+	@:overload @:protected private function processDocWrappedMethod(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, methodName : String, operationName : String, method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* models a rpc/literal method
@@ -121,7 +121,7 @@ extern class RuntimeModeler
 	* @param operationName the WSDL operation name for this <code>method</code>
 	* @param method the runtime model <code>JavaMethod</code> instance being created
 	*/
-	@:overload private function processRpcMethod(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, methodName : String, operationName : String, method : java.lang.reflect.Method) : Void;
+	@:overload @:protected private function processRpcMethod(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, methodName : String, operationName : String, method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* models the exceptions thrown by <code>method</code> and adds them to the <code>javaMethod</code>
@@ -129,7 +129,7 @@ extern class RuntimeModeler
 	* @param javaMethod the runtime model object to add the exception model objects to
 	* @param method the <code>method</code> from which to find the exceptions to model
 	*/
-	@:overload private function processExceptions(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, method : java.lang.reflect.Method) : Void;
+	@:overload @:protected private function processExceptions(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* returns the method that corresponds to "getFaultInfo".  Returns null if this is not an
@@ -138,7 +138,7 @@ extern class RuntimeModeler
 	* @return the method named "getFaultInfo" if this is an exception generated from WSDL or an
 	* exception that contains the <code>WebFault</code> annotation.  Otherwise it returns null
 	*/
-	@:overload private function getWSDLExceptionFaultInfo(exception : Class<Dynamic>) : java.lang.reflect.Method;
+	@:overload @:protected private function getWSDLExceptionFaultInfo(exception : Class<Dynamic>) : java.lang.reflect.Method;
 	
 	/**
 	* models a document/literal bare method
@@ -146,21 +146,21 @@ extern class RuntimeModeler
 	* @param operationName the runtime model <code>JavaMethod</code> instance being created
 	* @param method the runtime model <code>JavaMethod</code> instance being created
 	*/
-	@:overload private function processDocBareMethod(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, operationName : String, method : java.lang.reflect.Method) : Void;
+	@:overload @:protected private function processDocBareMethod(javaMethod : com.sun.xml.internal.ws.model.JavaMethodImpl, operationName : String, method : java.lang.reflect.Method) : Void;
 	
 	/**
 	* utility to capitalize the first letter in a string
 	* @param name the string to capitalize
 	* @return the capitalized string
 	*/
-	@:overload public static function capitalize(name : String) : String;
+	@:overload @:public @:static public static function capitalize(name : String) : String;
 	
 	/**
 	* gets the <code>wsdl:serviceName</code> for a given implementation class
 	* @param implClass the implementation class
 	* @return the <code>wsdl:serviceName</code> for the <code>implClass</code>
 	*/
-	@:overload public static function getServiceName(implClass : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getServiceName(implClass : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	/**
 	* gets the <code>wsdl:portName</code> for a given implementation class
@@ -168,14 +168,14 @@ extern class RuntimeModeler
 	* @param targetNamespace Namespace URI for service name
 	* @return the <code>wsdl:portName</code> for the <code>implClass</code>
 	*/
-	@:overload public static function getPortName(implClass : Class<Dynamic>, targetNamespace : String) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getPortName(implClass : Class<Dynamic>, targetNamespace : String) : javax.xml.namespace.QName;
 	
 	/**
 	* Gives portType QName from implementatorClass or SEI
 	* @param  implOrSeiClass cant be null
 	* @return  <code>wsdl:portType@name</code>, null if it could not find the annotated class.
 	*/
-	@:overload public static function getPortTypeName(implOrSeiClass : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload @:public @:static public static function getPortTypeName(implOrSeiClass : Class<Dynamic>) : javax.xml.namespace.QName;
 	
 	
 }

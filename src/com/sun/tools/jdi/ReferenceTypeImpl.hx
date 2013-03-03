@@ -25,105 +25,105 @@ package com.sun.tools.jdi;
 */
 extern class ReferenceTypeImpl extends com.sun.tools.jdi.TypeImpl implements com.sun.jdi.ReferenceType
 {
-	@:overload private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
+	@:overload @:protected private function new(aVm : com.sun.jdi.VirtualMachine, aRef : haxe.Int64) : Void;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
-	@:overload public function compareTo(object : com.sun.jdi.ReferenceType) : Int;
+	@:overload @:public public function compareTo(object : com.sun.jdi.ReferenceType) : Int;
 	
-	@:overload override public function signature() : String;
+	@:overload @:public override public function signature() : String;
 	
-	@:overload public function genericSignature() : String;
+	@:overload @:public public function genericSignature() : String;
 	
-	@:overload public function classLoader() : com.sun.jdi.ClassLoaderReference;
+	@:overload @:public public function classLoader() : com.sun.jdi.ClassLoaderReference;
 	
-	@:overload public function isPublic() : Bool;
+	@:overload @:public public function isPublic() : Bool;
 	
-	@:overload public function isProtected() : Bool;
+	@:overload @:public public function isProtected() : Bool;
 	
-	@:overload public function isPrivate() : Bool;
+	@:overload @:public public function isPrivate() : Bool;
 	
-	@:overload public function isPackagePrivate() : Bool;
+	@:overload @:public public function isPackagePrivate() : Bool;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function isFinal() : Bool;
+	@:overload @:public public function isFinal() : Bool;
 	
-	@:overload public function isStatic() : Bool;
+	@:overload @:public public function isStatic() : Bool;
 	
-	@:overload public function isPrepared() : Bool;
+	@:overload @:public public function isPrepared() : Bool;
 	
-	@:overload public function isVerified() : Bool;
+	@:overload @:public public function isVerified() : Bool;
 	
-	@:overload public function isInitialized() : Bool;
+	@:overload @:public public function isInitialized() : Bool;
 	
-	@:overload public function failedToInitialize() : Bool;
+	@:overload @:public public function failedToInitialize() : Bool;
 	
-	@:overload public function fields() : java.util.List<com.sun.jdi.Field>;
+	@:overload @:public public function fields() : java.util.List<com.sun.jdi.Field>;
 	
-	@:overload public function visibleFields() : java.util.List<com.sun.jdi.Field>;
+	@:overload @:public public function visibleFields() : java.util.List<com.sun.jdi.Field>;
 	
-	@:overload public function allFields() : java.util.List<com.sun.jdi.Field>;
+	@:overload @:public public function allFields() : java.util.List<com.sun.jdi.Field>;
 	
-	@:overload public function fieldByName(fieldName : String) : com.sun.jdi.Field;
+	@:overload @:public public function fieldByName(fieldName : String) : com.sun.jdi.Field;
 	
-	@:overload public function methods() : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public public function methods() : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload public function visibleMethods() : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public public function visibleMethods() : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload @:abstract public function allMethods() : java.util.List<com.sun.jdi.Method>;
+	@:overload @:abstract @:public public function allMethods() : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload public function methodsByName(name : String) : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public public function methodsByName(name : String) : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload public function methodsByName(name : String, signature : String) : java.util.List<com.sun.jdi.Method>;
+	@:overload @:public public function methodsByName(name : String, signature : String) : java.util.List<com.sun.jdi.Method>;
 	
-	@:overload public function nestedTypes() : java.util.List<com.sun.jdi.ReferenceType>;
+	@:overload @:public public function nestedTypes() : java.util.List<com.sun.jdi.ReferenceType>;
 	
-	@:overload public function getValue(sig : com.sun.jdi.Field) : com.sun.jdi.Value;
+	@:overload @:public public function getValue(sig : com.sun.jdi.Field) : com.sun.jdi.Value;
 	
 	/**
 	* Returns a map of field values
 	*/
-	@:overload public function getValues(theFields : java.util.List<com.sun.jdi.Field>) : java.util.Map<com.sun.jdi.Field, com.sun.jdi.Value>;
+	@:overload @:public public function getValues(theFields : java.util.List<com.sun.jdi.Field>) : java.util.Map<com.sun.jdi.Field, com.sun.jdi.Value>;
 	
-	@:overload public function classObject() : com.sun.jdi.ClassObjectReference;
+	@:overload @:public public function classObject() : com.sun.jdi.ClassObjectReference;
 	
-	@:overload public function sourceName() : String;
+	@:overload @:public public function sourceName() : String;
 	
-	@:overload public function sourceNames(stratumID : String) : java.util.List<String>;
+	@:overload @:public public function sourceNames(stratumID : String) : java.util.List<String>;
 	
-	@:overload public function sourcePaths(stratumID : String) : java.util.List<String>;
+	@:overload @:public public function sourcePaths(stratumID : String) : java.util.List<String>;
 	
-	@:overload public function sourceDebugExtension() : String;
+	@:overload @:public public function sourceDebugExtension() : String;
 	
-	@:overload public function availableStrata() : java.util.List<String>;
+	@:overload @:public public function availableStrata() : java.util.List<String>;
 	
 	/**
 	* Always returns non-null stratumID
 	*/
-	@:overload public function defaultStratum() : String;
+	@:overload @:public public function defaultStratum() : String;
 	
-	@:overload public function modifiers() : Int;
+	@:overload @:public public function modifiers() : Int;
 	
-	@:overload public function allLineLocations() : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public public function allLineLocations() : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload public function allLineLocations(stratumID : String, sourceName : String) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public public function allLineLocations(stratumID : String, sourceName : String) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload public function locationsOfLine(lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public public function locationsOfLine(lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload public function locationsOfLine(stratumID : String, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
+	@:overload @:public public function locationsOfLine(stratumID : String, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload public function instances(maxInstances : haxe.Int64) : java.util.List<com.sun.jdi.ObjectReference>;
+	@:overload @:public public function instances(maxInstances : haxe.Int64) : java.util.List<com.sun.jdi.ObjectReference>;
 	
-	@:overload public function majorVersion() : Int;
+	@:overload @:public public function majorVersion() : Int;
 	
-	@:overload public function minorVersion() : Int;
+	@:overload @:public public function minorVersion() : Int;
 	
-	@:overload public function constantPoolCount() : Int;
+	@:overload @:public public function constantPoolCount() : Int;
 	
-	@:overload public function constantPool() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function constantPool() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -132,7 +132,7 @@ extern class ReferenceTypeImpl extends com.sun.tools.jdi.TypeImpl implements com
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -173,7 +173,7 @@ extern class ReferenceTypeImpl extends com.sun.tools.jdi.TypeImpl implements com
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
 	* Gets the fully qualified name of this type. The returned name
@@ -186,7 +186,7 @@ extern class ReferenceTypeImpl extends com.sun.tools.jdi.TypeImpl implements com
 	* represented by {@link java.lang.Integer#TYPE Integer.TYPE}.
 	* @return a string containing the type name.
 	*/
-	@:overload override public function name() : String;
+	@:overload @:public override public function name() : String;
 	
 	
 }

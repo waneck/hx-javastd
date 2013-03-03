@@ -43,24 +43,24 @@ extern class GeneralNames
 	* @param derVal the DerValue to construct the GeneralNames from.
 	* @exception IOException on error.
 	*/
-	@:overload public function new(derVal : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(derVal : sun.security.util.DerValue) : Void;
 	
 	/**
 	* The default constructor for this class.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function add(name : sun.security.x509.GeneralName) : sun.security.x509.GeneralNames;
+	@:overload @:public public function add(name : sun.security.x509.GeneralName) : sun.security.x509.GeneralNames;
 	
-	@:overload public function get(index : Int) : sun.security.x509.GeneralName;
+	@:overload @:public public function get(index : Int) : sun.security.x509.GeneralName;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function iterator() : java.util.Iterator<sun.security.x509.GeneralName>;
+	@:overload @:public public function iterator() : java.util.Iterator<sun.security.x509.GeneralName>;
 	
-	@:overload public function names() : java.util.List<sun.security.x509.GeneralName>;
+	@:overload @:public public function names() : java.util.List<sun.security.x509.GeneralName>;
 	
 	/**
 	* Write the extension to the DerOutputStream.
@@ -68,18 +68,18 @@ extern class GeneralNames
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on error.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* compare this GeneralNames to other object for equality
 	*
 	* @returns true iff this equals other
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

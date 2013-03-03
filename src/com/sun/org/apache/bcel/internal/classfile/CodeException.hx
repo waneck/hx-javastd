@@ -69,7 +69,7 @@ extern class CodeException implements java.lang.Cloneable implements com.sun.org
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.CodeException) : Void;
+	@:overload @:public public function new(c : com.sun.org.apache.bcel.internal.classfile.CodeException) : Void;
 	
 	/**
 	* @param start_pc Range in the code the exception handler is active,
@@ -81,7 +81,7 @@ extern class CodeException implements java.lang.Cloneable implements com.sun.org
 	* exception, otherwise it points to the exception class which is
 	* to be caught.
 	*/
-	@:overload public function new(start_pc : Int, end_pc : Int, handler_pc : Int, catch_type : Int) : Void;
+	@:overload @:public public function new(start_pc : Int, end_pc : Int, handler_pc : Int, catch_type : Int) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -90,7 +90,7 @@ extern class CodeException implements java.lang.Cloneable implements com.sun.org
 	*
 	* @param v Visitor object
 	*/
-	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump code exception to file stream in binary format.
@@ -98,65 +98,65 @@ extern class CodeException implements java.lang.Cloneable implements com.sun.org
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:public @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return 0, if the handler catches any exception, otherwise it points to
 	* the exception class which is to be caught.
 	*/
-	@:overload @:final public function getCatchType() : Int;
+	@:overload @:public @:final public function getCatchType() : Int;
 	
 	/**
 	* @return Exclusive end index of the region where the handler is active.
 	*/
-	@:overload @:final public function getEndPC() : Int;
+	@:overload @:public @:final public function getEndPC() : Int;
 	
 	/**
 	* @return Starting address of exception handler, relative to the code.
 	*/
-	@:overload @:final public function getHandlerPC() : Int;
+	@:overload @:public @:final public function getHandlerPC() : Int;
 	
 	/**
 	* @return Inclusive start index of the region where the handler is active.
 	*/
-	@:overload @:final public function getStartPC() : Int;
+	@:overload @:public @:final public function getStartPC() : Int;
 	
 	/**
 	* @param catch_type.
 	*/
-	@:overload @:final public function setCatchType(catch_type : Int) : Void;
+	@:overload @:public @:final public function setCatchType(catch_type : Int) : Void;
 	
 	/**
 	* @param end_pc end of handled block
 	*/
-	@:overload @:final public function setEndPC(end_pc : Int) : Void;
+	@:overload @:public @:final public function setEndPC(end_pc : Int) : Void;
 	
 	/**
 	* @param handler_pc where the actual code is
 	*/
-	@:overload @:final public function setHandlerPC(handler_pc : Int) : Void;
+	@:overload @:public @:final public function setHandlerPC(handler_pc : Int) : Void;
 	
 	/**
 	* @param start_pc start of handled block
 	*/
-	@:overload @:final public function setStartPC(start_pc : Int) : Void;
+	@:overload @:public @:final public function setStartPC(start_pc : Int) : Void;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final public function toString() : String;
+	@:overload @:public @:final public function toString() : String;
 	
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool, verbose : Bool) : String;
+	@:overload @:public @:final public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool, verbose : Bool) : String;
 	
-	@:overload @:final public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload @:public @:final public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.CodeException;
+	@:overload @:public public function copy() : com.sun.org.apache.bcel.internal.classfile.CodeException;
 	
 	
 }

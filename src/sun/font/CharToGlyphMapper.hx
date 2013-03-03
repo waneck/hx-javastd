@@ -30,42 +30,42 @@ package sun.font;
 */
 extern class CharToGlyphMapper
 {
-	public static var HI_SURROGATE_START(default, null) : Int;
+	@:public @:static @:final public static var HI_SURROGATE_START(default, null) : Int;
 	
-	public static var HI_SURROGATE_END(default, null) : Int;
+	@:public @:static @:final public static var HI_SURROGATE_END(default, null) : Int;
 	
-	public static var LO_SURROGATE_START(default, null) : Int;
+	@:public @:static @:final public static var LO_SURROGATE_START(default, null) : Int;
 	
-	public static var LO_SURROGATE_END(default, null) : Int;
+	@:public @:static @:final public static var LO_SURROGATE_END(default, null) : Int;
 	
-	public static var UNINITIALIZED_GLYPH(default, null) : Int;
+	@:public @:static @:final public static var UNINITIALIZED_GLYPH(default, null) : Int;
 	
-	public static var INVISIBLE_GLYPH_ID(default, null) : Int;
+	@:public @:static @:final public static var INVISIBLE_GLYPH_ID(default, null) : Int;
 	
-	public static var INVISIBLE_GLYPHS(default, null) : Int;
+	@:public @:static @:final public static var INVISIBLE_GLYPHS(default, null) : Int;
 	
-	private var missingGlyph : Int;
+	@:protected private var missingGlyph : Int;
 	
-	@:overload public function getMissingGlyphCode() : Int;
+	@:overload @:public public function getMissingGlyphCode() : Int;
 	
 	/* Default implementations of these methods may be overridden by
 	* subclasses which have special requirements or optimisations
 	*/
-	@:overload public function canDisplay(ch : java.StdTypes.Char16) : Bool;
+	@:overload @:public public function canDisplay(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload public function canDisplay(cp : Int) : Bool;
+	@:overload @:public public function canDisplay(cp : Int) : Bool;
 	
-	@:overload public function charToGlyph(unicode : java.StdTypes.Char16) : Int;
+	@:overload @:public public function charToGlyph(unicode : java.StdTypes.Char16) : Int;
 	
-	@:overload public function charToGlyph(unicode : Int) : Int;
+	@:overload @:public public function charToGlyph(unicode : Int) : Int;
 	
-	@:overload @:abstract public function getNumGlyphs() : Int;
+	@:overload @:public @:abstract public function getNumGlyphs() : Int;
 	
-	@:overload @:abstract public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload @:public @:abstract public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
 	
-	@:overload @:abstract public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
+	@:overload @:public @:abstract public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
 	
-	@:overload @:abstract public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload @:public @:abstract public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
 	
 	
 }

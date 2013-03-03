@@ -28,7 +28,7 @@ extern class CaseInsensitiveMap
 	*  Return a list of code point characters (not including the input value)
 	*  that can be substituted in a case insensitive match
 	*/
-	@:overload public static function get(codePoint : Int) : java.NativeArray<Int>;
+	@:overload @:static @:public public static function get(codePoint : Int) : java.NativeArray<Int>;
 	
 	
 }

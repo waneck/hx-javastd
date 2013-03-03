@@ -25,53 +25,53 @@ package com.sun.corba.se.spi.ior.iiop;
 */
 extern class GIOPVersion
 {
-	public static var V1_0(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:public @:static @:final public static var V1_0(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V1_1(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:public @:static @:final public static var V1_1(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V1_2(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:public @:static @:final public static var V1_2(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V1_3(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:public @:static @:final public static var V1_3(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V13_XX(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:public @:static @:final public static var V13_XX(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var DEFAULT_VERSION(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:public @:static @:final public static var DEFAULT_VERSION(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var VERSION_1_0(default, null) : Int;
+	@:public @:static @:final public static var VERSION_1_0(default, null) : Int;
 	
-	public static var VERSION_1_1(default, null) : Int;
+	@:public @:static @:final public static var VERSION_1_1(default, null) : Int;
 	
-	public static var VERSION_1_2(default, null) : Int;
+	@:public @:static @:final public static var VERSION_1_2(default, null) : Int;
 	
-	public static var VERSION_1_3(default, null) : Int;
+	@:public @:static @:final public static var VERSION_1_3(default, null) : Int;
 	
-	public static var VERSION_13_XX(default, null) : Int;
+	@:public @:static @:final public static var VERSION_13_XX(default, null) : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(majorB : java.StdTypes.Int8, minorB : java.StdTypes.Int8) : Void;
+	@:overload @:public public function new(majorB : java.StdTypes.Int8, minorB : java.StdTypes.Int8) : Void;
 	
-	@:overload public function new(major : Int, minor : Int) : Void;
+	@:overload @:public public function new(major : Int, minor : Int) : Void;
 	
-	@:overload public function getMajor() : java.StdTypes.Int8;
+	@:overload @:public public function getMajor() : java.StdTypes.Int8;
 	
-	@:overload public function getMinor() : java.StdTypes.Int8;
+	@:overload @:public public function getMinor() : java.StdTypes.Int8;
 	
-	@:overload public function equals(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Bool;
+	@:overload @:public public function equals(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function lessThan(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Bool;
+	@:overload @:public public function lessThan(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Bool;
 	
-	@:overload public function intValue() : Int;
+	@:overload @:public public function intValue() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public static function getInstance(major : java.StdTypes.Int8, minor : java.StdTypes.Int8) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public @:static public static function getInstance(major : java.StdTypes.Int8, minor : java.StdTypes.Int8) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload public static function parseVersion(s : String) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public @:static public static function parseVersion(s : String) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
 	/**
 	* This chooses the appropriate GIOP version.
@@ -79,13 +79,13 @@ extern class GIOPVersion
 	* @return the GIOP version 13.00 if Java serialization is enabled, or
 	*         smallest(profGIOPVersion, orbGIOPVersion)
 	*/
-	@:overload public static function chooseRequestVersion(orb : com.sun.corba.se.spi.orb.ORB, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public @:static public static function chooseRequestVersion(orb : com.sun.corba.se.spi.orb.ORB, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload public function supportsIORIIOPProfileComponents() : Bool;
+	@:overload @:public public function supportsIORIIOPProfileComponents() : Bool;
 	
-	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload @:public public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:public public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	
 }

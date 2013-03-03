@@ -31,7 +31,7 @@ extern class Base64Data extends com.sun.xml.internal.bind.v2.runtime.output.Pcda
 	* @param len
 	*      data[0] to data[len-1] are treated as the data.
 	*/
-	@:overload public function set(data : java.NativeArray<java.StdTypes.Int8>, len : Int, mimeType : String) : Void;
+	@:overload @:public public function set(data : java.NativeArray<java.StdTypes.Int8>, len : Int, mimeType : String) : Void;
 	
 	/**
 	* Fills in the data object by the byte[] of the exact length.
@@ -39,72 +39,72 @@ extern class Base64Data extends com.sun.xml.internal.bind.v2.runtime.output.Pcda
 	* @param data
 	*      this buffer may be owned directly by the unmarshaleld JAXB object.
 	*/
-	@:overload public function set(data : java.NativeArray<java.StdTypes.Int8>, mimeType : String) : Void;
+	@:overload @:public public function set(data : java.NativeArray<java.StdTypes.Int8>, mimeType : String) : Void;
 	
 	/**
 	* Fills in the data object by a {@link DataHandler}.
 	*/
-	@:overload public function set(data : javax.activation.DataHandler) : Void;
+	@:overload @:public public function set(data : javax.activation.DataHandler) : Void;
 	
 	/**
 	* Gets the raw data.
 	*/
-	@:overload public function getDataHandler() : javax.activation.DataHandler;
+	@:overload @:public public function getDataHandler() : javax.activation.DataHandler;
 	
 	/**
 	* Gets the byte[] of the exact length.
 	*/
-	@:overload public function getExact() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function getExact() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Gets the data as an {@link InputStream}.
 	*/
-	@:overload public function getInputStream() : java.io.InputStream;
+	@:overload @:public public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Returns false if this object only has {@link DataHandler} and therefore
 	* {@link #get()} operation is likely going to be expensive.
 	*/
-	@:overload public function hasData() : Bool;
+	@:overload @:public public function hasData() : Bool;
 	
 	/**
 	* Gets the raw data. The size of the byte array maybe larger than the actual length.
 	*/
-	@:overload public function get() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function get() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getDataLen() : Int;
+	@:overload @:public public function getDataLen() : Int;
 	
-	@:overload public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	/**
 	* Gets the number of characters needed to represent
 	* this binary data in the base64 encoding.
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public override public function length() : Int;
 	
 	/**
 	* Encode this binary data in the base64 encoding
 	* and returns the character at the specified position.
 	*/
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public override public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Internally this is only used to split a text to a list,
 	* which doesn't happen that much for base64.
 	* So this method should be smaller than faster.
 	*/
-	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/**
 	* Returns the base64 encoded string of this data.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
-	@:overload override public function writeTo(buf : java.NativeArray<java.StdTypes.Char16>, start : Int) : Void;
+	@:overload @:public override public function writeTo(buf : java.NativeArray<java.StdTypes.Char16>, start : Int) : Void;
 	
-	@:overload override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
+	@:overload @:public override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
 	
-	@:overload public function writeTo(output : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeTo(output : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	
 }

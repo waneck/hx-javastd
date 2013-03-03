@@ -29,13 +29,13 @@ extern class PICurrent extends org.omg.CORBA.LocalObject implements org.omg.CORB
 	* This method sets the slot data at the given slot id (index) in the
 	* Slot Table which is on the top of the SlotTableStack.
 	*/
-	@:overload public function set_slot(id : Int, data : org.omg.CORBA.Any) : Void;
+	@:overload @:public public function set_slot(id : Int, data : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* This method gets the slot data at the given slot id (index) from the
 	* Slot Table which is on the top of the SlotTableStack.
 	*/
-	@:overload public function get_slot(id : Int) : org.omg.CORBA.Any;
+	@:overload @:public public function get_slot(id : Int) : org.omg.CORBA.Any;
 	
 	
 }

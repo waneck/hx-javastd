@@ -29,13 +29,13 @@ extern class SystemException extends java.lang.RuntimeException
 	* The CORBA Exception minor code.
 	* @serial
 	*/
-	public var minor : Int;
+	@:public public var minor : Int;
 	
 	/**
 	* The status of the operation that threw this exception.
 	* @serial
 	*/
-	public var completed : org.omg.CORBA.CompletionStatus;
+	@:public public var completed : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* Constructs a <code>SystemException</code> exception with the specified detail
@@ -45,12 +45,12 @@ extern class SystemException extends java.lang.RuntimeException
 	* @param minor the minor code
 	* @param completed the completion status
 	*/
-	@:overload private function new(reason : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
+	@:overload @:protected private function new(reason : String, minor : Int, completed : org.omg.CORBA.CompletionStatus) : Void;
 	
 	/**
 	* Converts this exception to a representative string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -37,7 +37,7 @@ extern interface AclEntry extends java.lang.Cloneable
 	*
 	* @see #getPrincipal
 	*/
-	@:overload public function setPrincipal(user : java.security.Principal) : Bool;
+	@:overload @:public public function setPrincipal(user : java.security.Principal) : Bool;
 	
 	/**
 	* Returns the principal for which permissions are granted or denied by
@@ -48,7 +48,7 @@ extern interface AclEntry extends java.lang.Cloneable
 	*
 	* @see #setPrincipal
 	*/
-	@:overload public function getPrincipal() : java.security.Principal;
+	@:overload @:public public function getPrincipal() : java.security.Principal;
 	
 	/**
 	* Sets this ACL entry to be a negative one. That is, the associated
@@ -59,7 +59,7 @@ extern interface AclEntry extends java.lang.Cloneable
 	* negative entry only if this <code>setNegativePermissions</code>
 	* method is called on it.
 	*/
-	@:overload public function setNegativePermissions() : Void;
+	@:overload @:public public function setNegativePermissions() : Void;
 	
 	/**
 	* Returns true if this is a negative ACL entry (one denying the
@@ -68,7 +68,7 @@ extern interface AclEntry extends java.lang.Cloneable
 	*
 	* @return true if this is a negative ACL entry, false if it's not.
 	*/
-	@:overload public function isNegative() : Bool;
+	@:overload @:public public function isNegative() : Bool;
 	
 	/**
 	* Adds the specified permission to this ACL entry. Note: An entry can
@@ -80,7 +80,7 @@ extern interface AclEntry extends java.lang.Cloneable
 	* @return true if the permission was added, false if the
 	* permission was already part of this entry's permission set.
 	*/
-	@:overload public function addPermission(permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function addPermission(permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* Removes the specified permission from this ACL entry.
@@ -90,7 +90,7 @@ extern interface AclEntry extends java.lang.Cloneable
 	* @return true if the permission is removed, false if the
 	* permission was not part of this entry's permission set.
 	*/
-	@:overload public function removePermission(permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function removePermission(permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* Checks if the specified permission is part of the
@@ -101,14 +101,14 @@ extern interface AclEntry extends java.lang.Cloneable
 	* @return true if the permission is part of the
 	* permission set in this entry, false otherwise.
 	*/
-	@:overload public function checkPermission(permission : java.security.acl.Permission) : Bool;
+	@:overload @:public public function checkPermission(permission : java.security.acl.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of the permissions in this ACL entry.
 	*
 	* @return an enumeration of the permissions in this ACL entry.
 	*/
-	@:overload public function permissions() : java.util.Enumeration<java.security.acl.Permission>;
+	@:overload @:public public function permissions() : java.util.Enumeration<java.security.acl.Permission>;
 	
 	
 }

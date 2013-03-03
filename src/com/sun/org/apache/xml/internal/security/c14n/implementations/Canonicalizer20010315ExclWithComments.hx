@@ -25,13 +25,13 @@ extern class Canonicalizer20010315ExclWithComments extends com.sun.org.apache.xm
 	* Constructor Canonicalizer20010315ExclWithComments
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload @:final override public function engineGetURI() : String;
+	@:overload @:public @:final override public function engineGetURI() : String;
 	
 	/** @inheritDoc */
-	@:overload @:final override public function engineGetIncludeComments() : Bool;
+	@:overload @:public @:final override public function engineGetIncludeComments() : Bool;
 	
 	
 }

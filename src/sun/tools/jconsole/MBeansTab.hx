@@ -25,40 +25,40 @@ package sun.tools.jconsole;
 */
 extern class MBeansTab extends sun.tools.jconsole.Tab implements javax.management.NotificationListener implements java.beans.PropertyChangeListener implements javax.swing.event.TreeSelectionListener implements javax.swing.event.TreeWillExpandListener
 {
-	@:overload public static function getTabName() : String;
+	@:overload @:public @:static public static function getTabName() : String;
 	
-	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
+	@:overload @:public public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload public function getDataViewer() : sun.tools.jconsole.inspector.XDataViewer;
+	@:overload @:public public function getDataViewer() : sun.tools.jconsole.inspector.XDataViewer;
 	
-	@:overload public function getTree() : sun.tools.jconsole.inspector.XTree;
+	@:overload @:public public function getTree() : sun.tools.jconsole.inspector.XTree;
 	
-	@:overload public function getSheet() : sun.tools.jconsole.inspector.XSheet;
+	@:overload @:public public function getSheet() : sun.tools.jconsole.inspector.XSheet;
 	
-	@:overload override public function dispose() : Void;
+	@:overload @:public override public function dispose() : Void;
 	
-	@:overload public function getUpdateInterval() : Int;
+	@:overload @:public public function getUpdateInterval() : Int;
 	
-	@:overload public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
+	@:overload @:public public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
-	@:overload public function getSnapshotMBeanServerConnection() : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
+	@:overload @:public public function getSnapshotMBeanServerConnection() : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
 	
-	@:overload override public function update() : Void;
+	@:overload @:public override public function update() : Void;
 	
 	/* notification listener:  handleNotification */
-	@:overload public function handleNotification(notification : javax.management.Notification, handback : Dynamic) : Void;
+	@:overload @:public public function handleNotification(notification : javax.management.Notification, handback : Dynamic) : Void;
 	
 	/* property change listener:  propertyChange */
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	/* tree selection listener: valueChanged */
-	@:overload public function valueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
+	@:overload @:public public function valueChanged(e : javax.swing.event.TreeSelectionEvent) : Void;
 	
 	/* tree will expand listener: treeWillExpand */
-	@:overload public function treeWillExpand(e : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function treeWillExpand(e : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	/* tree will expand listener: treeWillCollapse */
-	@:overload public function treeWillCollapse(e : javax.swing.event.TreeExpansionEvent) : Void;
+	@:overload @:public public function treeWillCollapse(e : javax.swing.event.TreeExpansionEvent) : Void;
 	
 	
 }

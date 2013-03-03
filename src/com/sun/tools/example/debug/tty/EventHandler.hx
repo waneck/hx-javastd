@@ -32,11 +32,11 @@ package com.sun.tools.example.debug.tty;
 */
 extern class EventHandler implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
-	@:overload public function vmDeathEvent(event : com.sun.jdi.event.Event) : Bool;
+	@:overload @:public public function vmDeathEvent(event : com.sun.jdi.event.Event) : Bool;
 	
-	@:overload public function vmDisconnectEvent(event : com.sun.jdi.event.Event) : Bool;
+	@:overload @:public public function vmDisconnectEvent(event : com.sun.jdi.event.Event) : Bool;
 	
 	
 }

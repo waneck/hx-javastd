@@ -32,14 +32,14 @@ extern class Invalid extends org.omg.CORBA.UserException
 	/**
 	* Constructs an <code>Invalid</code> object.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an <code>Invalid</code> object.
 	* @param reason a <code>String</code> giving more information
 	* regarding the bad parameter passed to a dynamic any operation.
 	*/
-	@:overload public function new(reason : String) : Void;
+	@:overload @:public public function new(reason : String) : Void;
 	
 	
 }

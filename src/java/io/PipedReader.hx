@@ -40,7 +40,7 @@ package java.io;
 	* @param      src   the stream to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function new(src : java.io.PipedWriter) : Void;
+	@:overload @:public public function new(src : java.io.PipedWriter) : Void;
 	
 	/**
 	* Creates a <code>PipedReader</code> so that it is connected
@@ -54,7 +54,7 @@ package java.io;
 	* @exception  IllegalArgumentException if <code>pipeSize <= 0</code>.
 	* @since      1.6
 	*/
-	@:require(java6) @:overload public function new(src : java.io.PipedWriter, pipeSize : Int) : Void;
+	@:require(java6) @:overload @:public public function new(src : java.io.PipedWriter, pipeSize : Int) : Void;
 	
 	/**
 	* Creates a <code>PipedReader</code> so
@@ -63,7 +63,7 @@ package java.io;
 	* java.io.PipedReader) connected} to a <code>PipedWriter</code>
 	* before being used.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>PipedReader</code> so that it is not yet
@@ -77,7 +77,7 @@ package java.io;
 	* @exception  IllegalArgumentException if <code>pipeSize <= 0</code>.
 	* @since      1.6
 	*/
-	@:require(java6) @:overload public function new(pipeSize : Int) : Void;
+	@:require(java6) @:overload @:public public function new(pipeSize : Int) : Void;
 	
 	/**
 	* Causes this piped reader to be connected
@@ -103,7 +103,7 @@ package java.io;
 	* @param      src   The piped writer to connect to.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload public function connect(src : java.io.PipedWriter) : Void;
+	@:overload @:public public function connect(src : java.io.PipedWriter) : Void;
 	
 	/**
 	* Reads the next character of data from this piped stream.
@@ -119,7 +119,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedWriter) unconnected}, closed,
 	*          or an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:public @:synchronized override public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> characters of data from this piped
@@ -139,7 +139,7 @@ package java.io;
 	*                  {@link #connect(java.io.PipedWriter) unconnected}, closed,
 	*                  or an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public @:synchronized override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Tell whether this stream is ready to be read.  A piped character
@@ -149,7 +149,7 @@ package java.io;
 	*                  <a href=PipedInputStream.html#BROKEN> <code>broken</code></a>,
 	*                  {@link #connect(java.io.PipedWriter) unconnected}, or closed.
 	*/
-	@:overload @:synchronized override public function ready() : Bool;
+	@:overload @:public @:synchronized override public function ready() : Bool;
 	
 	/**
 	* Closes this piped stream and releases any system resources
@@ -157,7 +157,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

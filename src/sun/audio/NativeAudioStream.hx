@@ -33,9 +33,9 @@ extern class NativeAudioStream extends java.io.FilterInputStream
 	* it contain an ACIS instead (so now it should work for
 	* all the data types we support....).
 	*/
-	@:overload public function new(_in : java.io.InputStream) : Void;
+	@:overload @:public public function new(_in : java.io.InputStream) : Void;
 	
-	@:overload public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	
 }

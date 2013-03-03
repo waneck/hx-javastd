@@ -30,7 +30,7 @@ extern class VariableGridLayout extends java.awt.GridLayout
 	* @param rows the rows
 	* @param cols the columns
 	*/
-	@:overload public function new(rows : Int, cols : Int) : Void;
+	@:overload @:public public function new(rows : Int, cols : Int) : Void;
 	
 	/**
 	* Creates a grid layout with the specified rows, columns,
@@ -41,27 +41,27 @@ extern class VariableGridLayout extends java.awt.GridLayout
 	* @param vgap the vertical gap variable
 	* @exception IllegalArgumentException If the rows and columns are invalid.
 	*/
-	@:overload public function new(rows : Int, cols : Int, hgap : Int, vgap : Int) : Void;
+	@:overload @:public public function new(rows : Int, cols : Int, hgap : Int, vgap : Int) : Void;
 	
-	@:overload public function setRowFraction(rowNum : Int, fraction : Float) : Void;
+	@:overload @:public public function setRowFraction(rowNum : Int, fraction : Float) : Void;
 	
-	@:overload public function setColFraction(colNum : Int, fraction : Float) : Void;
+	@:overload @:public public function setColFraction(colNum : Int, fraction : Float) : Void;
 	
-	@:overload public function getRowFraction(rowNum : Int) : Float;
+	@:overload @:public public function getRowFraction(rowNum : Int) : Float;
 	
-	@:overload public function getColFraction(colNum : Int) : Float;
+	@:overload @:public public function getColFraction(colNum : Int) : Float;
 	
 	/**
 	* Lays out the container in the specified panel.
 	* @param parent the specified component being laid out
 	* @see Container
 	*/
-	@:overload override public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload @:public override public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	/**
 	* Returns the String representation of this VariableGridLayout's values.
 	*/
-	@:overload override public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	
 }

@@ -50,19 +50,19 @@ package javax.xml.xpath;
 	/**
 	* <p>The default property name according to the JAXP spec.</p>
 	*/
-	public static var DEFAULT_PROPERTY_NAME(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_PROPERTY_NAME(default, null) : String;
 	
 	/**
 	* <p>Default Object Model URI.</p>
 	*/
-	public static var DEFAULT_OBJECT_MODEL_URI(default, null) : String;
+	@:public @:static @:final public static var DEFAULT_OBJECT_MODEL_URI(default, null) : String;
 	
 	/**
 	* <p>Protected constructor as {@link #newInstance()} or {@link #newInstance(String uri)}
 	* or {@link #newInstance(String uri, String factoryClassName, ClassLoader classLoader)}
 	* should be used to create a new instance of an <code>XPathFactory</code>.</p>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* <p>Get a new <code>XPathFactory</code> instance using the default object model,
@@ -81,7 +81,7 @@ package javax.xml.xpath;
 	* @throws RuntimeException When there is a failure in creating an
 	*   <code>XPathFactory</code> for the default object model.
 	*/
-	@:overload @:final public static function newInstance() : javax.xml.xpath.XPathFactory;
+	@:overload @:public @:static @:final public static function newInstance() : javax.xml.xpath.XPathFactory;
 	
 	/**
 	* <p>Get a new <code>XPathFactory</code> instance using the specified object model.</p>
@@ -136,7 +136,7 @@ package javax.xml.xpath;
 	* @throws IllegalArgumentException If <code>uri</code> is <code>null</code>
 	*   or <code>uri.length() == 0</code>.
 	*/
-	@:overload @:final public static function newInstance(uri : String) : javax.xml.xpath.XPathFactory;
+	@:overload @:public @:static @:final public static function newInstance(uri : String) : javax.xml.xpath.XPathFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>XPathFactory</code> from a factory class name. <code>XPathFactory</code>
@@ -184,7 +184,7 @@ package javax.xml.xpath;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(uri : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.xpath.XPathFactory;
+	@:require(java6) @:overload @:public @:static public static function newInstance(uri : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.xpath.XPathFactory;
 	
 	/**
 	* <p>Is specified object model supported by this <code>XPathFactory</code>?</p>
@@ -196,7 +196,7 @@ package javax.xml.xpath;
 	* @throws NullPointerException If <code>objectModel</code> is <code>null</code>.
 	* @throws IllegalArgumentException If <code>objectModel.length() == 0</code>.
 	*/
-	@:overload @:abstract public function isObjectModelSupported(objectModel : String) : Bool;
+	@:overload @:public @:abstract public function isObjectModelSupported(objectModel : String) : Bool;
 	
 	/**
 	* <p>Set a feature for this <code>XPathFactory</code> and
@@ -226,7 +226,7 @@ package javax.xml.xpath;
 	*   it creates cannot support this feature.
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	*/
-	@:overload @:abstract public function setFeature(name : String, value : Bool) : Void;
+	@:overload @:public @:abstract public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* <p>Get the state of the named feature.</p>
@@ -250,7 +250,7 @@ package javax.xml.xpath;
 	*   it creates cannot support this feature.
 	* @throws NullPointerException if <code>name</code> is <code>null</code>.
 	*/
-	@:overload @:abstract public function getFeature(name : String) : Bool;
+	@:overload @:public @:abstract public function getFeature(name : String) : Bool;
 	
 	/**
 	* <p>Establish a default variable resolver.</p>
@@ -266,7 +266,7 @@ package javax.xml.xpath;
 	* @throws NullPointerException If <code>resolver</code> is
 	*   <code>null</code>.
 	*/
-	@:overload @:abstract public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
+	@:overload @:public @:abstract public function setXPathVariableResolver(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
 	/**
 	* <p>Establish a default function resolver.</p>
@@ -282,7 +282,7 @@ package javax.xml.xpath;
 	* @throws NullPointerException If <code>resolver</code> is
 	*   <code>null</code>.
 	*/
-	@:overload @:abstract public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
+	@:overload @:public @:abstract public function setXPathFunctionResolver(resolver : javax.xml.xpath.XPathFunctionResolver) : Void;
 	
 	/**
 	* <p>Return a new <code>XPath</code> using the underlying object
@@ -290,7 +290,7 @@ package javax.xml.xpath;
 	*
 	* @return New instance of an <code>XPath</code>.
 	*/
-	@:overload @:abstract public function newXPath() : javax.xml.xpath.XPath;
+	@:overload @:public @:abstract public function newXPath() : javax.xml.xpath.XPath;
 	
 	
 }

@@ -33,7 +33,7 @@ package com.sun.org.apache.xml.internal.resolver.readers;
 extern class ExtendedXMLCatalogReader extends com.sun.org.apache.xml.internal.resolver.readers.OASISXMLCatalogReader
 {
 	/** The namespace name of extended catalog elements */
-	public static var extendedNamespaceName(default, null) : String;
+	@:public @:static @:final public static var extendedNamespaceName(default, null) : String;
 	
 	/**
 	* The SAX <code>startElement</code> method recognizes elements
@@ -47,10 +47,10 @@ extern class ExtendedXMLCatalogReader extends com.sun.org.apache.xml.internal.re
 	*
 	* @see CatalogEntry
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/** The SAX <code>endElement</code> method does nothing. */
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	
 }

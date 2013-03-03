@@ -45,26 +45,26 @@ extern interface MenuElement
 	* Note: you do not have to forward the event to sub-components.
 	* This is done automatically by the <code>MenuSelectionManager</code>.
 	*/
-	@:overload public function processMouseEvent(event : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processMouseEvent(event : java.awt.event.MouseEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	*  Process a key event.
 	*/
-	@:overload public function processKeyEvent(event : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
+	@:overload @:public public function processKeyEvent(event : java.awt.event.KeyEvent, path : java.NativeArray<javax.swing.MenuElement>, manager : javax.swing.MenuSelectionManager) : Void;
 	
 	/**
 	* Call by the <code>MenuSelectionManager</code> when the
 	* <code>MenuElement</code> is added or remove from
 	* the menu selection.
 	*/
-	@:overload public function menuSelectionChanged(isIncluded : Bool) : Void;
+	@:overload @:public public function menuSelectionChanged(isIncluded : Bool) : Void;
 	
 	/**
 	* This method should return an array containing the sub-elements for the receiving menu element
 	*
 	* @return an array of MenuElements
 	*/
-	@:overload public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
+	@:overload @:public public function getSubElements() : java.NativeArray<javax.swing.MenuElement>;
 	
 	/**
 	* This method should return the java.awt.Component used to paint the receiving element.
@@ -73,7 +73,7 @@ extern interface MenuElement
 	*
 	* @return the Component value
 	*/
-	@:overload public function getComponent() : java.awt.Component;
+	@:overload @:public public function getComponent() : java.awt.Component;
 	
 	
 }

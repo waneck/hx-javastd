@@ -14,7 +14,7 @@ extern interface ObjectReferenceFactory extends org.omg.CORBA.portable.ValueBase
 	* to the data in this template, with the given repository ID and
 	* object ID.
 	*/
-	@:overload @:abstract public function make_object(repositoryId : String, object_id : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload @:public @:abstract public function make_object(repositoryId : String, object_id : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
 	
 }

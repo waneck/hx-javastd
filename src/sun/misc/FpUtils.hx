@@ -28,12 +28,12 @@ extern class FpUtils
 	/**
 	* Returns unbiased exponent of a {@code double}.
 	*/
-	@:overload public static function getExponent(d : Float) : Int;
+	@:overload @:public @:static public static function getExponent(d : Float) : Int;
 	
 	/**
 	* Returns unbiased exponent of a {@code float}.
 	*/
-	@:overload public static function getExponent(f : Single) : Int;
+	@:overload @:public @:static public static function getExponent(f : Single) : Int;
 	
 	/**
 	* Returns the first floating-point argument with the sign of the
@@ -50,7 +50,7 @@ extern class FpUtils
 	* and the sign of {@code sign}.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function rawCopySign(magnitude : Float, sign : Float) : Float;
+	@:overload @:public @:static public static function rawCopySign(magnitude : Float, sign : Float) : Float;
 	
 	/**
 	* Returns the first floating-point argument with the sign of the
@@ -67,7 +67,7 @@ extern class FpUtils
 	* and the sign of {@code sign}.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function rawCopySign(magnitude : Single, sign : Single) : Single;
+	@:overload @:public @:static public static function rawCopySign(magnitude : Single, sign : Single) : Single;
 	
 	/**
 	* Returns {@code true} if the argument is a finite
@@ -78,7 +78,7 @@ extern class FpUtils
 	* @return {@code true} if the argument is a finite
 	* floating-point value, {@code false} otherwise.
 	*/
-	@:overload public static function isFinite(d : Float) : Bool;
+	@:overload @:public @:static public static function isFinite(d : Float) : Bool;
 	
 	/**
 	* Returns {@code true} if the argument is a finite
@@ -89,7 +89,7 @@ extern class FpUtils
 	* @return {@code true} if the argument is a finite
 	* floating-point value, {@code false} otherwise.
 	*/
-	@:overload public static function isFinite(f : Single) : Bool;
+	@:overload @:public @:static public static function isFinite(f : Single) : Bool;
 	
 	/**
 	* Returns {@code true} if the specified number is infinitely
@@ -103,7 +103,7 @@ extern class FpUtils
 	* @return  {@code true} if the value of the argument is positive
 	*          infinity or negative infinity; {@code false} otherwise.
 	*/
-	@:overload public static function isInfinite(d : Float) : Bool;
+	@:overload @:public @:static public static function isInfinite(d : Float) : Bool;
 	
 	/**
 	* Returns {@code true} if the specified number is infinitely
@@ -117,7 +117,7 @@ extern class FpUtils
 	* @return  {@code true} if the argument is positive infinity or
 	*          negative infinity; {@code false} otherwise.
 	*/
-	@:overload public static function isInfinite(f : Single) : Bool;
+	@:overload @:public @:static public static function isInfinite(f : Single) : Bool;
 	
 	/**
 	* Returns {@code true} if the specified number is a
@@ -131,7 +131,7 @@ extern class FpUtils
 	* @return  {@code true} if the value of the argument is NaN;
 	*          {@code false} otherwise.
 	*/
-	@:overload public static function isNaN(d : Float) : Bool;
+	@:overload @:public @:static public static function isNaN(d : Float) : Bool;
 	
 	/**
 	* Returns {@code true} if the specified number is a
@@ -145,7 +145,7 @@ extern class FpUtils
 	* @return  {@code true} if the argument is NaN;
 	*          {@code false} otherwise.
 	*/
-	@:overload public static function isNaN(f : Single) : Bool;
+	@:overload @:public @:static public static function isNaN(f : Single) : Bool;
 	
 	/**
 	* Returns {@code true} if the unordered relation holds
@@ -159,7 +159,7 @@ extern class FpUtils
 	* @return {@code true} if at least one argument is a NaN,
 	* {@code false} otherwise.
 	*/
-	@:overload public static function isUnordered(arg1 : Float, arg2 : Float) : Bool;
+	@:overload @:public @:static public static function isUnordered(arg1 : Float, arg2 : Float) : Bool;
 	
 	/**
 	* Returns {@code true} if the unordered relation holds
@@ -173,7 +173,7 @@ extern class FpUtils
 	* @return {@code true} if at least one argument is a NaN,
 	* {@code false} otherwise.
 	*/
-	@:overload public static function isUnordered(arg1 : Single, arg2 : Single) : Bool;
+	@:overload @:public @:static public static function isUnordered(arg1 : Single, arg2 : Single) : Bool;
 	
 	/**
 	* Returns unbiased exponent of a {@code double}; for
@@ -193,7 +193,7 @@ extern class FpUtils
 	* @return unbiased exponent of the argument.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function ilogb(d : Float) : Int;
+	@:overload @:public @:static public static function ilogb(d : Float) : Int;
 	
 	/**
 	* Returns unbiased exponent of a {@code float}; for
@@ -213,7 +213,7 @@ extern class FpUtils
 	* @return unbiased exponent of the argument.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function ilogb(f : Single) : Int;
+	@:overload @:public @:static public static function ilogb(f : Single) : Int;
 	
 	/**
 	* Return {@code d} &times;
@@ -247,7 +247,7 @@ extern class FpUtils
 	* @return {@code d * }2<sup>{@code scale_factor}</sup>
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function scalb(d : Float, scale_factor : Int) : Float;
+	@:overload @:public @:static public static function scalb(d : Float, scale_factor : Int) : Float;
 	
 	/**
 	* Return {@code f} &times;
@@ -281,7 +281,7 @@ extern class FpUtils
 	* @return {@code f * }2<sup>{@code scale_factor}</sup>
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function scalb(f : Single, scale_factor : Int) : Single;
+	@:overload @:public @:static public static function scalb(f : Single, scale_factor : Int) : Single;
 	
 	/**
 	* Returns the floating-point number adjacent to the first
@@ -323,7 +323,7 @@ extern class FpUtils
 	* direction of {@code direction}.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function nextAfter(start : Float, direction : Float) : Float;
+	@:overload @:public @:static public static function nextAfter(start : Float, direction : Float) : Float;
 	
 	/**
 	* Returns the floating-point number adjacent to the first
@@ -365,7 +365,7 @@ extern class FpUtils
 	* direction of {@code direction}.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function nextAfter(start : Single, direction : Float) : Single;
+	@:overload @:public @:static public static function nextAfter(start : Single, direction : Float) : Single;
 	
 	/**
 	* Returns the floating-point value adjacent to {@code d} in
@@ -392,7 +392,7 @@ extern class FpUtils
 	* infinity.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function nextUp(d : Float) : Float;
+	@:overload @:public @:static public static function nextUp(d : Float) : Float;
 	
 	/**
 	* Returns the floating-point value adjacent to {@code f} in
@@ -419,7 +419,7 @@ extern class FpUtils
 	* infinity.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function nextUp(f : Single) : Single;
+	@:overload @:public @:static public static function nextUp(f : Single) : Single;
 	
 	/**
 	* Returns the floating-point value adjacent to {@code d} in
@@ -446,7 +446,7 @@ extern class FpUtils
 	* infinity.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function nextDown(d : Float) : Float;
+	@:overload @:public @:static public static function nextDown(d : Float) : Float;
 	
 	/**
 	* Returns the floating-point value adjacent to {@code f} in
@@ -473,7 +473,7 @@ extern class FpUtils
 	* infinity.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function nextDown(f : Single) : Float;
+	@:overload @:public @:static public static function nextDown(f : Single) : Float;
 	
 	/**
 	* Returns the first floating-point argument with the sign of the
@@ -488,7 +488,7 @@ extern class FpUtils
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function copySign(magnitude : Float, sign : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function copySign(magnitude : Float, sign : Float) : Float;
 	
 	/**
 	* Returns the first floating-point argument with the sign of the
@@ -502,7 +502,7 @@ extern class FpUtils
 	* and the sign of {@code sign}.
 	* @author Joseph D. Darcy
 	*/
-	@:overload public static function copySign(magnitude : Single, sign : Single) : Single;
+	@:overload @:public @:static public static function copySign(magnitude : Single, sign : Single) : Single;
 	
 	/**
 	* Returns the size of an ulp of the argument.  An ulp of a
@@ -527,7 +527,7 @@ extern class FpUtils
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function ulp(d : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function ulp(d : Float) : Float;
 	
 	/**
 	* Returns the size of an ulp of the argument.  An ulp of a
@@ -552,7 +552,7 @@ extern class FpUtils
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function ulp(f : Single) : Single;
+	@:require(java5) @:overload @:public @:static public static function ulp(f : Single) : Single;
 	
 	/**
 	* Returns the signum function of the argument; zero if the argument
@@ -571,7 +571,7 @@ extern class FpUtils
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function signum(d : Float) : Float;
+	@:require(java5) @:overload @:public @:static public static function signum(d : Float) : Float;
 	
 	/**
 	* Returns the signum function of the argument; zero if the argument
@@ -590,7 +590,7 @@ extern class FpUtils
 	* @author Joseph D. Darcy
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function signum(f : Single) : Single;
+	@:require(java5) @:overload @:public @:static public static function signum(f : Single) : Single;
 	
 	
 }

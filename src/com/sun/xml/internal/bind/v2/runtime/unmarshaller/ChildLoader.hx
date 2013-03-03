@@ -32,11 +32,11 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 extern class ChildLoader
 {
-	public var loader(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:public @:final public var loader(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	public var receiver(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver;
+	@:public @:final public var receiver(default, null) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver;
 	
-	@:overload public function new(loader : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, receiver : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver) : Void;
+	@:overload @:public public function new(loader : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, receiver : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver) : Void;
 	
 	
 }

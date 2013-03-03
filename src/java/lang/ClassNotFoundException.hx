@@ -53,7 +53,7 @@ package java.lang;
 	/**
 	* Constructs a <code>ClassNotFoundException</code> with no detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>ClassNotFoundException</code> with the
@@ -61,7 +61,7 @@ package java.lang;
 	*
 	* @param   s   the detail message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Constructs a <code>ClassNotFoundException</code> with the
@@ -72,7 +72,7 @@ package java.lang;
 	* @param ex the exception that was raised while loading the class
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(s : String, ex : java.lang.Throwable) : Void;
+	@:require(java2) @:overload @:public public function new(s : String, ex : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns the exception that was raised if an error occurred while
@@ -85,7 +85,7 @@ package java.lang;
 	* @return the <code>Exception</code> that was raised while loading a class
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getException() : java.lang.Throwable;
+	@:require(java2) @:overload @:public public function getException() : java.lang.Throwable;
 	
 	/**
 	* Returns the cause of this exception (the exception that was raised
@@ -95,7 +95,7 @@ package java.lang;
 	* @return  the cause of this exception.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload @:public override public function getCause() : java.lang.Throwable;
 	
 	
 }

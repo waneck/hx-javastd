@@ -121,14 +121,14 @@ package java.util;
 	*
 	* @return the number of key-value mappings in this map
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains no key-value mappings.
 	*
 	* @return <tt>true</tt> if this map contains no key-value mappings
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this map contains a mapping for the specified
@@ -167,7 +167,7 @@ package java.util;
 	*         map does not permit null values
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -220,7 +220,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of the specified key
 	*         or value prevents it from being stored in this map
 	*/
-	@:overload @:public public function put(key : K, value : V) : V;
+	@:overload @:public @:public public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the mapping for a key from this map if it is present
@@ -273,7 +273,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of a key or value in
 	*         the specified map prevents it from being stored in this map
 	*/
-	@:overload public function putAll(m : java.util.Map<K, V>) : Void;
+	@:overload @:public public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Removes all of the mappings from this map (optional operation).
@@ -282,7 +282,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this map
 	*/
-	@:overload public function clear() : Void;
+	@:overload @:public @:public public function clear() : Void;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.
@@ -299,7 +299,7 @@ package java.util;
 	*
 	* @return a set view of the keys contained in this map
 	*/
-	@:overload public function keySet() : java.util.Set<K>;
+	@:overload @:public public function keySet() : java.util.Set<K>;
 	
 	/**
 	* Returns a {@link Collection} view of the values contained in this map.
@@ -316,7 +316,7 @@ package java.util;
 	*
 	* @return a collection view of the values contained in this map
 	*/
-	@:overload public function values() : java.util.Collection<V>;
+	@:overload @:public public function values() : java.util.Collection<V>;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -334,7 +334,7 @@ package java.util;
 	*
 	* @return a set view of the mappings contained in this map
 	*/
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }

@@ -34,7 +34,7 @@ package sun.security.provider.certpath;
 	* @exception CertPathValidatorException Exception thrown if user
 	* wants to enable forward checking and forward checking is not supported.
 	*/
-	@:overload override public function init(forward : Bool) : Void;
+	@:overload @:public override public function init(forward : Bool) : Void;
 	
 	/**
 	* Checks if forward checking is supported. Forward checking refers
@@ -44,7 +44,7 @@ package sun.security.provider.certpath;
 	*
 	* @return true if forward checking is supported, false otherwise
 	*/
-	@:overload override public function isForwardCheckingSupported() : Bool;
+	@:overload @:public override public function isForwardCheckingSupported() : Bool;
 	
 	/**
 	* Gets an immutable Set of the OID strings for the extensions that
@@ -56,7 +56,7 @@ package sun.security.provider.certpath;
 	* @return the Set of extensions supported by this PKIXCertPathChecker,
 	* or null if no extensions are supported
 	*/
-	@:overload override public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload @:public override public function getSupportedExtensions() : java.util.Set<String>;
 	
 	/**
 	* Performs the policy processing checks on the certificate using its
@@ -67,7 +67,7 @@ package sun.security.provider.certpath;
 	* @exception CertPathValidatorException Exception thrown if
 	* the certificate does not verify.
 	*/
-	@:overload override public function check(cert : java.security.cert.Certificate, unresCritExts : java.util.Collection<String>) : Void;
+	@:overload @:public override public function check(cert : java.security.cert.Certificate, unresCritExts : java.util.Collection<String>) : Void;
 	
 	
 }

@@ -42,15 +42,15 @@ package java.text;
 */
 @:internal extern class EntryPair
 {
-	public var entryName : String;
+	@:public public var entryName : String;
 	
-	public var value : Int;
+	@:public public var value : Int;
 	
-	public var fwd : Bool;
+	@:public public var fwd : Bool;
 	
-	@:overload public function new(name : String, value : Int) : Void;
+	@:overload @:public public function new(name : String, value : Int) : Void;
 	
-	@:overload public function new(name : String, value : Int, fwd : Bool) : Void;
+	@:overload @:public public function new(name : String, value : Int, fwd : Bool) : Void;
 	
 	
 }

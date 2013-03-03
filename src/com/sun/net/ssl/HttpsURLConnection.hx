@@ -34,72 +34,72 @@ extern class HttpsURLConnection extends java.net.HttpURLConnection
 	* but that's established by other code in this package.
 	* @param url the URL
 	*/
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* Returns the cipher suite in use on this connection.
 	* @return the cipher suite
 	*/
-	@:overload @:abstract public function getCipherSuite() : String;
+	@:overload @:public @:abstract public function getCipherSuite() : String;
 	
 	/**
 	* Returns the server's X.509 certificate chain, or null if
 	* the server did not authenticate.
 	* @return the server certificate chain
 	*/
-	@:overload @:abstract public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload @:public @:abstract public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
-	private var hostnameVerifier : com.sun.net.ssl.HostnameVerifier;
+	@:protected private var hostnameVerifier : com.sun.net.ssl.HostnameVerifier;
 	
 	/**
 	* Sets the default HostnameVerifier inherited when an instance
 	* of this class is created.
 	* @param v the default host name verifier
 	*/
-	@:overload public static function setDefaultHostnameVerifier(v : com.sun.net.ssl.HostnameVerifier) : Void;
+	@:overload @:public @:static public static function setDefaultHostnameVerifier(v : com.sun.net.ssl.HostnameVerifier) : Void;
 	
 	/**
 	* Gets the default HostnameVerifier.
 	* @return the default host name verifier
 	*/
-	@:overload public static function getDefaultHostnameVerifier() : com.sun.net.ssl.HostnameVerifier;
+	@:overload @:public @:static public static function getDefaultHostnameVerifier() : com.sun.net.ssl.HostnameVerifier;
 	
 	/**
 	* Sets the HostnameVerifier.
 	* @param v the host name verifier
 	*/
-	@:overload public function setHostnameVerifier(v : com.sun.net.ssl.HostnameVerifier) : Void;
+	@:overload @:public public function setHostnameVerifier(v : com.sun.net.ssl.HostnameVerifier) : Void;
 	
 	/**
 	* Gets the HostnameVerifier.
 	* @return the host name verifier
 	*/
-	@:overload public function getHostnameVerifier() : com.sun.net.ssl.HostnameVerifier;
+	@:overload @:public public function getHostnameVerifier() : com.sun.net.ssl.HostnameVerifier;
 	
 	/**
 	* Sets the default SSL socket factory inherited when an instance
 	* of this class is created.
 	* @param sf the default SSL socket factory
 	*/
-	@:overload public static function setDefaultSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
+	@:overload @:public @:static public static function setDefaultSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
 	
 	/**
 	* Gets the default SSL socket factory.
 	* @return the default SSL socket factory
 	*/
-	@:overload public static function getDefaultSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:public @:static public static function getDefaultSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	/**
 	* Sets the SSL socket factory.
 	* @param sf the SSL socket factory
 	*/
-	@:overload public function setSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
+	@:overload @:public public function setSSLSocketFactory(sf : javax.net.ssl.SSLSocketFactory) : Void;
 	
 	/**
 	* Gets the SSL socket factory.
 	* @return the SSL socket factory
 	*/
-	@:overload public function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload @:public public function getSSLSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
 	
 }

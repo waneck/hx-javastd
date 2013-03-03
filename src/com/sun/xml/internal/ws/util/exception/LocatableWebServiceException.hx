@@ -25,17 +25,17 @@ package com.sun.xml.internal.ws.util.exception;
 */
 extern class LocatableWebServiceException extends javax.xml.ws.WebServiceException
 {
-	@:overload public function new(message : String, location : java.NativeArray<org.xml.sax.Locator>) : Void;
+	@:overload @:public public function new(message : String, location : java.NativeArray<org.xml.sax.Locator>) : Void;
 	
-	@:overload public function new(message : String, cause : java.lang.Throwable, location : java.NativeArray<org.xml.sax.Locator>) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable, location : java.NativeArray<org.xml.sax.Locator>) : Void;
 	
-	@:overload public function new(cause : java.lang.Throwable, location : java.NativeArray<org.xml.sax.Locator>) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable, location : java.NativeArray<org.xml.sax.Locator>) : Void;
 	
-	@:overload public function new(message : String, locationSource : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(message : String, locationSource : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function new(message : String, cause : java.lang.Throwable, locationSource : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(message : String, cause : java.lang.Throwable, locationSource : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload public function new(cause : java.lang.Throwable, locationSource : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(cause : java.lang.Throwable, locationSource : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* Locations related to this exception.
@@ -43,7 +43,7 @@ extern class LocatableWebServiceException extends javax.xml.ws.WebServiceExcepti
 	* @return
 	*      Can be empty but never null.
 	*/
-	@:overload public function getLocation() : java.util.List<org.xml.sax.Locator>;
+	@:overload @:public public function getLocation() : java.util.List<org.xml.sax.Locator>;
 	
 	
 }

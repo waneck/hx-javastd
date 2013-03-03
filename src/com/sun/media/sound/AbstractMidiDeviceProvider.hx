@@ -25,9 +25,9 @@ package com.sun.media.sound;
 */
 extern class AbstractMidiDeviceProvider extends javax.sound.midi.spi.MidiDeviceProvider
 {
-	@:overload override public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
+	@:overload @:public override public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
 	
-	@:overload override public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
+	@:overload @:public override public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
 	
 	
 }

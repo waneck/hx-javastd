@@ -32,17 +32,17 @@ extern class Encoded
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var buf : java.NativeArray<java.StdTypes.Int8>;
+	@:public public var buf : java.NativeArray<java.StdTypes.Int8>;
 	
-	public var len : Int;
+	@:public public var len : Int;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(text : String) : Void;
+	@:overload @:public public function new(text : String) : Void;
 	
-	@:overload public function ensureSize(size : Int) : Void;
+	@:overload @:public public function ensureSize(size : Int) : Void;
 	
-	@:overload @:final public function set(text : String) : Void;
+	@:overload @:public @:final public function set(text : String) : Void;
 	
 	/**
 	* Fill in the buffer by encoding the specified characters
@@ -51,24 +51,24 @@ extern class Encoded
 	* @param isAttribute
 	*      if true, characters like \t, \r, and \n are also escaped.
 	*/
-	@:overload @:final public function setEscape(text : String, isAttribute : Bool) : Void;
+	@:overload @:public @:final public function setEscape(text : String, isAttribute : Bool) : Void;
 	
 	/**
 	* Writes the encoded bytes to the given output stream.
 	*/
-	@:overload @:final public function write(out : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
+	@:overload @:public @:final public function write(out : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
 	
 	/**
 	* Appends a new character to the end of the buffer.
 	* This assumes that you have enough space in the buffer.
 	*/
-	@:overload public function append(b : java.StdTypes.Char16) : Void;
+	@:overload @:public public function append(b : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Reallocate the buffer to the exact size of the data
 	* to reduce the memory footprint.
 	*/
-	@:overload public function compact() : Void;
+	@:overload @:public public function compact() : Void;
 	
 	
 }

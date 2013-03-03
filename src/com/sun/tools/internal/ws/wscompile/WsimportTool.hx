@@ -25,11 +25,11 @@ package com.sun.tools.internal.ws.wscompile;
 */
 extern class WsimportTool
 {
-	@:overload public function new(out : java.io.OutputStream) : Void;
+	@:overload @:public public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload public function new(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container) : Void;
+	@:overload @:public public function new(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container) : Void;
 	
-	@:overload public function run(args : java.NativeArray<String>) : Bool;
+	@:overload @:public public function run(args : java.NativeArray<String>) : Bool;
 	
 	/*
 	private void jarArtifacts() throws IOException {
@@ -72,11 +72,11 @@ extern class WsimportTool
 	}
 	}
 	*/
-	@:overload public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
+	@:overload @:public public function setEntityResolver(resolver : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload private function compileGeneratedClasses(receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, listener : com.sun.tools.internal.ws.wscompile.WsimportListener) : Bool;
+	@:overload @:protected private function compileGeneratedClasses(receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, listener : com.sun.tools.internal.ws.wscompile.WsimportListener) : Bool;
 	
-	@:overload private function usage(options : com.sun.tools.internal.ws.wscompile.Options) : Void;
+	@:overload @:protected private function usage(options : com.sun.tools.internal.ws.wscompile.Options) : Void;
 	
 	
 }

@@ -28,7 +28,7 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 	/**
 	* Creates a <code>TableRowSorter</code> with an empty model.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a <code>TableRowSorter</code> using <code>model</code>
@@ -37,7 +37,7 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 	* @param model the underlying <code>TableModel</code> to use,
 	*        <code>null</code> is treated as an empty model
 	*/
-	@:overload public function new(model : M) : Void;
+	@:overload @:public public function new(model : M) : Void;
 	
 	/**
 	* Sets the <code>TableModel</code> to use as the underlying model
@@ -46,7 +46,7 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 	*
 	* @param model the underlying model to use, or <code>null</code>
 	*/
-	@:overload public function setModel(model : M) : Void;
+	@:overload @:public public function setModel(model : M) : Void;
 	
 	/**
 	* Sets the object responsible for converting values from the
@@ -57,7 +57,7 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 	* @param stringConverter the object responsible for converting values
 	*        from the model to strings
 	*/
-	@:overload public function setStringConverter(stringConverter : javax.swing.table.TableStringConverter) : Void;
+	@:overload @:public public function setStringConverter(stringConverter : javax.swing.table.TableStringConverter) : Void;
 	
 	/**
 	* Returns the object responsible for converting values from the
@@ -65,7 +65,7 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 	*
 	* @return object responsible for converting values to strings.
 	*/
-	@:overload public function getStringConverter() : javax.swing.table.TableStringConverter;
+	@:overload @:public public function getStringConverter() : javax.swing.table.TableStringConverter;
 	
 	/**
 	* Returns the <code>Comparator</code> for the specified
@@ -82,14 +82,14 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function getComparator(column : Int) : java.util.Comparator<Dynamic>;
+	@:overload @:public override public function getComparator(column : Int) : java.util.Comparator<Dynamic>;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override private function useToString(column : Int) : Bool;
+	@:overload @:protected override private function useToString(column : Int) : Bool;
 	
 	
 }
@@ -99,23 +99,23 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 */
 @:native('javax$swing$table$TableRowSorter$TableRowSorterModelWrapper') @:internal extern class TableRowSorter_TableRowSorterModelWrapper extends javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<Dynamic, Null<Int>>
 {
-	@:overload override public function getModel() : Dynamic;
+	@:overload @:public override public function getModel() : Dynamic;
 	
-	@:overload override public function getColumnCount() : Int;
+	@:overload @:public override public function getColumnCount() : Int;
 	
-	@:overload override public function getRowCount() : Int;
+	@:overload @:public override public function getRowCount() : Int;
 	
-	@:overload override public function getValueAt(row : Int, column : Int) : Dynamic;
+	@:overload @:public override public function getValueAt(row : Int, column : Int) : Dynamic;
 	
-	@:overload override public function getStringValueAt(row : Int, column : Int) : String;
+	@:overload @:public override public function getStringValueAt(row : Int, column : Int) : String;
 	
-	@:overload override public function getIdentifier(index : Int) : Null<Int>;
+	@:overload @:public override public function getIdentifier(index : Int) : Null<Int>;
 	
 	
 }
 @:native('javax$swing$table$TableRowSorter$ComparableComparator') @:internal extern class TableRowSorter_ComparableComparator implements java.util.Comparator<Dynamic>
 {
-	@:overload public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
+	@:overload @:public public function compare(o1 : Dynamic, o2 : Dynamic) : Int;
 	
 	
 }

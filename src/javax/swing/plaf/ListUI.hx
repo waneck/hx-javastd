@@ -37,7 +37,7 @@ extern class ListUI extends javax.swing.plaf.ComponentUI
 	* @return the cell index closest to the given location, or {@code -1}
 	* @throws NullPointerException if {@code location} is null
 	*/
-	@:overload @:abstract public function locationToIndex(list : javax.swing.JList<Dynamic>, location : java.awt.Point) : Int;
+	@:overload @:public @:abstract public function locationToIndex(list : javax.swing.JList<Dynamic>, location : java.awt.Point) : Int;
 	
 	/**
 	* Returns the origin in the given {@code JList}, of the specified item,
@@ -48,7 +48,7 @@ extern class ListUI extends javax.swing.plaf.ComponentUI
 	* @param index the cell index
 	* @return the origin of the cell, or {@code null}
 	*/
-	@:overload @:abstract public function indexToLocation(list : javax.swing.JList<Dynamic>, index : Int) : java.awt.Point;
+	@:overload @:public @:abstract public function indexToLocation(list : javax.swing.JList<Dynamic>, index : Int) : java.awt.Point;
 	
 	/**
 	* Returns the bounding rectangle, in the given list's coordinate system,
@@ -65,7 +65,7 @@ extern class ListUI extends javax.swing.plaf.ComponentUI
 	* @param index2 the second index in the range
 	* @return the bounding rectangle for the range of cells, or {@code null}
 	*/
-	@:overload @:abstract public function getCellBounds(list : javax.swing.JList<Dynamic>, index1 : Int, index2 : Int) : java.awt.Rectangle;
+	@:overload @:public @:abstract public function getCellBounds(list : javax.swing.JList<Dynamic>, index1 : Int, index2 : Int) : java.awt.Rectangle;
 	
 	
 }

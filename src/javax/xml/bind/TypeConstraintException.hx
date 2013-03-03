@@ -50,7 +50,7 @@ package javax.xml.bind;
 	*
 	* @param message a description of the exception
 	*/
-	@:overload public function new(message : String) : Void;
+	@:overload @:public public function new(message : String) : Void;
 	
 	/**
 	* Construct a TypeConstraintException with the specified detail message and vendor
@@ -59,7 +59,7 @@ package javax.xml.bind;
 	* @param message a description of the exception
 	* @param errorCode a string specifying the vendor specific error code
 	*/
-	@:overload public function new(message : String, errorCode : String) : Void;
+	@:overload @:public public function new(message : String, errorCode : String) : Void;
 	
 	/**
 	* Construct a TypeConstraintException with a linkedException.  The detail message and
@@ -67,7 +67,7 @@ package javax.xml.bind;
 	*
 	* @param exception the linked exception
 	*/
-	@:overload public function new(exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct a TypeConstraintException with the specified detail message and
@@ -76,7 +76,7 @@ package javax.xml.bind;
 	* @param message a description of the exception
 	* @param exception the linked exception
 	*/
-	@:overload public function new(message : String, exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Construct a TypeConstraintException with the specified detail message,
@@ -86,21 +86,21 @@ package javax.xml.bind;
 	* @param errorCode a string specifying the vendor specific error code
 	* @param exception the linked exception
 	*/
-	@:overload public function new(message : String, errorCode : String, exception : java.lang.Throwable) : Void;
+	@:overload @:public public function new(message : String, errorCode : String, exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Get the vendor specific error code
 	*
 	* @return a string specifying the vendor specific error code
 	*/
-	@:overload public function getErrorCode() : String;
+	@:overload @:public public function getErrorCode() : String;
 	
 	/**
 	* Get the linked exception
 	*
 	* @return the linked Exception, null if none exists
 	*/
-	@:overload public function getLinkedException() : java.lang.Throwable;
+	@:overload @:public public function getLinkedException() : java.lang.Throwable;
 	
 	/**
 	* Add a linked Exception.
@@ -109,13 +109,13 @@ package javax.xml.bind;
 	*                  indicates that the linked exception does not exist or
 	*                  is unknown).
 	*/
-	@:overload @:synchronized public function setLinkedException(exception : java.lang.Throwable) : Void;
+	@:overload @:public @:synchronized public function setLinkedException(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns a short description of this TypeConstraintException.
 	*
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public override public function toString() : String;
 	
 	/**
 	* Prints this TypeConstraintException and its stack trace (including the stack trace
@@ -123,14 +123,14 @@ package javax.xml.bind;
 	*
 	* @param s PrintStream to use for output
 	*/
-	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload @:public override public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this TypeConstraintException and its stack trace (including the stack trace
 	* of the linkedException if it is non-null) to <tt>System.err</tt>.
 	*
 	*/
-	@:overload public function printStackTrace() : Void;
+	@:overload @:public override public function printStackTrace() : Void;
 	
 	
 }

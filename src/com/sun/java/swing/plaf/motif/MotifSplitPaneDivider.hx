@@ -25,52 +25,52 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPaneDivider
 {
-	public static var minimumThumbSize(default, null) : Int;
+	@:public @:static @:final public static var minimumThumbSize(default, null) : Int;
 	
-	public static var defaultDividerSize(default, null) : Int;
+	@:public @:static @:final public static var defaultDividerSize(default, null) : Int;
 	
-	private static var pad(default, null) : Int;
+	@:protected @:static @:final private static var pad(default, null) : Int;
 	
-	private var hThumbWidth : Int;
+	@:protected private var hThumbWidth : Int;
 	
-	private var hThumbHeight : Int;
+	@:protected private var hThumbHeight : Int;
 	
-	private var vThumbWidth : Int;
+	@:protected private var vThumbWidth : Int;
 	
-	private var vThumbHeight : Int;
+	@:protected private var vThumbHeight : Int;
 	
-	private var highlightColor : java.awt.Color;
+	@:protected private var highlightColor : java.awt.Color;
 	
-	private var shadowColor : java.awt.Color;
+	@:protected private var shadowColor : java.awt.Color;
 	
-	private var focusedColor : java.awt.Color;
+	@:protected private var focusedColor : java.awt.Color;
 	
 	/**
 	* Creates a new Motif SplitPaneDivider
 	*/
-	@:overload public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
+	@:overload @:public public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
 	/**
 	* overrides to hardcode the size of the divider
 	* PENDING(jeff) - rewrite JSplitPane so that this ins't needed
 	*/
-	@:overload public function setDividerSize(newSize : Int) : Void;
+	@:overload @:public override public function setDividerSize(newSize : Int) : Void;
 	
 	/**
 	* Paints the divider.
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* The minimums size is the same as the preferredSize
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the SplitPaneUI that is using the receiver. This is completely
 	* overriden from super to create a different MouseHandler.
 	*/
-	@:overload public function setBasicSplitPaneUI(newUI : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
+	@:overload @:public override public function setBasicSplitPaneUI(newUI : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
 	
 }
@@ -81,9 +81,9 @@ extern class MotifSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPane
 */
 @:native('com$sun$java$swing$plaf$motif$MotifSplitPaneDivider$MotifMouseHandler') @:internal extern class MotifSplitPaneDivider_MotifMouseHandler extends javax.swing.plaf.basic.BasicSplitPaneDivider.BasicSplitPaneDivider_MouseHandler
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

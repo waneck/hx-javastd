@@ -25,9 +25,9 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarUI
 {
-	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
 	/**
 	* Returns the baseline.
@@ -37,33 +37,33 @@ extern class WindowsProgressBarUI extends javax.swing.plaf.basic.BasicProgressBa
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:require(java6) @:overload @:public override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
-	@:overload override private function getPreferredInnerHorizontal() : java.awt.Dimension;
+	@:overload @:protected override private function getPreferredInnerHorizontal() : java.awt.Dimension;
 	
-	@:overload override private function getPreferredInnerVertical() : java.awt.Dimension;
+	@:overload @:protected override private function getPreferredInnerVertical() : java.awt.Dimension;
 	
-	@:overload override private function paintDeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
-	
-	/**
-	* {@inheritDoc}
-	* @since 1.6
-	*/
-	@:require(java6) @:overload override private function setAnimationIndex(newValue : Int) : Void;
+	@:overload @:protected override private function paintDeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function getBoxLength(availableLength : Int, otherDimension : Int) : Int;
+	@:require(java6) @:overload @:protected override private function setAnimationIndex(newValue : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function getBox(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:require(java6) @:overload @:protected override private function getBoxLength(availableLength : Int, otherDimension : Int) : Int;
 	
-	@:overload override private function paintIndeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	/**
+	* {@inheritDoc}
+	* @since 1.6
+	*/
+	@:require(java6) @:overload @:protected override private function getBox(r : java.awt.Rectangle) : java.awt.Rectangle;
+	
+	@:overload @:protected override private function paintIndeterminate(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }

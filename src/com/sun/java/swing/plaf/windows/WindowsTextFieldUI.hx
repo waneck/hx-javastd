@@ -31,7 +31,7 @@ extern class WindowsTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 	* @param c the text field
 	* @return the UI
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Paints a background for the view.  This will only be
@@ -41,14 +41,14 @@ extern class WindowsTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 	*
 	* @param g the graphics context
 	*/
-	@:overload override private function paintBackground(g : java.awt.Graphics) : Void;
+	@:overload @:protected override private function paintBackground(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Creates the caret for a field.
 	*
 	* @return the caret
 	*/
-	@:overload override private function createCaret() : javax.swing.text.Caret;
+	@:overload @:protected override private function createCaret() : javax.swing.text.Caret;
 	
 	
 }
@@ -58,7 +58,7 @@ extern class WindowsTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsTextFieldUI$WindowsFieldCaret') @:internal extern class WindowsTextFieldUI_WindowsFieldCaret extends javax.swing.text.DefaultCaret implements javax.swing.plaf.UIResource
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adjusts the visibility of the caret according to
@@ -66,20 +66,20 @@ extern class WindowsTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 	* caret out into the field by about a quarter of
 	* a field length if not visible.
 	*/
-	@:overload private function adjustVisibility(r : java.awt.Rectangle) : Void;
+	@:overload @:protected override private function adjustVisibility(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gets the painter for the Highlighter.
 	*
 	* @return the painter
 	*/
-	@:overload private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
+	@:overload @:protected override private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsTextFieldUI$WindowsFieldCaret$SafeScroller') @:internal extern class WindowsTextFieldUI_WindowsFieldCaret_SafeScroller implements java.lang.Runnable
 {
-	@:overload public function run() : Void;
+	@:overload @:public public function run() : Void;
 	
 	
 }

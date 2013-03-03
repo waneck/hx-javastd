@@ -31,89 +31,89 @@ extern class MotifDesktopIconUI extends javax.swing.plaf.basic.BasicDesktopIconU
 	* @author Thomas Ball
 	* @author Rich Schiavi
 	*/
-	private var desktopIconActionListener : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconActionListener;
+	@:protected private var desktopIconActionListener : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconActionListener;
 	
-	private var desktopIconMouseListener : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconMouseListener;
+	@:protected private var desktopIconMouseListener : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconMouseListener;
 	
-	private var defaultIcon : javax.swing.Icon;
+	@:protected private var defaultIcon : javax.swing.Icon;
 	
-	private var iconButton : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconButton;
+	@:protected private var iconButton : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconButton;
 	
-	private var iconLabel : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconLabel;
+	@:protected private var iconLabel : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconLabel;
 	
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload private function installDefaults() : Void;
+	@:overload @:protected override private function installDefaults() : Void;
 	
-	@:overload private function installComponents() : Void;
+	@:overload @:protected override private function installComponents() : Void;
 	
-	@:overload private function uninstallComponents() : Void;
+	@:overload @:protected override private function uninstallComponents() : Void;
 	
-	@:overload private function installListeners() : Void;
+	@:overload @:protected override private function installListeners() : Void;
 	
-	@:overload private function showSystemMenu() : Void;
+	@:overload @:protected private function showSystemMenu() : Void;
 	
-	@:overload private function hideSystemMenu() : Void;
+	@:overload @:protected private function hideSystemMenu() : Void;
 	
-	@:overload private function createIconLabel(frame : javax.swing.JInternalFrame) : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconLabel;
+	@:overload @:protected private function createIconLabel(frame : javax.swing.JInternalFrame) : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconLabel;
 	
-	@:overload private function createIconButton(i : javax.swing.Icon) : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconButton;
+	@:overload @:protected private function createIconButton(i : javax.swing.Icon) : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_IconButton;
 	
-	@:overload private function createDesktopIconActionListener() : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconActionListener;
+	@:overload @:protected private function createDesktopIconActionListener() : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconActionListener;
 	
-	@:overload private function createDesktopIconMouseListener() : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconMouseListener;
+	@:overload @:protected private function createDesktopIconMouseListener() : com.sun.java.swing.plaf.motif.MotifDesktopIconUI.MotifDesktopIconUI_DesktopIconMouseListener;
 	
-	@:overload private function uninstallDefaults() : Void;
+	@:overload @:protected override private function uninstallDefaults() : Void;
 	
-	@:overload private function uninstallListeners() : Void;
+	@:overload @:protected override private function uninstallListeners() : Void;
 	
-	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload @:public override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the default desktop icon.
 	*/
-	@:overload public function getDefaultIcon() : javax.swing.Icon;
+	@:overload @:public public function getDefaultIcon() : javax.swing.Icon;
 	
 	/**
 	* Sets the icon used as the default desktop icon.
 	*/
-	@:overload public function setDefaultIcon(newIcon : javax.swing.Icon) : Void;
+	@:overload @:public public function setDefaultIcon(newIcon : javax.swing.Icon) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifDesktopIconUI$IconLabel') extern class MotifDesktopIconUI_IconLabel extends javax.swing.JPanel
 {
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
-	@:overload public function getMinimumSize() : java.awt.Dimension;
+	@:overload @:public override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function getPreferredSize() : java.awt.Dimension;
+	@:overload @:public override public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload public function paint(g : java.awt.Graphics) : Void;
+	@:overload @:public override public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifDesktopIconUI$IconButton') extern class MotifDesktopIconUI_IconButton extends javax.swing.JButton
 {
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifDesktopIconUI$DesktopIconActionListener') extern class MotifDesktopIconUI_DesktopIconActionListener implements java.awt.event.ActionListener
 {
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$motif$MotifDesktopIconUI$DesktopIconMouseListener') extern class MotifDesktopIconUI_DesktopIconMouseListener extends java.awt.event.MouseAdapter
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

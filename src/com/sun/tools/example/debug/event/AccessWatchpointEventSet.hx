@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.event;
 */
 extern class AccessWatchpointEventSet extends com.sun.tools.example.debug.event.WatchpointEventSet
 {
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload @:public override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

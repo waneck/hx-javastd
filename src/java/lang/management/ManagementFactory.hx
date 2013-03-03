@@ -29,37 +29,37 @@ extern class ManagementFactory
 	* String representation of the
 	* <tt>ObjectName</tt> for the {@link ClassLoadingMXBean}.
 	*/
-	public static var CLASS_LOADING_MXBEAN_NAME(default, null) : String;
+	@:public @:final @:static public static var CLASS_LOADING_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* String representation of the
 	* <tt>ObjectName</tt> for the {@link CompilationMXBean}.
 	*/
-	public static var COMPILATION_MXBEAN_NAME(default, null) : String;
+	@:public @:final @:static public static var COMPILATION_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* String representation of the
 	* <tt>ObjectName</tt> for the {@link MemoryMXBean}.
 	*/
-	public static var MEMORY_MXBEAN_NAME(default, null) : String;
+	@:public @:final @:static public static var MEMORY_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* String representation of the
 	* <tt>ObjectName</tt> for the {@link OperatingSystemMXBean}.
 	*/
-	public static var OPERATING_SYSTEM_MXBEAN_NAME(default, null) : String;
+	@:public @:final @:static public static var OPERATING_SYSTEM_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* String representation of the
 	* <tt>ObjectName</tt> for the {@link RuntimeMXBean}.
 	*/
-	public static var RUNTIME_MXBEAN_NAME(default, null) : String;
+	@:public @:final @:static public static var RUNTIME_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* String representation of the
 	* <tt>ObjectName</tt> for the {@link ThreadMXBean}.
 	*/
-	public static var THREAD_MXBEAN_NAME(default, null) : String;
+	@:public @:final @:static public static var THREAD_MXBEAN_NAME(default, null) : String;
 	
 	/**
 	* The domain name and the type key property in
@@ -68,7 +68,7 @@ extern class ManagementFactory
 	* can be formed by appending this string with
 	* "<tt>,name=</tt><i>collector's name</i>".
 	*/
-	public static var GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE(default, null) : String;
+	@:public @:final @:static public static var GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE(default, null) : String;
 	
 	/**
 	* The domain name and the type key property in
@@ -77,7 +77,7 @@ extern class ManagementFactory
 	* can be formed by appending this string with
 	* "<tt>,name=</tt><i>manager's name</i>".
 	*/
-	public static var MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE(default, null) : String;
+	@:public @:final @:static public static var MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE(default, null) : String;
 	
 	/**
 	* The domain name and the type key property in
@@ -86,7 +86,7 @@ extern class ManagementFactory
 	* can be formed by appending this string with
 	* <tt>,name=</tt><i>pool's name</i>.
 	*/
-	public static var MEMORY_POOL_MXBEAN_DOMAIN_TYPE(default, null) : String;
+	@:public @:final @:static public static var MEMORY_POOL_MXBEAN_DOMAIN_TYPE(default, null) : String;
 	
 	/**
 	* Returns the managed bean for the class loading system of
@@ -95,7 +95,7 @@ extern class ManagementFactory
 	* @return a {@link ClassLoadingMXBean} object for
 	* the Java virtual machine.
 	*/
-	@:overload public static function getClassLoadingMXBean() : java.lang.management.ClassLoadingMXBean;
+	@:overload @:public @:static public static function getClassLoadingMXBean() : java.lang.management.ClassLoadingMXBean;
 	
 	/**
 	* Returns the managed bean for the memory system of
@@ -103,7 +103,7 @@ extern class ManagementFactory
 	*
 	* @return a {@link MemoryMXBean} object for the Java virtual machine.
 	*/
-	@:overload public static function getMemoryMXBean() : java.lang.management.MemoryMXBean;
+	@:overload @:public @:static public static function getMemoryMXBean() : java.lang.management.MemoryMXBean;
 	
 	/**
 	* Returns the managed bean for the thread system of
@@ -111,7 +111,7 @@ extern class ManagementFactory
 	*
 	* @return a {@link ThreadMXBean} object for the Java virtual machine.
 	*/
-	@:overload public static function getThreadMXBean() : java.lang.management.ThreadMXBean;
+	@:overload @:public @:static public static function getThreadMXBean() : java.lang.management.ThreadMXBean;
 	
 	/**
 	* Returns the managed bean for the runtime system of
@@ -120,7 +120,7 @@ extern class ManagementFactory
 	* @return a {@link RuntimeMXBean} object for the Java virtual machine.
 
 	*/
-	@:overload public static function getRuntimeMXBean() : java.lang.management.RuntimeMXBean;
+	@:overload @:public @:static public static function getRuntimeMXBean() : java.lang.management.RuntimeMXBean;
 	
 	/**
 	* Returns the managed bean for the compilation system of
@@ -131,7 +131,7 @@ extern class ManagementFactory
 	*   machine or <tt>null</tt> if the Java virtual machine has
 	*   no compilation system.
 	*/
-	@:overload public static function getCompilationMXBean() : java.lang.management.CompilationMXBean;
+	@:overload @:public @:static public static function getCompilationMXBean() : java.lang.management.CompilationMXBean;
 	
 	/**
 	* Returns the managed bean for the operating system on which
@@ -140,7 +140,7 @@ extern class ManagementFactory
 	* @return an {@link OperatingSystemMXBean} object for
 	* the Java virtual machine.
 	*/
-	@:overload public static function getOperatingSystemMXBean() : java.lang.management.OperatingSystemMXBean;
+	@:overload @:public @:static public static function getOperatingSystemMXBean() : java.lang.management.OperatingSystemMXBean;
 	
 	/**
 	* Returns a list of {@link MemoryPoolMXBean} objects in the
@@ -151,7 +151,7 @@ extern class ManagementFactory
 	* @return a list of <tt>MemoryPoolMXBean</tt> objects.
 	*
 	*/
-	@:overload public static function getMemoryPoolMXBeans() : java.util.List<java.lang.management.MemoryPoolMXBean>;
+	@:overload @:public @:static public static function getMemoryPoolMXBeans() : java.util.List<java.lang.management.MemoryPoolMXBean>;
 	
 	/**
 	* Returns a list of {@link MemoryManagerMXBean} objects
@@ -162,7 +162,7 @@ extern class ManagementFactory
 	* @return a list of <tt>MemoryManagerMXBean</tt> objects.
 	*
 	*/
-	@:overload public static function getMemoryManagerMXBeans() : java.util.List<java.lang.management.MemoryManagerMXBean>;
+	@:overload @:public @:static public static function getMemoryManagerMXBeans() : java.util.List<java.lang.management.MemoryManagerMXBean>;
 	
 	/**
 	* Returns a list of {@link GarbageCollectorMXBean} objects
@@ -175,7 +175,7 @@ extern class ManagementFactory
 	* @return a list of <tt>GarbageCollectorMXBean</tt> objects.
 	*
 	*/
-	@:overload public static function getGarbageCollectorMXBeans() : java.util.List<java.lang.management.GarbageCollectorMXBean>;
+	@:overload @:public @:static public static function getGarbageCollectorMXBeans() : java.util.List<java.lang.management.GarbageCollectorMXBean>;
 	
 	/**
 	* Returns the platform {@link javax.management.MBeanServer MBeanServer}.
@@ -218,7 +218,7 @@ extern class ManagementFactory
 	* @see javax.management.MBeanServerFactory
 	* @see javax.management.MBeanServerFactory#createMBeanServer
 	*/
-	@:overload @:synchronized public static function getPlatformMBeanServer() : javax.management.MBeanServer;
+	@:overload @:public @:static @:synchronized public static function getPlatformMBeanServer() : javax.management.MBeanServer;
 	
 	/**
 	* Returns a proxy for a platform MXBean interface of a
@@ -304,7 +304,7 @@ extern class ManagementFactory
 	* @throws java.io.IOException if a communication problem
 	* occurred when accessing the <tt>MBeanServerConnection</tt>.
 	*/
-	@:overload public static function newPlatformMXBeanProxy<T>(connection : javax.management.MBeanServerConnection, mxbeanName : String, mxbeanInterface : Class<T>) : T;
+	@:overload @:public @:static public static function newPlatformMXBeanProxy<T>(connection : javax.management.MBeanServerConnection, mxbeanName : String, mxbeanInterface : Class<T>) : T;
 	
 	/**
 	* Returns the platform MXBean implementing
@@ -333,7 +333,7 @@ extern class ManagementFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getPlatformMXBean<T : java.lang.management.PlatformManagedObject>(mxbeanInterface : Class<T>) : T;
+	@:require(java7) @:overload @:public @:static public static function getPlatformMXBean<T : java.lang.management.PlatformManagedObject>(mxbeanInterface : Class<T>) : T;
 	
 	/**
 	* Returns the list of platform MXBeans implementing
@@ -356,7 +356,7 @@ extern class ManagementFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getPlatformMXBeans<T : java.lang.management.PlatformManagedObject>(mxbeanInterface : Class<T>) : java.util.List<T>;
+	@:require(java7) @:overload @:public @:static public static function getPlatformMXBeans<T : java.lang.management.PlatformManagedObject>(mxbeanInterface : Class<T>) : java.util.List<T>;
 	
 	/**
 	* Returns the platform MXBean proxy for
@@ -392,7 +392,7 @@ extern class ManagementFactory
 	* @see #newPlatformMXBeanProxy
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getPlatformMXBean<T : java.lang.management.PlatformManagedObject>(connection : javax.management.MBeanServerConnection, mxbeanInterface : Class<T>) : T;
+	@:require(java7) @:overload @:public @:static public static function getPlatformMXBean<T : java.lang.management.PlatformManagedObject>(connection : javax.management.MBeanServerConnection, mxbeanInterface : Class<T>) : T;
 	
 	/**
 	* Returns the list of the platform MXBean proxies for
@@ -421,7 +421,7 @@ extern class ManagementFactory
 	* @see #newPlatformMXBeanProxy
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getPlatformMXBeans<T : java.lang.management.PlatformManagedObject>(connection : javax.management.MBeanServerConnection, mxbeanInterface : Class<T>) : java.util.List<T>;
+	@:require(java7) @:overload @:public @:static public static function getPlatformMXBeans<T : java.lang.management.PlatformManagedObject>(connection : javax.management.MBeanServerConnection, mxbeanInterface : Class<T>) : java.util.List<T>;
 	
 	/**
 	* Returns the set of {@code Class} objects, subinterface of
@@ -436,7 +436,7 @@ extern class ManagementFactory
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getPlatformManagementInterfaces() : java.util.Set<Class<java.lang.management.PlatformManagedObject>>;
+	@:require(java7) @:overload @:public @:static public static function getPlatformManagementInterfaces() : java.util.Set<Class<java.lang.management.PlatformManagedObject>>;
 	
 	
 }

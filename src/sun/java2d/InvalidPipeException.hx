@@ -38,7 +38,7 @@ extern class InvalidPipeException extends java.lang.IllegalStateException
 	* Constructs an InvalidPipeException with no detail message.
 	* A detail message is a String that describes this particular exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an InvalidPipeException with the specified detail
@@ -46,7 +46,7 @@ extern class InvalidPipeException extends java.lang.IllegalStateException
 	* exception.
 	* @param s the String that contains a detailed message
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	
 }

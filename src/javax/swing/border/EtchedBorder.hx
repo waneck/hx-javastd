@@ -26,23 +26,23 @@ package javax.swing.border;
 extern class EtchedBorder extends javax.swing.border.AbstractBorder
 {
 	/** Raised etched type. */
-	public static var RAISED(default, null) : Int;
+	@:public @:static @:final public static var RAISED(default, null) : Int;
 	
 	/** Lowered etched type. */
-	public static var LOWERED(default, null) : Int;
+	@:public @:static @:final public static var LOWERED(default, null) : Int;
 	
-	private var etchType : Int;
+	@:protected private var etchType : Int;
 	
-	private var highlight : java.awt.Color;
+	@:protected private var highlight : java.awt.Color;
 	
-	private var shadow : java.awt.Color;
+	@:protected private var shadow : java.awt.Color;
 	
 	/**
 	* Creates a lowered etched border whose colors will be derived
 	* from the background color of the component passed into
 	* the paintBorder method.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates an etched border with the specified etch-type
@@ -51,7 +51,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* the paintBorder method.
 	* @param etchType the type of etch to be drawn by the border
 	*/
-	@:overload public function new(etchType : Int) : Void;
+	@:overload @:public public function new(etchType : Int) : Void;
 	
 	/**
 	* Creates a lowered etched border with the specified highlight and
@@ -59,7 +59,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* @param highlight the color to use for the etched highlight
 	* @param shadow the color to use for the etched shadow
 	*/
-	@:overload public function new(highlight : java.awt.Color, shadow : java.awt.Color) : Void;
+	@:overload @:public public function new(highlight : java.awt.Color, shadow : java.awt.Color) : Void;
 	
 	/**
 	* Creates an etched border with the specified etch-type,
@@ -68,7 +68,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* @param highlight the color to use for the etched highlight
 	* @param shadow the color to use for the etched shadow
 	*/
-	@:overload public function new(etchType : Int, highlight : java.awt.Color, shadow : java.awt.Color) : Void;
+	@:overload @:public public function new(etchType : Int, highlight : java.awt.Color, shadow : java.awt.Color) : Void;
 	
 	/**
 	* Paints the border for the specified component with the
@@ -80,24 +80,24 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload @:public override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload @:public override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload public function isBorderOpaque() : Bool;
+	@:overload @:public override public function isBorderOpaque() : Bool;
 	
 	/**
 	* Returns which etch-type is set on the etched border.
 	*/
-	@:overload public function getEtchType() : Int;
+	@:overload @:public public function getEtchType() : Int;
 	
 	/**
 	* Returns the highlight color of the etched border
@@ -107,7 +107,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* @param c the component for which the highlight may be derived
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getHighlightColor(c : java.awt.Component) : java.awt.Color;
+	@:require(java3) @:overload @:public public function getHighlightColor(c : java.awt.Component) : java.awt.Color;
 	
 	/**
 	* Returns the highlight color of the etched border.
@@ -115,7 +115,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* at instantiation.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getHighlightColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getHighlightColor() : java.awt.Color;
 	
 	/**
 	* Returns the shadow color of the etched border
@@ -125,7 +125,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* @param c the component for which the shadow may be derived
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getShadowColor(c : java.awt.Component) : java.awt.Color;
+	@:require(java3) @:overload @:public public function getShadowColor(c : java.awt.Component) : java.awt.Color;
 	
 	/**
 	* Returns the shadow color of the etched border.
@@ -133,7 +133,7 @@ extern class EtchedBorder extends javax.swing.border.AbstractBorder
 	* at instantiation.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getShadowColor() : java.awt.Color;
+	@:require(java3) @:overload @:public public function getShadowColor() : java.awt.Color;
 	
 	
 }

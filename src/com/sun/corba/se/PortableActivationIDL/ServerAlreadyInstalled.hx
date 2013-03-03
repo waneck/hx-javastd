@@ -7,13 +7,13 @@ package com.sun.corba.se.PortableActivationIDL;
 */
 extern class ServerAlreadyInstalled extends org.omg.CORBA.UserException
 {
-	public var serverId : String;
+	@:public public var serverId : String;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(_serverId : String) : Void;
+	@:overload @:public public function new(_serverId : String) : Void;
 	
-	@:overload public function new($reason : String, _serverId : String) : Void;
+	@:overload @:public public function new($reason : String, _serverId : String) : Void;
 	
 	
 }

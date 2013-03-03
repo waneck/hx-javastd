@@ -52,7 +52,7 @@ package java.net;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:require(java2) @:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Constructs a <code>DatagramPacket</code> for receiving packets of
@@ -64,7 +64,7 @@ package java.net;
 	* @param   buf      buffer for holding the incoming datagram.
 	* @param   length   the number of bytes to read.
 	*/
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	/**
 	* Constructs a datagram packet for sending packets of length
@@ -82,7 +82,7 @@ package java.net;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, address : java.net.InetAddress, port : Int) : Void;
+	@:require(java2) @:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Constructs a datagram packet for sending packets of length
@@ -100,7 +100,7 @@ package java.net;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, address : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, address : java.net.SocketAddress) : Void;
 	
 	/**
 	* Constructs a datagram packet for sending packets of length
@@ -114,7 +114,7 @@ package java.net;
 	* @param   port     the destination port number.
 	* @see     java.net.InetAddress
 	*/
-	@:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int, address : java.net.InetAddress, port : Int) : Void;
+	@:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int, address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Constructs a datagram packet for sending packets of length
@@ -129,7 +129,7 @@ package java.net;
 	* @since 1.4
 	* @see     java.net.InetAddress
 	*/
-	@:require(java4) @:overload public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int, address : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public public function new(buf : java.NativeArray<java.StdTypes.Int8>, length : Int, address : java.net.SocketAddress) : Void;
 	
 	/**
 	* Returns the IP address of the machine to which this datagram is being
@@ -140,7 +140,7 @@ package java.net;
 	* @see     java.net.InetAddress
 	* @see #setAddress(java.net.InetAddress)
 	*/
-	@:overload @:synchronized public function getAddress() : java.net.InetAddress;
+	@:overload @:public @:synchronized public function getAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the port number on the remote host to which this datagram is
@@ -150,7 +150,7 @@ package java.net;
 	*          being sent or from which the datagram was received.
 	* @see #setPort(int)
 	*/
-	@:overload @:synchronized public function getPort() : Int;
+	@:overload @:public @:synchronized public function getPort() : Int;
 	
 	/**
 	* Returns the data buffer. The data received or the data to be sent
@@ -160,7 +160,7 @@ package java.net;
 	* @return  the buffer used to receive or  send data
 	* @see #setData(byte[], int, int)
 	*/
-	@:overload @:synchronized public function getData() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:synchronized public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the offset of the data to be sent or the offset of the
@@ -171,7 +171,7 @@ package java.net;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function getOffset() : Int;
+	@:require(java2) @:overload @:public @:synchronized public function getOffset() : Int;
 	
 	/**
 	* Returns the length of the data to be sent or the length of the
@@ -181,7 +181,7 @@ package java.net;
 	*          data received.
 	* @see #setLength(int)
 	*/
-	@:overload @:synchronized public function getLength() : Int;
+	@:overload @:public @:synchronized public function getLength() : Int;
 	
 	/**
 	* Set the data buffer for this packet. This sets the
@@ -202,7 +202,7 @@ package java.net;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public function setData(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:require(java2) @:overload @:public @:synchronized public function setData(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
 	/**
 	* Sets the IP address of the machine to which this datagram
@@ -211,7 +211,7 @@ package java.net;
 	* @since   JDK1.1
 	* @see #getAddress()
 	*/
-	@:require(java1) @:overload @:synchronized public function setAddress(iaddr : java.net.InetAddress) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setAddress(iaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Sets the port number on the remote host to which this datagram
@@ -220,7 +220,7 @@ package java.net;
 	* @since   JDK1.1
 	* @see #getPort()
 	*/
-	@:require(java1) @:overload @:synchronized public function setPort(iport : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setPort(iport : Int) : Void;
 	
 	/**
 	* Sets the SocketAddress (usually IP address + port number) of the remote
@@ -233,7 +233,7 @@ package java.net;
 	* @since 1.4
 	* @see #getSocketAddress
 	*/
-	@:require(java4) @:overload @:synchronized public function setSocketAddress(address : java.net.SocketAddress) : Void;
+	@:require(java4) @:overload @:public @:synchronized public function setSocketAddress(address : java.net.SocketAddress) : Void;
 	
 	/**
 	* Gets the SocketAddress (usually IP address + port number) of the remote
@@ -243,7 +243,7 @@ package java.net;
 	* @since 1.4
 	* @see #setSocketAddress
 	*/
-	@:require(java4) @:overload @:synchronized public function getSocketAddress() : java.net.SocketAddress;
+	@:require(java4) @:overload @:public @:synchronized public function getSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Set the data buffer for this packet. With the offset of
@@ -259,7 +259,7 @@ package java.net;
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function setData(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setData(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Set the length for this packet. The length of the packet is
@@ -279,7 +279,7 @@ package java.net;
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public function setLength(length : Int) : Void;
+	@:require(java1) @:overload @:public @:synchronized public function setLength(length : Int) : Void;
 	
 	
 }

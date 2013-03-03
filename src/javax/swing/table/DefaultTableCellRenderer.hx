@@ -25,12 +25,12 @@ package javax.swing.table;
 */
 extern class DefaultTableCellRenderer extends javax.swing.JLabel implements javax.swing.table.TableCellRenderer implements java.io.Serializable
 {
-	private static var noFocusBorder : javax.swing.border.Border;
+	@:protected @:static private static var noFocusBorder : javax.swing.border.Border;
 	
 	/**
 	* Creates a default table cell renderer.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Overrides <code>JComponent.setForeground</code> to assign
@@ -38,7 +38,7 @@ extern class DefaultTableCellRenderer extends javax.swing.JLabel implements java
 	*
 	* @param c set the foreground color to this value
 	*/
-	@:overload override public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Overrides <code>JComponent.setBackground</code> to assign
@@ -46,7 +46,7 @@ extern class DefaultTableCellRenderer extends javax.swing.JLabel implements java
 	*
 	* @param c set the background color to this value
 	*/
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Notification from the <code>UIManager</code> that the look and feel
@@ -56,7 +56,7 @@ extern class DefaultTableCellRenderer extends javax.swing.JLabel implements java
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload @:public override public function updateUI() : Void;
 	
 	/**
 	*
@@ -79,51 +79,14 @@ extern class DefaultTableCellRenderer extends javax.swing.JLabel implements java
 	* @return the default table cell renderer
 	* @see javax.swing.JComponent#isPaintingForPrint()
 	*/
-	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload @:public public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function isOpaque() : Bool;
-	
-	/**
-	* Overridden for performance reasons.
-	* See the <a href="#override">Implementation Note</a>
-	* for more information.
-	*
-	* @since 1.5
-	*/
-	@:require(java5) @:overload override public function invalidate() : Void;
-	
-	/**
-	* Overridden for performance reasons.
-	* See the <a href="#override">Implementation Note</a>
-	* for more information.
-	*/
-	@:overload override public function validate() : Void;
-	
-	/**
-	* Overridden for performance reasons.
-	* See the <a href="#override">Implementation Note</a>
-	* for more information.
-	*/
-	@:overload override public function revalidate() : Void;
-	
-	/**
-	* Overridden for performance reasons.
-	* See the <a href="#override">Implementation Note</a>
-	* for more information.
-	*/
-	@:overload override public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
-	
-	/**
-	* Overridden for performance reasons.
-	* See the <a href="#override">Implementation Note</a>
-	* for more information.
-	*/
-	@:overload override public function repaint(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function isOpaque() : Bool;
 	
 	/**
 	* Overridden for performance reasons.
@@ -132,21 +95,58 @@ extern class DefaultTableCellRenderer extends javax.swing.JLabel implements java
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function repaint() : Void;
+	@:require(java5) @:overload @:public override public function invalidate() : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	@:overload @:public override public function validate() : Void;
 	
 	/**
 	* Overridden for performance reasons.
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
+	@:overload @:public override public function revalidate() : Void;
+	
+	/**
+	* Overridden for performance reasons.
+	* See the <a href="#override">Implementation Note</a>
+	* for more information.
+	*/
+	@:overload @:public override public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	
+	/**
+	* Overridden for performance reasons.
+	* See the <a href="#override">Implementation Note</a>
+	* for more information.
+	*/
+	@:overload @:public override public function repaint(r : java.awt.Rectangle) : Void;
+	
+	/**
+	* Overridden for performance reasons.
+	* See the <a href="#override">Implementation Note</a>
+	* for more information.
+	*
+	* @since 1.5
+	*/
+	@:require(java5) @:overload @:public override public function repaint() : Void;
+	
+	/**
+	* Overridden for performance reasons.
+	* See the <a href="#override">Implementation Note</a>
+	* for more information.
+	*/
+	@:overload @:protected override private function firePropertyChange(propertyName : String, oldValue : Dynamic, newValue : Dynamic) : Void;
+	
+	/**
+	* Overridden for performance reasons.
+	* See the <a href="#override">Implementation Note</a>
+	* for more information.
+	*/
+	@:overload @:public override public function firePropertyChange(propertyName : String, oldValue : Bool, newValue : Bool) : Void;
 	
 	/**
 	* Sets the <code>String</code> object for the cell being rendered to
@@ -157,7 +157,7 @@ extern class DefaultTableCellRenderer extends javax.swing.JLabel implements java
 	* @see JLabel#setText
 	*
 	*/
-	@:overload private function setValue(value : Dynamic) : Void;
+	@:overload @:protected private function setValue(value : Dynamic) : Void;
 	
 	
 }

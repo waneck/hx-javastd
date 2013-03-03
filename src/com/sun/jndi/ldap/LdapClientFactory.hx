@@ -25,9 +25,9 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class LdapClientFactory implements com.sun.jndi.ldap.pool.PooledConnectionFactory
 {
-	@:overload public function createPooledConnection(pcb : com.sun.jndi.ldap.pool.PoolCallback) : com.sun.jndi.ldap.pool.PooledConnection;
+	@:overload @:public public function createPooledConnection(pcb : com.sun.jndi.ldap.pool.PoolCallback) : com.sun.jndi.ldap.pool.PooledConnection;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

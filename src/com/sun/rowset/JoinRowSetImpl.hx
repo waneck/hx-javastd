@@ -33,7 +33,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs in instantiating an instance of
 	* <code>JoinRowSetImpl</code>
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds the given <code>RowSet</code> object to this
@@ -53,7 +53,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         additional <code>RowSet</code> violates the active <code>JOIN</code>
 	* @see CachedRowSet#setMatchColumn
 	*/
-	@:overload public function addRowSet(rowset : javax.sql.rowset.Joinable) : Void;
+	@:overload @:public public function addRowSet(rowset : javax.sql.rowset.Joinable) : Void;
 	
 	/**
 	* Adds the given <code>RowSet</code> object to the <code>JOIN</code> relation
@@ -77,7 +77,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>JOIN</code>
 	* @see CachedRowSet#unsetMatchColumn
 	*/
-	@:overload public function addRowSet(rowset : javax.sql.RowSet, columnIdx : Int) : Void;
+	@:overload @:public public function addRowSet(rowset : javax.sql.RowSet, columnIdx : Int) : Void;
 	
 	/**
 	* Adds the given <code>RowSet</code> object to the <code>JOIN</code> relationship
@@ -100,7 +100,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         or (3) the <code>RowSet</code> object being added violates the active
 	*         <code>JOIN</code>
 	*/
-	@:overload public function addRowSet(rowset : javax.sql.RowSet, columnName : String) : Void;
+	@:overload @:public public function addRowSet(rowset : javax.sql.RowSet, columnName : String) : Void;
 	
 	/**
 	* Adds the given <code>RowSet</code> objects to the <code>JOIN</code> relationship
@@ -129,7 +129,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <i>rowset</i> is not equal to the number of <code>int</code> values
 	*         in <i>columnIdx</i>
 	*/
-	@:overload public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnIdx : java.NativeArray<Int>) : Void;
+	@:overload @:public public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnIdx : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Adds the given <code>RowSet</code> objects to the <code>JOIN</code> relationship
@@ -161,7 +161,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         or one or the <code>RowSet</code> objects in <i>rowset</i> violates the
 	*         active <code>JOIN</code>
 	*/
-	@:overload public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnName : java.NativeArray<String>) : Void;
+	@:overload @:public public function addRowSet(rowset : java.NativeArray<javax.sql.RowSet>, columnName : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns a Collection of the <code>RowSet</code> object instances
@@ -175,7 +175,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occours generating a collection
 	* of the originating RowSets contained within the JOIN.
 	*/
-	@:overload public function getRowSets() : java.util.Collection<Dynamic>;
+	@:overload @:public public function getRowSets() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns a string array of the RowSet names currently residing
@@ -185,7 +185,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occours retrieving the RowSet names
 	* @see CachedRowSet#setTableName
 	*/
-	@:overload public function getRowSetNames() : java.NativeArray<String>;
+	@:overload @:public public function getRowSetNames() : java.NativeArray<String>;
 	
 	/**
 	* Creates a separate <code>CachedRowSet</code> object that contains the data
@@ -217,7 +217,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @see javax.sql.rowset.CachedRowSet
 	* @see javax.sql.rowset.spi.SyncProvider
 	*/
-	@:overload public function toCachedRowSet() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public public function toCachedRowSet() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Returns <code>true</code> if this <code>JoinRowSet</code> object supports
@@ -226,7 +226,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @return <code>true</code> if the CROSS_JOIN is supported; <code>false</code>
 	*         otherwise
 	*/
-	@:overload public function supportsCrossJoin() : Bool;
+	@:overload @:public public function supportsCrossJoin() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>JoinRowSet</code> object supports
@@ -234,7 +234,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @return true is the INNER_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsInnerJoin() : Bool;
+	@:overload @:public public function supportsInnerJoin() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>JoinRowSet</code> object supports
@@ -242,7 +242,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @return true is the LEFT_OUTER_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsLeftOuterJoin() : Bool;
+	@:overload @:public public function supportsLeftOuterJoin() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>JoinRowSet</code> object supports
@@ -250,7 +250,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @return true is the RIGHT_OUTER_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsRightOuterJoin() : Bool;
+	@:overload @:public public function supportsRightOuterJoin() : Bool;
 	
 	/**
 	* Returns <code>true</code> if this <code>JoinRowSet</code> object supports
@@ -258,7 +258,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @return true is the FULL_JOIN is supported; false otherwise
 	*/
-	@:overload public function supportsFullJoin() : Bool;
+	@:overload @:public public function supportsFullJoin() : Bool;
 	
 	/**
 	* Sets the type of SQL <code>JOIN</code> that this <code>JoinRowSet</code>
@@ -281,7 +281,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            <code>JoinRowSet.FULL_JOIN</code>
 	* @throws SQLException if an unsupported <code>JOIN</code> type is set
 	*/
-	@:overload public function setJoinType(type : Int) : Void;
+	@:overload @:public public function setJoinType(type : Int) : Void;
 	
 	/**
 	* Return a SQL-like description of the <code>WHERE</code> clause being used
@@ -295,7 +295,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs in generating a representation
 	* of the <code>WHERE</code> clause.
 	*/
-	@:overload public function getWhereClause() : String;
+	@:overload @:public public function getWhereClause() : String;
 	
 	/**
 	* Moves the cursor down one row from its current position and
@@ -317,7 +317,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            the cursor is not positioned in the rowset, before
 	*            the first row, or after the last row
 	*/
-	@:overload public function next() : Bool;
+	@:overload @:public override public function next() : Bool;
 	
 	/**
 	* Releases the current contents of this rowset, discarding  outstanding
@@ -328,7 +328,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	/**
 	* Reports whether the last column read was SQL <code>NULL</code>.
@@ -341,7 +341,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         was SQL <code>NULL</code>; <code>false</code> otherwise
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function wasNull() : Bool;
+	@:overload @:public override public function wasNull() : Bool;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -356,7 +356,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds or
 	*            the cursor is not on a valid row
 	*/
-	@:overload public function getString(columnIndex : Int) : String;
+	@:overload @:public override public function getString(columnIndex : Int) : String;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -371,7 +371,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getBoolean(columnIndex : Int) : Bool;
+	@:overload @:public override public function getBoolean(columnIndex : Int) : Bool;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -386,7 +386,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getByte(columnIndex : Int) : java.StdTypes.Int8;
+	@:overload @:public override public function getByte(columnIndex : Int) : java.StdTypes.Int8;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -401,7 +401,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getShort(columnIndex : Int) : java.StdTypes.Int16;
+	@:overload @:public override public function getShort(columnIndex : Int) : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -416,7 +416,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getInt(columnIndex : Int) : Int;
+	@:overload @:public override public function getInt(columnIndex : Int) : Int;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -431,7 +431,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getLong(columnIndex : Int) : haxe.Int64;
+	@:overload @:public override public function getLong(columnIndex : Int) : haxe.Int64;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -446,7 +446,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getFloat(columnIndex : Int) : Single;
+	@:overload @:public override public function getFloat(columnIndex : Int) : Single;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -461,7 +461,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getDouble(columnIndex : Int) : Float;
+	@:overload @:public override public function getDouble(columnIndex : Int) : Float;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -484,7 +484,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            the cursor is not on a valid row, or this method fails
 	* @deprecated
 	*/
-	@:overload public function getBigDecimal(columnIndex : Int, scale : Int) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnIndex : Int, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -500,7 +500,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            the cursor is not on a valid row, or the the value to be
 	*            retrieved is not binary
 	*/
-	@:overload public function getBytes(columnIndex : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getBytes(columnIndex : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -515,7 +515,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getDate(columnIndex : Int) : java.sql.Date;
+	@:overload @:public override public function getDate(columnIndex : Int) : java.sql.Date;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -530,7 +530,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getTime(columnIndex : Int) : java.sql.Time;
+	@:overload @:public override public function getTime(columnIndex : Int) : java.sql.Time;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -545,7 +545,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getTimestamp(columnIndex : Int) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnIndex : Int) : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -560,7 +560,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getAsciiStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public override public function getAsciiStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* A column value can be retrieved as a stream of Unicode characters
@@ -583,7 +583,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs
 	* @deprecated
 	*/
-	@:overload public function getUnicodeStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public override public function getUnicodeStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* A column value can be retrieved as a stream of uninterpreted bytes
@@ -604,7 +604,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* then the result is null.
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getBinaryStream(columnIndex : Int) : java.io.InputStream;
+	@:overload @:public override public function getBinaryStream(columnIndex : Int) : java.io.InputStream;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -618,7 +618,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getString(columnName : String) : String;
+	@:overload @:public override public function getString(columnName : String) : String;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -632,7 +632,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getBoolean(columnName : String) : Bool;
+	@:overload @:public override public function getBoolean(columnName : String) : Bool;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -646,7 +646,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getByte(columnName : String) : java.StdTypes.Int8;
+	@:overload @:public override public function getByte(columnName : String) : java.StdTypes.Int8;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -660,7 +660,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getShort(columnName : String) : java.StdTypes.Int16;
+	@:overload @:public override public function getShort(columnName : String) : java.StdTypes.Int16;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -674,7 +674,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getInt(columnName : String) : Int;
+	@:overload @:public override public function getInt(columnName : String) : Int;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -688,7 +688,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getLong(columnName : String) : haxe.Int64;
+	@:overload @:public override public function getLong(columnName : String) : haxe.Int64;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -702,7 +702,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getFloat(columnName : String) : Single;
+	@:overload @:public override public function getFloat(columnName : String) : Single;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -716,7 +716,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getDouble(columnName : String) : Float;
+	@:overload @:public override public function getDouble(columnName : String) : Float;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -733,7 +733,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @deprecated use the method <code>getBigDecimal(String columnName)</code>
 	*             instead
 	*/
-	@:overload public function getBigDecimal(columnName : String, scale : Int) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnName : String, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -748,7 +748,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getBytes(columnName : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public override public function getBytes(columnName : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -762,7 +762,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getDate(columnName : String) : java.sql.Date;
+	@:overload @:public override public function getDate(columnName : String) : java.sql.Date;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -776,7 +776,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getTime(columnName : String) : java.sql.Time;
+	@:overload @:public override public function getTime(columnName : String) : java.sql.Time;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -790,7 +790,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getTimestamp(columnName : String) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnName : String) : java.sql.Timestamp;
 	
 	/**
 	* This method is not supported, and it will throw an
@@ -812,7 +812,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>NULL</code>, the result is <code>null</code>.
 	* @throws UnsupportedOperationException if this method is called
 	*/
-	@:overload public function getAsciiStream(columnName : String) : java.io.InputStream;
+	@:overload @:public override public function getAsciiStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -837,7 +837,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's rows or its insert row
 	* @deprecated use the method <code>getCharacterStream</code> instead
 	*/
-	@:overload public function getUnicodeStream(columnName : String) : java.io.InputStream;
+	@:overload @:public override public function getUnicodeStream(columnName : String) : java.io.InputStream;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -859,7 +859,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's column names or the cursor is not on one of
 	*            this rowset's rows or its insert row
 	*/
-	@:overload public function getBinaryStream(columnName : String) : java.io.InputStream;
+	@:overload @:public override public function getBinaryStream(columnName : String) : java.io.InputStream;
 	
 	/* The first warning reported by calls on this <code>JoinRowSetImpl</code>
 	* object is returned. Subsequent <code>JoinRowSetImpl</code> warnings will
@@ -876,7 +876,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @return the first SQLWarning or null
 	* @throws UnsupportedOperationException if this method is called
 	*/
-	@:overload public function getWarnings() : java.sql.SQLWarning;
+	@:overload @:public override public function getWarnings() : java.sql.SQLWarning;
 	
 	/**
 	* Throws an <code>UnsupportedOperationException</code> if called.
@@ -887,7 +887,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @throws UnsupportedOperationException if this method is called
 	*/
-	@:overload public function clearWarnings() : Void;
+	@:overload @:public override public function clearWarnings() : Void;
 	
 	/**
 	* Retrieves the name of the SQL cursor used by this
@@ -912,7 +912,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         cursor
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getCursorName() : String;
+	@:overload @:public override public function getCursorName() : String;
 	
 	/**
 	* Retrieves the <code>ResultSetMetaData</code> object that contains
@@ -924,7 +924,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>JoinRowSetImpl</code> object's columns
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getMetaData() : java.sql.ResultSetMetaData;
+	@:overload @:public override public function getMetaData() : java.sql.ResultSetMetaData;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -958,7 +958,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            the <code>Class</code> object for a custom mapping
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getObject(columnIndex : Int) : Dynamic;
+	@:require(java2) @:overload @:public override public function getObject(columnIndex : Int) : Dynamic;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -996,7 +996,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         on a valid row, or (3) there is a problem getting
 	*         the <code>Class</code> object for a custom mapping
 	*/
-	@:overload public function getObject(columnIndex : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public override public function getObject(columnIndex : Int, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1030,7 +1030,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*        on a valid row, or (3) there is a problem getting
 	*        the <code>Class</code> object for a custom mapping
 	*/
-	@:overload public function getObject(columnName : String) : Dynamic;
+	@:overload @:public override public function getObject(columnName : String) : Dynamic;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -1049,7 +1049,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            the cursor is not on one of this rowset's rows or its
 	*            insert row
 	*/
-	@:overload public function getObject(columnName : String, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
+	@:overload @:public override public function getObject(columnName : String, map : java.util.Map<String, Class<Dynamic>>) : Dynamic;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1068,7 +1068,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or there is a type mismatch
 	*/
-	@:overload public function getCharacterStream(columnIndex : Int) : java.io.Reader;
+	@:overload @:public override public function getCharacterStream(columnIndex : Int) : java.io.Reader;
 	
 	/**
 	* Retrieves the value stored in the designated column
@@ -1086,7 +1086,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or there is a type mismatch
 	*/
-	@:overload public function getCharacterStream(columnName : String) : java.io.Reader;
+	@:overload @:public override public function getCharacterStream(columnName : String) : java.io.Reader;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1101,7 +1101,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getBigDecimal(columnIndex : Int) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnIndex : Int) : java.math.BigDecimal;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -1115,14 +1115,14 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column index is out of bounds,
 	*            the cursor is not on a valid row, or this method fails
 	*/
-	@:overload public function getBigDecimal(columnName : String) : java.math.BigDecimal;
+	@:overload @:public override public function getBigDecimal(columnName : String) : java.math.BigDecimal;
 	
 	/**
 	* Returns the number of rows in this <code>JoinRowSetImpl</code> object.
 	*
 	* @return number of rows in the rowset
 	*/
-	@:overload public function size() : Int;
+	@:overload @:public override public function size() : Int;
 	
 	/**
 	* Indicates whether the cursor is before the first row in this
@@ -1132,7 +1132,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>false</code> otherwise or if the rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isBeforeFirst() : Bool;
+	@:overload @:public override public function isBeforeFirst() : Bool;
 	
 	/**
 	* Indicates whether the cursor is after the last row in this
@@ -1142,7 +1142,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>false</code> otherwise or if the rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isAfterLast() : Bool;
+	@:overload @:public override public function isAfterLast() : Bool;
 	
 	/**
 	* Indicates whether the cursor is on the first row in this
@@ -1152,7 +1152,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>false</code> otherwise or if the rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isFirst() : Bool;
+	@:overload @:public override public function isFirst() : Bool;
 	
 	/**
 	* Indicates whether the cursor is on the last row in this
@@ -1166,7 +1166,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         <code>false</code> otherwise or if this rowset contains no rows
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function isLast() : Bool;
+	@:overload @:public override public function isLast() : Bool;
 	
 	/**
 	* Moves this <code>JoinRowSetImpl</code> object's cursor to the front of
@@ -1176,7 +1176,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs or the type of this rowset
 	*            is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function beforeFirst() : Void;
+	@:overload @:public override public function beforeFirst() : Void;
 	
 	/**
 	* Moves this <code>JoinRowSetImpl</code> object's cursor to the end of
@@ -1185,7 +1185,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function afterLast() : Void;
+	@:overload @:public override public function afterLast() : Void;
 	
 	/**
 	* Moves this <code>JoinRowSetImpl</code> object's cursor to the first row
@@ -1198,7 +1198,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the type of this rowset
 	*            is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function first() : Bool;
+	@:overload @:public override public function first() : Bool;
 	
 	/**
 	* Moves this <code>JoinRowSetImpl</code> object's cursor to the last row
@@ -1211,7 +1211,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the type of this rowset
 	*            is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function last() : Bool;
+	@:overload @:public override public function last() : Bool;
 	
 	/**
 	* Returns the number of the current row in this <code>JoinRowSetImpl</code>
@@ -1221,7 +1221,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         current row
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getRow() : Int;
+	@:overload @:public override public function getRow() : Int;
 	
 	/**
 	* Moves this <code>JoinRowSetImpl</code> object's cursor to the row number
@@ -1270,7 +1270,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given cursor position is <code>0</code> or the
 	*            type of this rowset is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function absolute(row : Int) : Bool;
+	@:overload @:public override public function absolute(row : Int) : Bool;
 	
 	/**
 	* Moves the cursor the specified number of rows from the current
@@ -1327,7 +1327,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         positioned either before the first row or after the last row, or
 	*         the rowset is type <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function relative(rows : Int) : Bool;
+	@:overload @:public override public function relative(rows : Int) : Bool;
 	
 	/**
 	* Moves this <code>JoinRowSetImpl</code> object's cursor to the
@@ -1371,7 +1371,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the cursor is not on a valid position or the
 	*           type of this rowset is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload public function previous() : Bool;
+	@:overload @:public override public function previous() : Bool;
 	
 	/**
 	* Returns the index of the column whose name is <i>columnName</i>.
@@ -1383,7 +1383,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the given column name does not match one of the
 	*         column names for this <code>JoinRowSet</code> object
 	*/
-	@:overload public function findColumn(columnName : String) : Int;
+	@:overload @:public override public function findColumn(columnName : String) : Int;
 	
 	/**
 	* Indicates whether the current row of this <code>JoinRowSetImpl</code>
@@ -1399,7 +1399,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @see DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function rowUpdated() : Bool;
+	@:overload @:public override public function rowUpdated() : Bool;
 	
 	/**
 	* Indicates whether the designated column of the current row of
@@ -1413,7 +1413,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*          on a valid row
 	* @see DatabaseMetaData#updatesAreDetected
 	*/
-	@:overload public function columnUpdated(indexColumn : Int) : Bool;
+	@:overload @:public override public function columnUpdated(indexColumn : Int) : Bool;
 	
 	/**
 	* Indicates whether the current row has been inserted.  The value returned
@@ -1426,7 +1426,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @see DatabaseMetaData#insertsAreDetected
 	*/
-	@:overload public function rowInserted() : Bool;
+	@:overload @:public override public function rowInserted() : Bool;
 	
 	/**
 	* Indicates whether the current row has been deleted.  A deleted row
@@ -1441,7 +1441,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the cursor is on a valid row in this rowset
 	* @see DatabaseMetaData#deletesAreDetected
 	*/
-	@:overload public function rowDeleted() : Bool;
+	@:overload @:public override public function rowDeleted() : Bool;
 	
 	/**
 	* Sets the designated nullable column in the current row or the
@@ -1469,7 +1469,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateNull(columnIndex : Int) : Void;
+	@:overload @:public override public function updateNull(columnIndex : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1494,7 +1494,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBoolean(columnIndex : Int, x : Bool) : Void;
+	@:overload @:public override public function updateBoolean(columnIndex : Int, x : Bool) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1519,7 +1519,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1544,7 +1544,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1569,7 +1569,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateInt(columnIndex : Int, x : Int) : Void;
+	@:overload @:public override public function updateInt(columnIndex : Int, x : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1594,7 +1594,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
+	@:overload @:public override public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1619,7 +1619,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateFloat(columnIndex : Int, x : Single) : Void;
+	@:overload @:public override public function updateFloat(columnIndex : Int, x : Single) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1644,7 +1644,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDouble(columnIndex : Int, x : Float) : Void;
+	@:overload @:public override public function updateDouble(columnIndex : Int, x : Float) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1669,7 +1669,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
+	@:overload @:public override public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1697,7 +1697,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateString(columnIndex : Int, x : String) : Void;
+	@:overload @:public override public function updateString(columnIndex : Int, x : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1722,7 +1722,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1748,7 +1748,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            an SQL <code>DATE</code> or <code>TIMESTAMP</code>, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
+	@:overload @:public override public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1774,7 +1774,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            an SQL <code>TIME</code> or <code>TIMESTAMP</code>, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
+	@:overload @:public override public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1801,7 +1801,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
+	@:overload @:public override public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
 	
 	/*
 	* Sets the designated column in either the current row or the insert
@@ -1824,7 +1824,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @param length the number of one-byte ASCII characters in the stream
 	* @throws UnsupportedOperationException if this method is invoked
 	*/
-	@:overload public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1852,7 +1852,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, (3) the data in the stream is not binary, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1882,7 +1882,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            character type, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
+	@:overload @:public override public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1912,7 +1912,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
+	@:overload @:public override public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1937,7 +1937,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnIndex : Int, x : Dynamic) : Void;
+	@:overload @:public override public function updateObject(columnIndex : Int, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated nullable column in the current row or the
@@ -1959,7 +1959,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateNull(columnName : String) : Void;
+	@:overload @:public override public function updateNull(columnName : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1983,7 +1983,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBoolean(columnName : String, x : Bool) : Void;
+	@:overload @:public override public function updateBoolean(columnName : String, x : Bool) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2007,7 +2007,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2031,7 +2031,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2055,7 +2055,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateInt(columnName : String, x : Int) : Void;
+	@:overload @:public override public function updateInt(columnName : String, x : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2079,7 +2079,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateLong(columnName : String, x : haxe.Int64) : Void;
+	@:overload @:public override public function updateLong(columnName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2103,7 +2103,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateFloat(columnName : String, x : Single) : Void;
+	@:overload @:public override public function updateFloat(columnName : String, x : Single) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2127,7 +2127,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDouble(columnName : String, x : Float) : Void;
+	@:overload @:public override public function updateDouble(columnName : String, x : Float) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2151,7 +2151,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
+	@:overload @:public override public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2175,7 +2175,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateString(columnName : String, x : String) : Void;
+	@:overload @:public override public function updateString(columnName : String, x : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2199,7 +2199,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public override public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2225,7 +2225,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateDate(columnName : String, x : java.sql.Date) : Void;
+	@:overload @:public override public function updateDate(columnName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2251,7 +2251,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTime(columnName : String, x : java.sql.Time) : Void;
+	@:overload @:public override public function updateTime(columnName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2280,7 +2280,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            <code>TIME</code>, or <code>TIMESTAMP</code>, or (4) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
+	@:overload @:public override public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Unsupported; throws an <code>UnsupportedOperationException</code>
@@ -2305,7 +2305,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @param length the number of one-byte ASCII characters in the stream
 	* @throws UnsupportedOperationException if this method is invoked
 	*/
-	@:overload public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2333,7 +2333,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            in the stream is not binary, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload @:public override public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2362,7 +2362,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            in the stream is not a binary or character type, or (4) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateCharacterStream(columnName : String, x : java.io.Reader, length : Int) : Void;
+	@:overload @:public override public function updateCharacterStream(columnName : String, x : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2394,7 +2394,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
+	@:overload @:public override public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2418,7 +2418,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateObject(columnName : String, x : Dynamic) : Void;
+	@:overload @:public override public function updateObject(columnName : String, x : Dynamic) : Void;
 	
 	/**
 	* Inserts the contents of this <code>JoinRowSetImpl</code> object's insert
@@ -2435,7 +2435,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            row has not been given a value, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function insertRow() : Void;
+	@:overload @:public override public function insertRow() : Void;
 	
 	/**
 	* Marks the current row of this <code>JoinRowSetImpl</code> object as
@@ -2450,7 +2450,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the cursor is on the insert row or this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRow() : Void;
+	@:overload @:public override public function updateRow() : Void;
 	
 	/**
 	* Deletes the current row from this <code>JoinRowSetImpl</code> object and
@@ -2467,7 +2467,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            last row or (2) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function deleteRow() : Void;
+	@:overload @:public override public function deleteRow() : Void;
 	
 	/**
 	* Sets the current row with its original value and marks the row as
@@ -2479,7 +2479,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the cursor is on the insert row, before the
 	*            first row, or after the last row
 	*/
-	@:overload public function refreshRow() : Void;
+	@:overload @:public override public function refreshRow() : Void;
 	
 	/**
 	* Rolls back any updates made to the current row of this
@@ -2498,7 +2498,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if the cursor is on the insert row, before the
 	*            first row, or after the last row
 	*/
-	@:overload public function cancelRowUpdates() : Void;
+	@:overload @:public override public function cancelRowUpdates() : Void;
 	
 	/**
 	* Moves the cursor for this <code>JoinRowSetImpl</code> object
@@ -2526,7 +2526,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if this <code>JoinRowSetImpl</code> object is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function moveToInsertRow() : Void;
+	@:overload @:public override public function moveToInsertRow() : Void;
 	
 	/**
 	* Moves the cursor for this <code>JoinRowSetImpl</code> object to
@@ -2538,7 +2538,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function moveToCurrentRow() : Void;
+	@:overload @:public override public function moveToCurrentRow() : Void;
 	
 	/**
 	* Returns <code>null</code>.
@@ -2546,7 +2546,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @return <code>null</code>
 	* @throws SQLException if an error occurs
 	*/
-	@:overload public function getStatement() : java.sql.Statement;
+	@:overload @:public override public function getStatement() : java.sql.Statement;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2562,7 +2562,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) the designated column does not store an
 	*            SQL <code>REF</code> value
 	*/
-	@:overload public function getRef(columnIndex : Int) : java.sql.Ref;
+	@:overload @:public override public function getRef(columnIndex : Int) : java.sql.Ref;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2578,7 +2578,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) the designated column does not store an
 	*            SQL <code>BLOB</code> value
 	*/
-	@:overload public function getBlob(columnIndex : Int) : java.sql.Blob;
+	@:overload @:public override public function getBlob(columnIndex : Int) : java.sql.Blob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2594,7 +2594,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) the designated column does not store an
 	*            SQL <code>CLOB</code> value
 	*/
-	@:overload public function getClob(columnIndex : Int) : java.sql.Clob;
+	@:overload @:public override public function getClob(columnIndex : Int) : java.sql.Clob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2611,7 +2611,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) the designated column does not store an
 	*            SQL <code>ARRAY</code> value
 	*/
-	@:overload public function getArray(columnIndex : Int) : java.sql.Array;
+	@:overload @:public override public function getArray(columnIndex : Int) : java.sql.Array;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2626,7 +2626,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*         this rowset's rows or its insert row, or (3) the column value
 	*         is not an SQL <code>REF</code> value
 	*/
-	@:overload public function getRef(columnName : String) : java.sql.Ref;
+	@:overload @:public override public function getRef(columnName : String) : java.sql.Ref;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2642,7 +2642,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*        this rowset's rows or its insert row, or (3) the designated
 	*        column does not store an SQL <code>BLOB</code> value
 	*/
-	@:overload public function getBlob(columnName : String) : java.sql.Blob;
+	@:overload @:public override public function getBlob(columnName : String) : java.sql.Blob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2658,7 +2658,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            this rowset's rows or its insert row, or (3) the designated
 	*            column does not store an SQL <code>CLOB</code> value
 	*/
-	@:overload public function getClob(columnName : String) : java.sql.Clob;
+	@:overload @:public override public function getClob(columnName : String) : java.sql.Clob;
 	
 	/**
 	* Retrieves the value of the designated column in this
@@ -2674,7 +2674,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*        this rowset's rows or its insert row, or (3) the designated
 	*        column does not store an SQL <code>ARRAY</code> value
 	*/
-	@:overload public function getArray(columnName : String) : java.sql.Array;
+	@:overload @:public override public function getArray(columnName : String) : java.sql.Array;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -2695,7 +2695,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            column does not store an SQL <code>DATE</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getDate(columnIndex : Int, cal : java.util.Calendar) : java.sql.Date;
+	@:overload @:public override public function getDate(columnIndex : Int, cal : java.util.Calendar) : java.sql.Date;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -2715,7 +2715,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            column does not store an SQL <code>DATE</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getDate(columnName : String, cal : java.util.Calendar) : java.sql.Date;
+	@:overload @:public override public function getDate(columnName : String, cal : java.util.Calendar) : java.sql.Date;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -2736,7 +2736,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            column does not store an SQL <code>TIME</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTime(columnIndex : Int, cal : java.util.Calendar) : java.sql.Time;
+	@:overload @:public override public function getTime(columnIndex : Int, cal : java.util.Calendar) : java.sql.Time;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -2756,7 +2756,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            column does not store an SQL <code>TIME</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTime(columnName : String, cal : java.util.Calendar) : java.sql.Time;
+	@:overload @:public override public function getTime(columnName : String, cal : java.util.Calendar) : java.sql.Time;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -2777,7 +2777,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            column does not store an SQL <code>TIME</code> or
 	*            <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTimestamp(columnIndex : Int, cal : java.util.Calendar) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnIndex : Int, cal : java.util.Calendar) : java.sql.Timestamp;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -2798,7 +2798,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            column does not store an SQL <code>DATE</code>,
 	*            <code>TIME</code>, or <code>TIMESTAMP</code> value
 	*/
-	@:overload public function getTimestamp(columnName : String, cal : java.util.Calendar) : java.sql.Timestamp;
+	@:overload @:public override public function getTimestamp(columnName : String, cal : java.util.Calendar) : java.sql.Timestamp;
 	
 	/**
 	* Sets the metadata for this <code>JoinRowSetImpl</code> object
@@ -2809,9 +2809,9 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if invalid meta data is supplied to the
 	*            rowset
 	*/
-	@:overload public function setMetaData(md : javax.sql.RowSetMetaData) : Void;
+	@:overload @:public override public function setMetaData(md : javax.sql.RowSetMetaData) : Void;
 	
-	@:overload public function getOriginal() : java.sql.ResultSet;
+	@:overload @:public override public function getOriginal() : java.sql.ResultSet;
 	
 	/**
 	* Returns a result set containing the original value of the rowset.
@@ -2823,7 +2823,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs produce the
 	*           <code>ResultSet</code> object
 	*/
-	@:overload public function getOriginalRow() : java.sql.ResultSet;
+	@:overload @:public override public function getOriginalRow() : java.sql.ResultSet;
 	
 	/**
 	* Returns a result set containing the original value of the current
@@ -2832,7 +2832,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if there is no current row
 	* @see #setOriginalRow
 	*/
-	@:overload public function setOriginalRow() : Void;
+	@:overload @:public override public function setOriginalRow() : Void;
 	
 	/**
 	* Returns the columns that make a key to uniquely identify a
@@ -2845,7 +2845,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*           are designated as primary keys
 	* @see #setKeyColumns
 	*/
-	@:overload public function getKeyColumns() : java.NativeArray<Int>;
+	@:overload @:public override public function getKeyColumns() : java.NativeArray<Int>;
 	
 	/**
 	* Sets this <code>JoinRowSetImpl</code> object's
@@ -2863,7 +2863,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            given array is not valid for this rowset
 	* @see #getKeyColumns
 	*/
-	@:overload public function setKeyColumns(cols : java.NativeArray<Int>) : Void;
+	@:overload @:public override public function setKeyColumns(cols : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2889,7 +2889,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRef(columnIndex : Int, ref : java.sql.Ref) : Void;
+	@:overload @:public override public function updateRef(columnIndex : Int, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2915,7 +2915,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateRef(columnName : String, ref : java.sql.Ref) : Void;
+	@:overload @:public override public function updateRef(columnName : String, ref : java.sql.Ref) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2941,7 +2941,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateClob(columnIndex : Int, c : java.sql.Clob) : Void;
+	@:overload @:public override public function updateClob(columnIndex : Int, c : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2967,7 +2967,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateClob(columnName : String, c : java.sql.Clob) : Void;
+	@:overload @:public override public function updateClob(columnName : String, c : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -2993,7 +2993,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBlob(columnIndex : Int, b : java.sql.Blob) : Void;
+	@:overload @:public override public function updateBlob(columnIndex : Int, b : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3019,7 +3019,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateBlob(columnName : String, b : java.sql.Blob) : Void;
+	@:overload @:public override public function updateBlob(columnName : String, b : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3045,7 +3045,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateArray(columnIndex : Int, a : java.sql.Array) : Void;
+	@:overload @:public override public function updateArray(columnIndex : Int, a : java.sql.Array) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -3071,7 +3071,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload public function updateArray(columnName : String, a : java.sql.Array) : Void;
+	@:overload @:public override public function updateArray(columnName : String, a : java.sql.Array) : Void;
 	
 	/**
 	* Populates this <code>JoinRowSetImpl</code> object with data.
@@ -3096,7 +3096,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs or the
 	*                         necessary properties have not been set
 	*/
-	@:overload public function execute() : Void;
+	@:overload @:public override public function execute() : Void;
 	
 	/**
 	* Populates this <code>JoinRowSetImpl</code> object with data,
@@ -3116,17 +3116,17 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*           data soure
 	* @see java.sql.Connection
 	*/
-	@:overload public function execute(conn : java.sql.Connection) : Void;
+	@:overload @:public override public function execute(conn : java.sql.Connection) : Void;
 	
 	/**
 	* Provide interface coverage for getURL(int) in ResultSet->RowSet
 	*/
-	@:overload public function getURL(columnIndex : Int) : java.net.URL;
+	@:overload @:public override public function getURL(columnIndex : Int) : java.net.URL;
 	
 	/**
 	* Provide interface coverage for getURL(String) in ResultSet->RowSet
 	*/
-	@:overload public function getURL(columnName : String) : java.net.URL;
+	@:overload @:public override public function getURL(columnName : String) : java.net.URL;
 	
 	/**
 	* Creates a new <code>WebRowSet</code> object, populates it with the
@@ -3136,7 +3136,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs writing out the rowset
 	*          contents to XML
 	*/
-	@:overload override public function writeXml(rs : java.sql.ResultSet, writer : java.io.Writer) : Void;
+	@:overload @:public override public function writeXml(rs : java.sql.ResultSet, writer : java.io.Writer) : Void;
 	
 	/**
 	* Writes this <code>JoinRowSet</code> object to the given
@@ -3147,14 +3147,14 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if an error occurs writing out the rowset
 	*          contents to XML
 	*/
-	@:overload override public function writeXml(writer : java.io.Writer) : Void;
+	@:overload @:public override public function writeXml(writer : java.io.Writer) : Void;
 	
 	/**
 	* Reads this <code>JoinRowSet</code> object in its XML format.
 	*
 	* @throws SQLException if a database access error occurs
 	*/
-	@:overload override public function readXml(reader : java.io.Reader) : Void;
+	@:overload @:public override public function readXml(reader : java.io.Reader) : Void;
 	
 	/**
 	* Reads a stream based XML input to populate an <code>WebRowSet</code>
@@ -3162,7 +3162,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if a data source access occurs
 	* @throws IOException if a IO exception occurs
 	*/
-	@:overload override public function readXml(iStream : java.io.InputStream) : Void;
+	@:overload @:public override public function readXml(iStream : java.io.InputStream) : Void;
 	
 	/**
 	* Creates an an output stream of the internal state and contents of a
@@ -3171,7 +3171,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if a datasource access occurs
 	* @throws IOException if an IO exception occurs
 	*/
-	@:overload override public function writeXml(oStream : java.io.OutputStream) : Void;
+	@:overload @:public override public function writeXml(oStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Creates a new <code>WebRowSet</code> object, populates it with
@@ -3181,7 +3181,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @throws SQLException if a datasource access occurs
 	* @throws IOException if an IO exception occurs
 	*/
-	@:overload override public function writeXml(rs : java.sql.ResultSet, oStream : java.io.OutputStream) : Void;
+	@:overload @:public override public function writeXml(rs : java.sql.ResultSet, oStream : java.io.OutputStream) : Void;
 	
 	/**
 	* Returns the last set SQL <code>JOIN</code> type in this JoinRowSetImpl
@@ -3190,7 +3190,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @return joinType One of the standard JoinRowSet static field JOIN types
 	* @throws SQLException if an error occurs determining the current join type
 	*/
-	@:overload public function getJoinType() : Int;
+	@:overload @:public public function getJoinType() : Int;
 	
 	/**
 	* The listener will be notified whenever an event occurs on this <code>JoinRowSet</code>
@@ -3214,7 +3214,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*     null.
 	* @see #removeRowSetListener
 	*/
-	@:overload public function addRowSetListener(listener : javax.sql.RowSetListener) : Void;
+	@:overload @:public override public function addRowSetListener(listener : javax.sql.RowSetListener) : Void;
 	
 	/**
 	* Removes the designated object from this <code>JoinRowSet</code> object's list of listeners.
@@ -3229,7 +3229,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	*        of listeners for this <code>JoinRowSet</code> object
 	* @see #addRowSetListener
 	*/
-	@:overload public function removeRowSetListener(listener : javax.sql.RowSetListener) : Void;
+	@:overload @:public override public function removeRowSetListener(listener : javax.sql.RowSetListener) : Void;
 	
 	/**
 	* Converts this <code>JoinRowSetImpl</code> object to a collection
@@ -3246,7 +3246,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @see #toCollection(String)
 	* @see java.util.TreeMap
 	*/
-	@:overload public function toCollection() : java.util.Collection<Dynamic>;
+	@:overload @:public override public function toCollection() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns the specified column of this <code>JoinRowSetImpl</code> object
@@ -3266,7 +3266,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @see #toCollection(String)
 	* @see java.util.Vector
 	*/
-	@:overload public function toCollection(column : Int) : java.util.Collection<Dynamic>;
+	@:overload @:public override public function toCollection(column : Int) : java.util.Collection<Dynamic>;
 	
 	/**
 	* Returns the specified column of this <code>JoinRowSetImpl</code> object
@@ -3286,7 +3286,7 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @see #toCollection(int)
 	* @see java.util.Vector
 	*/
-	@:overload public function toCollection(column : String) : java.util.Collection<Dynamic>;
+	@:overload @:public override public function toCollection(column : String) : java.util.Collection<Dynamic>;
 	
 	/**
 	* Creates a <code>RowSet</code> object that is a copy of
@@ -3310,22 +3310,22 @@ extern class JoinRowSetImpl extends com.sun.rowset.WebRowSetImpl implements java
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopySchema() : javax.sql.rowset.CachedRowSet;
+	@:overload @:public override public function createCopySchema() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function setSyncProvider(providerStr : String) : Void;
+	@:overload @:public override public function setSyncProvider(providerStr : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function acceptChanges() : Void;
+	@:overload @:public override public function acceptChanges() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getSyncProvider() : javax.sql.rowset.spi.SyncProvider;
+	@:overload @:public override public function getSyncProvider() : javax.sql.rowset.spi.SyncProvider;
 	
 	
 }

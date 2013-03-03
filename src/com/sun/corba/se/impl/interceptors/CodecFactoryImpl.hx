@@ -29,7 +29,7 @@ extern class CodecFactoryImpl extends org.omg.CORBA.LocalObject implements org.o
 	* Creates a new CodecFactory implementation.  Stores the ORB that
 	* created this factory, for later use by the Codec.
 	*/
-	@:overload public function new(orb : org.omg.CORBA.ORB) : Void;
+	@:overload @:public public function new(orb : org.omg.CORBA.ORB) : Void;
 	
 	/**
 	* Creates a codec of the given encoding.  The only format recognized
@@ -39,7 +39,7 @@ extern class CodecFactoryImpl extends org.omg.CORBA.LocalObject implements org.o
 	* @exception UnknownEncoding Thrown if this factory cannot create a
 	*   Codec of the given encoding.
 	*/
-	@:overload public function create_codec(enc : org.omg.IOP.Encoding) : org.omg.IOP.Codec;
+	@:overload @:public public function create_codec(enc : org.omg.IOP.Encoding) : org.omg.IOP.Codec;
 	
 	
 }

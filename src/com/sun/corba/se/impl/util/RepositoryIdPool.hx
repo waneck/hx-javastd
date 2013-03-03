@@ -31,15 +31,15 @@ package com.sun.corba.se.impl.util;
 */
 @:internal extern class RepositoryIdPool extends java.util.Stack<Dynamic>
 {
-	@:overload @:final @:synchronized public function popId() : com.sun.corba.se.impl.util.RepositoryId;
+	@:overload @:public @:final @:synchronized public function popId() : com.sun.corba.se.impl.util.RepositoryId;
 	
 	
 }
 extern class RepositoryIdCache extends java.util.Hashtable<Dynamic, Dynamic>
 {
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final @:synchronized public function getId(key : String) : com.sun.corba.se.impl.util.RepositoryId;
+	@:overload @:public @:final @:synchronized public function getId(key : String) : com.sun.corba.se.impl.util.RepositoryId;
 	
 	
 }

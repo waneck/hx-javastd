@@ -43,85 +43,85 @@ extern class SAXDocumentSerializer extends com.sun.xml.internal.fastinfoset.Enco
 	* More than one fast infoset document may be encoded to the
 	* {@link java.io.OutputStream}.
 	*/
-	private var _elementHasNamespaces : Bool;
+	@:protected private var _elementHasNamespaces : Bool;
 	
-	private var _charactersAsCDATA : Bool;
+	@:protected private var _charactersAsCDATA : Bool;
 	
-	@:overload private function new(v : Bool) : Void;
+	@:overload @:protected private function new(v : Bool) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public override public function reset() : Void;
 	
-	@:overload @:final public function startDocument() : Void;
+	@:overload @:public @:final override public function startDocument() : Void;
 	
-	@:overload @:final public function endDocument() : Void;
+	@:overload @:public @:final override public function endDocument() : Void;
 	
-	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload @:final public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public @:final override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload @:final public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:public @:final override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload @:final public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public @:final override public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload @:final public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public @:final override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload @:final public function skippedEntity(name : String) : Void;
+	@:overload @:public @:final override public function skippedEntity(name : String) : Void;
 	
-	@:overload @:final public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function startCDATA() : Void;
+	@:overload @:public @:final public function startCDATA() : Void;
 	
-	@:overload @:final public function endCDATA() : Void;
+	@:overload @:public @:final public function endCDATA() : Void;
 	
-	@:overload @:final public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:final public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload @:final public function endDTD() : Void;
+	@:overload @:public @:final public function endDTD() : Void;
 	
-	@:overload @:final public function startEntity(name : String) : Void;
+	@:overload @:public @:final public function startEntity(name : String) : Void;
 	
-	@:overload @:final public function endEntity(name : String) : Void;
+	@:overload @:public @:final public function endEntity(name : String) : Void;
 	
-	@:overload @:final public function octets(URI : String, id : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function octets(URI : String, id : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function object(URI : String, id : Int, data : Dynamic) : Void;
+	@:overload @:public @:final public function object(URI : String, id : Int, data : Dynamic) : Void;
 	
-	@:overload @:final public function bytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function bytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function shorts(s : java.NativeArray<java.StdTypes.Int16>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function shorts(s : java.NativeArray<java.StdTypes.Int16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function ints(i : java.NativeArray<Int>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function ints(i : java.NativeArray<Int>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function longs(l : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function longs(l : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function booleans(b : java.NativeArray<Bool>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function booleans(b : java.NativeArray<Bool>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function floats(f : java.NativeArray<Single>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function floats(f : java.NativeArray<Single>, start : Int, length : Int) : Void;
 	
-	@:overload @:final public function doubles(d : java.NativeArray<Float>, start : Int, length : Int) : Void;
+	@:overload @:public @:final public function doubles(d : java.NativeArray<Float>, start : Int, length : Int) : Void;
 	
-	@:overload public function uuids(msblsb : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
+	@:overload @:public public function uuids(msblsb : java.NativeArray<haxe.Int64>, start : Int, length : Int) : Void;
 	
-	@:overload public function numericCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function numericCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function dateTimeCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function dateTimeCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function alphabetCharacters(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function alphabetCharacters(alphabet : String, ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, index : Bool) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, index : Bool) : Void;
 	
-	@:overload @:final private function countAttributes(atts : org.xml.sax.Attributes) : Int;
+	@:overload @:protected @:final private function countAttributes(atts : org.xml.sax.Attributes) : Int;
 	
-	@:overload private function encodeAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:protected private function encodeAttributes(atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
+	@:overload @:protected private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
 	
-	@:overload private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Bool;
+	@:overload @:protected private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Bool;
 	
 	
 }

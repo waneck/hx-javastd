@@ -27,69 +27,69 @@ package com.sun.xml.internal.fastinfoset.stax.events;
 */
 extern class StartDocumentEvent extends com.sun.xml.internal.fastinfoset.stax.events.EventBase implements javax.xml.stream.events.StartDocument
 {
-	private var _systemId : String;
+	@:protected private var _systemId : String;
 	
-	private var _encoding : String;
+	@:protected private var _encoding : String;
 	
-	private var _standalone : Bool;
+	@:protected private var _standalone : Bool;
 	
-	private var _version : String;
+	@:protected private var _version : String;
 	
-	@:overload public function reset() : Void;
+	@:overload @:public public function reset() : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(encoding : String) : Void;
+	@:overload @:public public function new(encoding : String) : Void;
 	
-	@:overload public function new(encoding : String, version : String) : Void;
+	@:overload @:public public function new(encoding : String, version : String) : Void;
 	
 	/**
 	* Returns the system ID of the XML data
 	* @return the system ID, defaults to ""
 	*/
-	@:overload override public function getSystemId() : String;
+	@:overload @:public override public function getSystemId() : String;
 	
 	/**
 	* Returns the encoding style of the XML data
 	* @return the character encoding, defaults to "UTF-8"
 	*/
-	@:overload public function getCharacterEncodingScheme() : String;
+	@:overload @:public public function getCharacterEncodingScheme() : String;
 	
 	/**
 	* Returns true if CharacterEncodingScheme was set in
 	* the encoding declaration of the document
 	*/
-	@:overload public function encodingSet() : Bool;
+	@:overload @:public public function encodingSet() : Bool;
 	
 	/**
 	* Returns if this XML is standalone
 	* @return the standalone state of XML, defaults to "no"
 	*/
-	@:overload public function isStandalone() : Bool;
+	@:overload @:public public function isStandalone() : Bool;
 	
 	/**
 	* Returns true if the standalone attribute was set in
 	* the encoding declaration of the document.
 	*/
-	@:overload public function standaloneSet() : Bool;
+	@:overload @:public public function standaloneSet() : Bool;
 	
 	/**
 	* Returns the version of XML of this XML stream
 	* @return the version of XML, defaults to "1.0"
 	*/
-	@:overload public function getVersion() : String;
+	@:overload @:public public function getVersion() : String;
 	
-	@:overload public function setStandalone(standalone : Bool) : Void;
+	@:overload @:public public function setStandalone(standalone : Bool) : Void;
 	
-	@:overload public function setStandalone(s : String) : Void;
+	@:overload @:public public function setStandalone(s : String) : Void;
 	
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
-	@:overload public function setVersion(s : String) : Void;
+	@:overload @:public public function setVersion(s : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload override public function isStartDocument() : Bool;
+	@:overload @:public override public function isStartDocument() : Bool;
 	
 	
 }

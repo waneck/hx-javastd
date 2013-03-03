@@ -29,14 +29,14 @@ extern class Main
 	* Command line interface.
 	* @param args   The command line parameters.
 	*/
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	/**
 	* Programmatic interface.
 	* @param args   The command line parameters.
 	* @return The return code.
 	*/
-	@:overload public static function execute(args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function execute(args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -48,7 +48,7 @@ extern class Main
 	* @return The return code.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function execute(docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
+	@:require(java7) @:overload @:public @:static public static function execute(docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -56,7 +56,7 @@ extern class Main
 	* @param args   The command line parameters.
 	* @return The return code.
 	*/
-	@:overload public static function execute(programName : String, args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function execute(programName : String, args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -69,7 +69,7 @@ extern class Main
 	* @return The return code.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function execute(programName : String, docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
+	@:require(java7) @:overload @:public @:static public static function execute(programName : String, docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -78,7 +78,7 @@ extern class Main
 	* @param args   The command line parameters.
 	* @return The return code.
 	*/
-	@:overload public static function execute(programName : String, defaultDocletClassName : String, args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function execute(programName : String, defaultDocletClassName : String, args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -92,7 +92,7 @@ extern class Main
 	* @return The return code.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function execute(programName : String, defaultDocletClassName : String, docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
+	@:require(java7) @:overload @:public @:static public static function execute(programName : String, defaultDocletClassName : String, docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -104,7 +104,7 @@ extern class Main
 	* @param args   The command line parameters.
 	* @return The return code.
 	*/
-	@:overload public static function execute(programName : String, errWriter : java.io.PrintWriter, warnWriter : java.io.PrintWriter, noticeWriter : java.io.PrintWriter, defaultDocletClassName : String, args : java.NativeArray<String>) : Int;
+	@:overload @:public @:static public static function execute(programName : String, errWriter : java.io.PrintWriter, warnWriter : java.io.PrintWriter, noticeWriter : java.io.PrintWriter, defaultDocletClassName : String, args : java.NativeArray<String>) : Int;
 	
 	/**
 	* Programmatic interface.
@@ -121,7 +121,7 @@ extern class Main
 	* @return The return code.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function execute(programName : String, errWriter : java.io.PrintWriter, warnWriter : java.io.PrintWriter, noticeWriter : java.io.PrintWriter, defaultDocletClassName : String, docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
+	@:require(java7) @:overload @:public @:static public static function execute(programName : String, errWriter : java.io.PrintWriter, warnWriter : java.io.PrintWriter, noticeWriter : java.io.PrintWriter, defaultDocletClassName : String, docletParentClassLoader : java.lang.ClassLoader, args : java.NativeArray<String>) : Int;
 	
 	
 }

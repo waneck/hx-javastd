@@ -30,21 +30,21 @@ extern class CoderResult
 	*
 	* @return  A descriptive string
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Tells whether or not this object describes an underflow condition.  </p>
 	*
 	* @return  <tt>true</tt> if, and only if, this object denotes underflow
 	*/
-	@:overload public function isUnderflow() : Bool;
+	@:overload @:public public function isUnderflow() : Bool;
 	
 	/**
 	* Tells whether or not this object describes an overflow condition.  </p>
 	*
 	* @return  <tt>true</tt> if, and only if, this object denotes overflow
 	*/
-	@:overload public function isOverflow() : Bool;
+	@:overload @:public public function isOverflow() : Bool;
 	
 	/**
 	* Tells whether or not this object describes an error condition.  </p>
@@ -52,7 +52,7 @@ extern class CoderResult
 	* @return  <tt>true</tt> if, and only if, this object denotes either a
 	*          malformed-input error or an unmappable-character error
 	*/
-	@:overload public function isError() : Bool;
+	@:overload @:public public function isError() : Bool;
 	
 	/**
 	* Tells whether or not this object describes a malformed-input error.
@@ -61,7 +61,7 @@ extern class CoderResult
 	* @return  <tt>true</tt> if, and only if, this object denotes a
 	*          malformed-input error
 	*/
-	@:overload public function isMalformed() : Bool;
+	@:overload @:public public function isMalformed() : Bool;
 	
 	/**
 	* Tells whether or not this object describes an unmappable-character
@@ -70,7 +70,7 @@ extern class CoderResult
 	* @return  <tt>true</tt> if, and only if, this object denotes an
 	*          unmappable-character error
 	*/
-	@:overload public function isUnmappable() : Bool;
+	@:overload @:public public function isUnmappable() : Bool;
 	
 	/**
 	* Returns the length of the erroneous input described by this
@@ -82,20 +82,20 @@ extern class CoderResult
 	*          If this object does not describe an error condition, that is,
 	*          if the {@link #isError() isError} does not return <tt>true</tt>
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* Result object indicating underflow, meaning that either the input buffer
 	* has been completely consumed or, if the input buffer is not yet empty,
 	* that additional input is required.  </p>
 	*/
-	public static var UNDERFLOW(default, null) : java.nio.charset.CoderResult;
+	@:public @:static @:final public static var UNDERFLOW(default, null) : java.nio.charset.CoderResult;
 	
 	/**
 	* Result object indicating overflow, meaning that there is insufficient
 	* room in the output buffer.  </p>
 	*/
-	public static var OVERFLOW(default, null) : java.nio.charset.CoderResult;
+	@:public @:static @:final public static var OVERFLOW(default, null) : java.nio.charset.CoderResult;
 	
 	/**
 	* Static factory method that returns the unique object describing a
@@ -103,7 +103,7 @@ extern class CoderResult
 	*
 	* @return  The requested coder-result object
 	*/
-	@:overload public static function malformedForLength(length : Int) : java.nio.charset.CoderResult;
+	@:overload @:public @:static public static function malformedForLength(length : Int) : java.nio.charset.CoderResult;
 	
 	/**
 	* Static factory method that returns the unique result object describing
@@ -111,7 +111,7 @@ extern class CoderResult
 	*
 	* @return  The requested coder-result object
 	*/
-	@:overload public static function unmappableForLength(length : Int) : java.nio.charset.CoderResult;
+	@:overload @:public @:static public static function unmappableForLength(length : Int) : java.nio.charset.CoderResult;
 	
 	/**
 	* Throws an exception appropriate to the result described by this object.
@@ -131,13 +131,13 @@ extern class CoderResult
 	*          If this object represents an unmappable-character error; the
 	*          exceptions length value will be that of this object
 	*/
-	@:overload public function throwException() : Void;
+	@:overload @:public public function throwException() : Void;
 	
 	
 }
 @:native('java$nio$charset$CoderResult$Cache') @:internal extern class CoderResult_Cache
 {
-	@:overload @:abstract private function create(len : Int) : java.nio.charset.CoderResult;
+	@:overload @:protected @:abstract private function create(len : Int) : java.nio.charset.CoderResult;
 	
 	
 }

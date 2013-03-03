@@ -63,27 +63,27 @@ package javax.swing.event;
 extern class TableModelEvent extends java.util.EventObject
 {
 	/** Identifies the addtion of new rows or columns. */
-	public static var INSERT(default, null) : Int;
+	@:public @:static @:final public static var INSERT(default, null) : Int;
 	
 	/** Identifies a change to existing data. */
-	public static var UPDATE(default, null) : Int;
+	@:public @:static @:final public static var UPDATE(default, null) : Int;
 	
 	/** Identifies the removal of rows or columns. */
-	public static var DELETE(default, null) : Int;
+	@:public @:static @:final public static var DELETE(default, null) : Int;
 	
 	/** Identifies the header row. */
-	public static var HEADER_ROW(default, null) : Int;
+	@:public @:static @:final public static var HEADER_ROW(default, null) : Int;
 	
 	/** Specifies all columns in a row or rows. */
-	public static var ALL_COLUMNS(default, null) : Int;
+	@:public @:static @:final public static var ALL_COLUMNS(default, null) : Int;
 	
-	private var type : Int;
+	@:protected private var type : Int;
 	
-	private var firstRow : Int;
+	@:protected private var firstRow : Int;
 	
-	private var lastRow : Int;
+	@:protected private var lastRow : Int;
 	
-	private var column : Int;
+	@:protected private var column : Int;
 	
 	/**
 	*  All row data in the table has changed, listeners should discard any state
@@ -94,7 +94,7 @@ extern class TableModelEvent extends java.util.EventObject
 	*  The structure of the table ie, the column names, types and order
 	*  have not changed.
 	*/
-	@:overload public function new(source : javax.swing.table.TableModel) : Void;
+	@:overload @:public public function new(source : javax.swing.table.TableModel) : Void;
 	
 	/**
 	*  This row of data has been updated.
@@ -106,18 +106,18 @@ extern class TableModelEvent extends java.util.EventObject
 	*  default ones in the order they appear in the model. This is the
 	*  same as calling <code>setModel(TableModel)</code> on the <code>JTable</code>.
 	*/
-	@:overload public function new(source : javax.swing.table.TableModel, row : Int) : Void;
+	@:overload @:public public function new(source : javax.swing.table.TableModel, row : Int) : Void;
 	
 	/**
 	*  The data in rows [<I>firstRow</I>, <I>lastRow</I>] have been updated.
 	*/
-	@:overload public function new(source : javax.swing.table.TableModel, firstRow : Int, lastRow : Int) : Void;
+	@:overload @:public public function new(source : javax.swing.table.TableModel, firstRow : Int, lastRow : Int) : Void;
 	
 	/**
 	*  The cells in column <I>column</I> in the range
 	*  [<I>firstRow</I>, <I>lastRow</I>] have been updated.
 	*/
-	@:overload public function new(source : javax.swing.table.TableModel, firstRow : Int, lastRow : Int, column : Int) : Void;
+	@:overload @:public public function new(source : javax.swing.table.TableModel, firstRow : Int, lastRow : Int, column : Int) : Void;
 	
 	/**
 	*  The cells from (firstRow, column) to (lastRow, column) have been changed.
@@ -127,27 +127,27 @@ extern class TableModelEvent extends java.util.EventObject
 	*  <p>
 	*  The <I>type</I> should be one of: INSERT, UPDATE and DELETE.
 	*/
-	@:overload public function new(source : javax.swing.table.TableModel, firstRow : Int, lastRow : Int, column : Int, type : Int) : Void;
+	@:overload @:public public function new(source : javax.swing.table.TableModel, firstRow : Int, lastRow : Int, column : Int, type : Int) : Void;
 	
 	/** Returns the first row that changed.  HEADER_ROW means the meta data,
 	* ie. names, types and order of the columns.
 	*/
-	@:overload public function getFirstRow() : Int;
+	@:overload @:public public function getFirstRow() : Int;
 	
 	/** Returns the last row that changed. */
-	@:overload public function getLastRow() : Int;
+	@:overload @:public public function getLastRow() : Int;
 	
 	/**
 	*  Returns the column for the event.  If the return
 	*  value is ALL_COLUMNS; it means every column in the specified
 	*  rows changed.
 	*/
-	@:overload public function getColumn() : Int;
+	@:overload @:public public function getColumn() : Int;
 	
 	/**
 	*  Returns the type of event - one of: INSERT, UPDATE and DELETE.
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	
 }

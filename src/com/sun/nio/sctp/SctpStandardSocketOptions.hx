@@ -37,7 +37,7 @@ extern class SctpStandardSocketOptions
 	* <P> It is implementation specific whether or not this option is
 	* supported.
 	*/
-	public static var SCTP_DISABLE_FRAGMENTS(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Bool>>;
+	@:public @:static @:final public static var SCTP_DISABLE_FRAGMENTS(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Bool>>;
 	
 	/**
 	* Enables or disables explicit message completion.
@@ -54,7 +54,7 @@ extern class SctpStandardSocketOptions
 	* option is disabled. It is implementation specific whether or not this
 	* option is supported.
 	*/
-	public static var SCTP_EXPLICIT_COMPLETE(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Bool>>;
+	@:public @:static @:final public static var SCTP_EXPLICIT_COMPLETE(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Bool>>;
 	
 	/**
 	* Fragmented interleave controls how the presentation of messages occur
@@ -102,7 +102,7 @@ extern class SctpStandardSocketOptions
 	* <P> It is implementation specific whether or not this option is
 	* supported.
 	*/
-	public static var SCTP_FRAGMENT_INTERLEAVE(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
+	@:public @:static @:final public static var SCTP_FRAGMENT_INTERLEAVE(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
 	
 	/**
 	* The maximum number of streams requested by the local endpoint during
@@ -138,7 +138,7 @@ extern class SctpStandardSocketOptions
 	* value requested by the user. The default value of 0 indicates to use
 	* the endpoints default value.
 	*/
-	public static var SCTP_INIT_MAXSTREAMS(default, null) : com.sun.nio.sctp.SctpSocketOption<com.sun.nio.sctp.SctpStandardSocketOptions.SctpStandardSocketOptions_InitMaxStreams>;
+	@:public @:static @:final public static var SCTP_INIT_MAXSTREAMS(default, null) : com.sun.nio.sctp.SctpSocketOption<com.sun.nio.sctp.SctpStandardSocketOptions.SctpStandardSocketOptions_InitMaxStreams>;
 	
 	/**
 	* Enables or disables a Nagle-like algorithm.
@@ -148,7 +148,7 @@ extern class SctpStandardSocketOptions
 	* <em>The Nagle Algorithm</em> to coalesce short segments and
 	* improve network efficiency.
 	*/
-	public static var SCTP_NODELAY(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Bool>>;
+	@:public @:static @:final public static var SCTP_NODELAY(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Bool>>;
 	
 	/**
 	* Requests that the local SCTP stack use the given peer address as
@@ -167,7 +167,7 @@ extern class SctpStandardSocketOptions
 	* the association parameter is not required and this option can be
 	* set or queried directly.
 	*/
-	public static var SCTP_PRIMARY_ADDR(default, null) : com.sun.nio.sctp.SctpSocketOption<java.net.SocketAddress>;
+	@:public @:static @:final public static var SCTP_PRIMARY_ADDR(default, null) : com.sun.nio.sctp.SctpSocketOption<java.net.SocketAddress>;
 	
 	/**
 	* Requests that the peer mark the enclosed address as the association
@@ -190,7 +190,7 @@ extern class SctpStandardSocketOptions
 	* getOption}. It is implementation specific whether or not this
 	* option is supported.
 	*/
-	public static var SCTP_SET_PEER_PRIMARY_ADDR(default, null) : com.sun.nio.sctp.SctpSocketOption<java.net.SocketAddress>;
+	@:public @:static @:final public static var SCTP_SET_PEER_PRIMARY_ADDR(default, null) : com.sun.nio.sctp.SctpSocketOption<java.net.SocketAddress>;
 	
 	/**
 	* The size of the socket send buffer.
@@ -217,7 +217,7 @@ extern class SctpStandardSocketOptions
 	* socket send buffer to be changed after the socket is bound is system
 	* dependent.
 	*/
-	public static var SO_SNDBUF(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
+	@:public @:static @:final public static var SO_SNDBUF(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
 	
 	/**
 	* The size of the socket receive buffer.
@@ -242,7 +242,7 @@ extern class SctpStandardSocketOptions
 	* socket receive buffer to be changed after the socket is bound is system
 	* dependent.
 	*/
-	public static var SO_RCVBUF(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
+	@:public @:static @:final public static var SO_RCVBUF(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
 	
 	/**
 	* Linger on close if data is present.
@@ -271,7 +271,7 @@ extern class SctpStandardSocketOptions
 	* greater than its maximum value causes the linger interval to be set to
 	* its maximum value.
 	*/
-	public static var SO_LINGER(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
+	@:public @:static @:final public static var SO_LINGER(default, null) : com.sun.nio.sctp.SctpSocketOption<Null<Int>>;
 	
 	
 }
@@ -302,21 +302,21 @@ extern class SctpStandardSocketOptions
 	* @throws  IllegalArgumentException
 	*          If an argument is outside of specified bounds
 	*/
-	@:overload public static function create(maxInStreams : Int, maxOutStreams : Int) : com.sun.nio.sctp.SctpStandardSocketOptions.SctpStandardSocketOptions_InitMaxStreams;
+	@:overload @:public @:static public static function create(maxInStreams : Int, maxOutStreams : Int) : com.sun.nio.sctp.SctpStandardSocketOptions.SctpStandardSocketOptions_InitMaxStreams;
 	
 	/**
 	* Returns the maximum number of inbound streams.
 	*
 	* @return  Maximum inbound streams
 	*/
-	@:overload public function maxInStreams() : Int;
+	@:overload @:public public function maxInStreams() : Int;
 	
 	/**
 	* Returns the maximum number of outbound streams.
 	*
 	* @return  Maximum outbound streams
 	*/
-	@:overload public function maxOutStreams() : Int;
+	@:overload @:public public function maxOutStreams() : Int;
 	
 	/**
 	* Returns a string representation of this init max streams, including
@@ -324,7 +324,7 @@ extern class SctpStandardSocketOptions
 	*
 	* @return  A string representation of this init max streams
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Returns true if the specified object is another {@code InitMaxStreams}
@@ -337,12 +337,12 @@ extern class SctpStandardSocketOptions
 	*          {@code InitMaxStreams} instance with the same number of in
 	*          and out bound streams
 	*/
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for this init max streams.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	
 }

@@ -50,11 +50,11 @@ extern class PolicyInformation
 	* @author Anne Anderson
 	* @since       1.4
 	*/
-	@:require(java4) public static var NAME(default, null) : String;
+	@:require(java4) @:public @:static @:final public static var NAME(default, null) : String;
 	
-	public static var ID(default, null) : String;
+	@:public @:static @:final public static var ID(default, null) : String;
 	
-	public static var QUALIFIERS(default, null) : String;
+	@:public @:static @:final public static var QUALIFIERS(default, null) : String;
 	
 	/**
 	* Create an instance of PolicyInformation
@@ -65,7 +65,7 @@ extern class PolicyInformation
 	*          Must not be NULL. Specify an empty Set for no qualifiers.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(policyIdentifier : sun.security.x509.CertificatePolicyId, policyQualifiers : java.util.Set<java.security.cert.PolicyQualifierInfo>) : Void;
+	@:overload @:public public function new(policyIdentifier : sun.security.x509.CertificatePolicyId, policyQualifiers : java.util.Set<java.security.cert.PolicyQualifierInfo>) : Void;
 	
 	/**
 	* Create an instance of PolicyInformation, decoding from
@@ -74,7 +74,7 @@ extern class PolicyInformation
 	* @param val the DerValue to construct the PolicyInformation from.
 	* @exception IOException on decoding errors.
 	*/
-	@:overload public function new(val : sun.security.util.DerValue) : Void;
+	@:overload @:public public function new(val : sun.security.util.DerValue) : Void;
 	
 	/**
 	* Compare this PolicyInformation with another object for equality
@@ -82,14 +82,14 @@ extern class PolicyInformation
 	* @param other object to be compared with this
 	* @return true iff the PolicyInformation objects match
 	*/
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload @:public public function equals(other : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code for this PolicyInformation.
 	*
 	* @return a hash code value.
 	*/
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
 	/**
 	* Return the policyIdentifier value
@@ -97,7 +97,7 @@ extern class PolicyInformation
 	* @return The CertificatePolicyId object containing
 	*     the policyIdentifier (not a copy).
 	*/
-	@:overload public function getPolicyIdentifier() : sun.security.x509.CertificatePolicyId;
+	@:overload @:public public function getPolicyIdentifier() : sun.security.x509.CertificatePolicyId;
 	
 	/**
 	* Return the policyQualifiers value
@@ -107,38 +107,38 @@ extern class PolicyInformation
 	*    Returns an empty Set if there are no qualifiers.
 	*    Never returns null.
 	*/
-	@:overload public function getPolicyQualifiers() : java.util.Set<java.security.cert.PolicyQualifierInfo>;
+	@:overload @:public public function getPolicyQualifiers() : java.util.Set<java.security.cert.PolicyQualifierInfo>;
 	
 	/**
 	* Get the attribute value.
 	*/
-	@:overload public function get(name : String) : Dynamic;
+	@:overload @:public public function get(name : String) : Dynamic;
 	
 	/**
 	* Set the attribute value.
 	*/
-	@:overload public function set(name : String, obj : Dynamic) : Void;
+	@:overload @:public public function set(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Delete the attribute value.
 	*/
-	@:overload public function delete(name : String) : Void;
+	@:overload @:public public function delete(name : String) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
 	* attribute.
 	*/
-	@:overload public function getElements() : java.util.Enumeration<String>;
+	@:overload @:public public function getElements() : java.util.Enumeration<String>;
 	
 	/**
 	* Return the name of this attribute.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Return a printable representation of the PolicyInformation.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* Write the PolicyInformation to the DerOutputStream.
@@ -146,7 +146,7 @@ extern class PolicyInformation
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : sun.security.util.DerOutputStream) : Void;
+	@:overload @:public public function encode(out : sun.security.util.DerOutputStream) : Void;
 	
 	
 }

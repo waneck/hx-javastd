@@ -40,7 +40,7 @@ package javax.script;
 	*
 	* @param s The String to use in the message.
 	*/
-	@:overload public function new(s : String) : Void;
+	@:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Creates a <code>ScriptException</code> wrapping an <code>Exception</code> thrown by an underlying
@@ -48,7 +48,7 @@ package javax.script;
 	*
 	* @param e The wrapped <code>Exception</code>.
 	*/
-	@:overload public function new(e : java.lang.Exception) : Void;
+	@:overload @:public public function new(e : java.lang.Exception) : Void;
 	
 	/**
 	* Creates a <code>ScriptException</code> with message, filename and linenumber to
@@ -62,7 +62,7 @@ package javax.script;
 	* @param lineNumber A line number describing the location of a script error causing
 	* the <code>ScriptException</code> to be thrown.
 	*/
-	@:overload public function new(message : String, fileName : String, lineNumber : Int) : Void;
+	@:overload @:public public function new(message : String, fileName : String, lineNumber : Int) : Void;
 	
 	/**
 	* <code>ScriptException</code> constructor specifying message, filename, line number
@@ -72,26 +72,26 @@ package javax.script;
 	* @param lineNumber the line number.
 	* @param columnNumber the column number.
 	*/
-	@:overload public function new(message : String, fileName : String, lineNumber : Int, columnNumber : Int) : Void;
+	@:overload @:public public function new(message : String, fileName : String, lineNumber : Int, columnNumber : Int) : Void;
 	
 	/**
 	* Returns a message containing the String passed to a constructor as well as
 	* line and column numbers and filename if any of these are known.
 	* @return The error message.
 	*/
-	@:overload public function getMessage() : String;
+	@:overload @:public override public function getMessage() : String;
 	
 	/**
 	* Get the line number on which an error occurred.
 	* @return The line number.  Returns -1 if a line number is unavailable.
 	*/
-	@:overload public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/**
 	* Get the column number on which an error occurred.
 	* @return The column number.  Returns -1 if a column number is unavailable.
 	*/
-	@:overload public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/**
 	* Get the source of the script causing the error.
@@ -99,7 +99,7 @@ package javax.script;
 	* source.  May return some implementation-defined string such as <i>&lt;unknown&gt;</i>
 	* if a description of the source is unavailable.
 	*/
-	@:overload public function getFileName() : String;
+	@:overload @:public public function getFileName() : String;
 	
 	
 }

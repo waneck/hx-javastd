@@ -23,31 +23,31 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	/** REVISIT: Currently we handle 3 different configurations, would be nice just have one configuration
 	* that has different recognized parameters depending if it is used in Core/LS.
 	*/
-	private var features : java.StdTypes.Int16;
+	@:protected private var features : java.StdTypes.Int16;
 	
-	private static var NAMESPACES(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var NAMESPACES(default, null) : java.StdTypes.Int16;
 	
-	private static var WELLFORMED(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var WELLFORMED(default, null) : java.StdTypes.Int16;
 	
-	private static var ENTITIES(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var ENTITIES(default, null) : java.StdTypes.Int16;
 	
-	private static var CDATA(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var CDATA(default, null) : java.StdTypes.Int16;
 	
-	private static var SPLITCDATA(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var SPLITCDATA(default, null) : java.StdTypes.Int16;
 	
-	private static var COMMENTS(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var COMMENTS(default, null) : java.StdTypes.Int16;
 	
-	private static var DISCARDDEFAULT(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var DISCARDDEFAULT(default, null) : java.StdTypes.Int16;
 	
-	private static var INFOSET(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var INFOSET(default, null) : java.StdTypes.Int16;
 	
-	private static var XMLDECL(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var XMLDECL(default, null) : java.StdTypes.Int16;
 	
-	private static var NSDECL(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var NSDECL(default, null) : java.StdTypes.Int16;
 	
-	private static var DOM_ELEMENT_CONTENT_WHITESPACE(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var DOM_ELEMENT_CONTENT_WHITESPACE(default, null) : java.StdTypes.Int16;
 	
-	private static var FORMAT_PRETTY_PRINT(default, null) : java.StdTypes.Int16;
+	@:protected @:final @:static private static var FORMAT_PRETTY_PRINT(default, null) : java.StdTypes.Int16;
 	
 	/**
 	* Constructs a new LSSerializer.
@@ -55,19 +55,19 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	* initializes the following fields: fNSBinder, fLocalNSBinder, fSymbolTable,
 	* fEmptySymbol, fXmlSymbol, fXmlnsSymbol, fNamespaceCounter, fFeatures.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/** DOM L3-EXPERIMENTAL:
 	* Setter for boolean and object parameters
 	*/
-	@:overload public function setParameter(name : String, value : Dynamic) : Void;
+	@:overload @:public public function setParameter(name : String, value : Dynamic) : Void;
 	
 	/** DOM L3-EXPERIMENTAL:
 	* Check if parameter can be set
 	*/
-	@:overload public function canSetParameter(name : String, state : Dynamic) : Bool;
+	@:overload @:public public function canSetParameter(name : String, state : Dynamic) : Bool;
 	
 	/**
 	*  DOM Level 3 Core CR - Experimental.
@@ -77,12 +77,12 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	* can be set by the application. Note that this list can also contain
 	* parameter names defined outside this specification.
 	*/
-	@:overload public function getParameterNames() : org.w3c.dom.DOMStringList;
+	@:overload @:public public function getParameterNames() : org.w3c.dom.DOMStringList;
 	
 	/** DOM L3-EXPERIMENTAL:
 	* Getter for boolean and object parameters
 	*/
-	@:overload public function getParameter(name : String) : Dynamic;
+	@:overload @:public public function getParameter(name : String) : Dynamic;
 	
 	/**
 	* DOM L3 EXPERIMENTAL:
@@ -103,7 +103,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	*    attach a <code>DOMErrorHandler</code> using the parameter
 	*    &quot;<i>error-handler</i>&quot; to get details on error.
 	*/
-	@:overload public function writeToString(wnode : org.w3c.dom.Node) : String;
+	@:overload @:public public function writeToString(wnode : org.w3c.dom.Node) : String;
 	
 	/**
 	* DOM L3 EXPERIMENTAL:
@@ -128,7 +128,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	* </dl>
 	* <br>The default value for this attribute is <code>null</code>.
 	*/
-	@:overload public function setNewLine(newLine : String) : Void;
+	@:overload @:public public function setNewLine(newLine : String) : Void;
 	
 	/**
 	* DOM L3 EXPERIMENTAL:
@@ -153,7 +153,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	* </dl>
 	* <br>The default value for this attribute is <code>null</code>.
 	*/
-	@:overload public function getNewLine() : String;
+	@:overload @:public public function getNewLine() : String;
 	
 	/**
 	*  When the application provides a filter, the serializer will call out
@@ -161,7 +161,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	* passed to the filter. The filter implementation can choose to remove
 	* the node from the stream or to terminate the serialization early.
 	*/
-	@:overload public function getFilter() : org.w3c.dom.ls.LSSerializerFilter;
+	@:overload @:public public function getFilter() : org.w3c.dom.ls.LSSerializerFilter;
 	
 	/**
 	*  When the application provides a filter, the serializer will call out
@@ -169,7 +169,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	* passed to the filter. The filter implementation can choose to remove
 	* the node from the stream or to terminate the serialization early.
 	*/
-	@:overload public function setFilter(filter : org.w3c.dom.ls.LSSerializerFilter) : Void;
+	@:overload @:public public function setFilter(filter : org.w3c.dom.ls.LSSerializerFilter) : Void;
 	
 	/**
 	*  Serialize the specified node as described above in the general
@@ -201,7 +201,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	*   successfully serialized and <code>false</code> in case the node
 	*   couldn't be serialized.
 	*/
-	@:overload public function write(node : org.w3c.dom.Node, destination : org.w3c.dom.ls.LSOutput) : Bool;
+	@:overload @:public public function write(node : org.w3c.dom.Node, destination : org.w3c.dom.ls.LSOutput) : Bool;
 	
 	/**
 	*  Serialize the specified node as described above in the general
@@ -228,7 +228,7 @@ extern class DOMSerializerImpl implements org.w3c.dom.ls.LSSerializer implements
 	*   successfully serialized and <code>false</code> in case the node
 	*   couldn't be serialized.
 	*/
-	@:overload public function writeToURI(node : org.w3c.dom.Node, URI : String) : Bool;
+	@:overload @:public public function writeToURI(node : org.w3c.dom.Node, URI : String) : Bool;
 	
 	
 }

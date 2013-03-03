@@ -25,9 +25,9 @@ package sun.nio.cs.ext;
 */
 @:internal extern class JIS_X_0212_MS5022X_Decoder extends sun.nio.cs.ext.JIS_X_0212_Decoder
 {
-	@:overload public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload @:public public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload @:protected override private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	
 }

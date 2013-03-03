@@ -40,7 +40,7 @@ package com.sun.mirror.util;
 	/**
 	* A visitor that has no side effects and keeps no state.
 	*/
-	public static var NO_OP(default, null) : com.sun.mirror.util.DeclarationVisitor;
+	@:public @:static @:final public static var NO_OP(default, null) : com.sun.mirror.util.DeclarationVisitor;
 	
 	/**
 	* Return a <tt>DeclarationVisitor</tt> that will scan the
@@ -64,7 +64,7 @@ package com.sun.mirror.util;
 	* @param post visitor representing processing to do after
 	* visiting contained declarations.
 	*/
-	@:overload public static function getDeclarationScanner(pre : com.sun.mirror.util.DeclarationVisitor, post : com.sun.mirror.util.DeclarationVisitor) : com.sun.mirror.util.DeclarationVisitor;
+	@:overload @:public @:static public static function getDeclarationScanner(pre : com.sun.mirror.util.DeclarationVisitor, post : com.sun.mirror.util.DeclarationVisitor) : com.sun.mirror.util.DeclarationVisitor;
 	
 	/**
 	* Return a <tt>DeclarationVisitor</tt> that will scan the
@@ -89,7 +89,7 @@ package com.sun.mirror.util;
 	* @param post visitor representing processing to do after
 	* visiting contained declarations.
 	*/
-	@:overload public static function getSourceOrderDeclarationScanner(pre : com.sun.mirror.util.DeclarationVisitor, post : com.sun.mirror.util.DeclarationVisitor) : com.sun.mirror.util.DeclarationVisitor;
+	@:overload @:public @:static public static function getSourceOrderDeclarationScanner(pre : com.sun.mirror.util.DeclarationVisitor, post : com.sun.mirror.util.DeclarationVisitor) : com.sun.mirror.util.DeclarationVisitor;
 	
 	
 }

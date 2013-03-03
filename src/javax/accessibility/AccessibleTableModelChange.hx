@@ -60,27 +60,27 @@ package javax.accessibility;
 	*  @see #UPDATE
 	*  @see #DELETE
 	*/
-	@:overload public function getType() : Int;
+	@:overload @:public public function getType() : Int;
 	
 	/**
 	* Returns the first row that changed.
 	*/
-	@:overload public function getFirstRow() : Int;
+	@:overload @:public public function getFirstRow() : Int;
 	
 	/**
 	* Returns the last row that changed.
 	*/
-	@:overload public function getLastRow() : Int;
+	@:overload @:public public function getLastRow() : Int;
 	
 	/**
 	* Returns the first column that changed.
 	*/
-	@:overload public function getFirstColumn() : Int;
+	@:overload @:public public function getFirstColumn() : Int;
 	
 	/**
 	* Returns the last column that changed.
 	*/
-	@:overload public function getLastColumn() : Int;
+	@:overload @:public public function getLastColumn() : Int;
 	
 	
 }

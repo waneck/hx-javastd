@@ -42,7 +42,7 @@ package com.sun.tools.doclets.internal.toolkit;
 	* @param member the member being documented
 	* @param annotationDocTree content tree to which the default value will be added
 	*/
-	@:overload public function addDefaultValueInfo(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload @:public public function addDefaultValueInfo(member : com.sun.javadoc.MemberDoc, annotationDocTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

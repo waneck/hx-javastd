@@ -162,7 +162,7 @@ package javax.naming.spi;
 	* @see NamingManager#getObjectInstance
 	* @see NamingManager#getURLContext
 	*/
-	@:overload public function getObjectInstance(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
+	@:overload @:public public function getObjectInstance(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>) : Dynamic;
 	
 	
 }

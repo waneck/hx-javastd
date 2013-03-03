@@ -25,13 +25,13 @@ package com.sun.corba.se.impl.ior;
 */
 extern class NewObjectKeyTemplateBase extends com.sun.corba.se.impl.ior.ObjectKeyTemplateBase
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : String, oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : String, oaid : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
 	
-	@:overload override public function write(objectId : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function write(objectId : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload private function setORBVersion(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:protected private function setORBVersion(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
 	
 }

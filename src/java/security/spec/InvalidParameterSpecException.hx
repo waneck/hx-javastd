@@ -30,7 +30,7 @@ extern class InvalidParameterSpecException extends java.security.GeneralSecurity
 	* detail message is a String that describes this particular
 	* exception.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs an InvalidParameterSpecException with the specified detail
@@ -39,7 +39,7 @@ extern class InvalidParameterSpecException extends java.security.GeneralSecurity
 	*
 	* @param msg the detail message.
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	
 }

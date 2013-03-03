@@ -37,22 +37,22 @@ extern interface AnnotationReader<T, C, F, M>
 	/**
 	* Reads an annotation on a property that consists of a field.
 	*/
-	@:overload public function getFieldAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, field : F, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getFieldAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, field : F, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
 	/**
 	* Checks if the given field has an annotation.
 	*/
-	@:overload public function hasFieldAnnotation(annotationType : Class<java.lang.annotation.Annotation>, field : F) : Bool;
+	@:overload @:public public function hasFieldAnnotation(annotationType : Class<java.lang.annotation.Annotation>, field : F) : Bool;
 	
 	/**
 	* Checks if a class has the annotation.
 	*/
-	@:overload public function hasClassAnnotation(clazz : C, annotationType : Class<java.lang.annotation.Annotation>) : Bool;
+	@:overload @:public public function hasClassAnnotation(clazz : C, annotationType : Class<java.lang.annotation.Annotation>) : Bool;
 	
 	/**
 	* Gets all the annotations on a field.
 	*/
-	@:overload public function getAllFieldAnnotations(field : F, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public public function getAllFieldAnnotations(field : F, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* Reads an annotation on a property that consists of a getter and a setter.
@@ -71,11 +71,11 @@ extern interface AnnotationReader<T, C, F, M>
 	* @param srcPos
 	*      the location from which this annotation is read.
 	*/
-	@:overload public function getAllMethodAnnotations(method : M, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
+	@:overload @:public public function getAllMethodAnnotations(method : M, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : java.NativeArray<java.lang.annotation.Annotation>;
 	
-	@:overload public function getMethodAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : M, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getMethodAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : M, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
-	@:overload public function hasMethodAnnotation(annotation : Class<java.lang.annotation.Annotation>, method : M) : Bool;
+	@:overload @:public public function hasMethodAnnotation(annotation : Class<java.lang.annotation.Annotation>, method : M) : Bool;
 	
 	/**
 	* Reads an annotation on a parameter of the method.
@@ -83,17 +83,17 @@ extern interface AnnotationReader<T, C, F, M>
 	* @return null
 	*      if the annotation was not found.
 	*/
-	@:overload public function getMethodParameterAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : M, paramIndex : Int, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getMethodParameterAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, method : M, paramIndex : Int, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
 	/**
 	* Reads an annotation on a class.
 	*/
-	@:overload public function getClassAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, clazz : C, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getClassAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, clazz : C, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
 	/**
 	* Reads an annotation on the package that the given class belongs to.
 	*/
-	@:overload public function getPackageAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, clazz : C, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
+	@:overload @:public public function getPackageAnnotation<A : java.lang.annotation.Annotation>(annotation : Class<A>, clazz : C, srcpos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	
 	/**
 	* Reads a value of an annotation that returns a Class object.
@@ -106,13 +106,13 @@ extern interface AnnotationReader<T, C, F, M>
 	* @param name
 	*      The name of the annotation parameter to be read.
 	*/
-	@:overload public function getClassValue(a : java.lang.annotation.Annotation, name : String) : T;
+	@:overload @:public public function getClassValue(a : java.lang.annotation.Annotation, name : String) : T;
 	
 	/**
 	* Similar to {@link #getClassValue(Annotation, String)} method but
 	* obtains an array parameter.
 	*/
-	@:overload public function getClassArrayValue(a : java.lang.annotation.Annotation, name : String) : java.NativeArray<T>;
+	@:overload @:public public function getClassArrayValue(a : java.lang.annotation.Annotation, name : String) : java.NativeArray<T>;
 	
 	
 }

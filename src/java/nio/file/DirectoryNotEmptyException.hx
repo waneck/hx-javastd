@@ -37,7 +37,7 @@ package java.nio.file;
 	* @param   dir
 	*          a string identifying the directory or {@code null} if not known
 	*/
-	@:overload public function new(dir : String) : Void;
+	@:overload @:public public function new(dir : String) : Void;
 	
 	
 }

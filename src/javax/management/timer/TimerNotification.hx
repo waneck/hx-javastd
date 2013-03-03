@@ -45,14 +45,14 @@ package javax.management.timer;
 	* @param id The notification identifier.
 	*
 	*/
-	@:overload public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64, msg : String, id : Null<Int>) : Void;
+	@:overload @:public public function new(type : String, source : Dynamic, sequenceNumber : haxe.Int64, timeStamp : haxe.Int64, msg : String, id : Null<Int>) : Void;
 	
 	/**
 	* Gets the identifier of this timer notification.
 	*
 	* @return The identifier.
 	*/
-	@:overload public function getNotificationID() : Null<Int>;
+	@:overload @:public public function getNotificationID() : Null<Int>;
 	
 	
 }

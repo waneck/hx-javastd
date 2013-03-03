@@ -30,11 +30,11 @@ extern class SoftProvider extends javax.sound.midi.spi.MidiDeviceProvider
 	*
 	* @author Karl Helgason
 	*/
-	private static var softinfo(default, null) : javax.sound.midi.MidiDevice.MidiDevice_Info;
+	@:protected @:final @:static private static var softinfo(default, null) : javax.sound.midi.MidiDevice.MidiDevice_Info;
 	
-	@:overload public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
+	@:overload @:public override public function getDeviceInfo() : java.NativeArray<javax.sound.midi.MidiDevice.MidiDevice_Info>;
 	
-	@:overload public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
+	@:overload @:public override public function getDevice(info : javax.sound.midi.MidiDevice.MidiDevice_Info) : javax.sound.midi.MidiDevice;
 	
 	
 }

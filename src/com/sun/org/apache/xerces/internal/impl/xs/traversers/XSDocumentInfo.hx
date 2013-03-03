@@ -31,37 +31,37 @@ package com.sun.org.apache.xerces.internal.impl.xs.traversers;
 	* @author Neil Graham, IBM
 	* @version $Id: XSDocumentInfo.java,v 1.5 2007/10/15 22:27:48 spericas Exp $
 	*/
-	private var fNamespaceSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
+	@:protected private var fNamespaceSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 	
-	private var fNamespaceSupportRoot : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
+	@:protected private var fNamespaceSupportRoot : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 	
-	private var SchemaNamespaceSupportStack : java.util.Stack<Dynamic>;
+	@:protected private var SchemaNamespaceSupportStack : java.util.Stack<Dynamic>;
 	
-	private var fAreLocalAttributesQualified : Bool;
+	@:protected private var fAreLocalAttributesQualified : Bool;
 	
-	private var fAreLocalElementsQualified : Bool;
+	@:protected private var fAreLocalElementsQualified : Bool;
 	
-	private var fBlockDefault : java.StdTypes.Int16;
+	@:protected private var fBlockDefault : java.StdTypes.Int16;
 	
-	private var fFinalDefault : java.StdTypes.Int16;
+	@:protected private var fFinalDefault : java.StdTypes.Int16;
 	
-	private var fIsChameleonSchema : Bool;
+	@:protected private var fIsChameleonSchema : Bool;
 	
-	private var fSchemaElement : org.w3c.dom.Element;
+	@:protected private var fSchemaElement : org.w3c.dom.Element;
 	
-	private var fValidationContext : com.sun.org.apache.xerces.internal.impl.validation.ValidationState;
+	@:protected private var fValidationContext : com.sun.org.apache.xerces.internal.impl.validation.ValidationState;
 	
-	private var fAttrChecker : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker;
+	@:protected private var fAttrChecker : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker;
 	
-	private var fSchemaAttrs : java.NativeArray<Dynamic>;
+	@:protected private var fSchemaAttrs : java.NativeArray<Dynamic>;
 	
-	private var fAnnotations : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAnnotationInfo;
+	@:protected private var fAnnotations : com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAnnotationInfo;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function addAllowedNS(namespace : String) : Void;
+	@:overload @:public public function addAllowedNS(namespace : String) : Void;
 	
-	@:overload public function isAllowedNS(namespace : String) : Bool;
+	@:overload @:public public function isAllowedNS(namespace : String) : Bool;
 	
 	
 }

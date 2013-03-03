@@ -31,7 +31,7 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 	*
 	* This flag is used to discard unused {@link BindInfo}s early to save memory footprint.
 	*/
-	@:overload public function isPointless() : Bool;
+	@:overload @:public public function isPointless() : Bool;
 	
 	/**
 	* Gets the location of this annotation in the source file.
@@ -42,56 +42,56 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 	*      If this BindInfo is generated internally by XJC, then
 	*      null will be returned.
 	*/
-	@:overload public function getSourceLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getSourceLocation() : org.xml.sax.Locator;
 	
 	/**
 	* Sets the owner schema component and a reference to BGMBuilder.
 	* This method is called from the BGMBuilder before
 	* any BIDeclaration inside it is used.
 	*/
-	@:overload public function setOwner(_builder : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder, _owner : com.sun.xml.internal.xsom.XSComponent) : Void;
+	@:overload @:public public function setOwner(_builder : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder, _owner : com.sun.xml.internal.xsom.XSComponent) : Void;
 	
-	@:overload public function getOwner() : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public public function getOwner() : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* Back pointer to the BGMBuilder which is building
 	* a BGM from schema components including this customization.
 	*/
-	@:overload public function getBuilder() : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
+	@:overload @:public public function getBuilder() : com.sun.tools.internal.xjc.reader.xmlschema.BGMBuilder;
 	
 	/** Adds a new declaration. */
-	@:overload public function addDecl(decl : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration) : Void;
+	@:overload @:public public function addDecl(decl : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration) : Void;
 	
 	/**
 	* Gets the first declaration with a given name, or null
 	* if none is found.
 	*/
-	@:overload public function get<T : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>(kind : Class<T>) : T;
+	@:overload @:public public function get<T : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>(kind : Class<T>) : T;
 	
 	/**
 	* Gets all the declarations
 	*/
-	@:overload public function getDecls() : java.NativeArray<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
+	@:overload @:public public function getDecls() : java.NativeArray<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
 	
 	/**
 	* Gets the documentation parsed from &lt;xs:documentation>s.
 	* The returned collection is to be added to {@link JDocComment#append(Object)}.
 	* @return  maybe null.
 	*/
-	@:overload public function getDocumentation() : String;
+	@:overload @:public public function getDocumentation() : String;
 	
 	/**
 	* Merges all the declarations inside the given BindInfo
 	* to this BindInfo.
 	*/
-	@:overload public function absorb(bi : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public public function absorb(bi : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	/** Gets the number of declarations. */
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function get(idx : Int) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration;
+	@:overload @:public public function get(idx : Int) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration;
 	
-	@:overload public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
+	@:overload @:public public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
 	
 	/**
 	* Gets the list of {@link CPluginCustomization}s from this.
@@ -100,17 +100,17 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 	* Note that calling this method marks all those plug-in customizations
 	* as 'used'. So call it only when it's really necessary.
 	*/
-	@:overload public function toCustomizationList() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public public function toCustomizationList() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/** An instance with the empty contents. */
-	public static var empty(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
+	@:public @:final @:static public static var empty(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
 	
-	@:overload public static function getJAXBContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
+	@:overload @:public @:static public static function getJAXBContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
 	/**
 	* Lazily parsed schema for the binding file.
 	*/
-	public static var bindingFileSchema(default, null) : com.sun.tools.internal.xjc.SchemaCache;
+	@:public @:static @:final public static var bindingFileSchema(default, null) : com.sun.tools.internal.xjc.SchemaCache;
 	
 	
 }
@@ -120,7 +120,7 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 }
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BindInfo$AppInfo') @:internal extern class BindInfo_AppInfo
 {
-	@:overload public function addTo(bi : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
+	@:overload @:public public function addTo(bi : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	
 }

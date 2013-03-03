@@ -30,13 +30,13 @@ extern interface XSVisitor extends com.sun.xml.internal.xsom.visitor.XSTermVisit
 	*/
 	@:overload public function annotation(ann : com.sun.xml.internal.xsom.XSAnnotation) : Void;
 	
-	@:overload public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
+	@:overload @:public public function attGroupDecl(decl : com.sun.xml.internal.xsom.XSAttGroupDecl) : Void;
 	
-	@:overload public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
+	@:overload @:public public function attributeDecl(decl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
 	
-	@:overload public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
+	@:overload @:public public function attributeUse(use : com.sun.xml.internal.xsom.XSAttributeUse) : Void;
 	
-	@:overload public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
+	@:overload @:public public function complexType(type : com.sun.xml.internal.xsom.XSComplexType) : Void;
 	
 	@:overload public function schema(schema : com.sun.xml.internal.xsom.XSSchema) : Void;
 	

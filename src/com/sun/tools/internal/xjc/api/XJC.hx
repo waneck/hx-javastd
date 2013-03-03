@@ -31,7 +31,7 @@ extern class XJC
 	* @return
 	*      always return non-null object.
 	*/
-	@:overload public static function createJavaCompiler() : com.sun.tools.internal.xjc.api.JavaCompiler;
+	@:overload @:public @:static public static function createJavaCompiler() : com.sun.tools.internal.xjc.api.JavaCompiler;
 	
 	/**
 	* Gets a fresh {@link SchemaCompiler}.
@@ -39,7 +39,7 @@ extern class XJC
 	* @return
 	*      always return non-null object.
 	*/
-	@:overload public static function createSchemaCompiler() : com.sun.tools.internal.xjc.api.SchemaCompiler;
+	@:overload @:public @:static public static function createSchemaCompiler() : com.sun.tools.internal.xjc.api.SchemaCompiler;
 	
 	/**
 	* Computes the namespace URI -> package name conversion
@@ -53,7 +53,7 @@ extern class XJC
 	*      (there are certain namespace URIs with which this algorithm does not
 	*      work --- such as ":::" as the URI.)
 	*/
-	@:overload public static function getDefaultPackageName(namespaceUri : String) : String;
+	@:overload @:public @:static public static function getDefaultPackageName(namespaceUri : String) : String;
 	
 	
 }

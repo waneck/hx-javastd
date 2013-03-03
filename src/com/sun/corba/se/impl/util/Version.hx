@@ -31,19 +31,19 @@ package com.sun.corba.se.impl.util;
 */
 extern class Version
 {
-	public static var PROJECT_NAME(default, null) : String;
+	@:public @:static @:final public static var PROJECT_NAME(default, null) : String;
 	
-	public static var VERSION(default, null) : String;
+	@:public @:static @:final public static var VERSION(default, null) : String;
 	
-	public static var BUILD(default, null) : String;
+	@:public @:static @:final public static var BUILD(default, null) : String;
 	
-	public static var BUILD_TIME(default, null) : String;
+	@:public @:static @:final public static var BUILD_TIME(default, null) : String;
 	
-	public static var FULL(default, null) : String;
+	@:public @:static @:final public static var FULL(default, null) : String;
 	
-	@:overload public static function asString() : String;
+	@:overload @:public @:static public static function asString() : String;
 	
-	@:overload public static function main(args : java.NativeArray<String>) : Void;
+	@:overload @:public @:static public static function main(args : java.NativeArray<String>) : Void;
 	
 	
 }

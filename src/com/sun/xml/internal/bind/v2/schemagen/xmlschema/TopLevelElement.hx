@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface TopLevelElement extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Element extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function _final(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
+	@:overload @:public public function _final(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
 	
-	@:overload public function _final(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
+	@:overload @:public public function _final(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
 	
-	@:overload public function _abstract(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
+	@:overload @:public public function _abstract(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
 	
-	@:overload public function substitutionGroup(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
+	@:overload @:public public function substitutionGroup(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
 	
-	@:overload public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
+	@:overload @:public public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.TopLevelElement;
 	
 	
 }

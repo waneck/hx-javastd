@@ -25,11 +25,11 @@ package sun.awt.image;
 */
 extern class ByteArrayImageSource extends sun.awt.image.InputStreamImageSource
 {
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:public public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
-	@:overload private function getDecoder() : sun.awt.image.ImageDecoder;
+	@:overload @:protected override private function getDecoder() : sun.awt.image.ImageDecoder;
 	
 	
 }

@@ -62,7 +62,7 @@ package com.sun.beans.decoder;
 	* @param name   the attribute name
 	* @param value  the attribute value
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload @:public override public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Creates {@code char} value from
@@ -71,7 +71,7 @@ package com.sun.beans.decoder;
 	* @param argument  the text of the body
 	* @return evaluated {@code char} value
 	*/
-	@:overload override public function getValue(argument : String) : Dynamic;
+	@:overload @:public override public function getValue(argument : String) : Dynamic;
 	
 	
 }

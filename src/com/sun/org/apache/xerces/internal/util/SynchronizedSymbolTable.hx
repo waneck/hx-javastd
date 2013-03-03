@@ -29,14 +29,14 @@ package com.sun.org.apache.xerces.internal.util;
 extern class SynchronizedSymbolTable extends com.sun.org.apache.xerces.internal.util.SymbolTable
 {
 	/** Main symbol table. */
-	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
+	@:protected private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Constructs a synchronized symbol table. */
-	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
+	@:overload @:public public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(size : Int) : Void;
+	@:overload @:public public function new(size : Int) : Void;
 	
 	/**
 	* Adds the specified symbol to the symbol table and returns a
@@ -46,7 +46,7 @@ extern class SynchronizedSymbolTable extends com.sun.org.apache.xerces.internal.
 	*
 	* @param symbol The new symbol.
 	*/
-	@:overload override public function addSymbol(symbol : String) : String;
+	@:overload @:public override public function addSymbol(symbol : String) : String;
 	
 	/**
 	* Adds the specified symbol to the symbol table and returns a
@@ -58,7 +58,7 @@ extern class SynchronizedSymbolTable extends com.sun.org.apache.xerces.internal.
 	* @param offset The offset into the buffer of the new symbol.
 	* @param length The length of the new symbol in the buffer.
 	*/
-	@:overload override public function addSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : String;
+	@:overload @:public override public function addSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : String;
 	
 	/**
 	* Returns true if the symbol table already contains the specified
@@ -66,7 +66,7 @@ extern class SynchronizedSymbolTable extends com.sun.org.apache.xerces.internal.
 	*
 	* @param symbol The symbol to look for.
 	*/
-	@:overload override public function containsSymbol(symbol : String) : Bool;
+	@:overload @:public override public function containsSymbol(symbol : String) : Bool;
 	
 	/**
 	* Returns true if the symbol table already contains the specified
@@ -76,7 +76,7 @@ extern class SynchronizedSymbolTable extends com.sun.org.apache.xerces.internal.
 	* @param offset The offset into the buffer.
 	* @param length The length of the symbol in the buffer.
 	*/
-	@:overload override public function containsSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Bool;
+	@:overload @:public override public function containsSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Bool;
 	
 	
 }

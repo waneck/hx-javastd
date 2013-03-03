@@ -26,36 +26,36 @@ package com.sun.xml.internal.ws.handler;
 extern class MessageUpdatableContext implements javax.xml.ws.handler.MessageContext
 {
 	/** Creates a new instance of MessageUpdatableContext */
-	@:overload public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload @:public public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
+	@:overload @:public public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
 	
-	@:overload public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
+	@:overload @:public public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
 	
 	/* java.util.Map methods below here */
-	@:overload public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
-	@:overload public function containsKey(obj : Dynamic) : Bool;
+	@:overload @:public public function containsKey(obj : Dynamic) : Bool;
 	
-	@:overload public function containsValue(obj : Dynamic) : Bool;
+	@:overload @:public public function containsValue(obj : Dynamic) : Bool;
 	
-	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
+	@:overload @:public public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
-	@:overload public function get(obj : Dynamic) : Dynamic;
+	@:overload @:public public function get(obj : Dynamic) : Dynamic;
 	
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
-	@:overload public function keySet() : java.util.Set<String>;
+	@:overload @:public public function keySet() : java.util.Set<String>;
 	
-	@:overload public function put(str : String, obj : Dynamic) : Dynamic;
+	@:overload @:public public function put(str : String, obj : Dynamic) : Dynamic;
 	
-	@:overload public function putAll(map : java.util.Map<String, Dynamic>) : Void;
+	@:overload @:public public function putAll(map : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload public function remove(obj : Dynamic) : Dynamic;
+	@:overload @:public public function remove(obj : Dynamic) : Dynamic;
 	
-	@:overload public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
-	@:overload public function values() : java.util.Collection<Dynamic>;
+	@:overload @:public public function values() : java.util.Collection<Dynamic>;
 	
 	/**
 	* Associates the specified value with the specified key in this map
@@ -81,7 +81,7 @@ extern class MessageUpdatableContext implements javax.xml.ws.handler.MessageCont
 	* @throws IllegalArgumentException if some property of the specified key
 	*         or value prevents it from being stored in this map
 	*/
-	@:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	
 }

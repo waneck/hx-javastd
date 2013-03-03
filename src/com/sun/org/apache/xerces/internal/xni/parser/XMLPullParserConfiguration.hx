@@ -32,7 +32,7 @@ extern interface XMLPullParserConfiguration extends com.sun.org.apache.xerces.in
 	*
 	* @see #parse(boolean)
 	*/
-	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload @:public public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Parses the document in a pull parsing fashion.
@@ -50,14 +50,14 @@ extern interface XMLPullParserConfiguration extends com.sun.org.apache.xerces.in
 	*
 	* @see #setInputSource
 	*/
-	@:overload public function parse(complete : Bool) : Bool;
+	@:overload @:public public function parse(complete : Bool) : Bool;
 	
 	/**
 	* If the application decides to terminate parsing before the xml document
 	* is fully parsed, the application should call this method to free any
 	* resource allocated during parsing. For example, close all opened streams.
 	*/
-	@:overload public function cleanup() : Void;
+	@:overload @:public public function cleanup() : Void;
 	
 	
 }

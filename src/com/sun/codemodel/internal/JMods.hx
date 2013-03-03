@@ -28,27 +28,27 @@ extern class JMods implements com.sun.codemodel.internal.JGenerable
 	/**
 	* Gets the bit-packed representaion of modifiers.
 	*/
-	@:overload public function getValue() : Int;
+	@:overload @:public public function getValue() : Int;
 	
-	@:overload public function isAbstract() : Bool;
+	@:overload @:public public function isAbstract() : Bool;
 	
-	@:overload public function isNative() : Bool;
+	@:overload @:public public function isNative() : Bool;
 	
-	@:overload public function isSynchronized() : Bool;
+	@:overload @:public public function isSynchronized() : Bool;
 	
-	@:overload public function setSynchronized(newValue : Bool) : Void;
+	@:overload @:public public function setSynchronized(newValue : Bool) : Void;
 	
-	@:overload public function setPrivate() : Void;
+	@:overload @:public public function setPrivate() : Void;
 	
-	@:overload public function setProtected() : Void;
+	@:overload @:public public function setProtected() : Void;
 	
-	@:overload public function setPublic() : Void;
+	@:overload @:public public function setPublic() : Void;
 	
-	@:overload public function setFinal(newValue : Bool) : Void;
+	@:overload @:public public function setFinal(newValue : Bool) : Void;
 	
-	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

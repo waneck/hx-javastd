@@ -40,11 +40,11 @@ extern class SwaRefAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function unmarshal(cid : String) : javax.activation.DataHandler;
+	@:overload @:public public function unmarshal(cid : String) : javax.activation.DataHandler;
 	
-	@:overload public function marshal(data : javax.activation.DataHandler) : String;
+	@:overload @:public public function marshal(data : javax.activation.DataHandler) : String;
 	
 	
 }

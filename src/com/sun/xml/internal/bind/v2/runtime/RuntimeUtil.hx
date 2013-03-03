@@ -31,22 +31,22 @@ extern class RuntimeUtil
 	* <p>
 	* e.g., int -> Integer.
 	*/
-	public static var boxToPrimitive(default, null) : java.util.Map<Class<Dynamic>, Class<Dynamic>>;
+	@:public @:static @:final public static var boxToPrimitive(default, null) : java.util.Map<Class<Dynamic>, Class<Dynamic>>;
 	
 	/**
 	* Reverse map of {@link #boxToPrimitive}.
 	*/
-	public static var primitiveToBox(default, null) : java.util.Map<Class<Dynamic>, Class<Dynamic>>;
+	@:public @:static @:final public static var primitiveToBox(default, null) : java.util.Map<Class<Dynamic>, Class<Dynamic>>;
 	
 	/**
 	* Reports a print conversion error while marshalling.
 	*/
-	@:overload public static function handlePrintConversionException(caller : Dynamic, e : java.lang.Exception, serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:public @:static public static function handlePrintConversionException(caller : Dynamic, e : java.lang.Exception, serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	/**
 	* Reports that the type of an object in a property is unexpected.
 	*/
-	@:overload public static function handleTypeMismatchError(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, parentObject : Dynamic, fieldName : String, childObject : Dynamic) : Void;
+	@:overload @:public @:static public static function handleTypeMismatchError(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, parentObject : Dynamic, fieldName : String, childObject : Dynamic) : Void;
 	
 	
 }
@@ -55,9 +55,9 @@ extern class RuntimeUtil
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$RuntimeUtil$ToStringAdapter') extern class RuntimeUtil_ToStringAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<String, Dynamic>
 {
-	@:overload public function unmarshal(s : String) : Dynamic;
+	@:overload @:public public function unmarshal(s : String) : Dynamic;
 	
-	@:overload override public function marshal(o : Dynamic) : String;
+	@:overload @:public override public function marshal(o : Dynamic) : String;
 	
 	
 }

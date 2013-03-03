@@ -35,16 +35,16 @@ extern class ASCIIUtility
 	*
 	* Based on java.lang.Integer.parseInt()
 	*/
-	@:overload public static function parseInt(b : java.NativeArray<java.StdTypes.Int8>, start : Int, end : Int, radix : Int) : Int;
+	@:overload @:public @:static public static function parseInt(b : java.NativeArray<java.StdTypes.Int8>, start : Int, end : Int, radix : Int) : Int;
 	
 	/**
 	* Convert the bytes within the specified range of the given byte
 	* array into a String. The range extends from <code>start</code>
 	* till, but not including <code>end</code>. <p>
 	*/
-	@:overload public static function toString(b : java.NativeArray<java.StdTypes.Int8>, start : Int, end : Int) : String;
+	@:overload @:public @:static public static function toString(b : java.NativeArray<java.StdTypes.Int8>, start : Int, end : Int) : String;
 	
-	@:overload public static function getBytes(s : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getBytes(s : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	*
@@ -54,7 +54,7 @@ extern class ASCIIUtility
 	*      Unless you absolutely need the exact size array, don't use this.
 	*      Use {@link ByteOutputStream} and {@link ByteOutputStream#write(InputStream)}.
 	*/
-	@:overload public static function getBytes(is : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:static public static function getBytes(is : java.io.InputStream) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

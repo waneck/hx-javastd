@@ -28,19 +28,19 @@ package com.sun.tools.internal.xjc.reader.relaxng;
 	/**
 	* Datatype library's namespace URI.
 	*/
-	public var nsUri(default, null) : String;
+	@:public @:final public var nsUri(default, null) : String;
 	
-	@:overload public function new(nsUri : String) : Void;
+	@:overload @:public public function new(nsUri : String) : Void;
 	
 	/**
 	* Datatype library for the built-in type.
 	*/
-	public static var BUILTIN(default, null) : com.sun.tools.internal.xjc.reader.relaxng.DatatypeLib;
+	@:public @:static @:final public static var BUILTIN(default, null) : com.sun.tools.internal.xjc.reader.relaxng.DatatypeLib;
 	
 	/**
 	* Datatype library for XML Schema datatypes.
 	*/
-	public static var XMLSCHEMA(default, null) : com.sun.tools.internal.xjc.reader.relaxng.DatatypeLib;
+	@:public @:static @:final public static var XMLSCHEMA(default, null) : com.sun.tools.internal.xjc.reader.relaxng.DatatypeLib;
 	
 	
 }

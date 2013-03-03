@@ -32,14 +32,14 @@ extern class PrintJobAttributeEvent extends javax.print.event.PrintEvent
 	* @throws IllegalArgumentException if <code>source</code> is
 	*         <code>null</code>.
 	*/
-	@:overload public function new(source : javax.print.DocPrintJob, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
+	@:overload @:public public function new(source : javax.print.DocPrintJob, attributes : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
 	/**
 	* Determine the Print Job to which this print job event pertains.
 	*
 	* @return  Print Job object.
 	*/
-	@:overload public function getPrintJob() : javax.print.DocPrintJob;
+	@:overload @:public public function getPrintJob() : javax.print.DocPrintJob;
 	
 	/**
 	* Determine the printing attributes that changed and their new values.
@@ -47,7 +47,7 @@ extern class PrintJobAttributeEvent extends javax.print.event.PrintEvent
 	* @return  Attributes containing the new values for the print job
 	* attributes that changed. The returned set may not be modifiable.
 	*/
-	@:overload public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintJobAttributeSet;
 	
 	
 }

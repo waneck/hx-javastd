@@ -40,9 +40,9 @@ extern class State<T>
 	*        or "EmbeddedPanel" or "Blurred". It is customary to use camel case,
 	*        with the first letter capitalized.
 	*/
-	@:overload private function new(name : String) : Void;
+	@:overload @:protected private function new(name : String) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/**
 	* <p>Gets whether the specified JComponent is in the custom state represented
@@ -60,15 +60,15 @@ extern class State<T>
 	* @return true if <code>c</code> is in the custom state represented by
 	*         this <code>State</code> instance
 	*/
-	@:overload @:abstract private function isInState(c : T) : Bool;
+	@:overload @:protected @:abstract private function isInState(c : T) : Bool;
 	
 	
 }
 @:native('javax$swing$plaf$nimbus$State$StandardState') @:internal extern class State_StandardState extends javax.swing.plaf.nimbus.State<javax.swing.JComponent>
 {
-	@:overload public function getState() : Int;
+	@:overload @:public public function getState() : Int;
 	
-	@:overload private function isInState(c : javax.swing.JComponent) : Bool;
+	@:overload @:protected private function isInState(c : javax.swing.JComponent) : Bool;
 	
 	
 }

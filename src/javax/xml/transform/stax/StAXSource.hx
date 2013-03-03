@@ -29,7 +29,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	* returns true when passed this value as an argument,
 	* the Transformer supports Source input of this type.
 	*/
-	public static var FEATURE(default, null) : String;
+	@:public @:static @:final public static var FEATURE(default, null) : String;
 	
 	/**
 	* <p>Creates a new instance of a <code>StAXSource</code>
@@ -53,7 +53,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	*   is not in <code>XMLStreamConstants.START_DOCUMENT</code> or
 	*   <code>XMLStreamConstants.START_ELEMENT</code> state.
 	*/
-	@:overload public function new(xmlEventReader : javax.xml.stream.XMLEventReader) : Void;
+	@:overload @:public public function new(xmlEventReader : javax.xml.stream.XMLEventReader) : Void;
 	
 	/**
 	* <p>Creates a new instance of a <code>StAXSource</code>
@@ -75,7 +75,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	*   is not in <code>XMLStreamConstants.START_DOCUMENT</code> or
 	*   <code>XMLStreamConstants.START_ELEMENT</code> state.
 	*/
-	@:overload public function new(xmlStreamReader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload @:public public function new(xmlStreamReader : javax.xml.stream.XMLStreamReader) : Void;
 	
 	/**
 	* <p>Get the <code>XMLEventReader</code> used by this
@@ -88,7 +88,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	* @return <code>XMLEventReader</code> used by this
 	*   <code>StAXSource</code>.
 	*/
-	@:overload public function getXMLEventReader() : javax.xml.stream.XMLEventReader;
+	@:overload @:public public function getXMLEventReader() : javax.xml.stream.XMLEventReader;
 	
 	/**
 	* <p>Get the <code>XMLStreamReader</code> used by this
@@ -101,7 +101,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	* @return <code>XMLStreamReader</code> used by this
 	*   <code>StAXSource</code>.
 	*/
-	@:overload public function getXMLStreamReader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public public function getXMLStreamReader() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* <p>In the context of a <code>StAXSource</code>, it is not appropriate
@@ -118,7 +118,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	* @throws UnsupportedOperationException Is <strong>always</strong>
 	*   thrown by this method.
 	*/
-	@:overload public function setSystemId(systemId : String) : Void;
+	@:overload @:public public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* <p>Get the system identifier used by this
@@ -133,7 +133,7 @@ extern class StAXSource implements javax.xml.transform.Source
 	*
 	* @return System identifier used by this <code>StAXSource</code>.
 	*/
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
 	
 }

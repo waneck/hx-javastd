@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class JavaCodebaseComponentImpl extends com.sun.corba.se.spi.ior.TaggedComponentBase implements com.sun.corba.se.spi.ior.iiop.JavaCodebaseComponent
 {
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
-	@:overload public function getURLs() : String;
+	@:overload @:public public function getURLs() : String;
 	
-	@:overload public function new(URLs : String) : Void;
+	@:overload @:public public function new(URLs : String) : Void;
 	
-	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function getId() : Int;
+	@:overload @:public override public function getId() : Int;
 	
 	
 }

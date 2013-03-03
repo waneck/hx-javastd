@@ -32,7 +32,7 @@ extern class KeyGenerator
 	* @param provider the provider
 	* @param algorithm the algorithm
 	*/
-	@:overload private function new(keyGenSpi : javax.crypto.KeyGeneratorSpi, provider : java.security.Provider, algorithm : String) : Void;
+	@:overload @:protected private function new(keyGenSpi : javax.crypto.KeyGeneratorSpi, provider : java.security.Provider, algorithm : String) : Void;
 	
 	/**
 	* Returns the algorithm name of this <code>KeyGenerator</code> object.
@@ -43,7 +43,7 @@ extern class KeyGenerator
 	*
 	* @return the algorithm name of this <code>KeyGenerator</code> object.
 	*/
-	@:overload @:final public function getAlgorithm() : String;
+	@:overload @:public @:final public function getAlgorithm() : String;
 	
 	/**
 	* Returns a <code>KeyGenerator</code> object that generates secret keys
@@ -74,7 +74,7 @@ extern class KeyGenerator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.KeyGenerator;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String) : javax.crypto.KeyGenerator;
 	
 	/**
 	* Returns a <code>KeyGenerator</code> object that generates secret keys
@@ -112,7 +112,7 @@ extern class KeyGenerator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.KeyGenerator;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.KeyGenerator;
 	
 	/**
 	* Returns a <code>KeyGenerator</code> object that generates secret keys
@@ -144,21 +144,21 @@ extern class KeyGenerator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.KeyGenerator;
+	@:overload @:public @:static @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.KeyGenerator;
 	
 	/**
 	* Returns the provider of this <code>KeyGenerator</code> object.
 	*
 	* @return the provider of this <code>KeyGenerator</code> object
 	*/
-	@:overload @:final public function getProvider() : java.security.Provider;
+	@:overload @:public @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Initializes this key generator.
 	*
 	* @param random the source of randomness for this generator
 	*/
-	@:overload @:final public function init(random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key generator with the specified parameter set.
@@ -176,7 +176,7 @@ extern class KeyGenerator
 	* @exception InvalidAlgorithmParameterException if the given parameters
 	* are inappropriate for this key generator
 	*/
-	@:overload @:final public function init(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload @:public @:final public function init(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Initializes this key generator with the specified parameter
@@ -188,7 +188,7 @@ extern class KeyGenerator
 	* @exception InvalidAlgorithmParameterException if <code>params</code> is
 	* inappropriate for this key generator
 	*/
-	@:overload @:final public function init(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this key generator for a certain keysize.
@@ -207,7 +207,7 @@ extern class KeyGenerator
 	* @exception InvalidParameterException if the keysize is wrong or not
 	* supported.
 	*/
-	@:overload @:final public function init(keysize : Int) : Void;
+	@:overload @:public @:final public function init(keysize : Int) : Void;
 	
 	/**
 	* Initializes this key generator for a certain keysize, using a
@@ -220,14 +220,14 @@ extern class KeyGenerator
 	* @exception InvalidParameterException if the keysize is wrong or not
 	* supported.
 	*/
-	@:overload @:final public function init(keysize : Int, random : java.security.SecureRandom) : Void;
+	@:overload @:public @:final public function init(keysize : Int, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Generates a secret key.
 	*
 	* @return the new key
 	*/
-	@:overload @:final public function generateKey() : javax.crypto.SecretKey;
+	@:overload @:public @:final public function generateKey() : javax.crypto.SecretKey;
 	
 	
 }

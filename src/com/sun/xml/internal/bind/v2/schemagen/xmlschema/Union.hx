@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Union extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleTypeHost extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function memberTypes(value : java.NativeArray<javax.xml.namespace.QName>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Union;
+	@:overload @:public public function memberTypes(value : java.NativeArray<javax.xml.namespace.QName>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Union;
 	
 	
 }

@@ -49,7 +49,7 @@ extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedTyp
 	* @throws MalformedParameterizedTypeException - if the instantiation
 	* is invalid
 	*/
-	@:overload public static function make(rawType : Class<Dynamic>, actualTypeArguments : java.NativeArray<java.lang.reflect.Type>, ownerType : java.lang.reflect.Type) : sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
+	@:overload @:public @:static public static function make(rawType : Class<Dynamic>, actualTypeArguments : java.NativeArray<java.lang.reflect.Type>, ownerType : java.lang.reflect.Type) : sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the actual type
@@ -68,7 +68,7 @@ extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedTyp
 	*     be instantiated for any reason
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getActualTypeArguments() : java.NativeArray<java.lang.reflect.Type>;
+	@:require(java5) @:overload @:public public function getActualTypeArguments() : java.NativeArray<java.lang.reflect.Type>;
 	
 	/**
 	* Returns the <tt>Type</tt> object representing the class or interface
@@ -77,7 +77,7 @@ extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedTyp
 	* @return the <tt>Type</tt> object representing the class or interface
 	*     that declared this type
 	*/
-	@:overload public function getRawType() : Class<Dynamic>;
+	@:overload @:public public function getRawType() : Class<Dynamic>;
 	
 	/**
 	* Returns a <tt>Type</tt> object representing the type that this type
@@ -96,7 +96,7 @@ extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedTyp
 	*     for any reason
 	*
 	*/
-	@:overload public function getOwnerType() : java.lang.reflect.Type;
+	@:overload @:public public function getOwnerType() : java.lang.reflect.Type;
 	
 	/*
 	* From the JavaDoc for java.lang.reflect.ParameterizedType
@@ -105,11 +105,11 @@ extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedTyp
 	* that share the same generic type declaration and have equal
 	* type parameters."
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload @:public public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

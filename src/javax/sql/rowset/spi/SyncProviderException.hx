@@ -62,7 +62,7 @@ extern class SyncProviderException extends java.sql.SQLException
 	/**
 	* Creates a new <code>SyncProviderException</code> object without a detail message.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructs a <code>SyncProviderException</code> object with the specified
@@ -70,7 +70,7 @@ extern class SyncProviderException extends java.sql.SQLException
 	*
 	* @param msg the detail message
 	*/
-	@:overload public function new(msg : String) : Void;
+	@:overload @:public public function new(msg : String) : Void;
 	
 	/**
 	* Constructs a <code>SyncProviderException</code> object with the specified
@@ -81,7 +81,7 @@ extern class SyncProviderException extends java.sql.SQLException
 	* @throws IllegalArgumentException if the <code>SyncResolver</code> object
 	*     is <code>null</code>.
 	*/
-	@:overload public function new(syncResolver : javax.sql.rowset.spi.SyncResolver) : Void;
+	@:overload @:public public function new(syncResolver : javax.sql.rowset.spi.SyncResolver) : Void;
 	
 	/**
 	* Retrieves the <code>SyncResolver</code> object that has been set for
@@ -102,7 +102,7 @@ extern class SyncProviderException extends java.sql.SQLException
 	*     <code>SyncResolver(String)</code> constructors are used to instantiate
 	*     the <code>SyncResolver</code> instance.
 	*/
-	@:overload public function getSyncResolver() : javax.sql.rowset.spi.SyncResolver;
+	@:overload @:public public function getSyncResolver() : javax.sql.rowset.spi.SyncResolver;
 	
 	/**
 	* Sets the <code>SyncResolver</code> object for this
@@ -117,7 +117,7 @@ extern class SyncProviderException extends java.sql.SQLException
 	*     is <code>null</code>.
 	* @see #getSyncResolver
 	*/
-	@:overload public function setSyncResolver(syncResolver : javax.sql.rowset.spi.SyncResolver) : Void;
+	@:overload @:public public function setSyncResolver(syncResolver : javax.sql.rowset.spi.SyncResolver) : Void;
 	
 	
 }

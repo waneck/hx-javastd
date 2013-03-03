@@ -29,7 +29,7 @@ extern interface Augmentations
 	* @return the previous value of the specified key in the Augmentations structure,
 	*         or <code>null</code> if it did not have one.
 	*/
-	@:overload public function putItem(key : String, item : Dynamic) : Dynamic;
+	@:overload @:public public function putItem(key : String, item : Dynamic) : Dynamic;
 	
 	/**
 	* Get information identified by a key from the Augmentations structure
@@ -39,7 +39,7 @@ extern interface Augmentations
 	* @return the value to which the key is mapped in the Augmentations structure;
 	*         <code>null</code> if the key is not mapped to any value.
 	*/
-	@:overload public function getItem(key : String) : Dynamic;
+	@:overload @:public public function getItem(key : String) : Dynamic;
 	
 	/**
 	* Remove additional info from the Augmentations structure
@@ -48,18 +48,18 @@ extern interface Augmentations
 	* @return the previous value of the specified key in the Augmentations structure,
 	*         or <code>null</code> if it did not have one.
 	*/
-	@:overload public function removeItem(key : String) : Dynamic;
+	@:overload @:public public function removeItem(key : String) : Dynamic;
 	
 	/**
 	* Returns an enumeration of the keys in the Augmentations structure
 	*
 	*/
-	@:overload public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:public public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Remove all objects from the Augmentations structure.
 	*/
-	@:overload public function removeAllItems() : Void;
+	@:overload @:public public function removeAllItems() : Void;
 	
 	
 }

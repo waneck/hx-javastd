@@ -30,45 +30,45 @@ extern class SOAPHeader extends com.sun.tools.internal.ws.wsdl.framework.Extensi
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload public function add(fault : com.sun.tools.internal.ws.wsdl.document.soap.SOAPHeaderFault) : Void;
+	@:overload @:public public function add(fault : com.sun.tools.internal.ws.wsdl.document.soap.SOAPHeaderFault) : Void;
 	
-	@:overload public function faults() : java.util.Iterator<Dynamic>;
+	@:overload @:public public function faults() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
-	@:overload public function getNamespace() : String;
+	@:overload @:public public function getNamespace() : String;
 	
-	@:overload public function setNamespace(s : String) : Void;
+	@:overload @:public public function setNamespace(s : String) : Void;
 	
-	@:overload public function getUse() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
+	@:overload @:public public function getUse() : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse;
 	
-	@:overload public function setUse(u : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse) : Void;
+	@:overload @:public public function setUse(u : com.sun.tools.internal.ws.wsdl.document.soap.SOAPUse) : Void;
 	
-	@:overload public function isEncoded() : Bool;
+	@:overload @:public public function isEncoded() : Bool;
 	
-	@:overload public function isLiteral() : Bool;
+	@:overload @:public public function isLiteral() : Bool;
 	
-	@:overload public function getEncodingStyle() : String;
+	@:overload @:public public function getEncodingStyle() : String;
 	
-	@:overload public function setEncodingStyle(s : String) : Void;
+	@:overload @:public public function setEncodingStyle(s : String) : Void;
 	
-	@:overload public function getPart() : String;
+	@:overload @:public public function getPart() : String;
 	
-	@:overload public function setMessage(message : javax.xml.namespace.QName) : Void;
+	@:overload @:public public function setMessage(message : javax.xml.namespace.QName) : Void;
 	
-	@:overload public function getMessage() : javax.xml.namespace.QName;
+	@:overload @:public public function getMessage() : javax.xml.namespace.QName;
 	
-	@:overload public function setPart(s : String) : Void;
+	@:overload @:public public function setPart(s : String) : Void;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload @:public override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload @:public override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
+	@:overload @:public override public function accept(visitor : com.sun.tools.internal.ws.wsdl.framework.ExtensionVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload @:public override public function validateThis() : Void;
 	
 	
 }

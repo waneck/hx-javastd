@@ -31,7 +31,7 @@ extern class PopupMenu extends java.awt.Menu
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Creates a new popup menu with the specified name.
@@ -42,19 +42,19 @@ extern class PopupMenu extends java.awt.Menu
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public function new(label : String) : Void;
+	@:overload @:public public function new(label : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getParent() : java.awt.MenuContainer;
+	@:overload @:public override public function getParent() : java.awt.MenuContainer;
 	
 	/**
 	* Creates the popup menu's peer.
 	* The peer allows us to change the appearance of the popup menu without
 	* changing any of the popup menu's functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload @:public override public function addNotify() : Void;
 	
 	/**
 	* Shows the popup menu at the x, y position relative to an origin
@@ -77,7 +77,7 @@ extern class PopupMenu extends java.awt.Menu
 	*                parent's heirarchy
 	* @exception RuntimeException if the parent is not showing on screen
 	*/
-	@:overload public function show(origin : java.awt.Component, x : Int, y : Int) : Void;
+	@:overload @:public public function show(origin : java.awt.Component, x : Int, y : Int) : Void;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -87,7 +87,7 @@ extern class PopupMenu extends java.awt.Menu
 	*                <code>PopupMenu</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload @:public override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -108,7 +108,7 @@ extern class PopupMenu extends java.awt.Menu
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload @:public override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

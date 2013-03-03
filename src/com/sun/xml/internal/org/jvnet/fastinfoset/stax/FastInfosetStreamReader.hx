@@ -33,21 +33,21 @@ extern interface FastInfosetStreamReader
 	* @return the event, which will be the same as that returned from
 	*         {@link #next}.
 	*/
-	@:overload public function peekNext() : Int;
+	@:overload @:public public function peekNext() : Int;
 	
-	@:overload public function accessNamespaceCount() : Int;
+	@:overload @:public public function accessNamespaceCount() : Int;
 	
-	@:overload public function accessLocalName() : String;
+	@:overload @:public public function accessLocalName() : String;
 	
-	@:overload public function accessNamespaceURI() : String;
+	@:overload @:public public function accessNamespaceURI() : String;
 	
-	@:overload public function accessPrefix() : String;
+	@:overload @:public public function accessPrefix() : String;
 	
-	@:overload public function accessTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function accessTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function accessTextStart() : Int;
+	@:overload @:public public function accessTextStart() : Int;
 	
-	@:overload public function accessTextLength() : Int;
+	@:overload @:public public function accessTextLength() : Int;
 	
 	
 }

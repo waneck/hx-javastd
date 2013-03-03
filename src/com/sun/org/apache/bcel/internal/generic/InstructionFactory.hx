@@ -67,19 +67,19 @@ extern class InstructionFactory implements com.sun.org.apache.bcel.internal.gene
 	* @author <A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>
 	* @see Constants
 	*/
-	private var cg : com.sun.org.apache.bcel.internal.generic.ClassGen;
+	@:protected private var cg : com.sun.org.apache.bcel.internal.generic.ClassGen;
 	
-	private var cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen;
+	@:protected private var cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen;
 	
-	@:overload public function new(cg : com.sun.org.apache.bcel.internal.generic.ClassGen, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(cg : com.sun.org.apache.bcel.internal.generic.ClassGen, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/** Initialize with ClassGen object
 	*/
-	@:overload public function new(cg : com.sun.org.apache.bcel.internal.generic.ClassGen) : Void;
+	@:overload @:public public function new(cg : com.sun.org.apache.bcel.internal.generic.ClassGen) : Void;
 	
 	/** Initialize just with ConstantPoolGen object
 	*/
-	@:overload public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function new(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
 	/** Create an invoke instruction.
 	*
@@ -91,20 +91,20 @@ extern class InstructionFactory implements com.sun.org.apache.bcel.internal.gene
 	* or INVOKESPECIAL
 	* @see Constants
 	*/
-	@:overload public function createInvoke(class_name : String, name : String, ret_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, kind : java.StdTypes.Int16) : com.sun.org.apache.bcel.internal.generic.InvokeInstruction;
+	@:overload @:public public function createInvoke(class_name : String, name : String, ret_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, kind : java.StdTypes.Int16) : com.sun.org.apache.bcel.internal.generic.InvokeInstruction;
 	
 	/** Create a call to the most popular System.out.println() method.
 	*
 	* @param s the string to print
 	*/
-	@:overload public function createPrintln(s : String) : com.sun.org.apache.bcel.internal.generic.InstructionList;
+	@:overload @:public public function createPrintln(s : String) : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	/** Uses PUSH to push a constant value onto the stack.
 	* @param value must be of type Number, Boolean, Character or String
 	*/
-	@:overload public function createConstant(value : Dynamic) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function createConstant(value : Dynamic) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function createAppend(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function createAppend(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/** Create a field instruction.
 	*
@@ -114,105 +114,105 @@ extern class InstructionFactory implements com.sun.org.apache.bcel.internal.gene
 	* @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC
 	* @see Constants
 	*/
-	@:overload public function createFieldAccess(class_name : String, name : String, type : com.sun.org.apache.bcel.internal.generic.Type, kind : java.StdTypes.Int16) : com.sun.org.apache.bcel.internal.generic.FieldInstruction;
+	@:overload @:public public function createFieldAccess(class_name : String, name : String, type : com.sun.org.apache.bcel.internal.generic.Type, kind : java.StdTypes.Int16) : com.sun.org.apache.bcel.internal.generic.FieldInstruction;
 	
 	/** Create reference to `this'
 	*/
-	@:overload public static function createThis() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:static public static function createThis() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/** Create typed return
 	*/
-	@:overload public static function createReturn(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ReturnInstruction;
+	@:overload @:public @:static public static function createReturn(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ReturnInstruction;
 	
 	/**
 	* Create binary operation for simple basic types, such as int and float.
 	*
 	* @param op operation, such as "+", "*", "<<", etc.
 	*/
-	@:overload public static function createBinaryOperation(op : String, type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ArithmeticInstruction;
+	@:overload @:public @:static public static function createBinaryOperation(op : String, type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ArithmeticInstruction;
 	
 	/**
 	* @param size size of operand, either 1 (int, e.g.) or 2 (double)
 	*/
-	@:overload public static function createPop(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
+	@:overload @:public @:static public static function createPop(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
 	
 	/**
 	* @param size size of operand, either 1 (int, e.g.) or 2 (double)
 	*/
-	@:overload public static function createDup(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
+	@:overload @:public @:static public static function createDup(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
 	
 	/**
 	* @param size size of operand, either 1 (int, e.g.) or 2 (double)
 	*/
-	@:overload public static function createDup_2(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
+	@:overload @:public @:static public static function createDup_2(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
 	
 	/**
 	* @param size size of operand, either 1 (int, e.g.) or 2 (double)
 	*/
-	@:overload public static function createDup_1(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
+	@:overload @:public @:static public static function createDup_1(size : Int) : com.sun.org.apache.bcel.internal.generic.StackInstruction;
 	
 	/**
 	* @param index index of local variable
 	*/
-	@:overload public static function createStore(type : com.sun.org.apache.bcel.internal.generic.Type, index : Int) : com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction;
+	@:overload @:public @:static public static function createStore(type : com.sun.org.apache.bcel.internal.generic.Type, index : Int) : com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction;
 	
 	/**
 	* @param index index of local variable
 	*/
-	@:overload public static function createLoad(type : com.sun.org.apache.bcel.internal.generic.Type, index : Int) : com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction;
+	@:overload @:public @:static public static function createLoad(type : com.sun.org.apache.bcel.internal.generic.Type, index : Int) : com.sun.org.apache.bcel.internal.generic.LocalVariableInstruction;
 	
 	/**
 	* @param type type of elements of array, i.e., array.getElementType()
 	*/
-	@:overload public static function createArrayLoad(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ArrayInstruction;
+	@:overload @:public @:static public static function createArrayLoad(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ArrayInstruction;
 	
 	/**
 	* @param type type of elements of array, i.e., array.getElementType()
 	*/
-	@:overload public static function createArrayStore(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ArrayInstruction;
+	@:overload @:public @:static public static function createArrayStore(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.ArrayInstruction;
 	
 	/** Create conversion operation for two stack operands, this may be an I2C, instruction, e.g.,
 	* if the operands are basic types and CHECKCAST if they are reference types.
 	*/
-	@:overload public function createCast(src_type : com.sun.org.apache.bcel.internal.generic.Type, dest_type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function createCast(src_type : com.sun.org.apache.bcel.internal.generic.Type, dest_type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload public function createGetField(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.GETFIELD;
+	@:overload @:public public function createGetField(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.GETFIELD;
 	
-	@:overload public function createGetStatic(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.GETSTATIC;
+	@:overload @:public public function createGetStatic(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.GETSTATIC;
 	
-	@:overload public function createPutField(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.PUTFIELD;
+	@:overload @:public public function createPutField(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.PUTFIELD;
 	
-	@:overload public function createPutStatic(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.PUTSTATIC;
+	@:overload @:public public function createPutStatic(class_name : String, name : String, t : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.PUTSTATIC;
 	
-	@:overload public function createCheckCast(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.CHECKCAST;
+	@:overload @:public public function createCheckCast(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.CHECKCAST;
 	
-	@:overload public function createInstanceOf(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
+	@:overload @:public public function createInstanceOf(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
 	
-	@:overload public function createNew(t : com.sun.org.apache.bcel.internal.generic.ObjectType) : com.sun.org.apache.bcel.internal.generic.NEW;
+	@:overload @:public public function createNew(t : com.sun.org.apache.bcel.internal.generic.ObjectType) : com.sun.org.apache.bcel.internal.generic.NEW;
 	
-	@:overload public function createNew(s : String) : com.sun.org.apache.bcel.internal.generic.NEW;
+	@:overload @:public public function createNew(s : String) : com.sun.org.apache.bcel.internal.generic.NEW;
 	
 	/** Create new array of given size and type.
 	* @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction
 	*/
-	@:overload public function createNewArray(t : com.sun.org.apache.bcel.internal.generic.Type, dim : java.StdTypes.Int16) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public public function createNewArray(t : com.sun.org.apache.bcel.internal.generic.Type, dim : java.StdTypes.Int16) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/** Create "null" value for reference types, 0 for basic types like int
 	*/
-	@:overload public static function createNull(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:public @:static public static function createNull(type : com.sun.org.apache.bcel.internal.generic.Type) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/** Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH.
 	* For those you should use the SWITCH compound instruction.
 	*/
-	@:overload public static function createBranchInstruction(opcode : java.StdTypes.Int16, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.BranchInstruction;
+	@:overload @:public @:static public static function createBranchInstruction(opcode : java.StdTypes.Int16, target : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : com.sun.org.apache.bcel.internal.generic.BranchInstruction;
 	
-	@:overload public function setClassGen(c : com.sun.org.apache.bcel.internal.generic.ClassGen) : Void;
+	@:overload @:public public function setClassGen(c : com.sun.org.apache.bcel.internal.generic.ClassGen) : Void;
 	
-	@:overload public function getClassGen() : com.sun.org.apache.bcel.internal.generic.ClassGen;
+	@:overload @:public public function getClassGen() : com.sun.org.apache.bcel.internal.generic.ClassGen;
 	
-	@:overload public function setConstantPool(c : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
+	@:overload @:public public function setConstantPool(c : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
-	@:overload public function getConstantPool() : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen;
+	@:overload @:public public function getConstantPool() : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen;
 	
 	
 }

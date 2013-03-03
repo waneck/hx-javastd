@@ -34,7 +34,7 @@ package java.beans;
 	* @param length  the array length
 	* @return        an array with specified length
 	*/
-	@:overload @:abstract private function newArray(length : Int) : java.NativeArray<L>;
+	@:overload @:protected @:abstract private function newArray(length : Int) : java.NativeArray<L>;
 	
 	/**
 	* Creates a proxy listener for the specified property.
@@ -43,7 +43,7 @@ package java.beans;
 	* @param listener  the listener to process events
 	* @return          a proxy listener
 	*/
-	@:overload @:abstract private function newProxy(name : String, listener : L) : L;
+	@:overload @:protected @:abstract private function newProxy(name : String, listener : L) : L;
 	
 	/**
 	* Adds a listener to the list of listeners for the specified property.
@@ -52,7 +52,7 @@ package java.beans;
 	* @param name      the name of the property to listen on
 	* @param listener  the listener to process events
 	*/
-	@:overload @:final @:synchronized public function add(name : String, listener : L) : Void;
+	@:overload @:public @:final @:synchronized public function add(name : String, listener : L) : Void;
 	
 	/**
 	* Removes a listener from the list of listeners for the specified property.
@@ -62,7 +62,7 @@ package java.beans;
 	* @param name      the name of the property to listen on
 	* @param listener  the listener to process events
 	*/
-	@:overload @:final @:synchronized public function remove(name : String, listener : L) : Void;
+	@:overload @:public @:final @:synchronized public function remove(name : String, listener : L) : Void;
 	
 	/**
 	* Returns the list of listeners for the specified property.
@@ -70,7 +70,7 @@ package java.beans;
 	* @param name  the name of the property
 	* @return      the corresponding list of listeners
 	*/
-	@:overload @:final @:synchronized public function get(name : String) : java.NativeArray<L>;
+	@:overload @:public @:final @:synchronized public function get(name : String) : java.NativeArray<L>;
 	
 	/**
 	* Sets new list of listeners for the specified property.
@@ -78,14 +78,14 @@ package java.beans;
 	* @param name       the name of the property
 	* @param listeners  new list of listeners
 	*/
-	@:overload @:final public function set(name : String, listeners : java.NativeArray<L>) : Void;
+	@:overload @:public @:final public function set(name : String, listeners : java.NativeArray<L>) : Void;
 	
 	/**
 	* Returns all listeners in the map.
 	*
 	* @return an array of all listeners
 	*/
-	@:overload @:final @:synchronized public function getListeners() : java.NativeArray<L>;
+	@:overload @:public @:final @:synchronized public function getListeners() : java.NativeArray<L>;
 	
 	/**
 	* Returns listeners that have been associated with the named property.
@@ -93,7 +93,7 @@ package java.beans;
 	* @param name  the name of the property
 	* @return an array of listeners for the named property
 	*/
-	@:overload @:final public function getListeners(name : String) : java.NativeArray<L>;
+	@:overload @:public @:final public function getListeners(name : String) : java.NativeArray<L>;
 	
 	/**
 	* Indicates whether the map contains
@@ -103,7 +103,7 @@ package java.beans;
 	* @return      {@code true} if at least one listener exists or
 	*              {@code false} otherwise
 	*/
-	@:overload @:final @:synchronized public function hasListeners(name : String) : Bool;
+	@:overload @:public @:final @:synchronized public function hasListeners(name : String) : Bool;
 	
 	/**
 	* Returns a set of entries from the map.
@@ -112,7 +112,7 @@ package java.beans;
 	*
 	* @return a set of entries from the map
 	*/
-	@:overload @:final public function getEntries() : java.util.Set<java.util.Map.Map_Entry<String, java.NativeArray<L>>>;
+	@:overload @:public @:final public function getEntries() : java.util.Set<java.util.Map.Map_Entry<String, java.NativeArray<L>>>;
 	
 	/**
 	* Extracts a real listener from the proxy listener.
@@ -120,7 +120,7 @@ package java.beans;
 	*
 	* @return a real listener
 	*/
-	@:overload @:abstract public function extract(listener : L) : L;
+	@:overload @:public @:abstract public function extract(listener : L) : L;
 	
 	
 }

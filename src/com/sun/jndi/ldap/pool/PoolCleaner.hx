@@ -34,9 +34,9 @@ extern class PoolCleaner extends java.lang.Thread
 	* @param period ms to wait between cleaning
 	* @param pools non-null array of Pools to clean
 	*/
-	@:overload public function new(period : haxe.Int64, pools : java.NativeArray<com.sun.jndi.ldap.pool.Pool>) : Void;
+	@:overload @:public public function new(period : haxe.Int64, pools : java.NativeArray<com.sun.jndi.ldap.pool.Pool>) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload @:public override public function run() : Void;
 	
 	
 }

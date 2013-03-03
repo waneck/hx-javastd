@@ -28,46 +28,46 @@ extern class MethodExpression extends sun.tools.tree.NaryExpression
 	/**
 	* constructor
 	*/
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, id : sun.tools.java.Identifier, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, id : sun.tools.java.Identifier, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
 	
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, field : sun.tools.java.MemberDefinition, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, field : sun.tools.java.MemberDefinition, args : java.NativeArray<sun.tools.tree.Expression>) : Void;
 	
-	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, field : sun.tools.java.MemberDefinition, args : java.NativeArray<sun.tools.tree.Expression>, forceSuper : Bool) : Void;
+	@:overload @:public public function new(where : haxe.Int64, right : sun.tools.tree.Expression, field : sun.tools.java.MemberDefinition, args : java.NativeArray<sun.tools.tree.Expression>, forceSuper : Bool) : Void;
 	
-	@:overload override public function getImplementation() : sun.tools.tree.Expression;
+	@:overload @:public override public function getImplementation() : sun.tools.tree.Expression;
 	
 	/**
 	* Check expression type
 	*/
-	@:overload override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Check void expression
 	*/
-	@:overload override public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload @:public override public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload @:public override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload @:public override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload @:public override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload @:public override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Check if the first thing is a constructor invocation
 	*/
-	@:overload override public function firstConstructor() : sun.tools.tree.Expression;
+	@:overload @:public override public function firstConstructor() : sun.tools.tree.Expression;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload @:public override public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

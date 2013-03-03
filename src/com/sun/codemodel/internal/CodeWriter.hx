@@ -30,7 +30,7 @@ extern class CodeWriter
 	*
 	* @since 2.5
 	*/
-	@:require(java5) private var encoding : String;
+	@:require(java5) @:protected private var encoding : String;
 	
 	/**
 	* Called by CodeModel to store the specified file.
@@ -47,7 +47,7 @@ extern class CodeWriter
 	*      File name without the path. Something like
 	*      "Foo.java" or "Bar.properties"
 	*/
-	@:overload @:abstract public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload @:public @:abstract public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
 	/**
 	* Called by CodeModel to store the specified file.
@@ -64,12 +64,12 @@ extern class CodeWriter
 	*      File name without the path. Something like
 	*      "Foo.java" or "Bar.properties"
 	*/
-	@:overload public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
+	@:overload @:public public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
 	
 	/**
 	* Called by CodeModel at the end of the process.
 	*/
-	@:overload @:abstract public function close() : Void;
+	@:overload @:public @:abstract public function close() : Void;
 	
 	
 }

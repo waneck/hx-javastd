@@ -34,7 +34,7 @@ extern class Locator2Impl extends org.xml.sax.helpers.LocatorImpl implements org
 	* This will not normally be useful, since the main purpose
 	* of this class is to make a snapshot of an existing Locator.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Copy an existing Locator or Locator2 object.
@@ -44,21 +44,21 @@ extern class Locator2Impl extends org.xml.sax.helpers.LocatorImpl implements org
 	*
 	* @param locator The existing Locator object.
 	*/
-	@:overload public function new(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function new(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Returns the current value of the version property.
 	*
 	* @see #setXMLVersion
 	*/
-	@:overload public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	/**
 	* Returns the current value of the encoding property.
 	*
 	* @see #setEncoding
 	*/
-	@:overload public function getEncoding() : String;
+	@:overload @:public public function getEncoding() : String;
 	
 	/**
 	* Assigns the current value of the version property.
@@ -66,7 +66,7 @@ extern class Locator2Impl extends org.xml.sax.helpers.LocatorImpl implements org
 	* @param version the new "version" value
 	* @see #getXMLVersion
 	*/
-	@:overload public function setXMLVersion(version : String) : Void;
+	@:overload @:public public function setXMLVersion(version : String) : Void;
 	
 	/**
 	* Assigns the current value of the encoding property.
@@ -74,7 +74,7 @@ extern class Locator2Impl extends org.xml.sax.helpers.LocatorImpl implements org
 	* @param encoding the new "encoding" value
 	* @see #getEncoding
 	*/
-	@:overload public function setEncoding(encoding : String) : Void;
+	@:overload @:public public function setEncoding(encoding : String) : Void;
 	
 	
 }

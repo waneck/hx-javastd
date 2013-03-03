@@ -38,7 +38,7 @@ extern class Naming
 	*  formatted URL
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function lookup(name : String) : java.rmi.Remote;
+	@:require(java1) @:overload @:public @:static public static function lookup(name : String) : java.rmi.Remote;
 	
 	/**
 	* Binds the specified <code>name</code> to a remote object.
@@ -53,7 +53,7 @@ extern class Naming
 	* originating from a non-local host, for example)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function bind(name : String, obj : java.rmi.Remote) : Void;
+	@:require(java1) @:overload @:public @:static public static function bind(name : String, obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Destroys the binding for the specified name that is associated
@@ -68,7 +68,7 @@ extern class Naming
 	* originating from a non-local host, for example)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function unbind(name : String) : Void;
+	@:require(java1) @:overload @:public @:static public static function unbind(name : String) : Void;
 	
 	/**
 	* Rebinds the specified name to a new remote object. Any existing
@@ -83,7 +83,7 @@ extern class Naming
 	* originating from a non-local host, for example)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function rebind(name : String, obj : java.rmi.Remote) : Void;
+	@:require(java1) @:overload @:public @:static public static function rebind(name : String, obj : java.rmi.Remote) : Void;
 	
 	/**
 	* Returns an array of the names bound in the registry.  The names are
@@ -100,7 +100,7 @@ extern class Naming
 	* @exception RemoteException if registry could not be contacted.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function list(name : String) : java.NativeArray<String>;
+	@:require(java1) @:overload @:public @:static public static function list(name : String) : java.NativeArray<String>;
 	
 	
 }

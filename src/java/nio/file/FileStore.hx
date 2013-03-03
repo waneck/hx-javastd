@@ -28,7 +28,7 @@ extern class FileStore
 	/**
 	* Initializes a new instance of this class.
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the name of this file store. The format of the name is highly
@@ -40,7 +40,7 @@ extern class FileStore
 	*
 	* @return  the name of this file store
 	*/
-	@:overload @:abstract public function name() : String;
+	@:overload @:public @:abstract public function name() : String;
 	
 	/**
 	* Returns the <em>type</em> of this file store. The format of the string
@@ -50,7 +50,7 @@ extern class FileStore
 	*
 	* @return  a string representing the type of this file store
 	*/
-	@:overload @:abstract public function type() : String;
+	@:overload @:public @:abstract public function type() : String;
 	
 	/**
 	* Tells whether this file store is read-only. A file store is read-only if
@@ -60,7 +60,7 @@ extern class FileStore
 	*
 	* @return  {@code true} if, and only if, this file store is read-only
 	*/
-	@:overload @:abstract public function isReadOnly() : Bool;
+	@:overload @:public @:abstract public function isReadOnly() : Bool;
 	
 	/**
 	* Returns the size, in bytes, of the file store.
@@ -70,7 +70,7 @@ extern class FileStore
 	* @throws  IOException
 	*          if an I/O error occurs
 	*/
-	@:overload @:abstract public function getTotalSpace() : haxe.Int64;
+	@:overload @:public @:abstract public function getTotalSpace() : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes available to this Java virtual machine on the
@@ -88,7 +88,7 @@ extern class FileStore
 	* @throws  IOException
 	*          if an I/O error occurs
 	*/
-	@:overload @:abstract public function getUsableSpace() : haxe.Int64;
+	@:overload @:public @:abstract public function getUsableSpace() : haxe.Int64;
 	
 	/**
 	* Returns the number of unallocated bytes in the file store.
@@ -105,7 +105,7 @@ extern class FileStore
 	* @throws  IOException
 	*          if an I/O error occurs
 	*/
-	@:overload @:abstract public function getUnallocatedSpace() : haxe.Int64;
+	@:overload @:public @:abstract public function getUnallocatedSpace() : haxe.Int64;
 	
 	/**
 	* Tells whether or not this file store supports the file attributes
@@ -123,7 +123,7 @@ extern class FileStore
 	* @return  {@code true} if, and only if, the file attribute view is
 	*          supported
 	*/
-	@:overload @:abstract public function supportsFileAttributeView(type : Class<java.nio.file.attribute.FileAttributeView>) : Bool;
+	@:overload @:public @:abstract public function supportsFileAttributeView(type : Class<java.nio.file.attribute.FileAttributeView>) : Bool;
 	
 	/**
 	* Tells whether or not this file store supports the file attributes
@@ -142,7 +142,7 @@ extern class FileStore
 	* @return  {@code true} if, and only if, the file attribute view is
 	*          supported
 	*/
-	@:overload @:abstract public function supportsFileAttributeView(name : String) : Bool;
+	@:overload @:public @:abstract public function supportsFileAttributeView(name : String) : Bool;
 	
 	/**
 	* Returns a {@code FileStoreAttributeView} of the given type.
@@ -158,7 +158,7 @@ extern class FileStore
 	* @return  a file store attribute view of the specified type or
 	*          {@code null} if the attribute view is not available
 	*/
-	@:overload @:abstract public function getFileStoreAttributeView<V : java.nio.file.attribute.FileStoreAttributeView>(type : Class<V>) : V;
+	@:overload @:public @:abstract public function getFileStoreAttributeView<V : java.nio.file.attribute.FileStoreAttributeView>(type : Class<V>) : V;
 	
 	/**
 	* Reads the value of a file store attribute.
@@ -193,7 +193,7 @@ extern class FileStore
 	* @throws  IOException
 	*          if an I/O error occurs
 	*/
-	@:overload @:abstract public function getAttribute(attribute : String) : Dynamic;
+	@:overload @:public @:abstract public function getAttribute(attribute : String) : Dynamic;
 	
 	
 }

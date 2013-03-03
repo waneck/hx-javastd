@@ -25,18 +25,18 @@ package sun.misc;
 */
 extern class FileURLMapper
 {
-	@:overload public function new(url : java.net.URL) : Void;
+	@:overload @:public public function new(url : java.net.URL) : Void;
 	
 	/**
 	* @returns the platform specific path corresponding to the URL
 	*  so long as the URL does not contain a hostname in the authority field.
 	*/
-	@:overload public function getPath() : String;
+	@:overload @:public public function getPath() : String;
 	
 	/**
 	* Checks whether the file identified by the URL exists.
 	*/
-	@:overload public function exists() : Bool;
+	@:overload @:public public function exists() : Bool;
 	
 	
 }

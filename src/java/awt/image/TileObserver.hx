@@ -46,7 +46,7 @@ extern interface TileObserver
 	* @param willBeWritable  If true, the tile will be grabbed for writing;
 	*                        otherwise it is being released.
 	*/
-	@:overload public function tileUpdate(source : java.awt.image.WritableRenderedImage, tileX : Int, tileY : Int, willBeWritable : Bool) : Void;
+	@:overload @:public public function tileUpdate(source : java.awt.image.WritableRenderedImage, tileX : Int, tileY : Int, willBeWritable : Bool) : Void;
 	
 	
 }

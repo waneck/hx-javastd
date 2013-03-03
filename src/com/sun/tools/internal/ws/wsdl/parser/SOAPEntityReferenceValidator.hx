@@ -31,9 +31,9 @@ extern class SOAPEntityReferenceValidator implements com.sun.tools.internal.ws.w
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function isValid(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Bool;
+	@:overload @:public public function isValid(kind : com.sun.tools.internal.ws.wsdl.framework.Kind, name : javax.xml.namespace.QName) : Bool;
 	
 	
 }

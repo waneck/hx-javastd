@@ -25,30 +25,30 @@ package com.sun.java.swing.plaf.gtk;
 */
 extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 {
-	@:overload override public function getDefaults() : javax.swing.UIDefaults;
+	@:overload @:public override public function getDefaults() : javax.swing.UIDefaults;
 	
-	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload @:protected override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Creates the GTK look and feel class for the passed in Component.
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload @:public @:static public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function initialize() : Void;
+	@:overload @:public override public function initialize() : Void;
 	
-	@:overload override public function isSupportedLookAndFeel() : Bool;
+	@:overload @:public override public function isSupportedLookAndFeel() : Bool;
 	
-	@:overload override public function isNativeLookAndFeel() : Bool;
+	@:overload @:public override public function isNativeLookAndFeel() : Bool;
 	
-	@:overload override public function getDescription() : String;
+	@:overload @:public override public function getDescription() : String;
 	
-	@:overload override public function getName() : String;
+	@:overload @:public override public function getName() : String;
 	
-	@:overload override public function getID() : String;
+	@:overload @:public override public function getID() : String;
 	
-	@:overload private function loadSystemColors(table : javax.swing.UIDefaults, systemColors : java.NativeArray<String>, useNative : Bool) : Void;
+	@:overload @:protected override private function loadSystemColors(table : javax.swing.UIDefaults, systemColors : java.NativeArray<String>, useNative : Bool) : Void;
 	
 	/**
 	* Returns whether or not the UIs should update their
@@ -59,20 +59,20 @@ extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	* <code>SynthStyles</code> from the <code>SynthStyleFactory</code>
 	* when the ancestor changed.
 	*/
-	@:overload override public function shouldUpdateStyleOnAncestorChanged() : Bool;
+	@:overload @:public override public function shouldUpdateStyleOnAncestorChanged() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getLayoutStyle() : javax.swing.LayoutStyle;
+	@:overload @:public override public function getLayoutStyle() : javax.swing.LayoutStyle;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKLookAndFeel$WeakPCL') @:internal extern class GTKLookAndFeel_WeakPCL extends java.lang.ref.WeakReference<com.sun.java.swing.plaf.gtk.GTKLookAndFeel> implements java.beans.PropertyChangeListener
 {
-	@:overload public function getKey() : String;
+	@:overload @:public public function getKey() : String;
 	
-	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
+	@:overload @:public public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }
@@ -85,9 +85,9 @@ extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKLookAndFeel$GnomeLayoutStyle') @:internal extern class GTKLookAndFeel_GnomeLayoutStyle extends sun.swing.DefaultLayoutStyle
 {
-	@:overload override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload @:public override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
 	
 }

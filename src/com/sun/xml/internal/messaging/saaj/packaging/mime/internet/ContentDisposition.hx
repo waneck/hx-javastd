@@ -39,7 +39,7 @@ extern class ContentDisposition
 	/**
 	* No-arg Constructor.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Constructor.
@@ -48,7 +48,7 @@ extern class ContentDisposition
 	* @param   list    ParameterList
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function new(disposition : String, list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
+	@:require(java2) @:overload @:public public function new(disposition : String, list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
 	
 	/**
 	* Constructor that takes a ContentDisposition string. The String
@@ -59,14 +59,14 @@ extern class ContentDisposition
 	* @exception       ParseException if the parse fails.
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function new(s : String) : Void;
+	@:require(java2) @:overload @:public public function new(s : String) : Void;
 	
 	/**
 	* Return the disposition value.
 	* @return the disposition
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function getDisposition() : String;
+	@:require(java2) @:overload @:public public function getDisposition() : String;
 	
 	/**
 	* Return the specified parameter value. Returns <code>null</code>
@@ -74,7 +74,7 @@ extern class ContentDisposition
 	* @return  parameter value
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function getParameter(name : String) : String;
+	@:require(java2) @:overload @:public public function getParameter(name : String) : String;
 	
 	/**
 	* Return a ParameterList object that holds all the available
@@ -83,14 +83,14 @@ extern class ContentDisposition
 	* @return  ParameterList
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function getParameterList() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
+	@:require(java2) @:overload @:public public function getParameterList() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
 	
 	/**
 	* Set the primary type. Overrides existing primary type.
 	* @param   primaryType     primary type
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function setDisposition(disposition : String) : Void;
+	@:require(java2) @:overload @:public public function setDisposition(disposition : String) : Void;
 	
 	/**
 	* Set the specified parameter. If this parameter already exists,
@@ -100,14 +100,14 @@ extern class ContentDisposition
 	* @param   value   parameter value
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function setParameter(name : String, value : String) : Void;
+	@:require(java2) @:overload @:public public function setParameter(name : String, value : String) : Void;
 	
 	/**
 	* Set a new ParameterList.
 	* @param   list    ParameterList
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function setParameterList(list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
+	@:require(java2) @:overload @:public public function setParameterList(list : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList) : Void;
 	
 	/**
 	* Retrieve a RFC2045 style string representation of
@@ -117,7 +117,7 @@ extern class ContentDisposition
 	* @return  RFC2045 style string
 	* @since           JavaMail 1.2
 	*/
-	@:require(java2) @:overload public function toString() : String;
+	@:require(java2) @:overload @:public public function toString() : String;
 	
 	
 }

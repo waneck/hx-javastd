@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.wsdl.parser;
 */
 extern interface SOAPConstants
 {
-	public var URI_SOAP_TRANSPORT_HTTP(default, null) : String;
+	@:public @:final public var URI_SOAP_TRANSPORT_HTTP(default, null) : String;
 	
 	
 }

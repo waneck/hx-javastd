@@ -37,7 +37,7 @@ extern class SSLPermission extends java.security.BasicPermission
 	*
 	* @param name the name of the SSLPermission.
 	*/
-	@:overload public function new(name : String) : Void;
+	@:overload @:public public function new(name : String) : Void;
 	
 	/**
 	* Creates a new SSLPermission object with the specified name.
@@ -49,7 +49,7 @@ extern class SSLPermission extends java.security.BasicPermission
 	* @param name the name of the SSLPermission.
 	* @param actions should be null.
 	*/
-	@:overload public function new(name : String, actions : String) : Void;
+	@:overload @:public public function new(name : String, actions : String) : Void;
 	
 	
 }

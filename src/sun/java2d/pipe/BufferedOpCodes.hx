@@ -25,107 +25,107 @@ package sun.java2d.pipe;
 */
 extern class BufferedOpCodes
 {
-	public static var DRAW_LINE(default, null) : Int;
+	@:public @:static @:final public static var DRAW_LINE(default, null) : Int;
 	
-	public static var DRAW_RECT(default, null) : Int;
+	@:public @:static @:final public static var DRAW_RECT(default, null) : Int;
 	
-	public static var DRAW_POLY(default, null) : Int;
+	@:public @:static @:final public static var DRAW_POLY(default, null) : Int;
 	
-	public static var DRAW_PIXEL(default, null) : Int;
+	@:public @:static @:final public static var DRAW_PIXEL(default, null) : Int;
 	
-	public static var DRAW_SCANLINES(default, null) : Int;
+	@:public @:static @:final public static var DRAW_SCANLINES(default, null) : Int;
 	
-	public static var DRAW_PARALLELOGRAM(default, null) : Int;
+	@:public @:static @:final public static var DRAW_PARALLELOGRAM(default, null) : Int;
 	
-	public static var DRAW_AAPARALLELOGRAM(default, null) : Int;
+	@:public @:static @:final public static var DRAW_AAPARALLELOGRAM(default, null) : Int;
 	
-	public static var FILL_RECT(default, null) : Int;
+	@:public @:static @:final public static var FILL_RECT(default, null) : Int;
 	
-	public static var FILL_SPANS(default, null) : Int;
+	@:public @:static @:final public static var FILL_SPANS(default, null) : Int;
 	
-	public static var FILL_PARALLELOGRAM(default, null) : Int;
+	@:public @:static @:final public static var FILL_PARALLELOGRAM(default, null) : Int;
 	
-	public static var FILL_AAPARALLELOGRAM(default, null) : Int;
+	@:public @:static @:final public static var FILL_AAPARALLELOGRAM(default, null) : Int;
 	
-	public static var COPY_AREA(default, null) : Int;
+	@:public @:static @:final public static var COPY_AREA(default, null) : Int;
 	
-	public static var BLIT(default, null) : Int;
+	@:public @:static @:final public static var BLIT(default, null) : Int;
 	
-	public static var MASK_FILL(default, null) : Int;
+	@:public @:static @:final public static var MASK_FILL(default, null) : Int;
 	
-	public static var MASK_BLIT(default, null) : Int;
+	@:public @:static @:final public static var MASK_BLIT(default, null) : Int;
 	
-	public static var SURFACE_TO_SW_BLIT(default, null) : Int;
+	@:public @:static @:final public static var SURFACE_TO_SW_BLIT(default, null) : Int;
 	
-	public static var DRAW_GLYPH_LIST(default, null) : Int;
+	@:public @:static @:final public static var DRAW_GLYPH_LIST(default, null) : Int;
 	
-	public static var SET_RECT_CLIP(default, null) : Int;
+	@:public @:static @:final public static var SET_RECT_CLIP(default, null) : Int;
 	
-	public static var BEGIN_SHAPE_CLIP(default, null) : Int;
+	@:public @:static @:final public static var BEGIN_SHAPE_CLIP(default, null) : Int;
 	
-	public static var SET_SHAPE_CLIP_SPANS(default, null) : Int;
+	@:public @:static @:final public static var SET_SHAPE_CLIP_SPANS(default, null) : Int;
 	
-	public static var END_SHAPE_CLIP(default, null) : Int;
+	@:public @:static @:final public static var END_SHAPE_CLIP(default, null) : Int;
 	
-	public static var RESET_CLIP(default, null) : Int;
+	@:public @:static @:final public static var RESET_CLIP(default, null) : Int;
 	
-	public static var SET_ALPHA_COMPOSITE(default, null) : Int;
+	@:public @:static @:final public static var SET_ALPHA_COMPOSITE(default, null) : Int;
 	
-	public static var SET_XOR_COMPOSITE(default, null) : Int;
+	@:public @:static @:final public static var SET_XOR_COMPOSITE(default, null) : Int;
 	
-	public static var RESET_COMPOSITE(default, null) : Int;
+	@:public @:static @:final public static var RESET_COMPOSITE(default, null) : Int;
 	
-	public static var SET_TRANSFORM(default, null) : Int;
+	@:public @:static @:final public static var SET_TRANSFORM(default, null) : Int;
 	
-	public static var RESET_TRANSFORM(default, null) : Int;
+	@:public @:static @:final public static var RESET_TRANSFORM(default, null) : Int;
 	
-	public static var SET_SURFACES(default, null) : Int;
+	@:public @:static @:final public static var SET_SURFACES(default, null) : Int;
 	
-	public static var SET_SCRATCH_SURFACE(default, null) : Int;
+	@:public @:static @:final public static var SET_SCRATCH_SURFACE(default, null) : Int;
 	
-	public static var FLUSH_SURFACE(default, null) : Int;
+	@:public @:static @:final public static var FLUSH_SURFACE(default, null) : Int;
 	
-	public static var DISPOSE_SURFACE(default, null) : Int;
+	@:public @:static @:final public static var DISPOSE_SURFACE(default, null) : Int;
 	
-	public static var DISPOSE_CONFIG(default, null) : Int;
+	@:public @:static @:final public static var DISPOSE_CONFIG(default, null) : Int;
 	
-	public static var INVALIDATE_CONTEXT(default, null) : Int;
+	@:public @:static @:final public static var INVALIDATE_CONTEXT(default, null) : Int;
 	
-	public static var SYNC(default, null) : Int;
+	@:public @:static @:final public static var SYNC(default, null) : Int;
 	
-	public static var RESTORE_DEVICES(default, null) : Int;
+	@:public @:static @:final public static var RESTORE_DEVICES(default, null) : Int;
 	
-	public static var SAVE_STATE(default, null) : Int;
+	@:public @:static @:final public static var SAVE_STATE(default, null) : Int;
 	
-	public static var RESTORE_STATE(default, null) : Int;
+	@:public @:static @:final public static var RESTORE_STATE(default, null) : Int;
 	
-	public static var SWAP_BUFFERS(default, null) : Int;
+	@:public @:static @:final public static var SWAP_BUFFERS(default, null) : Int;
 	
-	public static var NOOP(default, null) : Int;
+	@:public @:static @:final public static var NOOP(default, null) : Int;
 	
-	public static var RESET_PAINT(default, null) : Int;
+	@:public @:static @:final public static var RESET_PAINT(default, null) : Int;
 	
-	public static var SET_COLOR(default, null) : Int;
+	@:public @:static @:final public static var SET_COLOR(default, null) : Int;
 	
-	public static var SET_GRADIENT_PAINT(default, null) : Int;
+	@:public @:static @:final public static var SET_GRADIENT_PAINT(default, null) : Int;
 	
-	public static var SET_LINEAR_GRADIENT_PAINT(default, null) : Int;
+	@:public @:static @:final public static var SET_LINEAR_GRADIENT_PAINT(default, null) : Int;
 	
-	public static var SET_RADIAL_GRADIENT_PAINT(default, null) : Int;
+	@:public @:static @:final public static var SET_RADIAL_GRADIENT_PAINT(default, null) : Int;
 	
-	public static var SET_TEXTURE_PAINT(default, null) : Int;
+	@:public @:static @:final public static var SET_TEXTURE_PAINT(default, null) : Int;
 	
-	public static var ENABLE_CONVOLVE_OP(default, null) : Int;
+	@:public @:static @:final public static var ENABLE_CONVOLVE_OP(default, null) : Int;
 	
-	public static var DISABLE_CONVOLVE_OP(default, null) : Int;
+	@:public @:static @:final public static var DISABLE_CONVOLVE_OP(default, null) : Int;
 	
-	public static var ENABLE_RESCALE_OP(default, null) : Int;
+	@:public @:static @:final public static var ENABLE_RESCALE_OP(default, null) : Int;
 	
-	public static var DISABLE_RESCALE_OP(default, null) : Int;
+	@:public @:static @:final public static var DISABLE_RESCALE_OP(default, null) : Int;
 	
-	public static var ENABLE_LOOKUP_OP(default, null) : Int;
+	@:public @:static @:final public static var ENABLE_LOOKUP_OP(default, null) : Int;
 	
-	public static var DISABLE_LOOKUP_OP(default, null) : Int;
+	@:public @:static @:final public static var DISABLE_LOOKUP_OP(default, null) : Int;
 	
 	
 }

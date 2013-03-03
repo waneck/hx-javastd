@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.resolver;
 */
 extern class INSURLOperationImpl implements com.sun.corba.se.spi.orb.Operation
 {
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, bootstrapResolver : com.sun.corba.se.spi.resolver.Resolver) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, bootstrapResolver : com.sun.corba.se.spi.resolver.Resolver) : Void;
 	
-	@:overload public function operate(arg : Dynamic) : Dynamic;
+	@:overload @:public public function operate(arg : Dynamic) : Dynamic;
 	
 	
 }

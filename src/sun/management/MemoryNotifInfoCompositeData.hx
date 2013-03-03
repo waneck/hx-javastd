@@ -25,23 +25,23 @@ package sun.management;
 */
 extern class MemoryNotifInfoCompositeData extends sun.management.LazyCompositeData
 {
-	@:overload public function getMemoryNotifInfo() : java.lang.management.MemoryNotificationInfo;
+	@:overload @:public public function getMemoryNotifInfo() : java.lang.management.MemoryNotificationInfo;
 	
-	@:overload public static function toCompositeData(info : java.lang.management.MemoryNotificationInfo) : javax.management.openmbean.CompositeData;
+	@:overload @:public @:static public static function toCompositeData(info : java.lang.management.MemoryNotificationInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload @:protected override private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
-	@:overload public static function getPoolName(cd : javax.management.openmbean.CompositeData) : String;
+	@:overload @:public @:static public static function getPoolName(cd : javax.management.openmbean.CompositeData) : String;
 	
-	@:overload public static function getUsage(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryUsage;
+	@:overload @:public @:static public static function getUsage(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryUsage;
 	
-	@:overload public static function getCount(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
+	@:overload @:public @:static public static function getCount(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	
 	/** Validate if the input CompositeData has the expected
 	* CompositeType (i.e. contain all attributes with expected
 	* names and types).
 	*/
-	@:overload public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
+	@:overload @:public @:static public static function validateCompositeData(cd : javax.management.openmbean.CompositeData) : Void;
 	
 	
 }

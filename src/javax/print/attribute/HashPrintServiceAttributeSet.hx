@@ -28,7 +28,7 @@ extern class HashPrintServiceAttributeSet extends javax.print.attribute.HashAttr
 	/**
 	* Construct a new, empty hash print service attribute set.
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Construct a new hash print service attribute set,
@@ -39,7 +39,7 @@ extern class HashPrintServiceAttributeSet extends javax.print.attribute.HashAttr
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>attribute</CODE> is null.
 	*/
-	@:overload public function new(attribute : javax.print.attribute.PrintServiceAttribute) : Void;
+	@:overload @:public public function new(attribute : javax.print.attribute.PrintServiceAttribute) : Void;
 	
 	/**
 	* Construct a new print service attribute set, initially populated with
@@ -56,7 +56,7 @@ extern class HashPrintServiceAttributeSet extends javax.print.attribute.HashAttr
 	*     (unchecked exception)
 	*      Thrown if any element of <CODE>attributes</CODE> is null.
 	*/
-	@:overload public function new(attributes : java.NativeArray<javax.print.attribute.PrintServiceAttribute>) : Void;
+	@:overload @:public public function new(attributes : java.NativeArray<javax.print.attribute.PrintServiceAttribute>) : Void;
 	
 	/**
 	* Construct a new attribute set, initially populated with the
@@ -71,7 +71,7 @@ extern class HashPrintServiceAttributeSet extends javax.print.attribute.HashAttr
 	* <CODE>attributes</CODE> is not an instance of
 	* <CODE>PrintServiceAttribute</CODE>.
 	*/
-	@:overload public function new(attributes : javax.print.attribute.PrintServiceAttributeSet) : Void;
+	@:overload @:public public function new(attributes : javax.print.attribute.PrintServiceAttributeSet) : Void;
 	
 	
 }

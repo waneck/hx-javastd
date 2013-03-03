@@ -25,45 +25,45 @@ package sun.print;
 */
 extern class AttributeClass
 {
-	public static var TAG_UNSUPPORTED_VALUE(default, null) : Int;
+	@:public @:static @:final public static var TAG_UNSUPPORTED_VALUE(default, null) : Int;
 	
-	public static var TAG_INT(default, null) : Int;
+	@:public @:static @:final public static var TAG_INT(default, null) : Int;
 	
-	public static var TAG_BOOL(default, null) : Int;
+	@:public @:static @:final public static var TAG_BOOL(default, null) : Int;
 	
-	public static var TAG_ENUM(default, null) : Int;
+	@:public @:static @:final public static var TAG_ENUM(default, null) : Int;
 	
-	public static var TAG_OCTET(default, null) : Int;
+	@:public @:static @:final public static var TAG_OCTET(default, null) : Int;
 	
-	public static var TAG_DATE(default, null) : Int;
+	@:public @:static @:final public static var TAG_DATE(default, null) : Int;
 	
-	public static var TAG_RESOLUTION(default, null) : Int;
+	@:public @:static @:final public static var TAG_RESOLUTION(default, null) : Int;
 	
-	public static var TAG_RANGE_INTEGER(default, null) : Int;
+	@:public @:static @:final public static var TAG_RANGE_INTEGER(default, null) : Int;
 	
-	public static var TAG_TEXT_LANGUAGE(default, null) : Int;
+	@:public @:static @:final public static var TAG_TEXT_LANGUAGE(default, null) : Int;
 	
-	public static var TAG_NAME_LANGUAGE(default, null) : Int;
+	@:public @:static @:final public static var TAG_NAME_LANGUAGE(default, null) : Int;
 	
-	public static var TAG_TEXT_WO_LANGUAGE(default, null) : Int;
+	@:public @:static @:final public static var TAG_TEXT_WO_LANGUAGE(default, null) : Int;
 	
-	public static var TAG_NAME_WO_LANGUAGE(default, null) : Int;
+	@:public @:static @:final public static var TAG_NAME_WO_LANGUAGE(default, null) : Int;
 	
-	public static var TAG_KEYWORD(default, null) : Int;
+	@:public @:static @:final public static var TAG_KEYWORD(default, null) : Int;
 	
-	public static var TAG_URI(default, null) : Int;
+	@:public @:static @:final public static var TAG_URI(default, null) : Int;
 	
-	public static var TAG_CHARSET(default, null) : Int;
+	@:public @:static @:final public static var TAG_CHARSET(default, null) : Int;
 	
-	public static var TAG_NATURALLANGUAGE(default, null) : Int;
+	@:public @:static @:final public static var TAG_NATURALLANGUAGE(default, null) : Int;
 	
-	public static var TAG_MIME_MEDIATYPE(default, null) : Int;
+	@:public @:static @:final public static var TAG_MIME_MEDIATYPE(default, null) : Int;
 	
-	public static var TAG_MEMBER_ATTRNAME(default, null) : Int;
+	@:public @:static @:final public static var TAG_MEMBER_ATTRNAME(default, null) : Int;
 	
-	public static var ATTRIBUTES_CHARSET(default, null) : sun.print.AttributeClass;
+	@:public @:static @:final public static var ATTRIBUTES_CHARSET(default, null) : sun.print.AttributeClass;
 	
-	public static var ATTRIBUTES_NATURAL_LANGUAGE(default, null) : sun.print.AttributeClass;
+	@:public @:static @:final public static var ATTRIBUTES_NATURAL_LANGUAGE(default, null) : sun.print.AttributeClass;
 	
 	/*
 	* value passed in by IPPPrintService.readIPPResponse is a sequence
@@ -72,55 +72,55 @@ extern class AttributeClass
 	*      :
 	* | lengthN | byte1 ... byten | total number of values|
 	*/
-	@:overload private function new(name : String, type : Int, value : Dynamic) : Void;
+	@:overload @:protected private function new(name : String, type : Int, value : Dynamic) : Void;
 	
-	@:overload public function getType() : java.StdTypes.Int8;
+	@:overload @:public public function getType() : java.StdTypes.Int8;
 	
-	@:overload public function getLenChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload @:public public function getLenChars() : java.NativeArray<java.StdTypes.Char16>;
 	
 	/**
 	* Returns raw data.
 	*/
-	@:overload public function getObjectValue() : Dynamic;
+	@:overload @:public public function getObjectValue() : Dynamic;
 	
 	/**
 	* Returns single int value.
 	*/
-	@:overload public function getIntValue() : Int;
+	@:overload @:public public function getIntValue() : Int;
 	
 	/**
 	* Returns array of int values.
 	*/
-	@:overload public function getArrayOfIntValues() : java.NativeArray<Int>;
+	@:overload @:public public function getArrayOfIntValues() : java.NativeArray<Int>;
 	
 	/**
 	* Returns 2 int values.
 	*/
-	@:overload public function getIntRangeValue() : java.NativeArray<Int>;
+	@:overload @:public public function getIntRangeValue() : java.NativeArray<Int>;
 	
 	/**
 	* Returns String value.
 	*/
-	@:overload public function getStringValue() : String;
+	@:overload @:public public function getStringValue() : String;
 	
 	/**
 	* Returns array of String values.
 	*/
-	@:overload public function getArrayOfStringValues() : java.NativeArray<String>;
+	@:overload @:public public function getArrayOfStringValues() : java.NativeArray<String>;
 	
 	/**
 	* Returns single byte value.
 	*/
-	@:overload public function getByteValue() : java.StdTypes.Int8;
+	@:overload @:public public function getByteValue() : java.StdTypes.Int8;
 	
 	/**
 	* Returns attribute name.
 	*/
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

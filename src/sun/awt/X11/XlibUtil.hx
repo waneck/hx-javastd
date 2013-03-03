@@ -28,7 +28,7 @@ extern class XlibUtil
 	/**
 	* Xinerama-aware version of XlibWrapper.RootWindow method.
 	*/
-	@:overload public static function getRootWindow(screenNumber : Int) : haxe.Int64;
+	@:overload @:public @:static public static function getRootWindow(screenNumber : Int) : haxe.Int64;
 	
 	
 }

@@ -36,14 +36,14 @@ extern class HttpServerProvider
 	* @param addr the address to bind to. May be <code>null</code>
 	* @param backlog the socket backlog. A value of <code>zero</code> means the systems default
 	*/
-	@:overload @:abstract public function createHttpServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
+	@:overload @:public @:abstract public function createHttpServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* creates a HttpsServer from this provider
 	* @param addr the address to bind to. May be <code>null</code>
 	* @param backlog the socket backlog. A value of <code>zero</code> means the systems default
 	*/
-	@:overload @:abstract public function createHttpsServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
+	@:overload @:public @:abstract public function createHttpsServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
 	
 	/**
 	* Initializes a new instance of this class.  </p>
@@ -52,7 +52,7 @@ extern class HttpServerProvider
 	*          If a security manager has been installed and it denies
 	*          {@link RuntimePermission}<tt>("httpServerProvider")</tt>
 	*/
-	@:overload private function new() : Void;
+	@:overload @:protected private function new() : Void;
 	
 	/**
 	* Returns the system wide default HttpServerProvider for this invocation of
@@ -89,7 +89,7 @@ extern class HttpServerProvider
 	*
 	* @return  The system-wide default HttpServerProvider
 	*/
-	@:overload public static function provider() : com.sun.net.httpserver.spi.HttpServerProvider;
+	@:overload @:public @:static public static function provider() : com.sun.net.httpserver.spi.HttpServerProvider;
 	
 	
 }

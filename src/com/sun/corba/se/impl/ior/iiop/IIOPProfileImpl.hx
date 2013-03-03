@@ -25,44 +25,44 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class IIOPProfileImpl extends com.sun.corba.se.spi.ior.IdentifiableBase implements com.sun.corba.se.spi.ior.iiop.IIOPProfile
 {
-	private var codebase : String;
+	@:protected private var codebase : String;
 	
-	private var cachedCodebase : Bool;
+	@:protected private var cachedCodebase : Bool;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload @:public public function equals(obj : Dynamic) : Bool;
 	
-	@:overload public function hashCode() : Int;
+	@:overload @:public public function hashCode() : Int;
 	
-	@:overload public function getObjectId() : com.sun.corba.se.spi.ior.ObjectId;
+	@:overload @:public public function getObjectId() : com.sun.corba.se.spi.ior.ObjectId;
 	
-	@:overload public function getTaggedProfileTemplate() : com.sun.corba.se.spi.ior.TaggedProfileTemplate;
+	@:overload @:public public function getTaggedProfileTemplate() : com.sun.corba.se.spi.ior.TaggedProfileTemplate;
 	
-	@:overload public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
+	@:overload @:public public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, oid : com.sun.corba.se.spi.ior.ObjectId, proftemp : com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, oid : com.sun.corba.se.spi.ior.ObjectId, proftemp : com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate) : Void;
 	
-	@:overload public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload @:public public function new(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, profile : org.omg.IOP.TaggedProfile) : Void;
+	@:overload @:public public function new(orb : com.sun.corba.se.spi.orb.ORB, profile : org.omg.IOP.TaggedProfile) : Void;
 	
-	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function getId() : Int;
+	@:overload @:public override public function getId() : Int;
 	
-	@:overload public function isEquivalent(prof : com.sun.corba.se.spi.ior.TaggedProfile) : Bool;
+	@:overload @:public public function isEquivalent(prof : com.sun.corba.se.spi.ior.TaggedProfile) : Bool;
 	
-	@:overload public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
+	@:overload @:public public function getObjectKey() : com.sun.corba.se.spi.ior.ObjectKey;
 	
-	@:overload public function getIOPProfile() : org.omg.IOP.TaggedProfile;
+	@:overload @:public public function getIOPProfile() : org.omg.IOP.TaggedProfile;
 	
-	@:overload @:synchronized public function getCodebase() : String;
+	@:overload @:public @:synchronized public function getCodebase() : String;
 	
 	/**
 	* @return the ORBVersion associated with the object key in the IOR.
 	*/
-	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload @:public public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload @:synchronized public function isLocal() : Bool;
+	@:overload @:public @:synchronized public function isLocal() : Bool;
 	
 	/** Return the servant for this IOR, if it is local AND if the OA that
 	* implements this objref supports direct access to servants outside of an
@@ -70,22 +70,22 @@ extern class IIOPProfileImpl extends com.sun.corba.se.spi.ior.IdentifiableBase i
 	* XXX revisit: do we want this at all?  If we do, it might move to the
 	* ObjectKeyTemplate instead.
 	*/
-	@:overload public function getServant() : Dynamic;
+	@:overload @:public public function getServant() : Dynamic;
 	
 	/**
 	* Return GIOPVersion for this IOR.
 	* Requests created against this IOR will be of the
 	* return Version.
 	*/
-	@:overload @:synchronized public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:public @:synchronized public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload public function makeImmutable() : Void;
+	@:overload @:public public function makeImmutable() : Void;
 	
 	
 }
 @:native('com$sun$corba$se$impl$ior$iiop$IIOPProfileImpl$LocalCodeBaseSingletonHolder') @:internal extern class IIOPProfileImpl_LocalCodeBaseSingletonHolder
 {
-	public static var comp : com.sun.corba.se.spi.ior.iiop.JavaCodebaseComponent;
+	@:public @:static public static var comp : com.sun.corba.se.spi.ior.iiop.JavaCodebaseComponent;
 	
 	
 }

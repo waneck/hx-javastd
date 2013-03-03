@@ -30,7 +30,7 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var tagName(default, null) : javax.xml.namespace.QName;
+	@:public @:final public var tagName(default, null) : javax.xml.namespace.QName;
 	
 	/**
 	* The representative {@link XSElementDecl}.
@@ -44,11 +44,11 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 	* nillability, all that, so if that becomes a real issue we have
 	* to reconsider this design.)
 	*/
-	public var decl(default, null) : com.sun.xml.internal.xsom.XSElementDecl;
+	@:public @:final public var decl(default, null) : com.sun.xml.internal.xsom.XSElementDecl;
 	
-	@:overload public function new(tagName : javax.xml.namespace.QName, decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload @:public public function new(tagName : javax.xml.namespace.QName, decl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	
 }

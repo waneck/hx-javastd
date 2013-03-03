@@ -45,25 +45,25 @@ extern class MidiEvent
 	* @param message the MIDI message contained in the event
 	* @param tick the time-stamp for the event, in MIDI ticks
 	*/
-	@:overload public function new(message : javax.sound.midi.MidiMessage, tick : haxe.Int64) : Void;
+	@:overload @:public public function new(message : javax.sound.midi.MidiMessage, tick : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the MIDI message contained in the event.
 	* @return the MIDI message
 	*/
-	@:overload public function getMessage() : javax.sound.midi.MidiMessage;
+	@:overload @:public public function getMessage() : javax.sound.midi.MidiMessage;
 	
 	/**
 	* Sets the time-stamp for the event, in MIDI ticks
 	* @param tick the new time-stamp, in MIDI ticks
 	*/
-	@:overload public function setTick(tick : haxe.Int64) : Void;
+	@:overload @:public public function setTick(tick : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the time-stamp for the event, in MIDI ticks
 	* @return the time-stamp for the event, in MIDI ticks
 	*/
-	@:overload public function getTick() : haxe.Int64;
+	@:overload @:public public function getTick() : haxe.Int64;
 	
 	
 }

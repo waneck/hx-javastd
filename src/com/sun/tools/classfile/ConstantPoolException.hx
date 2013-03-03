@@ -31,7 +31,7 @@ package com.sun.tools.classfile;
 */
 extern class ConstantPoolException extends java.lang.Exception
 {
-	public var index(default, null) : Int;
+	@:public @:final public var index(default, null) : Int;
 	
 	
 }

@@ -28,33 +28,33 @@ package com.sun.org.glassfish.external.statistics.impl;
 */
 extern class BoundedRangeStatisticImpl extends com.sun.org.glassfish.external.statistics.impl.StatisticImpl implements com.sun.org.glassfish.external.statistics.BoundedRangeStatistic implements java.lang.reflect.InvocationHandler
 {
-	@:overload @:synchronized override public function toString() : String;
+	@:overload @:public @:synchronized override public function toString() : String;
 	
-	@:overload public function new(curVal : haxe.Int64, highMark : haxe.Int64, lowMark : haxe.Int64, upper : haxe.Int64, lower : haxe.Int64, name : String, unit : String, desc : String, startTime : haxe.Int64, sampleTime : haxe.Int64) : Void;
+	@:overload @:public public function new(curVal : haxe.Int64, highMark : haxe.Int64, lowMark : haxe.Int64, upper : haxe.Int64, lower : haxe.Int64, name : String, unit : String, desc : String, startTime : haxe.Int64, sampleTime : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.BoundedRangeStatistic;
+	@:overload @:public @:synchronized public function getStatistic() : com.sun.org.glassfish.external.statistics.BoundedRangeStatistic;
 	
-	@:overload @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
+	@:overload @:public @:synchronized override public function getStaticAsMap() : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload @:synchronized public function getCurrent() : haxe.Int64;
+	@:overload @:public @:synchronized public function getCurrent() : haxe.Int64;
 	
-	@:overload @:synchronized public function setCurrent(curVal : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setCurrent(curVal : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getHighWaterMark() : haxe.Int64;
+	@:overload @:public @:synchronized public function getHighWaterMark() : haxe.Int64;
 	
-	@:overload @:synchronized public function setHighWaterMark(hwm : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setHighWaterMark(hwm : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getLowWaterMark() : haxe.Int64;
+	@:overload @:public @:synchronized public function getLowWaterMark() : haxe.Int64;
 	
-	@:overload @:synchronized public function setLowWaterMark(lwm : haxe.Int64) : Void;
+	@:overload @:public @:synchronized public function setLowWaterMark(lwm : haxe.Int64) : Void;
 	
-	@:overload @:synchronized public function getLowerBound() : haxe.Int64;
+	@:overload @:public @:synchronized public function getLowerBound() : haxe.Int64;
 	
-	@:overload @:synchronized public function getUpperBound() : haxe.Int64;
+	@:overload @:public @:synchronized public function getUpperBound() : haxe.Int64;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:public @:synchronized override public function reset() : Void;
 	
-	@:overload public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload @:public public function invoke(proxy : Dynamic, m : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

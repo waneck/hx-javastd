@@ -31,7 +31,7 @@ extern class FuncNormalizeSpace extends com.sun.org.apache.xpath.internal.functi
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute an expression in the XPath runtime context, and return the
@@ -45,7 +45,7 @@ extern class FuncNormalizeSpace extends com.sun.org.apache.xpath.internal.functi
 	* @throws javax.xml.transform.TransformerException if a runtime exception
 	*         occurs.
 	*/
-	@:overload override public function executeCharsToContentHandler(xctxt : com.sun.org.apache.xpath.internal.XPathContext, handler : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public override public function executeCharsToContentHandler(xctxt : com.sun.org.apache.xpath.internal.XPathContext, handler : org.xml.sax.ContentHandler) : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class SOAPMessage
 	* @see SOAPMessage#setProperty(String, Object) SOAPMessage.setProperty
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) public static var CHARACTER_SET_ENCODING(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var CHARACTER_SET_ENCODING(default, null) : String;
 	
 	/**
 	* Specifies whether the SOAP Message will contain an XML declaration when
@@ -43,7 +43,7 @@ extern class SOAPMessage
 	* @see SOAPMessage#setProperty(String, Object) SOAPMessage.setProperty
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) public static var WRITE_XML_DECLARATION(default, null) : String;
+	@:require(java2) @:public @:static @:final public static var WRITE_XML_DECLARATION(default, null) : String;
 	
 	/**
 	* Sets the description of this <code>SOAPMessage</code> object's
@@ -53,7 +53,7 @@ extern class SOAPMessage
 	*         message
 	* @see #getContentDescription
 	*/
-	@:overload @:abstract public function setContentDescription(description : String) : Void;
+	@:overload @:public @:abstract public function setContentDescription(description : String) : Void;
 	
 	/**
 	* Retrieves a description of this <code>SOAPMessage</code> object's
@@ -63,7 +63,7 @@ extern class SOAPMessage
 	*         message or <code>null</code> if no description has been set
 	* @see #setContentDescription
 	*/
-	@:overload @:abstract public function getContentDescription() : String;
+	@:overload @:public @:abstract public function getContentDescription() : String;
 	
 	/**
 	* Gets the SOAP part of this <code>SOAPMessage</code> object.
@@ -74,7 +74,7 @@ extern class SOAPMessage
 	* @return the <code>SOAPPart</code> object for this <code>SOAPMessage</code>
 	*         object
 	*/
-	@:overload @:abstract public function getSOAPPart() : javax.xml.soap.SOAPPart;
+	@:overload @:public @:abstract public function getSOAPPart() : javax.xml.soap.SOAPPart;
 	
 	/**
 	* Gets the SOAP Body contained in this <code>SOAPMessage</code> object.
@@ -86,7 +86,7 @@ extern class SOAPMessage
 	*               if the SOAP Body does not exist or cannot be retrieved
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function getSOAPBody() : javax.xml.soap.SOAPBody;
+	@:require(java2) @:overload @:public public function getSOAPBody() : javax.xml.soap.SOAPBody;
 	
 	/**
 	* Gets the SOAP Header contained in this <code>SOAPMessage</code>
@@ -99,7 +99,7 @@ extern class SOAPMessage
 	*               if the SOAP Header does not exist or cannot be retrieved
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function getSOAPHeader() : javax.xml.soap.SOAPHeader;
+	@:require(java2) @:overload @:public public function getSOAPHeader() : javax.xml.soap.SOAPHeader;
 	
 	/**
 	* Removes all <code>AttachmentPart</code> objects that have been added
@@ -107,7 +107,7 @@ extern class SOAPMessage
 	* <P>
 	* This method does not touch the SOAP part.
 	*/
-	@:overload @:abstract public function removeAllAttachments() : Void;
+	@:overload @:public @:abstract public function removeAllAttachments() : Void;
 	
 	/**
 	* Gets a count of the number of attachments in this message. This count
@@ -116,7 +116,7 @@ extern class SOAPMessage
 	* @return the number of <code>AttachmentPart</code> objects that are
 	*         part of this <code>SOAPMessage</code> object
 	*/
-	@:overload @:abstract public function countAttachments() : Int;
+	@:overload @:public @:abstract public function countAttachments() : Int;
 	
 	/**
 	* Retrieves all the <code>AttachmentPart</code> objects that are part of
@@ -124,7 +124,7 @@ extern class SOAPMessage
 	*
 	* @return an iterator over all the attachments in this message
 	*/
-	@:overload @:abstract public function getAttachments() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getAttachments() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Retrieves all the <code>AttachmentPart</code> objects that have header
@@ -137,7 +137,7 @@ extern class SOAPMessage
 	* @return an iterator over all attachments that have a header that matches
 	*         one of the given headers
 	*/
-	@:overload @:abstract public function getAttachments(headers : javax.xml.soap.MimeHeaders) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:abstract public function getAttachments(headers : javax.xml.soap.MimeHeaders) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Removes all the <code>AttachmentPart</code> objects that have header
@@ -149,7 +149,7 @@ extern class SOAPMessage
 	*           headers for which to search
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function removeAttachments(headers : javax.xml.soap.MimeHeaders) : Void;
+	@:require(java3) @:overload @:public @:abstract public function removeAttachments(headers : javax.xml.soap.MimeHeaders) : Void;
 	
 	/**
 	* Returns an <code>AttachmentPart</code> object that is associated with an
@@ -176,7 +176,7 @@ extern class SOAPMessage
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:abstract public function getAttachment(element : javax.xml.soap.SOAPElement) : javax.xml.soap.AttachmentPart;
+	@:require(java3) @:overload @:public @:abstract public function getAttachment(element : javax.xml.soap.SOAPElement) : javax.xml.soap.AttachmentPart;
 	
 	/**
 	* Adds the given <code>AttachmentPart</code> object to this <code>SOAPMessage</code>
@@ -188,7 +188,7 @@ extern class SOAPMessage
 	*           of this <code>SOAPMessage</code> object
 	* @exception IllegalArgumentException
 	*/
-	@:overload @:abstract public function addAttachmentPart(AttachmentPart : javax.xml.soap.AttachmentPart) : Void;
+	@:overload @:public @:abstract public function addAttachmentPart(AttachmentPart : javax.xml.soap.AttachmentPart) : Void;
 	
 	/**
 	* Creates a new empty <code>AttachmentPart</code> object. Note that the
@@ -199,7 +199,7 @@ extern class SOAPMessage
 	* @return a new <code>AttachmentPart</code> object that can be populated
 	*         and added to this <code>SOAPMessage</code> object
 	*/
-	@:overload @:abstract public function createAttachmentPart() : javax.xml.soap.AttachmentPart;
+	@:overload @:public @:abstract public function createAttachmentPart() : javax.xml.soap.AttachmentPart;
 	
 	/**
 	* Creates an <code>AttachmentPart</code> object and populates it using
@@ -217,7 +217,7 @@ extern class SOAPMessage
 	* @see javax.activation.DataHandler
 	* @see javax.activation.DataContentHandler
 	*/
-	@:overload public function createAttachmentPart(dataHandler : javax.activation.DataHandler) : javax.xml.soap.AttachmentPart;
+	@:overload @:public public function createAttachmentPart(dataHandler : javax.activation.DataHandler) : javax.xml.soap.AttachmentPart;
 	
 	/**
 	* Returns all the transport-specific MIME headers for this <code>SOAPMessage</code>
@@ -226,7 +226,7 @@ extern class SOAPMessage
 	* @return a <code>MimeHeaders</code> object containing the <code>MimeHeader</code>
 	*         objects
 	*/
-	@:overload @:abstract public function getMimeHeaders() : javax.xml.soap.MimeHeaders;
+	@:overload @:public @:abstract public function getMimeHeaders() : javax.xml.soap.MimeHeaders;
 	
 	/**
 	* Creates an <code>AttachmentPart</code> object and populates it with
@@ -250,7 +250,7 @@ extern class SOAPMessage
 	* @see javax.activation.DataHandler
 	* @see javax.activation.DataContentHandler
 	*/
-	@:overload public function createAttachmentPart(content : Dynamic, contentType : String) : javax.xml.soap.AttachmentPart;
+	@:overload @:public public function createAttachmentPart(content : Dynamic, contentType : String) : javax.xml.soap.AttachmentPart;
 	
 	/**
 	* Updates this <code>SOAPMessage</code> object with all the changes that
@@ -272,7 +272,7 @@ extern class SOAPMessage
 	* @exception <code>SOAPException</code> if there was a problem saving
 	*               changes to this message.
 	*/
-	@:overload @:abstract public function saveChanges() : Void;
+	@:overload @:public @:abstract public function saveChanges() : Void;
 	
 	/**
 	* Indicates whether this <code>SOAPMessage</code> object needs to have
@@ -281,7 +281,7 @@ extern class SOAPMessage
 	* @return <code>true</code> if <code>saveChanges</code> needs to be
 	*         called; <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function saveRequired() : Bool;
+	@:overload @:public @:abstract public function saveRequired() : Bool;
 	
 	/**
 	* Writes this <code>SOAPMessage</code> object to the given output
@@ -303,7 +303,7 @@ extern class SOAPMessage
 	* @exception SOAPException
 	*               if there was a problem in externalizing this SOAP message
 	*/
-	@:overload @:abstract public function writeTo(out : java.io.OutputStream) : Void;
+	@:overload @:public @:abstract public function writeTo(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Associates the specified value with the specified property. If there was
@@ -338,7 +338,7 @@ extern class SOAPMessage
 	*               if the property name is not recognized.
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function setProperty(property : String, value : Dynamic) : Void;
+	@:require(java2) @:overload @:public public function setProperty(property : String, value : Dynamic) : Void;
 	
 	/**
 	* Retrieves value of the specified property.
@@ -351,7 +351,7 @@ extern class SOAPMessage
 	*               if the property name is not recognized.
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload public function getProperty(property : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getProperty(property : String) : Dynamic;
 	
 	
 }

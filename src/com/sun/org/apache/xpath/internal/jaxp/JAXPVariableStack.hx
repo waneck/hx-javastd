@@ -21,9 +21,9 @@ package com.sun.org.apache.xpath.internal.jaxp;
 //// $Id: JAXPVariableStack.java,v 1.1.2.1 2005/08/01 01:30:17 jeffsuttor Exp $
 extern class JAXPVariableStack extends com.sun.org.apache.xpath.internal.VariableStack
 {
-	@:overload public function new(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
+	@:overload @:public public function new(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
-	@:overload public function getVariableOrParam(xctxt : com.sun.org.apache.xpath.internal.XPathContext, qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload @:public override public function getVariableOrParam(xctxt : com.sun.org.apache.xpath.internal.XPathContext, qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

@@ -27,29 +27,29 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class KeyIntMap
 {
-	public static var NOT_PRESENT(default, null) : Int;
+	@:public @:static @:final public static var NOT_PRESENT(default, null) : Int;
 	
-	@:overload public function new(initialCapacity : Int, loadFactor : Single) : Void;
+	@:overload @:public public function new(initialCapacity : Int, loadFactor : Single) : Void;
 	
-	@:overload public function new(initialCapacity : Int) : Void;
+	@:overload @:public public function new(initialCapacity : Int) : Void;
 	
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload @:final public function size() : Int;
+	@:overload @:public @:final public function size() : Int;
 	
-	@:overload @:abstract public function clear() : Void;
+	@:overload @:public @:abstract public function clear() : Void;
 	
-	@:overload @:abstract public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
+	@:overload @:public @:abstract public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public static function hashHash(h : Int) : Int;
+	@:overload @:public @:static @:final public static function hashHash(h : Int) : Int;
 	
-	@:overload @:final public static function indexFor(h : Int, length : Int) : Int;
+	@:overload @:public @:static @:final public static function indexFor(h : Int, length : Int) : Int;
 	
 	
 }
 @:native('com$sun$xml$internal$fastinfoset$util$KeyIntMap$BaseEntry') @:internal extern class KeyIntMap_BaseEntry
 {
-	@:overload public function new(hash : Int, value : Int) : Void;
+	@:overload @:public public function new(hash : Int, value : Int) : Void;
 	
 	
 }

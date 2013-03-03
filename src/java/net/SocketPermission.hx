@@ -55,7 +55,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	* including a colon followed by a port or port range.
 	* @param action the action string.
 	*/
-	@:overload public function new(host : String, action : String) : Void;
+	@:overload @:public public function new(host : String, action : String) : Void;
 	
 	/**
 	* Checks if this socket permission object "implies" the
@@ -91,7 +91,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two SocketPermission objects for equality.
@@ -103,14 +103,14 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	*  SocketPermission object. However, port range will be ignored
 	*  in the comparison if <i>obj</i> only contains the action, 'resolve'.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload @:public override public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload @:public override public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions.
@@ -119,7 +119,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload @:public override public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing SocketPermission
@@ -132,7 +132,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	*
 	* @return a new PermissionCollection object suitable for storing SocketPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload @:public override public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -142,7 +142,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	* Create an empty SocketPermissions object.
 	*
 	*/
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
 	/**
 	* Adds a permission to the SocketPermissions. The key for the hash is
@@ -156,7 +156,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	* @exception SecurityException - if this SocketPermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload @:public override public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this collection of permissions implies the permissions
@@ -167,7 +167,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	* @return true if "permission" is a proper subset of a permission in
 	* the collection, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:public override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the SocketPermission objects in the
@@ -175,7 +175,7 @@ extern class SocketPermission extends java.security.Permission implements java.i
 	*
 	* @return an enumeration of all the SocketPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:public override public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }

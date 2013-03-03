@@ -33,7 +33,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @serial
 	* @see #getFont()
 	*/
-	private var font : java.awt.Font;
+	@:protected private var font : java.awt.Font;
 	
 	/**
 	* Creates a new <code>FontMetrics</code> object for finding out
@@ -42,7 +42,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @param     font the <code>Font</code>
 	* @see       java.awt.Font
 	*/
-	@:overload private function new(font : java.awt.Font) : Void;
+	@:overload @:protected private function new(font : java.awt.Font) : Void;
 	
 	/**
 	* Gets the <code>Font</code> described by this
@@ -50,7 +50,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @return    the <code>Font</code> described by this
 	* <code>FontMetrics</code> object.
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload @:public public function getFont() : java.awt.Font;
 	
 	/**
 	* Gets the <code>FontRenderContext</code> used by this
@@ -64,7 +64,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>FontMetrics</code> object.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:require(java6) @:overload @:public public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
 	/**
 	* Determines the <em>standard leading</em> of the
@@ -78,7 +78,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see   #getAscent()
 	* @see   #getDescent()
 	*/
-	@:overload public function getLeading() : Int;
+	@:overload @:public public function getLeading() : Int;
 	
 	/**
 	* Determines the <em>font ascent</em> of the <code>Font</code>
@@ -89,7 +89,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @return     the font ascent of the <code>Font</code>.
 	* @see        #getMaxAscent()
 	*/
-	@:overload public function getAscent() : Int;
+	@:overload @:public public function getAscent() : Int;
 	
 	/**
 	* Determines the <em>font descent</em> of the <code>Font</code>
@@ -102,7 +102,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @return     the font descent of the <code>Font</code>.
 	* @see        #getMaxDescent()
 	*/
-	@:overload public function getDescent() : Int;
+	@:overload @:public public function getDescent() : Int;
 	
 	/**
 	* Gets the standard height of a line of text in this font.  This
@@ -117,7 +117,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see       #getAscent()
 	* @see       #getDescent()
 	*/
-	@:overload public function getHeight() : Int;
+	@:overload @:public public function getHeight() : Int;
 	
 	/**
 	* Determines the maximum ascent of the <code>Font</code>
@@ -127,7 +127,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>Font</code>.
 	* @see       #getAscent()
 	*/
-	@:overload public function getMaxAscent() : Int;
+	@:overload @:public public function getMaxAscent() : Int;
 	
 	/**
 	* Determines the maximum descent of the <code>Font</code>
@@ -137,7 +137,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>Font</code>.
 	* @see       #getDescent()
 	*/
-	@:overload public function getMaxDescent() : Int;
+	@:overload @:public public function getMaxDescent() : Int;
 	
 	/**
 	* For backward compatibility only.
@@ -147,7 +147,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @deprecated As of JDK version 1.1.1,
 	* replaced by <code>getMaxDescent()</code>.
 	*/
-	@:overload public function getMaxDecent() : Int;
+	@:overload @:public public function getMaxDecent() : Int;
 	
 	/**
 	* Gets the maximum advance width of any character in this
@@ -159,7 +159,7 @@ extern class FontMetrics implements java.io.Serializable
 	*            in the <code>Font</code>, or <code>-1</code> if the
 	*            maximum advance width is not known.
 	*/
-	@:overload public function getMaxAdvance() : Int;
+	@:overload @:public public function getMaxAdvance() : Int;
 	
 	/**
 	* Returns the advance width of the specified character in this
@@ -182,7 +182,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see   #charsWidth(char[], int, int)
 	* @see   #stringWidth(String)
 	*/
-	@:overload public function charWidth(codePoint : Int) : Int;
+	@:overload @:public public function charWidth(codePoint : Int) : Int;
 	
 	/**
 	* Returns the advance width of the specified character in this
@@ -204,7 +204,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see        #charsWidth(char[], int, int)
 	* @see        #stringWidth(String)
 	*/
-	@:overload public function charWidth(ch : java.StdTypes.Char16) : Int;
+	@:overload @:public public function charWidth(ch : java.StdTypes.Char16) : Int;
 	
 	/**
 	* Returns the total advance width for showing the specified
@@ -223,7 +223,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see       #charsWidth(char[], int, int)
 	* @see       #getStringBounds(String, Graphics)
 	*/
-	@:overload public function stringWidth(str : String) : Int;
+	@:overload @:public public function stringWidth(str : String) : Int;
 	
 	/**
 	* Returns the total advance width for showing the specified array
@@ -248,7 +248,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see       #bytesWidth(byte[], int, int)
 	* @see       #stringWidth(String)
 	*/
-	@:overload public function charsWidth(data : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload @:public public function charsWidth(data : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns the total advance width for showing the specified array
@@ -272,7 +272,7 @@ extern class FontMetrics implements java.io.Serializable
 	* @see       #charsWidth(char[], int, int)
 	* @see       #stringWidth(String)
 	*/
-	@:overload public function bytesWidth(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:public public function bytesWidth(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Gets the advance widths of the first 256 characters in the
@@ -285,7 +285,7 @@ extern class FontMetrics implements java.io.Serializable
 	*                 characters in the <code>Font</code>
 	*                 described by this <code>FontMetrics</code> object.
 	*/
-	@:overload public function getWidths() : java.NativeArray<Int>;
+	@:overload @:public public function getWidths() : java.NativeArray<Int>;
 	
 	/**
 	* Checks to see if the <code>Font</code> has uniform line metrics.  A
@@ -299,7 +299,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>false</code> otherwise.
 	* @see java.awt.Font#hasUniformLineMetrics()
 	*/
-	@:overload public function hasUniformLineMetrics() : Bool;
+	@:overload @:public public function hasUniformLineMetrics() : Bool;
 	
 	/**
 	* Returns the {@link LineMetrics} object for the specified
@@ -310,7 +310,7 @@ extern class FontMetrics implements java.io.Serializable
 	* specified <code>String</code> and <code>Graphics</code> context.
 	* @see java.awt.Font#getLineMetrics(String, FontRenderContext)
 	*/
-	@:overload public function getLineMetrics(str : String, context : java.awt.Graphics) : java.awt.font.LineMetrics;
+	@:overload @:public public function getLineMetrics(str : String, context : java.awt.Graphics) : java.awt.font.LineMetrics;
 	
 	/**
 	* Returns the {@link LineMetrics} object for the specified
@@ -323,7 +323,7 @@ extern class FontMetrics implements java.io.Serializable
 	* specified <code>String</code> and <code>Graphics</code> context.
 	* @see java.awt.Font#getLineMetrics(String, int, int, FontRenderContext)
 	*/
-	@:overload public function getLineMetrics(str : String, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.font.LineMetrics;
+	@:overload @:public public function getLineMetrics(str : String, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.font.LineMetrics;
 	
 	/**
 	* Returns the {@link LineMetrics} object for the specified
@@ -336,7 +336,7 @@ extern class FontMetrics implements java.io.Serializable
 	* specified character array and <code>Graphics</code> context.
 	* @see java.awt.Font#getLineMetrics(char[], int, int, FontRenderContext)
 	*/
-	@:overload public function getLineMetrics(chars : java.NativeArray<java.StdTypes.Char16>, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.font.LineMetrics;
+	@:overload @:public public function getLineMetrics(chars : java.NativeArray<java.StdTypes.Char16>, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.font.LineMetrics;
 	
 	/**
 	* Returns the {@link LineMetrics} object for the specified
@@ -350,7 +350,7 @@ extern class FontMetrics implements java.io.Serializable
 	* specified arguments.
 	* @see java.awt.Font#getLineMetrics(CharacterIterator, int, int, FontRenderContext)
 	*/
-	@:overload public function getLineMetrics(ci : java.text.CharacterIterator, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.font.LineMetrics;
+	@:overload @:public public function getLineMetrics(ci : java.text.CharacterIterator, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.font.LineMetrics;
 	
 	/**
 	* Returns the bounds of the specified <code>String</code> in the
@@ -365,7 +365,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>Graphics</code> context.
 	* @see java.awt.Font#getStringBounds(String, FontRenderContext)
 	*/
-	@:overload public function getStringBounds(str : String, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getStringBounds(str : String, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounds of the specified <code>String</code> in the
@@ -382,7 +382,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>Graphics</code> context.
 	* @see java.awt.Font#getStringBounds(String, int, int, FontRenderContext)
 	*/
-	@:overload public function getStringBounds(str : String, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getStringBounds(str : String, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounds of the specified array of characters
@@ -402,7 +402,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>Graphics</code> context.
 	* @see java.awt.Font#getStringBounds(char[], int, int, FontRenderContext)
 	*/
-	@:overload public function getStringBounds(chars : java.NativeArray<java.StdTypes.Char16>, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getStringBounds(chars : java.NativeArray<java.StdTypes.Char16>, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounds of the characters indexed in the specified
@@ -419,7 +419,7 @@ extern class FontMetrics implements java.io.Serializable
 	* in the specified <code>Graphics</code> context.
 	* @see java.awt.Font#getStringBounds(CharacterIterator, int, int, FontRenderContext)
 	*/
-	@:overload public function getStringBounds(ci : java.text.CharacterIterator, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getStringBounds(ci : java.text.CharacterIterator, beginIndex : Int, limit : Int, context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounds for the character with the maximum bounds
@@ -429,7 +429,7 @@ extern class FontMetrics implements java.io.Serializable
 	* bounding box for the character with the maximum bounds.
 	* @see java.awt.Font#getMaxCharBounds(FontRenderContext)
 	*/
-	@:overload public function getMaxCharBounds(context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getMaxCharBounds(context : java.awt.Graphics) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns a representation of this <code>FontMetrics</code>
@@ -438,7 +438,7 @@ extern class FontMetrics implements java.io.Serializable
 	* <code>FontMetrics</code> object.
 	* @since     JDK1.0.
 	*/
-	@:require(java0) @:overload public function toString() : String;
+	@:require(java0) @:overload @:public public function toString() : String;
 	
 	
 }

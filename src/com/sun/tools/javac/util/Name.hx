@@ -34,93 +34,93 @@ package com.sun.tools.javac.util;
 */
 extern class Name implements javax.lang.model.element.Name
 {
-	public var table(default, null) : com.sun.tools.javac.util.Name.Name_Table;
+	@:public @:final public var table(default, null) : com.sun.tools.javac.util.Name.Name_Table;
 	
-	@:overload private function new(table : com.sun.tools.javac.util.Name.Name_Table) : Void;
-	
-	/**
-	* @inheritDoc
-	*/
-	@:overload public function contentEquals(cs : java.lang.CharSequence) : Bool;
+	@:overload @:protected private function new(table : com.sun.tools.javac.util.Name.Name_Table) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function length() : Int;
+	@:overload @:public public function contentEquals(cs : java.lang.CharSequence) : Bool;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload @:public public function length() : Int;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload @:public public function charAt(index : Int) : java.StdTypes.Char16;
+	
+	/**
+	* @inheritDoc
+	*/
+	@:overload @:public public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/** Return the concatenation of this name and name `n'.
 	*/
-	@:overload public function append(n : javax.lang.model.element.Name) : javax.lang.model.element.Name;
+	@:overload @:public public function append(n : javax.lang.model.element.Name) : javax.lang.model.element.Name;
 	
 	/** Return the concatenation of this name, the given ASCII
 	*  character, and name `n'.
 	*/
-	@:overload public function append(c : java.StdTypes.Char16, n : javax.lang.model.element.Name) : javax.lang.model.element.Name;
+	@:overload @:public public function append(c : java.StdTypes.Char16, n : javax.lang.model.element.Name) : javax.lang.model.element.Name;
 	
 	/** An arbitrary but consistent complete order among all Names.
 	*/
-	@:overload public function compareTo(other : javax.lang.model.element.Name) : Int;
+	@:overload @:public public function compareTo(other : javax.lang.model.element.Name) : Int;
 	
 	/** Return true if this is the empty name.
 	*/
-	@:overload public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/** Returns last occurrence of byte b in this name, -1 if not found.
 	*/
-	@:overload public function lastIndexOf(b : java.StdTypes.Int8) : Int;
+	@:overload @:public public function lastIndexOf(b : java.StdTypes.Int8) : Int;
 	
 	/** Does this name start with prefix?
 	*/
-	@:overload public function startsWith(prefix : javax.lang.model.element.Name) : Bool;
+	@:overload @:public public function startsWith(prefix : javax.lang.model.element.Name) : Bool;
 	
 	/** Returns the sub-name starting at position start, up to and
 	*  excluding position end.
 	*/
-	@:overload public function subName(start : Int, end : Int) : javax.lang.model.element.Name;
+	@:overload @:public public function subName(start : Int, end : Int) : javax.lang.model.element.Name;
 	
 	/** Return the string representation of this name.
 	*/
-	@:overload public function toString() : String;
+	@:overload @:public public function toString() : String;
 	
 	/** Return the Utf8 representation of this name.
 	*/
-	@:overload public function toUtf() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public public function toUtf() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/* Get a "reasonably small" value that uniquely identifies this name
 	* within its name table.
 	*/
-	@:overload @:abstract public function getIndex() : Int;
+	@:overload @:public @:abstract public function getIndex() : Int;
 	
 	/** Get the length (in bytes) of this name.
 	*/
-	@:overload @:abstract public function getByteLength() : Int;
+	@:overload @:public @:abstract public function getByteLength() : Int;
 	
 	/** Returns i'th byte of this name.
 	*/
-	@:overload @:abstract public function getByteAt(i : Int) : java.StdTypes.Int8;
+	@:overload @:public @:abstract public function getByteAt(i : Int) : java.StdTypes.Int8;
 	
 	/** Copy all bytes of this name to buffer cs, starting at start.
 	*/
-	@:overload public function getBytes(cs : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:public public function getBytes(cs : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
 	/** Get the underlying byte array for this name. The contents of the
 	* array must not be modified.
 	*/
-	@:overload @:abstract public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:public @:abstract public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** Get the start offset of this name within its byte array.
 	*/
-	@:overload @:abstract public function getByteOffset() : Int;
+	@:overload @:public @:abstract public function getByteOffset() : Int;
 	
 	
 }
@@ -130,37 +130,37 @@ extern class Name implements javax.lang.model.element.Name
 {
 	/** Standard name table.
 	*/
-	public var names(default, null) : com.sun.tools.javac.util.Names;
+	@:public @:final public var names(default, null) : com.sun.tools.javac.util.Names;
 	
 	/** Get the name from the characters in cs[start..start+len-1].
 	*/
-	@:overload @:abstract public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : javax.lang.model.element.Name;
+	@:overload @:public @:abstract public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : javax.lang.model.element.Name;
 	
 	/** Get the name for the characters in string s.
 	*/
-	@:overload public function fromString(s : String) : javax.lang.model.element.Name;
+	@:overload @:public public function fromString(s : String) : javax.lang.model.element.Name;
 	
 	/** Get the name for the bytes in array cs.
 	*  Assume that bytes are in utf8 format.
 	*/
-	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>) : javax.lang.model.element.Name;
+	@:overload @:public public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>) : javax.lang.model.element.Name;
 	
 	/** get the name for the bytes in cs[start..start+len-1].
 	*  Assume that bytes are in utf8 format.
 	*/
-	@:overload @:abstract public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : javax.lang.model.element.Name;
+	@:overload @:public @:abstract public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : javax.lang.model.element.Name;
 	
 	/** Release any resources used by this table.
 	*/
-	@:overload @:abstract public function dispose() : Void;
+	@:overload @:public @:abstract public function dispose() : Void;
 	
 	/** The hashcode of a name.
 	*/
-	@:overload private static function hashValue(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload @:protected @:static private static function hashValue(bytes : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
 	/** Compare two subarrays
 	*/
-	@:overload private static function equals(bytes1 : java.NativeArray<java.StdTypes.Int8>, offset1 : Int, bytes2 : java.NativeArray<java.StdTypes.Int8>, offset2 : Int, length : Int) : Bool;
+	@:overload @:protected @:static private static function equals(bytes1 : java.NativeArray<java.StdTypes.Int8>, offset1 : Int, bytes2 : java.NativeArray<java.StdTypes.Int8>, offset2 : Int, length : Int) : Bool;
 	
 	
 }

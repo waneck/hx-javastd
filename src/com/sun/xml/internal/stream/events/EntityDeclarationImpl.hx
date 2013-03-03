@@ -26,39 +26,39 @@ package com.sun.xml.internal.stream.events;
 extern class EntityDeclarationImpl extends com.sun.xml.internal.stream.events.DummyEvent implements javax.xml.stream.events.EntityDeclaration
 {
 	/** Creates a new instance of EntityDeclarationImpl */
-	@:overload public function new() : Void;
+	@:overload @:public public function new() : Void;
 	
-	@:overload public function new(entityName : String, replacementText : String) : Void;
+	@:overload @:public public function new(entityName : String, replacementText : String) : Void;
 	
-	@:overload public function new(entityName : String, replacementText : String, resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
+	@:overload @:public public function new(entityName : String, replacementText : String, resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
 	
-	@:overload public function setEntityName(entityName : String) : Void;
+	@:overload @:public public function setEntityName(entityName : String) : Void;
 	
-	@:overload public function getEntityName() : String;
+	@:overload @:public public function getEntityName() : String;
 	
-	@:overload public function setEntityReplacementText(replacementText : String) : Void;
+	@:overload @:public public function setEntityReplacementText(replacementText : String) : Void;
 	
-	@:overload public function setXMLResourceIdentifier(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
+	@:overload @:public public function setXMLResourceIdentifier(resourceIdentifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier) : Void;
 	
-	@:overload public function getXMLResourceIdentifier() : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
+	@:overload @:public public function getXMLResourceIdentifier() : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
 	
-	@:overload public function getSystemId() : String;
+	@:overload @:public public function getSystemId() : String;
 	
-	@:overload public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
-	@:overload public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
-	@:overload public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
-	@:overload public function getNotationName() : String;
+	@:overload @:public public function getNotationName() : String;
 	
-	@:overload public function setNotationName(notationName : String) : Void;
+	@:overload @:public public function setNotationName(notationName : String) : Void;
 	
-	@:overload public function getReplacementText() : String;
+	@:overload @:public public function getReplacementText() : String;
 	
-	@:overload private function init() : Void;
+	@:overload @:protected private function init() : Void;
 	
-	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload @:protected override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

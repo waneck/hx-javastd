@@ -29,13 +29,13 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* Pixels at the edge of the destination image are set to zero.  This
 	* is the default.
 	*/
-	public static var EDGE_ZERO_FILL(default, null) : Int;
+	@:public @:static @:final public static var EDGE_ZERO_FILL(default, null) : Int;
 	
 	/**
 	* Pixels at the edge of the source image are copied to
 	* the corresponding pixels in the destination without modification.
 	*/
-	public static var EDGE_NO_OP(default, null) : Int;
+	@:public @:static @:final public static var EDGE_NO_OP(default, null) : Int;
 	
 	/**
 	* Constructs a ConvolveOp given a Kernel, an edge condition, and a
@@ -48,7 +48,7 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* @see #EDGE_ZERO_FILL
 	* @see java.awt.RenderingHints
 	*/
-	@:overload public function new(kernel : java.awt.image.Kernel, edgeCondition : Int, hints : java.awt.RenderingHints) : Void;
+	@:overload @:public public function new(kernel : java.awt.image.Kernel, edgeCondition : Int, hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Constructs a ConvolveOp given a Kernel.  The edge condition
@@ -57,7 +57,7 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* @see Kernel
 	* @see #EDGE_ZERO_FILL
 	*/
-	@:overload public function new(kernel : java.awt.image.Kernel) : Void;
+	@:overload @:public public function new(kernel : java.awt.image.Kernel) : Void;
 	
 	/**
 	* Returns the edge condition.
@@ -65,13 +65,13 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* @see #EDGE_NO_OP
 	* @see #EDGE_ZERO_FILL
 	*/
-	@:overload public function getEdgeCondition() : Int;
+	@:overload @:public public function getEdgeCondition() : Int;
 	
 	/**
 	* Returns the Kernel.
 	* @return the <code>Kernel</code> of this <code>ConvolveOp</code>.
 	*/
-	@:overload @:final public function getKernel() : java.awt.image.Kernel;
+	@:overload @:public @:final public function getKernel() : java.awt.image.Kernel;
 	
 	/**
 	* Performs a convolution on BufferedImages.  Each component of the
@@ -92,7 +92,7 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	*         <code>dst</code>
 	* @throws ImagingOpException if <code>src</code> cannot be filtered
 	*/
-	@:overload @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
+	@:overload @:public @:final public function filter(src : java.awt.image.BufferedImage, dst : java.awt.image.BufferedImage) : java.awt.image.BufferedImage;
 	
 	/**
 	* Performs a convolution on Rasters.  Each band of the source Raster
@@ -112,7 +112,7 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* @throws IllegalArgumentException if <code>src</code> equals
 	*         <code>dst</code>
 	*/
-	@:overload @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
+	@:overload @:public @:final public function filter(src : java.awt.image.Raster, dst : java.awt.image.WritableRaster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a zeroed destination image with the correct size and number
@@ -122,27 +122,27 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* @return a destination <code>BufferedImage</code> with the correct
 	*         size and number of bands.
 	*/
-	@:overload public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
+	@:overload @:public public function createCompatibleDestImage(src : java.awt.image.BufferedImage, destCM : java.awt.image.ColorModel) : java.awt.image.BufferedImage;
 	
 	/**
 	* Creates a zeroed destination Raster with the correct size and number
 	* of bands, given this source.
 	*/
-	@:overload public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
+	@:overload @:public public function createCompatibleDestRaster(src : java.awt.image.Raster) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns the bounding box of the filtered destination image.  Since
 	* this is not a geometric operation, the bounding box does not
 	* change.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.BufferedImage) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the bounding box of the filtered destination Raster.  Since
 	* this is not a geometric operation, the bounding box does not
 	* change.
 	*/
-	@:overload @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
+	@:overload @:public @:final public function getBounds2D(src : java.awt.image.Raster) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the location of the destination point given a
@@ -150,12 +150,12 @@ extern class ConvolveOp implements java.awt.image.BufferedImageOp implements jav
 	* be used to hold the return value.  Since this is not a geometric
 	* operation, the srcPt will equal the dstPt.
 	*/
-	@:overload @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
+	@:overload @:public @:final public function getPoint2D(srcPt : java.awt.geom.Point2D, dstPt : java.awt.geom.Point2D) : java.awt.geom.Point2D;
 	
 	/**
 	* Returns the rendering hints for this op.
 	*/
-	@:overload @:final public function getRenderingHints() : java.awt.RenderingHints;
+	@:overload @:public @:final public function getRenderingHints() : java.awt.RenderingHints;
 	
 	
 }
